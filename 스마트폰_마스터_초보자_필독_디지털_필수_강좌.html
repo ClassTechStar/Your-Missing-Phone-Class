@@ -1,0 +1,1992 @@
+﻿<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스마트폰 마스터! 초보자 필독 디지털 필수 강좌</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-left: 3px solid #165DFF;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">스마트폰 마스터! 초보자 필독 디지털 필수 강좌</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>맨 위로
+            </a>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">목차</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">一、기초편 (제0-6장)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제0장: 안녕하세요, 시작하기 전에</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제1장: 안녕하세요, 나의 퍼스널 컴퓨터</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제2장: 디지털 룸 정리하기 - 파일 관리</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제3장: 스마트폰에 '생명선' 연결하기 - 네트워크</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제4장: 앱 설치와 관리 - 스마트폰의 '스킬셋'</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제5장: 스마트폰을 더 내 취향대로 - 기본 설정</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제6장: 디지털 라이프 지키기 - 보안과 프라이버시</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">二、소프트웨어편 (제7-12장)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제7장: 통신: SMS, 통화와 소셜</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제8장: 모바일 오피스와 학습</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제9장: 모바일 결제와 생활 서비스</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제10장: 촬영과 사진 관리</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제11장: 엔터테인먼트와 독서</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제12장: 추천 도구 앱</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">三、응용편 (제13-17장)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제13장: 배터리 과학과 절전 최적화</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제14장: 계정 체계와 클라우드 서비스</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제15장: 스마트폰과 다른 기기 연동</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제16장: 데이터 백업과 이관</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제17장: 문제 해결과 자가 해결</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">四、발전편 (제18-22장)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제18장: 모바일 네트워크와 정보 보안 심화</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제19장: AI는 어떻게 스마트폰에서 작동하는가</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제20장: 프로그래밍 사고와 자동화 입문</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제21장: 중고 스마트폰 처리와 디지털 유산</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">제22장: 미래의 스마트폰과 디지털 라이프</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">五、부록</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">부록A: 신규 스마트폰 개봉 '완벽 가이드' 플로우</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">부록B: 실전 연습 레퍼런스</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">부록C: 미니멀 용어 '전문 용어' 대조표</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">부록D: 신뢰할 수 있는 리소스는 어디서 찾을 수 있나?</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">부록E: 감사의 말과 설명</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">스마트폰 마스터! 초보자 필독 디지털 필수 강좌</h1>
+                <p class="text-center text-secondary text-lg">입문부터 숙달까지, 디지털 라이프를 완전히 파악하다</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">一、기초편 (제0-6장)</h2>
+                <p class="mb-4 text-secondary">당신의 스마트폰은 상상 이상으로 강력합니다. 이 부분은 모든 '신기술'의 토대가 되는 내용입니다. 먼저 '언어'를 통일하고, 한 걸음씩 기기를 인식하고, 파악해 봅시다.</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제0장: 안녕하세요, 시작하기 전에</h3>
+                    <p class="mb-3">본격적인 탐색에 앞서, 기본 규칙에 대해 이야기해 봅시다. 이것으로 이후의 내용이 모두 이해될 것입니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📖 이 책이 도와드릴 수 있는 것 (그리고 할 수 없는 것)</h4>
+                    <p class="mb-2">스마트폰 사용법을 체계적으로 이해하고, 기능의 배경에 있는 원리를 알 수 있습니다. Android 사용자든 iPhone 사용자든, 대부분의 생각방식은 공통적입니다. 실천적인 연습도 포함되어 있습니다.</p>
+                    <p class="mb-2">특정 기종의 사용설명서가 아니며, 최신 제품의 리뷰도 아니고, 스마트폰 중독을 가르치는 것도 아닙니다.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🔤 우리의 '암호'에 대하여</h4>
+                    <p class="mb-2">이해하기 쉽게 설명하기 위해, 몇 가지 기호를 사용합니다:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[버튼 이름]: 화면상의 구체적인 버튼이나 앱 이름을 나타냅니다.</li>
+                        <li>> : 조작 순서를 나타냅니다. 예: '[설정] > [사운드]를 탭'.</li>
+                        <li><strong>굵은 글씨</strong>: 매우 중요! 중요한 개념이나 보안 경고를 나타냅니다.</li>
+                        <li><em>기울임꼴</em>: 보충적인 생각이나 비유를 나타냅니다.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 📱 Android와 iOS, 양쪽 모두 설명합니다</h4>
+                    <p class="mb-2">부르는 이름은 달라도, 하는 일은 같은 것들이 있습니다. 예: 앱(Android)과 App(iOS), 설정(양쪽 모두 설정), 파일 관리(Android)와 파일(iOS). 같은 것이라고 이해해 주세요.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 💾 스마트폰 용량: 왜 128GB를 샀는데, 사용 가능한 것은 110GB 미만인가?</h4>
+                    <p class="mb-2">용량의 단위는 아시죠: 1TB = 1024GB, 1GB = 1024MB……</p>
+                    <p class="mb-2">하지만, 구매한 표시 용량은 손에 닿으면 '축소'됩니다. 주된 이유는:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>시스템이 공간을 점유: OS는 집의 구조벽과 같아서, 필수입니다.</li>
+                        <li>제조사 프리인스톨 앱: 새 스마트폰에 처음부터 들어있는 앱도 공간을 사용합니다.</li>
+                        <li>포맷 손실: 기술적인 이유로, 배낭의 안감도 부피를 차지합니다.</li>
+                    </ol>
+                    <p class="mb-2">스마트폰을 구매할 때는 시스템의 사용량도 고려에 넣어주세요.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">실전 타임 👉 당신의 스마트폰 '신분증' 확인</p>
+                        <p class="mt-1">[설정]을 열고, '기기 정보'(또는 유사한 옵션)를 찾아, 메모해 주세요: 스마트폰 모델, OS 버전, 총 저장 용량, 남은 용량. 이것이 아는 첫걸음입니다.</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제1장: 안녕하세요, 나의 퍼스널 컴퓨터</h3>
+                    <p class="mb-3">당신의 스마트폰은, 사실 주머니 속의 가장 퍼스널한 슈퍼컴퓨터입니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 🧠 스마트폰 하드웨어 '오장육부'</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC(칩)</strong>: 스마트폰의 '뇌+심장'으로, 성능을 결정합니다.</li>
+                        <li><strong>RAM(메모리)</strong>: 일시적인 작업대. 클수록, 여러 앱을 동시에 열어도 쾌적합니다.</li>
+                        <li><strong>ROM(저장소)</strong>: 장기 보관창고. 모든 사진, 동영상, 앱을 넣는 곳입니다.</li>
+                        <li><strong>화면</strong>: 당신의 눈. 타입(OLED는 색이 선명, LCD는 눈에 편함), 해상도(선명도), 리프레시 레이트(스크롤 추종성)가 중요합니다.</li>
+                        <li><strong>배터리와 충전</strong>: 사용하면서 충전. 완전히 빌 때까지 기다리지 않고, 100%로 계속 꽉 채우지 않는 것이 배터리에 좋습니다. 급속 충전과 무선 충전은 편리합니다.</li>
+                        <li><strong>카메라</strong>: 현재는 복수 렌즈+알고리즘(계산 사진)으로 협력하여, 야경과 아웃포커싱도 실현합니다.</li>
+                        <li><strong>센서</strong>: 스마트폰의 작은 더듬이. 예: 자이로스코프(게임에서 방향 변경), NFC(개찰구나 IC카드), 거리 센서(통화 시 자동 소등) 등.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🤖 OS: Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: 오픈소스 커뮤니티처럼, 스마트폰 제조사가 깊게 커스터마이즈할 수 있고, 선택지가 풍부합니다.</li>
+                        <li>iOS: 정성스럽게 가꾼 정원처럼, Apple이 하드와 소프트를 일원 관리하고, 경험이 통일되어 있습니다.</li>
+                    </ul>
+                    <p class="mb-2">양쪽 에코시스템 모두 매우 풍부하므로, 좋아하는 라이프스타일을 선택하세요.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🎭 당신의 스마트폰은, 과연 몇 개의 역할을 하고 있나요?</h4>
+                    <p class="mb-2">이제 전화만이 아닙니다: 통신 도구, 스마트 카메라, 지갑, 정보 포털, 게임기, 모바일 오피스, 헬스 어시스턴트, 스마트 홈 리모컨, 나아가 디지털 신분증입니다.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">실전 타임 👉 하드웨어 구성 이해하기</p>
+                        <p class="mt-1">[설정]에서, 프로세서 모델, RAM, ROM의 구체적인 크기를 찾을 수 있는지 확인해 주세요. 스마트폰의 능력을 파악합시다.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제2장: 디지털 룸 정리하기 - 파일 관리</h3>
+                    <p class="mb-3">스마트폰을 오래 쓰면 어지러워집니다. 좋은 습관은 파일 관리에서 시작됩니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📂 3층 스토리지 체계</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>본체 스토리지</strong>: 핵심 영역. 속도가 빠르고, 시스템과 앱이 모두 여기에 있습니다.</li>
+                        <li><strong>SD 카드(지원 경우)</strong>: 확장 옷장. 속도는 조금 느리지만, 영화나 사진을 넣기에 적합합니다.</li>
+                        <li><strong>클라우드 스토리지</strong>: 금고+동기 드라이브. 분실 방지와, 복수 기기 간 동기가 가능합니다.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🗂️ '파일 매니저' 알기</h4>
+                    <p class="mb-2">Android에는 보통 [파일] 또는 [파일 관리] 앱이 있고, iOS에는 표준 [파일] 앱이 있습니다. 이들은 스마트폰의 모든 파일을 보는 '탐색기'입니다. Download(다운로드), DCIM(카메라 사진), Pictures(이미지) 등의 폴더가 보입니다.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🏷️ 각종 파일은 어디에?</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>사진/동영상: 보통 자동으로 DCIM 또는 Pictures에 저장됩니다.</li>
+                        <li>다운로드한 파일: 기본적으로 모두 Download에 있습니다.</li>
+                        <li>앱 데이터: 각각의 '프라이빗 룸'(프라이빗 디렉토리)에 살고, 보이지 않을 수 있습니다.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🧹 용량이 부족한가? 대청소 시간</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>캐시 지우기: 앱의 일시적인 기억. 지우면 공간이 생깁니다.</li>
+                        <li>큰 파일 검색: 파일 매니저에서 크기순으로 정렬하고, 공간을 점유하는 '범인'을 찾아냅니다.</li>
+                        <li>찌꺼기 삭제: 앱을 삭제한 후, 쓰레기 파일이 남을 수 있습니다. 수동으로 삭제해 주세요.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">실전 타임 👉 '다운로드' 폴더 정리</p>
+                        <p class="mt-1">파일 매니저를 열고 > '다운로드' 폴더에 들어갑니다. 내용을 확인하고, 불필요한 것은 삭제하고, 필요한 것은 분류(예: '업무 자료', '스탬프' 폴더를 새로 만들어 넣기)해 주세요.</p>
+                    </div>
+                </div>
+
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제3장: 스마트폰에 '생명선' 연결하기 - 네트워크</h3>
+                    <p class="mb-3">네트가 없으면, 스마트폰은 '반쪽 바보'가 됩니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📶 모바일 네트워크(4G/5G)와 데이터 통신</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>데이터 통신: 스마트폰에서 인터넷 사용으로 발생하는 데이터 양. 동영상 시청과 이미지 열람이 가장 데이터를 소비합니다.</li>
+                        <li>데이터 절약 팁: 설정에서 '데이터 절약 모드'를 켜고, Wi-Fi 환경에서 앱 업데이트나 고화질 동영상 시청을 해주세요.</li>
+                        <li>신호 막대수≠통신 속도: 신호가 강한 것은 연결이 좋다는 것을 나타내지만, 통신 속도는 기지국의 혼잡 상황에도 의존합니다.</li>
+                        <li><strong>⚠️ 중요! 해외 출장 전에 [데이터 로밍]을 끄고, 고액 청구를 막읍시다!</strong></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 📡 Wi-Fi: 연결, 공유와 보안</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Wi-Fi 연결: [설정] > [WLAN]에서 네트워크를 선택하고, 비밀번호를 입력합니다.</li>
+                        <li>비밀번호 공유: 현재는 편리해서, Android와 iOS 모두 연결된 스마트폰에서 친구에게 빠르게 비밀번호를 공유할 수 있습니다.</li>
+                        <li>공공 Wi-Fi의 리스크: 해커의 데이터 도청이나 피싱 핫스팟의 가능성이 있습니다. 수칙: 은행 계좌 로그인은 피하고, 가능한 한 VPN을 사용하세요.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🔵 Bluetooth: 이어폰 연결, 파일 전송</h4>
+                    <p class="mb-2">주로 무선 이어폰, 스마트 밴드/워치의 연결에 사용됩니다. 파일 전송 기능은 현재 거의 사용되지 않습니다.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🔥 테더링: 스마트폰을 Wi-Fi 라우터로</h4>
+                    <p class="mb-2">자신의 데이터 통신량이 많을 때는, 태블릿이나 PC에 핫스팟을 열 수 있습니다. 주의: 배터리와 데이터 통신량을 대량으로 소비하므로, 복잡한 비밀번호를 설정하고, 연결 기기 수를 제한해 주세요.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">실전 타임 👉 핫스팟 설정·관리하기</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>[설정]을 열고, '테더링' 또는 '네트워크 공유'를 찾아, 켜고, 이름과 비밀번호를 설정합니다.</li>
+                            <li>다른 기기(예: PC)에서 이 Wi-Fi를 검색해서 연결합니다.</li>
+                            <li>스마트폰 쪽에서, 연결된 기기를 관리하거나, 모르는 기기를 끊을 수 있는지 확인해 주세요.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제4장: 앱 설치와 관리 - 스마트폰의 '스킬셋'</h3>
+                    <p class="mb-3">앱은 스마트폰을 만능으로 만들지만, 적절하게 관리하는 것도 필요합니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 🏪 공식 스토어: 가장 안전한 '앱 슈퍼마켓'</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Google Play 또는 각 브랜드의 순정 스토어(예: 삼성 앱 스토어).</li>
+                        <li>iOS: App Store만.</li>
+                    </ul>
+                    <p class="mb-2">핵심적인 보안상 의미: 심사 완료, 업데이트 보증, 결제 안전. 행동 지침: 우선적으로 공식 스토어만 사용해서 다운로드해 주세요.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🚨 서드파티 소스: 리스크가 극히 높다!</h4>
+                    <p class="mb-2">웹이나 불명한 링크에서 앱을 다운로드하면, 바이러스 감염, 프라이버시 탈취, 부정 결제의 가능성이 있습니다.</p>
+                    <p class="mb-2">부득이한 경우: 소스가 절대적으로 신뢰할 수 있는지 확인하고, 설치 전에 권한 요구를 잘 확인하고, 사후에 보안 앱으로 스캔해 주세요.</p>
+                    <p class="mb-2">최종적인 조언: 시스템 설정에서, '출처를 알 수 없는 앱 설치' 권한을 끄세요.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 📲 설치, 업데이트, 삭제</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>설치: 스토어에서 '받기'를 탭. 설치 후, 첫 실행 시에 권한을 요구받습니다.</li>
+                        <li>업데이트: <strong>반드시 업데이트하세요!</strong> 주로 보안 취약점 수정입니다. 자동 업데이트를 켜는 것을 권장합니다.</li>
+                        <li>삭제: 아이콘을 길게 눌러서 삭제 영역으로 드래그. 더 철저하게 삭제하려면, [설정] > [앱 관리]에서 찾아서 삭제하세요.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🛡️ 권한 관리: 당신은 앱의 '상사'</h4>
+                    <p class="mb-2">앱이 권한(예: 연락처, 위치 정보)을 요구하는 것은, 때로 합리적(지도는 위치 정보 필요), 때로 불합리(손전등이 연락처를 요구)입니다.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>권한 옵션: '항상 허용', '사용 중에만 허용', '거부', '매번 확인'.</li>
+                        <li>관리 원칙:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>최소화: 필요 없는 것은 주지 않는다.</li>
+                                <li>사후 감사: 정기적으로 권한 설정을 확인하고, 누가 '권한 초과'하지 않았는지 확인한다.</li>
+                                <li>상황에 따라: 택시 앱 등은, 사용 시에만 위치 정보 권한을 준다.</li>
+                            </ol>
+                        </li>
+                        <li><strong>⚠️ 중점 감시 대상: 연락처/SMS, 실시간 위치 정보, 카메라/마이크, 파일 접근 권한.</strong></li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">실전 타임 👉 3개 앱의 권한 감사</p>
+                        <p class="mt-1">자주 쓰는 앱 3개(예: SNS, 쇼핑, 도구류)를 선택하고, [설정]의 앱 권한 관리 페이지에 들어가, 항목별로 감사하고, 불필요한 민감 권한을 끄거나 '사용 중에만 허용'으로 변경해 주세요.</p>
+                    </div>
+                </div>
+
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제5장: 스마트폰을 더 내 취향대로 - 기본 설정</h3>
+                    <p class="mb-3">몇 분간 설정하는 것만으로, 경험이 크게 향상됩니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.1 🎵 사운드와 진동</h4>
+                    <p class="mb-2">좋아하는 벨소리와 알림음을 설정. 매너 모드(회의 중), 방해 금지 모드(수면 중)를 유연하게 사용하고, 세상이 순식간에 조용해집니다. Bluetooth 이어폰 연결 시, 오디오 출력이 전환되었는지 확인해 주세요.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.2 👀 디스플레이와 밝기</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>자동 밝기: 스마트폰이 주변 빛에 따라 자동 조정. 수고 덜기.</li>
+                        <li>블루라이트 차단/나이트 시프트: 블루라이트를 차단하고, 밤의 스마트폰 사용이 쾌적해집니다.</li>
+                        <li>다크 모드: 절전(특히 OLED 화면에서 효과적), 그리고 밤에 눈부시지 않습니다.</li>
+                        <li>화면 리프레시 레이트: 일부 Android 기종은 조정 가능. 높을수록(예: 120Hz) 스크롤이 부드러워집니다.</li>
+                        <li>자동 잠금: 15초 또는 30초로 설정. 안전하고 절전.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.3 🎨 배경화면, 테마와 홈 화면</h4>
+                    <p class="mb-2">아름다운 배경화면(정지 화면 또는 동영상)으로 바꾸면, 기분도 바뀝니다. Android 브랜드 스마트폰에는 보통 테마 스토어가 있고, 아이콘과 스타일을 한 세트로 변경할 수 있습니다. 홈 화면 위젯도 잊지 마세요. 날씨, 일정, 음악 컨트롤을 홈 화면에 두면, 원탭으로 접근할 수 있습니다.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.4 ♿ 접근성: 든든한 어시스턴트</h4>
+                    <p class="mb-2">이름에 놀라지 마세요. 누구나 사용할 수 있습니다.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>확대 제스처: 화면을 3번 탭해서 부분 확대. 작은 글자를 보기에 최적.</li>
+                        <li>음성 어시스턴트: Siri와 Google 어시스턴트. 말만으로 알람 설정이나 날씨 확인을 할 수 있습니다.</li>
+                        <li>스크린 리더(TalkBack/VoiceOver): 시각 장애인을 위해 설계되어 있지만, 기사를 '듣는' 데에도 도움이 됩니다.</li>
+                        <li>기타: 색채 보정(색약자용), 뒷면 탭 단축키(iPhone), 접근성 메뉴(Android) 등도 시도할 가치가 있습니다.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">실전 타임 👉 '평일'과 '휴일' 모드 설정</p>
+                        <p class="mt-1">집중 모드(iOS) 또는 시나리오 모드를 사용해서, 스마트폰이 자동으로 당신의 리듬에 적응하도록 합니다. 예:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>'업무' 모드 생성: 중요하지 않은 앱 알림을 자동으로 음소거하고, 상사와 가족의 전화만 허용.</li>
+                            <li>'수면' 모드 생성: 정시에 켜지고, 모든 알림을 음소거.</li>
+                            <li>그것들에 타이머 설정. 예: 평일 9:00-18:00에 자동으로 '업무' 모드 켜기. 틀리지 마세요.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제6장: 디지털 라이프 지키기 - 보안과 프라이버시</h3>
+                    <p class="mb-3">스마트폰의 보안 = 프라이버시 보안 + 재산 보안.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 🔒 잠금 화면: 첫 번째 물리적 방어선</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>보안 레벨 순위:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>비밀번호/PIN 코드: 가장 안전. 최종적인 보장(지문/얼굴 인증을 잊었을 때 의지할 수 있음).</li>
+                                <li>지문 인증: 보안과 편의성의 완벽한 밸런스.</li>
+                                <li>얼굴 인증: 가장 편리하지만, 보안은 기술에 의존(3D 구조광은 안전, 2D 사진은 쉽게 속음).</li>
+                            </ul>
+                        </li>
+                        <li>강력한 잠금 화면 설정: 복잡한 비밀번호(생일, 123456은 사용하지 않기)를 반드시 설정하고, 생체 인증을 켜세요. 잠금 시간은 '즉시' 또는 최단으로 설정.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 📍 '스마트폰 찾기': 궁극의 도난 방지 도구</h4>
+                    <p class="mb-2"><strong>반드시 켜세요!</strong> 다음과 같은 일을 할 수 있습니다:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>위치 특정: 스마트폰을 어디에 두었는지, 지도에서 찾습니다.</li>
+                        <li>사운드 재생: 스마트폰을 울리고, 집 안에서 찾기에 적합합니다.</li>
+                        <li>분실 모드: 원격으로 스마트폰을 잠그고, 연락처 번호를 표시. 주운 사람이 당신에게 연락할 수 있습니다.</li>
+                        <li>원격 소거: 최후의 수단. 모든 데이터를 소거(하지만 소거 후는 위치 특정 불가).</li>
+                    </ul>
+                    <p class="mb-2">[설정]에 가서, Apple은 'iPhone 찾기', Android는 '기기 찾기' 또는 브랜드의 유사 서비스를 찾아, 녹색의 켜짐 상태인지 확인하세요.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 🔧 시스템 업데이트: 패치하고, 취약점 막기</h4>
+                    <p class="mb-2">시스템 업데이트의 주된 목적은 보안 취약점 수정입니다. 집 벽의 구멍을 막는 것과 같습니다. 그래서, 시스템 업데이트 알림이 표시되면, 가능한 한 빨리 업그레이드하세요.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 🚫 사기 전화 식별과 예방</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>일반적인 수법: 경찰/고객센터 사칭(피싱), 당첨/부업 보상(유인), 로맨스 스캠(돼지 도살).</li>
+                        <li>스마트폰 표준 보호: 스팸 전화 차단, 인증 코드 도난 방지, SMS 링크 안전 검출. 설정에서 켜는 것을 잊지 마세요.</li>
+                        <li>사기 방지 구결: 믿지 않는다, 새지 않는다, 클릭하지 않는다, 송금하지 않는다, 의문이 있으면 확인한다!</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">실전 타임 👉 '원격 잠금' 활성화하고 시뮬레이션</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>'스마트폰 찾기' 기능이 켜져 있는지 확인하세요.</li>
+                            <li>PC 브라우저 또는 다른 스마트폰에서, 해당 클라우드 서비스 계정(iCloud.com 또는 브랜드 클라우드 서비스 사이트)에 로그인합니다.</li>
+                            <li>'기기 찾기' 기능을 찾아, 자신의 스마트폰에 대해 '사운드 재생'을 시도하거나, '잠금'을 시뮬레이션하고, 전체 플로우를 이해하세요. 중요한 때에 당황하지 않기 위해서입니다.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 二、소프트웨어편 -->
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">二、소프트웨어편 (제7-12장)</h2>
+
+                <!-- 제7장 -->
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제7장: 통신: SMS, 통화와 소셜</h3>
+                    <p class="mb-3">통신은 스마트폰의 가장 원시적이고 핵심적인 미션입니다. 현재, 단순한 통화와 SMS에서, 인스턴트 메시징, 소셜 네트워크, 전자 메일을 포함하는 복잡한 에코시스템으로 진화했습니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 전화 앱의 고급 기능: 통화 이상의 기능</h4>
+                    <p class="mb-2">현대 스마트폰의 전화 앱은, 단순한 다이얼 패드를 넘어, 녹음, 스팸 방지, 스마트 식별 등의 강력한 도구를 통합하고 있습니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 통화 녹음(법적 적합성에 주의):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>역할: 중요한 통화 내용을 기록하고, 업무 의사록, 인터뷰, 고객 약속, 또는 분쟁의 기록에 사용합니다.</li>
+                        <li>법적 힌트: 한국 내에서는, 통화 녹음을 증거로 사용하려면, 상대방의 동의를 얻거나, 또는 자신의 합법적인 권익을 지키기 위해(예: 스토킹이나 사기 고발) 사용해야 합니다. 상업상 또는 기밀성이 높은 대화 전에, 구두로 '이 통화는 녹음될 수 있습니다'라고 상대방에게 전하는 것이 더 신중한 접근입니다.</li>
+                        <li>조작 방법:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: 보통, 통화 화면에 명확한 '녹음' 버튼이 있습니다. 전화 앱 설정에서 '통화 녹음' 옵션을 찾아, 자동 녹음 규칙을 설정할 수 있습니다.</li>
+                                <li>iOS: 시스템은 네이티브 통화 녹음 기능을 제공하지 않습니다. 사용하려면, 서드파티 통화 녹음 앱이 필요합니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 스팸 전화 차단과 스마트 식별:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>원리: 전화 앱이 네트워크를 통해 거대한 번호 데이터베이스에 조회하고, 착신 시 '스팸 전화', '사기 전화', 또는 회사명을 표시합니다.</li>
+                        <li>켜는 방법:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: 전화 앱 들어가기 > 오른쪽 위 '설정' > 스팸 방지 또는 스마트 식별. 모든 식별과 차단 옵션을 켜세요.</li>
+                                <li>iOS: [설정] > [전화] > [착신 차단과 발신자 식별] 들어갑니다. 이 기능을 지원하는 서드파티 보안 앱(예: AhnLab V3 Mobile Security)을 확인하고, 동작을 허용할 수 있습니다. '알 수 없는 발신자 음소거' 기능을 켜면, 연락처에 없는 모든 착신을 음소거할 수 있습니다.</li>
+                            </ul>
+                        </li>
+                        <li>힌트: 스팸 전화를 받은 후, 통화 기록에서 능동적으로 '스팸' 또는 '사기'로 표시하면, 데이터베이스에 기여하고, 다른 사람을 도울 수 있습니다.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 통화 보조 기능:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>통화 녹음 텍스트 변환: 일부 Android 브랜드 스마트폰에서는, 통화 녹음 후, 녹음 파일 옆에 직접 '텍스트 변환' 버튼이 제공되어, 대화 내용을 텍스트로 변환할 수 있습니다.</li>
+                        <li>시각 보조(실시간 자막): Android 접근성 설정 또는 iOS 청각 보조에서, '실시간 텍스트 변환' 기능을 켜면, 모든 오디오(통화 포함)에 실시간 자막이 생성됩니다.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 SMS와 iMessage/RCS: 인증 코드와 스팸 메시지 필터링</h4>
+                    <p class="mb-2">전통적인 SMS는 폐지되지 않았습니다. 인증 코드, 은행 알림, 공식 정보를 수신하는 신뢰할 수 있는 채널입니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs iMessage (iOS) / RCS (Android):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iMessage: Apple 기기 간 인터넷을 통해 전송되는 메시지로, 파란 말풍선으로 표시됩니다. 고품질 이미지 동영상, 읽음 알림 등을 지원하고, 완전히 무료로 종단 간 암호화되어 있습니다.</li>
+                        <li>RCS: 전 세계 통신사와 Google이 추진하는 차세대 통신 프로토콜. iMessage나 카카오톡과 유사한 기능을 가지지만, 전화번호 기반입니다. Android 스마트폰 메시지 앱 설정에서 '채팅 기능'을 확인하고 켤 수 있습니다.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 인증 코드 보안:</h5>
+                    <p class="mb-2">시스템은 자동으로 인증 코드 SMS를 식별해서 분류합니다. 수신한 인증 코드를 절대 누구에게도 알리지 마세요.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 스팸 메시지 필터링:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: [설정] > [메시지]에서 '알 수 없는 발신자 필터'를 켭니다.</li>
+                        <li>Android: 메시지 앱 설정에서 '스마트 정보 서비스' 또는 '스팸 메시지 필터'를 켭니다.</li>
+                        <li>일반적인 힌트: 명확한 스팸 홍보 SMS에는, 아무것도 답장하지 마세요('수신 거부' 포함). 직접 삭제하거나, 스팸 메시지로 표시하세요. 답장하면, 당신 번호가 유효하다는 것을 확인할 수 있습니다.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 카카오톡/WeChat: 국민 소셜 앱 관리</h4>
+                    <p class="mb-2">카카오톡과 WeChat은, 통신 도구를 넘어, 소셜, 결제, 정보 취득을 통합한 '슈퍼 앱'이 되었습니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 채팅 기록 백업과 이관:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>중요성: 채팅 기록에는 중요한 파일, 추억, 업무 정보가 포함되어 있지만, 로컬과 서버의 일시적 캐시에만 저장됩니다. 스마트폰 분실이나 앱 재설치로, 기록이 영구히 손실될 수 있습니다.</li>
+                        <li>PC 백업(가장 신뢰할 수 있는):
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>PC 버전 또는 Mac 버전 WeChat/카카오톡에 로그인합니다.</li>
+                                <li>왼쪽 아래 메뉴 > [이관과 백업] > [백업과 복원] 클릭합니다.</li>
+                                <li>'채팅 기록을 PC에 백업' 선택, 스마트폰에서 백업할 채팅 선택합니다.</li>
+                            </ol>
+                            주의: 백업 파일은 PC 로컬에 암호화되어 저장됩니다. 복원 시, 스마트폰과 PC를 같은 Wi-Fi 네트워크에 연결해야 합니다.
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 스토리지 공간 클리닝:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>경로: WeChat [나] > [설정] > [일반] > [스토리지]. 카카오톡 [설정] > [일반] > [스토리지 관리].</li>
+                        <li>클리닝 전략:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>캐시: 안전하게 클리닝할 수 있습니다. 앱 실행 시 생성되는 일시적 데이터입니다.</li>
+                                <li>채팅 기록: 들어가서, 시간, 파일 타입, 또는 개별 채팅별로 상세히 클리닝할 수 있습니다. 예를 들어, 모든 채팅에서 '1년 이상 전' '동영상' 파일을 한 번에 클리닝할 수 있습니다.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 프라이버시와 보안 설정:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>추가 방법: 타인이 당신을 찾는 방법을 제어(전화번호, 사용자 ID, 그룹 채팅 등).</li>
+                        <li>타임라인 권한: 누가 볼 수 있는지, 누구에게 보이지 않을지 설정.</li>
+                        <li>인증 관리: WeChat [설정] > [개인정보와 권한] > [인증 관리]에서, 서드파티 웹사이트나 앱의 WeChat 로그인 인증을 확인하고 해제할 수 있습니다.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 전자 메일: 스마트폰 설정과 사용</h4>
+                    <p class="mb-2">모바일에서 효율적으로 메일을 처리하는 것은 모바일 오피스의 중요한 요소입니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 메일 계정 추가:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>시스템 표준 메일 앱:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS: [설정] > [메일] > [계정] > [계정 추가].</li>
+                                <li>Android: 시스템에 보통 '메일' 앱이 있습니다. 열어서 안내에 따라 추가하세요.</li>
+                            </ul>
+                        </li>
+                        <li>전용 클라이언트 앱: Gmail, Outlook 등. 특정 메일에 최적화되어, 더 강력한 기능을 가집니다.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 모바일 메일 사용 테크닉:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>푸시 알림 관리: 다른 메일 계정에 다른 알림 방법 설정.</li>
+                        <li>제스처 조작: 대부분 메일 앱은, 스와이프 제스처로 빠르게 아카이브, 삭제, 또는 표시할 수 있습니다.</li>
+                        <li>서명: 프로페셔널한 모바일 메일 서명 설정.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 보안상 주의 사항:</h5>
+                    <p class="mb-2">공공 Wi-Fi에서 메일에 로그인하거나, 기밀 메일을 전송할 때는 신중하게 진행하세요.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">본장 연습: WeChat 채팅 기록 PC에 백업</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>PC에서 백업 시작: PC 버전 WeChat 열기 > 왼쪽 아래 메뉴 > [이관과 백업] > [백업과 복원].</li>
+                            <li>PC 백업 선택: '채팅 기록을 PC에 백업' 클릭.</li>
+                            <li>스마트폰에서 백업 내용 선택: 스마트폰 WeChat에 팝업 표시, 백업할 채팅 선택하고 '백업 시작' 탭.</li>
+                            <li>백업 완료 대기.</li>
+                            <li>(옵션) 복원 플로우 이해: 같은 창에서, 다른 옵션은 '채팅 기록을 스마트폰에 복원'입니다.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 제8장 -->
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제8장: 모바일 오피스와 학습</h3>
+                    <p class="mb-3">스마트폰은, 강력한 모바일 워크스테이션과 휴대 학습 센터가 되었습니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 문서 처리: 손바닥에서 편집과 작성</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 주류 애플리케이션 선택:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>한컴오피스: 한국어 현지화가 우수하고, Microsoft 형식과 완전 호환. 풍부한 무료 템플릿과 PDF 도구 세트 내장.</li>
+                        <li>Microsoft 365: 데스크톱 버전 Office와 경험이 고도로 일치. 형식 호환성이 가장 우수하고, OneDrive 클라우드 스토리지와 깊게 통합.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 스마트폰 문서 처리 핵심 테크닉:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>클라우드 동기가 핵심: 작업 파일을 앱 관련 클라우드 드라이브에 저장하고, 자동 저장, 복수 기기 간 원활한 전환, 간단한 협업 확보. 기억했나요?</li>
+                        <li>협업과 공유: 링크 공유 지원, '열람만' 또는 '편집 가능' 권한 설정. 복수인 동시 온라인 편집 지원.</li>
+                        <li>효율적 입력 방법 활용: 장문 초안 입력에 음성 입력 활용.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 메모 앱: 퀵 기록에서 지식 관리까지</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 경량 & 시스템 표준:</h5>
+                    <p class="mb-2">iOS 메모, Android 각 브랜드 메모장 등. 장점: 실행이 빠르고, 시스템과 통합도가 높고, 빠른 메모, 리스트, 일시적 아이디어에 적합합니다.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 만능형 프로페셔널 메모:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Evernote: 강력한 정보 수집 능력과 우수한 전문 검색이 강점.</li>
+                        <li>Notion: 매우 유연하고, 메모, 데이터베이스, 칸반 통합. 모든 콘텐츠가 자유롭게 조합 가능한 '블록'입니다.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 사용의 마음가짐:</h5>
+                    <p class="mb-2">지식 '인박스'를 만들어 정보를 수집하고, 정기적으로 정리·가공하고, 메모 간 링크를 만들어 지식 네트워크를 형성하는 것을 시도하세요.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 스캔과 OCR: 종이 파일을 전자 버전으로</h4>
+                    <p class="mb-2">스마트폰은 휴대용 포터블 스캐너입니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 스캔 원리:</h5>
+                    <p class="mb-2">문서 끝을 자동 검출해서 보정하고, 그림자를 제거하고, 선명한 이미지 생성. OCR 기능은 이미지 내 문자를 편집 가능한 텍스트로 인식합니다.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 도구 선택:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>시스템 표준: iOS '메모'에 스캔 기능 내장. Android 일부 브랜드 카메라 또는 파일 관리 앱에 '문서 스캔' 모드 있습니다.</li>
+                        <li>서드파티 프로페셔널 앱: Microsoft Lens, Adobe Scan, CamScanner.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 조작 순서:</h5>
+                    <p class="mb-2">앱 열어서 문서 향하게 > 자동 또는 수동 캡처 > 조정과 처리 > OCR 실행 > 저장과 공유(복수 페이지 PDF 통합 가능).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 클라우드 드라이브 동기: 당신 모바일 파일 허브</h4>
+                    <p class="mb-2">클라우드 드라이브는, 스마트폰과 PC 연결하는 '데이터 허브'입니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 주류 클라우드 드라이브 서비스 비교:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Google Drive: 글로벌 보급률 높고, 공유 에코시스템 성숙.</li>
+                        <li>iCloud Drive: Apple 에코시스템과 깊게 통합. 동기가 자연스럽고 안전.</li>
+                        <li>OneDrive: Windows와 Office 365와 깊게 통합. Microsoft 에코시스템 사용자 제1선택.</li>
+                        <li>Dropbox: 전 세계 널리 사용, 안정성과 호환성 우수.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 사용 전략:</h5>
+                    <p class="mb-2">iCloud/브랜드 클라우드는 시스템과 개인 핵심 데이터 백업에 사용. Google Drive/OneDrive/Dropbox는 대용량 파일 스토리지와 업무 협업에 사용.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">본장 연습: 스마트폰 문서 스캔해서 PDF 생성</p>
+                        <p class="mt-1">조작 순서(Microsoft Lens 또는 iOS 메모 예):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>도구 선택: iOS는 '메모' 열기 > 신규 > 카메라 아이콘 탭 > '문서 스캔'. Android/범용은 'Microsoft Lens' 다운로드해서 열기.</li>
+                            <li>스캔 촬영: 문서 향하게, 앱이 틀 자동 인식하면 촬영. 복수 페이지 추가 가능.</li>
+                            <li>효과 강화: '흑백' 필터 선택해서 문서 더 선명하게.</li>
+                            <li>OCR 인식: 완료 후, PDF 출력 선택, '텍스트 복사' 또는 유사 버튼 클릭해서 문자 추출.</li>
+                            <li>저장과 명명: 파일 명확한 이름 붙여서 저장.</li>
+                            <li>검증과 공유: PDF 열어서 품질 확인, 메일 또는 카카오톡 공유 시도.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 제9장 -->
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제9장: 모바일 결제와 생활 서비스</h3>
+                    <p class="mb-3">스마트폰은, 지갑, 교통카드, 나아가 실체 신분증을 대체하고 있습니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 모바일 결제: 바인딩, 결제와 보안 관리</h4>
+                    <p class="mb-2"><strong>보안은 사용의 전제입니다.</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 은행 카드 바인딩:</h5>
+                    <p class="mb-2">1-2장의 상용 카드만 바인딩하는 것을 권장합니다. 은행 II류/III류 전자 계좌를 모바일 결제 전용으로 사용하고, 메인 계좌 리스크 분리 가능.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 결제 방법:</h5>
+                    <p class="mb-2">결제 코드, 스캔해서 결제, 송금, 스마트폰 NFC 결제. 반드시 '실행 시 인증' 또는 '보안 잠금' 켜고, 스마트폰 분실 시 부정 사용 방지.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 핵심 보안 관리:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>비밀번호와 생체 인증 결제: 반드시 독립된 결제 비밀번호 설정, 지문 또는 얼굴 인증 결제 켜세요.</li>
+                        <li>보안 잠금: 결제 앱 설정에서 '보안 잠금' 찾아, '마이페이지' 또는 '월렛' 페이지 들어갈 때 인증 필요하도록 설정 권장.</li>
+                        <li>로그인 기기 관리: 정기적으로 확인, 잘 사용하지 않는 기기 로그인 인증 삭제.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 대중교통 코드: 지하철, 버스</h4>
+                    <p class="mb-2">스마트폰이 당신 교통카드 됩니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 개통 방법:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>모바일 결제 앱: '교통카드' 검색, 해당 도시 전자 교통카드 개통.</li>
+                        <li>브랜드 스마트폰 교통카드: Samsung Pay, Apple Pay, Google Pay 등 월렛 앱 내에서, 가상 교통카드 개통. NFC 태그 결제. 응답 가장 빠르고, 오프라인 대응.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 사용 테크닉:</h5>
+                    <p class="mb-2">NFC 미대응 개찰구, 또는 스마트폰 배터리 떨어졌을 때, 모바일 결제 앱 대중교통 코드로 전환 사용 가능.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 공공요금 납부, 배달, 택시 앱 사용 테크닉</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>공공요금 납부: 모바일 결제 앱 '공공요금'에서 고객번호 바인딩, 수도, 전기, 가스 등 요금 납부.</li>
+                        <li>배달: 다른 플랫폼(배달의민족, 요기요 등) 같은 가게도 할인 다를 수 있음. 복수 플랫폼 비교.</li>
+                        <li>택시: 긴급 연락처 설정, 경로 공유 켜기. 플랫폼 내 결제 우선, 오프라인 거래 피하세요.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 전자 신분증 보관과 사용</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 전자 신분증:</h5>
+                    <p class="mb-2">일부 지역에서는, 공식 정부 앱에서 전자 신분증, 전자 운전면허증 도입, 특정 장면 사용 가능하지만, 모든 장면 적용되는 것은 아닙니다.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 보관 테크닉:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>스마트폰 '월렛' 추가, 잠금 화면에서 빠르게 호출 가능하도록.</li>
+                        <li>Android 앱 아이콘 길게 눌러서, 특정 기능(예: '내 건강보험증') 데스크톱 바로가기로 드래그 가능.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">본장 연습: 결제 앱 더 안전한 잠금 설정</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>생체 인증 결제 확인하고 켜기: 결제 앱에서 지문/얼굴 인증 결제 켜져 있는지 확인.</li>
+                            <li>'보안 잠금' 설정: 결제 앱 보안 설정에서 '보안 잠금' 찾아, '월렛' 들어가거나 자금 조작할 때 인증 필요하도록 설정.</li>
+                            <li>로그인 기기 확인: 보안 설정에서, 모르는, 사용하지 않는 기기 모두 삭제.</li>
+                            <li>계정 보호 이해: 결제 앱 계정 보안 보험 상세 확인.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 제10장 -->
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제10장: 촬영과 사진 관리</h3>
+                    <p class="mb-3">본장에서는, 스마트폰으로 훌륭한 영상 만들고, 시각적 추억 효율적으로 관리하는 전 플로우 마스터합니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 스마트폰 카메라 기초: 야경, 인물, 프로 모드</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>야경 모드</strong>: 복수 장 합성으로, 어두운 장소 밝기와 디테일 향상. 촬영 시 2-4초간 손에 들고 안정시켜야 합니다.</li>
+                        <li><strong>인물 모드</strong>: DSLR 카메라 얕은 피사계 심도 효과(배경 아웃포커싱) 시뮬레이션. 인물 초점 맞추고, 1-2미터 거리 유지 촬영. 나중에 아웃포커싱 강도 조정 가능.</li>
+                        <li><strong>프로 모드</strong>: 핵심 파라미터 수동 제어.
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>ISO: 낮을수록 화질 좋고, 어두운 장소에서 높이면 노이즈 발생.</li>
+                                <li>셔터 스피드: 고속으로 순간 고정, 저속으로 궤적 기록(안정 필요).</li>
+                                <li>화이트 밸런스: 색 경향 조정.</li>
+                                <li>노출 보정: 화면 전체 밝게 또는 어둡게 조정.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 사진 구도와 리터치</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 기본 구도 법칙:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>삼분할법: 관심 포인트 화면 가로세로 삼등분 교차점에 놓기.</li>
+                        <li>유도선: 도로, 강 등 이용해서 시선 피사체로 유도.</li>
+                        <li>단순하게 시작: 촬영 시 의식적으로 화면 수평 수직 유지.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 리터치 처리 플로우(Snapseed, VSCO 등 앱 사용):</h5>
+                    <ol class="list-alpha pl-6 mb-3 space-y-1">
+                        <li>보정: 회전과 원근 크롭 진행.</li>
+                        <li>기본 조정: 밝기, 콘트라스트 조정. 하이라이트 내리고, 그림자 올리기.</li>
+                        <li>부분 수정: 특정 영역 가감광, 흠 제거 진행.</li>
+                        <li>스타일링: 필터 추가, 색조 조정.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 사진 관리: 혼란에서 질서로</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 스마트폰 앨범 핵심 관리 기능:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>스마트 분류: 자동으로 시간, 장소, 인물, 장면 분류.</li>
+                        <li>검색: 키워드, 장소, 시간, 나아가 화면 내 문자로 전역 검색 가능.</li>
+                        <li>일괄 조작: 복수 선택 후, 일괄 공유, 앨범 추가, 또는 삭제 가능.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 사진 백업과 공간 해방:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>클라우드 백업: iOS iCloud 사진 사용, 'iPhone 스토리지 최적화' 켜기. Android/크로스 플랫폼 Google 포토 또는 다른 클라우드 서비스 사용.</li>
+                        <li>공간 해방: 시스템 도구 사용, 또는 수동으로 거대한 동영상이나 연사 사진 클리닝.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 스크린샷과 화면 녹화: 정보 캡처와 공유</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 기본 조작:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>일반적 단축키: [전원 버튼] + [볼륨 업 버튼] 동시 누르기.</li>
+                        <li>고급 캡처: 긴 스크린샷/스크롤 스크린샷, 영역 스크린샷.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 화면 녹화:</h5>
+                    <p class="mb-2">제어 센터에 '화면 녹화' 버튼 추가. 시작 전 길게 눌러서, 마이크 녹음으로 해설 켜기 가능.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 즉시 편집:</h5>
+                    <p class="mb-2">스크린샷 후, 썸네일 탭해서 편집 화면 들어가, 주석, 크롭, 모자이크 등 조작 가능.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">본장 연습: 프로 모드 야경 사진 촬영</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>준비: 안정된 광원 있는 장면 찾고, 삼각대 사용 또는 스마트폰 안정시키는 것 권장.</li>
+                            <li>프로 모드 들어가기: 카메라 앱 열어서 '프로' 모드 전환.</li>
+                            <li>파라미터 설정:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>ISO: 최저값(50 또는 100) 설정.</li>
+                                    <li>셔터 스피드: 1초에서 수초(예: 2초) 설정.</li>
+                                    <li>포커스: 매뉴얼 포커스 설정, 슬라이더 드래그해서 멀리 조명 선명해질 때까지 조정.</li>
+                                </ul>
+                            </li>
+                            <li>촬영과 확인: 셔터 탭, 절대 정지 상태 유지. 사진 확인, 밝기에 따라 파라미터 조정.</li>
+                            <li>비교 체험: 자동 야경 모드로도 한 장 촬영, 양자 차이 비교.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 제11장 -->
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제11장: 엔터테인먼트와 독서</h3>
+                    <p class="mb-3">스마트폰은, 우리 가장 중요한 엔터테인먼트 센터이고, 워크맨, 영화관, 도서관, 게임기 통합하고 있습니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 음악과 팟캐스트: 당신 휴대 사운드스케이프</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 온라인 스트리밍 서비스:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>글로벌: Spotify, Apple Music. 곡 라이브러리 글로벌, 음질 선택 풍부.</li>
+                        <li>한국: 멜론, 지니, 벅스. 플레이리스트 커뮤니티와 퍼스널라이즈 추천 특징.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 팟캐스트:</h5>
+                    <p class="mb-2">앱: Apple Podcasts, Spotify, Google Podcasts. 사용 테크닉: 채널 구독, 사전 다운로드, 재생 속도 조정으로 효율적 시청.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 비디오 플레이어: 로컬 재생과 스트리밍</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 로컬 비디오 재생:</h5>
+                    <p class="mb-2">VLC, nPlayer 등 만능 플레이어 권장. 거의 모든 형식과 외부 자막 지원.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 온라인 스트리밍 비디오:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>종합 플랫폼: YouTube, Netflix, Wavve, TVING, 쿠팡플레이.</li>
+                        <li>사용 테크닉: 콘텐츠 사전 캐시. '캐스트' 기능 활용 TV 시청.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 전자책 독서: Epub, PDF 리더</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 독서 플랫폼 선택:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>웹 소설과 출판 서적: Kindle, Apple Books, Google Play 북스, 밀리의 서재, 리디.</li>
+                        <li>전문서와 문서: Apple Books, Adobe Acrobat Reader(PDF 주석).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 독서 최적화 설정:</h5>
+                    <p class="mb-2">배경색, 폰트 커스터마이즈. 북마크, 하이라이트, 메모 기능 활용. 일부 앱 낭독 지원.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.4 게임 모드와 퍼포먼스 조정</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 게임 모드/게임 툴박스:</h5>
+                    <p class="mb-2">게임 실행 시 자동 활성화. 퍼포먼스 모드 전환, 방해 금지 모드, 퀵 녹화, 플로팅 윈도우 툴 등 기능 제공.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 수동 퍼포먼스 조정:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>게임 내: 스마트폰 성능에 따라 화질, 프레임 레이트 조정. 프레임 레이트 부드러움 우선하는 것 중요.</li>
+                        <li>시스템 레벨: 게임 지원하는 경우, 시스템 설정에서 고 리프레시 레이트 모드(예: 120Hz) 켜기.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 건강한 게임 습관:</h5>
+                    <p class="mb-2">시스템 '스크린 타임' 기능 이용 시간 알림 설정. 게임 내 과금에 결제 인증 설정.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">본장 연습: 전용 '비행기 모드' 엔터테인먼트 패키지 구성</p>
+                        <p class="mt-1">조작 순서: 완전한 오프라인 엔터테인먼트 콘텐츠 일식 사전 다운로드 계획.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>음악 패키지: 음악 앱에서 좋아하는 플레이리스트 또는 앨범 다운로드.</li>
+                            <li>비디오 패키지: 스트리밍 앱에서 영화 또는 드라마 캐시.</li>
+                            <li>독서 패키지: 전자책 앱에서 1-2권 책 다운로드.</li>
+                            <li>게임 패키지: 완전 오프라인 가능한 단기 게임 1-2개 설치.</li>
+                            <li>통합과 테스트: '비행기 모드' 켜고, 모든 콘텐츠 오프라인 접근 가능 확인. 관련 앱 '오프라인 엔터' 폴더 정리.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 제12장 -->
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제12장: 추천 도구 앱</h3>
+                    <p class="mb-3">본장에서는, 효율 진짜 향상시키고, 건강 촉진하고, 외출 편리하게 하는 도구 앱 엄선 소개합니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 효율 도구: 시간과 주의력 관리</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. ToDo 리스트와 태스크 관리:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>앱 선택:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>경량 편리: 시스템 메모장, Microsoft To Do.</li>
+                                <li>기능 충실: Todoist, TickTick(자연어 인식 우수, 뽀모도로 타이머 통합).</li>
+                                <li>칸반 관리: Trello 또는 Notion 칸반 뷰. 프로젝트 시각적 관리 적합.</li>
+                            </ul>
+                        </li>
+                        <li>사용 마음가짐: 태스크 '인박스' 즉시 수집. 정기적으로 정리 날짜 설정. 매일 '오늘' 리스트만 주목.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 뽀모도로 타이머:</h5>
+                    <p class="mb-2">앱: Forest, Focus To-Do. 원칙: 25분 집중, 5분 휴식, 반복.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 캘린더:</h5>
+                    <p class="mb-2">시스템 캘린더 또는 Google Calendar 사용. 예약, 마감, 나아가 '집중 시간 블록'도 캘린더 넣고, 시간 배분 시각화.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 건강 운동: Apple Health, Google Fit, Fitbit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>운동 지도와 기록: Nike Training Club, Strava 등 풍부한 피트니스 코스 제공. 브랜드 헬스 앱(예: Samsung Health) 스마트 밴드 데이터와 깊게 통합.</li>
+                        <li>Apple Health / Google Fit: 데이터 허브. 스마트폰, 스마트 밴드, 서드파티 헬스 앱 모든 데이터 집약, 통일된 건강 기록 형성. 정기적으로 '트렌드' 리포트 확인.</li>
+                        <li>사용 어드바이스: 달성 가능한 목표 설정. 적당한 리마인더 너무 많이 허용하지 않도록.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 여행 외출: 당신 만능 가이드</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 지도와 내비게이션:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>한국 내: 네이버 지도, 카카오맵. 상세하고 실시간 교통 정보 풍부.</li>
+                        <li>해외 출행: Google Maps. 글로벌 데이터, 스트리트 뷰, 사용자 리뷰 우위.</li>
+                        <li>하이킹과 아웃도어: AllTrails. 궤적 기록, 오프라인 맵 다운로드 가능.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 번역:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>실시간 대화: Google 번역 '대화'와 '카메라' 즉시 번역 여행 신기.</li>
+                        <li>텍스트와 문서: DeepL 구미 언어 간 번역 정확도 높음.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 여정 계획:</h5>
+                    <p class="mb-2">'TripIt' 등 앱 자동으로 루트 생성, 항공권 호텔 정보 관리, 여정표 작성.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.4 틈새지만 강력: 자동화 도구 입문</h4>
+                    <p class="mb-2">이것 스마트폰 '스마트 어시스턴트' 업그레이드 키입니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 자동화란?:</h5>
+                    <p class="mb-2">설정한 조건 충족될 때, 스마트폰 자동으로 일련 프리셋 조작 실행하도록. 예: 귀가 시 자동 Wi-Fi 연결 음악 재생, 취침 시 자동 화면 어둡게.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iOS '단축어':</h5>
+                    <p class="mb-2">Apple 공식 자동화 도구. 프로그래밍 불필요.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>핵심 개념: '단축어' 수동 탭 실행 가능 워크플로. '자동화' 조건 기반 자동 실행 지시.</li>
+                        <li>입문 패스: 먼저 '단축어 갤러리' 기성 단축어 추가 사용. 다음 간단한 단축어 생성 시도. 마지막 '자동화' 탭 개인 자동화 탐색.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Android 자동화 솔루션:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>시스템 레벨: 각 브랜드 시스템(예: One UI, MIUI) '시나리오 연동' 등 기본 자동화 기능 통합 경우 있음.</li>
+                        <li>신기급 앱: Tasker. 기능 매우 강력하지만, 학습 곡선 가파름.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">본장 연습: '취침 릴랙스' 자동화 플로우 생성</p>
+                        <p class="mt-1">참고안(iOS '단축어' 자동화 사용):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>트리거 조건 생성: 단축어 앱 열기 > [자동화] > [개인 자동화 생성] > '특정 시간'(예: 22:30, 매일) 선택.</li>
+                            <li>실행 액션 추가: 미디어 볼륨 내리기 > '방해 금지 모드' 켜기 > 특정 릴랙스 플레이리스트 재생 > 화면 밝기 최저로 > 알림 표시: '취침 릴랙스 타임입니다. 스마트폰 내려놓으세요.'</li>
+                        </ol>
+                        <p class="mt-2">Android 참고안: 시스템 표준 '시나리오' 기능 또는 Tasker 사용, 유사 트리거 조건과 액션 설정.</p>
+                        <p class="mt-1">연습 순서: 스마트폰 시스템 따라 도구 선택, '취침 릴랙스' 이름 자동화 생성. 중요 액션(볼륨 조정과 방해 금지 모드 켜기 포함) 추가. 저장하고 테스트.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 三、응용편 -->
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">三、응용편 (제13-17장)</h2>
+
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제13장: 배터리 과학과 절전 최적화</h3>
+                    <p class="mb-3">배터리는 스마트폰의 '에너지 심장'입니다. 이 장에서는, 배터리 특성을 이해하고, 과학적인 충전과 절전 테크닉을 배우고, 배터리 불안을 완전히 해소합니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 배터리란? 사이클과 건강도</h4>
+                    <p class="mb-2">스마트폰 배터리(리튬이온 또는 리튬폴리머)는, 에너지 스펀지와 같습니다: 충전은 물 흡수(축전), 방전은 물 짜기(사용)입니다. 그 3대 특징을 기억해 두세요:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>수시 충전: 낡은 배터리와 달리, 메모리 효과가 없고, 다 쓰고 나서 충전할 필요가 없습니다. 0%까지 쓰거나, 항상 100%로 꽉 채우면, 오히려 손상합니다.</li>
+                        <li>열을 두려워함: 고온은 배터리의 천적입니다.</li>
+                        <li>열화함: 장기간 사용하면, 최대 용량이 저하됩니다. 이것은 정상적인 현상입니다.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">핵심 지표: 사이클 횟수와 건강도</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>1사이클은 1회 충전이 아닙니다. 예를 들어, 오늘 60% 쓰고 꽉 채우고, 내일 40% 쓰고 꽉 채우면, 합계 100% 전력 소비로 1사이클로 카운트됩니다.</li>
+                        <li>배터리 건강도는, 현재 최대 용량이 신품 시의 몇 퍼센트인지 나타냅니다. 80%를 밑돌면, 배터리 지속이 명확히 짧아지고, 공식 배터리 교체를 검토할 수 있습니다.</li>
+                        <li>확인 방법:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: 설정 > 배터리 > 배터리 상태와 충전.</li>
+                                <li>Android: 보통, 설정에서 '배터리 상태' 검색하면 찾을 수 있습니다.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 충전의 미신? 급속 충전, 무선 충전과 황금 법칙</h4>
+                    <p class="mb-2">소문을 씻고, 과학적으로 충전.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 급속 충전은 배터리를 손상시키나?</h5>
+                    <p class="mb-2">순정 또는 인증된 급속 충전 액세서리를 사용하면, 손상은 미미합니다. 스마트폰과 충전기에는 온도 제어가 있고, 과열 시 자동으로 출력을 내립니다. 잡브랜드 급속 충전기는 사용하지 마세요.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 무선 충전은 어떤가?</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>편리: 올려두기만 충전. 밤 잘 때 사용하기 적합합니다.</li>
+                        <li>단점: 효율이 낮고, 발열이 눈에 띄고, 충전이 느림.</li>
+                        <li>조언: 한 밤 충전에는 적합합니다(수시로). 급히 충전할 때는 유선 급속 충전 사용. 사용 시 두꺼운 케이스 벗으세요.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 배터리 황금 양생 법칙</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>최적 전력 범위: 가능한 한 전력을 20%-80% 사이 유지하고, 0%로 '공복' 또는 100%로 '만복'하지 않도록.</li>
+                        <li>한 밤 충전은 안전? 안전합니다! 꽉 차면 자동으로 충전이 정지하고, 스마트폰은 전원에서 직접 급전됩니다.</li>
+                        <li>절대 대형 게임을 하면서 충전하지 마세요. 열 겹침이 배터리 손상.</li>
+                        <li>장기간 스마트폰 사용 안 함: 50% 정도 충전해서 전원 끄고 보관.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 이것이 진짜 절전 테크닉</h4>
+                    <p class="mb-2">배터리 건강만으로는 부족. 설정이야말로 절전 필살기입니다.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. '전력 대식가' 찾아내기</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>화면(전력 소비 왕): 밝기 내리고, 자동 잠금 시간 짧게. OLED 화면 스마트폰은 반드시 다크 모드 켜기. 상당히 절전.</li>
+                        <li>신호 나쁨: 엘리베이터, 지하에서는, 스마트폰이 필사적으로 신호 찾고, 전력 급속 소모.</li>
+                        <li>5G: 신호 나쁜 경우 수동으로 4G 전환하면, 배터리 지속 대폭 개선.</li>
+                        <li>위치 정보 서비스:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>내비게이션 외 앱(예: SNS, 쇼핑) 위치 정보 권한은 '사용 중에만 허용' 설정.</li>
+                                <li>시스템 위치 정보에서 '위치 기반 광고' 등 불필요 옵션 끄기.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 앱 '입' 관리</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>백그라운드 활동 제한:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: 설정 > 일반 > 백그라운드 App 업데이트. 모두 끄거나, 카카오톡만 남기기.</li>
+                                <li>Android: 앱 배터리 설정에서, 잘 사용하지 않는 앱에 대해 '백그라운드 활동 금지' 선택.</li>
+                            </ul>
+                        </li>
+                        <li>불필요 알림 끄기: 화면 켜지고, 진동할 때마다 전력 소모.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 구명 끈: 절전 모드</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>절전/저전력 모드: 시스템이 성능 내리고, 백그라운드 동기 정지. 일시적 응급에 매우 효과적.</li>
+                        <li>초절전/극한 모드: 전화, SMS, 극소수 앱만 남고, 화면 흑백. 마지막 전력 짜내서 명 잇기.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 실전 연습: 배터리 건강 진단</p>
+                        <p class="mt-1">목표: 데이터 사용해서 진짜 전력 소비 범인 찾아내기.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>건강도 확인: 위 방법으로, 배터리 최대 용량 찾아서 메모.</li>
+                            <li>전력 소비 상세 분석:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: 설정 > 배터리 가서, 아래 그래프와 앱 리스트 보고, 어떤 앱 백그라운드 활동 시간 긴지 주목.</li>
+                                    <li>Android: 설정 > 배터리 > 배터리 사용 현황 가서, 하드웨어와 앱 전력 소비 랭킹 보기.</li>
+                                </ul>
+                            </li>
+                            <li>대책 수립:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>특정 앱 백그라운드 전력 소비 이상 시 → 제한.</li>
+                                    <li>'모바일 네트워크' 전력 소비 높을 시 → 신호 나쁜 장소에 오래 있었는지 생각.</li>
+                                    <li>잘 사용하지 않는 앱 랭크인 시 → 삭제 검토.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제14장: 계정 체계와 클라우드 서비스</h3>
+                    <p class="mb-3">당신의 스마트폰 계정은, 앱 다운로드를 위한 비밀번호 이상입니다. 그것은 디지털 라이프의 '영혼의 여권'이고, 클라우드 서비스는 모든 데이터를 유동시키는 '보이지 않는 고속도로'입니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 3대 핵심 계정: Apple, Google과 각 브랜드</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple ID: Apple 에코시스템 만능 열쇠</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>역할: App Store, iCloud 동기, iPhone 찾기, FaceTime 등, 모두 이것에 의존. iPhone, iPad, Mac 간 원활 전환.</li>
+                        <li>보안 마지노선: 이중 인증 반드시 켜세요! 이것으로, 비밀번호 유출돼도, 타인은 새 기기 로그인 불가.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Google 계정: Android와 Google 서비스 핵심</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>역할: 연락처, 캘린더, Gmail, Chrome 북마크, 포토 백업 동기.</li>
+                        <li>보안 마지노선: 마찬가지로, 2단계 인증 프로세스 켜는 것이 중요.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 각 브랜드 계정: 로컬 만능 관리인</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>역할: 클라우드 공간 백업, 앱 스토어, 스마트폰 찾기, 크로스 기기 연동(예: 멀티스크린 협조).</li>
+                        <li>주의: 클라우드 데이터가 국내 서버 존재 이해, 프라이버시 정책 읽고, 어떤 데이터 동기되는지 파악.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">🔐 계정 보안 공통 법칙</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>강력한 비밀번호+비밀번호 매니저: iCloud 키체인 또는 Bitwarden 등 도구로 관리.</li>
+                        <li>이중 인증 켜기: 이것은 도난 방지 생명선.</li>
+                        <li>로그인 기기 정기 확인: 모르는 기기 삭제.</li>
+                        <li>피싱 링크 주의: 불명한 링크에서 비밀번호 요구받아도, 절대 클릭 마세요. 수동으로 공식 사이트 주소 입력.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 클라우드 동기: 데이터 직접 움직이기</h4>
+                    <p class="mb-2">클라우드 동기 켜면, 데이터는 스마트폰 안에 있는 것처럼 느껴지지만, 실제로는 안전하게 클라우드에 있고, 모든 기기 일관성 유지.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 클라우드 동기는 무엇을 할 수 있나?(iCloud 예)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>연락처, 캘린더, 메모: 어떤 기기에서 변경해도, 다른 기기에 즉시 동기.</li>
+                        <li>사진 동영상: iCloud 사진 켜면, 모든 사진 업로드, 스마트폰에는 작은 크기 남음(공간 절약). 어떤 Apple 기기에서 원본 크기 볼 수 있음.</li>
+                        <li>자동 전체 백업: 스마트폰 충전 중, 잠금 상태 Wi-Fi 연결 시, 시스템 설정, 앱 레이아웃 등 자동 백업. 새 스마트폰 복원 시 신기.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ⚠️ 중요 구별: 동기 vs 백업</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>동기=양방향 일관성: A 기기에서 사진 삭제하면, B, C 기기 것도 사라짐. 모든 기기 같게 유지 목적.</li>
+                        <li>백업=단방향 스냅샷: 스마트폰 스냅샷 찍어서 저장하는 것. 나중에 로컬 데이터 삭제해도, 클라우드 백업 남음. 복원 목적.</li>
+                        <li>기억: iCloud 사진 동기를 백업으로 취급 마세요! 모든 기기에서 실수로 삭제하면, 클라우드에서도 사라짐. 진짜 백업은, PC 전체 백업(iTunes/Finder) 또는 서드파티 클라우드 스토리지(업로드만, 삭제 없음) 필요.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 가족 공유: 1회 구매, 가족 전원 즐기기</h4>
+                    <p class="mb-2">이것은 가장 친한 가족과 디지털 리소스 공유 신기.</p>
+                    <p class="mb-2">Apple '가족 공유' 예, 다음 공유:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>앱, 음악, 영화, 북: 당신이 구매한 것은, 가족 전원(최대 5인) 다운로드 가능, 추가 요금 없음. 가장 효율적 소프트웨어 구매 방법.</li>
+                        <li>Apple Music, iCloud+ 등 구독: 패밀리 플랜 구독은 보통, 개인보다 저렴.</li>
+                        <li>위치 정보 공유: 가족 실시간 위치 확인(예: 아이 하교). 지오펜스 설정, 도착 또는 출발 시 알림. 안전하고 안심.</li>
+                        <li>공유 앨범과 캘린더: 함께 사진 놓고, 가족 이벤트 기록.</li>
+                    </ul>
+                    <p class="mb-2">💡 주의: 완전히 신뢰할 수 있는 직계 가족만 초대. 위치 정보 공유는 양방향. 프라이버시 상호 존중.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 실전 연습: 계정 동기 내용 확인</p>
+                        <p class="mt-1">목표: 능동적으로 관리하고, 혼란 동기 작별.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>iPhone 예: 설정 > 위쪽 당신 이름.</li>
+                            <li>iCloud 동기 항목 확인: 'iCloud' 탭, 리스트 내 각 앱 스위치 확인.
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>연락처, 캘린더는 켜기 권장.</li>
+                                    <li>'사진' 중점 주목: iCloud 사진 로직(한 곳 삭제하면, 어디서든 삭제) 이해 확인.</li>
+                                    <li>사용하지 않는 서드파티 앱 동기 끄기 가능, 공간 절약.</li>
+                                    <li>iCloud 백업 켜져 있는지 확인.</li>
+                                </ul>
+                            </li>
+                            <li>찾기와 위치 정보 확인: 'iPhone 찾기' 켜져 있는지 확인(도난 방지 필수). 가족 공유 위치 설정 기대대로인지 확인.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제15장: 스마트폰과 다른 기기 연동</h3>
+                    <p class="mb-3">현대 스마트폰은 당신의 퍼스널 디지털 센터. 다른 기기와 팀 짜는 법 배우면, 효율 배가.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 PC와 협조: 생산성 폭발</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 파일 전송, 데이터 케이블 작별</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>무선 왕자:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Apple 에코시스템: AirDrop. iPhone과 Mac 간 파일, 사진 순간 전송. 네트 불필요, 무손실.</li>
+                                <li>Android+Win: <strong>'Phone Link'</strong> 기능 사용. PC상에서 직접 스마트폰 사진 보거나, SMS 답장.</li>
+                                <li>브랜드 에코시스템: Samsung Flow, Huawei Share 등. 스마트폰 화면 직접 PC 미러링. PC 마우스와 키보드로 스마트폰 앱 조작. 파일 양방향 드래그.</li>
+                            </ul>
+                        </li>
+                        <li>물리적 직접 연결: 데이터 케이블로 PC 연결, '파일 전송' 모드 선택. 안정적 고속. 대용량 파일 전송 적합.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 멀티스크린 인계</h5>
+                    <p class="mb-2">Apple Handoff: iPhone에서 웹페이지 보면, Mac 프로그램 독에 Safari 아이콘 표시, 클릭하면 계속 볼 수 있음. 문자 복사하면, 다른 기기에서 직접 붙여넣기.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 스마트워치/밴드 연동: 손목 어시스턴트</h4>
+                    <p class="mb-2">핵심 기능:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>알림 필터: 스마트폰 메시지 워치 푸시. 손목 들기만 확인. 중요하지 않은 것 스와이프 무시. 스마트폰 꺼내는 횟수 줄임.</li>
+                        <li>건강 데이터 스테이션: 워치 24시간 심박수, 수면 측정. 데이터 스마트폰 앱에서 리포트 확인.</li>
+                        <li>만능 리모컨: 스마트폰 음악 재생 원격 조작, 스마트폰 카메라 셔터 사용(단체 사진 초편리).</li>
+                        <li>손목 태그: 스마트폰 월렛에서 연 교통카드, 출입카드 워치 동기. 손목 들기만 태그.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 스마트 홈 연동: 주머니 속 총 리모컨</h4>
+                    <p class="mb-2">스마트폰 3중 역할:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>리모컨: Google Home, Amazon Alexa, Apple Home 등 앱으로 직접 조명 온/오프, 에어컨 온도 조절.</li>
+                        <li>시나리오 디렉터: '영화 감상 모드' 설정. 원터치 메인 조명 끄기, 분위기 조명 켜기, 스크린 내리기, 에어컨 조절.</li>
+                        <li>설정 센터: 모든 스마트 기기 설정 스마트폰 앱 통해 진행 필요.</li>
+                    </ol>
+
+                    <p class="mb-2">에코시스템 추천:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone 사용, 프라이버시 중시 → Apple HomeKit 대응 기기 선택.</li>
+                        <li>기기 많고, 가성비 추구 → Google Home 또는 Amazon Alexa 에코시스템 가장 충실.</li>
+                        <li>Samsung 스마트폰 사용 → Samsung SmartThings 우선.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 실전 연습: 스마트폰 화면 TV 미러링</p>
+                        <p class="mt-1">목표: 대화면 사진 동영상 공유, 게임 플레이. 상쾌!</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>스마트폰과 TV 같은 Wi-Fi 연결 확인.</li>
+                            <li>TV에서: '화면 미러링', 'Miracast' 또는 'AirPlay' 기능 찾아 켜기.</li>
+                            <li>스마트폰에서:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: 오른쪽 위에서 아래 스와이프 제어 센터 열기, '화면 미러링' 탭. TV 선택.</li>
+                                    <li>Android: 빠른 설정 아래 스와이프, '무선 디스플레이', '스마트 뷰' 찾아, TV 선택.</li>
+                                </ul>
+                            </li>
+                            <li>성공! 스마트폰 화면과 소리가 TV 동기.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제16장: 데이터 백업과 이관</h3>
+                    <p class="mb-3">사진, 채팅 기록은 가치 없는 보물. 이 장에서는, 디지털 자산 보험 들고, 원활히 신기종 갈아타는 법 가르칩니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 전체 백업: 가장 철저한 '클론'</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. PC 로컬 백업(가장 신뢰할 수 있는)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone + PC: 데이터 케이블 연결. iTunes(Win) 또는 Finder(Mac) 열어, '지금 백업' 클릭. 반드시 '로컬 백업 암호화' 체크. 이것으로, 건강 데이터와 비밀번호 데이터 백업. 복원 시, 새 스마트폰 연결해서 '백업에서 복원' 선택.</li>
+                        <li>Android 브랜드기 + PC 소프트웨어: 각 브랜드 공식 도구(Samsung Smart Switch, Xiaomi PC Suite 등) 사용. 기능 유사.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 클라우드 백업(가장 수고 덜기)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iCloud 백업: 설정에서 켜기. 스마트폰 충전 중, 잠금 상태 Wi-Fi 연결 시 자동 백업. 새 iPhone 활성화 시 'iCloud 백업에서 복원' 선택만.</li>
+                        <li>주의: 무료 5GB는 전혀 부족. 보통, 유료 iCloud+ 업그레이드 필요.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 선택적 백업: 중점 보호</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>사진 동영상: iCloud 사진/Google 포토/브랜드 클라우드 포토 켜면, 지속적 백업. 또는, 정기적으로 데이터 케이블로 PC 복사.</li>
+                        <li>연락처 등: iCloud/Google/브랜드 계정에 있는 한, 다른 스마트폰 로그인하면 자동 돌아옴.</li>
+                        <li>⚠️ 카카오톡/WeChat 채팅 기록(최중요):
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>기종 변경 시: 앱 내 '채팅 기록 이관' 기능 사용. Wi-Fi 직접 연결. 구기에서 신기 전송. 가장 추천.</li>
+                                <li>장기 백업: PC 버전 앱 '백업과 복원' 기능 사용. PC 로컬 백업. 가장 안전——이것 중요.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 기종 변경 가이드: 3대 이관 경로</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Android → Android</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>동일 브랜드(예: Samsung → Samsung): 공식 '스마트폰 클론' 앱 사용. QR코드 스캔하면, 앱과 데이터 전송. 경험 완벽.</li>
+                        <li>크로스 브랜드: 서드파티 기종 변경 도구, 또는 사전 사진 연락처 클라우드(예: Google 포토) 동기, 신기 로그인 다운로드.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iPhone → iPhone</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iCloud 복원: 신기 활성화 시 iCloud 백업에서 복원 선택.</li>
+                        <li>빠른 시작: 신구 iPhone 가까이. 구기 설정 애니메이션 표시, QR코드 스캔하면 무선 모두 이관. 경험 훌륭.</li>
+                        <li>주의: 장시간 소요. 충전과 네트워크 유지.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 크로스 플랫폼(Android↔iPhone) 가장 복잡</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>공식 도구(예: 'Move to iOS' 앱) 사용. 연락처, 사진 등 전송 가능.</li>
+                        <li>핵심 제한: 앱과 앱 데이터(예: 카카오톡/WeChat 채팅 기록, 게임 진행 상황) 이관 불가. 앱 재설치 필요. 데이터 개별 대응(예: 카카오톡 PC 백업 복원)——이것 중요.</li>
+                        <li>수동 전략: 사진 PC 또는 클라우드 중계. 연락처 vCard 파일 내보내기. 중요 앱 데이터 크로스 플랫폼 내보내기 대응 확인.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 실전 연습: 사진과 연락처 수동 PC 백업</p>
+                        <p class="mt-1">목표: 완전히 직접 관리할 수 있는 오프라인 데이터 사본 가짐, 궁극 안심.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>데이터 케이블 준비, 스마트폰과 PC 연결.</li>
+                            <li>사진 백업: PC에서 스마트폰 내부 스토리지 들어가, DCIM과 Pictures 폴더 찾아, 전체 PC 하드디스크 복사.</li>
+                            <li>연락처 백업:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: 연락처 iCloud 있는지 확인. iCloud.com 웹 버전 접속, '연락처' 들어가, 모두 선택 vCard 파일 내보내기, PC 저장.</li>
+                                    <li>Android: '연락처' 앱 설정에서, '스토리지 기기 내보내기' 찾아, .vcf 파일 생성. 데이터 케이블로 PC 복사.</li>
+                                </ul>
+                            </li>
+                            <li>백업 검증: PC에서 복사 사진 몇 장 열어, .vcf 파일 열어, 정보 모두 있는지 확인.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제17장: 문제 해결과 자가 해결</h3>
+                    <p class="mb-3">스마트폰이 때때로 '병' 걸려도 당황 마세요. 대부분 문제는 직접 해결 가능. 이것이 당신 '스마트폰 응급 매뉴얼'.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 스마트폰 무거움, 발열</h4>
+                    <p class="mb-2">진단 4단계:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>연관 생각: 시스템 업데이트 후? 아니면 특정 앱 설치 후?</li>
+                        <li>스토리지 용량 확인: 남은 10% 밑돌면, 시스템 무거워지는 가장 일반적 원인.</li>
+                        <li>전력 소비 랭킹 확인: 배터리 설정에서, 어떤 앱 백그라운드 전력 소모하는지.</li>
+                        <li>신호 확인: 신호 나쁜 장소에서는, 스마트폰 필사적으로 네트워크 찾고, 발열.</li>
+                    </ol>
+
+                    <p class="mb-2">치료 방법:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>용량 부족 → 즉시 스토리지 클리닝(기초편 참조).</li>
+                        <li>특정 앱 문제 일으킴 → 설정 그 앱 캐시 지우기, 또는 삭제 재설치.</li>
+                        <li>만능 해법: 스마트폰 재시작.</li>
+                        <li>대형 게임 하면서 충전 마세요. 발열 배터리 손상.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 앱 강제 종료, 응답 없음</h4>
+                    <p class="mb-2">표준 처리 플로우:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>앱 닫고, 다시 열기.</li>
+                        <li>앱 스토어 업데이트.</li>
+                        <li>필요 권한(예: 스토리지 권한) 실수로 껐는지 확인.</li>
+                        <li>앱 캐시 지우기(안전, 데이터 손실 없음).</li>
+                        <li>최후 수단: 데이터 지우기/삭제 재설치(로그인 정보 지워짐. 비밀번호 기억 확인).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 전원 안 켜짐, 부팅 화면 멈춤 '궁극 수단'</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>먼저 30분 충전. 완전히 배터리 떨어진 것일 수.</li>
+                        <li>강제 재시작 시도(아래 연습 참조). 대부분 '가사' 해결.</li>
+                        <li>그래도 안 됨: 리커버리 모드 PC 연결 복구 필요할 수 있지만, 이것 모든 데이터 지움(백업 있으면 복원 가능). 그래도 안 되면, 하드웨어 문제 가능, 수리 보내야.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 공식 수리 찾기, 함정 피하기</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>진짜 공식 찾기: 반드시 브랜드 공식 사이트에서 '인증 서비스 제공자' 확인. 또는 스마트폰 설정, 공식 앱에서 서비스 진입 찾기.</li>
+                        <li>수리 전: 반드시 직접 모든 데이터 백업! 계정 로그아웃. 구매 증명서 지참.</li>
+                        <li>비공식 수리 주의: 저질 부품 사용 가능, 프라이버시 유출 가능. 게다가 한 번 열면 공식 보증 상실.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 실전 연습: '강제 재시작' 시뮬레이션</p>
+                        <p class="mt-1">목표: 스마트폰 정상일 때 이 '만능 열쇠' 배우고, 진짜 고장 시 당황 않기.</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>주의: 스마트폰 정상일 때 조작해도 안전. 데이터 삭제 안 되지만, 손 작업 먼저 저장 권장.</li>
+                            <li>방법:
+                                <ul class="list-circle pl-6 mt-1 space-y-1">
+                                    <li>풀스크린 iPhone: 볼륨 업 빠르게 1회 누르고, 볼륨 다운 1회 누르고, 측면 전원 버튼 길게 누름. Apple 로고 표시될 때까지.</li>
+                                    <li>Android 범용: 전원 버튼 10-15초 길게 누름. 재시작할 때까지.</li>
+                                    <li>(구체적 모델 따라 다소 다를 수 있음. 불확실 시 '[당신 스마트폰 모델] 강제 재시작' 검색)</li>
+                                </ul>
+                            </li>
+                            <li>의미: 한 번 연습하면, 나중 스마트폰 진짜 멈췄을 때, 침착 해결.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">四、발전편 (제18-22장)</h2>
+
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제18장: 모바일 네트워크와 정보 보안 심화</h3>
+                    <p class="mb-3">🔒 왜 이것을 신경 써야 하나요?</p>
+                    <p class="mb-3">우리는 매일 스마트폰으로 인터넷, 결제, 채팅을 하고, 매우 편리하다고 느낍니다. 하지만, 당신의 채팅 기록, 결제 비밀번호, 사진……이 정보가 인터넷에서 '벌거벗은' 빈도를 생각해 본 적 있나요? 스마트폰은 우리의 디지털 분신이고, 그 보안은 우리 자신의 보안입니다. 해커는 멀리 있다고 생각하지 마세요. 실수로 공공 Wi-Fi가 '함정'이 될 수 있습니다. 오늘은, 모바일 네트워크 내 '암류' 심화하고, 당신 스마트폰 반석으로 만들고, 틀리지 마세요.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📡 VPN: 네트워크 내 '투명 망토'</h4>
+                    <p class="mb-2">그것은 도대체 무엇?</p>
+                    <p class="mb-2">VPN, 정식 명칭은 Virtual Private Network(가상 사설망). 당신 집과 접속하고 싶은 웹사이트 사이에, 전용 암호화 지하 터널 건설했다고 상상하세요.</p>
+
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>일반 인터넷 연결: 당신 스마트폰 → 공공 네트워크(통신사 네트워크, 카페 Wi-Fi) → 대상 웹사이트. 
+                            <p class="mt-1 text-secondary">리스크: 이 길 도중에, 누군가(해커, 악의 Wi-Fi 제공자, 또는 네트워크 관리자) 당신이 전송하는 데이터 '훔쳐보고' 있을 수 있습니다.</p>
+                        </li>
+                        <li>VPN 사용 시: 당신 스마트폰 → VPN 암호화 터널 → VPN 서버 → 대상 웹사이트. 
+                            <p class="mt-1 text-secondary">효과: 당신 모든 네트워크 트래픽은, 터널 들어간 시점부터 암호화되어 봉인. 길 '훔쳐보는 자'는, 해독할 수 없는 문자 나열만 볼 수 있음. 데이터 VPN 서버 도달할 때까지, 복호화되어 진짜 웹사이트로 전송. 웹사이트 보는 접속 주소도, VPN 서버 주소이고, 당신 실제 주소 아님.</p>
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">무엇을 할 수 있나? '월경' 외에도</p>
+                    <p class="mb-2">VPN 하면 해외 사이트 접속만 떠올리지 마세요. 정당한 용도 많습니다:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>공공 Wi-Fi 하 보안 보호: 공항, 호텔, 카페 무료 Wi-Fi 사용은, 데이터 유출 고위험 구역. VPN 사용하면, 연결 '갑옷' 입힐 수 있음.</li>
+                        <li>기업 내망 원격 보안 접속: 많은 기업 직원, 재택근무 시 VPN 통해 사내 시스템이나 파일 서버 안전 로그인.</li>
+                        <li>개인 프라이버시 보호, 추적 회피: 인터넷 서비스 제공자(ISP) 당신 인터넷 사용 습관 기록·분석, 정밀 광고 배송 방지.</li>
+                    </ol>
+
+                    <p class="mb-2">⚠️ 중요 주의</p>
+                    <p class="mb-2">VPN 기술 자체는 합법적 보안 도구지만, 반드시 정규 채널에서 구매하거나, 신뢰할 수 있는 서비스 사용. 출처 불명 '무료 VPN' 사용 마세요. 스마트폰 트로이 목마 심거나, 몰래 데이터 기록해서 팔 수 있음——'도둑 경비원으로 고용' 같음.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🚫 공공 Wi-Fi '달콤한 함정'</h4>
+                    <p class="mb-2">무료 Wi-Fi 매력적이지만, '당밀포탄'일 수 있습니다. VPN '궁극 솔루션' 외에도, 2가지 기본 방어선 구축 가능.</p>
+                    
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>제1도 방어선: HTTPS 확인
+                            <p class="mt-1">웹사이트 접속 시, 주소창 선두가 http:// 인지 https:// 인지 확인. 추가된 's'는 Secure(안전) 의미. 당신과 웹사이트 간 통신 암호화 의미, 데이터 도청돼도, 해독 곤란. 현재, 대부분 정규 웹사이트(은행, 메일, SNS 플랫폼) 기본 HTTPS 사용. 공공 Wi-Fi 하에서는, 접속 페이지 HTTPS인지 확인.</p>
+                        </li>
+                        <li>제2도 방어선: DNS 쿼리 업그레이드
+                            <p class="mt-1">DNS란? 간단히 말해, '네트워크 전화번호부'. baidu.com 접속하고 싶을 때, 스마트폰 먼저 DNS 서버에 '바이두 주소(IP) 무엇인가?' 묻습니다. 전통 DNS 쿼리는 '엽서' 식, 암호화 안 됨. 이것은, 악의 Wi-Fi 당신 어떤 웹사이트 물었는지 알 수 있고, 답 변조 피싱사이트 유도 가능!</p>
+                            <p class="mt-1">DNS over TLS (DoT) / DNS over HTTPS (DoH) 이 문제 해결. 당신 '전화번호부' 쿼리도 암호화, 누구도 당신 누구 찾는지 모르고, 답도 변조 못 함.</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🕵️ '프라이빗 브라우징'은 진짜 투명이 되나?</h4>
+                    <p class="mb-2">주요 브라우저 모두 '프라이빗/시크릿 브라우징 모드' 가지고 있지만, 그것 당신 네트워크 닌자처럼 느끼게 하나요? 진실은 실망스러울 수 있습니다.</p>
+                    
+                    <p class="mb-2">그것은 무엇을 하나?</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>👍 로컬 흔적 남기지 않음: 프라이빗 윈도우 닫은 후, 시스템 당신 열람 기록, Cookie, 폼 데이터 저장 안 함. 가족 당신 스마트폰 손에 잡아도, 당신 무엇 검색했는지 볼 수 없음.</li>
+                    </ul>
+
+                    <p class="mb-2">그것은 무엇을 못 하나:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>당신 온라인 행동 투명: 당신 접속 웹사이트, 인터넷 서비스 제공자(ISP), 회사 네트워크 관리자(회사 Wi-Fi 사용 시), 여전히 당신 접속 기록 볼 수 있음. 웹사이트도, IP 주소 등 기술적 수단 당신 식별 가능.</li>
+                        <li>바이러스나 악성코드 방지: 실수 악의 사이트 들어도, 감염 가능.</li>
+                        <li>다운로드 파일 숨기기: 프라이빗 모드 다운로드 파일, 다운로드 폴더 제대로 저장.</li>
+                    </ol>
+
+                    <p class="mb-2">결론: 프라이빗 브라우징 모드는 <strong>'로컬 소거기'</strong> 같고, '네트워크 투명 망토' 아님. 타인 PC 빌릴 때, 로그인 상태나 검색 기록 보이지 않게 보호 적합, 모든 네트워크 추적 도망 기대 마세요.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">실전 타임 👉 스마트폰 '신뢰할 수 있는 전화번호부'(DNS) 설정</p>
+                        <p class="mt-1">DNS 쿼리 훔쳐보기나 변조 가능성 알았으니, 더 안전하고 빠른 DNS 서비스 전환. 여기서 Android와 iOS 예.</p>
+                        <p class="mt-2 font-semibold">Android 스마트폰 설정 방법:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>【설정】 열기.</li>
+                            <li>【WLAN】 들어가, 현재 연결 Wi-Fi 네트워크 길게 누르고, 【네트워크 변경】 선택.</li>
+                            <li>【고급 옵션】 탭, IP 설정 'DHCP'에서 '정적' 변경.</li>
+                            <li>아래 스크롤, '도메인1'과 '도메인2'(DNS 서버 주소) 찾기.</li>
+                            <li>원하는 DNS 주소 입력. 예:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>보안과 프라이버시 중시: Cloudflare DNS 1.1.1.1과 1.0.0.1</li>
+                                    <li>종합적 경험 좋음: Google DNS 8.8.8.8과 8.8.4.4</li>
+                                </ul>
+                            </li>
+                            <li>설정 저장.</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">iPhone/iPad 설정 방법(Wi-Fi 환경):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>【설정】>【Wi-Fi】 열기.</li>
+                            <li>연결 Wi-Fi 오른쪽 【i】 정보 아이콘 탭.</li>
+                            <li>아래 스크롤, 【DNS 설정】 찾기.</li>
+                            <li>【수동】 선택, 【서버 추가】 탭.</li>
+                            <li>위 추천 DNS 주소(예: 1.1.1.1) 입력.</li>
+                            <li>오른쪽 위 【저장】 탭.</li>
+                        </ol>
+                        <p class="mt-2">완료 후, 당신 스마트폰 웹사이트 주소 쿼리 시, 설정한 더 신뢰할 수 있는 DNS 서버 우선 사용, 더 안전하고, 응답도 조금 빠를 수 있음. 축하합니다. 또 하나 보안 구멍 막았습니다!</p>
+                    </div>
+                </div>
+
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제19장: AI는 어떻게 스마트폰에서 작동하는가</h3>
+                    <p class="mb-3">👋 스마트폰 가장 쿨한 '매직쇼' 환영합니다. 주역: 인공지능. 당신 매일 사용하는 '찰칵 찍으면 완성' 아름다운 사진, 목소리 내면 오는 음성 어시스턴트, 쓸수록 당신 이해하는 입력법. 그 배후에는, 이 보이지 않는 뇌 서 있습니다. 오늘은, 그 커튼 열고, AI 당신 스마트폰 어떻게 '사고'하고, 작동하는지 봅시다.</p>
+                    <p class="mb-3">먼저 핵심 결론부터: 당신 스마트폰 AI는, 계산 당신 가까이 가져오려 노력. 당신 서버 가까이 가져오려는 게 아님.</p>
+                    <p class="mb-3">이 말은 조금 돌려 말했나요? 전장서 말한 '디지털 분신' 결합 이해합시다. 전장서는, 스마트폰 당신 분신, 데이터 그것 떠나면 리스크 직면한다고 했습니다. 그리고 현대 스마트폰 AI는, 바로 이 '분신' 내부 더 많은 지능 채우려고. 이것이 소위 '엣지 AI'입니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 AI 카메라: 당신 '현상 암실' 스마트폰 이동</h4>
+                    <p class="mb-2">찰칵찰칵 찍는 것은, 우리 가장 자주 쓰는 AI 기능일 것. '사진 촬영' 찰칵 하고 한 번이라고 생각 안 하나요? 이미 아닙니다.</p>
+                    <p class="mb-2">초기 스마트폰 촬영은, 자동 필름카메라처럼, 셔터 누르면, 화면 좋고 나쁨은 거의 센서와 렌즈 하드웨어 의존. 하지만 현재 AI 계산 사진은, 프로 리터셔+카메라맨 팀 셔터 버튼 직접 채운 것 같음.</p>
+                    <p class="mb-2">차이는 무엇인가요?</p>
+                    <p class="mb-2">이 '팀'은, 당신 셔터 누르기 전부터 이미 일하기 시작. 장면 스캔, <strong>'이것은 푸른 하늘', '이것은 사람 얼굴', '이것은 야경'</strong> 또는 '이것은 요리' 식별. 식별 완료하면, AI 순간 이 타입 장면 위해 특별 훈련된 최적화 방안 호출:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>인물 촬영: 배경 아웃포커싱, 피부 아름답게 필요 알고, 자동 인물 모드 전환.</li>
+                        <li>야경 촬영: 단순 ISO 올려 노이즈 투성이 만드는 게 아니라, 순간 여러 장 어두운 사진 연속 촬영, 퍼즐처럼, 모든 사진 가장 선명하고 노이즈 적은 부분 '계산' 으로 융합, 한 장 밝고 예쁜 사진 만듦.</li>
+                        <li>문서 촬영: 자동 가장자리 똑바로 하고, 콘트라스트 올려, 스캐너처럼.</li>
+                        <li>움직임 순간 촬영: 움직임 궤적 예측, 자동 가장 선명한 순간 캡처.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 실전 타임 👉: 지금 스마트폰 카메라 열고, 다른 장면(사람 얼굴, 식물, 요리, 문자) 향하게. 많은 스마트폰 특정 장면 식별하면, 파인더 귀퉁이 작은 아이콘(예: '인물', '요리', '텍스트') 표시. 이 '순간 식별' 과정 느껴보세요. 이것 당신 셔터 누르기 전, AI 당신 주는 실시간 피드백.</p>
+                    </div>
+
+                    <p class="mt-4 mb-2">즉, 이제 셔터 누르는 것은, 이 '계산 리터치' 플로우 마지막 단계 기동만. 그 1초간 '처리 중' 빙글빙글 도는 표시는, AI 뇌 고속 작동 증거. 더 놀라운 것은, 이 복잡한 계산 모두 스마트폰 내 전용 AI 칩(예: Apple Neural Engine, Qualcomm AI Engine, Huawei 다빈치 아키텍처 등) 직접 이루어지는 증가. 빠르고, 프라이버시도 높음.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗣️ 음성 어시스턴트: 당신 '음성 비서' 어떻게 당신 이해?</h4>
+                    <p class="mb-2">'Hey Siri, 내일 날씨 어때?'</p>
+                    <p class="mb-2">'OK Google, 내일 아침 7시 알람 설정.'</p>
+                    <p class="mb-2">이것은 이미 숨쉬듯 자연스러움. 하지만, 이 음성 비서 어떻게 그것 성취?</p>
+                    <p class="mb-2">그 워크플로는, 표준화된 '3단계' 분해:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>1단계: 듣기(음성 인식).</strong>
+                            <p class="mt-1">당신 웨이크워드('Hey Siri') 말하고, 지시 내리면, 스마트폰 마이크 당신 음성 파형 녹음. 이것 연속 신호. AI 첫 번째 태스크는, 이 연속 음파 하나하나 음소 조각 잘라, 거대 훈련된 어휘 라이브러리 대조, 그것들 문자 변환. 이 프로세스 ASR(자동 음성 인식) 호출. 당신 억양, 말 속도, 환경 노이즈 극복 필요, 매우 대단.</p>
+                        </li>
+                        <li><strong>2단계: 이해하기(자연어 이해 - NLP).</strong>
+                            <p class="mt-1">'내일 아침 7시 우산 가져가라고 리마인드' 문자 취득만 부족. 의도 이해 필요. 누가? 언제? 무엇? 이것 NLP 기술 필요. 문장 구조 분석, 중요 엔티티 추출: '내일 아침 7시'(시간), '리마인드'(의도/액션), '나'(대상), '우산 가져가기'(이벤트). 이것 당신 명령 이해한 것에 해당——이것 중요.</p>
+                        </li>
+                        <li><strong>3단계: 실행과 답변.</strong>
+                            <p class="mt-1">당신 의도 이해 후, 어시스턴트 스마트폰 내 해당 앱 또는 서비스 모듈 호출. 날씨 확인은, 날씨 데이터 취득 위해 인터넷 접속. 알람 설정은, '시계' 앱 데이터베이스 쓰기. '메시 누구?' 물으면, 검색 엔진 호출 가능. 마지막, 그 결과 음성 합성(TTS) 기술 통해 '말해서' 당신 전달.</p>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">과거는, 1단계와 2단계 대부분 무거운 계산 클라우드 서버 보내야 했지만, 현재는, 웨이크워드 인식과 일부 오프라인 명령(예: 알람 설정, Bluetooth 켜기) 처리, 스마트폰 본체 완전 가능. 이것은, 응답 빠르고(네트워크 기다림 없음), 프라이버시 보호('조명 꺼' 등 명령 클라우드 업로드 필요 없음) 의미.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⌨️ 입력법 예측과 라이팅 어시스턴트: 당신 '든든 속기자'</h4>
+                    <p class="mb-2">이것은 가장 조용히 스며드는 AI일 것. 당신 '오늘 밤' 입력했는데, '뭐 먹을까' 팝업. '상사' 입력하면, 뒤 '안녕하세요' 자동 붙음. 그 배후에는, 엣지 머신러닝 모델 장기 관찰과 학습.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>당신 개인 습관 기반 언어 모델: 입력법, 당신 자주 사용 어휘, 프레이즈 조합, 채팅 상대 조용히 분석. 당신 친구와 채팅 시 'ㅋㅋㅋ' 웃고, 동료와 소통 시 '회의록' 자주 사용. 그것 모두 마음에 새김. 시간 지나면, 당신 한 사람 위해 최적화된 '예측 모델' 형성.</li>
+                        <li>문맥 이해: 앞 단어만 보는 게 아니라, 당신 입력 이 문장 문맥 이해. 카카오톡 채팅박스와 업무용 문서에서, 같은 시작 단어, 다른 보완 제안 나올 수 있음.</li>
+                        <li>오타 수정 능력: '미안' 입력 시, 당신 '미강' 치려 했다 알고, 자동 수정. 이것 단순 사전 매칭 아니라, 수십억 번 입력 훈련된 확률 판단 기반.</li>
+                    </ul>
+
+                    <p class="mb-2">🖋️ 더 한 걸음: AI 라이팅 어시스턴트.</p>
+                    <p class="mb-2">현재, 많은 입력법이나 메모 앱 제공 '스마트 오타 수정', '문장 다듬기', '계속 쓰기' 기능은, 더 강력한 AI 애플리케이션. '이 제품 정말 좋아요' '이 제품 사용자 경험 훌륭합니다' 다듬거나, 제목 쓴 후, 몇 가지 가능한 글 시작 제안. 이 모델 보통 더 크고, 일부 클라우드 의존 가능, 핵심 연상과 예측 여전히 대량 로컬 진행, 당신 라이팅 프라이버시 보호.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧠 엣지 AI vs. 클라우드 AI: 스마트폰 진화 분기점</h4>
+                    <p class="mb-2">전장서 반복 언급 키워드: 엣지. 이것 스마트폰 AI 발전 핵심 트렌드 대표: 계산력 침강.</p>
+                    <p class="mb-2">간단한 표로, '엣지 AI'와 전통 '클라우드 AI' 모드 본질적 차이 봅시다:</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">비교 차원</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">클라우드 AI(전통 모드)</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">엣지 AI(현재와 미래 트렌드)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">데이터 어디로</td>
+                                    <td class="border border-gray-300 px-4 py-2">당신 사진, 녹음 등 생 데이터 인터넷 서버 업로드 필요.</td>
+                                    <td class="border border-gray-300 px-4 py-2">생 데이터 스마트폰 남고, 처리 결과 또는 극히 작은 익명화 데이터만 동기.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">속도</td>
+                                    <td class="border border-gray-300 px-4 py-2">네트워크 품질 의존, 지연 있음. 질문하고 '네트워크 로딩' 기다림 필요.</td>
+                                    <td class="border border-gray-300 px-4 py-2">순간 응답, 지연 없음. 잠금 해제, 앨범 검색, 오프라인 번역은, 눈 깜짝 사이 완료.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">프라이버시 보안</td>
+                                    <td class="border border-gray-300 px-4 py-2">당신 데이터 '본가 떠나', 공공 네트워크 경유, 잠재 유출 리스크.</td>
+                                    <td class="border border-gray-300 px-4 py-2">데이터 '분신' 떠나지 않고, 전송 프로세스 도청과 방지 리스크 근본 회피.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">오프라인 가능</td>
+                                    <td class="border border-gray-300 px-4 py-2">기본 불가능. 넷 없음≒AI 기능 마비.</td>
+                                    <td class="border border-gray-300 px-4 py-2">핵심 기능 완전 오프라인 사용 가능. 더 많은 장면 적응(예: 지하 주차장, 비행기 내, 야외).</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">소비 전력과 데이터 통신량</td>
+                                    <td class="border border-gray-300 px-4 py-2">지속적 네트워크 통신 필요. 상대적 전력과 데이터 통신량 소모.</td>
+                                    <td class="border border-gray-300 px-4 py-2">클라우드 빈번 통신 줄여, 더 절전·절데이터 통신량.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">현재 예</td>
+                                    <td class="border border-gray-300 px-4 py-2">초기 음성 인식, 복잡 렌더링 필요 AI 이미지 생성, 초대규모 언어 모델 대화.</td>
+                                    <td class="border border-gray-300 px-4 py-2">얼굴/지문 잠금 해제, 앨범 얼굴 분류, 오프라인 번역, 일부 음성 명령, 입력법 예측.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-2">차이 보였나요? 엣지 AI는, 전장 '디지털 분신 보호' 보안 요구 완벽 응답. '분신' 경계벽 더 견고하고, 더 스마트 구축. 데이터와 계산 가능한 한 벽 안쪽 남고, 리스크와 지연 최소화.</p>
+                    <p class="mb-2">그리고 미래 '대규모 모델'도 엣지 진화. 현재, 완전한 ChatGPT 대화 작은 스마트폰 작동 안 하지만, 그 '축소 에센스 버전' 이미 스마트폰 들어가, 몇 로컬 태스크 처리 가능. 미래, 당신 스마트폰 집사, 메모 앱, 나아가 게임 NPC도, 당신 휴대 엣지 대규모 모델 구동, 당신 습관 완전 이해, 당신만 위해 서비스 가능.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 본장 실전 연습: AI 비서 명령</p>
+                        <p class="mt-1">자, 스마트폰 AI 협조 능력 실제 체험. 음성 어시스턴트, 다층적 정보 포함 복잡 지시 내리세요.</p>
+                        <p class="mt-1">예:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Siri에: 'Hey Siri, 내일 아침 7시 우산 가져가라고 리마인드하고, 오늘 오후 3시 캘린더 4시로 변경.'</li>
+                            <li>Google 어시스턴트에: 'OK Google, 오늘 밤 8시 어머니 전화 리마인드하고, 지금 Spotify서 맑은 날 재생.'</li>
+                            <li>Bixby에: 'Hi Bixby, 카카오톡 QR코드 스캔 열고, 화면 밝기 내려.'</li>
+                        </ol>
+                        <p class="mt-2">그것 일련 지시 어떻게 이해하고, 순서대로 실행하는지 관찰. 이 배후에는, NLP 태스크 분할, 다른 앱 능력 호출 의미. 축하합니다. 인간 컴퓨터 자연어 인터랙션 공동 작전 완료!</p>
+                        <p class="mt-2">본장 여기까지. 눈치챘나요? AI 스마트폰 안에서, 먼 실험실 기술 아니고, 당신 손끝 아래, 매번 포커스, 매번 웨이크업, 매번 단어 배후 '보이지 않는 엔진'. 그것 점점 빠르고, 점점 당신 이해하고, 점점 안전——왜냐하면, 그것 지혜와 프라이버시 함께, 당신 '디지털 분신' 단단히 가두려고.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제20장: 프로그래밍 사고와 자동화 입문</h3>
+                    <p class="mb-3">🤔 '프로그래밍'이라는 말 들으면, 어두운 화면과 복잡한 코드 떠오르나요? 사실, 프로그래밍 사고는, 당신 스마트폰 사용할 때, 이미 사용하고 있을지도. 스마트폰 사용해서, 어떻게 '자동화' 할 수 있는지 배우고, 생활 더 효율적으로 만듭시다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 프로그래밍 사고: '순서' 분해</h4>
+                    <p class="mb-2">프로그래밍 핵심은, 큰 문제 작은 단계 분해. 스마트폰 자동화도 같음.</p>
+                    <p class="mb-2">예: '매일 아침 7시 날씨 확인, 비면 우산 가져가라고 리마인드' 태스크 자동화하려면:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>트리거(언제): 매일 아침 7시.</li>
+                        <li>조건(무엇): 날씨 예보 취득, 비인지 확인.</li>
+                        <li>액션(어떻게): 비면 알림 전송.</li>
+                    </ol>
+                    <p class="mb-2">이것이 프로그래밍 사고. 복잡한 태스크, 트리거, 조건, 액션 3요소 분해.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 스마트폰 자동화 도구</h4>
+                    <p class="mb-2">당신 스마트폰에는, 강력한 자동화 도구 내장.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">iOS: 단축어(Shortcuts)</h5>
+                    <p class="mb-2">Apple 제공 자동화 도구. 프로그래밍 불필요, 블록 조합만으로 자동화 플로우 생성.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>트리거: 시간, 장소, Wi-Fi 연결, 앱 실행 등.</li>
+                        <li>액션: 메시지 전송, 음악 재생, 설정 변경, 앱 실행 등.</li>
+                        <li>예: '귀가 시 Wi-Fi 연결하면, 조명 켜고 음악 재생'.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Android: Tasker, Automate, 또는 브랜드 독자 기능</h5>
+                    <p class="mb-2">Android 더 오픈, 더 강력한 자동화 가능.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tasker: 가장 강력한 Android 자동화 앱. 거의 모든 조작 자동화 가능.</li>
+                        <li>브랜드 기능: Samsung 'Bixby 루틴', Xiaomi '시나리오' 등.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎯 실용적 자동화 시나리오</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>수면 모드</strong>: 취침 시간 되면, 자동 방해 금지 모드 켜고, 볼륨 내리고, 블루라이트 차단.</li>
+                        <li><strong>운전 모드</strong>: 차 Bluetooth 연결하면, 자동 운전 모드 켜고, 착신 음성 알림.</li>
+                        <li><strong>배터리 절약</strong>: 배터리 20% 밑돌면, 자동 절전 모드 켜고, 불필요 기능 끄기.</li>
+                        <li><strong>위치 기반 리마인더</strong>: 슈퍼 가까워지면, 쇼핑 리스트 알림.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 본장 실전 연습: 자동화 플로우 생성</p>
+                        <p class="mt-1">당신 스마트폰 자동화 도구 열고, 다음 플로우 생성:</p>
+                        <p class="mt-1">'매일 밤 10시, 방해 금지 모드 켜고, 내일 날씨 알림'.</p>
+                        <p class="mt-2">순서:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>자동화 앱 열기(iOS는 '단축어', Android는 Tasker 또는 브랜드 기능).</li>
+                            <li>신규 자동화/루틴 생성.</li>
+                            <li>트리거 설정: 시간(매일 밤 10시).</li>
+                            <li>액션 추가:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>방해 금지 모드 켜기.</li>
+                                    <li>날씨 정보 취득 알림.</li>
+                                </ul>
+                            </li>
+                            <li>저장하고 테스트.</li>
+                        </ol>
+                        <p class="mt-2">이것이 프로그래밍 사고 실전. 조건과 액션 조합해서, 스마트폰 '지능' 부여.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제21장: 중고 스마트폰 처리와 디지털 유산</h3>
+                    <p class="mb-3">📱 새 스마트폰 샀으면, 낡은 스마트폰 어떻게? 쓰레기통 버리기? 그것 아깝고, 위험할 수 있습니다. 이 장에서는, 낡은 스마트폰 안전 처리, 디지털 유산 관리 법 배웁니다.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 낡은 스마트폰 재활용</h4>
+                    <p class="mb-2">낡은 스마트폰은, 아직 사용할 수 있는 '소형 컴퓨터'. 다음 용도 재활용:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>전용 미디어 플레이어</strong>: 음악, 팟캐스트, 동영상 전용 기기.</li>
+                        <li><strong>디지털 포토 프레임</strong>: Google 포토 등 슬라이드쇼 표시.</li>
+                        <li><strong>홈 보안 카메라</strong>: 전용 앱 감시 카메라.</li>
+                        <li><strong>전용 게임기</strong>: 에뮬레이터 레트로 게임 플레이.</li>
+                        <li><strong>스마트 홈 컨트롤러</strong>: 상시 연결 스마트 홈 허브.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗑️ 스마트폰 내놓기 전 필수 단계</h4>
+                    <p class="mb-2"><strong>⚠️ 중요: 단순 '삭제'만으로 부족!</strong></p>
+                    <p class="mb-2">스마트폰 판매, 기부, 재활용 전, 다음 단계 반드시 실행:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>백업</strong>: 모든 중요 데이터 백업(사진, 연락처, 앱 데이터).</li>
+                        <li><strong>계정 로그아웃</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Google 계정(Android).</li>
+                                <li>Apple ID(iPhone).</li>
+                                <li>서드파티 앱(카카오톡, WeChat 등).</li>
+                            </ul>
+                        </li>
+                        <li><strong>공장 초기화(출하시 설정 복원)</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>[설정] > [시스템] > [초기화] > [모든 데이터 지우기](Android).</li>
+                                <li>[설정] > [일반] > [전송 또는 iPhone 초기화] > [모든 콘텐츠와 설정 지우기](iOS).</li>
+                            </ul>
+                        </li>
+                        <li><strong>암호화 확인</strong>: 현대 스마트폰 기본 암호화, 낡은 기종 수동 암호화 설정 확인.</li>
+                        <li><strong>SD카드와 SIM카드 제거</strong>: 이것도 개인정보 포함 가능.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚰️ 디지털 유산: 당신 '디지털 분신' 미래</h4>
+                    <p class="mb-2">만약 당신 무슨 일 있어도, 당신 디지털 자산(사진, 소셜 미디어 계정, 암호화폐 등) 어떻게?</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">디지털 유산 관리 단계:</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>자산 목록</strong>: 당신 소유 디지털 자산 리스트(계정, 구독, 디지털 구매물 등).</li>
+                        <li><strong>비밀번호 매니저 긴급 연락처 설정</strong>: 1Password, Bitwarden 등 긴급 연락처 기능 제공, 특정 조건 신뢰할 수 있는 사람 접근 허용.</li>
+                        <li><strong>Apple/Google '유산 연락처'</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>iOS 15.2 이상: 설정 > 로그인과 보안 > 유산 연락처.</li>
+                                <li>Google: 비활동 계정 관리자 설정.</li>
+                            </ul>
+                        </li>
+                        <li><strong>유언장 디지털 자산 포함</strong>: 변호사 상담, 디지털 자산 처리 방법 법적 문서 기재.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 본장 실전 연습: 스마트폰 안전 초기화</p>
+                        <p class="mt-1">(주의: 이 연습은, 실제 스마트폰 내놓을 때만 진행!)</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>모든 데이터 백업 확인.</li>
+                            <li>모든 계정 로그아웃.</li>
+                            <li>공장 초기화 실행.</li>
+                            <li>재부팅 후, 설정 화면 표시 확인(개인 데이터 남지 않은 증거).</li>
+                            <li>SD카드와 SIM카드 제거.</li>
+                        </ol>
+                        <p class="mt-2">또, 유산 연락처 설정 검토. 설정 > 로그인과 보안 > 유산 연락처(iOS) 또는 Google 비활동 계정 관리자 확인.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">제22장: 미래의 스마트폰과 디지털 라이프</h3>
+                    <p class="mb-3">🔮 스마트폰 어디로 향하고 있나요? 접이식? AR 글래스? 뇌내 칩? 이 최종 장에서는, 미래 기술 트렌드 탐색, 디지털 라이프 어떻게 준비해야 할지 생각.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 스마트폰 진화 트렌드</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 접이식 스마트폰</h5>
+                    <p class="mb-2">Samsung, Huawei, Motorola 등 리드. 스마트폰과 태블릿 융합. 현재 고가고 잘 부서지는 인상 있지만, 기술 성숙과 함께 주류 될 가능.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. AR(증강현실)과 MR(혼합현실)</h5>
+                    <p class="mb-2">Apple Vision Pro, Meta Quest 등 보여주듯, 스마트폰 AR 글래스 연동, 물리 세계와 디지털 세계 융합. 스마트폰 '계산 허브'로, AR 글래스 처리 능력 제공.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. AI 퍼스트</h5>
+                    <p class="mb-2">AI 점점 스마트폰 핵심. 대규모 언어 모델(LLM) 엣지 기기 작동, 퍼스널 AI 어시스턴트 당신 생활 완전 관리 날 올 수도.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. 지속가능성과 환경</h5>
+                    <p class="mb-2">재활용 소재, 장수명 설계, 수리 쉬움 중요. 유럽연합 '수리권' 법 등, 규제도 변화.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🌐 디지털 라이프 미래</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li><strong>메타버스와 가상 공간</strong>: 물리적 회의에서 버추얼 공간 존재로. 스마트폰 이 세계 '입구'.</li>
+                        <li><strong>디지털 트윈</strong>: 당신 스마트폰 데이터에서, 당신 '디지털 사본' 생성, 퍼스널라이즈 서비스 제공.</li>
+                        <li><strong>6G와 무처不在 연결</strong>: 6G 단순 속도 향상 아니고, 만물 인터넷(IoT) 실현, 모든 기기 원활 연결.</li>
+                        <li><strong>뇌내 칩?</strong>: Neuralink 등 기술, 직접 뇌-컴퓨터 인터페이스 목표. 윤리적·기술적 과제 많지만, 가능성 무한.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎓 어떻게 준비해야?</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>계속 배우기</strong>: 기술 급속 변화. 호기심 가지고, 새로운 것 계속 배우자.</li>
+                        <li><strong>디지털 리터러시 높이기</strong>: 정보 비판적 평가, 가짜뉴스 식별, 디지털 보안 실천.</li>
+                        <li><strong>프라이버시 의식</strong>: 미래 기술 더 퍼스널. 프라이버시 설정 항상 확인, 데이터 가치 이해.</li>
+                        <li><strong>밸런스</strong>: 기술 도구이고, 주인 아님. 오프라인 시간도 소중히.</li>
+                        <li><strong>커뮤니티 참여</strong>: 기술 포럼, 사용자 그룹 참여, 지식 공유.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 최종 실전: 당신 디지털 라이프 돌아보기</p>
+                        <p class="mt-1">이 책 다 읽은 지금, 당신 스마트폰 관계 변했나요?</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>이 책서 배운 가장 중요한 3가지 적어보세요.</li>
+                            <li>당신 스마트폰 사용 습관서, 개선하고 싶은 점 무엇인가요?</li>
+                            <li>다음 배우고 싶은 기술 토픽 무엇인가요?</li>
+                            <li>가족이나 친구에게, 스마트폰 사용법 가르칠 기회 있나요? 가르치는 것 가장 효과적 학습.</li>
+                        </ol>
+                        <p class="mt-2">축하합니다! 당신 '스마트폰 마스터' 길 걷기 시작. 디지털 라이프 파악하고, 기술 당신 위해 일하게!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">五、부록</h2>
+
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">부록A: 신규 스마트폰 개봉 '완벽 가이드' 플로우</h3>
+                    <p class="mb-3">새 스마트폰 샀으면, 먼저 무엇 해야? 다음 체크리스트 따르세요:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📦 개봉 시</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>패키지 개봉되지 않은지 확인(씰 intact).</li>
+                        <li>동봉물 확인: 스마트폰 본체, 충전기, 케이블, SIM 핀, 보증서, 빠른 시작 가이드.</li>
+                        <li>외관 체크: 흠집, 들어감, 제작상 결함 없는지.</li>
+                        <li>화면 체크: 데드 픽셀, 색 얼룩 없는지(흰/검 화면서 확인).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚙️ 초기 설정</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>전원 켜고, 언어와 지역 선택.</li>
+                        <li>Wi-Fi 연결.</li>
+                        <li>계정 로그인(Google 또는 Apple ID).</li>
+                        <li>보안 설정: 지문, 얼굴 인증, PIN 코드 설정.</li>
+                        <li>'스마트폰 찾기' 켜기.</li>
+                        <li>시스템 업데이트 확인, 최신 버전 업그레이드.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔒 보안 강화</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>이중 인증 켜기.</li>
+                        <li>프라이버시 설정 확인: 위치 정보, 앱 권한.</li>
+                        <li>불필요 프리인스톨 앱 비활성화 또는 삭제.</li>
+                        <li>보안 앱 설치(바이러스 대응).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">☁️ 백업 설정</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>iCloud 또는 Google 백업 켜기.</li>
+                        <li>사진 자동 백업 설정.</li>
+                        <li>연락처 동기 확인.</li>
+                    </ol>
+                </div>
+
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">부록B: 실전 연습 레퍼런스</h3>
+                    <p class="mb-3">이 책 포함 모든 실전 연습 빠른 레퍼런스:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">기초편</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>제0장: 스마트폰 '신분증' 확인</li>
+                        <li>제1장: 하드웨어 구성 이해</li>
+                        <li>제2장: '다운로드' 폴더 정리</li>
+                        <li>제3장: 핫스팟 설정·관리</li>
+                        <li>제4장: 3개 앱 권한 감사</li>
+                        <li>제5장: '평일'과 '휴일' 모드 설정</li>
+                        <li>제6장: '원격 잠금' 활성화하고 시뮬레이션</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">소프트웨어편</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>제7장: 카카오톡 채팅 기록 PC 백업</li>
+                        <li>제8장: 스마트폰 문서 스캔 PDF 생성</li>
+                        <li>제9장: 결제 앱 더 안전한 잠금 설정</li>
+                        <li>제10장: 프로 모드 야경 사진 촬영</li>
+                        <li>제11장: 전용 '비행기 모드' 엔터테인먼트 패키지 구성</li>
+                        <li>제12장: '취침 릴랙스' 자동화 플로우 생성</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">응용편</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>제13장: 배터리 건강 진단</li>
+                        <li>제14장: 계정 동기 내용 확인</li>
+                        <li>제15장: 스마트폰 화면 TV 미러링</li>
+                        <li>제16장: 사진과 연락처 수동 PC 백업</li>
+                        <li>제17장: '강제 재시작' 시뮬레이션</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">발전편</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>제18장: 스마트폰 '신뢰할 수 있는 전화번호부'(DNS) 설정</li>
+                        <li>제19장: AI 비서 명령</li>
+                        <li>제20장: 자동화 플로우 생성</li>
+                        <li>제21장: 스마트폰 안전 초기화</li>
+                        <li>제22장: 당신 디지털 라이프 돌아보기</li>
+                    </ul>
+                </div>
+
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">부록C: 미니멀 용어 '전문 용어' 대조표</h3>
+                    <p class="mb-3">이 책서 사용된 기술 용어 간단 설명:</p>
+                    
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">용어</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">SoC</td>
+                                    <td class="border border-gray-300 px-4 py-2">System on Chip. 스마트폰 '뇌'. CPU, GPU, 기타 컴포넌트 통합 칩.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RAM</td>
+                                    <td class="border border-gray-300 px-4 py-2">Random Access Memory. 일시적 작업 메모리. 클수록 많은 앱 동시 실행 가능.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">ROM/스토리지</td>
+                                    <td class="border border-gray-300 px-4 py-2">Read-Only Memory(실제 플래시 스토리지). 사진, 앱 등 장기 저장.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OLED</td>
+                                    <td class="border border-gray-300 px-4 py-2">유기EL 디스플레이. 개별 픽셀 발광. 고콘트라스트, 절전.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 px-4 py-2">Near Field Communication. 근거리 무선 통신. 교통카드, 모바일 결제 사용.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">VPN</td>
+                                    <td class="border border-gray-300 px-4 py-2">Virtual Private Network. 가상 사설망. 통신 암호화, 프라이버시 보호.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">DNS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Domain Name System. 도메인명 IP주소 변환 시스템.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OCR</td>
+                                    <td class="border border-gray-300 px-4 py-2">Optical Character Recognition. 이미지 내 문자 인식 텍스트 변환 기술.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">AI/머신러닝</td>
+                                    <td class="border border-gray-300 px-4 py-2">Artificial Intelligence. 인공지능. 스마트폰 사진 최적화, 음성 인식 등 사용.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">엣지 AI</td>
+                                    <td class="border border-gray-300 px-4 py-2">클라우드 아닌, 기기 본체 AI 처리 기술. 고속 프라이버시 보호.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RCS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Rich Communication Services. 차세대 SMS. 고품질 이미지, 읽음 알림 등 지원.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">HTTPS</td>
+                                    <td class="border border-gray-300 px-4 py-2">HTTP Secure. 암호화된 웹 통신 프로토콜.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">부록D: 신뢰할 수 있는 리소스 어디서 찾나?</h3>
+                    <p class="mb-3">스마트폰 관련 정보 얻기 위한 신뢰할 수 있는 소스:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 공식 리소스</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple 지원</strong>:support.apple.com</li>
+                        <li><strong>Google Android 도움말</strong>:support.google.com/android</li>
+                        <li><strong>각 브랜드 공식 사이트</strong>: Samsung, Xiaomi, OPPO, vivo 등</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📰 기술 미디어</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>한국</strong>: IT동아, 블로터, 아이티데일리</li>
+                        <li><strong>글로벌</strong>: The Verge, TechCrunch, Android Police, 9to5Mac</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">👥 커뮤니티와 포럼</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Reddit</strong>: r/Android, r/iPhone, r/techsupport</li>
+                        <li><strong>Stack Exchange</strong>: Android Enthusiasts, Ask Different(Apple)</li>
+                        <li><strong>한국 커뮤니티</strong>: 클리앙, 각 브랜드 공식 커뮤니티</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎥 유튜브 채널</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>MKBHD(Marques Brownlee)</li>
+                        <li>Unbox Therapy</li>
+                        <li>Linus Tech Tips</li>
+                        <li>한국: 각종 가젯 리뷰 채널</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ 주의해야 정보원</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>출처 불명 '해킹'이나 '꿀팁'</li>
+                        <li>과도히 센세이셔널 제목 기사</li>
+                        <li>명백히 오래된 정보(2-3년 이상 전)</li>
+                        <li>스폰서 기사와 명시되지 않은 리뷰</li>
+                    </ul>
+                </div>
+
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">부록E: 감사의 말과 설명</h3>
+                    <p class="mb-3">이 책은, 스마트폰 초보자에서 중급자 여행 가이드로 작성.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🙏 감사의 말</h4>
+                    <p class="mb-2">이 책 작성에, 다음 리소스와 커뮤니티 감사:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>오픈소스 커뮤니티</li>
+                        <li>기술 미디어와 리뷰어</li>
+                        <li>온라인 포럼 지식 공유 모든 분</li>
+                        <li>스마트폰 기술 진보시키 모든 엔지니어와 디자이너</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ 면책 사항</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>이 책 정보는, 집필 시점 것. 기술 급속 변화, 일부 내용 오래될 가능.</li>
+                        <li>스마트폰 조작 자기책임 진행. 중요 데이터 반드시 백업.</li>
+                        <li>특정 기종이나 OS 버전 따라, 기능과 설정 위치 다를 수 있음.</li>
+                        <li>이 책 내용 교육 목적, 특정 제품이나 서비스 추천 의도 아님.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📧 피드백</h4>
+                    <p class="mb-2">이 책 개선 위한 피드백 환영. 오류 지적, 추가 원하는 토픽, 개선 제안 등 있으면, 알려주세요.</p>
+
+                    <div class="bg-light rounded-lg p-6 mt-6 text-center">
+                        <p class="text-lg font-semibold mb-2">읽어주셔서 감사합니다!</p>
+                        <p class="text-secondary">당신 디지털 라이프, 더 풍요롭고 안전한 것 되기를.</p>
+                        <p class="mt-4 text-sm text-secondary">© 2024 스마트폰 마스터! 초보자 필독 디지털 필수 강좌</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        document.querySelectorAll('.toc-parent').forEach(parent => {
+            const toggle = parent.querySelector('.toc-toggle');
+            const child = parent.querySelector('.toc-child');
+            
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                child.classList.toggle('open');
+                toggle.classList.toggle('rotate-180');
+            });
+        });
+
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    if (!sidebar.classList.contains('-translate-x-full') && window.innerWidth < 1024) {
+                        toggleMenu();
+                    }
+                }
+            });
+        });
+
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('#sidebar a[href^="#"]');
+
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC();
+    </script>
+</body>
+</html>
