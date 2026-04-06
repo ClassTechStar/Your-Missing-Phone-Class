@@ -1,0 +1,1961 @@
+﻿<!DOCTYPE html>
+<html lang="de-DE">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smartphone-Meister! Der unverzichtbare Digitalkurs für Anfänger</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto { content-visibility: auto; }
+            .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+            .scrollbar-hide::-webkit-scrollbar { display: none; }
+            .text-balance { text-wrap: balance; }
+        }
+    </style>
+    <style>
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', system-ui, -apple-system, sans-serif; line-height: 1.7; }
+        .toc-item.active { color: #165DFF; font-weight: 600; background-color: #EFF6FF; border-left: 3px solid #165DFF; }
+        .toc-child { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; }
+        .toc-child.open { max-height: 2000px; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">Smartphone-Meister! Der unverzichtbare Digitalkurs für Anfänger</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>Nach oben
+            </a>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">Inhaltsverzeichnis</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">I. Grundlagen (Kapitel 0-6)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 0: Hallo, bevor wir beginnen</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 1: Hallo, mein persönlicher Computer</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 2: Den digitalen Raum organisieren</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 3: Die Lebensader verbinden</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 4: App-Installation und -Verwaltung</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 5: Das Smartphone anpassen</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 6: Sicherheit und Privatsphäre</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">II. Software (Kapitel 7-12)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 7: Kommunikation</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 8: Mobiles Büro und Lernen</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 9: Mobile Zahlungen</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 10: Fotografieren</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 11: Unterhaltung und Lesen</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 12: Empfohlene Apps</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">III. Fortgeschritten (Kapitel 13-17)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 13: Batteriewissenschaft</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 14: Konten und Cloud</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 15: Geräte verbinden</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 16: Datensicherung</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 17: Fehlerbehebung</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">IV. Weiterführend (Kapitel 18-22)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 18: Netzwerksicherheit</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 19: KI auf Smartphones</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 20: Automatisierung</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 21: Gebrauchte Smartphones</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Kapitel 22: Zukunft</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">V. Anhang</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">Anhang A: Anleitung für neue Smartphones</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">Anhang B: Übungsreferenz</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">Anhang C: Fachbegriffe-Glossar</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">Anhang D: Ressourcen</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">Anhang E: Danksagung</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">Smartphone-Meister! Der unverzichtbare Digitalkurs für Anfänger</h1>
+                <p class="text-center text-secondary text-lg">Vom Einsteiger zum Profi – Beherrschen Sie Ihr digitales Leben vollständig</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">I. Grundlagen (Kapitel 0-6)</h2>
+                <p class="mb-4 text-secondary">Ihr Smartphone ist viel leistungsfähiger als Sie denken. Dieser Teil bildet die Grundlage für alle Kunststücke.</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 0: Hallo, bevor wir beginnen</h3>
+                    <p class="mb-3">Bevor wir in die Tiefe gehen, sprechen wir über die Grundregeln.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Was dieses Buch tun kann und nicht tun kann</h4>
+                    <p class="mb-2">Sie können das Smartphone systematisch verstehen und die Prinzipien hinter den Funktionen kennenlernen. Ob Android- oder iPhone-Nutzer – die meisten Konzepte sind gemeinsam. Enthält auch praktische Übungen.</p>
+                    <p class="mb-2">Es ist keine Bedienungsanleitung für ein bestimmtes Modell, keine aktuelle Produktbewertung, keine Anleitung zur Smartphone-Sucht.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Was dieses Buch für Sie tun kann</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Das Smartphone systematisch verstehen – nicht nur blind bedienen, sondern die Prinzipien verstehen.</li>
+                        <li>Die versteckten Funktionen entdecken – viele nützliche Funktionen, die Sie noch nicht kennen.</li>
+                        <li>Sicherheitsbewusstsein entwickeln – sichere Nutzung im digitalen Zeitalter.</li>
+                        <li>Effizienz verbessern – Zeit sparen und das Leben erleichtern.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Was dieses Buch nicht tun kann</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Es ersetzt nicht die Bedienungsanleitung Ihres spezifischen Gerätemodells.</li>
+                        <li>Es ist keine aktuelle Produktbewertung oder Kaufratgeber.</li>
+                        <li>Es behandelt nicht die neuesten Modelle, die nach Veröffentlichung dieses Buches auf den Markt gekommen sind.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Unsere Codewörter</h4>
+                    <p class="mb-2">Um alles verständlich zu erklären, verwenden wir einige Symbole:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[Schaltflächenname]: Steht für eine bestimmte Schaltfläche oder App auf dem Bildschirm.</li>
+                        <li>> : Steht für eine Bedienungsabfolge. Beispiel: [Einstellungen] > [Ton] antippen.</li>
+                        <li><strong>Fett</strong>: Sehr wichtig!</li>
+                        <li><em>Kursiv</em>: Steht für ergänzende Gedanken.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Android und iOS – wir erklären beide</h4>
+                    <p class="mb-2">Auch wenn die Namen unterschiedlich sind, ist vieles gleich. Apps (Android) und App (iOS), Einstellungen (beide).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Smartphone-Speicher</h4>
+                    <p class="mb-2">Sie kennen sicher die Speichereinheiten: 1TB = 1024GB, 1GB = 1024MB. Aber die gekaufte Kapazität schrumpft, wenn sie bei Ihnen ankommt. Die Hauptgründe:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>System belegt Speicherplatz: Das Betriebssystem ist wie eine tragende Wand.</li>
+                        <li>Werksseitig vorinstallierte Apps belegen auch Platz.</li>
+                        <li>Formatierungsverlust: Aus technischen Gründen.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übungszeit: Überprüfen Sie Ihren Smartphone-Personalausweis</p>
+                        <p class="mt-1">Öffnen Sie [Einstellungen], finden Sie Geräteinformationen und notieren Sie: Modell, OS-Version, Gesamtspeicherplatz, verbleibender Speicher.</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 1: Hallo, mein persönlicher Computer</h3>
+                    <p class="mb-3">Ihr Smartphone ist der persönlichste Supercomputer in Ihrer Tasche.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Smartphone-Hardware: Das Innenleben</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC (Chip)</strong>: Das Gehirn und Herz des Smartphones. Bestimmt die Leistung (CPU), Grafik (GPU) und Energieeffizienz. Beispiele: Apple A17 Pro, Qualcomm Snapdragon 8 Gen 3.</li>
+                        <li><strong>RAM (Arbeitsspeicher)</strong>: Temporärer Arbeitsbereich. Je größer, desto komfortabler bei mehreren gleichzeitig geöffneten Apps. Üblich: 4-12GB.</li>
+                        <li><strong>ROM (Speicher)</strong>: Langzeitspeicher. Für alle Fotos, Videos und Apps. Üblich: 64GB-512GB.</li>
+                        <li><strong>Display</strong>: Typ (OLED=farbenfroh und Kontrast, LCD=augenschonend), Auflösung (Schärfe, z.B. Full HD+), Bildwiederholrate (Flüssigkeit, 60Hz-120Hz).</li>
+                        <li><strong>Akku und Laden</strong>: Laden während der Nutzung ist möglich. Nicht bis 0% entladen, nicht dauerhaft bei 100% halten. Schnellladen (30W-120W) und kabelloses Laden sind praktisch.</li>
+                        <li><strong>Kamera</strong>: Multiple Objektive (Weitwinkel, Ultraweitwinkel, Tele) + Algorithmen (Computational Photography). Nachtmodus und Bokeh (unscharfer Hintergrund) werden ermöglicht.</li>
+                        <li><strong>Sensoren</strong>: Gyroskop (Spielsteuerung durch Lageerkennung), NFC (Bezahlung und IC-Karten), Näherungssensor (Automatikabschaltung beim Telefonieren), Beschleunigungssensor.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">OS: Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Open-Source-Community – große Auswahl, viele Hersteller, tiefe Anpassungsmöglichkeiten. Verschiedene Hersteller-Oberflächen (Samsung One UI, Xiaomi MIUI/HyperOS, etc.).</li>
+                        <li>iOS: Gepflegter Garten – Apple kontrolliert Hard- und Software, einheitliches Erlebnis. Geschlossenes Ökosystem mit hoher Optimierung.</li>
+                    </ul>
+                    <p class="mb-2">Beide Ökosysteme sind sehr umfangreich. Wählen Sie nach Ihrem Lifestyle und Ihren Prioritäten.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Welche Rolle spielt Ihr Smartphone?</h4>
+                    <p class="mb-2">Es ist längst nicht mehr nur ein Telefon: Kommunikationstool, Smart-Kamera, Geldbörse, Informationportal, Spielkonsole, mobiles Büro, Gesundheitsassistent, Smart-Home-Fernbedienung, sogar digitaler Ausweis.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übungszeit: Hardware-Konfiguration verstehen</p>
+                        <p class="mt-1">Prüfen Sie in [Einstellungen] den Prozessormodellnamen, RAM und ROM-Größe. Verstehen Sie die Fähigkeiten Ihres Smartphones.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 2: Den digitalen Raum organisieren – Dateiverwaltung</h3>
+                    <p class="mb-3">Bei längerer Nutzung wird das Smartphone unübersichtlich. Gute Gewohnheiten beginnen mit der Dateiverwaltung.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Dreistufige Speicherarchitektur</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Interner Speicher</strong>: Kernbereich. Schnelle Geschwindigkeit, alle Systemdateien und Apps befinden sich hier.</li>
+                        <li><strong>SD-Karte (falls unterstützt)</strong>: Erweiterter Stauraum. Geschwindigkeit ist etwas langsamer, geeignet für Fotos und Videos.</li>
+                        <li><strong>Cloud-Speicher</strong>: Tresor und Synchronisationslaufwerk. Verhindert Datenverlust bei Verlust des Geräts und ermöglicht Synchronisation zwischen mehreren Geräten.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Dateimanager</h4>
+                    <p class="mb-2">Android hat [Dateien]-App, iOS hat [Dateien]. Dies sind die Explorer, die alle Dateien anzeigen.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Wo sind welche Dateien?</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fotos/Videos: DCIM oder Bilder.</li>
+                        <li>Downloads: Download-Ordner.</li>
+                        <li>App-Daten: In ihren privaten Verzeichnissen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Speicher voll? Zeit für Entrümpelung</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Cache leeren:</strong> Temporärer Speicher der Apps. Nach dem Leeren wird Platz geschaffen.</li>
+                        <li><strong>Große Dateien finden:</strong> Im Dateimanager nach Größe sortieren und die "Übeltäter" finden, die Platz verbrauchen.</li>
+                        <li><strong>Überbleibsel löschen:</strong> Nach App-Deinstallation bleiben manchmal Restdateien. Manuell löschen.</li>
+                        <li><strong>Doppelte Dateien:</strong> Suchen und bereinigen.</li>
+                        <li><strong>Selten genutzte Apps:</strong> Deinstallieren oder zumindest deren Cache leeren.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übungszeit: Download-Ordner organisieren</p>
+                        <p class="mt-1">Öffnen Sie den Dateimanager > Download-Ordner. Überprüfen Sie den Inhalt, löschen Sie Unnötiges.</p>
+                    </div>
+                </div>
+
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 3: Die Lebensader verbinden – Netzwerk</h3>
+                    <p class="mb-3">Ohne Internet ist das Smartphone halb so nützlich. Netzwerkverbindung ist die Lebensader des Smartphones.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Mobilfunknetz (4G/LTE und 5G)</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Datennutzung:</strong> Video-Streaming verbraucht am meisten Datenvolumen. Auch Bild-Browsing und Musik-Streaming nutzen kontinuierlich Daten.</li>
+                        <li><strong>Datensparen:</strong> Datensparmodus aktivieren. Videos in niedrigerer Qualität streamen, um Datenvolumen zu sparen.</li>
+                        <li><strong>Signalanzeige ≠ Geschwindigkeit:</strong> Volle Signalleitung bedeutet gute Verbindung, aber die tatsächliche Geschwindigkeit hängt auch von der Basisstationsauslastung und dem Netzausbau ab.</li>
+                        <li><strong>5G vs 4G:</strong> 5G bietet höhere Geschwindigkeiten, ist aber noch nicht überall verfügbar. Bei schlechtem 5G-Signal schaltet das Gerät automatisch auf 4G zurück.</li>
+                        <li><strong>Wichtig! Schalten Sie vor Auslandsreisen Datenroaming AUS!</strong> Um hohe Roaming-Gebühren zu vermeiden. WLAN bevorzugen im Ausland.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">WLAN</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Verbindung:</strong> In [Einstellungen] > [WLAN] Netzwerk wählen und Passwort eingeben.</li>
+                        <li><strong>Passwort teilen:</strong> Bequem – aktuelle Smartphones können schnell geteilte Passwörter an Freunde senden (QR-Code oder AirDrop).</li>
+                        <li><strong>WLAN 6E und WiFi 7:</strong> Neuere Standards bieten höhere Geschwindigkeiten und geringere Latenz, wenn Router und Gerät sie unterstützen.</li>
+                        <li><strong>Risiken öffentliches WLAN:</strong> Hacker-Datenspionage und Phishing-Hotspots möglich. Online-Banking vermeiden, VPN verwenden für zusätzlichen Schutz.</li>
+                        <li><strong>WLAN-Home automatisch:</strong> Smartphone verbindet sich automatisch mit bekannten WLAN-Netzwerken. Diese Liste in Einstellungen verwalten.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bluetooth</h4>
+                    <p class="mb-2">Für kabellose Kopfhörer, Lautsprecher und Smartwatch. Dateiübertragung wird kaum noch genutzt (dafür gibt es bessere Alternativen).</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Bluetooth-Versionen:</strong> Aktuell sind Bluetooth 5.3 und 5.4. Neuere Versionen bieten bessere Reichweite und geringeren Stromverbrauch.</li>
+                        <li><strong>Bluetooth-Probleme:</strong> Wenn Verbindung instabil ist: Bluetooth aus- und wieder einschalten, Geräte entkoppeln und neu koppeln.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Tethering und mobiler Hotspot</h4>
+                    <p class="mb-2">Teilen Sie Ihre mobile Datenverbindung mit anderen Geräten.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Hotspot einschalten:</strong> In [Einstellungen] > [Tethering] oder [Mobiler Hotspot].</li>
+                        <li><strong>Komplexes Passwort festlegen:</strong> Mindestens 8 Zeichen mit Mischung aus Buchstaben, Zahlen und Sonderzeichen.</li>
+                        <li><strong>ACHTUNG:</strong> Tethering verbraucht viel Akku und Datenvolumen! Nicht unbeaufsichtigt lassen.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übungszeit: Hotspot sicher einrichten</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>[Einstellungen] öffnen, Tethering oder Mobiler Hotspot einschalten.</li>
+                            <li>Einen eindeutigen Namen und ein sicheres Passwort festlegen.</li>
+                            <li>Mit einem anderen Gerät (Tablet oder Laptop) verbinden und die Verbindung testen.</li>
+                            <li>Nach Gebrauch: Hotspot wieder ausschalten.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 4: App-Installation und -Verwaltung</h3>
+                    <p class="mb-3">Apps machen das Smartphone universell.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Offizieller Store</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Android:</strong> Google Play Store – die zentrale Plattform für Android-Apps.</li>
+                        <li><strong>iOS:</strong> Ausschließlich App Store – von Apple kuratiert und geprüft.</li>
+                    </ul>
+                    <p class="mb-2"><strong>Kernbedeutung:</strong> Geprüfte Apps, Update-Garantie, sichere Zahlungen. Laden Sie bevorzugt nur aus offiziellen Stores herunter.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Warum offizielle Stores?</strong> Apple und Google prüfen Apps auf Schadsoftware bevor sie gelistet werden.</li>
+                        <li><strong>Zahlungssicherheit:</strong> In-App-Käufe werden über das Google Play Konto oder Apple ID abgerechnet.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Drittanbieter-Quellen</h4>
+                    <p class="mb-2"><strong>Extrem hohes Risiko!</strong> Viren, Diebstahl, unbefugte Zahlungen. Unbekannte Apps deaktivieren.</p>
+                    <p class="mb-2">Wenn unbedingt nötig: Stellen Sie sicher, dass die Quelle absolut vertrauenswürdig ist, prüfen Sie die Berechtigungsanforderungen vor der Installation sorgfältig.</p>
+                    <p class="mb-2"><strong>Empfehlung:</strong> Deaktivieren Sie in den Systemeinstellungen die Berechtigung zur Installation unbekannter Apps.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>APK-Dateien (Android):</strong> Installationsdateien von Drittanbietern können Schadsoftware enthalten.</li>
+                        <li><strong>Side-Loading (iOS):</strong> Nur über offizielle Methoden wie TestFlight für Beta-Tests.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Installieren, Aktualisieren, Deinstallieren</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Installieren:</strong> Im Store auf "Herunterladen" tippen. Bei der ersten App-Öffnung werden Berechtigungen angefordert.</li>
+                        <li><strong>Aktualisieren:</strong> <strong>Unbedingt aktualisieren!</strong> Sicherheitslücken werden behoben. Auto-Update aktivieren.</li>
+                        <li><strong>Deinstallieren:</strong> Symbol lange drücken und in den Deinstallierungsbereich ziehen. Für gründlicheres Löschen: [Einstellungen] > [Apps] finden und deinstallieren.</li>
+                        <li><strong>App-Daten:</strong> Bei Deinstallation bleiben manchmal Daten zurück. In Einstellungen > Apps > "Speicher" können Sie alle Daten löschen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Berechtigungsverwaltung</h4>
+                    <p class="mb-2">Sie sind der Chef der Apps. Optionen: Immer erlauben, Nur bei Verwendung, Ablehnen, Jedes Mal nachfragen.</p>
+                    <p class="mb-2"><strong>Besonders überwachen:</strong> Kontakte, Standort, Kamera, Mikrofon, Dateien.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Berechtigungs-Prinzipien</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>Minimalprinzip:</strong> Geben Sie keine Berechtigungen, die nicht notwendig sind.</li>
+                        <li><strong>Regelmäßige Prüfung:</strong> Überprüfen Sie regelmäßig die Berechtigungseinstellungen – Apps können nach Updates neue Berechtigungen anfordern.</li>
+                        <li><strong>Situationsabhängig:</strong> Taxis-Apps beispielsweise sollten nur während der Nutzung Standortberechtigung erhalten.</li>
+                        <li><strong>Bei Bedenken:</strong> Lieber eine Berechtigung verweigern und schauen ob die App noch funktioniert.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übungszeit: Berechtigungen von 3 Apps prüfen</p>
+                        <p class="mt-1">Wählen Sie 3 häufig genutzte Apps und prüfen Sie die Berechtigungen. Entfernen Sie unnötige Berechtigungen.</p>
+                    </div>
+                </div>
+
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 5: Das Smartphone anpassen</h3>
+                    <p class="mb-3">Ein paar Minuten Einstellungen und das Erlebnis verbessert sich erheblich.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Ton und Vibration</h4>
+                    <p class="mb-2">Lieblings-Klingelton einstellen. Lautlos-Modus und Bitte-nicht-stören-Modus nutzen. Bei Bluetooth-Kopfhörer prüfen ob Audioausgabe umgeschaltet wurde.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Individuelle Klingeltöne:</strong> Verschiedene Töne für verschiedene Kontakte – so wissen Sie wer anruft ohne aufs Display zu schauen.</li>
+                        <li><strong>Wichtig:</strong> Vergessen Sie nicht den Lautlos-Modus im Büro oder bei wichtigen Meetings.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Display und Helligkeit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Automatische Helligkeit:</strong> Passt sich an die Umgebung an. Spart Akku und schont die Augen.</li>
+                        <li><strong>Blaulichtfilter/Night Shift:</strong> Filtert blaues Licht heraus, macht das Display wärmer. Für komfortables Lesen bei Nacht.</li>
+                        <li><strong>Dunkelmodus:</strong> Spart Strom (besonders bei OLED), reduziert Blendung bei Nacht.</li>
+                        <li><strong>Bildwiederholrate:</strong> Höher = flüssiger (z.B. 120Hz). Einige Android-Geräte erlauben manuelle Einstellung.</li>
+                        <li><strong>Automatische Sperre:</strong> 15 oder 30 Sekunden einstellen. Sicher und energiesparend.</li>
+                        <li><strong>Always-On-Display:</strong> Zeigt Zeit und Benachrichtigungen auf dem gesperrten Display (bei OLED empfehlenswert).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Wallpaper, Themes und Startbildschirm</h4>
+                    <p class="mb-2">Schöne Wallpaper (Foto oder Live-Wallpaper) machen gute Laune. Android-Marken bieten oft Theme-Stores mit vollständigen Icon- und Stilpaketen. Vergessen Sie nicht Widgets!</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Wetter-Widget:</strong> Aktuelles Wetter auf einen Blick.</li>
+                        <li><strong>Kalender-Widget:</strong> Termine sofort sichtbar.</li>
+                        <li><strong>Musik-Widget:</strong> Wiedergabe steuern ohne App zu öffnen.</li>
+                        <li><strong>Batterie-Widget:</strong> Akkustand im Blick behalten.</li>
+                        <li><strong>Uhr-Widget:</strong> Mit Weltzeit oder Stoppuhr.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Barrierefreiheit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Zoom:</strong> Dreimal tippen zum Vergrößern. Ideal für kleine Texte.</li>
+                        <li><strong>Sprachassistent:</strong> Siri, Google. Nur sprechen für Wecker, Wetter und mehr.</li>
+                        <li><strong>Screen Reader:</strong> TalkBack (Android), VoiceOver (iOS). Originally für Sehbehinderte, aber auch zum "Vorlesen" von Artikeln nützlich.</li>
+                        <li><strong>Weitere Optionen:</strong> Farbkorrektur (für Farbenblinde), Rückseiten-Tap (iPhone), Barrierefreiheitsmenü (Android).</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übungszeit: Fokus-Modus einrichten</p>
+                        <p class="mt-1">Nutzen Sie Fokus-Modus (iOS) oder Szenen-Modus für automatische Anpassung.</p>
+                    </div>
+                </div>
+
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 6: Sicherheit und Privatsphäre</h3>
+                    <p class="mb-3">Smartphone-Sicherheit = Privatsphäre + Vermögens-Sicherheit.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Sperrbildschirm: Die erste physische Verteidigungslinie</h4>
+                    <p class="mb-2">Der Sperrbildschirm ist Ihre erste und wichtigste Verteidigungslinie gegen unbefugten Zugriff.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Sicherheitsstufen (vom Sichersten zum Bequemsten):</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Passwort/PIN: Am sichersten. Dient als ultimative Absicherung wenn Biometrie versagt.</li>
+                                <li>Fingerabdruck: Perfekte Balance zwischen Sicherheit und Komfort.</li>
+                                <li>Gesichtserkennung: Am bequemsten. Sicherheit variiert je nach Technologie (3D-Strukturlicht=sicher, 2D-Foto=leicht zu täuschen).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Komplexes Passwort einstellen:</strong> Keine Geburtsdaten, keine einfachen Muster (123456). Mindestens 6 Zeichen, besser mehr.</li>
+                        <li><strong>Biometrie einschalten:</strong> Für schnellen und sicheren Zugriff kombinieren.</li>
+                        <li><strong>Automatische Sperre:</strong> Sofort oder nach 30 Sekunden einstellen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Smartphone finden: Das ultimative Diebstahlschutz-Tool</h4>
+                    <p class="mb-2"><strong>Diese Funktion MÜSSEN Sie einschalten!</strong> Was Sie damit tun können:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Standort bestimmen:</strong> Finden Sie Ihr Smartphone auf einer Karte, egal wo es ist.</li>
+                        <li><strong>Ton abspielen:</strong> Lassen Sie das Smartphone klingeln – ideal zum Finden in der Wohnung.</li>
+                        <li><strong>Verloren-Modus:</strong> Fernsperre aktivieren und Kontaktnummer anzeigen. Finder können Sie kontaktieren.</li>
+                        <li><strong>Fernlöschung:</strong> Letzter Ausweg – alle Daten löschen (danach kein Standort mehr möglich).</li>
+                    </ul>
+                    <p class="mb-2">So schalten Sie es ein: Einstellungen > Apple ID/iCloud > "iPhone suchen" (iOS) oder "Gerät finden" / Marken-Cloud (Android).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">System-Updates: Sicherheitslücken schließen</h4>
+                    <p class="mb-2">Systemupdates dienen hauptsächlich dazu, Sicherheitslücken zu beheben – wie Löcher in Ihrer Hauswand zu reparieren. Wenn ein Update verfügbar ist, installieren Sie es so schnell wie möglich.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Automatische Updates:</strong> In den Einstellungen aktivieren für kontinuierlichen Schutz.</li>
+                        <li><strong>Regelmäßig prüfen:</strong> Einstellungen > System > Software-Update.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Betrügerische Anrufe und Nachrichten erkennen</h4>
+                    <p class="mb-2"><strong>Anti-Betrug-Mantra:</strong> Nicht glauben, nicht verraten, nicht klicken, nicht überweisen, bei Zweifeln nachfragen!</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Typische Betrugsmaschen:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Polizei-/Kundendienst-Imitation (Phishing): Anrufe von "Polizei" oder "Bank"</li>
+                                <li>Gewinnspiele/Nebenjob-Lockungen: "Sie haben gewonnen!"</li>
+                                <li>Romance Scam: Aufbau einer emotionalen Beziehung zur Geldforderung</li>
+                                <li>CEO-Betrug: Falsche Vorgesetzte bei Unternehmen</li>
+                            </ul>
+                        </li>
+                        <li><strong>Standard-Schutz:</strong> Spam-Blocker, Diebstahlschutz für Codes, SMS-Link-Sicherheitserkennung.</li>
+                        <li><strong>So schützen Sie sich:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Niemals persönliche Daten am Telefon geben</li>
+                                <li>Niemals Überweisungen auf Anweisung tätigen</li>
+                                <li>Im Zweifel auflegen und-offizielle Nummer selbst anrufen</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Fernsperre testen</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Prüfen Sie, ob "Smartphone suchen" eingeschaltet ist.</li>
+                            <li>Öffnen Sie auf einem PC-Browser oder einem anderen Smartphone die Cloud-Website (iCloud.com oder die Marken-Cloud).</li>
+                            <li>Loggen Sie sich mit Ihrem Konto ein.</li>
+                            <li>Testen Sie "Ton abspielen" oder "Verloren-Modus" – verstehen Sie den gesamten Ablauf.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">II. Software (Kapitel 7-12)</h2>
+
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 7: Kommunikation</h3>
+                    <p class="mb-3">Kommunikation ist die grundlegendste Mission des Smartphones. Von einfachen Anrufen und SMS hat sich die Kommunikation zu einem komplexen Ökosystem entwickelt: Instant Messaging, soziale Netzwerke und E-Mail.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Telefon-App: Mehr als nur Wählen</h4>
+                    <p class="mb-2">Moderne Telefon-Apps bieten weit mehr als nur das Wählen von Nummern.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Anrufaufzeichnung (rechtliche Hinweise beachten):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Einsatzbereiche:</strong> Wichtige Gespräche aufzeichnen für Besprechungsprotokolle, Interviews, Kundenvereinbarungen oder Streitfälle.</li>
+                        <li><strong>Rechtliche Hinweise für Deutschland:</strong> Aufzeichnung ohne Zustimmung ist verboten (§ 201 StGB). Ausnahme: Eigene Rechte wahren (z.B. bei Belästigung oder Betrug). Informieren Sie Ihr Gegenüber vorab mündlich.</li>
+                        <li><strong>So geht's:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: In der Telefon-App usually eine klare "Aufnehmen"-Taste. In den Telefon-App-Einstellungen nach "Anrufaufzeichnung" suchen.</li>
+                                <li>iOS: Keine native Funktion. Drittanbieter-Apps erforderlich (Vorsicht: Qualität und Datenschutz prüfen).</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Spam-Blockierung und intelligente Nummernerkennung:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>So funktioniert es:</strong> Die App prüft eingehende Anrufe gegen eine große Nummerndatenbank und zeigt "Spam", "Betrug" oder Firmenname an.</li>
+                        <li><strong>Aktivieren:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Telefon-App > Rechts oben "Einstellungen" > Spam-Schutz. Alle Optionen aktivieren.</li>
+                                <li>iOS: Einstellungen > Telefon > Kontakte & Anrufe > Drittanbieter-Sicherheits-App installieren (z.B. Trend Micro Mobile Security).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Tipp:</strong> Nach einem Spam-Anruf in der Anrufliste aktiv als "Spam" oder "Betrug" markieren – das hilft der Gemeinschaft.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Anruf-Unterstützungsfunktionen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Transkription:</strong> Einige Android-Marken bieten nach Aufzeichnung eine direkte "Transkribieren"-Taste.</li>
+                        <li><strong>Echtzeit-Untertitel:</strong> In den Barrierefreiheits-Einstellungen "Live-Untertitel" aktivieren – auch für Anrufe.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">SMS und iMessage/RCS</h4>
+                    <p class="mb-2">SMS ist nicht veraltet – für Authentifizierungscodes und offizielle Infos unverzichtbar.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs. iMessage (iOS) / RCS (Android):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iMessage:</strong> Zwischen Apple-Geräten über Internet. Blaue Blasen. Unterstützt hochqualitative Bilder/Videos, Lesebestätigungen. Kostenlos und Ende-zu-Ende-verschlüsselt.</li>
+                        <li><strong>RCS:</strong> Nächste SMS-Generation, von Mobilfunkbetreibern und Google gefördert. Ähnliche Funktionen wie iMessage, aber telefonbasiert. In Android-Messages "Chat-Funktionen" aktivieren.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Authentifizierungscodes sichern:</h5>
+                    <p class="mb-2">Das System erkennt automatisch SMS-Codes. Geben Sie erhaltene Codes NIEMALS an Dritte weiter.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Spam-Filterung:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: Einstellungen > Messages > "Unbekannte Absender filtern" einschalten.</li>
+                        <li>Android: In Messages-App "Smart-Spam-Schutz" oder "Spam-Filter" aktivieren.</li>
+                        <li><strong>Wichtig:</strong> Nie auf Spam-SMS antworten (auch nicht "TD zum Abbestellen"). Nur löschen oder als Spam markieren.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">LINE/WeChat: Super-Apps verwalten</h4>
+                    <p class="mb-2">LINE und WeChat sind zu "Super-Apps" geworden, die Kommunikation, Soziales und Zahlungen integrieren.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Chatverläufe sichern und migrieren:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Warum wichtig:</strong> Chatverläufe enthalten wichtige Dateien, Erinnerungen und Arbeitsinformationen. Bei Verlust oder Neuinstallation sind sie permanent weg.</li>
+                        <li><strong>Backup auf PC (empfohlen):</strong>
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>PC-Version oder Mac-Version öffnen.</li>
+                                <li>Links unten Menü > "Migrieren & Sichern" > "Backup & Wiederherstellung".</li>
+                                <li>"Chatverläufe auf PC sichern" wählen und Chats auswählen.</li>
+                            </ol>
+                            Hinweis: Backup-Dateien werden verschlüsselt lokal gespeichert. Zum Wiederherstellen: PC und Smartphone im gleichen WLAN.
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Speicherplatz bereinigen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Pfad:</strong> WeChat [Ich] > [Einstellungen] > [Allgemein] > [Speicher]. LINE [Einstellungen] > [Allgemein] > [Speicherverwaltung].</li>
+                        <li><strong>Was löschen:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Cache: Sicher löschbar – temporäre App-Daten.</li>
+                                <li>Chatverläufe: Nach Zeit, Dateityp oder einzelnen Chats bereinigen. Z.B. alle Videos älter als 1 Jahr löschen.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Datenschutz-Einstellungen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Zugänglichkeit kontrollieren:</strong> Wer Sie finden kann (Telefonnummer, ID, Gruppen).</li>
+                        <li><strong>Timeline-Berechtigungen:</strong> Wer sehen kann, wer nicht.</li>
+                        <li><strong>Authentifizierungen verwalten:</strong> In WeChat [Einstellungen] > [Persönliche Info & Rechte] > [Authentifizierungs-Management] – Drittanbieter-Logins prüfen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">E-Mail: Effizientes Mobile Management</h4>
+                    <p class="mb-2">Effizientes E-Mail-Management auf dem Smartphone ist ein wichtiger Teil des mobilen Büros.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. E-Mail-Konten hinzufügen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>System-Mail-App:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS: Einstellungen > Mail > Konten > Konto hinzufügen.</li>
+                                <li>Android: System-Mail-App öffnen und Anweisungen folgen.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Spezialisierte Clients:</strong> Gmail, Outlook – optimiert für bestimmte Dienste mit mehr Funktionen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Mobile E-Mail-Tipps:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Push-Benachrichtigungen:</strong> Verschiedene Benachrichtigungen für verschiedene Konten.</li>
+                        <li><strong>Wischgesten:</strong> Die meisten Apps ermöglichen schnelles Archivieren, Löschen oder Markieren per Wischgeste.</li>
+                        <li><strong>Signatur:</strong> Professionelle mobile E-Mail-Signatur einrichten.</li>
+                        <li><strong>Wichtige E-Mails:</strong> Sterne oder Flags verwenden für Follow-up.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Sicherheitshinweise:</h5>
+                    <p class="mb-2">Seien Sie vorsichtig beim Einloggen in E-Mail über öffentliches WLAN oder beim Senden vertraulicher E-Mails.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: WeChat-Chatverläufe auf PC sichern</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Backup starten: PC-WeChat öffnen > Links unten Menü > [Migrieren & Sichern] > [Backup & Wiederherstellung].</li>
+                            <li>"Chatverläufe auf PC sichern" wählen.</li>
+                            <li>Auf dem Smartphone die Chats zum Backup auswählen und "Backup starten" antippen.</li>
+                            <li>Auf Backup-Fertigstellung warten.</li>
+                            <li>(Optional) Wiederherstellungsprozess verstehen: Im gleichen Fenster "Chatverläufe auf Smartphone wiederherstellen".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 8: Mobiles Büro und Lernen</h3>
+                    <p class="mb-3">Das Smartphone ist eine mobile Workstation. Mit den richtigen Apps können Sie Dokumente erstellen, bearbeiten, scannen, in der Cloud speichern und unterwegs lernen.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Dokumentenverarbeitung: Microsoft Office unterwegs</h4>
+                    <p class="mb-2">Office-Dokumente (Word, Excel, PowerPoint) sind im Berufsleben allgegenwärtig. Auf dem Smartphone können Sie diese nicht nur ansehen, sondern auch bearbeiten.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Officielle Microsoft-Apps:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Word:</strong> Vollständiger Funktionsumfang für Dokumentbearbeitung. Formatierungen, Kommentare, Änderungsverfolgung.</li>
+                        <li><strong>Excel:</strong> Tabellenkalkulation mit Formeln, Diagrammen und Pivot-Tabellen.</li>
+                        <li><strong>PowerPoint:</strong> Präsentationen erstellen und vorführen. Stichpunkte, Übergänge, Animationen.</li>
+                        <li><strong>OneDrive:</strong> Dokumente automatisch in der Cloud speichern und mit PC/Mac synchronisieren.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Alternativen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>WPS Office:</strong> Kostenlos, Microsoft-kompatibel, gut für Deutsch lokalisiert. Enthält Writer, Spreadsheets, Presentation.</li>
+                        <li><strong>Google Docs/Sheets/Slides:</strong> Kostenlos, browserbasiert, hervorragend für Zusammenarbeit in Echtzeit.</li>
+                        <li><strong>Apple iWork:</strong> Pages, Numbers, Keynote. Nur für Apple-Geräte, aber elegant und gut integriert.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Cloud-Speicherung ist der Schlüssel:</h5>
+                    <p class="mb-2">Speichern Sie Ihre Dokumente IMMER in der Cloud (OneDrive, Google Drive, iCloud). Das schützt vor Datenverlust und ermöglicht nahtloses Arbeiten zwischen Smartphone, Tablet und PC.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Dokumente teilen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Per Link:</strong> Cloud-Dienst generiert einen Teilen-Link. Berechtigungen设置 (Nur ansehen / Kommentieren / Bearbeiten).</li>
+                        <li><strong>Per E-Mail:</strong> Direkt aus der App als Anhang senden.</li>
+                        <li><strong>Kollaboration:</strong> Mehrere Personen können gleichzeitig am selben Dokument arbeiten (Google Docs, Microsoft 365).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Notiz-Apps: Digitale第二个大脑</h4>
+                    <p class="mb-2">Gute Notiz-Apps helfen Ihnen, Gedanken zu ordnen, Ideen festzuhalten und Informationen zu organisieren.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Vergleich der wichtigsten Notiz-Apps:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Evernote:</strong> DER Pionier. Extrem starke Suche (durchsucht sogar PDF und Bilder). Gute Organisation mit Notizbüchern und Tags. Kostenlos: 60MB/Monat. Premium: $10/Monat.</li>
+                        <li><strong>Notion:</strong> Das Schweizer Messer der Produktivität. Datenbanken, Kanban-Boards, Kalender, Wikis – alles in einem. Steile Lernkurve, aber extrem flexibel. Kostenlos für Einzelpersonen.</li>
+                        <li><strong>Apple Notizen:</strong> Für Apple-Nutzer unschlagbar integriert. Handschrift-Erkennung, Scanner, Diagramme. iCloud-Sync. Kostenlos.</li>
+                        <li><strong>Google Keep:</strong> Schnell und einfach. Erinnerungen,Checkboxen, Zusammenarbeit. Perfekt für schnelle Notizen. Kostenlos.</li>
+                        <li><strong>Obsidian:</strong> Für Power-User. Lokale Markdown-Dateien, Graph-View, viele Plugins. Kostenlos (lokal), $8/Monat für Sync.</li>
+                        <li><strong>Microsoft OneNote:</strong> Freiform-Notizen wie ein physisches Notizbuch. Gut für Handschrift und Zeichnungen. Kostenlos.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Tipps für effektives Notieren:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Tag-System:</strong> Verwenden Sie ein konsistentes Tag-System für einfaches Wiederfinden.</li>
+                        <li><strong>regelmäßige Durchsicht:</strong> Einmal pro Woche Notizen durchgehen und aufräumen.</li>
+                        <li><strong>Kopieren vs. Verknüpfen:</strong> Bei langen Artikeln nur die Kernaussagen notieren, nicht den ganzen Text.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Scannen und OCR: Papier wird digital</h4>
+                    <p class="mb-2">Ihr Smartphone ist ein portabler Scanner. OCR (Optical Character Recognition) wandelt Text in Bildern in bearbeitbaren und durchsuchbaren Text um.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Nutzungsszenarien:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Rechnungen und Belege:</strong> Digitalisieren für Buchhaltung und Steuererklärung.</li>
+                        <li><strong>Visitenkarten:</strong> Kontakte einscannen und automatisch in Kontakte-App speichern.</li>
+                        <li><strong>Whiteboard-Notizen:</strong> Nach Meetings alles abfotografieren und durchsuchbar machen.</li>
+                        <li><strong>Bücher:</strong> Seiten abfotografieren und durchsuchen (rechtliche Einschränkungen beachten!).</li>
+                        <li><strong>Unterschriften:</strong> Verträge ausdrucken, unterschreiben, wieder einscannen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Scanner-Apps im Vergleich:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Microsoft Lens:</strong> Kostenlos, vielseitig. Exportiert zu Word, PDF, PowerPoint, Bilder. Hervorragende OCR.</li>
+                        <li><strong>Adobe Scan:</strong> Professionelle Qualität, automatische Trapez畸变矫正, Schärfung. In Adobe Reader integriert.</li>
+                        <li><strong>iOS Notizen:</strong> Integrierter Scanner in der Notizen-App. Einfach zu bedienen, gut für schnelles Scannen.</li>
+                        <li><strong>Google Drive:</strong> In Drive-App "+" > "Scannen". Schnell, direkt in Cloud gespeichert.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Tipps für gute Scans:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Gute Beleuchtung:</strong> Natürliches Licht ist am besten. Schatten vermeiden.</li>
+                        <li><strong>Gerade halten:</strong> Geräte möglichst parallel zum Dokument halten.</li>
+                        <li><strong>Ränder:</strong> Etwas mehr als nötig einschließen, zuschneiden kann man immer noch.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Cloud-Laufwerke: Überall und jederzeit Zugriff</h4>
+                    <p class="mb-2">Cloud-Laufwerke sind der zentrale Speicherort für Ihre digitalen Assets. Sie ermöglichen Datensicherung, Synchronisation und Zusammenarbeit.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Die wichtigsten Cloud-Dienste:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Google Drive:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Kostenlos: 15GB (Google Docs zählen nicht dazu!).</li>
+                                <li>Integration: Nahtlos mit Google Docs, Sheets, Slides.</li>
+                                <li>Desktop-App: "Backup & Sync" oder "Drive for Desktop".</li>
+                                <li>Teilen: Einfache Freigabe-Links.</li>
+                            </ul>
+                        </li>
+                        <li><strong>iCloud Drive:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Kostenlos: 5GB (viel zu wenig!).</li>
+                                <li>Integration: Nur für Apple-Geräte, aber mit "iCloud für Windows" auch für PC.</li>
+                                <li> особенность: Fotos in "iCloud Fotos" werden automatisch in voller Auflösung gesichert.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Microsoft OneDrive:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Kostenlos: 5GB.</li>
+                                <li>Integration: Windows 10/11 hat OneDrive integriert. Office 365 nutzt OneDrive.</li>
+                                <li>особенность: Persönlicher Tresor – extra sicherer Bereich mit Zwei-Faktor-Auth.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Dropbox:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Kostenlos: 2GB (sehr wenig).</li>
+                                <li>Qualität: Pionier, extrem zuverlässig, einfache Bedienung.</li>
+                                <li>Integration: Viele Drittanbieter-Apps haben Dropbox-Integration.</li>
+                            </ul>
+                        </li>
+                        <li><strong>MEGA:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Kostenlos: 20GB.</li>
+                                <li>Besonderheit: Ende-zu-Ende-Verschlüsselung – MEGA kann Ihre Daten nicht einsehen.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Cloud vs. Lokal: Die richtige Strategie:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Cloud-Speicher für:</strong> Aktuelle Projekte, geteilte Dateien, Fotos, Backups.</li>
+                        <li><strong>Lokaler Speicher für:</strong> Große Videodateien (wenn Cloud-Kontingent begrenzt), sensible Daten die Sie selbst verschlüsseln wollen.</li>
+                        <li><strong>Hybrid:</strong> Wichtige Dateien sowohl lokal als auch in Cloud (3-2-1 Backup-Regel).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Speicherplatz sparen mit Cloud:</h5>
+                    <p class="mb-2">Ein großer Vorteil: Cloud-Apps wie Google Photos oder iCloud Photos ermöglichen "Speicheroptimierung", wobei hochauflösende Fotos in der Cloud bleiben und nur Thumbnails lokal gespeichert werden.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Dokument scannen und OCR nutzen</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Microsoft Lens herunterladen (kostenlos).</li>
+                            <li>Eine Visitenkarte oder einen kurzen Text einscannen.</li>
+                            <li>Nach dem Scan "Text in Bild" aktivieren (oder nach dem Scan auf "Kopieren" tippen).</li>
+                            <li>Den erkannten Text in eine E-Mail oder Notiz einfügen.</li>
+                            <li>Die Genauigkeit prüfen – bei guten Scans ist der Text fast fehlerfrei!</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 9: Mobile Zahlungen</h3>
+                    <p class="mb-3">Das Smartphone ersetzt Geldbörse und Fahrkarte. Mobile Zahlungen sind bequem, aber es ist wichtig, die Sicherheit zu verstehen und zu gewährleisten.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Mobile Zahlungen: Sicherheit hat Priorität</h4>
+                    <p class="mb-2">Bevor Sie mobile Zahlungen nutzen, stellen Sie sicher, dass Sie die Sicherheitsmechanismen verstehen und aktivieren.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. NFC-Bezahlung (Kontaktlos mit Smartphone):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Wie es funktioniert:</strong> NFC (Near Field Communication) ermöglicht kontaktlose Kommunikation über wenige Zentimeter. Beim Bezahlen halten Sie Ihr Smartphone nahe an das Terminal.</li>
+                        <li><strong>Sicherheit:</strong> NFC-Zahlungen sind verschlüsselt und erfordern Biometrie oder PIN. Selbst wenn jemand Ihr Smartphone stiehlt, kann er nicht ohne Ihre Authentifizierung bezahlen.</li>
+                        <li><strong>Apple Pay:</strong> Nutzt die Secure Enclave des iPhones – extrem sicher. Bezahlen mit Face ID, Touch ID oder PIN.</li>
+                        <li><strong>Google Pay:</strong> Auf Android nutzt es Tokenisierung – Ihre echten Kartennummern werden niemals an den Händler weitergegeben.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Sicherheitseinstellungen für mobile Zahlungen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Nur 1-2 Karten verknüpfen:</strong> Nicht alle Ihre Karten, nur die wichtigsten – eine Kreditkarte und eine Debitkarte.</li>
+                        <li><strong>Zahlungspasswort und Biometrie einschalten:</strong> Zusätzliche Sicherheitsstufe bei jeder Zahlung.</li>
+                        <li><strong>Sicherheitssperre einrichten:</strong> Fernsperre und Fernlöschung aktivieren (siehe Kapitel 6 – Diebstahlschutz).</li>
+                        <li><strong>Regelmäßig Transaktionen prüfen:</strong> Unbekannte Abbuchungen sofort Ihrer Bank melden.</li>
+                        <li><strong>Keine Fernzahlungen für große Beträge:</strong> Richten Sie Limits ein für einzelne Transaktionen und tägliche Gesamtsummen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Spezielle Sicherheitsfunktionen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Virtuelle Kartennummern:</strong> Einige Banken bieten virtuellen Kartennummern für Online-Zahlungen – Ihre echte Kartennummer wird nie preisgegeben.</li>
+                        <li><strong>Einmal-Codes:</strong> Einige Dienste generieren Einmal-Passwörter für jede Transaktion.</li>
+                        <li><strong>Benachrichtigungen:</strong> Echtzeit-Benachrichtigungen für jede Transaktion aktivieren.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Beliebte Zahlungsapps im Detail</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple Pay:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Verfügbarkeit:</strong> Nur auf Apple-Geräten (iPhone, Apple Watch, iPad, Mac).</li>
+                        <li><strong>Akzeptanz:</strong> Weltweit an Millionen von Kontaktlos-Terminals.</li>
+                        <li><strong>Einrichtung:</strong> Wallet-App öffnen > Karte hinzufügen > Bank-ID oder Kartendaten eingeben.</li>
+                        <li><strong>Besonderheit:</strong> Wenn Sie Apple Pay nutzen, wird Ihre Kreditkarten-Nummer NICHT auf dem Gerät gespeichert. Stattdessen wird eine Device Account Number verwendet.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Google Pay:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Verfügbarkeit:</strong> Auf allen Android-Geräten mit NFC (Android 5.0+).</li>
+                        <li><strong>Akzeptanz:</strong> Weltweit, besonders in Europa stark verbreitet.</li>
+                        <li><strong>Einrichtung:</strong> Google Pay App herunterladen > Konto hinzufügen > Karte photographieren oder Daten eingeben.</li>
+                        <li><strong>Besonderheit:</strong> Kann auch für Person-zu-Person-Zahlungen (wie PayPal) verwendet werden.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. PayPal:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Einsatzbereich:</strong> Hauptsächlich für Online-Einkäufe, aber auch für Person-zu-Person-Zahlungen.</li>
+                        <li><strong>Sicherheit:</strong> Käuferschutz und Verkäuferschutz. Zwei-Faktor-Authentifizierung dringend empfohlen.</li>
+                        <li><strong>PayPal-App:</strong> Für mobile Zahlungen in Geschäften (in einigen Ländern mit NFC).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Verkehrstickets: Digitales Ticket</h4>
+                    <p class="mb-2">Smartphone wird zur Fahrkarte. Statt Papierfahrscheine können Sie virtuelle Verkehrskarten in Wallet-Apps aktivieren.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Deutschland:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>DB Navigator:</strong> Fernverkehr und Nahverkehr. Tickets für ICE, IC, Regionalzüge. Auch Handy-Ticket als SMS/QR-Code.</li>
+                        <li><strong>BVG FahrCard:</strong> Berliner Verkehrsbetriebe. Handy-Ticket für Bus, U-Bahn, Tram.</li>
+                        <li><strong>MVG App:</strong> Münchner Verkehrsgesellschaft. Für U-Bahn, Bus, Tram.</li>
+                        <li><strong>HandyTicket Deutschland:</strong> Aggregator für viele Verkehrsverbünde in Deutschland.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Österreich:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>WienMobil:</strong> Wiener Linien – Tickets für U-Bahn, Bus, Tram. Auch Tageskarten und Wochenkarten.</li>
+                        <li><strong>ÖBB:</strong> Fern- und Nahverkehr. scotty mobil – Tickets und Fahrpläne.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Schweiz:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>SBB Mobile:</strong> Schweizerische Bundesbahnen. Tickets für ganz Schweiz. Auch Halbtax- und Generalabonnemente.</li>
+                        <li><strong>ZVV Zvv:</strong> Zürcher Verkehrsverbund – für Zürich und Umgebung.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Tipps für digitale Tickets:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Offline-Verfügbarkeit:</strong> Die meisten Apps ermöglichen Download des Tickets fürOffline-Nutzung – wichtig bei schlechtem Empfang im Zug.</li>
+                        <li><strong> automatische Validierung:</strong> Einige Systeme erkennen automatisch, wenn Sie in einen Zug einsteigen (mit GPS oder Beacon).</li>
+                        <li><strong>Kein Akku = kein Ticket?</strong> Laden Sie Ihr Smartphone vor der Fahrt. Führen Sie als Backup immer einen Papierausdruck oder eine andere Zahlungsmethode mit.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Lebensservices: Alles in einer App</h4>
+                    <p class="mb-2">Neben Zahlungen und Tickets können Sie viele weitere Lebensservices über Ihr Smartphone nutzen.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Gebühren und Rechnungen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Bank-App:</strong> Überweisungen, Daueraufträge, Kontoauszüge.</li>
+                        <li><strong>PayPal-App:</strong> Online-Bezahlung, Guthaben verwalten.</li>
+                        <li><strong>Automatische Zahlungen:</strong> In Apps für Strom, Gas, Internet einrichten. Nicht vergessen, rechtzeitig auf dem Konto nachschauen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Essenlieferung:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Lieferando:</strong> Deutschlands größte Lieferplattform.</li>
+                        <li><strong>Uber Eats:</strong> Internationale Abdeckung.</li>
+                        <li><strong>Wolt:</strong> In vielen Städten verfügbar.</li>
+                        <li><strong>Tipp:</strong> Plattformen vergleichen – Preise und Liefergebühren können stark variieren. Achten Sie auf Gutscheine und Deals.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Taxi und Fahrdienste:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Uber:</strong> Internationale Abdeckung, verschiedene Fahrzeugtypen.</li>
+                        <li><strong>Bolt:</strong> Oft günstiger als Uber in einigen Städten.</li>
+                        <li><strong>Taxi:</strong> Klassische Taxis über Apps bestellen (Taxi Deutschland, etc.).</li>
+                        <li><strong>Sicherheitstipp:</strong> Notfallkontakt in der App einstellen. Fahrt teilen (Live-Standort) mit Familie oder Freunden.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Parkscheine und Maut:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>parken:</strong> Handyparken in vielen Städten – keine Parkscheibe mehr nötig.</li>
+                        <li><strong>Toll Collect:</strong> Für LKW-Maut in Deutschland.</li>
+                        <li><strong>Vignette:</strong> Digitale Vignetten für Österreich, Schweiz, Tschechien etc.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Zahlungs-App absichern</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Öffnen Sie Ihre Zahlungs-App (Apple Pay, Google Pay, PayPal).</li>
+                            <li>Prüfen Sie die Sicherheitseinstellungen: Ist Biometrie/PIN erforderlich?</li>
+                            <li>Richten Sie Transaktionsbenachrichtigungen ein.</li>
+                            <li>Prüfen Sie verbundene Geräte und entfernen Sie unbekannte Geräte.</li>
+                            <li>Aktivieren Sie falls möglich ein tägliches Zahlungslimit.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 10: Fotografieren und Fotoverwaltung</h3>
+                    <p class="mb-3">Großartige Fotos erstellen und Erinnerungen verwalten. Moderne Smartphone-Kameras sind technische Wunderwerke – mit ein paar Grundlagen können Sie das Beste aus ihnen herausholen.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Kamera-Modi meistern</h4>
+                    <p class="mb-2">Moderne Smartphones bieten verschiedene Aufnahmemodi für verschiedene Situationen.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Automatik-Modus:</h5>
+                    <p class="mb-2">Für den täglichen Gebrauch. Die KI erkennt Szenen automatisch und optimiert Einstellungen. Für die meisten Situationen ist dies der beste Ausgangspunkt.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Nachtmodus:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Wie es funktioniert:</strong> Die Kamera macht mehrere Aufnahmen mit verschiedenen Belichtungen und kombiniert sie zu einem hellen, rauscharmen Bild.</li>
+                        <li><strong>Tipps:</strong> Smartphone so ruhig wie möglich halten (am besten auf einer稳定 Oberfläche). Manchmal hilft ein Stativ.</li>
+                        <li><strong>Bei iPhone:</strong> Automatisch aktiviert bei wenig Licht. Halten Sie das iPhone still während der Aufnahme.</li>
+                        <li><strong>Bei Android:</strong> Oft ein separater Modus. Je nach Marke unterschiedlich: "Nacht" oder "Astro-Modus".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Porträt-Modus:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Was es macht:</strong> Hintergrund unscharf (Bokeh-Effekt), Motiv bleibt scharf. Professioneller Look ohne teure Kamera.</li>
+                        <li><strong>Optimale Bedingungen:</strong> Gute Beleuchtung, klare Abgrenzung zwischen Motiv und Hintergrund.</li>
+                        <li><strong>Fortgeschritten:</strong> Viele Apps erlauben die Stärke des Bokeh-Effekts nachträglich anzupassen.</li>
+                        <li><strong>Licht- und Schatteneffekte:</strong> iPhone bietet verschiedene Beleuchtungseffekte (Natürlich, Studio, Kontur, etc.).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Pro-Modus / Manueller Modus:</h5>
+                    <p class="mb-2">Für Fotografie-Enthusiasten. Alle Einstellungen können manuell angepasst werden.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>ISO:</strong> Lichtempfindlichkeit. Niedrig (100-400) für helles Licht/Tageslicht. Hoch (800+) für Dunkelheit. Achtung: Hoher ISO = mehr Rauschen.</li>
+                        <li><strong>Verschlusszeit:</strong> Wie lange der Sensor Licht sammelt. Schnell (1/1000s) für Sport. Langsam (1/30s, 1s) für Nacht/Action.</li>
+                        <li><strong>Weißabgleich:</strong> Farbtemperatur. Auto funktioniert meist, aber für Kunst-Looks oder bei Mischbeleuchtung manuell einstellen.</li>
+                        <li><strong>Fokus:</strong> Manueller Fokus für Makro oder捕捉 bestimmter Entfernungen.</li>
+                        <li><strong>Belichtungskorrektur:</strong> +/- einstellen, um das Bild heller oder dunkler zu machen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">5. Makro-Modus:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Wann nutzen:</strong> Für extrem nahaufnahmen – Blumen, Insekten, Texturen.</li>
+                        <li><strong>Entfernung:</strong> Oft nur 5-10cm vom Motiv entfernt.</li>
+                        <li><strong>Tipps:</strong> Bei direktem Sonnenlicht fotografieren für beste Ergebnisse. Stativ verwenden wegen der geringe Schärfentiefe.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Komposition: Die Kunst des Bildaufbaus</h4>
+                    <p class="mb-2">Gute Komposition macht den Unterschied zwischen einem Schnappschuss und einem tollen Foto aus.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Drittel-Regel:</h5>
+                    <p class="mb-2">Teilen Sie das Bild mental in 9 gleiche Teile (2 horizontale und 2 vertikale Linien). Platzieren Sie interessante Elemente auf den Schnittpunkten oder entlang der Linien.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Führungslinien:</h5>
+                    <p class="mb-2">Nutzen Sie natürliche Linien (Straßen, Zäune, Flüsse), um den Blick des Betrachters ins Bild zu führen.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Symmetrie und Muster:</h5>
+                    <p class="mb-2">Symmetrie wirkt harmonisch und ist perfekt für Architektur. Auch wiederholende Muster sind visuell ansprechend.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Negativer Raum:</h5>
+                    <p class="mb-2">Platzieren Sie Ihr Motiv nicht in der Mitte, sondern lassen Sie "Luft" in eine Richtung. Das gibt dem Bild Raum zum Atmen.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">5. Perspektive ändern:</h5>
+                    <p class="mb-2">Nicht immer nur aus Augenhöhe fotografieren. Low Angle (von unten) oder High Angle (von oben) kann ein Bild völlig verändern.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">6. Golden Hour:</h5>
+                    <p class="mb-2">Die Stunde nach Sonnenaufgang und vor Sonnenuntergang bietet das schönste Licht. Probieren Sie es aus!</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Fortgeschrittene Fotografie-Techniken</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Langzeitbelichtung:</h5>
+                    <p class="mb-2">Mit Stativ und langen Verschlusszeiten können Sie Lichtspuren von Autos, Sternenstreifen oder fließendes Wasser aufnehmen.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. HDR (High Dynamic Range):</h5>
+                    <p class="mb-2">Kombiniert mehrere Aufnahmen mit unterschiedlicher Belichtung für Details in Schatten und Lichtern. Ideal für Landschaften mit Himmel.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Panorama:</h5>
+                    <p class="mb-2">Für breite Landschaften oder große Räume. Smartphone zeigt eine Führungslinie – folgen Sie ihr langsam und gleichmäßig.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Blitz nutzen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Aufhellblitz:</strong> Bei Gegenlicht oder Schatten im Gesicht.</li>
+                        <li><strong>Synchronisation:</strong> Manche Kameras ermöglichen Langzeit-Synchronisation (Blitz am Ende der Belichtung).</li>
+                        <li><strong>Kein Blitz:</strong> In Museen, Konzerten oder wenn natürliches Licht interessanter ist.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Fotoverwaltung: Ordnung halten</h4>
+                    <p class="mb-2">Mit tausenden Fotos ist gute Organisation entscheidend.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Intelligente Klassifizierung:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Nach Zeit:</strong> Die meisten Apps sortieren automatisch nach Datum.</li>
+                        <li><strong>Nach Ort:</strong> GPS-Tag ermöglicht Sortierung nach Karte. Sehen Sie alle Fotos von einem Urlaub sortiert.</li>
+                        <li><strong>Nach Personen:</strong> KI-gestützte Gesichtserkennung gruppiert Fotos nach Personen. (iCloud Fotos, Google Fotos).</li>
+                        <li><strong>Nach Gegenständen:</strong> Google Fotos erkennt auch Objekte, Tiere, Sehenswürdigkeiten.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Cloud-Sicherung:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iCloud Fotos:</strong> Für Apple-Nutzer. Synchronisiert alle Fotos auf allen Geräten. 5GB gratis (viel zu wenig!).</li>
+                        <li><strong>Google Fotos:</strong> Für alle. 15GB gratis. "Speicheroptimierung" spart lokalen Platz.</li>
+                        <li><strong>OneDrive:</strong> Für Microsoft-Nutzer integriert.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Duplikate und schlechte Fotos bereinigen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Google Fotos:</strong> In "Bibliothek" > "Dienstprogramme" > "Speicher freigeben".</li>
+                        <li><strong>iPhone:</strong> "Zuletzt gelöscht" regelmäßig leeren. Duplikate manuell finden.</li>
+                        <li><strong>Drittanbieter-Apps:</strong> Duplicate Photos Fixer, Remo Duplicate Photos.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Alben erstellen:</h5>
+                    <p class="mb-2">Für besondere Anlässe (Geburtstag, Urlaub) oder Themen (Essen, Architektur) eigene Alben erstellen. Aber nicht zu viele – sonst wird es unübersichtlich.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Screenshots und Bildschirmaufnahmen</h4>
+                    <p class="mb-2">Nicht nur für Fotos – Screenshots und Bildschirmaufnahmen sind praktische Werkzeuge.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Screenshots:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Android:</strong> [Power] + [Leiser runter] gleichzeitig. Bei manchen: [Power] + [Screenshot-Taste].</li>
+                        <li><strong>iPhone:</strong> [Power] + [Leiser] (iPhone mit Face ID) oder [Power] + [Home] (iPhone mit Home-Button).</li>
+                        <li><strong>立即bearbeiten:</strong> Nach dem Screenshot erscheint unten eine Vorschau. Tippen Sie darauf für Bearbeitungsoptionen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Scroll-Screenshot:</h5>
+                    <p class="mb-2">Für lange Webseiten, Chat-Verläufe oder Dokumente.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Android:</strong> Nach Screenshot auf "Scrollen" oder "Mehr" tippen.</li>
+                        <li><strong>iPhone:</strong> In der Vorschau auf "Ganze Seite" tippen (funktioniert nur für Webseiten in Safari).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Bildschirmaufnahme (Screen Recording):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Android:</strong> Quick Settings öffnen > "Bildschirmaufnahme". Ton kann mit aufgenommen werden.</li>
+                        <li><strong>iPhone:</strong> [Einstellungen] > [Kontrollzentrum] > "Bildschirmaufnahme" zu Kontrollzentrum hinzufügen. Dann im Kontrollzentrum tippen und halten für Optionen.</li>
+                        <li><strong>Anwendungen:</strong> Tutorials erstellen, Bugs dokumentieren, Gaming-Mitschnitte.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Porträt-Foto meistern</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Finden Sie eine Person oder ein Objekt zum Fotografieren.</li>
+                            <li>Porträt-Modus aktivieren.</li>
+                            <li>Achten Sie auf gute Beleuchtung (idealerweise seitlich oder von hinten).</li>
+                            <li>Fokusieren Sie auf die Augen – tippen Sie auf das Motiv, falls nötig.</li>
+                            <li>Probieren Sie verschiedene Bokeh-Stärken aus.</li>
+                            <li>iPhone-Nutzer: Testen Sie verschiedene Licht-Effekte.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 11: Unterhaltung und Lesen</h3>
+                    <p class="mb-3">Smartphone = Unterhaltungszentrum. Musik, Videos, Bücher und Spiele – alles unterwegs dabei.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Musik-Streaming: Ihre persönliche Bibliothek</h4>
+                    <p class="mb-2">Musik-Streaming-Dienste bieten Zugriff auf Millionen von Songs für einen monatlichen Preis.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Spotify:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Kostenlos:</strong> Mit Werbung, Shuffle-Modus nur, keine Offline-Wiedergabe.</li>
+                        <li><strong>Premium:</strong> 9,99€/Monat. Offline, keine Werbung, bessere Audioqualität.</li>
+                        <li><strong>Besonderheit:</strong> Hervorragende Playlists und Entdeckungs-Funktionen. Social Features (Follower, geteilte Playlists).</li>
+                        <li><strong>Familienplan:</strong> Bis zu 6 Personen, 15,99€/Monat.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Apple Music:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Preis:</strong> 10,99€/Monat. Im Apple One Bundle mit TV+, Arcade und iCloud+.</li>
+                        <li><strong>Besonderheit:</strong> Lossless-Audio und Dolby Atmos für Audiophile. In Apple-Ökosystem tief integriert.</li>
+                        <li><strong>Integration:</strong> Siri steuert Apple Music. Auf HomePod und AirPods optimiert.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. YouTube Music:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Preis:</strong> 9,99€/Monat. In YouTube Premium enthalten (auch für Videos ohne Werbung).</li>
+                        <li><strong>Besonderheit:</strong> Offizielle Songs UND User-Uploads. Perfekt für seltene oder live Versionen.</li>
+                        <li><strong>YouTube Premium:</strong> 11,99€/Monat – Music + Videos ohne Werbung + Downloads.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Weitere Dienste:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Amazon Music Prime:</strong> Für Amazon Prime-Mitglieder inklusive. 100 Millionen Songs.</li>
+                        <li><strong>Tidal:</strong> Für Audiophile. Lossless und MQA. Bekannte Künstler als Investoren.</li>
+                        <li><strong>Deezer:</strong> Mit Flow-Funktion für personalisierte Playlists.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">5. Podcasts:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Spotify:</strong> Podcasts und Musik in einer App.</li>
+                        <li><strong>Apple Podcasts:</strong> Standard auf iOS. Große Bibliothek.</li>
+                        <li><strong>Pocket Casts:</strong> Enthusiasten-Favorit. Viele Funktionen.</li>
+                        <li><strong>Google Podcasts:</strong> Für Android, wird aber eingestellt – zu YouTube Music migrieren.</li>
+                        <li><strong>Tipp:</strong> Podcasts für Offline-Hören downloaden – im Flugzeug oder in der U-Bahn perfekt.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Video-Streaming: Kino in der Tasche</h4>
+                    <p class="mb-2">Streaming-Dienste haben das Fernsehen revolutioniert. Sie schauen, was Sie wollen, wann Sie wollen.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Lokale Videoplayer:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>VLC:</strong> Der Alleskönner. Fast alle Videoformate, Netzwerk-Streaming, Chromecast.</li>
+                        <li><strong>nPlayer (iOS):</strong> Perfekt für iPhone/iPad. Netzwerk-Streaming, viele Formate.</li>
+                        <li><strong>MX Player (Android):</strong> Beliebt, viele Features, HW-Beschleunigung.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Streaming-Dienste:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Netflix:</strong> 17,99€/Monat (Premium). Eigene Produktionen (Netflix Originals). Profile für verschiedene Nutzer.</li>
+                        <li><strong>Amazon Prime Video:</strong> In Prime enthalten (89€/Jahr). Kauf- und Leihfilme zusätzlich.</li>
+                        <li><strong>Disney+:</strong> 8,99€/Monat. Disney, Pixar, Marvel, Star Wars, National Geographic.</li>
+                        <li><strong>RTL+ / Joyn:</strong> Deutsche Sender. Live-TV und Mediatheken.</li>
+                        <li><strong>Paramount+:</strong> Star Trek, Mission Impossible, etc.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Deutsche Mediatheken:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>ARD-Mediathek:</strong> Tagesschau, Tatort, Dokumentationen.</li>
+                        <li><strong>ZDF-Mediathek:</strong> Heute, Shows, Serien.</li>
+                        <li><strong>RTL+:</strong> RTL, Vox, Super RTL.</li>
+                        <li><strong>Joyn:</strong> ProSieben, Sat.1, 7TV.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Tipps für Video-Streaming:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Offline-Download:</strong> Für unterwegs ohne Internet. Netflix, Amazon, Disney+ ermöglichen Downloads.</li>
+                        <li><strong>Datensparen:</strong> Niedrigere Videoqualität für mobiles Streaming. Zuhause auf höchste Qualität stellen.</li>
+                        <li><strong>Bildschirm sperren:</strong> Um Akku zu sparen oder versehentliche Berührungen zu vermeiden.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">E-Books und Hörbücher: Lesen ohne Papier</h4>
+                    <p class="mb-2">Digitales Lesen spart Platz und ermöglicht riesige Bibliotheken in der Tasche.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. E-Book-Reader vs. Smartphone/Tablet:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>E-Ink-Reader (Kindle, Tolino):</strong> Augen schonend wie echtes Papier. Keine Ablenkung. Beste für langes Lesen.</li>
+                        <li><strong>Smartphone/Tablet:</strong> Mehr Funktionalität, Farbe, aber anstrengender für die Augen bei langem Lesen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. E-Book-Dienste:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Kindle (Amazon):</strong> Größte Auswahl. Kindle Unlimited (11,99€/Monat) für unbegrenztes Lesen.</li>
+                        <li><strong>Thalia:</strong> Deutsche Buchhandlung, gutes deutsches Sortiment.</li>
+                        <li><strong>Tolino:</strong> Deutsche Initiative (Thalia, Weltbild, etc.). Offenes System.</li>
+                        <li><strong>Apple Books:</strong> Für iOS-Nutzer, elegant und integriert.</li>
+                        <li><strong>Google Play Bücher:</strong> Für Android, überall nutzbar.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Hörbücher:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Audible (Amazon):</strong> Größte Hörbuch-Auswahl. Mitgliedschaft ab 14,95€/Monat.</li>
+                        <li><strong>BookBeat:</strong> Deutsche Bibliothek,_flatrate (9,99€/Monat).</li>
+                        <li><strong>Storytel:</strong> Hörbücher und E-Books kombiniert.</li>
+                        <li><strong>Spooner:</strong> Für englische Hörbücher.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. PDF und Dokumente:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Adobe Acrobat Reader:</strong> Der Standard. Annotieren, unterschreiben.</li>
+                        <li><strong>System-Viewer:</strong> Die meisten Smartphones können PDFs nativ anzeigen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Spielmodus: Gaming auf dem Smartphone</h4>
+                    <p class="mb-2">Smartphones sind zu ernstzunehmenden Gaming-Plattformen geworden.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Game-Modus-Funktionen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Leistungsmodus:</strong> Maximale CPU/GPU-Leistung für flüssiges Gameplay.</li>
+                        <li><strong>Bitte-nicht-stören:</strong> Keine Unterbrechungen während des Spielens.</li>
+                        <li><strong>Temperaturmanagement:</strong> Verhindert Überhitzung bei langen Gaming-Sessions.</li>
+                        <li><strong>RAM-Boost:</strong> Schließt Hintergrund-Apps für mehr Arbeitsspeicher.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Hersteller-spezifische Lösungen:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Android:</strong> Game Turbo (Xiaomi), Game Launcher (Samsung), Legion Mode (Lenovo).</li>
+                        <li><strong>iOS:</strong> Der Game-Modus ist systemweit integriert. automatisch aktiviert beim Spielen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Display-Einstellungen für Gaming:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>120Hz:</strong> Für flüssige Animationen. Falls unterstützt, einschalten.</li>
+                        <li><strong>Touch-Sampling-Rate:</strong> Manche Gaming-Phones bieten 240Hz oder 360Hz für schnelleres Ansprechen.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Cloud-Gaming:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Xbox Cloud Gaming (xCloud):</strong> Xbox-Spiele auf dem Smartphone streamen.</li>
+                        <li><strong>Nintendo Switch Cloud:</strong> Einige Switch-Spiele als Cloud-Version.</li>
+                        <li><strong>GeForce NOW:</strong> PC-Spiele auf dem Smartphone.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Offline-Entertainment-Paket erstellen</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Vor dem nächsten Flug oder längeren Reise: Öffnen Sie Spotify/Apple Music.</li>
+                            <li>Laden Sie eine Playlist für offline listening herunter.</li>
+                            <li>Netflix/Disney+ öffnen und ein oder zwei Folgen Ihrer Lieblingsserie für offline downloaden.</li>
+                            <li>Ein Hörbuch oder einen Podcast downloaden.</li>
+                            <li>Falls Sie ein E-Book haben: Laden Sie es auf Ihr Gerät.</li>
+                            <li>Schalten Sie in den Flugmodus und testen Sie, ob alles funktioniert!</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 12: Empfohlene Apps</h3>
+                    <p class="mb-3">Apps, die Effizienz verbessern.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Effizienz-Tools</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Microsoft To Do:</strong> Einfach, integriert in Microsoft 365. Aufgaben mit Fälligkeitsdaten und Erinnerungen.</li>
+                        <li><strong>Todoist:</strong> Funktionsreich, plattformübergreifend. Etwas komplexer aber sehr mächtig.</li>
+                        <li><strong>TickTick:</strong> Kalender + Aufgaben in einer App. Für diejenigen die alles an einem Ort wollen.</li>
+                        <li><strong>Forest:</strong> Pomodoro-Timer gegen Prokrastination. Baume pflanzen während Sie fokussiert arbeiten.</li>
+                        <li><strong>Notion:</strong> Alles-in-einem: Notizen, Datenbanken, Projektmanagement. Steile Lernkurve aber extrem flexibel.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Gesundheit und Fitness</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple Health / Google Fit:</strong> Zentraler Daten-Hub für alle Gesundheitsdaten von Wearables und Apps.</li>
+                        <li><strong>Nike Training:</strong> Workouts und Trainingspläne mit Animationen und Videos.</li>
+                        <li><strong>Strava:</strong> Laufen und Radfahren tracken. Beliebt bei Sportlern für Routen und Leistungsvergleiche.</li>
+                        <li><strong>MyFitnessPal:</strong> Ernährung und Kalorien tracken. Barcode-Scanner für Lebensmittel.</li>
+                        <li><strong>Komoot:</strong> Für Wanderer und Radfahrer. Detaillierte Karten und Routenempfehlungen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Reisen und Navigation</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Google Maps:</strong> Detaillierte Karten, Navigation, lokale Geschäfte. Offline-Karten für Reisen herunterladen.</li>
+                        <li><strong>Google Übersetzer:</strong> Echtzeit-Kamera-Übersetzung. Text in Bildern sofort übersetzen.</li>
+                        <li><strong>Booking.com:</strong> Hotels und Unterkünfte. Mit Bewertungen und Fotos.</li>
+                        <li><strong>FlixBus / DB Navigator:</strong> Fernbus und Bahn. Tickets buchen und Fahrpläne abrufen.</li>
+                        <li><strong>Kayak / Google Flights:</strong> Flugpreise vergleichen und buchen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Sicherheit und Datenschutz</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>1Password / Bitwarden:</strong> Passwort-Manager. Ein Masterpasswort für alle Konten.</li>
+                        <li><strong>Signal:</strong> Sicherer Messenger mit Ende-zu-Ende-Verschlüsselung. Open Source.</li>
+                        <li><strong>ProtonVPN:</strong> Vertrauenswürdiger VPN-Dienst aus der Schweiz. Keine Logs, keine Datenweitergabe.</li>
+                        <li><strong>Authy:</strong> Zwei-Faktor-Authentifizierung (2FA). Einmal-Codes für zusätzliche Sicherheit.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: App-Ökosystem aufbauen</p>
+                        <p class="mt-1">Wählen Sie aus jeder Kategorie eine App aus, die Sie regelmäßig nutzen möchten. Richten Sie sie mit Ihren persönlichen Daten ein.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">III. Fortgeschritten (Kapitel 13-17)</h2>
+
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 13: Batteriewissenschaft</h3>
+                    <p class="mb-3">Der Akku ist das Energie-Herz des Smartphones.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Akkutypen</h4>
+                    <p class="mb-2"><strong>Lithium-Ionen (Li-Ion):</strong> Standard in modernen Smartphones. Kein Memory-Effekt, aber Hitze und extreme Temperaturen schaden. Altern natürlich über Zeit.</p>
+                    <p class="mb-2"><strong>Optimaler Ladebereich:</strong> 20%-80% halten. Nicht bis 0% entladen, nicht dauerhaft bei 100% laden.</p>
+                    <p class="mb-2"><strong>Wireless Charging:</strong> Bequem aber langsamer und erzeugt mehr Hitze. QI-Standard ist am weitesten verbreitet.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Gesundheitszustand prüfen</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iPhone:</strong> Einstellungen > Batterie > Batteriezustand.</li>
+                        <li><strong>Android:</strong> Dialer Code *#*#4636#*#* oder Apps wie AccuBattery.</li>
+                    </ul>
+                    <p class="mb-2"><strong>Unter 80% Kapazität:</strong> Akku tauschen erwägen. Deutlich kürzere Nutzungsdauer.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Stromspartechniken</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Dunkelmodus:</strong> Besonders effektiv bei OLED-Displays (echte Pixel abschalten).</li>
+                        <li><strong>5G auf 4G wechseln:</strong> Wenn Signal schlecht ist, verbraucht 5G mehr Strom.</li>
+                        <li><strong>Standort einschränken:</strong> Für wenig genutzte Apps Standort nur " Während der Nutzung".</li>
+                        <li><strong>Hintergrundaktivität:</strong> Nicht benötigte Hintergrunddaten für einzelne Apps deaktivieren.</li>
+                        <li><strong>Adaptives Laden:</strong> iPhone lernt Lademuster und pausiert bei 80%.</li>
+                        <li><strong>ynamische Bildwiederholrate:</strong> Reduzieren wenn nicht benötigt.</li>
+                        <li><strong>Benachrichtigungen reduzieren:</strong> Nicht jede App muss Benachrichtigungen senden. Nur die wichtigsten erlauben.</li>
+                        <li><strong>GPS ausschalten:</strong> Wenn nicht in Navigation – spart besonders viel Energie.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Lade-Praktiken</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Kabel vs. Wireless:</strong> Kabel ist effizienter, Wireless erzeugt mehr Hitze.</li>
+                        <li><strong>Original-Ladegeräte:</strong> Billige No-Name-Netzteile können schaden.</li>
+                        <li><strong>Temperatur:</strong> Nicht bei extremen Temperaturen laden (0-35°C ideal).</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Akku-Gesundheitscheck</p>
+                        <p class="mt-1">Gesundheitszustand prüfen, Stromverbrauch analysieren, Maßnahmen planen.</p>
+                    </div>
+                </div>
+
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 14: Konten und Cloud</h3>
+                    <p class="mb-3">Das Konto ist der Seelenpass des digitalen Lebens.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Drei Kernkonten</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple ID:</strong> App Store, iCloud, Find My. Zwei-Faktor-Authentifizierung einschalten!</li>
+                        <li><strong>Google:</strong> Play Store, Kontakte, Kalender, Fotos, Drive. Auch Zwei-Faktor einschalten!</li>
+                        <li><strong>Markenkonto:</strong> Samsung/ Xiaomi/ Huawei Cloud, App Store, Find My Device.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Zwei-Faktor-Authentifizierung (2FA)</h4>
+                    <p class="mb-2"><strong>Unbedingt einschalten!</strong> Zusätzliche Sicherheitsstufe neben dem Passwort.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Authenticator-App:</strong> Sicherer als SMS. Empfohlen: Google Authenticator, Authy, 1Password.</li>
+                        <li><strong>Backup-Codes:</strong> An sicherem Ort aufbewahren (z.B. in Passwort-Manager).</li>
+                        <li><strong>Was es schützt:</strong> Selbst wenn jemand Ihr Passwort kennt, kann er sich ohne 2FA-Code nicht einloggen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Cloud-Sync vs. Backup</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Sync:</strong> Überall gleich. Löschen = überall weg. Für aktuelle Dateien.</li>
+                        <li><strong>Backup:</strong> Momentaufnahme. Wiederherstellen möglich. Für Sicherung.</li>
+                    </ul>
+                    <p class="mb-2"><strong>Wichtig:</strong> iCloud Fotos nicht als Backup nutzen! Es ist Sync, kein Backup.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Familienfreigabe</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iOS:</strong> Familienfreigabe für Apps, Musik, iCloud+ Speicher,Apple TV+.</li>
+                        <li><strong>Google:</strong> Familiengruppen für Play Store und YouTube Premium.</li>
+                        <li><strong>Standort teilen:</strong> Für Familienmitglieder, z.B. Kinder finden.</li>
+                        <li><strong>Kindersicherung:</strong> Bildschirmzeit und App-Nutzung für Kinder verwalten.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Zwei-Faktor-Authentifizierung einrichten</p>
+                        <p class="mt-1">Richten Sie 2FA für Ihre wichtigsten Konten ein: Google, Apple ID, und falls möglich für Passwort-Manager.</p>
+                    </div>
+                </div>
+
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 15: Geräte verbinden</h3>
+                    <p class="mb-3">Smartphone = digitales Zentrum. Effizienz verdoppelt sich.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">PC-Zusammenarbeit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>AirDrop (iPhone ↔ Mac):</strong> Kabellos, verlustfrei, schnell. Für Fotos, Dokumente und mehr.</li>
+                        <li><strong>Phone Link (Android + Windows):</strong> PC nutzt Smartphone direkt, Nachrichten, Anrufe, Fotos.</li>
+                        <li><strong>Samsung Flow:</strong> Für Samsung-Nutzer mit Windows-PC. Spiegelung und Dateiübertragung.</li>
+                        <li><strong>Mit Kabel:</strong> Datenkabel, Dateitransfer-Modus aktivieren. Schnellste Methode für große Dateien.</li>
+                        <li><strong>Cloud-Dienste:</strong> OneDrive, Google Drive, iCloud – nahtlose Synchronisation zwischen Geräten.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Smartwatch/Band</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Benachrichtigungen:</strong> Anrufe, SMS, Apps auf Uhr sehen. Nicht mehr ständig zum Handy greifen.</li>
+                        <li><strong>Gesundheitsdaten:</strong> Schritte, Herzfrequenz, Schlaf 24/7 tracken. Motivation durch Statistiken.</li>
+                        <li><strong>Musik fernbedienen:</strong> Wiedergabe ohne Handy steuern. Ideal beim Sport.</li>
+                        <li><strong>Zahlungen:</strong> NFC-Bezahlung mit Uhr (Apple Watch, Samsung Watch). Immer schnell bezahlen.</li>
+                        <li><strong>GPS-Tracking:</strong> Sport-Apps nutzen GPS für Routenaufzeichnung ohne Handy.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Smart Home</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Fernbedienung:</strong> Lichter, Klimaanlage, Staubsaugerroboter – alles vom Handy.</li>
+                        <li><strong>Apps:</strong> Google Home, Apple HomeKit, Amazon Alexa – zentrale Steuerung.</li>
+                        <li><strong>Szenen erstellen:</strong> "Filmabend" = Licht dimmen + TV an + Klima auf.</li>
+                        <li><strong>Sprachsteuerung:</strong> "Hey Google, gute Nacht" startet Schlafenszeit-Szene.</li>
+                        <li><strong>Sicherheit:</strong> Intelligente Schlösser, Kameras, Bewegungsmelder – alles überwachen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Auto-Verbindung</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple CarPlay / Android Auto:</strong> Smartphone-Apps auf Auto-Display. Navigation, Musik, Nachrichten.</li>
+                        <li><strong>Bluetooth-Audio:</strong> Musik und Podcasts im Auto. Siri oder Google Assistant per Stimme steuern.</li>
+                        <li><strong>Freisprechanlage:</strong> Sicher telefonieren beim Fahren. Kontakte vom Handy nutzen.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Bildschirm spiegeln</p>
+                        <p class="mt-1">Smartphone und TV im gleichen WLAN > Bildschirmspiegelung einschalten.</p>
+                    </div>
+                </div>
+
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 16: Datensicherung</h3>
+                    <p class="mb-3">Fotos und Chatverläufe sind unbezahlbar.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Vollbackup</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>PC-lokal (am zuverlässigsten):</strong> iTunes/Finder mit Kabel, verschlüsseln! Complete image of device.</li>
+                        <li><strong>Cloud (am bequemsten):</strong> iCloud Backup (iPhone), Google Backup (Android). 5GB reichen nicht!</li>
+                        <li><strong>Warum verschlüsseln?</strong> Ihre Daten sind geschützt falls das Backup in falsche Hände gerät.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Selektive Sicherung</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Fotos:</strong> iCloud Fotos oder Google Fotos für automatische Sicherung. Wichtigste Daten!</li>
+                        <li><strong>Kontakte:</strong> Als vCard exportieren oder mit Google/Apple Cloud synchronisieren.</li>
+                        <li><strong>Nachrichten:</strong> WhatsApp-Backup in Cloud, LINE/WeChat: PC-Backup nutzen!</li>
+                        <li><strong>Dokumente:</strong> In Cloud-Laufwerke speichern (Google Drive, OneDrive).</li>
+                        <li><strong>Lesezeichen:</strong> Browser-Lesezeichen regelmäßig exportieren und sichern.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Backup-Strategie</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>3-2-1 Regel:</strong> 3 Kopien, 2 verschiedene Medien, 1 extern (z.B. Handy + PC + Cloud).</li>
+                        <li><strong>Automatisch:</strong> Cloud-Backup für Fotos und Kontakte aktivieren. Automatisch = sicher.</li>
+                        <li><strong>Manuell:</strong> Wichtige Dokumente regelmäßig auf PC sichern.</li>
+                        <li><strong>Regelmäßig:</strong> Mindestens einmal pro Monat prüfen ob Backups funktionieren.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Modellwechsel</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iPhone → iPhone:</strong> Schnellstart (Geräte nebeneinander), direkt von iCloud oder Backup.</li>
+                        <li><strong>Android → Android:</strong> Hersteller-eigene Transfer-Apps oder Google Backup.</li>
+                        <li><strong>Android ↔ iPhone:</strong> Move to iOS (nur von Android zu iPhone). Achtung: Apps und Daten können NICHT migriert werden!</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Manuell auf PC sichern</p>
+                        <p class="mt-1">DCIM und Bilder auf PC kopieren. Kontakte als vCard exportieren.</p>
+                    </div>
+                </div>
+
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 17: Fehlerbehebung</h3>
+                    <p class="mb-3">Die meisten Probleme können Sie selbst lösen.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Langsam/Überhitzt</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>Zusammenhang suchen:</strong> Nach Update? Nach neuer App?</li>
+                        <li><strong>Speicherplatz prüfen:</strong> Unter 10% freiem Speicher? Das verlangsamt alles.</li>
+                        <li><strong>Stromverbrauch prüfen:</strong> Welche App verbraucht wie viel?</li>
+                        <li><strong>Neustart:</strong> Einfach, aber oft effektiv.</li>
+                        <li><strong>Abkühlen:</strong> Bei Überhitzung: Handy ausschalten, Hülle entfernen, in Schatten legen.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">App-Absturz</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>App schließen und neu öffnen.</li>
+                        <li>Auf Updates prüfen und aktualisieren.</li>
+                        <li>Cache leeren (Android: Einstellungen > Apps > App > Cache).</li>
+                        <li>Letztes: Deinstallieren und neu installieren.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Lässt sich nicht einschalten</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>30 Minuten laden (auch wenn kein Ladeanzeige).</li>
+                        <li>Erzwungenen Neustart versuchen.</li>
+                        <li>Wenn nichts hilft: Hardware-Problem = Reparatur oder Hersteller kontaktieren.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Weitere häufige Probleme</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Kein Ton:</strong> Lautstärke hoch, Lautlos-Modus aus, Bluetooth getrennt.</li>
+                        <li><strong>WLAN funktioniert nicht:</strong> WLAN aus- und wieder einschalten, Router neustarten.</li>
+                        <li><strong>Bluetooth verbindet nicht:</strong> Auf beiden Geräten trennen und neu koppeln.</li>
+                        <li><strong>Apps starten nicht:</strong> Neustart, Cache leeren, Update prüfen.</li>
+                        <li><strong>Bildschirm reagiert nicht:</strong> Erzwungener Neustart. Falls weiterhin problematisch: Werkseinstellung als letzter Ausweg.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Fehlerbehebungs-Workflow üben</p>
+                        <p class="mt-1">Notieren Sie sich die häufigsten Probleme und ihre Lösungen. So sind Sie vorbereitet wenn es wirklich passiert.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">IV. Weiterführend (Kapitel 18-22)</h2>
+
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 18: Netzwerksicherheit</h3>
+                    <p class="mb-3">Smartphone = digitales Double. Sicherheit ist unsere Sicherheit.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">VPN</h4>
+                    <p class="mb-2">Virtueller privater Netzwerk – baut verschlüsselten Tunnel auf für sichere Verbindung.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Empfohlen:</strong> ProtonVPN, Mullvad, NordVPN (kostenpflichtig).</li>
+                        <li><strong>Warnung:</strong> Kostenlose VPNs können Daten sammeln und verkaufen. Finger weg von unbekannten Anbietern!</li>
+                        <li><strong>Warum VPN:</strong> Verschlüsselt Ihre Daten, verbirgt IP-Adresse, sicher auf öffentlichem WLAN.</li>
+                        <li><strong>Achtung:</strong> Vertrauenswürdige Anbieter mit No-Logs-Richtlinie wählen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Öffentliches WLAN</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>HTTPS prüfen:</strong> Sicher = Vorhängeschloss-Symbol in Adressleiste.</li>
+                        <li><strong>DNS over HTTPS:</strong> Ihre DNS-Abfragen verschlüsseln für mehr Privacy.</li>
+                        <li><strong>Kein Online-Banking:</strong> Banking-App nur im mobilen Netz oder mit VPN.</li>
+                        <li><strong>VPN nutzen:</strong> Immer wenn möglich bei öffentlichem WLAN.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Privates Surfen</h4>
+                    <p class="mb-2"><strong>Kann:</strong> Lokal keine Spuren hinterlassen (History, Cookies).</p>
+                    <p class="mb-2"><strong>Cannot:</strong> Online-Aktivitäten vor ISP, Arbeitgeber oder Behörden verbergen.</p>
+                    <p class="mb-2"><strong>Tipp:</strong> Für echte Anonymität: Tor Browser + VPN kombinieren.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Passwort-Manager</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Empfohlen:</strong> 1Password, Bitwarden, Dashlane.</li>
+                        <li><strong>Vorteile:</strong> Ein Masterpasswort, alle andere automatisch ausfüllen.</li>
+                        <li><strong>Sicher:</strong> Ende-zu-Ende-verschlüsselt, nie Ihr Passwort auf Server gespeichert.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: DNS einrichten</p>
+                        <p class="mt-1">Android: WLAN > Statisch > DNS (1.1.1.1). iPhone: WLAN > DNS > Manuell.</p>
+                    </div>
+                </div>
+
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 19: KI auf Smartphones</h3>
+                    <p class="mb-3">Ihr Smartphone ist voller unsichtbarer Gehirne.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">KI-Kamera</h4>
+                    <p class="mb-2">Szenen erkennen (Landschaft, Person, Essen), automatisch optimieren für bestes Ergebnis.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Nachtmodus:</strong> Mehrere Aufnahmen kombinieren für hellere Bilder ohne Rauschen.</li>
+                        <li><strong>Porträt-Modus:</strong> KI-gestützter Bokeh-Effekt.</li>
+                        <li><strong>Szenenoptimierung:</strong> Automatische Anpassung von Farben und Kontrast.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Sprachassistent</h4>
+                    <p class="mb-2">Ablauf: Hören > Verstehen (NLP) > Handeln > Antworten.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Siri:</strong> Apple-Geräte, tiefe Integration.</li>
+                        <li><strong>Google Assistant:</strong> Android, sehr mächtig.</li>
+                        <li><strong>Bixby:</strong> Samsung-Geräte.</li>
+                    </ul>
+                    <p class="mb-2"><strong>Trend:</strong> Mehr und mehr Verarbeitung lokal auf Gerät (Edge AI) für besseren Datenschutz.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Edge AI vs. Cloud AI</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Edge AI:</strong> Auf Gerät, schnell, privat, funktioniert offline.</li>
+                        <li><strong>Cloud AI:</strong> Daten hochladen, leistungsfähiger, braucht Internet.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">KI in Apps</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Foto-Apps:</strong> Automatische Verbesserung, Filter.</li>
+                        <li><strong>Musik:</strong> Personalisierte Playlists (Spotify, Apple Music).</li>
+                        <li><strong>Übersetzung:</strong> Echtzeit-Übersetzung per Kamera.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: KI-Assistent testen</p>
+                        <p class="mt-1">Siri/Google: Erinnere mich morgen 8 Uhr Wasser zu trinken.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 20: Automatisierung</h3>
+                    <p class="mb-3">Automatisierung ist für jeden, nicht nur Programmierer.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Programmierdenken</h4>
+                    <p class="mb-2">Große Probleme in kleine Schritte aufteilen:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Trigger (Wann):</strong> Auslöser für die Automatisierung.</li>
+                        <li><strong>Bedingung (Was):</strong> Unter welcher Bedingung etwas passiert.</li>
+                        <li><strong>Aktion (Wie):</strong> Was soll genau passieren.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Tools</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iOS Shortcuts:</strong> Visuell, Blöcke zusammensetzen, einfach zu lernen. Apple-eigene App bereits installiert.</li>
+                        <li><strong>Android Tasker:</strong> Mächtig, steile Lernkurve, sehr flexibel. Automatisierung fast aller Aspekte des Systems.</li>
+                        <li><strong>Bixby Routines:</strong> Für Samsung-Nutzer, einfach zu konfigurieren. Schon in Samsung-Geräten integriert.</li>
+                        <li><strong>Automate:</strong> Für Android, simpler als Tasker aber mächtig.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Beispiele</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Schlafenszeit:</strong> 22:30 = Lautstärke senken + Bitte-nicht-stören + Display dunkel.</li>
+                        <li><strong>Ins Auto:</strong> Bluetooth erkannt = Navigation öffnen + Lieblingsplaylist.</li>
+                        <li><strong>Arbeit:</strong> WLAN zu Hause getrennt = Fokus-Modus aktivieren.</li>
+                        <li><strong>Morgens:</strong> Wecker klingelt = Kaffee-Maschine starten (mit Smart Plug).</li>
+                        <li><strong>Batterie niedrig:</strong> Automatisch Energiesparmodus einschalten + Helligkeit reduzieren.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Ideen zum Starten</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Automatische WLAN/Aus am bestimmten Ort.</li>
+                        <li>Benachrichtigungen stumm bei bestimmten Apps.</li>
+                        <li>Foto-Backup wenn im WLAN.</li>
+                        <li>Standort-basierte Erinnerungen ("Erinnerung, wenn ich beim Einkaufen bin").</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Gute Nacht erstellen</p>
+                        <p class="mt-1">Trigger: 22:30. Aktionen: Lautstärke, Bitte-nicht-stören, Wetter.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 21: Gebrauchte Smartphones</h3>
+                    <p class="mb-3">Altes Smartphone = nicht wegwerfen!</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Wiederverwenden</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Mediaplayer:</strong> Musik und Videos abspielen, Spotify/Podcasts hören.</li>
+                        <li><strong>Digitaler Bilderrahmen:</strong> Fotos automatisch anzeigen (mit Frameo oder ähnlich).</li>
+                        <li><strong>Überwachungskamera:</strong> Mit Apps wie Alfred für Babyphone oder Sicherheit.</li>
+                        <li><strong>Smart-Home-Zentrale:</strong> Als Steuerzentrale für Smart-Home-Geräte.</li>
+                        <li><strong>Navigation:</strong> Als festes Auto-Navi mit Halterung nutzen.</li>
+                        <li><strong>Babyphone:</strong> Überwachungskamera-App installieren und mit WLAN verbinden.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Vor dem Verkauf oder Weitergeben</h4>
+                    <p class="mb-2"><strong>Warnung: Einfaches Löschen reicht nicht!</strong> Daten können mit speziellen Tools wiederhergestellt werden.</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Vollständiges Backup erstellen:</strong> Fotos, Kontakte, wichtige Daten sichern.</li>
+                        <li><strong>Aus allen Konten ausloggen:</strong> Apple ID/Google-Konto, Samsung/ Huawei-Konto.</li>
+                        <li><strong>iCloud/Google Fotos trennen:</strong> Auf Fotos > Einstellungen > Gerät entfernen.</li>
+                        <li><strong>SIM und SD-Karte entfernen:</strong> Persönliche Daten physisch entfernen.</li>
+                        <li><strong>Werksreset:</strong> Einstellungen > System > Reset > Auf Werkszustand zurücksetzen.</li>
+                        <li><strong>Neustart prüfen:</strong> Nach Reset prüfen, ob alle Daten weg sind.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Digitales Erbe</h4>
+                    <p class="mb-2">Was passiert mit Ihren Daten, wenn Sie sterben?</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple:</strong> Datenschutzkonto für Nachlass einrichten. Kontaktierte Person erhält Zugriff.</li>
+                        <li><strong>Google:</strong> Inaktivitätsmanager konfigurieren. Legen Sie fest wer nach 3/6/12 Monaten Inaktivität Zugriff erhält.</li>
+                        <li><strong>Wichtig:</strong> Testament oder Nachlassregelung erstellen. Digitale Vermögenswerte nicht vergessen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Gebraucht kaufen – Worauf achten</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Akku-Gesundheit:</strong> Unter 80% ist Tausch empfohlen.</li>
+                        <li><strong>Kosmetischer Zustand:</strong> Kratzer, Risse notieren.</li>
+                        <li><strong>Funktionstest:</strong> Kamera, Fingerabdruck, WLAN, Bluetooth prüfen.</li>
+                        <li><strong>IMEI-Check:</strong> Auf Diebstahl oder Sperre prüfen.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Übung: Sicher zurücksetzen</p>
+                        <p class="mt-1">Backup > Ausloggen > Werksreset > Neustart prüfen.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Kapitel 22: Zukunft</h3>
+                    <p class="mb-3">Wo gehen Smartphones hin?</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Trends</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Faltbar:</strong> Samsung, Huawei – Smartphone und Tablet verschmelzen. Mehr Display, weniger Platz.</li>
+                        <li><strong>AR:</strong> Apple Vision Pro – Smartphone als Rechen-Hub für AR-Brillen.</li>
+                        <li><strong>KI-First:</strong> Große Sprachmodelle auf Edge-Geräten. Offline-KI wird Realität.</li>
+                        <li><strong>Nachhaltigkeit:</strong> EU "Recht auf Reparatur" – längere Lebensdauer, austauschbare Akkus.</li>
+                        <li><strong>Satelliten-Kommunikation:</strong> Notfall-SMS ohne Mobilfunknetz.</li>
+                        <li><strong>Rollbar:</strong> Displays die sich aufrollen – noch in Entwicklung aber vielversprechend.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Zukunft des digitalen Lebens</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Metaverse:</strong> Virtuelle Räume für Arbeit und Unterhaltung.</li>
+                        <li><strong>Digitaler Zwilling:</strong> Virtuelle Kopie der realen Welt.</li>
+                        <li><strong>6G:</strong> Alles vernetzt – Smart City, autonomes Fahren.</li>
+                        <li><strong>Brain-Computer Interfaces:</strong> Gedanken steuern Technologie (Neuralink etc.).</li>
+                        <li><strong>Quantencomputing:</strong> Möglicherweise neue Verschlüsselungsmethoden.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Wie sich vorbereiten</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Weiter lernen:</strong> Technologie entwickelt sich schnell – bleiben Sie neugierig.</li>
+                        <li><strong>Digitalkompetenz verbessern:</strong> Grundlagen verstehen, nicht nur apps bedienen.</li>
+                        <li><strong>Privatsphäre bewahren:</strong> Bewusst mit Daten umgehen, Rechte kennen.</li>
+                        <li><strong>Balance halten:</strong> Digitale und analoge Welt in Einklang bringen.</li>
+                        <li><strong>Community beitreten:</strong> Lernen von anderen, Erfahrungen teilen.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Abschlussübung: Reflektieren</p>
+                        <p class="mt-1">1. Was sind 3 wichtigste Learnings?<br>2. Was möchten Sie ändern?<br>3. Was möchten Sie als nächstes lernen?</p>
+                        <p class="mt-4 font-semibold text-center">Herzlichen Glückwunsch! Sie haben den Weg zum Smartphone-Meister begonnen!</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">V. Anhang</h2>
+
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Anhang A: Vollständige Anleitung für neue Smartphones</h3>
+                    <p class="mb-3">Neues Smartphone gekauft? Folgen Sie dieser Schritt-für-Schritt-Checkliste für eine reibungslose Ersteinrichtung.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Beim Auspacken – Prüfen Sie zuerst alles</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>Verpackung prüfen:</strong> Das Siegel sollte unbeschädigt sein, um sicherzustellen, dass das Gerät neu ist.</li>
+                        <li><strong>Lieferumfang prüfen:</strong> Smartphone, Ladekabel, Netzstecker (optional), SIM-Werkzeug, Kurzanleitung.</li>
+                        <li><strong>Sichtprüfung:</strong> Auf Kratzer, Risse oder Schönheitsfehler am Gerät und Display prüfen.</li>
+                        <li><strong>Display-Prüfung:</strong> Helles Bild anzeigen (z.B. weiße Seite öffnen), auf tote Pixel prüfen.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Ersteinrichtung – Schritt für Schritt</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Sprache und Region wählen:</strong> Deutsch (Österreich/Schweiz/Lichtenstein) oder Hochdeutsch auswählen.</li>
+                        <li><strong>WLAN-Verbindung:</strong> Stabiles WLAN wählen für schnellen Start und große Downloads.</li>
+                        <li><strong>Konto anmelden:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Apple ID eingeben oder neue erstellen.</li>
+                                <li>Android: Google-Konto anmelden oder neues erstellen.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Sicherheit einrichten:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Fingerabdruck registrieren (empfohlen).</li>
+                                <li>Gesichtserkennung einrichten (falls verfügbar).</li>
+                                <li>PIN/Passwort festlegen (mindestens 6 Ziffern, kein Geburtsdatum).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Smartphone suchen aktivieren:</strong> Dies ist Ihr Diebstahlschutz – unbedingt einschalten!</li>
+                        <li><strong>Systemupdate prüfen:</strong> Einstellungen > System > Software-Update. Alle verfügbaren Updates installieren.</li>
+                        <li><strong>SD-Karte einlegen (falls unterstützt):</strong> Für zusätzlichen Speicherplatz.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Sicherheit verstärken</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Zwei-Faktor-Authentifizierung:</strong> In den Kontoeinstellungen für Apple ID und Google-Konto aktivieren.</li>
+                        <li><strong>Datenschutzeinstellungen prüfen:</strong> Standortdienste, Diagnosedaten und personalisierte Werbung nach Bedarf anpassen.</li>
+                        <li><strong>Unnötige vorinstallierte Apps:</strong> Nicht benötigte Hersteller-Apps deinstallieren oder deaktivieren.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Backup einrichten – Ihre Daten sind wichtig!</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iCloud/Google Backup:</strong> Automatisches Backup aktivieren für Fotos, Kontakte und App-Daten.</li>
+                        <li><strong>Foto-Auto-Backup:</strong> Google Fotos oder iCloud Fotos einschalten für kontinuierliche Fotosicherung.</li>
+                        <li><strong>Kontakte-Sync:</strong> Prüfen Sie, dass Kontakte mit Ihrem Cloud-Konto synchronisiert werden.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Apps installieren – Die ersten wichtigen Apps</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Messenger: WhatsApp, Signal oder Telegram.</li>
+                        <li>Browser: Chrome, Firefox oder Safari.</li>
+                        <li>Navigation: Google Maps oder Apple Karten.</li>
+                        <li>Streaming: Spotify, Netflix, Amazon Prime (nach Bedarf).</li>
+                    </ul>
+                </div>
+
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Anhang B: Übungsreferenz</h3>
+                    <p class="mb-3">Alle praktischen Übungen aus diesem Buch – eine schnelle Referenz zum Nachschlagen und Wiederholen.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Grundlagen (Kapitel 0-6)</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Kapitel 0:</strong> Smartphone-„Personalausweis" prüfen – Finden Sie Geräteinformationen in den Einstellungen.</li>
+                        <li><strong>Kapitel 1:</strong> Hardware-Konfiguration verstehen – Prozessor, RAM und ROM Ihres Smartphones kennenlernen.</li>
+                        <li><strong>Kapitel 2:</strong> Download-Ordner organisieren – Unnötige Dateien löschen, wichtige sortieren.</li>
+                        <li><strong>Kapitel 3:</strong> Hotspot einrichten und verwalten – Mobiles WLAN für andere Geräte erstellen.</li>
+                        <li><strong>Kapitel 4:</strong> App-Berechtigungen prüfen – Kontrolle über Ihre Privatsphäre behalten.</li>
+                        <li><strong>Kapitel 5:</strong> Fokus-Modus einrichten – Automatische Profilwechsel für Arbeit und Freizeit.</li>
+                        <li><strong>Kapitel 6:</strong> „Fernsperre" testen – Die Funktion „Smartphone finden" ausprobieren und verstehen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Software (Kapitel 7-12)</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Kapitel 7:</strong> Chatverlauf sichern –LINE/WeChat-Backup auf PC erstellen.</li>
+                        <li><strong>Kapitel 8:</strong> Dokument scannen – Microsoft Lens oder iOS Notizen für OCR nutzen.</li>
+                        <li><strong>Kapitel 9:</strong> Zahlungs-App absichern – Biometrie und Sicherheitssperre einrichten.</li>
+                        <li><strong>Kapitel 10:</strong> Nachtfoto im Pro-Modus – Manuelle Kameraeinstellungen für bessere Fotos bei wenig Licht.</li>
+                        <li><strong>Kapitel 11:</strong> Offline-Entertainment-Paket – Musik, Videos und Bücher für Flugmodus vorbereiten.</li>
+                        <li><strong>Kapitel 12:</strong> Automatisierung erstellen – Shortcuts oder Tasker für wiederkehrende Aufgaben nutzen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Fortgeschritten (Kapitel 13-17)</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Kapitel 13:</strong> Akku-Gesundheitscheck – Batteriezustand prüfen und Stromverbrauch analysieren.</li>
+                        <li><strong>Kapitel 14:</strong> Cloud-Sync prüfen – Welche Apps synchronisieren Daten? Kontrolle übernehmen.</li>
+                        <li><strong>Kapitel 15:</strong> Bildschirm spiegeln – Smartphone-Display auf Fernseher oder PC anzeigen.</li>
+                        <li><strong>Kapitel 16:</strong> Manuell auf PC sichern – Fotos und Kontakte als Backup auf Computer kopieren.</li>
+                        <li><strong>Kapitel 17:</strong> Erzwungenen Neustart üben – Für Notfälle gerüstet sein.</li>
+                        <li><strong>Kapitel 18:</strong> VPN einrichten – Sicheres VPN für öffentliche WLANs konfigurieren.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Weiterführend (Kapitel 18-22)</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Kapitel 18:</strong> DNS einrichten – Sicherere DNS-Server für mehr Privacy konfigurieren.</li>
+                        <li><strong>Kapitel 19:</strong> KI-Assistenten testen – Sprachassistenten für Alltagsaufgaben nutzen.</li>
+                        <li><strong>Kapitel 20:</strong> Automatisierung erstellen – „Gute Nacht"-Routine für automatische Abendgestaltung.</li>
+                        <li><strong>Kapitel 21:</strong> Smartphone sicher zurücksetzen – Vor Verkauf oder Weitergabe alle Daten löschen.</li>
+                        <li><strong>Kapitel 22:</strong> Digitales Leben reflektieren – eigene Gewohnheiten überprüfen und verbessern.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Übungstipps</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Regelmäßig üben:</strong> Wiederholung festigt das Gelernte.</li>
+                        <li><strong>Notieren:</strong> Machen Sie sich kurze Notizen zu Problemen und Lösungen.</li>
+                        <li><strong>Teach others:</strong> Das Erklären an andere vertieft das eigene Verständnis.</li>
+                    </ul>
+                </div>
+
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Anhang C: Fachbegriffe-Glossar</h3>
+                    <p class="mb-3">Technische Begriffe einfach erklärt – dieses Glossar hilft Ihnen, die wichtigsten Smartphone-Fachbegriffe zu verstehen.</p>
+                    
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Begriff</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Vollständiger Name</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Erklärung</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">SoC</td><td class="border border-gray-300 px-4 py-2">System on Chip</td><td class="border border-gray-300 px-4 py-2">Der Hauptprozessor mit integrierten Komponenten wie CPU, GPU und Netzwerkmodem auf einem Chip.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">RAM</td><td class="border border-gray-300 px-4 py-2">Random Access Memory</td><td class="border border-gray-300 px-4 py-2">Arbeitsspeicher – временный Speicher für aktive Apps und Prozesse. Wird beim Ausschalten gelöscht.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">ROM/Flash</td><td class="border border-gray-300 px-4 py-2">Read Only Memory / Flash-Speicher</td><td class="border border-gray-300 px-4 py-2">Dauerhafter Speicher für Fotos, Videos, Apps und das Betriebssystem.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">OLED</td><td class="border border-gray-300 px-4 py-2">Organic Light-Emitting Diode</td><td class="border border-gray-300 px-4 py-2">Display-Technologie wo jeder Pixel selbst leuchtet. Perfektes Schwarz, dünner, energiesparender als LCD.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">LCD</td><td class="border border-gray-300 px-4 py-2">Liquid Crystal Display</td><td class="border border-gray-300 px-4 py-2">Display-Technologie mit Hintergrundbeleuchtung. Augenschonender, günstiger.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">NFC</td><td class="border border-gray-300 px-4 py-2">Near Field Communication</td><td class="border border-gray-300 px-4 py-2">Kurzstrecken-Funktechnik für kontaktloses Bezahlen und Ticketing.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">VPN</td><td class="border border-gray-300 px-4 py-2">Virtual Private Network</td><td class="border border-gray-300 px-4 py-2">Virtuelles privates Netzwerk – verschlüsselte Verbindung für mehr Sicherheit und Privacy.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">DNS</td><td class="border border-gray-300 px-4 py-2">Domain Name System</td><td class="border border-gray-300 px-4 py-2">Das „Telefonbuch des Internets" – übersetzt Domainnamen in IP-Adressen.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">OCR</td><td class="border border-gray-300 px-4 py-2">Optical Character Recognition</td><td class="border border-gray-300 px-4 py-2">Texterkennung – wandelt Text in Bildern in bearbeitbaren Text um.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">Edge AI</td><td class="border border-gray-300 px-4 py-2">Edge Artificial Intelligence</td><td class="border border-gray-300 px-4 py-2">KI-Verarbeitung direkt auf dem Gerät – schnell, privat, offline-fähig.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">RCS</td><td class="border border-gray-300 px-4 py-2">Rich Communication Services</td><td class="border border-gray-300 px-4 py-2">Nächste SMS-Generation mit Chat-Funktionen, Gruppenmedien und mehr.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">APK</td><td class="border border-gray-300 px-4 py-2">Android Package Kit</td><td class="border border-gray-300 px-4 py-2">Installationspaket für Android-Apps.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">OTA</td><td class="border border-gray-300 px-4 py-2">Over The Air</td><td class="border border-gray-300 px-4 py-2">Drahtlose Updates – Software-Updates werden direkt aufs Smartphone heruntergeladen.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">Biometrie</td><td class="border border-gray-300 px-4 py-2">-</td><td class="border border-gray-300 px-4 py-2">Körperliche Merkmale zur Authentifizierung: Fingerabdruck, Gesichtserkennung, Iris-Scan.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">2FA</td><td class="border border-gray-300 px-4 py-2">Two-Factor Authentication</td><td class="border border-gray-300 px-4 py-2">Zwei-Faktor-Authentifizierung – zusätzliche Sicherheitsstufe neben dem Passwort.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">5G</td><td class="border border-gray-300 px-4 py-2">Fifth Generation</td><td class="border border-gray-300 px-4 py-2">Fünfte Mobilfunkgeneration – schnellste drahtlose Verbindung mit niedriger Latenz.</td></tr>
+                                <tr><td class="border border-gray-300 px-4 py-2 font-semibold">IoT</td><td class="border border-gray-300 px-4 py-2">Internet of Things</td><td class="border border-gray-300 px-4 py-2">Internet der Dinge – vernetzte Geräte wie Smart Home, Wearables.</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Anhang D: Wo finde ich vertrauenswürdige Ressourcen?</h3>
+                    <p class="mb-3">Zuverlässige Informationsquellen für weiterführende Themen und aktuelle Smartphone-Informationen.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Offizielle Support-Ressourcen</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple Support:</strong> support.apple.com/de – Offizielle Anleitungen, Community-Foren, Kontaktoptionen.</li>
+                        <li><strong>Google Android Help:</strong> support.google.com/android – Android-spezifische Hilfestellungen.</li>
+                        <li><strong>Hersteller-Websites:</strong>
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Samsung Deutschland: samsung.com/de/support</li>
+                                <li>Xiaomi: mi.com/global/support</li>
+                                <li>Google Pixel: store.google.com/de/support</li>
+                                <li>Huawei: consumer.huawei.com/de/support</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Deutsche Behörden und Organisationen</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>BSI (Bundesamt für Sicherheit):</strong> bsi.bund.de – Cybersicherheit-Tipps für Bürger.</li>
+                        <li><strong>Klicksafe:</strong> klicksafe.de – EU-Initiative für mehr Sicherheit im Netz.</li>
+                        <li><strong>Verbraucherzentrale:</strong> verbraucherzentrale.de – Verbraucherrechte im Digitalbereich.</li>
+                        <li><strong>DSiB (Datenschutz instance Bund):</strong> bfdi.bund.de – Bundesbeauftragte für Datenschutz.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Technologie-Medien</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Englisch:</strong> The Verge, TechCrunch, Ars Technica, MKBHD YouTube-Kanal.</li>
+                        <li><strong>Deutsch:</strong> Heise Online (heise.de), golem.de, t3n.de, Computerbase.de.</li>
+                        <li><strong>Vergleichsportale:</strong> CHIP Online, Connect (für Handy-Tests), inside-digital.de.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Sicherheit und Datenschutz</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>BSI (Bundesamt für Sicherheit):</strong> bsi.bund.de – Deutschland, Cybersicherheit-Tipps.</li>
+                        <li><strong>Klicksafe:</strong> klicksafe.de – EU-Initiative für mehr Sicherheit im Netz.</li>
+                        <li><strong>EFF (Electronic Frontier Foundation):</strong> eff.org – Internationale Digitalrechtsorganisation.</li>
+                        <li><strong>BSI für Bürger:</strong> Bürger-CERT für aktuelle Sicherheitswarnungen.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">YouTube-Lernkanäle</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>MKBHD (Marques Brownlee):</strong> Technologie-Reviews und Gadget-Neuigkeiten.</li>
+                        <li><strong>Linus Tech Tips:</strong> Detaillierte Technik-Tests und Erklärungen.</li>
+                        <li><strong>Deutsch:</strong> Roman Zeiss (Kamera), Jan Möller (Technik-Alltag), Technik-Sensei.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Was Sie vermeiden sollten</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>⚠️ Unbekannte „Hacks" und „Geheimtipps" von fragwürdigen Quellen.</li>
+                        <li>⚠️ Übertrieben sensationelle Überschriften („Das haben Sie falsch gemacht!").</li>
+                        <li>⚠️ Veraltete Informationen – Technologie ändert sich schnell. Prüfen Sie das Datum.</li>
+                        <li>⚠️ Kostenlose VPN-Dienste unbekannter Herkunft.</li>
+                        <li>⚠️ „Optimierer-Apps" die mehr schaden als nützen.</li>
+                    </ul>
+                </div>
+
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Anhang E: Danksagung und Hinweise</h3>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Danksagung</h4>
+                    <p class="mb-3">Dieses Buch wurde als Leitfaden für Smartphone-Einsteiger bis Fortgeschrittene erstellt. Wir danken:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Der Open-Source-Community für die Bereitstellung kostenloser Tools und Ressourcen.</li>
+                        <li>Technologie-Journalisten und YouTubern, die komplexe Themen verständlich erklären.</li>
+                        <li>Forum-Teilnehmern, die ihr Wissen großzügig teilen.</li>
+                        <li>Ingenieuren und Designern, die unsere Geräte entwickeln.</li>
+                        <li>Allen, die zur Verbesserung dieses Dokuments beitragen.</li>
+                        <li>Den Nutzern für ihr Feedback und ihre konstruktiven Vorschläge.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Haftungsausschluss</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Die Informationen in diesem Buch sind zum Zeitpunkt der Erstellung aktuell. Technologie entwickelt sich jedoch schnell – Inhalte können sich nach der Veröffentlichung ändern.</li>
+                        <li>Nutzen Sie Ihr Smartphone in Eigenverantwortung. Regelmäßige Backups sind Pflicht!</li>
+                        <li>Einstellungen können je nach Smartphone-Modell, Hersteller und Betriebssystemversion abweichen.</li>
+                        <li>Bei Unsicherheiten wenden Sie sich bitte an den offiziellen Support.</li>
+                        <li>Die Autoren übernehmen keine Haftung für Schäden durch unsachgemäße Nutzung.</li>
+                        <li>Markennamen und Produktnamen sind Eigentum ihrer jeweiligen Inhaber.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Rechtliche Informationen</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Deutsche Gesetze:</strong> §§ 201, 202 StGB (Verletzung der Vertraulichkeit des Wortes, Daten); TMG, DSGVO.</li>
+                        <li><strong>Behördliche Stellen:</strong> Bundesnetzagentur, Datenschutzbeauftragte der Länder.</li>
+                        <li><strong>Verbraucherrechte:</strong> BGH-Urteile zu Garantie, Gewährleistung bei digitalen Produkten.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Feedback und Kontakt</h4>
+                    <p class="mb-3">Für Feedback zu diesem Buch freuen wir uns über:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fehlerkorrekturen und Aktualisierungsvorschläge.</li>
+                        <li>Themen-Vorschläge für zukünftige Auflagen.</li>
+                        <li>Verbesserungsideen für bessere Verständlichkeit.</li>
+                        <li>Allgemeine Fragen und Diskussionen zum Thema.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Weiterführende Ressourcen</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Offizielle Dokumentation von Apple, Google, Samsung etc.</li>
+                        <li>YouTube-Tutorials für spezifische Funktionen.</li>
+                        <li>Technologie-Foren und Communitys.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Nützliche Kurzbefehle</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone: Screenshot = Power + Lauter; Android: Power + Leiser.</li>
+                        <li>iPhone: Neustart = Lauter, Leiser, Power halten; Android: Power 10s.</li>
+                        <li>Schnellzugriff auf Kamera: Auf Sperrbildschirm wischen.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-6 mt-6 text-center">
+                        <p class="text-lg font-semibold mb-2">Vielen Dank fürs Lesen!</p>
+                        <p class="text-secondary">Möge Ihr digitales Leben reicher, sicherer und produktiver werden.</p>
+                        <p class="mt-4 text-sm text-secondary">© 2024-2026 Smartphone-Meister! Der unverzichtbare Digitalkurs für Anfänger</p>
+                        <p class="mt-2 text-xs text-secondary">Erstellt mit ❤️ für alle, die ihr digitales Leben meistern wollen.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        function toggleMenu() { sidebar.classList.toggle('-translate-x-full'); overlay.classList.toggle('hidden'); }
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+        document.querySelectorAll('.toc-parent').forEach(parent => {
+            const toggle = parent.querySelector('.toc-toggle');
+            const child = parent.querySelector('.toc-child');
+            toggle.addEventListener('click', (e) => { e.preventDefault(); child.classList.toggle('open'); toggle.classList.toggle('rotate-180'); });
+        });
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) { backToTop.classList.remove('opacity-0', 'invisible'); backToTop.classList.add('opacity-100', 'visible'); }
+            else { backToTop.classList.add('opacity-0', 'invisible'); backToTop.classList.remove('opacity-100', 'visible'); }
+        });
+        backToTop.addEventListener('click', () => { window.scrollTo({ top: 0, behavior: 'smooth' }); });
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) { target.scrollIntoView({ behavior: 'smooth', block: 'start' }); toggleMenu(); }
+            });
+        });
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('#sidebar a[href^="#"]');
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => { if (window.scrollY >= section.offsetTop - 100) current = section.getAttribute('id'); });
+            tocLinks.forEach(link => { link.classList.remove('active'); if (link.getAttribute('href') === '#' + current) link.classList.add('active'); });
+        }
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC();
+    </script>
+</body>
+</html>

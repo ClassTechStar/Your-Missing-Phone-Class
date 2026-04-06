@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mestre do Smartphone! Curso Essencial de Digital para Iniciantes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-left: 3px solid #165DFF;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">Mestre do Smartphone! Curso Essencial de Digital para Iniciantes</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>Voltar ao topo
+            </a>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">Índice</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">I. Fundamentos (Capítulos 0-6)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 0: Olá, antes de começar</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 1: Olá, o meu computador pessoal</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 2: Organizar a sala digital — Gestão de ficheiros</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 3: Ligar a "linha da vida" do smartphone — Rede</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 4: Instalação e gestão de aplicações — O "conjunto de competências" do smartphone</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 5: Personalizar ainda mais o smartphone — Definições básicas</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 6: Proteger a vida digital — Segurança e privacidade</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">II. Software (Capítulos 7-12)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 7: Comunicação: SMS, chamadas e redes sociais</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 8: Trabalho e estudo móvel</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 9: Pagamentos móveis e serviços de vida</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 10: Fotografia e gestão de imagens</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 11: Entretenimento e leitura</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 12: Aplicações de utilitários recomendadas</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">III. Avançado (Capítulos 13-17)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 13: Ciência da bateria e otimização de poupança de energia</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 14: Sistema de contas e serviços na nuvem</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 15: Ligação do smartphone com outros dispositivos</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 16: Backup e migração de dados</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 17: Resolução de problemas e autossolução</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">IV. Desenvolvimento (Capítulos 18-22)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 18: Aprofundamento em rede móvel e segurança da informação</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 19: Como funciona a IA no smartphone</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 20: Pensamento de programação e introdução à automação</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 21: Tratamento de smartphones usados e herança digital</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Capítulo 22: O futuro do smartphone e da vida digital</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">V. Anexos</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">Anexo A: Guia completo de desembalagem de novo smartphone</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">Anexo B: Referência de exercícios práticos</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">Anexo C: Tabela de terminologia técnica</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">Anexo D: Onde encontrar recursos fiáveis</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">Anexo E: Agradecimentos e explicações</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">Mestre do Smartphone! Curso Essencial de Digital para Iniciantes</h1>
+                <p class="text-center text-secondary text-lg">Da introdução ao domínio, domine completamente a vida digital</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">I. Fundamentos (Capítulos 0-6)</h2>
+                <p class="mb-4 text-secondary">O seu smartphone é mais poderoso do que imagina. Esta secção é a base de todas as "façanhas". Primeiro, vamos unificar a "linguagem", e passo a passo, reconhecer e dominar o dispositivo.</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 0: Olá, antes de começar</h3>
+                    <p class="mb-3">Antes de começarmos a exploração a sério, vamos falar sobre as regras básicas. Isto tornará todo o conteúdo posterior compreensível.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 📖 O que este livro pode (e não pode) fazer por si</h4>
+                    <p class="mb-2">Pode compreender sistematicamente como usar o smartphone e conhecer os princípios por detrás das funcionalidades. Quer seja utilizador de Android ou iPhone, a maioria dos conceitos são comuns. Inclui também exercícios práticos.</p>
+                    <p class="mb-2">Não é um manual de instruções de um modelo específico, nem uma análise dos produtos mais recentes, nem ensina a criar dependência do smartphone.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 🔤 Sobre a nossa "palavra-chave"</h4>
+                    <p class="mb-2">Para explicar de forma clara, usamos alguns símbolos:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[Nome do botão]: representa um botão específico no ecrã ou nome de aplicação.</li>
+                        <li>> : representa a ordem de operação. Exemplo: "Tocar em [Definições] > [Som]".</li>
+                        <li><strong>Negrito</strong>: Muito importante! Representa conceitos importantes ou avisos de segurança.</li>
+                        <li><em>Itálico</em>: representa pensamentos complementares ou metáforas.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 📱 Android e iOS, explicamos ambos</h4>
+                    <p class="mb-2">Os nomes podem ser diferentes, mas o que fazem é o mesmo. Exemplo: aplicação (Android) e App (iOS), definições (ambos), gestão de ficheiros (Android) e ficheiros (iOS). Compreenda que são a mesma coisa.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">IV. 💾 Capacidade do smartphone: por que comprei 128GB mas tenho menos de 110GB disponíveis?</h4>
+                    <p class="mb-2">Conhece as unidades de capacidade: 1TB = 1024GB, 1GB = 1024MB...</p>
+                    <p class="mb-2">No entanto, a capacidade indicada na compra "encolhe" quando chega às suas mãos. As principais razões são:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>O sistema ocupa espaço: o SO é como as paredes estruturais de uma casa, é indispensável.</li>
+                        <li>Aplicações pré-instaladas pelo fabricante: as aplicações que vêm no smartphone novo também ocupam espaço.</li>
+                        <li>Perda de formatação: por razões técnicas, o forro da mochila também ocupa volume.</li>
+                    </ol>
+                    <p class="mb-2">Ao comprar um smartphone, considere também o espaço usado pelo sistema.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Tempo de prática 👉 Verifique o "cartão de identidade" do seu smartphone</p>
+                        <p class="mt-1">Abra [Definições], encontre "Informações do dispositivo" (ou opção similar), e anote: modelo do smartphone, versão do SO, capacidade total de armazenamento, capacidade restante. Este é o primeiro passo para conhecê-lo.</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 1: Olá, o meu computador pessoal</h3>
+                    <p class="mb-3">O seu smartphone é, na verdade, o supercomputador pessoal mais poderoso no seu bolso.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 🧠 Hardware do smartphone — "As entranhas"</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC (Chip)</strong>: O "cérebro + coração" do smartphone, determina o desempenho.</li>
+                        <li><strong>RAM (Memória)</strong>: A mesa de trabalho temporária. Quanto maior, mais confortável é ter várias aplicações abertas ao mesmo tempo.</li>
+                        <li><strong>ROM (Armazenamento)</strong>: O armazém de longo prazo. Onde ficam todas as fotos, vídeos e aplicações.</li>
+                        <li><strong>Ecrã</strong>: Os seus olhos. O tipo (OLED tem cores vivas, LCD é mais suave para os olhos), resolução (nitidez), taxa de atualização (fluidez de deslocamento) são importantes.</li>
+                        <li><strong>Bateria e carregamento</strong>: Carregue enquanto usa. Não espere ficar completamente vazio, nem mantenha sempre a 100% — isso é melhor para a bateria. O carregamento rápido e sem fios são convenientes.</li>
+                        <li><strong>Câmara</strong>: Atualmente, várias lentes + algoritmos (fotografia computacional) trabalham em conjunto para conseguir fotos noturnas e efeito de desfoque.</li>
+                        <li><strong>Sensores</strong>: As pequenas antenas do smartphone. Exemplo: giroscópio (mudança de orientação em jogos), NFC (portas de metro e cartões IC), sensor de proximidade (desligar o ecrã durante chamadas), etc.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 🤖 SO: Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Como uma comunidade de código aberto, os fabricantes de smartphones podem personalizar profundamente, com muitas opções.</li>
+                        <li>iOS: Como um jardim bem cuidado, a Apple gere o hardware e software de forma unificada, com uma experiência uniforme.</li>
+                    </ul>
+                    <p class="mb-2">Ambos os ecossistemas são muito ricos, escolha o estilo de vida que prefere.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 🎭 Quantos papéis desempenha o seu smartphone?</h4>
+                    <p class="mb-2">Já não é apenas um telefone: ferramenta de comunicação, câmara inteligente, carteira, portal de informação, consola de jogos, escritório móvel, assistente de saúde, comando remoto de casa inteligente, e até cartão de identidade digital.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Tempo de prática 👉 Compreender a configuração de hardware</p>
+                        <p class="mt-1">Em [Definições], verifique se consegue encontrar o modelo do processador, RAM e tamanho específico da ROM. Conheça a capacidade do seu smartphone.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 2: Organizar a sala digital — Gestão de ficheiros</h3>
+                    <p class="mb-3">Usar o smartphone durante muito tempo deixa-o desorganizado. Bons hábitos começam pela gestão de ficheiros.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 📂 Sistema de armazenamento em três camadas</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Armazenamento interno</strong>: A área central. Rápido, o sistema e aplicações estão todos aqui.</li>
+                        <li><strong>Cartão SD (se compatível)</strong>: O armário de expansão. Um pouco mais lento, mas adequado para filmes e fotos.</li>
+                        <li><strong>Armazenamento na nuvem</strong>: Cofre + unidade de sincronização. Previne perdas e permite sincronização entre vários dispositivos.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 🗂️ Conhecer o "gestor de ficheiros"</h4>
+                    <p class="mb-2">O Android geralmente tem uma aplicação [Ficheiros] ou [Gestão de ficheiros], e o iOS tem a aplicação padrão [Ficheiros]. Estes são os "exploradores" para ver todos os ficheiros do smartphone. Pode ver pastas como Download (downloads), DCIM (fotos da câmara), Pictures (imagens).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 🏷️ Onde ficam os vários tipos de ficheiros?</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fotos/vídeos: Normalmente guardados automaticamente em DCIM ou Pictures.</li>
+                        <li>Ficheiros descarregados: Basicamente todos em Download.</li>
+                        <li>Dados de aplicações: Vivem no seu "quarto privado" (diretório privado), podendo não ser visíveis.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">IV. 🧹 Sem espaço? Hora de limpeza geral</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Limpar cache: Memória temporária das aplicações. Limpar liberta espaço.</li>
+                        <li>Procurar ficheiros grandes: Ordenar por tamanho no gestor de ficheiros para encontrar os "culpados" que ocupam espaço.</li>
+                        <li>Eliminar restos: Após desinstalar aplicações, podem restar ficheiros lixo. Elimine manualmente.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Tempo de prática 👉 Organizar a pasta "Transferências"</p>
+                        <p class="mt-1">Abra o gestor de ficheiros > Entre na pasta "Transferências" (Download). Verifique o conteúdo, elimine o que não precisa, e organize o necessário (exemplo: criar pastas "Documentos de trabalho", "Autocolantes" para guardar).</p>
+                    </div>
+                </div>
+
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 3: Ligar a "linha da vida" do smartphone — Rede</h3>
+                    <p class="mb-3">Sem rede, o smartphone fica "meio parvo".</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 📶 Rede móvel (4G/5G) e dados móveis</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Dados móveis: A quantidade de dados gerada ao usar a Internet no smartphone. Ver vídeos e imagens consome mais dados.</li>
+                        <li>Dicas para poupar dados: Ative o "modo de poupança de dados" nas definições, atualize aplicações e veja vídeos de alta qualidade em ambiente Wi-Fi.</li>
+                        <li>Barras de sinal ≠ velocidade de ligação: Sinal forte indica boa ligação, mas a velocidade também depende da congestionamento da estação base.</li>
+                        <li><strong>⚠️ Importante! Antes de viagens ao estrangeiro, desative [Roaming de dados] para evitar contas elevadas!</strong></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 📡 Wi-Fi: Ligação, partilha e segurança</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ligação Wi-Fi: Em [Definições] > [WLAN], selecione a rede e introduza a palavra-passe.</li>
+                        <li>Partilha de palavra-passe: Atualmente é conveniente, tanto Android como iOS podem partilhar rapidamente a palavra-passe de um smartphone já ligado para um amigo.</li>
+                        <li>Riscos do Wi-Fi público: Possibilidade de roubo de dados por hackers ou hotspots de phishing. Regra: evite iniciar sessão em contas bancárias, use VPN sempre que possível.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 🔵 Bluetooth: Ligação de auriculares, transferência de ficheiros</h4>
+                    <p class="mb-2">Usado principalmente para ligar auriculares sem fios, pulseiras/relógios inteligentes. A função de transferência de ficheiros já não é muito usada.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">IV. 🔥 Tethering: Transformar o smartphone num router Wi-Fi</h4>
+                    <p class="mb-2">Quando tem muitos dados móveis, pode abrir um hotspot para tablets ou PC. Atenção: consome muita bateria e dados, por isso defina uma palavra-passe complexa e limite o número de dispositivos ligados.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Tempo de prática 👉 Configurar e gerir hotspot</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Abra [Definições], encontre "Tethering" ou "Partilha de rede", ative, defina nome e palavra-passe.</li>
+                            <li>Num outro dispositivo (exemplo: PC), procure e ligue a este Wi-Fi.</li>
+                            <li>No smartphone, verifique se consegue gerir dispositivos ligados ou desconectar dispositivos desconhecidos.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 4: Instalação e gestão de aplicações — O "conjunto de competências" do smartphone</h3>
+                    <p class="mb-3">As aplicações tornam o smartphone omnipotente, mas também é necessário geri-las adequadamente.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 🏪 Loja oficial: O "supermercado de aplicações" mais seguro</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Google Play ou lojas nativas de cada marca (exemplo: Loja de aplicações Xiaomi).</li>
+                        <li>iOS: Apenas App Store.</li>
+                    </ul>
+                    <p class="mb-2">Significado de segurança fundamental: revistas, garantia de atualização, segurança de pagamento. Orientação: use preferencialmente apenas lojas oficiais para descarregar.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 🚨 Fontes de terceiros: Risco extremamente elevado!</h4>
+                    <p class="mb-2">Descarregar aplicações da Web ou ligações desconhecidas pode levar a infeções por vírus, roubo de privacidade e pagamentos fraudulentos.</p>
+                    <p class="mb-2">Se for inevitável: confirme que a fonte é absolutamente fiável, verifique bem as permissões solicitadas antes de instalar, e depois faça uma análise com uma aplicação de segurança.</p>
+                    <p class="mb-2">Conselho final: nas definições do sistema, desative a permissão para "instalar aplicações de fontes desconhecidas".</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 📲 Instalar, atualizar, desinstalar</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Instalar: Toque em "Obter" na loja. Após a instalação, na primeira execução serão pedidas permissões.</li>
+                        <li>Atualizar: <strong>Atualize sempre!</strong> Principalmente para corrigir vulnerabilidades de segurança. Recomenda-se ativar a atualização automática.</li>
+                        <li>Desinstalar: Pressione longamente o ícone e arraste para a área de desinstalação. Para eliminar mais completamente, vá a [Definições] > [Gestão de aplicações], encontre e desinstale.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">IV. 🛡️ Gestão de permissões: Você é o "chefe" das aplicações</h4>
+                    <p class="mb-2">Quando uma aplicação pede permissões (exemplo: contactos, localização), às vezes é razoável (mapas precisam de localização), às vezes não (lanterna a pedir contactos).</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Opções de permissão: "Permitir sempre", "Permitir apenas durante o uso", "Recusar", "Perguntar sempre".</li>
+                        <li>Princípios de gestão:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Minimização: Não dê o que não é necessário.</li>
+                                <li>Auditoria posterior: Verifique regularmente as definições de permissões para ver se alguém está a "exceder permissões".</li>
+                                <li>Conforme a situação: Aplicações de táxi, por exemplo, devem receber permissão de localização apenas durante o uso.</li>
+                            </ol>
+                        </li>
+                        <li><strong>⚠️ Monitorizar com atenção: Permissões de contactos/SMS, localização em tempo real, câmara/microfone, acesso a ficheiros.</strong></li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Tempo de prática 👉 Auditar permissões de 3 aplicações</p>
+                        <p class="mt-1">Escolha 3 aplicações que usa frequentemente (exemplo: redes sociais, compras, utilitários), entre na página de gestão de permissões de aplicações em [Definições], audite item por item e desative permissões sensíveis desnecessárias ou altere para "permitir apenas durante o uso".</p>
+                    </div>
+                </div>
+
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 5: Personalizar ainda mais o smartphone — Definições básicas</h3>
+                    <p class="mb-3">Alguns minutos de configuração melhoram muito a experiência.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.1 🎵 Som e vibração</h4>
+                    <p class="mb-2">Defina o seu toque e som de notificação preferidos. Use de forma flexível o modo silencioso (em reuniões), modo não incomodar (durante o sono), e o mundo fica silencioso num instante. Ao ligar auriculares Bluetooth, confirme se a saída de áudio mudou.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.2 👀 Ecrã e brilho</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Brilho automático: O smartphone ajusta automaticamente conforme a luz envolvente. Sem trabalho.</li>
+                        <li>Filtro de luz azul / modo noturno: Filtra a luz azul, tornando o uso do smartphone à noite mais confortável.</li>
+                        <li>Modo escuro: Poupa energia (especialmente eficaz em ecrãs OLED), e não incomoda à noite.</li>
+                        <li>Taxa de atualização do ecrã: Alguns modelos Android permitem ajuste. Quanto maior (exemplo: 120Hz), mais suave é o deslocamento.</li>
+                        <li>Bloqueio automático: Defina para 15 ou 30 segundos. Seguro e poupa energia.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.3 🎨 Papel de parede, tema e ecrã principal</h4>
+                    <p class="mb-2">Mudar para um papel de parede bonito (imagem estática ou vídeo) também muda o humor. Smartphones de marca Android geralmente têm loja de temas, onde pode alterar ícones e estilos em conjunto. Não se esqueça dos widgets do ecrã principal. Colocar meteorologia, agenda, controlo de música no ecrã principal permite acesso com um toque.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.4 ♿ Acessibilidade: Um assistente valioso</h4>
+                    <p class="mb-2">Não se assuste com o nome. Qualquer pessoa pode usar.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Gesto de ampliação: Toque três vezes no ecrã para ampliar parcialmente. Ótimo para ver texto pequeno.</li>
+                        <li>Assistente de voz: Siri e Google Assistant. Só com a voz pode definir alarmes ou verificar o tempo.</li>
+                        <li>Leitor de ecrã (TalkBack/VoiceOver): Desenhado para pessoas com deficiência visual, mas também ajuda a "ouvir" artigos.</li>
+                        <li>Outros: Correção de cor (para daltónicos), atalho de toque na traseira (iPhone), menu de acessibilidade (Android) também valem a pena experimentar.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Tempo de prática 👉 Configurar modos "Dias úteis" e "Fins de semana"</p>
+                        <p class="mt-1">Use o modo de foco (iOS) ou modo de cenário para que o smartphone se adapte automaticamente ao seu ritmo. Exemplo:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Criar modo "Trabalho": Silenciar automaticamente notificações de aplicações não importantes, permitir apenas chamadas do chefe e família.</li>
+                            <li>Criar modo "Sono": Ativar automaticamente a uma hora fixa, silenciar todas as notificações.</li>
+                            <li>Definir temporizadores para eles. Exemplo: ativar automaticamente o modo "Trabalho" nos dias úteis das 9:00 às 18:00. Não se engane.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 6: Proteger a vida digital — Segurança e privacidade</h3>
+                    <p class="mb-3">Segurança do smartphone = segurança da privacidade + segurança do património.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 🔒 Ecrã de bloqueio: A primeira linha de defesa física</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ranking do nível de segurança:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Palavra-passe/Código PIN: O mais seguro. A garantia final (útil quando esquece a impressão digital/reconhecimento facial).</li>
+                                <li>Reconhecimento de impressão digital: O equilíbrio perfeito entre segurança e conveniência.</li>
+                                <li>Reconhecimento facial: O mais conveniente, mas a segurança depende da tecnologia (o Face ID 3D é seguro, a foto 2D é fácil de enganar).</li>
+                            </ul>
+                        </li>
+                        <li>Definir um ecrã de bloqueio forte: Defina sempre uma palavra-passe complexa (não use data de nascimento, 123456), e ative a autenticação biométrica. Defina o tempo de bloqueio para "imediatamente" ou o mais curto.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 📍 "Encontrar o smartphone": A ferramenta antirroubo definitiva</h4>
+                    <p class="mb-2"><strong>Ative sempre!</strong> Pode fazer o seguinte:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Localizar: Procura no mapa onde deixou o smartphone.</li>
+                        <li>Reproduzir som: Toca o smartphone, útil para encontrar em casa.</li>
+                        <li>Modo perdido: Bloqueia remotamente o smartphone e mostra um número de contacto. Quem encontrar pode contactá-lo.</li>
+                        <li>Apagar remotamente: O último recurso. Apaga todos os dados (mas depois de apagar já não pode localizar).</li>
+                    </ul>
+                    <p class="mb-2">Vá a [Definições], procure "Encontrar iPhone" (Apple) ou "Encontrar dispositivo" (Android) ou serviço similar da marca, e confirme que está verde/ativado.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 🔧 Atualização do sistema: Aplicar patches, fechar vulnerabilidades</h4>
+                    <p class="mb-2">O objetivo principal das atualizações do sistema é corrigir vulnerabilidades de segurança. É como tapar buracos na parede de casa. Por isso, quando aparecer uma notificação de atualização do sistema, atualize o mais depressa possível.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 🚫 Identificar e prevenir chamadas fraudulentas</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Táticas comuns: Fingir ser polícia/apoio ao cliente (phishing), prémios/remuneração de trabalho secundário (isca), romance fraudulento.</li>
+                        <li>Proteção padrão do smartphone: Bloqueio de chamadas spam, proteção contra roubo de códigos de verificação, deteção de segurança de ligações SMS. Não se esqueça de ativar nas definições.</li>
+                        <li>Regra antifraude: Não acreditar, não revelar, não clicar, não transferir dinheiro, se tiver dúvidas confirme!</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Tempo de prática 👉 Ativar e simular "bloqueio remoto"</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Confirme que a função "Encontrar o smartphone" está ativada.</li>
+                            <li>No navegador do PC ou outro smartphone, inicie sessão na conta de serviço na nuvem correspondente (iCloud.com ou site de serviço na nuvem da marca).</li>
+                            <li>Encontre a função "Encontrar dispositivo", tente "Reproduzir som" ou simule "Bloquear" no seu smartphone, para compreender todo o processo. Para não entrar em pânico quando for importante.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">II. Software (Capítulos 7-12)</h2>
+
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 7: Comunicação: SMS, chamadas e redes sociais</h3>
+                    <p class="mb-3">A comunicação é a missão mais original e central do smartphone. Atualmente, evoluiu de simples chamadas e SMS para um ecossistema complexo que inclui mensagens instantâneas, redes sociais e correio eletrónico.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 Funções avançadas da aplicação de telefone: Mais do que chamadas</h4>
+                    <p class="mb-2">A aplicação de telefone dos smartphones modernos vai além do simples disco, integrando ferramentas poderosas como gravação, bloqueio de spam e identificação inteligente.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Gravação de chamadas (atenção à conformidade legal):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Função: Registar o conteúdo de chamadas importantes, para atas de reuniões, entrevistas, promessas de clientes ou registo de disputas.</li>
+                        <li>Dica legal: Em Portugal, para usar gravações de chamadas como prova, é necessário obter o consentimento da outra parte ou usar para proteger os seus próprios direitos legais (exemplo: denúncia de assédio ou fraude). Antes de conversas comerciais ou confidenciais, é mais prudente informar verbalmente que "esta chamada pode ser gravada".</li>
+                        <li>Como operar:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Geralmente, há um botão "Gravar" claro no ecrã de chamada. Nas definições da aplicação de telefone, procure a opção "Gravação de chamadas" para definir regras de gravação automática.</li>
+                                <li>iOS: O sistema não fornece função nativa de gravação de chamadas. Se precisar, tem de usar uma aplicação de terceiros para gravação.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Bloqueio de chamadas spam e identificação inteligente:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Princípio: A aplicação de telefone consulta uma enorme base de dados de números através da rede, e ao receber uma chamada mostra "chamada spam", "chamada fraudulenta" ou o nome da empresa.</li>
+                        <li>Como ativar:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Entre na aplicação de telefone > "Definições" no canto superior direito > Antisspam ou identificação inteligente. Ative todas as opções de identificação e bloqueio.</li>
+                                <li>iOS: Vá a [Definições] > [Telefone] > [Bloqueio e identificação de chamadas]. Confirme uma aplicação de segurança de terceiros que suporte esta função (exemplo: Truecaller) e permita que funcione. Ativar a função "Silenciar desconhecidos" silencia todas as chamadas de números que não estão nos contactos.</li>
+                            </ul>
+                        </li>
+                        <li>Dica: Após receber uma chamada spam, marque ativamente como "Spam" ou "Fraude" no histórico de chamadas, contribuindo para a base de dados e ajudando outros.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Funções auxiliares de chamadas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Transcrição de gravação de chamadas: Alguns smartphones de marca Android, após gravar uma chamada, fornecem diretamente um botão "Transcrever" ao lado do ficheiro de gravação, convertendo o conteúdo da conversa em texto.</li>
+                        <li>Auxílio visual (legendas em tempo real): Nas definições de acessibilidade do Android ou auxílio auditivo do iOS, pode ativar a função "Legendas em tempo real", que gera legendas em tempo real para todo o áudio (incluindo chamadas).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 SMS e iMessage/RCS: Códigos de verificação e filtragem de mensagens spam</h4>
+                    <p class="mb-2">O SMS tradicional não foi descontinuado. É um canal fiável para receber códigos de verificação, notificações bancárias e informações oficiais.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs iMessage (iOS) / RCS (Android):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iMessage: Mensagem enviada pela Internet entre dispositivos Apple, mostrada em balões azuis. Suporta imagens e vídeos de alta qualidade, notificação de leitura, etc., totalmente gratuita e com encriptação ponta a ponta.</li>
+                        <li>RCS: Protocolo de comunicação de próxima geração promovido por operadoras mundiais e Google. Tem funções semelhantes ao iMessage e WhatsApp, mas baseado no número de telefone. Nas definições da aplicação de mensagens do smartphone Android, verifique e ative "Funções de chat".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Segurança dos códigos de verificação:</h5>
+                    <p class="mb-2">O sistema identifica e classifica automaticamente SMS com códigos de verificação. Nunca partilhe os códigos de verificação recebidos com ninguém.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Filtragem de mensagens spam:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: Em [Definições] > [Mensagens], ative "Filtrar remetentes desconhecidos".</li>
+                        <li>Android: Nas definições da aplicação de mensagens, ative "Serviço de informação inteligente" ou "Filtro de mensagens spam".</li>
+                        <li>Dica geral: Em SMS promocionais claramente spam, não responda nada (incluindo "Cancelar subscrição"). Elimine diretamente ou marque como mensagem spam. Responder pode confirmar que o seu número está ativo.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 WhatsApp/WeChat: Gestão de aplicações sociais nacionais</h4>
+                    <p class="mb-2">O WhatsApp e WeChat tornaram-se "super aplicações" que vão além de ferramentas de comunicação, integrando redes sociais, pagamentos e obtenção de informação.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Backup e migração do histórico de conversas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Importância: O histórico de conversas contém ficheiros importantes, memórias e informações de trabalho, mas é guardado apenas localmente e em cache temporário no servidor. Perder o smartphone ou reinstalar a aplicação pode fazer perder o histórico permanentemente.</li>
+                        <li>Backup para PC (o mais fiável):
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>Inicie sessão na versão PC ou Mac do WhatsApp/WeChat.</li>
+                                <li>Clique no menu no canto inferior esquerdo > [Migração e backup] > [Backup e restauro].</li>
+                                <li>Selecione "Fazer backup do histórico de conversas para PC", e no smartphone selecione as conversas a fazer backup.</li>
+                            </ol>
+                            Nota: Os ficheiros de backup são guardados encriptados localmente no PC. Para restaurar, o smartphone e PC precisam de estar ligados à mesma rede Wi-Fi.
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Limpeza do espaço de armazenamento:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Caminho: WeChat [Eu] > [Definições] > [Geral] > [Armazenamento]. WhatsApp [Definições] > [Armazenamento e dados] > [Gerir armazenamento].</li>
+                        <li>Estratégia de limpeza:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Cache: Pode limpar com segurança. São dados temporários gerados quando a aplicação corre.</li>
+                                <li>Histórico de conversas: Entre e limpe detalhadamente por tempo, tipo de ficheiro ou conversa individual. Exemplo: pode limpar de uma vez todos os ficheiros "vídeo" com "mais de 1 ano" de todas as conversas.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Definições de privacidade e segurança:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Método de adição: Controle como os outros o encontram (número de telefone, ID de utilizador, grupo, etc.).</li>
+                        <li>Permissões da linha do tempo: Defina quem pode ver, quem não pode ver.</li>
+                        <li>Gestão de autorização: Em WeChat [Definições] > [Informação pessoal e permissões] > [Gestão de autorização], pode ver e revogar autorizações de início de sessão do WeChat em sites e aplicações de terceiros.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 Correio eletrónico: Configuração e uso no smartphone</h4>
+                    <p class="mb-2">Processar e-mails de forma eficiente no dispositivo móvel é um elemento importante do trabalho móvel.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Adicionar conta de e-mail:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Aplicação de e-mail padrão do sistema:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS: [Definições] > [Correio] > [Contas] > [Adicionar conta].</li>
+                                <li>Android: O sistema geralmente tem uma aplicação "E-mail". Abra e siga as instruções para adicionar.</li>
+                            </ul>
+                        </li>
+                        <li>Aplicações cliente dedicadas: Gmail, Outlook, etc. Otimizadas para e-mails específicos, com funções mais poderosas.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Técnicas de uso de e-mail móvel:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Gestão de notificações push: Defina métodos de notificação diferentes para diferentes contas de e-mail.</li>
+                        <li>Gestos: A maioria das aplicações de e-mail permite arquivar, eliminar ou marcar rapidamente com gestos de deslizar.</li>
+                        <li>Assinatura: Configure uma assinatura de e-mail móvel profissional.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Precauções de segurança:</h5>
+                    <p class="mb-2">Tenha cuidado ao iniciar sessão no e-mail em Wi-Fi público ou enviar e-mails sensíveis.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Exercício do capítulo: Fazer backup do histórico de conversas do WhatsApp para PC</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Iniciar backup no PC: Abrir WhatsApp no PC > menu no canto inferior esquerdo > [Migração e backup] > [Backup e restauro].</li>
+                            <li>Selecionar backup para PC: Clicar em "Fazer backup do histórico de conversas para PC".</li>
+                            <li>Selecionar conteúdo de backup no smartphone: Aparece um popup no WhatsApp do smartphone, selecione as conversas a fazer backup e toque em "Iniciar backup".</li>
+                            <li>Aguardar conclusão do backup.</li>
+                            <li>(Opcional) Compreender o processo de restauro: Na mesma janela, outra opção é "Restaurar histórico de conversas para smartphone".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 8: Trabalho e estudo móvel</h3>
+                    <p class="mb-3">O smartphone tornou-se uma poderosa estação de trabalho móvel e centro de aprendizagem portátil.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 Processamento de documentos: Editar e criar na palma da mão</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Escolha de aplicações principais:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>WPS Office: Excelente localização, totalmente compatível com formatos Microsoft. Incorpora ricos modelos gratuitos e conjunto de ferramentas PDF.</li>
+                        <li>Microsoft 365: Experiência altamente consistente com o Office para computador. Melhor compatibilidade de formatos, profundamente integrado com armazenamento na nuvem OneDrive.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Técnicas principais de processamento de documentos no smartphone:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>A sincronização na nuvem é central: Guarde ficheiros de trabalho na unidade na nuvem associada à aplicação, garantindo gravação automática, mudança perfeita entre dispositivos e colaboração fácil. Lembra-se?</li>
+                        <li>Colaboração e partilha: Suporta partilha por ligação, definindo permissões "apenas leitura" ou "editável". Suporta edição online simultânea por várias pessoas.</li>
+                        <li>Aproveitar métodos de entrada eficientes: Use entrada de voz para redigir textos longos.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 Aplicações de notas: Do registo rápido à gestão de conhecimento</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Leves e padrão do sistema:</h5>
+                    <p class="mb-2">Notas iOS, notas de várias marcas Android, etc. Vantagens: Arranque rápido, alta integração com o sistema, adequadas para notas rápidas, listas e ideias temporárias.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Notas profissionais versáteis:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Evernote: Forte capacidade de recolha de informação e excelente pesquisa de texto completo.</li>
+                        <li>Notion: Muito flexível, integra notas, bases de dados e quadros Kanban. Todo o conteúdo são "blocos" que podem ser combinados livremente.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Dicas de uso:</h5>
+                    <p class="mb-2">Tente criar uma "caixa de entrada" de conhecimento para recolher informação, organizar e processar regularmente, e criar ligações entre notas para formar uma rede de conhecimento.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 Digitalização e OCR: De ficheiros em papel para versão digital</h4>
+                    <p class="mb-2">O smartphone é um scanner portátil.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Princípio da digitalização:</h5>
+                    <p class="mb-2">Deteta e corrige automaticamente as bordas do documento, remove sombras e gera uma imagem nítida. A função OCR reconhece o texto na imagem e converte-o em texto editável.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Escolha de ferramentas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Padrão do sistema: As "Notas" do iOS têm função de digitalização incorporada. Algumas marcas Android têm modo "Digitalização de documentos" na câmara ou aplicação de gestão de ficheiros.</li>
+                        <li>Aplicações profissionais de terceiros: Microsoft Lens, Adobe Scan, CamScanner.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Passos de operação:</h5>
+                    <p class="mb-2">Abrir a aplicação e apontar para o documento > Capturar automática ou manual > Ajustar e processar > Executar OCR > Guardar e partilhar (pode integrar várias páginas num PDF).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 Sincronização de unidade na nuvem: O seu hub de ficheiros móvel</h4>
+                    <p class="mb-2">A unidade na nuvem é o "hub de dados" que liga o smartphone ao PC.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Comparação de serviços principais de unidade na nuvem:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Google Drive: Alta penetração global, ecossistema de partilha maduro.</li>
+                        <li>iCloud Drive: Profundamente integrado no ecossistema Apple. Sincronização natural e segura.</li>
+                        <li>OneDrive: Profundamente integrado com Windows e Office 365. Primeira escolha para utilizadores do ecossistema Microsoft.</li>
+                        <li>Dropbox: Amplamente usado em todo o mundo, excelente estabilidade e compatibilidade.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Estratégia de uso:</h5>
+                    <p class="mb-2">Use iCloud/unidade na nuvem da marca para backup de dados do sistema e pessoais centrais. Use Google Drive/OneDrive/Dropbox para armazenamento de ficheiros de grande capacidade e colaboração de trabalho.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Exercício do capítulo: Digitalizar documento no smartphone e gerar PDF</p>
+                        <p class="mt-1">Passos de operação (usando Microsoft Lens ou Notas iOS como exemplo):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Selecionar ferramenta: No iOS, abrir "Notas" > Novo > Toque no ícone da câmara > "Digitalizar documentos". No Android/genérico, descarregar e abrir "Microsoft Lens".</li>
+                            <li>Digitalizar: Apontar para o documento, quando a aplicação reconhecer a moldura automaticamente, capturar. Pode adicionar várias páginas.</li>
+                            <li>Melhorar efeito: Selecionar filtro "Preto e branco" para tornar o documento mais nítido.</li>
+                            <li>Reconhecimento OCR: Após concluir, escolher saída como PDF, clicar em "Copiar texto" ou botão similar para extrair texto.</li>
+                            <li>Guardar e nomear: Dar um nome claro ao ficheiro e guardar.</li>
+                            <li>Verificar e partilhar: Abrir o PDF para confirmar a qualidade, tentar partilhar por e-mail ou WhatsApp.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 9: Pagamentos móveis e serviços de vida</h3>
+                    <p class="mb-3">O smartphone está a substituir a carteira, o cartão de transporte e até o cartão de identidade físico.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 Pagamentos móveis: Associar, pagar e gestão de segurança</h4>
+                    <p class="mb-2"><strong>A segurança é o pré-requisito para o uso.</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Associar cartão bancário:</h5>
+                    <p class="mb-2">Recomenda-se associar apenas 1-2 cartões de uso frequente. Pode usar contas eletrónicas de categoria II/III do banco para pagamentos móveis, separando o risco da conta principal.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Métodos de pagamento:</h5>
+                    <p class="mb-2">Código de pagamento, pagar com leitura de código, transferência, pagamento NFC no smartphone. Ative sempre "autenticação ao iniciar" ou "bloqueio de segurança" para prevenir uso indevido em caso de perda do smartphone.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Gestão de segurança central:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Palavra-passe e pagamento biométrico: Defina sempre uma palavra-passe de pagamento independente e ative pagamento com impressão digital ou reconhecimento facial.</li>
+                        <li>Bloqueio de segurança: Nas definições da aplicação de pagamento, encontre "Bloqueio de segurança", recomenda-se definir para exigir autenticação ao entrar em "A minha página" ou "Carteira".</li>
+                        <li>Gestão de dispositivos de início de sessão: Verifique regularmente e elimine autorizações de início de sessão de dispositivos pouco usados.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 Código de transporte público: Metro, autocarro</h4>
+                    <p class="mb-2">O smartphone torna-se o seu cartão de transporte.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Como ativar:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Aplicação de pagamento móvel: Pesquise "Cartão de transporte" e ative o cartão de transporte eletrónico da cidade correspondente.</li>
+                        <li>Cartão de transporte do smartphone de marca: Na aplicação de carteira como Apple Pay, Google Pay, ative um cartão de transporte virtual. Pagamento por toque com NFC. Resposta mais rápida, funciona offline.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Dicas de uso:</h5>
+                    <p class="mb-2">Em portas de metro sem NFC, ou quando a bateria do smartphone acabar, pode mudar para o código de transporte da aplicação de pagamento móvel.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 Pagamento de serviços públicos, entrega de comida, aplicação de táxi</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pagamento de serviços públicos: Em "Serviços públicos" da aplicação de pagamento móvel, associe o número de cliente e pague contas de água, eletricidade, gás, etc.</li>
+                        <li>Entrega de comida: Plataformas diferentes (Uber Eats, Glovo, etc.) podem ter descontos diferentes para o mesmo restaurante. Compare em várias plataformas.</li>
+                        <li>Táxi: Defina contacto de emergência, ative partilha de percurso. Prefira pagamento dentro da plataforma, evite transações offline.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 Guarda e uso de documentos de identificação eletrónicos</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Documentos de identificação eletrónicos:</h5>
+                    <p class="mb-2">Algumas regiões já introduziram documentos de identificação eletrónicos e carta de condução eletrónica em aplicações governamentais oficiais, que podem ser usados em certos cenários, mas não em todos.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Dicas de guarda:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Adicione à "Carteira" do smartphone, para poder chamar rapidamente a partir do ecrã de bloqueio.</li>
+                        <li>No Android, pressione longamente o ícone da aplicação e arraste uma função específica (exemplo: "O meu certificado digital") para a área de trabalho como atalho.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Exercício do capítulo: Definir um bloqueio mais seguro na aplicação de pagamento</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Confirmar e ativar pagamento biométrico: Na aplicação de pagamento, confirme que o pagamento com impressão digital/reconhecimento facial está ativado.</li>
+                            <li>Definir "Bloqueio de segurança": Nas definições de segurança da aplicação de pagamento, encontre "Bloqueio de segurança", defina para exigir autenticação ao entrar na "Carteira" ou fazer operações de fundos.</li>
+                            <li>Verificar dispositivos de início de sessão: Nas definições de segurança, elimine todos os dispositivos desconhecidos ou não usados.</li>
+                            <li>Compreender proteção de conta: Verifique os detalhes do seguro de segurança de conta da aplicação de pagamento.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 10: Fotografia e gestão de imagens</h3>
+                    <p class="mb-3">Neste capítulo, vamos dominar todo o processo de criar excelentes imagens com o smartphone e gerir eficientemente as memórias visuais.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 Bases da câmara do smartphone: Noturno, retrato, modo pro</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Modo noturno</strong>: Através da composição de múltiplas imagens, melhora o brilho e os detalhes em locais escuros. Ao fotografar, precisa de manter a mão estável por 2-4 segundos.</li>
+                        <li><strong>Modo retrato</strong>: Simula o efeito de pouca profundidade de campo de uma câmara reflex (desfoque de fundo). Foque na pessoa, mantendo uma distância de 1-2 metros. Pode ajustar a intensidade do desfoque depois.</li>
+                        <li><strong>Modo pro</strong>: Controlo manual dos parâmetros centrais.
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>ISO: Quanto mais baixo, melhor a qualidade de imagem; aumentar em locais escuros causa ruído.</li>
+                                <li>Velocidade do obturador: Alta congela o instante, baixa regista trajetórias (precisa de estabilidade).</li>
+                                <li>Balanço de brancos: Ajusta a tendência de cor.</li>
+                                <li>Compensação de exposição: Torna toda a imagem mais clara ou escura.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 Composição fotográfica e retoque</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Regras básicas de composição:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Regra dos terços: Coloque o ponto de interesse nas interseções das linhas que dividem a imagem em três partes iguais na horizontal e vertical.</li>
+                        <li>Linhas guia: Use estradas, rios, etc. para guiar o olhar para o sujeito.</li>
+                        <li>Comece simples: Ao fotografar, conscientemente mantenha a imagem nivelada horizontal e verticalmente.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Fluxo de processamento de retoque (usando aplicações como Snapseed, VSCO):</h5>
+                    <ol class="list-alpha pl-6 mb-3 space-y-1">
+                        <li>Correção: Fazer rotação e recorte de perspetiva.</li>
+                        <li>Ajuste básico: Ajustar brilho, contraste. Baixar as altas luzes, subir as sombras.</li>
+                        <li>Retoque parcial: Fazer escurecimento/clareamento e remoção de imperfeições em áreas específicas.</li>
+                        <li>Estilização: Adicionar filtros, ajustar tons.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 Gestão de fotos: Do caos à ordem</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Funções centrais de gestão do álbum do smartphone:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Classificação inteligente: Classifica automaticamente por tempo, local, pessoa, cena.</li>
+                        <li>Pesquisa: Pode pesquisar globalmente por palavra-chave, local, tempo, e até texto dentro da imagem.</li>
+                        <li>Operações em lote: Após seleção múltipla, pode partilhar em lote, adicionar ao álbum ou eliminar.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Backup de fotos e libertação de espaço:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Backup na nuvem: No iOS, use Fotos iCloud, ative "Otimizar armazenamento do iPhone". No Android/plataforma cruzada, use Google Fotos ou outro serviço na nuvem.</li>
+                        <li>Libertar espaço: Use ferramentas do sistema, ou limpe manualmente vídeos grandes e fotos em sequência.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 Captura de ecrã e gravação de ecrã: Capturar e partilhar informação</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Operação básica:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Atalho comum: Pressionar simultaneamente [Botão de ligar] + [Botão de aumentar volume].</li>
+                        <li>Captura avançada: Captura de ecrã longa/deslocamento, captura de área.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Gravação de ecrã:</h5>
+                    <p class="mb-2">Adicione o botão "Gravação de ecrã" ao centro de controlo. Antes de começar, pressione longamente para poder ativar a gravação de microfone para comentários.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Edição imediata:</h5>
+                    <p class="mb-2">Após a captura de ecrã, toque na miniatura para entrar no ecrã de edição, onde pode fazer anotações, recorte, mosaico, etc.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Exercício do capítulo: Fotografar noturno em modo pro</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Preparação: Encontre uma cena com fonte de luz estável, recomenda-se usar tripé ou estabilizar o smartphone.</li>
+                            <li>Entrar em modo pro: Abrir a aplicação de câmara e mudar para o modo "Pro".</li>
+                            <li>Definir parâmetros:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>ISO: Definir para o valor mais baixo (50 ou 100).</li>
+                                    <li>Velocidade do obturador: Definir de 1 segundo a vários segundos (exemplo: 2 segundos).</li>
+                                    <li>Foco: Definir para foco manual, arraste o cursor até as luzes distantes ficarem nítidas.</li>
+                                </ul>
+                            </li>
+                            <li>Fotografar e verificar: Toque no obturador e mantenha-se absolutamente imóvel. Verifique a foto, ajuste os parâmetros conforme o brilho.</li>
+                            <li>Comparar experiência: Fotografar também uma no modo noturno automático, compare as diferenças.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 11: Entretenimento e leitura</h3>
+                    <p class="mb-3">O smartphone é o nosso centro de entretenimento mais importante, integrando walkman, cinema, biblioteca e consola de jogos.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 Música e podcasts: A sua paisagem sonora portátil</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Serviços de streaming online:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Internacionais: Spotify, Apple Music. Catálogo global, rica escolha de qualidade de som.</li>
+                        <li>Portugueses: MEO Music, etc. Comunidade de playlists e recomendações personalizadas.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Podcasts:</h5>
+                    <p class="mb-2">Aplicações: Apple Podcasts, Spotify, Google Podcasts. Dicas de uso: Subscrever canais, descarregar antecipadamente, ajustar velocidade de reprodução para ouvir eficientemente.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 Leitor de vídeo: Reprodução local e streaming</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Reprodução de vídeo local:</h5>
+                    <p class="mb-2">Recomenda-se leitores universais como VLC, nPlayer. Suportam quase todos os formatos e legendas externas.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Vídeo de streaming online:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Plataformas gerais: YouTube, Netflix, Amazon Prime Video, HBO Max.</li>
+                        <li>Dicas de uso: Descarregar conteúdo antecipadamente. Use a função "Cast" para ver na TV.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 Leitura de e-books: Leitores Epub, PDF</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Escolha de plataforma de leitura:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Romances web e livros publicados: Kindle, Apple Books, Google Play Livros.</li>
+                        <li>Livros técnicos e documentos: Apple Books, Adobe Acrobat Reader (anotações PDF).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Definições de otimização de leitura:</h5>
+                    <p class="mb-2">Personalize cor de fundo, tipo de letra. Use funções de marcador, destaque, notas. Algumas aplicações suportam leitura em voz alta.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.4 Modo de jogo e ajuste de desempenho</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Modo de jogo/caixa de ferramentas de jogo:</h5>
+                    <p class="mb-2">Ativa automaticamente ao iniciar jogos. Fornece funções como mudança de modo de desempenho, modo não incomodar, gravação rápida, ferramentas de janela flutuante.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Ajuste manual de desempenho:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Dentro do jogo: Ajuste qualidade de imagem, taxa de frames conforme o desempenho do smartphone. A fluidez da taxa de frames é prioritária.</li>
+                        <li>A nível do sistema: Se o jogo suportar, ative o modo de alta taxa de atualização (exemplo: 120Hz) nas definições do sistema.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Hábitos de jogo saudáveis:</h5>
+                    <p class="mb-2">Use a função "Tempo de ecrã" do sistema para definir alertas de tempo. Defina autenticação de pagamento para compras dentro do jogo.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Exercício do capítulo: Configurar um pacote de entretenimento dedicado para "modo de avião"</p>
+                        <p class="mt-1">Passos de operação: Planear e descarregar antecipadamente um conjunto completo de conteúdo de entretenimento offline.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pacote de música: Na aplicação de música, descarregue a sua playlist ou álbum preferido.</li>
+                            <li>Pacote de vídeo: Na aplicação de streaming, guarde em cache um filme ou série.</li>
+                            <li>Pacote de leitura: Na aplicação de e-books, descarregue 1-2 livros.</li>
+                            <li>Pacote de jogos: Instale 1-2 jogos offline para um jogador.</li>
+                            <li>Integrar e testar: Ative o "modo de avião", confirme que todo o conteúdo está acessível offline. Organize as aplicações relacionadas numa pasta chamada "Entretenimento offline".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 12: Aplicações de utilitários recomendadas</h3>
+                    <p class="mb-3">Neste capítulo, apresentamos aplicações de utilitários cuidadosamente selecionadas que realmente melhoram a eficiência, promovem a saúde e facilitam as deslocações.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 Ferramentas de eficiência: Gerir tempo e atenção</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Lista de tarefas e gestão de tarefas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Escolha de aplicações:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Leves e convenientes: Notas do sistema, Microsoft To Do.</li>
+                                <li>Funcionalidades completas: Todoist, TickTick (excelente reconhecimento de linguagem natural, integração de temporizador Pomodoro).</li>
+                                <li>Gestão Kanban: Trello ou vista Kanban do Notion. Adequado para gestão visual de projetos.</li>
+                            </ul>
+                        </li>
+                        <li>Dicas de uso: Colete tarefas imediatamente na "caixa de entrada". Organize regularmente e defina datas. Foque-se apenas na lista "hoje" todos os dias.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Temporizador Pomodoro:</h5>
+                    <p class="mb-2">Aplicações: Forest, Focus To-Do. Princípio: 25 minutos de foco, 5 minutos de pausa, repetir.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Calendário:</h5>
+                    <p class="mb-2">Use o calendário do sistema ou Google Calendar. Coloque compromissos, prazos e até "blocos de tempo de foco" no calendário, visualizando a distribuição de tempo.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 Saúde e exercício: Apple Health, Google Fit, Fitbit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Orientação e registo de exercício: Nike Training Club, Strava, etc. oferecem ricos cursos de fitness. Aplicações de saúde de marcas (exemplo: Samsung Health) integram profundamente dados de pulseiras inteligentes.</li>
+                        <li>Apple Health / Google Fit: Hub de dados. Agrega todos os dados do smartphone, pulseira inteligente e aplicações de saúde de terceiros, formando um registo de saúde unificado. Verifique regularmente o relatório de "tendências".</li>
+                        <li>Conselhos de uso: Defina objetivos alcançáveis. Não permita demasiados lembretes.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 Viagens e deslocações: O seu guia universal</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Mapas e navegação:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Em Portugal: Google Maps. Informação de trânsito detalhada e em tempo real.</li>
+                        <li>Viagens ao estrangeiro: Google Maps. Vantagem em dados globais, street view e avaliações de utilizadores.</li>
+                        <li>Walking e outdoor: AllTrails. Regista trilhos, pode descarregar mapas offline.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Tradução:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Conversação em tempo real: A tradução "Conversação" e "Câmara" em tempo real do Google Tradutor é uma ferramenta mágica para viagens.</li>
+                        <li>Texto e documentos: DeepL tem alta precisão de tradução entre línguas europeias.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Planeamento de itinerário:</h5>
+                    <p class="mb-2">Aplicações como "TripIt" geram automaticamente rotas, gerem informações de bilhetes de avião e hotéis, criam itinerários.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.4 Nicho mas poderoso: Introdução a ferramentas de automação</h4>
+                    <p class="mb-2">Esta é a chave para atualizar o smartphone para "assistente inteligente".</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. O que é automação?</h5>
+                    <p class="mb-2">Fazer com que o smartphone execute automaticamente uma série de operações predefinidas quando as condições definidas são satisfeitas. Exemplo: ao chegar a casa, ligar automaticamente ao Wi-Fi e reproduzir música; ao deitar, escurecer automaticamente o ecrã.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. "Atalhos" do iOS:</h5>
+                    <p class="mb-2">Ferramenta de automação oficial da Apple. Sem programação.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Conceito central: "Atalho" é um fluxo de trabalho que pode ser executado tocando manualmente. "Automação" é uma instrução executada automaticamente com base em condições.</li>
+                        <li>Caminho de introdução: Primeiro adicione atalhos prontos da "Galeria de atalhos" para usar. Depois tente criar atalhos simples. Por fim, explore a automação pessoal no separador "Automação".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Soluções de automação Android:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>A nível do sistema: Os sistemas de cada marca (exemplo: One UI, MIUI) podem ter funções básicas de automação integradas como "cenários".</li>
+                        <li>Aplicação de topo: Tasker. Funções muito poderosas, mas curva de aprendizagem íngreme.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Exercício do capítulo: Criar fluxo de automação "Relaxamento ao deitar"</p>
+                        <p class="mt-1">Proposta de referência (usando automação "Atalhos" do iOS):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Criar condição de acionamento: Abrir aplicação Atalhos > [Automação] > [Criar automação pessoal] > Selecionar "Hora específica" (exemplo: 22:30, todos os dias).</li>
+                            <li>Adicionar ações a executar: Baixar volume de mídia > Ativar "Modo não incomodar" > Reproduzir playlist de relaxamento específica > Brilho do ecrã ao mínimo > Mostrar notificação: "Hora de relaxar antes de dormir. Largue o smartphone."</li>
+                        </ol>
+                        <p class="mt-2">Proposta de referência Android: Use a função "Cenários" padrão do sistema ou Tasker para definir condições de acionamento e ações similares.</p>
+                        <p class="mt-1">Passos do exercício: Escolha a ferramenta conforme o sistema do smartphone, crie uma automação chamada "Relaxamento ao deitar". Adicione ações importantes (incluindo ajuste de volume e ativação do modo não incomodar). Guarde e teste.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">III. Avançado (Capítulos 13-17)</h2>
+
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 13: Ciência da bateria e otimização de poupança de energia</h3>
+                    <p class="mb-3">A bateria é o "coração energético" do smartphone. Neste capítulo, vamos compreender as características da bateria, aprender técnicas científicas de carregamento e poupança de energia, e eliminar completamente a ansiedade de bateria.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 O que é a bateria? Ciclos e estado de saúde</h4>
+                    <p class="mb-2">A bateria do smartphone (ião de lítio ou polímero de lítio) é como uma esponja de energia: carregar é absorver água (armazenar energia), descarregar é espremer água (usar). Lembre-se das suas 3 grandes características:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Carregar a qualquer momento: Ao contrário das baterias antigas, não tem efeito de memória, não precisa de descarregar completamente antes de carregar. Usar até 0% ou manter sempre a 100% causa danos.</li>
+                        <li>Medo do calor: Altas temperaturas são o inimigo da bateria.</li>
+                        <li>Degradação: Com uso prolongado, a capacidade máxima diminui. É um fenómeno normal.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Indicador central: Número de ciclos e estado de saúde</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>1 ciclo não é 1 carregamento. Exemplo: se hoje usar 60% e carregar até cheio, amanhã usar 40% e carregar até cheio, o consumo total de 100% conta como 1 ciclo.</li>
+                        <li>O estado de saúde da bateria mostra que percentagem da capacidade máxima atual é em relação ao novo. Abaixo de 80%, a duração da bateria diminui visivelmente, pode considerar a substituição oficial da bateria.</li>
+                        <li>Como verificar:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Definições > Bateria > Estado da bateria e carregamento.</li>
+                                <li>Android: Geralmente, pode encontrar "Estado da bateria" pesquisando nas definições.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 Mitos sobre carregamento? Carregamento rápido, carregamento sem fios e regras de ouro</h4>
+                    <p class="mb-2">Desmistificar rumores, carregar cientificamente.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. O carregamento rápido danifica a bateria?</h5>
+                    <p class="mb-2">Se usar acessórios de carregamento rápido originais ou certificados, o dano é mínimo. O smartphone e carregador têm controlo de temperatura, reduzindo automaticamente a potência em caso de sobreaquecimento. Não use carregadores rápidos de marcas desconhecidas.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. E o carregamento sem fios?</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Conveniente: Basta colocar para carregar. Adequado para usar ao deitar à noite.</li>
+                        <li>Desvantagens: Baixa eficiência, aquecimento visível, carregamento lento.</li>
+                        <li>Conselho: Adequado para carregar durante a noite (com moderação). Quando tiver pressa, use carregamento rápido com fio. Retire a capa grossa ao usar.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Regras de ouro para cuidar da bateria</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Intervalo de energia ideal: Mantenha a energia entre 20%-80% sempre que possível, não deixe chegar a 0% "fome" nem mantenha sempre a 100% "barriga cheia".</li>
+                        <li>Carregar durante a noite é seguro? Sim! Quando chega ao máximo, o carregamento para automaticamente, e o smartphone é alimentado diretamente pela corrente.</li>
+                        <li>Nunca jogue jogos pesados enquanto carrega. O sobreposição de calor danifica a bateria.</li>
+                        <li>Se não usar o smartphone por muito tempo: Carregue até cerca de 50% e desligue para guardar.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 Estas são as verdadeiras técnicas de poupança de energia</h4>
+                    <p class="mb-2">A saúde da bateria não chega. As definições são o golpe fatal para poupar energia.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Identificar os "comilões de energia"</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ecrã (rei do consumo de energia): Baixe o brilho, reduza o tempo de bloqueio automático. Em smartphones com ecrã OLED, ative sempre o modo escuro. Poupa bastante energia.</li>
+                        <li>Sinal fraco: Em elevadores, caves, o smartphone procura desesperadamente sinal, consumindo energia rapidamente.</li>
+                        <li>5G: Em locais com mau sinal, mude manualmente para 4G, a duração da bateria melhora muito.</li>
+                        <li>Serviços de localização:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Defina permissões de localização de aplicações que não navegação (exemplo: redes sociais, compras) para "Permitir apenas durante o uso".</li>
+                                <li>Nas definições de localização do sistema, desative opções desnecessárias como "anúncios baseados na localização".</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Gerir a "boca" das aplicações</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Limitar atividade em segundo plano:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Definições > Geral > Atualização de apps em segundo plano. Desative tudo ou deixe apenas o WhatsApp.</li>
+                                <li>Android: Nas definições de bateria da aplicação, para aplicações pouco usadas, selecione "Proibir atividade em segundo plano".</li>
+                            </ul>
+                        </li>
+                        <li>Desative notificações desnecessárias: Cada vez que o ecrã acende e vibra, consome energia.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. A linha de salvação: Modo de poupança de energia</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Modo de poupança de energia/baixa energia: O sistema reduz o desempenho, para a sincronização em segundo plano. Muito eficaz para emergências temporárias.</li>
+                        <li>Modo de poupança de energia extrema/super: Resta apenas telefone, SMS e muito poucas aplicações, o ecrã fica a preto e branco. Espreme a última energia para manter a vida.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Exercício prático: Fazer um check-up de saúde à bateria</p>
+                        <p class="mt-1">Objetivo: Usar dados para identificar o verdadeiro culpado do consumo de energia.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Verificar estado de saúde: Encontre a capacidade máxima da bateria usando o método acima e anote.</li>
+                            <li>Analisar detalhes de consumo de energia:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Vá a Definições > Bateria, veja o gráfico abaixo e a lista de aplicações, preste atenção a quais aplicações têm muito tempo de atividade em segundo plano.</li>
+                                    <li>Android: Vá a Definições > Bateria > Uso da bateria, veja o ranking de consumo de energia por hardware e aplicações.</li>
+                                </ul>
+                            </li>
+                            <li>Elaborar medidas:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Se uma aplicação específica tem consumo anormal de energia em segundo plano → Limitar.</li>
+                                    <li>Se o consumo de "Rede móvel" é elevado → Lembre-se se esteve muito tempo em locais com mau sinal.</li>
+                                    <li>Se aplicações pouco usadas aparecem no ranking → Considere desinstalar.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 14: Sistema de contas e serviços na nuvem</h3>
+                    <p class="mb-3">A sua conta de smartphone é mais do que uma palavra-passe para descarregar aplicações. É o "passaporte da alma" da vida digital, e os serviços na nuvem são a "autoestrada invisível" que faz fluir todos os dados.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 Três grandes contas centrais: Apple, Google e cada marca</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple ID: A chave mestra do ecossistema Apple</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Função: App Store, sincronização iCloud, Encontrar iPhone, FaceTime, etc., tudo depende disto. Permite mudar perfeitamente entre iPhone, iPad, Mac.</li>
+                        <li>Linha de base de segurança: Ative sempre a autenticação de dois fatores! Assim, mesmo que a palavra-passe seja divulgada, ninguém consegue iniciar sessão num novo dispositivo.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Conta Google: O núcleo do Android e serviços Google</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Função: Sincronização de contactos, calendário, Gmail, marcadores Chrome, backup de fotos.</li>
+                        <li>Linha de base de segurança: Igualmente, é importante ativar a verificação em dois passos.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Contas de cada marca: O gestor geral local</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Função: Backup de espaço na nuvem, loja de aplicações, encontrar smartphone, ligação entre dispositivos (exemplo: colaboração multi-ecrã).</li>
+                        <li>Atenção: Compreenda que os dados na nuvem existem em servidores nacionais, leia a política de privacidade e saiba que dados estão a ser sincronizados.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">🔐 Regras comuns de segurança de contas</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Palavra-passe forte + gestor de palavras-passe: Gere com o chaveiro iCloud ou ferramentas como Bitwarden.</li>
+                        <li>Ativar autenticação de dois fatores: Esta é a linha de vida antirroubo.</li>
+                        <li>Verificar regularmente dispositivos de início de sessão: Elimine dispositivos desconhecidos.</li>
+                        <li>Atenção a ligações de phishing: Mesmo que uma ligação desconhecida peça a palavra-passe, nunca clique. Introduza manualmente o endereço do site oficial.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 Sincronização na nuvem: Fazer os dados moverem-se por si</h4>
+                    <p class="mb-2">Ao ativar a sincronização na nuvem, os dados parecem estar dentro do smartphone, mas na verdade estão seguros na nuvem, mantendo a consistência em todos os dispositivos.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. O que a sincronização na nuvem pode fazer? (Exemplo iCloud)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Contactos, calendário, notas: Qualquer alteração num dispositivo é sincronizada instantaneamente nos outros.</li>
+                        <li>Fotos e vídeos: Ao ativar Fotos iCloud, todas as fotos são carregadas, ficando no smartphone apenas versões de tamanho pequeno (poupança de espaço). Pode ver o tamanho original em qualquer dispositivo Apple.</li>
+                        <li>Backup completo automático: Quando o smartphone está a carregar, bloqueado e ligado ao Wi-Fi, as definições do sistema, layout de aplicações, etc. são automaticamente guardados em backup. Torna-se uma ferramenta mágica ao restaurar num novo smartphone.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ⚠️ Distinção importante: Sincronização vs Backup</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sincronização = Consistência bidirecional: Se eliminar uma foto no dispositivo A, também desaparece nos dispositivos B e C. O objetivo é manter todos os dispositivos iguais.</li>
+                        <li>Backup = Instantâneo unidirecional: É como tirar uma foto do estado do smartphone e guardar. Se depois eliminar dados locais, o backup na nuvem mantém-se. O objetivo é a restauração.</li>
+                        <li>Lembre-se: Não trate a sincronização de Fotos iCloud como backup! Se eliminar acidentalmente em todos os dispositivos, também desaparece da nuvem. Para um verdadeiro backup, precisa de backup completo no PC (iTunes/Finder) ou armazenamento na nuvem de terceiros (apenas carregar, não eliminar).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 Partilha familiar: Comprar uma vez, toda a família desfruta</h4>
+                    <p class="mb-2">Esta é a ferramenta para partilhar recursos digitais com os familiares mais próximos.</p>
+                    <p class="mb-2">Exemplo da "Partilha familiar" da Apple, pode partilhar:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Aplicações, música, filmes, livros: O que comprou, toda a família (até 5 pessoas) pode descarregar, sem custos adicionais. A forma mais económica de comprar software.</li>
+                        <li>Subscrições Apple Music, iCloud+, etc.: As subscrições de plano familiar são geralmente mais baratas do que as individuais.</li>
+                        <li>Partilha de localização: Ver a localização em tempo real da família (exemplo: regresso das aulas das crianças). Defina geocercas, notificar ao chegar ou sair. Seguro e tranquilo.</li>
+                        <li>Álbum partilhado e calendário: Colocar fotos juntos, registar eventos familiares.</li>
+                    </ul>
+                    <p class="mb-2">💡 Nota: Convide apenas familiares diretos de total confiança. A partilha de localização é bidirecional. Respeitem mutuamente a privacidade.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Exercício prático: Verificar conteúdo de sincronização da conta</p>
+                        <p class="mt-1">Objetivo: Gerir ativamente, dizer adeus à sincronização confusa.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Exemplo iPhone: Definições > O seu nome no topo.</li>
+                            <li>Verificar itens de sincronização iCloud: Toque em "iCloud", verifique o interruptor de cada aplicação na lista.
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Recomenda-se ativar Contactos, Calendário.</li>
+                                    <li>Preste atenção especial a "Fotos": Confirme que compreende a lógica das Fotos iCloud (eliminar num local, elimina em todo o lado).</li>
+                                    <li>Pode desativar sincronização de aplicações de terceiros não usadas, poupando espaço.</li>
+                                    <li>Confirme que o Backup iCloud está ativado.</li>
+                                </ul>
+                            </li>
+                            <li>Verificar Encontrar e localização: Confirme que "Encontrar iPhone" está ativado (obrigatório antirroubo). Verifique se as definições de localização da partilha familiar estão como esperado.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 15: Ligação do smartphone com outros dispositivos</h3>
+                    <p class="mb-3">O smartphone moderno é o seu centro digital pessoal. Aprender a fazer equipa com outros dispositivos duplica a eficiência.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 Colaboração com PC: Produtividade em explosão</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Transferência de ficheiros, despedir-se do cabo de dados</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>O rei sem fios:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Ecossistema Apple: AirDrop. Transferência instantânea de ficheiros e fotos entre iPhone e Mac. Sem rede, sem perda de qualidade.</li>
+                                <li>Android + Win: Use a função <strong>"Phone Link"</strong>. Veja diretamente fotos do smartphone no PC, responda a SMS, etc.</li>
+                                <li>Ecossistema de marca: Samsung Flow, Huawei Share, etc. Espelha diretamente o ecrã do smartphone no PC. Use o rato e teclado do PC para operar aplicações do smartphone. Arraste ficheiros em ambas as direções.</li>
+                            </ul>
+                        </li>
+                        <li>Ligação física direta: Ligue ao PC com cabo de dados, selecione o modo "Transferência de ficheiros". Estável e rápido. Adequado para transferência de ficheiros grandes.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Entrega multi-ecrã</h5>
+                    <p class="mb-2">Apple Handoff: Quando está a ver uma página web no iPhone, aparece um ícone do Safari na dock do Mac, clique para continuar a ver. Copie texto e pode colar diretamente noutro dispositivo.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 Ligação com relógio/pulseira inteligente: O assistente no pulso</h4>
+                    <p class="mb-2">Funções centrais:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Filtro de notificações: Envia mensagens do smartphone para o relógio. Basta levantar o pulso para ver. As não importantes, descarte com um deslize. Reduz o número de vezes que tira o smartphone.</li>
+                        <li>Estação de dados de saúde: O relógio mede a frequência cardíaca e sono 24 horas. Os dados podem ser vistos como relatório na aplicação do smartphone.</li>
+                        <li>Comando universal: Controle remotamente a reprodução de música do smartphone, use como obturador da câmara do smartphone (super útil para fotos de grupo).</li>
+                        <li>Toque no pulso: Sincronize o cartão de transporte e cartão de acesso abertos na carteira do smartphone para o relógio. Basta levantar o pulso para tocar.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 Ligação com casa inteligente: O comando geral no bolso</h4>
+                    <p class="mb-2">O smartphone tem três papéis:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Comando remoto: Com aplicações como Google Home, Amazon Alexa, Apple Home, ligue/desligue diretamente luzes, ajuste a temperatura do ar condicionado.</li>
+                        <li>Diretor de cenários: Defina um "Modo cinema". Com um toque, desliga a luz principal, liga a luz ambiente, desce o ecrã, ajusta o ar condicionado.</li>
+                        <li>Centro de definições: Todas as definições de dispositivos inteligentes têm de ser feitas através da aplicação do smartphone.</li>
+                    </ol>
+
+                    <p class="mb-2">Recomendações de ecossistema:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Se usa iPhone e valoriza a privacidade → Escolha dispositivos compatíveis com Apple HomeKit.</li>
+                        <li>Se tem muitos dispositivos e procura relação qualidade/preço → O ecossistema Google Home ou Amazon Alexa é o mais completo.</li>
+                        <li>Se usa smartphone Samsung → Priorize Samsung SmartThings.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Exercício prático: Espelhar ecrã do smartphone na TV</p>
+                        <p class="mt-1">Objetivo: Partilhar fotos e vídeos em ecrã grande, jogar. Incrível!</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Confirme que o smartphone e a TV estão ligados ao mesmo Wi-Fi.</li>
+                            <li>Na TV: Encontre e ative a função "Espelhamento de ecrã", "Miracast" ou "AirPlay".</li>
+                            <li>No smartphone:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Deslize de cima para baixo a partir do canto superior direito para abrir o centro de controlo, toque em "Espelhamento de ecrã". Selecione a TV.</li>
+                                    <li>Android: Deslize para baixo nas definições rápidas, procure "Ecrã sem fios", "Smart View", selecione a TV.</li>
+                                </ul>
+                            </li>
+                            <li>Sucesso! O ecrã e o som do smartphone são sincronizados na TV.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 16: Backup e migração de dados</h3>
+                    <p class="mb-3">Fotos e históricos de conversas são tesouros sem preço. Neste capítulo, vamos aprender a fazer um seguro aos ativos digitais e mudar suavemente para um novo modelo.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 Backup completo: O "clone" mais completo</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Backup local no PC (o mais fiável)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone + PC: Ligue com cabo de dados. Abra iTunes (Win) ou Finder (Mac), clique em "Fazer backup agora". Marque sempre "Encriptar backup local". Isto faz backup dos dados de saúde e palavras-passe. Para restaurar, ligue o novo smartphone e selecione "Restaurar de backup".</li>
+                        <li>Smartphone de marca Android + software PC: Use as ferramentas oficiais de cada marca (Samsung Smart Switch, Xiaomi PC Suite, etc.). Funções similares.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Backup na nuvem (o mais cómodo)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Backup iCloud: Ative nas definições. Backup automático quando o smartphone está a carregar, bloqueado e ligado ao Wi-Fi. Ao ativar um novo iPhone, basta selecionar "Restaurar de backup iCloud".</li>
+                        <li>Nota: Os 5GB gratuitos não chegam. Geralmente precisa de pagar para atualizar para iCloud+.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 Backup seletivo: Proteção focada</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fotos e vídeos: Ative Fotos iCloud/Google Fotos/Fotos na nuvem da marca, e torna-se um backup contínuo. Ou copie regularmente para o PC com cabo de dados.</li>
+                        <li>Contactos, etc.: Enquanto existirem na conta iCloud/Google/marca, ao iniciar sessão noutro smartphone voltam automaticamente.</li>
+                        <li>⚠️ Histórico de conversas WhatsApp/WeChat (o mais importante):
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Ao mudar de modelo: Use a função "Migrar histórico de conversas" dentro da aplicação. Ligação direta por Wi-Fi. Transfere do antigo para o novo. O mais recomendado.</li>
+                                <li>Backup a longo prazo: Use a função "Backup e restauro" da aplicação para PC. Backup local no PC. O mais seguro — isto é importante.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 Guia de mudança de modelo: Três grandes caminhos de migração</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Android → Android</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Mesma marca (exemplo: Samsung → Samsung): Use a aplicação oficial "Clone de smartphone". Digitalize o código QR e pode transferir aplicações e dados. Experiência perfeita.</li>
+                        <li>Marcas diferentes: Use ferramentas de mudança de modelo de terceiros, ou sincronize antecipadamente fotos e contactos na nuvem (exemplo: Google Fotos), inicie sessão no novo e descarregue.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iPhone → iPhone</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Restauro iCloud: Ao ativar o novo iPhone, selecione restaurar de backup iCloud.</li>
+                        <li>Quick Start: Aproxime o iPhone novo e antigo. Aparece uma animação de configuração no antigo, digitalize o código QR e tudo migra sem fios. Experiência excelente.</li>
+                        <li>Nota: Demora muito tempo. Mantenha a carregar e ligado à rede.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Plataforma cruzada (Android↔iPhone) é a mais complexa</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Use ferramentas oficiais (exemplo: aplicação "Mover para iOS"). Pode transferir contactos, fotos, etc.</li>
+                        <li>Limitação central: Aplicações e dados de aplicações (exemplo: histórico de conversas WhatsApp/WeChat, progresso de jogos) não podem ser migrados. As aplicações têm de ser reinstaladas. Os dados têm de ser tratados individualmente (exemplo: WhatsApp usa backup/restauro no PC) — isto é importante.</li>
+                        <li>Estratégia manual: Fotos passam pelo PC ou nuvem como intermediário. Contactos exportados como ficheiro vCard. Verifique se os dados importantes de aplicações suportam exportação multiplataforma.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Exercício prático: Fazer backup manual de fotos e contactos para PC</p>
+                        <p class="mt-1">Objetivo: Ter uma cópia de dados offline que pode gerir completamente, para a tranquilidade total.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Prepare o cabo de dados, ligue o smartphone ao PC.</li>
+                            <li>Backup de fotos: No PC, entre no armazenamento interno do smartphone, encontre as pastas DCIM e Pictures, copie tudo para o disco rígido do PC.</li>
+                            <li>Backup de contactos:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Confirme que os contactos estão no iCloud. Aceda à versão web iCloud.com, entre em "Contactos", selecione todos e exporte como ficheiro vCard, guarde no PC.</li>
+                                    <li>Android: Nas definições da aplicação "Contactos", procure "Exportar para dispositivo de armazenamento", gere um ficheiro .vcf. Copie para o PC com cabo de dados.</li>
+                                </ul>
+                            </li>
+                            <li>Verificar backup: Abra algumas das fotos copiadas no PC, abra o ficheiro .vcf para confirmar que toda a informação está presente.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 17: Resolução de problemas e autossolução</h3>
+                    <p class="mb-3">Não entre em pânico se o smartphone às vezes "adoece". A maioria dos problemas pode ser resolvida por si. Este é o seu "manual de emergência do smartphone".</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 Smartphone lento, sobreaquecimento</h4>
+                    <p class="mb-2">Diagnóstico em 4 passos:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Pense em associações: Depois de uma atualização do sistema? Ou depois de instalar uma aplicação específica?</li>
+                        <li>Verifique a capacidade de armazenamento: Se restar menos de 10%, é a causa mais comum de lentidão do sistema.</li>
+                        <li>Verifique o ranking de consumo de energia: Nas definições de bateria, veja que aplicações estão a consumir energia em segundo plano.</li>
+                        <li>Verifique o sinal: Em locais com mau sinal, o smartphone procura desesperadamente a rede e sobreaquece.</li>
+                    </ol>
+
+                    <p class="mb-2">Métodos de tratamento:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Espaço insuficiente → Limpe o armazenamento imediatamente (ver secção de fundamentos).</li>
+                        <li>Uma aplicação específica está a causar problemas → Nas definições, limpe a cache dessa aplicação, ou desinstale e reinstale.</li>
+                        <li>Solução universal: Reinicie o smartphone.</li>
+                        <li>Não jogue jogos pesados enquanto carrega. O sobreaquecimento danifica a bateria.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 Aplicação falha, não responde</h4>
+                    <p class="mb-2">Fluxo de processamento padrão:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Feche a aplicação e abra novamente.</li>
+                        <li>Atualize na loja de aplicações.</li>
+                        <li>Verifique se não desativou acidentalmente permissões necessárias (exemplo: permissão de armazenamento).</li>
+                        <li>Limpe a cache da aplicação (seguro, não perde dados).</li>
+                        <li>Último recurso: Limpar dados/desinstalar e reinstalar (as informações de início de sessão são apagadas. Confirme que se lembra da palavra-passe).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 Não liga, fica preso no ecrã de arranque "Meios últimos"</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Primeiro carregue durante 30 minutos. Pode ser apenas que a bateria está completamente gasta.</li>
+                        <li>Tente reiniciar forçadamente (ver exercício abaixo). Isto resolve a maioria dos "estados de coma".</li>
+                        <li>Ainda não funciona: Pode precisar de reparação por ligação ao PC em modo de recuperação, mas isto apaga todos os dados (se tiver backup pode restaurar). Se ainda assim não funcionar, pode ser um problema de hardware, precisa de enviar para reparação.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 Procurar reparação oficial, evitar armadilhas</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Procure o oficial verdadeiro: Confirme sempre os "prestadores de serviços autorizados" no site oficial da marca. Ou procure a entrada de serviço nas definições do smartphone ou aplicação oficial.</li>
+                        <li>Antes da reparação: Faça sempre backup de todos os dados por si! Termine a sessão na conta. Traga a prova de compra.</li>
+                        <li>Cuidado com reparações não oficiais: Podem usar peças de má qualidade, pode haver fugas de privacidade. E uma vez aberto, a garantia oficial perde-se.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Exercício prático: Simular "reinício forçado"</p>
+                        <p class="mt-1">Objetivo: Aprender esta "chave mestra" quando o smartphone está normal, para não entrar em pânico quando houver uma avaria real.</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>Nota: É seguro operar quando o smartphone está normal. Os dados não são eliminados, mas recomenda-se guardar primeiro o trabalho que tem em mãos.</li>
+                            <li>Método:
+                                <ul class="list-circle pl-6 mt-1 space-y-1">
+                                    <li>iPhone ecrã inteiro: Pressione rapidamente uma vez o volume cima, uma vez o volume baixo, depois pressione longamente o botão lateral de ligar. Até aparecer o logótipo da Apple.</li>
+                                    <li>Android genérico: Pressione longamente o botão de ligar durante 10-15 segundos. Até reiniciar.</li>
+                                    <li>(Pode variar ligeiramente conforme o modelo específico. Se não tiver certeza, pesquise "[modelo do seu smartphone] reinício forçado")</li>
+                                </ul>
+                            </li>
+                            <li>Significado: Pratique uma vez, e quando o smartphone realmente travar, poderá resolver com calma.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">IV. Desenvolvimento (Capítulos 18-22)</h2>
+
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 18: Aprofundamento em rede móvel e segurança da informação</h3>
+                    <p class="mb-3">🔒 Porque devemos preocupar-nos com isto?</p>
+                    <p class="mb-3">Todos os dias usamos o smartphone para aceder à Internet, fazer pagamentos, conversar, e achamos muito conveniente. Mas já pensou com que frequência o seu histórico de conversas, palavras-passe de pagamento, fotos... estas informações estão "nuas" na Internet? O smartphone é o nosso duplo digital, e a sua segurança é a nossa própria segurança. Não pense que os hackers estão longe. Um Wi-Fi público descuidado pode ser uma "armadilha". Hoje, vamos aprofundar as "correntes subterrâneas" na rede móvel, e tornar o seu smartphone inabalável — não se engane.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📡 VPN: A "capa de invisibilidade" na rede</h4>
+                    <p class="mb-2">O que é exatamente?</p>
+                    <p class="mb-2">VPN, nome completo Rede Privada Virtual. Imagine que construiu um túnel subterrâneo encriptado dedicado entre a sua casa e o site a que quer aceder.</p>
+
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Ligação à Internet normal: O seu smartphone → Rede pública (rede da operadora, Wi-Fi do café) → Site de destino. 
+                            <p class="mt-1 text-secondary">Risco: Neste caminho, alguém (hacker, fornecedor de Wi-Fi malicioso, ou gestor de rede) pode estar a "espiar" os dados que envia.</p>
+                        </li>
+                        <li>Ao usar VPN: O seu smartphone → Túnel encriptado VPN → Servidor VPN → Site de destino. 
+                            <p class="mt-1 text-secondary">Efeito: Todo o seu tráfego de rede, desde que entra no túnel, é encriptado e selado. Os "espiões" no caminho só conseguem ver uma sequência de caracteres indecifráveis. Os dados só são desencriptados quando chegam ao servidor VPN, e depois reencaminhados para o site verdadeiro. O endereço de acesso que o site vê também é o endereço do servidor VPN, não o seu endereço real.</p>
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">O que pode fazer? Além de "ultrapassar muros"</p>
+                    <p class="mb-2">Não pense apenas em aceder a sites no estrangeiro quando ouve falar de VPN. Há muitos usos legítimos:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Proteção em Wi-Fi público: Usar Wi-Fi gratuito em aeroportos, hotéis, cafés é uma zona de alto risco de fuga de dados. Usar VPN é como vestir uma "armadura" à ligação.</li>
+                        <li>Acesso seguro remoto à rede interna empresarial: Muitos funcionários, ao trabalhar a partir de casa, iniciam sessão em segurança nos sistemas internos e servidores de ficheiros da empresa através de VPN.</li>
+                        <li>Proteção da privacidade pessoal, evitar rastreio: Impede que o fornecedor de serviços de Internet (ISP) registe e analise os seus hábitos de uso da Internet para enviar publicidade direcionada.</li>
+                    </ol>
+
+                    <p class="mb-2">⚠️ Nota importante</p>
+                    <p class="mb-2">A tecnologia VPN em si é uma ferramenta de segurança legítima, mas compre sempre através de canais oficiais ou use serviços de confiança. Não use "VPNs gratuitas" de origem desconhecida. Podem instalar cavalos de Troia no smartphone, ou registar e vender secretamente os seus dados — é como "contratar um ladrão como guarda de segurança".</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🚫 A "doce armadilha" do Wi-Fi público</h4>
+                    <p class="mb-2">O Wi-Fi gratuito é atraente, mas pode ser uma "bala revestida de açúcar". Além da "solução definitiva" da VPN, também pode construir duas linhas de defesa básicas.</p>
+                    
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Primeira linha de defesa: Verificar HTTPS
+                            <p class="mt-1">Ao aceder a um site, verifique se o início da barra de endereços é http:// ou https://. O "s" acrescentado significa Secure (seguro). Significa que a comunicação entre si e o site está encriptada, e mesmo que os dados sejam intercetados, é difícil decifrá-los. Atualmente, a maioria dos sites legítimos (bancos, e-mail, plataformas de redes sociais) usa HTTPS por defeito. Em Wi-Fi público, confirme que a página a que está a aceder é HTTPS.</p>
+                        </li>
+                        <li>Segunda linha de defesa: Atualizar a consulta DNS
+                            <p class="mt-1">O que é DNS? Simplificando, é a "lista telefónica" da rede. Quando quer aceder a google.com, o smartphone primeiro pergunta ao servidor DNS "Qual é o endereço (IP) do Google?". A consulta DNS tradicional é em modo "postal", não encriptada. Isto significa que um Wi-Fi malicioso pode saber que sites perguntou, e pode adulterar a resposta para o redirecionar para sites de phishing!</p>
+                            <p class="mt-1">DNS over TLS (DoT) / DNS over HTTPS (DoH) resolve este problema. Encripta também a sua consulta à "lista telefónica", para que ninguém saiba quem está a procurar, e a resposta também não pode ser adulterada.</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🕵️ A "navegação privada" torna-o mesmo invisível?</h4>
+                    <p class="mb-2">Todos os principais navegadores têm um "modo de navegação privada/incógnita", mas fazem-no sentir como um ninja da rede? A verdade pode ser desiludidora.</p>
+                    
+                    <p class="mb-2">O que faz?</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>👍 Não deixa rastos locais: Após fechar a janela privada, o sistema não guarda o seu histórico de navegação, cookies, dados de formulário. Mesmo que a família pegue no seu smartphone, não consegue ver o que pesquisou.</li>
+                    </ul>
+
+                    <p class="mb-2">O que não consegue fazer:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Tornar-se invisível às suas ações online: Os sites a que acede, o fornecedor de serviços de Internet (ISP), o gestor de rede da empresa (se usar o Wi-Fi da empresa) ainda podem ver os seus registos de acesso. Os sites também o podem identificar através de meios técnicos como o endereço IP.</li>
+                        <li>Impedir vírus ou malware: Se entrar descuidadamente num site malicioso, ainda pode ser infetado.</li>
+                        <li>Esconder os ficheiros descarregados: Os ficheiros descarregados no modo privado são guardados na pasta de downloads.</li>
+                    </ol>
+
+                    <p class="mb-2">Conclusão: O modo de navegação privada é como um <strong>"eliminador local"</strong>, não uma "capa de invisibilidade de rede". É adequado para proteger o estado de início de sessão e histórico de pesquisas quando empresta o PC de outra pessoa, mas não espere escapar a todo o rastreio de rede.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Tempo de prática 👉 Configurar uma "lista telefónica de confiança" (DNS) no smartphone</p>
+                        <p class="mt-1">Agora que sabe que a consulta DNS pode ser espiada ou adulterada, vamos mudar para um serviço DNS mais seguro e rápido. Aqui usamos Android e iOS como exemplo.</p>
+                        <p class="mt-2 font-semibold">Método de configuração em smartphone Android:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Abra [Definições].</li>
+                            <li>Entre em [WLAN], pressione longamente a rede Wi-Fi atualmente ligada, selecione [Modificar rede].</li>
+                            <li>Toque em [Opções avançadas], mude as definições de IP de "DHCP" para "Estático".</li>
+                            <li>Desloque-se para baixo, encontre "DNS 1" e "DNS 2" (endereços do servidor DNS).</li>
+                            <li>Introduza o endereço DNS pretendido. Exemplos:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Foco em segurança e privacidade: Cloudflare DNS 1.1.1.1 e 1.0.0.1</li>
+                                    <li>Boa experiência geral: Google DNS 8.8.8.8 e 8.8.4.4</li>
+                                </ul>
+                            </li>
+                            <li>Guarde as definições.</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">Método de configuração no iPhone/iPad (ambiente Wi-Fi):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Abra [Definições] > [Wi-Fi].</li>
+                            <li>Toque no ícone de informação [i] à direita do Wi-Fi ligado.</li>
+                            <li>Desloque-se para baixo e encontre [Configurar DNS].</li>
+                            <li>Selecione [Manual] e toque em [Adicionar servidor].</li>
+                            <li>Introduza o endereço DNS recomendado acima (ex: 1.1.1.1).</li>
+                            <li>Toque em [Guardar] no canto superior direito.</li>
+                        </ol>
+                        <p class="mt-2">Após concluir, o seu smartphone passará a usar preferencialmente o servidor DNS mais fiável que configurou ao consultar endereços de sites, sendo mais seguro e possivelmente com respostas um pouco mais rápidas. Parabéns! Mais uma falha de segurança foi fechada!</p>
+                    </div>
+                </div>
+
+                <!-- Capítulo 19 -->
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 19: Como a IA funciona no smartphone</h3>
+                    <p class="mb-3">👋 Bem-vindo ao "espetáculo de magia" mais fixe do smartphone. O protagonista é: inteligência artificial. As belas fotos que tira todos os dias com um simples clique, o assistente de voz que aparece quando fala, o método de introdução que o entende cada vez mais. Por trás de tudo isto está este cérebro invisível. Hoje, vamos abrir essa cortina e ver como a IA "pensa" e trabalha no seu smartphone.</p>
+                    <p class="mb-3">Primeiro, a conclusão central: a IA do seu smartphone está a tentar aproximar a computação de si. Não está a tentar aproximá-lo de um servidor.</p>
+                    <p class="mb-3">Esta frase parece um pouco complicada? Vamos entender combinando com o "duplo digital" de que falámos no capítulo anterior. No capítulo anterior dissemos que o smartphone é o seu duplo, e que os dados que saem dele enfrentam riscos. E a IA moderna do smartphone está precisamente a tentar colocar mais inteligência dentro deste "duplo". Isto é o chamado "Edge AI" (IA de bordo).</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 Câmara IA: O seu "laboratório de revelação" mudou para o smartphone</h4>
+                    <p class="mb-2">Tirar fotos é talvez a função de IA que mais usamos. Pensava que "tirar uma foto" era apenas um clique? Já não é assim.</p>
+                    <p class="mb-2">A fotografia de smartphone antiga era como uma câmara de filme automática: ao premir o obturador, a qualidade da imagem dependia quase inteiramente do sensor e das lentes. Mas a fotografia computacional com IA atual é como ter uma equipa profissional de retoque e gestão de câmara diretamente no botão do obturador.</p>
+                    <p class="mb-2">Qual é a diferença?</p>
+                    <p class="mb-2">Esta "equipa" já começou a trabalhar antes de premir o obturador. Analisa a cena e identifica: <strong>"Isto é céu azul", "Isto é um rosto", "Isto é uma cena noturna"</strong> ou "Isto é comida". Uma vez identificada, a IA chama instantaneamente o esquema de otimização especialmente treinado para este tipo de cena:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fotografia de retrato: Sabe que precisa de desfocar o fundo e embelezar a pele, mudando automaticamente para o modo retrato.</li>
+                        <li>Fotografia noturna: Em vez de simplesmente aumentar o ISO e ficar cheio de ruído, dispara instantaneamente múltiplas fotos escuras consecutivas e, como um puzzle, "calcula" e funde as partes mais nítidas e com menos ruído de todas as fotos, criando uma imagem clara e bonita.</li>
+                        <li>Fotografia de documentos: Endireita automaticamente as margens, aumenta o contraste, como um scanner.</li>
+                        <li>Captura de momentos em movimento: Prevê a trajetória do movimento e captura automaticamente o instante mais nítido.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Tempo prático 👉: Abra agora a câmara do smartphone e aponte para diferentes cenas (rostos, plantas, comida, texto). Muitos smartphones, ao identificar uma cena específica, mostram um pequeno ícone no canto do visor (ex: "Retrato", "Comida", "Texto"). Sinta este processo de "identificação instantânea". Isto é o feedback em tempo real que a IA lhe dá antes de premir o obturador.</p>
+                    </div>
+
+                    <p class="mt-4 mb-2">Ou seja, agora premir o obturador é apenas acionar o último passo deste fluxo de "retoque computacional". Esse segundo de "a processar" que gira é a prova de que o cérebro da IA está a trabalhar a alta velocidade. E ainda melhor: cada vez mais, toda esta computação complexa é feita diretamente no chip de IA dedicado dentro do smartphone (ex: Neural Engine da Apple, AI Engine da Qualcomm, Arquitetura Da Vinci da Huawei). Rápido e com maior privacidade.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗣️ Assistente de voz: Como é que o seu "secretário de voz" o entende?</h4>
+                    <p class="mb-2">"Hey Siri, como está o tempo amanhã?"</p>
+                    <p class="mb-2">"OK Google, define o alarme para as 7 da manhã."</p>
+                    <p class="mb-2">Isto já é tão natural como respirar. Mas como é que este secretário de voz consegue fazê-lo?</p>
+                    <p class="mb-2">O seu fluxo de trabalho pode ser decomposto em "3 passos" padronizados:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Passo 1: Ouvir (reconhecimento de voz).</strong>
+                            <p class="mt-1">Quando diz a palavra de ativação ("Hey Siri") e dá uma instrução, o microfone do smartphone grava a forma de onda da sua voz. Isto é um sinal contínuo. A primeira tarefa da IA é cortar esta onda sonora contínua em fragmentos de fonemas um a um e compará-los com uma biblioteca gigantesca de vocabulário pré-treinado para os converter em texto. Este processo chama-se ASR (Reconhecimento Automático de Fala). É impressionante: precisa de superar o seu sotaque, velocidade de fala e ruído ambiente.</p>
+                        </li>
+                        <li><strong>Passo 2: Compreender (Compreensão de Linguagem Natural - NLP).</strong>
+                            <p class="mt-1">Obter apenas o texto "Lembra-me de levar o guarda-chuva às 7 da manhã de amanhã" não chega. Precisa de entender a intenção. Quem? Quando? O quê fazer? Isto requer tecnologia NLP. Analisa a estrutura da frase e extrai as entidades importantes: "7 da manhã de amanhã" (tempo), "lembra-me" (intenção/ação), "eu" (objeto), "levar o guarda-chuva" (evento). Isto equivale a ter compreendido o seu comando — isto é importante.</p>
+                        </li>
+                        <li><strong>Passo 3: Executar e responder.</strong>
+                            <p class="mt-1">Após entender a sua intenção, o assistente chama a aplicação ou módulo de serviço correspondente dentro do smartphone. Se for para ver o tempo, acede à Internet para obter dados meteorológicos. Se for para definir o alarme, escreve na base de dados da aplicação "Relógio". Se perguntar "Quem é o Messi?", pode chamar um motor de busca. Finalmente, comunica-lhe o resultado através de tecnologia de síntese de voz (TTS) para "falar" consigo.</p>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">Antigamente, a maior parte da computação pesada dos passos 1 e 2 tinha de ser enviada para servidores na nuvem, mas agora, o reconhecimento da palavra de ativação e o processamento de alguns comandos offline (ex: definir alarme, ligar Bluetooth) podem ser feitos completamente no próprio smartphone. Isto significa respostas mais rápidas (não espera pela rede) e também proteção da privacidade (não precisa de fazer upload para a nuvem de comandos como "apaga a luz").</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⌨️ Previsão do método de introdução e assistente de escrita: O seu "estenógrafo silencioso"</h4>
+                    <p class="mb-2">Esta é talvez a IA que mais silenciosamente se infiltra. Mal acabou de introduzir "hoje à noite", aparece "o que comer". Se introduzir "chefe", "olá" aparece automaticamente a seguir. Por trás disto está a observação e aprendizagem a longo prazo de um modelo de aprendizagem automática de bordo.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Modelo de linguagem baseado nos seus hábitos pessoais: O método de introdução analisa silenciosamente o vocabulário que usa frequentemente, combinações de frases, com quem fala. Ri com "hahaha" quando conversa com amigos e usa frequentemente "ata" quando comunica com colegas. Tudo isto guarda na memória. Com o tempo, forma-se um "modelo de previsão" otimizado só para si.</li>
+                        <li>Compreensão de contexto: Não olha apenas para a palavra anterior, mas entende o contexto da frase que está a escrever. Na caixa de chat do LINE e num documento de trabalho, para a mesma palavra inicial, podem aparecer sugestões de completar diferentes.</li>
+                        <li>Capacidade de correção de erros: Quando escreve "descupa", sabe que queria escrever "desculpa" e corrige automaticamente. Isto não é simples correspondência de dicionário, mas um julgamento de probabilidade treinado com milhares de milhões de introduções.</li>
+                    </ul>
+
+                    <p class="mb-2">🖋️ Um passo além: Assistente de escrita com IA.</p>
+                    <p class="mb-2">Atualmente, muitas aplicações de método de introdução e notas oferecem funções de "correção inteligente de erros", "polimento de frases", "continuar a escrever", que são aplicações de IA mais poderosas. Podem polir "Este produto é muito bom" para "A experiência de utilização deste produto é fantástica", ou sugerir alguns inícios de parágrafo possíveis depois de escrever um título. Este modelo é geralmente maior e pode depender parcialmente da nuvem, mas a associação e previsão centrais ainda são feitas em grande quantidade localmente, protegendo a sua privacidade de escrita.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧠 Edge AI vs. Cloud AI: O ponto de viragem na evolução do smartphone</h4>
+                    <p class="mb-2">A palavra-chave repetidamente mencionada no capítulo anterior: Edge (bordo). Isto representa a tendência central do desenvolvimento da IA no smartphone: a sedimentação da capacidade de computação.</p>
+                    <p class="mb-2">Vamos ver numa tabela simples as diferenças essenciais entre "Edge AI" e o modo tradicional de "Cloud AI":</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Dimensão de comparação</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Cloud AI (modo tradicional)</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Edge AI (tendência atual e futura)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Para onde vão os dados</td>
+                                    <td class="border border-gray-300 px-4 py-2">Precisa de fazer upload das suas fotos, gravações e outros dados brutos para servidores na Internet.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Os dados brutos ficam no smartphone, sincronizando apenas o resultado do processamento ou dados extremamente pequenos anonimizados.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Velocidade</td>
+                                    <td class="border border-gray-300 px-4 py-2">Depende da qualidade da rede, com latência. Precisa de esperar pelo "carregamento da rede" após perguntar.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Resposta instantânea, sem latência. Desbloqueio, pesquisa no álbum, tradução offline completam-se num piscar de olhos.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Segurança e privacidade</td>
+                                    <td class="border border-gray-300 px-4 py-2">Os seus dados "saem de casa", passam por redes públicas, com risco potencial de fuga.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Os dados não saem do "duplo", evitando fundamentalmente o risco de escuta e intercetação durante o processo de transmissão.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Pode funcionar offline?</td>
+                                    <td class="border border-gray-300 px-4 py-2">Basicamente impossível. Sem rede ≈ funções de IA paralisadas.</td>
+                                    <td class="border border-gray-300 px-4 py-2">As funções centrais funcionam completamente offline. Adaptam-se a mais cenários (ex: parque de estacionamento subterrâneo, interior de avião, ao ar livre).</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Consumo de energia e tráfego de dados</td>
+                                    <td class="border border-gray-300 px-4 py-2">Requer comunicação de rede contínua. Consome relativamente mais energia e tráfego de dados.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Reduz a comunicação frequente com a nuvem, poupando mais energia e tráfego de dados.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Exemplos atuais</td>
+                                    <td class="border border-gray-300 px-4 py-2">Reconhecimento de voz antigo, geração de imagens com IA que requer renderização complexa, diálogo com modelos de linguagem de grande escala.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Desbloqueio facial/por impressão digital, classificação de rostos no álbum, tradução offline, alguns comandos de voz, previsão do método de introdução.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-2">Consegue ver a diferença? O Edge AI responde perfeitamente ao requisito de segurança de "proteger o duplo digital" do capítulo anterior. Constrói a parede de fronteira do "duplo" de forma mais sólida e inteligente. Os dados e a computação ficam o mais possível dentro da parede, minimizando riscos e latência.</p>
+                    <p class="mb-2">E os futuros "modelos de grande escala" também estão a evoluir para o edge. Atualmente, um diálogo completo com o ChatGPT não funciona num pequeno smartphone, mas a sua "versão essência reduzida" já entrou nos smartphones e consegue processar algumas tarefas locais. No futuro, o seu mordomo do smartphone, a aplicação de notas, ou até os NPCs dos jogos podem ser impulsionados por um modelo de grande escala de bordo que transporta consigo, compreendendo completamente os seus hábitos e servindo apenas a si.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Exercício prático deste capítulo: Dar comandos ao secretário de IA</p>
+                        <p class="mt-1">Vamos experimentar a capacidade de coordenação da IA do smartphone na prática. Dê ao assistente de voz uma instrução complexa com informação em várias camadas.</p>
+                        <p class="mt-1">Exemplos:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Para a Siri: "Hey Siri, lembra-me de levar o guarda-chuva amanhã às 7 da manhã, e muda o calendário das 3 da tarde de hoje para as 4."</li>
+                            <li>Para o Google Assistant: "OK Google, lembra-me de ligar à mãe hoje à noite às 8, e toca músicas de dias soalheiros no Spotify agora."</li>
+                            <li>Para o Bixby: "Hi Bixby, abre o scanner de código QR do LINE, e baixa o brilho do ecrã."</li>
+                        </ol>
+                        <p class="mt-2">Observe como é que ele entende e executa sequencialmente uma série de instruções. Por trás disto está o NLP a dividir tarefas e a chamar as capacidades de diferentes aplicações. Parabéns! Completou a operação conjunta de interação em linguagem natural entre humano e computador!</p>
+                        <p class="mt-2">Este capítulo termina aqui. Reparou? A IA no smartphone não é tecnologia de um laboratório distante, mas um "motor invisível" sob as suas pontas dos dedos, por trás de cada focagem, de cada ativação, de cada palavra. Está cada vez mais rápida, cada vez mais a entendê-lo, cada vez mais segura — porque está a tentar confinar firmemente a inteligência e a privacidade no seu "duplo digital".</p>
+                    </div>
+                </div>
+
+                <!-- Capítulo 20 -->
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 20: Pensamento de programação e introdução à automação</h3>
+                    <p class="mb-3">🤔 Quando ouve a palavra "programação", vem-lhe à ideia um ecrã escuro e código complexo? Na verdade, o pensamento de programação é algo que já pode estar a usar quando utiliza o smartphone. Vamos aprender como "automatizar" com o smartphone e tornar a vida mais eficiente.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 Pensamento de programação: Decompor "procedimentos"</h4>
+                    <p class="mb-2">O núcleo da programação é decompor um grande problema em pequenos passos. A automação do smartphone é igual.</p>
+                    <p class="mb-2">Exemplo: Para automatizar a tarefa "todas as manhãs às 7, verificar o tempo e, se chover, lembrar de levar guarda-chuva":</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Acionador (quando): Todas as manhãs às 7.</li>
+                        <li>Condição (o quê): Obter a previsão do tempo e verificar se vai chover.</li>
+                        <li>Ação (como): Se chover, enviar notificação.</li>
+                    </ol>
+                    <p class="mb-2">Isto é o pensamento de programação. Decompor uma tarefa complexa em três elementos: acionador, condição e ação.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Ferramentas de automação do smartphone</h4>
+                    <p class="mb-2">O seu smartphone tem ferramentas de automação poderosas incorporadas.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">iOS: Atalhos (Shortcuts)</h5>
+                    <p class="mb-2">Ferramenta de automação fornecida pela Apple. Sem necessidade de programação, basta combinar blocos para criar fluxos de automação.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Acionadores: Hora, localização, ligação Wi-Fi, arranque de aplicação, etc.</li>
+                        <li>Ações: Enviar mensagem, reproduzir música, alterar definições, iniciar aplicação, etc.</li>
+                        <li>Exemplo: "Ao chegar a casa e ligar ao Wi-Fi, ligar as luzes e reproduzir música".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Android: Tasker, Automate ou funções próprias da marca</h5>
+                    <p class="mb-2">O Android é mais aberto, permitindo automação mais poderosa.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tasker: A aplicação de automação Android mais poderosa. Pode automatizar quase todas as operações.</li>
+                        <li>Funções da marca: "Rotinas Bixby" da Samsung, "Cenários" da Xiaomi, etc.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎯 Cenários práticos de automação</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Modo de sono</strong>: À hora de deitar, ligar automaticamente o modo de não incomodar, baixar o volume e cortar a luz azul.</li>
+                        <li><strong>Modo de condução</strong>: Ao ligar ao Bluetooth do carro, ligar automaticamente o modo de condução e anunciar chamadas por voz.</li>
+                        <li><strong>Poupança de bateria</strong>: Quando a bateria desce abaixo dos 20%, ligar automaticamente o modo de poupança de energia e desligar funções desnecessárias.</li>
+                        <li><strong>Lembrete baseado na localização</strong>: Ao aproximar-se do supermercado, notificar a lista de compras.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Exercício prático deste capítulo: Criar um fluxo de automação</p>
+                        <p class="mt-1">Abra a ferramenta de automação do seu smartphone e crie o seguinte fluxo:</p>
+                        <p class="mt-1">"Todas as noites às 22h, ligar o modo de não incomodar e notificar o tempo de amanhã".</p>
+                        <p class="mt-2">Passos:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Abra a aplicação de automação (iOS: "Atalhos", Android: Tasker ou função da marca).</li>
+                            <li>Crie uma nova automação/rotina.</li>
+                            <li>Defina o acionador: hora (todas as noites às 22h).</li>
+                            <li>Adicione ações:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Ligar o modo de não incomodar.</li>
+                                    <li>Obter informação meteorológica e notificar.</li>
+                                </ul>
+                            </li>
+                            <li>Guarde e teste.</li>
+                        </ol>
+                        <p class="mt-2">Isto é a prática do pensamento de programação. Combinar condições e ações para dar "inteligência" ao smartphone.</p>
+                    </div>
+                </div>
+
+                <!-- Capítulo 21 -->
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 21: Tratamento de smartphones usados e herança digital</h3>
+                    <p class="mb-3">📱 Comprou um smartphone novo, o que faz com o antigo? Deita no lixo? Isso é desperdício e pode ser perigoso. Neste capítulo, vamos aprender a tratar com segurança o smartphone antigo e a gerir a herança digital.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 Reutilizar o smartphone antigo</h4>
+                    <p class="mb-2">O smartphone antigo ainda é um "pequeno computador" utilizável. Pode ser reutilizado para:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Leitor de multimédia dedicado</strong>: Dispositivo dedicado para música, podcasts, vídeos.</li>
+                        <li><strong>Moldura digital</strong>: Mostrar apresentação de diapositivos com o Google Fotos, etc.</li>
+                        <li><strong>Câmara de segurança doméstica</strong>: Transformar em câmara de vigilância com aplicação dedicada.</li>
+                        <li><strong>Consola de jogos dedicada</strong>: Jogar jogos retro com emuladores.</li>
+                        <li><strong>Controlador de casa inteligente</strong>: Hub de casa inteligente sempre ligado.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗑️ Passos obrigatórios antes de se desfazer do smartphone</h4>
+                    <p class="mb-2"><strong>⚠️ Importante: Simplesmente "apagar" não é suficiente!</strong></p>
+                    <p class="mb-2">Antes de vender, doar ou reciclar o smartphone, execute obrigatoriamente os seguintes passos:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Cópia de segurança</strong>: Faça cópia de segurança de todos os dados importantes (fotos, contactos, dados de aplicações).</li>
+                        <li><strong>Terminar sessão nas contas</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Conta Google (Android).</li>
+                                <li>Apple ID (iPhone).</li>
+                                <li>Aplicações de terceiros (LINE, WeChat, etc.).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Repor definições de fábrica</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>[Definições] > [Sistema] > [Repor] > [Apagar todos os dados] (Android).</li>
+                                <li>[Definições] > [Geral] > [Transferir ou repor iPhone] > [Apagar todo o conteúdo e definições] (iOS).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Confirmar encriptação</strong>: Os smartphones modernos estão encriptados por defeito, mas em modelos antigos verifique manualmente a definição de encriptação.</li>
+                        <li><strong>Retirar o cartão SD e o cartão SIM</strong>: Estes também podem conter informações pessoais.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚰️ Herança digital: O futuro do seu "duplo digital"</h4>
+                    <p class="mb-2">Se lhe acontecer algo, o que acontece aos seus ativos digitais (fotos, contas de redes sociais, criptomoedas, etc.)?</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">Passos para gestão da herança digital:</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>Inventário de ativos</strong>: Liste os ativos digitais que possui (contas, subscrições, compras digitais, etc.).</li>
+                        <li><strong>Configurar contacto de emergência no gestor de palavras-passe</strong>: 1Password, Bitwarden, etc., oferecem função de contacto de emergência, permitindo que uma pessoa de confiança aceda sob certas condições.</li>
+                        <li><strong>"Contacto de herança" da Apple/Google</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>iOS 15.2 ou posterior: Definições > Iniciar sessão e segurança > Contacto de herança.</li>
+                                <li>Google: Configurar o gestor de contas inativas.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Incluir ativos digitais no testamento</strong>: Consulte um advogado e inclua o tratamento de ativos digitais no documento legal.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Exercício prático deste capítulo: Repor o smartphone com segurança</p>
+                        <p class="mt-1">(Nota: Este exercício deve ser feito apenas quando realmente se for desfazer do smartphone!)</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Confirme que todos os dados têm cópia de segurança.</li>
+                            <li>Termine sessão em todas as contas.</li>
+                            <li>Execute a reposição de definições de fábrica.</li>
+                            <li>Após reiniciar, confirme que aparece o ecrã de configuração (prova de que não ficaram dados pessoais).</li>
+                            <li>Retire o cartão SD e o cartão SIM.</li>
+                        </ol>
+                        <p class="mt-2">Considere também configurar o contacto de herança. Verifique Definições > Iniciar sessão e segurança > Contacto de herança (iOS) ou o gestor de contas inativas do Google.</p>
+                    </div>
+                </div>
+
+                <!-- Capítulo 22 -->
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Capítulo 22: O futuro do smartphone e da vida digital</h3>
+                    <p class="mb-3">🔮 Para onde vai o smartphone? Dobrável? Óculos de RA? Chip cerebral? Neste capítulo final, vamos explorar as tendências tecnológicas futuras e pensar como nos devemos preparar para a vida digital.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Tendências de evolução do smartphone</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Smartphone dobrável</h5>
+                    <p class="mb-2">Liderado por Samsung, Huawei, Motorola, entre outros. Fusão entre smartphone e tablet. Atualmente tem a imagem de ser caro e frágil, mas com a maturação da tecnologia pode tornar-se mainstream.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. RA (Realidade Aumentada) e RM (Realidade Mista)</h5>
+                    <p class="mb-2">Como mostram o Apple Vision Pro, Meta Quest, etc., o smartphone vai ligar-se a óculos de RA para fundir o mundo físico com o digital. O smartphone funciona como "hub de computação", fornecendo capacidade de processamento aos óculos de RA.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. AI-first (IA em primeiro lugar)</h5>
+                    <p class="mb-2">A IA vai-se tornar cada vez mais o núcleo do smartphone. Modelos de linguagem de grande escala (LLM) a funcionar em dispositivos de bordo, e o assistente de IA pessoal pode vir a gerir completamente a sua vida.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Sustentabilidade e ambiente</h5>
+                    <p class="mb-2">Materiais reciclados, design de longa duração, facilidade de reparação vão tornar-se importantes. Regulações como a lei do "direito à reparação" da União Europeia também estão a mudar.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🌐 O futuro da vida digital</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li><strong>Metaverso e espaços virtuais</strong>: De reuniões físicas a presença em espaços virtuais. O smartphone é a "entrada" para este mundo.</li>
+                        <li><strong>Gémeo digital</strong>: A partir dos dados do seu smartphone, cria-se uma "cópia digital" sua para fornecer serviços personalizados.</li>
+                        <li><strong>6G e conectividade omnipresente</strong>: O 6G não é apenas aumento de velocidade, mas a realização da Internet das Coisas (IoT), com todos os dispositivos ligados de forma fluida.</li>
+                        <li><strong>Chip cerebral?</strong>: Tecnologias como a Neuralink visam interfaces cérebro-computador diretas. Há muitos desafios éticos e técnicos, mas as possibilidades são infinitas.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎓 Como nos preparar?</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Continuar a aprender</strong>: A tecnologia muda rapidamente. Mantenha a curiosidade e continue a aprender coisas novas.</li>
+                        <li><strong>Aumentar a literacia digital</strong>: Avalie criticamente a informação, identifique notícias falsas, pratique a segurança digital.</li>
+                        <li><strong>Ter consciência da privacidade</strong>: A tecnologia futura será mais pessoal. Verifique sempre as definições de privacidade e compreenda o valor dos dados.</li>
+                        <li><strong>Manter o equilíbrio</strong>: A tecnologia é uma ferramenta, não uma dona. Valorize também o tempo offline.</li>
+                        <li><strong>Participar na comunidade</strong>: Junte-se a fóruns de tecnologia, grupos de utilizadores, partilhe conhecimento.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Prática final: Refletir sobre a sua vida digital</p>
+                        <p class="mt-1">Agora que terminou de ler este livro, a sua relação com o smartphone mudou?</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Escreva as 3 coisas mais importantes que aprendeu neste livro.</li>
+                            <li>Quais são os pontos dos seus hábitos de uso do smartphone que gostaria de melhorar?</li>
+                            <li>Qual é o próximo tópico de tecnologia que gostaria de aprender?</li>
+                            <li>Há oportunidade de ensinar a família ou amigos como usar o smartphone? Ensinar é a forma mais eficaz de aprender.</li>
+                        </ol>
+                        <p class="mt-2">Parabéns! Começou a trilhar o caminho de "Mestre do Smartphone". Domine a vida digital e faça a tecnologia trabalhar para si!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cinco, Apêndices -->
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Cinco, Apêndices</h2>
+
+                <!-- Apêndice A -->
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Apêndice A: Guia completo de desembalagem de novo smartphone</h3>
+                    <p class="mb-3">Comprou um smartphone novo, o que deve fazer primeiro? Siga a lista de verificação abaixo:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📦 Ao desembalar</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Confirme que a embalagem não foi aberta (selo intacto).</li>
+                        <li>Verifique o conteúdo: corpo do smartphone, carregador, cabo, pin SIM, certificado de garantia, guia de início rápido.</li>
+                        <li>Verifique o exterior: riscos, amolgadelas, defeitos de fabrico.</li>
+                        <li>Verifique o ecrã: pixels mortos, irregularidades de cor (verifique com ecrã branco/preto).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚙️ Configuração inicial</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Ligue e selecione o idioma e região.</li>
+                        <li>Ligue ao Wi-Fi.</li>
+                        <li>Inicie sessão na conta (Google ou Apple ID).</li>
+                        <li>Configure a segurança: impressão digital, reconhecimento facial, código PIN.</li>
+                        <li>Ative "Encontrar smartphone".</li>
+                        <li>Verifique atualizações do sistema e atualize para a versão mais recente.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔒 Reforçar a segurança</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Ative a autenticação de dois fatores.</li>
+                        <li>Verifique as definições de privacidade: localização, permissões de aplicações.</li>
+                        <li>Desative ou desinstale aplicações pré-instaladas desnecessárias.</li>
+                        <li>Instale uma aplicação de segurança (antivírus).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">☁️ Configurar cópia de segurança</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Ative a cópia de segurança iCloud ou Google.</li>
+                        <li>Configure a cópia de segurança automática de fotos.</li>
+                        <li>Confirme a sincronização de contactos.</li>
+                    </ol>
+                </div>
+
+                <!-- Apêndice B -->
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Apêndice B: Referência de exercícios práticos</h3>
+                    <p class="mb-3">Referência rápida de todos os exercícios práticos incluídos neste livro:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Parte de Fundamentos</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Capítulo 0: Verificar o "bilhete de identidade" do smartphone</li>
+                        <li>Capítulo 1: Compreender a composição do hardware</li>
+                        <li>Capítulo 2: Organizar a pasta "Downloads"</li>
+                        <li>Capítulo 3: Configurar e gerir hotspot</li>
+                        <li>Capítulo 4: Auditar as permissões de 3 aplicações</li>
+                        <li>Capítulo 5: Configurar os modos "dia de semana" e "fim de semana"</li>
+                        <li>Capítulo 6: Ativar e simular "bloqueio remoto"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Parte de Software</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Capítulo 7: Fazer cópia de segurança do histórico de chat do WeChat para o PC</li>
+                        <li>Capítulo 8: Digitalizar documento com o smartphone e gerar PDF</li>
+                        <li>Capítulo 9: Configurar um bloqueio mais seguro na aplicação de pagamentos</li>
+                        <li>Capítulo 10: Fotografar cena noturna em modo pro</li>
+                        <li>Capítulo 11: Configurar um pacote de entretenimento dedicado ao "modo de avião"</li>
+                        <li>Capítulo 12: Criar um fluxo de automação "relaxamento antes de dormir"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Parte de Aplicação</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Capítulo 13: Fazer um diagnóstico de saúde à bateria</li>
+                        <li>Capítulo 14: Verificar o conteúdo de sincronização da conta</li>
+                        <li>Capítulo 15: Espelhar o ecrã do smartphone na TV</li>
+                        <li>Capítulo 16: Fazer cópia de segurança manual de fotos e contactos para o PC</li>
+                        <li>Capítulo 17: Simular "reinício forçado"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Parte de Desenvolvimento</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Capítulo 18: Configurar uma "lista telefónica de confiança" (DNS) no smartphone</li>
+                        <li>Capítulo 19: Dar comandos ao secretário de IA</li>
+                        <li>Capítulo 20: Criar um fluxo de automação</li>
+                        <li>Capítulo 21: Repor o smartphone com segurança</li>
+                        <li>Capítulo 22: Refletir sobre a sua vida digital</li>
+                    </ul>
+                </div>
+
+                <!-- Apêndice C -->
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Apêndice C: Tabela de terminologia técnica</h3>
+                    <p class="mb-3">Breve explicação dos termos técnicos utilizados neste livro:</p>
+                    
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Termo</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Explicação</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">SoC</td>
+                                    <td class="border border-gray-300 px-4 py-2">System on Chip. O "cérebro" do smartphone. Chip que integra CPU, GPU e outros componentes.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RAM</td>
+                                    <td class="border border-gray-300 px-4 py-2">Random Access Memory. Memória de trabalho temporária. Quanto maior, mais aplicações pode executar simultaneamente.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">ROM/Armazenamento</td>
+                                    <td class="border border-gray-300 px-4 py-2">Read-Only Memory (na verdade, armazenamento flash). Guarda fotos, aplicações, etc. a longo prazo.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OLED</td>
+                                    <td class="border border-gray-300 px-4 py-2">Ecrã de diodo emissor de luz orgânico. Cada pixel emite luz individualmente. Alto contraste, poupança de energia.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 px-4 py-2">Near Field Communication. Comunicação sem fios de curta distância. Usado em cartões de transporte, pagamentos móveis.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">VPN</td>
+                                    <td class="border border-gray-300 px-4 py-2">Virtual Private Network. Rede privada virtual. Encripta a comunicação e protege a privacidade.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">DNS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Domain Name System. Sistema que converte nomes de domínio em endereços IP.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OCR</td>
+                                    <td class="border border-gray-300 px-4 py-2">Optical Character Recognition. Tecnologia que reconhece texto em imagens e o converte em texto editável.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">IA/Aprendizagem automática</td>
+                                    <td class="border border-gray-300 px-4 py-2">Artificial Intelligence. Inteligência artificial. Usada no smartphone para otimização de fotos, reconhecimento de voz, etc.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Edge AI</td>
+                                    <td class="border border-gray-300 px-4 py-2">Tecnologia que processa IA no próprio dispositivo em vez da nuvem. Rápida e com proteção de privacidade.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RCS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Rich Communication Services. SMS de nova geração. Suporta imagens de alta qualidade, notificações de leitura, etc.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">HTTPS</td>
+                                    <td class="border border-gray-300 px-4 py-2">HTTP Secure. Protocolo de comunicação Web encriptado.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Apêndice D -->
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Apêndice D: Onde encontrar recursos fiáveis?</h3>
+                    <p class="mb-3">Fontes fiáveis para obter informação sobre smartphones:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Recursos oficiais</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Suporte Apple</strong>: support.apple.com</li>
+                        <li><strong>Ajuda Google Android</strong>: support.google.com/android</li>
+                        <li><strong>Sites oficiais de cada marca</strong>: Samsung, Xiaomi, OPPO, vivo, etc.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📰 Media de tecnologia</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Nacionais</strong>: ITmedia, Engadget Japão, Gizmodo Japão</li>
+                        <li><strong>Globais</strong>: The Verge, TechCrunch, Android Police, 9to5Mac</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">👥 Comunidades e fóruns</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Reddit</strong>: r/Android, r/iPhone, r/techsupport</li>
+                        <li><strong>Stack Exchange</strong>: Android Enthusiasts, Ask Different (Apple)</li>
+                        <li><strong>Fóruns nacionais</strong>: 5ch, comunidades oficiais de cada marca</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎥 Canais YouTube</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>MKBHD (Marques Brownlee)</li>
+                        <li>Unbox Therapy</li>
+                        <li>Linus Tech Tips</li>
+                        <li>Nacionais: Vários canais de análise de gadgets</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ Fontes a ter cuidado</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>"Hacks" e "truques" de origem desconhecida</li>
+                        <li>Artigos com títulos excessivamente sensacionalistas</li>
+                        <li>Informação claramente desatualizada (mais de 2-3 anos)</li>
+                        <li>Análises que não indicam ser patrocinadas</li>
+                    </ul>
+                </div>
+
+                <!-- Apêndice E -->
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Apêndice E: Agradecimentos e explicações</h3>
+                    <p class="mb-3">Este livro foi criado como guia para a jornada de iniciantes a utilizadores intermédios de smartphones.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🙏 Agradecimentos</h4>
+                    <p class="mb-2">Agradecemos aos seguintes recursos e comunidades pela criação deste livro:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Comunidade de código aberto</li>
+                        <li>Media de tecnologia e analistas</li>
+                        <li>Todos os que partilham conhecimento em fóruns online</li>
+                        <li>Todos os engenheiros e designers que fazem avançar a tecnologia de smartphones</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ Isenção de responsabilidade</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>A informação deste livro é a da altura da escrita. Como a tecnologia muda rapidamente, parte do conteúdo pode ficar desatualizado.</li>
+                        <li>As operações no smartphone são da sua responsabilidade. Faça sempre cópia de segurança dos dados importantes.</li>
+                        <li>Dependendo do modelo específico e versão do SO, a localização das funções e definições pode ser diferente.</li>
+                        <li>O conteúdo deste livro é para fins educativos e não pretende recomendar produtos ou serviços específicos.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📧 Feedback</h4>
+                    <p class="mb-2">Agradecemos feedback para melhorar este livro. Se tiver correções a sugerir, tópicos que gostaria de ver adicionados ou propostas de melhoria, por favor informe-nos.</p>
+
+                    <div class="bg-light rounded-lg p-6 mt-6 text-center">
+                        <p class="text-lg font-semibold mb-2">Obrigado pela leitura!</p>
+                        <p class="text-secondary">Que a sua vida digital se torne mais rica e segura.</p>
+                        <p class="mt-4 text-sm text-secondary">© 2024 Mestre do Smartphone! Curso Completo de Digitais para Iniciantes</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Botão voltar ao topo -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script>
+        // Alternar menu móvel
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Expandir/colapsar índice
+        document.querySelectorAll('.toc-parent').forEach(parent => {
+            const toggle = parent.querySelector('.toc-toggle');
+            const child = parent.querySelector('.toc-child');
+            
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                child.classList.toggle('open');
+                toggle.classList.toggle('rotate-180');
+            });
+        });
+
+        // Botão voltar ao topo
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Deslocamento suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Fechar menu em dispositivo móvel
+                    if (!sidebar.classList.contains('-translate-x-full') && window.innerWidth < 1024) {
+                        toggleMenu();
+                    }
+                }
+            });
+        });
+
+        // Destacar índice ao deslocar
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('#sidebar a[href^="#"]');
+
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC(); // Inicialização
+    </script>
+</body>
+</html>
