@@ -1,0 +1,2040 @@
+<!DOCTYPE html>
+<html lang="ja-JP">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>スマホマスター！初心者必見のデジタル必修講座</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- 自定义Tailwind配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!-- 自定义样式 -->
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-left: 3px solid #165DFF;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- 顶部导航栏 -->
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">スマホマスター！初心者必見のデジタル必修講座</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>トップへ戻る
+            </a>
+        </div>
+    </header>
+
+    <!-- 主体容器 -->
+    <div class="flex min-h-screen pt-16 relative">
+        <!-- 侧边栏目录 -->
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">目次</h2>
+                <ul class="space-y-1 text-sm">
+                    <!-- 基础篇 -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">一、基礎編（第0-6章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第零章：こんにちは、はじめる前に</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第一章：こんにちは、私のパーソナルコンピュータ</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第二章：デジタルルームを整理する——ファイル管理</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第三章：スマホに「生命線」をつなぐ——ネットワーク</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第四章：アプリのインストールと管理——スマホの「スキルセット」</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第五章：スマホをもっと自分好みに——基本設定</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第六章：デジタルライフを守る——セキュリティとプライバシー</a></li>
+                        </ul>
+                    </li>
+                    <!-- 软件篇 -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">二、ソフトウェア編（第7-12章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第七章：通信：SMS、通話とソーシャル</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第八章：モバイルオフィスと学習</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第九章：モバイル決済と生活サービス</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十章：撮影と写真管理</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十一章：エンターテイメントと読書</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十二章：おすすめツールアプリ</a></li>
+                        </ul>
+                    </li>
+                    <!-- 进阶篇 -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">三、応用編（第13-17章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十三章：バッテリー科学と省電力最適化</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十四章：アカウント体系とクラウドサービス</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十五章：スマホと他デバイスの連携</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十六章：データバックアップと移行</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十七章：トラブルシューティングと自己解決</a></li>
+                        </ul>
+                    </li>
+                    <!-- 超越篇 -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">四、発展編（第18-22章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十八章：モバイルネットワークと情報セキュリティ深掘り</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十九章：AIはどうやってスマホで動くのか</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第二十章：プログラミング思考と自動化入門</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第二十一章：中古スマホの処理とデジタル遺産</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第二十二章：未来のスマホとデジタルライフ</a></li>
+                        </ul>
+                    </li>
+                    <!-- 附录 -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">五、付録</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">付録A：新規スマホ開封「完全ガイド」フロー</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">付録B：実践演習リファレンス</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">付録C：ミニマル用語「専門用語」対照表</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">付録D：信頼できるリソースはどこで見つかる？</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">付録E：謝辞と説明</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- 移动端遮罩层 -->
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <!-- 主内容区 -->
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <!-- 封面 -->
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">スマホマスター！初心者必見のデジタル必修講座</h1>
+                <p class="text-center text-secondary text-lg">入門から習得まで、デジタルライフを完全に掌握する</p>
+            </div>
+
+            <!-- 一、基础篇 -->
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">一、基礎編（第0-6章）</h2>
+                <p class="mb-4 text-secondary">あなたのスマホは想像以上に強力です。この部分はすべての「神業」の土台となる内容です。まず「言語」を統一し、一歩ずつデバイスを認識し、掌握していきましょう。</p>
+
+                <!-- 第零章 -->
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第零章：こんにちは、はじめる前に</h3>
+                    <p class="mb-3">本格的な探索の前に、基本ルールについてお話ししましょう。これで後の内容がすべて理解できるようになります。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📖 この本がお手伝いできること（とできないこと）</h4>
+                    <p class="mb-2">スマホの使い方を体系的に理解し、機能の背後にある原理を知ることができます。AndroidユーザーでもiPhoneユーザーでも、ほとんどの考え方は共通しています。実践的な練習も含まれています。</p>
+                    <p class="mb-2">特定の機種の取扱説明書ではなく、最新製品のレビューでもなく、スマホ中毒を教えるものでもありません。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🔤 私たちの「合言葉」について</h4>
+                    <p class="mb-2">分かりやすく説明するために、いくつかの記号を使用します：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[ボタン名]：画面上の具体的なボタンやアプリ名を表します。</li>
+                        <li>> ：操作順序を表します。例：「[設定] > [サウンド] をタップ」。</li>
+                        <li><strong>太字</strong>：非常に重要！重要な概念やセキュリティ警告を表します。</li>
+                        <li><em>斜体</em>：補足的な考えや比喩を表します。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 📱 AndroidとiOS、両方説明します</h4>
+                    <p class="mb-2">呼び方は違っても、やることは同じものがあります。例：アプリ（Android）とApp（iOS）、設定（両方とも設定）、ファイル管理（Android）とファイル（iOS）。同じものだと理解してください。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 💾 スマホ容量：なぜ128GBを買ったのに、利用可能は110GB未満？</h4>
+                    <p class="mb-2">容量の単位はご存知でしょう：1TB = 1024GB、1GB = 1024MB……</p>
+                    <p class="mb-2">しかし、購入した表示容量は、手元に届くと「縮小」します。主な理由は：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>システムがスペースを占有：OSは家の構造壁のようなもので、必須です。</li>
+                        <li>メーカープリインストールアプリ：新しいスマホに最初から入っているアプリもスペースを使います。</li>
+                        <li>フォーマット損失：技術的な理由で、リュックサックの裏地も体積を占めます。</li>
+                    </ol>
+                    <p class="mb-2">スマホを購入する際は、システムの使用量も考慮に入れてください。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">実践タイム 👉 あなたのスマホ「身分証明書」を確認</p>
+                        <p class="mt-1">[設定] を開き、「端末情報」（または類似のオプション）を見つけ、メモしてください：スマホモデル、OSバージョン、総ストレージ容量、残り容量。これがそれを知る第一歩です。</p>
+                    </div>
+                </div>
+
+                <!-- 第一章 -->
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第一章：こんにちは、私のパーソナルコンピュータ</h3>
+                    <p class="mb-3">あなたのスマホは、実はポケットの中の最もパーソナルなスーパーコンピュータです。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 🧠 スマホハードウェア「五脏六腑」</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC（チップ）</strong>：スマホの「脳＋心臓」で、性能を決定します。</li>
+                        <li><strong>RAM（メモリ）</strong>：一時的な作業台。大きいほど、複数のアプリを同時に開いても快適です。</li>
+                        <li><strong>ROM（ストレージ）</strong>：長期保管庫。すべての写真、動画、アプリを入れる場所です。</li>
+                        <li><strong>画面</strong>：あなたの目。タイプ（OLEDは色鮮やか、LCDは目に優しい）、解像度（鮮明度）、リフレッシュレート（スクロールの追従性）が重要です。</li>
+                        <li><strong>バッテリーと充電</strong>：使いながら充電。完全に空になるまで待たず、100%でずっと満タンにしないのがバッテリーに優しいです。急速充電とワイヤレス充電は便利です。</li>
+                        <li><strong>カメラ</strong>：現在は複数レンズ＋アルゴリズム（計算写真）で協力して、夜景やボケも実現します。</li>
+                        <li><strong>センサー</strong>：スマホの小さな触角。例：ジャイロスコープ（ゲームでの向き変更）、NFC（改札やICカード）、距離センサー（通話時の自動消灯）など。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🤖 OS：Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android：オープンソースコミュニティのように、スマホメーカーが深くカスタマイズでき、選択肢が豊富です。</li>
+                        <li>iOS：丁寧に手入れされた庭園のように、Appleがハードとソフトを一元管理し、体験が統一されています。</li>
+                    </ul>
+                    <p class="mb-2">両方のエコシステムとも非常に豊富なので、好きなライフスタイルを選んでください。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🎭 あなたのスマホは、一体いくつの役割を演じている？</h4>
+                    <p class="mb-2">もはや電話だけではありません：通信ツール、スマートカメラ、財布、情報ポータル、ゲーム機、モバイルオフィス、ヘルスアシスタント、スマートホームリモコン、さらにはデジタル身分証明書です。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">実践タイム 👉 ハードウェア構成を理解する</p>
+                        <p class="mt-1">[設定] で、プロセッサモデル、RAM、ROMの具体的なサイズが見つけられるか確認してください。スマホの能力を把握しましょう。</p>
+                    </div>
+                </div>
+
+                <!-- 第二章 -->
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第二章：デジタルルームを整理する——ファイル管理</h3>
+                    <p class="mb-3">スマホを長く使うと散らかります。良い習慣はファイル管理から始まります。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📂 三層ストレージ体系</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>本体ストレージ</strong>：核心エリア。速度が速く、システムとアプリがすべてここにあります。</li>
+                        <li><strong>SDカード（対応の場合）</strong>：拡張クローゼット。速度は少し遅いですが、映画や写真を入れるのに適しています。</li>
+                        <li><strong>クラウドストレージ</strong>：金庫＋同期ドライブ。紛失防止と、複数デバイス間での同期が可能です。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🗂️ 「ファイルマネージャー」を知る</h4>
+                    <p class="mb-2">Androidには通常 [ファイル] または [ファイル管理] アプリがあり、iOSには標準の [ファイル] アプリがあります。これらはスマホのすべてのファイルを見る「エクスプローラー」です。Download（ダウンロード）、DCIM（カメラ写真）、Pictures（画像）などのフォルダが見えます。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🏷️ 各種ファイルはどこに？</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>写真/動画：通常は自動的に DCIM または Pictures に保存されます。</li>
+                        <li>ダウンロードしたファイル：基本的にすべて Download にあります。</li>
+                        <li>アプリデータ：それぞれの「プライベートルーム」（プライベートディレクトリ）に住み、見えない場合があります。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🧹 容量が足りない？大掃除の時間</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>キャッシュのクリア：アプリの一時的な記憶。クリアするとスペースが空きます。</li>
+                        <li>大きなファイルの検索：ファイルマネージャーでサイズ順にソートし、スペースを占有する「犯人」を突き止めます。</li>
+                        <li>残り物の削除：アプリをアンインストールした後、ゴミファイルが残ることがあります。手動で削除してください。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">実践タイム 👉 「ダウンロード」フォルダを整理</p>
+                        <p class="mt-1">ファイルマネージャーを開き > 「ダウンロード」フォルダに入ります。中身を確認し、不要なものは削除し、必要なものは分類（例：「仕事資料」、「スタンプ」フォルダを新規作成して入れる）してください。</p>
+                    </div>
+                </div>
+
+                <!-- 第三章 -->
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第三章：スマホに「生命線」をつなぐ——ネットワーク</h3>
+                    <p class="mb-3">ネットがないと、スマートフォンは「半分バカ」になります。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📶 モバイルネットワーク（4G/5G）とデータ通信</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>データ通信：スマホでのインターネット使用で発生するデータ量。動画視聴や画像閲覧が最もデータを消費します。</li>
+                        <li>省データのヒント：設定で「データセーバーモード」をオンにし、Wi-Fi環境でアプリ更新や高画質動画視聴を行ってください。</li>
+                        <li>信号の本数≠通信速度：信号が強いのは接続が良いことを示しますが、通信速度は基地局の混雑状況にも依存します。</li>
+                        <li><strong>⚠️ 重要！海外出張前に【データローミング】をオフにし、高額請求を防ぎましょう！</strong></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 📡 Wi-Fi：接続、共有とセキュリティ</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Wi-Fi接続：[設定] > [WLAN] でネットワークを選択し、パスワードを入力します。</li>
+                        <li>パスワード共有：現在は便利で、AndroidとiOSともに接続済みのスマホから友達に素早くパスワードを共有できます。</li>
+                        <li>公共Wi-Fiのリスク：ハッカーのデータ盗聴やフィッシングホットスポットの可能性があります。守則：銀行口座へのログインは避け、可能な限りVPNを使用してください。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🔵 Bluetooth：イヤホン接続、ファイル転送</h4>
+                    <p class="mb-2">主にワイヤレスイヤホン、スマートバンド/ウォッチの接続に使用されます。ファイル転送機能は現在あまり使われていません。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🔥 テザリング：スマホをWi-Fiルーターに</h4>
+                    <p class="mb-2">自分のデータ通信量が多い時は、タブレットやPCにホットスポットを開くことができます。注意：バッテリーとデータ通信量を大量に消費するので、複雑なパスワードを設定し、接続デバイス数を制限してください。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">実践タイム 👉 ホットスポットを設定・管理する</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>[設定] を開き、「テザリング」または「ネットワーク共有」を見つけ、オンにし、名前とパスワードを設定します。</li>
+                            <li>別のデバイス（例：PC）でこのWi-Fiを検索して接続します。</li>
+                            <li>スマホ側で、接続済みデバイスを管理したり、知らないデバイスを切断したりできるか確認してください。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第四章 -->
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第四章：アプリのインストールと管理——スマホの「スキルセット」</h3>
+                    <p class="mb-3">アプリはスマホを万能にしますが、適切に管理することも必要です。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 🏪 公式ストア：最も安全な「アプリスーパー」</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android：Google Play または各ブランドの純正ストア（例：小米アプリストア）。</li>
+                        <li>iOS：App Store のみ。</li>
+                    </ul>
+                    <p class="mb-2">核心的なセキュリティ上の意味：審査済み、更新保証、支払い安全。行動指針：優先的に公式ストアのみを使用してダウンロードしてください。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🚨 サードパーティソース：リスクが極めて高い！</h4>
+                    <p class="mb-2">Webや不明なリンクからアプリをダウンロードすると、ウイルス感染、プライバシー窃取、不正支払いの可能性があります。</p>
+                    <p class="mb-2">やむを得ない場合：ソースが絶対に信頼できることを確認し、インストール前に権限要求をよく確認し、事後にセキュリティアプリでスキャンしてください。</p>
+                    <p class="mb-2">最終的なアドバイス：システム設定で、「不明なアプリのインストール」権限をオフにしてください。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 📲 インストール、更新、アンインストール</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>インストール：ストアで「入手」をタップ。インストール後、初回起動時に権限を求められます。</li>
+                        <li>更新：<strong>必ず更新してください！</strong> 主にセキュリティ脆弱性の修正です。自動更新をオンにすることをお勧めします。</li>
+                        <li>アンインストール：アイコンを長押ししてアンインストールエリアにドラッグ。より徹底的に削除するには、[設定] > [アプリ管理] で見つけてアンインストールしてください。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🛡️ 権限管理：あなたはアプリの「上司」</h4>
+                    <p class="mb-2">アプリが権限（例：連絡先、位置情報）を求めるのは、時に合理的（地図は位置情報が必要）、時に不合理（懐中電灯が連絡先を求める）です。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>権限オプション：「常に許可」、「使用中のみ許可」、「拒否」、「毎回確認」。</li>
+                        <li>管理原則：
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>最小化：必要でないものは与えない。</li>
+                                <li>事後監査：定期的に権限設定を確認し、誰が「権限超過」していないか確認する。</li>
+                                <li>状況に応じて：タクシーアプリなどは、使用時のみ位置情報権限を与える。</li>
+                            </ol>
+                        </li>
+                        <li><strong>⚠️ 重点監視対象：連絡先/SMS、リアルタイム位置情報、カメラ/マイク、ファイルアクセス権限。</strong></li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">実践タイム 👉 3つのアプリの権限を監査する</p>
+                        <p class="mt-1">よく使うアプリ3つ（例：SNS、ショッピング、ツール類）を選び、[設定] のアプリ権限管理ページに入り、項目ごとに監査し、不要な機密権限をオフにするか「使用中のみ許可」に変更してください。</p>
+                    </div>
+                </div>
+
+                <!-- 第五章 -->
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第五章：スマホをもっと自分好みに——基本設定</h3>
+                    <p class="mb-3">数分間設定するだけで、体験が大幅に向上します。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.1 🎵 サウンドとバイブレーション</h4>
+                    <p class="mb-2">好きな着信音と通知音を設定。マナーモード（会議中）、おやすみモード（睡眠中）を柔軟に使用し、世界が瞬く間に静かになります。Bluetoothイヤホン接続時は、オーディオ出力が切り替わったか確認してください。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.2 👀 ディスプレイと明るさ</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>自動輝度：スマホが周囲の光に応じて自動調整。手間いらず。</li>
+                        <li>ブルーライトカット/ナイトシフト：ブルーライトをカットし、夜のスマホ使用が快適になります。</li>
+                        <li>ダークモード：省電力（特にOLED画面で効果的）、かつ夜に眩しくありません。</li>
+                        <li>画面リフレッシュレート：一部のAndroid機種は調整可能。高いほど（例：120Hz）スクロールが滑らかになります。</li>
+                        <li>自動ロック：15秒または30秒に設定。安全で省電力。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.3 🎨 壁紙、テーマとホーム画面</h4>
+                    <p class="mb-2">美しい壁紙（静止画または動画）に変えると、気分も変わります。Androidブランドスマホには通常テーマストアがあり、アイコンとスタイルを一式変更できます。ホーム画面ウィジェットも忘れずに。天気、スケジュール、音楽コントロールをホーム画面に置けば、ワンタップでアクセスできます。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.4 ♿ アクセシビリティ：心強いアシスタント</h4>
+                    <p class="mb-2">名前に驚かないでください。誰でも使えます。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>拡大ジェスチャー：画面を3回タップして部分拡大。小さな文字を見るのに最適。</li>
+                        <li>音声アシスタント：SiriやGoogleアシスタント。口だけでアラーム設定や天気確認ができます。</li>
+                        <li>スクリーンリーダー（TalkBack/VoiceOver）：視覚障害者向けに設計されていますが、記事を「聞く」のにも役立ちます。</li>
+                        <li>その他：色彩補正（色弱者向け）、背面タップショートカット（iPhone）、アクセシビリティメニュー（Android）なども試す価値があります。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">実践タイム 👉 「平日」と「休日」モードを設定</p>
+                        <p class="mt-1">集中モード（iOS）またはシナリオモードを使用して、スマホが自動的にあなたのリズムに適応するようにします。例：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>「仕事」モードを作成：重要でないアプリ通知を自動的にミュートし、上司と家族の電話のみ許可。</li>
+                            <li>「睡眠」モードを作成：定時でオンになり、すべての通知をミュート。</li>
+                            <li>それらにタイマーを設定。例：平日9:00-18:00に自動的に「仕事」モードをオン。間違えないでください。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第六章 -->
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第六章：デジタルライフを守る——セキュリティとプライバシー</h3>
+                    <p class="mb-3">スマホのセキュリティ＝プライバシーのセキュリティ＋財産のセキュリティ。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 🔒 ロック画面：最初の物理的防衛線</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>セキュリティレベルの順位：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>パスワード/PINコード：最も安全。最終的な保障（指紋/顔認証を忘れた時に頼りになります）。</li>
+                                <li>指紋認証：セキュリティと利便性の完璧なバランス。</li>
+                                <li>顔認証：最も便利ですが、セキュリティは技術に依存（3D構造光は安全、2D写真は簡単に騙されます）。</li>
+                            </ul>
+                        </li>
+                        <li>強力なロック画面を設定：複雑なパスワード（誕生日、123456は使用しない）を必ず設定し、生体認証をオンにしてください。ロック時間は「すぐ」または最短に設定。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 📍 「スマホを探す」：究極の盗難防止ツール</h4>
+                    <p class="mb-2"><strong>必ずオンにしてください！</strong> 以下のことができます：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>位置特定：スマホをどこに置いたか、地図で探します。</li>
+                        <li>サウンド再生：スマホを鳴らし、家の中で探すのに適しています。</li>
+                        <li>紛失モード：リモートでスマホをロックし、連絡先番号を表示。拾った人があなたに連絡できます。</li>
+                        <li>リモート消去：最後の手段。すべてのデータを消去（ただし消去後は位置特定できなくなります）。</li>
+                    </ul>
+                    <p class="mb-2">[設定] に行き、Appleは「iPhoneを探す」、Androidは「デバイスを探す」またはブランドの類似サービスを探し、緑色のオン状態であることを確認してください。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 🔧 システム更新：パッチを当て、脆弱性を塞ぐ</h4>
+                    <p class="mb-2">システム更新の主な目的はセキュリティ脆弱性の修正です。家の壁の穴を塞ぐようなものです。そのため、システム更新の通知が表示されたら、できるだけ早くアップグレードしてください。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 🚫 詐欺電話の識別と予防</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>一般的な手口：警察/カスタマーサービスのなりすまし（フィッシング）、当選/副業報酬（利誘）、ロマンス詐欺（ブタの屠殺）。</li>
+                        <li>スマホ標準の保護：迷惑電話ブロック、認証コードの盗難防止、SMSリンクの安全検出。設定でオンにすることを忘れないでください。</li>
+                        <li>詐欺防止の口诀：信じない、漏らさない、クリックしない、送金しない、疑問があれば確認する！</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">実践タイム 👉 「リモートロック」を有効化してシミュレート</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>「スマホを探す」機能がオンになっていることを確認してください。</li>
+                            <li>PCブラウザまたは別のスマホで、対応するクラウドサービスアカウント（iCloud.com またはブランドクラウドサービスサイト）にログインします。</li>
+                            <li>「デバイスを探す」機能を見つけ、自分のスマホに対して「サウンド再生」を試すか、「ロック」をシミュレートし、全体のフローを理解してください。重要な時に慌てないためです。</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 二、软件篇 -->
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">二、ソフトウェア編（第7-12章）</h2>
+
+                <!-- 第七章 -->
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第七章：通信：SMS、通話とソーシャル</h3>
+                    <p class="mb-3">通信はスマホの最も原始的で核心的な使命です。現在、単純な通話とSMSから、インスタントメッセージング、ソーシャルネットワーク、電子メールを含む複雑なエコシステムへと進化しています。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 電話アプリの高度機能：通話以上の機能</h4>
+                    <p class="mb-2">現代のスマホの電話アプリは、単純なダイヤル盤を超えて、録音、迷惑防止、スマート識別などの強力なツールを統合しています。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 通話録音（法律上の適合性に注意）：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>役割：重要な通話内容を記録し、業務議事録、インタビュー、顧客の約束、または紛争の記録に使用します。</li>
+                        <li>法的ヒント：日本国内では、通話録音を証拠として使用するには、相手の同意を得るか、または自身の合法的な権益を守るため（例：迷惑行為や詐欺の告発）に使用する必要があります。商業上または機密性の高い会話の前に、口頭で「この通話は録音される可能性があります」と相手に伝えるのがより慎重なアプローチです。</li>
+                        <li>操作方法：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android：通常、通話画面に明確な「録音」ボタンがあります。電話アプリの設定で「通話録音」オプションを探し、自動録音ルールを設定できます。</li>
+                                <li>iOS：システムはネイティブの通話録音機能を提供していません。使用する場合は、サードパーティの通話録音アプリが必要です。</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 迷惑電話ブロックとスマート識別：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>原理：電話アプリがネットワークを介して膨大な番号データベースに照会し、着信時に「迷惑電話」、「詐欺電話」、または会社名を表示します。</li>
+                        <li>オンにする方法：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android：電話アプリに入り > 右上の「設定」 > 迷惑防止またはスマート識別。すべての識別とブロックオプションをオンにしてください。</li>
+                                <li>iOS：[設定] > [電話] > [着信阻止と発信者識別] に入ります。この機能をサポートするサードパーティのセキュリティアプリ（例：Trend Micro Mobile Security）を確認し、動作を許可できます。「不明な発信者をミュート」機能をオンにすると、連絡先にないすべての着信をミュートできます。</li>
+                            </ul>
+                        </li>
+                        <li>ヒント：迷惑電話を受けた後、通話履歴で能動的に「迷惑」または「詐欺」としてマークすると、データベースに貢献し、他の人を助けることができます。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 通話補助機能：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>通話録音の文字起こし：一部のAndroidブランドスマホでは、通話録音後、録音ファイルの横に直接「文字起こし」ボタンが提供され、会話内容をテキストに変換できます。</li>
+                        <li>視覚補助（リアルタイム字幕）：Androidのアクセシビリティ設定またはiOSの聴覚補助で、「リアルタイム文字起こし」機能をオンにすると、すべてのオーディオ（通話を含む）にリアルタイム字幕が生成されます。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 SMSとiMessage/RCS：認証コードと迷惑メッセージのフィルタリング</h4>
+                    <p class="mb-2">従来のSMSは廃止されていません。認証コード、銀行通知、公式情報を受信する信頼できるチャネルです。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs iMessage (iOS) / RCS (Android)：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iMessage：Appleデバイス間でインターネットを介して送信されるメッセージで、青い吹き出しで表示されます。高品質の画像動画、既読通知などをサポートし、完全に無料でエンドツーエンド暗号化されています。</li>
+                        <li>RCS：世界のキャリアとGoogleが推進する次世代通信プロトコル。iMessageやLINEと同様の機能を持ちますが、電話番号ベースです。Androidスマホのメッセージアプリ設定で「チャット機能」を確認してオンにできます。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 認証コードのセキュリティ：</h5>
+                    <p class="mb-2">システムは自動的に認証コードSMSを識別して分類します。受信した認証コードを決して誰にも教えないでください。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 迷惑メッセージのフィルタリング：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS：[設定] > [メッセージ] で「不明な送信者をフィルタ」をオンにします。</li>
+                        <li>Android：メッセージアプリ設定で「スマート情報サービス」または「迷惑メッセージフィルタ」をオンにします。</li>
+                        <li>一般的なヒント：明らかな迷惑プロモーションSMSには、何も返信しないでください（「TD配信停止」を含む）。直接削除するか、迷惑メッセージとしてマークしてください。返信すると、あなたの番号が有効であることを確認する場合があります。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 LINE/WeChat：国民的ソーシャルアプリの管理</h4>
+                    <p class="mb-2">LINEとWeChatは、通信ツールを超えて、ソーシャル、決済、情報取得を統合した「スーパーアプリ」になりました。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. チャット履歴のバックアップと移行：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>重要性：チャット履歴には重要なファイル、思い出、業務情報が含まれていますが、ローカルとサーバーの一時キャッシュにのみ保存されます。スマホの紛失やアプリの再インストールで、履歴が永久に失われる可能性があります。</li>
+                        <li>PCへのバックアップ（最も信頼できる）：
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>PC版またはMac版のWeChat/LINEにログインします。</li>
+                                <li>左下のメニュー > [移行とバックアップ] > [バックアップと復元] をクリックします。</li>
+                                <li>「チャット履歴をPCにバックアップ」を選択し、スマホでバックアップするチャットを選択します。</li>
+                            </ol>
+                            注意：バックアップファイルはPCローカルに暗号化されて保存されます。復元時は、スマホとPCを同じWi-Fiネットワークに接続する必要があります。
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ストレージスペースのクリーニング：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>パス：WeChat [私] > [設定] > [一般] > [ストレージ]。LINE [設定] > [一般] > [ストレージ管理]。</li>
+                        <li>クリーニング戦略：
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>キャッシュ：安全にクリーニングできます。アプリの実行時に生成される一時データです。</li>
+                                <li>チャット履歴：入ってから、時間、ファイルタイプ、または個別のチャットごとに詳細にクリーニングできます。例えば、すべてのチャットから「1年以上前」の「動画」ファイルを一度にクリーニングできます。</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. プライバシーとセキュリティ設定：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>追加方法：他人があなたを見つける方法を制御（電話番号、ユーザーID、グループチャットなど）。</li>
+                        <li>タイムライン権限：誰が見ることができるか、誰に見せないかを設定。</li>
+                        <li>認証管理：WeChat [設定] > [個人情報と権限] > [認証管理] で、サードパーティのWebサイトやアプリのWeChatログイン認証を確認して解除できます。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 電子メール：スマホでの設定と使用</h4>
+                    <p class="mb-2">モバイルで効率的にメールを処理することは、モバイルオフィスの重要な要素です。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. メールアカウントの追加：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>システム標準のメールアプリ：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS：[設定] > [メール] > [アカウント] > [アカウントを追加]。</li>
+                                <li>Android：システムに通常「メール」アプリがあります。開いて案内に従って追加してください。</li>
+                            </ul>
+                        </li>
+                        <li>専用クライアントアプリ：Gmail、Outlookなど。特定のメールに最適化され、より強力な機能を持ちます。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. モバイルメールの使用テクニック：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>プッシュ通知の管理：異なるメールアカウントに異なる通知方法を設定。</li>
+                        <li>ジェスチャー操作：ほとんどのメールアプリは、スワイプジェスチャーで素早くアーカイブ、削除、またはマークできます。</li>
+                        <li>署名：プロフェッショナルなモバイルメール署名を設定。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. セキュリティ上の注意事項：</h5>
+                    <p class="mb-2">公共Wi-Fiでメールにログインしたり、機密メールを送信したりする際は慎重に行ってください。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：WeChatチャット履歴をPCにバックアップ</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>PCでバックアップを開始：PC版WeChatを開く > 左下のメニュー > [移行とバックアップ] > [バックアップと復元]。</li>
+                            <li>PCへのバックアップを選択：「チャット履歴をPCにバックアップ」をクリック。</li>
+                            <li>スマホでバックアップ内容を選択：スマホのWeChatにポップアップが表示され、バックアップするチャットを選択して「バックアップ開始」をタップ。</li>
+                            <li>バックアップ完了を待つ。</li>
+                            <li>（オプション）復元フローを理解：同じウィンドウで、別のオプションは「チャット履歴をスマホに復元」です。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第八章 -->
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第八章：モバイルオフィスと学習</h3>
+                    <p class="mb-3">スマホは、強力なモバイルワークステーションと持ち歩き学習センターになりました。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 ドキュメント処理：手のひらで編集と作成</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 主流アプリケーションの選択：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>WPS Office：ローカライゼーションが優れており、Microsoft形式と完全互換。豊富な無料テンプレートとPDFツールセットを内蔵。</li>
+                        <li>Microsoft 365：デスクトップ版Officeとの体験が高度に一致。形式互換性が最も優れ、OneDriveクラウドストレージと深く統合。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. スマホドキュメント処理の核心テクニック：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>クラウド同期が核心：作業ファイルをアプリの関連クラウドドライブに保存し、自動保存、複数デバイス間のシームレスな切り替え、簡単なコラボレーションを確保。覚えておきましたか？</li>
+                        <li>コラボレーションと共有：リンク共有をサポートし、「閲覧のみ」または「編集可能」権限を設定。複数人による同時オンライン編集をサポート。</li>
+                        <li>効率的な入力方法の活用：長文の下書き入力に音声入力を活用。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 メモアプリ：クイック記録から知識管理まで</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 軽量＆システム標準：</h5>
+                    <p class="mb-2">iOSメモ、Android各ブランドの付箋など。利点：起動が速く、システムとの統合度が高く、素早いメモ、リスト、一時的なアイデアに適しています。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 万能型プロフェッショナルメモ：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Evernote：強力な情報収集能力と優れた全文検索が強み。</li>
+                        <li>Notion：非常に柔軟で、メモ、データベース、カンバンを統合。すべてのコンテンツが自由に組み合わせ可能な「ブロック」です。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 使用の心得：</h5>
+                    <p class="mb-2">知識「インボックス」を作成して情報を収集し、定期的に整理・加工し、メモ間にリンクを作成して知識ネットワークを形成することを試みてください。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 スキャンとOCR：紙のファイルを電子版に</h4>
+                    <p class="mb-2">スマホは持ち歩きのポータブルスキャナーです。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. スキャン原理：</h5>
+                    <p class="mb-2">ドキュメントの端を自動検出して補正し、影を除去し、鮮明な画像を生成。OCR機能は画像内の文字を編集可能なテキストに認識します。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ツールの選択：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>システム標準：iOS「メモ」にスキャン機能を内蔵。Android一部ブランドのカメラまたはファイル管理アプリに「ドキュメントスキャン」モードがあります。</li>
+                        <li>サードパーティプロフェッショナルアプリ：Microsoft Lens、Adobe Scan、CamScanner。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 操作手順：</h5>
+                    <p class="mb-2">アプリを開いてドキュメントに向ける > 自動または手動でキャプチャ > 調整と処理 > OCR実行 > 保存と共有（複数ページをPDFに統合可能）。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 クラウドドライブ同期：あなたのモバイルファイルハブ</h4>
+                    <p class="mb-2">クラウドドライブは、スマホとPCを接続する「データハブ」です。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 主流クラウドドライブサービスの比較：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Google Drive：グローバルで普及率が高く、共有エコシステムが成熟。</li>
+                        <li>iCloud Drive：Appleエコシステムと深く統合。同期が自然で安全。</li>
+                        <li>OneDrive：WindowsとOffice 365と深く統合。Microsoftエコシステムユーザーの第一選択。</li>
+                        <li>Dropbox：世界中で広く使用され、安定性と互換性に優れています。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 使用戦略：</h5>
+                    <p class="mb-2">iCloud/ブランドクラウドはシステムと個人の核心データバックアップに使用。Google Drive/OneDrive/Dropboxは大容量ファイルストレージと業務コラボレーションに使用。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：スマホでドキュメントをスキャンしてPDFを生成</p>
+                        <p class="mt-1">操作手順（Microsoft LensまたはiOSメモを例）：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>ツールを選択：iOSは「メモ」を開く > 新規 > カメラアイコンをタップ > 「ドキュメントをスキャン」。Android/汎用は「Microsoft Lens」をダウンロードして開く。</li>
+                            <li>スキャン撮影：ドキュメントに向け、アプリが枠を自動認識したら撮影。複数ページを追加可能。</li>
+                            <li>効果強化：「白黒」フィルタを選択してドキュメントをより鮮明に。</li>
+                            <li>OCR認識：完了後、PDFとして出力を選択し、「テキストをコピー」または類似ボタンをクリックして文字を抽出。</li>
+                            <li>保存と命名：ファイルに明確な名前を付けて保存。</li>
+                            <li>検証と共有：PDFを開いて品質を確認し、メールまたはLINEで共有を試みる。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第九章 -->
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第九章：モバイル決済と生活サービス</h3>
+                    <p class="mb-3">スマホは、財布、交通カード、さらには実体の身分証明書に取って代わりつつあります。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 モバイル決済：バインド、支払いとセキュリティ管理</h4>
+                    <p class="mb-2"><strong>セキュリティは使用の前提です。</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 銀行カードのバインド：</h5>
+                    <p class="mb-2">1-2枚の常用カードのみをバインドすることをお勧めします。銀行のII類/III類電子口座をモバイル決済専用に使用し、メイン口座のリスクを分離できます。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 支払い方法：</h5>
+                    <p class="mb-2">支払いコード、スキャンして支払い、送金、スマホNFC決済。必ず「起動時認証」または「セキュリティロック」をオンにし、スマホ紛失時の不正使用を防ぎます。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 核心的なセキュリティ管理：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>パスワードと生体認証支払い：必ず独立した支払いパスワードを設定し、指紋または顔認証支払いをオンにしてください。</li>
+                        <li>セキュリティロック：決済アプリの設定で「セキュリティロック」を見つけ、「マイページ」または「ウォレット」ページに入る際に認証が必要になるよう設定することをお勧めします。</li>
+                        <li>ログインデバイス管理：定期的に確認し、あまり使用しないデバイスのログイン認証を削除。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 公共交通機関コード：地下鉄、バス</h4>
+                    <p class="mb-2">スマホがあなたの交通カードになります。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 開通方法：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>モバイル決済アプリ：「交通系IC」と検索し、対応する都市の電子交通カードを開通。</li>
+                        <li>ブランドスマホの交通カード：Apple Pay、Google Payなどのウォレットアプリ内で、仮想交通カードを開通。NFCでタッチ決済。応答が最も速く、オフライン対応。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 使用テクニック：</h5>
+                    <p class="mb-2">NFC非対応の改札、またはスマホのバッテリーが切れた時は、モバイル決済アプリの交通機関コードに切り替えて使用できます。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 公共料金支払い、フードデリバリー、タクシーアプリの使用テクニック</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>公共料金支払い：モバイル決済アプリの「公共料金」で顧客番号をバインドし、水道、電気、ガスなどの料金を支払います。</li>
+                        <li>フードデリバリー：異なるプラットフォーム（Uber Eats、出前館など）は同じ店舗でも割引が異なる場合があります。複数プラットフォームで比較。</li>
+                        <li>タクシー：緊急連絡先を設定、行程共有をオンに。プラットフォーム内支払いを優先し、オフライン取引は避けてください。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 電子身分証明書の保管と使用</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 電子身分証明書：</h5>
+                    <p class="mb-2">一部の地域では、公式政務アプリで電子身分証明書、電子運転免許証を導入しており、特定のシーンで使用可能ですが、すべての場面で適用されるわけではありません。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 保管テクニック：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>スマホの「ウォレット」に追加し、ロック画面から素早く呼び出せるようにします。</li>
+                        <li>Androidはアプリアイコンを長押しして、特定の機能（例：「マイヘルスコード」）をデスクトップにショートカットとしてドラッグできます。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：決済アプリにより安全なロックを設定</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>生体認証支払いを確認してオン：決済アプリで指紋/顔認証支払いがオンになっていることを確認。</li>
+                            <li>「セキュリティロック」を設定：決済アプリのセキュリティ設定で「セキュリティロック」を見つけ、「ウォレット」に入るまたは資金操作を行う際に認証が必要になるよう設定。</li>
+                            <li>ログインデバイスを確認：セキュリティ設定で、知らない、使用していないデバイスをすべて削除。</li>
+                            <li>アカウント保護を理解：決済アプリのアカウントセキュリティ保険の詳細を確認。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十章 -->
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十章：撮影と写真管理</h3>
+                    <p class="mb-3">本章では、スマホで素晴らしい映像を作成し、視覚的な思い出を効率的に管理する全フローをマスターします。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 スマホカメラ基礎：夜景、ポートレート、プロモード</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>夜景モード</strong>：複数枚の合成により、暗い場所での明るさとディテールを向上。撮影時は2-4秒間手持ちで安定させる必要があります。</li>
+                        <li><strong>ポートレートモード</strong>：一眼レフカメラの浅い被写界深度効果（背景ボケ）をシミュレート。人物に焦点を合わせ、1-2メートルの距離を保って撮影。後でボケの強度を調整可能。</li>
+                        <li><strong>プロモード</strong>：核心パラメータを手動制御。
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>ISO：低いほど画質が良く、暗い場所で上げるとノイズが発生。</li>
+                                <li>シャッタースピード：高速で瞬間を固定、低速で軌跡を記録（安定が必要）。</li>
+                                <li>ホワイトバランス：色の傾向を調整。</li>
+                                <li>露出補正：画面全体を明るくまたは暗く調整。</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 写真構図とレタッチ</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 基本構図法則：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>三分割法：興味ポイントを画面の横縦三等分の交差点に置く。</li>
+                        <li>導線：道路、川などを利用して視線を被写体に導く。</li>
+                        <li>シンプルに始める：撮影時に意識的に画面を水平垂直に保つ。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. レタッチ処理フロー（Snapseed、VSCOなどのアプリを使用）：</h5>
+                    <ol class="list-alpha pl-6 mb-3 space-y-1">
+                        <li>補正：回転とパースペクティブクロップを行う。</li>
+                        <li>基本調整：明るさ、コントラストを調整。ハイライトを下げ、シャドウを上げる。</li>
+                        <li>部分的な修整：特定の領域に対して加減光、瑕疵除去を行う。</li>
+                        <li>スタイリング：フィルタを追加、色調を調整。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 写真管理：混乱から秩序へ</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. スマホアルバムの核心管理機能：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>スマート分類：自動的に時間、場所、人物、シーンで分類。</li>
+                        <li>検索：キーワード、場所、時間、さらには画面内の文字でグローバル検索が可能。</li>
+                        <li>バッチ操作：複数選択後、バッチ共有、アルバム追加、または削除が可能。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 写真バックアップとスペース解放：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>クラウドバックアップ：iOSはiCloud写真を使用し、「iPhoneストレージを最適化」をオンに。Android/クロスプラットフォームはGoogleフォトまたは他のクラウドサービスを使用。</li>
+                        <li>スペース解放：システムツールを使用、または手動で巨大な動画や連写写真をクリーニング。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 スクリーンショットと画面録画：情報キャプチャと共有</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 基本操作：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>一般的なショートカット：【電源ボタン】+【音量上ボタン】を同時に押す。</li>
+                        <li>高度なキャプチャ：長スクリーンショット/スクロールスクリーンショット、領域スクリーンショット。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 画面録画：</h5>
+                    <p class="mb-2">コントロールセンターに「画面録画」ボタンを追加。開始前に長押しして、マイク録音で解説をオンにできます。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 即時編集：</h5>
+                    <p class="mb-2">スクリーンショット後、サムネイルをタップして編集画面に入り、注釈、クロップ、モザイクなどの操作が可能。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：プロモードで夜景写真を撮影</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>準備：安定した光源のあるシーンを探し、三脚の使用またはスマホを安定させることをお勧めします。</li>
+                            <li>プロモードに入る：カメラアプリを開いて「プロ」モードに切り替え。</li>
+                            <li>パラメータを設定：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>ISO：最低値（50または100）に設定。</li>
+                                    <li>シャッタースピード：1秒から数秒（例：2秒）に設定。</li>
+                                    <li>フォーカス：マニュアルフォーカスに設定し、スライダーをドラッグして遠くの照明が鮮明になるまで調整。</li>
+                                </ul>
+                            </li>
+                            <li>撮影と確認：シャッターをタップし、絶対に静止したままにします。写真を確認し、明るさに応じてパラメータを調整。</li>
+                            <li>比較体験：自動夜景モードでも一枚撮影し、両者の違いを比較。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十一章 -->
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十一章：エンターテイメントと読書</h3>
+                    <p class="mb-3">スマホは、私たちの最も重要なエンターテイメントセンターであり、ウォークマン、映画館、図書館、ゲーム機を統合しています。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 音楽とポッドキャスト：あなたの持ち歩きサウンドスケープ</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. オンラインストリーミングサービス：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>国内：Spotify、Apple Music。曲庫がグローバルで、音質選択が豊富。</li>
+                        <li>日本：LINE MUSIC、AWA。プレイリストコミュニティとパーソナライズ推薦が特徴。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ポッドキャスト：</h5>
+                    <p class="mb-2">アプリ：Apple Podcasts、Spotify、Google Podcasts。使用テクニック：チャンネル購読、事前ダウンロード、再生速度調整で効率的に視聴。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 ビデオプレーヤー：ローカル再生とストリーミング</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. ローカルビデオ再生：</h5>
+                    <p class="mb-2">VLC、nPlayerなどの万能プレーヤーをお勧めします。ほぼすべての形式と外部字幕をサポート。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. オンラインストリーミングビデオ：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>総合プラットフォーム：YouTube、Netflix、Amazon Prime Video、Hulu。</li>
+                        <li>使用テクニック：コンテンツを事前にキャッシュ。「キャスト」機能を活用してテレビで視聴。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 電子書籍読書：Epub、PDFリーダー</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 読書プラットフォームの選択：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Web小説と出版書籍：Kindle、Apple Books、Google Play ブックス。</li>
+                        <li>専門書とドキュメント：Apple Books、Adobe Acrobat Reader（PDF注釈）。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 読書最適化設定：</h5>
+                    <p class="mb-2">背景色、フォントをカスタマイズ。ブックマーク、ハイライト、メモ機能を活用。一部のアプリは読み上げをサポート。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.4 ゲームモードとパフォーマンス調整</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. ゲームモード/ゲームツールボックス：</h5>
+                    <p class="mb-2">ゲーム起動時に自動的にアクティブ化。パフォーマンスモード切り替え、おやすみモード、クイック録画、悬浮ウィンドウツールなどの機能を提供。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 手動パフォーマンス調整：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>ゲーム内：スマホの性能に応じて画質、フレームレートを調整。フレームレートの滑らかさを優先することが重要。</li>
+                        <li>システムレベル：ゲームがサポートする場合、システム設定で高リフレッシュレートモード（例：120Hz）をオンに。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 健康的なゲーム習慣：</h5>
+                    <p class="mb-2">システムの「スクリーンタイム」機能を利用して時間アラートを設定。ゲーム内課金に支払い認証を設定。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：専用の「機内モード」エンターテイメントパッケージを構成</p>
+                        <p class="mt-1">操作手順：完全なオフラインエンターテイメントコンテンツ一式を事前にダウンロードして計画。</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>音楽パッケージ：音楽アプリで好きなプレイリストまたはアルバムをダウンロード。</li>
+                            <li>ビデオパッケージ：ストリーミングアプリで映画またはドラマをキャッシュ。</li>
+                            <li>読書パッケージ：電子書籍アプリで1-2冊の本をダウンロード。</li>
+                            <li>ゲームパッケージ：完全オフラインで遊べる単機ゲームを1-2本インストール。</li>
+                            <li>統合とテスト：「機内モード」をオンにし、すべてのコンテンツがオフラインでアクセスできることを確認。関連アプリを「オフラインエンタメ」というフォルダに整理。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十二章 -->
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十二章：おすすめツールアプリ</h3>
+                    <p class="mb-3">本章では、効率を本当に向上させ、健康を促進し、外出を便利にするツールアプリを厳選して紹介します。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 効率ツール：時間と注意力を管理</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. ToDoリストとタスク管理：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>アプリ選択：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>軽量で便利：システム付箋、Microsoft To Do。</li>
+                                <li>機能が充実：Todoist、TickTick（自然言語認識が優秀、ポモドーロタイマー統合）。</li>
+                                <li>カンバン管理：Trello または Notionのカンバンビュー。プロジェクトの視覚化管理に適しています。</li>
+                            </ul>
+                        </li>
+                        <li>使用の心得：タスクを「インボックス」に即座に収集。定期的に整理して日付を設定。毎日「今日」のリストのみに注目。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ポモドーロタイマー：</h5>
+                    <p class="mb-2">アプリ：Forest、Focus To-Do。原則：25分集中、5分休憩、を繰り返す。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. カレンダー：</h5>
+                    <p class="mb-2">システムカレンダーまたはGoogle Calendarを使用。予約、締め切り、さらには「集中時間ブロック」もカレンダーに入れ、時間配分を視覚化。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 健康運動：Apple Health、Google Fit、Fitbit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>運動指導と記録：Nike Training Club、Stravaなどが豊富なフィットネスコースを提供。ブランドのヘルスアプリ（例：Samsung Health）はスマートバンドデータと深く統合。</li>
+                        <li>Apple Health / Google Fit：データハブ。スマホ、スマートバンド、サードパーティヘルスアプリからのすべてのデータを集約し、統一された健康記録を形成。定期的に「トレンド」レポートを確認。</li>
+                        <li>使用アドバイス：達成可能な目標を設定。適度なリマインダーを許可しすぎないように。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 旅行外出：あなたの万能ガイド</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 地図とナビゲーション：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>日本国内：Google Maps、Yahoo! MAP。詳細でリアルタイムの交通情報が豊富。</li>
+                        <li>海外出行：Google Maps。グローバルデータ、ストリートビュー、ユーザーレビューで優位。</li>
+                        <li>ハイキングとアウトドア：AllTrails、YAMAP。軌跡を記録、オフラインマップをダウンロード可能。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 翻訳：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>リアルタイム会話：Google翻訳の「会話」と「カメラ」即時翻訳は旅行の神器。</li>
+                        <li>テキストとドキュメント：DeepLは欧米言語間の翻訳精度が高い。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 旅程計画：</h5>
+                    <p class="mb-2">「TripIt」などのアプリが自動的にルートを生成し、航空券ホテル情報を管理、旅程表を作成。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.4 ニッチだけど強力：自動化ツール入門</h4>
+                    <p class="mb-2">これはスマホを「スマートアシスタント」にアップグレードする鍵です。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 自動化とは？：</h5>
+                    <p class="mb-2">設定した条件が満たされた時に、スマホが自動的に一連のプリセット操作を実行するようにします。例：帰宅時に自動的にWi-Fiに接続して音楽を再生、就寝時に自動的に画面を暗くする。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iOSの「ショートカット」：</h5>
+                    <p class="mb-2">Apple公式の自動化ツール。プログラミング不要。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>核心概念：「ショートカット」は手動でタップして実行できるワークフロー。「自動化」は条件に基づいて自動的に実行される指示。</li>
+                        <li>入門パス：まず「ショートカットギャラリー」から既成のショートカットを追加して使用。次に簡単なショートカットの作成を試みる。最後に「自動化」タブで個人自動化を探索。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Androidの自動化ソリューション：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>システムレベル：各ブランドのシステム（例：One UI、MIUI）には「シナリオ連携」などの基本的な自動化機能が統合されている場合があります。</li>
+                        <li>神器級アプリ：Tasker。機能は非常に強力ですが、学習曲線は急です。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：「就寝リラックス」自動化フローを作成</p>
+                        <p class="mt-1">参考案（iOS「ショートカット」自動化を使用）：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>トリガー条件を作成：ショートカットアプリを開く > [自動化] > [個人自動化を作成] > 「特定の時間」（例：22:30、毎日）を選択。</li>
+                            <li>実行アクションを追加：メディア音量を下げる > 「おやすみモード」をオンにする > 特定のリラックスプレイリストを再生 > 画面輝度を最低に > 通知を表示：「就寝リラックスタイムです。スマホを置いてください。」</li>
+                        </ol>
+                        <p class="mt-2">Android参考案：システム標準の「シナリオ」機能またはTaskerを使用して、類似のトリガー条件とアクションを設定。</p>
+                        <p class="mt-1">練習手順：スマホのシステムに応じてツールを選択し、「就寝リラックス」という名前の自動化を作成。重要なアクション（音量調整とおやすみモードのオンを含む）を追加。保存してテスト。</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 三、进阶篇 -->
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">三、応用編（第13-17章）</h2>
+
+                <!-- 第十三章 -->
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十三章：バッテリー科学と省電力最適化</h3>
+                    <p class="mb-3">バッテリーはスマホの「エネルギー心臓」です。この章では、バッテリーの特性を理解し、科学的な充電と省電力テクニックを学び、バッテリー不安を完全に解消します。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 バッテリーとは？サイクルと健康度</h4>
+                    <p class="mb-2">スマホバッテリー（リチウムイオンまたはリチウムポリマー）は、エネルギースポンジのようなもの：充電は水を吸う（蓄電）、放電は水を絞る（使用）です。その3大特徴を覚えておいてください：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>随時充電：古いバッテリーとは異なり、メモリ効果がなく、使い切ってから充電する必要はありません。0%まで使うか、常に100%で満タンにすると、逆に損傷します。</li>
+                        <li>熱を恐れる：高温はバッテリーの天敵です。</li>
+                        <li>劣化する：長期間使用すると、最大容量が低下します。これは正常な現象です。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">核心指標：サイクル回数と健康度</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>1サイクルは1回の充電ではありません。例えば、今日60%使って満タンにし、明日40%使って満タンにすると、合計100%の電力消費で1サイクルとカウントされます。</li>
+                        <li>バッテリー健康度は、現在の最大容量が新品時の何パーセントかを示します。80%を下回ると、バッテリー持ちが明らかに短くなり、公式バッテリー交換を検討できます。</li>
+                        <li>確認方法：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone：設定 > バッテリー > バッテリーの状態と充電。</li>
+                                <li>Android：通常、設定で「バッテリー状態」を検索すると見つかります。</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 充電の迷信？急速充電、ワイヤレス充電と黄金法則</h4>
+                    <p class="mb-2">噂を払拭し、科学的に充電。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 急速充電はバッテリーを傷める？</h5>
+                    <p class="mb-2">純正または認証済みの急速充電アクセサリを使用すれば、損傷はわずかです。スマホと充電器には温度制御があり、過熱時は自動的に出力を下げます。雑牌の急速充電器は使用しないでください。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ワイヤレス充電はどう？</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>便利：置くだけ充電。夜寝る時に使用するのに適しています。</li>
+                        <li>欠点：効率が低く、発熱が目立ち、充電が遅い。</li>
+                        <li>アドバイス：一晩充電には適しています（こまめに）。急いで充電する時は有線急速充電を使用。使用時は厚いケースを外してください。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. バッテリーの黄金养生法則</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>最適な電力範囲：できるだけ電力を20%-80%の間に保ち、0%で「空腹」または100%で「満腹」にしないように。</li>
+                        <li>一晩充電は安全？ 安全です！満タンになると自動的に充電が停止し、スマホは電源から直接給電されます。</li>
+                        <li>決して大型ゲームをしながら充電しないでください。熱の重なりがバッテリーを傷めます。</li>
+                        <li>長期間スマホを使用しない：50%程度充電して電源を切って保管。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 これこそが本当の省電力テクニック</h4>
+                    <p class="mb-2">バッテリーの健康だけでは不十分。設定こそが省電力の必殺技です。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 「電力の大食い」を突き止める</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>画面（電力消費王）：輝度を下げ、自動ロック時間を短く。OLED画面スマホは必ずダークモードをオンに。かなり省電力になります。</li>
+                        <li>信号が悪い：エレベーター、地下では、スマホが必死に信号を探し、電力を急速に消費します。</li>
+                        <li>5G：信号が悪い場合は手動で4Gに切り替えると、バッテリー持ちが大幅に改善します。</li>
+                        <li>位置情報サービス：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>ナビゲーション以外のアプリ（例：SNS、ショッピング）の位置情報権限は「使用中のみ許可」に設定。</li>
+                                <li>システムの位置情報で「位置に基づく広告」などの不要なオプションをオフに。</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. アプリの「口」を管理</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>バックグラウンドアクティビティを制限：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone：設定 > 一般 > バックグラウンドApp更新。すべてオフにするか、LINEのみ残す。</li>
+                                <li>Android：アプリのバッテリー設定で、あまり使用しないアプリに対して「バックグラウンドアクティビティを禁止」を選択。</li>
+                            </ul>
+                        </li>
+                        <li>不要な通知をオフに：画面が点灯し、バイブレーションするたびに電力を消費。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 救命の糸：省電力モード</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>省電力/低電力モード：システムが性能を下げ、バックグラウンド同期を停止。一時的な救急には非常に効果的。</li>
+                        <li>超省電力/極限モード：電話、SMS、ごく少数のアプリのみ残り、画面が白黒に。最後の電力を絞り出して命を繋ぎます。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 実践練習：バッテリーに健康診断を受けさせる</p>
+                        <p class="mt-1">目標：データを使用して本当の電力消費の犯人を突き止める。</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>健康度を確認：上記の方法で、バッテリーの最大容量を見つけてメモ。</li>
+                            <li>電力消費の詳細を分析：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone：設定 > バッテリーに行き、下のグラフとアプリリストを見て、どのアプリのバックグラウンドアクティビティ時間が長いかに注目。</li>
+                                    <li>Android：設定 > バッテリー > バッテリー使用状況に行き、ハードウェアとアプリの電力消費ランキングを見る。</li>
+                                </ul>
+                            </li>
+                            <li>対策を立案：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>特定のアプリのバックグラウンド電力消費が異常な場合 → 制限する。</li>
+                                    <li>「モバイルネットワーク」の電力消費が高い場合 → 信号の悪い場所に長時間いたか思い出す。</li>
+                                    <li>あまり使用しないアプリがランクインしている場合 → アンインストールを検討。</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十四章 -->
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十四章：アカウント体系とクラウドサービス</h3>
+                    <p class="mb-3">あなたのスマホアカウントは、アプリをダウンロードするためのパスワード以上のものです。それはデジタルライフの「魂のパスポート」であり、クラウドサービスはすべてのデータを流動させる「見えない高速道路」です。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 三大核心アカウント：Apple、Googleと各ブランド</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple ID：Appleエコシステムの万能鍵</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>役割：App Store、iCloud同期、iPhoneを探す、FaceTimeなど、すべてこれに依存。iPhone、iPad、Mac間でシームレスに切り替えられます。</li>
+                        <li>セキュリティの底線：二要素認証を必ずオンにしてください！これにより、パスワードが漏洩しても、他人は新しいデバイスでログインできません。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Googleアカウント：AndroidとGoogleサービスの核心</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>役割：連絡先、カレンダー、Gmail、Chromeブックマーク、フォトバックアップの同期。</li>
+                        <li>セキュリティの底線：同様に、二段階認証プロセスをオンにすることが重要です。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 各ブランドアカウント：ローカル万能管理人</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>役割：クラウドスペースバックアップ、アプリストア、スマホを探す、クロスデバイス連携（例：マルチスクリーン協調）。</li>
+                        <li>注意：クラウドデータが国内サーバーに存在することを理解し、プライバシーポリシーを読み、どのデータが同期されているかを把握してください。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">🔐 アカウントセキュリティ共通法則</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>強力なパスワード＋パスワードマネージャー：iCloudキーチェーンまたはBitwardenなどのツールで管理。</li>
+                        <li>二要素認証をオンに：これは盗難防止の生命線です。</li>
+                        <li>ログインデバイスを定期的に確認：知らないデバイスを削除。</li>
+                        <li>フィッシングリンクに注意：不明なリンクでパスワードを求められても、絶対にクリックしないでください。手動で公式サイトアドレスを入力。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 クラウド同期：データを自分で動かす</h4>
+                    <p class="mb-2">クラウド同期をオンにすると、データはスマホの中にあるように感じますが、実際には安全にクラウドにあり、すべてのデバイスで一貫性が保たれます。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. クラウド同期は何ができる？（iCloudを例に）</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>連絡先、カレンダー、メモ：どのデバイスで変更しても、他のデバイスに即座に同期。</li>
+                        <li>写真動画：iCloud写真をオンにすると、すべての写真がアップロードされ、スマホには小さいサイズのものが残ります（スペース節約）。どのAppleデバイスでも原寸大を見ることができます。</li>
+                        <li>自動全体バックアップ：スマホが充電中、ロック状態でWi-Fiに接続している時、システム設定、アプリレイアウトなどが自動的にバックアップされます。新しいスマホへの復元時に神器になります。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ⚠️ 重要な区別：同期 vs バックアップ</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>同期＝双方向の一貫性：Aデバイスで写真を削除すると、B、Cデバイスのものも消えます。すべてのデバイスを同じに保つことが目的です。</li>
+                        <li>バックアップ＝一方向のスナップショット：スマホのスナップショットを撮って保存するようなもの。後でローカルデータを削除しても、クラウドバックアップは残ります。復元が目的です。</li>
+                        <li>覚えておいてください：iCloud写真同期をバックアップとして扱わないでください！すべてのデバイスで誤って削除した場合、クラウドからも消えます。本当のバックアップには、PCでの全体バックアップ（iTunes/Finder）またはサードパーティのクラウドストレージ（アップロードのみ、削除なし）が必要です。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 ファミリー共有：一度購入、家族全員で楽しむ</h4>
+                    <p class="mb-2">これは最も親しい家族とデジタルリソースを共有する神器です。</p>
+                    <p class="mb-2">Apple「ファミリー共有」を例に、以下を共有できます：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>アプリ、音楽、映画、ブック：あなたが購入したものは、家族全員（最大5人）がダウンロードでき、追加料金なし。最もお得なソフトウェア購入方法です。</li>
+                        <li>Apple Music、iCloud+などのサブスクリプション：ファミリープランのサブスクリプションは通常、個人より安い。</li>
+                        <li>位置情報共有：家族のリアルタイム位置を確認（例：子供の下校）。ジオフェンスを設定し、到着または出発時に通知。安全で安心。</li>
+                        <li>共有アルバムとカレンダー：一緒に写真を置き、家族のイベントを記録。</li>
+                    </ul>
+                    <p class="mb-2">💡 注意：完全に信頼できる直系の家族のみを招待してください。位置情報共有は双方向です。プライバシーを相互に尊重してください。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 実践練習：アカウントの同期内容を確認</p>
+                        <p class="mt-1">目標：能動的に管理し、混乱した同期にさようなら。</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>iPhoneを例に：設定 > 上部のあなたの名前。</li>
+                            <li>iCloud同期項目を確認：「iCloud」をタップし、リスト内の各アプリのスイッチを確認。
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>連絡先、カレンダーはオンをお勧め。</li>
+                                    <li>「写真」に重点的に注目：iCloud写真のロジック（一カ所で削除すると、どこでも削除）を理解していることを確認。</li>
+                                    <li>使用していないサードパーティアプリの同期はオフにでき、スペースを節約。</li>
+                                    <li>iCloudバックアップがオンになっていることを確認。</li>
+                                </ul>
+                            </li>
+                            <li>探すと位置情報を確認：「iPhoneを探す」がオンになっていることを確認（盗難防止必須）。ファミリー共有の位置情報設定が期待通りか確認。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十五章 -->
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十五章：スマホと他デバイスの連携</h3>
+                    <p class="mb-3">現代のスマホはあなたのパーソナルデジタルセンターです。他のデバイスとチームを組む方法を学ぶと、効率が倍増します。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 PCとの協調：生産性爆発</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. ファイル転送、データケーブルに別れを告げる</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>無線の王者：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Appleエコシステム：AirDrop。iPhoneとMac間でファイル、写真を瞬時に転送。ネット不要、無劣化。</li>
+                                <li>Android+Win：<strong>「Phone Link」</strong>機能を使用。PC上で直接スマホの写真を見たり、SMSに返信したり。</li>
+                                <li>ブランドエコシステム：Samsung Flow、Huawei Shareなど。スマホ画面を直接PCにミラーリング。PCのマウスとキーボードでスマホアプリを操作。ファイルを双方向にドラッグ。</li>
+                            </ul>
+                        </li>
+                        <li>物理的な直接接続：データケーブルでPCに接続し、「ファイル転送」モードを選択。安定して高速。大ファイルの転送に適しています。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. マルチスクリーン引き継ぎ</h5>
+                    <p class="mb-2">Apple Handoff：iPhoneでWebページを見ていると、MacのプログラムドックにSafariアイコンが表示され、クリックすると続きを見ることができます。文字をコピーすると、別のデバイスで直接ペースト。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 スマートウォッチ/バンドとの連携：手首のアシスタント</h4>
+                    <p class="mb-2">核心機能：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>通知フィルター：スマホのメッセージをウォッチにプッシュ。手首を上げるだけで確認。重要でないものはスワイプで無視。スマホを取り出す回数を減らせます。</li>
+                        <li>健康データステーション：ウォッチが24時間心拍数、睡眠を測定。データはスマホアプリでレポートとして確認。</li>
+                        <li>万能リモコン：スマホの音楽再生をリモート操作、スマホカメラのシャッターとして使用（集合写真に超便利）。</li>
+                        <li>手首でタッチ：スマホウォレットで開いた交通カード、门禁カードをウォッチに同期。手首を上げるだけでタッチ。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 スマートホームとの連携：ポケットの中の総リモコン</h4>
+                    <p class="mb-2">スマホの三重の役割：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>リモコン：Google Home、Amazon Alexa、Apple Homeなどのアプリで直接照明のオン/オフ、エアコンの温度調整。</li>
+                        <li>シナリオディレクター：「映画鑑賞モード」を設定。ワンタッチでメイン照明をオフ、雰囲気照明をオン、スクリーンを下ろし、エアコンを調整。</li>
+                        <li>設定センター：すべてのスマートデバイスの設定はスマホアプリを通じて行う必要があります。</li>
+                    </ol>
+
+                    <p class="mb-2">エコシステムの推奨：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhoneを使用し、プライバシーを重視 → Apple HomeKit対応デバイスを選択。</li>
+                        <li>デバイスが多く、コスパを求める → Google Home または Amazon Alexa エコシステムが最も充実。</li>
+                        <li>Samsungスマホを使用 → Samsung SmartThings を優先。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 実践練習：スマホ画面をテレビにミラーリング</p>
+                        <p class="mt-1">目標：大画面で写真動画を共有、ゲームをプレイ。爽快！</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>スマホとテレビが同じWi-Fiに接続されていることを確認。</li>
+                            <li>テレビで：「画面ミラーリング」、「Miracast」または「AirPlay」機能を見つけてオンに。</li>
+                            <li>スマホで：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone：右上から下にスワイプしてコントロールセンターを開き、「画面ミラーリング」をタップ。テレビを選択。</li>
+                                    <li>Android：クイック設定を下にスワイプし、「ワイヤレスディスプレイ」、「スマートビュー」を探して、テレビを選択。</li>
+                                </ul>
+                            </li>
+                            <li>成功！スマホの画面と音声がテレビに同期されます。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十六章 -->
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十六章：データバックアップと移行</h3>
+                    <p class="mb-3">写真、チャット履歴は価値のない宝物です。この章では、デジタル資産に保険をかけ、スムーズに新機種に乗り換える方法を教えます。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 全体バックアップ：最も徹底的な「クローン」</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. PCローカルバックアップ（最も信頼できる）</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone + PC：データケーブルで接続。iTunes（Win）またはFinder（Mac）を開き、「今すぐバックアップ」をクリック。必ず「ローカルバックアップを暗号化」にチェック。これにより、健康データとパスワードデータがバックアップされます。復元時は、新しいスマホを接続して「バックアップから復元」を選択。</li>
+                        <li>Androidブランド機 + PCソフトウェア：各ブランドの公式ツール（Samsung Smart Switch、Xiaomi PC Suiteなど）を使用。機能は同様。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. クラウドバックアップ（最も手間いらず）</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iCloudバックアップ：設定でオンに。スマホが充電中、ロック状態でWi-Fiに接続している時に自動バックアップ。新しいiPhoneのアクティベーション時に「iCloudバックアップから復元」を選択するだけ。</li>
+                        <li>注意：無料の5GBでは全然足りない。通常、有料でiCloud+をアップグレードする必要があります。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 選択的バックアップ：重点保護</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>写真動画：iCloud写真/Googleフォト/ブランドクラウドフォトをオンにすれば、継続的なバックアップになります。または、定期的にデータケーブルでPCにコピー。</li>
+                        <li>連絡先など：iCloud/Google/ブランドアカウントに存在する限り、別のスマホにログインすれば自動的に戻ってきます。</li>
+                        <li>⚠️ LINE/WeChatチャット履歴（最重要）：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>機種変更時：アプリ内の「チャット履歴移行」機能を使用。Wi-Fiで直接接続。旧機から新機へ転送。最も推奨。</li>
+                                <li>長期バックアップ：PC版アプリの「バックアップと復元」機能を使用。PCローカルにバックアップ。最も安全——これは重要です。</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 機種変更ガイド：三大移行パス</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Android → Android</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>同ブランド（例：Samsung → Samsung）：公式の「スマホクローン」アプリを使用。QRコードをスキャンすれば、アプリとデータを転送できます。体験は完璧。</li>
+                        <li>クロスブランド：サードパーティの機種変更ツール、または事前に写真連絡先をクラウド（例：Googleフォト）に同期し、新機でログインしてダウンロード。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iPhone → iPhone</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iCloud復元：新機アクティベーション時にiCloudバックアップから復元を選択。</li>
+                        <li>クイックスタート：新旧iPhoneを近づける。旧機に設定アニメーションが表示され、QRコードをスキャンすれば無線ですべてが移行。体験は素晴らしい。</li>
+                        <li>注意：長時間がかかります。充電とネットワークを維持してください。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. クロスプラットフォーム（Android↔iPhone）が最も複雑</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>公式ツール（例：「Move to iOS」アプリ）を使用。連絡先、写真などを転送できます。</li>
+                        <li>核心的な制限：アプリとアプリデータ（例：LINE/WeChatチャット履歴、ゲーム進行状況）は移行できません。アプリは再インストールが必要。データは個別に対応（例：LINEはPCバックアップ復元）——これは重要です。</li>
+                        <li>手動戦略：写真はPCまたはクラウドで中継。連絡先はvCardファイルをエクスポート。重要なアプリデータはクロスプラットフォームエクスポートに対応しているか確認。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 実践練習：写真と連絡先を手動でPCにバックアップ</p>
+                        <p class="mt-1">目標：完全に自分で管理できるオフラインデータコピーを持ち、究極の安心。</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>データケーブルを準備し、スマホとPCを接続。</li>
+                            <li>写真をバックアップ：PCでスマホの内部ストレージに入り、DCIM と Pictures フォルダを見つけ、全体をPCのハードディスクにコピー。</li>
+                            <li>連絡先をバックアップ：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone：連絡先がiCloudにあることを確認。iCloud.com Web版にアクセスし、「連絡先」に入り、すべて選択してvCardファイルをエクスポートし、PCに保存。</li>
+                                    <li>Android：「連絡先」アプリ設定で、「ストレージデバイスにエクスポート」を探し、.vcfファイルを生成。データケーブルでPCにコピー。</li>
+                                </ul>
+                            </li>
+                            <li>バックアップを検証：PCでコピーした写真を数枚開き、.vcfファイルを開いて、情報がすべてあることを確認。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十七章 -->
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十七章：トラブルシューティングと自己解決</h3>
+                    <p class="mb-3">スマホが時々「病気」になっても慌てないで。ほとんどの問題は自分で解決できます。これがあなたの「スマホ救急マニュアル」です。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 スマホが重い、発熱</h4>
+                    <p class="mb-2">診断4ステップ：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>関連を考える：システム更新後？それとも特定のアプリインストール後？</li>
+                        <li>ストレージ容量を確認：残りが10%を切ると、システムが重くなる最も一般的な原因です。</li>
+                        <li>電力消費ランキングを確認：バッテリー設定で、どのアプリがバックグラウンドで電力を消費しているか。</li>
+                        <li>信号を確認：信号の悪い場所では、スマホが必死にネットワークを探し、発熱します。</li>
+                    </ol>
+
+                    <p class="mb-2">治療方法：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>容量不足 → 即座にストレージをクリーニング（基礎編を参照）。</li>
+                        <li>特定のアプリが問題を起こしている → 設定でそのアプリのキャッシュをクリア、またはアンインストールして再インストール。</li>
+                        <li>万能解法：スマホを再起動。</li>
+                        <li>大型ゲームをしながら充電しないでください。発熱がバッテリーを傷めます。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 アプリのクラッシュ、応答なし</h4>
+                    <p class="mb-2">標準的な処理フロー：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>アプリを閉じて、再度開く。</li>
+                        <li>アプリストアで更新。</li>
+                        <li>必要な権限（例：ストレージ権限）を誤ってオフにしていないか確認。</li>
+                        <li>アプリキャッシュをクリア（安全、データは失われません）。</li>
+                        <li>最後の手段：データをクリア/アンインストールして再インストール（ログイン情報が消去されます。パスワードを覚えていることを確認）。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 電源が入らない、起動画面で固まる「究極の手段」</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>まず30分間充電。完全に電池が切れているだけかもしれません。</li>
+                        <li>強制再起動を試みる（下記の練習を参照）。これで大部分の「仮死」を解決できます。</li>
+                        <li>それでもダメ：リカバリモードでPC接続修復が必要かもしれませんが、これはすべてのデータを消去します（バックアップがあれば復元可能）。それでもダメなら、ハードウェア問題の可能性があり、修理に出す必要があります。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 公式修理を探す、罠を避ける</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>本物の公式を探す：必ずブランド公式サイトで「認定サービスプロバイダ」を確認。またはスマホ設定、公式アプリでサービスエントリを探す。</li>
+                        <li>修理前：必ず自分ですべてのデータをバックアップ！アカウントからログアウト。購入証明書を持参。</li>
+                        <li>非公式修理に注意：劣質な部品を使用する可能性、プライバシーが漏洩する可能性。しかも一度開けると公式保証が失効します。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 実践練習：「強制再起動」をシミュレート</p>
+                        <p class="mt-1">目標：スマホが正常な時にこの「万能鍵」を学び、本当の故障時に慌てない。</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>注意：スマホが正常な時に操作しても安全です。データは削除されませんが、手元の作業は先に保存することをお勧めします。</li>
+                            <li>方法：
+                                <ul class="list-circle pl-6 mt-1 space-y-1">
+                                    <li>フルスクリーンiPhone：音量上を素早く1回押し、音量下を1回押し、側面の電源ボタンを長押し。Appleロゴが表示されるまで。</li>
+                                    <li>Android汎用：電源ボタンを10-15秒長押し。再起動するまで。</li>
+                                    <li>（具体的なモデルによって多少異なる場合があります。不確かな場合は「[あなたのスマホモデル] 強制再起動」を検索）</li>
+                                </ul>
+                            </li>
+                            <li>意義：一度練習すれば、後でスマホが本当に固まった時、冷静に解決できます。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 四、超越篇 -->
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">四、発展編（第18-22章）</h2>
+
+                <!-- 第十八章 -->
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十八章：モバイルネットワークと情報セキュリティ深掘り</h3>
+                    <p class="mb-3">🔒 なぜこれを気にする必要があるのか？</p>
+                    <p class="mb-3">私たちは毎日スマホでインターネット、決済、チャットをして、とても便利だと感じています。しかし、あなたのチャット履歴、支払いパスワード、写真……これらの情報がインターネット上で「裸」になっている頻度を考えたことはありますか？スマホは私たちのデジタル分身であり、そのセキュリティは私たち自身のセキュリティです。ハッカーは遠くにあると思わないでください。うっかりした公共Wi-Fiが「罠」になる可能性があります。今日は、モバイルネットワーク内の「暗流」を深掘りし、あなたのスマホを盤石にし、間違えないでください。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📡 VPN：ネットワーク内の「インビジブルマント」</h4>
+                    <p class="mb-2">それは一体何？</p>
+                    <p class="mb-2">VPN、正式名称はVirtual Private Network（仮想プライベートネットワーク）。あなたの家とアクセスしたいWebサイトの間に、専用の暗号化された地下トンネルを建設したと想像してください。</p>
+
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>通常のインターネット接続：あなたのスマホ → 公共ネットワーク（キャリアネットワーク、カフェWi-Fi） → 対象Webサイト。 
+                            <p class="mt-1 text-secondary">リスク：この道の途中で、誰か（ハッカー、悪意あるWi-Fi提供者、またはネットワーク管理者）があなたが送信するデータを「覗き見」している可能性があります。</p>
+                        </li>
+                        <li>VPN使用時：あなたのスマホ → VPN暗号化トンネル → VPNサーバー → 対象Webサイト。 
+                            <p class="mt-1 text-secondary">効果：あなたのすべてのネットワークトラフィックは、トンネルに入った時点から暗号化され封入されます。道の「覗き見者」は、解読できない文字の羅列しか見ることができません。データがVPNサーバーに到達するまで、復号されて真のWebサイトに転送されます。Webサイトが見るアクセスアドレスも、VPNサーバーのアドレスであり、あなたの実際のアドレスではありません。</p>
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">何ができる？「壁越え」以外にも</p>
+                    <p class="mb-2">VPNといえば海外サイトへのアクセスだけを思い浮かべないでください。正当な用途はたくさんあります：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>公共Wi-Fi下のセキュリティ保護：空港、ホテル、カフェで無料Wi-Fiを使用するのは、データ漏洩の高リスク区域です。VPNを使用すると、接続に「鎧」を着けることができます。</li>
+                        <li>企業内网へのリモートセキュアアクセス：多くの企業の社員は、在宅勤務時にVPNを介して社内システムやファイルサーバーに安全にログインしています。</li>
+                        <li>個人のプライバシー保護、追跡回避：インターネットサービスプロバイダー（ISP）があなたのインターネット使用習慣を記録・分析し、精密広告を配信するのを防ぎます。</li>
+                    </ol>
+
+                    <p class="mb-2">⚠️ 重要な注意</p>
+                    <p class="mb-2">VPN技術自体は合法的なセキュリティツールですが、必ず正規のチャネルから購入するか、信頼できるサービスを使用してください。出所不明の「無料VPN」は使用しないでください。スマホにトロイの木馬を埋め込んだり、こっそりデータを記録して販売したりする可能性があります——「泥棒を警備員として雇う」ようなものです。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🚫 公共Wi-Fiの「甘い罠」</h4>
+                    <p class="mb-2">無料Wi-Fiは魅力的ですが、「糖衣炮弹」かもしれません。VPNという「究極のソリューション」以外にも、2つの基本的な防衛ラインを築くことができます。</p>
+                    
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>第一道防衛線：HTTPSを確認
+                            <p class="mt-1">Webサイトにアクセスする時、アドレスバーの先頭が http:// か https:// かを確認してください。追加された「s」はSecure（安全）を意味します。あなたとWebサイト間の通信が暗号化されていることを意味し、データが傍受されても、解読は困難です。現在、ほとんどの正規Webサイト（銀行、メール、SNSプラットフォーム）はデフォルトでHTTPSを使用しています。公共Wi-Fi下では、アクセスしているページがHTTPSであることを確認してください。</p>
+                        </li>
+                        <li>第二道防衛線：DNSクエリをアップグレード
+                            <p class="mt-1">DNSとは何か？簡単に言えば、「ネットワークの電話帳」です。baidu.comにアクセスしたい時、スマホはまずDNSサーバーに「Baiduのアドレス（IP）は何ですか？」と尋ねます。従来のDNSクエリは「はがき」式で、暗号化されていません。これは、悪意あるWi-FiがあなたがどのWebサイトを尋ねたか知ることができ、答えを改ざんしてフィッシングサイトに誘導できることを意味します！</p>
+                            <p class="mt-1">DNS over TLS (DoT) / DNS over HTTPS (DoH) はこの問題を解決します。あなたの「電話帳」クエリも暗号化し、誰にもあなたが誰を探しているか知られず、答えも改ざんできなくなります。</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🕵️ 「プライベートブラウジング」は本当に透明になるのか？</h4>
+                    <p class="mb-2">主要ブラウザのすべてが「プライベート/シークレットブラウジングモード」を持っていますが、それはあなたをネットワーク忍者のように感じさせますか？真実はがっかりさせるかもしれません。</p>
+                    
+                    <p class="mb-2">それは何をするのか？</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>👍 ローカルに痕跡を残さない：プライベートウィンドウを閉じた後、システムはあなたの閲覧履歴、Cookie、フォームデータを保存しません。家族があなたのスマホを手に取っても、あなたが何を検索したか見ることはできません。</li>
+                    </ul>
+
+                    <p class="mb-2">それは何ができないのか：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>あなたのオンライン行動に対して透明になる：あなたがアクセスするWebサイト、インターネットサービスプロバイダー（ISP）、会社のネットワーク管理者（会社のWi-Fiを使用する場合）は、依然としてあなたのアクセス記録を見ることができます。Webサイトも、IPアドレスなどの技術的手段であなたを識別できます。</li>
+                        <li>ウイルスやマルウェアを防ぐ：うっかり悪意あるサイトに入っても、感染する可能性があります。</li>
+                        <li>ダウンロードしたファイルを隠す：プライベートモードでダウンロードしたファイルは、ダウンロードフォルダにちゃんと保存されます。</li>
+                    </ol>
+
+                    <p class="mb-2">結論：プライベートブラウジングモードは<strong>「ローカル消去器」</strong>のようなもので、「ネットワークインビジブルマント」ではありません。他人のPCを借りる時に、ログイン状態や検索履歴が見られないように保護するのに適していますが、すべてのネットワーク追跡から逃れることを期待しないでください。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">実践タイム 👉 スマホに「信頼できる電話帳」（DNS）を設定</p>
+                        <p class="mt-1">DNSクエリが覗き見や改ざんされる可能性があることを知ったので、より安全で高速なDNSサービスに切り替えましょう。ここではAndroidとiOSを例にします。</p>
+                        <p class="mt-2 font-semibold">Androidスマホの設定方法：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>【設定】を開く。</li>
+                            <li>【WLAN】に入り、現在接続しているWi-Fiネットワークを長押しし、【ネットワークの変更】を選択。</li>
+                            <li>【詳細オプション】をタップし、IP設定を「DHCP」から「静的」に変更。</li>
+                            <li>下にスクロールし、「ドメイン1」と「ドメイン2」（DNSサーバーアドレス）を見つける。</li>
+                            <li>希望のDNSアドレスを入力。例：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>セキュリティとプライバシーを重視：Cloudflare DNS 1.1.1.1 と 1.0.0.1</li>
+                                    <li>総合的な体験が良い：Google DNS 8.8.8.8 と 8.8.4.4</li>
+                                </ul>
+                            </li>
+                            <li>設定を保存。</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">iPhone/iPad の設定方法（Wi-Fi環境下）：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>【設定】>【Wi-Fi】を開く。</li>
+                            <li>接続しているWi-Fiの右側の【i】情報アイコンをタップ。</li>
+                            <li>下にスクロールし、【DNSの設定】を見つける。</li>
+                            <li>【手動】を選択し、【サーバーを追加】をタップ。</li>
+                            <li>上記の推奨DNSアドレス（例：1.1.1.1）を入力。</li>
+                            <li>右上の【保存】をタップ。</li>
+                        </ol>
+                        <p class="mt-2">完了後、あなたのスマホはWebサイトアドレスをクエリする時、設定したより信頼できるDNSサーバーを優先的に使用し、より安全で、応答も少し速くなるかもしれません。おめでとうございます。もう一つのセキュリティホールを塞ぎました！</p>
+                    </div>
+                </div>
+
+                <!-- 第十九章 -->
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十九章：AIはどうやってスマホで動くのか</h3>
+                    <p class="mb-3">👋 スマホの最もクールな「マジックショー」へようこそ。主役は：人工知能です。あなたが毎日使用している「パシャッと撮れば完成」の美しい写真、声に出せば来る音声アシスタント、使えば使うほどあなたを理解する入力法。その背後には、この見えない脳が立っています。今日は、そのカーテンを開け、AIがあなたのスマホでどうやって「思考」し、働いているかを見てみましょう。</p>
+                    <p class="mb-3">まず核心の結論から：あなたのスマホのAIは、計算をあなたに近づけようと努力しています。あなたをサーバーに近づけようとしているのではありません。</p>
+                    <p class="mb-3">この言葉は少し回りくどいですか？前章で話した「デジタル分身」と組み合わせて理解しましょう。前章では、スマホはあなたの分身であり、データがそれを離れるとリスクに直面すると言いました。そして現代のスマホのAIは、まさにこの「分身」の内部により多くの知能を詰め込もうとしています。これがいわゆる「エッジAI」です。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 AIカメラ：あなたの「現像暗室」がスマホに移動</h4>
+                    <p class="mb-2">パシャパシャ撮るのは、私たちが最もよく使うAI機能かもしれません。「写真撮影」はカシャッと一声だと思っていませんか？もう違います。</p>
+                    <p class="mb-2">初期のスマホ撮影は、自動フィルムカメラのように、シャッターを押せば、画面の良し悪しはほぼセンサーとレンズのハードウェアに依存していました。しかし現在のAI計算写真は、プロのレタッシャー＋カメラマンチームをシャッターボタンに直接詰め込んだようなものです。</p>
+                    <p class="mb-2">違いは何でしょうか？</p>
+                    <p class="mb-2">この「チーム」は、あなたがシャッターを押す前からすでに働き始めています。シーンをスキャンし、<strong>「これは青空」、「これは人の顔」、「これは夜景」</strong> または「これは料理」を識別します。識別が完了すると、AIは瞬時にこのタイプのシーンのために特別に訓練された最適化方案を呼び出します：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>ポートレート撮影：背景をボカし、肌を美しくする必要があることを知り、自動的にポートレートモードに切り替えます。</li>
+                        <li>夜景撮影：単純にISOを上げてノイズだらけにするのではなく、瞬時に複数枚の暗い写真を連続撮影し、パズルのように、すべての写真の最も鮮明でノイズの少ない部分を「計算」で融合させ、一枚の明るくきれいな写真を作り出します。</li>
+                        <li>ドキュメント撮影：自動的に端をまっすぐにし、コントラストを上げ、スキャナーのようにします。</li>
+                        <li>動きの瞬間を撮影：動きの軌跡を予測し、自動的に最も鮮明な瞬間をキャプチャします。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 実践タイム 👉： 今すぐスマホカメラを開き、異なるシーン（人の顔、植物、料理、文字）に向けてください。多くのスマホは特定のシーンを識別すると、ファインダーの隅に小さなアイコン（例：「ポートレート」、「料理」、「テキスト」）を表示します。この「瞬間識別」のプロセスを感じてください。これがあなたがシャッターを押す前に、AIがあなたに与えるリアルタイムフィードバックです。</p>
+                    </div>
+
+                    <p class="mt-4 mb-2">つまり、今シャッターを押すのは、この「計算レタッチ」フローの最後のステップを起動するだけです。その1秒間の「処理中」のくるくる回る表示は、AIの脳が高速に動作している証です。さらに素晴らしいことに、この複雑な計算のすべてが、スマホ内の専用AIチップ（例：AppleのNeural Engine、QualcommのAI Engine、HuaweiのDa Vinci Architectureなど）で直接行われることが増えています。速く、プライバシーも高い。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗣️ 音声アシスタント：あなたの「音声秘書」はどうやってあなたを理解する？</h4>
+                    <p class="mb-2">「Hey Siri、明日の天気はどう？」</p>
+                    <p class="mb-2">「OK Google、明日の朝7時にアラームを設定。」</p>
+                    <p class="mb-2">これはもう呼吸するように自然です。しかし、この音声秘書はどうやってそれを成し遂げているのでしょうか？</p>
+                    <p class="mb-2">そのワークフローは、標準化された「3ステップ」に分解できます：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>ステップ1：聞き取る（音声認識）。</strong>
+                            <p class="mt-1">あなたがウェイクワード（「Hey Siri」）を言い、指示を出すと、スマホのマイクがあなたの音声の波形を録音します。これは連続した信号です。AIの最初のタスクは、この連続した音波を一つ一つの音素の断片に切り分け、膨大な訓練済み語彙ライブラリと照合して、それらを文字に変換することです。このプロセスはASR（自動音声認識）と呼ばれます。あなたのアクセント、話す速度、環境ノイズを克服する必要があり、非常にすごいです。</p>
+                        </li>
+                        <li><strong>ステップ2：理解する（自然言語理解 - NLP）。</strong>
+                            <p class="mt-1">「明日の朝7時に傘を持って行くようにリマインドして」という文字を取得しただけでは不十分です。意図を理解する必要があります。誰が？いつ？何をする？これにはNLP技術が必要です。文の構造を分析し、重要なエンティティを抽出します：「明日の朝7時」（時間）、「リマインド」（意図/アクション）、「私」（対象）、「傘を持って行く」（イベント）。これはあなたのコマンドを理解したことに相当します——これは重要です。</p>
+                        </li>
+                        <li><strong>ステップ3：実行と回答。</strong>
+                            <p class="mt-1">あなたの意図を理解した後、アシスタントはスマホ内の対応するアプリまたはサービスモジュールを呼び出します。天気を調べる場合は、天気データを取得するためにインターネットにアクセスします。アラームを設定する場合は、「時計」アプリのデータベースに書き込みます。「メッシは誰ですか」と聞かれた場合は、検索エンジンを呼び出す場合があります。最後に、その結果を音声合成（TTS）技術を介して「話して」あなたに伝えます。</p>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">過去は、ステップ1と2の大部分の重い計算をクラウドサーバーに送る必要がありましたが、現在は、ウェイクワード認識や一部のオフラインコマンド（例：アラーム設定、Bluetoothオン）の処理が、スマホ本体で完全に行えるようになりました。これは、応答が速く（ネットワークを待たない）、プライバシーも保護される（「照明を消す」などのコマンドをクラウドにアップロードする必要がない）ことを意味します。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⌨️ 入力法予測とライティングアシスタント：あなたの「心強い速記者」</h4>
+                    <p class="mb-2">これは最も静かに浸透するAIかもしれません。あなたが「今晩」を入力したばかりなのに、「何食べる」がポップアップします。「上司」と入力したら、後に「こんにちは」が自動的についてきます。その背後には、エッジ機械学習モデルの長期的な観察と学習があります。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>あなた個人の習慣に基づく言語モデル： 入力法は、あなたが頻繁に使用する語彙、フレーズの組み合わせ、チャットの相手を静かに分析します。あなたは友達とチャットする時に「ハハハ」と笑い、同僚とコミュニケーションする時に「議事録」をよく使います。それはすべて心に留めています。時間が経つと、あなた一人のために最適化された「予測モデル」が形成されます。</li>
+                        <li>文脈理解： 前の単語だけを見るのではなく、あなたが入力しているこの文の文脈を理解します。LINEのチャットボックスと仕事用ドキュメントでは、同じ開始単語に対して、異なる補完提案が出される場合があります。</li>
+                        <li>誤字修正能力： 「みあん」と入力した時、あなたが「みかん」を打ちたかったことを知り、自動的に修正します。これは単なる辞書マッチングではなく、何十億回もの入力で訓練された確率判断に基づいています。</li>
+                    </ul>
+
+                    <p class="mb-2">🖋️ さらに一歩進む：AIライティングアシスタント。</p>
+                    <p class="mb-2">現在、多くの入力法やメモアプリが提供する「スマート誤字修正」、「文の磨き上げ」、「続きを書く」機能は、より強力なAIアプリケーションです。「この製品はとても良いです」を「この製品のユーザーエクスペリエンスは素晴らしいです」に磨き上げたり、タイトルを書いた後に、いくつかの可能な文章の始まりを提案したりできます。このモデルは通常、より大きく、一部はクラウドに依存する場合がありますが、核心の連想と予測は依然として大量にローカルで行われ、あなたのライティングプライバシーを保護します。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧠 エッジAI vs. クラウドAI：スマホ進化の分岐点</h4>
+                    <p class="mb-2">前章で繰り返し言及されたキーワード：エッジ。これはスマホAI発展の核心トレンドを表しています：計算力の沈降。</p>
+                    <p class="mb-2">簡単な表で、「エッジAI」と従来の「クラウドAI」モードの本質的な違いを見てみましょう：</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">比較次元</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">クラウドAI（従来モード）</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">エッジAI（現在と未来のトレンド）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">データはどこへ</td>
+                                    <td class="border border-gray-300 px-4 py-2">あなたの写真、録音などの生データをインターネットサーバーにアップロードする必要があります。</td>
+                                    <td class="border border-gray-300 px-4 py-2">生データはスマホに残り、処理結果または極めて小さな匿名化データのみを同期します。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">速度</td>
+                                    <td class="border border-gray-300 px-4 py-2">ネットワーク品質に依存し、遅延があります。質問して「ネットワーク読み込み」を待つ必要があります。</td>
+                                    <td class="border border-gray-300 px-4 py-2">瞬時の応答、遅延なし。ロック解除、アルバム検索、オフライン翻訳は、瞬く間に完了します。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">プライバシーセキュリティ</td>
+                                    <td class="border border-gray-300 px-4 py-2">あなたのデータは「実家を離れ」、公共ネットワークを経由し、潜在的な漏洩リスクがあります。</td>
+                                    <td class="border border-gray-300 px-4 py-2">データは「分身」を離れず、伝送プロセスでの盗聴と傍受のリスクを根本的に回避します。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">オフライン可能か</td>
+                                    <td class="border border-gray-300 px-4 py-2">基本的に不可能。ネットなし≒AI機能麻痺。</td>
+                                    <td class="border border-gray-300 px-4 py-2">核心機能は完全にオフラインで使用可能。より多くのシーンに適応（例：地下駐車場、飛行機内、野外）。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">消費電力とデータ通信量</td>
+                                    <td class="border border-gray-300 px-4 py-2">継続的なネットワーク通信が必要。相対的に電力とデータ通信量を消費。</td>
+                                    <td class="border border-gray-300 px-4 py-2">クラウドとの頻繁な通信を減らし、より省電力・省データ通信量。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">現在の例</td>
+                                    <td class="border border-gray-300 px-4 py-2">初期の音声認識、複雑なレンダリングを必要とするAI画像生成、超大規模言語モデル対話。</td>
+                                    <td class="border border-gray-300 px-4 py-2">顔/指紋ロック解除、アルバムの顔分類、オフライン翻訳、一部音声コマンド、入力法予測。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-2">違いが見えましたか？エッジAIは、前章の「デジタル分身を保護する」というセキュリティ要求に完璧に応えます。「分身」の境界壁をより強固で、よりスマートに築き上げます。データと計算はできるだけ壁の内側に留まり、リスクと遅延を最小限に抑えます。</p>
+                    <p class="mb-2">そして未来の「大規模モデル」もエッジへの進化を遂げています。現在、完全なChatGPT対話は小さなスマホでは動作しませんが、その「縮小エッセンス版」はすでにスマホに入り込み、いくつかのローカルタスクを処理できます。未来、あなたのスマホの執事、メモアプリ、さらにはゲームのNPCも、あなたが持ち歩くエッジ大規模モデルによって駆動され、あなたの習慣を完全に理解し、あなただけのためにサービスを提供する可能性があります。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 本章実践練習：AI秘書にコマンド</p>
+                        <p class="mt-1">さあ、スマホAIの協調能力を実際に体験しましょう。音声アシスタントに、多層的な情報を含む複雑な指示を出してください。</p>
+                        <p class="mt-1">例：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Siriに： 「Hey Siri、明日の朝7時に傘を持って行くようにリマインドして、そして今日の午後3時のカレンダーを4時に変更して。」</li>
+                            <li>Googleアシスタントに： 「OK Google、今晩8時に母親に電話するようにリマインドして、そして今すぐSpotifyで晴れの日を再生して。」</li>
+                            <li>Bixbyに： 「Hi Bixby、LINEのQRコードスキャンを開いて、そして画面の明るさを下げて。」</li>
+                        </ol>
+                        <p class="mt-2">それが一連の指示をどうやって理解し、順番に実行するかを観察してください。これの背後には、NLPがタスクを分割し、異なるアプリの能力を呼び出すことを示しています。おめでとうございます。人間とコンピュータの自然言語インタラクションの共同作戦を完了しました！</p>
+                        <p class="mt-2">本章はここまで。気づきましたか？AIはスマホの中で、遠い実験室のテクノロジーではなく、あなたの指先の下、每一次のフォーカス、每一次のウェイクアップ、每一个の単語の背後にある「見えないエンジン」です。それはますます速く、ますますあなたを理解し、ますます安全になっています——なぜなら、それは知恵とプライバシーを一緒に、あなたの「デジタル分身」にしっかりと閉じ込めようとしているからです。</p>
+                    </div>
+                </div>
+
+                <!-- 第二十章 -->
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第二十章：プログラミング思考と自動化入門</h3>
+                    <p class="mb-3">🤔 「プログラミング」という言葉を聞くと、暗い画面と複雑なコードが浮かびますか？実は、プログラミング思考は、あなたがスマホを使う時、すでに使っているかもしれません。スマホを使って、どのように「自動化」できるかを学び、生活をより効率的にしましょう。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 プログラミング思考：「手順」を分解する</h4>
+                    <p class="mb-2">プログラミングの核心は、大きな問題を小さなステップに分解することです。スマホの自動化も同じです。</p>
+                    <p class="mb-2">例：「毎朝7時に天気を確認し、雨なら傘を持つようにリマインド」というタスクを自動化するには：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>トリガー（いつ）：毎朝7時。</li>
+                        <li>条件（何を）：天気予報を取得し、雨かどうか確認。</li>
+                        <li>アクション（どうする）：雨なら通知を送信。</li>
+                    </ol>
+                    <p class="mb-2">これがプログラミング思考です。複雑なタスクを、トリガー、条件、アクションの3要素に分解します。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 スマホ自動化ツール</h4>
+                    <p class="mb-2">あなたのスマホには、強力な自動化ツールが内蔵されています。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">iOS：ショートカット（Shortcuts）</h5>
+                    <p class="mb-2">Appleが提供する自動化ツール。プログラミング不要で、ブロックを組み合わせるだけで自動化フローを作成できます。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>トリガー：時間、場所、Wi-Fi接続、アプリ起動など。</li>
+                        <li>アクション：メッセージ送信、音楽再生、設定変更、アプリ起動など。</li>
+                        <li>例：「帰宅時にWi-Fiに接続したら、照明をオンにして音楽を再生」。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Android：Tasker、Automate、またはブランド独自機能</h5>
+                    <p class="mb-2">Androidはよりオープンなため、より強力な自動化が可能です。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tasker：最も強力なAndroid自動化アプリ。ほぼすべての操作を自動化できます。</li>
+                        <li>ブランド機能：Samsungの「Bixbyルーチン」、Xiaomiの「シナリオ」など。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎯 実用的な自動化シナリオ</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>睡眠モード</strong>：就寝時間になると、自動的におやすみモードをオン、音量を下げ、ブルーライトをカット。</li>
+                        <li><strong>運転モード</strong>：車のBluetoothに接続すると、自動的に運転モードをオン、着信を音声で通知。</li>
+                        <li><strong>バッテリー節約</strong>：バッテリーが20%を下回ると、自動的に省電力モードをオン、不要な機能をオフ。</li>
+                        <li><strong>位置ベースリマインダー</strong>：スーパーに近づくと、買い物リストを通知。</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 本章実践練習：自動化フローを作成</p>
+                        <p class="mt-1">あなたのスマホの自動化ツールを開き、以下のフローを作成してください：</p>
+                        <p class="mt-1">「毎晩10時に、おやすみモードをオンにし、明日の天気を通知」。</p>
+                        <p class="mt-2">手順：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>自動化アプリを開く（iOSは「ショートカット」、AndroidはTaskerまたはブランド機能）。</li>
+                            <li>新規自動化/ルーチンを作成。</li>
+                            <li>トリガーを設定：時間（毎晩10時）。</li>
+                            <li>アクションを追加：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>おやすみモードをオンにする。</li>
+                                    <li>天気情報を取得して通知。</li>
+                                </ul>
+                            </li>
+                            <li>保存してテスト。</li>
+                        </ol>
+                        <p class="mt-2">これがプログラミング思考の実践です。条件とアクションを組み合わせて、スマホに「賢さ」を与えます。</p>
+                    </div>
+                </div>
+
+                <!-- 第二十一章 -->
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第二十一章：中古スマホの処理とデジタル遺産</h3>
+                    <p class="mb-3">📱 新しいスマホを買ったら、古いスマホはどうしますか？ゴミ箱に捨てる？それはもったいないし、危険かもしれません。この章では、古いスマホを安全に処理し、デジタル遺産を管理する方法を学びます。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 古いスマホを再利用する</h4>
+                    <p class="mb-2">古いスマホは、まだ使える「小型コンピュータ」です。以下の用途に再利用できます：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>専用メディアプレーヤー</strong>：音楽、ポッドキャスト、動画専用デバイスに。</li>
+                        <li><strong>デジタルフォトフレーム</strong>：Googleフォトなどでスライドショーを表示。</li>
+                        <li><strong>ホームセキュリティカメラ</strong>：専用アプリで監視カメラに。</li>
+                        <li><strong>専用ゲーム機</strong>：エミュレータでレトロゲームをプレイ。</li>
+                        <li><strong>スマートホームコントローラー</strong>：常時接続のスマートホームハブに。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗑️ スマホを手放す前の必須ステップ</h4>
+                    <p class="mb-2"><strong>⚠️ 重要：単に「削除」するだけでは不十分です！</strong></p>
+                    <p class="mb-2">スマホを売却、寄付、リサイクルする前に、以下のステップを必ず実行してください：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>バックアップ</strong>：すべての重要データをバックアップ（写真、連絡先、アプリデータ）。</li>
+                        <li><strong>アカウントからサインアウト</strong>：
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Googleアカウント（Android）。</li>
+                                <li>Apple ID（iPhone）。</li>
+                                <li>サードパーティアプリ（LINE、WeChatなど）。</li>
+                            </ul>
+                        </li>
+                        <li><strong>ファクトリーリセット（出荷時設定に戻す）</strong>：
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>[設定] > [システム] > [リセット] > [すべてのデータを消去]（Android）。</li>
+                                <li>[設定] > [一般] > [転送またはiPhoneをリセット] > [すべてのコンテンツと設定を消去]（iOS）。</li>
+                            </ul>
+                        </li>
+                        <li><strong>暗号化を確認</strong>：現代のスマホはデフォルトで暗号化されていますが、古い機種は手動で暗号化設定を確認してください。</li>
+                        <li><strong>SDカードとSIMカードを取り外す</strong>：これらも個人情報が含まれている可能性があります。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚰️ デジタル遺産：あなたの「デジタル分身」の未来</h4>
+                    <p class="mb-2">もしあなたが何かあっても、あなたのデジタル資産（写真、ソーシャルメディアアカウント、暗号通貨など）はどうなりますか？</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">デジタル遺産管理のステップ：</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>資産の棚卸し</strong>：あなたが所有するデジタル資産をリストアップ（アカウント、サブスクリプション、デジタル購入物など）。</li>
+                        <li><strong>パスワードマネージャーの緊急連絡先を設定</strong>：1Password、Bitwardenなどは、緊急連絡先機能を提供し、特定の条件下で信頼できる人にアクセスを許可できます。</li>
+                        <li><strong>Apple/Googleの「遺産連絡先」</strong>：
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>iOS 15.2以降：設定 > サインインとセキュリティ > 遺産連絡先。</li>
+                                <li>Google：非活動アカウントマネージャーを設定。</li>
+                            </ul>
+                        </li>
+                        <li><strong>遺言書にデジタル資産を含める</strong>：弁護士に相談し、デジタル資産の処理方法を法的文書に記載。</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 本章実践練習：スマホを安全にリセット</p>
+                        <p class="mt-1">（注意：この練習は、実際にスマホを手放す時にのみ行ってください！）</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>すべてのデータがバックアップされていることを確認。</li>
+                            <li>すべてのアカウントからサインアウト。</li>
+                            <li>ファクトリーリセットを実行。</li>
+                            <li>再起動後、セットアップ画面が表示されることを確認（個人データが残っていない証拠）。</li>
+                            <li>SDカードとSIMカードを取り外す。</li>
+                        </ol>
+                        <p class="mt-2">また、遺産連絡先を設定することを検討してください。設定 > サインインとセキュリティ > 遺産連絡先（iOS）またはGoogleの非活動アカウントマネージャーを確認してください。</p>
+                    </div>
+                </div>
+
+                <!-- 第二十二章 -->
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第二十二章：未来のスマホとデジタルライフ</h3>
+                    <p class="mb-3">🔮 スマホはどこへ向かっているのでしょうか？折りたたみ式？ARグラス？脳内チップ？この最終章では、未来のテクノロジートレンドを探り、デジタルライフをどう準備すべきかを考えます。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 スマホの進化トレンド</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 折りたたみ式スマホ</h5>
+                    <p class="mb-2">Samsung、Huawei、Motorolaなどがリード。スマホとタブレットの融合。現在は高価で壊れやすい印象がありますが、技術の成熟とともに主流になる可能性があります。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. AR（拡張現実）とMR（複合現実）</h5>
+                    <p class="mb-2">Apple Vision Pro、Meta Questなどが示すように、スマホはARグラスと連携して、物理世界とデジタル世界を融合させます。スマホは「計算ハブ」として、ARグラスに処理能力を提供します。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. AIファースト</h5>
+                    <p class="mb-2">AIはますますスマホの核心になります。大規模言語モデル（LLM）がエッジデバイスで動作し、パーソナルAIアシスタントがあなたの生活を完全に管理する日が来るかもしれません。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. 持続可能性と環境</h5>
+                    <p class="mb-2">リサイクル素材、長寿命設計、修理しやすさが重要になります。欧州連合の「修理権」法など、規制も変化しています。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🌐 デジタルライフの未来</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li><strong>メタバースと仮想空間</strong>：物理的な会議からバーチャル空間での存在へ。スマホはこの世界への「入り口」です。</li>
+                        <li><strong>デジタルツイン</strong>：あなたのスマホデータから、あなたの「デジタルコピー」が作成され、パーソナライズされたサービスを提供。</li>
+                        <li><strong>6Gと無处不在の接続</strong>：6Gは単なる速度向上ではなく、万物のインターネット（IoT）を実現し、すべてのデバイスがシームレスに接続。</li>
+                        <li><strong>脳内チップ？</strong>：Neuralinkなどの技術は、直接的な脳-コンピュータインターフェースを目指しています。倫理的・技術的な課題は多いですが、可能性は無限です。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎓 どう準備すべきか？</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>学び続ける</strong>：テクノロジーは急速に変化します。好奇心を持ち、新しいことを学び続けましょう。</li>
+                        <li><strong>デジタルリテラシーを高める</strong>：情報を批判的に評価し、フェイクニュースを識別し、デジタルセキュリティを実践。</li>
+                        <li><strong>プライバシー意識を持つ</strong>：未来のテクノロジーはよりパーソナルになります。プライバシー設定を常に確認し、データの価値を理解。</li>
+                        <li><strong>バランスを取る</strong>：テクノロジーはツールであり、主人ではありません。オフラインの時間も大切に。</li>
+                        <li><strong>コミュニティに参加する</strong>：テクノロジーフォーラム、ユーザーグループに参加し、知識を共有。</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 最終実践：あなたのデジタルライフを振り返る</p>
+                        <p class="mt-1">この本を読み終えた今、あなたのスマホとの関係は変わりましたか？</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>この本で学んだ最も重要な3つのことを書き出してください。</li>
+                            <li>あなたのスマホ使用習慣で、改善したい点は何ですか？</li>
+                            <li>次に学びたいテクノロジートピックは何ですか？</li>
+                            <li>家族や友人に、スマホの使い方を教える機会はありますか？教えることは最も効果的な学習です。</li>
+                        </ol>
+                        <p class="mt-2">おめでとうございます！あなたは「スマホマスター」の道を歩み始めました。デジタルライフを掌握し、テクノロジーをあなたのために働かせましょう！</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 五、附录 -->
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">五、付録</h2>
+
+                <!-- 付録A -->
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">付録A：新規スマホ開封「完全ガイド」フロー</h3>
+                    <p class="mb-3">新しいスマホを買ったら、まず何をすべきか？以下のチェックリストに従ってください：</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📦 開封時</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>パッケージが開封されていないことを確認（シールが intact）。</li>
+                        <li>同梱物を確認：スマホ本体、充電器、ケーブル、SIMピン、保証書、クイックスタートガイド。</li>
+                        <li>外観をチェック：傷、凹み、製造上の欠陥がないか。</li>
+                        <li>画面をチェック：デッドピクセル、色ムラがないか（白/黒画面で確認）。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚙️ 初期設定</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>電源を入れ、言語と地域を選択。</li>
+                        <li>Wi-Fiに接続。</li>
+                        <li>アカウントにサインイン（GoogleまたはApple ID）。</li>
+                        <li>セキュリティ設定：指紋、顔認証、PINコードを設定。</li>
+                        <li>「スマホを探す」をオンに。</li>
+                        <li>システム更新を確認し、最新版にアップデート。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔒 セキュリティ強化</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>二要素認証をオンに。</li>
+                        <li>プライバシー設定を確認：位置情報、アプリ権限。</li>
+                        <li>不要なプリインストールアプリを無効化またはアンインストール。</li>
+                        <li>セキュリティアプリをインストール（ウイルス対策）。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">☁️ バックアップ設定</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>iCloudまたはGoogleバックアップをオンに。</li>
+                        <li>写真の自動バックアップを設定。</li>
+                        <li>連絡先の同期を確認。</li>
+                    </ol>
+                </div>
+
+                <!-- 付録B -->
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">付録B：実践演習リファレンス</h3>
+                    <p class="mb-3">この本に含まれるすべての実践練習のクイックリファレンス：</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">基礎編</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>第0章：スマホ「身分証明書」を確認</li>
+                        <li>第1章：ハードウェア構成を理解する</li>
+                        <li>第2章：「ダウンロード」フォルダを整理</li>
+                        <li>第3章：ホットスポットを設定・管理</li>
+                        <li>第4章：3つのアプリの権限を監査</li>
+                        <li>第5章：「平日」と「休日」モードを設定</li>
+                        <li>第6章：「リモートロック」を有効化してシミュレート</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">ソフトウェア編</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>第7章：WeChatチャット履歴をPCにバックアップ</li>
+                        <li>第8章：スマホでドキュメントをスキャンしてPDFを生成</li>
+                        <li>第9章：決済アプリにより安全なロックを設定</li>
+                        <li>第10章：プロモードで夜景写真を撮影</li>
+                        <li>第11章：専用の「機内モード」エンターテイメントパッケージを構成</li>
+                        <li>第12章：「就寝リラックス」自動化フローを作成</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">応用編</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>第13章：バッテリーに健康診断を受けさせる</li>
+                        <li>第14章：アカウントの同期内容を確認</li>
+                        <li>第15章：スマホ画面をテレビにミラーリング</li>
+                        <li>第16章：写真と連絡先を手動でPCにバックアップ</li>
+                        <li>第17章：「強制再起動」をシミュレート</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">発展編</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>第18章：スマホに「信頼できる電話帳」（DNS）を設定</li>
+                        <li>第19章：AI秘書にコマンド</li>
+                        <li>第20章：自動化フローを作成</li>
+                        <li>第21章：スマホを安全にリセット</li>
+                        <li>第22章：あなたのデジタルライフを振り返る</li>
+                    </ul>
+                </div>
+
+                <!-- 付録C -->
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">付録C：ミニマル用語「専門用語」対照表</h3>
+                    <p class="mb-3">この本で使用された技術用語の簡単な説明：</p>
+                    
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">用語</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">説明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">SoC</td>
+                                    <td class="border border-gray-300 px-4 py-2">System on Chip。スマホの「脳」。CPU、GPU、その他のコンポーネントを統合したチップ。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RAM</td>
+                                    <td class="border border-gray-300 px-4 py-2">Random Access Memory。一時的な作業メモリ。大きいほど多くのアプリを同時に実行可能。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">ROM/ストレージ</td>
+                                    <td class="border border-gray-300 px-4 py-2">Read-Only Memory（実際はフラッシュストレージ）。写真、アプリなどを長期保存。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OLED</td>
+                                    <td class="border border-gray-300 px-4 py-2">有機ELディスプレイ。個々のピクセルが発光。高コントラスト、省電力。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 px-4 py-2">Near Field Communication。近距離無線通信。交通系IC、モバイル決済に使用。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">VPN</td>
+                                    <td class="border border-gray-300 px-4 py-2">Virtual Private Network。仮想プライベートネットワーク。通信を暗号化し、プライバシーを保護。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">DNS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Domain Name System。ドメイン名をIPアドレスに変換するシステム。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OCR</td>
+                                    <td class="border border-gray-300 px-4 py-2">Optical Character Recognition。画像内の文字を認識してテキストに変換する技術。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">AI/機械学習</td>
+                                    <td class="border border-gray-300 px-4 py-2">Artificial Intelligence。人工知能。スマホでの写真最適化、音声認識などに使用。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">エッジAI</td>
+                                    <td class="border border-gray-300 px-4 py-2">クラウドではなく、デバイス本体でAI処理を行う技術。高速でプライバシー保護。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RCS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Rich Communication Services。次世代SMS。高品質画像、既読通知などをサポート。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">HTTPS</td>
+                                    <td class="border border-gray-300 px-4 py-2">HTTP Secure。暗号化されたWeb通信プロトコル。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 付録D -->
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">付録D：信頼できるリソースはどこで見つかる？</h3>
+                    <p class="mb-3">スマホに関する情報を得るための信頼できるソース：</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 公式リソース</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Appleサポート</strong>：support.apple.com</li>
+                        <li><strong>Google Androidヘルプ</strong>：support.google.com/android</li>
+                        <li><strong>各ブランド公式サイト</strong>：Samsung、Xiaomi、OPPO、vivoなど</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📰 テクノロジーメディア</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>国内</strong>：ITmedia、Engadget日本版、ギズモード・ジャパン</li>
+                        <li><strong>グローバル</strong>：The Verge、TechCrunch、Android Police、9to5Mac</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">👥 コミュニティとフォーラム</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Reddit</strong>：r/Android、r/iPhone、r/techsupport</li>
+                        <li><strong>Stack Exchange</strong>：Android Enthusiasts、Ask Different（Apple）</li>
+                        <li><strong>国内掲示板</strong>：5ch、各ブランド公式コミュニティ</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎥 YouTubeチャンネル</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>MKBHD（Marques Brownlee）</li>
+                        <li>Unbox Therapy</li>
+                        <li>Linus Tech Tips</li>
+                        <li>国内：各種ガジェットレビューチャンネル</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ 注意すべき情報源</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>出所不明の「ハック」や「裏技」</li>
+                        <li>過度に sensation な見出しの記事</li>
+                        <li>明らかに古い情報（2-3年以上前）</li>
+                        <li>スポンサー記事と明記されていないレビュー</li>
+                    </ul>
+                </div>
+
+                <!-- 付録E -->
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">付録E：謝辞と説明</h3>
+                    <p class="mb-3">この本は、スマホ初心者から中級者への旅のガイドとして作成されました。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🙏 謝辞</h4>
+                    <p class="mb-2">この本の作成にあたり、以下のリソースとコミュニティに感謝します：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>オープンソースコミュニティ</li>
+                        <li>テクノロジーメディアとレビュアー</li>
+                        <li>オンラインフォーラムで知識を共有するすべての人々</li>
+                        <li>スマホ技術を進歩させるすべてのエンジニアとデザイナー</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ 免責事項</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>この本の情報は、執筆時点のものです。テクノロジーは急速に変化するため、一部の内容が古くなる可能性があります。</li>
+                        <li>スマホの操作は自己責任で行ってください。重要なデータは必ずバックアップしてください。</li>
+                        <li>特定の機種やOSバージョンによって、機能や設定の位置が異なる場合があります。</li>
+                        <li>この本の内容は教育目的であり、特定の製品やサービスの推奨を意図するものではありません。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📧 フィードバック</h4>
+                    <p class="mb-2">この本の改善のためのフィードバックを歓迎します。誤りの指摘、追加してほしいトピック、改善提案などがありましたら、お知らせください。</p>
+
+                    <div class="bg-light rounded-lg p-6 mt-6 text-center">
+                        <p class="text-lg font-semibold mb-2">ご清読ありがとうございました！</p>
+                        <p class="text-secondary">あなたのデジタルライフが、より豊かで安全なものになりますように。</p>
+                        <p class="mt-4 text-sm text-secondary">© 2024 スマホマスター！初心者必見のデジタル必修講座</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 返回顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 脚本 -->
+    <script>
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // 目录展开/收起
+        document.querySelectorAll('.toc-parent').forEach(parent => {
+            const toggle = parent.querySelector('.toc-toggle');
+            const child = parent.querySelector('.toc-child');
+            
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                child.classList.toggle('open');
+                toggle.classList.toggle('rotate-180');
+            });
+        });
+
+        // 返回顶部按钮
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // 移动端关闭菜单
+                    if (!sidebar.classList.contains('-translate-x-full') && window.innerWidth < 1024) {
+                        toggleMenu();
+                    }
+                }
+            });
+        });
+
+        // 滚动时高亮目录
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('#sidebar a[href^="#"]');
+
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC(); // 初始化
+    </script>
+</body>
+</html>
