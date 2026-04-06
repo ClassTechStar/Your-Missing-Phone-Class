@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Master Your Smartphone! Essential Digital Literacy Course for Beginners</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-left: 3px solid #165DFF;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Top Navigation Bar -->
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">Master Your Smartphone!</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>Back to Top
+            </a>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="flex min-h-screen pt-16 relative">
+        <!-- Sidebar Table of Contents -->
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">Table of Contents</h2>
+                <ul class="space-y-1 text-sm">
+                    <!-- Basics -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#basics" class="flex-1">I. Basics (Chapters 0-6)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#chapter-0" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 0: Hi, Before We Begin</a></li>
+                            <li><a href="#chapter-1" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 1: Hello, My Personal Computer</a></li>
+                            <li><a href="#chapter-2" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 2: Organising Your Digital Room</a></li>
+                            <li><a href="#chapter-3" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 3: Connecting Your Phone to the "Lifeline"</a></li>
+                            <li><a href="#chapter-4" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 4: Installing and Managing Apps</a></li>
+                            <li><a href="#chapter-5" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 5: Making Your Phone Understand You</a></li>
+                            <li><a href="#chapter-6" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 6: Protecting Your Digital Life</a></li>
+                        </ul>
+                    </li>
+                    <!-- Software -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#software" class="flex-1">II. Software (Chapters 7-12)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#chapter-7" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 7: Communication</a></li>
+                            <li><a href="#chapter-8" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 8: Mobile Office and Learning</a></li>
+                            <li><a href="#chapter-9" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 9: Mobile Payments</a></li>
+                            <li><a href="#chapter-10" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 10: Photography</a></li>
+                            <li><a href="#chapter-11" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 11: Entertainment</a></li>
+                            <li><a href="#chapter-12" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 12: Utility Apps</a></li>
+                        </ul>
+                    </li>
+                    <!-- Advanced -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#advanced" class="flex-1">III. Advanced (Chapters 13-17)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#chapter-13" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 13: Battery Science</a></li>
+                            <li><a href="#chapter-14" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 14: Account System</a></li>
+                            <li><a href="#chapter-15" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 15: Device Collaboration</a></li>
+                            <li><a href="#chapter-16" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 16: Data Backup</a></li>
+                            <li><a href="#chapter-17" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 17: Troubleshooting</a></li>
+                        </ul>
+                    </li>
+                    <!-- Beyond -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#beyond" class="flex-1">IV. Beyond (Chapters 18-22)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#chapter-18" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 18: Network Security</a></li>
+                            <li><a href="#chapter-19" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 19: AI in Your Phone</a></li>
+                            <li><a href="#chapter-20" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 20: Automation</a></li>
+                            <li><a href="#chapter-21" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 21: Digital Legacy</a></li>
+                            <li><a href="#chapter-22" class="block px-3 py-1.5 rounded-md hover:bg-light">Chapter 22: Future Phones</a></li>
+                        </ul>
+                    </li>
+                    <!-- Appendix -->
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#appendix" class="flex-1">V. Appendix</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#appendix-a" class="block px-3 py-1.5 rounded-md hover:bg-light">Appendix A: New Phone Setup</a></li>
+                            <li><a href="#appendix-b" class="block px-3 py-1.5 rounded-md hover:bg-light">Appendix B: Exercise Hints</a></li>
+                            <li><a href="#appendix-c" class="block px-3 py-1.5 rounded-md hover:bg-light">Appendix C: Terminology</a></li>
+                            <li><a href="#appendix-d" class="block px-3 py-1.5 rounded-md hover:bg-light">Appendix D: Resources</a></li>
+                            <li><a href="#appendix-e" class="block px-3 py-1.5 rounded-md hover:bg-light">Appendix E: Thanks</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Mobile Overlay -->
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <!-- Main Content Area -->
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <!-- Cover -->
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">Master Your Smartphone!</h1>
+                <p class="text-center text-secondary text-lg">Essential Digital Literacy Course for Beginners</p>
+                <p class="text-center text-secondary mt-2">From Beginner to Expert: Take Full Control of Your Digital Life</p>
+            </div>
+
+            <!-- Section 1: Basics -->
+            <section id="basics" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">I. Basics (Chapters 0-6)</h2>
+                <p class="mb-4 text-secondary">Your phone is far more powerful than you could ever imagine. This section is the foundation for all the "magical operations" that follow. We will first unify our "language," and then step by step help you get to know and control your device.</p>
+
+                <!-- Chapter 0 -->
+                <div id="chapter-0" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 0: Hi, Before We Begin</h3>
+                    <p class="mb-3">Before we officially start exploring, let's talk about some basic rules to make sure you understand everything that follows~</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. What Can This Book Help You With? (And What It Cannot Do)</h4>
+                    <p class="mb-2">It can help you systematically understand how to use your phone, grasp the principles behind the functions, and most of the ideas apply whether you're an Android user or an Apple user. It will guide you through hands-on exercises.</p>
+                    <p class="mb-2">It is not a manual for a specific phone model, nor is it tech news about chasing the latest products, and definitely not a guide to help you become addicted to your phone.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Our "Code" Explanations</h4>
+                    <p class="mb-2">To speak more clearly, this book uses some small markers:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[Button Name]: Represents a specific button or app name on the screen.</li>
+                        <li>>: Represents the sequence of operations, for example "Tap [Settings] > [Sound]".</li>
+                        <li><strong>Bold</strong>: Very important! May be key concepts or safety warnings.</li>
+                        <li><em>Italic</em>: Some supplementary thoughts or metaphors.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. Android and iOS, We Cover Both</h4>
+                    <p class="mb-2">Guess what? Some things have different names but do the same thing. For example: "Applications" (Android) and App (iOS), Settings (both called Settings), File Manager (Android) and Files (iOS). As long as you know they're the same thing, that's all that matters.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. Phone Storage: Why Did You Buy 128GB But Only Have Less Than 110GB Available?</h4>
+                    <p class="mb-2">Storage units: 1TB = 1024GB, 1GB = 1024MB...</p>
+                    <p class="mb-2">But the nominal capacity you bought becomes "smaller" after you get it. The main reasons are:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>The system takes up space: The operating system is like the load-bearing wall of a house—it must exist.</li>
+                        <li>Pre-installed apps from the manufacturer: The apps that come with a new phone also take up space.</li>
+                        <li>Formatted capacity loss: For technical reasons, like how a backpack's lining also takes up volume.</li>
+                    </ol>
+                    <p class="mb-2">So when buying a phone, remember to factor in what the system takes up!</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Check Your Phone's "Identity Card"</p>
+                        <p class="mt-1">Open [Settings], find "About Phone" (or similar option), and note down: Phone model, system version, total storage space, and remaining space. This is the first step to understanding it.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 1 -->
+                <div id="chapter-1" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 1: Hello, My Personal Computer</h3>
+                    <p class="mb-3">Your phone is actually the most personal supercomputer in your pocket.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. Your Phone's Hardware: The "Five Viscera and Six Bowels"</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC (Chip)</strong>: The phone's "brain + heart," determining performance.</li>
+                        <li><strong>RAM (Running Memory)</strong>: A temporary workbench—the larger it is, the smoother it is to have multiple apps open at the same time.</li>
+                        <li><strong>Storage (ROM)</strong>: A long-term warehouse where all photos, videos, and apps are stored.</li>
+                        <li><strong>Screen</strong>: Your eyes. What matters is type (OLED has vibrant colours, LCD is easier on the eyes), resolution (clarity), and refresh rate (whether scrolling feels responsive).</li>
+                        <li><strong>Battery and Charging</strong>: Charge whenever you use it—don't wait until it's completely dead or keep it at 100% all the time, that's the most friendly to the battery. Fast charging and wireless charging are very convenient.</li>
+                        <li><strong>Camera</strong>: Now relies on multiple lenses + algorithms (computational photography) working together—night scenes and bokeh all depend on it.</li>
+                        <li><strong>Sensors</strong>: Your phone's small feelers. Like gyroscope (game steering), NFC (swiping access cards and transit cards), proximity sensor (auto screen-off during calls).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Operating System: Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Like an open-source community—phone manufacturers can deeply customise it, offering more choices.</li>
+                        <li>iOS: Like a well-tended garden—Apple controls both hardware and software, creating a unified experience.</li>
+                    </ul>
+                    <p class="mb-2">Both ecosystems are extremely rich—just choose the lifestyle you like.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. Your Phone's Many Roles</h4>
+                    <p class="mb-2">It has long stopped being just a phone: It is a communication tool, smart camera, wallet, information portal, gaming console, mobile office, health assistant, smart home remote control, and even your digital ID card.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Understand Hardware Configuration</p>
+                        <p class="mt-1">In [Settings], see if you can find the processor model, RAM, and ROM sizes. Get a sense of your phone's capabilities.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div id="chapter-2" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 2: Organising Your Digital Room — File Management</h3>
+                    <p class="mb-3">Phones get messy after long use—good habits start with managing files.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. The Three-Layer Storage System</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Internal Storage</strong>: The core area, fast speed—operating system and apps are all here.</li>
+                        <li><strong>SD Card (if supported)</strong>: An extended wardrobe, slower speed—suitable for movies and photos.</li>
+                        <li><strong>Cloud Storage</strong>: A safe + sync network drive. Prevents loss and enables synchronisation between multiple devices.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Getting to Know the "File Manager"</h4>
+                    <p class="mb-2">Android usually has a [Files] or [File Manager] app, iOS has the built-in [Files] app. They are your "resource managers" for viewing all files on your phone. You will see folders like Download, DCIM (camera photos), Pictures, etc.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. Common File Operations</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Create folder: Long-press > New folder.</li>
+                        <li>Move files: Long-press > Select > Move to / Cut.</li>
+                        <li>Bulk selection: Long-press to enter selection mode, then tap to select multiple items.</li>
+                        <li>Sort: Usually by name, date, size—choose what suits you.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. Cleaning Up: Where to Start?</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Duplicate photos: Use your phone's built-in cleanup tool or third-party apps to identify and remove duplicates.</li>
+                        <li>Screenshots and long screenshots: Create a dedicated folder to manage them—they accumulate quickly!</li>
+                        <li>Old videos: Back up important ones to the cloud or computer, then delete to free up space.</li>
+                        <li>Unused apps: Uninstall apps you haven't used in months.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Clean Up Your Phone's "Digital Room"</p>
+                        <p class="mt-1">Goal: Find your File Manager, create a new folder, move some old screenshots into it, and then use the storage cleanup tool to scan once.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div id="chapter-3" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 3: Connecting Your Phone to the "Lifeline" — Network</h3>
+                    <p class="mb-3">No network, no phone—let's get your phone online.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. Mobile Data: Your Anywhere Internet</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Data usage monitoring: Check in [Settings] > [Network] or [Data Usage]—set limits to avoid overspending.</li>
+                        <li>Data saving: Close background app data usage, restrict certain apps from using mobile data.</li>
+                        <li>When to use: Wi-Fi is available at home and work; mobile data is for going out.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Wi-Fi: Home Internet</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Auto-connect: Enable this for home and work Wi-Fi—convenient but be careful about security.</li>
+                        <li>Public Wi-Fi: Be especially cautious—avoid accessing sensitive apps like banking.</li>
+                        <li>Wi-Fi troubleshooting: If connected but no internet, try forgetting the network and reconnecting, or restart the router.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. Bluetooth: The Wireless Connector</h4>
+                    <p class="mb-2">Its uses: Pairing headphones, speakers, smartwatches, car systems, etc.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pairing: Enable Bluetooth on both devices, search and connect on one side.</li>
+                        <li>Unpairing: Go to Bluetooth settings, find the device, and tap to disconnect or forget.</li>
+                        <li>Tips: Turn off Bluetooth when not in use to save power.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. Flight Mode and Network Troubles</h4>
+                    <p class="mb-2">Flight mode turns off all wireless connections—useful on planes or when you need to focus.</p>
+                    <p class="mb-2">Network troubleshooting: Restart phone > Check if mobile data is on > Check if Wi-Fi is working > Contact operator if problems persist.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Check Your Data Usage</p>
+                        <p class="mt-1">In [Settings], find "Data Usage" or "Network." See how much data you've used this month and which apps consume the most data.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div id="chapter-4" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 4: Installing and Managing Apps — Your Phone's "Skill Pack"</h3>
+                    <p class="mb-3">Apps are your phone's superpowers—let's learn to manage them wisely.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. Where to Download Apps?</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Official sources first</strong>: Apple's App Store, Android's built-in app store (Huawei AppGallery, Xiaomi App Store, etc.).</li>
+                        <li><strong>Why not unknown sources?</strong>: Unofficial sources may contain malware—safety first!</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. App Permissions: What Are They?</h4>
+                    <p class="mb-2">Apps ask for permissions to use certain phone functions. For example, a camera app needs camera and storage permissions.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Common permissions: Storage, camera, microphone, location, contacts.</li>
+                        <li>Principle: "Does this app really need this permission?" If not, deny it.</li>
+                        <li>How to check: [Settings] > [Apps] > [Permissions].</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. App Management</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Updates: Keep apps updated for new features and security patches.</li>
+                        <li>Uninstall: Long-press the app icon, tap uninstall—or drag to the uninstall area.</li>
+                        <li>Disable: For pre-installed apps you don't need, you can disable them (not delete, just hide).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. App Versions and Updates</h4>
+                    <p class="mb-2">Why update? New features, performance improvements, and security bug fixes.</p>
+                    <p class="mb-2">How to update: Go to app store, check for updates, or enable auto-update.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Review App Permissions</p>
+                        <p class="mt-1">Go to [Settings] > [Apps] > [Permissions]. Check the permissions for 3-5 frequently used apps. Are there any permissions that seem unnecessary?</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 5 -->
+                <div id="chapter-5" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 5: Making Your Phone Understand You — Basic Settings</h3>
+                    <p class="mb-3">A few simple settings can make your phone much easier to use.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. Display Settings</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Brightness: Set to auto-brightness—the phone adjusts based on ambient light.</li>
+                        <li>Dark mode: Switch between light and dark themes—easier on the eyes at night.</li>
+                        <li>Font size: Adjust to a comfortable reading size.</li>
+                        <li>Screen timeout: Set how long until the screen auto-locks.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Sound and Vibration</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ringtone: Set your favourite ringtone.</li>
+                        <li>Notification sounds: Different apps can have different sounds.</li>
+                        <li>Do Not Disturb: Silence all notifications—great for sleep or focus time.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. Notifications Management</h4>
+                    <p class="mb-2">Too many notifications are distracting. We need to take control:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Turn off notifications for apps that aren't important.</li>
+                        <li>Allow only important notifications to break through Do Not Disturb.</li>
+                        <li>Notification badges: Those little red numbers—clean them up!</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. Security Settings</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Lock screen password: Set a secure password/PIN/pattern.</li>
+                        <li>Fingerprint/Face unlock: Convenient and relatively secure.</li>
+                        <li>Find My Phone: Must-enable feature (discussed in detail in Chapter 6).</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Customise Your Notification Centre</p>
+                        <p class="mt-1">Pull down the notification centre. Are there notification toggles you don't need? Turn them off. Find [Settings] > [Notifications] and refine which apps are allowed to send notifications.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 6 -->
+                <div id="chapter-6" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 6: Protecting Your Digital Life — Security and Privacy</h3>
+                    <p class="mb-3">Your phone holds so much personal information—let's learn to protect it.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 Lock Screen: Your First Line of Defense</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Password/PIN: The most basic security measure—don't use "123456"!</li>
+                        <li>Pattern: Draw a pattern to unlock—easy to remember but be careful about smudges.</li>
+                        <li>Fingerprint: Fast and secure.</li>
+                        <li>Face recognition: Convenient, but some models have security weaknesses—evaluate based on your situation.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 "Find My Phone": Your Phone's Lifeline</h4>
+                    <p class="mb-2">This feature is most important when you lose your phone:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Location: See where your phone is on a map.</li>
+                        <li>Play sound: Make your phone ring—great for finding it at home.</li>
+                        <li>Lost mode: Remotely lock the phone and display a contact number—someone who finds it can contact you.</li>
+                        <li>Remote erase: The last resort—clears all data (but you can no longer locate it after erasing).</li>
+                    </ul>
+                    <p class="mb-2">Go to [Settings]—Apple users find "Find My iPhone," Android users find "Find My Device" or similar brand service—make sure it's turned on (green).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 System Updates: Patch Holes</h4>
+                    <p class="mb-2">The primary purpose of system updates is fixing security vulnerabilities—it's like patching holes in your house. So when you see a system update prompt, try to upgrade as soon as possible.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 Recognising and Preventing Telecom Fraud</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Common scams: Impersonating police/customers (phishing), winning prizes/刷单 rebates (bait), online romance scams (pig butchering scam).</li>
+                        <li>Built-in phone protection: Harassment call blocking, verification code theft prevention, SMS link security checks—remember to turn these on in settings.</li>
+                        <li>Anti-fraud mantra: Don't easily trust, don't disclose, don't click, don't transfer, verify first if in doubt!</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Enable and Test "Remote Lock"</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Make sure "Find My Phone" is enabled.</li>
+                            <li>On a computer browser or another phone, log in to the corresponding cloud service (iCloud.com or brand cloud service website).</li>
+                            <li>Find "Find Device" function, try issuing a "Play Sound" or simulated "Lock" command to your own phone—familiarise yourself with the entire operation process so you won't panic in critical moments.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 2: Software -->
+            <section id="software" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">II. Software (Chapters 7-12)</h2>
+
+                <!-- Chapter 7 -->
+                <div id="chapter-7" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 7: Communication — SMS, Calls and Social</h3>
+                    <p class="mb-3">Communication is the phone's most primitive and essential purpose. Now it has evolved from simple calls and SMS into a complex ecosystem including instant messaging, social networks, and email.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 Phone App Advanced Features: More Than Just Making Calls</h4>
+                    <p class="mb-2">Guess what? Modern phone dialers have long surpassed simple keypads, integrating powerful tools like call recording, spam blocking, and smart identification.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">1. Call Recording (Note Legal Compliance):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Purpose: Record important call content for work notes, interviews, customer commitments, or dispute preservation.</li>
+                        <li>Legal note: In China, using call recordings as evidence requires obtaining the other party's consent, or using them to protect legitimate rights (like complaining about harassment or fraud). Before commercial or sensitive conversations, verbally informing the other party "This call may be recorded" is the safer approach.</li>
+                        <li>How to operate:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Usually has a clear "Record" button in the call interface. You can find "Call Recording" option in the phone app settings and set auto-recording rules.</li>
+                                <li>iOS: The system does not provide native call recording function. If needed, use third-party call recording apps.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Spam Call Blocking and Smart Identification:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Principle: The phone app queries a large number database when calls come in, displaying "Spam Call," "Scam Call," or company name.</li>
+                        <li>How to enable:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Enter Phone app > Upper right "Settings" > Spam blocking or Smart identification. Enable all identification and blocking options.</li>
+                                <li>iOS: Enter [Settings] > [Phone] > [Call Blocking & Identification]. You can see installed third-party security apps (like Tencent Phone Manager) that support this function, and allow them to work. Enabling "Silence Unknown Callers" mutes all calls not in your contacts.</li>
+                            </ul>
+                        </li>
+                        <li>Tip: After receiving a spam call, actively mark it as "Spam" or "Scam" in call history. This contributes data to the database and helps others—don't get it wrong!</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Call Assistance Features:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Call recording to text: Some Android brand phones can, after call recording, directly provide a "Convert to Text" button next to the recording file, turning dialogue into text.</li>
+                        <li>Visual assistance (Live Captions): In Android accessibility settings or iOS hearing accessibility, you can enable "Live Transcribe" to generate real-time captions for all audio including calls.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 SMS vs iMessage/RCS: Verification Codes and Spam Filtering</h4>
+                    <p class="mb-2">Traditional SMS has not been eliminated—it remains a reliable channel for receiving verification codes, bank notifications, and official information.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs iMessage (iOS) / RCS (Android):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iMessage: Messages sent between Apple devices via internet, displayed as blue bubbles. Supports high-quality images and videos, read receipts, completely free and end-to-end encrypted.</li>
+                        <li>RCS: The next-generation communication protocol promoted by global carriers and Google. Functions similar to iMessage or WeChat but based on phone numbers. Check and enable "Chat Features" in Android messaging app settings—don't get it wrong!</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Verification Code Security:</h5>
+                    <p class="mb-2">The system automatically identifies and categorises verification code SMS. Never disclose verification codes to anyone.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Spam Filtering:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: [Settings] > [Messages], enable "Filter Unknown Senders."</li>
+                        <li>Android: In messaging app settings, enable "Smart Messaging" or "Spam Filtering."</li>
+                        <li>General tip: For obvious promotional spam, do not reply to anything (including "TD to unsubscribe"). Just delete or mark as spam. Replying sometimes confirms your number is valid.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 WeChat/QQ: National-Level Social App Management</h4>
+                    <p class="mb-2">WeChat and QQ have surpassed being mere communication tools—they have become "super apps" integrating social, payment, and information acquisition.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">1. Chat History Backup and Migration:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Importance: Chat history contains important files, memories, and work information, but is only stored locally and in server temporary cache. Losing your phone or uninstalling and reinstalling causes permanent loss of records.</li>
+                        <li>Backup to computer (most reliable):
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>Log into PC or Mac WeChat on computer.</li>
+                                <li>Click bottom left menu > [Migrate & Backup] > [Backup & Restore].</li>
+                                <li>Select "Backup Chat History to Computer." On phone, select chats to backup.</li>
+                                <li>Note: Backup files are encrypted and stored locally on your computer. For restore, phone and computer need to be on the same Wi-Fi.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Storage Space Cleanup:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Path: WeChat [Me] > [Settings] > [General] > [Storage Space]. QQ [Settings] > [General] > [Storage Space Management].</li>
+                        <li>Cleanup strategy:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Cache: Safe to clear—temporary data generated by app operation.</li>
+                                <li>Chat history: Enter to carefully clean by time, file type, or individual chats. For example, clean all videos older than one year across all chats in one go.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Privacy and Security Settings:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ways to add me: Control how others find you (phone number, WeChat ID, group chat, etc.).</li>
+                        <li>Moments permissions: Set who can see, do not show to certain people.</li>
+                        <li>Authorization management: In WeChat [Settings] > [Personal Info & Permissions] > [Authorization Management], view and remove third-party website or app WeChat login authorizations.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 Email: Configuring and Using on Mobile</h4>
+                    <p class="mb-2">Efficiently handling email on mobile is a key part of mobile office.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">1. Adding Email Accounts:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>System mail app:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS: [Settings] > [Mail] > [Accounts] > [Add Account].</li>
+                                <li>Android: System usually has "Email" app. Open and follow prompts to add.</li>
+                            </ul>
+                        </li>
+                        <li>Dedicated client apps: Like Gmail, Outlook—optimised for specific email services with more powerful features.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Mobile Email Tips:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Push notification management: Set different notification methods for different email accounts.</li>
+                        <li>Gesture operations: Most email apps support swipe gestures to quickly archive, delete, or flag emails.</li>
+                        <li>Signature: Set a professional mobile email signature.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Security Notes:</h5>
+                    <p class="mb-2">Be cautious about logging into email or sending sensitive emails on public Wi-Fi.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Backup WeChat Chat History to Computer Once</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Start backup on computer: Open WeChat on computer > Bottom left menu > [Migrate & Backup] > [Backup & Restore].</li>
+                            <li>Select backup to computer: Click "Backup Chat History to Computer."</li>
+                            <li>Select backup content: WeChat on phone will pop up prompt. Select chats to backup and click "Start Backup."</li>
+                            <li>Wait for backup to complete.</li>
+                            <li>(Optional) Learn restore process: In the same window, the other option is "Restore Chat History to Phone."</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Chapter 8 -->
+                <div id="chapter-8" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 8: Mobile Office and Learning</h3>
+                    <p class="mb-3">Your phone has become a powerful mobile workstation and portable learning centre.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 Document Processing: Editing and Creating on Your Palm</h4>
+                    <p class="mb-2">You can handle documents without a computer:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Microsoft Office/WPS Office: View and edit Word, Excel, PowerPoint files.</li>
+                        <li>Google Docs/Sheets: Online collaboration, automatically saved to cloud.</li>
+                        <li>PDF reading: Use built-in PDF reader or Adobe Acrobat.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 Cloud Notes: Your Second Brain</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: Built-in Notes app, syncs via iCloud.</li>
+                        <li>Android: Use branded cloud notes (Samsung Notes, Huawei Notes, etc.) or third-party like Evernote, Notion.</li>
+                        <li>Use scenarios: Meeting minutes, study notes, quick ideas capture, to-do lists.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 Learning Apps: Your Mobile Classroom</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Online courses: Coursera, Udemy, Bilibili,Zhihu, etc.</li>
+                        <li>Language learning: Duolingo, HelloTalk,扇贝单词.</li>
+                        <li>E-books: WeRead, Kindle, books reader apps.</li>
+                        <li>Knowledge subscription: Get daily knowledge推送, but don't get addicted.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 Calendar and Schedule: Time Management</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sync: Use cloud calendar (iCloud, Google Calendar) to sync across devices.</li>
+                        <li>Event reminders: Set reminders for important events—arrive early!</li>
+                        <li>Share calendar: Share with family or colleagues for coordination.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Set Up a Weekly Schedule in Your Calendar</p>
+                        <p class="mt-1">Open your calendar app, create recurring events for regular activities (work hours, gym, reading time), and set reminder times.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 9 -->
+                <div id="chapter-9" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 9: Mobile Payments and Life Services</h3>
+                    <p class="mb-3">Mobile payments have made wallets almost obsolete—let's use them safely.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 Mobile Payment Ecosystem</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>WeChat Pay/Alipay: The two main mobile payment platforms in China.</li>
+                        <li>Apple Pay/Huawei Pay/Xiaomi Pay: Branded mobile payments, convenient and secure.</li>
+                        <li>Quick pass/NFC: Physically tap to pay—works even without internet.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 Payment Security</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Payment passwords: Set separately from lock screen password—don't use simple combos.</li>
+                        <li>Bi verification: Enable fingerprint/face for payments above a certain amount.</li>
+                        <li>Transaction notifications: Ensure every transaction sends a notification—check regularly.</li>
+                        <li>No public Wi-Fi payments: Never make payments on public Wi-Fi.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 Life Services</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Utilities: Pay electricity, water, gas, internet—all in payment apps.</li>
+                        <li>Transportation: Book buses, trains, planes; hire bikes; Didi ride-hailing.</li>
+                        <li>Government services: Many government affairs can be handled in WeChat/Alipay mini programs.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 Health Code and Travel</h4>
+                    <p class="mb-2">Check the health code app or WeChat/Alipay for travel needs.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Review Your Payment App's Security Settings</p>
+                        <p class="mt-1">Go to your payment app's settings, check if transaction notifications are enabled, review recent transaction records, and ensure biometric payment limit is set appropriately.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 10 -->
+                <div id="chapter-10" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 10: Photography and Image Management</h3>
+                    <p class="mb-3">Modern phones are essentially cameras we carry everywhere—let's master photography.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 Camera Basics</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Common modes: Photo, Portrait, Night, Video, Pro/Manual.</li>
+                        <li>Key settings: Resolution (set to highest), gridlines (help with composition), HDR (enhanced detail).</li>
+                        <li>Focus and exposure: Tap the screen to focus; slide to adjust exposure.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 Photo Composition Basics</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Rule of thirds: Place subjects at intersection points.</li>
+                        <li>Leading lines: Use lines to guide the viewer's eye.</li>
+                        <li>Symmetry and balance: Good for architecture and landscapes.</li>
+                        <li>Negative space: Leave space for the subject to "breathe."</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 Album Management</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Create albums: Organise photos by time, place, or event.</li>
+                        <li>Hidden albums: Hide sensitive photos.</li>
+                        <li>Photo cleanup: Use built-in cleanup suggestions to remove duplicates and screenshots.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 Photo Backup</h4>
+                    <p class="mb-2">Photos are irreplaceable memories:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cloud backup: Enable iCloud Photos/Google Photos/brand cloud photos.</li>
+                        <li>Computer backup: Regularly copy to computer via cable.</li>
+                        <li>NAS backup: For tech enthusiasts, a home NAS is the ultimate solution.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Learn One New Composition Technique</p>
+                        <p class="mt-1">This week, practice the "rule of thirds" when taking photos. Enable gridlines in your camera settings, and try placing your main subject at the intersection points.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 11 -->
+                <div id="chapter-11" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 11: Audio-Visual Entertainment and Reading</h3>
+                    <p class="mb-3">Your phone is also an entertainment centre—let's make good use of it.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 Music</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Streaming: QQ Music, NetEase Cloud Music, Spotify, Apple Music.</li>
+                        <li>Offline listening: Download songs for listening without internet.</li>
+                        <li>Sound quality: Choose appropriate sound quality based on network and headphones.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 Video</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Long videos: Bilibili, YouTube, iQiyi, Tencent Video.</li>
+                        <li>Short videos: Douyin, Kuaishou, minor videos—don't get addicted!</li>
+                        <li>Screen casting: Cast to TV for better experience.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 Reading</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>E-books: WeRead, Kindle, books apps.</li>
+                        <li>News: Stay informed but avoid information overload.</li>
+                        <li>Podcasts: Learn while commuting.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Create a Relaxation Playlist</p>
+                        <p class="mt-1">Create a dedicated playlist for relaxation—songs that help you wind down after work or before sleep.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 12 -->
+                <div id="chapter-12" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 12: Recommended Utility Apps</h3>
+                    <p class="mb-3">Some apps make life much more convenient—here are recommendations.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 Security Tools</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Password manager: 1Password, LastPass, bitwarden—manage all passwords securely.</li>
+                        <li>Security: System built-in security features + third-party like Tencent Phone Manager.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 Travel Tools</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Maps and navigation:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Domestic: Amap or Baidu Maps—rich details and real-time traffic.</li>
+                                <li>International: Google Maps—global data, street view.</li>
+                                <li>Hiking: TwoDogs or Outdoor Mapper—can record routes and download offline maps.</li>
+                            </ul>
+                        </li>
+                        <li>Translation:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Real-time conversation: Google Translate "Conversation" and "Camera" instant translation is essential for travel.</li>
+                                <li>Text and documents: DeepL has high accuracy in European language translation.</li>
+                            </ul>
+                        </li>
+                        <li>Trip planning: Apps like "TripIt" can automatically generate routes and manage flight and hotel information.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 Automation Tools</h4>
+                    <p class="mb-2">This is the key to upgrading your phone to "smart assistant."</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: "Shortcuts" app—powerful automation without programming.</li>
+                        <li>Android: Built-in "Scene" function or Tasker for advanced automation.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Try One New App</p>
+                        <p class="mt-1">Choose one app from the recommendations above that you don't currently have, download it, and use it for a week.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 3: Advanced -->
+            <section id="advanced" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">III. Advanced (Chapters 13-17)</h2>
+                <p class="mb-4 text-secondary">Master advanced skills to make your phone truly yours.</p>
+
+                <!-- Chapter 13 -->
+                <div id="chapter-13" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 13: Battery Science and Power Optimisation</h3>
+                    <p class="mb-3">The battery is your phone's "energy heart." This chapter helps you understand the battery's quirks, learn scientific charging and battery life tips, and completely say goodbye to battery anxiety.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 How Does Battery Work? Cycles and Health</h4>
+                    <p class="mb-2">Phone batteries (lithium-ion or lithium-polymer) are like energy sponges: charging is absorbing water (storing energy), discharging is squeezing water (using energy). Remember three key characteristics:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Charge whenever: Different from old batteries—it has no memory effect, does not need to be drained completely before charging. Draining to 0% or keeping at 100% all the time actually causes damage.</li>
+                        <li>Hates heat: High temperature is the battery's number one killer.</li>
+                        <li>Ages over time: Maximum capacity decreases with use—this is normal.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Core indicators: Cycle Count and Health</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>One cycle is not one charge. For example, using 60% today and fully charging, then using 40% tomorrow totals 100% consumption—that is one cycle.</li>
+                        <li>Battery health is current maximum capacity as a percentage of when new. Below 80%, you will noticeably feel shorter battery life—consider official battery replacement.</li>
+                        <li>How to check:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Settings > Battery > Battery Health and Charging.</li>
+                                <li>Android: Generally search "battery health" in settings.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 Charging Myths? Fast Charging, Wireless Charging and Golden Rules</h4>
+                    <p class="mb-2">Busting rumours, charging scientifically.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Does fast charging damage battery?</h5>
+                    <p class="mb-2">Using original or certified fast-charging accessories causes minimal damage. Phone and charger have temperature control—will automatically reduce power if overheating. Do not use off-brand fast chargers.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. How about wireless charging?</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Convenient: Charge anytime—great for overnight charging.</li>
+                        <li>Drawbacks: Lower efficiency, more heat, slower charging.</li>
+                        <li>Suggestion: Good for overnight charging (trickle charging); use wired fast charging when in a hurry. Remove thick phone case when using.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Golden health rules for battery</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Optimal battery level: Try to keep between 20%-80%—do not let it starve (0%) or stuff itself (100%).</li>
+                        <li>Is overnight charging safe? Yes! Automatically stops when full—phone draws power directly from outlet.</li>
+                        <li>Never play heavy games while charging—combined heat is very damaging.</li>
+                        <li>Storing phone long-term: Charge to around 50% before powered-off storage.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 Real Battery-Saving Tips</h4>
+                    <p class="mb-2">Battery health alone is not enough—settings are the big battery-saving moves.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Find the "Battery Hog"</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Screen (biggest consumer): Lower brightness, shorten auto-lock time. OLED screen phones must enable dark mode—it saves significant battery.</li>
+                        <li>Poor signal: In elevators, basements—phone frantically searches for signal, draining battery fast.</li>
+                        <li>5G: If signal is poor, manually switch back to 4G—battery life much better.</li>
+                        <li>Location services:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Non-navigation apps (e.g., social, shopping)—set location permission to "Only While Using."</li>
+                                <li>Turn off non-essential options like "Location-Based Ads" in system location settings.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Manage apps' appetites</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Restrict background activity:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Settings > General > Background App Refresh—can turn all off or leave only WeChat.</li>
+                                <li>Android: In app battery settings, select "Restrict Background Activity" for unused apps.</li>
+                            </ul>
+                        </li>
+                        <li>Turn off unnecessary notifications: Every screen-on and vibration consumes battery.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Lifeline: Battery Saver Mode</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Battery Saver/Low Power Mode: System reduces performance, stops background sync—effective for temporary emergency.</li>
+                        <li>Ultra Battery Saver/Extreme Mode: Only phone, SMS and a few apps remain—screen turns black and white, can squeeze the last bit of battery for emergency use.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Exercise: Give Your Battery a Health Check</p>
+                        <p class="mt-1">Goal: Use data to find the real battery drain culprits.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Check health: Following the method above, find and note your battery's maximum capacity.</li>
+                            <li>Analyse power details:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Go to Settings > Battery—check chart and app list below, focus on which apps have long background activity.</li>
+                                    <li>Android: Go to Settings > Battery > Battery Usage—check hardware and app power consumption ranking.</li>
+                                </ul>
+                            </li>
+                            <li>Formulate strategy:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>If an app has abnormal background drain → Restrict it.</li>
+                                    <li>If "Mobile Network" power consumption is high → Recall if you often stay in areas with poor signal.</li>
+                                    <li>Find uncommon apps on the list → Consider uninstalling.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Chapter 14 -->
+                <div id="chapter-14" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 14: Account System and Cloud Services</h3>
+                    <p class="mb-3">Your account is your phone's "identity card"—cloud services are your "digital safe deposit box."</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 Why Account Systems Matter</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Account = Your digital identity in the ecosystem (Apple ID, Google Account, brand account).</li>
+                        <li>Losing your account means losing purchases, cloud data, and find-my-phone features.</li>
+                        <li>Protect your account like protecting your wallet.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 Two-Factor Authentication (2FA)</h4>
+                    <p class="mb-2">Enable 2FA for all important accounts.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Recommended: Use authentication app (Google Authenticator, Microsoft Authenticator) instead of SMS.</li>
+                        <li>Save backup codes in a secure place.</li>
+                        <li>Check logged-in devices regularly; remove unrecognized ones.</li>
+                        <li>Beware of phishing links: Never enter passwords via unknown links—manually type official website addresses.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 Cloud Sync</h4>
+                    <p class="mb-2">With cloud sync enabled, data feels like it's in your phone but is safely stored in the cloud.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Contacts, calendars, notes: Changes on one device sync instantly.</li>
+                        <li>Photos and videos: Enable cloud photos for continuous backup.</li>
+                        <li>Full device backup: Phone auto-backs up when charging, locked, and on Wi-Fi.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Sync vs Backup</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sync = Bidirectional: Delete on one device, deleted everywhere.</li>
+                        <li>Backup = One-way snapshot: Even if you delete locally, cloud backup remains.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.4 Family Sharing</h4>
+                    <p class="mb-2">Share purchases, subscriptions, location, calendars with family.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Check What Your Account is Syncing</p>
+                        <p class="mt-1">Goal: Proactively manage your account sync settings.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 15 -->
+                <div id="chapter-15" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 15: Phone and Device Collaboration</h3>
+                    <p class="mb-3">Modern phones are personal digital centres—connecting with other devices multiplies productivity.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 Computer Collaboration</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>AirDrop (Apple): Instant file/photo transfer between iPhone and Mac.</li>
+                        <li>Link to Windows (Android): View phone photos and reply to texts from your computer.</li>
+                        <li>Brand ecosystems: Huawei Multi-Screen Collaboration, Xiaomi Mi Share—project phone screen to computer.</li>
+                        <li>Physical connection: Cable file transfer—stable and fast for large files.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 Smartwatch/Fitness Band Integration</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Notification filter: Phone notifications to watch—reduce pickups.</li>
+                        <li>Health monitoring: Heart rate, sleep tracking.</li>
+                        <li>Remote control: Control music, use as camera shutter.</li>
+                        <li>Wrist tap: Transit cards and access cards sync to watch.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 Smart Home Integration</h4>
+                    <p class="mb-2">Phone's roles: Remote control, scene director, configuration centre.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone + privacy: Choose Apple HomeKit devices.</li>
+                        <li>Many devices + value: Xiaomi Mi Home ecosystem.</li>
+                        <li>Huawei phone: Prioritise HarmonyOS Connect.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Cast Your Phone Screen to TV</p>
+                        <p class="mt-1">Ensure phone and TV are on same Wi-Fi, enable screen mirroring on TV, then cast from phone.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 16 -->
+                <div id="chapter-16" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 16: Data Backup and Migration</h3>
+                    <p class="mb-3">Photos and chat records are priceless—learn to protect your digital assets.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 Full Device Backup</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Computer backup (most reliable): iTunes/Finder for iPhone; brand software for Android.</li>
+                        <li>Cloud backup (most convenient): iCloud for iPhone; brand cloud for Android.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 Selective Backup</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Photos: Enable cloud photos or copy to computer.</li>
+                        <li>Contacts: Stored in cloud account—will return when logging into new phone.</li>
+                        <li>WeChat chat records: Use built-in migration or backup to computer via desktop WeChat.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 Phone Migration</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Same platform: Official migration tools—best experience.</li>
+                        <li>iPhone to iPhone: iCloud restore or Quick Start.</li>
+                        <li>Cross-platform: Some data can transfer, but apps and data may not.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Manually Backup Photos and Contacts to Computer</p>
+                        <p class="mt-1">Goal: Have an offline backup you control.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 17 -->
+                <div id="chapter-17" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 17: Troubleshooting and Self-Rescue</h3>
+                    <p class="mb-3">Don't panic when your phone has problems—most can be fixed yourself.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 Lagging and Overheating</h4>
+                    <p class="mb-2">Diagnosis:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Storage full? Less than 10% remaining causes lag.</li>
+                        <li>Check battery usage ranking for apps consuming power.</li>
+                        <li>Poor signal causes frantic network searching.</li>
+                    </ul>
+                    <p class="mb-2">Treatment: Clear storage, uninstall problematic apps, restart, avoid heavy use while charging.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 App Crashes</h4>
+                    <p class="mb-2">Process: Close and reopen > Update from store > Check permissions > Clear cache > Reinstall if needed.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 Won't Boot</h4>
+                    <p class="mb-2">Charge 30 minutes > Try forced restart > Recovery mode repair > Seek professional repair if needed.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 Finding Official Repair</h4>
+                    <p class="mb-2">Find genuine authorised service providers on official websites. Back up data before repair!</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Chapter Exercise: Practice Forced Restart</p>
+                        <p class="mt-1">Learn this before you need it! All-screen iPhone: Volume Up > Volume Down > Hold Side button until Apple logo. Android: Hold Power 10-15 seconds until restart.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 4: Beyond -->
+            <section id="beyond" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">IV. Beyond (Chapters 18-22)</h2>
+                <p class="mb-4 text-secondary">Explore network security, AI, automation, digital legacy, and future technology.</p>
+
+                <!-- Chapter 18 -->
+                <div id="chapter-18" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 18: Deep Dive into Mobile Networks and Information Security</h3>
+                    <p class="mb-3">🔒 Why do we need to care about this?</p>
+                    <p class="mb-3">We use phones for internet, payments, chatting every day—it feels so convenient. But have you thought about how exposed your chat logs, payment passwords, and photos are when they are "running naked" on the internet? Your phone is your digital avatar—its security is your own security. Do not think hackers are far away—one careless move with public Wi-Fi might make you "step on a mine." Today, let us dig deep into the "undercurrents" in mobile networks and make your phone steady as a mountain, do not get this wrong.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📡 VPN: The "Invisible Cloak" in the Network</h4>
+                    <p class="mb-2">What exactly is it?</p>
+                    <p class="mb-2">VPN stands for Virtual Private Network. You can imagine it as building a dedicated, encrypted underground tunnel between your home and the website you want to visit.</p>
+
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Normal browsing: Your phone -> Public network (operator network, cafe Wi-Fi) -> Target website. 
+                            <p class="mt-1 text-secondary">Risk: Along this road, someone (hacker, malicious Wi-Fi provider, even network administrator) might be "watching" the data you send.</p>
+                        </li>
+                        <li>Using VPN: Your phone -> VPN encrypted tunnel -> VPN server -> Target website. 
+                            <p class="mt-1 text-secondary">Effect: All your network traffic, from entering the tunnel, is encrypted and encapsulated. "Peepers" along the way only see garbled text. Only when data reaches VPN server is it decrypted and forwarded to the real website. The website sees the VPN server's address, not your real address.</p>
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">What can it do? Besides "circumventing censorship"</p>
+                    <p class="mb-2">Do not think of VPN only for accessing foreign websites—it has many legitimate uses:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Protect security on public Wi-Fi: Airports, hotels, cafes using free Wi-Fi are high-risk areas for data leakage. Using VPN armours your connection.</li>
+                        <li>Secure remote access to company intranet: Many company employees working from home access company's internal systems and file servers securely through VPN.</li>
+                        <li>Protect personal privacy, avoid tracking: Prevent your Internet Service Provider (ISP) from recording and analysing your browsing habits to deliver targeted ads.</li>
+                    </ol>
+
+                    <p class="mb-2">⚠️ An important reminder</p>
+                    <p class="mb-2">Although VPN technology itself is a legitimate security tool, be sure to purchase from official channels or use reputable services. Do not use those dubious "free VPNs"—they might plant Trojans in your phone, or secretly record and sell your data—that is like "hiring a thief as a security guard."</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🚫 The "Sweet Trap" of Public Wi-Fi</h4>
+                    <p class="mb-2">Free Wi-Fi is tempting, but may be "sugar-coated bullets." Besides using VPN as the "ultimate solution," we can build two basic defence lines.</p>
+                    
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>First defence line: Recognise HTTPS
+                            <p class="mt-1">When visiting a website, check if the address starts with http:// or https://. That extra "s" stands for Secure. It means communication between you and the website is encrypted—even if data is intercepted, it is hard to crack. Today, vast majority of legitimate websites (banks, email, social platforms) use HTTPS by default. On public Wi-Fi, be sure the page you are visiting is HTTPS.</p>
+                        </li>
+                        <li>Second defence line: Upgrade your DNS query
+                            <p class="mt-1">What is DNS? Simply put, it is the "network phonebook." When you want to access example.com, your phone first asks DNS server: "What is the address (IP) of example.com?" Traditional DNS queries are like "postcards"—unencrypted. This means malicious Wi-Fi can see which websites you queried, and even tamper with answers, directing you to phishing websites!</p>
+                            <p class="mt-1">DNS over TLS (DoT) / DNS over HTTPS (DoH) solve this problem. They encrypt your "phonebook" queries too—so no one knows who you are looking up, and cannot change the answers.</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🕵️ Can "Incognito Browsing" Really Make You Invisible?</h4>
+                    <p class="mb-2">All browsers have "Incognito/Private Browsing Mode"—does it make you feel like an internet ninja? The truth might disappoint you.</p>
+                    
+                    <p class="mb-2">What does it actually do?</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>👍 Does not save local history: After closing incognito window, system does not save your browsing history, cookies and form data. Someone picking up your phone cannot see what you just searched.</li>
+                    </ul>
+
+                    <p class="mb-2">What it cannot do:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Hide your browsing from your ISP, network administrator (if using company Wi-Fi), and websites can still identify you through your IP address and other technical means.</li>
+                        <li>Prevent viruses and malware: If you accidentally click into a malicious website, you will still get infected.</li>
+                        <li>Hide downloaded files: Files you download in incognito mode are still saved in your download folder.</li>
+                    </ol>
+
+                    <p class="mb-2">Conclusion: Incognito mode is more like a <strong>"local eraser"</strong> than a "network invisibility cloak." It is suitable for protecting your login state and search records from being seen when borrowing someone else's computer—but do not rely on it to escape all network tracking.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Configure a "Trusted Phonebook" (DNS) for Your Phone</p>
+                        <p class="mt-1">Now that we know DNS queries can be snooped and tampered with, let us change to a more secure, faster DNS service. Using Android and iOS as examples.</p>
+                        <p class="mt-2 font-semibold">Android phone settings:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Open [Settings].</li>
+                            <li>Go to [WLAN], long-press your current Wi-Fi network, select [Modify Network].</li>
+                            <li>Tap [Advanced Options], change IP Setting from "DHCP" to "Static."</li>
+                            <li>Scroll down, find "Domain Name 1" and "Domain Name 2" (DNS server addresses).</li>
+                            <li>Enter the DNS address you want, for example: 
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>More security and privacy focused: Cloudflare DNS 1.1.1.1 and 1.0.0.1</li>
+                                    <li>Balanced experience: Google DNS 8.8.8.8 and 8.8.4.4</li>
+                                    <li>Domestic options: Alibaba DNS 223.5.5.5 and 223.6.6.6 / Tencent DNS 119.29.29.29</li>
+                                </ul>
+                            </li>
+                            <li>Save settings.</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">iPhone/iPad Settings (in Wi-Fi environment):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Open [Settings] > [Wi-Fi].</li>
+                            <li>Tap the [i] icon next to your connected Wi-Fi.</li>
+                            <li>Scroll down, find [Configure DNS].</li>
+                            <li>Select [Manual], tap [Add Server].</li>
+                            <li>Enter the recommended DNS address above (e.g., 1.1.1.1).</li>
+                            <li>Tap [Save] in top right.</li>
+                        </ol>
+                        <p class="mt-2">After completion, your phone will prioritise the more trusted DNS server you set when querying website addresses—safer browsing and possibly faster response. Congratulations—you have plugged another security hole!</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 19 -->
+                <div id="chapter-19" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 19: How AI Works in Your Phone</h3>
+                    <p class="mb-3">👋 Welcome to the coolest "magic show" on your phone—Artificial Intelligence. Your daily "point-and-shoot" photos, voice assistants that respond to your commands, keyboards that get smarter the more you use them—all have this invisible brain standing behind them. Today, let us lift the curtain and see how AI really "thinks" and works inside your phone.</p>
+                    <p class="mb-3"><strong>Core conclusion</strong>: AI in your phone is working to bring computing closer to you, not to make you go to the server.</p>
+                    <p class="mb-3">This statement is a bit roundabout, is not it? Let us understand it with the "digital avatar" concept from the previous chapter. The previous chapter said your phone is your avatar—data leaving it faces risks. And modern phone AI is exactly working to squeeze more intelligence into this "avatar" to process locally—this is called "on-device AI." Do not worry—let us break it down one by one, got it?</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 AI Camera: Your "Darkroom" Moved Into Your Phone</h4>
+                    <p class="mb-2">Point-and-shoot might be the AI feature we use most. You think "taking photos" is just one click? Not anymore.</p>
+                    <p class="mb-2">Early phone photography was like using a point-and-shoot film camera—the quality of the shot almost entirely depended on sensor and lens hardware. But now, AI computational photography is more like shoving a professional photo retoucher + photography team directly into the shutter button.</p>
+                    <p class="mb-2">What is the difference?</p>
+                    <p class="mb-2">This "team" is already working before you press the shutter. Scanning the scene, identifying <strong>"This is blue sky," "This is a face," "This is a night scene," or "This is a plate of food."</strong> After identification, AI instantly calls up an optimisation scheme carefully trained for this type of scene:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Shooting portraits: It knows to blur the background, beautify skin tone, automatically switch to portrait mode.</li>
+                        <li>Shooting night scenes: It does not just blindly increase ISO causing a photo full of noise—instead it might quickly take multiple low-light photos, then like putting together a jigsaw puzzle, "computationally" fuses the clearest, least noisy parts from all photos into one bright, clean image.</li>
+                        <li>Shooting documents: It automatically straightens edges, increases contrast—like a scanner.</li>
+                        <li>Shooting action shots: It can predict motion trajectory, automatically capture the sharpest moment.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Open your phone camera now, aim at different scenes (faces, green plants, food, text), and carefully observe the viewfinder. Many phones, when recognising specific scenes, show a tiny icon hint in the corner of the viewfinder, like "Portrait," "Food," "Text." Feel this "instant recognition" process. This is AI giving you real-time feedback before you press the shutter.</p>
+                    </div>
+
+                    <p class="mt-4 mb-2">So now, pressing the shutter is really just starting the last step of this "computational retouching" process. That one-second "Processing" spinner is AI brain working at full speed. What is great is, more and more of this complex computation is happening directly on the dedicated AI chip in your phone (like Apple's Neural Engine, Qualcomm AI Engine, Huawei's Da Vinci architecture, etc.)—fast and privacy-preserving.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗣️ Voice Assistant: How Does Your "Voice Secretary" Understand You?</h4>
+                    <p class="mb-2">"Hey Siri, what is the weather tomorrow?"</p>
+                    <p class="mb-2">"Xiaoai, set an alarm for 7 AM tomorrow."</p>
+                    <p class="mb-2">This has become as natural as breathing. But have you ever wondered how this voice secretary works?</p>
+                    <p class="mb-2">Its workflow can be broken down into a standardised "three-step process":</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Step 1: Hear (ASR - Automatic Speech Recognition).</strong>
+                            <p class="mt-1">When you say the wake word ("Hey Siri") and give an instruction, the phone's microphone records your voice waveform—a continuous signal. AI's first task is to chop this continuous sound wave into individual phoneme fragments, then match them against its massive trained vocabulary to convert them into text. This is called ASR. It must overcome your accent, speech speed, and ambient noise—very impressive.</p>
+                        </li>
+                        <li><strong>Step 2: Understand (NLU - Natural Language Understanding).</strong>
+                            <p class="mt-1">Getting the text "7 AM tomorrow remind me to take an umbrella" is not enough—it needs to understand the intent. Who? What time? Do what? This requires NLP technology. It analyses sentence structure, extracting key entities: "7 AM tomorrow" (time), "remind" (intent/action), "me" (object), "take umbrella" (event). This is understanding your command—important stuff.</p>
+                        </li>
+                        <li><strong>Step 3: Execute and Respond.</strong>
+                            <p class="mt-1">After understanding your intent, the assistant calls the corresponding app or service module in your phone. If checking weather, it fetches weather data online; if setting an alarm, it writes to the "Clock" app database; if asking "Who is Messi?", it might call a search engine. Finally, it uses TTS (Text-to-Speech) technology to "speak" the result back to you.</p>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">In the past, most heavy computation for Steps 1 and 2 needed to be sent to cloud servers via the internet. But now, wake word recognition and some offline commands (like turning off lights) can be completely processed locally on your phone. This is faster (no waiting for network) and more private (commands like "turn off the lights" do not need to be uploaded to the cloud).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⌨️ Keyboard Predictions and Writing Assistance: Your "Considerate Stenographer"</h4>
+                    <p class="mb-2">This might be the most subtly pervasive AI. You just typed "tonight" and it jumps to "what to eat"; you input "boss" and "hello" automatically follows. Behind this are on-device machine learning models observing and learning from you over time.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Personalised language model based on your habits: The keyboard quietly analyses your high-frequency words, phrase collocations, and chat partners. You like using "hahaha" with friends, but use "meeting minutes" with colleagues—it remembers all this. Over time, it forms a prediction model optimised only for you.</li>
+                        <li>Context understanding: It is not just looking at the previous word—it understands the context of the sentence you are typing. In a WeChat chat box versus a work document, the suggestions it gives for the same starting word might be completely different.</li>
+                        <li>Error correction: When you type a wrong character, it knows you probably meant a different word—and automatically corrects. This is not just dictionary matching—it is probabilistic judgement trained on hundreds of millions of inputs.</li>
+                    </ul>
+
+                    <p class="mb-2">🖋️ Going further: AI writing assistance.</p>
+                    <p class="mb-2">Now many keyboards or note apps offer "smart correction," "sentence polishing," "continuation" features—these are more powerful AI applications. It can help polish "this product is quite good to use" into "this product offers an excellent user experience," or after you write a title, suggest possible article openings. This model is usually larger and may partially rely on the cloud, but core association and prediction still largely happens locally to protect your writing privacy.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧠 On-Device AI vs Cloud AI: A Crossroads in Phone Evolution</h4>
+                    <p class="mb-2">We have actually been mentioning a key term repeatedly: on-device. This represents the core trend in phone AI development: computing moving closer to the user.</p>
+                    <p class="mb-2">We can use a simple table to see the fundamental differences between "on-device AI" and traditional "cloud AI":</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Comparison Dimension</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Cloud AI (Traditional)</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">On-Device AI (Current & Future Trend)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Where does data go?</td>
+                                    <td class="border border-gray-300 px-4 py-2">Your photos, recordings and other raw data need uploading to internet servers.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Raw data stays on phone—only processing results or small anonymised data synced out.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Speed</td>
+                                    <td class="border border-gray-300 px-4 py-2">Depends on network quality—latency. Asking a question requires "network loading."</td>
+                                    <td class="border border-gray-300 px-4 py-2">Instant response, no latency. Unlocking, photo searching, offline translation—in the blink of an eye.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Privacy & Security</td>
+                                    <td class="border border-gray-300 px-4 py-2">Your data needs to "leave home"—passing through public networks, potential leakage risk.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Data does not leave the "avatar"—fundamentally avoiding eavesdropping and interception during transmission.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Offline capability</td>
+                                    <td class="border border-gray-300 px-4 py-2">Basically no. No network ≈ AI features do not work.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Core features work completely offline—adapts to more scenarios (underground car parks, planes, wilderness).</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Power & Data Usage</td>
+                                    <td class="border border-gray-300 px-4 py-2">Needs continuous network communication—relatively power and data hungry.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Reduces frequent communication with cloud—more power and data efficient.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Current examples</td>
+                                    <td class="border border-gray-300 px-4 py-2">Early speech recognition, AI image generation requiring complex rendering, large-parameter language model conversations.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Face/fingerprint unlocking, photo face categorisation, offline translation, some voice commands, keyboard predictions.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-2">See the difference? On-device AI perfectly echoes the previous chapter's security appeal of "protecting your digital avatar." It builds the "avatar's" boundary walls more solidly and intelligently. Data and computation stay within the walls as much as possible—minimising risk and latency.</p>
+                    <p class="mb-2">The future "large models" are also evolving toward on-device. Although today's complete ChatGPT-style conversations cannot run on a small phone, its "mini refined version" can already reside on phones, handling some local tasks. In the future, your phone butler, note apps, and even game NPCs might all be driven by your privately carried on-device large model—it completely knows your habits and serves only you.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Chapter Exercise: Command Your AI Secretary</p>
+                        <p class="mt-1">Now, let us truly experience your phone AI's collaboration capability. Give your voice assistant a complex command with multiple pieces of information.</p>
+                        <p class="mt-1">For example:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Say to Siri: "Hey Siri, remind me to take an umbrella at 7 AM tomorrow, and change my 3 PM meeting to 4 PM."</li>
+                            <li>Say to Xiaoai: "Xiaoai, remind me to call mum at 8 PM tonight, and now play Jay Chou's 'Sunny Day.'"</li>
+                            <li>Say to Bixby: "Hi Bixby, open WeChat scan function, then lower screen brightness."</li>
+                        </ol>
+                        <p class="mt-2">Observe how it understands a string of commands and executes them one by one. This is NLP splitting tasks and calling different app capabilities behind the scenes. Congratulations—you just completed a human-computer natural language interaction operation!</p>
+                        <p class="mt-2">Chapter complete. Did you notice—AI in your phone is not distant lab technology—it is beneath your fingertips, behind every focus, every voice wake, every keystroke. It is becoming faster, smarter, and more secure—because it is working hard to lock your wisdom and privacy firmly inside your "digital avatar."</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 20 -->
+                <div id="chapter-20" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 20: Programming Thinking and Automation Basics</h3>
+                    <p class="mb-3">In the previous two chapters, we built a secure "boundary wall" for our phone and witnessed its increasingly intelligent "AI brain" within those walls. Now it can not only "think" securely but also understand your one-time complex voice commands to call different apps. But is that enough? Imagine: every day after work, you need to manually complete "open door -> turn on lights -> connect Wi-Fi -> play music"—is not that a bit repetitive and troublesome?</p>
+                    <p class="mb-3">In this chapter, let us unlock one of the phone's ultimate potentials: making it "think" like a programmer and automatically complete the series of tasks you set. We call this "automation." Do not be scared by "programming"—here it means "using clear logic to teach the phone to automatically execute a series of actions under specific conditions." It is like your customised "digital servant," or a set of freely combinable "digital LEGO."</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 What is Automation? What Can It Do for Me?</h4>
+                    <p class="mb-2">Simply put, automation packages those frequent, fixed-pattern repetitive operations into an "instruction set" and lets the phone run them automatically when conditions are met.</p>
+                    <p class="mb-2">It is not magic—it is logic. Its core usually contains three elements:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Trigger condition: When to start? Like "when I connect to home Wi-Fi," "every day at 8 AM," "when I open an app," "when I arrive at a location (geofence)."</li>
+                        <li>Action: Specifically what to do? Like "turn on living room smart lights," "lower media volume," "send a preset SMS to someone," "record today's step count to notes."</li>
+                        <li>(Optional) Logic: Need to judge? Like "if it is a workday, play news; if weekend, play music."</li>
+                    </ol>
+
+                    <p class="mb-2">What can it do for you? Imagine these scenarios:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Life efficiency: Auto turn on lights when arriving home, auto connect Wi-Fi and play relaxation playlist; before bed, auto enable Do Not Disturb, dim screen and set alarm.</li>
+                        <li>Work assistance: Auto mute when entering office area and switch to work to-do list app; after meeting ends, auto save recording to cloud and email share to colleagues.</li>
+                        <li>Personalised care: When rain forecast is detected, auto pop up "remember to bring umbrella" on lock screen; when battery below 20%, auto enable ultra power-saving mode and remind you to charge.</li>
+                        <li>Fun uses: Stick NFC tags on car—tap to auto navigate home and play car music; scan specific QR code to auto join Wi-Fi and show today's menu.</li>
+                    </ul>
+
+                    <p class="mb-2">Automation frees your hands and attention—transforming your phone from a passive tool into an proactive, thoughtful life companion.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 iOS "Shortcuts" in Practice: Creating Personalised Automation Workflows</h4>
+                    <p class="mb-2">Apple's "Shortcuts" app is an incredibly powerful automation tool. You can think of it as a visual flowchart building tool.</p>
+                    
+                    <p class="mb-2">Core concepts tour:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>"Shortcuts": A complete automation workflow. You can manually tap to run it, or let it run automatically.</li>
+                        <li>"Automation": A section in the "Shortcuts" app specifically for creating instructions that run automatically based on triggers (time, location, app opening, etc.).</li>
+                        <li>"Actions": The smallest execution units. The app has hundreds of built-in actions—from "Get Current Location" to "Play Music," "Send Message," "Calculate"—everything. They are like building blocks that can be assembled in sequence.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Experience a Simple Automation:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Open "Shortcuts" app (if not found, download from App Store).</li>
+                            <li>Tap the centre "Automation" tab at the bottom.</li>
+                            <li>Tap "+" in top right to create personal automation.</li>
+                            <li>You will see a rich list of triggers: Select one, for example "Charger" -> "Connected."</li>
+                            <li>Tap "Next," then "Add Action."</li>
+                            <li>In search box, search "voice," add the "Speak Text" action.</li>
+                            <li>In the text box, enter: "Charging has started, entering fast charge mode, master please rest assured!"</li>
+                            <li>Tap "Next," turn off "Ask Before Running" (so it really runs automatically), finally tap "Done."</li>
+                        </ol>
+                        <p class="mt-2">Now, whenever you plug in your charger, it will automatically speak to report. Simple, right? You have created your first automation!</p>
+                        <p class="mt-1">You can use the same logic to add more actions—like after connecting charger, automatically lower brightness, enable Do Not Disturb—combining them into your "Focused Charging" scene.</p>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 Android "Auto-Clicker" or "Tasker" Introduction</h4>
+                    <p class="mb-2">Due to its openness, Android has more automation tool choices, often more powerful and deeper. Here are two typical examples:</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Auto-Clicker (like "Auto-Clicker - Repeater")</h5>
+                    <p class="mb-2">Very suitable for simulating repetitive screen tap operations—zero learning curve.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>What it does: Records your tap and swipe sequences on screen, then auto-plays like a "screen macro."</li>
+                        <li>Typical uses: Game auto-play, daily check-in, auto-swiping short videos, etc. It operates on "screen pixel coordinates"—does not involve deep system logic.</li>
+                        <li>How to use: After installing app, generally there is a "Record Gesture" function—record your operation, save, then can run anytime with one tap or set to timed run.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Tasker</h5>
+                    <p class="mb-2">This is the most recognised automation powerhouse on Android—functionality comparable to programming, but requires more learning.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>What it does: Achieves deep automation through configuring "Profiles" linking "Triggers" (Contexts) and "Tasks."</li>
+                        <li>Power: It can control extremely deep system dimensions—including modifying system settings, reading/writing files, listening to sensors, HTTP requests, interacting with plugins, etc.</li>
+                        <li>How to start: Interface looks complex at first, but logic is clear. Recommended to start with official examples or simple tutorials online—like creating a task for "when connecting to car Bluetooth, auto open navigation app and switch to high volume."</li>
+                    </ul>
+
+                    <p class="mb-2">For most users, starting with tools like "Auto-Clicker" to feel the fun of automation, then challenging Tasker when you have more complex needs—is a smooth learning curve.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🛠️ Exercise: Create an "Auto-connect Wi-Fi and Play Music When Arriving Home" Command</p>
+                        <p class="mt-1">Now, let us merge what we learned in this chapter and create a classic home automation scenario. You can choose based on your phone system:</p>
+                        <p class="mt-2 font-semibold">iOS users (using "Shortcuts"):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Open "Shortcuts" app, go to "Automation" -> "Create Personal Automation."</li>
+                            <li>Select trigger: "Location." Set your home address—range can be slightly larger (e.g., within 100 metres). Select "Arrival" as trigger condition.</li>
+                            <li>Tap "Next," start "Add Action": 
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>First building block: Search and add "Set Wi-Fi" — set it to "On." (If phone previously connected to home Wi-Fi, it will auto-connect.)</li>
+                                    <li>Second building block: Search and add "Play Music." Tap "Music" to select specific playlist, album or song—like a playlist you named "Home Relaxation."</li>
+                                </ul>
+                            </li>
+                            <li>Tap "Next," be sure to turn off "Ask Before Running," then tap "Done."</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">Android users (using Tasker as example, simplified process):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Open Tasker, tap "Profiles" tab at bottom, tap "+."</li>
+                            <li>Select "State" -> "Network" -> "Wi-Fi Connected." In SSID, input or select your home Wi-Fi name.</li>
+                            <li>This will link you to a new "Task." Name the task, like "Home Entertainment."</li>
+                            <li>In task edit interface, tap "+" to add action: 
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>First action: Select "Media" -> "Music Play." Can specify play file or directory.</li>
+                                    <li>(Optional) Second action: You can also add "Alert" -> "Say"—let phone speak "Welcome home" in voice.</li>
+                                </ul>
+                            </li>
+                            <li>Press back key to save all settings.</li>
+                        </ol>
+                        <p class="mt-2">Now, whenever you step into your home range after work (iOS) or your phone auto-connects to home Wi-Fi (Android), your phone will silently execute this warm welcome routine. Congratulations! You have taken the first step in using programming thinking to organise your life and control your devices. Automation is not just a skill—it is an efficient, elegant attitude toward life. Enjoy mastering your phone and the composure and fun that technology brings!</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 21 -->
+                <div id="chapter-21" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 21: Second-Hand Phone Processing and Digital Legacy</h3>
+                    <p class="mb-3">Hey folks, after the "cultivation" through the first twenty chapters, I believe you have grown from a "digital newbie" to a quite composed phone user. But there is always a cycle in tech life—new loves eventually become old ones. When you stroke that veteran companion that has fought alongside you for years, preparing to let it "retire," do you know how to give it a dignified, safe farewell and plan long-term for your digital life? This chapter, let us talk about the "afterlife" of phones and "legacy" in the digital age.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 "Euthanasia" for Old Phones: Safe Selling or Gifting Guide</h4>
+                    <p class="mb-2">Handling an old phone is absolutely not the same as throwing away an old water cup. It is more like handling a mini safe full of all your diaries, letters, financial receipts and house keys. Direct formatting? Factory reset? These operations may just be tearing off the "safe's" label, while the contents inside are still quietly lying in some corner of the storage chip, waiting to be "awakened" by professional software.</p>
+                    <p class="mb-2">Core principle: Data cleaning is not "deletion," but "overwriting."</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Step One: Personal "Big Cleanup"</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Before operating, please be sure to complete one last full data backup (review Chapter 16). This is like packing up precious items for storage before moving, got it?</li>
+                        <li>Manually log out of all logged-in accounts, especially WeChat, Alipay, online banking Apps. Remove this phone's login authorisation from the device management list. This is equivalent to wiping the fingerprint lock on the safe.</li>
+                        <li>If the phone supports it, you can remove or unpair all Bluetooth devices and smart wearable devices.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Step Two: Execute Ultimate "Formatting"—Encrypted Erasure</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Modern phones (especially iOS and higher versions of Android) "restore factory settings" usually automatically include an "encrypted erasure" process. It overwrites the original encryption key with random data, making old data become unreadable garbled text. This is much safer than simply deleting files, remember that?</li>
+                        <li>Confirm before doing: Find "Reset" or "Restore Factory Settings" option in settings, carefully read the instructions, ensure it includes "Delete All Data" or "Clear All Content" prompt.</li>
+                        <li>Remove external storage: If your phone has an SD card, be sure to physically remove it and handle separately (format or physical destruction).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Step Three: Final "Camouflage"</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>After restoring factory settings, the phone will enter the guide interface like new. At this point, do not activate! Do not log in!</li>
+                        <li>You can choose to skip all setup steps, then fill the phone storage space again with irrelevant pictures, videos and other junk files, then execute factory reset again. This "fill then delete" operation can further reduce the possibility of original data being recovered.</li>
+                    </ul>
+
+                    <p class="mb-2">Completing the above three steps, your old phone has finally completed the "euthanasia" of data, and can safely embark on its next journey.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🏛️ Digital Legacy: How to Place Your Social Soul?</h4>
+                    <p class="mb-2">If cleaning the phone is handling "physical legacy," then digital legacy is handling your "social soul." Those Moments, Weibo, family photos in cloud drives, purchased e-books and music... they constitute all the memories of your digital life. But when we go offline, how should these assets be handled?</p>
+                    <p class="mb-2">The reality is: Platform rules > Personal wishes. Now, domestic and foreign mainstream platforms have hugely different policies for digital legacy handling, most without clear, convenient inheritance processes. So, planning ahead is especially important.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. "Legacy Contact" and "Memorial Account"</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Apple provides "Legacy Contact" feature. You can designate one or more trusted contacts. When you pass away, they can apply to access your iCloud account data (such as photos, notes, memos, etc.) through access keys and death certificate.</li>
+                        <li>Google has "Inactive Account Manager." You can set a period (such as 3, 6, 12 months of inactivity), then Google will try to contact you. If confirming the account is unused, it will send data to your designated contacts according to your preset settings, or directly delete the account.</li>
+                        <li>Facebook allows you to set your account as "Memorial Account." Designate a "Legacy Contact," this contact can manage your memorial homepage after you pass away (post pinned posts on behalf, reply to friend requests, etc.), but cannot directly log into your account or view private messages.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Manual Backup: The Most Primitive "Family Heirloom"</h5>
+                    <p class="mb-2">For truly precious data (such as family photos and videos), the most reliable method is still regularly downloading them to local hard drives or home NAS, and informing family of storage location and access method. This is like putting old photos into physical albums, the certainty of inheritance is highest.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. A Simple "Digital Will"</h5>
+                    <p class="mb-2">You do not need to write it formally. You can list the following information in a safe note (or tell family):</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Core account list: WeChat, email, main social platforms, cloud drives, financial accounts, etc.</li>
+                        <li>Important data locations: Point out which cloud service or local device your most cherished photos and documents are stored in.</li>
+                        <li>Your wishes: Whether you hope the account is permanently deleted, converted to memorial status, or specific data is passed to someone.</li>
+                    </ul>
+
+                    <p class="mb-2">Planning digital legacy is not unlucky, but a responsible digital citizen behaviour. It ensures your digital footprint can be respected and handled according to your wishes, rather than being forgotten in corners of the network, or causing unnecessary family troubles.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">♻️ The Last Journey of Environmental Protection: Recycling of Electronic Products</h4>
+                    <p class="mb-2">An old phone that has been safely cleaned, its physical life still has three mainstream paths:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Official trade-in/recycling: This is the most recommended way.</strong> Apple, Huawei, Xiaomi and other brands all have official trade-in or recycling programs. Advantages include:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Standardised process, data security is guaranteed (usually require you to wipe data yourself beforehand).</li>
+                                <li>Transparent valuation, can directly deduct from new phone payment.</li>
+                                <li>Environmental processing, official partners will professionally disassemble devices, valuable parts are recycled, harmful substances are harmlessly treated.</li>
+                                <li>May get coupons or gifts, direct cash out.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Reputable recycling platforms or offline stores:</strong> Choose reputable large recycling platforms or offline digital recycling stores. Be sure to complete data cleaning on-site, and let the other party issue a recycling receipt. Absolutely avoid street vendors without qualifications.</li>
+                        <li><strong>Second career (gift or backup):</strong>
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Give to family/friends: As "senior phone" for elders, learning device for children, or family backup phone.</li>
+                                <li>Dedicated device: Convert to dedicated car navigation, smart home control centre (always plugged into dock controlling lights, speakers), or security camera (using idle phone + monitoring App).</li>
+                                <li>Donate: Some public welfare organisations will accept still-usable old phones, after processing provide to groups in need.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">Whichever path you choose, letting old devices enter the formal recycling circulation system is reducing "e-waste" pollution for the Earth. What you phase out may be the beginning of another digital life.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Execute a "Standard Funeral" for Your Old Phone</p>
+                        <p class="mt-1">If you happen to have an old phone ready for disposal nearby (or simulate the operation), please strictly follow the steps below to hold a safe, environmentally friendly farewell ceremony for it:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>[Preparation] Last backup and logout:</li>
+                            <li>[Core] Execute encrypted factory reset:</li>
+                            <li>[Optional enhancement] Data overwriting:</li>
+                            <li>[Disposal] Choose its next stop:</li>
+                        </ol>
+                        <p class="mt-2">Completing the above steps, congratulations! You have not only protected your privacy, but also ended an electronic product's service cycle in a responsible way, and made an important long-term thinking for your vast digital life. Treating old devices well, planning digital afterlife, is the ultimate cultivation of a mature digital citizen.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 22 -->
+                <div id="chapter-22" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chapter 22: Future Phones and Digital Life</h3>
+                    <p class="mb-3">The "zeroing" ceremony for an old phone, planning the "afterlife" of digital assets—this is not just a proper ending, but more like a letter written to the future. On the back of the letter, there is a hidden anticipation about the arrival of "new members"—what will it look like? How will our lives be embedded into a brand new digital structure?</p>
+                    <p class="mb-3">Today let us let our imagination fly a bit (but keep our feet firmly planted on today's ground), take a look at those storms brewing on the horizon, and chat about phones after phones, life beyond screens.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🌌 Next-Generation Devices: What Will It Become?</h4>
+                    <p class="mb-2">Future devices must first solve the problem of "fixed form." A glass slab has ruled us for over a decade, and tech industry designers have long been restless.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">Foldable Phones: An Oversized "Phablet" or a Folded "Wallet"?</h5>
+                    <p class="mb-2">This wonderful contradiction has already walked into reality. Imagine, you are scrolling through Weibo with one hand on the subway, unfold and immediately get a tablet-comparable view to binge shows or process documents. It is like an exquisite Japanese folding fan, switching between different life scenarios with opening and closing. But joking aside, it is essentially forcing the choice question of "should I buy a phone or a tablet" into a "two-in-one" fill-in-the-blank question, and also gifting an "anxiety about screen creases" bonus thinking question. It perhaps tells us that what future devices pursue is not "bigger," but "more appropriate form."</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">AR Glasses: Open a "Second Desktop" Before Your Eyes</h5>
+                    <p class="mb-2">If foldable devices are "transformation," then augmented reality (AR) glasses are "overlay." It no longer attempts to replace that slab in your pocket, but wants to become a filter through which you see the world—navigation arrows directly projected on the road ahead, friend's chat window floating beside your coffee cup, foreign menu you want to translate automatically overlaid with Chinese. Sounds like sci-fi movies, but major tech giants have already set it as the next "ten-year bet." Its ambition is to make digital information as ubiquitous as air, yet exist "non-intrusively." Of course, the premise is it must be light enough (not like diving goggles anymore), beautiful enough (not making you look like a cyberpunk street interview subject), and must solve an ultimate social dilemma—when we are all wearing glasses to communicate, how to judge whether the other person is really looking at me, or browsing the weather widget above my head?</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">Brain-Computer Interfaces: Will "Thought Typing" Be the "Nine-Key" of the Next Decade?</h5>
+                    <p class="mb-2">The Matrix and Ready Player One have implanted the ultimate vision into our cultural genes—eventually, no external devices needed, thought itself will become the interaction medium. Now, some cutting-edge experiments have made electrode patches as thin as temporary tattoos, using thoughts to control game characters or type simple words, already preliminarily feasible. The future it depicts is an ultimate liberation of interaction: paralysed patients can use thoughts to type and communicate, creators can skip keyboard and mouse to directly "download" inspiration into documents. The vision is immensely grand, but reality reminds us this path is much longer than evolving from "brick phones" to "smartphones." Protecting the absolute privacy of personal thoughts will be an ethical proposition several orders of magnitude higher than the App permission management we discuss now. (For our generation, perhaps first learning to proficiently use the automation tools discussed in this chapter is more practical.)</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Give Your "Future Device" Thoughts a Check-up</p>
+                        <p class="mt-1">List the three highest-frequency tasks you currently complete with your phone (such as social, payment, entertainment), then think: if using any of the future devices above to do them, would the experience be better or weirder? The future may not be replacement, but redistribution of tracks.</p>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖️ The "Invisibility" of Phones and the New Identity Cornerstone</h4>
+                    <p class="mb-2">Setting aside the cool device forms, another future evolution direction of phones may be "invisibility." It is not about changing into other shapes, but wanting to become an ubiquitous "behind-the-scenes mastermind," becoming the sole foundation of your digital identity.</p>
+                    <p class="mb-2">This matter was seeded in the previous chapter. When you set "digital legacy contact," enable "account trusteeship," you are actually saying: "This device and this online identity are 'my' digital extension. Please handle it properly when I go offline."</p>
+                    <p class="mb-2">In the future, this "identity binding" will become more underlying and smooth:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cloud-based two-factor authentication everywhere: When you approach the shopping cart checkout, the system no longer needs SMS verification codes, but directly initiates biometric (fingerprint/face/voiceprint) inquiry to your cloud identity, instantly completing "you are you" authentication.</li>
+                        <li>Digital legacy becomes factory default: When activating a new phone, the system may warmly ask like "whether to enable backup": "Do you wish to preset a safe inheritance plan for your most precious digital assets (such as encrypted albums, documents, social accounts)?" It is no longer a niche advanced feature, but a default service accessible to everyone.</li>
+                        <li>From "device-centred" to "identity-centred": Today, your data is scattered in phones, tablets, computers. In the future, your cloud personal data vault is the centre. All devices: unfolded foldable screens, AR glasses you are wearing, even smart mirrors at home, are just different "displays" or "sensors" reading this "central identity." The phone is no longer the "home" of data, but your most intimate, important "portable door"—this is important.</li>
+                    </ul>
+
+                    <p class="mb-2">This brings huge convenience, and also a huge and urgent reminder: Protecting your main account (Apple ID/Google account/WeChat, etc.) will be ten thousand times more important than protecting the phone itself. Because losing a phone is just losing a door, having your main account stolen is equivalent to someone copying all your rooms' master keys and your digital DNA, do not get that wrong.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧐 Ethical Reflection: Are We Still the Phone's Master?</h4>
+                    <p class="mb-2">No matter how devices evolve, an ultimate question always exists: Are we "gods" empowered by technology, or "brains in vats" fed by algorithms? Philosophers call it "alienation"—we created tools, but are ultimately reversely defined and shaped by tools.</p>
+                    <p class="mb-2">Think about it:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>When algorithms know better than you what you want to see (or even want to buy), how much of your "liking" is spontaneous, how much is the result of being carefully "recommended" by computing power?</li>
+                        <li>When you cannot help lighting up the screen to glance every few minutes (even without notifications), is this your habit, or "addictive behaviour" designed by the phone through instant feedback mechanisms?</li>
+                        <li>Exercise: Next time friends gather for dinner, observe whether there is a "phone wall" moment (everyone is looking down at phones). Try stacking everyone's phone screens down in the centre of the table, feel the brief "withdrawal reaction" in the first few minutes and how the subsequent real conversation is different.</li>
+                    </ul>
+
+                    <p class="mb-2">Of course, completely rejecting technology is turning back the wheel of history. Those Apps claiming to make you completely "quit phones" (sometimes, they themselves are quite funny) often only bring brief novelty, but cannot last. A true healthy relationship is not about "quitting," but about "control" and "symbiosis."</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧘‍♂️ Stay Connected, Also Stay Independent—Your Digital Life Philosophy</h4>
+                    <p class="mb-2">Synthesising all chapters above, we can piece together a digital life philosophy belonging to you. It is not some mysterious mental method, but woven from a series of specific skills you have already learned:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Be the allocator of resources, not the receiver of pushes (review Chapter 9, 11). Actively customise your information stream, cancel unnecessary pushes, maintain a trace of sober curiosity about "guess you like," also retain the right to say "no."</li>
+                        <li>Let automation become your loyal "co-pilot" (this is Chapter 20's graduation work). Hand repetitive, trivial processes to shortcuts or automation tools, save your mental resources for things that truly need creativity and deep thinking.</li>
+                        <li>Establish your solid "digital rear area" (this is Chapter 13-17's core mission). Make good use of cloud sync and local backup, let you seamlessly continue on any device; manage your battery health well, maintain device "stamina"; master multi-device collaboration, let your computer, tablet, watch become phone's extension, not burden.</li>
+                        <li>Regularly execute "digital decluttering" and "social fasting" (this is Chapter 2, 4, 6's extended exercise). Clean up no-longer-needed Apps and files; in certain time periods, bravely enable focus mode, even airplane mode, feel the coherent space-time of the physical world.</li>
+                        <li>Always make security and privacy the prerequisite of all convenience (this is Chapter 6, 18's cornerstone and sharp sword). Cautiously authorise, make good use of security tools, maintain awe for strange links, do not get that wrong.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Hands-On Time: Draft Your "Personal Digital Device Usage Service Agreement"</p>
+                        <p class="mt-1">We always hurriedly click "Agree" to those lengthy App terms. This time, please write a simple "service agreement" for you and your phone (and even future AR glasses), to define your relationship. For example:</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>Article 1: My attention time belongs to me. You (phone) should proactively enter "Do Not Disturb" state when I am working/reading/accompanying family, got it?</li>
+                            <li>Article 2: My personal data is my property. You (phone and cloud)'s primary duty is safe encryption and convenient sync, not analysis and profiling without explicit consent.</li>
+                            <li>Article 3: Our common goal is to improve life efficiency and experience. If you (phone and Apps) make me addicted through inducement design, I have the right to uninstall you or put you in "restricted use folder."</li>
+                            <li>...</li>
+                        </ul>
+                        <p class="mt-2">The future is already here, just not evenly distributed yet. Perhaps this glass slab in your hand will still be your most important digital life portal in the next five years. But this does not prevent us from carrying a sober optimism, to look forward, to prepare, to personally shape that more yearning digital future. True "transcendence" is not having the coolest hardware, but no matter how technology changes, you are always that composed, confident, adept master.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section 5: Appendix -->
+            <section id="appendix" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">V. Appendix</h2>
+                <p class="mb-3">Alright, after the "long trek" through twenty-plus chapters, congratulations! You have levelled up from a "phone newbie" to mastering core skills from beginner to transcending level.</p>
+                <p class="mb-3">This appendix is like a portable quick-reference handbook and resource toolbox for you. When you encounter specific problems, or want to quickly review some knowledge point, just flip through here.</p>
+                
+                <!-- Appendix A -->
+                <div id="appendix-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">📦 Appendix A: New Phone Unboxing "Nursery-Level" Process</h3>
+                    <p class="mb-2">Do not rush to play when you get a new phone! Follow these steps, very steady:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. Unboxing Inspection "Trilogy":</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Check appearance: Inspect body and screen for scratches, bumps.</li>
+                        <li>Verify information: Match IMEI/serial number on box (in About Phone) with invoice.</li>
+                        <li>Test functions: Make a call to test earpiece and microphone, take a photo to check camera, connect to Wi-Fi and mobile network, got it?</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Activation and Initial Setup "Key Reminders":</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Network: First connect to stable Wi-Fi, avoid using mobile data to download updates, it costs money!</li>
+                        <li>Account: Log in to your Apple ID, Huawei account, Xiaomi account, etc. Remember, this is your phone's "ID card," finding phone and cloud backup all depend on it.</li>
+                        <li>Basic settings: While at it, turn on "Find My Phone," set a reliable lock screen password (stop using 123456!). Set screen brightness to auto, comfortable.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. Installing Apps "Safety First":</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Official stores first: Apple use App Store, Android use phone's built-in app store (like Huawei App Market, Xiaomi App Store).</li>
+                        <li>Do not grant permissions carelessly: When installation prompts permission requests, especially for contacts, SMS, location, microphone—think clearly "does this App really need it?" If not, turn it off.</li>
+                    </ul>
+                </div>
+
+                <!-- Appendix B -->
+                <div id="appendix-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">✅ Appendix B: Hands-On Exercise Quick Reference</h3>
+                    <p class="mb-2">Each chapter above ends with "Hands-On Time," here are some tips and reference answer directions for completing exercises:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Basics exercises: For example, cleaning phone storage, the goal is to find and delete those "forgot what it is" old videos, duplicate screenshots and long-unused Apps. Using phone's built-in "Phone Manager" or "Storage Cleanup" tool is most convenient.</li>
+                        <li>Software exercises: Setting WeChat storage cleanup, the path is usually [Me] - [Settings] - [General] - [Storage Space], where you can clean cache and manage chat records.</li>
+                        <li>Advanced exercises: Checking battery health, iPhone is in [Settings] - [Battery] - [Battery Health]; many Android phones can find it in "Phone Manager's" battery management, remember that?</li>
+                        <li>Universal tip: When encountering problems, restart first! This is the master key that solves more than half of phone minor issues.</li>
+                    </ul>
+                </div>
+
+                <!-- Appendix C -->
+                <div id="appendix-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">📖 Appendix C: Ultra-Simple Terminology "Jargon" Reference Table</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Term You Might Hear</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Actually Means...</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">One-Sentence Explanation</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">SoC / Chip</td>
+                                    <td class="border border-gray-300 px-4 py-2">Phone's brain and heart</td>
+                                    <td class="border border-gray-300 px-4 py-2">Core component determining whether phone is fast, whether games lag.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RAM (Running Memory)</td>
+                                    <td class="border border-gray-300 px-4 py-2">Phone's "short-term work desk"</td>
+                                    <td class="border border-gray-300 px-4 py-2">Bigger desk = more Apps can be open simultaneously, smoother switching.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">ROM (Storage)</td>
+                                    <td class="border border-gray-300 px-4 py-2">Phone's "big warehouse"</td>
+                                    <td class="border border-gray-300 px-4 py-2">Where photos, videos, Apps are stored. 128GB, 256GB refer to this.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OLED / LCD</td>
+                                    <td class="border border-gray-300 px-4 py-2">Two screen materials</td>
+                                    <td class="border border-gray-300 px-4 py-2">OLED has more vivid colours, more power-efficient (black screen does not emit light); LCD is easier on eyes, lower cost.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 px-4 py-2">Near-Field Communication</td>
+                                    <td class="border border-gray-300 px-4 py-2">The "tap" feature that lets your phone become transit card, access card, bank card.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OTA Update</td>
+                                    <td class="border border-gray-300 px-4 py-2">Wireless system upgrade</td>
+                                    <td class="border border-gray-300 px-4 py-2">That "System Update" you tap in [Settings], that is it.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Cloud Sync / Cloud Backup</td>
+                                    <td class="border border-gray-300 px-4 py-2">Saving things to the internet</td>
+                                    <td class="border border-gray-300 px-4 py-2">Sync is keeping latest anytime (like contacts); backup is a complete snapshot at a certain moment (for recovery).</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Fast Charging</td>
+                                    <td class="border border-gray-300 px-4 py-2">Quick charging technology</td>
+                                    <td class="border border-gray-300 px-4 py-2">Check clearly what protocol your phone supports (like PD, QC), matching charger is needed to reach fastest speed.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Appendix D -->
+                <div id="appendix-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">🔗 Appendix D: Where to Find Reliable Resources?</h3>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Official Support is First Choice:</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Apple users: Remember apple.com and iCloud.com. All official tutorials and online support are most complete here.</li>
+                        <li>Android users: Phone brand official websites (like Huawei, Xiaomi, OPPO, vivo official sites) all have "Service & Support" sections, drivers, manuals, repair booking are all here—this is important.</li>
+                        <li>Universal tools: Use these for phone switching! Apple uses iTunes (computer software), Huawei uses HiSuite, Xiaomi uses Mi Mover (phone App).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Useful Websites and Bloggers (Here listing some general directions):</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Check tips: On video platforms (like YouTube, Bilibili) search "[your phone model] tips," there will be many practical tutorials.</li>
+                        <li>Watch reviews: To understand a phone's real experience, watch several different bloggers' review videos, more useful than just looking at specs.</li>
+                        <li>Learn photography: Follow some mobile photography tutorial bloggers, the composition and lighting techniques they teach will improve your photos more than just changing phones.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Security Self-Check One-Sentence Checklist:</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Lock screen password set? (Password/PIN most reliable)</li>
+                        <li>"Find My Phone" enabled?</li>
+                        <li>Two-factor authentication enabled on important accounts (like Apple ID, WeChat)?</li>
+                        <li>Regularly backing up photos, WeChat chat records? (Computer or cloud)</li>
+                        <li>Remember anti-fraud mantra: Do not easily believe, do not disclose, do not transfer, do not be greedy, do not be impatient.</li>
+                    </ol>
+                </div>
+
+                <!-- Appendix E -->
+                <div id="appendix-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">💌 Appendix E: Thanks and Notes</h3>
+                    <p class="mb-2">Thank you for persisting through this "phone course"! During the writing process, we referenced a large number of manufacturers' official manuals, user guides and publicly available technical articles to ensure information accuracy. At the same time, we also drew valuable practical experience shared by countless digital enthusiasts and developer communities.</p>
+                    <p class="mb-2">Speaking from the heart, technology develops rapidly—book content is based on mainstream technologies at the time of writing. By the time you read it, perhaps new features and products have emerged. We hope the thinking and methods taught in this book can help you calmly face more future digital gadgets, not just operate the buttons in front of you.</p>
+                    <p class="mb-2">We wish you to master your phone, enjoy the convenience and fun brought by technology, and also become a clear-headed, confident digital citizen.</p>
+                    <p class="mb-2">—— Your Digital Life Guide</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-50 opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script>
+        // Navigation bar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md', 'bg-white/95', 'backdrop-blur-sm');
+            } else {
+                navbar.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Mobile menu toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        // TOC collapse/expand
+        const tocToggles = document.querySelectorAll('.toc-toggle');
+        tocToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const parent = e.target.closest('.toc-parent');
+                const child = parent.querySelector('.toc-child');
+                child.classList.toggle('open');
+                e.target.classList.toggle('fa-chevron-up');
+                e.target.classList.toggle('fa-chevron-down');
+            });
+        });
+
+        // Back to top button
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll TOC highlighting
+        const sections = document.querySelectorAll('.content-section');
+        const tocItems = document.querySelectorAll('#sidebar a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    tocItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === '#' + id) {
+                            item.classList.add('active');
+                            item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => observer.observe(section));
+
+        // Close mobile menu when clicking anchor
+        tocItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth < 1024) {
+                    sidebar.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
