@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="vi-VN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bậc Thầy Smartphone! Khóa Học Kỹ Thuật Số Bắt Buộc Dành Cho Người Mới Bắt Đầu</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-left: 3px solid #165DFF;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">Bậc Thầy Smartphone! Khóa Học Kỹ Thuật Số Bắt Buộc Dành Cho Người Mới Bắt Đầu</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>Quay về đầu trang
+            </a>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">Mục lục</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">I. Phần Cơ Bản (Chương 0-6)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 0: Xin chào, trước khi bắt đầu</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 1: Xin chào, máy tính cá nhân của tôi</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 2: Sắp xếp không gian số — Quản lý tập tin</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 3: Kết nối "đường đời" cho smartphone — Mạng</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 4: Cài đặt và quản lý ứng dụng — "Bộ kỹ năng" của smartphone</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 5: Cá nhân hóa smartphone — Cài đặt cơ bản</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 6: Bảo vệ cuộc sống số — Bảo mật và quyền riêng tư</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">II. Phần Phần Mềm (Chương 7-12)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 7: Truyền thông: SMS, gọi điện và mạng xã hội</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 8: Văn phòng di động và học tập</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 9: Thanh toán di động và dịch vụ cuộc sống</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 10: Chụp ảnh và quản lý hình ảnh</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 11: Giải trí và đọc sách</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 12: Các ứng dụng tiện ích được đề xuất</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">III. Phần Nâng Cao (Chương 13-17)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 13: Khoa học pin và tối ưu hóa tiết kiệm điện</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 14: Hệ thống tài khoản và dịch vụ đám mây</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 15: Kết nối smartphone với các thiết bị khác</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 16: Sao lưu và di chuyển dữ liệu</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 17: Xử lý sự cố và tự giải quyết</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">IV. Phần Phát Triển (Chương 18-22)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 18: Đi sâu vào mạng di động và bảo mật thông tin</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 19: AI hoạt động như thế nào trên smartphone</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 20: Tư duy lập trình và nhập môn tự động hóa</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 21: Xử lý điện thoại cũ và di sản số</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Chương 22: Tương lai của smartphone và cuộc sống số</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">V. Phụ lục</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">Phụ lục A: Quy trình "Hướng dẫn hoàn chỉnh" mở hộp điện thoại mới</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">Phụ lục B: Tham khảo bài tập thực hành</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">Phụ lục C: Bảng đối chiếu thuật ngữ chuyên ngành</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">Phụ lục D: Tìm tài nguyên đáng tin cậy ở đâu?</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">Phụ lục E: Lời cảm ơn và giải thích</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">Bậc Thầy Smartphone! Khóa Học Kỹ Thuật Số Bắt Buộc Dành Cho Người Mới Bắt Đầu</h1>
+                <p class="text-center text-secondary text-lg">Từ nhập môn đến thành thạo, làm chủ hoàn toàn cuộc sống số</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">I. Phần Cơ Bản (Chương 0-6)</h2>
+                <p class="mb-4 text-secondary">Chiếc smartphone của bạn mạnh mẽ hơn bạn tưởng tượng. Phần này là nền tảng của tất cả các "kỹ năng thần thánh". Trước hết, hãy thống nhất "ngôn ngữ", từng bước nhận diện và làm chủ thiết bị.</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 0: Xin chào, trước khi bắt đầu</h3>
+                    <p class="mb-3">Trước khi khám phá chính thức, hãy nói về các quy tắc cơ bản. Điều này sẽ giúp bạn hiểu tất cả nội dung sau đây.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 📖 Cuốn sách này có thể giúp gì cho bạn (và không thể làm gì)</h4>
+                    <p class="mb-2">Bạn có thể hiểu một cách có hệ thống cách sử dụng smartphone và biết nguyên lý đằng sau các tính năng. Dù bạn là người dùng Android hay iPhone, hầu hết các tư duy đều giống nhau. Cuốn sách cũng bao gồm các bài tập thực hành.</p>
+                    <p class="mb-2">Đây không phải là hướng dẫn sử dụng cho một dòng máy cụ thể, không phải đánh giá sản phẩm mới nhất, và không dạy bạn nghiện điện thoại.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 🔤 Về "mật mã" của chúng ta</h4>
+                    <p class="mb-2">Để giải thích dễ hiểu, chúng tôi sử dụng một số ký hiệu:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[Tên nút]: Biểu thị các nút cụ thể trên màn hình hoặc tên ứng dụng.</li>
+                        <li>> : Biểu thị thứ tự thao tác. Ví dụ: "Nhấn [Cài đặt] > [Âm thanh]".</li>
+                        <li><strong>Chữ đậm</strong>: Rất quan trọng! Biểu thị các khái niệm quan trọng hoặc cảnh báo bảo mật.</li>
+                        <li><em>Chữ nghiêng</em>: Biểu thị các ý tưởng bổ sung hoặc ví dụ.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 📱 Android và iOS, chúng tôi sẽ giải thích cả hai</h4>
+                    <p class="mb-2">Tên gọi có thể khác nhưng cách làm thì giống nhau. Ví dụ: Ứng dụng (Android) và App (iOS), Cài đặt (cả hai đều gọi là cài đặt), Quản lý tập tin (Android) và Tập tin (iOS). Hãy hiểu rằng chúng là cùng một thứ.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">IV. 💾 Dung lượng smartphone: Tại sao mua 128GB nhưng khả dụng dưới 110GB?</h4>
+                    <p class="mb-2">Bạn có biết đơn vị dung lượng: 1TB = 1024GB, 1GB = 1024MB...</p>
+                    <p class="mb-2">Tuy nhiên, dung lượng hiển thị khi mua sẽ "thu nhỏ" khi đến tay bạn. Nguyên nhân chính là:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Hệ thống chiếm không gian: Hệ điều hành giống như tường kết cấu của ngôi nhà, là bắt buộc.</li>
+                        <li>Ứng dụng được cài sẵn của nhà sản xuất: Các ứng dụng có sẵn trong điện thoại mới cũng chiếm không gian.</li>
+                        <li>Mất mát do định dạng: Vì lý do kỹ thuật, lớp lót của ba lô cũng chiếm thể tích.</li>
+                    </ol>
+                    <p class="mb-2">Khi mua điện thoại, hãy tính đến dung lượng hệ thống sử dụng.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Thời gian thực hành 👉 Kiểm tra "giấy khai sinh" của smartphone</p>
+                        <p class="mt-1">Mở [Cài đặt], tìm "Thông tin thiết bị" (hoặc tùy chọn tương tự), ghi chú: Mẫu điện thoại, phiên bản hệ điều hành, tổng dung lượng lưu trữ, dung lượng còn lại. Đây là bước đầu tiên để hiểu thiết bị của bạn.</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 1: Xin chào, máy tính cá nhân của tôi</h3>
+                    <p class="mb-3">Chiếc smartphone của bạn thực chất là siêu máy tính cá nhân trong túi quần.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 🧠 Phần cứng smartphone "Nội tạng"</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC (Chip)</strong>: "Não + Tim" của smartphone, quyết định hiệu năng.</li>
+                        <li><strong>RAM (Bộ nhớ)</strong>: Bàn làm việc tạm thời. Càng lớn, càng thoải mái khi mở nhiều ứng dụng cùng lúc.</li>
+                        <li><strong>ROM (Bộ lưu trữ)</strong>: Kho lưu trữ dài hạn. Nơi chứa tất cả ảnh, video, ứng dụng.</li>
+                        <li><strong>Màn hình</strong>: Đôi mắt của bạn. Loại (OLED màu sắc rực rỡ, LCD thân thiện với mắt), độ phân giải (độ sắc nét), tốc độ làm mới (độ mượt khi cuộn) đều quan trọng.</li>
+                        <li><strong>Pin và sạc</strong>: Sạc trong khi sử dụng. Không đợi cạn pin hoàn toàn, không để 100% liên tục là tốt cho pin. Sạc nhanh và sạc không dây rất tiện lợi.</li>
+                        <li><strong>Camera</strong>: Hiện nay sử dụng nhiều ống kính + thuật toán (nhiếp ảnh tính toán) để hợp tác, thực hiện cả chụp đêm và chụp chân dung xóa phông.</li>
+                        <li><strong>Cảm biến</strong>: Các râu cảm biến nhỏ của smartphone. Ví dụ: Con quay hồi chuyển (thay đổi hướng trong game), NFC (cửa soát vé, thẻ IC), cảm biến khoảng cách (tắt màn hình tự động khi gọi điện).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 🤖 Hệ điều hành: Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Như cộng đồng mã nguồn mở, nhà sản xuất điện thoại có thể tùy chỉnh sâu, nhiều lựa chọn.</li>
+                        <li>iOS: Như khu vườn được chăm sóc cẩn thận, Apple quản lý thống nhất phần cứng và phần mềm, trải nghiệm đồng nhất.</li>
+                    </ul>
+                    <p class="mb-2">Cả hai hệ sinh thái đều rất phong phú, hãy chọn phong cách sống bạn thích.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 🎭 Chiếc smartphone của bạn đang đóng bao nhiêu vai?</h4>
+                    <p class="mb-2">Không còn chỉ là điện thoại: Công cụ truyền thông, máy ảnh thông minh, ví tiền, cổng thông tin, máy chơi game, văn phòng di động, trợ lý sức khỏe, điều khiển từ xa nhà thông minh, thậm chí là giấy tờ tùy thân số.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Thời gian thực hành 👉 Hiểu về cấu hình phần cứng</p>
+                        <p class="mt-1">Trong [Cài đặt], hãy xem bạn có thể tìm thấy mẫu bộ xử lý, RAM, kích thước cụ thể của ROM không. Hãy nắm rõ khả năng của điện thoại.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 2: Sắp xếp không gian số — Quản lý tập tin</h3>
+                    <p class="mb-3">Sử dụng điện thoại lâu ngày sẽ bừa bộn. Thói quen tốt bắt đầu từ quản lý tập tin.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 📂 Hệ thống lưu trữ ba tầng</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Bộ lưu trữ nội bộ</strong>: Khu vực lõi. Tốc độ nhanh, hệ thống và ứng dụng đều ở đây.</li>
+                        <li><strong>Thẻ SD (nếu hỗ trợ)</strong>: Tủ quần áo mở rộng. Tốc độ hơi chậm nhưng phù hợp để lưu phim và ảnh.</li>
+                        <li><strong>Lưu trữ đám mây</strong>: Két sắt + Ổ đĩa đồng bộ. Ngăn mất mát và có thể đồng bộ trên nhiều thiết bị.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 🗂️ Hiểu về "Trình quản lý tập tin"</h4>
+                    <p class="mb-2">Android thường có ứng dụng [Tập tin] hoặc [Quản lý tập tin], iOS có ứng dụng [Tập tin] tiêu chuẩn. Đây là "trình khám phá" xem tất cả tập tin trên điện thoại. Bạn có thể thấy các thư mục như Download (Tải xuống), DCIM (Ảnh camera), Pictures (Hình ảnh).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 🏷️ Các loại tập tin nằm ở đâu?</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ảnh/Video: Thường được lưu tự động trong DCIM hoặc Pictures.</li>
+                        <li>Tập tin đã tải xuống: Về cơ bản đều nằm trong Download.</li>
+                        <li>Dữ liệu ứng dụng: Sống trong "phòng riêng" (thư mục riêng) của chúng, có thể không nhìn thấy.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">IV. 🧹 Hết dung lượng? Đã đến lúc dọn dẹp lớn</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Xóa bộ nhớ đệm: Bộ nhớ tạm của ứng dụng. Xóa sẽ giải phóng không gian.</li>
+                        <li>Tìm tập tin lớn: Sắp xếp theo kích thước trong trình quản lý tập tin, tìm ra "thủ phạm" chiếm không gian.</li>
+                        <li>Xóa tàn dư: Sau khi gỡ cài đặt ứng dụng, có thể còn tập tin rác. Hãy xóa thủ công.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Thời gian thực hành 👉 Sắp xếp thư mục "Tải xuống"</p>
+                        <p class="mt-1">Mở trình quản lý tập tin > Vào thư mục "Tải xuống". Kiểm tra nội dung, xóa những thứ không cần thiết, phân loại những thứ cần thiết (ví dụ: tạo thư mục "Tài liệu công việc", "Sticker" mới để đưa vào).</p>
+                    </div>
+                </div>
+
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 3: Kết nối "đường đời" cho smartphone — Mạng</h3>
+                    <p class="mb-3">Không có mạng, smartphone trở thành "kẻ ngốc một nửa".</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 📶 Mạng di động (4G/5G) và truyền dữ liệu</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Truyền dữ liệu: Lượng dữ liệu phát sinh khi sử dụng internet trên smartphone. Xem video và hình ảnh tiêu tốn nhiều dữ liệu nhất.</li>
+                        <li>Mẹo tiết kiệm dữ liệu: Bật "chế độ tiết kiệm dữ liệu" trong cài đặt, cập nhật ứng dụng và xem video chất lượng cao trong môi trường Wi-Fi.</li>
+                        <li>Số vạch sóng ≠ Tốc độ mạng: Sóng mạnh cho thấy kết nối tốt, nhưng tốc độ mạng còn phụ thuộc vào tình trạng tắc nghẽn của trạm phát.</li>
+                        <li><strong>⚠️ Quan trọng! Trước khi đi công tác nước ngoài, hãy TẮT [Chuyển vùng dữ liệu] để tránh hóa đơn cao!</strong></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 📡 Wi-Fi: Kết nối, chia sẻ và bảo mật</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kết nối Wi-Fi: [Cài đặt] > [WLAN] chọn mạng, nhập mật khẩu.</li>
+                        <li>Chia sẻ mật khẩu: Hiện nay rất tiện lợi, cả Android và iOS đều có thể chia sẻ mật khẩu nhanh chóng từ điện thoại đã kết nối cho bạn bè.</li>
+                        <li>Rủi ro Wi-Fi công cộng: Có khả năng hacker đánh cắp dữ liệu hoặc điểm nóng lừa đảo. Nguyên tắc: Tránh đăng nhập tài khoản ngân hàng, sử dụng VPN nếu có thể.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 🔵 Bluetooth: Kết nối tai nghe, truyền tập tin</h4>
+                    <p class="mb-2">Chủ yếu được sử dụng để kết nối tai nghe không dây, vòng/thông minh thông minh. Chức năng truyền tập tin hiện ít được sử dụng.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">IV. 🔥 Điểm truy cập: Biến smartphone thành bộ định tuyến Wi-Fi</h4>
+                    <p class="mb-2">Khi gói dữ liệu của bạn còn nhiều, bạn có thể mở điểm truy cập cho máy tính bảng hoặc PC. Lưu ý: Tiêu tốn nhiều pin và dữ liệu, hãy đặt mật khẩu phức tạp và giới hạn số thiết bị kết nối.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Thời gian thực hành 👉 Thiết lập và quản lý điểm truy cập</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Mở [Cài đặt], tìm "Điểm truy cập" hoặc "Chia sẻ mạng", bật lên, đặt tên và mật khẩu.</li>
+                            <li>Trên thiết bị khác (ví dụ: PC), tìm và kết nối Wi-Fi này.</li>
+                            <li>Trên điện thoại, xem bạn có thể quản lý thiết bị đã kết nối hoặc ngắt kết nối thiết bị lạ không.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 4: Cài đặt và quản lý ứng dụng — "Bộ kỹ năng" của smartphone</h3>
+                    <p class="mb-3">Ứng dụng biến smartphone thành thiết bị đa năng, nhưng cũng cần quản lý phù hợp.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">I. 🏪 Cửa hàng chính thức: "Siêu thị ứng dụng" an toàn nhất</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Google Play hoặc cửa hàng chính hãng của từng thương hiệu (ví dụ: Cửa hàng ứng dụng Xiaomi).</li>
+                        <li>iOS: Chỉ có App Store.</li>
+                    </ul>
+                    <p class="mb-2">Ý nghĩa bảo mật cốt lõi: Đã được kiểm duyệt, đảm bảo cập nhật, thanh toán an toàn. Hướng dẫn: Hãy ưu tiên chỉ sử dụng cửa hàng chính thức để tải xuống.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">II. 🚨 Nguồn bên thứ ba: Rủi ro cực cao!</h4>
+                    <p class="mb-2">Tải ứng dụng từ web hoặc liên kết không rõ nguồn gốc có thể dẫn đến nhiễm virus, đánh cắp quyền riêng tư, thanh toán trái phép.</p>
+                    <p class="mb-2">Nếu bắt buộc: Xác nhận nguồn tuyệt đối đáng tin cậy, kiểm tra kỹ yêu cầu quyền trước khi cài đặt, quét bằng ứng dụng bảo mật sau đó.</p>
+                    <p class="mb-2">Lời khuyên cuối cùng: Tắt quyền "Cài đặt ứng dụng không rõ nguồn gốc" trong cài đặt hệ thống.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">III. 📲 Cài đặt, cập nhật, gỡ cài đặt</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cài đặt: Nhấn "Nhận" trong cửa hàng. Sau khi cài đặt, khi khởi động lần đầu sẽ được yêu cầu cấp quyền.</li>
+                        <li>Cập nhật: <strong>Nhất định phải cập nhật!</strong> Chủ yếu là sửa lỗi bảo mật. Khuyến nghị bật tự động cập nhật.</li>
+                        <li>Gỡ cài đặt: Nhấn giữ biểu tượng và kéo vào khu vực gỡ cài đặt. Để xóa triệt để hơn, vào [Cài đặt] > [Quản lý ứng dụng] tìm và gỡ cài đặt.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">IV. 🛡️ Quản lý quyền: Bạn là "sếp" của ứng dụng</h4>
+                    <p class="mb-2">Ứng dụng yêu cầu quyền (ví dụ: danh bạ, vị trí) đôi khi hợp lý (bản đồ cần vị trí), đôi khi không hợp lý (đèn pin yêu cầu danh bạ).</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tùy chọn quyền: "Luôn cho phép", "Chỉ cho phép khi sử dụng", "Từ chối", "Hỏi mỗi lần".</li>
+                        <li>Nguyên tắc quản lý:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Tối thiểu hóa: Không cấp những thứ không cần thiết.</li>
+                                <li>Kiểm tra sau: Định kỳ kiểm tra cài đặt quyền, xem ai đang "vượt quyền".</li>
+                                <li>Theo tình huống: Với ứng dụng gọi xe, chỉ cấp quyền vị trí khi sử dụng.</li>
+                            </ol>
+                        </li>
+                        <li><strong>⚠️ Đối tượng giám sát trọng điểm: Quyền danh bạ/SMS, vị trí thời gian thực, camera/micro, quyền truy cập tập tin.</strong></li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Thời gian thực hành 👉 Kiểm tra quyền của 3 ứng dụng</p>
+                        <p class="mt-1">Chọn 3 ứng dụng thường dùng (ví dụ: Mạng xã hội, Mua sắm, Tiện ích), vào trang quản lý quyền ứng dụng trong [Cài đặt], kiểm tra từng mục, tắt quyền nhạy cảm không cần thiết hoặc đổi thành "Chỉ cho phép khi sử dụng".</p>
+                    </div>
+                </div>
+
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 5: Cá nhân hóa smartphone — Cài đặt cơ bản</h3>
+                    <p class="mb-3">Chỉ mất vài phút cài đặt, trải nghiệm sẽ được cải thiện đáng kể.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.1 🎵 Âm thanh và rung</h4>
+                    <p class="mb-2">Đặt nhạc chuông và âm thanh thông báo yêu thích. Sử dụng linh hoạt chế độ im lặng (trong cuộc họp), chế độ ngủ (khi ngủ), thế giới lập tức yên tĩnh. Khi kết nối tai nghe Bluetooth, hãy kiểm tra xem đầu ra âm thanh đã chuyển chưa.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.2 👀 Màn hình và độ sáng</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Độ sáng tự động: Điện thoại tự điều chỉnh theo ánh sáng môi trường. Rất tiện.</li>
+                        <li>Lọc ánh sáng xanh/Chế độ đêm: Cắt ánh sáng xanh, sử dụng điện thoại ban đêm thoải mái hơn.</li>
+                        <li>Chế độ tối: Tiết kiệm điện (đặc biệt hiệu quả trên màn hình OLED), và không chói ban đêm.</li>
+                        <li>Tốc độ làm mới màn hình: Một số dòng Android có thể điều chỉnh. Càng cao (ví dụ: 120Hz) càng mượt khi cuộn.</li>
+                        <li>Khóa tự động: Đặt 15 hoặc 30 giây. An toàn và tiết kiệm điện.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.3 🎨 Hình nền, chủ đề và màn hình chính</h4>
+                    <p class="mb-2">Đổi hình nền đẹp (tĩnh hoặc động), tâm trạng cũng thay đổi. Điện thoại thương hiệu Android thường có cửa hàng chủ đề, có thể thay đổi toàn bộ biểu tượng và phong cách. Đừng quên widget màn hình chính. Đặt thời tiết, lịch, điều khiển nhạc trên màn hình chính, chỉ cần một chạm để truy cập.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.4 ♿ Trợ năng: Trợ lý đắc lực</h4>
+                    <p class="mb-2">Đừng ngạc nhiên với tên gọi. Ai cũng có thể sử dụng.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cử chỉ phóng to: Chạm màn hình 3 lần để phóng to cục bộ. Tuyệt vời để xem chữ nhỏ.</li>
+                        <li>Trợ lý giọng nói: Siri và Google Assistant. Chỉ cần nói để đặt báo thức hoặc kiểm tra thời tiết.</li>
+                        <li>Trình đọc màn hình (TalkBack/VoiceOver): Được thiết kế cho người khiếm thị nhưng cũng giúp "nghe" bài viết.</li>
+                        <li>Khác: Bù màu (cho người mù màu), phím tắt chạm lưng (iPhone), menu trợ năng (Android) cũng đáng thử.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Thời gian thực hành 👉 Thiết lập chế độ "Ngày thường" và "Cuối tuần"</p>
+                        <p class="mt-1">Sử dụng chế độ tập trung (iOS) hoặc chế độ kịch bản để điện thoại tự động thích ứng với nhịp điệu của bạn. Ví dụ:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Tạo chế độ "Công việc": Tự động tắt tiếng thông báo ứng dụng không quan trọng, chỉ cho phép cuộc gọi từ sếp và gia đình.</li>
+                            <li>Tạo chế độ "Ngủ": Bật tự động theo giờ, tắt tất cả thông báo.</li>
+                            <li>Đặt hẹn giờ cho chúng. Ví dụ: Tự động bật chế độ "Công việc" từ 9:00-18:00 các ngày trong tuần. Đừng nhầm lẫn.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 6: Bảo vệ cuộc sống số — Bảo mật và quyền riêng tư</h3>
+                    <p class="mb-3">Bảo mật smartphone = Bảo mật quyền riêng tư + Bảo mật tài sản.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 🔒 Màn hình khóa: Tuyến phòng thủ vật lý đầu tiên</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Thứ bậc mức độ bảo mật:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Mật khẩu/Mã PIN: An toàn nhất. Bảo đảm cuối cùng (dựa vào khi quên vân tay/nhận diện khuôn mặt).</li>
+                                <li>Nhận diện vân tay: Cân bằng hoàn hảo giữa bảo mật và tiện lợi.</li>
+                                <li>Nhận diện khuôn mặt: Tiện lợi nhất, nhưng bảo mật phụ thuộc vào công nghệ (cấu trúc 3D an toàn, ảnh 2D dễ bị lừa).</li>
+                            </ul>
+                        </li>
+                        <li>Thiết lập màn hình khóa mạnh: Nhất định phải đặt mật khẩu phức tạp (không dùng ngày sinh, 123456), bật nhận diện sinh trắc học. Thời gian khóa đặt "ngay" hoặc ngắn nhất.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 📍 "Tìm điện thoại": Công cụ chống trộm tối thượng</h4>
+                    <p class="mb-2"><strong>Nhất định phải bật!</strong> Có thể làm những việc sau:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Định vị: Tìm xem điện thoại để ở đâu trên bản đồ.</li>
+                        <li>Phát âm thanh: Làm điện thoại kêu lên, phù hợp để tìm trong nhà.</li>
+                        <li>Chế độ mất: Khóa điện thoại từ xa, hiển thị số liên lạc. Người nhặt được có thể liên lạc với bạn.</li>
+                        <li>Xóa từ xa: Phương án cuối cùng. Xóa tất cả dữ liệu (nhưng sau khi xóa sẽ không thể định vị).</li>
+                    </ul>
+                    <p class="mb-2">Vào [Cài đặt], Apple tìm "Tìm iPhone", Android tìm "Tìm thiết bị" hoặc dịch vụ tương tự của thương hiệu, xác nhận đang ở trạng thái bật màu xanh.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 🔧 Cập nhật hệ thống: Vá lỗi, bịt lỗ hổng</h4>
+                    <p class="mb-2">Mục đích chính của cập nhật hệ thống là sửa lỗi bảo mật. Giống như bịt lỗ trên tường nhà. Do đó, khi có thông báo cập nhật hệ thống, hãy nâng cấp càng sớm càng tốt.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 🚫 Nhận diện và phòng chống lừa đảo qua điện thoại</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Thủ đoạn phổ biến: Giả danh cảnh sát/dịch vụ khách hàng (lừa đảo), trúng thưởng/thu nhập việc làm (dụ dỗ), lừa đảo tình cảm ("giết lợn").</li>
+                        <li>Bảo vệ tiêu chuẩn của điện thoại: Chặn cuộc gọi rác, chống trộm mã xác thực, phát hiện an toàn liên kết SMS. Đừng quên bật trong cài đặt.</li>
+                        <li>Kinh nghiệm chống lừa đảo: Không tin, không tiết lộ, không nhấp, không chuyển tiền, có thắc mắc thì xác nhận!</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Thời gian thực hành 👉 Bật và mô phỏng "Khóa từ xa"</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Xác nhận tính năng "Tìm điện thoại" đã được bật.</li>
+                            <li>Trên trình duyệt PC hoặc điện thoại khác, đăng nhập vào tài khoản dịch vụ đám mây tương ứng (iCloud.com hoặc trang dịch vụ đám mây của thương hiệu).</li>
+                            <li>Tìm tính năng "Tìm thiết bị", thử "Phát âm thanh" hoặc mô phỏng "Khóa" cho điện thoại của bạn, hiểu toàn bộ quy trình. Để không hoảng loạn khi cần.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">II. Phần Phần Mềm (Chương 7-12)</h2>
+
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 7: Truyền thông: SMS, gọi điện và mạng xã hội</h3>
+                    <p class="mb-3">Truyền thông là sứ mệnh nguyên thủy và cốt lõi nhất của smartphone. Hiện nay đã phát triển từ gọi điện và SMS đơn giản thành hệ sinh thái phức tạp bao gồm nhắn tin tức thì, mạng xã hội và email.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 Tính năng nâng cao của ứng dụng Điện thoại: Vượt xa gọi điện</h4>
+                    <p class="mb-2">Ứng dụng điện thoại của smartphone hiện đại vượt xa bàn phím quay số đơn giản, tích hợp các công cụ mạnh mẽ như ghi âm, chống rác, nhận diện thông minh.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Ghi âm cuộc gọi (lưu ý về tính pháp lý):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Vai trò: Ghi lại nội dung cuộc gọi quan trọng, dùng cho biên bản công việc, phỏng vấn, cam kết khách hàng hoặc ghi chép tranh chấp.</li>
+                        <li>Gợi ý pháp lý: Tại Nhật Bản, để sử dụng ghi âm cuộc gọi làm bằng chứng, cần có sự đồng ý của đối phương hoặc sử dụng để bảo vệ quyền lợi hợp pháp của mình (ví dụ: tố cáo quấy rối hoặc lừa đảo). Trước các cuộc hội thoại thương mại hoặc bí mật, cách thận trọng hơn là thông báo bằng lời "Cuộc gọi này có thể được ghi âm".</li>
+                        <li>Cách thao tác:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Thường có nút "Ghi âm" rõ ràng trên màn hình cuộc gọi. Tìm tùy chọn "Ghi âm cuộc gọi" trong cài đặt ứng dụng điện thoại, đặt quy tắc ghi âm tự động.</li>
+                                <li>iOS: Hệ thống không cung cấp tính năng ghi âm cuộc gọi gốc. Nếu sử dụng, cần ứng dụng ghi âm cuộc gọi bên thứ ba.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Chặn cuộc gọi rác và nhận diện thông minh:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Nguyên lý: Ứng dụng điện thoại tra cứu cơ sở dữ liệu số khổng lồ qua mạng, khi có cuộc gọi đến hiển thị "Cuộc gọi rác", "Cuộc gọi lừa đảo" hoặc tên công ty.</li>
+                        <li>Cách bật:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Vào ứng dụng Điện thoại > "Cài đặt" góc trên bên phải > Chống rác hoặc Nhận diện thông minh. Bật tất cả tùy chọn nhận diện và chặn.</li>
+                                <li>iOS: Vào [Cài đặt] > [Điện thoại] > [Chặn và nhận diện người gọi]. Xác nhận ứng dụng bảo mật bên thứ ba hỗ trợ tính năng này (ví dụ: Trend Micro Mobile Security), cho phép hoạt động. Bật tính năng "Tắt tiếng người gọi lạ" sẽ tắt tiếng tất cả cuộc gọi không có trong danh bạ.</li>
+                            </ul>
+                        </li>
+                        <li>Mẹo: Sau khi nhận cuộc gọi rác, chủ động đánh dấu là "Rác" hoặc "Lừa đảo" trong lịch sử cuộc gọi, đóng góp vào cơ sở dữ liệu, giúp người khác.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Tính năng hỗ trợ cuộc gọi:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Chuyển đổi ghi âm cuộc gọi thành văn bản: Trên một số điện thoại thương hiệu Android, sau khi ghi âm cuộc gọi, có nút "Chuyển thành văn bản" ngay bên cạnh tập tin ghi âm, chuyển nội dung hội thoại thành văn bản.</li>
+                        <li>Hỗ trợ thị giác (phụ đề thời gian thực): Trong cài đặt trợ năng Android hoặc hỗ trợ thính giác iOS, bật tính năng "Chuyển văn bản thời gian thực", tạo phụ đề thời gian thực cho tất cả âm thanh (bao gồm cuộc gọi).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 SMS và iMessage/RCS: Mã xác thực và lọc tin nhắn rác</h4>
+                    <p class="mb-2">SMS truyền thống chưa bị loại bỏ. Là kênh đáng tin cậy để nhận mã xác thực, thông báo ngân hàng, thông tin chính thức.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs iMessage (iOS) / RCS (Android):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iMessage: Tin nhắn gửi qua internet giữa các thiết bị Apple, hiển thị bằng bong bóng màu xanh. Hỗ trợ ảnh video chất lượng cao, thông báo đã đọc, hoàn toàn miễn phí và mã hóa đầu cuối.</li>
+                        <li>RCS: Giao thức truyền thông thế hệ tiếp theo được các nhà mạng toàn cầu và Google thúc đẩy. Có tính năng tương tự iMessage và LINE nhưng dựa trên số điện thoại. Kiểm tra và bật "Tính năng trò chuyện" trong cài đặt ứng dụng Tin nhắn trên Android.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Bảo mật mã xác thực:</h5>
+                    <p class="mb-2">Hệ thống tự động nhận diện và phân loại SMS mã xác thực. Tuyệt đối không cho ai biết mã xác thực bạn nhận được.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Lọc tin nhắn rác:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: [Cài đặt] > [Tin nhắn] bật "Lọc người gửi lạ".</li>
+                        <li>Android: Bật "Dịch vụ thông tin thông minh" hoặc "Bộ lọc tin nhắn rác" trong cài đặt ứng dụng Tin nhắn.</li>
+                        <li>Mẹo chung: Với SMS quảng cáo rác rõ ràng, không trả lời gì (kể cả "TD hủy đăng ký"). Xóa trực tiếp hoặc đánh dấu là tin nhắn rác. Trả lời có thể xác nhận số của bạn còn hoạt động.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 LINE/WeChat: Quản lý ứng dụng xã hội quốc dân</h4>
+                    <p class="mb-2">LINE và WeChat đã vượt qua công cụ truyền thông, trở thành "siêu ứng dụng" tích hợp xã hội, thanh toán, thu thập thông tin.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Sao lưu và di chuyển lịch sử trò chuyện:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tầm quan trọng: Lịch sử trò chuyện chứa các tập tin quan trọng, kỷ niệm, thông tin công việc nhưng chỉ được lưu trong bộ nhớ đệm tạm thời cục bộ và máy chủ. Mất điện thoại hoặc cài lại ứng dụng có thể mất lịch sử vĩnh viễn.</li>
+                        <li>Sao lưu vào PC (đáng tin cậy nhất):
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>Đăng nhập WeChat/LINE phiên bản PC hoặc Mac.</li>
+                                <li>Nhấn menu góc dưới bên trái > [Di chuyển và sao lưu] > [Sao lưu và khôi phục].</li>
+                                <li>Chọn "Sao lưu lịch sử trò chuyện vào PC", chọn cuộc trò chuyện cần sao lưu trên điện thoại.</li>
+                            </ol>
+                            Lưu ý: Tập tin sao lưu được lưu mã hóa cục bộ trên PC. Khi khôi phục, điện thoại và PC cần kết nối cùng mạng Wi-Fi.
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Dọn dẹp không gian lưu trữ:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Đường dẫn: WeChat [Tôi] > [Cài đặt] > [Chung] > [Lưu trữ]. LINE [Cài đặt] > [Chung] > [Quản lý lưu trữ].</li>
+                        <li>Chiến lược dọn dẹp:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Bộ nhớ đệm: Có thể xóa an toàn. Là dữ liệu tạm thời được tạo khi ứng dụng chạy.</li>
+                                <li>Lịch sử trò chuyện: Vào trong, có thể dọn dẹp chi tiết theo thời gian, loại tập tin hoặc từng cuộc trò chuyện riêng. Ví dụ, xóa tất cả tập tin "video" "trên 1 năm" từ tất cả cuộc trò chuyện cùng lúc.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Cài đặt quyền riêng tư và bảo mật:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Phương thức thêm: Kiểm soát cách người khác tìm thấy bạn (số điện thoại, ID người dùng, nhóm chat...).</li>
+                        <li>Quyền dòng thời gian: Thiết lập ai có thể xem, ai không thể xem.</li>
+                        <li>Quản lý ủy quyền: WeChat [Cài đặt] > [Thông tin cá nhân và quyền] > [Quản lý ủy quyền], có thể xem và hủy ủy quyền đăng nhập WeChat của các trang web và ứng dụng bên thứ ba.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 Email: Thiết lập và sử dụng trên điện thoại</h4>
+                    <p class="mb-2">Xử lý email hiệu quả trên thiết bị di động là yếu tố quan trọng của văn phòng di động.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Thêm tài khoản email:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ứng dụng email tiêu chuẩn hệ thống:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS: [Cài đặt] > [Mail] > [Tài khoản] > [Thêm tài khoản].</li>
+                                <li>Android: Hệ thống thường có ứng dụng "Email". Mở và làm theo hướng dẫn để thêm.</li>
+                            </ul>
+                        </li>
+                        <li>Ứng dụng client chuyên dụng: Gmail, Outlook... Được tối ưu cho email cụ thể, có tính năng mạnh mẽ hơn.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Kỹ thuật sử dụng email di động:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Quản lý thông báo đẩy: Đặt phương thức thông báo khác nhau cho các tài khoản email khác nhau.</li>
+                        <li>Thao tác cử chỉ: Hầu hết ứng dụng email có thể lưu trữ, xóa hoặc đánh dấu nhanh bằng cử chỉ vuốt.</li>
+                        <li>Chữ ký: Thiết lập chữ ký email di động chuyên nghiệp.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Lưu ý bảo mật:</h5>
+                    <p class="mb-2">Cẩn trọng khi đăng nhập email hoặc gửi email nhạy cảm trên Wi-Fi công cộng.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Bài tập chương này: Sao lưu lịch sử trò chuyện WeChat vào PC</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Bắt đầu sao lưu trên PC: Mở WeChat PC > Menu góc dưới bên trái > [Di chuyển và sao lưu] > [Sao lưu và khôi phục].</li>
+                            <li>Chọn sao lưu vào PC: Nhấn "Sao lưu lịch sử trò chuyện vào PC".</li>
+                            <li>Chọn nội dung sao lưu trên điện thoại: WeChat trên điện thoại sẽ hiện popup, chọn cuộc trò chuyện cần sao lưu và nhấn "Bắt đầu sao lưu".</li>
+                            <li>Đợi hoàn thành sao lưu.</li>
+                            <li>(Tùy chọn) Hiểu quy trình khôi phục: Trong cùng cửa sổ, tùy chọn khác là "Khôi phục lịch sử trò chuyện vào điện thoại".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 8: Văn phòng di động và học tập</h3>
+                    <p class="mb-3">Smartphone đã trở thành trạm làm việc di động mạnh mẽ và trung tâm học tập mang theo.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 Xử lý tài liệu: Biên tập và tạo trên lòng bàn tay</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Lựa chọn ứng dụng chính thống:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>WPS Office: Bản địa hóa tốt, tương thích hoàn toàn với định dạng Microsoft. Có sẵn nhiều mẫu miễn phí và bộ công cụ PDF.</li>
+                        <li>Microsoft 365: Trải nghiệm nhất quán cao với Office phiên bản desktop. Tương thích định dạng tốt nhất, tích hợp sâu với lưu trữ đám mây OneDrive.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Kỹ thuật cốt lõi xử lý tài liệu trên điện thoại:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Đồng bộ đám mây là cốt lõi: Lưu tập tin công việc vào ổ đĩa đám mây liên quan của ứng dụng, đảm bảo tự động lưu, chuyển đổi liền mạch giữa các thiết bị, cộng tác dễ dàng. Đã nhớ chưa?</li>
+                        <li>Cộng tác và chia sẻ: Hỗ trợ chia sẻ liên kết, đặt quyền "Chỉ xem" hoặc "Có thể chỉnh sửa". Hỗ trợ chỉnh sửa trực tuyến nhiều người cùng lúc.</li>
+                        <li>Tận dụng phương thức nhập hiệu quả: Sử dụng nhập liệu bằng giọng nói để soạn thảo văn bản dài.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 Ứng dụng ghi chú: Từ ghi nhanh đến quản lý kiến thức</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Nhẹ & Tiêu chuẩn hệ thống:</h5>
+                    <p class="mb-2">Ghi chú iOS, Ghi chú của các thương hiệu Android... Ưu điểm: Khởi động nhanh, tích hợp cao với hệ thống, phù hợp cho ghi chú nhanh, danh sách, ý tưởng tạm thời.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Ghi chú chuyên nghiệp đa năng:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Evernote: Mạnh về khả năng thu thập thông tin và tìm kiếm toàn văn xuất sắc.</li>
+                        <li>Notion: Rất linh hoạt, tích hợp ghi chú, cơ sở dữ liệu, bảng Kanban. Tất cả nội dung là "khối" có thể tự do kết hợp.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Tâm đắc khi sử dụng:</h5>
+                    <p class="mb-2">Thử tạo một "hộp thư" kiến thức để thu thập thông tin, định kỳ sắp xếp và xử lý, tạo liên kết giữa các ghi chú để hình thành mạng lưới kiến thức.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 Quét và OCR: Biến tập tin giấy thành bản điện tử</h4>
+                    <p class="mb-2">Smartphone là máy quét di động mang theo.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Nguyên lý quét:</h5>
+                    <p class="mb-2">Tự động phát hiện và chỉnh sửa mép tài liệu, loại bỏ bóng, tạo hình ảnh rõ nét. Tính năng OCR nhận diện văn bản trong hình ảnh thành văn bản có thể chỉnh sửa.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Lựa chọn công cụ:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tiêu chuẩn hệ thống: iOS "Ghi chú" có tích hợp tính năng quét. Một số thương hiệu Android có chế độ "Quét tài liệu" trong ứng dụng camera hoặc quản lý tập tin.</li>
+                        <li>Ứng dụng chuyên nghiệp bên thứ ba: Microsoft Lens, Adobe Scan, CamScanner.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Quy trình thao tác:</h5>
+                    <p class="mb-2">Mở ứng dụng và hướng vào tài liệu > Chụp tự động hoặc thủ công > Điều chỉnh và xử lý > Thực hiện OCR > Lưu và chia sẻ (có thể gộp nhiều trang thành PDF).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 Đồng bộ ổ đĩa đám mây: Trung tâm tập tin di động của bạn</h4>
+                    <p class="mb-2">Ổ đĩa đám mây là "trung tâm dữ liệu" kết nối smartphone và PC.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. So sánh dịch vụ ổ đĩa đám mây chính thống:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Google Drive: Tỷ lệ phổ biến cao toàn cầu, hệ sinh thái chia sẻ trưởng thành.</li>
+                        <li>iCloud Drive: Tích hợp sâu với hệ sinh thái Apple. Đồng bộ tự nhiên và an toàn.</li>
+                        <li>OneDrive: Tích hợp sâu với Windows và Office 365. Lựa chọn đầu tiên cho người dùng hệ sinh thái Microsoft.</li>
+                        <li>Dropbox: Được sử dụng rộng rãi trên toàn thế giới, ưu điểm về tính ổn định và tương thích.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Chiến lược sử dụng:</h5>
+                    <p class="mb-2">Sử dụng iCloud/đám mây thương hiệu để sao lưu dữ liệu cốt lõi của hệ thống và cá nhân. Sử dụng Google Drive/OneDrive/Dropbox để lưu trữ tập tin dung lượng lớn và cộng tác công việc.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Bài tập chương này: Quét tài liệu trên điện thoại và tạo PDF</p>
+                        <p class="mt-1">Quy trình thao tác (lấy Microsoft Lens hoặc Ghi chú iOS làm ví dụ):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Chọn công cụ: iOS mở "Ghi chú" > Mới > Nhấn biểu tượng camera > "Quét tài liệu". Android/Chung tải và mở "Microsoft Lens".</li>
+                            <li>Chụp quét: Hướng vào tài liệu, khi ứng dụng nhận diện khung tự động thì chụp. Có thể thêm nhiều trang.</li>
+                            <li>Tăng cường hiệu quả: Chọn bộ lọc "Đen trắng" để tài liệu rõ hơn.</li>
+                            <li>Nhận diện OCR: Sau khi hoàn thành, chọn xuất PDF, nhấn "Sao chép văn bản" hoặc nút tương tự để trích xuất văn bản.</li>
+                            <li>Lưu và đặt tên: Lưu tập tin với tên rõ ràng.</li>
+                            <li>Kiểm tra và chia sẻ: Mở PDF để xác nhận chất lượng, thử chia sẻ qua email hoặc LINE.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 9: Thanh toán di động và dịch vụ cuộc sống</h3>
+                    <p class="mb-3">Smartphone đang dần thay thế ví tiền, thẻ giao thông, thậm chí giấy tờ tùy thân thực.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 Thanh toán di động: Liên kết, thanh toán và quản lý bảo mật</h4>
+                    <p class="mb-2"><strong>Bảo mật là tiền đề sử dụng.</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Liên kết thẻ ngân hàng:</h5>
+                    <p class="mb-2">Khuyến nghị chỉ liên kết 1-2 thẻ thường dùng. Sử dụng tài khoản điện tử loại II/III của ngân hàng chuyên cho thanh toán di động, tách biệt rủi ro tài khoản chính.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Phương thức thanh toán:</h5>
+                    <p class="mb-2">Mã thanh toán, quét để thanh toán, chuyển tiền, thanh toán NFC điện thoại. Nhất định phải bật "Xác thực khi khởi động" hoặc "Khóa bảo mật", ngăn sử dụng trái phép khi mất điện thoại.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Quản lý bảo mật cốt lõi:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Mật khẩu và thanh toán nhận diện sinh trắc học: Nhất định phải đặt mật khẩu thanh toán độc lập, bật thanh toán bằng vân tay hoặc nhận diện khuôn mặt.</li>
+                        <li>Khóa bảo mật: Trong cài đặt ứng dụng thanh toán tìm "Khóa bảo mật", khuyến nghị đặt yêu cầu xác thực khi vào trang "Tôi" hoặc "Ví".</li>
+                        <li>Quản lý thiết bị đăng nhập: Định kỳ kiểm tra, xóa ủy quyền đăng nhập của thiết bị ít sử dụng.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 Mã giao thông công cộng: Metro, xe buýt</h4>
+                    <p class="mb-2">Điện thoại trở thành thẻ giao thông của bạn.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Cách mở:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ứng dụng thanh toán di động: Tìm "IC giao thông", mở thẻ giao thông điện tử của thành phố tương ứng.</li>
+                        <li>Thẻ giao thông của điện thoại thương hiệu: Trong ứng dụng ví như Apple Pay, Google Pay, mở thẻ giao thông ảo. Chạm thanh toán bằng NFC. Phản hồi nhanh nhất, hỗ trợ ngoại tuyến.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Kỹ thuật sử dụng:</h5>
+                    <p class="mb-2">Với cổng soát không hỗ trợ NFC, hoặc khi điện thoại hết pin, có thể chuyển sang mã giao thông công cộng trong ứng dụng thanh toán di động để sử dụng.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 Thanh toán hóa đơn, giao đồ ăn, sử dụng ứng dụng gọi xe</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Thanh toán hóa đơn: Trong "Hóa đơn công cộng" của ứng dụng thanh toán di động, liên kết số khách hàng, thanh toán tiền nước, điện, gas...</li>
+                        <li>Giao đồ ăn: Các nền tảng khác nhau (Uber Eats, Demae-can...) có thể có khuyến mãi khác nhau cho cùng một quán. So sánh trên nhiều nền tảng.</li>
+                        <li>Gọi xe: Thiết lập liên hệ khẩn cấp, bật chia sẻ hành trình. Ưu tiên thanh toán trong nền tảng, tránh giao dịch ngoại tuyến.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 Lưu trữ và sử dụng giấy tờ tùy thân điện tử</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Giấy tờ tùy thân điện tử:</h5>
+                    <p class="mb-2">Ở một số khu vực, ứng dụng chính phủ chính thức đã triển khai giấy tờ tùy thân điện tử, bằng lái xe điện tử, có thể sử dụng trong một số tình huống nhất định nhưng không áp dụng ở mọi trường hợp.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Kỹ thuật lưu trữ:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Thêm vào "Ví" của điện thoại, có thể gọi nhanh từ màn hình khóa.</li>
+                        <li>Android có thể nhấn giữ biểu tượng ứng dụng, kéo tính năng cụ thể (ví dụ: "Mã sức khỏe của tôi") ra màn hình chính làm phím tắt.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Bài tập chương này: Đặt khóa an toàn hơn cho ứng dụng thanh toán</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Xác nhận và bật thanh toán nhận diện sinh trắc học: Xác nhận thanh toán vân tay/nhận diện khuôn mặt đã được bật trong ứng dụng thanh toán.</li>
+                            <li>Đặt "Khóa bảo mật": Tìm "Khóa bảo mật" trong cài đặt bảo mật ứng dụng thanh toán, đặt yêu cầu xác thực khi vào "Ví" hoặc thực hiện thao tác tiền.</li>
+                            <li>Kiểm tra thiết bị đăng nhập: Trong cài đặt bảo mật, xóa tất cả thiết bị lạ, không sử dụng.</li>
+                            <li>Hiểu về bảo vệ tài khoản: Xem chi tiết bảo hiểm bảo mật tài khoản của ứng dụng thanh toán.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 10: Chụp ảnh và quản lý hình ảnh</h3>
+                    <p class="mb-3">Chương này sẽ giúp bạn làm chủ toàn bộ quy trình tạo ra hình ảnh tuyệt vời bằng smartphone và quản lý kỷ niệm thị giác hiệu quả.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 Cơ sở camera điện thoại: Chụp đêm, chân dung, chế độ chuyên nghiệp</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Chế độ chụp đêm</strong>: Tổng hợp nhiều ảnh, cải thiện độ sáng và chi tiết ở nơi tối. Khi chụp cần giữ tay ổn định 2-4 giây.</li>
+                        <li><strong>Chế độ chân dung</strong>: Mô phỏng hiệu ứng độ sâu trường ảnh nông của máy ảnh DSLR (xóa phông nền). Tập trung vào nhân vật, giữ khoảng cách 1-2 mét khi chụp. Có thể điều chỉnh độ xóa phông sau đó.</li>
+                        <li><strong>Chế độ chuyên nghiệp</strong>: Kiểm soát thủ công các thông số cốt lõi.
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>ISO: Thấp thì chất lượng ảnh tốt, tăng ở nơi tối sẽ có nhiễu.</li>
+                                <li>Tốc độ màn trập: Cao để cố định khoảnh khắc, thấp để ghi lại quỹ đạo (cần giữ ổn định).</li>
+                                <li>Cân bằng trắng: Điều chỉnh xu hướng màu.</li>
+                                <li>Bù phơi sáng: Làm sáng hoặc tối toàn bộ hình ảnh.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 Bố cục ảnh và chỉnh sửa</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Quy tắc bố cục cơ bản:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Quy tắc một phần ba: Đặt điểm thú vị tại giao điểm của ba đường ngang dọc.</li>
+                        <li>Đường dẫn: Sử dụng đường, sông... để dẫn mắt vào chủ thể.</li>
+                        <li>Bắt đầu đơn giản: Khi chụp, cố ý giữ màn hình ngang dọc.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Quy trình chỉnh sửa (sử dụng Snapseed, VSCO...):</h5>
+                    <ol class="list-alpha pl-6 mb-3 space-y-1">
+                        <li>Chỉnh sửa: Xoay và cắt theo phối cảnh.</li>
+                        <li>Điều chỉnh cơ bản: Điều chỉnh độ sáng, độ tương phản. Giảm điểm sáng, tăng bóng.</li>
+                        <li>Chỉnh sửa cục bộ: Tăng giảm sáng, xóa khuyết điểm cho vùng cụ thể.</li>
+                        <li>Tạo phong cách: Thêm bộ lọc, điều chỉnh tông màu.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 Quản lý ảnh: Từ hỗn loạn đến trật tự</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Tính năng quản lý album điện thoại cốt lõi:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Phân loại thông minh: Tự động phân loại theo thời gian, địa điểm, nhân vật, cảnh.</li>
+                        <li>Tìm kiếm: Có thể tìm kiếm toàn cục theo từ khóa, địa điểm, thời gian, thậm chí văn bản trong hình.</li>
+                        <li>Thao tác hàng loạt: Sau khi chọn nhiều, có thể chia sẻ, thêm vào album hoặc xóa hàng loạt.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Sao lưu ảnh và giải phóng không gian:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sao lưu đám mây: iOS sử dụng Ảnh iCloud, bật "Tối ưu hóa dung lượng iPhone". Android/Đa nền tảng sử dụng Google Ảnh hoặc dịch vụ đám mây khác.</li>
+                        <li>Giải phóng không gian: Sử dụng công cụ hệ thống, hoặc xóa thủ công video lớn và ảnh chụp liên tục.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 Chụp màn hình và quay màn hình: Thu thập và chia sẻ thông tin</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Thao tác cơ bản:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Phím tắt phổ biến: Nhấn đồng thời [Nút nguồn] + [Nút tăng âm lượng].</li>
+                        <li>Chụp nâng cao: Chụp màn hình dài/chụp màn hình cuộn, chụp vùng.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Quay màn hình:</h5>
+                    <p class="mb-2">Thêm nút "Quay màn hình" vào trung tâm điều khiển. Nhấn giữ trước khi bắt đầu có thể bật ghi âm micro để thuyết minh.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Chỉnh sửa tức thì:</h5>
+                    <p class="mb-2">Sau khi chụp màn hình, nhấn vào hình thu nhỏ để vào màn hình chỉnh sửa, có thể chú thích, cắt, làm mờ...</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Bài tập chương này: Chụp ảnh đêm bằng chế độ chuyên nghiệp</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Chuẩn bị: Tìm cảnh có nguồn sáng ổn định, khuyến nghị sử dụng chân máy hoặc giữ điện thoại ổn định.</li>
+                            <li>Vào chế độ chuyên nghiệp: Mở ứng dụng camera, chuyển sang chế độ "Chuyên nghiệp".</li>
+                            <li>Thiết lập thông số:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>ISO: Đặt ở giá trị thấp nhất (50 hoặc 100).</li>
+                                    <li>Tốc độ màn trập: Đặt từ 1 giây đến vài giây (ví dụ: 2 giây).</li>
+                                    <li>Focusing: Đặt lấy nét thủ công, kéo thanh trượt điều chỉnh đến khi đèn xa rõ nét.</li>
+                                </ul>
+                            </li>
+                            <li>Chụp và kiểm tra: Nhấn màn trập, giữ tuyệt đối yên. Kiểm tra ảnh, điều chỉnh thông số theo độ sáng.</li>
+                            <li>Trải nghiệm so sánh: Cũng chụp một tấm bằng chế độ chụp đêm tự động, so sánh sự khác biệt.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 11: Giải trí và đọc sách</h3>
+                    <p class="mb-3">Smartphone là trung tâm giải trí quan trọng nhất của chúng ta, tích hợp máy nghe nhạc, rạp chiếu phim, thư viện, máy chơi game.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 Âm nhạc và Podcast: Không gian âm thanh mang theo</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Dịch vụ phát trực tuyến trực tuyến:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Quốc tế: Spotify, Apple Music. Kho nhạc toàn cầu, nhiều lựa chọn chất lượng âm thanh.</li>
+                        <li>Nhật Bản: LINE MUSIC, AWA. Đặc điểm là cộng đồng playlist và gợi ý cá nhân hóa.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Podcast:</h5>
+                    <p class="mb-2">Ứng dụng: Apple Podcasts, Spotify, Google Podcasts. Kỹ thuật sử dụng: Đăng ký kênh, tải trước, điều chỉnh tốc độ phát để nghe hiệu quả.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 Trình phát video: Phát cục bộ và phát trực tuyến</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Phát video cục bộ:</h5>
+                    <p class="mb-2">Khuyến nghị các trình phát đa năng như VLC, nPlayer. Hỗ trợ hầu hết mọi định dạng và phụ đề ngoài.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Video phát trực tuyến trực tuyến:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Nền tảng tổng hợp: YouTube, Netflix, Amazon Prime Video, Hulu.</li>
+                        <li>Kỹ thuật sử dụng: Tải trước nội dung. Tận dụng tính năng "Cast" để xem trên TV.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 Đọc sách điện tử: Trình đọc Epub, PDF</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Lựa chọn nền tảng đọc:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tiểu thuyết web và sách xuất bản: Kindle, Apple Books, Google Play Sách.</li>
+                        <li>Sách chuyên ngành và tài liệu: Apple Books, Adobe Acrobat Reader (chú thích PDF).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Cài đặt tối ưu hóa đọc:</h5>
+                    <p class="mb-2">Tùy chỉnh màu nền, phông chữ. Tận dụng tính năng đánh dấu trang, tô sáng, ghi chú. Một số ứng dụng hỗ trợ đọc to.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.4 Chế độ game và điều chỉnh hiệu năng</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Chế độ game/Hộp công cụ game:</h5>
+                    <p class="mb-2">Tự động kích hoạt khi khởi động game. Cung cấp các tính năng như chuyển chế độ hiệu năng, chế độ ngủ, quay nhanh, công cụ cửa sổ nổi.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Điều chỉnh hiệu năng thủ công:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Trong game: Điều chỉnh chất lượng hình ảnh, tốc độ khung hình theo hiệu năng điện thoại. Quan trọng là ưu tiên độ mượt của tốc độ khung hình.</li>
+                        <li>Cấp hệ thống: Nếu game hỗ trợ, bật chế độ tốc độ làm mới cao (ví dụ: 120Hz) trong cài đặt hệ thống.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Thói quen chơi game lành mạnh:</h5>
+                    <p class="mb-2">Sử dụng tính năng "Thời gian màn hình" của hệ thống để đặt cảnh báo thời gian. Đặt xác thực thanh toán cho mua hàng trong game.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Bài tập chương này: Cấu hình gói giải trí "Chế độ máy bay" chuyên dụng</p>
+                        <p class="mt-1">Quy trình thao tác: Tải trước và lên kế hoạch một bộ nội dung giải trí ngoại tuyến hoàn chỉnh.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Gói âm nhạc: Tải playlist hoặc album yêu thích trong ứng dụng âm nhạc.</li>
+                            <li>Gói video: Cache phim hoặc drama trong ứng dụng phát trực tuyến.</li>
+                            <li>Gói đọc: Tải 1-2 cuốn sách trong ứng dụng sách điện tử.</li>
+                            <li>Gói game: Cài đặt 1-2 game đơn cơ có thể chơi hoàn toàn ngoại tuyến.</li>
+                            <li>Tổng hợp và kiểm tra: Bật "Chế độ máy bay", xác nhận tất cả nội dung có thể truy cập ngoại tuyến. Sắp xếp các ứng dụng liên quan vào thư mục "Giải trí ngoại tuyến".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 12: Các ứng dụng tiện ích được đề xuất</h3>
+                    <p class="mb-3">Chương này sẽ giới thiệu các ứng dụng tiện ích được chọn lọc, thực sự nâng cao hiệu quả, thúc đẩy sức khỏe và làm cho việc đi lại thuận tiện.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 Công cụ hiệu quả: Quản lý thời gian và sự chú ý</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Danh sách ToDo và quản lý công việc:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Lựa chọn ứng dụng:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Nhẹ và tiện: Ghi chú hệ thống, Microsoft To Do.</li>
+                                <li>Tính năng đầy đủ: Todoist, TickTick (nhận diện ngôn ngữ tự nhiên xuất sắc, tích hợp hẹn giờ Pomodoro).</li>
+                                <li>Quản lý bảng Kanban: Trello hoặc chế độ xem Kanban của Notion. Phù hợp cho quản lý trực quan dự án.</li>
+                            </ul>
+                        </li>
+                        <li>Tâm đắc khi sử dụng: Thu thập ngay công việc vào "hộp thư". Định kỳ sắp xếp và đặt ngày. Mỗi ngày chỉ tập trung vào danh sách "Hôm nay".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Hẹn giờ Pomodoro:</h5>
+                    <p class="mb-2">Ứng dụng: Forest, Focus To-Do. Nguyên tắc: Tập trung 25 phút, nghỉ 5 phút, lặp lại.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Lịch:</h5>
+                    <p class="mb-2">Sử dụng lịch hệ thống hoặc Google Calendar. Đặt lịch hẹn, hạn chót, thậm chí "khối thời gian tập trung" vào lịch, trực quan hóa phân bổ thời gian.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 Sức khỏe vận động: Apple Health, Google Fit, Fitbit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Hướng dẫn và ghi chép vận động: Nike Training Club, Strava... cung cấp nhiều khóa fitness. Ứng dụng sức khỏe thương hiệu (ví dụ: Samsung Health) tích hợp sâu dữ liệu vòng đeo thông minh.</li>
+                        <li>Apple Health / Google Fit: Trung tâm dữ liệu. Tổng hợp tất cả dữ liệu từ điện thoại, vòng đeo thông minh, ứng dụng sức khỏe bên thứ ba, hình thành hồ sơ sức khỏe thống nhất. Định kỳ kiểm tra báo cáo "Xu hướng".</li>
+                        <li>Lời khuyên sử dụng: Đặt mục tiêu có thể đạt được. Không cho phép quá nhiều lời nhắc vừa phải.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 Du lịch đi lại: Hướng dẫn toàn năng của bạn</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Bản đồ và điều hướng:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Trong nước Nhật: Google Maps, Yahoo! MAP. Thông tin giao thông chi tiết và thời gian thực phong phú.</li>
+                        <li>Xuất cảnh nước ngoài: Google Maps.Ưu việt về dữ liệu toàn cầu, street view, đánh giá người dùng.</li>
+                        <li>Đi bộ đường dài và ngoài trời: AllTrails, YAMAP. Ghi lại quỹ đạo, có thể tải bản đồ ngoại tuyến.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Dịch thuật:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Hội thoại thời gian thực: Dịch thuật "Hội thoại" và "Camera" tức thì của Google Dịch là bảo bối du lịch.</li>
+                        <li>Văn bản và tài liệu: DeepL có độ chính xác dịch thuật cao giữa các ngôn ngữ Âu Mỹ.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Lên kế hoạch hành trình:</h5>
+                    <p class="mb-2">Các ứng dụng như "TripIt" tự động tạo lộ trình, quản lý thông tin vé máy bay khách sạn, tạo lịch trình.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.4 Ngách nhưng mạnh mẽ: Nhập môn công cụ tự động hóa</h4>
+                    <p class="mb-2">Đây là chìa khóa nâng cấp điện thoại thành "trợ lý thông minh".</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Tự động hóa là gì?:</h5>
+                    <p class="mb-2">Khi điều kiện đã đặt được đáp ứng, điện thoại tự động thực hiện một loạt thao tác đã đặt trước. Ví dụ: Khi về nhà tự động kết nối Wi-Fi và phát nhạc, khi đi ngủ tự động làm tối màn hình.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. "Phím tắt" iOS:</h5>
+                    <p class="mb-2">Công cụ tự động hóa chính thức của Apple. Không cần lập trình.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Khái niệm cốt lõi: "Phím tắt" là quy trình công việc có thể nhấn thủ công để chạy. "Tự động hóa" là chỉ thị chạy tự động dựa trên điều kiện.</li>
+                        <li>Đường nhập môn: Trước hết thêm phím tắt có sẵn từ "Thư viện phím tắt" để sử dụng. Sau đó thử tạo phím tắt đơn giản. Cuối cùng khám phá tự động hóa cá nhân trong tab "Tự động hóa".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Giải pháp tự động hóa Android:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cấp hệ thống: Hệ thống của từng thương hiệu (ví dụ: One UI, MIUI) có thể đã tích hợp tính năng tự động hóa cơ bản như "Kịch bản liên kết".</li>
+                        <li>Ứng dụng cấp thần thánh: Tasker. Tính năng cực kỳ mạnh mẽ nhưng đường cong học tập dốc.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Bài tập chương này: Tạo quy trình tự động hóa "Thư giãn trước khi ngủ"</p>
+                        <p class="mt-1">Phương án tham khảo (sử dụng tự động hóa "Phím tắt" iOS):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Tạo điều kiện kích hoạt: Mở ứng dụng Phím tắt > [Tự động hóa] > [Tạo tự động hóa cá nhân] > Chọn "Thời gian cụ thể" (ví dụ: 22:30, hàng ngày).</li>
+                            <li>Thêm hành động thực hiện: Giảm âm lượng phương tiện > Bật "Chế độ ngủ" > Phát playlist thư giãn cụ thể > Độ sáng màn hình thấp nhất > Hiển thị thông báo: "Đã đến giờ thư giãn trước khi ngủ. Hãy đặt điện thoại xuống."</li>
+                        </ol>
+                        <p class="mt-2">Phương án tham khảo Android: Sử dụng tính năng "Kịch bản" tiêu chuẩn hệ thống hoặc Tasker, đặt điều kiện kích hoạt và hành động tương tự.</p>
+                        <p class="mt-1">Quy trình tập: Chọn công cụ theo hệ thống điện thoại, tạo tự động hóa tên "Thư giãn trước khi ngủ". Thêm các hành động quan trọng (bao gồm điều chỉnh âm lượng và bật chế độ ngủ). Lưu và kiểm tra.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">III. Phần Nâng Cao (Chương 13-17)</h2>
+
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 13: Khoa học pin và tối ưu hóa tiết kiệm điện</h3>
+                    <p class="mb-3">Pin là "trái tim năng lượng" của smartphone. Chương này sẽ giúp bạn hiểu đặc tính pin, học các kỹ thuật sạc và tiết kiệm điện khoa học, giải quyết hoàn toàn nỗi lo pin.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 Pin là gì? Chu kỳ và độ sức khỏe</h4>
+                    <p class="mb-2">Pin smartphone (lithium-ion hoặc lithium-polymer) giống như bọt biển năng lượng: Sạc là hút nước (lưu điện), xả là vắt nước (sử dụng). Hãy nhớ 3 đặc điểm lớn:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sạc bất cứ lúc nào: Khác với pin cũ, không có hiệu ứng bộ nhớ, không cần đợi dùng hết mới sạc. Dùng đến 0% hoặc luôn để 100% đầy ngược lại sẽ gây hỏng.</li>
+                        <li>Sợ nhiệt: Nhiệt độ cao là kẻ thù của pin.</li>
+                        <li>Giảm chất lượng: Sử dụng lâu dài, dung lượng tối đa sẽ giảm. Đây là hiện tượng bình thường.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Chỉ số cốt lõi: Số lần chu kỳ và độ sức khỏe</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>1 chu kỳ không phải là 1 lần sạc. Ví dụ, hôm nay dùng 60% rồi sạc đầy, ngày mai dùng 40% rồi sạc đầy, tổng cộng tiêu thụ 100% điện năng được tính là 1 chu kỳ.</li>
+                        <li>Độ sức khỏe pin cho biết dung lượng tối đa hiện tại là bao nhiêu phần trăm so với mới. Dưới 80%, thời lượng pin rõ ràng ngắn hơn, có thể cân nhắc thay pin chính hãng.</li>
+                        <li>Cách kiểm tra:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Cài đặt > Pin > Tình trạng pin và sạc.</li>
+                                <li>Android: Thường có thể tìm thấy bằng cách tìm "Tình trạng pin" trong cài đặt.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 Mê tín khi sạc? Sạc nhanh, sạc không dây và quy tắc vàng</h4>
+                    <p class="mb-2">Xua tan tin đồn, sạc khoa học.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Sạc nhanh có làm hỏng pin không?</h5>
+                    <p class="mb-2">Sử dụng phụ kiện sạc nhanh chính hãng hoặc đã chứng nhận, hỏng hóc rất nhỏ. Điện thoại và sạc có kiểm soát nhiệt độ, khi quá nhiệt sẽ tự động giảm công suất. Không sử dụng sạc nhanh hãng lạ.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Sạc không dây thì sao?</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tiện lợi: Đặt là sạc. Phù hợp sử dụng khi ngủ đêm.</li>
+                        <li>Nhược điểm: Hiệu quả thấp, phát nhiệt rõ rệt, sạc chậm.</li>
+                        <li>Lời khuyên: Phù hợp để sạc qua đêm (cẩn thận). Khi cần sạc nhanh hãy dùng sạc nhanh có dây. Khi sử dụng hãy tháo ốp lưng dày.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Quy tắc dưỡng sinh vàng của pin</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Phạm vi điện tối ưu: Cố gắng giữ điện trong khoảng 20%-80%, không để 0% "đói" hoặc 100% "no".</li>
+                        <li>Sạc qua đêm có an toàn không? An toàn! Khi đầy sẽ tự động ngừng sạc, điện thoại sẽ cấp điện trực tiếp từ nguồn.</li>
+                        <li>Tuyệt đối không chơi game lớn khi sạc. Nhiệt chồng nhiệt sẽ làm hỏng pin.</li>
+                        <li>Không sử dụng điện thoại lâu dài: Sạc khoảng 50% rồi tắt nguồn bảo quản.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 Đây mới là kỹ thuật tiết kiệm điện thực sự</h4>
+                    <p class="mb-2">Chỉ có sức khỏe pin là chưa đủ. Cài đặt mới là chiêu tiết kiệm điện.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Tìm ra "kẻ ăn điện lớn"</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Màn hình (vua tiêu thụ điện): Giảm độ sáng, rút ngắn thời gian khóa tự động. Với điện thoại màn hình OLED nhất định phải bật chế độ tối. Tiết kiệm điện đáng kể.</li>
+                        <li>Sóng kém: Trong thang máy, tầng hầm, điện thoại cố gắng tìm sóng, tiêu thụ điện nhanh chóng.</li>
+                        <li>5G: Khi sóng kém, chuyển thủ công sang 4G, thời lượng pin sẽ cải thiện đáng kể.</li>
+                        <li>Dịch vụ vị trí:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Đặt quyền vị trí của ứng dụng ngoài điều hướng (ví dụ: mạng xã hội, mua sắm) thành "Chỉ cho phép khi sử dụng".</li>
+                                <li>Tắt các tùy chọn không cần thiết như "Quảng cáo dựa trên vị trí" trong vị trí hệ thống.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Quản lý "miệng" của ứng dụng</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Hạn chế hoạt động nền:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Cài đặt > Cài đặt chung > Làm mới App nền. Tắt tất cả hoặc chỉ để lại LINE.</li>
+                                <li>Android: Trong cài đặt pin ứng dụng, chọn "Cấm hoạt động nền" cho ứng dụng ít sử dụng.</li>
+                            </ul>
+                        </li>
+                        <li>Tắt thông báo không cần thiết: Mỗi lần màn hình sáng lên, rung đều tiêu thụ điện.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Sợi dây cứu mạng: Chế độ tiết kiệm điện</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Chế độ tiết kiệm điện/thấp: Hệ thống giảm hiệu năng, dừng đồng bộ nền. Rất hiệu quả cho cứu cấp tạm thời.</li>
+                        <li>Chế độ siêu tiết kiệm/cực hạn: Chỉ còn điện thoại, SMS, rất ít ứng dụng, màn hình đen trắng. Vắt kiệt điện cuối cùng để nối mạng.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Bài tập thực hành: Khám sức khỏe cho pin</p>
+                        <p class="mt-1">Mục tiêu: Sử dụng dữ liệu để tìm ra thủ phạm tiêu thụ điện thực sự.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Kiểm tra độ sức khỏe: Tìm dung lượng tối đa của pin bằng cách trên, ghi chú lại.</li>
+                            <li>Phân tích chi tiết tiêu thụ điện:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Vào Cài đặt > Pin, xem biểu đồ và danh sách ứng dụng bên dưới, chú ý ứng dụng nào có thời gian hoạt động nền dài.</li>
+                                    <li>Android: Vào Cài đặt > Pin > Sử dụng pin, xem bảng xếp hạng tiêu thụ điện của phần cứng và ứng dụng.</li>
+                                </ul>
+                            </li>
+                            <li>Lập kế hoạch đối phó:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Nếu ứng dụng cụ thể tiêu thụ điện nền bất thường → Hạn chế.</li>
+                                    <li>Nếu "Mạng di động" tiêu thụ điện cao → Nhớ lại có ở nơi sóng kém lâu không.</li>
+                                    <li>Nếu ứng dụng ít dùng có trong bảng xếp hạng → Cân nhắc gỡ cài đặt.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 14: Hệ thống tài khoản và dịch vụ đám mây</h3>
+                    <p class="mb-3">Tài khoản smartphone của bạn không chỉ là mật khẩu để tải ứng dụng. Đó là "hộ chiếu linh hồn" của cuộc sống số, và dịch vụ đám mây là "cao tốc vô hình" làm cho tất cả dữ liệu lưu thông.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 Ba tài khoản cốt lõi: Apple, Google và các thương hiệu</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple ID: Chìa khóa vạn năng hệ sinh thái Apple</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Vai trò: App Store, đồng bộ iCloud, Tìm iPhone, FaceTime... tất cả đều phụ thuộc vào đây. Chuyển đổi liền mạch giữa iPhone, iPad, Mac.</li>
+                        <li>Đường dây bảo mật: Nhất định phải bật xác thực hai yếu tố! Như vậy, ngay cả khi mật khẩu bị lộ, người khác cũng không thể đăng nhập trên thiết bị mới.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Tài khoản Google: Cốt lõi của Android và dịch vụ Google</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Vai trò: Đồng bộ danh bạ, lịch, Gmail, dấu trang Chrome, sao lưu ảnh.</li>
+                        <li>Đường dây bảo mật: Tương tự, bật quy trình xác thực hai bước là rất quan trọng.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Tài khoản thương hiệu: Quản lý vạn năng cục bộ</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Vai trò: Sao lưu không gian đám mây, cửa hàng ứng dụng, tìm điện thoại, liên kết đa thiết bị (ví dụ: phối hợp đa màn hình).</li>
+                        <li>Lưu ý: Hiểu rằng dữ liệu đám mây tồn tại trên máy chủ trong nước, đọc chính sách quyền riêng tư, nắm rõ dữ liệu nào đang được đồng bộ.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">🔐 Quy tắc chung bảo mật tài khoản</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Mật khẩu mạnh + Trình quản lý mật khẩu: Quản lý bằng chuỗi khóa iCloud hoặc công cụ như Bitwarden.</li>
+                        <li>Bật xác thực hai yếu tố: Đây là đường dây sống chống trộm.</li>
+                        <li>Định kỳ kiểm tra thiết bị đăng nhập: Xóa thiết bị lạ.</li>
+                        <li>Cẩn trọng liên kết lừa đảo: Tuyệt đối không nhấp ngay cả khi được yêu cầu mật khẩu từ liên kết không rõ. Nhập thủ công địa chỉ trang web chính thức.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 Đồng bộ đám mây: Tự di chuyển dữ liệu</h4>
+                    <p class="mb-2">Khi bật đồng bộ đám mây, dữ liệu cảm giác như nằm trong điện thoại, nhưng thực tế nằm an toàn trong đám mây, nhất quán trên mọi thiết bị.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Đồng bộ đám mây có thể làm gì? (Lấy iCloud làm ví dụ)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Danh bạ, lịch, ghi chú: Thay đổi trên thiết bị nào cũng đồng bộ ngay lập tức sang thiết bị khác.</li>
+                        <li>Ảnh video: Bật Ảnh iCloud, tất cả ảnh sẽ được tải lên, điện thoại chỉ giữ bản kích thước nhỏ (tiết kiệm không gian). Có thể xem kích thước gốc trên bất kỳ thiết bị Apple nào.</li>
+                        <li>Sao lưu toàn bộ tự động: Khi điện thoại đang sạc, trạng thái khóa và kết nối Wi-Fi, cài đặt hệ thống, bố cục ứng dụng... sẽ được sao lưu tự động. Trở thành bảo bối khi khôi phục điện thoại mới.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ⚠️ Phân biệt quan trọng: Đồng bộ vs Sao lưu</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Đồng bộ = Nhất quán hai chiều: Xóa ảnh trên thiết bị A, trên thiết bị B, C cũng mất. Mục đích là giữ tất cả thiết bị giống nhau.</li>
+                        <li>Sao lưu = Ảnh chụp nhanh một chiều: Giống như chụp ảnh chụp nhanh điện thoại để lưu. Sau đó xóa dữ liệu cục bộ, sao lưu đám mây vẫn còn. Mục đích là khôi phục.</li>
+                        <li>Hãy nhớ: Đừng coi đồng bộ ảnh iCloud là sao lưu! Nếu lỡ xóa trên tất cả thiết bị, cũng sẽ mất từ đám mây. Sao lưu thực sự cần sao lưu toàn bộ trên PC (iTunes/Finder) hoặc lưu trữ đám mây bên thứ ba (chỉ tải lên, không xóa).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 Chia sẻ gia đình: Mua một lần, cả nhà cùng hưởng</h4>
+                    <p class="mb-2">Đây là bảo bối chia sẻ tài nguyên số với những người thân thiết nhất.</p>
+                    <p class="mb-2">Lấy "Chia sẻ gia đình" Apple làm ví dụ, có thể chia sẻ:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ứng dụng, nhạc, phim, sách: Những gì bạn mua, cả nhà (tối đa 5 người) đều có thể tải xuống, không tính thêm phí. Cách mua phần mềm tiết kiệm nhất.</li>
+                        <li>Đăng ký Apple Music, iCloud+...: Gói đăng ký gia đình thường rẻ hơn cá nhân.</li>
+                        <li>Chia sẻ vị trí: Xem vị trí thời gian thực của gia đình (ví dụ: con tan học). Đặt hàng rào địa lý, thông báo khi đến hoặc đi. An toàn và an tâm.</li>
+                        <li>Album và lịch chung: Cùng đặt ảnh, ghi lại sự kiện gia đình.</li>
+                    </ul>
+                    <p class="mb-2">💡 Lưu ý: Chỉ mời người thân trực hệ hoàn toàn đáng tin cậy. Chia sẻ vị trí là hai chiều. Tôn trọng quyền riêng tư lẫn nhau.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Bài tập thực hành: Kiểm tra nội dung đồng bộ tài khoản</p>
+                        <p class="mt-1">Mục tiêu: Quản lý chủ động, tạm biệt đồng bộ lộn xộn.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Lấy iPhone làm ví dụ: Cài đặt > Tên của bạn ở trên cùng.</li>
+                            <li>Kiểm tra mục đồng bộ iCloud: Nhấn "iCloud", kiểm tra công tắc của từng ứng dụng trong danh sách.
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Danh bạ, lịch khuyến nghị bật.</li>
+                                    <li>Tập trung vào "Ảnh": Xác nhận hiểu logic Ảnh iCloud (xóa ở một nơi là xóa ở mọi nơi).</li>
+                                    <li>Có thể tắt đồng bộ ứng dụng bên thứ ba không sử dụng, tiết kiệm không gian.</li>
+                                    <li>Xác nhận Sao lưu iCloud đã bật.</li>
+                                </ul>
+                            </li>
+                            <li>Kiểm tra Tìm và vị trí: Xác nhận "Tìm iPhone" đã bật (bắt buộc chống trộm). Kiểm tra cài đặt vị trí chia sẻ gia đình có đúng kỳ vọng không.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 15: Kết nối smartphone với các thiết bị khác</h3>
+                    <p class="mb-3">Smartphone hiện đại là trung tâm số cá nhân của bạn. Học cách phối hợp với các thiết bị khác, hiệu suất sẽ tăng gấp đôi.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 Phối hợp với PC: Bùng nổ năng suất</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Truyền tập tin, tạm biệt cáp dữ liệu</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Vua không dây:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Hệ sinh thái Apple: AirDrop. Chuyển tập tin, ảnh tức thì giữa iPhone và Mac. Không cần mạng, không giảm chất lượng.</li>
+                                <li>Android+Win: Sử dụng tính năng <strong>"Phone Link"</strong>. Xem ảnh điện thoại trực tiếp trên PC, trả lời SMS.</li>
+                                <li>Hệ sinh thái thương hiệu: Samsung Flow, Huawei Share... Chiếu màn hình điện thoại trực tiếp lên PC. Điều khiển ứng dụng điện thoại bằng chuột và bàn phím PC. Kéo thả tập tin hai chiều.</li>
+                            </ul>
+                        </li>
+                        <li>Kết nối trực tiếp vật lý: Kết nối PC bằng cáp dữ liệu, chọn chế độ "Truyền tập tin". Ổn định và nhanh. Phù hợp chuyển tập tin lớn.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Tiếp nối đa màn hình</h5>
+                    <p class="mb-2">Apple Handoff: Đang xem trang web trên iPhone, biểu tượng Safari xuất hiện trên dock chương trình Mac, nhấn vào có thể xem tiếp. Sao chép văn bản, có thể dán trực tiếp trên thiết bị khác.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 Kết nối với đồng hồ/vòng thông minh: Trợ lý trên cổ tay</h4>
+                    <p class="mb-2">Tính năng cốt lõi:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Lọc thông báo: Đẩy tin nhắn từ điện thoại lên đồng hồ. Nâng cổ tay là xem. Những thứ không quan trọng vuốt để bỏ qua. Giảm số lần lấy điện thoại ra.</li>
+                        <li>Trạm dữ liệu sức khỏe: Đồng hồ đo nhịp tim, giấc ngủ 24 giờ. Dữ liệu xem dưới dạng báo cáo trong ứng dụng điện thoại.</li>
+                        <li>Điều khiển từ xa vạn năng: Điều khiển từ xa phát nhạc điện thoại, sử dụng làm màn trập camera điện thoại (siêu tiện cho ảnh tập thể).</li>
+                        <li>Chạm trên cổ tay: Đồng bộ thẻ giao thông, thẻ từ đã mở trong ví điện thoại lên đồng hồ. Nâng cổ tay là chạm.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 Kết nối với nhà thông minh: Điều khiển từ xa tổng trong túi</h4>
+                    <p class="mb-2">Ba vai trò của điện thoại:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Điều khiển từ xa: Bật/tắt đèn trực tiếp, điều chỉnh nhiệt độ điều hòa trong ứng dụng như Google Home, Amazon Alexa, Apple Home.</li>
+                        <li>Đạo diễn kịch bản: Đặt "Chế độ xem phim". Một chạm tắt đèn chính, bật đèn không khí, hạ màn hình, điều chỉnh điều hòa.</li>
+                        <li>Trung tâm cài đặt: Tất cả cài đặt thiết bị thông minh phải thông qua ứng dụng điện thoại.</li>
+                    </ol>
+
+                    <p class="mb-2">Khuyến nghị hệ sinh thái:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sử dụng iPhone, coi trọng quyền riêng tư → Chọn thiết bị hỗ trợ Apple HomeKit.</li>
+                        <li>Nhiều thiết bị, cầu hiệu quả chi phí → Hệ sinh thái Google Home hoặc Amazon Alexa đầy đủ nhất.</li>
+                        <li>Sử dụng điện thoại Samsung → Ưu tiên Samsung SmartThings.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Bài tập thực hành: Chiếu màn hình điện thoại lên TV</p>
+                        <p class="mt-1">Mục tiêu: Chia sẻ ảnh video trên màn lớn, chơi game. Sảng khoái!</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Xác nhận điện thoại và TV đã kết nối cùng Wi-Fi.</li>
+                            <li>Trên TV: Tìm và bật tính năng "Chiếu màn hình", "Miracast" hoặc "AirPlay".</li>
+                            <li>Trên điện thoại:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Vuốt từ góc trên bên phải xuống để mở trung tâm điều khiển, nhấn "Chiếu màn hình". Chọn TV.</li>
+                                    <li>Android: Vuốt xuống cài đặt nhanh, tìm "Hiển thị không dây", "Smart View", chọn TV.</li>
+                                </ul>
+                            </li>
+                            <li>Thành công! Màn hình và âm thanh điện thoại đồng bộ lên TV.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 16: Sao lưu và di chuyển dữ liệu</h3>
+                    <p class="mb-3">Ảnh, lịch sử trò chuyện là kho báu vô giá. Chương này sẽ dạy bạn cách mua bảo hiểm cho tài sản số và chuyển sang máy mới một cách suôn sẻ.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 Sao lưu toàn bộ: "Nhân bản" triệt để nhất</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Sao lưu cục bộ PC (đáng tin cậy nhất)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone + PC: Kết nối bằng cáp dữ liệu. Mở iTunes (Win) hoặc Finder (Mac), nhấn "Sao lưu ngay". Nhất định phải tích "Mã hóa sao lưu cục bộ". Như vậy dữ liệu sức khỏe và mật khẩu mới được sao lưu. Khi khôi phục, kết nối điện thoại mới và chọn "Khôi phục từ sao lưu".</li>
+                        <li>Máy thương hiệu Android + Phần mềm PC: Sử dụng công cụ chính thức của từng thương hiệu (Samsung Smart Switch, Xiaomi PC Suite...). Tính năng tương tự.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Sao lưu đám mây (tiện nhất)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sao lưu iCloud: Bật trong cài đặt. Tự động sao lưu khi điện thoại đang sạc, trạng thái khóa và kết nối Wi-Fi. Khi kích hoạt iPhone mới chỉ cần chọn "Khôi phục từ sao lưu iCloud".</li>
+                        <li>Lưu ý: 5GB miễn phí không đủ dùng. Thường phải nâng cấp iCloud+ trả phí.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 Sao lưu chọn lọc: Bảo vệ trọng điểm</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Ảnh video: Bật Ảnh iCloud/Google Ảnh/Ảnh đám mây thương hiệu là sao lưu liên tục. Hoặc định kỳ sao chép vào PC bằng cáp dữ liệu.</li>
+                        <li>Danh bạ...: Chỉ cần tồn tại trong tài khoản iCloud/Google/thương hiệu, đăng nhập điện thoại khác sẽ tự động quay lại.</li>
+                        <li>⚠️ Lịch sử trò chuyện LINE/WeChat (quan trọng nhất):
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Khi đổi máy: Sử dụng tính năng "Di chuyển lịch sử trò chuyện" trong ứng dụng. Kết nối trực tiếp bằng Wi-Fi. Chuyển từ máy cũ sang máy mới. Khuyến nghị nhất.</li>
+                                <li>Sao lưu dài hạn: Sử dụng tính năng "Sao lưu và khôi phục" của ứng dụng PC. Sao lưu cục bộ PC. An toàn nhất — điều này quan trọng.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 Hướng dẫn đổi máy: Ba đường di chuyển chính</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Android → Android</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cùng thương hiệu (ví dụ: Samsung → Samsung): Sử dụng ứng dụng "Nhân bản điện thoại" chính thức. Quét mã QR là có thể chuyển ứng dụng và dữ liệu. Trải nghiệm hoàn hảo.</li>
+                        <li>Khác thương hiệu: Công cụ đổi máy bên thứ ba, hoặc đồng bộ trước ảnh danh bạ lên đám mây (ví dụ: Google Ảnh), đăng nhập máy mới để tải xuống.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iPhone → iPhone</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Khôi phục iCloud: Chọn khôi phục từ sao lưu iCloud khi kích hoạt máy mới.</li>
+                        <li>Khởi động nhanh: Đưa iPhone cũ và mới lại gần. Máy cũ hiển thị hoạt ảnh cài đặt, quét mã QR là chuyển tất cả không dây. Trải nghiệm tuyệt vời.</li>
+                        <li>Lưu ý: Mất nhiều thời gian. Giữ sạc và mạng.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Đa nền tảng (Android↔iPhone) phức tạp nhất</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sử dụng công cụ chính thức (ví dụ: ứng dụng "Move to iOS"). Có thể chuyển danh bạ, ảnh...</li>
+                        <li>Giới hạn cốt lõi: Không thể di chuyển ứng dụng và dữ liệu ứng dụng (ví dụ: lịch sử trò chuyện LINE/WeChat, tiến độ game). Ứng dụng cần cài lại. Dữ liệu xử lý riêng (ví dụ: LINE khôi phục từ sao lưu PC) — điều này quan trọng.</li>
+                        <li>Chiến lược thủ công: Ảnh trung chuyển qua PC hoặc đám mây. Xuất danh bạ thành tập tin vCard. Kiểm tra dữ liệu ứng dụng quan trọng có hỗ trợ xuất đa nền tảng không.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Bài tập thực hành: Sao lưu thủ công ảnh và danh bạ vào PC</p>
+                        <p class="mt-1">Mục tiêu: Có bản sao dữ liệu ngoại tuyến tự quản lý hoàn toàn, an tâm tuyệt đối.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Chuẩn bị cáp dữ liệu, kết nối điện thoại và PC.</li>
+                            <li>Sao lưu ảnh: Vào bộ lưu trữ nội bộ điện thoại trên PC, tìm thư mục DCIM và Pictures, sao chép toàn bộ vào ổ cứng PC.</li>
+                            <li>Sao lưu danh bạ:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Xác nhận danh bạ có trong iCloud. Truy cập phiên bản web iCloud.com, vào "Danh bạ", chọn tất cả và xuất tập tin vCard, lưu vào PC.</li>
+                                    <li>Android: Trong cài đặt ứng dụng "Danh bạ", tìm "Xuất ra thiết bị lưu trữ", tạo tập tin .vcf. Sao chép vào PC bằng cáp dữ liệu.</li>
+                                </ul>
+                            </li>
+                            <li>Kiểm tra sao lưu: Mở vài ảnh đã sao chép trên PC, mở tập tin .vcf xác nhận thông tin đầy đủ.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 17: Xử lý sự cố và tự giải quyết</h3>
+                    <p class="mb-3">Điện thoại đôi khi "ốm" đừng hoảng loạn. Hầu hết vấn đề đều có thể tự giải quyết. Đây là "Cứu hộ điện thoại" của bạn.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 Điện thoại chậm, phát nhiệt</h4>
+                    <p class="mb-2">Chẩn đoán 4 bước:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Liên tưởng: Sau khi cập nhật hệ thống? Hay sau khi cài ứng dụng cụ thể?</li>
+                        <li>Kiểm tra dung lượng lưu trữ: Còn dưới 10% là nguyên nhân phổ biến nhất khiến hệ thống chậm.</li>
+                        <li>Kiểm tra bảng xếp hạng tiêu thụ điện: Trong cài đặt pin, xem ứng dụng nào tiêu thụ điện nền.</li>
+                        <li>Kiểm tra sóng: Ở nơi sóng kém, điện thoại cố gắng tìm mạng, phát nhiệt.</li>
+                    </ol>
+
+                    <p class="mb-2">Phương pháp điều trị:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Thiếu dung lượng → Dọn dẹp lưu trữ ngay (xem phần cơ bản).</li>
+                        <li>Ứng dụng cụ thể gây rắc rối → Xóa bộ nhớ đệm ứng dụng trong cài đặt, hoặc gỡ cài đặt rồi cài lại.</li>
+                        <li>Giải pháp vạn năng: Khởi động lại điện thoại.</li>
+                        <li>Không chơi game lớn khi sạc. Nhiệt chồng sẽ làm hỏng pin.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 Ứng dụng bị treo, không phản hồi</h4>
+                    <p class="mb-2">Quy trình xử lý tiêu chuẩn:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Đóng ứng dụng, mở lại.</li>
+                        <li>Cập nhật trong cửa hàng ứng dụng.</li>
+                        <li>Kiểm tra có vô tình tắt quyền cần thiết (ví dụ: quyền lưu trữ) không.</li>
+                        <li>Xóa bộ nhớ đệm ứng dụng (an toàn, không mất dữ liệu).</li>
+                        <li>Phương án cuối cùng: Xóa dữ liệu/Gỡ cài đặt rồi cài lại (thông tin đăng nhập sẽ bị xóa. Xác nhận nhớ mật khẩu).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 Không bật nguồn được, kẹt ở màn hình khởi động "Phương án cuối cùng"</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Trước hết sạc 30 phút. Có thể chỉ hết pin hoàn toàn.</li>
+                        <li>Thử khởi động lại cưỡng bức (xem bài tập dưới). Giải quyết được phần lớn "giả chết".</li>
+                        <li>Vẫn không được: Có thể cần sửa chữa kết nối PC ở chế độ khôi phục, nhưng điều này sẽ xóa tất cả dữ liệu (có thể khôi phục nếu có sao lưu). Vẫn không được thì có thể là vấn đề phần cứng, cần mang đi sửa.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 Tìm sửa chữa chính hãng, tránh bẫy</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tìm chính hãng thật: Nhất định phải xác nhận "Nhà cung cấp dịch vụ được chứng nhận" trên trang web chính thức thương hiệu. Hoặc tìm lối vào dịch vụ trong cài đặt điện thoại, ứng dụng chính thức.</li>
+                        <li>Trước khi sửa: Nhất định phải tự sao lưu tất cả dữ liệu! Đăng xuất khỏi tài khoản. Mang theo hóa đơn mua hàng.</li>
+                        <li>Cẩn thận sửa chữa không chính thức: Có thể sử dụng linh kiện kém chất lượng, rủi ro lộ quyền riêng tư. Hơn nữa một khi mở ra sẽ mất bảo hành chính hãng.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Bài tập thực hành: Mô phỏng "Khởi động lại cưỡng bức"</p>
+                        <p class="mt-1">Mục tiêu: Học "chìa khóa vạn năng" này khi điện thoại bình thường, không hoảng loạn khi thực sự hỏng.</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>Lưu ý: Thao tác khi điện thoại bình thường là an toàn. Dữ liệu sẽ không bị xóa nhưng khuyến nghị lưu công việc trên tay trước.</li>
+                            <li>Phương pháp:
+                                <ul class="list-circle pl-6 mt-1 space-y-1">
+                                    <li>iPhone màn hình đầy đủ: Nhấn nhanh 1 lần tăng âm lượng, nhấn 1 lần giảm âm lượng, nhấn giữ nút nguồn bên cạnh. Cho đến khi logo Apple xuất hiện.</li>
+                                    <li>Android phổ biến: Nhấn giữ nút nguồn 10-15 giây. Cho đến khi khởi động lại.</li>
+                                    <li>(Có thể khác nhau tùy mẫu cụ thể. Nếu không chắc, tìm "[Mẫu điện thoại của bạn] khởi động lại cưỡng bức")</li>
+                                </ul>
+                            </li>
+                            <li>Ý nghĩa: Tập một lần, sau này khi điện thoại thực sự bị treo, có thể giải quyết một cách bình tĩnh.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">IV. Phần Phát Triển (Chương 18-22)</h2>
+
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 18: Đi sâu vào mạng di động và bảo mật thông tin</h3>
+                    <p class="mb-3">🔒 Tại sao cần quan tâm đến điều này?</p>
+                    <p class="mb-3">Chúng ta mỗi ngày dùng điện thoại lướt web, thanh toán, chat, cảm thấy rất tiện. Nhưng bạn đã bao giờ nghĩ, lịch sử chat, mật khẩu thanh toán, ảnh... những thông tin này tần suất "trần trụi" trên internet là bao nhiêu? Điện thoại là phân thân số của chúng ta, bảo mật của nó là bảo mật của chính chúng ta. Đừng nghĩ hacker ở xa, một Wi-Fi công cộng bất cẩn cũng có thể trở thành "cạm bẫy". Hôm nay, hãy đi sâu vào "dòng chảy ngầm" trong mạng di động, làm cho điện thoại của bạn vững như bàn thạch, đừng nhầm lẫn.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📡 VPN: "Áo choàng tàng hình" trong mạng</h4>
+                    <p class="mb-2">Nó thực chất là gì?</p>
+                    <p class="mb-2">VPN, tên đầy đủ là Virtual Private Network (Mạng riêng ảo). Hãy tưởng tượng bạn xây dựng một đường hầm ngầm mã hóa chuyên dụng giữa nhà bạn và trang web muốn truy cập.</p>
+
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Kết nối internet thông thường: Điện thoại của bạn → Mạng công cộng (mạng nhà mạng, Wi-Fi quán cà phê) → Trang web đích.
+                            <p class="mt-1 text-secondary">Rủi ro: Trên đường này, ai đó (hacker, người cung cấp Wi-Fi độc hại, hoặc quản trị mạng) có thể đang "nhòm ngó" dữ liệu bạn gửi.</p>
+                        </li>
+                        <li>Khi sử dụng VPN: Điện thoại của bạn → Đường hầm mã hóa VPN → Máy chủ VPN → Trang web đích.
+                            <p class="mt-1 text-secondary">Hiệu quả: Tất cả lưu lượng mạng của bạn, từ khi vào đường hầm đã được mã hóa và đóng gói. "Kẻ nhòm ngó" trên đường chỉ thấy một chuỗi ký tự không thể giải mã. Dữ liệu đến máy chủ VPN mới được giải mã và chuyển đến trang web thực sự. Địa chỉ truy cập trang web thấy cũng là địa chỉ máy chủ VPN, không phải địa chỉ thực của bạn.</p>
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">Có thể làm gì? Ngoài "vượt tường"</p>
+                    <p class="mb-2">Đừng chỉ nghĩ đến truy cập trang web nước ngoài khi nhắc đến VPN. Có rất nhiều công dụng hợp pháp:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Bảo vệ dưới Wi-Fi công cộng: Sử dụng Wi-Fi miễn phí ở sân bay, khách sạn, quán cà phê là vùng rủi ro cao lộ dữ liệu. Sử dụng VPN, bạn có thể "mặc áo giáp" cho kết nối.</li>
+                        <li>Truy cập an toàn từ xa vào mạng nội bộ doanh nghiệp: Nhiều nhân viên doanh nghiệp đăng nhập an toàn vào hệ thống nội bộ và máy chủ tập tin qua VPN khi làm việc từ xa.</li>
+                        <li>Bảo vệ quyền riêng tư cá nhân, tránh theo dõi: Ngăn nhà cung cấp dịch vụ internet (ISP) ghi lại và phân tích thói quen sử dụng internet của bạn, phân phối quảng cáo chính xác.</li>
+                    </ol>
+
+                    <p class="mb-2">⚠️ Lưu ý quan trọng</p>
+                    <p class="mb-2">Bản thân công nghệ VPN là công cụ bảo mật hợp pháp, nhưng nhất định phải mua từ kênh chính quy hoặc sử dụng dịch vụ đáng tin cậy. Không sử dụng "VPN miễn phí" không rõ nguồn gốc. Có thể cài mã độc vào điện thoại, lén ghi lại và bán dữ liệu — giống như "thuê trộm làm bảo vệ".</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🚫 "Cạm bẫy ngọt ngào" của Wi-Fi công cộng</h4>
+                    <p class="mb-2">Wi-Fi miễn phí hấp dẫn nhưng có thể là "viên đường độc dược". Ngoài "giải pháp tối thượng" là VPN, bạn còn có thể xây dựng 2 tuyến phòng thủ cơ bản.</p>
+                    
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Tuyến phòng thủ thứ nhất: Xác nhận HTTPS
+                            <p class="mt-1">Khi truy cập trang web, hãy xem đầu thanh địa chỉ là http:// hay https://. Chữ "s" thêm vào nghĩa là Secure (An toàn). Nghĩa là giao tiếp giữa bạn và trang web đã được mã hóa, ngay cả khi dữ liệu bị chặn, giải mã cũng khó khăn. Hiện nay, hầu hết trang web chính quy (ngân hàng, email, nền tảng mạng xã hội) mặc định sử dụng HTTPS. Dưới Wi-Fi công cộng, hãy xác nhận trang đang truy cập là HTTPS.</p>
+                        </li>
+                        <li>Tuyến phòng thủ thứ hai: Nâng cấp truy vấn DNS
+                            <p class="mt-1">DNS là gì? Nói đơn giản là "danh bạ điện thoại" của mạng. Khi muốn truy cập baidu.com, điện thoại trước hết hỏi máy chủ DNS "Địa chỉ (IP) của Baidu là gì?". Truy vấn DNS truyền thống theo kiểu "bưu thiếp", không được mã hóa. Điều này có nghĩa là Wi-Fi độc hại có thể biết bạn hỏi trang web nào, và có thể sửa câu trả lời để dẫn bạn đến trang lừa đảo!</p>
+                            <p class="mt-1">DNS over TLS (DoT) / DNS over HTTPS (DoH) giải quyết vấn đề này. Mã hóa cả truy vấn "danh bạ" của bạn, không ai biết bạn đang tìm ai, câu trả lời cũng không thể bị sửa.</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🕵️ "Duyệt web riêng tư" có thực sự trở nên trong suốt không?</h4>
+                    <p class="mb-2">Tất cả các trình duyệt chính đều có "Chế độ duyệt web riêng tư/ẩn danh", nhưng nó có khiến bạn cảm thấy như ninja mạng không? Sự thật có thể khiến bạn thất vọng.</p>
+                    
+                    <p class="mb-2">Nó làm được gì?</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>👍 Không để lại dấu vết cục bộ: Sau khi đóng cửa sổ riêng tư, hệ thống không lưu lịch sử duyệt, Cookie, dữ liệu biểu mẫu của bạn. Người nhà cầm điện thoại của bạn cũng không thấy bạn tìm kiếm gì.</li>
+                    </ul>
+
+                    <p class="mb-2">Nó không làm được gì:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Trở nên trong suốt với hành vi trực tuyến của bạn: Trang web bạn truy cập, nhà cung cấp dịch vụ internet (ISP), quản trị mạng công ty (nếu dùng Wi-Fi công ty) vẫn có thể thấy lịch sử truy cập của bạn. Trang web cũng có thể nhận diện bạn qua địa chỉ IP và các phương pháp kỹ thuật khác.</li>
+                        <li>Ngăn virus và phần mềm độc hại: Nếu vô tình vào trang độc hại, vẫn có thể bị nhiễm.</li>
+                        <li>Ẩn tập tin đã tải xuống: Tập tin tải xuống trong chế độ riêng tư vẫn được lưu đúng trong thư mục tải xuống.</li>
+                    </ol>
+
+                    <p class="mb-2">Kết luận: Chế độ duyệt web riêng tư giống như <strong>"Cục tẩy cục bộ"</strong>, không phải "Áo choàng tàng hình mạng". Phù hợp để bảo vệ không bị thấy trạng thái đăng nhập và lịch sử tìm kiếm khi mượn PC người khác, nhưng đừng mong thoát khỏi mọi theo dõi mạng.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Thời gian thực hành 👉 Thiết lập "Danh bạ đáng tin cậy" (DNS) cho điện thoại</p>
+                        <p class="mt-1">Đã biết truy vấn DNS có thể bị nhòm ngó hoặc sửa, hãy chuyển sang dịch vụ DNS an toàn và nhanh hơn. Dưới đây lấy Android và iOS làm ví dụ.</p>
+                        <p class="mt-2 font-semibold">Cách thiết lập điện thoại Android:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Mở 【Cài đặt】.</li>
+                            <li>Vào 【WLAN】, nhấn giữ mạng Wi-Fi đang kết nối > Chọn 【Chỉnh sửa mạng】.</li>
+                            <li>Nhấn 【Cài đặt nâng cao】 hoặc 【Tùy chọn nâng cao】.</li>
+                            <li>Tìm mục 【Cài đặt IP】, đổi thành 【Tĩnh】.</li>
+                            <li>Ở dưới sẽ hiện các trường cài đặt DNS. Nhập địa chỉ máy chủ DNS bạn muốn dùng:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Bảo mật và nhanh nhất: Cloudflare DNS 1.1.1.1 và 1.0.0.1</li>
+                                    <li>Trải nghiệm tổng thể tốt: Google DNS 8.8.8.8 và 8.8.4.4</li>
+                                </ul>
+                            </li>
+                            <li>Lưu cài đặt.</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">Cách thiết lập iPhone/iPad (trong môi trường Wi-Fi):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Mở 【Cài đặt】 > 【Wi-Fi】.</li>
+                            <li>Nhấn vào biểu tượng 【i】 bên phải mạng Wi-Fi đang kết nối.</li>
+                            <li>Kéo xuống dưới, tìm 【Cài đặt DNS】.</li>
+                            <li>Chọn 【Thủ công】, nhấn 【Thêm máy chủ】.</li>
+                            <li>Nhập địa chỉ DNS được đề xuất ở trên (ví dụ: 1.1.1.1).</li>
+                            <li>Nhấn 【Lưu】 ở góc trên bên phải.</li>
+                        </ol>
+                        <p class="mt-2">Sau khi hoàn tất, điện thoại của bạn sẽ ưu tiên sử dụng máy chủ DNS đáng tin cậy hơn khi truy vấn địa chỉ trang web, an toàn hơn và có thể phản hồi nhanh hơn một chút. Xin chúc mừng! Bạn đã bịt thêm một lỗ hổng bảo mật!</p>
+                    </div>
+                </div>
+
+                <!-- Chương 19 -->
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 19: AI hoạt động trên điện thoại như thế nào</h3>
+                    <p class="mb-3">👋 Chào mừng đến với "trình diễn ảo thuật" thú vị nhất trên điện thoại. Nhân vật chính là: trí tuệ nhân tạo. Những bức ảnh đẹp "chụp là xong" mà bạn dùng mỗi ngày, trợ lý giọng nói có khi bạn nói là đến, phương pháp nhập liệu càng dùng càng hiểu bạn. Đằng sau tất cả là bộ não vô hình này đứng vững. Hôm nay, chúng ta sẽ mở bức màn này, xem AI "suy nghĩ" và làm việc như thế nào trên điện thoại của bạn.</p>
+                    <p class="mb-3">Trước hết, kết luận cốt lõi: AI trên điện thoại của bạn đang cố gắng đưa tính toán lại gần bạn hơn. Không phải đưa bạn lại gần máy chủ.</p>
+                    <p class="mb-3">Câu này hơi khó hiểu? Hãy kết hợp với "phân thân kỹ thuật số" đã nói ở chương trước để hiểu. Chương trước nói, điện thoại là phân thân của bạn, dữ liệu rời khỏi nó sẽ đối mặt với rủi ro. Và AI trên điện thoại hiện đại đang cố gắng nhồi nhét nhiều trí tuệ hơn vào bên trong "phân thân" này. Đây chính là "Edge AI" (AI biên).</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 Camera AI: "Phòng tối rửa ảnh" của bạn chuyển sang điện thoại</h4>
+                    <p class="mb-2">Chụp ảnh có thể là chức năng AI chúng ta dùng nhiều nhất. Bạn có nghĩ "chụp ảnh" chỉ là một tiếng "kacha"? Không còn nữa.</p>
+                    <p class="mb-2">Chụp ảnh bằng điện thoại thời đầu giống như máy ảnh phim tự động, nhấn cửa sập thì chất lượng ảnh phụ thuộc gần như vào phần cứng cảm biến và ống kính. Nhưng nhiếp ảnh tính toán AI hiện nay giống như nhét trực tiếp một đội chuyên gia chỉnh sửa chuyên nghiệp và nhiếp ảnh gia vào nút cửa sập.</p>
+                    <p class="mb-2">Khác biệt ở đâu?</p>
+                    <p class="mb-2">"Đội ngũ" này đã bắt đầu làm việc từ trước khi bạn nhấn cửa sập. Quét cảnh, nhận diện <strong>"đây là bầu trời xanh", "đây là khuôn mặt người", "đây là cảnh đêm"</strong> hoặc "đây là món ăn". Sau khi nhận diện xong, AI ngay lập tức gọi phương án tối ưu hóa được huấn luyện đặc biệt cho loại cảnh này:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Chụp chân dung: Biết cần làm mờ nền, làm đẹp da, tự động chuyển sang chế độ chân dung.</li>
+                        <li>Chụp cảnh đêm: Không đơn giản tăng ISO để tạo nhiễu, mà chụp liên tục nhiều ảnh tối trong tích tắc, như xếp hình ghép, "tính toán" để hòa trộn phần rõ nhất và ít nhiễu nhất của tất cả các ảnh, tạo ra một bức ảnh sáng và đẹp.</li>
+                        <li>Chụp tài liệu: Tự động làm thẳng mép, tăng độ tương phản, giống như máy quét.</li>
+                        <li>Chụp khoảnh khắc chuyển động: Dự đoán quỹ đạo chuyển động, tự động chụp khoảnh khắc rõ nhất.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Thời gian thực hành 👉: Mở camera điện thoại ngay bây giờ, hướng vào các cảnh khác nhau (khuôn mặt người, cây cối, món ăn, văn bản). Nhiều điện thoại khi nhận diện cảnh cụ thể sẽ hiển thị một biểu tượng nhỏ ở góc khung ngắm (ví dụ: "Chân dung", "Món ăn", "Văn bản"). Hãy cảm nhận quá trình "nhận diện tức thì" này. Đây là phản hồi thời gian thực mà AI mang lại cho bạn trước khi bạn nhấn cửa sập.</p>
+                    </div>
+
+                    <p class="mt-4 mb-2">Nói cách khác, nhấn cửa sập bây giờ chỉ là khởi động bước cuối cùng của quy trình "chỉnh sửa tính toán" này. Vòng xoay "đang xử lý" trong giây phút đó là bằng chứng bộ não AI đang hoạt động tốc độ cao. Điều tuyệt vời hơn là tất cả các tính toán phức tạp này ngày càng được thực hiện trực tiếp trên chip AI chuyên dụng trong điện thoại (ví dụ: Neural Engine của Apple, AI Engine của Qualcomm, Kiến trúc Da Vinci của Huawei...). Nhanh và bảo mật cao.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗣️ Trợ lý giọng nói: "Thư ký giọng nói" hiểu bạn như thế nào?</h4>
+                    <p class="mb-2">"Hey Siri, ngày mai thời tiết thế nào?"</p>
+                    <p class="mb-2">"OK Google, đặt báo thức sáng mai lúc 7 giờ."</p>
+                    <p class="mb-2">Điều này đã trở nên tự nhiên như hơi thở. Nhưng thư ký giọng nói này đã đạt được điều đó như thế nào?</p>
+                    <p class="mb-2">Quy trình làm việc của nó có thể phân rã thành "3 bước" tiêu chuẩn:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Bước 1: Nghe (Nhận diện giọng nói).</strong>
+                            <p class="mt-1">Khi bạn nói từ đánh thức ("Hey Siri") và đưa ra chỉ thị, mic điện thoại ghi lại dạng sóng giọng nói của bạn. Đây là tín hiệu liên tục. Nhiệm vụ đầu tiên của AI là cắt nhỏ sóng âm liên tục này thành từng mảnh âm tố, đối chiếu với thư viện từ vựng đã huấn luyện khổng lồ, chuyển chúng thành văn bản. Quá trình này gọi là ASR (Nhận diện giọng nói tự động). Cần vượt qua giọng địa phương, tốc độ nói, tiếng ồn môi trường, rất tuyệt vời.</p>
+                        </li>
+                        <li><strong>Bước 2: Hiểu (Hiểu ngôn ngữ tự nhiên - NLP).</strong>
+                            <p class="mt-1">Chỉ lấy được văn bản "nhắc tôi mang ô vào sáng mai lúc 7 giờ" là chưa đủ. Cần hiểu ý định. Ai? Khi nào? Làm gì? Điều này cần công nghệ NLP. Phân tích cấu trúc câu, trích xuất các thực thể quan trọng: "sáng mai lúc 7 giờ" (thời gian), "nhắc" (ý định/hành động), "tôi" (đối tượng), "mang ô" (sự kiện). Điều này tương đương với việc đã hiểu lệnh của bạn——điều này rất quan trọng.</p>
+                        </li>
+                        <li><strong>Bước 3: Thực thi và trả lời.</strong>
+                            <p class="mt-1">Sau khi hiểu ý định của bạn, trợ lý gọi ứng dụng hoặc mô-đun dịch vụ tương ứng trong điện thoại. Nếu tra cứu thời tiết, sẽ truy cập internet để lấy dữ liệu thời tiết. Nếu đặt báo thức, sẽ ghi vào cơ sở dữ liệu ứng dụng "Đồng hồ". Nếu hỏi "Messi là ai", có thể gọi công cụ tìm kiếm. Cuối cùng, kết quả được "nói" với bạn thông qua công nghệ tổng hợp giọng nói (TTS).</p>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">Trước đây, phần lớn tính toán nặng của bước 1 và 2 cần gửi đến máy chủ đám mây, nhưng hiện nay, việc nhận diện từ đánh thức và xử lý một số lệnh ngoại tuyến (ví dụ: đặt báo thức, bật Bluetooth) đã có thể hoàn toàn thực hiện trên chính điện thoại. Điều này có nghĩa là phản hồi nhanh hơn (không cần đợi mạng), bảo mật cũng được bảo vệ (không cần tải lên đám mây các lệnh như "tắt đèn").</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⌨️ Dự đoán phương pháp nhập liệu và trợ lý viết: "Thư ký tốc ký tâm đắc" của bạn</h4>
+                    <p class="mb-2">Đây có thể là AI thâm nhập lặng lẽ nhất. Bạn vừa gõ "tối nay", "ăn gì" đã hiện ra. Gõ "sếp", "chào" tự động đi sau. Đằng sau là quan sát và học hỏi lâu dài của mô hình học máy biên.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Mô hình ngôn ngữ dựa trên thói quen cá nhân: Phương pháp nhập liệu âm thầm phân tích từ vựng bạn dùng thường xuyên, tổ hợp cụm từ, người trò chuyện. Bạn cười "haha" khi chat với bạn bè, và dùng "biên bản họp" nhiều khi giao tiếp với đồng nghiệp. Nó đều ghi nhớ. Theo thời gian, hình thành một "mô hình dự đoán" được tối ưu hóa riêng cho bạn.</li>
+                        <li>Hiểu ngữ cảnh: Không chỉ nhìn từ trước, mà hiểu ngữ cảnh câu bạn đang gõ. Cùng một từ bắt đầu, trong hộp chat LINE và tài liệu công việc, có thể đưa ra đề xuất hoàn thành khác nhau.</li>
+                        <li>Khả năng sửa lỗi chính tả: Khi gõ "mian", biết bạn muốn gõ "mikan" (quýt), tự động sửa. Đây không đơn giản là khớp từ điển, mà dựa trên phán đoán xác suất được huấn luyện hàng tỷ lần nhập.</li>
+                    </ul>
+
+                    <p class="mb-2">🖋️ Một bước tiến hơn: Trợ lý viết AI.</p>
+                    <p class="mb-2">Hiện nay, nhiều phương pháp nhập liệu và ứng dụng ghi chú cung cấp chức năng "sửa lỗi chính tả thông minh", "mài giũa câu", "viết tiếp", là ứng dụng AI mạnh mẽ hơn. Có thể mài giũa "sản phẩm này rất tốt" thành "trải nghiệm người dùng của sản phẩm này tuyệt vời", hoặc sau khi viết tiêu đề, đề xuất một số cách mở đầu bài viết có thể. Mô hình này thường lớn hơn, một phần có thể phụ thuộc vào đám mây, nhưng sự liên tưởng và dự đoán cốt lõi vẫn được thực hiện nhiều tại địa phương, bảo vệ quyền riêng tư khi viết của bạn.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧠 Edge AI vs. Cloud AI: Điểm phân kỳ tiến hóa điện thoại</h4>
+                    <p class="mb-2">Từ khóa được nhắc đi nhắc lại ở chương trước: Edge (biên). Điều này đại diện cho xu hướng cốt lõi của phát triển AI điện thoại: sự lắng đọng của sức mạnh tính toán.</p>
+                    <p class="mb-2">Hãy xem sự khác biệt bản chất giữa "Edge AI" và chế độ "Cloud AI" truyền thống qua bảng đơn giản:</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Chiều so sánh</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Cloud AI (Chế độ truyền thống)</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Edge AI (Xu hướng hiện tại và tương lai)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Dữ liệu đi đâu</td>
+                                    <td class="border border-gray-300 px-4 py-2">Cần tải dữ liệu thô như ảnh, ghi âm của bạn lên máy chủ internet.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Dữ liệu thô ở lại điện thoại, chỉ đồng bộ kết quả xử lý hoặc dữ liệu ẩn danh cực nhỏ.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Tốc độ</td>
+                                    <td class="border border-gray-300 px-4 py-2">Phụ thuộc chất lượng mạng, có độ trễ. Hỏi xong phải đợi "tải mạng".</td>
+                                    <td class="border border-gray-300 px-4 py-2">Phản hồi tức thì, không trễ. Mở khóa, tìm kiếm album, dịch ngoại tuyến hoàn thành trong chớp mắt.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Bảo mật quyền riêng tư</td>
+                                    <td class="border border-gray-300 px-4 py-2">Dữ liệu của bạn "rời nhà", đi qua mạng công cộng, có rủi ro rò rỉ tiềm ẩn.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Dữ liệu không rời "phân thân", tránh triệt để rủi ro nghe lén và chặn bắt trong quá trình truyền.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Có thể ngoại tuyến không</td>
+                                    <td class="border border-gray-300 px-4 py-2">Về cơ bản không thể. Không mạng ≈ tê liệt chức năng AI.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Chức năng cốt lõi hoàn toàn có thể dùng ngoại tuyến. Thích ứng nhiều cảnh hơn (ví dụ: bãi đỗ xe ngầm, trong máy bay, ngoài trời).</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Tiêu thụ điện và dung lượng dữ liệu</td>
+                                    <td class="border border-gray-300 px-4 py-2">Cần giao tiếp mạng liên tục. Tiêu thụ tương đối nhiều điện và dung lượng dữ liệu.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Giảm giao tiếp thường xuyên với đám mây, tiết kiệm điện và dung lượng dữ liệu hơn.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Ví dụ hiện tại</td>
+                                    <td class="border border-gray-300 px-4 py-2">Nhận diện giọng nói thời đầu, tạo ảnh AI cần render phức tạp, đối thoại mô hình ngôn ngữ siêu lớn.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Mở khóa khuôn mặt/vân tay, phân loại khuôn mặt trong album, dịch ngoại tuyến, một số lệnh giọng nói, dự đoán phương pháp nhập.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-2">Bạn thấy sự khác biệt chưa? Edge AI hoàn hảo đáp ứng yêu cầu bảo mật "bảo vệ phân thân kỹ thuật số" ở chương trước. Xây dựng bức tường ranh giới của "phân thân" vững chắc hơn và thông minh hơn. Dữ liệu và tính toán ở lại trong tường nhiều nhất có thể, giảm thiểu rủi ro và độ trễ đến mức tối thiểu.</p>
+                    <p class="mb-2">Và "mô hình lớn" trong tương lai cũng đang tiến hóa về phía biên. Hiện nay, đối thoại ChatGPT hoàn chỉnh không thể chạy trên điện thoại nhỏ, nhưng "bản tinh chế thu nhỏ" của nó đã có thể đi vào điện thoại, xử lý một số tác vụ cục bộ. Trong tương lai, quản gia điện thoại, ứng dụng ghi chú, thậm chí NPC trong game của bạn có thể được điều khiển bởi mô hình lớn biên mà bạn mang theo, hiểu hoàn toàn thói quen của bạn, phục vụ chỉ riêng bạn.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Thực hành chương này: Ra lệnh cho thư ký AI</p>
+                        <p class="mt-1">Nào, hãy trải nghiệm thực tế khả năng phối hợp của AI điện thoại. Hãy đưa ra chỉ thị phức tạp chứa nhiều tầng thông tin cho trợ lý giọng nói.</p>
+                        <p class="mt-1">Ví dụ:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Với Siri: "Hey Siri, nhắc tôi mang ô vào sáng mai lúc 7 giờ, và đổi lịch chiều nay 3 giờ thành 4 giờ."</li>
+                            <li>Với Google Assistant: "OK Google, nhắc tôi gọi cho mẹ tối nay 8 giờ, và phát nhạc ngày nắng trên Spotify ngay bây giờ."</li>
+                            <li>Với Bixby: "Hi Bixby, mở quét mã QR LINE, và giảm độ sáng màn hình."</li>
+                        </ol>
+                        <p class="mt-2">Quan sát cách nó hiểu và thực hiện tuần tự một chuỗi chỉ thị. Đằng sau điều này là NLP phân chia tác vụ, gọi khả năng của các ứng dụng khác nhau. Xin chúc mừng! Bạn đã hoàn thành chiến dịch hợp tác tương tác ngôn ngữ tự nhiên giữa người và máy tính!</p>
+                        <p class="mt-2">Chương này đến đây là hết. Bạn nhận ra chưa? AI trong điện thoại không phải là công nghệ trong phòng thí nghiệm xa xôi, mà là "động cơ vô hình" dưới đầu ngón tay, sau mỗi lần lấy nét, mỗi lần đánh thức, sau mỗi từ bạn nói. Nó ngày càng nhanh hơn, ngày càng hiểu bạn hơn, ngày càng an toàn hơn——bởi vì nó đang cố gắng nhốt trí tuệ và quyền riêng tư cùng nhau vào "phân thân kỹ thuật số" của bạn một cách chắc chắn.</p>
+                    </div>
+                </div>
+
+                <!-- Chương 20 -->
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 20: Tư duy lập trình và nhập môn tự động hóa</h3>
+                    <p class="mb-3">🤔 Nghe từ "lập trình" có thấy hiện lên màn hình tối và code phức tạp không? Thực ra, tư duy lập trình có thể bạn đã dùng khi sử dụng điện thoại. Hãy học cách "tự động hóa" bằng điện thoại, làm cho cuộc sống hiệu quả hơn.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 Tư duy lập trình: Phân rã "thủ tục"</h4>
+                    <p class="mb-2">Cốt lõi của lập trình là phân rã vấn đề lớn thành các bước nhỏ. Tự động hóa điện thoại cũng vậy.</p>
+                    <p class="mb-2">Ví dụ: Để tự động hóa tác vụ "mỗi sáng 7 giờ kiểm tra thời tiết, nếu mưa thì nhắc mang ô":</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Kích hoạt (khi nào): Mỗi sáng 7 giờ.</li>
+                        <li>Điều kiện (cái gì): Lấy dự báo thời tiết, kiểm tra có mưa không.</li>
+                        <li>Hành động (làm gì): Nếu mưa thì gửi thông báo.</li>
+                    </ol>
+                    <p class="mb-2">Đây chính là tư duy lập trình. Phân rã tác vụ phức tạp thành 3 yếu tố: kích hoạt, điều kiện, hành động.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Công cụ tự động hóa điện thoại</h4>
+                    <p class="mb-2">Điện thoại của bạn có sẵn công cụ tự động hóa mạnh mẽ.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">iOS: Shortcuts (Phím tắt)</h5>
+                    <p class="mb-2">Công cụ tự động hóa do Apple cung cấp. Không cần lập trình, chỉ cần kết hợp các khối để tạo luồng tự động hóa.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kích hoạt: Thời gian, vị trí, kết nối Wi-Fi, khởi động ứng dụng, v.v.</li>
+                        <li>Hành động: Gửi tin nhắn, phát nhạc, thay đổi cài đặt, khởi động ứng dụng, v.v.</li>
+                        <li>Ví dụ: "Khi về nhà kết nối Wi-Fi, bật đèn và phát nhạc".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Android: Tasker, Automate, hoặc tính năng riêng của hãng</h5>
+                    <p class="mb-2">Android mở hơn nên có thể tự động hóa mạnh mẽ hơn.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tasker: Ứng dụng tự động hóa Android mạnh nhất. Có thể tự động hóa hầu hết mọi thao tác.</li>
+                        <li>Tính năng hãng: "Bixby Routines" của Samsung, "Kịch bản" của Xiaomi, v.v.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎯 Các kịch bản tự động hóa thực tế</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Chế độ ngủ</strong>: Đến giờ ngủ, tự động bật chế độ chúc ngủ ngon, giảm âm lượng, cắt ánh sáng xanh.</li>
+                        <li><strong>Chế độ lái xe</strong>: Kết nối Bluetooth xe, tự động bật chế độ lái xe, thông báo cuộc gọi bằng giọng nói.</li>
+                        <li><strong>Tiết kiệm pin</strong>: Pin dưới 20%, tự động bật chế độ tiết kiệm điện, tắt các chức năng không cần thiết.</li>
+                        <li><strong>Nhắc nhở theo vị trí</strong>: Đến gần siêu thị, hiện danh sách mua sắm.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Thực hành chương này: Tạo luồng tự động hóa</p>
+                        <p class="mt-1">Mở công cụ tự động hóa trên điện thoại, tạo luồng sau:</p>
+                        <p class="mt-1">"Mỗi tối 10 giờ, bật chế độ chúc ngủ ngon và thông báo thời tiết ngày mai".</p>
+                        <p class="mt-2">Các bước:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Mở ứng dụng tự động hóa (iOS là "Shortcuts", Android là Tasker hoặc tính năng hãng).</li>
+                            <li>Tạo tự động hóa/routine mới.</li>
+                            <li>Thiết lập kích hoạt: Thời gian (mỗi tối 10 giờ).</li>
+                            <li>Thêm hành động:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Bật chế độ chúc ngủ ngon.</li>
+                                    <li>Lấy thông tin thời tiết và thông báo.</li>
+                                </ul>
+                            </li>
+                            <li>Lưu và kiểm tra.</li>
+                        </ol>
+                        <p class="mt-2">Đây là thực hành tư duy lập trình. Kết hợp điều kiện và hành động, mang lại sự "thông minh" cho điện thoại.</p>
+                    </div>
+                </div>
+
+                <!-- Chương 21 -->
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 21: Xử lý điện thoại cũ và di sản kỹ thuật số</h3>
+                    <p class="mb-3">📱 Mua điện thoại mới xong, điện thoại cũ xử lý thế nào? Ném vào thùng rác? Vừa lãng phí vừa nguy hiểm. Chương này sẽ học cách xử lý điện thoại cũ an toàn và quản lý di sản kỹ thuật số.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 Tái sử dụng điện thoại cũ</h4>
+                    <p class="mb-2">Điện thoại cũ vẫn là "máy tính nhỏ" có thể dùng. Có thể tái sử dụng cho các mục đích sau:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Máy phát đa phương tiện chuyên dụng</strong>: Thiết bị chuyên nghe nhạc, podcast, xem video.</li>
+                        <li><strong>Khung ảnh kỹ thuật số</strong>: Chiếu slideshow bằng Google Photos, v.v.</li>
+                        <li><strong>Camera an ninh gia đình</strong>: Biến thành camera giám sát bằng ứng dụng chuyên dụng.</li>
+                        <li><strong>Máy chơi game chuyên dụng</strong>: Chơi game retro bằng giả lập.</li>
+                        <li><strong>Bộ điều khiển nhà thông minh</strong>: Hub nhà thông minh luôn kết nối.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗑️ Các bước bắt buộc trước khi bỏ điện thoại</h4>
+                    <p class="mb-2"><strong>⚠️ Quan trọng: Chỉ "xóa" thôi là chưa đủ!</strong></p>
+                    <p class="mb-2">Trước khi bán, quyên góp hoặc tái chế điện thoại, hãy thực hiện các bước sau:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Sao lưu</strong>: Sao lưu tất cả dữ liệu quan trọng (ảnh, danh bạ, dữ liệu ứng dụng).</li>
+                        <li><strong>Đăng xuất khỏi tài khoản</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Tài khoản Google (Android).</li>
+                                <li>Apple ID (iPhone).</li>
+                                <li>Ứng dụng bên thứ ba (LINE, WeChat, v.v.).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Khôi phục cài đặt gốc (Factory Reset)</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>[Cài đặt] > [Hệ thống] > [Đặt lại] > [Xóa tất cả dữ liệu] (Android).</li>
+                                <li>[Cài đặt] > [Cài đặt chung] > [Chuyển hoặc đặt lại iPhone] > [Xóa tất cả nội dung và cài đặt] (iOS).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Xác nhận mã hóa</strong>: Điện thoại hiện đại mặc định đã mã hóa, nhưng máy cũ cần kiểm tra cài đặt mã hóa thủ công.</li>
+                        <li><strong>Tháo thẻ SD và SIM</strong>: Các thẻ này cũng có thể chứa thông tin cá nhân.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚰️ Di sản kỹ thuật số: Tương lai của "phân thân kỹ thuật số" của bạn</h4>
+                    <p class="mb-2">Nếu có chuyện gì xảy ra với bạn, tài sản kỹ thuật số (ảnh, tài khoản mạng xã hội, tiền mã hóa, v.v.) của bạn sẽ ra sao?</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">Các bước quản lý di sản kỹ thuật số:</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>Kiểm kê tài sản</strong>: Liệt kê tài sản kỹ thuật số bạn sở hữu (tài khoản, thuê bao, hàng mua kỹ thuật số, v.v.).</li>
+                        <li><strong>Thiết lập liên hệ khẩn cấp cho quản lý mật khẩu</strong>: 1Password, Bitwarden, v.v. cung cấp tính năng liên hệ khẩn cấp, cho phép người đáng tin cậy truy cập trong điều kiện cụ thể.</li>
+                        <li><strong>"Liên hệ di sản" của Apple/Google</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>iOS 15.2 trở lên: Cài đặt > Đăng nhập và bảo mật > Liên hệ di sản.</li>
+                                <li>Google: Thiết lập Quản lý tài khoản không hoạt động.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Bao gồm tài sản kỹ thuật số trong di chúc</strong>: Tham khảo luật sư, ghi cách xử lý tài sản kỹ thuật số trong văn bản pháp lý.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Thực hành chương này: Đặt lại điện thoại an toàn</p>
+                        <p class="mt-1">(Lưu ý: Chỉ thực hành khi thực sự cần bỏ điện thoại!)</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Xác nhận tất cả dữ liệu đã được sao lưu.</li>
+                            <li>Đăng xuất khỏi tất cả tài khoản.</li>
+                            <li>Thực hiện khôi phục cài đặt gốc.</li>
+                            <li>Sau khi khởi động lại, xác nhận hiện màn hình thiết lập (bằng chứng không còn dữ liệu cá nhân).</li>
+                            <li>Tháo thẻ SD và SIM.</li>
+                        </ol>
+                        <p class="mt-2">Ngoài ra, hãy cân nhắc thiết lập liên hệ di sản. Kiểm tra Cài đặt > Đăng nhập và bảo mật > Liên hệ di sản (iOS) hoặc Quản lý tài khoản không hoạt động của Google.</p>
+                    </div>
+                </div>
+
+                <!-- Chương 22 -->
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Chương 22: Tương lai điện thoại và cuộc sống kỹ thuật số</h3>
+                    <p class="mb-3">🔮 Điện thoại đang đi về đâu? Gập gọn? Kính AR? Chip trong não? Chương cuối này sẽ khám phá xu hướng công nghệ tương lai và xem nên chuẩn bị thế nào cho cuộc sống kỹ thuật số.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Xu hướng tiến hóa điện thoại</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Điện thoại gập gọn</h5>
+                    <p class="mb-2">Samsung, Huawei, Motorola dẫn đầu. Sự kết hợp giữa điện thoại và máy tính bảng. Hiện tại có ấn tượng đắt và dễ hỏng, nhưng khi công nghệ trưởng thành có thể trở nên phổ biến.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. AR (Thực tế tăng cường) và MR (Thực tế hỗn hợp)</h5>
+                    <p class="mb-2">Như Apple Vision Pro, Meta Quest đã chỉ ra, điện thoại sẽ kết hợp với kính AR, hòa trộn thế giới vật lý và kỹ thuật số. Điện thoại đóng vai trò "hub tính toán", cung cấp năng lực xử lý cho kính AR.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. AI First</h5>
+                    <p class="mb-2">AI ngày càng trở thành cốt lõi của điện thoại. Mô hình ngôn ngữ lớn (LLM) chạy trên thiết bị biên, trợ lý AI cá nhân có thể quản lý hoàn toàn cuộc sống của bạn trong tương lai.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Bền vững và môi trường</h5>
+                    <p class="mb-2">Vật liệu tái chế, thiết kế tuổi thọ cao, dễ sửa chữa trở nên quan trọng. Quy định cũng thay đổi như luật "Quyền sửa chữa" của Liên minh Châu Âu.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🌐 Tương lai cuộc sống kỹ thuật số</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li><strong>Metaverse và không gian ảo</strong>: Từ họp vật lý sang hiện diện trong không gian ảo. Điện thoại là "cửa ngõ" vào thế giới này.</li>
+                        <li><strong>Song sinh kỹ thuật số</strong>: Từ dữ liệu điện thoại, tạo ra "bản sao kỹ thuật số" của bạn, cung cấp dịch vụ cá nhân hóa.</li>
+                        <li><strong>6G và kết nối vạn vật</strong>: 6G không chỉ tăng tốc độ, mà hiện thực hóa Internet vạn vật (IoT), tất cả thiết bị kết nối liền mạch.</li>
+                        <li><strong>Chip trong não?</strong>: Công nghệ như Neuralink hướng tới giao diện não-máy tính trực tiếp. Có nhiều thách thức đạo đức và kỹ thuật, nhưng khả năng vô hạn.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎓 Nên chuẩn bị thế nào?</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Học liên tục</strong>: Công nghệ thay đổi nhanh. Giữ sự tò mò, tiếp tục học cái mới.</li>
+                        <li><strong>Nâng cao năng lực kỹ thuật số</strong>: Đánh giá thông tin một cách phê phán, nhận diện tin giả, thực hành bảo mật kỹ thuật số.</li>
+                        <li><strong>Có ý thức quyền riêng tư</strong>: Công nghệ tương lai cá nhân hóa hơn. Luôn kiểm tra cài đặt quyền riêng tư, hiểu giá trị dữ liệu.</li>
+                        <li><strong>Cân bằng</strong>: Công nghệ là công cụ, không phải chủ nhân. Trân trọng thời gian ngoại tuyến.</li>
+                        <li><strong>Tham gia cộng đồng</strong>: Tham gia diễn đàn công nghệ, nhóm người dùng, chia sẻ kiến thức.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Thực hành cuối cùng: Nhìn lại cuộc sống kỹ thuật số của bạn</p>
+                        <p class="mt-1">Đọc xong cuốn sách này, mối quan hệ của bạn với điện thoại đã thay đổi chưa?</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Viết ra 3 điều quan trọng nhất bạn học được từ cuốn sách này.</li>
+                            <li>Trong thói quen sử dụng điện thoại, điều gì bạn muốn cải thiện?</li>
+                            <li>Chủ đề công nghệ tiếp theo bạn muốn học là gì?</li>
+                            <li>Có cơ hội dạy cách dùng điện thoại cho gia đình hoặc bạn bè không? Dạy là cách học hiệu quả nhất.</li>
+                        </ol>
+                        <p class="mt-2">Xin chúc mừng! Bạn đã bắt đầu bước đi trên con đường "Bậc thầy điện thoại". Hãy làm chủ cuộc sống kỹ thuật số, để công nghệ phục vụ bạn!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phần năm: Phụ lục -->
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Năm. Phụ lục</h2>
+
+                <!-- Phụ lục A -->
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Phụ lục A: Quy trình "Hướng dẫn hoàn chỉnh" mở hộp điện thoại mới</h3>
+                    <p class="mb-3">Mua điện thoại mới xong, đầu tiên nên làm gì? Hãy theo danh sách kiểm tra dưới đây:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📦 Khi mở hộp</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Xác nhận hộp chưa mở (tem niêm phong còn nguyên).</li>
+                        <li>Kiểm tra vật đi kèm: Thân máy, sạc, cáp, kim SIM, phiếu bảo hành, hướng dẫn khởi động nhanh.</li>
+                        <li>Kiểm tra ngoại quan: Không có vết trầy, vết lõm, lỗi sản xuất.</li>
+                        <li>Kiểm tra màn hình: Không có điểm chết, lệch màu (kiểm tra bằng màn hình trắng/đen).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚙️ Thiết lập ban đầu</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Bật nguồn, chọn ngôn ngữ và khu vực.</li>
+                        <li>Kết nối Wi-Fi.</li>
+                        <li>Đăng nhập tài khoản (Google hoặc Apple ID).</li>
+                        <li>Thiết lập bảo mật: Vân tay, nhận diện khuôn mặt, mã PIN.</li>
+                        <li>Bật "Tìm điện thoại".</li>
+                        <li>Kiểm tra cập nhật hệ thống, cập nhật lên phiên bản mới nhất.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔒 Tăng cường bảo mật</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Bật xác thực hai yếu tố.</li>
+                        <li>Kiểm tra cài đặt quyền riêng tư: Vị trí, quyền ứng dụng.</li>
+                        <li>Vô hiệu hóa hoặc gỡ cài đặt ứng dụng cài sẵn không cần thiết.</li>
+                        <li>Cài đặt ứng dụng bảo mật (chống virus).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">☁️ Thiết lập sao lưu</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Bật sao lưu iCloud hoặc Google.</li>
+                        <li>Thiết lập tự động sao lưu ảnh.</li>
+                        <li>Xác nhận đồng bộ danh bạ.</li>
+                    </ol>
+                </div>
+
+                <!-- Phụ lục B -->
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Phụ lục B: Tham khảo bài tập thực hành</h3>
+                    <p class="mb-3">Tham khảo nhanh tất cả bài tập thực hành trong cuốn sách này:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Phần cơ bản</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Chương 0: Kiểm tra "giấy tờ tùy thân" điện thoại</li>
+                        <li>Chương 1: Hiểu cấu tạo phần cứng</li>
+                        <li>Chương 2: Sắp xếp thư mục "Tải xuống"</li>
+                        <li>Chương 3: Thiết lập và quản lý điểm truy cập</li>
+                        <li>Chương 4: Kiểm toán quyền của 3 ứng dụng</li>
+                        <li>Chương 5: Thiết lập chế độ "Ngày thường" và "Cuối tuần"</li>
+                        <li>Chương 6: Bật "Khóa từ xa" và mô phỏng</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Phần phần mềm</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Chương 7: Sao lưu lịch sử chat WeChat lên PC</li>
+                        <li>Chương 8: Quét tài liệu bằng điện thoại và tạo PDF</li>
+                        <li>Chương 9: Thiết lập khóa an toàn hơn cho ứng dụng thanh toán</li>
+                        <li>Chương 10: Chụp ảnh cảnh đêm bằng chế độ Pro</li>
+                        <li>Chương 11: Cấu hình gói giải trí "Chế độ máy bay" chuyên dụng</li>
+                        <li>Chương 12: Tạo luồng tự động hóa "Thư giãn trước khi ngủ"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Phần ứng dụng</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Chương 13: Kiểm tra sức khỏe pin</li>
+                        <li>Chương 14: Kiểm tra nội dung đồng bộ tài khoản</li>
+                        <li>Chương 15: Chiếu màn hình điện thoại lên TV</li>
+                        <li>Chương 16: Sao lưu thủ công ảnh và danh bạ lên PC</li>
+                        <li>Chương 17: Mô phỏng "Khởi động lại cưỡng bức"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Phần phát triển</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Chương 18: Thiết lập "Danh bạ đáng tin cậy" (DNS) cho điện thoại</li>
+                        <li>Chương 19: Ra lệnh cho thư ký AI</li>
+                        <li>Chương 20: Tạo luồng tự động hóa</li>
+                        <li>Chương 21: Đặt lại điện thoại an toàn</li>
+                        <li>Chương 22: Nhìn lại cuộc sống kỹ thuật số của bạn</li>
+                    </ul>
+                </div>
+
+                <!-- Phụ lục C -->
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Phụ lục C: Bảng đối chiếu thuật ngữ chuyên ngành</h3>
+                    <p class="mb-3">Giải thích đơn giản các thuật ngữ kỹ thuật sử dụng trong cuốn sách này:</p>
+                    
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Thuật ngữ</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Giải thích</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">SoC</td>
+                                    <td class="border border-gray-300 px-4 py-2">System on Chip. "Bộ não" của điện thoại. Chip tích hợp CPU, GPU và các thành phần khác.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RAM</td>
+                                    <td class="border border-gray-300 px-4 py-2">Random Access Memory. Bộ nhớ làm việc tạm thời. Càng lớn càng chạy được nhiều ứng dụng cùng lúc.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">ROM/Bộ nhớ</td>
+                                    <td class="border border-gray-300 px-4 py-2">Read-Only Memory (thực tế là bộ nhớ flash). Lưu trữ dài hạn ảnh, ứng dụng, v.v.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OLED</td>
+                                    <td class="border border-gray-300 px-4 py-2">Màn hình hữu cơ EL. Mỗi điểm ảnh tự phát sáng. Độ tương phản cao, tiết kiệm điện.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 px-4 py-2">Near Field Communication. Truyền thông không dây tầm ngắn. Dùng cho thẻ IC giao thông, thanh toán di động.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">VPN</td>
+                                    <td class="border border-gray-300 px-4 py-2">Virtual Private Network. Mạng riêng ảo. Mã hóa giao tiếp, bảo vệ quyền riêng tư.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">DNS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Domain Name System. Hệ thống chuyển đổi tên miền thành địa chỉ IP.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OCR</td>
+                                    <td class="border border-gray-300 px-4 py-2">Optical Character Recognition. Công nghệ nhận diện văn bản trong ảnh và chuyển thành text.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">AI/Học máy</td>
+                                    <td class="border border-gray-300 px-4 py-2">Artificial Intelligence. Trí tuệ nhân tạo. Dùng trong tối ưu hóa ảnh, nhận diện giọng nói trên điện thoại, v.v.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Edge AI</td>
+                                    <td class="border border-gray-300 px-4 py-2">Công nghệ xử lý AI trên thiết bị thay vì đám mây. Nhanh và bảo vệ quyền riêng tư.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RCS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Rich Communication Services. SMS thế hệ sau. Hỗ trợ ảnh chất lượng cao, thông báo đã đọc, v.v.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">HTTPS</td>
+                                    <td class="border border-gray-300 px-4 py-2">HTTP Secure. Giao thức giao tiếp Web được mã hóa.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Phụ lục D -->
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Phụ lục D: Tìm tài nguyên đáng tin cậy ở đâu?</h3>
+                    <p class="mb-3">Các nguồn đáng tin cậy để lấy thông tin về điện thoại:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Tài nguyên chính thức</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Hỗ trợ Apple</strong>: support.apple.com</li>
+                        <li><strong>Trợ giúp Google Android</strong>: support.google.com/android</li>
+                        <li><strong>Trang web chính thức các hãng</strong>: Samsung, Xiaomi, OPPO, vivo, v.v.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📰 Truyền thông công nghệ</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Trong nước</strong>: ITmedia, Engadget Nhật Bản, Gizmodo Nhật Bản</li>
+                        <li><strong>Toàn cầu</strong>: The Verge, TechCrunch, Android Police, 9to5Mac</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">👥 Cộng đồng và diễn đàn</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Reddit</strong>: r/Android, r/iPhone, r/techsupport</li>
+                        <li><strong>Stack Exchange</strong>: Android Enthusiasts, Ask Different (Apple)</li>
+                        <li><strong>Bảng tin trong nước</strong>: 5ch, cộng đồng chính thức các hãng</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎥 Kênh YouTube</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>MKBHD (Marques Brownlee)</li>
+                        <li>Unbox Therapy</li>
+                        <li>Linus Tech Tips</li>
+                        <li>Trong nước: Các kênh review gadget</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ Nguồn thông tin cần cảnh giác</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Các "mẹo" và "thủ thuật" không rõ nguồn gốc</li>
+                        <li>Bài viết tiêu đề giật gân quá mức</li>
+                        <li>Thông tin rõ ràng đã cũ (2-3 năm trước)</li>
+                        <li>Review không ghi rõ là bài tài trợ</li>
+                    </ul>
+                </div>
+
+                <!-- Phụ lục E -->
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Phụ lục E: Lời cảm ơn và giải thích</h3>
+                    <p class="mb-3">Cuốn sách này được tạo như hướng dẫn cho hành trình từ người mới bắt đầu đến trung cấp về điện thoại.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🙏 Lời cảm ơn</h4>
+                    <p class="mb-2">Cảm ơn các tài nguyên và cộng đồng sau đã giúp tạo cuốn sách này:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cộng đồng mã nguồn mở</li>
+                        <li>Truyền thông công nghệ và người review</li>
+                        <li>Tất cả những người chia sẻ kiến thức trên diễn đàn trực tuyến</li>
+                        <li>Tất cả kỹ sư và nhà thiết kế thúc đẩy công nghệ điện thoại tiến bộ</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ Tuyên bố miễn trừ trách nhiệm</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Thông tin trong cuốn sách này là tại thời điểm viết. Công nghệ thay đổi nhanh, một số nội dung có thể lỗi thời.</li>
+                        <li>Thao tác điện thoại là tự chịu trách nhiệm. Hãy luôn sao lưu dữ liệu quan trọng.</li>
+                        <li>Vị trí tính năng và cài đặt có thể khác nhau tùy dòng máy và phiên bản OS.</li>
+                        <li>Nội dung cuốn sách mang mục đích giáo dục, không có ý định đề xuất sản phẩm hay dịch vụ cụ thể.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📧 Phản hồi</h4>
+                    <p class="mb-2">Chào mừng phản hồi để cải thiện cuốn sách. Nếu có chỉ ra lỗi, chủ đề muốn thêm, đề xuất cải thiện, xin hãy cho biết.</p>
+
+                    <div class="bg-light rounded-lg p-6 mt-6 text-center">
+                        <p class="text-lg font-semibold mb-2">Cảm ơn đã đọc!</p>
+                        <p class="text-secondary">Chúc cuộc sống kỹ thuật số của bạn phong phú và an toàn hơn.</p>
+                        <p class="mt-4 text-sm text-secondary">© 2024 Bậc thầy điện thoại! Khóa học kỹ thuật số bắt buộc cho người mới bắt đầu</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Nút quay về đầu trang -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Script -->
+    <script>
+        // Chuyển đổi menu di động
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Mở rộng/thu gọn mục lục
+        document.querySelectorAll('.toc-parent').forEach(parent => {
+            const toggle = parent.querySelector('.toc-toggle');
+            const child = parent.querySelector('.toc-child');
+            
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                child.classList.toggle('open');
+                toggle.classList.toggle('rotate-180');
+            });
+        });
+
+        // Nút quay về đầu trang
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Cuộn mượt
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Đóng menu trên di động
+                    if (!sidebar.classList.contains('-translate-x-full') && window.innerWidth < 1024) {
+                        toggleMenu();
+                    }
+                }
+            });
+        });
+
+        // Highlight mục lục khi cuộn
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('#sidebar a[href^="#"]');
+
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC(); // Khởi tạo
+    </script>
+</body>
+</html>
