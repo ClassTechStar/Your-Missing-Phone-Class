@@ -1,0 +1,2000 @@
+<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>手機達人！新手必讀嘅數碼必修課</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-left: 3px solid #165DFF;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">手機達人！新手必讀嘅數碼必修課</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>返回頂部
+            </a>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">目錄</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">一、基礎篇（第0-6章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第零章：你好，開始之前</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第一章：你好，我嘅個人電腦</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第二章：整理數碼房間——檔案管理</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第三章：為手機接上「生命線」——網絡</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第四章：App嘅安裝同管理——手機嘅「技能包」</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第五章：將手機變得更啱自己——基本設定</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第六章：保護數碼生活——安全同私隱</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">二、軟件篇（第7-12章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第七章：通訊：SMS、通話同社交</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第八章：流動辦公同學習</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第九章：流動支付同生活服務</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十章：影相同相片管理</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十一章：娛樂同閱讀</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十二章：好用工具App推介</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">三、進階篇（第13-17章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十三章：電池科學同慳電優化</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十四章：帳戶體系同雲端服務</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十五章：手機同其他裝置嘅連接</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十六章：數據備份同轉移</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十七章：故障排除同自行解決</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">四、發展篇（第18-22章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十八章：流動網絡同資訊安全深入探討</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第十九章：AI點樣喺手機度運作</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第二十章：編程思維同自動化入門</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第二十一章：舊手機處理同數碼遺產</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">第二十二章：未來手機同數碼生活</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">五、附錄</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">附錄A：新手機開箱「完全指南」流程</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">附錄B：實踐練習參考</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">附錄C：簡易術語「專業用語」對照表</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">附錄D：可靠資源喺邊度搵到？</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">附錄E：鳴謝同說明</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">手機達人！新手必讀嘅數碼必修課</h1>
+                <p class="text-center text-secondary text-lg">由入門到精通，完全掌握數碼生活</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">一、基礎篇（第0-6章）</h2>
+                <p class="mb-4 text-secondary">你嘅手機比你想像中更加強大。呢部分係所有「神技」嘅基礎內容。首先統一「語言」，一步步認識同掌握你嘅裝置。</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第零章：你好，開始之前</h3>
+                    <p class="mb-3">喺正式探索之前，我哋講吓基本規則。咁樣可以令你理解之後嘅所有內容。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📖 呢本書可以幫到你嘅嘢（同幫唔到你嘅嘢）</h4>
+                    <p class="mb-2">你可以系統咁了解手機嘅用法，知道功能背後嘅原理。無論你係Android定iPhone用戶，大部分概念都係通用嘅。書入面仲包括實用練習。</p>
+                    <p class="mb-2">呢本書唔係特定型號嘅說明書，亦都唔係最新產品嘅評測，更加唔係教你玩手機上癮嘅嘢。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🔤 關於我哋嘅「暗號」</h4>
+                    <p class="mb-2">為咗方便解釋，我哋會用一啲符號：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[按鈕名稱]：表示畫面上具體嘅按鈕或者App名稱。</li>
+                        <li>> ：表示操作順序。例如：「撳 [設定] > [音效]」。</li>
+                        <li><strong>粗體</strong>：非常重要！表示重要概念或者安全警告。</li>
+                        <li><em>斜體</em>：表示補充說明或者比喻。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 📱 Android同iOS，兩邊都會講</h4>
+                    <p class="mb-2">叫法可能唔同，但做嘅嘢係一樣嘅。例如：App（Android）同App（iOS）、設定（兩邊都叫設定）、檔案管理（Android）同檔案（iOS）。請理解佢哋係同一樣嘢。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 💾 手機容量：點解買咗128GB，可用空間得返唔夠110GB？</h4>
+                    <p class="mb-2">容量單位你應該知：1TB = 1024GB、1GB = 1024MB……</p>
+                    <p class="mb-2">不過，買返嚟顯示嘅容量，到手之後會「縮水」。主要原因係：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>系統佔用空間：OS就好似屋企嘅結構牆咁，係必須嘅。</li>
+                        <li>廠商預裝App：新機入面已經有嘅App都會用空間。</li>
+                        <li>格式化損耗：因為技術原因，好似背囊嘅內膽都會佔體積。</li>
+                    </ol>
+                    <p class="mb-2">買手機嗰陣，記得考慮系統用量。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">實戰時間 👉 查看你手機嘅「身份證」</p>
+                        <p class="mt-1">打開 [設定]，搵「裝置資訊」（或者類似選項），記低：手機型號、系統版本、總儲存容量、剩餘容量。呢個係認識佢嘅第一步。</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第一章：你好，我嘅個人電腦</h3>
+                    <p class="mb-3">你嘅手機，其實係你袋入面最個人化嘅超級電腦。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 🧠 手機硬件「五臟六腑」</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC（處理器）</strong>：手機嘅「腦＋心臟」，決定性能。</li>
+                        <li><strong>RAM（記憶體）</strong>：臨時工作台。越大，同時開越多App都會好順。</li>
+                        <li><strong>ROM（儲存空間）</strong>：長期倉庫。放晒所有相、片、App嘅地方。</li>
+                        <li><strong>螢幕</strong>：你嘅眼睛。類型（OLED色彩鮮豔，LCD護眼）、解像度（清晰度）、更新率（滑動跟手度）都好重要。</li>
+                        <li><strong>電池同充電</strong>：邊用邊充。唔好等到完全冇電先充，亦都唔好成日keep住100%滿電，咁樣對電池好啲。快充同無線充電都好方便。</li>
+                        <li><strong>相機</strong>：而家係多鏡頭＋演算法（運算攝影）協作，夜景同散景都做得好好。</li>
+                        <li><strong>感應器</strong>：手機嘅小觸角。例如：陀螺儀（打機時轉向）、NFC（拍卡入閘）、距離感應器（通話時自動熄螢幕）等。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🤖 系統：Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android：好似開源社群咁，手機廠商可以深度客製化，選擇好多。</li>
+                        <li>iOS：好似精心打理嘅花園咁，Apple統一管理硬件同軟件，體驗一致。</li>
+                    </ul>
+                    <p class="mb-2">兩邊嘅生態系統都好豐富，揀你鍾意嘅生活方式就得。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🎭 你嘅手機，到底扮演緊幾多個角色？</h4>
+                    <p class="mb-2">已經唔單止係電話咁簡單：通訊工具、智能相機、銀包、資訊入口、遊戲機、流動辦公室、健康助理、智能家居遙控，甚至係數碼身份證。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">實戰時間 👉 了解硬件配置</p>
+                        <p class="mt-1">喺 [設定] 度，睇下搵唔搵到處理器型號、RAM、ROM嘅具體大細。掌握你手機嘅能力。</p>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第二章：整理數碼房間——檔案管理</h3>
+                    <p class="mb-3">手機用耐咗就會亂。好習慣由檔案管理開始。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📂 三層儲存體系</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>機身儲存</strong>：核心區域。速度快，系統同App都喺呢度。</li>
+                        <li><strong>SD卡（如果支援）</strong>：擴充衣櫃。速度慢啲，適合放戲同相。</li>
+                        <li><strong>雲端儲存</strong>：保險箱＋同步碟。防遺失，可以喺多個裝置之間同步。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🗂️ 認識「檔案管理員」</h4>
+                    <p class="mb-2">Android通常有 [檔案] 或者 [檔案管理] App，iOS有內置嘅 [檔案] App。呢啲係查看手機所有檔案嘅「檔案總管」。你可以見到Download（下載）、DCIM（相機相）、Pictures（圖片）等資料夾。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🏷️ 各類檔案喺邊度？</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>相/片：通常自動儲存喺 DCIM 或者 Pictures。</li>
+                        <li>下載嘅檔案：基本上全部喺 Download。</li>
+                        <li>App數據：住喺各自嘅「私人房間」（私有目錄），可能睇唔到。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🧹 空間唔夠？大掃除時間到</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>清除快取：App嘅臨時記憶。清除可以釋放空間。</li>
+                        <li>搵大檔案：喺檔案管理員度按大細排序，搵出霸佔空間嘅「兇手」。</li>
+                        <li>刪除殘留：解除安裝App之後，可能會有垃圾檔案剩低。手動刪除佢哋。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">實戰時間 👉 整理「下載」資料夾</p>
+                        <p class="mt-1">打開檔案管理員 > 入「下載」資料夾。睇下入面有咩，唔要嘅就刪除，要嘅就分類（例如：新建「工作資料」、「貼圖」資料夾放入去）。</p>
+                    </div>
+                </div>
+
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第三章：為手機接上「生命線」——網絡</h3>
+                    <p class="mb-3">冇網，智能手機就會變成「半個傻仔」。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 📶 流動網絡（4G/5G）同數據通訊</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>數據通訊：用手機上網產生嘅數據量。睇片同睇相最食數據。</li>
+                        <li>慳數據貼士：喺設定度開啟「數據慳電模式」，喺Wi-Fi環境下更新App同睇高清片。</li>
+                        <li>訊號格數≠上網速度：訊號強只係代表連接好，上網速度仲要睇基站擠唔擁堵。</li>
+                        <li><strong>⚠️ 重要！出差前記得關閉【數據漫遊】，避免天價帳單！</strong></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 📡 Wi-Fi：連接、分享同安全</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Wi-Fi連接：[設定] > [Wi-Fi] 選擇網絡，輸入密碼。</li>
+                        <li>密碼分享：而家好方便，Android同iOS都可以將已連接嘅手機密碼快速分享俾朋友。</li>
+                        <li>公共Wi-Fi風險：有可能被黑客竊聽數據或者係釣魚熱點。守則：盡量唔好登入銀行戶口，可以用VPN。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 🔵 藍牙：耳機連接、檔案傳輸</h4>
+                    <p class="mb-2">主要用嚟連接無線耳機、智能手環/手錶。檔案傳輸功能而家好少用。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🔥 個人熱點：將手機變成Wi-Fi路由器</h4>
+                    <p class="mb-2">當你數據量多嗰陣，可以開熱點俾平板或者電腦用。注意：好食電同數據，記得設定複雜密碼，限制連接裝置數量。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">實戰時間 👉 設定同管理個人熱點</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>打開 [設定]，搵「個人熱點」或者「網絡分享」，開啟佢，設定名稱同密碼。</li>
+                            <li>喺另一個裝置（例如：電腦）度搜尋呢個Wi-Fi並連接。</li>
+                            <li>喺手機度，睇下可唔可以管理已連接嘅裝置，或者切斷唔識嘅裝置。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第四章：App嘅安裝同管理——手機嘅「技能包」</h3>
+                    <p class="mb-3">App令手機變得萬能，但都要適當管理。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、 🏪 官方商店：最安全嘅「App超市」</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android：Google Play 或者各品牌嘅官方商店（例如：小米應用商店）。</li>
+                        <li>iOS：只有 App Store。</li>
+                    </ul>
+                    <p class="mb-2">核心安全意義：已審核、有更新保證、付款安全。行動指南：優先只用官方商店下載。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、 🚨 第三方來源：風險極高！</h4>
+                    <p class="mb-2">喺網頁或者不明連結下載App，有可能中毒、私隱被竊、俾錢唔知。如果真係無辦法：確認來源絕對可信，安裝前仔細睇權限要求，安裝後用安全App掃描。</p>
+                    <p class="mb-2">最終建議：喺系統設定度，關閉「安裝未知來源App」權限。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、 📲 安裝、更新、解除安裝</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>安裝：喺商店撳「取得」。安裝後第一次開啟會問權限。</li>
+                        <li>更新：<strong>一定要更新！</strong> 主要係修復安全漏洞。建議開啟自動更新。</li>
+                        <li>解除安裝：長按圖標拖去解除安裝區域。想刪得更徹底，去 [設定] > [App管理] 搵佢再解除安裝。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、 🛡️ 權限管理：你係App嘅「老闆」</h4>
+                    <p class="mb-2">App問權限（例如：聯絡人、位置）有時合理（地圖要位置），有時唔合理（電筒要聯絡人）。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>權限選項：「永遠允許」、「使用時允許」、「拒絕」、「每次詢問」。</li>
+                        <li>管理原則：
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>最小化：唔需要嘅唔好俾。</li>
+                                <li>事後審計：定期檢查權限設定，睇下有冇人「越權」。</li>
+                                <li>按情況：例如Call車App，只喺使用時俾位置權限。</li>
+                            </ol>
+                        </li>
+                        <li><strong>⚠️ 重點監察對象：聯絡人/SMS、實時位置、相機/咪、檔案存取權限。</strong></li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">實戰時間 👉 審計3個App嘅權限</p>
+                        <p class="mt-1">揀3個常用App（例如：社交、購物、工具類），入 [設定] 嘅App權限管理頁面，逐項審計，關閉唔需要嘅敏感權限或者改做「使用時允許」。</p>
+                    </div>
+                </div>
+
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第五章：將手機變得更啱自己——基本設定</h3>
+                    <p class="mb-3">花幾分鐘設定，體驗可以大大提升。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.1 🎵 音效同震動</h4>
+                    <p class="mb-2">設定你鍾意嘅鈴聲同通知聲。靈活使用靜音模式（開會時）、勿擾模式（瞓覺時），世界瞬間變靜。連接藍牙耳機嗰陣，記得確認音訊輸出有冇切換。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.2 👀 螢幕同亮度</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>自動亮度：手機根據環境光自動調節。唔使煩。</li>
+                        <li>護眼模式/夜覽：過濾藍光，夜晚用手機舒服啲。</li>
+                        <li>深色模式：慳電（尤其係OLED螢幕），而且夜晚唔刺眼。</li>
+                        <li>螢幕更新率：部分Android機種可以調校。越高（例如：120Hz）滑動越順。</li>
+                        <li>自動鎖定：設定15秒或者30秒。安全又慳電。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.3 🎨 壁紙、主題同主畫面</h4>
+                    <p class="mb-2">換個靚壁紙（靜態或者動態），心情都會唔同。Android品牌手機通常有主題商店，可以一次過改晒圖標同風格。主畫面小工具都唔好忘記，將天氣、日程、音樂控制放喺主畫面，一撳就有。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.4 ♿ 輔助功能：強大嘅助手</h4>
+                    <p class="mb-2">唔好俾個名嚇親。任何人都可以用。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>放大手勢：撳三下螢幕放大局部。睇細字好有用。</li>
+                        <li>語音助理：Siri或者Google助理。講句嘢就可以設定鬧鐘或者查天氣。</li>
+                        <li>螢幕閱讀器（TalkBack/VoiceOver）：專為視障人士設計，但都可以用嚟「聽」文章。</li>
+                        <li>其他：色彩校正（色盲人士適用）、背面輕拍快捷鍵（iPhone）、輔助功能選單（Android）等都值得一試。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">實戰時間 👉 設定「平日」同「假日」模式</p>
+                        <p class="mt-1">使用專注模式（iOS）或者情境模式，令手機自動適應你嘅節奏。例如：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>建立「工作」模式：自動將唔重要嘅App通知靜音，只容許老細同屋企人嘅電話。</li>
+                            <li>建立「睡眠」模式：定時開啟，將所有通知靜音。</li>
+                            <li>為佢哋設定時間。例如：平日9:00-18:00自動開啟「工作」模式。唔好搞錯。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第六章：保護數碼生活——安全同私隱</h3>
+                    <p class="mb-3">手機安全＝私隱安全＋財產安全。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 🔒 鎖定螢幕：第一道物理防線</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>安全等級排名：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>密碼/PIN碼：最安全。最終保障（唔記得指紋/面容嗰陣靠佢）。</li>
+                                <li>指紋辨識：安全同方便嘅完美平衡。</li>
+                                <li>面容辨識：最方便，但安全程度視乎技術（3D結構光安全，2D相片好易騙到）。</li>
+                            </ul>
+                        </li>
+                        <li>設定強大鎖定螢幕：一定要設定複雜密碼（唔好用生日、123456），開啟生物辨識。鎖定時間設定「立即」或者最短。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 📍 「尋找手機」：終極防盜工具</h4>
+                    <p class="mb-2"><strong>一定要開啟！</strong> 可以做到：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>定位：喺地圖度搵你放咗手機喺邊。</li>
+                        <li>播放聲音：令手機響，方便喺屋企搵。</li>
+                        <li>遺失模式：遙距鎖定手機，顯示聯絡電話。執到嘅人可以聯絡你。</li>
+                        <li>遙距清除：最後手段。清除所有數據（不過清除之後就定位唔到）。</li>
+                    </ul>
+                    <p class="mb-2">去 [設定]，Apple搵「尋找iPhone」，Android搵「尋找裝置」或者品牌類似服務，確認係綠色開啟狀態。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 🔧 系統更新：修補漏洞</h4>
+                    <p class="mb-2">系統更新主要目的係修復安全漏洞。就好似補屋企幅牆嘅窿咁。所以，見到系統更新通知，盡快升級。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 🚫 詐騙電話嘅識別同預防</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>常見手法：扮警察/客服（釣魚）、中獎/副業報酬（利誘）、感情騙案（殺豬盤）。</li>
+                        <li>手機內置保護：攔截騷擾電話、防盜取驗證碼、短訊連結安全檢測。記得喺設定度開啟。</li>
+                        <li>防騙口訣：唔信、唔講、唔撳、唔匯、有疑問就查證！</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">實戰時間 👉 啟用同模擬「遙距鎖定」</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>確認「尋找手機」功能已開啟。</li>
+                            <li>喺電腦瀏覽器或者另一部手機，登入對應嘅雲端服務帳戶（iCloud.com 或者品牌雲端服務網站）。</li>
+                            <li>搵「尋找裝置」功能，試吓對自己手機「播放聲音」或者模擬「鎖定」，了解成個流程。重要時刻唔使慌。</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">二、軟件篇（第7-12章）</h2>
+
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第七章：通訊：SMS、通話同社交</h3>
+                    <p class="mb-3">通訊係手機最原始同核心嘅使命。而家已經由單純嘅通話同SMS，進化成包括即時通訊、社交網絡、電郵嘅複雜生態系統。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 電話App嘅進階功能：通話以外嘅功能</h4>
+                    <p class="mb-2">現代手機嘅電話App，已經超越簡單嘅撥號盤，整合咗錄音、防騷擾、智能識別等強大工具。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 通話錄音（注意法律合規）：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>用途：記錄重要通話內容，用於業務會議紀錄、訪問、客戶承諾，或者爭議記錄。</li>
+                        <li>法律提示：喺香港，通話錄音作為證據使用，需要得到對方同意，或者用於保護自己合法權益（例如：舉報騷擾或詐騙）。商業或機密對話前，口頭講「呢個通話可能會被錄音」係比較謹慎嘅做法。</li>
+                        <li>操作方法：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android：通常通話畫面有明確嘅「錄音」按鈕。可以喺電話App設定度搵「通話錄音」選項，設定自動錄音規則。</li>
+                                <li>iOS：系統冇內置通話錄音功能。要用嘅話，需要第三方通話錄音App。</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 騷擾電話攔截同智能識別：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>原理：電話App透過網絡查詢龐大嘅號碼數據庫，來電嗰陣顯示「騷擾電話」、「詐騙電話」或者公司名。</li>
+                        <li>開啟方法：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android：入電話App > 右上「設定」 > 防騷擾或者智能識別。開啟晒所有識別同攔截選項。</li>
+                                <li>iOS：入 [設定] > [電話] > [來電阻擋與識別]。確認支援呢個功能嘅第三方安全App（例如：Trend Micro Mobile Security），可以允許佢運作。開啟「將不明來電者靜音」功能，可以將唔喺聯絡人嘅所有來電靜音。</li>
+                            </ul>
+                        </li>
+                        <li>貼士：收到騷擾電話之後，喺通話記錄度主動標記為「騷擾」或者「詐騙」，可以貢獻數據庫，幫到其他人。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 通話輔助功能：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>通話錄音轉文字：部分Android品牌手機，通話錄音之後，錄音檔案隔籬會直接提供「轉文字」按鈕，可以將對話內容轉做文字。</li>
+                        <li>視覺輔助（實時字幕）：喺Android嘅輔助功能設定或者iOS嘅聽覺輔助度，開啟「實時轉錄」功能，可以為所有音訊（包括通話）生成實時字幕。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 SMS同iMessage/RCS：驗證碼同騷擾訊息過濾</h4>
+                    <p class="mb-2">傳統SMS仲未淘汰。係接收驗證碼、銀行通知、官方資訊嘅可靠渠道。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs iMessage (iOS) / RCS (Android)：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iMessage：Apple裝置之間透過互聯網發送嘅訊息，顯示藍色對話框。支援高清圖片影片、已讀通知等，完全免費同端對端加密。</li>
+                        <li>RCS：全球電訊商同Google推動嘅新一代通訊協定。功能同iMessage、LINE類似，但係以電話號碼為基礎。可以喺Android手機嘅訊息App設定度確認並開啟「聊天功能」。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 驗證碼安全：</h5>
+                    <p class="mb-2">系統會自動識別同分類驗證碼SMS。收到嘅驗證碼千祈唔好話俾任何人知。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 騷擾訊息過濾：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS：[設定] > [訊息] 開啟「過濾未知發送人」。</li>
+                        <li>Android：喺訊息App設定度開啟「智能資訊服務」或者「騷擾訊息過濾」。</li>
+                        <li>常見貼士：明顯係騷擾推廣SMS，唔好回覆任何嘢（包括「TD取消訂閱」）。直接刪除或者標記為騷擾訊息。回覆可能會確認你個號碼係有效嘅。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 LINE/WeChat：國民社交App管理</h4>
+                    <p class="mb-2">LINE同WeChat已經超越通訊工具，變成整合社交、支付、資訊獲取嘅「超級App」。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 聊天記錄備份同轉移：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>重要性：聊天記錄入面有重要檔案、回憶、業務資訊，但只儲存喺本機同伺服器嘅臨時快取。手機遺失或者重新安裝App，記錄可能會永久消失。</li>
+                        <li>備份到電腦（最可靠）：
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>登入PC版或者Mac版WeChat/LINE。</li>
+                                <li>撳左下角選單 > [遷移與備份] > [備份與恢復]。</li>
+                                <li>選擇「備份聊天記錄到電腦」，喺手機度揀要備份嘅聊天。</li>
+                            </ol>
+                            注意：備份檔案會加密儲存喺電腦本機。恢復嗰陣，手機同電腦要連接同一個Wi-Fi網絡。
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 儲存空間清理：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>路徑：WeChat [我] > [設定] > [一般] > [儲存空間]。LINE [設定] > [一般] > [儲存空間管理]。</li>
+                        <li>清理策略：
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>快取：可以安全清理。係App運行時產生嘅臨時數據。</li>
+                                <li>聊天記錄：入去之後，可以按時間、檔案類型，或者個別聊天詳細清理。例如，一次過清理所有聊天入面「1年以上」嘅「影片」檔案。</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 私隱同安全設定：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>加好友方式：控制其他人點樣搵到你（電話號碼、用戶ID、群組聊天等）。</li>
+                        <li>動態權限：設定邊個可以睇、邊個唔可以睇。</li>
+                        <li>授權管理：WeChat [設定] > [個人資料與權限] > [授權管理] 度，可以查看同解除第三方網站或者App嘅WeChat登入授權。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 電子郵件：手機設定同使用</h4>
+                    <p class="mb-2">喺手機度高效處理郵件，係流動辦公嘅重要一環。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 新增郵件帳戶：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>系統內置郵件App：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS：[設定] > [郵件] > [帳戶] > [新增帳戶]。</li>
+                                <li>Android：系統通常有「郵件」App。打開跟指示新增。</li>
+                            </ul>
+                        </li>
+                        <li>專用客戶端App：Gmail、Outlook等。針對特定郵件優化，功能更強。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 手機郵件使用技巧：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>推送通知管理：為唔同郵件帳戶設定唔同嘅通知方式。</li>
+                        <li>手勢操作：大部分郵件App支援滑動手勢快速封存、刪除或者標記。</li>
+                        <li>簽名檔：設定專業嘅手機郵件簽名。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 安全注意事項：</h5>
+                    <p class="mb-2">喺公共Wi-Fi登入郵件或者發送敏感郵件要小心。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：將WeChat聊天記錄備份到電腦</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>喺電腦開始備份：打開PC版WeChat > 左下角選單 > [遷移與備份] > [備份與恢復]。</li>
+                            <li>選擇備份到電腦：撳「備份聊天記錄到電腦」。</li>
+                            <li>喺手機度揀備份內容：手機WeChat會彈出視窗，揀要備份嘅聊天，然後撳「開始備份」。</li>
+                            <li>等待備份完成。</li>
+                            <li>（選做）了解恢復流程：喺同一個視窗度，另一個選項係「恢復聊天記錄到手機」。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第八章：流動辦公同學習</h3>
+                    <p class="mb-3">手機已經變成強大嘅流動工作站同隨身學習中心。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 文件處理：喺手掌心編輯同創作</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 主流應用程式選擇：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>WPS Office：本地化做得好，同Microsoft格式完全兼容。內置豐富免費範本同PDF工具集。</li>
+                        <li>Microsoft 365：同桌面版Office體驗高度一致。格式兼容性最好，同OneDrive雲端儲存深度整合。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 手機文件處理核心技巧：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>雲端同步係核心：將工作檔案儲存喺App相關嘅雲端碟，確保自動儲存、多裝置無縫切換、方便協作。記住未？</li>
+                        <li>協作同分享：支援連結分享，設定「只供檢視」或者「可編輯」權限。支援多人同時線上編輯。</li>
+                        <li>善用高效輸入方法：用語音輸入嚟起草長文。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 筆記App：由快速記錄到知識管理</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 輕量＆系統內置：</h5>
+                    <p class="mb-2">iOS備忘錄、Android各品牌便箋等。優點：啟動快、同系統整合度高，適合快速筆記、清單、臨時想法。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 萬能型專業筆記：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Evernote：強大嘅資訊收集能力同優秀嘅全文搜尋。</li>
+                        <li>Notion：非常靈活，整合筆記、數據庫、看板。所有內容都係可以自由組合嘅「區塊」。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 使用心得：</h5>
+                    <p class="mb-2">試吓建立知識「收件匣」嚟收集資訊，定期整理加工，喺筆記之間建立連結，形成知識網絡。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 掃描同OCR：將紙本文件變電子版</h4>
+                    <p class="mb-2">手機係隨身攜帶嘅流動掃描器。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 掃描原理：</h5>
+                    <p class="mb-2">自動檢測文件邊緣並校正，消除陰影，生成清晰圖像。OCR功能可以識別圖入面嘅文字轉做可編輯文本。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 工具選擇：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>系統內置：iOS「備忘錄」內置掃描功能。Android部分品牌嘅相機或者檔案管理App有「文件掃描」模式。</li>
+                        <li>第三方專業App：Microsoft Lens、Adobe Scan、CamScanner。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 操作步驟：</h5>
+                    <p class="mb-2">打開App對準文件 > 自動或者手動拍攝 > 調整同處理 > 執行OCR > 儲存同分享（可以將多頁合併成PDF）。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 雲端碟同步：你嘅流動檔案中樞</h4>
+                    <p class="mb-2">雲端碟係連接手機同電腦嘅「數據中樞」。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 主流雲端碟服務比較：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Google Drive：全球普及率高，分享生態成熟。</li>
+                        <li>iCloud Drive：同Apple生態深度整合。同步自然安全。</li>
+                        <li>OneDrive：同Windows同Office 365深度整合。Microsoft生態用戶首選。</li>
+                        <li>Dropbox：全球廣泛使用，穩定性同兼容性優秀。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 使用策略：</h5>
+                    <p class="mb-2">iCloud/品牌雲端用於系統同個人核心數據備份。Google Drive/OneDrive/Dropbox用於大容量檔案儲存同業務協作。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：用手機掃描文件生成PDF</p>
+                        <p class="mt-1">操作步驟（以Microsoft Lens或者iOS備忘錄為例）：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>揀工具：iOS打開「備忘錄」> 新增 > 撳相機圖標 > 「掃描文件」。Android/通用下載並打開「Microsoft Lens」。</li>
+                            <li>掃描拍攝：對準文件，App自動識別框框就拍攝。可以加多頁。</li>
+                            <li>效果增強：揀「黑白」濾鏡令文件更清晰。</li>
+                            <li>OCR識別：完成後，選擇輸出為PDF，撳「複製文字」或者類似按鈕提取文字。</li>
+                            <li>儲存同命名：為檔案改個清楚嘅名並儲存。</li>
+                            <li>驗證同分享：打開PDF確認品質，試吓用郵件或者LINE分享。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第九章：流動支付同生活服務</h3>
+                    <p class="mb-3">手機正在取代銀包、交通卡，甚至實體身份證。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 流動支付：綁定、付款同安全管理</h4>
+                    <p class="mb-2"><strong>安全係使用前提。</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 綁定銀行卡：</h5>
+                    <p class="mb-2">建議只綁定1-2張常用卡。可以用銀行嘅II類/III類電子戶口專門用於流動支付，隔離主戶口風險。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 付款方式：</h5>
+                    <p class="mb-2">付款碼、掃碼付款、轉帳、手機NFC支付。一定要開啟「啟動時認證」或者「安全鎖」，防止手機遺失時被盜用。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 核心安全管理：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>密碼同生物辨識支付：一定要設定獨立嘅支付密碼，開啟指紋或者面容支付。</li>
+                        <li>安全鎖：喺支付App設定度搵「安全鎖」，建議設定進入「我的」或者「錢包」頁面時需要認證。</li>
+                        <li>登入裝置管理：定期檢查，刪除唔多用嘅裝置登入授權。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 公共交通碼：地鐵、巴士</h4>
+                    <p class="mb-2">手機變成你嘅交通卡。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 開通方法：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>流動支付App：搜尋「交通卡」，開通對應城市嘅電子交通卡。</li>
+                        <li>品牌手機交通卡：喺Apple Pay、Google Pay等錢包App入面，開通虛擬交通卡。用NFC拍卡付款。反應最快，支援離線。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 使用技巧：</h5>
+                    <p class="mb-2">喺唔支援NFC嘅閘機，或者手機冇電嗰陣，可以切換用流動支付App嘅交通碼。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 公共事業繳費、外賣、Call車App使用技巧</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>公共事業繳費：喺流動支付App嘅「公共事業」度綁定客戶編號，交水費、電費、煤氣費等。</li>
+                        <li>外賣：唔同平台（Uber Eats、foodpanda等）同一間舖可能有唔同優惠。多個平台比較。</li>
+                        <li>Call車：設定緊急聯絡人，開啟行程分享。優先使用平台內付款，避免線下交易。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 電子身份證明文件儲存同使用</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 電子身份證明文件：</h5>
+                    <p class="mb-2">部分地區已經喺官方政務App推出電子身份證、電子駕駛執照，喺特定場景可以使用，但唔係所有場合都適用。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 儲存技巧：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>加入手機「錢包」，可以喺鎖定螢幕快速呼叫。</li>
+                        <li>Android可以長按App圖標，將特定功能（例如：「我嘅健康碼」）拖去桌面做捷徑。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：為支付App設定更安全嘅鎖</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>確認並開啟生物辨識支付：喺支付App確認指紋/面容支付已開啟。</li>
+                            <li>設定「安全鎖」：喺支付App安全設定度搵「安全鎖」，設定進入「錢包」或者進行資金操作時需要認證。</li>
+                            <li>檢查登入裝置：喺安全設定度，刪除晒唔識、唔用嘅裝置。</li>
+                            <li>了解帳戶保護：查看支付App帳戶安全保險嘅詳情。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十章：影相同相片管理</h3>
+                    <p class="mb-3">本章會教你用手機影出靚相，同埋高效管理視覺回憶嘅全流程。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 手機相機基礎：夜景、人像、專業模式</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>夜景模式</strong>：透過多張合成，提升暗位嘅亮度同細節。拍攝嗰陣要手持穩定2-4秒。</li>
+                        <li><strong>人像模式</strong>：模擬單反相機嘅淺景深效果（背景散景）。對焦人物，保持1-2米距離拍攝。之後可以調整散景強度。</li>
+                        <li><strong>專業模式</strong>：手動控制核心參數。
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>ISO：越低畫質越好，暗位調高會有雜訊。</li>
+                                <li>快門速度：高速定格瞬間，低速記錄軌跡（要穩定）。</li>
+                                <li>白平衡：調整色溫傾向。</li>
+                                <li>曝光補償：將畫面整體調光或者調暗。</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 相片構圖同修圖</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 基本構圖法則：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>三分法：將興趣點放喺畫面橫直三等分嘅交點。</li>
+                        <li>引導線：利用道路、河流等將視線引導去主體。</li>
+                        <li>由簡單開始：拍攝時有意識咁保持畫面水平垂直。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 修圖處理流程（使用Snapseed、VSCO等App）：</h5>
+                    <ol class="list-alpha pl-6 mb-3 space-y-1">
+                        <li>校正：進行旋轉同透視裁剪。</li>
+                        <li>基本調整：調整亮度、對比。降低高光，提升陰影。</li>
+                        <li>局部修飾：對特定區域進行加減光、瑕疵移除。</li>
+                        <li>風格化：加入濾鏡，調整色調。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 相片管理：由混亂到有序</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 手機相簿核心管理功能：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>智能分類：自動按時間、地點、人物、場景分類。</li>
+                        <li>搜尋：可以用關鍵字、地點、時間，甚至畫面入面嘅文字進行全局搜尋。</li>
+                        <li>批量操作：選擇多張後，可以批量分享、加入相簿，或者刪除。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 相片備份同釋放空間：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>雲端備份：iOS用iCloud相片，開啟「優化iPhone儲存空間」。Android/跨平台用Google相片或者其他雲端服務。</li>
+                        <li>釋放空間：使用系統工具，或者手動清理巨大嘅影片同連拍相片。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 螢幕截圖同螢幕錄影：資訊擷取同分享</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 基本操作：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>常見快捷鍵：同時撳【電源鍵】+【音量上鍵】。</li>
+                        <li>進階擷取：長截圖/滾動截圖、區域截圖。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 螢幕錄影：</h5>
+                    <p class="mb-2">喺控制中心加入「螢幕錄影」按鈕。開始前長撳可以開啟咪錄音解說。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 即時編輯：</h5>
+                    <p class="mb-2">截圖之後，撳縮圖入編輯畫面，可以進行標註、裁剪、馬賽克等操作。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：用專業模式影夜景相</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>準備：搵個有穩定光源嘅場景，建議用三腳架或者將手機放穩。</li>
+                            <li>入專業模式：打開相機App切換去「專業」模式。</li>
+                            <li>設定參數：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>ISO：設定最低值（50或者100）。</li>
+                                    <li>快門速度：設定1秒到幾秒（例如：2秒）。</li>
+                                    <li>對焦：設定手動對焦，拖動滑桿調校到遠處燈光清晰為止。</li>
+                                </ul>
+                            </li>
+                            <li>拍攝同確認：撳快門，全程保持絕對靜止。確認相片，根據亮度調整參數。</li>
+                            <li>比較體驗：都用自動夜景模式影一張，比較兩者分別。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十一章：娛樂同閱讀</h3>
+                    <p class="mb-3">手機係我哋最重要嘅娛樂中心，整合咗隨身聽、戲院、圖書館、遊戲機。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 音樂同Podcast：你嘅隨身音景</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 線上串流服務：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>國際：Spotify、Apple Music。曲庫全球，音質選擇豐富。</li>
+                        <li>本地：KKBOX、JOOX。播放清單社群同個人化推薦係特色。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Podcast：</h5>
+                    <p class="mb-2">App：Apple Podcasts、Spotify、Google Podcasts。使用技巧：訂閱頻道、預先下載、調整播放速度高效收聽。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 影片播放器：本機播放同串流</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 本機影片播放：</h5>
+                    <p class="mb-2">推薦VLC、nPlayer等萬能播放器。支援幾乎所有格式同外掛字幕。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 線上串流影片：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>綜合平台：YouTube、Netflix、Disney+、Amazon Prime Video。</li>
+                        <li>使用技巧：預先下載內容。善用「投放」功能喺電視度睇。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 電子書閱讀：Epub、PDF閱讀器</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 閱讀平台選擇：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>網絡小說同出版書籍：Kindle、Apple Books、Google Play 圖書。</li>
+                        <li>專業書同文件：Apple Books、Adobe Acrobat Reader（PDF標註）。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 閱讀優化設定：</h5>
+                    <p class="mb-2">自訂背景色、字體。善用書籤、螢光筆、筆記功能。部分App支援朗讀。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.4 遊戲模式同效能調整</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 遊戲模式/遊戲工具箱：</h5>
+                    <p class="mb-2">啟動遊戲時自動激活。提供效能模式切換、勿擾模式、快速錄影、懸浮視窗工具等功能。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 手動效能調整：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>遊戲內：根據手機性能調整畫質、幀率。幀率順暢度優先。</li>
+                        <li>系統層面：如果遊戲支援，可以喺系統設定度開啟高更新率模式（例如：120Hz）。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 健康遊戲習慣：</h5>
+                    <p class="mb-2">利用系統嘅「螢幕使用時間」功能設定時間提醒。為遊戲內課金設定付款認證。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：配置專屬「飛行模式」娛樂包</p>
+                        <p class="mt-1">操作步驟：預先下載並計劃一套完整嘅離線娛樂內容。</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>音樂包：喺音樂App下載你鍾意嘅播放清單或者專輯。</li>
+                            <li>影片包：喺串流App下載電影或者劇集。</li>
+                            <li>閱讀包：喺電子書App下載1-2本書。</li>
+                            <li>遊戲包：安裝1-2隻完全離線玩到嘅單機遊戲。</li>
+                            <li>整合同測試：開啟「飛行模式」，確認所有內容都可以離線存取。將相關App整理入「離線娛樂」資料夾。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十二章：好用工具App推介</h3>
+                    <p class="mb-3">本章精選介紹真正提升效率、促進健康、方便外出嘅工具App。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 效率工具：管理時間同注意力</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 待辦清單同任務管理：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>App選擇：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>輕量方便：系統便箋、Microsoft To Do。</li>
+                                <li>功能齊全：Todoist、TickTick（自然語言識別出色，整合番茄鐘）。</li>
+                                <li>看板管理：Trello 或者 Notion嘅看板視圖。適合項目視覺化管理。</li>
+                            </ul>
+                        </li>
+                        <li>使用心得：即時將任務收集入「收件匣」。定期整理設定日期。每日只專注「今日」清單。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 番茄鐘：</h5>
+                    <p class="mb-2">App：Forest、Focus To-Do。原則：專注25分鐘，休息5分鐘，重複。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 行事曆：</h5>
+                    <p class="mb-2">使用系統行事曆或者Google Calendar。將預約、截止日期，甚至「專注時段」都放入行事曆，將時間分配視覺化。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 健康運動：Apple Health、Google Fit、Fitbit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>運動指導同記錄：Nike Training Club、Strava等提供豐富健身課程。品牌健康App（例如：Samsung Health）同智能手環數據深度整合。</li>
+                        <li>Apple Health / Google Fit：數據中樞。匯聚手機、智能手環、第三方健康App嘅所有數據，形成統一健康記錄。定期查看「趨勢」報告。</li>
+                        <li>使用建議：設定可達成目標。唔好容許過多提醒。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 旅行外出：你嘅萬能指南</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 地圖同導航：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>香港本地：Google Maps、Citymapper。詳細實時交通資訊豐富。</li>
+                        <li>海外出行：Google Maps。全球數據、街景、用戶評價有優勢。</li>
+                        <li>行山同戶外：AllTrails、TrailWatch。記錄軌跡，可下載離線地圖。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 翻譯：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>實時對話：Google翻譯嘅「對話」同「相機」即時翻譯係旅行神器。</li>
+                        <li>文字同文件：DeepL喺歐美語言之間翻譯準確度高。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 行程規劃：</h5>
+                    <p class="mb-2">「TripIt」等App自動生成路線，管理機票酒店資訊，製作行程表。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.4 小眾但強大：自動化工具入門</h4>
+                    <p class="mb-2">呢個係將手機升級做「智能助理」嘅關鍵。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 自動化係咩？：</h5>
+                    <p class="mb-2">設定好條件，當條件滿足嗰陣，手機自動執行一系列預設操作。例如：返到屋企自動連接Wi-Fi並播放音樂，瞓覺時自動調暗螢幕。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iOS嘅「捷徑」：</h5>
+                    <p class="mb-2">Apple官方自動化工具。唔使編程。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>核心概念：「捷徑」係可以手動撳執行嘅工作流程。「自動化」係根據條件自動執行嘅指令。</li>
+                        <li>入門路徑：首先喺「捷徑資料庫」加入現成捷徑使用。然後試吓建立簡單捷徑。最後喺「自動化」分頁探索個人自動化。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Android嘅自動化方案：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>系統層面：各品牌系統（例如：One UI、MIUI）可能整合咗「情境模式」等基本自動化功能。</li>
+                        <li>神器級App：Tasker。功能極強，但學習曲線陡峭。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">本章練習：建立「睡前放鬆」自動化流程</p>
+                        <p class="mt-1">參考方案（使用iOS「捷徑」自動化）：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>建立觸發條件：打開捷徑App > [自動化] > [製作個人自動化] > 選擇「特定時間」（例如：22:30，每日）。</li>
+                            <li>加入執行動作：降低媒體音量 > 開啟「勿擾模式」> 播放特定放鬆播放清單 > 螢幕亮度調到最低 > 顯示通知：「睡前放鬆時間，放低手機啦。」</li>
+                        </ol>
+                        <p class="mt-2">Android參考方案：使用系統內置「情境」功能或者Tasker，設定類似嘅觸發條件同動作。</p>
+                        <p class="mt-1">練習步驟：根據手機系統揀工具，建立一個叫「睡前放鬆」嘅自動化。加入重要動作（包括調整音量同開啟勿擾模式）。儲存並測試。</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">三、進階篇（第13-17章）</h2>
+
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十三章：電池科學同慳電優化</h3>
+                    <p class="mb-3">電池係手機嘅「能量心臟」。本章會教你了解電池特性，學習科學充電同慳電技巧，徹底消除電量焦慮。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 電池係咩？循環同健康度</h4>
+                    <p class="mb-2">手機電池（鋰離子或者鋰聚合物）就好似能量海綿咁：充電係吸水（儲電），放電係擰水（使用）。記住佢嘅3大特點：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>隨時充電：同舊電池唔同，冇記憶效應，唔使用到晒先充。用到0%或者成日keep住100%滿電，反而會損壞。</li>
+                        <li>驚熱：高溫係電池嘅天敵。</li>
+                        <li>會老化：長期使用，最大容量會下降。呢個係正常現象。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">核心指標：循環次數同健康度</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>1個循環唔係充1次電。例如，今日用咗60%充滿，聽日用咗40%充滿，總共100%電量消耗就計1個循環。</li>
+                        <li>電池健康度顯示目前最大容量係新機嗰陣嘅幾多%。低過80%，電池續航會明顯變短，可以考慮官方換電。</li>
+                        <li>查看方法：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone：設定 > 電池 > 電池健康度與充電。</li>
+                                <li>Android：通常可以喺設定度搜尋「電池狀態」搵到。</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 充電迷思？快充、無線充電同黃金法則</h4>
+                    <p class="mb-2">破除迷思，科學充電。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 快充會唔會整壞電池？</h5>
+                    <p class="mb-2">用原廠或者認證快充配件，損耗好輕微。手機同充電器有溫度控制，過熱嗰陣會自動降低輸出。唔好用雜牌快充器。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 無線充電點樣？</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>方便：放低就充。適合夜晚瞓覺嗰陣用。</li>
+                        <li>缺點：效率低，發熱明顯，充電慢。</li>
+                        <li>建議：適合通宵充電（唔使頻繁）。趕住充電嗰陣用有線快充。用嗰陣除咗厚殼。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 電池黃金養生法則</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>最佳電量範圍：盡量將電量保持喺20%-80%之間，唔好用到0%「餓過頭」或者100%「撐過頭」。</li>
+                        <li>通宵充電安全嗎？ 安全！充滿之後會自動停止充電，手機會直接由電源取電。</li>
+                        <li>千祈唔好一邊打機一邊充電。熱上加熱會整壞電池。</li>
+                        <li>長期唔用手機：充到50%左右關機存放。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 呢啲先係真正嘅慳電技巧</h4>
+                    <p class="mb-2">電池健康唔夠，設定先係慳電必殺技。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 搵出「食電大戶」</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>螢幕（食電王）：降低亮度，縮短自動鎖定時間。OLED螢幕手機一定要開深色模式。可以慳好多電。</li>
+                        <li>訊號差：喺升降機、地下室，手機拼命搵訊號，急速消耗電量。</li>
+                        <li>5G：訊號差嗰陣手動切換去4G，電池續航會大幅改善。</li>
+                        <li>定位服務：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>導航以外嘅App（例如：社交、購物）定位權限設定做「使用時允許」。</li>
+                                <li>喺系統定位度關閉「基於位置嘅廣告」等唔需要嘅選項。</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 管理App嘅「口」</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>限制背景活動：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone：設定 > 一般 > 背景App重新整理。全部關閉或者只留LINE。</li>
+                                <li>Android：喺App電池設定度，對唔多用嘅App選擇「禁止背景活動」。</li>
+                            </ul>
+                        </li>
+                        <li>關閉唔需要嘅通知：每次螢幕亮起、震動都會消耗電量。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 救命索：慳電模式</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>慳電/低電量模式：系統降低性能，停止背景同步。臨時救急非常有效。</li>
+                        <li>超級慳電/極限模式：只剩電話、SMS、極少數App，螢幕變黑白。榨盡最後電量續命。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 實戰練習：為電池做健康檢查</p>
+                        <p class="mt-1">目標：用數據搵出真正嘅食電兇手。</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>查看健康度：用上面嘅方法，搵到電池最大容量並記低。</li>
+                            <li>分析耗電詳情：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone：去設定 > 電池，睇下面圖表同App列表，留意邊個App背景活動時間長。</li>
+                                    <li>Android：去設定 > 電池 > 電池使用狀況，睇硬件同App耗電排名。</li>
+                                </ul>
+                            </li>
+                            <li>制定對策：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>特定App背景耗電異常 → 限制佢。</li>
+                                    <li>「流動網絡」耗電高 → 諗返係咪喺訊號差嘅地方耐咗。</li>
+                                    <li>唔多用嘅App上榜 → 考慮解除安裝。</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十四章：帳戶體系同雲端服務</h3>
+                    <p class="mb-3">你嘅手機帳戶，唔單止係下載App嘅通行證。佢係數碼生活嘅「靈魂護照」，雲端服務係令所有數據流動嘅「隱形高速公路」。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 三大核心帳戶：Apple、Google同各品牌</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple ID：Apple生態嘅萬能匙</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>作用：App Store、iCloud同步、尋找iPhone、FaceTime等，全部依賴佢。iPhone、iPad、Mac之間無縫切換。</li>
+                        <li>安全底線：一定要開啟雙重認證！咁樣密碼洩漏，人都唔可以喺新裝置登入。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Google帳戶：Android同Google服務嘅核心</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>作用：同步聯絡人、行事曆、Gmail、Chrome書籤、相片備份。</li>
+                        <li>安全底線：同樣，開啟兩步驗證好重要。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 各品牌帳戶：本地萬能管家</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>作用：雲端空間備份、應用商店、尋找手機、跨裝置連接（例如：多屏協同）。</li>
+                        <li>注意：了解雲端數據存放喺邊度嘅伺服器，閱讀私隱政策，掌握同步咗邊啲數據。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">🔐 帳戶安全通用法則</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>強密碼＋密碼管理員：用iCloud鑰匙圈或者Bitwarden等工具管理。</li>
+                        <li>開啟雙重認證：呢個係防盜嘅生命線。</li>
+                        <li>定期檢查登入裝置：刪除唔識嘅裝置。</li>
+                        <li>小心釣魚連結：唔好喺不明連結輸入密碼。手動輸入官方網址。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 雲端同步：令數據自己識郁</h4>
+                    <p class="mb-2">開啟雲端同步，數據感覺上仲喺手機入面，但其實安全咁存放喺雲端，所有裝置保持一致。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 雲端同步做到咩？（以iCloud為例）</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>聯絡人、行事曆、備忘錄：喺任何裝置改動，其他裝置即時同步。</li>
+                        <li>相片影片：開啟iCloud相片，所有相都會上傳，手機只留細尺寸版本（慳位）。任何Apple裝置都可以睇原大。</li>
+                        <li>自動整機備份：手機充電中、鎖定狀態連接Wi-Fi嗰陣，系統設定、App佈局等會自動備份。轉新機恢復嗰陣係神器。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ⚠️ 重要區別：同步 vs 備份</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>同步＝雙向一致：A裝置刪除相，B、C裝置都會冇咗。目的係保持所有裝置一樣。</li>
+                        <li>備份＝單向快照：好似幫手機影快照儲存咁。之後刪除本機數據，雲端備份都會喺度。目的係恢復。</li>
+                        <li>記住：唔好將iCloud相片同步當做備份！所有裝置誤刪，雲端都會冇。真正備份要靠電腦整機備份（iTunes/Finder）或者第三方雲端儲存（只上傳唔刪除）。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 家庭共享：買一次，全家享用</h4>
+                    <p class="mb-2">呢個係同最親密家人分享數碼資源嘅神器。</p>
+                    <p class="mb-2">以Apple「家人共享」為例，可以分享：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>App、音樂、電影、書：你買嘅嘢，全家（最多5人）都可以下載，唔使額外俾錢。最抵嘅軟件購買方式。</li>
+                        <li>Apple Music、iCloud+等訂閱：家庭方案訂閱通常比個人平。</li>
+                        <li>位置分享：查看家人實時位置（例如：小朋友放學）。設定地理圍欄，到達或者離開嗰陣通知。安全又安心。</li>
+                        <li>共享相簿同行事曆：一齊放相，記錄家庭活動。</li>
+                    </ul>
+                    <p class="mb-2">💡 注意：只邀請完全信任嘅直系親屬。位置分享係雙向嘅。互相尊重私隱。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 實戰練習：檢查帳戶同步內容</p>
+                        <p class="mt-1">目標：主動管理，同混亂同步講拜拜。</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>以iPhone為例：設定 > 頂部你嘅名。</li>
+                            <li>檢查iCloud同步項目：撳「iCloud」，檢查列表入面每個App嘅開關。
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>聯絡人、行事曆建議開啟。</li>
+                                    <li>重點留意「相片」：確認理解iCloud相片邏輯（一處刪除，處處刪除）。</li>
+                                    <li>唔用嘅第三方App同步可以關閉，慳位。</li>
+                                    <li>確認iCloud備份已開啟。</li>
+                                </ul>
+                            </li>
+                            <li>檢查尋找同定位：確認「尋找iPhone」已開啟（防盜必備）。確認家人共享定位設定符合預期。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十五章：手機同其他裝置嘅連接</h3>
+                    <p class="mb-3">現代手機係你嘅個人數碼中心。學識同其他裝置組隊，效率倍增。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 同電腦協作：生產力爆發</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 檔案傳輸，同數據線講拜拜</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>無線王者：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Apple生態：AirDrop。iPhone同Mac之間瞬間傳輸檔案、相片。唔使網絡，無損。</li>
+                                <li>Android+Win：使用<strong>「Phone Link」</strong>功能。可以直接喺電腦睇手機相、回覆SMS。</li>
+                                <li>品牌生態：Samsung Flow、Huawei Share等。可以直接將手機畫面鏡射去電腦。用電腦滑鼠鍵盤操作手機App。雙向拖放檔案。</li>
+                            </ul>
+                        </li>
+                        <li>物理直連：用數據線連接電腦，選擇「檔案傳輸」模式。穩定快速。適合傳大檔案。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 多屏接力</h5>
+                    <p class="mb-2">Apple Handoff：iPhone睇緊網頁，Mac嘅程式Dock會出現Safari圖標，撳一下就可以繼續睇。複製文字，喺另一個裝置直接貼上。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 智能手錶/手環連接：手腕上嘅助理</h4>
+                    <p class="mb-2">核心功能：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>通知過濾：手機訊息推送去手錶。抬起手腕就睇到。唔重要嘅掃走就算。減少拎手機次數。</li>
+                        <li>健康數據站：手錶24小時測心率、睡眠。數據喺手機App度睇報告。</li>
+                        <li>萬能遙控：遙控手機播歌，做手機相機快門（影大合照超方便）。</li>
+                        <li>手腕拍卡：將手機錢包開咗嘅交通卡、門禁卡同步去手錶。抬起手腕就拍。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 智能家居連接：袋入面嘅總遙控</h4>
+                    <p class="mb-2">手機嘅三重角色：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>遙控：直接喺Google Home、Amazon Alexa、Apple Home等App開關燈、調校冷氣溫度。</li>
+                        <li>情境導演：設定「睇戲模式」。一撳關主燈、開氣氛燈、落幕、調冷氣。</li>
+                        <li>設定中心：所有智能裝置設定都要透過手機App進行。</li>
+                    </ol>
+
+                    <p class="mb-2">生態推薦：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>用iPhone，重視私隱 → 揀支援Apple HomeKit嘅裝置。</li>
+                        <li>裝置多，追求性價比 → Google Home 或者 Amazon Alexa 生態最豐富。</li>
+                        <li>用Samsung手機 → 優先Samsung SmartThings。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 實戰練習：將手機畫面鏡射去電視</p>
+                        <p class="mt-1">目標：大螢幕分享相片影片，打機。爽！</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>確認手機同電視連接同一個Wi-Fi。</li>
+                            <li>喺電視度：搵並開啟「螢幕鏡射」、「Miracast」或者「AirPlay」功能。</li>
+                            <li>喺手機度：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone：由右上向下滑打開控制中心，撳「螢幕鏡射」。揀電視。</li>
+                                    <li>Android：向下滑快速設定，搵「無線顯示」、「智能檢視」，揀電視。</li>
+                                </ul>
+                            </li>
+                            <li>成功！手機畫面同聲音同步去電視。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十六章：數據備份同轉移</h3>
+                    <p class="mb-3">相片、聊天記錄係無價寶物。本章教你為數碼資產買保險，順利轉新機。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 整機備份：最徹底嘅「複製」</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. 電腦本機備份（最可靠）</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone + 電腦：用數據線連接。打開iTunes（Win）或者Finder（Mac），撳「立即備份」。記得剔選「為本機備份加密」。咁樣健康數據同密碼數據都會備份。恢復嗰陣，連接新機揀「從備份恢復」。</li>
+                        <li>Android品牌機 + 電腦軟件：用各品牌官方工具（Samsung Smart Switch、Xiaomi PC Suite等）。功能類似。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 雲端備份（最唔使煩）</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iCloud備份：喺設定度開啟。手機充電中、鎖定狀態連接Wi-Fi嗰陣自動備份。新iPhone激活嗰陣揀「從iCloud備份恢復」就得。</li>
+                        <li>注意：免費5GB根本唔夠用。通常要付費升級iCloud+。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 選擇性備份：重點保護</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>相片影片：開啟iCloud相片/Google相片/品牌雲端相片，就係持續備份。或者定期用數據線複製去電腦。</li>
+                        <li>聯絡人等：只要喺iCloud/Google/品牌帳戶度，登入另一部手機就會自動返嚟。</li>
+                        <li>⚠️ LINE/WeChat聊天記錄（最重要）：
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>轉機嗰陣：用App內「聊天記錄轉移」功能。Wi-Fi直連。舊機傳去新機。最推薦。</li>
+                                <li>長期備份：用電腦版App「備份與恢復」功能。備份喺電腦本機。最安全——呢個好重要。</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 轉機指南：三大轉移路徑</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Android → Android</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>同品牌（例如：Samsung → Samsung）：用官方「手機克隆」App。掃QR碼就傳App同數據。體驗完美。</li>
+                        <li>跨品牌：用第三方轉機工具，或者提前將相片聯絡人同步去雲端（例如：Google相片），新機登入下載。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iPhone → iPhone</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iCloud恢復：新機激活嗰陣揀從iCloud備份恢復。</li>
+                        <li>快速開始：新舊iPhone放埋一齊。舊機出現設定動畫，掃QR碼就無線轉移晒所有嘢。體驗一流。</li>
+                        <li>注意：要花好耐時間。保持充電同網絡。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 跨平台（Android↔iPhone）最複雜</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>用官方工具（例如：「Move to iOS」App）。可以傳聯絡人、相片等。</li>
+                        <li>核心限制：App同App數據（例如：LINE/WeChat聊天記錄、遊戲進度）傳唔到。App要重新安裝。數據要單獨處理（例如：LINE用電腦備份恢復）——呢個好重要。</li>
+                        <li>手動策略：相片經電腦或者雲端中轉。聯絡人匯出vCard檔案。確認重要App數據支援跨平台匯出。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 實戰練習：手動備份相片同聯絡人去電腦</p>
+                        <p class="mt-1">目標：擁有完全自己控制到嘅離線數據副本，終極安心。</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>準備數據線，連接手機同電腦。</li>
+                            <li>備份相片：喺電腦入手機內部儲存，搵 DCIM 同 Pictures 資料夾，成個複製去電腦硬碟。</li>
+                            <li>備份聯絡人：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone：確認聯絡人喺iCloud。登入iCloud.com網頁版，入「聯絡人」，全選匯出vCard檔案，儲存喺電腦。</li>
+                                    <li>Android：喺「聯絡人」App設定度，搵「匯出到儲存裝置」，生成.vcf檔案。用數據線複製去電腦。</li>
+                                </ul>
+                            </li>
+                            <li>驗證備份：喺電腦打開幾張複製嘅相，打開.vcf檔案確認資料齊全。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十七章：故障排除同自行解決</h3>
+                    <p class="mb-3">手機有時會「生病」，唔使慌。大部分問題都可以自己搞掂。呢個係你嘅「手機急救手冊」。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 手機慢、發熱</h4>
+                    <p class="mb-2">診斷4步：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>聯想關係：系統更新後？定係安裝咗特定App後？</li>
+                        <li>檢查儲存空間：剩餘少過10%，係系統變慢最常見原因。</li>
+                        <li>檢查耗電排名：喺電池設定度，睇下邊個App喺背景耗電。</li>
+                        <li>檢查訊號：訊號差嘅地方，手機拼命搵網絡，會發熱。</li>
+                    </ol>
+
+                    <p class="mb-2">治療方法：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>空間唔夠 → 即刻清理儲存空間（參考基礎篇）。</li>
+                        <li>特定App搞事 → 喺設定度清除嗰個App快取，或者解除安裝再安裝。</li>
+                        <li>萬能解法：重啟手機。</li>
+                        <li>唔好一邊打機一邊充電。發熱會整壞電池。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 App閃退、無回應</h4>
+                    <p class="mb-2">標準處理流程：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>關閉App，再開。</li>
+                        <li>去App商店更新。</li>
+                        <li>檢查有冇誤關必要權限（例如：儲存權限）。</li>
+                        <li>清除App快取（安全，唔會冇數據）。</li>
+                        <li>最後手段：清除數據/解除安裝再安裝（登入資訊會清除。確認記得密碼）。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 開唔到機、卡喺開機畫面「終極手段」</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>首先充電30分鐘。可能只係完全冇電。</li>
+                        <li>試吓強制重啟（參考下面練習）。可以解決大部分「假死」。</li>
+                        <li>都唔得：可能需要恢復模式連接電腦修復，但會清除所有數據（有備份就可以恢復）。都唔得嘅話，可能係硬件問題，要送去整。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 搵官方維修，避開陷阱</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>搵真官方：一定要喺品牌官網確認「認可維修中心」。或者喺手機設定、官方App搵服務入口。</li>
+                        <li>維修前：一定要自己備份晒所有數據！登出帳戶。帶購買證明。</li>
+                        <li>小心非官方維修：可能用劣質零件，私隱可能洩漏。而且一經拆機，官方保養就失效。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 實戰練習：模擬「強制重啟」</p>
+                        <p class="mt-1">目標：喺手機正常嗰陣學識呢個「萬能匙」，真正壞機嗰陣唔使慌。</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>注意：手機正常嗰陣操作係安全嘅。數據唔會刪除，但建議先儲存手頭工作。</li>
+                            <li>方法：
+                                <ul class="list-circle pl-6 mt-1 space-y-1">
+                                    <li>全螢幕iPhone：快速撳一下音量上，撳一下音量下，長撳側面電源鍵。直到出現Apple標誌。</li>
+                                    <li>Android通用：長撳電源鍵10-15秒。直到重啟。</li>
+                                    <li>（具體型號可能略有唔同。唔確定就搜尋「[你手機型號] 強制重啟」）</li>
+                                </ul>
+                            </li>
+                            <li>意義：練習一次，之後手機真係卡住嗰陣，就可以冷靜解決。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">四、發展篇（第18-22章）</h2>
+
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十八章：流動網絡同資訊安全深入探討</h3>
+                    <p class="mb-3">🔒 點解要關心呢啲？</p>
+                    <p class="mb-3">我哋每日用手機上網、付款、傾計，覺得好方便。但你嘅聊天記錄、付款密碼、相片……呢啲資訊喺互聯網上「裸奔」嘅頻率，你有冇諗過？手機係我哋嘅數碼分身，佢嘅安全就係我哋自己嘅安全。唔好覺得黑客好遠。一個唔小心嘅公共Wi-Fi可能就係「陷阱」。今日深入探討流動網絡入面嘅「暗湧」，令你嘅手機堅如磐石，唔好搞錯。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📡 VPN：網絡入面嘅「隱形斗篷」</h4>
+                    <p class="mb-2">佢到底係咩？</p>
+                    <p class="mb-2">VPN，全名係Virtual Private Network（虛擬私人網絡）。想像你喺屋企同想訪問嘅網站之間，起咗一條專用加密嘅地下隧道。</p>
+
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>普通網絡連接：你手機 → 公共網絡（電訊商網絡、咖啡店Wi-Fi） → 目標網站。 
+                            <p class="mt-1 text-secondary">風險：呢條路途中，有人（黑客、惡意Wi-Fi提供者，或者網絡管理員）可能「偷睇」你發送嘅數據。</p>
+                        </li>
+                        <li>使用VPN嗰陣：你手機 → VPN加密隧道 → VPN伺服器 → 目標網站。 
+                            <p class="mt-1 text-secondary">效果：你所有網絡流量，入隧道嗰刻就加密封裝。路途「偷睇者」只會見到解唔開嘅亂碼。數據去到VPN伺服器先解密轉發去真正網站。網站見到嘅訪問地址都係VPN伺服器地址，唔係你真實地址。</p>
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">做到咩？除咗「翻牆」仲有好多</p>
+                    <p class="mb-2">唔好一講VPN就淨係諗住訪問海外網站。正當用途好多：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>公共Wi-Fi下嘅安全保護：喺機場、酒店、咖啡店用免費Wi-Fi係數據洩漏高危區域。用VPN可以為連接穿上「盔甲」。</li>
+                        <li>企業內網遠端安全存取：好多企業員工在家工作嗰陣透過VPN安全登入公司系統同檔案伺服器。</li>
+                        <li>個人私隱保護，避免追蹤：防止互聯網服務供應商（ISP）記錄分析你嘅上網習慣，推送精準廣告。</li>
+                    </ol>
+
+                    <p class="mb-2">⚠️ 重要注意</p>
+                    <p class="mb-2">VPN技術本身係合法安全工具，但一定要經正規渠道購買或者使用可信服務。唔好使用來歷不明嘅「免費VPN」，可能會喺手機植入木馬，或者偷偷記錄數據出售——就好似「請賊做保安」咁。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🚫 公共Wi-Fi嘅「糖衣毒藥」</h4>
+                    <p class="mb-2">免費Wi-Fi好吸引，但可能係「糖衣毒藥」。除咗VPN呢個「終極方案」，仲可以建立兩道基本防線。</p>
+                    
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>第一道防線：確認HTTPS
+                            <p class="mt-1">訪問網站嗰陣，留意地址欄開頭係 http:// 定 https://。多咗嘅「s」代表Secure（安全）。代表你同網站之間通訊已加密，數據就算被截取，都好難解讀。而家大部分正規網站（銀行、郵件、社交平台）預設用HTTPS。公共Wi-Fi下，確認訪問緊嘅頁面係HTTPS。</p>
+                        </li>
+                        <li>第二道防線：升級DNS查詢
+                            <p class="mt-1">DNS係咩？簡單講係「網絡電話簿」。想訪問baidu.com嗰陣，手機首先問DNS伺服器「百度嘅地址（IP）係咩？」。傳統DNS查詢係「明信片」式，冇加密。即係話，惡意Wi-Fi可以知道你問咗邊個網站，仲可以篡改答案引你去釣魚網站！</p>
+                            <p class="mt-1">DNS over TLS (DoT) / DNS over HTTPS (DoH) 解決呢個問題。將你嘅「電話簿」查詢都加密，無人知你搵緊邊個，答案都改唔到。</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🕵️ 「無痕瀏覽」真係會變透明？</h4>
+                    <p class="mb-2">主流瀏覽器都有「無痕/私密瀏覽模式」，係咪令你覺得自己變咗網絡忍者？真相可能令你失望。</p>
+                    
+                    <p class="mb-2">佢做到咩？</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>👍 本地唔留痕跡：關閉無痕視窗後，系統唔會儲存你嘅瀏覽記錄、Cookie、表格數據。家人拎你手機都睇唔到你搜尋過咩。</li>
+                    </ul>
+
+                    <p class="mb-2">佢做唔到咩：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>對你嘅網上行為變透明：你訪問嘅網站、互聯網服務供應商（ISP）、公司網絡管理員（用公司Wi-Fi嗰陣），依然可以見到你嘅訪問記錄。網站都可以透過IP地址等技術手段識別你。</li>
+                        <li>防毒防惡意軟件：唔小心入咗惡意網站，都會中招。</li>
+                        <li>隱藏下載嘅檔案：無痕模式下載嘅檔案，會好好儲存喺下載資料夾。</li>
+                    </ol>
+
+                    <p class="mb-2">結論：無痕瀏覽模式好似<strong>「本地清除器」</strong>，唔係「網絡隱形斗篷」。適合借人電腦嗰陣保護登入狀態同搜尋記錄唔俾人睇到，唔好期望佢可以避開所有網絡追蹤。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">實戰時間 👉 為手機設定「可信電話簿」（DNS）</p>
+                        <p class="mt-1">知道DNS查詢可能被偷睇或者篡改，我哋轉用更安全更快嘅DNS服務。以下以Android同iOS為例。</p>
+                        <p class="mt-2 font-semibold">Android手機設定方法：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>打開【設定】。</li>
+                            <li>入【Wi-Fi】，長撳目前連接緊嘅Wi-Fi網絡，揀【修改網絡】。</li>
+                            <li>撳【進階選項】，將IP設定由「DHCP」改做「靜態」。</li>
+                            <li>向下拉，搵「DNS 1」同「DNS 2」（DNS伺服器地址）。</li>
+                            <li>輸入你想用嘅DNS地址。例如：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>重視安全同私隱：Cloudflare DNS 1.1.1.1 同 1.0.0.1</li>
+                                    <li>綜合體驗好：Google DNS 8.8.8.8 同 8.8.4.4</li>
+                                </ul>
+                            </li>
+                            <li>儲存設定。</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">iPhone/iPad 設定方法（Wi-Fi環境下）：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>打開【設定】>【Wi-Fi】。</li>
+                            <li>撳連接緊嘅Wi-Fi右邊嘅【i】資訊圖標。</li>
+                            <li>向下拉，搵【設定DNS】。</li>
+                            <li>揀【手動】，撳【加入伺服器】。</li>
+                            <li>輸入上面推薦嘅DNS地址（例如：1.1.1.1）。</li>
+                            <li>撳右上【儲存】。</li>
+                        </ol>
+                        <p class="mt-2">完成後，你手機查詢網站地址嗰陣，會優先使用設定好嘅更可信DNS伺服器，更安全，回應都可能快少少。恭喜你，又塞咗一個安全漏洞！</p>
+                    </div>
+                </div>
+
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第十九章：AI點樣喺手機度運作</h3>
+                    <p class="mb-3">👋 歡迎嚟到手機最型嘅「魔術表演」。主角係：人工智能。你每日用緊嘅「一撳即影」靚相、講就有嘅語音助理、越用越識你嘅輸入法。背後都有呢個隱形大腦。今日揭開布簾，睇下AI點樣喺你手機度「思考」同工作。</p>
+                    <p class="mb-3">首先講核心結論：你手機嘅AI，正努力將運算帶近你。而唔係將你帶近伺服器。</p>
+                    <p class="mb-3">呢句話有啲拗口？結合上一章講嘅「數碼分身」嚟理解。上一章講過，手機係你嘅分身，數據離開佢就面臨風險。而現代手機嘅AI，正正係想將更多智能塞入呢個「分身」內部。呢個就係所謂嘅「邊緣AI」。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 AI相機：你嘅「沖印暗房」搬咗入手機</h4>
+                    <p class="mb-2">撳撳吓影相，可能係我哋最常用嘅AI功能。你係咪覺得「影相」就係咔嚓一聲？已經唔係喇。</p>
+                    <p class="mb-2">早期手機影相，好似自動菲林相機咁，撳快門，畫面好唔好主要睇感光元件同鏡頭硬件。而家嘅AI運算攝影，就好似將專業修圖師＋攝影師團隊直接塞入快門掣咁。</p>
+                    <p class="mb-2">有咩唔同？</p>
+                    <p class="mb-2">呢個「團隊」喺你撳快門之前已經開始工作。掃描場景，識別<strong>「呢個係藍天」、「呢個係人面」、「呢個係夜景」</strong> 或者「呢個係食物」。識別完之後，AI瞬間調用專為呢類場景特別訓練嘅優化方案：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>人像拍攝：知道要將背景虛化、皮膚美化，自動切換人像模式。</li>
+                        <li>夜景拍攝：唔係單純提高ISO搞到雜訊滿滿，而係瞬間連續拍攝多張暗光照片，好似拼圖咁，將所有照片最清晰、雜訊最少嘅部分用「計算」融合，生成一張明亮清晰嘅相。</li>
+                        <li>文檔拍攝：自動將邊緣拉直，提高對比度，好似掃描器咁。</li>
+                        <li>動態瞬間拍攝：預測動作軌跡，自動捕捉最清晰嘅瞬間。</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 實戰時間 👉： 而家即刻打開手機相機，對住唔同嘅場景（人面、植物、食物、文字）。好多手機識別到特定場景嗰陣，會喺取景器角落顯示一個細圖標（例如：「人像」、「食物」、「文字」）。感受呢個「瞬間識別」嘅過程。呢個就係你撳快門之前，AI俾你嘅實時回饋。</p>
+                    </div>
+
+                    <p class="mt-4 mb-2">換言之，而家撳快門，只係啟動呢個「計算修圖」流程嘅最後一步。嗰一秒鐘嘅「處理中」轉圈顯示，就係AI大腦高速運作嘅證明。更厲害嘅係，呢啲複雜計算全部可以喺手機入面嘅專用AI晶片（例如：Apple嘅Neural Engine、Qualcomm嘅AI Engine、Huawei嘅達文西架構等）直接進行。快，私隱度又高。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗣️ 語音助理：你嘅「語音秘書」點樣聽明你講嘢？</h4>
+                    <p class="mb-2">「Hey Siri，聽日天氣點呀？」</p>
+                    <p class="mb-2">「OK Google，聽朝早七點設定鬧鐘。」</p>
+                    <p class="mb-2">呢啲已經好似呼吸咁自然。但係，呢個語音秘書係點做到嘅呢？</p>
+                    <p class="mb-2">佢嘅工作流程，可以拆解做標準化嘅「三步曲」：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>第一步：聽入耳（語音識別）。</strong>
+                            <p class="mt-1">當你講喚醒詞（「Hey Siri」）並發出指令，手機嘅咪高峰會錄低你嘅語音波形。呢個係連續嘅信號。AI嘅第一個任務，就係將呢段連續聲波切分成一個個音素片段，同龐大嘅訓練好嘅詞彙庫比對，將佢哋轉換成文字。呢個過程叫做ASR（自動語音識別）。要克服你嘅口音、語速、環境噪音，非常犀利。</p>
+                        </li>
+                        <li><strong>第二步：理解意思（自然語言理解 - NLP）。</strong>
+                            <p class="mt-1">淨係攞到「聽朝早七點提醒我帶遮」呢句文字係唔夠嘅。要理解意圖。邊個？幾時？做咩？呢度需要NLP技術。分析句子結構，提取關鍵實體：「聽朝早七點」（時間）、「提醒」（意圖/動作）、「我」（對象）、「帶遮」（事件）。呢個就相當於理解咗你嘅命令——呢個好重要。</p>
+                        </li>
+                        <li><strong>第三步：執行同回答。</strong>
+                            <p class="mt-1">理解你嘅意圖之後，助理會調用手機入面對應嘅App或者服務模組。查天氣就去互聯網攞天氣數據；設鬧鐘就寫入「時鐘」App嘅數據庫；問「美斯係邊個」可能會調用搜索引擎。最後，將結果通過語音合成（TTS）技術「講」俾你聽。</p>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">以前，第一步同第二步大部分重型計算要送去雲端伺服器，而家，喚醒詞識別同部分離線指令（例如：設鬧鐘、開藍牙）嘅處理，已經可以喺手機本體完全進行。呢個意味住回應更快（唔使等網絡），私隱亦更有保障（「熄燈」呢類命令唔使上傳雲端）。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⌨️ 輸入法預測同寫作助理：你嘅「貼心速記員」</h4>
+                    <p class="mb-2">呢個可能係最靜靜地滲透嘅AI。你啱啱輸入「今晚」，「食咩好」就彈出嚟。輸入「老細」，後面自動跟住「你好」。背後係邊緣機器學習模型長期觀察同學習嘅結果。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>基於你個人習慣嘅語言模型： 輸入法會靜靜分析你常用嘅詞彙、短語組合、傾計對象。你同朋友傾計嗰陣會「哈哈哈」笑，同同事溝通嗰陣會多用「會議紀錄」。佢全部記喺心度。時間耐咗，就形成咗專為你一人優化嘅「預測模型」。</li>
+                        <li>語境理解： 唔單止睇前一個詞，而係理解你緊輸入緊呢句話嘅語境。喺WhatsApp嘅聊天框同工作文檔，同一個開頭詞，可能會有唔同嘅補全建議。</li>
+                        <li>錯字修正能力： 輸入「幾好」嗰陣，知道你想打「幾好」而唔係「幾號」，自動幫你修正。呢個唔係單純嘅字典匹配，而係基於幾十億次輸入訓練出嚟嘅概率判斷。</li>
+                    </ul>
+
+                    <p class="mb-2">🖋️ 再進一步：AI寫作助理。</p>
+                    <p class="mb-2">而家好多輸入法或者筆記App提供嘅「智能錯字修正」、「句子潤飾」、「續寫」功能，係更強大嘅AI應用。可以將「呢個產品好好用」潤飾成「呢個產品嘅用戶體驗非常出色」，或者寫完標題之後，建議幾個可能嘅文章開頭。呢個模型通常更大，部分可能依賴雲端，但核心嘅聯想同預測依然大量喺本地進行，保護你嘅寫作私隱。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧠 邊緣AI vs. 雲端AI：手機進化嘅分水嶺</h4>
+                    <p class="mb-2">上一章反覆提及嘅關鍵詞：邊緣。呢個代表手機AI發展嘅核心趨勢：算力下沉。</p>
+                    <p class="mb-2">用簡單嘅表格，睇下「邊緣AI」同傳統「雲端AI」模式嘅本質區別：</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">比較維度</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">雲端AI（傳統模式）</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">邊緣AI（現在與未來趨勢）</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">數據去邊度</td>
+                                    <td class="border border-gray-300 px-4 py-2">你嘅相、錄音等原始數據要上傳去互聯網伺服器。</td>
+                                    <td class="border border-gray-300 px-4 py-2">原始數據留喺手機，只同步處理結果或者極細嘅匿名化數據。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">速度</td>
+                                    <td class="border border-gray-300 px-4 py-2">依賴網絡質素，有延遲。問完要等「網絡加載」。</td>
+                                    <td class="border border-gray-300 px-4 py-2">即時回應，無延遲。解鎖、相簿搜尋、離線翻譯，眨吓眼就搞掂。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">私隱安全</td>
+                                    <td class="border border-gray-300 px-4 py-2">你嘅數據「離開家門」，經過公共網絡，有潛在洩漏風險。</td>
+                                    <td class="border border-gray-300 px-4 py-2">數據唔離開「分身」，根本性避開傳送過程中嘅竊聽同攔截風險。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">可否離線</td>
+                                    <td class="border border-gray-300 px-4 py-2">基本上唔得。無網絡≈AI功能癱瘓。</td>
+                                    <td class="border border-gray-300 px-4 py-2">核心功能完全可以離線使用。適應更多場景（例如：地下停車場、飛機上、野外）。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">耗電同數據流量</td>
+                                    <td class="border border-gray-300 px-4 py-2">需要持續網絡通信。相對耗電同數據流量。</td>
+                                    <td class="border border-gray-300 px-4 py-2">減少同雲端頻繁通信，更慳電、慳數據流量。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">現有例子</td>
+                                    <td class="border border-gray-300 px-4 py-2">早期語音識別、需要複雜渲染嘅AI圖像生成、超大規模語言模型對話。</td>
+                                    <td class="border border-gray-300 px-4 py-2">人面/指紋解鎖、相簿人面分類、離線翻譯、部分語音指令、輸入法預測。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-2">睇到分別未？邊緣AI完美回應咗上一章「保護數碼分身」嘅安全要求。「分身」嘅圍牆築得更堅固、更智能。數據同計算盡量留喺牆入面，將風險同延遲降到最低。</p>
+                    <p class="mb-2">而未來嘅「大模型」都喺度向邊緣進化。而家，完整嘅ChatGPT對話喺細小嘅手機度運行唔到，但佢嘅「縮小精華版」已經入咗手機，處理一啲本地任務。未來，你手機嘅管家、筆記App，甚至遊戲嘅NPC，都可能由你隨身攜帶嘅邊緣大模型驅動，完全理解你嘅習慣，專為你服務。</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 本章實戰練習：俾AI秘書下指令</p>
+                        <p class="mt-1">嚟啦，實際體驗下手機AI嘅協調能力。俾語音助理一個包含多層信息嘅複雜指令。</p>
+                        <p class="mt-1">例子：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>對Siri講： 「Hey Siri，聽朝早七點提醒我帶遮，然後將今日下晝三點嘅日程改做四點。」</li>
+                            <li>對Google助理講： 「OK Google，今晚八點提醒我打電話俾媽咪，然後即刻喺Spotify播放晴天歌單。」</li>
+                            <li>對Bixby講： 「Hi Bixby，開LINE嘅QR Code掃描，然後調低屏幕亮度。」</li>
+                        </ol>
+                        <p class="mt-2">觀察佢點樣理解並依次執行一連串指令。呢個背後展示咗NLP將任務拆分，調用唔同App能力嘅過程。恭喜你，完成咗人機自然語言交互嘅協同作戰！</p>
+                        <p class="mt-2">本章到此為止。有無發覺？AI喺手機入面，唔係遙遠實驗室嘅技術，而係喺你指尖下，每一次對焦、每一次喚醒、每一個詞背後嘅「隱形引擎」。佢越嚟越快、越嚟越識你、越嚟越安全——因為佢正努力將智慧同私隱一齊，牢牢鎖喺你嘅「數碼分身」入面。</p>
+                    </div>
+                </div>
+
+                <!-- 第二十章 -->
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第二十章：編程思維同自動化入門</h3>
+                    <p class="mb-3">🤔 聽到「編程」呢個詞，係咪會諗起漆黑嘅屏幕同複雜嘅代碼？其實，編程思維可能你用緊手機嗰陣，已經用緊。學下點樣用手機做到「自動化」，令生活更有效率。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 編程思維：拆解「步驟」</h4>
+                    <p class="mb-2">編程嘅核心，係將大問題拆細做細步驟。手機自動化都一樣。</p>
+                    <p class="mb-2">例子：要自動化「每日朝早七點睇天氣，落雨就提醒帶遮」呢個任務：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>觸發條件（幾時）：每日朝早七點。</li>
+                        <li>判斷條件（做咩）：攞天氣預報，睇下係咪落雨。</li>
+                        <li>執行動作（點做）：落雨就發通知。</li>
+                    </ol>
+                    <p class="mb-2">呢個就係編程思維。將複雜任務，拆解做觸發、條件、動作三要素。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 手機自動化工具</h4>
+                    <p class="mb-2">你嘅手機入面，其實內置咗強大嘅自動化工具。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">iOS：捷徑（Shortcuts）</h5>
+                    <p class="mb-2">Apple提供嘅自動化工具。唔使編程，將方塊砌埋一齊就可以創建自動化流程。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>觸發條件：時間、地點、Wi-Fi連接、App開啟等。</li>
+                        <li>執行動作：發送訊息、播放音樂、更改設定、開啟App等。</li>
+                        <li>例子：「返到屋企連上Wi-Fi嗰陣，開燈同播歌」。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Android：Tasker、Automate、或者品牌自家功能</h5>
+                    <p class="mb-2">Android更加開放，所以可以做到更強大嘅自動化。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tasker：最強大嘅Android自動化App。幾乎所有操作都可以自動化。</li>
+                        <li>品牌功能：Samsung嘅「Bixby日常程式」、Xiaomi嘅「場景」等。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎯 實用自動化場景</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>睡眠模式</strong>：到咗瞓覺時間，自動開啟勿擾模式、調低音量、過濾藍光。</li>
+                        <li><strong>駕駛模式</strong>：連接車上藍牙嗰陣，自動開啟駕駛模式、來電語音通知。</li>
+                        <li><strong>慳電</strong>：電量低過20%嗰陣，自動開啟省電模式、熄咗唔需要嘅功能。</li>
+                        <li><strong>位置提醒</strong>：接近超市嗰陣，彈出購物清單通知。</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 本章實戰練習：創建自動化流程</p>
+                        <p class="mt-1">打開你手機嘅自動化工具，創建以下流程：</p>
+                        <p class="mt-1">「每晚十點，開啟勿擾模式，並通知聽日天氣」。</p>
+                        <p class="mt-2">步驟：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>打開自動化App（iOS係「捷徑」，Android係Tasker或者品牌功能）。</li>
+                            <li>創建新自動化/日常程式。</li>
+                            <li>設定觸發條件：時間（每晚十點）。</li>
+                            <li>添加動作：
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>開啟勿擾模式。</li>
+                                    <li>攞天氣資訊並發通知。</li>
+                                </ul>
+                            </li>
+                            <li>儲存並測試。</li>
+                        </ol>
+                        <p class="mt-2">呢個就係編程思維嘅實踐。將條件同動作組合，俾手機「智慧」。</p>
+                    </div>
+                </div>
+
+                <!-- 第二十一章 -->
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第二十一章：舊手機處理同數碼遺產</h3>
+                    <p class="mb-3">📱 買咗新手機，舊手機點算好？掉落垃圾桶？咁樣好浪費，仲可能好危險。呢章會學點樣安全處理舊手機，同埋管理數碼遺產。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 舊手機再利用</h4>
+                    <p class="mb-2">舊手機其實仲係一部可以用嘅「小型電腦」。可以再利用做以下用途：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>專用媒體播放器</strong>：做音樂、Podcast、影片專用裝置。</li>
+                        <li><strong>數碼相架</strong>：用Google相簿等顯示幻燈片。</li>
+                        <li><strong>家居保安鏡頭</strong>：用專用App變做監視鏡頭。</li>
+                        <li><strong>專用遊戲機</strong>：用模擬器玩懷舊遊戲。</li>
+                        <li><strong>智能家居控制器</strong>：做長開嘅智能家居中樞。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗑️ 轉讓手機前必做步驟</h4>
+                    <p class="mb-2"><strong>⚠️ 重要：單純「刪除」係唔夠㗎！</strong></p>
+                    <p class="mb-2">賣、捐贈或者回收手機之前，一定要做以下步驟：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>備份</strong>：備份所有重要數據（相、聯絡人、App數據）。</li>
+                        <li><strong>登出帳戶</strong>：
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Google帳戶（Android）。</li>
+                                <li>Apple ID（iPhone）。</li>
+                                <li>第三方App（LINE、WeChat等）。</li>
+                            </ul>
+                        </li>
+                        <li><strong>恢復原廠設定</strong>：
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>[設定] > [系統] > [重設] > [清除所有數據]（Android）。</li>
+                                <li>[設定] > [一般] > [傳送或重設iPhone] > [清除所有內容同設定]（iOS）。</li>
+                            </ul>
+                        </li>
+                        <li><strong>確認加密</strong>：現代手機預設已加密，但舊型號要手動確認加密設定。</li>
+                        <li><strong>移除SD卡同SIM卡</strong>：呢啲都可能包含個人資料。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚰️ 數碼遺產：你嘅「數碼分身」嘅未來</h4>
+                    <p class="mb-2">如果你有咩事，你嘅數碼資產（相、社交媒體帳戶、加密貨幣等）會點樣？</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">數碼遺產管理步驟：</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>資產盤點</strong>：列出你擁有嘅數碼資產（帳戶、訂閱、數碼購買品等）。</li>
+                        <li><strong>設定密碼管理器緊急聯絡人</strong>：1Password、Bitwarden等提供緊急聯絡人功能，喺特定條件下容許信任嘅人存取。</li>
+                        <li><strong>Apple/Google嘅「遺產聯絡人」</strong>：
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>iOS 15.2之後：設定 > 登入與安全 > 遺產聯絡人。</li>
+                                <li>Google：設定閒置帳戶管理器。</li>
+                            </ul>
+                        </li>
+                        <li><strong>遺囑包含數碼資產</strong>：諮詢律師，將數碼資產處理方式寫入法律文件。</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 本章實戰練習：安全重置手機</p>
+                        <p class="mt-1">（注意：呢個練習只喺實際要轉讓手機嗰陣先做！）</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>確認所有數據已備份。</li>
+                            <li>登出所有帳戶。</li>
+                            <li>執行恢復原廠設定。</li>
+                            <li>重啟後，確認顯示設定畫面（證明無個人數據殘留）。</li>
+                            <li>移除SD卡同SIM卡。</li>
+                        </ol>
+                        <p class="mt-2">另外，考慮設定遺產聯絡人。去設定 > 登入與安全 > 遺產聯絡人（iOS）或者查閱Google閒置帳戶管理器。</p>
+                    </div>
+                </div>
+
+                <!-- 第二十二章 -->
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">第二十二章：未來手機同數碼生活</h3>
+                    <p class="mb-3">🔮 手機會向邊度發展？摺機？AR眼鏡？腦內晶片？呢個最終章會探索未來科技趨勢，思考應該點樣準備數碼生活。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 手機進化趨勢</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. 摺機</h5>
+                    <p class="mb-2">Samsung、Huawei、Motorola等品牌領先。手機同平板嘅融合。而家感覺貴又易爛，但隨住技術成熟，可能會成為主流。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. AR（擴增實境）同MR（混合實境）</h5>
+                    <p class="mb-2">好似Apple Vision Pro、Meta Quest咁，手機會同AR眼鏡連動，融合物理世界同數碼世界。手機做「計算中樞」，俾AR眼鏡運算能力。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. AI優先</h5>
+                    <p class="mb-2">AI會越嚟越成為手機核心。大語言模型（LLM）喺邊緣裝置運行，個人AI助理可能會完全管理你生活嘅一日會來臨。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. 可持續發展同環境</h5>
+                    <p class="mb-2">回收物料、長壽命設計、易維修會變得重要。歐盟嘅「維修權」法例等，規管都喺度變緊。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🌐 數碼生活嘅未來</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li><strong>元宇宙同虛擬空間</strong>：由實體會議變做虛擬空間入面嘅存在。手機係進入呢個世界嘅「入口」。</li>
+                        <li><strong>數碼孖生</strong>：由你手機數據，創建你嘅「數碼副本」，提供個人化服務。</li>
+                        <li><strong>6G同無處不在嘅連接</strong>：6G唔單止係速度提升，而係實現萬物互聯（IoT），所有裝置無縫連接。</li>
+                        <li><strong>腦內晶片？</strong>：Neuralink等技術目標係直接嘅腦機介面。倫理同技術挑戰好多，但可能性無限。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎓 應該點樣準備？</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>持續學習</strong>：科技急速變化。保持好奇心，持續學習新嘢。</li>
+                        <li><strong>提高數碼素養</strong>：批判性評估資訊，識別假新聞，實踐數碼安全。</li>
+                        <li><strong>建立私隱意識</strong>：未來科技會更加個人化。時常檢查私隱設定，理解數據價值。</li>
+                        <li><strong>取得平衡</strong>：科技係工具，唔係主人。離線時間都好重要。</li>
+                        <li><strong>參與社群</strong>：參加科技論壇、用戶群組，分享知識。</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 最終實戰：回顧你嘅數碼生活</p>
+                        <p class="mt-1">讀完呢本書，你同手機嘅關係有無改變？</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>寫出呢本書學到最重要嘅三樣嘢。</li>
+                            <li>你嘅手機使用習慣，有邊啲想改善？</li>
+                            <li>下一步想學咩科技主題？</li>
+                            <li>有無機會教家人朋友用手機？教人係最有效嘅學習。</li>
+                        </ol>
+                        <p class="mt-2">恭喜你！你已經踏上「手機達人」之路。掌握數碼生活，令科技為你服務！</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 五、附录 -->
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">五、附錄</h2>
+
+                <!-- 附錄A -->
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">附錄A：新手機開封「完全指南」流程</h3>
+                    <p class="mb-3">買咗新手機，首先要做咩？跟住以下清單做：</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📦 開封時</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>確認包裝無開過（封條完整）。</li>
+                        <li>確認隨附物品：手機本體、充電器、數據線、SIM卡針、保養卡、快速入門指南。</li>
+                        <li>檢查外觀：有無刮痕、凹陷、製造缺陷。</li>
+                        <li>檢查屏幕：有無壞點、色差（用白/黑畫面確認）。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚙️ 初始設定</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>開機，選擇語言同地區。</li>
+                        <li>連接Wi-Fi。</li>
+                        <li>登入帳戶（Google或Apple ID）。</li>
+                        <li>安全設定：設定指紋、人面辨識、PIN碼。</li>
+                        <li>開啟「尋找手機」。</li>
+                        <li>檢查系統更新，更新到最新版本。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔒 加強安全</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>開啟雙重認證。</li>
+                        <li>檢查私隱設定：位置資訊、App權限。</li>
+                        <li>停用或移除唔需要嘅預載App。</li>
+                        <li>安裝安全App（防毒軟件）。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">☁️ 備份設定</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>開啟iCloud或Google備份。</li>
+                        <li>設定相自動備份。</li>
+                        <li>確認聯絡人同步。</li>
+                    </ol>
+                </div>
+
+                <!-- 附錄B -->
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">附錄B：實戰練習參考</h3>
+                    <p class="mb-3">呢本書包含嘅所有實戰練習快速參考：</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">基礎篇</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>第0章：確認手機「身份證」</li>
+                        <li>第1章：了解硬件組成</li>
+                        <li>第2章：整理「下載」資料夾</li>
+                        <li>第3章：設定同管理熱點</li>
+                        <li>第4章：審計3個App嘅權限</li>
+                        <li>第5章：設定「平日」同「假日」模式</li>
+                        <li>第6章：啟用並模擬「遠端鎖定」</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">軟件篇</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>第7章：將WeChat聊天記錄備份到電腦</li>
+                        <li>第8章：用手機掃描文檔並生成PDF</li>
+                        <li>第9章：為支付App設定更安全嘅鎖</li>
+                        <li>第10章：用專業模式拍夜景</li>
+                        <li>第11章：配置專用「飛行模式」娛樂套裝</li>
+                        <li>第12章：創建「睡前放鬆」自動化流程</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">進階篇</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>第13章：俾電池做健康檢查</li>
+                        <li>第14章：確認帳戶同步內容</li>
+                        <li>第15章：將手機屏幕鏡像到電視</li>
+                        <li>第16章：手動備份相同聯絡人到電腦</li>
+                        <li>第17章：模擬「強制重啟」</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">發展篇</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>第18章：為手機設定「可信電話簿」（DNS）</li>
+                        <li>第19章：俾AI秘書下指令</li>
+                        <li>第20章：創建自動化流程</li>
+                        <li>第21章：安全重置手機</li>
+                        <li>第22章：回顧你嘅數碼生活</li>
+                    </ul>
+                </div>
+
+                <!-- 附錄C -->
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">附錄C：簡明術語「專業名詞」對照表</h3>
+                    <p class="mb-3">呢本書用到嘅技術術語簡單說明：</p>
+                    
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">術語</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">說明</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">SoC</td>
+                                    <td class="border border-gray-300 px-4 py-2">System on Chip。手機嘅「大腦」。整合CPU、GPU同其他組件嘅晶片。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RAM</td>
+                                    <td class="border border-gray-300 px-4 py-2">Random Access Memory。暫時工作記憶體。越大可以同時運行越多App。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">ROM/儲存空間</td>
+                                    <td class="border border-gray-300 px-4 py-2">Read-Only Memory（實際係快閃儲存）。長期儲存相、App等。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OLED</td>
+                                    <td class="border border-gray-300 px-4 py-2">有機EL顯示屏。每個像素自己發光。高對比度、慳電。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 px-4 py-2">Near Field Communication。近距離無線通信。用於交通卡、流動支付。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">VPN</td>
+                                    <td class="border border-gray-300 px-4 py-2">Virtual Private Network。虛擬私人網絡。加密通信，保護私隱。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">DNS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Domain Name System。將域名轉換做IP地址嘅系統。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OCR</td>
+                                    <td class="border border-gray-300 px-4 py-2">Optical Character Recognition。識別圖像入面文字並轉換做文字嘅技術。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">AI/機器學習</td>
+                                    <td class="border border-gray-300 px-4 py-2">Artificial Intelligence。人工智能。用於手機相片優化、語音識別等。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">邊緣AI</td>
+                                    <td class="border border-gray-300 px-4 py-2">唔係雲端，而係喺裝置本體進行AI處理嘅技術。高速同保護私隱。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RCS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Rich Communication Services。下一代SMS。支援高質圖像、已讀通知等。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">HTTPS</td>
+                                    <td class="border border-gray-300 px-4 py-2">HTTP Secure。加密嘅網頁通信協議。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 附錄D -->
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">附錄D：可信資源喺邊度搵到？</h3>
+                    <p class="mb-3">獲取手機相關資訊嘅可信來源：</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 官方資源</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple支援</strong>：support.apple.com</li>
+                        <li><strong>Google Android說明</strong>：support.google.com/android</li>
+                        <li><strong>各品牌官網</strong>：Samsung、Xiaomi、OPPO、vivo等</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📰 科技媒體</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>本地</strong>：Unwire.hk、PCM電腦廣場、ezone</li>
+                        <li><strong>國際</strong>：The Verge、TechCrunch、Android Police、9to5Mac</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">👥 社群同論壇</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Reddit</strong>：r/Android、r/iPhone、r/techsupport</li>
+                        <li><strong>Stack Exchange</strong>：Android Enthusiasts、Ask Different（Apple）</li>
+                        <li><strong>本地討論區</strong>：LIHKG、各品牌官方社群</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎥 YouTube頻道</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>MKBHD（Marques Brownlee）</li>
+                        <li>Unbox Therapy</li>
+                        <li>Linus Tech Tips</li>
+                        <li>本地：各類科技評測頻道</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ 要注意嘅資訊來源</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>來歷不明嘅「破解」同「秘技」</li>
+                        <li>過度煽情嘅標題文章</li>
+                        <li>明顯過時嘅資訊（2-3年前）</li>
+                        <li>無標明贊助嘅評測</li>
+                    </ul>
+                </div>
+
+                <!-- 附錄E -->
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">附錄E：致謝同說明</h3>
+                    <p class="mb-3">呢本書係作為手機新手到中階者嘅旅程指南而創作。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🙏 致謝</h4>
+                    <p class="mb-2">創作呢本書，感謝以下資源同社群：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>開源社群</li>
+                        <li>科技媒體同評測者</li>
+                        <li>喺網上論壇分享知識嘅所有人</li>
+                        <li>推動手機技術進步嘅所有工程師同設計師</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ 免責聲明</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>呢本書嘅資訊係撰寫時嘅內容。科技急速變化，部分內容可能會過時。</li>
+                        <li>手機操作請自行承擔風險。重要數據務必備份。</li>
+                        <li>特定型號或OS版本，功能同設定位置可能唔同。</li>
+                        <li>呢本書內容係教育用途，唔係推薦特定產品或服務。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📧 意見回饋</h4>
+                    <p class="mb-2">歡迎對呢本書提出改善建議。如有錯誤指正、想加入嘅主題、改善建議等，請告知。</p>
+
+                    <div class="bg-light rounded-lg p-6 mt-6 text-center">
+                        <p class="text-lg font-semibold mb-2">多謝你嘅閱讀！</p>
+                        <p class="text-secondary">希望你嘅數碼生活更加豐富、安全。</p>
+                        <p class="mt-4 text-sm text-secondary">© 2024 手機達人！新手必讀嘅數碼必修課</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 返回頂部按鈕 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- 腳本 -->
+    <script>
+        // 移動端菜單切換
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // 目錄展開/收起
+        document.querySelectorAll('.toc-parent').forEach(parent => {
+            const toggle = parent.querySelector('.toc-toggle');
+            const child = parent.querySelector('.toc-child');
+            
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                child.classList.toggle('open');
+                toggle.classList.toggle('rotate-180');
+            });
+        });
+
+        // 返回頂部按鈕
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // 平滑滾動
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // 移動端關閉菜單
+                    if (!sidebar.classList.contains('-translate-x-full') && window.innerWidth < 1024) {
+                        toggleMenu();
+                    }
+                }
+            });
+        });
+
+        // 滾動時高亮目錄
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('#sidebar a[href^="#"]');
+
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC(); // 初始化
+    </script>
+</body>
+</html>

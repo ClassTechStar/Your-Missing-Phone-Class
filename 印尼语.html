@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="id-ID">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penguasa Smartphone! Kursus Wajib Digital untuk Pemula</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-left: 3px solid #165DFF;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">Penguasa Smartphone! Kursus Wajib Digital untuk Pemula</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>Kembali ke Atas
+            </a>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">Daftar Isi</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">Satu, Bab Dasar (Bab 0-6)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Nol: Halo, Sebelum Memulai</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Satu: Halo, Komputer Pribadi Saya</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Dua: Menata Ruang Digital — Manajemen File</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Tiga: Menghubungkan "Jalur Kehidupan" Smartphone — Jaringan</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Empat: Instalasi dan Manajemen Aplikasi — "Keterampilan" Smartphone</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Lima: Menyesuaikan Smartphone Sesuai Keinginan — Pengaturan Dasar</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Enam: Melindungi Kehidupan Digital — Keamanan dan Privasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">Dua, Bab Perangkat Lunak (Bab 7-12)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Tujuh: Komunikasi: SMS, Telepon, dan Media Sosial</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Delapan: Kantor Mobile dan Pembelajaran</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Sembilan: Pembayaran Mobile dan Layanan Kehidupan</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Sepuluh: Fotografi dan Manajemen Foto</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Sebelas: Hiburan dan Membaca</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Dua Belas: Aplikasi Alat yang Direkomendasikan</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">Tiga, Bab Lanjutan (Bab 13-17)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Tiga Belas: Ilmu Baterai dan Optimasi Hemat Daya</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Empat Belas: Sistem Akun dan Layanan Cloud</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Lima Belas: Koneksi Smartphone dengan Perangkat Lain</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Enam Belas: Cadangan Data dan Migrasi</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Tujuh Belas: Pemecahan Masalah dan Penyelesaian Mandiri</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">Empat, Bab Pengembangan (Bab 18-22)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Delapan Belas: Mendalami Jaringan Mobile dan Keamanan Informasi</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Sembilan Belas: Bagaimana AI Bekerja di Smartphone</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Dua Puluh: Berpikir Pemrograman dan Pengenalan Otomatisasi</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Dua Puluh Satu: Penanganan Smartphone Bekas dan Warisan Digital</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Dua Puluh Dua: Masa Depan Smartphone dan Kehidupan Digital</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">Lima, Lampiran</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran A: Alur "Panduan Lengkap" Pembukaan Smartphone Baru</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran B: Referensi Latihan Praktis</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran C: Tabel Perbandingan Istilah Teknis</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran D: Di Mana Menemukan Sumber Terpercaya?</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran E: Ucapan Terima Kasih dan Penjelasan</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">Penguasa Smartphone! Kursus Wajib Digital untuk Pemula</h1>
+                <p class="text-center text-secondary text-lg">Dari Pemula Hingga Mahir, Kuasai Kehidupan Digital Secara Menyeluruh</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Satu, Bab Dasar (Bab 0-6)</h2>
+                <p class="mb-4 text-secondary">Smartphone Anda lebih powerful dari yang Anda bayangkan. Bagian ini adalah fondasi dari semua "keajaiban". Mari kita satukan "bahasa" terlebih dahulu, lalu kenali dan kuasai perangkat langkah demi langkah.</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Nol: Halo, Sebelum Memulai</h3>
+                    <p class="mb-3">Sebelum menjelajah lebih jauh, mari kita bicara tentang aturan dasar. Ini akan membuat semua konten berikutnya mudah dipahami.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Satu, 📖 Apa yang Bisa Dibantu Buku Ini (dan yang Tidak Bisa)</h4>
+                    <p class="mb-2">Anda dapat memahami cara menggunakan smartphone secara sistematis dan mengetahui prinsip di balik fitur-fiturnya. Baik pengguna Android maupun iPhone, sebagian besar konsepnya sama. Latihan praktis juga disertakan.</p>
+                    <p class="mb-2">Bukan manual pengguna untuk model tertentu, bukan review produk terbaru, dan bukan mengajarkan kecanduan smartphone.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Dua, 🔤 Tentang "Kata Sandi" Kita</h4>
+                    <p class="mb-2">Untuk memudahkan penjelasan, kami menggunakan beberapa simbol:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[Nama Tombol]: Menunjukkan tombol atau nama aplikasi spesifik di layar.</li>
+                        <li>> : Menunjukkan urutan operasi. Contoh: "Ketuk [Pengaturan] > [Suara]".</li>
+                        <li><strong>Tebal</strong>: Sangat penting! Menunjukkan konsep penting atau peringatan keamanan.</li>
+                        <li><em>Miring</em>: Menunjukkan pemikiran tambahan atau metafora.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Tiga, 📱 Android dan iOS, Keduanya Dijelaskan</h4>
+                    <p class="mb-2">Namanya berbeda, tapi yang dilakukan sama. Contoh: Aplikasi (Android) dan App (iOS), Pengaturan (keduanya sama), Manajemen File (Android) dan File (iOS). Pahami bahwa ini adalah hal yang sama.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Empat, 💾 Kapasitas Smartphone: Mengapa Beli 128GB, Tapi Tersedia Kurang dari 110GB?</h4>
+                    <p class="mb-2">Anda pasti tahu satuan kapasitas: 1TB = 1024GB, 1GB = 1024MB……</p>
+                    <p class="mb-2">Namun, kapasitas yang tertera saat membeli akan "menyusut" saat sampai di tangan. Alasan utamanya:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Sistem menempati ruang: OS seperti dinding struktural rumah, wajib ada.</li>
+                        <li>Aplikasi bawaan pabrikan: Aplikasi yang sudah ada di smartphone baru juga menggunakan ruang.</li>
+                        <li>Kerugian format: Karena alasan teknis, lapisan dalam tas ransel juga menempati volume.</li>
+                    </ol>
+                    <p class="mb-2">Saat membeli smartphone, pertimbangkan juga penggunaan sistem.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Waktu Praktik 👉 Periksa "Kartu Identitas" Smartphone Anda</p>
+                        <p class="mt-1">Buka [Pengaturan], temukan "Info Perangkat" (atau opsi serupa), dan catat: Model smartphone, Versi OS, Total kapasitas penyimpanan, Kapasitas tersisa. Ini adalah langkah pertama untuk mengenalinya.</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Satu: Halo, Komputer Pribadi Saya</h3>
+                    <p class="mb-3">Smartphone Anda sebenarnya adalah superkomputer pribadi di dalam saku Anda.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Satu, 🧠 Hardware Smartphone "Organ Vital"</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC (Chip)</strong>: "Otak + Jantung" smartphone, menentukan performa.</li>
+                        <li><strong>RAM (Memori)</strong>: Meja kerja sementara. Semakin besar, semakin nyaman membuka banyak aplikasi sekaligus.</li>
+                        <li><strong>ROM (Penyimpanan)</strong>: Gudang penyimpanan jangka panjang. Tempat semua foto, video, dan aplikasi.</li>
+                        <li><strong>Layar</strong>: Mata Anda. Tipe (OLED warna cerah, LCD ramah mata), resolusi (kejelasan), refresh rate (kelancaran scroll) penting.</li>
+                        <li><strong>Baterai dan Pengisian</strong>: Isi sambil digunakan. Tidak perlu menunggu kosong total, tidak perlu selalu 100% penuh untuk menjaga kesehatan baterai. Fast charging dan wireless charging sangat nyaman.</li>
+                        <li><strong>Kamera</strong>: Sekarang menggunakan banyak lensa + algoritma (fotografi komputasi) bekerja sama, menghasilkan foto malam dan efek blur.</li>
+                        <li><strong>Sensor</strong>: Antena kecil smartphone. Contoh: Giroskop (perubahan orientasi dalam game), NFC (gerbang tol dan kartu IC), sensor jarak (layar mati otomatis saat menelepon).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Dua, 🤖 OS: Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Seperti komunitas open source, pabrikan smartphone bisa menyesuaikan secara mendalam, banyak pilihan.</li>
+                        <li>iOS: Seperti taman yang dirawat dengan rapi, Apple mengelola hardware dan software secara terpadu, pengalaman yang seragam.</li>
+                    </ul>
+                    <p class="mb-2">Kedua ekosistem sangat kaya, pilih gaya hidup yang Anda suka.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Tiga, 🎭 Smartphone Anda, Berapa Banyak Peran yang Dimainkan?</h4>
+                    <p class="mb-2">Bukan lagi sekadar telepon: alat komunikasi, kamera cerdas, dompet, portal informasi, konsol game, kantor mobile, asisten kesehatan, remote rumah pintar, bahkan kartu identitas digital.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Waktu Praktik 👉 Memahami Konfigurasi Hardware</p>
+                        <p class="mt-1">Di [Pengaturan], periksa apakah Anda bisa menemukan model prosesor, RAM, dan ukuran ROM spesifik. Pahami kemampuan smartphone Anda.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Dua: Menata Ruang Digital — Manajemen File</h3>
+                    <p class="mb-3">Smartphone yang lama digunakan akan berantakan. Kebiasaan baik dimulai dari manajemen file.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Satu, 📂 Sistem Penyimpanan Tiga Tingkat</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Penyimpanan Internal</strong>: Area inti. Kecepatan tinggi, sistem dan semua aplikasi ada di sini.</li>
+                        <li><strong>Kartu SD (jika didukung)</strong>: Lemari ekspansi. Kecepatan sedikit lebih lambat, cocok untuk film dan foto.</li>
+                        <li><strong>Cloud Storage</strong>: Brankas + Drive sinkronisasi. Mencegah kehilangan dan memungkinkan sinkronisasi antar perangkat.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Dua, 🗂️ Mengenal "File Manager"</h4>
+                    <p class="mb-2">Android biasanya memiliki aplikasi [File] atau [Manajemen File], iOS memiliki aplikasi [File] standar. Ini adalah "Explorer" untuk melihat semua file di smartphone. Anda bisa melihat folder Download, DCIM (foto kamera), Pictures (gambar), dll.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Tiga, 🏷️ Di mana Berbagai File Berada?</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Foto/Video: Biasanya otomatis disimpan di DCIM atau Pictures.</li>
+                        <li>File yang diunduh: Pada dasarnya semua ada di Download.</li>
+                        <li>Data aplikasi: Tinggal di "ruang pribadi" masing-masing (direktori privat), mungkin tidak terlihat.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Empat, 🧹 Kapasitas Tidak Cukup? Waktunya Bersih-bersih</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Hapus Cache: Memori sementara aplikasi. Menghapusnya akan membebaskan ruang.</li>
+                        <li>Cari file besar: Urutkan berdasarkan ukuran di file manager, temukan "pelaku" yang menempati ruang.</li>
+                        <li>Hapus sisa-sisa: Setelah uninstall aplikasi, file sampah mungkin tersisa. Hapus secara manual.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Waktu Praktik 👉 Atur Folder "Unduhan"</p>
+                        <p class="mt-1">Buka file manager > Masuk ke folder "Unduhan". Periksa isinya, hapus yang tidak diperlukan, dan kategorikan yang diperlukan (contoh: buat folder baru "Dokumen Kerja", "Stiker" untuk menyimpannya).</p>
+                    </div>
+                </div>
+
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Tiga: Menghubungkan "Jalur Kehidupan" Smartphone — Jaringan</h3>
+                    <p class="mb-3">Tanpa jaringan, smartphone menjadi "setengah bodoh".</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Satu, 📶 Jaringan Mobile (4G/5G) dan Data Seluler</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Data seluler: Data yang digunakan saat menggunakan internet di smartphone. Menonton video dan melihat gambar paling banyak mengonsumsi data.</li>
+                        <li>Tips hemat data: Nyalakan "Mode hemat data" di pengaturan, perbarui aplikasi dan tonton video berkualitas tinggi di lingkungan Wi-Fi.</li>
+                        <li>Jumlah sinyal ≠ Kecepatan koneksi: Sinyal kuat menunjukkan koneksi baik, tapi kecepatan juga bergantung pada kepadatan base station.</li>
+                        <li><strong>⚠️ Penting! Sebelum perjalanan bisnis ke luar negeri, matikan [Data Roaming] untuk mencegah tagihan mahal!</strong></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Dua, 📡 Wi-Fi: Koneksi, Berbagi, dan Keamanan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Koneksi Wi-Fi: [Pengaturan] > [WLAN], pilih jaringan dan masukkan kata sandi.</li>
+                        <li>Berbagi kata sandi: Sekarang sangat mudah, Android dan iOS keduanya bisa berbagi kata sandi dengan cepat dari smartphone yang sudah terhubung ke teman.</li>
+                        <li>Risiko Wi-Fi publik: Kemungkinan pencurian data oleh hacker dan hotspot phishing. Aturan: Hindari login ke rekening bank, gunakan VPN jika memungkinkan.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Tiga, 🔵 Bluetooth: Koneksi Earphone, Transfer File</h4>
+                    <p class="mb-2">Utamanya digunakan untuk koneksi earphone nirkabel, smart band/watch. Fitur transfer file sekarang jarang digunakan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Empat, 🔥 Tethering: Smartphone Menjadi Router Wi-Fi</h4>
+                    <p class="mb-2">Saat kuota data Anda banyak, Anda bisa membuka hotspot untuk tablet atau PC. Catatan: Mengonsumsi banyak baterai dan kuota data, jadi pasang kata sandi yang kompleks dan batasi jumlah perangkat yang terhubung.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Waktu Praktik 👉 Atur dan Kelola Hotspot</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buka [Pengaturan], temukan "Tethering" atau "Berbagi Jaringan", nyalakan, dan atur nama serta kata sandi.</li>
+                            <li>Di perangkat lain (contoh: PC), cari dan hubungkan ke Wi-Fi ini.</li>
+                            <li>Di sisi smartphone, periksa apakah Anda bisa mengelola perangkat yang terhubung atau memutus perangkat yang tidak dikenal.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Empat: Instalasi dan Manajemen Aplikasi — "Keterampilan" Smartphone</h3>
+                    <p class="mb-3">Aplikasi membuat smartphone serba bisa, tapi perlu dikelola dengan baik.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Satu, 🏪 Toko Resmi: "Supermarket Aplikasi" Paling Aman</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Google Play atau toko resmi masing-masing merek (contoh: Mi Store Xiaomi).</li>
+                        <li>iOS: Hanya App Store.</li>
+                    </ul>
+                    <p class="mb-2">Arti keamanan inti: Sudah ditinjau, jaminan pembaruan, pembayaran aman. Pedoman: Utamakan menggunakan toko resmi untuk mengunduh.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Dua, 🚨 Sumber Pihak Ketiga: Risiko Sangat Tinggi!</h4>
+                    <p class="mb-2">Mengunduh aplikasi dari web atau link tidak dikenal bisa menyebabkan infeksi virus, pencurian privasi, dan pembayaran tidak sah.</p>
+                    <p class="mb-2">Jika terpaksa: Pastikan sumber benar-benar terpercaya, periksa permintaan izin dengan teliti sebelum instalasi, dan pindai dengan aplikasi keamanan setelahnya.</p>
+                    <p class="mb-2">Saran akhir: Matikan izin "Instal aplikasi tidak dikenal" di pengaturan sistem.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Tiga, 📲 Instalasi, Pembaruan, dan Uninstall</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Instalasi: Ketuk "Dapatkan" di toko. Setelah instalasi, saat pertama kali dibuka akan diminta izin.</li>
+                        <li>Pembaruan: <strong>Harus diperbarui!</strong> Utamanya untuk perbaikan kerentanan keamanan. Disarankan menyalakan pembaruan otomatis.</li>
+                        <li>Uninstall: Tekan lama ikon dan seret ke area uninstall. Untuk penghapusan lebih menyeluruh, temukan di [Pengaturan] > [Manajemen Aplikasi] lalu uninstall.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Empat, 🛡️ Manajemen Izin: Anda Adalah "Atasan" Aplikasi</h4>
+                    <p class="mb-2">Aplikasi meminta izin (contoh: kontak, lokasi) kadang wajar (peta butuh lokasi), kadang tidak wajar (senter meminta kontak).</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Opsi izin: "Selalu izinkan", "Izinkan hanya saat digunakan", "Tolak", "Tanya setiap kali".</li>
+                        <li>Prinsip manajemen:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Minimalkan: Jangan berikan yang tidak diperlukan.</li>
+                                <li>Audit berkala: Periksa pengaturan izin secara teratur, siapa yang "kelebihan izin".</li>
+                                <li>Sesuaikan situasi: Aplikasi taksi dll, berikan izin lokasi hanya saat digunakan.</li>
+                            </ol>
+                        </li>
+                        <li><strong>⚠️ Pantau secara ketat: Izin Kontak/SMS, Lokasi real-time, Kamera/Mikrofon, Akses file.</strong></li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Waktu Praktik 👉 Audit Izin 3 Aplikasi</p>
+                        <p class="mt-1">Pilih 3 aplikasi yang sering digunakan (contoh: media sosial, belanja, alat), masuk ke halaman manajemen izin aplikasi di [Pengaturan], audit item per item, dan matikan izin sensitif yang tidak diperlukan atau ubah ke "Izinkan hanya saat digunakan".</p>
+                    </div>
+                </div>
+
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Lima: Menyesuaikan Smartphone Sesuai Keinginan — Pengaturan Dasar</h3>
+                    <p class="mb-3">Beberapa menit pengaturan bisa sangat meningkatkan pengalaman.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.1 🎵 Suara dan Getar</h4>
+                    <p class="mb-2">Atur nada dering dan notifikasi sesuai keinginan. Gunakan mode senyap (saat rapat), mode tidur (saat tidur) secara fleksibel, dunia seketika menjadi tenang. Saat earphone Bluetooth terhubung, pastikan output audio sudah beralih.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.2 👀 Tampilan dan Kecerahan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kecerahan otomatis: Smartphone menyesuaikan secara otomatis sesuai cahaya sekitar. Praktis.</li>
+                        <li>Filter cahaya biru/Shift Malam: Memfilter cahaya biru, membuat penggunaan smartphone di malam hari lebih nyaman.</li>
+                        <li>Mode gelap: Hemat daya (terutama efektif di layar OLED), dan tidak silau di malam hari.</li>
+                        <li>Refresh rate layar: Beberapa model Android bisa diatur. Semakin tinggi (contoh: 120Hz) semakin halus scroll-nya.</li>
+                        <li>Kunci otomatis: Atur ke 15 atau 30 detik. Aman dan hemat daya.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.3 🎨 Wallpaper, Tema, dan Layar Utama</h4>
+                    <p class="mb-2">Ganti wallpaper cantik (diam atau bergerak) bisa mengubah suasana hati. Smartphone merek Android biasanya memiliki toko tema, bisa mengubah ikon dan gaya sekaligus. Jangan lupa widget layar utama. Cuaca, jadwal, kontrol musik di layar utama, akses dengan satu ketukan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.4 ♿ Aksesibilitas: Asisten yang Andal</h4>
+                    <p class="mb-2">Jangan takut dengan namanya. Siapa pun bisa menggunakannya.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Gestur pembesaran: Ketuk layar 3 kali untuk memperbesar bagian. Sangat cocok untuk melihat teks kecil.</li>
+                        <li>Asisten suara: Siri dan Google Assistant. Atur alarm dan cek cuaca hanya dengan suara.</li>
+                        <li>Pembaca layar (TalkBack/VoiceOver): Dirancang untuk tunanetra, tapi juga membantu "mendengarkan" artikel.</li>
+                        <li>Lainnya: Koreksi warna (untuk buta warna), pintasan ketuk bagian belakang (iPhone), menu aksesibilitas (Android) juga layak dicoba.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Waktu Praktik 👉 Atur Mode "Hari Kerja" dan "Akhir Pekan"</p>
+                        <p class="mt-1">Gunakan mode fokus (iOS) atau mode skenario, buat smartphone otomatis menyesuaikan ritme Anda. Contoh:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buat mode "Kerja": Otomatis bisukan notifikasi aplikasi yang tidak penting, hanya izinkan telepon dari atasan dan keluarga.</li>
+                            <li>Buat mode "Tidur": Nyala pada waktu tertentu, bisukan semua notifikasi.</li>
+                            <li>Atur timer untuk keduanya. Contoh: Otomatis nyalakan mode "Kerja" hari kerja 9:00-18:00. Jangan salah.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Enam: Melindungi Kehidupan Digital — Keamanan dan Privasi</h3>
+                    <p class="mb-3">Keamanan smartphone = Keamanan privasi + Keamanan aset.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 🔒 Layar Kunci: Garis Pertahanan Fisik Pertama</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Peringkat tingkat keamanan:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Kata sandi/PIN: Paling aman. Jaminan terakhir (berguna saat lupa sidik jari/pengenalan wajah).</li>
+                                <li>Sidik jari: Keseimbangan sempurna antara keamanan dan kenyamanan.</li>
+                                <li>Pengenalan wajah: Paling nyaman, tapi keamanan bergantung pada teknologi (3D structured light aman, foto 2D mudah ditipu).</li>
+                            </ul>
+                        </li>
+                        <li>Atur layar kunci yang kuat: Pastikan pasang kata sandi kompleks (jangan gunakan tanggal lahir, 123456), dan nyalakan autentikasi biometrik. Waktu kunci atur ke "Segera" atau terpendek.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 📍 "Temukan Smartphone Saya": Alat Anti-Pencurian Utama</h4>
+                    <p class="mb-2"><strong>Harus dinyalakan!</strong> Bisa melakukan:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Lokasi: Cari di mana smartphone diletakkan di peta.</li>
+                        <li>Putar suara: Bunyikan smartphone, cocok untuk mencari di dalam rumah.</li>
+                        <li>Mode Hilang: Kunci smartphone dari jarak jauh, tampilkan nomor kontak. Penemu bisa menghubungi Anda.</li>
+                        <li>Hapus dari jarak jauh: Upaya terakhir. Hapus semua data (tapi setelah dihapus tidak bisa dilacak lagi).</li>
+                    </ul>
+                    <p class="mb-2">Pergi ke [Pengaturan], Apple cari "Temukan iPhone", Android cari "Temukan Perangkat" atau layanan serupa dari merek, pastikan status hijau menyala.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 🔧 Pembaruan Sistem: Menambal, Menutup Kerentanan</h4>
+                    <p class="mb-2">Tujuan utama pembaruan sistem adalah memperbaiki kerentanan keamanan. Seperti menambal lubang di dinding rumah. Jadi, saat ada notifikasi pembaruan sistem, upgrade sesegera mungkin.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 🚫 Identifikasi dan Pencegahan Penipuan Telepon</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Modus umum: Berpura-pura menjadi polisi/layanan pelanggan (phishing), hadiah/penghasilan kerja sampingan (rayuan), penipuan percintaan (pembantaian babi).</li>
+                        <li>Proteksi standar smartphone: Blokir spam, anti-pencurian kode OTP, deteksi aman link SMS. Jangan lupa nyalakan di pengaturan.</li>
+                        <li>Pantangan anti-penipuan: Jangan percaya, jangan bocorkan, jangan klik, jangan kirim uang, jika ragu konfirmasi!</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Waktu Praktik 👉 Aktifkan dan Simulasi "Kunci Jarak Jauh"</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pastikan fitur "Temukan Smartphone" menyala.</li>
+                            <li>Di browser PC atau smartphone lain, login ke akun layanan cloud terkait (iCloud.com atau situs layanan cloud merek).</li>
+                            <li>Temukan fitur "Temukan Perangkat", coba "Putar Suara" atau simulasi "Kunci" pada smartphone Anda, pahami seluruh alur. Supaya tidak panik saat penting.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Dua, Bab Perangkat Lunak (Bab 7-12)</h2>
+
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Tujuh: Komunikasi: SMS, Telepon, dan Media Sosial</h3>
+                    <p class="mb-3">Komunikasi adalah misi paling asli dan inti dari smartphone. Sekarang telah berevolusi dari telepon dan SMS sederhana menjadi ekosistem kompleks yang mencakup pesan instan, jejaring sosial, dan email.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 Fitur Lanjutan Aplikasi Telepon: Lebih dari Sekadar Menelepon</h4>
+                    <p class="mb-2">Aplikasi telepon smartphone modern melampaui dial pad sederhana, mengintegrasikan alat powerful seperti rekaman, anti-spam, dan identifikasi cerdas.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Rekaman Telepon (perhatikan kepatuhan hukum):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fungsi: Merekam konten percakapan penting, digunakan untuk notulen rapat, wawancara, janji pelanggan, atau bukti sengketa.</li>
+                        <li>Petunjuk hukum: Di Indonesia, penggunaan rekaman telepon sebagai bukti harus dengan persetujuan pihak lawan atau untuk melindungi hak sah sendiri (contoh: melaporkan pelecehan atau penipuan). Sebelum percakapan komersial atau rahasia, lebih bijak untuk memberitahu secara lisan "Percakapan ini mungkin direkam".</li>
+                        <li>Cara operasi:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Biasanya ada tombol "Rekam" yang jelas di layar telepon. Cari opsi "Rekam Telepon" di pengaturan aplikasi telepon, atur aturan rekaman otomatis.</li>
+                                <li>iOS: Sistem tidak menyediakan fitur rekaman telepon native. Jika ingin menggunakan, perlu aplikasi rekaman telepon pihak ketiga.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Blokir Spam dan Identifikasi Cerdas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Prinsip: Aplikasi telepon menelusuri database nomor besar melalui jaringan, saat ada panggilan masuk menampilkan "Spam", "Penipuan", atau nama perusahaan.</li>
+                        <li>Cara mengaktifkan:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Masuk ke aplikasi telepon > "Pengaturan" kanan atas > Anti-spam atau Identifikasi cerdas. Nyalakan semua opsi identifikasi dan blokir.</li>
+                                <li>iOS: Masuk ke [Pengaturan] > [Telepon] > [Blokir Panggilan & Identifikasi]. Konfirmasi aplikasi keamanan pihak ketiga yang mendukung fitur ini (contoh: Truecaller), dan izinkan berfungsi. Nyalakan fitur "Bisukan Penelepon Tidak Dikenal" untuk membisukan semua panggilan dari nomor tidak ada di kontak.</li>
+                            </ul>
+                        </li>
+                        <li>Tip: Setelah menerima spam, tandai secara aktif sebagai "Spam" atau "Penipuan" di riwayat panggilan, berkontribusi pada database dan membantu orang lain.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Fitur Bantu Telepon:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Transkripsi rekaman telepon: Beberapa smartphone merek Android menyediakan tombol "Transkripsi" langsung di samping file rekaman setelah rekaman telepon, mengubah konten percakapan menjadi teks.</li>
+                        <li>Bantuan visual (subtitle real-time): Di pengaturan aksesibilitas Android atau bantuan pendengaran iOS, nyalakan fitur "Transkripsi real-time" untuk menghasilkan subtitle real-time untuk semua audio (termasuk telepon).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 SMS dan iMessage/RCS: Kode OTP dan Filter Pesan Spam</h4>
+                    <p class="mb-2">SMS tradisional belum usang. Saluran terpercaya untuk menerima kode OTP, notifikasi bank, dan informasi resmi.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs iMessage (iOS) / RCS (Android):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iMessage: Pesan yang dikirim melalui internet antar perangkat Apple, ditampilkan dengan balon biru. Mendukung gambar video berkualitas tinggi, notifikasi sudah dibaca, dll, sepenuhnya gratis dan terenkripsi end-to-end.</li>
+                        <li>RCS: Protokol komunikasi generasi berikutnya yang didorong oleh operator global dan Google. Memiliki fitur serupa dengan iMessage dan LINE, tapi berbasis nomor telepon. Cek dan nyalakan "Fitur Chat" di pengaturan aplikasi pesan smartphone Android.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Keamanan Kode OTP:</h5>
+                    <p class="mb-2">Sistem otomatis mengidentifikasi dan mengkategorikan SMS kode OTP. Jangan pernah memberitahu kode OTP yang diterima kepada siapa pun.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Filter Pesan Spam:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: [Pengaturan] > [Pesan], nyalakan "Filter Pengirim Tidak Dikenal".</li>
+                        <li>Android: Di pengaturan aplikasi pesan, nyalakan "Layanan Info Cerdas" atau "Filter Pesan Spam".</li>
+                        <li>Tip umum: Untuk SMS promosi spam yang jelas, jangan balas apa pun (termasuk "UNSUB"). Langsung hapus atau tandai sebagai spam. Membalas bisa mengkonfirmasi nomor Anda aktif.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 LINE/WeChat: Manajemen Aplikasi Sosial Nasional</h4>
+                    <p class="mb-2">LINE dan WeChat telah menjadi "super aplikasi" yang mengintegrasikan komunikasi, pembayaran, dan pengambilan informasi.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Cadangan dan Migrasi Riwayat Chat:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pentingnya: Riwayat chat berisi file penting, kenangan, informasi kerja, tapi hanya disimpan di cache sementara lokal dan server. Kehilangan smartphone atau reinstall aplikasi bisa membuat riwayat hilang selamanya.</li>
+                        <li>Cadangan ke PC (paling terpercaya):
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>Login ke WeChat/LINE versi PC atau Mac.</li>
+                                <li>Klik menu kiri bawah > [Migrasi dan Cadangan] > [Cadangkan dan Pulihkan].</li>
+                                <li>Pilih "Cadangkan riwayat chat ke PC", pilih chat yang akan dicadangkan di smartphone.</li>
+                            </ol>
+                            Catatan: File cadangan disimpan terenkripsi secara lokal di PC. Saat memulihkan, smartphone dan PC harus terhubung ke jaringan Wi-Fi yang sama.
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Pembersihan Ruang Penyimpanan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Lokasi: WeChat [Saya] > [Pengaturan] > [Umum] > [Penyimpanan]. LINE [Pengaturan] > [Umum] > [Manajemen Penyimpanan].</li>
+                        <li>Strategi pembersihan:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Cache: Aman dibersihkan. Data sementara yang dihasilkan saat aplikasi berjalan.</li>
+                                <li>Riwayat chat: Masuk, bersihkan secara detail berdasarkan waktu, tipe file, atau chat individual. Contoh, bersihkan semua file "video" dari "lebih dari 1 tahun lalu" dari semua chat sekaligus.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Pengaturan Privasi dan Keamanan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Metode penambahan: Kontrol bagaimana orang lain menemukan Anda (nomor telepon, ID pengguna, grup, dll).</li>
+                        <li>Izin timeline: Atur siapa yang bisa melihat, siapa yang tidak bisa melihat.</li>
+                        <li>Manajemen otorisasi: WeChat [Pengaturan] > [Info Pribadi & Izin] > [Manajemen Otorisasi], cek dan cabut otorisasi login WeChat untuk situs web dan aplikasi pihak ketiga.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 Email: Pengaturan dan Penggunaan di Smartphone</h4>
+                    <p class="mb-2">Mengelola email secara efisien di perangkat mobile adalah elemen penting dari kantor mobile.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Menambahkan Akun Email:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Aplikasi email standar sistem:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS: [Pengaturan] > [Email] > [Akun] > [Tambah Akun].</li>
+                                <li>Android: Sistem biasanya memiliki aplikasi "Email". Buka dan ikuti panduan untuk menambahkan.</li>
+                            </ul>
+                        </li>
+                        <li>Aplikasi klien khusus: Gmail, Outlook, dll. Dioptimalkan untuk email tertentu, fitur lebih powerful.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Teknik Penggunaan Email Mobile:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Manajemen notifikasi push: Atur metode notifikasi berbeda untuk akun email berbeda.</li>
+                        <li>Operasi gestur: Sebagian besar aplikasi email bisa dengan cepat arsipkan, hapus, atau tandai dengan gestur geser.</li>
+                        <li>Tanda tangan: Atur tanda tangan email mobile profesional.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Catatan Keamanan:</h5>
+                    <p class="mb-2">Berhati-hatilah saat login email atau mengirim email sensitif di Wi-Fi publik.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Cadangkan Riwayat Chat WeChat ke PC</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Mulai cadangan di PC: Buka WeChat PC > Menu kiri bawah > [Migrasi dan Cadangan] > [Cadangkan dan Pulihkan].</li>
+                            <li>Pilih cadangan ke PC: Klik "Cadangkan riwayat chat ke PC".</li>
+                            <li>Pilih konten cadangan di smartphone: Pop-up muncul di WeChat smartphone, pilih chat yang akan dicadangkan lalu ketuk "Mulai Cadangan".</li>
+                            <li>Tunggu cadangan selesai.</li>
+                            <li>(Opsional) Pahami alur pemulihan: Di jendela yang sama, opsi lain adalah "Pulihkan riwayat chat ke smartphone".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Delapan: Kantor Mobile dan Pembelajaran</h3>
+                    <p class="mb-3">Smartphone telah menjadi workstation mobile powerful dan pusat pembelajaran portabel.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 Pengolahan Dokumen: Edit dan Buat di Telapak Tangan</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Pilihan Aplikasi Utama:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>WPS Office: Lokalisasi sangat baik, sepenuhnya kompatibel dengan format Microsoft. Kaya template gratis dan set alat PDF built-in.</li>
+                        <li>Microsoft 365: Pengalaman sangat konsisten dengan Office versi desktop. Kompatibilitas format terbaik, terintegrasi mendalam dengan penyimpanan cloud OneDrive.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Teknik Inti Pengolahan Dokumen Smartphone:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sinkronisasi cloud adalah inti: Simpan file kerja di drive cloud terkait aplikasi, pastikan simpan otomatis, perpindahan mulus antar perangkat, kolaborasi mudah. Sudah diingat?</li>
+                        <li>Kolaborasi dan berbagi: Mendukung berbagi link, atur izin "Hanya lihat" atau "Bisa edit". Mendukung editing online bersama oleh banyak orang.</li>
+                        <li>Manfaat metode input efisien: Gunakan input suara untuk mengetik draf panjang.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 Aplikasi Catatan: Dari Pencatatan Cepat hingga Manajemen Pengetahuan</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Ringkas & Standar Sistem:</h5>
+                    <p class="mb-2">Catatan iOS, memo berbagai merek Android, dll. Kelebihan: Cepat dibuka, integrasi tinggi dengan sistem, cocok untuk catatan cepat, daftar, dan ide sementara.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Catatan Profesional Serba Guna:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Evernote: Kemampuan pengumpulan informasi powerful dan pencarian full-text sangat baik.</li>
+                        <li>Notion: Sangat fleksibel, mengintegrasikan catatan, database, dan kanban. Semua konten adalah "blok" yang bisa dikombinasikan secara bebas.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Tips Penggunaan:</h5>
+                    <p class="mb-2">Coba buat "kotak masuk" pengetahuan untuk mengumpulkan informasi, atur dan olah secara berkala, buat link antar catatan untuk membentuk jaringan pengetahuan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 Scan dan OCR: File Kertas Menjadi Versi Digital</h4>
+                    <p class="mb-2">Smartphone adalah scanner portabel yang bisa dibawa.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Prinsip Scan:</h5>
+                    <p class="mb-2">Mendeteksi dan meluruskan tepi dokumen secara otomatis, menghilangkan bayangan, menghasilkan gambar jernih. Fitur OCR mengenali teks dalam gambar menjadi teks yang bisa diedit.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Pilihan Alat:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Standar sistem: iOS "Catatan" memiliki fitur scan built-in. Beberapa merek Android memiliki mode "Scan Dokumen" di aplikasi kamera atau manajemen file.</li>
+                        <li>Aplikasi profesional pihak ketiga: Microsoft Lens, Adobe Scan, CamScanner.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Langkah Operasi:</h5>
+                    <p class="mb-2">Buka aplikasi dan arahkan ke dokumen > Tangkap otomatis atau manual > Sesuaikan dan proses > Jalankan OCR > Simpan dan bagikan (bisa menggabungkan banyak halaman menjadi PDF).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 Sinkronisasi Drive Cloud: Hub File Mobile Anda</h4>
+                    <p class="mb-2">Drive cloud adalah "hub data" yang menghubungkan smartphone dan PC.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Perbandingan Layanan Drive Cloud Utama:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Google Drive: Penetrasi tinggi secara global, ekosistem berbagi matang.</li>
+                        <li>iCloud Drive: Terintegrasi mendalam dengan ekosistem Apple. Sinkronisasi alami dan aman.</li>
+                        <li>OneDrive: Terintegrasi mendalam dengan Windows dan Office 365. Pilihan utama pengguna ekosistem Microsoft.</li>
+                        <li>Dropbox: Digunakan secara luas di seluruh dunia, stabilitas dan kompatibilitas sangat baik.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Strategi Penggunaan:</h5>
+                    <p class="mb-2">Gunakan iCloud/drive cloud merek untuk cadangan data inti sistem dan pribadi. Gunakan Google Drive/OneDrive/Dropbox untuk penyimpanan file besar dan kolaborasi kerja.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Scan Dokumen di Smartphone dan Hasilkan PDF</p>
+                        <p class="mt-1">Langkah operasi (contoh Microsoft Lens atau Catatan iOS):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pilih alat: iOS buka "Catatan" > Baru > Ketuk ikon kamera > "Scan Dokumen". Android/Umum unduh dan buka "Microsoft Lens".</li>
+                            <li>Scan dan foto: Arahkan ke dokumen, saat aplikasi mengenali bingkai secara otomatis lalu foto. Bisa menambahkan banyak halaman.</li>
+                            <li>Tingkatkan efek: Pilih filter "Hitam Putih" untuk membuat dokumen lebih jernih.</li>
+                            <li>Kenali OCR: Setelah selesai, pilih output sebagai PDF, klik tombol "Salin Teks" atau serupa untuk mengekstrak karakter.</li>
+                            <li>Simpan dan beri nama: Simpan file dengan nama yang jelas.</li>
+                            <li>Verifikasi dan bagikan: Buka PDF untuk cek kualitas, coba bagikan via email atau LINE.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Sembilan: Pembayaran Mobile dan Layanan Kehidupan</h3>
+                    <p class="mb-3">Smartphone sedang menggantikan dompet, kartu transportasi, bahkan kartu identitas fisik.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 Pembayaran Mobile: Ikatan, Pembayaran, dan Manajemen Keamanan</h4>
+                    <p class="mb-2"><strong>Keamanan adalah prasyarat penggunaan.</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Ikatan Kartu Bank:</h5>
+                    <p class="mb-2">Disarankan hanya mengikat 1-2 kartu yang sering digunakan. Gunakan rekening elektronik Kelas II/III bank khusus untuk pembayaran mobile, memisahkan risiko rekening utama.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Metode Pembayaran:</h5>
+                    <p class="mb-2">Kode pembayaran, scan untuk bayar, transfer, pembayaran NFC smartphone. Pastikan nyalakan "Autentikasi saat Dibuka" atau "Kunci Keamanan", mencegah penyalahgunaan saat smartphone hilang.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Manajemen Keamanan Inti:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kata sandi dan pembayaran autentikasi biometrik: Pastikan atur kata sandi pembayaran independen, dan nyalakan pembayaran sidik jari atau pengenalan wajah.</li>
+                        <li>Kunci keamanan: Di pengaturan aplikasi pembayaran, temukan "Kunci Keamanan", disarankan atur agar perlu autentikasi saat masuk ke halaman "Saya" atau "Dompet".</li>
+                        <li>Manajemen perangkat login: Cek secara berkala, hapus autentikasi login perangkat yang jarang digunakan.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 Kode Transportasi Umum: Kereta Bawah Tanah, Bus</h4>
+                    <p class="mb-2">Smartphone menjadi kartu transportasi Anda.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Cara Mengaktifkan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Aplikasi pembayaran mobile: Cari "Kartu IC Transportasi", aktifkan kartu transportasi elektronik kota terkait.</li>
+                        <li>Kartu transportasi smartphone merek: Di aplikasi dompet seperti Apple Pay, Google Pay, aktifkan kartu transportasi virtual. Bayar dengan tap NFC. Respon paling cepat, mendukung offline.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Tips Penggunaan:</h5>
+                    <p class="mb-2">Di gerbang tol yang tidak mendukung NFC, atau saat baterai smartphone habis, bisa beralih ke kode transportasi di aplikasi pembayaran mobile.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 Pembayaran Tagihan, Pesan Makanan, Aplikasi Taksi</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pembayaran tagihan: Di "Tagihan" aplikasi pembayaran mobile, ikat nomor pelanggan, bayar tagihan air, listrik, gas, dll.</li>
+                        <li>Pesan makanan: Platform berbeda (GoFood, GrabFood, dll) mungkin memiliki diskon berbeda untuk toko yang sama. Bandingkan di banyak platform.</li>
+                        <li>Taksi: Atur kontak darurat, nyalakan berbagi perjalanan. Utamakan pembayaran dalam platform, hindari transaksi offline.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 Penyimpanan dan Penggunaan Kartu Identitas Elektronik</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Kartu Identitas Elektronik:</h5>
+                    <p class="mb-2">Di beberapa daerah, aplikasi pemerintahan resmi telah menerapkan kartu identitas elektronik, SIM elektronik, bisa digunakan di skenario tertentu, tapi tidak berlaku di semua situasi.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Tips Penyimpanan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tambahkan ke "Dompet" smartphone, bisa dipanggil cepat dari layar kunci.</li>
+                        <li>Android bisa tekan lama ikon aplikasi, seret fitur tertentu (contoh: "Kode Kesehatan Saya") ke desktop sebagai pintasan.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Atur Kunci Lebih Aman untuk Aplikasi Pembayaran</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Konfirmasi dan nyalakan pembayaran autentikasi biometrik: Pastikan pembayaran sidik jari/pengenalan wajah menyala di aplikasi pembayaran.</li>
+                            <li>Atur "Kunci Keamanan": Di pengaturan keamanan aplikasi pembayaran, temukan "Kunci Keamanan", atur agar perlu autentikasi saat masuk "Dompet" atau melakukan operasi dana.</li>
+                            <li>Cek perangkat login: Di pengaturan keamanan, hapus semua perangkat yang tidak dikenal dan tidak digunakan.</li>
+                            <li>Pahami proteksi akun: Cek detail asuransi keamanan akun aplikasi pembayaran.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Sepuluh: Fotografi dan Manajemen Foto</h3>
+                    <p class="mb-3">Bab ini menguasai seluruh alur membuat gambar hebat dengan smartphone dan mengelola kenangan visual secara efisien.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 Dasar Kamera Smartphone: Malam, Potret, Mode Pro</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Mode Malam</strong>: Melalui penggabungan banyak foto, meningkatkan kecerahan dan detail di tempat gelap. Saat memotret perlu menstabilkan tangan selama 2-4 detik.</li>
+                        <li><strong>Mode Potret</strong>: Mensimulasikan efek depth of field dangkal kamera DSLR (blur background). Fokus pada orang, jaga jarak 1-2 meter. Bisa atur intensitas blur setelahnya.</li>
+                        <li><strong>Mode Pro</strong>: Kontrol manual parameter inti.
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>ISO: Semakin rendah kualitas gambar semakin baik, di tempat gelap dinaikkan akan muncul noise.</li>
+                                <li>Kecepatan rana: Cepat membekukan momen, lambat merekam jejak (perlu stabil).</li>
+                                <li>White balance: Menyesuaikan kecenderungan warna.</li>
+                                <li>Kompensasi eksposur: Mencerahkan atau menggelapkan seluruh gambar.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 Komposisi Foto dan Retouching</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Aturan Komposisi Dasar:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Aturan sepertiga: Tempatkan titik minat di perpotongan pembagian tiga horizontal dan vertikal.</li>
+                        <li>Garis pengarah: Gunakan jalan, sungai, dll untuk mengarahkan pandangan ke subjek.</li>
+                        <li>Mulai sederhana: Saat memotret, sadar menjaga layar horizontal dan vertikal.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Alur Retouching (menggunakan aplikasi seperti Snapseed, VSCO, dll):</h5>
+                    <ol class="list-alpha pl-6 mb-3 space-y-1">
+                        <li>Koreksi: Lakukan rotasi dan crop perspektif.</li>
+                        <li>Penyesuaian dasar: Atur kecerahan, kontras. Turunkan highlight, naikkan shadow.</li>
+                        <li>Retouch parsial: Lakukan dodge and burn, hapus cacat pada area tertentu.</li>
+                        <li>Styling: Tambahkan filter, sesuaikan tone warna.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 Manajemen Foto: Dari Kacau ke Tertata</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Fitur Manajemen Album Smartphone Inti:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Klasifikasi cerdas: Otomatis mengkategorikan berdasarkan waktu, lokasi, orang, skenario.</li>
+                        <li>Pencarian: Bisa pencarian global dengan kata kunci, lokasi, waktu, bahkan teks dalam gambar.</li>
+                        <li>Operasi batch: Setelah pilih banyak, bisa batch berbagi, tambah ke album, atau hapus.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Cadangan Foto dan Pembebasan Ruang:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cadangan cloud: iOS gunakan Foto iCloud, nyalakan "Optimalkan Penyimpanan iPhone". Android/cross-platform gunakan Google Foto atau layanan cloud lain.</li>
+                        <li>Pembebasan ruang: Gunakan alat sistem, atau bersihkan manual video besar dan foto burst.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 Screenshot dan Rekam Layar: Menangkap dan Berbagi Informasi</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Operasi Dasar:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pintasan umum: Tekan bersamaan [Tombol Power] + [Tombol Volume Naik].</li>
+                        <li>Capture lanjutan: Screenshot panjang/screenshot scroll, screenshot area.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Rekam Layar:</h5>
+                    <p class="mb-2">Tambahkan tombol "Rekam Layar" ke Control Center. Sebelum mulai, tekan lama untuk bisa menyalakan rekam mikrofon untuk narasi.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Edit Langsung:</h5>
+                    <p class="mb-2">Setelah screenshot, ketuk thumbnail untuk masuk ke layar edit, bisa anotasi, crop, mosaic, dll.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Foto Malam dengan Mode Pro</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Persiapan: Cari skenario dengan sumber cahaya stabil, disarankan gunakan tripod atau stabilkan smartphone.</li>
+                            <li>Masuk Mode Pro: Buka aplikasi kamera, beralih ke mode "Pro".</li>
+                            <li>Atur parameter:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>ISO: Atur ke nilai terendah (50 atau 100).</li>
+                                    <li>Kecepatan rana: Atur dari 1 detik hingga beberapa detik (contoh: 2 detik).</li>
+                                    <li>Fokus: Atur ke fokus manual, geser slider hingga lampu jauh terlihat jernih.</li>
+                                </ul>
+                            </li>
+                            <li>Foto dan cek: Ketuk rana, tetap diam mutlak. Cek foto, sesuaikan parameter berdasarkan kecerahan.</li>
+                            <li>Bandingkan pengalaman: Foto juga dengan mode malam otomatis, bandingkan perbedaan keduanya.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Sebelas: Hiburan dan Membaca</h3>
+                    <p class="mb-3">Smartphone adalah pusat hiburan terpenting kita, mengintegrasikan walkman, bioskop, perpustakaan, dan konsol game.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 Musik dan Podcast: Soundscape Portabel Anda</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Layanan Streaming Online:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Global: Spotify, Apple Music. Library lagu global, pilihan kualitas suara kaya.</li>
+                        <li>Indonesia: Joox, Langit Musik. Fitur komunitas playlist dan rekomendasi personal.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Podcast:</h5>
+                    <p class="mb-2">Aplikasi: Apple Podcasts, Spotify, Google Podcasts. Tips penggunaan: Subscribe channel, unduh terlebih dahulu, atur kecepatan pemutaran untuk mendengar efisien.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 Video Player: Pemutaran Lokal dan Streaming</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Pemutaran Video Lokal:</h5>
+                    <p class="mb-2">Disarankan player serba bisa seperti VLC, nPlayer. Mendukung hampir semua format dan subtitle eksternal.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Video Streaming Online:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Platform komprehensif: YouTube, Netflix, Amazon Prime Video, Disney+ Hotstar.</li>
+                        <li>Tips penggunaan: Cache konten terlebih dahulu. Manfaatkan fitur "Cast" untuk menonton di TV.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 Membaca Ebook: Pembaca Epub, PDF</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Pilihan Platform Membaca:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Novel web dan buku terbitan: Kindle, Apple Books, Google Play Buku.</li>
+                        <li>Buku profesional dan dokumen: Apple Books, Adobe Acrobat Reader (anotasi PDF).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Pengaturan Optimasi Membaca:</h5>
+                    <p class="mb-2">Kustomisasi warna latar, font. Manfaatkan fitur bookmark, highlight, catatan. Beberapa aplikasi mendukung read aloud.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.4 Mode Game dan Penyesuaian Performa</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Mode Game/Game Toolbox:</h5>
+                    <p class="mb-2">Otomatis aktif saat game dibuka. Menyediakan fitur seperti peralihan mode performa, mode jangan ganggu, rekam cepat, alat floating window.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Penyesuaian Performa Manual:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Dalam game: Sesuaikan kualitas grafis, frame rate sesuai performa smartphone. Utamakan kelancaran frame rate.</li>
+                        <li>Level sistem: Jika game mendukung, nyalakan mode refresh rate tinggi (contoh: 120Hz) di pengaturan sistem.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Kebiasaan Gaming Sehat:</h5>
+                    <p class="mb-2">Gunakan fitur "Screen Time" sistem untuk atur peringatan waktu. Atur autentikasi pembayaran untuk pembelian dalam aplikasi.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Konfigurasi Paket Hiburan "Mode Pesawat" Khusus</p>
+                        <p class="mt-1">Langkah operasi: Unduh dan rencanakan terlebih dahulu satu set konten hiburan offline lengkap.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Paket musik: Unduh playlist atau album favorit di aplikasi musik.</li>
+                            <li>Paket video: Cache film atau drama di aplikasi streaming.</li>
+                            <li>Paket bacaan: Unduh 1-2 buku di aplikasi ebook.</li>
+                            <li>Paket game: Install 1-2 game offline yang bisa dimainkan sepenuhnya.</li>
+                            <li>Integrasi dan tes: Nyalakan "Mode Pesawat", pastikan semua konten bisa diakses offline. Atur aplikasi terkait ke folder bernama "Hiburan Offline".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Dua Belas: Aplikasi Alat yang Direkomendasikan</h3>
+                    <p class="mb-3">Bab ini memperkenalkan aplikasi alat pilihan yang benar-benar meningkatkan efisiensi, mempromosikan kesehatan, dan memudahkan perjalanan.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 Alat Efisiensi: Mengelola Waktu dan Perhatian</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Daftar ToDo dan Manajemen Tugas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pilihan aplikasi:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Ringkas dan nyaman: Memo sistem, Microsoft To Do.</li>
+                                <li>Fitur lengkap: Todoist, TickTick (pengenalan bahasa alami sangat baik, integrasi timer Pomodoro).</li>
+                                <li>Manajemen kanban: Trello atau tampilan kanban Notion. Cocok untuk manajemen visual proyek.</li>
+                            </ul>
+                        </li>
+                        <li>Tips penggunaan: Kumpulkan tugas ke "kotak masuk" segera. Atur secara berkala dan tetapkan tanggal. Setiap hari fokus hanya pada daftar "Hari Ini".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Timer Pomodoro:</h5>
+                    <p class="mb-2">Aplikasi: Forest, Focus To-Do. Prinsip: 25 menit fokus, 5 menit istirahat, berulang.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Kalender:</h5>
+                    <p class="mb-2">Gunakan kalender sistem atau Google Calendar. Masukkan janji, deadline, bahkan "blok waktu fokus" ke kalender, visualisasikan alokasi waktu.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 Kesehatan Olahraga: Apple Health, Google Fit, Fitbit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Panduan dan catatan olahraga: Nike Training Club, Strava, dll menyediakan kursus fitness kaya. Aplikasi kesehatan merek (contoh: Samsung Health) terintegrasi mendalam dengan data smart band.</li>
+                        <li>Apple Health / Google Fit: Hub data. Mengumpulkan semua data dari smartphone, smart band, dan aplikasi kesehatan pihak ketiga, membentuk catatan kesehatan terpadu. Cek laporan "Tren" secara berkala.</li>
+                        <li>Saran penggunaan: Tetapkan target yang bisa dicapai. Jangan terlalu banyak mengizinkan pengingat.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 Perjalanan: Panduan Serba Guna Anda</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Peta dan Navigasi:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Dalam negeri: Google Maps, Waze. Info lalu lintas real-time detail dan kaya.</li>
+                        <li>Perjalanan luar negeri: Google Maps. Data global, street view, review pengguna sangat unggul.</li>
+                        <li>Hiking dan outdoor: AllTrails. Merekam jejak, bisa unduh peta offline.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Terjemahan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Percakapan real-time: Fitur "Percakapan" dan "Kamera" terjemahan instan Google Translate adalah alat ajaib perjalanan.</li>
+                        <li>Teks dan dokumen: DeepL memiliki akurasi terjemahan tinggi antar bahasa Eropa.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Perencanaan Itinerary:</h5>
+                    <p class="mb-2">Aplikasi seperti "TripIt" secara otomatis menghasilkan rute, mengelola info tiket pesawat dan hotel, membuat jadwal perjalanan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.4 Niche tapi Powerful: Pengenalan Alat Otomatisasi</h4>
+                    <p class="mb-2">Ini adalah kunci untuk meng-upgrade smartphone menjadi "asisten cerdas".</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Apa itu Otomatisasi?:</h5>
+                    <p class="mb-2">Membuat smartphone secara otomatis menjalankan serangkaian operasi preset saat kondisi yang diatur terpenuhi. Contoh: Saat pulang rumah otomatis terhubung Wi-Fi dan memutar musik, saat tidur otomatis menggelapkan layar.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. "Pintasan" iOS:</h5>
+                    <p class="mb-2">Alat otomatisasi resmi Apple. Tidak perlu programming.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Konsep inti: "Pintasan" adalah workflow yang bisa dijalankan dengan ketuk manual. "Otomatisasi" adalah instruksi yang dijalankan otomatis berdasarkan kondisi.</li>
+                        <li>Jalur pemula: Pertama tambahkan pintasan jadi dari "Galeri Pintasan" untuk digunakan. Kemudian coba buat pintasan sederhana. Terakhir eksplorasi otomatisasi personal di tab "Otomatisasi".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Solusi Otomatisasi Android:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Level sistem: Berbagai sistem merek (contoh: One UI, MIUI) mungkin memiliki fitur otomatisasi dasar seperti "Skenario" terintegrasi.</li>
+                        <li>Aplikasi level dewa: Tasker. Fitur sangat powerful, tapi kurva belajar curam.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Buat Alur Otomatisasi "Relaksasi Tidur"</p>
+                        <p class="mt-1">Rujukan (menggunakan otomatisasi "Pintasan" iOS):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buat kondisi trigger: Buka aplikasi Pintasan > [Otomatisasi] > [Buat Otomatisasi Personal] > Pilih "Waktu Tertentu" (contoh: 22:30, setiap hari).</li>
+                            <li>Tambahkan aksi yang dijalankan: Turunkan volume media > Nyalakan "Mode Jangan Ganggu" > Putar playlist relaksasi tertentu > Kecerahan layar ke minimum > Tampilkan notifikasi: "Waktu relaksasi tidur. Letakkan smartphone."</li>
+                        </ol>
+                        <p class="mt-2">Rujukan Android: Gunakan fitur "Skenario" standar sistem atau Tasker, atur kondisi trigger dan aksi serupa.</p>
+                        <p class="mt-1">Langkah latihan: Pilih alat sesuai sistem smartphone, buat otomatisasi bernama "Relaksasi Tidur". Tambahkan aksi penting (termasuk penyesuaian volume dan menyalakan mode jangan ganggu). Simpan dan tes.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Tiga, Bab Lanjutan (Bab 13-17)</h2>
+
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Tiga Belas: Ilmu Baterai dan Optimasi Hemat Daya</h3>
+                    <p class="mb-3">Baterai adalah "jantung energi" smartphone. Bab ini memahami karakteristik baterai, mempelajari teknik pengisian dan hemat daya ilmiah, sepenuhnya menghilangkan kecemasan baterai.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 Apa itu Baterai? Siklus dan Kesehatan</h4>
+                    <p class="mb-2">Baterai smartphone (lithium-ion atau lithium-polymer) seperti spons energi: mengisi daya adalah menyerap air (menyimpan listrik), mengosongkan adalah memeras air (menggunakan). Ingat 3 karakteristik utamanya:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Isi kapan saja: Berbeda dengan baterai lama, tidak ada efek memori, tidak perlu menunggu kosong total baru diisi. Menggunakan sampai 0% atau selalu 100% penuh justru merusak.</li>
+                        <li>Takut panas: Suhu tinggi adalah musuh utama baterai.</li>
+                        <li>Mengalami degradasi: Penggunaan jangka panjang akan menurunkan kapasitas maksimum. Ini fenomena normal.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Indikator Inti: Jumlah Siklus dan Kesehatan</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>1 siklus bukan 1 kali pengisian. Contoh, hari ini pakai 60% lalu isi penuh, besok pakai 40% lalu isi penuh, total konsumsi listrik 100% dihitung 1 siklus.</li>
+                        <li>Kesehatan baterai menunjukkan berapa persen kapasitas maksimum saat ini dibanding saat baru. Di bawah 80%, daya tahan baterai terasa jelas berkurang, bisa pertimbangkan penggantian baterai resmi.</li>
+                        <li>Cara cek:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Pengaturan > Baterai > Kesehatan Baterai & Pengisian.</li>
+                                <li>Android: Biasanya bisa cari "Status Baterai" di pengaturan.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 Mitos Pengisian? Fast Charging, Wireless Charging, dan Aturan Emas</h4>
+                    <p class="mb-2">Singkirkan rumor, isi daya secara ilmiah.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Fast Charging Merusak Baterai?</h5>
+                    <p class="mb-2">Menggunakan aksesori fast charging resmi atau tersertifikasi, kerusakan sangat kecil. Smartphone dan charger memiliki kontrol suhu, saat terlalu panas otomatis menurunkan output. Jangan gunakan charger fast charging abal-abal.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Bagaimana dengan Wireless Charging?</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Nyaman: Letakkan saja untuk mengisi. Cocok digunakan saat tidur malam.</li>
+                        <li>Kekurangan: Efisiensi rendah, panas lebih terasa, pengisian lambat.</li>
+                        <li>Saran: Cocok untuk pengisian semalaman (sesekali). Saat butuh cepat gunakan fast charging kabel. Lepas case tebal saat digunakan.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Aturan Perawatan Emas Baterai</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Rentang daya optimal: Usahakan menjaga daya di rentang 20%-80%, jangan sampai 0% "lapar" atau 100% "kenyang".</li>
+                        <li>Aman mengisi semalaman? Aman! Saat penuh akan otomatis berhenti mengisi, smartphone akan langsung dialiri listrik dari charger.</li>
+                        <li>Jangan pernah main game berat sambil mengisi. Tumpang tindih panas merusak baterai.</li>
+                        <li>Tidak menggunakan smartphone dalam waktu lama: Isi sekitar 50% lalu matikan dan simpan.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 Ini Teknik Hemat Daya yang Sebenarnya</h4>
+                    <p class="mb-2">Kesehatan baterai saja tidak cukup. Pengaturan adalah jurus pamungkas hemat daya.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Temukan "Pemakan Listrik Besar"</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Layar (raja konsumsi listrik): Turunkan kecerahan, perpendek waktu kunci otomatis. Smartphone layar OLED wajib nyalakan mode gelap. Cukup menghemat daya.</li>
+                        <li>Sinyal buruk: Di lift, basement, smartphone berjuang mencari sinyal, mengonsumsi listrik dengan cepat.</li>
+                        <li>5G: Saat sinyal buruk, beralih manual ke 4G, daya tahan baterai sangat membaik.</li>
+                        <li>Layanan lokasi:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Izin lokasi aplikasi non-navigasi (contoh: media sosial, belanja) atur ke "Izinkan hanya saat digunakan".</li>
+                                <li>Di lokasi sistem, matikan opsi tidak perlu seperti "Iklan berbasis lokasi".</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Kelola "Mulut" Aplikasi</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Batasi aktivitas background:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Pengaturan > Umum > Pembaruan App Background. Matikan semua atau sisakan LINE saja.</li>
+                                <li>Android: Di pengaturan baterai aplikasi, untuk aplikasi yang jarang digunakan pilih "Larang Aktivitas Background".</li>
+                            </ul>
+                        </li>
+                        <li>Matikan notifikasi tidak perlu: Setiap kali layar menyala dan bergetar mengonsumsi listrik.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Tali Penyelamat: Mode Hemat Daya</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Mode hemat daya/low power: Sistem menurunkan performa, menghentikan sinkronisasi background. Sangat efektif untuk darurat sementara.</li>
+                        <li>Mode super hemat daya/ekstrem: Hanya tersisa telepon, SMS, dan sangat sedikit aplikasi, layar hitam putih. Memeras daya terakhir untuk menyambung hidup.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktis: Periksa Kesehatan Baterai</p>
+                        <p class="mt-1">Tujuan: Gunakan data untuk menemukan pelaku sebenarnya konsumsi listrik.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Cek kesehatan: Dengan cara di atas, temukan dan catat kapasitas maksimum baterai.</li>
+                            <li>Analisis detail konsumsi listrik:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Pergi ke Pengaturan > Baterai, lihat grafik dan daftar aplikasi di bawah, perhatikan aplikasi mana yang aktivitas background-nya lama.</li>
+                                    <li>Android: Pergi ke Pengaturan > Baterai > Penggunaan Baterai, lihat ranking konsumsi listrik hardware dan aplikasi.</li>
+                                </ul>
+                            </li>
+                            <li>Buat rencana tindakan:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Jika konsumsi listrik background aplikasi tertentu abnormal → Batasi.</li>
+                                    <li>Jika konsumsi listrik "Jaringan Mobile" tinggi → Ingat-ingat apakah lama di tempat sinyal buruk.</li>
+                                    <li>Jika aplikasi yang jarang digunakan masuk ranking → Pertimbangkan uninstall.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Empat Belas: Sistem Akun dan Layanan Cloud</h3>
+                    <p class="mb-3">Akun smartphone Anda lebih dari sekadar kata sandi untuk mengunduh aplikasi. Itu adalah "paspor jiwa" kehidupan digital, dan layanan cloud adalah "jalan raya tak terlihat" yang mengalirkan semua data.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 Tiga Akun Inti: Apple, Google, dan Berbagai Merek</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple ID: Kunci Serba Guna Ekosistem Apple</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Peran: App Store, sinkronisasi iCloud, Temukan iPhone, FaceTime, dll, semuanya bergantung pada ini. Beralih mulus antara iPhone, iPad, Mac.</li>
+                        <li>Garansi keamanan: Harus nyalakan autentikasi dua faktor! Dengan begitu, meski kata sandi bocor, orang lain tidak bisa login di perangkat baru.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Akun Google: Inti Android dan Layanan Google</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Peran: Sinkronisasi kontak, kalender, Gmail, bookmark Chrome, cadangan foto.</li>
+                        <li>Garansi keamanan: Demikian juga, penting untuk menyalakan verifikasi dua langkah.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Akun Berbagai Merek: Pengelola Serba Guna Lokal</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Peran: Cadangan ruang cloud, toko aplikasi, temukan smartphone, koneksi lintas perangkat (contoh: kolaborasi multi-layar).</li>
+                        <li>Catatan: Pahami bahwa data cloud ada di server dalam negeri, baca kebijakan privasi, ketahui data apa yang disinkronkan.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">🔐 Aturan Umum Keamanan Akun</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kata sandi kuat + password manager: Kelola dengan iCloud Keychain atau alat seperti Bitwarden.</li>
+                        <li>Nyalakan autentikasi dua faktor: Ini tali penyelamat anti-pencurian.</li>
+                        <li>Cek perangkat login secara berkala: Hapus perangkat yang tidak dikenal.</li>
+                        <li>Hati-hati link phishing: Jangan pernah klik meski diminta kata sandi di link tidak dikenal. Ketik manual alamat situs resmi.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 Sinkronisasi Cloud: Membuat Data Bergerak Sendiri</h4>
+                    <p class="mb-2">Menyalakan sinkronisasi cloud, data terasa ada di dalam smartphone, tapi sebenarnya aman di cloud, konsisten di semua perangkat.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Apa yang Bisa Dilakukan Sinkronisasi Cloud? (contoh iCloud)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kontak, kalender, catatan: Diubah di perangkat mana pun, langsung sinkron ke perangkat lain.</li>
+                        <li>Foto video: Nyalakan Foto iCloud, semua foto di-upload, di smartphone tersisa versi ukuran kecil (hemat ruang). Bisa lihat ukuran penuh di semua perangkat Apple.</li>
+                        <li>Cadangan penuh otomatis: Saat smartphone sedang diisi, terkunci, dan terhubung Wi-Fi, pengaturan sistem, layout aplikasi, dll otomatis dicadangkan. Menjadi alat ajaib saat memulihkan ke smartphone baru.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ⚠️ Perbedaan Penting: Sinkronisasi vs Cadangan</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sinkronisasi = Konsistensi dua arah: Hapus foto di perangkat A, di perangkat B, C juga hilang. Tujuannya menjaga semua perangkat sama.</li>
+                        <li>Cadangan = Snapshot satu arah: Seperti mengambil foto smartphone lalu menyimpan. Nanti hapus data lokal, cadangan cloud tetap ada. Tujuannya pemulihan.</li>
+                        <li>Ingat: Jangan perlakukan sinkronisasi Foto iCloud sebagai cadangan! Jika salah hapus di semua perangkat, juga hilang dari cloud. Untuk cadangan sebenarnya, perlu cadangan penuh di PC (iTunes/Finder) atau cloud storage pihak ketiga (hanya upload, tidak hapus).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 Berbagi Keluarga: Beli Sekali, Semua Keluarga Menikmati</h4>
+                    <p class="mb-2">Ini adalah alat ajaib untuk berbagi sumber daya digital dengan keluarga terdekat.</p>
+                    <p class="mb-2">Contoh "Berbagi Keluarga" Apple, bisa berbagi:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Aplikasi, musik, film, buku: Yang Anda beli, semua keluarga (maksimal 5 orang) bisa unduh, tanpa biaya tambahan. Cara pembelian software paling hemat.</li>
+                        <li>Langganan Apple Music, iCloud+, dll: Langganan paket keluarga biasanya lebih murah dari personal.</li>
+                        <li>Berbagi lokasi: Lihat lokasi real-time keluarga (contoh: anak pulang sekolah). Atur geofence, notifikasi saat tiba atau berangkat. Aman dan tenang.</li>
+                        <li>Album dan kalender bersama: Taruh foto bersama, catat acara keluarga.</li>
+                    </ul>
+                    <p class="mb-2">💡 Catatan: Hanya undang keluarga inti yang sepenuhnya dipercaya. Berbagi lokasi dua arah. Saling menghormati privasi.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktis: Konfirmasi Konten Sinkronisasi Akun</p>
+                        <p class="mt-1">Tujuan: Kelola secara aktif, berhenti dari sinkronisasi kacau.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Contoh iPhone: Pengaturan > Nama Anda di atas.</li>
+                            <li>Konfirmasi item sinkronisasi iCloud: Ketuk "iCloud", cek switch setiap aplikasi dalam daftar.
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Kontak, kalender disarankan nyala.</li>
+                                    <li>Perhatikan khusus "Foto": Pastikan pahami logika Foto iCloud (hapus di satu tempat, hapus di mana saja).</li>
+                                    <li>Sinkronisasi aplikasi pihak ketiga yang tidak digunakan bisa dimatikan, menghemat ruang.</li>
+                                    <li>Pastikan Cadangan iCloud menyala.</li>
+                                </ul>
+                            </li>
+                            <li>Konfirmasi Temukan dan lokasi: Pastikan "Temukan iPhone" menyala (wajib anti-pencurian). Cek pengaturan berbagi lokasi Berbagi Keluarga sesuai harapan.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Lima Belas: Koneksi Smartphone dengan Perangkat Lain</h3>
+                    <p class="mb-3">Smartphone modern adalah pusat digital personal Anda. Belajar cara bekerja sama dengan perangkat lain, efisiensi berlipat ganda.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 Koordinasi dengan PC: Produktivitas Meledak</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Transfer File, Ucapkan Selamat Tinggal pada Kabel Data</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Raja nirkabel:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Ekosistem Apple: AirDrop. Transfer file, foto instan antara iPhone dan Mac. Tanpa jaringan, tanpa kompresi.</li>
+                                <li>Android+Win: Gunakan fitur <strong>"Phone Link"</strong>. Langsung lihat foto smartphone di PC, balas SMS, dll.</li>
+                                <li>Ekosistem merek: Samsung Flow, Huawei Share, dll. Langsung mirror layar smartphone ke PC. Operasi aplikasi smartphone dengan mouse dan keyboard PC. Drag file dua arah.</li>
+                            </ul>
+                        </li>
+                        <li>Koneksi fisik langsung: Hubungkan ke PC dengan kabel data, pilih mode "Transfer File". Stabil dan cepat. Cocok untuk transfer file besar.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Penerusan Multi-layar</h5>
+                    <p class="mb-2">Apple Handoff: Saat melihat halaman web di iPhone, ikon Safari muncul di dock program Mac, klik untuk melanjutkan. Setelah menyalin teks, langsung paste di perangkat lain.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 Koneksi dengan Smartwatch/Band: Asisten di Pergelangan Tangan</h4>
+                    <p class="mb-2">Fitur inti:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Filter notifikasi: Push pesan smartphone ke watch. Angkat pergelangan tangan untuk cek. Yang tidak penting geser untuk abaikan. Mengurangi frekuensi mengeluarkan smartphone.</li>
+                        <li>Stasiun data kesehatan: Watch mengukur detak jantung, tidur 24 jam. Data bisa dilihat sebagai laporan di aplikasi smartphone.</li>
+                        <li>Remote serba guna: Kontrol pemutaran musik smartphone dari jarak jauh, gunakan sebagai rana kamera smartphone (sangat nyaman untuk foto bersama).</li>
+                        <li>Tap di pergelangan tangan: Sinkronkan kartu transportasi, kartu akses yang dibuka di dompet smartphone ke watch. Angkat pergelangan tangan untuk tap.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 Koneksi dengan Smart Home: Remote Total dalam Saku</h4>
+                    <p class="mb-2">Tiga peran smartphone:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Remote: Langsung on/off lampu, atur suhu AC melalui aplikasi seperti Google Home, Amazon Alexa, Apple Home.</li>
+                        <li>Sutradara skenario: Atur "Mode Nonton Film". Sekali tap, lampu utama mati, lampu suasana menyala, layar turun, AC disesuaikan.</li>
+                        <li>Pusat pengaturan: Semua pengaturan perangkat cerdas harus melalui aplikasi smartphone.</li>
+                    </ol>
+
+                    <p class="mb-2">Rekomendasi ekosistem:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Menggunakan iPhone, mengutamakan privasi → Pilih perangkat yang mendukung Apple HomeKit.</li>
+                        <li>Banyak perangkat, mengutamakan value for money → Ekosistem Google Home atau Amazon Alexa paling lengkap.</li>
+                        <li>Menggunakan smartphone Samsung → Utamakan Samsung SmartThings.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktis: Mirror Layar Smartphone ke TV</p>
+                        <p class="mt-1">Tujuan: Bagikan foto video di layar besar, main game. Seru!</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pastikan smartphone dan TV terhubung ke Wi-Fi yang sama.</li>
+                            <li>Di TV: Temukan dan nyalakan fitur "Screen Mirroring", "Miracast" atau "AirPlay".</li>
+                            <li>Di smartphone:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Geser dari kanan atas ke bawah untuk buka Control Center, ketuk "Screen Mirroring". Pilih TV.</li>
+                                    <li>Android: Geser pengaturan cepat ke bawah, cari "Wireless Display", "Smart View", pilih TV.</li>
+                                </ul>
+                            </li>
+                            <li>Berhasil! Layar dan suara smartphone sinkron ke TV.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Enam Belas: Cadangan Data dan Migrasi</h3>
+                    <p class="mb-3">Foto, riwayat chat adalah harta berharga tanpa nilai. Bab ini mengajarkan cara mengasuransikan aset digital dan beralih ke model baru dengan mulus.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 Cadangan Penuh: "Kloning" Paling Menyeluruh</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Cadangan Lokal PC (Paling Terpercaya)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone + PC: Hubungkan dengan kabel data. Buka iTunes (Win) atau Finder (Mac), klik "Cadangkan Sekarang". Harus centang "Enkripsi Cadangan Lokal". Ini akan mencadangkan data kesehatan dan data kata sandi. Saat memulihkan, hubungkan smartphone baru dan pilih "Pulihkan dari Cadangan".</li>
+                        <li>Android merek + Software PC: Gunakan alat resmi masing-masing merek (Samsung Smart Switch, Xiaomi PC Suite, dll). Fungsi serupa.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Cadangan Cloud (Paling Praktis)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cadangan iCloud: Nyalakan di pengaturan. Otomatis mencadangkan saat smartphone diisi, terkunci, dan terhubung Wi-Fi. Saat aktivasi iPhone baru cukup pilih "Pulihkan dari Cadangan iCloud".</li>
+                        <li>Catatan: 5GB gratis tidak cukup sama sekali. Biasanya perlu upgrade berbayar ke iCloud+.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 Cadangan Selektif: Proteksi Prioritas</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Foto video: Nyalakan Foto iCloud/Google Foto/Foto cloud merek, jadi cadangan berkelanjutan. Atau, secara berkala salin ke PC dengan kabel data.</li>
+                        <li>Kontak, dll: Selama ada di akun iCloud/Google/merek, login ke smartphone lain akan otomatis kembali.</li>
+                        <li>⚠️ Riwayat chat LINE/WeChat (paling penting):
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Saat ganti model: Gunakan fitur "Migrasi Riwayat Chat" dalam aplikasi. Koneksi langsung via Wi-Fi. Transfer dari model lama ke baru. Paling direkomendasikan.</li>
+                                <li>Cadangan jangka panjang: Gunakan fitur "Cadangkan dan Pulihkan" aplikasi versi PC. Cadangan lokal di PC. Paling aman — ini penting.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 Panduan Ganti Model: Tiga Jalur Migrasi</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Android → Android</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Merek sama (contoh: Samsung → Samsung): Gunakan aplikasi "Clone Smartphone" resmi. Scan QR code, aplikasi dan data bisa ditransfer. Pengalaman sempurna.</li>
+                        <li>Lintas merek: Alat ganti model pihak ketiga, atau sinkronkan foto kontak ke cloud (contoh: Google Foto) terlebih dahulu, login di model baru lalu unduh.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iPhone → iPhone</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pemulihan iCloud: Saat aktivasi model baru, pilih pulihkan dari cadangan iCloud.</li>
+                        <li>Quick Start: Dekatkan iPhone lama dan baru. Animasi pengaturan muncul di model lama, scan QR code, semua akan migrasi nirkabel. Pengalaman luar biasa.</li>
+                        <li>Catatan: Memakan waktu lama. Pertahankan pengisian dan jaringan.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Lintas Platform (Android↔iPhone) Paling Kompleks</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Gunakan alat resmi (contoh: aplikasi "Move to iOS"). Bisa transfer kontak, foto, dll.</li>
+                        <li>Batasan inti: Aplikasi dan data aplikasi (contoh: riwayat chat LINE/WeChat, progress game) tidak bisa migrasi. Aplikasi perlu install ulang. Data perlu tangani terpisah (contoh: LINE pulihkan dari cadangan PC) — ini penting.</li>
+                        <li>Strategi manual: Foto relay via PC atau cloud. Ekspor kontak ke file vCard. Cek apakah data aplikasi penting mendukung ekspor lintas platform.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktis: Cadangkan Foto dan Kontak ke PC Secara Manual</p>
+                        <p class="mt-1">Tujuan: Memiliki salinan data offline yang bisa dikelola sendiri sepenuhnya, ketenangan ultimate.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Siapkan kabel data, hubungkan smartphone dan PC.</li>
+                            <li>Cadangkan foto: Di PC masuk ke penyimpanan internal smartphone, temukan folder DCIM dan Pictures, salin seluruhnya ke hard disk PC.</li>
+                            <li>Cadangkan kontak:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Pastikan kontak ada di iCloud. Akses versi web iCloud.com, masuk ke "Kontak", pilih semua lalu ekspor file vCard, simpan di PC.</li>
+                                    <li>Android: Di pengaturan aplikasi "Kontak", cari "Ekspor ke Perangkat Penyimpanan", hasilkan file .vcf. Salin ke PC dengan kabel data.</li>
+                                </ul>
+                            </li>
+                            <li>Verifikasi cadangan: Buka beberapa foto yang disalin di PC, buka file .vcf, pastikan semua info ada.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Tujuh Belas: Pemecahan Masalah dan Penyelesaian Mandiri</h3>
+                    <p class="mb-3">Smartphone kadang "sakit", jangan panik. Sebagian besar masalah bisa diselesaikan sendiri. Ini adalah "Manual Pertolongan Pertama Smartphone" Anda.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 Smartphone Lambat, Panas</h4>
+                    <p class="mb-2">Diagnosis 4 langkah:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Pikirkan korelasi: Setelah update sistem? Atau setelah install aplikasi tertentu?</li>
+                        <li>Cek kapasitas penyimpanan: Tersisa di bawah 10% adalah penyebab paling umum sistem lambat.</li>
+                        <li>Cek ranking konsumsi listrik: Di pengaturan baterai, aplikasi mana yang mengonsumsi listrik di background.</li>
+                        <li>Cek sinyal: Di tempat sinyal buruk, smartphone berjuang mencari jaringan, jadi panas.</li>
+                    </ol>
+
+                    <p class="mb-2">Metode pengobatan:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kapasitas tidak cukup → Segera bersihkan penyimpanan (lihat Bab Dasar).</li>
+                        <li>Aplikasi tertentu bermasalah → Bersihkan cache aplikasi itu di pengaturan, atau uninstall lalu install ulang.</li>
+                        <li>Solusi serba guna: Restart smartphone.</li>
+                        <li>Jangan main game berat sambil mengisi daya. Panas tumpang tindih merusak baterai.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 Aplikasi Crash, Tidak Merespons</h4>
+                    <p class="mb-2">Alur penanganan standar:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Tutup aplikasi, buka lagi.</li>
+                        <li>Perbarui di toko aplikasi.</li>
+                        <li>Cek apakah izin yang diperlukan (contoh: izin penyimpanan) tidak sengaja dimatikan.</li>
+                        <li>Bersihkan cache aplikasi (aman, data tidak hilang).</li>
+                        <li>Upaya terakhir: Bersihkan data/uninstall lalu install ulang (info login akan dihapus. Pastikan ingat kata sandi).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 Tidak Bisa Nyala, Macet di Layar Boot "Upaya Terakhir"</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pertama isi daya 30 menit. Mungkin hanya baterai benar-benar habis.</li>
+                        <li>Coba restart paksa (lihat latihan di bawah). Ini bisa mengatasi sebagian besar "mati suri".</li>
+                        <li>Masih tidak bisa: Mungkin perlu perbaikan koneksi PC dalam mode recovery, tapi ini akan menghapus semua data (bisa pulihkan jika ada cadangan). Jika masih tidak bisa, mungkin masalah hardware, perlu kirim untuk diperbaiki.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 Cari Perbaikan Resmi, Hindari Jebakan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cari resmi asli: Harus cek "Penyedia Layanan Tersertifikasi" di situs resmi merek. Atau cari entri layanan di pengaturan smartphone, aplikasi resmi.</li>
+                        <li>Sebelum perbaikan: Harus cadangkan semua data sendiri! Logout dari akun. Bawa bukti pembelian.</li>
+                        <li>Hati-hati perbaikan tidak resmi: Mungkin menggunakan komponen berkualitas rendah, privasi bisa bocor. Dan sekali dibuka garansi resmi hangus.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktis: Simulasi "Restart Paksa"</p>
+                        <p class="mt-1">Tujuan: Belajar "kunci serba guna" ini saat smartphone normal, jadi tidak panik saat benar-benar rusak.</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>Catatan: Aman untuk operasi saat smartphone normal. Data tidak dihapus, tapi disarankan simpan dulu pekerjaan di tangan.</li>
+                            <li>Metode:
+                                <ul class="list-circle pl-6 mt-1 space-y-1">
+                                    <li>iPhone full-screen: Tekan cepat 1x volume naik, tekan 1x volume turun, tekan lama tombol power samping. Sampai logo Apple muncul.</li>
+                                    <li>Android umum: Tekan lama tombol power 10-15 detik. Sampai restart.</li>
+                                    <li>(Mungkin sedikit berbeda tergantung model spesifik. Jika tidak yakin, cari "[model smartphone Anda] restart paksa")</li>
+                                </ul>
+                            </li>
+                            <li>Makna: Sekali latihan, nanti saat smartphone benar-benar macet, bisa selesaikan dengan tenang.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Empat, Bab Pengembangan (Bab 18-22)</h2>
+
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Delapan Belas: Mendalami Jaringan Mobile dan Keamanan Informasi</h3>
+                    <p class="mb-3">🔒 Mengapa perlu peduli dengan ini?</p>
+                    <p class="mb-3">Setiap hari kita menggunakan smartphone untuk internet, pembayaran, chat, merasa sangat nyaman. Tapi, pernahkah Anda berpikir seberapa sering riwayat chat, kata sandi pembayaran, foto... informasi ini "telanjang" di internet? Smartphone adalah digital twin kita, keamanannya adalah keamanan kita sendiri. Jangan pikir hacker jauh di sana. Wi-Fi publik yang tidak sengaja terhubung bisa menjadi "jebakan". Hari ini kita akan mendalami "arus bawah" dalam jaringan mobile, membuat smartphone Anda kokoh, jangan salah.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📡 VPN: "Jubah Gaib" dalam Jaringan</h4>
+                    <p class="mb-2">Apa sebenarnya?</p>
+                    <p class="mb-2">VPN, nama lengkap Virtual Private Network. Bayangkan Anda membangun terowongan bawah tanah terenkripsi khusus antara rumah Anda dan situs web yang ingin diakses.</p>
+
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Koneksi internet biasa: Smartphone Anda → Jaringan publik (jaringan operator, Wi-Fi kafe) → Situs web target. 
+                            <p class="mt-1 text-secondary">Risiko: Di tengah jalan ini, seseorang (hacker, penyedia Wi-Fi jahat, atau administrator jaringan) bisa "mengintip" data yang Anda kirim.</p>
+                        </li>
+                        <li>Saat menggunakan VPN: Smartphone Anda → Terowongan terenkripsi VPN → Server VPN → Situs web target. 
+                            <p class="mt-1 text-secondary">Efek: Semua traffic jaringan Anda, sejak masuk terowongan sudah dienkripsi dan disegel. "Pengintip" di jalan hanya bisa melihat rangkaian karakter yang tidak bisa dipecahkan. Data sampai di server VPN, baru didekripsi dan diteruskan ke situs web sebenarnya. Alamat akses yang dilihat situs web juga adalah alamat server VPN, bukan alamat Anda yang sebenarnya.</p>
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">Apa yang bisa dilakukan? Selain "menembus tembok"</p>
+                    <p class="mb-2">Jangan hanya memikirkan akses situs luar negeri saat mendengar VPN. Ada banyak kegunaan sah:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Proteksi keamanan di bawah Wi-Fi publik: Menggunakan Wi-Fi gratis di bandara, hotel, kafe adalah area risiko tinggi kebocoran data. Menggunakan VPN, koneksi Anda memakai "baju besi".</li>
+                        <li>Akses aman jarak jauh ke intranet perusahaan: Banyak karyawan perusahaan, saat WFH, login aman ke sistem internal dan file server melalui VPN.</li>
+                        <li>Proteksi privasi pribadi, menghindari pelacakan: Mencegah ISP mencatat dan menganalisis kebiasaan penggunaan internet Anda, mengirim iklan presisi.</li>
+                    </ol>
+
+                    <p class="mb-2">⚠️ Catatan Penting</p>
+                    <p class="mb-2">Teknologi VPN sendiri adalah alat keamanan yang sah, tapi pastikan beli dari saluran resmi atau gunakan layanan terpercaya. Jangan gunakan "VPN gratis" asal tidak jelas. Bisa menanam Trojan di smartphone, diam-diam merekam dan menjual data Anda — seperti "mempekerjakan pencuri sebagai satpam".</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🚫 "Perangkap Manis" Wi-Fi Publik</h4>
+                    <p class="mb-2">Wi-Fi gratis menarik, tapi bisa jadi "bom gula". Selain "solusi ultimate" VPN, Anda juga bisa membangun 2 garis pertahanan dasar.</p>
+                    
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Garis pertahanan pertama: Konfirmasi HTTPS
+                            <p class="mt-1">Saat mengakses situs web, cek apakah awalan address bar http:// atau https://. "s" yang ditambahkan berarti Secure (aman). Berarti komunikasi antara Anda dan situs web dienkripsi, meski data disadap, sulit dipecahkan. Sekarang, sebagian besar situs resmi (bank, email, platform media sosial) default menggunakan HTTPS. Di bawah Wi-Fi publik, pastikan halaman yang diakses adalah HTTPS.</p>
+                        </li>
+                        <li>Garis pertahanan kedua: Upgrade query DNS
+                            <p class="mt-1">Apa itu DNS? Sederhananya, "buku telepon jaringan". Saat ingin mengakses baidu.com, smartphone bertanya ke server DNS "Apa alamat (IP) Baidu?". Query DNS tradisional seperti "kartu pos", tidak dienkripsi. Ini berarti Wi-Fi jahat bisa tahu situs web apa yang Anda tanyakan, dan bisa memodifikasi jawaban untuk mengarahkan ke situs phishing!</p>
+                            <p class="mt-1">DNS over TLS (DoT) / DNS over HTTPS (DoH) menyelesaikan masalah ini. Mengenkripsi query "buku telepon" Anda juga, tidak ada yang tahu siapa yang Anda cari, dan jawaban tidak bisa dimodifikasi.</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🕵️ Apakah "Penjelajahan Pribadi" Benar-benar Menjadi Transparan?</h4>
+                    <p class="mb-2">Semua browser utama memiliki "Mode Penjelajahan Pribadi/Incognito", apakah itu membuat Anda merasa seperti ninja jaringan? Kebenarannya mungkin mengecewakan.</p>
+                    
+                    <p class="mb-2">Apa yang dilakukannya?</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>👍 Tidak meninggalkan jejak lokal: Setelah menutup jendela pribadi, sistem tidak menyimpan riwayat penjelajahan, cookie, data form. Keluarga mengambil smartphone Anda, tidak bisa melihat apa yang Anda cari.</li>
+                    </ul>
+
+                    <p class="mb-2">Apa yang tidak bisa dilakukannya:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Menjadi transparan terhadap aktivitas online Anda: Situs web yang Anda akses, ISP, administrator jaringan perusahaan (jika menggunakan Wi-Fi kantor), masih bisa melihat catatan akses Anda. Situs web juga bisa mengidentifikasi Anda melalui alamat IP dan sarana teknis lain.</li>
+                        <li>Mencegah virus dan malware: Jika tidak sengaja masuk ke situs jahat, tetap bisa terinfeksi.</li>
+                        <li>Menyembunyikan file yang diunduh: File yang diunduh dalam mode pribadi tetap disimpan rapi di folder unduhan.</li>
+                    </ol>
+
+                    <p class="mb-2">Kesimpulan: Mode penjelajahan pribadi seperti <strong>"Penghapus Lokal"</strong>, bukan "Jubah Gaib Jaringan". Cocok untuk melindungi agar status login dan riwayat pencarian tidak terlihat saat meminjam PC orang lain, tapi jangan berharap bisa lolos dari semua pelacakan jaringan.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Waktu Praktik 👉 Mengatur "Buku Telepon Terpercaya" (DNS) di Smartphone</p>
+                        <p class="mt-1">Sekarang kita tahu bahwa query DNS bisa diintip atau dimodifikasi, mari kita beralih ke layanan DNS yang lebih aman dan cepat. Berikut contoh untuk Android dan iOS.</p>
+                        <p class="mt-2 font-semibold">Cara Pengaturan Smartphone Android:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buka [Pengaturan].</li>
+                            <li>Masuk ke [WLAN], tekan lama jaringan Wi-Fi yang sedang terhubung, pilih [Ubah Jaringan].</li>
+                            <li>Ketuk [Opsi Lanjutan], ubah pengaturan IP dari "DHCP" ke "Statis".</li>
+                            <li>Gulir ke bawah, temukan "Domain 1" dan "Domain 2" (alamat server DNS).</li>
+                            <li>Masukkan alamat DNS yang diinginkan. Contoh:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Prioritas keamanan dan privasi: Cloudflare DNS 1.1.1.1 dan 1.0.0.1</li>
+                                    <li>Pengalaman komprehensif yang baik: Google DNS 8.8.8.8 dan 8.8.4.4</li>
+                                </ul>
+                            </li>
+                            <li>Simpan pengaturan.</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">Cara Pengaturan iPhone/iPad (lingkungan Wi-Fi):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buka [Pengaturan] > [Wi-Fi].</li>
+                            <li>Ketuk ikon informasi [i] di sebelah kanan Wi-Fi yang terhubung.</li>
+                            <li>Gulir ke bawah, temukan [Pengaturan DNS].</li>
+                            <li>Pilih [Manual], lalu ketuk [Tambah Server].</li>
+                            <li>Masukkan alamat DNS rekomendasi di atas (contoh: 1.1.1.1).</li>
+                            <li>Ketuk [Simpan] di pojok kanan atas.</li>
+                        </ol>
+                        <p class="mt-2">Setelah selesai, smartphone Anda akan memprioritaskan server DNS yang lebih terpercaya saat query alamat situs web, menjadi lebih aman, dan responsnya mungkin sedikit lebih cepat. Selamat! Anda sudah menutup satu celah keamanan lagi!</p>
+                    </div>
+                </div>
+
+                <!-- Bab 19 -->
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab 19: Bagaimana AI Bekerja di Smartphone</h3>
+                    <p class="mb-3">👋 Selamat datang di "Pertunjukan Sulap" terkeren di smartphone. Pemeran utamanya adalah: Kecerdasan Buatan. Foto cantik "potret langsung jadi" yang Anda gunakan setiap hari, asisten suara yang datang saat Anda berbicara, metode input yang semakin memahami Anda. Di balik itu semua, otak tak terlihat ini berdiri. Hari ini, mari kita buka tirainya dan lihat bagaimana AI "berpikir" dan bekerja di smartphone Anda.</p>
+                    <p class="mb-3">Pertama, kesimpulan intinya: AI di smartphone Anda berusaha mendekatkan komputasi kepada Anda. Bukan mendekatkan Anda ke server.</p>
+                    <p class="mb-3">Kalimat ini terdengar agak berbelit? Mari kita pahami dengan menggabungkan "digital twin" yang dibahas di bab sebelumnya. Di bab sebelumnya, kita bilang smartphone adalah kembaran Anda, dan data yang meninggalkannya menghadapi risiko. Dan AI smartphone modern justru berusaha memasukkan lebih banyak kecerdasan ke dalam "kembaran" ini. Inilah yang disebut "Edge AI".</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 Kamera AI: "Ruang Gelap Pengembangan" Anda Pindah ke Smartphone</h4>
+                    <p class="mb-2">Memotret mungkin adalah fungsi AI yang paling sering kita gunakan. Apakah Anda berpikir "ambil foto" hanya sekali klik? Sudah tidak lagi.</p>
+                    <p class="mb-2">Fotografi smartphone awal seperti kamera film otomatis, tekan shutter, dan kualitas gambar hampir seluruhnya bergantung pada sensor dan lensa hardware. Tapi fotografi komputasi AI sekarang seperti tim retoucher profesional + manajer kamera yang langsung dimasukkan ke dalam tombol shutter.</p>
+                    <p class="mb-2">Apa bedanya?</p>
+                    <p class="mb-2">"Tim" ini sudah mulai bekerja bahkan sebelum Anda menekan shutter. Memindai adegan, mengidentifikasi <strong>"ini langit biru", "ini wajah orang", "ini pemandangan malam"</strong> atau "ini makanan". Setelah identifikasi selesai, AI langsung memanggil skema optimasi yang dilatih khusus untuk tipe adegan ini:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fotografi potret: Tahu perlu memburamkan latar belakang dan mempercantik kulit, otomatis beralih ke mode potret.</li>
+                        <li>Fotografi malam: Bukan sekadar menaikkan ISO yang menghasilkan banyak noise, tapi secara instan mengambil beberapa foto gelap secara berurutan, seperti teka-teki, menggabungkan bagian paling tajam dan paling sedikit noise dari semua foto dengan "komputasi", menghasilkan satu foto terang dan indah.</li>
+                        <li>Fotografi dokumen: Otomatis meluruskan tepi, meningkatkan kontras, seperti scanner.</li>
+                        <li>Mengambil momen bergerak: Memprediksi lintasan gerakan, otomatis menangkap momen paling tajam.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Waktu Praktik 👉: Buka kamera smartphone sekarang, arahkan ke adegan berbeda (wajah orang, tanaman, makanan, teks). Banyak smartphone akan menampilkan ikon kecil di sudut jendela bidik saat mengidentifikasi adegan tertentu (contoh: "Potret", "Makanan", "Teks"). Rasakan proses "identifikasi instan" ini. Ini adalah umpan balik real-time yang AI berikan sebelum Anda menekan shutter.</p>
+                    </div>
+
+                    <p class="mt-4 mb-2">Dengan kata lain, menekan shutter sekarang hanya melangkah ke langkah terakhir dari alur "retas komputasi" ini. Tampilan berputar "sedang memproses" dalam satu detik itu adalah bukti otak AI bekerja dengan kecepatan tinggi. Yang lebih luar biasa, semua komputasi kompleks ini semakin banyak yang dilakukan langsung di chip AI khusus di dalam smartphone (contoh: Apple Neural Engine, Qualcomm AI Engine, Arsitektur Da Vinci Huawei, dll). Cepat, dan privasi juga tinggi.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗣️ Asisten Suara: Bagaimana "Sekretaris Suara" Anda Memahami Anda?</h4>
+                    <p class="mb-2">"Hey Siri, bagaimana cuaca besok?"</p>
+                    <p class="mb-2">"OK Google, atur alarm jam 7 pagi besok."</p>
+                    <p class="mb-2">Ini sudah selembut napas. Tapi, bagaimana sekretaris suara ini mencapainya?</p>
+                    <p class="mb-2">Alur kerjanya bisa dipecah menjadi "3 langkah" yang terstandarisasi:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Langkah 1: Mendengarkan (Pengenalan Suara).</strong>
+                            <p class="mt-1">Saat Anda mengucapkan kata aktivasi ("Hey Siri") dan memberikan perintah, mic smartphone merekam bentuk gelombang suara Anda. Ini adalah sinyal kontinu. Tugas pertama AI adalah memotong sinyal gelombang suara kontinu ini menjadi potongan-potongan fonem satu per satu, mencocokkannya dengan perpustakaan kosakata terlatih yang sangat besar, dan mengubahnya menjadi teks. Proses ini disebut ASR (Automatic Speech Recognition). Harus mengatasi aksen, kecepatan berbicara, dan kebisingan lingkungan Anda, sangat luar biasa.</p>
+                        </li>
+                        <li><strong>Langkah 2: Memahami (Pemahaman Bahasa Alami - NLP).</strong>
+                            <p class="mt-1">Hanya mendapatkan teks "ingatkan saya untuk membawa payung jam 7 pagi besok" tidak cukup. Perlu memahami maksudnya. Siapa? Kapan? Melakukan apa? Ini membutuhkan teknologi NLP. Menganalisis struktur kalimat, mengekstrak entitas penting: "jam 7 pagi besok" (waktu), "ingatkan" (maksud/aksi), "saya" (objek), "membawa payung" (event). Ini berarti telah memahami perintah Anda—ini penting.</p>
+                        </li>
+                        <li><strong>Langkah 3: Mengeksekusi dan Menjawab.</strong>
+                            <p class="mt-1">Setelah memahami maksud Anda, asisten memanggil aplikasi atau modul layanan yang sesuai di dalam smartphone. Jika memeriksa cuaca, akses internet untuk mengambil data cuaca. Jika mengatur alarm, menulis ke database aplikasi "Jam". Jika ditanya "Siapa Messi", mungkin memanggil mesin pencari. Terakhir, hasilnya "dibicarakan" kepada Anda melalui teknologi sintesis suara (TTS).</p>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">Dahulu, sebagian besar komputasi berat langkah 1 dan 2 harus dikirim ke server cloud, tapi sekarang, pengenalan kata aktivasi dan pemrosesan beberapa perintah offline (contoh: atur alarm, nyalakan Bluetooth) bisa dilakukan sepenuhnya di smartphone itu sendiri. Ini berarti respons lebih cepat (tidak menunggu jaringan), dan privasi juga dilindungi (perintah seperti "matikan lampu" tidak perlu diunggah ke cloud).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⌨️ Prediksi Metode Input dan Asisten Penulisan: "Penulis Cepat Andalan" Anda</h4>
+                    <p class="mb-2">Ini mungkin AI yang paling diam-diam meresap. Anda baru saja mengetik "malam ini", tapi "mau makan apa" sudah muncul. Mengetik "bos", lalu "halo" otomatis mengikuti di belakangnya. Di baliknya, ada observasi dan pembelajaran jangka panjang dari model pembelajaran mesin edge.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Model bahasa berdasarkan kebiasaan pribadi Anda: Metode input secara diam-diam menganalisis kosakata yang sering Anda gunakan, kombinasi frasa, lawan bicara chat. Anda tertawa "hahaha" saat chat dengan teman, dan sering menggunakan "notulen rapat" saat berkomunikasi dengan rekan kerja. Semua itu diingatnya. Seiring waktu, terbentuklah "model prediksi" yang dioptimalkan khusus untuk Anda.</li>
+                        <li>Pemahaman konteks: Bukan hanya melihat kata sebelumnya, tapi memahami konteks kalimat yang sedang Anda ketik. Di kotak chat LINE dan dokumen kerja, untuk kata awal yang sama, mungkin muncul saran pelengkapan yang berbeda.</li>
+                        <li>Kemampuan koreksi typo: Saat mengetik "syan", tahu Anda ingin mengetik "saya", dan otomatis mengoreksi. Ini bukan sekadar pencocokan kamus, tapi penilaian probabilitas yang dilatih miliaran kali input.</li>
+                    </ul>
+
+                    <p class="mb-2">🖋️ Melangkah lebih jauh: Asisten Penulisan AI.</p>
+                    <p class="mb-2">Sekarang, banyak metode input dan aplikasi catatan yang menyediakan fungsi "koreksi typo cerdas", "penghalusan kalimat", "melanjutkan penulisan", adalah aplikasi AI yang lebih kuat. Bisa menghaluskan "Produk ini sangat bagus" menjadi "Pengalaman pengguna produk ini luar biasa", atau setelah menulis judul, menyarankan beberapa kemungkinan awal paragraf. Model ini biasanya lebih besar, sebagian mungkin bergantung pada cloud, tapi asosiasi dan prediksi intinya masih banyak dilakukan secara lokal, melindungi privasi penulisan Anda.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧠 Edge AI vs. Cloud AI: Titik Percabangan Evolusi Smartphone</h4>
+                    <p class="mb-2">Kata kunci yang disebut berulang kali di bab sebelumnya: Edge. Ini mewakili tren inti pengembangan AI smartphone: penurunan daya komputasi.</p>
+                    <p class="mb-2">Mari kita lihat perbedaan mendasar antara "Edge AI" dan mode "Cloud AI" tradisional dengan tabel sederhana:</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Dimensi Perbandingan</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Cloud AI (Mode Tradisional)</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Edge AI (Tren Saat Ini dan Masa Depan)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Kemana Data Pergi</td>
+                                    <td class="border border-gray-300 px-4 py-2">Foto, rekaman, dan data mentah Anda harus diunggah ke server internet.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Data mentah tetap di smartphone, hanya hasil pemrosesan atau data yang sangat kecil dan dianonimkan yang disinkronkan.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Kecepatan</td>
+                                    <td class="border border-gray-300 px-4 py-2">Bergantung pada kualitas jaringan, ada latensi. Harus menunggu "memuat jaringan" setelah bertanya.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Respons instan, tanpa latensi. Buka kunci, cari album, terjemahkan offline, selesai dalam sekejap.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Keamanan Privasi</td>
+                                    <td class="border border-gray-300 px-4 py-2">Data Anda "keluar dari rumah", melewati jaringan publik, ada potensi risiko kebocoran.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Data tidak meninggalkan "kembaran", mendasar menghindari risiko penyadapan dan intersepsi dalam proses transmisi.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Bisa Offline?</td>
+                                    <td class="border border-gray-300 px-4 py-2">Pada dasarnya tidak bisa. Tanpa jaringan ≈ fungsi AI lumpuh.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Fungsi inti bisa digunakan sepenuhnya offline. Beradaptasi dengan lebih banyak skenario (contoh: parkir bawah tanah, dalam pesawat, luar ruangan).</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Konsumsi Daya dan Data</td>
+                                    <td class="border border-gray-300 px-4 py-2">Membutuhkan komunikasi jaringan terus-menerus. Relatif mengonsumsi daya dan data.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Mengurangi komunikasi cloud yang sering, lebih hemat daya dan data.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Contoh Saat Ini</td>
+                                    <td class="border border-gray-300 px-4 py-2">Pengenalan suara awal, generasi gambar AI yang membutuhkan rendering kompleks, dialog model bahasa sangat besar.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Buka kunci wajah/sidik jari, klasifikasi wajah di album, terjemahan offline, sebagian perintah suara, prediksi metode input.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-2">Sudah terlihat bedanya? Edge AI dengan sempurna menjawab persyaratan keamanan "melindungi digital twin" dari bab sebelumnya. Membangun dinding batas "kembaran" lebih kuat dan lebih cerdas. Data dan komputasi sebisa mungkin tetap di dalam dinding, meminimalkan risiko dan latensi.</p>
+                    <p class="mb-2">Dan "model besar" masa depan juga sedang berevolusi ke edge. Saat ini, dialog ChatGPT lengkap tidak bisa berjalan di smartphone kecil, tapi "versi esensi yang dipadatkan" sudah mulai masuk ke smartphone, bisa memproses beberapa tugas lokal. Di masa depan, pelayan smartphone Anda, aplikasi catatan, bahkan NPC game mungkin digerakkan oleh model besar edge yang Anda bawa, sepenuhnya memahami kebiasaan Anda, melayani hanya untuk Anda.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Latihan Praktik Bab Ini: Memberikan Perintah pada Sekretaris AI</p>
+                        <p class="mt-1">Ayo, rasakan kemampuan koordinasi AI smartphone secara nyata. Berikan perintah kompleks dengan informasi berlapis pada asisten suara.</p>
+                        <p class="mt-1">Contoh:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Ke Siri: "Hey Siri, ingatkan saya untuk membawa payung jam 7 pagi besok, dan ubah kalender jam 3 sore hari ini menjadi jam 4."</li>
+                            <li>Ke Asisten Google: "OK Google, ingatkan saya untuk menelepon ibu jam 8 malam ini, dan sekarang langsung putar lagu hari cerah di Spotify."</li>
+                            <li>Ke Bixby: "Hi Bixby, buka scan QR code LINE, dan turunkan kecerahan layar."</li>
+                        </ol>
+                        <p class="mt-2">Amati bagaimana ia memahami dan mengeksekusi rangkaian perintah secara berurutan. Di balik ini, menunjukkan NLP membagi tugas dan memanggil kemampuan aplikasi berbeda. Selamat! Anda telah menyelesaikan operasi bersama interaksi bahasa alami manusia-komputer!</p>
+                        <p class="mt-2">Bab ini sampai di sini. Sadarkah Anda? AI di dalam smartphone bukan teknologi laboratorium yang jauh, tapi "mesin tak terlihat" di bawah ujung jari Anda, di balik setiap fokus, setiap aktivasi, setiap kata. Ia semakin cepat, semakin memahami Anda, semakin aman—karena ia berusaha mengunci kebijaksanaan dan privasi bersama, kuat-kuat di dalam "digital twin" Anda.</p>
+                    </div>
+                </div>
+
+                <!-- Bab 20 -->
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab 20: Berpikir Pemrograman dan Pengantar Otomasi</h3>
+                    <p class="mb-3">🤔 Saat mendengar kata "pemrograman", apakah yang terbayang adalah layar gelap dan kode rumit? Sebenarnya, berpikir pemrograman mungkin sudah Anda gunakan saat menggunakan smartphone. Mari belajar bagaimana "mengotomasi" dengan smartphone, dan membuat hidup lebih efisien.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 Berpikir Pemrograman: Memecah "Prosedur"</h4>
+                    <p class="mb-2">Inti pemrograman adalah memecah masalah besar menjadi langkah-langkah kecil. Otomasi smartphone juga sama.</p>
+                    <p class="mb-2">Contoh: Untuk mengotomasi tugas "setiap pagi jam 7 cek cuaca, jika hujan ingatkan membawa payung":</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Trigger (kapan): Setiap pagi jam 7.</li>
+                        <li>Kondisi (apa): Ambil prakiraan cuaca, cek apakah hujan.</li>
+                        <li>Aksi (bagaimana): Jika hujan, kirim notifikasi.</li>
+                    </ol>
+                    <p class="mb-2">Ini adalah berpikir pemrograman. Memecah tugas kompleks menjadi 3 elemen: trigger, kondisi, aksi.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Alat Otomasi Smartphone</h4>
+                    <p class="mb-2">Smartphone Anda memiliki alat otomasi canggih yang terpasang di dalamnya.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">iOS: Pintasan (Shortcuts)</h5>
+                    <p class="mb-2">Alat otomasi yang disediakan Apple. Tanpa perlu pemrograman, cukup menggabungkan blok untuk membuat alur otomasi.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Trigger: Waktu, lokasi, koneksi Wi-Fi, peluncuran aplikasi, dll.</li>
+                        <li>Aksi: Kirim pesan, putar musik, ubah pengaturan, luncurkan aplikasi, dll.</li>
+                        <li>Contoh: "Saat pulang terhubung ke Wi-Fi, nyalakan lampu dan putar musik".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Android: Tasker, Automate, atau Fitur Khusus Merek</h5>
+                    <p class="mb-2">Android lebih terbuka, sehingga otomasi lebih kuat.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tasker: Aplikasi otomasi Android paling kuat. Hampir semua operasi bisa diotomasi.</li>
+                        <li>Fitur merek: "Bixby Routines" Samsung, "Skenario" Xiaomi, dll.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎯 Skenario Otomasi Praktis</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Mode Tidur</strong>: Saat waktu tidur tiba, otomatis nyalakan mode jangan ganggu, turunkan volume, potong cahaya biru.</li>
+                        <li><strong>Mode Mengemudi</strong>: Saat terhubung ke Bluetooth mobil, otomatis nyalakan mode mengemudi, notifikasi panggilan dengan suara.</li>
+                        <li><strong>Hemat Baterai</strong>: Saat baterai di bawah 20%, otomatis nyalakan mode hemat daya, matikan fungsi yang tidak perlu.</li>
+                        <li><strong>Pengingat Berbasis Lokasi</strong>: Saat mendekati supermarket, notifikasi daftar belanja.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Latihan Praktik Bab Ini: Membuat Alur Otomasi</p>
+                        <p class="mt-1">Buka alat otomasi smartphone Anda, buat alur berikut:</p>
+                        <p class="mt-1">"Setiap malam jam 10, nyalakan mode jangan ganggu, dan notifikasi cuaca besok".</p>
+                        <p class="mt-2">Langkah:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buka aplikasi otomasi (iOS "Pintasan", Android Tasker atau fitur merek).</li>
+                            <li>Buat otomasi/rutin baru.</li>
+                            <li>Atur trigger: waktu (setiap malam jam 10).</li>
+                            <li>Tambahkan aksi:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Nyalakan mode jangan ganggu.</li>
+                                    <li>Ambil info cuaca dan notifikasi.</li>
+                                </ul>
+                            </li>
+                            <li>Simpan dan uji.</li>
+                        </ol>
+                        <p class="mt-2">Ini adalah praktik berpikir pemrograman. Menggabungkan kondisi dan aksi, memberi smartphone "kecerdasan".</p>
+                    </div>
+                </div>
+
+                <!-- Bab 21 -->
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab 21: Penanganan Smartphone Bekas dan Warisan Digital</h3>
+                    <p class="mb-3">📱 Setelah membeli smartphone baru, apa yang Anda lakukan dengan yang lama? Membuang ke tempat sampah? Itu sayang, dan mungkin berbahaya. Di bab ini, kita belajar cara menangani smartphone lama dengan aman dan mengelola warisan digital.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 Memanfaatkan Kembali Smartphone Lama</h4>
+                    <p class="mb-2">Smartphone lama masih merupakan "komputer kecil" yang bisa digunakan. Bisa dimanfaatkan kembali untuk:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Pemutar Media Khusus</strong>: Perangkat khusus musik, podcast, video.</li>
+                        <li><strong>Bingkai Foto Digital</strong>: Tampilkan slideshow dengan Google Foto, dll.</li>
+                        <li><strong>Kamera Keamanan Rumah</strong>: Jadi kamera pengawas dengan aplikasi khusus.</li>
+                        <li><strong>Konsol Game Khusus</strong>: Mainkan game retro dengan emulator.</li>
+                        <li><strong>Pengontrol Smart Home</strong>: Jadi hub smart home yang selalu terhubung.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗑️ Langkah Wajib Sebelum Menyerahkan Smartphone</h4>
+                    <p class="mb-2"><strong>⚠️ Penting: Hanya "menghapus" tidak cukup!</strong></p>
+                    <p class="mb-2">Sebelum menjual, menyumbangkan, atau mendaur ulang smartphone, pastikan melakukan langkah berikut:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Backup</strong>: Backup semua data penting (foto, kontak, data aplikasi).</li>
+                        <li><strong>Keluar dari Akun</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Akun Google (Android).</li>
+                                <li>Apple ID (iPhone).</li>
+                                <li>Aplikasi pihak ketiga (LINE, WeChat, dll).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Factory Reset (Kembali ke Pengaturan Pabrik)</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>[Pengaturan] > [Sistem] > [Reset] > [Hapus semua data] (Android).</li>
+                                <li>[Pengaturan] > [Umum] > [Transfer atau Reset iPhone] > [Hapus Semua Konten dan Pengaturan] (iOS).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Konfirmasi Enkripsi</strong>: Smartphone modern terenkripsi secara default, tapi model lama perlu konfirmasi pengaturan enkripsi manual.</li>
+                        <li><strong>Lepaskan Kartu SD dan Kartu SIM</strong>: Ini juga bisa berisi informasi pribadi.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚰️ Warisan Digital: Masa Depan "Digital Twin" Anda</h4>
+                    <p class="mb-2">Jika terjadi sesuatu pada Anda, apa yang terjadi dengan aset digital Anda (foto, akun media sosial, mata uang kripto, dll)?</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">Langkah Pengelolaan Warisan Digital:</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>Inventarisasi Aset</strong>: Daftar aset digital yang Anda miliki (akun, langganan, pembelian digital, dll).</li>
+                        <li><strong>Atur Kontak Darurat di Pengelola Kata Sandi</strong>: 1Password, Bitwarden, dll menyediakan fungsi kontak darurat, memungkinkan akses ke orang terpercaya dalam kondisi tertentu.</li>
+                        <li><strong>"Kontak Warisan" Apple/Google</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>iOS 15.2+: Pengaturan > Masuk dan Keamanan > Kontak Warisan.</li>
+                                <li>Google: Atur Pengelola Akun Tidak Aktif.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Sertakan Aset Digital dalam Wasiat</strong>: Konsultasikan dengan pengacara, cantumkan cara penanganan aset digital dalam dokumen hukum.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Latihan Praktik Bab Ini: Reset Smartphone dengan Aman</p>
+                        <p class="mt-1">(Catatan: Latihan ini hanya dilakukan saat benar-benar menyerahkan smartphone!)</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Konfirmasi semua data sudah di-backup.</li>
+                            <li>Keluar dari semua akun.</li>
+                            <li>Lakukan factory reset.</li>
+                            <li>Setelah restart, konfirmasi tampilan setup muncul (bukti tidak ada data pribadi yang tersisa).</li>
+                            <li>Lepaskan kartu SD dan kartu SIM.</li>
+                        </ol>
+                        <p class="mt-2">Juga, pertimbangkan untuk mengatur kontak warisan. Periksa Pengaturan > Masuk dan Keamanan > Kontak Warisan (iOS) atau Pengelola Akun Tidak Aktif Google.</p>
+                    </div>
+                </div>
+
+                <!-- Bab 22 -->
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab 22: Smartphone Masa Depan dan Kehidupan Digital</h3>
+                    <p class="mb-3">🔮 Ke mana smartphone menuju? Lipat? Kacamata AR? Chip di otak? Di bab terakhir ini, kita menjelajahi tren teknologi masa depan dan memikirkan bagaimana mempersiapkan kehidupan digital.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Tren Evolusi Smartphone</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Smartphone Lipat</h5>
+                    <p class="mb-2">Dipimpin Samsung, Huawei, Motorola, dll. Fusi smartphone dan tablet. Saat ini terkesan mahal dan rapuh, tapi seiring kematangan teknologi mungkin menjadi mainstream.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. AR (Augmented Reality) dan MR (Mixed Reality)</h5>
+                    <p class="mb-2">Seperti yang ditunjukkan Apple Vision Pro, Meta Quest, dll, smartphone akan terhubung dengan kacamata AR, memadukan dunia fisik dan digital. Smartphone menjadi "hub komputasi", menyediakan daya pemrosesan untuk kacamata AR.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. AI First</h5>
+                    <p class="mb-2">AI semakin menjadi inti smartphone. Model bahasa besar (LLM) berjalan di perangkat edge, mungkin suatu hari asisten AI pribadi akan mengelola hidup Anda sepenuhnya.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Keberlanjutan dan Lingkungan</h5>
+                    <p class="mb-2">Material daur ulang, desain tahan lama, kemudahan perbaikan menjadi penting. Regulasi seperti hukum "Hak Perbaikan" Uni Eropa juga berubah.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🌐 Masa Depan Kehidupan Digital</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li><strong>Metaverse dan Ruang Virtual</strong>: Dari pertemuan fisik ke kehadiran di ruang virtual. Smartphone adalah "pintu masuk" ke dunia ini.</li>
+                        <li><strong>Digital Twin</strong>: Dari data smartphone Anda, "salinan digital" Anda dibuat, menyediakan layanan yang dipersonalisasi.</li>
+                        <li><strong>6G dan Konektivitas di Mana Saja</strong>: 6G bukan sekadar peningkatan kecepatan, tapi mewujudkan Internet of Everything (IoT), semua perangkat terhubung seamlessly.</li>
+                        <li><strong>Chip di Otak?</strong>: Teknologi seperti Neuralink bertujuan untuk antarmuka otak-komputer langsung. Tantangan etis dan teknis banyak, tapi kemungkinannya tak terbatas.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎓 Bagaimana Mempersiapkan?</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Terus Belajar</strong>: Teknologi berubah cepat. Tetaplah penasaran dan terus belajar hal baru.</li>
+                        <li><strong>Tingkatkan Literasi Digital</strong>: Evaluasi informasi secara kritis, identifikasi berita palsu, praktikkan keamanan digital.</li>
+                        <li><strong>Miliki Kesadaran Privasi</strong>: Teknologi masa depan semakin personal. Selalu periksa pengaturan privasi, pahami nilai data.</li>
+                        <li><strong>Jaga Keseimbangan</strong>: Teknologi adalah alat, bukan tuan. Hargai waktu offline juga.</li>
+                        <li><strong>Bergabung dengan Komunitas</strong>: Ikuti forum teknologi, grup pengguna, berbagi pengetahuan.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Praktik Terakhir: Renungkan Kehidupan Digital Anda</p>
+                        <p class="mt-1">Sekarang setelah selesai membaca buku ini, apakah hubungan Anda dengan smartphone berubah?</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Tuliskan 3 hal paling penting yang Anda pelajari dari buku ini.</li>
+                            <li>Apa yang ingin Anda perbaiki dari kebiasaan penggunaan smartphone Anda?</li>
+                            <li>Topik teknologi apa yang ingin Anda pelajari selanjutnya?</li>
+                            <li>Apakah ada kesempatan untuk mengajarkan cara menggunakan smartphone kepada keluarga atau teman? Mengajar adalah cara belajar paling efektif.</li>
+                        </ol>
+                        <p class="mt-2">Selamat! Anda telah mulai menapaki jalan "Master Smartphone". Kuasai kehidupan digital, biarkan teknologi bekerja untuk Anda!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lima, Lampiran -->
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Lima, Lampiran</h2>
+
+                <!-- Lampiran A -->
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran A: Panduan Lengkap "Unboxing" Smartphone Baru</h3>
+                    <p class="mb-3">Setelah membeli smartphone baru, apa yang harus dilakukan pertama kali? Ikuti checklist berikut:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📦 Saat Unboxing</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Konfirmasi kemasan belum dibuka (segel masih utuh).</li>
+                        <li>Periksa isi kemasan: bodi smartphone, charger, kabel, pin SIM, kartu garansi, panduan mulai cepat.</li>
+                        <li>Periksa penampilan: goresan, penyok, cacat produksi.</li>
+                        <li>Periksa layar: dead pixel, warna tidak merata (cek dengan layar putih/hitam).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚙️ Pengaturan Awal</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Nyalakan, pilih bahasa dan wilayah.</li>
+                        <li>Hubungkan ke Wi-Fi.</li>
+                        <li>Masuk ke akun (Google atau Apple ID).</li>
+                        <li>Pengaturan keamanan: atur sidik jari, pengenalan wajah, kode PIN.</li>
+                        <li>Nyalakan "Temukan Smartphone Saya".</li>
+                        <li>Periksa pembaruan sistem, update ke versi terbaru.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔒 Penguatan Keamanan</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Nyalakan autentikasi dua faktor.</li>
+                        <li>Periksa pengaturan privasi: lokasi, izin aplikasi.</li>
+                        <li>Nonaktifkan atau uninstall aplikasi pre-install yang tidak perlu.</li>
+                        <li>Install aplikasi keamanan (antivirus).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">☁️ Pengaturan Backup</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Nyalakan iCloud atau Google Backup.</li>
+                        <li>Atur backup otomatis foto.</li>
+                        <li>Konfirmasi sinkronisasi kontak.</li>
+                    </ol>
+                </div>
+
+                <!-- Lampiran B -->
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran B: Referensi Latihan Praktis</h3>
+                    <p class="mb-3">Referensi cepat untuk semua latihan praktis dalam buku ini:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bagian Dasar</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Bab 0: Konfirmasi "KTP Smartphone"</li>
+                        <li>Bab 1: Pahami konfigurasi hardware</li>
+                        <li>Bab 2: Atur folder "Unduhan"</li>
+                        <li>Bab 3: Atur dan kelola hotspot</li>
+                        <li>Bab 4: Audit izin 3 aplikasi</li>
+                        <li>Bab 5: Atur mode "Hari Kerja" dan "Akhir Pekan"</li>
+                        <li>Bab 6: Aktifkan dan simulasi "Kunci Jarak Jauh"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bagian Software</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Bab 7: Backup riwayat chat WeChat ke PC</li>
+                        <li>Bab 8: Scan dokumen dengan smartphone dan hasilkan PDF</li>
+                        <li>Bab 9: Atur kunci yang lebih aman di aplikasi pembayaran</li>
+                        <li>Bab 10: Foto malam dengan mode pro</li>
+                        <li>Bab 11: Konfigurasi paket hiburan "Mode Pesawat" khusus</li>
+                        <li>Bab 12: Buat alur otomasi "Relaksasi Sebelum Tidur"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bagian Aplikasi</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Bab 13: Periksa kesehatan baterai</li>
+                        <li>Bab 14: Konfirmasi konten sinkronisasi akun</li>
+                        <li>Bab 15: Mirroring layar smartphone ke TV</li>
+                        <li>Bab 16: Backup foto dan kontak ke PC secara manual</li>
+                        <li>Bab 17: Simulasi "Restart Paksa"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bagian Pengembangan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Bab 18: Atur "Buku Telepon Terpercaya" (DNS) di smartphone</li>
+                        <li>Bab 19: Berikan perintah pada sekretaris AI</li>
+                        <li>Bab 20: Buat alur otomasi</li>
+                        <li>Bab 21: Reset smartphone dengan aman</li>
+                        <li>Bab 22: Renungkan kehidupan digital Anda</li>
+                    </ul>
+                </div>
+
+                <!-- Lampiran C -->
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran C: Tabel Perbandingan Istilah Teknis</h3>
+                    <p class="mb-3">Penjelasan sederhana istilah teknis yang digunakan dalam buku ini:</p>
+                    
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Istilah</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Penjelasan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">SoC</td>
+                                    <td class="border border-gray-300 px-4 py-2">System on Chip. "Otak" smartphone. Chip yang mengintegrasikan CPU, GPU, dan komponen lain.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RAM</td>
+                                    <td class="border border-gray-300 px-4 py-2">Random Access Memory. Memori kerja sementara. Semakin besar, semakin banyak aplikasi bisa berjalan bersamaan.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">ROM/Storage</td>
+                                    <td class="border border-gray-300 px-4 py-2">Read-Only Memory (sebenarnya flash storage). Menyimpan foto, aplikasi, dll untuk jangka panjang.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OLED</td>
+                                    <td class="border border-gray-300 px-4 py-2">Display Organic LED. Setiap piksel memancarkan cahaya sendiri. Kontras tinggi, hemat daya.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 px-4 py-2">Near Field Communication. Komunikasi nirkabel jarak dekat. Digunakan untuk kartu IC transportasi, pembayaran mobile.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">VPN</td>
+                                    <td class="border border-gray-300 px-4 py-2">Virtual Private Network. Jaringan pribadi virtual. Mengenkripsi komunikasi, melindungi privasi.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">DNS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Domain Name System. Sistem yang mengubah nama domain menjadi alamat IP.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OCR</td>
+                                    <td class="border border-gray-300 px-4 py-2">Optical Character Recognition. Teknologi yang mengenali teks dalam gambar dan mengubahnya menjadi teks.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">AI/Machine Learning</td>
+                                    <td class="border border-gray-300 px-4 py-2">Artificial Intelligence. Kecerdasan Buatan. Digunakan untuk optimasi foto, pengenalan suara, dll di smartphone.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Edge AI</td>
+                                    <td class="border border-gray-300 px-4 py-2">Teknologi yang melakukan pemrosesan AI di perangkat itu sendiri, bukan di cloud. Cepat dan melindungi privasi.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RCS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Rich Communication Services. SMS generasi berikutnya. Mendukung gambar berkualitas tinggi, notifikasi terbaca, dll.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">HTTPS</td>
+                                    <td class="border border-gray-300 px-4 py-2">HTTP Secure. Protokol komunikasi web yang dienkripsi.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Lampiran D -->
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran D: Di Mana Menemukan Sumber Terpercaya?</h3>
+                    <p class="mb-3">Sumber terpercaya untuk mendapatkan informasi tentang smartphone:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Sumber Resmi</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Dukungan Apple</strong>: support.apple.com</li>
+                        <li><strong>Bantuan Google Android</strong>: support.google.com/android</li>
+                        <li><strong>Situs Resmi Merek</strong>: Samsung, Xiaomi, OPPO, vivo, dll</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📰 Media Teknologi</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Domestik</strong>: ITmedia, Engadget Jepang, Gizmodo Jepang</li>
+                        <li><strong>Global</strong>: The Verge, TechCrunch, Android Police, 9to5Mac</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">👥 Komunitas dan Forum</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Reddit</strong>: r/Android, r/iPhone, r/techsupport</li>
+                        <li><strong>Stack Exchange</strong>: Android Enthusiasts, Ask Different (Apple)</li>
+                        <li><strong>Forum Domestik</strong>: 5ch, Komunitas resmi masing-masing merek</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎥 Channel YouTube</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>MKBHD (Marques Brownlee)</li>
+                        <li>Unbox Therapy</li>
+                        <li>Linus Tech Tips</li>
+                        <li>Domestik: Berbagai channel review gadget</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ Sumber yang Perlu Diwaspadai</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>"Hack" dan "trik rahasia" dari sumber tidak jelas</li>
+                        <li>Artikel dengan judul terlalu sensasional</li>
+                        <li>Informasi yang jelas-jelas usang (2-3 tahun lalu)</li>
+                        <li>Review yang tidak menyebutkan sponsorship</li>
+                    </ul>
+                </div>
+
+                <!-- Lampiran E -->
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran E: Ucapan Terima Kasih dan Penjelasan</h3>
+                    <p class="mb-3">Buku ini dibuat sebagai panduan perjalanan dari pemula ke menengah dalam penggunaan smartphone.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🙏 Ucapan Terima Kasih</h4>
+                    <p class="mb-2">Dalam pembuatan buku ini, kami berterima kasih kepada sumber dan komunitas berikut:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Komunitas open source</li>
+                        <li>Media teknologi dan reviewer</li>
+                        <li>Semua orang yang berbagi pengetahuan di forum online</li>
+                        <li>Semua insinyur dan desainer yang memajukan teknologi smartphone</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ Penyangkalan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Informasi dalam buku ini adalah pada saat penulisan. Karena teknologi berubah cepat, sebagian konten mungkin sudah usang.</li>
+                        <li>Operasi smartphone dilakukan dengan risiko sendiri. Pastikan backup data penting.</li>
+                        <li>Tergantung model dan versi OS tertentu, lokasi fungsi dan pengaturan mungkin berbeda.</li>
+                        <li>Konten buku ini untuk tujuan pendidikan, tidak dimaksudkan sebagai rekomendasi produk atau layanan tertentu.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📧 Umpan Balik</h4>
+                    <p class="mb-2">Kami menyambut umpan balik untuk perbaikan buku ini. Jika ada koreksi kesalahan, topik yang ingin ditambahkan, atau saran perbaikan, silakan beri tahu kami.</p>
+
+                    <div class="bg-light rounded-lg p-6 mt-6 text-center">
+                        <p class="text-lg font-semibold mb-2">Terima Kasih Telah Membaca!</p>
+                        <p class="text-secondary">Semoga kehidupan digital Anda menjadi lebih kaya dan aman.</p>
+                        <p class="mt-4 text-sm text-secondary">© 2024 Master Smartphone! Kursus Wajib Digital untuk Pemula</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Tombol Kembali ke Atas -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Script -->
+    <script>
+        // Toggle menu mobile
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Expand/collapse daftar isi
+        document.querySelectorAll('.toc-parent').forEach(parent => {
+            const toggle = parent.querySelector('.toc-toggle');
+            const child = parent.querySelector('.toc-child');
+            
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                child.classList.toggle('open');
+                toggle.classList.toggle('rotate-180');
+            });
+        });
+
+        // Tombol kembali ke atas
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Scroll halus
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Tutup menu di mobile
+                    if (!sidebar.classList.contains('-translate-x-full') && window.innerWidth < 1024) {
+                        toggleMenu();
+                    }
+                }
+            });
+        });
+
+        // Highlight daftar isi saat scroll
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('#sidebar a[href^="#"]');
+
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC(); // Inisialisasi
+    </script>
+</body>
+</html>

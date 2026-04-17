@@ -1,0 +1,2002 @@
+<!DOCTYPE html>
+<html lang="ms-MY">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pakar Telefon Pintar! Kursus Wajib Digital untuk Pemula</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-left: 3px solid #165DFF;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">Pakar Telefon Pintar! Kursus Wajib Digital untuk Pemula</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up mr-1"></i>Kembali ke Atas
+            </a>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-r border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">Kandungan</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">Satu: Asas (Bab 0-6)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Sifar: Halo, Sebelum Mula</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Pertama: Halo, Komputer Peribadi Saya</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kedua: Mengatur Bilik Digital - Pengurusan Fail</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Ketiga: Menyambungkan "Talian Hayat" Telefon - Rangkaian</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Keempat: Pemasangan dan Pengurusan Apl - "Set Kemahiran" Telefon</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kelima: Menyesuaikan Telefon Mengikut Citarasa - Tetapan Asas</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Keenam: Melindungi Kehidupan Digital - Keselamatan dan Privasi</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">Dua: Perisian (Bab 7-12)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Ketujuh: Komunikasi: SMS, Panggilan dan Sosial</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kelapan: Pejabat Mudah Alih dan Pembelajaran</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kesembilan: Pembayaran Mudah Alih dan Perkhidmatan Kehidupan</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kesepuluh: Penggambaran dan Pengurusan Foto</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kesebelas: Hiburan dan Pembacaan</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kedua Belas: Apl Alat yang Disyorkan</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">Tiga: Lanjutan (Bab 13-17)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Ketiga Belas: Sains Bateri dan Pengoptimuman Jimat Kuasa</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Keempat Belas: Sistem Akaun dan Perkhidmatan Awan</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kelima Belas: Penyelarasan Telefon dengan Peranti Lain</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Keenam Belas: Sandaran Data dan Pemindahan</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Ketujuh Belas: Penyelesaian Masalah dan Penyelesaian Kendiri</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">Empat: Kemajuan (Bab 18-22)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kelapan Belas: Pendalaman Rangkaian Mudah Alih dan Keselamatan Maklumat</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kesembilan Belas: Bagaimana AI Berfungsi dalam Telefon Pintar</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kedua Puluh: Pemikiran Pengaturcaraan dan Pengenalan Automasi</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kedua Puluh Satu: Pelupusan Telefon Terpakai dan Warisan Digital</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">Bab Kedua Puluh Dua: Masa Depan Telefon Pintar dan Kehidupan Digital</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">Lima: Lampiran</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran A: Aliran "Panduan Lengkap" Pembukaan Telefon Baru</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran B: Rujukan Latihan Praktikal</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran C: Jadual Perbandingan Istilah Teknikal</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran D: Di Mana Mencari Sumber yang Boleh Dipercayai?</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">Lampiran E: Penghargaan dan Penjelasan</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">Pakar Telefon Pintar! Kursus Wajib Digital untuk Pemula</h1>
+                <p class="text-center text-secondary text-lg">Dari Permulaan hingga Penguasaan, Kuasai Kehidupan Digital Sepenuhnya</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Satu: Asas (Bab 0-6)</h2>
+                <p class="mb-4 text-secondary">Telefon pintar anda lebih berkuasa daripada yang anda bayangkan. Bahagian ini adalah asas kepada semua "kehebatan". Mari kita menyatukan "bahasa" terlebih dahulu, mengenali dan menguasai peranti langkah demi langkah.</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Sifar: Halo, Sebelum Mula</h3>
+                    <p class="mb-3">Sebelum mula meneroka dengan serius, mari kita bincangkan peraturan asas. Ini akan membantu anda memahami semua kandungan yang akan datang.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 📖 Apa yang Buku Ini Bantu (dan Tidak Boleh Bantu)</h4>
+                    <p class="mb-2">Anda akan memahami cara menggunakan telefon pintar secara sistematik dan mengetahui prinsip di sebalik fungsi-fungsinya. Sama ada pengguna Android atau iPhone, kebanyakan konsep adalah sama. Latihan praktikal juga disertakan.</p>
+                    <p class="mb-2">Bukan manual untuk model tertentu, bukan ulasan produk terbaru, dan bukan mengajar ketagihan telefon pintar.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 🔤 Mengenai "Kata Laluan" Kita</h4>
+                    <p class="mb-2">Untuk menerangkan dengan jelas, kita menggunakan beberapa simbol:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>[Nama Butang]: Mewakili butang atau nama apl khusus pada skrin.</li>
+                        <li>> : Mewakili urutan operasi. Contoh: "Ketik [Tetapan] > [Bunyi]".</li>
+                        <li><strong>Tebal</strong>: Sangat penting! Mewakili konsep penting atau amaran keselamatan.</li>
+                        <li><em>Italik</em>: Mewakili pemikiran tambahan atau metafora.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 📱 Android dan iOS, Kedua-duanya Diterangkan</h4>
+                    <p class="mb-2">Nama mungkin berbeza, tetapi fungsinya sama. Contoh: Apl (Android) dan App (iOS), Tetapan (kedua-duanya), Pengurusan Fail (Android) dan Fail (iOS). Fahami ia sebagai perkara yang sama.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. 💾 Kapasiti Telefon: Mengapa Beli 128GB, Tetapi Kurang Daripada 110GB Tersedia?</h4>
+                    <p class="mb-2">Anda mungkin sudah mengetahui unit kapasiti: 1TB = 1024GB, 1GB = 1024MB...</p>
+                    <p class="mb-2">Walau bagaimanapun, kapasiti yang dipaparkan semasa pembelian akan "mengecil" apabila sampai ke tangan anda. Sebab utamanya:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Sistem mengambil ruang: OS seperti dinding struktur rumah, ia adalah keperluan.</li>
+                        <li>Apl pratertib oleh pengilang: Apl yang sudah ada dalam telefon baru juga menggunakan ruang.</li>
+                        <li>Kerugian pemformatan: Atas sebab teknikal, lapisan dalam beg galas juga mengambil isipadu.</li>
+                    </ol>
+                    <p class="mb-2">Apabila membeli telefon, ambil kira penggunaan sistem juga.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Masa Praktikal 👉 Semak "Kad Pengenalan" Telefon Anda</p>
+                        <p class="mt-1">Buka [Tetapan], cari "Maklumat Peranti" (atau pilihan serupa), dan catat: Model telefon, versi OS, jumlah kapasiti storan, kapasiti yang tinggal. Ini adalah langkah pertama untuk mengenalinya.</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Pertama: Halo, Komputer Peribadi Saya</h3>
+                    <p class="mb-3">Telefon pintar anda sebenarnya adalah superkomputer peribadi yang paling peribadi dalam poket anda.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 🧠 Perkakasan Telefon "Organ Dalaman"</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>SoC (Cip)</strong>: "Otak + Jantung" telefon, menentukan prestasi.</li>
+                        <li><strong>RAM (Memori)</strong>: Meja kerja sementara. Semakin besar, semakin selesa membuka banyak apl serentak.</li>
+                        <li><strong>ROM (Storan)</strong>: Gudang simpanan jangka panjang. Tempat untuk semua foto, video, dan apl.</li>
+                        <li><strong>Skrin</strong>: Mata anda. Jenama (OLED warna cerah, LCD mesra mata), resolusi (kejelasan), kadar penyegaran (kelembutan skrol) adalah penting.</li>
+                        <li><strong>Bateri dan Pengecasan</strong>: Cas semasa menggunakan. Jangan tunggu sehingga kosong sepenuhnya, jangan sentiasa cas 100% untuk menjaga bateri. Pengecasan pantas dan wayarles adalah mudah.</li>
+                        <li><strong>Kamera</strong>: Kini pelbagai kanta + algoritma (fotografi pengiraan) bekerjasama untuk mencapai gambar malam dan kesan kabur latar belakang.</li>
+                        <li><strong>Penderia</strong>: Antena kecil telefon. Contoh: Giroskop (perubahan orientasi dalam permainan), NFC (pintu tol dan kad IC), penderia jarak (skrin mati automatik semasa panggilan).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 🤖 OS: Android VS iOS</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Seperti komuniti sumber terbuka, pengilang telefon boleh menyesuaikan secara mendalam, pilihan yang pelbagai.</li>
+                        <li>iOS: Seperti taman yang dijaga dengan rapi, Apple menguruskan perkakasan dan perisian secara berpusat, pengalaman yang seragam.</li>
+                    </ul>
+                    <p class="mb-2">Kedua-dua ekosistem sangat kaya, pilih gaya hidup yang anda suka.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 🎭 Telefon Anda, Berapa Banyak Peranan yang Dimainkan?</h4>
+                    <p class="mb-2">Bukan lagi sekadar telefon: Alat komunikasi, kamera pintar, dompet, portal maklumat, konsol permainan, pejabat mudah alih, pembantu kesihatan, kawalan jauh rumah pintar, malah kad pengenalan digital.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Masa Praktikal 👉 Fahami Konfigurasi Perkakasan</p>
+                        <p class="mt-1">Dalam [Tetapan], cuba cari model pemproses, RAM, dan saiz ROM yang spesifik. Kenali keupayaan telefon anda.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kedua: Mengatur Bilik Digital - Pengurusan Fail</h3>
+                    <p class="mb-3">Telefon yang digunakan lama akan menjadi bersepah. Kebiasaan yang baik bermula dengan pengurusan fail.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 📂 Sistem Storan Tiga Lapisan</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Storan Dalaman</strong>: Kawasan teras. Kelajuan tinggi, sistem dan semua apl berada di sini.</li>
+                        <li><strong>Kad SD (jika disokong)</strong>: Almari pakaian tambahan. Sedikit lebih perlahan, sesuai untuk menyimpan filem dan foto.</li>
+                        <li><strong>Storan Awan</strong>: Peti besi + pemacu segerak. Mencegah kehilangan dan membolehkan penyegerakan antara pelbagai peranti.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 🗂️ Mengenali "Pengurus Fail"</h4>
+                    <p class="mb-2">Android biasanya mempunyai apl [Fail] atau [Pengurusan Fail], iOS mempunyai apl [Fail] standard. Ini adalah "penjelajah" untuk melihat semua fail dalam telefon. Anda boleh melihat folder seperti Muat Turun, DCIM (foto kamera), Gambar (imej).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 🏷️ Di Mana Pelbagai Fail Berada?</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Foto/Video: Biasanya disimpan secara automatik dalam DCIM atau Gambar.</li>
+                        <li>Fail yang dimuat turun: Pada asasnya semua dalam Muat Turun.</li>
+                        <li>Data apl: Tinggal dalam "bilik peribadi" masing-masing (direktori peribadi), mungkin tidak kelihatan.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. 🧹 Kapasiti Tidak Mencukupi? Masa Pembersihan Besar</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Padam cache: Memori sementara apl. Memadam akan membebaskan ruang.</li>
+                        <li>Cari fail besar: Isih mengikut saiz dalam pengurus fail, kesan "penyebab" yang mengambil ruang.</li>
+                        <li>Padam sisa: Selepas nyahpasang apl, fail sampah mungkin kekal. Padam secara manual.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Masa Praktikal 👉 Atur Folder "Muat Turun"</p>
+                        <p class="mt-1">Buka pengurus fail > Masuk folder "Muat Turun". Semak kandungan, padam yang tidak perlu, dan klasifikasikan yang diperlukan (contoh: cipta folder "Bahan Kerja", "Stiker" untuk memasukkannya).</p>
+                    </div>
+                </div>
+
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Ketiga: Menyambungkan "Talian Hayat" Telefon - Rangkaian</h3>
+                    <p class="mb-3">Tanpa rangkaian, telefon pintar menjadi "separuh bodoh".</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 📶 Rangkaian Mudah Alih (4G/5G) dan Penghantaran Data</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Penghantaran data: Jumlah data yang digunakan apabila menggunakan internet pada telefon. Menonton video dan melihat gambar menggunakan paling banyak data.</li>
+                        <li>Tip jimat data: Hidupkan "mod penjimat data" dalam tetapan, kemas kini apl dan tonton video berkualiti tinggi dalam persekitaran Wi-Fi.</li>
+                        <li>Bilangan isyarat ≠ kelajuan rangkaian: Isyarat kuat menunjukkan sambungan yang baik, tetapi kelajuan juga bergantung pada kesesakan stesen pangkalan.</li>
+                        <li><strong>⚠️ Penting! Sebelum perjalanan perniagaan luar negara, MATIKAN [Perayauan Data] untuk mengelakkan bil tinggi!</strong></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 📡 Wi-Fi: Sambungan, Perkongsian dan Keselamatan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sambungan Wi-Fi: [Tetapan] > [WLAN], pilih rangkaian dan masukkan kata laluan.</li>
+                        <li>Perkongsian kata laluan: Kini mudah, Android dan iOS boleh berkongsi kata laluan dengan cepat dari telefon yang sudah disambungkan kepada rakan.</li>
+                        <li>Risiko Wi-Fi awam: Kemungkinan pencurian data oleh penggodam dan hotspot phishing. Peraturan: Elakkan log masuk ke akaun bank, gunakan VPN seboleh mungkin.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 🔵 Bluetooth: Sambungan Fon Kepala, Pemindahan Fail</h4>
+                    <p class="mb-2">Terutamanya digunakan untuk menyambungkan fon kepala wayarles, gelang/jam pintar. Fungsi pemindahan fail kini jarang digunakan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. 🔥 Tethering: Telefon Sebagai Penghala Wi-Fi</h4>
+                    <p class="mb-2">Apabila data anda banyak, anda boleh membuka hotspot untuk tablet atau PC. Perhatian: Menggunakan banyak bateri dan data, tetapkan kata laluan yang kompleks dan hadkan bilangan peranti yang disambungkan.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Masa Praktikal 👉 Tetapkan dan Urus Hotspot</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buka [Tetapan], cari "Tethering" atau "Perkongsian Rangkaian", hidupkan, tetapkan nama dan kata laluan.</li>
+                            <li>Pada peranti lain (contoh: PC), cari dan sambungkan Wi-Fi ini.</li>
+                            <li>Pada telefon, semak sama ada anda boleh menguruskan peranti yang disambungkan atau memutuskan sambungan peranti yang tidak dikenali.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Keempat: Pemasangan dan Pengurusan Apl - "Set Kemahiran" Telefon</h3>
+                    <p class="mb-3">Apl menjadikan telefon serba boleh, tetapi pengurusan yang betul juga diperlukan.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 🏪 Kedai Rasmi: "Supersar Apl" Paling Selamat</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Android: Google Play atau kedai tulen setiap jenama (contoh: Kedai Apl Xiaomi).</li>
+                        <li>iOS: App Store sahaja.</li>
+                    </ul>
+                    <p class="mb-2">Makna keselamatan teras: Disemak, jaminan kemas kini, pembayaran selamat. Garis panduan: Utamakan penggunaan kedai rasmi untuk memuat turun.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 🚨 Sumber Pihak Ketiga: Risiko Sangat Tinggi!</h4>
+                    <p class="mb-2">Memuat turun apl dari Web atau pautan yang tidak diketahui boleh menyebabkan jangkitan virus, pencurian privasi, dan pembayaran tidak sah.</p>
+                    <p class="mb-2">Jika terpaksa: Pastikan sumber benar-benar boleh dipercayai, semak permintaan kebenaran sebelum memasang, imbas dengan apl keselamatan selepas itu.</p>
+                    <p class="mb-2">Nasihat akhir: Dalam tetapan sistem, MATIKAN kebenaran "Pasang apl dari sumber tidak diketahui".</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 📲 Pasang, Kemas Kini, Nyahpasang</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pasang: Ketik "Dapatkan" di kedai. Selepas pemasangan, kebenaran akan diminta semasa pelancaran pertama.</li>
+                        <li>Kemas kini: <strong>Mesti kemas kini!</strong> Terutamanya untuk pembetulan kerentanan keselamatan. Disyorkan mengaktifkan kemas kini automatik.</li>
+                        <li>Nyahpasang: Tekan lama ikon dan seret ke kawasan nyahpasang. Untuk memadam lebih teliti, pergi ke [Tetapan] > [Pengurusan Apl] untuk mencari dan nyahpasang.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. 🛡️ Pengurusan Kebenaran: Anda Adalah "Boss" Apl</h4>
+                    <p class="mb-2">Apl meminta kebenaran (contoh: kenalan, lokasi) kadang-kadang munasabah (peta memerlukan lokasi), kadang-kadang tidak munasabah (lampu suluh meminta kenalan).</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pilihan kebenaran: "Sentiasa benarkan", "Benarkan hanya semasa digunakan", "Tolak", "Tanya setiap kali".</li>
+                        <li>Prinsip pengurusan:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Minimumkan: Jangan berikan yang tidak diperlukan.</li>
+                                <li>Audit selepas: Semak tetapan kebenaran secara berkala, pastikan tiada yang "melebihi kebenaran".</li>
+                                <li>Mengikut situasi: Untuk apl teksi, berikan kebenaran lokasi hanya semasa digunakan.</li>
+                            </ol>
+                        </li>
+                        <li><strong>⚠️ Pantau dengan teliti: Kebenaran Kenalan/SMS, Lokasi masa nyata, Kamera/Mikrofon, Akses Fail.</strong></li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Masa Praktikal 👉 Audit Kebenaran 3 Apl</p>
+                        <p class="mt-1">Pilih 3 apl yang sering digunakan (contoh: Media Sosial, Membeli-belah, Alat), masuk halaman pengurusan kebenaran apl dalam [Tetapan], audit item demi item, matikan kebenaran sensitif yang tidak diperlukan atau tukar kepada "Benarkan hanya semasa digunakan".</p>
+                    </div>
+                </div>
+
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kelima: Menyesuaikan Telefon Mengikut Citarasa - Tetapan Asas</h3>
+                    <p class="mb-3">Hanya beberapa minit tetapan, pengalaman akan meningkat dengan ketara.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.1 🎵 Bunyi dan Getaran</h4>
+                    <p class="mb-2">Tetapkan nada dering dan bunyi pemberitahuan kegemaran. Gunakan mod senyap (dalam mesyuarat), mod jangan ganggu (semasa tidur) dengan fleksibel, dunia akan menjadi senyap dalam sekelip mata. Semasa menyambungkan fon kepala Bluetooth, pastikan output audio telah bertukar.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.2 👆 Paparan dan Kecerahan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kecerahan automatik: Telefon melaraskan secara automatik mengikut cahaya sekeliling. Tanpa usaha.</li>
+                        <li>Potong cahaya biru/Shift Malam: Memotong cahaya biru, menggunakan telefon pada waktu malam lebih selesa.</li>
+                        <li>Mod gelap: Menjimatkan kuasa (terutamanya berkesan pada skrin OLED), dan tidak menyilaukan pada waktu malam.</li>
+                        <li>Kadar penyegaran skrin: Sesetengah model Android boleh dilaraskan. Semakin tinggi (contoh: 120Hz), semakin lancar skrol.</li>
+                        <li>Kunci automatik: Tetapkan kepada 15 atau 30 saat. Selamat dan menjimatkan kuasa.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.3 🎨 Kertas Dinding, Tema dan Skrin Utama</h4>
+                    <p class="mb-2">Tukar kepada kertas dinding yang cantik (gambar statik atau video), mood juga akan berubah. Telefon jenama Android biasanya mempunyai kedai tema, boleh menukar ikon dan gaya secara keseluruhan. Jangan lupa widget skrin utama. Letakkan cuaca, jadual, kawalan muzik pada skrin utama, akses dengan satu ketikan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.4 ♿ Ketercapaian: Pembantu yang Bermanfaat</h4>
+                    <p class="mb-2">Jangan terkejut dengan namanya. Sesiapa sahaja boleh menggunakannya.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Gestur pembesaran: Ketik skrin 3 kali untuk pembesaran separa. Sesuai untuk melihat teks kecil.</li>
+                        <li>Pembantu suara: Siri dan Google Assistant. Tetapkan penggera atau semak cuaca hanya dengan bercakap.</li>
+                        <li>Pembaca skrin (TalkBack/VoiceOver): Direka untuk orang cacat penglihatan, tetapi juga membantu "mendengar" artikel.</li>
+                        <li>Lain-lain: Pembetulan warna (untuk buta warna), pintasan ketik belakang (iPhone), menu ketercapaian (Android) juga berbaloi untuk dicuba.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Masa Praktikal 👉 Tetapkan Mod "Hari Kerja" dan "Hujung Minggu"</p>
+                        <p class="mt-1">Gunakan mod fokus (iOS) atau mod senario untuk membolehkan telefon menyesuaikan diri dengan irama anda secara automatik. Contoh:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Cipta mod "Kerja": Senyapkan pemberitahuan apl yang tidak penting secara automatik, hanya benarkan panggilan dari bos dan keluarga.</li>
+                            <li>Cipta mod "Tidur": Hidupkan pada waktu tetap, senyapkan semua pemberitahuan.</li>
+                            <li>Tetapkan pemasa untuknya. Contoh: Hidupkan mod "Kerja" secara automatik pada hari kerja 9:00-18:00. Jangan tersalah.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Keenam: Melindungi Kehidupan Digital - Keselamatan dan Privasi</h3>
+                    <p class="mb-3">Keselamatan telefon = Keselamatan privasi + Keselamatan harta benda.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 🔒 Skrin Kunci: Garis Pertahanan Fizikal Pertama</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pangkatan tahap keselamatan:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Kata laluan/Kod PIN: Paling selamat. Jaminan akhir (berguna apabila lupa cap jari/pengenalan wajah).</li>
+                                <li>Pengenalan cap jari: Keseimbangan sempurna antara keselamatan dan kemudahan.</li>
+                                <li>Pengenalan wajah: Paling mudah, tetapi keselamatan bergantung pada teknologi (cahaya struktur 3D selamat, foto 2D mudah ditipu).</li>
+                            </ul>
+                        </li>
+                        <li>Tetapkan skrin kunci yang kuat: Pastikan tetapkan kata laluan yang kompleks (jangan gunakan tarikh lahir, 123456), dan aktifkan pengenalan biometrik. Tetapkan masa kunci kepada "segera" atau paling pendek.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 📍 "Cari Telefon": Alat Pencegahan Kecurian Terbaik</h4>
+                    <p class="mb-2"><strong>Pasti hidupkan!</strong> Boleh melakukan:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Lokasi: Cari telefon yang diletakkan di mana, pada peta.</li>
+                        <li>Main bunyi: Bunyikan telefon, sesuai untuk mencari dalam rumah.</li>
+                        <li>Mod hilang: Kunci telefon dari jauh, paparkan nombor hubungan. Orang yang menjumpai boleh menghubungi anda.</li>
+                        <li>Padam dari jauh: Usaha terakhir. Padam semua data (tetapi selepas memadam, lokasi tidak boleh dikesan).</li>
+                    </ul>
+                    <p class="mb-2">Pergi ke [Tetapan], Apple cari "Cari iPhone", Android cari "Cari Peranti" atau perkhidmatan serupa jenama, pastikan status hijau hidup.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 🔧 Kemas Kini Sistem: Tampal Lubang, Tutup Kerentanan</h4>
+                    <p class="mb-2">Tujuan utama kemas kini sistem adalah pembetulan kerentanan keselamatan. Seperti menampal lubang di dinding rumah. Oleh itu, apabila pemberitahuan kemas kini sistem muncul, naik taraf secepat mungkin.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 🚫 Mengenal dan Mencegah Panggilan Penipuan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Modus operandi biasa: Menyamar sebagai polis/khidmat pelanggan (phishing), menang hadiah/bonus kerja sampingan (umpan), penipuan cinta (pembunuhan babi).</li>
+                        <li>Perlindungan standard telefon: Sekat panggilan spam, pencegahan curi kod pengesahan, pengesanan selamat pautan SMS. Jangan lupa hidupkan dalam tetapan.</li>
+                        <li>Ajaran pencegahan penipuan: Jangan percaya, jangan bocorkan, jangan klik, jangan hantar wang, jika ragu-ragu sahkan!</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Masa Praktikal 👉 Aktifkan dan Simulasi "Kunci Jauh"</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pastikan fungsi "Cari Telefon" dihidupkan.</li>
+                            <li>Pada pelayar PC atau telefon lain, log masuk ke akaun perkhidmatan awan yang sepadan (iCloud.com atau tapak perkhidmatan awan jenama).</li>
+                            <li>Cari fungsi "Cari Peranti", cuba "Main Bunyi" atau simulasi "Kunci" pada telefon anda sendiri, fahami keseluruhan aliran. Supaya tidak panik apabila penting.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Dua: Perisian (Bab 7-12)</h2>
+
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Ketujuh: Komunikasi: SMS, Panggilan dan Sosial</h3>
+                    <p class="mb-3">Komunikasi adalah misi paling asal dan teras telefon pintar. Kini, ia telah berkembang dari panggilan dan SMS yang mudah kepada ekosistem kompleks yang merangkumi pemesejan segera, rangkaian sosial, dan e-mel.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 Fungsi Lanjutan Apl Telefon: Lebih Daripada Panggilan</h4>
+                    <p class="mb-2">Apl telefon telefon pintar moden telah melampaui dial mudah, mengintegrasikan alat berkuasa seperti rakaman, pencegahan spam, dan pengenalan pintar.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Rakaman Panggilan (perhatikan pematuhan undang-undang):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fungsi: Merakam kandungan panggilan penting, digunakan untuk minit mesyuarat, temubual, janji pelanggan, atau rekod pertikaian.</li>
+                        <li>Petua undang-undang: Di Malaysia, untuk menggunakan rakaman panggilan sebagai bukti, perlu mendapat persetujuan pihak lain atau digunakan untuk melindungi hak sah sendiri (contoh: melaporkan gangguan atau penipuan). Sebelum perbincangan komersial atau sulit, lebih berhati-hati untuk memberitahu pihak lain secara lisan "panggilan ini mungkin dirakam".</li>
+                        <li>Cara operasi:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Biasanya terdapat butang "Rakam" yang jelas pada skrin panggilan. Cari pilihan "Rakaman Panggilan" dalam tetapan apl telefon, tetapkan peraturan rakaman automatik.</li>
+                                <li>iOS: Sistem tidak menyediakan fungsi rakaman panggilan native. Jika ingin guna, perlu apl rakaman panggilan pihak ketiga.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Sekat Panggilan Spam dan Pengenalan Pintar:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Prinsip: Apl telefon bertanya ke pangkalan data nombor besar melalui rangkaian, memaparkan "panggilan spam", "panggilan penipuan", atau nama syarikat semasa panggilan masuk.</li>
+                        <li>Cara menghidupkan:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Android: Masuk apl telefon > "Tetapan" di sudut kanan atas > Pencegahan spam atau pengenalan pintar. Hidupkan semua pilihan pengenalan dan sekat.</li>
+                                <li>iOS: Masuk [Tetapan] > [Telefon] > [Sekat Panggilan Masuk dan Pengenalan Pemanggil]. Sahkan apl keselamatan pihak ketiga yang menyokong fungsi ini (contoh: Trend Micro Mobile Security), boleh membenarkan operasi. Hidupkan fungsi "Senyapkan Pemanggil Tidak Dikenali" akan senyapkan semua panggilan masuk yang bukan dari kenalan.</li>
+                            </ul>
+                        </li>
+                        <li>Petua: Selepas menerima panggilan spam, tandakan secara proaktif sebagai "spam" atau "penipuan" dalam sejarah panggilan, menyumbang kepada pangkalan data dan membantu orang lain.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Fungsi Bantuan Panggilan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Transkripsi rakaman panggilan: Pada sesetengah telefon jenama Android, selepas rakaman panggilan, butang "transkripsi" disediakan terus di sebelah fail rakaman, menukar kandungan perbualan kepada teks.</li>
+                        <li>Bantuan visual (sarikata masa nyata): Dalam tetapan ketercapaian Android atau bantuan pendengaran iOS, hidupkan fungsi "transkripsi masa nyata", akan menjana sarikata masa nyata untuk semua audio (termasuk panggilan).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 SMS dan iMessage/RCS: Kod Pengesahan dan Penapisan Mesej Spam</h4>
+                    <p class="mb-2">SMS tradisional tidak luput. Ia adalah saluran dipercayai untuk menerima kod pengesahan, pemberitahuan bank, dan maklumat rasmi.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SMS vs iMessage (iOS) / RCS (Android):</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iMessage: Mesej dihantar melalui internet antara peranti Apple, dipaparkan dengan gelembung biru. Menyokong imej video berkualiti tinggi, pemberitahuan dibaca, dan lain-lain, percuma sepenuhnya dengan penyulitan hujung ke hujung.</li>
+                        <li>RCS: Protokol komunikasi generasi akan datang yang dipromosikan oleh pembawa dan Google di seluruh dunia. Mempunyai fungsi serupa dengan iMessage dan LINE, tetapi berasaskan nombor telefon. Boleh semak dan hidupkan "fungsi chat" dalam tetapan apl mesej telefon Android.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Keselamatan Kod Pengesahan:</h5>
+                    <p class="mb-2">Sistem secara automatik mengenal pasti dan mengkategorikan SMS kod pengesahan. Jangan sekali-kali beritahu sesiapa kod pengesahan yang diterima.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Penapisan Mesej Spam:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iOS: Dalam [Tetapan] > [Mesej], hidupkan "Tapis Pengirim Tidak Dikenali".</li>
+                        <li>Android: Dalam tetapan apl mesej, hidupkan "Perkhidmatan Maklumat Pintar" atau "Penapis Mesej Spam".</li>
+                        <li>Petua umum: Untuk SMS promosi spam yang jelas, jangan balas apa-apa (termasuk "TD berhenti langgan"). Padam terus atau tandakan sebagai mesej spam. Membalas mungkin mengesahkan nombor anda aktif.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 LINE/WeChat: Pengurusan Apl Sosial Kebangsaan</h4>
+                    <p class="mb-2">LINE dan WeChat telah melampaui alat komunikasi, menjadi "aplikasi super" yang mengintegrasikan sosial, pembayaran, dan perolehan maklumat.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Sandaran dan Pemindahan Sejarah Chat:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kepentingan: Sejarah chat mengandungi fail penting, kenangan, maklumat perniagaan, tetapi hanya disimpan dalam cache sementara lokal dan pelayan. Kehilangan telefon atau pasang semula apl boleh menyebabkan sejarah hilang selamanya.</li>
+                        <li>Sandaran ke PC (paling boleh dipercayai):
+                            <ol class="list-decimal pl-6 mt-1 space-y-1">
+                                <li>Log masuk ke WeChat/LINE versi PC atau Mac.</li>
+                                <li>Klik menu di sudut kiri bawah > [Pemindahan dan Sandaran] > [Sandaran dan Pemulihan].</li>
+                                <li>Pilih "Sandar sejarah chat ke PC", pilih chat yang ingin disandar pada telefon.</li>
+                            </ol>
+                            Perhatian: Fail sandaran disimpan secara disulitkan secara lokal di PC. Semasa pemulihan, telefon dan PC perlu disambungkan ke rangkaian Wi-Fi yang sama.
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Pembersihan Ruang Storan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Laluan: WeChat [Saya] > [Tetapan] > [Umum] > [Storan]. LINE [Tetapan] > [Umum] > [Pengurusan Storan].</li>
+                        <li>Strategi pembersihan:
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>Cache: Boleh dibersihkan dengan selamat. Data sementara yang dihasilkan semasa apl berjalan.</li>
+                                <li>Sejarah chat: Masuk, kemudian boleh membersihkan secara terperinci mengikut masa, jenis fail, atau chat individu. Contohnya, membersihkan semua fail "video" "lebih dari setahun lalu" dari semua chat sekaligus.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Tetapan Privasi dan Keselamatan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kaedah tambahan: Kawal cara orang lain mencari anda (nombor telefon, ID pengguna, chat kumpulan, dll).</li>
+                        <li>Kebenaran timeline: Tetapkan siapa yang boleh melihat, siapa yang tidak boleh melihat.</li>
+                        <li>Pengurusan kebenaran: Dalam WeChat [Tetapan] > [Maklumat Peribadi dan Kebenaran] > [Pengurusan Kebenaran], boleh semak dan batalkan kebenaran log masuk WeChat laman web dan apl pihak ketiga.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 E-mel: Tetapan dan Penggunaan pada Telefon</h4>
+                    <p class="mb-2">Memproses e-mel dengan cekap pada telefon mudah alih adalah elemen penting pejabat mudah alih.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Menambah Akaun E-mel:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Apl e-mel standard sistem:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iOS: [Tetapan] > [Mel] > [Akaun] > [Tambah Akaun].</li>
+                                <li>Android: Sistem biasanya mempunyai apl "Mel". Buka dan ikut panduan untuk menambah.</li>
+                            </ul>
+                        </li>
+                        <li>Apl klien khusus: Gmail, Outlook, dll. Dioptimumkan untuk e-mel tertentu, fungsi lebih berkuasa.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Teknik Penggunaan E-mel Mudah Alih:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pengurusan pemberitahuan push: Tetapkan cara pemberitahuan berbeza untuk akaun e-mel berbeza.</li>
+                        <li>Operasi gestur: Kebanyakan apl e-mel boleh mengarkibkan, memadam, atau menandakan dengan cepat melalui gestur leret.</li>
+                        <li>Tandatangan: Tetapkan tandatangan e-mel mudah alih profesional.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Perhatian Keselamatan:</h5>
+                    <p class="mb-2">Berhati-hati apabila log masuk e-mel atau menghantar e-mel sensitif pada Wi-Fi awam.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Sandar Sejarah Chat WeChat ke PC</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Mulakan sandaran di PC: Buka WeChat versi PC > Menu di sudut kiri bawah > [Pemindahan dan Sandaran] > [Sandaran dan Pemulihan].</li>
+                            <li>Pilih sandaran ke PC: Klik "Sandar sejarah chat ke PC".</li>
+                            <li>Pilih kandungan sandaran di telefon: Pop timbul akan muncul di WeChat telefon, pilih chat yang ingin disandar dan ketik "Mula Sandaran".</li>
+                            <li>Tunggu sandaran selesai.</li>
+                            <li>(Pilihan) Fahami aliran pemulihan: Dalam tetingkap yang sama, pilihan lain adalah "Pulih sejarah chat ke telefon".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kelapan: Pejabat Mudah Alih dan Pembelajaran</h3>
+                    <p class="mb-3">Telefon pintar telah menjadi stesen kerja mudah alih yang berkuasa dan pusat pembelajaran mudah alih.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 Pemprosesan Dokumen: Sunting dan Cipta di Tapak Tangan</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Pilihan Aplikasi Utama:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>WPS Office: Penyetempatan yang sangat baik, serasi sepenuhnya dengan format Microsoft. Kaya dengan templat percuma dan set alat PDF terbina dalam.</li>
+                        <li>Microsoft 365: Pengalaman yang sangat konsisten dengan Office versi desktop. Keserasian format terbaik, disepadukan secara mendalam dengan storan awan OneDrive.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Teknik Teras Pemprosesan Dokumen Telefon:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Penyegerakan awan adalah teras: Simpan fail kerja dalam pemacu awan berkaitan apl, memastikan simpan automatik, pertukaran tanpa batas antara pelbagai peranti, kerjasama mudah. Ingat?</li>
+                        <li>Kerjasama dan perkongsian: Menyokong perkongsian pautan, tetapkan kebenaran "lihat sahaja" atau "boleh sunting". Menyokong penyuntingan dalam talian serentak oleh ramai orang.</li>
+                        <li>Manfaatkan kaedah input cekap: Gunakan input suara untuk draf teks panjang.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 Apl Nota: Dari Rekod Pantas ke Pengurusan Pengetahuan</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Ringan & Standard Sistem:</h5>
+                    <p class="mb-2">Nota iOS, nota pelekat setiap jenama Android, dll. Kelebihan: Pelancaran pantas, integrasi tinggi dengan sistem, sesuai untuk nota pantas, senarai, idea sementara.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Nota Profesional Serba Boleh:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Evernote: Kelebihan dalam keupayaan pengumpulan maklumat yang berkuasa dan carian teks penuh yang sangat baik.</li>
+                        <li>Notion: Sangat fleksibel, mengintegrasikan nota, pangkalan data, dan papan kanban. Semua kandungan adalah "blok" yang boleh digabungkan secara bebas.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Pengalaman Penggunaan:</h5>
+                    <p class="mb-2">Cuba cipta "kotak masuk" pengetahuan untuk mengumpulkan maklumat, kemas kini secara berkala, cipta pautan antara nota untuk membentuk rangkaian pengetahuan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 Imbasan dan OCR: Fail Kertas ke Versi Elektronik</h4>
+                    <p class="mb-2">Telefon adalah pengimbas mudah alih portabel.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Prinsip Imbasan:</h5>
+                    <p class="mb-2">Mengesan dan meluruskkan tepi dokumen secara automatik, membuang bayangan, menghasilkan imej yang jelas. Fungsi OCR mengenal pasti teks dalam imej dan menukarnya kepada teks yang boleh diedit.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Pilihan Alat:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Standard sistem: "Nota" iOS mempunyai fungsi imbasan terbina dalam. Sesetengah jenama Android mempunyai mod "Imbasan Dokumen" dalam kamera atau apl pengurusan fail.</li>
+                        <li>Apl profesional pihak ketiga: Microsoft Lens, Adobe Scan, CamScanner.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Langkah Operasi:</h5>
+                    <p class="mb-2">Buka apl dan halakan ke dokumen > Tangkap secara automatik atau manual > Laras dan proses > Jalankan OCR > Simpan dan kongsi (boleh gabungkan pelbagai halaman menjadi PDF).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 Penyegerakan Pemacu Awan: Hab Fail Mudah Alih Anda</h4>
+                    <p class="mb-2">Pemacu awan adalah "hab data" yang menghubungkan telefon dan PC.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Perbandingan Perkhidmatan Pemacu Awan Utama:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Google Drive: Penembusan tinggi secara global, ekosistem perkongsian matang.</li>
+                        <li>iCloud Drive: Disepadukan secara mendalam dengan ekosistem Apple. Penyegerakan semula jadi dan selamat.</li>
+                        <li>OneDrive: Disepadukan secara mendalam dengan Windows dan Office 365. Pilihan pertama pengguna ekosistem Microsoft.</li>
+                        <li>Dropbox: Digunakan secara meluas di seluruh dunia, kestabilan dan keserasian yang sangat baik.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Strategi Penggunaan:</h5>
+                    <p class="mb-2">Gunakan iCloud/awan jenama untuk sandaran data teras sistem dan peribadi. Gunakan Google Drive/OneDrive/Dropbox untuk storan fail besar dan kerjasama perniagaan.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Imbas Dokumen di Telefon dan Jana PDF</p>
+                        <p class="mt-1">Langkah operasi (contoh Microsoft Lens atau Nota iOS):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pilih alat: iOS buka "Nota" > Baru > Ketik ikon kamera > "Imbas Dokumen". Android/Umum muat turun dan buka "Microsoft Lens".</li>
+                            <li>Tangkap imbasan: Halakan ke dokumen, tangkap apabila apl mengenal pasti bingkai secara automatik. Boleh tambah pelbagai halaman.</li>
+                            <li>Tingkatkan kesan: Pilih penapis "Hitam Putih" untuk menjadikan dokumen lebih jelas.</li>
+                            <li>Pengenalan OCR: Selepas selesai, pilih output sebagai PDF, klik butang "Salin Teks" atau serupa untuk mengekstrak teks.</li>
+                            <li>Simpan dan namakan: Simpan fail dengan nama yang jelas.</li>
+                            <li>Sahkan dan kongsi: Buka PDF untuk semak kualiti, cuba kongsi melalui e-mel atau LINE.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kesembilan: Pembayaran Mudah Alih dan Perkhidmatan Kehidupan</h3>
+                    <p class="mb-3">Telefon pintar semakin menggantikan dompet, kad pengangkutan, malah kad pengenalan fizikal.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 Pembayaran Mudah Alih: Ikatan, Pembayaran dan Pengurusan Keselamatan</h4>
+                    <p class="mb-2"><strong>Keselamatan adalah prasyarat penggunaan.</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Ikatan Kad Bank:</h5>
+                    <p class="mb-2">Disyorkan ikat hanya 1-2 kad yang sering digunakan. Gunakan akaun elektronik Kelas II/III bank untuk pembayaran mudah alih khusus, mengasingkan risiko akaun utama.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Kaedah Pembayaran:</h5>
+                    <p class="mb-2">Kod pembayaran, imbas untuk bayar, pemindahan, pembayaran NFC telefon. Pastikan hidupkan "Pengesahan semasa pelancaran" atau "Kunci Keselamatan", mencegah penggunaan tidak sah apabila telefon hilang.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Pengurusan Keselamatan Teras:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kata laluan dan pembayaran pengesahan biometrik: Pastikan tetapkan kata laluan pembayaran yang berasingan, dan hidupkan pembayaran cap jari atau pengenalan wajah.</li>
+                        <li>Kunci keselamatan: Dalam tetapan apl pembayaran, cari "Kunci Keselamatan", disyorkan tetapkan supaya perlu pengesahan apabila masuk halaman "Halaman Saya" atau "Dompet".</li>
+                        <li>Pengurusan peranti log masuk: Semak secara berkala, padam kebenaran log masuk peranti yang jarang digunakan.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 Kod Pengangkutan Awam: Metro, Bas</h4>
+                    <p class="mb-2">Telefon menjadi kad pengangkutan anda.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Kaedah Pengaktifan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Apl pembayaran mudah alih: Cari "IC Pengangkutan", aktifkan kad pengangkutan elektronik bandar yang sepadan.</li>
+                        <li>Kad pengangkutan telefon jenama: Dalam apl dompet seperti Apple Pay, Google Pay, aktifkan kad pengangkutan maya. Pembayaran ketik dengan NFC. Respons paling cepat, sokongan luar talian.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Teknik Penggunaan:</h5>
+                    <p class="mb-2">Pada pintu tol yang tidak menyokong NFC, atau apabila bateri telefon habis, boleh tukar ke kod pengangkutan apl pembayaran mudah alih untuk digunakan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 Pembayaran Utiliti Awam, Penghantaran Makanan, Teknik Penggunaan Apl Teksi</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pembayaran utiliti awam: Dalam "Utiliti Awam" apl pembayaran mudah alih, ikat nombor pelanggan, bayar bil air, elektrik, gas, dll.</li>
+                        <li>Penghantaran makanan: Platform berbeza (GrabFood, Foodpanda, dll) mungkin mempunyai diskaun berbeza untuk kedai yang sama. Bandingkan di pelbagai platform.</li>
+                        <li>Teksi: Tetapkan kecemasan hubungi, hidupkan perkongsian perjalanan. Utamakan pembayaran dalam platform, elakkan transaksi luar talian.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 Penyimpanan dan Penggunaan Sijil Pengenalan Elektronik</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Sijil pengenalan elektronik:</h5>
+                    <p class="mb-2">Di sesetengah kawasan, apl kerajaan rasmi telah memperkenalkan kad pengenalan elektronik, lesen memandu elektronik, boleh digunakan dalam situasi tertentu, tetapi tidak terpakai di semua situasi.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Teknik Penyimpanan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tambah ke "Dompet" telefon, boleh dipanggil dengan cepat dari skrin kunci.</li>
+                        <li>Android boleh tekan lama ikon apl, seret fungsi tertentu (contoh: "Kod Kesihatan Saya") ke desktop sebagai pintasan.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Tetapkan Kunci Lebih Selamat untuk Apl Pembayaran</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Sahkan dan hidupkan pembayaran pengesahan biometrik: Sahkan dalam apl pembayaran bahawa pembayaran cap jari/pengenalan wajah dihidupkan.</li>
+                            <li>Tetapkan "Kunci Keselamatan": Dalam tetapan keselamatan apl pembayaran, cari "Kunci Keselamatan", tetapkan supaya perlu pengesahan apabila masuk "Dompet" atau melakukan operasi dana.</li>
+                            <li>Sahkan peranti log masuk: Dalam tetapan keselamatan, padam semua peranti yang tidak dikenali dan tidak digunakan.</li>
+                            <li>Fahami perlindungan akaun: Semak butiran insurans keselamatan akaun apl pembayaran.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kesepuluh: Penggambaran dan Pengurusan Foto</h3>
+                    <p class="mb-3">Bab ini akan menguasai keseluruhan aliran untuk mencipta imej yang hebat dengan telefon dan mengurus kenangan visual dengan cekap.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 Asas Kamera Telefon: Mod Malam, Potret, Mod Pro</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Mod Malam</strong>: Melalui gabungan pelbagai gambar, meningkatkan kecerahan dan perincian di tempat gelap. Semasa mengambil gambar, perlu menahan pegang selama 2-4 saat.</li>
+                        <li><strong>Mod Potret</strong>: Mensimulasikan kesan kedalaman medan cetik kamera SLR (kabur latar belakang). Fokus pada orang, jaga jarak 1-2 meter. Boleh laras kekuatan kabur selepas itu.</li>
+                        <li><strong>Mod Pro</strong>: Kawalan manual parameter teras.
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>ISO: Semakin rendah semakin baik kualiti gambar, tinggi di tempat gelap akan menyebabkan hingar.</li>
+                                <li>Kelajuan pengatup: Tinggi untuk membekukan momen, rendah untuk merakod lintasan (perlu stabil).</li>
+                                <li>Keseimbangan putih: Laraskan kecenderungan warna.</li>
+                                <li>Pampasan dedahan: Mencerahkan atau menggelapkan keseluruhan gambar.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 Komposisi dan Penyuntingan Foto</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Hukum Komposisi Asas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Peraturan pertigaan: Letakkan titik minat pada persilangan pembahagian tiga menegak dan mendatar.</li>
+                        <li>Garis panduan: Gunakan jalan, sungai, dll untuk membimbing mata ke subjek.</li>
+                        <li>Mulakan dengan mudah: Kesedaran mengekalkan gambar mendatar dan menegak semasa mengambil gambar.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Aliran Penyuntingan (menggunakan apl seperti Snapseed, VSCO):</h5>
+                    <ol class="list-alpha pl-6 mb-3 space-y-1">
+                        <li>Pembetulan: Lakukan putaran dan potongan perspektif.</li>
+                        <li>Penyesuaian asas: Laraskan kecerahan, kontras. Turunkan sorot, naikkan bayangan.</li>
+                        <li>Penyuntingan separa: Lakukan penambahan dan penolakan cahaya, pembuangan kecacatan pada kawasan tertentu.</li>
+                        <li>Penggayaan: Tambah penapis, laraskan ton warna.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 Pengurusan Foto: Dari Kekacauan ke Ketertiban</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Fungsi Pengurusan Album Telefon Teras:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Klasifikasi pintar: Mengkategorikan secara automatik mengikut masa, lokasi, orang, situasi.</li>
+                        <li>Carian: Boleh carian global dengan kata kunci, lokasi, masa, malah teks dalam gambar.</li>
+                        <li>Operasi pukal: Selepas pilih pelbagai, boleh kongsi pukal, tambah ke album, atau padam.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Sandaran Foto dan Pembebasan Ruang:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sandaran awan: iOS guna Foto iCloud, hidupkan "Optimumkan Storan iPhone". Android/Platform silang guna Google Foto atau perkhidmatan awan lain.</li>
+                        <li>Pembebasan ruang: Gunakan alat sistem, atau bersihkan secara manual video besar dan foto tangkapan berterusan.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 Tangkapan Skrin dan Rakaman Skrin: Tangkapan dan Perkongsian Maklumat</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Operasi Asas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pintasan biasa: Tekan serentak [Butang Kuasa] + [Butang Kelantangan Atas].</li>
+                        <li>Tangkapan lanjutan: Tangkapan skrin panjang/tangkapan skrin tatal, tangkapan skrin kawasan.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Rakaman Skrin:</h5>
+                    <p class="mb-2">Tambah butang "Rakaman Skrin" ke Pusat Kawalan. Sebelum mula, tekan lama untuk menghidupkan rakaman mikrofon untuk ulasan.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Suntingan Segera:</h5>
+                    <p class="mb-2">Selepas tangkapan skrin, ketik lakaran kecil untuk masuk skrin suntingan, boleh buat anotasi, potong, mozek, dll.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Ambil Gambar Malam dengan Mod Pro</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Bersedia: Cari situasi dengan sumber cahaya yang stabil, disyorkan guna tripod atau menstabilkan telefon.</li>
+                            <li>Masuk mod pro: Buka apl kamera, tukar ke mod "Pro".</li>
+                            <li>Tetapkan parameter:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>ISO: Tetapkan ke nilai terendah (50 atau 100).</li>
+                                    <li>Kelajuan pengatup: Tetapkan dari 1 saat hingga beberapa saat (contoh: 2 saat).</li>
+                                    <li>Fokus: Tetapkan ke fokus manual, tarik peluncur sehingga lampu jauh menjadi jelas.</li>
+                                </ul>
+                            </li>
+                            <li>Tangkap dan sahkan: Ketik pengatup, kekal pegun sepenuhnya. Semak gambar, laras parameter mengikut kecerahan.</li>
+                            <li>Perbandingan pengalaman: Ambil satu gambar juga dengan mod malam automatik, bandingkan perbezaan kedua-duanya.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kesebelas: Hiburan dan Pembacaan</h3>
+                    <p class="mb-3">Telefon pintar adalah pusat hiburan paling penting kita, mengintegrasikan Walkman, pawagam, perpustakaan, dan konsol permainan.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 Muzik dan Podcast: Landskap Bunyi Mudah Alih Anda</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Perkhidmatan Penstriman Dalam Talian:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Antarabangsa: Spotify, Apple Music. Perpustakaan lagu global, pilihan kualiti bunyi kaya.</li>
+                        <li>Tempatan: JOOX, Yonder. Komuniti senarai main dan pengesyoran diperibadikan sebagai ciri.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Podcast:</h5>
+                    <p class="mb-2">Apl: Apple Podcasts, Spotify, Google Podcasts. Teknik penggunaan: Langgan saluran, muat turun terlebih dahulu, laraskan kelajuan main untuk mendengar dengan cekap.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 Pemain Video: Main Semula Lokal dan Penstriman</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Main Semula Video Lokal:</h5>
+                    <p class="mb-2">Disyorkan pemain serba boleh seperti VLC, nPlayer. Menyokong hampir semua format dan sarung luar.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Video Penstriman Dalam Talian:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Platform komprehensif: YouTube, Netflix, Amazon Prime Video, iflix.</li>
+                        <li>Teknik penggunaan: Cache kandungan terlebih dahulu. Manfaatkan fungsi "Cast" untuk menonton di TV.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 Pembacaan E-Buku: Pembaca Epub, PDF</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Pilihan Platform Pembacaan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Novel web dan buku terbitan: Kindle, Apple Books, Google Play Buku.</li>
+                        <li>Buku profesional dan dokumen: Apple Books, Adobe Acrobat Reader (anotasi PDF).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Tetapan Pengoptimuman Pembacaan:</h5>
+                    <p class="mb-2">Sesuaikan warna latar belakang, fon. Manfaatkan fungsi penanda buku, sorotan, nota. Sesetengah apl menyokong bacaan kuat.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.4 Mod Permainan dan Pelarasan Prestasi</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Mod Permainan/Kotak Alat Permainan:</h5>
+                    <p class="mb-2">Diaktifkan secara automatik semasa pelancaran permainan. Menyediakan fungsi seperti pertukaran mod prestasi, mod jangan ganggu, rakaman pantas, alat tetingkap terapung.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Pelarasan Prestasi Manual:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Dalam permainan: Laraskan kualiti gambar, kadar bingkai mengikut prestasi telefon. Keutamaan kelancaran kadar bingkai adalah penting.</li>
+                        <li>Tahap sistem: Jika permainan menyokong, hidupkan mod kadar penyegaran tinggi (contoh: 120Hz) dalam tetapan sistem.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Kebiasaan Permainan Sihat:</h5>
+                    <p class="mb-2">Gunakan fungsi "Masa Skrin" sistem untuk tetapkan amaran masa. Tetapkan pengesahan pembayaran untuk pembelian dalam apl permainan.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Konfigurasikan Pakej Hiburan "Mod Pesawat" Khusus</p>
+                        <p class="mt-1">Langkah operasi: Muat turun dan rancang satu set lengkap kandungan hiburan luar talian terlebih dahulu.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pakej muzik: Muat turun senarai main atau album kegemaran dalam apl muzik.</li>
+                            <li>Pakej video: Cache filem atau drama dalam apl penstriman.</li>
+                            <li>Pakej pembacaan: Muat turun 1-2 buah buku dalam apl e-buku.</li>
+                            <li>Pakej permainan: Pasang 1-2 permainan single player yang boleh dimainkan sepenuhnya luar talian.</li>
+                            <li>Integrasi dan ujian: Hidupkan "Mod Pesawat", sahkan semua kandungan boleh diakses luar talian. Atur apl berkaitan dalam folder bernama "Hiburan Luar Talian".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kedua Belas: Apl Alat yang Disyorkan</h3>
+                    <p class="mb-3">Bab ini memperkenalkan apl alat yang dipilih khusus yang benar-benar meningkatkan kecekapan, menggalakkan kesihatan, dan memudahkan perjalanan keluar.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 Alat Kecekapan: Mengurus Masa dan Perhatian</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Senarai ToDo dan Pengurusan Tugas:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pilihan apl:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Ringkas dan mudah: Nota sistem, Microsoft To Do.</li>
+                                <li>Fungsi lengkap: Todoist, TickTick (pengenalan bahasa semula jadi sangat baik, pemasa Pomodoro disepadukan).</li>
+                                <li>Pengurusan kanban: Trello atau paparan kanban Notion. Sesuai untuk pengurusan visual projek.</li>
+                            </ul>
+                        </li>
+                        <li>Pengalaman penggunaan: Kumpulkan tugas ke dalam "kotak masuk" dengan segera. Kemas kini secara berkala dan tetapkan tarikh. Fokus hanya pada senarai "Hari Ini" setiap hari.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Pemasa Pomodoro:</h5>
+                    <p class="mb-2">Apl: Forest, Focus To-Do. Prinsip: 25 minit fokus, 5 minit rehat, ulangi.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Kalendar:</h5>
+                    <p class="mb-2">Gunakan kalendar sistem atau Google Calendar. Masukkan temu janji, tarikh akhir, malah "blok masa fokus" ke dalam kalendar, memvisualisasikan peruntukan masa.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 Kesihatan dan Senaman: Apple Health, Google Fit, Fitbit</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Panduan dan rekod senaman: Nike Training Club, Strava, dll menyediakan kursus kecergasan yang kaya. Apl kesihatan jenama (contoh: Samsung Health) disepadukan secara mendalam dengan data gelang pintar.</li>
+                        <li>Apple Health / Google Fit: Hab data. Mengumpulkan semua data dari telefon, gelang pintar, apl kesihatan pihak ketiga, membentuk rekod kesihatan yang bersatu. Semak laporan "trend" secara berkala.</li>
+                        <li>Nasihat penggunaan: Tetapkan matlamat yang boleh dicapai. Jangan terlalu banyak peringatan sederhana.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 Perjalanan Keluar: Panduan Serba Boleh Anda</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Peta dan Navigasi:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Malaysia: Google Maps, Waze. Maklumat trafik terperinci dan masa nyata yang kaya.</li>
+                        <li>Perjalanan luar negara: Google Maps. Data global, paparan jalan, ulasan pengguna sebagai kelebihan.</li>
+                        <li>Perjalanan mendaki dan luar: AllTrails. Rekod jejak, boleh muat turun peta luar talian.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Terjemahan:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Perbualan masa nyata: Fungsi "Perbualan" dan "Kamera" terjemahan segera Google Translate adalah alat perjalanan.</li>
+                        <li>Teks dan dokumen: DeepL mempunyai ketepatan terjemahan yang tinggi antara bahasa Eropah.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Perancangan Itinerary:</h5>
+                    <p class="mb-2">Apl seperti "TripIt" menjana laluan secara automatik, menguruskan maklumat tiket penerbangan dan hotel, mencipta jadual perjalanan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.4 Niche tetapi Berkuasa: Pengenalan Alat Automasi</h4>
+                    <p class="mb-2">Ini adalah kunci untuk menaik taraf telefon kepada "pembantu pintar".</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Apa itu Automasi?:</h5>
+                    <p class="mb-2">Membolehkan telefon melaksanakan secara automatik satu siri operasi pratetap apabila syarat yang ditetapkan dipenuhi. Contoh: Apabila pulang ke rumah, sambung ke Wi-Fi secara automatik dan main muzik, apabila tidur, gelapkan skrin secara automatik.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. "Pintasan" iOS:</h5>
+                    <p class="mb-2">Alat automasi rasmi Apple. Tiada pengaturcaraan diperlukan.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Konsep teras: "Pintasan" adalah aliran kerja yang boleh dilaksanakan dengan ketikan manual. "Automasi" adalah arahan yang dilaksanakan secara automatik berdasarkan syarat.</li>
+                        <li>Laluan permulaan: Mula dengan menambah pintasan sedia ada dari "Galeri Pintasan" untuk digunakan. Kemudian cuba cipta pintasan mudah. Akhirnya terokai automasi peribadi dalam tab "Automasi".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Penyelesaian Automasi Android:</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tahap sistem: Setiap sistem jenama (contoh: One UI, MIUI) mungkin mempunyai fungsi automasi asas seperti "Hubungan Senario" yang disepadukan.</li>
+                        <li>Apl tahap senjata: Tasker. Fungsi sangat berkuasa, tetapi lengkung pembelajaran curam.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Latihan Bab Ini: Cipta Aliran Automasi "Relaksasi Tidur"</p>
+                        <p class="mt-1">Rujukan (menggunakan automasi "Pintasan" iOS):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Cipta syarat pencetus: Buka apl Pintasan > [Automasi] > [Cipta Automasi Peribadi] > Pilih "Masa Tertentu" (contoh: 22:30, setiap hari).</li>
+                            <li>Tambah tindakan dilaksanakan: Turunkan kelantangan media > Hidupkan "Mod Jangan Ganggu" > Main senarai main relaksasi tertentu > Kecerahan skrin ke minimum > Paparkan pemberitahuan: "Masa relaksasi tidur. Letakkan telefon."</li>
+                        </ol>
+                        <p class="mt-2">Rujukan Android: Gunakan fungsi "Senario" standard sistem atau Tasker untuk tetapkan syarat pencetus dan tindakan yang serupa.</p>
+                        <p class="mt-1">Langkah latihan: Pilih alat mengikut sistem telefon, cipta automasi bernama "Relaksasi Tidur". Tambah tindakan penting (termasuk pelarasan kelantangan dan menghidupkan mod jangan ganggu). Simpan dan uji.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Tiga: Lanjutan (Bab 13-17)</h2>
+
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Ketiga Belas: Sains Bateri dan Pengoptimuman Jimat Kuasa</h3>
+                    <p class="mb-3">Bateri adalah "jantung tenaga" telefon. Bab ini akan membantu anda memahami ciri-ciri bateri, belajar teknik pengecasan dan jimat kuasa secara saintifik, menghapuskan keresahan bateri sepenuhnya.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 Apa itu Bateri? Kitaran dan Tahap Kesihatan</h4>
+                    <p class="mb-2">Bateri telefon (litium-ion atau litium-polimer) seperti span tenaga: Pengecasan adalah menyerap air (menyimpan elektrik), penyahcasan adalah memerah air (penggunaan). Ingat 3 ciri besarnya:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cas bila-bila masa: Berbeza dengan bateri lama, tiada kesan memori, tidak perlu cas selepas habis sepenuhnya. Menggunakan sehingga 0% atau sentiasa cas 100% sebenarnya merosakkan.</li>
+                        <li>Takut haba: Suhu tinggi adalah musuh utama bateri.</li>
+                        <li>Merosot: Penggunaan jangka panjang akan menurunkan kapasiti maksimum. Ini adalah fenomena normal.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Penunjuk Teras: Bilangan Kitaran dan Tahap Kesihatan</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>1 kitaran bukan 1 kali pengecasan. Contohnya, hari ini guna 60% dan cas penuh, esok guna 40% dan cas penuh, jumlah penggunaan 100% dikira sebagai 1 kitaran.</li>
+                        <li>Tahap kesihatan bateri menunjukkan berapa peratus kapasiti maksimum semasa berbanding baru. Di bawah 80%, ketahanan bateri akan jelas lebih pendek, boleh pertimbangkan pertukaran bateri rasmi.</li>
+                        <li>Cara semak:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Tetapan > Bateri > Status Bateri dan Pengecasan.</li>
+                                <li>Android: Biasanya boleh cari "Status Bateri" dalam tetapan.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 Mitos Pengecasan? Pengecasan Pantas, Pengecasan Wayarles dan Hukum Emas</h4>
+                    <p class="mb-2">Singkirkan khabar angin, cas secara saintifik.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Pengecasan pantas merosakkan bateri?</h5>
+                    <p class="mb-2">Gunakan aksesori pengecasan pantas tulen atau disahkan, kerosakan adalah minimum. Telefon dan pengecas mempunyai kawalan suhu, akan mengurangkan output secara automatik apabila terlalu panas. Jangan guna pengecas pantas jenama murahan.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Bagaimana dengan pengecasan wayarles?</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Mudah: Letak sahaja untuk cas. Sesuai digunakan semasa tidur malam.</li>
+                        <li>Kekurangan: Kecekapan rendah, haba ketara, pengecasan perlahan.</li>
+                        <li>Nasihat: Sesuai untuk pengecasan semalaman (sekali-sekala). Guna pengecasan pantas berwayar apabila perlu cas segera. Tanggalkan sarung tebal semasa penggunaan.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Hukum Penjagaan Emas Bateri</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Julat kuasa optimum: Cuba kekalkan kuasa antara 20%-80%, jangan biarkan "perut kosong" di 0% atau "terlalu kenyang" di 100%.</li>
+                        <li>Cas semalaman selamat? Selamat! Apabila penuh, pengecasan akan berhenti secara automatik, telefon akan dibekalkan kuasa terus dari punca kuasa.</li>
+                        <li>Jangan sekali-kali bermain permainan besar semasa mengecas. Pertindihan haba akan merosakkan bateri.</li>
+                        <li>Tidak menggunakan telefon untuk jangka panjang: Cas kira-kira 50% dan matikan untuk simpanan.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 Ini adalah Teknik Jimat Kuasa Sebenar</h4>
+                    <p class="mb-2">Kesihatan bateri sahaja tidak mencukupi. Tetapan adalah teknik mesti jimat kuasa.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Kesankan "Pemakan Kuasa Besar"</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Skrin (raja penggunaan kuasa): Turunkan kecerahan, pendekkan masa kunci automatik. Telefon skrin OLED mesti hidupkan mod gelap. Jimat kuasa dengan ketara.</li>
+                        <li>Isyarat lemah: Dalam lif, bawah tanah, telefon akan mencari isyarat dengan bersungguh-sungguh, menggunakan kuasa dengan cepat.</li>
+                        <li>5G: Di tempat isyarat lemah, tukar manual ke 4G, ketahanan bateri akan meningkat dengan ketara.</li>
+                        <li>Perkhidmatan lokasi:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Tetapkan kebenaran lokasi apl selain navigasi (contoh: media sosial, membeli-belah) kepada "Benarkan hanya semasa digunakan".</li>
+                                <li>Dalam lokasi sistem, matikan pilihan yang tidak perlu seperti "Iklan berasaskan lokasi".</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Urus "Mulut" Apl</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Hadkan aktiviti latar belakang:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>iPhone: Tetapan > Umum > Kemas Kini Apl Latar Belakang. Matikan semua atau biarkan LINE sahaja.</li>
+                                <li>Android: Dalam tetapan bateri apl, pilih "Larang aktiviti latar belakang" untuk apl yang jarang digunakan.</li>
+                            </ul>
+                        </li>
+                        <li>Matikan pemberitahuan yang tidak perlu: Setiap kali skrin menyala dan bergetar, menggunakan kuasa.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Tali Nyawa: Mod Jimat Kuasa</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Mod jimat kuasa/kuasa rendah: Sistem menurunkan prestasi, menghentikan penyegerakan latar belakang. Sangat berkesan untuk kecemasan sementara.</li>
+                        <li>Mod jimat kuasa ultra/maksimum: Hanya tinggal telefon, SMS, sangat sedikit apl, skrin hitam putih. Memerah kuasa terakhir untuk menyambung nyawa.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktikal: Beri Pemeriksaan Kesihatan kepada Bateri</p>
+                        <p class="mt-1">Matlamat: Guna data untuk kesan penjenayah penggunaan kuasa sebenar.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Semak tahap kesihatan: Dengan kaedah di atas, cari dan catat kapasiti maksimum bateri.</li>
+                            <li>Analisis butiran penggunaan kuasa:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Pergi ke Tetapan > Bateri, lihat graf dan senarai apl di bawah, perhatikan apl mana yang mempunyai masa aktiviti latar belakang yang panjang.</li>
+                                    <li>Android: Pergi ke Tetapan > Bateri > Penggunaan Bateri, lihat ranking penggunaan kuasa perkakasan dan apl.</li>
+                                </ul>
+                            </li>
+                            <li>Rancang langkah:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Jika penggunaan kuasa latar belakang apl tertentu tidak normal → Hadkan.</li>
+                                    <li>Jika penggunaan kuasa "Rangkaian Mudah Alih" tinggi → Ingat kembali sama ada lama di tempat isyarat lemah.</li>
+                                    <li>Jika apl yang jarang digunakan masuk ranking → Pertimbangkan nyahpasang.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Keempat Belas: Sistem Akaun dan Perkhidmatan Awan</h3>
+                    <p class="mb-3">Akaun telefon anda lebih daripada sekadar kata laluan untuk memuat turun apl. Ia adalah "pasport jiwa" kehidupan digital, dan perkhidmatan awan adalah "lebuh raya tidak kelihatan" yang mengalirkan semua data.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 Tiga Akaun Teras Utama: Apple, Google dan Setiap Jenama</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple ID: Kunci Serba Boleh Ekosistem Apple</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fungsi: App Store, penyegerakan iCloud, Cari iPhone, FaceTime, dll, semuanya bergantung padanya. Boleh bertukar tanpa batas antara iPhone, iPad, Mac.</li>
+                        <li>Garis dasar keselamatan: Pastikan hidupkan pengesahan dua faktor! Ini memastikan walaupun kata laluan bocor, orang lain tidak boleh log masuk di peranti baru.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Akaun Google: Teras Android dan Perkhidmatan Google</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fungsi: Penyegerakan kenalan, kalendar, Gmail, penanda buku Chrome, sandaran foto.</li>
+                        <li>Garis dasar keselamatan: Sama penting, hidupkan proses pengesahan dua langkah.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Akaun Setiap Jenama: Pengurus Serba Boleh Tempatan</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Fungsi: Sandaran ruang awan, kedai apl, cari telefon, penyelarasan silang peranti (contoh: kerjasama pelbagai skrin).</li>
+                        <li>Perhatian: Fahami data awan wujud di pelayan tempatan, baca polisi privasi, ketahui data mana yang disegerakkan.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">🔐 Hukum Umum Keselamatan Akaun</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kata laluan kuat + pengurus kata laluan: Urus dengan alat seperti iCloud Keychain atau Bitwarden.</li>
+                        <li>Hidupkan pengesahan dua faktor: Ini adalah tali nyawa pencegahan kecurian.</li>
+                        <li>Semak peranti log masuk secara berkala: Padam peranti yang tidak dikenali.</li>
+                        <li>Berhati-hati dengan pautan phishing: Walaupun diminta kata laluan di pautan tidak diketahui, jangan klik. Taip alamat laman web rasmi secara manual.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 Penyegerakan Awan: Gerakkan Data Sendiri</h4>
+                    <p class="mb-2">Menghidupkan penyegerakan awan, data akan terasa seperti di dalam telefon, tetapi sebenarnya berada di awan dengan selamat, konsisten di semua peranti.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Apa yang Boleh Dilakukan Penyegerakan Awan? (Contoh iCloud)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kenalan, kalendar, nota: Apa sahaja perubahan di mana-mana peranti, segera disegerakkan ke peranti lain.</li>
+                        <li>Foto video: Hidupkan Foto iCloud, semua foto akan dimuat naik, telefon akan kekal versi saiz kecil (menjimatkan ruang). Boleh lihat saiz penuh di mana-mana peranti Apple.</li>
+                        <li>Sandaran penuh automatik: Apabila telefon sedang dicas, dalam keadaan berkunci dan disambungkan ke Wi-Fi, tetapan sistem, susun atur apl, dll akan disandar secara automatik. Menjadi alat ajaib semasa pemulihan telefon baru.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ⚠️ Perbezaan Penting: Penyegerakan vs Sandaran</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Penyegerakan = Konsistensi dua hala: Padam foto di peranti A, di peranti B, C juga hilang. Tujuannya mengekalkan semua peranti sama.</li>
+                        <li>Sandaran = Gambaran satu arah: Seperti mengambil gambar telefon dan menyimpannya. Kemudian padam data lokal, sandaran awan masih kekal. Tujuannya pemulihan.</li>
+                        <li>Ingat: Jangan anggap penyegerakan Foto iCloud sebagai sandaran! Jika padam secara tidak sengaja di semua peranti, juga hilang dari awan. Untuk sandaran sebenar, perlu sandaran penuh di PC (iTunes/Finder) atau storan awan pihak ketiga (muat naik sahaja, tiada pemadaman).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 Perkongsian Keluarga: Beli Sekali, Nikmati Seluruh Keluarga</h4>
+                    <p class="mb-2">Ini adalah alat ajaib untuk berkongsi sumber digital dengan keluarga terdekat.</p>
+                    <p class="mb-2">Contoh "Perkongsian Keluarga" Apple, boleh berkongsi:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Apl, muzik, filem, buku: Apa yang anda beli, seluruh keluarga (maksimum 5 orang) boleh muat turun, tanpa caj tambahan. Cara pembelian perisian paling berbaloi.</li>
+                        <li>Langganan Apple Music, iCloud+, dll: Langganan pelan keluarga biasanya lebih murah daripada peribadi.</li>
+                        <li>Perkongsian lokasi: Lihat lokasi masa nyata keluarga (contoh: pulang sekolah anak). Tetapkan geofence, beritahu apabila tiba atau berlepas. Selamat dan tenang.</li>
+                        <li>Album dan kalendar berkongsi: Letakkan foto bersama, rekod aktiviti keluarga.</li>
+                    </ul>
+                    <p class="mb-2">💡 Perhatian: Hanya jemput ahli keluarga terdekat yang boleh dipercayai sepenuhnya. Perkongsian lokasi adalah dua hala. Hormati privasi masing-masing.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktikal: Sahkan Kandungan Penyegerakan Akaun</p>
+                        <p class="mt-1">Matlamat: Urus secara proaktif, selamat tinggal penyegerakan yang keliru.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Contoh iPhone: Tetapan > Nama anda di bahagian atas.</li>
+                            <li>Semak item penyegerakan iCloud: Ketik "iCloud", semak suis setiap apl dalam senarai.
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Kenalan, kalendar disyorkan hidupkan.</li>
+                                    <li>Fokus pada "Foto": Pastikan faham logik Foto iCloud (padam di satu tempat, padam di mana-mana).</li>
+                                    <li>Penyegerakan apl pihak ketiga yang tidak digunakan boleh dimatikan, menjimatkan ruang.</li>
+                                    <li>Sahkan Sandaran iCloud dihidupkan.</li>
+                                </ul>
+                            </li>
+                            <li>Semak Cari dan lokasi: Sahkan "Cari iPhone" dihidupkan (mesti untuk pencegahan kecurian). Sahkan tetapan lokasi Perkongsian Keluarga adalah seperti yang diharapkan.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kelima Belas: Penyelarasan Telefon dengan Peranti Lain</h3>
+                    <p class="mb-3">Telefon pintar moden adalah pusat digital peribadi anda. Belajar cara bekerjasama dengan peranti lain, kecekapan akan berganda.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 Kerjasama dengan PC: Produktiviti Meletup</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Pemindahan Fail, Selamat Tinggal Kabel Data</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Raja wayarles:
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Ekosistem Apple: AirDrop. Pemindahan segera fail, foto antara iPhone dan Mac. Tiada rangkaian diperlukan, tanpa kehilangan kualiti.</li>
+                                <li>Android+Win: Gunakan fungsi <strong>"Phone Link"</strong>. Lihat foto telefon terus di PC, balas SMS, dll.</li>
+                                <li>Ekosistem jenama: Samsung Flow, Huawei Share, dll. Paparan skrin telefon terus ke PC. Operasi apl telefon dengan tetikus dan papan kekunci PC. Seret fail dua hala.</li>
+                            </ul>
+                        </li>
+                        <li>Sambungan fizikal terus: Sambung ke PC dengan kabel data, pilih mod "Pemindahan Fail". Stabil dan pantas. Sesuai untuk pemindahan fail besar.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Penyambungan Pelbagai Skrin</h5>
+                    <p class="mb-2">Apple Handoff: Apabila melihat halaman web di iPhone, ikon Safari akan muncul di dok program Mac, klik untuk teruskan melihat. Salin teks, boleh tampal terus di peranti lain.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 Penyelarasan dengan Jam Pintar/Gelang: Pembantu Pergelangan Tangan</h4>
+                    <p class="mb-2">Fungsi teras:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Penapisan pemberitahuan: Tolak mesej telefon ke jam. Angkat pergelangan tangan sahaja untuk semak. Abaikan yang tidak penting dengan leret. Mengurangkan bilangan mengeluarkan telefon.</li>
+                        <li>Stesen data kesihatan: Jam mengukur degupan jantung, tidur 24 jam. Data boleh dilihat sebagai laporan dalam apl telefon.</li>
+                        <li>Kawalan jauh serba boleh: Kawalan main muzik telefon dari jauh, digunakan sebagai pengatup kamera telefon (sangat mudah untuk foto berkumpulan).</li>
+                        <li>Ketik di pergelangan tangan: Kad pengangkutan, kad akses pintasan yang dibuka dalam dompet telefon disegerakkan ke jam. Angkat pergelangan tangan sahaja untuk ketik.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 Penyelarasan dengan Rumah Pintar: Kawalan Jauh Umum dalam Poket</h4>
+                    <p class="mb-2">Tiga peranan telefon:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Kawalan jauh: Hidup/matikan lampu terus, laraskan suhu penghawa dingin dalam apl seperti Google Home, Amazon Alexa, Apple Home.</li>
+                        <li>Pengarah senario: Tetapkan "Mod Menonton Filem". Satu ketikan matikan lampu utama, hidupkan lampu suasana, turunkan skrin, laraskan penghawa dingin.</li>
+                        <li>Pusat tetapan: Semua tetapan peranti pintar perlu dilakukan melalui apl telefon.</li>
+                    </ol>
+
+                    <p class="mb-2">Pengesyoran ekosistem:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Gunakan iPhone, utamakan privasi → Pilih peranti yang serasi dengan Apple HomeKit.</li>
+                        <li>Banyak peranti, cari nilai kos → Ekosistem Google Home atau Amazon Alexa paling lengkap.</li>
+                        <li>Gunakan telefon Samsung → Utamakan Samsung SmartThings.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktikal: Paparkan Skrin Telefon ke TV</p>
+                        <p class="mt-1">Matlamat: Kongsi foto video di skrin besar, main permainan. Seronok!</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pastikan telefon dan TV disambungkan ke Wi-Fi yang sama.</li>
+                            <li>Pada TV: Cari dan hidupkan fungsi "Paparan Cermin", "Miracast" atau "AirPlay".</li>
+                            <li>Pada telefon:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Leret ke bawah dari sudut kanan atas untuk buka Pusat Kawalan, ketik "Paparan Cermin". Pilih TV.</li>
+                                    <li>Android: Leret ke bawah tetapan pantas, cari "Paparan Wayarles", "Smart View", pilih TV.</li>
+                                </ul>
+                            </li>
+                            <li>Berjaya! Skrin dan bunyi telefon akan disegerakkan ke TV.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Keenam Belas: Sandaran Data dan Pemindahan</h3>
+                    <p class="mb-3">Foto, sejarah chat adalah harta berharga tanpa nilai. Bab ini akan mengajar cara menginsuranskan aset digital dan bertukar ke model baru dengan lancar.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 Sandaran Penuh: "Klon" Paling Teliti</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Sandaran Lokal PC (Paling Boleh Dipercayai)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>iPhone + PC: Sambung dengan kabel data. Buka iTunes (Win) atau Finder (Mac), klik "Sandar Sekarang". Pastikan tandakan "Sulitkan Sandaran Lokal". Ini akan menyandarkan data kesihatan dan kata laluan. Semasa pemulihan, sambungkan telefon baru dan pilih "Pulih dari Sandaran".</li>
+                        <li>Telefon jenama Android + Perisian PC: Gunakan alat rasmi setiap jenama (Samsung Smart Switch, Xiaomi PC Suite, dll). Fungsi serupa.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. Sandaran Awan (Paling Tanpa Usaha)</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Sandaran iCloud: Hidupkan dalam tetapan. Telefon akan sandar secara automatik apabila sedang dicas, dalam keadaan berkunci dan disambungkan ke Wi-Fi. Semasa pengaktifan iPhone baru, pilih "Pulih dari Sandaran iCloud" sahaja.</li>
+                        <li>Perhatian: 5GB percuma tidak cukup sama sekali. Biasanya perlu naik taraf ke iCloud+ dengan bayaran.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 Sandaran Terpilih: Perlindungan Fokus</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Foto video: Hidupkan Foto iCloud/Google Foto/Foto Awan Jenama, menjadi sandaran berterusan. Atau, salin ke PC secara berkala dengan kabel data.</li>
+                        <li>Kenalan, dll: Selagi wujud dalam akaun iCloud/Google/Jenama, log masuk ke telefon lain akan kembali secara automatik.</li>
+                        <li>⚠️ Sejarah Chat LINE/WeChat (paling penting):
+                            <ul class="list-circle pl-6 mt-1 space-y-1">
+                                <li>Semasa pertukaran model: Gunakan fungsi "Pemindahan Sejarah Chat" dalam apl. Sambung terus dengan Wi-Fi. Pindah dari telefon lama ke telefon baru. Paling disyorkan.</li>
+                                <li>Sandaran jangka panjang: Gunakan fungsi "Sandaran dan Pemulihan" apl versi PC. Sandaran lokal di PC. Paling selamat — ini penting.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 Panduan Pertukaran Model: Tiga Laluan Pemindahan Utama</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Android → Android</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Jenama sama (contoh: Samsung → Samsung): Gunakan apl "Klon Telefon" rasmi. Imbas kod QR, boleh pindah apl dan data. Pengalaman sempurna.</li>
+                        <li>Jenama silang: Alat pertukaran model pihak ketiga, atau sediakan penyegerakan foto kenalan ke awan (contoh: Google Foto) terlebih dahulu, log masuk dan muat turun di telefon baru.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iPhone → iPhone</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pemulihan iCloud: Pilih pulih dari sandaran iCloud semasa pengaktifan telefon baru.</li>
+                        <li>Mula Cepat: Dekatkan iPhone lama dan baru. Animasi tetapan akan muncul di telefon lama, imbas kod QR, semua akan dipindahkan secara wayarles. Pengalaman hebat.</li>
+                        <li>Perhatian: Mengambil masa lama. Kekalkan pengecasan dan rangkaian.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. Platform Silang (Android↔iPhone) Paling Kompleks</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Gunakan alat rasmi (contoh: apl "Move to iOS"). Boleh pindah kenalan, foto, dll.</li>
+                        <li>Had teras: Apl dan data apl (contoh: sejarah chat LINE/WeChat, kemajuan permainan) tidak boleh dipindahkan. Apl perlu pasang semula. Data perlu tangani secara berasingan (contoh: LINE guna pemulihan sandaran PC) — ini penting.</li>
+                        <li>Strategi manual: Foto guna PC atau awan sebagai perantara. Kenalan eksport fail vCard. Sahkan sama ada data apl penting menyokong eksport platform silang.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktikal: Sandar Foto dan Kenalan ke PC Secara Manual</p>
+                        <p class="mt-1">Matlamat: Mempunyai salinan data luar talian yang boleh diuruskan sendiri sepenuhnya, ketenangan mutlak.</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Sediakan kabel data, sambung telefon dan PC.</li>
+                            <li>Sandar foto: Masuk storan dalaman telefon di PC, cari folder DCIM dan Pictures, salin keseluruhannya ke cakera keras PC.</li>
+                            <li>Sandar kenalan:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>iPhone: Sahkan kenalan ada dalam iCloud. Akses versi Web iCloud.com, masuk "Kenalan", pilih semua dan eksport fail vCard, simpan di PC.</li>
+                                    <li>Android: Dalam tetapan apl "Kenalan", cari "Eksport ke Peranti Storan", jana fail .vcf. Salin ke PC dengan kabel data.</li>
+                                </ul>
+                            </li>
+                            <li>Sahkan sandaran: Buka beberapa foto yang disalin di PC, buka fail .vcf, sahkan semua maklumat ada.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Ketujuh Belas: Penyelesaian Masalah dan Penyelesaian Kendiri</h3>
+                    <p class="mb-3">Jangan panik apabila telefon kadang-kadang "sakit". Kebanyakan masalah boleh diselesaikan sendiri. Ini adalah "Manual Kecemasan Telefon" anda.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 Telefon Berat, Panas</h4>
+                    <p class="mb-2">Diagnosis 4 langkah:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Fikirkan kaitan: Selepas kemas kini sistem? Atau selepas pasang apl tertentu?</li>
+                        <li>Semak kapasiti storan: Baki kurang dari 10%, punca paling biasa sistem menjadi berat.</li>
+                        <li>Semak ranking penggunaan kuasa: Dalam tetapan bateri, apl mana menggunakan kuasa di latar belakang.</li>
+                        <li>Semak isyarat: Di tempat isyarat lemah, telefon akan mencari rangkaian dengan bersungguh-sungguh, menyebabkan panas.</li>
+                    </ol>
+
+                    <p class="mb-2">Kaedah rawatan:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Kapasiti tidak mencukupi → Bersihkan storan dengan segera (rujuk bahagian asas).</li>
+                        <li>Apl tertentu menyebabkan masalah → Kosongkan cache apl tersebut dalam tetapan, atau nyahpasang dan pasang semula.</li>
+                        <li>Penyelesaian serba boleh: Mula semula telefon.</li>
+                        <li>Jangan bermain permainan besar semasa mengecas. Haba akan merosakkan bateri.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 Apl Rosak, Tiada Respons</h4>
+                    <p class="mb-2">Aliran pemprosesan standard:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Tutup apl, buka semula.</li>
+                        <li>Kemas kini di kedai apl.</li>
+                        <li>Semak sama ada kebenaran yang diperlukan (contoh: kebenaran storan) tidak sengaja dimatikan.</li>
+                        <li>Kosongkan cache apl (selamat, data tidak hilang).</li>
+                        <li>Usaha terakhir: Kosongkan data/nyahpasang dan pasang semula (maklumat log masuk akan dipadam. Pastikan ingat kata laluan).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 Tidak Boleh Hidup, Tersekat di Skrin Boot "Usaha Terakhir"</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pertama cas selama 30 minit. Mungkin hanya bateri habis sepenuhnya.</li>
+                        <li>Cuba mulakan semula secara paksa (rujuk latihan di bawah). Ini boleh menyelesaikan kebanyakan "kematian palsu".</li>
+                        <li>Masih tidak boleh: Mungkin perlu pembaikan sambungan PC dalam mod pemulihan, tetapi ini akan memadam semua data (boleh pulih jika ada sandaran). Jika masih tidak boleh, mungkin masalah perkakasan, perlu hantar untuk pembaikan.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 Cari Pembaikan Rasmi, Elakkan Perangkap</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Cari yang rasmi sebenar: Pastikan semak "Penyedia Perkhidmatan Sah" di laman web rasmi jenama. Atau cari pintu masuk perkhidmatan dalam tetapan telefon, apl rasmi.</li>
+                        <li>Sebelum pembaikan: Pastikan sandar semua data sendiri! Log keluar dari akaun. Bawa sijil pembelian.</li>
+                        <li>Berhati-hati dengan pembaikan tidak rasmi: Mungkin guna komponen murahan, privasi mungkin bocor. Dan sekali dibuka, jaminan rasmi akan terbatal.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Latihan Praktikal: Simulasi "Mulakan Semula Secara Paksa"</p>
+                        <p class="mt-1">Matlamat: Belajar "kunci serba boleh" ini apabila telefon normal, supaya tidak panik apabila kerosakan sebenar.</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>Perhatian: Selamat untuk beroperasi apabila telefon normal. Data tidak dipadam, tetapi disyorkan simpan kerja di tangan terlebih dahulu.</li>
+                            <li>Kaedah:
+                                <ul class="list-circle pl-6 mt-1 space-y-1">
+                                    <li>iPhone skrin penuh: Tekan kelantangan atas sekali dengan cepat, tekan kelantangan bawah sekali, tekan lama butang kuasa di sisi. Sehingga logo Apple muncul.</li>
+                                    <li>Android umum: Tekan lama butang kuasa 10-15 saat. Sehingga mula semula.</li>
+                                    <li>(Mungkin sedikit berbeza mengikut model tertentu. Jika tidak pasti, cari "[Model telefon anda] mulakan semula secara paksa")</li>
+                                </ul>
+                            </li>
+                            <li>Makna: Latih sekali, kemudian apabila telefon benar-benar tersekat, boleh selesaikan dengan tenang.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Empat: Kemajuan (Bab 18-22)</h2>
+
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kelapan Belas: Pendalaman Rangkaian Mudah Alih dan Keselamatan Maklumat</h3>
+                    <p class="mb-3">🔒 Mengapa perlu ambil berat tentang ini?</p>
+                    <p class="mb-3">Kita menggunakan internet, pembayaran, chat di telefon setiap hari, merasa sangat mudah. Tetapi, pernahkah anda fikir berapa kerap sejarah chat, kata laluan pembayaran, foto anda... maklumat ini "telanjang" di internet? Telefon adalah kembar digital kita, dan keselamatannya adalah keselamatan kita sendiri. Jangan fikir penggodam jauh. Wi-Fi awam yang tidak sengaja boleh menjadi "perangkap". Hari ini, kita akan mendalami "arus bawah tanah" dalam rangkaian mudah alih, menjadikan telefon anda kukuh, jangan salah.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📡 VPN: "Jubah Halimunan" dalam Rangkaian</h4>
+                    <p class="mb-2">Apa sebenarnya?</p>
+                    <p class="mb-2">VPN, nama rasminya Rangkaian Peribadi Maya. Bayangkan anda membina terowong bawah tanah yang disulitkan khusus antara rumah anda dan laman web yang ingin diakses.</p>
+
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Sambungan internet biasa: Telefon anda → Rangkaian awam (rangkaian pembawa, Wi-Fi kafe) → Laman web sasaran. 
+                            <p class="mt-1 text-secondary">Risiko: Di tengah jalan ini, seseorang (penggodam, penyedia Wi-Fi berniat jahat, atau pentadbir rangkaian) mungkin "mengintip" data yang anda hantar.</p>
+                        </li>
+                        <li>Apabila menggunakan VPN: Telefon anda → Terowong penyulitan VPN → Pelayan VPN → Laman web sasaran. 
+                            <p class="mt-1 text-secondary">Kesan: Semua trafik rangkaian anda disulitkan dan dimeterai sebaik sahaja memasuki terowong. "Pengintip" di jalan hanya dapat melihat rentetan aksara yang tidak dapat disahkod. Data akan dinyahsulit hanya apabila sampai ke pelayan VPN, kemudian dihantar ke laman web sebenar. Alamat akses yang dilihat oleh laman web juga adalah alamat pelayan VPN, bukan alamat sebenar anda.</p>
+                        </li>
+                    </ul>
+
+                    <p class="mb-2">Apa yang boleh dilakukan? Selain "melangkah dinding"</p>
+                    <p class="mb-2">Jangan fikir VPN hanya untuk mengakses laman web luar negara. Terdapat banyak kegunaan yang sah:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Perlindungan keselamatan di bawah Wi-Fi awam: Menggunakan Wi-Fi percuma di lapangan terbang, hotel, kafe adalah kawasan berisiko tinggi untuk kebocoran data. Menggunakan VPN adalah seperti memakaikan "perisai" pada sambungan anda.</li>
+                        <li>Akses selamat jauh ke rangkaian dalaman syarikat: Ramai pekerja syarikat log masuk dengan selamat ke sistem dalaman dan pelayan fail melalui VPN semasa bekerja dari rumah.</li>
+                        <li>Perlindungan privasi peribadi, mengelakkan penjejakan: Menghalang pembekal perkhidmatan internet (ISP) daripada merakam dan menganalisis tabiat penggunaan internet anda dan menghantar iklan tepat sasaran.</li>
+                    </ol>
+
+                    <p class="mb-2">⚠️ Notis penting</p>
+                    <p class="mb-2">Teknologi VPN itu sendiri adalah alat keselamatan yang sah, tetapi pastikan membeli dari saluran rasmi atau menggunakan perkhidmatan yang dipercayai. Jangan gunakan "VPN percuma" dari sumber tidak diketahui. Ia mungkin memasang trojan ke telefon anda, atau merakam data secara senyap dan menjualnya — seperti "mengupah pencuri sebagai pengawal".</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🚫 "Perangkap Manis" Wi-Fi Awam</h4>
+                    <p class="mb-2">Wi-Fi percuma memang menarik, tetapi mungkin merupakan "peluru bersalut gula". Selain "penyelesaian muktamad" VPN, anda boleh membina dua garis pertahanan asas.</p>
+                    
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li>Garis pertahanan pertama: Sahkan HTTPS
+                            <p class="mt-1">Apabila mengakses laman web, periksa sama ada permulaan bar alamat adalah http:// atau https://. "s" yang ditambahkan bermaksud Secure (selamat). Ia bermakna komunikasi antara anda dan laman web disulitkan, dan walaupun data disadap, sukar untuk dinyahsulit. Kini, kebanyakan laman web rasmi (bank, e-mel, platform media sosial) menggunakan HTTPS secara lalai. Di bawah Wi-Fi awam, pastikan halaman yang anda akses adalah HTTPS.</p>
+                        </li>
+                        <li>Garis pertahanan kedua: Tingkatkan pertanyaan DNS
+                            <p class="mt-1">Apa itu DNS? Secara ringkas, ia adalah "buku telefon rangkaian". Apabila anda ingin mengakses baidu.com, telefon anda terlebih dahulu bertanya pelayan DNS "Apakah alamat (IP) Baidu?". Pertanyaan DNS tradisional adalah seperti "poskad", tidak disulitkan. Ini bermakna Wi-Fi berniat jahat boleh mengetahui laman web mana yang anda tanya, dan boleh mengubah jawapan untuk mengarahkan anda ke laman web pancingan data!</p>
+                            <p class="mt-1">DNS over TLS (DoT) / DNS over HTTPS (DoH) menyelesaikan masalah ini. Ia menyulitkan pertanyaan "buku telefon" anda, supaya tiada siapa yang tahu siapa yang anda cari, dan jawapan tidak boleh diubah.</p>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🕵️ Adakah "Pelayaran Peribadi" benar-benar menjadikan anda telus?</h4>
+                    <p class="mb-2">Semua pelayar utama mempunyai "mod pelayaran peribadi/rahsia", tetapi adakah ia membuat anda berasa seperti ninja rangkaian? Kebenarannya mungkin mengecewakan.</p>
+                    
+                    <p class="mb-2">Apa yang dilakukannya?</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>👍 Tidak meninggalkan jejak secara tempatan: Selepas menutup tetingkap peribadi, sistem tidak menyimpan sejarah pelayaran, kuki, atau data borang anda. Walaupun keluarga mengambil telefon anda, mereka tidak dapat melihat apa yang anda cari.</li>
+                    </ul>
+
+                    <p class="mb-2">Apa yang tidak dapat dilakukannya:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Menjadikan telus terhadap tingkah laku dalam talian anda: Laman web yang anda akses, pembekal perkhidmatan internet (ISP), pentadbir rangkaian syarikat (jika menggunakan Wi-Fi syarikat) masih boleh melihat rekod akses anda. Laman web juga boleh mengenal pasti anda melalui alamat IP dan kaedah teknikal lain.</li>
+                        <li>Mencegah virus atau perisian hasad: Jika anda tersalah masuk ke laman web berniat jahat, anda masih boleh dijangkiti.</li>
+                        <li>Menyembunyikan fail yang dimuat turun: Fail yang dimuat turun dalam mod peribadi masih disimpan dalam folder muat turun.</li>
+                    </ol>
+
+                    <p class="mb-2">Kesimpulan: Mod pelayaran peribadi adalah seperti <strong>"pemadam tempatan"</strong>, bukan "jubah halimunan rangkaian". Ia sesuai untuk melindungi status log masuk dan sejarah carian daripada dilihat apabila meminjam PC orang lain, tetapi jangan harapkan ia dapat melepaskan semua penjejakan rangkaian.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">Masa Praktikal 👉 Tetapkan "Buku Telefon Dipercayai" (DNS) pada Telefon</p>
+                        <p class="mt-1">Sekarang kita tahu pertanyaan DNS boleh diintip atau diubah, mari kita tukar ke perkhidmatan DNS yang lebih selamat dan pantas. Berikut adalah contoh untuk Android dan iOS.</p>
+                        <p class="mt-2 font-semibold">Kaedah tetapan telefon Android:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buka [Tetapan].</li>
+                            <li>Masuk ke [WLAN], tekan lama rangkaian Wi-Fi yang sedang disambung, pilih [Ubah Rangkaian].</li>
+                            <li>Tap [Pilihan Lanjutan], tukar tetapan IP dari "DHCP" ke "Statik".</li>
+                            <li>Tatal ke bawah, cari "Domain 1" dan "Domain 2" (alamat pelayan DNS).</li>
+                            <li>Masukkan alamat DNS yang dikehendaki. Contoh:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Mementingkan keselamatan dan privasi: Cloudflare DNS 1.1.1.1 dan 1.0.0.1</li>
+                                    <li>Pengalaman menyeluruh yang baik: Google DNS 8.8.8.8 dan 8.8.4.4</li>
+                                </ul>
+                            </li>
+                            <li>Simpan tetapan.</li>
+                        </ol>
+                        <p class="mt-2 font-semibold">Kaedah tetapan iPhone/iPad (persekitaran Wi-Fi):</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buka [Tetapan] > [Wi-Fi].</li>
+                            <li>Tap ikon maklumat [i] di sebelah kanan Wi-Fi yang disambung.</li>
+                            <li>Tatal ke bawah, cari [Tetapan DNS].</li>
+                            <li>Pilih [Manual], tap [Tambah Pelayan].</li>
+                            <li>Masukkan alamat DNS yang disyorkan di atas (contoh: 1.1.1.1).</li>
+                            <li>Tap [Simpan] di sudut kanan atas.</li>
+                        </ol>
+                        <p class="mt-2">Selepas selesai, telefon anda akan mengutamakan penggunaan pelayan DNS yang lebih dipercayai yang telah ditetapkan apabila membuat pertanyaan alamat laman web, lebih selamat, dan respons mungkin juga lebih pantas. Tahniah! Anda telah menutup satu lagi lubang keselamatan!</p>
+                    </div>
+                </div>
+
+                <!-- Bab Kesembilan Belas -->
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kesembilan Belas: Bagaimana AI Berfungsi dalam Telefon Pintar</h3>
+                    <p class="mb-3">👋 Selamat datang ke "pertunjukan sihir" paling hebat dalam telefon pintar. Pelakon utamanya ialah: kecerdasan buatan. Foto cantik "tangkap terus siap" yang anda gunakan setiap hari, pembantu suara yang datang apabila anda bercakap, kaedah input yang semakin memahami anda. Di sebaliknya, terdapat otak yang tidak kelihatan ini. Hari ini, mari kita buka tabir itu dan lihat bagaimana AI "berfikir" dan bekerja dalam telefon pintar anda.</p>
+                    <p class="mb-3">Pertama, kesimpulan teras: AI dalam telefon pintar anda berusaha untuk mendekatkan pengiraan kepada anda. Bukan mendekatkan anda kepada pelayan.</p>
+                    <p class="mb-3">Kata-kata ini agak berpusing-pusing? Mari kita fahami bersama dengan konsep "kembar digital" yang dibincangkan dalam bab sebelumnya. Dalam bab sebelumnya, kita katakan telefon pintar adalah kembara anda, dan apabila data meninggalkannya, ia menghadapi risiko. Dan AI telefon pintar moden sedang cuba memasukkan lebih banyak kecerdasan ke dalam "kembara" ini. Ini yang dipanggil "AI Tepi".</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🤖 Kamera AI: "Bilik Gelap Pembangunan" Anda Berpindah ke Telefon Pintar</h4>
+                    <p class="mb-2">Tangkap-tangkap gambar mungkin fungsi AI yang paling sering kita gunakan. Adakah anda fikir "mengambil gambar" hanya satu klik? Sudah tidak lagi.</p>
+                    <p class="mb-2">Penggambaran telefon pintar awal adalah seperti kamera filem automatik, tekan shutter, dan kualiti gambar hampir sepenuhnya bergantung pada perkakasan sensor dan kanta. Tetapi fotografi pengiraan AI kini adalah seperti memasukkan pasukan editor profesional + jurukamera terus ke butang shutter.</p>
+                    <p class="mb-2">Apakah bezanya?</p>
+                    <p class="mb-2">"Pasukan" ini mula bekerja sebelum anda menekan shutter. Ia mengimbas adegan, mengenal pasti <strong>"Ini langit biru", "Ini wajah manusia", "Ini pemandangan malam"</strong> atau "Ini makanan". Selepas pengenalan selesai, AI serta-merta memanggil skim pengoptimuman yang dilatih khas untuk jenis adegan ini:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Penggambaran potret: Tahu perlu mengaburkan latar belakang, mempercantikkan kulit, dan secara automatik bertukar ke mod potret.</li>
+                        <li>Penggambaran malam: Bukan sekadar menaikkan ISO yang menghasilkan gambar berbunyi, tetapi serta-merta mengambil beberapa gambar gelap secara berterusan, seperti teka-teki, menggabungkan semua bahagian paling jelas dan kurang bunyi dari setiap gambar melalui "pengiraan", menghasilkan satu gambar yang terang dan cantik.</li>
+                        <li>Penggambaran dokumen: Secara automatik meluruskan tepi, meningkatkan kontras, seperti pengimbas.</li>
+                        <li>Mengambil gambar detik pergerakan: Meramalkan trajektori pergerakan, secara automatik menangkap detik paling jelas.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 Masa Praktikal 👉: Buka kamera telefon pintar anda sekarang, arahkan ke adegan berbeza (wajah manusia, tumbuhan, makanan, teks). Banyak telefon pintar akan memaparkan ikon kecil di sudut penting apabila mengenal pasti adegan tertentu (contoh: "Potret", "Makanan", "Teks"). Rasakan proses "pengenalan segera" ini. Ini adalah maklum balas masa nyata yang AI berikan kepada anda sebelum anda menekan shutter.</p>
+                    </div>
+
+                    <p class="mt-4 mb-2">Dengan erti kata lain, menekan shutter sekarang hanya melancarkan langkah terakhir aliran "pembaikan pengiraan" ini. Paparan berputar "sedang memproses" selama satu saat itu adalah bukti otak AI berfungsi pada kelajuan tinggi. Lebih hebat lagi, semua pengiraan kompleks ini semakin banyak dilakukan terus dalam cip AI khusus dalam telefon pintar (contoh: Neural Engine Apple, AI Engine Qualcomm, Seni Bina Da Vinci Huawei, dll.). Lebih pantas, dan privasi juga lebih tinggi.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗣️ Pembantu Suara: Bagaimana "Setiausaha Suara" Anda Memahami Anda?</h4>
+                    <p class="mb-2">"Hey Siri, bagaimana cuaca esok?"</p>
+                    <p class="mb-2">"OK Google, tetapkan penggera pukul 7 pagi esok."</p>
+                    <p class="mb-2">Ini sudah semudah bernafas. Tetapi bagaimana setiausaha suara ini mencapainya?</p>
+                    <p class="mb-2">Aliran kerjanya boleh dipecahkan kepada "3 langkah" yang standard:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Langkah 1: Mendengar (Pengecaman Suara).</strong>
+                            <p class="mt-1">Apabila anda mengucapkan kata kebangkitan ("Hey Siri") dan memberi arahan, mikrofon telefon merakam bentuk gelombang suara anda. Ini adalah isyarat berterusan. Tugas pertama AI adalah memotong gelombang bunyi berterusan ini menjadi serpihan fonem satu demi satu, dan memadankannya dengan perpustakaan kosakata yang telah dilatih besar-besaran untuk menukarkannya kepada teks. Proses ini dipanggil ASR (Pengecaman Suara Automatik). Ia perlu mengatasi loghat, kelajuan bercakap, dan hingar persekitaran anda — sangat hebat.</p>
+                        </li>
+                        <li><strong>Langkah 2: Memahami (Pemahaman Bahasa Semula Jadi - NLP).</strong>
+                            <p class="mt-1">Hanya mendapat teks "ingatkan saya untuk membawa payung pada pukul 7 pagi esok" tidak mencukupi. Perlu memahami maksudnya. Siapa? Bila? Buat apa? Ini memerlukan teknologi NLP. Menganalisis struktur ayat, mengekstrak entiti penting: "pukul 7 pagi esok" (masa), "ingatkan" (maksud/tindakan), "saya" (subjek), "membawa payung" (peristiwa). Ini bersamaan dengan memahami arahan anda — ini penting.</p>
+                        </li>
+                        <li><strong>Langkah 3: Melaksanakan dan Menjawab.</strong>
+                            <p class="mt-1">Selepas memahami maksud anda, pembantu memanggil aplikasi atau modul perkhidmatan yang sepadan dalam telefon pintar. Jika menyemak cuaca, ia mengakses internet untuk mendapatkan data cuaca. Jika menetapkan penggera, ia menulis ke pangkalan data aplikasi "Jam". Jika ditanya "Siapa Messi?", ia mungkin memanggil enjin carian. Akhirnya, ia "bercakap" memberitahu anda hasilnya melalui teknologi sintesis suara (TTS).</p>
+                        </li>
+                    </ol>
+
+                    <p class="mb-2">Dahulu, kebanyakan pengiraan berat langkah 1 dan 2 perlu dihantar ke pelayan awan, tetapi sekarang, pengecaman kata kebangkitan dan pemprosesan beberapa arahan luar talian (contoh: menetapkan penggera, menghidupkan Bluetooth) boleh dilakukan sepenuhnya pada telefon pintar itu sendiri. Ini bermakna respons lebih pantas (tidak menunggu rangkaian), dan privasi juga dilindungi (arahan seperti "padamkan lampu" tidak perlu dimuat naik ke awan).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⌨️ Ramalan Kaedah Input dan Pembantu Penulisan: "Penulis Cepat" Anda yang Menyokong</h4>
+                    <p class="mb-2">Ini mungkin AI yang paling senyap meresap. Anda baru menaip "malam ini", "makan apa" muncul. Anda menaip "bos", "selamat pagi" secara automatik mengikuti di belakang. Di sebaliknya, terdapat pemerhatian dan pembelajaran jangka panjang model pembelajaran mesin tepi.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Model bahasa berasaskan tabiat peribadi anda: Kaedah input secara senyap menganalisis kosakata yang anda gunakan dengan kerap, gabungan frasa, dan rakan sembang anda. Anda ketawa "hahaha" apabila sembang dengan kawan, dan sering menggunakan "minit mesyuarat" apabila berkomunikasi dengan rakan sekerja. Semuanya diingatnya. Lama-kelamaan, "model ramalan" yang dioptimumkan khusus untuk anda terbentuk.</li>
+                        <li>Pemahaman konteks: Bukan hanya melihat perkataan sebelumnya, tetapi memahami konteks ayat yang anda taip. Dalam kotak sembang LINE dan dokumen kerja, cadangan pelengkap yang berbeza mungkin diberikan untuk perkataan permulaan yang sama.</li>
+                        <li>Kemampuan pembetulan salah eja: Apabila anda menaip "mian", ia tahu anda mahu menaip "mikan" dan membetulkannya secara automatik. Ini bukan sekadar pemadanan kamus, tetapi berdasarkan penilaian kebarangkalian yang dilatih dengan berbilion-bilion input.</li>
+                    </ul>
+
+                    <p class="mb-2">🖋️ Melangkah lebih jauh: Pembantu Penulisan AI.</p>
+                    <p class="mb-2">Kini, banyak kaedah input dan aplikasi nota menawarkan fungsi "pembetulan salah eja pintar", "menggilap ayat", "teruskan menulis" adalah aplikasi AI yang lebih kuat. Boleh menggilap "Produk ini sangat bagus" menjadi "Pengalaman pengguna produk ini luar biasa", atau selepas menulis tajuk, mencadangkan beberapa permulaan ayat yang mungkin. Model ini biasanya lebih besar, sebahagiannya mungkin bergantung pada awan, tetapi perkaitan dan ramalan teras masih banyak dilakukan secara tempatan, melindungi privasi penulisan anda.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🧠 AI Tepi vs. AI Awan: Titik Pencapahan Evolusi Telefon Pintar</h4>
+                    <p class="mb-2">Kata kunci yang disebut berulang kali dalam bab sebelumnya: Tepi. Ini mewakili trend teras pembangunan AI telefon pintar: Penenggelaman kuasa pengiraan.</p>
+                    <p class="mb-2">Mari kita lihat perbezaan asas antara "AI Tepi" dan mod "AI Awan" tradisional dalam jadual ringkas:</p>
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Dimensi Perbandingan</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">AI Awan (Mod Tradisional)</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">AI Tepi (Trend Semasa dan Masa Depan)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Ke mana data pergi</td>
+                                    <td class="border border-gray-300 px-4 py-2">Perlu memuat naik data mentah anda seperti foto, rakaman ke pelayan internet.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Data mentah kekal dalam telefon pintar, hanya menyegerakkan hasil pemprosesan atau data tanpa nama yang sangat kecil.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Kelajuan</td>
+                                    <td class="border border-gray-300 px-4 py-2">Bergantung pada kualiti rangkaian, terdapat kelewatan. Perlu menunggu "pemuatan rangkaian" selepas bertanya.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Respons segera, tiada kelewatan. Buka kunci, carian album, terjemahan luar talian, sekelip mata selesai.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Keselamatan Privasi</td>
+                                    <td class="border border-gray-300 px-4 py-2">Data anda "keluar dari rumah", melalui rangkaian awam, berisiko kebocoran berpotensi.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Data tidak meninggalkan "kembara", mengelakkan risiko penyadapan dan penyadapan dalam proses penghantaran secara asas.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Boleh luar talian?</td>
+                                    <td class="border border-gray-300 px-4 py-2">Pada asasnya tidak boleh. Tiada rangkaian ≈ fungsi AI lumpuh.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Fungsi teras boleh digunakan sepenuhnya luar talian. Menyesuaikan lebih banyak senario (contoh: tempat letak kereta bawah tanah, dalam pesawat, luar rumah).</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Penggunaan kuasa dan data</td>
+                                    <td class="border border-gray-300 px-4 py-2">Memerlukan komunikasi rangkaian berterusan. Menggunakan kuasa dan data secara relatif.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Mengurangkan komunikasi kerap dengan awan, lebih menjimatkan kuasa dan data.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">Contoh semasa</td>
+                                    <td class="border border-gray-300 px-4 py-2">Pengecaman suara awal, penjanaan imej AI yang memerlukan penerapan kompleks, dialog model bahasa berskala besar.</td>
+                                    <td class="border border-gray-300 px-4 py-2">Buka kunci wajah/sepitan, pengkelasan wajah dalam album, terjemahan luar talian, sebahagian arahan suara, ramalan kaedah input.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="mb-2">Adakah anda dapat melihat perbezaannya? AI Tepi menjawab dengan sempurna keperluan keselamatan "melindungi kembara digital" yang dibincangkan dalam bab sebelumnya. Membina dinding sempadan "kembara" lebih kukuh dan lebih pintar. Data dan pengiraan cuba kekal di dalam dinding seberapa banyak yang mungkin, meminimumkan risiko dan kelewatan.</p>
+                    <p class="mb-2">Dan "model berskala besar" masa depan juga sedang berkembang ke arah tepi. Kini, dialog ChatGPT lengkap tidak boleh berjalan dalam telefon pintar kecil, tetapi "versi esensi mengecil"nya sudah memasuki telefon pintar dan boleh memproses beberapa tugas tempatan. Pada masa depan, pelayan telefon pintar anda, aplikasi nota, malah NPC permainan mungkin didorong oleh model berskala besar tepi yang anda bawa bersama, memahami tabiat anda sepenuhnya, dan berkhidmat khusus untuk anda.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Latihan Praktikal Bab Ini: Perintahkan Pembantu AI</p>
+                        <p class="mt-1">Mari kita alami keupayaan koordinasi AI telefon pintar secara praktikal. Berikan pembantu suara arahan kompleks yang mengandungi maklumat berbilang lapisan.</p>
+                        <p class="mt-1">Contoh:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Kepada Siri: "Hey Siri, ingatkan saya untuk membawa payung pada pukul 7 pagi esok, dan tukar kalendar pukul 3 petang hari ini ke pukul 4."</li>
+                            <li>Kepada Pembantu Google: "OK Google, ingatkan saya untuk menelefon ibu pada pukul 8 malam ini, dan mainkan lagu hari cerah di Spotify sekarang."</li>
+                            <li>Kepada Bixby: "Hi Bixby, buka imbasan kod QR LINE, dan turunkan kecerahan skrin."</li>
+                        </ol>
+                        <p class="mt-2">Perhatikan bagaimana ia memahami dan melaksanakan siri arahan secara berurutan. Di sebalik ini, menunjukkan NLP membahagikan tugas dan memanggil keupayaan aplikasi berbeza. Tahniah! Anda telah menyelesaikan operasi bersama interaksi bahasa semula jadi manusia-komputer!</p>
+                        <p class="mt-2">Bab ini setakat ini. Adakah anda perasan? AI dalam telefon pintar bukan teknologi makmal jauh, tetapi "enjin tidak kelihatan" di hujung jari anda, di sebalik setiap fokus, setiap kebangkitan, setiap perkataan. Ia semakin pantas, semakin memahami anda, dan semakin selamat — kerana ia cuba mengunci kebijaksanaan dan privasi bersama dalam "kembara digital" anda dengan kukuh.</p>
+                    </div>
+                </div>
+
+                <!-- Bab Kedua Puluh -->
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kedua Puluh: Pemikiran Pengaturcaraan dan Pengenalan Automasi</h3>
+                    <p class="mb-3">🤔 Apabila mendengar perkataan "pengaturcaraan", adakah skrin gelap dan kod kompleks terbayang? Sebenarnya, pemikiran pengaturcaraan mungkin sudah anda gunakan apabila menggunakan telefon pintar. Mari belajar bagaimana "mengautomasikan" menggunakan telefon pintar dan menjadikan kehidupan lebih cekap.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 Pemikiran Pengaturcaraan: Menguraikan "Prosedur"</h4>
+                    <p class="mb-2">Teras pengaturcaraan adalah menguraikan masalah besar menjadi langkah-langkah kecil. Automasi telefon pintar juga sama.</p>
+                    <p class="mb-2">Contoh: Untuk mengautomasikan tugas "semak cuaca setiap pagi pukul 7, dan ingatkan membawa payung jika hujan":</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Pencetus (bila): Setiap pagi pukul 7.</li>
+                        <li>Syarat (apa): Dapatkan ramalan cuaca, semak sama ada hujan.</li>
+                        <li>Tindakan (buat apa): Jika hujan, hantar pemberitahuan.</li>
+                    </ol>
+                    <p class="mb-2">Ini adalah pemikiran pengaturcaraan. Menguraikan tugas kompleks kepada 3 elemen: pencetus, syarat, tindakan.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Alat Automasi Telefon Pintar</h4>
+                    <p class="mb-2">Telefon pintar anda mempunyai alat automasi berkuasa yang terbina dalam.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">iOS: Pintasan (Shortcuts)</h5>
+                    <p class="mb-2">Alat automasi yang disediakan oleh Apple. Tiada pengaturcaraan diperlukan, hanya gabungkan blok untuk mencipta aliran automasi.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Pencetus: Masa, lokasi, sambungan Wi-Fi, pelancaran aplikasi, dll.</li>
+                        <li>Tindakan: Hantar mesej, mainkan muzik, ubah tetapan, lancarkan aplikasi, dll.</li>
+                        <li>Contoh: "Apabila sambung ke Wi-Fi di rumah, hidupkan lampu dan mainkan muzik".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Android: Tasker, Automate, atau Fungsi Jenama Tersendiri</h5>
+                    <p class="mb-2">Android lebih terbuka, membolehkan automasi lebih berkuasa.</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Tasker: Aplikasi automasi Android paling berkuasa. Boleh mengautomasikan hampir semua operasi.</li>
+                        <li>Fungsi jenama: "Rutin Bixby" Samsung, "Senario" Xiaomi, dll.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎯 Senario Automasi Praktikal</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Mod tidur</strong>: Apabila tiba masa tidur, secara automatik menghidupkan mod jangan ganggu, menurunkan volum, memotong cahaya biru.</li>
+                        <li><strong>Mod memandu</strong>: Apabila sambung ke Bluetooth kereta, secara automatik menghidupkan mod memandu, memberitahu panggilan masuk melalui suara.</li>
+                        <li><strong>Penjimatan bateri</strong>: Apabila bateri di bawah 20%, secara automatik menghidupkan mod jimat kuasa, mematikan fungsi yang tidak diperlukan.</li>
+                        <li><strong>Peringatan berasaskan lokasi</strong>: Apabila menghampiri pasar raya, maklumkan senarai belian.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Latihan Praktikal Bab Ini: Cipta Aliran Automasi</p>
+                        <p class="mt-1">Buka alat automasi telefon pintar anda dan cipta aliran berikut:</p>
+                        <p class="mt-1">"Setiap malam pukul 10, hidupkan mod jangan ganggu dan maklumkan cuaca esok".</p>
+                        <p class="mt-2">Langkah:</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Buka aplikasi automasi (iOS guna "Pintasan", Android guna Tasker atau fungsi jenama).</li>
+                            <li>Cipta automasi/rutin baharu.</li>
+                            <li>Tetapkan pencetus: masa (setiap malam pukul 10).</li>
+                            <li>Tambah tindakan:
+                                <ul class="list-disc pl-6 mt-1 space-y-1">
+                                    <li>Hidupkan mod jangan ganggu.</li>
+                                    <li>Dapatkan maklumat cuaca dan maklumkan.</li>
+                                </ul>
+                            </li>
+                            <li>Simpan dan uji.</li>
+                        </ol>
+                        <p class="mt-2">Ini adalah amalan pemikiran pengaturcaraan. Menggabungkan syarat dan tindakan untuk memberikan "kecerdasan" kepada telefon pintar.</p>
+                    </div>
+                </div>
+
+                <!-- Bab Kedua Puluh Satu -->
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kedua Puluh Satu: Pelupusan Telefon Terpakai dan Warisan Digital</h3>
+                    <p class="mb-3">📱 Selepas membeli telefon pintar baharu, apa yang anda buat dengan telefon lama? Buang ke dalam tong sampah? Itu membazir dan mungkin berbahaya. Dalam bab ini, kita akan belajar bagaimana melupuskan telefon lama dengan selamat dan menguruskan warisan digital.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔄 Guna Semula Telefon Lama</h4>
+                    <p class="mb-2">Telefon lama masih merupakan "komputer kecil" yang boleh digunakan. Boleh digunakan semula untuk tujuan berikut:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Pemain media khusus</strong>: Peranti khusus untuk muzik, podcast, video.</li>
+                        <li><strong>Bingkai foto digital</strong>: Paparkan tayangan slaid dengan Google Foto, dll.</li>
+                        <li><strong>Kamera keselamatan rumah</strong>: Jadikan kamera pengawasan dengan aplikasi khusus.</li>
+                        <li><strong>Konsol permainan khusus</strong>: Main permainan retro dengan emulator.</li>
+                        <li><strong>Pengawal rumah pintar</strong>: Hab rumah pintar yang sentiasa bersambung.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🗑️ Langkah Wajib Sebelum Menyerahkan Telefon</h4>
+                    <p class="mb-2"><strong>⚠️ Penting: Hanya "memadam" tidak mencukupi!</strong></p>
+                    <p class="mb-2">Sebelum menjual, menderma, atau mengitar semula telefon pintar, pastikan melakukan langkah berikut:</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Sandaran</strong>: Sandarkan semua data penting (foto, kenalan, data aplikasi).</li>
+                        <li><strong>Log keluar dari akaun</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>Akaun Google (Android).</li>
+                                <li>Apple ID (iPhone).</li>
+                                <li>Aplikasi pihak ketiga (LINE, WeChat, dll).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Tetapan semula kilang (kembalikan ke tetapan asal)</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>[Tetapan] > [Sistem] > [Tetapan Semula] > [Padamkan semua data] (Android).</li>
+                                <li>[Tetapan] > [Umum] > [Pindahkan atau Tetapkan Semula iPhone] > [Padamkan semua kandungan dan tetapan] (iOS).</li>
+                            </ul>
+                        </li>
+                        <li><strong>Sahkan penyulitan</strong>: Telefon pintar moden disulitkan secara lalai, tetapi model lama perlu mengesahkan tetapan penyulitan manual.</li>
+                        <li><strong>Tanggalkan kad SD dan kad SIM</strong>: Ini juga mungkin mengandungi maklumat peribadi.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚰️ Warisan Digital: Masa Depan "Kembara Digital" Anda</h4>
+                    <p class="mb-2">Jika sesuatu berlaku kepada anda, apa akan jadi kepada aset digital anda (foto, akaun media sosial, mata wang kripto, dll)?</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">Langkah pengurusan warisan digital:</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>Inventori aset</strong>: Senaraikan aset digital yang anda miliki (akaun, langganan, pembelian digital, dll).</li>
+                        <li><strong>Tetapkan kenalan kecemasan pengurus kata laluan</strong>: 1Password, Bitwarden, dll. menawarkan fungsi kenalan kecemasan, membenarkan akses kepada orang yang dipercayai dalam keadaan tertentu.</li>
+                        <li><strong>"Kenalan Warisan" Apple/Google</strong>:
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>iOS 15.2 dan kemudian: Tetapan > Log masuk dan Keselamatan > Kenalan Warisan.</li>
+                                <li>Google: Tetapkan Pengurus Akaun Tidak Aktif.</li>
+                            </ul>
+                        </li>
+                        <li><strong>Masukkan aset digital dalam wasiat</strong>: Runding dengan peguam, catatkan cara pelupusan aset digital dalam dokumen undang-undang.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Latihan Praktikal Bab Ini: Tetapkan Semula Telefon dengan Selamat</p>
+                        <p class="mt-1">(Perhatian: Latihan ini hanya dilakukan apabila benar-benar menyerahkan telefon!)</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Pastikan semua data telah disandar.</li>
+                            <li>Log keluar dari semua akaun.</li>
+                            <li>Lakukan tetapan semula kilang.</li>
+                            <li>Selepas dimulakan semula, pastikan skrin persediaan dipaparkan (bukti tiada data peribadi yang tinggal).</li>
+                            <li>Tanggalkan kad SD dan kad SIM.</li>
+                        </ol>
+                        <p class="mt-2">Juga, pertimbangkan untuk menetapkan kenalan warisan. Semak Tetapan > Log masuk dan Keselamatan > Kenalan Warisan (iOS) atau Pengurus Akaun Tidak Aktif Google.</p>
+                    </div>
+                </div>
+
+                <!-- Bab Kedua Puluh Dua -->
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Bab Kedua Puluh Dua: Masa Depan Telefon Pintar dan Kehidupan Digital</h3>
+                    <p class="mb-3">🔮 Ke manakah telefon pintar menuju? Lipat? Cermin mata AR? Cip dalam otak? Dalam bab terakhir ini, kita akan meneroka trend teknologi masa depan dan memikirkan bagaimana bersedia untuk kehidupan digital.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Trend Evolusi Telefon Pintar</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. Telefon Pintar Lipat</h5>
+                    <p class="mb-2">Dipimpin oleh Samsung, Huawei, Motorola, dll. Gabungan telefon pintar dan tablet. Kini mempunyai tanggapan mahal dan rapuh, tetapi mungkin menjadi arus perdana dengan kematangan teknologi.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. AR (Realiti Ditambah) dan MR (Realiti Campuran)</h5>
+                    <p class="mb-2">Seperti yang ditunjukkan oleh Apple Vision Pro, Meta Quest, dll., telefon pintar akan bekerjasama dengan cermin mata AR untuk menggabungkan dunia fizikal dan digital. Telefon pintar berfungsi sebagai "hab pengiraan", menyediakan kuasa pemprosesan kepada cermin mata AR.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. AI Dahulu</h5>
+                    <p class="mb-2">AI semakin menjadi teras telefon pintar. Model bahasa berskala besar (LLM) berjalan pada peranti tepi, dan pembantu AI peribadi mungkin menguruskan kehidupan anda sepenuhnya suatu hari nanti.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. Kelestarian dan Alam Sekitar</h5>
+                    <p class="mb-2">Bahan kitar semula, reka bentuk jangka hayat panjang, kemudahan pembaikan menjadi penting. Peraturan seperti "Hak Pembaikan" Kesatuan Eropah juga sedang berubah.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🌐 Masa Depan Kehidupan Digital</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-2">
+                        <li><strong>Metaverse dan ruang maya</strong>: Dari mesyuarat fizikal kepada kehadiran dalam ruang maya. Telefon pintar adalah "pintu masuk" ke dunia ini.</li>
+                        <li><strong>Kembar digital</strong>: Dari data telefon pintar anda, "salinan digital" anda dicipta, menyediakan perkhidmatan diperibadikan.</li>
+                        <li><strong>6G dan sambungan di mana-mana</strong>: 6G bukan sekadar peningkatan kelajuan, tetapi merealisasikan Internet Segala Perkara (IoT), semua peranti disambung secara lancar.</li>
+                        <li><strong>Cip dalam otak?</strong>: Teknologi seperti Neuralink bertujuan untuk antara muka otak-komputer langsung. Cabaran etika dan teknikal banyak, tetapi kemungkinan tidak terhad.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎓 Bagaimana Bersedia?</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>Terus belajar</strong>: Teknologi berubah dengan cepat. Kekal ingin tahu dan terus belajar perkara baharu.</li>
+                        <li><strong>Tingkatkan literasi digital</strong>: Menilai maklumat secara kritikal, mengenal pasti berita palsu, mengamalkan keselamatan digital.</li>
+                        <li><strong>Mempunyai kesedaran privasi</strong>: Teknologi masa depan lebih diperibadikan. Sentiasa semak tetapan privasi, fahami nilai data.</li>
+                        <li><strong>Ambil keseimbangan</strong>: Teknologi adalah alat, bukan tuan. Hargai masa luar talian juga.</li>
+                        <li><strong>Sertai komuniti</strong>: Sertai forum teknologi, kumpulan pengguna, kongsi pengetahuan.</li>
+                    </ol>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">🚀 Latihan Akhir: Renungkan Kehidupan Digital Anda</p>
+                        <p class="mt-1">Sekarang setelah selesai membaca buku ini, adakah hubungan anda dengan telefon pintar telah berubah?</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>Tulis 3 perkara paling penting yang dipelajari dari buku ini.</li>
+                            <li>Apakah aspek tabiat penggunaan telefon pintar anda yang ingin diperbaiki?</li>
+                            <li>Apakah topik teknologi yang ingin dipelajari seterusnya?</li>
+                            <li>Adakah peluang untuk mengajar keluarga atau rakan cara menggunakan telefon pintar? Mengajar adalah pembelajaran paling berkesan.</li>
+                        </ol>
+                        <p class="mt-2">Tahniah! Anda telah mula melangkah di jalan "Master Telefon Pintar". Kuasai kehidupan digital dan biarkan teknologi bekerja untuk anda!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Lima: Lampiran -->
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">Lima: Lampiran</h2>
+
+                <!-- Lampiran A -->
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran A: Aliran "Panduan Lengkap" Pembukaan Telefon Pintar Baharu</h3>
+                    <p class="mb-3">Selepas membeli telefon pintar baharu, apa yang perlu dilakukan dahulu? Ikuti senarai semak di bawah:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📦 Semasa Membuka</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Pastikan pembungkus belum dibuka (meterai masih utuh).</li>
+                        <li>Periksa kandungan: badan telefon pintar, pengecas, kabel, pin SIM, sijil jaminan, panduan permulaan pantas.</li>
+                        <li>Periksa penampilan: tiada calar, penyok, atau kecacatan pembuatan.</li>
+                        <li>Periksa skrin: tiada piksel mati, warna tidak sekata (periksa dengan skrin putih/hitam).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚙️ Tetapan Awal</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Hidupkan, pilih bahasa dan rantau.</li>
+                        <li>Sambung ke Wi-Fi.</li>
+                        <li>Log masuk ke akaun (Google atau Apple ID).</li>
+                        <li>Tetapan keselamatan: tetapkan cap jari, pengecaman wajah, kod PIN.</li>
+                        <li>Hidupkan "Cari Telefon Pintar Saya".</li>
+                        <li>Semak kemas kini sistem dan kemas kini ke versi terkini.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🔒 Pengukuhan Keselamatan</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Hidupkan pengesahan dua faktor.</li>
+                        <li>Semak tetapan privasi: maklumat lokasi, kebenaran aplikasi.</li>
+                        <li>Lumpuhkan atau nyahpasang aplikasi pra-dipasang yang tidak diperlukan.</li>
+                        <li>Pasang aplikasi keselamatan (anti-virus).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">☁️ Tetapan Sandaran</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>Hidupkan sandaran iCloud atau Google.</li>
+                        <li>Tetapkan sandaran automatik foto.</li>
+                        <li>Sahkan penyegerakan kenalan.</li>
+                    </ol>
+                </div>
+
+                <!-- Lampiran B -->
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran B: Rujukan Latihan Praktikal</h3>
+                    <p class="mb-3">Rujukan pantas semua latihan praktikal yang terkandung dalam buku ini:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bahagian Asas</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Bab 0: Semak "Kad Pengenalan" Telefon Pintar</li>
+                        <li>Bab 1: Fahami Konfigurasi Perkakasan</li>
+                        <li>Bab 2: Susun folder "Muat Turun"</li>
+                        <li>Bab 3: Tetapkan dan urus titik panas</li>
+                        <li>Bab 4: Audit kebenaran 3 aplikasi</li>
+                        <li>Bab 5: Tetapkan mod "Hari Bekerja" dan "Hari Rehat"</li>
+                        <li>Bab 6: Hidupkan dan simulasikan "Kunci Jauh"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bahagian Perisian</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Bab 7: Sandar sejarah sembang WeChat ke PC</li>
+                        <li>Bab 8: Imbas dokumen dengan telefon pintar dan jana PDF</li>
+                        <li>Bab 9: Tetapkan kunci lebih selamat pada aplikasi pembayaran</li>
+                        <li>Bab 10: Tangkap foto pemandangan malam dengan mod pro</li>
+                        <li>Bab 11: Konfigurasikan pakej hiburan "Mod Pesawat" khusus</li>
+                        <li>Bab 12: Cipta aliran automasi "Relaksasi Sebelum Tidur"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bahagian Lanjutan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Bab 13: Berikan pemeriksaan kesihatan pada bateri</li>
+                        <li>Bab 14: Semak kandungan penyegerakan akaun</li>
+                        <li>Bab 15: Cerminan skrin telefon pintar ke TV</li>
+                        <li>Bab 16: Sandar foto dan kenalan ke PC secara manual</li>
+                        <li>Bab 17: Simulasikan "Mulakan Semula Secara Paksa"</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Bahagian Kemajuan</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Bab 18: Tetapkan "Buku Telefon Dipercayai" (DNS) pada telefon pintar</li>
+                        <li>Bab 19: Perintahkan pembantu AI</li>
+                        <li>Bab 20: Cipta aliran automasi</li>
+                        <li>Bab 21: Tetapkan semula telefon dengan selamat</li>
+                        <li>Bab 22: Renungkan kehidupan digital anda</li>
+                    </ul>
+                </div>
+
+                <!-- Lampiran C -->
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran C: Jadual Perbandingan Istilah Teknikal "Minimal"</h3>
+                    <p class="mb-3">Penjelasan ringkas istilah teknikal yang digunakan dalam buku ini:</p>
+                    
+                    <div class="overflow-x-auto mb-4">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light">
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Istilah</th>
+                                    <th class="border border-gray-300 px-4 py-2 text-left">Penjelasan</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">SoC</td>
+                                    <td class="border border-gray-300 px-4 py-2">System on Chip. "Otak" telefon pintar. Cip yang mengintegrasikan CPU, GPU, dan komponen lain.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RAM</td>
+                                    <td class="border border-gray-300 px-4 py-2">Random Access Memory. Memori kerja sementara. Semakin besar, semakin banyak aplikasi boleh dijalankan serentak.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">ROM/Storan</td>
+                                    <td class="border border-gray-300 px-4 py-2">Read-Only Memory (sebenarnya storan flash). Menyimpan foto, aplikasi, dll. untuk jangka panjang.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OLED</td>
+                                    <td class="border border-gray-300 px-4 py-2">Paparan OLED. Setiap piksel memancarkan cahaya sendiri. Kontras tinggi, menjimatkan kuasa.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 px-4 py-2">Near Field Communication. Komunikasi tanpa wayar jarak dekat. Digunakan untuk kad IC pengangkutan, pembayaran mudah alih.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">VPN</td>
+                                    <td class="border border-gray-300 px-4 py-2">Virtual Private Network. Rangkaian peribadi maya. Menyulitkan komunikasi, melindungi privasi.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">DNS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Domain Name System. Sistem yang menukar nama domain ke alamat IP.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">OCR</td>
+                                    <td class="border border-gray-300 px-4 py-2">Optical Character Recognition. Teknologi yang mengenal pasti teks dalam imej dan menukarnya kepada teks.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">AI/Pembelajaran Mesin</td>
+                                    <td class="border border-gray-300 px-4 py-2">Artificial Intelligence. Kecerdasan buatan. Digunakan untuk pengoptimuman foto, pengecaman suara, dll. dalam telefon pintar.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">AI Tepi</td>
+                                    <td class="border border-gray-300 px-4 py-2">Teknologi yang menjalankan pemprosesan AI pada peranti itu sendiri, bukan di awan. Pantas dan melindungi privasi.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">RCS</td>
+                                    <td class="border border-gray-300 px-4 py-2">Rich Communication Services. SMS generasi akan datang. Menyokong imej berkualiti tinggi, pemberitahuan baca, dll.</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 px-4 py-2">HTTPS</td>
+                                    <td class="border border-gray-300 px-4 py-2">HTTP Secure. Protokol komunikasi Web yang disulitkan.</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Lampiran D -->
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran D: Di Mana Mencari Sumber Dipercayai?</h3>
+                    <p class="mb-3">Sumber dipercayai untuk mendapatkan maklumat tentang telefon pintar:</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📱 Sumber Rasmi</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Sokongan Apple</strong>: support.apple.com</li>
+                        <li><strong>Bantuan Google Android</strong>: support.google.com/android</li>
+                        <li><strong>Laman web rasmi setiap jenama</strong>: Samsung, Xiaomi, OPPO, vivo, dll.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📰 Media Teknologi</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Tempatan</strong>: Amanz, Soyacincau, TechNave</li>
+                        <li><strong>Global</strong>: The Verge, TechCrunch, Android Police, 9to5Mac</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">👥 Komuniti dan Forum</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Reddit</strong>: r/Android, r/iPhone, r/techsupport</li>
+                        <li><strong>Stack Exchange</strong>: Android Enthusiasts, Ask Different (Apple)</li>
+                        <li><strong>Forum tempatan</strong>: Forum komuniti setiap jenama</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🎥 Saluran YouTube</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>MKBHD (Marques Brownlee)</li>
+                        <li>Unbox Therapy</li>
+                        <li>Linus Tech Tips</li>
+                        <li>Tempatan: Pelbagai saluran ulasan gajet</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ Sumber Maklumat Yang Perlu Diwaspadai</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>"Hack" dan "tipu daya" dari sumber tidak diketahui</li>
+                        <li>Artikel dengan tajuk terlalu sensasi</li>
+                        <li>Maklumat yang jelas usang (2-3 tahun lalu)</li>
+                        <li>Ulasan yang tidak dinyatakan sebagai artikel penaja</li>
+                    </ul>
+                </div>
+
+                <!-- Lampiran E -->
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">Lampiran E: Penghargaan dan Penjelasan</h3>
+                    <p class="mb-3">Buku ini dicipta sebagai panduan perjalanan dari pemula ke peringkat pertengahan untuk pengguna telefon pintar.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">🙏 Penghargaan</h4>
+                    <p class="mb-2">Kami mengucapkan terima kasih kepada sumber dan komuniti berikut dalam penciptaan buku ini:</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Komuniti sumber terbuka</li>
+                        <li>Media teknologi dan pengulas</li>
+                        <li>Semua orang yang berkongsi pengetahuan dalam forum dalam talian</li>
+                        <li>Semua jurutera dan pereka bentuk yang memajukan teknologi telefon pintar</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">⚠️ Penafian</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>Maklumat dalam buku ini adalah pada masa penulisan. Teknologi berubah dengan cepat, jadi sebahagian kandungan mungkin sudah usang.</li>
+                        <li>Operasi telefon pintar adalah atas tanggungjawab sendiri. Pastikan sandarkan data penting.</li>
+                        <li>Lokasi fungsi dan tetapan mungkin berbeza mengikut model dan versi OS tertentu.</li>
+                        <li>Kandungan buku ini adalah untuk tujuan pendidikan dan tidak bertujuan untuk mengesyorkan produk atau perkhidmatan tertentu.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">📧 Maklum Balas</h4>
+                    <p class="mb-2">Kami mengalu-alukan maklum balas untuk penambahbaikan buku ini. Jika ada kesilapan, topik yang ingin ditambah, atau cadangan penambahbaikan, sila maklumkan kepada kami.</p>
+
+                    <div class="bg-light rounded-lg p-6 mt-6 text-center">
+                        <p class="text-lg font-semibold mb-2">Terima Kasih Kerana Membaca!</p>
+                        <p class="text-secondary">Semoga kehidupan digital anda menjadi lebih kaya dan selamat.</p>
+                        <p class="mt-4 text-sm text-secondary">© 2024 Master Telefon Pintar! Kursus Wajib Digital untuk Pemula</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Butang kembali ke atas -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300 hover:bg-primary/90 z-50">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Skrip -->
+    <script>
+        // Togol menu mudah alih
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        function toggleMenu() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+        overlay.addEventListener('click', toggleMenu);
+
+        // Kembangkan/kuncupkan senarai kandungan
+        document.querySelectorAll('.toc-parent').forEach(parent => {
+            const toggle = parent.querySelector('.toc-toggle');
+            const child = parent.querySelector('.toc-child');
+            
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                child.classList.toggle('open');
+                toggle.classList.toggle('rotate-180');
+            });
+        });
+
+        // Butang kembali ke atas
+        const backToTop = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Tatalan licin
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Tutup menu pada peranti mudah alih
+                    if (!sidebar.classList.contains('-translate-x-full') && window.innerWidth < 1024) {
+                        toggleMenu();
+                    }
+                }
+            });
+        });
+
+        // Serlahkan senarai kandungan semasa menatal
+        const sections = document.querySelectorAll('.content-section');
+        const tocLinks = document.querySelectorAll('#sidebar a[href^="#"]');
+
+        function highlightTOC() {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (window.scrollY >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', highlightTOC);
+        highlightTOC(); // Permulaan
+    </script>
+</body>
+</html>

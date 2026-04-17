@@ -1,0 +1,2072 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتقان الهاتف الذكي! الدورة الإلزامية للمبتدئين في العصر الرقمي</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Tajawal', 'Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Tajawal', 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            direction: rtl;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+            border-right: 3px solid #165DFF;
+            border-left: none;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 2000px;
+        }
+        ul.list-disc, ol.list-decimal {
+            padding-right: 1.5rem;
+            padding-left: 0;
+        }
+        aside {
+            right: 0;
+            left: auto;
+        }
+        main {
+            margin-right: 18rem;
+            margin-left: 0;
+        }
+        @media (max-width: 1023px) {
+            main {
+                margin-right: 0;
+            }
+            aside {
+                transform: translateX(100%);
+            }
+            aside:not(.-translate-x-full) {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <header id="navbar" class="fixed top-0 right-0 w-full bg-white shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <button id="menu-toggle" class="lg:hidden text-dark text-xl p-2 rounded-md hover:bg-light">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-xl md:text-2xl font-bold text-primary">إتقان الهاتف الذكي! الدورة الإلزامية للمبتدئين في العصر الرقمي</h1>
+            </div>
+            <a href="#top" class="hidden md:block text-sm text-secondary hover:text-primary transition-colors">
+                <i class="fas fa-arrow-up ml-1"></i>العودة للأعلى
+            </a>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed right-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white border-l border-gray-200 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark mb-4 pb-2 border-b border-gray-200">الفهرس</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1">أولاً: القسم الأساسي (الفصول 0-6)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pr-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الصفري: مرحباً، قبل البدء</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الأول: مرحباً، حاسوبي الشخصي</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الثاني: تنظيم غرفتك الرقمية - إدارة الملفات</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الثالث: ربط خط الحياة بهاتفك - الشبكة</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الرابع: تثبيت التطبيقات وإدارتها</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الخامس: الإعدادات الأساسية</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل السادس: الأمان والخصوصية</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1">ثانياً: قسم البرمجيات (الفصول 7-12)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pr-4 space-y-1 mt-1">
+                            <li><a href="#di-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل السابع: الاتصالات: الرسائل القصيرة والمكالمات والتواصل الاجتماعي</a></li>
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الثامن: المكتب المتنقل والتعلم</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل التاسع: الدفع الرقمي وخدمات الحياة</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل العاشر: التصوير وإدارة الصور</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الحادي عشر: الترفيه والقراءة</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل الثاني عشر: تطبيقات الأدوات الموصى بها</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1">ثالثاً: القسم التطبيقي (الفصول 13-17)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pr-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 13: علم البطارية وتوفير الطاقة</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 14: الحسابات والخدمات السحابية</a></li>
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 15: ربط الهاتف بأجهزة أخرى</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 16: النسخ الاحتياطي وهجرة البيانات</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 17: استكشاف الأخطاء وإصلاحها</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1">رابعاً: قسم التطوير (الفصول 18-22)</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pr-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 18: شبكات الهاتف المحمول وأمن المعلومات</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 19: كيف يعمل الذكاء الاصطناعي على هاتفك</a></li>
+                            <li><a href="#di-er-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 20: التفكير البرمجي والأتمتة</a></li>
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 21: الهواتف المستعملة والإرث الرقمي</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light">الفصل 22: مستقبل الهاتف والحياة الرقمية</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light cursor-pointer">
+                            <a href="#fu-lu" class="flex-1">خامساً: الملاحق</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary"></i>
+                        </div>
+                        <ul class="toc-child open pr-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light">الملحق أ: دليل فتح الهاتف الجديد الكامل</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light">الملحق ب: مرجع التمارين التطبيقية</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light">الملحق ج: جدول المصطلحات التقنية</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light">الملحق د: أين تجد الموارد الموثوقة</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light">الملحق هـ: الشكر والتوضيحات</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:mr-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">إتقان الهاتف الذكي! الدورة الإلزامية للمبتدئين في العصر الرقمي</h1>
+                <p class="text-center text-secondary text-lg">من البداية إلى الإتقان، إتقان حياتك الرقمية بالكامل</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">أولاً: القسم الأساسي (الفصول 0-6)</h2>
+                <p class="mb-4 text-secondary">هاتفك أقوى بكثير مما تتخيل. هذا الجزء هو الأساس لجميع المهارات. لنبدأ بتوحيد المصطلحات والتعرف على الجهاز خطوة بخطوة ثم إتقانه.</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الصفري: مرحباً، قبل البدء</h3>
+                    <p class="mb-3">قبل الاستكشاف الرسمي، دعني أحدثك عن بعض القواعد الأساسية. بعد فهم هذا، ستتمكن من فهم كل المحتوى اللاحق.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 📖 ما الذي يمكن لهذا الكتاب أن يساعدك فيه (وما لا يمكنه)</h4>
+                    <p class="mb-2">يمكنه مساعدتك على فهم كيفية استخدام الهاتف بشكل منهجي وفهم المنطق وراء الوظائف. معظم الأفكار مشتركة بين مستخدمي Android وiPhone. كما يتضمن تمارين عملية.</p>
+                    <p class="mb-2">إنه ليس دليل مستخدم لهاتف معين وليس مراجعة لأحدث المنتجات ولا يُعلمك إدمان الهاتف.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 🔤 عن كلماتنا المتفق عليها</h4>
+                    <p class="mb-2">للتوضيح، نستخدم بعض الرموز:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>[اسم الزر]: يمثل زرًا محددًا على الشاشة أو اسم تطبيق.</li>
+                        <li>> : يمثل تسلسل العمليات، مثل [الإعدادات] > [الصوت] اضغط.</li>
+                        <li><strong>عريض</strong>: مهم جداً! يمثل مفهومًا مهمًا أو تحذيرًا أمنيًا.</li>
+                        <li><em>مائل</em>: يمثل أفكارًا تكميلية أو استعارات.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 📱 Android وiOS، نشرح كليهما</h4>
+                    <p class="mb-2">رغم اختلاف المسميات، هناك أشياء متشابهة. مثال: التطبيقات (Android) وApp (iOS)، الإعدادات (كلاهما)، إدارة الملفات (Android) والملفات (iOS). افهم أنها نفس الشيء.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. 💾 سعة الهاتف: لماذا اشتريت 128GB لكن المتاح أقل من 110GB؟</h4>
+                    <p class="mb-2">وحدات السعة معروفة: 1 تيرابايت = 1024 جيجابايت، 1 جيجابايت = 1024 ميجابايت...</p>
+                    <p class="mb-2">لكن السعة المشتراة تتقلص عند وصولها إليك. الأسباب الرئيسية:</p>
+                    <ol class="list-decimal pr-6 mb-3 space-y-1">
+                        <li>النظام يشغل مساحة: نظام التشغيل مثل جدران هيكل المنزل وهو ضروري.</li>
+                        <li>التطبيقات المثبتة مسبقًا من الشركة المصنعة: التطبيقات المثبتة مسبقًا على الهاتف الجديد تشغل أيضًا مساحة.</li>
+                        <li>فقدان التنسيق: لأسباب تقنية، بطانة الحقيبة تشغل أيضًا حجمًا.</li>
+                    </ol>
+                    <p class="mb-2">عند شراء الهاتف، يجب أن تأخذ في الاعتبار أيضًا استخدام النظام.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">وقت التطبيق 👉 تحقق من بطاقة الهوية لهاتفك</p>
+                        <p class="mt-1">افتح [الإعدادات]، ابحث عن معلومات الجهاز، ودوّن: طراز الهاتف وإصدار نظام التشغيل والسعة الإجمالية للتخزين والمساحة المتبقية. هذه هي الخطوة الأولى لمعرفة ذلك.</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الأول: مرحباً، حاسوبي الشخصي</h3>
+                    <p class="mb-3">هاتفك هو في الحقيقة أقوى كمبيوتر شخصي فائق في جيبك.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 🧠 الأجهزة الداخلية للهاتف "الأعضاء الخمسة والستة"</h4>
+                    <ol class="list-decimal pr-6 mb-3 space-y-2">
+                        <li><strong>SoC (الشريحة)</strong>: دماغ القلب للهاتف ويحدد الأداء.</li>
+                        <li><strong>RAM (الذاكرة)</strong>: سطح عمل مؤقت. كلما كانت أكبر كان أكثر سلاسة عند فتح تطبيقات متعددة.</li>
+                        <li><strong>ROM (التخزين)</strong>: مستودع طويل المدى. مكان تخزين جميع الصور ومقاطع الفيديو والتطبيقات.</li>
+                        <li><strong>الشاشة</strong>: عيناك. النوع (OLED ألوان زاهية، LCD مريح للعين) والدقة ومعدل التحديث كلها مهمة.</li>
+                        <li><strong>البطارية والشحن</strong>: اشحن في أي وقت. لا تنتظر حتى تُفرغ تمامًا ولا تبقى عند 100% ممتلئة دائمًا. الشحن السريع واللاسلكي مريحان.</li>
+                        <li><strong>الكاميرا</strong>: تعمل الآن بعدة عدسات وخوارزميات (التصوير الحسابي) معًا لتحقيق لقطات ليلية وتأثيرات ضبابية.</li>
+                        <li><strong>المستشعرات</strong>: قرون استشعار صغيرة للهاتف. مثال: الجيروسكوب (تغيير الاتجاه في الألعاب)، NFC (بوابة المرور وبطاقات IC)، مستشعر المسافة (إطفاء تلقائي أثناء المكالمات).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 🤖 نظام التشغيل: Android مقابل iOS</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>Android: مثل مجتمع مفتوح المصدر، الشركات المصنعة يمكنها التخصيص بعمق والخيارات وفيرة.</li>
+                        <li>iOS: مثل حديقة مُعتنى بها بعناية، Apple تدير الأجهزة والبرمجيات بشكل مركزي والتجربة موحدة.</li>
+                    </ul>
+                    <p class="mb-2">كلا النظامين البيئيين غنيان جدًا، اختر أسلوب الحياة الذي يناسبك.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 🎭 كم دورًا يلعبه هاتفك؟</h4>
+                    <p class="mb-2">لم يعد مجرد هاتف: أداة اتصال وكاميرا ذكية ومحفظة وبوابة معلومات وجهاز ألعاب ومكتب متنقل ومساعد صحي وجهاز تحكم منزلي ذكي وحتى بطاقة هوية رقمية.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">وقت التطبيق 👉 فهم تكوين الأجهزة</p>
+                        <p class="mt-1">في [الإعدادات]، تحقق مما إذا كان يمكنك العثور على طراز المعالج والحجم المحدد للـ RAM وROM. كن على دراية بقدرات هاتفك.</p>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الثاني: تنظيم غرفتك الرقمية - إدارة الملفات</h3>
+                    <p class="mb-3">مع الاستخدام لفترة طويلة يصبح الهاتف فوضويًا. العادات الجيدة تبدأ من إدارة الملفات.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 📂 نظام التخزين ثلاثي الطبقات</h4>
+                    <ol class="list-decimal pr-6 mb-3 space-y-2">
+                        <li><strong>التخزين الداخلي</strong>: المنطقة الأساسية. السرعة عالية والنظام والتطبيقات كلها هنا.</li>
+                        <li><strong>بطاقة SD (إذا كانت مدعومة)</strong>: خزانة ملابس موسعة. السرعة أبطأ قليلاً لكنها مناسبة لتخزين الأفلام والصور.</li>
+                        <li><strong>التخزين السحابي</strong>: خزنة ومحرك أقراص متزامن. يمنع الفقدان ويتيح المزامنة بين أجهزة متعددة.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 🗂️ التعرف على مدير الملفات</h4>
+                    <p class="mb-2">Android لديه عادةً تطبيق الملفات أو إدارة الملفات وiOS لديه تطبيق الملفات القياسي. هذه هي مستكشف الملفات لرؤية جميع ملفات الهاتف. سترى مجلدات مثل التنزيلات وDCIM (صور الكاميرا) والصور.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 🏷️ أين توجد الملفات المختلفة؟</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الصور ومقاطع الفيديو: عادةً تُحفظ تلقائيًا في DCIM أو Pictures.</li>
+                        <li>الملفات المحملة: بشكل أساسي كلها في التنزيلات.</li>
+                        <li>بيانات التطبيقات: تعيش في غرفة خاصة بكل تطبيق وقد لا تكون مرئية.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. 🧹 المساحة غير كافية؟ وقت التنظيف الكبير</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>مسح ذاكرة التخزين المؤقت: ذاكرة مؤقتة مؤقتة للتطبيق. المسح يفرج المساحة.</li>
+                        <li>البحث عن الملفات الكبيرة: في مدير الملفات رتب حسب الحجم لاكتشاف الجناة.</li>
+                        <li>حذف البقايا: بعد إلغاء تثبيت التطبيق قد تبقى ملفات قمامة. احذفها يدويًا.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">وقت التطبيق 👉 نظف مجلد التنزيلات</p>
+                        <p class="mt-1">افتح مدير الملفات وادخل مجلد التنزيلات. تحقق من المحتويات واحذف ما لا تحتاجه وصنف ما تحتاجه (مثلاً أنشئ مجلدات "ملفات العمل" و"الملصقات").</p>
+                    </div>
+                </div>
+
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الثالث: ربط خط الحياة بهاتفك - الشبكة</h3>
+                    <p class="mb-3">بدون الإنترنت الهاتف الذكي يصبح "نصف معطل".</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 📶 الشبكة المتنقلة (4G/5G) واتصالات البيانات</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>اتصالات البيانات: كمية البيانات الناتجة عن استخدام الهاتف للإنترنت. مشاهدة الفيديو وتصفح الصور تستهلك البيانات أكثر.</li>
+                        <li>نصائح لتوفير البيانات: فعّل وضع توفير البيانات في الإعدادات وقم بتحديث التطبيقات ومشاهدة الفيديو عالي الجودة عبر Wi-Fi.</li>
+                        <li>عدد الإشارات لا يساوي سرعة الاتصال: الإشارة القوية تعني اتصالاً جيدًا لكن السرعة تعتمد أيضًا على ازدحام محطة القاعدة.</li>
+                        <li><strong>⚠️ مهم! قبل السفر للخارج قم بإيقاف تجوال البيانات لتجنب الفواتير الباهظة!</strong></li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 📡 Wi-Fi: الاتصال والمشاركة والأمان</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الاتصال بـ Wi-Fi: [الإعدادات] > [WLAN] اختر الشبكة وأدخل كلمة المرور.</li>
+                        <li>مشاركة كلمات المرور: الآن الأمر مريح يمكن لكل من Android وiOS مشاركة كلمات المرور بسرعة مع الأصدقاء من الهاتف المتصل.</li>
+                        <li>مخاطر Wi-Fi العام: احتمال سرقة البيانات من قبل القراصنة أو نقاط ساخنة احتيالية. القاعدة: تجنب تسجيل الدخول إلى الحسابات المصرفية واستخدم VPN قدر الإمكان.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 🔵 Bluetooth: توصيل سماعات الأذن ونقل الملفات</h4>
+                    <p class="mb-2">يُستخدم بشكل رئيسي لتوصيل سماعات لاسلكية وأجهزة ذكية. وظيفة نقل الملفات نادرًا ما تُستخدم الآن.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. 🔥 الربط: اجعل هاتفك موجه Wi-Fi</h4>
+                    <p class="mb-2">عندما يكون لديك بيانات كثيرة يمكنك فتح نقطة ساخنة للكمبيوتر اللوحي أو الكمبيوتر. انتبه: يستهلك البطارية وبيانات كثيرة لذا اضبط كلمة مرور معقدة وحدد عدد الأجهزة المتصلة.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">وقت التطبيق 👉 إعداد وإدارة نقطة ساخنة</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>افتح [الإعدادات] وابحث عن الربط أو مشاركة الشبكة وفعّلها واضبط الاسم وكلمة المرور.</li>
+                            <li>من جهاز آخر (مثلاً الكمبيوتر) ابحث عن هذا Wi-Fi واتصل به.</li>
+                            <li>من جانب الهاتف تحقق مما إذا كان يمكنك إدارة الأجهزة المتصلة وقطع اتصال الأجهزة غير المعروفة.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الرابع: تثبيت التطبيقات وإدارتها - مجموعة مهارات الهاتف</h3>
+                    <p class="mb-3">التطبيقات تجعل الهاتف ذكيًا لكن الإدارة المناسبة ضرورية أيضًا.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 🏪 المتجر الرسمي: الأكثر أمانًا "سوبرماركت التطبيقات"</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>Android: Google Play أو المتجر الأصلي للعلامة التجارية (مثلاً متجر Xiaomi).</li>
+                        <li>iOS: App Store فقط.</li>
+                    </ul>
+                    <p class="mb-2">المعنى الأمني الأساسي: تمت مراجعته ومضمون التحديث وأمان الدفع. التوجيه: نزّل من المتاجر الرسمية فقط كلما أمكن.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 🚨 المصادر الخارجية: الخطر مرتفع جدًا!</h4>
+                    <p class="mb-2">تحميل التطبيقات من صفحات الويب أو روابط غير معروفة قد يؤدي إلى عدوى فيروسية أو سرقة خصوصية أو مدفوعات غير مصرح بها.</p>
+                    <p class="mb-2">في حالة الضرورة: تأكد أن المصدر موثوق تمامًا وراجع طلبات الأذونات قبل التثبيت وافحص بتطبيق أمان بعد ذلك.</p>
+                    <p class="mb-2">النصيحة النهائية: في إعدادات النظام قم بإيقاف إذن تثبيت تطبيقات غير معروفة.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 📲 التثبيت والتحديث وإلغاء التثبيت</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>التثبيت: اضغط "احصل" في المتجر. بعد التثبيت ستُطلب الأذونات عند أول تشغيل.</li>
+                        <li>التحديث: <strong>يجب التحديث دائمًا!</strong> لإصلاح ثغرات الأمان بشكل أساسي. يُوصى بتفعيل التحديث التلقائي.</li>
+                        <li>إلغاء التثبيت: اضغط مطولاً على الرمز واسحبه إلى منطقة إلغاء التثبيت. للحذف الأكثر شمولاً اذهب إلى [الإعدادات] > [إدارة التطبيقات] وابحث عنه وألغِ التثبيت.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. 🛡️ إدارة الأذونات: أنت رئيس التطبيقات</h4>
+                    <p class="mb-2">سبب طلب التطبيقات لأذونات (مثل جهات الاتصال والموقع) أحيانًا يكون معقولًا (الخرائط تحتاج الموقع) وأحيانًا غير معقول (المصباح يطلب جهات الاتصال).</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>خيارات الأذونات: "السماح دائمًا" و"السماح أثناء الاستخدام" و"الرفض" و"اسأل في كل مرة".</li>
+                        <li>مبدأ الإدارة:
+                            <ol class="list-alpha pr-6 mt-1 space-y-1">
+                                <li>التصغير: لا تعطِ ما ليس ضروريًا.</li>
+                                <li>المراجعة اللاحقة: راجع إعدادات الأذونات دوريًا وتحقق من لمَن "تجاوز الأذونات".</li>
+                                <li>حسب الوضع: لتطبيقات مثل تاكسي أعطِ إذن الموقع أثناء الاستخدام فقط.</li>
+                            </ol>
+                        </li>
+                        <li><strong>⚠️ موضوع مراقبة رئيسي: أذونات جهات الاتصال/الرسائل القصيرة والموقع في الوقت الفعلي والكاميرا/الميكروفون والوصول للملفات.</strong></li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">وقت التطبيق 👉 تدقيق أذونات 3 تطبيقات</p>
+                        <p class="mt-1">اختر 3 تطبيقات مستخدمة بشكل متكرر (مثل السوشيال ميديا والتسوق والأدوات) وادخل صفحة إدارة أذونات التطبيقات في [الإعدادات] وراجع كل بند وأوقف الأذونات الحساسة غير الضرورية أو غيّرها إلى "أثناء الاستخدام فقط".</p>
+                    </div>
+                </div>
+
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الخامس: تخصيص هاتفك - الإعدادات الأساسية</h3>
+                    <p class="mb-3">اقضِ بضع دقائق في الإعدادات ستتحسن التجربة بشكل كبير.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.1 🎵 الصوت والاهتزاز</h4>
+                    <p class="mb-2">اضبط نغمة الرنين وإشعار تعجبك. استخدم وضع الصمت (أثناء الاجتماعات) ووضع عدم الإزعاج (أثناء النوم) بمرونة والعالم يصبح هادئًا فورًا. عند توصيل سماعات Bluetooth تحقق من تبديل إخراج الصوت.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.2 👀 الشاشة والسطوع</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>السطوع التلقائي: الهاتف يضبط تلقائيًا حسب الضوء المحيط. لا حاجة للتدخل.</li>
+                        <li>قطع الضوء الأزرق/الوضع الليلي: يقطع الضوء الأزرق ويجعل استخدام الهاتف ليلاً أكثر راحة.</li>
+                        <li>الوضع الداكن: يوفر الطاقة (خاصة على شاشات OLED) ولا يُبهت ليلاً.</li>
+                        <li>معدل تحديث الشاشة: بعض هواتف Android قابلة للتعديل. كلما ارتفع (مثلاً 120Hz) كان التمرير أكثر سلاسة.</li>
+                        <li>القفل التلقائي: اضبط على 15 ثانية أو 30 ثانية. آمن واقتصادي.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.3 🎨 الخلفية والثيمات وشاشة البداية</h4>
+                    <p class="mb-2">تغيير الخلفية الجميلة (ثابتة أو متحركة) يغير المزاج. هواتف Android من العلامات التجارية لديها عادةً متجر ثيمات يمكن تغيير الأيقونات والأنماط معًا. لا تنسَ عناصر واجهة الشاشة الرئيسية. ضع الطقس والجدول والتحكم بالموسيقى على الشاشة الرئيسية للوصول بنقرة واحدة.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5.4 ♿ إمكانية الوصول: مساعد قوي</h4>
+                    <p class="mb-2">لا تخف من الاسم. يمكن للجميع استخدامه.</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>إيماءة التكبير: اضغط على الشاشة 3 مرات للتكبير الجزئي. مثالي لرؤية النصوص الصغيرة.</li>
+                        <li>المساعد الصوتي: Siri وGoogle Assistant. بالصوت فقط يمكنك ضبط المنبه والتحقق من الطقس.</li>
+                        <li>قارئ الشاشة (TalkBack/VoiceOver): مصمم لضعاف البصر لكنه مفيد أيضًا لـ "الاستماع" للمقالات.</li>
+                        <li>أخرى: تصحيح الألوان (للمصابين بعمى الألوان)، اختصار النقر الخلفي (iPhone)، قائمة إمكانية الوصول (Android) كلها تستحق التجربة.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">وقت التطبيق 👉 إعداد وضع "يوم العمل" و"العطلة"</p>
+                        <p class="mt-1">استخدم وضع التركيز (iOS) أو وضع السيناريو لجعل الهاتف يتكيف تلقائيًا مع إيقاعك. مثال:</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>أنشئ وضع "العمل": أوقف تلقائيًا إشعارات التطبيقات غير المهمة واسمح فقط بمكالمات الرئيس والعائلة.</li>
+                            <li>أنشئ وضع "النوم": يُفعّل في وقت محدد ويوقف جميع الإشعارات.</li>
+                            <li>اضبط مؤقتًا لها. مثال: تفعيل تلقائي لوضع "العمل" من 9:00-18:00 أيام الأسبوع. لا تخطئ.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل السادس: حماية حياتك الرقمية - الأمان والخصوصية</h3>
+                    <p class="mb-3">أمان الهاتف = أمان الخصوصية + أمان الممتلكات.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.1 🔒 شاشة القفل: خط الدفاع المادي الأول</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>ترتيب مستوى الأمان:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>كلمة المرور/رمز PIN: الأكثر أمانًا. الضمان النهائي (عند نسيان البصمة/الوجه).</li>
+                                <li>بصمة الإصبع: التوازن المثالي بين الأمان والملاءمة.</li>
+                                <li>التعرف على الوجه: الأكثر ملاءمة لكن الأمان يعتمد على التقنية (البنية ثلاثية الأبعاد آمنة، الصورة ثنائية الأبعاد سهلة الخداع).</li>
+                            </ul>
+                        </li>
+                        <li>اضبط شاشة قفل قوية: اضبط كلمة مرور معقدة (لا تستخدم تاريخ الميلاد أو 123456) وفعّل المصادقة البيومترية. اضبط وقت القفل على "فورًا" أو الأقصر.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.2 📍 "العثور على هاتفي": أداة مضادة للسرقة</h4>
+                    <p class="mb-2"><strong>يجب تفعيلها!</strong> يمكنها:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تحديد الموقع: أين وضعت هاتفك، ابحث عنه على الخريطة.</li>
+                        <li>تشغيل الصوت: اجعل الهاتف يرن، مناسب للبحث في المنزل.</li>
+                        <li>وضع الفقد: قفل الهاتف عن بُعد وعرض رقم الاتصال. الشخص الذي وجده يمكنه الاتصال بك.</li>
+                        <li>المسح عن بُعد: الملاذ الأخير. مسح جميع البيانات (لكن بعد المسح لن تتمكن من تحديد الموقع).</li>
+                    </ul>
+                    <p class="mb-2">اذهب إلى [الإعدادات]، Apple ابحث عن "العثور على iPhone" وAndroid ابحث عن "العثور على الجهاز" أو خدمة مشابهة من العلامة التجارية وتأكد أنها خضراء ومفعّلة.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.3 🔧 تحديث النظام: وضع الرقع وسد الثغرات</h4>
+                    <p class="mb-2">الهدف الرئيسي من تحديث النظام هو إصلاح ثغرات الأمان. مثل سد ثقوب جدران المنزل. لذلك عندما تظهر إشعارات تحديث النظام قم بالترقية في أقرب وقت ممكن.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6.4 🚫 التعرّف على مكالمات الاحتيال والوقاية</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الأساليب الشائعة: انتحال الشرطة/خدمة العملاء (التصيد الاحتيالي)، المكافآت/دخل العمل الجانبي (الإغراء)، الاحتيال العاطفي (ذبح الخنزير).</li>
+                        <li>حماية الهاتف القياسية: حظر المكالمات المزعجة، منع سرقة رموز التحقق، الكشف الآمن عن روابط الرسائل القصيرة. لا تنسَ تفعيلها في الإعدادات.</li>
+                        <li>قاعدة منع الاحتيال: لا تصدق ولا تكشف ولا تنقر ولا تحوّل وتحقق إذا كان هناك شك!</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">وقت التطبيق 👉 تفعيل "القفل عن بُعد" والمحاكاة</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>تأكد من تفعيل وظيفة "العثور على الهاتف".</li>
+                            <li>من متصفح كمبيوتر أو هاتف آخر سجّل الدخول إلى حساب خدمة السحابة المقابل (iCloud.com أو موقع خدمة السحابة للعلامة التجارية).</li>
+                            <li>ابحث عن وظيفة "العثور على الجهاز" وجرب "تشغيل الصوت" أو حاكِ "القفل" على هاتفك لفهم العملية الكاملة. لكي لا تضطرب في الوقت المهم.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">ثانياً: قسم البرمجيات (الفصول 7-12)</h2>
+
+                <div id="di-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل السابع: الاتصالات: الرسائل القصيرة والمكالمات والتواصل الاجتماعي</h3>
+                    <p class="mb-3">الاتصال هو المهمة الأصلية والأكثر جوهرية للهاتف. الآن تطور من مكالمات ورسائل قصيرة بسيطة إلى نظام بيئي معقد يشمل المراسلة الفورية والشبكات الاجتماعية والبريد الإلكتروني.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.1 وظائف تطبيق الهاتف المتقدمة: أكثر من مجرد مكالمات</h4>
+                    <p class="mb-2">تطبيق الهاتف على الهواتف الحديثة تجاوز لوحة الطلب البسيطة ودمج أدوات قوية مثل التسجيل ومنع المكالمات المزعجة والتعريف الذكي.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. تسجيل المكالمات (انتبه للامتثال القانوني):</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الدور: تسجيل محتوى المكالمات المهمة لاستخدامها في محاضر العمل والمقابلات ووعود العملاء أو سجلات النزاعات.</li>
+                        <li>نصيحة قانونية: في اليابان لاستخدام تسجيل المكالمات كدليل يجب الحصول على موافقة الطرف الآخر أو استخدامه لحماية حقوقك المشروعة (مثل الإبلاغ عن التحرش أو الاحتيال). قبل المحادثات التجارية أو السرية من الأكثر حذرًا إخبار الطرف الآخر شفهيًا "قد تُسجل هذه المكالمة".</li>
+                        <li>طريقة التشغيل:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>Android: عادةً يوجد زر "تسجيل" واضح على شاشة المكالمة. ابحث عن خيار "تسجيل المكالمات" في إعدادات تطبيق الهاتف واضبط قواعد التسجيل التلقائي.</li>
+                                <li>iOS: النظام لا يوفر وظيفة تسجيل مكالمات أصلية. إذا كنت تريد استخدامها تحتاج تطبيق تسجيل مكالمات من طرف ثالث.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. حظر المكالمات المزعجة والتعريف الذكي:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>المبدأ: تطبيق الهاتف يستشير عبر الشبكة قاعدة بيانات أرقام ضخمة وعند المكالمة يعرض "مكالمة مزعجة" أو "مكالمة احتيال" أو اسم الشركة.</li>
+                        <li>طريقة التفعيل:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>Android: ادخل تطبيق الهاتف > "الإعدادات" أعلى اليمين > منع المكالمات المزعجة أو التعريف الذكي. فعّل جميع خيارات التعريف والحظر.</li>
+                                <li>iOS: ادخل [الإعدادات] > [الهاتف] > [حظر المكالمات وتعريف المتصل]. تأكد من تطبيقات الأمان من طرف ثالث التي تدعم هذه الوظيفة (مثل Trend Micro Mobile Security) ويمكنك السماح لها بالعمل. يمكنك تفعيل وظيفة "كتم المتصلين غير المعروفين" لكتم جميع المكالمات من غير جهات الاتصال.</li>
+                            </ul>
+                        </li>
+                        <li>نصيحة: بعد تلقي مكالمة مزعجة قم بوضع علامة "مزعجة" أو "احتيال" بنشاط في سجل المكالمات للمساهمة في قاعدة البيانات ومساعدة الآخرين.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. وظائف مساعدة المكالمات:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تحويل تسجيل المكالمات إلى نص: بعض هواتف Android من العلامات التجارية توفر بعد تسجيل المكالمة زر "تحويل إلى نص" مباشرة بجانب ملف التسجيل لتحويل محتوى المحادثة إلى نص.</li>
+                        <li>المساعدة البصرية (الترجمة الفورية): في إعدادات إمكانية الوصول لـ Android أو المساعدة السمعية لـ iOS يمكنك تفعيل وظيفة "الترجمة الفورية" لتوليد ترجمة فورية لجميع الصوت (بما في ذلك المكالمات).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.2 الرسائل القصيرة وiMessage/RCS: رموز التحقق وتصفية الرسائل المزعجة</h4>
+                    <p class="mb-2">الرسائل القصيرة التقليدية لم تُلغَ. إنها قناة موثوقة لاستلام رموز التحقق وإشعارات البنوك والمعلومات الرسمية.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. الرسائل القصيرة مقابل iMessage (iOS) / RCS (Android):</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>iMessage: رسائل تُرسل عبر الإنترنت بين أجهزة Apple وتظهر في فقاعات زرقاء. تدعم الصور والفيديو عالي الجودة وإشعارات القراءة ومجانية بالكامل ومشفرة من الطرف إلى الطرف.</li>
+                        <li>RCS: بروتوكول الاتصال من الجيل القادم تدعمه شركات الاتصالات العالمية وGoogle. له وظائف مشابهة لـ iMessage وLINE لكنه يعتمد على رقم الهاتف. في إعدادات تطبيق الرسائل لهاتف Android تحقق من "وظائف المحادثة" وفعلها.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. أمان رموز التحقق:</h5>
+                    <p class="mb-2">النظام يتعرف تلقائيًا على رسائل رموز التحقد ويصنفها. لا تخبر أبدًا أي شخص برمز التحققد الذي تلقيته.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. تصفية الرسائل المزعجة:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>iOS: في [الإعدادات] > [الرسائل] فعّل "تصفية المرسلين غير المعروفين".</li>
+                        <li>Android: في إعدادات تطبيق الرسائل فعّل "خدمة المعلومات الذكية" أو "فلتر الرسائل المزعجة".</li>
+                        <li>نصيحة عامة: لرسائل الترويج المزعجة الواضحة لا ترد بأي شيء (بما في ذلك "TD إيقاف الإرسال"). احذف مباشرة أو ضع علامة كرسالة مزعجة. الرد قد يؤكد أن رقمك فعال.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.3 LINE/WeChat: إدارة تطبيقات التواصل الوطنية</h4>
+                    <p class="mb-2">LINE وWeChat تجاوزتا كونهما أدوات اتصال وأصبحتا "تطبيقات سوبر" تدمج التواصل الاجتماعي والدفع والحصول على المعلومات.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. النسخ الاحتياطي لسجلات الدردشة والترحيل:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الأهمية: سجلات الدردشة تحتوي على ملفات مهمة وذكريات ومعلومات عمل لكنها تُحفظ محليًا وفي ذاكرة التخزين المؤقت المؤقتة للخادم فقط. فقدان الهاتف أو إعادة تثبيت التطبيق قد يفقد السجلات إلى الأبد.</li>
+                        <li>النسخ الاحتياطي على PC (الأكثر موثوقية):
+                            <ol class="list-decimal pr-6 mt-1 space-y-1">
+                                <li>سجّل الدخول إلى نسخة PC أو Mac من WeChat/LINE.</li>
+                                <li>انقر على القائمة السفلية اليسرى > [الترحيل والنسخ الاحتياطي] > [النسخ الاحتياطي والاستعادة].</li>
+                                <li>اختر "نسخ احتياطي لسجلات الدردشة إلى PC" واختر الدردشات المراد نسخها احتياطيًا على الهاتف.</li>
+                            </ol>
+                            ملاحظة: ملفات النسخ الاحتياطي تُحفظ مشفرة محليًا على PC. عند الاستعادة يجب توصيل الهاتف وPC بنفس شبكة Wi-Fi.
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. تنظيف مساحة التخزين:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>المسار: WeChat [أنا] > [الإعدادات] > [عام] > [التخزين]. LINE [الإعدادات] > [عام] > [إدارة التخزين].</li>
+                        <li>استراتيجية التنظيف:
+                            <ol class="list-alpha pr-6 mt-1 space-y-1">
+                                <li>ذاكرة التخزين المؤقت: يمكن تنظيفها بأمان. بيانات مؤقتة تُنتج عند تشغيل التطبيق.</li>
+                                <li>سجلات الدردشة: ادخل ثم نظف بالتفصيل حسب الوقت أو نوع الملف أو الدردشة الفردية. مثلاً يمكنك تنظيف جميع ملفات "الفيديو" من "أكثر من سنة" في جميع الدردشات دفعة واحدة.</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. إعدادات الخصوصية والأمان:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>طريقة الإضافة: تحكم في كيفية العثور عليك الآخرون (رقم الهاتف، المعرف، الدردشة الجماعية، إلخ).</li>
+                        <li>أذونات الجدول الزمني: اضبط من يمكنه الرؤية ومن لا يمكنه الرؤية.</li>
+                        <li>إدارة المصادقة: في WeChat [الإعدادات] > [المعلومات الشخصية والأذونات] > [إدارة المصادقة] يمكنك مراجعة وإلغاء مصادقة تسجيل الدخول بـ WeChat لمواقع وتطبيقات الطرف الثالث.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">7.4 البريد الإلكتروني: الإعداد والاستخدام على الهاتف</h4>
+                    <p class="mb-2">معالجة البريد بكفاءة على الهاتف عنصر حاسم في المكتب المتنقل.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. إضافة حساب بريد:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تطبيق البريد القياسي للنظام:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>iOS: [الإعدادات] > [البريد] > [الحسابات] > [إضافة حساب].</li>
+                                <li>Android: يوجد عادةً تطبيق "بريد" في النظام. افتحه واتبع التعليمات للإضافة.</li>
+                            </ul>
+                        </li>
+                        <li>تطبيقات العميل المخصصة: Gmail وOutlook وما إلى ذلك. محسّنة لبريد معين ووظائفها أقوى.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. تقنيات استخدام البريد على الهاتف:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>إدارة إشعارات الدفع: اضبط طرق إشعار مختلفة لحسابات بريد مختلفة.</li>
+                        <li>إيماءات التشغيل: معظم تطبيقات البريد تدعم إيماءات السحب للأرشفة أو الحذف أو وضع العلامات بسرعة.</li>
+                        <li>التوقيع: اضبط توقيع بريد احترافي للهاتف.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. احتياطات أمنية:</h5>
+                    <p class="mb-2">كن حذرًا عند تسجيل الدخول إلى البريد أو إرسال بريد حساس على Wi-Fi العام.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">تمرين الفصل: نسخ احتياطي لسجلات WeChat على PC</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>ابدأ النسخ الاحتياطي على PC: افتح WeChat على PC > القائمة السفلية اليسرى > [الترحيل والنسخ الاحتياطي] > [النسخ الاحتياطي والاستعادة].</li>
+                            <li>اختر النسخ الاحتياطي إلى PC: انقر "نسخ احتياطي لسجلات الدردشة إلى PC".</li>
+                            <li>اختر محتوى النسخ الاحتياطي على الهاتف: ستظهر نافذة منبثقة على WeChat للهاتف اختر الدردشات المراد نسخها احتياطيًا وانقر "بدء النسخ الاحتياطي".</li>
+                            <li>انتظر حتى يكتمل النسخ الاحتياطي.</li>
+                            <li>(اختياري) افهم عملية الاستعادة: في نفس النافذة الخيار الآخر هو "استعادة سجلات الدردشة إلى الهاتف".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الثامن: المكتب المتنقل والتعلم</h3>
+                    <p class="mb-3">الهاتف أصبح محطة عمل متنقلة قوية ومركز تعلم متنقل.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.1 معالجة المستندات: التحرير والإنشاء في راحة اليد</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. اختيار التطبيقات الرئيسية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>WPS Office: التوطين ممتاز ومتوافق تمامًا مع تنسيقات Microsoft. يحتوي على قوالب مجانية غنية ومجموعة أدوات PDF مدمجة.</li>
+                        <li>Microsoft 365: التجربة متطابقة بدرجة عالية مع نسخة Office سطح المكتب. التوافق مع التنسيقات هو الأفضل وتكامل عميق مع التخزين السحابي OneDrive.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. التقنيات الأساسية لمعالجة المستندات على الهاتف:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>المزامنة السحابية هي المفتاح: احفظ ملفات العمل في محرك السحابة ذي الصلة بالتطبيق لضمان الحفظ التلقائي والتبديل السلس بين الأجهزة المتعددة والتعاون السهل. هل تذكرت؟</li>
+                        <li>التعاون والمشاركة: دعم المشاركة عبر الروابط وضبط أذونات "للقراءة فقط" أو "قابل للتحرير". دعم التحرير المتزامن عبر الإنترنت لعدة أشخاص.</li>
+                        <li>استخدام طرق الإدخال الفعالة: استخدم الإدخال الصوتي لكتابة المسودات الطويلة.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.2 تطبيقات الملاحظات: من التسجيل السريع إلى إدارة المعرفة</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. خفيف ومعيار النظام:</h5>
+                    <p class="mb-2">ملاحظات iOS وملصقات Android من كل علامة تجارية. المزايا: التشغيل سريع والتكامل مع النظام عالي ومناسب للملاحظات السريعة والقوائم والأفكار المؤقتة.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. متعدد الاستخدامات احترافي:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>Evernote: قدرة قوية على جمع المعلومات والبحث الكامل الممتاز.</li>
+                        <li>Notion: مرن للغاية يدمج الملاحظات وقواعد البيانات والكانبان. كل المحتوى "كتل" يمكن دمجها بحرية.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. خبرة الاستخدام:</h5>
+                    <p class="mb-2">حاول إنشاء "صندوق وارد" للمعرفة لجمع المعلومات وتنظيمها ومعالجتها دوريًا وإنشاء روابط بين الملاحظات لتشكيل شبكة معرفة.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.3 المسح وOCR: تحويل الملفات الورقية إلى نسخ إلكترونية</h4>
+                    <p class="mb-2">الهاتف هو ماسح ضوئي محمول متنقل.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. مبدأ المسح:</h5>
+                    <p class="mb-2">يكتشف تلقائيًا حواف المستند ويصححه ويزيل الظلال ويولد صورة واضحة. وظيفة OCR تتعرف على النص في الصورة وتحوله إلى نص قابل للتحرير.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. اختيار الأدوات:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>معيار النظام: iOS "الملاحظات" لديها وظيفة مسح مدمجة. بعض هواتف Android من العلامات التجارية لديها وضع "مسح المستندات" في الكاميرا أو تطبيق إدارة الملفات.</li>
+                        <li>تطبيقات احترافية من طرف ثالث: Microsoft Lens وAdobe Scan وCamScanner.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. خطوات التشغيل:</h5>
+                    <p class="mb-2">افتح التطبيق ووجهه للمستند > التقط تلقائيًا أو يدويًا > اضبط وعالج > نفذ OCR > احفظ وشارك (يمكن دمج صفحات متعددة في PDF).</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">8.4 التخزين السحابي ومحرك الأقراص: مركز ملفاتك المتنقل</h4>
+                    <p class="mb-2">محرك السحابة هو "مركز البيانات" الذي يربط الهاتف والكمبيوتر.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. مقارنة خدمات محركات الأقراص السحابية الرئيسية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>Google Drive: انتشار عالمي عالي ونظام بيئي للمشاركة ناضج.</li>
+                        <li>iCloud Drive: تكامل عميق مع نظام Apple البيئي. المزامنة طبيعية وآمنة.</li>
+                        <li>OneDrive: تكامل عميق مع Windows وOffice 365. الخيار الأول لمستخدمي نظام Microsoft البيئي.</li>
+                        <li>Dropbox: مستخدم على نطاق واسع عالميًا وممتاز في الاستقرار والتوافق.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. استراتيجية الاستخدام:</h5>
+                    <p class="mb-2">استخدم iCloud/سحابة العلامة التجارية للنسخ الاحتياطي للنظام والبيانات الشخصية الأساسية. استخدم Google Drive/OneDrive/Dropbox لتخزين الملفات كبيرة الحجم والتعاون العملي.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">تمرين الفصل: مسح مستند على الهاتف وإنشاء PDF</p>
+                        <p class="mt-1">خطوات التشغيل (باستخدام Microsoft Lens أو ملاحظات iOS كمثال):</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>اختر الأداة: iOS افتح "الملاحظات" > جديد > انقر أيقونة الكاميرا > "مسح المستندات". Android/عام حمّل وافتح "Microsoft Lens".</li>
+                            <li>التقاط المسح: وجهه للمستند وعندما يتعرف التطبيق على الإطار التقط. يمكن إضافة صفحات متعددة.</li>
+                            <li>تحسين التأثير: اختر فلتر "أبيض وأسود" لجعل المستند أوضح.</li>
+                            <li>التعرف OCR: بعد الانتهاء اختر الإخراج كـ PDF وانقر "نسخ النص" أو زر مشابه لاستخراج النص.</li>
+                            <li>الحفظ والتسمية: احفظ الملف باسم واضح.</li>
+                            <li>التحقق والمشاركة: افتح PDF وتحقق من الجودة وجرب المشاركة عبر البريد أو LINE.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل التاسع: الدفع الرقمي وخدمات الحياة</h3>
+                    <p class="mb-3">الهاتف يحل محل محافظنا وبطاقات المواصلات وحتى بطاقات الهوية المادية.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.1 الدفع الرقمي: الربط والدفع وإدارة الأمان</h4>
+                    <p class="mb-2"><strong>الأمان هو شرط الاستخدام.</strong></p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. ربط البطاقات البنكية:</h5>
+                    <p class="mb-2">يُوصى بربط 1-2 بطاقات شائعة الاستخدام فقط. يمكنك استخدام الحساب الإلكتروني من الفئة الثانية/الثالثة للبنك للدفع الرقمي حصريًا وعزل مخاطر الحساب الرئيسي.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. طرق الدفع:</h5>
+                    <p class="mb-2">رمز الدفع والمسح للدفع والتحويل والدفع عبر NFC للهاتف. تأكد من تفعيل "المصادقة عند التشغيل" أو "القفل الأمني" لمنع الاستخدام غير المصرح به عند فقدان الهاتف.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. إدارة الأمان الأساسية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>كلمة مرور الدفع والمصادقة البيومترية: اضبط بالتأكيد كلمة مرور دفع مستقلة وفعّل الدفع ببصمة الإصبع أو التعرف على الوجه.</li>
+                        <li>القفل الأمني: في إعدادات تطبيق الدفع ابحث عن "القفل الأمني" ويُنصح بضبط طلب المصادقة عند الدخول إلى صفحة "صفحتي" أو "المحفظة".</li>
+                        <li>إدارة أجهزة تسجيل الدخول: راجع دوريًا واحذف مصادقة تسجيل الدخول للأجهزة غير المستخدمة كثيرًا.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.2 رمز المواصلات العامة: المترو والحافلة</h4>
+                    <p class="mb-2">الهاتف يصبح بطاقة مواصلاتك.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. طريقة التفعيل:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تطبيق الدفع الرقمي: ابحث عن "IC المواصلات" وفعّل بطاقة المواصلات الإلكترونية للمدينة المقابلة.</li>
+                        <li>بطاقة المواصلات لهاتف العلامة التجارية: في تطبيقات المحفظة مثل Apple Pay وGoogle Pay فعّل بطاقة مواصلات افتراضية. الدفع باللمس عبر NFC. الاستجابة الأسرع وتدعم العمل بدون اتصال.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. نصائح الاستخدام:</h5>
+                    <p class="mb-2">للبوابات غير الداعمة لـ NFC أو عندما تُفرغ بطارية الهاتف يمكنك التبديل إلى رمز المواصلات في تطبيق الدفع الرقمي للاستخدام.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.3 دفع الفواتير العامة وتوصيل الطعام وسيارات الأجرة</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>دفع الفواتير العامة: في "الفواتير العامة" لتطبيق الدفع الرقمي اربط رقم العميل وادفع فواتير المياه والكهرباء والغاز.</li>
+                        <li>توصيل الطعام: منصات مختلفة (Uber Eats وDemae-can وما إلى ذلك) قد يكون لها خصومات مختلفة لنفس المتجر. قارن عبر منصات متعددة.</li>
+                        <li>سيارات الأجرة: اضبط جهة اتصال طوارئ وفعّل مشاركة المسار. فضّل الدفع داخل المنصة وتجنب المعاملات خارج المنصة.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">9.4 حفظ واستخدام بطاقات الهوية الإلكترونية</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. بطاقات الهوية الإلكترونية:</h5>
+                    <p class="mb-2">في بعض المناطق تطبيقات الحكومة الرسمية تطرح بطاقات هوية إلكترونية ورخص قيادة إلكترونية قابلة للاستخدام في مشاهد محددة لكنها لا تنطبق على جميع المواقف.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. نصائح الحفظ:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>أضف إلى "محفظة" الهاتف للاستدعاء السريع من شاشة القفل.</li>
+                        <li>Android يمكنك الضغط مطولاً على أيقونة التطبيق وسحب وظيفة محددة (مثل "رمز الصحة الخاص بي") إلى سطح المكتب كاختصار.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">تمرين الفصل: إعداد قفل أكثر أمانًا لتطبيق الدفع</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>تأكد من تفعيل الدفع بالمصادقة البيومترية: في تطبيق الدفع تأكد أن الدفع ببصمة/وجه الإصبع مفعّل.</li>
+                            <li>اضبط "القفل الأمني": في إعدادات أمان تطبيق الدفع ابحث عن "القفل الأمني" واضبط طلب المصادقة عند الدخول إلى "المحفظة" أو إجراء عمليات مالية.</li>
+                            <li>راجع أجهزة تسجيل الدخول: في إعدادات الأمان احذف جميع الأجهزة غير المعروفة وغير المستخدمة.</li>
+                            <li>افهم حماية الحساب: تحقق من تفاصيل تأمين أمان الحساب لتطبيق الدفع.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل العاشر: التصوير وإدارة الصور</h3>
+                    <p class="mb-3">في هذا الفصل ستتقن العملية الكاملة لإنشاء صور رائعة على الهاتف وإدارة ذكرياتك البصرية بكفاءة.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.1 أساسيات كاميرا الهاتف: الوضع الليلي والبورتريه والوضع الاحترافي</h4>
+                    <ol class="list-decimal pr-6 mb-3 space-y-2">
+                        <li><strong>الوضع الليلي</strong>: من خلال دمج صور متعددة يحسن السطوع والتفاصيل في الأماكن المظلمة. عند التصوير تحتاج للثبات باليد لمدة 2-4 ثوانٍ.</li>
+                        <li><strong>وضع البورتريه</strong>: يحاكي تأثير عمق الميدان الضحل (خلفية ضبابية) لكاميرات SLR. ركّز على الشخص وابقَ على مسافة 1-2 متر. يمكن تعديل شدة الضبابية لاحقًا.</li>
+                        <li><strong>الوضع الاحترافي</strong>: تحكم يدوي في المعايير الأساسية.
+                            <ul class="list-disc pr-6 mt-1 space-y-1">
+                                <li>ISO: كلما انخفض كانت جودة الصورة أفضل، ورفعه في الأماكن المظلمة يولد ضوضاء.</li>
+                                <li>سرعة الغالق: السريع يثبت اللحظة، البطيء يسجل المسار (يحتاج ثبات).</li>
+                                <li>توازن البياض: يضبط ميل الألوان.</li>
+                                <li>تعويض التعريض: يضبط الصورة بأكملها لتكون أفتح أو أغمق.</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.2 تكوين الصور والتعديل</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. قواعد التكوين الأساسية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>قاعدة الأثلاث: ضع نقاط الاهتمام على التقاطعات الأفقية والعمودية الثلاثية للصورة.</li>
+                        <li>الخطوط الموجهة: استخدم الطرق والأنهار وما إلى ذلك لتوجيه النظر للهدف.</li>
+                        <li>ابدأ ببساطة: عند التصوير حافظ واعيًا على الصورة أفقية ورأسية.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. عملية التعديل (باستخدام تطبيقات مثل Snapseed وVSCO):</h5>
+                    <ol class="list-alpha pr-6 mb-3 space-y-1">
+                        <li>التصحيح: قم بالتدوير وقص المنظور.</li>
+                        <li>التعديلات الأساسية: اضبط السطوع والتباين. اخفض الإبرازات وارفع الظلال.</li>
+                        <li>التعديلات الجزئية: قم بالتفتيح والتعتيم وإزالة العيوب في مناطق محددة.</li>
+                        <li>التنميط: أضف فلاتر واضبط درجة الألوان.</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.3 إدارة الصور: من الفوضى إلى النظام</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. وظائف إدارة الألبوم الأساسية للهاتف:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>التصنيف الذكي: يصنف تلقائيًا حسب الوقت والمكان والأشخاص والمشهد.</li>
+                        <li>البحث: يمكن البحث بالكلمات الرئيسية والمكان والوقت وحتى النص في الصورة.</li>
+                        <li>العمليات المجمعة: بعد التحديد المتعدد يمكن المشاركة والإضافة للألبوم أو الحذف دفعة واحدة.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. النسخ الاحتياطي للصور وتحرير المساحة:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>النسخ الاحتياطي السحابي: iOS استخدم صور iCloud وفعّل "تحسين تخزين iPhone". Android/عبر المنصات استخدم صور Google أو خدمات سحابية أخرى.</li>
+                        <li>تحرير المساحة: استخدم أدوات النظام أو نظف يدويًا الفيديوهات الضخمة وصور الالتقاط المستمر.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">10.4 لقطات الشاشة وتسجيل الشاشة: التقاط ومشاركة المعلومات</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. العمليات الأساسية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>اختصار شائع: اضغط [زر الطاقة] + [زر رفع الصوت] في نفس الوقت.</li>
+                        <li>الالتقاط المتقدم: لقطة شاشة طويلة/لقطة شاشة بالتمرير، لقطة شاشة لمنطقة محددة.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. تسجيل الشاشة:</h5>
+                    <p class="mb-2">أضف زر "تسجيل الشاشة" لمركز التحكم. قبل البدء اضغط مطولاً لتفعيل تسجيل الميكروفون للتعليق الصوتي.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. التحرير الفوري:</h5>
+                    <p class="mb-2">بعد لقطة الشاشة انقر على الصورة المصغرة للدخول لشاشة التحرير حيث يمكنك التعليق والقص والتركيب وغيرها.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">تمرين الفصل: التصوير بالوضع الاحترافي لالتقاط صور ليلية</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>التحضير: ابحث عن مشهد به مصدر ضوء ثابت ويُنصح باستخدام حامل ثلاثي أو تثبيت الهاتف.</li>
+                            <li>الدخول إلى الوضع الاحترافي: افتح تطبيق الكاميرا وبدّل إلى وضع "احترافي".</li>
+                            <li>اضبط المعايير:
+                                <ul class="list-disc pr-6 mt-1 space-y-1">
+                                    <li>ISO: اضبط على أدنى قيمة (50 أو 100).</li>
+                                    <li>سرعة الغالق: اضبط من ثانية واحدة إلى عدة ثوانٍ (مثلاً: ثانيتين).</li>
+                                    <li>التركيز: اضبط على التركيز اليدوي واسحب الشريط حتى تصبح الأضواء البعيدة واضحة.</li>
+                                </ul>
+                            </li>
+                            <li>التصوير والتحقق: انقر الغالق وابقَ ثابتًا تمامًا. تحقق من الصورة واضبط المعايير حسب السطوع.</li>
+                            <li>تجربة المقارنة: التقط صورة أيضًا بالوضع الليلي التلقائي وقارن الفرق بين الاثنتين.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الحادي عشر: الترفيه والقراءة</h3>
+                    <p class="mb-3">الهاتف أهم مركز ترفيهي لنا، يجمع بين مشغل الموسيقى وسينما ومكتبة وجهاز ألعاب.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.1 الموسيقى والبودكاست: مشهدك الصوتي المتنقل</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. خدمات البث الموسيقي عبر الإنترنت:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>عالمي: Spotify وApple Music. مكتبة أغاني عالمية وخيارات جودة صوت غنية.</li>
+                        <li>ياباني: LINE MUSIC وAWA. تتميز بمجتمع قوائم التشغيل والتوصيات الشخصية.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. البودكاست:</h5>
+                    <p class="mb-2">التطبيقات: Apple Podcasts وSpotify وGoogle Podcasts. نصائح الاستخدام: اشترك في القنوات وحمل مسبقًا واضبط سرعة التشغيل للاستماع بكفاءة.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.2 مشغل الفيديو: التشغيل المحلي والبث</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. تشغيل الفيديو المحلي:</h5>
+                    <p class="mb-2">يُنصح بمشغلات متعددة الاستخدامات مثل VLC وnPlayer. تدعم تقريبًا جميع التنسيقات والترجمة الخارجية.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. بث الفيديو عبر الإنترنت:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>منصات شاملة: YouTube وNetflix وAmazon Prime Video وHulu.</li>
+                        <li>نصائح الاستخدام: حمّل المحتوى مسبقًا. استخدم وظيفة "البث" للمشاهدة على التلفاز.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.3 قراءة الكتب الإلكترونية: قارئ Epub وPDF</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. اختيار منصات القراءة:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>روايات الويب والكتب المنشورة: Kindle وApple Books وGoogle Play Books.</li>
+                        <li>كتب متخصصة ومستندات: Apple Books وAdobe Acrobat Reader (للتعليق على PDF).</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. إعدادات تحسين القراءة:</h5>
+                    <p class="mb-2">خصّص لون الخلفية والخط. استخدم وظائف الإشارات المرجعية والتمييز والملاحظات. بعض التطبيقات تدعم القراءة بصوت عالٍ.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">11.4 وضع الألعاب وضبط الأداء</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. وضع الألعاب/صندوق أدوات الألعاب:</h5>
+                    <p class="mb-2">يُفعّل تلقائيًا عند تشغيل اللعبة. يوفر تبديل وضع الأداء ووضع عدم الإزعاج والتسجيل السريع وأدوات النافذة العائمة.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ضبط الأداء يدويًا:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>داخل اللعبة: اضبط جودة الصورة ومعدل الإطارات حسب أداء الهاتف. سلاسة معدل الإطارات هي الأهم.</li>
+                        <li>على مستوى النظام: إذا كانت اللعبة تدعم فعّل وضع معدل التحديث العالي (مثلاً 120Hz) في إعدادات النظام.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. عادات اللعب الصحية:</h5>
+                    <p class="mb-2">استخدم وظيفة "وقت الشاشة" للنظام لضبط تنبيهات الوقت. اضبط مصادقة الدفع للمشتريات داخل اللعبة.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">تمرين الفصل: تكوين حزمة ترفيه "وضع الطيران" مخصصة</p>
+                        <p class="mt-1">خطوات التشغيل: حمّل مسبقًا وخطط لمجموعة كاملة من محتوى الترفيه غير المتصل.</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>حزمة الموسيقى: في تطبيق الموسيقى حمّل قوائم التشغيل أو الألبومات المفضلة.</li>
+                            <li>حزمة الفيديو: في تطبيق البث خزّن فيلمًا أو مسلسلاً.</li>
+                            <li>حزمة القراءة: في تطبيق الكتب الإلكترونية حمّل كتابًا أو كتابين.</li>
+                            <li>حزمة الألعاب: ثبّت لعبة أو لعبتين يمكن لعبهما بدون اتصال.</li>
+                            <li>التكامل والاختبار: فعّل "وضع الطيران" وتأكد أن جميع المحتوى قابل للوصول بدون اتصال. رتّب التطبيقات ذات الصلة في مجلد "ترفيه غير متصل".</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل الثاني عشر: تطبيقات الأدوات الموصى بها</h3>
+                    <p class="mb-3">في هذا الفصل نختار بعناية تطبيقات الأدوات التي ترفع الكفاءة حقًا وتعزز الصحة وتجعل الخروج مريحًا.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.1 أدوات الكفاءة: إدارة الوقت والانتباه</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. قوائم المهام وإدارة المهام:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>اختيار التطبيقات:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>خفيف ومريح: ملصقات النظام وMicrosoft To Do.</li>
+                                <li>غني بالميزات: Todoist وTickTick (التعرف على اللغة الطبيعية ممتاز ومتكامل مع مؤقت بومودورو).</li>
+                                <li>إدارة كانبان: Trello أو عرض كانبان في Notion. مناسب للإدارة البصرية للمشاريع.</li>
+                            </ul>
+                        </li>
+                        <li>خبرة الاستخدام: اجمع المهام في "صندوق وارد" فورًا. نظّم دوريًا واضبط التواريخ. ركّز فقط على قائمة "اليوم" كل يوم.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. مؤقت بومودورو:</h5>
+                    <p class="mb-2">التطبيقات: Forest وFocus To-Do. المبدأ: 25 دقيقة تركيز و5 دقائق راحة، كرر.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. التقويم:</h5>
+                    <p class="mb-2">استخدم تقويم النظام أو Google Calendar. أدخل المواعيد والمواعيد النهائية وحتى "كتل وقت التركيز" في التقويم لتصور توزيع الوقت.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.2 الصحة واللياقة: Apple Health وGoogle Fit وFitbit</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>التوجيه الرياضي والتسجيل: Nike Training Club وStrava وغيرها توفر دورات لياقة غنية. تطبيقات الصحة من العلامات التجارية (مثل Samsung Health) تتكامل بعمق مع بيانات السوار الذكي.</li>
+                        <li>Apple Health / Google Fit: مركز البيانات. يجمع جميع البيانات من الهاتف والسوار الذكي وتطبيقات الصحة من طرف ثالث ويشكل سجل صحة موحد. راجع تقارير "الاتجاهات" دوريًا.</li>
+                        <li>نصيحة الاستخدام: اضبط أهدافًا قابلة للتحقيق. لا تسمح بالتذكيرات المفرطة.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.3 السفر والخروج: دليلك الشامل</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. الخرائط والملاحة:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>داخل اليابان: Google Maps وYahoo! MAP. معلومات مرور تفصيلية وفي الوقت الفعلي غنية.</li>
+                        <li>السفر للخارج: Google Maps. البيانات العالمية والتقطيع الشارعي وتقييمات المستخدمين ممتازة.</li>
+                        <li>المشي والخروج: AllTrails وYAMAP. تسجل المسارات ويمكن تحميل خرائط بدون اتصال.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. الترجمة:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>المحادثة في الوقت الفعلي: "المحادثة" و"الكاميرا" للترجمة الفورية في Google Translate هي أدوات سحرية للسفر.</li>
+                        <li>النص والمستندات: DeepL دقة ترجمة عالية بين اللغات الأوروبية.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. تخطيط الرحلات:</h5>
+                    <p class="mb-2">تطبيقات مثل "TripIt" تولد مسارات تلقائيًا وتدير معلومات تذاكر الطيران والفنادق وتصنع جداول الرحلات.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">12.4 متخصص لكن قوي: مقدمة لأدوات الأتمتة</h4>
+                    <p class="mb-2">هذا مفتاح ترقية الهاتف إلى "مساعد ذكي".</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. ما هي الأتمتة؟:</h5>
+                    <p class="mb-2">جعل الهاتف ينفذ تلقائيًا سلسلة من العمليات المحددة مسبقًا عند تحقق الشروط المضبوطة. مثال: عند العودة للمنزل اتصل تلقائيًا بـ Wi-Fi وشغّل الموسيقى، عند وقت النوم أخفض الشاشة تلقائيًا.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. "الاختصارات" في iOS:</h5>
+                    <p class="mb-2">أداة الأتمتة الرسمية من Apple. لا تحتاج برمجة.</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>المفهوم الأساسي: "الاختصار" هو سير عمل يمكن تشغيله يدويًا بالنقر. "الأتمتة" هي تعليمات تُنفذ تلقائيًا بناءً على الشروط.</li>
+                        <li>مسار البدء: أضف أولاً اختصارات جاهزة من "معرض الاختصارات" للاستخدام. ثم حاول إنشاء اختصارات بسيطة. أخيرًا استكشف الأتمتة الشخصية في تبويب "الأتمتة".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. حلول الأتمتة في Android:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>على مستوى النظام: أنظمة كل علامة تجارية (مثل One UI وMIUI) قد تحتوي على وظائف أتمتة أساسية مدمجة مثل "ربط السيناريوهات".</li>
+                        <li>تطبيق على مستوى الأداة: Tasker. الوظائف قوية جدًا لكن منحنى التعلم حاد.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">تمرين الفصل: إنشاء أتمتة "استرخاء ما قبل النوم"</p>
+                        <p class="mt-1">مرجع (باستخدام أتمتة "الاختصارات" في iOS):</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>إنشاء شرط التشغيل: افتح تطبيق الاختصارات > [الأتمتة] > [إنشاء أتمتة شخصية] > اختر "وقت محدد" (مثلاً: 22:30، كل يوم).</li>
+                            <li>إضافة إجراءات التنفيذ: أخفض صوت الوسائط > فعّل "وضع عدم الإزعاج" > شغّل قائمة تشغيل استرخاء محددة > أخفض سطوع الشاشة للأدنى > اعرض إشعار: "حان وقت استرخاء ما قبل النوم. ضع الهاتف".</li>
+                        </ol>
+                        <p class="mt-2">مرجع Android: استخدم وظيفة "السيناريو" القياسية للنظام أو Tasker لضبط شروط تشغيل وإجراءات مشابهة.</p>
+                        <p class="mt-1">خطوات التمرين: اختر الأداة حسب نظام هاتفك وأنشئ أتمتة باسم "استرخاء ما قبل النوم". أضف إجراءات مهمة (بما في ذلك ضبط الصوت وتفعيل وضع عدم الإزعاج). احفظ واختبر.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">ثالثاً: القسم التطبيقي (الفصول 13-17)</h2>
+
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 13: علم البطارية وتوفير الطاقة</h3>
+                    <p class="mb-3">البطارية هي "قلب الطاقة" للهاتف. في هذا الفصل سنتعرف على خصائص البطارية ونتعلم تقنيات الشحن وتوفير الطاقة العلمية ونحل تمامًا قلق البطارية.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.1 ما هي البطارية؟ الدورات والصحة</h4>
+                    <p class="mb-2">بطارية الهاتف (ليثيوم أيون أو بوليمر ليثيوم) مثل إسفنجة الطاقة: الشحن هو امتصاص الماء (تخزين الطاقة)، التفريغ هو عصر الماء (الاستخدام). تذكر خصائصها الثلاث الكبرى:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الشحن في أي وقت: على عكس البطاريات القديمة لا يوجد تأثير ذاكرة ولا تحتاج للتفريغ الكامل قبل الشحن. استخدامها حتى 0% أو إبقاؤها دائمًا ممتلئة عند 100% يضرها بالعكس.</li>
+                        <li>تخشى الحرارة: الحرارة العالية هي العدو الأول للبطارية.</li>
+                        <li>تتدهور: مع الاستخدام الطويل الأمد تنخفض السعة القصوى. هذه ظاهرة طبيعية.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">المؤشر الأساسي: عدد الدورات والصحة</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الدورة الواحدة ليست شحنة واحدة. مثلاً إذا استخدمت اليوم 60% وملأتها ثم استخدمت غدًا 40% وملأتها فالمجموع 100% استهلاك طاقة يُحسب دورة واحدة.</li>
+                        <li>صحة البطارية تشير إلى النسبة المئوية للسعة القصوى الحالية مقارنة بالجديدة. إذا انخفضت عن 80% ستصبح مدة البطارية قصيرة بشكل واضح ويمكنك التفكير في استبدال البطارية الرسمي.</li>
+                        <li>طريقة التحقق:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>iPhone: الإعدادات > البطارية > حالة البطارية والشحن.</li>
+                                <li>Android: عادةً ابحث عن "حالة البطارية" في الإعدادات.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.2 خرافات الشحن؟ الشحن السريع واللاسلكي والقاعدة الذهبية</h4>
+                    <p class="mb-2">لنبدد الشائعات ونشحن علميًا.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. هل الشحن السريع يضر البطارية؟</h5>
+                    <p class="mb-2">استخدام ملحقات الشحن السريع الأصلية أو المعتمدة يسبب ضررًا طفيفًا فقط. الهاتف والشاحن لديهما تحكم في الحرارة وعند السخونة الزائدة يخفضان الإخراج تلقائيًا. لا تستخدم شاحنات سريعة من علامات تجارية مجهولة.</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ماذا عن الشحن اللاسلكي؟</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>مريح: ضع وشحن. مناسب للاستخدام ليلاً عند النوم.</li>
+                        <li>العيوب: كفاءة منخفضة والسخونة ملحوظة والشحن بطيء.</li>
+                        <li>نصيحة: مناسب للشحن طوال الليل (بشكل متقطع). عند الاستعجال استخدم الشحن السريع السلكي. عند الاستخدام اخلع الغطاء السميك.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. القاعدة الذهبية لصحة البطارية</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>نطاق الطاقة الأمثل: حافظ على الطاقة بين 20%-80% قدر الإمكان ولا تتركها "جائعة" عند 0% أو "ممتلئة" عند 100%.</li>
+                        <li>هل الشحن طوال الليل آمن؟ آمن! عند الامتلاء يتوقف الشحن تلقائيًا والهاتف يتغذى مباشرة من الكهرباء.</li>
+                        <li>لا تشحن أبدًا أثناء لعب الألعاب الكبيرة. تراكب الحرارة يضر البطارية.</li>
+                        <li>عدم استخدام الهاتف لفترة طويلة: اشحن لحوالي 50% وأطفئه وخزنه.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">13.3 هذه هي تقنيات توفير الطاقة الحقيقية</h4>
+                    <p class="mb-2">صحة البطارية وحدها لا تكفي. الإعدادات هي المهارة القاتلة لتوفير الطاقة.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. اكتشاف "الشرهين للطاقة"</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الشاشة (ملك استهلاك الطاقة): أخفض السطوع وقلل وقت القفل التلقائي. هواتف شاشات OLED فعّل بالتأكيد الوضع الداكن. يوفر طاقة كبيرة.</li>
+                        <li>إشارة ضعيفة: في المصاعد والأقبية يبحث الهاتف بجد عن الإشارة ويستهلك الطاقة بسرعة.</li>
+                        <li>5G: عندما تكون الإشارة ضعيفة بدّل يدويًا إلى 4G وستتحسن مدة البطارية كثيرًا.</li>
+                        <li>خدمات الموقع:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>اضبط أذونات الموقع للتطبيقات غير الملاحية (مثل السوشيال ميديا والتسوق) على "أثناء الاستخدام فقط".</li>
+                                <li>في موقع النظام أوقف الخيارات غير الضرورية مثل "الإعلانات المبنية على الموقع".</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. إدارة "أفواه" التطبيقات</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تقييد نشاط الخلفية:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>iPhone: الإعدادات > عام > تحديث التطبيقات في الخلفية. أوقف الكل أو اترك LINE فقط.</li>
+                                <li>Android: في إعدادات بطارية التطبيق اختر "حظر نشاط الخلفية" للتطبيقات غير المستخدمة كثيرًا.</li>
+                            </ul>
+                        </li>
+                        <li>أوقف الإشعارات غير الضرورية: كلما أضيءت الشاشة واهتزت يُستهلك طاقة.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. حبل النجاة: وضع توفير الطاقة</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>وضع توفير الطاقة/الطاقة المنخفضة: النظام يخفض الأداء ويوقف المزامنة الخلفية. فعال جدًا للإنقاذ المؤقت.</li>
+                        <li>وضع توفير الطاقة الفائق/الحد الأقصى: يبقى الهاتف والرسائل القصيرة وعدد قليل جدًا من التطبيقات والشاشة بالأبيض والأسود. يعصر آخر الطاقة ليمد الحياة.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: فحص صحة البطارية</p>
+                        <p class="mt-1">الهدف: استخدم البيانات لتحديد الجاني الحقيقي لاستهلاك الطاقة.</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>تحقق من الصحة: بالطريقة أعلاه ابحث عن السعة القصوى للبطارية وسجلها.</li>
+                            <li>حلل تفاصيل استهلاك الطاقة:
+                                <ul class="list-disc pr-6 mt-1 space-y-1">
+                                    <li>iPhone: اذهب إلى الإعدادات > البطارية وانظر إلى الرسم البياني وقائمة التطبيقات أدناه ولاحظ أي تطبيق لديه نشاط خلفية طويل.</li>
+                                    <li>Android: اذهب إلى الإعدادات > البطارية > استخدام البطارية وانظر إلى ترتيب استهلاك الطاقة للأجهزة والتطبيقات.</li>
+                                </ul>
+                            </li>
+                            <li>ضع خطة:
+                                <ul class="list-disc pr-6 mt-1 space-y-1">
+                                    <li>إذا كان استهلاك الطاقة الخلفية لتطبيق معين غير طبيعي → قيده.</li>
+                                    <li>إذا كان استهلاك "الشبكة المتنقلة" عاليًا → تذكر هل بقيت في مكان إشارة ضعيفة لفترة طويلة.</li>
+                                    <li>إذا كانت تطبيقات غير مستخدمة كثيرًا في الترتيب → فكر في إلغاء تثبيتها.</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 14: الحسابات والخدمات السحابية</h3>
+                    <p class="mb-3">حساب هاتفك أكثر من مجرد كلمة مرور لتنزيل التطبيقات. إنه "جواز السفر الرقمي" لحياتك الرقمية والخدمات السحابية هي "الطريق السريع غير المرئي" الذي يجعل جميع بياناتك تتدفق.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.1 الحسابات الأساسية الثلاثة: Apple وGoogle وكل علامة تجارية</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Apple ID: المفتاح الشامل لنظام Apple البيئي</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الدور: App Store ومزامنة iCloud والعثور على iPhone وFaceTime وغيرها كلها تعتمد عليه. يمكن التبديل بسلاسة بين iPhone وiPad وMac.</li>
+                        <li>الحد الأدنى للأمان: فعّل المصادقة الثنائية بالتأكيد! هذا يجعل حتى لو تسربت كلمة المرور لا يمكن للآخرين تسجيل الدخول على جهاز جديد.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. حساب Google: قلب Android وخدمات Google</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الدور: مزامنة جهات الاتصال والتقويم وGmail وإشارات Chrome والنسخ الاحتياطي للصور.</li>
+                        <li>الحد الأدنى للأمان: بالمثل تفعيل المصادقة الثنائية مهم.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. حسابات كل علامة تجارية: المدير الشامل المحلي</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الدور: النسخ الاحتياطي لمساحة السحابة ومتجر التطبيقات والعثور على الهاتف والربط بين الأجهزة (مثل التعاون متعدد الشاشات).</li>
+                        <li>ملاحظة: افهم أن بيانات السحابة موجودة على خوادم محلية واقرأ سياسة الخصوصية واعرف ما هي البيانات التي تُزامن.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">🔐 قواعد أمان الحسابات المشتركة</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>كلمة مرور قوية + مدير كلمات المرور: أدِر بأدوات مثل سلسلة مفاتيح iCloud أو Bitwarden.</li>
+                        <li>فعّل المصادقة الثنائية: هذا هو حبل النجاة المضاد للسرقة.</li>
+                        <li>راجع أجهزة تسجيل الدخول دوريًا: احذف الأجهزة غير المعروفة.</li>
+                        <li>انتبه لروابط التصيد: لا تنقر أبدًا إذا طُلبت كلمة المرور من رابط غير معروف. أدخل عنوان الموقع الرسمي يدويًا.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.2 المزامنة السحابية: اجعل بياناتك تتحرك بنفسها</h4>
+                    <p class="mb-2">عند تفعيل المزامنة السحابية تشعر أن البيانات موجودة في الهاتف لكنها في الواقع آمنة في السحابة ومتسقة على جميع الأجهزة.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. ماذا يمكن للمزامنة السحابية أن تفعل؟ (باستخدام iCloud كمثال)</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>جهات الاتصال والتقويم والملاحظات: أي تغيير على أي جهاز يُزامن فورًا على الأجهزة الأخرى.</li>
+                        <li>الصور والفيديوهات: عند تفعيل صور iCloud تُرفع جميع الصور ويبقى في الهاتف نسخ صغيرة الحجم (لتوفير المساحة). يمكنك رؤية الحجم الأصلي على أي جهاز Apple.</li>
+                        <li>النسخ الاحتياطي الكامل التلقائي: عندما يكون الهاتف يشحن ومقفل ومتصل بـ Wi-Fi يُنسخ احتياطيًا تلقائيًا إعدادات النظام وتخطيط التطبيقات وغيرها. يصبح أداة سحرية عند استعادة هاتف جديد.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. ⚠️ تمييز مهم: المزامنة مقابل النسخ الاحتياطي</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>المزامنة = اتساق ثنائي الاتجاه: إذا حذفت صورة على جهاز A تُحذف أيضًا على أجهزة B وC. الهدف هو إبقاء جميع الأجهزة متطابقة.</li>
+                        <li>النسخ الاحتياطي = لقطة أحادية الاتجاه: مثل التقاط لقطة للهاتف وحفظها. حتى لو حذفت البيانات المحلية لاحقًا يبقى النسخ الاحتياطي السحابي. الهدف هو الاستعادة.</li>
+                        <li>تذكر: لا تتعامل مع مزامنة صور iCloud كنسخ احتياطي! إذا حذفت عن طريق الخطأ على جميع الأجهزة تُحذف أيضًا من السحابة. للنسخ الاحتياطي الحقيقي تحتاج نسخ احتياطي كامل على PC (iTunes/Finder) أو تخزين سحابي من طرف ثالث (رفع فقط بدون حذف).</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">14.3 المشاركة العائلية: اشترِ مرة واستمتع بها كل العائلة</h4>
+                    <p class="mb-2">هذه أداة سحرية لمشاركة الموارد الرقمية مع أقرب أفراد العائلة.</p>
+                    <p class="mb-2">باستخدام "المشاركة العائلية" من Apple كمثال يمكن مشاركة:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>التطبيقات والموسيقى والأفلام والكتب: ما اشتريته يمكن لجميع أفراد العائلة (حتى 5 أشخاص) تنزيله بدون رسوم إضافية. هذه أنجح طريقة لشراء البرمجيات.</li>
+                        <li>اشتراكات Apple Music وiCloud+ وغيرها: اشتراكات الخطة العائلية عادة أرخص من الشخصية.</li>
+                        <li>مشاركة الموقع: راجع موقع العائلة في الوقت الفعلي (مثلاً عودة الطفل من المدرسة). اضبط السياج الجغرافي وأُرسل إشعار عند الوصول أو المغادرة. آمن ومطمئن.</li>
+                        <li>ألبوم مشترك وتقويم: ضع الصور معًا وسجل فعاليات العائلة.</li>
+                    </ul>
+                    <p class="mb-2">💡 ملاحظة: ادعُ فقط أفراد العائلة المباشرين الموثوقين تمامًا. مشاركة الموقع ثنائية الاتجاه. احترم الخصوصية المتبادلة.</p>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: تحقق من محتوى مزامنة الحساب</p>
+                        <p class="mt-1">الهدف: الإدارة النشطة والوداع للمزامنة الفوضوية.</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>باستخدام iPhone كمثال: الإعدادات > اسمك في الأعلى.</li>
+                            <li>تحقق من عناصر مزامنة iCloud: انقر "iCloud" وتحقق من مفتاح كل تطبيق في القائمة.
+                                <ul class="list-disc pr-6 mt-1 space-y-1">
+                                    <li>جهات الاتصال والتقويم يُنصح بتشغيلهما.</li>
+                                    <li>ركز على "الصور": تأكد أنك تفهم منطق صور iCloud (الحذف في مكان واحد يحذف في كل مكان).</li>
+                                    <li>يمكن إيقاف مزامنة تطبيقات الطرف الثالث غير المستخدمة لتوفير المساحة.</li>
+                                    <li>تأكد أن نسخ iCloud الاحتياطي مفعّل.</li>
+                                </ul>
+                            </li>
+                            <li>تحقق من "العثور" والموقع: تأكد أن "العثور على iPhone" مفعّل (ضروري لمضاد السرقة). تحقق أن إعدادات مشاركة الموقع في المشاركة العائلية كما تتوقع.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 15: ربط الهاتف بأجهزة أخرى</h3>
+                    <p class="mb-3">الهاتف الحديث هو مركزك الرقمي الشخصي. تعلم كيف يشكل فريقًا مع الأجهزة الأخرى وتتضاعف الكفاءة.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.1 التعاون مع PC: انفجار الإنتاجية</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. نقل الملفات، وداعًا لكابل البيانات</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الملك اللاسلكي:
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>نظام Apple البيئي: AirDrop. نقل فوري للملفات والصور بين iPhone وMac. لا يحتاج شبكة وبلا تدهور في الجودة.</li>
+                                <li>Android + Win: استخدم وظيفة <strong>"Phone Link"</strong>. شاهد صور الهاتف مباشرة على PC ورد على الرسائل القصيرة.</li>
+                                <li>نظام العلامة التجارية البيئي: Samsung Flow وHuawei Share وغيرها. عكس شاشة الهاتف مباشرة على PC. شغّل تطبيقات الهاتف بماوس ولوحة مفاتيح PC. اسحب الملفات في كلا الاتجاهين.</li>
+                            </ul>
+                        </li>
+                        <li>التوصيل المباشر الفيزيائي: صل بالكابل للـ PC واختر وضع "نقل الملفات". مستقر وسريع. مناسب لنقل الملفات الكبيرة.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. الاستمرار متعدد الشاشات</h5>
+                    <p class="mb-2">Apple Handoff: عندما تشاهد صفحة ويب على iPhone يظهر أيقونة Safari في شريط برامج Mac وانقر لمتابعة المشاهدة. انسخ نصًا والصقه مباشرة على جهاز آخر.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.2 الربط مع الساعة الذكية/السوار: المساعد على المعصم</h4>
+                    <p class="mb-2">الوظائف الأساسية:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>فلترة الإشعارات: ادفع رسائل الهاتف للساعة. ارفع المعصم للتحقق. مرر لتجاهل غير المهم. يقلل عدد مرات إخراج الهاتف.</li>
+                        <li>محطة بيانات الصحة: الساعة تقيس معدل ضربات القلب والنوم 24 ساعة. البيانات تُراجع كتقرير في تطبيق الهاتف.</li>
+                        <li>ريموت كونترول شامل: تحكم عن بُعد في تشغيل الموسيقى على الهاتف واستخدم كغالق كاميرا الهاتف (مريح جدًا للصور الجماعية).</li>
+                        <li>المس على المعصم: زامن بطاقة المواصلات وبطاقة الدخول المفتوحة في محفظة الهاتف للساعة. ارفع المعصم للمس.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">15.3 الربط مع المنزل الذكي: الريموت كونترول الشامل في الجيب</h4>
+                    <p class="mb-2">الدور الثلاثي للهاتف:</p>
+                    <ol class="list-decimal pr-6 mb-3 space-y-1">
+                        <li>ريموت كونترول: في تطبيقات مثل Google Home وAmazon Alexa وApple Home شغّل/أطفئ الإضاءة مباشرة واضبط درجة حرارة المكيف.</li>
+                        <li>مخرج السيناريو: اضبط "وضع مشاهدة الفيلم". بنقرة واحدة أطفئ الإضاءة الرئيسية وشغّل إضاءة الأجواء وأنزل الشاشة واضبط المكيف.</li>
+                        <li>مركز الإعدادات: جميع إعدادات الأجهزة الذكية يجب أن تتم عبر تطبيق الهاتف.</li>
+                    </ol>
+
+                    <p class="mb-2">توصيات النظام البيئي:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>إذا كنت تستخدم iPhone وتهتم بالخصوصية → اختر أجهزة متوافقة مع Apple HomeKit.</li>
+                        <li>إذا كانت الأجهزة كثيرة وتبحث عن القيمة مقابل السعر → نظام Google Home أو Amazon Alexa البيئي هو الأكثر اكتمالاً.</li>
+                        <li>إذا كنت تستخدم هاتف Samsung → فضّل Samsung SmartThings.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: عكس شاشة الهاتف على التلفاز</p>
+                        <p class="mt-1">الهدف: شارك الصور والفيديوهات على الشاشة الكبيرة والعب. رائع!</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>تأكد أن الهاتف والتلفاز متصلان بنفس Wi-Fi.</li>
+                            <li>على التلفاز: ابحث عن وظيفة "عكس الشاشة" أو "Miracast" أو "AirPlay" وفعّلها.</li>
+                            <li>على الهاتف:
+                                <ul class="list-disc pr-6 mt-1 space-y-1">
+                                    <li>iPhone: اسحب من أعلى اليمين للأسفل لفتح مركز التحكم وانقر "عكس الشاشة". اختر التلفاز.</li>
+                                    <li>Android: اسحب الإعدادات السريعة للأسفل وابحث عن "العرض اللاسلكي" أو "Smart View" واختر التلفاز.</li>
+                                </ul>
+                            </li>
+                            <li>نجاح! شاشة الهاتف والصوت يُزامنان على التلفاز.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 16: النسخ الاحتياطي وهجرة البيانات</h3>
+                    <p class="mb-3">الصور وسجلات الدردشة كنوز بلا قيمة. في هذا الفصل نعلمك كيف تؤمن أصولك الرقمية وتنتقل بسلاسة للهاتف الجديد.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.1 النسخ الاحتياطي الكامل: "الاستنساخ" الأكثر شمولاً</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. النسخ الاحتياطي المحلي على PC (الأكثر موثوقية)</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>iPhone + PC: صل بالكابل. افتح iTunes (Win) أو Finder (Mac) وانقر "النسخ الاحتياطي الآن". ضع علامة بالتأكيد على "تشفير النسخ الاحتياطي المحلي". هذا يضمن نسخ بيانات الصحة وكلمات المرور. عند الاستعادة صل الهاتف الجديد واختر "الاستعادة من النسخ الاحتياطي".</li>
+                        <li>هاتف Android من العلامة التجارية + برمجيات PC: استخدم الأدوات الرسمية لكل علامة تجارية (Samsung Smart Switch وXiaomi PC Suite وغيرها). الوظائف مشابهة.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. النسخ الاحتياطي السحابي (الأكثر راحة)</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>نسخ iCloud الاحتياطي: فعّله في الإعدادات. يُنسخ احتياطيًا تلقائيًا عندما يكون الهاتف يشحن ومقفل ومتصل بـ Wi-Fi. عند تفعيل iPhone الجديد اختر "الاستعادة من نسخ iCloud الاحتياطي" فقط.</li>
+                        <li>ملاحظة: الـ 5GB المجانية لا تكفي أبدًا. عادةً تحتاج للترقية المدفوعة لـ iCloud+.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.2 النسخ الاحتياطي الانتقائي: الحماية المركزة</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الصور والفيديوهات: فعّل صور iCloud/صور Google/صور سحابة العلامة التجارية فيصبح نسخًا احتياطيًا مستمرًا. أو انسخ دوريًا بالكابل للـ PC.</li>
+                        <li>جهات الاتصال وغيرها: طالما موجودة في حساب iCloud/Google/العلامة التجارية عند تسجيل الدخول على هاتف آخر تعود تلقائيًا.</li>
+                        <li>⚠️ سجلات دردشة LINE/WeChat (الأهم):
+                            <ul class="list-circle pr-6 mt-1 space-y-1">
+                                <li>عند تغيير الهاتف: استخدم وظيفة "ترحيل سجلات الدردشة" داخل التطبيق. اتصال مباشر عبر Wi-Fi. نقل من الهاتف القديم للجديد. الأكثر توصية.</li>
+                                <li>النسخ الاحتياطي طويل الأمد: استخدم وظيفة "النسخ الاحتياطي والاستعادة" في تطبيق PC. نسخ احتياطي محلي على PC. الأكثر أمانًا — هذا مهم.</li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">16.3 دليل تغيير الهاتف: ثلاث مسارات رئيسية للترحيل</h4>
+                    <h5 class="font-semibold mt-3 mb-1">1. Android → Android</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>نفس العلامة التجارية (مثلاً Samsung → Samsung): استخدم تطبيق "استنساخ الهاتف" الرسمي. امسح رمز QR فتُنقل التطبيقات والبيانات. التجربة مثالية.</li>
+                        <li>علامات تجارية مختلفة: أدوات تغيير الهاتف من طرف ثالث أو زامن مسبقًا الصور وجهات الاتصال للسحابة (مثل صور Google) وسجل الدخول على الجديد ونزّل.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iPhone → iPhone</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>استعادة iCloud: اختر الاستعادة من نسخ iCloud الاحتياطي عند تفعيل الهاتف الجديد.</li>
+                        <li>البدء السريع: قرّب iPhone الجديد والقديم. يظهر رسم متحرك للإعدادات على القديم وامسح رمز QR فيُرحل كل شيء لاسلكيًا. التجربة رائعة.</li>
+                        <li>ملاحظة: يستغرق وقتًا طويلاً. حافظ على الشحن والشبكة.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. عبر المنصات (Android↔iPhone) الأكثر تعقيدًا</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>استخدم الأداة الرسمية (مثل تطبيق "Move to iOS"). يمكن نقل جهات الاتصال والصور وغيرها.</li>
+                        <li>القيود الأساسية: لا يمكن ترحيل التطبيقات وبيانات التطبيقات (مثل سجلات دردشة LINE/WeChat وتقدم اللعبة). التطبيقات تحتاج إعادة تثبيت. البيانات تُعالج بشكل فردي (مثلاً LINE نسخ احتياطي PC واستعادة) — هذا مهم.</li>
+                        <li>استراتيجية يدوية: الصور عبر PC أو السحابة كوسيط. جهات الاتصال صدّر ملف vCard. تحقق مما إذا كانت بيانات التطبيقات المهمة تدعم التصدير عبر المنصات.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: نسخ احتياطي يدوي للصور وجهات الاتصال على PC</p>
+                        <p class="mt-1">الهدف: امتلك نسخة بيانات غير متصلة تديرها بالكامل بنفسك، الراحة القصوى.</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>جهّز كابل بيانات وصل الهاتف بالـ PC.</li>
+                            <li>النسخ الاحتياطي للصور: على PC ادخل التخزين الداخلي للهاتف وابحث عن مجلدي DCIM وPictures وانسخ الكل للقرص الصلب للـ PC.</li>
+                            <li>النسخ الاحتياطي لجهات الاتصال:
+                                <ul class="list-disc pr-6 mt-1 space-y-1">
+                                    <li>iPhone: تأكد أن جهات الاتصال في iCloud. ادخل نسخة الويب iCloud.com وادخل "جهات الاتصال" واختر الكل وصدّر ملف vCard واحفظه على PC.</li>
+                                    <li>Android: في إعدادات تطبيق "جهات الاتصال" ابحث عن "التصدير لجهاز التخزين" لتوليد ملف .vcf. انسخ للـ PC بالكابل.</li>
+                                </ul>
+                            </li>
+                            <li>تحقق من النسخ الاحتياطي: على PC افتح عدة صور منسوخة وافتح ملف .vcf وتأكد أن جميع المعلومات موجودة.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 17: استكشاف الأخطاء وإصلاحها</h3>
+                    <p class="mb-3">لا تذعر إذا مرض الهاتف أحيانًا. معظم المشاكل يمكن حلها بنفسك. هذا "دليل الطوارئ للهاتف" الخاص بك.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.1 الهاتف ثقيل وساخن</h4>
+                    <p class="mb-2">التشخيص في 4 خطوات:</p>
+                    <ol class="list-decimal pr-6 mb-3 space-y-1">
+                        <li>فكر في الارتباط: بعد تحديث النظام؟ أم بعد تثبيت تطبيق معين؟</li>
+                        <li>تحقق من سعة التخزين: إذا بقي أقل من 10% فهذا السبب الأكثر شيوعًا لثقل النظام.</li>
+                        <li>تحقق من ترتيب استهلاك الطاقة: في إعدادات البطارية أي تطبيق يستهلك طاقة في الخلفية.</li>
+                        <li>تحقق من الإشارة: في الأماكن ذات الإشارة الضعيفة يبحث الهاتف بجد عن الشبكة ويسخن.</li>
+                    </ol>
+
+                    <p class="mb-2">طرق العلاج:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>سعة غير كافية → نظف التخزين فورًا (راجع القسم الأساسي).</li>
+                        <li>تطبيق معين يسبب المشكلة → امسح ذاكرة التخزين المؤقت لذلك التطبيق في الإعدادات أو ألغِ التثبيت وأعد التثبيت.</li>
+                        <li>حل شامل: أعد تشغيل الهاتف.</li>
+                        <li>لا تشحن أثناء لعب الألعاب الكبيرة. السخونة تضر البطارية.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.2 التطبيق يتعطل ولا يستجيب</h4>
+                    <p class="mb-2">سير المعالجة القياسي:</p>
+                    <ol class="list-decimal pr-6 mb-3 space-y-1">
+                        <li>أغلق التطبيق وافتحه مرة أخرى.</li>
+                        <li>حدّث في متجر التطبيقات.</li>
+                        <li>تحقق مما إذا أوقفت عن طريق الخطأ الأذونات الضرورية (مثل إذن التخزين).</li>
+                        <li>امسح ذاكرة التخزين المؤقت للتطبيق (آمن، لن تفقد البيانات).</li>
+                        <li>الملاذ الأخير: امسح البيانات/ألغِ التثبيت وأعد التثبيت (تُمحى معلومات تسجيل الدخول. تأكد أنك تتذكر كلمة المرور).</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.3 لا يُشغل ويتجمد على شاشة البدء "الحل النهائي"</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>أولاً اشحن لمدة 30 دقيقة. قد يكون البطارية فارغة تمامًا فقط.</li>
+                        <li>حاول إعادة التشغيل الإجباري (راجع التمرين أدناه). هذا يحل معظم حالات "الوفاة الظاهرية".</li>
+                        <li>لا يزال لا يعمل: قد تحتاج إصلاح اتصال PC في وضع الاستعادة لكن هذا يمسح جميع البيانات (يمكن الاستعادة إذا كان هناك نسخ احتياطي). إذا لم ينفع فقد تكون مشكلة أجهزة وتحتاج الإرسال للإصلاح.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">17.4 البحث عن الإصلاح الرسمي وتجنب الفخاخ</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>ابحث عن الرسمي الحقيقي: بالتأكيد تحقق من "مزود الخدمة المعتمد" على الموقع الرسمي للعلامة التجارية. أو ابحث عن مدخل الخدمة في إعدادات الهاتف أو التطبيق الرسمي.</li>
+                        <li>قبل الإصلاح: بالتأكيد انسخ احتياطيًا جميع بياناتك بنفسك! سجل الخروج من الحساب. أحضر إثبات الشراء.</li>
+                        <li>انتبه للإصلاح غير الرسمي: قد يستخدم قطعًا رديئة وقد تتسرب الخصوصية. وبمجرد الفتح يبطل الضمان الرسمي.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: محاكاة "إعادة التشغيل الإجباري"</p>
+                        <p class="mt-1">الهدف: تعلم هذه "المفتاح الشامل" عندما يكون الهاتف طبيعيًا لكي لا تذعر عند العطل الحقيقي.</p>
+                        <ul class="list-disc pr-6 mt-1 space-y-1">
+                            <li>ملاحظة: آمن أن تعمل عندما يكون الهاتف طبيعيًا. لن تُحذف البيانات لكن يُنصح بحفظ العمل اليدوي أولاً.</li>
+                            <li>الطريقة:
+                                <ul class="list-circle pr-6 mt-1 space-y-1">
+                                    <li>iPhone بشاشة كاملة: اضغط رفع الصوت بسرعة مرة ثم خفض الصوت مرة ثم اضغط مطولاً زر الطاقة على الجانب. حتى يظهر شعار Apple.</li>
+                                    <li>Android عام: اضغط مطولاً زر الطاقة لمدة 10-15 ثانية. حتى يعاد التشغيل.</li>
+                                    <li>(قد تختلف قليلاً حسب الطراز المحدد. إذا لم تكن متأكدًا ابحث "[طراز هاتفك] إعادة تشغيل إجباري")</li>
+                                </ul>
+                            </li>
+                            <li>الأهمية: مرة واحدة من التمرين وعندما يتجمد الهاتف حقًا لاحقًا يمكنك الحل بهدوء.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">رابعاً: قسم التطوير (الفصول 18-22)</h2>
+
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 18: شبكات الهاتف المحمول وأمن المعلومات</h3>
+                    <p class="mb-3">في هذا الفصل سنتعمق في كيفية عمل شبكات الهاتف المحمول ونتعلم كيف نستخدم أدوات مثل VPN لحماية أنفسنا في بيئات الشبكة المعقدة.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">18.1 من 4G إلى 5G: ما الذي تغير حقًا؟</h4>
+                    <p class="mb-2">5G ليست مجرد أسرع من 4G. التغييرات الجوهرية:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>السرعة: سرعة تحميل قصوى تزيد عن 10 أضعاف 4G. تحميل الأفلام بالثواني.</li>
+                        <li>زمن الانتقال: من عشرات المللي ثواني إلى مللي ثانية واحدة. مهم جدًا للألعاب السحابية والقيادة الذاتية.</li>
+                        <li>السعة: يمكن لعدد أكبر من الأجهزة الاتصال في نفس الوقت. أساس إنترنت الأشياء.</li>
+                    </ul>
+                    <p class="mb-2">نصيحة عملية: في الأماكن التي لا تزال تغطية 5G فيها ضعيفة بدّل يدويًا إلى 4G في إعدادات الشبكة. هذا يوفر البطارية ويحسن الاستقرار.</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">18.2 VPN: ما هو ولماذا تحتاجه؟</h4>
+                    <p class="mb-2">VPN (الشبكة الافتراضية الخاصة) تنشئ "نفقًا مشفرًا" بين جهازك والإنترنت.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">سيناريوهات الاستخدام الرئيسية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>استخدام Wi-Fi العام: في المقاهي والمطارات والفنادق. VPN يمنع الآخرين من التنصت على بياناتك.</li>
+                        <li>الوصول للمحتوى المقيد جغرافيًا: بعض خدمات البث والخدمات متاحة فقط في مناطق معينة.</li>
+                        <li>حماية الخصوصية: يخفي عنوان IP الحقيقي الخاص بك.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">كيف تختار VPN؟</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>سياسة عدم الاحتفاظ بالسجلات: اختر مزودًا لا يحتفظ بسجلات نشاطك.</li>
+                        <li>السرعة والاستقرار: جرب عدة خوادم واختر الأسرع.</li>
+                        <li>التطبيقات سهلة الاستخدام: يجب أن يكون التطبيق بسيطًا وواضحًا.</li>
+                        <li>السعر: الخدمات المجانية عادةً ما تكون بطيئة وقد تبيع بياناتك. الخدمات المدفوعة أكثر موثوقية.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">18.3 أمان Wi-Fi العام: ما يجب فعله وما لا يجب فعله</h4>
+                    <h5 class="font-semibold mt-3 mb-1">❌ لا تفعل:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تسجيل الدخول للحسابات المصرفية أو المالية.</li>
+                        <li>إدخال كلمات المرور الحساسة.</li>
+                        <li>الوصول لمعلومات العمل السرية.</li>
+                        <li>قبول شهادات SSL غير الصالحة.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">✅ افعل:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>استخدم VPN دائمًا.</li>
+                        <li>تأكد أن المواقع تستخدم HTTPS (القفل في شريط العنوان).</li>
+                        <li>سجل الخروج فورًا بعد الانتهاء.</li>
+                        <li>استخدم بيانات الهاتف للعمليات الحساسة بدلاً من Wi-Fi العام.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">18.4 التصيد الاحتيالي والهجمات الاجتماعية</h4>
+                    <p class="mb-2">الهجمات تستهدفك أنت، وليس جهازك.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">الأنواع الشائعة:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>التصيد الاحتيالي: رسائل بريد إلكتروني أو رسائل نصية تبدو من بنكك أو خدمة موثوقة وتطلب منك النقر على رابط وإدخال معلومات.</li>
+                        <li>انتحال الهوية: مكالمات من أشخاص يتظاهرون بأنهم من الدعم الفني أو الشرطة.</li>
+                        <li>عروض احتيالية: "لقد ربحت!" أو "حسابك سيُغلق!".</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">قواعد الحماية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>لا تنقر على روابط من مصادر غير موثوقة.</li>
+                        <li>تحقق دائمًا من عنوان URL قبل إدخال أي معلومات.</li>
+                        <li>اتصل بالشركة مباشرة باستخدام الرقم الرسمي إذا تلقيت رسالة مشبوهة.</li>
+                        <li>تذكر: البنوك والخدمات الرسمية لن تطلب أبدًا كلمة المرور أو رمز التحقق عبر الهاتف أو البريد الإلكتروني.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: تثبيت واختبار VPN</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>اختر خدمة VPN موثوقة (مثل ProtonVPN المجانية أو خدمة مدفوعة).</li>
+                            <li>حمّل التطبيق من المتجر الرسمي.</li>
+                            <li>أنشئ حسابًا وسجّل الدخول.</li>
+                            <li>اتصل بأقرب خادم.</li>
+                            <li>تحقق من أن اتصالك مشفر: افتح المتصفح واذهب إلى whatismyip.com وتأكد أن عنوان IP المعروض يختلف عن عنوانك الحقيقي.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 19: كيف يعمل الذكاء الاصطناعي على هاتفك</h3>
+                    <p class="mb-3">الهاتف الذكي الحديث مليء بتقنيات الذكاء الاصطناعي. دعنا نفهم كيف تعمل وكيف تستفيد منها.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">19.1 الذكاء الاصطناعي في الكاميرا: ما وراء الصور الجميلة</h4>
+                    <p class="mb-2">الكاميرا الذكية لا "ترى" فقط بل "تفهم" المشهد:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>التعرف على المشهد: يكتشف تلقائيًا ما إذا كنت تصور طعامًا أو منظرًا طبيعيًا أو شخصًا ويضبط الإعدادات وفقًا لذلك.</li>
+                        <li>الوضع الليلي: يدمج الذكاء الاصطناعي عدة صور ويقلل الضوضاء ويحسن التفاصيل.</li>
+                        <li>وضع البورتريه: يستخدم الذكاء الاصطناعي لفصل الشخص عن الخلفية وإنشاء تأثير ضبابية واقعي.</li>
+                        <li>تحسين الوجوه: يكتشف الوجوه ويحسن البشرة والإضاءة تلقائيًا.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">19.2 المساعد الصوتي: Siri وGoogle Assistant والمزيد</h4>
+                    <p class="mb-2">المساعدات الصوتية تفهم اللغة الطبيعية وتنفذ الأوامر.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">ما يمكنهم فعله:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>ضبط المنبهات والتذكيرات.</li>
+                        <li>التحكم في المنزل الذكي.</li>
+                        <li>الإجابة على الأسئلة العامة.</li>
+                        <li>إرسال الرسائل وإجراء المكالمات.</li>
+                        <li>تشغيل الموسيقى والبودكاست.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">اعتبارات الخصوصية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>يمكنك مراجعة وحذف سجل المساعد الصوتي.</li>
+                        <li>يمكنك إيقاف تسجيل الصوت للتحسين.</li>
+                        <li>معالجة الأوامر تتم غالبًا على الخادم، لكن بعض الوظائف الأساسية تتم محليًا.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">19.3 الذكاء الاصطناعي على الجهاز مقابل السحابي</h4>
+                    <table class="w-full border-collapse mb-4">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border p-2 text-right">الجانب</th>
+                                <th class="border p-2 text-right">على الجهاز</th>
+                                <th class="border p-2 text-right">سحابي</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border p-2">الخصوصية</td>
+                                <td class="border p-2">أفضل - البيانات لا تغادر الجهاز</td>
+                                <td class="border p-2">البيانات تُرسل للخوادم</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">السرعة</td>
+                                <td class="border p-2">سريع - لا حاجة للإنترنت</td>
+                                <td class="border p-2">يعتمد على الاتصال</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">القدرات</td>
+                                <td class="border p-2">محدودة بقوة المعالج</td>
+                                <td class="border p-2">قوية جدًا - خوادم ضخمة</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">البطارية</td>
+                                <td class="border p-2">يستهلك أكثر</td>
+                                <td class="border p-2">استهلاك أقل على الجهاز</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">19.4 تطبيقات الذكاء الاصطناعي العملية</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الترجمة الفورية: Google Translate وMicrosoft Translator يترجمان النصوص والصوت والصور في الوقت الفعلي.</li>
+                        <li>التعرف على النص: تطبيقات المسح تستخرج النص من الصور تلقائيًا.</li>
+                        <li>التنظيم التلقائي: تطبيقات الصور تجمع الوجوه وتصنف الصور حسب المحتوى تلقائيًا.</li>
+                        <li>التنبؤ بالكتابة: لوحات المفاتيح الذكية تتنبأ بالكلمة التالية وتصحح الأخطاء تلقائيًا.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: استكشاف قدرات الذكاء الاصطناعي في الكاميرا</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>افتح تطبيق الكاميرا.</li>
+                            <li>وجه الكاميرا لمشاهد مختلفة (طعام، شخص، منظر طبيعي، حيوان) ولاحظ كيف يتغير أيقونة الوضع تلقائيًا.</li>
+                            <li>جرب الوضع الليلي في مكان مظلم ولاحظ كيف تتحسن الصورة.</li>
+                            <li>بعد التقاط صورة بورتريه، افتحها في معرض الصور وحاول تعديل شدة الضبابية (إذا كانت هذه الميزة متاحة).</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 20: التفكير البرمجي والأتمتة</h3>
+                    <p class="mb-3">لا تحتاج أن تكون مبرمجًا للاستفادة من قوة الأتمتة. هذا الفصل يفتح لك باب الإنتاجية المتقدمة.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">20.1 ما هو التفكير البرمجي؟</h4>
+                    <p class="mb-2">التفكير البرمجي ليس كتابة الأكواد فقط. إنه طريقة لحل المشكلات:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>التفكيك: تقسيم المشكلة الكبيرة إلى خطوات صغيرة قابلة للتنفيذ.</li>
+                        <li>الأنماط: التعرف على الأنماط المتكررة وإنشاء حلول قابلة لإعادة الاستخدام.</li>
+                        <li>الخوارزميات: تحديد تسلسل واضح من الخطوات للوصول للنتيجة.</li>
+                        <li>التصحيح: عندما لا يعمل شيء، العودة خطوة بخطوة لإيجاد المشكلة.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">20.2 أتمتة iOS: الاختصارات المتقدمة</h4>
+                    <p class="mb-2">تطبيق الاختصارات في iOS يتيح إنشاء أتمتات معقدة بدون برمجة.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">أمثلة عملية:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>اختصار "الوصول للمنزل": عند الاتصال بـ Wi-Fi المنزل يُرسل رسالة تلقائية "وصلت" ويشغل الموسيقى ويضبط الإضاءة الذكية.</li>
+                        <li>اختصار "تسجيل النفقات": يسألك عن المبلغ والفئة ويضيفها لجدول وينشئ تقريرًا أسبوعيًا.</li>
+                        <li>اختصار "تحضير النوم": يوقف الإشعارات ويشغل موسيقى استرخاء ويضبط المنبه.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">20.3 أتمتة Android: Tasker والمزيد</h4>
+                    <p class="mb-2">Android يوفر مرونة أكبر في الأتمتة.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">الأدوات المتاحة:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>Tasker: الأقوى والأكثر مرونة. يمكنه التحكم في كل جانب من جوانب الهاتف تقريبًا.</li>
+                        <li>Automate: واجهة بصرية سهلة الاستخدام مع تدفق المنطق.</li>
+                        <li>IFTTT: بسيط جدًا، يربط خدمات مختلفة معًا.</li>
+                        <li>وظائف النظام المدمجة: العديد من هواتف Android لديها وظائف أتمتة مدمجة.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">20.4 أتمتة عبر الخدمات: IFTTT وZapier</h4>
+                    <p class="mb-2">هذه الخدمات تربط تطبيقات وخدمات مختلفة معًا.</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">أمثلة:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>إذا نشرت صورة على Instagram → احفظها تلقائيًا في Dropbox.</li>
+                        <li>إذا كان الطقس سيُمطر غدًا → أرسل إشعارًا في المساء.</li>
+                        <li>إذا وصلت للعمل → أرسل رسالة تلقائية "وصلت".</li>
+                        <li>إذا أضفت حدثًا في التقويم → أنشئ مهمة في قائمة المهام.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: إنشاء اختصار شخصي</p>
+                        <p class="mt-1">أنشئ اختصارًا يجمع عدة إجراءات:</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>افتح تطبيق الاختصارات (iOS) أو تطبيق الأتمتة المناسب (Android).</li>
+                            <li>أنشئ اختصارًا جديدًا.</li>
+                            <li>أضف الإجراءات التالية:
+                                <ul class="list-disc pr-6 mt-1 space-y-1">
+                                    <li>احصل على الطقس الحالي.</li>
+                                    <li>اعرض الطقس في إشعار.</li>
+                                    <li>شغّل قائمة تشغيل الصباح.</li>
+                                    <li>اعرض تقويم اليوم.</li>
+                                </ul>
+                            </li>
+                            <li>سمِّ الاختصار "روتين الصباح" وأضفه للشاشة الرئيسية.</li>
+                            <li>اختبره بالضغط على الأيقونة.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 21: الهواتف المستعملة والإرث الرقمي</h3>
+                    <p class="mb-3">ماذا تفعل بهاتفك القديم؟ وكيف تحمي إرثك الرقمي؟ هذا الفصل يجيب على هذه الأسئلة المهمة.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">21.1 بيع أو التبرع بهاتفك القديم</h4>
+                    <h5 class="font-semibold mt-3 mb-1">قبل التخلص من الهاتف:</h5>
+                    <ol class="list-decimal pr-6 mb-3 space-y-1">
+                        <li>انسخ احتياطيًا جميع البيانات المهمة.</li>
+                        <li>سجّل الخروج من جميع الحسابات (iCloud، Google، التطبيقات).</li>
+                        <li>امسح بيانات المصادقة الثنائية.</li>
+                        <li>أزل بطاقة SIM وبطاقة الذاكرة.</li>
+                        <li>قم بمسح المصنع الكامل.</li>
+                        <li>للأمان الإضافي: بعد مسح المصنع، املأ التخزين ببيانات عشوائية ثم امسح مرة أخرى (يمنع استعادة البيانات).</li>
+                    </ol>
+
+                    <h5 class="font-semibold mt-3 mb-1">خيارات التخلص:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>برامج الاستبدال: العديد من الشركات تقدم خصومات عند استبدال الهاتف القديم.</li>
+                        <li>البيع المباشر: مواقع مثل Mercari وeBay. التقط صورًا جيدة وكن صادقًا بشأن الحالة.</li>
+                        <li>التبرع: الجمعيات الخيرية والمدارس قد تقبل الهواتف العاملة.</li>
+                        <li>إعادة التدوير: إذا كان الهاتف تالفًا، ابحث عن مراكز إعادة التدوير الإلكتروني.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">21.2 شراء هاتف مستعمل: ما يجب الانتباه له</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تحقق من حالة البطارية: اسأل عن صحة البطارية (يجب أن تكون فوق 80%).</li>
+                        <li>تحقق من الشاشة: ابحث عن خدوش أو بقع أو وحدات ميتة.</li>
+                        <li>اختبر جميع الوظائف: الكاميرا، السماعات، الميكروفون، الأزرار.</li>
+                        <li>تحقق من قفل الشبكة: تأكد أن الهاتف غير مقفل على شبكة معينة.</li>
+                        <li>تحقق من قفل iCloud/Google: قبل الشراء، تأكد أن الهاتف غير مرتبط بحساب سابق.</li>
+                        <li>الضمان: هل لا يزال الضمان ساريًا؟</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">21.3 الإرث الرقمي: التخطيط لمستقبل بياناتك</h4>
+                    <p class="mb-2">ماذا يحدث لحساباتك الرقمية بعد وفاتك؟</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">خدمات الإرث الرقمي:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>Apple: جهة اتصال الإرث - يمكنك تعيين شخص للوصول لبياناتك بعد وفاتك.</li>
+                        <li>Google: مدير الحساب غير النشط - يحدد ما يحدث لحسابك بعد فترة من عدم النشاط.</li>
+                        <li>Facebook: يمكنك تعيين وصي للذكرى أو طلب حذف الحساب نهائيًا.</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">نصائح التخطيط:</h5>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>احتفظ بقائمة محدثة بحساباتك الرقمية.</li>
+                        <li>استخدم مدير كلمات مرور مع ميزة الطوارئ.</li>
+                        <li>أخبر شخصًا تثق به عن حساباتك المهمة.</li>
+                        <li>فكر في ما تريد أن يبقى وما تريد أن يُحذف.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: إعداد جهة اتصال الإرث</p>
+                        <p class="mt-1">استخدم iPhone كمثال:</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>افتح الإعدادات > اسمك > كلمة المرور والأمان.</li>
+                            <li>ابحث عن "جهة اتصال الإرث".</li>
+                            <li>اختر جهة اتصال من قائمة جهات الاتصال الخاصة بك.</li>
+                            <li>سيُرسل لهم إشعار ويمكنهم قبول أو رفض.</li>
+                            <li>احتفظ بنسخة من مفتاح الوصول في مكان آمن.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الفصل 22: مستقبل الهاتف والحياة الرقمية</h3>
+                    <p class="mb-3">إلى أين نتجه؟ دعنا نلقي نظرة على الاتجاهات الناشئة التي ستشكل مستقبلنا الرقمي.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">22.1 الهواتف القابلة للطي والشاشات المرنة</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الحاضر: هواتف تنطوي لتصبح بحجم الجيب وتنفتح لتصبح بحجم الجهاز اللوحي.</li>
+                        <li>المستقبل: شاشات قابلة للطي أكثر متانة، أسعار أقل، استخدامات جديدة.</li>
+                        <li>التأثير: تغيير في كيفية استخدامنا للهاتف - شاشة أكبر للعمل والترفيه، حجم أصغر للتنقل.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">22.2 الواقع المعزز والواقع الافتراضي</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الواقع المعزز (AR): تراكب المعلومات الرقمية على العالم الحقيقي. مثال: إرشادات الملاحة تظهر على الشارع الحقيقي.</li>
+                        <li>الواقع الافتراضي (VR): غمر كامل في عوالم رقمية. مثال: الألعاب والتعليم الافتراضي.</li>
+                        <li>الواقع المختلط (MR): دمج العناصر الرقمية والحقيقية بشكل تفاعلي.</li>
+                        <li>الهاتف كنقطة دخول: الهواتف الحديثة تدعم بالفعل AR، والنظارات الذكية ترتبط بالهاتف.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">22.3 إنترنت الأشياء والمنزل الذكي</h4>
+                    <p class="mb-2">الهاتف يصبح مركز التحكم لكل شيء:</p>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>الأجهزة المنزلية: الثلاجة الذكية، الغسالة الذكية، نظام التدفئة والتبريد.</li>
+                        <li>الأمان: الأقفال الذكية، الكاميرات، أجهزة الاستشعار.</li>
+                        <li>الصحة: موازين ذكية، أجهزة قياس الضغط، أجهزة مراقبة النوم.</li>
+                        <li>السيارات: السيارات المتصلة، القيادة الذاتية.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">22.4 الخصوصية والأمان في المستقبل</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>المصادقة البيومترية المتقدمة: التعرف على الوجه ثلاثي الأبعاد، التعرف على الوريد، تحليل المشي.</li>
+                        <li>التشفير من طرف إلى طرف: يصبح المعيار لجميع الاتصالات.</li>
+                        <li>المعالجة على الجهاز: المزيد من الذكاء الاصطناعي يعمل محليًا لحماية الخصوصية.</li>
+                        <li>التحكم في البيانات: لوائح أقوى وأدوات أفضل للمستخدمين للتحكم في بياناتهم.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">22.5 الاستعداد للمستقبل</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>ابقَ متعلمًا: التكنولوجيا تتطور بسرعة. خصص وقتًا للتعلم المستمر.</li>
+                        <li>كن مرنًا: لا ترتبط بمنصة أو نظام بيئي واحد بشكل مفرط.</li>
+                        <li>فكر في الخصوصية: طور عادات رقمية صحية الآن.</li>
+                        <li>وازن بين الراحة والأمان: كل تقنية جديدة لها مقايضات.</li>
+                    </ul>
+
+                    <div class="bg-light rounded-lg p-4 mt-4">
+                        <p class="font-semibold">📱 تمرين عملي: تقييم استعدادك للمستقبل</p>
+                        <ol class="list-decimal pr-6 mt-1 space-y-1">
+                            <li>راجع عاداتك الرقمية الحالية:
+                                <ul class="list-disc pr-6 mt-1 space-y-1">
+                                    <li>هل تستخدم المصادقة الثنائية؟</li>
+                                    <li>هل لديك نسخ احتياطية منتظمة؟</li>
+                                    <li>هل تفهم كيف تُستخدم بياناتك؟</li>
+                                </ul>
+                            </li>
+                            <li>حدد مجالًا واحدًا للتحسين هذا الشهر.</li>
+                            <li>جرّب تقنية جديدة (مثل AR في خرائط Google أو اختصار جديد).</li>
+                            <li>شارك معرفتك مع شخص آخر - أفضل طريقة للتعلم هي التعليم.</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark mb-6 pb-2 border-b-2 border-primary">خامساً: الملاحق</h2>
+
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الملحق أ: دليل فتح الهاتف الجديد الكامل</h3>
+                    <p class="mb-3">قائمة مراجعة خطوة بخطوة عند الحصول على هاتف جديد.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">الخطوة 1: الفحص المبدئي</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تحقق من محتويات العلبة (الهاتف، الشاحن، الكابل، الدليل).</li>
+                        <li>افحص الهاتف للأضرار المادية.</li>
+                        <li>تأكد من عمل زر الطاقة.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">الخطوة 2: الإعداد الأولي</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>اختر اللغة والمنطقة.</li>
+                        <li>اتصل بـ Wi-Fi.</li>
+                        <li>سجّل الدخول أو أنشئ حساب (Apple ID / Google Account).</li>
+                        <li>استعد من النسخ الاحتياطي إذا كان متاحًا.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">الخطوة 3: الأمان الأساسي</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>اضبط رمز PIN/كلمة المرور.</li>
+                        <li>فعّل المصادقة البيومترية (بصمة/وجه).</li>
+                        <li>فعّل "العثور على هاتفي".</li>
+                        <li>فعّل المصادقة الثنائية للحسابات.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">الخطوة 4: التحديثات</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تحقق من تحديثات النظام.</li>
+                        <li>حدّث التطبيقات المثبتة مسبقًا.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">الخطوة 5: التخصيص</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>اضبط الخلفية.</li>
+                        <li>رتب التطبيقات.</li>
+                        <li>اضبط الإشعارات.</li>
+                        <li>اضبط الأصوات والاهتزاز.</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">الخطوة 6: التطبيقات الأساسية</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>حمّل التطبيقات الأساسية (البريد، الرسائل، المتصفح).</li>
+                        <li>سجّل الدخول للحسابات المهمة.</li>
+                        <li>اضبط التطبيقات المالية بحذر.</li>
+                    </ul>
+                </div>
+
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الملحق ب: مرجع التمارين التطبيقية</h3>
+                    <p class="mb-3">ملخص لجميع التمارين العملية في هذا الكتاب.</p>
+                    
+                    <table class="w-full border-collapse mb-4">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border p-2 text-right">الفصل</th>
+                                <th class="border p-2 text-right">التمرين</th>
+                                <th class="border p-2 text-right">المهارة</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border p-2">الفصل 0</td>
+                                <td class="border p-2">التحقق من بطاقة هوية الهاتف</td>
+                                <td class="border p-2">فهم مواصفات الجهاز</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 1</td>
+                                <td class="border p-2">فهم تكوين الأجهزة</td>
+                                <td class="border p-2">التعرف على الأجهزة الداخلية</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 2</td>
+                                <td class="border p-2">تنظيف مجلد التنزيلات</td>
+                                <td class="border p-2">إدارة الملفات</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 3</td>
+                                <td class="border p-2">إعداد نقطة ساخنة</td>
+                                <td class="border p-2">مشاركة الاتصال</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 4</td>
+                                <td class="border p-2">تدقيق أذونات التطبيقات</td>
+                                <td class="border p-2">إدارة الأذونات</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 5</td>
+                                <td class="border p-2">إعداد أوضاع التركيز</td>
+                                <td class="border p-2">التخصيص المتقدم</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 6</td>
+                                <td class="border p-2">تفعيل القفل عن بُعد</td>
+                                <td class="border p-2">الأمان المضاد للسرقة</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 7</td>
+                                <td class="border p-2">نسخ احتياطي لسجلات WeChat</td>
+                                <td class="border p-2">النسخ الاحتياطي للرسائل</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 8</td>
+                                <td class="border p-2">مسح مستند وإنشاء PDF</td>
+                                <td class="border p-2">المسح الضوئي</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 9</td>
+                                <td class="border p-2">إعداد قفل تطبيق الدفع</td>
+                                <td class="border p-2">أمان الدفع</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 10</td>
+                                <td class="border p-2">التصوير بالوضع الاحترافي</td>
+                                <td class="border p-2">التصوير المتقدم</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 11</td>
+                                <td class="border p-2">تكوين حزمة ترفيه غير متصل</td>
+                                <td class="border p-2">التحضير للسفر</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 12</td>
+                                <td class="border p-2">إنشاء أتمتة ما قبل النوم</td>
+                                <td class="border p-2">الأتمتة الأساسية</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 13</td>
+                                <td class="border p-2">فحص صحة البطارية</td>
+                                <td class="border p-2">إدارة الطاقة</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 14</td>
+                                <td class="border p-2">التحقق من مزامنة الحساب</td>
+                                <td class="border p-2">إدارة السحابة</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 15</td>
+                                <td class="border p-2">عكس الشاشة على التلفاز</td>
+                                <td class="border p-2">الربط بالأجهزة</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 16</td>
+                                <td class="border p-2">نسخ احتياطي يدوي على PC</td>
+                                <td class="border p-2">النسخ الاحتياطي الكامل</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2">الفصل 17</td>
+                                <td class="border p-2">محاكاة إعادة التشغيل الإجباري</td>
+                                <td class="border p-2">استكشاف الأخطاء</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الملحق ج: جدول المصطلحات التقنية</h3>
+                    <p class="mb-3">قاموس المصطلحات التقنية المستخدمة في هذا الكتاب.</p>
+                    
+                    <table class="w-full border-collapse mb-4">
+                        <thead>
+                            <tr class="bg-gray-100">
+                                <th class="border p-2 text-right">المصطلح</th>
+                                <th class="border p-2 text-right">الشرح</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border p-2 font-semibold">APK</td>
+                                <td class="border p-2">حزمة تطبيق Android - تنسيق ملف التثبيت لتطبيقات Android</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">App Store</td>
+                                <td class="border p-2">متجر تطبيقات Apple الرسمي لأجهزة iOS</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">Bluetooth</td>
+                                <td class="border p-2">تقنية اتصال لاسلكي قصيرة المدى</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">Cache</td>
+                                <td class="border p-2">ذاكرة تخزين مؤقتة لتسريع الوصول للبيانات</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">Cloud Storage</td>
+                                <td class="border p-2">تخزين البيانات على خوادم عبر الإنترنت</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">CPU</td>
+                                <td class="border p-2">وحدة المعالجة المركزية - "دماغ" الجهاز</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">GPS</td>
+                                <td class="border p-2">نظام تحديد المواقع العالمي</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">GPU</td>
+                                <td class="border p-2">وحدة معالجة الرسومات - للرسومات والألعاب</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">iCloud</td>
+                                <td class="border p-2">خدمة السحابة من Apple</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">iOS</td>
+                                <td class="border p-2">نظام تشغيل Apple للأجهزة المحمولة</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">NFC</td>
+                                <td class="border p-2">اتصال قريب المدى - للدفع والبطاقات</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">OLED</td>
+                                <td class="border p-2">شاشة عضوية باعثة للضوء - ألوان زاهية وسوداء نقية</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">OS</td>
+                                <td class="border p-2">نظام التشغيل</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">RAM</td>
+                                <td class="border p-2">ذاكرة الوصول العشوائي - للعمليات الحالية</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">ROM</td>
+                                <td class="border p-2">ذاكرة القراءة فقط - للتخزين الدائم</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">SDK</td>
+                                <td class="border p-2">مجموعة تطوير البرمجيات</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">SoC</td>
+                                <td class="border p-2">نظام على شريحة - يدمج CPU وGPU وغيرها</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">UI</td>
+                                <td class="border p-2">واجهة المستخدم - ما تراه وتتفاعل معه</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">VPN</td>
+                                <td class="border p-2">الشبكة الافتراضية الخاصة - للاتصال الآمن</td>
+                            </tr>
+                            <tr>
+                                <td class="border p-2 font-semibold">Wi-Fi</td>
+                                <td class="border p-2">تقنية الشبكة المحلية اللاسلكية</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الملحق د: أين تجد الموارد الموثوقة</h3>
+                    <p class="mb-3">مصادر موثوقة للتعلم والحصول على المساعدة.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">المواقع الرسمية</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>Apple Support: support.apple.com</li>
+                        <li>Google Support: support.google.com</li>
+                        <li>Samsung Support: samsung.com/support</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">مواقع التعلم</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>YouTube - قنوات تعليمية موثوقة</li>
+                        <li>Udemy - دورات مدفوعة</li>
+                        <li>Coursera - دورات جامعية</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">مجتمعات المساعدة</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>Reddit - r/apple, r/android</li>
+                        <li>منتديات Apple الرسمية</li>
+                        <li>منتديات Google الرسمية</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">تحذيرات</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>تجنب مواقع التنزيل غير الرسمية</li>
+                        <li>تحقق من مصدر أي معلومات قبل اتباعها</li>
+                        <li>لا تعطِ معلومات حساسة لأي شخص</li>
+                    </ul>
+                </div>
+
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark mb-4">الملحق هـ: الشكر والتوضيحات</h3>
+                    <p class="mb-3">شكر وتقدير لجميع من ساهم في هذا العمل.</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">شكر خاص</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>لمجتمع التكنولوجيا المفتوحة</li>
+                        <li>للمدونين والكتاب الذين شاركوا معرفتهم</li>
+                        <li>للمستخدمين الذين قدموا ملاحظات قيمة</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">توضيحات</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>جميع العلامات التجارية المذكورة هي ملك لأصحابها</li>
+                        <li>الصور المستخدمة للأغراض التعليمية فقط</li>
+                        <li>المعلومات قابلة للتحديث مع تطور التكنولوجيا</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">كيف تساهم</h4>
+                    <ul class="list-disc pr-6 mb-3 space-y-1">
+                        <li>شارك ملاحظاتك واقتراحاتك</li>
+                        <li>ساعد الآخرين في رحلتهم الرقمية</li>
+                        <li>انشر المعرفة</li>
+                    </ul>
+
+                    <div class="bg-primary text-white rounded-lg p-6 mt-6 text-center">
+                        <p class="text-xl font-bold mb-2">شكرًا لقراءتك!</p>
+                        <p>نتمنى أن يكون هذا الكتاب قد ساعدك في رحلتك الرقمية.</p>
+                        <p class="mt-2">استمر في التعلم واستمتع بهاتفك الذكي!</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <footer class="bg-white border-t border-gray-200 py-6">
+        <div class="container mx-auto px-4 text-center text-secondary text-sm">
+            <p>© 2024 إتقان الهاتف الذكي! الدورة الإلزامية للمبتدئين في العصر الرقمي</p>
+            <p class="mt-1">جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const sidebar = document.getElementById('sidebar');
+            const overlay = document.getElementById('overlay');
+            const tocToggles = document.querySelectorAll('.toc-toggle');
+            const tocParents = document.querySelectorAll('.toc-parent');
+
+            if (menuToggle && sidebar && overlay) {
+                menuToggle.addEventListener('click', function() {
+                    sidebar.classList.toggle('-translate-x-full');
+                    overlay.classList.toggle('hidden');
+                });
+
+                overlay.addEventListener('click', function() {
+                    sidebar.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                });
+            }
+
+            tocToggles.forEach(function(toggle) {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const tocChild = this.closest('.toc-parent').querySelector('.toc-child');
+                    tocChild.classList.toggle('open');
+                    this.classList.toggle('rotate-180');
+                });
+            });
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '-20% 0px -70% 0px',
+                threshold: 0
+            };
+
+            const observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        if (id) {
+                            document.querySelectorAll('.toc-item').forEach(function(item) {
+                                item.classList.remove('active');
+                            });
+                            const activeLink = document.querySelector('a[href="#' + id + '"]');
+                            if (activeLink) {
+                                activeLink.classList.add('active');
+                            }
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.content-section').forEach(function(section) {
+                observer.observe(section);
+            });
+
+            let lastScrollTop = 0;
+            const navbar = document.getElementById('navbar');
+
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    navbar.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+        });
+    </script>
+</body>
+</html>
