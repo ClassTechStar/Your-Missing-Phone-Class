@@ -1,0 +1,2939 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搞定手机！小白必学的数码必修课</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+        }
+        .dark body {
+            background-color: #111827;
+        }
+        .toc-item.active {
+            color: #165DFF;
+            font-weight: 600;
+            background-color: #EFF6FF;
+        }
+        .dark .toc-item.active {
+            background-color: #1e3a5f;
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 3000px;
+        }
+        .content-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+        .content-section h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .content-section h5 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .content-section ul, .content-section ol {
+            margin-bottom: 1rem;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(180deg);
+        }
+        .info-box {
+            border-left: 4px solid #165DFF;
+            background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+        }
+        .dark .info-box {
+            background: linear-gradient(135deg, #1e3a5f 0%, #1e40af 100%);
+        }
+        .warning-box {
+            border-left: 4px solid #F59E0B;
+            background: linear-gradient(135deg, #FFFBEB 0%, #FEF3C7 100%);
+        }
+        .dark .warning-box {
+            background: linear-gradient(135deg, #78350f 0%, #92400e 100%);
+        }
+        .danger-box {
+            border-left: 4px solid #EF4444;
+            background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+        }
+        .dark .danger-box {
+            background: linear-gradient(135deg, #7f1d1d 0%, #991b1b 100%);
+        }
+        .success-box {
+            border-left: 4px solid #10B981;
+            background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+        }
+        .dark .success-box {
+            background: linear-gradient(135deg, #064e3b 0%, #065f46 100%);
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        .dark th, .dark td {
+            border-color: #374151;
+        }
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+        .dark th {
+            background-color: #1f2937;
+        }
+        .practice-box {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border: 1px solid #bae6fd;
+        }
+        .dark .practice-box {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            border-color: #0369a1;
+        }
+        .chapter-intro {
+            font-size: 1.05em;
+            color: #4b5563;
+            padding: 1rem 1.25rem;
+            border-radius: 0.5rem;
+            background: #f9fafb;
+            border-left: 3px solid #165DFF;
+        }
+        .dark .chapter-intro {
+            color: #9ca3af;
+            background: #1f2937;
+        }
+        .key-point {
+            background: linear-gradient(90deg, transparent 0%, rgba(22, 93, 255, 0.1) 50%, transparent 100%);
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+        .dark .key-point {
+            background: linear-gradient(90deg, transparent 0%, rgba(22, 93, 255, 0.3) 50%, transparent 100%);
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200 transition-colors duration-300">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <h1 class="text-lg md:text-xl font-bold text-primary truncate">搞定手机！小白必学的数码必修课</h1>
+            </div>
+            <div class="flex items-center gap-3">
+                <button id="theme-toggle" class="theme-toggle text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300" title="切换深色/浅色模式">
+                    <i class="fas fa-moon dark:hidden"></i>
+                    <i class="fas fa-sun hidden dark:inline"></i>
+                </button>
+                <a href="#top" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary transition-colors">
+                    <i class="fas fa-arrow-up mr-1"></i>回到顶部
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0">
+            <nav class="p-4">
+                <h2 class="text-lg font-bold text-dark dark:text-gray-200 mb-4 pb-2 border-b border-gray-200 dark:border-gray-700">目录</h2>
+                <ul class="space-y-1 text-sm">
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light dark:hover:bg-gray-700 cursor-pointer">
+                            <a href="#ji-chu-pian" class="flex-1 text-gray-700 dark:text-gray-300">一、基础篇（第0-7章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary dark:text-gray-500"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ling-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第零章：嗨，开始之前</a></li>
+                            <li><a href="#di-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第一章：你好，我的私人电脑</a></li>
+                            <li><a href="#di-yi-zhang-harmony" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第一章附：鸿蒙操作系统专题</a></li>
+                            <li><a href="#di-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第二章：整理你的数字房间</a></li>
+                            <li><a href="#di-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第三章：让手机接上"生命线"</a></li>
+                            <li><a href="#di-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第四章：安装和管理App</a></li>
+                            <li><a href="#di-si-zhang-apk" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 pl-6 text-sm">附：软件安装包构成要素</a></li>
+                            <li><a href="#di-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第五章：让手机更懂你</a></li>
+                            <li><a href="#di-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第六章：守护你的数字生活</a></li>
+                            <li><a href="#di-qi-zhang-jichu" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第七章：前沿功能全解析</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light dark:hover:bg-gray-700 cursor-pointer">
+                            <a href="#ruan-jian-pian" class="flex-1 text-gray-700 dark:text-gray-300">二、软件篇（第8-14章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary dark:text-gray-500"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第八章：通信：短信、电话与社交</a></li>
+                            <li><a href="#di-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第九章：移动办公与学习</a></li>
+                            <li><a href="#di-shi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十章：移动支付与生活服务</a></li>
+                            <li><a href="#di-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十一章：摄影与图片管理</a></li>
+                            <li><a href="#di-shi-yi-zhang-advanced" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十一章附：专业影像技术</a></li>
+                            <li><a href="#di-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十二章：影音娱乐与阅读</a></li>
+                            <li><a href="#di-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十三章：工具类App推荐</a></li>
+                            <li><a href="#di-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十四章：密码管理器专题</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light dark:hover:bg-gray-700 cursor-pointer">
+                            <a href="#jin-jie-pian" class="flex-1 text-gray-700 dark:text-gray-300">三、进阶篇（第15-20章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary dark:text-gray-500"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十五章：电池科学与续航优化</a></li>
+                            <li><a href="#di-shi-wu-zhang-kuichong" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 pl-6 text-sm">附：快充协议全解析</a></li>
+                            <li><a href="#di-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十六章：账号体系与云服务</a></li>
+                            <li><a href="#di-shi-qi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十七章：手机与其他设备的联动</a></li>
+                            <li><a href="#di-shi-ba-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十八章：数据备份与迁移</a></li>
+                            <li><a href="#di-shi-jiu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第十九章：故障排查与自救</a></li>
+                            <li><a href="#di-er-shi-zhang-jinjie" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第二十章：开发者模式与高级权限</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light dark:hover:bg-gray-700 cursor-pointer">
+                            <a href="#chao-yue-pian" class="flex-1 text-gray-700 dark:text-gray-300">四、超越篇（第21-26章）</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary dark:text-gray-500"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#di-er-shi-yi-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第二十一章：移动网络与信息安全深探</a></li>
+                            <li><a href="#di-er-shi-er-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第二十二章：AI如何在手机中工作</a></li>
+                            <li><a href="#di-er-shi-san-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第二十三章：编程思维与自动化启蒙</a></li>
+                            <li><a href="#di-er-shi-si-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第二十四章：Root权限与BL锁深度解析</a></li>
+                            <li><a href="#di-er-shi-wu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第二十五章：二手手机处理与数字遗产</a></li>
+                            <li><a href="#di-er-shi-liu-zhang" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">第二十六章：未来的手机与数字生活</a></li>
+                        </ul>
+                    </li>
+                    <li class="toc-parent">
+                        <div class="flex items-center justify-between w-full px-3 py-2 rounded-md hover:bg-light dark:hover:bg-gray-700 cursor-pointer">
+                            <a href="#fu-lu" class="flex-1 text-gray-700 dark:text-gray-300">五、附录</a>
+                            <i class="fas fa-chevron-down toc-toggle text-xs text-secondary dark:text-gray-500"></i>
+                        </div>
+                        <ul class="toc-child open pl-4 space-y-1 mt-1">
+                            <li><a href="#fu-lu-a" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">附录A：新手机开箱流程</a></li>
+                            <li><a href="#fu-lu-b" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">附录B：动手练习小参考</a></li>
+                            <li><a href="#fu-lu-c" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">附录C：极简术语对照表</a></li>
+                            <li><a href="#fu-lu-d" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">附录D：靠谱资源去哪里找</a></li>
+                            <li><a href="#fu-lu-e" class="block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400">附录E：感谢与说明</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <main id="content" class="w-full lg:ml-72 px-4 md:px-8 py-8 max-w-4xl mx-auto bg-white dark:bg-gray-800 my-6 rounded-xl shadow-sm">
+            <div id="top" class="mb-12 pb-8 border-b border-gray-200 dark:border-gray-700">
+                <h1 class="text-[clamp(1.8rem,5vw,3rem)] font-bold text-center text-primary mb-4">搞定手机！小白必学的数码必修课</h1>
+                <p class="text-center text-secondary dark:text-gray-400 text-lg">从入门到精通，全面掌控你的数字生活</p>
+                <p class="text-center text-gray-500 dark:text-gray-500 text-sm mt-2">Version 1.4</p>
+            </div>
+
+            <section id="ji-chu-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">一、基础篇（第0-7章）</h2>
+                <p class="chapter-intro mb-4">你的手机远比你想象的更强大。这部分内容是所有"神操作"的地基，咱们先统一"语言"，再一步步认识并掌控你的设备。无论你是刚拿到第一部智能手机的新手，还是用了多年却从未深入了解过的老用户，这一篇都会让你重新认识手中这台神奇的小盒子。</p>
+
+                <div id="di-ling-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第零章：嗨，开始之前</h3>
+                    <p class="mb-3">在正式探索前，咱们先聊点基本规则，确保后面说的你都懂。别急，磨刀不误砍柴工嘛。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、这本书能帮你做什么？（和不能做的）</h4>
+                    <p class="mb-2">它能帮你系统性地搞懂手机怎么用，明白功能背后的道理，而且无论你是安卓党还是苹果派，大多数思路是通用的。它会带着你动手练习，让你从"会用"升级到"懂用"。</p>
+                    <p class="mb-2">它不是某一款特定手机的说明书，也不是追新品的科技新闻，更不是教你沉迷手机的指南。说实话，如果你期待的是"如何用手机刷视频更爽"，那可能要失望了——我们更关心的是如何让手机真正为你服务，而不是反过来。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、我们的"暗号"说明</h4>
+                    <p class="mb-2">为了说得更清楚，书里会用一些小标记，这些标记就像我们之间的默契暗号：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>[按钮名]</strong>：代表屏幕上具体的按钮或App名字，比如[设置]、[确定]。</li>
+                        <li><strong>></strong>：代表操作顺序，比如"点 [设置] > [声音]"，就是先点设置，再点声音。</li>
+                        <li><strong>加粗</strong>：非常重要！可能是关键概念或安全警告，请务必留意。</li>
+                        <li><em>斜体</em>：一些补充的小想法或比喻，帮你更好地理解。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、安卓和iOS，咱都说说</h4>
+                    <p class="mb-2">你猜怎么着，有些东西叫法不同，但干的事儿一样。比如：应用（安卓）和 App（iOS），设置（都叫设置），文件管理（安卓）和 文件（iOS）。知道是一回事就行，别被名词绕晕了。</p>
+                    <p class="mb-2">另外，现在安卓阵营里还有华为的鸿蒙系统，它有自己的特色，后面我们会专门讲到。总之，不管你用什么手机，这本书都能帮到你。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、手机容量：为啥买了128G，可用却不到110G？</h4>
+                    <p class="mb-2">容量单位大家知道：1TB = 1024GB，1GB = 1024MB，1MB = 1024KB……但这里有个坑：硬盘厂商通常按1000进制算，而系统按1024进制算，所以你买到的"128G"硬盘，实际容量会"缩水"。</p>
+                    <p class="mb-2">但你手机容量缩水的原因主要有三个：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>系统自己占了地方</strong>：操作系统就像房子的承重墙，必须存在。现在的系统动辄占用10-20GB，这很正常。</li>
+                        <li><strong>厂商预装的应用</strong>：新手机里自带的那些App也占空间，有的能卸载，有的不能。</li>
+                        <li><strong>分区和格式化损耗</strong>：技术原因，就像书包的衬布也占体积。</li>
+                    </ol>
+                    <div class="info-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>买手机的小建议</p>
+                        <p class="mt-1">现在64GB的手机基本不够用了，128GB起步比较稳妥。如果你喜欢拍照、玩游戏，建议直接上256GB甚至更大。记住，存储空间这东西，宁可富余，不可捉襟见肘。</p>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：看看你的手机"身份证"</p>
+                        <p class="mt-1">打开 [设置]，找到关于手机（或类似选项），记下：手机型号、系统版本、总存储空间和剩余空间。这是了解它的第一步。顺便看看电池健康度，心里有个数。</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第一章：你好，我的私人电脑</h3>
+                    <p class="chapter-intro mb-4">你的手机，其实是你口袋里最私人的超级计算机。它比当年把人类送上月球的计算机强大无数倍，却安静地躺在你的掌心。今天，咱们就来好好认识这位"沉默的巨人"。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、手机硬件"五脏六腑"：深度解析</h4>
+                    <p class="mb-2">手机虽小，五脏俱全。让我们像解剖课一样，逐个认识这些精密的组件。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">1. SoC（系统级芯片）：手机的"大脑+心脏"</h5>
+                    <p class="mb-2">SoC全称System on Chip，翻译过来就是"把整个系统塞进一块芯片"。它不只是CPU（中央处理器），而是把CPU、GPU（图形处理器）、NPU（神经网络处理器）、ISP（图像信号处理器）、基带（负责通信）等等全部集成在一起。</p>
+                    <p class="mb-2">这就像把一个城市的政府大楼、发电厂、通信中心、警察局全部建在一栋楼里，效率极高。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">CPU：通用计算的核心</h5>
+                    <p class="mb-2">CPU是SoC中最核心的组件，负责处理绝大多数计算任务。手机CPU采用ARM架构，与电脑的x86架构不同，ARM架构以精简指令集（RISC）为特色，功耗更低，更适合移动设备。</p>
+                    <p class="mb-2"><strong>CPU大小核设计</strong>：现代手机CPU普遍采用"大小核"架构（ARM的big.LITTLE技术），将核心分为不同性能等级：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>超大核/大核</strong>：性能最强，负责重度任务。如游戏加载、应用启动、复杂计算。频率最高（3GHz+），但功耗也最大。</li>
+                        <li><strong>中核</strong>：性能与功耗平衡，处理日常中等负载任务。刷微博、看视频、多任务切换主要靠它。</li>
+                        <li><strong>小核/能效核</strong>：功耗最低，处理轻量级后台任务。待机、听音乐、接收消息等，几乎不费电。</li>
+                    </ul>
+                    <p class="mb-2">三个等级的核心协同工作：系统调度器根据任务负载自动分配——轻量任务交给小核省电，重活交给大核猛干，干完再切回小核。这就是为什么手机既能流畅打游戏，又能待机一整天。</p>
+                    <p class="mb-2"><strong>各品牌架构特点</strong>：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>高通骁龙8 Gen3</strong>：1个超大核（Cortex-X4，3.3GHz）+ 5个性能核（Cortex-A720，最高3.15GHz）+ 2个能效核（Cortex-A520，2.27GHz）。特点是超大核单核性能极强。</li>
+                        <li><strong>联发科天玑9300</strong>：1个超大核（Cortex-X4）+ 3个性能核（Cortex-A720）+ 4个能效核（Cortex-A520）。联发科宣传为"全大核"架构，指的是去掉了传统小核，以3个A720性能核替代，多核性能突出。</li>
+                        <li><strong>苹果A17 Pro</strong>：2个性能核（最高3.78GHz）+ 4个能效核。核心数虽少，但单核性能遥遥领先，这得益于苹果自研架构和先进的3nm制程。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">GPU：图形渲染引擎</h5>
+                    <p class="mb-2">GPU（Graphics Processing Unit）专门负责图形和并行计算任务。它的核心数量远多于CPU（动辄数百上千个核心），但每个核心的功能相对简单，适合同时处理大量相似的计算。</p>
+                    <p class="mb-2"><strong>图形渲染流程</strong>：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>顶点处理</strong>：计算3D模型中每个顶点的位置坐标。</li>
+                        <li><strong>光栅化</strong>：将3D图形转换为2D屏幕上的像素点。</li>
+                        <li><strong>像素着色</strong>：为每个像素计算颜色、纹理、光照效果。</li>
+                        <li><strong>输出合成</strong>：将所有图层合成最终画面，送到屏幕显示。</li>
+                    </ol>
+                    <p class="mb-2"><strong>GPU对日常使用的影响</strong>：不只是游戏！界面滑动、动画效果、视频播放、照片滤镜、AR应用都依赖GPU。GPU性能弱的手机，滑动界面可能掉帧，游戏更是直接卡顿。</p>
+                    <p class="mb-2"><strong>各品牌GPU</strong>：高通使用自研Adreno GPU；联发科使用ARM Mali GPU；苹果使用自研GPU，性能和能效都是行业标杆。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">NPU：AI加速引擎</h5>
+                    <p class="mb-2">NPU（Neural Processing Unit）是专门为神经网络运算设计的处理器。相比CPU和GPU，NPU在处理AI任务时效率更高、功耗更低。</p>
+                    <p class="mb-2"><strong>神经网络运算方式</strong>：NPU的核心运算是矩阵乘法和卷积运算——这正是神经网络中最基础、最频繁的计算。NPU通过硬件级优化，可以并行处理大量矩阵运算，速度比CPU快几十倍，功耗却低得多。</p>
+                    <p class="mb-2"><strong>AI处理流程</strong>：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>数据输入</strong>：摄像头图像、麦克风音频、传感器数据等。</li>
+                        <li><strong>预处理</strong>：调整数据格式和尺寸，适配神经网络输入要求。</li>
+                        <li><strong>推理计算</strong>：NPU加载训练好的模型，对输入数据进行前向计算，输出结果。</li>
+                        <li><strong>后处理</strong>：将AI输出转换为可用的结果，如人脸坐标、文字内容、场景标签。</li>
+                    </ol>
+                    <p class="mb-2"><strong>实际应用场景</strong>：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>计算摄影</strong>：夜景合成、人像虚化、HDR处理、AI美颜。</li>
+                        <li><strong>语音助手</strong>：语音识别、自然语言理解、语音合成。</li>
+                        <li><strong>实时翻译</strong>：AI字幕、对话翻译。</li>
+                        <li><strong>智能识别</strong>：文字识别（OCR）、物体识别、场景识别。</li>
+                        <li><strong>端侧大模型</strong>：最新旗舰芯片已支持在手机端运行小型AI大模型，实现离线AI对话、文档摘要等功能。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">ISP：影像信号处理器</h5>
+                    <p class="mb-2">ISP处理摄像头传来的原始数据，把光线信号变成好看的照片。</p>
+
+                    <p class="mb-2"><strong>性能怎么看？</strong>看型号！苹果A系列、高通骁龙8系、联发科天玑9000系、华为麒麟9000系都是旗舰级别。中端看骁龙7系、天玑8000系。别只看核心数，架构和制程（纳米数）更重要。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 运存（RAM）：临时工作台</h5>
+                    <p class="mb-2">运存就像你的办公桌，越大，能同时摊开的文件就越多。8GB是现在的主流，12GB适合重度用户，16GB以上则是游戏玩家和极客的选择。</p>
+                    <p class="mb-2">运存类型也很重要：LPDDR5比LPDDR4X更快更省电。苹果虽然运存不大，但系统优化好，所以看起来"够用"。</p>
+                    <p class="mb-2"><strong>运存不够会怎样？</strong>App会被系统杀掉后台，切换时需要重新加载。这就是为什么有时候切个微信回来，游戏就没了。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 存储（ROM/闪存）：长期仓库</h5>
+                    <p class="mb-2">存储就像你的书柜，装所有照片、视频、App的地方。现在主流是UFS 3.1或UFS 4.0，速度比老式的eMMC快好几倍。</p>
+                    <p class="mb-2"><strong>为什么存储速度重要？</strong>它决定了App打开速度、游戏加载速度、照片保存速度。用久了之后，慢速存储会让手机越来越卡。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. 屏幕：你的眼睛</h5>
+                    <p class="mb-2">屏幕是你和手机交互的主要窗口，好坏直接影响体验。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>材质</strong>：OLED色彩艳丽、对比度高、更省电（显示黑色时像素不发光），但低亮度下可能有频闪伤眼；LCD更护眼、成本低，但对比度和色彩不如OLED。</li>
+                        <li><strong>分辨率</strong>：1080P是主流，2K更清晰但更耗电。苹果的"视网膜屏"概念就是：在一定距离下，人眼分辨不出像素点。</li>
+                        <li><strong>刷新率</strong>：60Hz是标准，90Hz/120Hz更流畅，滑动时丝般顺滑。高刷新率会耗电，所以很多手机支持自适应刷新率（LTPO），根据内容动态调整。</li>
+                        <li><strong>触控采样率</strong>：影响触控响应速度，游戏玩家要关注，越高越跟手。</li>
+                        <li><strong>调光方式</strong>：DC调光比PWM调光更护眼，低亮度下不容易眼睛累。现在很多手机支持高频PWM调光，也是为了护眼。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">屏幕HDR技术</h5>
+                    <p class="mb-2">HDR（High Dynamic Range）让屏幕同时展现更亮的亮部和更暗的暗部，画面层次感大幅提升。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>实现原理</strong>：普通屏幕的亮度范围有限（SDR），最亮和最暗之间的差距不够大。HDR屏幕的峰值亮度更高（通常1000尼特以上），对比度更大，色域更广，能显示更多细节。</li>
+                        <li><strong>主流标准</strong>：HDR10（最基础，免费开源）、HDR10+（三星推动，动态元数据）、Dolby Vision（杜比视界，画质最佳但需授权）。手机支持哪个标准取决于屏幕硬件和系统授权。</li>
+                        <li><strong>实际效果</strong>：看HDR视频时，阳光更刺眼、阴影更深邃、色彩更丰富。前提是视频本身是HDR制作的，屏幕也支持HDR显示。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">影像HDR技术</h5>
+                    <p class="mb-2">拍照时的HDR和屏幕HDR是两回事。影像HDR是通过算法解决"亮处过曝、暗处死黑"的问题。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>算法原理</strong>：手机在按下快门时，实际拍摄了多张不同曝光的照片（欠曝保留亮部细节、过曝保留暗部细节、正常曝光保留中间调），然后将它们合成为一张高动态范围的照片。</li>
+                        <li><strong>处理流程</strong>：多帧捕获 → 对齐补偿（防手抖）→ 曝光融合/色调映射 → 色彩校正 → 输出最终照片。</li>
+                        <li><strong>效果优化</strong>：现在手机已经能做到"实时HDR"——取景器里看到的画面就是HDR处理后的效果，所见即所得。苹果的Smart HDR和安卓的自动HDR都非常成熟。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">5. 电池与充电：能量之源</h5>
+                    <p class="mb-2">电池是手机最"短命"的部件，用个两三年就会明显老化。现在主流容量是4500-5500mAh。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>充电功率</strong>：安卓阵营已经卷到了100W甚至200W，十几分钟充满；苹果还在20-30W徘徊。快充伤电池吗？用原装配件问题不大，手机有温控保护。</li>
+                        <li><strong>无线充电</strong>：方便但效率低、发热大。适合办公室随手充，不适合急着出门时用。</li>
+                        <li><strong>反向充电</strong>：手机变成充电宝，给耳机、手表充电，应急用。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">6. 摄像头：光与影的魔法</h5>
+                    <p class="mb-2">现在手机摄像头动辄三四个，各有分工：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>主摄</strong>：最常用的，传感器最大，画质最好。</li>
+                        <li><strong>超广角</strong>：拍风景、建筑，视野更宽。</li>
+                        <li><strong>长焦</strong>：拍远处，有光学变焦和数码变焦之分。</li>
+                        <li><strong>微距</strong>：拍极近距离的小东西。</li>
+                    </ul>
+                    <p class="mb-2"><strong>像素数不是全部！</strong>传感器尺寸（底大一级压死人）、光圈大小（f/1.8比f/2.4大）、防抖（OIS光学防抖很重要）都影响画质。计算摄影（AI算法）现在越来越重要，能把多张照片合成一张好照片。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">潜望式长焦镜头</h5>
+                    <p class="mb-2">传统长焦镜头需要较长的光学路径，会让手机变得很厚。潜望式长焦通过一个90度的棱镜将光线折射，让光路在手机内部横向展开，从而在保持手机轻薄的同时实现5倍甚至10倍光学变焦。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>结构原理</strong>：光线从镜头进入 → 棱镜折射90度 → 沿手机宽度方向穿过镜片组 → 到达传感器。相当于把一个竖着的望远镜横着放。</li>
+                        <li><strong>光学特性</strong>：光学变焦倍数高（5x-10x），画质远超数码变焦。但传感器尺寸通常比主摄小，暗光表现一般。</li>
+                        <li><strong>成像优势</strong>：拍月亮、拍远处建筑、拍舞台特写，是普通手机无法企及的。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">OIS光学防抖 vs EIS电子防抖</h5>
+                    <p class="mb-2">防抖是影响拍照和录像画质的关键技术，两种方式原理完全不同：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>OIS（光学防抖）</strong>：通过物理移动镜头或传感器来抵消手抖。镜头内部有微型陀螺仪检测抖动方向和幅度，然后驱动马达反向移动镜片组。优点是不损失画质，缺点是成本高、占用空间。</li>
+                        <li><strong>EIS（电子防抖）</strong>：通过软件算法裁切和偏移画面来抵消抖动。手机录制稍大的画面范围，然后根据陀螺仪数据裁切出稳定的区域。优点是不需要额外硬件，缺点是会裁切画面（视野变小），暗光下可能模糊。</li>
+                        <li><strong>实际选择</strong>：拍照优先看OIS，录像两者结合效果最好。现在很多旗舰手机支持"Sensor-Shift"传感器位移防抖，比传统镜头防抖效果更好。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">光学变焦 vs 数码变焦</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>光学变焦</strong>：通过物理移动镜片组改变焦距，画质不损失。手机上的光学变焦通常只有固定倍数（如2x、3x、5x、10x），不能像相机那样连续变焦。</li>
+                        <li><strong>数码变焦</strong>：放大画面中心区域，本质是裁切+插值放大。放大越多，画质越差。100倍数码变焦看着很酷，但实际画质已经很糊了。</li>
+                        <li><strong>混合变焦</strong>：结合光学和数码，在光学变焦倍数之间用多帧合成算法弥补画质损失。效果比纯数码好，但仍不如光学。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">音频：扬声器与独显芯片</h5>
+                    <p class="mb-2"><strong>单扬声器 vs 双扬声器</strong>：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>单扬声器</strong>：只有底部一个发声单元，声音偏向一侧，没有立体感。中低端手机常见。</li>
+                        <li><strong>双扬声器（立体声）</strong>：顶部和底部各一个扬声器，形成立体声场。看视频、听音乐时左右声道分明，沉浸感强很多。听筒兼做顶部扬声器是常见方案。</li>
+                        <li><strong>音质差异</strong>：双扬声器不只是"声音更大"，更重要的是空间感和层次感。用单扬声器看大片，总觉得少了点什么。</li>
+                    </ul>
+                    <p class="mb-2"><strong>游戏手机独显芯片</strong>：</p>
+                    <p class="mb-2">部分游戏手机和性能手机配备了独立的显示处理芯片（如红米的"狂暴引擎"独显芯片、iQOO的自研显示芯片），它的作用是：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>插帧</strong>：将30fps的游戏画面通过算法插值到60fps或120fps，画面更流畅。这个过程在独显芯片上完成，不占用SoC的GPU资源。</li>
+                        <li><strong>超分</strong>：将低分辨率画面通过AI算法提升到高分辨率，画质更清晰。</li>
+                        <li><strong>降功耗</strong>：因为插帧和超分由独显芯片负责，SoC的负载降低，发热和功耗都减少，游戏更稳定。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">GPS定位：单频与双频</h5>
+                    <p class="mb-2">手机定位主要依赖GPS等卫星导航系统。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>单频GPS</strong>：只接收L1频段信号，定位精度约3-5米。在开阔地带够用，但在高楼密集的城市峡谷中，信号反射会导致定位偏移较大。</li>
+                        <li><strong>双频GPS</strong>：同时接收L1和L5两个频段信号。L5频段波长更长、抗干扰能力更强，双频联合解算可以消除大部分电离层误差，定位精度可达1-3米。在城市中导航、打车定位时优势明显。</li>
+                        <li><strong>多星座支持</strong>：现代手机不仅支持GPS，还支持北斗（中国）、GLONASS（俄罗斯）、Galileo（欧洲）等多个卫星系统。同时连接的卫星越多，定位越快越准。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">7. 传感器：手机的小触角</h5>
+                    <p class="mb-2">手机里藏着十几个传感器，默默工作：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>加速度计+陀螺仪</strong>：感知手机姿态，玩游戏转向、自动旋转屏幕。</li>
+                        <li><strong>光线传感器</strong>：自动调节屏幕亮度。</li>
+                        <li><strong>距离传感器</strong>：打电话时手机贴近耳朵自动熄屏。</li>
+                        <li><strong>指纹传感器</strong>：现在主流是屏下光学或超声波指纹。</li>
+                        <li><strong>面部识别</strong>：苹果的Face ID是3D结构光，安全级别高；很多安卓是2D照片识别，安全性一般。</li>
+                        <li><strong>NFC</strong>：近场通信，刷公交卡、门禁卡、银行卡。</li>
+                        <li><strong>气压计</strong>：测海拔高度，爬楼梯都能检测到。</li>
+                        <li><strong>霍尔传感器</strong>：检测磁吸壳的开合。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、操作系统：安卓 VS iOS VS 鸿蒙</h4>
+                    <p class="mb-2">硬件是身体，操作系统是灵魂。三大系统各有特色：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>安卓</strong>：像开源社区，手机厂商可以深度定制，选择多。你可以换主题、装第三方应用商店、折腾各种玩法。但也因为开放，碎片化严重，不同品牌体验差异大。</li>
+                        <li><strong>iOS</strong>：像精心打理的花园，苹果软硬件一手抓，体验统一流畅。应用质量高，隐私保护好，但自由度低，很多事得按苹果的规矩来。</li>
+                        <li><strong>鸿蒙</strong>：华为的新物种，主打分布式能力，可以让不同设备无缝协同。后面我们会专门讲。</li>
+                    </ul>
+                    <p class="mb-2">三者生态都极其丰富，选你喜欢的生活方式就好。没有绝对的好坏，只有适不适合。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、手机接口全解析</h4>
+                    <p class="mb-2">手机接口是连接外部世界的桥梁，不同接口差异很大：</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">Micro USB</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>物理特性</strong>：扁平梯形接口，分正反面（插反了插不进去）。已经在手机上基本淘汰，但部分低端设备和老设备仍在使用。</li>
+                        <li><strong>传输限制</strong>：仅支持USB 2.0标准，最高传输速率480Mbps，充电功率通常不超过10W。</li>
+                        <li><strong>缺点</strong>：正反面不通用、插拔寿命短、传输速度慢、充电功率低。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Lightning（苹果闪电接口）</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>物理特性</strong>：苹果自研的8针接口，正反都可以插。iPhone 14及更早机型使用。</li>
+                        <li><strong>传输限制</strong>：Lightning接口物理上仅支持USB 2.0标准，最高传输速率480Mbps。即使使用USB-C转Lightning线，传输速度也受限于Lightning接口本身。iPhone 15系列已改用Type-C。</li>
+                        <li><strong>注意</strong>：苹果MFi认证的数据线内含认证芯片，非认证线可能无法正常充电或传输数据。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">USB Type-C</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>物理特性</strong>：24针脚的椭圆形接口，正反都可以插。已成为手机和多数电子设备的标准接口。</li>
+                        <li><strong>传输协议</strong>：Type-C只是接口形态，实际传输能力取决于内部协议。支持USB 2.0（480Mbps）、USB 3.0/3.1/3.2（5-20Gbps）甚至USB4（40Gbps）。</li>
+                        <li><strong>重要区分</strong>：并非所有Type-C接口都支持USB 3.0！很多手机虽然用Type-C接口，但内部只连接了USB 2.0的引脚，传输速度和老接口一样慢。要享受USB 3.0速度，需要手机支持且使用支持USB 3.0的专用数据线。</li>
+                        <li><strong>充电能力</strong>：支持USB PD等快充协议，最高可支持240W充电。</li>
+                        <li><strong>视频输出</strong>：支持DisplayPort Alt Mode，可以通过转接线输出视频到显示器。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3.5mm音频接口</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>物理特性</strong>：圆形3段或4段插孔，3段传输左右声道音频，4段多一个麦克风通道。</li>
+                        <li><strong>特点</strong>：模拟信号传输，即插即用，不需要驱动或转换。音质稳定，延迟为零。</li>
+                        <li><strong>现状</strong>：大部分旗舰手机已取消3.5mm接口，需要Type-C转接线或使用蓝牙耳机。部分中端机和游戏手机仍保留。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、手机产品体系与命名规则</h4>
+                    <p class="mb-2">面对各品牌眼花缭乱的产品线，搞清楚命名规则能帮你快速定位适合自己的机型。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">主流品牌产品系列：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>苹果</strong>：iPhone（标准版）/ iPhone Plus（大屏版）/ iPhone Pro（专业版）/ iPhone Pro Max（大屏专业版）/ iPhone SE（平价版）</li>
+                        <li><strong>华为</strong>：Mate系列（商务旗舰）/ P/Pura系列（影像旗舰）/ nova系列（年轻中端）/ 畅享系列（入门）</li>
+                        <li><strong>小米</strong>：小米数字系列（旗舰）/ 小米MIX（探索旗舰）/ Redmi K系列（性能旗舰）/ Redmi Note系列（中端）/ Redmi数字系列（入门）</li>
+                        <li><strong>OPPO</strong>：Find X系列（旗舰）/ Reno系列（中端）/ A系列（入门）/ 一加数字系列（性能旗舰）</li>
+                        <li><strong>vivo</strong>：X系列（影像旗舰）/ iQOO数字系列（性能旗舰）/ S系列（自拍中端）/ Y系列（入门）</li>
+                        <li><strong>三星</strong>：Galaxy S系列（旗舰）/ Galaxy Z Fold/Flip（折叠旗舰）/ Galaxy A系列（中端）</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">常见后缀含义：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Pro</strong>：Professional的缩写，专业版。通常在标准版基础上升级摄像头、屏幕、处理器等核心配置。</li>
+                        <li><strong>Max</strong>：最大版。屏幕最大、电池最大，但配置不一定比Pro高。</li>
+                        <li><strong>Ultra</strong>：极致版。通常代表该系列的最高配置，堆料最猛，价格也最高。如三星S24 Ultra、小米14 Ultra。</li>
+                        <li><strong>SE</strong>：Special Edition特别版，实际多为平价版。配置缩水，价格降低。如iPhone SE。</li>
+                        <li><strong>Plus</strong>：加大版。屏幕比标准版大，电池也大，但配置基本一致。</li>
+                        <li><strong>Lite/青春版</strong>：轻量版。配置精简，价格更低。</li>
+                        <li><strong>Note</strong>：原本指大屏手机，现在各品牌用法不一。Redmi Note是中端系列。</li>
+                        <li><strong>Neo</strong>：新锐版。通常指性能取向的中端机型。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">五、基带与天线：手机通信的幕后功臣</h4>
+                    <p class="mb-2">手机能打电话、上网，靠的是基带芯片和天线这对搭档。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">基带芯片：</h5>
+                    <p class="mb-2">基带是手机中负责无线通信的处理器，它将数字信号调制成无线电波发出去，也将接收到的无线电波解调成数字信号。基带性能直接影响通话质量、上网速度和信号稳定性。高通是最大的手机基带供应商，联发科、三星也有自研基带。苹果从iPhone 16e开始搭载自研的C1基带芯片，标志着苹果正式进入自研基带时代；此前的iPhone 12至iPhone 16系列均使用高通基带（X55/X60/X65/X66/X71等）。更早的iPhone XS/11系列使用Intel基带时信号表现不佳，是不少用户的痛点。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">天线设计：</h5>
+                    <p class="mb-2">手机天线藏在机身内部，通常围绕边框布置。天线设计直接影响信号接收性能：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>MIMO技术</strong>：多入多出，使用多个天线同时收发数据，提升速度和稳定性。4×4 MIMO比2×2 MIMO速度更快。</li>
+                        <li><strong>天线数量</strong>：旗舰机通常有十几个天线（蜂窝、Wi-Fi、蓝牙、NFC、GPS各需要独立天线）。</li>
+                        <li><strong>金属机身的影响</strong>：金属会屏蔽信号，所以金属机身手机需要设计天线带（边框上的塑料条）。玻璃和塑料机身对信号影响较小。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">网络技术演进：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>4G LTE</strong>：理论峰值速率下行1Gbps/上行500Mbps（Cat.18），实际体验通常50-150Mbps。覆盖最广，够用。</li>
+                        <li><strong>5G NR</strong>：理论峰值速率下行10Gbps+。Sub-6GHz频段覆盖较好，mmWave毫米波速度极快但覆盖极小。</li>
+                        <li><strong>5G-A（5G Advanced）</strong>：5G的增强版，也叫5.5G。下行速率可达10Gbps，上行1Gbps，连接数密度和定位精度大幅提升。2024年起部分旗舰手机开始支持。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">网络频段分类：</h5>
+                    <p class="mb-2">手机支持的网络频段决定了它能在哪些国家、哪些运营商的网络上使用：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>FDD-LTE Band（B系列）</strong>：如B1、B3、B5等，4G频段。不同国家使用不同频段，中国主要用B1/B3/B5/B8/B34/B38/B39/B40/B41。</li>
+                        <li><strong>TDD-LTE Band</strong>：4G的另一制式，中国大量使用B38/B39/B40/B41。</li>
+                        <li><strong>5G NR Band（N系列）</strong>：如n1、n3、n28、n41、n78、n79等。n78（3.5GHz）是中国5G主力频段，n41（2.5GHz）移动使用较多。</li>
+                        <li><strong>购买建议</strong>：如果需要出国使用，购买前确认手机是否支持目标国家的频段。国行手机通常对中国频段支持最全，但可能缺少部分海外频段。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">六、你的手机，到底在扮演多少角色？</h4>
+                    <p class="mb-2">它早已不只是电话：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>通讯工具</strong>：电话、短信、微信、邮件……</li>
+                        <li><strong>智能相机</strong>：拍照、录像、扫描文档……</li>
+                        <li><strong>钱包</strong>：支付、公交卡、银行卡、会员卡……</li>
+                        <li><strong>信息门户</strong>：新闻、天气、股票、知识……</li>
+                        <li><strong>游戏机</strong>：从消消乐到3A大作……</li>
+                        <li><strong>移动办公室</strong>：文档、表格、会议、协作……</li>
+                        <li><strong>健康助手</strong>：计步、心率、睡眠、运动……</li>
+                        <li><strong>智能家居遥控器</strong>：控制灯、空调、电视、扫地机器人……</li>
+                        <li><strong>数字身份证</strong>：电子身份证、电子驾照、健康码……</li>
+                        <li><strong>娱乐中心</strong>：音乐、视频、电子书、播客……</li>
+                    </ol>
+                    <p class="mb-2">想想看，一台小小的设备，承载了多少生活！所以，学会用好它，就是学会更好地生活。</p>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：了解硬件配置</p>
+                        <p class="mt-1">在 [设置] 里，看看能不能找到处理器型号、运行内存（RAM）和机身存储（ROM）的具体大小。对你手机的能力有个数。安卓用户可以下载"安兔兔"或"CPU-Z"查看详细硬件信息。</p>
+                    </div>
+                </div>
+
+                <div id="di-yi-zhang-harmony" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第一章附：鸿蒙操作系统专题</h3>
+                    <p class="chapter-intro mb-4">鸿蒙（HarmonyOS）是华为自主研发的操作系统，从2019年发布至今，已经走过了几个大版本。它不只是"又一个安卓替代品"，而是有着独特设计理念的新物种。让我们一起深入了解这个正在崛起的操作系统。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、鸿蒙是什么？为什么它与众不同？</h4>
+                    <p class="mb-2">鸿蒙的核心理念是"万物互联"。不同于传统操作系统主要服务于单一设备，鸿蒙从设计之初就考虑了多设备协同。</p>
+                    <p class="mb-2"><strong>分布式架构</strong>是鸿蒙的灵魂。简单说，它可以把多个设备虚拟成一个"超级终端"。你的手机、平板、电脑、手表、电视，不再是孤立的个体，而是一个整体的"器官"，可以互相调用对方的能力。</p>
+                    <p class="mb-2">举个例子：你在用手机看视频，想在大屏上看，传统方式是投屏；而在鸿蒙上，你可以直接把视频"流转"到电视上继续看，手机变成遥控器。这不是简单的投屏，而是应用本身在跨设备运行。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、鸿蒙4.3：基于AOSP的成熟版本</h4>
+                    <p class="mb-2">鸿蒙4.3是当前华为手机上广泛部署的版本。需要说明的是，鸿蒙4.3兼容安卓开源项目（AOSP）的代码框架，因此它能够完整兼容安卓应用——你在华为应用市场下载的大部分App，本质上仍然是安卓应用，通过鸿蒙的兼容层运行。但鸿蒙4.3并非简单套壳安卓，它在AOSP基础上加入了大量华为自研的分布式能力、方舟引擎等技术。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">核心特性：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>安卓应用兼容</strong>：由于基于AOSP开发，鸿蒙4.3可以正常运行几乎所有安卓应用，用户几乎感受不到差异。</li>
+                        <li><strong>方舟引擎</strong>：华为自研的编译器和运行时，让应用运行更流畅、更省电。相比早期版本，流畅度提升明显。</li>
+                        <li><strong>超级终端</strong>：在控制中心，可以直观地看到周围的其他鸿蒙设备，拖拽即可连接。手机调用电脑的键盘鼠标、平板调用手机的摄像头，都很方便。</li>
+                        <li><strong>服务卡片</strong>：类似iOS的小组件，但更灵活。可以上滑App图标展开卡片，显示关键信息，不用打开App。</li>
+                        <li><strong>纯净模式</strong>：只允许从官方应用市场安装应用，减少恶意软件风险。</li>
+                        <li><strong>隐私中心</strong>：集中管理应用权限，查看应用行为记录。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">用户界面特点：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>杂志锁屏</strong>：锁屏界面显示精美图片和文章，划走即进入桌面。</li>
+                        <li><strong>万能卡片</strong>：桌面图标可以展开成卡片，显示更多信息。</li>
+                        <li><strong>超级中转站</strong>：一个临时存储区，可以把文字、图片、文件暂存，然后拖到任意App中使用。跨应用分享变得无比丝滑。</li>
+                        <li><strong>智慧搜索</strong>：全局搜索，可以搜应用、文件、设置、网页。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、鸿蒙NEXT（鸿蒙6）：华为自主操作系统的真正起点</h4>
+                    <p class="mb-2">鸿蒙NEXT（也称鸿蒙6）与鸿蒙4.3有着根本性的区别——它是华为基于Linux内核完全自主开发的操作系统，不再依赖AOSP，也<strong>不再兼容安卓应用</strong>。这意味着鸿蒙从"兼容安卓的过渡形态"正式走向了"完全独立的操作系统"。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">重大变革：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>完全自主内核</strong>：鸿蒙NEXT使用华为自研的内核，不再包含任何AOSP代码。系统更精简、更安全、更高效。</li>
+                        <li><strong>不再支持安卓应用</strong>：这是最大的变化。鸿蒙NEXT只能运行原生鸿蒙应用，无法安装和运行APK文件。升级前请确认你常用的App已经有鸿蒙原生版本。</li>
+                        <li><strong>原生应用生态</strong>：华为正在全力推动开发者将应用迁移到鸿蒙原生平台。目前主流App如微信、支付宝、淘宝等已推出鸿蒙原生版本，但部分小众应用可能尚未适配。</li>
+                        <li><strong>星盾安全架构</strong>：全新的安全体系，从硬件到软件的全链路保护。支持更细粒度的权限控制，比如"模糊定位"——应用只能知道你大概在哪，不知道精确位置。</li>
+                        <li><strong>AI深度融合</strong>：系统级AI能力，不只是某个App有AI。比如AI字幕可以实时翻译视频，AI抠图可以智能识别主体。</li>
+                        <li><strong>跨设备无缝流转</strong>：更进一步的分布式能力。应用状态可以在设备间无缝切换，你在手机上编辑的文档，走到电脑前自动在电脑上打开。</li>
+                        <li><strong>元服务</strong>：无需安装即可使用的轻量级服务。比如扫二维码直接打开某个功能，不用先下载App。</li>
+                    </ul>
+
+                    <div class="warning-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>升级鸿蒙NEXT前必读</p>
+                        <p class="mt-1">升级到鸿蒙NEXT后，你的手机将无法运行安卓应用。请务必在升级前确认：①你常用的App已有鸿蒙原生版本；②你的工作或生活中没有必须依赖安卓应用的场景。升级后无法回退到鸿蒙4.3。</p>
+                    </div>
+
+                    <h5 class="font-semibold mt-3 mb-1">操作逻辑变化：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>手势导航</strong>：左右边缘滑动返回，底部上滑回桌面，上滑停顿进多任务。</li>
+                        <li><strong>智慧多窗</strong>：支持分屏、悬浮窗、平行视界等多种多任务形态。</li>
+                        <li><strong>畅连通话</strong>：华为的视频通话服务，支持屏幕共享、美颜、背景虚化。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、鸿蒙生态：设备与应用</h4>
+                    <p class="mb-2">鸿蒙不只是手机系统，而是一个覆盖多种设备的生态系统。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">支持的设备类型：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>手机与平板</strong>：核心设备，功能最完整。</li>
+                        <li><strong>智能手表与手环</strong>：独立运行或与手机协同。</li>
+                        <li><strong>智慧屏（电视）</strong>：家庭娱乐中心。</li>
+                        <li><strong>智能音箱</strong>：语音交互入口。</li>
+                        <li><strong>汽车</strong>：鸿蒙座舱，智能驾驶舱体验。</li>
+                        <li><strong>智能家居</strong>：冰箱、空调、洗衣机等。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">应用生态现状：</h5>
+                    <p class="mb-2">鸿蒙应用市场已有数百万应用，主流App基本都有。华为也在积极推动开发者开发原生鸿蒙应用。对于用户来说，日常使用基本无障碍。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">五、鸿蒙实用技巧</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>超级终端</strong>：从屏幕右上角下滑打开控制中心，点击"超级终端"，可以看到周围的其他设备，拖拽连接。</li>
+                        <li><strong>超级中转站</strong>：长按文字/图片/文件，选择"复制到中转站"，然后在其他App中长按粘贴，或拖拽出来。</li>
+                        <li><strong>服务卡片</strong>：上滑App图标展开卡片，长按卡片可以调整大小或添加到桌面。</li>
+                        <li><strong>智慧多窗</strong>：从屏幕左右边缘向内滑动并停顿，打开侧边栏，点击应用以悬浮窗打开。</li>
+                        <li><strong>隐私保护</strong>：设置 > 隐私，可以查看应用权限使用记录，设置模糊定位等。</li>
+                    </ul>
+
+                    <div class="warning-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>注意事项</p>
+                        <p class="mt-1">鸿蒙系统在不断更新迭代，不同版本可能有些差异。本文描述基于鸿蒙4.3和6的主要特性，具体功能请以你的手机实际版本为准。建议保持系统更新，以获得最新功能和安全补丁。</p>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：体验鸿蒙特色功能</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>打开控制中心，找到"超级终端"，看看周围有没有其他鸿蒙设备。</li>
+                            <li>试试"超级中转站"：复制一段文字到中转站，然后在备忘录中拖出来。</li>
+                            <li>上滑几个常用App图标，看看它们的服务卡片显示什么内容。</li>
+                            <li>去设置 > 隐私，查看最近哪些应用使用了敏感权限。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <div id="di-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第二章：整理你的数字房间——文件管理</h3>
+                    <p class="chapter-intro mb-4">手机用久了会乱，好习惯从管理文件开始。就像你的房间需要定期整理一样，你的数字空间也需要打理。一个井井有条的手机，不仅找东西方便，运行也更流畅。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、三层存储体系：你的数字仓库</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>机身存储</strong>：核心区，速度快，系统和App都在这。这是你手机最宝贵的空间，要精打细算。</li>
+                        <li><strong>SD卡（如果支持）</strong>：扩展衣柜，速度慢点，适合放电影、照片等大文件。注意：现在很多旗舰机不支持SD卡了。</li>
+                        <li><strong>云存储</strong>：保险柜+同步网盘。防丢失，也能在多个设备间同步。iCloud、百度网盘、OneDrive都是常用选择。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、认识"文件管理器"</h4>
+                    <p class="mb-2">安卓一般有个 [文件] 或 [文件管理] App，iOS是自带的 [文件] App。它们是你查看手机所有文件的"资源管理器"。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">常见文件夹含义：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>DCIM</strong>：相机拍摄的照片和视频。</li>
+                        <li><strong>Pictures</strong>：其他图片，如截图、保存的图片。</li>
+                        <li><strong>Download</strong>：浏览器下载的文件。</li>
+                        <li><strong>Music</strong>：音乐文件。</li>
+                        <li><strong>Movies</strong>：视频文件。</li>
+                        <li><strong>Documents</strong>：文档文件。</li>
+                        <li><strong>Android</strong>：安卓系统文件夹，里面是各App的数据，一般不要手动删除。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、文件系统结构：深入了解</h4>
+                    <p class="mb-2">安卓基于Linux，文件系统有一定的层级结构。虽然普通用户不需要深入了解，但知道一些基本概念有帮助。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">存储分区：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>/system</strong>：系统分区，存放操作系统文件。普通用户无权访问，需要root权限。</li>
+                        <li><strong>/data</strong>：数据分区，存放用户数据和应用数据。这是你日常使用的空间。</li>
+                        <li><strong>/sdcard 或 /storage/emulated/0</strong>：用户可访问的存储空间，你的照片、下载文件都在这里。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">App数据存储：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>内部存储</strong>：App的私有空间，其他App无法访问。卸载App时会被删除。</li>
+                        <li><strong>外部存储</strong>：App在用户可访问区域存储的文件，如照片、下载内容。卸载App时不一定会被删除。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、数据备份与恢复：给你的数据上保险</h4>
+                    <p class="mb-2">数据无价，备份是必须养成的习惯。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">备份策略：</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>云备份</strong>：自动、方便，但需要网络和云空间。iCloud、华为云、小米云等都支持。</li>
+                        <li><strong>本地备份</strong>：用数据线连接电脑，用官方工具备份。速度快、空间大，但需要手动操作。</li>
+                        <li><strong>双重备份</strong>：云备份+本地备份，最安全。</li>
+                    </ol>
+
+                    <h5 class="font-semibold mt-3 mb-1">备份什么？</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>照片和视频</strong>：最占空间，也最珍贵。</li>
+                        <li><strong>通讯录</strong>：存在云账号里最方便。</li>
+                        <li><strong>微信聊天记录</strong>：用微信自带的备份功能。</li>
+                        <li><strong>重要文档</strong>：存在云盘或电脑上。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">五、文件安全：保护你的隐私</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>敏感文件加密</strong>：很多手机有"安全文件夹"或"私密空间"功能，可以把敏感文件放进去，需要密码或指纹才能访问。</li>
+                        <li><strong>删除不等于销毁</strong>：普通删除只是标记空间可覆盖，数据还在。要彻底删除，需要用专门的安全擦除工具，或者多次覆盖写入。</li>
+                        <li><strong>云端安全</strong>：选择信誉好的云服务商，开启双重认证，定期检查登录设备。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">六、空间不够？来场大扫除</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>清理缓存</strong>：App的临时记忆，清了能腾地方。在设置 > 存储 里可以清理。</li>
+                        <li><strong>查找大文件</strong>：用文件管理器按大小排序，揪出占空间的"元凶"。</li>
+                        <li><strong>删除残留</strong>：卸载App后，有时会留下垃圾文件，手动清掉。</li>
+                        <li><strong>清理相册</strong>：删除重复照片、模糊照片、不需要的截图。</li>
+                        <li><strong>清理微信</strong>：微信是空间大户，定期清理聊天记录和缓存很有必要。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">七、常见文件格式全解析</h4>
+                    <p class="mb-2">手机里各种文件后缀名让人头大，搞懂它们能帮你更好地管理文件：</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                            <thead>
+                                <tr class="bg-light dark:bg-gray-700">
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">格式</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">类型</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特性</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐打开方式</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">JPG/JPEG</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图片</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有损压缩，体积小，兼容性最好。手机拍照默认格式。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意图片查看器</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PNG</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">图片</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无损压缩，支持透明背景。截图、图标常用。体积比JPG大。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意图片查看器</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP3</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有损压缩，体积小，兼容性极好。最通用的音频格式。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任意音乐播放器</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">FLAC</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无损压缩，音质与CD一致，体积比MP3大3-5倍。发烧友首选。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音乐播放器/专业播放App</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WAV</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无压缩原始音频，音质最好但体积巨大。专业录音常用。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音乐播放器</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">M4A</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">音频</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AAC编码，比MP3同码率音质更好。苹果生态常用。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Music/音乐播放器</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MP4</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用的视频封装格式，兼容性极好。手机录制的视频默认格式。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">相册/任意视频播放器</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MKV</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">视频</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开源封装格式，支持多音轨、多字幕。电影资源常用。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VLC/nPlayer</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DOC/DOCX</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文档</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Word文档。DOCX是压缩格式，体积更小。DOC是旧版格式。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PPT/PPTX</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">演示</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PowerPoint演示文稿。PPTX是压缩格式。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">XLS/XLSX</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">表格</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Excel电子表格。XLSX是压缩格式。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WPS/Office</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PDF</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文档</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨平台格式，排版固定不可编辑。合同、论文、电子书常用。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Adobe Reader/WPS</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ZIP</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最通用的压缩格式，跨平台兼容好。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统自带/解压App</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">RAR</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">压缩率比ZIP高，但需要专用软件解压。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解压App</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ISO</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">镜像</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">光盘镜像文件，完整复制光盘内容。系统安装包常用。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">解压App/虚拟光驱</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTML</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网页文件，用浏览器打开。保存的网页常用此格式。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">浏览器</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：整理"下载"文件夹</p>
+                        <p class="mt-1">打开文件管理器 > 进入"下载"文件夹。看看里面都有啥？把没用的删掉，有用的分门别类（比如新建"工作资料"、"表情包"文件夹放进去）。顺便看看存储空间，了解哪些类型文件占用最多。</p>
+                    </div>
+                </div>
+
+                <!-- 第三章 -->
+                <div id="di-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第三章：让手机接上"生命线"——网络</h3>
+                    <p class="chapter-intro mb-4">没网，智能手机就"智障"了一半。网络是现代手机的生命线，理解它、用好它、保护它，是每个手机用户的必修课。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、移动网络（4G/5G）与流量</h4>
+                    <p class="mb-2">移动网络是你随时随地联网的基础。从2G到5G，速度提升了上千倍，但原理其实差不多。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">网络制式：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>4G LTE</strong>：目前覆盖最广，速度够用（理论上最高100Mbps+），耗电相对低。</li>
+                        <li><strong>5G</strong>：速度快（理论上最高10Gbps），但覆盖还在完善，耗电高。适合下载大文件、看高清视频。</li>
+                        <li><strong>5G SA vs NSA</strong>：SA是独立组网，NSA是依托4G基站。SA体验更好，但需要运营商和手机都支持。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">流量管理：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>流量是什么</strong>：就是手机上网产生的数据量。看视频、刷图最费流量，文字和语音相对省。</li>
+                        <li><strong>省流小贴士</strong>：在设置里开启"省流量模式"，Wi-Fi下再更新App或看高清视频。</li>
+                        <li><strong>信号格≠网速</strong>：信号强只代表连接好，网速还看基站忙不忙、你离基站多远。</li>
+                    </ul>
+
+                    <div class="danger-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-exclamation-circle mr-2"></i>重要警告：出国前关闭【数据漫游】！</p>
+                        <p class="mt-1">在国外使用移动数据可能产生天价账单！出国前务必在设置里关闭数据漫游，或者提前购买当地流量卡/国际漫游套餐。</p>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、Wi-Fi：连接、分享与安全</h4>
+                    <p class="mb-2">Wi-Fi是家庭和办公室的联网主力，速度快、不费流量。但Wi-Fi其实也在不断进化，不同标准之间差异很大。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">连接Wi-Fi：</h5>
+                    <p class="mb-2">去 [设置] > [WLAN] 选择网络输密码。现在很多手机支持扫码连接，更方便。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">分享密码：</h5>
+                    <p class="mb-2">安卓和iOS都能让已连接的手机快速分享密码给朋友。安卓生成二维码，iOS可以靠近自动分享。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">Wi-Fi标准演进：</h5>
+                    <p class="mb-2">Wi-Fi标准由IEEE制定，每一代都有显著提升：</p>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                            <thead>
+                                <tr class="bg-light dark:bg-gray-700">
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">标准</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">频段</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速率</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 4</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11n</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">600Mbps</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老旧标准，覆盖还行</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 5</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ac</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5GHz</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.5Gbps</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">目前最普及，速度够用</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5GHz</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多设备性能强，延迟低</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 6E</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11ax</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">9.6Gbps</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">增加6GHz频段，不拥堵</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi 7</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">802.11be</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.4/5/6GHz</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">46Gbps</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极速传输，多链路聚合</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Wi-Fi 6的关键技术</strong>：OFDMA（正交频分多址）让多个设备同时传输，MU-MIMO（多用户多入多出）提升多设备并发效率，TWT（目标唤醒时间）让设备更省电。</li>
+                        <li><strong>Wi-Fi 6E</strong>：在Wi-Fi 6基础上增加了6GHz频段，提供更多信道，减少干扰。需要手机和路由器都支持。</li>
+                        <li><strong>Wi-Fi 7</strong>：引入MLO（多链路操作），可同时使用多个频段传输数据，大幅降低延迟。320MHz超宽信道让速率飞跃。2024年起旗舰手机陆续支持。</li>
+                        <li><strong>2.4GHz vs 5GHz</strong>：2.4GHz穿墙好但速度慢、干扰多；5GHz速度快但穿墙弱。Wi-Fi 6E/7的6GHz频段速度最快，但穿墙最弱，适合同一房间内使用。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">公共Wi-Fi风险：</h5>
+                    <p class="mb-2">公共Wi-Fi可能有黑客窃听数据或设钓鱼热点。守则：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>避免登录银行账户、输入密码。</li>
+                        <li>最好用VPN加密连接。</li>
+                        <li>不要自动连接陌生Wi-Fi。</li>
+                        <li>用HTTPS网站（地址栏有锁图标）。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、蓝牙：短距离无线通信的万能选手</h4>
+                    <p class="mb-2">蓝牙可能是你手机上使用频率最高的无线技术之一——无线耳机、智能手表、车载系统、键盘鼠标，都靠它连接。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">技术原理：</h5>
+                    <p class="mb-2">蓝牙工作在2.4GHz ISM频段，使用跳频扩频技术（FHSS）将数据分散在79个频道上快速切换传输，有效避免干扰。蓝牙的通信距离分为三个等级：Class 1约100米、Class 2约10米（手机常用）、Class 3约1米。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">版本演进：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>蓝牙4.0</strong>：引入低功耗蓝牙（BLE），让手环、心率带这类小电池设备也能无线连接，续航从天变成月。</li>
+                        <li><strong>蓝牙4.2</strong>：提升传输速度和隐私保护，支持IPv6直连。</li>
+                        <li><strong>蓝牙5.0</strong>：传输速度翻倍（2Mbps），传输距离4倍（理论300米），广播能力8倍。支持双音频（同时连两副耳机）。</li>
+                        <li><strong>蓝牙5.1</strong>：引入方向寻址功能（AoA/AoD），定位精度可达厘米级。</li>
+                        <li><strong>蓝牙5.2</strong>：LE Audio新标准，支持LC3编码（音质更好、功耗更低）、多流音频、广播音频。</li>
+                        <li><strong>蓝牙5.3/5.4</strong>：进一步优化功耗和连接稳定性，增强周期性广播。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">应用场景：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>音频传输</strong>：无线耳机、车载音响。蓝牙5.2的LE Audio让音质和延迟都有质的飞跃。</li>
+                        <li><strong>数据传输</strong>：近距离传文件、照片。虽然速度不如Wi-Fi Direct，但胜在简单。</li>
+                        <li><strong>设备配对</strong>：智能手表、手环、键盘鼠标、游戏手柄。</li>
+                        <li><strong>位置服务</strong>：蓝牙信标（Beacon）用于室内导航、物品追踪（如苹果AirTag）。</li>
+                        <li><strong>智能家居</strong>：蓝牙Mesh网络控制灯泡、门锁等。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、红外遥控：手机变身万能遥控器</h4>
+                    <p class="mb-2">红外遥控是最古老的无线控制技术之一，但在手机上依然实用。部分安卓手机（如小米、华为部分机型）内置了红外发射器，可以遥控电视、空调、机顶盒等家电。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">工作原理：</h5>
+                    <p class="mb-2">红外遥控通过红外发光二极管发出特定频率（通常38kHz）的红外光脉冲信号，家电的红外接收器解码这些脉冲执行对应操作。不同品牌使用不同的编码协议，常见的有NEC、RC5、RC6、SONY等。手机里的红外App内置了各品牌的编码库，选择品牌和型号就能匹配。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">局限性：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>方向性</strong>：红外是直线传播，需要对着设备发射，不能隔墙。</li>
+                        <li><strong>距离短</strong>：有效距离一般5-8米。</li>
+                        <li><strong>苹果不支持</strong>：iPhone没有红外发射器，无法使用此功能。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">五、NFC：碰一碰的魔法</h4>
+                    <p class="mb-2">NFC（Near Field Communication，近场通信）是一种极短距离（10厘米以内）的高频无线通信技术，工作频率13.56MHz，传输速率最高424Kbps。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">通信原理与模式：</h5>
+                    <p class="mb-2">NFC基于RFID技术演变而来，支持三种工作模式：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>读写模式</strong>：手机读取NFC标签中的信息，如读取NFC贴纸触发动作。</li>
+                        <li><strong>点对点模式</strong>：两台NFC设备互相传输数据，如Android Beam（已停用）。</li>
+                        <li><strong>卡模拟模式</strong>：手机模拟一张智能卡，这是最常用的模式——公交卡、门禁卡、银行卡都是这个模式。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">安全机制：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>超短距离</strong>：10厘米内的通信距离本身就是物理安全保障，远程窃听几乎不可能。</li>
+                        <li><strong>安全芯片</strong>：手机内置独立的安全芯片（SE）或使用HCE（主机卡模拟），支付密钥存储在安全区域，即使手机被root也无法提取。</li>
+                        <li><strong>指纹/面容验证</strong>：支付时需要生物识别确认，即使手机丢失也无法盗刷。</li>
+                        <li><strong>令牌化</strong>：Apple Pay、华为Pay等不传输真实卡号，而是使用一次性令牌，即使被截获也无法重复使用。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">典型应用：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>公交卡/门禁卡</strong>：把实体卡信息写入手机，刷手机就行。</li>
+                        <li><strong>移动支付</strong>：Apple Pay、华为Pay等，把银行卡绑定到手机，碰一碰支付。</li>
+                        <li><strong>设备配对</strong>：NFC碰一碰快速配对蓝牙耳机、音箱。</li>
+                        <li><strong>身份验证</strong>：NFC身份证读取、电子驾照验证。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">五、个人热点：把手机变Wi-Fi路由器</h4>
+                    <p class="mb-2">自己流量多时，可以开热点给平板、电脑用。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>开启方法</strong>：设置 > 个人热点/网络共享，开启它。</li>
+                        <li><strong>注意事项</strong>：很耗电和流量，记得设个复杂密码，并限制连接设备数。</li>
+                        <li><strong>USB共享</strong>：用数据线连电脑，比无线热点更稳定、更快。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：设置并管理热点</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>打开 [设置]，找到"个人热点"或"网络共享"，开启它，设好名称和密码。</li>
+                            <li>用另一台设备（比如电脑）搜索并连接这个Wi-Fi。</li>
+                            <li>在手机端看看，能不能管理已连接的设备，或踢掉不认识的设备。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第四章 -->
+                <div id="di-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第四章：安装和管理App——手机的"技能包"</h3>
+                    <p class="chapter-intro mb-4">App让手机无所不能，但也要管好它们。就像你会给新员工安排工位、分配权限一样，安装App也需要一套规范流程。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、官方商店：最安全的"应用超市"</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>安卓</strong>：Google Play（国外）或各品牌自带商店（如华为应用市场、小米应用商店）。</li>
+                        <li><strong>iOS</strong>：只有 App Store。</li>
+                        <li><strong>鸿蒙</strong>：华为应用市场。</li>
+                    </ul>
+                    <p class="mb-2">核心安全意义：经过审核、更新有保障、支付安全。行动指南：<strong>优先只用官方商店下载！</strong></p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、第三方来源：风险极高！</h4>
+                    <p class="mb-2">从网页或不明链接下载App，可能夹带病毒、窃取隐私、盗刷支付。</p>
+                    <p class="mb-2">如果万不得已：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>确保来源绝对可信。</li>
+                        <li>安装前狂看权限要求。</li>
+                        <li>事后用安全App扫描。</li>
+                    </ol>
+                    <p class="mb-2">终极建议：在系统设置里，关掉"安装未知应用"的权限。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、装、更新、卸载</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>安装</strong>：商店里点"获取"或"安装"，装完首次打开会问你要权限。</li>
+                        <li><strong>更新</strong>：<strong>必须更！</strong> 主要是修复安全漏洞。建议开启自动更新。</li>
+                        <li><strong>卸载</strong>：长按图标拖到卸载区。想清得更彻底，去 [设置] > [应用管理] 里找到并卸载。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、权限管理：你是App的"老板"</h4>
+                    <p class="mb-2">App要权限（比如通讯录、位置）有时合理（地图要位置），有时不合理（手电筒要通讯录）。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>权限选项</strong>："始终允许"、"仅在使用时允许"、"禁止"、"每次询问"。</li>
+                        <li><strong>管理原则</strong>：
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>最小化：非必要不给。</li>
+                                <li>事后审计：定期去权限设置里看看谁在"越权"。</li>
+                                <li>情境化：像打车软件，只在用时给位置权限。</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <div class="warning-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-shield-alt mr-2"></i>重点盯防的权限</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>通讯录/短信：可能被用来发垃圾短信。</li>
+                            <li>实时位置：可能被追踪行踪。</li>
+                            <li>相机/麦克风：可能被偷拍偷录。</li>
+                            <li>文件访问：可能读取你的隐私文件。</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2" id="di-si-zhang-apk">五、软件安装包的构成要素</h4>
+                    <p class="mb-2">你有没有想过，从应用商店下载的那个安装包，里面到底装了什么？了解安装包的构成，能帮你更好地理解App是怎么工作的，也能在遇到问题时知道该从哪里排查。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">1. 安卓APK文件结构</h5>
+                    <p class="mb-2">APK（Android Package Kit）本质是一个ZIP压缩包，解压后可以看到以下核心目录和文件：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>AndroidManifest.xml</strong>：应用的"身份证"和"说明书"。记录了应用包名、版本号、所需权限、支持的系统版本、入口Activity等核心信息。系统安装应用时首先读取这个文件。</li>
+                        <li><strong>classes.dex</strong>：应用的核心代码。Java/Kotlin源代码编译后变成Dalvik字节码，存在这个文件里。一个应用可能有多个dex文件（如classes2.dex、classes3.dex）。</li>
+                        <li><strong>resources.arsc</strong>：编译后的资源索引表。记录了所有资源的ID和对应关系。</li>
+                        <li><strong>res/目录</strong>：资源文件夹。包含图片、布局文件、字符串、颜色定义等。不同分辨率的图片放在不同的drawable文件夹里（如drawable-hdpi、drawable-xhdpi）。</li>
+                        <li><strong>assets/目录</strong>：原始资源文件夹。存放不经过编译的资源，如网页文件、字体、音频等。App运行时可以通过AssetManager读取。</li>
+                        <li><strong>lib/目录</strong>：本地库文件夹。存放编译好的.so文件（C/C++代码编译产物），按CPU架构分类（如arm64-v8a、armeabi-v7a）。游戏和需要高性能计算的App通常有这个目录。</li>
+                        <li><strong>META-INF/目录</strong>：签名信息文件夹。包含MANIFEST.MF、CERT.SF、CERT.RSA三个文件，用于验证APK的完整性和签名。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. iOS IPA文件结构</h5>
+                    <p class="mb-2">IPA（iOS App Store Package）同样是压缩包，结构略有不同：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Payload/目录</strong>：核心内容所在。里面有一个.app文件夹，包含应用的所有内容。</li>
+                        <li><strong>Info.plist</strong>：应用的配置文件，类似安卓的AndroidManifest.xml。记录了应用ID、版本、权限需求、支持的设备等。</li>
+                        <li><strong>可执行文件</strong>：与.app文件夹同名的主程序，是编译后的Mach-O格式二进制文件。</li>
+                        <li><strong>Frameworks/目录</strong>：应用依赖的动态库和框架。</li>
+                        <li><strong>资源文件</strong>：图片、音频、视频等资源，通常存放在.app文件夹内。</li>
+                        <li><strong>_CodeSignature/目录</strong>：代码签名信息，用于验证应用的完整性和来源。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 签名验证机制</h5>
+                    <p class="mb-2">为什么从官方商店下载的App更安全？签名验证是关键。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>安卓签名</strong>：开发者用私钥对APK进行签名，系统安装时用公钥验证。如果APK被篡改（比如植入病毒），签名就会失效，系统会拒绝安装。Google Play还要求App Signing，由Google保管签名密钥，进一步保护应用安全。</li>
+                        <li><strong>iOS签名</strong>：苹果的审核更严格。每个IPA必须有苹果颁发的证书签名，否则无法安装。这就是为什么iOS只能从App Store或企业证书安装应用。企业证书签名的应用有效期有限，且苹果可以随时吊销。</li>
+                        <li><strong>签名的作用</strong>：
+                            <ol class="list-alpha pl-6 mt-1 space-y-1">
+                                <li>验证来源：确认应用确实来自声称的开发者。</li>
+                                <li>验证完整性：确保应用在传输过程中未被篡改。</li>
+                                <li>防止冒充：恶意应用无法伪装成其他应用。</li>
+                            </ol>
+                        </li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. 安装包大小与优化</h5>
+                    <p class="mb-2">你可能会发现，应用商店显示的App大小和安装后占用的空间不一样。这是因为：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>下载大小</strong>：压缩后的APK/IPA大小。</li>
+                        <li><strong>安装大小</strong>：解压后的大小，通常比下载大小大很多。</li>
+                        <li><strong>运行时占用</strong>：App运行时还会产生缓存、数据文件，占用更多空间。</li>
+                    </ul>
+                    <p class="mb-2">现代App的优化手段：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>App Bundle（安卓）</strong>：Google Play的动态分发技术。用户下载时只获取适合自己设备的资源（如只下载对应屏幕分辨率的图片），大大减少下载大小。</li>
+                        <li><strong>App Thinning（iOS）</strong>：类似的技术，苹果会根据设备自动裁剪不需要的资源。</li>
+                        <li><strong>按需下载</strong>：游戏等大型应用可以先下载核心包，后续再下载资源包。</li>
+                    </ul>
+
+                    <div class="info-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>小知识：为什么有的App安装包特别大？</p>
+                        <p class="mt-1">游戏类App通常最大，因为包含大量高清贴图、3D模型、音频文件。社交类App也比较大，因为要支持各种功能模块。工具类App通常最小。如果你发现某个工具类App特别大，要警惕是否捆绑了不必要的功能。</p>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：审查3个App的权限</p>
+                        <p class="mt-1">选3个常用App（如社交、购物、工具类），进入 [设置] 的应用权限管理页，逐项审查，把不必要的敏感权限关掉或改成"仅在使用时允许"。</p>
+                    </div>
+                </div>
+
+                <!-- 第五章 -->
+                <div id="di-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第五章：让手机更懂你——基础设置</h3>
+                    <p class="chapter-intro mb-4">花几分钟设置，体验提升巨大。这些设置就像给手机"调音"，让它更符合你的使用习惯。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、声音与震动</h4>
+                    <p class="mb-2">设个喜欢的铃声和通知声。灵活使用静音模式（开会）、勿扰模式（睡觉），世界瞬间清净。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>铃声</strong>：选一个你能听到的、不尴尬的。</li>
+                        <li><strong>震动模式</strong>：静音时靠震动提醒。</li>
+                        <li><strong>勿扰模式</strong>：可以设置例外，比如允许通讯录来电。</li>
+                        <li><strong>音量分离</strong>：媒体音量、铃声音量、闹钟音量可以分开调。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、显示与亮度</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>自动亮度</strong>：让手机根据环境光自动调节，省心。</li>
+                        <li><strong>护眼/夜览模式</strong>：过滤蓝光，晚上看手机舒服点。</li>
+                        <li><strong>深色模式</strong>：省电（对OLED屏特别有效），且夜间不刺眼。很多App也支持深色模式。</li>
+                        <li><strong>屏幕刷新率</strong>：部分安卓机可调，越高（如120Hz）滑动越丝滑。</li>
+                        <li><strong>自动锁屏</strong>：设置15秒或30秒，安全又省电。</li>
+                        <li><strong>字体大小</strong>：觉得字小？调大一点。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、壁纸、主题与桌面</h4>
+                    <p class="mb-2">换张好看的壁纸（静态或动态），心情都变了。安卓品牌手机常有主题商店，能整套换图标和风格。</p>
+                    <p class="mb-2"><strong>桌面小组件</strong>：天气、日程、音乐控制放桌面，一步直达。iOS和安卓都支持，长按桌面空白处添加。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、辅助功能与无障碍：科技向善的力量</h4>
+                    <p class="mb-2">别被"辅助功能"这个名字吓到，这些功能人人能用。它们最初是为残障人士设计的，但对普通人也很有用。更重要的是，无障碍设计体现了科技向善的理念——让每个人都能平等地享受数字生活。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">面向视障人士的辅助技术：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>屏幕阅读器（旁白/VoiceOver）</strong>：iOS的"旁白"和安卓的TalkBack是视障人士使用手机的核心工具。它们会将屏幕上的文字、按钮、图标逐一朗读出来，用户通过滑动和双击手势操作手机。苹果的VoiceOver体验最为成熟，支持多语言、可调节语速和音调。</li>
+                        <li><strong>语音控制</strong>：完全通过语音指令操控手机，如"打开微信"、"向上滚动"、"点确认"。iOS的语音控制功能非常强大，甚至可以声控点击屏幕上的编号按钮。</li>
+                        <li><strong>放大器</strong>：利用手机摄像头充当放大镜，实时放大眼前的文字或物体。iOS的放大器还支持色彩滤镜和对比度调节。</li>
+                        <li><strong>显示调整</strong>：色彩反转、灰度模式、色彩滤镜（为色盲用户调整颜色显示）、粗体文本、增大字体等。</li>
+                        <li><strong>动态字体</strong>：系统级字体大小调节，所有支持动态字体的App都会跟随调整。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">面向听障人士的辅助功能：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>实时字幕</strong>：系统自动将正在播放的音频或视频中的语音实时转成文字，显示在屏幕底部。iOS的实时字幕支持通话、视频、播客等场景。</li>
+                        <li><strong>声音识别</strong>：手机通过麦克风识别环境中的特定声音（如门铃、婴儿哭声、火灾警报、汽车喇叭），然后用震动和视觉提示提醒用户。这对听障人士在家的安全性至关重要。</li>
+                        <li><strong>助听器兼容</strong>：支持直接连接蓝牙助听器，iOS的MFi助听器认证确保了良好的兼容性。</li>
+                        <li><strong>LED闪烁提醒</strong>：来电或通知时用闪光灯闪烁代替铃声提醒。</li>
+                        <li><strong>单声道音频</strong>：将左右声道合并为单声道输出，单耳听力受损的用户不会丢失另一半声音信息。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">面向所有人的实用功能：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>放大手势</strong>：三击屏幕局部放大，看小字神器。</li>
+                        <li><strong>语音助手</strong>：Siri或小爱同学，动动嘴就能设闹钟、问天气。</li>
+                        <li><strong>色彩校正</strong>：对色弱友好。</li>
+                        <li><strong>轻点背面</strong>：iPhone特有，轻拍手机背面两下触发动作，比如截图。</li>
+                        <li><strong>辅助触控（悬浮球）</strong>：虚拟的Home键和手势按钮，适合按键不灵或手势操作不便的用户。</li>
+                        <li><strong>切换控制</strong>：通过外部开关或头部动作控制手机，为肢体障碍用户设计。</li>
+                    </ul>
+
+                    <div class="info-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-universal-access mr-2"></i>苹果的无障碍设计哲学</p>
+                        <p class="mt-1">苹果在无障碍领域投入巨大，每年都会更新和新增辅助功能。苹果官网有专门的无障碍页面，详细介绍各项功能的使用方法。iOS的无障碍功能通常比安卓更完善、体验更流畅，这也是很多残障用户选择苹果的重要原因。</p>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：设置"工作日"和"休息日"模式</p>
+                        <p class="mt-1">用专注模式（iOS）或情景模式让手机自动适应你的节奏：</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>创建"工作"模式：自动静音非重要App通知，只允许老板和家人的电话。</li>
+                            <li>创建"睡眠"模式：定时开启，所有通知静音。</li>
+                            <li>为它们设置定时，比如工作日9:00-18:00自动开启"工作"模式。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第六章 -->
+                <div id="di-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第六章：守护你的数字生活——安全与隐私</h3>
+                    <p class="chapter-intro mb-4">手机安全=隐私安全+财产安全。在这个数据即资产的时代，保护手机就是保护你自己。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、锁屏：第一道物理防线</h4>
+                    <p class="mb-2">锁屏是你手机的第一道防线，也是最容易被忽视的。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">安全等级排序：</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>密码/PIN码</strong>：安全度最高，是最终保障（忘记指纹/脸时靠它）。</li>
+                        <li><strong>指纹识别</strong>：安全与便利的完美平衡。</li>
+                        <li><strong>人脸识别</strong>：最方便，但安全性取决于技术（3D结构光安全，2D照片易骗过）。</li>
+                        <li><strong>图案解锁</strong>：方便但容易留下痕迹被猜到。</li>
+                    </ol>
+
+                    <h5 class="font-semibold mt-3 mb-1">设置强锁屏：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>务必设置一个复杂密码（不要用生日、123456）。</li>
+                        <li>开启生物识别。</li>
+                        <li>锁屏时间设成"立即"或最短。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、"查找我的手机"：终极防盗工具</h4>
+                    <p class="mb-2"><strong>必须开启！</strong> 它能：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>定位</strong>：手机丢哪了，在地图上找。</li>
+                        <li><strong>播放声音</strong>：让手机响铃，适合在家找。</li>
+                        <li><strong>丢失模式</strong>：远程锁死手机并显示联系号码。</li>
+                        <li><strong>远程擦除</strong>：最后一招，清除所有数据（但擦除后无法再定位）。</li>
+                    </ul>
+                    <p class="mb-2">去 [设置] 里，苹果找"查找我的iPhone"，安卓找"查找我的设备"或品牌类似服务，确保它是绿色开启状态。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、系统更新：打补丁，堵漏洞</h4>
+                    <p class="mb-2">系统更新首要目的是修复安全漏洞，就像给房子补墙洞。所以，看到系统更新提示，尽量第一时间升级。</p>
+                    <p class="mb-2">当然，大版本更新（比如iOS 17到iOS 18）可能会有兼容性问题，可以观望几天再升。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、识别与防范电信诈骗</h4>
+                    <p class="mb-2">常见套路：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>冒充公检法/客服</strong>：钓鱼电话，要你转账或提供验证码。</li>
+                        <li><strong>中奖/刷单返利</strong>：利诱，先给你点甜头再骗大钱。</li>
+                        <li><strong>网恋诈骗</strong>：杀猪盘，培养感情后骗钱。</li>
+                        <li><strong>冒充熟人</strong>：盗号后借钱。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">手机自带防护：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>骚扰电话拦截。</li>
+                        <li>验证码防窃取。</li>
+                        <li>短信链接安全检测。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">防骗口诀：</h5>
+                    <p class="mb-2"><strong>不轻信、不透露、不点击、不转账、有疑问先核实！</strong></p>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：启用并模拟"远程锁定"</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>确保你的"查找我的手机"功能已开启。</li>
+                            <li>在电脑浏览器或另一部手机上，登录对应的云服务账号（iCloud.com 或品牌云服务网站）。</li>
+                            <li>找到"查找设备"功能，尝试对你自己的手机发起一次"播放声音"或模拟"锁定"指令，熟悉整个操作流程。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第七章：前沿功能 -->
+                <div id="di-qi-zhang-jichu" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第七章：前沿功能全解析</h3>
+                    <p class="chapter-intro mb-4">科技日新月异，手机功能也在不断进化。卫星通信、无网通、车祸检测、星闪技术……这些听起来很科幻的功能，其实已经走进我们的生活。让我们一起来了解这些前沿技术。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、卫星通信：没信号也能求救</h4>
+                    <p class="mb-2">卫星通信是近年来手机领域的一大突破。当你在荒郊野外、深山老林，手机完全没有信号时，卫星通信可能就是救命稻草。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">工作原理：</h5>
+                    <p class="mb-2">手机直接与轨道上的通信卫星建立连接，发送求救信息。目前主要支持发送短信和位置信息，不能打电话。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">支持机型：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>苹果</strong>：iPhone 14系列及以后，支持通过卫星发送紧急SOS。</li>
+                        <li><strong>华为</strong>：Mate 50系列开始支持北斗卫星消息（仅文字），Mate 60 Pro系列进一步支持天通卫星通话（可打电话）。</li>
+                        <li><strong>其他品牌</strong>：陆续跟进中。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">使用场景：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>户外探险、登山遇险。</li>
+                        <li>海上遇险。</li>
+                        <li>自然灾害导致地面通信中断。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">使用方法：</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>确保在开阔地带，能看到天空。</li>
+                        <li>打开手机的卫星通信功能（通常在紧急呼叫界面）。</li>
+                        <li>按照屏幕指引，对准卫星方向。</li>
+                        <li>发送预设的求救信息和位置。</li>
+                    </ol>
+
+                    <div class="info-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>小知识</p>
+                        <p class="mt-1">卫星通信需要手机有特殊的硬件天线，不是所有手机都支持。另外，卫星通信通常需要付费订阅服务，但紧急求救功能一般是免费的。</p>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、无网通：近距离通信新方式</h4>
+                    <p class="mb-2">"无网通"是指在没有移动网络和Wi-Fi的情况下，两台手机之间直接通信的技术。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">技术原理：</h5>
+                    <p class="mb-2">利用蓝牙或专用的无线电频率，在短距离内（通常几百米到几公里）建立点对点连接。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">应用场景：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>户外活动</strong>：徒步、露营时队友间通信。</li>
+                        <li><strong>灾难救援</strong>：地震、洪水后通信中断时。</li>
+                        <li><strong>大型活动</strong>：演唱会、体育赛事人多信号差时。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">支持平台：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>苹果</strong>：iOS 17的"NameDrop"和"离线找朋友"功能。</li>
+                        <li><strong>华为</strong>：畅连App支持无网通话。</li>
+                        <li><strong>小米</strong>：小米妙享中心的部分功能。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、车祸检测：关键时刻救命</h4>
+                    <p class="mb-2">车祸检测是利用手机传感器检测严重车祸，并自动拨打紧急电话的功能。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">工作原理：</h5>
+                    <p class="mb-2">手机通过加速度计、陀螺仪、气压计、麦克风等多个传感器，综合判断是否发生了严重碰撞。检测到车祸后，手机会：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>弹出倒计时界面，询问你是否没事。</li>
+                        <li>如果倒计时结束你没有响应，自动拨打紧急电话。</li>
+                        <li>向紧急联系人发送你的位置。</li>
+                    </ol>
+
+                    <h5 class="font-semibold mt-3 mb-1">支持机型：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>苹果</strong>：iPhone 14系列及以后。</li>
+                        <li><strong>安卓</strong>：部分高端机型陆续支持。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">注意事项：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>功能需要开启才能使用。</li>
+                        <li>可能会误触发（比如过山车、剧烈运动），及时取消即可。</li>
+                        <li>依赖传感器和算法，不是100%可靠，但多一层保障。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、星闪技术：下一代无线连接</h4>
+                    <p class="mb-2">星闪（SparkLink）是华为牵头研发的新一代无线通信技术，旨在替代蓝牙和Wi-Fi在某些场景的应用。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">技术特点：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>低延迟</strong>：比蓝牙延迟低很多，适合游戏、音乐同步。</li>
+                        <li><strong>高速率</strong>：传输速度比蓝牙快。</li>
+                        <li><strong>低功耗</strong>：更省电。</li>
+                        <li><strong>广覆盖</strong>：连接距离更远。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">应用场景：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>无线耳机</strong>：更低延迟，玩游戏音画同步。</li>
+                        <li><strong>智能手表</strong>：更稳定的连接。</li>
+                        <li><strong>智能家居</strong>：更多设备同时连接。</li>
+                        <li><strong>车载互联</strong>：更流畅的手机-车机连接。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">支持设备：</h5>
+                    <p class="mb-2">目前主要是华为生态设备，如华为Mate 60系列、部分华为耳机和手表。未来会有更多品牌支持。</p>
+
+                    <div class="success-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-rocket mr-2"></i>技术展望</p>
+                        <p class="mt-1">星闪技术代表了无线通信的未来方向。随着更多厂商加入，我们可能会看到更多支持星闪的设备，享受更好的无线体验。</p>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：检查你的手机是否支持这些功能</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>去设置里搜索"卫星"，看看是否有卫星通信相关选项。</li>
+                            <li>搜索"车祸检测"或"紧急SOS"，检查是否开启。</li>
+                            <li>如果你的手机是华为，看看是否支持星闪设备连接。</li>
+                            <li>了解这些功能的使用方法，关键时刻可能派上用场。</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 二、软件篇 -->
+            <section id="ruan-jian-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">二、软件篇（第8-14章）</h2>
+                <p class="chapter-intro mb-4">掌握了基础操作后，让我们深入了解各类应用的使用技巧。从通信到办公，从支付到娱乐，这些章节将帮助你成为真正的手机达人。</p>
+
+                <!-- 第八章 -->
+                <div id="di-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第八章：通信：短信、电话与社交</h3>
+                    <p class="chapter-intro mb-4">通信是手机最原始、最核心的使命。现在，它已从简单的通话和短信，演变成一个包含即时通讯、社交网络和电子邮件在内的复杂生态系统。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、电话App的高级功能</h4>
+                    <p class="mb-2">现代手机的电话应用，早已超越了一个简单的拨号盘，它集成了录音、骚扰拦截、智能识别等强大工具。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">通话录音（注意法律合规性）：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>作用</strong>：记录重要通话内容，用于工作纪要、采访、客户承诺或争议留存。</li>
+                        <li><strong>法律提示</strong>：在中国境内，通话录音作为证据使用的前提是取得对方同意，或用于维护自身合法权益。</li>
+                        <li><strong>如何操作</strong>：安卓通常在通话界面有明确的"录音"按钮；iOS系统不提供原生通话录音功能，需借助第三方App。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">骚扰电话拦截与智能识别：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>原理</strong>：电话App通过网络查询庞大的号码库，在来电时显示"骚扰电话"、"诈骗电话"或公司名称。</li>
+                        <li><strong>如何开启</strong>：安卓进入电话App > 设置 > 骚扰拦截；iOS进入设置 > 电话 > 来电阻止与身份识别。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、短信与iMessage/RCS</h4>
+                    <p class="mb-2">传统短信并未被淘汰，它仍是接收验证码、银行通知和官方信息的可靠渠道。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iMessage</strong>：苹果设备间通过互联网发送的消息，显示为蓝色气泡。支持高质量图片视频、已读回执等，完全免费且端到端加密。</li>
+                        <li><strong>RCS</strong>：由全球运营商和谷歌推动的下一代通信协议。功能类似iMessage或微信，但基于电话号码。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、微信/QQ：国民级社交应用的管理</h4>
+                    <p class="mb-2">微信和QQ已超越通信工具，成为集社交、支付、信息获取于一体的"超级App"。</p>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">聊天记录备份与迁移：</h5>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>在电脑上登录PC版或Mac版微信。</li>
+                        <li>点击左下角菜单 > [迁移与备份] > [备份与恢复]。</li>
+                        <li>选择"备份聊天记录至电脑"，在手机上选择需要备份的聊天。</li>
+                    </ol>
+
+                    <h5 class="font-semibold mt-3 mb-1">存储空间清理：</h5>
+                    <p class="mb-2">路径：微信[我] > [设置] > [通用] > [存储空间]。可以清理缓存和按时间、文件类型精细化清理聊天记录。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、电子邮件：在手机上配置与使用</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>添加邮箱账户</strong>：iOS在设置 > 邮件 > 账户 > 添加账户；安卓通常有"电子邮件"App。</li>
+                        <li><strong>使用技巧</strong>：为不同邮箱账户设置不同的通知方式；善用滑动手势快速归档、删除或标记邮件。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：备份一次微信聊天记录到电脑</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>在电脑上启动备份：打开电脑版微信 > 左下角菜单 > [迁移与备份] > [备份与恢复]。</li>
+                            <li>选择备份到电脑：点击"备份聊天记录至电脑"。</li>
+                            <li>在手机上选择备份内容，等待备份完成。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第九章 -->
+                <div id="di-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第九章：移动办公与学习</h3>
+                    <p class="chapter-intro mb-4">手机已成为一个功能强大的移动工作站和随身学习中心。掌握这些工具，让你的效率翻倍。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、文档处理：在掌中编辑与创作</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>WPS Office</strong>：本土化好，全面兼容微软格式，内置丰富的免费模板和PDF工具集。</li>
+                        <li><strong>Microsoft 365</strong>：与桌面版Office体验高度一致，格式兼容性最好，深度集成OneDrive云存储。</li>
+                    </ul>
+                    <p class="mb-2"><strong>核心技巧</strong>：将工作文件保存在应用的关联云盘中，确保自动保存、多设备无缝切换。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、笔记应用：从快速记录到知识管理</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>轻量级</strong>：iOS备忘录、安卓各品牌便签。启动快、与系统集成度高。</li>
+                        <li><strong>全能型</strong>：印象笔记（信息收集能力强）、Notion（极其灵活，集笔记、数据库、看板于一体）。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、扫描与OCR：将纸质文件转为电子版</h4>
+                    <p class="mb-2">手机是随身携带的便携扫描仪。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>系统自带</strong>：iOS"备忘录"内置扫描功能；安卓部分品牌的相机或文件管理App有"文档扫描"模式。</li>
+                        <li><strong>第三方应用</strong>：Microsoft Lens、Adobe Scan、全能扫描王。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、网盘同步：你的移动文件中枢</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>百度网盘</strong>：国内普及率高，分享生态成熟。</li>
+                        <li><strong>iCloud Drive</strong>：与苹果生态深度融合，同步无感且安全。</li>
+                        <li><strong>OneDrive</strong>：深度整合Windows和Office 365。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：用手机扫描一份文件并生成PDF</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>打开"备忘录"或下载"Microsoft Lens"。</li>
+                            <li>对准文档，应用自动识别边框后拍照。</li>
+                            <li>选择"黑白"滤镜使文档更清晰。</li>
+                            <li>输出为PDF，保存并分享。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十章 -->
+                <div id="di-shi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十章：移动支付与生活服务</h3>
+                    <p class="chapter-intro mb-4">手机正日益取代我们的钱包、交通卡乃至实体身份证。安全是使用的前提。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、支付宝与微信支付：绑定、支付与安全管理</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>绑定银行卡</strong>：建议绑定1-2张常用卡片即可。可使用银行的Ⅱ类/Ⅲ类电子账户专门用于移动支付，隔离主账户风险。</li>
+                        <li><strong>支付方式</strong>：付款码、扫一扫、转账、手机NFC支付。</li>
+                        <li><strong>核心安全管理</strong>：务必设置独立的支付密码，并开启指纹或面容支付。开启"安全锁"。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、公共交通码：地铁、公交</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>支付宝/微信</strong>：搜索"乘车码"，开通对应城市的电子交通卡。</li>
+                        <li><strong>品牌手机公交卡</strong>：在小米、华为、苹果等手机的钱包App内，开通虚拟交通卡，通过NFC刷卡，响应最快且支持离线。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、生活缴费、外卖、打车App的使用技巧</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>生活缴费</strong>：在支付宝或微信的"生活缴费"中绑定户号，缴纳水、电、燃气等费用。</li>
+                        <li><strong>外卖</strong>：不同平台对同一商家优惠可能不同，可多平台比价。</li>
+                        <li><strong>打车</strong>：设置紧急联系人、开启行程分享。优先选择平台内支付。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：为你的支付App设置更安全的锁</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>检查并开启生物支付：在支付宝和微信中确认已开启指纹/面容支付。</li>
+                            <li>设置"安全锁"：在支付宝和微信的安全设置中找到"安全锁"。</li>
+                            <li>检查登录设备：移除所有不认识、不再使用的设备。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十一章 -->
+                <div id="di-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十一章：摄影与图片管理</h3>
+                    <p class="chapter-intro mb-4">本章带你掌握用手机创作精彩影像、高效管理视觉记忆的全流程。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、手机相机基础：夜景、人像、专业模式</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-2">
+                        <li><strong>夜景模式</strong>：通过多张合成提升暗光下的亮度和细节。拍摄时需手持稳定2-4秒。</li>
+                        <li><strong>人像模式</strong>：模拟大光圈镜头带来的浅景深效果（背景虚化）。浅景深本质上是镜头大光圈的物理特性，和相机类型无关——单反也好、手机也好，只要光圈够大、焦距够长，都能产生自然的背景虚化。手机由于镜头物理尺寸限制，真实光圈下的虚化效果有限，所以人像模式通过算法（AI抠图+背景模糊）来模拟这种效果。对准人物，保持1-2米距离拍摄效果最佳。</li>
+                        <li><strong>专业模式</strong>：手动控制核心参数。
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>ISO：越低画质越好，暗光下提高会产生噪点。</li>
+                                <li>快门速度：高速定格瞬间，低速记录轨迹。</li>
+                                <li>白平衡：调整色彩倾向。</li>
+                                <li>曝光补偿：整体调亮或调暗画面。</li>
+                            </ul>
+                        </li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、照片构图与后期</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>三分法</strong>：将兴趣点放在画面横竖三等分的交叉点上。</li>
+                        <li><strong>引导线</strong>：利用道路、河流将视线引向主体。</li>
+                        <li><strong>后期处理</strong>：使用Snapseed、醒图等App进行校正、基础调整、局部精修、风格化。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、照片管理：从混乱到有序</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>智能分类</strong>：自动按时间、地点、人物、场景分类。</li>
+                        <li><strong>搜索</strong>：可以用关键词、地点、时间甚至画面中的文字进行全局搜索。</li>
+                        <li><strong>云备份</strong>：iOS用iCloud照片；安卓/跨平台可用Google相册或国内网盘。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、截图与录屏：信息捕获与分享</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>通用快捷键</strong>：同时按下【电源键】+【音量加键】。</li>
+                        <li><strong>进阶捕获</strong>：长截图/滚动截图、区域截图。</li>
+                        <li><strong>屏幕录制</strong>：在控制中心添加"屏幕录制"按钮。开始前长按可开启麦克风录制解说。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：用专业模式拍摄一张夜景照片</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>找有稳定光源的场景，建议使用三脚架。</li>
+                            <li>打开相机App切换到"专业"模式。</li>
+                            <li>ISO设为最低值（50或100），快门速度设为1-2秒。</li>
+                            <li>点击快门，保持绝对静止。查看成片，根据亮度调整参数。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十一章附：专业影像技术 -->
+                <div id="di-shi-yi-zhang-advanced" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十一章附：专业影像技术知识</h3>
+                    <p class="chapter-intro mb-4">想要真正理解手机摄影和视频的奥秘，你需要了解一些专业的影像技术知识。这些知识不仅能帮你更好地使用手机相机，还能让你在选择设备时更有判断力。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、分辨率、帧率与码率：视频质量的三要素</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">分辨率（Resolution）：</h5>
+                    <p class="mb-2">分辨率决定了画面的清晰度，用像素数表示。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>720P (HD)</strong>：1280×720像素，入门级清晰度。</li>
+                        <li><strong>1080P (Full HD)</strong>：1920×1080像素，目前最主流的分辨率。</li>
+                        <li><strong>2K (QHD)</strong>：2560×1440像素，比1080P更清晰。</li>
+                        <li><strong>4K (UHD)</strong>：3840×2160像素，超高清，细节丰富。</li>
+                        <li><strong>8K</strong>：7680×4320像素，未来标准，目前设备支持有限。</li>
+                    </ul>
+                    <p class="mb-2">分辨率越高，画面越清晰，但文件也越大，对存储和处理能力要求越高。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">帧率（Frame Rate）：</h5>
+                    <p class="mb-2">帧率决定了画面的流畅度，用每秒帧数（fps）表示。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>24fps</strong>：电影标准帧率，有独特的"电影感"。</li>
+                        <li><strong>30fps</strong>：电视和网络视频常用，流畅自然。</li>
+                        <li><strong>60fps</strong>：高帧率，适合运动场景和游戏录制，非常流畅。</li>
+                        <li><strong>120fps/240fps</strong>：超高帧率，可用于慢动作视频。</li>
+                    </ul>
+                    <p class="mb-2">帧率越高，画面越流畅，慢动作效果越好，但文件也越大。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">码率（Bitrate）：</h5>
+                    <p class="mb-2">码率决定了视频的数据密度，用每秒数据量（Mbps）表示。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>码率越高，画质越好，细节保留越多，但文件也越大。</li>
+                        <li>码率过低会导致画面出现马赛克、色块等压缩痕迹。</li>
+                        <li>专业视频拍摄通常需要高码率以保留更多后期处理空间。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、视频编码格式：H.264、H.265与ProRes</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">H.264 (AVC)：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>特点</strong>：最广泛使用的编码格式，兼容性极好。</li>
+                        <li><strong>优点</strong>：几乎所有设备都能播放，压缩效率适中。</li>
+                        <li><strong>缺点</strong>：相比新格式，压缩效率较低，文件较大。</li>
+                        <li><strong>适用场景</strong>：网络视频分享、普通用户日常拍摄。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">H.265 (HEVC)：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>特点</strong>：H.264的升级版，压缩效率提升约50%。</li>
+                        <li><strong>优点</strong>：相同画质下文件更小，支持更高分辨率和帧率。</li>
+                        <li><strong>缺点</strong>：编码和解码需要更强的处理器，部分老设备不兼容。</li>
+                        <li><strong>适用场景</strong>：4K视频拍摄、存储空间有限的场景。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Apple ProRes：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>特点</strong>：苹果开发的专业视频编码，几乎无损压缩。</li>
+                        <li><strong>优点</strong>：画质极高，后期处理空间大，色彩准确。</li>
+                        <li><strong>缺点</strong>：文件极大，需要大量存储空间，处理需要专业设备。</li>
+                        <li><strong>适用场景</strong>：专业视频制作、电影级拍摄。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">ProRes RAW：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>特点</strong>：结合了ProRes和RAW格式的优势。</li>
+                        <li><strong>RAW是什么</strong>：未经处理的原始传感器数据，保留最大信息量。</li>
+                        <li><strong>优点</strong>：后期调整空间极大，可以改变曝光、白平衡等参数而不损失画质。</li>
+                        <li><strong>缺点</strong>：文件极其巨大，需要专业后期软件处理。</li>
+                        <li><strong>适用场景</strong>：高端专业制作。iPhone 15 Pro系列支持拍摄Apple ProRes视频（最高4K 60fps），但ProRes RAW格式目前需要配合外部录影设备使用，手机端暂不支持直接拍摄。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、HDR：高动态范围技术</h4>
+                    <p class="mb-2">HDR（High Dynamic Range）技术可以同时保留画面中最亮和最暗部分的细节。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>HDR10</strong>：最基础的HDR标准，兼容性好。</li>
+                        <li><strong>HDR10+</strong>：三星推动的标准，支持动态元数据。</li>
+                        <li><strong>Dolby Vision</strong>：杜比开发的顶级HDR标准，画质最佳，但需要授权。</li>
+                        <li><strong>HLG</strong>：广播级HDR标准，兼容普通显示器。</li>
+                    </ul>
+                    <p class="mb-2">拍摄HDR视频时，需要支持HDR的显示器才能看到完整效果。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、色彩空间与色深</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">色彩空间：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>sRGB</strong>：标准色彩空间，兼容性最好。</li>
+                        <li><strong>Display P3</strong>：苹果推广的广色域标准，色彩更丰富。</li>
+                        <li><strong>Rec.2020</strong>：HDR视频的标准色彩空间，色域最广。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">色深：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>8-bit</strong>：1670万色，普通视频标准。</li>
+                        <li><strong>10-bit</strong>：10.7亿色，专业视频标准，色彩过渡更平滑。</li>
+                        <li><strong>12-bit</strong>：680亿色，高端专业标准。</li>
+                    </ul>
+
+                    <div class="info-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>实用建议</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>日常拍摄：1080P/4K + 30fps + H.265编码，平衡画质和文件大小。</li>
+                            <li>运动拍摄：1080P/4K + 60fps，保证流畅度。</li>
+                            <li>专业创作：4K + ProRes（如果支持），保留最大后期空间。</li>
+                            <li>存储建议：高码率视频很占空间，建议定期备份到电脑或云盘。</li>
+                        </ul>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：探索你的手机视频设置</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>打开相机App，切换到视频模式。</li>
+                            <li>查看分辨率和帧率选项，尝试不同的组合。</li>
+                            <li>如果支持，查看是否有HDR、ProRes等高级选项。</li>
+                            <li>拍摄几段不同设置的视频，对比画质和文件大小。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十二章 -->
+                <div id="di-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十二章：影音娱乐与阅读</h3>
+                    <p class="chapter-intro mb-4">手机是我们最重要的休闲娱乐中心，整合了随身听、电影院、图书馆和游戏机。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、音乐与播客：你的随身声景</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>国内流媒体</strong>：QQ音乐、网易云音乐，特色是歌单社区和个性化推荐。</li>
+                        <li><strong>国际流媒体</strong>：Spotify、Apple Music，曲库全球化，音质选择多。</li>
+                        <li><strong>播客</strong>：苹果播客、小宇宙、Spotify。使用技巧：订阅频道、预先下载、调整播放速度。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、视频播放器：本地播放与流媒体</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>本地视频播放</strong>：推荐VLC、nPlayer等全能播放器，支持几乎所有格式和外挂字幕。</li>
+                        <li><strong>在线流媒体</strong>：Bilibili（弹幕文化）、腾讯视频、爱奇艺。善用"投屏"功能在电视上观看。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、电子书阅读</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>网文与出版书</strong>：微信读书、Kindle App。</li>
+                        <li><strong>专业与文档</strong>：Apple Books、Adobe Acrobat Reader（PDF标注）。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、游戏模式与性能调节</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>游戏模式</strong>：启动游戏时自动激活，提供性能模式切换、免打扰、快捷录屏等功能。</li>
+                        <li><strong>手动调节</strong>：根据手机性能调整画质、帧率。优先保证帧率流畅。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：配置一个专属的"飞行模式"下的娱乐套餐</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>音乐套餐：在音乐App中下载喜欢的歌单或专辑。</li>
+                            <li>视频套餐：在流媒体App中缓存一部电影或剧集。</li>
+                            <li>阅读套餐：在电子书App中下载1-2本书。</li>
+                            <li>开启"飞行模式"，验证所有内容可离线访问。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十三章 -->
+                <div id="di-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十三章：工具类App推荐</h3>
+                    <p class="chapter-intro mb-4">本章精选那些能真正提升效率、促进健康、便利出行的工具类应用。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、效率工具：管理你的时间与注意力</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>待办清单</strong>：系统便签、Microsoft To Do（轻量）；滴答清单、Todoist（功能全面）。</li>
+                        <li><strong>番茄钟</strong>：Forest、潮汐。原则：25分钟专注，5分钟休息。</li>
+                        <li><strong>日历</strong>：系统日历或Google Calendar，将预约、截止日期放入日历。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、健康运动</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>运动指导</strong>：Keep提供海量健身课程。</li>
+                        <li><strong>数据中枢</strong>：苹果健康/Google Fit，汇聚来自手机、手环及第三方健康App的所有数据。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、旅行出行</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>地图导航</strong>：国内首选高德地图或百度地图；国际出行用谷歌地图。</li>
+                        <li><strong>翻译</strong>：谷歌翻译的"对话"和"相机"即时取词翻译是旅行神器。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、自动化工具启蒙</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iOS"快捷指令"</strong>：苹果官方自动化工具，无需编程。</li>
+                        <li><strong>安卓自动化</strong>：系统级场景联动，或Tasker（功能强大但学习曲线陡峭）。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">五、浏览器与搜索引擎：你的信息入口</h4>
+                    <p class="mb-2">浏览器是你通往互联网的窗口，搜索引擎是你在信息海洋中导航的罗盘。用好它们，能让你少走很多弯路。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">浏览器的工作原理：</h5>
+                    <p class="mb-2">当你在浏览器中输入网址后，浏览器会：①向DNS服务器查询域名对应的IP地址；②向该IP地址的服务器发送HTTP/HTTPS请求；③服务器返回网页代码（HTML、CSS、JavaScript）；④浏览器解析代码并渲染成你看到的页面。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">主流浏览器推荐：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>微软Edge</strong>：基于Chromium内核，速度快、兼容好。内置Copilot AI助手，可以总结网页、翻译、对话。支持跨设备同步，个人强烈推荐作为主力浏览器。</li>
+                        <li><strong>Safari</strong>：苹果设备默认浏览器，与系统深度集成，省电高效。隐私保护好，但扩展插件较少。</li>
+                        <li><strong>Chrome</strong>：全球使用率最高，扩展丰富。但内存占用大，手机端相对耗电。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">搜索引擎选择：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Bing</strong>：微软旗下搜索引擎，与Edge深度集成。AI摘要功能可以直接给出答案而不只是链接，搜索效率很高。图片搜索体验也不错。</li>
+                        <li><strong>Yandex</strong>：俄罗斯最大的搜索引擎，图片搜索和反向图片搜索能力很强。找相似图片、识别物体时非常好用。</li>
+                        <li><strong>百度</strong>：国内信息搜索的主力，但广告较多，需要一定的辨别能力。</li>
+                        <li><strong>Google</strong>：全球最精准的搜索引擎，但国内需要特殊网络才能使用。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">高效信息检索指南：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>善用AI搜索</strong>：Bing的AI摘要、Edge的Copilot可以直接回答问题，帮你从海量结果中提炼关键信息，比逐条点击链接高效得多。</li>
+                        <li><strong>识别虚假信息与广告</strong>：搜索结果中标注"广告"或"赞助"的条目是付费推广，不是自然搜索结果。注意甄别信息来源的权威性，优先选择官方网站、知名媒体的内容。</li>
+                        <li><strong>正确下载应用</strong>：在搜索引擎中输入"应用名+官网"，如"微信官网"，优先点击带有官方域名标识的结果。不要从第三方下载站安装软件，它们经常捆绑流氓软件。</li>
+                        <li><strong>官网鉴别技巧</strong>：下载Windows 11应该访问microsoft.com，下载Chrome应该访问google.com。看域名是否与品牌一致，是最基本的鉴别方法。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">网站域名知识：</h5>
+                    <p class="mb-2">域名是网站的"门牌号"，读懂它能帮你判断网站的性质和来源：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>常见后缀含义</strong>：
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>.com — 商业机构，最常见</li>
+                                <li>.cn — 中国国家域名</li>
+                                <li>.org — 非营利组织</li>
+                                <li>.net — 网络服务机构</li>
+                                <li>.edu — 教育机构</li>
+                                <li>.gov — 政府机构</li>
+                                <li>.xyz/.tech/.info — 新兴通用域名，门槛低，需谨慎</li>
+                            </ul>
+                        </li>
+                        <li><strong>国家/地区域名</strong>：
+                            <ul class="list-disc pl-6 mt-1 space-y-1">
+                                <li>.jp — 日本</li>
+                                <li>.kr — 韩国</li>
+                                <li>.uk — 英国</li>
+                                <li>.de — 德国</li>
+                                <li>.tw — 台湾</li>
+                                <li>.hk — 香港</li>
+                            </ul>
+                        </li>
+                        <li><strong>安全提示</strong>：.gov和.edu后缀的网站通常更可信，因为申请门槛高。.xyz、.top等廉价域名容易被钓鱼网站利用，访问时要多留个心眼。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：创建一个"睡前放松"的自动化流程</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>创建触发条件：特定时间（如22:30）。</li>
+                            <li>添加执行动作：调低音量 > 打开勿扰模式 > 播放放松歌单 > 调低亮度。</li>
+                            <li>保存并测试。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十四章：密码管理器专题 -->
+                <div id="di-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十四章：密码管理器专题</h3>
+                    <p class="chapter-intro mb-4">在数字时代，密码就是你的家门钥匙。但钥匙太多、太复杂，怎么办？密码管理器就是你的"万能钥匙管家"。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、为什么你需要密码管理器？</h4>
+                    <p class="mb-2">现代人平均有几十甚至上百个网络账号。如果每个账号都用相同的密码，一旦一个网站被黑，所有账号都危险。如果每个账号都用不同的复杂密码，根本记不住。</p>
+                    <p class="mb-2">密码管理器解决了这个困境：你只需要记住一个主密码，它帮你记住所有其他密码。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、密码管理器的工作原理</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>加密存储</strong>：所有密码都经过高强度加密存储，只有你能解密。</li>
+                        <li><strong>主密码</strong>：你设置一个主密码，用于解锁密码库。主密码本身不存储在服务器上。</li>
+                        <li><strong>自动填充</strong>：在网站或App登录界面，密码管理器自动填充账号密码。</li>
+                        <li><strong>密码生成</strong>：可以生成随机、复杂的密码，提高安全性。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、主流密码管理器推荐</h4>
+                    
+                    <h5 class="font-semibold mt-3 mb-1">系统自带：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>iCloud钥匙串</strong>：苹果生态用户首选。与Safari、App无缝集成，免费，安全。缺点是跨平台使用不便。</li>
+                        <li><strong>Google密码管理器</strong>：安卓用户方便。与Chrome、安卓系统集成，免费。</li>
+                        <li><strong>华为密码保险箱</strong>：鸿蒙系统内置，适合华为用户。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">第三方专业工具：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Bitwarden</strong>：开源免费，功能强大，支持所有平台。强烈推荐给注重隐私的用户。</li>
+                        <li><strong>1Password</strong>：界面美观，功能丰富，适合家庭和团队。付费。</li>
+                        <li><strong>LastPass</strong>：老牌密码管理器，免费版功能受限。</li>
+                        <li><strong>KeePass</strong>：完全本地存储，开源免费。适合极客用户。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、密码管理器使用最佳实践</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>设置强主密码</strong>：主密码是最后一道防线，务必设置一个长且复杂的密码，并牢记。</li>
+                        <li><strong>启用双重认证</strong>：为密码管理器账号开启双重认证，增加一层保护。</li>
+                        <li><strong>定期检查弱密码</strong>：大多数密码管理器有"安全审计"功能，帮你找出弱密码和重复密码。</li>
+                        <li><strong>不要忘记主密码</strong>：主密码无法找回，忘记就意味着丢失所有密码。建议写在纸上，放在安全的地方。</li>
+                        <li><strong>紧急访问</strong>：设置紧急联系人，万一你无法访问，信任的人可以获取你的密码。</li>
+                    </ul>
+
+                    <div class="warning-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>重要提醒</p>
+                        <p class="mt-1">密码管理器虽然方便，但也有风险：如果主密码泄露，所有密码都暴露了。所以主密码绝对不能和其他密码相同，也不能写在容易被找到的地方。另外，建议选择有良好安全记录的服务商。</p>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：开始使用密码管理器</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>选择一个密码管理器（推荐Bitwarden或系统自带）。</li>
+                            <li>注册账号，设置一个强主密码。</li>
+                            <li>导入现有密码（如果有的话）或开始添加新密码。</li>
+                            <li>安装浏览器插件或手机App，体验自动填充功能。</li>
+                            <li>检查安全审计报告，找出需要改进的密码。</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 三、进阶篇 -->
+            <section id="jin-jie-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">三、进阶篇（第15-20章）</h2>
+                <p class="chapter-intro mb-4">掌握了基础和软件应用后，让我们深入探索手机的高级功能。这些内容将帮助你成为真正的手机高手，甚至解锁一些"隐藏技能"。</p>
+
+                <!-- 第十五章 -->
+                <div id="di-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十五章：电池科学与续航优化</h3>
+                    <p class="chapter-intro mb-4">电池就是你手机的"能量心脏"。这章带你搞懂电池的小脾气，学会科学的充电和续航技巧，彻底告别电量焦虑。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、电池是怎么回事？循环与健康度</h4>
+                    <p class="mb-2">手机电池（锂离子或锂聚合物）像个能量海绵：充电就是吸水（存电），放电就是挤水（用电）。记住它的三大特点：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>随用随充</strong>：和旧电池不同，它没有记忆效应，不用非得用完再充。</li>
+                        <li><strong>怕热</strong>：高温是电池头号杀手。</li>
+                        <li><strong>会老化</strong>：用久了，最大容量就会下降，这是正常现象。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">核心指标：循环次数与健康度</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>一次循环不是充一次电。比如今天用60%充满，明天用40%充满，总消耗100%电量才算一次循环。</li>
+                        <li>电池健康度就是当前最大容量占全新时的百分比。低于80%时，你会明显感觉续航变短。</li>
+                        <li><strong>怎么看？</strong> iPhone：设置 > 电池 > 电池健康与充电；安卓：一般去设置里搜电池健康。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、充电玄学？快充、无线充与黄金法则</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>快充伤电池？</strong> 用原装或认证的快充配件，伤害很小。手机和充电头有温控，过热会自动降功率。</li>
+                        <li><strong>无线充电</strong>：方便但效率较低，发热更明显。适合整夜充电。</li>
+                        <li><strong>黄金养生法则</strong>：尽量让电量保持在20%-80%之间，别老让它饿着（0%）或撑着（100%）。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2" id="di-shi-wu-zhang-kuichong">三、快充协议全解析：为什么你的充电器充不快？</h4>
+                    <p class="mb-2">你可能遇到过这种情况：明明手机支持快充，换了充电器却变得很慢。这是因为快充不是简单的"功率大就行"，而是需要充电头、数据线、手机三方"说同一种语言"——这就是快充协议。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">1. 快充的基本原理</h5>
+                    <p class="mb-2">充电功率 = 电压 × 电流（P = U × I）。要提升功率，要么提高电压，要么提高电流，或者两者都提高。不同协议选择了不同的技术路线。</p>
+                    <p class="mb-2">快充的工作流程：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>握手阶段</strong>：手机和充电头通过数据线通信，交换各自支持的协议和功率信息。</li>
+                        <li><strong>协商阶段</strong>：双方确定一个共同支持的最高功率档位。</li>
+                        <li><strong>充电阶段</strong>：充电头按协商好的电压电流输出，手机端进行电源管理。</li>
+                        <li><strong>调整阶段</strong>：随着电量增加，手机会逐步降低充电功率，保护电池。</li>
+                    </ol>
+
+                    <h5 class="font-semibold mt-3 mb-1">2. 主流快充协议详解</h5>
+                    
+                    <p class="mb-2"><strong>USB PD（Power Delivery）</strong>——通用协议之王</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>特点</strong>：USB-IF组织制定的官方标准，覆盖范围最广。PD 3.0支持最高100W（20V/5A），PD 3.1扩展到240W（48V/5A）。</li>
+                        <li><strong>电压档位</strong>：5V、9V、15V、20V，PD 3.1还支持28V、36V、48V。</li>
+                        <li><strong>兼容性</strong>：iPhone全系、谷歌Pixel、部分安卓旗舰、笔记本电脑、Switch游戏机都支持PD协议。</li>
+                        <li><strong>优势</strong>：通用性强，一个充电头可以给多种设备充电；支持PPS（可编程电源），可以精细调节电压电流。</li>
+                        <li><strong>劣势</strong>：需要Type-C接口和专用芯片，成本较高。</li>
+                    </ul>
+
+                    <p class="mb-2"><strong>高通QC（Quick Charge）</strong>——安卓阵营的元老</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>QC 3.0</strong>：支持3.6V-20V以0.2V为步进的可调电压，最高18W。</li>
+                        <li><strong>QC 4.0/4+</strong>：兼容USB PD协议，支持最高27W，加入双路充电技术。</li>
+                        <li><strong>QC 5.0</strong>：支持最高100W+，0-50%仅需5分钟，大幅改善发热。</li>
+                        <li><strong>兼容性</strong>：使用高通骁龙处理器的手机大多支持，但各品牌通常会优先使用自己的私有协议。</li>
+                    </ul>
+
+                    <p class="mb-2"><strong>OPPO VOOC/一加WARP/真我Dart</strong>——低压大电流的代表</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>技术路线</strong>：低压大电流（5V/4A起步），发热更小，效率更高。</li>
+                        <li><strong>VOOC 1.0</strong>：20W（5V/4A），2014年发布，开创快充时代。</li>
+                        <li><strong>SuperVOOC</strong>：50W-65W，采用双电芯串联设计。</li>
+                        <li><strong>SuperVOOC 2.0</strong>：65W，30分钟充满4000mAh电池。</li>
+                        <li><strong>150W/240W超级闪充</strong>：目前最快的量产快充技术。</li>
+                        <li><strong>特点</strong>：需要专用充电头和数据线（有额外触点），不兼容其他协议。</li>
+                    </ul>
+
+                    <p class="mb-2"><strong>华为SuperCharge</strong>——高压快充的演进</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>FCP（Fast Charge Protocol）</strong>：9V/2A，18W，兼容QC 2.0。</li>
+                        <li><strong>SCP（Super Charge Protocol）</strong>：支持更高功率，从22.5W到66W再到100W。</li>
+                        <li><strong>技术特点</strong>：采用电荷泵技术，将高压转换为低压大电流输入电池，效率高达98%。</li>
+                        <li><strong>兼容性</strong>：华为/荣耀手机专用，部分充电器支持PD协议。</li>
+                    </ul>
+
+                    <p class="mb-2"><strong>小米澎湃快充</strong>——自研协议的崛起</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>澎湃P1芯片</strong>：小米自研的快充管理芯片，支持120W有线快充。</li>
+                        <li><strong>澎湃G1芯片</strong>：电池管理芯片，与P1配合实现更高效的快充。</li>
+                        <li><strong>技术特点</strong>：采用双电芯串联+电荷泵方案，支持多种协议兼容。</li>
+                    </ul>
+
+                    <p class="mb-2"><strong>苹果快充</strong>——保守但稳定</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>协议</strong>：仅支持USB PD协议。</li>
+                        <li><strong>功率</strong>：iPhone 8及以后支持快充，最高约27W（iPhone 15 Pro Max可达27W+）。</li>
+                        <li><strong>特点</strong>：功率相对保守，但充电曲线优化好，发热控制出色。</li>
+                        <li><strong>配件要求</strong>：需要USB-C to Lightning线（或USB-C to USB-C线）和PD充电头。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">3. 快充协议对比表</h5>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300 text-sm mb-4">
+                            <thead>
+                                <tr class="bg-light dark:bg-gray-700">
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高功率</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技术路线</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">兼容性</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">USB PD 3.1</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高压/多档位</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最广泛</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">QC 5.0</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W+</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高压可调</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">高通机型</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">VOOC/Dart</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">240W</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低压大电流</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO系专用</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SuperCharge</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100W</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电荷泵</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为/荣耀</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果快充</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">~27W</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">PD协议</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <h5 class="font-semibold mt-3 mb-1">4. 无线充电协议</h5>
+                    <p class="mb-2">无线充电也有自己的协议标准：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Qi标准</strong>：WPC（无线充电联盟）制定，最通用的标准。基础Qi支持5W-15W。</li>
+                        <li><strong>Qi2标准</strong>：2023年发布，引入磁吸定位（类似苹果MagSafe），支持15W+。</li>
+                        <li><strong>私有协议</strong>：各品牌有自己的高速无线充电，如小米50W无线充、华为50W无线充等，需要专用充电器。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">5. 快充选购指南</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>看协议匹配</strong>：购买充电器时，确认它支持你手机的快充协议。第三方充电器通常会标注支持的协议。</li>
+                        <li><strong>看数据线</strong>：大功率快充需要专用数据线。普通数据线可能只支持60W以下。</li>
+                        <li><strong>看认证</strong>：苹果用户建议选择MFi认证的数据线；安卓用户选择品牌原装或知名第三方。</li>
+                        <li><strong>看发热</strong>：快充时手机发热是正常的，但如果烫手就不正常了，建议暂停充电或更换充电器。</li>
+                    </ul>
+
+                    <div class="warning-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>快充安全提示</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>避免边充边玩大型游戏，会加剧发热。</li>
+                            <li>不要使用劣质充电器和数据线，可能导致安全隐患。</li>
+                            <li>充电时取掉厚重的手机壳，帮助散热。</li>
+                            <li>如果充电器或手机异常发热、有异味，立即停止使用。</li>
+                        </ul>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、这才是真正的省电技巧</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>屏幕（耗电王）</strong>：调低亮度、缩短自动锁屏时间。OLED屏手机开深色模式能省不少电。</li>
+                        <li><strong>信号差</strong>：在电梯、地下室，手机会拼命搜信号，耗电极快。</li>
+                        <li><strong>5G</strong>：如果信号不好，手动切回4G，续航会好很多。</li>
+                        <li><strong>定位服务</strong>：非导航类App，定位权限设为"仅使用时允许"。</li>
+                        <li><strong>限制后台活动</strong>：iPhone在设置 > 通用 > 后台App刷新；安卓在应用电池设置里。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：给你的电池做个体检</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>查看健康度：找到并记下你的电池最大容量。</li>
+                            <li>分析耗电详情：看电池设置里的图表和App列表，找出耗电元凶。</li>
+                            <li>制定对策：限制后台耗电异常的App。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十六章 -->
+                <div id="di-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十六章：账号体系与云服务</h3>
+                    <p class="chapter-intro mb-4">你的手机账号远不只是下载App的密码，它是你数字生活的"灵魂护照"，而云服务就是让所有数据流动起来的"隐形高速公路"。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、三大核心账号</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple ID</strong>：苹果生态的万能钥匙。必须开启双重认证！</li>
+                        <li><strong>谷歌账号</strong>：安卓与谷歌服务的核心。同样要开启两步验证。</li>
+                        <li><strong>华为/小米/OPPO/vivo账号</strong>：本土全能管家，云空间备份、应用商店、查找手机、跨设备协同。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、云同步：让数据自己会跑</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>通讯录、日历、备忘录</strong>：在任何设备上改了，其他设备秒同步。</li>
+                        <li><strong>照片视频</strong>：开启iCloud照片，所有照片上传，手机里留个小尺寸的。</li>
+                        <li><strong>整机自动备份</strong>：手机充电、锁屏连Wi-Fi时，会自动备份。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">重要区分：同步 vs 备份</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>同步</strong>=双向一致性：你在A设备删了照片，B、C设备上的也会没。</li>
+                        <li><strong>备份</strong>=单向快照：像给手机拍张照存起来，后来删了本地数据，云端备份还在。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、家庭共享：一次购买，全家享用</h4>
+                    <p class="mb-2">苹果"家人共享"能共享App、音乐、电影、图书，还有位置共享功能。</p>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：检查你的账号同步了啥</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>进入账号设置页面。</li>
+                            <li>检查云同步项，确认iCloud云备份已开启。</li>
+                            <li>确认"查找我的手机"已开。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十七章 -->
+                <div id="di-shi-qi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十七章：手机与其他设备的联动</h3>
+                    <p class="chapter-intro mb-4">现代手机是你的个人数字中心，学会让它和其他设备组队，效率直接翻倍。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、与电脑协同：生产力爆表</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>苹果生态</strong>：隔空投送 (AirDrop)，iPhone和Mac之间秒传文件。</li>
+                        <li><strong>安卓+Win</strong>：用"连接至Windows"功能，在电脑上直接看手机照片、回短信。</li>
+                        <li><strong>品牌生态</strong>：华为多屏协同/小米妙享等，手机屏幕直接投到电脑上。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、与智能手表/手环联动</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>通知过滤器</strong>：手机消息推送到手表，抬手就能看。</li>
+                        <li><strong>健康数据站</strong>：手表24小时测心率、睡眠，数据汇总到手机App。</li>
+                        <li><strong>刷手腕</strong>：手机钱包里开的交通卡、门禁卡，同步到手表上。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、与智能家居联动</h4>
+                    <p class="mb-2">手机的三重角色：遥控器、场景导演、配置中心。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>用iPhone，重视隐私 → 选支持Apple HomeKit的设备。</li>
+                        <li>设备多，求性价比 → 小米米家生态最全。</li>
+                        <li>用华为手机 → 优先华为鸿蒙智联。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：把手机屏幕投到电视上</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>确保手机和电视连同一个Wi-Fi。</li>
+                            <li>在电视上找到"屏幕镜像"或"AirPlay"功能并打开。</li>
+                            <li>在手机上：iPhone从控制中心点「屏幕镜像」；安卓下拉找「无线投屏」。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十八章 -->
+                <div id="di-shi-ba-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十八章：数据备份与迁移</h3>
+                    <p class="chapter-intro mb-4">照片、聊天记录都是无价之宝。这章教你给数字资产上保险，并丝滑换新机。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、整机备份：最彻底的"克隆"</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>电脑本地备份（最可靠）</strong>：iPhone用iTunes或Finder；安卓用官方手机助手。</li>
+                        <li><strong>云备份（最省心）</strong>：iCloud云备份，换新iPhone激活时选"从iCloud备份恢复"。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、换机指南：三大迁徙路径</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>安卓→安卓</strong>：同品牌用官方"手机克隆"App；跨品牌用第三方换机工具。</li>
+                        <li><strong>iPhone→iPhone</strong>：iCloud恢复或"快速开始"无线迁移。</li>
+                        <li><strong>跨平台</strong>：用"转移到iOS"App，但无法迁移App和应用数据。</li>
+                    </ul>
+
+                    <div class="warning-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>微信聊天记录特别注意</p>
+                        <p class="mt-1">微信聊天记录无法通过换机工具迁移！必须用微信自带的"聊天记录迁移"功能，或备份到电脑版微信。</p>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：手动备份照片和通讯录到电脑</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>备好数据线，连手机和电脑。</li>
+                            <li>备份照片：在电脑上进入手机存储，找到DCIM和Pictures文件夹，整个复制到电脑。</li>
+                            <li>备份通讯录：iPhone上iCloud.com导出vCard；安卓在联系人App设置里导出.vcf文件。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第十九章 -->
+                <div id="di-shi-jiu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第十九章：故障排查与自救</h3>
+                    <p class="chapter-intro mb-4">手机偶尔"生病"别慌，大部分问题你都能自己搞定。这是你的"手机急诊手册"。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、手机变卡、发热</h4>
+                    <p class="mb-2">诊断四步：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>关联想想：是更新系统后？还是装了某个新App后？</li>
+                        <li>查存储空间：如果剩余不到10%，系统会卡爆。</li>
+                        <li>查耗电排行：看电池设置，哪个App在后台偷吃电。</li>
+                        <li>看信号：在信号差的地方，手机会狂搜网，导致发热。</li>
+                    </ol>
+                    <p class="mb-2">治疗方法：空间不足→立刻清存储；某个App作妖→清缓存或卸载重装；万能解法→重启手机。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、应用闪退、无响应</h4>
+                    <p class="mb-2">标准处理流程：关掉App重开→更新App→检查权限→清除缓存→卸载重装。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、无法开机、卡在启动界面</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>先充30分钟电，可能只是彻底没电了。</li>
+                        <li>尝试强制重启。</li>
+                        <li>还不行：可能需进入恢复模式连接电脑修复。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、找官方维修，别踩坑</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>找真官方：去品牌官网查"授权服务商"。</li>
+                        <li>送修前：必须自己先备份好所有数据！退出账号。</li>
+                        <li>警惕非官方维修：可能用劣质配件、泄露隐私。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：模拟"强制重启"</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li><strong>全面屏iPhone</strong>：快速按一下音量加，一下音量减，然后长按侧边电源键，直到出现苹果Logo。</li>
+                            <li><strong>安卓通用</strong>：长按电源键10-15秒，直到重启。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第二十章：开发者模式与高级权限 -->
+                <div id="di-er-shi-zhang-jinjie" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第二十章：开发者模式与高级权限</h3>
+                    <p class="chapter-intro mb-4">这一章是给那些想要深入探索手机"隐藏功能"的用户准备的。开发者模式、Root权限、BL锁……这些听起来很极客的概念，其实离普通用户并不遥远。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、开发者模式：解锁隐藏设置</h4>
+                    <p class="mb-2">开发者模式是手机系统内置的一个隐藏菜单，里面有很多普通用户用不到但开发者需要的功能。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">如何开启：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>安卓</strong>：进入设置 > 关于手机 > 连续点击"版本号"7次，直到提示"您已处于开发者模式"。</li>
+                        <li><strong>鸿蒙</strong>：设置 > 关于手机 > 连续点击"HarmonyOS版本"7次。</li>
+                        <li><strong>iOS</strong>：普通用户无法开启完整的开发者模式，需要付费的Apple Developer账号。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">常用功能：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>USB调试</strong>：连接电脑进行高级操作，如刷机、数据恢复。</li>
+                        <li><strong>动画速度调节</strong>：调小或关闭动画，让手机感觉更快。</li>
+                        <li><strong>显示触摸操作</strong>：屏幕上显示触摸点，适合录教程。</li>
+                        <li><strong>后台进程限制</strong>：限制后台运行的应用数量，省电。</li>
+                        <li><strong>强制GPU渲染</strong>：某些情况下提升流畅度。</li>
+                    </ul>
+
+                    <div class="warning-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>注意事项</p>
+                        <p class="mt-1">开发者模式里的设置可能会影响系统稳定性，不懂的选项不要乱改。开启USB调试后，连接电脑时要小心，不要连接不信任的电脑。</p>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、BL锁（Bootloader锁）：刷机的第一道门</h4>
+                    <p class="mb-2">Bootloader是手机启动时加载操作系统的程序。BL锁就是厂商为了安全而加的锁，防止用户刷入非官方系统。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">BL锁的作用：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>安全保护</strong>：防止恶意软件刷入系统。</li>
+                        <li><strong>防盗</strong>：即使手机被刷机，没有原账号密码也无法使用。</li>
+                        <li><strong>保修限制</strong>：解锁BL通常意味着失去官方保修。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">各品牌BL锁政策：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>小米</strong>：可以解锁，需要绑定账号等待期（7-30天）。</li>
+                        <li><strong>华为</strong>：2018年后停止提供解锁码，基本无法官方解锁。</li>
+                        <li><strong>一加</strong>：可以解锁，相对宽松。</li>
+                        <li><strong>OPPO/vivo</strong>：部分机型可以解锁，需要申请。</li>
+                        <li><strong>三星</strong>：可以解锁，但会触发Knox熔断，失去Samsung Pay等功能。</li>
+                        <li><strong>苹果</strong>：iOS设备没有传统意义上的BL锁概念，但有类似的安全机制。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、Root权限：安卓的"超级管理员"</h4>
+                    <p class="mb-2">Root权限相当于Windows的Administrator，是安卓系统的最高权限。获得Root权限后，你可以修改系统文件、卸载预装应用、使用需要Root的高级App。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">Root的好处：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>卸载无法卸载的预装应用。</li>
+                        <li>使用高级功能App（如钛备份、绿色守护）。</li>
+                        <li>修改系统界面和功能。</li>
+                        <li>安装第三方Recovery和自定义ROM。</li>
+                    </ul>
+
+                    <h5 class="font-semibold mt-3 mb-1">Root的风险：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>失去保修</strong>：大多数厂商不保修Root过的手机。</li>
+                        <li><strong>安全风险</strong>：恶意App可能获得Root权限，造成严重后果。</li>
+                        <li><strong>系统不稳定</strong>：误操作可能导致系统崩溃。</li>
+                        <li><strong>银行App不能用</strong>：很多银行和支付App检测到Root会拒绝运行。</li>
+                        <li><strong>OTA更新失败</strong>：可能无法正常接收官方系统更新。</li>
+                    </ul>
+
+                    <div class="danger-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-skull-crossbones mr-2"></i>严重警告</p>
+                        <p class="mt-1">Root操作有一定风险，可能导致手机变砖（无法开机）。如果你是新手，建议先充分了解相关知识，并确保有完整的备份。操作前请仔细阅读教程，确认你的机型和系统版本。</p>
+                    </div>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、给普通用户的建议</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>开发者模式</strong>：可以开启，体验一下动画加速等功能，但不要乱改其他设置。</li>
+                        <li><strong>BL锁</strong>：如果你不打算刷机，保持锁定状态更安全。</li>
+                        <li><strong>Root</strong>：普通用户不建议Root，风险大于收益。如果确实需要某些功能，可以先了解有没有不需要Root的替代方案。</li>
+                    </ul>
+
+                    <div class="info-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>小知识：Magisk</p>
+                        <p class="mt-1">Magisk是一种现代的Root方案，它的特点是"Systemless"——不修改系统分区，而是通过挂载的方式实现Root。这样可以隐藏Root状态，让银行App等检测Root的应用正常运行。但使用Magisk仍然需要解锁BL锁。</p>
+                    </div>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：开启开发者模式并调整动画速度</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>进入设置 > 关于手机。</li>
+                            <li>连续点击"版本号"7次，直到提示已开启开发者模式。</li>
+                            <li>返回设置，找到"开发者选项"（通常在设置底部或"系统"里）。</li>
+                            <li>找到"窗口动画缩放"、"过渡动画缩放"、"动画程序时长缩放"，将它们都设为0.5x或关闭。</li>
+                            <li>感受一下手机是否变快了。</li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 四、超越篇 -->
+            <section id="chao-yue-pian" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">四、超越篇（第21-26章）</h2>
+                <p class="chapter-intro mb-4">这一篇将带你进入更深层次的数字世界。从信息安全到AI原理，从编程思维到数字遗产，这些内容将帮助你成为一个真正的数字公民。</p>
+
+                <!-- 第二十一章 -->
+                <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第二十一章：移动网络与信息安全深探</h3>
+                    <p class="chapter-intro mb-4">咱们每天用手机上网、支付、聊天，感觉方便得很。但你有没有想过，你的聊天记录、支付密码、照片……这些信息在网上"裸奔"的时候多吗？</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、VPN：网络里的"隐形斗篷"</h4>
+                    <p class="mb-2">VPN，全称虚拟专用网络。你可以把它想象成在你家和你要去的网站之间，建起了一条专属的、加密的地下隧道。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>普通上网</strong>：你的手机→公共网络→目标网站。风险：路上可能有人"偷看"你发送的数据。</li>
+                        <li><strong>使用VPN</strong>：你的手机→VPN加密隧道→VPN服务器→目标网站。效果：数据被加密封装，"偷窥者"只能看到乱码。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、公共Wi-Fi的"甜蜜陷阱"</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>认准HTTPS</strong>：地址栏开头是https://，多出的"s"代表Secure（安全）。</li>
+                        <li><strong>升级DNS</strong>：DNS over TLS (DoT) / DNS over HTTPS (DoH) 把你的"电话本"查询也加密了。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、"无痕浏览"真的能隐身吗？</h4>
+                    <p class="mb-2">它做了什么：不在本地留下痕迹，关闭无痕窗口后不保存浏览历史和Cookies。</p>
+                    <p class="mb-2">它做不到什么：你访问的网站、你的ISP、网络管理员依然能看到你的访问记录。</p>
+                    <p class="mb-2">结论：无痕模式是"本地擦除器"，不是"网络隐身衣"。</p>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：给你的手机配一个"可信电话本"（DNS）</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>安卓：设置 > WLAN > 长按Wi-Fi > 修改网络 > 高级选项 > 设置DNS（如1.1.1.1）。</li>
+                            <li>iPhone：设置 > 无线局域网 > 点击Wi-Fi的i图标 > 配置DNS > 手动添加服务器。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第二十二章 -->
+                <div id="di-er-shi-er-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第二十二章：AI如何在手机中工作</h3>
+                    <p class="chapter-intro mb-4">欢迎来到手机最酷的"魔术现场"，主角是：人工智能。你每天在用的"一拍即得"的美照、张口就来的语音助手、越用越懂你的输入法，背后都站着这位隐形大脑。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、AI相机：你的"后期暗房"搬进了手机</h4>
+                    <p class="mb-2">现在的AI计算摄影，更像是把一个专业修图师+摄影师团队直接塞进了快门键里。在你按下快门前，AI就已经开始工作了：扫描场景，识别出"这是蓝天"、"这是人脸"、"这是夜景"。</p>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、语音助手：你的"声音秘书"如何听懂你？</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>听清（语音识别）</strong>：将声波转变成文字。</li>
+                        <li><strong>听懂（自然语言理解）</strong>：理解意图，提取关键实体。</li>
+                        <li><strong>执行与回答</strong>：调用对应App或服务，再通过语音合成"说"给你听。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、端侧AI vs. 云端AI</h4>
+                    <p class="mb-2">端侧AI把计算留在手机里，速度快、隐私高、可离线。云端AI需要联网，但能处理更复杂的任务。</p>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：命令你的AI秘书</p>
+                        <p class="mt-1">对语音助手下达一个包含多层信息的复杂指令，比如："明天早上7点提醒我带伞，并且把今天下午3点的日历改成4点。"</p>
+                    </div>
+                </div>
+
+                <!-- 第二十三章 -->
+                <div id="di-er-shi-san-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第二十三章：编程思维与自动化启蒙</h3>
+                    <p class="chapter-intro mb-4">前两章，咱们给手机筑起了安全的"边界墙"，也见识了它在墙内日益聪明的"AI大脑"。现在，让我们解锁手机的终极潜力之一：让它像程序员一样"思考"，并自动完成你设定的连续任务。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、什么是自动化？</h4>
+                    <p class="mb-2">自动化就是把那些你经常做、有固定模式的重复性操作，打包成一个"指令集"，让手机在满足条件时自动运行。其核心包含三个要素：</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>触发条件</strong>：什么时候开始？比如"当我连接到家庭Wi-Fi"。</li>
+                        <li><strong>执行动作</strong>：具体做什么？比如"打开客厅的智能灯"。</li>
+                        <li><strong>中间逻辑</strong>（可选）：如果需要判断？比如"如果是工作日，就播放新闻"。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、iOS"快捷指令"实战</h4>
+                    <p class="mb-2">苹果的"快捷指令"（Shortcuts）App是实现自动化超级强大的神器。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>"快捷指令"</strong>：一个完整的自动化流程，可手动点击运行。</li>
+                        <li><strong>"自动化"</strong>：由触发条件自动运行的指令。</li>
+                        <li><strong>"动作"</strong>：最小的执行单元，像积木一样拼接。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、安卓自动化方案</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>自动点击器</strong>：录制屏幕点击序列，像"屏幕宏"一样自动回放。</li>
+                        <li><strong>Tasker</strong>：安卓平台公认最强的自动化神器，功能堪比编程。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：创建一个"到家自动连接Wi-Fi并播放音乐"的指令</p>
+                        <p class="mt-1">iOS用户：打开快捷指令App > 自动化 > 创建个人自动化 > 选择"位置"触发 > 添加"设定Wi-Fi"和"播放音乐"动作。</p>
+                        <p class="mt-1">安卓用户：使用Tasker或系统自带的"场景"功能设置类似触发条件和动作。</p>
+                    </div>
+                </div>
+
+                <!-- 第二十四章：Root权限与BL锁深度解析 -->
+                <div id="di-er-shi-si-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第二十四章：Root权限与BL锁深度解析</h3>
+                    <p class="chapter-intro mb-4">这一章是对第二十章内容的深入扩展，适合那些想要真正理解手机底层机制、甚至尝试刷机的用户。请注意，这些操作有一定风险，请谨慎行事。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、深入理解Bootloader</h4>
+                    <p class="mb-2">Bootloader是手机启动时第一个运行的程序，它的任务是初始化硬件、加载操作系统内核。可以把Bootloader理解为手机的"守门人"。</p>
+
+                    <h5 class="font-semibold mt-3 mb-1">BL锁的工作原理：</h5>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>验证签名</strong>：BL锁会验证启动镜像的数字签名，只有厂商签名的系统才能启动。</li>
+                        <li><strong>防止降级</strong>：防止用户刷入旧版本系统来利用已知漏洞。</li>
+                        <li><strong>保护数据</strong>：即使刷入新系统，没有原账号密码也无法访问用户数据。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、解锁BL锁的详细流程（以小米为例）</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>申请解锁权限</strong>：在小米解锁工具网站申请解锁。</li>
+                        <li><strong>绑定账号</strong>：在手机设置中绑定小米账号。</li>
+                        <li><strong>等待期</strong>：根据账号等级，需要等待7-30天。</li>
+                        <li><strong>解锁操作</strong>：使用小米解锁工具连接电脑解锁。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、Root的多种方案</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Magisk</strong>：现代Root方案，Systemless设计，可隐藏Root状态。</li>
+                        <li><strong>Kernelsu</strong>：基于内核的Root方案，更底层，隐藏性更好。</li>
+                        <li><strong>SuperSU</strong>：老牌Root方案，目前已停止更新。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、刷机入门</h4>
+                    <p class="mb-2">刷机是指给手机安装新的操作系统。常见的刷机类型：</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>刷官方ROM</strong>：安装官方系统，用于救砖或降级。</li>
+                        <li><strong>刷第三方Recovery</strong>：如TWRP，用于备份恢复、刷入第三方ROM。</li>
+                        <li><strong>刷第三方ROM</strong>：如LineageOS、Pixel Experience等，体验不同的系统。</li>
+                    </ul>
+
+                    <div class="danger-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-skull-crossbones mr-2"></i>重要警告</p>
+                        <p class="mt-1">刷机有风险，操作需谨慎。可能导致：</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>手机变砖（无法开机）</li>
+                            <li>失去保修</li>
+                            <li>数据丢失</li>
+                            <li>支付功能异常</li>
+                        </ul>
+                        <p class="mt-1">刷机前务必做好完整备份，仔细阅读教程，确认机型和版本匹配。</p>
+                    </div>
+
+                    <div class="info-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>推荐资源</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li><strong>XDA Developers</strong>：全球最大的安卓开发者社区，有丰富的刷机教程和ROM资源。</li>
+                            <li><strong>酷安</strong>：国内知名的数码社区，有很多中文教程和讨论。</li>
+                            <li><strong>各机型论坛</strong>：如小米社区、一加社区等，有官方和民间教程。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 第二十五章 -->
+                <div id="di-er-shi-wu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第二十五章：二手手机处理与数字遗产</h3>
+                    <p class="chapter-intro mb-4">嘿，伙计们，经过前面二十多章的"修炼"，相信你已经从一个"数字小白"成长为一名相当从容的手机使用者了。但科技生活总有轮回——新欢终会变旧爱。当你准备让老伙计"退役"时，你知道该如何体面、安全地告别吗？</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、旧手机的"安乐死"：安全出售或转赠指南</h4>
+                    <p class="mb-2">核心原则：数据清理不是"删除"，而是"覆盖"。</p>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li><strong>自我"大扫除"</strong>：完成最后一次完整备份，退出所有账号。</li>
+                        <li><strong>执行终极"格式化"</strong>：现代手机的"恢复出厂设置"通常包含加密擦除。</li>
+                        <li><strong>最后的"障眼法"</strong>：恢复出厂设置后，用垃圾文件填满存储，再执行一次恢复出厂设置。</li>
+                    </ol>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、数字遗产：你的社交灵魂如何安放？</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>Apple"遗产联系人"</strong>：指定信任的联系人，去世后可申请访问iCloud数据。</li>
+                        <li><strong>Google"不活跃账户管理器"</strong>：设定期限，届时自动将数据发送给指定联系人或删除账户。</li>
+                        <li><strong>手动备份</strong>：最可靠的方式，定期将珍贵数据下载到本地硬盘。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、环保的最后一程</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>官方回收/以旧换新</strong>：最推荐的方式，流程规范，数据安全有保障。</li>
+                        <li><strong>正规回收平台</strong>：选择信誉良好的大型回收平台。</li>
+                        <li><strong>发挥余热</strong>：改成车载导航仪、智能家居中控、监控摄像头。</li>
+                    </ul>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：为你的旧手机执行一场"标准葬礼"</p>
+                        <ol class="list-decimal pl-6 mt-1 space-y-1">
+                            <li>最后一次备份与退出所有账号。</li>
+                            <li>执行加密恢复出厂设置。</li>
+                            <li>（可选）用垃圾文件填满存储，再恢复出厂设置。</li>
+                            <li>选择它的下一站：官方回收、正规平台、或转赠。</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- 第二十六章 -->
+                <div id="di-er-shi-liu-zhang" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第二十六章：未来的手机与数字生活</h3>
+                    <p class="chapter-intro mb-4">告别旧手机的"清零"仪式，规划数字资产的"身后事"，这不仅仅是善终，更像一封写给未来的信件。今天就让我们放飞一下想象力，看一看地平线上那些酝酿中的风暴。</p>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">一、下一代设备：它会变成什么样？</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>可折叠手机</strong>：收放之间切换着不同的生活场景。</li>
+                        <li><strong>AR眼镜</strong>：给你的眼前开个"第二桌面"，数字信息变得像空气一样无处不在。</li>
+                        <li><strong>脑机接口</strong>：思想本身将成为交互的媒介，但这条路比想象中漫长。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">二、手机的"隐身"与新身份基石</h4>
+                    <p class="mb-2">手机的另一个未来进化方向或许是"隐身"。它要化身为无处不在的"幕后推手"，成为你数字身份的唯一基石。</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>云端双因素认证</strong>：瞬间完成"你是你"的认证。</li>
+                        <li><strong>数字遗产成为出厂设置</strong>：新机激活时预设数字资产继承方案。</li>
+                        <li><strong>从"设备中心"到"身份中心"</strong>：你的云端个人数据保险柜才是中心。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">三、伦理思考：我们，还是手机的主人吗？</h4>
+                    <p class="mb-2">一个终极拷问始终存在：我们是被技术赋能的"神"，还是被算法喂养的"缸中之脑"？</p>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li>当算法比你更懂你想看什么，你的"喜欢"有多少是出于自发？</li>
+                        <li>当你每隔几分钟就不自觉地点亮屏幕，这是你的习惯还是被设计出来的"上瘾行为"？</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">四、保持连接，也保持独立——你的数字生活哲学</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>做资源的分配者，而非被推送的接收者。</li>
+                        <li>让自动化成为你忠实的"副驾驶"。</li>
+                        <li>建立你稳固的"数字后方"。</li>
+                        <li>定期执行"数字断舍离"与"社交斋戒"。</li>
+                        <li>永远把安全和隐私作为一切便利的前提。</li>
+                    </ol>
+
+                    <div class="practice-box rounded-lg p-4 mt-4">
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>动手时间：制定你的《个人数字设备使用服务条款》</p>
+                        <p class="mt-1">为你和你的手机写一份简单的"服务条款"，来定义你们的关系。例如：</p>
+                        <ul class="list-disc pl-6 mt-1 space-y-1">
+                            <li>第1条：我的注意力时间属于我。你在我工作/陪伴家人时应主动进入"勿扰"状态。</li>
+                            <li>第2条：我的个人数据是我的财产。你的首要职责是安全加密与便捷同步。</li>
+                            <li>第3条：我们的共同目标是提升生活效率与体验。若你通过诱导性设计让我沉迷，我有权将你卸载。</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 五、附录 -->
+            <section id="fu-lu" class="mb-12">
+                <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">五、附录</h2>
+                <p class="chapter-intro mb-4">好啦，经过前面二十多章的"长途跋涉"，恭喜你！你已经从一个"手机小白"成功进阶，掌握了从入门到超越的核心技能。这个附录，就像是给你的一本随身速查手册和资源百宝箱。</p>
+                
+                <!-- 附录A -->
+                <div id="fu-lu-a" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">附录A：新手机开箱"保姆级"流程</h3>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 开箱验机"三部曲"：</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>看外观</strong>：检查机身、屏幕有无划痕、磕碰。</li>
+                        <li><strong>对信息</strong>：核对盒子上的IMEI/序列号和发票上的是否一致。</li>
+                        <li><strong>试功能</strong>：拨个电话试试听筒话筒，拍张照片检查摄像头。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 激活与初始设置"重点提醒"：</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>网络</strong>：先连上稳定的Wi-Fi。</li>
+                        <li><strong>账号</strong>：登录你的苹果ID、华为账号、小米账号等。</li>
+                        <li><strong>基础设置</strong>：把"查找我的手机"打开，设置一个靠谱的锁屏密码。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 装App"安全第一"：</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>首选官方商店</strong>：苹果用App Store，安卓用手机自带的应用商店。</li>
+                        <li><strong>权限别乱给</strong>：安装时弹出的权限请求，想清楚"这个App真的需要吗？"</li>
+                    </ul>
+                </div>
+
+                <!-- 附录B -->
+                <div id="fu-lu-b" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">附录B：动手练习小参考</h3>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>基础篇练习</strong>：清理手机存储，目标就是找到并删除那些"忘了是啥"的旧视频、重复截图和很久不用的App。</li>
+                        <li><strong>软件篇练习</strong>：设置微信的存储清理，路径通常是【我】-【设置】-【通用】-【存储空间】。</li>
+                        <li><strong>进阶篇练习</strong>：查看电池健康度，iPhone在【设置】-【电池】-【电池健康】里。</li>
+                        <li><strong>通用技巧</strong>：遇到问题，先重启！这是解决一半以上手机小毛病的万能钥匙。</li>
+                    </ul>
+                </div>
+
+                <!-- 附录C -->
+                <div id="fu-lu-c" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">附录C：极简术语"黑话"对照表</h3>
+                    <div class="overflow-x-auto">
+                        <table class="w-full border-collapse border border-gray-300 text-sm">
+                            <thead>
+                                <tr class="bg-light dark:bg-gray-700">
+                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">你可能听到的词</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">其实就是指……</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">一句话解释</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">SoC / 芯片</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的大脑和心脏</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">决定手机快不快、游戏卡不卡的核心部件。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">RAM (运存)</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的"短期工作桌"</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">桌越大，能同时开的App就越多，切换越流畅。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">ROM (存储)</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的"大仓库"</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">存照片、视频、App的地方。128G、256G说的就是它。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLED / LCD</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">屏幕的两种材质</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLED色彩更艳、更省电；LCD更护眼、成本低。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">NFC</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">近距离无线通讯</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">让你手机能变身公交卡、门禁卡、银行卡的"贴贴"功能。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OTA更新</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">无线系统升级</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">在【设置】里点的那个"系统更新"，就是它。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Root</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">安卓超级管理员权限</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">获得后可以修改系统文件，但也有风险。</td>
+                                </tr>
+                                <tr>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">BL锁</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Bootloader锁</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">厂商加的安全锁，解锁后才能刷机。</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- 附录D -->
+                <div id="fu-lu-d" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">附录D：靠谱资源去哪里找？</h3>
+                    
+                    <h4 class="text-lg font-semibold mt-4 mb-2">官方支持是首选：</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>苹果用户</strong>：apple.com/cn 和 iCloud.com。</li>
+                        <li><strong>安卓用户</strong>：手机品牌的官网都有"服务与支持"板块。</li>
+                        <li><strong>通用工具</strong>：苹果用iTunes，华为用华为手机助手，小米用小米换机。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">实用网站与博主：</h4>
+                    <ul class="list-disc pl-6 mb-3 space-y-1">
+                        <li><strong>查技巧</strong>：在B站搜索"【你的手机型号】技巧"。</li>
+                        <li><strong>看测评</strong>：多看几个不同博主的测评视频。</li>
+                        <li><strong>学拍照</strong>：关注手机摄影教程博主。</li>
+                    </ul>
+
+                    <h4 class="text-lg font-semibold mt-4 mb-2">安全自查一句话清单：</h4>
+                    <ol class="list-decimal pl-6 mb-3 space-y-1">
+                        <li>锁屏密码设了吗？</li>
+                        <li>"查找我的手机"开了吗？</li>
+                        <li>重要账号的双重认证开了吗？</li>
+                        <li>定期给照片、微信聊天记录做备份了吗？</li>
+                        <li>记住防骗口诀：不轻信、不泄露、不转账、不贪心、不急躁。</li>
+                    </ol>
+                </div>
+
+                <!-- 附录E -->
+                <div id="fu-lu-e" class="mb-10 content-section">
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">附录E：感谢与说明</h3>
+                    <p class="mb-2">感谢你坚持读完这本"手机课"！写作过程中，我们参考了大量厂商的官方说明书、用户手册以及公开的技术科普文章，以确保信息的准确性。</p>
+                    <p class="mb-2">技术的发展日新月异，书中内容基于撰稿时的主流技术和产品。当你读到它时，或许又有新的功能和产品出现。希望这本书传授的思路和方法，能帮助你从容面对未来更多的数字新玩意。</p>
+                    <p class="mb-2">祝你玩转手机，享受科技带来的便利与乐趣，也成为一个清醒、自信的数字公民。</p>
+                    <p class="mb-2">—— 你的数字生活向导</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- 回到顶部按钮 -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg z-50 opacity-0 invisible transition-all duration-300 hover:bg-blue-600">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- JS脚本 -->
+    <script>
+        // 主题切换功能
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        // 检查本地存储的主题偏好
+        if (localStorage.getItem('theme') === 'dark' || 
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            html.classList.add('dark');
+        }
+        
+        themeToggle.addEventListener('click', () => {
+            html.classList.toggle('dark');
+            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // 导航栏滚动效果
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+                navbar.classList.add('bg-white/95', 'dark:bg-gray-800/95');
+                navbar.classList.add('backdrop-blur-sm');
+            } else {
+                navbar.classList.remove('shadow-md');
+                navbar.classList.remove('bg-white/95', 'dark:bg-gray-800/95');
+                navbar.classList.remove('backdrop-blur-sm');
+            }
+        });
+
+        // 移动端菜单切换
+        const menuToggle = document.getElementById('menu-toggle');
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+
+        menuToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+            document.body.classList.toggle('overflow-hidden');
+        });
+
+        overlay.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+            document.body.classList.remove('overflow-hidden');
+        });
+
+        // 目录折叠/展开
+        const tocToggles = document.querySelectorAll('.toc-toggle');
+        tocToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                const parent = e.target.closest('.toc-parent');
+                const child = parent.querySelector('.toc-child');
+                child.classList.toggle('open');
+                e.target.classList.toggle('fa-chevron-up');
+                e.target.classList.toggle('fa-chevron-down');
+            });
+        });
+
+        // 回到顶部按钮
+        const backToTop = document.getElementById('back-to-top');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.remove('opacity-0', 'invisible');
+                backToTop.classList.add('opacity-100', 'visible');
+            } else {
+                backToTop.classList.add('opacity-0', 'invisible');
+                backToTop.classList.remove('opacity-100', 'visible');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // 滚动时目录高亮
+        const sections = document.querySelectorAll('.content-section');
+        const tocItems = document.querySelectorAll('#sidebar a');
+
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -60% 0px',
+            threshold: 0
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const id = entry.target.getAttribute('id');
+                    tocItems.forEach(item => {
+                        item.classList.remove('active');
+                        if (item.getAttribute('href') === `#${id}`) {
+                            item.classList.add('active');
+                            item.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+                        }
+                    });
+                }
+            });
+        }, observerOptions);
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // 关闭移动端菜单当点击锚点
+        tocItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if (window.innerWidth < 1024) {
+                    sidebar.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                    document.body.classList.remove('overflow-hidden');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
