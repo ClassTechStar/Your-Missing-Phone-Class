@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>你缺失的那门手机课 — 从基础操作到数字生活掌控</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF',
+                        'primary-dark': '#0E42D2',
+                        accent: '#FF6B35',
+                        light: '#F8FAFC',
+                        dark: '#0F172A',
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;600;700;900&display=swap');
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 40%, #165DFF 100%);
+        }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .lang-card { transition: all 0.3s ease; }
+        .lang-card:hover { transform: scale(1.03); }
+        .toc-item { transition: all 0.2s ease; }
+        .toc-item:hover { padding-left: 1.25rem; background-color: #EFF6FF; }
+        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        .part-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .floating-phone {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        .stat-number {
+            background: linear-gradient(135deg, #165DFF, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+    </style>
+</head>
+<body class="bg-white text-gray-800">
+
+    <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <a href="#hero" class="flex items-center gap-2">
+                <i class="fas fa-mobile-alt text-primary text-2xl"></i>
+                <span class="font-bold text-lg text-dark">你缺失的那门手机课</span>
+            </a>
+            <div class="hidden md:flex items-center gap-6 text-sm">
+                <a href="#about" class="text-gray-600 hover:text-primary transition-colors">关于本书</a>
+                <a href="#contents" class="text-gray-600 hover:text-primary transition-colors">目录</a>
+                <a href="#languages" class="text-gray-600 hover:text-primary transition-colors">多语言版本</a>
+                <a href="https://github.com/Yihggh/Your-Missing-Phone-Class" target="_blank" class="flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-gray-600 text-xl">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t border-gray-100 px-4 py-3">
+            <a href="#about" class="block py-2 text-gray-600 hover:text-primary">关于本书</a>
+            <a href="#contents" class="block py-2 text-gray-600 hover:text-primary">目录</a>
+            <a href="#languages" class="block py-2 text-gray-600 hover:text-primary">多语言版本</a>
+            <a href="https://github.com/Yihggh/Your-Missing-Phone-Class" target="_blank" class="block py-2 text-gray-600 hover:text-primary">
+                <i class="fab fa-github"></i> GitHub
+            </a>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero-gradient min-h-screen flex items-center relative overflow-hidden pt-16">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute top-20 left-10 w-72 h-72 bg-white rounded-full blur-3xl"></div>
+            <div class="absolute bottom-20 right-10 w-96 h-96 bg-blue-300 rounded-full blur-3xl"></div>
+        </div>
+        <div class="container mx-auto px-4 py-20 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="flex-1 text-center lg:text-left">
+                    <div class="inline-block px-4 py-1.5 bg-white/10 backdrop-blur rounded-full text-blue-200 text-sm mb-6">
+                        <i class="fas fa-book-open mr-2"></i>开源免费 · 全民手机素养指南
+                    </div>
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-black text-white leading-tight mb-4">
+                        你缺失的<br>那门手机课
+                    </h1>
+                    <p class="text-xl md:text-2xl text-blue-200 font-light mb-2">
+                        从基础操作到数字生活掌控
+                    </p>
+                    <p class="text-base text-blue-300/80 mb-8 italic">
+                        Your Missing Semester of Using Smartphone
+                    </p>
+                    <p class="text-blue-100/90 text-base md:text-lg leading-relaxed max-w-xl mb-8">
+                        无论你用的是安卓还是 iOS，是千元机还是旗舰机——这本书将陪你从最基础的"认识手机硬件"开始，一步步掌握文件管理、网络设置、应用管控等核心技能，让你从"被动使用"手机变成"主动掌控"手机。
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contents" class="px-8 py-3.5 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-all shadow-lg shadow-white/20">
+                            <i class="fas fa-list mr-2"></i>查看目录
+                        </a>
+                        <a href="#languages" class="px-8 py-3.5 bg-white/10 text-white font-semibold rounded-xl hover:bg-white/20 transition-all border border-white/20">
+                            <i class="fas fa-globe mr-2"></i>多语言版本
+                        </a>
+                    </div>
+                </div>
+                <div class="flex-1 flex justify-center">
+                    <div class="floating-phone relative">
+                        <div class="w-64 h-[500px] bg-gray-900 rounded-[3rem] border-4 border-gray-700 shadow-2xl overflow-hidden relative">
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-10"></div>
+                            <div class="w-full h-full bg-gradient-to-b from-blue-600 to-blue-900 flex flex-col items-center justify-center text-white p-6">
+                                <i class="fas fa-mobile-alt text-6xl mb-6 opacity-80"></i>
+                                <div class="text-center">
+                                    <p class="text-lg font-bold mb-1">22 章</p>
+                                    <p class="text-sm opacity-70">系统课程</p>
+                                </div>
+                                <div class="w-full h-px bg-white/20 my-4"></div>
+                                <div class="text-center">
+                                    <p class="text-lg font-bold mb-1">15+</p>
+                                    <p class="text-sm opacity-70">语言版本</p>
+                                </div>
+                                <div class="w-full h-px bg-white/20 my-4"></div>
+                                <div class="text-center">
+                                    <p class="text-lg font-bold mb-1">CC BY-NC-SA</p>
+                                    <p class="text-sm opacity-70">开源协议</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-16 h-16 bg-accent rounded-2xl flex items-center justify-center text-white shadow-lg">
+                            <i class="fas fa-graduation-cap text-2xl"></i>
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 w-14 h-14 bg-green-500 rounded-2xl flex items-center justify-center text-white shadow-lg">
+                            <i class="fas fa-shield-alt text-xl"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">为什么需要这门课？</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">手机早已不只是通讯工具，它是你的相机、钱包、助手、终端——可我们对它的了解，往往停留在"点图标"的层面。</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in">
+                <div class="card-hover bg-light rounded-2xl p-6 text-center">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hdd text-primary text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-dark mb-2">存储空间不足？</h3>
+                    <p class="text-sm text-gray-500">不知道该删哪些文件才安全，清理后还是不够用</p>
+                </div>
+                <div class="card-hover bg-light rounded-2xl p-6 text-center">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-wifi text-accent text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-dark mb-2">5G 却总卡顿？</h3>
+                    <p class="text-sm text-gray-500">明明开了5G套餐，刷视频还是转圈圈</p>
+                </div>
+                <div class="card-hover bg-light rounded-2xl p-6 text-center">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-user-shield text-red-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-dark mb-2">怕被骗？</h3>
+                    <p class="text-sm text-gray-500">收到"中奖短信"看着像真的又怕是陷阱</p>
+                </div>
+                <div class="card-hover bg-light rounded-2xl p-6 text-center">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-exchange-alt text-green-500 text-xl"></i>
+                    </div>
+                    <h3 class="font-bold text-dark mb-2">换机一团糟？</h3>
+                    <p class="text-sm text-gray-500">旧手机照片和联系人转移得一团糟</p>
+                </div>
+            </div>
+            <div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 fade-in">
+                <div class="max-w-3xl mx-auto text-center">
+                    <i class="fas fa-quote-left text-primary/20 text-4xl mb-4"></i>
+                    <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
+                        写这本书的目标很简单：让你从"被动使用"手机，变成"主动掌控"手机，让它真正成为你生活、工作、学习的得力助手，而不是一个让你焦虑的"黑盒子"。
+                    </p>
+                    <p class="text-sm text-gray-500">—— 序言</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="stats" class="py-16 bg-primary">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
+                <div>
+                    <p class="text-4xl md:text-5xl font-black mb-2">22</p>
+                    <p class="text-blue-200 text-sm">章节内容</p>
+                </div>
+                <div>
+                    <p class="text-4xl md:text-5xl font-black mb-2">4</p>
+                    <p class="text-blue-200 text-sm">核心篇章</p>
+                </div>
+                <div>
+                    <p class="text-4xl md:text-5xl font-black mb-2">15+</p>
+                    <p class="text-blue-200 text-sm">语言版本</p>
+                </div>
+                <div>
+                    <p class="text-4xl md:text-5xl font-black mb-2">∞</p>
+                    <p class="text-blue-200 text-sm">动手练习</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contents" class="py-20 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">全书目录</h2>
+                <p class="text-gray-500">四大篇章，从零基础到数字生活达人</p>
+            </div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm fade-in">
+                    <div class="bg-gradient-to-r from-blue-500 to-blue-600 px-6 py-4">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fas fa-seedling"></i> 第一部分：基础篇
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-1">
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.0</span>
+                            <span class="text-gray-700">一些约定与预备知识</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.1</span>
+                            <span class="text-gray-700">认识你的手机</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.2</span>
+                            <span class="text-gray-700">文件管理与存储空间</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.3</span>
+                            <span class="text-gray-700">网络的连接与使用</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.4</span>
+                            <span class="text-gray-700">应用（App）的获取、安装与管理</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.5</span>
+                            <span class="text-gray-700">基础设置与个性化</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.6</span>
+                            <span class="text-gray-700">手机安全与隐私防护</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm fade-in">
+                    <div class="bg-gradient-to-r from-purple-500 to-purple-600 px-6 py-4">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fas fa-puzzle-piece"></i> 第二部分：软件篇
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-1">
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-purple-600 font-bold text-sm mt-0.5 shrink-0">Ch.7</span>
+                            <span class="text-gray-700">通信：短信、电话与社交</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-purple-600 font-bold text-sm mt-0.5 shrink-0">Ch.8</span>
+                            <span class="text-gray-700">移动办公与学习</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-purple-600 font-bold text-sm mt-0.5 shrink-0">Ch.9</span>
+                            <span class="text-gray-700">移动支付与生活服务</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-purple-600 font-bold text-sm mt-0.5 shrink-0">Ch.10</span>
+                            <span class="text-gray-700">摄影与图片管理</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-purple-600 font-bold text-sm mt-0.5 shrink-0">Ch.11</span>
+                            <span class="text-gray-700">影音娱乐与阅读</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-purple-600 font-bold text-sm mt-0.5 shrink-0">Ch.12</span>
+                            <span class="text-gray-700">工具类 App 推荐</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm fade-in">
+                    <div class="bg-gradient-to-r from-orange-500 to-orange-600 px-6 py-4">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fas fa-rocket"></i> 第三部分：进阶篇
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-1">
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-orange-500 font-bold text-sm mt-0.5 shrink-0">Ch.13</span>
+                            <span class="text-gray-700">电池科学与续航优化</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-orange-500 font-bold text-sm mt-0.5 shrink-0">Ch.14</span>
+                            <span class="text-gray-700">账号体系与云服务</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-orange-500 font-bold text-sm mt-0.5 shrink-0">Ch.15</span>
+                            <span class="text-gray-700">手机与其他设备的联动</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-orange-500 font-bold text-sm mt-0.5 shrink-0">Ch.16</span>
+                            <span class="text-gray-700">数据备份与迁移</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-orange-500 font-bold text-sm mt-0.5 shrink-0">Ch.17</span>
+                            <span class="text-gray-700">故障排查与自救</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm fade-in">
+                    <div class="bg-gradient-to-r from-emerald-500 to-emerald-600 px-6 py-4">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fas fa-brain"></i> 第四部分：超越篇
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-1">
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-emerald-500 font-bold text-sm mt-0.5 shrink-0">Ch.18</span>
+                            <span class="text-gray-700">移动网络与信息安全深探</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-emerald-500 font-bold text-sm mt-0.5 shrink-0">Ch.19</span>
+                            <span class="text-gray-700">AI 如何在手机中工作</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-emerald-500 font-bold text-sm mt-0.5 shrink-0">Ch.20</span>
+                            <span class="text-gray-700">编程思维与自动化启蒙</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-emerald-500 font-bold text-sm mt-0.5 shrink-0">Ch.21</span>
+                            <span class="text-gray-700">二手手机处理与数字遗产</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-emerald-500 font-bold text-sm mt-0.5 shrink-0">Ch.22</span>
+                            <span class="text-gray-700">未来的手机与数字生活</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="languages" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">多语言版本</h2>
+                <p class="text-gray-500">让全世界的人都能读懂这门课</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 fade-in">
+
+                <a href="你缺失的那门手机课A" class="lang-card block bg-gradient-to-br from-red-50 to-red-100 border border-red-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇨🇳</span>
+                        <div>
+                            <h4 class="font-bold text-dark">简体中文</h4>
+                            <p class="text-xs text-gray-500">原始版本</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">你缺失的那门手机课</p>
+                </a>
+
+                <a href="你缺失的那門手機課C版1.3Laojie_深度人工化.html" class="lang-card block bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇭🇰</span>
+                        <div>
+                            <h4 class="font-bold text-dark">繁體中文</h4>
+                            <p class="text-xs text-gray-500">C版 1.3</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">你缺失的那門手機課</p>
+                </a>
+
+                <a href="粤语.html" class="lang-card block bg-gradient-to-br from-pink-50 to-pink-100 border border-pink-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🗣️</span>
+                        <div>
+                            <h4 class="font-bold text-dark">粵語</h4>
+                            <p class="text-xs text-gray-500">Cantonese</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">你缺失嘅嗰門手機課</p>
+                </a>
+
+                <a href="Master_Your_Smartphone_Full_Translation.html" class="lang-card block bg-gradient-to-br from-blue-50 to-blue-100 border border-blue-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇬🇧</span>
+                        <div>
+                            <h4 class="font-bold text-dark">English</h4>
+                            <p class="text-xs text-gray-500">Full Translation</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Master Your Smartphone</p>
+                </a>
+
+                <a href="French.html" class="lang-card block bg-gradient-to-br from-indigo-50 to-indigo-100 border border-indigo-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇫🇷</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Français</h4>
+                            <p class="text-xs text-gray-500">French</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Cours de Smartphone</p>
+                </a>
+
+                <a href="Smartphone_Master_Spanish_Complete.html" class="lang-card block bg-gradient-to-br from-yellow-50 to-yellow-100 border border-yellow-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇪🇸</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Español</h4>
+                            <p class="text-xs text-gray-500">Spanish</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Master del Smartphone</p>
+                </a>
+
+                <a href="Handy-Meisterkurs_Deutsch.html" class="lang-card block bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇩🇪</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Deutsch</h4>
+                            <p class="text-xs text-gray-500">German</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Handy-Meisterkurs</p>
+                </a>
+
+                <a href="Padrone_dello_Smartphone_Corso_Digitale_Essenziale_per_Principianti.html" class="lang-card block bg-gradient-to-br from-green-50 to-green-100 border border-green-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇮🇹</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Italiano</h4>
+                            <p class="text-xs text-gray-500">Italian</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Padrone dello Smartphone</p>
+                </a>
+
+                <a href="Mestre_do_Smartphone_Curso_Completo_PT.html" class="lang-card block bg-gradient-to-br from-emerald-50 to-emerald-100 border border-emerald-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇵🇹</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Português</h4>
+                            <p class="text-xs text-gray-500">Portuguese</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Mestre do Smartphone</p>
+                </a>
+
+                <a href="スマホマスター_初心者必見のデジタル必修講座.html" class="lang-card block bg-gradient-to-br from-rose-50 to-rose-100 border border-rose-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇯🇵</span>
+                        <div>
+                            <h4 class="font-bold text-dark">日本語</h4>
+                            <p class="text-xs text-gray-500">Japanese</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">スマホマスター</p>
+                </a>
+
+                <a href="스마트폰_마스터_초보자_필독_디지털_필수_강좌.html" class="lang-card block bg-gradient-to-br from-violet-50 to-violet-100 border border-violet-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇰🇷</span>
+                        <div>
+                            <h4 class="font-bold text-dark">한국어</h4>
+                            <p class="text-xs text-gray-500">Korean</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">스마트폰 마스터</p>
+                </a>
+
+                <a href="印尼语.html" class="lang-card block bg-gradient-to-br from-orange-50 to-orange-100 border border-orange-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇮🇩</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Bahasa Indonesia</h4>
+                            <p class="text-xs text-gray-500">Indonesian</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Kelas Smartphone</p>
+                </a>
+
+                <a href="马来语.html" class="lang-card block bg-gradient-to-br from-cyan-50 to-cyan-100 border border-cyan-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇲🇾</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Bahasa Melayu</h4>
+                            <p class="text-xs text-gray-500">Malay</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Kelas Smartphone</p>
+                </a>
+
+                <a href="越南语.html" class="lang-card block bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇻🇳</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Tiếng Việt</h4>
+                            <p class="text-xs text-gray-500">Vietnamese</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Lớp Học Smartphone</p>
+                </a>
+
+                <a href="阿拉伯语.html" class="lang-card block bg-gradient-to-br from-lime-50 to-lime-100 border border-lime-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇸🇦</span>
+                        <div>
+                            <h4 class="font-bold text-dark">العربية</h4>
+                            <p class="text-xs text-gray-500">Arabic</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">دورة الهاتف الذكي</p>
+                </a>
+
+                <a href="Мастер_смартфона_Обязательный_цифровой_курс_для_начинающих.html" class="lang-card block bg-gradient-to-br from-sky-50 to-sky-100 border border-sky-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇷🇺</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Русский</h4>
+                            <p class="text-xs text-gray-500">Russian</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Мастер смартфона</p>
+                </a>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-light">
+        <div class="container mx-auto px-4">
+            <div class="bg-white rounded-3xl p-8 md:p-12 shadow-sm fade-in">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-dark mb-4">
+                            <i class="fab fa-github text-gray-800 mr-2"></i>开源项目
+                        </h3>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            本项目完全开源，采用 <strong>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</strong>（CC BY-NC-SA 4.0）进行许可。欢迎贡献、翻译和分享！
+                        </p>
+                        <div class="flex flex-wrap gap-3">
+                            <a href="https://github.com/Yihggh/Your-Missing-Phone-Class" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                                <i class="fab fa-github"></i> 查看源码
+                            </a>
+                            <a href="https://github.com/Yihggh/Your-Missing-Phone-Class/issues" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
+                                <i class="fas fa-comment"></i> 反馈问题
+                            </a>
+                        </div>
+                    </div>
+                    <div class="flex-shrink-0 text-center">
+                        <div class="w-32 h-32 bg-light rounded-2xl flex items-center justify-center">
+                            <i class="fas fa-users text-5xl text-primary/30"></i>
+                        </div>
+                        <p class="mt-3 text-sm text-gray-500">项目群：1074995524</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+                <div class="flex items-center gap-3">
+                    <i class="fas fa-mobile-alt text-primary text-2xl"></i>
+                    <span class="font-bold text-lg">你缺失的那门手机课</span>
+                </div>
+                <div class="flex items-center gap-6 text-sm text-gray-400">
+                    <a href="https://github.com/Yihggh/Your-Missing-Phone-Class" target="_blank" class="hover:text-white transition-colors">
+                        <i class="fab fa-github text-lg"></i>
+                    </a>
+                    <span>CC BY-NC-SA 4.0</span>
+                    <span>·</span>
+                    <span>Yihggh</span>
+                </div>
+            </div>
+            <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-500">
+                <p>Your Missing Semester of Using Smartphone</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.fade-in').forEach(function(el) {
+            observer.observe(el);
+        });
+
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md');
+            } else {
+                navbar.classList.remove('shadow-md');
+            }
+        });
+    </script>
+
+</body>
+</html>
