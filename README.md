@@ -1,5 +1,7 @@
 你缺失的那门手机课：从基础操作到数字生活掌控
 
+在线阅读https://classtechstar.github.io/Yihggh.github.io/
+
 副标题：Your Missing Semester of Using Smartphone
 
 项目群：1074995524
