@@ -1,8 +1,29 @@
 你缺失的那门手机课：从基础操作到数字生活掌控
 
-在线阅读https://classtechstar.github.io/Yihggh.github.io/
-
 副标题：Your Missing Semester of Using Smartphone
+
+## 在线阅读
+
+- **最新版本 (v1.5)**：[简体中文](v1.5/zh-CN.html) | [繁體中文](v1.5/zh-TW.html) | [粵語](v1.5/yue.html) | [English](v1.5/en.html) | [한국어](v1.5/ko.html) | [日本語](v1.5/ja.html) | [Русский](v1.5/ru.html) | [Italiano](v1.5/it.html) | [Português](v1.5/pt.html) | [Español](v1.5/es.html) | [Français](v1.5/fr.html) | [ภาษาไทย](v1.5/th.html) | [Tiếng Việt](v1.5/vi.html) | [Bahasa Indonesia](v1.5/id.html) | [Bahasa Melayu](v1.5/ms.html) | [Ελληνικά](v1.5/el.html) | [文言文](v1.5/lzh.html)
+- **历史版本**：见 [archive/](archive/) 目录（v1.3 / v1.4）
+- **多语言入口**：[index.html](index.html)
+
+## 仓库结构
+
+| 目录 | 说明 |
+|------|------|
+| `v1.5/` | 最新版本（17 种语言） |
+| `archive/` | 历史版本归档（v1.3 / v1.4） |
+| `source/` | Markdown 和 Word 源文件 |
+| `index.html` | 多语言在线阅读入口页 |
+
+## 语言代码对照
+
+`zh-CN` 简体中文 | `zh-TW` 繁體中文 | `yue` 粵語 | `en` English | `ko` 한국어 | `ja` 日本語 | `ru` Русский | `it` Italiano | `pt` Português | `es` Español | `fr` Français | `de` Deutsch | `ar` العربية | `he` עברית | `th` ภาษาไทย | `vi` Tiếng Việt | `id` Indonesia | `ms` Melayu | `el` Ελληνικά | `lzh` 文言文
+
+---
+
+在线阅读https://classtechstar.github.io/Yihggh.github.io/
 
 项目群：1074995524
 
