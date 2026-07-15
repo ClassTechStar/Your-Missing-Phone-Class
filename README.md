@@ -4,17 +4,19 @@
 
 ## 在线阅读
 
-- **最新版本 (v1.5)**：[简体中文](v1.5/zh-CN.html) | [繁體中文](v1.5/zh-TW.html) | [粵語](v1.5/yue.html) | [English](v1.5/en.html) | [한국어](v1.5/ko.html) | [日本語](v1.5/ja.html) | [Русский](v1.5/ru.html) | [Italiano](v1.5/it.html) | [Português](v1.5/pt.html) | [Español](v1.5/es.html) | [Français](v1.5/fr.html) | [ภาษาไทย](v1.5/th.html) | [Tiếng Việt](v1.5/vi.html) | [Bahasa Indonesia](v1.5/id.html) | [Bahasa Melayu](v1.5/ms.html) | [Ελληνικά](v1.5/el.html) | [文言文](v1.5/lzh.html)
-- **历史版本**：见 [archive/](archive/) 目录（v1.3 / v1.4）
+- **最新版本 (v1.7)**：[简体中文](v1.7/你缺失的那门手机课V1.7%20Fixed..html) | [繁體](v1.7/你缺失的那门手机课V1.7%20Fixed%20繁体.html) | [粵語](v1.7/你缺失的那门手机课V1.7%20Fixed%20粤语.html) | [Русский](v1.7/你缺失的那门手机课V1.7%20Fixed%20俄语.html) | [Italiano](v1.7/你缺失的那门手机课V1.7%20Fixed%20意大利语.html) | [한국어](v1.7/你缺失的那门手机课_V1.7_韩语.html) | [Português](v1.7/手机课葡萄牙语版.html)
+- **完整多语言版本 (v1.5，17 种语言)**：[简体中文](v1.5/zh-CN.html) | [繁體中文](v1.5/zh-TW.html) | [粵語](v1.5/yue.html) | [English](v1.5/en.html) | [한국어](v1.5/ko.html) | [日本語](v1.5/ja.html) | [Русский](v1.5/ru.html) | [Italiano](v1.5/it.html) | [Português](v1.5/pt.html) | [Español](v1.5/es.html) | [Français](v1.5/fr.html) | [ภาษาไทย](v1.5/th.html) | [Tiếng Việt](v1.5/vi.html) | [Bahasa Indonesia](v1.5/id.html) | [Bahasa Melayu](v1.5/ms.html) | [Ελληνικά](v1.5/el.html) | [文言文](v1.5/lzh.html)
 - **v1.6**：[简体中文](v1.6/你缺失的那门手机课C版1.6版...html) | [繁體](v1.6/你缺失的那门手机课C版1.6版_繁體..html) | [粵語](v1.6/phone_class_cantonese..html) | [English](v1.6/The_Missing_Phone_Course_C_v1.6_EN..html) | [한국어](v1.6/스마트폰_수업_C버전_1.6_한국어..html) | [日本語](v1.6/スマホ講座_日本語版_v1.6..html) | [Русский](v1.6/你缺失的那门手机课C版1.6版..._ru..html) | [Italiano](v1.6/Il_Corso_sul_Telefono_che_Ti_Manca_Versione_C_1..html) | [Português](v1.6/你缺失的那门手机课C版1.6版_pt..html) | [Español](v1.6/你缺失的那门手机课C版1.6版..._es..html) | [Français](v1.6/你缺失的那门手机课C版1.6版..._fr..html) | [Deutsch](v1.6/Smartphone_Kurs_Deutsch_v1.6..html) | [العربية](v1.6/你缺失的那门手机课C版1.6版..._ar..html) | [עברית](v1.6/你缺失的那门手机课C版1.6版...he..html) | [ภาษาไทย](v1.6/你缺失的那门手机课C版1.6版_泰语版..html) | [Bahasa Indonesia](v1.6/你缺失的那门手机课C版1.6版..._id..html) | [Bahasa Melayu](v1.6/Kursus_Wajib_Telefon_Pintar_C_v1.6_Melayu..html) | [Ελληνικά](v1.6/你缺失的那门手机课C版1.6版_希腊语版..html) | [文言文](v1.6/你缺失的那门手机课C版1.6版_文言文版..html)
-- **v1.7**：[简体中文](v1.7/你缺失的那门手机课V1.7%20Fixed..html) | [繁體](v1.7/你缺失的那门手机课V1.7%20Fixed%20繁体.html) | [粵語](v1.7/你缺失的那门手机课V1.7%20Fixed%20粤语.html) | [Русский](v1.7/你缺失的那门手机课V1.7%20Fixed%20俄语.html) | [Italiano](v1.7/你缺失的那门手机课V1.7%20Fixed%20意大利语.html) | [한국어](v1.7/你缺失的那门手机课_V1.7_韩语.html) | [Português](v1.7/手机课葡萄牙语版.html)
+- **历史版本**：见 [archive/](archive/) 目录（v1.3 / v1.4）
 - **多语言入口**：[index.html](index.html)
 
 ## 仓库结构
 
 | 目录 | 说明 |
 |------|------|
-| `v1.5/` | 最新版本（17 种语言） |
+| `v1.7/` | 最新版本（7 种语言） |
+| `v1.6/` | 历史版本（19 种语言） |
+| `v1.5/` | 完整多语言版本（17 种语言） |
 | `archive/` | 历史版本归档（v1.3 / v1.4） |
 | `source/` | Markdown 和 Word 源文件 |
 | `index.html` | 多语言在线阅读入口页 |
