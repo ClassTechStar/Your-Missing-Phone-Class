@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+permissions:
+  contents: read
+
+jobs:
+  consistency-check:
+    name: 仓库一致性检查
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 运行一致性检查
+        run: python3 scripts/check_consistency.py
+
+      - name: 校验 index.html 与 manifest 同步
+        run: python3 scripts/generate_index.py --check
