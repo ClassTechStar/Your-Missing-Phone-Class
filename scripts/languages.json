@@ -1,0 +1,83 @@
+{
+  "_comment": "多语言覆盖清单（方向 B 基础）。由 scripts/check_consistency.py 校验文件存在性。新增翻译后在此登记，再同步到 index.html / README.md。",
+  "_update_rule": "新增/补齐某语言版本时：1) 放置 HTML 文件到对应版本目录；2) 在 versions[版本] 中登记 lang->file；3) 运行 python3 scripts/check_consistency.py 校验。",
+  "languages": {
+    "zh-CN": { "name": "简体中文", "native": "简体中文", "flag": "🇨🇳" },
+    "zh-TW": { "name": "繁體中文", "native": "繁體中文", "flag": "🇭🇰" },
+    "yue":   { "name": "粵語",     "native": "粵語",     "flag": "🗣️" },
+    "en":    { "name": "English",  "native": "English",  "flag": "🇬🇧" },
+    "ko":    { "name": "한국어",    "native": "한국어",    "flag": "🇰🇷" },
+    "ja":    { "name": "日本語",    "native": "日本語",    "flag": "🇯🇵" },
+    "ru":    { "name": "Русский",  "native": "Русский",  "flag": "🇷🇺" },
+    "it":    { "name": "Italiano", "native": "Italiano", "flag": "🇮🇹" },
+    "pt":    { "name": "Português","native": "Português","flag": "🇵🇹" },
+    "es":    { "name": "Español",  "native": "Español",  "flag": "🇪🇸" },
+    "fr":    { "name": "Français", "native": "Français", "flag": "🇫🇷" },
+    "de":    { "name": "Deutsch",  "native": "Deutsch",  "flag": "🇩🇪" },
+    "ar":    { "name": "العربية",  "native": "العربية",  "flag": "🇸🇦" },
+    "he":    { "name": "עברית",    "native": "עברית",    "flag": "🇮🇱" },
+    "th":    { "name": "ภาษาไทย",  "native": "ภาษาไทย",  "flag": "🇹🇭" },
+    "vi":    { "name": "Tiếng Việt","native":"Tiếng Việt","flag": "🇻🇳" },
+    "id":    { "name": "Bahasa Indonesia", "native": "Bahasa Indonesia", "flag": "🇮🇩" },
+    "ms":    { "name": "Bahasa Melayu", "native": "Bahasa Melayu", "flag": "🇲🇾" },
+    "el":    { "name": "Ελληνικά", "native": "Ελληνικά", "flag": "🇬🇷" },
+    "lzh":   { "name": "文言文",   "native": "文言文",   "flag": "📜" }
+  },
+  "versions": {
+    "v1.7": {
+      "zh-CN": "你缺失的那门手机课V1.7 Fixed..html",
+      "zh-TW": "你缺失的那门手机课V1.7 Fixed 繁体.html",
+      "yue":   "你缺失的那门手机课V1.7 Fixed 粤语.html",
+      "ru":    "你缺失的那门手机课V1.7 Fixed 俄语.html",
+      "it":    "你缺失的那门手机课V1.7 Fixed 意大利语.html",
+      "ko":    "你缺失的那门手机课_V1.7_韩语.html",
+      "pt":    "手机课葡萄牙语版.html"
+    },
+    "v1.6": {
+      "zh-CN": "你缺失的那门手机课C版1.6版...html",
+      "zh-TW": "你缺失的那门手机课C版1.6版_繁體..html",
+      "yue":   "phone_class_cantonese..html",
+      "en":    "The_Missing_Phone_Course_C_v1.6_EN..html",
+      "ko":    "스마트폰_수업_C버전_1.6_한국어..html",
+      "ja":    "スマホ講座_日本語版_v1.6..html",
+      "ru":    "你缺失的那门手机课C版1.6版..._ru..html",
+      "it":    "Il_Corso_sul_Telefono_che_Ti_Manca_Versione_C_1..html",
+      "pt":    "你缺失的那门手机课C版1.6版_pt..html",
+      "es":    "你缺失的那门手机课C版1.6版..._es..html",
+      "fr":    "你缺失的那门手机课C版1.6版..._fr..html",
+      "de":    "Smartphone_Kurs_Deutsch_v1.6..html",
+      "ar":    "你缺失的那门手机课C版1.6版..._ar..html",
+      "he":    "你缺失的那门手机课C版1.6版...he..html",
+      "th":    "你缺失的那门手机课C版1.6版_泰语版..html",
+      "id":    "你缺失的那门手机课C版1.6版..._id..html",
+      "ms":    "Kursus_Wajib_Telefon_Pintar_C_v1.6_Melayu..html",
+      "el":    "你缺失的那门手机课C版1.6版_希腊语版..html",
+      "lzh":   "你缺失的那门手机课C版1.6版_文言文版..html"
+    },
+    "v1.5": {
+      "zh-CN": "zh-CN.html",
+      "zh-TW": "zh-TW.html",
+      "yue":   "yue.html",
+      "en":    "en.html",
+      "ko":    "ko.html",
+      "ja":    "ja.html",
+      "ru":    "ru.html",
+      "it":    "it.html",
+      "pt":    "pt.html",
+      "es":    "es.html",
+      "fr":    "fr.html",
+      "th":    "th.html",
+      "vi":    "vi.html",
+      "id":    "id.html",
+      "ms":    "ms.html",
+      "el":    "el.html",
+      "lzh":   "lzh.html"
+    }
+  },
+  "translation_priority": {
+    "_comment": "v1.7 缺失语言的补齐优先级（基于传播价值与历史覆盖）",
+    "P0_high_value": ["en", "ja", "es", "fr"],
+    "P1_regional":   ["ar", "de", "th", "vi", "id", "ms"],
+    "P2_niche":      ["he", "el", "lzh"]
+  }
+}
