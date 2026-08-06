@@ -6281,7 +6281,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">非プログラマーでもGitHubを使えます。多くの人が学習ノート、技術ブログ（GitHub Pagesと組み合わせて無料でサイト構築）、電子書籍のホスティングに利用しています。Markdown形式での執筆＋Gitバージョン管理＋クラウドバックアップの三位一体です。</h4>
 
                     <h5 class="font-semibold mt-3 mb-1">🌐 オープンソースプロジェクトへの参加</h5>
-                    <p class="mb-2">GitHubはグローバルなオープンソース運動の核心拠点です。好きなプロジェクトをForkし、修正後にPRでコミュニティに還元できます。また、単にStarでお気に入りのプロジェクトを收藏し、更新を追跡することもできます。オープンソースへの参加は技術向上と評価蓄積の絶好の道です。</p>
+                    <p class="mb-2">GitHubはグローバルなオープンソース運動の核心拠点です。好きなプロジェクトをForkし、修正後にPRでコミュニティに還元できます。また、単にStarでお気に入りのプロジェクトをブックマークし、更新を追跡することもできます。オープンソースへの参加は技術向上と評価蓄積の絶好の道です。</p>
 
                     <h5 class="font-semibold mt-3 mb-1">🤖 オートメーションデプロイとCI/CD</h5>
                     <p class="mb-2">GitHub Actionsを活用し、「コードをpushしたら、自動テスト＋サーバーへの自動デプロイ」というフルオートフローを実現できます。多くの個人ブログやドキュメントサイトがこの方法で構築され、記事を書いてpushするだけでサイトが自動更新されます。</p>
@@ -9032,7 +9032,7 @@
                 const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
                 const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
-                    restoreToastText.textContent = `上次读到：${savedChapter}`;
+                    restoreToastText.textContent = `前回の閲覧：${savedChapter}`;
                     setTimeout(() => restoreToast.classList.add('show'), 800);
                     // 10秒后自动隐藏
                     setTimeout(() => restoreToast.classList.remove('show'), 15000);
@@ -9553,7 +9553,7 @@
 
                         // 显示连续天数提示
                         if (streak >= 2 && streakToast && streakToastText) {
-                            streakToastText.textContent = '🔥 连续阅读第 ' + streak + ' 天！坚持下去！';
+                            streakToastText.textContent = '🔥 連続読書  ' + streak + ' 日！頑張ろう！';
                             streakToast.classList.add('show');
                             setTimeout(() => streakToast.classList.remove('show'), 5000);
                         }
@@ -9588,7 +9588,7 @@
                         const sec = c.closest('.content-section');
                         if (sec) data.chapterChecks[sec.id] = true;
                     });
-                    // 收藏书签
+                    // ブックマーク书签
                     $$('.toc-item.bookmarked').forEach(b => {
                         data.bookmarks.push(b.getAttribute('href').replace('#', ''));
                     });
@@ -9914,7 +9914,7 @@
                 if (healthBarEl) healthBarEl.style.width = (checked / totalChecks * 100) + '%';
                 if (healthMsgEl) {
                     if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>満点！あなたのスマホのセキュリティ状況は優秀です';
-                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = '不错！还有 ' + (totalChecks - checked) + ' 项可以完善';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'いいね！あと  ' + (totalChecks - checked) + '  項目改善可能';
                     else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = '合格、未チェックのセキュリティ項目を優先的に処理することを推奨';
                     else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>あなたのスマホにはセキュリティリスクがあります、早急に改善してください';
                 }
@@ -10003,7 +10003,7 @@
                 };
 
                 ttsUtterance.onend = () => {
-                    // 自动播放下一章节
+                    // 自动播放次の章节
                     if (ttsSectionIndex < sections.length - 1 && ttsActive) {
                         ttsSectionIndex++;
                         speakSection(ttsSectionIndex);
