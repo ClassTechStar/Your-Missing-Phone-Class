@@ -74,10 +74,10 @@ def check_v17_counts():
         elif cid.startswith("di-"):
             # 章节 id 可能带后缀，如 di-qi-zhang-jichu / di-er-shi-zhang-jinjie
             n = chapter_num_from_id(cid)
-            if n is not None and 1 <= n <= 36:
+            if n is not None and 1 <= n <= 41:
                 main_chapters.add(n)
-    missing = sorted(set(range(1, 37)) - main_chapters)
-    print(f"[v1.7] 主章节 1-36: 实际 {len(main_chapters)}/36", end="")
+    missing = sorted(set(range(1, 42)) - main_chapters)
+    print(f"[v1.7] 主章节 1-41: 实际 {len(main_chapters)}/41", end="")
     if missing:
         print(f"  缺失: {missing}")
         problems.append(f"v1.7 缺失主章节: {missing}")
@@ -96,15 +96,15 @@ def check_index(html_v17, v17_ids):
     stat_m = re.search(r'<p class="text-4xl[^"]*mb-2">(\d+)</p>\s*<p class="text-blue-200 text-sm">章节内容</p>', html)
     print("\n[index.html] 宣传数据:")
     if hero_m:
-        ok = hero_m.group(1) == "36"
-        print(f"  hero 章节数 = {hero_m.group(1)} (应为 36) {'✓' if ok else '✗'}")
+        ok = hero_m.group(1) == "41"
+        print(f"  hero 章节数 = {hero_m.group(1)} (应为 41) {'✓' if ok else '✗'}")
         if not ok:
-            problems.append(f"index.html hero 章节数={hero_m.group(1)} 应为 36")
+            problems.append(f"index.html hero 章节数={hero_m.group(1)} 应为 41")
     if stat_m:
-        ok = stat_m.group(1) == "36"
-        print(f"  stats 章节内容 = {stat_m.group(1)} (应为 36) {'✓' if ok else '✗'}")
+        ok = stat_m.group(1) == "41"
+        print(f"  stats 章节内容 = {stat_m.group(1)} (应为 41) {'✓' if ok else '✗'}")
         if not ok:
-            problems.append(f"index.html stats 章节数={stat_m.group(1)} 应为 36")
+            problems.append(f"index.html stats 章节数={stat_m.group(1)} 应为 41")
     # 附录列表（contents 区 "附 X"）
     appx = re.findall(r'<span class="text-stone-500[^"]*">附 ([A-H])</span>', html)
     print(f"  目录附录列表 = {appx} (应为 A-H 共 8 个)")
