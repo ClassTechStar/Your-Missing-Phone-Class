@@ -25,34 +25,34 @@
   },
   "versions": {
     "v1.7": {
-      "zh-CN": "你缺失的那门手机课V1.7 Fixed..html",
-      "zh-TW": "你缺失的那门手机课V1.7 Fixed 繁体.html",
-      "yue":   "你缺失的那门手机课V1.7 Fixed 粤语.html",
-      "ru":    "你缺失的那门手机课V1.7 Fixed 俄语.html",
-      "it":    "你缺失的那门手机课V1.7 Fixed 意大利语.html",
-      "ko":    "你缺失的那门手机课_V1.7_韩语.html",
-      "pt":    "手机课葡萄牙语版.html"
+      "zh-CN": "zh-CN.html",
+      "zh-TW": "zh-TW.html",
+      "yue":   "yue.html",
+      "ru":    "ru.html",
+      "it":    "it.html",
+      "ko":    "ko.html",
+      "pt":    "pt.html"
     },
     "v1.6": {
-      "zh-CN": "你缺失的那门手机课C版1.6版...html",
-      "zh-TW": "你缺失的那门手机课C版1.6版_繁體..html",
-      "yue":   "phone_class_cantonese..html",
-      "en":    "The_Missing_Phone_Course_C_v1.6_EN..html",
-      "ko":    "스마트폰_수업_C버전_1.6_한국어..html",
-      "ja":    "スマホ講座_日本語版_v1.6..html",
-      "ru":    "你缺失的那门手机课C版1.6版..._ru..html",
-      "it":    "Il_Corso_sul_Telefono_che_Ti_Manca_Versione_C_1..html",
-      "pt":    "你缺失的那门手机课C版1.6版_pt..html",
-      "es":    "你缺失的那门手机课C版1.6版..._es..html",
-      "fr":    "你缺失的那门手机课C版1.6版..._fr..html",
-      "de":    "Smartphone_Kurs_Deutsch_v1.6..html",
-      "ar":    "你缺失的那门手机课C版1.6版..._ar..html",
-      "he":    "你缺失的那门手机课C版1.6版...he..html",
-      "th":    "你缺失的那门手机课C版1.6版_泰语版..html",
-      "id":    "你缺失的那门手机课C版1.6版..._id..html",
-      "ms":    "Kursus_Wajib_Telefon_Pintar_C_v1.6_Melayu..html",
-      "el":    "你缺失的那门手机课C版1.6版_希腊语版..html",
-      "lzh":   "你缺失的那门手机课C版1.6版_文言文版..html"
+      "zh-CN": "zh-CN.html",
+      "zh-TW": "zh-TW.html",
+      "yue":   "yue.html",
+      "en":    "en.html",
+      "ko":    "ko.html",
+      "ja":    "ja.html",
+      "ru":    "ru.html",
+      "it":    "it.html",
+      "pt":    "pt.html",
+      "es":    "es.html",
+      "fr":    "fr.html",
+      "de":    "de.html",
+      "ar":    "ar.html",
+      "he":    "he.html",
+      "th":    "th.html",
+      "id":    "id.html",
+      "ms":    "ms.html",
+      "el":    "el.html",
+      "lzh":   "lzh.html"
     },
     "v1.5": {
       "zh-CN": "zh-CN.html",
@@ -72,6 +72,44 @@
       "ms":    "ms.html",
       "el":    "el.html",
       "lzh":   "lzh.html"
+    }
+  },
+  "version_meta": {
+    "v1.7": {
+      "badge_icon": "fa-star",
+      "badge_color": "bg-emerald-500/10 text-emerald-600",
+      "badge_text": "最新版本 v1.7",
+      "card_border": "border-2 border-emerald-300",
+      "lang_tag_text": "v1.7 最新",
+      "lang_tag_class": "text-emerald-600"
+    },
+    "v1.6": {
+      "badge_icon": "fa-history",
+      "badge_color": "bg-amber-50 text-amber-600",
+      "badge_text": "历史版本归档 v1.6",
+      "card_border": "border border-amber-200",
+      "lang_tag_text": "v1.6",
+      "lang_tag_class": "text-amber-600"
+    },
+    "v1.5": {
+      "badge_icon": "fa-globe",
+      "badge_color": "bg-primary/10 text-primary",
+      "badge_text": "完整多语言版本 v1.5（17 种语言）",
+      "card_border": "border border-primary-200",
+      "lang_tag_text": "v1.5",
+      "lang_tag_class": "text-primary"
+    }
+  },
+  "language_descriptions": {
+    "_comment": "卡片底部那行小字描述，按版本+语言给出；缺省回退到 native 名。",
+    "v1.7": {
+      "zh-CN": "你缺失的那门手机课 V1.7",
+      "zh-TW": "你缺失的那門手機課 V1.7",
+      "yue":   "你缺失嘅嗰門手機課 V1.7",
+      "ru":    "Покоряем смартфон V1.7",
+      "it":    "Corso Digitale V1.7",
+      "ko":    "스마트폰 정복 V1.7",
+      "pt":    "Curso Digital V1.7"
     }
   },
   "translation_priority": {

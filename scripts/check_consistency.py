@@ -18,7 +18,7 @@ import sys
 import json
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-V17 = os.path.join(ROOT, "v1.7", "你缺失的那门手机课V1.7 Fixed..html")
+V17 = os.path.join(ROOT, "v1.7", "zh-CN.html")
 INDEX = os.path.join(ROOT, "index.html")
 MANIFEST = os.path.join(ROOT, "scripts", "languages.json")
 
