@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="搞定手机! מתחיל למומחה. 32 פרקים: חומרה, מערכת, רשת, אבטחה, AI, אוטומציה, קשישים, קנייה, בריאות, מסך, וידאו, חירום, עתיד. v3.0.">
-    <meta name="keywords" content="手机教程,数码必修课,智能手机,Android,iOS,HarmonyOS,手机技巧,数字生活,AI,计算摄影,信息安全,密码管理,自动化,手机选购">
+    <meta name="description" content="לשלוט בטלפון! מתחיל למומחה. 32 פרקים: חומרה, מערכת, רשת, אבטחה, AI, אוטומציה, קשישים, קנייה, בריאות, מסך, וידאו, חירום, עתיד. v3.0.">
+    <meta name="keywords" content="מדריך טלפון,קורס דיגיטלי חובה,טלפון חכם,Android,iOS,HarmonyOS,טיפים לטלפון,חיים דיגיטליים,AI,צילום חישובי,אבטחת מידע,ניהול סיסמאות,אוטומציה,רכישת טלפון">
     <meta name="author" content="מדריך חיים דיגיטליים">
     <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index, follow">
     <meta name="format-detection" content="telephone=no">
-    <meta property="og:title" content="搞定手机! v3.0">
+    <meta property="og:title" content="לשלוט בטלפון! v3.0">
     <meta property="og:description" content="מתחיל למומחה. 32 פרקים + קריאה + Dashboard + גיבוי + מונחים. v3.0.">
     <meta property="og:type" content="book">
     <meta property="og:locale" content="zh_CN">
-    <meta property="og:site_name" content="搞定手机!">
+    <meta property="og:site_name" content="לשלוט בטלפון!">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="תפוס את הטלפון! קורס דיגיטלי חובה למתחילים">
     <meta name="twitter:description" content="מתחיל למומחה">
@@ -83,7 +83,7 @@
             background-color: #1e1b4b;
             border-left-color: #818cf8;
         }
-        /* 侧边栏链接基础样式 */
+        /* סגנון בסיסי לקישורי סרגל הצד */
         #sidebar a {
             display: block;
             transition: all 0.2s ease;
@@ -98,7 +98,7 @@
         .dark #sidebar a:hover {
             background-color: rgba(79, 70, 229, 0.12);
         }
-        /* 父级分组标题 */
+        /* כותרת קבוצת אב */
         .toc-parent > div {
             transition: background-color 0.15s ease;
         }
@@ -108,7 +108,7 @@
         .dark .toc-parent > div:hover {
             background-color: rgba(255,255,255,0.03);
         }
-        /* 折叠图标独立区域 */
+        /* אזור עצמאי לסמל קיפול */
         .toc-toggle-btn {
             width: 24px;
             height: 24px;
@@ -129,7 +129,7 @@
             background-color: #374151;
             color: #e5e7eb;
         }
-        /* 子项过渡动画 */
+        /* אנימציית מעבר לפריטי משנה */
         .toc-child li {
             opacity: 1;
             transform: translateX(0);
@@ -137,9 +137,9 @@
         }
         .toc-child:not(.open) + .toc-child li,
         .toc-child:not(.open) li {
-            /* 折叠时由 max-height 控制 */
+            /* בעת קיפול על ידי max-height בקרה */
         }
-        /* 当前阅读位置指示条 */
+        /* פס אינדיקציה למיקום הקריאה הנוכחי */
         .toc-reading-indicator {
             position: absolute;
             left: 0;
@@ -151,7 +151,7 @@
             transition: top 0.3s ease, height 0.3s ease;
             z-index: 1;
         }
-        /* 侧边栏顶部区域增强 */
+        /* שיפור אזור החלק העליון של סרגל הצד */
         #sidebar > nav > div:first-child {
             background: #f5f6f8;
             border-radius: 0;
@@ -160,7 +160,7 @@
         .dark #sidebar > nav > div:first-child {
             background: #1a2230;
         }
-        /* 侧边栏整体增强 */
+        /* שיפור כללי של סרגל הצד */
         #sidebar {
             box-shadow: none;
             border-right: 1px solid #e5e7eb;
@@ -174,7 +174,7 @@
                 border-right: none;
             }
         }
-        /* 章节序号样式 */
+        /* סגנון מספור פרקים */
         .toc-item span[class*="font-mono"] {
             display: inline-block;
             min-width: 1.5rem;
@@ -192,7 +192,7 @@
         .dark .toc-item.active span[class*="font-mono"] {
             color: #818cf8;
         }
-        /* 导航目标章节高亮闪烁 */
+        /* הבהוב הדגשה לפרק יעד הניווט */
         .scroll-target-flash {
             animation: targetFlash 1.2s ease-out;
         }
@@ -511,7 +511,7 @@
             }
         }
 
-        /* ===== 增强样式：导读卡片、章节摘要、学习路径 ===== */
+        /* ===== סגנון משופר：כרטיס מדריך קריאה、סיכום פרק、מסלול למידה ===== */
         .reading-guide-card {
             background: #fafafa;
             border: 1px solid #e0e0e0;
@@ -739,9 +739,9 @@
             main { max-width: 56rem; }
         }
 
-        /* ===== 深度改进样式 ===== */
+        /* ===== שיפור סגנון מעמיק ===== */
 
-        /* 渐变阅读进度条 */
+        /* פס התקדמות קריאה בדרגת צבע */
         #reading-progress {
             background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
             background-size: 200% 100% !important;
@@ -758,7 +758,7 @@
             100% { background-position: -200% 0; }
         }
 
-        /* 滚动入场动画 */
+        /* אנימציית כניסה בגלילה */
         .content-section {
             opacity: 0;
             transform: translateY(24px);
@@ -769,7 +769,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* 第一屏内容直接可见 */
+        /* תוכן המסך הראשון גלוי ישירות */
         .content-section:first-of-type,
         .content-section.immediately-visible {
             opacity: 1;
@@ -777,7 +777,7 @@
             transition: none;
         }
 
-        /* Hero横幅增强 */
+        /* Heroשיפור באנר */
         .hero-banner {
             background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
             position: relative;
@@ -805,7 +805,7 @@
         }
         .hero-banner > * { position: relative; z-index: 1; }
 
-        /* 卡片悬浮效果 */
+        /* אפקט ריחוף כרטיס */
         .path-step {
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
                         box-shadow 0.3s ease,
@@ -828,7 +828,7 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
 
-        /* 返回顶部按钮增强 */
+        /* שיפור כפתור חזרה לראש הדף */
         #back-to-top {
             position: fixed;
             right: 1rem;
@@ -877,7 +877,7 @@
             transform-origin: center;
         }
 
-        /* 书签按钮 */
+        /* כפתור סימנייה */
         .bookmark-btn {
             display: inline-flex;
             align-items: center;
@@ -913,7 +913,7 @@
             border-color: #818cf8;
         }
 
-        /* 章节完成勾选 */
+        /* סימון השלמת פרק */
         .chapter-check {
             display: inline-flex;
             align-items: center;
@@ -963,7 +963,7 @@
             line-height: 1;
         }
 
-        /* 搜索结果键盘选中 */
+        /* בחירת תוצאות חיפוש במקלדת */
         .search-result-item.selected {
             background: #eef2f5;
         }
@@ -971,12 +971,12 @@
             background: #374151;
         }
 
-        /* 仪表盘卡片 */
+        /* כרטיס לוח מחוונים */
         .dashboard-card {
             transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
         }
 
-        /* 阅读连续天数徽章 */
+        /* תג ימי קריאה רצופים */
         #streak-toast {
             transform: translateX(-50%) translateY(100px);
             left: 50%;
@@ -987,7 +987,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* 章节评分星星 */
+        /* כוכבי דירוג פרקים */
         .chapter-rating {
             display: inline-flex;
             align-items: center;
@@ -1020,7 +1020,7 @@
             opacity: 0.5;
         }
 
-        /* 语音朗读控件 */
+        /* בקרת הקראה קולית */
         .tts-controls {
             position: fixed;
             bottom: 6rem;
@@ -1112,7 +1112,7 @@
             .tts-controls .tts-chapter-label { max-width: 8rem; }
         }
 
-        /* 复制按钮 */
+        /* כפתור העתקה */
         .copy-btn {
             display: inline-flex;
             align-items: center;
@@ -1143,7 +1143,7 @@
             border-color: #27ae60;
         }
 
-        /* 可折叠内容块 */
+        /* בלוק תוכן ניתן לקיפול */
         .collapsible-header {
             cursor: pointer;
             display: flex;
@@ -1178,7 +1178,7 @@
             opacity: 0;
         }
 
-        /* 阅读位置恢复提示 */
+        /* התראת שחזור מיקום קריאה */
         .restore-position-toast {
             position: fixed;
             bottom: 2rem;
@@ -1221,7 +1221,7 @@
             color: #fff;
         }
 
-        /* 章节分隔线增强 */
+        /* שיפור קו הפרדת פרקים */
         .content-section {
             position: relative;
             padding-top: 1rem;
@@ -1242,7 +1242,7 @@
             display: none;
         }
 
-        /* Callout框增强 */
+        /* Calloutשיפור מסגרת */
         .callout-box {
             position: relative;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1251,7 +1251,7 @@
             transform: translateX(2px);
         }
 
-        /* 表格行悬浮 */
+        /* ריחוף שורת טבלה */
         table tbody tr {
             transition: background-color 0.15s ease;
         }
@@ -1262,7 +1262,7 @@
             background-color: rgba(255,255,255,0.04);
         }
 
-        /* 章节导航按钮增强 */
+        /* שיפור כפתורי ניווט פרקים */
         .chapter-nav a {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1277,7 +1277,7 @@
             background: #1e2a36;
         }
 
-        /* 侧边栏书签标记 */
+        /* סימן סימנייה בסרגל הצד */
         .toc-item.bookmarked::after {
             content: '★';
             color: #d4a017;
@@ -1288,7 +1288,7 @@
             color: #27ae60 !important;
         }
 
-        /* 快捷工具增强 */
+        /* שיפור כלים מהירים */
         .quick-tool-btn {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1299,7 +1299,7 @@
             transform: translateY(0) scale(0.95);
         }
 
-        /* 移动端底部安全区域 */
+        /* אזור בטוח בתחתית מכשיר נייד */
         @media (max-width: 768px) {
             #back-to-top {
                 right: 0.75rem;
@@ -1322,7 +1322,7 @@
             }
         }
 
-        /* 打印时隐藏新增元素 */
+        /* הסתרת אלמנטים חדשים בעת הדפסה */
         @media print {
             .bookmark-btn, .chapter-check, .copy-btn,
             .restore-position-toast, #back-to-top .progress-ring,
@@ -1396,7 +1396,7 @@
                     <input type="text" id="toc-filter" placeholder="סינון..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="סינון">
                 </div>
                 <ul class="space-y-1 text-sm" id="toc-list">
-                    <!-- 基础篇 -->
+                    <!-- חלק בסיסי -->
                     <li class="toc-parent" data-group="ji-chu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ji-chu-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">א. חלק היסודות (פרקים 0-7)</a>
@@ -1418,7 +1418,7 @@
                             <li><a href="#di-qi-zhang-jichu" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">07</span>1. תקשורת לוויינית: קריאה לעזרה גם בלי קליטה</a></li>
                         </ul>
                     </li>
-                    <!-- 软件篇 -->
+                    <!-- חלק תוכנה -->
                     <li class="toc-parent" data-group="ruan-jian">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ruan-jian-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">ב. חלק התוכנה (פרקים 8-14)</a>
@@ -1437,7 +1437,7 @@
                             <li><a href="#di-shi-si-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">14</span>פרק 14: נושא מנהל סיסמאות</a></li>
                         </ul>
                     </li>
-                    <!-- 进阶篇 -->
+                    <!-- חלק מתקדם -->
                     <li class="toc-parent" data-group="jin-jie">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#jin-jie-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">ג. חלק מתקדם (פרקים 15-20)</a>
@@ -1456,7 +1456,7 @@
                             <li><a href="#di-er-shi-zhang-termux" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-500 dark:text-gray-500 pl-6 text-xs"><span class="mr-1.5 text-xs text-gray-300 font-mono"></span>נספח: Termux - טרמינל לינוקס נייד</a></li>
                         </ul>
                     </li>
-                    <!-- 超越篇 -->
+                    <!-- חלק התקדמות -->
                     <li class="toc-parent" data-group="chao-yue">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#chao-yue-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">ד. חלק מתקדם מעבר (פרקים 21-26)</a>
@@ -1474,7 +1474,7 @@
                             <li><a href="#di-er-shi-liu-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">26</span>פרק 26: חזית הטכנולוגיה העכשווית בטלפונים</a></li>
                         </ul>
                     </li>
-                    <!-- 五、实战篇（第27-32章） -->
+                    <!-- 5. חלק מעשי（פרקים 27-32） -->
                     <li class="toc-parent" data-group="shi-zhan">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#shi-zhan-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">ה. חלק מעשי (פרקים 27-32)</a>
@@ -1491,7 +1491,7 @@
                             <li><a href="#di-san-shi-er-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">32</span>פרק 32: מדריך עזרה ראשונה לאבטחת הטלפון</a></li>
                         </ul>
                     </li>
-                    <!-- 六、展望篇（第33-41章） -->
+                    <!-- 6. חלק חזון（פרקים 33-41） -->
                     <li class="toc-parent" data-group="zhan-wang">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#zhan-wang-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">ו. חלק סיכום ומבט קדימה (פרקים 33-41)</a>
@@ -1511,7 +1511,7 @@
                             <li><a href="#di-si-shi-yi-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">41</span>פרק 41: מבוא לדרמות קצרות אנכיות – הוק ב-3 דקות</a></li>
                         </ul>
                     </li>
-                    <!-- 附录 -->
+                    <!-- נספח -->
                     <li class="toc-parent" data-group="fu-lu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#fu-lu" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">ז. נספחים</a>
@@ -1554,14 +1554,14 @@
             <div class="content-col">
             <a id="top"></a>
 
-            <!-- 顶部面包屑 -->
+            <!-- פירורי לחם עליונים -->
             <nav class="breadcrumb no-print" aria-label="אנשי קשר">
                 <a href="#top">דף הבית</a>
                 <span class="sep" aria-hidden="true">›</span>
                 <span class="text-gray-700 dark:text-gray-300">קורס דיגיטלי חובה · v1.7</span>
             </nav>
 
-            <!-- Hero 横幅 -->
+            <!-- Hero באנר -->
             <section class="hero-banner mb-8" aria-labelledby="hero-title">
                 <div class="flex flex-wrap items-center gap-2 mb-3">
                     <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>32 פרקים + 6 נספחים</span>
@@ -1583,7 +1583,7 @@
                 </div>
             </section>
 
-            <!-- 怎么用这本书 -->
+            <!-- איך להשתמש בספר הזה -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-compass text-primary" aria-hidden="true"></i>איך להשתמש בספר הזה?
@@ -1608,7 +1608,7 @@
                 </div>
             </section>
 
-            <!-- 学习路径五步走 -->
+            <!-- מסלול למידה בחמישה שלבים -->
             <section class="mb-8" aria-labelledby="learning-path-title">
                 <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">מסלול למידה: חמישה צעדים להפוך למומחה טלפונים</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">הספר מסודר לפי עקרון ״מהיכרות לשליטה ואז למעשה״, כל חלק הוא הבסיס לחלק הבא.</p>
@@ -1651,7 +1651,7 @@
                 </div>
             </section>
 
-            <!-- 章节地图速查表 -->
+            <!-- טבלת עיון מהיר למפת פרקים -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-map text-primary" aria-hidden="true"></i>מפת פרקים לחיפוש מהיר
@@ -1676,13 +1676,13 @@
                 </div>
             </section>
 
-            <!-- 写在最后：本书不教什么 -->
+            <!-- דברי סיום：מה הספר הזה לא מלמד -->
             <div class="highlight-quote">
                 <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>הספר הזה לא מלמד אותך "איך לגלול סרטונים בכיף יותר", אלא רוצה לעזור לך להבין: למה הטלפון עובד כך? מה הוא יכול לעשות ומה לא? ואיך לגרום לו לשרת אותך באמת, במקום לשעבד את תשומת הלב והזמן שלך להיפך.</p>
                 <p class="text-right text-sm">—— על הכוונה המקורית של הספר</p>
             </div>
 
-            <!-- 交互式自检清单 + 阅读仪表盘 -->
+            <!-- רשימת בדיקה עצמית אינטראקטיבית + לוח מחוונים קריאה -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
                     <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>לוח בקרה ללמידה
@@ -1690,7 +1690,7 @@
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">עקוב אחרי התקדמות הקריאה שלך ובדוק את מצב הבריאות של הטלפון.</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
-                    <!-- 阅读进度卡片 -->
+                    <!-- כרטיס התקדמות קריאה -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>התקדמות קריאה</h3>
                         <div class="flex items-center gap-4">
@@ -1709,7 +1709,7 @@
                         </div>
                     </div>
 
-                    <!-- 手机健康自检卡片 -->
+                    <!-- כרטיס בדיקת בריאות טלפון -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>בדיקת בריאות עצמית לטלפון</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">סמנו את הפריטים שכבר יישמתם, ובדקו את ״ניקוד הבריאות״ של הטלפון שלכם:</p>
@@ -1735,7 +1735,7 @@
                 </div>
             </section>
 
-            <!-- 原"top" 内容保持兼容 -->
+            <!-- מקורי"top" שמירה על תאימות תוכן -->
             <div class="sr-only" aria-hidden="true">v3.0 · קורס דיגיטלי חובה שמיועד באמת לאנשים רגילים</div>
 
             <section id="ji-chu-pian" class="mb-12">
@@ -2100,7 +2100,7 @@
                     </div>
                 </div>
 
-                <!-- 第一章附：安卓手机内存拓展解析 -->
+                <!-- נספח לפרק 1：ניתוח הרחבת זיכרון של טלפון אנדרואיד -->
                 <div id="di-yi-zhang-memory" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">נספח: ניתוח הרחבת זיכרון בטלפוני Android</h3>
                     <p class="chapter-intro mb-4">בקניית טלפון, לעתים קרובות תראה פרסום כמו "12GB+8GB זיכרון הפעלה" - כאילו נוספו 8GB של זיכרון הפעלה יש מאין. אבל האם זה באמת יכול להאיץ את הטלפון? האם זה עלול דווקא להזיק לטלפון? בפרק זה נסביר לעומק את טכנולוגיית "הרחבת הזיכרון".</p>
@@ -2305,7 +2305,7 @@
                     
                     <h5 class="font-semibold mt-3 mb-1">אסטרטגיית גיבוי:</h5>
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
-                        <li><strong>גיבוי בענן</strong>: אוטומטי, נוח, אך דורש רשת ומרחב בענן. iCloud, 华为云, 小米云 ועוד תומכים בכך.</li>
+                        <li><strong>גיבוי בענן</strong>: אוטומטי, נוח, אך דורש רשת ומרחב בענן. iCloud, Huawei Cloud, Xiaomi Cloud ועוד תומכים בכך.</li>
                         <li><strong>גיבוי מקומי</strong>: חבר למחשב באמצעות כבל נתונים, גבה באמצעות כלים רשמיים. מהיר, מרחב גדול, אך דורש פעולה ידנית.</li>
                         <li><strong>גיבוי כפול</strong>: גיבוי בענן + גיבוי מקומי, הבטוח ביותר.</li>
                     </ol>
@@ -2514,7 +2514,7 @@
                     </ul>
                 </div>
 
-                <!-- 第三章 -->
+                <!-- פרק 3 -->
                 <div id="di-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">מחוברים ל-Wi-Fi אבל הדפים לא נטענים</h3>
                     <p class="chapter-intro mb-4">——כי הנתב מנותק, והטלפון לא עבר אוטומטית לסלולר. כדי להבין זאת לעומק, עלינו לבנות מודל קוגניטיבי של "דרך ורכב".</p>
@@ -2733,7 +2733,7 @@
                     </div>
                 </div>
 
-                <!-- 第四章 -->
+                <!-- פרק 4 -->
                 <div id="di-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">：Google Play（בחו"ל）או חנויות מותג（כגון Huawei AppGallery、Xiaomi App Store）。</h3>
                     <p class="chapter-intro mb-4">iOS</p>
@@ -2899,7 +2899,7 @@
                     </div>
                 </div>
 
-                <!-- 第五章 -->
+                <!-- פרק 5 -->
                 <div id="di-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. צליל ורטט</h3>
                     <p class="chapter-intro mb-4">הגדר צלצול וצליל התראה שאתה אוהב. השתמש במצב שקט (ישיבות) ובמצב 'נא לא להפריע' (שינה), והעולם יהפוך מיד לשקט.</p>
@@ -3111,7 +3111,7 @@
                     </div>
                 </div>
 
-                <!-- 第六章 -->
+                <!-- פרק 6 -->
                 <div id="di-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. נעילת מסך: קו ההגנה הפיזי הראשון</h3>
                     <p class="chapter-intro mb-4">נעילת המסך היא קו ההגנה הראשון של הטלפון שלך, וגם הקל ביותר להתעלם ממנו.</p>
@@ -3277,7 +3277,7 @@
                     </div>
                 </div>
 
-                <!-- 第七章：前沿功能 -->
+                <!-- פרק 7：פונקציות חוד החנית -->
                 <div id="di-qi-zhang-jichu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. תקשורת לוויינית: קריאה לעזרה גם בלי קליטה</h3>
                     <p class="chapter-intro mb-4">תקשורת לוויינית היא פריצת דרך משמעותית בתחום הטלפונים בשנים האחרונות. כשאתה בשטח פתוח, בהרים נידחים, ולטלפון אין קליטה כלל – תקשורת לוויינית עשויה להיות חבל ההצלה שלך.</p>
@@ -3357,7 +3357,7 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li>מסתמכת על חיישנים ואלגוריתמים, אינה אמינה ב-100%, אך מספקת שכבת הגנה נוספת.</li>
                         <li>4. טכנולוגיית SparkLink: הדור הבא של קישוריות אלחוטית</li>
-                        <li>SparkLink (星闪) היא טכנולוגיית תקשורת אלחוטית מהדור החדש שפותחה בהובלת Huawei, במטרה להחליף Bluetooth ו-Wi-Fi בתרחישים מסוימים. היא משווה ואף עולה על הפתרונות הקיימים במדדים מרכזיים: קצב נתונים באוויר של עד 900Mbps (הרבה מעבר ל-50Mbps של Bluetooth), השהיה נמוכה עד 20μs (Bluetooth כ-15ms), תמיכה בעד 4096 מכשירים מחוברים בו-זמנית ברשת אחת (Bluetooth בדרך כלל עד 8).</li>
+                        <li>SparkLink (SparkLink) היא טכנולוגיית תקשורת אלחוטית מהדור החדש שפותחה בהובלת Huawei, במטרה להחליף Bluetooth ו-Wi-Fi בתרחישים מסוימים. היא משווה ואף עולה על הפתרונות הקיימים במדדים מרכזיים: קצב נתונים באוויר של עד 900Mbps (הרבה מעבר ל-50Mbps של Bluetooth), השהיה נמוכה עד 20μs (Bluetooth כ-15ms), תמיכה בעד 4096 מכשירים מחוברים בו-זמנית ברשת אחת (Bluetooth בדרך כלל עד 8).</li>
                     </ul>
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">מאפיינים טכניים:</h4>
@@ -3399,12 +3399,12 @@
                 </div>
             </section>
 
-            <!-- 二、软件篇 -->
+            <!-- 2. חלק תוכנה -->
             <section id="ruan-jian-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ב. חלק התוכנה (פרקים 8-14)</h2>
                 <p class="chapter-intro mb-4">תקשורת היא המשימה המקורית והליבתית ביותר של הטלפון. כיום, היא התפתחה משיחות ו-SMS פשוטים למערכת אקולוגית מורכבת הכוללת מסרים מיידיים, רשתות חברתיות ודוא"ל.</p>
 
-                <!-- 第八章 -->
+                <!-- פרק 8 -->
                 <div id="di-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. תכונות מתקדמות של אפליקציית הטלפון</h3>
                     <p class="chapter-intro mb-4">אפליקציית הטלפון בטלפונים חכמים מודרניים עברה מזמן מעבר לחוגה פשוטה, היא משלבת כלים רבי עוצמה כמו הקלטה, חסימת שיחות ספאם וזיהוי חכם.</p>
@@ -3440,7 +3440,7 @@
                                 <li>Tapir: בקר בפלטפורמת ערעור מספרים (haoma.tk.cn) והגש זיהוי.</li>
                                 <li>360: הגש דרך פונקציית "ערעור מספר" באפליקציית 360 Mobile Safe.</li>
                                 <li>Tencent: הגש דרך דף "ערעור מספר" במיני-תוכנית Tencent Mobile Manager.</li>
-                                <li>שלושת הספקים: משתמשי China Mobile יכולים לשלוח SMS "KTFSR" ל-10086 להפעלת חסימת הטרדות; משתמשי China Telecom יכולים לעקוב אחר חשבון "天翼防骚扰" הרשמי; משתמשי China Unicom יכולים להגדיר באפליקציית "联通手机管家".</li>
+                                <li>שלושת הספקים: משתמשי China Mobile יכולים לשלוח SMS "KTFSR" ל-10086 להפעלת חסימת הטרדות; משתמשי China Telecom יכולים לעקוב אחר חשבון "חסימת הטרדות של China Telecom" הרשמי; משתמשי China Unicom יכולים להגדיר באפליקציית "מנהל הטלפון של China Unicom".</li>
                             </ul>
                         </li>
                         <li><strong>הגנה מתקדמת מפני הטרדות</strong>：הפעלת "חסימת שיחות תכופות" של הספק (כמו הגבלת שיחות תכופות של China Mobile) יכולה לחסום אוטומטית שיחות יוצאות בקול AI.</li>
@@ -3509,7 +3509,7 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>הודעת קבוצה</strong>：מנהל הקבוצה מפרסם בפינה הימנית העליונה "…" &gt; [הודעת קבוצה], תזכורת חזקה לכולם, מתאים להודעות חשובות. מופיע אוטומטית לחברים חדשים.</li>
                         <li><strong>משימת קבוצה</strong>：מנהל הקבוצה יכול להגדיר הודעה נעוצה כ"משימת קבוצה", כל החברים יראו תזכורת אדומה, שנעלמת אחרי לחיצה. מתאים להרשמה לאירועים ואיסוף משימות.</li>
-                        <li><strong>רשימת הצטרפות קבוצתית</strong>：הקלד "#接龙" בתיבת הקלט כדי להתחיל שרשרת, מתאים להזמנת אוכל וספירת הרשמות. התוצאות מתאספות אוטומטית בראש הקבוצה.</li>
+                        <li><strong>רשימת הצטרפות קבוצתית</strong>：הקלד "#משחק מילים" בתיבת הקלט כדי להתחיל שרשרת, מתאים להזמנת אוכל וספירת הרשמות. התוצאות מתאספות אוטומטית בראש הקבוצה.</li>
                         <li><strong>שידור חי בקבוצה</strong>：בפינה הימנית העליונה "+" &gt; [שידור קבוצה], ניתן להתחיל שידור חי לקבוצה בלבד, מתאים להדרכות פנימיות, מפגשים משפחתיים ובדיקות מוצר.</li>
                         <li><strong>קפל צ'אט קבוצתי זה</strong>：ברשימת הקבוצות החלק שמאלה על שם הקבוצה &gt; [קיפול], כדי לאסוף קבוצות פחות חשובות ל"קבוצות מקופלות", תזכורת רק כשמתייגים אותך @.</li>
                         <li><strong>רק מנהל הקבוצה/מנהל יכול לתייג את כולם</strong>：כשיש מעל 500 חברים בקבוצה, חברים רגילים לא יכולים לתייג @ את כולם, כדי למנוע הטרדה.</li>
@@ -3594,7 +3594,7 @@
                     </div>
                 </div>
 
-                <!-- 第九章 -->
+                <!-- פרק 9 -->
                 <div id="di-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 9: עבודה ולמידה ניידת</h3>
                     <p class="chapter-intro mb-4">עריכת מסמכים על מסך הטלפון מרגישה באמת שונה ממחשב. הבעיה הגדולה ביותר היא מסך קטן, אצבעות עבות, ועיצוב שנוטה לסטות. אבל יש כמה טיפים שיכולים לשפר משמעותית את החוויה:</p>
@@ -3603,7 +3603,7 @@
                     <p class="mb-2">: הלוקליזציה הטובה ביותר, תואם לחלוטין לפורמטים של Microsoft (docx/xlsx/pptx), ערכת כלי PDF מובנית עשירה. אני אוהב במיוחד את פונקציית "הערות קוליות" – כשצריך לעיין בחוזה ולא נוח להקליד, פשוט אומרים כמה הערות לטלפון, והוא ממיר אותן אוטומטית להערות טקסט במסמך. בנוסף, WPS כולל מאגר עצום של תבניות חינמיות, חוסך הרבה זמן בהכנת קורות חיים או מצגות.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>WPS Office</strong>: אם החברה שלך משתמשת ב-Office מקורי, זו הבחירה הטובה ביותר. תאימות כמעט מושלמת לעיצוב גרסת שולחן העבודה, לא תראה הזזות קלות בעיצוב מורכב כמו שעלול לקרות ב-WPS. אינטגרציה עמוקה עם OneDrive, מסמך שהתחלת לערוך במחשב נפתח בטלפון בגרסה העדכנית ביותר.</li>
-                        <li><strong>Shimo Docs/腾讯文档</strong>: שני אלה מייצגים "שיתוף פעולה מקוון". מתאימים לעריכה משותפת של מסמך על ידי מספר אנשים בו-זמנית, כל שינוי מוצג בזמן אמת. אני משתמש ב-Shimo Docs עם חברים לתכנון טיולים, שנינו ממלאים מידע בטבלה בו-זמנית, הרבה יותר יעיל מאדם אחד.</li>
+                        <li><strong>Shimo Docs/Tencent Docs</strong>: שני אלה מייצגים "שיתוף פעולה מקוון". מתאימים לעריכה משותפת של מסמך על ידי מספר אנשים בו-זמנית, כל שינוי מוצג בזמן אמת. אני משתמש ב-Shimo Docs עם חברים לתכנון טיולים, שנינו ממלאים מידע בטבלה בו-זמנית, הרבה יותר יעיל מאדם אחד.</li>
                         <li><strong>זרימת עבודה מעשית</strong>: ההרגל שלי עכשיו – קבצים חשובים ב-OneDrive, עריכה יומיומית ב-WPS, שיתוף פעולה צוותי ב-Shimo Docs. מאז שהקבצים עלו לענן, לא הייתה לי יותר המבוכה של "שכחתי את ה-USB".</li>
                     </ul>
                     <p class="mb-2"><strong>2. אפליקציות רישום: מרישום אקראי למערכת ידע</strong>בעניין רישום הערות, הרבה אנשים ישר רוצים לבנות מערכת מורכבת, והתוצאה – לא מחזיקים מעמד שלושה ימים. ההמלצה שלי היא להתחיל קל ואז להעמיק – קודם לפתח הרגל "לרשום", ואז לחשוב על "ניהול".</p>
@@ -3621,7 +3621,7 @@
                     <p class="mb-2">: פונקציית הסריקה המובנית באפליקציית ההערות של iOS כבר טובה מאוד. פתח את אפליקציית ההערות → לחץ על סמל המצלמה → בחר "סרוק מסמך", כוון למסמך והיא תזהה אוטומטית את הגבולות ותתקן פרספקטיבה. לאחר הצילום אפשר להתאים צבע – מצב "שחור-לבן" נותן תוצאה הכי קרובה לסורק, "גווני אפור" מתאים לחומרים עם תמונות.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>משתמשי אנדרואיד</strong>: להרבה מותגים יש מצב "סריקת מסמכים" מובנה במצלמה. אם לא מוצאים, הורידו Microsoft Lens מחנות האפליקציות (חינמי, ומשולב עם OneDrive).</li>
-                        <li><strong>כלים כלליים</strong>: לאחר צילום הסריקה, אם צריך לחלץ את הטקסט לעריכה, צריך OCR. פונקציית "חילוץ טקסט" המובנית של WeChat היא הפשוטה ביותר – לחיצה ארוכה על תמונה מספיקה, דיוק הזיהוי סביר. לעיבוד בכמות גדולה, אפשר להשתמש באפליקציית 白描 או 全能扫描王. לזיהוי סינית, מנוע ה-OCR של Baidu עובד טוב יחסית; פונקציית המרת תמונה לטקסט של WPS גם מדויקת מאוד.</li>
+                        <li><strong>כלים כלליים</strong>: לאחר צילום הסריקה, אם צריך לחלץ את הטקסט לעריכה, צריך OCR. פונקציית "חילוץ טקסט" המובנית של WeChat היא הפשוטה ביותר – לחיצה ארוכה על תמונה מספיקה, דיוק הזיהוי סביר. לעיבוד בכמות גדולה, אפשר להשתמש באפליקציית תיאור או סורק כל-יכול. לזיהוי סינית, מנוע ה-OCR של Baidu עובד טוב יחסית; פונקציית המרת תמונה לטקסט של WPS גם מדויקת מאוד.</li>
                         <li><strong>טיפים לסריקה</strong>: צלמו במקום מואר היטב, עדיף עם מנורת שולחן שמאירה מהצד, כדי להימנע מצל היד על המסמך. אם המסמך מקופל בפינה, לחצו אותו שטוח לפני הצילום. מסמכים מרובי עמודים ניתן לסרוק ברצף ולמזג ל-PDF אחד, אין צורך לשמור כל עמוד בנפרד.</li>
                         <li><strong>4. איך לבחור אחסון ענן: אין הכי טוב, יש הכי מתאים לך</strong>חשבתי הרבה על בחירת אחסון ענן, ולבסוף גיליתי שזה תלוי ב"מערכת האקולוגית העיקרית" שלך.</li>
                     </ul>
@@ -3631,7 +3631,7 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>משתמשי Windows ← OneDrive</strong>: אם אתה משתמש במחשב Windows + Office 365, OneDrive הוא שידוך מושלם. שומר מסמך ב-Word, והוא נשמר אוטומטית בענן. 1TB שטח עם מנוי Office משתלם מאוד. פונקציית גיבוי התמונות האוטומטי באפליקציה לנייד גם טובה מאוד.</li>
                         <li><strong>שיתוף מקומי ← Baidu Pan</strong>: האמת, מגבלת מהירות ההורדה של Baidu Pan תמיד ספגה ביקורת, אבל אקוסיסטם השיתוף שלה באמת ללא תחרות. כמות עצומה של חומרי למידה ומשאבי מדיה באינטרנט הסיני משותפים דרך Baidu Pan. אם אתה רק מוריד מדי פעם קבצים שאחרים משתפים, אפשר להסתדר גם בלי מנוי. אם אתה אספן משאבים כבד, פשוט תקנה מנוי, הזמן שתחסוך שווה הרבה יותר.</li>
-                        <li><strong>Aliyun盘/Quark网盘</strong>: שני אלה הם כוכבים עולים בשנתיים האחרונות. Aliyun盘 ללא הגבלת מהירות העלאה והורדה (נכון לעכשיו), Quark网盘 משולב עמוק עם דפדפן Quark, בחיפוש חומרים אפשר לשמור ישירות לאחסון הענן, נוח מאוד.</li>
+                        <li><strong>Aliyun Drive/Quark Drive</strong>: שני אלה הם כוכבים עולים בשנתיים האחרונות. Aliyun Drive ללא הגבלת מהירות העלאה והורדה (נכון לעכשיו), Quark Drive משולב עמוק עם דפדפן Quark, בחיפוש חומרים אפשר לשמור ישירות לאחסון הענן, נוח מאוד.</li>
                         <li><strong>פתרון השילוב שלי</strong>: iCloud לתמונות אישיות וקבצים יומיומיים (פרטיות תחילה), Baidu Pan לאחסון משאבים וקבלת שיתופים (אקוסיסטם תחילה), OneDrive למסמכי עבודה (אינטגרציית Office תחילה). שלושה אחסוני ענן, כל אחד בתפקידו, בלי להפריע זה לזה.</li>
                     </ul>
                     <p class="mb-2"><strong>5. תרחיש עבודה נייד אמיתי</strong>אספר חוויה אמיתית שלי. פעם אחת בנסיעת עסקים לעיר אחרת, לקוח ביקש לשנות סעיפי חוזה באופן זמני. זרימת העבודה שלי הייתה כזו:</p>
@@ -3659,7 +3659,7 @@
                     </div>
                 </div>
 
-                <!-- 第十章 -->
+                <!-- פרק 10 -->
                 <div id="di-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. איך בדיוק לקשר כרטיס בנק?</h3>
                     <p class="chapter-intro mb-4">בין אם אתה משתמש ב-Alipay או WeChat, פעם ראשונה של קישור כרטיס עוברת את השלבים האלה:</p>
@@ -3700,7 +3700,7 @@
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">: ב"תשלומי חשבונות" ב-Alipay או WeChat, קשר את מספרי הלקוח של חשמל, מים וגז בביתך. אחר כך, כל חודש כשמגיע החשבון, אפשר להיכנס ישר ולשלם. מספר הלקוח בדרך כלל נמצא בחשבון הנייר שלך, או התקשר לשירות לקוחות לשאול.</h4>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>השוואת מחירי משלוחים</strong>: אותה חנות ב-Meituan וב-Ele.me לעיתים קרובות מציעה מחירים ומבצעים שונים. לפני ההזמנה, תסתכל בשתיהן, לפעמים אפשר לחסוך כמה שקלים. בנוסף, פונקציית "拼好饭" של Meituan, להזמין יחד עם חברים, המחיר יכול להיות זול בהרבה.</li>
+                        <li><strong>השוואת מחירי משלוחים</strong>: אותה חנות ב-Meituan וב-Ele.me לעיתים קרובות מציעה מחירים ומבצעים שונים. לפני ההזמנה, תסתכל בשתיהן, לפעמים אפשר לחסוך כמה שקלים. בנוסף, פונקציית "הזמנה משותפת" של Meituan, להזמין יחד עם חברים, המחיר יכול להיות זול בהרבה.</li>
                         <li><strong>בטיחות בנסיעות</strong>: ב-Didi או Gaode, זכור להגדיר "איש קשר לחירום" ו"שיתוף מסלול". בנסיעה, האפליקציה תשתף אוטומטית את המסלול שלך עם איש הקשר שהגדרת. בנוסף, בנסיעות מאוחרות בלילה העדף "מונית" על פני "נסיעה מהירה", למוניות יש פיקוח ענפי, מקדם הבטיחות גבוה יותר.</li>
                         <li><strong>6. ביטוח רפואי, ביטוח לאומי ושירותים ממשלתיים בטלפון</strong>השינויים בשנים האחרונות גדולים מאוד. הרבה דברים שבעבר דרשו המתנה בתור באולם השירות, כיום אפשר לסיים תוך דקות ספורות בטלפון.</li>
                     </ul>
@@ -3708,7 +3708,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">תעודת ביטוח רפואי אלקטרונית</h4>
                     <p class="mb-2">: חפש "תעודת ביטוח רפואי אלקטרונית" ב-Alipay או WeChat. לאחר ההפעלה, תוכל לגשת לטיפול רפואי או לקנות תרופות בבית מרקחת ישירות באמצעות הטלפון, ללא צורך בכרטיס ביטוח רפואי פיזי. בפעם הראשונה נדרש אימות זיהוי פנים, ולאחר מכן בכל שימוש ייווצר קוד דינמי.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>בירור ביטוח לאומי</strong>: הורד את אפליקציית "掌上12333" או השתמש ב"מרכז האזרח" ב-Alipay. תוכל לבדוק רשומות תשלומי ביטוח לאומי, יתרת חשבון פנסיה, הגשת בקשה לדמי אבטלה ועוד.</li>
+                        <li><strong>בירור ביטוח לאומי</strong>: הורד את אפליקציית "Zhangshang 12333" או השתמש ב"מרכז האזרח" ב-Alipay. תוכל לבדוק רשומות תשלומי ביטוח לאומי, יתרת חשבון פנסיה, הגשת בקשה לדמי אבטלה ועוד.</li>
                         <li><strong>מס הכנסה אישי</strong>: הסדר מס הכנסה שנתי בין מרץ ליוני ניתן לבצע באפליקציית "מס הכנסה אישי". זכור לבדוק אם יש ניכויים מיוחדים נוספים שתוכל לדווח עליהם (חינוך ילדים, ריבית משכנתא, תמיכה בהורים מבוגרים ועוד) – אלה יכולים לעזור לך לשלם פחות מס או לקבל החזר מס.</li>
                         <li><strong>זכור את הכללים האלה למניעת הונאות</strong>רשויות אכיפה, בתי משפט, בנקים או נציגי שירות לקוחות לעולם לא יבקשו ממך להעביר כסף ל"חשבון מאובטח".</li>
                     </ul>
@@ -3735,7 +3735,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章 -->
+                <!-- פרק 11 -->
                 <div id="di-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 11: צילום וניהול תמונות</h3>
                     <p class="chapter-intro mb-4">בוא נתחיל עם הבעיות הנפוצות ביותר, תראה בכמה מהן אתה מזהה את עצמך:</p>
@@ -3768,7 +3768,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">Snapseed</h4>
                     <p class="mb-2">: כלי עיבוד חינמי מבית גוגל, פונקציונליות מקצועית בלי פרסומות. תהליך העיבוד היומי שלי: קודם "התאמת תמונה" למשוך בהירות וניגודיות ← "הדגשת פרטים" לחידוד ← "איזון לבן" לתיקון גוון ← ולבסוף "חיתוך" לקומפוזיציה הרצויה. פונקציית ה"מקומי" של Snapseed שימושית מאוד – מאפשרת לכוונן רק אזור מסוים בתמונה בלי להשפיע על כל התמונה.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>醒图/美图秀秀</strong>: שני אלה מתאימים לעיבוד פורטרטים. אבל יש לי עיקרון: פילטר יופי עד 30% זה בסדר, מעבר לזה זה נראה מזויף, העור נראה כמו פלסטיק. טבעי נראה טוב יותר ממושלם.</li>
+                        <li><strong>Xingtu/Meitu</strong>: שני אלה מתאימים לעיבוד פורטרטים. אבל יש לי עיקרון: פילטר יופי עד 30% זה בסדר, מעבר לזה זה נראה מזויף, העור נראה כמו פלסטיק. טבעי נראה טוב יותר ממושלם.</li>
                         <li><strong>Lightroom גרסת טלפון</strong>: אם יש לך שאיפות לגבי צבע, זה הכלי המקצועי ביותר. יש לו כיוון עקומות, כיוון HSL להפרדת צבעים ועוד פונקציות מתקדמות. אבל עבור רוב האנשים זה קצת כמו להשתמש בתותח כדי להרוג יתוש.</li>
                         <li><strong>המלצה לזרימת עבודה בעיבוד תמונה</strong>: ההרגל האישי שלי הוא קודם לצלם את התמונה המקורית כמו שצריך, ואז בבית על מסך מחשב או iPad לעבד בנחת. מסך הטלפון קטן מדי וגם הצבע לא מדויק מספיק. אם חייבים לעבד בטלפון, כדאי לכוון את בהירות המסך לבינונית-גבוהה ולא לעבד במצב חיסכון בסוללה.</li>
                         <li><strong>5. יותר מדי תמונות? אסטרטגיות ארגון</strong>אלפי תמונות נערמות בגלריה של הטלפון, וכשרוצים למצוא תמונה מסוימת מחפשים חצי יום – כולם מכירים את החוויה הזו. כמה שיטות ארגון פרקטיות:</li>
@@ -3779,7 +3779,7 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>נקה זבל באופן קבוע</strong>: צילומי מסך, תמונות כפולות, תמונות מטושטשות – אלה האשמים העיקריים שתופסים מקום. בגלריה של iOS יש פונקציית מיזוג אוטומטית של "פריטים כפולים"; באנדרואיד אפשר לחפש במנהל הקבצים את תיקיית "screenshots" ולמחוק בבת אחת צילומי מסך לא נחוצים. אני מקדיש כל חודש חמש דקות לניקוי וזה מפנה כמה ג'יגה-בייטים.</li>
                         <li><strong>צור אלבומים, אל תסתמך רק על מיון ברירת המחדל</strong>: ברירת המחדל של המערכת היא מיון לפי זמן וזה בסדר, אבל עבור דברים שחוצים תקופות זמן כמו "תמונות גדילה של הילד", "תמונות טיול", "מסמכים חשובים" – כדאי ליצור ידנית אלבומים כדי לקבץ אותם. "אלבום משותף" של Apple מאפשר גם להוסיף תמונות יחד עם בני משפחה – אדם אחד יוצר, כל המשפחה יכולה לצפות.</li>
-                        <li><strong>גיבוי הוא קו ההגנה האחרון</strong>: תמונות הן הנתונים שאין להם תחליף – מסמכים אפשר לשחזר, היסטוריית צ'אט שאבדה זה לא נורא, אבל תמונות של ילדים, סרטונים של הורים – אם אבדו, באמת אבדו. חובה להפעיל גיבוי ענן. iCloud Photos הכי קל ונוח, באנדרואיד לכל מותג יש שירות ענן משלו, או השתמש ב-百度网盘/阿里云盘 לגיבוי אוטומטי. העיקרון: לפחות גיבוי ענן אחד, אל תשים את כל הביצים בסל אחד.</li>
+                        <li><strong>גיבוי הוא קו ההגנה האחרון</strong>: תמונות הן הנתונים שאין להם תחליף – מסמכים אפשר לשחזר, היסטוריית צ'אט שאבדה זה לא נורא, אבל תמונות של ילדים, סרטונים של הורים – אם אבדו, באמת אבדו. חובה להפעיל גיבוי ענן. iCloud Photos הכי קל ונוח, באנדרואיד לכל מותג יש שירות ענן משלו, או השתמש ב-百度网盘/Aliyun Drive לגיבוי אוטומטי. העיקרון: לפחות גיבוי ענן אחד, אל תשים את כל הביצים בסל אחד.</li>
                         <li><strong>6. צילום מסך והקלטת מסך</strong>צילום מסך</li>
                     </ul>
 
@@ -3800,7 +3800,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章附：专业影像技术 -->
+                <!-- נספח לפרק 11：טכנולוגיית צילום מקצועית -->
                 <div id="di-shi-yi-zhang-advanced" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. רזולוציה, קצב פריימים וקצב נתונים: שלושת הגורמים המרכזיים באיכות וידאו</h3>
                     <p class="chapter-intro mb-4">רזולוציה (Resolution):</p>
@@ -4062,7 +4062,7 @@
                     </div>
                 </div>
 
-                <!-- 第十二章 -->
+                <!-- פרק 12 -->
                 <div id="di-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 12: בידור אודיו-ויזואלי וקריאה</h3>
                     <p class="chapter-intro mb-4">אפליקציות המוזיקה כיום דומות למדי בפונקציונליות, אבל לכל אחת יש דגשים משלה – לבחור נכון חוסך הרבה טרחה:</p>
@@ -4070,15 +4070,15 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">网易云音乐</h4>
                     <p class="mb-2">：היתרון שלו הוא קהילת הפלייליסטים ואזור התגובות. אם אתה רוצה לשמוע "שירים שמתאימים ליום גשום" או "מוזיקה אינסטרומנטלית טהורה להירגעות אחרי לימודים", פשוט תחפש ויש פלייליסטים שמישהו כבר ארגן. אזור התגובות לפעמים יותר מעניין מהשירים. החיסרון הוא שחלק מזכויות השירים אינן מלאות, ויש שירים שהופכים לאפורים תוך כדי האזנה.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>NetEase Music</strong>：זכויות היוצרים המלאות ביותר, זמרים פופולריים כמו ג'ואו ג'יילון ומיידיי יש בעיקר רק ב-QQ音乐. אפשרויות איכות השמע גם עשירות מאוד, חברים יכולים לפתוח איכות שמע ללא אובדן. אם חשוב לך "למצוא את כל השירים שאתה רוצה לשמוע", QQ音乐 היא הבחירה הבטוחה ביותר.</li>
-                        <li><strong>QQ Music</strong>：הבחירה המועדפת על משתמשי אפל. ממשק נקי, ללא פרסומות, איכות שמע טובה, ותומך ב-Lossless וב-Dolby Atmos. אבל אלגוריתם ההמלצות שלו לא מבין את העדפות המשתמשים הסיניים כמו אפליקציות מקומיות, ותרבות הפלייליסטים לא מפותחת כמו 网易云. מתאים לאנשים שאוהבים חוויה פשוטה ופחות מתעניינים בפונקציות חברתיות.</li>
+                        <li><strong>NetEase Music</strong>：זכויות היוצרים המלאות ביותר, זמרים פופולריים כמו ג'ואו ג'יילון ומיידיי יש בעיקר רק ב-QQ Music. אפשרויות איכות השמע גם עשירות מאוד, חברים יכולים לפתוח איכות שמע ללא אובדן. אם חשוב לך "למצוא את כל השירים שאתה רוצה לשמוע", QQ Music היא הבחירה הבטוחה ביותר.</li>
+                        <li><strong>QQ Music</strong>：הבחירה המועדפת על משתמשי אפל. ממשק נקי, ללא פרסומות, איכות שמע טובה, ותומך ב-Lossless וב-Dolby Atmos. אבל אלגוריתם ההמלצות שלו לא מבין את העדפות המשתמשים הסיניים כמו אפליקציות מקומיות, ותרבות הפלייליסטים לא מפותחת כמו NetEase Cloud. מתאים לאנשים שאוהבים חוויה פשוטה ופחות מתעניינים בפונקציות חברתיות.</li>
                         <li><strong>Spotify</strong>：בעל מספר המשתמשים הגדול בעולם, אלגוריתם ההמלצות נחשב לחזק ביותר. "Discover Weekly" ו-"Daily Mix" בעלי דיוק מדהים, ככל שמשתמשים יותר כך הוא מבין אותך יותר. החיסרון הוא שהגרסה החינמית מלאה בפרסומות, וחלק מזכויות השירים הסיניים אינן מלאות. דורש רשת מיוחדת לשימוש.</li>
                         <li><strong>כמה טיפים להאזנה למוזיקה</strong>：אם אתה משתמש באוזניות בלוטות', לך להגדרות אפליקציית המוזיקה ובדוק אם יש "התאמת אפקטים קוליים" או "אקולייזר", כוונן מעט את הבס והטרבל, השיפור מורגש מאוד. בנוסף, האזנה לסטרימינג צורכת הרבה נפח גלישה, זכור להפעיל "נגן Lossless רק ב-WiFi" בהגדרות, או הורד מראש פלייליסטים אהובים להאזנה לא מקוונת.</li>
                     </ul>
                     <p class="mb-2"><strong>2.פודקאסטים：ה"בן לוויה לאוזניים" בנסיעות</strong>פודקאסטים, אנשים שלא שמעו חושבים שזה לא רלוונטי אליהם, ברגע שמתחילים להאזין אי אפשר לחזור אחורה. בעצם זו "גרסת Netflix של תוכניות רדיו" — יש אנשים שמדברים על טכנולוגיה, אחרים על היסטוריה, אחרים קוראים סיפורים, יש כל סוג שתרצה.</p>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">אפליקציית 小宇宙</h4>
-                    <p class="mb-2">：אפליקציית הפודקאסטים הטובה ביותר בסין, ממשק נקי, ללא פונקציות מבולגנות. "ההמלצה היומית" ו"בחירת העורך" שלה עוזרים לך לגלות תוכניות חדשות, אזור התגובות גם פעיל מאוד. אני אישית מאזין הכי הרבה ל《忽左忽右》(קטגוריית תרבות והיסטוריה) ו《不合时宜》(קטגוריית נושאים חברתיים), כל פרק מרגיש כמו להאזין לכמה אנשים חכמים משוחחים.</p>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">אפליקציית XiaoYu</h4>
+                    <p class="mb-2">：אפליקציית הפודקאסטים הטובה ביותר בסין, ממשק נקי, ללא פונקציות מבולגנות. "ההמלצה היומית" ו"בחירת העורך" שלה עוזרים לך לגלות תוכניות חדשות, אזור התגובות גם פעיל מאוד. אני אישית מאזין הכי הרבה ל《ימינה ושמאלה》(קטגוריית תרבות והיסטוריה) ו《בלתי ראוי》(קטגוריית נושאים חברתיים), כל פרק מרגיש כמו להאזין לכמה אנשים חכמים משוחחים.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>פודקאסטים של אפל</strong>：מובנה ב-iPhone, אין צורך להוריד אפליקציה נוספת. האינטגרציה עם CarPlay היא הטובה ביותר, נוח מאוד בנהיגה.</li>
                         <li><strong>טיפים להאזנה</strong>：רוב אפליקציות הפודקאסטים תומכות בהאזנה במהירות 1.2x או 1.5x, אחרי שמתרגלים חוסכים הרבה זמן. אני בדרך כלל מאזין ב-1.2x לסינית, ו-1.5x לאנגלית. בנוסף חשוב להפעיל "הורדה אוטומטית של תוכניות חדשות" ו"מחיקה אוטומטית אחרי השמעה", כך הטלפון שלך לא יתמלא בקבצי שמע שכבר האזנת להם.</li>
@@ -4089,7 +4089,7 @@
                     <p class="mb-2">：קוד פתוח וחינמי, כמעט כל פורמט ניתן לנגן — MKV, AVI, FLAC, ואפילו תמונות ISO. אם הורדת סרטון שעובד במחשב אבל לא בטלפון, סביר להניח שזו בעיית פורמט, התקן VLC וזה נפתר. הוא גם תומך בכתוביות חיצוניות, שים קובץ כתוביות .srt באותה תיקייה עם הסרטון, VLC יטען אותן אוטומטית.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>nPlayer</strong>：אם אתה רוצה חוויה מעודנת יותר, אפליקציה בתשלום זו שווה קנייה. ממשק יפה, מחוות שליטה נוחות — החלק למעלה/למטה בצד שמאל להתאמת בהירות, צד ימין להתאמת עוצמת קול, החלק שמאלה/ימינה להרצה קדימה/אחורה. תומך ב-DTS וב-Dolby Audio, תחושת הנוכחות חזקה הרבה יותר בצפייה בסרטים גדולים.</li>
-                        <li><strong>Bilibili (B站)</strong>：כבר לא רק אתר אנימה, עכשיו משאבי הלמידה שם רבים בטירוף. מבחני כניסה, תכנות, צילום, בישול, יש כל מיני מדריכים. תרבות ה"דנמו" (הערות צפות) היא הנשמה של B站, כשצופים בווידאו עם דנמו, מרגיש כאילו יש קבוצת אנשים שצופה איתך. אבל כשצופים בסרטוני למידה מומלץ לכבות דנמו, אחרת קל לאבד ריכוז.</li>
+                        <li><strong>Bilibili (Bilibili)</strong>：כבר לא רק אתר אנימה, עכשיו משאבי הלמידה שם רבים בטירוף. מבחני כניסה, תכנות, צילום, בישול, יש כל מיני מדריכים. תרבות ה"דנמו" (הערות צפות) היא הנשמה של Bilibili, כשצופים בווידאו עם דנמו, מרגיש כאילו יש קבוצת אנשים שצופה איתך. אבל כשצופים בסרטוני למידה מומלץ לכבות דנמו, אחרת קל לאבד ריכוז.</li>
                         <li><strong>שיקוף לטלוויזיה</strong>：מסך הטלפון, גדול ככל שיהיה, לא משתווה לנוחות הצפייה בטלוויזיה. באותה רשת WiFi, פתח את כפתור ה-"TV" בפינה העליונה של אפליקציית הווידאו, ותוכל להקרין את התמונה לטלוויזיה. רוב הטלוויזיות החכמות והמקרנים תומכים בכך, חוויית הצפייה בסדרות וסרטים הרבה יותר טובה. משתמשי iPhone יכולים גם להשתמש ב-AirPlay לשיקוף ישיר של כל המסך.</li>
                         <li><strong>4.קריאת ספרים אלקטרוניים：אפשר לקרוא ספרים היטב גם בטלפון</strong>יש אומרים שקריאה בטלפון פוגעת בעיניים ומקשה על הריכוז, ויש בזה אמת. אבל היתרונות של קריאה בטלפון ברורים — בכל זמן ובכל מקום, ניצול מקסימלי של זמן מפוצל. אני קראתי לא מעט ספרים בטלפון ברכבת התחתית, בתור ולפני השינה.</li>
                     </ul>
@@ -4114,7 +4114,7 @@
                     </ul>
 
                     <div class="practice-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>לך ל-小宇宙 או פודקאסטים של אפל, הירשם ל-3 ערוצים מעניינים, הורד פרק אחד להאזנה.</p>
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>לך ל-XiaoYu או פודקאסטים של אפל, הירשם ל-3 ערוצים מעניינים, הורד פרק אחד להאזנה.</p>
                         <ol class="list-decimal pl-6 mt-1 space-y-1">
                             <li>התקן נגן VLC, נסה לנגן קובץ וידאו שהעתקת מהמחשב.</li>
                             <li>חפש ספר שאתה רוצה לקרוא ב-微信读书, הגדר רקע בגוון חם ומצב הגנת עיניים, כוונן את הגופן לגודל שמתאים לך.</li>
@@ -4125,12 +4125,12 @@
                     </div>
                 </div>
 
-                <!-- 第十三章 -->
+                <!-- פרק 13 -->
                 <div id="di-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 13: המלצות על App מסוג כלים</h3>
                     <p class="chapter-intro mb-4">רשימת משימות</p>
                     
-                    <h4 class="text-lg font-semibold mt-4 mb-2">：פתקיות מערכת, Microsoft To Do (קל משקל)；滴答清单, Todoist (פונקציונליות מקיפה).</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">：פתקיות מערכת, Microsoft To Do (קל משקל)；רשימת משימות TickTick, Todoist (פונקציונליות מקיפה).</h4>
                     <p class="mb-2">כלי יעילות הם ה"שלד" של החיים הדיגיטליים, עוזרים לארגן מחשבות, משימות וחומרים. להלן המלצות לפי תרחיש.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">1. רשימת משימות (ניהול משימות)</h5>
@@ -4138,7 +4138,7 @@
                         <li><strong>TickTick</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>מי שצריך לנהל באופן מאוחד משימות עבודה, חיים ולימודים.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>סנכרון חוצה פלטפורמות, רשימה/יומן/טומטו משולב, קלט בשפה טבעית "פגישה מחר ב-3" מזהה אוטומטית.</li>
                         <li><strong>Todoist</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>משתמשים שמחפשים פשטות ותמיכה חוצה-פלטפורמות.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>ממשק נקי, היררכיה ברורה (משימה &gt; תת-משימה &gt; תת-תת-משימה), ניקוד karma לעידוד הרגלים.</li>
                         <li><strong>Microsoft To Do</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>אנשי משרד, משתמשי Outlook.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>חינמי לחלוטין, ללא פרסומות, "היום שלי" מתרוקן כל יום, משולב עם אקו-סיסטם של Microsoft.</li>
-                        <li><strong>פתקים/תזכורות מובנים במערכת</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>משתמשים קלים שלא רוצים להתקין App צד שלישי.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>חוויה מקורית, השהיה אפסית, הוספה קולית דרך Siri/小爱, משולב עם widget.</li>
+                        <li><strong>פתקים/תזכורות מובנים במערכת</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>משתמשים קלים שלא רוצים להתקין App צד שלישי.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>חוויה מקורית, השהיה אפסית, הוספה קולית דרך Siri/Xiaoai, משולב עם widget.</li>
                     </ul>
 
                     <h5 class="font-semibold mt-3 mb-1">2. שעון עגבנייה (אימון מיקוד)</h5>
@@ -4150,7 +4150,7 @@
 
                     <h5 class="font-semibold mt-3 mb-1">3. לוח שנה (המחשה חזותית של זמן)</h5>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>לוח שנה מובנה</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>כל המשתמשים.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>דחיפה מקורית יציבה, צריכת חשמל נמוכה, הוספה קולית דרך Siri/小爱.</li>
+                        <li><strong>לוח שנה מובנה</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>כל המשתמשים.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>דחיפה מקורית יציבה, צריכת חשמל נמוכה, הוספה קולית דרך Siri/Xiaoai.</li>
                         <li><strong>Google Calendar</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>משתמשים עם מכשירים מרובים, מי שצריך לשתף לוח שנה עם אחרים.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>פונקציית "יעדים" מתזמנת אימון/לימוד, זיהוי אירועים מ-Gmail.</li>
                     </ul>
 
@@ -4217,7 +4217,7 @@
                         <li><strong>Apple Health / Google Fit</strong>　<span class="text-gray-500 dark:text-gray-400">קהל יעד:</span>כל משתמשי הסמארטפון.<span class="text-gray-500 dark:text-gray-400">נקודות חוזק מרכזיות:</span>אוסף נתונים מהטלפון, צמיד ואפליקציות (צעדים, דופק, שינה, וסת), "מרכז תיק בריאות".</li>
                     </ul>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">：בסין העדיפות היא 高德地图 או 百度地图；לנסיעות בינלאומיות השתמש ב-Google Maps.</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">：בסין העדיפות היא Amap או Baidu Maps；לנסיעות בינלאומיות השתמש ב-Google Maps.</h4>
                     <p class="mb-2">בדרכים, כמה אפליקציות טובות חוסכות צרות. להלן המלצות לפי שלבי הנסיעה.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">1. טיסות ורכבות מהירות</h5>
@@ -4379,7 +4379,7 @@
                     </div>
                 </div>
 
-                <!-- 第十四章：密码管理器专题 -->
+                <!-- פרק 14：נושא מיוחד: מנהל סיסמאות -->
                 <div id="di-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 14: נושא מנהל סיסמאות</h3>
                     <p class="chapter-intro mb-4">לאדם המודרני יש בממוצע עשרות ואפילו מאות חשבונות אינטרנט. אם כל חשבון משתמש באותה סיסמה, ברגע שאתר אחד נפרץ, כל החשבונות בסכנה. אם כל חשבון משתמש בסיסמה מורכבת שונה, פשוט אי אפשר לזכור.</p>
@@ -4739,12 +4739,12 @@
                 </div>
             </section>
 
-            <!-- 三、进阶篇 -->
+            <!-- 3. חלק מתקדם -->
             <section id="jin-jie-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ג. חלק מתקדם (פרקים 15-20)</h2>
                 <p class="chapter-intro mb-4">הסוללה היא "הלב האנרגטי" של הטלפון שלך. הפרק הזה יעזור לך להבין את הקסמים הקטנים של הסוללה, ללמוד טכניקות טעינה וחיי סוללה מדעיות, ולהיפרד לתמיד מחרדת סוללה.</p>
 
-                <!-- 第十五章 -->
+                <!-- פרק 15 -->
                 <div id="di-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 15: מדע הסוללה ואופטימיזציית חיי סוללה</h3>
                     <p class="chapter-intro mb-4">סוללת טלפון (ליתיום-יון או ליתיום-פולימר) היא כמו ספוג אנרגיה: טעינה היא כמו שאיבת מים (אגירת חשמל), פריקה היא כמו סחיטת מים (צריכת חשמל). יש כמה מאפיינים שכדאי לזכור:</p>
@@ -4961,7 +4961,7 @@
                     </div>
                 </div>
 
-                <!-- 第十六章 -->
+                <!-- פרק 16 -->
                 <div id="di-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 16: מערכת חשבונות ושירותי ענן</h3>
                     <p class="chapter-intro mb-4">הרבה אנשים חושבים שהחשבון משמש רק להורדת אפליקציות. למעשה, מה שחשבון טלפון אחד אחראי לו הוא הרבה יותר ממה שתדמיין:</p>
@@ -5053,7 +5053,7 @@
                     </div>
                 </div>
 
-                <!-- 第十七章 -->
+                <!-- פרק 17 -->
                 <div id="di-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 17: קישוריות הטלפון עם מכשירים אחרים</h3>
                     <p class="chapter-intro mb-4">להגיד את האמת, מה שהכי הטריד אותי פעם זה שצילמתי תמונה בטלפון, רציתי להעביר למחשב לעריכה, והייתי צריך למצוא כבל, לחכות להעברה. אחר כך גיליתי שבכלל לא צריך כבל, קישוריות טובה מהירה פי עשרה מכבל.</p>
@@ -5165,7 +5165,7 @@
                     </div>
                 </div>
 
-                <!-- 第十八章 -->
+                <!-- פרק 18 -->
                 <div id="di-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 18: גיבוי והעברת נתונים</h3>
                     <p class="chapter-intro mb-4">לנתונים שונים יש "מצבי הישרדות" שונים, צריך להבדיל ביניהם:</p>
@@ -5263,7 +5263,7 @@
                     </div>
                 </div>
 
-                <!-- 第十九章 -->
+                <!-- פרק 19 -->
                 <div id="di-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 19: אבחון תקלות והצלה עצמית</h3>
                     <p class="chapter-intro mb-4">להגיד את האמת, אחרי שנה של שימוש הטלפון מתחיל להאט, זה נורמלי מאוד. הסיבה לא בהכרח שהטלפון התקלקל, לרוב מדובר ב"אבק" - קבצים זבל, תהליכי רקע, שטח אחסון שמתמלא לאט.</p>
@@ -5359,7 +5359,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章：开发者模式与高级权限 -->
+                <!-- פרק 20：מצב מפתח ומתקדםהרשאות -->
                 <div id="di-er-shi-zhang-jinjie" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">אחת, מצב מפתח: פתיחת הגדרות נסתרות</h3>
                     <p class="chapter-intro mb-4">מצב מפתח הוא תפריט נסתר מובנה במערכת הטלפון, עם הרבה פונקציות שמשתמשים רגילים לא צריכים אבל מפתחים כן.</p>
@@ -5561,7 +5561,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章附：Termux便携式Linux终端 -->
+                <!-- נספח לפרק 20：TermuxניידLinuxמסוף -->
                 <div id="di-er-shi-zhang-termux" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">אחד, מה זה Termux</h3>
                     <p class="chapter-intro mb-4">Termux הוא אמולטור טרמינל וסביבת לינוקס בקוד פתוח המיועד למכשירי Android, המספק חוויית shell מלאה של לינוקס על הטלפון ללא צורך בהרשאות root. כיישום קל משקל (גודל ההתקנה כ-30MB בלבד), Termux תומך במערכת ניהול חבילות APT עם מערכת תוכנה עשירה, ומאפשר למשתמשים להריץ על מכשירים ניידים כלים כמו Python, Node.js, Git, SSH, ואף לבנות שרתים או לבצע בדיקות חדירה.</p>
@@ -5685,12 +5685,12 @@
                 </div>
             </section>
 
-            <!-- 四、超越篇 -->
+            <!-- 4. חלק התקדמות -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ד. חלק מתקדם מעבר (פרקים 21-26)</h2>
                 <p class="chapter-intro mb-4">אנחנו גולשים באינטרנט, משלמים ומצ'וטצ'ים כל יום בטלפון, ונראה שזה ממש נוח. אבל האם חשבת פעם, כשהיסטוריית הצ'אט, סיסמאות התשלום, התמונות שלך... כשהמידע הזה "רץ עירום" ברשת, כמה פעמים זה קורה? בכנות, רוב האנשים בכלל לא חשבו על זה, אבל ברגע שקורה משהו — כמו פריצה לחשבון או גניבה מכרטיס הבנק — אז כבר מאוחר מדי להתחרט. בפרק זה נדבר על איך להפוך את החיים הדיגיטליים שלך לפחות "שקופים".</p>
 
-                <!-- 第二十一章 -->
+                <!-- פרק 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">אחד, VPN: "גלימת ההיעלמות" של הרשת</h3>
                     <p class="chapter-intro mb-4">VPN, ראשי תיבות של רשת פרטית וירטואלית (Virtual Private Network). אפשר לדמיין את זה כמנהרה תת-קרקעית ייעודית ומוצפנת שנבנית בין הבית שלך לבין האתר שאתה רוצה לבקר בו. אתה הולך במנהרה, ואנשים בחוץ לא יכולים לראות מה אתה אוחז או לאן אתה הולך.</p>
@@ -5780,7 +5780,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十二章 -->
+                <!-- פרק 22 -->
                 <div id="di-er-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 22: כיצד AI עובד בטלפון</h3>
                     <p class="chapter-intro mb-4">צילום חישובי AI של היום דומה יותר לדחיפת צוות מקצועי של רטושר וצלם ישירות לתוך כפתור הצילום. לפני שאתה לוחץ על הצילום, AI כבר מתחיל לעבוד: סורק את הסצנה, מזהה "זה שמיים כחולים", "זה פנים אנושיות", "זה צילום לילה".</p>
@@ -6047,7 +6047,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章 -->
+                <!-- פרק 23 -->
                 <div id="di-er-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. מהי בעצם אוטומציה?</h3>
                     <p class="chapter-intro mb-4">במילים פשוטות, אוטומציה היא:</p>
@@ -6147,7 +6147,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章附：GitHub入门指南 -->
+                <!-- נספח לפרק 23：GitHubמדריך למתחילים -->
                 <div id="di-er-shi-san-zhang-github" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. מה זה GitHub בעצם?</h3>
                     <p class="chapter-intro mb-4">במילים פשוטות, GitHub היא</p>
@@ -6194,7 +6194,7 @@
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN, Mercurial</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee (码云), Bitbucket</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab, Gitee (Gitee), Bitbucket</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בקיצור:</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Git מנהל "איך לתעד שינויים", GitHub מנהל "איפה השינויים נמצאים ואיך לשתף פעולה"</td>
                             </tr>
@@ -6315,7 +6315,7 @@
                     </div>
 
                     <div class="info-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>Gitee (码云)</p>
+                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>Gitee (Gitee)</p>
                         <p class="mt-1">, עם פונקציונליות דומה ומהירות גישה טובה. צוותים רבים מארחים במקביל ב-GitHub וב-Gitee, משלבים בין-לאומיות ומהירות מקומית.<strong>טריק מתקדם: בניית בלוג אישי חינמי עם GitHub Pages</strong>GitHub Pages מאפשר לך לארח אתר סטטי בחינם, בשילוב עם מחוללי אתרים סטטיים כמו Jekyll, Hexo, Hugo, אפשר לבנות בקלות בלוג אישי. כותבים פוסט Markdown, דוחפים למאגר, הבלוג מתעדכן אוטומטית, עם HTTPS ושם מתחם מותאם אישית מובנים. אינספור בלוגרים טכניים בנו כך את הבלוגים שלהם, אפס עלות, ללא פרסומות, שליטה מלאה בגרסאות.</p>
                     </div>
 
@@ -6340,7 +6340,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十四章：Root权限与BL锁深度解析 -->
+                <!-- פרק 24：Rootהרשאות ו-BLניתוח מעמיק של נעילה -->
                 <div id="di-er-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">1. הבנה מעמיקה של Bootloader</h3>
                     <p class="chapter-intro mb-4">Bootloader היא התוכנה הראשונה שרצה בעת הפעלת הטלפון, תפקידה לאתחל את החומרה ולטעון את ליבת מערכת ההפעלה. ניתן להבין את Bootloader כ"שומר הסף" של הטלפון.</p>
@@ -6461,7 +6461,7 @@
                     <div class="info-box rounded-lg p-4 mt-4">
                         <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>: קהילת מפתחי האנדרואיד הגדולה בעולם, עם שפע מדריכי הבהוב ומשאבי ROM.</p>
                         <ul class="list-disc pl-6 mt-1 space-y-1">
-                            <li><strong>酷安 (CoolAPK)</strong>: קהילה דיגיטלית ידועה, עם מדריכים ודיונים רבים.</li>
+                            <li><strong>Coolapk (CoolAPK)</strong>: קהילה דיגיטלית ידועה, עם מדריכים ודיונים רבים.</li>
                             <li><strong>פורומים לפי דגם</strong>: כמו קהילת Xiaomi, קהילת OnePlus, עם מדריכים רשמיים וקהילתיים.</li>
                             <li><strong>פרק 25: טיפול בטלפון יד שנייה ומורשת דיגיטלית</strong>היי, חברים, אחרי יותר מעשרים פרקים של "אימון", אני מאמין שכבר הפכתם מ"טירון דיגיטלי" למשתמש טלפון די בטוח בעצמו. אבל לחיי הטכנולוגיה יש תמיד מחזוריות – החדש הופך בסוף לישן. כשאתם מתכוננים "להפריש" את החבר הוותיק, האם אתם יודעים איך להיפרד בכבוד ובבטחה?</li>
                         </ul>
@@ -6484,7 +6484,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十五章 -->
+                <!-- פרק 25 -->
                 <div id="di-er-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 25: טיפול בטלפון יד שנייה ומורשת דיגיטלית</h3>
                     <p class="chapter-intro mb-4">עקרון מפתח: ניקוי נתונים אינו "מחיקה", אלא "דרסה".</p>
@@ -6747,7 +6747,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十六章 -->
+                <!-- פרק 26 -->
                 <div id="di-er-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 26: חזית הטכנולוגיה העכשווית בטלפונים</h3>
                     <p class="chapter-intro mb-4">אחרי ישנים, 2024-2026 = התפרצות: AI בכיס, לוויין בטווח בינוני, מתקפל "שגרתי", סוללה חומרית. פרק זה סוקר ועוזר להחליט "להחליף?" ו"מה?".</p>
@@ -6841,12 +6841,12 @@
                 </div>
             </section>
 
-            <!-- 五、实战篇（第27-32章） -->
+            <!-- 5. חלק מעשי（פרקים 27-32） -->
             <section id="shi-zhan-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ה. חלק מעשי (פרקים 27-32)</h2>
                 <p class="chapter-intro mb-4">26 פרקים תיאוריה, עכשיו פרקטיקה. 6 פרקים: קשישים, קנייה, הרגלים, מסך, וידאו, חירום. מיידי.</p>
 
-                <!-- 第二十七章：适老化专题 -->
+                <!-- פרק 27：נושא מיוחד: התאמה לקשישים -->
                 <div id="di-er-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 27: מדריך לקשישים</h3>
                     <p class="chapter-intro mb-4">בכנות, חשבתי על הוריי. אמא לא מעזה "עדכון", אבא פונט זעיר 2 שנים. לא "טיפשים" - הטלפון מתוכנן לצעירים. פרק זה פותר בעיות בשפה פשוטה.</p>
@@ -6884,7 +6884,7 @@
                             </tbody>
                         </table>
                     </div>
-                    <p class="mb-2">אם המותג שלך שונה, חפש "简易" או "长辈" בתיבת החיפוש בהגדרות. אם לא מצאת, בצע "הגדלה ידנית" לפי השלבים.</p>
+                    <p class="mb-2">אם המותג שלך שונה, חפש "פשוט" או "קשישים" בתיבת החיפוש בהגדרות. אם לא מצאת, בצע "הגדלה ידנית" לפי השלבים.</p>
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">ב', אם לא פותחים מצב פשוט, ניתן להגדיל ידנית - 5 שלבים</h4>
                     <p class="mb-2">חלק מההורים לא רוצים מצב פשוט, חושבים שהוא "זקן". הגדל ידנית 5 פריטים:</p>
@@ -6941,7 +6941,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">ד', סיוע מרחוק</h4>
                     <p class="mb-2">קשישים לא מוצאים כפתורים. "סיוע מרחוק" = אתה רואה ומסמן. לפי מותג:</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>~27W</strong>："畅连" App, "שיתוף מסך". וידאו &gt; שתף &gt; סמן.</li>
+                        <li><strong>~27W</strong>："חיבור רציף" App, "שיתוף מסך". וידאו &gt; שתף &gt; סמן.</li>
                         <li><strong>Xiaomi/Redmi</strong>：Xiaomi "סיוע מרחוק", מסך + קול.</li>
                         <li><strong>Samsung</strong>："מרחב משפחה/שמירה", חפש "מרחוק".</li>
                         <li><strong>אוניברסלי</strong>："Sunflower" App (חינם), שניהם מתקינים. קוד אימות = שלט.</li>
@@ -6970,7 +6970,7 @@
                     <p class="mb-2">קשישים רבים לא יודעים שהטלפון עובד עם מכשיר שמיעה. iPhone/Android תומכים MFi, מעבירים קול ישירות.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>חיבור</strong>：iPhone &gt; הגדרות &gt; נגישות &gt; מכשירי שמיעה, הפעל Bluetooth, לפי הוראות המכשיר.</li>
-                        <li><strong>בלי מכשיר שמיעה</strong>：נגישות &gt; אודיו/חזותי &gt; "降噪" + "מונו".</li>
+                        <li><strong>בלי מכשיר שמיעה</strong>：נגישות &gt; אודיו/חזותי &gt; "ביטול רעש" + "מונו".</li>
                         <li><strong>HarmonyOS</strong>：נגישות &gt; "הגברת שמיעה", חפש "שמיעה".</li>
                     </ul>
 
@@ -6994,7 +6994,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十八章：手机选购终极指南 -->
+                <!-- פרק 28：מדריך אולטימטיבי לרכישת טלפון -->
                 <div id="di-er-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 28: להוציא את הכסף נכון – מדריך הקנייה הסופי לטלפון</h3>
                     <p class="chapter-intro mb-4">קניית טלפון: שבוע סקירות, חודש מחירים, ובסוף דגל ב-5000-6000. לא טבלת פרמטרים - "חשיבת בחירה".</p>
@@ -7138,7 +7138,7 @@
                         <li><strong>מלכודת 2: אל תתפעל מ-100 מיליון פיקסל</strong>—פיקסלים גבוהים לא אומר איכות. גודל חיישן, צמצם, אלגוריתם חשובים יותר. דגמי דגל ב-50 מיליון עם חיישן גדול מצלמים טוב יותר ממכשירי 100 מיליון זולים.</li>
                         <li><strong>מלכודת 3: אל תקנה מכשיר מותאם ספק</strong>—"צבור חיובים קבל מכשיר" נראה משתלם, אך מכשירים מותאמים מתעדכנים לאט, כוללים אפליקציות שלא ניתנות למחיקה, ונעולים לספק. חיסכון לכאורה = "נעילה".</li>
                         <li><strong>מלכודת 4: "מסך מעוקל זה יוקרתי" - זה שיווק</strong>—מסך מעוקל היה סמל דגל, אך יותר אנשים מגלים בעיות: שמיכה קשה, מגע שגוי בקצוות, תיקון יקר. ב-2026 חוזרים ל"מעוקל מעט" או "שטוח". אל תבחר מעוקל כי "זה יוקרתי".</li>
-                        <li><strong>מלכודת 5: לא כל "AI手机" שימושי</strong>—ב-2026 כולם צועקים "AI手机", אך רבים רק משנים שם לעוזר קולי. AI שימושי: תרגום חי, הסרת אנשים מתמונות, עריכה, מודל מקומי, סיכום. השאר מצג שווא.</li>
+                        <li><strong>מלכודת 5: לא כל "AIטלפון" שימושי</strong>—ב-2026 כולם צועקים "AIטלפון", אך רבים רק משנים שם לעוזר קולי. AI שימושי: תרגום חי, הסרת אנשים מתמונות, עריכה, מודל מקומי, סיכום. השאר מצג שווא.</li>
                     </ol>
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">ה', מתי הכי משתלם לקנות?</h4>
@@ -7182,7 +7182,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十九章：数字健康 -->
+                <!-- פרק 29：בריאות דיגיטלית -->
                 <div id="di-er-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 29: בריאות דיגיטלית – לבנות יחסים בריאים עם הטלפון</h3>
                     <p class="chapter-intro mb-4">האם קרה שרצית לגלוש 5 דקות ועברו שעתיים? או ששכבת בלילה והתעוררת ב-2? הטלפון שינה את חיינו אך גוזל זמן ובריאות. פרק זה לא אומר "הפסק" אלא "קח שליטה".</p>
@@ -7227,7 +7227,7 @@
                     <p class="mb-2">הצוואר נושא פי 5-6 מהרגיל. התכופפות ממושכת גורמת לבעיות צוואר, סחרחורות, נימול. שיטות שיפור:</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>הרם את הטלפון</strong>：הרם לגובה העיניים, לא הסתכל למטה. הידיים עייפות אך הצוואר מודה.</li>
-                        <li><strong>כל 30 דקות הזז צוואר</strong>：הסב לאט שמאלה, עצור 3 שניות, חזור; ימינה, 3 שניות. 5 פעמים. ואז כתוב "米" עם הסנטר.</li>
+                        <li><strong>כל 30 דקות הזז צוואר</strong>：הסב לאט שמאלה, עצור 3 שניות, חזור; ימינה, 3 שניות. 5 פעמים. ואז כתוב "אורז" עם הסנטר.</li>
                         <li><strong>עמוד על הקיר 3 דקות</strong>：עורף, שכמות, ישבן, עקביים נצמדים לקיר, 3 דקות ביום, מתקן יציבה.</li>
                     </ul>
 
@@ -7274,7 +7274,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十章：投屏、演示与车载互联 -->
+                <!-- פרק 30：העברת מסך、הדגמה וחיבור רכב -->
                 <div id="di-san-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 30: הקרנה, מצגות וחיבור לרכב</h3>
                     <p class="chapter-intro mb-4">מסך הטלפון 7 אינץ', אך הטלוויזיה 55 והמקרן 100. העברת התמונה למסך גדול היא חוויה שונה. פרק זה מסביר הקרנה, מצגות וחיבור לרכב.</p>
@@ -7367,7 +7367,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十一章：短视频拍摄与内容创作入门 -->
+                <!-- פרק 31：מבוא לצילום וידאו קצר ויצירת תוכן -->
                 <div id="di-san-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 31: צילום סרטונים קצרים ויצירת תוכן למתחילים</h3>
                     <p class="chapter-intro mb-4">ב-2026, וידאו קצר כבר לא "צעצוע של צעירים", אלא דרך בסיסית למידע וביטוי. טלפון הוא הכלי הטוב ביותר - בלי מצלמה, בלי Premiere. פרק זה מתחיל מאפס.</p>
@@ -7450,7 +7450,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十二章：手机安全急救手册 -->
+                <!-- פרק 32：מדריך עזרה ראשונה לאבטחת טלפון -->
                 <div id="di-san-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 32: מדריך עזרה ראשונה לאבטחת הטלפון</h3>
                     <p class="chapter-intro mb-4">"תוכנית חירום". קרא, צלם, הדפס - כי הטלפון אולי לא איתך.</p>
@@ -7619,12 +7619,12 @@
                 </div>
             </section>
 
-            <!-- 六、展望篇（第33-41章） -->
+            <!-- 6. חלק חזון（פרקים 33-41） -->
             <section id="zhan-wang-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ו. חלק סיכום ומבט קדימה (פרקים 33-41)</h2>
                 <p class="chapter-intro mb-4">אחרי פרקטיקה וחירום, נדמיין. 5-20 שנה - הטלפון יעלם?</p>
 
-                <!-- 第三十三章 -->
+                <!-- פרק 33 -->
                 <div id="di-san-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 33: מבט לעתיד – הצעד הבא של הטלפון</h3>
                     <p class="chapter-intro mb-4">לא יעלם, אך יאבד מונופול. 3 נושאים: מכשירים, "היעלמות", אתיקה.</p>
@@ -7695,7 +7695,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十四章：车机互联深度指南 -->
+                <!-- פרק 34：מדריך מעמיק לחיבור רכב-טלפון -->
                 <div id="di-san-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 34: מדריך מעמיק לחיבור רכב – מיזוג הטלפון עם המכונית</h3>
                     <p class="chapter-intro mb-4">רכב = "גלגלים + סמארטפון". מכשיר + רכב = חוויה. 3 נתיבים, מערכות, טיפים.</p>
@@ -7820,12 +7820,12 @@
                 </div>
             </section>
 
-            <!-- 儿童与手机专题（第35章） -->
+            <!-- נושא ילדים וטלפון（פרק 35） -->
             <section id="er-tong-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ילדים וטלפון (פרק 35)</h2>
                 <p class="chapter-intro mb-4">ילדים+טלפון = כאב ראש. מתי? איך? לא שיפוטי.</p>
 
-                <!-- 第三十五章 -->
+                <!-- פרק 35 -->
                 <div id="di-san-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 35: ילדים וטלפונים – מדריך חינוכי לעידן הדיגיטלי</h3>
                     <p class="chapter-intro mb-4">לא "שטן" ולא "מוקדם = חכם". לפי גיל.</p>
@@ -7972,7 +7972,7 @@
                 </div>
             </section>
 
-            <!-- 第三十六章：手机与智能家居——让家变聪明 -->
+            <!-- פרק 36：טלפון ובית חכם——להפוך את הבית לחכם -->
             <div id="di-san-shi-liu-zhang" class="mb-10 content-section">
                 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">פרק 36: טלפון ובית חכם – להפוך את הבית לחכם</h3>
                 <p class="chapter-intro mb-4">טלפון = שלט לבית. Smart Home: חידוש → שגרה. פרוטוקול/אקוסיסטם/מרכז/קיט/אבטחה.</p>
@@ -7980,7 +7980,7 @@
                 <h4 class="text-lg font-semibold mt-4 mb-2">א', פרוטוקול</h4>
                 <p class="mb-2">קנה? פרוטוקול. 4:</p>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>Matter</strong>：2022 CSA, Apple/Google/Amazon/Samsung. שפה אחת. 2023-2026. HomeKit/Google/Alexa/米家.</li>
+                    <li><strong>Matter</strong>：2022 CSA, Apple/Google/Amazon/Samsung. שפה אחת. 2023-2026. HomeKit/Google/Alexa/Mijia.</li>
                     <li><strong>Thread</strong>："צינור" של Matter. חסכוני, mesh. HomePod/Apple TV.</li>
                     <li><strong>Wi-Fi</strong>：Wi-Fi, רחב, צריכה, מצלמה/רובוט.</li>
                     <li><strong>Bluetooth</strong>：פשוט, חסכוני, קצר, מנעול/חיישן.</li>
@@ -8011,7 +8011,7 @@
                         </tr>
                         <tr>
                             <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xiaomi</td>
-                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מגוון/זול/小爱</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מגוון/זול/Xiaoai</td>
                             <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">סגור/ענן/פרסומות</td>
                             <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מתחיל</td>
                         </tr>
@@ -8025,7 +8025,7 @@
                 </table>
                 <div class="info-box rounded-lg p-4 mt-3">
                     <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>החלטה</p>
-                    <p class="mt-1">iPhone=HomeKit, Huawei=智联, אחר=Xiaomi. Matter.</p>
+                    <p class="mt-1">iPhone=HomeKit, Huawei=חיבור חכם, אחר=Xiaomi. Matter.</p>
                 </div>
 
                 <h4 class="text-lg font-semibold mt-4 mb-2">ג', טלפון כמרכז</h4>
@@ -8049,14 +8049,14 @@
                 <h4 class="text-lg font-semibold mt-4 mb-2">ד', קיט</h4>
                 <p class="mb-2">4 פריטים:</p>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>רמקול חכם</strong>：小爱/HomePod/Alexa.<em>שים לב</em>：אקוסיסטם קודם.</li>
+                    <li><strong>רמקול חכם</strong>：Xiaoai/HomePod/Alexa.<em>שים לב</em>：אקוסיסטם קודם.</li>
                     <li><strong>נורה חכמה</strong>：Yeelight/Hue.<em>שים לב</em>：E27/B22.</li>
                     <li><strong>שקע חכם</strong>：Xiaomi/TP-Link.<em>שים לב</em>：עומס.</li>
                     <li><strong>מנעול חכם</strong>：Lockin/Xiaomi/Kaadas.<em>שים לב</em>：Matter/סוללה/מפתח.</li>
                 </ul>
                 <div class="info-box rounded-lg p-4 mt-3">
                     <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>סדר</p>
-                    <p class="mt-1">音箱→灯/插座→锁/מצלמה.</p>
+                    <p class="mt-1">רמקול→אור/שקע→מנעול/מצלמה.</p>
                 </div>
 
                 <h4 class="text-lg font-semibold mt-4 mb-2">ה', אבטחה</h4>
@@ -8128,8 +8128,8 @@
                 <h4 class="text-lg font-semibold mt-4 mb-2">ב', 3 אופליין</h4>
                 <p class="mb-2">אות נעלם, כלים לא.</p>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>מפות</strong>：Google/高德/OsmAnd, הורד.</li>
-                    <li><strong>תרגום</strong>：Google/有道/百度.<strong>הורד שפה</strong>, אחרת לא עובד.</li>
+                    <li><strong>מפות</strong>：Google/Amap/OsmAnd, הורד.</li>
+                    <li><strong>תרגום</strong>：Google/Youdao/百度.<strong>הורד שפה</strong>, אחרת לא עובד.</li>
                     <li><strong>תשלום</strong>：UnionPay/Visa/Mastercard NFC; GrabPay/PayPay/Toss; Alipay/WeChat מוגבל.</li>
                 </ul>
                 <h4 class="text-lg font-semibold mt-4 mb-2">ג', תעבורה</h4>
@@ -8210,15 +8210,15 @@
                 <h4 class="text-lg font-semibold mt-4 mb-2">א', צינור</h4>
                 <p class="mb-2">וידאו = טקסט+תמונה+קול+עריכה.</p>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>טקסט</strong>：ChatGPT/豆包/Kimi, hook.</li>
-                    <li><strong>תמונה</strong>：可灵/Runway/HeyGen.</li>
-                    <li><strong>קול</strong>：剪映/ElevenLabs/TTS.</li>
-                    <li><strong>עריכה</strong>：剪映.</li>
+                    <li><strong>טקסט</strong>：ChatGPT/Doubao/Kimi, hook.</li>
+                    <li><strong>תמונה</strong>：Kling/Runway/HeyGen.</li>
+                    <li><strong>קול</strong>：CapCut/ElevenLabs/TTS.</li>
+                    <li><strong>עריכה</strong>：CapCut.</li>
                 </ul>
                 <h4 class="text-lg font-semibold mt-4 mb-2">ב', 30 שנ'</h4>
                 <ol class="list-decimal pl-6 mb-3 space-y-1">
                     <li class="pl-1">80-120 תווים.</li>
-                    <li class="pl-1">剪映 &gt; טקסט.</li>
+                    <li class="pl-1">CapCut &gt; טקסט.</li>
                     <li class="pl-1">קול.</li>
                     <li class="pl-1">כתוביות.</li>
                     <li class="pl-1">BGM, 1080P.</li>
@@ -8244,7 +8244,7 @@
                 <p class="mb-2">לא "טלוויזיה קצרה", אלא "hook".</p>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
                     <li><strong>פורמולה</strong>：3 שנ' hook → 30 → 60 → סיום.</li>
-                    <li><strong>רקע</strong>：סטריאוטיפ, "一眼懂".</li>
+                    <li><strong>רקע</strong>：סטריאוטיפ, "מובן במבט אחד".</li>
                     <li><strong>קצב</strong>：15-20 שנ', נקודה.</li>
                 </ul>
                 <h4 class="text-lg font-semibold mt-4 mb-2">ב', צילום</h4>
@@ -8255,25 +8255,25 @@
                 </ul>
                 <h4 class="text-lg font-semibold mt-4 mb-2">ג', פלטפורמה</h4>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>פלטפורמה</strong>：抖音/快手/红果.</li>
-                    <li><strong>רישוי</strong>："微短剧" רישוי.</li>
-                    <li><strong>הכנסה</strong>：分账/投流/定制.</li>
+                    <li><strong>פלטפורמה</strong>：抖音/快手/Hongguo.</li>
+                    <li><strong>רישוי</strong>："מיקרו-דרמה" רישוי.</li>
+                    <li><strong>הכנסה</strong>：חלוקת חשבון/קידום/מותאם.</li>
                 </ul>
                 <div class="info-box rounded-lg p-4 mt-3">
                     <p><strong>סיכון</strong>：תחרות/סיכון, לא all-in.</p>
                 </div>
                 <div class="bg-blue-50 dark:bg-gray-700 rounded-lg p-4 mt-4">
                     <p class="font-semibold text-blue-700 dark:text-blue-300"><i class="fas fa-hand-pointer mr-2"></i>תרגול</p>
-                    <p class="mt-1 text-gray-700 dark:text-gray-300">תרגול: hook/升级/悬念.</p>
+                    <p class="mt-1 text-gray-700 dark:text-gray-300">תרגול: hook/שדרוג/מתח.</p>
                 </div>
             </div>
 
-            <!-- 七、附录 -->
+            <!-- 7. נספח -->
             <section id="fu-lu" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ז. נספחים</h2>
                 <p class="chapter-intro mb-4">1. "טרילוגיית" בדיקת המכשיר עם הפתיחה:</p>
                 
-                <!-- 附录A -->
+                <!-- נספחA -->
                 <div id="fu-lu-a" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">בדיקת מראה חיצוני</h3>
                     
@@ -8300,7 +8300,7 @@
                     </ul>
                 </div>
 
-                <!-- 附录B -->
+                <!-- נספחB -->
                 <div id="fu-lu-b" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">נספח B: מדריך קטן לתרגול מעשי</h3>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -8311,7 +8311,7 @@
                     </ul>
                 </div>
 
-                <!-- 附录C -->
+                <!-- נספחC -->
                 <div id="fu-lu-c" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">בעצם הכוונה ל...</h3>
                     <div class="overflow-x-auto">
@@ -8394,7 +8394,7 @@
                     </div>
                 </div>
 
-                <!-- 附录D -->
+                <!-- נספחD -->
                 <div id="fu-lu-d" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">משתמשי Apple</h3>
                     
@@ -8422,7 +8422,7 @@
                     </ol>
                 </div>
 
-                <!-- 附录E -->
+                <!-- נספחE -->
                 <div id="fu-lu-e" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">נספח E: תודות והערות</h3>
                     <p class="mb-2">נקודות עיקריות בעדכון גרסה 1.6</p>
@@ -8451,19 +8451,19 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>פרק 29: בריאות</strong> —Screen Time, 20-20-20, שינה, חרדה.</li>
                         <li><strong>פרק 30: מסך/רכב</strong> —AirPlay/Miracast/DLNA, DeX, CarPlay/Auto/HiCar/CarLife.</li>
-                        <li><strong>פרק 31: וידאו</strong> —选题, 5 צעדים, 5 מצלמות, 剪映.</li>
+                        <li><strong>פרק 31: וידאו</strong> —בחירת נושא, 5 צעדים, 5 מצלמות, CapCut.</li>
                         <li><strong>פרק 32: חירום</strong> —30 דק', 72 שע', Safe Mode, 6 צעדים.</li>
                     </ul>
 
                     <p class="mb-2"><strong>ב', 2 פרקים</strong></p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>פרק 27: קשישים</strong> —简易, 6 הונאות, סיוע, WeChat, SOS.</li>
+                        <li><strong>פרק 27: קשישים</strong> —פשוט, 6 הונאות, סיוע, WeChat, SOS.</li>
                         <li><strong>פרק 28: קנייה</strong> —3 צעדים, 5 פרמטרים, 5 תקציב, 7 תרחיש.</li>
                     </ul>
 
                     <p class="mb-2"><strong>ג', קריאה</strong></p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>סרגל קריאה</strong>：播放/暂停, 0.5-2.5x.</li>
+                        <li><strong>סרגל קריאה</strong>：השמעה/השהה, 0.5-2.5x.</li>
                         <li><strong>כפתור אזניות</strong>：התחל.</li>
                         <li><strong>קיצורי מקלדת</strong>ניתוח הרחבת זיכרון בטלפוני אנדרואיד<code>R</code> קריאה,<code>ESC</code> עצור.</li>
                         <li><strong>אופטימיזציה</strong>：רציף, הסתר.</li>
@@ -8494,7 +8494,7 @@
                     <p class="mb-2">טלפונים מתקפלים הפכו מ"טכנולוגיית עתיד" לקטגוריה בוגרת ש"ניתן לקנות היום". אבל הם שונים מאוד מטלפונים רגילים בצורה, הרגלי שימוש ותחזוקה. האם כדאי לקנות, איך לבחור ואיך להשתמש — המדריך הזה יעזור לך להבין.</p>
                 </div>
 
-                <!-- 附录F：折叠屏专题 -->
+                <!-- נספחF：נושא מיוחד: מסך מתקפל -->
                 <div id="fu-lu-f" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">נספח F: נושא רכישה ושימוש במסך מתקפל</h3>
                     <p class="chapter-intro mb-4">נתחיל במסקנה:</p>
@@ -8625,11 +8625,11 @@
 
                     <div class="info-box rounded-lg p-4 mt-4">
                         <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>תזכורת אחרונה</p>
-                        <p class="mt-1">2026. בדוק: ציר/折痕/维修. נסה.</p>
+                        <p class="mt-1">2026. בדוק: ציר/קמט/תיקון. נסה.</p>
                     </div>
                 </div>
 
-                <!-- 结语 -->
+                <!-- סיכום -->
                 <div id="jie-yu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">דברי סיכום: שמרו על סקרנות, שמרו על צלילות</h3>
                     <p class="mb-2">ברכות!</p>
@@ -8646,7 +8646,7 @@
                     </div>
                 </div>
 
-                <!-- 附录G：全书速查索引 -->
+                <!-- נספחG：אינדקס עיון מהיר לכל הספר -->
                 <div id="fu-lu-g" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">נספח G: מפתח חיפוש מהיר לכל הספר</h3>
                     <p class="chapter-intro mb-4">לפי פין-יין.</p>
@@ -8692,7 +8692,7 @@
                                 <li>GaN → <a href="#di-shi-wu-zhang" class="text-primary hover:underline">פרק 15</a></li>
                                 <li>iCloud → <a href="#di-shi-liu-zhang" class="text-primary hover:underline">פרק 16</a></li>
                                 <li>Smart Home → <a href="#di-san-shi-liu-zhang" class="text-primary hover:underline">פרק 36</a></li>
-                                <li>צילום → <a href="#di-shi-yi-zhang-advanced" class="text-primary hover:underline">פרק 11附</a></li>
+                                <li>צילום → <a href="#di-shi-yi-zhang-advanced" class="text-primary hover:underline">פרק 11 נספח</a></li>
                             </ul>
                         </div>
                         <div>
@@ -8703,7 +8703,7 @@
                                 <li>SafetyNet → <a href="#di-er-shi-zhang-jinjie" class="text-primary hover:underline">פרק 20</a></li>
                                 <li>SIM swap → <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">פרק 32</a></li>
                                 <li>Root → <a href="#di-er-shi-zhang-jinjie" class="text-primary hover:underline">פרק 20</a> / <a href="#di-er-shi-si-zhang" class="text-primary hover:underline">פרק 24</a></li>
-                                <li>Termux → <a href="#di-er-shi-zhang-termux" class="text-primary hover:underline">פרק 20附</a></li>
+                                <li>Termux → <a href="#di-er-shi-zhang-termux" class="text-primary hover:underline">פרק 20 נספח</a></li>
                             </ul>
                         </div>
                         <div>
@@ -8723,11 +8723,11 @@
                                 <li>שינה → <a href="#di-san-shi-jiu-zhang" class="text-primary hover:underline">פרק 39</a></li>
                                 <li>Detox → <a href="#di-san-shi-jiu-zhang" class="text-primary hover:underline">פרק 39</a></li>
                                 <li>דיגיטלי → <a href="#di-si-shi-zhang" class="text-primary hover:underline">פרק 40</a></li>
-                                <li>剪映 → <a href="#di-si-shi-zhang" class="text-primary hover:underline">פרק 40</a></li>
-                                <li>图生视频 → <a href="#di-si-shi-zhang" class="text-primary hover:underline">פרק 40</a></li>
-                                <li>短剧 → <a href="#di-si-shi-yi-zhang" class="text-primary hover:underline">פרק 41</a></li>
-                                <li>备案 → <a href="#di-si-shi-yi-zhang" class="text-primary hover:underline">פרק 41</a></li>
-                                <li>变现 → <a href="#di-si-shi-yi-zhang" class="text-primary hover:underline">פרק 41</a></li>
+                                <li>CapCut → <a href="#di-si-shi-zhang" class="text-primary hover:underline">פרק 40</a></li>
+                                <li>וידאו מתמונה → <a href="#di-si-shi-zhang" class="text-primary hover:underline">פרק 40</a></li>
+                                <li>דרמה קצרה → <a href="#di-si-shi-yi-zhang" class="text-primary hover:underline">פרק 41</a></li>
+                                <li>רישום → <a href="#di-si-shi-yi-zhang" class="text-primary hover:underline">פרק 41</a></li>
+                                <li>מונטיזציה → <a href="#di-si-shi-yi-zhang" class="text-primary hover:underline">פרק 41</a></li>
                                 </ul>
                         </div>
                         <div>
@@ -8735,16 +8735,16 @@
                             <ul class="list-disc pl-5 space-y-0.5 text-gray-700 dark:text-gray-300">
                                 <li>קבצים → <a href="#di-er-zhang" class="text-primary hover:underline">פרק 2</a></li>
                                 <li>קשישים → <a href="#di-er-shi-qi-zhang" class="text-primary hover:underline">פרק 27</a></li>
-                                <li>投屏 → <a href="#di-san-shi-zhang" class="text-primary hover:underline">פרק 30</a></li>
+                                <li>העברת מסך → <a href="#di-san-shi-zhang" class="text-primary hover:underline">פרק 30</a></li>
                                 <li>וידאו → <a href="#di-san-shi-yi-zhang" class="text-primary hover:underline">פרק 31</a></li>
                                 <li>חירום → <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">פרק 32</a></li>
-                                <li>Git/GitHub → <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">פרק 23附</a></li>
+                                <li>Git/GitHub → <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">פרק 23 נספח</a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- 附录H：版本路线图 -->
+                <!-- נספחH：מפת דרכים לגרסה -->
                 <div id="fu-lu-h" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">נספח H: מפת דרכים של גרסאות</h3>
                     <p class="chapter-intro mb-4">מתעדכן. תכנון:</p>
@@ -8754,8 +8754,8 @@
                             <li><strong>לבישים</strong>：Apple Watch, Huawei, Oura/Galaxy Ring</li>
                             <li><strong>טיול</strong>：eSIM, תעבורה, מפות, תשלום, תרגום</li>
                             <li><strong>בריאות</strong>：ספורט, שינה, דופק, SpO₂, נפש</li>
-                            <li><strong>AI וידאו</strong>：剪映, 可灵, דיגיטלי, קול</li>
-                            <li><strong>短剧</strong>：תסריט, צילום, פלטפורמה</li>
+                            <li><strong>AI וידאו</strong>：CapCut, Kling, דיגיטלי, קול</li>
+                            <li><strong>דרמה קצרה</strong>：תסריט, צילום, פלטפורמה</li>
                         </ul>
                     </div>
                     <div class="warning-box rounded-lg p-4 mt-3">
@@ -8768,7 +8768,7 @@
         </main>
     </div>
 
-    <!-- 快捷工具：浮动按钮组 -->
+    <!-- כלים מהירים：קבוצת כפתורים צפה -->
     <div id="quick-tools" class="quick-tools no-print" aria-label="כלים">
         <button id="quick-search" class="quick-tool-btn" title="חיפוש (Ctrl+K)" aria-label="חיפוש">
             <i class="fas fa-search" aria-hidden="true"></i>
@@ -8793,7 +8793,7 @@
         </button>
     </div>
 
-    <!-- 快捷键面板 -->
+    <!-- פאנל קיצורי מקשים -->
     <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="קיצורי מקלדת">
         <div class="search-panel" style="max-width:480px">
             <div class="search-input-wrapper">
@@ -8813,7 +8813,7 @@
         </div>
     </div>
 
-    <!-- 备份/恢复弹窗 -->
+    <!-- גיבוי/חלון קופץ שחזור -->
     <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="גיבוי">
         <div class="search-panel" style="max-width:520px">
             <div class="search-input-wrapper">
@@ -8848,13 +8848,13 @@
         </div>
     </div>
 
-    <!-- 阅读连续天数提示 -->
+    <!-- התראת ימי קריאה רצופים -->
     <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
         <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
         <span id="streak-toast-text">רצף יום X!</span>
     </div>
 
-    <!-- 语音朗读控件栏 -->
+    <!-- סרגל בקרת הקראה קולית -->
     <div id="tts-controls" class="tts-controls" role="region" aria-label="קריאה" aria-live="polite">
         <span class="tts-chapter-label" id="tts-label" title="פרק">לא התחיל</span>
         <button class="tts-btn" id="tts-prev" title="הקודם" aria-label="הקודם"><i class="fas fa-step-backward"></i></button>
@@ -8866,7 +8866,7 @@
         <button class="tts-btn" id="tts-stop" title="עצור" aria-label="עצור"><i class="fas fa-times"></i></button>
     </div>
 
-    <!-- 回到顶部按钮 -->
+    <!-- כפתור חזרה לראש הדף -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="למעלה">
         <svg class="progress-ring" viewBox="0 0 40 40">
             <circle class="bg" cx="20" cy="20" r="18"/>
@@ -8875,7 +8875,7 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- 阅读位置恢复提示 -->
+    <!-- התראת שחזור מיקום קריאה -->
     <div id="restore-toast" class="restore-position-toast" role="alert">
         <i class="fas fa-bookmark" aria-hidden="true"></i>
         <span id="restore-toast-text">התעלם</span>
@@ -8883,7 +8883,7 @@
         <button class="btn-dismiss" id="dismiss-btn">סגור</button>
     </div>
 
-    <!-- JS脚本 -->
+    <!-- JSסקריפט -->
     <script>
         (function() {
             'use strict';
@@ -8918,7 +8918,7 @@
             const restoreBtn = $('#restore-btn');
             const dismissBtn = $('#dismiss-btn');
 
-            // ===== 主题 =====
+            // ===== ערכת נושא =====
             function applyTheme(theme) {
                 html.classList.toggle('dark', theme === 'dark');
                 localStorage.setItem('theme', theme);
@@ -8934,12 +8934,12 @@
             if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
             if (quickTheme) quickTheme.addEventListener('click', toggleTheme);
 
-            // ===== 滚动：进度 + 阴影 + 返回顶部 + 目录进度 + 进度环 =====
+            // ===== גלילה：התקדמות + צל + חזרה לראש הדף + התקדמות תוכן העניינים + טבעת התקדמות =====
             const sections = $$('.content-section');
             const totalChapters = sections.length;
             if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} פרק`;
 
-            // 进度环参数
+            // פרמטרי טבעת התקדמות
             const progressRingFg = backToTop.querySelector('.progress-ring .fg');
             const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
             if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
@@ -8953,7 +8953,7 @@
                         const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
                         progressBar.style.width = progress + '%';
 
-                        // 进度环更新
+                        // עדכון טבעת התקדמות
                         if (progressRingFg) {
                             const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
                             progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
@@ -8973,7 +8973,7 @@
                             backToTop.classList.remove('opacity-100', 'visible');
                         }
 
-                        // 阅读到第几章
+                        // קריאה עד לפרק מספר
                         let passedChapters = 0;
                         const viewportTop = scrollY + 100;
                         sections.forEach(sec => {
@@ -9002,15 +9002,15 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 阅读位置记忆 =====
+            // ===== זיכרון מיקום קריאה =====
             const POSITION_KEY = 'phoneCourse_scrollPos';
             const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
             let savePosTimer = null;
             function saveReadingPosition() {
                 const scrollY = window.scrollY;
-                if (scrollY < 200) return; // 太靠前不保存
+                if (scrollY < 200) return; // קרוב מדי לראש הדף, לא נשמר
                 localStorage.setItem(POSITION_KEY, scrollY.toString());
-                // 找到当前章节名
+                // מציאת שם הפרק הנוכחי
                 let currentChapter = '';
                 const viewportTop = scrollY + 100;
                 for (let i = sections.length - 1; i >= 0; i--) {
@@ -9027,14 +9027,14 @@
                 savePosTimer = setTimeout(saveReadingPosition, 1000);
             }, { passive: true });
 
-            // 页面加载时恢复位置
+            // שחזור מיקום בעת טעינת הדף
             function tryRestorePosition() {
                 const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
                 const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
-                    restoreToastText.textContent = `上次读到：${savedChapter}`;
+                    restoreToastText.textContent = `קריאה אחרונה: ${savedChapter}`;
                     setTimeout(() => restoreToast.classList.add('show'), 800);
-                    // 10秒后自动隐藏
+                    // 10 שניות ואז מסתיר אוטומטית
                     setTimeout(() => restoreToast.classList.remove('show'), 15000);
                 }
             }
@@ -9053,7 +9053,7 @@
                 });
             }
 
-            // ===== 滚动入场动画 =====
+            // ===== אנימציית כניסה בגלילה =====
             const visibleObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -9062,7 +9062,7 @@
                     }
                 });
             }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
-            // 第一屏的内容直接可见
+            // תוכן המסך הראשון גלוי ישירות
             sections.forEach((sec, i) => {
                 const rect = sec.getBoundingClientRect();
                 if (rect.top < window.innerHeight) {
@@ -9072,7 +9072,7 @@
                 }
             });
 
-            // ===== 侧边栏打开/关闭 =====
+            // ===== סרגל הצד פתוח/סגור =====
             function openSidebar() {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
@@ -9091,13 +9091,13 @@
             });
             if (overlay) overlay.addEventListener('click', closeSidebar);
 
-            // 快捷工具：打开目录
+            // כלים מהירים：פתיחת תוכן העניינים
             if (quickToc) quickToc.addEventListener('click', () => {
                 if (window.innerWidth < 1024) openSidebar();
                 else window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 全局锚点导航：补偿固定导航栏偏移 =====
+            // ===== ניווט עוגן גלובלי：פיצוי על היסט סרגל ניווט קבוע =====
             const NAVBAR_HEIGHT = 80;
             function scrollToAnchor(id) {
                 const el = document.getElementById(id);
@@ -9118,7 +9118,7 @@
                 requestAnimationFrame(() => scrollToAnchor(targetId));
             }, { passive: false });
 
-            // ===== 目录折叠 =====
+            // ===== קיפול תוכן העניינים =====
             $$('.toc-toggle-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -9137,7 +9137,7 @@
                 });
             });
 
-            // ===== 目录筛选 =====
+            // ===== סינון תוכן העניינים =====
             if (tocFilter && tocList) {
                 tocFilter.addEventListener('input', () => {
                     const q = tocFilter.value.trim().toLowerCase();
@@ -9154,7 +9154,7 @@
                 });
             }
 
-            // ===== 目录高亮 =====
+            // ===== הדגשת תוכן העניינים =====
             const tocLinkMap = new Map();
             $$('#sidebar a').forEach(item => {
                 const href = item.getAttribute('href');
@@ -9196,7 +9196,7 @@
 
             sections.forEach(section => observer.observe(section));
 
-            // ===== 书签系统 =====
+            // ===== מערכת סימניות =====
             const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
             function getBookmarks() {
                 try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
@@ -9212,7 +9212,7 @@
             }
             function isBookmarked(id) { return getBookmarks().includes(id); }
 
-            // 给每个章节添加书签按钮
+            // הוספת כפתור סימנייה לכל פרק
             sections.forEach(sec => {
                 const id = sec.id;
                 if (!id) return;
@@ -9227,10 +9227,10 @@
                     btn.classList.toggle('active', added);
                     btn.querySelector('span').textContent = added ? 'סימנייה' : 'סימנייה';
                     btn.setAttribute('aria-label', added ? 'הסר סימנייה' : 'סמן');
-                    // 更新侧边栏标记
+                    // עדכון סימן סרגל הצד
                     updateTocBookmark(id, added);
                 });
-                // 插入到h3后面
+                // הוספה לתוךh3אחרי
                 h3.parentNode.insertBefore(btn, h3.nextSibling);
             });
 
@@ -9240,10 +9240,10 @@
                     tocLink.classList.toggle('bookmarked', isBookmarked);
                 }
             }
-            // 初始化侧边栏书签标记
+            // אתחול סימני סימניות בסרגל הצד
             getBookmarks().forEach(id => updateTocBookmark(id, true));
 
-            // ===== 章节完成勾选 =====
+            // ===== סימון השלמת פרק =====
             const COMPLETED_KEY = 'phoneCourse_completed';
             function getCompleted() {
                 try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
@@ -9264,7 +9264,7 @@
                 if (!id) return;
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
-                // 找到meta条或h3前面的元素
+                // מצאmetaפריטים אוh3האלמנטים הקודמים
                 const metaDiv = h3.previousElementSibling;
                 const check = document.createElement('button');
                 check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
@@ -9275,9 +9275,9 @@
                     check.classList.toggle('checked', done);
                     check.querySelector('span:last-child').textContent = done ? 'נקרא' : 'סמן נקרא';
                     check.setAttribute('aria-label', done ? 'בטל' : 'סמן');
-                    // 更新侧边栏
+                    // עדכון סרגל הצד
                     updateTocCompleted(id, done);
-                    // 更新完成进度
+                    // עדכון התקדמות השלמה
                     updateCompletedProgress();
                 });
                 if (metaDiv && metaDiv.classList.contains('flex')) {
@@ -9298,13 +9298,13 @@
             function updateCompletedProgress() {
                 const completed = getCompleted().length;
                 if (readingProgressText) {
-                    // 也更新完成数显示
+                    // גם מעדכן את תצוגת מספר ההשלמות
                     const passed = parseInt(readingProgressText.textContent) || 0;
-                    readingProgressText.textContent = `${passed} / ${totalChapters} 章`;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} פרקים`;
                 }
             }
 
-            // ===== 搜索（增强：键盘导航 + 结果计数） =====
+            // ===== חיפוש（שיפור：ניווט מקלדת + ספירת תוצאות） =====
             let searchData = null;
             let searchSelectedIdx = -1;
             let searchResultItems = [];
@@ -9373,7 +9373,7 @@
                         return;
                     }
 
-                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">找到 ${results.length} 个结果</div>`;
+                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">מצא ${results.length} תוצאות</div>`;
                     searchResults.innerHTML = countHtml + results.map(item => {
                         const idx = item.text.toLowerCase().indexOf(query);
                         const start = Math.max(0, idx - 40);
@@ -9403,7 +9403,7 @@
                 }, 200);
             });
 
-            // 搜索键盘导航
+            // ניווט מקלדת בחיפוש
             if (searchInput) searchInput.addEventListener('keydown', (e) => {
                 if (!searchResultItems.length) return;
                 if (e.key === 'ArrowDown') {
@@ -9427,7 +9427,7 @@
                 }
             });
 
-            // ===== 字号 =====
+            // ===== גודל גופן =====
             const DEFAULT_FONT_SIZE = 16;
             function setFontSize(size) {
                 contentEl.style.fontSize = size + 'px';
@@ -9448,7 +9448,7 @@
                 });
             });
 
-            // ===== 触摸滑动关闭侧边栏 =====
+            // ===== החלקת מגע לסגירת סרגל הצד =====
             let touchStartX = 0;
             let touchStartY = 0;
             sidebar.addEventListener('touchstart', (e) => {
@@ -9461,7 +9461,7 @@
                 if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
             }, { passive: true });
 
-            // ===== 章节导航 =====
+            // ===== ניווט פרקים =====
             const sectionIds = sections.map(s => s.id);
             sections.forEach((section, i) => {
                 const nav = document.createElement('div');
@@ -9479,12 +9479,12 @@
                 section.appendChild(nav);
             });
 
-            // ===== 打印 =====
+            // ===== הדפסה =====
             function doPrint() { window.print(); }
             if (printBtn) printBtn.addEventListener('click', doPrint);
             if (quickPrint) quickPrint.addEventListener('click', doPrint);
 
-            // ===== 全局键盘快捷键 =====
+            // ===== קיצורי מקלדת גלובליים =====
             const shortcutsOverlay = $('#shortcuts-overlay');
             const backupOverlay = $('#backup-overlay');
             function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
@@ -9501,7 +9501,7 @@
             if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
             if (backupClose) backupClose.addEventListener('click', closeBackup);
 
-            // 点击遮罩关闭弹窗
+            // לחיצה על מסך מסיכה לסגירת חלון קופץ
             if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
                 if (e.target === shortcutsOverlay) closeShortcuts();
             });
@@ -9515,7 +9515,7 @@
                     e.preventDefault();
                     searchOverlay.classList.contains('active') ? closeSearch() : openSearch();
                 } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                    // 浏览器已经处理打印
+                    // הדפדפן כבר טיפל בהדפסה
                 } else if (e.key === 'Escape') {
                     if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
                     if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
@@ -9529,7 +9529,7 @@
                 }
             });
 
-            // ===== 阅读连续天数追踪 =====
+            // ===== מעקב ימי קריאה רצופים =====
             const STREAK_KEY = 'reading-streak';
             const STREAK_DATE_KEY = 'reading-streak-date';
             const streakToast = $('#streak-toast');
@@ -9551,18 +9551,18 @@
                         localStorage.setItem(STREAK_KEY, streak.toString());
                         localStorage.setItem(STREAK_DATE_KEY, today);
 
-                        // 显示连续天数提示
+                        // הצגת התראת ימים רצופים
                         if (streak >= 2 && streakToast && streakToastText) {
-                            streakToastText.textContent = '🔥 连续阅读第 ' + streak + ' 天！坚持下去！';
+                            streakToastText.textContent = '🔥 קריאה רצופה יום  ' + streak + '  ימים! המשך כך!';
                             streakToast.classList.add('show');
                             setTimeout(() => streakToast.classList.remove('show'), 5000);
                         }
                     }
-                } catch(e) { /* localStorage 可能不可用 */ }
+                } catch(e) { /* localStorage עשוי להיות לא זמין */ }
             }
             updateStreak();
 
-            // ===== 备份/恢复功能 =====
+            // ===== גיבוי/פונקציית שחזור =====
             function exportBackup() {
                 try {
                     const data = {
@@ -9579,20 +9579,20 @@
                         bookmarks: [],
                         ratings: {}
                     };
-                    // 收集健康自检状态
+                    // איסוף סטטוס בדיקות בריאות עצמית
                     for (let i = 0; i < 8; i++) {
                         data.healthChecks[i] = localStorage.getItem('health-check-' + i);
                     }
-                    // 收集章节完成状态
+                    // איסוף סטטוס השלמת פרקים
                     $$('.chapter-check.checked').forEach(c => {
                         const sec = c.closest('.content-section');
                         if (sec) data.chapterChecks[sec.id] = true;
                     });
-                    // 收藏书签
+                    // סימנייהסימנייה
                     $$('.toc-item.bookmarked').forEach(b => {
                         data.bookmarks.push(b.getAttribute('href').replace('#', ''));
                     });
-                    // 收集评分
+                    // איסוף דירוגים
                     $$('.chapter-rating').forEach(r => {
                         const sec = r.closest('.content-section');
                         if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
@@ -9621,13 +9621,13 @@
                         if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
                         if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
                         if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
-                        // 恢复健康自检
+                        // שחזור בדיקת בריאות
                         if (data.healthChecks) {
                             Object.keys(data.healthChecks).forEach(i => {
                                 localStorage.setItem('health-check-' + i, data.healthChecks[i]);
                             });
                         }
-                        // 恢复章节完成状态
+                        // שחזור סטטוס השלמת פרקים
                         if (data.chapterChecks) {
                             Object.keys(data.chapterChecks).forEach(id => {
                                 const sec = document.getElementById(id);
@@ -9639,7 +9639,7 @@
                                 }
                             });
                         }
-                        // 恢复书签
+                        // שחזור סימניות
                         if (data.bookmarks) {
                             data.bookmarks.forEach(id => {
                                 const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
@@ -9674,7 +9674,7 @@
             });
             if (backupReset) backupReset.addEventListener('click', resetAllData);
 
-            // ===== 章节评分系统 =====
+            // ===== מערכת דירוג פרקים =====
             sections.forEach(sec => {
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
@@ -9695,7 +9695,7 @@
                     });
                     ratingDiv.appendChild(star);
                 }
-                // 插入到h3后面
+                // הוספה לתוךh3אחרי
                 h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
                 updateStars(ratingDiv);
             });
@@ -9707,7 +9707,7 @@
                 });
             }
 
-            // ===== scroll 防抖优化 =====
+            // ===== scroll אופטימיזציית ייצוב תמונה =====
             let scrollTicking = false;
             const originalOnScroll = onScroll;
             function debouncedScroll() {
@@ -9722,7 +9722,7 @@
             window.removeEventListener('scroll', onScroll);
             window.addEventListener('scroll', debouncedScroll, { passive: true });
 
-            // ===== 系统深色模式跟随 =====
+            // ===== מעקב אחר מצב כהה של המערכת =====
             if (window.matchMedia) {
                 const mq = window.matchMedia('(prefers-color-scheme: dark)');
                 mq.addEventListener('change', (e) => {
@@ -9732,7 +9732,7 @@
                 });
             }
 
-            // ===== 自动给每个章节标题添加面包屑与难度标签 =====
+            // ===== הוספת פירורי לחם ותגי רמה לכל כותרת פרק אוטומטית =====
             sections.forEach(sec => {
                 const id = sec.id || '';
                 const h3 = sec.querySelector('h3');
@@ -9759,54 +9759,54 @@
                         ${level === 'beginner' ? 'מתחילים' : level === 'intermediate' ? 'מתקדם' : 'מתקדם מאוד'}
                     </span>
                     <span class="reading-time">
-                        <i class="far fa-clock" aria-hidden="true"></i>约 ${minutes} 分钟
+                        <i class="far fa-clock" aria-hidden="true"></i>כ ${minutes} דקות
                     </span>
                 `;
                 h3.parentNode.insertBefore(meta, h3);
             });
 
-            // ===== 给章节添加"סיכום"区块 =====
+            // ===== הוספה לפרק"סיכום"בלוק =====
             function addChapterSummary(sec, points) {
                 const div = document.createElement('div');
                 div.className = 'chapter-summary';
-                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>סיכום פרק זה</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
                 const nav = sec.querySelector('.chapter-nav');
                 if (nav) sec.insertBefore(div, nav);
                 else sec.appendChild(div);
             }
             const summaries = {
-                'fu-lu-f': ['מתקפל: בוגר, לא מיינסטרים', 'ספר=טלפון+טאבלט; צדפת=נייד+מסך', 'למי: קריאה/עסקים/נשים', '6: ציר/UTG/折痕/מסך/משקל/מחיר', 'ייחודי: split/90°/מסך/PC', 'תחזוקה: קור/זר/פילם/אבק', 'ציפיות: עקבות/כבד/סוללה/ערך/תיקון', 'קנה: צורה, לא "מתקדם"'],
-                'di-ling-zhang': ['ספר: מדבר + פרקטי', 'סמלים: [按钮]/>/加粗/斜体', 'נפח "מצטמצם"', 'רשום קונפיג', 'טלפון = נכסים, מניעה', 'נתונים > חומרה'],
-                'di-yi-zhang': ['SoC = CPU+GPU+NPU+ISP+基带', 'CPU: 大小核', 'OLED/LCD, Hz, HDR', 'סנסור > פיקסל', 'Micro USB → Lightning → USB-C', '5G-A: תקשורת+חישה'],
+                'fu-lu-f': ['מתקפל: בוגר, לא מיינסטרים', 'ספר=טלפון+טאבלט; צדפת=נייד+מסך', 'למי: קריאה/עסקים/נשים', '6: ציר/UTG/קמט/מסך/משקל/מחיר', 'ייחודי: split/90°/מסך/PC', 'תחזוקה: קור/זר/פילם/אבק', 'ציפיות: עקבות/כבד/סוללה/ערך/תיקון', 'קנה: צורה, לא "מתקדם"'],
+                'di-ling-zhang': ['ספר: מדבר + פרקטי', 'סמלים: [כפתור]/>/מודגש/נטוי', 'נפח "מצטמצם"', 'רשום קונפיג', 'טלפון = נכסים, מניעה', 'נתונים > חומרה'],
+                'di-yi-zhang': ['SoC = CPU+GPU+NPU+ISP+baseband', 'CPU: ליבה גדולה-קטנה', 'OLED/LCD, Hz, HDR', 'סנסור > פיקסל', 'Micro USB → Lightning → USB-C', '5G-A: תקשורת+חישה'],
                 'di-yi-zhang-harmony': ['HarmonyOS = מבוזר', 'HarmonyOS 4.3: AOSP', 'HarmonyOS NEXT: עצמאי', 'ודא App מקורי'],
                 'di-er-zhang': ['3 שכבות: מכשיר/SD/ענן', 'תיקיות: DCIM, Download', 'גיבוי: ענן + מקומי', 'מחיקה ≠ השמדה, דרוס', 'פורמטים: תמונה/אודיו/וידאו/מסמך', '"זמן+אירוע"', '72 שע' ניקוי', 'מסך + EXIF'],
                 'di-san-zhang': ['4G/5G, 5G-A', 'Wi-Fi 6/6E/7', 'Wi-Fi ציבורי: זהיר', 'Bluetooth 5.x, LE Audio', 'NFC: 10cm'],
-                'di-si-zhang': ['App: רשמי', 'APK: תעודה+משאב+קונפיג+בינארי', '"שדרוג" App: זהיר', '签名: הגנה', '"מומלץ בחום לכל המשתמשים להפעיל": רשמי', '"电子寄生虫": טרויאן', 'חנות: וירוס+הרשאות+מפתח'],
-                'di-wu-zhang': ['מסך: רזולוציה/Hz/אוטו', 'קול: רינג/מדיה/התראה', 'אחסון: נקה', 'ביומטרי: 3D > 2D', 'Screen Reader: VoiceOver/TalkBack', 'זום: ניגוד/粗体/פילטר', 'AI: תמונה/תפריט/קוד', 'כתוביות: חירשים', 'RTT/TTY'],
-                'di-liu-zhang': ['מסך נעילה + 2FA', 'הרשאות: מינימום', 'Wi-Fi: לא תשלום', 'AI: deepfake/权威/投资', '破局: פעולה+暗号+核实', 'תמונה: EXIF', 'IoT: סיסמה', 'הונאה: לא/לא/לא'],
-                'di-qi-zhang-jichu': ['לוויין: חירום', '无网通', '车祸检测', '星闪'],
+                'di-si-zhang': ['App: רשמי', 'APK: תעודה+משאב+קונפיג+בינארי', '"שדרוג" App: זהיר', 'חתימה: הגנה', '"מומלץ בחום לכל המשתמשים להפעיל": רשמי', '"טפיל אלקטרוני": טרויאן', 'חנות: וירוס+הרשאות+מפתח'],
+                'di-wu-zhang': ['מסך: רזולוציה/Hz/אוטו', 'קול: רינג/מדיה/התראה', 'אחסון: נקה', 'ביומטרי: 3D > 2D', 'Screen Reader: VoiceOver/TalkBack', 'זום: ניגוד/מודגש/פילטר', 'AI: תמונה/תפריט/קוד', 'כתוביות: חירשים', 'RTT/TTY'],
+                'di-liu-zhang': ['מסך נעילה + 2FA', 'הרשאות: מינימום', 'Wi-Fi: לא תשלום', 'AI: deepfake/סמכות/השקעה', 'פריצה: פעולה+סיסמה+אימות', 'תמונה: EXIF', 'IoT: סיסמה', 'הונאה: לא/לא/לא'],
+                'di-qi-zhang-jichu': ['לוויין: חירום', 'תקשורת ללא רשת', 'זיהוי תאונת דרכים', 'SparkLink'],
                 'di-ba-zhang': ['הקלטה: חוק', 'iMessage/RCS', 'WeChat: גיבוי', 'דוא"ל: מספר'],
-                'di-jiu-zhang': ['WPS / Office', '笔记: 3 שלבים', 'סריקה', 'ענן: iCloud/OneDrive/百度/阿里'],
-                'di-shi-zhang': ['付款码: לא צילום', '5 דק': ביומטרי+锁+免密+设备', '交通卡: NFC', '医保/社保/个税', '4不: 转账/付款码/链接/卡号'],
-                'di-shi-yi-zhang': ['4错: 镜头/曝光/闪光/变焦', '夜景: 多帧, 2-4秒', '专业: ISO/快门', '后期: 4步', '照片: 搜索+清理+相簿'],
-                'di-shi-yi-zhang-advanced': ['视频: 分辨率/帧率/码率', 'H.265 > H.264 50%', 'ProRes', 'HDR'],
-                'di-shi-er-zhang': ['网易云/QQ/Apple/Spotify', '小宇宙', 'VLC / nPlayer', 'אפליקציית Kindle', '游戏: 帧率/散热'],
-                'di-shi-san-zhang': ['效率: 待办+番茄+日历', '健康: Apple/Google', 'Edge + Copilot', '搜索: 域名'],
-                'di-shi-si-zhang': ['1 主密码', 'Bitwarden/1Password', '主密码 + 2FA', '审计', 'Zero-Knowledge', 'AES-256 + PBKDF2/Argon2', 'LastPass 2022', '熵: 长度+随机', 'HaveIBeenPwned/Watchtower', 'Passkey: FIDO2', 'Passkey: iCloud/Google', 'YubiKey/Titan', '1Password Vault + Bitwarden Emergency'],
-                'di-shi-wu-zhang': ['锂电池: 怕热', '<80% = 短', '快充: PD/QC/VOOC/SuperCharge', 'טעינה אלחוטית עם מיקום מגנטי, בדומה ל-MagSafe, טעינה נוחה יותר.', '省电: 亮度+后台+4G'],
-                'di-shi-liu-zhang': ['账号 = 户口本', '3必须: 2FA+恢复+查找', 'iCloud 5GB → 50GB', '同步=双向; 备份=单向', 'Android: 品牌+Google+WeChat'],
-                'di-shi-qi-zhang': ['协同: AirDrop/多屏/妙享/Windows', '投屏: 同一Wi-Fi', '手表: 通知+健康+支付', 'Smart Home: HomeKit/米家/华为', '投屏: 隐私'],
-                'di-shi-ba-zhang': ['整机: 电脑+云', 'WeChat: 自带', '3-2-1', '换机: 同品牌/跨'],
-                'di-shi-jiu-zhang': ['卡顿: 4步', '闪退: 5步', '不充电: 清洁/换', '网络: 飞行/Wi-Fi/路由器', '重启; 官方; 备份+退出'],
-                'di-er-shi-zhang-jinjie': ['Developer: 7次', 'BL: 慎', 'Root: 不建议', 'Magisk: 隐藏'],
-                'di-er-shi-yi-zhang': ['VPN: 隧道', 'Wi-Fi: HTTPS/手动/流量', 'HTTPS: 4次', 'DoH/DoT: DNS', '无痕: 本地', '清单: 5项'],
-                'di-er-shi-er-zhang': ['AI 相机', '语音: 3步', '端侧 AI', 'AI: 5场景', 'AI: 翻译/消除/修图/文档/搜图', 'CRISPE', 'AI: 幻觉/隐私', '"角色-背景-任务-限制"', '好提示词: 5特征'],
-                'di-er-shi-san-zhang': ['自动化: 触发+动作+逻辑', 'iOS: Shortcuts', 'Android: Tasker/MacroDroid', '踩坑: 位置/确认/权限', '自动化: 重复→条件'],
-                'di-er-shi-si-zhang': ['Bootloader: 守门人', 'BL: 小米可/华为锁', 'Root: Magisk/Kernelsu/SuperSU', '刷机: 3类型'],
-                'di-er-shi-wu-zhang': ['卖: 备份→退出→擦除→填充', '遗产: iCloud/Google', '回收: 官方/余热'],
-                'di-er-shi-liu-zhang': ['AI: 3标准', 'AI: 各厂商', '卫星: 北斗/天通', '折叠: 70%', '6G/Wi-Fi 7/LE Audio', '硅碳: 5000-6000mAh'],
-                'di-er-shi-qi-zhang': ['מצב פשוט/פונט גדול = בעיה נעלמת', '3 כללים: אל תלחיץ, אנלוגיה, כתוב', '6骗局+3防线', 'סיוע מרחוק', 'WeChat: 关怀+语音', 'SOS+跌倒'],
-                'di-er-shi-ba-zhang': ['3板斧: 需求→预算→机型', '5 פרמטרים: מעבד, מסך, מצלמה, סוללה/טעינה, עדכונים', '1500-3500 הוא טווח המחיר המומלץ', 'דגל מלפני שנה משתלם יותר מבינוני השנה', '5 מלכודות: עדשות מרובות, פיקסלים, מותאם ספק, מסך מעוקל, AI', '618 ו-Double 11 הם הזדמנויות הקנייה הטובות ביותר'],
+                'di-jiu-zhang': ['WPS / Office', 'פתקים: 3 שלבים', 'סריקה', 'ענן: iCloud/OneDrive/百度/阿里'],
+                'di-shi-zhang': ['קוד תשלום: לא צילום', '5 דק': ביומטרי+מנעול+ללא סיסמה+מכשיר', 'כרטיס תחבורה: NFC', 'ביטוח בריאות/ביטוח לאומי/מס הכנסה', '4לא: העברה/קוד תשלום/קישור/מספר כרטיס'],
+                'di-shi-yi-zhang': ['4טעויות: עדשה/חשיפה/מבזק/זום', 'תרחיש לילה: מרובה פרימים, 2-4שניות', 'מקצועי: ISO/תריס', 'פוסט-פרודקשן: 4שלבים', 'תמונה: חיפוש+ניקוי+אלבום'],
+                'di-shi-yi-zhang-advanced': ['וידאו: רזולוציה/קצב פריימים/קצב סיביות', 'H.265 > H.264 50%', 'ProRes', 'HDR'],
+                'di-shi-er-zhang': ['NetEase Cloud/QQ/Apple/Spotify', 'XiaoYu', 'VLC / nPlayer', 'אפליקציית Kindle', 'משחק: קצב פריימים/קירור'],
+                'di-shi-san-zhang': ['יעילות: לביצוע+עגבנייה+לוח שנה', 'בריאות: Apple/Google', 'Edge + Copilot', 'חיפוש: דומיין'],
+                'di-shi-si-zhang': ['1 סיסמה ראשית', 'Bitwarden/1Password', 'סיסמה ראשית + 2FA', 'ביקורת', 'Zero-Knowledge', 'AES-256 + PBKDF2/Argon2', 'LastPass 2022', 'אנטרופיה: אורך+אקראי', 'HaveIBeenPwned/Watchtower', 'Passkey: FIDO2', 'Passkey: iCloud/Google', 'YubiKey/Titan', '1Password Vault + Bitwarden Emergency'],
+                'di-shi-wu-zhang': ['סוללת ליתיום: רגיש לחום', '<80% = קצר', 'טעינה מהירה: PD/QC/VOOC/SuperCharge', 'טעינה אלחוטית עם מיקום מגנטי, בדומה ל-MagSafe, טעינה נוחה יותר.', 'חיסכון בסוללה: בהירות+רקע+4G'],
+                'di-shi-liu-zhang': ['חשבון = פנקס אוכלוסין', '3חובה: 2FA+שחזור+חיפוש', 'iCloud 5GB → 50GB', 'סנכרון=דו כיווני; גיבוי=חד כיווני', 'Android: מותג+Google+WeChat'],
+                'di-shi-qi-zhang': ['שיתוף פעולה: AirDrop/מסך מרובה/שיתוף/Windows', 'העברת מסך: אותוWi-Fi', 'שעון: הודעה+בריאות+תשלום', 'Smart Home: HomeKit/Mijia/华为', 'העברת מסך: פרטיות'],
+                'di-shi-ba-zhang': ['מכשיר מלא: מחשב+ענן', 'WeChat: מובנה', '3-2-1', 'החלפת מכשיר: אותו מותג/חוצה'],
+                'di-shi-jiu-zhang': ['מעצור: 4שלבים', 'קריסה: 5שלבים', 'לא טוען: ניקוי/החלפה', 'רשת: טיסה/Wi-Fi/נתב', 'הפעלה מחדש; רשמי; גיבוי+יציאה'],
+                'di-er-shi-zhang-jinjie': ['Developer: 7פעמים', 'BL: זהיר', 'Root: לא מומלץ', 'Magisk: הסתרה'],
+                'di-er-shi-yi-zhang': ['VPN: מנהרה', 'Wi-Fi: HTTPS/ידני/תעבורה', 'HTTPS: 4פעמים', 'DoH/DoT: DNS', 'ללא עקבות: מקומי', 'רשימה: 5פריטים'],
+                'di-er-shi-er-zhang': ['AI מצלמה', 'קול: 3שלבים', 'במכשיר AI', 'AI: 5תרחיש', 'AI: תרגום/הסרה/עריכת תמונה/מסמך/חיפוש תמונות', 'CRISPE', 'AI: הזיה/פרטיות', '"תפקיד-רקע-משימה-הגבלה"', 'פרומפט טוב: 5מאפיין'],
+                'di-er-shi-san-zhang': ['אוטומציה: הפעלה+פעולה+היגיון', 'iOS: Shortcuts', 'Android: Tasker/MacroDroid', 'טעויות: מיקום/אישור/הרשאות', 'אוטומציה: חזרה→תנאי'],
+                'di-er-shi-si-zhang': ['Bootloader: שומר סף', 'BL: 小米 ניתן לפתיחה/华为 נעילה', 'Root: Magisk/Kernelsu/SuperSU', 'פלאש: 3סוג'],
+                'di-er-shi-wu-zhang': ['מכירה: גיבוי→יציאה→מחיקה→מילוי', 'ירושה: iCloud/Google', 'מיחזור: רשמי/חום שיורי'],
+                'di-er-shi-liu-zhang': ['AI: 3תקן', 'AI: יצרנים שונים', 'לוויין: BeiDou/Tiantong', 'מתקפל: 70%', '6G/Wi-Fi 7/LE Audio', 'סיליקון-פחמן: 5000-6000mAh'],
+                'di-er-shi-qi-zhang': ['מצב פשוט/פונט גדול = בעיה נעלמת', '3 כללים: אל תלחיץ, אנלוגיה, כתוב', '6הונאה+3קו הגנה', 'סיוע מרחוק', 'WeChat: טיפול+קול', 'SOS+נפילה'],
+                'di-er-shi-ba-zhang': ['3כלי: צורך→תקציב→דגם', '5 פרמטרים: מעבד, מסך, מצלמה, סוללה/טעינה, עדכונים', '1500-3500 הוא טווח המחיר המומלץ', 'דגל מלפני שנה משתלם יותר מבינוני השנה', '5 מלכודות: עדשות מרובות, פיקסלים, מותאם ספק, מסך מעוקל, AI', '618 ו-Double 11 הם הזדמנויות הקנייה הטובות ביותר'],
                 'di-er-shi-jiu-zhang': ['בדוק נתונים, הכרת המצב היא הצעד הראשון', 'מגבלות לבידור, נא לא להפריע, שלוט בקשב', '20-20-20 הוא הרגל הגנת העיניים הפשוט ביותר', 'צוואר נושא פי 5-6, הרם טלפון + הזז צוואר', 'שעה לפני שינה בלי טלפון, מטען מרוחק', 'תרופת חרדת מידע היא "חסימה", לא "עוד"'],
                 'di-san-shi-zhang': ['3 מערכות: AirPlay, Miracast, DLNA', 'כבל יציב יותר, חובה בישיבות', 'DeX/华为 מצב שולחן = מחשב קל', 'חיבור רכב: 4 פתרונות', 'ישיבות: בדוק, הכן Plan B, כבה התראות'],
                 'di-san-shi-yi-zhang': ['לפני צילום: קהל, ערך, פלטפורמה', '5 דברים: 1080P/30fps, ניקוי, נעילה, כיוון, רשת', '5 תנועות: Push, Pull, Pan, Track, Follow', 'JianYing: חיתוך > מעבר > כתוביות > BGM > ייצוא', '3 שניות, נושא אחד, התמדה'],
@@ -9815,13 +9815,13 @@
             };
             Object.keys(summaries).forEach(id => {
                 const sec = document.getElementById(id);
-                // 跳过已有内联小结的章节，避免重复
+                // דילוג על פרקים עם סיכום מוטמע קיים，הימנעות מכפילות
                 if (sec && !sec.querySelector('.chapter-summary')) {
                     addChapterSummary(sec, summaries[id]);
                 }
             });
 
-            // ===== 复制按钮（给 kbd 元素添加） =====
+            // ===== כפתור העתקה（ל kbd הוספת אלמנט） =====
             $$('.kbd').forEach(kbd => {
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
@@ -9841,11 +9841,11 @@
                 kbd.parentNode.insertBefore(btn, kbd.nextSibling);
             });
 
-            // ===== 可折叠长内容（h4 级别） =====
+            // ===== תוכן ארוך ניתן לקיפול（h4 רמה） =====
             sections.forEach(sec => {
                 const h4s = $$('h4', sec);
                 h4s.forEach(h4 => {
-                    // 只对内容较长的h4段落添加折叠
+                    // רק לתוכן ארוך יותרh4הוספת קיפול לפסקאות
                     let sibling = h4.nextElementSibling;
                     let contentLength = 0;
                     let elements = [];
@@ -9855,7 +9855,7 @@
                         sibling = sibling.nextElementSibling;
                     }
                     if (contentLength > 800) {
-                        // 添加折叠头
+                        // הוספת כותרת קיפול
                         const header = document.createElement('div');
                         header.className = 'collapsible-header';
                         header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
@@ -9876,7 +9876,7 @@
                 });
             });
 
-            // ===== 学习仪表盘：阅读进度 + 手机健康自检 =====
+            // ===== לוח מחוונים למידה：התקדמות קריאה + בדיקת בריאות טלפון =====
             const dashProgressRing = $('#progress-ring-fg');
             const progressPercent = $('#progress-percent');
             const readCountEl = $('#read-count');
@@ -9889,7 +9889,7 @@
             const DASH_RING_CIRCUMFERENCE = 213.6;
 
             function updateDashboard() {
-                // 阅读进度
+                // התקדמות קריאה
                 const completed = $$('.chapter-check.checked').length;
                 const total = sections.length;
                 const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -9899,28 +9899,28 @@
                 if (progressPercent) progressPercent.textContent = pct + '%';
                 if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
 
-                // 书签数
+                // מספר סימניות
                 const bookmarks = $$('.toc-item.bookmarked').length;
                 if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
 
-                // 上次章节
+                // הפרק הקודם
                 const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
 
-                // 健康自检
+                // בדיקת בריאות
                 const checked = checkInputs.filter(c => c.checked).length;
                 const totalChecks = checkInputs.length;
                 if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
                 if (healthBarEl) healthBarEl.style.width = (checked / totalChecks * 100) + '%';
                 if (healthMsgEl) {
                     if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>מעולה!';
-                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = '不错！还有 ' + (totalChecks - checked) + ' 项可以完善';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'יפה! נשארו  ' + (totalChecks - checked) + '  פריטים לשיפור';
                     else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'עבר, טפל';
                     else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>סיכון! טפל';
                 }
             }
 
-            // 恢复自检状态
+            // שחזור סטטוס בדיקה עצמית
             checkInputs.forEach((input, i) => {
                 const saved = localStorage.getItem('health-check-' + i);
                 if (saved === 'true') input.checked = true;
@@ -9931,10 +9931,10 @@
             });
 
             updateDashboard();
-            // 每隔3秒刷新一次（捕获章节完成勾选的变化）
+            // כל3 שניות מתעדכן（לכידת שינויים בסימון השלמת פרקים）
             setInterval(updateDashboard, 3000);
 
-            // ===== 语音朗读（TTS）=====
+            // ===== הקראה קולית（TTS）=====
             const ttsControls = $('#tts-controls');
             const ttsPlayBtn = $('#tts-play');
             const ttsPrevBtn = $('#tts-prev');
@@ -9958,11 +9958,11 @@
 
             function getSectionText(sec) {
                 if (!sec) return '';
-                // 克隆并移除不需要朗读的元素
+                // שיבוט והסרת אלמנטים שאינם דרושים להקראה
                 const clone = sec.cloneNode(true);
                 const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
                 removes.forEach(el => el.remove());
-                // 移除折叠体但保留其文字内容
+                // הסרת גוף מקופל אך שמירת תוכן הטקסט שלו
                 const text = clone.textContent.replace(/\s+/g, ' ').trim();
                 return text;
             }
@@ -9989,7 +9989,7 @@
                 ttsUtterance.pitch = 1.0;
                 ttsUtterance.volume = 1.0;
 
-                // 尝试使用更自然的中文语音
+                // ניסיון להשתמש בקול סיני טבעי יותר
                 const voices = window.speechSynthesis.getVoices();
                 const zhVoice = voices.find(v => v.lang.startsWith('he') || v.lang.startsWith('iw'));
                 if (zhVoice) ttsUtterance.voice = zhVoice;
@@ -10003,7 +10003,7 @@
                 };
 
                 ttsUtterance.onend = () => {
-                    // 自动播放下一章节
+                    // השמעה אוטומטיתפרק הבאפרק
                     if (ttsSectionIndex < sections.length - 1 && ttsActive) {
                         ttsSectionIndex++;
                         speakSection(ttsSectionIndex);
@@ -10025,9 +10025,9 @@
 
             function toggleTtsPlay() {
                 if (!ttsActive) {
-                    // 找到当前可见章节
+                    // מציאת הפרק הגלוי הנוכחי
                     if (ttsSectionIndex < 0) {
-                        // 从头开始或从当前滚动位置最近的章节开始
+                        // התחלה מההתחלה או מהפרק הקרוב ביותר למיקום הגלילה הנוכחי
                         const scrollCenter = window.scrollY + window.innerHeight / 2;
                         let closestIdx = 0;
                         let closestDist = Infinity;
@@ -10068,7 +10068,7 @@
                 if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
             }
 
-            // 事件绑定
+            // קשירת אירועים
             if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
             if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
             if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
@@ -10088,7 +10088,7 @@
                 updateTtsSpeedDisplay();
                 if (ttsActive && ttsUtterance) {
                     ttsUtterance.rate = ttsSpeed;
-                    // 重新创建并播放当前段落
+                    // יצירה מחדש והשמעת הפסקה הנוכחית
                     const idx = ttsSectionIndex;
                     window.speechSynthesis.cancel();
                     setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
@@ -10106,7 +10106,7 @@
             });
             if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
 
-            // 键盘快捷键：按 R 键切换朗读
+            // קיצורי מקלדת：לחץ R מקש להחלפת הקראה
             document.addEventListener('keydown', (e) => {
                 if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
                 if (e.key === 'r' || e.key === 'R') {
@@ -10118,7 +10118,7 @@
                 }
             });
 
-            // ===== 初始化 =====
+            // ===== אתחול =====
             onScroll();
             tryRestorePosition();
         })();
