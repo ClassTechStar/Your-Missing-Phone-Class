@@ -83,7 +83,7 @@
             background-color: #1e1b4b;
             border-left-color: #818cf8;
         }
-        /* 侧边栏链接基础样式 */
+        /* Βασικό στυλ συνδέσμων πλευρικής μπάρας */
         #sidebar a {
             display: block;
             transition: all 0.2s ease;
@@ -98,7 +98,7 @@
         .dark #sidebar a:hover {
             background-color: rgba(79, 70, 229, 0.12);
         }
-        /* 父级分组标题 */
+        /* Τίτλος γονικής ομάδας */
         .toc-parent > div {
             transition: background-color 0.15s ease;
         }
@@ -108,7 +108,7 @@
         .dark .toc-parent > div:hover {
             background-color: rgba(255,255,255,0.03);
         }
-        /* 折叠图标独立区域 */
+        /* Ξεχωριστή περιοχή εικονιδίου διπλώματος */
         .toc-toggle-btn {
             width: 24px;
             height: 24px;
@@ -129,7 +129,7 @@
             background-color: #374151;
             color: #e5e7eb;
         }
-        /* 子项过渡动画 */
+        /* Animation μετάβασης υποστοιχείων */
         .toc-child li {
             opacity: 1;
             transform: translateX(0);
@@ -137,9 +137,9 @@
         }
         .toc-child:not(.open) + .toc-child li,
         .toc-child:not(.open) li {
-            /* 折叠时由 max-height 控制 */
+            /* Κατά το δίπλωμα από max-height control */
         }
-        /* 当前阅读位置指示条 */
+        /* Μπάρα ένδειξης τρέχουσας θέσης ανάγνωσης */
         .toc-reading-indicator {
             position: absolute;
             left: 0;
@@ -151,7 +151,7 @@
             transition: top 0.3s ease, height 0.3s ease;
             z-index: 1;
         }
-        /* 侧边栏顶部区域增强 */
+        /* Ενίσχυση της πάνω περιοχής της πλευρικής μπάρας */
         #sidebar > nav > div:first-child {
             background: #f5f6f8;
             border-radius: 0;
@@ -160,7 +160,7 @@
         .dark #sidebar > nav > div:first-child {
             background: #1a2230;
         }
-        /* 侧边栏整体增强 */
+        /* Συνολική ενίσχυση πλευρικής μπάρας */
         #sidebar {
             box-shadow: none;
             border-right: 1px solid #e5e7eb;
@@ -174,7 +174,7 @@
                 border-right: none;
             }
         }
-        /* 章节序号样式 */
+        /* Στυλ αρίθμησης κεφαλαίου */
         .toc-item span[class*="font-mono"] {
             display: inline-block;
             min-width: 1.5rem;
@@ -192,7 +192,7 @@
         .dark .toc-item.active span[class*="font-mono"] {
             color: #818cf8;
         }
-        /* 导航目标章节高亮闪烁 */
+        /* Το κεφάλαιο προορισμού πλοήγησης αναβοσβήνει */
         .scroll-target-flash {
             animation: targetFlash 1.2s ease-out;
         }
@@ -511,7 +511,7 @@
             }
         }
 
-        /* ===== 增强样式：导读卡片、章节摘要、学习路径 ===== */
+        /* ===== Ενισχυμένο στυλ：Κάρτα εισαγωγής、Σύνοψη κεφαλαίου、Διαδρομή μάθησης ===== */
         .reading-guide-card {
             background: #fafafa;
             border: 1px solid #e0e0e0;
@@ -739,9 +739,9 @@
             main { max-width: 56rem; }
         }
 
-        /* ===== 深度改进样式 ===== */
+        /* ===== Βαθιά βελτίωση στυλ ===== */
 
-        /* 渐变阅读进度条 */
+        /* Μπάρα προόδου ανάγνωσης με διαβάθμιση */
         #reading-progress {
             background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
             background-size: 200% 100% !important;
@@ -758,7 +758,7 @@
             100% { background-position: -200% 0; }
         }
 
-        /* 滚动入场动画 */
+        /* Animation εισόδου με κύλιση */
         .content-section {
             opacity: 0;
             transform: translateY(24px);
@@ -769,7 +769,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* 第一屏内容直接可见 */
+        /* Το περιεχόμενο της πρώτης οθόνης αμέσως ορατό */
         .content-section:first-of-type,
         .content-section.immediately-visible {
             opacity: 1;
@@ -777,7 +777,7 @@
             transition: none;
         }
 
-        /* Hero横幅增强 */
+        /* HeroΕνίσχυση banner */
         .hero-banner {
             background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
             position: relative;
@@ -805,7 +805,7 @@
         }
         .hero-banner > * { position: relative; z-index: 1; }
 
-        /* 卡片悬浮效果 */
+        /* Εφέ hover κάρτας */
         .path-step {
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
                         box-shadow 0.3s ease,
@@ -828,7 +828,7 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
 
-        /* 返回顶部按钮增强 */
+        /* Ενίσχυση κουμπιού επιστροφής στην κορυφή */
         #back-to-top {
             position: fixed;
             right: 1rem;
@@ -877,7 +877,7 @@
             transform-origin: center;
         }
 
-        /* 书签按钮 */
+        /* Κουμπί σελιδοδείκτη */
         .bookmark-btn {
             display: inline-flex;
             align-items: center;
@@ -913,7 +913,7 @@
             border-color: #818cf8;
         }
 
-        /* 章节完成勾选 */
+        /* Checkbox ολοκλήρωσης κεφαλαίου */
         .chapter-check {
             display: inline-flex;
             align-items: center;
@@ -963,7 +963,7 @@
             line-height: 1;
         }
 
-        /* 搜索结果键盘选中 */
+        /* Επιλογή αποτελεσμάτων αναζήτησης με πληκτρολόγιο */
         .search-result-item.selected {
             background: #eef2f5;
         }
@@ -971,12 +971,12 @@
             background: #374151;
         }
 
-        /* 仪表盘卡片 */
+        /* Κάρτα ταμπλό */
         .dashboard-card {
             transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
         }
 
-        /* 阅读连续天数徽章 */
+        /* Σήμα συνεχών ημερών ανάγνωσης */
         #streak-toast {
             transform: translateX(-50%) translateY(100px);
             left: 50%;
@@ -987,7 +987,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* 章节评分星星 */
+        /* Αστέρια βαθμολογίας κεφαλαίου */
         .chapter-rating {
             display: inline-flex;
             align-items: center;
@@ -1020,7 +1020,7 @@
             opacity: 0.5;
         }
 
-        /* 语音朗读控件 */
+        /* Στοιχείο ελέγχου φωνητικής ανάγνωσης */
         .tts-controls {
             position: fixed;
             bottom: 6rem;
@@ -1112,7 +1112,7 @@
             .tts-controls .tts-chapter-label { max-width: 8rem; }
         }
 
-        /* 复制按钮 */
+        /* Κουμπί αντιγραφής */
         .copy-btn {
             display: inline-flex;
             align-items: center;
@@ -1143,7 +1143,7 @@
             border-color: #27ae60;
         }
 
-        /* 可折叠内容块 */
+        /* Αναδιπλούμενο μπλοκ περιεχομένου */
         .collapsible-header {
             cursor: pointer;
             display: flex;
@@ -1178,7 +1178,7 @@
             opacity: 0;
         }
 
-        /* 阅读位置恢复提示 */
+        /* Ειδοποίηση επαναφοράς θέσης ανάγνωσης */
         .restore-position-toast {
             position: fixed;
             bottom: 2rem;
@@ -1221,7 +1221,7 @@
             color: #fff;
         }
 
-        /* 章节分隔线增强 */
+        /* Ενίσχυση γραμμής διαχωρισμού κεφαλαίου */
         .content-section {
             position: relative;
             padding-top: 1rem;
@@ -1242,7 +1242,7 @@
             display: none;
         }
 
-        /* Callout框增强 */
+        /* CalloutΕνίσχυση πλαισίου */
         .callout-box {
             position: relative;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1251,7 +1251,7 @@
             transform: translateX(2px);
         }
 
-        /* 表格行悬浮 */
+        /* Hover γραμμής πίνακα */
         table tbody tr {
             transition: background-color 0.15s ease;
         }
@@ -1262,7 +1262,7 @@
             background-color: rgba(255,255,255,0.04);
         }
 
-        /* 章节导航按钮增强 */
+        /* Ενίσχυση κουμπιού πλοήγησης κεφαλαίου */
         .chapter-nav a {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1277,7 +1277,7 @@
             background: #1e2a36;
         }
 
-        /* 侧边栏书签标记 */
+        /* Δείκτες σελιδοδείκτη πλευρικής μπάρας */
         .toc-item.bookmarked::after {
             content: '★';
             color: #d4a017;
@@ -1288,7 +1288,7 @@
             color: #27ae60 !important;
         }
 
-        /* 快捷工具增强 */
+        /* Ενίσχυση γρήγορων εργαλείων */
         .quick-tool-btn {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1299,7 +1299,7 @@
             transform: translateY(0) scale(0.95);
         }
 
-        /* 移动端底部安全区域 */
+        /* Ασφαλής ζώνη κάτω μέρους στην έκδοση κινητού */
         @media (max-width: 768px) {
             #back-to-top {
                 right: 0.75rem;
@@ -1322,7 +1322,7 @@
             }
         }
 
-        /* 打印时隐藏新增元素 */
+        /* Απόκρυψη νέων στοιχείων κατά την εκτύπωση */
         @media print {
             .bookmark-btn, .chapter-check, .copy-btn,
             .restore-position-toast, #back-to-top .progress-ring,
@@ -1396,7 +1396,7 @@
                     <input type="text" id="toc-filter" placeholder="κεφάλαιο..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="κεφάλαιο">
                 </div>
                 <ul class="space-y-1 text-sm" id="toc-list">
-                    <!-- 基础篇 -->
+                    <!-- Βασικό κεφάλαιο -->
                     <li class="toc-parent" data-group="ji-chu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ji-chu-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">I. Ενότητα Βασικών (Κεφάλαια 0-7)</a>
@@ -1418,7 +1418,7 @@
                             <li><a href="#di-qi-zhang-jichu" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">07</span>Κεφάλαιο 7: Πλήρης ανάλυση προηγμένων λειτουργιών</a></li>
                         </ul>
                     </li>
-                    <!-- 软件篇 -->
+                    <!-- Κεφάλαιο λογισμικού -->
                     <li class="toc-parent" data-group="ruan-jian">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ruan-jian-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">II. Ενότητα Λογισμικού (Κεφάλαια 8-14)</a>
@@ -1437,7 +1437,7 @@
                             <li><a href="#di-shi-si-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">14</span>Κεφάλαιο 14: Ειδικό θέμα διαχειριστών κωδικών</a></li>
                         </ul>
                     </li>
-                    <!-- 进阶篇 -->
+                    <!-- Προχωρημένο κεφάλαιο -->
                     <li class="toc-parent" data-group="jin-jie">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#jin-jie-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">III. Ενότητα Προχωρημένων (Κεφάλαια 15-20)</a>
@@ -1456,7 +1456,7 @@
                             <li><a href="#di-er-shi-zhang-termux" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-500 dark:text-gray-500 pl-6 text-xs"><span class="mr-1.5 text-xs text-gray-300 font-mono"></span>Παράρτημα: Termux — φορητό τερματικό Linux</a></li>
                         </ul>
                     </li>
-                    <!-- 超越篇 -->
+                    <!-- Κεφάλαιο υπέρβασης -->
                     <li class="toc-parent" data-group="chao-yue">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#chao-yue-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">IV. Ενότητα Υπέρβασης (Κεφάλαια 21-26)</a>
@@ -1474,7 +1474,7 @@
                             <li><a href="#di-er-shi-liu-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">26</span>Κεφάλαιο 26: Σύγχρονες τεχνολογικές εξελίξεις στα κινητά</a></li>
                         </ul>
                     </li>
-                    <!-- 五、实战篇（第27-32章） -->
+                    <!-- 5. Κεφάλαιο πρακτικής（Κεφάλαια 27-32） -->
                     <li class="toc-parent" data-group="shi-zhan">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#shi-zhan-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">V. Ενότητα Πρακτικής (Κεφάλαια 27-32)</a>
@@ -1491,7 +1491,7 @@
                             <li><a href="#di-san-shi-er-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">32</span>Κεφάλαιο 32: Εγχειρίδιο πρώτων βοηθειών για την ασφάλεια του κινητού</a></li>
                         </ul>
                     </li>
-                    <!-- 六、展望篇（第33-41章） -->
+                    <!-- 6. Κεφάλαιο προοπτικής（Κεφάλαια 33-41） -->
                     <li class="toc-parent" data-group="zhan-wang">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#zhan-wang-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">VI. Ενότητα Προοπτικής (Κεφάλαια 33-41)</a>
@@ -1511,7 +1511,7 @@
                             <li><a href="#di-si-shi-yi-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">41</span>Κεφάλαιο 41: Εισαγωγή σε κάθετες σύντομες σειρές — Ένα αγκίστρι κάθε 3 λεπτά</a></li>
                         </ul>
                     </li>
-                    <!-- 附录 -->
+                    <!-- appendix -->
                     <li class="toc-parent" data-group="fu-lu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#fu-lu" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">VII. Παραρτήματα</a>
@@ -1554,14 +1554,14 @@
             <div class="content-col">
             <a id="top"></a>
 
-            <!-- 顶部面包屑 -->
+            <!-- Ψίχουλα πλοήγησης κορυφής -->
             <nav class="breadcrumb no-print" aria-label="Τοποθεσία">
                 <a href="#top">Αρχική σελίδα</a>
                 <span class="sep" aria-hidden="true">›</span>
                 <span class="text-gray-700 dark:text-gray-300">Ψηφιακό υποχρεωτικό μάθημα · v1.7</span>
             </nav>
 
-            <!-- Hero 横幅 -->
+            <!-- Hero banner -->
             <section class="hero-banner mb-8" aria-labelledby="hero-title">
                 <div class="flex flex-wrap items-center gap-2 mb-3">
                     <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>32 κεφάλαια + 6 παραρτήματα</span>
@@ -1583,7 +1583,7 @@
                 </div>
             </section>
 
-            <!-- 怎么用这本书 -->
+            <!-- Πώς να χρησιμοποιήσεις αυτό το βιβλίο -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-compass text-primary" aria-hidden="true"></i>Πώς να χρησιμοποιήσετε αυτό το βιβλίο;
@@ -1608,7 +1608,7 @@
                 </div>
             </section>
 
-            <!-- 学习路径五步走 -->
+            <!-- Διαδρομή μάθησης σε πέντε βήματα -->
             <section class="mb-8" aria-labelledby="learning-path-title">
                 <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">Διαδρομή μάθησης: Πέντε βήματα για να γίνετε εμπειρογνώμονας κινητού</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Αυτό το βιβλίο οργανώνεται σύμφωνα με τη γνωστική αρχή «από την κατανόηση στην κατάκτηση και τελικά στην πρακτική»· κάθε ενότητα είναι το θεμέλιο της επόμενης.</p>
@@ -1651,7 +1651,7 @@
                 </div>
             </section>
 
-            <!-- 章节地图速查表 -->
+            <!-- Πίνακας γρήγορης αναζήτησης χάρτη κεφαλαίων -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-map text-primary" aria-hidden="true"></i>Γρήγορος χάρτης κεφαλαίων
@@ -1676,13 +1676,13 @@
                 </div>
             </section>
 
-            <!-- 写在最后：本书不教什么 -->
+            <!-- Επίλογος：Τι δεν διδάσκει αυτό το βιβλίο -->
             <div class="highlight-quote">
                 <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Αυτό το βιβλίο δεν σας διδάσκει πώς «να βλέπετε βίντεο πιο απολαυστικά», αλλά θέλει να σας βοηθήσει να κατανοήσετε: γιατί το κινητό λειτουργεί έτσι; Τι μπορεί και τι δεν μπορεί να κάνει; Και πώς να το κάνετε πραγματικά να εργάζεται για εσάς, αντί να υποδουλώνει την προσοχή και τον χρόνο σας.</p>
                 <p class="text-right text-sm">—— Σχετικά με την αρχική πρόθεση του βιβλίου</p>
             </div>
 
-            <!-- 交互式自检清单 + 阅读仪表盘 -->
+            <!-- Διαδραστική λίστα αυτοελέγχου + Ταμπλό ανάγνωσης -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
                     <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>Πίνακας μάθησης
@@ -1690,7 +1690,7 @@
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Παρακολουθήστε την πρόοδο ανάγνωσής σας και ελέγξτε την κατάσταση ασφάλειας του κινητού σας.</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
-                    <!-- 阅读进度卡片 -->
+                    <!-- Κάρτα προόδου ανάγνωσης -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>Πρόοδος ανάγνωσης</h3>
                         <div class="flex items-center gap-4">
@@ -1709,7 +1709,7 @@
                         </div>
                     </div>
 
-                    <!-- 手机健康自检卡片 -->
+                    <!-- Κάρτα αυτοελέγχου υγείας κινητού -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>Αυτοέλεγχος ασφάλειας κινητού</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Τσεκάρετε τα στοιχεία που έχετε ήδη εφαρμόσει και δείτε τον «βαθμό υγείας» του κινητού σας:</p>
@@ -1735,7 +1735,7 @@
                 </div>
             </section>
 
-            <!-- 原"top" 内容保持兼容 -->
+            <!-- Πρωτότυπο"top" Το περιεχόμενο παραμένει συμβατό -->
             <div class="sr-only" aria-hidden="true">v3.0 · Ένα ψηφιακό υποχρεωτικό μάθημα πραγματικά προσανατολισμένο στο ευρύ κοινό</div>
 
             <section id="ji-chu-pian" class="mb-12">
@@ -2100,7 +2100,7 @@
                     </div>
                 </div>
 
-                <!-- 第一章附：安卓手机内存拓展解析 -->
+                <!-- Παράρτημα Κεφαλαίου 1：Ανάλυση επέκτασης μνήμης Android -->
                 <div id="di-yi-zhang-memory" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Παράρτημα: Ανάλυση επέκτασης μνήμης σε Android κινητά</h3>
                     <p class="chapter-intro mb-4">Όταν αγοράζετε κινητό, συχνά βλέπετε διαφημίσεις όπως «12GB+8GB RAM» — σαν να κερδίζετε 8GB RAM δωρεάν. Όμωςπράγματι κάνει το κινητό πιο γρήγορο; Μπορεί αντίθετα να το βλάψει; Σε αυτή την ενότητα θα εξηγήσουμε διεξοδικά την τεχνολογία «επέκταση μνήμης».</p>
@@ -2514,7 +2514,7 @@
                     </ul>
                 </div>
 
-                <!-- 第三章 -->
+                <!-- Κεφάλαιο 3 -->
                 <div id="di-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 3: Συνδέστε το κινητό με τη «γραμμή ζωής» — Δίκτυο</h3>
                     <p class="chapter-intro mb-4">Χωρίς δίκτυο, το έξυπνο κινητό «χαζεύει» κατά το ήμισυ. Το δίκτυοείναι η γραμμή ζωής του σύγχρονου κινητού, η κατανόηση, η σωστή χρήση και η προστασία τουείναι υποχρεωτικό μάθημα κάθε χρήστη.</p>
@@ -2733,7 +2733,7 @@
                     </div>
                 </div>
 
-                <!-- 第四章 -->
+                <!-- Κεφάλαιο 4 -->
                 <div id="di-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 4: Εγκατάστασηκαι διαχείριση App — τα «skill packs» του κινητού</h3>
                     <p class="chapter-intro mb-4">Οι App κάνουν το κινητό παντοδύναμο, αλλά πρέπει να τα διαχειρίζεστε. Όπως δίνετε σε νέο υπάλληλο θέσηκαι δικαιώματα, έτσι και η εγκατάσταση App χρειάζεται μια τυποποιημένη διαδικασία.</p>
@@ -2899,7 +2899,7 @@
                     </div>
                 </div>
 
-                <!-- 第五章 -->
+                <!-- Κεφάλαιο 5 -->
                 <div id="di-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 5: Κάντε το κινητό να σας κατανοεί — Βασικές ρυθμίσεις</h3>
                     <p class="chapter-intro mb-4">Δαπανήστε λίγα λεπτά σε ρυθμίσεις, η εμπειρία βελτιώνεται τεράστια. Αυτές οι ρυθμίσεις είναι σαν να «κουρδίζετε» το κινητό, για να ταιριάζει στις συνήθειές σας.</p>
@@ -3111,7 +3111,7 @@
                     </div>
                 </div>
 
-                <!-- 第六章 -->
+                <!-- Κεφάλαιο 6 -->
                 <div id="di-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 6: Προστατέψτε την ψηφιακή σας ζωή — Ασφάλειακαι απόρρητο</h3>
                     <p class="chapter-intro mb-4">Ασφάλεια κινητού = ασφάλεια απορρήτου + ασφάλεια περιουσίας. Σε αυτή την εποχή όπου τα δεδομένα είναι περιουσία, η προστασία του κινητού είναι προστασία του εαυτού σας.</p>
@@ -3277,7 +3277,7 @@
                     </div>
                 </div>
 
-                <!-- 第七章：前沿功能 -->
+                <!-- Κεφάλαιο 7：Πρωτοποριακές λειτουργίες -->
                 <div id="di-qi-zhang-jichu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 7: Πλήρης ανάλυση προηγμένων λειτουργιών</h3>
                     <p class="chapter-intro mb-4">Η τεχνολογία εξελίσσεται, οι λειτουργίες του κινητού επίσης. Δορυφορική επικοινωνία,εκτός δικτύου επικοινωνία, ανίχνευση ατυχήματος, SparkLink τεχνολογία… αυτές οιεπιστημονικής φαντασίας λειτουργίες στην πραγματικότηταήδη μπήκαν στη ζωή μας. Ας τις γνωρίσουμε.</p>
@@ -3399,12 +3399,12 @@
                 </div>
             </section>
 
-            <!-- 二、软件篇 -->
+            <!-- 2. Κεφάλαιο λογισμικού -->
             <section id="ruan-jian-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">II. Ενότητα Λογισμικού (Κεφάλαια 8-14)</h2>
                 <p class="chapter-intro mb-4">Αφότου κατακτήσετε τις βασικές λειτουργίες, ας εμβαθύνουμε στις τεχνικέςχρήση διάφορων τύπων εφαρμογών. Από επικοινωνία σε γραφείο, από πληρωμή σε ψυχαγωγία, αυτά τα κεφάλαια θα σας βοηθήσουν να γίνετε πραγματικός ειδικός.</p>
 
-                <!-- 第八章 -->
+                <!-- Κεφάλαιο 8 -->
                 <div id="di-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 8: Επικοινωνία: SMS, τηλέφωνοκαι κοινωνικά δίκτυα</h3>
                     <p class="chapter-intro mb-4">Η επικοινωνίαείναι η πιο αρχική, πιο βασική αποστολή του κινητού. Τώρα, από απλή κλήσηκαι SMS, έχει εξελιχθεί σε ένα πολύπλοκο οικοσύστημα που περιλαμβάνει IM, κοινωνικά δίκτυακαι email.</p>
@@ -3547,7 +3547,7 @@
                         <li><strong>Φωτισμός</strong>: Γυρίστε την πλάτη στο παράθυρο και κοιτάξτε προς τη φωτεινή πηγή (η φυσική φωτιά είναι η καλύτερη), αποφεύγοντας την αντιφωτισμό που μαυρίζει το πρόσωπο.</li>
                         <li><strong>Γωνία</strong>：Η κάμερα του τηλεφώνου ελαφρώς πάνω από τα μάτια, αποφεύγοντας το διπλό πηγούνι· σε οριζόντια κλήση κρατήστε με δύο χέρια για σταθερότητα.</li>
                         <li><strong>Ήχος</strong>: Η χρήση ακουστικών αποφεύγει ηχώ και σφυριγμό· σε ήσυχο περιβάλλον μην ανοίγετε τη λειτουργία «ηχείο».</li>
-                        <li><strong>网络</strong>：Δώστε προτεραιότητα στο WiFi· σε βίντεο 4G/5G πλησιάστε στο παράθυρο για αποφυγή εξασθένησης σήματος· σε πολυπρόσωπες συναντήσεις μπορείτε να κλείσετε τα άλλα βίντεο κρατώντας μόνο τον ομιλητή.</li>
+                        <li><strong>network</strong>：Δώστε προτεραιότητα στο WiFi· σε βίντεο 4G/5G πλησιάστε στο παράθυρο για αποφυγή εξασθένησης σήματος· σε πολυπρόσωπες συναντήσεις μπορείτε να κλείσετε τα άλλα βίντεο κρατώντας μόνο τον ομιλητή.</li>
                         <li><strong>Θόλωση φόντου</strong>：Το Tencent Meeting και το Zoom υποστηρίζουν AI εικονικό θόλωμα φόντου. Φορέστε ρούχα μονόχρωμα, αποφεύγοντας χρώματα παρόμοια με το φόντο για να μην «φύγει» το green screen.</li>
                     </ul>
 
@@ -3594,7 +3594,7 @@
                     </div>
                 </div>
 
-                <!-- 第九章 -->
+                <!-- Κεφάλαιο 9 -->
                 <div id="di-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 9: Κινηνό γραφείο και εκπαίδευση</h3>
                     <p class="chapter-intro mb-4">Παλαιότερα πίστευα ότι η εργασία στο κινητό ήταν «πρόχειρη», μέχρι που σε ένα ταξίδι ξέχασα τον υπολογιστή και τελείωσα την τροποποίηση προσφοράς και την υπογραφή συμβολαίου από το κινητό. Ειλικρινά, το bottleneck δεν είναι το κινητό, αλλά η άγνοιά μας για τις δυνατότητές του.</p>
@@ -3659,7 +3659,7 @@
                     </div>
                 </div>
 
-                <!-- 第十章 -->
+                <!-- Κεφάλαιο 10 -->
                 <div id="di-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 10: Κινητές πληρωμές και υπηρεσίες καθημερινότητας</h3>
                     <p class="chapter-intro mb-4">Ειλικρινά, η γενιά των γονιών μου αρνιόταν την "πληρωμή με κινητό". "Αν κλαπούν τα χρήματα;" Φοβούνται. Η πραγματικότητα: μετρητά στην τσέπη χάνονται πιο εύκολα από ό,τι κλαπεί πληρωμή. Η πληρωμή με κινητό δεν αποθηκεύει χρήματα, είναι απλά κλειδί για τον τραπεζικό λογαριασμό.</p>
@@ -3735,7 +3735,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章 -->
+                <!-- Κεφάλαιο 11 -->
                 <div id="di-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 11: Φωτογραφία και διαχείριση εικόνων</h3>
                     <p class="chapter-intro mb-4">Ειλικρινά, οι περισσότερες φωτογραφίες είναι πολύ κάτω από τις δυνατότητες του κινητού. Δεν φταίει η τεχνική σας, αλλά μικρές ρυθμίσεις και συνήθειες. Εδώ θα δούμε πρακτικά πράγματα.</p>
@@ -3800,7 +3800,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章附：专业影像技术 -->
+                <!-- Παράρτημα Κεφαλαίου 11：Επαγγελματική τεχνολογία απεικόνισης -->
                 <div id="di-shi-yi-zhang-advanced" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 11 Παράρτημα: γνώσεις επαγγελματικής απεικόνισης</h3>
                     <p class="chapter-intro mb-4">Για να κατανοήσετε πραγματικά τα μυστικά της φωτογραφίας και του βίντεο στο κινητό, χρειάζεται να γνωρίσετε κάποιες επαγγελματικές γνώσεις τεχνολογίας εικόνας. Αυτές οι γνώσεις όχι μόνο σας βοηθούν να χρησιμοποιείτε καλύτερα την κάμερα του κινητού, αλλά και να έχετε καλύτερη κρίση κατά την επιλογή συσκευής.</p>
@@ -4062,7 +4062,7 @@
                     </div>
                 </div>
 
-                <!-- 第十二章 -->
+                <!-- Κεφάλαιο 12 -->
                 <div id="di-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 12: Ήχος, εικόνα, ψυχαγωγία και ανάγνωση</h3>
                     <p class="chapter-intro mb-4">Το κινητό έχει βασικά αντικαταστήσει τα MP3, τα τηλεχειριστήρια, το Kindle και τις φορητές κονσόλες παιχνιδιών. Αλλά ειλικρινά, πολλοί χρησιμοποιούν μόνο τις πιο βασικές λειτουργίες αυτών των εφαρμογών, υπάρχουν πολλές χρήσιμες δυνατότητες που δεν έχουν ανακαλύψει. Σε αυτό το κεφάλαιο θα μιλήσουμε για το πώς να κάνετε την ψυχαγωγία στο κινητό πιο άνετη και ευχάριστη.</p>
@@ -4125,7 +4125,7 @@
                     </div>
                 </div>
 
-                <!-- 第十三章 -->
+                <!-- Κεφάλαιο 13 -->
                 <div id="di-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 13: Προτάσεις εφαρμογών εργαλείων</h3>
                     <p class="chapter-intro mb-4">Αυτό το κεφάλαιο επιλέγει εργαλεία που πραγματικά αυξάνουν παραγωγικότητα, υγεία και μετακίνηση.</p>
@@ -4379,7 +4379,7 @@
                     </div>
                 </div>
 
-                <!-- 第十四章：密码管理器专题 -->
+                <!-- Κεφάλαιο 14：Θέμα διαχειριστή κωδικών -->
                 <div id="di-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 14: Ειδικό θέμα διαχειριστών κωδικών</h3>
                     <p class="chapter-intro mb-4">Στην ψηφιακή εποχή, οι κωδικοί είναι τα κλειδιά του σπιτιού σας. Αλλά αν είναι πάρα πολλοί και πολύπλοκοι, τι κάνετε; Ο διαχειριστής κωδικών είναι ο "παντογνώστης θεματοφύλακας των κλειδιών σας".</p>
@@ -4739,12 +4739,12 @@
                 </div>
             </section>
 
-            <!-- 三、进阶篇 -->
+            <!-- 3. Προχωρημένο κεφάλαιο -->
             <section id="jin-jie-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">III. Ενότητα Προχωρημένων (Κεφάλαια 15-20)</h2>
                 <p class="chapter-intro mb-4">Αφότου κατακτήσετε τα βασικά, ας εμβαθύνουμε σε προχωρημένες λειτουργίες. Θα σας βοηθήσουν να γίνετε πραγματικός ειδικός, ακόμα και να ξεκλειδώσετε "κρυφές δεξιότητες".</p>
 
-                <!-- 第十五章 -->
+                <!-- Κεφάλαιο 15 -->
                 <div id="di-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 15: Επιστήμη μπαταρίας και βελτιστοποίηση διάρκειας</h3>
                     <p class="chapter-intro mb-4">Η μπαταρία είναι η "καρδιά ενέργειας" του κινητού. Αυτό το κεφάλαιο εξηγεί τους ιδιωματισμούς της, επιστημονικές τεχνικές φόρτισης και αυτονομίας, για να ξεπεράσετε το άγχος.</p>
@@ -4961,7 +4961,7 @@
                     </div>
                 </div>
 
-                <!-- 第十六章 -->
+                <!-- Κεφάλαιο 16 -->
                 <div id="di-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 16: Συστήματα λογαριασμών και υπηρεσίες cloud</h3>
                     <p class="chapter-intro mb-4">Έχω έναν φίλο, πέρυσι του έκλεψαν το κινητό. Δεν σκέφτηκε «πόσο κοστίζει το κινητό», αλλά «μπορώ να βρω τις φωτογραφίες μου;». Δυστυχώς, δεν είχε ενεργοποιήσει cloud backup. Το κινητό αντικαθίσταται, αλλά τα δεδομένα στους λογαριασμούς, αν χαθούν, χάθηκαν για πάντα. Σε αυτή την ενότητα θα μιλήσουμε για το πώς να ασφαλίσετε πραγματικά την ψηφιακή σας ζωή.</p>
@@ -5053,7 +5053,7 @@
                     </div>
                 </div>
 
-                <!-- 第十七章 -->
+                <!-- Κεφάλαιο 17 -->
                 <div id="di-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 17: Σύνδεση κινητού με άλλες συσκευές</h3>
                     <p class="chapter-intro mb-4">Το κινητό σας είναι σούπερ τηλεχειριστήριο και κέντρο δεδομένων. Δεν κάνει μόνο κλήσεις, συνδέει υπολογιστή, τηλεόραση, ρολόι, ηχείο, αυτοκίνητο, ώστε να μην είναι νησιά. Θα δούμε πώς να τα κάνουμε να "συνεργάζονται".</p>
@@ -5165,7 +5165,7 @@
                     </div>
                 </div>
 
-                <!-- 第十八章 -->
+                <!-- Κεφάλαιο 18 -->
                 <div id="di-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 18: Αντίγραφα ασφαλείας δεδομένων και μεταφορά</h3>
                     <p class="chapter-intro mb-4">Μια γειτόνισσά μου, το κινητό της έπεσε στην πισίνα και δεν ανοίγει. Δεν την πείραξε τόσο το ίδιο το κινητό, αλλά οι φωτογραφίες τριών ετών χωρίς backup — όλα τα στάδια του παιδιού της, από τη γέννηση μέχρι τα πρώτα του βήματα. Όταν μου το είπε, ένιωσα άσχημα, γιατί αυτό θα μπορούσε να είχε αποφευχθεί. Σε αυτή την ενότητα θα ασφαλίσουμε σοβαρά τα δεδομένα μας.</p>
@@ -5263,7 +5263,7 @@
                     </div>
                 </div>
 
-                <!-- 第十九章 -->
+                <!-- Κεφάλαιο 19 -->
                 <div id="di-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 19: Εντοπισμός βλαβών και αυτοβοήθεια</h3>
                     <p class="chapter-intro mb-4">Το κινητό, όπως και οι άνθρωποι, μερικές φορές "αρρωσταίνει". Κολλήματα, κρασαρίσματα, μαύρη οθόνη, αδυναμία φόρτισης... οι περισσότερες βλάβες δεν είναι τόσο τρομακτικές, μπορείτε να δοκιμάσετε μόνοι σας πριν το στείλετε για επισκευή. Αυτό το κεφάλαιο είναι το "εγχειρίδιο πρώτων βοηθειών κινητού" σας — δοκιμάστε πρώτα μεθόδους χαμηλού κόστους, αν δεν δουλέψουν, βρείτε επαγγελματία.</p>
@@ -5359,7 +5359,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章：开发者模式与高级权限 -->
+                <!-- Κεφάλαιο 20：Λειτουργία προγραμματιστή και προχωρημένα δικαιώματα -->
                 <div id="di-er-shi-zhang-jinjie" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 20: Λειτουργία προγραμματιστή και προχωρημένα δικαιώματα</h3>
                     <p class="chapter-intro mb-4">Αυτό το κεφάλαιο είναι για όσους θέλουν να εμβαθύνουν σε "κρυφές λειτουργίες". Λειτουργία προγραμματιστή, Root, BL — ακούγονται geek αλλά δεν είναι μακριά.</p>
@@ -5561,7 +5561,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章附：Termux便携式Linux终端 -->
+                <!-- Παράρτημα Κεφαλαίου 20：TermuxΦορητόLinuxterminal -->
                 <div id="di-er-shi-zhang-termux" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 20 Παράρτημα: Termux — φορητό περιβάλλον τερματικού Linux σε Android</h3>
                     <p class="chapter-intro mb-4">Αν νιώθετε ότι η λειτουργία προγραμματιστή δεν είναι αρκετά «hardcore» και θέλετε μια ολοκληρωμένη εμπειρία Linux command line στο κινητό, το Termux είναι για εσάς. Χωρίς root, μετατρέπει ένα απλό Android κινητό σε φορητό Linux σταθμό εργασίας — ιδανικό για προχωρημένους χρήστες που εξερευνούν την ανάπτυξη και τη λειτουργία σε κινητά.</p>
@@ -5685,12 +5685,12 @@
                 </div>
             </section>
 
-            <!-- 四、超越篇 -->
+            <!-- 4. Κεφάλαιο υπέρβασης -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">IV. Ενότητα Υπέρβασης (Κεφάλαια 21-26)</h2>
                 <p class="chapter-intro mb-4">Αυτό το μέρος σας παίρνει σε βαθύτερο ψηφιακό κόσμο. Ασφάλεια, AI, προγραμματισμός, ψηφιακή κληρονομιά — θα σας κάνουν πραγματικό ψηφιακό πολίτη.</p>
 
-                <!-- 第二十一章 -->
+                <!-- Κεφάλαιο 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 21: Βαθιά εξερεύνηση κινητών δικτύων και ασφάλειας πληροφοριών</h3>
                     <p class="chapter-intro mb-4">Χρησιμοποιούμε καθημερινά το κινητό για internet, πληρωμές, συνομιλίες, είναι πολύ βολικό. Αλλά έχετε σκεφτεί ποτέ, το ιστορικό συνομιλιών, οι κωδικοί πληρωμής, οι φωτογραφίες σας... πόσο "γυμνές" είναι αυτές οι πληροφορίες online; Ειλικρινά, οι περισσότεροι δεν το έχουν σκεφτεί καθόλου, αλλά μόλις συμβεί κάτι — όπως κλοπή λογαριασμού, χρέωση κάρτας — τότε είναι πολύ αργά για να μετανιώσετε. Σε αυτό το κεφάλαιο θα συζητήσουμε πώς να κάνετε την ψηφιακή σας ζωή λιγότερο "διαφανή".</p>
@@ -5780,7 +5780,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十二章 -->
+                <!-- Κεφάλαιο 22 -->
                 <div id="di-er-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 22: Πώς λειτουργεί η AI στο κινητό</h3>
                     <p class="chapter-intro mb-4">Καλώς ήρθατε στην πιο ωραία "μαγική σκηνή" του κινητού, πρωταγωνιστής: η τεχνητή νοημοσύνη. Όμορφες φωτογραφίες, φωνητικός βοηθός, πληκτρολόγιο που σας καταλαβαίνει — πίσω τους στέκει αυτός ο αόρατος εγκέφαλος.</p>
@@ -6047,7 +6047,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章 -->
+                <!-- Κεφάλαιο 23 -->
                 <div id="di-er-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 23: Προγραμματιστική σκέψη και εισαγωγή στον αυτοματισμό</h3>
                     <p class="chapter-intro mb-4">Ας ξεκλειδώσουμε τη δυνατότητα: αυτοματισμός χωρίς κώδικα.</p>
@@ -6147,7 +6147,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章附：GitHub入门指南 -->
+                <!-- Παράρτημα Κεφαλαίου 23：GitHubΟδηγός αρχαρίου -->
                 <div id="di-er-shi-san-zhang-github" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 23 Παράρτημα: GitHub</h3>
                     <p class="chapter-intro mb-4">GitHub = απαραίτητο.</p>
@@ -6340,7 +6340,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十四章：Root权限与BL锁深度解析 -->
+                <!-- Κεφάλαιο 24：RootΔικαιώματα καιBLΒαθιά ανάλυση κλειδώματος -->
                 <div id="di-er-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 24: Βαθιά ανάλυση δικαιωμάτων Root και κλειδώματος Bootloader</h3>
                     <p class="chapter-intro mb-4">Επέκταση κεφ. 20. Κίνδυνοι.</p>
@@ -6410,27 +6410,27 @@
                         </table>
                     </div>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">二、解锁BL锁的详细流程（以小米为例）</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. unlockBLΛεπτομερής διαδικασία ξεκλειδώματος（(παράδειγμα: Xiaomi)）</h4>
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
-                        <li><strong>申请解锁权限</strong>：在小米解锁工具网站申请解锁。</li>
-                        <li><strong>绑定账号</strong>：在手机设置中绑定小米账号。</li>
-                        <li><strong>等待期</strong>：根据账号等级，需要等待7-30天。</li>
-                        <li><strong>解锁操作</strong>：使用小米解锁工具连接电脑解锁。</li>
+                        <li><strong>Αίτημα δικαιωμάτων ξεκλειδώματος</strong>：στο Xiaomiunlockεφαρμογή μέσω ιστοσελίδας εργαλείουunlock。</li>
+                        <li><strong>Σύνδεση λογαριασμού</strong>：στο κινητόsettings σύνδεσε Xiaomi account。</li>
+                        <li><strong>Περίοδος αναμονής</strong>：Βάσει επιπέδου λογαριασμού，Απαιτείται αναμονή7-30ημέρες。</li>
+                        <li><strong>Λειτουργία ξεκλειδώματος</strong>：χρησιμοποίησε Xiaomiunlockεργαλείο σύνδεσης με υπολογιστήunlock。</li>
                     </ol>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">三、Root的多种方案</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. RootΠολλαπλές λύσεις</h4>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Magisk</strong>：现代Root方案，Systemless设计，可隐藏Root状态。</li>
-                        <li><strong>Kernelsu</strong>：基于内核的Root方案，更底层，隐藏性更好。</li>
-                        <li><strong>SuperSU</strong>：老牌Root方案，目前已停止更新。</li>
+                        <li><strong>Magisk</strong>：modernRootsolution，Systemlessdesign，Μπορεί να κρυφτείRootstatus。</li>
+                        <li><strong>Kernelsu</strong>：Βασισμένο σε kernelRootsolution，Πιο βαθύ，Καλύτερη απόκρυψη。</li>
+                        <li><strong>SuperSU</strong>：establishedRootsolution，Έχει σταματήσει η ενημέρωση。</li>
                     </ul>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">四、刷机入门</h4>
-                    <p class="mb-2">刷机是指给手机安装新的操作系统。常见的刷机类型：</p>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. Εισαγωγή στο flashing</h4>
+                    <p class="mb-2">Το flashing σημαίνει εγκατάσταση νέου λειτουργικού συστήματος στο κινητό。Συνηθισμένοι τύποι flashing：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>刷官方ROM</strong>：安装官方系统，用于救砖或降级。</li>
-                        <li><strong>刷第三方Recovery</strong>：如TWRP，用于备份恢复、刷入第三方ROM。</li>
-                        <li><strong>刷第三方ROM</strong>：如LineageOS、Pixel Experience等，体验不同的系统。</li>
+                        <li><strong>Flash επίσημουROM</strong>：Εγκατάσταση επίσημου συστήματος，Γιά διάσωση από brick ή υποβάθμιση。</li>
+                        <li><strong>Flash τρίτου κατασκευαστήRecovery</strong>：όπωςTWRP，Γιά αντίγραφο ασφαλείας και επαναφορά、Flash τρίτου κατασκευαστήROM。</li>
+                        <li><strong>Flash τρίτου κατασκευαστήROM</strong>：όπωςLineageOS、Pixel Experienceκ.λπ.，Δοκιμή διαφορετικών συστημάτων。</li>
                     </ul>
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">Πέμπτο: Samsung Knox — μη αναστρέψιμο κόστος BL Unlock</h4>
@@ -6447,23 +6447,23 @@
                     </div>
 
                     <div class="danger-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-skull-crossbones mr-2"></i>重要警告</p>
-                        <p class="mt-1">刷机有风险，操作需谨慎。可能导致：</p>
+                        <p class="font-semibold"><i class="fas fa-skull-crossbones mr-2"></i>Σημαντική προειδοποίηση</p>
+                        <p class="mt-1">Το flashing έχει ρίσκο，Προσοχή στις λειτουργίες。Μπορεί να προκαλέσει：</p>
                         <ul class="list-disc pl-6 mt-1 space-y-1">
-                            <li>手机变砖（无法开机）</li>
+                            <li>Το κινητό έγινε brick（Δεν ανοίγει）</li>
                             <li>Απώλεια εγγύησης</li>
                             <li>Απώλεια δεδομένων</li>
-                            <li>支付功能异常</li>
+                            <li>Δυσλειτουργία πληρωμών</li>
                         </ul>
-                        <p class="mt-1">刷机前务必做好完整备份，仔细阅读教程，确认机型和版本匹配。</p>
+                        <p class="mt-1">Πριν το flashing κάνε οπωσδήποτε πλήρες αντίγραφο ασφαλείας，Διάβασε προσεκτικά το tutorial，Επιβεβαίωση αντιστοιχίας μοντέλου και έκδοσης。</p>
                     </div>
 
                     <div class="info-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>推荐资源</p>
+                        <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>Προτεινόμενες πηγές</p>
                         <ul class="list-disc pl-6 mt-1 space-y-1">
-                            <li><strong>XDA Developers</strong>：全球最大的安卓开发者社区，有丰富的刷机教程和ROM资源。</li>
-                            <li><strong>酷安</strong>：国内知名的数码社区，有很多中文教程和讨论。</li>
-                            <li><strong>各机型论坛</strong>：如小米社区、一加社区等，有官方和民间教程。</li>
+                            <li><strong>XDA Developers</strong>：η μεγαλύτερη κοινότητα προγραμματιστών Android παγκοσμίως，Υπάρχουν πλούσια tutorials flashing καιROMresources。</li>
+                            <li><strong>Coolapk</strong>：Γνωστή εγχώρια ψηφιακή κοινότητα，Υπάρχουν πολλά κινεζικά tutorials και συζητήσεις。</li>
+                            <li><strong>Φόρουμ κάθε μοντέλου</strong>：όπως κοινότητα Xiaomi、κοινότητα OnePlus κ.λπ.，Υπάρχουν επίσημα και ανεπίσημα tutorials。</li>
                         </ul>
                     </div>
 
@@ -6484,16 +6484,16 @@
                     </div>
                 </div>
 
-                <!-- 第二十五章 -->
+                <!-- Κεφάλαιο 25 -->
                 <div id="di-er-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 25: Διαχείριση μεταχειρισμένων κινητών και ψηφιακή κληρονομιά</h3>
-                    <p class="chapter-intro mb-4">嘿，伙计们，经过前面二十多章的"修炼"，相信你已经从一个"数字小白"成长为一名相当从容的手机使用者了。但科技生活总有轮回——新欢终会变旧爱。当你准备让老伙计"退役"时，你知道该如何体面、安全地告别吗？</p>
+                    <p class="chapter-intro mb-4">Ει，Παιδιά，Μετά τα προηγούμενα πάνω από είκοσι κεφάλαια"training"，Πιστεύω ότι έχεις περάσει από"Ψηφιακός αρχάριος"Έχεις εξελιχθεί σε έναν αρκετά αυτόνομο χρήστη κινητού。Αλλά η τεχνολογική ζωή έχει πάντα κύκλους——Το νέο πάθος γίνεται παλιό。Όταν ετοιμάζεσαι να αφήσεις τον παλιό σύντροφο"retire"όταν，Ξέρεις πώς να αποχωρήσεις με αξιοπρέπεια、Ασφαλής αποχαιρετισμός？</p>
                     
-                    <h4 class="text-lg font-semibold mt-4 mb-2">一、旧手机的"安乐死"：安全出售或转赠指南</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. Του παλιού κινητού"Ευθανασία"：Οδηγός ασφαλούς πώλησης ή δωρεάς</h4>
                     <p class="mb-2">κεντρικόΑρχές：ΔεδομέναΚαθαρισμός"Διαγραφή"，""。Φωτογραφία、，，Δεδομέναεπαναφορά，Φωτογραφία、καταγραφή、Φωτογραφία——""。</p>
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
-                        <li><strong>自我"大扫除"</strong>：αντίγραφο ασφαλείας，（iCloud、//、Google），απενεργοποίηση"εύρεση"Λειτουργία——。</li>
-                        <li><strong>执行终极"格式化"</strong>："Επαναφορά εργοστασιακών ρυθμίσεων"Κρυπτογράφηση——Κρυπτογράφηση，，Δεδομένα。</li>
+                        <li><strong>self"Μεγάλος καθαρισμός"</strong>：αντίγραφο ασφαλείας，（iCloud、//、Google），απενεργοποίηση"εύρεση"Λειτουργία——。</li>
+                        <li><strong>Εκτέλεση τελικού"Μορφοποίηση"</strong>："Επαναφορά εργοστασιακών ρυθμίσεων"Κρυπτογράφηση——Κρυπτογράφηση，，Δεδομένα。</li>
                         <li><strong>Τελευταίο «κόλπο παραλλαγής» (μόνο παλιές συσκευές)</strong>：（iOS 8+、Android 6+）προεπιλογήΚρυπτογράφηση（FBE），Επαναφορά εργοστασιακών ρυθμίσεωνΚρυπτογράφηση，Δεδομέναεπαναφορά，<strong>Δεν χρειάζεται αυτό το βήμα</strong>。ΚρυπτογράφησηΣυσκευή（2015），Επαναφορά εργοστασιακών ρυθμίσεωνΑρχείοΑποθήκευση，Επαναφορά εργοστασιακών ρυθμίσεων。</li>
                     </ol>
 
@@ -6549,7 +6549,7 @@
                         </ul>
                     </div>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">二、数字遗产：你的社交灵魂如何安放？</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Ψηφιακή κληρονομιά：Πού ακουμπά η κοινωνική σου ψυχή？</h4>
                     <p class="mb-2">Δεδομένα，"εικονικό"。、Κοινωνικό、，"ψηφιακό"。<strong>Μετά τον θάνατο, πώς διαχειριζόμαστε αυτά τα περιουσιακά στοιχεία;</strong>，οικογένεια——Κωδικός、Πλατφόρμα、Κρυπτογράφηση。</p>
 
                     <div class="info-box rounded-lg p-4 mt-3">
@@ -6674,7 +6674,7 @@
                         <p class="mt-1">Κωδικός，。<strong>：" + + Κωδικός"，ΚωδικόςΔιαχειριστής κωδικώνΚωδικός</strong>. Έτσι τηρείται ο νόμος και μειώνεται ο κίνδυνος διαρροής.</p>
                     </div>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">三、环保的最后一程</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. Το τελικό στάδιο προστασίας περιβάλλοντος</h4>
                     <p class="mb-2">、、、，，。Κανάλι，：</p>
                     <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
                         <thead>
@@ -6713,10 +6713,10 @@
                         </tbody>
                     </table>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>官方回收/以旧换新</strong>：，，ΔεδομέναΑσφάλεια。、、Μάρκα""，。</li>
-                        <li><strong>正规回收平台</strong>：Πλατφόρμα，，。<strong>Που παρέχουν «αναφορά διαγραφής δεδομένων»</strong>πλατφόρμες, και κρατήστε αποδεικτικό.</li>
+                        <li><strong>Επίσημη ανακύκλωση/Ανταλλαγή με παλιό</strong>：，，ΔεδομέναΑσφάλεια。、、Μάρκα""，。</li>
+                        <li><strong>Νόμιμη πλατφόρμα ανακύκλωσης</strong>：Πλατφόρμα，，。<strong>Που παρέχουν «αναφορά διαγραφής δεδομένων»</strong>πλατφόρμες, και κρατήστε αποδεικτικό.</li>
                         <li><strong>Δωρεά</strong>: Μπορείτε να επικοινωνήσετε με τοπικά σχολεία της υπαίθρου ή κοινοτικούς οργανισμούς δημόσιας ωφέλειας. Τα παλιά κινητά μπορούν να μετατραπούν σε εκπαιδευτικά tablet ή κινητά για ηλικιωμένους.<strong>Πριν δωρίσετε, εκτελέστε πλήρη διαγραφή και αφαιρέστε SIM/SD</strong>。</li>
-                        <li><strong>发挥余热</strong>：Πλοήγηση、Έξυπνο、、、。。</li>
+                        <li><strong>Αξιοποίηση υπόλειψης</strong>：Πλοήγηση、Έξυπνο、、、。。</li>
                     </ul>
 
                     <div class="info-box rounded-lg p-4 mt-3">
@@ -6725,7 +6725,7 @@
                     </div>
 
                     <div class="practice-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>实操：为你的旧手机执行一场"标准葬礼"</p>
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>hands-on：Για το παλιό σου κινητό κάνε μια"Κανονική κηδεία"</p>
                         <ol class="list-decimal pl-6 mt-1 space-y-1">
                             <li>αντίγραφο ασφαλείας：ΦωτογραφίαΜεταφόρτωσηcloud、ΑρχείοΑντιγραφή、καταγραφήΕξαγωγή。</li>
                             <li>：iCloud / / / Google ，απενεργοποίηση"εύρεση"。</li>
@@ -6747,7 +6747,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十六章 -->
+                <!-- Κεφάλαιο 26 -->
                 <div id="di-er-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 26: Σύγχρονες τεχνολογικές εξελίξεις στα κινητά</h3>
                     <p class="chapter-intro mb-4">""，。2024-2026Τεχνολογία：AIcloud，Δορυφόροςναυαρχίδαμεσαίο，Foldable""""，ΜπαταρίαΤεχνολογία。κεφάλαιο，Τεχνολογία，""""。</p>
@@ -6841,12 +6841,12 @@
                 </div>
             </section>
 
-            <!-- 五、实战篇（第27-32章） -->
+            <!-- 5. Κεφάλαιο πρακτικής（Κεφάλαια 27-32） -->
             <section id="shi-zhan-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">V. Ενότητα Πρακτικής (Κεφάλαια 27-32)</h2>
                 <p class="chapter-intro mb-4">κεφάλαιο，。κεφάλαιο——，ΥγείαψηφιακόΚασκολήψη οθόνηςΒίντεο，ΕπείγονΑσφάλεια。κεφάλαιο，。</p>
 
-                <!-- 第二十七章：适老化专题 -->
+                <!-- Κεφάλαιο 27：Θέμα προσβασιμότητας ηλικιωμένων -->
                 <div id="di-er-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 27: Οι γονείς μπορούν κι αυτοί — πλήρης οδηγός προσβασιμότητας</h3>
                     <p class="chapter-intro mb-4">，κεφάλαιο，。"Σύστημαενημέρωση"，，。，，。""，προεπιλογήνέοι。κεφάλαιο，，。</p>
@@ -6893,7 +6893,7 @@
                         <li><strong>Μεγάλα εικονίδια</strong>：Οθόνητσίμπημα（σμίκρυνσηΦωτογραφία）Ρυθμίσεις &gt; （），（3×5），。</li>
                         <li><strong>άνοιγμα""</strong>：，"Λειτουργία"。</li>
                         <li><strong>απενεργοποίησηΕιδοποίηση</strong>：Ρυθμίσεις &gt; Ειδοποίηση，、SMS、AppΕιδοποίηση。，。</li>
-                        <li><strong>把常用联系人放到桌面</strong>：παρατεταμένο πάτημα &gt; Προσθήκη &gt; Επαφή，、、、ΕπείγονΕπαφή。，。</li>
+                        <li><strong>Βάλε τις συχνές επαφές στην αρχική οθόνη</strong>：παρατεταμένο πάτημα &gt; Προσθήκη &gt; Επαφή，、、、ΕπείγονΕπαφή。，。</li>
                     </ol>
 
                     <div class="practice-box rounded-lg p-4 mt-3">
@@ -6912,7 +6912,7 @@
                     <h5 class="font-semibold mt-3 mb-1">Έξι κοινές απάτες (αν τις ακούσετε, κλείστε αμέσως το τηλέφωνο):</h5>
                     <ul class="list-disc pl-6 mb-3 space-y-2">
                         <li><strong>1. "Ο εγγονός σου έχει πρόβλημα, στείλε χρήματα γρήγορα"</strong>— Οι απατεώνες θα πουν "ο εγγονός/η εγγονή σου έκανε ζημιά έξω, τον συνέλαβε η αστυνομία, χρειάζεται εγγύηση". Θυμηθείτε:<strong>""Απάτη</strong>. Η αστυνομία και οι δικαστικές αρχές δεν ζητούν χρήματα μέσω τηλεφώνου.</li>
-                        <li><strong>2. "Η κάρτα ασθενείας σου έχει ανασταλεί"</strong>——SMS，""。：<strong>医保局、社保局不会发短信让你点链接</strong>。12333（επίσημο）。</li>
+                        <li><strong>2. "Η κάρτα ασθενείας σου έχει ανασταλεί"</strong>——SMS，""。：<strong>Οργανισμός υγείας、Ο οργανισμός κοινωνικής ασφάλισης δεν στέλνει SMS ζητώντας να πατήσεις σύνδεσμο</strong>。12333（επίσημο）。</li>
                         <li><strong>3. "Υψηλής απόδοσης επένδυση, κέρδος χωρίς ρίσκο"</strong>——、SMS""""，。：<strong>Αυτά που υπόσχονται ετήσια απόδοση πάνω από 5% και "εγγυημένο κεφάλαιο", 99,9% είναι απάτη</strong>。</li>
                         <li><strong>4. "Είμαι ο προϊστάμενος/παλιός φίλος σου, άλλαξα αριθμό"</strong>— Παριστάνουν γνωστό για να δανειστούν χρήματα. Θυμηθείτε:<strong>Το να τηλεφωνήσετε για επιβεβαίωση είναι πιο αποτελεσματικό από οτιδήποτε</strong>, όποιος λέει "δεν μπορώ να μιλήσω στο τηλέφωνο" είναι κατά 80% απατεώνας.</li>
                         <li><strong>⑤ "δωρεάν/"</strong>——δωρεάν"Υγεία"，。：<strong>，δωρεάν</strong>。</li>
@@ -6953,7 +6953,7 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>Μεγέθυνση της γραμματοσειράς του WeChat</strong>： &gt; &gt; Ρυθμίσεις &gt; &gt; ，。，，Σύστημα。</li>
                         <li><strong>άνοιγμα""</strong>： &gt; &gt; Ρυθμίσεις &gt; &gt; Ενεργοποίηση.άνοιγμα，，"Μήνυμα"（Μήνυμα）。</li>
-                        <li><strong>帮他们备注好重要联系人</strong>：、——"-""-"，άνοιγμα。</li>
+                        <li><strong>Σημείωσε για αυτούς τους σημαντικούς επαφές</strong>：、——"-""-"，άνοιγμα。</li>
                         <li><strong>"Φωνήείσοδος"</strong>：，（）Μικρόφωνο（iPhone），。，""。</li>
                         <li><strong>απενεργοποίηση""Λειτουργία</strong>： &gt; &gt; Ρυθμίσεις &gt; &gt; ，"Moments""Βίντεο""Ζωντανή μετάδοση"""""，。</li>
                     </ul>
@@ -6994,7 +6994,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十八章：手机选购终极指南 -->
+                <!-- Κεφάλαιο 28：Ο απόλυτος οδηγός αγοράς κινητού -->
                 <div id="di-er-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 28: Επενδύστε σωστά τα χρήματά σας για το ιδανικό κινητό — Ο τελικός οδηγός αγοράς</h3>
                     <p class="chapter-intro mb-4">，、Τιμή，ναυαρχίδα。κεφάλαιοΠαράμετρος——。，""，，。</p>
@@ -7182,7 +7182,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十九章：数字健康 -->
+                <!-- Κεφάλαιο 29：Ψηφιακή υγεία -->
                 <div id="di-er-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 29: Ψηφιακή υγεία — Χτίστε μια υγιή σχέση με το κινητό σας</h3>
                     <p class="chapter-intro mb-4">：5Βίντεο，？，，？，Υγεία。κεφάλαιο""，。</p>
@@ -7215,11 +7215,11 @@
                     <p class="mb-2">Οθόνη，、。（），：</p>
                     <div class="info-box rounded-lg p-4 mt-3">
                         <p class="font-semibold"><i class="fas fa-eye mr-2"></i>Κανόνας 20-20-20</p>
-                        <p class="mt-1">每看屏幕<strong>20 λεπτά</strong>, μετακινήστε το βλέμμα σε<strong>20 πόδια (περίπου 6 μέτρα)</strong> μακριά, και κρατήστε για<strong>20 δευτερόλεπτα</strong>. Αυτή η απλή κίνηση ανακουφίζει αποτελεσματικά την κόπωση του φωτοquilerιμού μυός.</p>
+                        <p class="mt-1">Κάθε θέα οθόνης<strong>20 λεπτά</strong>, μετακινήστε το βλέμμα σε<strong>20 πόδια (περίπου 6 μέτρα)</strong> μακριά, και κρατήστε για<strong>20 δευτερόλεπτα</strong>. Αυτή η απλή κίνηση ανακουφίζει αποτελεσματικά την κόπωση του φωτοquilerιμού μυός.</p>
                     </div>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>ενεργοποίηση</strong>：Ρυθμίσεις &gt; εμφάνιση &gt; （），ενεργοποίησηΟθόνη，。ΣυμβουλέςαυτόματοΕνεργοποίηση.</li>
-                        <li><strong>调整屏幕亮度</strong>：Οθόνη。，。ενεργοποίηση"αυτόματο"。</li>
+                        <li><strong>Προσαρμογή φωτεινότητας οθόνης</strong>：Οθόνη。，。ενεργοποίηση"αυτόματο"。</li>
                         <li><strong>Διατηρήστε απόσταση</strong>: Το κινητό πρέπει να είναι τουλάχιστον 30 εκατοστά από τα μάτια. Πολλοί κρατάνε το κινητό πολύ κοντά, οπότε ο μυς εστιασης είναι συνεχώς σε σύσπαση και η μυωπία επιδεινώνεται γρήγορα.</li>
                     </ul>
 
@@ -7274,7 +7274,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十章：投屏、演示与车载互联 -->
+                <!-- Κεφάλαιο 30：screen cast、Παρουσίαση και διασύνδεση με αυτοκίνητο -->
                 <div id="di-san-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 30: Αναζήτηση οθόνης, παρουσιάσεις και διασύνδεση με αυτοκίνητο</h3>
                     <p class="chapter-intro mb-4">Οθόνη7，55、100。""Οθόνη，Διάσταση。κεφάλαιοΚασκολήψη οθόνης、Σενάριο，Οθόνη。</p>
@@ -7367,7 +7367,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十一章：短视频拍摄与内容创作入门 -->
+                <!-- Κεφάλαιο 31：Εισαγωγή στη λήψη βίντεο σύντομης διάρκειας και τη δημιουργία περιεχομένου -->
                 <div id="di-san-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 31: Εισαγωγή στη δημιουργία βίντεο μικρής διάρκειας και περιεχομένου</h3>
                     <p class="chapter-intro mb-4">2026，Βίντεο"νέοι"，βασικό。καταγραφή、Κοινοποίηση，，——Κάμερα、Premiere，。κεφάλαιο。</p>
@@ -7383,7 +7383,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">、βασικόΡυθμίσεις——Υποχρεωτικό5</h4>
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
                         <li><strong>Ανάλυση1080P，Ρυθμός καρέ30fps</strong>：ΒίντεοΠλατφόρμα。4KΑρχείοΜεταφόρτωση，60fpsΚοινωνικόΠλατφόρμαΑρχείο。</li>
-                        <li><strong>擦干净镜头</strong>：。Φακός，。</li>
+                        <li><strong>Καθάρισε τον φακό</strong>：。Φακός，。</li>
                         <li><strong>ΚλείδωμαΕστίασηΈκθεση</strong>：παρατεταμένο πάτημα2，"AE/AFΚλείδωμα"。。</li>
                         <li><strong>Οριζόντια ή κατακόρυφη λήψη;</strong>——//Βίντεο/<strong>Κατακόρυφη λήψη</strong> (9:16), δημοσίευση σε Bilibili/YouTube<strong>Οριζόντια λήψη</strong>（16:9）。Πλατφόρμα。</li>
                         <li><strong>Ενεργοποιήστε τις γραμμές πλέγματος</strong>：Ρυθμίσεις &gt; Κάμερα &gt; 。βασικό，。</li>
@@ -7450,7 +7450,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十二章：手机安全急救手册 -->
+                <!-- Κεφάλαιο 32：Εγχειρίδιο πρώτων βοηθειών ασφαλείας κινητού -->
                 <div id="di-san-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 32: Εγχειρίδιο πρώτων βοηθειών για την ασφάλεια του κινητού</h3>
                     <p class="chapter-intro mb-4">κεφάλαιο""。，、、Απάτη，。ΣυμβουλέςΑυτή τη στιγμή，Βήματααποθήκευση，Εκτύπωση——。</p>
@@ -7619,12 +7619,12 @@
                 </div>
             </section>
 
-            <!-- 六、展望篇（第33-41章） -->
+            <!-- 6. Κεφάλαιο προοπτικής（Κεφάλαια 33-41） -->
             <section id="zhan-wang-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">VI. Ενότητα Προοπτικής (Κεφάλαια 33-41)</h2>
                 <p class="chapter-intro mb-4">，，。κεφάλαιο，5-20——？？ψηφιακό？</p>
 
-                <!-- 第三十三章 -->
+                <!-- Κεφάλαιο 33 -->
                 <div id="di-san-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 33: Μελλοντικές προοπτικές — Το επόμενο βήμα των κινητών</h3>
                     <p class="chapter-intro mb-4">，""Συσκευή。κεφάλαιο：Συσκευή、""、。</p>
@@ -7633,7 +7633,7 @@
                     <p class="mb-2">Συσκευή，，AR/VRΣυσκευή：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>Σειρά Vision Pro</strong>：Vision ProΔημοσίευση""，Τιμή（29999）。2026-2027、Vision，"Προγραμματιστής"""。iPhoneVisionΔεδομένα。</li>
-                        <li><strong>AR眼镜</strong>：""，ψηφιακό。MetaRay-BanΈξυπνο，Rokid、XREAL、INMOAR。2025-2026ARπραγματικού χρόνουΜετάφραση、ΠλοήγησηHUD、AI，εμφάνιση，""3-5。</li>
+                        <li><strong>ARglasses</strong>：""，ψηφιακό。MetaRay-BanΈξυπνο，Rokid、XREAL、INMOAR。2025-2026ARπραγματικού χρόνουΜετάφραση、ΠλοήγησηHUD、AI，εμφάνιση，""3-5。</li>
                         <li><strong>Έξυπνο</strong>：Samsung Galaxy Ring、Oura RingΈξυπνο，"Αισθητήρας"Υγεία。"""+"。</li>
                     </ul>
 
@@ -7648,38 +7648,38 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">3. Η "απόκρυψη" του κινητού και η νέα ταυτότητα-ακρογωνιαίος λίθος</h4>
                     <p class="mb-2">""——""，ψηφιακό：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>云端双因素认证</strong>：""，χειροκίνητοεπαλήθευση。</li>
-                        <li><strong>数字遗产成为出厂设置</strong>：ψηφιακόΛύση，""προεπιλογή。</li>
-                        <li><strong>从"设备中心"到"身份中心"</strong>：cloudάτομοΔεδομένα，。、Συσκευή，Δεδομένα。</li>
+                        <li><strong>Διπλή επαλήθευση στο cloud</strong>：""，χειροκίνητοεπαλήθευση。</li>
+                        <li><strong>Το ψηφιακό κληροδότημα γίνεται εργοστασιακή ρύθμιση</strong>：ψηφιακόΛύση，""προεπιλογή。</li>
+                        <li><strong>Από"Κέντρο συσκευών"προς"Κέντρο ταυτότητας"</strong>：cloudάτομοΔεδομένα，。、Συσκευή，Δεδομένα。</li>
                     </ul>
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">4. Ηθικές σκέψεις: Είμαστε εμείς οι κύριοι του κινητού;</h4>
-                    <p class="mb-2">一个终极拷问始终存在：我们是被技术赋能的"神"，还是被算法喂养的"缸中之脑"？</p>
+                    <p class="mb-2">Ένα απόλυτο ερώτημα παραμένει πάντα：Είμαστε ενισχυμένοι από την τεχνολογία"θεός"，Ή είσαι τρεφόμενος από τον αλγόριθμο"Εγκέφαλος σε δεξαμενή"？</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>Ηθική της τεχνητής νοημοσύνης</strong>：AI，""？AI Agent、Μήνυμα，？</li>
                         <li><strong>Δεδομένα</strong>：ΥγείαΔεδομένα、Δεδομένα、Δεδομένα，、Συσκευή？《άτομο》GDPR，"Δεδομένα"""。</li>
                         <li><strong>ψηφιακό</strong>：AI、Foldable、Δορυφόρος""""。ψηφιακόβασικό，——20""。</li>
-                        <li>当算法比你更懂你想看什么，你的"喜欢"有多少是出于自发？</li>
-                        <li>当你每隔几分钟就不自觉地点亮屏幕，这是你的习惯还是被设计出来的"上瘾行为"？</li>
+                        <li>Όταν ο αλγόριθμος ξέρει καλύτερα από σένα τι θέλεις να δεις，your"like"Πόσα προέρχονται από δική σου πρωτοβουλία？</li>
+                        <li>Όταν κάθε λίγα λεπτά ανάβεις ασυναίσθητα την οθόνη，Αυτό είναι δική σου συνήθεια ή σχεδιασμένη για σένα"Εθιστική συμπεριφορά"？</li>
                     </ul>
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">、σύνδεση，——ψηφιακό</h4>
                     <p class="mb-2">Τεχνολογία，ψηφιακό，10：</p>
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
-                        <li>做资源的分配者，而非被推送的接收者。</li>
-                        <li>让自动化成为你忠实的"副驾驶"。</li>
-                        <li>建立你稳固的"数字后方"。</li>
-                        <li>定期执行"数字断舍离"与"社交斋戒"。</li>
-                        <li>永远把安全和隐私作为一切便利的前提。</li>
+                        <li>Γίνε διαχειριστής πόρων，Και όχι δέκτης ότι σου στέλνουν。</li>
+                        <li>Κάνε την αυτοματοποίηση τον πιστό σου"Συνοδηγός"。</li>
+                        <li>Χτίσε τη σταθερή σου"Ψηφιακή οπισθοφυλακή"。</li>
+                        <li>Τακτική εκτέλεση"Ψηφιακός μινιμαλισμός"και"Κοινωνική νηστεία"。</li>
+                        <li>Πάντα η ασφάλεια και το απόρρητο ως προϋπόθεση κάθε διευκόλυσης。</li>
                     </ol>
 
                     <div class="practice-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>来试试：制定你的《个人数字设备使用服务条款》</p>
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>Δοκίμασε：Διαμόρφωσε το《Όροι χρήσης προσωπικών ψηφιακών συσκευών》</p>
                         <p class="mt-1">Γράψτε έναν απλό "όρο service" για εσάς και το κινητό σας (καθώς και μελλοντικά γυαλιά AR, βοηθούς AI) για να ορίσετε τη σχέση σας. Για παράδειγμα:</p>
                         <ul class="list-disc pl-6 mt-1 space-y-1">
-                            <li>第1条：我的注意力时间属于我。你在我工作/陪伴家人时应主动进入"勿扰"状态。</li>
-                            <li>第2条：我的个人数据是我的财产。你的首要职责是安全加密与便捷同步。</li>
-                            <li>第3条：我们的共同目标是提升生活效率与体验。若你通过诱导性设计让我沉迷，我有权将你卸载。</li>
+                            <li>Σημείο 1：Ο χρόνος προσοχής μου μου ανήκει。Εσύ στη δουλειά μου/Όταν είσαι με την οικογένεια πρέπει να ενεργοποιείς"do not disturb"status。</li>
+                            <li>Σημείο 2：Τα προσωπικά μου δεδομένα είναι η περιουσία μου。Η κύρια ευθύνη σου είναι η ασφαλής κρυπτογράφηση και ο βολικός συγχρονισμός。</li>
+                            <li>Σημείο 3：Ο κοινός μας στόχος είναι η βελτίωση της αποδοτικότητας και της εμπειρίας ζωής。Αν μέσω παραπλανητικού σχεδιασμού με κάνεις να εθιστώ，Έχω το δικαίωμα να σε απεγκαταστήσω。</li>
                         </ul>
                     </div>
 
@@ -7695,7 +7695,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十四章：车机互联深度指南 -->
+                <!-- Κεφάλαιο 34：Βαθύς οδηγός διασύνδεσης με το αυτοκίνητο -->
                 <div id="di-san-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 34: Οδηγός σε βάθος για τη διασύνδεση κινητού-αυτοκινήτου — Η σύγκλιση κινητού και αυτοκινήτου</h3>
                     <p class="chapter-intro mb-4">"""Έξυπνο"。，。κεφάλαιο、Σύστημα，Μικρή τεχνική。</p>
@@ -7820,12 +7820,12 @@
                 </div>
             </section>
 
-            <!-- 儿童与手机专题（第35章） -->
+            <!-- Θέμα: Παιδιά και κινητά（Κεφάλαιο 35） -->
             <section id="er-tong-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">παιδιά（35κεφάλαιο）</h2>
                 <p class="chapter-intro mb-4">，。，；，。κεφάλαιο、，"、、、"Βήματα，ψηφιακόγονείς。</p>
 
-                <!-- 第三十五章 -->
+                <!-- Κεφάλαιο 35 -->
                 <div id="di-san-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 35: Παιδιά και κινητά — Εκπαιδευτικός οδηγός για την ψηφιακή εποχή</h3>
                     <p class="chapter-intro mb-4">κεφάλαιο""，""。Συσκευή、、、Υγεία，。</p>
@@ -7972,7 +7972,7 @@
                 </div>
             </section>
 
-            <!-- 第三十六章：手机与智能家居——让家变聪明 -->
+            <!-- Κεφάλαιο 36：Κινητό και έξυπνο σπίτι——Κάνε το σπίτι έξυπνο -->
             <div id="di-san-shi-liu-zhang" class="mb-10 content-section">
                 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Κεφάλαιο 36: Κινητό και έξυπνο σπίτι — Κάντε το σπίτι σας έξυπνο</h3>
                 <p class="chapter-intro mb-4">——""。、，Έξυπνο"""ρύθμιση"。κεφάλαιοΠρωτόκολλο、、αρχάριος，Ασφάλεια，"Έξυπνο"。</p>
@@ -7987,7 +7987,7 @@
                     <li><strong>Zigbee</strong>：Πρωτόκολλο，，Συσκευή，Μάρκα，Matter+Thread。</li>
                 </ul>
                 <div class="info-box rounded-lg p-4 mt-3">
-                    <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>一句话原则</p>
+                    <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>Αρχή μίας φράσης</p>
                     <p class="mt-1">2026ΈξυπνοΣυσκευή，"Matter over Thread"——。ΣυσκευήWi-FiBluetooth，，Matter。</p>
                 </div>
 
@@ -8036,7 +8036,7 @@
                         <ul class="list-disc pl-6 mt-1">
                             <li><strong>Λειτουργία επιστροφής σπιτιού</strong>：εντοπισμός+→+++。</li>
                             <li><strong>Λειτουργία αναχώρησης</strong>：（εντοπισμός）→++++。</li>
-                            <li><strong>睡眠模式</strong>: Κάθε βράδυ 23:00 → σβήσιμο κεντρικών φώτων+κλείσιμο κουρτινών+κλιματισμός στους 26°+άναμμα νυχτερινού φωτός.</li>
+                            <li><strong>λειτουργία ύπνου</strong>: Κάθε βράδυ 23:00 → σβήσιμο κεντρικών φώτων+κλείσιμο κουρτινών+κλιματισμός στους 26°+άναμμα νυχτερινού φωτός.</li>
                         </ul>
                     </li>
                     <li><strong>NFC με ένα άγγιγμα</strong>：NFC，Σενάριο（、Ύπνος）。iPhone""Αυτοματοποίηση，""Appεγγραφή。</li>
@@ -8129,7 +8129,7 @@
                 <p class="mb-2">Σήμα，。</p>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
                     <li><strong>εκτός σύνδεσηςΧάρτης</strong>：Google Maps / / OsmAnd Λήψηεκτός σύνδεσης。 Wi-Fi Λήψη+，Πλοήγηση、αναζήτησηεκτός σύνδεσης。</li>
-                    <li><strong>εκτός σύνδεσηςΜετάφραση</strong>：Google Μετάφραση、、Μετάφρασηεκτός σύνδεσης。<strong>提前下载目的地语言包</strong>，Μετάφραση App 。</li>
+                    <li><strong>εκτός σύνδεσηςΜετάφραση</strong>：Google Μετάφραση、、Μετάφρασηεκτός σύνδεσης。<strong>Κατέβασε εκ των προτέρων τα γλωσσικά πακέτα του προορισμού</strong>，Μετάφραση App 。</li>
                     <li><strong>Πληρωμές στο εξωτερικό</strong>: Δέστε UnionPay/Visa/Mastercard στο πορτοφόλι του κινητού για πληρωμές καρτών ή NFC στο εξωτερικό (προσοχή στην ενεργοποίηση "συναλλαγών εξωτερικού"). Τοπικά πορτοφόλια (GrabPay στη ΝΑ Ασία, PayPay στην Ιαπωνία, Toss στην Κορέα) είναι πιο βολικά για εγγραφή επιτόπου. Alipay/WeChat στο εξωτερικό λειτουργούν μόνο σε καταστήματα με "μπλε-πράσινο λογότυπο", μην βασίζεστε μόνο σε αυτά.</li>
                 </ul>
                 <h4 class="text-lg font-semibold mt-4 mb-2">、Κίνηση δεδομένωνΛύση</h4>
@@ -8183,7 +8183,7 @@
                     <li><strong>Καρδιακός παλμός</strong>：Καρδιακός παλμός 60–100 ；、ΆσκησηΚαρδιακός παλμός。Καρδιακός παλμόςΆσκηση，Τάση。</li>
                     <li><strong>Επίπεδο οξυγόνου（SpO₂）</strong>： 95%–100%。""，，。ΎπνοςΠαύσηΣυσκευή，。</li>
                     <li><strong>Ύπνος</strong>：""+""Τάση， 20 。+Καρδιακός παλμόςΎπνος，。</li>
-                    <li><strong>女性健康</strong>：καταγραφήβασικό（/）。：Λειτουργίαεντοπισμός""，。</li>
+                    <li><strong>Γυναικεία υγεία</strong>：καταγραφήβασικό（/）。：Λειτουργίαεντοπισμός""，。</li>
                 </ul>
                 <h4 class="text-lg font-semibold mt-4 mb-2">、Υγεία App</h4>
                 <ol class="list-decimal pl-6 mb-3 space-y-1">
@@ -8194,7 +8194,7 @@
                 <p class="mb-2"><strong>Βασικές λειτουργίες</strong>： [Ρυθμίσεις] &gt; [Ιδιωτικότητα] &gt; [Υγεία] ， App Εξουσιοδότηση。τρίτου App Δεδομένα—— App Ύπνος。</p>
                 <h4 class="text-lg font-semibold mt-4 mb-2">、Υγείαψηφιακό</h4>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
-                    <li><strong>屏幕使用时间</strong>：iOS [Ρυθμίσεις] &gt; [Οθόνη]，Android [ψηφιακόΥγεία]。""，" App "。</li>
+                    <li><strong>Χρόνος χρήσης οθόνης</strong>：iOS [Ρυθμίσεις] &gt; [Οθόνη]，Android [ψηφιακόΥγεία]。""，" App "。</li>
                     <li><strong>Υγεία App</strong>：Διαλογισμός（、Calm）、καταγραφή（Daylio），επαγγελματικός——。</li>
                     <li><strong>"Δεδομένα"</strong>：Ύπνος、HRV（Καρδιακός παλμός）。ΥγείαΔεδομένα"/Τάση"，""。</li>
                 </ul>
@@ -8268,179 +8268,179 @@
                 </div>
             </div>
 
-            <!-- 七、附录 -->
+            <!-- 7. appendix -->
             <section id="fu-lu" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">VII. Παραρτήματα</h2>
-                <p class="chapter-intro mb-4">好啦，经过前面二十多章的"长途跋涉"，恭喜你！你已经从一个"手机小白"成功进阶，掌握了从入门到超越的核心技能。这个附录，就像是给你的一本随身速查手册和资源百宝箱。</p>
+                <p class="chapter-intro mb-4">ok，Μετά τα προηγούμενα πάνω από είκοσι κεφάλαια"Μεγάλο ταξίδι"，Συγχαρητήρια！Έχεις ήδη περάσει από"Αρχάριος κινητού"Επιτυχής πρόοδος，Έχεις κατακτήσει τις βασικές δεξιότητες από την εισαγωγή έως την υπέρβαση。Αυτό το παράρτημα，Σαν ένα εφήμερο εγχειρίδιο γρήγορης αναφοράς και ένα θησαυροφυλάκιο πόρων。</p>
                 
-                <!-- 附录A -->
+                <!-- appendixA -->
                 <div id="fu-lu-a" class="mb-10 content-section">
-                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">附录A：新手机开箱"保姆级"流程</h3>
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">appendixA：Unboxing νέου κινητού"Λεπτομερέστατο"process</h3>
                     
-                    <h4 class="text-lg font-semibold mt-4 mb-2">1. 开箱验机"三部曲"：</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. Έλεγχος κατά το unboxing"Τριλογία"：</h4>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>看外观</strong>：检查机身、屏幕有无划痕、磕碰。</li>
-                        <li><strong>对信息</strong>：核对盒子上的IMEI/序列号和发票上的是否一致。</li>
-                        <li><strong>试功能</strong>：拨个电话试试听筒话筒，拍张照片检查摄像头。</li>
+                        <li><strong>Δες την εμφάνιση</strong>：Έλεγχος σώματος συσκευής、Υπάρχουν γρατζουνιές στην οθόνη、impact。</li>
+                        <li><strong>Πληροφορίες</strong>：Έλεγχος αυτών στο κουτίIMEI/Ταίριαξε τον σειριακό αριθμό με αυτόν της απόδειξης。</li>
+                        <li><strong>Δοκιμή λειτουργίας</strong>：Κάνε μια κλήση για να δοκιμάσεις ακουστικό και μικρόφωνο，Τράβηξε μια φωτογραφία για έλεγχο κάμερας。</li>
                     </ul>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">2. 激活与初始设置"重点提醒"：</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Ενεργοποίηση και αρχικές ρυθμίσεις"Κύρια υπενθύμιση"：</h4>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>网络</strong>：先连上稳定的Wi-Fi。</li>
-                        <li><strong>账号</strong>：登录你的苹果ID、华为账号、小米账号等。</li>
-                        <li><strong>基础设置</strong>：把"查找我的手机"打开，设置一个靠谱的锁屏密码。</li>
-                        <li><strong>eSIM设置</strong>：如果你的手机支持eSIM（如iPhone、部分安卓旗舰），可以在设置中添加eSIM套餐，无需插入实体SIM卡。出国时eSIM尤其方便，可以直接购买当地运营商的eSIM套餐。</li>
-                        <li><strong>数据迁移</strong>：从旧手机迁移数据时，确保两台手机电量充足。iPhone用"快速开始"，安卓用官方换机App。</li>
+                        <li><strong>network</strong>：Πρώτα σύνδεσε σταθερόWi-Fi。</li>
+                        <li><strong>account</strong>：σύνδεσηyourAppleID、华为account、小米accountκ.λπ.。</li>
+                        <li><strong>Βασικές ρυθμίσεις</strong>：Άνοιξε"Εύρεση του κινητού μου"open，Όρισε έναν αξιόπιστο κωδικό κλειδώματος οθόνης。</li>
+                        <li><strong>eSIMsettings</strong>：Αν το κινητό σου υποστηρίζειeSIM（όπωςiPhone、κάποια Android flagship），Μπορείς να προσθέσεις στις ρυθμίσειςeSIMplan，Δεν χρειάζεται φυσική εισαγωγήSIM κάρτα。Όταν ταξιδεύεις στο εξωτερικόeSIMΙδιαίτερα βολικό，Μπορείς να αγοράσεις απευθείας από τον τοπικό πάροχοeSIMplan。</li>
+                        <li><strong>Μεταφορά δεδομένων</strong>：Κατά τη μεταφορά δεδομένων από παλιό κινητό，Εξασφάλισε επαρκή μπαταρία και στις δύο συσκευές。iPhoneχρησιμοποιεί"Γρήγορη έναρξη"，Android χρησιμοποιεί επίσημη εφαρμογή μεταφοράςApp。</li>
                     </ul>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">3. 装App"安全第一"：</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. ΕγκατάστασηApp"Ασφάλεια πρώτα"：</h4>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>首选官方商店</strong>：苹果用App Store，安卓用手机自带的应用商店。</li>
-                        <li><strong>权限别乱给</strong>：安装时弹出的权限请求，想清楚"这个App真的需要吗？"</li>
+                        <li><strong>Προτίμησε το επίσημο κατάστημα</strong>：Apple χρησιμοποιείApp Store，Android χρησιμοποιεί το ενσωματωμένο app store。</li>
+                        <li><strong>Μην δίνεις δικαιώματα επιπόλαια</strong>：Αιτήματα δικαιωμάτων κατά την εγκατάσταση，Σκέψου καλά"thisAppΣτ αλήθεια το χρειάζεσαι？"</li>
                     </ul>
                 </div>
 
-                <!-- 附录B -->
+                <!-- appendixB -->
                 <div id="fu-lu-b" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Παράρτημα B: Μικρές πρακτικές αναφορές</h3>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>基础篇练习</strong>：清理手机存储，目标就是找到并删除那些"忘了是啥"的旧视频、重复截图和很久不用的App。</li>
-                        <li><strong>软件篇练习</strong>：设置微信的存储清理，路径通常是【我】-【设置】-【通用】-【存储空间】。</li>
-                        <li><strong>进阶篇练习</strong>：查看电池健康度，iPhone在【设置】-【电池】-【电池健康】里。</li>
-                        <li><strong>通用技巧</strong>：遇到问题，先重启！这是解决一半以上手机小毛病的万能钥匙。</li>
+                        <li><strong>Ασκήσεις βασικού κεφαλαίου</strong>：εκκαθάριση αποθήκευσης κινητού，Ο στόχος είναι να βρεις και να διαγράψεις αυτά"Ξέχνα τι είναι"Τα παλιά βίντεο、Επαναλαμβανόμενα screenshots και παλιά αχρησιμοποίηταApp。</li>
+                        <li><strong>Ασκήσεις κεφαλαίου λογισμικού</strong>：settingsεκκαθάριση αποθήκευσης WeChat，Η διαδρομή συνήθως είναι【Εγώ】-【settings】-【general】-【χώρος αποθήκευσης】。</li>
+                        <li><strong>Ασκήσεις προχωρημένου κεφαλαίου</strong>：Έλεγχος υγείας μπαταρίας，iPhoneστο【settings】-【battery】-【Υγεία μπαταρίας】μέσα。</li>
+                        <li><strong>Γενικές τεχνικές</strong>：Όταν προκύψουν προβλήματα，Πρώτα επανεκκίνηση！Αυτό είναι το πανάκειο κλειδί για πάνω από τις μισές μικρές βλάβες του κινητού。</li>
                     </ul>
                 </div>
 
-                <!-- 附录C -->
+                <!-- appendixC -->
                 <div id="fu-lu-c" class="mb-10 content-section">
-                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">附录C：极简术语"黑话"对照表</h3>
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">appendixC：Μινιμαλιστική ορολογία"jargon"Πίνακας αντιστοιχίας</h3>
                     <div class="overflow-x-auto">
                         <table class="w-full border-collapse border border-gray-300 text-sm">
                             <thead>
                                 <tr class="bg-light dark:bg-gray-700">
-                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">你可能听到的词</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">其实就是指……</th>
-                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">一句话解释</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Όροι που μπορεί να ακούσεις</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Στην πραγματικότητα αναφέρεται……</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-4 py-2 text-left">Εξήγηση σε μία φράση</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">SoC / 芯片</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的大脑和心脏</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">决定手机快不快、游戏卡不卡的核心部件。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">SoC / chip</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Ο εγκέφαλος και η καρδιά του κινητού</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Καθορίζει την ταχύτητα του κινητού、Το βασικό εξάρτημα για το αν τα παιχνίδια κολλάνε。</td>
                                 </tr>
                                 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">RAM (运存)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的"短期工作桌"</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">桌越大，能同时开的App就越多，切换越流畅。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">RAM (RAM)</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Του κινητού"Προσωρινός χώρος εργασίας"</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Όσο μεγαλύτερο το τραπέζι，Που μπορούν να ανοίξουν ταυτόχροναAppΤόσο περισσότερο，Όσο πιο ομαλή η εναλλαγή。</td>
                                 </tr>
                                 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">ROM (存储)</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机的"大仓库"</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">存照片、视频、App的地方。128G、256G说的就是它。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">ROM (αποθήκευση)</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Του κινητού"Μεγάλη αποθήκη"</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Αποθήκευση φωτογραφιών、video、AppΤο μέρος。128G、256GΑναφέρεται σε αυτό。</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLED / LCD</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">屏幕的两种材质</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLED色彩更艳、更省电；LCD更护眼、成本低。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Δύο τύποι υλικών οθόνης</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OLEDΠιο έντονα χρώματα、Πιο οικονομικό；LCDΠιο φιλικό στα μάτια、Χαμηλό κόστος。</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">NFC</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">近距离无线通讯</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">让你手机能变身公交卡、门禁卡、银行卡的"贴贴"功能。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Επικοινωνία κοντινής εμβέλειας</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Μετατρέπει το κινητό σου σε κάρτα μέσων μαζικής μεταφοράς、Κάρτα ελέγχου πρόσβασης、Της τραπεζικής κάρτας"cute"feature。</td>
                                 </tr>
                                 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OTA更新</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">无线系统升级</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">在【设置】里点的那个"系统更新"，就是它。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">OTAupdate</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Ασύρματη αναβάθμιση συστήματος</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">στο【settings】Αυτό που επέλεξες εκεί"Ενημέρωση συστήματος"，Ακριβώς αυτό。</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Root</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">安卓超级管理员权限</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">获得后可以修改系统文件，但也有风险。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">δικαιώματα υπερ-διαχειριστή Android</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Μετά την απόκτηση μπορείς να τροποποιήσεις αρχεία συστήματος，Αλλά έχει ρίσκο。</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Κλείδωμα BL</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Bootloader锁</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">厂商加的安全锁，解锁后才能刷机。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">κλείδωμα Bootloader</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Κλείδωμα ασφαλείας κατασκευαστή，Flash επιτρέπεται μόνο μετά το ξεκλείδωμα。</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">NPU</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">神经网络处理器</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">专门处理AI任务的芯片，比CPU快几十倍、功耗更低。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Επεξεργαστής νευρωνικών δικτύων</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Εξειδικευμένη επεξεργασίαAIChip εργασιών，απόCPUΔεκάδες φορές πιο γρήγορο、Χαμηλότερη κατανάλωση。</td>
                                 </tr>
                                 <tr>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">端侧AI</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">手机本地运行的AI</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">AI在手机上直接运行，不需要联网，速度快、隐私好。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">on-deviceAI</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Εκτελείται τοπικά στο κινητόAI</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">AIΕκτέλεση απευθείας στο κινητό，Δεν χρειάζεται internet，Γρήγορο、Καλό απόρρητο。</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Qi2</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">新一代无线充电标准</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">带磁吸定位的无线充电，类似MagSafe，充电更方便。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Νέα γενιά προτύπου ασύρματης φόρτισης</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Ασύρματη φόρτιση με μαγνητική ευθυγράμμιση，similarMagSafe，Πιο βολική φόρτιση。</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">eSIM</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">嵌入式SIM卡</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">没有实体卡的SIM，直接写入手机，换运营商不用换卡。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">ΕνσωματωμένοSIM κάρτα</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Χωρίς φυσική κάρταSIM，Εγγραφή απευθείας στο κινητό，Αλλαγή παρόχου χωρίς αλλαγή κάρτας。</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">LTPO</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">自适应刷新率技术</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">屏幕刷新率根据内容自动调节（1-120Hz），流畅又省电。</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Τεχνολογία προσαρμοστικού ρυθμού ανανέωσης</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-4 py-2">Ο ρυθμός ανανέωσης οθόνης προσαρμόζεται αυτόματα στο περιεχόμενο（1-120Hz），Ομαλό και οικονομικό σε μπαταρία。</td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
 
-                <!-- 附录D -->
+                <!-- appendixD -->
                 <div id="fu-lu-d" class="mb-10 content-section">
-                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">附录D：靠谱资源去哪里找？</h3>
+                    <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">appendixD：Πού να βρεις αξιόπιστες πηγές？</h3>
                     
-                    <h4 class="text-lg font-semibold mt-4 mb-2">官方支持是首选：</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Η επίσημη υποστήριξη είναι προτεραιότητα：</h4>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>苹果用户</strong>：apple.com/cn 和 iCloud.com。</li>
-                        <li><strong>Android</strong>：手机品牌的官网都有"服务与支持"板块。</li>
-                        <li><strong>通用工具</strong>：苹果用iTunes，华为用华为手机助手，小米用小米换机。</li>
+                        <li><strong>χρήστες Apple</strong>：apple.com/cn και iCloud.com。</li>
+                        <li><strong>Android</strong>：Οι επίσημες ιστοσελίδες όλων των μάρκων έχουν"Υπηρεσίες και υποστήριξη"section。</li>
+                        <li><strong>Γενικά εργαλεία</strong>：Apple χρησιμοποιείiTunes，Huawei χρησιμοποιεί Huawei Phone Assistant，Xiaomi χρησιμοποιεί Xiaomi μεταφορά。</li>
                     </ul>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">实用网站与博主：</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Χρήσιμες ιστοσελίδες και bloggers：</h4>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>查技巧</strong>：在B站搜索"【你的手机型号】技巧"。</li>
-                        <li><strong>看测评</strong>：多看几个不同博主的测评视频。</li>
-                        <li><strong>学拍照</strong>：关注手机摄影教程博主。</li>
+                        <li><strong>Έλεγξε τεχνικές</strong>：στοBΑναζήτηση στην πλατφόρμα"【Το μοντέλο του κινητού σου】tips"。</li>
+                        <li><strong>Δες αξιολόγηση</strong>：Δες βίντεο αξιολόγησης από διάφορους bloggers。</li>
+                        <li><strong>Μάθε φωτογραφία</strong>：Ακολούθησε bloggers με tutorials φωτογραφίας κινητού。</li>
                     </ul>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">安全自查一句话清单：</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">Λίστα ελέγχου ασφαλείας σε μία φράση：</h4>
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
-                        <li>锁屏密码设了吗？</li>
-                        <li>"查找我的手机"开了吗？</li>
-                        <li>重要账号的双重认证开了吗？</li>
-                        <li>定期给照片、微信聊天记录做备份了吗？</li>
-                        <li>记住防骗口诀：不轻信、不泄露、不转账、不贪心、不急躁。</li>
+                        <li>Έχεις βάλει κωδικό κλειδώματος？</li>
+                        <li>"Εύρεση του κινητού μου"Το ενεργοποίησες？</li>
+                        <li>Έχεις ενεργοποιήσει διπλή επαλήθευση στους σημαντικούς λογαριασμούς？</li>
+                        <li>Τακτικά στις φωτογραφίες、αντίγραφα ασφαλείας συνομιλιών WeChatbackup;？</li>
+                        <li>Αποστήθισε τον κανόνα προστασίας από απάτες：Μην πιστεύεις εύκολα、Μην αποκαλύπτεις、Μην μεταφέρεις χρήματα、Μην είσαι άπληστος、Χωρίς βιασύνη。</li>
                     </ol>
                 </div>
 
-                <!-- 附录E -->
+                <!-- appendixE -->
                 <div id="fu-lu-e" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Παράρτημα E: Ευχαριστίες και σημειώσεις</h3>
-                    <p class="mb-2">感谢你坚持读完这本"手机课"！写作过程中，我们参考了大量厂商的官方说明书、用户手册以及公开的技术科普文章，以确保信息的准确性。</p>
-                    <p class="mb-2">技术的发展日新月异，书中内容基于撰稿时的主流技术和产品。当你读到它时，或许又有新的功能和产品出现。希望这本书传授的思路和方法，能帮助你从容面对未来更多的数字新玩意。</p>
+                    <p class="mb-2">Σε ευχαριστώ που επιμένεις να διαβάσεις αυτό"Μάθημα κινητού"！Κατά τη συγγραφή，Αναφερθήκαμε σε μεγάλο αριθμό επίσημων εγχειριδίων κατασκευαστών、Εγχειρίδια χρηστών και δημόσια τεχνικά εκλαϊκευμένα άρθρα，Για διασφάλιση της ακρίβειας των πληροφοριών。</p>
+                    <p class="mb-2">Η τεχνολογία εξελίσσεται ραγδαία，Το περιεχόμενο του βιβλίου βασίζεται στις κυρίαρχες τεχνολογίες και προϊόντα κατά τη συγγραφή。Όταν το διαβάζεις，Ίσως έχουν εμφανιστεί νέες λειτουργίες και προϊόντα。Ελπίζω οι ιδέες και οι μέθοδοι που μεταδίδει αυτό το βιβλίο，Σε βοηθά να αντιμετωπίσεις με αυτοπεποίθηση περισσότερες ψηφιακές νεωτερίες στο μέλλον。</p>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">1.6版更新要点</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1.6Σημεία ενημέρωσης έκδοσης</h4>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li>扩充"数字资产价值与管理理念"，新增"图片与文件系统管理"章节（时间+事件命名、分类整理、72小时自动清理、EXIF 脱敏）。</li>
-                        <li>完善"纯净/防护模式"与"电子寄生虫"防护体系。</li>
-                        <li>新增 AI 时代常见诈骗套路（换脸拟声/冒充权威/虚假投资）与破局防护思路。</li>
-                        <li>重写"开盒"与社工攻击防护。</li>
-                        <li>扩充无障碍章节（旁白/TalkBack 完整操作、放大与色彩滤镜、AI 图像描述、实时字幕、RTT/TTY 通话双通道）。</li>
-                        <li>用"角色-背景-任务-限制"思路重写提示词框架，附 3 个完整场景案例。</li>
-                        <li><strong>新增三篇技术进阶附录</strong>：
+                        <li>expand"Αξία ψηφιακών περιουσιακών στοιχείων και φιλοσοφία διαχείρισης"，new"Διαχείριση εικόνων και συστήματος αρχείων"chapter（time+Ονομασία συμβάντος、Ταξινόμηση κατηγοριών、72Αυτόματος καθαρισμός ανά ώρα、EXIF anonymize）。</li>
+                        <li>improve"clean/λειτουργία προστασίας"και"ηλεκτρονικό παράσιτο"Σύστημα προστασίας。</li>
+                        <li>new AI Συνηθισμένες απάτες της εποχής（Αντικατάσταση προσώπου και φωνής/Προσποίηση αρχής/Ψευδής επένδυση）Και ιδέες προστασίας από επιθέσεις。</li>
+                        <li>rewrite"unboxing"Και προστασία από social engineering。</li>
+                        <li>Επέκταση κεφαλαίου προσβασιμότητας（voiceover/TalkBack Πλήρης λειτουργία、Μεγέθυνση και φίλτρα χρώματος、AI Περιγραφή εικόνας、Υπότιτλοι πραγματικού χρόνου、RTT/TTY Διπλό κανάλι κλήσης）。</li>
+                        <li>χρησιμοποιεί"role-background-task-limit"Αναδιατύπωση πλαισίου prompt με νέες ιδέες，συνοδεύεται από 3 Πλήρης περιπτώσεις χρήσης。</li>
+                        <li><strong>Προστέθηκαν τρία τεχνικά προχωρημένα παραρτήματα</strong>：
                             <ul class="list-disc pl-6 mt-1 space-y-1">
-                                <li>第一章附：<strong>安卓手机内存拓展解析</strong>（本质定义、zRAM/swap 原理、速度瓶颈、适用场景边界、各厂商命名与开启方式）。</li>
-                                <li>第二十章附：<strong>Termux——Android 设备上的便携式 Linux 终端环境</strong>（核心功能、插件生态、安装配置、移动开发/服务器运维/安全测试等典型场景）。</li>
-                                <li>第二十三章附：<strong>GitHub 入门指南——从代码托管到协作平台</strong>（Git vs GitHub 区分、核心概念、注册上手、Pull Request 协作流、安全提醒、国内访问方案）。</li>
+                                <li>Παράρτημα Κεφαλαίου 1：<strong>Ανάλυση επέκτασης μνήμης Android</strong>（Ουσιαστικός ορισμός、zRAM/swap principle、Προβλήμα ταχύτητας、Όρια εφαρμογής、Ονομασία και τρόπος ενεργοποίησης από κάθε κατασκευαστή）。</li>
+                                <li>Παράρτημα Κεφαλαίου 20：<strong>Termux——Android Φορητό στη συσκευή Linux Περιβάλλον τερματικού</strong>（Βασικές λειτουργίες、Οικοσύστημα plugins、Εγκατάσταση και διαμόρφωση、Ανάπτυξη κινητού/Συντήρηση διακομιστή/Τυπικές σκηνές όπως έλεγχος ασφαλείας）。</li>
+                                <li>Παράρτημα Κεφαλαίου 23：<strong>GitHub Οδηγός αρχαρίου——Από hosting κώδικα σε πλατφόρμα συνεργασίας</strong>（Git vs GitHub distinguish、Βασική έννοια、Εγγραφή και εκκίνηση、Pull Request Ροή συνεργασίας、Υπόμνηση ασφαλείας、Λύσεις πρόσβασης εγχώρια）。</li>
                             </ul>
                         </li>
                     </ul>
@@ -8490,138 +8490,138 @@
                         <li><strong>Μήνυμα υποδείξεων κατά επίπεδο</strong>：εμφάνιση"///Ασφάλεια"。</li>
                     </ul>
 
-                    <p class="mb-2">祝你玩转手机，享受科技带来的便利与乐趣，也成为一个清醒、自信的数字公民。</p>
-                    <p class="mb-2">—— 你的数字生活向导</p>
+                    <p class="mb-2">Σου εύχομαι να κατακτήσεις το κινητό，Απόλαυσε την ευκολία και τη χαρά που φέρνει η τεχνολογία，Και γίνε και ένας ξύπνιος、Αυτοπεποίθητος ψηφιακός πολίτης。</p>
+                    <p class="mb-2">—— Ο οδηγός της ψηφιακής σου ζωής</p>
                 </div>
 
-                <!-- 附录F：折叠屏专题 -->
+                <!-- appendixF：Θέμα αναδιπλούμενων -->
                 <div id="fu-lu-f" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Παράρτημα F: Ειδικό θέμα αγοράς και χρήσης folding οθονών</h3>
-                    <p class="chapter-intro mb-4">折叠屏已经从"未来科技"变成"现在能买"的成熟品类。但它和直板机在形态、使用习惯、保养方式上差异很大，值不值得买、怎么选、怎么用，这一篇帮你理清楚。</p>
+                    <p class="chapter-intro mb-4">Τα αναδιπλούμενα ήδη από"Μελλοντική τεχνολογία"becomes"Διαθέσιμο τώρα"Ωριμή κατηγορία。Αλλά σε μορφή με τα συμβατικά、Συνήθειες χρήσης、Μεγάλες διαφορές στον τρόπο συντήρησης，Αξίζει η αγορά、Πώς να επιλέξεις、Πώς να χρησιμοποιήσεις，Αυτό το κεφάλαιο σε βοηθά να ξεκαθαρίσεις。</p>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">一、折叠屏现在发展到什么程度了？</h4>
-                    <p class="mb-2">Πρώτα το συμπέρασμα:<strong>折叠屏已经不是"尝鲜玩具"，但也不是"人人该买"的主流形态</strong>。它介于小众极客产品和大众消费品之间，适合特定人群。</p>
-                    <p class="mb-2">目前主流分两类：</p>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">1. Σε τι στάδιο ανάπτυξης βρίσκονται τώρα τα αναδιπλούμενα？</h4>
+                    <p class="mb-2">Πρώτα το συμπέρασμα:<strong>Τα αναδιπλούμενα δεν είναι πλέον"Παιχνίδι για δοκιμή"，Αλλά ούτε"Όλοι πρέπει να αγοράσουν"Η κυρίαρχη μορφή</strong>。Βρίσκεται ανάμεσα σε niche προϊόντα geek και προϊόντα μαζικής κατανάλωσης，Κατάλληλο για συγκεκριμένες ομάδες。</p>
+                    <p class="mb-2">Προς το παρόν κυρίαρχοι δύο τύποι：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>横向折叠（书本式）</strong>：合上是普通手机大小，展开是接近方形的小平板。代表：华为Mate X系列、三星Galaxy Z Fold系列、小米MIX Fold系列、vivo X Fold系列。主打"一部手机=手机+平板"。</li>
-                        <li><strong>纵向折叠（翻盖式）</strong>：合上像粉饼盒，展开是正常尺寸手机。代表：华为Pocket系列、三星Galaxy Z Flip系列、OPPO Find N Flip、小米MIX Flip。主打"小巧便携+外屏速览"。</li>
+                        <li><strong>Οριζόντιο αναδίπλωμα（Σε μορφή βιβλίου）</strong>：Κλειστό είναι μέγεθος κανονικού τηλεφώνου，Ανοιγμένο μοιάζει με μικρή τετράγωνη ταμπλέτα。represents：华为Mate Xσειρά、三星Galaxy Z Foldσειρά、小米MIX Foldσειρά、vivo X Foldσειρά。focus"Ένα κινητό=κινητό+tablet"。</li>
+                        <li><strong>Κάθετο αναδίπλωμα（Σε μορφή clamshell）</strong>：Κλειστό μοιάζει με πακέτο πούδρας，Ανοιγμένο είναι κανονικού μεγέθους τηλέφωνο。represents：华为Pocketσειρά、三星Galaxy Z Flipσειρά、OPPO Find N Flip、小米MIX Flip。focus"Μικρό και φορητό+Γρήγορη ματιά εξωτερικής οθόνης"。</li>
                     </ul>
                     <p class="mb-2">2024-2026：50αναδίπλωση（10013）、UTG、、Τιμή4000-5000。</p>
 
                     <div class="info-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话判断</p>
-                        <p class="mt-1">如果你现在用直板机完全够用、没有"屏幕不够大"的痛点，就别买折叠屏。它是"锦上添花"的设备，不是"雪中送炭"的设备。</p>
+                        <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>Κριτική σε μία φράση</p>
+                        <p class="mt-1">Αν το συμβατικό τηλέφωνο σου αρκεί πλήρως τώρα、no"Η οθόνη δεν είναι αρκετά μεγάλη"Το πρόβλημα，Τότε μην αγοράσεις αναδιπλούμενο。it is"Κεράσι στην τούρτα"Η συσκευή，not"Βοήθεια σε κρίσιμη στιγμή"Η συσκευή。</p>
                     </div>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">二、什么人适合买折叠屏？</h4>
-                    <p class="mb-2">根据真实用户反馈，这几类人买折叠屏"真香"概率高：</p>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">2. Ποιοι ταιριάζουν να αγοράσουν αναδιπλούμενο？</h4>
+                    <p class="mb-2">Βάσει πραγματικών ανατροφοδοτήσεων χρηστών，Αυτοί οι τύποι αγοράζουν αναδιπλούμενα"great"Υψηλή πιθανότητα：</p>
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
-                        <li><strong>重度阅读/文档处理者</strong>：经常在手机上看PDF、批注文档、读长文。展开后接近7.5英寸的内屏，看A4 PDF不用缩放，体验质变。</li>
-                        <li><strong>经常出差/开会的商务用户</strong>：不想带平板又嫌手机屏小。横向折叠屏展开看PPT、签合同、双屏对照邮件，比直板机效率高一截。</li>
-                        <li><strong>喜欢"悬停态"创作的人</strong>：折叠到90度放在桌上，上半屏取景下半屏按快门（自拍/延时摄影）、上半屏视频下半屏记笔记、上半屏直播下半屏看评论——这是直板机做不到的形态。</li>
-                        <li><strong>追求便携又想要大屏的女性用户</strong>：纵向折叠屏合上能塞进小包，展开是正常手机，外屏还能当化妆镜、看通知。</li>
+                        <li><strong>Έντονη ανάγνωση/επεξεργαστής έγγράφων</strong>：Συχνά βλέπεις στο κινητόPDF、σχολίαση έγγράφων、Διάβαζε μεγάλα κείμενα。Ανοιγμένο πλησιάζει7.5Ίντσες εσωτερικής οθόνης，ΔιάβασεA4 PDFΧωρίς ζουμ，Ποιοτική αλλαγή εμπειρίας。</li>
+                        <li><strong>Συχνά ταξίδια/Επαγγελματίες χρήστες σε συναντήσεις</strong>：Δεν θες ταμπλέτα αλλά η οθόνη του κινητού σου φαίνεται μικρή。Το οριζόντιο αναδιπλούμενο ανοιγμένοPPT、Υπογραφή σύμβασης、Σύγκριση email σε διπλή οθόνη，Αρκετά πιο αποδοτικό από τα συμβατικά。</li>
+                        <li><strong>like"Κατάσταση hover"Άτομα δημιουργίας</strong>：Δίπλωμα σε90Μοίρες πάνω στο τραπέζι，Πάνω οθόνη σκόπευση κάτω οθόνη λήψη（selfie/Φωτογραφία μεγαχρονικής έκθεσης）、Πάνω οθόνη βίντεο κάτω οθόνη σημειώσεις、Πάνω οθόνη ζωντανή μετάδοση κάτω οθόνη σχόλια——Αυτή είναι μια μορφή που τα συμβατικά τηλέφωνα δεν μπορούν να πετύχουν。</li>
+                        <li><strong>Γυναίκες χρήστες που αναζητούν φορητότητα και μεγάλη οθόνη</strong>：Το κάθετο αναδιπλούμενο διπλωμένο χωράει σε μικρή τσάντα，Ανοιγμένο είναι κανονικό τηλέφωνο，Η εξωτερική οθόνη μπορεί να είναι και καθρέφτης、Δες ειδοποιήσεις。</li>
                     </ol>
                     <div class="warning-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-triangle-exclamation mr-2"></i>这几类人别买</p>
+                        <p class="font-semibold"><i class="fas fa-triangle-exclamation mr-2"></i>Αυτοί δεν πρέπει να αγοράσουν</p>
                         <ul class="list-disc pl-6 mt-2 space-y-1">
-                            <li>手机只用来刷短视频、聊微信、打电话的——折叠屏对你毫无增益，反而更重更厚。</li>
-                            <li>手小或手腕有腱鞘炎的——横向折叠屏展开后普遍230g+，单手握持累。</li>
-                            <li>预算紧张、一部手机要用4年以上的——折叠屏二手保值率低于直板机，维修成本高。</li>
+                            <li>Το κινητό χρησιμοποιείται μόνο για βίντεο、συνομιλία WeChat、Αυτού που τηλεφωνεί——Το αναδιπλούμενο δεν σου προσφέρει τίποτα，Αντίθετα πιο βαρύ και παχύ。</li>
+                            <li>Για μικρά χέρια ή τενοντοελυτρίτιδα καρπού——Τα οριζόντια αναδιπλούμενα ανοιγμένα γενικά230g+，Κουραστικό με ένα χέρι。</li>
+                            <li>Σφιχτός προϋπολογισμός、Ένα κινητό πρέπει να4Πάνω από χρόνια——Η αξία μεταπώλησης των αναδιπλούμενων είναι χαμηλότερη από τα συμβατικά，Υψηλό κόστος επισκευής。</li>
                         </ul>
                     </div>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">三、选购要点：看这6个指标</h4>
-                    <p class="mb-2">别被"折叠"两个字晃花了眼，选购时重点看：</p>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">3. Σημεία αγοράς：look at6Δείκτης</h4>
+                    <p class="mb-2">dont be"foldable"Δύο λέξεις σου θόλωσαν το μυαλό，Εστίασε κατά την αγορά：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>铰链类型</strong>：水滴铰链（折痕浅、寿命长，目前主流）优于U型铰链（折痕深、早期方案）。问销售或查评测确认是哪种。</li>
-                        <li><strong>内屏材质</strong>：必须是UTG超薄玻璃，不要早期那种塑料膜。UTG手感接近玻璃，塑料膜指甲划过会有凹陷感且易留痕。</li>
-                        <li><strong>折痕表现</strong>：επέκταση。2026：，，。</li>
-                        <li><strong>外屏尺寸</strong>：横向折叠屏的外屏越大越好（最好6.4英寸以上），合上能当正常手机用；纵向折叠屏的外屏越大越实用（4英寸以上能回消息、看导航）。</li>
-                        <li><strong>重量与厚度</strong>：横向折叠展开后230-260g是常态，低于230g算优秀；合上厚度12-14mm，低于12mm算薄。纵向折叠合上后能轻松放进衬衫口袋才算合格。</li>
-                        <li><strong>售后与保修</strong>：重点看内屏碎裂的维修价格。有些品牌首年免费换一次内屏，有些自费要2000-4000元。这是折叠屏最大的隐性成本。</li>
+                        <li><strong>Τύπος άρθρωσης</strong>：Άρθρωση σταγόνας（Ρηχή γραμμή διπλώματος、Μεγάλη διάρκεια ζωής，Προς το παρόν κυρίαρχο）better thanUΤύπου άρθρωσης（Βαθιά γραμμή διπλώματος、Πρώιμες λύσεις）。Ρώτα τον πωλητή ή έλεγξε αξιολόγηση για να επιβεβαιώσεις τον τύπο。</li>
+                        <li><strong>Υλικό εσωτερικής οθόνης</strong>：Πρέπει να είναιUTGΥπερλεπτό γυαλί，Όχι τις πρώιμες πλαστικές μεμβράνες。UTGΗ αίσθηση πλησιάζει το γυαλί，Στη μεμβράνη πλαστικού τα νύχια αφήνουν βαθουλώματα και σημάδια εύκολα。</li>
+                        <li><strong>Συμπεριφορά γραμμής διπλώματος</strong>：επέκταση。2026：，，。</li>
+                        <li><strong>Μέγεθος εξωτερικής οθόνης</strong>：Στα οριζόντια αναδιπλούμενα όσο μεγαλύτερη η εξωτερική οθόνη τόσο καλύτερα（best6.4Πάνω από ίντσες），Κλειστό χρησιμοποιείται σαν κανονικό τηλέφωνο；Στα κάθετα αναδιπλούμενα όσο μεγαλύτερη η εξωτερική οθόνη τόσο πιο πρακτική（4Πάνω από ίντσες μπορείς να απαντάς μηνύματα、Δες πλοήγηση）。</li>
+                        <li><strong>Βάρος και πάχος</strong>：Μετά το άνοιγμα του οριζόντιου αναδιπλούμενου230-260gΕίναι κανόνας，under230gΘεωρείται εξαιρετικό；Πάχος κλειστού12-14mm，under12mmthin。Ένα κάθετο αναδιπλούμενο θεωρείται αποδεκτό μόνο όταν διπλωμένο χωράει εύκολα στην τσέπη του πουκαμίσου。</li>
+                        <li><strong>Εξυπηρέτηση και εγγύηση</strong>：Εστίασε στην τιμή επισκευής θρυμματισμένης εσωτερικής οθόνης。Κάποιες μάρκες προσφέρουν δωρεάν αντικατάσταση εσωτερικής οθόνης το πρώτο έτος，Κάποια πληρώνονται από τον χρήστη2000-4000yuan。Αυτό είναι το μεγαλύτερο κρυφό κόστος των αναδιπλούμενων。</li>
                     </ul>
 
                     <div class="practice-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>线下体验清单</p>
+                        <p class="font-semibold"><i class="fas fa-hands mr-2"></i>Λίστα ελέγχου εμπειρίας σε φυσικό κατάστημα</p>
                         <ol class="list-decimal pl-6 mt-1 space-y-1">
-                            <li>亲手开合10次，感受铰链阻尼是否顺滑、有没有异响。</li>
-                            <li>展开后斜对着灯光看折痕，再正面亮屏看。</li>
-                            <li>单手握持展开状态30秒，感受重量是否能接受。</li>
-                            <li>试用悬停态：折90度放桌上，试试拍照和看视频。</li>
-                            <li>问清楚内屏单独维修价格和保修政策。</li>
+                            <li>Άνοιγμα κλείσιμο με τα χέρια10φορές，Αισθάνσου αν η αντίσταση της άρθρωσης είναι ομαλή、Υπάρχουν περίεργοι ήχοι。</li>
+                            <li>Μετά το άνοιγμα κλίσε απέναντι από φως για να δεις τη γραμμή διπλώματος，Μετά δες με αναμμένη οθόνη εμπρός。</li>
+                            <li>Κράτημα με ένα χέρι σε ανοιχτή κατάσταση30δευτερόλεπτα，Αισθάνσου αν το βάρος είναι αποδεκτό。</li>
+                            <li>Δοκιμή κατάστασης hover：Δίπλωσε90Μοίρες στο τραπέζι，Δοκίμασε φωτογραφίες και βίντεο。</li>
+                            <li>Ρώτησε ξεκάθαρα την τιμή ξεχωριστής επισκευής εσωτερικής οθόνης και την πολιτική εγγύησης。</li>
                         </ol>
                     </div>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">四、折叠屏独有的使用技巧</h4>
-                    <p class="mb-2">买回来之后，这几个玩法是直板机体验不到的：</p>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">4. Τεχνικές χρήσης αποκλειστικές για αναδιπλούμενα</h4>
+                    <p class="mb-2">Μετά την αγορά，Αυτές οι εμπειρίες δεν μπορείς να τις ζήσεις με συμβατικό τηλέφωνο：</p>
 
-                    <h5 class="font-semibold mt-3 mb-1">1. 分屏与多任务</h5>
-                    <p class="mb-2">横向折叠屏展开后，大部分系统支持上下/左右分屏。典型场景：上半屏看网课视频，下半屏记笔记；左边微信右边文档；上面地图导航下面音乐。比直板机分屏实用得多，因为屏幕够大，每半边都不挤。</p>
+                    <h5 class="font-semibold mt-3 mb-1">1. Split-screen και multitasking</h5>
+                    <p class="mb-2">Μετά το άνοιγμα του οριζόντιου αναδιπλούμενου，Τα περισσότερα συστήματα υποστηρίζουν πάνω κάτω/Διαίρεση οθόνης αριστερά δεξιά。Τυπικές σκηνές：Πάνω οθόνη βίντεο μαθήματος，Κάτω οθόνη σημειώσεις；αριστερά WeChat δεξιά έγγραφα；Πάνω χάρτης πλοήγησης κάτω μουσική。Πολύ πιο πρακτικό από το split-screen των συμβατικών，Επειδή η οθόνη είναι αρκετά μεγάλη，Καθε μισό δεν στριμώχνεται。</p>
 
-                    <h5 class="font-semibold mt-3 mb-1">2. 悬停态（90度折叠）</h5>
-                    <p class="mb-2">这是折叠屏的"杀手锏"用法：</p>
+                    <h5 class="font-semibold mt-3 mb-1">2. Κατάσταση hover（90Μοίρες διπλώματος）</h5>
+                    <p class="mb-2">Αυτό είναι των αναδιπλούμενων"Απόλυτο όπλο"usage：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>自拍/合影</strong>：放桌上折90度，上半屏取景，下半屏按快门，不用找人帮忙拍。</li>
-                        <li><strong>延时摄影/夜景</strong>：同样放桌上稳定拍摄，省三脚架。</li>
-                        <li><strong>视频通话</strong>：解放双手，对方看你角度也更自然。</li>
-                        <li><strong>看视频</strong>：放桌上当小电视，飞机/高铁小桌板上特别实用。</li>
-                        <li><strong>外屏预览+内屏拍摄</strong>：用后置摄像头拍自己时，外屏能实时显示画面，构图更准。</li>
+                        <li><strong>selfie/group photo</strong>：Διπλωμένο στο τραπέζι90μοίρες，Πάνω οθόνη σκόπευση，Κάτω οθόνη λήψη，Δεν χρειάζεται να ζητήσεις βοήθεια。</li>
+                        <li><strong>Φωτογραφία μεγαχρονικής έκθεσης/night scene</strong>：Επίσης σταθερή λήψη όταν είναι πάνω σε τραπέζι，Εξοικονόμηση τρίποδου。</li>
+                        <li><strong>Βιντεοκλήση</strong>：Απελευθέρωση χεριών，Η γωνία με την οποία σε βλέπει ο άλλος είναι πιο φυσική。</li>
+                        <li><strong>Δες βίντεο</strong>：Στο τραπέζι σαν μικρή τηλεόραση，airplane/Ιδιαίτερα πρακτικό στο τραπεζάκι του τρένου υψηλής ταχύτητας。</li>
+                        <li><strong>Προεπισκόπηση εξωτερικής οθόνης+Λήψη με εσωτερική οθόνη</strong>：Όταν φωτογραφίζεις τον εαυτό σου με την πίσω κάμερα，Η εξωτερική οθόνη δείχνει εικόνα σε πραγματικό χρόνο，Πιο ακριβής σύνθεση。</li>
                     </ul>
 
-                    <h5 class="font-semibold mt-3 mb-1">3. 外屏速览</h5>
-                    <p class="mb-2">纵向折叠屏合上后，外屏可以：看时间/通知/天气、回微信（语音转文字或快捷回复）、刷公交卡、看导航、当化妆镜（调用前置摄像头）。不用每次都展开，省电又省事。</p>
+                    <h5 class="font-semibold mt-3 mb-1">3. Γρήγορη ματιά εξωτερικής οθόνης</h5>
+                    <p class="mb-2">Μετά το κλείσιμο του κάθετου αναδιπλούμενου，Η εξωτερική οθόνη μπορεί：Δες ώρα/notification/καιρός、απάντηση WeChat（Φωνή σε κείμενο ή γρήγορη απάντηση）、Σάρωση κάρτας μεταφοράς、Δες πλοήγηση、Σαν καθρέφτη（Κλήση μπροστινής κάμερας）。Δεν χρειάζεται να ανοίγεις κάθε φορά，Ευκολία και εξοικονόμηση μπαταρίας。</p>
 
-                    <h5 class="font-semibold mt-3 mb-1">4. 电脑模式</h5>
-                    <p class="mb-2">部分横向折叠屏（华为、三星）展开后可切换"电脑模式"，外接显示器键鼠后像台简易PC，临时处理文档、回邮件够用。不是主力生产力工具，但应急很香。</p>
+                    <h5 class="font-semibold mt-3 mb-1">4. λειτουργία υπολογιστή</h5>
+                    <p class="mb-2">Μερικά οριζόντια αναδιπλούμενα（华为、三星）Μετά το άνοιγμα μπορείς να εναλλάξεις"λειτουργία υπολογιστή"，με εξωτερική οθόνη, πληκτρολόγιο και ποντίκι μοιάζει με έναν απλόPC，προσωρινή επεξεργασία έγγράφων、Αρκετό για απάντηση email。Δεν είναι το κύριο εργαλείο παραγωγικότητας，Αλλά πολύ χρήσιμο σε ανάγκη。</p>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">五、保养要点：让折叠屏活得久一点</h4>
-                    <p class="mb-2">折叠屏最娇贵的就是内屏和铰链，这几条习惯能显著延长寿命：</p>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">5. Σημεία συντήρησης：Κάνε το αναδιπλούμενο να ζήσει περισσότερο</h4>
+                    <p class="mb-2">Τα πιο ευαίσθητα μέρη των αναδιπλούμενων είναι η εσωτερική οθόνη και η άρθρωση，Αυτές οι συνήθειες μπορούν να παρατείνουν σημαντικά τη διάρκεια ζωής：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>别在低温下强行开合</strong>：0℃以下UTG玻璃变脆，开合前先揣怀里暖几分钟。这是官方说明书都会写但没人看的重点。</li>
-                        <li><strong>避免指甲/硬物接触内屏</strong>：内屏虽有保护层但比外屏软，用指腹操作，别用指甲戳。</li>
-                        <li><strong>合上时确认屏内无异物</strong>：一粒沙子夹在中间合上，可能直接压坏内屏。合上前扫一眼。</li>
-                        <li><strong>不要贴普通钢化膜</strong>：内屏只能用官方专用膜或UTG保护膜，普通钢化膜会影响折叠和触控。建议去官方售后贴膜。</li>
-                        <li><strong>铰链别进灰尘液体</strong>：虽然多数标称IPX8防水，但防尘等级普遍较低。沙滩、工地等环境要小心。</li>
-                        <li><strong>开合力度均匀</strong>：别单手暴力甩开，双手从中间匀速展开最稳。</li>
+                        <li><strong>Μην ανοιγοκλείνεις με το ζόρι σε χαμηλή θερμοκρασία</strong>：0℃belowUTGΤο γυαλί γίνεται εύθραυστο，Πριν ανοιγοκλείσεις ζέστανέ το στην αγκαλιά σου για λίγα λεπτά。Αυτά είναι τα σημεία που γράφουν όλα τα επίσημα εγχειρίδια αλλά κανείς δεν διαβάζει。</li>
+                        <li><strong>Αποφυγή νυχιών/Σκληρό αντικείμενο στην εσωτερική οθόνη</strong>：Η εσωτερική οθόνη έχει προστατευτικό στρώμα αλλά είναι πιο μαλακή από την εξωτερική，Χειρισμός με την άκρη του δαχτύλου，Μην πιέζεις με τα νύχια。</li>
+                        <li><strong>Κλείνοντας επιβεβαίωσε ότι δεν υπάρχει ξένο σώμα μέσα</strong>：Ένας κόκκος άμμου στη μέση όταν κλείνεις，Μπορεί να σπάσει απευθείας η εσωτερική οθόνη。Πριν κλείσεις ρίξε μια ματιά。</li>
+                        <li><strong>Μην βάζεις κοινές μεμβράνες σκλήρυνσης</strong>：Η εσωτερική οθόνη δέχεται μόνο την επίσημη μεμβράνη ήUTGΜεμβράνη προστασίας，Οι κοινές μεμβράνες σκλήρυνσης επηρεάζουν το αναδίπλωμα και την αφή。Προτείνεται επίσημη εφαρμογή μεμβράνης στο service。</li>
+                        <li><strong>Μην μπαίνουν σκόνη και υγρά στην άρθρωση</strong>：Αν και τα περισσότερα αναφέρουνIPX8waterproof，Αλλά η στεγανοποίηση είναι γενικά χαμηλή。beach、Προσεκτικά σε περιβάλλοντα όπως εργοτάξια。</li>
+                        <li><strong>Ομοιόμορφη δύναμη ανοίγματος κλεισίματος</strong>：Μην ανοίγεις βίαια με ένα χέρι，Ανοίγμα με δύο χέρια από τη μέση με ομοιόμορφη ταχύτητα είναι το πιο σταθερό。</li>
                     </ul>
 
                     <div class="danger-box rounded-lg p-4 mt-4">
-                        <p class="font-semibold"><i class="fas fa-skull-crossbones mr-2"></i>内屏损坏的高发场景</p>
+                        <p class="font-semibold"><i class="fas fa-skull-crossbones mr-2"></i>Συχνές σκηνές βλάβης εσωτερικής οθόνης</p>
                         <ul class="list-disc pl-6 mt-2 space-y-1">
-                            <li>合上时夹住耳机线/充电线——直接压裂内屏。</li>
-                            <li>放包里和钥匙混装——外屏没事，内屏被钥匙硌出裂痕。</li>
-                            <li>冬天从冷处进暖房立刻开合——温差导致玻璃应力变化。</li>
-                            <li>用了一年后觉得"折痕变深了"去撕原厂膜——撕膜会连内屏一起损坏。</li>
+                            <li>Τσιμπάει το καλώδιο ακουστικών όταν κλείνεις/Καλώδιο φόρτισης——Ρωγμή απευθείας στην εσωτερική οθόνη。</li>
+                            <li>Στην τσάντα ανακατεμένο με κλειδιά——Η εξωτερική οθόνη δεν έχει πρόβλημα，Η εσωτερική οθόνη ραγίζει από κλειδιά。</li>
+                            <li>Το χειμώνα από κρύο σε ζεστό χώρο ανοιγοκλείνεις αμέσως——Η θερμοκρασιακή διαφορά προκαλεί αλλαγή τάσης στο γυαλί。</li>
+                            <li>Μετά από ένα χρόνο χρήσης αισθάνεσαι"Η γραμμή διπλώματος βαθαίνει"Ξεσκέπασμα της εργοστασιακής μεμβράνης——Το ξέσπασμα της μεμβράνης μπορεί να χαλάσει και την εσωτερική οθόνη。</li>
                         </ul>
                     </div>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">六、折叠屏的"坑"和心理预期</h4>
-                    <p class="mb-2">买之前心里要有这几本账：</p>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">6. Των αναδιπλούμενων"παγίδες"Και προσδοκίες</h4>
+                    <p class="mb-2">Πριν αγοράσεις βάλε αυτά στον υπολογισμό：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>折痕会一直在</strong>：2026Τεχνολογία""，""。，，。</li>
-                        <li><strong>更重更厚</strong>：横向折叠屏展开后普遍230g+，单手握持比直板机累；合上后厚度12-14mm，裤兜里更鼓。</li>
-                        <li><strong>续航普遍一般</strong>：因为要塞铰链机构，电池空间被压缩，同价位续航通常不如直板机。</li>
-                        <li><strong>保值率低</strong>：一年后二手价通常是新机的50-60%，比直板机跌得快。</li>
-                        <li><strong>维修贵</strong>：内屏总成维修价2000-4000元，铰链维修500-1500元。买之前查清楚保修政策。</li>
-                        <li><strong>App适配参差</strong>：主流App已适配大屏，但小众App可能只是"拉伸放大"，体验一般。</li>
+                        <li><strong>Η γραμμή διπλώματος θα υπάρχει πάντα</strong>：2026Τεχνολογία""，""。，，。</li>
+                        <li><strong>Πιο βαρύ και παχύ</strong>：Τα οριζόντια αναδιπλούμενα ανοιγμένα γενικά230g+，Κρατώντας με ένα χέρι είναι πιο κουραστικό από συμβατικό；Πάχος μετά το κλείσιμο12-14mm，Πιο φουσκωμένο στην τσέπη。</li>
+                        <li><strong>Η μπαταρία είναι γενικά μέτρια</strong>：Επειδή πρέπει να χωρέσει ο μηχανισμός άρθρωσης，Ο χώρος μπαταρίας συμπιέζεται，Στην ίδια τιμή η μπαταρία συνήθως υπολείπεται των συμβατικών。</li>
+                        <li><strong>Χαμηλή αξία μεταπώλησης</strong>：Μετά από ένα χρόνο η μεταπωλητική αξία συνήθως είναι50-60%，Πέφτει πιο γρήγορα από τα συμβατικά。</li>
+                        <li><strong>Ακριβή επισκευή</strong>：Τιμή επισκευής συνόλου εσωτερικής οθόνης2000-4000yuan，Επισκευή άρθρωσης500-1500yuan。Πριν αγοράσεις έλεγξε ξεκάθαρα την πολιτική εγγύησης。</li>
+                        <li><strong>AppΑνομοιογενής προσαρμογή</strong>：mainstreamAppΈχει προσαρμοστεί σε μεγάλη οθόνη，Αλλά μικρή αγοράAppΜπορεί να είναι απλά"Τέντωμα και μεγέθυνση"，Μέτρια εμπειρία。</li>
                     </ul>
 
                     <div class="highlight-quote">
-                        <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>折叠屏不是"更好的手机"，而是"另一种形态的手机"。买它是因为你需要它独特的形态，不是因为它"更先进"。</p>
-                        <p class="text-right text-sm">—— 关于折叠屏的选购哲学</p>
+                        <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Τα αναδιπλούμενα δεν είναι"Καλύτερο κινητό"，but rather"Ένα τηλέφωνο άλλης μορφής"。Το αγοράζεις επειδή χρειάζεσαι τη μοναδική του μορφή，Όχι επειδή"Πιο προηγμένο"。</p>
+                        <p class="text-right text-sm">—— Η φιλοσοφία αγοράς αναδιπλούμενων</p>
                     </div>
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">、κύριοΜάρκα（2026）</h4>
-                    <p class="mb-2">不写具体型号（会过时），只写品牌调性，帮你快速定位：</p>
+                    <p class="mb-2">Χωρίς συγκεκριμένα μοντέλα（Θα παλιώσει），Γράψε μόνο τον τόνο της μάρκας，Σε βοηθά να εντοπίσεις γρήγορα：</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>华为Mate X系列</strong>：横向折叠标杆，鸿蒙生态协同强，外屏比例接近正常手机，合上能当主力机用。价格高但保值率相对最好。</li>
-                        <li><strong>三星Galaxy Z Fold/Flip</strong>：折叠屏鼻祖，铰链调校成熟，Z Flip是纵向折叠的颜值担当。国内售后网点较少是短板。</li>
-                        <li><strong>小米MIX Fold/Flip</strong>：性价比路线，配置堆料足，价格相对亲民。适合想尝鲜又不想花太多的用户。</li>
-                        <li><strong>vivo X Fold系列</strong>：横向折叠里外屏比例做得最接近正常手机的，合上当直板机用体验好。</li>
-                        <li><strong>OPPO Find N系列</strong>：横向折叠里尺寸偏紧凑的，单手可握持，适合觉得大折叠太重的用户。</li>
-                        <li><strong>华为Pocket系列</strong>：纵向折叠里外屏最大最实用的，化妆镜、防晒检测等女性向功能做得细致。</li>
+                        <li><strong>华为Mate Xσειρά</strong>：Σημείο αναφοράς οριζόντιου αναδιπλούμενου，ισχυρή συνέργεια οικοσυστήματος HarmonyOS，Η αναλογία εξωτερικής οθόνης πλησιάζει τα κανονικά τηλέφωνα，Κλειστό μπορεί να είναι το κύριο κινητό。Υψηλή τιμή αλλά σχετικά η καλύτερη αξία μεταπώλησης。</li>
+                        <li><strong>三星Galaxy Z Fold/Flip</strong>：Ο πρόγονος των αναδιπλούμενων，Καλά ρυθμισμένη άρθρωση，Z FlipΕίναι η αισθητική επιλογή των κάθετων αναδιπλούμενων。Ο μικρός αριθμός κέντρων επισκευής εγχώρια είναι μειονέκτημα。</li>
+                        <li><strong>小米MIX Fold/Flip</strong>：Διαδρομή value-for-money，Πλούσιες προδιαγραφές，Σχετικά προσιτή τιμή。Κατάλληλο για χρήστες που θέλουν να δοκιμάσουν νέα πράγματα χωρίς να ξοδέψουν πολλά。</li>
+                        <li><strong>vivo X Foldσειρά</strong>：Το αναδιπλούμενο οριζόντια με την πιο κοντινή αναλογία εξωτερικής και εσωτερικής οθόνης σε κανονικό τηλέφωνο，Κλειστό χρησιμοποιείται σαν συμβατικό με καλή εμπειρία。</li>
+                        <li><strong>OPPO Find Nσειρά</strong>：Τα πιο συμπαγή οριζόντια αναδιπλούμενα，Μπορεί να κρατηθεί με ένα χέρι，Κατάλληλο για όσους θεωρούν τα μεγάλα αναδιπλούμενα πολύ βαριά。</li>
+                        <li><strong>华为Pocketσειρά</strong>：Το κάθετο αναδιπλούμενο με τη μεγαλύτερη και πιο πρακτική εξωτερική οθόνη，Καθρέφτης、Λεπτομερής υλοποίηση γυναικείων λειτουργιών όπως έλεγχος αντηλιακής προστασίας。</li>
                     </ul>
-                    <p class="mb-2">选购建议：预算充足追求生态选华为Mate X；想要最成熟铰链选三星Z Fold；性价比首选小米/vivo；纵向折叠看华为Pocket和三星Z Flip。</p>
+                    <p class="mb-2">Προτάσεις αγοράς：με επαρκή προϋπολογισμό και επιθυμία για οικοσύστημα, επίλεξε HuaweiMate X；για την πιο ώριμη άρθρωση, επίλεξε SamsungZ Fold；για σχέση τιμής-απόδοσης, πρώτη επιλογή Xiaomi/vivo；Κάθετο αναδίπλωμαδες HuaweiPocketκαι SamsungZ Flip。</p>
 
                     <div class="info-box rounded-lg p-4 mt-4">
                         <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>Τελευταία Υπόμνηση</p>
@@ -8629,7 +8629,7 @@
                     </div>
                 </div>
 
-                <!-- 结语 -->
+                <!-- conclusion -->
                 <div id="jie-yu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Επίλογος: Μείνετε περίεργοι, μείνετε ξεκάθαροι</h3>
                     <p class="mb-2">Συγχαρητήρια που φτάσατε ως εδώ.</p>
@@ -8646,7 +8646,7 @@
                     </div>
                 </div>
 
-                <!-- 附录G：全书速查索引 -->
+                <!-- appendixG：Ευρετήριο γρήγορης αναζήτησης όλου του βιβλίου -->
                 <div id="fu-lu-g" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Παράρτημα G: Γρήγορο ευρετήριο βιβλίου</h3>
                     <p class="chapter-intro mb-4">，εντοπισμόςκεφάλαιο。</p>
@@ -8744,7 +8744,7 @@
                     </div>
                 </div>
 
-                <!-- 附录H：版本路线图 -->
+                <!-- appendixH：Χάρτης πορείας έκδοσης -->
                 <div id="fu-lu-h" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Παράρτημα H: Χάρτης πορείας εκδόσεων</h3>
                     <p class="chapter-intro mb-4">ενημέρωση。，。</p>
@@ -8753,7 +8753,7 @@
                         <ul class="list-disc pl-6 mt-2 space-y-1">
                             <li><strong>Συσκευή</strong>：Apple Watch、、Έξυπνο（Oura/Galaxy Ring）</li>
                             <li><strong>Ταξίδια και κινητό</strong>：eSIM、Κίνηση δεδομένωνΛύση、εκτός σύνδεσηςΧάρτης、、ΜετάφρασηApp</li>
-                            <li><strong>手机与健康管理</strong>：ΆσκησηΥγεία、Ύπνος、Καρδιακός παλμόςΕπίπεδο οξυγόνου、Υγεία、ΥγείαApp</li>
+                            <li><strong>Κινητό και διαχείριση υγείας</strong>：ΆσκησηΥγεία、Ύπνος、Καρδιακός παλμόςΕπίπεδο οξυγόνου、Υγεία、ΥγείαApp</li>
                             <li><strong>AIΒίντεο</strong>：AI、AI、ψηφιακό、AIΦωνητική αφήγηση</li>
                             <li><strong>αρχάριος</strong>：、、Πλατφόρμα</li>
                         </ul>
@@ -8768,7 +8768,7 @@
         </main>
     </div>
 
-    <!-- 快捷工具：浮动按钮组 -->
+    <!-- Γρήγορα εργαλεία：Ομάδα floating κουμπιών -->
     <div id="quick-tools" class="quick-tools no-print" aria-label="Γρήγορα εργαλεία">
         <button id="quick-search" class="quick-tool-btn" title="αναζήτηση (Ctrl+K)" aria-label="Αναζήτηση">
             <i class="fas fa-search" aria-hidden="true"></i>
@@ -8782,7 +8782,7 @@
         <button id="quick-toc" class="quick-tool-btn" title="Πίνακας περιεχομένων" aria-label="άνοιγμαΠίνακας περιεχομένων">
             <i class="fas fa-list" aria-hidden="true"></i>
         </button>
-        <button id="quick-tts" class="quick-tool-btn" title="语音朗读" aria-label="语音朗读">
+        <button id="quick-tts" class="quick-tool-btn" title="Φωνητική ανάγνωση" aria-label="Φωνητική ανάγνωση">
             <i class="fas fa-headphones" aria-hidden="true"></i>
         </button>
         <button id="quick-shortcuts" class="quick-tool-btn" title="Συντομεύσεις πληκτρολογίου (?)" aria-label="Πίνακας συντομεύσεων">
@@ -8793,7 +8793,7 @@
         </button>
     </div>
 
-    <!-- 快捷键面板 -->
+    <!-- Πάνελ συντομεύσεων -->
     <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="Συντομεύσεις πληκτρολογίου">
         <div class="search-panel" style="max-width:480px">
             <div class="search-input-wrapper">
@@ -8813,7 +8813,7 @@
         </div>
     </div>
 
-    <!-- 备份/恢复弹窗 -->
+    <!-- backup/Popup επαναφοράς -->
     <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="αντίγραφο ασφαλείαςεπαναφορά">
         <div class="search-panel" style="max-width:520px">
             <div class="search-input-wrapper">
@@ -8848,14 +8848,14 @@
         </div>
     </div>
 
-    <!-- 阅读连续天数提示 -->
+    <!-- Ειδοποίηση συνεχών ημερών ανάγνωσης -->
     <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
         <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
         <span id="streak-toast-text">Συνεχής ανάγνωση ημέρα X!</span>
     </div>
 
-    <!-- 语音朗读控件栏 -->
-    <div id="tts-controls" class="tts-controls" role="region" aria-label="语音朗读控制" aria-live="polite">
+    <!-- Μπάρα ελέγχου φωνητικής ανάγνωσης -->
+    <div id="tts-controls" class="tts-controls" role="region" aria-label="Έλεγχος φωνητικής ανάγνωσης" aria-live="polite">
         <span class="tts-chapter-label" id="tts-label" title="κεφάλαιο">Δεν ξεκίνησε</span>
         <button class="tts-btn" id="tts-prev" title="Προηγούμενη παράγραφος" aria-label="Προηγούμενη παράγραφος"><i class="fas fa-step-backward"></i></button>
         <button class="tts-btn play-btn" id="tts-play" title="Αναπαραγωγή/Παύση" aria-label="Αναπαραγωγή"><i class="fas fa-play"></i></button>
@@ -8866,7 +8866,7 @@
         <button class="tts-btn" id="tts-stop" title="Διακοπή" aria-label="Διακοπή"><i class="fas fa-times"></i></button>
     </div>
 
-    <!-- 回到顶部按钮 -->
+    <!-- Κουμπί επιστροφής στην κορυφή -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="Επιστροφή στην κορυφή">
         <svg class="progress-ring" viewBox="0 0 40 40">
             <circle class="bg" cx="20" cy="20" r="18"/>
@@ -8875,15 +8875,15 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- 阅读位置恢复提示 -->
+    <!-- Ειδοποίηση επαναφοράς θέσης ανάγνωσης -->
     <div id="restore-toast" class="restore-position-toast" role="alert">
         <i class="fas fa-bookmark" aria-hidden="true"></i>
-        <span id="restore-toast-text">上次读到：...</span>
+        <span id="restore-toast-text">Τελευταία ανάγνωση: ...</span>
         <button class="btn-restore" id="restore-btn">Συνέχεια Ανάγνωσης</button>
         <button class="btn-dismiss" id="dismiss-btn">Κλείσιμο</button>
     </div>
 
-    <!-- JS脚本 -->
+    <!-- JSscript -->
     <script>
         (function() {
             'use strict';
@@ -8918,7 +8918,7 @@
             const restoreBtn = $('#restore-btn');
             const dismissBtn = $('#dismiss-btn');
 
-            // ===== 主题 =====
+            // ===== theme =====
             function applyTheme(theme) {
                 html.classList.toggle('dark', theme === 'dark');
                 localStorage.setItem('theme', theme);
@@ -8934,12 +8934,12 @@
             if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
             if (quickTheme) quickTheme.addEventListener('click', toggleTheme);
 
-            // ===== 滚动：进度 + 阴影 + 返回顶部 + 目录进度 + 进度环 =====
+            // ===== scrolling：progress + shadow + Επιστροφή στην κορυφή + Πρόοδος πίνακα + Δακτύλιος προόδου =====
             const sections = $$('.content-section');
             const totalChapters = sections.length;
             if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} κεφάλαιο`;
 
-            // 进度环参数
+            // Παράμετροι δακτυλίου προόδου
             const progressRingFg = backToTop.querySelector('.progress-ring .fg');
             const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
             if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
@@ -8953,7 +8953,7 @@
                         const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
                         progressBar.style.width = progress + '%';
 
-                        // 进度环更新
+                        // Ενημέρωση δακτυλίου προόδου
                         if (progressRingFg) {
                             const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
                             progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
@@ -8973,7 +8973,7 @@
                             backToTop.classList.remove('opacity-100', 'visible');
                         }
 
-                        // 阅读到第几章
+                        // Διαβάζεις μέχρι ποιο κεφάλαιο
                         let passedChapters = 0;
                         const viewportTop = scrollY + 100;
                         sections.forEach(sec => {
@@ -9002,15 +9002,15 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 阅读位置记忆 =====
+            // ===== Μνήμη θέσης ανάγνωσης =====
             const POSITION_KEY = 'phoneCourse_scrollPos';
             const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
             let savePosTimer = null;
             function saveReadingPosition() {
                 const scrollY = window.scrollY;
-                if (scrollY < 200) return; // 太靠前不保存
+                if (scrollY < 200) return; // Πολύ μπροστά δεν αποθηκεύεται
                 localStorage.setItem(POSITION_KEY, scrollY.toString());
-                // 找到当前章节名
+                // Εύρεση ονόματος τρέχοντος κεφαλαίου
                 let currentChapter = '';
                 const viewportTop = scrollY + 100;
                 for (let i = sections.length - 1; i >= 0; i--) {
@@ -9027,14 +9027,14 @@
                 savePosTimer = setTimeout(saveReadingPosition, 1000);
             }, { passive: true });
 
-            // 页面加载时恢复位置
+            // Επαναφορά θέσης κατά τη φόρτωση σελίδας
             function tryRestorePosition() {
                 const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
                 const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
-                    restoreToastText.textContent = `上次读到：${savedChapter}`;
+                    restoreToastText.textContent = `Τελευταία ανάγνωση: ${savedChapter}`;
                     setTimeout(() => restoreToast.classList.add('show'), 800);
-                    // 10秒后自动隐藏
+                    // 10Αυτόματη απόκρυψη μετά από δευτερόλεπτα
                     setTimeout(() => restoreToast.classList.remove('show'), 15000);
                 }
             }
@@ -9053,7 +9053,7 @@
                 });
             }
 
-            // ===== 滚动入场动画 =====
+            // ===== Animation εισόδου με κύλιση =====
             const visibleObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -9062,7 +9062,7 @@
                     }
                 });
             }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
-            // 第一屏的内容直接可见
+            // Το περιεχόμενο της πρώτης οθόνης είναι αμέσως ορατό
             sections.forEach((sec, i) => {
                 const rect = sec.getBoundingClientRect();
                 if (rect.top < window.innerHeight) {
@@ -9072,7 +9072,7 @@
                 }
             });
 
-            // ===== 侧边栏打开/关闭 =====
+            // ===== Άνοιγμα πλευρικής μπάρας/close =====
             function openSidebar() {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
@@ -9091,13 +9091,13 @@
             });
             if (overlay) overlay.addEventListener('click', closeSidebar);
 
-            // 快捷工具：打开目录
+            // Γρήγορα εργαλεία：Άνοιγμα πίνακα
             if (quickToc) quickToc.addEventListener('click', () => {
                 if (window.innerWidth < 1024) openSidebar();
                 else window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 全局锚点导航：补偿固定导航栏偏移 =====
+            // ===== Καθολική πλοήγηση anchors：Αντιστάθμιση μετατόπισης σταθερής μπάρας πλοήγησης =====
             const NAVBAR_HEIGHT = 80;
             function scrollToAnchor(id) {
                 const el = document.getElementById(id);
@@ -9118,7 +9118,7 @@
                 requestAnimationFrame(() => scrollToAnchor(targetId));
             }, { passive: false });
 
-            // ===== 目录折叠 =====
+            // ===== Δίπλωμα πίνακα =====
             $$('.toc-toggle-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -9137,7 +9137,7 @@
                 });
             });
 
-            // ===== 目录筛选 =====
+            // ===== Φιλτράρισμα πίνακα =====
             if (tocFilter && tocList) {
                 tocFilter.addEventListener('input', () => {
                     const q = tocFilter.value.trim().toLowerCase();
@@ -9154,7 +9154,7 @@
                 });
             }
 
-            // ===== 目录高亮 =====
+            // ===== Επισήμανση πίνακα =====
             const tocLinkMap = new Map();
             $$('#sidebar a').forEach(item => {
                 const href = item.getAttribute('href');
@@ -9196,7 +9196,7 @@
 
             sections.forEach(section => observer.observe(section));
 
-            // ===== 书签系统 =====
+            // ===== Σύστημα σελιδοδεικτών =====
             const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
             function getBookmarks() {
                 try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
@@ -9212,7 +9212,7 @@
             }
             function isBookmarked(id) { return getBookmarks().includes(id); }
 
-            // 给每个章节添加书签按钮
+            // Προσθήκη κουμπιού σελιδοδείκτη σε κάθε κεφάλαιο
             sections.forEach(sec => {
                 const id = sec.id;
                 if (!id) return;
@@ -9227,10 +9227,10 @@
                     btn.classList.toggle('active', added);
                     btn.querySelector('span').textContent = added ? 'Στους σελιδοδείκτες' : 'Σελιδοδείκτης';
                     btn.setAttribute('aria-label', added ? 'Αφαίρεση από σελιδοδείκτες' : 'Προσθήκη κεφαλαίου στους σελιδοδείκτες');
-                    // 更新侧边栏标记
+                    // Ενημέρωση δεικτών πλευρικής μπάρας
                     updateTocBookmark(id, added);
                 });
-                // 插入到h3后面
+                // Εισαγωγή σεh3later
                 h3.parentNode.insertBefore(btn, h3.nextSibling);
             });
 
@@ -9240,10 +9240,10 @@
                     tocLink.classList.toggle('bookmarked', isBookmarked);
                 }
             }
-            // 初始化侧边栏书签标记
+            // Αρχικοποίηση δεικτών σελιδοδείκτη πλευρικής μπάρας
             getBookmarks().forEach(id => updateTocBookmark(id, true));
 
-            // ===== 章节完成勾选 =====
+            // ===== Checkbox ολοκλήρωσης κεφαλαίου =====
             const COMPLETED_KEY = 'phoneCourse_completed';
             function getCompleted() {
                 try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
@@ -9264,7 +9264,7 @@
                 if (!id) return;
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
-                // 找到meta条或h3前面的元素
+                // findmetaitems orh3Τα προηγούμενα στοιχεία
                 const metaDiv = h3.previousElementSibling;
                 const check = document.createElement('button');
                 check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
@@ -9275,9 +9275,9 @@
                     check.classList.toggle('checked', done);
                     check.querySelector('span:last-child').textContent = done ? 'Αναγνωσμένο' : 'Σήμανση ως αναγνωσμένο';
                     check.setAttribute('aria-label', done ? 'Αφαίρεση σήμανσης αναγνωσμένου' : 'Σήμανση ως αναγνωσμένο');
-                    // 更新侧边栏
+                    // Ενημέρωση πλευρικής μπάρας
                     updateTocCompleted(id, done);
-                    // 更新完成进度
+                    // Ενημέρωση προόδου ολοκλήρωσης
                     updateCompletedProgress();
                 });
                 if (metaDiv && metaDiv.classList.contains('flex')) {
@@ -9298,13 +9298,13 @@
             function updateCompletedProgress() {
                 const completed = getCompleted().length;
                 if (readingProgressText) {
-                    // 也更新完成数显示
+                    // Ενημερώνει επίσης την εμφάνιση μετρητή ολοκλήρωσης
                     const passed = parseInt(readingProgressText.textContent) || 0;
-                    readingProgressText.textContent = `${passed} / ${totalChapters} 章`;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} κεφάλαια`;
                 }
             }
 
-            // ===== 搜索（增强：键盘导航 + 结果计数） =====
+            // ===== search（enhance：Πλοήγηση με πληκτρολόγιο + Μετρητής αποτελεσμάτων） =====
             let searchData = null;
             let searchSelectedIdx = -1;
             let searchResultItems = [];
@@ -9373,7 +9373,7 @@
                         return;
                     }
 
-                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">找到 ${results.length} 个结果</div>`;
+                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">find ${results.length} Αποτέλεσμα</div>`;
                     searchResults.innerHTML = countHtml + results.map(item => {
                         const idx = item.text.toLowerCase().indexOf(query);
                         const start = Math.max(0, idx - 40);
@@ -9403,7 +9403,7 @@
                 }, 200);
             });
 
-            // 搜索键盘导航
+            // Πλοήγηση αναζήτησης με πληκτρολόγιο
             if (searchInput) searchInput.addEventListener('keydown', (e) => {
                 if (!searchResultItems.length) return;
                 if (e.key === 'ArrowDown') {
@@ -9427,7 +9427,7 @@
                 }
             });
 
-            // ===== 字号 =====
+            // ===== font size =====
             const DEFAULT_FONT_SIZE = 16;
             function setFontSize(size) {
                 contentEl.style.fontSize = size + 'px';
@@ -9448,7 +9448,7 @@
                 });
             });
 
-            // ===== 触摸滑动关闭侧边栏 =====
+            // ===== Κλείσιμο πλευρικής μπάρας με σάρωση αφής =====
             let touchStartX = 0;
             let touchStartY = 0;
             sidebar.addEventListener('touchstart', (e) => {
@@ -9461,7 +9461,7 @@
                 if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
             }, { passive: true });
 
-            // ===== 章节导航 =====
+            // ===== Πλοήγηση κεφαλαίου =====
             const sectionIds = sections.map(s => s.id);
             sections.forEach((section, i) => {
                 const nav = document.createElement('div');
@@ -9479,12 +9479,12 @@
                 section.appendChild(nav);
             });
 
-            // ===== 打印 =====
+            // ===== print =====
             function doPrint() { window.print(); }
             if (printBtn) printBtn.addEventListener('click', doPrint);
             if (quickPrint) quickPrint.addEventListener('click', doPrint);
 
-            // ===== 全局键盘快捷键 =====
+            // ===== Καθολικές συντομεύσεις πληκτρολογίου =====
             const shortcutsOverlay = $('#shortcuts-overlay');
             const backupOverlay = $('#backup-overlay');
             function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
@@ -9501,7 +9501,7 @@
             if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
             if (backupClose) backupClose.addEventListener('click', closeBackup);
 
-            // 点击遮罩关闭弹窗
+            // Κλικ στο overlay για κλείσιμο popup
             if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
                 if (e.target === shortcutsOverlay) closeShortcuts();
             });
@@ -9515,7 +9515,7 @@
                     e.preventDefault();
                     searchOverlay.classList.contains('active') ? closeSearch() : openSearch();
                 } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                    // 浏览器已经处理打印
+                    // Ο browser έχει ήδη επεξεργαστεί την εκτύπωση
                 } else if (e.key === 'Escape') {
                     if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
                     if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
@@ -9529,7 +9529,7 @@
                 }
             });
 
-            // ===== 阅读连续天数追踪 =====
+            // ===== Παρακολούθηση συνεχών ημερών ανάγνωσης =====
             const STREAK_KEY = 'reading-streak';
             const STREAK_DATE_KEY = 'reading-streak-date';
             const streakToast = $('#streak-toast');
@@ -9551,18 +9551,18 @@
                         localStorage.setItem(STREAK_KEY, streak.toString());
                         localStorage.setItem(STREAK_DATE_KEY, today);
 
-                        // 显示连续天数提示
+                        // Εμφάνιση ειδοποίησης συνεχών ημερών
                         if (streak >= 2 && streakToast && streakToastText) {
-                            streakToastText.textContent = '🔥 连续阅读第 ' + streak + ' 天！坚持下去！';
+                            streakToastText.textContent = '🔥 Συνεχής ανάγνωση ημέρα  ' + streak + '  μέρες! Συνεχίστε!';
                             streakToast.classList.add('show');
                             setTimeout(() => streakToast.classList.remove('show'), 5000);
                         }
                     }
-                } catch(e) { /* localStorage 可能不可用 */ }
+                } catch(e) { /* localStorage Μπορεί να μην είναι διαθέσιμο */ }
             }
             updateStreak();
 
-            // ===== 备份/恢复功能 =====
+            // ===== backup/Λειτουργία επαναφοράς =====
             function exportBackup() {
                 try {
                     const data = {
@@ -9579,20 +9579,20 @@
                         bookmarks: [],
                         ratings: {}
                     };
-                    // 收集健康自检状态
+                    // Συλλογή κατάστασης αυτοελέγχου υγείας
                     for (let i = 0; i < 8; i++) {
                         data.healthChecks[i] = localStorage.getItem('health-check-' + i);
                     }
-                    // 收集章节完成状态
+                    // Συλλογή κατάστασης ολοκλήρωσης κεφαλαίου
                     $$('.chapter-check.checked').forEach(c => {
                         const sec = c.closest('.content-section');
                         if (sec) data.chapterChecks[sec.id] = true;
                     });
-                    // 收藏书签
+                    // Σελιδοδείκτηςbookmark
                     $$('.toc-item.bookmarked').forEach(b => {
                         data.bookmarks.push(b.getAttribute('href').replace('#', ''));
                     });
-                    // 收集评分
+                    // Συλλογή βαθμολογιών
                     $$('.chapter-rating').forEach(r => {
                         const sec = r.closest('.content-section');
                         if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
@@ -9621,13 +9621,13 @@
                         if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
                         if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
                         if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
-                        // 恢复健康自检
+                        // Επαναφορά αυτοελέγχου υγείας
                         if (data.healthChecks) {
                             Object.keys(data.healthChecks).forEach(i => {
                                 localStorage.setItem('health-check-' + i, data.healthChecks[i]);
                             });
                         }
-                        // 恢复章节完成状态
+                        // Επαναφορά κατάστασης ολοκλήρωσης κεφαλαίου
                         if (data.chapterChecks) {
                             Object.keys(data.chapterChecks).forEach(id => {
                                 const sec = document.getElementById(id);
@@ -9639,7 +9639,7 @@
                                 }
                             });
                         }
-                        // 恢复书签
+                        // Επαναφορά σελιδοδεικτών
                         if (data.bookmarks) {
                             data.bookmarks.forEach(id => {
                                 const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
@@ -9674,7 +9674,7 @@
             });
             if (backupReset) backupReset.addEventListener('click', resetAllData);
 
-            // ===== 章节评分系统 =====
+            // ===== Σύστημα βαθμολογίας κεφαλαίου =====
             sections.forEach(sec => {
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
@@ -9695,7 +9695,7 @@
                     });
                     ratingDiv.appendChild(star);
                 }
-                // 插入到h3后面
+                // Εισαγωγή σεh3later
                 h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
                 updateStars(ratingDiv);
             });
@@ -9707,7 +9707,7 @@
                 });
             }
 
-            // ===== scroll 防抖优化 =====
+            // ===== scroll Βελτιστοποίηση σταθεροποίησης =====
             let scrollTicking = false;
             const originalOnScroll = onScroll;
             function debouncedScroll() {
@@ -9722,7 +9722,7 @@
             window.removeEventListener('scroll', onScroll);
             window.addEventListener('scroll', debouncedScroll, { passive: true });
 
-            // ===== 系统深色模式跟随 =====
+            // ===== ακολουθήστε την σκοτεινή λειτουργία του συστήματος =====
             if (window.matchMedia) {
                 const mq = window.matchMedia('(prefers-color-scheme: dark)');
                 mq.addEventListener('change', (e) => {
@@ -9732,7 +9732,7 @@
                 });
             }
 
-            // ===== 自动给每个章节标题添加面包屑与难度标签 =====
+            // ===== Αυτόματη προσθήκη ψίχουλων πλοήγησης και ετικετών δυσκολίας σε κάθε τίτλο κεφαλαίου =====
             sections.forEach(sec => {
                 const id = sec.id || '';
                 const h3 = sec.querySelector('h3');
@@ -9759,17 +9759,17 @@
                         ${level === 'beginner' ? 'Εισαγωγική' : level === 'intermediate' ? 'Προχωρημένο' : 'Προχωρημένο'}
                     </span>
                     <span class="reading-time">
-                        <i class="far fa-clock" aria-hidden="true"></i>约 ${minutes} 分钟
+                        <i class="far fa-clock" aria-hidden="true"></i>περίπου ${minutes} minutes
                     </span>
                 `;
                 h3.parentNode.insertBefore(meta, h3);
             });
 
-            // ===== 给章节添加"Σύνοψη"区块 =====
+            // ===== Προσθήκη σε κεφάλαιο"Σύνοψη"block =====
             function addChapterSummary(sec, points) {
                 const div = document.createElement('div');
                 div.className = 'chapter-summary';
-                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Σύνοψη κεφαλαίου</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
                 const nav = sec.querySelector('.chapter-nav');
                 if (nav) sec.insertBefore(div, nav);
                 else sec.appendChild(div);
@@ -9785,7 +9785,7 @@
                 'di-wu-zhang': ['εμφάνιση：Ανάλυση、、αυτόματο', '：Ήχος κλήσης//Ειδοποίηση', 'Αποθήκευση：ΚαθαρισμόςΠροσωρινή μνήμηΑρχείο', '： vs ，Ασφάλεια 3D > 2D', 'Οθόνη：iOS / TalkBack Χρήστης', 'μεγέθυνση：、、Φίλτρο', 'AI ： AI 、、επαλήθευση', 'πραγματικού χρόνουΥπότιτλοι：Χρήστης', 'RTT/TTY：+Χρήστης'],
                 'di-liu-zhang': ['Κωδικός + βασικό', 'ΕφαρμογήΔικαίωμαενεργοποίηση，ΕξουσιοδότησηΑρχές', 'Μην κάνετε πληρωμές/σύνδεση σε δημόσιο Wi-Fi', 'Στην εποχή της AI τα μάτια απατούν: deepfake, απομίμηση φωνής, impersonarwπή αρχών, ψευδείς επενδύσεις είναι τα πιο κοινά τεχνάσματα', '：επαλήθευση++', 'ΦωτογραφίαΚοινοποίηση，απενεργοποίηση EXIF Συσκευή', 'IoT ΣυσκευήπροεπιλογήΚωδικός', 'Απάτη：、、'],
                 'di-qi-zhang-jichu': ['Δορυφόρος：Επείγον""', '：，Δίκτυο', '：Αισθητήρας', '：Καθυστέρησηασύρματοσύνδεση，'],
-                'di-ba-zhang': ['ΚλήσηΗχογράφηση', 'iMessage/RCS SMSαναβάθμιση', 'καταγραφήαντίγραφο ασφαλείαςΛειτουργία', '邮件账户支持多账号统一管理'],
+                'di-ba-zhang': ['ΚλήσηΗχογράφηση', 'iMessage/RCS SMSαναβάθμιση', 'καταγραφήαντίγραφο ασφαλείαςΛειτουργία', 'Ο λογαριασμός email υποστηρίζει ενοποιημένη διαχείριση πολλαπλών λογαριασμών'],
                 'di-jiu-zhang': ['Το WPS Office έχει την καλύτερη εμπειρία στην Κίνα, το Microsoft 365 έχει την καλύτερη συμβατότητα', 'Σημείωση：→→', 'σάρωση：Σημείωση/Mic Lens//σάρωση', '：iCloud/OneDrive//Σενάρια χρήσης'],
                 'di-shi-zhang': ['Ο κωδικός πληρωμής σημαίνει όποιος τον βλέπει παίρνει τα χρήματα, ποτέ μην στέλνετε screenshot σε κανέναν', '5Ασφάλεια：+Ασφάλεια++Συσκευή', 'εικονικό，εκτός σύνδεσης', 'Ηλεκτρονική κάρτα ασθενείας, έλεγχος κοινωνικής ασφάλισης, φορολογική δήλωση — όλα στο κινητό', '：Ασφάλεια、、、'],
                 'di-shi-yi-zhang': ['：Φακός、Έκθεση、Flash、Zoom', 'Νυχτερινή λήψη，2-4', 'επαγγελματικός：ISO，', '：→βασικό→→', 'Έξυπνοαναζήτηση+Καθαρισμός+χειροκίνητο=Φωτογραφία'],
@@ -9815,13 +9815,13 @@
             };
             Object.keys(summaries).forEach(id => {
                 const sec = document.getElementById(id);
-                // 跳过已有内联小结的章节，避免重复
+                // Παράλειψη κεφαλαίων που έχουν ήδη ενσωματωμένη σύνοψη，Αποφυγή επανάληψης
                 if (sec && !sec.querySelector('.chapter-summary')) {
                     addChapterSummary(sec, summaries[id]);
                 }
             });
 
-            // ===== 复制按钮（给 kbd 元素添加） =====
+            // ===== Κουμπί αντιγραφής（σε kbd Προσθήκη στοιχείου） =====
             $$('.kbd').forEach(kbd => {
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
@@ -9841,11 +9841,11 @@
                 kbd.parentNode.insertBefore(btn, kbd.nextSibling);
             });
 
-            // ===== 可折叠长内容（h4 级别） =====
+            // ===== Αναδιπλούμενο μακρύ περιεχόμενο（h4 level） =====
             sections.forEach(sec => {
                 const h4s = $$('h4', sec);
                 h4s.forEach(h4 => {
-                    // 只对内容较长的h4段落添加折叠
+                    // Μόνο για μακρύτερο περιεχόμενοh4Προσθήκη διπλώματος σε παραγράφους
                     let sibling = h4.nextElementSibling;
                     let contentLength = 0;
                     let elements = [];
@@ -9855,7 +9855,7 @@
                         sibling = sibling.nextElementSibling;
                     }
                     if (contentLength > 800) {
-                        // 添加折叠头
+                        // Προσθήκη κεφαλίδας διπλώματος
                         const header = document.createElement('div');
                         header.className = 'collapsible-header';
                         header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
@@ -9876,7 +9876,7 @@
                 });
             });
 
-            // ===== 学习仪表盘：阅读进度 + 手机健康自检 =====
+            // ===== Ταμπλό μάθησης：Πρόοδος ανάγνωσης + Αυτοέλεγχος υγείας κινητού =====
             const dashProgressRing = $('#progress-ring-fg');
             const progressPercent = $('#progress-percent');
             const readCountEl = $('#read-count');
@@ -9889,7 +9889,7 @@
             const DASH_RING_CIRCUMFERENCE = 213.6;
 
             function updateDashboard() {
-                // 阅读进度
+                // Πρόοδος ανάγνωσης
                 const completed = $$('.chapter-check.checked').length;
                 const total = sections.length;
                 const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -9899,28 +9899,28 @@
                 if (progressPercent) progressPercent.textContent = pct + '%';
                 if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
 
-                // 书签数
+                // Αριθμός σελιδοδεικτών
                 const bookmarks = $$('.toc-item.bookmarked').length;
                 if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
 
-                // 上次章节
+                // Προηγούμενο κεφάλαιο
                 const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
 
-                // 健康自检
+                // Αυτοέλεγχος υγείας
                 const checked = checkInputs.filter(c => c.checked).length;
                 const totalChecks = checkInputs.length;
                 if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
                 if (healthBarEl) healthBarEl.style.width = (checked / totalChecks * 100) + '%';
                 if (healthMsgEl) {
                     if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>！Ασφάλεια';
-                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = '不错！还有 ' + (totalChecks - checked) + ' 项可以完善';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'Καλά! Απομένουν  ' + (totalChecks - checked) + '  στοιχεία για βελτίωση';
                     else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = '，ΣυμβουλέςΑσφάλεια';
                     else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>Ασφάλεια，';
                 }
             }
 
-            // 恢复自检状态
+            // Επαναφορά κατάστασης αυτοελέγχου
             checkInputs.forEach((input, i) => {
                 const saved = localStorage.getItem('health-check-' + i);
                 if (saved === 'true') input.checked = true;
@@ -9931,10 +9931,10 @@
             });
 
             updateDashboard();
-            // 每隔3秒刷新一次（捕获章节完成勾选的变化）
+            // every3Ανανέωση κάθε δευτερόλεπτο（Καταγραφή αλλαγών στα checkboxes ολοκλήρωσης κεφαλαίου）
             setInterval(updateDashboard, 3000);
 
-            // ===== 语音朗读（TTS）=====
+            // ===== Φωνητική ανάγνωση（TTS）=====
             const ttsControls = $('#tts-controls');
             const ttsPlayBtn = $('#tts-play');
             const ttsPrevBtn = $('#tts-prev');
@@ -9958,11 +9958,11 @@
 
             function getSectionText(sec) {
                 if (!sec) return '';
-                // 克隆并移除不需要朗读的元素
+                // Κλωνοποίηση και αφαίρεση στοιχείων που δεν χρειάζεται να αναγνωστούν
                 const clone = sec.cloneNode(true);
                 const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
                 removes.forEach(el => el.remove());
-                // 移除折叠体但保留其文字内容
+                // Αφαίρεση του αναδιπλούμενου σώματος αλλά διατήρηση του περιεχομένου κειμένου
                 const text = clone.textContent.replace(/\s+/g, ' ').trim();
                 return text;
             }
@@ -9989,7 +9989,7 @@
                 ttsUtterance.pitch = 1.0;
                 ttsUtterance.volume = 1.0;
 
-                // 尝试使用更自然的中文语音
+                // Δοκίμασε πιο φυσική κινεζική φωνή
                 const voices = window.speechSynthesis.getVoices();
                 const zhVoice = voices.find(v => v.lang.startsWith('el'));
                 if (zhVoice) ttsUtterance.voice = zhVoice;
@@ -10003,7 +10003,7 @@
                 };
 
                 ttsUtterance.onend = () => {
-                    // 自动播放下一章节
+                    // Αυτόματη αναπαραγωγήΕπόμενο Κεφάλαιοενότητα
                     if (ttsSectionIndex < sections.length - 1 && ttsActive) {
                         ttsSectionIndex++;
                         speakSection(ttsSectionIndex);
@@ -10025,9 +10025,9 @@
 
             function toggleTtsPlay() {
                 if (!ttsActive) {
-                    // 找到当前可见章节
+                    // Εύρεση του τρέχοντος ορατού κεφαλαίου
                     if (ttsSectionIndex < 0) {
-                        // 从头开始或从当前滚动位置最近的章节开始
+                        // Έναρξη από την αρχή ή από το κοντινότερο κεφάλαιο στη τρέχουσα θέση κύλισης
                         const scrollCenter = window.scrollY + window.innerHeight / 2;
                         let closestIdx = 0;
                         let closestDist = Infinity;
@@ -10068,7 +10068,7 @@
                 if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
             }
 
-            // 事件绑定
+            // Δέσιμο συμβάντος
             if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
             if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
             if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
@@ -10088,7 +10088,7 @@
                 updateTtsSpeedDisplay();
                 if (ttsActive && ttsUtterance) {
                     ttsUtterance.rate = ttsSpeed;
-                    // 重新创建并播放当前段落
+                    // Επαναδημιουργία και αναπαραγωγή της τρέχουσας παραγράφου
                     const idx = ttsSectionIndex;
                     window.speechSynthesis.cancel();
                     setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
@@ -10106,7 +10106,7 @@
             });
             if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
 
-            // 键盘快捷键：按 R 键切换朗读
+            // Συντομεύσεις πληκτρολογίου：Πάτα R Πλήκτρο εναλλαγής ανάγνωσης
             document.addEventListener('keydown', (e) => {
                 if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
                 if (e.key === 'r' || e.key === 'R') {
@@ -10118,7 +10118,7 @@
                 }
             });
 
-            // ===== 初始化 =====
+            // ===== Αρχικοποίηση =====
             onScroll();
             tryRestorePosition();
         })();

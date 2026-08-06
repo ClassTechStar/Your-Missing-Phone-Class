@@ -83,7 +83,7 @@
             background-color: #1e1b4b;
             border-left-color: #818cf8;
         }
-        /* 侧边栏链接基础样式 */
+        /* สไตล์พื้นฐานของลิงก์แถบข้าง */
         #sidebar a {
             display: block;
             transition: all 0.2s ease;
@@ -98,7 +98,7 @@
         .dark #sidebar a:hover {
             background-color: rgba(79, 70, 229, 0.12);
         }
-        /* 父级分组标题 */
+        /* หัวข้อกลุ่มระดับบน */
         .toc-parent > div {
             transition: background-color 0.15s ease;
         }
@@ -108,7 +108,7 @@
         .dark .toc-parent > div:hover {
             background-color: rgba(255,255,255,0.03);
         }
-        /* 折叠图标独立区域 */
+        /* พื้นที่เฉพาะสำหรับไอคอนพับ */
         .toc-toggle-btn {
             width: 24px;
             height: 24px;
@@ -129,7 +129,7 @@
             background-color: #374151;
             color: #e5e7eb;
         }
-        /* 子项过渡动画 */
+        /* อนิเมชันเปลี่ยนผ่านของรายการย่อย */
         .toc-child li {
             opacity: 1;
             transform: translateX(0);
@@ -137,9 +137,9 @@
         }
         .toc-child:not(.open) + .toc-child li,
         .toc-child:not(.open) li {
-            /* 折叠时由 max-height 控制 */
+            /* เมื่อพับโดย max-height ควบคุม */
         }
-        /* 当前阅读位置指示条 */
+        /* แถบบอกตำแหน่งการอ่านปัจจุบัน */
         .toc-reading-indicator {
             position: absolute;
             left: 0;
@@ -151,7 +151,7 @@
             transition: top 0.3s ease, height 0.3s ease;
             z-index: 1;
         }
-        /* 侧边栏顶部区域增强 */
+        /* ปรับปรุงพื้นที่ด้านบนของแถบข้าง */
         #sidebar > nav > div:first-child {
             background: #f5f6f8;
             border-radius: 0;
@@ -160,7 +160,7 @@
         .dark #sidebar > nav > div:first-child {
             background: #1a2230;
         }
-        /* 侧边栏整体增强 */
+        /* ปรับปรุงแถบข้างทั้งหมด */
         #sidebar {
             box-shadow: none;
             border-right: 1px solid #e5e7eb;
@@ -174,7 +174,7 @@
                 border-right: none;
             }
         }
-        /* 章节序号样式 */
+        /* สไตล์หมายเลขบท */
         .toc-item span[class*="font-mono"] {
             display: inline-block;
             min-width: 1.5rem;
@@ -192,7 +192,7 @@
         .dark .toc-item.active span[class*="font-mono"] {
             color: #818cf8;
         }
-        /* 导航目标章节高亮闪烁 */
+        /* เน้นและกะพริบบทเป้าหมายเมื่อนำทาง */
         .scroll-target-flash {
             animation: targetFlash 1.2s ease-out;
         }
@@ -511,7 +511,7 @@
             }
         }
 
-        /* ===== 增强样式：导读卡片、章节摘要、学习路径 ===== */
+        /* ===== ปรับปรุงสไตล์：การ์ดแนะนำ、สรุปบท、เส้นทางการเรียนรู้ ===== */
         .reading-guide-card {
             background: #fafafa;
             border: 1px solid #e0e0e0;
@@ -739,9 +739,9 @@
             main { max-width: 56rem; }
         }
 
-        /* ===== 深度改进样式 ===== */
+        /* ===== ปรับปรุงสไตล์อย่างลึกซึ้ง ===== */
 
-        /* 渐变阅读进度条 */
+        /* แถบความคืบหน้าการอ่านแบบไล่เฉด */
         #reading-progress {
             background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
             background-size: 200% 100% !important;
@@ -758,7 +758,7 @@
             100% { background-position: -200% 0; }
         }
 
-        /* 滚动入场动画 */
+        /* อนิเมชันปรากฏเมื่อเลื่อน */
         .content-section {
             opacity: 0;
             transform: translateY(24px);
@@ -769,7 +769,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* 第一屏内容直接可见 */
+        /* เนื้อหาหน้าจอแรกเห็นได้ทันที */
         .content-section:first-of-type,
         .content-section.immediately-visible {
             opacity: 1;
@@ -777,7 +777,7 @@
             transition: none;
         }
 
-        /* Hero横幅增强 */
+        /* Heroปรับปรุงแบนเนอร์ */
         .hero-banner {
             background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
             position: relative;
@@ -805,7 +805,7 @@
         }
         .hero-banner > * { position: relative; z-index: 1; }
 
-        /* 卡片悬浮效果 */
+        /* เอฟเฟกต์เมื่อนำเมาส์ไปวางบนการ์ด */
         .path-step {
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
                         box-shadow 0.3s ease,
@@ -828,7 +828,7 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
 
-        /* 返回顶部按钮增强 */
+        /* ปรับปรุงปุ่มกลับขึ้นบน */
         #back-to-top {
             position: fixed;
             right: 1rem;
@@ -877,7 +877,7 @@
             transform-origin: center;
         }
 
-        /* 书签按钮 */
+        /* ปุ่มบุ๊กมาร์ก */
         .bookmark-btn {
             display: inline-flex;
             align-items: center;
@@ -913,7 +913,7 @@
             border-color: #818cf8;
         }
 
-        /* 章节完成勾选 */
+        /* เช็คบทที่อ่านจบ */
         .chapter-check {
             display: inline-flex;
             align-items: center;
@@ -963,7 +963,7 @@
             line-height: 1;
         }
 
-        /* 搜索结果键盘选中 */
+        /* เลือกผลการค้นหาด้วยแป้นพิมพ์ */
         .search-result-item.selected {
             background: #eef2f5;
         }
@@ -971,12 +971,12 @@
             background: #374151;
         }
 
-        /* 仪表盘卡片 */
+        /* การ์ดแดชบอร์ด */
         .dashboard-card {
             transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
         }
 
-        /* 阅读连续天数徽章 */
+        /* เข็มกลัดวันอ่านต่อเนื่อง */
         #streak-toast {
             transform: translateX(-50%) translateY(100px);
             left: 50%;
@@ -987,7 +987,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* 章节评分星星 */
+        /* ดาวให้คะแนนบท */
         .chapter-rating {
             display: inline-flex;
             align-items: center;
@@ -1020,7 +1020,7 @@
             opacity: 0.5;
         }
 
-        /* 语音朗读控件 */
+        /* ตัวควบคุมการอ่านด้วยเสียง */
         .tts-controls {
             position: fixed;
             bottom: 6rem;
@@ -1112,7 +1112,7 @@
             .tts-controls .tts-chapter-label { max-width: 8rem; }
         }
 
-        /* 复制按钮 */
+        /* ปุ่มคัดลอก */
         .copy-btn {
             display: inline-flex;
             align-items: center;
@@ -1143,7 +1143,7 @@
             border-color: #27ae60;
         }
 
-        /* 可折叠内容块 */
+        /* บล็อกเนื้อหาที่พับได้ */
         .collapsible-header {
             cursor: pointer;
             display: flex;
@@ -1178,7 +1178,7 @@
             opacity: 0;
         }
 
-        /* 阅读位置恢复提示 */
+        /* แจ้งเตือนการคืนตำแหน่งการอ่าน */
         .restore-position-toast {
             position: fixed;
             bottom: 2rem;
@@ -1221,7 +1221,7 @@
             color: #fff;
         }
 
-        /* 章节分隔线增强 */
+        /* ปรับปรุงเส้นแบ่งบท */
         .content-section {
             position: relative;
             padding-top: 1rem;
@@ -1242,7 +1242,7 @@
             display: none;
         }
 
-        /* Callout框增强 */
+        /* Calloutปรับปรุงกรอบ */
         .callout-box {
             position: relative;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1251,7 +1251,7 @@
             transform: translateX(2px);
         }
 
-        /* 表格行悬浮 */
+        /* เอฟเฟกต์เมื่อนำเมาส์ไปวางบนแถวตาราง */
         table tbody tr {
             transition: background-color 0.15s ease;
         }
@@ -1262,7 +1262,7 @@
             background-color: rgba(255,255,255,0.04);
         }
 
-        /* 章节导航按钮增强 */
+        /* ปรับปรุงปุ่มนำทางบท */
         .chapter-nav a {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1277,7 +1277,7 @@
             background: #1e2a36;
         }
 
-        /* 侧边栏书签标记 */
+        /* ป้ายบุ๊กมาร์กในแถบข้าง */
         .toc-item.bookmarked::after {
             content: '★';
             color: #d4a017;
@@ -1288,7 +1288,7 @@
             color: #27ae60 !important;
         }
 
-        /* 快捷工具增强 */
+        /* ปรับปรุงเครื่องมือด่วน */
         .quick-tool-btn {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1299,7 +1299,7 @@
             transform: translateY(0) scale(0.95);
         }
 
-        /* 移动端底部安全区域 */
+        /* พื้นที่ปลอดภัยด้านล่างบนมือถือ */
         @media (max-width: 768px) {
             #back-to-top {
                 right: 0.75rem;
@@ -1322,7 +1322,7 @@
             }
         }
 
-        /* 打印时隐藏新增元素 */
+        /* ซ่อนองค์ประกอบใหม่เมื่อพิมพ์ */
         @media print {
             .bookmark-btn, .chapter-check, .copy-btn,
             .restore-position-toast, #back-to-top .progress-ring,
@@ -1396,7 +1396,7 @@
                     <input type="text" id="toc-filter" placeholder="กรองบท..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="กรองบท">
                 </div>
                 <ul class="space-y-1 text-sm" id="toc-list">
-                    <!-- 基础篇 -->
+                    <!-- พื้นฐาน -->
                     <li class="toc-parent" data-group="ji-chu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ji-chu-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">1. ภาคพื้นฐาน (บทที่ 0-7)</a>
@@ -1418,7 +1418,7 @@
                             <li><a href="#di-qi-zhang-jichu" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">07</span>บทที่ 7: วิเคราะห์ฟังก์ชันล้ำสมัยอย่างครบถ้วน</a></li>
                         </ul>
                     </li>
-                    <!-- 软件篇 -->
+                    <!-- ซอฟต์แวร์ -->
                     <li class="toc-parent" data-group="ruan-jian">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ruan-jian-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">2. ภาคซอฟต์แวร์ (บทที่ 8-14)</a>
@@ -1437,7 +1437,7 @@
                             <li><a href="#di-shi-si-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">14</span>รหัสผ่านสร้าง</a></li>
                         </ul>
                     </li>
-                    <!-- 进阶篇 -->
+                    <!-- ขั้นกลาง -->
                     <li class="toc-parent" data-group="jin-jie">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#jin-jie-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">3. ภาคขั้นสูง (บทที่ 15-20)</a>
@@ -1456,7 +1456,7 @@
                             <li><a href="#di-er-shi-zhang-termux" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-500 dark:text-gray-500 pl-6 text-xs"><span class="mr-1.5 text-xs text-gray-300 font-mono"></span>ภาคผนวก: Termux เทอร์มินัล Linux แบบพกพา</a></li>
                         </ul>
                     </li>
-                    <!-- 超越篇 -->
+                    <!-- ขั้นสูง -->
                     <li class="toc-parent" data-group="chao-yue">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#chao-yue-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">พันผ่านพื้นดินพื้นที่จำกัด</a>
@@ -1474,7 +1474,7 @@
                             <li><a href="#di-er-shi-liu-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">26</span>บทที่ 26：แนวโน้มเทคโนโลยีโทรศัพท์ในปัจจุบัน</a></li>
                         </ul>
                     </li>
-                    <!-- 五、实战篇（第27-32章） -->
+                    <!-- V、ภาคปฏิบัติ（บทที่ 27-32） -->
                     <li class="toc-parent" data-group="shi-zhan">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#shi-zhan-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">5. บทปฏิบัติจริง (บทที่ 27-32)</a>
@@ -1491,7 +1491,7 @@
                             <li><a href="#di-san-shi-er-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">32</span>บทที่ 32：คู่มือปฐมพยาบาลความปลอดภัยโทรศัพท์</a></li>
                         </ul>
                     </li>
-                    <!-- 六、展望篇（第33-41章） -->
+                    <!-- VI、มองอนาคต（บทที่ 33-41） -->
                     <li class="toc-parent" data-group="zhan-wang">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#zhan-wang-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">6. บทมองการณ์ไกล (บทที่ 33-41)</a>
@@ -1511,7 +1511,7 @@
                             <li><a href="#di-si-shi-yi-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">41</span>บทที่ 41：เริ่มต้นละครสั้นแนวตั้ง—3 นาทีต่อหนึ่งตะขอ</a></li>
                         </ul>
                     </li>
-                    <!-- 附录 -->
+                    <!-- ภาคผนวก -->
                     <li class="toc-parent" data-group="fu-lu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#fu-lu" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">7. ภาคผนวก</a>
@@ -1554,14 +1554,14 @@
             <div class="content-col">
             <a id="top"></a>
 
-            <!-- 顶部面包屑 -->
+            <!-- เบรดครัมบ์ด้านบน -->
             <nav class="breadcrumb no-print" aria-label=":[ตั้งค่า] > [ความเป็นส่วนตัวและความปลอดภัย] > [App ความเป็นส่วนตัวรายงานบอก], ดูไหนบาง App ที่ขโมยขโมยเยี่ยมชมถามคุณของตำแหน่ง, กล้อง, ไมโครโฟน">
                 <a href="#top">หน้าแรก</a>
                 <span class="sep" aria-hidden="true">›</span>
                 <span class="text-gray-700 dark:text-gray-300">วิชาบังคับดิจิทัล · v1.7</span>
             </nav>
 
-            <!-- Hero 横幅 -->
+            <!-- Hero แบนเนอร์ -->
             <section class="hero-banner mb-8" aria-labelledby="hero-title">
                 <div class="flex flex-wrap items-center gap-2 mb-3">
                     <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>32 บท + 6 ภาคผนวก</span>
@@ -1583,7 +1583,7 @@
                 </div>
             </section>
 
-            <!-- 怎么用这本书 -->
+            <!-- วิธีใช้หนังสือเล่มนี้ -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-compass text-primary" aria-hidden="true"></i>ใช้หนังสือเล่มนี้อย่างไร?
@@ -1608,7 +1608,7 @@
                 </div>
             </section>
 
-            <!-- 学习路径五步走 -->
+            <!-- เส้นทางการเรียนรู้ห้าขั้น -->
             <section class="mb-8" aria-labelledby="learning-path-title">
                 <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">เส้นทางการเรียนรู้: 5 ขั้นสู่การเป็นมือฉมังโทรศัพท์</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">หนังสือเล่มนี้จัดเรียงตามหลักการรับรู้ "จากรู้จัก สู่ความเชี่ยวชาญ และสู่การปฏิบัติจริง" แต่ละภาคคือรากฐานของภาคถัดไป</p>
@@ -1651,7 +1651,7 @@
                 </div>
             </section>
 
-            <!-- 章节地图速查表 -->
+            <!-- ตารางอ้างอิงเร็วแผนที่บท -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-map text-primary" aria-hidden="true"></i>ค้นหาแผนที่บทด่วน
@@ -1676,13 +1676,13 @@
                 </div>
             </section>
 
-            <!-- 写在最后：本书不教什么 -->
+            <!-- บทส่งท้าย：หนังสือเล่มนี้ไม่สอนอะไร -->
             <div class="highlight-quote">
                 <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>หนังสือเล่มนี้ไม่ได้สอนวิธี "ดูวิดีโอให้สนุกขึ้น" แต่ต้องการช่วยให้คุณเข้าใจ: ทำไมโทรศัพท์ถึงทำงานแบบนี้? มันทำอะไรได้และทำอะไรไม่ได้? และจะทำอย่างไรให้มันทำงานเพื่อคุณอย่างแท้จริง แทนที่จะเป็นฝ่ายควบคุมความสนใจและเวลาของคุณ</p>
                 <p class="text-right text-sm">—— เกี่ยวกับเจตนารมณ์ของหนังสือเล่มนี้</p>
             </div>
 
-            <!-- 交互式自检清单 + 阅读仪表盘 -->
+            <!-- รายการตรวจสอบแบบโต้ตอบ + แดชบอร์ดการอ่าน -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
                     <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>แดชบอร์ดการเรียนรู้
@@ -1690,7 +1690,7 @@
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">ติดตามความคืบหน้าการอ่านของคุณ และตรวจสอบสถานะสุขภาพของโทรศัพท์</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
-                    <!-- 阅读进度卡片 -->
+                    <!-- การ์ดความคืบหน้าการอ่าน -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>ความคืบหน้าการอ่าน</h3>
                         <div class="flex items-center gap-4">
@@ -1709,7 +1709,7 @@
                         </div>
                     </div>
 
-                    <!-- 手机健康自检卡片 -->
+                    <!-- การ์ดตรวจสอบสุขภาพโทรศัพท์ -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>ตรวจสอบสุขภาพโทรศัพท์ด้วยตัวเอง</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">ทำเครื่องหมายที่รายการที่คุณทำได้แล้ว แล้วดู "คะแนนสุขภาพ" ของโทรศัพท์คุณ:</p>
@@ -1735,7 +1735,7 @@
                 </div>
             </section>
 
-            <!-- 原"top" 内容保持兼容 -->
+            <!-- เดิม"top" รักษาความเข้ากันของเนื้อหา -->
             <div class="sr-only" aria-hidden="true">v3.0 · หลักสูตรดิจิทัลที่จำเป็นจริงๆ สำหรับคนทั่วไป</div>
 
             <section id="ji-chu-pian" class="mb-12">
@@ -2100,7 +2100,7 @@
                     </div>
                 </div>
 
-                <!-- 第一章附：安卓手机内存拓展解析 -->
+                <!-- ภาคผนวกบทที่ 1：การวิเคราะห์การขยายหน่วยความจำโทรศัพท์ Android -->
                 <div id="di-yi-zhang-memory" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ภาคผนวก: การวิเคราะห์การขยายหน่วยความจำมือถือแอนดรอยด์</h3>
                     <p class="chapter-intro mb-4">เวลาซื้อโทรศัพท์ คุณมักเห็นโฆษณาแบบ "12GB+8GB RAM" เหมือนได้ RAM เพิ่มมา 8GB ฟรีๆ แต่มันทำให้โทรศัพท์เร็วขึ้นจริงไหม? หรืออาจทำร้ายโทรศัพท์? ในส่วนนี้เราจะอธิบายเทคโนโลยี "การขยายหน่วยความจำ" ให้ชัดเจน</p>
@@ -2514,7 +2514,7 @@
                     </ul>
                 </div>
 
-                <!-- 第三章 -->
+                <!-- บทที่ 3 -->
                 <div id="di-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">มากมากคนของโทรศัพท์มือถือหน้าจอบนทางขณะเดียวกันสว่างกำลังWi-Fiและสัญญาณไอคอน, แต่คู่2ผู้ของแก่นแท้ความแตกต่างแต่1หัวหมอกน้ำ ที่สุดผ่านพจนานุกรมของผิดพลาดเขตก็ใช่:</h3>
                     <p class="chapter-intro mb-4">เชื่อมกำลังWi-Fiแต่รีเฟรชไม่ออกหน้าหน้า</p>
@@ -2733,7 +2733,7 @@
                     </div>
                 </div>
 
-                <!-- 第四章 -->
+                <!-- บทที่ 4 -->
                 <div id="di-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">แอนดรอยด์</h3>
                     <p class="chapter-intro mb-4">:Google Play(ประเทศนอก)หรือแต่ละแบรนด์ตัวเองนำพาณิชย์ร้าน(เหมือนหัวเว่ยนำไปใช้ตลาดเรื่อง, เล็กมี่นำไปใช้พาณิชย์ร้าน)</p>
@@ -2899,7 +2899,7 @@
                     </div>
                 </div>
 
-                <!-- 第五章 -->
+                <!-- บทที่ 5 -->
                 <div id="di-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">:เลือก1ชิ้นคุณสามารถได้ยินของ, ไม่อายอายของ</h3>
                     <p class="chapter-intro mb-4">แผ่นดินไหวเคลื่อนไหวโหมด</p>
@@ -3111,7 +3111,7 @@
                     </div>
                 </div>
 
-                <!-- 第六章 -->
+                <!-- บทที่ 6 -->
                 <div id="di-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ลายนิ้วมือระบุ</h3>
                     <p class="chapter-intro mb-4">:ปลอดภัยและสะดวกของเสร็จสวยราบสมดุล</p>
@@ -3277,7 +3277,7 @@
                     </div>
                 </div>
 
-                <!-- 第七章：前沿功能 -->
+                <!-- บทที่ 7：ฟังก์ชันล้ำสมัย -->
                 <div id="di-qi-zhang-jichu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 7: วิเคราะห์ฟังก์ชันล้ำสมัยอย่างครบถ้วน</h3>
                     <p class="chapter-intro mb-4">พัฒนาการแนวโน้ม</p>
@@ -3399,12 +3399,12 @@
                 </div>
             </section>
 
-            <!-- 二、软件篇 -->
+            <!-- II、ซอฟต์แวร์ -->
             <section id="ruan-jian-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">2. ภาคซอฟต์แวร์ (บทที่ 8-14)</h2>
                 <p class="chapter-intro mb-4">อื้ออึงรบกวนไฟฟ้าพูดขวางตัดและอัจฉริยะระบุ:</p>
 
-                <!-- 第八章 -->
+                <!-- บทที่ 8 -->
                 <div id="di-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">หลักการ</h3>
                     <p class="chapter-intro mb-4">:ไฟฟ้าพูดAppผ่านเครือข่ายตรวจสอบถามใหญ่โตใหญ่ของหมายเลขรหัสคลัง, ที่ไฟฟ้าชั่วโมงแสดง"อื้ออึงรบกวนไฟฟ้าพูด", "หลอกลวงไฟฟ้าพูด"หรือสาธารณะบริษัทชื่อเรียก</p>
@@ -3594,7 +3594,7 @@
                     </div>
                 </div>
 
-                <!-- 第九章 -->
+                <!-- บทที่ 9 -->
                 <div id="di-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 9: การทำงานและการเรียนรู้บนมือถือ</h3>
                     <p class="chapter-intro mb-4">จดบันทึกโน้ตนี้ชิ้นเรื่อง, มากมากคน1บนก็คิดทำ1เซ็ตมากซับซ้อนของระบบ, ผลลัพธ์แข็งแรงถือไม่3วัน ฉันของคำแนะนำใช่ก่อนเบาหลังหนัก——ก่อนเลี้ยงสำเร็จ"จดบันทึก"ของคุ้นเคย, อีกพิจารณา"จัดการ"ของปัญหา</p>
@@ -3659,7 +3659,7 @@
                     </div>
                 </div>
 
-                <!-- 第十章 -->
+                <!-- บทที่ 10 -->
                 <div id="di-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 10: การชำระเงินมือถือและบริการในชีวิตประจำวัน</h3>
                     <p class="chapter-intro mb-4">อย่าอย่าตัดรูปภาพส่งให้ใดคน</p>
@@ -3735,7 +3735,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章 -->
+                <!-- บทที่ 11 -->
                 <div id="di-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 11: การถ่ายภาพและการจัดการรูปภาพ</h3>
                     <p class="chapter-intro mb-4">นี้บางไม่ต้องการอะไรทฤษฎีรู้จัก, ใช้1ครั้งก็สามารถเห็นผล:</p>
@@ -3800,7 +3800,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章附：专业影像技术 -->
+                <!-- ภาคผนวกบทที่ 11：เทคโนโลยีภาพถ่ายระดับมืออาชีพ -->
                 <div id="di-shi-yi-zhang-advanced" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">:3840×2160พิกเซล, เกินสูงใส, ละเอียดตอนอุดมร่ำรวย</h3>
                     <p class="chapter-intro mb-4">8K</p>
@@ -4062,7 +4062,7 @@
                     </div>
                 </div>
 
-                <!-- 第十二章 -->
+                <!-- บทที่ 12 -->
                 <div id="di-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ไม่กี่ฟังเพลงเล็กทักษะช่างฝีมือ</h3>
                     <p class="chapter-intro mb-4">:ถ้าคุณใช้ของใช่บลูทูธหูฟัง, ไปเพลงAppตั้งค่าในดูดูมีไม่มีมี"เอฟเฟกต์เสียงปรับ"หรือ"เท่ากันสมดุลอุปกรณ์", เล็กน้อยเล็กน้อยปรับ1ล่างต่ำเสียงและสูงเสียง, ผลยกระดับพรุ่งนี้แสดง อีกนอก, สตรีมมิงฟังเพลงมากค่าใช้จ่ายปริมาณข้อมูล, จดบันทึกได้ที่ตั้งค่าในคัน"เพียงWiFiล่างเล่นไม่มีเสียหาย"เปิด, หรือยกหน้าดาวน์โหลดดีชอบของเพลย์ลิสต์ออฟไลน์ฟัง</p>
@@ -4125,7 +4125,7 @@
                     </div>
                 </div>
 
-                <!-- 第十三章 -->
+                <!-- บทที่ 13 -->
                 <div id="di-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ข้อมูลกลางศูนย์กลาง</h3>
                     <p class="chapter-intro mb-4">:แอปเปิลแข็งแรงสุขภาพ/Google Fit, รวบรวมรวมตัวตัวเองโทรศัพท์มือถือ, มือวงแหวนและบุคคลที่สามแข็งแรงสุขภาพAppของทั้งหมดข้อมูล</p>
@@ -4379,7 +4379,7 @@
                     </div>
                 </div>
 
-                <!-- 第十四章：密码管理器专题 -->
+                <!-- บทที่ 14：หัวข้อพิเศษเรื่องตัวจัดการรหัสผ่าน -->
                 <div id="di-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">รหัสผ่านสร้าง</h3>
                     <p class="chapter-intro mb-4">:สามารถสร้างสุ่ม, ซับซ้อนของรหัสผ่าน, ยกสูงความปลอดภัย</p>
@@ -4739,12 +4739,12 @@
                 </div>
             </section>
 
-            <!-- 三、进阶篇 -->
+            <!-- III、ขั้นกลาง -->
             <section id="jin-jie-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">3. ภาคขั้นสูง (บทที่ 15-20)</h2>
                 <p class="chapter-intro mb-4">1ครั้งวนรอบไม่ใช่เติม1ครั้งไฟฟ้า เช่นนี้วันใช้60%เติมเต็ม, พรุ่งนี้วันใช้40%เติมเต็ม, รวมการบริโภค100%ไฟฟ้าปริมาณเพิ่งคำนวณ1ครั้งวนรอบ</p>
 
-                <!-- 第十五章 -->
+                <!-- บทที่ 15 -->
                 <div id="di-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 15: วิทยาศาสตร์แบตเตอรี่และการเพิ่มประสิทธิภาพการใช้งาน</h3>
                     <p class="chapter-intro mb-4">อย่างไรดู?</p>
@@ -4961,7 +4961,7 @@
                     </div>
                 </div>
 
-                <!-- 第十六章 -->
+                <!-- บทที่ 16 -->
                 <div id="di-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ค้นหาโทรศัพท์มือถือ</h3>
                     <p class="chapter-intro mb-4">:โทรศัพท์มือถือทิ้งหลัง, นี้ใช่เพียง1สามารถช่วยคุณระบุตำแหน่ง, ล็อกเครื่อง, ระยะไกลทาข้อมูลของงานเครื่องมือ</p>
@@ -5053,7 +5053,7 @@
                     </div>
                 </div>
 
-                <!-- 第十七章 -->
+                <!-- บทที่ 17 -->
                 <div id="di-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">iPhone → ไฟฟ้ามอง</h3>
                     <p class="chapter-intro mb-4">:จากขวาบนมุมล่างดึงศูนย์ควบคุม, จุดนั่นชิ้น2ชิ้นทางกรอบซ้อนที่1เริ่มของไอคอน(หน้าจอกระจกเหมือน), พบคุณของไฟฟ้ามองชื่อเรียก, นิดหน่อยก็เชื่อมบน หน้ายกใช่ไฟฟ้ามองและโทรศัพท์มือถือเชื่อมของเดียวกัน1ชิ้นWi-Fi, และไฟฟ้ามองรองรับAirPlay(ใหญ่บางส่วนอัจฉริยะไฟฟ้ามองทั้งหมดรองรับ)</p>
@@ -5165,7 +5165,7 @@
                     </div>
                 </div>
 
-                <!-- 第十八章 -->
+                <!-- บทที่ 18 -->
                 <div id="di-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 18: สำรองข้อมูลและย้ายข้อมูล</h3>
                     <p class="chapter-intro mb-4">แผน1:คอมพิวเตอร์ภายในเครื่องสำรองข้อมูล(ที่สุดเชื่อถือได้, แนะนำมีคอมพิวเตอร์ของคน)</p>
@@ -5263,7 +5263,7 @@
                     </div>
                 </div>
 
-                <!-- 第十九章 -->
+                <!-- บทที่ 19 -->
                 <div id="di-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 19: แก้ไขปัญหาและช่วยเหลือตนเอง</h3>
                     <p class="chapter-intro mb-4">รักษารักษาวิธี(จากง่ายถึงซับซ้อน)</p>
@@ -5359,7 +5359,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章：开发者模式与高级权限 -->
+                <!-- บทที่ 20：โหมดนักพัฒนาและสิทธิ์ขั้นสูง -->
                 <div id="di-er-shi-zhang-jinjie" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">USBปรับทดสอบ</h3>
                     <p class="chapter-intro mb-4">:เชื่อมต่อคอมพิวเตอร์เข้าบรรทัดระดับสูงดำเนินการ, เหมือนรีเฟรชเครื่อง, ข้อมูลกู้คืน</p>
@@ -5561,7 +5561,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章附：Termux便携式Linux终端 -->
+                <!-- ภาคผนวกบทที่ 20：TermuxพกพาLinuxเทอร์มินัล -->
                 <div id="di-er-shi-zhang-termux" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">:รองรับSSHไคลเอนต์และเซิร์ฟเวอร์การทำงาน, ได้ระยะไกลเชื่อมต่ออื่นๆอุปกรณ์หรือให้โทรศัพท์มือถือสำเร็จเว่ยSSHหลักเครื่อง</h3>
                     <p class="chapter-intro mb-4">เข้ารหัสงานเครื่องมือ</p>
@@ -5685,12 +5685,12 @@
                 </div>
             </section>
 
-            <!-- 四、超越篇 -->
+            <!-- IV、ขั้นสูง -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">พันผ่านพื้นดินพื้นที่จำกัด</h2>
                 <p class="chapter-intro mb-4">(เช่นดูบางคนตัวที่พิเศษกำหนดประเทศบ้านบนเส้นของในเนื้อหา); ที่3,</p>
 
-                <!-- 第二十一章 -->
+                <!-- บทที่ 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 21: สำรวจเครือข่ายมือถือและความมั่นคงปลอดภัยข้อมูลอย่างลึกซึ้ง</h3>
                     <p class="chapter-intro mb-4">แต่ฉันได้คำเตือน1ประโยค:</p>
@@ -5780,7 +5780,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十二章 -->
+                <!-- บทที่ 22 -->
                 <div id="di-er-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 22: AI ทำงานอย่างไรในโทรศัพท์มือถือ</h3>
                     <p class="chapter-intro mb-4">2024-2025ปี, AIใหญ่โมเดล(เหมือนDeepSeek, ChatGPT, ข้อความหัวใจ1คำพูด, ผ่านความหมาย1000ถามชั้น)ของระเบิดส่งลึกแกะสลักเปลี่ยนโทรศัพท์มือถือของใช้รูปแบบ โทรศัพท์มือถือไม่อีกตัวใช่ดำเนินการคำสั่งของงานเครื่องมือ, แต่ใช่สามารถเข้าใจ, อนุมานและสร้างของอัจฉริยะพวกเพื่อน</p>
@@ -6047,7 +6047,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章 -->
+                <!-- บทที่ 23 -->
                 <div id="di-er-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 23: แนวคิดการเขียนโปรแกรมและการเริ่มต้นระบบอัตโนมัติ</h3>
                     <p class="chapter-intro mb-4">แอปเปิลของ"เร็วรวดเร็วคำสั่ง"(Shortcuts)Appใช่ตัวเองนำของนำไปใช้, ไม่ต้องการดาวน์โหลด มันของแก่นกลางโดยสรุปคิดถึงก็ใช่จัดการต่างๆ เหมือนประกอบบล็อกประกอบเริ่ม ก่อนพูดไม่กี่สำคัญโดยสรุปคิดถึง:</p>
@@ -6147,7 +6147,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章附：GitHub入门指南 -->
+                <!-- ภาคผนวกบทที่ 23：GitHubคู่มือเริ่มต้น -->
                 <div id="di-er-shi-san-zhang-github" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">GitHub</h3>
                     <p class="chapter-intro mb-4">แก่นแท้</p>
@@ -6340,7 +6340,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十四章：Root权限与BL锁深度解析 -->
+                <!-- บทที่ 24：Rootสิทธิ์และBLวิเคราะห์ระบบล็อกอย่างละเอียด -->
                 <div id="di-er-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">:ที่โทรศัพท์มือถือตั้งค่ากลางผูกเล็กมี่บัญชี</h3>
                     <p class="chapter-intro mb-4">ชั้นรอฉบับ</p>
@@ -6484,7 +6484,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十五章 -->
+                <!-- บทที่ 25 -->
                 <div id="di-er-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ด้วยมือสำรองข้อมูล</h3>
                     <p class="chapter-intro mb-4">:ที่สุดเชื่อถือได้ของรูปแบบ, เป็นประจำจะมีค่าแพงข้อมูลดาวน์โหลดถึงภายในเครื่องแข็งจาน</p>
@@ -6747,7 +6747,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十六章 -->
+                <!-- บทที่ 26 -->
                 <div id="di-er-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 26：แนวโน้มเทคโนโลยีโทรศัพท์ในปัจจุบัน</h3>
                     <p class="chapter-intro mb-4">พูดคุยเรื่อง "ชีวิตหลังเกษียณ" ของโทรศัพท์เก่ากันไปแล้ว ตอนนี้ลองหันกลับมามองปัจจุบันกันบ้าง ปี 2024-2026 ถือเป็นช่วงที่เทคโนโลยีโทรศัพท์มือถือเติบโตแบบก้าวกระโดด: AI ถูกยัดลงมาอยู่ในกระเป๋ากางเกง, การสื่อสารผ่านดาวเทียมเริ่มจากเครื่องระดับ Flagship แล้วลงมาสู่รุ่นระดับกลาง, หน้าจอแบบพับได้จาก "ของลองใหม่" กลายเป็น "ของใช้ประจำวัน" และเทคโนโลยีแบตเตอรี่ก็มีความก้าวหน้าระดับวัสดุที่ไม่ได้เห็นมานานหลายปี ในบทนี้ เราจะมาสรุปแนวโน้มเทคโนโลยีล้ำสมัยที่กำลังเกิดขึ้นเหล่านี้ เพื่อช่วยให้คุณตัดสินใจว่า "ถึงเวลาเปลี่ยนเครื่องหรือยัง" และ "ควรเปลี่ยนเป็นเครื่องแบบไหน"</p>
@@ -6841,12 +6841,12 @@
                 </div>
             </section>
 
-            <!-- 五、实战篇（第27-32章） -->
+            <!-- V、ภาคปฏิบัติ（บทที่ 27-32） -->
             <section id="shi-zhan-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">5. บทปฏิบัติจริง (บทที่ 27-32)</h2>
                 <p class="chapter-intro mb-4">หลังจากเรียนรู้ทฤษฎีจาก 26 บทก่อนหน้านี้ไปแล้ว ตอนนี้ก็ถึงเวลานำมันไปใช้จริง บททั้ง 6 บทนี้ไม่ได้พูดเรื่องทฤษฎีลอยๆ—ตั้งแต่การปรับแต่งโทรศัพท์ให้ผู้สูงอายุ, การเลือกซื้อมือถือเครื่องใหม่อย่างง่ายดาย, การสร้างนิสัยการใช้งานดิจิทัลที่ดีต่อสุขภาพ, การสอนการทำ Screen Mirroring และถ่ายคลิปวิดีโอสั้นทีละขั้นตอน ไปจนถึงคู่มือปฐมพยาบาลดิจิทัลสำหรับยามฉุกเฉิน ทุกบทเป็นทักษะภาคปฏิบัติที่คุณสามารถนำไปใช้ได้ทันที อ่านจบก็ใช้ได้เลย</p>
 
-                <!-- 第二十七章：适老化专题 -->
+                <!-- บทที่ 27：หัวข้อพิเศษเรื่องผู้สูงอายุ -->
                 <div id="di-er-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 27: พ่อแม่ก็ใช้ง่าย—คู่มือปรับแต่งมือถือสำหรับผู้สูงอายุอย่างครบถ้วน</h3>
                     <p class="chapter-intro mb-4">พูดตรงๆ ตอนเขียนบทนี้ ฉันนึกถึงพ่อกับแม่ของฉัน ทุกครั้งที่มือถือของแม่ฉันเด้งข้อความ "อัปเดตระบบ" ขึ้นมา แม่ไม่กล้ากด เพราะกลัวว่าจะทำให้มือถือพัง ส่วนพ่อของฉันตั้งค่าตัวอักษร WeChat เล็กกว่ามดอีก แต่ก็ไม่รู้วิธีขยายให้ใหญ่ขึ้น ต้องมัวเพ่งตาอ่านอยู่แบบนั้นตั้ง 2 ปี นี่ไม่ใช่เพราะพวกท่าน "โง่" แต่เป็นเพราะมือถือตั้งค่าเริ่มต้นโดยถือว่าทุกคนเป็นคนหนุ่มสาววัยยี่สิบกว่าๆ ทั้งหมด ในบทนี้ ฉันจะใช้คำพูดที่ตรงไปตรงมาที่สุด เพื่อไขปัญหาที่ทำให้ผู้สูงอายุปวดหัวที่สุดในการใช้มือถือทีละข้อ</p>
@@ -6994,7 +6994,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十八章：手机选购终极指南 -->
+                <!-- บทที่ 28：คู่มือซื้อโทรศัพท์ขั้นสุดยอด -->
                 <div id="di-er-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 28：ใช้เงินอย่างคุ้มค่า ซื้อเครื่องที่ใช่—คู่มือเลือกซื้อโทรศัพท์ขั้นเทพ</h3>
                     <p class="chapter-intro mb-4">เรื่องการซื้อโทรศัพท์นั้น หลายคนอ่านรีวิวมาสัปดาห์ก่อน เปรียบเทียบราคามาเป็นเดือน แต่สุดท้ายก็ยังเผลอจ่ายไปห้าถึงหกพันเพื่อซื้อเรือธงที่ตัวเองแทบไม่ได้ใช้ บทนี้จะไม่แสดงตารางสเปก เพราะสิ่งเหล่านั้นคุณดูได้จากเว็บไซต์อย่างเป็นทางการ สิ่งที่ผมอยากทำคือ มอบ"วิธีคิดเลือกซื้อมือถือ" ให้คุณ เพื่อให้ไม่ว่าตลาดจะออกโทรศัพท์รุ่นใหม่อะไรมา คุณก็สามารถตัดสินใจได้ด้วยตัวเองว่ามันเหมาะกับคุณหรือไม่</p>
@@ -7182,7 +7182,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十九章：数字健康 -->
+                <!-- บทที่ 29：สุขภาพดิจิทัล -->
                 <div id="di-er-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 29：สุขภาพดิจิทัล—สร้างความสัมพันธ์ที่ดีกับโทรศัพท์</h3>
                     <p class="chapter-intro mb-4">คุณเคยมีประสบการณ์แบบนี้ไหม: ตั้งใจจะดูคลิปสั้นๆ แค่ 5 นาที แต่เมื่อเงยหน้าขึ้นมาก็ผ่านไปแล้วสองชั่วโมง? หรือตอนกลางคืนนอนเล่นมือถือ ยิ่งดูยิ่งตื่น สุดท้ายนอนตอนตี 2? สมาร์ทโฟนเปลี่ยนชีวิตของเรา แต่ก็แอบกลืนกินเวลาและสุขภาพของเราไปอย่างเงียบๆ บทนี้ไม่ได้ต้องการให้คุณ "เลิกใช้มือถือ" แต่เพื่อช่วยให้คุณชิงการควบคุมมือถือกลับมาอีกครั้ง</p>
@@ -7274,7 +7274,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十章：投屏、演示与车载互联 -->
+                <!-- บทที่ 30：การแคสต์หน้าจอ、สาธิตและเชื่อมต่อรถยนต์ -->
                 <div id="di-san-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 30：การแคสต์หน้าจอ การนำเสนอ และการเชื่อมต่อระบบรถยนต์</h3>
                     <p class="chapter-intro mb-4">หน้าจอมือถือถึงแม้จะใหญ่แค่ไหนก็แค่ 7 นิ้ว แต่ทีวีของคุณมี 55 นิ้ว โปรเจคเตอร์ของคุณมี 100 นิ้ว การ "โยน" ภาพจากมือถือไปยังหน้าจอขนาดใหญ่ ประสบการณ์ที่ได้จะอยู่คนละมิติเลย บทนี้จะอธิบายให้ชัดเจนเกี่ยวกับการทำงานของการแคสต์หน้าจอ การนำเสนอ และการเชื่อมต่อรถยนต์ ซึ่งเป็น 3 สถานการณ์ที่พบบ่อย เพื่อช่วยให้คุณขยายความสามารถของมือถือไปสู่หน้าจอที่ใหญ่ขึ้น</p>
@@ -7367,7 +7367,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十一章：短视频拍摄与内容创作入门 -->
+                <!-- บทที่ 31：เริ่มต้นถ่ายวิดีโอสั้นและสร้างคอนเทนต์ -->
                 <div id="di-san-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 31：เริ่มต้นถ่ายวิดีโอสั้นและการสร้างคอนเทนต์</h3>
                     <p class="chapter-intro mb-4">ในปี 2026 วิดีโอสั้นไม่ใช่ "ของเล่นของคนหนุ่มสาว" อีกต่อไป แต่กลายเป็นวิธีพื้นฐานที่ทุกคนใช้รับข้อมูลและแสดงออกถึงตัวตน ไม่ว่าคุณจะบันทึกชีวิตประจำวัน แบ่งปันความรู้ หรือทำงานเสริม มือถือก็คือเครื่องมือสร้างสรรค์ที่ดีที่สุดของคุณ — ไม่ต้องซื้อกล้อง ไม่ต้องเรียน Premiere แค่มือถือเครื่องเดียวก็เริ่มได้ บทนี้จะช่วยให้คุณเริ่มต้นจากศูนย์</p>
@@ -7450,7 +7450,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十二章：手机安全急救手册 -->
+                <!-- บทที่ 32：คู่มือปฐมพยาบาลความปลอดภัยโทรศัพท์ -->
                 <div id="di-san-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 32：คู่มือปฐมพยาบาลความปลอดภัยโทรศัพท์</h3>
                     <p class="chapter-intro mb-4">บทนี้คือ "แผนรับมือฉุกเฉิน" หวังว่าคุณจะไม่ต้องใช้มันเลย แต่ถ้าหากเจอกับสถานการณ์มือถือหาย ถูกขโมย หรือถูกหลอกลวง คู่มือฉบับนี้จะช่วยให้คุณลดความสูญเสียได้มากที่สุด แนะนำให้คุณอ่านจบให้หมดตั้งแต่ตอนนี้ แล้วบันทึกภาพขั้นตอนสำคัญเก็บไว้ หรือพิมพ์ออกมาเก็บไว้ที่บ้าน — เพราะตอนเกิดเหตุ มือถือของคุณอาจจะไม่อยู่ในมือแล้ว</p>
@@ -7619,12 +7619,12 @@
                 </div>
             </section>
 
-            <!-- 六、展望篇（第33-41章） -->
+            <!-- VI、มองอนาคต（บทที่ 33-41） -->
             <section id="zhan-wang-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">6. บทมองการณ์ไกล (บทที่ 33-41)</h2>
                 <p class="chapter-intro mb-4">พูดคุยกันถึงแนวทางปฏิบัติในปัจจุบันและแผนรับมือฉุกเฉินกันไปแล้ว ต่อไปมาปล่อยจินตนาการกันบ้าง แล้วมาดูพายุที่กำลังก่อตัวอยู่บนขอบฟ้า บทนี้ไม่ยาวนัก แต่ชี้ไปที่ทิศทางใหญ่ในอีก 5-20 ปีข้างหน้า — มือถือจะหายไปไหม? อะไรจะมาแทนที่? ความสัมพันธ์ระหว่างเรากับโลกดิจิทัลจะถูกปรับเปลี่ยนไปอย่างไร?</p>
 
-                <!-- 第三十三章 -->
+                <!-- บทที่ 33 -->
                 <div id="di-san-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 33：มองอนาคต—ก้าวต่อไปของโทรศัพท์</h3>
                     <p class="chapter-intro mb-4">มือถือจะไม่หายไปในชั่วข้ามคืน แต่ "สถานะผูกขาด" ของมันอาจถูกแบ่งโดยอุปกรณ์รุ่นใหม่ ในบทนี้เราจะคุยกัน 3 เรื่อง: อุปกรณ์รุ่นใหม่จะหน้าตาเป็นอย่างไร, มือถือจะ "ล่องหน" ไปเป็นรากฐานของตัวตนใหม่อย่างไร และประเด็นทางจริยธรรมที่เราต้องคิดล่วงหน้า</p>
@@ -7695,7 +7695,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十四章：车机互联深度指南 -->
+                <!-- บทที่ 34：คู่มือเชื่อมต่อโทรศัพท์กับรถยนต์อย่างละเอียด -->
                 <div id="di-san-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 34：คู่มือเชื่อมต่อรถยนต์ขั้นลึก—การผสานระหว่างโทรศัพท์และรถยนต์</h3>
                     <p class="chapter-intro mb-4">รถยนต์กำลังวิวัฒนาการจาก "ล้อสี่ล้อบวกกับโซฟา" เป็น "ล้อสี่ล้อบวกกับสมาร์ทโฟน" ไม่ว่าคุณจะขับรถน้ำมันหรือรถพลังงานใหม่ ความสัมพันธ์ระหว่างสมาร์ทโฟนกับระบบรถยนต์ต่างกำหนดประสบการณ์การขับขี่ของคุณ บทนี้จะพาคุณทำความเข้าใจเส้นทางหลัก 3 ทางของการเชื่อมต่อระบบรถยนต์ คุณสมบัติของระบบรถยนต์แต่ละค่าย ตลอดจนเทคนิคเล็ก ๆ ที่ทำให้การขับขี่ราบรื่นยิ่งขึ้น</p>
@@ -7820,12 +7820,12 @@
                 </div>
             </section>
 
-            <!-- 儿童与手机专题（第35章） -->
+            <!-- หัวข้อเด็กและโทรศัพท์（บทที่ 35） -->
             <section id="er-tong-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">หัวข้อพิเศษเรื่องเด็กกับสมาร์ทโฟน (บทที่ 35)</h2>
                 <p class="chapter-intro mb-4">ความสัมพันธ์ระหว่างเด็กกับสมาร์ทโฟน ถือเป็นหนึ่งในปัญหาที่ทำให้ผู้ปกครองยุคนี้ปวดหัวที่สุด ให้เร็วเกินไปก็กลัวติด ให้ช้าไปก็กลัวตามเพื่อนไม่ทัน ควบคุมมากไปกลัวเด็กขัดใจ ปล่อยมากไปกลัวควบคุมไม่ได้ บทนี้ไม่เข้าข้างฝ่ายใด ไม่สั่งสอน เพียงแต่จะแยกประเด็น "ให้ตอนอายุเท่าไหร่ ควบคุมอย่างไร สอนอย่างไร และปกป้องอย่างไร" ออกเป็นขั้นตอนที่ทำตามได้จริง เพื่อช่วยให้คุณเป็นผู้ปกครองที่มั่นใจในยุคดิจิทัล</p>
 
-                <!-- 第三十五章 -->
+                <!-- บทที่ 35 -->
                 <div id="di-san-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 35：เด็กกับโทรศัพท์—คู่มือการศึกษาในยุคดิจิทัล</h3>
                     <p class="chapter-intro mb-4">บทนี้จะไม่กล่าวว่า "สมาร์ทโฟนเป็นภัยพิบัติ" และไม่ส่งเสริมว่า "ยิ่งสัมผัสเร็วยิ่งฉลาด" เราจะแบ่งตามช่วงอายุในการจัดอุปกรณ์ ตั้งกฎเกณฑ์ สอนสื่อสาร และปกป้องสุขภาพ ทำทีละขั้นตอน</p>
@@ -7972,7 +7972,7 @@
                 </div>
             </section>
 
-            <!-- 第三十六章：手机与智能家居——让家变聪明 -->
+            <!-- บทที่ 36：โทรศัพท์และบ้านอัจฉริยะ——ทำให้บ้านของคุณฉลาดขึ้น -->
             <div id="di-san-shi-liu-zhang" class="mb-10 content-section">
                 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทที่ 36：โทรศัพท์กับสมาร์ทโฮม—ทำให้บ้านฉลาดขึ้น</h3>
                 <p class="chapter-intro mb-4">มือถือยังทำหน้าที่สำคัญมากขึ้นเรื่อยๆ อย่างหนึ่ง—นั่นคือการเป็น "รีโมท" ของทั้งบ้าน ตั้งแต่หลอดไฟ, ปลั๊กไฟ ไปจนถึงกลอนประตู บ้านอัจฉริยะกำลังเปลี่ยนจาก "ของเล่นของคอเทคโนโลยี" ไปเป็น "อุปกรณ์มาตรฐานในบ้าน" บทนี้จะช่วยให้คุณเข้าใจโปรโตคอล, ระบบนิเวศ, ฮับ และชุดเริ่มต้น แล้วปิดท้ายด้วยรายการเช็คลิสต์ด้านความปลอดภัย เพื่อไม่ให้คุณถูก "ความอัจฉริยะ" ตอกกลับ</p>
@@ -8268,12 +8268,12 @@
                 </div>
             </div>
 
-            <!-- 七、附录 -->
+            <!-- VII、ภาคผนวก -->
             <section id="fu-lu" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">7. ภาคผนวก</h2>
                 <p class="chapter-intro mb-4">:คัน"ค้นหาฉันของโทรศัพท์มือถือ"เปิด, ตั้งค่า1ชิ้นพึ่งพาบันทึกของล็อกหน้าจอรหัสผ่าน</p>
                 
-                <!-- 附录A -->
+                <!-- ภาคผนวกA -->
                 <div id="fu-lu-a" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">eSIMตั้งค่า</h3>
                     
@@ -8300,7 +8300,7 @@
                     </ul>
                 </div>
 
-                <!-- 附录B -->
+                <!-- ภาคผนวกB -->
                 <div id="fu-lu-b" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ภาคผนวก B: แนวทางแบบฝึกหัดปฏิบัติ</h3>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -8311,7 +8311,7 @@
                     </ul>
                 </div>
 
-                <!-- 附录C -->
+                <!-- ภาคผนวกC -->
                 <div id="fu-lu-c" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">OLEDสีสีสันมากขึ้นสดใส, มากขึ้นประหยัดไฟฟ้า; LCDมากขึ้นปกป้องตา, ต้นทุนต่ำ</h3>
                     <div class="overflow-x-auto">
@@ -8394,7 +8394,7 @@
                     </div>
                 </div>
 
-                <!-- 附录D -->
+                <!-- ภาคผนวกD -->
                 <div id="fu-lu-d" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ปลอดภัยตัวเองตรวจ1ประโยคพูดใสเดี่ยว:</h3>
                     
@@ -8422,7 +8422,7 @@
                     </ol>
                 </div>
 
-                <!-- 附录E -->
+                <!-- ภาคผนวกE -->
                 <div id="fu-lu-e" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ที่210บทแนบ:</h3>
                     <p class="mb-2">Termux——Android อุปกรณ์บนของสะดวกพกรูปแบบ Linux สุดท้ายปลายวงแหวนสภาพแวดล้อม</p>
@@ -8494,7 +8494,7 @@
                     <p class="mb-2">2. ใครเหมาะกับหน้าจอพับได้?</p>
                 </div>
 
-                <!-- 附录F：折叠屏专题 -->
+                <!-- ภาคผนวกF：หัวข้อพิเศษหน้าจอพับ -->
                 <div id="fu-lu-f" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ภาคผนวก F: หัวข้อพิเศษการเลือกซื้อและใช้งานหน้าจอพับได้</h3>
                     <p class="chapter-intro mb-4">หนักองศาอ่านอ่าน/เอกสารประมวลผลผู้</p>
@@ -8615,13 +8615,13 @@
                     <p class="mb-2">พับจอทักษะศิลปะทุกปีทั้งหมดที่วนซ้ำ, เล่มภาคผนวกเขียนที่2025ปี ซื้อหน้าต้องตรวจที่สุดใหม่ประเมินวัดและผู้ใช้ผลตอบรับ, หนักจุดปิดเขียน:บานพับโซ่อายุชีวิตจริงวัด, พับรอยแสดง, ในจอซ่อมแซมนโยบายนี้3รายการ เส้นล่างใกล้ชิดมือคลำตลอดไปเทียบดูประเมินวัดสำคัญ</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>อ่านถึงครั้งล่าสุด: ...</strong>อ่านต่อ</li>
-                        <li><strong>ข้าม</strong>：折叠屏鼻祖，铰链调校成熟，Z Flip是纵向折叠的颜值担当。国内售后网点较少是短板。</li>
-                        <li><strong>小米MIX Fold/Flip</strong>：性价比路线，配置堆料足，价格相对亲民。适合想尝鲜又不想花太多的用户。</li>
-                        <li><strong>vivo X Fold系列</strong>：横向折叠里外屏比例做得最接近正常手机的，合上当直板机用体验好。</li>
-                        <li><strong>OPPO Find N系列</strong>：横向折叠里尺寸偏紧凑的，单手可握持，适合觉得大折叠太重的用户。</li>
-                        <li><strong>华为Pocket系列</strong>：纵向折叠里外屏最大最实用的，化妆镜、防晒检测等女性向功能做得细致。</li>
+                        <li><strong>ข้าม</strong>：บุกเบิกหน้าจอแบบพับ，การปรับแต่งบานพับทำได้สมบูรณ์แล้ว，Z Flipเป็นหน้าตาของแนวตั้งที่สวยที่สุด。จุดอ่อนคือมีศูนย์บริการในประเทศน้อย。</li>
+                        <li><strong>XiaomiMIX Fold/Flip</strong>：เน้นความคุ้มค่า，สเปคครบครัน，ราคาค่อนข้างเข้าถึงง่าย。เหมาะกับผู้ใช้ที่อยากลองของใหม่แต่ไม่อยากใช้จ่ายมาก。</li>
+                        <li><strong>vivo X Fold-ซีรีส์</strong>：แบบที่สัดส่วนจอนอกต่อจอในใกล้เคียงโทรศัพท์ปกติที่สุด，พับปิดแล้วใช้เหมือนโทรศัพท์แบบแผ่นได้ดี。</li>
+                        <li><strong>OPPO Find N-ซีรีส์</strong>：ขนาดค่อนข้างกระทัดรัดในแนวนอน，ถือได้ด้วยมือเดียว，เหมาะกับผู้ใช้ที่รู้สึกว่าพับแนวนอนใหญ่เกินไป。</li>
+                        <li><strong>HuaweiPocket-ซีรีส์</strong>：จอนอกที่ใหญ่และใช้งานได้จริงที่สุดในแนวตั้ง，กระจกแต่งหน้า、ฟังก์ชันสำหรับผู้หญิงเช่นการตรวจจับกันแดดทำได้ละเอียด。</li>
                     </ul>
-                    <p class="mb-2">选购建议：预算充足追求生态选华为Mate X；想要最成熟铰链选三星Z Fold；性价比首选小米/vivo；纵向折叠看华为Pocket和三星Z Flip。</p>
+                    <p class="mb-2">คำแนะนำการซื้อ：งบเพียงพอและเน้นระบบนิเวศ: เลือก HuaweiMate X；ต้องการบานพับที่สมบูรณ์ที่สุด: เลือก SamsungZ Fold；คุ้มค่าที่สุด: เลือก Xiaomi/vivo；แนวตั้งดู HuaweiPocketและ SamsungZ Flip。</p>
 
                     <div class="info-box rounded-lg p-4 mt-4">
                         <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>การเตือนครั้งสุดท้าย</p>
@@ -8629,7 +8629,7 @@
                     </div>
                 </div>
 
-                <!-- 结语 -->
+                <!-- บทส่งท้าย -->
                 <div id="jie-yu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">บทส่งท้าย：คงความอยากรู้ คงความตื่นตัว</h3>
                     <p class="mb-2">ยินดีกับคุณที่อ่านมาถึงตรงนี้</p>
@@ -8646,7 +8646,7 @@
                     </div>
                 </div>
 
-                <!-- 附录G：全书速查索引 -->
+                <!-- ภาคผนวกG：ดัชนีอ้างอิงเร็วทั้งเล่ม -->
                 <div id="fu-lu-g" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ภาคผนวก G：ดัชนีค้นหาด่วนทั้งเล่ม</h3>
                     <p class="chapter-intro mb-4">เรียงตามพินอิน เพื่อให้คุณค้นหาและข้ามไปยังบทที่ต้องการได้อย่างรวดเร็ว</p>
@@ -8744,7 +8744,7 @@
                     </div>
                 </div>
 
-                <!-- 附录H：版本路线图 -->
+                <!-- ภาคผนวกH：แผนพัฒนาเวอร์ชัน -->
                 <div id="fu-lu-h" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ภาคผนวก H：แผนงานเวอร์ชัน</h3>
                     <p class="chapter-intro mb-4">หนังสือเล่มนี้ยังคงอัปเดตอย่างต่อเนื่อง ต่อไปนี้คือทิศทางที่วางแผนไว้สำหรับเวอร์ชันในอนาคต และยินดีต้อนรับให้คุณบอกเราในส่วนข้อเสนอแนะว่าอยากอ่านเนื้อหาอะไรมากที่สุด</p>
@@ -8768,7 +8768,7 @@
         </main>
     </div>
 
-    <!-- 快捷工具：浮动按钮组 -->
+    <!-- เครื่องมือด่วน：กลุ่มปุ่มลอย -->
     <div id="quick-tools" class="quick-tools no-print" aria-label="เครื่องมือด่วน">
         <button id="quick-search" class="quick-tool-btn" title="ค้นหา (Ctrl+K)" aria-label="ค้นหา">
             <i class="fas fa-search" aria-hidden="true"></i>
@@ -8793,7 +8793,7 @@
         </button>
     </div>
 
-    <!-- 快捷键面板 -->
+    <!-- แผงปุ่มลัด -->
     <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="คีย์ลัดบนคีย์บอร์ด">
         <div class="search-panel" style="max-width:480px">
             <div class="search-input-wrapper">
@@ -8813,7 +8813,7 @@
         </div>
     </div>
 
-    <!-- 备份/恢复弹窗 -->
+    <!-- สำรองข้อมูล/คืนป๊อปอัป -->
     <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="สำรองและกู้คืน">
         <div class="search-panel" style="max-width:520px">
             <div class="search-input-wrapper">
@@ -8848,13 +8848,13 @@
         </div>
     </div>
 
-    <!-- 阅读连续天数提示 -->
+    <!-- แจ้งเตือนวันอ่านต่อเนื่อง -->
     <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
         <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
         <span id="streak-toast-text">อ่านต่อเนื่องวันที่ X!</span>
     </div>
 
-    <!-- 语音朗读控件栏 -->
+    <!-- แถบควบคุมการอ่านด้วยเสียง -->
     <div id="tts-controls" class="tts-controls" role="region" aria-label="การควบคุมการอ่านออกเสียง" aria-live="polite">
         <span class="tts-chapter-label" id="tts-label" title="บทที่กำลังอ่านออกเสียง">ยังไม่เริ่ม</span>
         <button class="tts-btn" id="tts-prev" title="ย่อหน้าก่อนหน้า" aria-label="ย่อหน้าก่อนหน้า"><i class="fas fa-step-backward"></i></button>
@@ -8866,7 +8866,7 @@
         <button class="tts-btn" id="tts-stop" title="หยุดอ่าน" aria-label="หยุดอ่าน"><i class="fas fa-times"></i></button>
     </div>
 
-    <!-- 回到顶部按钮 -->
+    <!-- ปุ่มกลับขึ้นบน -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="กลับขึ้นบนสุด">
         <svg class="progress-ring" viewBox="0 0 40 40">
             <circle class="bg" cx="20" cy="20" r="18"/>
@@ -8875,15 +8875,15 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- 阅读位置恢复提示 -->
+    <!-- แจ้งเตือนการคืนตำแหน่งการอ่าน -->
     <div id="restore-toast" class="restore-position-toast" role="alert">
         <i class="fas fa-bookmark" aria-hidden="true"></i>
-        <span id="restore-toast-text">上次读到：...</span>
+        <span id="restore-toast-text">อ่านล่าสุด: ...</span>
         <button class="btn-restore" id="restore-btn">อ่านต่อ</button>
         <button class="btn-dismiss" id="dismiss-btn">ปิด</button>
     </div>
 
-    <!-- JS脚本 -->
+    <!-- JSสคริปต์ -->
     <script>
         (function() {
             'use strict';
@@ -8918,7 +8918,7 @@
             const restoreBtn = $('#restore-btn');
             const dismissBtn = $('#dismiss-btn');
 
-            // ===== 主题 =====
+            // ===== ธีม =====
             function applyTheme(theme) {
                 html.classList.toggle('dark', theme === 'dark');
                 localStorage.setItem('theme', theme);
@@ -8934,12 +8934,12 @@
             if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
             if (quickTheme) quickTheme.addEventListener('click', toggleTheme);
 
-            // ===== 滚动：进度 + 阴影 + 返回顶部 + 目录进度 + 进度环 =====
+            // ===== เลื่อน：ความคืบหน้า + เงา + กลับขึ้นบน + ความคืบหน้าสารบัญ + วงแหวนความคืบหน้า =====
             const sections = $$('.content-section');
             const totalChapters = sections.length;
             if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} บท`;
 
-            // 进度环参数
+            // พารามิเตอร์วงแหวนความคืบหน้า
             const progressRingFg = backToTop.querySelector('.progress-ring .fg');
             const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
             if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
@@ -8953,7 +8953,7 @@
                         const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
                         progressBar.style.width = progress + '%';
 
-                        // 进度环更新
+                        // อัปเดตวงแหวนความคืบหน้า
                         if (progressRingFg) {
                             const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
                             progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
@@ -8973,7 +8973,7 @@
                             backToTop.classList.remove('opacity-100', 'visible');
                         }
 
-                        // 阅读到第几章
+                        // อ่านถึงบทที่เท่าไหร่
                         let passedChapters = 0;
                         const viewportTop = scrollY + 100;
                         sections.forEach(sec => {
@@ -9002,15 +9002,15 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 阅读位置记忆 =====
+            // ===== จำตำแหน่งการอ่าน =====
             const POSITION_KEY = 'phoneCourse_scrollPos';
             const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
             let savePosTimer = null;
             function saveReadingPosition() {
                 const scrollY = window.scrollY;
-                if (scrollY < 200) return; // 太靠前不保存
+                if (scrollY < 200) return; // อยู่ใกล้บนเกินไป ไม่บันทึก
                 localStorage.setItem(POSITION_KEY, scrollY.toString());
-                // 找到当前章节名
+                // หาชื่อบทปัจจุบัน
                 let currentChapter = '';
                 const viewportTop = scrollY + 100;
                 for (let i = sections.length - 1; i >= 0; i--) {
@@ -9027,14 +9027,14 @@
                 savePosTimer = setTimeout(saveReadingPosition, 1000);
             }, { passive: true });
 
-            // 页面加载时恢复位置
+            // คืนตำแหน่งเมื่อโหลดหน้าเว็บ
             function tryRestorePosition() {
                 const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
                 const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
-                    restoreToastText.textContent = `上次读到：${savedChapter}`;
+                    restoreToastText.textContent = `อ่านล่าสุด: ${savedChapter}`;
                     setTimeout(() => restoreToast.classList.add('show'), 800);
-                    // 10秒后自动隐藏
+                    // 10ซ่อนอัตโนมัติหลังผ่านไปกี่วินาที
                     setTimeout(() => restoreToast.classList.remove('show'), 15000);
                 }
             }
@@ -9053,7 +9053,7 @@
                 });
             }
 
-            // ===== 滚动入场动画 =====
+            // ===== อนิเมชันปรากฏเมื่อเลื่อน =====
             const visibleObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -9062,7 +9062,7 @@
                     }
                 });
             }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
-            // 第一屏的内容直接可见
+            // เนื้อหาหน้าจอแรกเห็นได้ทันที
             sections.forEach((sec, i) => {
                 const rect = sec.getBoundingClientRect();
                 if (rect.top < window.innerHeight) {
@@ -9072,7 +9072,7 @@
                 }
             });
 
-            // ===== 侧边栏打开/关闭 =====
+            // ===== แถบข้างเปิดอยู่/ปิด =====
             function openSidebar() {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
@@ -9091,13 +9091,13 @@
             });
             if (overlay) overlay.addEventListener('click', closeSidebar);
 
-            // 快捷工具：打开目录
+            // เครื่องมือด่วน：เปิดสารบัญ
             if (quickToc) quickToc.addEventListener('click', () => {
                 if (window.innerWidth < 1024) openSidebar();
                 else window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 全局锚点导航：补偿固定导航栏偏移 =====
+            // ===== นำทางด้วยจุดยึดทั่วทั้งระบบ：ชดเชยการเลื่อนของแถบนำทางคงที่ =====
             const NAVBAR_HEIGHT = 80;
             function scrollToAnchor(id) {
                 const el = document.getElementById(id);
@@ -9118,7 +9118,7 @@
                 requestAnimationFrame(() => scrollToAnchor(targetId));
             }, { passive: false });
 
-            // ===== 目录折叠 =====
+            // ===== พับสารบัญ =====
             $$('.toc-toggle-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -9137,7 +9137,7 @@
                 });
             });
 
-            // ===== 目录筛选 =====
+            // ===== กรองสารบัญ =====
             if (tocFilter && tocList) {
                 tocFilter.addEventListener('input', () => {
                     const q = tocFilter.value.trim().toLowerCase();
@@ -9154,7 +9154,7 @@
                 });
             }
 
-            // ===== 目录高亮 =====
+            // ===== เน้นสารบัญ =====
             const tocLinkMap = new Map();
             $$('#sidebar a').forEach(item => {
                 const href = item.getAttribute('href');
@@ -9196,7 +9196,7 @@
 
             sections.forEach(section => observer.observe(section));
 
-            // ===== 书签系统 =====
+            // ===== ระบบบุ๊กมาร์ก =====
             const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
             function getBookmarks() {
                 try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
@@ -9212,7 +9212,7 @@
             }
             function isBookmarked(id) { return getBookmarks().includes(id); }
 
-            // 给每个章节添加书签按钮
+            // เพิ่มปุ่มบุ๊กมาร์กให้ทุกบท
             sections.forEach(sec => {
                 const id = sec.id;
                 if (!id) return;
@@ -9227,10 +9227,10 @@
                     btn.classList.toggle('active', added);
                     btn.querySelector('span').textContent = added ? 'บุ๊คมาร์กแล้ว' : 'บุ๊คมาร์ก';
                     btn.setAttribute('aria-label', added ? 'ยกเลิกบุ๊คมาร์ก' : 'บุ๊คมาร์กบทนี้');
-                    // 更新侧边栏标记
+                    // อัปเดตป้ายแถบข้าง
                     updateTocBookmark(id, added);
                 });
-                // 插入到h3后面
+                // แทรกไปยังh3หลังจาก
                 h3.parentNode.insertBefore(btn, h3.nextSibling);
             });
 
@@ -9240,10 +9240,10 @@
                     tocLink.classList.toggle('bookmarked', isBookmarked);
                 }
             }
-            // 初始化侧边栏书签标记
+            // เริ่มต้นป้ายบุ๊กมาร์กในแถบด้านข้าง
             getBookmarks().forEach(id => updateTocBookmark(id, true));
 
-            // ===== 章节完成勾选 =====
+            // ===== เช็คบทที่อ่านจบ =====
             const COMPLETED_KEY = 'phoneCourse_completed';
             function getCompleted() {
                 try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
@@ -9264,7 +9264,7 @@
                 if (!id) return;
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
-                // 找到meta条或h3前面的元素
+                // ค้นหาmetaรายการหรือh3องค์ประกอบก่อนหน้า
                 const metaDiv = h3.previousElementSibling;
                 const check = document.createElement('button');
                 check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
@@ -9275,9 +9275,9 @@
                     check.classList.toggle('checked', done);
                     check.querySelector('span:last-child').textContent = done ? 'อ่านแล้ว' : 'ทำเครื่องหมายว่าอ่านแล้ว';
                     check.setAttribute('aria-label', done ? 'ยกเลิกการอ่านแล้ว' : 'ทำเครื่องหมายว่าอ่านแล้ว');
-                    // 更新侧边栏
+                    // อัปเดตแถบข้าง
                     updateTocCompleted(id, done);
-                    // 更新完成进度
+                    // อัปเดตความคืบหน้า
                     updateCompletedProgress();
                 });
                 if (metaDiv && metaDiv.classList.contains('flex')) {
@@ -9298,13 +9298,13 @@
             function updateCompletedProgress() {
                 const completed = getCompleted().length;
                 if (readingProgressText) {
-                    // 也更新完成数显示
+                    // อัปเดตจำนวนที่อ่านจบด้วย
                     const passed = parseInt(readingProgressText.textContent) || 0;
-                    readingProgressText.textContent = `${passed} / ${totalChapters} 章`;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} `;
                 }
             }
 
-            // ===== 搜索（增强：键盘导航 + 结果计数） =====
+            // ===== ค้นหา（ปรับปรุง：นำทางด้วยแป้นพิมพ์ + ตัวนับผลลัพธ์） =====
             let searchData = null;
             let searchSelectedIdx = -1;
             let searchResultItems = [];
@@ -9373,7 +9373,7 @@
                         return;
                     }
 
-                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">找到 ${results.length} 个结果</div>`;
+                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">ค้นหา ${results.length} ผลลัพธ์</div>`;
                     searchResults.innerHTML = countHtml + results.map(item => {
                         const idx = item.text.toLowerCase().indexOf(query);
                         const start = Math.max(0, idx - 40);
@@ -9403,7 +9403,7 @@
                 }, 200);
             });
 
-            // 搜索键盘导航
+            // นำทางการค้นหาด้วยแป้นพิมพ์
             if (searchInput) searchInput.addEventListener('keydown', (e) => {
                 if (!searchResultItems.length) return;
                 if (e.key === 'ArrowDown') {
@@ -9427,7 +9427,7 @@
                 }
             });
 
-            // ===== 字号 =====
+            // ===== ขนาดตัวอักษร =====
             const DEFAULT_FONT_SIZE = 16;
             function setFontSize(size) {
                 contentEl.style.fontSize = size + 'px';
@@ -9448,7 +9448,7 @@
                 });
             });
 
-            // ===== 触摸滑动关闭侧边栏 =====
+            // ===== ปัดเพื่อปิดแถบข้าง =====
             let touchStartX = 0;
             let touchStartY = 0;
             sidebar.addEventListener('touchstart', (e) => {
@@ -9461,7 +9461,7 @@
                 if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
             }, { passive: true });
 
-            // ===== 章节导航 =====
+            // ===== นำทางบท =====
             const sectionIds = sections.map(s => s.id);
             sections.forEach((section, i) => {
                 const nav = document.createElement('div');
@@ -9479,12 +9479,12 @@
                 section.appendChild(nav);
             });
 
-            // ===== 打印 =====
+            // ===== พิมพ์ =====
             function doPrint() { window.print(); }
             if (printBtn) printBtn.addEventListener('click', doPrint);
             if (quickPrint) quickPrint.addEventListener('click', doPrint);
 
-            // ===== 全局键盘快捷键 =====
+            // ===== ปุ่มลัดแป้นพิมพ์ทั่วทั้งระบบ =====
             const shortcutsOverlay = $('#shortcuts-overlay');
             const backupOverlay = $('#backup-overlay');
             function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
@@ -9501,7 +9501,7 @@
             if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
             if (backupClose) backupClose.addEventListener('click', closeBackup);
 
-            // 点击遮罩关闭弹窗
+            // คลิกพื้นหลังเพื่อปิดป๊อปอัป
             if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
                 if (e.target === shortcutsOverlay) closeShortcuts();
             });
@@ -9515,7 +9515,7 @@
                     e.preventDefault();
                     searchOverlay.classList.contains('active') ? closeSearch() : openSearch();
                 } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                    // 浏览器已经处理打印
+                    // เบราว์เซอร์ประมวลผลการพิมพ์แล้ว
                 } else if (e.key === 'Escape') {
                     if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
                     if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
@@ -9529,7 +9529,7 @@
                 }
             });
 
-            // ===== 阅读连续天数追踪 =====
+            // ===== ติดตามวันอ่านต่อเนื่อง =====
             const STREAK_KEY = 'reading-streak';
             const STREAK_DATE_KEY = 'reading-streak-date';
             const streakToast = $('#streak-toast');
@@ -9551,18 +9551,18 @@
                         localStorage.setItem(STREAK_KEY, streak.toString());
                         localStorage.setItem(STREAK_DATE_KEY, today);
 
-                        // 显示连续天数提示
+                        // แสดงแจ้งเตือนวันต่อเนื่อง
                         if (streak >= 2 && streakToast && streakToastText) {
-                            streakToastText.textContent = '🔥 连续阅读第 ' + streak + ' 天！坚持下去！';
+                            streakToastText.textContent = '🔥 อ่านต่อเนื่องวันที่  ' + streak + '  วัน! สู้ต่อไป!';
                             streakToast.classList.add('show');
                             setTimeout(() => streakToast.classList.remove('show'), 5000);
                         }
                     }
-                } catch(e) { /* localStorage 可能不可用 */ }
+                } catch(e) { /* localStorage อาจไม่พร้อมใช้งาน */ }
             }
             updateStreak();
 
-            // ===== 备份/恢复功能 =====
+            // ===== สำรองข้อมูล/ฟังก์ชันคืนค่า =====
             function exportBackup() {
                 try {
                     const data = {
@@ -9579,20 +9579,20 @@
                         bookmarks: [],
                         ratings: {}
                     };
-                    // 收集健康自检状态
+                    // เก็บสถานะการตรวจสอบสุขภาพ
                     for (let i = 0; i < 8; i++) {
                         data.healthChecks[i] = localStorage.getItem('health-check-' + i);
                     }
-                    // 收集章节完成状态
+                    // เก็บสถานะการอ่านจบบท
                     $$('.chapter-check.checked').forEach(c => {
                         const sec = c.closest('.content-section');
                         if (sec) data.chapterChecks[sec.id] = true;
                     });
-                    // 收藏书签
+                    // บุ๊คมาร์กบุ๊กมาร์ก
                     $$('.toc-item.bookmarked').forEach(b => {
                         data.bookmarks.push(b.getAttribute('href').replace('#', ''));
                     });
-                    // 收集评分
+                    // เก็บคะแนน
                     $$('.chapter-rating').forEach(r => {
                         const sec = r.closest('.content-section');
                         if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
@@ -9621,13 +9621,13 @@
                         if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
                         if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
                         if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
-                        // 恢复健康自检
+                        // คืนการตรวจสอบสุขภาพ
                         if (data.healthChecks) {
                             Object.keys(data.healthChecks).forEach(i => {
                                 localStorage.setItem('health-check-' + i, data.healthChecks[i]);
                             });
                         }
-                        // 恢复章节完成状态
+                        // คืนสถานะการอ่านจบบท
                         if (data.chapterChecks) {
                             Object.keys(data.chapterChecks).forEach(id => {
                                 const sec = document.getElementById(id);
@@ -9639,7 +9639,7 @@
                                 }
                             });
                         }
-                        // 恢复书签
+                        // คืนบุ๊กมาร์ก
                         if (data.bookmarks) {
                             data.bookmarks.forEach(id => {
                                 const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
@@ -9674,7 +9674,7 @@
             });
             if (backupReset) backupReset.addEventListener('click', resetAllData);
 
-            // ===== 章节评分系统 =====
+            // ===== ระบบให้คะแนนบท =====
             sections.forEach(sec => {
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
@@ -9695,7 +9695,7 @@
                     });
                     ratingDiv.appendChild(star);
                 }
-                // 插入到h3后面
+                // แทรกไปยังh3หลังจาก
                 h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
                 updateStars(ratingDiv);
             });
@@ -9707,7 +9707,7 @@
                 });
             }
 
-            // ===== scroll 防抖优化 =====
+            // ===== scroll ปรับปรุงกันสั่น =====
             let scrollTicking = false;
             const originalOnScroll = onScroll;
             function debouncedScroll() {
@@ -9722,7 +9722,7 @@
             window.removeEventListener('scroll', onScroll);
             window.addEventListener('scroll', debouncedScroll, { passive: true });
 
-            // ===== 系统深色模式跟随 =====
+            // ===== ติดตามโหมดมืดของระบบ =====
             if (window.matchMedia) {
                 const mq = window.matchMedia('(prefers-color-scheme: dark)');
                 mq.addEventListener('change', (e) => {
@@ -9732,7 +9732,7 @@
                 });
             }
 
-            // ===== 自动给每个章节标题添加面包屑与难度标签 =====
+            // ===== เพิ่มเบรดครัมบ์และป้ายระดับความยากให้ทุกหัวข้อบทอัตโนมัติ =====
             sections.forEach(sec => {
                 const id = sec.id || '';
                 const h3 = sec.querySelector('h3');
@@ -9759,17 +9759,17 @@
                         ${level === 'beginner' ? 'ระดับเริ่มต้น' : level === 'intermediate' ? 'ระดับกลาง' : 'ระดับสูง'}
                     </span>
                     <span class="reading-time">
-                        <i class="far fa-clock" aria-hidden="true"></i>约 ${minutes} 分钟
+                        <i class="far fa-clock" aria-hidden="true"></i>ประมาณ ${minutes} นาที
                     </span>
                 `;
                 h3.parentNode.insertBefore(meta, h3);
             });
 
-            // ===== 给章节添加"สรุป"区块 =====
+            // ===== เพิ่มไปยังบท"สรุป"บล็อก =====
             function addChapterSummary(sec, points) {
                 const div = document.createElement('div');
                 div.className = 'chapter-summary';
-                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปบทนี้</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
                 const nav = sec.querySelector('.chapter-nav');
                 if (nav) sec.insertBefore(div, nav);
                 else sec.appendChild(div);
@@ -9815,13 +9815,13 @@
             };
             Object.keys(summaries).forEach(id => {
                 const sec = document.getElementById(id);
-                // 跳过已有内联小结的章节，避免重复
+                // ข้ามบทที่มีสรุปแบบอินไลน์อยู่แล้ว，หลีกเลี่ยงการซ้ำ
                 if (sec && !sec.querySelector('.chapter-summary')) {
                     addChapterSummary(sec, summaries[id]);
                 }
             });
 
-            // ===== 复制按钮（给 kbd 元素添加） =====
+            // ===== ปุ่มคัดลอก（สำหรับ kbd เพิ่มองค์ประกอบ） =====
             $$('.kbd').forEach(kbd => {
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
@@ -9841,11 +9841,11 @@
                 kbd.parentNode.insertBefore(btn, kbd.nextSibling);
             });
 
-            // ===== 可折叠长内容（h4 级别） =====
+            // ===== เนื้อหายาวที่พับได้（h4 ระดับ） =====
             sections.forEach(sec => {
                 const h4s = $$('h4', sec);
                 h4s.forEach(h4 => {
-                    // 只对内容较长的h4段落添加折叠
+                    // เฉพาะเนื้อหาที่ยาวh4เพิ่มการพับให้ย่อหน้า
                     let sibling = h4.nextElementSibling;
                     let contentLength = 0;
                     let elements = [];
@@ -9855,7 +9855,7 @@
                         sibling = sibling.nextElementSibling;
                     }
                     if (contentLength > 800) {
-                        // 添加折叠头
+                        // เพิ่มส่วนหัวพับ
                         const header = document.createElement('div');
                         header.className = 'collapsible-header';
                         header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
@@ -9876,7 +9876,7 @@
                 });
             });
 
-            // ===== 学习仪表盘：阅读进度 + 手机健康自检 =====
+            // ===== แดชบอร์ดการเรียนรู้：ความคืบหน้าการอ่าน + ตรวจสอบสุขภาพโทรศัพท์ =====
             const dashProgressRing = $('#progress-ring-fg');
             const progressPercent = $('#progress-percent');
             const readCountEl = $('#read-count');
@@ -9889,7 +9889,7 @@
             const DASH_RING_CIRCUMFERENCE = 213.6;
 
             function updateDashboard() {
-                // 阅读进度
+                // ความคืบหน้าการอ่าน
                 const completed = $$('.chapter-check.checked').length;
                 const total = sections.length;
                 const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -9899,28 +9899,28 @@
                 if (progressPercent) progressPercent.textContent = pct + '%';
                 if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
 
-                // 书签数
+                // จำนวนบุ๊กมาร์ก
                 const bookmarks = $$('.toc-item.bookmarked').length;
                 if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
 
-                // 上次章节
+                // บทก่อนหน้า
                 const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
 
-                // 健康自检
+                // ตรวจสอบสุขภาพ
                 const checked = checkInputs.filter(c => c.checked).length;
                 const totalChecks = checkInputs.length;
                 if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
                 if (healthBarEl) healthBarEl.style.width = (checked / totalChecks * 100) + '%';
                 if (healthMsgEl) {
                     if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>เต็ม! สถานะความปลอดภัยของมือถือคุณอยู่ในระดับดีเยี่ยม';
-                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = '不错！还有 ' + (totalChecks - checked) + ' 项可以完善';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'ดี! เหลืออีก  ' + (totalChecks - checked) + '  รายการให้ปรับปรุง';
                     else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'ผ่านเกณฑ์ แนะนำให้จัดลำดับการแก้ไขรายการความปลอดภัยที่ยังไม่ได้ทำเครื่องหมายก่อน';
                     else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>มือถือของคุณมีความเสี่ยงด้านความปลอดภัย โปรดดำเนินการแก้ไขโดยเร็ว';
                 }
             }
 
-            // 恢复自检状态
+            // คืนสถานะการตรวจสอบ
             checkInputs.forEach((input, i) => {
                 const saved = localStorage.getItem('health-check-' + i);
                 if (saved === 'true') input.checked = true;
@@ -9931,10 +9931,10 @@
             });
 
             updateDashboard();
-            // 每隔3秒刷新一次（捕获章节完成勾选的变化）
+            // ทุก3รีเฟรชทุกไม่กี่วินาที（จับการเปลี่ยนแปลงของการเช็คบทที่อ่านจบ）
             setInterval(updateDashboard, 3000);
 
-            // ===== 语音朗读（TTS）=====
+            // ===== อ่านด้วยเสียง（TTS）=====
             const ttsControls = $('#tts-controls');
             const ttsPlayBtn = $('#tts-play');
             const ttsPrevBtn = $('#tts-prev');
@@ -9958,11 +9958,11 @@
 
             function getSectionText(sec) {
                 if (!sec) return '';
-                // 克隆并移除不需要朗读的元素
+                // โคลนและลบองค์ประกอบที่ไม่ต้องการอ่าน
                 const clone = sec.cloneNode(true);
                 const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
                 removes.forEach(el => el.remove());
-                // 移除折叠体但保留其文字内容
+                // ลบส่วนพับได้แต่คงเนื้อหาข้อความไว้
                 const text = clone.textContent.replace(/\s+/g, ' ').trim();
                 return text;
             }
@@ -9989,7 +9989,7 @@
                 ttsUtterance.pitch = 1.0;
                 ttsUtterance.volume = 1.0;
 
-                // 尝试使用更自然的中文语音
+                // ลองใช้เสียงอ่านภาษาจีนที่เป็นธรรมชาติขึ้น
                 const voices = window.speechSynthesis.getVoices();
                 const zhVoice = voices.find(v => v.lang.startsWith('th'));
                 if (zhVoice) ttsUtterance.voice = zhVoice;
@@ -10003,7 +10003,7 @@
                 };
 
                 ttsUtterance.onend = () => {
-                    // 自动播放下一章节
+                    // เล่นอัตโนมัติบทถัดไปตอน
                     if (ttsSectionIndex < sections.length - 1 && ttsActive) {
                         ttsSectionIndex++;
                         speakSection(ttsSectionIndex);
@@ -10025,9 +10025,9 @@
 
             function toggleTtsPlay() {
                 if (!ttsActive) {
-                    // 找到当前可见章节
+                    // หาบทที่เห็นอยู่ในปัจจุบัน
                     if (ttsSectionIndex < 0) {
-                        // 从头开始或从当前滚动位置最近的章节开始
+                        // เริ่มจากต้นหรือจากบทที่ใกล้ตำแหน่งเลื่อนปัจจุบัน
                         const scrollCenter = window.scrollY + window.innerHeight / 2;
                         let closestIdx = 0;
                         let closestDist = Infinity;
@@ -10068,7 +10068,7 @@
                 if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
             }
 
-            // 事件绑定
+            // ผูกเหตุการณ์
             if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
             if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
             if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
@@ -10088,7 +10088,7 @@
                 updateTtsSpeedDisplay();
                 if (ttsActive && ttsUtterance) {
                     ttsUtterance.rate = ttsSpeed;
-                    // 重新创建并播放当前段落
+                    // สร้างและเล่นย่อหน้าปัจจุบันใหม่
                     const idx = ttsSectionIndex;
                     window.speechSynthesis.cancel();
                     setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
@@ -10106,7 +10106,7 @@
             });
             if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
 
-            // 键盘快捷键：按 R 键切换朗读
+            // ปุ่มลัดแป้นพิมพ์：กด R สลับการอ่านด้วยปุ่ม
             document.addEventListener('keydown', (e) => {
                 if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
                 if (e.key === 'r' || e.key === 'R') {
@@ -10118,7 +10118,7 @@
                 }
             });
 
-            // ===== 初始化 =====
+            // ===== เริ่มต้นระบบ =====
             onScroll();
             tryRestorePosition();
         })();
