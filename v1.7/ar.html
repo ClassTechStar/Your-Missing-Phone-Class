@@ -83,7 +83,7 @@
             background-color: #1e1b4b;
             border-left-color: #818cf8;
         }
-        /* 侧边栏链接基础样式 */
+        /* النمط الأساسي لروابط الشريط الجانبي */
         #sidebar a {
             display: block;
             transition: all 0.2s ease;
@@ -98,7 +98,7 @@
         .dark #sidebar a:hover {
             background-color: rgba(79, 70, 229, 0.12);
         }
-        /* 父级分组标题 */
+        /* عنوان المجموعة الأم */
         .toc-parent > div {
             transition: background-color 0.15s ease;
         }
@@ -108,7 +108,7 @@
         .dark .toc-parent > div:hover {
             background-color: rgba(255,255,255,0.03);
         }
-        /* 折叠图标独立区域 */
+        /* منطقة مستقلة لأيقونة الطي */
         .toc-toggle-btn {
             width: 24px;
             height: 24px;
@@ -129,7 +129,7 @@
             background-color: #374151;
             color: #e5e7eb;
         }
-        /* 子项过渡动画 */
+        /* حركة انتقالية للعناصر الفرعية */
         .toc-child li {
             opacity: 1;
             transform: translateX(0);
@@ -137,9 +137,9 @@
         }
         .toc-child:not(.open) + .toc-child li,
         .toc-child:not(.open) li {
-            /* 折叠时由 max-height 控制 */
+            /* عند الطي بواسطة max-height تحكم */
         }
-        /* 当前阅读位置指示条 */
+        /* مؤشر موضع القراءة الحالي */
         .toc-reading-indicator {
             position: absolute;
             left: 0;
@@ -151,7 +151,7 @@
             transition: top 0.3s ease, height 0.3s ease;
             z-index: 1;
         }
-        /* 侧边栏顶部区域增强 */
+        /* تحسين المنطقة العلوية للشريط الجانبي */
         #sidebar > nav > div:first-child {
             background: #f5f6f8;
             border-radius: 0;
@@ -160,7 +160,7 @@
         .dark #sidebar > nav > div:first-child {
             background: #1a2230;
         }
-        /* 侧边栏整体增强 */
+        /* تحسين الشريط الجانبي بالكامل */
         #sidebar {
             box-shadow: none;
             border-right: 1px solid #e5e7eb;
@@ -174,7 +174,7 @@
                 border-right: none;
             }
         }
-        /* 章节序号样式 */
+        /* نمط ترقيم الفصول */
         .toc-item span[class*="font-mono"] {
             display: inline-block;
             min-width: 1.5rem;
@@ -192,7 +192,7 @@
         .dark .toc-item.active span[class*="font-mono"] {
             color: #818cf8;
         }
-        /* 导航目标章节高亮闪烁 */
+        /* إبراز الفصل المستهدف في التنقل وامضاؤه */
         .scroll-target-flash {
             animation: targetFlash 1.2s ease-out;
         }
@@ -511,7 +511,7 @@
             }
         }
 
-        /* ===== 增强样式：导读卡片、章节摘要、学习路径 ===== */
+        /* ===== تحسين النمط：بطاقة مقدمة إرشادية、ملخص الفصل、مسار التعلم ===== */
         .reading-guide-card {
             background: #fafafa;
             border: 1px solid #e0e0e0;
@@ -739,9 +739,9 @@
             main { max-width: 56rem; }
         }
 
-        /* ===== 深度改进样式 ===== */
+        /* ===== تحسين النمط بعمق ===== */
 
-        /* 渐变阅读进度条 */
+        /* شريط تقدم القراءة المتدرج */
         #reading-progress {
             background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
             background-size: 200% 100% !important;
@@ -758,7 +758,7 @@
             100% { background-position: -200% 0; }
         }
 
-        /* 滚动入场动画 */
+        /* حركة الظهور عند التمرير */
         .content-section {
             opacity: 0;
             transform: translateY(24px);
@@ -769,7 +769,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* 第一屏内容直接可见 */
+        /* محتوى الشاشة الأولى مرئي مباشرة */
         .content-section:first-of-type,
         .content-section.immediately-visible {
             opacity: 1;
@@ -777,7 +777,7 @@
             transition: none;
         }
 
-        /* Hero横幅增强 */
+        /* Heroتحسين اللافتة */
         .hero-banner {
             background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
             position: relative;
@@ -805,7 +805,7 @@
         }
         .hero-banner > * { position: relative; z-index: 1; }
 
-        /* 卡片悬浮效果 */
+        /* تأثير التمرير فوق البطاقة */
         .path-step {
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
                         box-shadow 0.3s ease,
@@ -828,7 +828,7 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
 
-        /* 返回顶部按钮增强 */
+        /* تحسين زر العودة للأعلى */
         #back-to-top {
             position: fixed;
             right: 1rem;
@@ -877,7 +877,7 @@
             transform-origin: center;
         }
 
-        /* 书签按钮 */
+        /* زر الإشارة المرجعية */
         .bookmark-btn {
             display: inline-flex;
             align-items: center;
@@ -913,7 +913,7 @@
             border-color: #818cf8;
         }
 
-        /* 章节完成勾选 */
+        /* خانة إتمام الفصل */
         .chapter-check {
             display: inline-flex;
             align-items: center;
@@ -963,7 +963,7 @@
             line-height: 1;
         }
 
-        /* 搜索结果键盘选中 */
+        /* تحديد نتائج البحث بلوحة المفاتيح */
         .search-result-item.selected {
             background: #eef2f5;
         }
@@ -971,12 +971,12 @@
             background: #374151;
         }
 
-        /* 仪表盘卡片 */
+        /* بطاقة لوحة المعلومات */
         .dashboard-card {
             transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
         }
 
-        /* 阅读连续天数徽章 */
+        /* شارة أيام القراءة المتتالية */
         #streak-toast {
             transform: translateX(-50%) translateY(100px);
             left: 50%;
@@ -987,7 +987,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* 章节评分星星 */
+        /* نجوم تقييم الفصل */
         .chapter-rating {
             display: inline-flex;
             align-items: center;
@@ -1020,7 +1020,7 @@
             opacity: 0.5;
         }
 
-        /* 语音朗读控件 */
+        /* عنصر تحكم القراءة الصوتية */
         .tts-controls {
             position: fixed;
             bottom: 6rem;
@@ -1112,7 +1112,7 @@
             .tts-controls .tts-chapter-label { max-width: 8rem; }
         }
 
-        /* 复制按钮 */
+        /* زر النسخ */
         .copy-btn {
             display: inline-flex;
             align-items: center;
@@ -1143,7 +1143,7 @@
             border-color: #27ae60;
         }
 
-        /* 可折叠内容块 */
+        /* كتلة محتوى قابلة للطي */
         .collapsible-header {
             cursor: pointer;
             display: flex;
@@ -1178,7 +1178,7 @@
             opacity: 0;
         }
 
-        /* 阅读位置恢复提示 */
+        /* تنبيه استعادة موضع القراءة */
         .restore-position-toast {
             position: fixed;
             bottom: 2rem;
@@ -1221,7 +1221,7 @@
             color: #fff;
         }
 
-        /* 章节分隔线增强 */
+        /* تحسين خط فاصل الفصول */
         .content-section {
             position: relative;
             padding-top: 1rem;
@@ -1242,7 +1242,7 @@
             display: none;
         }
 
-        /* Callout框增强 */
+        /* Calloutتحسين الإطار */
         .callout-box {
             position: relative;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1251,7 +1251,7 @@
             transform: translateX(2px);
         }
 
-        /* 表格行悬浮 */
+        /* تمرير فوق صفوف الجدول */
         table tbody tr {
             transition: background-color 0.15s ease;
         }
@@ -1262,7 +1262,7 @@
             background-color: rgba(255,255,255,0.04);
         }
 
-        /* 章节导航按钮增强 */
+        /* تحسين زر تنقل الفصول */
         .chapter-nav a {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1277,7 +1277,7 @@
             background: #1e2a36;
         }
 
-        /* 侧边栏书签标记 */
+        /* علامات الإشارات المرجعية في الشريط الجانبي */
         .toc-item.bookmarked::after {
             content: '★';
             color: #d4a017;
@@ -1288,7 +1288,7 @@
             color: #27ae60 !important;
         }
 
-        /* 快捷工具增强 */
+        /* تحسين الأدوات السريعة */
         .quick-tool-btn {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1299,7 +1299,7 @@
             transform: translateY(0) scale(0.95);
         }
 
-        /* 移动端底部安全区域 */
+        /* منطقة الأمان السفلية على الأجهزة المحمولة */
         @media (max-width: 768px) {
             #back-to-top {
                 right: 0.75rem;
@@ -1322,7 +1322,7 @@
             }
         }
 
-        /* 打印时隐藏新增元素 */
+        /* إخفاء العناصر الجديدة عند الطباعة */
         @media print {
             .bookmark-btn, .chapter-check, .copy-btn,
             .restore-position-toast, #back-to-top .progress-ring,
@@ -1396,7 +1396,7 @@
                     <input type="text" id="toc-filter" placeholder="تصفية الفصول..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="تصفية الفصول">
                 </div>
                 <ul class="space-y-1 text-sm" id="toc-list">
-                    <!-- 基础篇 -->
+                    <!-- الأساسيات -->
                     <li class="toc-parent" data-group="ji-chu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ji-chu-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">أولاً: القسم الأساسي (الفصول 0-7)</a>
@@ -1418,7 +1418,7 @@
                             <li><a href="#di-qi-zhang-jichu" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">07</span>الفصل السابع: تحليل شامل للوظائف المتقدمة</a></li>
                         </ul>
                     </li>
-                    <!-- 软件篇 -->
+                    <!-- البرمجيات -->
                     <li class="toc-parent" data-group="ruan-jian">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ruan-jian-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">ثانياً: قسم البرمجيات (الفصول 8-14)</a>
@@ -1437,7 +1437,7 @@
                             <li><a href="#di-shi-si-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">14</span>الفصل الرابع عشر: موضوع خاص عن مديري كلمات المرور</a></li>
                         </ul>
                     </li>
-                    <!-- 进阶篇 -->
+                    <!-- الدور المتقدم -->
                     <li class="toc-parent" data-group="jin-jie">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#jin-jie-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">ثالثاً: القسم المتقدم (الفصول 15-20)</a>
@@ -1456,7 +1456,7 @@
                             <li><a href="#di-er-shi-zhang-termux" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-500 dark:text-gray-500 pl-6 text-xs"><span class="mr-1.5 text-xs text-gray-300 font-mono"></span>ملحق: طرفية Termux المحمولة لنظام Linux</a></li>
                         </ul>
                     </li>
-                    <!-- 超越篇 -->
+                    <!-- متقدم -->
                     <li class="toc-parent" data-group="chao-yue">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#chao-yue-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">رابعاً: قسم ما بعد الأساسيات (الفصول 21-26)</a>
@@ -1474,7 +1474,7 @@
                             <li><a href="#di-er-shi-liu-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">26</span>الفصل 26: حدود تقنية الهاتف الحالية</a></li>
                         </ul>
                     </li>
-                    <!-- 五、实战篇（第27-32章） -->
+                    <!-- V、التطبيق العملي（الفصل 27-32） -->
                     <li class="toc-parent" data-group="shi-zhan">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#shi-zhan-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">خامساً: القسم العملي (الفصول 27-32)</a>
@@ -1491,7 +1491,7 @@
                             <li><a href="#di-san-shi-er-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">32</span>الفصل 32: دليل الإسعافات الأولية لأمان الهاتف</a></li>
                         </ul>
                     </li>
-                    <!-- 六、展望篇（第33-41章） -->
+                    <!-- VI、آفاق مستقبلية（الفصل 33-41） -->
                     <li class="toc-parent" data-group="zhan-wang">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#zhan-wang-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">سادساً: قسم التطلعات (الفصول 33-41)</a>
@@ -1511,7 +1511,7 @@
                             <li><a href="#di-si-shi-yi-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">41</span>الفصل 41: مقدمة في الدراما القصيرة العمودية — خطاف كل 3 دقائق</a></li>
                         </ul>
                     </li>
-                    <!-- 附录 -->
+                    <!-- ملحق -->
                     <li class="toc-parent" data-group="fu-lu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#fu-lu" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">سابعاً: الملاحق</a>
@@ -1554,14 +1554,14 @@
             <div class="content-col">
             <a id="top"></a>
 
-            <!-- 顶部面包屑 -->
+            <!-- فتات الخريطة العلوي -->
             <nav class="breadcrumb no-print" aria-label="الموقع">
                 <a href="#top">الصفحة الرئيسية</a>
                 <span class="sep" aria-hidden="true">›</span>
                 <span class="text-gray-700 dark:text-gray-300">الدرس الإلزامي الرقمي · v1.7</span>
             </nav>
 
-            <!-- Hero 横幅 -->
+            <!-- Hero لافتة -->
             <section class="hero-banner mb-8" aria-labelledby="hero-title">
                 <div class="flex flex-wrap items-center gap-2 mb-3">
                     <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>32 فصلاً + 6 ملاحق</span>
@@ -1583,7 +1583,7 @@
                 </div>
             </section>
 
-            <!-- 怎么用这本书 -->
+            <!-- كيفية استخدام هذا الكتاب -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-compass text-primary" aria-hidden="true"></i>كيف تستخدم هذا الكتاب؟
@@ -1608,7 +1608,7 @@
                 </div>
             </section>
 
-            <!-- 学习路径五步走 -->
+            <!-- مسار التعلم في خمس خطوات -->
             <section class="mb-8" aria-labelledby="learning-path-title">
                 <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">مسار التعلم: خمس خطوات لتصبح خبيراً في الهاتف</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">نظّم هذا الكتاب وفقاً لقانون التعلم "من المعرفة إلى الإتقان ثم التطبيق"، حيث يُعد كل قسم أساساً للذي يليه.</p>
@@ -1651,7 +1651,7 @@
                 </div>
             </section>
 
-            <!-- 章节地图速查表 -->
+            <!-- جدول مرجعي سريع لخريطة الفصول -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-map text-primary" aria-hidden="true"></i>البحث السريع في خريطة الفصول
@@ -1676,13 +1676,13 @@
                 </div>
             </section>
 
-            <!-- 写在最后：本书不教什么 -->
+            <!-- في الختام：ما لا يعلمه هذا الكتاب -->
             <div class="highlight-quote">
                 <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>هذا الكتاب لا يعلمك "كيف تشاهد الفيديوهات بمتعة أكبر"، بل يريد مساعدتك على الفهم: لماذا يعمل الهاتف بهذه الطريقة؟ ماذا يمكنه فعله وماذا لا يمكنه؟ وكيف تجعله يعمل حقاً لصالحك، بدلاً من أن يستعبد انتباهك ووقتك.</p>
                 <p class="text-right text-sm">—— حول النية الأصلية لهذا الكتاب</p>
             </div>
 
-            <!-- 交互式自检清单 + 阅读仪表盘 -->
+            <!-- قائمة فحص تفاعلية ذاتي + لوحة معلومات القراءة -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
                     <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>لوحة تحكم التعلم
@@ -1690,7 +1690,7 @@
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">تابع تقدم قراءتك وتحقق من حالة صحة هاتفك.</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
-                    <!-- 阅读进度卡片 -->
+                    <!-- بطاقة تقدم القراءة -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>تقدم القراءة</h3>
                         <div class="flex items-center gap-4">
@@ -1709,7 +1709,7 @@
                         </div>
                     </div>
 
-                    <!-- 手机健康自检卡片 -->
+                    <!-- بطاقة الفحص الصحي للهاتف -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>الفحص الذاتي لصحة الهاتف</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">ضع علامة على العناصر التي نفّذتها بالفعل لمعرفة "درجة صحة" هاتفك:</p>
@@ -1735,7 +1735,7 @@
                 </div>
             </section>
 
-            <!-- 原"top" 内容保持兼容 -->
+            <!-- الأصلي"top" الحفاظ على توافق المحتوى -->
             <div class="sr-only" aria-hidden="true">v3.0 · درس إلزامي رقمي موجّه حقاً للأشخاص العاديين</div>
 
             <section id="ji-chu-pian" class="mb-12">
@@ -2100,7 +2100,7 @@
                     </div>
                 </div>
 
-                <!-- 第一章附：安卓手机内存拓展解析 -->
+                <!-- ملحق الفصل 1：تحليل توسيع ذاكرة هواتف أندرويد -->
                 <div id="di-yi-zhang-memory" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ملحق: تحليل توسيع ذاكرة هواتف Android</h3>
                     <p class="chapter-intro mb-4">عند شراء هاتف، غالباً ما ترى إعلاناً مثل "ذاكرة 12GB+8GB" — وكأن 8GB من الذاكرة العشوائية أضيفت من العدم. لكن هل يمكنها حقاً جعل الهاتف أسرع؟ وهل قد تؤذي الهاتف؟ في هذا القسم سنوضح تقنية "توسيع الذاكرة" بالكامل.</p>
@@ -2514,7 +2514,7 @@
                     </ul>
                 </div>
 
-                <!-- 第三章 -->
+                <!-- الفصل 3 -->
                 <div id="di-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الثالث: اربط هاتفك بـ "خط الحياة" — الشبكة</h3>
                     <p class="chapter-intro mb-4">بدون شبكة، يفقد الهاتف الذكي نصف ذكائه. الشبكة هي خط حياة الهاتف الحديث، فهمها واستخدامها جيداً وحمايتها هو فرض عين على كل مستخدم هاتف.</p>
@@ -2733,7 +2733,7 @@
                     </div>
                 </div>
 
-                <!-- 第四章 -->
+                <!-- الفصل 4 -->
                 <div id="di-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الرابع: تثبيت التطبيقات وإدارتها — "حقيبة المهارات" لهاتفك</h3>
                     <p class="chapter-intro mb-4">تجعل التطبيقات الهاتف قادراً على كل شيء، لكن يجب إدارتها جيداً. تماماً كما ترتيب مكان عمل لموظف جديد وتمنحه الصلاحيات، يحتاج تثبيت التطبيقات إلى عملية منظمة.</p>
@@ -2899,7 +2899,7 @@
                     </div>
                 </div>
 
-                <!-- 第五章 -->
+                <!-- الفصل 5 -->
                 <div id="di-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الخامس: اجعل هاتفك يفهمك أكثر — الإعدادات الأساسية</h3>
                     <p class="chapter-intro mb-4">اقضِ بضع دقائق في الإعداد، وستتحسن التجربة بشكل كبير. هذه الإعدادات مثل"ضبط النغمة" للهاتف، لجعله أكثر توافقاً مع عاداتك.</p>
@@ -3111,7 +3111,7 @@
                     </div>
                 </div>
 
-                <!-- 第六章 -->
+                <!-- الفصل 6 -->
                 <div id="di-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل السادس: احمِ حياتك الرقمية — الأمان والخصوصية</h3>
                     <p class="chapter-intro mb-4">أمان الهاتف = أمان الخصوصية + أمان الممتلكات. في هذا العصر الذي أصبحت فيه البيانات أصلاً، حماية هاتفك هي حماية لنفسك.</p>
@@ -3277,7 +3277,7 @@
                     </div>
                 </div>
 
-                <!-- 第七章：前沿功能 -->
+                <!-- الفصل 7：ميزات متقدمة -->
                 <div id="di-qi-zhang-jichu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل السابع: تحليل شامل للوظائف المتقدمة</h3>
                     <p class="chapter-intro mb-4">تتطور التكنولوجيا يوماً بعد يوم، وتتطور وظائف الهاتف باستمرار. اتصال الأقمار الصناعية، والاتصال دون شبكة، وكشف الحوادث، وتقنية SparkLink... هذه الوظائف التي تبدو خيال علمي دخلت بالفعل حياتنا. لنتعرف معاً على هذه التقنيات المتقدمة.</p>
@@ -3399,12 +3399,12 @@
                 </div>
             </section>
 
-            <!-- 二、软件篇 -->
+            <!-- II、البرمجيات -->
             <section id="ruan-jian-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ثانياً: قسم البرمجيات (الفصول 8-14)</h2>
                 <p class="chapter-intro mb-4">بعد إتقان العمليات الأساسية، دعنا نتعمق في مهارات استخدام مختلف التطبيقات. من الاتصالات إلى المكتب، ومن المدفوعات إلى الترفيه، ستساعدك هذه الفصول على أن تصبح خبيراً حقيقياً في الهاتف المحمول.</p>
 
-                <!-- 第八章 -->
+                <!-- الفصل 8 -->
                 <div id="di-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الثامن: الاتصالات: الرسائل النصية والمكالمات والشبكات الاجتماعية</h3>
                     <p class="chapter-intro mb-4">الاتصالات هي المهمة الأصلية والأكثر جوهرية للهاتف المحمول. واليوم، تطورت من مجرد مكالمة ورسالة نصية بسيطة إلى نظام بيئي معقّد يضم المراسلة الفورية والشبكات الاجتماعية والبريد الإلكتروني.</p>
@@ -3594,7 +3594,7 @@
                     </div>
                 </div>
 
-                <!-- 第九章 -->
+                <!-- الفصل 9 -->
                 <div id="di-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل التاسع: العمل والتعلم عبر الهاتف المحمول</h3>
                     <p class="chapter-intro mb-4">كنت أعتقد أيضاً أن العمل على الهاتف هو مجرد "حل مؤقت"، حتى سافرت مرة في مهمة عمل ونسيت حاسوبي المحمول، واضطررت إلى تعديل عرض تقديمي وتوقيع عقد باستخدام الهاتف فقط. بصراحة، عنق الزجاجة في العمل عبر الهاتف لا يكون عادةً في الهاتف نفسه، بل في عدم إلمامك بحدود قدراته.</p>
@@ -3659,7 +3659,7 @@
                     </div>
                 </div>
 
-                <!-- 第十章 -->
+                <!-- الفصل 10 -->
                 <div id="di-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل العاشر: الدفع عبر الهاتف المحمول والخدمات الحياتية</h3>
                     <p class="chapter-intro mb-4">بصراحة، كان جيل والديّ في البداية متردداً تجاه فكرة "الدفع بالهاتف". "إذا كانت الأموال في الهاتف، ماذا لو سرقه أحد؟" هذا القلق طبيعي، لكن الواقع هو: احتمال ضياع النقد في جيبك أعلى بكثير من احتمال اختراق الدفع عبر الهاتف. الدفع عبر الهاتف لا يعني وضع أموالك في الهاتف، بل هو مجرد مفتاح — مفتاح يفتح حسابك البنكي.</p>
@@ -3735,7 +3735,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章 -->
+                <!-- الفصل 11 -->
                 <div id="di-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الحادي عشر: التصوير وإدارة الصور</h3>
                     <p class="chapter-intro mb-4">بصراحة، معظم الناس عند التصوير بالهاتف يحصلون على نتائج أقل بكثير من إمكانات الهاتف نفسه. الأمر ليس ضعفاً في مهاراتك، بل أنك لم تنتبه إلى كثير من الإعدادات والعادات الصغيرة. هذا الفصل لا يتحدث في نظريات مجردة، بل يركز على ما يمكنك استخدامه فوراً.</p>
@@ -3800,7 +3800,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章附：专业影像技术 -->
+                <!-- ملحق الفصل 11：تقنية تصوير احترافية -->
                 <div id="di-shi-yi-zhang-advanced" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ملحق الفصل الحادي عشر: المعارف التقنية للتصوير الاحترافي</h3>
                     <p class="chapter-intro mb-4">لفهم أسرار التصوير والفيديو بالهاتف حقاً، تحتاج إلى معرفة بعض المعلومات التقنية الاحترافية. هذه المعارف لا تساعدك فقط على استخدام كاميرا الهاتف بشكل أفضل، بل تجعلك أكثر قدرة على الحكم عند اختيار الأجهزة.</p>
@@ -4062,7 +4062,7 @@
                     </div>
                 </div>
 
-                <!-- 第十二章 -->
+                <!-- الفصل 12 -->
                 <div id="di-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الثاني عشر: الترفيه الصوتي والمرئي والقراءة</h3>
                     <p class="chapter-intro mb-4">حلّ الهاتف محل مشغل MP3 وجهاز التحكم بالتلفزيون وKindle وجهاز الألعاب المحمول تقريباً. لكن بصراحة، كثيرون يستخدمون فقط الوظائف الأساسية لهذه التطبيقات، وهناك الكثير من الميزات الجيدة التي لم يكتشفوها. سنتحدث في هذا الفصل عن كيفية جعل الترفيه على الهاتف أسلس وأكثر راحة.</p>
@@ -4080,7 +4080,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">ثانياً: البودكاست: "رفيق الأذن" في طريق العمل</h4>
                     <p class="mb-2">البودكاست، من لم يستمع إليه يظن أنه لا يعنيه، لكن بمجرد البدء لا يعود. هو في جوهره "نسخة نتفليكس من البرامج الإذاعية" — من يتحدث عن التكنولوجيا، ومن يروي التاريخ، ومن يقرأ القصص، كل الأنواع موجودة.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>تطبيق Xiaoyuzhou</strong>: أفضل تطبيق بودكاست محلي، واجهته أنيقة، وبدون وظائف فوضوية. "التوصية اليومية" و"اختيارات المحرر" تساعدك على اكتشاف برامج جديدة، والتعليقات نشطة أيضاً. أكثر ما أستمع إليه شخصياً هو "هو زوو هو يو" (忽左忽右، ثقافة وتاريخ) و"بو خه شي يي" (不合时宜، قضايا اجتماعية)، كل حلقة كأنك تستمع إلى حوار بين أناس أذكياء.</li>
+                        <li><strong>تطبيق Xiaoyuzhou</strong>: أفضل تطبيق بودكاست محلي، واجهته أنيقة، وبدون وظائف فوضوية. "التوصية اليومية" و"اختيارات المحرر" تساعدك على اكتشاف برامج جديدة، والتعليقات نشطة أيضاً. أكثر ما أستمع إليه شخصياً هو "هو زوو هو يو" (متذبذب، ثقافة وتاريخ) و"بو خه شي يي" (غير ملائم، قضايا اجتماعية)، كل حلقة كأنك تستمع إلى حوار بين أناس أذكياء.</li>
                         <li><strong>Apple Podcasts</strong>: مدمج في iPhone، لا يحتاج تنزيلاً إضافياً. تكامله مع CarPlay هو الأفضل، مريح جداً عند القيادة.</li>
                         <li><strong>نصائح الاستماع</strong>: معظم تطبيقات البودكاست تدعم التشغيل بسرعة 1.2x أو 1.5x، وبعد الاعتياد عليها توفر وقتاً كثيراً. أستمع عادةً للصينية بسرعة 1.2x وللإنجليزية بسرعة 1.5x. كما يجب تفعيل "التنزيل التلقائي للحلقات الجديدة" و"الحذف التلقائي بعد الاستماع"، حتى لا تمتلئ ذاكرة هاتفك بالملفات الصوتية التي استمعت إليها.</li>
                     </ul>
@@ -4090,7 +4090,7 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>مشغّل VLC</strong>: مفتوح المصدر ومجاني، يشغّل تقريباً أي صيغة — MKV وAVI وFLAC وحتى صور أقراص ISO. إذا نزّلت فيديو يعمل على الكمبيوتر لكن لا يعمل على الهاتف، فالمشكلة على الأرجح في الصيغة، وتثبيت VLC يحلها. كما يدعم الترجمة الخارجية، ضَع ملف الترجمة .srt مع الفيديو في المجلد نفسه، وسيحمّله VLC تلقائياً.</li>
                         <li><strong>nPlayer</strong>: إذا أردت تجربة أكثر أناقة، فهذا التطبيق المدفوع يستحق الشراء. واجهته جميلة، والتحكم بالإيماءات سلس — السحب لأعلى/أسفل على اليسار يضبط السطوع، وعلى اليمين يضبط الصوت، والسحب يميناً/يساراً للتقديم/التأخير. يدعم صوت DTS ودولبي، ما يمنح إحساساً أقوى بمشاهدة الأفلام الكبيرة.</li>
-                        <li><strong>Bilibili (B站)</strong>: لم يعد مجرد موقع للأنمي، بل أصبح مصدراً للتعلم بشكل مذهل. امتحانات الدراسات العليا، البرمجة، التصوير، الطبخ، كل الدروس موجودة. ثقافة التعليقات العائمة (Danmaku) هي روح Bilibili، وعند مشاهدة الفيديو مع التعليقات تشعر وكأن مجموعة تشاهد معك. لكن عند مشاهدة الفيديوهات التعليمية يُفضل إغلاق التعليقات، حتى لا تتشتت.</li>
+                        <li><strong>Bilibili (Bموقع)</strong>: لم يعد مجرد موقع للأنمي، بل أصبح مصدراً للتعلم بشكل مذهل. امتحانات الدراسات العليا، البرمجة، التصوير، الطبخ، كل الدروس موجودة. ثقافة التعليقات العائمة (Danmaku) هي روح Bilibili، وعند مشاهدة الفيديو مع التعليقات تشعر وكأن مجموعة تشاهد معك. لكن عند مشاهدة الفيديوهات التعليمية يُفضل إغلاق التعليقات، حتى لا تتشتت.</li>
                         <li><strong>البث إلى التلفزيون</strong>: مهما كبرت شاشة الهاتف فهي ليست براحة التلفزيون. على شبكة Wi-Fi نفسها، افتح زر "TV" في الزاوية العلوية اليمنى من تطبيق الفيديو، لعرض الصورة على التلفزيون. تدعم معظم التلفزيونات الذكية وأجهزة العرض ذلك، وتجربة مشاهدة المسلسلات والأفلام أفضل بكثير. ويمكن لمستخدمي iPhone استخدام AirPlay لعكس الشاشة كاملة.</li>
                     </ul>
 
@@ -4125,7 +4125,7 @@
                     </div>
                 </div>
 
-                <!-- 第十三章 -->
+                <!-- الفصل 13 -->
                 <div id="di-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الثالث عشر: توصيات تطبيقات الأدوات</h3>
                     <p class="chapter-intro mb-4">يختار هذا الفصل التطبيقات الأدوات التي ترفع الكفاءة فعلاً وتعزز الصحة وتسهّل التنقل.</p>
@@ -4379,7 +4379,7 @@
                     </div>
                 </div>
 
-                <!-- 第十四章：密码管理器专题 -->
+                <!-- الفصل 14：موضوع مدير كلمات المرور -->
                 <div id="di-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الرابع عشر: موضوع خاص عن مديري كلمات المرور</h3>
                     <p class="chapter-intro mb-4">في العصر الرقمي، كلمات المرور هي مفاتيح باب منزلك. لكن المفاتيح كثيرة ومعقّدة جداً، فما العمل؟ مدير كلمات المرور هو "خادم المفاتيح الشامل" الخاص بك.</p>
@@ -4739,12 +4739,12 @@
                 </div>
             </section>
 
-            <!-- 三、进阶篇 -->
+            <!-- III、الدور المتقدم -->
             <section id="jin-jie-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">ثالثاً: القسم المتقدم (الفصول 15-20)</h2>
                 <p class="chapter-intro mb-4">بعد إتقان الأساسيات وتطبيقات البرمجيات، دعونا نتعمق في استكشاف الوظائف المتقدمة للهاتف. هذه المحتويات ستجعلك خبيراً حقيقياً في الهواتف، بل وتفتح لك بعض "المهارات المخفية".</p>
 
-                <!-- 第十五章 -->
+                <!-- الفصل 15 -->
                 <div id="di-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الخامس عشر: علم البطارية وتحسين مدة الاستخدام</h3>
                     <p class="chapter-intro mb-4">البطارية هي "قلب الطاقة" لهاتفك. يأخذك هذا الفصل لفهم طباع بطاريتك الصغيرة، وتعلّم تقنيات الشحن وإطالة العمر بشكل علمي، لتودع قلق نفاد الطاقة إلى الأبد.</p>
@@ -4961,7 +4961,7 @@
                     </div>
                 </div>
 
-                <!-- 第十六章 -->
+                <!-- الفصل 16 -->
                 <div id="di-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل السادس عشر: نظام الحسابات والخدمات السحابية</h3>
                     <p class="chapter-intro mb-4">لي صديق، سُرق هاتفه العام الماضي. أول ما فكّر فيه لم يكن "كم ثمن الهاتف"، بل "هل يمكنني استرجاع صوري؟". للأسف، لم يكن قد فعّل النسخ الاحتياطي السحابي. الهاتف شيء خارجي، لكن البيانات داخل حسابك، إذا ضاعت حقاً فلن تعود أبداً. في هذا الفصل سنتحدث عن كيفية تأمين حياتك الرقمية بشكل حقيقي.</p>
@@ -5053,7 +5053,7 @@
                     </div>
                 </div>
 
-                <!-- 第十七章 -->
+                <!-- الفصل 17 -->
                 <div id="di-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل السابع عشر: ربط الهاتف بالأجهزة الأخرى</h3>
                     <p class="chapter-intro mb-4">الهاتف في يدك هو في الواقع جهاز تحكم عن بُعد خارق ومركز بيانات. فهو لا يجري المكالمات فحسب، بل يربط الحاسوب والتلفاز والساعة ومكبر الصوت والسيارة معاً، بحيث لا تبقى هذه الأجهزة جزراً معزولة. في هذا الفصل سنتحدث عن كيفية جعلها "تشكل فريقاً".</p>
@@ -5165,7 +5165,7 @@
                     </div>
                 </div>
 
-                <!-- 第十八章 -->
+                <!-- الفصل 18 -->
                 <div id="di-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الثامن عشر: النسخ الاحتياطي للبيانات وترحيلها</h3>
                     <p class="chapter-intro mb-4">جارتي، سقط هاتفها في حوض الماء وأخرجته ولم يعد يعمل. لم يكن ألمها للهاتف نفسه، بل للصور التي لم تنسخها احتياطياً منذ ثلاث سنوات — كل سجل طفلها من الولادة حتى المشي. بعد سماع قصتها شعرت بسوء شديد، لأن هذا كان يمكن تجنبه تماماً. في هذا الفصل سنؤمّن بياناتك بشكل جدي.</p>
@@ -5263,7 +5263,7 @@
                     </div>
                 </div>
 
-                <!-- 第十九章 -->
+                <!-- الفصل 19 -->
                 <div id="di-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل التاسع عشر: تشخيص الأعطال والإنقاذ الذاتي</h3>
                     <p class="chapter-intro mb-4">الهاتف مثل الإنسان، يمرض أحياناً. بطء، انهيار التطبيقات، شاشة سوداء، عدم الشحن... معظم هذه المشاكل ليست مخيفة كما تبدو، ويمكنك تجربة حلها بنفسك قبل إرسالها للصيانة. هذا الفصل هو "دليل الطوارئ لهاتفك" — جرّب الطرق منخفضة التكلفة أولاً، وإذا لم تنجح فابحث عن طبيب محترف.</p>
@@ -5359,7 +5359,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章：开发者模式与高级权限 -->
+                <!-- الفصل 20：وضع المطور والأذونات المتقدمة -->
                 <div id="di-er-shi-zhang-jinjie" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل العشرون: وضع المطور والصلاحيات المتقدمة</h3>
                     <p class="chapter-intro mb-4">هذا الفصل مُعد للمستخدمين الذين يرغبون في التعمق في "الوظائف المخفية" للهاتف. وضع المطور، وصلاحية Root، وقفل BL... هذه المفاهيم التي تبدو غريبة، ليست بعيدة عن المستخدم العادي كما يظن.</p>
@@ -5561,7 +5561,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章附：Termux便携式Linux终端 -->
+                <!-- ملحق الفصل 20：TermuxمحمولLinuxطرفية -->
                 <div id="di-er-shi-zhang-termux" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ملحق الفصل العشرون: Termux — بيئة طرف Linux محمولة على أجهزة Android</h3>
                     <p class="chapter-intro mb-4">إذا كنت ترى أن وضع المطور ليس "قوياً" بما يكفي، وتريد تجربة سطر أوامر Linux كامل على هاتفك، فإن Termux هو ما تبحث عنه. لا يتطلب صلاحية root، ويحوّل هاتف أندرويد عادي إلى محطة عمل Linux محمولة، وهو أداة قوية للمستخدمين المتقدمين لاستكشاف تطوير وإدارة الأنظمة على الأجهزة المحمولة.</p>
@@ -5685,12 +5685,12 @@
                 </div>
             </section>
 
-            <!-- 四、超越篇 -->
+            <!-- IV、متقدم -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">رابعاً: قسم ما بعد الأساسيات (الفصول 21-26)</h2>
                 <p class="chapter-intro mb-4">سيأخذك هذا القسم إلى عالم رقمي أعمق. من أمن المعلومات إلى مبادئ الذكاء الاصطناعي، ومن التفكير البرمجي إلى التراث الرقمي، ستساعدك هذه المحتويات على أن تصبح مواطناً رقمياً حقيقياً.</p>
 
-                <!-- 第二十一章 -->
+                <!-- الفصل 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الحادي والعشرون: تعمّق في شبكات الهاتف المحمول وأمن المعلومات</h3>
                     <p class="chapter-intro mb-4">نستخدم هواتفنا يوميًا للتصفح والدفع والدردشة، ويبدو الأمر مريحًا للغاية. لكن هل فكرت يومًا في عدد المرات التي تكون فيها سجلات الدردشة وكلمات مرور الدفع وصورك "عارية" على الإنترنت؟ بصراحة، لم يفكر معظم الناس في هذه المشكلة أبدًا، لكن بمجرد وقوع الكارثة — مثل سرقة الحساب أو اختراق البطاقة المصرفية — فالأوان قد فات على الندم. في هذا الفصل سنتحدث جيدًا عن كيفية جعل حياتك الرقمية أقل "شفافية".</p>
@@ -5780,7 +5780,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十二章 -->
+                <!-- الفصل 22 -->
                 <div id="di-er-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الثاني والعشرون: كيف يعمل الذكاء الاصطناعي في الهاتف</h3>
                     <p class="chapter-intro mb-4">مرحبًا بك في أروع "عرض سحري" على الهاتف، وبطل القصة هو: الذكاء الاصطناعي. الصور الجميلة "بضغطة واحدة"، والمساعد الصوتي الذي يجيب فورًا، ولوحة المفاتيح التي تفهمك كلما استخدمتها أكثر، كلها يقف خلفها هذا الدماغ الخفي.</p>
@@ -6047,7 +6047,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章 -->
+                <!-- الفصل 23 -->
                 <div id="di-er-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">إجراء التنفيذ</h3>
                     <p class="chapter-intro mb-4">: ماذا تفعل بالتحديد؟ يمكن أن يكون إرسال رسالة WeChat، أو فتح تطبيق ما، أو ضبط مستوى الصوت، أو تغيير الخلفية، أو تشغيل الموسيقى، أو إرسال إشعار... تقريبًا كل ما تستطيع فعله يدويًا على الهاتف تستطيع الأتمتة فعله.</p>
@@ -6147,7 +6147,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章附：GitHub入门指南 -->
+                <!-- ملحق الفصل 23：GitHubدليل المبتدئين -->
                 <div id="di-er-shi-san-zhang-github" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ثانيًا: الفرق بين Git و GitHub (مفاهيم أساسية!)</h3>
                     <p class="chapter-intro mb-4">كثير من الناس يخلطون بين الكلمتين عند أول لقاء، وهنا نساعدك على التوضيح:</p>
@@ -6180,7 +6180,7 @@
                             </tr>
                             <tr>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SVN وMercurial</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab وGitee (码云) وBitbucket</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitLab وGitee (مايون) وBitbucket</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ببساطة:</td>
                             </tr>
                             <tr>
@@ -6302,7 +6302,7 @@
                         <li><strong>إذا رفعت معلومات حساسة بالخطأ، فحذف الملف لا يكفي (لأنها لا تزال في السجل التاريخي)، استخدم</strong>git filter-branch</li>
                         <li><strong>أو أدوات متخصصة لتنظيف التاريخ، وغيّر فورًا المفاتيح المسربة.</strong>المستودعات الخاصة ليست آمنة تمامًا أيضًا، يُفضل إدارة المعلومات الحساسة بمتغيرات البيئة، ولا تدخلها في مستودع الكود.</li>
                         <li><strong>ملاحظات للوصول إلى GitHub من داخل الصين</strong>قد يكون الوصول إلى GitHub من داخل الصين غير مستقر أحيانًا، فقد لا يفتح أو يكون الاستنساخ بطيئًا. يمكنك تجربة: ① استخدام مواقع مرآة محلية (مثل GitClone وghproxy) لتسريع الاستنساخ؛ ② تكوين Hosts أو استخدام وكيل؛ ③ إذا كان التعاون موجّهًا أساسًا للداخل، يمكنك أيضًا التفكير في البديل الصيني</li>
-                        <li><strong>Gitee (码云)</strong>، بوظائف مماثلة وسرعة وصول عالية. كثير من الفرق تستضيف على GitHub و Gitee في الوقت ذاته، لجمع الفوائد الدولية والسرعة المحلية.</li>
+                        <li><strong>Gitee (مايون)</strong>، بوظائف مماثلة وسرعة وصول عالية. كثير من الفرق تستضيف على GitHub و Gitee في الوقت ذاته، لجمع الفوائد الدولية والسرعة المحلية.</li>
                     </ul>
 
                     <div class="warning-box rounded-lg p-4 mt-4">
@@ -6340,7 +6340,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十四章：Root权限与BL锁深度解析 -->
+                <!-- الفصل 24：Rootالأذونات وBLتحليل مفصل للقفل -->
                 <div id="di-er-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل الرابع والعشرون: تحليل عميق لصلاحيات Root وقفل BL</h3>
                     <p class="chapter-intro mb-4">ثانيًا: العملية التفصيلية لفك قفل BL (باستخدام شاومي كمثال)</p>
@@ -6484,7 +6484,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十五章 -->
+                <!-- الفصل 25 -->
                 <div id="di-er-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ثانيًا: التراث الرقمي — أين تضع روحك الاجتماعية؟</h3>
                     <p class="chapter-intro mb-4">"جهة اتصال التراث" من Apple</p>
@@ -6747,7 +6747,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十六章 -->
+                <!-- الفصل 26 -->
                 <div id="di-er-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 26: حدود تقنية الهاتف الحالية</h3>
                     <p class="chapter-intro mb-4">بعد الحديث عن "ما بعد الوفاة" للهواتف القديمة، لنعد نظرنا للحاضر. 2024-2026 فترة انفجار تقني للهواتف: AI من السحابة إلى الجيب، والاتصال بالأقمار الصناعية من الرائد للمتوسط، والشاشات القابلة للطي من "تجربة" إلى "استخدام يومي"، وتكنولوجيا البطارية شهدت اختراقاً على مستوى المواد لم يُرَ منذ سنوات. هذا الفصل يراجع هذه الحدود التقنية، لمساعدتك في الحكم "هل تستبدل الآن" و"بماذا تستبدل".</p>
@@ -6841,12 +6841,12 @@
                 </div>
             </section>
 
-            <!-- 五、实战篇（第27-32章） -->
+            <!-- V、التطبيق العملي（الفصل 27-32） -->
             <section id="shi-zhan-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">خامساً: القسم العملي (الفصول 27-32)</h2>
                 <p class="chapter-intro mb-4">بعد تعلم المعرفة النظرية في الفصول الستة والعشرين السابقة، حان وقت تطبيقها. هذه الفصول الستة لا تتحدث نظرياً — من ضبط هاتف الوالدين لاختيار هاتف جديد بسهولة، من بناء عادات رقمية صحية لتعليمك بث الشاشة وتصوير الفيديوهات القصيرة، إلى دليل الإسعافات الأولية الأمنية في الطوارئ. كل فصل مهارة عملية يمكن البدء بها فوراً، اقرأ واستخدم.</p>
 
-                <!-- 第二十七章：适老化专题 -->
+                <!-- الفصل 27：موضوع سهولة الاستخدام لكبار السن -->
                 <div id="di-er-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 27: يستخدمه الآباء بسهولة — دليل شامل لهاتف مناسب لكبار السن</h3>
                     <p class="chapter-intro mb-4">بصراحة، عند كتابة هذا الفصل، فكرت في والديّ. والدتي لا تجرؤ على النقر على "تحديث النظام" في كل مرة، خوفاً من إتلاف الهاتف. خط WeChat لأبي أصغر من النمل، لكنه لا يعرف كيف يكبره، وظل يضيق عينيه لسنتين. هذا ليس "ضعفاً" منهما، بل لأن الهاتف يفترض أن الجميع في العشرينات. هذا الفصل، بأوضح كلمة، يحل مشاكل كبار السن في استخدام الهاتف واحدة تلو الأخرى.</p>
@@ -6994,7 +6994,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十八章：手机选购终极指南 -->
+                <!-- الفصل 28：الدليل النهائي لشراء الهاتف -->
                 <div id="di-er-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 28: أنفق بحكمة لتحصل على هاتفك المثالي — الدليل الشامل لشراء الهاتف</h3>
                     <p class="chapter-intro mb-4">شراء الهاتف، كثيرون يقرؤون المراجعات لأسبوع ويقارنون الأسعار لشهر، ثم ينفقون خمسة أو ستة آلاف على هاتف رائد لا يحتاجونه. هذا الفصل لا يسرد جداول المعاملات — تلك موجودة على الموقع الرسمي. ما أريد تقديمه لك "تفكير اختيار الهاتف"، مهما ظهرت هواتف جديدة، تستطيع الحكم بنفسك.</p>
@@ -7182,7 +7182,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十九章：数字健康 -->
+                <!-- الفصل 29：الصحة الرقمية -->
                 <div id="di-er-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 29: الصحة الرقمية — إقامة علاقة صحية مع الهاتف</h3>
                     <p class="chapter-intro mb-4">هل حدث لك: أردت تصفح الفيديوهات القصيرة لخمس دقائق، فرفعت رأسك بعد ساعتين؟ أو تصفح الهاتف ليلاً في السرير، يزداد نشاطاً، وتنام في الثانية فجراً؟ الهاتف غيّر حياتنا لكنه يبتلع وقتنا وصحتنا بهدوء. هذا الفصل لا يطلب منك "الإقلاع عن الهاتف"، بل يساعدك في استعادة السيطرة.</p>
@@ -7274,7 +7274,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十章：投屏、演示与车载互联 -->
+                <!-- الفصل 30：عكس الشاشة、عرض توضيحي وربط بالسيارة -->
                 <div id="di-san-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 30: عرض الشاشة والعروض التقديمية والاتصال بالسيارة</h3>
                     <p class="chapter-intro mb-4">شاشة الهاتف 7 إنش كحد أقصى، لكن تلفازك 55 إنشاً وبروجيكتورك 100 إنش. إلقاء شاشة الهاتف على الشاشة الكبيرة تجربة في بُعد مختلف. هذا الفصل يشرح بث الشاشة والعرض والاتصال بالسيارة، يمتد بقدرات هاتفك لشاشات أكبر.</p>
@@ -7367,7 +7367,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十一章：短视频拍摄与内容创作入门 -->
+                <!-- الفصل 31：مقدمة في تصوير الفيديو القصير وإنشاء المحتوى -->
                 <div id="di-san-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 31: مقدمة في تصوير الفيديوهات القصيرة وإنشاء المحتوى</h3>
                     <p class="chapter-intro mb-4">في 2026، الفيديو القصير لم يعد "لعبة الشباب"، بل أصبح الطريقة الأساسية للجميع للحصول على المعلومات والتعبير عن الذات. سواء أردت توثيق الحياة أو مشاركة المعرفة أو عملاً جانبياً، هاتفك أداة الإبداع الأفضل — لا تحتاج كاميرا ولا تعلم Premiere، هاتف واحد يكفي للبدء. هذا الفصل يبدأ بك من الصفر.</p>
@@ -7450,7 +7450,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十二章：手机安全急救手册 -->
+                <!-- الفصل 32：دليل الإسعافات الأولية لأمان الهاتف -->
                 <div id="di-san-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 32: دليل الإسعافات الأولية لأمان الهاتف</h3>
                     <p class="chapter-intro mb-4">هذا الفصل "خطة طوارئ". أتمنى ألا تحتاجه أبداً، لكن إذا فقدت هاتفك أو سُرق أو تعرضت لاحتيال، هذا الدليل يساعدك في تقليل الخسارة. يُنصح بقراءته الآن، ثم التقاط صور للخطوات الرئيسية أو طباعتها وحفظها في المنزل — لأن وقت الحادث قد لا يكون هاتفك معك.</p>
@@ -7619,12 +7619,12 @@
                 </div>
             </section>
 
-            <!-- 六、展望篇（第33-41章） -->
+            <!-- VI、آفاق مستقبلية（الفصل 33-41） -->
             <section id="zhan-wang-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">سادساً: قسم التطلعات (الفصول 33-41)</h2>
                 <p class="chapter-intro mb-4">بعد الحديث عن الحاضر العملي وخطط الطوارئ، لنطلق خيالنا وننظر للعواصف المتخمرة على الأفق. هذا الفصل قصير، لكنه يشير لاتجاه العشرين سنة القادمة — هل يختفي الهاتف؟ بماذا يُستبدل؟ كيف تتشكل علاقتنا بالعالم الرقمي؟</p>
 
-                <!-- 第三十三章 -->
+                <!-- الفصل 33 -->
                 <div id="di-san-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 33: نظرة مستقبلية — المحطة القادمة للهاتف</h3>
                     <p class="chapter-intro mb-4">لن يختفي الهاتف بين عشية وضحاها، لكن "سيادته" قد تُقسم لأجهزة الجيل الجديد. هذا الفصل نتحدث عن ثلاثة: كيف تبدو الأجهزة القادمة، كيف يتحول الهاتف لـ"مخفي" كأساس للهوية، والقضايا الأخلاقية التي يجب التفكير فيها مسبقاً.</p>
@@ -7695,7 +7695,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十四章：车机互联深度指南 -->
+                <!-- الفصل 34：دليل مفصل لربط الهاتف بالسيارة -->
                 <div id="di-san-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 34: دليل متعمق لاتصال السيارة — اندماج الهاتف مع السيارة</h3>
                     <p class="chapter-intro mb-4">السيارة تتطور من "أربع عجلات وأريكة" إلى "أربع عجلات وهاتف ذكي". سواء كانت سيارة بنزين أو طاقة جديدة، علاقة الهاتف بنظام السيارة تحدد تجربة قيادتك. هذا الفصل يوضح ثلاثة مسارات لاتصال السيارة، وخصائص أنظمة كل معسكر، ونصائح تجعل القيادة أسهل.</p>
@@ -7820,12 +7820,12 @@
                 </div>
             </section>
 
-            <!-- 儿童与手机专题（第35章） -->
+            <!-- موضوع الأطفال والهواتف（الفصل 35） -->
             <section id="er-tong-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">الأطفال والهاتف: موضوع خاص (الفصل 35)</h2>
                 <p class="chapter-intro mb-4">علاقة الأطفال بالهاتف من أصعب المشاكل لآباء هذا الجيل. إعطاؤه مبكراً يخشى الإدمان، وتأخيره يخشى التخلف؛ التشديد يخشى التمرد، والتساهل يخشى فقدان السيطرة. هذا الفصل لا ينحاز ولا يلقن، بل يفكك "متى نعطي، كيف نضبط، كيف نعلّم، كيف نحمي" لخطوات قابلة للتنفيذ.</p>
 
-                <!-- 第三十五章 -->
+                <!-- الفصل 35 -->
                 <div id="di-san-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 35: الأطفال والهاتف — دليل التربية في العصر الرقمي</h3>
                     <p class="chapter-intro mb-4">هذا الفصل لا يقول "الهاتف وحش" ولا يروج "التعرف المبكر يزيد الذكاء". نقسم حسب العمر: إعطاء أجهزة، وضع قواعد، تعليم آداب، حماية صحة، خطوة بخطوة.</p>
@@ -7972,7 +7972,7 @@
                 </div>
             </section>
 
-            <!-- 第三十六章：手机与智能家居——让家变聪明 -->
+            <!-- الفصل 36：الهاتف والمنزل الذكي——اجعل منزلك ذكيًا -->
             <div id="di-san-shi-liu-zhang" class="mb-10 content-section">
                 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الفصل 36: الهاتف والمنزل الذكي — اجعل منزلك أكثر ذكاءً</h3>
                 <p class="chapter-intro mb-4">الهاتف يفعل شيئاً يزداد أهمية — أن يكون "جهاز تحكم" للمنزل. من مصباح ومقبس إلى قفل باب، المنزل الذكي يتحول من "لعبة المهووسين" لـ"تجهيز منزلي". هذا الفصل يوضح البروتوكولات والمنظومات والمركز ومجموعة البداية، وقائمة أمان، لكي لا ينقلب "الذكاء" عليك.</p>
@@ -8268,12 +8268,12 @@
                 </div>
             </div>
 
-            <!-- 七、附录 -->
+            <!-- VII、ملحق -->
             <section id="fu-lu" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">سابعاً: الملاحق</h2>
                 <p class="chapter-intro mb-4">الشبكة</p>
                 
-                <!-- 附录A -->
+                <!-- ملحقA -->
                 <div id="fu-lu-a" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">：اتصل أولاً بشبكة Wi-Fi مستقرة.</h3>
                     
@@ -8300,7 +8300,7 @@
                     </ul>
                 </div>
 
-                <!-- 附录B -->
+                <!-- ملحقB -->
                 <div id="fu-lu-b" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الكلمة التي قد تسمعها</h3>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -8311,7 +8311,7 @@
                     </ul>
                 </div>
 
-                <!-- 附录C -->
+                <!-- ملحقC -->
                 <div id="fu-lu-c" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ROM (التخزين)</h3>
                     <div class="overflow-x-auto">
@@ -8394,7 +8394,7 @@
                     </div>
                 </div>
 
-                <!-- 附录D -->
+                <!-- ملحقD -->
                 <div id="fu-lu-d" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">：ابحث في Bilibili عن "[طراز هاتفك] نصائح".</h3>
                     
@@ -8422,7 +8422,7 @@
                     </ol>
                 </div>
 
-                <!-- 附录E -->
+                <!-- ملحقE -->
                 <div id="fu-lu-e" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الملحق هـ: الشكر والتوضيحات</h3>
                     <p class="mb-2">:</p>
@@ -8494,7 +8494,7 @@
                     <p class="mb-2">الطي العمودي (شكل الغطاء المتحرك)</p>
                 </div>
 
-                <!-- 附录F：折叠屏专题 -->
+                <!-- ملحقF：موضوع الشاشة القابلة للطي -->
                 <div id="fu-lu-f" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الملحق و: موضوع شراء واستخدام الهواتف القابلة للطي</h3>
                     <p class="chapter-intro mb-4">التقدم الرئيسي لعامي 2024-2025: عمر المفصل معلن بـ 500 ألف مرة طي (100 فتح/إغلاق يوميًا = 13 عامًا)، UTG زجاج فائق الرقة يحل محل الأغشية البلاستيكية المبكرة، آثار الطي مرئية بالعين لكن الإحساس خفيف جدًا، الأسعار انخفضت من فئة عشرة آلاف إلى فئة 5000-6000 يوان.</p>
@@ -8617,11 +8617,11 @@
                         <li><strong>：بين الشاشات العمودية الشاشة الخارجية الأكبر والأكثر عملية، وظائف موجهة للنساء مثل مرآة makeup وفحص واقي الشمس مصنوعة بدقة.</strong>نصيحة الشراء: إذا كانت الميزانية وفيرة وتريد النظام البيئي اختر هواوي Mate X؛ إذا أردت المفصل الأكثر نضجًا اختر سامسونج Z Fold؛ القيمة مقابل السعر الأولى شاومي/فيفو؛ للشاشات العمودية انظر هواوي Pocket وسامسونج Z Flip.</li>
                         <li><strong>تذكير أخير</strong>تقنية الشاشات القابلة للطي تتطور سنويًا، هذا الملحق مكتوب في 2025. قبل الشراء تأكد من البحث عن أحدث المراجعات وملاحظات المستخدمين، ركز على ثلاثة: عمر المفصل الفعلي، أداء آثار الطي، سياسة إصلاح الشاشة الداخلية. اللمس الفعلي دائمًا أهم من قراءة المراجعات.</li>
                         <li><strong>آخر قراءة: ...</strong>متابعة القراءة</li>
-                        <li><strong>تجاهل</strong>：横向折叠里外屏比例做得最接近正常手机的，合上当直板机用体验好。</li>
-                        <li><strong>OPPO Find N系列</strong>：横向折叠里尺寸偏紧凑的，单手可握持，适合觉得大折叠太重的用户。</li>
-                        <li><strong>华为Pocket系列</strong>：纵向折叠里外屏最大最实用的，化妆镜、防晒检测等女性向功能做得细致。</li>
+                        <li><strong>تجاهل</strong>：نسبة الشاشة الخارجية للداخلية في الطي الأفقي هي الأقرب للهاتف العادي，تجربة الاستخدام كطي أفقي عند الإغلاق ممتازة。</li>
+                        <li><strong>OPPO Find N-سلسلة</strong>：نماذج مدمجة الحجم في الطي الأفقي，قابل للمسك بيد واحدة，للمستخدمين الذين يجدون الهواتف القابلة للطي الكبيرة ثقيلة。</li>
+                        <li><strong>هواويPocket-سلسلة</strong>：أكبر وأكثر شاشة خارجية عملية في الطي العمودي，مرآة زينة、ميزات نسائية مثل كشف الحماية من الشمس منفذة بتفاصيل دقيقة。</li>
                     </ul>
-                    <p class="mb-2">选购建议：预算充足追求生态选华为Mate X；想要最成熟铰链选三星Z Fold；性价比首选小米/vivo；纵向折叠看华为Pocket和三星Z Flip。</p>
+                    <p class="mb-2">توصيات الشراء：بميزانية كافية والتركيز على النظام البيئي: هواويMate X；لرغبة في مفصلة أكثر نضجًا: سامسونجZ Fold；أفضل قيمة مقابل السعر: شاومي/vivo；في الطي العمودي: هواويPocketوسامسونجZ Flip。</p>
 
                     <div class="info-box rounded-lg p-4 mt-4">
                         <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>تذكير أخير</p>
@@ -8629,7 +8629,7 @@
                     </div>
                 </div>
 
-                <!-- 结语 -->
+                <!-- خاتمة -->
                 <div id="jie-yu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">خاتمة: ابقَ فضولياً، ابقَ يقظاً</h3>
                     <p class="mb-2">تهانينا على وصولك لهنا.</p>
@@ -8646,7 +8646,7 @@
                     </div>
                 </div>
 
-                <!-- 附录G：全书速查索引 -->
+                <!-- ملحقG：فهرس مرجعي سريع للكتاب كامل -->
                 <div id="fu-lu-g" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الملحق ز: فهرس البحث السريع للكتاب كاملاً</h3>
                     <p class="chapter-intro mb-4">مرتب أبجدياً (pinyin)، لتسهيل وصولك للفصل المقابل.</p>
@@ -8744,7 +8744,7 @@
                     </div>
                 </div>
 
-                <!-- 附录H：版本路线图 -->
+                <!-- ملحقH：خريطة طريق الإصدار -->
                 <div id="fu-lu-h" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">الملحق ح: خارطة طريق الإصدارات</h3>
                     <p class="chapter-intro mb-4">هذا الكتاب يتحدث بالتحديث. التالي اتجاهات الإصدارات المستقبلية، ونرحب بإخبارنا في الملاحظات بالمحتوى الذي تريد رؤيته أكثر.</p>
@@ -8768,7 +8768,7 @@
         </main>
     </div>
 
-    <!-- 快捷工具：浮动按钮组 -->
+    <!-- أدوات سريعة：مجموعة أزرار عائمة -->
     <div id="quick-tools" class="quick-tools no-print" aria-label="أدوات سريعة">
         <button id="quick-search" class="quick-tool-btn" title="بحث (Ctrl+K)" aria-label="بحث">
             <i class="fas fa-search" aria-hidden="true"></i>
@@ -8793,7 +8793,7 @@
         </button>
     </div>
 
-    <!-- 快捷键面板 -->
+    <!-- لوحة الاختصارات -->
     <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="اختصارات لوحة المفاتيح">
         <div class="search-panel" style="max-width:480px">
             <div class="search-input-wrapper">
@@ -8813,7 +8813,7 @@
         </div>
     </div>
 
-    <!-- 备份/恢复弹窗 -->
+    <!-- نسخ احتياطي/استعادة النافذة المنبثقة -->
     <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="النسخ الاحتياطي والاستعادة">
         <div class="search-panel" style="max-width:520px">
             <div class="search-input-wrapper">
@@ -8848,13 +8848,13 @@
         </div>
     </div>
 
-    <!-- 阅读连续天数提示 -->
+    <!-- تنبيه أيام القراءة المتتالية -->
     <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
         <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
         <span id="streak-toast-text">يوم X متواصل!</span>
     </div>
 
-    <!-- 语音朗读控件栏 -->
+    <!-- شريط التحكم بالقراءة الصوتية -->
     <div id="tts-controls" class="tts-controls" role="region" aria-label="تحكم القراءة الصوتية" aria-live="polite">
         <span class="tts-chapter-label" id="tts-label" title="الفصل الحالي للقراءة">غير مبدوء</span>
         <button class="tts-btn" id="tts-prev" title="فقرة سابقة" aria-label="فقرة سابقة"><i class="fas fa-step-backward"></i></button>
@@ -8866,7 +8866,7 @@
         <button class="tts-btn" id="tts-stop" title="إيقاف القراءة" aria-label="إيقاف القراءة"><i class="fas fa-times"></i></button>
     </div>
 
-    <!-- 回到顶部按钮 -->
+    <!-- زر العودة للأعلى -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="العودة للأعلى">
         <svg class="progress-ring" viewBox="0 0 40 40">
             <circle class="bg" cx="20" cy="20" r="18"/>
@@ -8875,15 +8875,15 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- 阅读位置恢复提示 -->
+    <!-- تنبيه استعادة موضع القراءة -->
     <div id="restore-toast" class="restore-position-toast" role="alert">
         <i class="fas fa-bookmark" aria-hidden="true"></i>
-        <span id="restore-toast-text">上次读到：...</span>
+        <span id="restore-toast-text">آخر قراءة: ...</span>
         <button class="btn-restore" id="restore-btn">متابعة القراءة</button>
         <button class="btn-dismiss" id="dismiss-btn">إغلاق</button>
     </div>
 
-    <!-- JS脚本 -->
+    <!-- JSسكريبت -->
     <script>
         (function() {
             'use strict';
@@ -8918,7 +8918,7 @@
             const restoreBtn = $('#restore-btn');
             const dismissBtn = $('#dismiss-btn');
 
-            // ===== 主题 =====
+            // ===== الموضوع =====
             function applyTheme(theme) {
                 html.classList.toggle('dark', theme === 'dark');
                 localStorage.setItem('theme', theme);
@@ -8934,12 +8934,12 @@
             if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
             if (quickTheme) quickTheme.addEventListener('click', toggleTheme);
 
-            // ===== 滚动：进度 + 阴影 + 返回顶部 + 目录进度 + 进度环 =====
+            // ===== التمرير：التقدم + ظل + العودة للأعلى + تقدم جدول المحتويات + حلقة التقدم =====
             const sections = $$('.content-section');
             const totalChapters = sections.length;
             if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} فصل`;
 
-            // 进度环参数
+            // معلمات حلقة التقدم
             const progressRingFg = backToTop.querySelector('.progress-ring .fg');
             const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
             if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
@@ -8953,7 +8953,7 @@
                         const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
                         progressBar.style.width = progress + '%';
 
-                        // 进度环更新
+                        // تحديث حلقة التقدم
                         if (progressRingFg) {
                             const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
                             progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
@@ -8973,7 +8973,7 @@
                             backToTop.classList.remove('opacity-100', 'visible');
                         }
 
-                        // 阅读到第几章
+                        // قرأت حتى أي فصل
                         let passedChapters = 0;
                         const viewportTop = scrollY + 100;
                         sections.forEach(sec => {
@@ -9002,15 +9002,15 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 阅读位置记忆 =====
+            // ===== تذكر موضع القراءة =====
             const POSITION_KEY = 'phoneCourse_scrollPos';
             const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
             let savePosTimer = null;
             function saveReadingPosition() {
                 const scrollY = window.scrollY;
-                if (scrollY < 200) return; // 太靠前不保存
+                if (scrollY < 200) return; // قريب جدًا من الأعلى، غير محفوظ
                 localStorage.setItem(POSITION_KEY, scrollY.toString());
-                // 找到当前章节名
+                // العثور على اسم الفصل الحالي
                 let currentChapter = '';
                 const viewportTop = scrollY + 100;
                 for (let i = sections.length - 1; i >= 0; i--) {
@@ -9027,14 +9027,14 @@
                 savePosTimer = setTimeout(saveReadingPosition, 1000);
             }, { passive: true });
 
-            // 页面加载时恢复位置
+            // استعادة الموضع عند تحميل الصفحة
             function tryRestorePosition() {
                 const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
                 const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
-                    restoreToastText.textContent = `上次读到：${savedChapter}`;
+                    restoreToastText.textContent = `آخر قراءة: ${savedChapter}`;
                     setTimeout(() => restoreToast.classList.add('show'), 800);
-                    // 10秒后自动隐藏
+                    // 10إخفاء تلقائي بعد ثوانٍ
                     setTimeout(() => restoreToast.classList.remove('show'), 15000);
                 }
             }
@@ -9053,7 +9053,7 @@
                 });
             }
 
-            // ===== 滚动入场动画 =====
+            // ===== حركة الظهور عند التمرير =====
             const visibleObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -9062,7 +9062,7 @@
                     }
                 });
             }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
-            // 第一屏的内容直接可见
+            // محتوى الشاشة الأولى مرئي مباشرة
             sections.forEach((sec, i) => {
                 const rect = sec.getBoundingClientRect();
                 if (rect.top < window.innerHeight) {
@@ -9072,7 +9072,7 @@
                 }
             });
 
-            // ===== 侧边栏打开/关闭 =====
+            // ===== الشريط الجانبي مفتوح/إغلاق =====
             function openSidebar() {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
@@ -9091,13 +9091,13 @@
             });
             if (overlay) overlay.addEventListener('click', closeSidebar);
 
-            // 快捷工具：打开目录
+            // أدوات سريعة：فتح جدول المحتويات
             if (quickToc) quickToc.addEventListener('click', () => {
                 if (window.innerWidth < 1024) openSidebar();
                 else window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 全局锚点导航：补偿固定导航栏偏移 =====
+            // ===== تنقل المراسي العامة：تعويض إزاحة شريط التنقل الثابت =====
             const NAVBAR_HEIGHT = 80;
             function scrollToAnchor(id) {
                 const el = document.getElementById(id);
@@ -9118,7 +9118,7 @@
                 requestAnimationFrame(() => scrollToAnchor(targetId));
             }, { passive: false });
 
-            // ===== 目录折叠 =====
+            // ===== طي جدول المحتويات =====
             $$('.toc-toggle-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -9137,7 +9137,7 @@
                 });
             });
 
-            // ===== 目录筛选 =====
+            // ===== تصفية جدول المحتويات =====
             if (tocFilter && tocList) {
                 tocFilter.addEventListener('input', () => {
                     const q = tocFilter.value.trim().toLowerCase();
@@ -9154,7 +9154,7 @@
                 });
             }
 
-            // ===== 目录高亮 =====
+            // ===== إبراز جدول المحتويات =====
             const tocLinkMap = new Map();
             $$('#sidebar a').forEach(item => {
                 const href = item.getAttribute('href');
@@ -9196,7 +9196,7 @@
 
             sections.forEach(section => observer.observe(section));
 
-            // ===== 书签系统 =====
+            // ===== نظام الإشارات المرجعية =====
             const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
             function getBookmarks() {
                 try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
@@ -9212,7 +9212,7 @@
             }
             function isBookmarked(id) { return getBookmarks().includes(id); }
 
-            // 给每个章节添加书签按钮
+            // إضافة زر إشارة مرجعية لكل فصل
             sections.forEach(sec => {
                 const id = sec.id;
                 if (!id) return;
@@ -9227,10 +9227,10 @@
                     btn.classList.toggle('active', added);
                     btn.querySelector('span').textContent = added ? 'محفوظ' : 'إشارة مرجعية';
                     btn.setAttribute('aria-label', added ? 'إلغاء الإشارة المرجعية' : 'إشارة مرجعية لهذا الفصل');
-                    // 更新侧边栏标记
+                    // تحديث علامات الشريط الجانبي
                     updateTocBookmark(id, added);
                 });
-                // 插入到h3后面
+                // إدراج فيh3بعده
                 h3.parentNode.insertBefore(btn, h3.nextSibling);
             });
 
@@ -9240,10 +9240,10 @@
                     tocLink.classList.toggle('bookmarked', isBookmarked);
                 }
             }
-            // 初始化侧边栏书签标记
+            // تهيئة علامات الإشارات المرجعية في الشريط الجانبي
             getBookmarks().forEach(id => updateTocBookmark(id, true));
 
-            // ===== 章节完成勾选 =====
+            // ===== خانة إتمام الفصل =====
             const COMPLETED_KEY = 'phoneCourse_completed';
             function getCompleted() {
                 try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
@@ -9264,7 +9264,7 @@
                 if (!id) return;
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
-                // 找到meta条或h3前面的元素
+                // العثور علىmetaعنصر أوh3العنصر السابق
                 const metaDiv = h3.previousElementSibling;
                 const check = document.createElement('button');
                 check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
@@ -9275,9 +9275,9 @@
                     check.classList.toggle('checked', done);
                     check.querySelector('span:last-child').textContent = done ? 'مقروء' : 'تحديد كمقروء';
                     check.setAttribute('aria-label', done ? 'إلغاء مقروء' : 'وضع علامة كمقروء');
-                    // 更新侧边栏
+                    // تحديث الشريط الجانبي
                     updateTocCompleted(id, done);
-                    // 更新完成进度
+                    // تحديث تقدم الإتمام
                     updateCompletedProgress();
                 });
                 if (metaDiv && metaDiv.classList.contains('flex')) {
@@ -9298,13 +9298,13 @@
             function updateCompletedProgress() {
                 const completed = getCompleted().length;
                 if (readingProgressText) {
-                    // 也更新完成数显示
+                    // تحديث عداد المكتمل أيضًا
                     const passed = parseInt(readingProgressText.textContent) || 0;
-                    readingProgressText.textContent = `${passed} / ${totalChapters} 章`;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} `;
                 }
             }
 
-            // ===== 搜索（增强：键盘导航 + 结果计数） =====
+            // ===== البحث（محسّن：تنقل لوحة المفاتيح + عدّاد النتائج） =====
             let searchData = null;
             let searchSelectedIdx = -1;
             let searchResultItems = [];
@@ -9373,7 +9373,7 @@
                         return;
                     }
 
-                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">找到 ${results.length} 个结果</div>`;
+                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">العثور على ${results.length} نتيجة</div>`;
                     searchResults.innerHTML = countHtml + results.map(item => {
                         const idx = item.text.toLowerCase().indexOf(query);
                         const start = Math.max(0, idx - 40);
@@ -9403,7 +9403,7 @@
                 }, 200);
             });
 
-            // 搜索键盘导航
+            // تنقل لوحة المفاتيح للبحث
             if (searchInput) searchInput.addEventListener('keydown', (e) => {
                 if (!searchResultItems.length) return;
                 if (e.key === 'ArrowDown') {
@@ -9427,7 +9427,7 @@
                 }
             });
 
-            // ===== 字号 =====
+            // ===== حجم الخط =====
             const DEFAULT_FONT_SIZE = 16;
             function setFontSize(size) {
                 contentEl.style.fontSize = size + 'px';
@@ -9448,7 +9448,7 @@
                 });
             });
 
-            // ===== 触摸滑动关闭侧边栏 =====
+            // ===== إغلاق الشريط الجانبي بالتمرير =====
             let touchStartX = 0;
             let touchStartY = 0;
             sidebar.addEventListener('touchstart', (e) => {
@@ -9461,7 +9461,7 @@
                 if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
             }, { passive: true });
 
-            // ===== 章节导航 =====
+            // ===== تنقل الفصول =====
             const sectionIds = sections.map(s => s.id);
             sections.forEach((section, i) => {
                 const nav = document.createElement('div');
@@ -9479,12 +9479,12 @@
                 section.appendChild(nav);
             });
 
-            // ===== 打印 =====
+            // ===== الطباعة =====
             function doPrint() { window.print(); }
             if (printBtn) printBtn.addEventListener('click', doPrint);
             if (quickPrint) quickPrint.addEventListener('click', doPrint);
 
-            // ===== 全局键盘快捷键 =====
+            // ===== اختصارات لوحة المفاتيح العامة =====
             const shortcutsOverlay = $('#shortcuts-overlay');
             const backupOverlay = $('#backup-overlay');
             function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
@@ -9501,7 +9501,7 @@
             if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
             if (backupClose) backupClose.addEventListener('click', closeBackup);
 
-            // 点击遮罩关闭弹窗
+            // إغلاق النافذة المنبثقة بالنقر على القناع
             if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
                 if (e.target === shortcutsOverlay) closeShortcuts();
             });
@@ -9515,7 +9515,7 @@
                     e.preventDefault();
                     searchOverlay.classList.contains('active') ? closeSearch() : openSearch();
                 } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                    // 浏览器已经处理打印
+                    // المتصفح قد عالج الطباعة بالفعل
                 } else if (e.key === 'Escape') {
                     if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
                     if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
@@ -9529,7 +9529,7 @@
                 }
             });
 
-            // ===== 阅读连续天数追踪 =====
+            // ===== تتبع أيام القراءة المتتالية =====
             const STREAK_KEY = 'reading-streak';
             const STREAK_DATE_KEY = 'reading-streak-date';
             const streakToast = $('#streak-toast');
@@ -9551,18 +9551,18 @@
                         localStorage.setItem(STREAK_KEY, streak.toString());
                         localStorage.setItem(STREAK_DATE_KEY, today);
 
-                        // 显示连续天数提示
+                        // إظهار تنبيه الأيام المتتالية
                         if (streak >= 2 && streakToast && streakToastText) {
-                            streakToastText.textContent = '🔥 连续阅读第 ' + streak + ' 天！坚持下去！';
+                            streakToastText.textContent = '🔥 قراءة متتالية اليوم  ' + streak + '  يوماً! استمر!';
                             streakToast.classList.add('show');
                             setTimeout(() => streakToast.classList.remove('show'), 5000);
                         }
                     }
-                } catch(e) { /* localStorage 可能不可用 */ }
+                } catch(e) { /* localStorage قد لا يكون متاحًا */ }
             }
             updateStreak();
 
-            // ===== 备份/恢复功能 =====
+            // ===== نسخ احتياطي/وظيفة الاستعادة =====
             function exportBackup() {
                 try {
                     const data = {
@@ -9579,20 +9579,20 @@
                         bookmarks: [],
                         ratings: {}
                     };
-                    // 收集健康自检状态
+                    // تجميع حالة الفحص الصحي
                     for (let i = 0; i < 8; i++) {
                         data.healthChecks[i] = localStorage.getItem('health-check-' + i);
                     }
-                    // 收集章节完成状态
+                    // تجميع حالة إتمام الفصول
                     $$('.chapter-check.checked').forEach(c => {
                         const sec = c.closest('.content-section');
                         if (sec) data.chapterChecks[sec.id] = true;
                     });
-                    // 收藏书签
+                    // إشارة مرجعيةإشارة مرجعية
                     $$('.toc-item.bookmarked').forEach(b => {
                         data.bookmarks.push(b.getAttribute('href').replace('#', ''));
                     });
-                    // 收集评分
+                    // تجميع التقييمات
                     $$('.chapter-rating').forEach(r => {
                         const sec = r.closest('.content-section');
                         if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
@@ -9621,13 +9621,13 @@
                         if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
                         if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
                         if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
-                        // 恢复健康自检
+                        // استعادة الفحص الصحي
                         if (data.healthChecks) {
                             Object.keys(data.healthChecks).forEach(i => {
                                 localStorage.setItem('health-check-' + i, data.healthChecks[i]);
                             });
                         }
-                        // 恢复章节完成状态
+                        // استعادة حالة إتمام الفصول
                         if (data.chapterChecks) {
                             Object.keys(data.chapterChecks).forEach(id => {
                                 const sec = document.getElementById(id);
@@ -9639,7 +9639,7 @@
                                 }
                             });
                         }
-                        // 恢复书签
+                        // استعادة الإشارات المرجعية
                         if (data.bookmarks) {
                             data.bookmarks.forEach(id => {
                                 const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
@@ -9674,7 +9674,7 @@
             });
             if (backupReset) backupReset.addEventListener('click', resetAllData);
 
-            // ===== 章节评分系统 =====
+            // ===== نظام تقييم الفصول =====
             sections.forEach(sec => {
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
@@ -9695,7 +9695,7 @@
                     });
                     ratingDiv.appendChild(star);
                 }
-                // 插入到h3后面
+                // إدراج فيh3بعده
                 h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
                 updateStars(ratingDiv);
             });
@@ -9707,7 +9707,7 @@
                 });
             }
 
-            // ===== scroll 防抖优化 =====
+            // ===== scroll تحسين تثبيت الصورة =====
             let scrollTicking = false;
             const originalOnScroll = onScroll;
             function debouncedScroll() {
@@ -9722,7 +9722,7 @@
             window.removeEventListener('scroll', onScroll);
             window.addEventListener('scroll', debouncedScroll, { passive: true });
 
-            // ===== 系统深色模式跟随 =====
+            // ===== متابعة الوضع الداكن للنظام =====
             if (window.matchMedia) {
                 const mq = window.matchMedia('(prefers-color-scheme: dark)');
                 mq.addEventListener('change', (e) => {
@@ -9732,7 +9732,7 @@
                 });
             }
 
-            // ===== 自动给每个章节标题添加面包屑与难度标签 =====
+            // ===== إضافة فتات الخريطة وعلامات مستوى الصعوبة تلقائيًا لكل عنوان فصل =====
             sections.forEach(sec => {
                 const id = sec.id || '';
                 const h3 = sec.querySelector('h3');
@@ -9759,17 +9759,17 @@
                         ${level === 'beginner' ? 'مبتدئ' : level === 'intermediate' ? 'متوسط' : 'متقدم'}
                     </span>
                     <span class="reading-time">
-                        <i class="far fa-clock" aria-hidden="true"></i>约 ${minutes} 分钟
+                        <i class="far fa-clock" aria-hidden="true"></i>تقريبًا ${minutes} دقائق
                     </span>
                 `;
                 h3.parentNode.insertBefore(meta, h3);
             });
 
-            // ===== 给章节添加"خلاصة"区块 =====
+            // ===== إضافة إلى الفصول"خلاصة"كتلة =====
             function addChapterSummary(sec, points) {
                 const div = document.createElement('div');
                 div.className = 'chapter-summary';
-                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>خلاصة هذا الفصل</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
                 const nav = sec.querySelector('.chapter-nav');
                 if (nav) sec.insertBefore(div, nav);
                 else sec.appendChild(div);
@@ -9815,13 +9815,13 @@
             };
             Object.keys(summaries).forEach(id => {
                 const sec = document.getElementById(id);
-                // 跳过已有内联小结的章节，避免重复
+                // تخطي الفصول التي تحتوي بالفعل على ملخص مضمّن，تجنب التكرار
                 if (sec && !sec.querySelector('.chapter-summary')) {
                     addChapterSummary(sec, summaries[id]);
                 }
             });
 
-            // ===== 复制按钮（给 kbd 元素添加） =====
+            // ===== زر النسخ（لـ kbd إضافة عنصر） =====
             $$('.kbd').forEach(kbd => {
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
@@ -9841,11 +9841,11 @@
                 kbd.parentNode.insertBefore(btn, kbd.nextSibling);
             });
 
-            // ===== 可折叠长内容（h4 级别） =====
+            // ===== محتوى طويل قابل للطي（h4 مستوى） =====
             sections.forEach(sec => {
                 const h4s = $$('h4', sec);
                 h4s.forEach(h4 => {
-                    // 只对内容较长的h4段落添加折叠
+                    // فقط للمحتوى الأطولh4إضافة طي للفقرات
                     let sibling = h4.nextElementSibling;
                     let contentLength = 0;
                     let elements = [];
@@ -9855,7 +9855,7 @@
                         sibling = sibling.nextElementSibling;
                     }
                     if (contentLength > 800) {
-                        // 添加折叠头
+                        // إضافة رأس طي
                         const header = document.createElement('div');
                         header.className = 'collapsible-header';
                         header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
@@ -9876,7 +9876,7 @@
                 });
             });
 
-            // ===== 学习仪表盘：阅读进度 + 手机健康自检 =====
+            // ===== لوحة معلومات التعلم：تقدم القراءة + الفحص الصحي للهاتف =====
             const dashProgressRing = $('#progress-ring-fg');
             const progressPercent = $('#progress-percent');
             const readCountEl = $('#read-count');
@@ -9889,7 +9889,7 @@
             const DASH_RING_CIRCUMFERENCE = 213.6;
 
             function updateDashboard() {
-                // 阅读进度
+                // تقدم القراءة
                 const completed = $$('.chapter-check.checked').length;
                 const total = sections.length;
                 const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -9899,28 +9899,28 @@
                 if (progressPercent) progressPercent.textContent = pct + '%';
                 if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
 
-                // 书签数
+                // عدد الإشارات المرجعية
                 const bookmarks = $$('.toc-item.bookmarked').length;
                 if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
 
-                // 上次章节
+                // الفصل السابق
                 const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
 
-                // 健康自检
+                // الفحص الصحي
                 const checked = checkInputs.filter(c => c.checked).length;
                 const totalChecks = checkInputs.length;
                 if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
                 if (healthBarEl) healthBarEl.style.width = (checked / totalChecks * 100) + '%';
                 if (healthMsgEl) {
                     if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>ممتاز! حالة أمان هاتفك ممتازة';
-                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = '不错！还有 ' + (totalChecks - checked) + ' 项可以完善';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'جيد! تبقى  ' + (totalChecks - checked) + '  عنصراً للتحسين';
                     else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'مقبول، يُنصح بمعالجة بنود الأمان غير المحددة أولاً';
                     else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>هاتفك به مخاطر أمنية، يرجى التحسين في أقرب وقت';
                 }
             }
 
-            // 恢复自检状态
+            // استعادة حالة الفحص الذاتي
             checkInputs.forEach((input, i) => {
                 const saved = localStorage.getItem('health-check-' + i);
                 if (saved === 'true') input.checked = true;
@@ -9931,10 +9931,10 @@
             });
 
             updateDashboard();
-            // 每隔3秒刷新一次（捕获章节完成勾选的变化）
+            // كل3تحديث كل بضع ثوانٍ（التقاط تغييرات خانة إتمام الفصل）
             setInterval(updateDashboard, 3000);
 
-            // ===== 语音朗读（TTS）=====
+            // ===== القراءة الصوتية（TTS）=====
             const ttsControls = $('#tts-controls');
             const ttsPlayBtn = $('#tts-play');
             const ttsPrevBtn = $('#tts-prev');
@@ -9958,11 +9958,11 @@
 
             function getSectionText(sec) {
                 if (!sec) return '';
-                // 克隆并移除不需要朗读的元素
+                // استنساخ العناصر وإزالة ما لا يحتاج للقراءة
                 const clone = sec.cloneNode(true);
                 const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
                 removes.forEach(el => el.remove());
-                // 移除折叠体但保留其文字内容
+                // إزالة القسم القابل للطي مع الاحتفاظ بمحتواه النصي
                 const text = clone.textContent.replace(/\s+/g, ' ').trim();
                 return text;
             }
@@ -9989,7 +9989,7 @@
                 ttsUtterance.pitch = 1.0;
                 ttsUtterance.volume = 1.0;
 
-                // 尝试使用更自然的中文语音
+                // تجربة صوت صيني أكثر طبيعية
                 const voices = window.speechSynthesis.getVoices();
                 const zhVoice = voices.find(v => v.lang.startsWith('ar'));
                 if (zhVoice) ttsUtterance.voice = zhVoice;
@@ -10003,7 +10003,7 @@
                 };
 
                 ttsUtterance.onend = () => {
-                    // 自动播放下一章节
+                    // تشغيل تلقائيالفصل التاليقسم
                     if (ttsSectionIndex < sections.length - 1 && ttsActive) {
                         ttsSectionIndex++;
                         speakSection(ttsSectionIndex);
@@ -10025,9 +10025,9 @@
 
             function toggleTtsPlay() {
                 if (!ttsActive) {
-                    // 找到当前可见章节
+                    // العثور على الفصل المرئي حاليًا
                     if (ttsSectionIndex < 0) {
-                        // 从头开始或从当前滚动位置最近的章节开始
+                        // البدء من الأول أو من أقرب فصل عند موضع التمرير الحالي
                         const scrollCenter = window.scrollY + window.innerHeight / 2;
                         let closestIdx = 0;
                         let closestDist = Infinity;
@@ -10068,7 +10068,7 @@
                 if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
             }
 
-            // 事件绑定
+            // ربط الأحداث
             if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
             if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
             if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
@@ -10088,7 +10088,7 @@
                 updateTtsSpeedDisplay();
                 if (ttsActive && ttsUtterance) {
                     ttsUtterance.rate = ttsSpeed;
-                    // 重新创建并播放当前段落
+                    // إعادة إنشاء وتشغيل الفقرة الحالية
                     const idx = ttsSectionIndex;
                     window.speechSynthesis.cancel();
                     setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
@@ -10106,7 +10106,7 @@
             });
             if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
 
-            // 键盘快捷键：按 R 键切换朗读
+            // اختصارات لوحة المفاتيح：اضغط R تبديل القراءة بمفتاح
             document.addEventListener('keydown', (e) => {
                 if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
                 if (e.key === 'r' || e.key === 'R') {
@@ -10118,7 +10118,7 @@
                 }
             });
 
-            // ===== 初始化 =====
+            // ===== التهيئة =====
             onScroll();
             tryRestorePosition();
         })();
