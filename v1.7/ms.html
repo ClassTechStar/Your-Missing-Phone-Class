@@ -83,7 +83,7 @@
             background-color: #1e1b4b;
             border-left-color: #818cf8;
         }
-        /* 侧边栏链接基础样式 */
+        /* Gaya asas pautan bar sisi */
         #sidebar a {
             display: block;
             transition: all 0.2s ease;
@@ -98,7 +98,7 @@
         .dark #sidebar a:hover {
             background-color: rgba(79, 70, 229, 0.12);
         }
-        /* 父级分组标题 */
+        /* Tajuk kumpulan induk */
         .toc-parent > div {
             transition: background-color 0.15s ease;
         }
@@ -108,7 +108,7 @@
         .dark .toc-parent > div:hover {
             background-color: rgba(255,255,255,0.03);
         }
-        /* 折叠图标独立区域 */
+        /* Kawasan ikon lipat berasingan */
         .toc-toggle-btn {
             width: 24px;
             height: 24px;
@@ -129,7 +129,7 @@
             background-color: #374151;
             color: #e5e7eb;
         }
-        /* 子项过渡动画 */
+        /* Animasi peralihan item anak */
         .toc-child li {
             opacity: 1;
             transform: translateX(0);
@@ -137,9 +137,9 @@
         }
         .toc-child:not(.open) + .toc-child li,
         .toc-child:not(.open) li {
-            /* 折叠时由 max-height 控制 */
+            /* Semasa dilipat, oleh max-height 控制 */
         }
-        /* 当前阅读位置指示条 */
+        /* Bar penunjuk kedudukan bacaan semasa */
         .toc-reading-indicator {
             position: absolute;
             left: 0;
@@ -151,7 +151,7 @@
             transition: top 0.3s ease, height 0.3s ease;
             z-index: 1;
         }
-        /* 侧边栏顶部区域增强 */
+        /* Peningkatan kawasan atas bar sisi */
         #sidebar > nav > div:first-child {
             background: #f5f6f8;
             border-radius: 0;
@@ -160,7 +160,7 @@
         .dark #sidebar > nav > div:first-child {
             background: #1a2230;
         }
-        /* 侧边栏整体增强 */
+        /* Peningkatan keseluruhan bar sisi */
         #sidebar {
             box-shadow: none;
             border-right: 1px solid #e5e7eb;
@@ -174,7 +174,7 @@
                 border-right: none;
             }
         }
-        /* 章节序号样式 */
+        /* Gaya nombor bab */
         .toc-item span[class*="font-mono"] {
             display: inline-block;
             min-width: 1.5rem;
@@ -192,7 +192,7 @@
         .dark .toc-item.active span[class*="font-mono"] {
             color: #818cf8;
         }
-        /* 导航目标章节高亮闪烁 */
+        /* Kelipan sorotan bab sasaran navigasi */
         .scroll-target-flash {
             animation: targetFlash 1.2s ease-out;
         }
@@ -511,7 +511,7 @@
             }
         }
 
-        /* ===== 增强样式：导读卡片、章节摘要、学习路径 ===== */
+        /* ===== Gaya yang ditingkatkan：Kad panduan bacaan、Ringkasan bab、Laluan pembelajaran ===== */
         .reading-guide-card {
             background: #fafafa;
             border: 1px solid #e0e0e0;
@@ -739,9 +739,9 @@
             main { max-width: 56rem; }
         }
 
-        /* ===== 深度改进样式 ===== */
+        /* ===== Penambahbaikan gaya mendalam ===== */
 
-        /* 渐变阅读进度条 */
+        /* Bar progres bacaan gradien */
         #reading-progress {
             background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
             background-size: 200% 100% !important;
@@ -758,7 +758,7 @@
             100% { background-position: -200% 0; }
         }
 
-        /* 滚动入场动画 */
+        /* Animasi masuk semasa menatal */
         .content-section {
             opacity: 0;
             transform: translateY(24px);
@@ -769,7 +769,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* 第一屏内容直接可见 */
+        /* Kandungan skrin pertama terus kelihatan */
         .content-section:first-of-type,
         .content-section.immediately-visible {
             opacity: 1;
@@ -777,7 +777,7 @@
             transition: none;
         }
 
-        /* Hero横幅增强 */
+        /* HeroPeningkatan sepanduk */
         .hero-banner {
             background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
             position: relative;
@@ -805,7 +805,7 @@
         }
         .hero-banner > * { position: relative; z-index: 1; }
 
-        /* 卡片悬浮效果 */
+        /* Kesan hover kad */
         .path-step {
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
                         box-shadow 0.3s ease,
@@ -828,7 +828,7 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
 
-        /* 返回顶部按钮增强 */
+        /* Peningkatan butang kembali ke atas */
         #back-to-top {
             position: fixed;
             right: 1rem;
@@ -877,7 +877,7 @@
             transform-origin: center;
         }
 
-        /* 书签按钮 */
+        /* Butang tanda buku */
         .bookmark-btn {
             display: inline-flex;
             align-items: center;
@@ -913,7 +913,7 @@
             border-color: #818cf8;
         }
 
-        /* 章节完成勾选 */
+        /* Tanda selesai bab */
         .chapter-check {
             display: inline-flex;
             align-items: center;
@@ -963,7 +963,7 @@
             line-height: 1;
         }
 
-        /* 搜索结果键盘选中 */
+        /* Pilihan kekabur hasil carian */
         .search-result-item.selected {
             background: #eef2f5;
         }
@@ -971,12 +971,12 @@
             background: #374151;
         }
 
-        /* 仪表盘卡片 */
+        /* Kad papan pemuka */
         .dashboard-card {
             transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
         }
 
-        /* 阅读连续天数徽章 */
+        /* Lencana hari berturut-turut membaca */
         #streak-toast {
             transform: translateX(-50%) translateY(100px);
             left: 50%;
@@ -987,7 +987,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* 章节评分星星 */
+        /* Bintang penilaian bab */
         .chapter-rating {
             display: inline-flex;
             align-items: center;
@@ -1020,7 +1020,7 @@
             opacity: 0.5;
         }
 
-        /* 语音朗读控件 */
+        /* Kawalan bacaan suara */
         .tts-controls {
             position: fixed;
             bottom: 6rem;
@@ -1112,7 +1112,7 @@
             .tts-controls .tts-chapter-label { max-width: 8rem; }
         }
 
-        /* 复制按钮 */
+        /* Butang salin */
         .copy-btn {
             display: inline-flex;
             align-items: center;
@@ -1143,7 +1143,7 @@
             border-color: #27ae60;
         }
 
-        /* 可折叠内容块 */
+        /* Blok kandungan boleh lipat */
         .collapsible-header {
             cursor: pointer;
             display: flex;
@@ -1178,7 +1178,7 @@
             opacity: 0;
         }
 
-        /* 阅读位置恢复提示 */
+        /* Peringatan pemulihan kedudukan bacaan */
         .restore-position-toast {
             position: fixed;
             bottom: 2rem;
@@ -1221,7 +1221,7 @@
             color: #fff;
         }
 
-        /* 章节分隔线增强 */
+        /* Peningkatan pemisah bab */
         .content-section {
             position: relative;
             padding-top: 1rem;
@@ -1242,7 +1242,7 @@
             display: none;
         }
 
-        /* Callout框增强 */
+        /* CalloutPeningkatan bingkai */
         .callout-box {
             position: relative;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1251,7 +1251,7 @@
             transform: translateX(2px);
         }
 
-        /* 表格行悬浮 */
+        /* Hover baris jadual */
         table tbody tr {
             transition: background-color 0.15s ease;
         }
@@ -1262,7 +1262,7 @@
             background-color: rgba(255,255,255,0.04);
         }
 
-        /* 章节导航按钮增强 */
+        /* Peningkatan butang navigasi bab */
         .chapter-nav a {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1277,7 +1277,7 @@
             background: #1e2a36;
         }
 
-        /* 侧边栏书签标记 */
+        /* Penanda tanda buku bar sisi */
         .toc-item.bookmarked::after {
             content: '★';
             color: #d4a017;
@@ -1288,7 +1288,7 @@
             color: #27ae60 !important;
         }
 
-        /* 快捷工具增强 */
+        /* Peningkatan alat pantas */
         .quick-tool-btn {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1299,7 +1299,7 @@
             transform: translateY(0) scale(0.95);
         }
 
-        /* 移动端底部安全区域 */
+        /* Kawasan selamat bawah peranti mudah alih */
         @media (max-width: 768px) {
             #back-to-top {
                 right: 0.75rem;
@@ -1322,7 +1322,7 @@
             }
         }
 
-        /* 打印时隐藏新增元素 */
+        /* Sembunyikan elemen baharu semasa mencetak */
         @media print {
             .bookmark-btn, .chapter-check, .copy-btn,
             .restore-position-toast, #back-to-top .progress-ring,
@@ -1396,7 +1396,7 @@
                     <input type="text" id="toc-filter" placeholder="Tapis bab..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="Tapis bab">
                 </div>
                 <ul class="space-y-1 text-sm" id="toc-list">
-                    <!-- 基础篇 -->
+                    <!-- Bahagian asas -->
                     <li class="toc-parent" data-group="ji-chu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ji-chu-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">I. Bahagian Asas (Bab 0-7)</a>
@@ -1418,7 +1418,7 @@
                             <li><a href="#di-qi-zhang-jichu" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">07</span>Prinsip Kerja:</a></li>
                         </ul>
                     </li>
-                    <!-- 软件篇 -->
+                    <!-- Bahagian perisian -->
                     <li class="toc-parent" data-group="ruan-jian">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ruan-jian-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">2. Bahagian Perisian (Bab 8-14)</a>
@@ -1437,7 +1437,7 @@
                             <li><a href="#di-shi-si-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">14</span>Bab 14: Topik Khas Pengurus Kata Laluan</a></li>
                         </ul>
                     </li>
-                    <!-- 进阶篇 -->
+                    <!-- Bahagian pertengahan -->
                     <li class="toc-parent" data-group="jin-jie">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#jin-jie-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">3. Bahagian Lanjutan (Bab 15-20)</a>
@@ -1456,7 +1456,7 @@
                             <li><a href="#di-er-shi-zhang-termux" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-500 dark:text-gray-500 pl-6 text-xs"><span class="mr-1.5 text-xs text-gray-300 font-mono"></span>Lampiran: Terminal Linux Mudah Alih Termux</a></li>
                         </ul>
                     </li>
-                    <!-- 超越篇 -->
+                    <!-- Bahagian lanjutan -->
                     <li class="toc-parent" data-group="chao-yue">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#chao-yue-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">4. Bahagian Melangkaui (Bab 21-26)</a>
@@ -1474,7 +1474,7 @@
                             <li><a href="#di-er-shi-liu-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">26</span>Bab 26: Hadapan Teknologi Telefon Semasa</a></li>
                         </ul>
                     </li>
-                    <!-- 五、实战篇（第27-32章） -->
+                    <!-- 五、Bahagian amalan（第27-32章） -->
                     <li class="toc-parent" data-group="shi-zhan">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#shi-zhan-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">V. Bahagian Praktikal (Bab 27-32)</a>
@@ -1491,7 +1491,7 @@
                             <li><a href="#di-san-shi-er-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">32</span>Bab 32: Manual Kecemasan Keselamatan Telefon</a></li>
                         </ul>
                     </li>
-                    <!-- 六、展望篇（第33-41章） -->
+                    <!-- 六、Bahagian prospek（第33-41章） -->
                     <li class="toc-parent" data-group="zhan-wang">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#zhan-wang-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">VI. Bahagian Pandangan Hadapan (Bab 33-41)</a>
@@ -1554,7 +1554,7 @@
             <div class="content-col">
             <a id="top"></a>
 
-            <!-- 顶部面包屑 -->
+            <!-- Breadcrumb atas -->
             <nav class="breadcrumb no-print" aria-label="Album / Semua Foto">
                 <a href="#top">Laman utama</a>
                 <span class="sep" aria-hidden="true">›</span>
@@ -1583,7 +1583,7 @@
                 </div>
             </section>
 
-            <!-- 怎么用这本书 -->
+            <!-- Cara menggunakan buku ini -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-compass text-primary" aria-hidden="true"></i>Cara menggunakan buku ini?
@@ -1608,7 +1608,7 @@
                 </div>
             </section>
 
-            <!-- 学习路径五步走 -->
+            <!-- Laluan pembelajaran lima langkah -->
             <section class="mb-8" aria-labelledby="learning-path-title">
                 <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">Laluan pembelajaran: Lima langkah menjadi pakar telefon</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Buku ini disusun mengikut corak kognitif "dari mengenali, ke mahir, ke praktikal", setiap bahagian adalah asas kepada bahagian seterusnya.</p>
@@ -1651,7 +1651,7 @@
                 </div>
             </section>
 
-            <!-- 章节地图速查表 -->
+            <!-- Jadual rujukan cepat peta bab -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-map text-primary" aria-hidden="true"></i>Rujukan pantas peta bab
@@ -1676,13 +1676,13 @@
                 </div>
             </section>
 
-            <!-- 写在最后：本书不教什么 -->
+            <!-- Penutup：Apa yang buku ini tidak ajarkan -->
             <div class="highlight-quote">
                 <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Buku ini tidak mengajar anda cara "menonton video dengan lebih puas", sebaliknya ingin membantu anda memahami: mengapa telefon berfungsi sedemikian? Apa yang ia boleh lakukan, apa yang ia tidak boleh lakukan? Dan bagaimana untuk menjadikannya benar-benar berguna untuk anda, bukan sebaliknya memperhambakan perhatian dan masa anda.</p>
                 <p class="text-right text-sm">—— Tentang niat asal buku ini</p>
             </div>
 
-            <!-- 交互式自检清单 + 阅读仪表盘 -->
+            <!-- Senarai semak interaktif + Papan pemuka bacaan -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
                     <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>Papan pemuka pembelajaran
@@ -1690,7 +1690,7 @@
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Jejak kemajuan bacaan anda, semak status kesihatan telefon.</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
-                    <!-- 阅读进度卡片 -->
+                    <!-- Kad progres bacaan -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>Kemajuan bacaan</h3>
                         <div class="flex items-center gap-4">
@@ -1709,7 +1709,7 @@
                         </div>
                     </div>
 
-                    <!-- 手机健康自检卡片 -->
+                    <!-- Kad pemeriksaan kesihatan telefon -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>Pemeriksaan kendiri kesihatan telefon</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Tanda item yang anda telah lakukan, lihat "skor kesihatan" telefon anda:</p>
@@ -1735,7 +1735,7 @@
                 </div>
             </section>
 
-            <!-- 原"top" 内容保持兼容 -->
+            <!-- 原"top" Kekalkan keserasian kandungan -->
             <div class="sr-only" aria-hidden="true">v3.0 · Kursus wajib digital yang benar-benar untuk orang biasa</div>
 
             <section id="ji-chu-pian" class="mb-12">
@@ -2100,7 +2100,7 @@
                     </div>
                 </div>
 
-                <!-- 第一章附：安卓手机内存拓展解析 -->
+                <!-- Lampiran Bab 1：安卓手机内存拓展解析 -->
                 <div id="di-yi-zhang-memory" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Tambahan: Analisis Pengembangan Ingatan Telefon Android</h3>
                     <p class="chapter-intro mb-4">Apabila membeli telefon, anda sering nampak pengiklanan seperti "12GB+8GB RAM" — seolah-olah secara ajaib mendapat 8GB RAM tambahan. Tetapi adakah ia benar-benar membolehkan telefon lebih pantas? Adakah ia sebaliknya merosakkan telefon? Bahagian ini akan menjelaskan sepenuhnya teknologi "pengembangan ingatan" ini.</p>
@@ -2514,7 +2514,7 @@
                     </ul>
                 </div>
 
-                <!-- 第三章 -->
+                <!-- Bab 3 -->
                 <div id="di-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">bersambung ke Wi-Fi tetapi tidak dapat memuatkan halaman</h3>
                     <p class="chapter-intro mb-4">— kerana penghala telah terputus dari internet, dan telefon tidak secara automatik bertukar ke data mudah alih. Untuk memahami masalah ini secara menyeluruh, kita perlu membina model kognitif "jalan dan kenderaan".</p>
@@ -2733,7 +2733,7 @@
                     </div>
                 </div>
 
-                <!-- 第四章 -->
+                <!-- Bab 4 -->
                 <div id="di-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">: Google Play (luar negara) atau kedai terbina dalam pelbagai jenama (seperti Pasaran Aplikasi Huawei, Kedai Aplikasi Xiaomi).</h3>
                     <p class="chapter-intro mb-4">iOS</p>
@@ -2899,7 +2899,7 @@
                     </div>
                 </div>
 
-                <!-- 第五章 -->
+                <!-- Bab 5 -->
                 <div id="di-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Nada dering</h3>
                     <p class="chapter-intro mb-4">: Pilih satu yang anda boleh dengar dan tidak memalukan.</p>
@@ -3111,7 +3111,7 @@
                     </div>
                 </div>
 
-                <!-- 第六章 -->
+                <!-- Bab 6 -->
                 <div id="di-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Penyusunan Tahap Keselamatan:</h3>
                     <p class="chapter-intro mb-4">Kata laluan/Kod PIN</p>
@@ -3277,7 +3277,7 @@
                     </div>
                 </div>
 
-                <!-- 第七章：前沿功能 -->
+                <!-- Bab 7：Ciri terdepan -->
                 <div id="di-qi-zhang-jichu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Prinsip Kerja:</h3>
                     <p class="chapter-intro mb-4">Telefon terus membina sambungan dengan satelit komunikasi di orbit, menghantar maklumat permintaan bantuan. Pada masa ini terutamanya menyokong penghantaran SMS dan maklumat lokasi, tidak boleh membuat panggilan.</p>
@@ -3399,12 +3399,12 @@
                 </div>
             </section>
 
-            <!-- 二、软件篇 -->
+            <!-- 二、Bahagian perisian -->
             <section id="ruan-jian-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">2. Bahagian Perisian (Bab 8-14)</h2>
                 <p class="chapter-intro mb-4">Apl panggilan telefon pintar moden telah jauh melangkaui pad dail ringkas, ia mengintegrasikan alat berkuasa seperti rakaman, sekatan gangguan dan pengenalan pintar.</p>
 
-                <!-- 第八章 -->
+                <!-- Bab 8 -->
                 <div id="di-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 8: Komunikasi: SMS, Panggilan &amp; Sosial</h3>
                     <p class="chapter-intro mb-4">Tujuan</p>
@@ -3594,7 +3594,7 @@
                     </div>
                 </div>
 
-                <!-- 第九章 -->
+                <!-- Bab 9 -->
                 <div id="di-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">WPS Office</h3>
                     <p class="chapter-intro mb-4">: Penyetempatan terbaik, serasi sepenuhnya dengan format Microsoft (docx/xlsx/pptx), set alat PDF terbina dalam sangat kaya. Saya sangat suka fungsi "Nota Suara"nya—apabila melihat kontrak dan tidak sesuai menaip, terus bercakap kepada telefon, ia akan automatik tukar ke anotasi teks dan tampal dalam dokumen. Tambahan pula, WPS mempunyai banyak templat percuma, menjimatkan banyak masa semasa membuat resume atau PPT pembentangan.</p>
@@ -3659,7 +3659,7 @@
                     </div>
                 </div>
 
-                <!-- 第十章 -->
+                <!-- Bab 10 -->
                 <div id="di-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 10: Pembayaran Bergerak &amp; Perkhidmatan Hidup</h3>
                     <p class="chapter-intro mb-4">Masukkan nombor kad. Sekarang kebanyakan App menyokong terus gambar kenal pasti nombor kad, tak perlu taip satu-satu digit.</p>
@@ -3735,7 +3735,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章 -->
+                <!-- Bab 11 -->
                 <div id="di-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Lens kotor</h3>
                     <p class="chapter-intro mb-4">: Ini memang masalah paling biasa. Bila ambil telefon cap jari tertekan pada lens, gambar jadi berkabus, ingat telefon rosak. Biasakan, sebelum ambil gambar lap lens dengan tepi baju.</p>
@@ -3800,7 +3800,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章附：专业影像技术 -->
+                <!-- Lampiran Bab 11：Teknologi pengimejan profesional -->
                 <div id="di-shi-yi-zhang-advanced" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Resolusi menentukan kejelasan gambar, dinyatakan dengan bilangan piksel.</h3>
                     <p class="chapter-intro mb-4">720P (HD)</p>
@@ -4062,7 +4062,7 @@
                     </div>
                 </div>
 
-                <!-- 第十二章 -->
+                <!-- Bab 12 -->
                 <div id="di-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">NetEase Cloud Music</h3>
                     <p class="chapter-intro mb-4">: Kekuatannya adalah komuniti senarai lagu dan ruang komen. Anda mahu dengar "lagu sesuai untuk hari hujan" atau "muzik instrumental untuk relaks selepas penat belajar", cari ada senarai lagu yang disusun orang lain. Ruang komen kadang-kadang lebih menarik daripada lagu. Kekurangannya sebahagian lagu hak cipta tak lengkap, sesetengah lagu dengar tiba-tiba jadi kelabu.</p>
@@ -4125,7 +4125,7 @@
                     </div>
                 </div>
 
-                <!-- 第十三章 -->
+                <!-- Bab 13 -->
                 <div id="di-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 13: Cadangan Aplikasi Alat</h3>
                     <p class="chapter-intro mb-4">Pomodoro</p>
@@ -4379,7 +4379,7 @@
                     </div>
                 </div>
 
-                <!-- 第十四章：密码管理器专题 -->
+                <!-- Bab 14：Topik khas pengurus kata laluan -->
                 <div id="di-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 14: Topik Khas Pengurus Kata Laluan</h3>
                     <p class="chapter-intro mb-4">2. Prinsip kerja pengurus kata laluan</p>
@@ -4739,12 +4739,12 @@
                 </div>
             </section>
 
-            <!-- 三、进阶篇 -->
+            <!-- 三、Bahagian pertengahan -->
             <section id="jin-jie-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">3. Bahagian Lanjutan (Bab 15-20)</h2>
                 <p class="chapter-intro mb-4">Bateri telefon pintar (litium-ion atau litium-polimer) ibarat span tenaga: mengecas adalah seperti menyerap air (menyimpan tenaga), menyahcas adalah seperti memerah air (menggunakan tenaga). Terdapat beberapa ciri yang perlu diingat:</p>
 
-                <!-- 第十五章 -->
+                <!-- Bab 15 -->
                 <div id="di-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Cas bila-bila masa</h3>
                     <p class="chapter-intro mb-4">: Berbeza dengan bateri lama, ia tiada kesan memori, tidak perlu habis baru boleh dicas.</p>
@@ -4961,7 +4961,7 @@
                     </div>
                 </div>
 
-                <!-- 第十六章 -->
+                <!-- Bab 16 -->
                 <div id="di-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kenalan</h3>
                     <p class="chapter-intro mb-4">: Nombor telefon yang anda simpan selama bertahun-tahun malah lebih sedekad.</p>
@@ -5053,7 +5053,7 @@
                     </div>
                 </div>
 
-                <!-- 第十七章 -->
+                <!-- Bab 17 -->
                 <div id="di-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 17: Sambungan Telefon dengan Peranti Lain</h3>
                     <p class="chapter-intro mb-4">: Jika anda menggunakan iPhone dengan Mac, AirDrop adalah fungsi pertama yang perlu anda pelajari. Pada telefon pintar, ketik Kongsi → AirDrop → pilih Mac anda, foto akan sampai serta-merta, tanpa menggunakan data dan tanpa Wi-Fi, menggunakan Bluetooth dan sambungan terus Wi-Fi. Terdapat juga fungsi yang mudah diabaikan dipanggil "Papan Keratan Universal" — salin teks di telefon pintar, tampal terus di Mac, seperti sihir.</p>
@@ -5165,7 +5165,7 @@
                     </div>
                 </div>
 
-                <!-- 第十八章 -->
+                <!-- Bab 18 -->
                 <div id="di-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 18: Sandaran Data &amp; Pemindahan</h3>
                     <p class="chapter-intro mb-4">: Foto video (jika penyegerakan awan tidak diaktifkan), nota, SMS, rekod panggilan, fail yang dimuat turun.</p>
@@ -5263,7 +5263,7 @@
                     </div>
                 </div>
 
-                <!-- 第十九章 -->
+                <!-- Bab 19 -->
                 <div id="di-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 19: Pengesanan Kerosakan &amp; Penyelamatan Diri</h3>
                     <p class="chapter-intro mb-4">Periksa ruang penyimpanan</p>
@@ -5359,7 +5359,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章：开发者模式与高级权限 -->
+                <!-- Bab 20：开发者模式与高级权限 -->
                 <div id="di-er-shi-zhang-jinjie" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Cara mengaktifkan:</h3>
                     <p class="chapter-intro mb-4">Android</p>
@@ -5561,7 +5561,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章附：Termux便携式Linux终端 -->
+                <!-- Lampiran Bab 20：TermuxMudah alihLinux终端 -->
                 <div id="di-er-shi-zhang-termux" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kelebihan teras Termux terletak pada ringan dan kebolehluasan yang tinggi, sesuai untuk pelbagai senario seperti pembangunan, pembelajaran dan pentadbiran sistem. Ia menggabungkan pakej perisian standard dengan emulasi terminal yang tepat dalam satu penyelesaian sumber terbuka.</h3>
                     <p class="chapter-intro mb-4">2. Fungsi dan Ciri Teras</p>
@@ -5685,12 +5685,12 @@
                 </div>
             </section>
 
-            <!-- 四、超越篇 -->
+            <!-- 四、Bahagian lanjutan -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">4. Bahagian Melangkaui (Bab 21-26)</h2>
                 <p class="chapter-intro mb-4">VPN, nama penuhnya Rangkaian Peribadi Maya (Virtual Private Network). Anda boleh bayangkan ia seperti membina sebuah terowong bawah tanah eksklusif dan disulitkan antara rumah anda dan laman web yang ingin dituju. Anda berjalan dalam terowong itu, orang di luar tidak dapat melihat apa yang anda pegang atau ke mana anda pergi.</p>
 
-                <!-- 第二十一章 -->
+                <!-- Bab 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Pelayaran biasa</h3>
                     <p class="chapter-intro mb-4">: Telefon anda → rangkaian awam → laman web sasaran. Penghala dan suis yang dilalui di tengah-tengah, mana-mana bahagian boleh ada orang "mengintip" data yang anda hantar. Terutamanya pada Wi-Fi awam di kafe dan lapangan terbang, kalau dikatakan "berlari telanjang", memang tidak berlebihan.</p>
@@ -5780,7 +5780,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十二章 -->
+                <!-- Bab 22 -->
                 <div id="di-er-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 22: Cara AI Berfungsi dalam Telefon</h3>
                     <p class="chapter-intro mb-4">Mendengar dengan jelas (Pengecaman Suara)</p>
@@ -6047,7 +6047,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章 -->
+                <!-- Bab 23 -->
                 <div id="di-er-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 23: Pemikiran Pengaturcaraan &amp; Pengenalan Automasi</h3>
                     <p class="chapter-intro mb-4">Anda tidak perlu mengendalikan secara manual setiap kali, dan tidak perlu mengingat apa yang perlu dilakukan—telefon akan menilai masa yang sesuai sendiri, dan melaksanakan sendiri.</p>
@@ -6147,7 +6147,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章附：GitHub入门指南 -->
+                <!-- Lampiran Bab 23：GitHubPanduan permulaan -->
                 <div id="di-er-shi-san-zhang-github" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">platform hos kod dan kolaborasi</h3>
                     <p class="chapter-intro mb-4">berasaskan Git. Ia dilancarkan pada 2008, diperoleh Microsoft pada 2018, dan sehingga kini masih menjadi platform hos kod sumber terbuka terbesar di dunia, menghoskan ratusan juta repositori, merangkumi hampir semua bahasa pengaturcaraan utama.</p>
@@ -6340,7 +6340,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十四章：Root权限与BL锁深度解析 -->
+                <!-- Bab 24：RootKebenaran danBLAnalisis mendalam kunci -->
                 <div id="di-er-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Prinsip kerja kunci BL:</h3>
                     <p class="chapter-intro mb-4">Mengesahkan tandatangan</p>
@@ -6484,7 +6484,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十五章 -->
+                <!-- Bab 25 -->
                 <div id="di-er-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">"Pembersihan besar" diri sendiri</h3>
                     <p class="chapter-intro mb-4">: Selesaikan sandaran lengkap terakhir kali, log keluar semua akaun.</p>
@@ -6747,7 +6747,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十六章 -->
+                <!-- Bab 26 -->
                 <div id="di-er-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 26: Hadapan Teknologi Telefon Semasa</h3>
                     <p class="chapter-intro mb-4">Selesai bercakap tentang "urusan selepas kematian" telefon lama, mari kita lihat kembali masa kini. 2024-2026 adalah tempoh letupan teknologi telefon: AI dari awan masuk ke poket, komunikasi satelit dari flagship turun ke model kelas pertengahan, skrin lipat dari "percubaan teknologi" ke "boleh guna sebagai telefon utama". Mari kita kira teknologi frontier yang sedang berlaku ini, bantu anda tentukan "patut tukar telefon sekarang atau tidak" dan "tukar telefon apa".</p>
@@ -6841,12 +6841,12 @@
                 </div>
             </section>
 
-            <!-- 五、实战篇（第27-32章） -->
+            <!-- 五、Bahagian amalan（第27-32章） -->
             <section id="shi-zhan-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">V. Bahagian Praktikal (Bab 27-32)</h2>
                 <p class="chapter-intro mb-4">Selepas belajar pengetahuan teori 26 bab sebelum ini, sekarang adalah masa untuk menggunakannya. Enam bab ini tidak bercakap kosong - dari bantu warga emas tetap telefon hingga beli telefon baru dengan mudah, dari bina tabiat digital sihat hingga ajar pelancangan skrin dan tangkap video pendek, kemudian ke manual keselamatan kecemasan. Setiap bab adalah kemahiran praktikal yang anda boleh terus guna, habis baca boleh guna.</p>
 
-                <!-- 第二十七章：适老化专题 -->
+                <!-- Bab 27：Topik khas mesra warga emas -->
                 <div id="di-er-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 27: Ibu bapa juga boleh guna dengan mudah - Panduan lengkap penyesuaian warga emas telefon</h3>
                     <p class="chapter-intro mb-4">Jujur, tulis bab ini saya teringat ibu bapa saya. Ibu saya setiap kali telefon popup "kemas kini sistem", dia tidak berani klik, takut rosakkan telefon. Bapa saya fon WeChat lebih kecil dari semut, tetapi dia tidak tahu cara besarkan, jadi terkilan mata lihat dua tahun. Ini bukan mereka "bodoh", tetapi telefon lalai anggap semua orang sebagai pemuda dua puluhan. Bab ini, saya guna paling bahasa langsung, satu persatu selesaikan masalah paling sakit kepala warga emas dalam guna telefon.</p>
@@ -6994,7 +6994,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十八章：手机选购终极指南 -->
+                <!-- Bab 28：Panduan ultimate pembelian telefon -->
                 <div id="di-er-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 28: Belanjakan dengan Bijak, Dapatkan Telefon Idaman — Panduan Membeli Telefon Ultimat</h3>
                     <p class="chapter-intro mb-4">Beli telefon ini, ramai orang akan lihat ulasan seminggu lebih awal, banding harga sebulan, hasilnya akhir masih keliru belanjakan lima enam ribu beli satu flagship yang sebenarnya tidak diguna. Bab ini tidak senaraikan jadual parameter - itu semua anda boleh lihat di laman web rasmi. Yang saya mahu buat, adalah beri anda satu "cara pemikiran pilih telefon", selepas ini tidak kira pasaran keluarkan telefon baru apa, anda boleh nilaikan sendiri sama ada sesuai untuk anda.</p>
@@ -7182,7 +7182,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十九章：数字健康 -->
+                <!-- Bab 29：Kesihatan digital -->
                 <div id="di-er-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 29: Kesihatan Digital — Wujudkan Hubungan Sihat dengan Telefon</h3>
                     <p class="chapter-intro mb-4">Pernahkah anda ada pengalaman begini: asalnya mahu skrol 5 minit video pendek, hasilnya angkat kepala sudah lalu dua jam? Atau malam baring di katil skrol telefon, semakin skrol semakin bersemangat, akhirnya 2 pagi</p>
@@ -7274,7 +7274,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十章：投屏、演示与车载互联 -->
+                <!-- Bab 30：投屏、Demo dan sambungan kereta -->
                 <div id="di-san-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 30: Pantau Skrin, Pembentangan dan Sambungan Kereta</h3>
                     <p class="chapter-intro mb-4">Skrin telefon paling besar juga 7 inci, tetapi TV anda 55 inci, projektor anda 100 inci. Baling gambar telefon ke skrin besar, pengalaman adalah dimensi berbeza. Bab ini jelaskan pelancangan skrin, demo</p>
@@ -7367,7 +7367,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十一章：短视频拍摄与内容创作入门 -->
+                <!-- Bab 31：Pengenalan penggambaran video pendek dan penciptaan kandungan -->
                 <div id="di-san-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 31: Pengenalan Penggambaran Video Pendek dan Penciptaan Kandungan</h3>
                     <p class="chapter-intro mb-4">2026, video pendek bukan lagi "mainan orang muda", ia telah menjadi cara asas semua orang mendapatkan maklumat dan menyatakan diri. Tidak kira anda mahu rekod kehidupan, kongsi pengetahuan, atau buat kerja sampingan, telefon adalah alat penciptaan terbaik anda - tidak perlu beli kamera, tidak perlu belajar Premiere, satu telefon boleh mula. Bab ini bantu anda bermula dari sifar.</p>
@@ -7450,7 +7450,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十二章：手机安全急救手册 -->
+                <!-- Bab 32：Manual pertolongan cemas keselamatan telefon -->
                 <div id="di-san-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 32: Manual Kecemasan Keselamatan Telefon</h3>
                     <p class="chapter-intro mb-4">Jejak aktiviti: Guna AI untuk analisis aktiviti dan beri cadangan.</p>
@@ -7619,12 +7619,12 @@
                 </div>
             </section>
 
-            <!-- 六、展望篇（第33-41章） -->
+            <!-- 六、Bahagian prospek（第33-41章） -->
             <section id="zhan-wang-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">VI. Bahagian Pandangan Hadapan (Bab 33-41)</h2>
                 <p class="chapter-intro mb-4">Tetapan → Aksesibiliti → Pengesanan Jatuh.</p>
 
-                <!-- 第三十三章 -->
+                <!-- Bab 33 -->
                 <div id="di-san-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 33: Pandangan Hadapan — Perjalanan Seterusnya Telefon</h3>
                     <p class="chapter-intro mb-4">Jika telefon kesan jatuh, telefon akan papar amaran, jika tidak respons dalam 60 saat, auto-panggil kecemasan.</p>
@@ -7695,7 +7695,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十四章：车机互联深度指南 -->
+                <!-- Bab 34：Panduan mendalam sambungan kereta-telefon -->
                 <div id="di-san-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 34: Panduan Mendalam Sambungan Kereta — Integrasi Telefon dan Automobil</h3>
                     <p class="chapter-intro mb-4">Cas pantas 200W+ telah ada, boleh cas telefon dari 0 ke 100% dalam masa 10 minit.</p>
@@ -7825,7 +7825,7 @@
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">Topik kanak-kanak dan telefon (Bab 35)</h2>
                 <p class="chapter-intro mb-4">Hubungan anak dan telefon, adalah salah satu masalah paling sakit kepala ibu bapa generasi ini. Beri awal takut ketagihan, beri lewat takut ketinggalan; kawal banyak takut memberontak, kawal kurang takut hilang kawalan. Bab ini tidak berpihak, tidak berdakwah, hanya membongkar "berapa umur beri, bagaimana kawal, bagaimana ajar, bagaimana lindungi" jadi langkah boleh laksana, bantu anda jadi ibu bapa yakin dalam era digital.</p>
 
-                <!-- 第三十五章 -->
+                <!-- Bab 35 -->
                 <div id="di-san-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 35: Kanak-kanak dan Telefon — Panduan Pendidikan Era Digital</h3>
                     <p class="chapter-intro mb-4">Ajar anak-anak tentang penggunaan teknologi secara bertanggungjawab, keselamatan dalam talian, dan etika digital.</p>
@@ -7972,7 +7972,7 @@
                 </div>
             </section>
 
-            <!-- 第三十六章：手机与智能家居——让家变聪明 -->
+            <!-- Bab 36：Telefon dan rumah pintar——Buat rumah anda pintar -->
             <div id="di-san-shi-liu-zhang" class="mb-10 content-section">
                 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Bab 36: Telefon dan Rumah Pintar — Jadikan Rumah Lebih Bijak</h3>
                 <p class="chapter-intro mb-4">Telefon juga boleh buat satu perkara semakin penting - jadi "alat kawal jauh" seluruh rumah. Dari satu lampu, satu plug ke satu kunci pintu, peranti pintar sedang dari "mainan geek" jadi "perkara</p>
@@ -8494,7 +8494,7 @@
                     <p class="mb-2">Kesimpulan dahulu:</p>
                 </div>
 
-                <!-- 附录F：折叠屏专题 -->
+                <!-- 附录F：Topik khas skrin lipat -->
                 <div id="fu-lu-f" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Lampiran F: Topik Khas Pembelian &amp; Penggunaan Skrin Lipat</h3>
                     <p class="chapter-intro mb-4">. Ia berada di antara produk geek niche dan barangan penggunaan umum, sesuai untuk kumpulan tertentu.</p>
@@ -8646,7 +8646,7 @@
                     </div>
                 </div>
 
-                <!-- 附录G：全书速查索引 -->
+                <!-- 附录G：Indeks rujukan cepat buku -->
                 <div id="fu-lu-g" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Lampiran G: Indeks Rujukan Pantas Seluruh Buku</h3>
                     <p class="chapter-intro mb-4">Disusun mengikut pinyin, memudahkan anda cari bab yang sepadan dengan cepat.</p>
@@ -8744,7 +8744,7 @@
                     </div>
                 </div>
 
-                <!-- 附录H：版本路线图 -->
+                <!-- 附录H：Peta jalan versi -->
                 <div id="fu-lu-h" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Lampiran H: Peta Jalan Versi</h3>
                     <p class="chapter-intro mb-4">Buku ini masih dikemas kini secara berterusan. Berikut adalah arah perancangan versi akan datang, dialu-alukan anda beritahu kami kandungan yang paling anda ingin lihat dalam maklum balas.</p>
@@ -8768,7 +8768,7 @@
         </main>
     </div>
 
-    <!-- 快捷工具：浮动按钮组 -->
+    <!-- Alat pantas：Kumpulan butang terapung -->
     <div id="quick-tools" class="quick-tools no-print" aria-label="Alat pantas">
         <button id="quick-search" class="quick-tool-btn" title="Cari (Ctrl+K)" aria-label="Cari">
             <i class="fas fa-search" aria-hidden="true"></i>
@@ -8793,7 +8793,7 @@
         </button>
     </div>
 
-    <!-- 快捷键面板 -->
+    <!-- Panel pintasan -->
     <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="Pintasan papan kekunci">
         <div class="search-panel" style="max-width:480px">
             <div class="search-input-wrapper">
@@ -8813,7 +8813,7 @@
         </div>
     </div>
 
-    <!-- 备份/恢复弹窗 -->
+    <!-- 备份/Popup pemulihan -->
     <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="Sandaran dan Pemulihan">
         <div class="search-panel" style="max-width:520px">
             <div class="search-input-wrapper">
@@ -8848,13 +8848,13 @@
         </div>
     </div>
 
-    <!-- 阅读连续天数提示 -->
+    <!-- Peringatan hari berturut-turut membaca -->
     <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
         <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
         <span id="streak-toast-text">Bacaan berterusan hari ke-X!</span>
     </div>
 
-    <!-- 语音朗读控件栏 -->
+    <!-- Bar kawalan bacaan suara -->
     <div id="tts-controls" class="tts-controls" role="region" aria-label="Kawalan bacaan suara" aria-live="polite">
         <span class="tts-chapter-label" id="tts-label" title="Bab bacaan semasa">Belum mula</span>
         <button class="tts-btn" id="tts-prev" title="Bahagian sebelumnya" aria-label="Bahagian sebelumnya"><i class="fas fa-step-backward"></i></button>
@@ -8866,7 +8866,7 @@
         <button class="tts-btn" id="tts-stop" title="Berhenti bacaan" aria-label="Berhenti bacaan"><i class="fas fa-times"></i></button>
     </div>
 
-    <!-- 回到顶部按钮 -->
+    <!-- Butang kembali ke atas -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="Kembali ke atas">
         <svg class="progress-ring" viewBox="0 0 40 40">
             <circle class="bg" cx="20" cy="20" r="18"/>
@@ -8875,10 +8875,10 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- 阅读位置恢复提示 -->
+    <!-- Peringatan pemulihan kedudukan bacaan -->
     <div id="restore-toast" class="restore-position-toast" role="alert">
         <i class="fas fa-bookmark" aria-hidden="true"></i>
-        <span id="restore-toast-text">上次读到：...</span>
+        <span id="restore-toast-text">Terakhir dibaca: ...</span>
         <button class="btn-restore" id="restore-btn">Sambung Membaca</button>
         <button class="btn-dismiss" id="dismiss-btn">Tutup</button>
     </div>
@@ -8934,12 +8934,12 @@
             if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
             if (quickTheme) quickTheme.addEventListener('click', toggleTheme);
 
-            // ===== 滚动：进度 + 阴影 + 返回顶部 + 目录进度 + 进度环 =====
+            // ===== 滚动：进度 + 阴影 + Kembali ke atas + Progres jadual kandungan + Cincin progres =====
             const sections = $$('.content-section');
             const totalChapters = sections.length;
             if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} Bab`;
 
-            // 进度环参数
+            // Parameter cincin progres
             const progressRingFg = backToTop.querySelector('.progress-ring .fg');
             const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
             if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
@@ -8953,7 +8953,7 @@
                         const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
                         progressBar.style.width = progress + '%';
 
-                        // 进度环更新
+                        // Kemas kini cincin progres
                         if (progressRingFg) {
                             const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
                             progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
@@ -8973,7 +8973,7 @@
                             backToTop.classList.remove('opacity-100', 'visible');
                         }
 
-                        // 阅读到第几章
+                        // Sudah membaca sehingga bab berapa
                         let passedChapters = 0;
                         const viewportTop = scrollY + 100;
                         sections.forEach(sec => {
@@ -9002,15 +9002,15 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 阅读位置记忆 =====
+            // ===== Ingatan kedudukan bacaan =====
             const POSITION_KEY = 'phoneCourse_scrollPos';
             const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
             let savePosTimer = null;
             function saveReadingPosition() {
                 const scrollY = window.scrollY;
-                if (scrollY < 200) return; // 太靠前不保存
+                if (scrollY < 200) return; // Terlalu awal, jangan simpan
                 localStorage.setItem(POSITION_KEY, scrollY.toString());
-                // 找到当前章节名
+                // Cari nama bab semasa
                 let currentChapter = '';
                 const viewportTop = scrollY + 100;
                 for (let i = sections.length - 1; i >= 0; i--) {
@@ -9027,14 +9027,14 @@
                 savePosTimer = setTimeout(saveReadingPosition, 1000);
             }, { passive: true });
 
-            // 页面加载时恢复位置
+            // Pulihkan kedudukan semasa halaman dimuatkan
             function tryRestorePosition() {
                 const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
                 const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
-                    restoreToastText.textContent = `上次读到：${savedChapter}`;
+                    restoreToastText.textContent = `Terakhir dibaca: ${savedChapter}`;
                     setTimeout(() => restoreToast.classList.add('show'), 800);
-                    // 10秒后自动隐藏
+                    // 10Sembunyi automatik selepas beberapa saat
                     setTimeout(() => restoreToast.classList.remove('show'), 15000);
                 }
             }
@@ -9053,7 +9053,7 @@
                 });
             }
 
-            // ===== 滚动入场动画 =====
+            // ===== Animasi masuk semasa menatal =====
             const visibleObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -9062,7 +9062,7 @@
                     }
                 });
             }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
-            // 第一屏的内容直接可见
+            // Kandungan skrin pertama terus kelihatan
             sections.forEach((sec, i) => {
                 const rect = sec.getBoundingClientRect();
                 if (rect.top < window.innerHeight) {
@@ -9072,7 +9072,7 @@
                 }
             });
 
-            // ===== 侧边栏打开/关闭 =====
+            // ===== Buka bar sisi/关闭 =====
             function openSidebar() {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
@@ -9091,13 +9091,13 @@
             });
             if (overlay) overlay.addEventListener('click', closeSidebar);
 
-            // 快捷工具：打开目录
+            // Alat pantas：Buka jadual kandungan
             if (quickToc) quickToc.addEventListener('click', () => {
                 if (window.innerWidth < 1024) openSidebar();
                 else window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 全局锚点导航：补偿固定导航栏偏移 =====
+            // ===== Navigasi sauh global：ampampensasi ofset bar navigasi tetap =====
             const NAVBAR_HEIGHT = 80;
             function scrollToAnchor(id) {
                 const el = document.getElementById(id);
@@ -9118,7 +9118,7 @@
                 requestAnimationFrame(() => scrollToAnchor(targetId));
             }, { passive: false });
 
-            // ===== 目录折叠 =====
+            // ===== Lipat jadual kandungan =====
             $$('.toc-toggle-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -9137,7 +9137,7 @@
                 });
             });
 
-            // ===== 目录筛选 =====
+            // ===== Penapis jadual kandungan =====
             if (tocFilter && tocList) {
                 tocFilter.addEventListener('input', () => {
                     const q = tocFilter.value.trim().toLowerCase();
@@ -9154,7 +9154,7 @@
                 });
             }
 
-            // ===== 目录高亮 =====
+            // ===== Sorotan jadual kandungan =====
             const tocLinkMap = new Map();
             $$('#sidebar a').forEach(item => {
                 const href = item.getAttribute('href');
@@ -9196,7 +9196,7 @@
 
             sections.forEach(section => observer.observe(section));
 
-            // ===== 书签系统 =====
+            // ===== Sistem tanda buku =====
             const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
             function getBookmarks() {
                 try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
@@ -9212,7 +9212,7 @@
             }
             function isBookmarked(id) { return getBookmarks().includes(id); }
 
-            // 给每个章节添加书签按钮
+            // Tambahkan butang tanda buku ke setiap bab
             sections.forEach(sec => {
                 const id = sec.id;
                 if (!id) return;
@@ -9227,10 +9227,10 @@
                     btn.classList.toggle('active', added);
                     btn.querySelector('span').textContent = added ? 'Telah ditanda buku' : 'Tanda buku';
                     btn.setAttribute('aria-label', added ? 'Buang tanda buku' : 'Tanda buku bab ini');
-                    // 更新侧边栏标记
+                    // Kemas kini penanda bar sisi
                     updateTocBookmark(id, added);
                 });
-                // 插入到h3后面
+                // Sisipkan keh3后面
                 h3.parentNode.insertBefore(btn, h3.nextSibling);
             });
 
@@ -9240,10 +9240,10 @@
                     tocLink.classList.toggle('bookmarked', isBookmarked);
                 }
             }
-            // 初始化侧边栏书签标记
+            // Mulakan penanda tanda buku bar sisi
             getBookmarks().forEach(id => updateTocBookmark(id, true));
 
-            // ===== 章节完成勾选 =====
+            // ===== Tanda selesai bab =====
             const COMPLETED_KEY = 'phoneCourse_completed';
             function getCompleted() {
                 try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
@@ -9264,7 +9264,7 @@
                 if (!id) return;
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
-                // 找到meta条或h3前面的元素
+                // 找到meta条或h3Elemen sebelumnya
                 const metaDiv = h3.previousElementSibling;
                 const check = document.createElement('button');
                 check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
@@ -9275,9 +9275,9 @@
                     check.classList.toggle('checked', done);
                     check.querySelector('span:last-child').textContent = done ? 'Telah dibaca' : 'Tanda dibaca';
                     check.setAttribute('aria-label', done ? 'Buang tanda dibaca' : 'Tanda sebagai telah dibaca');
-                    // 更新侧边栏
+                    // Kemas kini bar sisi
                     updateTocCompleted(id, done);
-                    // 更新完成进度
+                    // Kemas kini progres penyelesaian
                     updateCompletedProgress();
                 });
                 if (metaDiv && metaDiv.classList.contains('flex')) {
@@ -9298,13 +9298,13 @@
             function updateCompletedProgress() {
                 const completed = getCompleted().length;
                 if (readingProgressText) {
-                    // 也更新完成数显示
+                    // Juga kemas kini paparan jumlah selesai
                     const passed = parseInt(readingProgressText.textContent) || 0;
                     readingProgressText.textContent = `${passed} / ${totalChapters} 章`;
                 }
             }
 
-            // ===== 搜索（增强：键盘导航 + 结果计数） =====
+            // ===== 搜索（增强：Navigasi papan kekunci + Kiraan hasil） =====
             let searchData = null;
             let searchSelectedIdx = -1;
             let searchResultItems = [];
@@ -9373,7 +9373,7 @@
                         return;
                     }
 
-                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">找到 ${results.length} 个结果</div>`;
+                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">找到 ${results.length} hasil</div>`;
                     searchResults.innerHTML = countHtml + results.map(item => {
                         const idx = item.text.toLowerCase().indexOf(query);
                         const start = Math.max(0, idx - 40);
@@ -9403,7 +9403,7 @@
                 }, 200);
             });
 
-            // 搜索键盘导航
+            // Navigasi papan kekunci carian
             if (searchInput) searchInput.addEventListener('keydown', (e) => {
                 if (!searchResultItems.length) return;
                 if (e.key === 'ArrowDown') {
@@ -9448,7 +9448,7 @@
                 });
             });
 
-            // ===== 触摸滑动关闭侧边栏 =====
+            // ===== Leret untuk menutup bar sisi =====
             let touchStartX = 0;
             let touchStartY = 0;
             sidebar.addEventListener('touchstart', (e) => {
@@ -9461,7 +9461,7 @@
                 if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
             }, { passive: true });
 
-            // ===== 章节导航 =====
+            // ===== Navigasi bab =====
             const sectionIds = sections.map(s => s.id);
             sections.forEach((section, i) => {
                 const nav = document.createElement('div');
@@ -9484,7 +9484,7 @@
             if (printBtn) printBtn.addEventListener('click', doPrint);
             if (quickPrint) quickPrint.addEventListener('click', doPrint);
 
-            // ===== 全局键盘快捷键 =====
+            // ===== Pintasan papan kekunci global =====
             const shortcutsOverlay = $('#shortcuts-overlay');
             const backupOverlay = $('#backup-overlay');
             function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
@@ -9501,7 +9501,7 @@
             if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
             if (backupClose) backupClose.addEventListener('click', closeBackup);
 
-            // 点击遮罩关闭弹窗
+            // Klik tindanan untuk menutup popup
             if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
                 if (e.target === shortcutsOverlay) closeShortcuts();
             });
@@ -9515,7 +9515,7 @@
                     e.preventDefault();
                     searchOverlay.classList.contains('active') ? closeSearch() : openSearch();
                 } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                    // 浏览器已经处理打印
+                    // Pelayar telah mengendalikan pencetakan
                 } else if (e.key === 'Escape') {
                     if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
                     if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
@@ -9529,7 +9529,7 @@
                 }
             });
 
-            // ===== 阅读连续天数追踪 =====
+            // ===== Penjejakan hari berturut-turut membaca =====
             const STREAK_KEY = 'reading-streak';
             const STREAK_DATE_KEY = 'reading-streak-date';
             const streakToast = $('#streak-toast');
@@ -9551,18 +9551,18 @@
                         localStorage.setItem(STREAK_KEY, streak.toString());
                         localStorage.setItem(STREAK_DATE_KEY, today);
 
-                        // 显示连续天数提示
+                        // Paparkan peringatan hari berturut-turut
                         if (streak >= 2 && streakToast && streakToastText) {
-                            streakToastText.textContent = '🔥 连续阅读第 ' + streak + ' 天！坚持下去！';
+                            streakToastText.textContent = '🔥 Membaca berturut-turut hari  ' + streak + '  hari! Teruskan!';
                             streakToast.classList.add('show');
                             setTimeout(() => streakToast.classList.remove('show'), 5000);
                         }
                     }
-                } catch(e) { /* localStorage 可能不可用 */ }
+                } catch(e) { /* localStorage Mungkin tidak tersedia */ }
             }
             updateStreak();
 
-            // ===== 备份/恢复功能 =====
+            // ===== 备份/Fungsi pemulihan =====
             function exportBackup() {
                 try {
                     const data = {
@@ -9579,20 +9579,20 @@
                         bookmarks: [],
                         ratings: {}
                     };
-                    // 收集健康自检状态
+                    // Kumpulkan status pemeriksaan kesihatan
                     for (let i = 0; i < 8; i++) {
                         data.healthChecks[i] = localStorage.getItem('health-check-' + i);
                     }
-                    // 收集章节完成状态
+                    // Kumpulkan status selesai bab
                     $$('.chapter-check.checked').forEach(c => {
                         const sec = c.closest('.content-section');
                         if (sec) data.chapterChecks[sec.id] = true;
                     });
-                    // 收藏书签
+                    // Tanda Buku书签
                     $$('.toc-item.bookmarked').forEach(b => {
                         data.bookmarks.push(b.getAttribute('href').replace('#', ''));
                     });
-                    // 收集评分
+                    // Kumpulkan penilaian
                     $$('.chapter-rating').forEach(r => {
                         const sec = r.closest('.content-section');
                         if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
@@ -9621,13 +9621,13 @@
                         if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
                         if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
                         if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
-                        // 恢复健康自检
+                        // Pulihkan pemeriksaan kesihatan
                         if (data.healthChecks) {
                             Object.keys(data.healthChecks).forEach(i => {
                                 localStorage.setItem('health-check-' + i, data.healthChecks[i]);
                             });
                         }
-                        // 恢复章节完成状态
+                        // Pulihkan status selesai bab
                         if (data.chapterChecks) {
                             Object.keys(data.chapterChecks).forEach(id => {
                                 const sec = document.getElementById(id);
@@ -9639,7 +9639,7 @@
                                 }
                             });
                         }
-                        // 恢复书签
+                        // Pulihkan tanda buku
                         if (data.bookmarks) {
                             data.bookmarks.forEach(id => {
                                 const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
@@ -9674,7 +9674,7 @@
             });
             if (backupReset) backupReset.addEventListener('click', resetAllData);
 
-            // ===== 章节评分系统 =====
+            // ===== Sistem penilaian bab =====
             sections.forEach(sec => {
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
@@ -9695,7 +9695,7 @@
                     });
                     ratingDiv.appendChild(star);
                 }
-                // 插入到h3后面
+                // Sisipkan keh3后面
                 h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
                 updateStars(ratingDiv);
             });
@@ -9707,7 +9707,7 @@
                 });
             }
 
-            // ===== scroll 防抖优化 =====
+            // ===== scroll Pengoptimuman penstabilan =====
             let scrollTicking = false;
             const originalOnScroll = onScroll;
             function debouncedScroll() {
@@ -9732,7 +9732,7 @@
                 });
             }
 
-            // ===== 自动给每个章节标题添加面包屑与难度标签 =====
+            // ===== Tambahkan breadcrumb dan tag kesukaran ke setiap tajuk bab secara automatik =====
             sections.forEach(sec => {
                 const id = sec.id || '';
                 const h3 = sec.querySelector('h3');
@@ -9765,11 +9765,11 @@
                 h3.parentNode.insertBefore(meta, h3);
             });
 
-            // ===== 给章节添加"Rumusan"区块 =====
+            // ===== Tambahkan ke bab"Rumusan"区块 =====
             function addChapterSummary(sec, points) {
                 const div = document.createElement('div');
                 div.className = 'chapter-summary';
-                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan bab</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
                 const nav = sec.querySelector('.chapter-nav');
                 if (nav) sec.insertBefore(div, nav);
                 else sec.appendChild(div);
@@ -9815,13 +9815,13 @@
             };
             Object.keys(summaries).forEach(id => {
                 const sec = document.getElementById(id);
-                // 跳过已有内联小结的章节，避免重复
+                // Langkau bab yang sudah mempunyai ringkasan sebaris，Elakkan pendua
                 if (sec && !sec.querySelector('.chapter-summary')) {
                     addChapterSummary(sec, summaries[id]);
                 }
             });
 
-            // ===== 复制按钮（给 kbd 元素添加） =====
+            // ===== Butang salin（给 kbd Penambahan elemen） =====
             $$('.kbd').forEach(kbd => {
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
@@ -9841,11 +9841,11 @@
                 kbd.parentNode.insertBefore(btn, kbd.nextSibling);
             });
 
-            // ===== 可折叠长内容（h4 级别） =====
+            // ===== Kandungan panjang boleh lipat（h4 级别） =====
             sections.forEach(sec => {
                 const h4s = $$('h4', sec);
                 h4s.forEach(h4 => {
-                    // 只对内容较长的h4段落添加折叠
+                    // Hanya untuk kandungan yang lebih panjangh4Tambah lipat ke perenggan
                     let sibling = h4.nextElementSibling;
                     let contentLength = 0;
                     let elements = [];
@@ -9855,7 +9855,7 @@
                         sibling = sibling.nextElementSibling;
                     }
                     if (contentLength > 800) {
-                        // 添加折叠头
+                        // Tambah tajuk lipat
                         const header = document.createElement('div');
                         header.className = 'collapsible-header';
                         header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
@@ -9876,7 +9876,7 @@
                 });
             });
 
-            // ===== 学习仪表盘：阅读进度 + 手机健康自检 =====
+            // ===== Papan pemuka pembelajaran：Progres bacaan + Pemeriksaan kesihatan telefon =====
             const dashProgressRing = $('#progress-ring-fg');
             const progressPercent = $('#progress-percent');
             const readCountEl = $('#read-count');
@@ -9889,7 +9889,7 @@
             const DASH_RING_CIRCUMFERENCE = 213.6;
 
             function updateDashboard() {
-                // 阅读进度
+                // Progres bacaan
                 const completed = $$('.chapter-check.checked').length;
                 const total = sections.length;
                 const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -9899,28 +9899,28 @@
                 if (progressPercent) progressPercent.textContent = pct + '%';
                 if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
 
-                // 书签数
+                // Bilangan tanda buku
                 const bookmarks = $$('.toc-item.bookmarked').length;
                 if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
 
-                // 上次章节
+                // Bab terakhir
                 const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
 
-                // 健康自检
+                // Pemeriksaan kesihatan
                 const checked = checkInputs.filter(c => c.checked).length;
                 const totalChecks = checkInputs.length;
                 if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
                 if (healthBarEl) healthBarEl.style.width = (checked / totalChecks * 100) + '%';
                 if (healthMsgEl) {
                     if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>Markah penuh! Keadaan keselamatan telefon anda cemerlang';
-                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = '不错！还有 ' + (totalChecks - checked) + ' 项可以完善';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'Bagus! Masih ada  ' + (totalChecks - checked) + '  item untuk diperbaiki';
                     else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'Lulus, cadangan utamakan proses item keselamatan tidak ditanda';
                     else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>Telefon anda ada risiko keselamatan, sila tambah baik secepat mungkin';
                 }
             }
 
-            // 恢复自检状态
+            // Pulihkan status pemeriksaan
             checkInputs.forEach((input, i) => {
                 const saved = localStorage.getItem('health-check-' + i);
                 if (saved === 'true') input.checked = true;
@@ -9931,10 +9931,10 @@
             });
 
             updateDashboard();
-            // 每隔3秒刷新一次（捕获章节完成勾选的变化）
+            // 每隔3Segarkan sekali sesaat（Tangkap perubahan tanda selesai bab）
             setInterval(updateDashboard, 3000);
 
-            // ===== 语音朗读（TTS）=====
+            // ===== Bacaan suara（TTS）=====
             const ttsControls = $('#tts-controls');
             const ttsPlayBtn = $('#tts-play');
             const ttsPrevBtn = $('#tts-prev');
@@ -9958,11 +9958,11 @@
 
             function getSectionText(sec) {
                 if (!sec) return '';
-                // 克隆并移除不需要朗读的元素
+                // Klon dan alih keluar elemen yang tidak perlu dibacakan
                 const clone = sec.cloneNode(true);
                 const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
                 removes.forEach(el => el.remove());
-                // 移除折叠体但保留其文字内容
+                // Alih keluar kontena lipat tetapi simpan kandungan teksnya
                 const text = clone.textContent.replace(/\s+/g, ' ').trim();
                 return text;
             }
@@ -9989,7 +9989,7 @@
                 ttsUtterance.pitch = 1.0;
                 ttsUtterance.volume = 1.0;
 
-                // 尝试使用更自然的中文语音
+                // Cuba gunakan suara Cina yang lebih semula jadi
                 const voices = window.speechSynthesis.getVoices();
                 const zhVoice = voices.find(v => v.lang.startsWith('ms'));
                 if (zhVoice) ttsUtterance.voice = zhVoice;
@@ -10003,7 +10003,7 @@
                 };
 
                 ttsUtterance.onend = () => {
-                    // 自动播放下一章节
+                    // Main automatikBab Berikutnya节
                     if (ttsSectionIndex < sections.length - 1 && ttsActive) {
                         ttsSectionIndex++;
                         speakSection(ttsSectionIndex);
@@ -10025,9 +10025,9 @@
 
             function toggleTtsPlay() {
                 if (!ttsActive) {
-                    // 找到当前可见章节
+                    // Cari bab yang kelihatan semasa
                     if (ttsSectionIndex < 0) {
-                        // 从头开始或从当前滚动位置最近的章节开始
+                        // Mula dari awal atau dari bab terdekat dengan kedudukan tatal semasa
                         const scrollCenter = window.scrollY + window.innerHeight / 2;
                         let closestIdx = 0;
                         let closestDist = Infinity;
@@ -10068,7 +10068,7 @@
                 if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
             }
 
-            // 事件绑定
+            // Pengikatan acara
             if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
             if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
             if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
@@ -10088,7 +10088,7 @@
                 updateTtsSpeedDisplay();
                 if (ttsActive && ttsUtterance) {
                     ttsUtterance.rate = ttsSpeed;
-                    // 重新创建并播放当前段落
+                    // Buat semula dan mainkan perenggan semasa
                     const idx = ttsSectionIndex;
                     window.speechSynthesis.cancel();
                     setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
@@ -10106,7 +10106,7 @@
             });
             if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
 
-            // 键盘快捷键：按 R 键切换朗读
+            // Pintasan papan kekunci：按 R Togol bacaan dengan kekunci
             document.addEventListener('keydown', (e) => {
                 if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
                 if (e.key === 'r' || e.key === 'R') {
@@ -10118,7 +10118,7 @@
                 }
             });
 
-            // ===== 初始化 =====
+            // ===== Permulaan =====
             onScroll();
             tryRestorePosition();
         })();
