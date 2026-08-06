@@ -83,7 +83,7 @@
             background-color: #1e1b4b;
             border-left-color: #818cf8;
         }
-        /* 侧边栏链接基础样式 */
+        /* Basis-Stil fuer Links in der Seitenleiste */
         #sidebar a {
             display: block;
             transition: all 0.2s ease;
@@ -98,7 +98,7 @@
         .dark #sidebar a:hover {
             background-color: rgba(79, 70, 229, 0.12);
         }
-        /* 父级分组标题 */
+        /* Uebergeordneter Gruppen-Titel */
         .toc-parent > div {
             transition: background-color 0.15s ease;
         }
@@ -108,7 +108,7 @@
         .dark .toc-parent > div:hover {
             background-color: rgba(255,255,255,0.03);
         }
-        /* 折叠图标独立区域 */
+        /* Eigenstaendiger Bereich fuer das Einklapp-Icon */
         .toc-toggle-btn {
             width: 24px;
             height: 24px;
@@ -129,7 +129,7 @@
             background-color: #374151;
             color: #e5e7eb;
         }
-        /* 子项过渡动画 */
+        /* Uebergangsanimation fuer Unterelemente */
         .toc-child li {
             opacity: 1;
             transform: translateX(0);
@@ -137,9 +137,9 @@
         }
         .toc-child:not(.open) + .toc-child li,
         .toc-child:not(.open) li {
-            /* 折叠时由 max-height 控制 */
+            /* Beim Einklappen durch max-height Steuerung */
         }
-        /* 当前阅读位置指示条 */
+        /* Indikator fuer aktuelle Leseposition */
         .toc-reading-indicator {
             position: absolute;
             left: 0;
@@ -151,7 +151,7 @@
             transition: top 0.3s ease, height 0.3s ease;
             z-index: 1;
         }
-        /* 侧边栏顶部区域增强 */
+        /* Oberer Bereich der Seitenleiste verbessert */
         #sidebar > nav > div:first-child {
             background: #f5f6f8;
             border-radius: 0;
@@ -160,7 +160,7 @@
         .dark #sidebar > nav > div:first-child {
             background: #1a2230;
         }
-        /* 侧边栏整体增强 */
+        /* Seitenleiste insgesamt verbessert */
         #sidebar {
             box-shadow: none;
             border-right: 1px solid #e5e7eb;
@@ -174,7 +174,7 @@
                 border-right: none;
             }
         }
-        /* 章节序号样式 */
+        /* Stil der Kapitelnummerierung */
         .toc-item span[class*="font-mono"] {
             display: inline-block;
             min-width: 1.5rem;
@@ -192,7 +192,7 @@
         .dark .toc-item.active span[class*="font-mono"] {
             color: #818cf8;
         }
-        /* 导航目标章节高亮闪烁 */
+        /* Zielkapitel bei Navigation hervorheben und blinken */
         .scroll-target-flash {
             animation: targetFlash 1.2s ease-out;
         }
@@ -511,7 +511,7 @@
             }
         }
 
-        /* ===== 增强样式：导读卡片、章节摘要、学习路径 ===== */
+        /* ===== Stil verbessern：Einfuehrungskarte、Kapitelzusammenfassung、Lernpfad ===== */
         .reading-guide-card {
             background: #fafafa;
             border: 1px solid #e0e0e0;
@@ -739,9 +739,9 @@
             main { max-width: 56rem; }
         }
 
-        /* ===== 深度改进样式 ===== */
+        /* ===== Stil umfassend verbessern ===== */
 
-        /* 渐变阅读进度条 */
+        /* Verlaufsbasierte Fortschrittsanzeige */
         #reading-progress {
             background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
             background-size: 200% 100% !important;
@@ -758,7 +758,7 @@
             100% { background-position: -200% 0; }
         }
 
-        /* 滚动入场动画 */
+        /* Scroll-Einblendungs-Animation */
         .content-section {
             opacity: 0;
             transform: translateY(24px);
@@ -769,7 +769,7 @@
             opacity: 1;
             transform: translateY(0);
         }
-        /* 第一屏内容直接可见 */
+        /* Inhalt des ersten Bildschirms direkt sichtbar */
         .content-section:first-of-type,
         .content-section.immediately-visible {
             opacity: 1;
@@ -777,7 +777,7 @@
             transition: none;
         }
 
-        /* Hero横幅增强 */
+        /* HeroBanner verbessert */
         .hero-banner {
             background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
             position: relative;
@@ -805,7 +805,7 @@
         }
         .hero-banner > * { position: relative; z-index: 1; }
 
-        /* 卡片悬浮效果 */
+        /* Hover-Effekt fuer Karten */
         .path-step {
             transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
                         box-shadow 0.3s ease,
@@ -828,7 +828,7 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.2);
         }
 
-        /* 返回顶部按钮增强 */
+        /* Zurueck-nach-oben-Button verbessert */
         #back-to-top {
             position: fixed;
             right: 1rem;
@@ -877,7 +877,7 @@
             transform-origin: center;
         }
 
-        /* 书签按钮 */
+        /* Lesezeichen-Button */
         .bookmark-btn {
             display: inline-flex;
             align-items: center;
@@ -913,7 +913,7 @@
             border-color: #818cf8;
         }
 
-        /* 章节完成勾选 */
+        /* Haekchen fuer Kapitelabschluss */
         .chapter-check {
             display: inline-flex;
             align-items: center;
@@ -963,7 +963,7 @@
             line-height: 1;
         }
 
-        /* 搜索结果键盘选中 */
+        /* Suchergebnisse per Tastatur auswaehlen */
         .search-result-item.selected {
             background: #eef2f5;
         }
@@ -971,12 +971,12 @@
             background: #374151;
         }
 
-        /* 仪表盘卡片 */
+        /* Dashboard-Karte */
         .dashboard-card {
             transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
         }
 
-        /* 阅读连续天数徽章 */
+        /* Abzeichen fuer aufeinanderfolgende Lesetage */
         #streak-toast {
             transform: translateX(-50%) translateY(100px);
             left: 50%;
@@ -987,7 +987,7 @@
             transform: translateX(-50%) translateY(0);
         }
 
-        /* 章节评分星星 */
+        /* Sterne-Bewertung fuer Kapitel */
         .chapter-rating {
             display: inline-flex;
             align-items: center;
@@ -1020,7 +1020,7 @@
             opacity: 0.5;
         }
 
-        /* 语音朗读控件 */
+        /* Steuerung fuer Sprachausgabe */
         .tts-controls {
             position: fixed;
             bottom: 6rem;
@@ -1112,7 +1112,7 @@
             .tts-controls .tts-chapter-label { max-width: 8rem; }
         }
 
-        /* 复制按钮 */
+        /* Kopieren-Button */
         .copy-btn {
             display: inline-flex;
             align-items: center;
@@ -1143,7 +1143,7 @@
             border-color: #27ae60;
         }
 
-        /* 可折叠内容块 */
+        /* Einklappbarer Inhaltsblock */
         .collapsible-header {
             cursor: pointer;
             display: flex;
@@ -1178,7 +1178,7 @@
             opacity: 0;
         }
 
-        /* 阅读位置恢复提示 */
+        /* Hinweis zur Wiederherstellung der Leseposition */
         .restore-position-toast {
             position: fixed;
             bottom: 2rem;
@@ -1221,7 +1221,7 @@
             color: #fff;
         }
 
-        /* 章节分隔线增强 */
+        /* Kapiteltrennlinie verbessert */
         .content-section {
             position: relative;
             padding-top: 1rem;
@@ -1242,7 +1242,7 @@
             display: none;
         }
 
-        /* Callout框增强 */
+        /* CalloutRahmen verbessert */
         .callout-box {
             position: relative;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -1251,7 +1251,7 @@
             transform: translateX(2px);
         }
 
-        /* 表格行悬浮 */
+        /* Tabellenzeilen-Hover */
         table tbody tr {
             transition: background-color 0.15s ease;
         }
@@ -1262,7 +1262,7 @@
             background-color: rgba(255,255,255,0.04);
         }
 
-        /* 章节导航按钮增强 */
+        /* Kapitelnavigations-Button verbessert */
         .chapter-nav a {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1277,7 +1277,7 @@
             background: #1e2a36;
         }
 
-        /* 侧边栏书签标记 */
+        /* Lesezeichen-Markierungen in der Seitenleiste */
         .toc-item.bookmarked::after {
             content: '★';
             color: #d4a017;
@@ -1288,7 +1288,7 @@
             color: #27ae60 !important;
         }
 
-        /* 快捷工具增强 */
+        /* Schnellwerkzeuge verbessert */
         .quick-tool-btn {
             transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
@@ -1299,7 +1299,7 @@
             transform: translateY(0) scale(0.95);
         }
 
-        /* 移动端底部安全区域 */
+        /* Sicherheitsbereich am unteren Rand auf Mobilgeraeten */
         @media (max-width: 768px) {
             #back-to-top {
                 right: 0.75rem;
@@ -1322,7 +1322,7 @@
             }
         }
 
-        /* 打印时隐藏新增元素 */
+        /* Neue Elemente beim Drucken ausblenden */
         @media print {
             .bookmark-btn, .chapter-check, .copy-btn,
             .restore-position-toast, #back-to-top .progress-ring,
@@ -1396,7 +1396,7 @@
                     <input type="text" id="toc-filter" placeholder="Kapitel filtern..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="Kapitel filtern">
                 </div>
                 <ul class="space-y-1 text-sm" id="toc-list">
-                    <!-- 基础篇 -->
+                    <!-- Grundlagen -->
                     <li class="toc-parent" data-group="ji-chu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ji-chu-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">Fettgedruckt</a>
@@ -1418,7 +1418,7 @@
                             <li><a href="#di-qi-zhang-jichu" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">07</span>Anwendungsszenarien:</a></li>
                         </ul>
                     </li>
-                    <!-- 软件篇 -->
+                    <!-- Software -->
                     <li class="toc-parent" data-group="ruan-jian">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#ruan-jian-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">II. Softwareteil (Kapitel 8-14)</a>
@@ -1437,7 +1437,7 @@
                             <li><a href="#di-shi-si-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">14</span>Systemeigene:</a></li>
                         </ul>
                     </li>
-                    <!-- 进阶篇 -->
+                    <!-- Aufbaukurs -->
                     <li class="toc-parent" data-group="jin-jie">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#jin-jie-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">Wo nachsehen?</a>
@@ -1456,7 +1456,7 @@
                             <li><a href="#di-er-shi-zhang-termux" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-500 dark:text-gray-500 pl-6 text-xs"><span class="mr-1.5 text-xs text-gray-300 font-mono"></span>Anhang: Termux portables Linux-Terminal</a></li>
                         </ul>
                     </li>
-                    <!-- 超越篇 -->
+                    <!-- Fortgeschrittene -->
                     <li class="toc-parent" data-group="chao-yue">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#chao-yue-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">IV. Weiterführender Teil (Kapitel 21-26)</a>
@@ -1474,7 +1474,7 @@
                             <li><a href="#di-er-shi-liu-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">26</span>Kapitel 26: Aktuelle Fronten der Smartphone-Technologie</a></li>
                         </ul>
                     </li>
-                    <!-- 五、实战篇（第27-32章） -->
+                    <!-- V、Praxis（Kapitel 27-32） -->
                     <li class="toc-parent" data-group="shi-zhan">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#shi-zhan-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">V. Praxisteil (Kapitel 27-32)</a>
@@ -1491,7 +1491,7 @@
                             <li><a href="#di-san-shi-er-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">32</span>Kapitel 32: Smartphone-Sicherheit – Erste-Hilfe-Handbuch</a></li>
                         </ul>
                     </li>
-                    <!-- 六、展望篇（第33-41章） -->
+                    <!-- VI、Ausblick（Kapitel 33-41） -->
                     <li class="toc-parent" data-group="zhan-wang">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#zhan-wang-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">VI. Ausblick (Kapitel 33-41)</a>
@@ -1511,7 +1511,7 @@
                             <li><a href="#di-si-shi-yi-zhang" class="toc-item block px-3 py-1.5 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400"><span class="mr-1.5 text-xs text-gray-400 font-mono">41</span>Kapitel 41: Einstieg in vertikale Kurzserien – Ein Hook alle 3 Minuten</a></li>
                         </ul>
                     </li>
-                    <!-- 附录 -->
+                    <!-- Anhang -->
                     <li class="toc-parent" data-group="fu-lu">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
                             <a href="#fu-lu" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">VII. Anhang</a>
@@ -1554,14 +1554,14 @@
             <div class="content-col">
             <a id="top"></a>
 
-            <!-- 顶部面包屑 -->
+            <!-- Brotkrumen oben -->
             <nav class="breadcrumb no-print" aria-label="Werbetracking einschränken">
                 <a href="#top">Startseite</a>
                 <span class="sep" aria-hidden="true">›</span>
                 <span class="text-gray-700 dark:text-gray-300">Digitaler Pflichtkurs · v1.7</span>
             </nav>
 
-            <!-- Hero 横幅 -->
+            <!-- Hero Banner -->
             <section class="hero-banner mb-8" aria-labelledby="hero-title">
                 <div class="flex flex-wrap items-center gap-2 mb-3">
                     <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>32 Kapitel + 6 Anhaenge</span>
@@ -1583,7 +1583,7 @@
                 </div>
             </section>
 
-            <!-- 怎么用这本书 -->
+            <!-- Wie man dieses Buch nutzt -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-compass text-primary" aria-hidden="true"></i>Wie man dieses Buch benutzt
@@ -1608,7 +1608,7 @@
                 </div>
             </section>
 
-            <!-- 学习路径五步走 -->
+            <!-- Lernpfad in fuenf Schritten -->
             <section class="mb-8" aria-labelledby="learning-path-title">
                 <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">Lernpfad: Fuenf Schritte zum Smartphone-Profi</h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Dieses Buch ist nach der Erkenntnislogik „vom Verstehen zur Beherrschung bis zur Praxis" strukturiert – jeder Teil ist das Fundament fuer den naechsten.</p>
@@ -1651,7 +1651,7 @@
                 </div>
             </section>
 
-            <!-- 章节地图速查表 -->
+            <!-- Kapiteluebersicht als Schnellreferenz -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
                     <i class="fas fa-map text-primary" aria-hidden="true"></i>Dieses Buch ist nach der kognitiven Logik "vom Kennenlernen zum Meistern" aufgebaut, jeder Teil ist das Fundament für den nächsten.
@@ -1676,13 +1676,13 @@
                 </div>
             </section>
 
-            <!-- 写在最后：本书不教什么 -->
+            <!-- Zum Schluss：Was dieses Buch nicht lehrt -->
             <div class="highlight-quote">
                 <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>: steht für konkrete Buttons oder App-Namen auf dem Bildschirm, z. B. [Einstellungen], [OK].</p>
                 <p class="text-right text-sm">&gt;</p>
             </div>
 
-            <!-- 交互式自检清单 + 阅读仪表盘 -->
+            <!-- Interaktive Pruefliste zur Selbstkontrolle + Lese-Dashboard -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
                     <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>Lern-Dashboard
@@ -1690,7 +1690,7 @@
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Verfolge deinen Lese fortschritt und pruefe den Sicherheitsstatus deines Smartphones.</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
-                    <!-- 阅读进度卡片 -->
+                    <!-- Lese-Fortschritts-Karte -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>Lesefortschritt</h3>
                         <div class="flex items-center gap-4">
@@ -1709,7 +1709,7 @@
                         </div>
                     </div>
 
-                    <!-- 手机健康自检卡片 -->
+                    <!-- Gesundheitspruefungs-Karte fuer das Handy -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
                         <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>Smartphone-Sicherheits-Check</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Hake ab, was du schon erfuellst hast, und sieh deinen Smartphone-„Gesundheitswert":</p>
@@ -1735,7 +1735,7 @@
                 </div>
             </section>
 
-            <!-- 原"top" 内容保持兼容 -->
+            <!-- urspruenglich"top" Inhalt kompatibel halten -->
             <div class="sr-only" aria-hidden="true">v3.0 · Ein digitaler Pflichtkurs, der wirklich fuer normale Nutzer gemacht ist</div>
 
             <section id="ji-chu-pian" class="mb-12">
@@ -2100,7 +2100,7 @@
                     </div>
                 </div>
 
-                <!-- 第一章附：安卓手机内存拓展解析 -->
+                <!-- Anhang zu Kapitel 1：Analyse der Speichererweiterung bei Android-Handys -->
                 <div id="di-yi-zhang-memory" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Anhang: Android-Smartphone Speichererweiterung erklärt</h3>
                     <p class="chapter-intro mb-4">Vier. Anwendungsszenarien und Ertragsgrenzen</p>
@@ -2514,7 +2514,7 @@
                     </ul>
                 </div>
 
-                <!-- 第三章 -->
+                <!-- Kapitel 3 -->
                 <div id="di-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">„Autobahn"</h3>
                     <p class="chapter-intro mb-4">nach draußen ist unterbrochen — du kommst nirgendwo hin. Mobilfunkdaten hingegen werden über die 4G/5G-Basisstationen des Betreibers übertragen, als würdest du direkt auf die Expressstrecke des Betreibers auffahren — mit Signal bist du direkt im Internet.</p>
@@ -2733,7 +2733,7 @@
                     </div>
                 </div>
 
-                <!-- 第四章 -->
+                <!-- Kapitel 4 -->
                 <div id="di-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">bzw.</h3>
                     <p class="chapter-intro mb-4">Schutzmodus</p>
@@ -2899,7 +2899,7 @@
                     </div>
                 </div>
 
-                <!-- 第五章 -->
+                <!-- Kapitel 5 -->
                 <div id="di-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Augenschutz-/Nachtmodus</h3>
                     <p class="chapter-intro mb-4">: Filtert blaues Licht; abends ist das Smartphone angenehmer zu lesen.</p>
@@ -3111,7 +3111,7 @@
                     </div>
                 </div>
 
-                <!-- 第六章 -->
+                <!-- Kapitel 6 -->
                 <div id="di-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Unbedingt ein komplexes Passwort festlegen (nicht Geburtsdatum oder 123456).</h3>
                     <p class="chapter-intro mb-4">Biometrische Entsperrung aktivieren.</p>
@@ -3277,7 +3277,7 @@
                     </div>
                 </div>
 
-                <!-- 第七章：前沿功能 -->
+                <!-- Kapitel 7：Innovative Funktionen -->
                 <div id="di-qi-zhang-jichu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Anwendungsszenarien:</h3>
                     <p class="chapter-intro mb-4">Outdoor-Abenteuer, Bergunglücke;</p>
@@ -3399,12 +3399,12 @@
                 </div>
             </section>
 
-            <!-- 二、软件篇 -->
+            <!-- II、Software -->
             <section id="ruan-jian-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">II. Softwareteil (Kapitel 8-14)</h2>
                 <p class="chapter-intro mb-4">Aktivierung</p>
 
-                <!-- 第八章 -->
+                <!-- Kapitel 8 -->
                 <div id="di-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 8: Kommunikation: SMS, Anrufe und Soziales</h3>
                     <p class="chapter-intro mb-4">Zwei. SMS und iMessage/RCS</p>
@@ -3594,7 +3594,7 @@
                     </div>
                 </div>
 
-                <!-- 第九章 -->
+                <!-- Kapitel 9 -->
                 <div id="di-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 9: Mobiles Arbeiten und Lernen</h3>
                     <p class="chapter-intro mb-4">Später lesen – Informationen sammeln</p>
@@ -3659,7 +3659,7 @@
                     </div>
                 </div>
 
-                <!-- 第十章 -->
+                <!-- Kapitel 10 -->
                 <div id="di-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Empfangscode</h3>
                     <p class="chapter-intro mb-4">: Jemand scannt diesen Code, um Ihnen Geld zu überweisen. Dieser Code kann als Screenshot gespeichert und an andere geschickt werden – sicher.</p>
@@ -3735,7 +3735,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章 -->
+                <!-- Kapitel 11 -->
                 <div id="di-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 11: Fotografie und Bildverwaltung</h3>
                     <p class="chapter-intro mb-4">Führen Sie mit Linien</p>
@@ -3800,7 +3800,7 @@
                     </div>
                 </div>
 
-                <!-- 第十一章附：专业影像技术 -->
+                <!-- Anhang zu Kapitel 11：Professionelle Bildgebungstechnik -->
                 <div id="di-shi-yi-zhang-advanced" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Je höher die Auflösung, desto schärfer das Bild, aber die Datei wird größer und die Anforderungen an Speicher und Rechenleistung steigen.</h3>
                     <p class="chapter-intro mb-4">Bildrate (Frame Rate):</p>
@@ -4062,7 +4062,7 @@
                     </div>
                 </div>
 
-                <!-- 第十二章 -->
+                <!-- Kapitel 12 -->
                 <div id="di-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 12: Medien, Unterhaltung und Lesen</h3>
                     <p class="chapter-intro mb-4">XYZ App (Xiaoyuzhou)</p>
@@ -4125,7 +4125,7 @@
                     </div>
                 </div>
 
-                <!-- 第十三章 -->
+                <!-- Kapitel 13 -->
                 <div id="di-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Karten und Navigation</h3>
                     <p class="chapter-intro mb-4">: Im Inland sind Amap oder Baidu Maps die erste Wahl; für internationale Reisen Google Maps.</p>
@@ -4379,7 +4379,7 @@
                     </div>
                 </div>
 
-                <!-- 第十四章：密码管理器专题 -->
+                <!-- Kapitel 14：Themenbereich Passwort-Manager -->
                 <div id="di-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Systemeigene:</h3>
                     <p class="chapter-intro mb-4">iCloud-Schlüsselbund</p>
@@ -4607,7 +4607,7 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>YubiKey</strong>(Yubico): Massgeblich; unterstuetzt FIDO2/WebAuthn, U2F, OTP, PIV, OpenPGP; USB-C / USB-A / NFC. Serie 5: 50-70 USD.</li>
                         <li><strong>Google Titan</strong>: Von Google; USB-C + NFC / Bluetooth; ca. 30-40 USD.</li>
-                        <li><strong>OnlyKey</strong>: Open-Source-Alternative; unterstuetzt多种 Protokolle.</li>
+                        <li><strong>OnlyKey</strong>: Open-Source-Alternative; unterstuetztmehrere Protokolle.</li>
                         <li><strong>Chinesische Alternativen</strong>: z. B. Feitian ePasskey; guenstiger.</li>
                     </ul>
 
@@ -4739,12 +4739,12 @@
                 </div>
             </section>
 
-            <!-- 三、进阶篇 -->
+            <!-- III、Aufbaukurs -->
             <section id="jin-jie-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">Wo nachsehen?</h2>
                 <p class="chapter-intro mb-4">iPhone: Einstellungen → Akku → Akkugesundheit und -laden; Android: In den Einstellungen nach „Akkugesundheit" suchen.</p>
 
-                <!-- 第十五章 -->
+                <!-- Kapitel 15 -->
                 <div id="di-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 15: Batterietechnologie und Akkulaufzeit-Optimierung</h3>
                     <p class="chapter-intro mb-4">Schadet Schnellladen dem Akku?</p>
@@ -4961,7 +4961,7 @@
                     </div>
                 </div>
 
-                <!-- 第十六章 -->
+                <!-- Kapitel 16 -->
                 <div id="di-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">2. Drei Pflichtaktionen – jetzt sofort</h3>
                     <p class="chapter-intro mb-4">Zwei-Faktor-Authentifizierung aktivieren</p>
@@ -5053,7 +5053,7 @@
                     </div>
                 </div>
 
-                <!-- 第十七章 -->
+                <!-- Kapitel 17 -->
                 <div id="di-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 17: Smartphone und Gerätevernetzung</h3>
                     <p class="chapter-intro mb-4">Video-App direkt spiegeln</p>
@@ -5165,7 +5165,7 @@
                     </div>
                 </div>
 
-                <!-- 第十八章 -->
+                <!-- Kapitel 18 -->
                 <div id="di-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 18: Daten-Backup und -Migration</h3>
                     <p class="chapter-intro mb-4">Android</p>
@@ -5263,7 +5263,7 @@
                     </div>
                 </div>
 
-                <!-- 第十九章 -->
+                <!-- Kapitel 19 -->
                 <div id="di-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 19: Fehlerbehebung und Selbsthilfe</h3>
                     <p class="chapter-intro mb-4">Eine App stürzt beim Öffnen ab, oder sie friert plötzlich ein. Der Ablauf ist wie eine ärztliche Befragung – Schritt für Schritt vorgehen:</p>
@@ -5359,7 +5359,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章：开发者模式与高级权限 -->
+                <!-- Kapitel 20：Entwicklermodus und erweiterte Berechtigungen -->
                 <div id="di-er-shi-zhang-jinjie" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 20: Entwicklermodus und erweiterte Berechtigungen</h3>
                     <p class="chapter-intro mb-4">Touch-Operationen anzeigen</p>
@@ -5561,7 +5561,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十章附：Termux便携式Linux终端 -->
+                <!-- Anhang zu Kapitel 20：TermuxTragbarLinuxTerminal -->
                 <div id="di-er-shi-zhang-termux" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Server-Aufbau</h3>
                     <p class="chapter-intro mb-4">: Kann Nginx oder Apache konfigurieren, um einen statischen Webserver aufzusetzen.</p>
@@ -5685,12 +5685,12 @@
                 </div>
             </section>
 
-            <!-- 四、超越篇 -->
+            <!-- IV、Fortgeschrittene -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">IV. Weiterführender Teil (Kapitel 21-26)</h2>
                 <p class="chapter-intro mb-4">. Aber ich muss warnen:</p>
 
-                <!-- 第二十一章 -->
+                <!-- Kapitel 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Keine kostenlosen VPNs verwenden!</h3>
                     <p class="chapter-intro mb-4">„Kostenlos" bedeutet oft, dass deine Daten die „Ware" sind. Ein Freund nutzte ein kostenloses VPN – plötzlich bekam sein Smartphone überall Werbung; später stellte sich heraus, dass das VPN seine Surfdaten an Werbetreibende verkauft hatte. Also: Entweder ein kostenpflichtiges Marken-VPN (wie NordVPN, ExpressVPN) oder gar keines.</p>
@@ -5780,7 +5780,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十二章 -->
+                <!-- Kapitel 22 -->
                 <div id="di-er-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Was ist ein großes KI-Modell?</h3>
                     <p class="chapter-intro mb-4">Ein großes KI-Modell (Large Language Model, LLM) ist ein KI-System, das mit riesigen Textmengen trainiert wurde und natürliche Sprache verstehen und erzeugen kann. Stell dir einen „Super-Streber" vor, der fast alle Texte des Internets gelesen hat – er kann Fragen beantworten, Artikel schreiben, übersetzen, programmieren, Daten analysieren.</p>
@@ -6047,7 +6047,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章 -->
+                <!-- Kapitel 23 -->
                 <div id="di-er-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 23: Programmierdenken und Einführung in die Automatisierung</h3>
                     <p class="chapter-intro mb-4">Apples "Kurzbefehle" (Shortcuts) ist eine vorinstallierte App, die nicht heruntergeladen werden muss. Ihr Kernkonzept besteht darin, verschiedene Aktionen wie Bauklötze zusammenzusetzen. Zunächst einige Schlüsselbegriffe:</p>
@@ -6147,7 +6147,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十三章附：GitHub入门指南 -->
+                <!-- Anhang zu Kapitel 23：GitHubEinsteiger-Leitfaden -->
                 <div id="di-er-shi-san-zhang-github" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Zweitens. Der Unterschied zwischen Git und GitHub (Schlüsselkonzept!)</h3>
                     <p class="chapter-intro mb-4">Viele verwechseln beim ersten Kontakt diese beiden Begriffe. Hier eine Übersicht:</p>
@@ -6340,7 +6340,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十四章：Root权限与BL锁深度解析 -->
+                <!-- Kapitel 24：RootBerechtigungen undBLDetaillierte Analyse der Sperre -->
                 <div id="di-er-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 24: Root-Zugriff und Bootloader-Sperre vertieft</h3>
                     <p class="chapter-intro mb-4">Zweitens. Detaillierter Ablauf der Bootloader-Entsperrung (am Beispiel Xiaomi)</p>
@@ -6484,7 +6484,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十五章 -->
+                <!-- Kapitel 25 -->
                 <div id="di-er-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 25: Gebrauchttelefone und digitales Erbe</h3>
                     <p class="chapter-intro mb-4">Apples "Legacy-Kontakt"</p>
@@ -6747,7 +6747,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十六章 -->
+                <!-- Kapitel 26 -->
                 <div id="di-er-shi-liu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 26: Aktuelle Fronten der Smartphone-Technologie</h3>
                     <p class="chapter-intro mb-4">Nachdem wir das „ digitale Erbe" alter Handys besprochen haben, wenden wir uns der Gegenwart zu. 2024-2026 ist eine Phase geballter Smartphone-Innovationen: KI ist von der Cloud in die Hosentasche gewandert, die Satellitenkommunikation vom Flaggschiff ins Mittelsegment gewandert, faltbare Displays vom „Experimentieren" zum „taeglichen Gebrauch" geworden, und auch die Batterietechnologie erlebt einen seit Jahren nicht mehr dagewesenen Materialdurchbruch. Dieses Kapitel beleuchtet diese aktuellen Technikfronten und hilft dir einzuschaetzen, ob „es Zeit fuer ein neues Handy ist" und „welches".</p>
@@ -6756,7 +6756,7 @@
                     <p class="mb-2">Seit 2024 bewerben fast alle Android-Hersteller ihre Flaggschiffe als „KI-Handy"; auch Apple hat mit iOS 18 Apple Intelligence eingefuehrt. Aber was genau macht ein Handy zum „KI-Handy"? In der Branche haben sich drei Beurteilungskriterien herausgebildet:</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>Warum ist die Speichergeschwindigkeit wichtig?</strong>: Das Handy kann lokal ein Sprachmodell mit ca. 7B Parametern ausfuehren (wie Qwen, Llama, DeepSeek in leichter Version), ohne Cloud-Abhaengigkeit Aufgaben wie Zusammenfassen, Uebersetzen und Textgenerierung erledigen. Testmethode: Wenn die KI-Funktion im Flugmodus noch funktioniert, ist es ein On-Device-Modell.</li>
-                        <li><strong>NPU-Rechenleistung (TOPS)</strong>: Die Rechenleistung der NPU (Neural Processing Unit) wird in TOPS (Billionen Operationen pro Sekunde) angegeben. 2024 erreichten Flaggschiff-Chips (wie Snapdragon 8 Gen3, Dimensity 9300) 40-70 TOPS; die新一代 Chips 2025-2026 uebertreffen allgemein 100 TOPS – das ist die Hardware-Huerde fuer das lokale Ausfuehren grosser Modelle.</li>
+                        <li><strong>NPU-Rechenleistung (TOPS)</strong>: Die Rechenleistung der NPU (Neural Processing Unit) wird in TOPS (Billionen Operationen pro Sekunde) angegeben. 2024 erreichten Flaggschiff-Chips (wie Snapdragon 8 Gen3, Dimensity 9300) 40-70 TOPS; dieNeue Generation Chips 2025-2026 uebertreffen allgemein 100 TOPS – das ist die Hardware-Huerde fuer das lokale Ausfuehren grosser Modelle.</li>
                         <li><strong>KI-Agent-Szenarien</strong>: Nicht nur „Fragen und Antworten", sondern auch die faehige Ausfuehrung von Aufgabenketten ueber mehrere Apps hinweg – z. B. „Sortiere die Fotos von gestern in ein Album und teile sie mit Zhang San"; das System ruft automatisch Album, Datei-Manager, WeChat und andere Apps auf. Das ist das Kernmerkmal, das ein KI-Handy von einem „Handy mit KI-Assistent" unterscheidet.</li>
                     </ul>
 
@@ -6794,7 +6794,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">V. 6G und Wi-Fi 7: Tempo und Grenzen der naechsten Verbindungsgeneration</h4>
                     <p class="mb-2">6G ist noch nicht wirklich angekommen, aber die Technologie ist bereits auf dem Weg:</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>6G-Fortschritt</strong>: 3GPP plant, den 6G-Standard bis 2027 fertigzustellen; kommerzielle Nutzung ca. 2030. Die theoretische Spitzenrate von 6G koennte bei 1 Tbps liegen (50x so schnell wie 5G), die Latenz bei 0,1 ms. „Integrated Sensing and Communication" (Kommunikation + Wahrnehmung) wird unterstuetzt; das Handy koennte sogar als grob aufloesendes Radar dienen. Die Hersteller befinden sich noch im Prototyp-Stadium;消费级 Produkte sind noch fern.</li>
+                        <li><strong>6G-Fortschritt</strong>: 3GPP plant, den 6G-Standard bis 2027 fertigzustellen; kommerzielle Nutzung ca. 2030. Die theoretische Spitzenrate von 6G koennte bei 1 Tbps liegen (50x so schnell wie 5G), die Latenz bei 0,1 ms. „Integrated Sensing and Communication" (Kommunikation + Wahrnehmung) wird unterstuetzt; das Handy koennte sogar als grob aufloesendes Radar dienen. Die Hersteller befinden sich noch im Prototyp-Stadium;Consumer-Klasse Produkte sind noch fern.</li>
                         <li><strong>Wi-Fi 7（802.11be）</strong>: Ab 2024 Standard bei Flaggschiffen; theoretische Spitzenrate bis 46 Gbps (4x Wi-Fi 6); unterstuetzt 320 MHz Bandbreite, 4K-QAM und MLO (Multi-Link-Uebertragung). Gemessen an einem Wi-Fi-7-Router erreichen Flaggschiff-Handys 2-5 Gbps – 2-3x schneller als Wi-Fi 6E. Wer ein Wi-Fi-7-Handy kauft, sollte auch einen Wi-Fi-7-Router haben, um die volle Leistung zu erhalten.</li>
                         <li><strong>Bluetooth 5.4 und LE Audio</strong>: 2024-2026 unterstuetzen neue Handys allgemein Bluetooth 5.4 und LE Audio (Low Energy Audio); zwei Kopfhoerer-Paare koennen gleichzeitig dasselbe Lied hoeren. Auracast-Broadcast-Audio ermoeglicht es vielen Personen an oeffentlichen Orten, dieselbe Tonquelle synchron zu hoeren.</li>
                     </ul>
@@ -6841,12 +6841,12 @@
                 </div>
             </section>
 
-            <!-- 五、实战篇（第27-32章） -->
+            <!-- V、Praxis（Kapitel 27-32） -->
             <section id="shi-zhan-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">V. Praxisteil (Kapitel 27-32)</h2>
                 <p class="chapter-intro mb-4">Nach 26 Kapiteln Theorie ist es jetzt an der Zeit, das Gelernte in die Praxis umzusetzen. Diese sechs Kapitel sind rein praktisch: vom Einrichten des Handys fuer aeltere Familienmitglieder bis zum entspannten Neukauf, vom Aufbau gesunder digitaler Gewohnheiten bis zur Schritt-fuer-Schritt-Anleitung fuer Bildschirmuebertragung und Kurzvideos, und nicht zuletzt ein Notfallhandbuch fuer kritische Situationen. Jedes Kapitel vermittelt Skills, die man sofort anwenden kann.</p>
 
-                <!-- 第二十七章：适老化专题 -->
+                <!-- Kapitel 27：Themenbereich Barrierefreiheit im Alter -->
                 <div id="di-er-shi-qi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 27: Auch fuer Mama und Papa kinderleicht – Der komplette Ratgeber fuer altersgerechte Smartphone-Nutzung</h3>
                     <p class="chapter-intro mb-4">Um ehrlich zu sein: Als ich dieses Kapitel schrieb, musste ich an meine Eltern denken. Meine Mutter traut sich nie, auf "Systemaktualisierung" zu tippen, wenn das Handy sie darauf hinweist – sie hat Angst, etwas kaputtzumachen. Die Schrift in WeChat meines Vaters war kleiner als eine Ameise, aber er wusste nicht, wie man sie vergrößert, und hat deshalb zwei Jahre lang die Augen zusammengekniffen. Sie sind nicht "dumm" – die Handys stufen alle standardmäßig als wären sie Anfang zwanzig. In diesem Kapitel erkläre ich in ganz einfachen Worten die Probleme, die ältere Menschen beim Nutzen von Handys am meisten nerven, eins nach dem anderen.</p>
@@ -6994,7 +6994,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十八章：手机选购终极指南 -->
+                <!-- Kapitel 28：Ultimativer Leitfaden fuer den Handykauf -->
                 <div id="di-er-shi-ba-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 28: Geld klug ausgeben fuer das Wunschgeraet – Der ultimative Smartphone-Kaufguide</h3>
                     <p class="chapter-intro mb-4">Beim Handykauf schauen viele eine Woche lang Testberichte an und vergleichen einen Monat lang Preise, um am Ende doch verwirrt 5.000–6.000 Yuan für ein Flaggschiff auszugeben, das sie gar nicht brauchen. Dieses Kapitel listet keine Parametertabellen – die finden Sie auf der Herstellerwebsite. Was ich Ihnen geben möchte, ist eine "Kauflogik", mit der Sie bei jedem neuen Modell selbst beurteilen können, ob es zu Ihnen passt.</p>
@@ -7057,7 +7057,7 @@
 
                     <h5 class="font-semibold mt-3 mb-1">💰 Unter 1.000 Yuan: Telefonieren, WeChat – reicht, wenn es funktioniert</h5>
                     <p class="mb-2"><strong>Für wen geeignet</strong>: Schüler, Zweitgerät, wenig Ansprüche, hauptsächlich Telefon und WeChat.</p>
-                    <p class="mb-2"><strong>Was man bekommt</strong>: Redmi Note-Serie, Honor X-Serie, realme数字-Serie in niedriger Ausstattung. Prozessor etwa Snapdragon-Serie 6 oder Dimensity 6000-Serie, Display meist LCD, Kamera macht klare Fotos aber langsamer Autofokus, System-Performance durchschnittlich.</p>
+                    <p class="mb-2"><strong>Was man bekommt</strong>: Redmi Note-Serie, Honor X-Serie, realmeZahlen--Serie in niedriger Ausstattung. Prozessor etwa Snapdragon-Serie 6 oder Dimensity 6000-Serie, Display meist LCD, Kamera macht klare Fotos aber langsamer Autofokus, System-Performance durchschnittlich.</p>
                     <p class="mb-2"><strong>Kaufempfehlung</strong>: Achten Sie in dieser Preisklasse auf zwei Dinge: Ist der Akku groß genug (ab 5.000 mAh) und ist der Speicher ausreichend (ab 6 GB + 128 GB, nicht 4 GB kaufen – das ruckelt). Redmi ist in dieser Preisklasse am stärksten.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">💰 1.000–2.000 Yuan: Bestes Preis-Leistungs-Verhältnis, 3–4 Jahre ohne Ruckeln</h5>
@@ -7067,12 +7067,12 @@
 
                     <h5 class="font-semibold mt-3 mb-1">💰 2.000–3.500 Yuan: Mittelklasse, deutliche Verbesserung bei Leistung und Kamera</h5>
                     <p class="mb-2"><strong>Für wen geeignet</strong>: Normale Nutzer, die gute Fotos, ruckelfreies Gaming und lange Nutzung wnschen. Das ist die beliebteste Preisklasse.</p>
-                    <p class="mb-2"><strong>Repräsentative Modelle</strong>: Xiaomi数字-Serie (z. B. Xiaomi 17 Standard nach Preisnachlass), vivo S-Serie in hoher Ausstattung, OPPO Reno-Serie, Honor数字-Serie, Redmi K-Serie.</p>
+                    <p class="mb-2"><strong>Repräsentative Modelle</strong>: XiaomiZahlen--Serie (z. B. Xiaomi 17 Standard nach Preisnachlass), vivo S-Serie in hoher Ausstattung, OPPO Reno-Serie, HonorZahlen--Serie, Redmi K-Serie.</p>
                     <p class="mb-2"><strong>Kaufempfehlung</strong>: Die größte Eigenschaft dieser Preisklasse ist der "Rundum-Sorglos-Typ" – keine offensichtlichen Schwächen. Gegenüber Geräten unter 2.000 Yuan: deutlich bessere Kamera (mit optischem Bildstabilisator), hochwertiges OLED-Display, schnelleres Laden (oft über 80 W), hochwertigere Verarbeitung. 12 GB + 256 GB oder 12 GB + 512 GB – problemlos 4–5 Jahre nutzbar.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">💰 3.500–5.000 Yuan: Vorflaggschiff – für alle außer Geek-Spielern völlig ausreichend</h5>
                     <p class="mb-2"><strong>Für wen geeignet</strong>: Nutzer mit hohen Erwartungen an die Kamera und an hochwertige Verarbeitung.</p>
-                    <p class="mb-2"><strong>Repräsentative Modelle</strong>: Xiaomi数字-Serie Standard, vivo X-Serie, OPPO Find X-Serie Standard, ältere iPhone-Flaggschiffe (z. B. iPhone 16).</p>
+                    <p class="mb-2"><strong>Repräsentative Modelle</strong>: XiaomiZahlen--Serie Standard, vivo X-Serie, OPPO Find X-Serie Standard, ältere iPhone-Flaggschiffe (z. B. iPhone 16).</p>
                     <p class="mb-2"><strong>Kaufempfehlung</strong>: In dieser Preisklasse bekommen Sie schon das Vorjahres-Flaggschiff. Mein Rat:<strong>Letztes Jahres Flaggschiff kaufen statt dieses Jahres Mittelklasse</strong>. Das Vorjahres-Flaggschiff bietet bei Material, Verarbeitung und Kamera-Hardware meist eine Stufe mehr als die aktuelle Mittelklasse. Voraussetzung: Sie können akzeptieren, dass es nicht das "Neueste" ist.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">💰 Über 5.000 Yuan: Flaggschiff-Liga – für unbegrenztes Budget oder höchste Ansprüche</h5>
@@ -7135,7 +7135,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">4. Fuenf haeufige Fallstricke – vor dem Kauf ueberpruefen</h4>
                     <ol class="list-decimal pl-6 mb-3 space-y-2">
                         <li><strong>Fallstrick 1: Vier oder fuenf Linsen heisst nicht »gute Kamera«</strong>– Hersteller geben gerne hohe Linsenzahlen an. Oft sind zwei davon 200-MP-»Platzhalter-Linsen« (Makro + Tiefeninfo), die praktisch unnuetz sind. Fuer die Kameraqualitaet eines Handys reicht es,<strong>nur Hauptkamera + Ultraweitwinkel + Tele</strong>zu betrachten. Alles andere kann man ignorieren.</li>
-                        <li><strong>Fallstrick 2: Nicht von 100 Megapixel blenden lassen</strong>– Hohe Pixelzahl bedeutet nicht gute Bildqualitaet. Sensorgroesse, Blaende und算法ische Optimierung sind viel wichtiger. Viele Flaggschiff-Geraete mit 50-MP-Sensoren und grosso Sensor machen deutlich bessere Fotos als manche 100-MP-Einsteigergeraete.</li>
+                        <li><strong>Fallstrick 2: Nicht von 100 Megapixel blenden lassen</strong>– Hohe Pixelzahl bedeutet nicht gute Bildqualitaet. Sensorgroesse, Blaende undalgorithmischeische Optimierung sind viel wichtiger. Viele Flaggschiff-Geraete mit 50-MP-Sensoren und grosso Sensor machen deutlich bessere Fotos als manche 100-MP-Einsteigergeraete.</li>
                         <li><strong>Fallstrick 3: Keine Provider-Lock-Geraete kaufen</strong>– »Guthaben aufladen und Handy geschenkt bekommen« klingt verlockend, aber Provider-Geraete bekommen Systemupdates langsam, haben oft vorinstallierte Apps, die sich nicht loeschen lassen, und sind meist Provider-locked (funktionieren nur mit SIM-Karte dieses Anbieters). Man spart scheinbar Geld, wird aber »gebunden«.</li>
                         <li><strong>Fallstrick 4: »Gebogenes Display ist hochwertig« – das ist Marketing, keine Wahrheit</strong>—— Gebogene Displays waren einst das Markenzeichen von Flaggschiffen, aber immer mehr Menschen erkennen ihre Probleme: Schutzfolie schwer anzubringen, Fehlberührungen am Rand, teure Reparatur bei Bruch. Der Trend 2026 geht zurück zu "leicht gebogen" oder "komplett flach". Wählen Sie kein gebogenes Display nur, weil "gebogen = hochwertig" klingt.</li>
                         <li><strong>Falle 5: Nicht jedes "AI-Handy" ist wirklich nützlich</strong>—— 2026 rufen alle Hersteller "AI-Handy", aber viele haben nur den bestehenden Sprachassistenten umbenannt. Wirklich nützliche AI-Funktionen sind: Echtzeitübersetzung, AI-Entfernung (Personen aus Fotos entfernen), AI-Bildbearbeitung, On-Device-LLM-Inferenz, lokale intelligente Zusammenfassungen. Andere auffällige Funktionen sind meistens nur Gimmicks.</li>
@@ -7182,7 +7182,7 @@
                     </div>
                 </div>
 
-                <!-- 第二十九章：数字健康 -->
+                <!-- Kapitel 29：Digitale Gesundheit -->
                 <div id="di-er-shi-jiu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 29: Digitale Gesundheit – Eine gesunde Beziehung zum Smartphone aufbauen</h3>
                     <p class="chapter-intro mb-4">Kennen Sie das: Sie wollten nur 5 Minuten Kurzvideos schauen, schauen auf – und zwei Stunden sind vergangen? Oder Sie liegen abends im Bett, scrollen durchs Handy, werden immer wacher und schlafen erst um zwei Uhr nachts ein? Das Handy hat unser Leben verändert, aber es verschlingt unauffällig unsere Zeit und Gesundheit. Dieses Kapitel will Sie nicht dazu bringen, "das Handy aufzugeben", sondern Ihnen helfen, die Kontrolle zurückzugewinnen.</p>
@@ -7227,7 +7227,7 @@
                     <p class="mb-2">Wenn Sie mit gesenktem Kopf aufs Handy schauen, lastet das 5–6-fache des normalen Drucks auf Ihrem Nacken. Langfristig führt das zu einer Begradigung der Halswirbelsäule, Knochenausbildungen, Schwindel und tauben Händen. Hier sind einfache Verbesserungsmaßnahmen:</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>Handy höher halten</strong>: Halten Sie das Handy beim Schauen möglichst auf Augenhöhe, statt mit gesenktem Kopf auf das Handy auf den Knien zu blicken. Der Arm wird müde, aber der Nacken dankt es.</li>
-                        <li><strong>Alle 30 Minuten den Nacken bewegen</strong>: Langsam den Kopf nach links drehen bis zum Anschlag, 3 Sekunden halten, zurück; dann nach rechts, 3 Sekunden halten. 5-mal wiederholen. Danach das "Reiszeichen-Mal-Exercise" – mit dem Kinn das Zeichen „米“ in die Luft schreiben.</li>
+                        <li><strong>Alle 30 Minuten den Nacken bewegen</strong>: Langsam den Kopf nach links drehen bis zum Anschlag, 3 Sekunden halten, zurück; dann nach rechts, 3 Sekunden halten. 5-mal wiederholen. Danach das "Reiszeichen-Mal-Exercise" – mit dem Kinn das Zeichen „Mi“ in die Luft schreiben.</li>
                         <li><strong>3 Minuten an der Wand stehen</strong>: Hinterkopf, Schulterblätter, Gesäß und Fersen an die Wand pressen – täglich 3 Minuten stehen korrigiert wirksam die Haltung.</li>
                     </ul>
 
@@ -7274,7 +7274,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十章：投屏、演示与车载互联 -->
+                <!-- Kapitel 30：Bildschirmuebertragung、Demo und Auto-Konnektivitaet -->
                 <div id="di-san-shi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 30: Bildschirmuebertragung, Praesentation und Auto-Konnektivitaet</h3>
                     <p class="chapter-intro mb-4">Auch das größte Handydisplay hat nur 7 Zoll, aber Ihr Fernseher hat 55 und Ihr Beamer 100 Zoll. Das Handybild auf einen großen Bildschirm zu "werfen", ist eine ganz andere Dimension. Dieses Kapitel erklärt die drei häufigen Szenarien Bildschirmübertragung, Präsentation und Auto-Anbindung und hilft Ihnen, die Fähigkeiten des Handys auf größere Bildschirme auszudehnen.</p>
@@ -7367,7 +7367,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十一章：短视频拍摄与内容创作入门 -->
+                <!-- Kapitel 31：Einstieg in Kurzvideo-Aufnahme und Content-Erstellung -->
                 <div id="di-san-shi-yi-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 31: Einstieg in Kurzvideo-Drehs und Content-Erstellung</h3>
                     <p class="chapter-intro mb-4">2026 sind Kurzvideos kein "Spielzeug der Jungen" mehr – sie sind die grundlegende Art, wie alle Menschen Informationen erhalten und sich ausdrücken. Ob Sie das Leben festhalten, Wissen teilen oder einen Nebenverdienst aufbauen wollen – das Handy ist Ihr bestes Werkzeug. Keine Kamera, kein Premiere nötig. Ein Handy genügt. Dieses Kapitel hilft Ihnen beim Start von Null.</p>
@@ -7450,7 +7450,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十二章：手机安全急救手册 -->
+                <!-- Kapitel 32：Sicherheits-Notfallhandbuch fuer das Handy -->
                 <div id="di-san-shi-er-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 32: Smartphone-Sicherheit – Erste-Hilfe-Handbuch</h3>
                     <p class="chapter-intro mb-4">Dieses Kapitel ist ein "Notfallplan". Hoffentlich brauchen Sie ihn nie. Aber wenn Ihr Handy verloren, gestohlen oder Sie betrogen wurden, hilft Ihnen diese Anleitung, den Schaden zu minimieren. Lesen Sie es jetzt durch, speichern Sie die wichtigsten Schritte als Screenshot oder drucken Sie es aus – denn wenn es passiert, ist Ihr Handy vielleicht schon weg.</p>
@@ -7619,12 +7619,12 @@
                 </div>
             </section>
 
-            <!-- 六、展望篇（第33-41章） -->
+            <!-- VI、Ausblick（Kapitel 33-41） -->
             <section id="zhan-wang-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">VI. Ausblick (Kapitel 33-41)</h2>
                 <p class="chapter-intro mb-4">Nach den praktischen Themen und Notfallplanungen wollen wir die Phantasie etwas schweifen lassen und einen Blick auf die am Horizont brauenden Stuerme werfen. Dieses Kapitel ist kurz, aber es weist auf die grossen Richtungen der naechsten 5–20 Jahre voraus: Wird das Handy verschwinden? Wodurch wird es ersetzt? Wie wird sich unsere Beziehung zur digitalen Welt neu formen?</p>
 
-                <!-- 第三十三章 -->
+                <!-- Kapitel 33 -->
                 <div id="di-san-shi-san-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 33: Zukunftsausblick – Die naechste Etappe des Smartphones</h3>
                     <p class="chapter-intro mb-4">Das Handy wird nicht ueber Nacht verschwinden, aber seine dominante Stellung koennte von einer neuen Geraetegeneration aufgeteilt werden. In diesem Kapitel besprechen wir drei Dinge: Wie sehen die Geraete der naechsten Generation aus, wie wird das Handy als neues Fundament der Identitaet »unsichtbar«, und welche ethischen Fragen muessen wir im Voraus bedenken.</p>
@@ -7695,7 +7695,7 @@
                     </div>
                 </div>
 
-                <!-- 第三十四章：车机互联深度指南 -->
+                <!-- Kapitel 34：Ausfuehrlicher Leitfaden zur Auto-Handy-Konnektivitaet -->
                 <div id="di-san-shi-si-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 34: Tiefer Leitfaden zur Auto-Konnektivitaet – Verschmelzung von Smartphone und Auto</h3>
                     <p class="chapter-intro mb-4">Das Auto entwickelt sich vom »vier Raeder plus Sofa« zum »vier Raeder plus Smartphone«. Egal ob Verbrenner oder Elektro – die Beziehung zwischen Handy und Infotainment-System bestimmt dein Fahrerlebnis. Dieses Kapitel klaert die drei Hauptansaetze der Handy-Auto-Vernetzung, die Merkmale der verschiedenen Systeme und praktische Tipps fuer entspannteres Fahren.</p>
@@ -7820,12 +7820,12 @@
                 </div>
             </section>
 
-            <!-- 儿童与手机专题（第35章） -->
+            <!-- Thema Kinder und Handys（Kapitel 35） -->
             <section id="er-tong-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">Thema Kinder und Handy (Kapitel 35)</h2>
                 <p class="chapter-intro mb-4">Die Beziehung zwischen Kindern und Handys ist eines der groessten Kopfschmerzthemen fuer die Eltern dieser Generation. Zu frueh gegeben – Angst vor Abhaengigkeit. Zu spaet – Angst vor Zurueckbleiben. Zu viel Kontrolle – Angst vor Auflehnung. Zu wenig – Angst vor Kontrollverlust. Dieses Kapitel bezieht keine Position und belehrt nicht, sondern zerlegt »Wann geben, wie kontrollieren, wie lehren, wie schuetzen« in umsetzbare Schritte.</p>
 
-                <!-- 第三十五章 -->
+                <!-- Kapitel 35 -->
                 <div id="di-san-shi-wu-zhang" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 35: Kinder und Smartphones – Erziehungsleitfaden fuer das digitale Zeitalter</h3>
                     <p class="chapter-intro mb-4">Dieses Kapitel behauptet nicht, das Handy sei »ein Ungeheuer«, noch dass »je frueher desto klueger«. Wir gehen nach Altersstufen vor: Geraete bereitstellen, Regeln setzen, Medienkompetenz vermitteln, Gesundheit schuetzen – Schritt fuer Schritt.</p>
@@ -7972,7 +7972,7 @@
                 </div>
             </section>
 
-            <!-- 第三十六章：手机与智能家居——让家变聪明 -->
+            <!-- Kapitel 36：Handy und Smart Home——Das Zuhause intelligent machen -->
             <div id="di-san-shi-liu-zhang" class="mb-10 content-section">
                 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Kapitel 36: Smartphone und Smart Home – Das Zuhause intelligent machen</h3>
                 <p class="chapter-intro mb-4">Das Handy kann noch etwas immer Wichtigeres: die "Fernbedienung" des ganzen Hauses sein. Von einer Lampe über eine Steckdose bis zum Türschloss – Smart Home wird vom "Geek-Spielzeug" zur "Alltagsausstattung". Dieses Kapitel klärt Protokolle, Ökosysteme, Hubs und Starter-Kits und schließt mit einer Sicherheits-Checkliste, damit Sie nicht vom "Smart" überrollt werden.</p>
@@ -8244,7 +8244,7 @@
                 <p class="mb-2">Mini-Serien sind keine "verkürzten Fernsehserien", sondern "Hook-Maschinen, die Konflikte verstärken".</p>
                 <ul class="list-disc pl-6 mb-3 space-y-1">
                     <li><strong>Episoden-Formel</strong>: Eröffnung 3 Sekunden starker Hook (Ohrfeige, Geheimnis gelüftet, Identitätswechsel) → 30 Sekunden Aufbau → 60 Sekunden Eskalation → Cliffhanger-Ende.</li>
-                    <li><strong>:</strong>: Typisiert, gelabelt ("schiktierter Schwiegersohn", "heimlicher Milliardär"). Mini-Serien streben nicht nach Komplexität, sondern nach "das Publikum versteht sofort,爽 in einer Sekunde".</li>
+                    <li><strong>:</strong>: Typisiert, gelabelt ("schiktierter Schwiegersohn", "heimlicher Milliardär"). Mini-Serien streben nicht nach Komplexität, sondern nach "das Publikum versteht sofort,erfrischend in einer Sekunde".</li>
                     <li><strong>Tempo</strong>: Alle 15–20 Sekunden ein emotionaler Punkt – keine flachen Passagen. Beim Schreiben jeden "emotionalen Wendepunkt" markieren.</li>
                 </ul>
                 <h4 class="text-lg font-semibold mt-4 mb-2">II. Dreh: Handy reicht, aber mit Einschränkungen</h4>
@@ -8268,12 +8268,12 @@
                 </div>
             </div>
 
-            <!-- 七、附录 -->
+            <!-- VII、Anhang -->
             <section id="fu-lu" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">VII. Anhang</h2>
                 <p class="chapter-intro mb-4">Netzwerk</p>
                 
-                <!-- 附录A -->
+                <!-- AnhangA -->
                 <div id="fu-lu-a" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">: Zunächst mit einem stabilen WLAN verbinden.</h3>
                     
@@ -8300,7 +8300,7 @@
                     </ul>
                 </div>
 
-                <!-- 附录B -->
+                <!-- AnhangB -->
                 <div id="fu-lu-b" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Was du vielleicht hörst</h3>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -8311,7 +8311,7 @@
                     </ul>
                 </div>
 
-                <!-- 附录C -->
+                <!-- AnhangC -->
                 <div id="fu-lu-c" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">ROM (Speicher)</h3>
                     <div class="overflow-x-auto">
@@ -8394,7 +8394,7 @@
                     </div>
                 </div>
 
-                <!-- 附录D -->
+                <!-- AnhangD -->
                 <div id="fu-lu-d" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">: Auf Bilibili nach "[dein Smartphone-Modell] Tipps" suchen.</h3>
                     
@@ -8422,7 +8422,7 @@
                     </ol>
                 </div>
 
-                <!-- 附录E -->
+                <!-- AnhangE -->
                 <div id="fu-lu-e" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Anhang E: Dank und Erläuterungen</h3>
                     <p class="mb-2">:</p>
@@ -8494,7 +8494,7 @@
                     <p class="mb-2">Vertikal faltbar (klapphandyartig)</p>
                 </div>
 
-                <!-- 附录F：折叠屏专题 -->
+                <!-- AnhangF：Themenbereich Klappbildschirm -->
                 <div id="fu-lu-f" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Anhang F: Faltbildschirm-Kauf und -Nutzung</h3>
                     <p class="chapter-intro mb-4">Wichtige Fortschritte 2024–2025: Scharnierlebensdauer meist mit 300.000 Klappzyklen spezifiziert (bei 100-mal täglichem Aufklappen ca. 8 Jahre), UTG-Dünnglas ersetzt die frühere Kunststofffolie, die Knickfalte ist sichtbar, aber das Gefühl beim Anfassen bereits sehr dezent, Preise von der 10.000-Yuan-Klasse auf 5.000–6.000 Yuan gesunken.</p>
@@ -8618,10 +8618,10 @@
                         <li><strong>Kaufempfehlungen: Bei ausreichendem Budget und Fokus auf das Ökosystem wähle Huawei Mate X; für den ausgereiftesten Scharniermechanismus wähle Samsung Z Fold; für das beste Preis-Leistungs-Verhältnis wähle Xiaomi/vivo; bei vertikalen Faltbildschirmen vergleiche Huawei Pocket und Samsung Z Flip.</strong>Letzter Hinweis</li>
                         <li><strong>Die Faltbildschirm-Technologie entwickelt sich jedes Jahr weiter; dieser Anhang wurde 2025 verfasst. Vor dem Kauf unbedingt die neuesten Tests und Nutzerfeedbacks prüfen, mit Fokus auf: gemessene Scharnierlebensdauer, Falzverhalten und Reparaturrichtlinien für den Innenbildschirm. Ein persönlicher Test im Geschäft ist immer wichtiger als Online-Bewertungen.</strong>Zuletzt gelesen bei: ...</li>
                         <li><strong>Weiterlesen</strong>Ignorieren</li>
-                        <li><strong>OPPO Find N系列</strong>：横向折叠里尺寸偏紧凑的，单手可握持，适合觉得大折叠太重的用户。</li>
-                        <li><strong>华为Pocket系列</strong>：纵向折叠里外屏最大最实用的，化妆镜、防晒检测等女性向功能做得细致。</li>
+                        <li><strong>OPPO Find N-Serie</strong>：Kompaktere Modelle bei horizontalen Klapphandys，Einhaendig bedienbar，Fuer Nutzer, denen grosse Klapphandys zu schwer sind。</li>
+                        <li><strong>HuaweiPocket-Serie</strong>：Bei vertikalen Klapphandys die groesste und praktischste Aussenanzeige，Kosmetikspiegel、Sonnenschutz-Erkennung und weitere frauenorientierte Funktionen sind detailliert umgesetzt。</li>
                     </ul>
-                    <p class="mb-2">选购建议：预算充足追求生态选华为Mate X；想要最成熟铰链选三星Z Fold；性价比首选小米/vivo；纵向折叠看华为Pocket和三星Z Flip。</p>
+                    <p class="mb-2">Kaufempfehlungen：Bei ausreichendem Budget und Fokus auf Oekosystem: HuaweiMate X；Bei Wunsch nach ausgereiftem Scharnier: SamsungZ Fold；Bestes Preis-Leistungs-Verhaeltnis: Xiaomi/vivo；Bei vertikalem Klapphandy: HuaweiPocketund SamsungZ Flip。</p>
 
                     <div class="info-box rounded-lg p-4 mt-4">
                         <p class="font-semibold"><i class="fas fa-circle-info mr-2"></i>Letzte Erinnerung</p>
@@ -8629,7 +8629,7 @@
                     </div>
                 </div>
 
-                <!-- 结语 -->
+                <!-- Schlusswort -->
                 <div id="jie-yu" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Epilog: Neugierig bleiben, achtsam bleiben</h3>
                     <p class="mb-2">Herzlichen Glückwunsch, Sie haben es bis hierher geschafft.</p>
@@ -8646,7 +8646,7 @@
                     </div>
                 </div>
 
-                <!-- 附录G：全书速查索引 -->
+                <!-- AnhangG：Schnellreferenz-Index des gesamten Buches -->
                 <div id="fu-lu-g" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Anhang G: Schnellsuchindex des gesamten Buches</h3>
                     <p class="chapter-intro mb-4">Nach Pinyin sortiert, damit Sie schnell das passende Kapitel finden.</p>
@@ -8744,7 +8744,7 @@
                     </div>
                 </div>
 
-                <!-- 附录H：版本路线图 -->
+                <!-- AnhangH：Versions-Roadmap -->
                 <div id="fu-lu-h" class="mb-10 content-section">
                     <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">Anhang H: Versions-Roadmap</h3>
                     <p class="chapter-intro mb-4">Dieses Buch wird ständig aktualisiert. Hier sind die Planungen für zukünftige Versionen. Sagen Sie uns im Feedback, was Sie gerne lesen möchten.</p>
@@ -8768,7 +8768,7 @@
         </main>
     </div>
 
-    <!-- 快捷工具：浮动按钮组 -->
+    <!-- Schnellwerkzeuge：Schwebende Button-Gruppe -->
     <div id="quick-tools" class="quick-tools no-print" aria-label="Schnellwerkzeuge">
         <button id="quick-search" class="quick-tool-btn" title="Suche (Strg+K)" aria-label="Suche">
             <i class="fas fa-search" aria-hidden="true"></i>
@@ -8793,7 +8793,7 @@
         </button>
     </div>
 
-    <!-- 快捷键面板 -->
+    <!-- Tastenkuerzel-Panel -->
     <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="Tastaturkürzel">
         <div class="search-panel" style="max-width:480px">
             <div class="search-input-wrapper">
@@ -8813,7 +8813,7 @@
         </div>
     </div>
 
-    <!-- 备份/恢复弹窗 -->
+    <!-- Backup/Popup wiederherstellen -->
     <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="Sichern und Wiederherstellen">
         <div class="search-panel" style="max-width:520px">
             <div class="search-input-wrapper">
@@ -8848,13 +8848,13 @@
         </div>
     </div>
 
-    <!-- 阅读连续天数提示 -->
+    <!-- Hinweis auf aufeinanderfolgende Lesetage -->
     <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
         <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
         <span id="streak-toast-text">X Tage in Folge gelesen!</span>
     </div>
 
-    <!-- 语音朗读控件栏 -->
+    <!-- Steuerungsleiste fuer Sprachausgabe -->
     <div id="tts-controls" class="tts-controls" role="region" aria-label="Vorlesen-Steuerung" aria-live="polite">
         <span class="tts-chapter-label" id="tts-label" title="Aktuell vorgelesenes Kapitel">Nicht begonnen</span>
         <button class="tts-btn" id="tts-prev" title="Vorheriger Abschnitt" aria-label="Vorheriger Abschnitt"><i class="fas fa-step-backward"></i></button>
@@ -8866,7 +8866,7 @@
         <button class="tts-btn" id="tts-stop" title="Vorlesen stoppen" aria-label="Vorlesen stoppen"><i class="fas fa-times"></i></button>
     </div>
 
-    <!-- 回到顶部按钮 -->
+    <!-- Zurueck-nach-oben-Button -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="Nach oben scrollen">
         <svg class="progress-ring" viewBox="0 0 40 40">
             <circle class="bg" cx="20" cy="20" r="18"/>
@@ -8875,15 +8875,15 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- 阅读位置恢复提示 -->
+    <!-- Hinweis zur Wiederherstellung der Leseposition -->
     <div id="restore-toast" class="restore-position-toast" role="alert">
         <i class="fas fa-bookmark" aria-hidden="true"></i>
-        <span id="restore-toast-text">上次读到：...</span>
+        <span id="restore-toast-text">Zuletzt gelesen: ...</span>
         <button class="btn-restore" id="restore-btn">Weiterlesen</button>
         <button class="btn-dismiss" id="dismiss-btn">Schließen</button>
     </div>
 
-    <!-- JS脚本 -->
+    <!-- JSSkript -->
     <script>
         (function() {
             'use strict';
@@ -8918,7 +8918,7 @@
             const restoreBtn = $('#restore-btn');
             const dismissBtn = $('#dismiss-btn');
 
-            // ===== 主题 =====
+            // ===== Thema =====
             function applyTheme(theme) {
                 html.classList.toggle('dark', theme === 'dark');
                 localStorage.setItem('theme', theme);
@@ -8934,12 +8934,12 @@
             if (themeToggle) themeToggle.addEventListener('click', toggleTheme);
             if (quickTheme) quickTheme.addEventListener('click', toggleTheme);
 
-            // ===== 滚动：进度 + 阴影 + 返回顶部 + 目录进度 + 进度环 =====
+            // ===== Scrollen：Fortschritt + Schatten + Zurueck nach oben + Inhaltsverzeichnis-Fortschritt + Fortschrittsring =====
             const sections = $$('.content-section');
             const totalChapters = sections.length;
             if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} Kapitel`;
 
-            // 进度环参数
+            // Fortschrittsring-Parameter
             const progressRingFg = backToTop.querySelector('.progress-ring .fg');
             const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
             if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
@@ -8953,7 +8953,7 @@
                         const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
                         progressBar.style.width = progress + '%';
 
-                        // 进度环更新
+                        // Fortschrittsring aktualisieren
                         if (progressRingFg) {
                             const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
                             progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
@@ -8973,7 +8973,7 @@
                             backToTop.classList.remove('opacity-100', 'visible');
                         }
 
-                        // 阅读到第几章
+                        // Bis zu welchem Kapitel gelesen
                         let passedChapters = 0;
                         const viewportTop = scrollY + 100;
                         sections.forEach(sec => {
@@ -9002,15 +9002,15 @@
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 阅读位置记忆 =====
+            // ===== Leseposition merken =====
             const POSITION_KEY = 'phoneCourse_scrollPos';
             const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
             let savePosTimer = null;
             function saveReadingPosition() {
                 const scrollY = window.scrollY;
-                if (scrollY < 200) return; // 太靠前不保存
+                if (scrollY < 200) return; // Zu weit oben, nicht gespeichert
                 localStorage.setItem(POSITION_KEY, scrollY.toString());
-                // 找到当前章节名
+                // Aktuellen Kapitelnamen finden
                 let currentChapter = '';
                 const viewportTop = scrollY + 100;
                 for (let i = sections.length - 1; i >= 0; i--) {
@@ -9027,14 +9027,14 @@
                 savePosTimer = setTimeout(saveReadingPosition, 1000);
             }, { passive: true });
 
-            // 页面加载时恢复位置
+            // Position beim Laden der Seite wiederherstellen
             function tryRestorePosition() {
                 const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
                 const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
-                    restoreToastText.textContent = `上次读到：${savedChapter}`;
+                    restoreToastText.textContent = `Zuletzt gelesen: ${savedChapter}`;
                     setTimeout(() => restoreToast.classList.add('show'), 800);
-                    // 10秒后自动隐藏
+                    // 10Automatisch nach Sekunden ausblenden
                     setTimeout(() => restoreToast.classList.remove('show'), 15000);
                 }
             }
@@ -9053,7 +9053,7 @@
                 });
             }
 
-            // ===== 滚动入场动画 =====
+            // ===== Scroll-Einblendungs-Animation =====
             const visibleObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -9062,7 +9062,7 @@
                     }
                 });
             }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
-            // 第一屏的内容直接可见
+            // Inhalt des ersten Bildschirms direkt sichtbar
             sections.forEach((sec, i) => {
                 const rect = sec.getBoundingClientRect();
                 if (rect.top < window.innerHeight) {
@@ -9072,7 +9072,7 @@
                 }
             });
 
-            // ===== 侧边栏打开/关闭 =====
+            // ===== Seitenleiste geoeffnet/Schliessen =====
             function openSidebar() {
                 sidebar.classList.remove('-translate-x-full');
                 overlay.classList.remove('hidden');
@@ -9091,13 +9091,13 @@
             });
             if (overlay) overlay.addEventListener('click', closeSidebar);
 
-            // 快捷工具：打开目录
+            // Schnellwerkzeuge：Inhaltsverzeichnis oeffnen
             if (quickToc) quickToc.addEventListener('click', () => {
                 if (window.innerWidth < 1024) openSidebar();
                 else window.scrollTo({ top: 0, behavior: 'smooth' });
             });
 
-            // ===== 全局锚点导航：补偿固定导航栏偏移 =====
+            // ===== Globale Anker-Navigation：Versatz der fixierten Navigationsleiste ausgleichen =====
             const NAVBAR_HEIGHT = 80;
             function scrollToAnchor(id) {
                 const el = document.getElementById(id);
@@ -9118,7 +9118,7 @@
                 requestAnimationFrame(() => scrollToAnchor(targetId));
             }, { passive: false });
 
-            // ===== 目录折叠 =====
+            // ===== Inhaltsverzeichnis einklappen =====
             $$('.toc-toggle-btn').forEach(btn => {
                 btn.addEventListener('click', (e) => {
                     e.preventDefault();
@@ -9137,7 +9137,7 @@
                 });
             });
 
-            // ===== 目录筛选 =====
+            // ===== Inhaltsverzeichnis filtern =====
             if (tocFilter && tocList) {
                 tocFilter.addEventListener('input', () => {
                     const q = tocFilter.value.trim().toLowerCase();
@@ -9154,7 +9154,7 @@
                 });
             }
 
-            // ===== 目录高亮 =====
+            // ===== Inhaltsverzeichnis hervorheben =====
             const tocLinkMap = new Map();
             $$('#sidebar a').forEach(item => {
                 const href = item.getAttribute('href');
@@ -9196,7 +9196,7 @@
 
             sections.forEach(section => observer.observe(section));
 
-            // ===== 书签系统 =====
+            // ===== Lesezeichensystem =====
             const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
             function getBookmarks() {
                 try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
@@ -9212,7 +9212,7 @@
             }
             function isBookmarked(id) { return getBookmarks().includes(id); }
 
-            // 给每个章节添加书签按钮
+            // Lesezeichen-Button zu jedem Kapitel hinzufuegen
             sections.forEach(sec => {
                 const id = sec.id;
                 if (!id) return;
@@ -9227,10 +9227,10 @@
                     btn.classList.toggle('active', added);
                     btn.querySelector('span').textContent = added ? 'Als Lesezeichen markiert' : 'Lesezeichen';
                     btn.setAttribute('aria-label', added ? 'Lesezeichen entfernen' : 'Dieses Kapitel als Lesezeichen');
-                    // 更新侧边栏标记
+                    // Markierungen in der Seitenleiste aktualisieren
                     updateTocBookmark(id, added);
                 });
-                // 插入到h3后面
+                // Einfuegen inh3danach
                 h3.parentNode.insertBefore(btn, h3.nextSibling);
             });
 
@@ -9240,10 +9240,10 @@
                     tocLink.classList.toggle('bookmarked', isBookmarked);
                 }
             }
-            // 初始化侧边栏书签标记
+            // Lesezeichen-Markierungen in der Seitenleiste initialisieren
             getBookmarks().forEach(id => updateTocBookmark(id, true));
 
-            // ===== 章节完成勾选 =====
+            // ===== Haekchen fuer Kapitelabschluss =====
             const COMPLETED_KEY = 'phoneCourse_completed';
             function getCompleted() {
                 try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
@@ -9264,7 +9264,7 @@
                 if (!id) return;
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
-                // 找到meta条或h3前面的元素
+                // FindenmetaEintrag oderh3Vorheriges Element
                 const metaDiv = h3.previousElementSibling;
                 const check = document.createElement('button');
                 check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
@@ -9275,9 +9275,9 @@
                     check.classList.toggle('checked', done);
                     check.querySelector('span:last-child').textContent = done ? 'Gelesen' : 'Als gelesen markieren';
                     check.setAttribute('aria-label', done ? 'Als ungelesen markieren' : 'Als gelesen markieren');
-                    // 更新侧边栏
+                    // Seitenleiste aktualisieren
                     updateTocCompleted(id, done);
-                    // 更新完成进度
+                    // Fortschritt aktualisieren
                     updateCompletedProgress();
                 });
                 if (metaDiv && metaDiv.classList.contains('flex')) {
@@ -9298,13 +9298,13 @@
             function updateCompletedProgress() {
                 const completed = getCompleted().length;
                 if (readingProgressText) {
-                    // 也更新完成数显示
+                    // Auch die Anzahl der Abgeschlossenen aktualisieren
                     const passed = parseInt(readingProgressText.textContent) || 0;
-                    readingProgressText.textContent = `${passed} / ${totalChapters} 章`;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} `;
                 }
             }
 
-            // ===== 搜索（增强：键盘导航 + 结果计数） =====
+            // ===== Suche（verbessert：Tastaturnavigation + Ergebniszaehler） =====
             let searchData = null;
             let searchSelectedIdx = -1;
             let searchResultItems = [];
@@ -9373,7 +9373,7 @@
                         return;
                     }
 
-                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">找到 ${results.length} 个结果</div>`;
+                    const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">Finden ${results.length} Ergebnisse</div>`;
                     searchResults.innerHTML = countHtml + results.map(item => {
                         const idx = item.text.toLowerCase().indexOf(query);
                         const start = Math.max(0, idx - 40);
@@ -9403,7 +9403,7 @@
                 }, 200);
             });
 
-            // 搜索键盘导航
+            // Tastaturnavigation fuer die Suche
             if (searchInput) searchInput.addEventListener('keydown', (e) => {
                 if (!searchResultItems.length) return;
                 if (e.key === 'ArrowDown') {
@@ -9427,7 +9427,7 @@
                 }
             });
 
-            // ===== 字号 =====
+            // ===== Schriftgroesse =====
             const DEFAULT_FONT_SIZE = 16;
             function setFontSize(size) {
                 contentEl.style.fontSize = size + 'px';
@@ -9448,7 +9448,7 @@
                 });
             });
 
-            // ===== 触摸滑动关闭侧边栏 =====
+            // ===== Seitenleiste durch Wischen schliessen =====
             let touchStartX = 0;
             let touchStartY = 0;
             sidebar.addEventListener('touchstart', (e) => {
@@ -9461,7 +9461,7 @@
                 if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
             }, { passive: true });
 
-            // ===== 章节导航 =====
+            // ===== Kapitelnavigation =====
             const sectionIds = sections.map(s => s.id);
             sections.forEach((section, i) => {
                 const nav = document.createElement('div');
@@ -9479,12 +9479,12 @@
                 section.appendChild(nav);
             });
 
-            // ===== 打印 =====
+            // ===== Drucken =====
             function doPrint() { window.print(); }
             if (printBtn) printBtn.addEventListener('click', doPrint);
             if (quickPrint) quickPrint.addEventListener('click', doPrint);
 
-            // ===== 全局键盘快捷键 =====
+            // ===== Globale Tastaturkuerzel =====
             const shortcutsOverlay = $('#shortcuts-overlay');
             const backupOverlay = $('#backup-overlay');
             function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
@@ -9501,7 +9501,7 @@
             if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
             if (backupClose) backupClose.addEventListener('click', closeBackup);
 
-            // 点击遮罩关闭弹窗
+            // Popup durch Klick auf Overlay schliessen
             if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
                 if (e.target === shortcutsOverlay) closeShortcuts();
             });
@@ -9515,7 +9515,7 @@
                     e.preventDefault();
                     searchOverlay.classList.contains('active') ? closeSearch() : openSearch();
                 } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
-                    // 浏览器已经处理打印
+                    // Browser hat den Druck bereits verarbeitet
                 } else if (e.key === 'Escape') {
                     if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
                     if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
@@ -9529,7 +9529,7 @@
                 }
             });
 
-            // ===== 阅读连续天数追踪 =====
+            // ===== Verfolgung aufeinanderfolgender Lesetage =====
             const STREAK_KEY = 'reading-streak';
             const STREAK_DATE_KEY = 'reading-streak-date';
             const streakToast = $('#streak-toast');
@@ -9551,18 +9551,18 @@
                         localStorage.setItem(STREAK_KEY, streak.toString());
                         localStorage.setItem(STREAK_DATE_KEY, today);
 
-                        // 显示连续天数提示
+                        // Hinweis auf aufeinanderfolgende Tage anzeigen
                         if (streak >= 2 && streakToast && streakToastText) {
-                            streakToastText.textContent = '🔥 连续阅读第 ' + streak + ' 天！坚持下去！';
+                            streakToastText.textContent = '🔥 Aufeinanderfolgende Lesetage  ' + streak + '  Tage. Weiter so!';
                             streakToast.classList.add('show');
                             setTimeout(() => streakToast.classList.remove('show'), 5000);
                         }
                     }
-                } catch(e) { /* localStorage 可能不可用 */ }
+                } catch(e) { /* localStorage Moeglicherweise nicht verfuegbar */ }
             }
             updateStreak();
 
-            // ===== 备份/恢复功能 =====
+            // ===== Backup/Wiederherstellungsfunktion =====
             function exportBackup() {
                 try {
                     const data = {
@@ -9579,20 +9579,20 @@
                         bookmarks: [],
                         ratings: {}
                     };
-                    // 收集健康自检状态
+                    // Status der Gesundheitspruefung erfassen
                     for (let i = 0; i < 8; i++) {
                         data.healthChecks[i] = localStorage.getItem('health-check-' + i);
                     }
-                    // 收集章节完成状态
+                    // Kapitel-Abschluss-Status erfassen
                     $$('.chapter-check.checked').forEach(c => {
                         const sec = c.closest('.content-section');
                         if (sec) data.chapterChecks[sec.id] = true;
                     });
-                    // 收藏书签
+                    // LesezeichenLesezeichen
                     $$('.toc-item.bookmarked').forEach(b => {
                         data.bookmarks.push(b.getAttribute('href').replace('#', ''));
                     });
-                    // 收集评分
+                    // Bewertungen erfassen
                     $$('.chapter-rating').forEach(r => {
                         const sec = r.closest('.content-section');
                         if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
@@ -9621,13 +9621,13 @@
                         if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
                         if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
                         if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
-                        // 恢复健康自检
+                        // Gesundheitspruefung wiederherstellen
                         if (data.healthChecks) {
                             Object.keys(data.healthChecks).forEach(i => {
                                 localStorage.setItem('health-check-' + i, data.healthChecks[i]);
                             });
                         }
-                        // 恢复章节完成状态
+                        // Kapitel-Abschluss-Status wiederherstellen
                         if (data.chapterChecks) {
                             Object.keys(data.chapterChecks).forEach(id => {
                                 const sec = document.getElementById(id);
@@ -9639,7 +9639,7 @@
                                 }
                             });
                         }
-                        // 恢复书签
+                        // Lesezeichen wiederherstellen
                         if (data.bookmarks) {
                             data.bookmarks.forEach(id => {
                                 const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
@@ -9674,7 +9674,7 @@
             });
             if (backupReset) backupReset.addEventListener('click', resetAllData);
 
-            // ===== 章节评分系统 =====
+            // ===== Kapitel-Bewertungssystem =====
             sections.forEach(sec => {
                 const h3 = sec.querySelector('h3');
                 if (!h3) return;
@@ -9695,7 +9695,7 @@
                     });
                     ratingDiv.appendChild(star);
                 }
-                // 插入到h3后面
+                // Einfuegen inh3danach
                 h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
                 updateStars(ratingDiv);
             });
@@ -9707,7 +9707,7 @@
                 });
             }
 
-            // ===== scroll 防抖优化 =====
+            // ===== scroll Bildstabilisierung optimiert =====
             let scrollTicking = false;
             const originalOnScroll = onScroll;
             function debouncedScroll() {
@@ -9722,7 +9722,7 @@
             window.removeEventListener('scroll', onScroll);
             window.addEventListener('scroll', debouncedScroll, { passive: true });
 
-            // ===== 系统深色模式跟随 =====
+            // ===== Dunkelmodus dem System folgen =====
             if (window.matchMedia) {
                 const mq = window.matchMedia('(prefers-color-scheme: dark)');
                 mq.addEventListener('change', (e) => {
@@ -9732,7 +9732,7 @@
                 });
             }
 
-            // ===== 自动给每个章节标题添加面包屑与难度标签 =====
+            // ===== Brotkrumen und Schwierigkeitsmarkierungen automatisch zu jedem Kapiteltitel hinzufügen =====
             sections.forEach(sec => {
                 const id = sec.id || '';
                 const h3 = sec.querySelector('h3');
@@ -9759,17 +9759,17 @@
                         ${level === 'beginner' ? 'Kapitel 19: Fehlersuche und Selbsthilfe' : level === 'intermediate' ? 'Weiterführender Teil' : 'Kapitel-Karte zur Schnellsuche'}
                     </span>
                     <span class="reading-time">
-                        <i class="far fa-clock" aria-hidden="true"></i>约 ${minutes} 分钟
+                        <i class="far fa-clock" aria-hidden="true"></i>ca. ${minutes} Minuten
                     </span>
                 `;
                 h3.parentNode.insertBefore(meta, h3);
             });
 
-            // ===== 给章节添加"HarmonyOS 4.3 ist die Version, die derzeit auf Huawei-Smartphones weit verbreitet ist. Es ist erwähnenswert, dass HarmonyOS 4.3 mit dem Code-Framework des Android Open Source Project (AOSP) kompatibel ist und daher vollständig Android-Anwendungen ausführen kann — die meisten Apps, die du im Huawei AppGallery lädst, sind im Wesentlichen Android-Anwendungen, die über die Kompatibilitätsschicht von HarmonyOS laufen. HarmonyOS 4.3 ist jedoch nicht einfach ein ummanteltes Android, sondern fügt auf der AOSP-Basis zahlreiche von Huawei selbstentwickelte Fähigkeiten wie die verteilte Architektur und die Ark Engine hinzu."区块 =====
+            // ===== Zu Kapiteln hinzufuegen"HarmonyOS 4.3 ist die Version, die derzeit auf Huawei-Smartphones weit verbreitet ist. Es ist erwähnenswert, dass HarmonyOS 4.3 mit dem Code-Framework des Android Open Source Project (AOSP) kompatibel ist und daher vollständig Android-Anwendungen ausführen kann — die meisten Apps, die du im Huawei AppGallery lädst, sind im Wesentlichen Android-Anwendungen, die über die Kompatibilitätsschicht von HarmonyOS laufen. HarmonyOS 4.3 ist jedoch nicht einfach ein ummanteltes Android, sondern fügt auf der AOSP-Basis zahlreiche von Huawei selbstentwickelte Fähigkeiten wie die verteilte Architektur und die Ark Engine hinzu."Block =====
             function addChapterSummary(sec, points) {
                 const div = document.createElement('div');
                 div.className = 'chapter-summary';
-                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Zusammenfassung dieses Kapitels</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
                 const nav = sec.querySelector('.chapter-nav');
                 if (nav) sec.insertBefore(div, nav);
                 else sec.appendChild(div);
@@ -9786,10 +9786,10 @@
                 'di-liu-zhang': ['Sperrbildschirm-PIN + 2FA ist die Grundverteidigung', 'App-Berechtigungen nach Bedarf, Prinzip der minimalen Rechte', 'Auf öffentlichem Wi-Fi keine Zahlungen oder Logins', 'Im AI-Zeitaltem ist nicht alles echt, was man sieht: Deepfakes, Autoritätsbetrug und Scheinanlagen sind die häufigsten Maschen', 'Ausweg: Handlungsverifikation + Codewort + zweite Bestätigung', 'Vor dem Teilen von Fotos anonymisieren: EXIF-Standort und -Gerät entfernen', 'IoT-Geräte müssen Standardpasswörter ändern', 'Bei Betrug: nicht glauben, nicht verraten, nicht überweisen'],
                 'di-qi-zhang-jichu': ['Satellitenkommunikation: der "Rettungsanker" im Notfall', 'Netzloser Funk: Fern-Funk ohne Netzwerk', 'Unfallerkennung: Sensorfusion erkennt schwere Aufprälle', 'SparkLink: kabellose Verbindung mit geringer Latenz, enormes Potenzial'],
                 'di-ba-zhang': ['Bei Anrufaufzeichnung auf Rechtskonformität achten', 'iMessage/RCS machen klassische SMS zu Rich Media', 'WeChat-Chatverläufe müssen mit der eingebauten Backup-Funktion gesichert werden', 'E-Mail-Konten unterstützen einheitliche Mehrfachkonten-Verwaltung'],
-                'di-jiu-zhang': ['WPS Office hat in China das beste Erlebnis, Microsoft 365 die beste Kompatibilität', 'Notizen in drei Phasen: schnell notieren → später lesen → Wissenssystem', 'Handy-Scan: Notizen/Mic Lens/Baiku/Quanneng Saomiao Wang', 'Cloud-Drive nach Bedarf kombinieren: iCloud/OneDrive/Baidu/Alibaba各有 Anwendungsbereich'],
+                'di-jiu-zhang': ['WPS Office hat in China das beste Erlebnis, Microsoft 365 die beste Kompatibilität', 'Notizen in drei Phasen: schnell notieren → später lesen → Wissenssystem', 'Handy-Scan: Notizen/Mic Lens/Baiku/Quanneng Saomiao Wang', 'Cloud-Drive nach Bedarf kombinieren: iCloud/OneDrive/Baidu/Alibabahaben jeweils Anwendungsbereich'],
                 'di-shi-zhang': ['Wer den Zahlungscode sieht, bekommt Geld – niemals an jemanden Screenshots schicken', '5-Minuten-Sicherheitscheck: Biometrie-Zahlung + Sicherheitssperre + PIN-loses-Zahlung-Check + Geräteverwaltung', 'Bus/U-Bahn bevorzugt mit virtueller Transit-Karte der Handy-Wallet – auch offline nutzbar', 'Elektronische Versichertenkarte, Sozialabfragen, Steuererklärung – alles per Handy', 'Vier Betrug-Nein: Nicht auf "Sicherheitskonten" überweisen, keinen Zahlungscode senden, keine fremden Links klicken, keine Kontonummern verraten'],
                 'di-shi-yi-zhang': ['Vier häufige Fehler: schmutziges Objektiv, Belichtung nicht einstellen, Blitz übermäßig, Digitalzoom falsch nutzen', 'Nachtmodus nutzt Multi-Frame-Komposition – 2–4 Sekunden ruhig halten', 'Pro-Modus: Je niedriger das ISO, desto besser die Qualität; Verschluss steuert das Licht', 'Post-Workflow: Korrektur → Grundeinstellung → lokale Feinbearbeitung → Stilisierung', 'Smart-Suche + regelmäßige Bereinigung + manuelle Alben = Foto-Management-Dreierpaket'],
-                'di-shi-yi-zhang-advanced': ['Drei Video-Elemente: Auflösung, Bildrate, Bitrate', 'H.265 hat 50 % bessere Kompression als H.264', 'ProRes ist Apples professionelles Format, Dateien riesig', 'HDR10/10+/Dolby Vision各有 Positionierung'],
+                'di-shi-yi-zhang-advanced': ['Drei Video-Elemente: Auflösung, Bildrate, Bitrate', 'H.265 hat 50 % bessere Kompression als H.264', 'ProRes ist Apples professionelles Format, Dateien riesig', 'HDR10/10+/Dolby Visionhaben jeweils Positionierung'],
                 'di-shi-er-zhang': ['NetEase Cloud: Playlist-Community; QQ Music: umfangreichste Rechte; Apple Music: schlicht und verlustfrei; Spotify: starker Empfehlungsalgorithmus', 'Xiaoyuzhou ist die erste Wahl für chinesische Podcasts; Tempo und Auto-Cache-Löschung nutzen', 'Lokale Videos mit VLC (alle Formate) oder nPlayer (Gestensteuerung)', 'WeChat Read: Markierung + Social + Kindle-Sync; Augenschutzmodus einschalten', 'Spielmodus priorisiert flüssige Framerate; bei Überhitzung Kühl-Rückenhalter verwenden'],
                 'di-shi-san-zhang': ['Effizienz-Tools: To-Do + Pomodoro + Kalender', 'Gesundheit/Sport: Apple Health / Google Fit sind die Daten-Hubs', 'Browser: Edge bevorzugt, mit Copilot effizienter', 'Suche: auf offizielle Domains achten, .xyz u.ä. meiden'],
                 'di-shi-si-zhang': ['Passwort-Manager: Nur ein Master-Passwort merken', 'Bitwarden: Open-Source kostenlos; 1Password: gutes Erlebnis', 'Master-Passwort: lang und komplex, 2FA aktivieren', 'Regelmäßig Passwort-Sicherheitsaudit durchführen', 'Zero-Knowledge-Architektur: Auch der Anbieter sieht Ihre Passwörter nicht, Verschlüsselung lokal', 'AES-256 + PBKDF2/Argon2 sind das Sicherheitsfundament des Passwort-Tresors', 'Der LastPass-Zwischenfall 2022 warnt: Schwache Master-Passwörter sind am gefährlichsten', 'Passwortstärke nach "Entropie": Länge + Zufall > komplexe Symbole', 'HaveIBeenPwned für Lecks, 1Password Watchtower überwacht Anomalien', 'Passkey basiert auf FIDO2/WebAuthn, phishing-resistent ohne Passwortübertragung', 'Passkey geräteübergreifende Synchronisierung: iCloud-Schlüsselbund/Google-Passwortmanager unterstützt', 'Hardware-Schlüssel (YubiKey/Titan) – phising- und SIM-Hijack-resistent, für Hochsicherheitsnutzer', '1Password geteilter Tresor + Bitwarden Notfallzugang – sichere Familien-Team-Freigabe'],
@@ -9804,7 +9804,7 @@
                 'di-er-shi-san-zhang': ['Automatisierungs-Elemente: Auslöser + Aktion + optionale Logik', 'iOS-Kurzbefehle: Ein-Klick-Morgenroutine, Auto-Energiesparmodus, QR-Buchhaltung', 'Android: Auto-Clicker (Bildschirm-Makro), Tasker (stärkste Automatisierung), MacroDroid (anfängerfreundlich)', 'Fallen: ungenauer Standort-Trigger, iOS läuft nicht automatisch (manuell bestätigen), Tasker braucht Bedienungshilfen', 'Automatisierungsdenken: Wiederholung in "Bedingung → Aktion" verwandeln – das Handy wird Ihr persönlicher Assistent'],
                 'di-er-shi-si-zhang': ['Bootloader ist der Torwächter beim Start; Signaturverifizierung verhindert Manipulation', 'BL-Entsperrung je nach Marke unterschiedlich (Xiaomi ja/Huawei gesperrt)', 'Root-Methoden: Magisk/Kernelsu/SuperSU', 'Drei Flash-Typen: offizielles ROM / Drittanbieter-Recovery / Drittanbieter-ROM'],
                 'di-er-shi-wu-zhang': ['Altes Handy verkaufen: erst Backup → Account abmelden → verschlüsselt löschen → überschreiben und erneut löschen', 'Digitales Erbe: iCloud Legacy Contact / Google inaktive Konten', 'Verwertung bevorzugt offizielle Inzahlungnahme; Zweitverwendung als Überwachung/Navigation'],
-                'di-er-shi-liu-zhang': ['Drei AI-Handy-Standards: On-Device-LLM, NPU-TOPS, AI-Agent App-übergreifend', 'AI-Strategien der Hersteller: Apple/Google/Huawei/Xiaomi/OPPO/vivo各有 Stärken', 'Satellitenkommunikation: BeiDou-Kurznachrichten nun in Mittelklasse; Tiantong-Telefonie noch Flaggschiff', 'Faltbare Displays: Hardware ausgereift, App-Anpassung 70 %, Aufstellen/Split einzigartig', '6G noch unterwegs, Wi-Fi 7 bereits da, Bluetooth LE Audio verbreitet sich', 'Silizium-Karbon-Anoden-Akkus machen 5.000–6.000 mAh zum Flaggschiff-Standard'],
+                'di-er-shi-liu-zhang': ['Drei AI-Handy-Standards: On-Device-LLM, NPU-TOPS, AI-Agent App-übergreifend', 'AI-Strategien der Hersteller: Apple/Google/Huawei/Xiaomi/OPPO/vivohaben jeweils Stärken', 'Satellitenkommunikation: BeiDou-Kurznachrichten nun in Mittelklasse; Tiantong-Telefonie noch Flaggschiff', 'Faltbare Displays: Hardware ausgereift, App-Anpassung 70 %, Aufstellen/Split einzigartig', '6G noch unterwegs, Wi-Fi 7 bereits da, Bluetooth LE Audio verbreitet sich', 'Silizium-Karbon-Anoden-Akkus machen 5.000–6.000 mAh zum Flaggschiff-Standard'],
                 'di-er-shi-qi-zhang': ['Zuerst den einfachen Modus aktivieren oder Schrift/Symbole manuell vergrößern – wenn die Umgebung stimmt, ist das meiste Problem gelöst', 'Drei eiserne Regeln beim Unterrichten: Nicht drängen, Vergleiche verwenden, aufschreiben', 'Die sechs häufigsten Betrugsmaschen immer wieder erwähnen – drei Verteidigungslinien blocken 90 %', 'Die Fernunterstützung lässt Sie das Handy der Eltern auch aus der Ferne reparieren', 'WeChat Barrierefrei-Modus + Spracheingabe sind die zwei praktischsten Funktionen für Senioren', 'SOS-Notruf und Sturzerkennung – im Ernstfall lebensrettend'],
                 'di-er-shi-ba-zhang': ['Drei Schritte: Erst Bedarf → dann Budget → zuletzt Modell', 'Fünf Kernparameter: Prozessor, Display, Kamera, Akku/Laden, Update-Garantie', '1.500–3.500 Yuan ist die Preisklasse mit dem besten Preis-Leistungs-Verhältnis', 'Letztes Jahres Flaggschiff ist günstiger als dieses Jahres Mittelklasse', 'Fünf große Fallen: Mehrfachkamera-Täuschung, Hohe-Pixel-Falle, Anbieter-Branding, Gebogene-Display-Glaube, AI-Gimmick', '618 und Doppel-11 sind die zwei besten Kaufzeitfenster des Jahres'],
                 'di-er-shi-jiu-zhang': ['Zuerst die Bildschirmzeit-Daten ansehen – den Ist-Zustand erkennen ist der erste Schritt', 'Unterhaltungs-Apps Limits setzen, "Nicht stören" zeitsteuern – die Aufmerksamkeit zurückgewinnen', 'Die 20-20-20-Regel ist die einfachste und wirksamste Augengewohnheit', 'Bei gesenktem Kopf lastet das 5–6-fache auf dem Nacken – Handy höher halten + regelmäßig den Nacken bewegen', '1 Stunde vor dem Schlafengehen nicht aufs Handy schauen, Ladegerät außer Reichweite legen', 'Das Gegenmittel gegen Informationsangst ist "aktives Ausblenden", nicht "mehr konsumieren"'],
@@ -9815,13 +9815,13 @@
             };
             Object.keys(summaries).forEach(id => {
                 const sec = document.getElementById(id);
-                // 跳过已有内联小结的章节，避免重复
+                // Kapitel mit vorhandener Inline-Zusammenfassung ueberspringen，Wiederholungen vermeiden
                 if (sec && !sec.querySelector('.chapter-summary')) {
                     addChapterSummary(sec, summaries[id]);
                 }
             });
 
-            // ===== 复制按钮（给 kbd 元素添加） =====
+            // ===== Kopieren-Button（fuer kbd Element hinzufuegen） =====
             $$('.kbd').forEach(kbd => {
                 const btn = document.createElement('button');
                 btn.className = 'copy-btn';
@@ -9841,11 +9841,11 @@
                 kbd.parentNode.insertBefore(btn, kbd.nextSibling);
             });
 
-            // ===== 可折叠长内容（h4 级别） =====
+            // ===== Einklappbare langformatige Inhalte（h4 Ebene） =====
             sections.forEach(sec => {
                 const h4s = $$('h4', sec);
                 h4s.forEach(h4 => {
-                    // 只对内容较长的h4段落添加折叠
+                    // Nur fuer laengere Inhalteh4Einklappfunktion zu Absaetzen hinzufuegen
                     let sibling = h4.nextElementSibling;
                     let contentLength = 0;
                     let elements = [];
@@ -9855,7 +9855,7 @@
                         sibling = sibling.nextElementSibling;
                     }
                     if (contentLength > 800) {
-                        // 添加折叠头
+                        // Einklapp-Header hinzufuegen
                         const header = document.createElement('div');
                         header.className = 'collapsible-header';
                         header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
@@ -9876,7 +9876,7 @@
                 });
             });
 
-            // ===== 学习仪表盘：阅读进度 + 手机健康自检 =====
+            // ===== Lern-Dashboard：Lese-Fortschritt + Gesundheitspruefung des Handys =====
             const dashProgressRing = $('#progress-ring-fg');
             const progressPercent = $('#progress-percent');
             const readCountEl = $('#read-count');
@@ -9889,7 +9889,7 @@
             const DASH_RING_CIRCUMFERENCE = 213.6;
 
             function updateDashboard() {
-                // 阅读进度
+                // Lese-Fortschritt
                 const completed = $$('.chapter-check.checked').length;
                 const total = sections.length;
                 const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
@@ -9899,28 +9899,28 @@
                 if (progressPercent) progressPercent.textContent = pct + '%';
                 if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
 
-                // 书签数
+                // Anzahl Lesezeichen
                 const bookmarks = $$('.toc-item.bookmarked').length;
                 if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
 
-                // 上次章节
+                // Letztes Kapitel
                 const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
                 if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
 
-                // 健康自检
+                // Gesundheitspruefung
                 const checked = checkInputs.filter(c => c.checked).length;
                 const totalChecks = checkInputs.length;
                 if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
                 if (healthBarEl) healthBarEl.style.width = (checked / totalChecks * 100) + '%';
                 if (healthMsgEl) {
                     if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>Vollpunkt! Ihre Handysicherheit ist hervorragend';
-                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = '不错！还有 ' + (totalChecks - checked) + ' 项可以完善';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'Gut! Noch  ' + (totalChecks - checked) + '  Verbesserungspunkte';
                     else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'Ausreichend – nicht angekreuzte Sicherheitspunkte zuerst erledigen';
                     else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>Ihr Handy hat Sicherheitsrisiken – bitte schnell beheben';
                 }
             }
 
-            // 恢复自检状态
+            // Selbstpruefungs-Status wiederherstellen
             checkInputs.forEach((input, i) => {
                 const saved = localStorage.getItem('health-check-' + i);
                 if (saved === 'true') input.checked = true;
@@ -9931,10 +9931,10 @@
             });
 
             updateDashboard();
-            // 每隔3秒刷新一次（捕获章节完成勾选的变化）
+            // alle3Aktualisierung alle paar Sekunden（Aenderungen der Kapitel-Abschluss-Haekchen erfassen）
             setInterval(updateDashboard, 3000);
 
-            // ===== 语音朗读（TTS）=====
+            // ===== Sprachausgabe（TTS）=====
             const ttsControls = $('#tts-controls');
             const ttsPlayBtn = $('#tts-play');
             const ttsPrevBtn = $('#tts-prev');
@@ -9958,11 +9958,11 @@
 
             function getSectionText(sec) {
                 if (!sec) return '';
-                // 克隆并移除不需要朗读的元素
+                // Elemente klonen und nicht zu lesende entfernen
                 const clone = sec.cloneNode(true);
                 const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
                 removes.forEach(el => el.remove());
-                // 移除折叠体但保留其文字内容
+                // Einklappbereich entfernen, aber Textinhalt beibehalten
                 const text = clone.textContent.replace(/\s+/g, ' ').trim();
                 return text;
             }
@@ -9989,7 +9989,7 @@
                 ttsUtterance.pitch = 1.0;
                 ttsUtterance.volume = 1.0;
 
-                // 尝试使用更自然的中文语音
+                // Natuerlichere chinesische Sprachausgabe ausprobieren
                 const voices = window.speechSynthesis.getVoices();
                 const zhVoice = voices.find(v => v.lang.startsWith('de'));
                 if (zhVoice) ttsUtterance.voice = zhVoice;
@@ -10003,7 +10003,7 @@
                 };
 
                 ttsUtterance.onend = () => {
-                    // 自动播放下一章节
+                    // Automatische WiedergabeNächstes KapitelAbschnitt
                     if (ttsSectionIndex < sections.length - 1 && ttsActive) {
                         ttsSectionIndex++;
                         speakSection(ttsSectionIndex);
@@ -10025,9 +10025,9 @@
 
             function toggleTtsPlay() {
                 if (!ttsActive) {
-                    // 找到当前可见章节
+                    // Aktuell sichtbares Kapitel finden
                     if (ttsSectionIndex < 0) {
-                        // 从头开始或从当前滚动位置最近的章节开始
+                        // Vom Anfang beginnen oder vom naechsten Kapitel ab der aktuellen Scrollposition
                         const scrollCenter = window.scrollY + window.innerHeight / 2;
                         let closestIdx = 0;
                         let closestDist = Infinity;
@@ -10068,7 +10068,7 @@
                 if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
             }
 
-            // 事件绑定
+            // Ereignisbindung
             if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
             if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
             if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
@@ -10088,7 +10088,7 @@
                 updateTtsSpeedDisplay();
                 if (ttsActive && ttsUtterance) {
                     ttsUtterance.rate = ttsSpeed;
-                    // 重新创建并播放当前段落
+                    // Aktuellen Abschnitt neu erstellen und abspielen
                     const idx = ttsSectionIndex;
                     window.speechSynthesis.cancel();
                     setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
@@ -10106,7 +10106,7 @@
             });
             if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
 
-            // 键盘快捷键：按 R 键切换朗读
+            // Tastaturkuerzel：druecke R Mit Taste zwischen Lesen wechseln
             document.addEventListener('keydown', (e) => {
                 if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
                 if (e.key === 'r' || e.key === 'R') {
@@ -10118,7 +10118,7 @@
                 }
             });
 
-            // ===== 初始化 =====
+            // ===== Initialisierung =====
             onScroll();
             tryRestorePosition();
         })();
