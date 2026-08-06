@@ -31,7 +31,19 @@
       "ru":    "ru.html",
       "it":    "it.html",
       "ko":    "ko.html",
-      "pt":    "pt.html"
+      "pt":    "pt.html",
+      "en":    "en.html",
+      "ja":    "ja.html",
+      "es":    "es.html",
+      "fr":    "fr.html",
+      "de":    "de.html",
+      "ar":    "ar.html",
+      "he":    "he.html",
+      "th":    "th.html",
+      "id":    "id.html",
+      "ms":    "ms.html",
+      "el":    "el.html",
+      "lzh":   "lzh.html"
     },
     "v1.6": {
       "zh-CN": "zh-CN.html",
@@ -109,7 +121,19 @@
       "ru":    "Покоряем смартфон V1.7",
       "it":    "Corso Digitale V1.7",
       "ko":    "스마트폰 정복 V1.7",
-      "pt":    "Curso Digital V1.7"
+      "pt":    "Curso Digital V1.7",
+      "en":    "Master Your Phone V1.7",
+      "ja":    "スマホマスター V1.7",
+      "es":    "Domina tu Móvil V1.7",
+      "fr":    "Maîtrisez votre Mobile V1.7",
+      "de":    "Smartphone Meistern V1.7",
+      "ar":    "إتقان الهاتف V1.7",
+      "he":    "שליטה בסמארטפון V1.7",
+      "th":    "ครองสมาร์ทโฟน V1.7",
+      "id":    "Kuasai Ponselmu V1.7",
+      "ms":    "Kuasai Telefon Pintar V1.7",
+      "el":    "Κυριαρχήστε το Κινητό V1.7",
+      "lzh":   "手機課 V1.7"
     }
   },
   "translation_priority": {
