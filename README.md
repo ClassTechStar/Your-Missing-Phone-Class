@@ -1,105 +1,90 @@
-# 你缺失的那门手机课
+# 你缺失的那门手机课：从基础操作到数字生活掌控
 
-> **从基础操作到数字生活掌控 —— 一本真正面向普通人的智能手机必修课。**
-
-[![章节](https://img.shields.io/badge/章节-36%2B-4F46E5)](./v1.7)
-[![附录](https://img.shields.io/badge/附录-8%2B-4F46E5)](./v1.7)
-[![语言](https://img.shields.io/badge/语言-19%20种-blue)](./v1.7)
-[![版本](https://img.shields.io/badge/当前版本-v1.7-10B981)](./v1.7)
-
----
-
-## 快速开始
-
-| 方式 | 操作 |
-|------|------|
-| **在线阅读** | 打开 [index.html](index.html)，自动识别浏览器语言 |
-| **Android 应用** | 下载 [v1.7 APK](releases/download/v1.7/app-release.apk)，离线阅读 |
-| **下载源码** | `git clone https://github.com/ClassTechStar/Your-Missing-Phone-Class.git` |
+**副标题：** Your Missing Semester of Using Smartphone
 
 ---
 
 ## 在线阅读
 
-### v1.7 — 19 种语言（最新）
+### 最新版本 (v1.7) — 19 种语言
 
-> 按语系分组，点击直达。
-
-**东亚**
-
-| 语言 | 链接 | 语言 | 链接 |
-|------|------|------|------|
-| 简体中文 | [zh-CN.html](v1.7/zh-CN.html) | 繁體中文 | [zh-TW.html](v1.7/zh-TW.html) |
-| 粵語 | [yue.html](v1.7/yue.html) | 日本語 | [ja.html](v1.7/ja.html) |
-| 한국어 | [ko.html](v1.7/ko.html) | 文言文 | [lzh.html](v1.7/lzh.html) |
-
-**欧洲**
-
-| 语言 | 链接 | 语言 | 链接 |
-|------|------|------|------|
-| English | [en.html](v1.7/en.html) | Italiano | [it.html](v1.7/it.html) |
-| Português | [pt.html](v1.7/pt.html) | Español | [es.html](v1.7/es.html) |
-| Français | [fr.html](v1.7/fr.html) | Deutsch | [de.html](v1.7/de.html) |
-| Русский | [ru.html](v1.7/ru.html) | Ελληνικά | [el.html](v1.7/el.html) |
-
-**亚洲/中东**
-
-| 语言 | 链接 | 语言 | 链接 |
-|------|------|------|------|
-| العربية | [ar.html](v1.7/ar.html) | עברית | [he.html](v1.7/he.html) |
-| ภาษาไทย | [th.html](v1.7/th.html) | Bahasa Indonesia | [id.html](v1.7/id.html) |
-| Bahasa Melayu | [ms.html](v1.7/ms.html) | — | — |
+| 语言 | 链接 |
+|------|------|
+| 简体中文 | [zh-CN.html](v1.7/zh-CN.html) |
+| 繁體中文 | [zh-TW.html](v1.7/zh-TW.html) |
+| 粵語 | [yue.html](v1.7/yue.html) |
+| English | [en.html](v1.7/en.html) |
+| 한국어 | [ko.html](v1.7/ko.html) |
+| 日本語 | [ja.html](v1.7/ja.html) |
+| Русский | [ru.html](v1.7/ru.html) |
+| Italiano | [it.html](v1.7/it.html) |
+| Português | [pt.html](v1.7/pt.html) |
+| Español | [es.html](v1.7/es.html) |
+| Français | [fr.html](v1.7/fr.html) |
+| Deutsch | [de.html](v1.7/de.html) |
+| العربية | [ar.html](v1.7/ar.html) |
+| עברית | [he.html](v1.7/he.html) |
+| ภาษาไทย | [th.html](v1.7/th.html) |
+| Bahasa Indonesia | [id.html](v1.7/id.html) |
+| Bahasa Melayu | [ms.html](v1.7/ms.html) |
+| Ελληνικά | [el.html](v1.7/el.html) |
+| 文言文 | [lzh.html](v1.7/lzh.html) |
 
 ### 历史版本
 
-| 版本 | 语言数 | 说明 | 入口 |
-|------|--------|------|------|
-| v1.6 | 19 | 上一稳定版 | [v1.6/](v1.6/) |
-| v1.5 | 17 | 完整多语言版 | [v1.5/](v1.5/) |
-| v1.3 / v1.4 | — | 早期归档 | [archive/](archive/) |
+- **v1.6**（19 种语言）：[目录](v1.6/)
+- **v1.5**（17 种语言）：[目录](v1.5/)
+- **v1.3 / v1.4**：[archive/](archive/)
+
+### 多语言入口
+
+[index.html](index.html) — 自动检测浏览器语言并跳转对应版本
 
 ---
 
-## 课程概览
+## Android 应用
 
-### 七阶体系（36 章 + 8 附录）
-
-| 板块 | 章节 | 内容定位 | 状态 |
-|------|------|----------|------|
-| 基础篇 | 0–7 | 认识手机五脏六腑 | 已发布 |
-| 软件篇 | 8–14 | 玩转 App，变身随身工作站 | 已发布 |
-| 进阶篇 | 15–20 | 快捷指令、多设备协同、系统定制 | 已发布 |
-| 超越篇 | 21–26 | 网络、安全、隐私、数据备份 | 已发布 |
-| 实战篇 | 27–32 | 适老化、选购、投屏、短视频、急救 | **v1.7 新增** |
-| 展望篇 | 33–34 | 未来技术、车机互联 | **v1.7 新增** |
-| 拓展篇 | 35–36 | 儿童专题、智能家居入门 | **v1.7 新增** |
-| 附录 A–H | — | 折叠屏、安全急救、智能家居、健康自查等 | 已发布 |
-
-### 互动特性
-
-- **学习仪表盘** — 阅读进度追踪 + 手机健康自检 8 项清单
-- **语音朗读** — 浮动控制栏，0.5x–2.5x 无极调速，支持键盘快捷键
-- **离线下载** — Android APK 支持全本离线，内置导出 PDF 功能
-- **打印优化** — 章节页自动适配 A4 打印排版
-- **多语言入口** — 单页自动检测浏览器语言并跳转对应版本
+- **v1.7 APK 安装包**：[app-release.apk](releases/download/v1.7/app-release.apk)
+  - 支持离线阅读，无需联网
+  - 适配状态栏，沉浸式体验
+  - 内置打印功能（可导出 PDF）
 
 ---
 
 ## 仓库结构
 
-```
-Your-Missing-Phone-Class/
-├── v1.7/              # 最新版本（19 种语言）
-├── v1.6/              # 历史版本
-├── v1.5/              # 完整多语言版（17 种语言）
-├── archive/           # v1.3 / v1.4 归档
-├── source/            # Markdown / Word 源文件
-├── index.html         # 多语言自动跳转入口
-├── scripts/           # 构建与发布脚本
-└── README.md
-```
+| 目录 | 说明 |
+|------|------|
+| `v1.7/` | **最新版本**（19 种语言，36 章 + 8 附录） |
+| `v1.6/` | 历史版本（19 种语言） |
+| `v1.5/` | 完整多语言版本（17 种语言） |
+| `archive/` | 历史版本归档（v1.3 / v1.4） |
+| `source/` | Markdown 和 Word 源文件 |
+| `index.html` | 多语言在线阅读入口页 |
+| `scripts/` | 构建与发布脚本 |
 
 ---
+
+## V1.7 更新亮点
+
+- **新增实战篇**（第 27–32 章）：适老化改造、手机选购指南、数字健康管理、投屏与车载、短视频创作入门、安全急救功能
+- **新增展望篇**（第 33–34 章）：未来技术展望、车机互联指南
+- **新增拓展篇**（第 35–36 章）：儿童与手机专题、智能家居入门
+- **学习仪表盘**：阅读进度追踪 + 手机健康自检 8 项清单
+- **朗读功能**：浮动控制栏，0.5x–2.5x 无极调速，键盘快捷键支持
+- **多语言扩展**：v1.7 支持 **19 种语言**（新增阿拉伯语、希伯来语、希腊语等）
+
+---
+
+## 语言代码对照
+
+`zh-CN` 简体中文 | `zh-TW` 繁體中文 | `yue` 粵語 | `en` English | `ko` 한국어 | `ja` 日本語 | `ru` Русский | `it` Italiano | `pt` Português | `es` Español | `fr` Français | `de` Deutsch | `ar` العربية | `he` עברית | `th` ภาษาไทย | `id` Bahasa Indonesia | `ms` Bahasa Melayu | `el` Ελληνικά | `lzh` 文言文
+
+---
+
+## 在线阅读（镜像）
+
+[https://classtechstar.github.io/Yihggh.github.io/](https://classtechstar.github.io/Yihggh.github.io/)
 
 ## 交流社区
 
@@ -114,7 +99,7 @@ Your-Missing-Phone-Class/
 
 ---
 
-## 关于这本书
+## 序言
 
 > 别让你的手机，只发挥了一半价值。
 
@@ -141,3 +126,5 @@ Your-Missing-Phone-Class/
 写这本书的目标很简单：让你从"被动使用"手机，变成"主动掌控"手机，让它真正成为你生活、工作、学习的得力助手，而不是一个让你焦虑的"黑盒子"。
 
 现在，拿起你的手机，我们一起开始这门"缺失的课程"吧。
+
+
