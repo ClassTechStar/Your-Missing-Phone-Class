@@ -10,6 +10,13 @@
 - **历史版本**：见 [archive/](archive/) 目录（v1.3 / v1.4）
 - **多语言入口**：[index.html](index.html)
 
+## Android 应用
+
+- **v1.7 APK 安装包**：[app-release.apk](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/v1.7/app-release.apk)
+  - 支持离线阅读，无需联网
+  - 适配状态栏，沉浸式体验
+  - 内置打印功能（可导出 PDF）
+
 ## 仓库结构
 
 | 目录 | 说明 |
@@ -52,4 +59,5 @@
 写这本书的目标很简单：让你从“被动使用”手机，变成“主动掌控”手机，让它真正成为你生活、工作、学习的得力助手，而不是一个让你焦虑的“黑盒子”。
 
 现在，拿起你的手机，我们一起开始这门“缺失的课程”吧。
+
 
