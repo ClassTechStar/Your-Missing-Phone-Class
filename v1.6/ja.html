@@ -5894,14 +5894,18 @@
             });
 
             // ===== グローバルアンカーナビゲーション：固定ナビバーのオフセット補正 =====
-            const NAVBAR_HEIGHT = 80;
             function scrollToAnchor(id) {
                 const el = document.getElementById(id);
                 if (!el) return;
-                const y = el.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT;
-                window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });
-                el.classList.add('scroll-target-flash');
-                setTimeout(() => el.classList.remove('scroll-target-flash'), 1200);
+                // 第一步：instant 模式先强制渲染目标章节并定位，避免 content-visibility
+                // 在 smooth 滚动过程中因延迟渲染导致定位漂移。
+                el.scrollIntoView({ behavior: 'instant', block: 'start' });
+                // 第二步：在目标已渲染、坐标稳定后，再触发一次 smooth 滚动以获得平滑体验。
+                requestAnimationFrame(() => {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.classList.add('scroll-target-flash');
+                    setTimeout(() => el.classList.remove('scroll-target-flash'), 1200);
+                });
             }
             document.addEventListener('click', (e) => {
                 const link = e.target.closest('a[href^="#"]');
