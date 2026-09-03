@@ -4,7 +4,7 @@
 
 ---
 
-## 在线阅读
+## 在线阅读：https://classtechstar.github.io/Yihggh.github.io/
 
 ### 最新版本 (v1.7) — 19 种语言
 
