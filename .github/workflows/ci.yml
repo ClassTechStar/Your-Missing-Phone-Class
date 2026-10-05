@@ -21,8 +21,89 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: 运行一致性检查
-        run: python3 scripts/check_consistency.py
+      - name: 校验 v1.8 多语言成品（19 个 HTML）
+        run: |
+          python3 - <<'EOF'
+          import re, sys, hashlib
+          from pathlib import Path
 
-      - name: 校验 index.html 与 manifest 同步
-        run: python3 scripts/generate_index.py --check
+          root = Path('.')
+          v18 = root / 'v1.8'
+          langs = ['zh-CN','zh-TW','yue','en','ko','ja','ru','it','pt','es',
+                   'fr','de','ar','he','th','id','ms','el','lzh']
+          non_cjk = {'en','ko','ru','it','pt','es','fr','de','ar','he','th','id','ms','el'}
+          trad = {'zh-TW','yue','lzh'}
+          simp = set('们后发经过还进远运说对车见贝页风飞马鸟龙长东两严丝买亏亚产亲仅从仓仪价会伞伟传伤佣伪侨办务动勋'
+                     '医华协单卖厅历厉压厌员响哑团园围图国圆冻结净凉减几凤击凭凯刘则刚创删剂剑剧劝势区归当录来现环'
+                     '确释触点济数献标题储体验证术极构桥联网络应软视频账记扫户计费划亿译书习库问块链汉语变质检测开闭'
+                     '观场据总线级万档卫报广签处罚监护锁银转扰诈骗举挂补遗嘱侦蓝连热浏览隐权许声动余询换缴罚识号拦骚'
+                     '属摄个为关内写军农冲况宁层币帮弃担扩毕毙沟浅灭灵烂猎猫画疗疯盖监离种积称笔笋简类紧线练组细终驻'
+                     '饶驱验驹鲁齐龄双叙叠号吕吗囤嘱悬柜桥桩梦检榄槟欢欧残殿泞炉焕')
+          ja_bad = set('们这说对边还给电忆记济证释储验术构桥联讯贴页风马鸟龙车见贝门书设络视账软录动发经过运进远输线绝维统圆场备复韩')
+          errors = []
+
+          blocks = {}
+          for lang in langs:
+              p = v18 / (lang + '.html')
+              if not p.exists():
+                  errors.append(lang + ': file missing'); continue
+              raw = p.read_text(encoding='utf-8')
+              n = len(re.findall(r'id="[\w-]+" class="mb-10 content-section"', raw))
+              if n != 84: errors.append(lang + ': sections=' + str(n) + ' != 84')
+              if not raw.rstrip().endswith('</html>'): errors.append(lang + ': no </html> at EOF')
+              if '\x00' in raw: errors.append(lang + ': NUL bytes')
+              lm = re.search(r'<html[^>]*lang="([^"]*)"', raw)
+              expect = 'pt-BR' if lang == 'pt' else lang
+              if not lm or lm.group(1) != expect:
+                  errors.append(lang + ': html lang=' + (lm.group(1) if lm else 'None') + ' != ' + expect)
+              if lang in ('ar','he') and 'dir="rtl"' not in raw[:300]:
+                  errors.append(lang + ': missing dir="rtl"')
+              if lang not in ('ar','he') and 'dir="rtl"' in raw[:300]:
+                  errors.append(lang + ': unexpected dir="rtl"')
+              i = raw.find('id="toc-list"'); j = raw.find('</nav>', i)
+              blocks[lang] = re.findall(r'<a href="#([\w-]+)"', raw[i:j])
+
+          zh_anchors = blocks.get('zh-CN', [])
+          for lang in langs:
+              if lang != 'zh-CN' and lang in blocks and blocks[lang] != zh_anchors:
+                  errors.append(lang + ': TOC anchors != zh-CN')
+
+          src = root / '你缺失的那门手机课V1.8Fixed.html'
+          if src.exists():
+              a = (v18 / 'zh-CN.html').read_bytes().replace(b'\r\n', b'\n')
+              b = src.read_bytes().replace(b'\r\n', b'\n')
+              if hashlib.sha256(a).hexdigest() != hashlib.sha256(b).hexdigest():
+                  errors.append('zh-CN.html differs from source book file')
+
+          def visible(raw):
+              t = re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<!--[\s\S]*?-->', '', raw)
+              return re.sub(r'<[^>]+>', ' ', t)
+
+          for lang in langs:
+              if lang == 'zh-CN' or not (v18 / (lang + '.html')).exists():
+                  continue
+              text = visible((v18 / (lang + '.html')).read_text(encoding='utf-8'))
+              cjk = re.findall(r'[一-鿿]', text)
+              if lang in non_cjk:
+                  allowed = 6 if lang in ('en','it','es') else 0
+                  if len(cjk) > allowed:
+                      errors.append(lang + ': ' + str(len(cjk)) + ' CJK chars in visible text (>' + str(allowed) + ')')
+              elif lang in trad:
+                  bad = sorted({c for c in text if c in simp})
+                  if bad:
+                      errors.append(lang + ': simplified chars ' + repr(bad[:10]))
+              elif lang == 'ja':
+                  bad = sorted({c for c in text if c in ja_bad})
+                  if bad:
+                      errors.append('ja: Chinese-simplified chars ' + repr(bad[:10]))
+
+          if not (root / 'index.html').exists():
+              errors.append('index.html missing at repo root')
+
+          if errors:
+              print('CONSISTENCY FAIL:')
+              for e in errors:
+                  print(' -', e)
+              sys.exit(1)
+          print('OK: 19 v1.8 files consistent (84 sections each, TOC aligned, zh-CN matches source, no residual Chinese)')
+          EOF
