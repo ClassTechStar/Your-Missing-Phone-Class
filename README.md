@@ -6,7 +6,7 @@
 
 ## 在线阅读：https://classtechstar.github.io/Yihggh.github.io/
 
-### 最新版本 (v1.7) — 19 种语言
+### 最新版本 (v1.8) — 19 种语言
 
 | 语言 | 链接 |
 |------|------|
