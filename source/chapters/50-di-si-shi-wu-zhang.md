@@ -1,0 +1,119 @@
+---
+id: di-si-shi-wu-zhang
+num: 45
+part: ai-biancheng-pian
+nav: 第四十五章：质量保障——让AI代码可靠
+toc: default
+kind: chapter
+---
+
+### 第四十五章：质量保障——让AI写的代码可靠
+
+{class="chapter-intro mb-4"}
+AI 写的代码有一个特点：它通常"看起来很对"——变量命名规范、注释齐全、逻辑清晰。但"看起来对"不等于"真的对"。AI 代码中隐藏的问题往往比手写代码更难发现，因为它的表面质量太高了，容易让人放松警惕。本章教你如何为 AI 代码建立有效的质量保障体系——用测试、审查、版本控制三道防线，把"看起来对"变成"真的对"。
+
+#### 一、测试驱动：让 AI 写测试
+
+测试是 AI 编程质量保障的第一道防线。好消息是：<strong>让 AI 写测试比让它写功能代码更容易、更可靠</strong>——因为测试的预期行为是明确的，不太容易产生"看起来对但实际不对"的代码。
+
+测试驱动的 AI 编程流程是：先让 AI 写功能代码，验证基本功能通过后，立即让它写测试用例。测试用例应覆盖正常路径、边界情况和异常情况。然后再让 AI 根据测试反馈修正功能代码。这个流程的好处是：测试一旦写好，就是持续的验证工具——后续任何修改都可以通过运行测试来确认没有引入回归问题。
+
+::: div .code-block
+:::inline div .code-head
+<span>给 AI 的指令：写测试</span><span class="dots">···</span>
+:::
+
+```
+请为 calculate_discount 函数编写单元测试。
+测试用例应覆盖：
+1. 正常路径：
+   - 100元商品打8折 -> 80
+   - 200元商品打5折 -> 100
+2. 边界情况：
+   - 0元商品打8折 -> 0
+   - 100元商品打0折 -> 100（不打折）
+   - 100元商品打10折 -> 100（全价）
+3. 异常情况：
+   - 负数价格 -> 应抛出错误
+   - 折扣率 > 1 -> 应抛出错误
+   - 非数字输入 -> 应抛出错误
+使用Vitest框架，给出完整测试文件。
+```
+:::
+
+注意这个指令的特点：它<strong>明确列出了三类测试用例</strong>（正常、边界、异常），不给 AI 自由发挥的空间去"选择性测试"。AI 有时候会只写正常路径的测试来"快速交差"，明确列出所有类别可以避免这个问题。
+
+#### 二、代码审查技巧
+
+即使有测试覆盖，你仍然需要对 AI 产出的代码进行人工审查。代码审查不是逐行阅读——那太耗时也太依赖你的编程水平。有效的 AI 代码审查应该关注以下几个关键维度：
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">审查维度</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">关注什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见问题</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安全性</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">输入验证、密钥处理、SQL注入防护</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI经常忘记验证输入，密钥硬编码在代码中</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">错误处理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">异常是否被捕获，错误信息是否合理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI喜欢用空catch块或只console.log</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">性能</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">是否有明显的性能问题，如N+1查询、无限循环</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI有时会写出O(n²)的算法</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可维护性</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">代码结构是否清晰，命名是否有意义</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI偶尔会生成过度抽象的代码</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">依赖管理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">引入的依赖是否必要，版本是否明确</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI倾向于引入不必要的库</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+AI 代码审查的关键维度
+
+审查时不必自己逐一检查——可以让 AI 帮你做第一轮审查。指令如："请审查这段代码的安全性、错误处理和性能，指出潜在问题。"AI 的自我审查能力在不断提升，虽然不能完全替代人工审查，但能帮你过滤掉大部分明显问题。
+
+#### 三、版本控制：Git 在 AI 编程中的角色
+
+Git 在 AI 编程中的角色比在传统编程中更加重要。因为 AI 的每次修改都可能引入不可预知的变化，你需要一个可靠的"后悔药"——<strong>版本控制就是那个后悔药</strong>。
+
+AI 编程中 Git 的最佳实践是"频繁提交、小步快进"。每完成一个可验证的功能点，就提交一次。这样当 AI 的某次修改出了问题时，你可以精准回退到上一个可用状态，而不需要推翻所有工作。
+
+另一个实用技巧是"分支隔离"。对于不确定结果的 AI 修改（比如大步重构），先创建一个新分支来做。如果结果满意，合并回主分支；如果不满意，直接删除分支，不影响主分支。这比在主分支上反复修改安全得多。
+
+1. 每次 AI 修改前，确保工作区是干净的（没有未提交的更改）。这样如果 AI 的修改不满意，可以用 <code class="inline">git checkout .</code> 快速回退。
+2. 每次 AI 修改后、验证通过后，立即提交。提交信息描述这次修改做了什么，比如"feat: 添加用户注册功能"。
+3. 对于大步重构，先创建分支：<code class="inline">git checkout -b refactor/auth-system</code>。在分支上完成修改，测试通过后再合并。
+4. 养成查看 diff 的习惯。每次 AI 修改后，用 <code class="inline">git diff</code> 查看具体改了什么。这不仅能帮你发现问题，还能帮你学习代码。
+
+#### 四、常见陷阱与避坑指南
+
+AI 编程中有几个反复出现的陷阱，几乎所有初学者都会踩。提前知道它们，能帮你少走很多弯路。
+
+##### 1. 陷阱一：信任陷阱
+
+"AI 写的代码看起来很专业，一定没问题吧？"——这是最危险的陷阱。AI 生成的代码在表面上非常整洁——命名规范、注释齐全、结构清晰——这种"表面专业感"会让人放松警惕。但<strong>表面整洁不代表逻辑正确</strong>。<strong>解药</strong>：永远通过测试验证，而非通过"看起来对不对"判断。
+
+##### 2. 陷阱二：膨胀陷阱
+
+"既然 AI 能帮我写代码，那不如把功能做得全面一点？"——这会导致代码膨胀。AI 很擅长"多给"：你让它做一个登录页面，它会给你一套完整的用户管理系统。多余的功能不仅增加复杂度，还增加了出 bug 的概率。<strong>解药</strong>：严格遵循 Simplicity First 原则，明确告诉 AI"只做这个功能，不要额外添加"。
+
+##### 3. 陷阱三：理解陷阱
+
+"AI 应该理解我的意思吧？"——不一定。AI 的理解能力虽然很强，但对模糊的需求仍然会"猜"。当它猜错了，产出的代码就是错的。更麻烦的是，它猜错的代码通常"看起来很合理"，让你误以为它理解了。<strong>解药</strong>：在指令中提供足够的具体细节，减少 AI 需要"猜"的空间。
+
+##### 4. 陷阱四：上下文陷阱
+
+"我在之前的对话里说过了，AI 应该还记得吧？"——很可能不记得。随着对话变长或开新会话，AI 会丢失早期上下文。如果某个关键约束没有被写入项目记忆文件，它很可能在后续修改中被忽略。<strong>解药</strong>：关键约束写入项目记忆文件，不要依赖对话记忆。
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>四大陷阱速记
+
+{class="mt-1"}
+信任陷阱——别信"看起来对"；膨胀陷阱——AI 爱"多给"；理解陷阱——模糊需求它会"猜"；上下文陷阱——对话记忆会"忘"。对应的解药分别是：测试验证、砍掉多余、给足细节、写入记忆文件。
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>来动手：给你的项目建三道防线
+
+{class="mt-1"}
+如果你已经开始做项目一（工具站）：① 让 AI 给核心函数写 3 类测试用例；② 按五个维度审查一遍代码（安全性/错误处理/性能/可维护性/依赖）；③ 用 git 初始化项目，做第一次提交。三道防线齐了，你的项目才真正属于你。
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+<i class="fas fa-flag-checkered mr-1"></i>本章小结
+
+- AI 代码"看起来对"≠"真的对"——表面质量太高反而容易放松警惕
+- 让 AI 写测试：明确列出正常/边界/异常三类用例，防止"选择性测试"
+- 审查五维度：安全性、错误处理、性能、可维护性、依赖管理
+- Git 是"后悔药"：频繁提交、小步快进、分支隔离、常看 diff
+- 四大陷阱：信任（测试验证）、膨胀（砍掉多余）、理解（给足细节）、上下文（写入记忆文件）
+:::

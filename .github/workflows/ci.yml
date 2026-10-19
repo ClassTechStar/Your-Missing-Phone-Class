@@ -5,13 +5,14 @@ on:
     branches: [main, master]
   pull_request:
     branches: [main, master]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  consistency-check:
-    name: 仓库一致性检查
+  lint:
+    name: 全版本门禁与宣称值
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,89 +22,59 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: 校验 v1.8 多语言成品（19 个 HTML）
+      - name: 结构/锚点/目录/版本串/lang/NUL/残留字（v1.5–v1.8 + archive）
+        run: python -m bookkit lint --all-versions
+
+      - name: README 与 index.html 宣称值校验（章数/区块数/语言数/链接）
+        run: python -m bookkit check --claims
+
+      - name: index.html 卡片块与 manifest 一致性（AUTOGEN 漂移检测）
+        if: always()
+        run: python -m bookkit index --check
+
+      - name: 翻译覆盖率报告
+        if: always()
+        run: python -m bookkit i18n --report coverage.md
+
+      - name: 上传覆盖率报告
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: coverage.md
+
+  build:
+    name: 源稿构建可复现性
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: 源稿 → HTML 与已发布成品等价性（逐章比对）
+        run: python -m bookkit build --verify
+
+      - name: 构建幂等（两次构建字节一致）
         run: |
-          python3 - <<'EOF'
-          import re, sys, hashlib
+          python -m bookkit build --out dist/a.html
+          python -m bookkit build --out dist/b.html
+          cmp dist/a.html dist/b.html
+
+      - name: 源稿结构自检（book.json 与章文件一一对应）
+        run: |
+          python - <<'EOF'
+          import json
           from pathlib import Path
-
-          root = Path('.')
-          v18 = root / 'v1.8'
-          langs = ['zh-CN','zh-TW','yue','en','ko','ja','ru','it','pt','es',
-                   'fr','de','ar','he','th','id','ms','el','lzh']
-          non_cjk = {'en','ko','ru','it','pt','es','fr','de','ar','he','th','id','ms','el'}
-          trad = {'zh-TW','yue','lzh'}
-          simp = set('们后发经过还进远运说对车见贝页风飞马鸟龙长东两严丝买亏亚产亲仅从仓仪价会伞伟传伤佣伪侨办务动勋'
-                     '医华协单卖厅历厉压厌员响哑团园围图国圆冻结净凉减几凤击凭凯刘则刚创删剂剑剧劝势区归当录来现环'
-                     '确释触点济数献标题储体验证术极构桥联网络应软视频账记扫户计费划亿译书习库问块链汉语变质检测开闭'
-                     '观场据总线级万档卫报广签处罚监护锁银转扰诈骗举挂补遗嘱侦蓝连热浏览隐权许声动余询换缴罚识号拦骚'
-                     '属摄个为关内写军农冲况宁层币帮弃担扩毕毙沟浅灭灵烂猎猫画疗疯盖监离种积称笔笋简类紧线练组细终驻'
-                     '饶驱验驹鲁齐龄双叙叠号吕吗囤嘱悬柜桥桩梦检榄槟欢欧残殿泞炉焕')
-          ja_bad = set('们这说对边还给电忆记济证释储验术构桥联讯贴页风马鸟龙车见贝门书设络视账软录动发经过运进远输线绝维统圆场备复韩')
-          errors = []
-
-          blocks = {}
-          for lang in langs:
-              p = v18 / (lang + '.html')
-              if not p.exists():
-                  errors.append(lang + ': file missing'); continue
-              raw = p.read_text(encoding='utf-8')
-              n = len(re.findall(r'id="[\w-]+" class="mb-10 content-section"', raw))
-              if n != 84: errors.append(lang + ': sections=' + str(n) + ' != 84')
-              if not raw.rstrip().endswith('</html>'): errors.append(lang + ': no </html> at EOF')
-              if '\x00' in raw: errors.append(lang + ': NUL bytes')
-              lm = re.search(r'<html[^>]*lang="([^"]*)"', raw)
-              expect = 'pt-BR' if lang == 'pt' else lang
-              if not lm or lm.group(1) != expect:
-                  errors.append(lang + ': html lang=' + (lm.group(1) if lm else 'None') + ' != ' + expect)
-              if lang in ('ar','he') and 'dir="rtl"' not in raw[:300]:
-                  errors.append(lang + ': missing dir="rtl"')
-              if lang not in ('ar','he') and 'dir="rtl"' in raw[:300]:
-                  errors.append(lang + ': unexpected dir="rtl"')
-              i = raw.find('id="toc-list"'); j = raw.find('</nav>', i)
-              blocks[lang] = re.findall(r'<a href="#([\w-]+)"', raw[i:j])
-
-          zh_anchors = blocks.get('zh-CN', [])
-          for lang in langs:
-              if lang != 'zh-CN' and lang in blocks and blocks[lang] != zh_anchors:
-                  errors.append(lang + ': TOC anchors != zh-CN')
-
-          src = root / '你缺失的那门手机课V1.8Fixed.html'
-          if src.exists():
-              a = (v18 / 'zh-CN.html').read_bytes().replace(b'\r\n', b'\n')
-              b = src.read_bytes().replace(b'\r\n', b'\n')
-              if hashlib.sha256(a).hexdigest() != hashlib.sha256(b).hexdigest():
-                  errors.append('zh-CN.html differs from source book file')
-
-          def visible(raw):
-              t = re.sub(r'<script[\s\S]*?</script>|<style[\s\S]*?</style>|<!--[\s\S]*?-->', '', raw)
-              return re.sub(r'<[^>]+>', ' ', t)
-
-          for lang in langs:
-              if lang == 'zh-CN' or not (v18 / (lang + '.html')).exists():
-                  continue
-              text = visible((v18 / (lang + '.html')).read_text(encoding='utf-8'))
-              cjk = re.findall(r'[一-鿿]', text)
-              if lang in non_cjk:
-                  allowed = 6 if lang in ('en','it','es') else 0
-                  if len(cjk) > allowed:
-                      errors.append(lang + ': ' + str(len(cjk)) + ' CJK chars in visible text (>' + str(allowed) + ')')
-              elif lang in trad:
-                  bad = sorted({c for c in text if c in simp})
-                  if bad:
-                      errors.append(lang + ': simplified chars ' + repr(bad[:10]))
-              elif lang == 'ja':
-                  bad = sorted({c for c in text if c in ja_bad})
-                  if bad:
-                      errors.append('ja: Chinese-simplified chars ' + repr(bad[:10]))
-
-          if not (root / 'index.html').exists():
-              errors.append('index.html missing at repo root')
-
-          if errors:
-              print('CONSISTENCY FAIL:')
-              for e in errors:
-                  print(' -', e)
-              sys.exit(1)
-          print('OK: 19 v1.8 files consistent (84 sections each, TOC aligned, zh-CN matches source, no residual Chinese)')
+          book = json.loads(Path('source/book.json').read_text(encoding='utf-8'))
+          missing = [c['file'] for c in book['chapters'] if not (Path('source') / c['file']).is_file()]
+          missing += [p['file'] for p in book['parts'] if not (Path('source') / p['file']).is_file()]
+          ids = [c['id'] for c in book['chapters']]
+          if missing:
+              raise SystemExit('源稿缺失：' + str(missing))
+          if len(ids) != len(set(ids)):
+              raise SystemExit('book.json 存在重复章节 id')
+          print('source OK:', len(ids), 'chapters,', len(book['parts']), 'parts')
           EOF

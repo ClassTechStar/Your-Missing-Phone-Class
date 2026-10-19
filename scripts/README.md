@@ -1,78 +1,127 @@
-# 工程化脚本
+# 工程工具链 `bookkit`
 
-> **当前状态：本目录暂为空文档位。** 历史上的一致性工具链已于提交 `7f58c0c`（Remove i18n build tooling）移除；本文件描述仓库当前真实的校验方式与覆盖盲区，以及工具链的重建计划。详见根目录 `README.md` 的「已知问题」。
+> 本文件描述的工具链**已落地可用**（Python 3 标准库，零第三方依赖）。历史上的 `scripts/check_consistency.py`、
+> `scripts/generate_index.py`、`scripts/languages.json` 已在提交 `7f58c0c` 删除；其能力由 `bookkit/` 包与
+> `manifest/languages.json` 取代，本节与之对齐。
 
-## 一、当前一致性保障
-
-`.github/workflows/ci.yml` 内联了一段 Python 校验（提交 `0869a74` 起，替代已删除的 `scripts/check_consistency.py`），在每次 push / PR 时对 **v1.8 目录** 执行以下检查：
-
-| 检查项 | 判定 |
-|--------|------|
-| 内容区块计数 | 19 个文件各有 84 个 `class="mb-10 content-section"` 区块 |
-| 目录锚点对齐 | 各语言侧边栏目录锚点序列与 `v1.8/zh-CN.html` 完全一致 |
-| 语言标记 | `<html lang>` 与语言代码匹配（`pt` 例外为 `pt-BR`）；`ar` / `he` 必须有 `dir="rtl"`，其余不得有 |
-| 文件完整性 | 无 NUL 字节、以 `</html>` 结尾、`index.html` 存在于仓库根 |
-| 残留字符 | 非中文版本无残留汉字（`en` / `it` / `es` 允许 ≤ 6 个）；繁体目标无残留简体 |
-| 源文件一致 | `v1.8/zh-CN.html` 与根目录 `你缺失的那门手机课V1.8Fixed.html` 归一换行后 SHA-256 一致 |
-
-任一检查失败即阻断合并。
-
-## 二、已知覆盖盲区
-
-当前 CI **只守护 v1.8**，以下缺陷不会被发现（详见根目录「已知问题」）：
-
-- 历史版本（v1.5 / v1.6 / v1.7 与 `archive/`）的结构、锚点、`lang`、NUL 均未校验；
-- 各文件 `<title>` 中的版本串未与目录名比对；
-- 正文互链（附录 G 速查索引等）的 `href="#id"` 未做双向闭合校验（仅校验侧边栏目录）；
-- 跨语言的区块数缺口（如某语言少若干章）未比对；
-- `README.md` / `index.html` 中宣称的数字（章数、区块数、语言数）未与真实内容比对。
-
-## 三、本地自检（当前可用）
-
-由于 `scripts/` 暂无脚本，可复用 CI 的等价判断自行校验。示例（Python 3 标准库，零依赖）：
+## 一、一条命令看清全貌
 
 ```bash
-# 统计某版本某语言的内容区块数
-python3 - <<'EOF'
-import re
-from pathlib import Path
-for f in sorted(Path('v1.8').glob('*.html')):
-    raw = f.read_text(encoding='utf-8')
-    n = len(re.findall(r'id="[\w-]+" class="mb-10 content-section"', raw))
-    print(f.name, n)
-EOF
-
-# 检查页内锚点是否双向闭合（排除 JS 模板串）
-python3 - <<'EOF'
-import re
-from pathlib import Path
-for f in sorted(Path('v1.8').glob('*.html')):
-    raw = f.read_text(encoding='utf-8')
-    ids = set(re.findall(r'id="([\w-]+)"', raw))
-    bad = sorted({a for a in re.findall(r'href="#([\w-]+)"', raw) if a not in ids})
-    if bad:
-        print(f.name, bad)
-EOF
+python -m bookkit --version          # bookkit 1.0.0
+python -m bookkit lint --all-versions # v1.5–v1.8 + archive：结构/锚点/目录/版本串/lang/NUL/残留字/覆盖率
+python -m bookkit check --claims      # README 与 index.html 的宣称值 ↔ 真实内容
+python -m bookkit build --verify      # source/ → HTML，并与已发布成品逐章比对
 ```
 
-## 四、重建计划（工具链 `bookkit`）
+## 二、目录职责
 
-原设计（单一数据源 `languages.json` + 生成器渲染 `AUTOGEN` 卡片块 + 检查脚本无副作用）方向正确，将按下述目标重建，并恢复本目录文档：
+| 路径 | 内容 | 谁写 |
+| --- | --- | --- |
+| `manifest/languages.json` | **单一数据源**：语言元数据（`html_lang`/`dir`/`script`/`flag`/`gradient`）、各版本检查等级与期望区块数、入口页卡片样式、每语言书名 | 手工维护 |
+| `source/book.json` | 书籍结构：篇/章顺序、目录元数据、孤儿章节归属、篇 `open_tag` | `bookkit extract` 生成 |
+| `source/chapters/NN-<id>.md` | 单章正文（Markdown + 行内 HTML），84 章 | `extract` 生成 / 手工编辑 |
+| `source/parts/NN-<id>.md` | 各篇导语，11 篇 | 同上 |
+| `source/template/shell.html` | 页面骨架：`<head>`、导航、侧栏容器、页脚、脚本；含 `{{TOC}} {{BODY}} {{TITLE}} {{VERSION}} {{CH_COUNT}} {{APP_COUNT}}` 占位 | `extract` 生成 |
+| `source/legacy/` | 三份历史近重复源稿（只读留档），差异分析见 `source/legacy/MERGE-REPORT.md` | 归档 |
+| `bookkit/` | 工具链本体：`htmlparse` / `markdown` / `extract` / `build` / `lint` / `claims` / `index` / `i18n` / `release` / `cli` | 代码 |
+| `dist/` | 构建与发布产物（不入库，见 `.gitignore`） | `build` / `release` |
 
-| 模块 | 职责 |
-|------|------|
-| `manifest/languages.json` | 语言元数据 + 各版本文件映射 + 卡片样式 + 翻译优先级（单一数据源） |
-| `bookkit lint` | 全版本结构 / 锚点 / 版本串 / `lang` / 残留字 / NUL 校验 |
-| `bookkit check` | README 与 index.html 宣称值 ↔ 真实内容比对 |
-| `bookkit build` | Markdown 源 → 单文件 HTML（目录、速查索引、版本徽章注入） |
-| `bookkit i18n` | 翻译覆盖率报告（缺失章节 id） |
-| `bookkit release` | 发布清单与 APK 矩阵 |
+## 三、章节源稿的 Markdown 方言
 
-重建后，CI 将由「仅 v1.8 内联脚本」升级为「全版本矩阵门禁 + 宣称值校验」，覆盖上述全部盲区。
+块级结构用 Markdown，行内格式原样保留 HTML——这是为了让 19 种语言的既有译文**零损毁**地进入源稿体系。
 
-## 五、设计原则（延续）
+```markdown
+---
+id: di-san-shi-qi-zhang
+num: "37"
+part: ai-biancheng
+nav: 第三十七章：范式革命——从"写代码"到"指挥AI写代码"
+toc: default          # default | sub（二级锚点，如"附：安卓手机内存拓展解析"）
+kind: chapter         # chapter | supplement | appendix | conclusion
+---
 
-- **单一数据源**：语言清单只在 `languages.json` 维护，入口页卡片由生成器渲染，避免多处手写漂移。
-- **标记隔离**：`AUTOGEN` 标记之间的内容是机器生成的；标记以外的 HTML（hero、stats、目录、归档区）保持手写自由度。
-- **幂等**：生成器重复运行结果一致；检查脚本无副作用。
-- **零依赖**：仅用 Python 标准库，CI 环境开箱即用。
+### 第三十七章：范式革命——从"写代码"到"指挥AI写代码"
+
+{class="chapter-intro mb-4"}
+恭喜你，翻开这本书的你……<strong>行内 HTML 原样保留</strong>。
+
+#### 一、Vibe Coding 的诞生
+
+::: info-box .rounded-lg .p-4 .mt-4
+<p>容器用 <code>:::</code> 指令，属性以 <code>.类名</code> 书写</p>
+:::
+
+:::inline div .code-head
+<span>PRD.md</span><span class="dots">···</span>
+:::
+
+```html
+<!-- 表格、SVG 等复杂子树整体保真，构建时原样输出 -->
+```
+```
+
+规则要点：
+
+1. **属性行** `{class="…" id="…" style="…"}` 作用于紧随其后的段落/标题/列表；`class` 等于该标签默认值时可省略。
+2. **容器指令** `::: tag .cls1 .cls2 … :::`；`:::inline` 表示子节点全为行内元素，整行原样输出。
+3. **`html` 代码块** 表示"原样 HTML"，构建时逐字输出——用于表格、SVG、异常嵌套列表等。
+4. 其余代码块渲染为 `<pre>`，内容逐字保留（示例代码中的 `<Boolean>` 不会被解析）。
+5. 标题层级 `###`→`<h3>`（默认类 `text-xl font-bold …`），`####`→`<h4>`，`#####`→`<h5>`。
+
+## 四、子命令
+
+| 命令 | 作用 | 关键参数 |
+| --- | --- | --- |
+| `extract` | 成品 HTML → `source/`（先断言解析器字节无损往返，再反解） | `--version` `--lang` `--out` `--dry-run` |
+| `build` | `source/` → 单文件 HTML（目录、版本徽章、书名由数据推导） | `--lang` `--out` `--verify` `--book` |
+| `lint` | 全版本一致性；等级由 `manifest.versions.<v>.checks` 决定（error/warn/off） | `--all-versions` `--version-dir` `--fail-on` |
+| `check` | README/index 宣称值校验；`--index` 追加 AUTOGEN 漂移检测 | `--claims` `--index` |
+| `index` | 按 manifest 重生成 `index.html` 的 `AUTOGEN:languages-*` 块与统计区 | `--check`（只比对不写盘） |
+| `i18n` | 翻译覆盖率报告（缺章清单、目录缺项、状态） | `--report coverage.md` |
+| `release` | 发布清单：每语言 HTML 的 SHA-256 + 包名 + `SHA256SUMS` | `--release-version` `--out` |
+
+全部子命令支持 `--root`（仓库根）、`--json`（机器可读）、`--fail-on {error,warn,never}`。
+
+## 五、CI 门禁（`.github/workflows/ci.yml`）
+
+| Job | 步骤 | 阻断 |
+| --- | --- | --- |
+| `lint` | `lint --all-versions`；`check --claims`；`index --check`；`i18n --report` | 前三项阻断，覆盖率报告仅出件 |
+| `build` | `build --verify`（与成品等价）；两次构建字节一致；`book.json` 与章文件一一对应 | 阻断 |
+
+覆盖的勘误项：ERR-01/07/12（覆盖率）、ERR-02/06（锚点与目录）、ERR-03（NUL）、ERR-04（版本串）、
+ERR-05/09/21（宣称值）、ERR-13（lang）、ERR-16（CI 盲区）、ERR-10（源稿缺失）。
+
+## 六、日常操作
+
+```bash
+# 修改某章正文
+$EDITOR source/chapters/37-di-san-shi-qi-zhang.md
+python -m bookkit build --verify      # 结构与文本等价性（改了正文会显示差异章节）
+python -m bookkit lint                # 最新版本全项检查
+
+# 新增一种语言
+# 1) manifest/languages.json 的 languages 增加条目（html_lang/dir/script/flag/gradient/priority）
+# 2) 放入 vX/<code>.html
+python -m bookkit index               # 入口页卡片自动补上
+python -m bookkit check --claims      # README 语言表需同步，否则报错
+
+# 发布前
+python -m bookkit release --release-version v1.8   # → dist/release/
+```
+
+## 七、设计原则（延续并落地）
+
+- **单一数据源**：语言与卡片在 `manifest`，章节在 `source/`，HTML 由构建产生；README 与 `index.html` 的每个数字都能被脚本验证。
+- **标记隔离**：`AUTOGEN:languages-*` 之间由机器生成，标记之外保持手写自由度。
+- **幂等**：`extract`/`build`/`index` 重复运行结果一致（CI 用两次构建字节比对锁死）。
+- **零依赖**：只用 Python 标准库，GitHub Actions 开箱即用。
+- **保真优先**：无法安全转成 Markdown 的子树一律以 `html` 代码块原样保留，宁可少转，不可改字。
+
+## 八、已知边界
+
+- `bookkit build` 目前只覆盖**简体中文源稿**（`source/` 为 zh-CN 单一事实源）；其余 18 种语言仍以
+  `v1.8/<lang>.html` 成品为准，由 `lint` 与 `i18n` 守护一致性。多语言构建（`source/translations/<lang>/`）
+  属下一步，接口已在 `manifest` 预留 `language_descriptions`。
+- `release` 只生成待打包清单与校验和；APK 打包仍依赖外部 Android 工具链，不在本仓库内。
+- 历史版本（v1.5–v1.7）按"只修元数据、不重排内容"的归档策略处理，`lint` 对它们使用 warn 级门槛。

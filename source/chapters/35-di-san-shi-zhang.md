@@ -1,0 +1,109 @@
+---
+id: di-san-shi-zhang
+num: 30
+part: shi-zhan-pian
+nav: 第三十章：投屏、演示与车载互联
+toc: default
+kind: chapter
+---
+
+### 第三十章：投屏、演示与车载互联
+
+{class="chapter-intro mb-4"}
+手机屏幕再大也就7英寸，但你的电视有55英寸、你的投影仪有100英寸。把手机画面"扔"到大屏幕上，体验是完全不同维度的。这一章讲清楚投屏、演示和车载互联这三个高频场景，帮你把手机的能力延伸到更大的屏幕上。
+
+#### 一、无线投屏三大阵营——别搞混了
+
+无线投屏看起来都是"手机画面到电视上"，但底层技术有三种，互不通用：
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                            <thead>
+                                <tr class="bg-light dark:bg-gray-700">
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技术</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">谁用</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">苹果生态，体验最流畅。需要Apple TV或支持AirPlay的电视</td></tr>
+                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct直连，不需要路由器。安卓手机"无线投屏"默认用这个</td></tr>
+                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">所有平台</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只推送媒体文件（视频/音乐/图片），不镜像屏幕。适合推视频到电视上播放</td></tr>
+                            </tbody>
+                        </table>
+```
+:::
+
+##### 各平台操作方法：
+
+- <strong>iPhone</strong>：控制中心 > 屏幕镜像 > 选择你的电视/Apple TV。如果电视不支持AirPlay，可以买一个Apple TV盒子或支持AirPlay的电视棒。
+- <strong>安卓</strong>：下拉通知栏 > 找到"无线投屏"/"智能投屏"/"多屏互动"按钮 > 选择电视。需要手机和电视连同一个Wi-Fi。
+- <strong>万能方案</strong>：如果电视太老不支持任何无线投屏，买一个Chromecast或小米盒子/华为盒子插到电视HDMI口上，就能接收投屏了。
+
+#### 二、有线投屏——更稳定、零延迟
+
+无线投屏方便但有延迟，玩游戏和做演示时体验不好。有线投屏能解决这个问题：
+
+- <strong>iPhone</strong>：需要一根Lightning/USB-C转HDMI的转换线（约100-200元）。插上后手机画面直接输出到电视/投影仪的HDMI口。
+- <strong>安卓</strong>：部分手机支持USB-C转HDMI直连（需要手机支持DP Alt Mode，大部分旗舰都支持）。买一根USB-C to HDMI线即可。
+- <strong>会议室场景</strong>：如果你经常需要用手机做演示，建议在包里常备一根转HDMI线。会议室的电视/投影仪几乎都有HDMI口，插上就能用，比折腾无线投屏靠谱多了。
+
+#### 三、手机变电脑——桌面模式
+
+部分安卓手机支持"桌面模式"——连上显示器后，手机会输出一个类似电脑桌面的界面，可以用鼠标键盘操作：
+
+- <strong>Samsung DeX</strong>：三星旗舰的招牌功能。连接显示器后弹出桌面界面，可以多窗口操作，体验最接近真正的电脑。配合蓝牙键鼠，出差可以不带笔记本。
+- <strong>华为桌面模式</strong>：华为Mate系列/Pura系列连接显示器后也有类似功能。支持多窗口、文件管理、办公App。
+- <strong>摩托罗拉Ready For</strong>：Moto旗舰也支持，功能类似DeX。
+- <strong>适用场景</strong>：轻办公（回邮件、改文档）、演示PPT、大屏看视频。不适合重度Excel操作或专业设计。
+
+#### 四、车载互联——开车用手机的正确方式
+
+开车时操作手机是违法的，但导航、听音乐、接电话又是刚需。车载互联系统让你在车机屏幕上使用手机的核心功能，手机可以放在一边不碰：
+
+- <strong>Apple CarPlay</strong>：iPhone用户的首选。通过USB或无线连接车机，车机屏幕上出现iPhone的精简界面——导航（高德/百度）、音乐、电话、信息、播客。Siri语音控制全程免手。
+- <strong>Android Auto</strong>：安卓用户对应方案。功能与CarPlay类似，支持Google Maps、Spotify等。国内因Google服务限制，部分功能不可用。
+- <strong>华为HiCar</strong>：华为自研方案，国内车型支持率高。除了导航音乐，还能用华为视频通话、泊车影像融合等特色功能。
+- <strong>百度CarLife</strong>：跨平台方案，iOS和安卓都能用。功能较少但兼容性广，很多老车型只支持CarLife。
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>安全提醒
+
+{class="mt-1"}
+无论哪种车载互联方案，开车时都应尽量使用语音控制。导航提前设好目的地，音乐提前选好歌单，不要在行驶中操作车机屏幕。
+:::
+
+#### 五、会议室投屏实战——不再手忙脚乱
+
+开会是投屏最高频的场景，也是最容易出问题的场景。以下是几条实战经验：
+
+- <strong>提前到场测试</strong>：永远不要等到会议开始才连投屏。提前10分钟到场，测试好连接方式。Wi-Fi投屏失败的概率比你想的高得多。
+- <strong>准备有线方案做Plan B</strong>：在包里放一根转HDMI线。无线投屏连不上的时候，有线就是救命稻草。
+- <strong>关闭通知预览</strong>：投屏时你的微信消息会显示在会议室大屏上。投屏前在设置里关闭"锁屏通知内容预览"，或者开启"演示模式"（部分手机支持，投屏时自动隐藏通知）。
+- <strong>用"演示文档"而不是"操作手机"</strong>：如果你要展示PPT，直接把PPT存到手机里用WPS打开全屏播放，而不是投屏整个手机桌面。这样更专业、更流畅。
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>动手：完成一次手机到电视的投屏
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 确保手机和电视连同一个Wi-Fi。
+2. 用手机打开一张照片或一个视频。
+3. 尝试无线投屏（iPhone用屏幕镜像，安卓用无线投屏按钮）。
+4. 如果失败，检查电视是否支持对应协议，或尝试DLNA推送（在相册/视频App里点"投屏"按钮）。
+5. 投屏成功后，试试在手机上做其他操作，看看大屏是否同步显示。
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+<i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结
+
+{class="list-disc pl-5 text-sm space-y-0.5"}
+- 无线投屏三阵营：AirPlay（苹果）、Miracast（安卓）、DLNA（跨平台推媒体）
+- 有线投屏更稳定零延迟，会议室场景必备转HDMI线
+- Samsung DeX/华为桌面模式让手机变身轻办公电脑
+- 车载互联：CarPlay/Android Auto/HiCar/CarLife四大方案
+- 会议室投屏铁律：提前测试、准备Plan B、关闭通知预览
+:::

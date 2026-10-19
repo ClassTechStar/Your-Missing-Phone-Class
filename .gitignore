@@ -1,0 +1,16 @@
+# Python 工具链产生的临时物
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# 构建与发布产物（由 bookkit build / release 生成）
+dist/
+
+# 覆盖率报告由 CI 产出并作为 artifact 上传
+coverage.md
+
+# 编辑器与系统
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

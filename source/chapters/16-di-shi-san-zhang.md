@@ -1,0 +1,552 @@
+---
+id: di-shi-san-zhang
+num: 13
+part: ruan-jian-pian
+nav: 第十三章：工具类App推荐
+toc: default
+kind: chapter
+---
+
+### 第十三章：工具类App推荐
+
+{class="chapter-intro mb-4"}
+本章精选效率、健康、出行类工具，并补充实用系统与跨设备能力：清浊等清理与防骚扰、手机自带拦截开关、天气与地震预警；向日葵/ToDesk 远控电脑、Trae 等 AI 办公、人工桌面、LocalSend 等局域网快传、跨设备剪贴板、Aegis/Microsoft Authenticator 动态口令、滴答清单日程与纸质扫描。
+
+#### 一、效率工具：管理你的时间与注意力
+
+效率工具是数字生活的"骨架"，帮助你把零散的想法、任务、资料整理得井井有条。下面按场景分类推荐。
+
+##### 1. 待办清单（任务管理）
+
+- <strong>滴答清单（TickTick）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要把工作、生活、学习任务与日程统一记录的人；本节重点推荐之一。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>跨手机/电脑/平板/Web 同步；<strong>清单 + 日历 + 番茄钟</strong>三合一；自然语言输入「明天下午3点开会」「每周一交周报」自动识别时间与重复规则；支持子任务、标签、优先级、附件与协作清单。适合「日程安排 + 任务打卡 + 每日回顾」一体化管理。
+- <strong>滴答清单怎么用得更顺</strong>：
+  - <strong>收集箱</strong>：先全部丢进「今天/收集箱」，晚上再归类到工作、家庭、学习清单。
+  - <strong>日历视图</strong>：会议、截止日拖到日历上看冲突，比只看待办列表更直观。
+  - <strong>重复任务</strong>：吃药、缴费、健身设成规则任务，不用每次手填。
+  - <strong>番茄钟</strong>：在任务上直接开专注，统计本周「真正做完了多少」。
+  - <strong>与手机功能联动</strong>：语音助手说「提醒我…」可进系统提醒；重要截止日同时开系统日历双保险。
+- <strong>Todoist</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求极简、跨平台用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>界面克制清爽，项目层级清晰（任务→子任务→子子任务），karma 积分激励习惯养成。
+- <strong>Microsoft To Do</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>办公党、Outlook用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>完全免费、无广告，"我的一天"功能每天清空、减轻心理负担，与微软生态深度集成。
+- <strong>系统便签/提醒事项</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>不想装第三方App的轻度用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>原生体验、零延迟，Siri/小爱语音直接添加，与系统 widget 联动。
+
+##### 2. 番茄钟（专注力训练）
+
+- <strong>Forest</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>管不住手、易刷手机的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>专注时种树，提前离开 App 树会枯死，用"虚拟生命"建立正向反馈，可与好友合种。
+- <strong>潮汐</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要白噪音辅助专注/入睡的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>自然音效（雨声、海浪、森林）+番茄钟+冥想三合一，界面极简治愈。
+- <strong>原则</strong>：经典 25 分钟专注 + 5 分钟休息，可根据自身状态调整为 50/10 或 90/20。
+
+##### 3. 日历（时间可视化）
+
+- <strong>系统日历</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>原生推送最稳、耗电极低，可与 Siri/小爱语音添加。
+- <strong>Google Calendar</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>多设备用户、需要与他人共享日程者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"目标"功能自动帮你安排健身/学习时间，与 Gmail 智能识别邮件中的事件。
+
+##### 4. 笔记类（知识沉淀）
+
+- <strong>Notion</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要把笔记、任务、数据库、wiki 统一管理的人；学生党、自由职业者、团队协作。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>全能知识库，Block 模块化编辑，可搭建个人主页、阅读清单、项目看板，模板生态丰富。
+- <strong>Obsidian</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>深度知识管理者、研究者、写作人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>本地 Markdown 存储，双向链接 + 关系图谱，让你的笔记形成"第二大脑"，数据完全归你所有。
+- <strong>flomo</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>想记录碎片灵感却不想写长文的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>卡片式笔记，类似发朋友圈一样记录想法，支持 # 标签分类，按时间线回溯。
+- <strong>苹果备忘录</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>iPhone/Mac 用户、轻度记录需求。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>启动快、支持扫描文档/手绘/清单/iCloud 同步，免费且与系统深度集成。
+- <strong>印象笔记</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要大量网页剪藏、资料归档的资深用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>网页剪藏插件强大，OCR 识别图片文字，老牌稳定，但高级版需付费。
+
+##### 5. PDF 工具
+
+- <strong>PDF Expert</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>iPad/iPhone 用户、需要批注合同的商务人士、学生党。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>iOS 上公认最强的 PDF 编辑器，标注流畅、支持签名、合并拆分、填写表单。
+- <strong>WPS</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要同时处理 Word/Excel/PPT/PDF 的办公族。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>一站式办公套件，国内网盘/微信文件兼容好，免费版功能已足够日常。
+- <strong>Adobe Acrobat</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>对 PDF 格式规范要求高的人（法律、设计、出版）。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>官方标准、转换 PDF/A 格式无误，跨设备同步与电子签名功能专业。
+
+##### 6. 扫描类（纸质文件数字化）
+
+纸质合同、发票、作业、白板笔记、身份证复印件……手机摄像头已经能替代大部分扫描仪。核心流程：<strong>拍清楚 → 自动裁边与矫正 → 导出 PDF/图片 → OCR 可选</strong>。
+
+- <strong>扫描全能王（CamScanner）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>经常需要扫描合同、票据、证件的商务人士和学生。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>边缘自动识别、透视矫正、OCR 文字识别，可生成多页 PDF 并云同步。
+- <strong>微软 Lens</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>学生党、需要把白板/书页扫描成 Word 的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>免费无广告，可一键导出到 OneNote/Word，识别文字准确率高。
+- <strong>苹果备忘录扫描</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>iPhone 用户、轻度扫描需求。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>无需装 App，备忘录内点击相机图标即可扫描，自动去阴影、签名标注，免费好用。
+- <strong>白描 / 扫描全能王网页版 / 品牌相机「文档扫描」</strong>：华为、小米、OPPO、vivo 系统相机大多内置「文档/扫描」模式；安卓也可用 Google 相机或系统扫一扫。适合应急拍一页合同。
+- <strong>拍照小技巧</strong>：光线均匀、手机与纸面平行、对准四个角；多页文件按顺序拍完再合并 PDF；敏感证件注意水印与保存位置，用完可从「最近删除」彻底清理。
+
+#### 二、健康运动
+
+健康类 App 是手机最被低估的"私人助理"——它们能持续追踪你的睡眠、心率、运动量，比偶尔去一次医院更能反映长期状态。
+
+##### 1. 运动健身
+
+- <strong>Keep</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>居家训练者、零基础新手、想减脂塑形的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>海量免费课程，从 HIIT 到瑜伽全覆盖，AI 自动生成训练计划，社区氛围浓厚。
+- <strong>Nike Training Club（NTC）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求专业教练指导、希望系统训练的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>Nike 官方出品，课程全部免费，动作演示由专业教练录制，按肌群/器械分类清晰。
+- <strong>苹果健身（Fitness）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>Apple Watch 用户、想用闭环激励自己动起来的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>每日三个活动圆环（移动/锻炼/站立），可视化目标，与手表心率数据无缝打通。
+
+##### 2. 睡眠追踪
+
+- <strong>AutoSleep</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>Apple Watch 用户、想知道自己每晚深睡/浅睡比例的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>戴表入睡自动追踪，无需手动启停，给出睡眠质量评分与就寝建议。
+- <strong>Sleep Cycle</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>不戴手表睡觉、想用手机监测的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>通过麦克风分析翻身/呼噜声，在浅睡阶段智能唤醒，让你起床不痛苦。
+- <strong>小米运动健康</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>小米手环/手表用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>免费且与小米手环深度联动，心率/血氧/睡眠一体追踪，性价比高。
+
+##### 3. 冥想放松
+
+- <strong>Calm</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>压力大的上班族、入睡困难者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"每日平静"冥想引导 + 睡眠故事（由名人朗读），界面唯美，英文内容丰富。
+- <strong>潮汐</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要白噪音专注/入睡的中文用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>国产精品，自然音效 + 冥想课程 + 番茄钟，中文引导更亲切。
+- <strong>小睡眠</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要助眠音效、记录梦话/呼噜声的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>海量白噪音可叠加组合（雨声+风扇+篝火），睡前定时关闭，梦话录音有趣又实用。
+
+##### 4. 女性健康
+
+- <strong>Flo</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要记录经期、备孕或关注女性健康的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>AI 预测下次经期/排卵日准确度高，社区可匿名提问，界面设计精致。
+- <strong>美柚</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>国内女性用户、希望看中文社区与科普的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>本地化内容丰富，按经期/备孕/孕期/育儿分阶段提供对应知识。
+
+##### 5. 用药提醒
+
+- <strong>用药助手</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要长期服药的慢性病患者、需要照顾老人用药的子女。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>扫码识别药品、自动建立用药清单，按时弹窗提醒，记录服药情况可分享给家属。
+
+##### 6. 数据中枢
+
+- <strong>苹果健康/Google Fit</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有智能手机用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>汇聚来自手机、手环及第三方健康 App 的所有数据（步数、心率、睡眠、经期等），是统一的"健康档案中心"。
+
+#### 三、旅行出行
+
+出门在外，几款趁手的 App 能让你少踩无数坑。下面按出行全流程推荐。
+
+##### 1. 航班高铁
+
+- <strong>航旅纵横</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>经常坐飞机的商务人士。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>官方民航数据，航班动态/登机口变更/延误预警最权威，可查机型与座位图。
+- <strong>12306</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有国内火车出行者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>官方唯一可信购票渠道，支持候补购票（有人退票自动抢），学生票/团体票办理方便。
+- <strong>飞常准</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>对航班准点率敏感、需要接送机的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>航班延误预测准确，可分享行程给家人实时查看你的位置与到达时间。
+
+##### 2. 地图导航
+
+- <strong>高德地图</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>国内城市用户、自驾/打车族。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>实时路况准确、避开拥堵能力强，打车/打车合乘一站搞定，公共交通换乘方案丰富。
+- <strong>百度地图</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>对地点信息、室内导航有需求的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>全景地图/AR 实景导航，景区/商场室内地图细致，语音包丰富。
+- <strong>Google Maps</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>出国旅行者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>全球覆盖最全、本地评价真实，街景与离线地图是异国他乡的救星。
+
+##### 3. 翻译
+
+- <strong>谷歌翻译</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>出国旅行者、跨语言学习者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"对话"实时双向翻译、"相机"即时取词翻译是旅行神器，支持离线语言包下载。
+
+##### 4. 汇率换算
+
+- <strong>极简汇率</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>出国旅行、海淘、跨境购物的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>界面极致清爽，支持 160+ 货币，汇率实时更新，可同时对比多种货币，长按数字快速换算。
+
+##### 5. 天气
+
+- <strong>系统天气 / 中国天气网</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有人，查预报与官方气象预警的首选。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>厂商天气 App 与「中国天气」等官方渠道对接气象台预警，暴雨、台风、高温等预警会以横幅/通知推送，权威性高。
+- <strong>彩云天气</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要精准到分钟级降雨预报的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>"未来两小时是否下雨"准确度业内领先，降雨带动态地图直观可见，下雨前主动推送提醒。
+- <strong>Carrot Weather</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求趣味性与丰富 widget 的天气发烧友。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>毒舌 AI 语音播报天气、超多自定义 widget 桌面组件、雷达图专业，付费版功能更全。
+- <strong>预警要点</strong>：天气类 App 要<strong>允许通知</strong>才收得到预警；预警分蓝、黄、橙、红四级，红色表示灾害性天气风险最高，应按提示调整出行。更多开启方式见本章第七节「天气预警 / 自然灾害预警 / 地震预警」。
+
+##### 6. 旅行攻略
+
+- <strong>马蜂窝</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>喜欢做详细攻略、自驾游/深度游的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>用户原创游记内容丰富，目的地玩法/路线/避坑指南详尽，可下载离线攻略。
+- <strong>小红书</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>想看真实体验、找小众打卡点/美食的年轻旅行者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>图文短视频形式直观，"XX 城市 3 天攻略"等内容更新快、时效性强，搜索体验好。
+
+#### 四、自动化工具启蒙
+
+自动化是"用一次配置换长期省事"的杠杆，能把你每天重复的几十次操作压缩成零。本节只做概念启蒙，具体玩法与详细教程请见 <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">第二十三章：编程思维与自动化启蒙</a>。
+
+- <strong>iOS"快捷指令"</strong>：苹果官方自动化工具，无需编程，可一键完成"到家开 WiFi+亮度调低+播报天气"等组合动作。
+- <strong>安卓自动化</strong>：系统级场景联动（如小米"自动任务"、华为"情景智能"）上手最简单；Tasker 功能强大但学习曲线陡峭，适合极客。
+- <strong>核心思路</strong>：先识别"每天都要重复做的操作"，再想"能否用一个触发条件 + 多个动作替代"。详细示例与进阶玩法见第 23 章。
+
+#### 五、浏览器与搜索引擎：你的信息入口
+
+浏览器是你通往互联网的窗口，搜索引擎是你在信息海洋中导航的罗盘。用好它们，能让你少走很多弯路。
+
+##### 浏览器的工作原理：
+
+当你在浏览器中输入网址后，浏览器会：①向DNS服务器查询域名对应的IP地址；②向该IP地址的服务器发送HTTP/HTTPS请求；③服务器返回网页代码（HTML、CSS、JavaScript）；④浏览器解析代码并渲染成你看到的页面。
+
+##### 主流浏览器推荐：
+
+- <strong>微软Edge</strong>：基于Chromium内核，速度快、兼容好。内置Copilot AI助手，可以总结网页、翻译、对话。支持跨设备同步，个人强烈推荐作为主力浏览器。
+- <strong>Safari</strong>：苹果设备默认浏览器，与系统深度集成，省电高效。隐私保护好，但扩展插件较少。
+- <strong>Chrome</strong>：全球使用率最高，扩展丰富。但内存占用大，手机端相对耗电。
+
+##### 搜索引擎选择：
+
+- <strong>Bing</strong>：微软旗下搜索引擎，与Edge深度集成。AI摘要功能可以直接给出答案而不只是链接，搜索效率很高。图片搜索体验也不错。
+- <strong>Yandex</strong>：俄罗斯最大的搜索引擎，图片搜索和反向图片搜索能力很强。找相似图片、识别物体时非常好用。
+- <strong>百度</strong>：国内信息搜索的主力，但广告较多，需要一定的辨别能力。
+- <strong>Google</strong>：全球最精准的搜索引擎，但国内需要特殊网络才能使用。
+
+##### 高效信息检索指南：
+
+- <strong>善用AI搜索</strong>：Bing的AI摘要、Edge的Copilot可以直接回答问题，帮你从海量结果中提炼关键信息，比逐条点击链接高效得多。
+- <strong>识别虚假信息与广告</strong>：搜索结果中标注"广告"或"赞助"的条目是付费推广，不是自然搜索结果。注意甄别信息来源的权威性，优先选择官方网站、知名媒体的内容。
+- <strong>正确下载应用</strong>：在搜索引擎中输入"应用名+官网"，如"微信官网"，优先点击带有官方域名标识的结果。不要从第三方下载站安装软件，它们经常捆绑流氓软件。
+- <strong>官网鉴别技巧</strong>：下载Windows 11应该访问microsoft.com，下载Chrome应该访问google.com。看域名是否与品牌一致，是最基本的鉴别方法。
+
+##### 网站域名知识：
+
+域名是网站的"门牌号"，读懂它能帮你判断网站的性质和来源：
+
+- <strong>常见后缀含义</strong>：
+  - .com — 商业机构，最常见
+  - .cn — 中国国家域名
+  - .org — 非营利组织
+  - .net — 网络服务机构
+  - .edu — 教育机构
+  - .gov — 政府机构
+  - .xyz/.tech/.info — 新兴通用域名，门槛低，需谨慎
+- <strong>国家/地区域名</strong>：
+  - .jp — 日本
+  - .kr — 韩国
+  - .uk — 英国
+  - .de — 德国
+  - .tw — 台湾
+  - .hk — 香港
+- <strong>安全提示</strong>：.gov和.edu后缀的网站通常更可信，因为申请门槛高。.xyz、.top等廉价域名容易被钓鱼网站利用，访问时要多留个心眼。
+
+##### 广告拦截：
+
+- <strong>AdGuard</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>被各类弹窗、贴片广告、应用内广告困扰的所有用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>系统级广告拦截（不仅限浏览器），可过滤 App 内横幅广告与开屏追踪，省流量、加速页面加载，付费版支持全设备。
+
+##### 隐私浏览器：
+
+- <strong>Brave</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>注重隐私、不希望被广告追踪的日常浏览者。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>基于 Chromium 内核，开箱即用屏蔽广告与追踪器，自带 Tor 隐身模式，速度比 Chrome 快、内存占用更低。
+- <strong>DuckDuckGo</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>希望"搜一个词不被全网追着推广告"的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>自带同名搜索引擎（不记录搜索历史），一键清除所有浏览痕迹（"燃烧按钮"），跨平台体验统一。
+
+##### 浏览器对比一览：
+
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                        <thead>
+                            <tr class="bg-light dark:bg-gray-700">
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">浏览器</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">核心卖点</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适用人群</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">微软 Edge</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chromium 内核 + 内置 Copilot AI，可总结网页/翻译/对话</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">追求效率的办公族、AI 重度用户（推荐主力）</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Safari</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与苹果生态深度集成，省电高效，隐私保护强</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/Mac 用户，重视续航与系统联动</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Chrome</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全球使用率最高，扩展插件生态最丰富</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要大量扩展插件的进阶用户、跨设备同步党</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Brave</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开箱即用屏蔽广告与追踪器，速度更快</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">注重隐私、不装插件也想屏蔽广告的用户</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DuckDuckGo</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">同名搜索引擎不记录历史，一键清除痕迹</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不希望被个性化追踪的隐私敏感用户</td>
+                            </tr>
+                        </tbody>
+                    </table>
+```
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>试着创建一个"睡前放松"的自动化流程
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 创建触发条件：特定时间（如22:30）。
+2. 添加执行动作：调低音量 > 打开勿扰模式 > 播放放松歌单 > 调低亮度。
+3. 保存并测试。
+:::
+
+#### 六、实用系统工具：清理、防骚扰与安全防护
+
+除了效率与健康类 App，真正影响日常体验的往往是「少被打扰、存储够用、骗子进不来」这三件事。本节先盘点常用实用软件，再单独展开<strong>手机自带的骚扰拦截功能</strong>——很多人买了手机多年，却从没打开过这些开关。
+
+##### 1. 系统清理与存储优化
+
+- <strong>清浊</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>安卓用户，希望轻量清理缓存、残留文件、空文件夹，又不想被「手机管家」全家桶打扰的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>体积小、无广告干扰，支持深度扫描应用残留、大文件定位、存储占用分析；比商业「一键加速」更克制，适合动手能力强的用户做定期维护。<span class="text-gray-500 dark:text-gray-400">注意：</span>清理前先确认路径，微信、相册、文档目录不要盲目全选；系统级缓存尽量优先用品牌自带存储清理，第三方工具只作补充。
+- <strong>系统自带存储清理</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有人，尤其是长辈和怕折腾的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>安卓 [设置] > [存储] > [清理加速]；iOS [设置] > [通用] > [iPhone 储存空间]。系统更懂自家 App 缓存结构，误删风险最低，应作为<strong>第一选择</strong>。
+- <strong>微信/QQ 内置存储管理</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>聊天大户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>微信 [我] > [设置] > [通用] > [存储空间]，可按聊天、文件类型精细清理；比外部「清微信」类工具更安全。
+- <strong>原则</strong>：能用系统/App 自带的，就不用第三方；能按路径/类型勾选的，就不要「一键全清」。清理的目标是释放空间，不是把重要数据一起扫掉。
+
+##### 2. 防骚扰与安全类实用软件
+
+- <strong>国家反诈中心</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>所有人，尤其是长辈、财务相关岗位、经常网购/接陌生电话的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>官方出品，可开启来电预警、短信风险提示、可疑网址检测；与公安反诈数据库联动，是「三道防线」里最有官方背书的一环。
+- <strong>品牌安全中心 / 手机管家</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>对应品牌用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>华为手机管家、小米安全中心、OPPO 手机管家、vivo 手机管家等，集成骚扰拦截、病毒查杀、权限管理、支付保护，通常<strong>免费且与系统底层协同更好</strong>，不建议再装第二套商业安全软件造成权限冲突。
+- <strong>运营商防骚扰服务</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>被高频外呼、AI 语音电话轰炸的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>移动发送 <span class="kbd">KTFSR</span> 到 10086 开通；电信关注「天翼防骚扰」；联通在「联通手机管家」中设置。拦截发生在<strong>运营商侧</strong>，手机不响铃也能挡住一批骚扰号。
+- <strong>AdGuard</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>被各类弹窗、贴片广告、应用内广告困扰的所有用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>系统级广告拦截（不仅限浏览器），可过滤 App 内横幅广告与开屏追踪，省流量、加速页面加载，付费版支持全设备。
+- <strong>慎装「清理加速 / 骚扰拦截」全家桶</strong>：部分第三方管家常驻后台、反复请求通讯录与短信权限，拦截能力未必比系统强，反而增加耗电与隐私风险。优先打开系统自带功能，再考虑官方反诈 App。
+
+::: div .success-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-shield-halved mr-2"></i>实用软件选型原则
+
+{class="list-disc pl-6 mt-1 space-y-1 text-sm"}
+- <strong>系统优先</strong>：拦截、清理、权限管理，先打开手机自带开关。
+- <strong>官方补充</strong>：国家反诈中心、运营商防骚扰属于官方通道，可叠加。
+- <strong>第三方克制</strong>：同一类功能装一个就够，避免权限打架与后台抢资源。
+- <strong>少即是多</strong>：工具装得越多，通知和权限面越大，被「工具本身」打扰的概率越高。
+:::
+
+##### 3. 手机自带骚扰拦截功能：各品牌怎么开
+
+下面按品牌列出入口。名称可能随系统版本略有差异，可在设置里直接搜索「骚扰」「拦截」「未知来电」。与第八章「骚扰电话治理」互为补充：这里侧重<strong>开关位置</strong>，那里侧重<strong>号码标记与误标申诉</strong>。
+
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                        <thead>
+                            <tr class="bg-light dark:bg-gray-700">
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平台</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">入口路径</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推荐开启项</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[设置] > [电话] / [信息]</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">静音未知来电；已阻止的联系人；信息中「过滤未知发件人」</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 App > 设置 > 骚扰拦截；或 安全中心</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能拦截、陌生号响一声挂断、短信关键词过滤</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为 / 荣耀</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 骚扰拦截；手机管家 > 骚扰拦截</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">来电识别、黑名单、短信智能拦截</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 App > 骚扰拦截；或 本机 > 骚扰拦截</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">来电拦截、诈骗电话识别、短信拦截规则</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 骚扰电话拦截；i 管家</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">骚扰拦截、诈骗电话预警、信息过滤</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">电话 > 设置 > 阻止号码 / 来电显示与垃圾电话</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">阻止未知号码、垃圾电话识别（地区支持度不同）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+```
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-info-circle mr-2"></i>三层防护叠加建议
+
+{class="mt-1"}
+日常推荐「<strong>系统拦截 + 运营商防骚扰 + 国家反诈中心</strong>」三层叠加：系统管标记与黑名单，运营商在网侧挡高频外呼，反诈中心补官方预警。三层不必都开到最严，避免把快递、外卖、医生电话也误杀——可对通讯录与最近联系人放行。
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>动手练习：今天就把骚扰拦截打开
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 打开电话 App 设置，找到「骚扰拦截 / 静音未知来电」，开启智能拦截。
+2. 给爸妈手机也检查一遍：同样路径 + 开通运营商防骚扰（移动可发 KTFSR 到 10086）。
+3. 应用商店安装「国家反诈中心」，注册并打开来电预警。
+4. 试打一个已被标记的测试号（或看拦截记录），确认功能生效。
+:::
+
+#### 七、天气预警、自然灾害预警与地震预警
+
+骚扰拦截挡住的是「电话诈骗」，预警功能挡住的是「天灾与极端天气」。很多人只装了天气 App 看温度，却<strong>没开通知、没开地震预警</strong>——暴雨红色预警、台风、地震来临前那几秒到几十秒，手机本可以帮你争取到宝贵的避险时间。
+
+##### 1. 天气预警：暴雨、台风、高温怎么收
+
+- <strong>官方渠道优先</strong>：中国气象局 / 中央气象台 / 各省气象局发布的预警最权威。可关注「中国天气」微信公众号、微博，或下载「中国天气」等官方类 App。
+- <strong>系统天气 App</strong>：华为天气、小米天气、OPPO 天气、vivo 天气、苹果「天气」等，多数会推送当地气象台预警；进入天气 App 设置，确认<strong>「气象预警 / 灾害性天气」通知已开启</strong>。
+- <strong>彩云天气等分钟级降雨</strong>：适合通勤、接送孩子前判断「这半小时要不要带伞」；预警能力仍以官方气象台为准。
+- <strong>预警颜色含义（通用）</strong>：
+  - <strong>蓝色</strong>：注意防范，一般照常出行、关注更新。
+  - <strong>黄色</strong>：加强防范，减少不必要户外活动。
+  - <strong>橙色</strong>：严重，尽量留在室内，远离危险区域。
+  - <strong>红色</strong>：特别严重，听从停课、停工、避险指引，不要硬闯积水、山洪、大风路段。
+- <strong>常见预警类型</strong>：暴雨、暴雪、台风、高温、寒潮、大风、雷电、冰雹、道路结冰、大雾、干旱、地质灾害风险。
+
+##### 2. 自然灾害预警：不只「下雨」
+
+- <strong>发布主体</strong>：气象台负责气象类；地质灾害、山洪等常由自然资源、水利、应急管理部门联合发布；地方政府也会通过应急广播、短信、12379 等渠道发布。
+- <strong>怎么多渠道接收</strong>：
+  - 手机系统通知 + 天气 App 预警。
+  - 微信关注当地「应急管理局」「气象局」公众号。
+  - 12379 国家预警信息发布相关渠道（短信/服务，视地区开通情况）。
+  - 电视、应急广播、村/社区大喇叭——山区、汛期不要只盯手机。
+- <strong>户外与出行提醒</strong>：台风天不贴广告牌、不走树下；暴雨不进地下车库、隧道、下穿桥；山区旅游遇「地质灾害气象风险」预警应立即离开陡坡、沟谷。
+- <strong>与急救手册联动</strong>：灾后失联、手机没电、需要定位求救时，见 <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">第三十二章</a> 地震/灾害场景，以及 <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">第七章</a> 卫星通信与无网通。
+
+##### 3. 地震预警：和「地震预报」不是一回事
+
+<strong>地震预警</strong>（EEW）是在地震波（尤其是破坏力更强的横波）到达目标区之前，利用电磁波比地震波快、以及台站更快捕捉到纵波的原理，向可能受影响区域<strong>提前数秒到数十秒</strong>推送警报。它<strong>不能预测地震是否发生</strong>，但能抢出「就近避险、切断火源、冲出电梯」的窗口。距离震中越近，预警时间越短，甚至可能来不及。
+
+- <strong>官方与行业方案</strong>：中国大陆常见接入方包括中国地震预警网相关能力，以及成都高新减灾研究所等机构推动的预警服务；部分厂商手机会预装或可联网接收预警。
+- <strong>第三方 App</strong>：应用商店搜索「地震预警」等官方/机构相关应用（安装前看清开发者，避免山寨「假预警」App 要你开一堆无关权限）。
+- <strong>收到警报后怎么做</strong>：室内就近躲避（桌下、承重墙角、坚固家具旁），护住头颈；远离窗户、外墙、高大家具；不要盲目冲楼梯/跳楼；电梯里立刻在最近楼层离开；室外到开阔地，远离电线、广告牌、危房。震后检查燃气与电路，注意余震。
+- <strong>勿扰勿关</strong>：地震预警应允许「突破静音/勿扰」响铃；睡前把手机放伸手可及处，铃声音量别调到 0。
+
+##### 4. 手机自带地震预警：各品牌怎么开
+
+下列入口随系统版本可能略有差异，可在设置中直接搜索「地震」「预警」「安全预警」。iOS 系统本身对国内地震预警支持有限，通常需安装可靠的第三方预警 App，并保持定位与通知权限。
+
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                        <thead>
+                            <tr class="bg-light dark:bg-gray-700">
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">平台</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见入口</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">说明</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">小米 / Redmi</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机管家 / 安全中心 > 地震预警；或 设置搜索「地震」</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分版本系统内置预警服务，需联网并开启定位</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">华为 / 荣耀</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全 > 应急预警通知 / 地震预警</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">名称可能是「应急预警通知」，内含地震等</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / realme / 一加</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全（SOS 紧急联络）> 地震预警</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分机型与地区服务覆盖有关</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo / iQOO</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天气 App 或 设置 > 安全/更多 > 地震预警</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">以实际系统版本菜单为准</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone / iOS</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统设置中通常无完整内置开关；安装可靠地震预警 App 并允许通知</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App 需后台运行与定位权限；系统勿扰勿屏蔽其警报</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">三星等</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设置 > 安全与紧急情况 / 无线紧急警报</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「紧急警报」覆盖范围因地区与运营商而异</td>
+                            </tr>
+                        </tbody>
+                    </table>
+```
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>关于地震预警的常见误区
+
+{class="list-disc pl-6 mt-1 space-y-1 text-sm"}
+- <strong>预警 ≠ 预报</strong>：它不能告诉你「明天会不会地震」，只在已发生地震、波尚未到达时报警。
+- <strong>不是哪里都能提前很多秒</strong>：震中附近可能只有数秒甚至来不及，预警主要惠及周边区域。
+- <strong>关通知就等于没装</strong>：再好的预警，静音、杀后台、不给定位，都可能收不到。
+- <strong>山寨 App</strong>：警惕要通讯录、短信权限的「地震预报」软件，优先系统内置或正规机构方案。
+:::
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-info-circle mr-2"></i>预警能力怎么搭配
+
+{class="mt-1"}
+日常建议：「<strong>系统天气预警通知 + 官方气象/应急渠道 + 地震预警（系统或正规 App）</strong>」。与防骚扰一样，不必装一堆同类软件；关键是<strong>通知权限打开、定位允许、勿扰能突破</strong>。给长辈手机做完骚扰拦截后，顺手把天气预警和地震预警也检查一遍。
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>动手练习：10 分钟检查预警设置
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 打开系统天气 App，进入设置，开启「气象预警 / 灾害性天气」通知。
+2. 在系统设置里搜索「地震」或「预警」，找到并开启地震预警/应急预警（安卓）；iPhone 则安装正规地震预警 App 并允许通知。
+3. 关注当地气象局或应急局的公众号/服务号，允许其推送。
+4. 确认预警声音不会被勿扰完全静音；给爸妈手机同样检查一遍。
+:::
+
+#### 八、跨设备协同：远控电脑、快传与账号安全
+
+手机用得顺，多半是因为它和电脑、平板「组了队」。本节补充几类高频实用工具：手机远控电脑、AI 办公与远程协作、动态壁纸、局域网快传、跨设备剪贴板、动态口令 2FA，以及纸质扫描与日程任务的衔接。更系统的多设备联动见 <a href="#di-shi-qi-zhang" class="text-primary hover:underline">第十七章</a>。
+
+##### 1. 手机远控电脑：向日葵 / ToDesk
+
+- <strong>向日葵远程控制</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要在外出时操作家里/公司 Windows 或 Mac 的用户；也常用于帮长辈远程修手机（见第二十七章）。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>国产生态成熟，手机 App 控制电脑桌面、传文件、开关机（部分需硬件）；免费版一般够个人轻度使用。
+- <strong>ToDesk</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>追求连接稳定、低延迟远程办公/运维的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>设备码+密码连接，手机控电脑、电脑控手机（视版本）、文件传输与多显示器切换较顺手，国内节点体验通常较好。
+- <strong>基本用法</strong>：电脑端安装客户端并登录/保持在线 → 手机端装 App → 用<strong>设备识别码 + 连接密码</strong>（或同一账号）建立会话 → 手机触控板/手势操作桌面。
+- <strong>安全红线（务必记住）</strong>：
+  - 陌生人自称「客服/公检法/运营商」让你装向日葵、ToDesk 并远程你<strong>手机或电脑</strong>，<strong>一律拒绝</strong>——这是典型诈骗手法（详见第二十七章）。
+  - 自己用时：开启二次验证、修改默认密码、不用时退出账号或关闭无人值守；公司电脑遵守单位安全规定。
+  - 公共场合远程办公注意周围是否有人偷窥屏幕与口令。
+
+##### 2. AI 办公软件：Trae / WorkBuddy / Dumate
+
+- <strong>Trae</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>编程与文档协作用户，中文环境友好。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>字节跳动推出的 AI IDE/编程助手，SOLO 模式可一句话生成项目；日常写代码、改文档效率高。若电脑端运行，可在移动端配合远控或官方配套能力查看/跟进任务（以产品最新形态为准）。详见 <a href="#di-si-shi-yi-zhang" class="text-primary hover:underline">第四十一章</a> AI 编程工具全景。
+- <strong>WorkBuddy</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>希望 AI 帮忙整理会议纪要、邮件、汇报、办公文档的职场用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>面向办公场景的 AI 助手，适合「起草—润色—总结」这类高频文案；部分工作流可在手机端发起，重活放到电脑端完成。
+- <strong>Dumate</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>需要多人协作、文档与知识管理一体化的团队/个人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>AI 协作向办公工具，强调资料汇聚与协同编辑；手机端可查看与轻量编辑，复杂排版建议在电脑大屏处理。
+- <strong>「手机端远程控制电脑」怎么理解</strong>：很多 AI 办公能力跑在电脑/网页端；在手机上通过<strong>向日葵/ToDesk</strong>连回电脑，或使用产品自身的手机 App/网页，就能在通勤时「遥控」电脑上的 AI 任务。原则：<strong>重计算、长文档放电脑；看进度、改几句放手机</strong>。
+- <strong>隐私提醒</strong>：上传合同、身份证、客户数据前看清产品隐私条款与企业合规要求；公司资料优先用单位指定工具。
+
+##### 3. 人工桌面：米哈游动态壁纸（手机 + PC）
+
+- <strong>人工桌面</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>喜欢米哈游角色、想要免费动态壁纸的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>米哈游推出的<strong>免费</strong>动态壁纸应用，支持<strong>手机端与 PC 端</strong>；角色 Live2D/动态演出可作桌面，部分机型/系统可设为锁屏或桌面壁纸。
+- <strong>省电与性能</strong>：动态壁纸比静态图更耗电、占 GPU；低电量或老机型可只在充电时使用，或降低帧率（若 App 提供选项）。
+- <strong>安装来源</strong>：优先官网/正规应用商店，避免第三方「破解版」捆绑木马；PC 版注意安装路径与开机自启是否需要。
+
+##### 4. 局域网文件快传：LocalSend / 飞鸽传书 / 隔空投送
+
+- <strong>LocalSend</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>安卓/Windows/iOS/Mac/Linux 混用，想要<strong>跨平台、不传公有云</strong>快传的人。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>开源、局域网直连，同一 Wi-Fi 下互传照片视频文档，无需数据线、不经过厂商服务器，速度取决于路由器。
+- <strong>飞鸽传书</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>办公室 Windows 电脑之间、老局域网办公场景。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>老牌局域网传输/聊天工具，适合内网传大文件；注意从正规渠道下载，企业内网遵守 IT 策略。
+- <strong>隔空投送（AirDrop）</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>iPhone、iPad、Mac 用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>苹果生态一键分享，蓝牙发现 + Wi-Fi 直连传输，免流量；可设「仅联系人」降低陌生人骚扰。
+- <strong>其他补充</strong>：小米互传、华为分享、vivo 互传等品牌方案在同一品牌设备间很快；微信「文件传输助手」方便但受文件大小与登录设备限制，大文件更推荐 LocalSend/隔空投送。
+- <strong>使用提示</strong>：双方连<strong>同一 Wi-Fi</strong>；公共 Wi-Fi 传敏感文件有风险，优先私人热点；传输完成后在接收方确认文件是否完整。
+
+##### 5. 跨设备剪贴板同步：KDE Connect / 手机电脑互传
+
+- <strong>苹果「通用剪贴板」</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>iPhone + Mac 用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>登录同一 Apple ID、开接力后，手机复制 → Mac 直接粘贴（反之亦然），文字与部分文件均可。
+- <strong>KDE Connect</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>安卓 + Windows/Linux/Mac，想要开源剪贴板同步、通知镜像、远程输入的用户。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>局域网配对后同步剪贴板、推送手机通知到电脑、用手机当幻灯片翻页器/触控板；数据不经过第三方账号。
+- <strong>品牌「手机电脑互传」</strong>：华为多屏协同/超级终端、小米妙享、vivo 互传、OPPO 互连、荣耀互联等，常自带<strong>跨屏剪贴板与文件拖拽</strong>，同品牌体验最好。
+- <strong>Windows + 安卓官方通道</strong>：「手机连接 / Link to Windows」（Your Phone 演进）可在电脑上看手机通知、照片，并在支持的场景复制粘贴；三星等机型集成更深。
+- <strong>安全提醒</strong>：剪贴板可能残留密码、验证码；在共用电脑上慎用全局同步，用完在密码框避免二次粘贴泄露；部分输入法也会读剪贴板，注意权限。
+
+##### 6. 动态口令 2FA：Aegis / Microsoft Authenticator
+
+- <strong>为什么要用认证器而不是短信</strong>：短信验证码可能遭遇 SIM 补卡劫持；TOTP 动态口令在本地按时间算法生成，无需依赖手机号信号，更抗钓鱼与拦截（仍需防木马与截屏）。
+- <strong>Aegis Authenticator</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>安卓用户，偏好开源、本地可控。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>开源免费，支持加密备份与导入导出，界面干净，可指纹/人脸解锁令牌列表。
+- <strong>Microsoft Authenticator</strong>　<span class="text-gray-500 dark:text-gray-400">适用人群：</span>使用微软账号、Office 365/企业账号的用户；跨 iOS/安卓。<span class="text-gray-500 dark:text-gray-400">核心卖点：</span>推送批准登录、密码监控与账号备份（按产品版本），与 Windows/企业身份体系结合紧密。
+- <strong>Google Authenticator / 2FAS 等</strong>：生态内也常见；关键是有<strong>加密备份</strong>，换机不丢令牌。
+- <strong>换机必做</strong>：旧机迁移或用服务里的「备用码/恢复密钥」；<strong>备用码打印在纸上</strong>存两处，不要只存同一部手机。
+- <strong>与密码管理器</strong>：部分密码库也可存 TOTP，方便但风险更集中；高价值账号建议「密码管理器 + 独立认证器」分工。详见 <a href="#di-shi-si-zhang" class="text-primary hover:underline">第十四章</a>。
+
+##### 7. 推荐组合：一天里怎么串起来
+
+::: div .success-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-diagram-project mr-2"></i>实用工作流示例
+
+{class="list-disc pl-6 mt-1 space-y-1 text-sm"}
+- <strong>早上</strong>：滴答清单看今日日程 → 天气/预警扫一眼 → 电脑开 Trae/文档，手机放一旁。
+- <strong>白天</strong>：纸质材料用扫描类 App 转 PDF，经 LocalSend/隔空投送发到电脑；长文在电脑用 AI 办公工具起草。
+- <strong>外出</strong>：用 ToDesk/向日葵连回电脑继续任务；重要账号登录走 Aegis/Microsoft Authenticator 动态口令。
+- <strong>晚上</strong>：滴答清单勾选完成项；需要时人工桌面换个壁纸放松一下。
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-user-shield mr-2"></i>远控与账号安全口诀
+
+{class="list-disc pl-6 mt-1 space-y-1 text-sm"}
+- 别人让你装远控软件 → <strong>挂电话，自己找官方客服</strong>。
+- 验证码、动态口令<strong>不告诉任何人</strong>，包括「快递」「客服」。
+- 公司电脑远控与安装 AI 软件前，先问 IT 能不能用。
+- 公共网络传文件、远程登录时格外警惕。
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>动手练习：把「跨设备」链路跑通一次
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 手机与电脑连同一 Wi-Fi，用 LocalSend（或隔空投送）互传一张照片。
+2. 在滴答清单建一条「今晚 8 点：整理扫描件」任务，确认手机与电脑都能看到。
+3. 为邮箱或微信开启 2FA（若支持），用 Aegis 或 Microsoft Authenticator 绑定，并保存备用码。
+4. 在自己电脑上安装向日葵或 ToDesk，用自己手机成功连一次，再<strong>退出或加固密码</strong>，熟悉流程但不留安全后门。
+:::

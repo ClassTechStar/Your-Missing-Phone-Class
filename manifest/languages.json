@@ -1,0 +1,406 @@
+{
+  "schema_version": 2,
+  "description": "语言与版本单一数据源（bookkit 读取）。语言元数据在此维护；各版本包含哪些 HTML 由目录扫描发现，避免双重维护。",
+  "default_version": "v1.8",
+  "languages": {
+    "zh-CN": {
+      "name": "简体中文",
+      "html_lang": "zh-CN",
+      "dir": "ltr",
+      "script": "Hans",
+      "priority": 1,
+      "flag": "🇨🇳",
+      "gradient": "from-red-50 to-red-100"
+    },
+    "zh-TW": {
+      "name": "繁體中文",
+      "html_lang": "zh-TW",
+      "dir": "ltr",
+      "script": "Hant",
+      "priority": 2,
+      "flag": "🇭🇰",
+      "gradient": "from-amber-50 to-amber-100"
+    },
+    "yue": {
+      "name": "粵語",
+      "html_lang": "yue",
+      "dir": "ltr",
+      "script": "Hant",
+      "priority": 3,
+      "flag": "🗣️",
+      "gradient": "from-pink-50 to-pink-100"
+    },
+    "en": {
+      "name": "English",
+      "html_lang": "en",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 4,
+      "flag": "🇬🇧",
+      "gradient": "from-blue-50 to-blue-100"
+    },
+    "ko": {
+      "name": "한국어",
+      "html_lang": "ko",
+      "dir": "ltr",
+      "script": "Hang",
+      "priority": 5,
+      "flag": "🇰🇷",
+      "gradient": "from-violet-50 to-violet-100"
+    },
+    "ja": {
+      "name": "日本語",
+      "html_lang": "ja",
+      "dir": "ltr",
+      "script": "Jpan",
+      "priority": 6,
+      "flag": "🇯🇵",
+      "gradient": "from-rose-50 to-rose-100"
+    },
+    "ru": {
+      "name": "Русский",
+      "html_lang": "ru",
+      "dir": "ltr",
+      "script": "Cyrl",
+      "priority": 7,
+      "flag": "🇷🇺",
+      "gradient": "from-sky-50 to-sky-100"
+    },
+    "it": {
+      "name": "Italiano",
+      "html_lang": "it",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 8,
+      "flag": "🇮🇹",
+      "gradient": "from-green-50 to-green-100"
+    },
+    "pt": {
+      "name": "Português",
+      "html_lang": "pt-BR",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 9,
+      "flag": "🇵🇹",
+      "gradient": "from-emerald-50 to-emerald-100"
+    },
+    "es": {
+      "name": "Español",
+      "html_lang": "es",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 10,
+      "flag": "🇪🇸",
+      "gradient": "from-yellow-50 to-yellow-100"
+    },
+    "fr": {
+      "name": "Français",
+      "html_lang": "fr",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 11,
+      "flag": "🇫🇷",
+      "gradient": "from-indigo-50 to-indigo-100"
+    },
+    "de": {
+      "name": "Deutsch",
+      "html_lang": "de",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 12,
+      "flag": "🇩🇪",
+      "gradient": "from-gray-50 to-gray-100"
+    },
+    "ar": {
+      "name": "العربية",
+      "html_lang": "ar",
+      "dir": "rtl",
+      "script": "Arab",
+      "priority": 13,
+      "flag": "🇸🇦",
+      "gradient": "from-lime-50 to-lime-100"
+    },
+    "he": {
+      "name": "עברית",
+      "html_lang": "he",
+      "dir": "rtl",
+      "script": "Hebr",
+      "priority": 14,
+      "flag": "🇮🇱",
+      "gradient": "from-teal-50 to-teal-100"
+    },
+    "th": {
+      "name": "ภาษาไทย",
+      "html_lang": "th",
+      "dir": "ltr",
+      "script": "Thai",
+      "priority": 15,
+      "flag": "🇹🇭",
+      "gradient": "from-fuchsia-50 to-fuchsia-100"
+    },
+    "id": {
+      "name": "Bahasa Indonesia",
+      "html_lang": "id",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 16,
+      "flag": "🇮🇩",
+      "gradient": "from-orange-50 to-orange-100"
+    },
+    "ms": {
+      "name": "Bahasa Melayu",
+      "html_lang": "ms",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 17,
+      "flag": "🇲🇾",
+      "gradient": "from-cyan-50 to-cyan-100"
+    },
+    "el": {
+      "name": "Ελληνικά",
+      "html_lang": "el",
+      "dir": "ltr",
+      "script": "Grek",
+      "priority": 18,
+      "flag": "🇬🇷",
+      "gradient": "from-blue-50 to-indigo-100"
+    },
+    "lzh": {
+      "name": "文言文",
+      "html_lang": "lzh",
+      "dir": "ltr",
+      "script": "Hant",
+      "priority": 19,
+      "flag": "📜",
+      "gradient": "from-stone-50 to-stone-100"
+    },
+    "vi": {
+      "name": "Tiếng Việt",
+      "html_lang": "vi",
+      "dir": "ltr",
+      "script": "Latn",
+      "priority": 20,
+      "flag": "🇻🇳",
+      "gradient": "from-teal-50 to-teal-100"
+    }
+  },
+  "cjk_allowance": {
+    "en": 6,
+    "it": 6,
+    "es": 6
+  },
+  "versions": {
+    "v1.8": {
+      "baseline": "zh-CN",
+      "expect_sections": 84,
+      "source_sync": {
+        "canonical": "v1.8/zh-CN.html",
+        "source": "你缺失的那门手机课V1.8Fixed.html"
+      },
+      "checks": {
+        "structure": "error",
+        "anchors": "error",
+        "toc": "error",
+        "title_version": "error",
+        "lang": "error",
+        "nul": "error",
+        "residual": "error",
+        "coverage": "error",
+        "source_sync": "error",
+        "orphan": "error"
+      }
+    },
+    "v1.7": {
+      "baseline": "zh-CN",
+      "expect_sections": 56,
+      "checks": {
+        "structure": "warn",
+        "anchors": "error",
+        "toc": "warn",
+        "title_version": "error",
+        "lang": "warn",
+        "nul": "error",
+        "residual": "warn",
+        "coverage": "warn",
+        "source_sync": "off",
+        "orphan": "warn"
+      }
+    },
+    "v1.6": {
+      "baseline": "zh-CN",
+      "expect_sections": 38,
+      "checks": {
+        "structure": "error",
+        "anchors": "error",
+        "toc": "warn",
+        "title_version": "error",
+        "lang": "warn",
+        "nul": "error",
+        "residual": "warn",
+        "coverage": "warn",
+        "source_sync": "off",
+        "orphan": "error"
+      }
+    },
+    "v1.5": {
+      "baseline": "zh-CN",
+      "checks": {
+        "structure": "warn",
+        "anchors": "error",
+        "toc": "off",
+        "title_version": "off",
+        "lang": "warn",
+        "nul": "error",
+        "residual": "warn",
+        "coverage": "warn",
+        "source_sync": "off",
+        "orphan": "off"
+      }
+    },
+    "archive": {
+      "checks": {
+        "structure": "off",
+        "anchors": "warn",
+        "toc": "off",
+        "title_version": "off",
+        "lang": "off",
+        "nul": "warn",
+        "residual": "off",
+        "coverage": "off",
+        "source_sync": "off",
+        "orphan": "off"
+      }
+    }
+  },
+  "claims": {
+    "readme": "README.md",
+    "index": "index.html",
+    "forbidden_strings": {
+      "index": [
+        "41 章",
+        "六大篇章 36 章",
+        "最新版本 v1.7",
+        "Yihggh"
+      ]
+    },
+    "index_stats_selector": "text-4xl md:text-5xl font-black"
+  },
+  "cards": {
+    "v1.8": {
+      "badge_classes": "inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-600",
+      "badge_icon": "fas fa-star",
+      "badge_text": "最新版本 v1.8",
+      "card_extra": "border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg",
+      "label_classes": "text-emerald-600",
+      "label_suffix": "最新"
+    },
+    "v1.7": {
+      "badge_classes": "inline-block px-4 py-1.5 bg-amber-50 text-amber-600",
+      "badge_icon": "fas fa-history",
+      "badge_text": "历史版本归档 v1.7",
+      "card_extra": "border border-amber-200 rounded-xl p-5 hover:shadow-lg",
+      "label_classes": "text-amber-600",
+      "label_suffix": ""
+    },
+    "v1.6": {
+      "badge_classes": "inline-block px-4 py-1.5 bg-amber-50 text-amber-600",
+      "badge_icon": "fas fa-history",
+      "badge_text": "历史版本归档 v1.6",
+      "card_extra": "border border-amber-200 rounded-xl p-5 hover:shadow-lg",
+      "label_classes": "text-amber-600",
+      "label_suffix": ""
+    },
+    "v1.5": {
+      "badge_classes": "inline-block px-4 py-1.5 bg-primary/10 text-primary",
+      "badge_icon": "fas fa-globe",
+      "badge_text": "完整多语言版本 v1.5（17 种语言）",
+      "card_extra": "border border-primary-200 rounded-xl p-5 hover:shadow-lg",
+      "label_classes": "text-primary",
+      "label_suffix": ""
+    }
+  },
+  "language_descriptions": {
+    "v1.8": {
+      "zh-CN": "你缺失的那门手机课 V1.8",
+      "zh-TW": "你缺失的那門手機課 V1.8",
+      "yue": "你缺失嘅嗰門手機課 V1.8",
+      "en": "Master Your Phone V1.8",
+      "ko": "스마트폰 정복 V1.8",
+      "ja": "スマホ攻略 V1.8",
+      "ru": "Освой смартфон V1.8",
+      "it": "Corso Digitale V1.8",
+      "pt": "Domine o Celular V1.8",
+      "es": "Domina tu Móvil V1.8",
+      "fr": "Maîtrisez votre Mobile V1.8",
+      "de": "Handy im Griff V1.8",
+      "ar": "إتقان الهاتف V1.8",
+      "he": "שליטה בסמארטפון V1.8",
+      "th": "ครองสมาร์ทโฟน V1.8",
+      "id": "Kuasai Ponselmu V1.8",
+      "ms": "Kuasai Telefon Pintar V1.8",
+      "el": "Κυριαρχήστε το Κινητό V1.8",
+      "lzh": "手機課 V1.8"
+    },
+    "v1.7": {
+      "zh-CN": "你缺失的那门手机课 V1.7",
+      "zh-TW": "你缺失的那門手機課 V1.7",
+      "yue": "你缺失嘅嗰門手機課 V1.7",
+      "ru": "Покоряем смартфон V1.7",
+      "it": "Corso Digitale V1.7",
+      "ko": "스마트폰 정복 V1.7",
+      "pt": "Curso Digital V1.7",
+      "en": "Master Your Phone V1.7",
+      "ja": "スマホマスター V1.7",
+      "es": "Domina tu Móvil V1.7",
+      "fr": "Maîtrisez votre Mobile V1.7",
+      "de": "Smartphone Meistern V1.7",
+      "ar": "إتقان الهاتف V1.7",
+      "he": "שליטה בסמארטפון V1.7",
+      "th": "ครองสมาร์ทโฟน V1.7",
+      "id": "Kuasai Ponselmu V1.7",
+      "ms": "Kuasai Telefon Pintar V1.7",
+      "el": "Κυριαρχήστε το Κινητό V1.7",
+      "lzh": "手機課 V1.7"
+    },
+    "v1.6": {
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文",
+      "yue": "粵語",
+      "en": "English",
+      "ko": "한국어",
+      "ja": "日本語",
+      "ru": "Русский",
+      "it": "Italiano",
+      "pt": "Português",
+      "es": "Español",
+      "fr": "Français",
+      "de": "Deutsch",
+      "ar": "العربية",
+      "he": "עברית",
+      "th": "ภาษาไทย",
+      "id": "Bahasa Indonesia",
+      "ms": "Bahasa Melayu",
+      "el": "Ελληνικά",
+      "lzh": "文言文"
+    },
+    "v1.5": {
+      "zh-CN": "简体中文",
+      "zh-TW": "繁體中文",
+      "yue": "粵語",
+      "en": "English",
+      "ko": "한국어",
+      "ja": "日本語",
+      "ru": "Русский",
+      "it": "Italiano",
+      "pt": "Português",
+      "es": "Español",
+      "fr": "Français",
+      "th": "ภาษาไทย",
+      "vi": "Tiếng Việt",
+      "id": "Bahasa Indonesia",
+      "ms": "Bahasa Melayu",
+      "el": "Ελληνικά",
+      "lzh": "文言文"
+    }
+  }
+}

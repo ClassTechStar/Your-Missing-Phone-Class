@@ -62,10 +62,27 @@
 | `v1.6/` | 历史版本（19 种语言） |
 | `v1.5/` | 完整多语言版本（17 种语言） |
 | `archive/` | 历史版本归档（v1.3 / v1.4） |
-| `source/` | Markdown 和 Word 源文件 |
-| `scripts/` | 工程工具链与一致性检查说明 |
-| `index.html` | 多语言在线阅读入口页 |
+| `source/` | 源稿（单一事实源）：`chapters/` 84 章 Markdown、`parts/` 11 篇导语、`template/` 页面骨架、`book.json` 结构清单、`legacy/` 历史源稿留档 |
+| `manifest/` | `languages.json`：语言元数据、各版本门禁等级、入口页卡片样式 |
+| `bookkit/` | Python 工具链（零依赖）：extract / build / lint / check / index / i18n / release |
+| `scripts/` | 工具链使用说明（见 [scripts/README.md](scripts/README.md)） |
+| `index.html` | 多语言在线阅读入口页（卡片块与统计区由 `bookkit index` 生成） |
 | `你缺失的那门手机课V1.8Fixed.html` | v1.8 简体中文源文件（与 `v1.8/zh-CN.html` 保持一致） |
+
+---
+
+## 工程工具链
+
+```bash
+python -m bookkit lint --all-versions   # v1.5–v1.8 全版本一致性门禁
+python -m bookkit check --claims        # README / index.html 宣称值校验
+python -m bookkit build --verify        # source/ → HTML，与已发布成品逐章比对
+python -m bookkit i18n --report coverage.md
+```
+
+源稿现已是"单一事实源"：`v1.8/zh-CN.html` 的 84 章已反解为 `source/chapters/` 下的 Markdown，
+构建产物与成品在区块 id、侧栏目录（97 锚点）、可见文本（312,756 字）三项上完全等价。
+详见 [scripts/README.md](scripts/README.md)。
 
 ---
 
@@ -102,7 +119,10 @@
 - **v1.7 六种语言缺章**：`it` / `ko` / `pt` / `ru` / `yue` / `zh-TW` 的 v1.7 版本仅含 51 个内容区块（其余语言为 56），缺第 37–41 章；请阅读 [v1.8](v1.8/) 对应语言版获取完整内容。
 - **v1.6 缺章**：`yue` 缺第一章及两个附章，`he` 缺第二十三章。
 - **v1.7/lzh.html 文件损坏**：含 NUL 字节，文言文版请阅读 [v1.8/lzh.html](v1.8/lzh.html) 或 [v1.5/lzh.html](v1.5/lzh.html)。
-- **工具链重建中**：仓库一致性检查目前由 CI 内联脚本承担，原 `scripts/` 工具链正在重建，详见 [scripts/README.md](scripts/README.md)。
+- **工具链已重建**：`bookkit` 取代了被删除的 `scripts/*.py`，CI 由"仅 v1.8 内联脚本"升级为
+  "全版本矩阵 + 宣称值校验 + 构建等价性"，用法见 [scripts/README.md](scripts/README.md)。
+- **构建仅覆盖简体中文源稿**：其余 18 种语言仍以 `v1.8/<语言>.html` 成品为准，由 `bookkit lint` 与
+  `bookkit i18n` 守护一致性；多语言构建（`source/translations/`）为下一步计划。
 
 ---
 
