@@ -56,6 +56,9 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+        .lang-card.recommended {
+            box-shadow: 0 0 0 3px rgba(22, 93, 255, 0.35);
+        }
     </style>
 </head>
 <body class="bg-white text-gray-800">
@@ -70,7 +73,7 @@
                 <a href="#about" class="text-gray-600 hover:text-primary transition-colors">关于本书</a>
                 <a href="#contents" class="text-gray-600 hover:text-primary transition-colors">目录</a>
                 <a href="#languages" class="text-gray-600 hover:text-primary transition-colors">多语言版本</a>
-                <a href="https://github.com/Yihggh/Your-Missing-Phone-Class" target="_blank" class="flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
+                <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" class="flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
@@ -82,7 +85,7 @@
             <a href="#about" class="block py-2 text-gray-600 hover:text-primary">关于本书</a>
             <a href="#contents" class="block py-2 text-gray-600 hover:text-primary">目录</a>
             <a href="#languages" class="block py-2 text-gray-600 hover:text-primary">多语言版本</a>
-            <a href="https://github.com/Yihggh/Your-Missing-Phone-Class" target="_blank" class="block py-2 text-gray-600 hover:text-primary">
+            <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" class="block py-2 text-gray-600 hover:text-primary">
                 <i class="fab fa-github"></i> GitHub
             </a>
         </div>
@@ -127,12 +130,12 @@
                             <div class="w-full h-full bg-gradient-to-b from-blue-600 to-blue-900 flex flex-col items-center justify-center text-white p-6">
                                 <i class="fas fa-mobile-alt text-6xl mb-6 opacity-80"></i>
                                 <div class="text-center">
-                                    <p class="text-lg font-bold mb-1">41 章</p>
-                                    <p class="text-sm opacity-70">系统课程</p>
+                                    <p class="text-lg font-bold mb-1">84 区块</p>
+                                    <p class="text-sm opacity-70">内容总量</p>
                                 </div>
                                 <div class="w-full h-px bg-white/20 my-4"></div>
                                 <div class="text-center">
-                                    <p class="text-lg font-bold mb-1">v1.7</p>
+                                    <p class="text-lg font-bold mb-1">v1.8</p>
                                     <p class="text-sm opacity-70">最新版本</p>
                                 </div>
                                 <div class="w-full h-px bg-white/20 my-4"></div>
@@ -206,16 +209,16 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
                 <div>
-                    <p class="text-4xl md:text-5xl font-black mb-2">41</p>
-                    <p class="text-blue-200 text-sm">章节内容</p>
+                    <p class="text-4xl md:text-5xl font-black mb-2">84</p>
+                    <p class="text-blue-200 text-sm">内容区块</p>
                 </div>
                 <div>
-                    <p class="text-4xl md:text-5xl font-black mb-2">v1.7</p>
+                    <p class="text-4xl md:text-5xl font-black mb-2">v1.8</p>
                     <p class="text-blue-200 text-sm">最新版本</p>
                 </div>
                 <div>
-                    <p class="text-4xl md:text-5xl font-black mb-2">19+</p>
-                    <p class="text-blue-200 text-sm">累计语言版本</p>
+                    <p class="text-4xl md:text-5xl font-black mb-2">19</p>
+                    <p class="text-blue-200 text-sm">语言版本</p>
                 </div>
                 <div>
                     <p class="text-4xl md:text-5xl font-black mb-2">∞</p>
@@ -229,7 +232,7 @@
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">全书目录</h2>
-                <p class="text-gray-500">六大篇章 36 章，从零基础到数字生活达人</p>
+                <p class="text-gray-500">九大篇章 · 第 0–69 章 · 5 篇专题附章 · 8 个附录，从零基础到 App 开发者</p>
             </div>
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
 
@@ -249,7 +252,11 @@
                             <span class="text-gray-700">你好，我的私人电脑</span>
                         </div>
                         <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
-                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.1 附</span>
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.1 附①</span>
+                            <span class="text-gray-700">安卓手机内存拓展解析</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-primary font-bold text-sm mt-0.5 shrink-0">Ch.1 附②</span>
                             <span class="text-gray-700">鸿蒙操作系统专题</span>
                         </div>
                         <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
@@ -434,7 +441,7 @@
                 <div class="bg-white rounded-2xl overflow-hidden shadow-sm fade-in">
                     <div class="bg-gradient-to-r from-cyan-500 to-cyan-600 px-6 py-4">
                         <h3 class="text-white font-bold text-lg flex items-center gap-2">
-                            <i class="fas fa-binoculars"></i> 第六部分：展望篇（第 33-41 章）
+                            <i class="fas fa-binoculars"></i> 第六部分：展望篇（第 33-36 章）
                         </h3>
                     </div>
                     <div class="p-6 space-y-1">
@@ -454,25 +461,167 @@
                             <span class="text-cyan-500 font-bold text-sm mt-0.5 shrink-0">Ch.36</span>
                             <span class="text-gray-700">手机与智能家居——让家变聪明</span>
                         </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm fade-in">
+                    <div class="bg-gradient-to-r from-indigo-500 to-indigo-600 px-6 py-4">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fas fa-robot"></i> 第七部分：AI 编程实战篇（第 37-47 章）
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-1">
                         <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
-                            <span class="text-cyan-500 font-bold text-sm mt-0.5 shrink-0">Ch.37</span>
-                            <span class="text-gray-700">手机与可穿戴设备——手腕上的协同</span>
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.37</span>
+                            <span class="text-gray-700">范式革命——从"写代码"到"指挥AI写代码"</span>
                         </div>
                         <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
-                            <span class="text-cyan-500 font-bold text-sm mt-0.5 shrink-0">Ch.38</span>
-                            <span class="text-gray-700">旅行与手机——eSIM、流量与离线地图</span>
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.38</span>
+                            <span class="text-gray-700">AI 编程五大思维原则</span>
                         </div>
                         <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
-                            <span class="text-cyan-500 font-bold text-sm mt-0.5 shrink-0">Ch.39</span>
-                            <span class="text-gray-700">手机与健康管理——把数字变成行动</span>
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.39</span>
+                            <span class="text-gray-700">上下文工程——让 AI 理解你的意图</span>
                         </div>
                         <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
-                            <span class="text-cyan-500 font-bold text-sm mt-0.5 shrink-0">Ch.40</span>
-                            <span class="text-gray-700">AI 短视频创作——从一句话到一条片</span>
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.40</span>
+                            <span class="text-gray-700">需求工程——把想法变成 AI 可执行的指令</span>
                         </div>
                         <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
-                            <span class="text-cyan-500 font-bold text-sm mt-0.5 shrink-0">Ch.41</span>
-                            <span class="text-gray-700">竖屏短剧入门——3 分钟一个钩子</span>
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.41</span>
+                            <span class="text-gray-700">2026 年 AI 编程工具全景</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.42</span>
+                            <span class="text-gray-700">大模型全景与 API 实战</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.43</span>
+                            <span class="text-gray-700">对话工程——与 AI 高效协作的对话技术</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.44</span>
+                            <span class="text-gray-700">从 0 到 1 实战——完整项目全流程</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.45</span>
+                            <span class="text-gray-700">质量保障——让 AI 写的代码可靠</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.46</span>
+                            <span class="text-gray-700">进阶之路——从使用者到架构师</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-indigo-500 font-bold text-sm mt-0.5 shrink-0">Ch.47</span>
+                            <span class="text-gray-700">速查手册与资源</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm fade-in">
+                    <div class="bg-gradient-to-r from-teal-500 to-teal-600 px-6 py-4">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fab fa-android"></i> 第八部分：安卓开发实战篇（第 48-58 章）
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-1">
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.48</span>
+                            <span class="text-gray-700">认识安卓——从操作系统到开发生态</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.49</span>
+                            <span class="text-gray-700">搭建开发环境——Android Studio 与第一个项目</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.50</span>
+                            <span class="text-gray-700">Kotlin 快速上手——安卓开发的第一语言</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.51</span>
+                            <span class="text-gray-700">界面开发——Jetpack Compose 入门</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.52</span>
+                            <span class="text-gray-700">四大组件与 Activity 生命周期</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.53</span>
+                            <span class="text-gray-700">数据存储与网络请求</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.54</span>
+                            <span class="text-gray-700">项目一——我的记账本（本地版）</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.55</span>
+                            <span class="text-gray-700">项目二——天气查询 App（网络版）</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.56</span>
+                            <span class="text-gray-700">打磨与发布——上架 Google Play</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.57</span>
+                            <span class="text-gray-700">进阶之路——权限、通知与现代架构</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-teal-600 font-bold text-sm mt-0.5 shrink-0">Ch.58</span>
+                            <span class="text-gray-700">速查手册与资源</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl overflow-hidden shadow-sm fade-in">
+                    <div class="bg-gradient-to-r from-amber-500 to-amber-600 px-6 py-4">
+                        <h3 class="text-white font-bold text-lg flex items-center gap-2">
+                            <i class="fab fa-apple"></i> 第九部分：iOS 开发实战篇（第 59-69 章）
+                        </h3>
+                    </div>
+                    <div class="p-6 space-y-1">
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.59</span>
+                            <span class="text-gray-700">认识 iOS——苹果生态与开发生态</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.60</span>
+                            <span class="text-gray-700">搭建开发环境——Xcode 与第一个项目</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.61</span>
+                            <span class="text-gray-700">Swift 快速上手——苹果开发的第一语言</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.62</span>
+                            <span class="text-gray-700">界面开发——SwiftUI 入门</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.63</span>
+                            <span class="text-gray-700">视图、状态与导航</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.64</span>
+                            <span class="text-gray-700">数据存储与网络请求</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.65</span>
+                            <span class="text-gray-700">项目一——我的记账本（本地版）</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.66</span>
+                            <span class="text-gray-700">项目二——天气查询 App（网络版）</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.67</span>
+                            <span class="text-gray-700">打磨与发布——上架 App Store</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.68</span>
+                            <span class="text-gray-700">进阶之路——权限、通知与现代架构</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-amber-600 font-bold text-sm mt-0.5 shrink-0">Ch.69</span>
+                            <span class="text-gray-700">速查手册与资源</span>
                         </div>
                     </div>
                 </div>
@@ -509,6 +658,10 @@
                             <span class="text-gray-700">折叠屏选购与使用专题</span>
                         </div>
                         <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
+                            <span class="text-stone-500 font-bold text-sm mt-0.5 shrink-0">结语</span>
+                            <span class="text-gray-700">保持好奇，保持清醒</span>
+                        </div>
+                        <div class="toc-item flex items-start gap-3 px-3 py-2 rounded-lg">
                             <span class="text-stone-500 font-bold text-sm mt-0.5 shrink-0">附 G</span>
                             <span class="text-gray-700">全书速查索引</span>
                         </div>
@@ -530,219 +683,451 @@
                 <p class="text-gray-500">让全世界的人都能读懂这门课</p>
             </div>
 
-                        <!-- AUTOGEN:languages-v1.7 START - 由 scripts/generate_index.py 生成，勿手改 -->
+            <div id="lang-recommend" class="hidden max-w-3xl mx-auto mb-10 rounded-2xl border border-primary/20 bg-primary/5 px-6 py-5 text-center">
+                <p class="text-sm text-gray-700">
+                    <i class="fas fa-language text-primary mr-1"></i>
+                    检测到你的浏览器语言为 <strong id="lang-recommend-name" class="text-primary">简体中文</strong>，已为你标记推荐版本。
+                </p>
+                <a id="lang-recommend-link" href="#" class="mt-3 inline-flex items-center gap-2 px-5 py-2 bg-primary text-white rounded-lg hover:bg-primary-dark transition-colors text-sm font-medium">
+                    <i class="fas fa-book-open"></i> 直接阅读该语言版
+                </a>
+            </div>
+
+            <!-- AUTOGEN:languages-v1.8 START - 由 scripts/generate_index.py 生成，勿手改 -->
             <div class="mb-12 fade-in">
                 <div class="text-center mb-8">
                     <span class="inline-block px-4 py-1.5 bg-emerald-500/10 text-emerald-600 rounded-full text-sm font-semibold">
-                        <i class="fas fa-star mr-1"></i>最新版本 v1.7
+                        <i class="fas fa-star mr-1"></i>最新版本 v1.8
                     </span>
                 </div>
                 <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
 
-                <a href="v1.7/zh-CN.html" class="lang-card block bg-gradient-to-br from-red-50 to-red-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.8/zh-CN.html" class="lang-card block bg-gradient-to-br from-red-50 to-red-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇨🇳</span>
                         <div>
                             <h4 class="font-bold text-dark">简体中文</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">你缺失的那门手机课 V1.8</p>
+                </a>
+
+                <a href="v1.8/zh-TW.html" class="lang-card block bg-gradient-to-br from-amber-50 to-amber-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇭🇰</span>
+                        <div>
+                            <h4 class="font-bold text-dark">繁體中文</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">你缺失的那門手機課 V1.8</p>
+                </a>
+
+                <a href="v1.8/yue.html" class="lang-card block bg-gradient-to-br from-pink-50 to-pink-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🗣️</span>
+                        <div>
+                            <h4 class="font-bold text-dark">粵語</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">你缺失嘅嗰門手機課 V1.8</p>
+                </a>
+
+                <a href="v1.8/en.html" class="lang-card block bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇬🇧</span>
+                        <div>
+                            <h4 class="font-bold text-dark">English</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Master Your Phone V1.8</p>
+                </a>
+
+                <a href="v1.8/ko.html" class="lang-card block bg-gradient-to-br from-violet-50 to-violet-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇰🇷</span>
+                        <div>
+                            <h4 class="font-bold text-dark">한국어</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">스마트폰 정복 V1.8</p>
+                </a>
+
+                <a href="v1.8/ja.html" class="lang-card block bg-gradient-to-br from-rose-50 to-rose-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇯🇵</span>
+                        <div>
+                            <h4 class="font-bold text-dark">日本語</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">スマホ攻略 V1.8</p>
+                </a>
+
+                <a href="v1.8/ru.html" class="lang-card block bg-gradient-to-br from-sky-50 to-sky-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇷🇺</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Русский</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Освой смартфон V1.8</p>
+                </a>
+
+                <a href="v1.8/it.html" class="lang-card block bg-gradient-to-br from-green-50 to-green-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇮🇹</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Italiano</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Corso Digitale V1.8</p>
+                </a>
+
+                <a href="v1.8/pt.html" class="lang-card block bg-gradient-to-br from-emerald-50 to-emerald-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇵🇹</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Português</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Domine o Celular V1.8</p>
+                </a>
+
+                <a href="v1.8/es.html" class="lang-card block bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇪🇸</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Español</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Domina tu Móvil V1.8</p>
+                </a>
+
+                <a href="v1.8/fr.html" class="lang-card block bg-gradient-to-br from-indigo-50 to-indigo-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇫🇷</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Français</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Maîtrisez votre Mobile V1.8</p>
+                </a>
+
+                <a href="v1.8/de.html" class="lang-card block bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇩🇪</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Deutsch</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Handy im Griff V1.8</p>
+                </a>
+
+                <a href="v1.8/ar.html" class="lang-card block bg-gradient-to-br from-lime-50 to-lime-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇸🇦</span>
+                        <div>
+                            <h4 class="font-bold text-dark">العربية</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">إتقان الهاتف V1.8</p>
+                </a>
+
+                <a href="v1.8/he.html" class="lang-card block bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇮🇱</span>
+                        <div>
+                            <h4 class="font-bold text-dark">עברית</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">שליטה בסמארטפון V1.8</p>
+                </a>
+
+                <a href="v1.8/th.html" class="lang-card block bg-gradient-to-br from-fuchsia-50 to-fuchsia-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇹🇭</span>
+                        <div>
+                            <h4 class="font-bold text-dark">ภาษาไทย</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">ครองสมาร์ทโฟน V1.8</p>
+                </a>
+
+                <a href="v1.8/id.html" class="lang-card block bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇮🇩</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Bahasa Indonesia</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Kuasai Ponselmu V1.8</p>
+                </a>
+
+                <a href="v1.8/ms.html" class="lang-card block bg-gradient-to-br from-cyan-50 to-cyan-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇲🇾</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Bahasa Melayu</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Kuasai Telefon Pintar V1.8</p>
+                </a>
+
+                <a href="v1.8/el.html" class="lang-card block bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇬🇷</span>
+                        <div>
+                            <h4 class="font-bold text-dark">Ελληνικά</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">Κυριαρχήστε το Κινητό V1.8</p>
+                </a>
+
+                <a href="v1.8/lzh.html" class="lang-card block bg-gradient-to-br from-stone-50 to-stone-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">📜</span>
+                        <div>
+                            <h4 class="font-bold text-dark">文言文</h4>
+                            <p class="text-xs text-emerald-600 font-semibold">v1.8 最新</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600">手機課 V1.8</p>
+                </a>
+
+                </div>
+            </div>
+            <!-- AUTOGEN:languages-v1.8 END -->
+
+            <!-- AUTOGEN:languages-v1.7 START - 由 scripts/generate_index.py 生成，勿手改 -->
+            <div class="mb-12 fade-in">
+                <div class="text-center mb-8">
+                    <span class="inline-block px-4 py-1.5 bg-amber-50 text-amber-600 rounded-full text-sm font-semibold">
+                        <i class="fas fa-history mr-1"></i>历史版本归档 v1.7
+                    </span>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+
+                <a href="v1.7/zh-CN.html" class="lang-card block bg-gradient-to-br from-red-50 to-red-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
+                    <div class="flex items-center gap-3 mb-2">
+                        <span class="text-3xl">🇨🇳</span>
+                        <div>
+                            <h4 class="font-bold text-dark">简体中文</h4>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">你缺失的那门手机课 V1.7</p>
                 </a>
 
-                <a href="v1.7/zh-TW.html" class="lang-card block bg-gradient-to-br from-amber-50 to-amber-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/zh-TW.html" class="lang-card block bg-gradient-to-br from-amber-50 to-amber-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇭🇰</span>
                         <div>
                             <h4 class="font-bold text-dark">繁體中文</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">你缺失的那門手機課 V1.7</p>
                 </a>
 
-                <a href="v1.7/yue.html" class="lang-card block bg-gradient-to-br from-pink-50 to-pink-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/yue.html" class="lang-card block bg-gradient-to-br from-pink-50 to-pink-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🗣️</span>
                         <div>
                             <h4 class="font-bold text-dark">粵語</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">你缺失嘅嗰門手機課 V1.7</p>
                 </a>
 
-                <a href="v1.7/ru.html" class="lang-card block bg-gradient-to-br from-sky-50 to-sky-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/ru.html" class="lang-card block bg-gradient-to-br from-sky-50 to-sky-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇷🇺</span>
                         <div>
                             <h4 class="font-bold text-dark">Русский</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Покоряем смартфон V1.7</p>
                 </a>
 
-                <a href="v1.7/it.html" class="lang-card block bg-gradient-to-br from-green-50 to-green-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/it.html" class="lang-card block bg-gradient-to-br from-green-50 to-green-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇮🇹</span>
                         <div>
                             <h4 class="font-bold text-dark">Italiano</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Corso Digitale V1.7</p>
                 </a>
 
-                <a href="v1.7/ko.html" class="lang-card block bg-gradient-to-br from-violet-50 to-violet-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/ko.html" class="lang-card block bg-gradient-to-br from-violet-50 to-violet-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇰🇷</span>
                         <div>
                             <h4 class="font-bold text-dark">한국어</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">스마트폰 정복 V1.7</p>
                 </a>
 
-                <a href="v1.7/pt.html" class="lang-card block bg-gradient-to-br from-emerald-50 to-emerald-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/pt.html" class="lang-card block bg-gradient-to-br from-emerald-50 to-emerald-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇵🇹</span>
                         <div>
                             <h4 class="font-bold text-dark">Português</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Curso Digital V1.7</p>
                 </a>
 
-                <a href="v1.7/en.html" class="lang-card block bg-gradient-to-br from-blue-50 to-blue-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/en.html" class="lang-card block bg-gradient-to-br from-blue-50 to-blue-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇬🇧</span>
                         <div>
                             <h4 class="font-bold text-dark">English</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Master Your Phone V1.7</p>
                 </a>
 
-                <a href="v1.7/ja.html" class="lang-card block bg-gradient-to-br from-rose-50 to-rose-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/ja.html" class="lang-card block bg-gradient-to-br from-rose-50 to-rose-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇯🇵</span>
                         <div>
                             <h4 class="font-bold text-dark">日本語</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">スマホマスター V1.7</p>
                 </a>
 
-                <a href="v1.7/es.html" class="lang-card block bg-gradient-to-br from-yellow-50 to-yellow-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/es.html" class="lang-card block bg-gradient-to-br from-yellow-50 to-yellow-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇪🇸</span>
                         <div>
                             <h4 class="font-bold text-dark">Español</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Domina tu Móvil V1.7</p>
                 </a>
 
-                <a href="v1.7/fr.html" class="lang-card block bg-gradient-to-br from-indigo-50 to-indigo-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/fr.html" class="lang-card block bg-gradient-to-br from-indigo-50 to-indigo-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇫🇷</span>
                         <div>
                             <h4 class="font-bold text-dark">Français</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Maîtrisez votre Mobile V1.7</p>
                 </a>
 
-                <a href="v1.7/de.html" class="lang-card block bg-gradient-to-br from-gray-50 to-gray-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/de.html" class="lang-card block bg-gradient-to-br from-gray-50 to-gray-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇩🇪</span>
                         <div>
                             <h4 class="font-bold text-dark">Deutsch</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Smartphone Meistern V1.7</p>
                 </a>
 
-                <a href="v1.7/ar.html" class="lang-card block bg-gradient-to-br from-lime-50 to-lime-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/ar.html" class="lang-card block bg-gradient-to-br from-lime-50 to-lime-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇸🇦</span>
                         <div>
                             <h4 class="font-bold text-dark">العربية</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">إتقان الهاتف V1.7</p>
                 </a>
 
-                <a href="v1.7/he.html" class="lang-card block bg-gradient-to-br from-teal-50 to-teal-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/he.html" class="lang-card block bg-gradient-to-br from-teal-50 to-teal-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇮🇱</span>
                         <div>
                             <h4 class="font-bold text-dark">עברית</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">שליטה בסמארטפון V1.7</p>
                 </a>
 
-                <a href="v1.7/th.html" class="lang-card block bg-gradient-to-br from-fuchsia-50 to-fuchsia-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/th.html" class="lang-card block bg-gradient-to-br from-fuchsia-50 to-fuchsia-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇹🇭</span>
                         <div>
                             <h4 class="font-bold text-dark">ภาษาไทย</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">ครองสมาร์ทโฟน V1.7</p>
                 </a>
 
-                <a href="v1.7/id.html" class="lang-card block bg-gradient-to-br from-orange-50 to-orange-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/id.html" class="lang-card block bg-gradient-to-br from-orange-50 to-orange-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇮🇩</span>
                         <div>
                             <h4 class="font-bold text-dark">Bahasa Indonesia</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Kuasai Ponselmu V1.7</p>
                 </a>
 
-                <a href="v1.7/ms.html" class="lang-card block bg-gradient-to-br from-cyan-50 to-cyan-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/ms.html" class="lang-card block bg-gradient-to-br from-cyan-50 to-cyan-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇲🇾</span>
                         <div>
                             <h4 class="font-bold text-dark">Bahasa Melayu</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Kuasai Telefon Pintar V1.7</p>
                 </a>
 
-                <a href="v1.7/el.html" class="lang-card block bg-gradient-to-br from-blue-50 to-indigo-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/el.html" class="lang-card block bg-gradient-to-br from-blue-50 to-indigo-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">🇬🇷</span>
                         <div>
                             <h4 class="font-bold text-dark">Ελληνικά</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">Κυριαρχήστε το Κινητό V1.7</p>
                 </a>
 
-                <a href="v1.7/lzh.html" class="lang-card block bg-gradient-to-br from-stone-50 to-stone-100 border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="v1.7/lzh.html" class="lang-card block bg-gradient-to-br from-stone-50 to-stone-100 border border-amber-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
                         <span class="text-3xl">📜</span>
                         <div>
                             <h4 class="font-bold text-dark">文言文</h4>
-                            <p class="text-xs text-emerald-600 font-semibold">v1.7 最新</p>
+                            <p class="text-xs text-amber-600 font-semibold">v1.7</p>
                         </div>
                     </div>
                     <p class="text-sm text-gray-600">手機課 V1.7</p>
@@ -1424,15 +1809,15 @@
                     <p class="text-sm text-gray-600">C版1.4</p>
                 </a>
 
-                <a href="archive/v1.4/legacy/he_スマホマスター.html" class="lang-card block bg-gradient-to-br from-pink-50 to-pink-100 border border-pink-300 rounded-xl p-5 hover:shadow-lg">
+                <a href="archive/v1.4/legacy/he_スマホマスター.html" class="lang-card block bg-gradient-to-br from-teal-50 to-teal-100 border border-teal-200 rounded-xl p-5 hover:shadow-lg">
                     <div class="flex items-center gap-3 mb-2">
-                        <span class="text-3xl">🇯🇵</span>
+                        <span class="text-3xl">🇮🇱</span>
                         <div>
-                            <h4 class="font-bold text-dark">日本語</h4>
-                            <p class="text-xs text-accent font-semibold">v1.4 HE</p>
+                            <h4 class="font-bold text-dark">עברית</h4>
+                            <p class="text-xs text-gray-500">Hebrew</p>
                         </div>
                     </div>
-                    <p class="text-sm text-gray-600">スマホマスター HE</p>
+                    <p class="text-sm text-gray-600">שליטה בסמארטפון</p>
                 </a>
 
                 <a href="archive/v1.4/ko.html" class="lang-card block bg-gradient-to-br from-violet-50 to-violet-100 border border-violet-300 rounded-xl p-5 hover:shadow-lg">
@@ -1540,10 +1925,10 @@
                             本项目完全开源，采用 <strong>知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</strong>（CC BY-NC-SA 4.0）进行许可。欢迎贡献、翻译和分享！
                         </p>
                         <div class="flex flex-wrap gap-3">
-                            <a href="https://github.com/Yihggh/Your-Missing-Phone-Class" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
+                            <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-gray-900 text-white rounded-lg hover:bg-gray-800 transition-colors text-sm font-medium">
                                 <i class="fab fa-github"></i> 查看源码
                             </a>
-                            <a href="https://github.com/Yihggh/Your-Missing-Phone-Class/issues" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
+                            <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/issues" target="_blank" class="inline-flex items-center gap-2 px-5 py-2.5 bg-white text-gray-700 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors text-sm font-medium">
                                 <i class="fas fa-comment"></i> 反馈问题
                             </a>
                         </div>
@@ -1567,12 +1952,12 @@
                     <span class="font-bold text-lg">你缺失的那门手机课</span>
                 </div>
                 <div class="flex items-center gap-6 text-sm text-gray-400">
-                    <a href="https://github.com/Yihggh/Your-Missing-Phone-Class" target="_blank" class="hover:text-white transition-colors">
+                    <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" class="hover:text-white transition-colors">
                         <i class="fab fa-github text-lg"></i>
                     </a>
                     <span>CC BY-NC-SA 4.0</span>
                     <span>·</span>
-                    <span>Yihggh</span>
+                    <span>ClassTechStar</span>
                 </div>
             </div>
             <div class="mt-8 pt-6 border-t border-gray-800 text-center text-sm text-gray-500">
@@ -1613,6 +1998,46 @@
                 navbar.classList.remove('shadow-md');
             }
         });
+
+        /* 检测浏览器语言，标记并推荐对应的 v1.8 版本 */
+        (function() {
+            var CODE_MAP = {
+                'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN', 'zh': 'zh-CN',
+                'zh-tw': 'zh-TW', 'zh-hant': 'zh-TW', 'zh-hk': 'yue',
+                'en': 'en', 'ko': 'ko', 'ja': 'ja', 'ru': 'ru', 'it': 'it',
+                'pt': 'pt', 'pt-br': 'pt', 'es': 'es', 'fr': 'fr', 'de': 'de',
+                'ar': 'ar', 'he': 'he', 'th': 'th', 'id': 'id', 'ms': 'ms', 'el': 'el'
+            };
+            var NAME_MAP = {
+                'zh-CN': '简体中文', 'zh-TW': '繁體中文', 'yue': '粵語', 'en': 'English',
+                'ko': '한국어', 'ja': '日本語', 'ru': 'Русский', 'it': 'Italiano',
+                'pt': 'Português', 'es': 'Español', 'fr': 'Français', 'de': 'Deutsch',
+                'ar': 'العربية', 'he': 'עברית', 'th': 'ภาษาไทย', 'id': 'Bahasa Indonesia',
+                'ms': 'Bahasa Melayu', 'el': 'Ελληνικά'
+            };
+            function resolve(tag) {
+                var t = String(tag || '').toLowerCase();
+                if (CODE_MAP[t]) return CODE_MAP[t];
+                return CODE_MAP[t.split('-')[0]] || null;
+            }
+            var candidates = (navigator.languages && navigator.languages.length)
+                ? navigator.languages : [navigator.language];
+            var code = null;
+            for (var i = 0; i < candidates.length && !code; i++) {
+                code = resolve(candidates[i]);
+            }
+            if (!code) return;
+            var card = document.querySelector('a[href="v1.8/' + code + '.html"]');
+            if (!card) return;
+            card.classList.add('recommended');
+            var box = document.getElementById('lang-recommend');
+            var link = document.getElementById('lang-recommend-link');
+            var nameEl = document.getElementById('lang-recommend-name');
+            if (!box || !link || !nameEl) return;
+            nameEl.textContent = NAME_MAP[code] || code;
+            link.setAttribute('href', 'v1.8/' + code + '.html');
+            box.classList.remove('hidden');
+        })();
     </script>
 
 </body>

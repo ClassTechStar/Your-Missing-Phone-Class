@@ -1,55 +1,78 @@
 # 工程化脚本
 
-本目录提供仓库一致性维护工具链。所有脚本仅依赖 Python 3 标准库，无需安装依赖。
+> **当前状态：本目录暂为空文档位。** 历史上的一致性工具链已于提交 `7f58c0c`（Remove i18n build tooling）移除；本文件描述仓库当前真实的校验方式与覆盖盲区，以及工具链的重建计划。详见根目录 `README.md` 的「已知问题」。
 
-## 脚本一览
+## 一、当前一致性保障
 
-| 脚本 | 作用 | 用法 |
-|------|------|------|
-| `check_consistency.py` | 校验章节/附录计数、index.html 宣传数据、侧边栏断链、manifest 文件存在性、多语言缺口 | `python3 scripts/check_consistency.py` |
-| `generate_index.py` | 从 `languages.json` 渲染 index.html 中标记为 `AUTOGEN:languages-{版本}` 的多语言卡片块 | `python3 scripts/generate_index.py`（写入）/ `--check`（仅校验同步） |
-| `rename_to_langcode.py` | 一次性迁移脚本：将历史混乱文件名统一为 `{语言代码}.html` 并同步引用 | `--apply` 执行 / 默认 dry-run |
-| `languages.json` | 多语言清单（语言元数据 + 各版本文件映射 + 卡片样式 + 翻译优先级） | 数据文件，被上述脚本读取 |
+`.github/workflows/ci.yml` 内联了一段 Python 校验（提交 `0869a74` 起，替代已删除的 `scripts/check_consistency.py`），在每次 push / PR 时对 **v1.8 目录** 执行以下检查：
 
-## 标准工作流
+| 检查项 | 判定 |
+|--------|------|
+| 内容区块计数 | 19 个文件各有 84 个 `class="mb-10 content-section"` 区块 |
+| 目录锚点对齐 | 各语言侧边栏目录锚点序列与 `v1.8/zh-CN.html` 完全一致 |
+| 语言标记 | `<html lang>` 与语言代码匹配（`pt` 例外为 `pt-BR`）；`ar` / `he` 必须有 `dir="rtl"`，其余不得有 |
+| 文件完整性 | 无 NUL 字节、以 `</html>` 结尾、`index.html` 存在于仓库根 |
+| 残留字符 | 非中文版本无残留汉字（`en` / `it` / `es` 允许 ≤ 6 个）；繁体目标无残留简体 |
+| 源文件一致 | `v1.8/zh-CN.html` 与根目录 `你缺失的那门手机课V1.8Fixed.html` 归一换行后 SHA-256 一致 |
 
-### 新增一种语言翻译
+任一检查失败即阻断合并。
 
-1. 把翻译好的 HTML 放到对应版本目录，命名为 `{语言代码}.html`（如 `v1.7/en.html`）。
-2. 编辑 `scripts/languages.json`，在 `versions[版本]` 中添加 `"语言代码": "文件名"`。
-3. （可选）在 `language_descriptions[版本]` 补充卡片底部描述文本。
-4. 运行 `python3 scripts/generate_index.py` 重新生成入口页卡片。
-5. 运行 `python3 scripts/check_consistency.py` 确认全绿。
+## 二、已知覆盖盲区
 
-### 发布新版本
+当前 CI **只守护 v1.8**，以下缺陷不会被发现（详见根目录「已知问题」）：
 
-1. 新建 `{版本}/` 目录，放入各语言 HTML（命名 `{语言代码}.html`）。
-2. 在 `languages.json` 的 `versions` 和 `version_meta` 中添加该版本条目。
-3. 在 `index.html` 中为该版本添加 `AUTOGEN:languages-{版本} START/END` 标记对。
-4. 运行 `generate_index.py` 和 `check_consistency.py`。
-5. 更新 `README.md` 的版本链接。
+- 历史版本（v1.5 / v1.6 / v1.7 与 `archive/`）的结构、锚点、`lang`、NUL 均未校验；
+- 各文件 `<title>` 中的版本串未与目录名比对；
+- 正文互链（附录 G 速查索引等）的 `href="#id"` 未做双向闭合校验（仅校验侧边栏目录）；
+- 跨语言的区块数缺口（如某语言少若干章）未比对；
+- `README.md` / `index.html` 中宣称的数字（章数、区块数、语言数）未与真实内容比对。
 
-### 修改章节/附录结构
+## 三、本地自检（当前可用）
 
-1. 编辑对应版本 HTML（新增/删除 `content-section` 块、侧边栏条目、附录G速查索引）。
-2. 同步更新 `index.html` 的目录区（contents section）。
-3. 运行 `check_consistency.py`——它会自动校验章节数、附录数、断链。
-
-## CI 自动检查
-
-`.github/workflows/ci.yml` 会在每次 push/PR 时自动运行：
-- `check_consistency.py`：确保章节计数、附录、断链、manifest 文件存在性正确。
-- `generate_index.py --check`：确保 index.html 的多语言卡片块与 manifest 同步（防止手改后漂移）。
-
-任一检查失败会阻断合并。本地提交前建议先跑一遍：
+由于 `scripts/` 暂无脚本，可复用 CI 的等价判断自行校验。示例（Python 3 标准库，零依赖）：
 
 ```bash
-python3 scripts/check_consistency.py && python3 scripts/generate_index.py --check
+# 统计某版本某语言的内容区块数
+python3 - <<'EOF'
+import re
+from pathlib import Path
+for f in sorted(Path('v1.8').glob('*.html')):
+    raw = f.read_text(encoding='utf-8')
+    n = len(re.findall(r'id="[\w-]+" class="mb-10 content-section"', raw))
+    print(f.name, n)
+EOF
+
+# 检查页内锚点是否双向闭合（排除 JS 模板串）
+python3 - <<'EOF'
+import re
+from pathlib import Path
+for f in sorted(Path('v1.8').glob('*.html')):
+    raw = f.read_text(encoding='utf-8')
+    ids = set(re.findall(r'id="([\w-]+)"', raw))
+    bad = sorted({a for a in re.findall(r'href="#([\w-]+)"', raw) if a not in ids})
+    if bad:
+        print(f.name, bad)
+EOF
 ```
 
-## 设计原则
+## 四、重建计划（工具链 `bookkit`）
+
+原设计（单一数据源 `languages.json` + 生成器渲染 `AUTOGEN` 卡片块 + 检查脚本无副作用）方向正确，将按下述目标重建，并恢复本目录文档：
+
+| 模块 | 职责 |
+|------|------|
+| `manifest/languages.json` | 语言元数据 + 各版本文件映射 + 卡片样式 + 翻译优先级（单一数据源） |
+| `bookkit lint` | 全版本结构 / 锚点 / 版本串 / `lang` / 残留字 / NUL 校验 |
+| `bookkit check` | README 与 index.html 宣称值 ↔ 真实内容比对 |
+| `bookkit build` | Markdown 源 → 单文件 HTML（目录、速查索引、版本徽章注入） |
+| `bookkit i18n` | 翻译覆盖率报告（缺失章节 id） |
+| `bookkit release` | 发布清单与 APK 矩阵 |
+
+重建后，CI 将由「仅 v1.8 内联脚本」升级为「全版本矩阵门禁 + 宣称值校验」，覆盖上述全部盲区。
+
+## 五、设计原则（延续）
 
 - **单一数据源**：语言清单只在 `languages.json` 维护，入口页卡片由生成器渲染，避免多处手写漂移。
-- **标记隔离**：`AUTOGEN` 标记之间的内容是机器生成的，标记以外的 HTML（hero、stats、目录、归档区）保持手写自由度。
+- **标记隔离**：`AUTOGEN` 标记之间的内容是机器生成的；标记以外的 HTML（hero、stats、目录、归档区）保持手写自由度。
 - **幂等**：生成器重复运行结果一致；检查脚本无副作用。
 - **零依赖**：仅用 Python 标准库，CI 环境开箱即用。
