@@ -93,7 +93,7 @@ def build_parser() -> argparse.ArgumentParser:
     ex.add_argument("--out", type=Path, default=None, help="源稿根目录（默认 source/）")
     ex.add_argument("--dry-run", action="store_true", help="只解析不写盘")
 
-    i18 = common(sub.add_parser("i18n", help="翻译覆盖率报告"))
+    i18 = common(sub.add_parser("i18n", help="翻译覆盖率报告"), fail_default="never")
     i18.add_argument("--report", type=Path, default=None, help="报告输出路径（Markdown）")
 
     rl = common(sub.add_parser("release", help="生成发布清单与校验和"))
