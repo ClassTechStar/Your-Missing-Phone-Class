@@ -14,3 +14,14 @@ coverage.md
 Thumbs.db
 .idea/
 .vscode/
+
+# LaTeX 构建中间产物（main.tex 与 chapters/ 是源稿，需入库）
+latex/*.aux
+latex/*.log
+latex/*.toc
+latex/*.out
+latex/*.lof
+latex/*.lot
+latex/*.pdf
+latex/*.txt
+latex/smoke*

@@ -96,6 +96,12 @@ def build_parser() -> argparse.ArgumentParser:
     i18 = common(sub.add_parser("i18n", help="翻译覆盖率报告"), fail_default="never")
     i18.add_argument("--report", type=Path, default=None, help="报告输出路径（Markdown）")
 
+    tx = common(sub.add_parser("latex", help="生成 LaTeX 书稿（HTML → LaTeX，供 XeLaTeX 编译）"))
+    tx.add_argument("--lang", default="zh-CN", help="源语言（默认 zh-CN）")
+    tx.add_argument("--tex-version", dest="tex_version", default=None,
+                    help="源版本（默认 manifest 的最新版本）")
+    tx.add_argument("--out", type=Path, default=None, help="输出目录（默认 latex/）")
+
     rl = common(sub.add_parser("release", help="生成发布清单与校验和"))
     rl.add_argument("--release-version", dest="rel_version", default=None,
                     help="发布版本（默认 manifest 的最新版本）")
@@ -189,6 +195,19 @@ def main(argv=None) -> int:
         issues = I.issues(mf)
         if issues:
             print(f"-- 缺章告警：{len(issues)} 条（详见报告）")
+
+    elif args.cmd == "latex":
+        from .latex import build as latex_build
+        out = args.out or (mf.root / 'latex')
+        version = args.tex_version or mf.latest_version()
+        result = latex_build(mf.root, out, args.lang, version)
+        if args.json:
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+        else:
+            print(f"latex {version}/{args.lang}: {result['chapters']} 章，"
+                  f"{len(result['figures'])} 张图 → {result['out']}")
+            print("  编译：cd latex && xelatex main.tex（需跑两遍以生成目录）")
+        return 0
 
     elif args.cmd == "release":
         from .release import build_release

@@ -1,0 +1,129 @@
+\bookchapter{第五十二章：四大组件与 Activity 生命周期}
+
+\chapterintro{如果说 Compose 是 App 的“脸”，那这一章讲的就是 App 的“骨架”。安卓系统有四大基本组件，所有 App 都是由它们拼成的；而其中最重要的 Activity，有一张每个安卓开发者都必须刻在脑子里的“生命周期图”。本章学完，你就能理解“为什么切个后台回来，我的 App 状态就没了”这类千古之谜。}
+
+\booksection{一、四大组件：安卓的“四梁八柱”}
+
+安卓官方定义了四种基本组件，分别负责一类工作：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{组件} & \textbf{职责} & \textbf{打个比方} \tabularnewline
+\hline
+Activity & 一个可见的界面 & 店铺的门面——用户能看见、能交互 \tabularnewline
+Service & 后台干活的"隐形人" & 仓库工人——放音乐、下载文件，不需要界面 \tabularnewline
+BroadcastReceiver & 接收系统广播 & 传达室——"电池没电了""网络断了"的喇叭 \tabularnewline
+ContentProvider & 跨 App 共享数据 & 公共资料柜——比如把联系人共享给别的 App \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}安卓四大组件速览\end{center}
+
+新手阶段你 95\% 的时间都在跟\textbf{Activity}打交道；Service 和 BroadcastReceiver 做音乐播放、消息推送时会用到；ContentProvider 用得最少（系统已把常用数据封好了）。另外注意：四大组件都要在\textbf{AndroidManifest.xml}里“登记户口”，不登记系统就找不到它们。
+
+\booksection{二、Activity 生命周期：安卓开发的第一张“藏宝图”}
+
+手机上的 App 随时可能被打断：来电话了、用户切去回微信、系统内存不够把你杀了……Activity 的一生，就是在这张图上循环旅行：
+
+onCreate（出生：初始化）
+
+onStart（可见了）
+
+onResume（前台交互中）
+
+onPause（部分被遮住）
+
+onStop（完全看不见）
+
+onDestroy（销毁）
+
+onRestart / onStart / onResume：回到前台时原路返回
+
+\begin{center}\small\color{gray}图 4：Activity 生命周期（前进方向：上排出生 下排离场，回来时原路折返）\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{回调} & \textbf{什么时候触发} & \textbf{典型用途} \tabularnewline
+\hline
+onCreate & Activity 创建时（一次） & 加载界面、初始化数据 \tabularnewline
+onStart & 界面变为可见 & 开始一些轻量逻辑 \tabularnewline
+onResume & 拿到焦点、可交互 & 开始动画、恢复播放 \tabularnewline
+onPause & 被部分遮挡/切走瞬间 & 暂停动画、保存草稿 \tabularnewline
+onStop & 完全不可见 & 释放重资源、暂停下载 \tabularnewline
+onDestroy & 被销毁前 & 最后的清理 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}六个生命周期回调的典型用途\end{center}
+
+\textbf{避坑提醒：屏幕旋转会“杀死”Activity}\par
+
+新手最经典的翻车现场：App 转一下屏幕，输入框里的字全没了。原因：旋转屏幕默认会销毁并重建 Activity（走一遍 onDestroy onCreate）。解法：用\texttt{rememberSaveable}保存状态（Compose 里替代 remember），它会在重建时自动把值找回来。第 6、7 章会反复用到。
+
+\booksection{三、Intent：App 里外通行的“车票”}
+
+Intent（意图）是组件之间通信的“车票”。你想从一个页面跳到另一个页面，或者打开浏览器、调起相机，都要“买票上车”：
+
+\begin{lstlisting}[language=Kotlin]
+// 方式一：显式 Intent——明确指定去哪个页面
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", "张三")     // 车上捎带"行李"（数据）
+startActivity(intent)
+
+// 方式二：隐式 Intent——只说要干什么，系统找谁干
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // 系统会打开浏览器/或让你选
+\end{lstlisting}
+
+两种方式各有用途：\textbf{显式}用于自己 App 内部的页面跳转；\textbf{隐式}用于调用系统或其他 App 的能力（开网页、打电话、分享）。Compose 项目里，在 Composable 中用\texttt{LocalContext.current}拿到 Context 就能\texttt{startActivity}。
+
+\booksection{四、多页面与导航}
+
+真实 App 都有多个页面。Compose 官方推荐的导航方案是\textbf{Navigation Compose}（依赖库 androidx.navigation）：
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "未知")
+    }
+}
+
+// 在页面里跳转：
+navController.navigate("detail/张三")     // 带参数
+navController.popBackStack()              // 返回上一页
+\end{lstlisting}
+
+\begin{tcbinfo}{小贴士：页面多了怎么办？}
+项目长大后，把所有页面路由集中写在一个文件里（比如\texttt{AppNavGraph.kt}），统一管理，别让“跳转到哪”的逻辑散落在各个页面。这是从“能跑”走向“可维护”的第一步。
+
+\end{tcbinfo}
+
+\booksection{五、顺带认识：Fragment 是什么（以及为什么本书没教）}
+
+查老教程时你一定会撞见\textbf{Fragment}——它是 Activity 里的“可复用界面片段”，在老式多页面架构里是绝对主角。但 Compose 时代，页面直接用 Composable 函数 + Navigation 路由就够了，官方也已弱化 Fragment 的地位。本书因此没把它放进主线。
+
+给你的建议：\textbf{新项目不主动用 Fragment}；但读老代码、面试被问到时，知道它是“Activity 里嵌的界面片段”即可。学习资源永远优先选 2023 年以后的——安卓技术栈的“老黄历”更新得比想象中快。
+
+\begin{tcbpractice}{来动手：给计数器装上"记忆"}
+把第 51 章的计数器改造一下：(1) 把 remember 换成 rememberSaveable，旋转屏幕验证数字还在；(2) 加一个“关于”按钮，用 Navigation 跳到第二个页面显示版本号；(3) 在两个页面的 onCreate/onPause 里打印日志（Log.d），用 Logcat 观察生命周期调用顺序。做完这三步，生命周期就不再是纸上谈兵。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item 四大组件：Activity（门面）、Service（后台）、BroadcastReceiver（喇叭）、ContentProvider（资料柜）
+  \item 生命周期六回调：onCreate onStart onResume onPause onStop onDestroy
+  \item 旋转屏幕会销毁重建 Activity：用 rememberSaveable 保住状态
+  \item Intent 是"车票"：显式跳自家页面，隐式调系统能力
+  \item 多页面用 Navigation Compose：NavHost + composable 路由
+\end{itemize}
+
+\end{tcbsummary}

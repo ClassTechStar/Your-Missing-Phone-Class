@@ -1,0 +1,196 @@
+\bookchapter{第五十四章：项目一——我的记账本（本地版）}
+
+\chapterintro{欢迎来到你的第一个“正经项目”。这个记账本虽然不联网，但五脏俱全：能记一笔账、能看流水、能按月统计、能删改。做完它，你就完整走了一遍“数据 逻辑 界面”的全流程。别急着抄代码——\textbf{先想清楚再动手}，这是咱们一贯的原则。}
+
+\booksection{一、需求思考：先问五个问题}
+
+动手之前，用“需求五要素”把想法捋清楚：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{要素} & \textbf{答案} \tabularnewline
+\hline
+Who（给谁用） & 自己用，家人朋友也行 \tabularnewline
+What（做什么） & 记收支、看流水、按月汇总、按分类统计 \tabularnewline
+Why（为什么） & 练手 + 搞清楚钱花哪儿了 \tabularnewline
+How（怎么做） & Kotlin + Compose + Room + MVVM，纯本地无后端 \tabularnewline
+Constraint（约束） & 一周内完成；最低支持 Android 8；不上架也先按上架标准写 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}记账本需求五要素\end{center}
+
+然后拆解成“每一步都能用”的小步骤：(1) 建 Room 数据层（能存一笔账）；(2) 列表页（能看流水）；(3) 录入页（能加账）；(4) 删除与编辑；(5) 月度汇总卡片。每完成一步，App 都是一个“能用的东西”。
+
+\booksection{二、数据层：让“账”有个家}
+
+先定义一笔账长什么样——字段要够用但别贪多：
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" 收入 | "expense" 支出
+    val amount: Double,      // 金额（元）
+    val category: String,    // 分类：餐饮、交通、工资……
+    val note: String = "",   // 备注（可选）
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Dao 里加两条“统计用”的查询——这是记账本的灵魂：
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month 形如 "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{小贴士：金额为什么用 Double？}
+严谨的金融 App 会用 BigDecimal 或“以分为单位的 Int”来避免浮点误差（0.1+0.2$\neq$0.3 的老问题）。练手项目用 Double 足够；如果哪天做真金融产品，记得换成“分”为单位——这是无数前辈踩出来的坑。
+
+\end{tcbinfo}
+
+\booksection{三、MVVM：界面与逻辑“分家”}
+
+直接让界面操作数据库？能跑，但界面代码会又臭又长。MVVM 架构让各司其职：\textbf{View（界面）只管画，ViewModel（逻辑中枢）管数据，Model（Room）管存储}。
+
+View（Compose 界面）
+
+ViewModel（状态与逻辑）
+
+Model（Room 数据层）
+
+\begin{center}\small\color{gray}图 5：MVVM 三层结构——数据单向流动，各层互不越界\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // 把 Flow 转成界面能观察的状态
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // 用户操作：调用 suspend 函数
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+界面（Compose）里这样用：\texttt{val vm: RecordViewModel = viewModel()}，然后\texttt{val list by vm.records.collectAsState()}——数据一变，列表自动刷新，你什么都不用做。这就是 MVVM + Flow + Compose 三剑合璧的威力。
+
+\booksection{四、界面：列表页 + 录入页}
+
+列表页用\textbf{LazyColumn}（懒加载列表）——数据再多也不卡：
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // 顶部汇总卡片（收入-支出=结余）
+        SummaryCard(records)
+
+        // 流水列表
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // 悬浮"记一笔"按钮  弹录入对话框
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+录入用\textbf{AlertDialog}（对话框）最省事：几个输入框 + 收入/支出切换 + 分类下拉，点确定就调\texttt{vm.addRecord(...)}。
+
+\begin{tcbwarn}{注意：输入校验别偷懒}
+金额输入框一定要校验：空值、负数、“abc”这类非法输入都要拦住（用\texttt{toDoubleOrNull()}判断）。App 崩掉最常见的原因之一就是“把用户的输入当成了乖孩子”。记住：\textbf{用户输入的一切，都要当敌人审查}。
+
+\end{tcbwarn}
+
+\booksection{五、编辑与删除：让数据“能进能出”}
+
+只会加不会删的记账本，用三天就废了。补两个操作：
+
+\begin{lstlisting}[language=Kotlin]
+// Dao 里补两条：
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// 界面上：长按列表项弹"编辑/删除"菜单（Compose 用 DropdownMenu 或 AlertDialog）
+// 删除前最好弹确认框——"误删"是记账类 App 用户最痛恨的事
+\end{lstlisting}
+
+交互细节两条经验：\textbf{删除必须二次确认}（防止手滑），编辑尽量\textbf{预填原值}（改一个字比重新输入省事）。别小看这两个细节——产品感就是这些细节堆出来的。
+
+\booksection{六、验收：三层检查 + 两个进阶挑战}
+
+\booksection{五、验收：三层检查 + 两个进阶挑战}
+
+项目做完，按“功能 边界 架构”三层验收：能不能记、能不能删、重开 App 数据还在不在（功能）；金额输 0 或负数会不会崩、转屏会不会丢数据（边界）；界面和数据有没有混在一起、字段有没有硬编码（架构）。
+
+基础版验收通过后，给自己加两道“进阶菜”：
+
+\begin{enumerate}
+  \item \textbf{月度筛选}：顶部加月份切换（比如 2026-08 v），列表只显示当月流水；
+  \item \textbf{分类饼图}：用 Compose 的 Canvas 或引入轻量图表库，把"钱花哪儿了"画成饼图——做完这个，记账本就有点"产品样"了。
+\end{enumerate}
+
+\begin{tcbpractice}{来动手：本周完成它}
+按“数据层 ViewModel 列表页 录入页 汇总卡片”的顺序动手，每天一步。卡住了就把报错原样丢给搜索引擎或 AI（还记得第七篇《AI编程实战篇》吗？描述问题时说清“期望行为、实际行为、复现步骤”）。完成后用它记一周账——自己做的 App 用起来，成就感会推着你继续往前走。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item 需求五要素 拆成"每步能用"的小步骤，再动手
+  \item 数据层：Record 实体 + Dao（含月份统计 SQL）+ Database
+  \item MVVM 分工：View 只管画，ViewModel 管逻辑，Model 管存储
+  \item Flow + stateIn + collectAsState：数据一变界面自动刷新
+  \item LazyColumn 懒加载列表；AlertDialog 做录入
+  \item 三层验收（功能/边界/架构）+ 进阶挑战（月度筛选、分类饼图）
+\end{itemize}
+
+\end{tcbsummary}

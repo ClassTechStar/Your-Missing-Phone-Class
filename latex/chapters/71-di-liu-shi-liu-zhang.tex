@@ -1,0 +1,157 @@
+\bookchapter{第六十六章：项目二——天气查询 App（网络版）}
+
+\chapterintro{记账本是“练内功”，天气 App 是“见世面”——它要和互联网打交道。这个项目你会学到：申请免费 API、解析 JSON、处理“加载中/成功/失败”三种界面状态，以及怎么把 API 密钥藏好。做完它，你就具备了做任何“联网 App”的能力——新闻、汇率、翻译，套路一模一样。}
+
+\booksection{一、申请免费天气 API}
+
+个人练手，推荐\textbf{OpenWeatherMap}或国内的\textbf{和风天气（QWeather）}——都有免费额度，注册即用。以 OpenWeatherMap 为例：
+
+\begin{enumerate}
+  \item 注册账号 在 API keys 页面生成一个 Key（\texttt{apikey}）；
+  \item 免费版可调用 Current Weather 接口：\texttt{api.openweathermap.org/data/2.5/weather?q=beijing\&appid=你的Key\&units=metric}；
+  \item 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的"预习"。
+\end{enumerate}
+
+\textbf{避坑提醒：密钥绝不能写死在代码里}\par
+
+API Key 相当于你的“钱包密码”，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。iOS 的正确做法：放进\texttt{Config.xcconfig}（配置文件，已被 gitignore 忽略），通过 Info.plist 读入代码。搜索“iOS xcconfig 管理密钥”照着改即可。
+
+\booksection{二、网络层：URLSession + Codable}
+
+先照 API 返回的 JSON 定义模型，再写服务：
+
+\begin{lstlisting}[language=Swift]
+// JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
+struct WeatherResponse: Codable {
+    let weather: [Weather]
+    let main: Main
+    let name: String
+}
+struct Weather: Codable { let description: String }
+struct Main: Codable { let temp: Double; let humidity: Int }
+
+struct WeatherService {
+    let key: String   // 从 xcconfig 读入
+
+    func fetchWeather(city: String) async throws -> WeatherResponse {
+        var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
+        comps.queryItems = [
+            URLQueryItem(name: "q", value: city),
+            URLQueryItem(name: "appid", value: key),
+            URLQueryItem(name: "units", value: "metric"),
+            URLQueryItem(name: "lang", value: "zh_cn")
+        ]
+        let (data, _) = try await URLSession.shared.data(from: comps.url!)
+        return try JSONDecoder().decode(WeatherResponse.self, from: data)
+    }
+}
+\end{lstlisting}
+
+\booksection{三、三种界面状态：加载中 / 成功 / 失败}
+
+联网 App 的灵魂在于“状态管理”。网络慢、断网、城市名打错……每种情况界面都要给用户交代。用\textbf{枚举 + switch}优雅地表示：
+
+\begin{lstlisting}[language=Swift]
+enum LoadState {
+    case loading                  // 转圈中
+    case success(WeatherResponse) // 成功
+    case error(String)            // 失败
+}
+
+@Observable
+class WeatherViewModel {
+    var state: LoadState = .loading
+    private let service = WeatherService(key: Config.apiKey)
+
+    func search(city: String) async {
+        state = .loading
+        do {
+            let data = try await service.fetchWeather(city: city)
+            state = .success(data)
+        } catch {
+            state = .error("查不到这个城市，换个名字试试？")
+        }
+    }
+}
+
+// 界面里：
+switch vm.state {
+case .loading: ProgressView("加载中…")
+case .success(let d): WeatherContent(data: d)
+case .error(let msg): Text(msg).foregroundColor(.secondary)
+}
+\end{lstlisting}
+
+这个\texttt{loading/success/error}三段式是联网界面的“万金油模板”，先背下来，以后所有联网 App 照葫芦画瓢。
+
+\booksection{四、实战界面代码：把天气画出来}
+
+\begin{lstlisting}[language=Swift]
+struct WeatherContent: View {
+    let data: WeatherResponse
+
+    var body: some View {
+        VStack(spacing: 12) {
+            Text(data.name)
+                .font(.title.bold())
+            Text("\(Int(data.main.temp))°C")
+                .font(.system(size: 76, weight: .thin))
+            Text(data.weather.first?.description ?? "未知")
+                .font(.title3)
+                .foregroundColor(.secondary)
+            HStack(spacing: 24) {
+                Label("湿度 \(data.main.humidity)%", systemImage: "humidity")
+                Label("体感 \(Int(data.main.temp))°C", systemImage: "thermometer")
+            }
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+几个小细节值得学：\texttt{first?}安全取第一个元素（列表可能为空），\texttt{?? “未知”}给兜底文案；76 号细字重的温度数字是天气类 App 的经典配方；\texttt{Label}是“图标+文字”的官方组件，比手拼 HStack 更规范。
+
+\booksection{五、交互细节与收藏城市}
+
+\begin{itemize}
+  \item \textbf{搜索框}：顶部\texttt{.searchable}修饰符，系统自带搜索交互，提交时调\texttt{vm.search}；
+  \item \textbf{收藏城市}：把常看的城市存进 UserDefaults，下次打开自动查；
+  \item \textbf{下拉刷新}：\texttt{.refreshable \{ await vm.search(...) \}}一行搞定；
+  \item \textbf{天气图标}：用\texttt{Image(systemName:)}按描述映射（sun.max / cloud.rain / snowflake），界面立刻活起来。
+\end{itemize}
+
+\begin{tcbinfo}{小贴士：中文城市的"梗"}
+OpenWeatherMap 对中文城市名支持一般，搜“北京”可能无结果而 “beijing” 正常。产品化做法是内置一份“城市名 英文/坐标”映射表，或接国内天气服务。练手阶段先支持拼音/英文城市名即可，别和它较劲。
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{来动手：天气 App 验收清单}
+\booksection{六、网络请求怎么调试：打印、抓包与模拟慢网}
+
+联网 App 出问题，十有八九在“请求没发对”或“响应没解析对”。三个调试手段：
+
+\begin{enumerate}
+  \item \textbf{打印原始数据}：把\texttt{String(data: data, encoding: .utf8)}打印出来看原始 JSON——字段名、类型一目了然，比猜快十倍；
+  \item \textbf{抓包工具}：Mac 上免费的 Proxyman / 开源 Charles 能截获 App 的全部请求和响应，像 X 光一样看清网络层；
+  \item \textbf{模拟弱网}：模拟器菜单 Features Network Link Conditioner（需从开发者网站下载工具），能模拟 3G、高延迟——测出"转圈半天"的体验问题。
+\end{enumerate}
+
+\begin{tcbinfo}{小贴士：请求没过 ATS？}
+如果请求一发出就报 “App Transport Security” 错误，八成是用了 http:// 明文地址。正式接口必须 HTTPS；本地调试临时开例外（Info.plist 加 NSAllowsLocalNetworking），上架前记得清干净。
+
+\end{tcbinfo}
+
+(1) 正常搜索出天气；(2) 断开网络，App 优雅报错不崩溃（模拟器里关掉 Mac 的网络测！）；(3) 输一个不存在的城市，提示友好；(4) 收藏两个城市，重启 App 还在；(5) 深色模式下界面不刺眼。五条全过，这个项目才算毕业。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item 先浏览器试 API、看懂 JSON，再写代码——"预习"永远不亏
+  \item API Key 藏进 xcconfig，绝不进代码库
+  \item Codable 模型 + URLSession async/await：字段对上，JSON 自动解析
+  \item loading/success/error 三段式状态是联网界面万金油
+  \item 断网、空输入、城市不存在——错误处理是联网 App 的及格线
+\end{itemize}
+
+\end{tcbsummary}

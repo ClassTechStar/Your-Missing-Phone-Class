@@ -1,0 +1,115 @@
+\booksection{第二十章附：Termux——Android设备上的便携式Linux终端环境}
+
+\chapterintro{如果你觉得开发者模式还不够“硬核”，想要在手机上体验完整的Linux命令行，那么Termux正是为你准备的。它无需root权限，就能把一台普通的安卓手机变成一台便携的Linux工作站，是进阶用户探索移动端开发与运维的利器。}
+
+\booksubsection{一、什么是Termux}
+
+Termux是一款专为Android设备设计的开源终端模拟器和Linux环境应用程序，它无需root权限即可在手机上提供完整的Linux shell体验。作为一个轻量级应用（安装包仅30MB左右），Termux通过APT包管理系统支持丰富的软件生态，允许用户在移动设备上运行Python、Node.js、Git、SSH等工具，甚至搭建服务器或进行渗透测试。
+
+Termux的核心优势在于轻量化和高度可扩展性，适合开发、学习及系统管理等多种场景。它将标准的软件包与精确的终端仿真结合在一个开源解决方案中。
+
+\booksubsection{二、核心功能与特性}
+
+\subsubsection*{完整的Linux环境}
+
+Termux\textbf{仅内置Bash}这一种Shell。如果想使用Zsh或fish等其他Shell，需要通过包管理器手动安装，例如：\texttt{pkg install zsh}或\texttt{pkg install fish}。同时Termux支持Vim、Nano、Emacs等编辑器，提供接近原生的命令行体验。用户可以通过“pkg install”安装2000+软件包，包括GCC、OpenSSH、SQLMap等开发和安全工具。
+
+\subsubsection*{强大的包管理}
+
+使用APT包管理器（类似Debian和Ubuntu），可安装数千种Linux软件包，涵盖开发工具、网络工具等。支持Python、Ruby、Node.js、Go、Rust、Swift等多种编程语言环境。
+
+\subsubsection*{安全与网络功能}
+
+\begin{itemize}
+  \item \textbf{SSH远程连接}：支持SSH客户端和服务器功能，可远程连接其他设备或让手机成为SSH主机。
+  \item \textbf{加密工具}：提供OpenSSL等加密工具，支持数据加密和安全通信。
+  \item \textbf{服务器搭建}：可配置Nginx或Apache搭建静态网页服务器。
+\end{itemize}
+
+\subsubsection*{系统集成与扩展}
+
+\begin{itemize}
+  \item 访问手机存储权限，实现本地文件管理。
+  \item 通过Termux:API插件调用传感器、摄像头等Android硬件功能。
+  \item 支持蓝牙键盘和外部显示器连接，具有完整的鼠标支持。
+\end{itemize}
+
+\booksubsection{三、插件生态系统}
+
+Termux的核心应用程序可以通过几个可选的插件应用进行扩展，提供额外的功能和集成：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{插件名称} & \textbf{功能描述} \tabularnewline
+\hline
+Termux:API & 向命令行程序公开Android API功能 \tabularnewline
+Termux:Boot & 允许在设备启动时运行脚本 \tabularnewline
+Termux:Float & 提供浮动终端窗口 \tabularnewline
+Termux:Styling & 为终端启用颜色方案和字体自定义 \tabularnewline
+Termux:Tasker & 将Termux脚本与Tasker自动化应用集成 \tabularnewline
+Termux:Widget & 允许从主屏幕小部件运行脚本 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{重要提示}
+Termux及其插件必须从同一来源安装，因为它们共享相同的sharedUserId。混合来自不同来源（如F-Droid和GitHub）的安装将导致安装错误。
+
+\end{tcbwarn}
+
+\booksubsection{四、安装与配置指南}
+
+\subsubsection*{安装步骤}
+
+\begin{enumerate}
+  \item \textbf{下载应用}：从官方渠道（F-Droid或GitHub）下载安装Termux，无需root权限。
+  \item \textbf{初始化系统}：首次启动后等待"Installing bootstrap packages"完成。
+  \item \textbf{获取存储权限}：执行\texttt{termux-setup-storage}获取手机文件系统权限。
+  \item \textbf{更新软件源}：执行\texttt{pkg update \&\& pkg upgrade}更新软件包列表。
+\end{enumerate}
+
+\subsubsection*{基础优化}
+
+\begin{itemize}
+  \item \textbf{换镜像源}：使用\texttt{termux-change-repo}命令通过图形界面更换镜像源（推荐清华大学镜像源）。
+  \item \textbf{快捷键设置}：音量减键模拟Ctrl，音量加键模拟Esc，提升输入效率。
+  \item \textbf{界面美化}：安装Zsh + Oh My Zsh，配置主题和插件。
+\end{itemize}
+
+\booksubsection{五、典型应用场景}
+
+\subsubsection*{移动开发测试}
+
+在手机上搭建完整的开发环境，编写并运行Python脚本，使用GCC编译C程序，通过Git管理代码仓库，结合SSH与远程服务器同步。
+
+\subsubsection*{服务器运维}
+
+通过SSH远程管理服务器，执行系统维护、日志分析等任务，随时随地处理服务器问题。
+
+\subsubsection*{学习Linux操作}
+
+提供真实的Linux环境，是学习命令行和系统管理的理想平台，可练习Shell脚本编写、Linux文件权限管理（如\texttt{chmod 755}设置 rwxr-xr-x 权限位、\texttt{chown user:group}修改文件归属、\texttt{ls -l}查看 owner/group/other 三组九位权限）等基础命令。注意这是Unix/Linux经典的“三组九位”权限模型（owner / group / other × 读 / 写 / 执行），与Windows NTFS的ACL访问控制列表是完全不同的两套体系。
+
+\subsubsection*{网络安全测试}
+
+安装Nmap、SQLMap、Hydra、Metasploit等安全工具，进行网络扫描和渗透测试。
+
+\booksubsection{六、版本与兼容性}
+
+Termux的最新稳定版本是v0.118.2，适用于Android $\geq$ 7的设备。需要注意的是，Termux在Android 12及更高版本上可能存在不稳定性，建议关注官方更新日志以获取最新兼容性信息。
+
+\begin{tcbinfo}{总结}
+Termux将强大的Linux终端体验带到了Android设备上，让手机成为一台便携的开发和学习工具。无论是开发者、系统管理员还是技术爱好者，都可以利用Termux在移动设备上享受完整的命令行体验，实现“口袋里的Linux”这一理念。
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{来动手：在手机上跑通第一条Linux命令}
+\begin{enumerate}
+  \item 从F-Droid下载并安装Termux，首次启动等待初始化完成。
+  \item 执行\texttt{pkg update \&\& pkg upgrade}更新软件包。
+  \item 安装Python：\texttt{pkg install python}。
+  \item 输入\texttt{python3 -c "print('Hello from Termux!')"}，感受在手机上运行代码的乐趣。
+\end{enumerate}
+
+\end{tcbpractice}

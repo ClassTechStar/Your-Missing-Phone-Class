@@ -1,0 +1,367 @@
+\bookchapter{第一章：你好，我的私人电脑}
+
+\chapterintro{你的手机，其实是你口袋里最私人的超级计算机。它比当年把人类送上月球的计算机强大无数倍，却安静地躺在你的掌心。今天，咱们就来好好认识这位“沉默的巨人”。}
+
+\booksection{一、手机硬件“五脏六腑”：深度解析}
+
+手机虽小，五脏俱全。让我们像解剖课一样，逐个认识这些精密的组件。
+
+\booksubsection{SoC（系统级芯片）：手机的“大脑+心脏”}
+
+SoC全称System on Chip，翻译过来就是“把整个系统塞进一块芯片”。它不只是CPU（中央处理器），而是把CPU、GPU（图形处理器）、NPU（神经网络处理器）、ISP（图像信号处理器）、基带（负责通信）等等全部集成在一起。
+
+这就像把一个城市的政府大楼、发电厂、通信中心、警察局全部建在一栋楼里，效率极高。
+
+\booksubsection{CPU：通用计算的核心}
+
+CPU是SoC中最核心的组件，负责处理绝大多数计算任务。手机CPU采用ARM架构，与电脑的x86架构不同，ARM架构以精简指令集（RISC）为特色，功耗更低，更适合移动设备。
+
+\textbf{CPU大小核设计}：现代手机CPU普遍采用“大小核”架构（ARM的big.LITTLE技术），将核心分为不同性能等级：
+
+\begin{itemize}
+  \item \textbf{超大核/大核}：性能最强，负责重度任务。如游戏加载、应用启动、复杂计算。频率最高（3GHz+），但功耗也最大。
+  \item \textbf{中核}：性能与功耗平衡，处理日常中等负载任务。刷微博、看视频、多任务切换主要靠它。
+  \item \textbf{小核/能效核}：功耗最低，处理轻量级后台任务。待机、听音乐、接收消息等，几乎不费电。
+\end{itemize}
+
+三个等级的核心协同工作：系统调度器根据任务负载自动分配——轻量任务交给小核省电，重活交给大核猛干，干完再切回小核。这就是为什么手机既能流畅打游戏，又能待机一整天。
+
+\textbf{各品牌架构特点}：
+
+\begin{itemize}
+  \item \textbf{高通骁龙8 Elite}：采用Oryon自研CPU架构（源自Nuvia收购），2个超级核（4.32GHz）+ 6个性能核（3.53GHz），全部基于台积电第二代3nm制程。彻底告别ARM公版架构，单核和多核性能均实现跨越式提升。GPU为Adreno 830，采用切片架构，图形性能提升40\%，Hexagon NPU算力约45 TOPS，AI推理性能提升45\%。（注：三星Galaxy定制版频率更高，超级核可达4.47GHz。）
+  \item \textbf{联发科天玑9400}：1个超大核（Cortex-X925，3.62GHz）+ 3个性能核（Cortex-X4，3.3GHz）+ 4个能效核（Cortex-A720，2.4GHz），全大核架构延续，台积电第二代3nm制程。GPU为Immortalis-G925（12核），峰值性能提升41\%，光线追踪性能提升40\%。AI处理器为第八代NPU 890，支持端侧大模型运行、端侧LoRA训练和端侧视频生成。
+  \item \textbf{苹果A18 Pro}：2个性能核（约4.04GHz）+ 4个能效核（约2.4GHz），台积电第二代3nm制程。6核GPU支持硬件级光线追踪，16核NPU（约35 TOPS）为端侧AI和Apple Intelligence提供强大算力。苹果自研架构在单核性能和能效比上依然领先，统一内存架构为AI推理提供高带宽优势。
+  \item \textbf{华为麒麟9020}：搭载于Mate 70系列，采用自研泰山CPU架构，NPU和ISP能力持续增强，支持5.5G和卫星通信，代表国产芯片的最新突破。
+\end{itemize}
+
+\booksubsection{GPU：图形渲染引擎}
+
+GPU（Graphics Processing Unit）专门负责图形和并行计算任务。它的核心数量远多于CPU（动辄数百上千个核心），但每个核心的功能相对简单，适合同时处理大量相似的计算。
+
+\textbf{图形渲染流程}：
+
+\begin{enumerate}
+  \item \textbf{顶点处理}：计算3D模型中每个顶点的位置坐标。
+  \item \textbf{光栅化}：将3D图形转换为2D屏幕上的像素点。
+  \item \textbf{像素着色}：为每个像素计算颜色、纹理、光照效果。
+  \item \textbf{输出合成}：将所有图层合成最终画面，送到屏幕显示。
+\end{enumerate}
+
+\textbf{GPU对日常使用的影响}：不只是游戏！界面滑动、动画效果、视频播放、照片滤镜、AR应用都依赖GPU。GPU性能弱的手机，滑动界面可能掉帧，游戏更是直接卡顿。
+
+\textbf{各品牌GPU}：高通使用自研Adreno GPU；联发科使用ARM Mali GPU；苹果使用自研GPU，性能和能效都是行业标杆。
+
+\booksubsection{NPU：AI加速引擎}
+
+NPU（Neural Processing Unit）是专门为神经网络运算设计的处理器。相比CPU和GPU，NPU在处理AI任务时效率更高、功耗更低。
+
+\textbf{神经网络运算方式}：NPU的核心运算是矩阵乘法和卷积运算——这正是神经网络中最基础、最频繁的计算。NPU通过硬件级优化，可以并行处理大量矩阵运算，速度比CPU快几十倍，功耗却低得多。
+
+\textbf{AI处理流程}：
+
+\begin{enumerate}
+  \item \textbf{数据输入}：摄像头图像、麦克风音频、传感器数据等。
+  \item \textbf{预处理}：调整数据格式和尺寸，适配神经网络输入要求。
+  \item \textbf{推理计算}：NPU加载训练好的模型，对输入数据进行前向计算，输出结果。
+  \item \textbf{后处理}：将AI输出转换为可用的结果，如人脸坐标、文字内容、场景标签。
+\end{enumerate}
+
+\textbf{实际应用场景}：
+
+\begin{itemize}
+  \item \textbf{计算摄影}：夜景合成、人像虚化、HDR处理、AI美颜。
+  \item \textbf{语音助手}：语音识别、自然语言理解、语音合成。
+  \item \textbf{实时翻译}：AI字幕、对话翻译。
+  \item \textbf{智能识别}：文字识别（OCR）、物体识别、场景识别。
+  \item \textbf{端侧大模型}：最新旗舰芯片已支持在手机端运行小型AI大模型（7B参数级别），实现离线AI对话、文档摘要、智能写作等功能。骁龙8 Elite的Hexagon NPU算力约45 TOPS，天玑9400的NPU 890同样支持端侧大模型（LLM推理速度提升80\%），苹果A18 Pro的16核NPU提供约35 TOPS算力。
+  \item \textbf{AI图像处理}：AI消除（一键去除照片中的路人）、AI扩图（扩展图片边界）、AI风格转换、文字生成图片等。
+\end{itemize}
+
+\booksubsection{ISP：影像信号处理器}
+
+ISP处理摄像头传来的原始数据，把光线信号变成好看的照片。
+
+\textbf{性能怎么看？}看型号！苹果A18 Pro、高通骁龙8 Elite、联发科天玑9400、华为麒麟9020都是旗舰级别。中端看骁龙8s Gen3/7+ Gen3、天玑8400。别只看核心数，架构和制程（纳米数）更重要。3nm制程是目前最先进的，能效比远优于5nm和4nm。
+
+\booksubsection{运存（RAM）：临时工作台}
+
+运存就像你的办公桌，越大，能同时摊开的文件就越多。12GB是现在的主流，16GB适合重度用户，24GB以上则是游戏玩家和极客的选择。
+
+运存类型也很重要：LPDDR5比LPDDR4X更快更省电。苹果虽然运存不大，但系统优化好，所以看起来“够用”。
+
+\textbf{运存不够会怎样？}App会被系统杀掉后台，切换时需要重新加载。这就是为什么有时候切个微信回来，游戏就没了。
+
+\booksubsection{存储（ROM/闪存）：长期仓库}
+
+存储就像你的书柜，装所有照片、视频、App的地方。现在主流是UFS 3.1或UFS 4.0，速度比老式的eMMC快好几倍。
+
+\textbf{为什么存储速度重要？}它决定了App打开速度、游戏加载速度、照片保存速度。用久了之后，慢速存储会让手机越来越卡。
+
+\booksubsection{屏幕：你的眼睛}
+
+屏幕是你和手机交互的主要窗口，好坏直接影响体验。
+
+\begin{itemize}
+  \item \textbf{材质}：OLED色彩艳丽、对比度高、更省电（显示黑色时像素不发光），但低亮度下可能有频闪伤眼；LCD更护眼、成本低，但对比度和色彩不如OLED。
+  \item \textbf{分辨率}：1080P是主流，2K更清晰但更耗电。苹果的"视网膜屏"概念就是：在一定距离下，人眼分辨不出像素点。
+  \item \textbf{刷新率}：60Hz是标准，90Hz/120Hz更流畅，滑动时丝般顺滑。高刷新率会耗电，所以很多手机支持自适应刷新率（LTPO），根据内容动态调整。
+  \item \textbf{触控采样率}：影响触控响应速度，游戏玩家要关注，越高越跟手。
+  \item \textbf{调光方式}：DC调光比PWM调光更护眼，低亮度下不容易眼睛累。现在很多手机支持高频PWM调光，也是为了护眼。
+\end{itemize}
+
+\booksubsection{屏幕HDR技术}
+
+HDR（High Dynamic Range）让屏幕同时展现更亮的亮部和更暗的暗部，画面层次感大幅提升。
+
+\begin{itemize}
+  \item \textbf{实现原理}：普通屏幕的亮度范围有限（SDR），最亮和最暗之间的差距不够大。HDR屏幕的峰值亮度更高（通常1000尼特以上），对比度更大，色域更广，能显示更多细节。
+  \item \textbf{主流标准}：HDR10（最基础，免费开源）、HDR10+（三星推动，动态元数据）、Dolby Vision（杜比视界，画质最佳但需授权）。手机支持哪个标准取决于屏幕硬件和系统授权。
+  \item \textbf{实际效果}：看HDR视频时，阳光更刺眼、阴影更深邃、色彩更丰富。前提是视频本身是HDR制作的，屏幕也支持HDR显示。
+\end{itemize}
+
+\booksubsection{影像HDR技术}
+
+拍照时的HDR和屏幕HDR是两回事。影像HDR是通过算法解决“亮处过曝、暗处死黑”的问题。
+
+\begin{itemize}
+  \item \textbf{算法原理}：手机在按下快门时，实际拍摄了多张不同曝光的照片（欠曝保留亮部细节、过曝保留暗部细节、正常曝光保留中间调），然后将它们合成为一张高动态范围的照片。
+  \item \textbf{处理流程}：多帧捕获 对齐补偿（防手抖） 曝光融合/色调映射 色彩校正 输出最终照片。
+  \item \textbf{效果优化}：现在手机已经能做到"实时HDR"——取景器里看到的画面就是HDR处理后的效果，所见即所得。苹果的Smart HDR和安卓的自动HDR都非常成熟。
+\end{itemize}
+
+\booksubsection{电池与充电：能量之源}
+
+电池是手机最“短命”的部件，用个两三年就会明显老化。现在主流容量是5500-7500mAh。
+
+\begin{itemize}
+  \item \textbf{充电功率}：安卓阵营已经卷到了100W甚至200W，十几分钟充满；苹果还在20-30W徘徊。快充伤电池吗？用原装配件问题不大，手机有温控保护。
+  \item \textbf{无线充电}：方便但效率低、发热大。适合办公室随手充，不适合急着出门时用。
+  \item \textbf{反向充电}：手机变成充电宝，给耳机、手表充电，应急用。
+\end{itemize}
+
+\booksubsection{摄像头：光与影的魔法}
+
+现在手机摄像头动辄三四个，各有分工：
+
+\begin{itemize}
+  \item \textbf{主摄}：最常用的，传感器最大，画质最好。
+  \item \textbf{超广角}：拍风景、建筑，视野更宽。
+  \item \textbf{长焦}：拍远处，有光学变焦和数码变焦之分。
+  \item \textbf{微距}：拍极近距离的小东西。
+\end{itemize}
+
+\textbf{像素数不是全部！}传感器尺寸（底大一级压死人）、光圈大小（f/1.8比f/2.4大）、防抖（OIS光学防抖很重要）都影响画质。计算摄影（AI算法）现在越来越重要，能把多张照片合成一张好照片。
+
+\booksubsection{潜望式长焦镜头}
+
+传统长焦镜头需要较长的光学路径，会让手机变得很厚。潜望式长焦通过一个90度的棱镜将光线折射，让光路在手机内部横向展开，从而在保持手机轻薄的同时实现5倍甚至10倍光学变焦。
+
+\begin{itemize}
+  \item \textbf{结构原理}：光线从镜头进入 棱镜折射90度 沿手机宽度方向穿过镜片组 到达传感器。相当于把一个竖着的望远镜横着放。
+  \item \textbf{光学特性}：光学变焦倍数高（5x-10x），画质远超数码变焦。但传感器尺寸通常比主摄小，暗光表现一般。
+  \item \textbf{成像优势}：拍月亮、拍远处建筑、拍舞台特写，是普通手机无法企及的。
+\end{itemize}
+
+\booksubsection{OIS光学防抖 vs EIS电子防抖}
+
+防抖是影响拍照和录像画质的关键技术，两种方式原理完全不同：
+
+\begin{itemize}
+  \item \textbf{OIS（光学防抖）}：通过物理移动镜头或传感器来抵消手抖。镜头内部有微型陀螺仪检测抖动方向和幅度，然后驱动马达反向移动镜片组。优点是不损失画质，缺点是成本高、占用空间。
+  \item \textbf{EIS（电子防抖）}：通过软件算法裁切和偏移画面来抵消抖动。手机录制稍大的画面范围，然后根据陀螺仪数据裁切出稳定的区域。优点是不需要额外硬件，缺点是会裁切画面（视野变小），暗光下可能模糊。
+  \item \textbf{实际选择}：拍照优先看OIS，录像两者结合效果最好。现在很多旗舰手机支持"Sensor-Shift"传感器位移防抖，比传统镜头防抖效果更好。
+\end{itemize}
+
+\booksubsection{光学变焦 vs 数码变焦}
+
+\begin{itemize}
+  \item \textbf{光学变焦}：通过物理移动镜片组改变焦距，画质不损失。手机上的光学变焦通常只有固定倍数（如2x、3x、5x、10x），不能像相机那样连续变焦。
+  \item \textbf{数码变焦}：放大画面中心区域，本质是裁切+插值放大。放大越多，画质越差。100倍数码变焦看着很酷，但实际画质已经很糊了。
+  \item \textbf{混合变焦}：结合光学和数码，在光学变焦倍数之间用多帧合成算法弥补画质损失。效果比纯数码好，但仍不如光学。
+\end{itemize}
+
+\booksubsection{音频：扬声器与独显芯片}
+
+\textbf{单扬声器 vs 双扬声器}：
+
+\begin{itemize}
+  \item \textbf{单扬声器}：只有底部一个发声单元，声音偏向一侧，没有立体感。中低端手机常见。
+  \item \textbf{双扬声器（立体声）}：顶部和底部各一个扬声器，形成立体声场。看视频、听音乐时左右声道分明，沉浸感强很多。听筒兼做顶部扬声器是常见方案。
+  \item \textbf{音质差异}：双扬声器不只是"声音更大"，关键是空间感和层次感。用单扬声器看大片，总觉得少了点什么。
+\end{itemize}
+
+\textbf{游戏手机独显芯片}：
+
+部分游戏手机和性能手机配备了独立的显示处理芯片，它的作用是：
+
+\begin{itemize}
+  \item \textbf{插帧}：将30fps的游戏画面通过算法插值到60fps或120fps，画面更流畅。这个过程在独显芯片上完成，不占用SoC的GPU资源。
+  \item \textbf{超分}：将低分辨率画面通过AI算法提升到高分辨率，画质更清晰。
+  \item \textbf{降功耗}：因为插帧和超分由独显芯片负责，SoC的负载降低，发热和功耗都减少，游戏更稳定。
+\end{itemize}
+
+\booksubsection{GPS定位：单频与双频}
+
+手机定位主要依赖GPS等卫星导航系统。
+
+\begin{itemize}
+  \item \textbf{单频GPS}：只接收L1频段信号，定位精度约3-5米。在开阔地带够用，但在高楼密集的城市峡谷中，信号反射会导致定位偏移较大。
+  \item \textbf{双频GPS}：同时接收L1和L5两个频段信号。L5频段波长更长、抗干扰能力更强，双频联合解算可以消除大部分电离层误差，定位精度可达1-3米。在城市中导航、打车定位时优势明显。
+  \item \textbf{多星座支持}：现代手机不仅支持GPS，还支持北斗（中国）、GLONASS（俄罗斯）、Galileo（欧洲）等多个卫星系统。同时连接的卫星越多，定位越快越准。
+\end{itemize}
+
+\booksubsection{传感器：手机的小触角}
+
+手机里藏着十几个传感器，默默工作：
+
+\begin{itemize}
+  \item \textbf{加速度计+陀螺仪}：感知手机姿态，玩游戏转向、自动旋转屏幕。
+  \item \textbf{光线传感器}：自动调节屏幕亮度。
+  \item \textbf{距离传感器}：打电话时手机贴近耳朵自动熄屏。
+  \item \textbf{指纹传感器}：现在主流是屏下光学或超声波指纹。
+  \item \textbf{面部识别}：苹果的Face ID是3D结构光，安全级别高；很多安卓是2D照片识别，安全性一般。
+  \item \textbf{NFC}：近场通信，刷公交卡、门禁卡、银行卡。
+  \item \textbf{气压计}：测海拔高度，爬楼梯都能检测到。
+  \item \textbf{霍尔传感器}：检测磁吸壳的开合。
+\end{itemize}
+
+\booksection{二、操作系统：安卓 VS iOS VS 鸿蒙}
+
+硬件是身体，操作系统是灵魂。三大系统各有特色：
+
+\begin{itemize}
+  \item \textbf{安卓}：像开源社区，手机厂商可以深度定制，选择多。你可以换主题、装第三方应用商店、折腾各种玩法。但也因为开放，碎片化严重，不同品牌体验差异大。
+  \item \textbf{iOS}：像精心打理的花园，苹果软硬件一手抓，体验统一流畅。应用质量高，隐私保护好，但自由度低，很多事得按苹果的规矩来。
+  \item \textbf{鸿蒙}：华为的新物种，主打分布式能力，可以让不同设备无缝协同。后面我们会专门讲。
+\end{itemize}
+
+三者生态都极其丰富，选你喜欢的生活方式就好。没有绝对的好坏，只有适不适合。
+
+\booksection{三、手机接口全解析}
+
+手机接口是连接外部世界的桥梁，不同接口差异很大：
+
+\booksubsection{Micro USB}
+
+\begin{itemize}
+  \item \textbf{物理特性}：扁平梯形接口，分正反面（插反了插不进去）。已经在手机上基本淘汰，但部分低端设备和老设备仍在使用。
+  \item \textbf{传输限制}：仅支持USB 2.0标准，最高传输速率480Mbps，充电功率通常不超过10W。
+  \item \textbf{缺点}：正反面不通用、插拔寿命短、传输速度慢、充电功率低。
+\end{itemize}
+
+\booksubsection{Lightning（苹果闪电接口，已淘汰）}
+
+\begin{itemize}
+  \item \textbf{物理特性}：苹果自研的8针接口，正反都可以插。iPhone 14及更早机型使用，现已全面淘汰。
+  \item \textbf{传输限制}：Lightning接口物理上仅支持USB 2.0标准，最高传输速率480Mbps。即使使用USB-C转Lightning线，传输速度也受限于Lightning接口本身。
+  \item \textbf{淘汰原因}：欧盟通过法规要求2024年起所有手机统一使用USB-C接口，苹果从iPhone 15系列开始全面改用Type-C。Lightning接口正式退出历史舞台。
+  \item \textbf{注意}：苹果MFi认证的数据线内含认证芯片，非认证线可能无法正常充电或传输数据。如果你仍在使用旧款iPhone，建议备好Lightning数据线。
+\end{itemize}
+
+\booksubsection{USB Type-C}
+
+\begin{itemize}
+  \item \textbf{物理特性}：24针脚的椭圆形接口，正反都可以插。已成为手机和多数电子设备的标准接口。欧盟已立法要求2024年起所有手机、平板、耳机等便携设备统一使用USB-C接口，全球其他地区也在跟进。
+  \item \textbf{传输协议}：Type-C只是接口形态，实际传输能力取决于内部协议。支持USB 2.0（480Mbps）、USB 3.0/3.1/3.2（5-20Gbps）甚至USB4（40Gbps）。
+  \item \textbf{重要区分}：并非所有Type-C接口都支持USB 3.0！很多手机虽然用Type-C接口，但内部只连接了USB 2.0的引脚，传输速度和老接口一样慢。iPhone 16/17标准版仅支持USB 2.0速度，Pro版才支持USB 3.0（需使用USB-C to USB-C线）。
+  \item \textbf{充电能力}：支持USB PD等快充协议，最高可支持240W充电。
+  \item \textbf{视频输出}：支持DisplayPort Alt Mode，可以通过转接线输出视频到显示器。
+\end{itemize}
+
+\booksubsection{5mm音频接口}
+
+\begin{itemize}
+  \item \textbf{物理特性}：圆形3段或4段插孔，3段传输左右声道音频，4段多一个麦克风通道。
+  \item \textbf{特点}：模拟信号传输，即插即用，不需要驱动或转换。音质稳定，延迟为零。
+  \item \textbf{现状}：大部分旗舰手机已取消3.5mm接口，需要Type-C转接线或使用蓝牙耳机。部分中端机和游戏手机仍保留。
+\end{itemize}
+
+\booksection{四、手机产品体系与命名规则}
+
+面对各品牌眼花缭乱的产品线，搞清楚命名规则能帮你快速定位适合自己的机型。
+
+\booksubsection{主流品牌产品系列：}
+
+\begin{itemize}
+  \item \textbf{苹果}：iPhone（标准版）/ iPhone Plus（大屏版）/ iPhone Pro（专业版）/ iPhone Pro Max（大屏专业版）/ iPhone SE（平价版）/ iPhone 16e（平价AI版，搭载A18芯片和苹果自研C1基带）。2026年iPhone 17系列全面搭载A19 Pro芯片，AI能力进一步提升。
+  \item \textbf{华为}：Mate系列（商务旗舰）/ P/Pura系列（影像旗舰）/ Mate X系列（折叠旗舰）/ nova系列（年轻中端）/ 畅享系列（入门）
+  \item \textbf{小米}：小米数字系列（旗舰）/ 小米MIX（探索旗舰/折叠）/ Redmi K系列（性能旗舰）/ Redmi Note系列（中端）/ Redmi数字系列（入门）
+  \item \textbf{OPPO}：Find X系列（旗舰）/ Reno系列（中端）/ A系列（入门）/ 一加数字系列（性能旗舰）
+  \item \textbf{vivo}：X系列（影像旗舰）/ iQOO数字系列（性能旗舰）/ S系列（自拍中端）/ Y系列（入门）
+  \item \textbf{三星}：Galaxy S系列（旗舰）/ Galaxy Z Fold/Flip（折叠旗舰）/ Galaxy A系列（中端）
+\end{itemize}
+
+\booksubsection{常见后缀含义：}
+
+\begin{itemize}
+  \item \textbf{Pro}：Professional的缩写，专业版。通常在标准版基础上升级摄像头、屏幕、处理器等核心配置。
+  \item \textbf{Max}：最大版。屏幕最大、电池最大，但配置不一定比Pro高。
+  \item \textbf{Ultra}：极致版。通常代表该系列的最高配置，堆料最猛，价格也最高。如三星S24 Ultra、小米14 Ultra。
+  \item \textbf{SE}：Special Edition特别版，实际多为平价版。配置缩水，价格降低。如iPhone SE。
+  \item \textbf{Plus}：加大版。屏幕比标准版大，电池也大，但配置基本一致。
+  \item \textbf{Lite/青春版}：轻量版。配置精简，价格更低。
+  \item \textbf{Note}：原本指大屏手机，现在各品牌用法不一。Redmi Note是中端系列。
+  \item \textbf{Neo}：新锐版。通常指性能取向的中端机型。
+\end{itemize}
+
+\booksection{五、基带与天线：手机通信的幕后功臣}
+
+手机能打电话、上网，靠的是基带芯片和天线这对搭档。
+
+\booksubsection{基带芯片：}
+
+基带是手机中负责无线通信的处理器，它将数字信号调制成无线电波发出去，也将接收到的无线电波解调成数字信号。基带性能直接影响通话质量、上网速度和信号稳定性。高通是最大的手机基带供应商，联发科、三星也有自研基带。苹果从iPhone 16e开始搭载自研的C1基带芯片，标志着苹果正式进入自研基带时代，C1基带采用4nm制程，功耗表现优异；iPhone 16/16 Plus/16 Pro/16 Pro Max仍使用高通基带（骁龙X75 5G），预计后续机型将逐步过渡到自研基带。更早的iPhone XS/11系列使用Intel基带时信号表现不佳，是不少用户的痛点。
+
+\booksubsection{天线设计：}
+
+手机天线藏在机身内部，通常围绕边框布置。天线设计直接影响信号接收性能：
+
+\begin{itemize}
+  \item \textbf{MIMO技术}：多入多出，使用多个天线同时收发数据，提升速度和稳定性。4×4 MIMO比2×2 MIMO速度更快。
+  \item \textbf{天线数量}：旗舰机通常有十几个天线（蜂窝、Wi-Fi、蓝牙、NFC、GPS各需要独立天线）。
+  \item \textbf{金属机身的影响}：金属会屏蔽信号，所以金属机身手机需要设计天线带（边框上的塑料条）。玻璃和塑料机身对信号影响较小。
+\end{itemize}
+
+\booksubsection{网络技术演进：}
+
+\begin{itemize}
+  \item \textbf{4G LTE}：理论峰值速率下行1Gbps/上行500Mbps（Cat.18），实际体验通常50-150Mbps。覆盖最广，够用。
+  \item \textbf{5G NR}：理论峰值速率下行10Gbps+。Sub-6GHz频段覆盖较好，mmWave毫米波速度极快但覆盖极小。
+  \item \textbf{5G-A（5G Advanced）}：5G的增强版，也叫5.5G。下行速率可达10Gbps，上行1Gbps，连接数密度和定位精度大幅提升。2024年起中国移动、电信、联通开始在重点城市部署5G-A网络，华为Mate 70/80系列、小米15/16系列等旗舰手机已支持5G-A。5G-A还带来了"通感一体"能力，基站可以同时通信和感知环境，为低空经济（无人机配送）和车联网提供基础设施。
+\end{itemize}
+
+\booksubsection{网络频段分类：}
+
+手机支持的网络频段决定了它能在哪些国家、哪些运营商的网络上使用：
+
+\begin{itemize}
+  \item \textbf{FDD-LTE Band（B系列）}：如B1、B3、B5等，4G频段。不同国家使用不同频段，中国主要用B1/B3/B5/B8/B34/B38/B39/B40/B41。
+  \item \textbf{TDD-LTE Band}：4G的另一制式，中国大量使用B38/B39/B40/B41。
+  \item \textbf{5G NR Band（N系列）}：如n1、n3、n28、n41、n78、n79等。n78（3.5GHz）是中国5G主力频段，n41（2.5GHz）移动使用较多。
+  \item \textbf{购买建议}：如果需要出国使用，购买前确认手机是否支持目标国家的频段。国行手机通常对中国频段支持最全，但可能缺少部分海外频段。
+\end{itemize}
+
+\booksection{六、你的手机，到底在扮演多少角色？}
+
+它早已不只是电话：
+
+\begin{enumerate}
+  \item \textbf{通讯工具}：电话、短信、微信、邮件……
+  \item \textbf{智能相机}：拍照、录像、扫描文档……
+  \item \textbf{钱包}：支付、公交卡、银行卡、会员卡……
+  \item \textbf{信息门户}：新闻、天气、股票、知识……
+  \item \textbf{游戏机}：从消消乐到3A大作……
+  \item \textbf{移动办公室}：文档、表格、会议、协作……
+  \item \textbf{健康助手}：计步、心率、睡眠、运动……
+  \item \textbf{智能家居遥控器}：控制灯、空调、电视、扫地机器人……
+  \item \textbf{数字身份证}：电子身份证、电子驾照、健康码……
+  \item \textbf{娱乐中心}：音乐、视频、电子书、播客……
+\end{enumerate}
+
+想想看，一台小小的设备，承载了多少生活！所以，学会用好它，就是学会更好地生活。
+
+\begin{tcbpractice}{实操一下：了解硬件配置}
+在 [设置] 里，看看能不能找到处理器型号、运行内存（RAM）和机身存储（ROM）的具体大小。对你手机的能力有个数。安卓用户可以下载“安兔兔”或“DevCheck”查看详细硬件信息。
+
+\end{tcbpractice}

@@ -1,0 +1,146 @@
+\bookchapter{第三十九章：上下文工程——让AI理解你的意图}
+
+\chapterintro{你有没有过这种体验：换个新对话窗口，AI 就像失忆了一样，把你项目的基本情况全忘了？这不是 AI 故意气你，而是它天生“健忘”。这一章教你给 AI 装上一套“长期记忆系统”，顺便认识 2026 年最火的开发范式之一——规范驱动开发。}
+
+\booksection{一、项目记忆文件：AI 的“长期记忆”}
+
+AI 模型有一个根本性限制：\textbf{它的记忆是“短时”的}。每次对话开始时，AI 对你项目的了解为零。你需要在对话中不断告诉它“我们用的是 React”“后端是 Node.js”“数据库是 PostgreSQL”“代码风格用双引号”。这不仅低效，而且容易遗漏——就像每天都要重新给新来的同事做入职培训。
+
+解决方案是“项目记忆文件”——一个放在项目根目录的纯文本文件，AI 工具会在每次对话开始时自动读取它。不同的工具有不同的命名约定：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{工具} & \textbf{文件名} \tabularnewline
+\hline
+Cursor & \texttt{.cursorrules} \tabularnewline
+Claude Code & \texttt{CLAUDE.md} \tabularnewline
+GitHub Copilot & \texttt{copilot-instructions.md} \tabularnewline
+通用方案 & \texttt{AGENTS.md} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}各工具的项目记忆文件命名约定\end{center}
+
+虽然命名不同，但原理一样：\textbf{把你希望 AI“始终记住”的信息写在这个文件里}。一个好的项目记忆文件应该包含：项目概述（这是什么项目）、技术栈（用了什么技术）、代码规范（命名、缩进、注释风格）、目录结构（代码怎么组织的）、开发约定（分支策略、提交规范、测试要求）。Karpathy 的 CLAUDE.md 只有 70 行，但覆盖了所有关键信息——简洁但完备。
+
+\begin{lstlisting}
+# 项目：个人记账应用
+## 概述
+这是一个全栈个人记账应用，帮助用户记录日常收支。
+## 技术栈
+- 前端：React + TypeScript + Tailwind CSS
+- 后端：Node.js + Express + TypeScript
+- 数据库：SQLite (开发) / PostgreSQL (生产)
+- 测试：Vitest
+## 代码规范
+- 使用双引号
+- 缩进2个空格
+- 函数名用camelCase
+- 类型定义用PascalCase
+- 每个函数必须有JSDoc注释
+## 目录结构
+/src
+  /frontend  - 前端代码
+  /backend   - 后端代码
+  /shared    - 前后端共享的类型
+  /tests     - 测试文件
+## 开发约定
+- 提交信息用中文
+- 新功能必须先写测试
+- API返回统一用 { success, data, error } 格式
+\end{lstlisting}
+
+\begin{tcbwarn}{注意：别写成"第二份需求文档"}
+注意这个文件的长度——不要写成几十页的需求文档。项目记忆文件的目的是“让 AI 快速建立背景认知”，不是“详细描述每个功能”。保持简洁、结构化、只写“AI 需要知道的”。
+
+\end{tcbwarn}
+
+\booksection{二、规范驱动开发（SDD）}
+
+\textbf{Spec-Driven Development}（SDD，规范驱动开发）是 2026 年逐渐成熟的一种开发范式，核心理念一句话：\textbf{先写规范，再写代码}。与传统 TDD（测试驱动开发）不同的是，SDD 的“规范”不仅是测试用例，还包括需求描述、接口定义、数据模型等。AI 根据这些规范来生成代码，人类的职责是编写和维护规范。
+
+SDD 的工作流程五步走：
+
+\begin{enumerate}
+  \item 用自然语言描述需求规范（写在一个 .md 文件中）；
+  \item 定义接口和数据结构（写在规范文件中）；
+  \item 让 AI 根据规范生成代码实现；
+  \item 运行测试验证产出是否符合规范；
+  \item 如果不符合，修正规范或让 AI 修正代码。
+\end{enumerate}
+
+在这个流程中，\textbf{规范文件是“唯一真理源”——代码可以重新生成，但规范必须先正确}。
+
+编写规范文件
+
+审查规范是否完备？
+
+完备
+
+AI 根据规范生成代码
+
+运行测试验证产出
+
+不完备 / 测试不过
+
+代码问题 修正代码；规范问题 修正规范
+
+回到验证
+
+全部通过 交付
+
+\begin{center}\small\color{gray}图 3：规范驱动开发（SDD）的工作流程\end{center}
+
+SDD 的优势在于：\textbf{规范文件比代码更稳定}。当底层模型或工具变化时，你的规范文件依然有效，只需要让新的 AI 工具重新生成代码即可。这也是为什么本书强调“方法论比工具重要”——规范文件就是你方法论的具体载体。
+
+\booksection{三、上下文窗口管理}
+
+即使有了项目记忆文件，你仍然会在对话中遇到“上下文不够用”的问题。AI 模型的上下文窗口（能同时处理的信息量）是有限的。当对话太长、引用的文件太多时，AI 会“忘记”早期的信息，导致产出质量下降——就像你和一个朋友聊天聊了六个小时，他早忘了你开头说的第一件事。
+
+管理上下文窗口的核心策略是“分层引用”：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{上下文层次} & \textbf{内容} & \textbf{管理方式} \tabularnewline
+\hline
+第一层：项目记忆 & 技术栈、规范、目录结构 & 写在 CLAUDE.md 等文件中，自动加载，无需重复 \tabularnewline
+第二层：文件引用 & 当前任务涉及的代码文件 & 用 @ 符号精确引用，不粘贴全文到对话 \tabularnewline
+第三层：对话上下文 & 当前任务的对话历史 & 完成一个任务后开新对话，避免上下文膨胀 \tabularnewline
+第四层：即时指令 & 当前这一步的具体要求 & 清晰、简洁、有针对性，避免冗长描述 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}上下文窗口的分层管理策略\end{center}
+
+\booksection{四、上下文工程的实践要点}
+
+上下文工程不是一次性的设置，而是一个持续优化的过程。以下是几个在实践中被反复验证的要点：
+
+\begin{enumerate}
+  \item \textbf{记忆文件随项目演进同步更新}。引入新技术或改变架构时，第一时间更新记忆文件，而不是在对话中临时说明。
+  \item \textbf{善用 @ 引用而非全文粘贴}。大多数 AI 编程工具支持 @file 或 @folder 语法，它会在后台将文件内容注入 AI 的上下文，比手动粘贴更高效且不会污染对话。
+  \item \textbf{对话要"短小精悍"}。一个对话只处理一个任务或一个功能点。完成后开新对话处理下一个。长对话不仅消耗上下文窗口，还会让 AI"分心"。
+  \item \textbf{给 AI"看"结果而非"描述"结果}。遇到 bug 时，把错误日志直接 @ 引用给 AI，而不是用自己的话描述"好像有个什么错误"。AI 看到原始信息比看到你的转述更有效。
+  \item \textbf{定期清理和归档}。已完成的对话和临时文件会占用工作空间。定期清理无关内容，保持项目目录整洁，也有助于 AI 更高效地理解项目结构。
+\end{enumerate}
+
+\begin{tcbpractice}{来动手：给你的项目写一份 70 行记忆文件}
+挑一个你正在做（或打算做）的项目，写一份 CLAUDE.md：项目概述（2-3 句话）、技术栈（列出来）、代码规范（3-5 条）、目录结构（画个树）、开发约定（2-3 条）。控制在 70 行以内——写完你会发现自己对项目的理解都清晰了不少。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item AI 的记忆是"短时"的：每次新对话，它对项目的了解为零
+  \item 项目记忆文件（CLAUDE.md 等）是 AI 的"长期记忆"，每次对话自动加载
+  \item 好的记忆文件 = 概述 + 技术栈 + 规范 + 目录 + 约定，70 行足矣
+  \item SDD 规范驱动开发：先写规范再写代码，规范是"唯一真理源"，比代码更稳定
+  \item 上下文分四层管理：项目记忆 @文件引用 对话历史 即时指令
+  \item 五个实践要点：同步更新、@引用、短对话、给原信息、定期清理
+\end{itemize}
+
+\end{tcbsummary}

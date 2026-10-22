@@ -1,0 +1,143 @@
+\bookchapter{第五十五章：项目二——天气查询 App（网络版）}
+
+\chapterintro{记账本是“练内功”，天气 App 是“见世面”——它要和互联网打交道。这个项目你会学到：申请免费 API、解析 JSON、处理“加载中/成功/失败”三种界面状态，以及怎么把 API 密钥藏好。做完它，你就具备了做任何“联网 App”的能力——新闻、汇率、翻译，套路一模一样。}
+
+\booksection{一、申请免费天气 API}
+
+个人练手，推荐\textbf{OpenWeatherMap}或国内的\textbf{和风天气（QWeather）}——都有免费额度，注册即用。以 OpenWeatherMap 为例：
+
+\begin{enumerate}
+  \item 注册账号 在 API keys 页面生成一个 Key（\texttt{apikey}）；
+  \item 免费版可调用 Current Weather（当前天气）接口：\texttt{api.openweathermap.org/data/2.5/weather?q=beijing\&appid=你的Key\&units=metric}；
+  \item 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的"预习"。
+\end{enumerate}
+
+\textbf{避坑提醒：密钥绝不能写死在代码里}\par
+
+API Key 相当于你的“钱包密码”，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。正确做法：放进\texttt{local.properties}（这个文件已被 gitignore 忽略），再通过 Gradle 的 buildConfig 读进代码。搜索“Android 隐藏 API Key 的最佳实践”照着改即可。
+
+\booksection{二、网络层：Retrofit + JSON 解析}
+
+先照 API 返回的 JSON 定义“数据模型”，字段对不上的一律忽略：
+
+\begin{lstlisting}[language=Kotlin]
+// JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+data class Weather(val description: String)
+data class Main(val temp: Double, val humidity: Int)
+
+interface WeatherApi {
+    @GET("data/2.5/weather")
+    suspend fun getWeather(
+        @Query("q") city: String,
+        @Query("appid") key: String,
+        @Query("units") metric: String = "metric",
+        @Query("lang") lang: String = "zh_cn"
+    ): WeatherResponse
+}
+\end{lstlisting}
+
+Gson 会自动把 JSON 塞进这些 data class——\textbf{字段名一致，魔法自动发生}。
+
+\booksection{三、三种界面状态：加载中 / 成功 / 失败}
+
+联网 App 的灵魂在于“状态管理”。网络慢、断网、城市名打错……每种情况界面都要给用户交代。用一个 sealed class（密封类）优雅地表示：
+
+\begin{lstlisting}[language=Kotlin]
+sealed class UiState {
+    object Loading : UiState()                    // 转圈中
+    data class Success(val data: WeatherResponse) : UiState()  // 成功
+    data class Error(val message: String) : UiState()          // 失败
+}
+
+// ViewModel 里：
+fun search(city: String) {
+    viewModelScope.launch {
+        _state.value = UiState.Loading
+        _state.value = try {
+            UiState.Success(api.getWeather(city))
+        } catch (e: Exception) {
+            UiState.Error("查不到这个城市，换个名字试试？")
+        }
+    }
+}
+
+// 界面里：
+when (val s = state) {
+    is UiState.Loading -> CircularProgressIndicator()   // 转圈
+    is UiState.Success -> WeatherContent(s.data)        // 展示
+    is UiState.Error -> Text(s.message)                 // 报错
+}
+\end{lstlisting}
+
+这个\texttt{Loading/Success/Error}三段式是联网界面的“万金油模板”，先背下来，以后所有联网 App 照葫芦画瓢。
+
+\booksection{四、实战界面代码：把天气画出来}
+
+状态有了，界面长这样（关键片段）：
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun WeatherContent(data: WeatherResponse) {
+    Column(
+        Modifier.fillMaxSize().padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(
+            "${data.main.temp}°C",
+            fontSize = 72.sp,
+            fontWeight = FontWeight.Light
+        )
+        Text(
+            data.weather.firstOrNull()?.description ?: "未知",
+            fontSize = 20.sp,
+            color = Color.Gray
+        )
+        Spacer(Modifier.height(16.dp))
+        Row {
+            Text(" 湿度 ${data.main.humidity}%")
+            Spacer(Modifier.width(24.dp))
+            Text(" 体感 ${data.main.temp}°C")
+        }
+    }
+}
+\end{lstlisting}
+
+几个小细节值得学：\texttt{firstOrNull()}安全取第一个元素（列表可能为空），\texttt{?: “未知”}给兜底文案——空安全原则在界面里同样适用。温度用\texttt{72.sp}的大字号撑场面，“轻”字重（Light）让数字显得优雅，这是天气类 App 的经典配方。
+
+\booksection{五、界面与交互细节}
+
+\booksection{四、界面与交互细节}
+
+\begin{itemize}
+  \item \textbf{搜索框}：顶部 TextField，输城市名点搜索（键盘上设"搜索"动作，回车即搜）；
+  \item \textbf{天气卡片}：大字号温度（26.5°）、天气描述（晴）、湿度、城市名；
+  \item \textbf{收藏城市}：把常看的城市存进 DataStore，下次打开自动查——顺手复习第 6 章；
+  \item \textbf{下拉刷新}：Compose 里用\texttt{PullToRefreshBox}（Material 3 提供），手感立刻"专业"起来。
+\end{itemize}
+
+\begin{tcbinfo}{小贴士：图片让界面活起来}
+给每种天气配一个 emoji 或图标（），用\texttt{when(description)}映射——三行代码，界面温度感翻倍。也可以加载第三方的天气图标库，但练手阶段 emoji 足够。
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{来动手：天气 App 验收清单}
+(1) 正常搜索出天气；(2) 断开网络，App 优雅报错不崩溃（开飞行模式测！）；(3) 输一个不存在的城市，提示友好；(4) 收藏两个城市，重启 App 还在；(5) 转屏不丢状态。五条全过，这个项目才算毕业。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item 先浏览器试 API、看懂 JSON，再写代码——"预习"永远不亏
+  \item API Key 藏进 local.properties，绝不进代码库
+  \item Retrofit 接口 + data class：字段对上，JSON 自动解析
+  \item Loading/Success/Error 三段式状态是联网界面万金油
+  \item 断网、空输入、城市不存在——错误处理是联网 App 的及格线
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,155 @@
+\bookchapter{第六十一章：Swift 快速上手——苹果开发的第一语言}
+
+\chapterintro{这一章咱们正式学语言。别紧张——Swift 是出了名的“对新手友好”，而且你不需要背语法书：先掌握 20\% 的语法，就能看懂和写出 80\% 的日常代码。剩下的边做项目边查。记住咱们的学习原则：\textbf{看懂 > 记住，会用 > 精通}。}
+
+\booksection{一、变量与类型：给数据起名字}
+
+程序就是“数据 + 逻辑”。变量，就是给数据起个名字存起来。Swift 用\texttt{let}和\texttt{var}声明：
+
+\begin{lstlisting}[language=Swift]
+let name = "张三"        // let：常量（推荐默认用这个）
+var age = 18             // var：变量（以后还能改）
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可以改
+// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> let 不能改，编译报错
+
+let score: Int = 100     // 也可以显式写明类型
+let pi = 3.14            // 不写也能自动推断
+
+print("你好，\(name)")   // 字符串插值：反斜杠 + 括号
+\end{lstlisting}
+
+常用类型一张表记住：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{类型} & \textbf{存什么} & \textbf{示例} \tabularnewline
+\hline
+Int & 整数 & 42 \tabularnewline
+Double & 小数 & 3.14 \tabularnewline
+String & 文字 & "你好" \tabularnewline
+Bool & 真/假 & true / false \tabularnewline
+{}[Int]（数组） & 一组数据 & {}[1, 2, 3] \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Swift 常用基础类型\end{center}
+
+\begin{tcbinfo}{小贴士：let 优先原则}
+Swift 社区的铁律：\textbf{默认用 let，确有必要再用 var}。能用 let 的地方用 var，Xcode 会黄字警告你。这个习惯能帮你少掉一大类“变量被意外修改”的 bug——代码越少变化，越容易推理。
+
+\end{tcbinfo}
+
+\booksection{二、可选值（Optional）：Swift 的“防崩护身符”}
+
+这是 Swift 最重要的概念，没有之一。一句话：\textbf{一个值可能“不存在”时，Swift 强迫你处理它}——从语言层面消灭了“空指针崩溃”这个行业噩梦。
+
+\begin{lstlisting}[language=Swift]
+var name: String = "张三"   // 普通类型：绝不允许是 nil
+// name = nil                // <i class="fas fa-times-circle mr-1"></i> 编译错误，直接拦住
+
+var nickname: String? = nil  // 加个问号：允许为 nil（可选值）
+nickname = "三儿"
+
+// 使用可选值，必须"解包"：
+if let n = nickname {        // if let：安全解包
+    print("你好，\(n)")
+} else {
+    print("还没有昵称")
+}
+
+let len = nickname?.count ?? 0   // ?? 给默认值（空合运算符）
+print(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{注意：! 是"高危操作"}
+代码里写\texttt{nickname!}（强制解包）等于对编译器喊“我保证它不是 nil”——一旦猜错，App 当场崩溃。新手期原则：\textbf{尽量用 if let / ?? ，不用 !}。Xcode 补全代码时偶尔会顺手加 !，记得改掉它。
+
+\end{tcbwarn}
+
+\booksection{三、函数与闭包：把逻辑打包成“按钮”}
+
+函数是一段有名字的逻辑，像遥控器上的按钮。闭包（Closure）则是“没名字的函数”，可以随手递给别人：
+
+\begin{lstlisting}[language=Swift]
+// 函数：名字在前，参数和返回类型在后
+func greet(name: String) -> String {
+    return "你好，\(name)！"
+}
+print(greet(name: "张三"))     // 调用时要带参数名
+
+// 闭包：就地定义，轻快直接
+let numbers = [1, 2, 3, 4]
+let doubled = numbers.map { $0 * 2 }   // $0 = 当前元素
+// [2, 4, 6, 8]
+
+let big = numbers.filter { $0 > 2 }    // 筛选
+// [3, 4]
+\end{lstlisting}
+
+SwiftUI 里闭包无处不在：按钮的\texttt{Button(“点我”) \{ ... \}}后面的大括号就是一个闭包。\texttt{map}、\texttt{filter}、\texttt{sorted}这几个“集合连招”请记牢——未来 90\% 的列表处理都是它们的组合。
+
+\booksection{四、结构体与协议：Swift 的“乐高”体系}
+
+Swift 的官方偏好很明确：\textbf{优先用结构体（struct），需要继承时才用类（class）}。结构体是“值类型”——复制时各过各的，天然少一类 bug：
+
+\begin{lstlisting}[language=Swift]
+// 结构体：装数据的盒子
+struct Record {
+    var id = UUID()
+    var amount: Double
+    var category: String
+    var date: Date
+
+    // 结构体自带"成员逐一构造器"：直接就能创建
+}
+let r = Record(amount: 25.5, category: "餐饮", date: Date())
+
+// 协议：约定"必须具备哪些能力"
+protocol Identifiable {
+    var id: UUID { get }
+}
+struct Record: Identifiable { ... }   // 遵守协议 = 承诺实现其要求
+\end{lstlisting}
+
+SwiftUI 里几乎一切都是 struct（View 就是协议）。这句现在不懂没关系，第 62 章会天天见面——\textbf{在 Swift 的世界里，先拥抱 struct}。
+
+\booksection{五、写给零基础的语法速查卡}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{要做什么} & \textbf{写法} \tabularnewline
+\hline
+定义常量/变量 & \texttt{let x = 1}/\texttt{var x = 1} \tabularnewline
+字符串插值 & \texttt{"你好，\textbackslash{}(name)"} \tabularnewline
+定义函数 & \texttt{func 名字(参数: 类型) -> 返回类型 \{ ... \}} \tabularnewline
+判断 & \texttt{if 条件 \{ ... \} else \{ ... \}} \tabularnewline
+遍历 & \texttt{for x in 数组 \{ ... \}} \tabularnewline
+安全解包 & \texttt{if let x = 可选值 \{ ... \}} \tabularnewline
+默认值 & \texttt{x ?? 默认值} \tabularnewline
+定义结构体 & \texttt{struct X \{ var a: Int; var b: String \}} \tabularnewline
+闭包 & \texttt{\{ \$0 * 2 \}} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Swift 语法速查卡（新手版）\end{center}
+
+\begin{tcbpractice}{来动手：在 Playgrounds 里玩 15 分钟 Swift}
+有 Mac 就打开 Xcode Playground；没 Mac 就用 iPad 上的 Swift Playgrounds 或网页版演练场。把本章每一段代码都跑一遍，改改数字和文字，故意制造几个错误看看 Xcode 怎么提示。这个“先玩后学”的 15 分钟，会让你第 62 章上手时轻松一倍。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item let 优先，var 慎用；类型自动推断，冒号后显式声明也行
+  \item 可选值是 Swift 的灵魂：可能为空必须处理，if let / ?? 是护身符，! 是高危操作
+  \item 函数调用要带参数名；闭包 = 没名字的函数，SwiftUI 里无处不在
+  \item 优先 struct，遵守协议（Protocol）；SwiftUI 几乎一切都是 struct
+  \item 20\% 语法干 80\% 的活：先会用，再精通
+\end{itemize}
+
+\end{tcbsummary}
