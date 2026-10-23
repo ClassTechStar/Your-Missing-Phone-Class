@@ -2575,7 +2575,7 @@
                         <ol class="list-decimal pl-6 mt-1 space-y-0.5 text-sm">
                             <li>Lege im Dateimanager einen Arbeitsordner für diesen Monat im Format <code>2026Q2_ProjektA</code> :</li>
                             <li>Gehe alle Dateien dieser Woche im „Download"-Verzeichnis durch: Nützliches behalten und archivieren, Nutzloses löschen.</li>
-                            <li>Erstelle für die Familienfotos dieses Jahr Ordner wie <code>2025_Familie</code>oder<code>2026_Familie</code> .</li>
+                            <li>Erstelle für die Familienfotos dieses Jahr Ordner wie <code>2025_Familie</code> oder <code>2026_Familie</code> .</li>
                         </ol>
                     </div>
 
@@ -3502,7 +3502,7 @@
             <!-- II,Software -->
             <section id="ruan-jian-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">II. Softwareteil (Kapitel 8-14)</h2>
-                <p class="chapter-intro mb-4">Aktivierung</p>
+                <p class="chapter-intro mb-4">Nachdem du die Grundlagen beherrschst, lass uns tiefer in die Verwendung verschiedener Anwendungen eintauchen. Von Kommunikation über Büro bis hin zu Zahlung und Unterhaltung – diese Kapitel machen dich zum echten Smartphone-Profi.</p>
 
                 <!-- Kapitel 8 -->
                 <div id="di-ba-zhang" class="mb-10 content-section">
@@ -5990,7 +5990,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">II. Kernfunktionen und Merkmale</h4>
 
                     <h5 class="font-semibold mt-3 mb-1">🖥️ Vollständige Linux-Umgebung</h5>
-                    <p class="mb-2">Termux <strong>Nur Bash integriert</strong> als Shell. Wenn du Zsh, fish oder andere Shells verwenden moechtest, musst du sie manuell ueber den Paketmanager installieren, z. B.:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>oder<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Zudem unterstuetzt Termux Editoren wie Vim, Nano und Emacs und bietet ein nahezu originales Kommandozeilenerlebnis. Ueber „pkg install" lassen sich ueber 2000 Pakete installieren, darunter GCC, OpenSSH, SQLMap und weitere Entwicklungs- und Sicherheitstools.</p>
+                    <p class="mb-2">Termux <strong>Nur Bash integriert</strong> als Shell. Wenn du Zsh, fish oder andere Shells verwenden moechtest, musst du sie manuell ueber den Paketmanager installieren, z. B.:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> oder<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Zudem unterstuetzt Termux Editoren wie Vim, Nano und Emacs und bietet ein nahezu originales Kommandozeilenerlebnis. Ueber „pkg install" lassen sich ueber 2000 Pakete installieren, darunter GCC, OpenSSH, SQLMap und weitere Entwicklungs- und Sicherheitstools.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">📦 Leistungsstarkes Paketmanagement</h5>
                     <p class="mb-2">Mit dem APT-Paketmanager (ähnlich wie Debian und Ubuntu) lassen sich tausende Linux-Pakete installieren: Entwicklungs- und Netzwerkwerkzeuge und Umgebungen für Python, Ruby, Node.js, Go, Rust, Swift und mehr.</p>
@@ -6057,8 +6057,8 @@
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
                         <li><strong>App herunterladen</strong>: Termux aus offiziellen Quellen (F-Droid oder GitHub) herunterladen und installieren – keine Root-Rechte erforderlich.</li>
                         <li><strong>System initialisieren</strong>: Nach dem ersten Start warten, bis „Installing bootstrap packages" abgeschlossen ist.</li>
-                        <li><strong>Speicherberechtigung abrufen</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>ausführen, um Zugriff auf das Smartphone-Dateisystem zu erhalten.</li>
-                        <li><strong>Softwarepakete aktualisieren</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>ausführen, um die Paketliste zu aktualisieren.</li>
+                        <li><strong>Speicherberechtigung abrufen</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> ausführen, um Zugriff auf das Smartphone-Dateisystem zu erhalten.</li>
+                        <li><strong>Softwarepakete aktualisieren</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> ausführen, um die Paketliste zu aktualisieren.</li>
                     </ol>
 
                     <h5 class="font-semibold mt-3 mb-1">⚙️ Grundlegende Optimierung</h5>
@@ -6094,9 +6094,9 @@
                         <p class="font-semibold"><i class="fas fa-hands mr-2"></i>Hand an: Führe auf dem Smartphone deinen ersten Linux-Befehl aus</p>
                         <ol class="list-decimal pl-6 mt-1 space-y-1">
                             <li>Lade Termux von F-Droid herunter und installiere es; warte beim ersten Start auf den Abschluss der Initialisierung.</li>
-                            <li>Führe<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>aus, um die Softwarepakete zu aktualisieren.</li>
+                            <li>Führe<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> aus, um die Softwarepakete zu aktualisieren.</li>
                             <li>Installiere Python:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install python</code>.</li>
-                            <li>Gib<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>Dieser Teil führt dich in eine tiefere digitale Welt ein – von Informationssicherheit über KI-Prinzipien bis hin zu Programmierdenken und digitalem Erbe. Diese Inhalte helfen dir, ein echter digitaler Bürger zu werden.</li>
+                            <li>Gib<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code> Dieser Teil führt dich in eine tiefere digitale Welt ein – von Informationssicherheit über KI-Prinzipien bis hin zu Programmierdenken und digitalem Erbe. Diese Inhalte helfen dir, ein echter digitaler Bürger zu werden.</li>
                         </ol>
                     </div>
                 </div>
@@ -6105,7 +6105,7 @@
             <!-- IV,Fortgeschrittene -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">IV. Weiterführender Teil (Kapitel 21-26)</h2>
-                <p class="chapter-intro mb-4">. Aber ich muss warnen:</p>
+                <p class="chapter-intro mb-4">Dieser Teil führt dich in eine tiefere digitale Welt ein – von Informationssicherheit über KI-Prinzipien bis hin zu Programmierdenken und digitalem Erbe. Diese Inhalte helfen dir, ein echter digitaler Bürger zu werden.</p>
 
                 <!-- Kapitel 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
@@ -6726,7 +6726,7 @@
                         <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>Sicherheitshinweis</p>
                         <ul class="list-disc pl-6 mt-1 space-y-1">
                             <li>Niemals Passwörter, API-Schlüssel, Datenbankverbindungsstrings oder andere sensible Informationen zu GitHub committen – besonders nicht in öffentlichen Repositories. Einmal geleakt, werden sie von Crawlern sofort erfasst, mit schwerwiegenden Folgen.</li>
-                            <li>Wer versehentlich sensible Informationen committet hat, reicht es nicht, die Datei zu löschen (in der Historie steht sie noch). Nutze<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code>oder spezielle Tools, um die Historie zu bereinigen, und wechsle sofort die geleakten Schlüssel.</li>
+                            <li>Wer versehentlich sensible Informationen committet hat, reicht es nicht, die Datei zu löschen (in der Historie steht sie noch). Nutze<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> oder spezielle Tools, um die Historie zu bereinigen, und wechsle sofort die geleakten Schlüssel.</li>
                             <li>Auch private Repositories sind nicht absolut sicher; sensible Informationen sollten vorzugsweise über Umgebungsvariablen verwaltet werden und nicht ins Code-Repository gelangen.</li>
                         </ul>
                     </div>
@@ -6749,7 +6749,7 @@
                         <p class="font-semibold"><i class="fas fa-hands mr-2"></i>Leg los: Dein GitHub-Erlebnis</p>
                         <ol class="list-decimal pl-6 mt-1 space-y-1">
                             <li>Ein GitHub-Konto registrieren und das Profil vervollständigen (Avatar, Kurzprofil, interessante Technikbereiche).</li>
-                            <li>Ein öffentliches Repository namens<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">hello-github</code>erstellen und "Add a README file" ankreuzen.</li>
+                            <li>Ein öffentliches Repository namens<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">hello-github</code> erstellen und "Add a README file" ankreuzen.</li>
                             <li>Das Repository öffnen, auf die Bearbeiten-Schaltfläche der README.md (Bleistift-Symbol) klicken, mit Markdown eine Selbstvorstellung schreiben und die Änderung committen.</li>
                             <li>In der GitHub-Suchleiste ein interessantes Stichwort suchen (z. B.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python-tutorial</code>) und zwei Projekte mit einem Stern markieren.</li>
                             <li>(Fortgeschritten) Git auf dem Computer installieren, das Repository lokal klonen, die README ändern und zur Cloud zurückpushen – ein vollständiger "Lokal → Cloud"-Workflow.</li>

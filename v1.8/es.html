@@ -5159,7 +5159,7 @@
             <!-- 3,Sección intermedia -->
             <section id="jin-jie-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">III. Parte avanzada (Capítulos 15-20)</h2>
-                <p class="chapter-intro mb-4">2. Principales protocolos de carga rápida explicados</p>
+                <p class="chapter-intro mb-4">Después de dominar los fundamentos y las aplicaciones de software, profundicemos en las funciones avanzadas del teléfono inteligente. Este contenido te ayudará a convertirte en un verdadero experto e incluso desbloquear algunas "habilidades ocultas".</p>
 
                 <!-- Capítulo 15 -->
                 <div id="di-shi-wu-zhang" class="mb-10 content-section">
@@ -5857,7 +5857,7 @@
                         <li>En el telefono: entra en opciones de desarrollador y activa "Depuracion USB".</li>
                         <li>En el ordenador: descarga Platform Tools de Google (incluye <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb</code> Incluir contexto en vez de aislarlo <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">fastboot</code> dos ejecutables) y descomprime en cualquier carpeta.</li>
                         <li>Conecta el telefono por cable; aparecera "Permitir depuracion USB", marca "Permitir siempre" y acepta.</li>
-                        <li>En la linea de comandos del ordenador (PowerShell o cmd en Windows) ejecuta <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code>; si la respuesta es algo como <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">List of devices attached / xxxxxxxx device</code>esta conectado.</li>
+                        <li>En la linea de comandos del ordenador (PowerShell o cmd en Windows) ejecuta <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb devices</code>; si la respuesta es algo como <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">List of devices attached / xxxxxxxx device</code> esta conectado.</li>
                     </ol>
 
                     <div class="warning-box rounded-lg p-4 mt-4">
@@ -5990,7 +5990,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">II. Funciones principales y carácterísticas</h4>
 
                     <h5 class="font-semibold mt-3 mb-1">Entorno Linux completo</h5>
-                    <p class="mb-2">Termux <strong>Solo Bash integrado</strong> Este tipo de Shell. Si quieres usar Zsh, fish u otros Shells, necesitas instalarlos manualmente mediante un gestor de paquetes, por ejemplo:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>o<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Además, Termux soporta editores como Vim, Nano, Emacs, ofreciendo una experiencia de línea de comandos casi nativa. Los usuarios pueden instalar más de 2000 paquetes de software mediante "pkg install", incluyendo herramientas de desarrollo y seguridad como GCC, OpenSSH, SQLMap.</p>
+                    <p class="mb-2">Termux <strong>Solo Bash integrado</strong> Este tipo de Shell. Si quieres usar Zsh, fish u otros Shells, necesitas instalarlos manualmente mediante un gestor de paquetes, por ejemplo:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> o<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Además, Termux soporta editores como Vim, Nano, Emacs, ofreciendo una experiencia de línea de comandos casi nativa. Los usuarios pueden instalar más de 2000 paquetes de software mediante "pkg install", incluyendo herramientas de desarrollo y seguridad como GCC, OpenSSH, SQLMap.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">Gestor de paquetes potente</h5>
                     <p class="mb-2">Usa el gestor de paquetes APT (similar a Debian/Ubuntu) para instalar miles de paquetes Linux: herramientas de desarrollo, red, etc. Soporta Python, Ruby, Node.js, Go, Rust, Swift y más.</p>
@@ -6057,13 +6057,13 @@
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
                         <li><strong>Descargar App</strong>: Descarga e instala Termux desde canales oficiales (F-Droid o GitHub), sin permisos de root.</li>
                         <li><strong>Inicializar el sistema</strong>: Tras el primer arranque, espera a que termine «Installing bootstrap packages».</li>
-                        <li><strong>Conseguir el permiso de almacenamiento</strong>: ejecuta<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>para obtener acceso al sistema de archivos del móvil.</li>
-                        <li><strong>Actualizar los repositorios de software</strong>: ejecuta<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>para actualizar la lista de paquetes.</li>
+                        <li><strong>Conseguir el permiso de almacenamiento</strong>: ejecuta<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> para obtener acceso al sistema de archivos del móvil.</li>
+                        <li><strong>Actualizar los repositorios de software</strong>: ejecuta<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> para actualizar la lista de paquetes.</li>
                     </ol>
 
                     <h5 class="font-semibold mt-3 mb-1">Optimizacion básica</h5>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Cambiar repositorio espejo</strong>:usa el comando<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code>para cambiar el repositorio espejo mediante interfaz gráfica (recomendado: mirror de Universidad de Tsinghua).</li>
+                        <li><strong>Cambiar repositorio espejo</strong>:usa el comando<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code> para cambiar el repositorio espejo mediante interfaz gráfica (recomendado: mirror de Universidad de Tsinghua).</li>
                         <li><strong>Configuracion de atajos de teclado</strong>: volumen - simula Ctrl, volumen + simula Esc; mejora la eficiencia de entrada.</li>
                         <li><strong>Embellecer interfaz</strong>: instala Zsh + Oh My Zsh, configura temas y plugins.</li>
                     </ul>
@@ -6094,9 +6094,9 @@
                         <p class="font-semibold"><i class="fas fa-hands mr-2"></i>Practica: ejecuta tu primer comando Linux en el móvil</p>
                         <ol class="list-decimal pl-6 mt-1 space-y-1">
                             <li>Descarga e instala Termux desde F-Droid; espera la inicializacion al primer inicio.</li>
-                            <li>Ejecuta<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>para actualizar los paquetes.</li>
+                            <li>Ejecuta<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> para actualizar los paquetes.</li>
                             <li>Instala Python:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install python</code>.</li>
-                            <li>Escribe<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>y disfruta ejecutar código en tu móvil.</li>
+                            <li>Escribe<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code> y disfruta ejecutar código en tu móvil.</li>
                         </ol>
                     </div>
                 </div>
@@ -6105,7 +6105,7 @@
             <!-- 4,Sección avanzada -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">IV. Parte de superación (Capítulos 21-26)</h2>
-                <p class="chapter-intro mb-4">Primero la conclusión:</p>
+                <p class="chapter-intro mb-4">Esta parte te llevará a un mundo digital más profundo. Desde la seguridad de la información hasta los principios de la IA, desde el pensamiento computacional hasta el legado digital, estos contenidos te ayudarán a convertirte en un verdadero ciudadano digital.</p>
 
                 <!-- Capítulo 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
@@ -6726,7 +6726,7 @@
                         <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>Recordatorío de seguridad</p>
                         <ul class="list-disc pl-6 mt-1 space-y-1">
                             <li>Nunca subas contraseñas, claves API, cadenas de conexión a bases de datos u otra información sensible a GitHub, especialmente en repositorios públicos — una vez filtrada, los rastreadores la capturarán al instante con graves consecuencias.</li>
-                            <li>Si por error subiste información sensible, no basta con borrar el archivo (todavía está en el historial); usa<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code>o herramientas profesionales para limpiar el historial y cambia inmediatamente las claves filtradas.</li>
+                            <li>Si por error subiste información sensible, no basta con borrar el archivo (todavía está en el historial); usa<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> o herramientas profesionales para limpiar el historial y cambia inmediatamente las claves filtradas.</li>
                             <li>Los repositorios privados tampoco son absolutamente seguros; lo mejor es gestionar la información sensible con variables de entorno, sin incluirla en el repositorio de código.</li>
                         </ul>
                     </div>
@@ -8272,7 +8272,7 @@
             <!-- Especial de ninos y moviles(Capítulo 35) -->
             <section id="er-tong-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">La cámara del teléfono es la que más usas; estos diez consejos mejoran tus fotos:</h2>
-                <p class="chapter-intro mb-4">Limpia el objetivo antes de tomar fotos importantes</p>
+                <p class="chapter-intro mb-4">La relación entre los niños y el móvil es uno de los mayores quebraderos de cabeza para esta generación de padres. Si lo das demasiado pronto, temes la adicción; si demasiado tarde, temes que se queden atrás. Si controlas de más, provocas rebeldía; si controlas de menos, pierdes el control. Este capítulo no toma partido ni da sermones: solo descompone «a qué edad darlo, cómo gestionarlo, cómo enseñarlo y cómo protegerlo» en pasos ejecutables, para ayudarte a ser un padre con criterio en la era digital.</p>
 
                 <!-- Capítulo 35 -->
                 <div id="di-san-shi-wu-zhang" class="mb-10 content-section">

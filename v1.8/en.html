@@ -5127,7 +5127,7 @@
             <!-- 3,Intermediate section -->
             <section id="jin-jie-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">III. Advanced (Chapters 15-20)</h2>
-                <p class="chapter-intro mb-4">Charge as you use</p>
+                <p class="chapter-intro mb-4">After mastering the basics and software applications, let's dive deeper into the advanced features of your phone. This content will help you become a true phone expert and even unlock some "hidden skills".</p>
 
                 <!-- Chapter 15 -->
                 <div id="di-shi-wu-zhang" class="mb-10 content-section">
@@ -5828,7 +5828,7 @@
                         <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb uninstall com.xxx.xxx</code>: Uninstalls an app by package name.</li>
                         <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb push [computer path] /sdcard/[target path]</code>: Pushes a file from the computer to the phone.</li>
                         <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb pull /sdcard/[file] [computer path]</code>: Pulls a file from the phone to the computer (much faster than sending it to yourself on WeChat and downloading).</li>
-                        <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell</code>: Enters the phone's Linux shell, can directly execute <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls</code>and<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm</code>and<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">am</code> and other commands.</li>
+                        <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell</code>: Enters the phone's Linux shell, can directly execute <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls</code> and<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pm</code> and<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">am</code> and other commands.</li>
                         <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot bootloader</code>: Reboots the phone into Fastboot mode (the entry point for flashing).</li>
                         <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb reboot recovery</code>: Reboots into Recovery mode.</li>
                         <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">adb shell pm list packages</code>: Lists all installed app package names on the phone (essential for finding package names). Add <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-s</code> to see only system apps, add <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">-3</code> to see only third-party apps.</li>
@@ -5947,7 +5947,7 @@
                     <h4 class="text-lg font-semibold mt-4 mb-2">2. Core Features and Characteristics</h4>
 
                     <h5 class="font-semibold mt-3 mb-1">🖥️ Complete Linux Environment</h5>
-                    <p class="mb-2">Termux <strong>Only Bash is Built-in</strong> is the only built-in shell. If you want to use Zsh, fish, or other shells, you need to install them manually via the package manager, for example:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>or<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Termux also supports editors like Vim, Nano, and Emacs, providing a near-native command-line experience. Users can install 2000+ packages via "pkg install," including GCC, OpenSSH, SQLMap, and other development and security tools.</p>
+                    <p class="mb-2">Termux <strong>Only Bash is Built-in</strong> is the only built-in shell. If you want to use Zsh, fish, or other shells, you need to install them manually via the package manager, for example:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> or<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Termux also supports editors like Vim, Nano, and Emacs, providing a near-native command-line experience. Users can install 2000+ packages via "pkg install," including GCC, OpenSSH, SQLMap, and other development and security tools.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">📦 Powerful Package Management</h5>
                     <p class="mb-2">Uses the APT package manager (similar to Debian and Ubuntu), can install thousands of Linux software packages, covering development tools, network tools, and more. Supports multiple programming language environments including Python, Ruby, Node.js, Go, Rust, and Swift.</p>
@@ -6014,13 +6014,13 @@
                     <ol class="list-decimal pl-6 mb-3 space-y-1">
                         <li><strong>Download the app</strong>: Download and install Termux from official channels (F-Droid or GitHub), no root permission required.</li>
                         <li><strong>Initialize the system</strong>: Wait for "Installing bootstrap packages" to complete after first launch.</li>
-                        <li><strong>Get storage permission</strong>: Execute<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>to get phone file system permission.</li>
-                        <li><strong>Update package sources</strong>: Execute<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">: Use the</code>to update the package list.</li>
+                        <li><strong>Get storage permission</strong>: Execute<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> to get phone file system permission.</li>
+                        <li><strong>Update package sources</strong>: Execute<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">: Use the</code> to update the package list.</li>
                     </ol>
 
                     <h5 class="font-semibold mt-3 mb-1">⚙️ Basic Optimization</h5>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>Change mirror source</strong>: Use the<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Enter</code>command to change the mirror source through a graphical interface (Tsinghua University mirror recommended).</li>
+                        <li><strong>Change mirror source</strong>: Use the<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Enter</code> command to change the mirror source through a graphical interface (Tsinghua University mirror recommended).</li>
                         <li><strong>Shortcut settings</strong>: Volume down key simulates Ctrl, volume up key simulates Esc, improving input efficiency.</li>
                         <li><strong>Interface beautification</strong>: Install Zsh + Oh My Zsh, configure themes and plugins.</li>
                     </ul>
@@ -6051,7 +6051,7 @@
                         <p class="font-semibold"><i class="fas fa-hands mr-2"></i>Hands-on: Run Your First Linux Command on Your Phone</p>
                         <ol class="list-decimal pl-6 mt-1 space-y-1">
                             <li>Download and install Termux from F-Droid, wait for initialization to complete on first launch.</li>
-                            <li>Execute<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>to update packages.</li>
+                            <li>Execute<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> to update packages.</li>
                             <li>Install Python:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install python</code>.</li>
                             <li>Enter<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>, and experience the joy of running code on your phone.</li>
                         </ol>
@@ -6062,7 +6062,7 @@
             <!-- 4,Beyond section -->
             <section id="chao-yue-pian" class="mb-12">
                 <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">IV. Beyond (Chapters 21-26)</h2>
-                <p class="chapter-intro mb-4">Regular internet access</p>
+                <p class="chapter-intro mb-4">This section will take you into a deeper digital world. From information security to AI principles, from computational thinking to digital legacy, this content will help you become a true digital citizen.</p>
 
                 <!-- Chapter 21 -->
                 <div id="di-er-shi-yi-zhang" class="mb-10 content-section">
@@ -6683,7 +6683,7 @@
                         <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>Security Reminder</p>
                         <ul class="list-disc pl-6 mt-1 space-y-1">
                             <li>Never commit sensitive information like passwords, API keys, database connection strings to GitHub, especially public repositories—once leaked, they'll be scraped by crawlers in seconds, with serious consequences.</li>
-                            <li>If you accidentally commit sensitive information, just deleting the file isn't enough (it's still in the history); use<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code>or professional tools to clean history, and immediately change the leaked keys.</li>
+                            <li>If you accidentally commit sensitive information, just deleting the file isn't enough (it's still in the history); use<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> or professional tools to clean history, and immediately change the leaked keys.</li>
                             <li>Private repositories aren't absolutely secure either; sensitive information is best managed with environment variables, not in code repositories.</li>
                         </ul>
                     </div>
