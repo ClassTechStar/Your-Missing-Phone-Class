@@ -125,3 +125,20 @@ python -m bookkit release --release-version v1.8   # → dist/release/
   属下一步，接口已在 `manifest` 预留 `language_descriptions`。
 - `release` 只生成待打包清单与校验和；APK 打包仍依赖外部 Android 工具链，不在本仓库内。
 - 历史版本（v1.5–v1.7）按"只修元数据、不重排内容"的归档策略处理，`lint` 对它们使用 warn 级门槛。
+
+## 九、多语言章节标题与 PDF 管线（2026-10 增补）
+
+| 脚本 | 作用 |
+| --- | --- |
+| `python scripts/inventory_titles.py [版本...]` | 全量体检：84 节 h3 的章前缀分类（title/supplement/corrupt），修完应为全 0（v1.7/lzh.html 除外，已知 NUL 损坏） |
+| `python scripts/analyze_numbering.py v1.8` | 各文件章编号样式分布（多数派应唯一） |
+| `python scripts/repair_headings.py [--apply] [版本...]` | 损坏标题回填（v1.6/v1.5 → 侧栏兜底）+ 编号统一 + 逐槽校验；翻译覆盖表在 `translation_overrides.py` |
+| `python scripts/verify_pdf_toc.py [语言...]` | 校验 `latex/<lang>/main.toc` 章级目录风格唯一 |
+| `bash scripts/build_pdfs.sh <语言...>` | `bookkit latex` 生成 + XeLaTeX 两遍编译（MiKTeX） |
+
+编号约定（勿混用）：非中文语言一律阿拉伯数字（词形数字→数字）；**日语统一汉字数字**（第零章…第六十九章，
+对齐中文源稿）；zh 系保持汉字。语言基准用同版本 `zh-CN.html`（v1.5/v1.6 书结构不同）。
+
+`bookkit latex` 行为（2026-10 增补）：篇标题取自 HTML 各语言 `<section id>` 的 h2；书名取自
+`manifest/languages.json` 的 `language_descriptions`；babel 连字（de/ru/el/fr/es/it/pt/id/vi）+
+`\shorthandoff`（de/fr）；`\emergencystretch=3em` 与代码内 `.-_/-` 断行兜底长复合词/长标识符溢出。

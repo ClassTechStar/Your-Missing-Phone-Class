@@ -1,0 +1,885 @@
+{
+ "v1.8/ar": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\ar.pdf",
+  "pages": 398,
+  "issues": [
+   "章编号风格混用：规范 46 条 / 异风格 22 条（期望全部 الفصل N）",
+   "章号非严格递增 1 处（如 [8, 13, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35]）"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 68,
+  "appendices": 3,
+  "meta_title": "إتقان الهاتف! الكورس الرقمي الإلزامي الواجب على كل مبتدئ v1."
+ },
+ "v1.8/de": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\de.pdf",
+  "pages": 508,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）",
+   "过期标记[损坏小节标题] ×2"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 70,
+  "appendices": 4,
+  "meta_title": "Handy im Griff! Der digitale Grundkurs für Einsteiger v1.8"
+ },
+ "v1.8/el": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\el.pdf",
+  "pages": 475,
+  "issues": [
+   "章编号风格混用：规范 69 条 / 异风格 1 条（期望全部 Κεφάλαιο N）",
+   "章号非严格递增 1 处（如 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]）",
+   "过期标记[και 粘连] ×46"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 70,
+  "appendices": 5,
+  "meta_title": "Κατάκτησε το κινητό σου! Τα απαραίτητα μαθήματα ψηφιακών δεξ"
+ },
+ "v1.8/en": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\en.pdf",
+  "pages": 470,
+  "issues": [
+   "章编号风格混用：规范 70 条 / 异风格 1 条（期望全部 Chapter N）",
+   "章号非严格递增 2 处（如 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11]）",
+   "过期标记[词形章号] ×4"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 71,
+  "appendices": 5,
+  "meta_title": "Master Your Phone! The Must-Learn Digital Literacy Course fo"
+ },
+ "v1.8/es": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\es.pdf",
+  "pages": 495,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）",
+   "过期标记[附录C错标D(重复出现=过期)] ×2"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 70,
+  "appendices": 5,
+  "meta_title": "¡Domina tu móvil! El curso digital básico para principiantes"
+ },
+ "v1.8/fr": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\fr.pdf",
+  "pages": 510,
+  "issues": [
+   "章编号风格混用：规范 69 条 / 异风格 2 条（期望全部 Chapitre N）",
+   "章号非严格递增 2 处（如 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]）",
+   "过期标记[词形章号] ×21"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 71,
+  "appendices": 8,
+  "meta_title": "Maîtrise ton téléphone ! Le cours numérique obligatoire des "
+ },
+ "v1.8/he": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\he.pdf",
+  "pages": 401,
+  "issues": [
+   "章编号风格混用：规范 60 条 / 异风格 1 条（期望全部 פרק N）",
+   "章号非严格递增 1 处（如 [0, 1, 4, 8, 9, 11, 12, 13, 14, 15, 16, 17]）",
+   "过期标记[词形章号] ×9"
+  ],
+  "warn": [],
+  "outline": 560,
+  "chapters": 61,
+  "appendices": 5,
+  "meta_title": "תשתלטו על הטלפון! הקורס הדיגיטלי החובה למתחילים v1.8"
+ },
+ "v1.8/id": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\id.pdf",
+  "pages": 501,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13]）"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 68,
+  "appendices": 8,
+  "meta_title": "Kuasai Ponsel! Kelas Wajib Digital untuk Pemula v1.8"
+ },
+ "v1.8/it": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\it.pdf",
+  "pages": 489,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 70,
+  "appendices": 8,
+  "meta_title": "Padroneggia lo smartphone! Il corso di base sul digitale per"
+ },
+ "v1.8/ja": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\ja.pdf",
+  "pages": 458,
+  "issues": [
+   "章编号风格混用：规范 14 条 / 异风格 50 条（期望全部 第N章 汉字）",
+   "过期标记[旧数字章号] ×128"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 64,
+  "appendices": 0,
+  "meta_title": "スマホ攻略！初心者必見のデジタル必修講座 v1.8"
+ },
+ "v1.8/ko": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\ko.pdf",
+  "pages": 401,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）"
+  ],
+  "warn": [],
+  "outline": 497,
+  "chapters": 70,
+  "appendices": 8,
+  "meta_title": "스마트폰 정복! 초보자가 꼭 배워야 할 디지털 필수 교양 v1.8"
+ },
+ "v1.8/lzh": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\lzh.pdf",
+  "pages": 372,
+  "issues": [
+   "章号非严格递增 2 处（如 [0, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]）",
+   "疑似竖排/单字成行页 1 页（如 [38]）"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 71,
+  "appendices": 0,
+  "meta_title": "搞定手機！小白必學之數碼必修課 v1.8"
+ },
+ "v1.8/ms": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\ms.pdf",
+  "pages": 505,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 8, 10, 13, 14, 17, 18, 19, 22, 23]）",
+   "过期标记[损坏小节标题] ×8"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 56,
+  "appendices": 5,
+  "meta_title": "Kuasai Telefon! Kelas Wajib Digital untuk Pengguna Baharu v1"
+ },
+ "v1.8/pt": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\pt.pdf",
+  "pages": 489,
+  "issues": [
+   "章编号风格混用：规范 69 条 / 异风格 1 条（期望全部 Capítulo N）",
+   "章号非严格递增 1 处（如 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]）",
+   "过期标记[词形章号] ×5"
+  ],
+  "warn": [],
+  "outline": 556,
+  "chapters": 70,
+  "appendices": 0,
+  "meta_title": "Domine o Celular! O Curso Essencial de Tecnologia para Inici"
+ },
+ "v1.8/ru": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\ru.pdf",
+  "pages": 524,
+  "issues": [
+   "章编号风格混用：规范 64 条 / 异风格 6 条（期望全部 Глава N）",
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）",
+   "过期标记[词形章号] ×14"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 70,
+  "appendices": 8,
+  "meta_title": "Освой смартфон! Обязательный курс цифровой грамотности для н"
+ },
+ "v1.8/th": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\th.pdf",
+  "pages": 418,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）"
+  ],
+  "warn": [],
+  "outline": 560,
+  "chapters": 70,
+  "appendices": 8,
+  "meta_title": "จัดการมือถือให้เป็น! วิชาพื้นฐานดิจิทัลที่มือใหม่ต้องเรียน v"
+ },
+ "v1.8/yue": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\yue.pdf",
+  "pages": 380,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 70,
+  "appendices": 0,
+  "meta_title": "搞定手機！小白必學嘅數碼必修課 v1.8"
+ },
+ "v1.8/zh-CN": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\zh-CN.pdf",
+  "pages": 378,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）",
+   "过期标记[占位标题] ×1"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 70,
+  "appendices": 0,
+  "meta_title": "搞定手机！小白必学的数码必修课 v1.8"
+ },
+ "v1.8/zh-TW": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.8\\zh-TW.pdf",
+  "pages": 380,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）"
+  ],
+  "warn": [],
+  "outline": 562,
+  "chapters": 70,
+  "appendices": 0,
+  "meta_title": "搞定手機！小白必學的數位必修課 v1.8"
+ },
+ "v1.7/ar": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\ar.pdf",
+  "pages": 287,
+  "issues": [
+   "章编号风格混用：规范 16 条 / 异风格 24 条（期望全部 الفصل N）"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 40,
+  "appendices": 0,
+  "meta_title": "إتقان الهاتف! الدرس الإلزامي الرقمي للمبتدئين v1.7"
+ },
+ "v1.7/de": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\de.pdf",
+  "pages": 348,
+  "issues": [],
+  "warn": [],
+  "outline": 349,
+  "chapters": 29,
+  "appendices": 4,
+  "meta_title": "Meistere dein Smartphone! Der digitale Pflichtkurs fuer Eins"
+ },
+ "v1.7/el": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\el.pdf",
+  "pages": 286,
+  "issues": [
+   "章编号风格混用：规范 44 条 / 异风格 1 条（期望全部 Κεφάλαιο N）",
+   "章号非严格递增 3 处（如 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11]）",
+   "过期标记[και 粘连] ×51"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 45,
+  "appendices": 0,
+  "meta_title": "Κατακτήστε το κινητό! Το ψηφιακό υποχρεωτικό μάθημα για αρχά"
+ },
+ "v1.7/en": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\en.pdf",
+  "pages": 330,
+  "issues": [
+   "章编号风格混用：规范 31 条 / 异风格 1 条（期望全部 Chapter N）",
+   "过期标记[词形章号] ×4"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 32,
+  "appendices": 4,
+  "meta_title": "Master Your Phone! Digital Essentials Beginners Must Learn v"
+ },
+ "v1.7/es": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\es.pdf",
+  "pages": 338,
+  "issues": [
+   "过期标记[附录C错标D(重复出现=过期)] ×1"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 33,
+  "appendices": 5,
+  "meta_title": "¡Domina tu móvil! Curso digital obligatorio para principiant"
+ },
+ "v1.7/fr": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\fr.pdf",
+  "pages": 343,
+  "issues": [
+   "章编号风格混用：规范 41 条 / 异风格 2 条（期望全部 Chapitre N）",
+   "章号非严格递增 1 处（如 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]）",
+   "过期标记[词形章号] ×13"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 43,
+  "appendices": 8,
+  "meta_title": "Maîtrisez votre smartphone ! Le cours obligatoire sur le num"
+ },
+ "v1.7/he": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\he.pdf",
+  "pages": 277,
+  "issues": [
+   "章编号风格混用：规范 30 条 / 异风格 1 条（期望全部 פרק N）",
+   "过期标记[词形章号] ×5"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 31,
+  "appendices": 5,
+  "meta_title": "תפוס את הטלפון! קורס דיגיטלי חובה למתחילים v1.7"
+ },
+ "v1.7/id": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\id.pdf",
+  "pages": 333,
+  "issues": [],
+  "warn": [],
+  "outline": 353,
+  "chapters": 40,
+  "appendices": 8,
+  "meta_title": "Kuasai Ponsel! Kursus Wajib Digital untuk Pemula v1.7"
+ },
+ "v1.7/it": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\it.pdf",
+  "pages": 316,
+  "issues": [],
+  "warn": [],
+  "outline": 333,
+  "chapters": 37,
+  "appendices": 8,
+  "meta_title": "Padroneggia il cellulare! Corso obbligatorio digitale per pr"
+ },
+ "v1.7/ja": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\ja.pdf",
+  "pages": 334,
+  "issues": [
+   "章编号风格混用：规范 1 条 / 异风格 33 条（期望全部 第N章 汉字）",
+   "过期标记[旧数字章号] ×85"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 34,
+  "appendices": 0,
+  "meta_title": "スマホを制覇！初心者必須のデジタル必修講座 v1.7"
+ },
+ "v1.7/ko": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\ko.pdf",
+  "pages": 258,
+  "issues": [],
+  "warn": [],
+  "outline": 266,
+  "chapters": 37,
+  "appendices": 8,
+  "meta_title": "스마트폰 마스터하기！초보자를 위한 필수 디지털 과정 v1.7"
+ },
+ "v1.7/lzh": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\lzh.pdf",
+  "pages": 271,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]）"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 22,
+  "appendices": 0,
+  "meta_title": "搞定手机！小白必学之数码必修课 v1.7"
+ },
+ "v1.7/ms": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\ms.pdf",
+  "pages": 335,
+  "issues": [
+   "过期标记[损坏小节标题] ×4"
+  ],
+  "warn": [],
+  "outline": 353,
+  "chapters": 28,
+  "appendices": 5,
+  "meta_title": "Kuasai Telefon! Kursus Wajib Digital untuk Pemula v1.7"
+ },
+ "v1.7/pt": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\pt.pdf",
+  "pages": 319,
+  "issues": [
+   "章编号风格混用：规范 36 条 / 异风格 1 条（期望全部 Capítulo N）",
+   "过期标记[词形章号] ×3"
+  ],
+  "warn": [],
+  "outline": 327,
+  "chapters": 37,
+  "appendices": 0,
+  "meta_title": "Domine o celular! Curso obrigatório de tecnologia para inici"
+ },
+ "v1.7/ru": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\ru.pdf",
+  "pages": 339,
+  "issues": [
+   "章编号风格混用：规范 29 条 / 异风格 8 条（期望全部 Глава N）",
+   "过期标记[词形章号] ×14"
+  ],
+  "warn": [],
+  "outline": 333,
+  "chapters": 37,
+  "appendices": 8,
+  "meta_title": "Освойте свой телефон! Обязательный цифровой курс для новичко"
+ },
+ "v1.7/th": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\th.pdf",
+  "pages": 302,
+  "issues": [],
+  "warn": [],
+  "outline": 353,
+  "chapters": 29,
+  "appendices": 4,
+  "meta_title": "เข้าใจโทรศัพท์! วิชาบังคับดิจิทัลที่มือใหม่ต้องเรียน v1.7"
+ },
+ "v1.7/yue": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\yue.pdf",
+  "pages": 265,
+  "issues": [],
+  "warn": [],
+  "outline": 333,
+  "chapters": 37,
+  "appendices": 0,
+  "meta_title": "搞掂手機！新手必學嘅數碼必修課 v1.7"
+ },
+ "v1.7/zh-CN": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\zh-CN.pdf",
+  "pages": 269,
+  "issues": [],
+  "warn": [],
+  "outline": 338,
+  "chapters": 42,
+  "appendices": 0,
+  "meta_title": "搞定手机！小白必学的数码必修课 v1.7"
+ },
+ "v1.7/zh-TW": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.7\\zh-TW.pdf",
+  "pages": 266,
+  "issues": [],
+  "warn": [],
+  "outline": 333,
+  "chapters": 37,
+  "appendices": 0,
+  "meta_title": "搞定手機！小白必學的數碼必修課 v1.7"
+ },
+ "v1.6/ar": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\ar.pdf",
+  "pages": 173,
+  "issues": [
+   "章编号风格混用：规范 0 条 / 异风格 27 条（期望全部 الفصل N）"
+  ],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 6,
+  "meta_title": "أتقن هاتفك! الدورة الرقمية الإلزامية للمبتدئين v1.6"
+ },
+ "v1.6/de": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\de.pdf",
+  "pages": 201,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）",
+   "过期标记[损坏小节标题] ×1"
+  ],
+  "warn": [],
+  "outline": 233,
+  "chapters": 27,
+  "appendices": 6,
+  "meta_title": "Meistere dein Smartphone! Der digitale Pflichtkurs für Einst"
+ },
+ "v1.6/el": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\el.pdf",
+  "pages": 176,
+  "issues": [
+   "章编号风格混用：规范 29 条 / 异风格 1 条（期望全部 Κεφάλαιο N）",
+   "章号非严格递增 3 处（如 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11]）",
+   "过期标记[και 粘连] ×58"
+  ],
+  "warn": [],
+  "outline": 234,
+  "chapters": 30,
+  "appendices": 0,
+  "meta_title": "Κατακτήστε το κινητό τηλέφωνο! Το ψηφιακό υποχρεωτικό μάθημα"
+ },
+ "v1.6/en": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\en.pdf",
+  "pages": 187,
+  "issues": [
+   "章编号风格混用：规范 26 条 / 异风格 1 条（期望全部 Chapter N）",
+   "附录字母顺序错乱：['Chapter 20 Appendix: Termux—A Portable Linux Terminal Environment on Android Devices', 'A', 'B', 'C', 'D', 'E', 'F']",
+   "过期标记[词形章号] ×3"
+  ],
+  "warn": [],
+  "outline": 233,
+  "chapters": 27,
+  "appendices": 7,
+  "meta_title": "Master Your Phone! The Digital Essentials Course Beginners M"
+ },
+ "v1.6/es": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\es.pdf",
+  "pages": 190,
+  "issues": [
+   "过期标记[附录C错标D(重复出现=过期)] ×1"
+  ],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 4,
+  "meta_title": "¡Domina tu móvil! El curso digital obligatorio para principi"
+ },
+ "v1.6/fr": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\fr.pdf",
+  "pages": 205,
+  "issues": [
+   "章编号风格混用：规范 26 条 / 异风格 2 条（期望全部 Chapitre N）",
+   "章号非严格递增 1 处（如 [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]）",
+   "过期标记[词形章号] ×13"
+  ],
+  "warn": [],
+  "outline": 234,
+  "chapters": 28,
+  "appendices": 6,
+  "meta_title": "Maîtrisez votre smartphone ! Le cours numérique indispensabl"
+ },
+ "v1.6/he": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\he.pdf",
+  "pages": 179,
+  "issues": [
+   "章编号风格混用：规范 24 条 / 异风格 3 条（期望全部 פרק N）",
+   "过期标记[词形章号] ×12"
+  ],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "תפוס את הטלפון! קורס דיגיטלי חובה למתחילים v1.6"
+ },
+ "v1.6/id": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\id.pdf",
+  "pages": 197,
+  "issues": [],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 6,
+  "meta_title": "Kuasai Ponsel! Mata Kuliah Wajib Digital untuk Pemula v1.6"
+ },
+ "v1.6/it": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\it.pdf",
+  "pages": 193,
+  "issues": [],
+  "warn": [],
+  "outline": 233,
+  "chapters": 27,
+  "appendices": 6,
+  "meta_title": "Padroneggia il Telefono! Corso Digitale Essenziale per Princ"
+ },
+ "v1.6/ja": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\ja.pdf",
+  "pages": 188,
+  "issues": [
+   "章编号风格混用：规范 17 条 / 异风格 10 条（期望全部 第N章 汉字）",
+   "过期标记[旧数字章号] ×26"
+  ],
+  "warn": [],
+  "outline": 233,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "スマホを制覇！初心者必須のデジタル必修講座 v1.6"
+ },
+ "v1.6/ko": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\ko.pdf",
+  "pages": 180,
+  "issues": [],
+  "warn": [],
+  "outline": 234,
+  "chapters": 19,
+  "appendices": 6,
+  "meta_title": "스마트폰 정복! 초보자 필수 디지털 필수 과정 v1.6"
+ },
+ "v1.6/lzh": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\lzh.pdf",
+  "pages": 157,
+  "issues": [],
+  "warn": [],
+  "outline": 227,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "通晓手机！初学者必习之数码必修课 v1.6"
+ },
+ "v1.6/ms": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\ms.pdf",
+  "pages": 198,
+  "issues": [
+   "过期标记[损坏小节标题] ×1"
+  ],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 6,
+  "meta_title": "Kuasai Telefon Pintar Anda! Kursus Wajib Digital untuk Pemul"
+ },
+ "v1.6/pt": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\pt.pdf",
+  "pages": 197,
+  "issues": [
+   "章编号风格混用：规范 26 条 / 异风格 1 条（期望全部 Capítulo N）",
+   "过期标记[词形章号] ×3"
+  ],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "Domine seu celular! Curso digital essencial para iniciantes "
+ },
+ "v1.6/ru": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\ru.pdf",
+  "pages": 206,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]）"
+  ],
+  "warn": [],
+  "outline": 234,
+  "chapters": 28,
+  "appendices": 6,
+  "meta_title": "Освойте телефон! Обязательный курс цифровой грамотности для "
+ },
+ "v1.6/th": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\th.pdf",
+  "pages": 177,
+  "issues": [],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 6,
+  "meta_title": "พิชิตโทรศัพท์มือถือ! วิชาบังคับดิจิทัลที่มือใหม่ต้องเรียน v1"
+ },
+ "v1.6/yue": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\yue.pdf",
+  "pages": 144,
+  "issues": [
+   "章号非严格递增 1 处（如 [0, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]）"
+  ],
+  "warn": [],
+  "outline": 215,
+  "chapters": 26,
+  "appendices": 0,
+  "meta_title": "搞掂手機！小白必學嘅數碼必修課 v1.6"
+ },
+ "v1.6/zh-CN": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\zh-CN.pdf",
+  "pages": 162,
+  "issues": [],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "搞定手机！小白必学的数码必修课 v1.6"
+ },
+ "v1.6/zh-TW": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.6\\zh-TW.pdf",
+  "pages": 164,
+  "issues": [],
+  "warn": [],
+  "outline": 234,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "搞定手機！小白必學的數位必修課 v1.6"
+ },
+ "v1.5/el": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\el.pdf",
+  "pages": 125,
+  "issues": [
+   "章编号风格混用：规范 25 条 / 异风格 1 条（期望全部 Κεφάλαιο N）",
+   "章号非严格递增 1 处（如 [1, 1, 2, 4, 6, 7, 8, 9, 10, 11, 12, 13]）"
+  ],
+  "warn": [],
+  "outline": 145,
+  "chapters": 26,
+  "appendices": 0,
+  "meta_title": "Ολοκληρώστε το τηλέφωνο! Η Xiaobai πρέπει να μάθει το ψηφιακ"
+ },
+ "v1.5/en": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\en.pdf",
+  "pages": 120,
+  "issues": [
+   "章号非严格递增 2 处（如 [0, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]）"
+  ],
+  "warn": [],
+  "outline": 163,
+  "chapters": 29,
+  "appendices": 5,
+  "meta_title": "Master Your Phone! Essential Digital Skills for Beginners v1"
+ },
+ "v1.5/es": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\es.pdf",
+  "pages": 127,
+  "issues": [
+   "章编号风格混用：规范 24 条 / 异风格 3 条（期望全部 Capítulo N）"
+  ],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 5,
+  "meta_title": "Domina tu teléfono! Curso digital obligatorio para principia"
+ },
+ "v1.5/fr": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\fr.pdf",
+  "pages": 119,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 5,
+  "meta_title": "Finissez le téléphone ! v1.5"
+ },
+ "v1.5/id": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\id.pdf",
+  "pages": 123,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 5,
+  "meta_title": "Kuasai Ponsel! Kursus Wajib Digital untuk Pemula v1.5"
+ },
+ "v1.5/it": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\it.pdf",
+  "pages": 126,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 5,
+  "meta_title": "Padroneggia lo Smartphone! Il corso digitale obbligatorio pe"
+ },
+ "v1.5/ja": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\ja.pdf",
+  "pages": 121,
+  "issues": [
+   "章编号风格混用：规范 0 条 / 异风格 27 条（期望全部 第N章 汉字）",
+   "过期标记[旧数字章号] ×67"
+  ],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "スマホをマスター！初心者必須のデジタル必修講座 v1.5"
+ },
+ "v1.5/ko": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\ko.pdf",
+  "pages": 116,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 3,
+  "meta_title": "스마트폰 정복! 초보자 필수 디지털 필수 과정 v1.5"
+ },
+ "v1.5/lzh": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\lzh.pdf",
+  "pages": 105,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "驾驭手机！初涉者必习之数码功课也 v1.5"
+ },
+ "v1.5/ms": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\ms.pdf",
+  "pages": 123,
+  "issues": [
+   "章编号风格混用：规范 23 条 / 异风格 4 条（期望全部 Bab N）"
+  ],
+  "warn": [],
+  "outline": 161,
+  "chapters": 27,
+  "appendices": 5,
+  "meta_title": "Kuasai Telefon Pintar! Kursus Wajib Digital untuk Pemula v1."
+ },
+ "v1.5/pt": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\pt.pdf",
+  "pages": 115,
+  "issues": [
+   "章编号风格混用：规范 26 条 / 异风格 2 条（期望全部 Capítulo N）",
+   "章号非严格递增 2 处（如 [8, 9, 10, 11, 11, 12, 13, 14, 15, 16, 17, 18]）",
+   "过期标记[词形章号] ×8"
+  ],
+  "warn": [],
+  "outline": 158,
+  "chapters": 28,
+  "appendices": 0,
+  "meta_title": "Domine o smartphone! Curso obrigatório de digital para inici"
+ },
+ "v1.5/ru": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\ru.pdf",
+  "pages": 127,
+  "issues": [
+   "章号非严格递增 2 处（如 [0, 1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]）",
+   "过期标记[词形章号] ×1"
+  ],
+  "warn": [],
+  "outline": 163,
+  "chapters": 29,
+  "appendices": 5,
+  "meta_title": "Покори смартфон! Обязательный цифровой курс для новичков v1."
+ },
+ "v1.5/th": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\th.pdf",
+  "pages": 112,
+  "issues": [
+   "章编号风格混用：规范 18 条 / 异风格 9 条（期望全部 บทที่ N）"
+  ],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 5,
+  "meta_title": "เอาชนะสมาร์ทโฟน! หลักสูตรดิจิทัลที่มือใหม่ต้องรู้ v1.5"
+ },
+ "v1.5/vi": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\vi.pdf",
+  "pages": 120,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 0,
+  "appendices": 5,
+  "meta_title": "Chiếc điện thoại trong tầm tay! Khóa học kỹ thuật số bắt buộ"
+ },
+ "v1.5/yue": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\yue.pdf",
+  "pages": 107,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "搞掂手機！小白必學嘅數碼必修課 v1.5"
+ },
+ "v1.5/zh-CN": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\zh-CN.pdf",
+  "pages": 106,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "搞定手机！小白必学的数码必修课 v1.5"
+ },
+ "v1.5/zh-TW": {
+  "file": "C:\\Users\\18948\\Documents\\手机课-LaTeX-PDF\\pdf\\v1.5\\zh-TW.pdf",
+  "pages": 107,
+  "issues": [],
+  "warn": [],
+  "outline": 163,
+  "chapters": 27,
+  "appendices": 0,
+  "meta_title": "搞定手機！小白必學的數碼必修課 v1.5"
+ }
+}
