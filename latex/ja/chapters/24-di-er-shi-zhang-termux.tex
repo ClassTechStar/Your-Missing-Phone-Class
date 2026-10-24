@@ -1,0 +1,115 @@
+\booksection{第二十章付録：Termux——Androidデバイス上のポータブルLinuxターミナル環境}
+
+\chapterintro{開発者モードでもまだ「ハードコア」不够だと思い、スマホで完全なLinuxコマンドラインを体験したいなら、Termuxはまさにあなたのためにあります。Root不要で、普通のAndroidスマホをポータブルLinuxワークステーションに変え、応用ユーザーがモバイル開発と運用保守を探求する強力なツールです。}
+
+\booksubsection{一、Termuxとは}
+
+Termuxの核心的優位性は軽量性と高い拡張性にあり、開発、学習、システム管理など多くのシーンに適しています。標準的なソフトウェアパッケージと精密なターミナルエミュレーションをオープンソースソリューションに統合しています。
+
+二、核心機能と特徴
+
+\booksubsection{二、核心機能と特徴}
+
+\subsubsection*{完全なLinux環境}
+
+Termux\textbf{Bash のみ内蔵}という1種類の Shell のみです。Zsh や fish などの他の Shell を使いたい場合は、パッケージマネージャーで手動インストールが必要です。例：\texttt{pkg install zsh}プロテクトモード\texttt{pkg install fish}。また Termux は Vim、Nano、Emacs などのエディターをサポートし、ネイティブに近いコマンドライン体験を提供します。ユーザーは「pkg install」で2000以上のパッケージをインストールでき、GCC、OpenSSH、SQLMap などの開発·セキュリティツールも含まれます。
+
+\subsubsection*{強力なパッケージ管理}
+
+セキュリティとネットワーク機能
+
+\subsubsection*{セキュリティとネットワーク機能}
+
+\begin{itemize}
+  \item \textbf{：SSHクライアントとサーバー機能をサポート、他デバイスへのリモート接続やスマホをSSHホストにすることが可能。}暗号化ツール
+  \item \textbf{：OpenSSLなどの暗号化ツールを提供、データ暗号化とセキュア通信をサポート。}サーバー構築
+  \item \textbf{：NginxやApacheを設定して静的ウェブページサーバーを構築可能。}システム統合と拡張
+\end{itemize}
+
+\subsubsection*{システム統合と拡張}
+
+\begin{itemize}
+  \item Termux:APIプラグインでセンサー、カメラなどAndroidハードウェア機能を呼び出し。
+  \item Bluetoothキーボードと外部ディスプレイの接続をサポート、完全なマウスサポートあり。
+  \item 三、プラグインエコシステム
+\end{itemize}
+
+\booksubsection{三、プラグインエコシステム}
+
+プラグイン名
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{機能説明} & \textbf{Termux:API} \tabularnewline
+\hline
+コマンドラインプログラムにAndroid API機能を公開 & Termux: Boot \tabularnewline
+デバイス起動時のスクリプト実行を許可 & Termux: Float \tabularnewline
+フローティングターミナルウィンドウを提供 & Termux: Styling \tabularnewline
+ターミナルでカラースキームとフォントカスタマイズを有効化 & Termux: Tasker \tabularnewline
+TermuxスクリプトをTasker自動化アプリと統合 & Termux: Widget \tabularnewline
+ホーム画面ウィジェットからスクリプト実行を許可 & 重要なヒント \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{Termuxとそのプラグインは同じソースからインストールする必要があります、同じsharedUserIdを共有するため。異なるソース（F-DroidとGitHubなど）からの混在インストールはインストールエラーになります。}
+四、インストールと設定ガイド
+
+\end{tcbwarn}
+
+\booksubsection{四、インストールと設定ガイド}
+
+\subsubsection*{インストール手順}
+
+\begin{enumerate}
+  \item \textbf{：公式チャネル（F-DroidまたはGitHub）からTermuxをダウンロードインストール、Root不要。}システム初期化
+  \item \textbf{：初回起動後「Installing bootstrap packages」の完了を待つ。}ストレージ権限の取得
+  \item \textbf{：}pkg update \&\& pkg upgrade\texttt{を実行してスマホファイルシステム権限を取得。}ソフトウェアソースの更新
+  \item \textbf{：}pkg update \&\& pkg upgrade\texttt{Pythonをインストール：}基本最適化
+\end{enumerate}
+
+\subsubsection*{基本最適化}
+
+\begin{itemize}
+  \item \textbf{：}termux-change-repo\texttt{コマンドでグラフィカルインターフェースからミラーソースを変更（清華大学ミラーソースを推奨）。}ショートカットキー設定
+  \item \textbf{：音量下キーがCtrlを、音量上キーがEscをエミュレート、入力効率を向上。}インターフェース美化
+  \item \textbf{：Zsh + Oh My Zshをインストール、テーマとプラグインを設定。}五、典型的な応用シーン
+\end{itemize}
+
+\booksubsection{五、典型的な応用シーン}
+
+\subsubsection*{モバイル開発テスト}
+
+サーバー運用保守
+
+\subsubsection*{サーバー運用保守}
+
+Linux操作の学習
+
+\subsubsection*{Linux操作の学習}
+
+リアルな Linux 環境を提供し、コマンドラインやシステム管理の学習に理想的なプラットフォームです。Shell スクリプト作成、Linux ファイル権限管理（例：\texttt{chmod 755}で rwxr-xr-x 権限を設定、\texttt{chown user: group}でファイル所有者を変更、\texttt{ls -\allowbreak l}で owner/group/other の3組9桁の権限を確認）などの基本コマンドを練習できます。これは Unix/Linux の古典的な「3組9桁」権限モデル（owner / group / other × 読み / 書き / 実行）で、Windows NTFS の ACL アクセス制御リストとは完全に異なる体系であることに注意してください。
+
+\subsubsection*{ネットワークセキュリティテスト}
+
+六、バージョンと互換性
+
+\booksubsection{六、バージョンと互換性}
+
+まとめ
+
+\begin{tcbinfo}{Termuxは強力なLinuxターミナル体験をAndroidデバイスにもたらし、スマホをポータブルな開発·学習ツールにします。開発者、システム管理者、技術愛好家のいずれも、Termuxを活用してモバイルデバイスで完全なコマンドライン体験を楽しみ、「ポケットの中のLinux」という理念を実現できます。}
+やってみよう：スマホで最初のLinuxコマンドを実行
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{F-DroidからTermuxをダウンロードインストール、初回起動で初期化完了を待つ。}
+\begin{enumerate}
+  \item pkg update \&\& pkg upgrade
+  \item を実行してパッケージを更新。\texttt{Pythonをインストール：}pkg install python
+  \item 。\texttt{python3 -\allowbreak c "print('Hello from Termux!')"}。
+  \item 四、超越編（第21-26章）\texttt{この編ではより深いデジタル世界にご案内します。情報セキュリティからAIの原理、プログラミング思考からデジタル遺産まで、これらのコンテンツはあなたを真のデジタル市民にします。}第二十一章：モバイルネットワークと情報セキュリティの深掘り
+\end{enumerate}
+
+\end{tcbpractice}

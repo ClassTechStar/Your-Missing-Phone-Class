@@ -1,0 +1,131 @@
+\bookchapter{Κεφάλαιο 24: Βαθιά ανάλυση δι και ω$\mu$άτων Root και κλειδώ$\mu$ατος Bootloader}
+
+\chapterintro{Επέκταση κεφ. 20. Κίνδυνοι.}
+
+\booksection{Bootloader}
+
+Bootloader = φύλακας.
+
+\booksubsection{Πώς δουλεύει BL:}
+
+\begin{itemize}
+  \item \textbf{Verify signature}: Digital signature.
+  \item \textbf{Anti-downgrade}: No old versions.
+  \item \textbf{Data protection}: No access without account.
+\end{itemize}
+
+\booksubsection{Αποθήκευση και επαλήθευση σε επίπεδο υλισ$\mu$ικού}
+
+BL Κλείδω$\mu$α(Locked/Unlocked),Αποθήκευση( devinfo ,eFuse RPMB ). Bootloader Ασφάλεια ανάγνωση, Υπογραφή επαλήθευση.
+
+\booksubsection{Επαλήθευση ψηφιακής υπογραφής}
+
+Δη$\mu$οσίευση Σύστη$\mu$α ενη$\mu$έρωση Image, Υπογραφή.Συσκευή, Bootloader Σύστη$\mu$α Image( boot.img, recovery.img)επαλήθευση.:
+
+\begin{enumerate}
+  \item Επανυπολογισ$\mu$ός hash του συστη$\mu$ικού image.
+  \item Αποκρυπτογράφηση της υπογραφής του image $\mu$ε το δη$\mu$όσιο κλειδί, παραγωγή hash.
+  \item Hash, επαλήθευση.Σύστη$\mu$α Image τρίτου.
+\end{enumerate}
+
+\booksubsection{Αλυσίδα ασφαλούς εκκίνησης}
+
+BL Ασφάλεια.επαλήθευση, φόρτωση(),Σύστη$\mu$α.
+
+\booksubsection{Κλειδω$\mu$ένο vs ξεκλείδωτο: Διπλή επίπτωση του BL Lock}
+
+BL , 5 κεντρικό Διάσταση:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Κεντρικός ρόλος} & \textbf{Κλειδω$\mu$ένο (προεπιλογή)} & \textbf{Ξεκλείδωτο} \tabularnewline
+\hline
+Ασφάλεια συστή$\mu$ατος & Αποτρέπει εγγραφή $\mu$η υπογεγρα$\mu$$\mu$ένων συστη$\mu$άτων, προστατεύει ακεραιότητα\newline Υψηλή ασφάλεια: φορτώνει $\mu$όνο επίση$\mu$α υπογεγρα$\mu$$\mu$ένα images & Ασφάλεια: επιτρέπεται τρίτου ROM, Σύστη$\mu$α, Root Δικαίω$\mu$α Σύστη$\mu$α \tabularnewline
+Σταθερότητα συστή$\mu$ατος & Εξασφαλίζει δοκι$\mu$ασ$\mu$ένο και βελτιστοποιη$\mu$ένο επίση$\mu$ο σύστη$\mu$α\newline Σταθερό: επίση$\mu$ο firmware, πλήρεις λειτουργίες, αξιόπιστο OTA & :τρίτου ROM ,Σύστη$\mu$α, Λειτουργία(,),OTA ενη$\mu$έρωση \tabularnewline
+Εγγύηση & Ο κατασκευαστής κλειδώνει το BL για να παρέχει σταθερό σύστη$\mu$α και εγγύηση\newline Εγγύηση ενεργή: δωρεάν επίση$\mu$η εξυπηρέτηση ($\mu$η ανθρώπινη ζη$\mu$ιά) & :Ξεκλείδω$\mu$α BL , Ξεκλείδω$\mu$α καταγραφή \tabularnewline
+Ασφάλεια δεδο$\mu$ένων & Το ξεκλείδω$\mu$α συνήθως διαγράφει δεδο$\mu$ένα, αποτρόπαια κακή χρήση\newline Δεδο$\mu$ένα Ασφάλεια: καθη$\mu$ερινό, BL περιορισ$\mu$ός Σύστη$\mu$α Τροποποίηση & Δεδο$\mu$ένα: Ξεκλείδω$\mu$α Εκκαθάριση Όλοι οι χρήστες Δεδο$\mu$ένα; Ξεκλείδω$\mu$α Κρυπτογράφηση, Δεδο$\mu$ένα Αποθήκευση Ασφάλεια; Flash Δεδο$\mu$ένα \tabularnewline
+Περιορισ$\mu$οί λειτουργιών & Εξασφαλίζει λειτουργίες που εξαρτώνται από ασφαλές περιβάλλον (πληρω$\mu$ές, τράπεζα)\newline Πλήρεις λειτουργίες: όλες οι επίση$\mu$ες λειτουργίες διαθέσι$\mu$ες & Λειτουργία: Ασφάλεια Εφαρ$\mu$ογή( Google Pay, App) BL Ξεκλείδω$\mu$α απόρριψη; DRM υποβάθ$\mu$ιση, Βίντεο Αναπαραγωγή \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksection{unlockBL Λεπτο$\mu$ερής διαδικασία ξεκλειδώ$\mu$ατος((παράδειγ$\mu$α: Xiaomi))}
+
+\begin{enumerate}
+  \item \textbf{Αίτη$\mu$α δι και ω$\mu$άτων ξεκλειδώ$\mu$ατος}:στο Xiaomiunlock εφαρ$\mu$ογή $\mu$έσω ιστοσελίδας εργαλείου unlock.
+  \item \textbf{Σύνδεση λογαριασ$\mu$ού}:στο κινητό settings σύνδεσε Xiaomi account.
+  \item \textbf{Περίοδος ανα$\mu$ονής}:Βάσει επιπέδου λογαριασ$\mu$ού, Απαιτείται ανα$\mu$ονή 7-30 η$\mu$έρες.
+  \item \textbf{Λειτουργία ξεκλειδώ$\mu$ατος}:χρησι$\mu$οποίησε Xiaomiunlock εργαλείο σύνδεσης $\mu$ε υπολογιστή unlock.
+\end{enumerate}
+
+\booksection{Root Πολλαπλές λύσεις}
+
+\begin{itemize}
+  \item \textbf{Magisk}:modernRootsolution, Systemlessdesign, Μπορεί να κρυφτεί Rootstatus.
+  \item \textbf{Kernelsu}:Βασισ$\mu$ένο σε kernelRootsolution, Πιο βαθύ, Καλύτερη απόκρυψη.
+  \item \textbf{SuperSU}:establishedRootsolution, Έχει στα$\mu$ατήσει η ενη$\mu$έρωση.
+\end{itemize}
+
+\booksection{Εισαγωγή στο flashing}
+
+Το flashing ση$\mu$αίνει εγκατάσταση νέου λειτουργικού συστή$\mu$ατος στο κινητό.Συνηθισ$\mu$ένοι τύποι flashing:
+
+\begin{itemize}
+  \item \textbf{Flash επίση$\mu$ου ROM}:Εγκατάσταση επίση$\mu$ου συστή$\mu$ατος, Γιά διάσωση από brick ή υποβάθ$\mu$ιση.
+  \item \textbf{Flash τρίτου κατασκευαστή Recovery}:όπως TWRP, Γιά αντίγραφο ασφαλείας και επαναφορά, Flash τρίτου κατασκευαστή ROM.
+  \item \textbf{Flash τρίτου κατασκευαστή ROM}:όπως LineageOS, Pixel Experience κ.λπ.,Δοκι$\mu$ή διαφορετικών συστη$\mu$άτων.
+\end{itemize}
+
+\booksection{Πέ$\mu$πτο: Samsung Knox — $\mu$η αναστρέψι$\mu$ο κόστος BL Unlock}
+
+,BL Ξεκλείδω$\mu$α “”:\textbf{,Ξεκλείδω$\mu$α Knox, Ασφάλεια Λειτουργία(Samsung Pay);Εκκαθάριση Δεδο$\mu$ένα;}. Συγκεκρι$\mu$ένα:
+
+\begin{itemize}
+  \item \textbf{Το eFuse καίγεται $\mu$ία φορά}: eFuse , BL Ξεκλείδω$\mu$α, επαναφορά.
+  \item \textbf{Επηρεαζό$\mu$ενες λειτουργίες}:Samsung Pay(/),Knox Ασφάλεια Αρχείο, επιχείρηση MDM ,Υγεία App .
+  \item \textbf{Εξαναγκαστική διαγραφή δεδο$\mu$ένων}:Επαναφορά εργοστασιακών ρυθ$\mu$ίσεων, τοπικό Δεδο$\mu$ένα(cloud Δεδο$\mu$ένα).
+  \item \textbf{Επίπτωση στην εγγύηση}: Επίση$\mu$α, $\mu$ετά το κάψι$\mu$ο του Knox δεν υπάρχει εγγύηση.
+\end{itemize}
+
+\begin{tcbwarn}{Σκεφτείτε το καλά}
+Το κάψι$\mu$ο Knox της Samsung είναι\textbf{$\mu$η αναστρέψι$\mu$ο}. Root Λειτουργία, Συ$\mu$βουλές Root Λύση.
+
+\end{tcbwarn}
+
+\textbf{Ση$\mu$αντική προειδοποίηση}\par
+
+Το flashing έχει ρίσκο, Προσοχή στις λειτουργίες.Μπορεί να προκαλέσει:
+
+\begin{itemize}
+  \item Το κινητό έγινε brick(Δεν ανοίγει)
+  \item Απώλεια εγγύησης
+  \item Απώλεια δεδο$\mu$ένων
+  \item Δυσλειτουργία πληρω$\mu$ών
+\end{itemize}
+
+Πριν το flashing κάνε οπωσδήποτε πλήρες αντίγραφο ασφαλείας, Διάβασε προσεκτικά το tutorial, Επιβεβαίωση αντιστοιχίας $\mu$οντέλου και έκδοσης.
+
+\begin{tcbinfo}{Προτεινό$\mu$ενες πηγές}
+\begin{itemize}
+  \item \textbf{XDA Developers}:η $\mu$εγαλύτερη κοινότητα προγρα$\mu$$\mu$ατιστών Android παγκοσ$\mu$ίως, Υπάρχουν πλούσια tutorials flashing και ROMresources.
+  \item \textbf{Coolapk}:Γνωστή εγχώρια ψηφιακή κοινότητα, Υπάρχουν πολλά κινεζικά tutorials και συζητήσεις.
+  \item \textbf{Φόρου$\mu$ κάθε $\mu$οντέλου}:όπως κοινότητα Xiaomi, κοινότητα OnePlus κ.λπ.,Υπάρχουν επίση$\mu$α και ανεπίση$\mu$α tutorials.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{Έκτο: Συχνές ερωτήσεις (Q\& A)}
+
+\textbf{Q1: Μπορεί να αναιρεθεί το BL Unlock;}\par
+
+\textbf{A:}.επίση$\mu$ο, FlashScript(\texttt{flash\_all\_lock.\allowbreak bat}). Ξεκλείδω$\mu$α Ασφάλεια(Knox).
+
+\textbf{Q2: Πώς γίνεται Root $\mu$ετά το Unlock;}\par
+
+\textbf{A:}Το BL Unlock είναι $\mu$όνο το πρώτο βή$\mu$α. Το Root συνήθως απαιτεί:
+
+\begin{enumerate}
+  \item FlashRecovery (π.χ. TWRP).
+  \item RecoveryMagiskRootbootImage, Root Δικαίω$\mu$α.
+\end{enumerate}

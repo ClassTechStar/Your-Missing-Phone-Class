@@ -1,0 +1,367 @@
+\bookchapter{第一章：你好，我嘅私人電腦}
+
+\chapterintro{你嘅手機，其實係你口袋裏最私人嘅超級電腦。佢比當年將人類送上月球嘅電腦強大無數倍，卻安靜咁躺喺你嘅掌心。今日，我哋就嚟好好認識呢位「沉默嘅巨人」。}
+
+\booksection{一、手機硬件「五臟六腑」：深度解析}
+
+手機雖小，五臟俱全。等我哋好似解剖課咁樣，逐個認識呢啲精密嘅組件。
+
+\booksubsection{SoC（系統級晶片）：手機嘅「大腦+心臟」}
+
+SoC全稱System on Chip，翻譯過嚟就係「將整個系統塞入一塊晶片」。佢唔只係CPU（中央處理器），而係將CPU、GPU（圖形處理器）、NPU（神經網絡處理器）、ISP（圖像信號處理器）、基帶（負責通信）等等全部集成埋一齊。
+
+呢個就似將一個城市嘅政府大樓、發電廠、通信中心、警察局全部建喺一棟樓裏，效率極高。
+
+\booksubsection{CPU：通用計算嘅核心}
+
+CPU係SoC中最核心嘅組件，負責處理絕大多數計算任務。手機CPU採用ARM架構，同電腦嘅x86架構唔同，ARM架構以精簡指令集（RISC）為特色，功耗更低，更適合流動設備。
+
+\textbf{CPU大小核設計}：現代手機CPU普遍採用「大小核」架構（ARM嘅big.LITTLE技術），將核心分為唔同性能等級：
+
+\begin{itemize}
+  \item \textbf{超大核/大核}：性能最強，負責重度任務。如遊戲加載、應用啟動、複雜計算。頻率最高（3GHz+），但功耗都最大。
+  \item \textbf{中核}：性能同功耗平衡，處理日常中等負載任務。刷微博、睇影片、多任務切換主要靠佢。
+  \item \textbf{小核/能效核}：功耗最低，處理輕量級後台任務。待機、聽音樂、接收消息等，幾乎唔費電。
+\end{itemize}
+
+三個等級嘅核心協同工作：系統調度器根據任務負載自動分配——輕量任務交畀小核慳電，重活交畀大核猛做，做完再切返小核。呢個就係點解手機既識流暢打遊戲，又識待機成日。
+
+\textbf{各品牌架構特點}：
+
+\begin{itemize}
+  \item \textbf{高通驍龍8 Elite}：採用Oryon自研CPU架構（源自Nuvia收購），2個超級核（4.32GHz）+ 6個性能核（3.53GHz），全部基於台積電第二代3nm製程。徹底告別ARM公版架構，單核同多核性能均實現跨越式提升。GPU為Adreno 830，採用切片架構，圖形性能提升40\%，Hexagon NPU算力約45 TOPS，AI推理性能提升45\%。（註：三星Galaxy定製版頻率更高，超級核可達4.47GHz。）
+  \item \textbf{聯發科天璣9400}：1個超大核（Cortex-X925，3.62GHz）+ 3個性能核（Cortex-X4，3.3GHz）+ 4個能效核（Cortex-A720，2.4GHz），全大核架構延續，台積電第二代3nm製程。GPU為Immortalis-G925（12核），峯值性能提升41\%，光線追蹤性能提升40\%。AI處理器為第八代NPU 890，支援端側大模型運行、端側LoRA訓練同端側影片生成。
+  \item \textbf{蘋果A18 Pro}：2個性能核（約4.04GHz）+ 4個能效核（約2.4GHz），台積電第二代3nm製程。6核GPU支援硬件級光線追蹤，16核NPU（約35 TOPS）為端側AI同Apple Intelligence提供強大算力。蘋果自研架構喺單核性能同能效比上依然領先，統一記憶體架構為AI推理提供高帶寬優勢。
+  \item \textbf{華為麒麟9020}：搭載於Mate 70系列，採用自研泰山CPU架構，NPU同ISP能力持續增強，支援5.5G同衞星通信，代表國產晶片嘅最新突破。
+\end{itemize}
+
+\booksubsection{GPU：圖形渲染引擎}
+
+GPU（Graphics Processing Unit）專門負責圖形同並行計算任務。佢嘅核心數量遠多過CPU（動輒數百上千個核心），但每個核心嘅功能相對簡單，適合同時處理大量相似嘅計算。
+
+\textbf{圖形渲染流程}：
+
+\begin{enumerate}
+  \item \textbf{頂點處理}：計算3D模型中每個頂點嘅位置坐標。
+  \item \textbf{光柵化}：將3D圖形轉換為2D螢幕上嘅像素點。
+  \item \textbf{像素著色}：為每個像素計算顏色、紋理、光照效果。
+  \item \textbf{輸出合成}：將所有圖層合成最終畫面，送到螢幕顯示。
+\end{enumerate}
+
+\textbf{GPU對日常使用嘅影響}：唔只係遊戲！界面滑動、動畫效果、影片播放、相濾鏡、AR應用都依賴GPU。GPU性能弱嘅手機，滑動界面可能掉幀，遊戲更係直接卡頓。
+
+\textbf{各品牌GPU}：高通使用自研Adreno GPU；聯發科使用ARM Mali GPU；蘋果使用自研GPU，性能同能效都係行業標杆。
+
+\booksubsection{NPU：AI加速引擎}
+
+NPU（Neural Processing Unit）係專門為神經網絡運算設計嘅處理器。相比CPU同GPU，NPU喺處理AI任務時效率更高、功耗更低。
+
+\textbf{神經網絡運算方式}：NPU嘅核心運算係矩陣乘法同卷積運算——呢個正係神經網絡中最基礎、最頻繁嘅計算。NPU通過硬件級優化，可以並行處理大量矩陣運算，速度比CPU快幾十倍，功耗卻低得多。
+
+\textbf{AI處理流程}：
+
+\begin{enumerate}
+  \item \textbf{數據輸入}：攝像頭圖像、麥克風音頻、傳感器數據等。
+  \item \textbf{預處理}：調整數據格式同尺寸，適配神經網絡輸入要求。
+  \item \textbf{推理計算}：NPU加載訓練好嘅模型，對輸入數據進行前向計算，輸出結果。
+  \item \textbf{後處理}：將AI輸出轉換為可用嘅結果，如人臉坐標、文字內容、場景標籤。
+\end{enumerate}
+
+\textbf{實際應用場景}：
+
+\begin{itemize}
+  \item \textbf{計算攝影}：夜景合成、人像虛化、HDR處理、AI美顏。
+  \item \textbf{語音助手}：語音識別、自然語言理解、語音合成。
+  \item \textbf{實時翻譯}：AI字幕、對話翻譯。
+  \item \textbf{智能識別}：文字識別（OCR）、物體識別、場景識別。
+  \item \textbf{端側大模型}：最新旗艦晶片已支援喺手機端運行小型AI大模型（7B參數級別），實現離線AI對話、文檔摘要、智能寫作等功能。驍龍8 Elite嘅Hexagon NPU算力約45 TOPS，天璣9400嘅NPU 890同樣支援端側大模型（LLM推理速度提升80\%），蘋果A18 Pro嘅16核NPU提供約35 TOPS算力。
+  \item \textbf{AI圖像處理}：AI消除（一鍵去除相中嘅路人）、AI擴圖（擴展圖片邊界）、AI風格轉換、文字生成圖片等。
+\end{itemize}
+
+\booksubsection{ISP：影像信號處理器}
+
+ISP處理攝像頭傳嚟嘅原始數據，將光線信號變成好睇嘅相。
+
+\textbf{性能點樣睇？}睇型號！蘋果A18 Pro、高通驍龍8 Elite、聯發科天璣9400、華為麒麟9020都係旗艦級別。中端睇驍龍8s Gen3/7+ Gen3、天璣8400。唔好淨係睇核心數，架構同製程（納米數）更重要。3nm製程係目前最先進嘅，能效比遠優於5nm同4nm。
+
+\booksubsection{記憶體（RAM）：臨時工作台}
+
+記憶體就似你嘅辦公桌，越大，可以同時攤開嘅檔案就越多。12GB係而家嘅主流，16GB適合重度用戶，24GB以上就係遊戲玩家同極客嘅選擇。
+
+記憶體類型都好重要：LPDDR5比LPDDR4X更快更慳電。蘋果雖然記憶體唔大，但系統優化好，所以睇起嚟「夠用」。
+
+\textbf{記憶體唔夠會點樣？}App會被系統殺咗後台，切換時需要重新加載。呢個就係點解有時切個微信返嚟，遊戲就冇咗。
+
+\booksubsection{存儲（ROM/閃存）：長期倉庫}
+
+存儲就似你嘅書櫃，裝所有相、影片、App嘅地方。而家主流係UFS 3.1或UFS 4.0，速度比老式嘅eMMC快好幾倍。
+
+\textbf{點解存儲速度重要？}佢決定咗App打開速度、遊戲加載速度、相保存速度。用耐咗之後，慢速存儲會等手機越嚟越卡。
+
+\booksubsection{螢幕：你嘅眼睛}
+
+螢幕係你同手機交互嘅主要介面，好壞直接影響體驗。
+
+\begin{itemize}
+  \item \textbf{材質}：OLED色彩艷麗、對比度高、更慳電（顯示黑色時像素唔發光），但低亮度下可能有頻閃傷眼；LCD更護眼、成本低，但對比度同色彩唔如OLED。
+  \item \textbf{分辨率}：1080P係主流，2K更清晰但更耗電。蘋果嘅「視網膜屏」概念就係：喺一定距離下，人眼分辨唔出像素點。
+  \item \textbf{刷新率}：60Hz係標準，90Hz/120Hz更流暢，滑動時絲般順滑。高刷新率會耗電，所以好多手機支援自適應刷新率（LTPO），根據內容動態調整。
+  \item \textbf{觸控採樣率}：影響觸控響應速度，遊戲玩家要關注，越高越跟手。
+  \item \textbf{調光方式}：DC調光比PWM調光更護眼，低亮度下唔容易眼攰。而家好多手機支援高頻PWM調光，都係為咗護眼。
+\end{itemize}
+
+\booksubsection{螢幕HDR技術}
+
+HDR（High Dynamic Range）等螢幕同時展現更亮嘅亮部同更暗嘅暗部，畫面層次感大幅提升。
+
+\begin{itemize}
+  \item \textbf{實現原理}：普通螢幕嘅亮度範圍有限（SDR），最亮同最暗之間嘅差距唔夠大。HDR螢幕嘅峯值亮度更高（通常1000尼特以上），對比度更大，色域更廣，能顯示更多細節。
+  \item \textbf{主流標準}：HDR10（最基礎，免費開源）、HDR10+（三星推動，動態元數據）、Dolby Vision（杜比視界，畫質最佳但需授權）。手機支援邊個標準取決於螢幕硬件同系統授權。
+  \item \textbf{實際效果}：睇HDR影片時，陽光更刺眼、陰影更深邃、色彩更豐富。前提係影片本身係HDR製作嘅，螢幕都支援HDR顯示。
+\end{itemize}
+
+\booksubsection{影像HDR技術}
+
+影相時嘅HDR同螢幕HDR係兩回事。影像HDR係通過算法解決「亮處過曝、暗處死黑」嘅問題。
+
+\begin{itemize}
+  \item \textbf{算法原理}：手機喺撳低快門時，實際拍攝咗多張唔同曝光嘅相（欠曝保留亮部細節、過曝保留暗部細節、正常曝光保留中間調），然後將佢哋合成為一張高動態範圍嘅相。
+  \item \textbf{處理流程}：多幀捕獲 對齊補償（防手震） 曝光融合/色調映射 色彩校正 輸出最終相。
+  \item \textbf{效果優化}：而家手機已經做到「實時HDR」——取景器裏睇到嘅畫面就係HDR處理後嘅效果，所見即所得。蘋果嘅Smart HDR同安卓嘅自動HDR都非常成熟。
+\end{itemize}
+
+\booksubsection{電池同充電：能量之源}
+
+電池係手機最「短命」嘅部件，用個兩三年就會明顯老化。而家主流容量係5500-7500mAh。
+
+\begin{itemize}
+  \item \textbf{充電功率}：安卓陣營已經捲到咗100W甚至200W，十幾分鐘充滿；蘋果仲喺20-30W徘徊。快充傷電池嗎？用原裝配件問題唔大，手機有温控保護。
+  \item \textbf{無線充電}：方便但效率低、發熱大。適合辦公室隨手充，唔適合急住出門時用。
+  \item \textbf{反向充電}：手機變成充電寶，畀耳機、手錶充電，應急用。
+\end{itemize}
+
+\booksubsection{攝像頭：光同影嘅魔法}
+
+而家手機攝像頭動輒三四個，各有分工：
+
+\begin{itemize}
+  \item \textbf{主攝}：最常用嘅，傳感器最大，畫質最好。
+  \item \textbf{超廣角}：影風景、建築，視野更闊。
+  \item \textbf{長焦}：影遠處，有光學變焦同數碼變焦之分。
+  \item \textbf{微距}：影極近距離嘅小嘢。
+\end{itemize}
+
+\textbf{像素數唔係全部！}傳感器尺寸（底大一級壓死人）、光圈大小（f/1.8比f/2.4大）、防震（OIS光學防震好重要）都影響畫質。計算攝影（AI算法）而家越嚟越重要，可以將多張相合成一張好相。
+
+\booksubsection{潛望式長焦鏡頭}
+
+傳統長焦鏡頭需要較長嘅光學路徑，會等手機變得好厚。潛望式長焦通過一個90度嘅稜鏡將光線折射，等光路喺手機內部橫向展開，從而喺保持手機輕薄嘅同時實現5倍甚至10倍光學變焦。
+
+\begin{itemize}
+  \item \textbf{結構原理}：光線由鏡頭進入 稜鏡折射90度 沿手機寬度方向穿過鏡片組 到達傳感器。相當於將一個豎住嘅望遠鏡橫住放。
+  \item \textbf{光學特性}：光學變焦倍數高（5x-10x），畫質遠超數碼變焦。但傳感器尺寸通常比主攝細，暗光表現一般。
+  \item \textbf{成像優勢}：影月亮、影遠處建築、影舞台特寫，係普通手機無法企及嘅。
+\end{itemize}
+
+\booksubsection{OIS光學防震 vs EIS電子防震}
+
+防震係影響影相同錄像畫質嘅關鍵技術，兩種方式原理完全唔同：
+
+\begin{itemize}
+  \item \textbf{OIS（光學防震）}：通過物理移動鏡頭或傳感器嚟抵消手震。鏡頭內部有微型陀螺儀檢測震動方向同幅度，然後驅動馬達反向移動鏡片組。優點係唔損失畫質，缺點係成本高、佔用空間。
+  \item \textbf{EIS（電子防震）}：通過軟件算法裁切同偏移畫面嚟抵消震動。手機錄製稍大嘅畫面範圍，然後根據陀螺儀數據裁切出穩定嘅區域。優點係唔需要額外硬件，缺點係會裁切畫面（視野變細），暗光下可能模糊。
+  \item \textbf{實際選擇}：影相優先睇OIS，錄像兩者結合效果最好。而家好多旗艦手機支援「Sensor-Shift」傳感器位移防震，比傳統鏡頭防震效果更好。
+\end{itemize}
+
+\booksubsection{光學變焦 vs 數碼變焦}
+
+\begin{itemize}
+  \item \textbf{光學變焦}：通過物理移動鏡片組改變焦距，畫質唔損失。手機上嘅光學變焦通常淨係有固定倍數（如2x、3x、5x、10x），唔可以好似相機咁樣連續變焦。
+  \item \textbf{數碼變焦}：放大畫面中心區域，本質係裁切+插值放大。放大越多，畫質越差。100倍數碼變焦睇住好型，但實際畫質已經好糊咗。
+  \item \textbf{混合變焦}：結合光學同數碼，喺光學變焦倍數之間用多幀合成算法彌補畫質損失。效果比純數碼好，但仍不如光學。
+\end{itemize}
+
+\booksubsection{音頻：揚聲器同獨顯晶片}
+
+\textbf{單揚聲器 vs 雙揚聲器}：
+
+\begin{itemize}
+  \item \textbf{單揚聲器}：淨係底部一個發聲單元，聲音偏向一側，冇立體感。中低端手機常見。
+  \item \textbf{雙揚聲器（立體聲）}：頂部同底部各一個揚聲器，形成立體聲場。睇影片、聽音樂時左右聲道分明，沉浸感強好多。聽筒兼做頂部揚聲器係常見方案。
+  \item \textbf{音質差異}：雙揚聲器唔只係「聲音更大」，關鍵係空間感同層次感。用單揚聲器睇大片，總覺得少咗啲乜。
+\end{itemize}
+
+\textbf{遊戲手機獨顯晶片}：
+
+部分遊戲手機同性能手機配備咗獨立嘅顯示處理晶片，佢嘅作用係：
+
+\begin{itemize}
+  \item \textbf{插幀}：將30fps嘅遊戲畫面通過算法插值到60fps或120fps，畫面更流暢。呢個過程喺獨顯晶片上完成，唔佔用SoC嘅GPU資源。
+  \item \textbf{超分}：將低分辨率畫面通過AI算法提升到高分辨率，畫質更清晰。
+  \item \textbf{降功耗}：因為插幀同超分由獨顯晶片負責，SoC嘅負載降低，發熱同功耗都減少，遊戲更穩定。
+\end{itemize}
+
+\booksubsection{GPS定位：單頻同雙頻}
+
+手機定位主要依賴GPS等衞星導航系統。
+
+\begin{itemize}
+  \item \textbf{單頻GPS}：淨係接收L1頻段信號，定位精度約3-5米。喺開闊地帶夠用，但喺高樓密集嘅城市峽谷中，信號反射會導致定位偏移較大。
+  \item \textbf{雙頻GPS}：同時接收L1同L5兩個頻段信號。L5頻段波長更長、抗幹擾能力更強，雙頻聯合解算可以消除大部分電離層誤差，定位精度可達1-3米。喺城市中導航、打車定位時優勢明顯。
+  \item \textbf{多星座支援}：現代手機唔只支援GPS，仲支援北斗（中國）、GLONASS（俄羅斯）、Galileo（歐洲）等多個衞星系統。同時連接嘅衞星越多，定位越快越準。
+\end{itemize}
+
+\booksubsection{傳感器：手機嘅小觸角}
+
+手機裏收埋十幾個傳感器，默默工作：
+
+\begin{itemize}
+  \item \textbf{加速度計+陀螺儀}：感知手機姿態，玩遊戲轉向、自動旋轉螢幕。
+  \item \textbf{光線傳感器}：自動調節螢幕亮度。
+  \item \textbf{距離傳感器}：打電話時手機貼近耳朵自動熄屏。
+  \item \textbf{指紋傳感器}：而家主流係屏下光學或超聲波指紋。
+  \item \textbf{面部識別}：蘋果嘅Face ID係3D結構光，安全級別高；好多安卓係2D相識別，安全性一般。
+  \item \textbf{NFC}：近場通信，刷公交卡、門禁卡、銀行卡。
+  \item \textbf{氣壓計}：測海拔高度，爬樓梯都識檢測到。
+  \item \textbf{霍爾傳感器}：檢測磁吸殼嘅開合。
+\end{itemize}
+
+\booksection{二、作業系統：安卓 VS iOS VS 鴻蒙}
+
+硬件係身體，作業系統係靈魂。三大系統各有特色：
+
+\begin{itemize}
+  \item \textbf{安卓}：似開源社區，手機廠商可以深度定製，選擇多。你可以換主題、裝第三方應用商店、折騰各種玩法。但都因為開放，碎片化嚴重，唔同品牌體驗差異大。
+  \item \textbf{iOS}：似精心打理嘅花園，蘋果軟硬件一手抓，體驗統一流暢。應用質量高，私隱保護好，但自由度低，好多事要按蘋果嘅規矩嚟。
+  \item \textbf{鴻蒙}：華為嘅新物種，主打分佈式能力，可以等唔同設備無縫協同。後面我哋會專門講。
+\end{itemize}
+
+三者生態都極其豐富，揀你鍾意嘅生活方式就好。冇絕對嘅好壞，淨係有適唔適合。
+
+\booksection{三、手機介面全解析}
+
+手機介面係連接外部世界嘅橋樑，唔同介面差異好大：
+
+\booksubsection{Micro USB}
+
+\begin{itemize}
+  \item \textbf{物理特性}：扁平梯形介面，分正反面（插反咗插唔入去）。已經喺手機上基本淘汰，但部分低端設備同老設備仲喺度用。
+  \item \textbf{傳輸限制}：淨係支援USB 2.0標準，最高傳輸速率480Mbps，充電功率通常唔超過10W。
+  \item \textbf{缺點}：正反面唔通用、插拔壽命短、傳輸速度慢、充電功率低。
+\end{itemize}
+
+\booksubsection{Lightning（蘋果閃電介面，已淘汰）}
+
+\begin{itemize}
+  \item \textbf{物理特性}：蘋果自研嘅8針介面，正反都可以插。iPhone 14及更早機型使用，現已全面淘汰。
+  \item \textbf{傳輸限制}：Lightning介面物理上淨係支援USB 2.0標準，最高傳輸速率480Mbps。即使用USB-C轉Lightning線，傳輸速度都受限於Lightning介面本身。
+  \item \textbf{淘汰原因}：歐盟通過法規要求2024年起所有手機統一使用USB-C介面，蘋果由iPhone 15系列開始全面改用Type-C。Lightning介面正式退出歷史舞台。
+  \item \textbf{注意}：蘋果MFi認證嘅數據線內含認證晶片，非認證線可能無法正常充電或傳輸數據。如果你仲喺度用舊款iPhone，建議備好Lightning數據線。
+\end{itemize}
+
+\booksubsection{USB Type-C}
+
+\begin{itemize}
+  \item \textbf{物理特性}：24針腳嘅橢圓形介面，正反都可以插。已成為手機同多數電子設備嘅標準介面。歐盟已立法要求2024年起所有手機、平板、耳機等便攜設備統一使用USB-C介面，全球其他地區都喺度跟進。
+  \item \textbf{傳輸協議}：Type-C淨係介面形態，實際傳輸能力取決於內部協議。支援USB 2.0（480Mbps）、USB 3.0/3.1/3.2（5-20Gbps）甚至USB4（40Gbps）。
+  \item \textbf{重要區分}：並非所有Type-C介面都支援USB 3.0！好多手機雖然用Type-C介面，但內部淨係連接咗USB 2.0嘅引腳，傳輸速度同老介面一樣慢。iPhone 16/17標準版淨係支援USB 2.0速度，Pro版先支援USB 3.0（需使用USB-C to USB-C線）。
+  \item \textbf{充電能力}：支援USB PD等快充協議，最高可支援240W充電。
+  \item \textbf{影片輸出}：支援DisplayPort Alt Mode，可以通過轉接線輸出影片到顯示器。
+\end{itemize}
+
+\booksubsection{5mm音頻介面}
+
+\begin{itemize}
+  \item \textbf{物理特性}：圓形3段或4段插孔，3段傳輸左右聲道音頻，4段多一個麥克風通道。
+  \item \textbf{特點}：模擬信號傳輸，即插即用，唔需要驅動或轉換。音質穩定，延遲為零。
+  \item \textbf{現狀}：大部分旗艦手機已取消3.5mm介面，需要Type-C轉接線或使用藍牙耳機。部分中端機同遊戲手機仲保留。
+\end{itemize}
+
+\booksection{四、手機產品體系與命名規則}
+
+面對各品牌眼花繚亂嘅產品線，搞清楚命名規則可以幫你快速定位適合自己嘅機型。
+
+\booksubsection{主流品牌產品系列：}
+
+\begin{itemize}
+  \item \textbf{蘋果}：iPhone（標準版）/ iPhone Plus（大螢幕版）/ iPhone Pro（專業版）/ iPhone Pro Max（大螢幕專業版）/ iPhone SE（平價版）/ iPhone 16e（平價AI版，搭載A18晶片同蘋果自研C1基帶）。2026年iPhone 17系列全面搭載A19 Pro晶片，AI能力進一步提升。
+  \item \textbf{華為}：Mate系列（商務旗艦）/ P/Pura系列（影像旗艦）/ Mate X系列（摺疊旗艦）/ nova系列（年輕中端）/ 暢享系列（入門）
+  \item \textbf{小米}：小米數字系列（旗艦）/ 小米MIX（探索旗艦/摺疊）/ Redmi K系列（性能旗艦）/ Redmi Note系列（中端）/ Redmi數字系列（入門）
+  \item \textbf{OPPO}：Find X系列（旗艦）/ Reno系列（中端）/ A系列（入門）/ 一加數字系列（性能旗艦）
+  \item \textbf{vivo}：X系列（影像旗艦）/ iQOO數字系列（性能旗艦）/ S系列（自拍中端）/ Y系列（入門）
+  \item \textbf{三星}：Galaxy S系列（旗艦）/ Galaxy Z Fold/Flip（摺疊旗艦）/ Galaxy A系列（中端）
+\end{itemize}
+
+\booksubsection{常見後綴含義：}
+
+\begin{itemize}
+  \item \textbf{Pro}：Professional嘅縮寫，專業版。通常喺標準版基礎上升級鏡頭、螢幕、處理器等核心配置。
+  \item \textbf{Max}：最大版。螢幕最大、電池最大，但配置唔一定比Pro高。
+  \item \textbf{Ultra}：極致版。通常代表該系列嘅最高配置，堆料最猛，價格都最高。如三星S24 Ultra、小米14 Ultra。
+  \item \textbf{SE}：Special Edition特別版，實際多為平價版。配置縮水，價格降低。如iPhone SE。
+  \item \textbf{Plus}：加大版。螢幕比標準版大，電池都大，但配置基本一致。
+  \item \textbf{Lite/青春版}：輕量版。配置精簡，價格更低。
+  \item \textbf{Note}：原本指大螢幕手機，而家各品牌用法不一。Redmi Note係中端系列。
+  \item \textbf{Neo}：新鋭版。通常指性能取向嘅中端機型。
+\end{itemize}
+
+\booksection{五、基帶與天線：手機通信嘅幕後功臣}
+
+手機可以打電話、上網，靠嘅係基帶晶片同天線呢對拍檔。
+
+\booksubsection{基帶晶片：}
+
+基帶係手機中負責無線通信嘅處理器，佢將數碼信號調製成無線電波發出去，都將接收到嘅無線電波解調成數碼信號。基帶性能直接影響通話質量、上網速度同信號穩定性。高通係最大嘅手機基帶供應商，聯發科、三星都有自研基帶。蘋果由iPhone 16e開始搭載自研嘅C1基帶晶片，標誌住蘋果正式進入自研基帶時代，C1基帶採用4nm製程，功耗表現優異；iPhone 16/16 Plus/16 Pro/16 Pro Max仲用緊高通基帶（驍龍X75 5G），預計後續機型會逐步過渡到自研基帶。更早嘅iPhone XS/11系列用Intel基帶嗰陣信號表現唔好，係唔少用戶嘅痛點。
+
+\booksubsection{天線設計：}
+
+手機天線收埋喺機身內部，通常圍繞邊框佈置。天線設計直接影響信號接收性能：
+
+\begin{itemize}
+  \item \textbf{MIMO技術}：多入多出，使用多個天線同時收發數據，提升速度同穩定性。4×4 MIMO比2×2 MIMO速度更快。
+  \item \textbf{天線數量}：旗艦機通常有十幾個天線（蜂窩、Wi-Fi、藍牙、NFC、GPS各需要獨立天線）。
+  \item \textbf{金屬機身嘅影響}：金屬會屏蔽信號，所以金屬機身手機需要設計天線帶（邊框上嘅塑膠條）。玻璃同塑膠機身對信號影響較細。
+\end{itemize}
+
+\booksubsection{網絡技術演進：}
+
+\begin{itemize}
+  \item \textbf{4G LTE}：理論峯值速率下行1Gbps/上行500Mbps（Cat.18），實際體驗通常50-150Mbps。覆蓋最廣，夠用。
+  \item \textbf{5G NR}：理論峯值速率下行10Gbps+。Sub-6GHz頻段覆蓋較好，mmWave毫米波速度極快但覆蓋極細。
+  \item \textbf{5G-A（5G Advanced）}：5G嘅增強版，又叫5.5G。下行速率可達10Gbps，上行1Gbps，連接數密度同定位精度大幅提升。2024年起中國移動、電信、聯通開始喺重點城市部署5G-A網絡，華為Mate 70/80系列、小米15/16系列等旗艦手機已支援5G-A。5G-A仲帶嚟咗「通感一體」能力，基站可以同時通信同感知環境，為低空經濟（無人機配送）同車聯網提供基礎設施。
+\end{itemize}
+
+\booksubsection{網絡頻段分類：}
+
+手機支援嘅網絡頻段決定咗佢可以喺邊啲國家、邊啲電訊商嘅網絡上使用：
+
+\begin{itemize}
+  \item \textbf{FDD-LTE Band（B系列）}：如B1、B3、B5等，4G頻段。唔同國家使用唔同頻段，中國主要用B1/B3/B5/B8/B34/B38/B39/B40/B41。
+  \item \textbf{TDD-LTE Band}：4G嘅另一制式，中國大量使用B38/B39/B40/B41。
+  \item \textbf{5G NR Band（N系列）}：如n1、n3、n28、n41、n78、n79等。n78（3.5GHz）係中國5G主力頻段，n41（2.5GHz）移動使用較多。
+  \item \textbf{購買建議}：如果需要出國使用，購買前確認手機係咪支援目標國家嘅頻段。國行手機通常對中國頻段支援最全，但可能缺少部分海外頻段。
+\end{itemize}
+
+\booksection{六、你嘅手機，到底喺度扮演幾多角色？}
+
+佢早已唔只係電話：
+
+\begin{enumerate}
+  \item \textbf{通訊工具}：電話、短訊、微信、郵件……
+  \item \textbf{智能相機}：影相、錄影、掃描文檔……
+  \item \textbf{銀包}：支付、公交卡、銀行卡、會員卡……
+  \item \textbf{資訊門戶}：新聞、天氣、股票、知識……
+  \item \textbf{遊戲機}：由消消樂到3A大作……
+  \item \textbf{流動辦公室}：文檔、表格、會議、協作……
+  \item \textbf{健康助手}：計步、心率、睡眠、運動……
+  \item \textbf{智能家居遙控器}：控制燈、冷氣、電視、掃地機械人……
+  \item \textbf{數碼身份證}：電子身份證、電子駕照、健康碼……
+  \item \textbf{娛樂中心}：音樂、影片、電子書、播客……
+\end{enumerate}
+
+諗下，一台細細嘅設備，承載咗幾多生活！所以，學識用好佢，就係學識更好咁生活。
+
+\begin{tcbpractice}{實操一下：瞭解硬件配置}
+喺 [設定] 入面，睇下可唔可以揾到處理器型號、記憶體（RAM）同機身存儲（ROM）嘅具體大小。對你手機嘅能力有個數。安卓用戶可以下載「安兔兔」或「DevCheck」查看詳細硬件資訊。
+
+\end{tcbpractice}

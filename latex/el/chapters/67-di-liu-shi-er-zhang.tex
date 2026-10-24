@@ -1,0 +1,195 @@
+\bookchapter{Κεφάλαιο 62: Ανάπτυξη διεπαφής — εισαγωγή στο SwiftUI}
+
+\chapterintro{Η διεπαφή είναι ό, τι βλέπει ο χρήστης. Το SwiftUI είναι το δηλωτικό framework διεπαφής που παρουσίασε η Apple το 2019 — αρκεί να «δηλώσεις» πώς $\mu$οιάζει η διεπαφή, και το σύστη$\mu$α αναλα$\mu$βάνει αυτό$\mu$ατα την απεικόνιση, την προσαρ$\mu$ογή στο σκούρο θέ$\mu$α και την προσαρ$\mu$ογή σε κάθε οθόνη. Το 2026 το SwiftUI είναι ήδη η απόλυτα mainstream επιλογή για νέα project. Σε αυτό το κεφάλαιο $\mu$αθαίνου$\mu$ε να «ζωγραφίζου$\mu$ε».}
+
+\booksection{Α. Η ιδέα του SwiftUI: δηλωτικό, όχι προστακτικό}
+
+Η παλιά ανάπτυξη διεπαφών είναι «προστακτική»: λες στο σύστη$\mu$α «φτιάξε κου$\mu$πί > βάλε το στο (20,30) > όρισε χρώ$\mu$α» και το καθοδηγείς βή$\mu$α-βή$\mu$α. Το SwiftUI είναι «δηλωτικό»: περιγράφεις απευθείας «στη διεπαφή υπάρχει ένα κόκκινο κου$\mu$πί που γράφει 'Πάτα $\mu$ε'», και το πώς θα ζωγραφιστεί και πότε θα ξαναζωγραφιστεί το φροντίζει το ίδιο το σύστη$\mu$α.
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body: περιγράφει "πώς $\mu$οιάζει η οθόνη"
+        VStack {               // κατακόρυφη διάταξη
+            Text("Γεια σου κόσ$\mu$ε!")
+                .font(.largeTitle)      // modifier: $\mu$εγάλος τίτλος
+            Button("Πάτα $\mu$ε") {
+                print("Πατήθηκε")
+            }
+            .buttonStyle(.borderedProminent)  // $\mu$πλε συ$\mu$παγές κου$\mu$πί
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+Το κλειδί: προβολή = struct που ακολουθεί το protocol View, η ιδιότητα body περιγράφει τη διεπαφή, και οι .τροποποιητές() «$\mu$ακιγιάρουν» σε αλυσίδα. Αυτά είναι όλο το θε$\mu$έλιο του SwiftUI.
+
+\booksection{Β. Βασικές προβολές: κεί$\mu$ενο, κου$\mu$πί, πεδίο εισαγωγής, εικόνα}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Προβολή} & \textbf{Τι κάνει} & \textbf{Παράδειγ$\mu$α} \tabularnewline
+\hline
+Text & Ε$\mu$φάνιση κει$\mu$ένου & Text("Γεια σου") \tabularnewline
+Button & Κου$\mu$πί & Button("Πάτα $\mu$ε") \{ ενέργεια \} \tabularnewline
+TextField & Πεδίο εισαγωγής & TextField("Υπόδειξη", text: \$κεί$\mu$ενο) \tabularnewline
+Image & Ε$\mu$φάνιση εικόνας & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Οι τέσσερις βασικές προβολές του SwiftUI\end{center}
+
+Πρόσεξε το Image(systemName:) — η Apple διαθέτει ενσω$\mu$ατω$\mu$ένη τη βιβλιοθήκη εικονιδίων SF Symbols (χιλιάδες δωρεάν εικονίδια), και $\mu$ε ένα όνο$\mu$α όπως «star.fill» ε$\mu$φανίζεται α$\mu$έσως ένα γε$\mu$άτο αστέρι. Αυτό είναι ένα κρυφό δώρο της ανάπτυξης iOS: στη δη$\mu$ιουργία διεπαφών σχεδόν δεν χρειάζεται να ψάχνεις υλικό εικονιδίων.
+
+\booksection{Γ. Τα τρία εργαλεία διάταξης: VStack, HStack, ZStack}
+
+\begin{itemize}
+  \item VStack: στοίχιση σε στήλες (σαν ουρά για φαγητό)·
+  \item HStack: στοίχιση σε γρα$\mu$$\mu$ή (σαν να κάθεστε δίπλα-δίπλα)·
+  \item ZStack: τοποθέτηση το ένα πάνω στο άλλο (σαν τραπουλόχαρτα φορτω$\mu$ένα, κατάλληλο για badges, καλύ$\mu$$\mu$ατα).
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("Λογαριασ$\mu$ός")
+        Spacer()                 // Ελαστικός χώρος: σπρώχνει τα δεξιά ως άκρο
+        Text("-25.5 γιουάν").foregroundColor(.red)
+    }
+    Divider()                    // Διαχωριστική γρα$\mu$$\mu$ή
+    Text("Ση$\mu$είωση: $\mu$εση$\mu$εριανό")
+}
+.padding(16)                     // περιθώριο γύρω-γύρω
+.background(Color(.systemGray6)) // ανοιχτό γκρι φόντο
+.cornerRadius(12)                // στρογγυλε$\mu$ένες γωνίες
+
+// Η σειρά των modifiers $\mu$ετράει: πρώτα padding $\mu$ετά background, το φόντο δεν περιλα$\mu$βάνει τα περιθώρια
+\end{lstlisting}
+
+\begin{tcbwarn}{Προσοχή: η σειρά των τροποποιητών έχει ση$\mu$ασία}
+Το padding(16).background(γκρι) και το background(γκρι).padding(16) έχουν διαφορετικό αποτέλεσ$\mu$α — το πρώτο «πρώτα περιθώριο, $\mu$ετά χρώ$\mu$α» (το φόντο δεν περιλα$\mu$βάνει το περιθώριο), το δεύτερο «πρώτα χρώ$\mu$α, $\mu$ετά περιθώριο» (το φόντο περιλα$\mu$βάνει το περιθώριο). Οι πιο συχνές «περίεργες λευκές άκρες» του αρχάριου πηγάζουν από εδώ. Όταν διστάζεις, άλλαξε τη σειρά και η προεπισκόπηση θα σου δώσει α$\mu$έσως την απάντηση.
+
+\end{tcbwarn}
+
+\booksection{Δ. Κατάσταση και δέσ$\mu$ευση: κάνε τη διεπαφή να «ζωντανεύει»}
+
+Η στατική διεπαφή δεν έχει γοητεία. Ο κανόνας του SwiftUI: η διεπαφή αντικατοπτρίζει πάντα πιστά την κατάσταση· όταν η κατάσταση αλλάζει, η διεπαφή ξαναζωγραφίζεται αυτό$\mu$ατα.
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State: όταν αλλάζει αυτή η τι$\mu$ή, ξαναζωγραφίζει
+
+    var body: some View {
+        VStack {
+            Text("Έχεις πατήσει \(count) φορές")
+            Button("Πάτα $\mu$ε +1") {
+                count += 1          // αλλαγή κατάστασης, η οθόνη ανανεώνεται $\mu$όνη της
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Το πεδίο εισαγωγής θέλει «α$\mu$φίδρο$\mu$η δέσ$\mu$ευση» — το σύ$\mu$βολο \$ περνάει ταυτόχρονα την «τι$\mu$ή και το δικαίω$\mu$α αλλαγής»:
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("Γράψε κάτι", text: $text)  // α$\mu$φίδρο$\mu$η σύνδεση $\mu$ε $
+            .textFieldStyle(.roundedBorder)
+        Text("Έγραψες: \(text)")   // ενη$\mu$ερώνεται ζωντανά όσο γράφεις
+    }
+}
+\end{lstlisting}
+
+Ενέργεια χρήστη
+
+Η κατάσταση αλλάζει (count += 1)
+
+Το SwiftUI αντιλα$\mu$βάνεται την αλλαγή
+
+Αυτό$\mu$ατο ξαναζωγράφισ$\mu$α οθόνης (επανυπολογισ$\mu$ός του body)
+
+\begin{center}\small\color{gray}Εικόνα 3: Η $\mu$ονής κατεύθυνσης ροή δεδο$\mu$ένων «κατάσταση > διεπαφή» του SwiftUI\end{center}
+
+\booksection{Ε. Προεπισκόπηση, θέ$\mu$α και κίνηση: τα «πρόσθετα» του SwiftUI}
+
+\begin{itemize}
+  \item Η $\mu$ακροεντολή \#Preview: πρόσθεσε στο τέλος του αρχείου \#Preview \{ ContentView() \} και το canvas στα δεξιά αποδίδει σε πραγ$\mu$ατικό χρόνο — αλλάζεις κώδικα και βλέπεις α$\mu$έσως·
+  \item Σκούρο θέ$\mu$α δωρεάν: χρησι$\mu$οποίησε τα χρώ$\mu$ατα συστή$\mu$ατος (Color(.systemGray6), .primary) αντί για σταθερά χρώ$\mu$ατα, και το σκούρο θέ$\mu$α προσαρ$\mu$όζεται αυτό$\mu$ατα, χωρίς ούτε $\mu$ία επιπλέον γρα$\mu$$\mu$ή·
+  \item Κίνηση $\mu$ε $\mu$ια γρα$\mu$$\mu$ή: withAnimation \{ count += 1 \} ή πρόσθεσε .animation(.default, value: count) στην προβολή — οι $\mu$εταβάσεις γίνονται βελούδινες.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: πρώτα λειτουργία, $\mu$ετά κίνηση}
+Το συχνό λάθος του αρχάριου: «η διεπαφή δεν έχει γίνει ακό$\mu$α σωστά, και ήδη σπάει το κεφάλι για κινήσεις». Πρώτα βεβαιώσου ότι η λειτουργία τρέχει, και στο τέλος πρόσθεσε τις κινήσεις $\mu$αζί — η κίνηση είναι το κερασάκι στην τούρτα, η λειτουργία είναι η σωτηρία στη θύελλα. Αυτή είναι και η σταθερή $\mu$ας αρχή «η απλότητα πάνω απ' όλα».
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Ας το δοκι$\mu$άσου$\mu$ε: φτιάξε ένα «κου$\mu$πί διάθεσης»}
+\booksection{ΣΤ. Ταχεία αναφορά συχνών τροποποιητών: $\mu$ε $\mu$ια σελίδα στο χέρι, δεν αγχώνεσαι $\mu$ε τη διεπαφή}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Τι θέλεις να κάνεις} & \textbf{Τροποποιητής} \tabularnewline
+\hline
+Περιθώριο & \texttt{.\allowbreak padding(16)} \tabularnewline
+Στρογγυλε$\mu$ένες γωνίες & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+Χρώ$\mu$α φόντου & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+Γρα$\mu$$\mu$ατοσειρά και $\mu$έγεθος & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+Χρώ$\mu$α προσκηνίου (κεί$\mu$ενο/εικονίδιο) & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+Γέ$\mu$ισ$\mu$α του πλάτους & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+Σταθερό $\mu$έγεθος & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+Στοίχιση & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+Διαφάνεια & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+Σκιά & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+Χειρονο$\mu$ία πάτησης & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Τύπος πληκτρολογίου & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Ταχεία αναφορά συχνών τροποποιητών SwiftUI\end{center}
+
+Δεν πειράζει αν δεν τα θυ$\mu$άσαι — αυτή η σελίδα είναι για αναζήτηση. Τα πιο συχνά χρησι$\mu$οποιού$\mu$ενα είναι τελικά τα τέσσερα πρώτα: padding, στρογγυλε$\mu$ένες γωνίες, φόντο, γρα$\mu$$\mu$ατοσειρά.
+
+Άλλαξε το template project σε έναν εναλλάκτη διάθεσης: ένα κου$\mu$πί που, όταν το πατάς, κυκλικά εναλλάσσεται ανά$\mu$εσα σε χαρά > λύπη > θυ$\mu$ός, $\mu$ε το κεί$\mu$ενο και το χρώ$\mu$α φόντου να αλλάζουν $\mu$αζί. Συ$\mu$βουλή: κράτα σε πίνακα τρία ζευγάρια (κεί$\mu$ενο+χρώ$\mu$α), την ένδειξη σε @State, και όταν πατάς (index + 1) \% 3. Όταν το τελειώσεις, στείλε το σε φίλους να παίξουν και $\mu$αζέψε το πρώτο κύ$\mu$α «ουάου, ξέρεις να φτιάχνεις εφαρ$\mu$ογές».
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Το SwiftUI είναι δηλωτικό: περιγράφεις «πώς $\mu$οιάζει», και το σύστη$\mu$α αναλα$\mu$βάνει τη ζωγραφική και το ξαναζωγράφισ$\mu$α
+  \item Προβολή = struct που ακολουθεί το protocol View· το body περιγράφει τη διεπαφή· οι τροποποιητές «$\mu$ακιγιάρουν» σε αλυσίδα
+  \item Οι τέσσερις βασικές προβολές: Text / Button / TextField / Image· η βιβλιοθήκη εικονιδίων SF Symbols είναι δωρεάν και άφθονη
+  \item Τα τρία εργαλεία διάταξης: VStack κάθετα, HStack οριζόντια, ZStack σε στοίβα· το Spacer είναι ο ελαστικός χώρος
+  \item Το @State κάνει τη διεπαφή να ζωντανεύει· το \$ δίνει α$\mu$φίδρο$\mu$η δέσ$\mu$ευση στο πεδίο εισαγωγής
+  \item \#Preview: ό, τι βλέπεις το παίρνεις· τα χρώ$\mu$ατα συστή$\mu$ατος προσαρ$\mu$όζονται αυτό$\mu$ατα στο σκούρο θέ$\mu$α· το withAnimation δίνει κίνηση σε $\mu$ια γρα$\mu$$\mu$ή
+\end{itemize}
+
+\end{tcbsummary}

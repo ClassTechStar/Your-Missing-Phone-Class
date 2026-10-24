@@ -1,0 +1,195 @@
+\bookchapter{Bab 62: Pembangunan Antara Muka — Pengenalan SwiftUI}
+
+\chapterintro{Antara muka ialah segala yang dilihat oleh pengguna. SwiftUI ialah rangka kerja antara muka jenis deklaratif yang dikeluarkan Apple pada 2019 — anda hanya perlu 'menyatakan' bentuk antara muka, dan sistem yang menguruskan pemaparan, penyesuaian mod gelap serta pelbagai saiz skrin secara automatik. Menjelang 2026, SwiftUI sudah menjadi arus perdana mutlak untuk projek baharu. Dalam bab ini, kita belajar 'melukis'.}
+
+\booksection{Falsafah SwiftUI: deklaratif, bukan imperatif}
+
+Pembangunan antara muka lama bersifat 'imperatif': anda memberitahu sistem 'cipta butang letak di (20,30) tetapkan warna' langkah demi langkah seperti mengarahkan. SwiftUI bersifat 'deklaratif': anda hanya menerangkan 'di atas skrin ada butang merah bertulis “Klik saya”', dan bagaimana melukisnya serta bila melukis semula menjadi urusan sistem.
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body: menggambarkan "rupawan paparan"
+        VStack {               // disusun menegak
+            Text("Hai, dunia!")
+                .font(.largeTitle)      // modifier: tajuk besar
+            Button("Tekan saya") {
+                print("Ditekan")
+            }
+            .buttonStyle(.borderedProminent)  // butang pejal biru
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+Perkara utama: view = struktur yang mematuhi protokol View, sifat body menerangkan antara muka, dan modifier dirantai seperti 'memakaikan solek'. Inilah seluruh asas SwiftUI.
+
+\booksection{View asas: teks, butang, medan input, imej}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{View} & \textbf{Fungsinya} & \textbf{Contoh} \tabularnewline
+\hline
+Text & Paparkan teks & Text("Halo") \tabularnewline
+Button & Butang & Button("Klik saya") \{ tindakan \} \tabularnewline
+TextField & Medan input & TextField("Petunjuk", text: \$teks) \tabularnewline
+Image & Paparkan imej & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Empat view asas utama SwiftUI\end{center}
+
+Perhatikan Image(systemName:) — Apple menyediakan pustaka ikon terbina dalam SF Symbols (beribu-ribu ikon percuma); nama seperti “star.fill” terus memaparkan ikon bintang penuh. Inilah faedah tersembunyi pembangunan iOS: membina antara muka hampir tidak memerlukan carian bahan ikon.
+
+\booksection{Tiga alat susun atur: VStack, HStack, ZStack}
+
+\begin{itemize}
+  \item VStack: disusun menegak (seperti beratur mengambil makanan);
+  \item HStack: disusun mengufuk (seperti duduk bersebelahan);
+  \item ZStack: ditindihkan (seperti kad poker disusun bertindih — sesuai untuk lencana dan lapisan tonjolan).
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("Bil")
+        Spacer()                 // Ruang kenyal: tolak bahagian kanan sampai hujung
+        Text("-25.5 yuan").foregroundColor(.red)
+    }
+    Divider()                    // Garis pembahagi
+    Text("Nota: makan tengah hari")
+}
+.padding(16)                     // beri ruang sekeliling
+.background(Color(.systemGray6)) // latar kelabu muda
+.cornerRadius(12)                // bucu bulat
+
+// Susunan modifier berpengaruh: padding dahulu baru background, latar tidak merangkumi jarak padding
+\end{lstlisting}
+
+\begin{tcbwarn}{Perhatian: susunan modifier mempengaruhi hasil}
+padding(16).background(kelabu) dan background(kelabu).padding(16) memberi hasil berbeza — yang pertama 'beri ruang dahulu, barulah warnakan' (latar belakang tidak merangkumi ruang tepi), yang kedua 'warnakan dahulu, barulah beri ruang' (latar belakang merangkumi ruang tepi). 'Jalur putih pelik' yang paling kerap mengelirukan pemula berpunca dari sini. Jika tidak pasti, tukar sahaja susunannya dan pratonton akan terus memberi jawapan.
+
+\end{tcbwarn}
+
+\booksection{Negeri (state) dan pengikatan: membuat antara muka 'hidup'}
+
+Antara muka statik membosankan. Peraturan SwiftUI: antara muka sentiasa mencerminkan state dengan setia; state berubah, antara muka dilukis semula secara automatik.
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State: bila nilai ini berubah, lukis semula
+
+    var body: some View {
+        VStack {
+            Text("Anda menekan \(count) kali")
+            Button("Tekan saya +1") {
+                count += 1          // ubah state, paparan terus segar
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Medan input perlu “pengikatan dua hala” — simbol \$ menghantar “nilai dan kuasa mengubahnya” bersama-sama:
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("Taip sesuatu", text: $text)  // ikatan dua hala dengan $
+            .textFieldStyle(.roundedBorder)
+        Text("Anda menaip: \(text)")   // terkini semasa menaip
+    }
+}
+\end{lstlisting}
+
+Tindakan pengguna
+
+State berubah (count += 1)
+
+SwiftUI mengesan perubahan
+
+Lukis semula paparan automatik (body dikira semula)
+
+\begin{center}\small\color{gray}Rajah 3: Aliran data sehala “state antara muka” dalam SwiftUI\end{center}
+
+\booksection{Pratonton, tema dan animasi: 'tambahan luar' SwiftUI}
+
+\begin{itemize}
+  \item Makro \#Preview: tambah \#Preview \{ ContentView() \} di bahagian bawah fail, dan kanvas di sebelah kanan memaparkan hasil secara masa nyata — ubah kod, apa yang dilihat itulah yang diperoleh;
+  \item Mod gelap percuma: gunakan warna sistem (Color(.systemGray6), .primary) dan bukannya warna tetap; mod gelap disesuaikan secara automatik tanpa satu baris tambahan;
+  \item Animasi selesai dalam satu baris: withAnimation \{ count += 1 \} atau tambah .animation(.default, value: count) pada view — peralihan menjadi lancar.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Petua: Fungsi dahulu, animasi kemudian}
+Masalah lazim pemula ialah 'antara muka belum betul, tetapi sibuk memikirkan animasi'. Pastikan fungsi berjalan dahulu, tambahkan kesan animasi secara menyeluruh di hujungnya — animasi hanyalah sentuhan hiasan, manakala fungsi ialah keperluan yang menyelamatkan. Ini juga selaras dengan prinsip kita sepanjang buku ini: 'kesederhanaan di atas segalanya'.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Praktik: Bina 'butang mood'}
+\booksection{Rujukan pantas modifier lazim: satu halaman dalam tangan, antara muka tak jadi masalah}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Apa yang mahu dibuat} & \textbf{Modifier} \tabularnewline
+\hline
+Ruang tepi & \texttt{.\allowbreak padding(16)} \tabularnewline
+Sudut bulat & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+Warna latar belakang & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+Fon dan saiz fon & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+Warna latar depan (teks/ikon) & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+Rapatkan penuh lebar & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+Saiz tetap & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+Penjajaran & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+Kelegapan & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+Bayang & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+Gerak ketikan (tap) & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Jenis papan kekunci & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Rujukan pantas modifier lazim SwiftUI\end{center}
+
+Tidak apa-apa jika tidak dapat diingat — halaman ini memang untuk dirujuk. Yang paling kerap digunakan sebenarnya hanya empat yang pertama: padding, sudut bulat, latar belakang dan fon.
+
+Ubah projek templat menjadi penukar mood: satu butang yang apabila ditekan berkitar antara gembira sedih marah, teks dan warna latar berubah mengikutnya. Petunjuk: gunakan tatasusunan untuk menyimpan tiga set (teks + warna), @State untuk menyimpan indeks, dan (index + 1) \% 3 semasa ditekan. Selepas siap, hantar kepada rakan untuk dimainkan dan terimalah gelombang pertama 'wow, anda sudah boleh buat App'.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan bab ini}
+\begin{itemize}
+  \item SwiftUI bersifat deklaratif: anda menerangkan 'bentuknya', sistem yang melukis dan melukis semula
+  \item View = struktur yang mematuhi protokol View; body menerangkan antara muka; modifier dirantai seperti 'memakaikan solek'
+  \item Empat view asas: Text / Button / TextField / Image; pustaka ikon SF Symbols percuma dan lengkap
+  \item Tiga alat susun atur: VStack menegak, HStack mengufuk, ZStack bertindih; Spacer ialah ruang fleksibel
+  \item @State menghidupkan antara muka; \$ mengikat dua hala untuk disuapkan ke medan input
+  \item \#Preview — apa dilihat itulah yang diperoleh; warna sistem menyesuaikan mod gelap secara automatik; withAnimation memberi kesan animasi dalam satu baris
+\end{itemize}
+
+\end{tcbsummary}

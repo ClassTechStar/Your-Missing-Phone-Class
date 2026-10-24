@@ -1,0 +1,108 @@
+\bookchapter{Capitolo 16: Sistema di account e servizi cloud}
+
+\chapterintro{Un mio amico lo scorso anno ha avuto il telefono rubato. Il suo primo pensiero non è stato “quanto costa il telefono”, ma “potrò recuperare le foto che ho dentro?”. Purtroppo non aveva attivato il backup sul cloud. Il telefono è un bene esteriore, ma i dati nell'account, una volta persi, non tornano più. In questo capitolo parliamo di come stipulare una vera assicurazione per la tua vita digitale.}
+
+\booksection{Cosa gestisce davvero il tuo account telefonico?}
+
+Molti pensano che l'account serva solo a scaricare App. In realtà, un account telefonico è collegato a molte più cose di quanto immagini:
+
+\begin{itemize}
+  \item \textbf{Rubrica}: numeri di telefono che conservi da anni o decenni.
+  \item \textbf{Foto e video}: dalla nascita del figlio al diploma, dal primo appuntamento al viaggio di nozze.
+  \item \textbf{Note}: appunti di ispirazione, diari, password degli account (sì, molti annotano le password nelle Note).
+  \item \textbf{Cronologia acquisti App}: App a pagamento e acquisti in-app fatti per centinaia di yuan.
+  \item \textbf{Trova il mio telefono}: se il telefono viene perso, è l'unico strumento che ti aiuta a localizzarlo, bloccarlo e cancellare i dati da remoto.
+\end{itemize}
+
+Se usi un telefono Apple, tutto quanto sopra è legato al tuo Apple ID. Se usi Android, è legato all'account Huawei/Xiaomi/OPPO/vivo e al tuo account Google. Questi account sono il “certificato di famiglia” della tua vita digitale: se lo perdi, molte cose diventano difficili da ricostruire.
+
+\booksection{Tre cose da fare subito, adesso}
+
+\begin{enumerate}
+  \item \textbf{Attiva la verifica in due fattori}: che tu usi Apple o Android, la prima cosa da fare è andare nelle impostazioni dell'account e attivare la "verifica in due fattori" o "verifica in due passaggi". È come aggiungere un catenaccio alla porta: non basta la password, serve anche un codice inviato al tuo telefono. Anche se qualcuno su Internet indovina la tua password, senza il tuo telefono non entra.
+  \item \textbf{Associa un metodo di recupero affidabile}: la 2FA è sicura, ma c'è un rischio: cosa fai se perdi proprio il tuo telefono? Per questo il sistema ti chiederà di impostare una "chiave di recupero" o "email/telefono di backup". È l'unica via per riottenere l'account in caso di emergenza: meglio scriverla su carta, non tenerla nel telefono.
+  \item \textbf{Verifica che "Trova il mio telefono" sia attivo}: questa funzione, in caso di smarrimento, ti aiuta a localizzare, bloccare, far suonare e persino cancellare da remoto tutti i dati. È l'ultima linea di difesa. Molti la saltano all'acquisto del telefono e poi, quando serve, scoprono di non averla attivata: troppo tardi.
+\end{enumerate}
+
+\booksection{iCloud: l'“aria” per gli utenti Apple}
+
+Chi usa un telefono Apple prima o poi si trova davanti a un dilemma: e se lo spazio iCloud è pieno?
+
+Apple offre gratuitamente 5 GB, che a dire il vero non bastano neanche per un backup. Così la maggior parte delle persone prima o poi riceve il fastidioso popup “Spazio di archiviazione iCloud pieno”. A quel punto hai tre opzioni:
+
+\begin{itemize}
+  \item \textbf{Pulisci}: vai in Impostazioni [il tuo nome] iCloud Gestisci spazio di archiviazione, guarda chi sta occupando spazio. Di solito foto e backup sono i più pesanti. Puoi iniziare cancellando i vecchi backup non necessari.
+  \item \textbf{Upgrade}: 50 GB costano 6 yuan al mese, 200 GB 21 yuan. Personalmente ritengo che 50 GB bastino alla maggior parte delle persone, soprattutto per backup e miniature delle foto.
+  \item \textbf{Soluzione indiretta}: se non vuoi pagare, puoi esportare periodicamente le foto sul computer e poi disattivare la sincronizzazione Foto iCloud. Ma in questo modo perdi la comodità del backup automatico delle foto.
+\end{itemize}
+
+Un avvertimento importante: la libreria foto di iCloud non è un “disco di rete”, ma una “sincronizzazione”. Se elimini una foto dal telefono, viene eliminata anche da iCloud. Se quello che vuoi è “fare il backup sul cloud e poi svuotare il telefono”, la libreria foto di iCloud non fa per te: ti serve iCloud Backup o un disco di rete di terze parti.
+
+\begin{tcbinfo}{iCloud+: il tris di privacy riservato agli utenti a pagamento}
+Basta passare a qualsiasi livello a pagamento di iCloud (50 GB/200 GB/2 TB ecc.) per diventare automaticamente utenti\textbf{iCloud+}e sbloccare tre funzioni di privacy:
+
+\begin{itemize}
+  \item \textbf{Private Relay (inoltro privato)}: il "VPN" di Apple. Il traffico Safari viene inoltrato dai server di Apple al sito web; nessuno (inclusa Apple) può vedere contemporaneamente chi sei e cosa visiti. Utile per proteggere la privacy su Wi-Fi pubblico. Percorso:\texttt{Impostazioni > [il tuo nome] > iCloud > Inoltro privato}.
+  \item \textbf{Hide My Email (nascondi la mia email)}: genera un indirizzo email casuale monouso quando ti registri su siti/App; le email vengono inoltrate automaticamente al tuo indirizzo reale. Se non vuoi più ricevere email da quel sito, basta chiudere l'indirizzo casuale: l'email reale non viene esposta. Percorso:\texttt{Impostazioni > [il tuo nome] > iCloud > Nascondi la mia email}.
+  \item \textbf{Dominio email personalizzato}: puoi usare il tuo dominio (ad esempio @tuocognome.com) per inviare e ricevere email iCloud, utile per il personal branding o per la gestione della posta di famiglia.
+\end{itemize}
+
+Nota: Private Relay non è disponibile in alcuni paesi/regioni; gli utenti in Cina potrebbero aver bisogno di soluzioni alternative.
+
+\end{tcbinfo}
+
+\begin{tcbwarn}{iCloud Advanced Data Protection (ADP) — la vera crittografia end-to-end}
+Alla fine del 2022 Apple ha lanciato\textbf{iCloud Advanced Data Protection (ADP)}, estendendo la crittografia end-to-end (E2EE) dai pochi dati di salute, password e simili alla\textbf{maggior parte dei dati iCloud}: foto, note, backup iCloud, informazioni sui dispositivi, per un totale di 23 categorie.
+
+\begin{itemize}
+  \item \textbf{Cos'è l'E2EE}: la chiave di crittografia si trova solo sul tuo dispositivo, non sui server Apple. Anche se Apple venisse hackerata o le autorità richiedessero i dati, Apple non potrebbe consegnare dati decifrabili.
+  \item \textbf{Percorso di attivazione}:\texttt{Impostazioni > [il tuo nome] > iCloud > Protezione avanzata dei dati}; segui le istruzioni per impostare i contatti di recupero/la chiave di recupero (\textbf{obbligatorio}: senza chiave non potrai recuperare i dati).
+  \item \textbf{Avvertenze}: (1) una volta attivato, conserva con cura la chiave di recupero, altrimenti in caso di perdita dell'account non potrai recuperare i dati; (2) gli album condivisi, la libreria condivisa iCloud e poche altre funzioni non partecipano all'E2EE; (3) l'Apple ID per la Cina continentale non supporta ancora ADP, occorre passare a un account di un'altra regione.
+\end{itemize}
+
+In sintesi: se il tuo account contiene dati privati importanti e la regione lo supporta, consiglio vivamente di attivare ADP: è la protezione cloud più forte accessibile a un utente comune.
+
+\end{tcbwarn}
+
+\booksection{Sincronizzazione e backup, non confonderli}
+
+Queste due parole sembrano simili, ma le conseguenze sono molto diverse:
+
+\begin{itemize}
+  \item \textbf{La sincronizzazione}è bidirezionale: se elimini qualcosa sul telefono, viene eliminata anche sul cloud; se elimini sul cloud, viene eliminata anche sul telefono. Le foto iCloud, la rubrica e le note sono sincronizzate. Il vantaggio è che più dispositivi restano coerenti; lo svantaggio è che "una volta eliminato, è davvero andato".
+  \item \textbf{Il backup}è monodirezionale: il telefono fa una "fotografia" dello stato attuale e la salva sul cloud. Se in seguito elimini qualcosa sul telefono, la copia nel backup cloud resta. iCloud Backup e il backup locale su computer sono backup. Il vantaggio è una maggiore sicurezza dei dati; lo svantaggio è l'occupazione di spazio e l'assenza di aggiornamenti in tempo reale.
+\end{itemize}
+
+\booksection{La matrice di account per gli utenti Android}
+
+Sul lato Android la situazione è un po' più complessa che su Apple, perché i tuoi dati possono essere sparsi su più account:
+
+\begin{itemize}
+  \item \textbf{Account di brand}(Huawei/Xiaomi/OPPO/vivo): gestisce il tuo spazio cloud, Trova il mio telefono, App store e wallet. Ogni brand ha il proprio servizio cloud, di solito con un modello base gratuito + espansioni a pagamento.
+  \item \textbf{Account Google}: se usi Gmail, Google Foto, Google Contatti, questi dati si trovano nell'account Google. Google offre 15 GB gratuiti, è più generoso di Apple, ma sono condivisi con Gmail e Drive.
+  \item \textbf{WeChat/QQ}: sono indipendenti dal sistema telefonico. La cronologia chat e i preferiti di WeChat non sono né nell'account di brand né in quello Google, ma solo sui server di WeChat.
+\end{itemize}
+
+Pertanto, quando un utente Android fa il backup, deve verificare separatamente: backup cloud di brand, backup Google, backup della cronologia chat di WeChat. Tutti e tre sono indispensabili.
+
+\booksection{Condivisione in famiglia: avvantaggia anche i tuoi cari}
+
+La “Condivisione con la famiglia” di Apple permette di condividere con i familiari acquisti di App, musica, film e spazio iCloud, e di condividere la posizione. Si possono aggiungere fino a 6 persone. Si attiva in: Impostazioni [il tuo nome] Condivisione con la famiglia. Anche Huawei e Xiaomi hanno funzioni simili, rintracciabili nelle impostazioni dell'account come “Condivisione in famiglia” o “Cloud di famiglia”.
+
+Uno scenario molto pratico: imposta la condivisione con la famiglia sul telefono dei genitori, così potrai vedere in qualsiasi momento la loro posizione (se loro acconsentono); se l'anziano si perde o non è raggiungibile al telefono, avrai un riferimento di posizione.
+
+\begin{tcbwarn}{Le conseguenze del furto dell'account sono più gravi di quanto pensi}
+Se un hacker ottiene la password del tuo account, può: bloccare da remoto il tuo telefono e chiedere un riscatto, visionare le tue foto e la tua rubrica, fare acquisti con il tuo metodo di pagamento. Peggio ancora, se l'account è legato a troppe cose, recuperarlo è di per sé un incubo. Quindi: attiva subito la verifica in due fattori.
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{In pratica: fai un check-up completo del tuo account}
+\begin{enumerate}
+  \item Apri le Impostazioni del telefono, vai alla pagina dell'account e conferma che la verifica in due fattori sia attiva.
+  \item Verifica che "numeri di telefono affidabili" e "chiave di recupero" siano impostati; trascrivi la chiave su carta.
+  \item Accedi alla gestione di iCloud o dello spazio cloud, vedi quali dati sono sincronizzati e disattiva quelli non necessari.
+  \item Conferma che "Trova il mio telefono" sia attivo.
+  \item Se usi Android, controlla che backup cloud di brand, backup Google e backup di WeChat siano tutti coperti.
+\end{enumerate}
+
+\end{tcbpractice}

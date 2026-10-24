@@ -1,0 +1,194 @@
+\bookchapter{Bab 65: Proyek 1 — Buku Catatan Keuangan Saya (Versi Lokal)}
+
+\chapterintro{Selamat datang di “proyek serius” pertamamu. Buku catatan keuangan ini meski tidak terhubung internet, isinya lengkap: bisa mencatat transaksi, melihat riwayat, merangkum per bulan, serta menghapus dan mengubah. Setelah menyelesaikannya, kamu telah melewati alur lengkap “data logika antarmuka”. Jangan buru-buru menyalin kode — pikirkan dulu dengan jelas, baru mulai; itu prinsip kita selama ini.}
+
+\booksection{Memikirkan Kebutuhan: Tanya Dulu Lima Pertanyaan}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Elemen} & \textbf{Jawaban} \tabularnewline
+\hline
+Who (untuk siapa) & Untuk sendiri, boleh juga untuk keluarga dan teman \tabularnewline
+What (membuat apa) & Mencatat pemasukan/pengeluaran, melihat riwayat, merangkum per bulan, statistik per kategori \tabularnewline
+Why (mengapa) & Berlatih + mengetahui uang habis ke mana \tabularnewline
+How (bagaimana membuatnya) & Swift + SwiftUI + SwiftData + MVVM, murni lokal tanpa backend \tabularnewline
+Constraint (batasan) & Selesai dalam satu minggu; minimal mendukung iOS 17 (syarat SwiftData) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Lima elemen kebutuhan buku catatan keuangan\end{center}
+
+Lalu pecah menjadi langkah-langkah kecil yang “setiap langkahnya langsung bisa dipakai”: (1) bangun lapisan data SwiftData (bisa menyimpan satu transaksi); (2) halaman daftar (bisa melihat riwayat); (3) popup entri (bisa menambah catatan); (4) hapus dan edit; (5) kartu ringkasan bulanan. Setiap langkah selesai, App selalu berupa “sesuatu yang bisa dipakai”.
+
+\booksection{Lapisan Data: Memberi “Catatan” Sebuah Rumah}
+
+Pertama, definisikan seperti apa satu transaksi — field cukup untuk kebutuhan, jangan serakah:
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+@Model
+class Record {
+    var type: String      // "income" pemasukan | "expense" pengeluaran
+    var amount: Double    // Nominal (yuan)
+    var category: String  // Kategori: makan, transportasi, gaji……
+    var note: String      // Catatan (opsional)
+    var date: Date        // Tanggal pencatatan
+
+    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+        self.type = type
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tips: Mengapa Nominal Memakai Double?}
+App finansial yang serius memakai Decimal (desimal presisi) untuk menghindari galat floating-point (masalah lama 0.1+0.2$\neq$0.3). Untuk proyek latihan, Double sudah cukup; jika suatu hari membuat produk finansial sungguhan, ingat ganti ke Decimal atau “Int dengan satuan sen” — ini lubang yang telah menelan banyak pendahulu.
+
+\end{tcbinfo}
+
+\booksection{MVVM: Antarmuka dan Logika “Berpisah Rumah”}
+
+Langsung membuat antarmuka mengoperasikan basis data? Bisa jalan, tapi kode antarmukanya akan panjang dan berantakan. Arsitektur MVVM membuat semuanya menjalankan tugasnya masing-masing: View (antarmuka) hanya menggambar, ViewModel (pusat logika) mengelola data, Model (SwiftData) mengelola penyimpanan.
+
+View (tampilan SwiftUI)
+
+ViewModel (pusat logika @Observable)
+
+Model (lapisan data SwiftData)
+
+\begin{center}\small\color{gray}Gambar 4: Struktur tiga lapis MVVM — data mengalir satu arah, tiap lapis tidak melampaui batasnya\end{center}
+
+\begin{lstlisting}[language=Swift]
+import Observation
+
+@Observable
+class RecordViewModel {
+    var records: [Record] = []
+    private let context: ModelContext
+
+    init(context: ModelContext) { self.context = context }
+
+    func load() {
+        // Menyaring + mengurutkan dengan #Predicate milik SwiftData
+        let descriptor = FetchDescriptor<Record>(
+            sortBy: [SortDescriptor(\.date, order: .reverse)]
+        )
+        records = (try? context.fetch(descriptor)) ?? []
+    }
+
+    func add(type: String, amount: Double, category: String, note: String) {
+        let r = Record(type: type, amount: amount, category: category, note: note)
+        context.insert(r)
+        try? context.save()
+        load()                       // Muat ulang, tampilan ikut menyegarkan
+    }
+
+    func delete(_ record: Record) {
+        context.delete(record)
+        try? context.save()
+        load()
+    }
+}
+\end{lstlisting}
+
+Di antarmuka tulis @State private var vm = RecordViewModel(...), lalu langsung render daftar dari vm.records — begitu data berubah, antarmuka otomatis menyegarkan.
+
+\booksection{Antarmuka: Halaman Daftar + Popup Entri}
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var vm: RecordViewModel
+    @State private var showAdd = false
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section("Saldo bulan ini") {          // kartu rekap
+                    SummaryRow(records: vm.records)
+                }
+                Section("Mutasi") {
+                    ForEach(vm.records) { r in
+                        RecordRow(record: r)
+                    }
+                    .onDelete { idx in
+                        idx.forEach { vm.delete(vm.records[$0]) }
+                    }
+                }
+            }
+            .navigationTitle("Buku kas saya")
+            .toolbar {
+                Button { showAdd = true } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView(vm: vm)          // dialog input
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Poin penting popup entri: keyboard kolom nominal memakai .keyboardType(.decimalPad) (keyboard angka), pemasukan/pengeluaran memakai kontrol tersegmentasi (Picker), kategori dipilih lewat menu, dan saat menekan “Simpan” panggil vm.add(...) lalu dismiss() untuk menutup popup.
+
+\begin{tcbwarn}{Perhatian: Jangan Malas Memvalidasi Input}
+Kolom nominal wajib divalidasi: nilai kosong, angka negatif, dan input tidak sah seperti “abc” semuanya harus ditahan (cek dengan Double(text); jika gagal mengembalikan nil). Salah satu penyebab paling umum App crash adalah “menganggap input pengguna anak yang penurut”. Ingat: semua yang diketik pengguna harus diperiksa seperti musuh.
+
+\end{tcbwarn}
+
+\booksection{Edit, Hapus, dan Ringkasan}
+
+\begin{itemize}
+  \item Hapus: .onDelete pada List untuk hapus dengan geser ke kiri + popup konfirmasi (salah hapus adalah hal yang paling dibenci pengguna App pencatat keuangan);
+  \item Edit: ketuk baris untuk masuk popup edit dengan nilai lama sudah terisi (mengubah sedikit lebih hemat tenaga daripada mengetik ulang);
+  \item Ringkasan: pakai filter + reduce untuk menghitung "pemasukan / pengeluaran / saldo bulan ini", ditampilkan dalam kartu di bagian atas:
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
+    let cal = Calendar.current
+    let monthRecords = records.filter {
+        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+    }
+    let income = monthRecords
+        .filter { $0.type == "income" }
+        .reduce(0) { $0 + $1.amount }
+    let expense = monthRecords
+        .filter { $0.type == "expense" }
+        .reduce(0) { $0 + $1.amount }
+    return (income, expense)
+}
+\end{lstlisting}
+
+\booksection{Penerimaan: Pemeriksaan Tiga Lapis + Dua Tantangan Lanjutan}
+
+Setelah proyek selesai, lakukan penerimaan tiga lapis sesuai “fungsi batas arsitektur”: bisa mencatat atau tidak, bisa menghapus atau tidak, apakah data tetap ada setelah App dimulai ulang (fungsi); apakah crash saat nominal diisi 0 atau negatif (batas); apakah antarmuka dan data tercampur, apakah ada field yang ditulis mati (arsitektur).
+
+Setelah versi dasar lolos penerimaan, beri dirimu dua “hidangan lanjutan”:
+
+\begin{enumerate}
+  \item Statistik kategori: tambahkan tab "Statistik", gunakan Swift Charts untuk menggambar pengeluaran per kategori sebagai diagram lingkaran/batang — pustaka grafik resmi Apple, beberapa baris kode langsung jadi grafik;
+  \item Sinkronisasi iCloud: mengaktifkan sinkronisasi iCloud di SwiftData hanya perlu beberapa pengaturan — buku catatan otomatis tersinkron antara iPhone/iPad, langsung terasa "canggih".
+\end{enumerate}
+
+\begin{tcbpractice}{Praktik: Selesaikan Minggu Ini}
+Bekerjalah mengikuti urutan “lapisan data ViewModel halaman daftar popup entri kartu ringkasan”, satu langkah per hari. Kalau macet, tempelkan pesan error apa adanya ke mesin pencari atau AI (masih ingat Bagian 7 “Praktik Pemrograman dengan AI”? Saat mendeskripsikan masalah, jelaskan dengan jelas “perilaku yang diharapkan, perilaku yang terjadi, langkah reproduksi”). Setelah selesai, pakai untuk mencatat keuangan selama satu minggu — memakai App buatan sendiri memberi rasa pencapaian yang mendorongmu terus berjalan.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Lima elemen kebutuhan pecah menjadi langkah kecil "setiap langkah bisa dipakai", baru mulai bekerja
+  \item Lapisan data: model @Model + kontainer modelContainer + kueri FetchDescriptor
+  \item Pembagian tugas MVVM: View hanya menggambar, ViewModel @Observable mengelola logika, SwiftData mengelola penyimpanan
+  \item Antarmuka: List + Section + toolbar + popup entri sheet
+  \item Penerimaan tiga lapis (fungsi/batas/arsitektur) + tantangan lanjutan (Swift Charts, sinkronisasi iCloud)
+\end{itemize}
+
+\end{tcbsummary}

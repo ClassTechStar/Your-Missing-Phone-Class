@@ -1,0 +1,131 @@
+\bookchapter{Chapitre 24 : Analyse approfondie des permissions Root et du verrou Bootloader}
+
+\chapterintro{Ce chapitre approfondit le contenu du chapitre 20, pour ceux qui veulent vraiment comprendre les mécanismes bas niveau du smartphone, voire tenter le flashage. Attention, ces opérations comportent des risques, procédez avec prudence.}
+
+\booksection{I. Comprendre en profondeur le Bootloader}
+
+Le Bootloader est le premier programme exécuté au démarrage du smartphone, sa tâche est d'initialiser le matériel et de charger le noyau du système d'exploitation. On peut le comprendre comme le « gardien » du smartphone.
+
+\booksubsection{Principe de fonctionnement du verrou BL :}
+
+\begin{itemize}
+  \item \textbf{Vérification de signature}:Le verrou BL vérifie la signature numérique de l'image de démarrage, seuls les systèmes signés par le fabricant peuvent démarrer.
+  \item \textbf{Prévention du retour en arrière}:Empêche les utilisateurs de flasher une ancienne version du système pour exploiter des vulnérabilités connues.
+  \item \textbf{Protection des données}:Même si un nouveau système est flashé, sans le compte et mot de passe originaux, les données utilisateur restent inaccessibles.
+\end{itemize}
+
+\booksubsection{Stockage et vérification au niveau matériel}
+
+L'état de verrouillage du BL (Locked/Unlocked) et la clé publique du fabricant sont généralement stockés dans une zone matérielle protégée (telle que la partition devinfo de Qualcomm, eFuse ou la partition RPMB), pour empêcher toute modification logicielle. À chaque démarrage, le bootloader lit l'état depuis cette zone sécurisée et décide en conséquence d'exécuter ou non une vérification de signature stricte.
+
+\booksubsection{Vérification de signature numérique}
+
+Lors de la publication d'une mise à jour système ou d'une image, le fabricant la signe avec sa clé privée. Au démarrage de l'appareil, le bootloader vérifie l'image système (par exemple boot.img, recovery.img) avec la clé publique intégrée. Son fonctionnement est le suivant :
+
+\begin{enumerate}
+  \item Recalcul de la valeur de hachage de l'image système.
+  \item Déchiffrement de la signature intégrée à l'image avec la clé publique pour obtenir une valeur de hachage.
+  \item Comparaison des deux valeurs de hachage, si elles correspondent, la vérification est réussie. Cela garantit que l'image système n'a pas été modifiée par un tiers.
+\end{enumerate}
+
+\booksubsection{Chaîne de démarrage sécurisé}
+
+Le verrouillage BL est le premier maillon de toute la chaîne de démarrage sécurisé. Une fois la vérification réussie, il charge et exécute le programme de démarrage suivant (par exemple le noyau), garantissant ainsi de proche en proche la fiabilité de l'environnement de démarrage du système.
+
+\booksubsection{Verrouillé vs déverrouillé : l'impact à double tranchant du BL}
+
+Pour mieux comprendre les avantages et les inconvénients du verrouillage BL, nous utilisons un tableau comparatif pour montrer les différences sur 5 dimensions clés :
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Rôle principal} & \textbf{État verrouillé (par défaut)} & \textbf{État après déverrouillage} \tabularnewline
+\hline
+Sécurité du système & Empêche le flash de systèmes non officiels non signés, protège l'intégrité du système et la sécurité de bas niveau\newline Sécurité élevée : charge uniquement les images signées officielles, protège efficacement contre la modification malveillante du firmware & Sécurité réduite : permet de flasher des ROM tierces, le mécanisme de vérification d'intégrité du système est désactivé, un logiciel malveillant obtenant les permissions Root peut modifier le système en profondeur \tabularnewline
+Stabilité du système & Garantit que le smartphone exécute le système officiel testé et optimisé par le fabricant, assurant stabilité et fluidité\newline Stable : utilise le firmware officiel, fonctionnalités complètes, mises à jour OTA fiables & Risque accru : les ROM tierces peuvent présenter des problèmes de compatibilité, pouvant provoquer des crashs système, un brickage, des dysfonctionnements matériels (par exemple caméra, charge rapide), et des échecs de mise à jour OTA \tabularnewline
+Droits de garantie & Le fabricant verrouille le BL pour fournir un système officiel stable, afin d'offrir le service de garantie\newline Garantie valide : bénéficie du service de garantie gratuit officiel (hors dommages intentionnels) & Garantie invalide : la grande majorité des fabricants considèrent le déverrouillage du BL comme une renonciation volontaire à la garantie, même en cas de reverrouillage, l'historique de déverrouillage peut être détecté et la garantie refusée \tabularnewline
+Sécurité des données & Le processus de déverrouillage efface généralement les données de force, pour empêcher que les anciennes données soient exploitées malveillamment dans le nouvel environnement système\newline Données sécurisées : en usage quotidien, le verrouillage BL limite la capacité des programmes malveillants à modifier la partition système & Risque pour les données : le déverrouillage efforce l'effacement de toutes les données utilisateur ; si le chiffrement n'est pas correctement configuré après le déverrouillage, le stockage des données peut être non sécurisé ; en cas de perte, les données sont plus facilement extractibles par flash \tabularnewline
+Restrictions fonctionnelles & Garantit le fonctionnement normal des fonctions dépendant d'un environnement sécurisé (par exemple paiement, applications bancaires)\newline Fonctions complètes : toutes les fonctions officielles peuvent être utilisées normalement & Fonctions limitées : certaines applications sensibles à la sécurité (par exemple Google Pay, applications bancaires) peuvent refuser de fonctionner en détectant l'état de déverrouillage du BL ; les services DRM peuvent être dégradés, affectant la lecture vidéo HD \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksection{II. Procédure détaillée de déverrouillage du BL (exemple Xiaomi)}
+
+\begin{enumerate}
+  \item \textbf{Demander la permission de déverrouillage}:Demandez le déverrouillage sur le site de l'outil de déverrouillage Xiaomi.
+  \item \textbf{Lier le compte}:Liez votre compte Xiaomi dans les paramètres du smartphone.
+  \item \textbf{Période d'attente}:Selon le niveau du compte, une attente de 7 à 30 jours est requise.
+  \item \textbf{Opération de déverrouillage}:Utilisez l'outil de déverrouillage Xiaomi en connectant à l'ordinateur.
+\end{enumerate}
+
+\booksection{III. Les multiples solutions de Root}
+
+\begin{itemize}
+  \item \textbf{Magisk}:Solution de Root moderne, conception Systemless, permet de masquer l'état Root.
+  \item \textbf{Kernelsu}:Solution de Root basée sur le noyau, plus bas niveau, meilleure dissimulation.
+  \item \textbf{SuperSU}:Solution de Root classique, actuellement plus maintenue.
+\end{itemize}
+
+\booksection{IV. Introduction au flashage}
+
+Le flashage consiste à installer un nouveau système d'exploitation sur le smartphone. Types de flashage courants :
+
+\begin{itemize}
+  \item \textbf{Flasher une ROM officielle}:Installer un système officiel, pour débricker ou rétrograder.
+  \item \textbf{Flasher un Recovery tiers}:Comme TWRP, pour la sauvegarde/restauration et le flashage de ROMs tierces.
+  \item \textbf{Flasher une ROM tierce}:Comme LineageOS, Pixel Experience, etc., pour découvrir d'autres systèmes.
+\end{itemize}
+
+\booksection{V. Samsung Knox : le coût irréversible du déverrouillage du BL}
+
+Contrairement aux autres fabricants Android, le mécanisme de déverrouillage du BL des smartphones Samsung possède une conception unique de « fusion » :\textbf{Pour les smartphones Samsung, le déverrouillage déclenche la fusion Knox, entraînant la perte permanente de certaines fonctions de sécurité (telles que Samsung Pay) ; toutes les données protégées sont effacées ; la garantie est affectée}. Plus précisément :
+
+\begin{itemize}
+  \item \textbf{Le fusible est à usage unique}: Le smartphone contient un fusible eFuse qui, une fois qu'il détecte que le BL a été déverrouillé, grille définitivement et ne peut pas être restauré.
+  \item \textbf{Fonctions affectées}: Samsung Pay (carte de transport/carte bancaire), le dossier sécurisé Knox, le contrôle MDM d'entreprise, et certaines applications d'assurance santé deviennent inutilisables.
+  \item \textbf{Effacement forcé des données}: Une fois la fusion déclenchée, le smartphone force une réinitialisation d'usine, toutes les données locales sont effacées (les données cloud ne sont pas affectées).
+  \item \textbf{Impact sur la garantie}: Le fabricant déclare explicitement qu'après la fusion Knox, le service de garantie n'est plus disponible.
+\end{itemize}
+
+\begin{tcbwarn}{Réfléchissez à deux fois avant d'agir}
+La fusion Knox de Samsung est\textbf{irréversible}, une fois déclenchée, il est impossible de revenir à l'état d'usine. Si vous souhaitez simplement utiliser certaines fonctions nécessitant normalement le Root, il est recommandé de vérifier d'abord s'il existe des alternatives ne nécessitant pas de Root.
+
+\end{tcbwarn}
+
+\textbf{Avertissement important}\par
+
+Le flashage comporte des risques, procédez avec prudence. Cela peut entraîner :
+
+\begin{itemize}
+  \item Smartphone brické (impossible de démarrer)
+  \item Perte de la garantie
+  \item Perte de données
+  \item Dysfonctionnement des services de paiement
+\end{itemize}
+
+Avant le flashage, faites impérativement une sauvegarde complète, lisez attentivement le tutoriel, et vérifiez la compatibilité du modèle et de la version.
+
+\begin{tcbinfo}{Ressources recommandées}
+\begin{itemize}
+  \item \textbf{XDA Developers}:La plus grande communauté de développeurs Android au monde, riche en tutoriels de flashage et ressources de ROM.
+  \item \textbf{Coolapk}:Communauté numérique bien connue en Chine, avec de nombreux tutoriels et discussions en chinois.
+  \item \textbf{Forums par modèle}:Comme la communauté Xiaomi, la communauté OnePlus, etc., avec des tutoriels officiels et communautaires.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{VI. Foire aux questions (FAQ)}
+
+\textbf{Q1 : Peut-on revenir en arrière après avoir déverrouillé le BL ?}\par
+
+\textbf{A:}Oui, il est possible de reverrouiller. Il faut généralement flasher le package complet de flash filaire officiel et utiliser un script de flash spécifique (par exemple, celui de Xiaomi\texttt{flash\_all\_lock.\allowbreak bat}) pour reverrouiller. Mais notez que même après reverrouillage, certaines sécurités déclenchées par le déverrouillage (telles que le Knox de Samsung) peuvent être irréversibles.
+
+\textbf{Q2 : Comment rooter après le déverrouillage ?}\par
+
+\textbf{A:}Le déverrouillage du BL n'est que la première étape. Le Root nécessite généralement :
+
+\begin{enumerate}
+  \item Flasher un Recovery personnalisé (tel que TWRP).
+  \item Flasher un gestionnaire de Root tel que Magisk via le Recovery pour patcher l'image boot et obtenir les permissions Root.
+\end{enumerate}

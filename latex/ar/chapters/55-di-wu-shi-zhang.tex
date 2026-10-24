@@ -1,0 +1,195 @@
+\bookchapter{الفصل 50: انطلاقة سريعة مع Kotlin — اللغة الأولى لتطوير Android}
+
+\chapterintro{في هذا الفصل نبدأ رسميًا تعلم اللغة. لا تتوتر — Kotlin معروفة بأنها “ودودة مع المبتدئين”، ولا تحتاج إلى حفظ كتاب قواعد: بإتقان 20\% من القواعد تستطيع فهم وكتابة 80\% من الكود اليومي، والباقي تتعلمه أثناء العمل على المشاريع. تذكّر مبدأنا في التعلم: الفهم أهم من الحفظ، والاستخدام أهم من الإتقان.}
+
+\booksection{أولًا: المتغيرات والأنواع: إعطاء البيانات أسماء}
+
+البرنامج هو “بيانات + منطق”. والمتغير اسم نطلقه على البيانات لنخزنها. في Kotlin طريقتان للتصريح:
+
+\begin{lstlisting}[language=Kotlin]
+val name = "أحمد"        // val: متغير للقراءة فقط (يُفضَّل افتراضيًا)
+var age = 18             // var: متغير قابل للتغيير (يمكن تعديله لاحقًا)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var يمكن تغييره
+// name = "سارة"         // <i class="fas fa-times-circle mr-1"></i> val لا يمكن تغييره، الترجمة ستُظهر خطأ
+
+val score: Int = 100     // يمكن أيضًا تحديد النوع صراحة
+val pi = 3.14            // إن لم تكتبه سيُستنتج تلقائيًا
+\end{lstlisting}
+
+الأنواع الشائعة قليلة، وجدول واحد يكفي لحفظها:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{النوع} & \textbf{ماذا يخزن} & \textbf{مثال} \tabularnewline
+\hline
+Int & عدد صحيح & 42 \tabularnewline
+Double & عدد عشري & 3.14 \tabularnewline
+String & نص & "مرحبًا" \tabularnewline
+Boolean & صح/خطأ & true / false \tabularnewline
+List< T> & مجموعة بيانات & listOf(1, 2, 3) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}الأنواع الأساسية الشائعة في Kotlin\end{center}
+
+\begin{tcbinfo}{نصيحة: قاعدة أولوية val}
+قاعدة حديدية في مجتمع Kotlin: استخدم val افتراضيًا، ولا تلجأ إلى var إلا عند الضرورة القصوى. إذا استخدمت var حيث يكفي val سيحذرك المحرر بخط أصفر. هذه العادة توفر عليك فئة كبيرة من الأخطاء الناتجة عن “تعديل المتغيرات دون قصد” — فكلما قلّ التغيير في الكود سهُل فهمه.
+
+\end{tcbinfo}
+
+\booksection{ثانيًا: الدوال: تجميع المنطق في “أزرار”}
+
+الدالة منطق له اسم، تشبه زرًا على جهاز التحكم — تضغطه (تستدعيه) فتنفَّذ سلسلة من الأوامر. في Kotlin نصرّح عنها بالكلمة fun:
+
+\begin{lstlisting}[language=Kotlin]
+fun greet(name: String): String {
+    return "مرحبًا، $name!"     // رمز $ يُدرج المتغير داخل النص
+}
+
+println(greet("أحمد"))        // الناتج: مرحبًا أحمد!
+
+// الدوال ذات السطر الواحد يمكن كتابتها كتعبير
+fun add(a: Int, b: Int) = a + b
+
+println(add(3, 5))            // الناتج: 8
+\end{lstlisting}
+
+نقاط مهمة: تُكتب المعاملات داخل الأقواس (الاسم أولًا ثم النوع، يفصلهما نقطتان رأسيتان)، ويُكتب نوع الإرجاع بعد الأقواس؛ وقالب النص \$اسم\_المتغير هو ميزة Kotlin المميزة — لم تعد تحتاج إلى “لصق” السلاسل مع المتغيرات كما في Java.
+
+\booksection{ثالثًا: الشروط والحلقات: نجعل البرنامج “يفكر”}
+
+ذكاء البرنامج يأتي من أمرين: القدرة على الحكم (if/when) والقدرة على التكرار (for/while).
+
+\begin{lstlisting}[language=Kotlin]
+// شرط: if / else
+val age = 17
+if (age >= 18) {
+    println("بالغ")
+} else {
+    println("قاصر")
+}
+
+// فروع متعددة: when (أفضل من switch بمئة مرة)
+val score = 85
+val level = when {
+    score >= 90 -> "ممتاز"
+    score >= 60 -> "ناجح"
+    else -> "واصل المحاولة!"
+}
+
+// تكرار: حلقة for
+val fruits = listOf("تفاح", "موز", "برتقال")
+for (fruit in fruits) {
+    println("أحب أكل $fruit")
+}
+\end{lstlisting}
+
+التعبير when هو أسلوب التفرع المتعدد الأكثر استخدامًا في Kotlin، وستستخدمه يوميًا في تطوير Android (مثل عرض واجهات مختلفة حسب الحالة).
+
+\booksection{رابعًا: أمان الفراغ: “تميمة الحماية” في Kotlin}
+
+أشهر خطأ في عصر Java اسمه NullPointerException (استثناء المؤشر الفارغ) — ينهار البرنامج عندما يصل إلى شيء “لا يحتوي شيئًا”. وتقول الإحصائيات إنه يتصدر قائمة أعطال Android باستمرار. حلت Kotlin هذه المشكلة من مستوى اللغة نفسه: القيم الفارغة ممنوعة افتراضيًا.
+
+\begin{lstlisting}[language=Kotlin]
+var name: String = "أحمد"   // نوع عادي: لا يجوز أن يكون null أبدًا
+// name = null                // <i class="fas fa-times-circle mr-1"></i> خطأ ترجمة: يوقفك فورًا
+
+var nickname: String? = null // أضف علامة استفهام: يسمح بـ null
+nickname = "تومي"
+
+// مع الأنواع القابلة لـ null يجب التعامل بأمان:
+println(nickname?.length)    // استدعاء آمن: إذا كانت null يرجع null دون انهيار
+val len = nickname?.length ?: 0   // معامل Elvis: قيمة افتراضية عند null
+println(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{تنبيه: لا تخلط بين ? و ?}
+النوع String? يعني “مسموح أن يكون فارغًا”، أما a ?: b فتعني “إذا كان a فارغًا استخدم b” (تشبه تسريحة شعر إلفيس بريسلي لذلك تسمى معامل Elvis). في بداياتك، إذا ظهر لك خطأ متعلق بـ null فالأرجح أنك نسيت معالجة نوع قابل للفراغ — وهذا هو اللغة تحميك.
+
+\end{tcbwarn}
+
+\booksection{خامسًا: الأصناف والكائنات: قوالب صناعة “القطع”}
+
+الصنف (class) هو “قالب” الكائن، والكائن “المنتج النهائي” من الصنف. كل شيء في Android — الصفحات والأزرار والبيانات — كائن. وفي Kotlin أداة رائعة اسمها data class (صنف البيانات) مخصصة “لحمل البيانات”؛ سطر واحد يعادل عشرات الأسطر في Java:
+
+\begin{lstlisting}[language=Kotlin]
+// صنف عادي: القالب
+class Dog(val name: String) {
+    fun bark() = println("$name: هو هو!")
+}
+
+val dog = Dog("Rex")      // ينشئ الكائن
+dog.bark()                 // Rex: هو هو!
+
+// data class: صندوق البيانات (يشمل equals/copy وغيرها تلقائيًا)
+data class User(val id: Int, val name: String, val email: String)
+
+val me = User(1, "أحمد", "zhangsan@example.com")
+val twin = me.copy(name = "خالد")   // ينسخ ويغيّر حقلًا واحدًا
+\end{lstlisting}
+
+عندما تصنع لاحقًا دفتر حسابات، ستكون كل عملية مالية data class مثل: data class Record(val amount: Double, val category: String, val date: String). أرأيت؟ صرت قادرًا على كتابة بنية كود مشروع حقيقي.
+
+\booksection{سادسًا: اللامدا والدوال العليا: “سكر Kotlin النحوي”}
+
+ستشاهد يوميًا في كود Android تعابير مثل \{ ... \} وهي “دوال بلا اسم” تسمى lambda (دالة مجهولة). السطر onClick = \{ count++ \} في الزر هو lambda — يجمع “ماذا نفعل بعد النقر” في كتلة واحدة ويسلّمها للزر.
+
+\begin{lstlisting}[language=Kotlin]
+// الطريقة العادية: تعرّف دالة مسماة ثم تمررها
+fun double(x: Int) = x * 2
+val result = listOf(1, 2, 3).map(::double)
+
+// طريقة lambda: تُعرَّف في المكان، خفيفة ومباشرة
+val result2 = listOf(1, 2, 3).map { it * 2 }   // it = العنصر الحالي
+
+// تصفية + تحويل متسلسل (شائع جدًا في المشاريع الحقيقية)
+val bills = listOf(12.5, 88.0, 5.0, 200.0)
+val bigBills = bills.filter { it > 50 }.sorted()
+// [88.0, 200.0]——"الفواتير فوق 50 بعد الترتيب"
+\end{lstlisting}
+
+احفظ “المجموعات” عالية التكرار: filter (التصفية) و map (التحويل) و sorted (الترتيب) و sum (الجمع). في المستقبل ستعالج 90\% من قوائمك بتركيبات هذه الحيل الأربع. فلسفة Kotlin: ما يمكن قوله بجملة واحدة لا يُكتب بخمس.
+
+\booksection{سابعًا: بطاقة مراجعة نحوية للمبتدئين من الصفر}
+
+لا تحاول حفظ كل القواعد في يوم واحد. احفظ هذه البطاقة وراجعها أثناء كتابة الكود، وبعد أسبوعين ستألفها تلقائيًا:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{ماذا تريد أن تفعل} & \textbf{الطريقة} \tabularnewline
+\hline
+تعريف متغير للقراءة فقط & \texttt{val x = 1} \tabularnewline
+تعريف متغير قابل للتغيير & \texttt{var x = 1} \tabularnewline
+تعريف دالة & fun الاسم(المعاملات): نوع الإرجاع \{ ... \} \tabularnewline
+اتخاذ قرار & if (الشرط) \{...\} else \{...\} \tabularnewline
+تفرع متعدد & when \{ الشرط -> النتيجة \} \tabularnewline
+المرور على العناصر & for (x in القائمة) \{ ... \} \tabularnewline
+دمج النصوص & "مرحبًا، \$name" \tabularnewline
+معالجة الفراغ & \texttt{x?.\allowbreak length ?: 0} \tabularnewline
+تعريف صنف بيانات & \texttt{data class X(val a: Int, val b: String)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}بطاقة مراجعة نحو Kotlin (نسخة المبتدئين)\end{center}
+
+\begin{tcbpractice}{لنتجرب: جرّب Kotlin 10 دقائق دون تثبيت أي برنامج}
+افتح play.kotlinlang.org (ساحة التجارب الرسمية لـ Kotlin) في المتصفح، والصق كل مقطع كود في هذا الفصل وشغّله، وعدّل الأرقام والنصوص وراقب كيف يتغير الناتج. هذه الـ 10 دقائق من “اللعب قبل التعلم” ستسهّل عليك البدء في الفصل 51 إلى ضعفين.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{خلاصة الفصل}
+\begin{itemize}
+  \item أولوية val واحذر مع var؛ يمكن استنتاج الأنواع تلقائيًا، أو التصريح بها صراحة بعد النقطتين
+  \item الدالة = منطق مجمّع؛ وقالب النص \$ هو الميزة المميزة
+  \item if/when للحكم و for للتكرار؛ و when هو "متعدد المواهب" في تطوير Android
+  \item أمان الفراغ هو تميمة الحماية في Kotlin: الأنواع العادية ترفض null، والأنواع القابلة للفراغ تتطلب معالجة بـ ? أو ?:
+  \item data class صندوق لحمل البيانات، حقل لكل سطر، وتستخدم يوميًا في المشاريع الحقيقية
+  \item 20\% من القواعد تُنجز 80\% من العمل: استخدم أولًا ثم أتقن
+\end{itemize}
+
+\end{tcbsummary}

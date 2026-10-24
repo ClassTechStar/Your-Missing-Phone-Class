@@ -1,0 +1,143 @@
+\bookchapter{Capítulo 55: Proyecto 2: app del tiempo (versión en red)}
+
+\chapterintro{La app de gastos era “forjar el fondo”; la del tiempo es “ver mundo”: tiene que entenderse con internet. En este proyecto aprenderás a pedir una API gratuita, a parsear JSON, a llevar los tres estados de interfaz “cargando/éxito/error” y a esconder bien la clave de la API. Al acabarlo tendrás la capacidad de hacer cualquier “app conectada”: noticias, divisas, traducción; la receta es idéntica.}
+
+\booksection{Pedir una API de tiempo gratuita}
+
+Para practicar en casa van bien OpenWeatherMap o, en China, QWeather (HeFeng); ambas tienen cuota gratuita y funcionan al registrarte. Tomemos OpenWeatherMap como ejemplo:
+
+\begin{enumerate}
+  \item Crea una cuenta genera una Key (apikey) en la página API keys;
+  \item El plan gratuito permite llamar al endpoint Current Weather (tiempo actual): api.openweathermap.org/data/2.5/weather? q=beijing\&appid=TU\_CLAVE\&units=metric;
+  \item Pruébalo primero en el navegador para ver cómo es el JSON que devuelve: es la "lección previa" obligatoria antes de enchufarte a cualquier API.
+\end{enumerate}
+
+\textbf{Aviso para esquivar problemas: la clave jamás clavada en el código}\par
+
+La API Key equivale a “la contraseña de tu cartera”: la escribes en el código, lo subes a GitHub y en cuestión de horas los crawlers la barren y te la gastan. Lo correcto: meterla en local.properties (un archivo que gitignore ya ignora) y leerla en el código a través del buildConfig de Gradle. Busca “Android hide API key best practices” y sigue los pasos.
+
+\booksection{La capa de red: Retrofit + parseo de JSON}
+
+Define primero el “modelo de datos” según el JSON que devuelve la API; los campos que no encajen, ignóralos sin más:
+
+\begin{lstlisting}[language=Kotlin]
+// JSON: {"weather":[{"description":"Despejado"}],"main":{"temp":26.5,"humidity":40},"name":"Madrid"}
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+data class Weather(val description: String)
+data class Main(val temp: Double, val humidity: Int)
+
+interface WeatherApi {
+    @GET("data/2.5/weather")
+    suspend fun getWeather(
+        @Query("q") city: String,
+        @Query("appid") key: String,
+        @Query("units") metric: String = "metric",
+        @Query("lang") lang: String = "zh_cn"
+    ): WeatherResponse
+}
+\end{lstlisting}
+
+Gson meterá el JSON solo dentro de esas data class: si los nombres de campo coinciden, la magia ocurre sola.
+
+\booksection{Los tres estados de interfaz: cargando / éxito / error}
+
+El alma de una app conectada está en la “gestión de estados”. Red lenta, sin conexión, nombre de ciudad mal escrito... ante cada caso la interfaz debe dar la cara y explicarse. Una forma elegante de representarlo es un sealed class (clase sellada):
+
+\begin{lstlisting}[language=Kotlin]
+sealed class UiState {
+    object Loading : UiState()                    // cargando
+    data class Success(val data: WeatherResponse) : UiState()  // éxito
+    data class Error(val message: String) : UiState()          // fallo
+}
+
+// en el ViewModel:
+fun search(city: String) {
+    viewModelScope.launch {
+        _state.value = UiState.Loading
+        _state.value = try {
+            UiState.Success(api.getWeather(city))
+        } catch (e: Exception) {
+            UiState.Error("No encuentro esa ciudad, ¿pruebas con otro nombre?")
+        }
+    }
+}
+
+// en la interfaz:
+when (val s = state) {
+    is UiState.Loading -> CircularProgressIndicator()   // rueda de carga
+    is UiState.Success -> WeatherContent(s.data)        // muestra
+    is UiState.Error -> Text(s.message)                 // muestra el error
+}
+\end{lstlisting}
+
+Este esquema en tres tramos Loading/Success/Error es la “plantilla todoterreno” de las interfaces conectadas: apréndetela de memoria y, a partir de ahora, calca el molde en todas tus apps conectadas.
+
+\booksection{Código de interfaz en la práctica: dibujar el tiempo}
+
+Con el estado listo, la interfaz queda así (fragmentos clave):
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun WeatherContent(data: WeatherResponse) {
+    Column(
+        Modifier.fillMaxSize().padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(
+            "${data.main.temp}°C",
+            fontSize = 72.sp,
+            fontWeight = FontWeight.Light
+        )
+        Text(
+            data.weather.firstOrNull()?.description ?: "Desconocido",
+            fontSize = 20.sp,
+            color = Color.Gray
+        )
+        Spacer(Modifier.height(16.dp))
+        Row {
+            Text(" Humedad ${data.main.humidity}%")
+            Spacer(Modifier.width(24.dp))
+            Text(" Sensación ${data.main.temp}°C")
+        }
+    }
+}
+\end{lstlisting}
+
+Detalles que valen la pena aprender: firstOrNull() coge el primer elemento sin riesgo (la lista puede estar vacía) y ?: “desconocido” aporta el texto de reserva; el principio de seguridad frente a nulos manda igual en la interfaz. La temperatura presume con un tamaño grande de 72.sp y el peso “Light” da elegancia a las cifras: es la receta clásica de las apps del tiempo.
+
+\booksection{Detalles de interfaz e interacción}
+
+\booksection{Detalles de interfaz e interacción}
+
+\begin{itemize}
+  \item Cuadro de búsqueda: un TextField arriba, escribes el nombre de la ciudad y pulsas buscar (configura la acción "Buscar" en el teclado: enter y busca);
+  \item Tarjeta del tiempo: temperatura en letra grande (26,5°), descripción del tiempo (despejado), humedad y nombre de la ciudad;
+  \item Ciudades favoritas: guarda las que consultas a menudo en DataStore y la próxima vez que abras la app se consultan solas; de regalo, repaso del capítulo 6;
+  \item Deslizar para actualizar: en Compose usa PullToRefreshBox (lo trae Material 3) y la sensación pasa a "profesional" al instante.
+\end{itemize}
+
+\begin{tcbinfo}{Consejo: las imágenes dan vida a la interfaz}
+Asigna a cada tipo de tiempo un emoji o icono () mapeándolos con when(description): tres líneas de código y la “temperatura humana” de la interfaz se duplica. También puedes cargar una biblioteca de iconos del tiempo de terceros, pero en la etapa de práctica bastan los emojis.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Manos a la obra: la lista de comprobación de la app del tiempo}
+(1) La búsqueda del tiempo funciona con normalidad; (2) corta la red y la app avisa con elegancia sin cerrarse (¡pruébalo en modo avión!); (3) tecleas una ciudad que no existe y avisa con amabilidad; (4) guardas dos ciudades favoritas y siguen ahí al reiniciar la app; (5) girar la pantalla no pierde el estado. Con las cinco superadas, este proyecto se gradúa.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item Prueba la API en el navegador y entiende el JSON antes de escribir código: la "lección previa" nunca sale cara
+  \item La API Key se esconde en local.properties y jamás entra al repositorio de código
+  \item Interfaz de Retrofit + data class: si los campos encajan, el JSON se parsea solo
+  \item El esquema en tres estados Loading/Success/Error es el todoterreno de las interfaces conectadas
+  \item Sin red, entrada vacía, ciudad inexistente: manejar errores es la nota mínima de una app conectada
+\end{itemize}
+
+\end{tcbsummary}

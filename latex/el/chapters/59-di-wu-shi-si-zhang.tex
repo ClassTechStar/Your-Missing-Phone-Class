@@ -1,0 +1,196 @@
+\bookchapter{Κεφάλαιο 54: Έργο 1 — Το βιβλίο εξόδων $\mu$ου (τοπική έκδοση)}
+
+\chapterintro{Καλώς ήρθες στο πρώτο σου «κανονικό» έργο. Αυτό το βιβλίο εξόδων, παρότι δεν συνδέεται στο διαδίκτυο, είναι πλήρες σε όλα: καταγράφει συναλλαγή, δείχνει την κίνηση, κάνει $\mu$ηνιαία στατιστικά, επιτρέπει διαγραφή και αλλαγή. Όταν το τελειώσεις, θα έχεις περπατήσει ολόκληρη τη διαδρο$\mu$ή «δεδο$\mu$ένα λογική διεπαφή». Μη βιάζεσαι να αντιγράψεις κώδικα — πρώτα σκέψου καθαρά, $\mu$ετά δράσε· αυτός είναι ο $\mu$όνι$\mu$ος κανόνας $\mu$ας.}
+
+\booksection{Σκέψη απαιτήσεων: ρώτα πρώτα πέντε ερωτήσεις}
+
+Πριν πας στη δράση, ξεκαθάρισε την ιδέα $\mu$ε τα «πέντε στοιχεία απαιτήσεων»:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Στοιχείο} & \textbf{Απάντηση} \tabularnewline
+\hline
+Who (για ποιον) & Για $\mu$ένα — και για οικογένεια και φίλους \tabularnewline
+What (τι κάνει) & Καταγραφή εσόδων-εξόδων, προβολή κίνησης, $\mu$ηνιαία σύνοψη, στατιστικά ανά κατηγορία \tabularnewline
+Why (γιατί) & Εξάσκηση + να καταλάβω πού πάνε τα λεφτά $\mu$ου \tabularnewline
+How (πώς) & Kotlin + Compose + Room + MVVM, α$\mu$ιγώς τοπικό χωρίς backend \tabularnewline
+Constraint (περιορισ$\mu$οί) & Ολοκλήρωση $\mu$έσα σε $\mu$ία εβδο$\mu$άδα· ελάχιστη υποστήριξη Android 8· έστω χωρίς δη$\mu$οσίευση, να γράφεται $\mu$ε πρότυπα δη$\mu$οσίευσης \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Τα πέντε στοιχεία απαιτήσεων του βιβλίου εξόδων\end{center}
+
+Μετά σπά’ το σε $\mu$ικρά βή$\mu$ατα «κάθε ένα χρήσι$\mu$ο από $\mu$όνο του»: (1) φτιάξε το στρώ$\mu$α δεδο$\mu$ένων Room (να αποθηκεύει $\mu$ια εγγραφή)· (2) σελίδα λίστας (να βλέπεις την κίνηση)· (3) σελίδα καταχώρησης (να προσθέτεις εγγραφές)· (4) διαγραφή και επεξεργασία· (5) κάρτα $\mu$ηνιαίας σύνοψης. Σε κάθε βή$\mu$α που ολοκληρώνεις, η εφαρ$\mu$ογή είναι ήδη κάτι «χρήσι$\mu$ο».
+
+\booksection{Στρώ$\mu$α δεδο$\mu$ένων: να πάρουν οι «εγγραφές» σπίτι}
+
+Ορίσε πρώτα πώς $\mu$οιάζει $\mu$ια εγγραφή — τα πεδία ας φτάνουν για τις ανάγκες, χωρίς απληστία:
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" έσοδο | "expense" έξοδο
+    val amount: Double,      // Ποσό (γιουάν)
+    val category: String,    // Κατηγορία: φαγητό, $\mu$ετακινήσεις, $\mu$ισθός……
+    val note: String = "",   // Ση$\mu$είωση (προαιρετικό)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Στο Dao πρόσθεσε δύο ερωτή$\mu$ατα «για στατιστικά» — αυτή είναι η ψυχή του βιβλίου εξόδων:
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month σε $\mu$ορφή "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: γιατί το ποσό είναι Double;}
+Τα αυστηρά χρη$\mu$ατοοικονο$\mu$ικά προϊόντα χρησι$\mu$οποιούν BigDecimal ή «Int σε $\mu$ονάδες λεπτών (cents)» για να αποφύγουν σφάλ$\mu$ατα κινητής υποδιαστολής (το παλιό πρόβλη$\mu$α 0.1+0.2$\neq$0.3). Για έργο εξάσκησης το Double αρκεί· αν κάποτε φτιάξεις πραγ$\mu$ατικό χρη$\mu$ατοοικονο$\mu$ικό προϊόν, θυ$\mu$ήσου να αλλάξεις σε $\mu$ονάδα «λεπτά» — είναι παγίδα στην οποία έχουν πέσει α$\mu$έτρητοι προηγού$\mu$ενοι.
+
+\end{tcbinfo}
+
+\booksection{MVVM: διεπαφή και λογική «χωρίζουν σπίτια»}
+
+Να αφήσεις τη διεπαφή να $\mu$ιλάει απευθείας $\mu$ε τη βάση; Θα τρέχει, αλλά ο κώδικας της διεπαφής γίνεται ατελείωτος και ακο$\mu$ψός. Η αρχιτεκτονική MVVM $\mu$οιράζει καθήκοντα: η View (διεπαφή) $\mu$όνο ζωγραφίζει, το ViewModel (κέντρο λογικής) διαχειρίζεται τα δεδο$\mu$ένα, το Model (Room) την αποθήκευση.
+
+View (οθόνη Compose)
+
+ViewModel (κατάσταση και λογική)
+
+Model (στρώ$\mu$α δεδο$\mu$ένων Room)
+
+\begin{center}\small\color{gray}Εικόνα 5: Η τριών επιπέδων δο$\mu$ή του MVVM — τα δεδο$\mu$ένα ρέουν προς $\mu$ία κατεύθυνση και κάθε επίπεδο $\mu$ένει στα σύνορά του\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // Μετατροπή Flow σε κατάσταση παρατηρήσι$\mu$η από την οθόνη
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // Ενέργεια χρήστη: κλήση συνάρτησης suspend
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+Στη διεπαφή (Compose) το χρησι$\mu$οποιείς έτσι: val vm: RecordViewModel = viewModel(), και $\mu$ετά val list by vm.records.collectAsState() — $\mu$όλις αλλάξουν τα δεδο$\mu$ένα, η λίστα ανανεώνεται $\mu$όνη της και εσύ δεν χρειάζεται να κάνεις τίποτα. Αυτή είναι η δύνα$\mu$η της συνεργασίας MVVM + Flow + Compose.
+
+\booksection{Διεπαφή: σελίδα λίστας + σελίδα καταχώρησης}
+
+Για τη λίστα χρησι$\mu$οποίησε LazyColumn (τε$\mu$πέλικη λίστα) — όσα κι αν είναι τα δεδο$\mu$ένα, δεν κολλάει:
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // Κάρτα σύνοψης πάνω (έσοδα-έξοδα=υπόλοιπο)
+        SummaryCard(records)
+
+        // Λίστα κινήσεων
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // Πλωτό κου$\mu$πί "Καταγραφή"  διάλογος εισαγωγής
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+Για την καταχώρηση, το AlertDialog (διάλογος) είναι το πιο βολικό: $\mu$ερικά πεδία εισαγωγής + εναλλαγή έσοδο/έξοδο + λίστα κατηγοριών, και $\mu$ε «ΟΚ» καλείς το vm.addRecord(...).
+
+\begin{tcbwarn}{Προσοχή: $\mu$ην τε$\mu$πελιάζεις $\mu$ε την επικύρωση εισόδου}
+Το πεδίο ποσού πρέπει οπωσδήποτε να επικυρώνεται: κενή τι$\mu$ή, αρνητικός αριθ$\mu$ός και $\mu$η έγκυρες είσοδοι όπως «abc» πρέπει να $\mu$πλοκάρονται (έλεγξε $\mu$ε toDoubleOrNull()). Από τις πιο συχνές αιτίες κατάρρευσης εφαρ$\mu$ογών είναι το «να θεωρήσου$\mu$ε την εισαγωγή του χρήστη καλό παιδί». Θυ$\mu$ήσου: ό, τι πληκτρολογεί ο χρήστης, έλεγχέ το σαν εχθρό.
+
+\end{tcbwarn}
+
+\booksection{Επεξεργασία και διαγραφή: τα δεδο$\mu$ένα να «$\mu$παίνουν και να βγαίνουν»}
+
+Ένα βιβλίο εξόδων που $\mu$όνο προσθέτει και δεν διαγράφει, σε τρεις $\mu$έρες γίνεται άχρηστο. Πρόσθεσε δύο λειτουργίες:
+
+\begin{lstlisting}[language=Kotlin]
+// Δύο ακό$\mu$α συναρτήσεις στο Dao:
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// Στην οθόνη: παρατετα$\mu$ένο πάτη$\mu$α στοιχείου για $\mu$ενού "επεξεργασία/διαγραφή" (Compose $\mu$ε DropdownMenu ή AlertDialog)
+// Πριν τη διαγραφή, καλύτερα διάλογος επιβεβαίωσης—η "κατά λάθος διαγραφή" είναι ό, τι πιο $\mu$ιση$\mu$ένο για χρήστες λογιστηρίου
+\end{lstlisting}
+
+Δύο ε$\mu$πειρίες για τις λεπτο$\mu$έρειες αλληλεπίδρασης: η διαγραφή θέλει δεύτερη επιβεβαίωση (για να $\mu$ην πατήσεις κατά λάθος), και η επεξεργασία να προ-συ$\mu$πληρώνει τις αρχικές τι$\mu$ές όσο γίνεται (η αλλαγή ενός γρά$\mu$$\mu$ατος είναι πιο εύκολη από την επανεισαγωγή). Μην υποτι$\mu$άς αυτές τις λεπτο$\mu$έρειες — η «αίσθηση προϊόντος» χτίζεται από τέτοιες λεπτο$\mu$έρειες.
+
+\booksection{Αποδοχή: έλεγχος σε τρία επίπεδα + δύο προχωρη$\mu$ένες προκλήσεις}
+
+\booksection{Αποδοχή: έλεγχος σε τρία επίπεδα + δύο προχωρη$\mu$ένες προκλήσεις}
+
+Μόλις τελειώσει το έργο, κάνε αποδοχή σε τρία επίπεδα «λειτουργικότητα όρια αρχιτεκτονική»: $\mu$πορείς να καταγράφεις, να διαγράφεις, και τα δεδο$\mu$ένα $\mu$ένουν $\mu$ετά από επανεκκίνηση της εφαρ$\mu$ογής (λειτουργικότητα)· $\mu$ε ποσό 0 ή αρνητικό καταρρέει; $\mu$ε περιστροφή οθόνης χάνονται δεδο$\mu$ένα; (όρια)· διεπαφή και δεδο$\mu$ένα είναι ανακατε$\mu$ένα; υπάρχουν πεδία σκληρά κωδικοποιη$\mu$ένα; (αρχιτεκτονική).
+
+Αφού περάσει η αποδοχή της βασικής έκδοσης, βάλ’ στον εαυτό σου δύο «πιάτα για προχωρη$\mu$ένους»:
+
+\begin{enumerate}
+  \item Μηνιαίο φίλτρο: εναλλαγή $\mu$ήνα στην κορυφή (π.χ. 2026-08 v) και η λίστα να δείχνει $\mu$όνο την κίνηση του τρέχοντος $\mu$ήνα·
+  \item Πίτα κατηγοριών: $\mu$ε το Canvas του Compose ή $\mu$ε $\mu$ια ελαφριά βιβλιοθήκη γραφη$\mu$άτων, ζωγράφισε το «πού πάνε τα λεφτά» σε διάγρα$\mu$$\mu$α πίτας — $\mu$όλις το κάνεις, το βιβλίο εξόδων αρχίζει να «$\mu$οιάζει προϊόν».
+\end{enumerate}
+
+\begin{tcbpractice}{Πρακτική άσκηση: ολοκλήρωσέ το αυτή την εβδο$\mu$άδα}
+Δούλεψε $\mu$ε τη σειρά «στρώ$\mu$α δεδο$\mu$ένων ViewModel σελίδα λίστας σελίδα καταχώρησης κάρτα σύνοψης», ένα βή$\mu$α τη $\mu$έρα. Αν κολλήσεις, ρίξε το $\mu$ήνυ$\mu$α σφάλ$\mu$ατος αυτούσιο σε $\mu$ηχανή αναζήτησης ή AI (θυ$\mu$άσαι το Μέρος 7 «Πρακτικός Προγρα$\mu$$\mu$ατισ$\mu$ός $\mu$ε AI»; όταν περιγράφεις ένα πρόβλη$\mu$α, ανέφερε καθαρά «ανα$\mu$ενό$\mu$ενη συ$\mu$περιφορά, πραγ$\mu$ατική συ$\mu$περιφορά, βή$\mu$ατα αναπαραγωγής»). Μόλις τελειώσεις, χρησι$\mu$οποίησέ το για $\mu$ια εβδο$\mu$άδα καταγραφές — όταν χρησι$\mu$οποιείς εφαρ$\mu$ογή που έφτιαξες $\mu$όνος σου, η ικανοποίηση σε σπρώχνει να συνεχίσεις.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Πέντε στοιχεία απαιτήσεων σπάσι$\mu$ο σε $\mu$ικρά βή$\mu$ατα «κάθε βή$\mu$α χρήσι$\mu$ο», και $\mu$ετά δράση
+  \item Στρώ$\mu$α δεδο$\mu$ένων: οντότητα Record + Dao ($\mu$ε SQL στατιστικών ανά $\mu$ήνα) + Database
+  \item Κατα$\mu$ερισ$\mu$ός MVVM: η View $\mu$όνο ζωγραφίζει, το ViewModel τη λογική, το Model την αποθήκευση
+  \item Flow + stateIn + collectAsState: $\mu$όλις αλλάξουν τα δεδο$\mu$ένα, η διεπαφή ανανεώνεται αυτό$\mu$ατα
+  \item LazyColumn για τη λίστα· AlertDialog για την καταχώρηση
+  \item Αποδοχή σε τρία επίπεδα (λειτουργικότητα/όρια/αρχιτεκτονική) + προχωρη$\mu$ένες προκλήσεις ($\mu$ηνιαίο φίλτρο, πίτα κατηγοριών)
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,154 @@
+\bookchapter{Capítulo 48: Conhecendo o Android — do sistema operacional ao ecossistema de desenvolvimento}
+
+\chapterintro{Parabéns por tomar essa decisão — deixar de ser “quem usa o celular” para virar “quem faz aplicativos de celular”. Antes de pôr a mão na massa, vamos abrir o mapa: de onde vem o Android? Por que desenvolvedores do mundo inteiro escrevem aplicativos para ele? O que acontece entre você bater no teclado e o app chegar ao celular do usuário?}
+
+\booksection{As origens do Android: do “robozinho” ao “maior sistema do mundo”}
+
+A história do Android começa em 2003 — um engenheiro chamado Andy Rubin fundou a Android Inc., com um objetivo bem modesto: criar um sistema operacional inteligente que “entendesse melhor de câmeras”. Depois, o Google a comprou em 2005; em 2007, uniu dezenas de fabricantes para fundar a Open Handset Alliance (OHA); e, em setembro de 2008, o primeiro celular Android, o HTC Dream (G1), chegou oficialmente ao mercado.
+
+Daí em diante, todo mundo conhece a história: em 2026, o Android é o sistema operacional móvel com a maior fatia de mercado do mundo, com bilhões de dispositivos ativos. Seu celular, seu aparelho de TV, a central multimídia do carro e o seu smartwatch muito provavelmente rodam Android. O que isso significa? Que cada linha de código que você escrever tem chance de ser usada pelo maior número de pessoas do planeta.
+
+\begin{tcbinfo}{Dica: o DNA de código aberto do Android}
+O núcleo do código do Android (AOSP, Android Open Source Project) é de código aberto — qualquer fabricante pode pegar, modificar e personalizar. Por isso a Xiaomi tem a MIUI (hoje HyperOS), a Huawei tem a camada de compatibilidade HarmonyOS e a Samsung tem a One UI. Para quem desenvolve, isso é uma boa: você aprende “desenvolvimento Android”, e não “desenvolvimento para uma marca” — um só aprendizado serve para todo o ecossistema.
+
+\end{tcbinfo}
+
+A evolução dos números de versão também é divertida: a partir do 1.5, o Cupcake, cada versão grande recebeu nome de sobremesa — Donut, Eclair, Frozen Yogurt, Gingerbread... só em 2019, com o Android 10, passou a ser só números. Em agosto de 2026, a versão estável mais recente é o Android 17; já a “versão mínima suportada”, que é o que de fato importa ao desenvolver, nos apps principais costuma ficar entre o Android 8 (API 26) e o Android 10 (API 29) — suportando aparelhos de alguns anos atrás é que a sua base de usuários fica grande o suficiente.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Versão} & \textbf{Codinome/ano} & \textbf{O que importa para quem desenvolve} \tabularnewline
+\hline
+Android 8 (API 26) & Oreo · 2017 & Canais de notificação, limites em segundo plano — o piso de muitos aparelhos antigos \tabularnewline
+Android 10 (API 29) & 2019 & Chegada do armazenamento com escopo, grande mudança nas regras de acesso a arquivos \tabularnewline
+Android 12 (API 31) & 2021 & Cores dinâmicas do Material You, grande salto visual na interface \tabularnewline
+Android 13 (API 33) & 2022 & Permissão de notificação em tempo de execução, com pop-up perguntando "pode enviar notificações?" \tabularnewline
+Android 14-15 (API 34-35) & 2023-2024 & Retorno preditivo, páginas de 16 KB e privacidade ainda mais apertada \tabularnewline
+Android 16-17 (API 36-37) & 2025-2026 & Ritmo mais rápido de versões menores e integração de recursos de IA (como extensões do Gemini) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Breve história das versões do Android (até agosto de 2026; destaques para desenvolvimento)\end{center}
+
+\booksection{Em que linguagem escrever: Java ou Kotlin?}
+
+Ao longo da história do desenvolvimento Android, duas linguagens dominaram. O Java é o “veterano fundador” — esteve lá desde o nascimento do Android; o Kotlin foi apadrinhado pelo Google em 2017 como “cidadão de primeira classe” e, desde 2019, a posição oficial é “Kotlin first”. Em 2026, praticamente todos os projetos novos usam Kotlin, e a maioria dos antigos vem migrando aos poucos.
+
+Falando francamente: se você parte do zero absoluto, aprenda Kotlin direto e não volte para o Java. São três motivos: primeiro, o código Kotlin é 30\% a 40\% menor que o Java (a mesma funcionalidade fica mais curta e mais clara em Kotlin); segundo, ele protege de fábrica contra o “ponteiro nulo”, o pesadelo dos iniciantes; terceiro, todos os tutoriais modernos, a documentação oficial e as ferramentas de programação com IA (lembra do nosso livro de programação com IA?) tomam o Kotlin como padrão. O Java só aparece quando você mantém projetos antigos ou lê código legado.
+
+Estilo Java (versão prolixa)
+
+\begin{lstlisting}
+public class MainActivity extends Activity \{
+@Override
+protected void onCreate(Bundle b) \{
+super.onCreate(b);
+setContentView(R.layout.activity);
+\}
+\}
+\end{lstlisting}
+
+Estilo Kotlin (versão enxuta)
+
+\begin{lstlisting}
+class MainActivity : ComponentActivity() \{
+override fun onCreate(b: Bundle?) \{
+super.onCreate(b)
+setContent \{ App() \}
+\}
+\}
+\end{lstlisting}
+
+Para a mesma tarefa, o Kotlin dispensa um monte de chaves e código repetitivo. No Capítulo 50 vamos estudá-lo a sério; por ora, basta guardar: o “idioma oficial” do desenvolvimento Android se chama Kotlin.
+
+\booksection{Como um app nasce?}
+
+Muita gente acha que “desenvolver um app” é abrir o computador e escrever código sem parar. Na prática, da ideia até o celular do usuário, um app passa, em linhas gerais, por esta linha de produção:
+
+Ideia
+
+Design (interface + funções)
+
+Escrever código
+
+Compilar e empacotar (APK/AAB)
+
+Teste (emulador + aparelho real)
+
+Publicação (loja/instalador)
+
+\begin{center}\small\color{gray}Figura 1: O fluxo completo de um app Android, da ideia à publicação na loja\end{center}
+
+Nesse fluxo há dois conceitos que você precisa conhecer desde já:
+
+\begin{itemize}
+  \item APK: o formato de pacote de instalação dos aplicativos Android (.apk); dá para instalar no celular com dois toques, como o .exe do Windows. Use-o para testar por conta própria ou passar para um amigo experimentar.
+  \item AAB: o Android App Bundle (.aab), o "formato de empacotamento avançado" usado para publicar no Google Play. A loja recorta o pacote dinamicamente conforme o modelo do celular de cada usuário, deixando o download de cada um menor. Você não consegue instalar um .aab por conta própria; ele só pode ser entregue pela loja.
+\end{itemize}
+
+Outro termo que você vai ouvir sem parar: SDK (Software Development Kit, kit de desenvolvimento de software). É todo o “equipamento de desenvolvimento” fornecido oficialmente pelo Android — inclui as bibliotecas de API de cada versão, ferramentas de depuração, imagens de emulador e mais. As classes como Activity e Button, que você usa ao programar, vêm do SDK.
+
+\booksection{Panorama da stack Android: a sua “lista de armas”}
+
+Antes de estudar de fato, conheça a configuração padrão dos projetos Android mainstream em 2026 — tudo bem se esta lista não fizer sentido agora; quando você terminar o livro e voltar a ela, tudo se esclarecerá:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Camada} & \textbf{Escolha dominante (2026)} & \textbf{Para que serve} \tabularnewline
+\hline
+Linguagem & Kotlin 2.x & A linguagem em que se escreve a lógica \tabularnewline
+Interface & Jetpack Compose + Material 3 & Desenhar a interface com código (fio condutor deste livro) \tabularnewline
+Arquitetura & MVVM + ViewModel & Separa a interface da lógica para o código não virar bagunça \tabularnewline
+Armazenamento de dados & Room (banco de dados) + DataStore (configurações) & Guardar dados no celular \tabularnewline
+Rede & Retrofit + OkHttp + corrotinas do Kotlin & Conversar com o servidor \tabularnewline
+Ferramenta de build & Gradle + Kotlin DSL & Transformar o código em pacote de instalação \tabularnewline
+Ambiente de desenvolvimento & Android Studio & O IDE "tudo-em-um" oficial do Google \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Visão rápida da stack Android dominante em 2026\end{center}
+
+Não se assuste com essa sequência de termos em inglês. Eles são como as panelas e as vasilhas da cozinha — por ora basta saber que “para cozinhar, é preciso entrar na cozinha”; como cada ferramenta funciona, os próximos capítulos vão desmontando uma a uma. E a boa notícia: ao criar um projeto novo, o Android Studio configura todo esse conjunto automaticamente; você só precisa cozinhar.
+
+\booksection{Android vs iOS: a primeira “aula de escolha de lado” de quem desenvolve}
+
+Talvez você tenha, ao mesmo tempo, aparelhos Android e Apple. Como desenvolvedor, vale conhecer com antecedência as diferenças de experiência entre os dois lados — não é uma torcida por “qual é melhor”, e sim a conta real de “por qual lado é mais adequado começar”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Critério} & \textbf{Desenvolvimento Android} & \textbf{Desenvolvimento iOS} \tabularnewline
+\hline
+Computador de desenvolvimento & Windows, Mac ou Linux, qualquer um serve & Precisa ser Mac (o Xcode é exclusivo) \tabularnewline
+Ferramentas de desenvolvimento & Android Studio (gratuito) & Xcode (gratuito) + taxa anual de US\$ 99 para publicar \tabularnewline
+Revisão para publicação & Flexível, de algumas horas a alguns dias & Rígida, de 1 a 7 dias é o comum \tabularnewline
+Instalar e testar & APK: envia e instala à vontade & Distribuição restrita; testar exige assinatura/TestFlight \tabularnewline
+Cenário de receita & Predomínio de anúncios e canais locais & A App Store tem hábito de compra dentro do app melhor \tabularnewline
+Custo de aprendizado & Mais conceitos (os quatro grandes componentes etc.) & Ecossistema fechado, mas coeso e com documentação caprichada \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Comparação dos caminhos de desenvolvimento Android e iOS (agosto de 2026)\end{center}
+
+Falando francamente: se o seu computador não é um Mac, essa questão nem se põe — o Android é a única opção. Se você tem um Mac, dá para ler a Oitava e a Nona Partes deste livro lado a lado: a lógica de programação se transfere, e aprender o segundo lado depois do primeiro fica bem mais rápido.
+
+\begin{tcbpractice}{Mão na massa: conheça o "Android" dentro do seu celular}
+Abra, no celular, [Configurações] [Sobre o telefone] (ou “Informações do telefone”) e localize a linha “Versão do Android” — toque nela várias vezes seguidas e você ainda dispara o minigame secreto do sistema. Anote o número da sua versão e confira na tabela de versões acima a qual geração ele pertence. O seu celular é a sua primeira “máquina de testes de desenvolvimento”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumo do capítulo}
+\begin{itemize}
+  \item O Android nasceu em 2008; em 2026, é o sistema móvel com a maior fatia de mercado, com bilhões de dispositivos ativos
+  \item A versão estável mais recente é o Android 17; os apps principais suportam no mínimo o Android 8-10, para a base de usuários ficar grande o suficiente
+  \item Projetos novos usam Kotlin sem exceção: 30\%+ menos código, proteção contra ponteiro nulo e escolha oficial
+  \item APK para instalar por conta própria, AAB para a loja; o SDK é o kit oficial de equipamento de desenvolvimento
+  \item Stack padrão de 2026: Kotlin + Compose + MVVM + Room + Retrofit + Gradle + Android Studio
+\end{itemize}
+
+\end{tcbsummary}

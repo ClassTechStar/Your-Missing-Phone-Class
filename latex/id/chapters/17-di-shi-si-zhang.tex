@@ -1,0 +1,393 @@
+\bookchapter{Bab 14: Topik khusus pengelola kata sandi}
+
+\chapterintro{1. Mengapa Anda Memerlukan Password Manager?}
+
+\booksection{Mengapa Anda Memerlukan Password Manager?}
+
+Password manager menyelesaikan dilema ini: Anda hanya perlu mengingat satu master password, ia membantu Anda mengingat semua kata sandi lainnya.
+
+2. Cara Kerja Password Manager
+
+\booksection{Cara Kerja Password Manager}
+
+\begin{enumerate}
+  \item \textbf{: Semua kata sandi disimpan dengan enkripsi kuat, hanya Anda yang bisa mendekripsi.}Master Password
+  \item \textbf{: Anda mengatur satu master password, digunakan untuk membuka kunci brankas kata sandi. Master password itu sendiri tidak disimpan di server.}Auto-fill
+  \item \textbf{: Di antarmuka login website atau aplikasi, password manager otomatis mengisi akun dan kata sandi.}Generasi Kata Sandi
+  \item \textbf{: Dapat menghasilkan kata sandi acak dan kompleks, meningkatkan keamanan.}3. Rekomendasi Password Manager Mainstream
+\end{enumerate}
+
+\booksection{Pengantar Prinsip Enkripsi}
+
+Memahami prinsip enkripsi password manager membantu Anda menilai apakah suatu layanan layak dipercaya. Berikut penjelasan beberapa konsep inti dalam bahasa sederhana.
+
+\booksubsection{Enkripsi AES-256}
+
+AES (Advanced Encryption Standard) adalah algoritma enkripsi simetris yang diakui oleh NIST (National Institute of Standards and Technology) Amerika Serikat, banyak digunakan oleh bank, militer, dan pemerintah. “256” berarti panjang key 256 bit — secara teori butuh waktu melebihi usia alam semesta untuk brute force. Password manager mainstream (1Password, Bitwarden, KeePass, dll.) semua memakai AES-256 untuk mengenkripsi vault password Anda.
+
+\booksubsection{Arsitektur Zero-Knowledge}
+
+“Zero-knowledge” bukan berarti penyedia layanan tidak menyimpan apa-apa, melainkan\textbf{Enkripsi dan dekripsi semua dilakukan lokal di perangkat Anda, server hanya menyimpan ciphertext yang sudah dienkripsi}. Alur spesifik:
+
+\begin{enumerate}
+  \item Anda memasukkan master password di sisi klien.
+  \item Klien derive encryption key dari master password (langkah ini diselesaikan di ponsel/komputer Anda).
+  \item Hanya ciphertext yang dienkripsi yang diupload ke server.
+  \item Saat login berikutnya, server mengirim ciphertext, klien lagi-lagi dekripsi dengan master password.
+\end{enumerate}
+
+Poin kunci:\textbf{Master password itu sendiri tidak pernah meninggalkan perangkat Anda}, di server juga tidak ada. Jadi bahkan jika penyedia layanan diretas, hacker hanya mendapatkan setumpuk ciphertext yang tidak bisa didekripsi — kecuali mereka bisa menebak master password Anda.
+
+\begin{tcbinfo}{Mengapa "zero-knowledge" berarti penyedia layanan juga tidak bisa melihat password Anda?}
+Karena decryption key di-derive dari master password Anda, dan master password hanya ada di pikiran Anda, hanya digunakan di perangkat lokal Anda. Server penyedia layanan tidak punya master password, tidak punya decryption key, hanya ciphertext. Inilah sebabnya penyedia layanan resmi seperti Bitwarden, 1Password secara eksplisit menyatakan “kami juga tidak bisa melihat password Anda” — bukan tidak mau lihat, tapi secara teknis tidak bisa.
+
+\end{tcbinfo}
+
+\booksubsection{Key Derivation Function: PBKDF2 dan Argon2}
+
+Master password tidak bisa langsung dipakai sebagai encryption key — perlu diproses melalui “key derivation function”. Fungsi ini bertugas\textbf{Sengaja memperlambat komputasi}, membuat biaya brute force hacker menjadi tidak feasibel.
+
+\begin{itemize}
+  \item \textbf{PBKDF2}: Standar lama, digunakan luas oleh iCloud Keychain, Bitwarden, LastPass, dll. Melalui iterasi berulang (biasanya 100.000+ kali) hash untuk memperlambat cracking.
+  \item \textbf{Argon2}: Juara Password Hashing Competition 2015, lebih modern dari PBKDF2. Selain "konsumsi compute" juga memperkenalkan "konsumsi memori" — membuat hardware khusus seperti GPU/ASIC juga sulit mempercepat cracking. Bitwarden, KeePassXC, dll. sudah mendukung.
+\end{itemize}
+
+Semakin tinggi jumlah iterasi semakin aman, tapi kecepatan unlock juga melambat. Penyedia layanan resmi akan mempublikasikan algoritma derivation dan jumlah iterasi yang digunakan, untuk memudahkan audit komunitas keamanan.
+
+\booksubsection{Studi Kasus: Kebocoran Data LastPass 2022}
+
+Agustus 2022, password manager lama LastPass mengumumkan environment development-nya diretas; November tahun yang sama lebih lanjut mengungkapkan, hacker mengambil backup vault password pengguna (ciphertext terenkripsi). Pelajaran kunci dari insiden ini:
+
+\begin{itemize}
+  \item \textbf{Arsitektur zero-knowledge mempertahankan garis bawah}: Karena vault password itu sendiri terenkripsi, hacker mendapatkan ciphertext tapi tidak bisa dekripsi — dengan syarat master password pengguna cukup kuat.
+  \item \textbf{Pengguna master password lemah paling berbahaya}: Hacker bisa brute force offline master password lemah, karena itu pengguna dengan master password lemah atau berulang menghadapi risiko nyata.
+  \item \textbf{Metadata juga bocor}: Meskipun konten password terenkripsi, metadata seperti URL situs dan catatan mungkin tidak terenkripsi, akan mengungkapkan layanan apa saja yang digunakan pengguna.
+\end{itemize}
+
+\begin{tcbwarn}{Yang dipelajari dari insiden LastPass}
+Pertama, master password harus panjang dan unik (disarankan 16+ karakter, termasuk huruf besar/kecil, angka, simbol); kedua, prioritaskan penyedia layanan yang mendukung Argon2id dengan iterasi tinggi; ketiga, untuk akun high-value (bank, email) pastikan aktifkan verifikasi dua faktor independen, jangan hanya andalkan password manager.
+
+\end{tcbwarn}
+
+\booksection{Rekomendasi Password Manager Mainstream}
+
+\booksubsection{iCloud Keychain}
+
+\begin{itemize}
+  \item \textbf{: Pilihan utama pengguna ekosistem Apple. Integrasi mulus dengan Safari dan aplikasi, gratis, aman. Kekurangannya penggunaan lintas platform tidak nyaman.}Google Password Manager
+  \item \textbf{: Nyaman untuk pengguna Android. Integrasi dengan Chrome dan sistem Android, gratis.}Huawei Password Vault
+  \item \textbf{: Bawaan sistem HarmonyOS, cocok untuk pengguna Huawei.}Alat Profesional Pihak Ketiga:
+\end{itemize}
+
+\booksubsection{Bitwarden}
+
+\begin{itemize}
+  \item \textbf{: Open source gratis, fitur kuat, mendukung semua platform. Sangat direkomendasikan untuk pengguna yang mengutamakan privasi.}1Password
+  \item \textbf{: Antarmuka indah, fitur kaya, cocok untuk keluarga dan tim. Berbayar.}LastPass
+  \item \textbf{: Password manager lama, versi gratis fiturnya terbatas.}KeePass
+  \item \textbf{: Penyimpanan sepenuhnya lokal, open source gratis. Cocok untuk pengguna geek.}4. Praktik Terbaik Penggunaan Password Manager
+\end{itemize}
+
+\booksection{Evaluasi Nyata Kekuatan Password}
+
+Password manager umumnya menampilkan indikator “password strength” (merah/kuning/hijau), tapi evaluasi ini sering hanya melihat panjang dan jenis karakter, tidak komprehensif. Untuk benar-benar menilai apakah password aman, perlu mempertimbangkan “entropy” dan “apakah sudah pernah bocor”.
+
+\booksubsection{Entropy: Ukuran Ilmiah Kekuatan Password}
+
+“Entropy” mengukur ketidakpastian password, satuan bit. Semakin tinggi entropy, semakin banyak upaya brute force yang dibutuhkan.
+
+\begin{itemize}
+  \item \textbf{"123456"}: Entropy sangat rendah, crack sekejap.
+  \item \textbf{"P@ssw0rd"}: Terlihat kompleks, tapi muncul di semua list dictionary attack, entropy tetap rendah.
+  \item \textbf{"correct horse battery staple"}: Empat kata acak, entropy sekitar 44 bit, kesulitan crack jauh melampaui "P@ssw0rd".
+  \item \textbf{16 karakter acak (termasuk besar/kecil+angka+simbol)}: Entropy sekitar 100 bit, compute power saat ini tidak bisa brute force.
+\end{itemize}
+
+Kesimpulan:\textbf{“Panjang + randomitas” lebih penting dari “simbol kompleks”}. Inilah juga alasan password acak panjang yang di-generate password manager benar-benar aman.
+
+\booksubsection{HaveIBeenPwned: Cek Apakah Password Anda Sudah Bocor}
+
+Dipelihara oleh security researcher Troy Hunt\href{https://haveibeenpwned.com}{haveibeenpwned.com}mencatat akun dan password yang bocor dari berbagai insiden kebocoran data besar. Anda bisa:
+
+\begin{enumerate}
+  \item Masukkan email, cek apakah akun Anda terekspos dalam suatu kebocoran.
+  \item Pakai fitur Pwned Passwords untuk query apakah suatu password ada di database kebocoran yang diketahui (password manager dan browser sudah built-in query ini).
+\end{enumerate}
+
+Jika suatu password muncul di database kebocoran,\textbf{meskipun terlihat sekompleks apa pun harus segera diganti}— karena dictionary attack akan prioritas mencoba password yang diketahui ini.
+
+\begin{tcbinfo}{Prinsip Query k-Anonymity}
+Khawatir input password di HaveIBeenPwned akan bocor lagi? Tidak perlu khawatir. Query modern memakai protokol “k-anonymity”: browser hanya mengirim 5 karakter pertama hash password ke server, server mengembalikan semua list hash yang diawali 5 karakter tersebut, lalu dicocokkan secara lokal. Artinya, server tidak pernah melihat hash password lengkap Anda. “Leaked password detection” 1Password dan Bitwarden semua bekerja seperti ini.
+
+\end{tcbinfo}
+
+\booksubsection{Fitur Monitoring Built-in Password Manager}
+
+\begin{itemize}
+  \item \textbf{1Password Watchtower}: Real-time monitor password lemah, password duplikat, password bocor, password kedaluwarsa, situs tanpa 2FA, ditampilkan dengan grading merah/oranye/kuning.
+  \item \textbf{Bitwarden Vault Health}: Versi gratis sudah bisa cek password lemah dan duplikat; versi premium bisa deteksi password bocor (berbasis HaveIBeenPwned).
+  \item \textbf{"Security Recommendations" iCloud Keychain}: iOS Settings Passwords Security Recommendations, akan mengingatkan password mana yang muncul di kebocoran yang diketahui, mana yang dipakai berulang.
+  \item \textbf{"Password Checkup" Google Password Manager}: Built-in Chrome, bisa sekali klik cek password bocor, lemah, dan duplikat.
+\end{itemize}
+
+\begin{tcbpractice}{Cek Sekarang: Apakah Password Anda Aman}
+\begin{enumerate}
+  \item Buka haveibeenpwned.com, masukkan email yang sering Anda pakai, lihat di kebocoran mana Anda muncul.
+  \item Pengguna iPhone: Settings Passwords Security Recommendations, proses peringatan merah satu per satu.
+  \item Pengguna Chrome: Settings Passwords Check Passwords, ubah sesuai petunjuk.
+  \item Pengguna 1Password/Bitwarden: Buka Watchtower/Health Reports, prioritaskan proses item "bocor" dan "duplikat".
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{Passkey: Masa Depan Login Tanpa Password}
+
+2024-2026, teknologi password sedang mengalami revolusi —\textbf{Passkey}diharapkan bisa sepenuhnya menggantikan password tradisional. Apple, Google, Microsoft tiga platform besar mendorong bersama, didukung oleh FIDO Alliance dan W3C, ini adalah perubahan terbesar dalam cara login selama puluhan tahun.
+
+\booksubsection{Apa itu Passkey?}
+
+Passkey berbasis standar FIDO2 / WebAuthn, memakai\textbf{key pair di perangkat}menggantikan password. Prinsipnya bisa disederhanakan:
+
+\begin{itemize}
+  \item Ponsel Anda meng-generate sepasang key:\textbf{Public key}(didaftarkan ke situs) +\textbf{Private key}(selalu ada di security chip perangkat Anda).
+  \item Saat login, situs mengirim "challenge", ponsel Anda menandatangani dengan private key, lalu diverifikasi oleh situs dengan public key.
+  \item Sebelum menandatangani perlu verifikasi biometrik (Face ID / sidik jari) atau PIN perangkat untuk konfirmasi identitas.
+  \item Seluruh proses,\textbf{tidak ada password yang ditransmisikan di jaringan}.
+\end{itemize}
+
+\booksubsection{Passkey vs Password Tradisional}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimensi} & \textbf{Password Tradisional} & \textbf{Passkey} \tabularnewline
+\hline
+Anti-Phishing & Buruk, situs phishing bisa mencuri password & Naturally anti-phishing, private key hanya menandatangani domain asli \tabularnewline
+Dampak Kebocoran Server & Hash password mungkin bisa di-crack & Server hanya simpan public key, bocor tidak berdampak \tabularnewline
+Kemudahan & Perlu hafal/input/kelola & Face ID/sidik jari login satu detik \tabularnewline
+Replay Attack & Mungkin diintercept dan di-replay man-in-the-middle & Setiap tanda tangan sekali pakai, tidak bisa di-replay \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Dukungan Platform}
+
+\begin{itemize}
+  \item \textbf{Apple iCloud Keychain Passkey}: iOS 16+ / macOS Ventura+ native mendukung, Passkey bisa sinkron antar semua perangkat yang login Apple ID yang sama, perangkat baru login situs tanpa perlu buat ulang.
+  \item \textbf{Google Password Manager Passkey}: Android + Chrome native mendukung, Passkey disimpan di akun Google, sinkron antar perangkat Android; sejak 2023 akun personal Google sudah mendukung login dengan Passkey.
+  \item \textbf{Microsoft}: Windows 11 / Edge sudah mendukung Passkey; akun Microsoft, Outlook, Office, dll. bertahap membuka login Passkey, dan bisa dikelola di Microsoft Authenticator.
+  \item \textbf{1Password / Bitwarden}: Sudah mendukung pembuatan, penyimpanan, sinkronisasi cross-platform Passkey, membuat Anda tidak terbatas pada satu ekosistem.
+\end{itemize}
+
+\begin{tcbinfo}{Sinkronisasi cross-device adalah terobosan kunci}
+Pain point terbesar Passkey awal adalah “terikat satu perangkat” — ganti ponsel harus buat ulang. Sejak 2023 Apple, Google, Microsoft mengimplementasikan sinkronisasi cloud Passkey: iCloud Keychain sync antar perangkat Apple, Google Password Manager sync antar perangkat Android. 1Password dan pihak ketiga lain membuka sinkronisasi cross-ecosystem. Artinya Passkey sudah memiliki praktikalitas untuk menggantikan password.
+
+\end{tcbinfo}
+
+\booksubsection{Cara Membuat dan Menggunakan Passkey di Ponsel}
+
+\textbf{Jalur iOS (iPhone):}
+
+\begin{enumerate}
+  \item Di halaman keamanan akun situs yang mendukung Passkey (seperti Google, Microsoft, Amazon, eBay, PayPal) pilih "Add passkey".
+  \item Sistem memunculkan jendela verifikasi Face ID / Touch ID, setelah lolos Passkey otomatis di-generate dan disimpan ke iCloud Keychain.
+  \item Saat login situs tersebut berikutnya, setelah input username pilih "Login with iPhone", Face ID sekali scan selesai.
+  \item Entri manajemen: Settings Passwords cari situs terkait, terlihat entri Passkey.
+\end{enumerate}
+
+\textbf{Jalur Android:}
+
+\begin{enumerate}
+  \item Di halaman keamanan akun situs yang mendukung Passkey pilih "Add passkey".
+  \item Pop-up Google Password Manager pilih akun Google Anda verifikasi screen lock (sidik jari/pola/PIN).
+  \item Passkey otomatis disimpan ke Google Password Manager, sinkron antar perangkat Android dengan akun yang sama.
+  \item Saat login berikutnya, pilih "Use Passkey", screen lock sekali buka selesai.
+  \item Entri manajemen: Android Settings Passwords, passkeys \& autofill Password Manager google.com.
+\end{enumerate}
+
+\booksubsection{Login Passkey Cross-Device}
+
+Jika Anda login ke situs yang hanya punya Passkey di iPhone di komputer Windows, bisa scan kode QR untuk otorisasi:
+
+\begin{enumerate}
+  \item Halaman login situs pilih "Use Passkey".
+  \item Pilih "Use another device".
+  \item Komputer menampilkan QR code, scan dengan iPhone.
+  \item iPhone memunculkan verifikasi Face ID, setelah konfirmasi situs selesai login di komputer.
+\end{enumerate}
+
+Proses ini melalui komunikasi double encryption Bluetooth + internet, private key Passkey tidak akan meninggalkan iPhone Anda.
+
+\begin{tcbpractice}{Coba Sekarang: Rasakan Login Tanpa Password}
+\begin{enumerate}
+  \item Login akun Google Security Passkeys Add passkey, rasakan login Face ID/sidik jari.
+  \item Login akun Microsoft Security Advanced security options Add passkey.
+  \item Coba di Taobao, JD, eBay, PayPal, dll. yang sudah mendukung Passkey.
+  \item Simpan password tradisional sebagai backup, bertahap migrasi akun high-value ke Passkey.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbwarn}{Saran Masa Transisi}
+Passkey belum sepenuhnya menggantikan password — banyak situs masih dalam tahap “Passkey + password” berdampingan. Saran: akun high-value prioritaskan aktifkan Passkey, tapi\textbf{jangan langsung hapus password tradisional}, simpan sebagai cadangan; bersamaan terus gunakan password manager, karena tidak semua situs mendukung Passkey. Anggap Passkey sebagai “suplemen kuat password manager” bukan “pengganti langsung”.
+
+\end{tcbwarn}
+
+\booksection{Hardware Security Key}
+
+Jika requirement keamanan Anda lebih tinggi dari pengguna biasa — misalnya memegang banyak cryptocurrency, adalah eksekutif/jurnalis/aktivis, atau melindungi akun inti perusahaan — hardware security key adalah pilihan yang lebih andal dibanding SMS verification code.
+
+\booksubsection{Apa itu Hardware Security Key?}
+
+Hardware key adalah perangkat fisik (mirip USB drive), security chip internal menyimpan private key Anda, perlu kontak fisik atau NFC untuk menyelesaikan verifikasi. Produk representatif:
+
+\begin{itemize}
+  \item \textbf{YubiKey}(perusahaan Yubico): Paling mainstream, mendukung FIDO2/WebAuthn, U2F, OTP, PIV, OpenPGP, USB-C / USB-A / NFC dan berbagai interface. Seri 5 seharga 50-70 USD.
+  \item \textbf{Google Titan}: Produk Google, USB-C + NFC / Bluetooth, sekitar 30-40 USD.
+  \item \textbf{OnlyKey}: Alternatif open-source, mendukung banyak protokol.
+  \item \textbf{Alternatif Domestik}: Seperti ePasskey Feitian, harga lebih terjangkau.
+\end{itemize}
+
+\booksubsection{Mengapa Hardware Key Lebih Aman dari SMS Verification Code?}
+
+\begin{itemize}
+  \item \textbf{Anti-Phishing}: Sama seperti Passkey, hardware key hanya merespons domain asli, situs phishing tidak bisa menipu verification code.
+  \item \textbf{Anti SIM Hijacking}: SMS verification code bisa di-intercept serangan SIM-swap, hardware key tidak butuh nomor ponsel.
+  \item \textbf{Anti Man-in-the-Middle}: Protokol FIDO2 setiap tanda tangan mengandung challenge value, tidak bisa di-replay.
+  \item \textbf{Isolasi Fisik}: Private key selalu di dalam hardware chip, malware bahkan jika meretas komputer Anda juga tidak bisa membacanya.
+\end{itemize}
+
+\booksubsection{Skenario yang Cocok}
+
+\begin{itemize}
+  \item Akun exchange cryptocurrency, pemulihan wallet.
+  \item SSO enterprise, VPN remote working, SSH login server.
+  \item Email, GitHub, media sosial, dll. "akun utama" — sekali diretas bisa reset semua akun lain.
+  \item Jurnalis, pengacara, eksekutif, dan orang sensitif tinggi lainnya.
+\end{itemize}
+
+\booksubsection{Cara Konfigurasi Hardware Key sebagai Verifikasi Dua Faktor}
+
+Contoh akun Google + YubiKey:
+
+\begin{enumerate}
+  \item Beli YubiKey (disarankan beli dua sekaligus, satu untuk harian, satu cadangan, simpan di lokasi berbeda).
+  \item Login myaccount.google.com Security 2-Step Verification.
+  \item Pilih "Add security key" masukkan YubiKey ke port USB-C atau dekatkan ke area sensor NFC ponsel.
+  \item Ikuti petunjuk sentuh metal contact YubiKey untuk menyelesaikan registrasi.
+  \item Disarankan mendaftarkan key cadangan kedua.
+  \item Di settings "2-Step Verification", set hardware key sebagai metode verifikasi utama, SMS verification code sebagai cadangan.
+\end{enumerate}
+
+Situs mainstream yang mendukung: Google, GitHub, Microsoft, Apple ID, Facebook, Twitter, Dropbox, GitLab, AWS, Coinbase, Binance, dll.
+
+\begin{tcbinfo}{Strategi Dual Key}
+Risiko terbesar hardware key adalah “kehilangan”. Saran: (1) sekaligus daftarkan dua key berbeda; (2) satu dibawa (gantungan kunci), satu disimpan di brankas rumah atau safe deposit box bank; (3) sebagian situs mengizinkan “recovery code cadangan” dicetak untuk disimpan offline. Dengan begitu bahkan jika key utama hilang, tidak akan terkunci permanen di luar akun.
+
+\end{tcbinfo}
+
+\begin{tcbwarn}{Hati-hati Channel Pembelian}
+Pastikan beli dari toko resmi atau agen resmi, jangan beli key bekas atau sumber tidak jelas — secara teori hardware yang sudah di-preset mungkin sudah ditanam backdoor. Firmware YubiKey tidak bisa diupdate setelah keluar pabrik, tapi Yubico akan terus push security advisory, perhatikan situs resminya.
+
+\end{tcbwarn}
+
+\booksection{Sharing Password Keluarga/Tim}
+
+Dalam skenario keluarga, Netflix, Wi-Fi rumah, backend router, password smart lock perlu dipakai bersama keluarga; dalam skenario tim, server, database, akun media sosial perlu kolaborasi multipihak.\textbf{Mengirim password via WeChat atau menulis di shared document adalah praktik berisiko tinggi}— sekali riwayat chat atau permission document bocor, password juga bocor.
+
+\booksubsection{“Shared Vault” 1Password}
+
+1Password adalah produk benchmark sharing keluarga dan tim. Mekanisme intinya adalah\textbf{multiple vault}:
+
+\begin{itemize}
+  \item \textbf{Personal Vault}: Hanya Anda yang bisa lihat, seperti akun pribadi bank, email.
+  \item \textbf{Shared Vault}: Keluarga atau anggota tim semua bisa lihat, seperti Netflix, Wi-Fi rumah, kartu kredit bersama.
+  \item \textbf{Permission Tiering}: Versi tim bisa setel anggota tertentu "read-only" atau "read-only tanpa edit".
+\end{itemize}
+
+Keluarga atau anggota tim tidak perlu sharing master password, masing-masing login dengan akun sendiri, tapi bisa melihat konten shared vault yang diotorisasi. Setelah password diubah semua anggota sinkron real-time.
+
+\booksubsection{Fitur “Organization” Bitwarden}
+
+Versi gratis Bitwarden mendukung sharing password personal (via fitur “Send” share time-limited single password); versi premium bisa membuat “Organization”, membagikan beberapa entri ke anggota keluarga atau kolega tim, permission bisa dibagi halus. Bitwarden juga menyediakan opsi self-hosted, cocok untuk enterprise dengan requirement kedaulatan data tinggi.
+
+\booksubsection{Skenario Keluarga: Cara Aman Sharing Password Netflix, Wi-Fi, dll.}
+
+\begin{itemize}
+  \item \textbf{Netflix / Situs Video}: Simpan login password di "Shared Vault" 1Password Families, anggota keluarga masing-masing login, tanpa perlu kirim di grup.
+  \item \textbf{Password Wi-Fi Rumah}: Antar perangkat iOS bisa via AirDrop langsung sharing password Wi-Fi ke tamu, tanpa perlu dibacakan; Android 12+ juga punya fitur "Nearby Share Wi-Fi".
+  \item \textbf{Smart Lock, Smart Home Appliances}: Usahakan pakai fitur "Family Member" App vendor untuk membuat akun terpisah per orang, bukan sharing satu akun admin.
+  \item \textbf{Backend Router Rumah}: Password admin disimpan di 1Password Shared Vault, Wi-Fi tamu buka SSID terpisah.
+\end{itemize}
+
+\begin{tcbinfo}{Value for Money 1Password Families}
+1Password Families sekitar 4.99 USD/bulan, mendukung maksimal 5 anggota keluarga, masing-masing punya personal vault independen + 4 shared vault. Dihitung per orang kurang dari 1 USD/bulan, saat ini solusi sharing keluarga dengan pengalaman terbaik. Versi keluarga Bitwarden 10 USD/tahun mendukung 6 orang, value for money lebih tinggi, tapi pengalaman antarmuka sedikit kalah.
+
+\end{tcbinfo}
+
+\booksubsection{Skenario Tim: Sharing Password Server/Database}
+
+\begin{itemize}
+  \item \textbf{1Password Teams / Business}: Bisa membuat multiple vault per departemen, project team, permission control fine-grained, semua perilaku akses bisa diaudit.
+  \item \textbf{Bitwarden Teams / Enterprise}: Solusi open-source, bisa self-hosted, versi enterprise mendukung SSO integration, directory sync.
+  \item \textbf{Prinsip Separation of Duties}: Password admin tidak boleh hanya dipegang satu orang — setel 2-3 "emergency contact", pastikan saat personil kunci resign/cuti bisnis tidak terputus.
+  \item \textbf{Proses Resign}: Saat karyawan resign segera cabut akses password manager-nya, jika perlu rotasi semua password sensitif tinggi yang perlu disentuhnya.
+\end{itemize}
+
+\booksubsection{Emergency Access: Jika Terjadi Sesuatu pada Anda}
+
+Bayangkan skenario: Anda mengelola sendiri semua akun penting keluarga, tapi tiba-tiba dirawat di rumah sakit atau meninggal, keluarga tidak bisa login ke bank, email, akun asuransi.\textbf{Fitur “Emergency Access”}dirancang untuk hal ini — otorisasi seorang keluarga/teman terpercaya, untuk mendapatkan vault password Anda saat Anda tidak bisa merespons.
+
+\textbf{Setting Emergency Access Bitwarden:}
+
+\begin{enumerate}
+  \item Login Bitwarden Web Vault Settings Emergency Access.
+  \item Tambahkan email kontak terpercaya, undang untuk accept.
+  \item Setel "waiting period" (disarankan 7-14 hari): time window dari permintaan dikirim sampai Anda konfirmasi.
+  \item Jika Anda tidak merespons dalam waiting period (menolak atau tidak melakukan apa-apa), setelah jatuh tempo pihak tersebut otomatis mendapatkan akses.
+  \item Anda kapan saja bisa manual menolak permintaan atau cabut permission Emergency Access.
+\end{enumerate}
+
+\textbf{Emergency Access 1Password:}
+
+\begin{enumerate}
+  \item 1Password tidak secara langsung disebut "Emergency Access", tapi melalui fitur "Family/Team Organization" bisa diimplementasikan — tambahkan keluarga ke versi Families, lalu masukkan sebagian entri ke "Shared Vault".
+  \item Untuk pengguna versi personal, disarankan memberi tahu master password ke satu keluarga yang sangat dipercaya, atau tulis di amplop tertutup simpan di brankas.
+  \item 1Password juga menyediakan "Recovery Code", saat mengaktifkan 2FA pastikan cetak dan simpan.
+\end{enumerate}
+
+\begin{tcbpractice}{Set Sekarang: Simpan "Kunci Cadangan" untuk Keluarga}
+\begin{enumerate}
+  \item Pilih satu keluarga terpercaya sebagai "Emergency Contact".
+  \item Di password manager setel Emergency Access (Bitwarden) atau gabung shared vault keluarga (1Password).
+  \item Tulis master password + recovery code di kertas, segel di amplop, simpan di brankas rumah atau beri tahu keluarga terpercaya.
+  \item Review setiap enam bulan, konfirmasi apakah emergency contact masih tepat.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{Praktik Terbaik Penggunaan Password Manager}
+
+\begin{itemize}
+  \item \textbf{: Master password adalah pertahanan terakhir, pastikan mengatur kata sandi yang panjang dan kompleks, dan ingat baik-baik.}Aktifkan Two-Factor Authentication
+  \item \textbf{: Aktifkan 2FA untuk akun password manager, menambah lapisan perlindungan.}Periksa Kata Sandi Lemah Secara Berkala
+  \item \textbf{: Sebagian besar password manager memiliki fitur "Security Audit", membantu menemukan kata sandi lemah dan duplikat.}Jangan Lupa Master Password
+  \item \textbf{: Master password tidak bisa dipulihkan, lupa berarti kehilangan semua kata sandi. Disarankan tulis di kertas, simpan di tempat aman.}Akses Darurat
+  \item \textbf{: Atur emergency contact, jika Anda tidak bisa mengakses, orang yang dipercaya bisa mendapatkan kata sandi Anda.}Pengingat Penting
+\end{itemize}
+
+\begin{tcbwarn}{Password manager meski nyaman, tetapi juga ada risiko: jika master password bocor, semua kata sandi terbuka. Jadi master password tidak boleh sama dengan kata sandi lain, juga tidak boleh ditulis di tempat yang mudah ditemukan. Selain itu, disarankan pilih penyedia layanan dengan rekam jejak keamanan yang baik.}
+Coba Sekarang: Mulai Menggunakan Password Manager
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{Pilih satu password manager (rekomendasi Bitwarden atau bawaan sistem).}
+\begin{enumerate}
+  \item Daftar akun, atur master password yang kuat.
+  \item Impor kata sandi yang ada (jika ada) atau mulai tambah kata sandi baru.
+  \item Install ekstensi browser atau aplikasi ponsel, rasakan fitur auto-fill.
+  \item Periksa laporan security audit, temukan kata sandi yang perlu diperbaiki.
+  \item III. Bagian Lanjutan (Bab 15-20)
+\end{enumerate}
+
+\end{tcbpractice}

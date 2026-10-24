@@ -1,0 +1,181 @@
+\bookchapter{Chapter 63: Views, State, and Navigation}
+
+\chapterintro{You already know how to build a single-screen toy. This chapter tackles two “growing up” problems: how to hop between multiple screens (navigation) and how data flows between screens (state management). After this chapter, you'll be able to build the classic multi-screen app skeleton: “list detail edit.”}
+
+\booksection{The Big Picture of State Management and Data Flow}
+
+@State isn't the only state tool in SwiftUI. Start with this overview so you understand “which one to use when”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Tool} & \textbf{What it manages} & \textbf{Who uses it} & \textbf{Typical scenario} \tabularnewline
+\hline
+@State & Private, temporary state for one screen & The current view & Counters, text field content \tabularnewline
+@Binding & Borrowing someone else's state & A child view changing a parent view & Custom components \tabularnewline
+@StateObject / @Observable & Logic shared across screens & The view model (ViewModel) & Data loading, business logic \tabularnewline
+@EnvironmentObject / .environment & State shared across the whole app & The entire app & Login state, theme settings \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}The SwiftUI state toolbox at a glance (2026, @Observable is now mainstream)\end{center}
+
+\begin{lstlisting}[language=Swift]
+// The modern way on iOS 17+: the @Observable macro (recommended for new projects)
+import Observation
+
+@Observable
+class CounterModel {                 // the view model
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // holds the model
+
+    var body: some View {
+        VStack {
+            Text("You tapped \(model.count) times")
+            Button("Tap me") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+Blunt advice for beginners: use @State for state private to one screen, and @Observable classes for anything shared across screens or involving logic. The @StateObject/@ObservableObject in older tutorials are the previous generation—being able to read them is enough; write new code the way described above.
+
+\booksection{NavigationStack: The “Stack” Behind Screen Jumps}
+
+Since iOS 16, multi-screen navigation uses NavigationStack—like a stack of plates: push one on, and pop them off one by one as you go back:
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("Alex's ledger") {
+                    DetailView(name: "Alex's ledger")   // destination screen
+                }
+                NavigationLink("Sam's ledger") {
+                    DetailView(name: "Sam's ledger")
+                }
+            }
+            .navigationTitle("Ledger list")   // large title at the top
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("\(name) details")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+NavigationLink is a “tappable link to another screen”; navigationTitle automatically generates the navigation bar title and the back button. When you need programmatic navigation (say, returning automatically after tapping “Save”), use @Environment(\textbackslash{}.dismiss) to close the current screen—together, these two tricks cover 90\% of your navigation needs.
+
+\booksection{Pop-Ups and Bottom Tabs: sheet and TabView}
+
+Besides “pushing screens,” there are two more classic interactions:
+
+\begin{lstlisting}[language=Swift]
+// 1. Slides up half/full screen (the favorite for entry forms)
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("Add entry") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // the entry sheet
+            }
+    }
+}
+
+// 2. The bottom tab bar (the app's "skeleton")
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("Ledger", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("Stats", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("Settings", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tip: When Do You Use Which?}
+Rules of thumb: use NavigationStack to push screens for the main flow (list detail), use a sheet pop-up for temporary actions (adding, editing, confirming), and use TabView for several side-by-side sections (bottom tabs). Combine the three, and you have the skeleton of the vast majority of apps.
+
+\end{tcbinfo}
+
+\booksection{List: iOS's Go-To List}
+
+The most used—and most “Apple-flavored”—component on iOS is List: it comes with dividers, swipe-to-delete, and tap highlighting out of the box:
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["Lunch 25.5", "Metro 6.0", "Salary +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // swipe left to delete
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+List + NavigationLink + sheet + TabView—put these four together, and you can already build a complete app skeleton: “ledger list tap for details tap + to open the entry sheet.” The expense tracker project in the next chapter is built exactly this way.
+
+\begin{tcbpractice}{Hands-on: Build a "Three-Screen Skeleton"}
+\booksection{The App Lifecycle: Foreground and Background}
+
+Much like Android's Activity lifecycle, iOS apps also move through “born, foreground, background, dead” state changes. In SwiftUI, watch them with the scenePhase environment value:
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("Back in the foreground, resuming refresh")
+            case .inactive:  print("Transitioning (call / just backgrounded)")
+            case .background: print("Went to background, saving draft")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Typical uses: refresh data when coming back to the foreground, save drafts when heading to the background. iOS runs a tight ship on background activity—an ordinary app gets suspended (frozen) shortly after going to the background, so don't expect to secretly do heavy work back there; if you truly need scheduled tasks, use the local notifications from Chapter 68 instead of “staying alive in the background.”
+
+Build a fake-data skeleton of the expense tracker: a TabView with three tabs (Ledger / Stats / Settings) the Ledger screen shows fake data in a List, and tapping a row jumps to the details (NavigationStack) the “+” button in the top-right opens the entry sheet. No saving, no internet—pure skeleton practice. Get this skeleton right, and filling it with real data in Chapter 65 will be a smooth ride.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter summary}
+\begin{itemize}
+  \item The four state tools: @State (screen-private), @Binding (borrowed), @Observable (logic), .environment (global)
+  \item Use the @Observable macro for view models in new projects; being able to read the older @ObservableObject is enough
+  \item NavigationStack pushes screens; @Environment(\textbackslash{}.dismiss) navigates back programmatically
+  \item Push screens for the main flow, pop up a sheet for temporary actions, and use TabView for side-by-side sections
+  \item List is the go-to list: dividers and swipe-to-delete work out of the box
+\end{itemize}
+
+\end{tcbsummary}

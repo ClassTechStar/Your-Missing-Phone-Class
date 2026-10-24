@@ -1,0 +1,121 @@
+\bookchapter{Chapter 69: Quick Reference and Resources}
+
+\chapterintro{This chapter is a quick-reference handbook that works on its own. When you can't remember a bit of syntax or need to make a fast decision, flip straight here. Treat it as a set of “pocket cards”: common code, common questions, and learning resources—nothing left out.}
+
+\booksection{Common code cheat sheet}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{What you want to do} & \textbf{Key code} \tabularnewline
+\hline
+Page-private state & @State private var x = initialValue \tabularnewline
+Logic shared across pages & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+Vertical/horizontal layout & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+Flexible space & \texttt{Spacer()} \tabularnewline
+Lists & List \{ ForEach(array) \{ ... \} \} \tabularnewline
+Navigating between pages & \texttt{NavigationStack + NavigationLink} \tabularnewline
+Bottom sheet & .sheet(isPresented: \$show) \{ content \} \tabularnewline
+Dismiss the current page & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+Fetch data over the network & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+JSON parsing & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+Store small settings & UserDefaults.standard.set(value, forKey: "key") \tabularnewline
+Store structured data & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+Dark mode support & Use system colors (.primary / Color(.systemGray6)); never hard-code \tabularnewline
+Run tests & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS development cheat sheet (August 2026 edition)\end{center}
+
+\booksection{Frequently asked questions (FAQ)}
+
+Q1: Can I learn iOS development without a Mac?
+
+You can learn the language, but not do the full development. Swift Playgrounds on iPad/iPhone can cover everything in Chapter 61; but Xcode is macOS-only, so in the end you'll need a Mac. On a tight budget, you can rent a cloud Mac or buy a used Mac mini as a stopgap, then decide how much to invest after learning the language.
+
+Q2: How much does learning iOS development cost?
+
+Learning stage: 0 dollars (Xcode is free + a free Apple ID for on-device debugging). Release stage: a developer account at 99 USD/year (about 700 RMB). Add a Mac, and that's the entire cost. Compared with the payoff—even a small utility on the App Store has paying users—the math works out.
+
+Q3: SwiftUI or UIKit—which one first?
+
+SwiftUI. In 2026, new projects, new tutorials, and new job listings all center on SwiftUI, and this book uses it throughout. UIKit is the previous-generation framework, still used in many older projects—once you're comfortable with SwiftUI, pick up UIKit as needed (Apple has interop tutorials), and it will come quickly. Just don't reverse the order.
+
+Q4: Is iOS development easy to find work in?
+
+The 2026 job market: entry-level roles that amount to “can draw interfaces” are fiercely competitive, but developers who “know Swift + SwiftUI and have a shipped app” are still in demand. Median pay for iOS roles has ranked near the top among tech stacks for years. While you're learning, the best line on your resume is that app you made, sitting in the store.
+
+Q5: What if my app gets rejected in review?
+
+Don't panic—it's normal; first submissions get rejected at a decent rate. Apple's rejection reasons are usually written very specifically (which page, which guideline). Fix things one by one, reply with an explanation in App Store Connect, and resubmit. The three most common rejection reasons: permission purposes not clearly explained, buggy interfaces, and metadata (screenshots/description) that doesn't match the real thing. Self-check those three ahead of time and you'll save yourself a round of waiting.
+
+\booksection{High-frequency Xcode shortcuts}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Action} & \textbf{Shortcut} \tabularnewline
+\hline
+Run / test & CmdR / CmdU \tabularnewline
+Open the canvas preview & OptionCmd \tabularnewline
+Quickly open a file & CmdO \tabularnewline
+Search everywhere & CmdF \tabularnewline
+Fix indentation & CtrlI \tabularnewline
+Comment / uncomment & Cmd/ \tabularnewline
+Clean the build cache & CmdK \tabularnewline
+Jump to definition & Cmd-click \tabularnewline
+Rename (safe renaming across the project) & Right-click Refactor Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}High-frequency Xcode shortcuts\end{center}
+
+\begin{tcbinfo}{Tip: when builds act haunted, clean the cache first}
+That spooky “it ran yesterday but not today” phenomenon is, six or seven times out of ten, a scrambled build cache. Clean with CmdK and rebuild, and it cures the majority of these hauntings. Still broken? Restart Xcode (and the Mac along with it), and if that fails, “delete the DerivedData folder”—the legendary ultimate trio, passed down among iOS developers.
+
+\end{tcbinfo}
+
+\booksection{Recommended learning resources}
+
+\booksection{Recommended learning resources}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Type} & \textbf{Resource} & \textbf{Why it's recommended} \tabularnewline
+\hline
+Official & developer.apple.com & Apple's official documentation, with the SwiftUI/Swift tutorials inside—the first authority \tabularnewline
+Official & Apple's SwiftUI Tutorials & Apple's official hands-on course—maximum beginner-friendliness \tabularnewline
+Official & The Swift website (swift.org) & Official language docs and an online playground \tabularnewline
+Community & Hacking with Swift & Paul Hudson's free tutorial library, widely recognized as top-tier in quality \tabularnewline
+Community & Stack Overflow (the swiftui tag) & The first stop when an error has you stumped \tabularnewline
+Video & The official Apple Developer channel (WWDC videos) & Authoritative coverage of each year's new technologies \tabularnewline
+Design & Apple's Human Interface Guidelines (HIG) & The official bible for building interfaces with that "Apple feel" \tabularnewline
+Companion & Part 7, "Hands-On AI Coding" (Chapters 37–47) & The complete playbook for AI-assisted iOS development \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS development learning resources (August 2026)\end{center}
+
+\booksection{Closing: from your first app to your Nth app}
+
+Looking back, you went from “having no idea what SwiftUI was” to installing Xcode, learning Swift, drawing interfaces with SwiftUI, hooking your app up to a database and the network, and on to testing, packaging, and shipping—on this road, you've already walked the hardest stretch of the journey from zero to one.
+
+The world of technology changes fast: frameworks upgrade, tools get replaced, and AI takes over more and more of the “typing” work. But one thing never goes out of date: your ability to take a fuzzy idea, break it into clear steps, and then build it one step at a time. Tools are the amplifier; the way you think is the foundation. The amplifier can be swapped out; the foundation must not shake.
+
+You're no longer just "someone who knows how to use a phone." You can turn the ideas in your head into real apps running on hundreds of millions of iPhones. From today, create with your keyboard — that's the romance of being an iOS developer.
+
+\booksection{References}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

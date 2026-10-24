@@ -1,0 +1,222 @@
+\booksection{Κεφάλαιο 20: Λειτουργία προγρα$\mu$$\mu$ατιστή και προχωρη$\mu$ένα δι και ώ$\mu$ατα}
+
+\chapterintro{Αυτό το κεφάλαιο είναι για όσους θέλουν να ε$\mu$βαθύνουν σε “κρυφές λειτουργίες”. Λειτουργία προγρα$\mu$$\mu$ατιστή, Root, BL — ακούγονται geek αλλά δεν είναι $\mu$ακριά.}
+
+\booksubsection{I. Λειτουργία προγρα$\mu$$\mu$ατιστή: ξεκλειδώστε κρυφές ρυθ$\mu$ίσεις}
+
+Η λειτουργία προγρα$\mu$$\mu$ατιστή είναι ένα κρυφό $\mu$ενού ενσω$\mu$ατω$\mu$ένο στο σύστη$\mu$α του κινητού, που περιέχει πολλές λειτουργίες που οι απλοί χρήστες δεν χρειάζονται αλλά οι προγρα$\mu$$\mu$ατιστές χρειάζονται.
+
+\subsubsection*{Πώς να ενεργοποιήσετε:}
+
+\begin{itemize}
+  \item \textbf{Android}: $\mu$πείτε στις Ρυθ$\mu$ίσεις > Σχετικά $\mu$ε το τηλέφωνο > πατήστε συνεχό$\mu$ενα τον "Αριθ$\mu$ό έκδοσης " 7 φορές, $\mu$έχρι να ε$\mu$φανιστεί "Έχετε ενεργοποιήσει τη λειτουργία προγρα$\mu$$\mu$ατιστή".
+  \item \textbf{HarmonyOS}: Ρυθ$\mu$ίσεις > Σχετικά $\mu$ε το τηλέφωνο > πατήστε 7 φορές συνεχό$\mu$ενα "Έκδοση HarmonyOS".
+  \item \textbf{iOS}. Απλοί χρήστες δεν $\mu$πορούν, θέλει Apple Developer επί πληρω$\mu$ή.
+\end{itemize}
+
+\subsubsection*{Συχνές λειτουργίες:}
+
+\begin{itemize}
+  \item \textbf{Εντοπισ$\mu$ός σφαλ$\mu$άτων USB}:σύνδεση προηγ$\mu$ένος(Flash, Δεδο$\mu$ένα επαναφορά, ADB Εντολή),κεφάλαιο "ADB Εντολή".
+  \item \textbf{Ε$\mu$φάνιση λειτουργίας αφής}:Οθόνηε$\mu$φάνιση().
+\end{itemize}
+
+\subsubsection*{Απόδοση και ο$\mu$αλότητα:}
+
+\begin{itemize}
+  \item \textbf{(κλι$\mu$άκωση / κλι$\mu$άκωση / κλι$\mu$άκωση)}:άνοιγ$\mu$α App. προεπιλογή 1x,0.5x"" (,),απενεργοποίηση.0.5x, απενεργοποίηση, "".
+  \item \textbf{Εξαναγκασ$\mu$ένη απόδοση GPU (Force GPU Rendering)}:2DGPUCPU.App βελτιστοποίηση, GPU Κατανάλωση ενέργειας.προεπιλογή GPU, υψηλό, Χρήστης προεπιλογή.
+  \item \textbf{ε$\mu$φάνιση GPU(Profile GPU Rendering)}:Οθόνη πραγ$\mu$ατικού χρόνουε$\mu$φάνιση,16.6ms(60fps)..Προγρα$\mu$$\mu$ατιστής App, Χρήστης App βελτιστοποίηση——App.
+\end{itemize}
+
+\subsubsection*{Παρασκήνιο και αυτονο$\mu$ία:}
+
+\begin{itemize}
+  \item \textbf{Περιορισ$\mu$ός διεργασιών παρασκηνίου}:Ρυθ$\mu$ίσεις "περιορισ$\mu$ός""1 Διεργασία ""2 Διεργασία".περιορισ$\mu$ός Παρασκήνιο Διεργασία Εξοικονό$\mu$ηση ενέργειας, Android Παρασκήνιο, περιορισ$\mu$ός App φόρτωση(Κατανάλωση ενέργειας,).Debug, Συ$\mu$βουλές Χρήστης ενεργοποίηση,"περιορισ$\mu$ός".
+  \item \textbf{Μη διατήρηση δραστηριοτήτων}:. App, φόρτωση, έλεγχος App επαναφορά.
+\end{itemize}
+
+\begin{tcbwarn}{Ση$\mu$ειώσεις}
+Οι ρυθ$\mu$ίσεις της λειτουργίας προγρα$\mu$$\mu$ατιστή $\mu$πορεί να επηρεάσουν τη σταθερότητα του συστή$\mu$ατος, $\mu$ην αλλάζετε ό, τι δεν καταλαβαίνετε. Αφού ενεργοποιήσετε USB debugging, προσέξτε όταν συνδέεστε $\mu$ε υπολογιστή, $\mu$ην συνδέεστε σε $\mu$η αξιόπιστους υπολογιστές.
+
+\end{tcbwarn}
+
+\booksubsection{Δεύτερο: OEM Unlocking — ο «διακόπτης flash» στις επιλογές προγρα$\mu$$\mu$ατιστή}
+
+Προγρα$\mu$$\mu$ατιστής——“OEM Ξεκλείδω$\mu$α ” (Μάρκα“OEM Ξεκλείδω$\mu$α επιτρέπεται ”“Συσκευή Ξεκλείδω$\mu$α ”).Ξεκλείδω$\mu$α BL,“”:άνοιγ$\mu$α, επιτρέπεται fastboot Εντολή Μάρκα Ξεκλείδω$\mu$α BL.
+
+\begin{itemize}
+  \item \textbf{Ρόλος του διακόπτη}:", επιτρέπεται Ξεκλείδω$\mu$α BL".απενεργοποίηση, Ξεκλείδω$\mu$α BL Εντολήαπόρριψη.
+  \item \textbf{Σχέση $\mu$ε το BL lock}:OEM Ξεκλείδω$\mu$α "",BL Ξεκλείδω$\mu$α "".Ρυθ$\mu$ίσεις, Ξεκλείδω$\mu$α, fastboot Εντολή(\texttt{fastboot flashing unlock}), και τα δύο απαραίτητα.
+  \item \textbf{Επαναφορά εργοστασιακών τι$\mu$ών;}:."OEM Ξεκλείδω$\mu$α"επαναφορά απενεργοποίηση, BL Ξεκλείδω$\mu$α φυσικό, επαναφορά——χειροκίνητο\texttt{fastboot flashing lock}για ξανακλείδω$\mu$α.
+  \item \textbf{Πότε πρέπει να ανοίξει}:Επιβεβαίωση FlashRoot, απενεργοποίηση."USBDebug",Flash άνοιγ$\mu$α.
+\end{itemize}
+
+\begin{tcbinfo}{Γνώση: Γιατί οι κατασκευαστές βάζουν αυτόν τον διακόπτη}
+,Δικαίω$\mu$α Σύστη$\mu$α.Google Προγρα$\mu$$\mu$ατιστής “OEM Ξεκλείδω$\mu$α”,“Χρήστης”επιβεβαίωση.BL, OEM Ξεκλείδω$\mu$α απενεργοποίηση, Flash.
+
+\end{tcbinfo}
+
+\booksubsection{Τρίτο: BL Lock (Bootloader Lock) — η πρώτη πόρτα του flash}
+
+Το Bootloader φορτώνει το λειτουργικό κατά την εκκίνηση. Το κλείδω$\mu$α BL είναι κλείδω$\mu$α ασφαλείας των κατασκευαστών, για να αποτρέψουν την εγκατάσταση $\mu$η επίση$\mu$ων συστη$\mu$άτων.
+
+\subsubsection*{Ο ρόλος του κλειδώ$\mu$ατος BL:}
+
+\begin{itemize}
+  \item \textbf{Προστασία ασφαλείας}. Αποτρέπει κακόβουλο flash.
+  \item \textbf{Αντικλοπή}: Ακό$\mu$α και $\mu$ετά flash, χωρίς αρχικό κωδικό δεν λειτουργεί.
+  \item \textbf{Περιορισ$\mu$ός εγγύησης}. Ξεκλείδω$\mu$α BL = απώλεια εγγύησης.
+\end{itemize}
+
+\subsubsection*{Πολιτικές κλειδώ$\mu$ατος Bootloader ανά επωνυ$\mu$ία:}
+
+\begin{itemize}
+  \item \textbf{Xiaomi}: Ξεκλειδώνει, απαιτεί λογαριασ$\mu$ό και ανα$\mu$ονή (7-30 $\mu$έρες).
+  \item \textbf{Huawei}: από το 2018 στα$\mu$άτησε τους κωδικούς, σχεδόν αδύνατο ξεκλείδω$\mu$α.
+  \item \textbf{OnePlus}: Ξεκλειδώνει, πιο χαλαρά.
+  \item \textbf{OPPO/vivo}. Κάποια $\mu$οντέλα $\mu$ε αίτη$\mu$α.
+  \item \textbf{Samsung}: Ξεκλειδώνει, αλλά Knox fuse, χάνετε Samsung Pay.
+  \item \textbf{Apple}: iOS χωρίς παραδοσιακό BL αλλά παρό$\mu$οιο ασφάλειας.
+\end{itemize}
+
+\booksubsection{Τέταρτο: Πρακτικές εντολές ADB — έλεγχος κινητού $\mu$έσω υπολογιστή}
+
+ADB Android Debug Bridge(Debug), Google επίση$\mu$ο Εντολή, USB Wi-Fi . Root,“USBDebug”.“”——Flash, App, Αρχείο, .
+
+\subsubsection*{Πώς να συνδέσετε $\mu$έσω USB:}
+
+\begin{enumerate}
+  \item Στο κινητό: Επιλογές προγρα$\mu$$\mu$ατιστή Ενεργοποίηση «USB Debugging».
+  \item : Google επίση$\mu$ο Λήψη Platform Tools(\texttt{adb}και\texttt{fastboot}δύο εκτελέσι$\mu$α), αποσυ$\mu$πιέστε σε οποιονδήποτε φάκελο.
+  \item Καλώδιο δεδο$\mu$ένων σύνδεση,"επιτρέπεται USBDebug","επιτρέπεται"Επιβεβαίωση.
+  \item Εντολή(Windows PowerShell cmd)\texttt{adb devices}, αν η έξοδος $\mu$οιάζει\texttt{List of devices attached /\allowbreak  xxxxxxxx device}, έχει συνδεθεί.
+\end{enumerate}
+
+\begin{tcbwarn}{Μην αγνοείτε drivers και popup εξουσιοδότησης}
+Χρήστες Windows αν\texttt{adb devices}ε$\mu$φάνιση “unauthorized” Συσκευή, Driver“επιτρέπεται ”./Μάρκα“USBDriver”“”Driver; Mac Linux . Καλώδιο δεδο$\mu$ένων.
+
+\end{tcbwarn}
+
+\subsubsection*{Συχνές εντολές ADB:}
+
+\begin{itemize}
+  \item \texttt{adb install app.\allowbreak apk}: Εγκατάσταση APK από υπολογιστή (\texttt{-\allowbreak r}ση$\mu$αίνει επανεγκατάσταση $\mu$ε διατήρηση δεδο$\mu$ένων·\texttt{-\allowbreak s}εγκατάσταση σε SD card).
+  \item \texttt{adb uninstall com.\allowbreak xxx.\allowbreak xxx}: Απεγκατάσταση εφαρ$\mu$ογής $\mu$ε όνο$\mu$α πακέτου.
+  \item \texttt{adb push διαδρο$\mu$ή\_υπολογιστή /\allowbreak sdcard/\allowbreak προορισ$\mu$ός}: Αποστολή αρχείου σε κινητό.
+  \item \texttt{adb pull /\allowbreak sdcard/\allowbreak αρχείο διαδρο$\mu$ή\_υπολογιστή}: Λήψη αρχείου σε υπολογιστή (πολύ πιο γρήγορο από WeChat).
+  \item \texttt{adb shell}: Είσοδος στο Linux shell του κινητού, απευθείας εκτέλεση\texttt{ls},\texttt{pm},\texttt{am}εντολών.
+  \item \texttt{adb reboot bootloader}: Επανεκκίνηση σε Fastboot (είσοδος flash).
+  \item \texttt{adb reboot recovery}: Επανεκκίνηση σε Recovery.
+  \item \texttt{adb shell pm list packages}: Λίστα όλων των εγκατεστη$\mu$ένων πακέτων. Προσθέστε\texttt{-\allowbreak s}για εφαρ$\mu$ογές συστή$\mu$ατος,\texttt{-\allowbreak 3}για εφαρ$\mu$ογές τρίτων.
+  \item \texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 όνο$\mu$α\_πακέτου}: Απεγκατάσταση προεγκατεστη$\mu$ένης εφαρ$\mu$ογής για τρέχοντα χρήστη, χωρίς Root.
+\end{itemize}
+
+\subsubsection*{Πρακτική: Απεγκατάσταση προεγκατεστη$\mu$ένων χωρίς Root:}
+
+Αυτή είναι $\mu$ια από τις πιο πρακτικές χρήσεις του ADB: $\mu$ε\texttt{pm uninstall -\allowbreak -\allowbreak user 0}Εντολή “Χρήστης”απεγκατάσταση App, Root, Σύστη$\mu$α.απεγκατάσταση App Σύστη$\mu$α “”,Σύστη$\mu$α, Επαναφορά εργοστασιακών ρυθ$\mu$ίσεων.
+
+\begin{enumerate}
+  \item Πρώτα $\mu$ε\texttt{adb shell pm list packages -\allowbreak s}ε$\mu$φανίστε όλες τις εφαρ$\mu$ογές συστή$\mu$ατος και βρείτε το όνο$\mu$α πακέτου. π.χ. του browser Xiaomi είναι\texttt{com.\allowbreak android.\allowbreak browser}, του Huawei AppGallery είναι\texttt{com.\allowbreak vmall.\allowbreak client}.
+  \item Δεν είστε σίγουροι ποια εφαρ$\mu$ογή αντιστοιχεί σε ποιο πακέτο; Στον υπολογιστή χρησι$\mu$οποιήστε\texttt{adb shell pm list packages | findstr λέξη-\allowbreak κλειδί}αναζήτηση, τρίτου App "Package Viewer"Προβολή App .
+  \item Εκτέλεση απεγκατάστασης:\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 όνο$\mu$α\_πακέτου}, π.χ.\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 com.\allowbreak android.\allowbreak browser}. Επιστρέφει\texttt{Success}— επιτυχία.
+  \item επαναφορά?:(1) Επαναφορά εργοστασιακών ρυθ$\mu$ίσεων();(2) εγκατάσταση:\texttt{adb shell cmd package install-\allowbreak existing όνο$\mu$α\_πακέτου}.
+\end{enumerate}
+
+\textbf{Ποτέ $\mu$ην διαγράφετε κρίσι$\mu$α πακέτα συστή$\mu$ατος}\par
+
+“pm uninstall --user 0” Root Ασφάλεια, Σύστη$\mu$α Εφαρ$\mu$ογή(\texttt{com.\allowbreak android.\allowbreak systemui}Γρα$\mu$$\mu$ή κατάστασης,\texttt{com.\allowbreak android.\allowbreak phone}Τηλέφωνο,\texttt{com.\allowbreak android.\allowbreak settings}Ρυθ$\mu$ίσεις)Σύστη$\mu$α, . Google “”. Συ$\mu$βουλές, επιβεβαίωση.
+
+\begin{tcbinfo}{Γνώση: Τι ση$\mu$αίνει --user 0}
+4.2 Χρήστης, Χρήστης ID( 0, Χρήστης 10 ).\texttt{-\allowbreak -\allowbreak user 0}“απεγκατάσταση ”,Σύστη$\mu$α APK Αρχείο, ε$\mu$φάνιση. Root——Σύστη$\mu$α Αρχείο,“Χρήστηςρύθ$\mu$ιση”. Root απεγκατάσταση: Root απεγκατάσταση Σύστη$\mu$α, Όλοι οι χρήστες; ADB απεγκατάσταση “Χρήστης απόκρυψη”.
+
+\end{tcbinfo}
+
+\booksubsection{Πέ$\mu$πτο: Root — ο «υπερ διαχειριστής» του Android}
+
+Root Δικαίω$\mu$α Linux Χρήστης(/Πίνακας περιεχο$\mu$ένων, Αρχείο),Σύστη$\mu$α Δικαίω$\mu$α.WindowsAdministrator: Windows Ασφάλεια Διαχειριστής περιορισ$\mu$ός(Δικαίω$\mu$α TrustedInstaller), Administrator Linux root\texttt{sudo rm -\allowbreak rf /\allowbreak *}.Root Δικαίω$\mu$α, Τροποποίηση Σύστη$\mu$α Αρχείο, απεγκατάσταση Εφαρ$\mu$ογή, Root προηγ$\mu$ένος App.
+
+\subsubsection*{Πλεονεκτή$\mu$ατα του Root:}
+
+\begin{itemize}
+  \item Απεγκατάσταση προεγκατεστη$\mu$ένων εφαρ$\mu$ογών που δεν απεγκαθίστανται.
+  \item Χρήση App προχωρη$\mu$ένων λειτουργιών (π.χ. Titanium Backup, Greenify).
+  \item Τροποποίηση διεπαφής και λειτουργιών συστή$\mu$ατος.
+  \item εγκατάσταση τρίτου Recovery και προσαρ$\mu$οσ$\mu$ένης ROM.
+\end{itemize}
+
+\subsubsection*{Κίνδυνοι του Root:}
+
+\begin{itemize}
+  \item \textbf{Απώλεια εγγύησης}: Οι περισσότεροι δεν καλύπτουν Root.
+  \item \textbf{Κίνδυνος ασφαλείας}: Κακόβουλες App $\mu$ε Root, σοβαρές συνέπειες.
+  \item \textbf{Αστάθεια συστή$\mu$ατος}. Λάθος = crash.
+  \item \textbf{Οι τραπεζικές App δεν λειτουργούν}: Πολλές τραπεζικές App δεν τρέχουν $\mu$ε Root.
+  \item \textbf{Αποτυχία ενη$\mu$έρωσης OTA}: Ίσως δεν δέχεται επίση$\mu$α updates.
+\end{itemize}
+
+\textbf{Σοβαρή προειδοποίηση}\par
+
+Η διαδικασία Root έχει ρίσκο, $\mu$πορεί να κάνει το κινητό “τούβλο”. Αν είστε αρχάριος, ενη$\mu$ερωθείτε επαρκώς και έχετε πλήρες αντίγραφο. Διαβάστε προσεκτικά τον οδηγό και επιβεβαιώστε το $\mu$οντέλο και την έκδοση συστή$\mu$ατος.
+
+\booksubsection{Πιστοποίηση SafetyNet και Play Integrity: Γιατί οι τραπεζικές εφαρ$\mu$ογές δεν λειτουργούν $\mu$ετά το Root}
+
+Root Χρήστης:RootModule, άνοιγ$\mu$α App——“Συσκευή Ασφάλεια,”,Google Pay, Netflix απόρριψη Αναπαραγωγή.Google Συσκευή: SafetyNet Play Integrity API.
+
+\subsubsection*{Τι είναι το SafetyNet / Play Integrity:}
+
+\begin{itemize}
+  \item \textbf{SafetyNet Attestation (παλαιά έκδοση, από το 2017)}:Google Συσκευή API, Εφαρ$\mu$ογή Google Διακο$\mu$ιστής "Συσκευή CTS έλεγχος, Τροποποίηση επίση$\mu$ο".Επιστροφή Basic Attestation(βασικό) Strong Attestation(,).Google SafetyNet 2024 .
+  \item \textbf{Play Integrity API (νέα έκδοση, από 2022)}:Google Λύση, SafetyNet .Συσκευή,"Εφαρ$\mu$ογή " (App )"/Εξουσιοδότηση" (Χρήστης Google ). App $\mu$εταφορά Play Integrity.
+  \item \textbf{Ποιος το χρησι$\mu$οποιεί}:, App( Google Pay, /Σενάριο),(Netflix ),(/),επιχείρηση App(MDM Συσκευή).
+\end{itemize}
+
+\subsubsection*{Τρία επίπεδα αποτελεσ$\mu$άτων Play Integrity:}
+
+\begin{itemize}
+  \item \textbf{MEETS\_DEVICE\_INTEGRITY(Συσκευή)}:Συσκευή Android Σύστη$\mu$α, Bootloader Ξεκλείδω$\mu$α, Root, CTS έλεγχος., App.
+  \item \textbf{MEETS\_BASIC\_INTEGRITY (βασική ακεραιότητα)}:Συσκευή. App υποβάθ$\mu$ιση( Netflix Αναπαραγωγή περιορισ$\mu$ός), App απόρριψη.
+  \item \textbf{MEETS\_STRONG\_INTEGRITY (ισχυρή ακεραιότητα)}:προηγ$\mu$ένος,( Google Pixel Titan M ),τρίτου Μάρκα Root .
+  \item \textbf{Κα$\mu$ία ετικέτα (NO\_INTEGRITY)}:Συσκευή Root, Ξεκλείδω$\mu$α BL, τρίτου ROM αναλογικό,/ App απόρριψη.
+\end{itemize}
+
+\subsubsection*{Γιατί $\mu$ετά από Root αυτές οι εφαρ$\mu$ογές δεν δουλεύουν:}
+
+Εφαρ$\mu$ογή Play Integrity API Google Διακο$\mu$ιστής, Google Συσκευή——Bootloader Κλείδω$\mu$α, Σύστη$\mu$α Τροποποίηση, su Αρχείο, SELinux .Επιστροφή, App “Συσκευή Ασφάλεια”,απόρριψη.
+
+\subsubsection*{απόκρυψη Λύση: Magisk Hide / Shamiko / Zygisk:}
+
+Root App,“απόκρυψη Root ”Λύση.Κεντρική ιδέα: Τροποποίηση Σύστη$\mu$α,“”Συσκευή.
+
+\begin{itemize}
+  \item \textbf{Magisk}:κύριο Systemless Root Λύση——Τροποποίηση Σύστη$\mu$α, Root. OTA ενη$\mu$έρωση, απεγκατάσταση, απόκρυψη Λύσηβασικό. Magisk Ξεκλείδω$\mu$α BL .
+  \item \textbf{Magisk Hide (έχει διακοπεί)}:Magisk απόκρυψη Module, App απόκρυψη Root. 2021 Magisk επίση$\mu$ο, Google αναβάθ$\mu$ιση,"".
+  \item \textbf{Zygisk}:Magisk 24.0+ , Riru, Zygote Διεργασία Module φόρτωση, Τροποποίηση Σύστη$\mu$α.ενεργοποίηση Zygisk απόκρυψη Λύση.
+  \item \textbf{Shamiko}:κύριοαπόκρυψη Module, Zygisk , App("")απόκρυψη Root, απόκρυψη Magisk , Bootloader Κλείδω$\mu$α.Shamiko LSPosed GitHub .
+  \item \textbf{Play Integrity Fix(osm0sis)}: Google Play Integrity Magisk Module, Τροποποίηση Συσκευή(fingerprint) Google Συσκευή Root επίση$\mu$ο.
+\end{itemize}
+
+\begin{tcbwarn}{Το παιχνίδι γάτας-ποντικιού δεν τελειώνει ποτέ}
+Google ενη$\mu$έρωση, App αναβάθ$\mu$ιση Play Integrity .απόκρυψη Λύση. / App(καθη$\mu$ερινό,),: Root, BL .απόκρυψη Λύση “ Root + Root”ρύθ$\mu$ιση.
+
+\end{tcbwarn}
+
+\booksubsection{Έβδο$\mu$ο: Συ$\mu$βουλές για απλούς χρήστες}
+
+\begin{itemize}
+  \item \textbf{Λειτουργία προγρα$\mu$$\mu$ατιστή}:ενεργοποίηση, Επιτάχυνση, GPU Λειτουργία.
+  \item \textbf{OEM Unlocking και BL Lock}:Flash Root, προεπιλογή(απενεργοποίηση)Ασφάλεια.
+  \item \textbf{ADB}: Ισχυρό εργαλείο χωρίς Root, χρήσι$\mu$ο και για απλούς χρήστες — π.χ. $\mu$ε\texttt{pm uninstall -\allowbreak -\allowbreak user 0}απεγκατάσταση προεγκατεστη$\mu$ένων. Πριν διαγράψετε, ελέγξτε αν $\mu$πορεί να διαγραφεί.
+  \item \textbf{Root}:Χρήστης Συ$\mu$βουλές Root. Λειτουργία, Root Λύση( ADB απεγκατάσταση, Shizuku Root Λειτουργία).
+\end{itemize}
+
+\begin{tcbpractice}{Δοκι$\mu$ή: ενεργοποιήστε λειτουργία προγρα$\mu$$\mu$ατιστή και ρυθ$\mu$ίστε ταχύτητα κινου$\mu$ένων σχεδίων}
+\begin{enumerate}
+  \item Μεταβείτε στα Ρυθ$\mu$ίσεις > Σχετικά $\mu$ε το τηλέφωνο.
+  \item Πατήστε "Αριθ$\mu$ός έκδοσης" 7 φορές, $\mu$έχρι να ανοίξει.
+  \item Επιστρέψτε στις ρυθ$\mu$ίσεις, βρείτε "Επιλογές προγρα$\mu$$\mu$ατιστή " (συνήθως κάτω ή στο "Σύστη$\mu$α").
+  \item Βρείτε "Κλί$\mu$ακα κίνησης παραθύρου ", "Κλί$\mu$ακα κίνησης $\mu$ετάβασης ", "Κλί$\mu$ακα διάρκειας κινού$\mu$ενου προγρά$\mu$$\mu$ατος", ρυθ$\mu$ίστε τα όλα σε 0.5x ή απενεργοποιήστε.
+  \item Νιώστε αν το κινητό έγινε πιο γρήγορο.
+\end{enumerate}
+
+\end{tcbpractice}

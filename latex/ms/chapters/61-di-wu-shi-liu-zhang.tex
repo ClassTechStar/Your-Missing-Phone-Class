@@ -1,0 +1,153 @@
+\bookchapter{Bab 56: Pengilatan dan Penerbitan — Ujian, Penyahpepijatan dan Penerbitan di Google Play}
+
+\chapterintro{Aplikasi sudah siap dibuat, kemudian? Bab ini menjawab tiga perkara 'dari boleh berjalan' ke 'boleh dihantar': bagaimana menyahpepijat dengan cekap untuk mencari bug, bagaimana menulis ujian untuk mengelakkan regresi, dan bagaimana menghantar aplikasi ke Google Play untuk dimuat turun oleh seluruh dunia. Menerbitkan bukan sekadar upacara formal — ia titik peralihan yang menukarkan sebuah karya menjadi produk.}
+
+\booksection{Tiga Senjata Penyahpepijatan: Logcat, Breakpoint, Pemeriksa UI}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Alat} & \textbf{Untuk apa} & \textbf{Cara guna} \tabularnewline
+\hline
+Logcat & Lihat log sistem atau log yang anda tulis sendiri & Dalam kod tulis Log.d("TAG","nilai=\$x"), kemudian tapis panel dengan mencari TAG \tabularnewline
+Debug dengan breakpoint & Buat program berhenti pada baris tertentu untuk melihat nilai pemboleh ubah & Klik di sebelah nombor baris untuk munculkan titik merah, jalankan dalam mod Debug, dan menelusuri langkah demi langkah \tabularnewline
+Layout Inspector & Lihat struktur antara muka semasa aplikasi berjalan & Menu Tools Layout Inspector, lihat pepohon komponen secara masa nyata \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tiga senjata utama debugging\end{center}
+
+\begin{tcbinfo}{Petua: cara membaca mesej ralat?}
+Selepas aplikasi ranap, Logcat akan memaparkan stacktrace berwarna merah. Cari dari bawah ke atas baris pertama yang bermula dengan nama pakej anda sendiri (contohnya com.example.yourapp) — baris itu biasanya lokasi 'kejadian'. Lihat dahulu “jenis Exception” (penunjuk kosong? ralat penukaran jenis?), kemudian lihat “at ... fail anda: nombor baris”. Cara ini boleh menyelesaikan 80\% daripada ranapan.
+
+\end{tcbinfo}
+
+\booksection{Ujian: beri 'insurans' kepada kod anda}
+
+Ujian manual tidak boleh diharap — anda membaiki satu fungsi, fungsi lain rosak secara senyap. Ujian ialah 'ubat penyesalan' dan sekali gus 'baju kebal'. Ujian Android terbahagi kepada tiga lapisan; sebagai pemula, kuasai dahulu lapisan pertama:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Lapisan} & \textbf{Apa yang diuji} & \textbf{Diletakkan di mana} & \textbf{Kelajuan} \tabularnewline
+\hline
+Ujian unit & Logik tulen (pengiraan, pengesahan) & app/src/test/ & Beberapa saat \tabularnewline
+Ujian instrumentasi & Tingkah laku antara muka pada peranti sebenar & app/src/androidTest/ & Beberapa minit \tabularnewline
+Ujian manual & Pengalaman dan rasa sebenar manusia & —— & Sentiasa diperlukan \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tiga lapisan ujian\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// Pisahkan logik "tukar rentetan jumlah kepada nombor" menjadi fungsi tulen
+fun parseAmount(input: String): Double? {
+    val v = input.trim().toDoubleOrNull()
+    return if (v != null && v > 0) v else null
+}
+
+// Uji dia (JUnit4)
+@Test
+fun emptyInputReturnsNull() {
+    assertEquals(null, parseAmount(""))
+}
+@Test
+fun negativeReturnsNull() {
+    assertEquals(null, parseAmount("-5"))
+}
+@Test
+fun normalValueParses() {
+    assertEquals(12.5, parseAmount("12.5"))
+}
+\end{lstlisting}
+
+Pengesahan jumlah wang dan pengiraan statistik dalam buku perakaunan patut dilindungi oleh ujian unit. Jalankan ujian: klik kanan folder test Run. Jika semuanya hijau, anda boleh mengubah kod dengan tenang.
+
+\booksection{Tandatangan dan bungkusan: 'cop rasmi' untuk aplikasi anda}
+
+Android mewajibkan semua pakej pemasangan ditandatangani — seperti cop rasmi yang membuktikan “pakej ini datang daripada saya dan tidak diubah suai”. Semasa debug, Android Studio secara automatik menggunakan tandatangan debug; untuk penerbitan, anda perlu tandatangan release sendiri. Prosedurnya:
+
+\begin{enumerate}
+  \item Menu Build Generate Signed Bundle / APK;
+  \item Cipta fail keystore (stor kunci) — tetapkan kata laluan dan simpan dengan selamat;
+  \item Pilih format release + AAB, dan binaan siap.
+\end{enumerate}
+
+\textbf{Amaran penting: keystore hilang = aplikasi hilang}\par
+
+Selepas aplikasi diterbitkan, setiap kemas kini mesti menggunakan tandatangan yang sama, jika tidak kedai akan menolak kemas kini tersebut. Sekali fail keystore dan kata laluannya hilang, anda hanya boleh mencipta aplikasi baharu dan menerbitkannya semula — pengguna lama semuanya terputus sambungan. Pastikan anda membuat sandaran keystore dan kata laluannya di tempat yang selamat (storan awan disulitkan + buku nota). Ini antara pengajaran paling mahal bagi pembangun Android.
+
+\booksection{Proses penuh menerbitkan di Google Play}
+
+Daftar akaun pembangun
+
+Menyiapkan bahan kedai
+
+Muat naik AAB
+
+Isi jadual keselamatan data
+
+Semakan (beberapa jam\textasciitilde{}beberapa hari)
+
+Naik ke kedai
+
+\begin{center}\small\color{gray}Rajah 6: Enam langkah menerbitkan di Google Play\end{center}
+
+\begin{itemize}
+  \item Pendaftaran: yuran pendaftaran sekali bayar 25 dolar AS, memerlukan akaun Google yang boleh digunakan;
+  \item Bahan: ikon aplikasi (512×512), tangkapan skrin (sekurang-kurangnya 2 keping), penerangan fungsi, pautan dasar privasi (wajib jika ada data dikumpul);
+  \item Borang keselamatan data: isytiharkan dengan jujur data apa yang dikumpul — buku perakaunan yang tidak bersambung ke internet boleh menanda "sifar pengumpulan";
+  \item Semakan: akaun baharu yang menerbitkan buat kali pertama kerap melalui semakan manusia, dari beberapa jam hingga beberapa hari; jika ditolak, baiki mengikut ulasan yang diberikan.
+\end{itemize}
+
+Perhatian bagi pengguna di China: Google Play memerlukan persekitaran rangkaian khas, dan pengedaran di tanah besar China biasanya melalui kedai tempatan (Huawei, Xiaomi, Yingyongbao dan sebagainya). Prosedur menerbitkan di kedai tempatan serupa, tetapi setiap kedai mempunyai citarasa semakan sendiri — AAB/APK yang sama boleh diedarkan ke banyak kedai. Untuk permulaan, berjaya melalui satu kedai sahaja sudah kemenangan.
+
+\booksection{Cara menyediakan bahan kedai: tanggapan pertama menentukan muat turun}
+
+Halaman kedai ialah etalase yang dilihat pengguna ketika “melayari kedai”. Tiga bahan menentukan tanggapan pertama:
+
+\begin{itemize}
+  \item Ikon: 512×512, jangan guna tangkapan skrin sekadar lepas. Jika tiada kemahiran reka bentuk, gunakan alat AI untuk menjana bentuk geometri ringkas; ia hanya layak jika masih dikenali sekilas pandang walaupun diperkecil pada skrin utama telefon;
+  \item Tangkapan skrin: sekurang-kurangnya 2 keping, lebih baik 4-6 keping, memaparkan senario fungsi paling teras; setiap satu disertakan satu ayat mudah difahami ("Catat satu entri dalam se saat" sepuluh kali lebih baik daripada "Penyelesaian perakaunan yang cekap");
+  \item Penerangan: ayat pertama mesti menjelaskan "apa ini + untuk siapa"; jangan menimbun "paling profesional, paling hebat" — keutamaan carian kedai terutamanya bergantung pada kata kunci dan penukaran muat turun; kejujuran lebih berkesan daripada pembesaran berlebihan.
+\end{itemize}
+
+\begin{tcbinfo}{Petua: buat perbandingan A/B dengan aplikasi sejenis}
+Sebelum menerbitkan, layari sepuluh teratas aplikasi sejenis di kedai dan bandingkan tangkapan skrin: apakah gaya ikon mereka? Apakah jualan unik dalam tangkapan skrin? Bagaimana tajuk ditulis? Meniru bukan menjiplak — pelajari coraknya, gantikan dengan kandungan anda sendiri. Ini pelajaran terpantas untuk memulakan semua produk.
+
+\end{tcbinfo}
+
+\booksection{Senarai semak pengoptimuman prestasi dan laporan ranapan}
+
+Sebelum aplikasi diterbitkan, dua perkara ini berbaloi diberikan masing-masing separuh jam:
+
+\booksubsection{Empat semakan prestasi}
+
+\begin{enumerate}
+  \item Gunakan LazyColumn untuk senarai: jangan sesekali menyusun senarai panjang dengan Column — lazy loading ialah pelajaran pertama prestasi Android;
+  \item Jangan terus gunakan imej asal: gunakan pustaka imej Coil untuk menskala dan menge-cache secara automatik; satu imej asal 5MB sudah cukup untuk menyekat telefon kelas bawah;
+  \item Elakkan kerja berat pada benang utama: pangkalan data, rangkaian dan fail besar dilakukan dalam coroutine;
+  \item Ukur dengan Profiler: penganalisis prestasi terbina dalam Android Studio boleh melihat memori, CPU dan penggunaan bateri — ukur dahulu, kemudian optima; jangan bergantung pada perasaan.
+\end{enumerate}
+
+\booksubsection{Laporan ranapan}
+
+Aplikasi tidak ranap semasa anda menguji tidak bermakna ia tidak akan ranap pada telefon pengguna. Sebelum menerbitkan, integrasikan Firebase Crashlytics (rasmi Google, percuma): dengan beberapa baris konfigurasi, apabila pengguna mengalami ranapan, stacktrace dihantar secara automatik, dan anda boleh melihat dalam papan pemuka “model peranti mana, versi mana, ranap di baris mana”. Menerbitkan tanpa pemantauan ranapan bagaikan memandu sambil memejamkan mata.
+
+\begin{tcbpractice}{Praktik: "serahkan" buku perakaunan anda sekali}
+(1) Tambahkan 3 ujian unit untuk logik seperti parseAmount; (2) gunakan Logcat untuk menangkap sendiri satu ranapan yang anda cipta dan membaikinya; (3) jana APK bertanda tangan release dan hantar kepada rakan untuk dipasang (barulah ada rasa “karya siap”); (4) jika ada kelapangan, daftar akaun pembangun dan benar-benar hantar buku perakaunan untuk diterbitkan. Tiga yang pertama boleh siap malam ini juga.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan bab ini}
+\begin{itemize}
+  \item Tiga senjata debugging: Logcat untuk log, breakpoint untuk pemboleh ubah, Layout Inspector untuk antara muka
+  \item Membaca ranapan: cari dari bawah ke atas baris pertama yang mengandungi nama pakej anda
+  \item Tiga lapisan ujian: unit (saat, pelajari ini dahulu)/instrumentasi/manual
+  \item Penerbitan wajib bertanda tangan: sandarkan keystore dan kata laluan; jika hilang, aplikasi "bertukar tuan"
+  \item Enam langkah menerbitkan: pendaftaran bahan muat naik AAB borang keselamatan data semakan diterbitkan
+\end{itemize}
+
+\end{tcbsummary}

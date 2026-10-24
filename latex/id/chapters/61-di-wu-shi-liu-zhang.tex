@@ -1,0 +1,153 @@
+\bookchapter{Bab 56: Pemolesan dan Rilis—Menguji, Men-debug, dan Naik ke Google Play}
+
+\chapterintro{Aplikasinya sudah jadi, terus? Bab ini menjawab tiga hal untuk berpindah dari 'bisa jalan' ke 'bisa diserahkan': cara men-debug untuk menemukan bug secara efisien, cara menulis pengujian untuk mencegah regresi, dan cara mengirim aplikasi ke Google Play agar diunduh orang seluruh dunia. Naik toko bukan sekadar seremoni—itulah garis batas yang mengubah sebuah karya menjadi produk.}
+
+\booksection{Tiga Jurus Debugging: Logcat, Breakpoint, Inspektur UI}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Alat} & \textbf{Fungsinya Apa} & \textbf{Cara memakainya} \tabularnewline
+\hline
+Logcat & Melihat log sistem / log yang kamu tulis sendiri & Di kode tulis Log.d("TAG","nilai=\$x"), lalu cari TAG di panel untuk memfilter \tabularnewline
+Debug dengan breakpoint & Membuat program berhenti di baris tertentu untuk melihat nilai variabel & Klik di samping nomor baris hingga muncul titik merah, jalankan dalam mode Debug, lalu eksekusi baris demi baris \tabularnewline
+Layout Inspector & Melihat struktur tampilan yang sedang berjalan & Menu Tools Layout Inspector, melihat pohon komponen secara waktu nyata \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tiga jurus andalan debugging\end{center}
+
+\begin{tcbinfo}{Tips: Cara membaca pesan error}
+Setelah crash, Logcat akan menampilkan stacktrace merah. Cari dari bawah ke atas baris pertama yang diawali nama paketmu sendiri (misalnya com.example.yourapp) — baris itulah biasanya lokasi kejadian. Periksa dulu “jenis Exception”-nya (null pointer? salah konversi tipe?), lalu lihat “at ... filemu: nomorbaris”. Trik ini menyelesaikan 80\% crash.
+
+\end{tcbinfo}
+
+\booksection{Pengujian: Memberi “asuransi” pada kode}
+
+Pengujian manual tidak bisa diandalkan — perbaiki satu fitur, fitur lain diam-diam rusak. Test adalah “obat penyesalan” sekaligus “rompi anti peluru”. Test Android terbagi tiga lapis; pemula cukup kuasai lapis pertama dulu:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Lapisan} & \textbf{Menguji apa} & \textbf{Diletakkan di mana} & \textbf{Kecepatan} \tabularnewline
+\hline
+Unit test & Logika murni (perhitungan, validasi) & app/src/test/ & Hitungan detik \tabularnewline
+Instrumented test & Perilaku antarmuka di perangkat asli & app/src/androidTest/ & Hitungan menit \tabularnewline
+Pengujian manual & Rasa dan pengalaman manusia sungguhan & —— & Selalu diperlukan \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tiga lapis pengujian\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// Pisahkan logika "mengubah teks nominal menjadi angka" menjadi fungsi murni
+fun parseAmount(input: String): Double? {
+    val v = input.trim().toDoubleOrNull()
+    return if (v != null && v > 0) v else null
+}
+
+// Uji dia (JUnit4)
+@Test
+fun emptyInputReturnsNull() {
+    assertEquals(null, parseAmount(""))
+}
+@Test
+fun negativeReturnsNull() {
+    assertEquals(null, parseAmount("-5"))
+}
+@Test
+fun normalValueParses() {
+    assertEquals(12.5, parseAmount("12.5"))
+}
+\end{lstlisting}
+
+Validasi nominal dan perhitungan statistik di aplikasi catatan keuangan semuanya harus dilindungi unit test. Menjalankan test: klik kanan folder test Run. Semua hijau berarti lulus, dan kamu bisa mengubah kode dengan tenang.
+
+\booksection{Menandatangani dan mengemas: Memberi “stempel” pada App}
+
+Android mewajibkan semua paket instalasi ditandatangani — seperti mencap cap resmi yang membuktikan “paket ini keluaran saya dan tidak diubah orang”. Saat debugging, Android Studio otomatis memakai tanda tangan debug; untuk rilis kamu harus memakai tanda tangan release sendiri. Prosesnya:
+
+\begin{enumerate}
+  \item Menu Build Generate Signed Bundle / APK;
+  \item Buat file keystore (gudang kunci) — atur kata sandinya dan simpan dengan baik;
+  \item Pilih format release + AAB, dan build selesai.
+\end{enumerate}
+
+\textbf{Peringatan jebakan: keystore hilang = App hilang}\par
+
+Setelah tayang, pembaruan App wajib memakai tanda tangan yang sama, jika tidak toko akan menolak pembaruannya. Begitu file keystore dan kata sandinya hilang, kamu hanya bisa membuat aplikasi baru dan mengunggah ulang dari nol — pengguna lama tidak bisa terhubung sama sekali. Pastikan mencadangkan keystore dan kata sandi di tempat yang aman (cloud drive terenkripsi + aplikasi catatan); ini salah satu pelajaran paling mahal bagi pengembang Android.
+
+\booksection{Alur lengkap tayang di Google Play}
+
+Mendaftar akun developer
+
+Menyiapkan materi store
+
+Unggah AAB
+
+Isi tabel keamanan data
+
+Review (berjam-jam sampai berhari-hari)
+
+Rilis di store
+
+\begin{center}\small\color{gray}Gambar 6: Enam langkah tayang di Google Play\end{center}
+
+\begin{itemize}
+  \item Pendaftaran: biaya pendaftaran sekali bayar 25 dolar AS, perlu akun Google yang bisa dipakai;
+  \item Aset: ikon aplikasi (512×512), tangkapan layar (minimal 2), deskripsi fitur, tautan kebijakan privasi (wajib bila mengumpulkan data);
+  \item Formulir keamanan data: nyatakan dengan jujur data apa saja yang dikumpulkan — aplikasi catatan keuangan tanpa koneksi internet bisa "nol pengumpulan";
+  \item Peninjauan: unggahan pertama akun baru sering ditinjau manusia, durasinya berkisar beberapa jam hingga beberapa hari; kalau ditolak, perbaiki sesuai masukannya.
+\end{itemize}
+
+Catatan untuk pengguna di Tiongkok: Google Play membutuhkan lingkungan jaringan khusus, dan distribusi di Tiongkok daratan biasanya lewat toko lokal (Huawei, Xiaomi, Yingyongbao, dll.). Proses tayang di toko lokal serupa, tetapi tiap toko punya selera peninjauannya sendiri — satu AAB/APK yang sama bisa didistribusikan ke banyak toko. Untuk latihan, berhasil menuntaskan satu toko saja sudah kemenangan.
+
+\booksection{Menyiapkan aset toko: Kesan pertama adalah jumlah unduhan}
+
+Halaman toko adalah etalase yang dilihat pengguna saat “berkeliling di toko”. Tiga aset menentukan kesan pertama:
+
+\begin{itemize}
+  \item Ikon: 512×512, jangan asal pakai tangkapan layar. Kalau tidak punya kemampuan desain, pakai alat AI untuk membuat bentuk geometris sederhana; baru memenuhi syarat jika ikon tetap dikenali sekali lihat setelah diperkecil di layar utama ponsel;
+  \item Tangkapan layar: minimal 2, sebaiknya 4-6, menampilkan skenario fitur paling inti; tiap gambar diberi satu kalimat bahasa sehari-hari ("catat satu catatan dalam sekejap" sepuluh kali lebih baik daripada "solusi pencatatan keuangan yang efisien");
+  \item Deskripsi: kalimat pertama harus menjelaskan "ini apa + untuk siapa"; jangan menumpuk kata "paling profesional, paling hebat" — bobot pencarian toko utamanya melihat kata kunci dan konversi unduhan; kejujuran lebih efektif daripada bombastis.
+\end{itemize}
+
+\begin{tcbinfo}{Tips: Lihat-lihat sejawat (A/B)}
+Sebelum tayang, kelilingi sepuluh besar App sejenis di toko dan bandingkan lewat tangkapan layar: gaya ikon mereka seperti apa? Titik jual apa yang ditonjolkan tangkapan layarnya? Bagaimana judulnya ditulis? Meniru bukan mencontek — pelajari polanya, ganti dengan kontenmu sendiri; ini pelajaran tercepat untuk cold start semua produk.
+
+\end{tcbinfo}
+
+\booksection{Daftar singkat optimasi performa dan pelaporan crash}
+
+Sebelum App tayang, dua hal ini layak masing-masing diberi setengah jam:
+
+\booksubsection{Empat butir pemeriksaan performa}
+
+\begin{enumerate}
+  \item Gunakan LazyColumn untuk daftar: jangan pernah menyusun daftar panjang dengan Column paksa — lazy loading adalah pelajaran pertama performa Android;
+  \item Jangan memuat gambar asli mentah-mentah: pakai pustaka gambar Coil untuk memperkecil dan menyimpan cache otomatis; satu gambar asli 5MB cukup membuat ponsel kelas bawah tersendat habis;
+  \item Hindari kerja berat di thread utama: database, jaringan, dan file besar kerjakan di dalam coroutine;
+  \item Ukur dengan Profiler: profiler bawaan Android Studio bisa memantau memori, CPU, dan konsumsi baterai — ukur dulu, baru optimasi, jangan pakai perasaan.
+\end{enumerate}
+
+\booksubsection{Pelaporan crash}
+
+Tidak crash saat kamu menguji bukan berarti tidak crash di ponsel pengguna. Sebelum tayang, integrasikan Firebase Crashlytics (resmi dari Google, gratis): hanya beberapa baris konfigurasi; saat pengguna mengalami crash, stacktrace otomatis terlaporkan, dan di dashboard kamu bisa melihat “model mana, versi berapa, crash di baris mana”. Tayang tanpa pemantauan crash sama dengan menyetir dengan mata terpejam.
+
+\begin{tcbpractice}{Praktik: "Serahkan" aplikasi catatan keuanganmu sekali}
+(1) Tambahkan 3 unit test untuk logika seperti parseAmount; (2) gunakan Logcat untuk menangkap sendiri satu crash buatanmu lalu perbaiki; (3) hasilkan satu APK bertanda tangan release dan kirim ke teman untuk dipasang (di sinilah “rasa karya” terasa); (4) kalau masih ada tenaga, daftar akun pengembang dan benar-benar ajukan aplikasi catatan keuanganmu untuk tayang. Tiga butir pertama bisa selesai malam ini.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan bab}
+\begin{itemize}
+  \item Tiga jurus debugging: Logcat melihat log, breakpoint melihat variabel, Layout Inspector melihat tampilan
+  \item Membaca crash: dari stacktrace, cari dari bawah ke atas baris pertama yang memuat nama paketmu sendiri
+  \item Tiga lapis pengujian: unit (hitungan detik, pelajari ini dulu) / instrumented / manual
+  \item Rilis wajib ditandatangani: cadangkan baik-baik keystore dan kata sandi; hilang berarti App "berganti orang"
+  \item Enam langkah tayang: daftar aset unggah AAB formulir keamanan data peninjauan tayang
+\end{itemize}
+
+\end{tcbsummary}

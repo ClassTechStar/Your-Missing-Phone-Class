@@ -1,0 +1,129 @@
+\bookchapter{Bab 52: Empat Komponen dan Kitaran Hayat Activity}
+
+\chapterintro{Jika Compose ialah 'wajah' aplikasi, bab ini pula bercakap tentang 'rangka' aplikasi. Sistem Android ada empat komponen asas; semua aplikasi dibina daripadanya; dan yang paling penting, Activity, mempunyai satu 'rajah kitaran hayat' yang wajib terpahat dalam kepala setiap pembangun Android. Selepas bab ini, anda akan memahami teka-teki abadi seperti 'kenapa bila masuk latar belakang dan kembali semula, keadaan aplikasi saya hilang'.}
+
+\booksection{Empat Komponen: 'Tiang Seri' Android}
+
+Android secara rasmi mentakrifkan empat komponen asas, masing-masing bertanggungjawab atas satu jenis kerja:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Komponen} & \textbf{Tanggungjawab} & \textbf{Ibaratnya} \tabularnewline
+\hline
+Activity & Satu antara muka yang boleh dilihat & Pemuka kedai — boleh dilihat dan boleh berinteraksi oleh pengguna \tabularnewline
+Service & 'Pekerja halimunan' yang bekerja di latar belakang & Pekerja gudang — memainkan muzik, memuat turun fail, tidak perlukan antara muka \tabularnewline
+BroadcastReceiver & Menerima siaran sistem & Rumah pengawal — 'pembesar suara' yang menyiarkan 'bateri habis', 'rangkaian terputus' \tabularnewline
+ContentProvider & Berkongsi data merentas aplikasi & Kabinet fail awam — contohnya berkongsi kenalan dengan aplikasi lain \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Sekilas pandang empat komponen Android\end{center}
+
+Pada peringkat pemula, 95\% masa anda dihabiskan berurusan dengan Activity; Service dan BroadcastReceiver digunakan semasa memainkan muzik atau menghantar pemberitahuan; ContentProvider paling jarang digunakan (sistem sudah membungkus data yang lazim). Juga perhatikan: keempat-empat komponen mesti 'mendaftar' dalam AndroidManifest.xml; tanpa pendaftaran, sistem tidak jumpa mereka.
+
+\booksection{Kitaran Hayat Activity: 'Peta Harta Karun' Pertama Pembangunan Android}
+
+Aplikasi pada telefon boleh terganggu bila-bila masa: panggilan telefon masuk, pengguna bertukar ke WeChat untuk membalas mesej, memori sistem tidak cukup lalu mematikan anda… Sepanjang hayat Activity, ia melawati rajah ini secara berulang:
+
+onCreate (lahir: pemulaan)
+
+onStart (sudah kelihatan)
+
+onResume (aktif di hadapan)
+
+onPause (sebahagian tertutup)
+
+onStop (langsung tidak kelihatan)
+
+onDestroy (dimusnahkan)
+
+onRestart / onStart / onResume: kembali ke hadapan melalui jalan yang sama
+
+\begin{center}\small\color{gray}Rajah 4: Kitaran hayat Activity (arah ke hadapan: baris atas lahir baris bawah keluar; semasa kembali, berbalik melalui jalan asal)\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Panggil balik} & \textbf{Bila dicetuskan} & \textbf{Kegunaan biasa} \tabularnewline
+\hline
+onCreate & Semasa Activity dicipta (sekali) & Memuatkan antara muka, memulakan data \tabularnewline
+onStart & Antara muka menjadi kelihatan & Memulakan beberapa logik ringan \tabularnewline
+onResume & Mendapat fokus, boleh berinteraksi & Memulakan animasi, menyambung semula main balik \tabularnewline
+onPause & Dilindungi sebahagian / sejurus bertukar pergi & Jeda animasi, simpan draf \tabularnewline
+onStop & Sama sekali tidak kelihatan & Melepaskan sumber berat, menjeda muat turun \tabularnewline
+onDestroy & Sebelum dimusnahkan & Pembersihan terakhir \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kegunaan biasa enam panggil balik kitaran hayat\end{center}
+
+\textbf{Amaran Perangkap: Memusingkan Skrin Akan 'Membunuh' Activity}\par
+
+Adegan terjebak paling klasik pemula: aplikasi dipusingkan sedikit, semua teks dalam kotak input hilang. Punca: memusingkan skrin secara lalai akan memusnahkan dan mencipta semula Activity (melalui sekali onDestroy onCreate). Penyelesaian: guna rememberSaveable untuk menyimpan keadaan (pengganti remember dalam Compose); ia akan mengembalikan nilai secara automatik semasa dibina semula. Akan digunakan berulang kali dalam Bab 6 dan 7.
+
+\booksection{Intent: 'Tiket Perjalanan' Masuk Keluar Aplikasi}
+
+Intent (niat) ialah 'tiket' komunikasi antara komponen. Mahu melompat dari satu halaman ke halaman lain, atau membuka pelayar, atau membangkitkan kamera, semuanya perlu 'beli tiket dan naik':
+
+\begin{lstlisting}[language=Kotlin]
+// Cara satu: Intent eksplisit—nyatakan halaman destinasi dengan jelas
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", "Zhang San")     // Seperti menitipkan "bagasi" dalam kenderaan (data)
+startActivity(intent)
+
+// Cara dua: Intent implisit—cukup sebut mahu buat apa, sistem carikan pelakunya
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // Sistem akan buka pelayar/atau minta anda pilih
+\end{lstlisting}
+
+Kedua-dua cara ada kegunaan masing-masing: eksplisit untuk lompatan halaman di dalam aplikasi sendiri; implisit untuk memanggil kebolehan sistem atau aplikasi lain (membuka laman web, membuat panggilan, berkongsi). Dalam projek Compose, dalam Composable gunakan LocalContext.current untuk mendapatkan Context maka boleh startActivity.
+
+\booksection{Berbilang Halaman dan Navigasi}
+
+Aplikasi sebenar semuanya ada berbilang halaman. Penyelesaian navigasi yang disyorkan secara rasmi untuk Compose ialah Navigation Compose (pustaka kebergantungan androidx.navigation):
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "Tidak diketahui")
+    }
+}
+
+// Berpindah halaman dalam halaman:
+navController.navigate("detail/Zhang San")     // dengan parameter
+navController.popBackStack()              // kembali ke halaman sebelumnya
+\end{lstlisting}
+
+\begin{tcbinfo}{Petua: Kalau Halaman Makin Banyak Macam Mana?}
+Apabila projek membesar, kumpulkan semua laluan halaman dalam satu fail (contohnya AppNavGraph.kt) untuk diurus secara pusat; jangan biarkan logik 'pergi ke mana' berselerak merentas halaman. Ini langkah pertama dari 'boleh berjalan' ke 'boleh diselenggara'.
+
+\end{tcbinfo}
+
+\booksection{Sambil Membiasa Diri: Apa Itu Fragment (dan Kenapa Buku Ini Tidak Mengajarnya)}
+
+Semasa merujuk tutorial lama, anda pasti akan bertemu Fragment — ia 'cekak antara muka boleh guna semula' dalam Activity, wira utama dalam seni bina berbilang halaman lama. Tetapi di era Compose, halaman cukup menggunakan fungsi Composable + laluan Navigation, dan pihak rasmi pun sudah melemahkan kedudukan Fragment. Maka buku ini tidak memasukkannya ke dalam laluan utama.
+
+Cadangan untuk anda: projek baharu jangan aktif menggunakan Fragment; tetapi semasa membaca kod lama atau apabila ditanya dalam temu duga, tahu bahawa ia 'cekak antara muka yang disarang dalam Activity' sudah memadai. Sumber pembelajaran sentiasa utamakan yang selepas 2023 — 'kalendar lama' tindanan teknologi Android berubah lebih pantas daripada disangka.
+
+\begin{tcbpractice}{Mari cuba: Beri Pengira Itu 'Ingatan'}
+Ubah suai pengira Bab 51: (1) tukar remember kepada rememberSaveable, pusingkan skrin dan sahkan nombor masih ada; (2) tambah butang 'Tentang', guna Navigation untuk pergi ke halaman kedua yang memaparkan nombor versi; (3) cetak log (Log.d) dalam onCreate/onPause kedua-dua halaman, dan perhatikan susunan panggilan kitaran hayat dengan Logcat. Selepas tiga langkah ini, kitaran hayat bukan lagi teori di atas kertas.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab}
+\begin{itemize}
+  \item Empat komponen: Activity (pemuka), Service (latar belakang), BroadcastReceiver (pembesar suara), ContentProvider (kabinet fail)
+  \item Enam panggil balik kitaran hayat: onCreate onStart onResume onPause onStop onDestroy
+  \item Memusingkan skrin memusnahkan dan membina semula Activity: guna rememberSaveable untuk menyelamatkan keadaan
+  \item Intent ialah 'tiket': eksplisit melompat halaman sendiri, implisit memanggil kebolehan sistem
+  \item Berbilang halaman guna Navigation Compose: laluan NavHost + composable
+\end{itemize}
+
+\end{tcbsummary}

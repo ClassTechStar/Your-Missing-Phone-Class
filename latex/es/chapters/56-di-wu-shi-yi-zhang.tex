@@ -1,0 +1,203 @@
+\bookchapter{Capítulo 51: Desarrollo de interfaces: primeros pasos con Jetpack Compose}
+
+\chapterintro{La interfaz es todo lo que el usuario ve. Antes de llegar Compose, las interfaces de Android se escribían en XML, tedioso como un ejercicio de rellenar huecos; en 2021 Google presentó Jetpack Compose: la interfaz se “dibuja” directamente con código Kotlin, ves lo que haces y, al tocar una línea de código, la vista previa se refresca al instante. Para 2026, Compose ya era la corriente mayoritaria absoluta en los proyectos nuevos. En este capítulo aprenderemos a “dibujar”.}
+
+\booksection{La idea de Compose: la interfaz es una función}
+
+La idea central de Compose cabe en una frase: interfaz = función. Cada cosa que puede verse en pantalla (texto, botones, imágenes) es una “función composable” (Composable), marcada con @Composable. Anidarlas como piezas de un juego de construcción da como resultado la interfaz.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Greeting(name: String) {
+    Text(text = "¡Hola, $name!")     // un "bloque de texto"
+}
+
+// composición anidada: bloques grandes que contienen bloques pequeños
+@Composable
+fun HomeScreen() {
+    Column {                          // apilados en vertical
+        Greeting(name = "Luis")
+        Greeting(name = "María")
+        Button(onClick = { /* qué hacer al pulsar */ }) {
+            Text("Púlsame")
+        }
+    }
+}
+\end{lstlisting}
+
+Fíjate en ese “sombrero” llamado @Composable: le dice al compilador “esto es una pieza de interfaz”. Las piezas se pueden anidar sin límite, y ese es todo el secreto de Compose.
+
+\booksection{Componentes básicos: texto, botón, campo de texto e imagen}
+
+Los componentes de Compose son “bloques de construcción”; los cuatro más habituales:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Componente} & \textbf{Qué hace} & \textbf{Parámetros imprescindibles} \tabularnewline
+\hline
+Text & Mostrar texto & text (el texto a mostrar) \tabularnewline
+Button & Botón & onClick (retrollamada al pulsar) \tabularnewline
+TextField & Campo de texto & value y onValueChange (retrollamada al cambiar la entrada) \tabularnewline
+Image & Mostrar imagen & painter (recurso de imagen) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Los cuatro componentes básicos de Compose\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun BasicWidgets() {
+    Column {
+        Text(text = "Esto es un texto")
+        Button(onClick = { println("¡Pulsado!") }) {
+            Text("Botón")
+        }
+        var input by remember { mutableStateOf("") }
+        TextField(
+            value = input,
+            onValueChange = { input = it },
+            label = { Text("Escribe algo") }
+        )
+    }
+}
+\end{lstlisting}
+
+En las líneas del campo de texto aparece remember \{ mutableStateOf(“”) \}: es la magia del “estado” de Compose, que detallamos en la quinta sección de este capítulo. Por ahora basta con que te suene.
+
+\booksection{El trío de maquetación: Column, Row y Box}
+
+Ya tienes los componentes, ¿cómo se colocan? Recuerda tres “cajas”:
+
+\begin{itemize}
+  \item Column: apila en vertical (como la cola del comedor);
+  \item Row: alinea en horizontal (como sentados lado a lado);
+  \item Box: coloca en capas (como un mazo de cartas apiladas; ideal para insignias y superposiciones).
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+Column {
+    Text("Primera fila")
+    Row {
+        Text("Izquierda")
+        Text("Derecha")
+    }
+    Box {
+        Text("Capa inferior")
+        Text("etiqueta superpuesta encima")
+    }
+}
+\end{lstlisting}
+
+¿Quieres un diseño más bonito? Añade a los componentes Modifier (modificador): es como “maquillar” las piezas:
+
+\begin{lstlisting}[language=Kotlin]
+Text(
+    text = "Texto bonito",
+    modifier = Modifier
+        .padding(16.dp)          // margen en los cuatro lados
+        .fillMaxWidth()          // ocupa todo el ancho
+        .background(Color.Blue)  // color de fondo
+        .clickable { /* al pulsar */ }// se puede pulsar
+)
+// llamadas encadenadas: una tras otra; el orden importa (primero padding y luego fondo; el fondo no incluye el margen)
+\end{lstlisting}
+
+\begin{tcbwarn}{Atención: el orden de Modifier importa}
+padding(16.dp).background(Blue) y background(Blue).padding(16.dp) no dan el mismo resultado: el primero es “primero margen, luego pintura” (el fondo no incluye el margen) y el segundo, “primero pintura, luego margen” (el fondo sí lo incluye). Aquí es donde los principiantes más dibujan “bordes blancos raros”. Si dudas, invierte el orden y prueba: la vista previa te dará la respuesta al instante.
+
+\end{tcbwarn}
+
+\booksection{Estado: que la interfaz cobre “vida”}
+
+Una interfaz estática es sosa. Para que un botón sume +1 al pulsarlo o que un campo admita escribir, hace falta estado (State). La regla de Compose: la interfaz refleja siempre fielmente el estado; si el estado cambia, la interfaz se redibuja sola.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Counter() {
+    // remember + mutableStateOf: recuerda este valor que cambia
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "Has pulsado $count veces")
+        Button(onClick = { count++ }) {   // cambia el estado
+            Text("Púlsame +1")                // la interfaz se actualiza sola
+        }
+    }
+}
+\end{lstlisting}
+
+Tres líneas de código y tienes un contador vivo. Ahí está lo agradable de Compose frente a la forma antigua: no hay que “refrescar la interfaz” a mano, basta con cambiar los datos. Recuerda dos funciones clave: remember (evita que el valor se borre al recomponerse la interfaz) y mutableStateOf (avisa a Compose de que “este valor cambió y toca redibujar”).
+
+El usuario pulsa
+
+Cambia el estado (count++)
+
+Compose detecta el cambio
+
+Redibuja la interfaz (recomposición)
+
+\begin{center}\small\color{gray}Figura 3: el flujo de datos unidireccional “estado interfaz” de Compose\end{center}
+
+\booksection{Temas y modo oscuro: se configura una vez y manda en toda la app}
+
+El MyFirstAppTheme \{ ... \} del proyecto de plantilla es el tema. Se apoya en las directrices de diseño Material 3 y te ayuda a llevar colores, tipografías y formas con un mismo criterio. Dar soporte al modo oscuro solo exige tres pasos:
+
+\begin{enumerate}
+  \item definir en el tema las dos paletas, clara y oscura (la plantilla ya genera sola el ColorScheme);
+  \item isSystemInDarkTheme() detecta solo cuando el sistema pasa al modo oscuro;
+  \item usar los colores que da el tema (por ejemplo, MaterialTheme.colorScheme.primary) en vez de valores clavados a mano.
+\end{enumerate}
+
+\begin{tcbinfo}{Consejo: el color dinámico de Material 3}
+“Material You”, que existe desde Android 12, permite a la app sacar colores de tu fondo de pantalla. Las plantillas de Compose lo traen por defecto (dynamicColor). Tu app se “cambiará de traje” sola en el móvil de cada usuario: esa es la poesía del Android moderno.
+
+\end{tcbinfo}
+
+\booksection{Vista previa, animaciones y edición en vivo: los “extras” de Compose}
+
+Tres “extras” de Compose para la experiencia de desarrollo: una vez probados, ya no hay vuelta atrás:
+
+\begin{itemize}
+  \item Vista previa con @Preview: al añadir la anotación @Preview a un Composable, Android Studio dibuja la interfaz al momento en el panel de la derecha: ves lo que escribes sin tener que instalar cada vez en el móvil;
+  \item Edición en vivo (Live Edit): Android Studio en 2026 admite "recargar en caliente" ciertos cambios sobre el emulador o el dispositivo real; retoques pequeños como cambiar el color de un texto se ven al segundo en el dispositivo;
+  \item APIs de animación: con unas pocas líneas de animateFloatAsState o AnimatedVisibility los elementos pasan de un estado a otro con suavidad; esa "sensación premium" suele estar a esas pocas líneas de distancia.
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun AnimatedBox() {
+    var big by remember { mutableStateOf(false) }
+    // cuando el valor cambia, transita suavemente al valor objetivo
+    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+
+    Box(Modifier
+        .size(size)
+        .background(MaterialTheme.colorScheme.primary)
+        .clickable { big = !big }
+    )
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Consejo: primero la función, luego la animación}
+El vicio típico del principiante es “apurar animaciones cuando la interfaz todavía no funciona”. Primero logra que la función ande y deja los efectos para el final; también es el principio de “sencillez ante todo”: la animación es la guinda, la función es el pastel.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Manos a la obra: crea un "botón del humor"}
+Transforma el proyecto de plantilla en un conmutador de humor: un botón que al pulsarlo rota entre feliz triste enfadado, con el texto y el color de fondo cambiando al compás. Pista: usa when para elegir el texto y el color según el estado. Cuando lo acabes, pásaselo a tus amigos y recoge tu primera oleada de “vaya, ¿ya haces apps?”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item La idea de Compose: interfaz = funciones @Composable anidadas como bloques
+  \item Cuatro componentes básicos: Text / Button / TextField / Image
+  \item Trío de maquetación: Column en vertical, Row en horizontal, Box en capas
+  \item Modifier se "maquilla" en cadena: padding, fillMaxWidth, background, clickable; el orden importa
+  \item El estado es el alma: remember + mutableStateOf; cambias los datos y la interfaz se redibuja sola
+  \item Tema con Material 3 + color dinámico; el modo oscuro se configura una vez y manda en toda la app
+\end{itemize}
+
+\end{tcbsummary}

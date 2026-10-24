@@ -1,0 +1,146 @@
+\bookchapter{Chapitre 39 : Ingénierie du contexte — faire comprendre votre intention à l'IA}
+
+\chapterintro{Vous est-il arrivé qu'une nouvelle conversation fasse perdre à l'IA toute mémoire de votre projet ? Ce n'est pas de la malice : elle est « oublieuse » par nature. Ce chapitre vous apprend à lui installer un « système de mémoire longue » et vous fait découvrir l'un des paradigmes les plus en vogue en 2026 : le développement piloté par la spécification.}
+
+\booksection{I. Fichier de mémoire de projet : la « mémoire longue » de l'IA}
+
+Un modèle d'IA a une limite fondamentale : sa mémoire est de courte durée. Au début de chaque conversation, sa connaissance de votre projet est nulle. Il faut sans cesse rappeler « nous utilisons React », « le backend est Node.js », « la base est PostgreSQL », « les chaînes en doubles guillemets ». Inefficace et source d'oublis — comme réformer chaque jour un nouveau collègue.
+
+Solution : le fichier de mémoire de projet, un fichier texte à la racine du projet que l'outil IA lit automatiquement au début de chaque conversation. Chaque outil a sa convention de nommage :
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Outil} & \textbf{Nom de fichier} \tabularnewline
+\hline
+Cursor & \texttt{.\allowbreak cursorrules} \tabularnewline
+Claude Code & \texttt{CLAUDE.\allowbreak md} \tabularnewline
+GitHub Copilot & \texttt{copilot-\allowbreak instructions.\allowbreak md} \tabularnewline
+Solution générique & \texttt{AGENTS.\allowbreak md} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Conventions de nommage des fichiers de mémoire de projet\end{center}
+
+Les noms diffèrent, le principe est le même : y consigner ce que l'IA doit « toujours se rappeler ». Un bon fichier contient : présentation du projet, pile technique, conventions de code (nommage, indentation, commentaires), structure des dossiers, règles de développement (branches, commits, tests). Le CLAUDE.md de Karpathy tient en 70 lignes et couvre l'essentiel — concis mais complet.
+
+\begin{lstlisting}
+# Projet : app de suivi de dépenses personnelles
+## Aperçu
+C'est une app full-stack de suivi de dépenses qui aide l'utilisateur à enregistrer ses revenus et dépenses quotidiens.
+## Stack technique
+- Frontend : React + TypeScript + Tailwind CSS
+- Backend : Node.js + Express + TypeScript
+- Base de données : SQLite (développement) / PostgreSQL (production)
+- Tests : Vitest
+## Conventions de code
+- Utiliser les guillemets doubles
+- Indentation de 2 espaces
+- Noms de fonctions en camelCase
+- Définitions de types en PascalCase
+- Chaque fonction doit avoir son commentaire JSDoc
+## Structure des dossiers
+/src
+  /frontend  - code du frontend
+  /backend   - code du backend
+  /shared    - types partagés frontend/backend
+  /tests     - fichiers de test
+## Conventions de développement
+- Messages de commit en français
+- Toute nouvelle fonctionnalité commence par son test
+- Les réponses de l'API utilisent toujours le format { success, data, error }
+\end{lstlisting}
+
+\begin{tcbwarn}{Attention : ce n'est pas un second cahier des charges}
+Surveillez la longueur — pas des dizaines de pages de spécifications. L'objectif est que l'IA « contextualise vite », pas qu'elle décrive chaque fonction en détail. Restez concis, structuré, et ne notez que « ce que l'IA doit savoir ».
+
+\end{tcbwarn}
+
+\booksection{II. Développement piloté par la spécification (SDD)}
+
+Le Spec-Driven Development (SDD) est un paradigme mûri en 2026, en une phrase : écrire la spécification avant le code. Contrairement au TDD, la « spécification » du SDD ne se limite pas aux cas de test : elle inclut la description des besoins, les interfaces, les modèles de données. L'IA génère le code à partir de ces spécifications ; l'humain écrit et maintient les spécifications.
+
+Le flux SDD en cinq étapes :
+
+\begin{enumerate}
+  \item Décrire le besoin en langage naturel (dans un fichier .md) ;
+  \item Définir interfaces et structures de données (dans la spécification) ;
+  \item Laisser l'IA générer le code à partir de la spécification ;
+  \item Exécuter les tests pour vérifier la conformité ;
+  \item Si non conforme, corriger la spécification ou demander à l'IA de corriger le code.
+\end{enumerate}
+
+Dans ce flux, la spécification est la « source de vérité » — le code se régénère, mais la spécification doit d'abord être juste.
+
+Rédiger le document de spécifications
+
+La spécification est-elle complète ?
+
+Complète
+
+L'IA génère le code d'après la spécification
+
+Lancer les tests pour vérifier le produit
+
+Incomplète / tests échoués
+
+Problème de code corrige le code ; problème de spécification corrige la spécification
+
+Retour à la vérification
+
+Tout est au vert livraison
+
+\begin{center}\small\color{gray}Figure 3 : flux de travail du développement piloté par la spécification (SDD)\end{center}
+
+Avantage du SDD : la spécification est plus stable que le code. Si le modèle ou l'outil change, la spécification reste valable ; il suffit de régénérer le code. D'où l'insistance de ce livre : « la méthodologie prime sur les outils » — la spécification en est le support concret.
+
+\booksection{III. Gestion de la fenêtre de contexte}
+
+Même avec un fichier de mémoire, le contexte peut manquer. La fenêtre de contexte (quantité d'informations traitées simultanément) est limitée. Conversations trop longues ou fichiers trop nombreux : l'IA « oublie » le début et la qualité chute — comme un ami qui, après six heures de discussion, a oublié votre première phrase.
+
+Stratégie clé : les références par couches.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Couche de contexte} & \textbf{Contenu} & \textbf{Gestion} \tabularnewline
+\hline
+Couche 1 : mémoire de projet & Pile technique, conventions, structure des dossiers & Dans CLAUDE.md etc., chargé automatiquement, sans répétition \tabularnewline
+Couche 2 : références de fichiers & Fichiers de code concernés par la tâche & Référence précise avec @, sans coller tout le fichier dans la conversation \tabularnewline
+Couche 3 : contexte de conversation & Historique de la tâche en cours & Nouvelle conversation après chaque tâche, pour éviter le gonflement du contexte \tabularnewline
+Couche 4 : instructions immédiates & Exigences précises de l'étape en cours & Claire, concise, ciblée — éviter les longueurs \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Stratégie de gestion par couches de la fenêtre de contexte\end{center}
+
+\booksection{Les points clés de la pratique de l'ingénierie du contexte}
+
+L'ingénierie du contexte n'est pas un réglage à faire une fois pour toutes, mais un processus d'amélioration continue. Voici quelques points maintes fois éprouvés sur le terrain :
+
+\begin{enumerate}
+  \item Tiens le fichier de mémoire à jour au fil de l'évolution du projet. Quand tu introduis une nouvelle technologie ou changes d'architecture, mets-le à jour immédiatement, au lieu de l'expliquer à la volée dans la conversation.
+  \item Utilise bien les références @ plutôt que de coller le texte entier. La plupart des outils de programmation IA acceptent la syntaxe @file ou @folder, qui injecte le contenu du fichier dans le contexte de l'IA en arrière-plan — plus efficace qu'un collage manuel, et sans polluer la conversation.
+  \item Garde des conversations « courtes et percutantes ». Une conversation traite une seule tâche ou un seul point de fonctionnalité ; une fois terminé, ouvre une nouvelle conversation pour la suite. Les longues conversations épuisent la fenêtre de contexte et distraient l'IA.
+  \item Montre les résultats à l'IA au lieu de les décrire. Face à un bug, référence directement le journal d'erreurs à l'IA avec @, plutôt que de raconter avec tes mots « il semble y avoir une erreur quelque part ». L'IA comprend bien mieux l'information brute que ton résumé.
+  \item Nettoie et archive régulièrement. Les conversations terminées et les fichiers temporaires encombrent ton espace de travail. Fais périodiquement le ménage des contenus inutiles et garde le répertoire du projet bien rangé : l'IA comprendra d'autant mieux la structure du projet.
+\end{enumerate}
+
+\begin{tcbpractice}{À toi de jouer : écris un fichier de mémoire de 70 lignes pour ton projet}
+Choisis un projet en cours (ou prévu) et rédige un CLAUDE.md : présentation du projet (2 ou 3 phrases), stack technique (mets-la en liste), conventions de code (3 à 5 règles), structure des dossiers (dessine un arbre), conventions de développement (2 ou 3 règles). Reste sous les 70 lignes — une fois écrit, tu verras que ta compréhension du projet sera bien plus claire.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Résumé du chapitre}
+\begin{itemize}
+  \item La mémoire de l'IA est « à court terme » : à chaque nouvelle conversation, elle ne sait rien du projet
+  \item Le fichier de mémoire du projet (CLAUDE.md, etc.) est la « mémoire long terme » de l'IA, chargé automatiquement à chaque conversation
+  \item Un bon fichier de mémoire = présentation + stack + conventions + arborescence + accords, 70 lignes suffisent
+  \item Le SDD (développement piloté par les spécifications) : on écrit d'abord les spécifications, puis le code ; la spécification est la « source unique de vérité », plus stable que le code
+  \item Le contexte se gère en quatre couches : mémoire du projet références @fichier historique de conversation instructions immédiates
+  \item Cinq points de pratique : mises à jour synchronisées, références @, conversations courtes, informations brutes, nettoyage régulier
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,181 @@
+\bookchapter{Kapitel 63: Views, State und Navigation}
+
+\chapterintro{Einseitige Spielereien kannst du bereits. Dieses Kapitel löst die zwei Fragen des „Erwachsenwerdens“: wie du zwischen mehreren Seiten hin- und herspringst (Navigation) und wie Daten zwischen den Seiten fließen (State-Management). Nach diesem Kapitel baust du das klassische Mehrseiten-Gerüst „Liste Detail Bearbeiten“.}
+
+\booksection{Das Datenfluss-Panorama des State-Managements}
+
+SwiftUI hat mehr als nur @State als State-Werkzeug. Sieh dir zuerst diese Übersicht an, um zu verstehen, „wann du welches einsetzt“:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Werkzeug} & \textbf{Zuständig für} & \textbf{Wer es nutzt} & \textbf{Typischer Einsatzfall} \tabularnewline
+\hline
+@State & Seiteneigener, temporärer Zustand & Das aktuelle View & Zähler, Textfeldeingaben \tabularnewline
+@Binding & Zustand von jemand anderem ausleihen & Kind-View ändert Eltern-View & Eigene Komponenten \tabularnewline
+@StateObject / @Observable & Seitenübergreifend geteilte Logik & ViewModel & Datenladen, Geschäftslogik \tabularnewline
+@EnvironmentObject / .environment & Global geteilter Zustand & Die ganze App & Anmeldestatus, Theme-Einstellungen \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Überblick über SwiftUIs State-Werkzeuge (2026: @Observable ist längst Standard)\end{center}
+
+\begin{lstlisting}[language=Swift]
+// der moderne Weg ab iOS 17+: das @Observable-Makro (für neue Projekte empfohlen)
+import Observation
+
+@Observable
+class CounterModel {                 // das View Model
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // hält das Modell
+
+    var body: some View {
+        VStack {
+            Text("Du hast \(model.count) Mal geklickt")
+            Button("Klick mich") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+Knallharter Rat für Einsteiger: Seiteneigen @State; seitenübergreifend oder mit Logik @Observable-Klasse. @StateObject/@ObservableObject aus älteren Tutorials ist die Schreibweise der Vorgängergeneration – lesen können genügt, für neuen Code gilt das oben Gesagte.
+
+\booksection{NavigationStack: der „Stapel“ für Seitenwechsel}
+
+Ab iOS 16 übernimmt NavigationStack die Mehrseiten-Navigation – wie ein Stapel Teller: einer kommt oben drauf, und beim Zurückgehen wird jeder einzeln wieder abgenommen:
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("Max' Ausgabenbuch") {
+                    DetailView(name: "Max' Ausgabenbuch")   // Zielseite
+                }
+                NavigationLink("Lenas Ausgabenbuch") {
+                    DetailView(name: "Lenas Ausgabenbuch")
+                }
+            }
+            .navigationTitle("Liste der Ausgabenbücher")   // große Überschrift oben
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("Details zu \(name)")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+NavigationLink ist schlicht ein „antippbarer Sprunglink“; navigationTitle erzeugt automatisch Navigationstitel und Zurück-Button. Für programmatisches Navigieren (etwa nach „Speichern“ automatisch zurück) schließt du die aktuelle Seite mit @Environment(\textbackslash{}.dismiss) – mit dieser Kombination hast du 90 \% aller Navigationsbedürfnisse abgedeckt.
+
+\booksection{Dialoge und untere Reiter: sheet und TabView}
+
+Neben dem „Seitenschieben“ gibt es zwei klassische Interaktionsformen:
+
+\begin{lstlisting}[language=Swift]
+// 1. Sheet von unten, halber oder ganzer Bildschirm (der Liebling von Eingabeformularen)
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("Ausgabe erfassen") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // die sich öffnende Erfassungsansicht
+            }
+    }
+}
+
+// 2. untere Tab-Leiste (das "Skelett" der App)
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("Buch", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("Statistik", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("Einstellungen", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tipp: Wann nimmt man was?}
+Faustregel: Für den Hauptablauf Seiten mit NavigationStack schieben (Liste Detail), für kurzzeitige Aktionen den sheet-Dialog (Anlegen, Bearbeiten, Bestätigen) und für gleichrangige Hauptbereiche TabView (untere Reiter). Die Kombination aus allen dreien ist das Gerüst der allermeisten Apps.
+
+\end{tcbinfo}
+
+\booksection{List: iOS' Alleskönner-Liste}
+
+Der meistgenutzte und am typischsten „apple-artige“ Baustein unter iOS ist List – mit Trennlinien, Wisch-löschen und Tipp-Highlight ab Werk:
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["Mittagessen 25.5", "U-Bahn 6.0", "Gehalt +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // nach links wischen zum Löschen
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Liste + NavigationLink + sheet + TabView – kombiniere diese vier Bausteine, und du kannst bereits das komplette App-Gerüst „Buchungsliste Detail öffnen auf + tippen, Eingabe-Dialog erscheint“ bauen. Genau so entsteht das Haushaltsbuch-Projekt im nächsten Kapitel.
+
+\begin{tcbpractice}{Jetzt bist du dran: Baue ein „Drei-Seiten-Gerüst“}
+\booksection{Der App-Lebenszyklus: Vordergrund und Hintergrund}
+
+Ähnlich wie der Activity-Lebenszyklus bei Android durchläuft auch eine iOS-App Zustandswechsel von „Geburt, Vordergrund, Hintergrund, Tod“. In SwiftUI beobachtest du das über den Environment-Wert scenePhase:
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("wieder vorn: Aktualisierung fortsetzen")
+            case .inactive:  print("im Übergang (Anruf oder Moment des Wechsels nach hinten)")
+            case .background: print("in den Hintergrund: Entwurf sichern")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Typische Einsätze: Daten auffrischen, wenn die App wieder in den Vordergrund kommt; Entwürfe speichern, wenn sie in den Hintergrund geht. iOS geht mit Hintergrundbetrieb streng ins Gericht – normale Apps werden bald nach dem Wechsel in den Hintergrund angehalten (eingefroren). Rechne nicht damit, heimlich Schwerstarbeit im Hintergrund zu leisten; für zeitgesteuerte Aufgaben nutze die lokalen Benachrichtigungen aus Kapitel 68, keinen „Dauerbetrieb im Hintergrund“.
+
+Baue eine Fake-Daten-Version des Haushaltsbuch-Gerüsts: TabView mit drei Reitern (Buchungen/Statistik/Einstellungen) die Buchungsseite zeigt Fake-Daten in einer List, ein Tipp auf eine Zeile springt zum Detail (NavigationStack) der “+”-Button oben rechts öffnet den Eingabe-Dialog als sheet. Kein Speichern, kein Netz – reine Gerüstübung. Steht dieses Gerüst, ist es in Kapitel 65 nur noch ein Katzensprung, echte Daten einzufüllen.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Kapitelfazit}
+\begin{itemize}
+  \item Die vier State-Werkzeuge: @State (seiteneigen), @Binding (ausgeliehen), @Observable (Logik), .environment (global)
+  \item In neuen Projekten schreibst du ViewModels mit dem @Observable-Makro; @ObservableObject aus alten Tutorials: lesen können genügt
+  \item NavigationStack schiebt Seiten; @Environment(\textbackslash{}.dismiss) ermöglicht programmatisches Zurück
+  \item Hauptablauf: Seiten schieben; kurzzeitige Aktionen: sheet; gleichrangige Hauptbereiche: TabView
+  \item List ist die Alltagsliste: Trennlinien und Wisch-löschen ab Werk
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,178 @@
+\bookchapter{Глава 53. Хранение данных и сетевые запросы}
+
+\chapterintro{Приложение, которое умеет лишь «показывать», — мёртвое; живым его делают умение сохранять данные и выходить в сеть. В этой главе знакомимся с «тройкой» слоя данных Android: DataStore (хранит мелкие настройки), Room (хранит структурированные данные), Retrofit (говорит с сервером) — плюс их «главный диспетчер», корутины. Осилив главу, вы сможете писать настоящие приложения, которые помнят привычки пользователя и обновляют содержимое на лету.}
+
+\booksection{Как выбрать хранилище: сначала взгляните на таблицу}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Решение} & \textbf{Что удобно хранить} & \textbf{Особенности} & \textbf{Где применяется в книге} \tabularnewline
+\hline
+DataStore & Разрозненные настройки (тема, переключатели) & Пары «ключ — значение», просто и надёжно & Настройки учётной книги, глава 54 \tabularnewline
+Room & Структурированные данные (записи, пользователи) & Настоящая обёртка над базой SQLite, умеет делать запросы & Записи расходов, глава 54 \tabularnewline
+Retrofit & (не хранит, берёт из сети) данные с сервера & Фактический стандарт среди библиотек HTTP-запросов & Данные о погоде, глава 55 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Как делят работу три инструмента хранения\end{center}
+
+Заучите присказку: «мелкие настройки — в DataStore, данные пачками — в Room, внешние данные — через Retrofit». Привычный по старым учебникам SharedPreferences вытеснен DataStore, а рукописный SQL для SQLite — Room: учитесь сразу новому, не топчитесь по старой колее.
+
+\booksection{DataStore: храним мелкие настройки}
+
+Хотите запоминать разрозненные значения вроде «валюта, выбранная в прошлый раз» или «включён ли тёмный режим»? Берите DataStore (вариант Preferences):
+
+\begin{lstlisting}[language=Kotlin]
+val Context.dataStore by preferencesDataStore(name = "settings")
+
+// Запись: сохраняем значение
+suspend fun saveTheme(isDark: Boolean) {
+    context.dataStore.edit { prefs ->
+        prefs[THEME_KEY] = isDark
+    }
+}
+
+// Чтение: достаём (Flow сам сообщит об изменениях)
+val themeFlow: Flow<Boolean> = context.dataStore.data
+    .map { it[THEME_KEY] ?: false }
+\end{lstlisting}
+
+Обратите внимание: возвращается Flow — «текущий» поток данных. Значение изменилось — и все, кто за ним наблюдает, автоматически получают новое. Эта идея (реактивность) — краеугольный камень современного Android; практика будет в главе 54.
+
+\booksection{Room: строим для данных «настоящий дом»}
+
+В учётной книге сотни и тысячи записей, да ещё нужны запросы и статистика по категориям и месяцам — без базы данных не обойтись. Room — официальная обёртка над SQLite: она делает «создание таблиц и выборки» таким же естественным, как написание Kotlin. Нужны три вещи:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Entity: структура таблицы (одна таблица = один data class)
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val amount: Double,
+    val category: String,
+    val note: String,
+    val date: String
+)
+
+// 2. Dao: интерфейс операций (CRUD)
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+    suspend fun sumByCategory(c: String): Double
+}
+
+// 3. Database: общая сборка
+@Database(entities = [Record::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun recordDao(): RecordDao
+}
+\end{lstlisting}
+
+Этот шаблон «тройки» можно целиком переносить в любой ваш проект — поменяйте имена полей и готово. Запросы возвращают Flow, и интерфейс сам обновляется вслед за данными. Прелесть!
+
+\booksection{Retrofit: разговор с сервером}
+
+Погода, новости, курсы валют… Этих данных в телефоне нет — они на чужих серверах. Retrofit превращает «попросить данные у сервера» в нечто столь же простое, как вызов функции. Три шага:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Определяем интерфейс: описываем HTTP-запросы как функции
+interface WeatherApi {
+    @GET("v1/weather")
+    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+}
+
+// 2. Создаём экземпляр
+val api = Retrofit.Builder()
+    .baseUrl("https://api.example.com/")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build()
+    .create(WeatherApi::class.java)
+
+// 3. Вызываем как обычную функцию (в корутине)
+val result = api.getWeather("Пекин")
+\end{lstlisting}
+
+\textbf{Осторожно: два железных правила сетевой работы}\par
+
+(1) Сетевые запросы нельзя выполнять в главном потоке — интерфейс замрёт или приложение упадёт (NetworkOnMainThreadException). Все сетевые вызовы обязаны жить в корутинах (viewModelScope.launch). (2) Открытый HTTP по умолчанию запрещён: начиная с Android 9 требуется HTTPS. Если для тестов нужен локальный адрес http://, придётся явно объявить usesCleartextTraffic в Manifest — но в настоящем продукте всё должно ходить только по HTTPS.
+
+\booksection{Разбор JSON: «переводим» сетевые данные}
+
+Большинство данных с сервера приходит в JSON — текст, похожий на «вложенный словарь». Retrofit нужен «переводчик», который превратит его в объекты Kotlin. Два главных решения 2026 года:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Решение} & \textbf{Особенности} & \textbf{Когда выбирать} \tabularnewline
+\hline
+Gson / Moshi & Проверенное временем решение на рефлексии, настраивать нечего & Быстрый старт, небольшие проекты с малым числом полей \tabularnewline
+kotlinx.serialization & Официальное решение с обработкой на этапе компиляции: быстрее и безопаснее & Первый выбор для новых проектов (мейнстрим 2026 года) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Два главных решения для разбора JSON\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// Добавляем data-классу аннотацию @Serializable
+@Serializable
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+
+// Подключаем к Retrofit соответствующий Converter (официальная поддержка с Retrofit 2.11+):
+// .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+\end{lstlisting}
+
+При любом решении железное правило одно: сначала изучите реальный JSON-ответ, потом описывайте поля. Множество багов «не парсится» рождаются из опечаток в именах полей и неверно угаданной вложенности — распечатайте исходный JSON и сверьтесь — через десять секунд виновник найден.
+
+\booksection{Корутины: «общий язык» многозадачности Android}
+
+\booksection{Корутины: «общий язык» многозадачности Android}
+
+Снова и снова мелькавшие выше suspend и launch родом из корутин Kotlin (Coroutine) — официального механизма многозадачности Android. Грубо говоря, это способ дать операциям «с ожиданием» (сеть, база данных) не блокировать интерфейс.
+
+\begin{lstlisting}[language=Kotlin]
+// Запускаем корутину в ViewModel
+viewModelScope.launch {
+    val records = dao.getAll().first()  // suspend: сам приостановится и подождёт
+    // обновляем состояние интерфейса…
+}
+
+// Шпаргалка по ключевым словам:
+// suspend   — «мне надо подождать, не мешайте другим»
+// launch    — «За работу!»
+// viewModelScope — «рабочая», привязанная к экрану; закрывается сама при уничтожении экрана
+\end{lstlisting}
+
+Если вы начинаете с нуля — просто запомните, как этим пользоваться; принцип «приостановил и продолжил» можно изучить позже. 90\% вашего повседневного кода — именно этот шаблон.
+
+\begin{tcbpractice}{Практика: мини-приложение «фраза дня»}
+Найдите бесплатный API цитат (например, hitokoto или похожий), через Retrofit подтягивайте «фразу дня» и показывайте её в центре экрана, добавьте кнопку «Ещё» (новый запрос в корутине). Любимые фразы складывайте в «избранное» через Room. Это упражнение прогоняет через DataStore/Room/Retrofit/корутины всё сразу — сделаете его, и главы 7 и 8 пройдёте как по маслу.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Коротко о главном}
+\begin{itemize}
+  \item Присказка: мелкие настройки — в DataStore, данные пачками — в Room, внешние данные — через Retrofit
+  \item DataStore возвращает Flow: значение поменялось — наблюдатели узнали сами
+  \item Тройка Room: @Entity (таблица) + @Dao (операции) + @Database (общая сборка) — шаблон можно брать как есть
+  \item Три шага Retrofit: объявить интерфейс создать экземпляр вызвать в корутине
+  \item Два железных правила: сеть — не в главном потоке; в настоящем продукте — только HTTPS
+  \item Корутина = ожидание, не блокирующее интерфейс; viewModelScope — личный рабочий кабинет экрана
+\end{itemize}
+
+\end{tcbsummary}

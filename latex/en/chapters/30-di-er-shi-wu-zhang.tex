@@ -1,0 +1,236 @@
+\bookchapter{Chapter 25: Second-hand Phone Disposal and Digital Legacy}
+
+\chapterintro{Execute ultimate “formatting”}
+
+\booksection{: Modern phones' “factory reset” usually includes encrypted erasure.}
+
+Core principle: Data cleaning isn't “deletion” — it's “overwriting.” Many people think dragging photos to the trash and clearing the album is enough, but after the phone changes hands, the new owner can scan with data recovery software and recover old photos, chat history, and ID photos — this kind of “social death” happens every year.
+
+\begin{enumerate}
+  \item \textbf{: After factory reset, fill storage with junk files, then perform another factory reset.}: Complete the last full backup, sign out of all accounts (iCloud, Huawei/Xiaomi/Samsung account, Google account), turn off "Find My Phone" — otherwise the next user will be blocked by Activation Lock.
+  \item \textbf{Apple "Legacy Contact"}: Modern phones' "factory reset" usually includes encrypted wiping — it destroys the encryption key itself. Once the key is gone, all data on the disk instantly becomes garbled.
+  \item \textbf{Final "Camouflage" (Only for Old Devices)}: Modern phones (iOS 8+, Android 6+) already have full disk encryption (FBE) by default. Factory reset destroys the encryption key — data is theoretically unrecoverable,\textbf{this step is not needed}. Only for very old non-encrypted devices (pre-2015), after factory reset, should you fill the storage with junk files and then perform another factory reset.
+\end{enumerate}
+
+\textbf{Brand-Specific Data Wipe Quick Reference Table}: Although the principles are the same, each brand hides “factory reset” in slightly different locations. Key differences are below.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Brand} & \textbf{Wipe Entry Point} & \textbf{Key Differences \& Notes} \tabularnewline
+\hline
+Huawei & Settings > System \& Updates > Reset > Factory Reset & Must sign out of Huawei account and turn off "Find My Phone" first, otherwise Activation Lock will trigger; may require password verification in Pure Mode. \tabularnewline
+Xiaomi / Redmi & Settings > My Device > Factory Reset & At the bottom, there are "Format Virtual SD Card" and "Clear All Content \& Settings" options — both must be checked; turn off "Find Device" before signing out of Xiaomi account. \tabularnewline
+OPPO / OnePlus & Settings > Additional Settings > Restore Phone > Completely Clear All Data & ColorOS provides a "thorough clear" mode that overwrites storage multiple times; requires lock screen password confirmation. \tabularnewline
+vivo & Settings > System Management > Backup \& Reset > Clear All Data & Must check "Format Phone Storage" to clean the SD card area; must sign out of vivo account and turn off "Find Phone." \tabularnewline
+Samsung & Settings > General Management > Reset > Factory Reset & Must remove Samsung account and turn off "Find My Mobile" first; some models have an "auto-overwrite" option, recommended to enable. \tabularnewline
+iPhone & Settings > General > Transfer or Reset iPhone > Erase All Content and Settings & Must sign out of Apple ID first, otherwise the next user will be blocked by iCloud Activation Lock; iOS 15+ supports "Keep iCloud Data When Signing Out" for later reference. \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{The Three Most Overlooked Things}
+\begin{itemize}
+  \item \textbf{Not Signing Out of Accounts}: Phone gets remotely locked after selling to the next buyer, and you can't get back in either — ultimately you have to take your ID to an official service center to unlock it.
+  \item \textbf{SD Card Not Removed}: Factory reset doesn't format photos on the external SD card — remember to manually remove or separately format it.
+  \item \textbf{USB Drive / OTG Peripheral Not Disconnected}: If peripherals are connected during the wipe, it may accidentally clear their data or cause the wipe to be interrupted.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{Manual backup}
+
+The data in your phone is no longer “virtual.” It carries your money, social relationships, creative works, and even your “digital identity.”\textbf{After a person passes away, how should these assets be handled?}This is no longer an abstract question — it's a real dilemma facing more and more families: relatives don't know the passwords, platforms won't allow inheritance, and cryptocurrency is lost forever.
+
+\begin{tcbinfo}{Legal Basis: Article 49 of the Personal Information Protection Law}
+Article 49 of the Personal Information Protection Law of the People's Republic of China, effective in 2021, clearly states:\textbf{When a natural person dies, their close relatives may, for their own legitimate and proper interests, exercise the rights to access, copy, correct, and delete the deceased's personal information as provided in this Chapter, unless the deceased made other arrangements during their lifetime.}
+
+This means:
+
+\begin{itemize}
+  \item \textbf{Close relatives have a legal basis}to request platforms to process the deceased's accounts and personal information.
+  \item "Legitimate and proper interests" typically include handling inheritance, closing accounts, and deleting sensitive privacy information.
+  \item If the deceased made other arrangements during their lifetime (such as designating a legacy contact), those arrangements take precedence.
+  \item Platforms cannot use "user privacy" as a blanket reason to refuse cooperation, but specific procedures vary by platform.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksubsection{WeChat and Alipay: Accounts Can't Be Inherited, But Funds Can}
+
+The rules for these two most commonly used apps among Chinese people are different:
+
+\begin{itemize}
+  \item \textbf{WeChat Account}: According to the Tencent WeChat Software License and Service Agreement, account ownership belongs to Tencent — users only have usage rights,\textbf{the account itself cannot be inherited or transferred}. However, the\textbf{Wallet balance and Qian funds}are personal property. Close relatives can apply to Tenpay for withdrawal or transfer with a death certificate, proof of kinship, and an inheritance notarization.
+  \item \textbf{Alipay}: The account also cannot be directly inherited, but Alipay balance, Yuebao, and wealth management funds\textbf{are inheritable property}. Heirs can handle this through Alipay's customer service hotline or by submitting a death certificate and inheritance notarization offline; Ant Wealth financial products require going through the fund company's process.
+  \item \textbf{Chat History}: Legally classified as personal privacy — platforms won't proactively provide it to family members. If it involves inheritance leads, it can be obtained through litigation or notarization application.
+\end{itemize}
+
+\begin{tcbwarn}{Enable "screen sharing" or "remote control" for strangers.}
+\begin{itemize}
+  \item \textbf{Don't directly hand the deceased's account passwords to family members to "keep using"}— this violates platform agreements, and it's harder to prove things if funds are frozen or risk control is triggered.
+  \item \textbf{Don't try to use the deceased's phone to receive verification codes for "withdrawals"}— this may be classified as theft and could violate the law.
+  \item \textbf{Don't Delay}: Some accounts are automatically deactivated after long periods of inactivity, making fund recovery more difficult.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksubsection{Apple's “Legacy Contact”: Designate in Advance for Half the Effort, Double the Result}
+
+Starting from iOS 15.2, Apple launched the “Legacy Contact” feature, allowing users to designate trusted contacts in advance. After the user's passing, the contact can use\textbf{death certificate + Legacy Contact access key}to request access to the deceased's iCloud data (photos, notes, contacts, etc.). Steps:
+
+\begin{enumerate}
+  \item On iPhone, go to\textbf{[Settings] > [Your Name] > [Sign-In \& Security] > [Legacy Contact]}.
+  \item Tap "Add Legacy Contact" and confirm identity with Face ID.
+  \item Select a contact (from your contacts), and the system will generate an\textbf{Access Key}.
+  \item Send the access key to the other person via SMS, email, or printed copy, and remind them to keep it safe.
+  \item Multiple contacts can be added as backup to avoid single-point failure.
+\end{enumerate}
+
+The designated person doesn't need an Apple device — they can request access on Apple's official website with the key and death certificate. The entire process typically completes within 7 days.
+
+\booksubsection{Google's “Inactive Account Manager”: Automatically Handling Digital Aftermath}
+
+Google provides the “Inactive Account Manager,” which can automatically execute preset actions when the user hasn't logged in for a long time — this is one of the most comprehensive digital legacy mechanisms available.
+
+\begin{enumerate}
+  \item ).\textbf{myaccount.google.com/inactive}, sign in to your Google account.
+  \item Set the timeout period: triggers after 3 / 6 / 12 / 18 months of inactivity.
+  \item Add trusted contacts (up to 10), and set which data each can access (Gmail, Photos, Drive, etc.).
+  \item Optional: Set up auto-reply email to inform senders you can no longer respond.
+  \item Final choice: when the timeout expires, either\textbf{Share data with contacts}, or\textbf{Delete the account}.
+  \item Set a phone number as fallback verification to prevent accidental triggering.
+\end{enumerate}
+
+\booksubsection{Domestic Social Media Accounts: Memorialization and Deletion Process}
+
+Domestic mainstream social platforms handle deceased users' accounts in two ways:\textbf{“Memorialization” (preserving the account for remembrance)}verb\textbf{“Deletion” (complete removal)}. Family members can apply to platform customer service with a death certificate, proof of kinship, and the applicant's ID.
+
+\begin{itemize}
+  \item \textbf{Weibo}: Supports account "memorialization." Relatives apply with a death certificate — the account is locked and can't be logged into, but content is preserved. The profile page displays "This account has been set as a memorial account." Deletion can also be requested, requiring an inheritance notarization.
+  \item \textbf{Douyin}: Through "Me - Settings - Feedback \& Help - Account \& Security - Account Deletion" or manual customer service, submit a death certificate, proof of kinship, and applicant ID. After review, the account can be deleted or converted to memorial status.
+  \item \textbf{Bilibili}: Submit the deceased's certificate and proof of kinship through customer service channels. You can request account deletion or preservation as a memorial page; handling of the uploader's historical content requires consideration of copyright declarations.
+  \item \textbf{Xiaohongshu (RED)}: Appeal through official customer service, submit death certificate and proof of kinship, can request account deletion and content removal.
+\end{itemize}
+
+\begin{tcbinfo}{Key Reminders}
+\begin{itemize}
+  \item Platform rules may be updated — check the latest official customer service guidelines before proceeding.
+  \item All certification documents should be scanned and backed up before submission. Keep originals safe.
+  \item When handling multiple platforms at once, you can apply for a single\textbf{inheritance notarization}to save repeated trips.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksubsection{The Challenge of Digital Asset Inheritance}
+
+In addition to social accounts, more and more people hold\textbf{genuinely valuable digital assets}, whose inheritance issues are more complex:
+
+\begin{itemize}
+  \item \textbf{Cryptocurrency (Bitcoin, Ethereum, etc.)}: Based on the principle of "private key = ownership,"\textbf{no private key means the assets are gone}. Heirs can't appeal "on-chain" through legal documents. Recommendation: store mnemonics/private keys in shards across multiple physical security locations (such as a bank safe deposit box + home safe), and specify the access method in your will.
+  \item \textbf{Exchange Accounts}: Similar to bank accounts, can apply to exchanges (such as Binance, OKX) for asset disposition with an inheritance notarization, but cross-border exchange processes are lengthy.
+  \item \textbf{Domain Names}: Inheritable property. Heirs can transfer ownership at the domain registrar (such as Alibaba Cloud, GoDaddy) after submitting an inheritance notarization.
+  \item \textbf{Intellectual Property (original articles, videos, patents, software copyrights)}: Property rights within copyright can be inherited (personal rights are not inherited), and revenue rights can be enjoyed by heirs until 50 years after the author's death.
+  \item \textbf{Cloud Storage and Network Drives}: Content data belongs to the individual and can be inherited; however, some platform agreements stipulate that accounts themselves are non-transferable — you need to download data first before deletion.
+\end{itemize}
+
+\textbf{The Real Cost of Cryptocurrency “Disappearance”}\par
+
+According to Chainalysis reports, globally\textbf{over 3 million Bitcoins}have been permanently lost due to lost private keys — equivalent to one-sixth of the existing total. If you hold crypto assets, be sure to let at least one person you absolutely trust know the\textbf{recovery path}— otherwise these assets will sleep forever on the blockchain.
+
+\booksubsection{A “Digital Will” Template}
+
+Traditional property wills can't manage digital assets. I recommend updating a “digital will” addendum annually, stored alongside your official will. The following template is for reference:
+
+\textbf{“Personal Digital Asset Disposition Addendum” (Template)}\par
+
+\textbf{Part One: Account Inventory}(Record only account names and platforms —\textbf{do NOT write passwords})
+
+\begin{itemize}
+  \item Social: WeChat (account xxx), Weibo, Douyin, Bilibili, Xiaohongshu, etc.
+  \item Payment: Alipay, WeChat Pay, various bank card apps
+  \item Cloud: iCloud, Huawei Cloud, Mi Cloud, Google account, Microsoft account
+  \item Email: QQ Mail, NetEase Mail, Gmail, etc.
+  \item Other: Cloud drives, subscription services, game accounts, etc.
+\end{itemize}
+
+\textbf{Part Two: Password Custody Plan}
+
+\begin{itemize}
+  \item Master password storage: Use a password manager (like Bitwarden, 1Password). Write the master password on paper and seal it in a home safe.
+  \item Recovery keys/mnemonics: Store in fragments across at least two physical locations (e.g., bank safe deposit box + home safe).
+  \item Authorized contact: Name, ID number, relationship, contact information.
+\end{itemize}
+
+\textbf{Part Three: Disposition Wishes}
+
+\begin{itemize}
+  \item Whether each type of account should be "memorialized" or "deactivated."
+  \item Whether iCloud / Google data has a designated "Legacy Contact" or "Inactive Account Manager."
+  \item Who inherits crypto assets, with instructions for private key access.
+  \item Who enjoys the proceeds from copyrighted works.
+\end{itemize}
+
+\textbf{Part Four: Contacts and Platforms}
+
+\begin{itemize}
+  \item Trusted executor: name, contact, backup contact.
+  \item Platform customer service contacts and required documentation checklist.
+  \item This addendum updated: \_\_\_\_/\_\_/\_\_. Next review date: \_\_\_\_/\_\_/\_\_.
+\end{itemize}
+
+\begin{tcbwarn}{Legal Note on "Passwords"}
+Writing passwords directly into a will poses leak risks, and all heirs can see them once the will is probated.\textbf{A safer approach: the will only contains “account inventory + disposition wishes + password custody location.” Actual passwords are transmitted separately to the trusted executor via the password manager's master password}. This satisfies legal requirements while reducing password leak risks.
+
+\end{tcbwarn}
+
+\booksection{Give it a second life}
+
+A single phone contains dozens of metals including gold, silver, copper, and rare earth elements. Discarding it carelessly pollutes soil and wastes resources. There are three proper recycling channels, each with different strengths:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Channel} & \textbf{Recycle Value} & \textbf{Data Security} & \textbf{What is RAW} \tabularnewline
+\hline
+Official Trade-in (Huawei/Apple/Xiaomi, etc.) & Medium, often with subsidy vouchers & Highest, official standardized process & Most cost-effective when upgrading to same brand \tabularnewline
+Third-Party Recycling Platforms (Aihuishou, Zhuanzhuan, Huishoubao, etc.) & Slightly higher, can compare prices & Fairly high, with data wiping report & Want direct cash, not brand-locked \tabularnewline
+Charitable Donation (e.g., rural schools, charity organizations) & No financial return & Must thoroughly wipe data yourself & Device still usable, want to do good \tabularnewline
+Repurpose (Keep and Modify) & Save money on new devices & Original owner continues using, no risk & Device still performs well, household has repurposing needs \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{: Convert it into a car navigator, smart home hub, or surveillance camera.}: Most recommended — standardized process, data security guaranteed. Apple, Huawei, Xiaomi, and other brands have "trade-in" entries on their official websites. After assessment, the value can be deducted from the new phone price.
+  \item \textbf{Last backup and log out of all accounts.}: Choose a reputable large recycling platform. After placing an order, SF Express picks up the device, and payment is made after inspection. Be sure to choose a\textbf{platform that provides a "data wiping report"}, and keep the receipt.
+  \item \textbf{Charitable Donation}: Contact local rural schools or community organizations — old phones can be converted into educational tablets or phones for the elderly.\textbf{Before donating, be sure to perform a complete wipe and remove all SIM/SD cards}.
+  \item \textbf{(Optional) Fill storage with junk files, then factory reset again.}: Repurpose as a car navigator, smart home controller, security camera, baby monitor, or digital photo frame. An old phone can serve for several more years.
+\end{itemize}
+
+\begin{tcbinfo}{The Truth About E-Waste}
+A phone's circuit board contains\textbf{gold, silver, palladium, copper}and other precious metals. Per ton of scrap circuit boards contains tens of times more gold than gold ore. But if discarded carelessly, the lead, mercury, and cadmium will leach into soil and groundwater, polluting for decades.\textbf{Proper recycling protects the environment and allows scarce metals to be recycled.}
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Chapter 26: Future Phones and Digital Life}
+\begin{enumerate}
+  \item Final complete backup: Upload photos to cloud, copy important files to computer, export and archive chat history.
+  \item Sign out of all accounts: iCloud / Huawei / Xiaomi / Google, turn off "Find My Phone."
+  \item Remove SIM and SD cards, disconnect all OTG peripherals.
+  \item Perform encrypted factory reset, manually check "Format storage" if necessary.
+  \item (Old devices only) Fill storage with junk files, then factory reset again.
+  \item Choose its next destination: official trade-in, certified recycling platform, charitable donation, or pass to family.
+  \item Sync and update your "digital legacy inventory" — cross out retired devices.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbpractice}{This Month's Task List}
+\begin{enumerate}
+  \item Designate an Apple "Legacy Contact" or set up Google "Inactive Account Manager" for your current primary phone.
+  \item Draft a "Personal Digital Asset Disposition Addendum" using this section's template, and discuss storage location with family.
+  \item Check if you have 2+ idle old phones at home, and schedule an official or certified platform recycling.
+\end{enumerate}
+
+\end{tcbpractice}

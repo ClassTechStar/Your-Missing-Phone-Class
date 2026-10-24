@@ -1,0 +1,153 @@
+\bookchapter{第五十六章：仕上げとリリース——テスト、デバッグ、Google Playへの出品}
+
+\chapterintro{アプリができました。それで次は？　この章では「動くもの」から「届けられるもの」へ進むための3つのことを扱います。効率よくデバッグしてバグを見つける方法。テストを書いてデグレを防ぐ方法。そしてアプリをGoogle Playに並べて、世界中にダウンロードしてもらう方法です。出品は儀式ではありません。作品を製品に変える分水嶺です。}
+
+\booksection{デバッグの三種の神器：Logcat、ブレークポイント、UIインスペクター}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{ツール} & \textbf{何をするか} & \textbf{使い方} \tabularnewline
+\hline
+Logcat & システムや自分が出したログを見る & コードで Log.d("TAG","値=\$x") と書き、パネルでTAGを検索して絞り込む \tabularnewline
+ブレークポイントデバッグ & プログラムをある行で止めて、変数の値を見る & 行番号の横をクリックして赤点を出し、Debugモードで実行して1行ずつ進める \tabularnewline
+Layout Inspector & 動いている画面の構造を見る & メニューのTools Layout Inspectorで、コンポーネントツリーをリアルタイムに見る \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}デバッグの三種の神器\end{center}
+
+\begin{tcbinfo}{ワンポイント：エラーの読み方}
+クラッシュするとLogcatに赤いスタックトレース（Stacktrace）が出ます。下から上へ向かって、自分のパッケージ名で始まる最初の行（たとえば com.example.yourapp）を探します。その行がほぼ現場です。まず「Exceptionの種類」（ヌルポインタ？　型変換？）を見て、次に「at ... 自分のファイル:行番号」を見ます。この技で、クラッシュの8割は解決できます。
+
+\end{tcbinfo}
+
+\booksection{テスト：コードに保険をかける}
+
+手動テストは頼りになりません。ある機能を直したら、別の機能がこっそり壊れていた——そんなことはよくあります。テストは「後悔しないための薬」であり、「防弾チョッキ」です。Androidのテストは3層に分かれています。初心者はまず第1層をしっかり押さえましょう。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{層} & \textbf{何をテストするか} & \textbf{どこに置くか} & \textbf{速さ} \tabularnewline
+\hline
+ユニットテスト & 純粋なロジック（計算、検証） & app/src/test/ & 秒単位 \tabularnewline
+インストゥルメンテーションテスト & 実機上での画面の動き & app/src/androidTest/ & 分単位 \tabularnewline
+手動テスト & 本物の人間の感覚·体験 & —— & 常に必要 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}テストの3層\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// 「金額文字列を数値へ変換」するロジックを純粋関数として切り出す
+fun parseAmount(input: String): Double? {
+    val v = input.trim().toDoubleOrNull()
+    return if (v != null && v > 0) v else null
+}
+
+// テストする（JUnit4）
+@Test
+fun emptyInputReturnsNull() {
+    assertEquals(null, parseAmount(""))
+}
+@Test
+fun negativeReturnsNull() {
+    assertEquals(null, parseAmount("-5"))
+}
+@Test
+fun normalValueParses() {
+    assertEquals(12.5, parseAmount("12.5"))
+}
+\end{lstlisting}
+
+家計簿の金額チェックや集計の計算には、ユニットテストをかぶせておくべきです。テストの実行は、testディレクトリを右クリック Run。緑で全部通れば、安心してコードを直せます。
+
+\booksection{署名とパッケージング：アプリに「ハンコ」を押す}
+
+Androidでは、すべてのインストールパッケージに署名が必須です。公印を押すのと同じで、「このパッケージは自分が出したもので、改ざんされていない」ことを証明します。デバッグ中はAndroid Studioが自動でdebug署名を使い、リリースでは自分のrelease署名を使います。手順はこうです。
+
+\begin{enumerate}
+  \item メニューのBuild Generate Signed Bundle / APK を選ぶ。
+  \item keystoreファイル（キーストア）を作る——パスワードを設定して、大切に保管する。
+  \item release＋AAB形式を選んで、ビルド完了。
+\end{enumerate}
+
+\textbf{落とし穴注意：keystoreを失う＝アプリを失う}\par
+
+出品後のアップデートには、必ず同じ署名を使います。そうしないとストアは更新を拒否します。keystoreファイルとパスワードを一度失うと、新しいアプリとして出し直すしかなく、既存のユーザーはみんなつながらなくなります。keystoreとパスワードは必ず安全な場所（クラウドの暗号化保存＋メモ）にバックアップしてください。Android開発者にとって、いちばん高くつく教訓のひとつです。
+
+\booksection{Google Play出品の全ステップ}
+
+開発者アカウントを登録
+
+ストア用素材を準備
+
+AABをアップロード
+
+データセキュリティ表を記入
+
+審査（数時間〜数日）
+
+ストアにリリース
+
+\begin{center}\small\color{gray}図6：Google Play出品の6ステップ\end{center}
+
+\begin{itemize}
+  \item 登録：25ドルの一回払いの登録料。使えるGoogleアカウントが必要。
+  \item 素材：アプリのアイコン（512×512）、スクリーンショット（2枚以上）、機能の説明、プライバシーポリシーのリンク（データを集める場合は必須）。
+  \item データセーフティフォーム：どんなデータを集めるかを正直に申告する——ネットにつながらない家計簿なら「ゼロ収集」にできます。
+  \item 審査：新しいアカウントの初出品は、人手による審査になることがよくあります。数時間から数日。差し戻されたら指摘に従って直します。
+\end{itemize}
+
+中国国内の読者へ：Google Playには特別なネット環境が必要で、中国大陸向けの配信は普通、国内ストア（Huawei、Xiaomi、Tencent（応用宝）など）を使います。国内ストアへの出品も流れはよく似ていますが、ストアごとに審査の好みがあります。同じAAB/APKを複数のストアで配信できます。練習としては、まず1つでいいので通せば勝ちです。
+
+\booksection{ストア素材の作り方：第一印象がそのままダウンロード数になる}
+
+ストアページは、ユーザーが「お店をのぞく」ときに目にするショーウィンドーです。3つの素材が第一印象を決めます。
+
+\begin{itemize}
+  \item アイコン：512×512。スクリーンショットで代用しないこと。デザインが苦手なら、AIツールでシンプルな幾何学模様を生成しましょう。スマホのホーム画面で小さくしても、一目で見分けられるかが合格ラインです。
+  \item スクリーンショット：2枚以上、できれば4〜6枚で、いちばん核となる機能の場面を見せる。1枚ごとに、自然なひと言を添える（「1秒で1件メモ」は「効率的な家計簿ソリューション」より10倍いい）。
+  \item 説明文：最初の一文で「これが何で、誰のためのものか」をはっきりさせる。「最もプロフェッショナル」「最強」を並べないこと。ストアの検索順位は主にキーワードとダウンロードへの転換で決まります。誠実さのほうが、誇張より効きます。
+\end{itemize}
+
+\begin{tcbinfo}{ワンポイント：A/Bで同業をのぞいてみる}
+出品する前に、ストアで同ジャンルの上位10アプリを見て回り、スクリーンショットを取って比べましょう。アイコンはどんなスタイル？　スクリーンショットは何を売りにしている？　タイトルはどう書く？　真似は盗作ではありません。型を学んで、中身を自分のものに替える。これはどんな製品でも、最初の一歩を最速で踏み出すための教訓です。
+
+\end{tcbinfo}
+
+\booksection{パフォーマンス最適化とクラッシュ報告の小チェックリスト}
+
+アプリを出品する前に、この2つにはそれぞれ30分かける価値があります。
+
+\booksubsection{パフォーマンスのセルフチェック4か条}
+
+\begin{enumerate}
+  \item リストはLazyColumn：長いリストをColumnで無理に並べないこと——遅延読み込みは、Androidの性能の最初の一歩です。
+  \item 画像は元のままで使わない：Coil画像ライブラリで自動的に縮小とキャッシュを行う。5MBの元画像1枚で、ローエンド機は固まってしまいます。
+  \item メインスレッドで重い仕事をしない：データベース、ネットワーク、大きなファイルは、すべてコルーチンの中で。
+  \item Profilerで測る：Android Studio内蔵のプロファイラーで、メモリ、CPU、消費電力が見られます。まず測ってから最適化する。感覚に頼らないこと。
+\end{enumerate}
+
+\booksubsection{クラッシュ報告}
+
+自分のテストでクラッシュしなくても、ユーザーのスマホでクラッシュしないとは限りません。出品前にFirebase Crashlytics（Google公式、無料）を組み込みましょう。数行の設定で、ユーザーがクラッシュするとスタックトレースが自動で送られ、「どの機種·どのバージョン·どこで落ちたか」が管理画面で分かります。クラッシュ監視なしの出品は、目をつぶって車を運転するのと同じです。
+
+\begin{tcbpractice}{やってみよう：家計簿を一度「引き渡す」}
+(1) parseAmountなどのロジックにユニットテストを3つ追加する。(2) Logcatで、自分で仕込んだクラッシュを実際につかまえて直す。(3) release署名のAPKを生成して、友人に送ってインストールしてもらう（これこそ「作品」の儀式です）。(4) 余裕があれば開発者アカウントを登録して、家計簿を本当に出品する。最初の3つは今夜中にできます。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章のまとめ}
+\begin{itemize}
+  \item デバッグの三種の神器：Logcatでログ、ブレークポイントで変数、Layout Inspectorで画面
+  \item クラッシュの読み方：スタックトレースを下から上へ、自分のパッケージ名の最初の行を探す
+  \item テストの3層：ユニット（秒単位、まずこれを学ぶ）／インストゥルメンテーション／手動
+  \item リリースには署名が必須：keystoreとパスワードはバックアップ必須。失うとアプリは「別のアプリ」になる
+  \item 出品の6ステップ：登録 素材 AABをアップロード データセーフティフォーム 審査 出品
+\end{itemize}
+
+\end{tcbsummary}

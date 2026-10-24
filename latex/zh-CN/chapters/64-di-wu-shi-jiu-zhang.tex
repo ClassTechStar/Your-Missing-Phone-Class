@@ -1,0 +1,130 @@
+\bookchapter{第五十九章：认识 iOS——苹果生态与开发生态}
+
+\chapterintro{恭喜你做出这个决定——从“用 iPhone 的人”变成“给 iPhone 写应用的人”。在动手之前，咱们先把地图摊开：iOS 从哪里来？苹果的“围墙花园”对开发者意味着什么？一个 App 从你的手指敲键盘到用户手机上，中间都发生了什么？}
+
+\booksection{一、iOS 的身世：一部手机改变一个行业}
+
+2007 年 1 月，乔布斯在发布会上掏出了第一代 iPhone。当时它连第三方应用都不支持——直到 2008 年，苹果推出 App Store 和 iPhone SDK，允许全世界开发者给 iPhone 写软件。\textbf{那一刻，“应用经济”诞生了}：到今天，App Store 上有数百万个应用，为开发者累计分成超过数千亿美元。
+
+系统本身也在进化：最初叫 iPhone OS，2010 年更名 iOS；版本号一路走到 iOS 17（2023），然后在 2025 年，苹果把命名改为跟随年份——\textbf{iOS 26}于 2025 年发布，2026 年 8 月的当前版本是\textbf{iOS 27}。命名会变，但一件事没变过：\textbf{iOS 的用户付费习惯和软件质量口碑，是移动生态里公认最好的}——同样的 App，iOS 端的收入往往显著高于安卓端。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{节点} & \textbf{年份} & \textbf{对开发者重要的事} \tabularnewline
+\hline
+App Store 上线 & 2008 & 第三方开发生态开启 \tabularnewline
+Swift 发布 & 2014 & 现代 iOS 开发语言登场 \tabularnewline
+SwiftUI 发布 & 2019 & 声明式界面框架，本书主线 \tabularnewline
+iOS 26（改名元年） & 2025 & 命名跟随年份；Apple Intelligence 全面整合 \tabularnewline
+iOS 27 & 2026 & 当前最新版（本书基准） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 开发大事记（截至 2026 年 8 月）\end{center}
+
+\booksection{二、围墙花园：苹果生态的“规矩”与“红利”}
+
+苹果生态常被形容为\textbf{“围墙花园”（Walled Garden）}——规则多、管得严：App 必须审核才能上架、开发必须用 Mac 和 Xcode、分发主要走 App Store。听起来憋屈？但对开发者，这套规矩换来了真金白银的红利：
+
+\begin{itemize}
+  \item \textbf{设备碎片化极小}：iPhone 型号就那么几款，屏幕尺寸、系统版本高度统一——你适配 5 台机型，就覆盖了 95\% 的用户（安卓可能要适配几十款）；
+  \item \textbf{系统版本更新率极高}：新系统发布几周内就有七八成用户升级，新 API 可以大胆用，不用照顾"五年前的老系统"；
+  \item \textbf{用户付费习惯好}：App Store 用户更愿意为应用和内购花钱；
+  \item \textbf{审核虽然严格，但商店干净}：山寨、流氓软件少，好产品更容易被看见。
+\end{itemize}
+
+\begin{tcbwarn}{注意：先说清楚成本}
+iOS 开发有硬门槛：\textbf{必须有一台 Mac}（Xcode 是 macOS 独占），上架需要 99 美元/年的开发者账号（个人开发者免费账号可以本地真机调试，但不能上架）。想清楚这笔投入再启程——不过好消息是，学习阶段用免费账号完全够用，第 60 章会讲。
+
+\end{tcbwarn}
+
+\booksection{三、用什么语言写：Objective-C 还是 Swift？}
+
+iOS 开发历史上也有两位“主角”。Objective-C 是开国元老——从 2008 年用到 2014 年；\textbf{Swift 是苹果 2014 年发布的新语言}，此后一路进化到 Swift 6（2024 年发布，引入严格并发检查），到 2026 年，新项目几乎全部用 Swift。
+
+给零基础的你一句实在话：\textbf{直接学 Swift，Objective-C 连看都不用看}——除非你入职后要维护十年前的遗产代码。Swift 的好处：语法清爽（没有 C 语言时代的分号与头文件包袱）、\textbf{可选值（Optional）机制从语言层面消灭“空指针崩溃”}、和 SwiftUI 无缝配合、还有 iPad 上的 Swift Playgrounds 可以边玩边学。
+
+Objective-C 风格（上古遗迹）
+
+\begin{lstlisting}
+NSString *name = @"张三";
+[name stringByAppendingString:@"你好"];
+// 方括号 + 指针 + 分号三件套
+\end{lstlisting}
+
+Swift 风格（现代清爽）
+
+\begin{lstlisting}
+var name = "张三"
+name += "你好"
+// 像自然语言一样直白
+\end{lstlisting}
+
+\booksection{四、一个 App 是怎么诞生的？}
+
+和所有平台一样，iOS App 的诞生也有一条流水线。但苹果版多了两道“安检”：
+
+想法
+
+设计（界面+功能）
+
+写代码（Swift + SwiftUI）
+
+编译签名
+
+测试（模拟器+真机）
+
+苹果审核
+
+上架 App Store
+
+\begin{center}\small\color{gray}图 1：一个 iOS App 从想法到上架的全流程（注意多出的“审核”环节）\end{center}
+
+流程里的关键概念：
+
+\begin{itemize}
+  \item \textbf{签名（Signing）}：每个 iOS App 都必须"签名"才能安装——证明"这个包出自你，没被篡改"。学习阶段 Xcode 用你的 Apple ID 自动签名；上架时用开发者证书。第 67 章细讲。
+  \item \textbf{模拟器（Simulator）}：Mac 上虚拟出的 iPhone，开发调试的主战场。它跑的是 Mac 的 CPU，所以\textbf{特别流畅}，比安卓模拟器体验好一大截。
+  \item \textbf{TestFlight}：苹果官方的"内测分发"工具——上架前把测试版发给最多 10000 名测试用户，他们用 TestFlight 应用安装试用。这是 iOS 生态独有的优雅。
+\end{itemize}
+
+\booksection{五、iOS 技术栈全景：你的“武器清单”}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{层次} & \textbf{主流选择（2026）} & \textbf{干什么用的} \tabularnewline
+\hline
+语言 & Swift 6 & 写逻辑的语言 \tabularnewline
+界面 & SwiftUI + 苹果设计规范（HIG） & 用代码画界面（本书主线） \tabularnewline
+架构 & MVVM + @Observable & 把界面和逻辑分开 \tabularnewline
+数据存储 & SwiftData（数据库）+ UserDefaults（配置） & 把数据存进手机 \tabularnewline
+网络 & URLSession + async/await + Codable & 和服务器对话 \tabularnewline
+构建工具 & Xcode Build System / xcodebuild & 把代码变成安装包 \tabularnewline
+开发环境 & Xcode（macOS 独占） & 苹果官方 IDE \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}2026 年 iOS 主流技术栈速览\end{center}
+
+注意到没：这套清单比安卓的短一截——因为苹果把很多事都“包办”了。\textbf{封闭生态的代价是自由度，回报是省心}：不用纠结选哪个网络库、哪个数据库，官方给的往往就是最优解。
+
+\begin{tcbpractice}{来动手：看看你手机的"苹果户口"}
+打开 iPhone 的 [设置] [通用] [关于本机]，记下三样：iOS 版本、机型名称、可用容量。再去 App Store 的“今天”页随便逛逛，注意那些精品 App 的截图和文案——从今天起，你逛商店的视角要从“用户”切换到“开发者”了。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item 2008 年 App Store 上线，"应用经济"诞生；2026 年当前版本 iOS 27
+  \item 围墙花园的账：规矩多，但设备少、版本新、用户肯花钱、商店干净
+  \item 硬门槛：必须有 Mac；上架要 99 美元/年开发者账号；学习阶段免费账号够用
+  \item 语言直接学 Swift；Objective-C 只属于遗产代码
+  \item 流水线比安卓多一环：苹果审核；TestFlight 是内测分发神器
+  \item 2026 标准技术栈：Swift 6 + SwiftUI + MVVM + SwiftData + URLSession + Xcode
+\end{itemize}
+
+\end{tcbsummary}

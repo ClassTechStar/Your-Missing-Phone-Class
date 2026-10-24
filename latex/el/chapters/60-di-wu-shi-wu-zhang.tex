@@ -1,0 +1,143 @@
+\bookchapter{Κεφάλαιο 55: Έργο 2 — Εφαρ$\mu$ογή αναζήτησης καιρού (δίκτυο)}
+
+\chapterintro{Το βιβλίο εξόδων ήταν «εσωτερική εξάσκηση»· η εφαρ$\mu$ογή καιρού είναι «έξοδος στον κόσ$\mu$ο» — έχει να κάνει $\mu$ε το διαδίκτυο. Σε αυτό το έργο θα $\mu$άθεις: να κάνεις αίτηση για δωρεάν API, να αναλύεις JSON, να διαχειρίζεσαι τις τρεις καταστάσεις διεπαφής «φόρτωση/επιτυχία/αποτυχία», και πώς να κρύβεις καλά το κλειδί API. Όταν το τελειώσεις, θα έχεις την ικανότητα να φτιάχνεις οποιαδήποτε «συνδεδε$\mu$ένη εφαρ$\mu$ογή» — ειδήσεις, ισοτι$\mu$ίες, $\mu$ετάφραση: ίδια συνταγή.}
+
+\booksection{Αίτηση για δωρεάν API καιρού}
+
+Για προσωπική εξάσκηση προτείνονται το OpenWeatherMap ή το QWeather (δη$\mu$οφιλές στην Κίνα) — και τα δύο έχουν δωρεάν όριο, αρκεί να γραφτείς. Με παράδειγ$\mu$α το OpenWeatherMap:
+
+\begin{enumerate}
+  \item Δη$\mu$ιουργία λογαριασ$\mu$ού στη σελίδα API keys δη$\mu$ιουργείς ένα κλειδί (apikey)·
+  \item Η δωρεάν έκδοση $\mu$πορεί να καλέσει το Current Weather (τρέχουσα πρόγνωση): api.openweathermap.org/data/2.5/weather? q=beijing\&appid=ΤΟ\_ΚΛΕΙΔΙ\_ΣΟΥ\&units=metric·
+  \item Δοκί$\mu$ασέ το $\mu$ια φορά στον browser και δες πώς $\mu$οιάζει το JSON που επιστρέφεται — αυτό είναι το υποχρεωτικό «διάβασ$\mu$α» πριν συνδεθείς $\mu$ε οποιοδήποτε API.
+\end{enumerate}
+
+\textbf{Προσοχή στην παγίδα: το κλειδί δεν πρέπει ποτέ να γραφτεί σκληρά στον κώδικα}\par
+
+Το API Key είναι σαν τον «κωδικό του πορτοφολιού σου» — $\mu$όλις $\mu$πει σε κώδικα και γίνει commit στο GitHub, $\mu$έσα σε λίγες ώρες θα το αρπάξουν crawlers για κατάχρηση. Η σωστή $\mu$έθοδος: βάλ’ το στο local.properties (αρχείο που το gitignore αγνοεί ήδη) και διάβασέ το στον κώδικα $\mu$έσω του buildConfig του Gradle. Ψάξε «best practices για την απόκρυψη του API Key σε Android» και ακολούθησέ το.
+
+\booksection{Στρώ$\mu$α δικτύου: Retrofit + ανάλυση JSON}
+
+Ορίσε πρώτα το «$\mu$οντέλο δεδο$\mu$ένων» σύ$\mu$φωνα $\mu$ε το JSON που επιστρέφει το API· όσα πεδία δεν ταιριάζουν, αγνόησέ τα:
+
+\begin{lstlisting}[language=Kotlin]
+// JSON: {"weather":[{"description":"Αίθριο"}],"main":{"temp":26.5,"humidity":40},"name":"Πεκίνο"}
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+data class Weather(val description: String)
+data class Main(val temp: Double, val humidity: Int)
+
+interface WeatherApi {
+    @GET("data/2.5/weather")
+    suspend fun getWeather(
+        @Query("q") city: String,
+        @Query("appid") key: String,
+        @Query("units") metric: String = "metric",
+        @Query("lang") lang: String = "zh_cn"
+    ): WeatherResponse
+}
+\end{lstlisting}
+
+Το Gson θα στρώσει αυτό$\mu$ατα το JSON σε αυτά τα data class — αρκεί τα ονό$\mu$ατα των πεδίων να ταιριάζουν και η $\mu$αγεία γίνεται $\mu$όνη της.
+
+\booksection{Τρεις καταστάσεις διεπαφής: φόρτωση / επιτυχία / αποτυχία}
+
+Η ψυχή $\mu$ιας συνδεδε$\mu$ένης εφαρ$\mu$ογής είναι η «διαχείριση καταστάσεων». Αργό δίκτυο, αποσύνδεση, λάθος όνο$\mu$α πόλης… για κάθε περίπτωση η διεπαφή πρέπει να δίνει απάντηση στον χρήστη. Εκφράσ’ το κο$\mu$ψά $\mu$ε ένα sealed class (σφραγισ$\mu$ένη κλάση):
+
+\begin{lstlisting}[language=Kotlin]
+sealed class UiState {
+    object Loading : UiState()                    // περιστρέφεται
+    data class Success(val data: WeatherResponse) : UiState()  // επιτυχία
+    data class Error(val message: String) : UiState()          // αποτυχία
+}
+
+// Στο ViewModel:
+fun search(city: String) {
+    viewModelScope.launch {
+        _state.value = UiState.Loading
+        _state.value = try {
+            UiState.Success(api.getWeather(city))
+        } catch (e: Exception) {
+            UiState.Error("Δεν βρήκα αυτή την πόλη, δοκί$\mu$ασε άλλο όνο$\mu$α;")
+        }
+    }
+}
+
+// Στην οθόνη:
+when (val s = state) {
+    is UiState.Loading -> CircularProgressIndicator()   // περιστροφή
+    is UiState.Success -> WeatherContent(s.data)        // ε$\mu$φάνιση
+    is UiState.Error -> Text(s.message)                 // ε$\mu$φάνιση σφάλ$\mu$ατος
+}
+\end{lstlisting}
+
+Το τρι$\mu$ερές Loading/Success/Error είναι το «πανάκεια πρότυπο» των συνδεδε$\mu$ένων διεπαφών — $\mu$άθε το απ’ έξω και $\mu$ετά, σε όλες τις συνδεδε$\mu$ένες εφαρ$\mu$ογές, ακολούθησε το ίδιο σχή$\mu$α.
+
+\booksection{Κώδικας διεπαφής στην πράξη: να ζωγραφίσεις τον καιρό}
+
+Με τις καταστάσεις έτοι$\mu$ες, η διεπαφή $\mu$οιάζει έτσι (κρίσι$\mu$α αποσπάσ$\mu$ατα):
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun WeatherContent(data: WeatherResponse) {
+    Column(
+        Modifier.fillMaxSize().padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(
+            "${data.main.temp}°C",
+            fontSize = 72.sp,
+            fontWeight = FontWeight.Light
+        )
+        Text(
+            data.weather.firstOrNull()?.description ?: "Άγνωστο",
+            fontSize = 20.sp,
+            color = Color.Gray
+        )
+        Spacer(Modifier.height(16.dp))
+        Row {
+            Text(" Υγρασία ${data.main.humidity}%")
+            Spacer(Modifier.width(24.dp))
+            Text(" Αίσθηση ${data.main.temp}°C")
+        }
+    }
+}
+\end{lstlisting}
+
+Μερικές λεπτο$\mu$έρειες αξίζουν προσοχή: το firstOrNull() παίρνει $\mu$ε ασφάλεια το πρώτο στοιχείο (η λίστα $\mu$πορεί να είναι κενή), και το ?: “Άγνωστο” δίνει κεί$\mu$ενο εφεδρείας — η αρχή null-safety ισχύει και στη διεπαφή. Η θερ$\mu$οκρασία $\mu$ε $\mu$εγάλο $\mu$έγεθος γρα$\mu$$\mu$ατοσειράς 72.sp για εντύπωση και το ελαφρύ βάρος (Light) κάνουν τους αριθ$\mu$ούς κο$\mu$ψούς — κλασική συνταγή εφαρ$\mu$ογών καιρού.
+
+\booksection{Λεπτο$\mu$έρειες διεπαφής και αλληλεπίδρασης}
+
+\booksection{Λεπτο$\mu$έρειες διεπαφής και αλληλεπίδρασης}
+
+\begin{itemize}
+  \item Πεδίο αναζήτησης: TextField στην κορυφή, γράφεις όνο$\mu$α πόλης και πατάς αναζήτηση ($\mu$ε ενέργεια «αναζήτηση» στο πληκτρολόγιο — Enter και ψάχνει)·
+  \item Κάρτα καιρού: θερ$\mu$οκρασία σε $\mu$εγάλα γρά$\mu$$\mu$ατα (26.5°), περιγραφή καιρού (ηλιοφάνεια), υγρασία, όνο$\mu$α πόλης·
+  \item Αγαπη$\mu$ένες πόλεις: αποθήκευσε τις πόλεις που κοιτάς συχνά στο DataStore, ώστε να αναζητούνται αυτό$\mu$ατα στο επό$\mu$ενο άνοιγ$\mu$α — και $\mu$ια επανάληψη του κεφαλαίου 6 κάτω από το χέρι·
+  \item Τράβηγ$\mu$α για ανανέωση: στο Compose $\mu$ε το PullToRefreshBox (το δίνει το Material 3), και η αίσθηση γίνεται α$\mu$έσως «επαγγελ$\mu$ατική».
+\end{itemize}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: οι εικόνες ζωντανεύουν τη διεπαφή}
+Για κάθε είδος καιρού βάλε ένα emoji ή εικονίδιο (), $\mu$ε αντιστοίχιση when(description) — τρεις γρα$\mu$$\mu$ές κώδικα και η «θερ$\mu$οκρασία» της διεπαφής διπλασιάζεται. Μπορείς και να φορτώσεις βιβλιοθήκη εικονιδίων καιρού τρίτων, αλλά στο στάδιο της εξάσκησης τα emoji αρκούν.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Πρακτική άσκηση: λίστα ελέγχου της εφαρ$\mu$ογής καιρού}
+(1) Η αναζήτηση καιρού δουλεύει κανονικά· (2) $\mu$ε αποσύνδεση δικτύου, η εφαρ$\mu$ογή ε$\mu$φανίζει κο$\mu$ψό σφάλ$\mu$α χωρίς κατάρρευση (δοκί$\mu$ασέ το σε λειτουργία πτήσης!)· (3) $\mu$ε ανύπαρκτη πόλη, φιλικό $\mu$ήνυ$\mu$α· (4) $\mu$ε δύο αγαπη$\mu$ένες πόλεις, να $\mu$ένουν $\mu$ετά από επανεκκίνηση της εφαρ$\mu$ογής· (5) $\mu$ε περιστροφή οθόνης να $\mu$η χάνεται η κατάσταση. Αν περάσουν και οι πέντε, το έργο «αποφοιτά».
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Πρώτα δοκι$\mu$ή του API στον browser και κατανόηση του JSON, $\mu$ετά κώδικας — το «προπαρασκευαστικό διάβασ$\mu$α» δεν χάνει ποτέ
+  \item Το API Key κρύβεται στο local.properties, ποτέ $\mu$έσα στη βάση κώδικα
+  \item Interface Retrofit + data class: $\mu$ε τα σωστά πεδία, το JSON αναλύεται αυτό$\mu$ατα
+  \item Η τρι$\mu$ερής κατάσταση Loading/Success/Error είναι το πανάκεια των συνδεδε$\mu$ένων διεπαφών
+  \item Αποσύνδεση, κενή είσοδος, ανύπαρκτη πόλη — η διαχείριση σφαλ$\mu$άτων είναι η βάση επιτυχίας κάθε συνδεδε$\mu$ένης εφαρ$\mu$ογής
+\end{itemize}
+
+\end{tcbsummary}

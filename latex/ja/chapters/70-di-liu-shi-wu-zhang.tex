@@ -1,0 +1,194 @@
+\bookchapter{第六十五章：プロジェクト1——わたしの家計簿（ローカル版）}
+
+\chapterintro{あなたの初めての「まともなプロジェクト」へようこそ。この家計簿はネットにはつながりませんが、中身は一通り揃っています：1件の記録ができ、履歴が見られて、月ごとに集計できて、削除·編集もできます。完成すれば、「データ ロジック 画面」の全工程をひととおり歩いたことになります。コードをいきなり写すのは急がないで——まずよく考えてから手を動かす。それが私たちのいつもの原則です。}
+
+\booksection{要件を考える：まず5つの質問}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{要素} & \textbf{答え} \tabularnewline
+\hline
+Who（誰が使うか） & 自分用。家族や友だちでもOK \tabularnewline
+What（何を作るか） & 収支を記録、履歴を見る、月ごとにまとめる、カテゴリ別に集計 \tabularnewline
+Why（なぜ作るか） & 練習＋お金を何に使ったかをはっきりさせる \tabularnewline
+How（どう作るか） & Swift＋SwiftUI＋SwiftData＋MVVM。完全ローカル、サーバーなし \tabularnewline
+Constraint（制約） & 1週間で完成。iOS 17以上をサポート（SwiftDataの要件） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}家計簿の要件5要素\end{center}
+
+そして「どの段階でも使える」小さなステップに分解します：(1)SwiftDataのデータ層を作る（1件保存できる）。(2)リストページ（履歴が見られる）。(3)入力ポップアップ（記録を追加できる）。(4)削除と編集。(5)月次集計カード。1ステップ終えるごとに、アプリは「使えるもの」になります。
+
+\booksection{データ層：記録に「家」を用意する}
+
+まず1件の記録がどんな形かを定義します——フィールドは十分に、でも欲張らない：
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+@Model
+class Record {
+    var type: String      // "income" 収入 | "expense" 支出
+    var amount: Double    // 金額（元）
+    var category: String  // カテゴリー：食費、交通、給料……
+    var note: String      // メモ（任意）
+    var date: Date        // 記帳日
+
+    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+        self.type = type
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{ワンポイント：金額はなぜDouble？}
+本格的な金融アプリは、浮動小数点の誤差（0.1＋0.2$\neq$0.3という昔からの問題）を避けるためにDecimal（正確な十進数）を使います。練習用プロジェクトならDoubleで十分です。いつか本物の金融商品を作るときは、Decimalか「分単位のInt」に切り替えるのを忘れずに——これは先人たちが何度も踏んできた落とし穴です。
+
+\end{tcbinfo}
+
+\booksection{MVVM：画面とロジックの「世帯分け」}
+
+画面にデータベースを直接操作させる？　動きはしますが、画面のコードが長ったらしくなります。MVVMアーキテクチャなら、それぞれが持ち場を守ります：View（画面）は描くことだけ、ViewModel（ロジックの中枢）はデータを担当、Model（SwiftData）は保存を担当。
+
+View（SwiftUIの画面）
+
+ViewModel（@Observableのロジック中枢）
+
+Model（SwiftDataのデータ層）
+
+\begin{center}\small\color{gray}図4：MVVMの3層構造——データは一方向に流れ、各層は互いに踏み込まない\end{center}
+
+\begin{lstlisting}[language=Swift]
+import Observation
+
+@Observable
+class RecordViewModel {
+    var records: [Record] = []
+    private let context: ModelContext
+
+    init(context: ModelContext) { self.context = context }
+
+    func load() {
+        // SwiftDataの#Predicateで絞り込み + 並べ替え
+        let descriptor = FetchDescriptor<Record>(
+            sortBy: [SortDescriptor(\.date, order: .reverse)]
+        )
+        records = (try? context.fetch(descriptor)) ?? []
+    }
+
+    func add(type: String, amount: Double, category: String, note: String) {
+        let r = Record(type: type, amount: amount, category: category, note: note)
+        context.insert(r)
+        try? context.save()
+        load()                       // 読み込み直す。画面が更新される
+    }
+
+    func delete(_ record: Record) {
+        context.delete(record)
+        try? context.save()
+        load()
+    }
+}
+\end{lstlisting}
+
+画面の中で@State private var vm = RecordViewModel(...)としておき、vm.recordsをそのままリストに描画——データが変わると、画面も自動で更新されます。
+
+\booksection{画面：リストページ＋入力ポップアップ}
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var vm: RecordViewModel
+    @State private var showAdd = false
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section("今月の残高") {          // 集計カード
+                    SummaryRow(records: vm.records)
+                }
+                Section("明細") {
+                    ForEach(vm.records) { r in
+                        RecordRow(record: r)
+                    }
+                    .onDelete { idx in
+                        idx.forEach { vm.delete(vm.records[$0]) }
+                    }
+                }
+            }
+            .navigationTitle("私の家計簿")
+            .toolbar {
+                Button { showAdd = true } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView(vm: vm)          // 入力ダイアログ
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+入力ポップアップのポイント：金額入力欄のキーボードは.keyboardType(.decimalPad)（数字キーボード）。収入／支出はセグメントコントロール（Picker）で、カテゴリはメニューで選択。「保存」を押したらvm.add(...)を呼び、dismiss()で閉じます。
+
+\begin{tcbwarn}{注意：入力チェックの手抜きは禁物}
+金額入力欄は必ずチェックしましょう：空の値、負の数、“abc”のような不正な入力はすべてはじく（Double(text)で判定し、失敗するとnilが返ります）。アプリがクラッシュするいちばんよくある原因のひとつが、「ユーザーの入力をお行儀のいい子だと思い込む」ことです。忘れずに：ユーザーが入力したものは、すべて敵として審査する。
+
+\end{tcbwarn}
+
+\booksection{編集、削除、集計}
+
+\begin{itemize}
+  \item 削除：Listの.onDeleteで左スワイプ削除＋確認ポップアップ（うっかり削除は、家計簿系アプリのユーザーがいちばん恨むものです）。
+  \item 編集：行をタップして編集ポップアップへ。元の値を先に入れておく（1文字直すほうが、打ち直すよりずっとラク）。
+  \item 集計：filter＋reduceで「今月の収入／支出／残高」を計算して、上部のカードに表示します：
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
+    let cal = Calendar.current
+    let monthRecords = records.filter {
+        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+    }
+    let income = monthRecords
+        .filter { $0.type == "income" }
+        .reduce(0) { $0 + $1.amount }
+    let expense = monthRecords
+        .filter { $0.type == "expense" }
+        .reduce(0) { $0 + $1.amount }
+    return (income, expense)
+}
+\end{lstlisting}
+
+\booksection{検収：3層チェック＋2つの上級チャレンジ}
+
+プロジェクトが完成したら、「機能 境界 アーキテクチャ」の3層で検収します：記録できるか、削除できるか、アプリを再起動してもデータが残っているか（機能）。金額に0や負の数を入れてもクラッシュしないか（境界）。画面とデータが混ざっていないか、フィールドがハードコードされていないか（アーキテクチャ）。
+
+基本版の検収をパスしたら、自分に2品の「上級メニュー」を出しましょう：
+
+\begin{enumerate}
+  \item カテゴリ別集計：「統計」タブを追加して、Swift Chartsでカテゴリ別支出を円グラフ／棒グラフに——Apple公式のグラフライブラリで、数行のコードでグラフが描けます。
+  \item iCloud同期：SwiftDataのiCloud同期は、設定をいくつか入れるだけ——帳簿がiPhone／iPadの間で自動同期されて、一気に「高級感」が出ます。
+\end{enumerate}
+
+\begin{tcbpractice}{やってみよう：今週中に完成させる}
+「データ層 ViewModel リストページ 入力ポップアップ 集計カード」の順に手を動かし、1日1ステップ。つまづいたら、エラーをそのまま検索エンジンやAIに投げましょう（第7編『AIプログラミング実践編』を覚えていますか？　問題を説明するときは「期待した動き、実際の動き、再現手順」をはっきりと）。完成したら、1週間これで家計簿をつけてみてください——自分で作ったアプリを使うと、達成感が次へ進む力になります。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章のまとめ}
+\begin{itemize}
+  \item 要件5要素 「どの段階でも使える」小ステップに分解してから、着手する
+  \item データ層：@Modelモデル＋modelContainerコンテナ＋FetchDescriptorクエリ
+  \item MVVMの分担：Viewは描くだけ、@ObservableなViewModelがロジック、SwiftDataが保存を担当
+  \item 画面：List＋Section＋toolbar＋sheetの入力ポップアップ
+  \item 3層検収（機能／境界／アーキテクチャ）＋上級チャレンジ（Swift Charts、iCloud同期）
+\end{itemize}
+
+\end{tcbsummary}

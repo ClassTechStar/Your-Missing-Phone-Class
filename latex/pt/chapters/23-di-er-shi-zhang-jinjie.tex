@@ -1,0 +1,37 @@
+\booksection{Capítulo 20: Modo desenvolvedor e permissões avançadas}
+
+\chapterintro{Este capítulo é para os usuários que desejam explorar a fundo as “funções ocultas” do celular. Modo desenvolvedor, permissão Root, bloqueio do bootloader... Esses conceitos que soam muito geek não estão, na verdade, tão distantes do usuário comum.}
+
+\booksubsection{I. Modo desenvolvedor: desbloqueando configurações ocultas}
+
+O modo desenvolvedor é um menu oculto embutido no sistema do celular, com muitas funções que o usuário comum não usa, mas que os desenvolvedores precisam.
+
+\subsubsection*{Como ativar:}
+
+\begin{itemize}
+  \item \textbf{Android}: Entre em Ajustes > Sobre o telefone > Toque repetidamente em "Número da versão" 7 vezes, até aparecer "Você agora está no modo desenvolvedor".
+  \item \textbf{HarmonyOS}: Ajustes > Sobre o telefone > Toque repetidamente em "Versão do HarmonyOS" 7 vezes.
+  \item \textbf{iOS}: Usuários comuns não podem ativar o modo desenvolvedor completo. É necessário ter uma conta Apple Developer paga.
+\end{itemize}
+
+\subsubsection*{Visão geral das funções comuns:}
+
+\begin{itemize}
+  \item \textbf{Depuração USB}: Chave obrigatória para conectar ao computador e realizar operações avançadas (como flash de ROM, recuperação de dados, comandos ADB). Veja detalhes na seção "Comandos úteis de ADB" deste capítulo.
+  \item \textbf{Mostrar toques}: Exibe na tela os pontos de toque (um pequeno círculo seguindo o dedo). Ideal para gravar tutoriais ou demonstrações.
+\end{itemize}
+
+\subsubsection*{Relacionado a desempenho e fluidez:}
+
+\begin{itemize}
+  \item \textbf{Ajuste de velocidade de animação (Escala de animação da janela / Escala de animação de transição / Escala de duração do animador)}: Estas três opções controlam a duração das animações ao abrir apps e trocar de páginas. O padrão é 1x. Ajustar para 0,5x faz o celular "parecer" mais rápido (na verdade, a velocidade de execução do programa não muda, só a animação fica mais rápida). Ajustar para desligado elimina completamente a animação, com transições instantâneas. A maioria dos geeks define 0,5x, que mantém a sensação de transição e parece mais rápido. Desligar completamente torna a operação brusca e pode mascarar travamentos reais do programa, fazendo você acreditar erroneamente que está "muito fluido".
+  \item \textbf{Forçar renderização por GPU (Force GPU Rendering)}: Força todo o desenho 2D a ser processado pela GPU em vez da CPU. Em modelos antigos ou apps mal otimizados, pode melhorar a fluidez da rolagem, mas também aumenta a carga da GPU e o consumo de energia. Os celulares modernos já usam maciçamente a renderização por GPU por padrão. Esta opção tem impacto limitado em modelos de médio e alto padrão, sendo mais um resquício histórico. O usuário comum pode manter o padrão.
+  \item \textbf{Mostrar análise de renderização da GPU (Profile GPU Rendering)}: Exibe na tela, em gráfico de barras, o tempo de renderização de cada quadro em tempo real, com uma linha verde horizontal representando 16,6ms (limiar de tempo de quadro para 60fps). Barras acima da linha verde indicam queda de quadros. Esta é uma ferramenta poderosa para desenvolvedores identificarem gargalos nos apps. Usuários comuns também podem usá-la para comparar qual app é mal otimizado — por exemplo, se um app tem barras frequentemente acima da linha vermelha durante a rolagem, a culpa é basicamente dele.
+\end{itemize}
+
+\subsubsection*{Relacionado a segundo plano e autonomia:}
+
+\begin{itemize}
+  \item \textbf{Limite de processos em segundo plano}: É possível definir "Limite padrão", "No máximo 1 processo", "No máximo 2 processos", etc. À primeira vista, limitar os processos em segundo plano parece economizar bateria, mas na prática o gerenciamento nativo de segundo plano do Android já é bom o suficiente. Forçar a limitação faz com que os apps sejam recarregados com frequência (o cold start, na verdade, consome mais energia e a experiência piora). Esta opção é mais adequada para depuração. Não é recomendado que usuários comuns a ativem permanentemente; mantenha o "Limite padrão".
+  \item \textbf{Não manter atividades}: Cada vez que você sai de uma interface, ela é imediatamente destruída. Altamente desaconselhado, pois faz com que os apps tenham telas brancas frequentes e recarreguem constantemente. Serve apenas para testar a lógica de restauração dos apps.
+\end{itemize}

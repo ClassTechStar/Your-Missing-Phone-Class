@@ -1,0 +1,188 @@
+\bookchapter{Lampiran Bab 23: Panduan Pemula GitHub—Dari Hosting Kode ke Platform Kolaborasi}
+
+\chapterintro{Bab sebelumnya membahas “pemikiran pemrograman”, dan untuk benar-benar mewujudkan pemikiran pemrograman dan mengerjakan proyek bersama orang lain, tidak bisa dipisahkan dari satu nama—GitHub. Baik Anda mahasiswa ilmu komputer yang ingin mengikuti kompetisi, ingin menyimpan karya kode Anda, atau sekadar ingin melihat apa yang dikerjakan developer global, GitHub adalah platform yang harus Anda kenal. Bagian ini dimulai dari konsep paling dasar, membantu Anda membangun pemahaman yang jelas.}
+
+\booksection{Apa Sebenarnya GitHub Itu?}
+
+Singkatnya, GitHub adalah\textbf{platform hosting kode dan kolaborasi berbasis Git}. Diluncurkan pada 2008, diakuisisi Microsoft pada 2018, hingga kini masih menjadi platform hosting kode open source terbesar di dunia, menampung ratusan juta repository, mencakup hampir semua bahasa pemrograman mainstream.
+
+Jika menggunakan analogi:\textbf{Git adalah buku harian di komputer Anda, GitHub adalah platform blog publik}—Anda bisa mempublikasikan karya Anda, mengikuti proyek orang lain, berpartisipasi dalam diskusi dan kolaborasi. Ia bukan hanya “gudang backstage programmer”, tapi lebih seperti “kota teknologi” yang dibangun bersama oleh developer global—proyek lahir, diiterasi, didiskusikan, dan digunakan ulang di sini.
+
+Bagi orang biasa, GitHub juga tidak terlalu jauh dari jangkauan. Banyak non-programmer menggunakannya untuk hosting catatan, buku elektronik, blog pribadi, bahkan untuk backup file konfigurasi. Selama Anda memiliki sedikit kebutuhan “ingin mengatur dan membagikan barang Anda”, GitHub layak untuk dipelajari.
+
+\booksection{Perbedaan Git dan GitHub (Konsep Kunci!)}
+
+Banyak orang bingung dengan dua istilah ini saat pertama kali bertemu, berikut kami uraikan:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Item Perbandingan} & \textbf{Git} & \textbf{GitHub} \tabularnewline
+\hline
+Esensi & Alat kontrol versi (perangkat lunak) & Platform hosting kode (situs web) \tabularnewline
+Lokasi berjalan & Di komputer lokal & Cloud (akses browser) \tabularnewline
+Tanggung jawab inti & Mencatat setiap perubahan file (bagaimana diubah, siapa mengubah, kapan diubah) & Menempatkan repository Git di cloud, memudahkan penyimpanan, tampilan, kolaborasi \tabularnewline
+Butuh jaringan? & Tidak perlu, bisa offline & Perlu internet untuk akses \tabularnewline
+Kepemilikan & Perangkat lunak open source, dibuat oleh Linus Torvalds (bapak Linux) & Produk milik Microsoft \tabularnewline
+Kompetitor sejenis & SVN, Mercurial & GitLab, Gitee, Bitbucket \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+Singkatnya:\textbf{Git mengurus “bagaimana mencatat perubahan”, GitHub mengurus “di mana perubahan disimpan, bagaimana berkolaborasi”}. Git adalah alat, berjalan secara lokal; GitHub adalah platform, menempatkan repository Git di cloud, memudahkan kolaborasi dan tampilan. Anda bisa menggunakan Git tanpa GitHub (misalnya menulis kode sendiri untuk kontrol versi), tapi menggunakan GitHub harus menggunakan Git (karena GitHub berbasis Git).
+
+\booksection{Konsep dan Fungsi Inti GitHub}
+
+\booksubsection{Konsep Dasar}
+
+Sebelum mulai, kenali beberapa kata frekuensi tinggi, jika tidak antarmuka GitHub akan membingungkan:
+
+\begin{itemize}
+  \item \textbf{Repository (Repo)}: Satu proyek sesuai dengan satu repository, berisi semua file kode proyek, versi historis, dan dokumentasi. Bisa dipahami sebagai "folder proyek".
+  \item \textbf{Commit}: Catatan satu modifikasi kode. Setiap Commit disertai pesan, mencatat "apa yang diubah kali ini, mengapa diubah". Ini adalah dasar Git/GitHub bisa "mundur waktu".
+  \item \textbf{Branch}: Jalur pengembangan independen yang dipisahkan dari jalur utama. Misalnya ingin menambah fitur baru, bisa buka branch untuk pengembangan terpisah, setelah selesai merge kembali ke jalur utama, tidak mempengaruhi orang lain.
+  \item \textbf{Clone}: Menyalin lengkap repository cloud ke komputer lokal, setelah itu bisa mengubah kode secara lokal.
+  \item \textbf{Push/Pull}: Push adalah mengunggah kode lokal ke GitHub, Pull adalah mengunduh kode terbaru dari GitHub ke lokal. Ini adalah dua action inti untuk sinkronisasi kode saat kolaborasi tim.
+  \item \textbf{Pull Request (PR)}: Saat Anda selesai mengubah kode di sebuah branch dan ingin merge ke branch utama, ajukan PR, biarkan anggota tim meninjau kode sebelum merge. Ini adalah mekanisme inti kolaborasi GitHub.
+  \item \textbf{Issue}: Digunakan untuk mencatat bug, permintaan fitur, topik diskusi. Setiap Issue seperti thread diskusi, bisa menugaskan penanggung jawab, memberi label.
+  \item \textbf{Fork}: Menyalin repository orang lain ke akun Anda sendiri, Anda bisa bebas mengubah di salinan Anda tanpa mempengaruhi repository asli. Setelah selesai bisa kirim PR ke penulis asli, minta merge perbaikan Anda.
+\end{itemize}
+
+\booksubsection{Fungsi Inti}
+
+GitHub tidak hanya menyediakan penyimpanan kode, tetapi juga:
+
+\begin{itemize}
+  \item \textbf{Kontrol versi}: Mencatat riwayat setiap perubahan kode, jika kode rusak bisa kembali ke versi normal sebelumnya kapan saja.
+  \item \textbf{Kolaborasi tim}: Mendukung pengembangan paralel pada proyek yang sama oleh multiple user, banyak orang mengembangkan bersamaan tanpa menimpa, tanpa konflik.
+  \item \textbf{Pelacakan masalah}: Gunakan Issue untuk mencatat bug dan permintaan fitur, memudahkan tim menindaklanjuti.
+  \item \textbf{Manajemen proyek}: Terintegrasi dengan to-do list, project board (Projects), dan alat manajemen lainnya, setara dengan Trello ringan bawaan.
+  \item \textbf{Otomatisasi}: Melalui\textbf{GitHub Actions}mengimplementasikan kompilasi otomatis, testing, packaging, deployment setelah commit kode, adalah alat inti "CI/CD (Continuous Integration/Continuous Deployment)" modern.
+  \item \textbf{Manajemen dokumentasi}: README memperkenalkan proyek, Wiki menyimpan arsitektur detail dan standar pengembangan, Pages bahkan bisa langsung hosting situs web statis.
+  \item \textbf{Hosting dan tampilan kode}: Setiap repository memiliki tampilan web yang cantik, mendukung syntax highlighting, adalah "etale" karya teknis Anda.
+  \item \textbf{Komunitas open source}: Anda bisa Star (koleksi) proyek favorit, Watch (ikuti) dinamika proyek, Follow (ikuti) developer, berpartisipasi dalam kolaborasi open source global.
+\end{itemize}
+
+\booksection{Registrasi dan Memulai: Buat Repository Pertama Anda dalam Lima Menit}
+
+\booksubsection{Registrasi Akun}
+
+\begin{enumerate}
+  \item Kunjungi\href{https://github.com}{github.com}, klik "Sign up".
+  \item Isi email, setel kata sandi dan username (username akan muncul di alamat halaman pribadi Anda, disarankan menggunakan bahasa Inggris, misalnya\texttt{github.\allowbreak com/\allowbreak yourname}).
+  \item Selesaikan verifikasi email dan verifikasi human-machine.
+  \item Pilih paket gratis (Free) saja, sudah cukup untuk pengguna individu.
+\end{enumerate}
+
+\booksubsection{Buat Repository Pertama}
+
+\begin{enumerate}
+  \item Setelah login, klik tanda "+" di pojok kanan atas, pilih "New repository".
+  \item Isi nama repository (Repository name), misalnya\texttt{my-\allowbreak first-\allowbreak project}.
+  \item Tulis deskripsi singkat (Description), agar orang tahu untuk apa repository ini.
+  \item Pilih Public atau Private. Repository publik terlihat oleh semua orang, private hanya oleh Anda dan kolaborator. Akun gratis juga mendukung repository private tak terbatas.
+  \item Centang "Add a README file"—README adalah "buku panduan" proyek, setiap repository disarankan memilikinya.
+  \item Klik "Create repository", repository GitHub pertama Anda lahir!
+\end{enumerate}
+
+\begin{tcbinfo}{Pengetahuan Kecil: Apa itu README}
+README.md adalah file format Markdown, konten pertama yang dilihat orang saat membuka repository Anda. README yang baik biasanya berisi: pengenalan proyek, cara instalasi, contoh penggunaan, lisensi, kontak. Menulis README yang baik adalah kompetensi dasar programmer, juga ambang pertama apakah proyek bisa digunakan orang lain.
+
+\end{tcbinfo}
+
+\booksection{Workflow Dasar: Dari Lokal ke Cloud}
+
+Memahami workflow GitHub, intinya adalah mengingat siklus ini:\textbf{Modifikasi lokal Staging Commit Push Update cloud}. Berikut penjelasan setiap langkah dalam bahasa sederhana:
+
+\begin{enumerate}
+  \item \textbf{Modifikasi file}: Tulis kode atau ubah dokumen dengan editor di komputer lokal.
+  \item \textbf{git add}: Tambahkan file yang dimodifikasi ke "staging area", setara dengan memberi tahu Git "perubahan ini saya siap catat".
+  \item \textbf{git commit}: Catat perubahan staging area secara resmi sebagai "commit", sertakan pesan, misalnya "fix login bug". Langkah ini hanya selesai secara lokal.
+  \item \textbf{git push}: Unggah commit lokal ke cloud GitHub, sehingga orang lain bisa melihatnya.
+  \item \textbf{git pull}: Sebelum mulai bekerja, tarik kode terbaru dari cloud terlebih dahulu, pastikan lokal sinkron dengan anggota tim lainnya.
+\end{enumerate}
+
+Untuk pemula, ingat mantra ini:\textbf{“Pull dulu sebelum ubah, setelah selesai add, commit dengan pesan, terakhir push”}. Biasakan ini, kolaborasi tim tidak akan berantakan.
+
+\booksection{Workflow Kolaborasi Tim: Bagaimana Pull Request Bekerja}
+
+Hal terkuat dari GitHub adalah mekanisme kolaborasinya. Workflow kolaborasi tim yang tipikal adalah seperti ini:
+
+\begin{enumerate}
+  \item \textbf{Buka branch}: Buka branch baru dari branch utama (biasanya disebut main atau master), misalnya\texttt{feature/\allowbreak login}, kembangkan fitur baru di branch ini.
+  \item \textbf{Kembangkan dan commit}: Tulis kode di branch baru, commit berkali-kali untuk mencatat progres.
+  \item \textbf{Push ke GitHub}: Push branch ke repository cloud.
+  \item \textbf{Ajukan Pull Request}: Ajukan PR di halaman web GitHub, minta merge branch Anda ke branch utama. Jelaskan dengan jelas apa perubahan yang dibuat PR ini, mengapa diubah.
+  \item \textbf{Code Review}: Anggota tim meninjau kode Anda, memberikan pendapat atau saran perubahan. Anda bisa terus commit berdasarkan feedback, PR akan otomatis update.
+  \item \textbf{Merge}: Setelah review lolos, klik "Merge" untuk merge kode ke branch utama. Kontribusi Anda resmi masuk ke proyek!
+\end{enumerate}
+
+Workflow ini memastikan\textbf{setiap kode ditinjau sebelum masuk ke branch utama}, sangat mengurangi probabilitas error. Proyek open source juga menggunakan mekanisme ini untuk menerima kontribusi dari orang asing di seluruh dunia—Anda benar-benar bisa mengajukan PR di proyek open source terkenal, setelah diterima Anda menjadi kontributor proyek tersebut.
+
+\booksection{Skenario Aplikasi Tipikal GitHub}
+
+\booksubsection{Mahasiswa Mengikuti Kompetisi dan Proyek Mata Kuliah}
+
+Mahasiswa ilmu komputer mengikuti ACM, hackathon, tugas akhir, hampir selalu membutuhkan GitHub. Ia bisa menjadi platform kolaborasi tim sekaligus jendela tampilan karya—juri kompetisi bisa langsung melihat repository Anda, memahami kualitas kode dan proses kolaborasi. Banyak perusahaan saat rekrutmen juga meminta melampirkan halaman GitHub, sebagai bukti kemampuan teknis.
+
+\booksubsection{Hosting Basis Pengetahuan dan Catatan Pribadi}
+
+Non-programmer juga bisa menggunakan GitHub. Banyak orang menggunakannya untuk hosting catatan belajar, blog teknis (dengan GitHub Pages bisa membuat situs gratis), buku elektronik. Penulisan format Markdown + kontrol versi Git + backup cloud, tiga dalam satu.
+
+\booksubsection{Berpartisipasi dalam Proyek Open Source}
+
+GitHub adalah pusat gerakan open source global. Anda bisa Fork proyek favorit, modifikasi lalu kirim PR untuk memberi balik ke komunitas; atau sekadar Star koleksi proyek bagus, lacak update. Berpartisipasi dalam open source adalah cara terbaik untuk meningkatkan teknis dan membangun reputasi.
+
+\booksubsection{Deployment Otomatis dan CI/CD}
+
+Dengan GitHub Actions, bisa mengimplementasikan workflow otomatis penuh “kode push, otomatis test + otomatis deploy ke server”. Banyak blog pribadi, situs dokumentasi dibangun seperti ini, setelah menulis artikel push, situs otomatis update.
+
+\booksubsection{Backup Kode dan Sinkronisasi Multi-Perangkat}
+
+Gunakan repository kode sebagai cloud drive, saat ganti komputer atau kerja multi-perangkat, git pull sekali bisa mendapatkan kode terbaru, tidak perlu lagi bolak-balik menyalin dengan flash drive.
+
+\booksection{Beberapa Saran untuk Pemula}
+
+\begin{itemize}
+  \item \textbf{Tulis pesan commit dengan jelas}: Jangan tulis pesan tidak berguna seperti "update". Commit message yang baik: "fix bug halaman redirect salah setelah user login", setengah tahun kemudian meninjau kembali juga tahu apa yang dilakukan saat itu.
+  \item \textbf{Rajin commit, langkah kecil cepat}: Commit sekali setiap selesai fitur kecil, bukan commit sekali setelah menulis seharian penuh. Jika ada masalah, lebih mudah dilokalisasi.
+  \item \textbf{Kembangkan dengan branch, jangan langsung ubah branch utama}: Bahkan untuk proyek pribadi, biasakan membuka branch, saat kolaborasi tim di masa depan tidak akan panik.
+  \item \textbf{Manfaatkan .gitignore}: File ini memberi tahu Git file mana yang tidak perlu dimasukkan dalam kontrol versi (seperti konfigurasi kata sandi, hasil kompilasi, folder dependensi), hindari mengunggah file sampah.
+  \item \textbf{Sering-sering lihat proyek open source yang bagus}: Jelajahi GitHub Trending, lihat struktur kode, cara menulis README, workflow kolaborasi proyek berbintang tinggi, adalah cara gratis tercepat untuk meningkatkan diri.
+  \item \textbf{Ajukan GitHub Student Pack}: Setelah verifikasi mahasiswa, bisa mendapatkan gratis banyak kuota alat dan layanan berbayar (Copilot, domain, layanan cloud, dll.), nilai ribuan dolar.
+\end{itemize}
+
+\begin{tcbwarn}{Peringatan Keamanan}
+\begin{itemize}
+  \item Jangan pernah commit informasi sensitif seperti kata sandi, API key, string koneksi database ke GitHub, terutama repository publik—sekali bocor, akan di-scrape dalam hitungan detik, konsekuensinya serius.
+  \item Jika tidak sengaja commit informasi sensitif, hanya menghapus file tidak cukup (masih ada di riwayat), gunakan\texttt{git filter-\allowbreak branch}atau alat profesional untuk membersihkan riwayat, dan segera ganti key yang bocor.
+  \item Repository private juga tidak absolut aman, informasi sensitif sebaiknya dikelola dengan environment variable, tidak masuk ke repository kode.
+\end{itemize}
+
+\end{tcbwarn}
+
+\begin{tcbinfo}{Catatan untuk Mengakses GitHub di Dalam Negeri}
+Akses GitHub di dalam negeri kadang tidak stabil, mungkin tidak bisa dibuka atau clone lambat. Bisa coba: (1) Gunakan situs mirror domestik (seperti GitClone, ghproxy) untuk mempercepat clone; (2) Konfigurasi Hosts atau gunakan proxy; (3) Jika utamanya untuk kolaborasi domestik, juga bisa pertimbangkan alternatif domestik\textbf{Gitee}, fungsinya serupa dan aksesnya cepat. Banyak tim hosting di GitHub dan Gitee sekaligus, mengakomodasi internasionalisasi dan kecepatan domestik.
+
+\end{tcbinfo}
+
+\textbf{Tingkat Lanjut: Bangun Blog Pribadi Gratis dengan GitHub Pages}\par
+
+GitHub Pages memungkinkan Anda hosting situs web statis secara gratis, dipadukan dengan generator situs statis seperti Jekyll, Hexo, Hugo, bisa dengan mudah membangun blog pribadi. Setelah menulis artikel Markdown push ke repository, blog otomatis update, juga dilengkapi HTTPS dan custom domain. Blog tak terhitung jumlahnya dibangun seperti ini, biaya nol, tanpa iklan, versi terkontrol.
+
+\booksection{Kesimpulan: Mengapa Semua Orang Harus Mengenal GitHub}
+
+GitHub sudah lama bukan hanya “alat programmer”, ia lebih seperti\textbf{cara kerja era digital}: kontrol versi membuat segalanya traceable, mekanisme kolaborasi membuat tim beroperasi efisien, semangat open source membuat pengetahuan mengalir bebas. Bahkan jika Anda tidak menulis kode, memahami konsep “commit, branch, merge” juga bisa membantu Anda mengelola konten apa pun yang membutuhkan “modifikasi berulang + kolaborasi multi-orang” dengan lebih baik—dari makalah ke dokumen, dari catatan ke proposal.
+
+Bagi mahasiswa ilmu komputer, GitHub adalah keterampilan wajib: ia adalah portofolio Anda, platform kolaborasi, perpustakaan sumber belajar, juga “resume” yang paling meyakinkan saat mencari pekerjaan di masa depan. Daftarkan akun lebih awal, unggah tugas mata kuliah dan proyek kecil Anda, kumpulkan secara bertahap, beberapa tahun kemudian Anda akan memiliki resume teknis yang membuat interviewer terkesan.
+
+\begin{tcbpractice}{Mari Praktik: Selesaikan Pengalaman Pertama GitHub Anda}
+\begin{enumerate}
+  \item Daftarkan akun GitHub, lengkapi profil pribadi (avatar, bio, bidang teknis yang diminati).
+  \item Buat repository publik bernama\texttt{hello-\allowbreak github}, centang "Add a README file".
+  \item Masuk ke repository, klik tombol edit README.md (ikon pensil), tulis perkenalan diri dengan Markdown, commit perubahan.
+  \item Di kolom pencarian GitHub, cari kata kunci yang Anda minati (misalnya\texttt{python-\allowbreak tutorial}), Star dua proyek yang Anda suka.
+  \item (Tingkat lanjut) Instal Git di komputer, Clone repository ke lokal, modifikasi README lalu push kembali ke cloud, selesaikan workflow lengkap "lokal cloud".
+\end{enumerate}
+
+\end{tcbpractice}

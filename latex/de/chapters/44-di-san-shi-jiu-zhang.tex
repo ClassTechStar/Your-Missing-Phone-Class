@@ -1,0 +1,146 @@
+\bookchapter{Kapitel 39: Kontextengineering – damit KI Ihre Absicht versteht}
+
+\chapterintro{Kennst Sie das: Ein neues Chat-Fenster, und die KI scheint alles vergessen zu haben? Das ist keine Böswilligkeit, sondern „Vergesslichkeit“ von Natur aus. Dieses Kapitel zeigt, wie man der KI ein „Langzeitgedächtnis“ verpasst – und stellt eine der angesagtesten Entwicklungsparadigmen 2026 vor: spec-driven development.}
+
+\booksection{Projektgedächtnisdatei: Das „Langzeitgedächtnis“ der KI}
+
+Ein grundlegendes Limit: Das Gedächtnis der Modelle ist kurzlebig. Zu Beginn jeder Konversation kennt die KI Ihr Projekt nicht. Sie müssten immer wieder sagen: „Wir nutzen React“, „Backend ist Node.js“, „Datenbank PostgreSQL“, „Code-Stil mit doppelten Anführungszeichen“. Das ist mühsam und fehleranfällig – wie tägliches Onboarding für neue Kollegen.
+
+Die Lösung: eine Projektgedächtnisdatei im Projektstamm. KI-Werkzeuge lesen sie automatisch beim Gesprächsstart. Die Benennung unterscheidet sich je Tool:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Werkzeug} & \textbf{Dateiname} \tabularnewline
+\hline
+Cursor & \texttt{.\allowbreak cursorrules} \tabularnewline
+Claude Code & \texttt{CLAUDE.\allowbreak md} \tabularnewline
+GitHub Copilot & \texttt{copilot-\allowbreak instructions.\allowbreak md} \tabularnewline
+Allgemeine Lösung & \texttt{AGENTS.\allowbreak md} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Benennungskonventionen für Projektgedächtnisdateien\end{center}
+
+Andere Namen, gleiche Idee: Alles, was die KI „immer wissen“ soll, gehört in diese Datei. Eine gute Projektgedächtnisdatei enthält: Projektüberblick, Technikstack, Code-Konventionen (Namensgebung, Einrückung, Kommentare), Verzeichnisstruktur, Entwicklungsabreden (Branch-Strategie, Commit-Regeln, Testanforderungen). Karpathys CLAUDE.md umfasst nur 70 Zeilen, deckt aber alle Schlüsselinfos ab – knapp und vollständig.
+
+\begin{lstlisting}
+# Projekt: App zur Verwaltung persönlicher Ausgaben
+## Überblick
+Eine Full-Stack-App zur Verwaltung persönlicher Ausgaben, mit der der Nutzer Einnahmen und Ausgaben des Alltags festhält.
+## Tech-Stack
+- Frontend: React + TypeScript + Tailwind CSS
+- Backend: Node.js + Express + TypeScript
+- Datenbank: SQLite (Entwicklung) / PostgreSQL (Produktion)
+- Tests: Vitest
+## Code-Konventionen
+- Doppelte Anführungszeichen verwenden
+- Einrückung mit 2 Leerzeichen
+- Funktionsnamen in camelCase
+- Typdefinitionen in PascalCase
+- Jede Funktion braucht einen JSDoc-Kommentar
+## Verzeichnisstruktur
+/src
+  /frontend  - Frontend-Code
+  /backend   - Backend-Code
+  /shared    - gemeinsame Typen für Frontend/Backend
+  /tests     - Testdateien
+## Entwicklungskonventionen
+- Commit-Meldungen auf Deutsch
+- Neue Funktionen immer zuerst mit Test
+- API-Antworten durchgängig im Format { success, data, error }
+\end{lstlisting}
+
+\begin{tcbwarn}{Hinweis: Nicht zur „zweiten Anforderungsdoku“ verkommen lassen}
+Achten Sie auf die Länge – keine Dutzende von Seiten. Ziel ist, der KI schnell Hintergrund zu geben, nicht jedes Feature auszuführen. Klar, strukturiert, nur das Nötige.
+
+\end{tcbwarn}
+
+\booksection{Spec-Driven Development (SDD)}
+
+Spec-Driven Development (SDD) ist ein reifendes Paradigma 2026, Kernsatz: Erst Spezifikation, dann Code. Anders als klassisches TDD umfasst die „Spec“ nicht nur Tests, sondern auch Anforderungen, Schnittstellen und Datenmodelle. Die KI generiert Code daraus, Menschen schreiben und pflegen die Spezifikation.
+
+Der SDD-Ablauf in fünf Schritten:
+
+\begin{enumerate}
+  \item Anforderungen in natürlicher Sprache beschreiben (als .md-Datei);
+  \item Schnittstellen und Datenstrukturen festlegen (in der Spec-Datei);
+  \item KI generiert die Implementierung nach Spec;
+  \item Tests prüfen, ob das Ergebnis zur Spec passt;
+  \item Falls nicht: Spec korrigieren oder KI den Code nachbessern lassen.
+\end{enumerate}
+
+In diesem Ablauf ist die Spec-Datei die „einzige Wahrheitsquelle“ – Code lässt sich neu erzeugen, die Spec muss stimmen.
+
+Spezifikationsdokument schreiben
+
+Ist die Spezifikation vollständig?
+
+Vollständig
+
+KI generiert Code nach der Spezifikation
+
+Tests laufen lassen, um das Ergebnis zu prüfen
+
+Unvollständig / Tests schlagen fehl
+
+Code-Problem Code korrigieren; Spezifikationsproblem Spezifikation korrigieren
+
+Zurück zur Prüfung
+
+Alles bestanden Auslieferung
+
+\begin{center}\small\color{gray}Abbildung 3: Arbeitsablauf von Spec-Driven Development (SDD)\end{center}
+
+Vorteil: Spezifikationen sind stabiler als Code. Wechseln Modell oder Werkzeug, bleibt Ihre Spec gültig – der neue Generator setzt sie um. Deshalb betont dieses Buch „Methodik vor Werkzeug“: Die Spec-Datei ist der konkrete Träger Ihrer Methodik.
+
+\booksection{Kontextfenster verwalten}
+
+Selbst mit Projektgedächtnis stößt man im Gespräch an Grenzen des Kontextfensters (der gleichzeitig verarbeitbaren Informationsmenge). Bei zu langen Dialogen und vielen Dateien „vergisst“ die KI frühere Inhalte, die Qualität sinkt – wie nach sechs Stunden Plaudern mit einem Freund, der den ersten Satz längst vergessen hat.
+
+Kernstrategie: „geschichtetes Zitieren“:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Kontextebene} & \textbf{Inhalt} & \textbf{Handhabung} \tabularnewline
+\hline
+Ebene 1: Projektgedächtnis & Technikstack, Konventionen, Verzeichnisbaum & In CLAUDE.md o. Ä. ablegen, wird automatisch geladen, nicht wiederholen \tabularnewline
+Ebene 2: Datei-Referenzen & Code-Dateien der aktuellen Aufgabe & Mit @ präzise referenzieren, nicht ganze Dateien in den Chat kleben \tabularnewline
+Ebene 3: Gesprächsverlauf & Dialoghistorie der aktuellen Aufgabe & Nach Abschluss neuen Chat beginnen, um Kontext nicht aufzublähen \tabularnewline
+Ebene 4: Sofortige Anweisung & Konkrete Anforderung dieses Schritts & Klar, knapp, zielgerichtet – keine langatmigen Umschweife \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Geschichtete Verwaltung des Kontextfensters\end{center}
+
+\booksection{Praxispunkte fürs Kontext-Engineering}
+
+Kontext-Engineering ist keine einmalige Einstellung, sondern ein fortlaufender Optimierungsprozess. Hier ein paar Punkte, die sich in der Praxis immer wieder bewährt haben:
+
+\begin{enumerate}
+  \item Halte die Gedächtnisdatei beim Weiterentwickeln des Projekts aktuell. Wenn du eine neue Technik einführst oder die Architektur änderst, aktualisiere sofort die Gedächtnisdatei, statt es im Chat improvisiert zu erklären.
+  \item Nutze @-Verweise statt alles einzufügen. Die meisten KI-Coding-Tools unterstützen die Syntax @file oder @folder; sie schiebt den Dateiinhalt im Hintergrund in den Kontext der KI – effizienter als manuelles Einfügen, ohne den Chat zu überladen.
+  \item Halte die Chats „kurz und knackig“. Ein Chat behandelt nur eine Aufgabe oder ein Feature. Wenn er fertig ist, starte fürs Nächste einen neuen Chat. Lange Chats verbrauchen nicht nur das Kontextfenster, sie lenken die KI auch ab.
+  \item Lass die KI Ergebnisse „sehen“, statt sie zu „beschreiben“. Bei einem Bug gibst du das Fehlerprotokoll direkt per @-Verweis an die KI weiter, statt in eigenen Worten zu erzählen, „da sei wohl irgendein Fehler“. Die Rohinformation nützt der KI deutlich mehr als deine Wiedergabe.
+  \item Räume regelmäßig auf und archiviere. Abgeschlossene Chats und temporäre Dateien belegen den Arbeitsbereich. Regelmäßiges Aufräumen hält das Projektverzeichnis sauber und hilft der KI, die Projektstruktur schneller zu erfassen.
+\end{enumerate}
+
+\begin{tcbpractice}{Ausprobieren: Schreibe für dein Projekt eine 70-Zeilen-Gedächtnisdatei}
+Such dir ein Projekt aus, an dem du gerade arbeitest (oder arbeiten willst), und schreibe eine CLAUDE.md: Projektüberblick (2–3 Sätze), Tech-Stack (auflisten), Code-Richtlinien (3–5 Punkte), Verzeichnisstruktur (als Baum skizzieren), Entwicklungskonventionen (2–3 Punkte). Halte dich unter 70 Zeilen – danach wirst du merken, dass du dein Projekt selbst viel klarer verstehst.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Zusammenfassung des Kapitels}
+\begin{itemize}
+  \item Das Gedächtnis der KI ist „kurzzeitig“: Bei jedem neuen Chat weiß sie null über dein Projekt
+  \item Projekt-Gedächtnisdateien (CLAUDE.md \& Co.) sind das „Langzeitgedächtnis“ der KI und werden bei jedem Chat automatisch geladen
+  \item Eine gute Gedächtnisdatei = Überblick + Tech-Stack + Richtlinien + Verzeichnis + Konventionen; 70 Zeilen genügen
+  \item SDD, die spezifikationsgetriebene Entwicklung: erst die Spezifikation, dann der Code; die Spezifikation ist die „single source of truth“ und stabiler als der Code
+  \item Kontext wird in vier Ebenen verwaltet: Projektgedächtnis @-Dateiverweise Chatverlauf direkte Anweisungen
+  \item Fünf Praxispunkte: aktuell halten, @-Verweise, kurze Chats, Originalinfos geben, regelmäßig aufräumen
+\end{itemize}
+
+\end{tcbsummary}

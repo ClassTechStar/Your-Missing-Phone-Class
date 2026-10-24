@@ -1,0 +1,154 @@
+\bookchapter{제48장: 안드로이드 알아보기——운영체제에서 개발 생태계까지}
+
+\chapterintro{이 결정을 내린 것을 축하해요——'휴대전화를 쓰는 사람'에서 '휴대전화 앱을 만드는 사람'이 되는 거니까요. 시작하기 전에 지도를 펼쳐 볼게요: 안드로이드는 어디에서 왔을까요? 왜 전 세계 개발자가 안드로이드용 앱을 만들까요? 앱 하나가 여러분의 손가락이 키보드를 두드리는 순간부터 사용자의 휴대전화에 닿기까지, 그 사이에 무슨 일이 일어날까요?}
+
+\booksection{안드로이드의 내력: '작은 로봇'에서 '세계 최대 시스템'까지}
+
+안드로이드(Android)의 이야기는 2003년에 시작돼요——Andy Rubin이라는 엔지니어가 Android 회사를 설립했는데, 목표는 아주 소박했어요: '카메라를 더 잘 아는' 스마트 운영체제를 만들겠다는 거죠. 이후 구글이 2005년에 인수했고, 2007년에는 수십 개 제조사와 함께 오픈 핸드셋 얼라이언스(OHA)를 결성했으며, 2008년 9월에는 최초의 안드로이드 폰 HTC Dream(G1)이 정식 출시됐어요.
+
+뒷이야기는 모두가 알죠: 2026년 현재 안드로이드는 세계 점유율 1위 모바일 운영체제이고, 활성 기기가 수십억 대에 이르러요. 여러분의 휴대전화, TV 셋톱박스, 차량용 대형 스크린, 스마트워치도 아마 안드로이드로 돌아가고 있을 거예요. 이게 무슨 의미일까요? 여러분이 쓰는 코드 한 줄 한 줄이 세상에서 가장 많은 사람에게 쓰일 기회를 갖는다는 뜻이에요.
+
+\begin{tcbinfo}{작은 팁: 안드로이드의 오픈소스 유전자}
+안드로이드의 핵심 코드(AOSP, Android Open Source Project)는 오픈소스예요——어떤 제조사든 가져다 수정하고 자기만의 입맛대로 꾸밀 수 있죠. 그래서 샤오미는 MIUI(지금은 HyperOS), 화웨이는 HarmonyOS 호환 계층, 삼성은 One UI를 갖고 있어요. 개발자에게는 좋은 일이에요: 여러분이 배우는 건 '특정 브랜드 개발'이 아니라 '안드로이드 개발'이니까, 한 세트의 실력으로 어디서든 통합니다.
+
+\end{tcbinfo}
+
+버전 번호의 진화도 재미있어요: 1.5의 컵케이크(Cupcake)부터 시작해 주요 버전마다 디저트 이름을 붙였어요——도넛, 에클레어, 프로즌 요거트, 진저브레드… 2019년의 안드로이드 10에 이르러서야 숫자로 바뀌었죠. 2026년 8월 현재 최신 정식 버전은 Android 17이에요. 그리고 개발할 때 진짜 신경 써야 하는 '최소 지원 버전'은 메이저 앱들이 보통 Android 8(API 26)에서 Android 10(API 29) 사이로 잡아요——몇 년 전 기기까지 지원해야 사용자 풀이 넉넉해지거든요.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{버전} & \textbf{코드명/연도} & \textbf{개발자에게 중요한 점} \tabularnewline
+\hline
+Android 8 (API 26) & Oreo · 2017 & 알림 채널, 백그라운드 제한——오래된 기기가 많이 걸리는 최소선 \tabularnewline
+Android 10 (API 29) & 2019 & 범위 지정 저장소 등장, 파일 접근 규칙 대변경 \tabularnewline
+Android 12 (API 31) & 2021 & Material You 동적 색상 추출, 화면 관감 대폭 업그레이드 \tabularnewline
+Android 13 (API 33) & 2022 & 알림 권한 런타임 승인, '알림을 보내도 되는지' 묻는 팝업 \tabularnewline
+Android 14-15 (API 34-35) & 2023-2024 & 예측형 뒤로 가기, 16KB 페이지, 개인정보 보호 더 강화 \tabularnewline
+Android 16-17 (API 36-37) & 2025-2026 & 더 빨라진 마이너 업데이트 주기, AI 기능 통합(Gemini 확장 등) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}안드로이드 버전 연혁 요약(2026년 8월 기준, 개발 시 주목할 항목)\end{center}
+
+\booksection{어떤 언어로 쓸까: Java 아니면 Kotlin?}
+
+안드로이드 개발 역사에는 두 가지 주력 언어가 있었어요. Java는 '개국공신'——안드로이드가 태어날 때부터 쓰였어요. Kotlin은 2017년에 구글이 지명한 '일등 시민'으로, 2019년부터 공식적으로 'Kotlin 우선'(Kotlin-first)을 내세웠고, 2026년 현재 새 프로젝트는 거의 전부 Kotlin을 쓰며 기존 프로젝트도 대부분 차근차근 옮겨 가는 중이에요.
+
+솔직히 말할게요: 완전 왕초보라면 바로 Kotlin을 배우고, Java로 되돌아가지 마세요. 이유는 세 가지예요. 첫째, Kotlin은 Java보다 코드량이 30\textasciitilde{}40\% 적어요(같은 기능을 Kotlin이 더 짧고 명확하게 쓰죠). 둘째, '널 포인터'라는 초보자의 악몽을 태생적으로 막아 줘요. 셋째, 요즘 튜토리얼, 공식 문서, AI 코딩 도구(우리 AI 코딩 책 기억나죠?)가 모두 Kotlin을 기준으로 해요. Java는 기존 프로젝트를 유지보수하거나 오래된 코드를 읽을 때만 만나게 돼요.
+
+Java 스타일(장황한 버전)
+
+\begin{lstlisting}
+public class MainActivity extends Activity \{
+@Override
+protected void onCreate(Bundle b) \{
+super.onCreate(b);
+setContentView(R.layout.activity);
+\}
+\}
+\end{lstlisting}
+
+Kotlin 스타일(깔끔한 버전)
+
+\begin{lstlisting}
+class MainActivity : ComponentActivity() \{
+override fun onCreate(b: Bundle?) \{
+super.onCreate(b)
+setContent \{ App() \}
+\}
+\}
+\end{lstlisting}
+
+같은 일을 하면서도 Kotlin은 중괄호와 상용구를 한참 줄여 줘요. 50장에서 정식으로 배울 테니, 지금은 이것만 기억하세요: 안드로이드 개발의 '표준어' 이름은 Kotlin이에요.
+
+\booksection{앱 하나는 어떻게 태어날까?}
+
+많은 사람이 '앱 개발'이라고 하면 컴퓨터를 켜고 코드만 길게 치는 일이라고 생각해요. 실제로는 앱 하나가 아이디어에서 사용자의 휴대전화에 이르기까지 대략 다음과 같은 흐름을 거쳐요:
+
+아이디어
+
+설계(화면+기능)
+
+코드 작성
+
+컴파일·패키징(APK/AAB)
+
+테스트(에뮬레이터+실기기)
+
+배포(스토어/설치 파일)
+
+\begin{center}\small\color{gray}그림 1: 안드로이드 앱이 아이디어에서 출시까지 가는 전체 과정\end{center}
+
+이 흐름에는 지금 바로 알아 둘 개념이 두 개 있어요:
+
+\begin{itemize}
+  \item APK: 안드로이드 앱의 설치 패키지 형식(.apk)이에요. 두 번 클릭하면 휴대전화에 설치할 수 있어요, Windows의 .exe처럼요. 평소에 직접 테스트하거나 친구에게 공유해서 함께 즐기려면 이걸 쓰면 돼요.
+  \item AAB: Android App Bundle(.aab)로, Google Play에 올릴 때 쓰는 '고급 패키징 형식'이에요. 스토어가 사용자의 휴대전화 기종에 맞춰 동적으로 잘라 내서 각자 내려받는 용량을 더 작게 만들어 줘요. 직접 설치할 수는 없고, 스토어에 맡길 수만 있어요.
+\end{itemize}
+
+그리고 계속 듣게 될 단어가 하나 더 있어요: SDK(Software Development Kit, 소프트웨어 개발 키트)예요. 안드로이드 공식이 제공하는 개발 장비 한 세트로——버전별 API 라이브러리, 디버깅 도구, 에뮬레이터 이미지 등이 포함돼요. 코드를 쓸 때 호출하는 Activity, Button 같은 클래스가 모두 SDK에서 나오죠.
+
+\booksection{안드로이드 기술 스택 전경: 여러분의 '무기 목록}
+
+본격적으로 배우기 전에 2026년 주류 안드로이드 프로젝트의 표준 구성을 먼저 봐요——이 목록이 지금은 안 읽혀도 괜찮아요. 책을 다 읽고 다시 보면 훤히 보일 거예요:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{계층} & \textbf{주류 선택(2026)} & \textbf{어디에 쓰는 걸까} \tabularnewline
+\hline
+언어 & Kotlin 2.x & 로직을 쓰는 언어 \tabularnewline
+화면 & Jetpack Compose + Material 3 & 코드로 화면을 그려요(이 책의 주축) \tabularnewline
+아키텍처 & MVVM + ViewModel & 화면과 로직을 분리해서 코드가 지저분해지지 않게 해요 \tabularnewline
+데이터 저장 & Room(데이터베이스) + DataStore(설정) & 데이터를 휴대전화에 저장해요 \tabularnewline
+네트워크 & Retrofit + OkHttp + Kotlin 코루틴 & 서버와 대화해요 \tabularnewline
+빌드 도구 & Gradle + Kotlin DSL & 코드를 설치 패키지로 만들어요 \tabularnewline
+개발 환경 & Android Studio & 구글 공식 '올인원' IDE \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}2026년 안드로이드 주류 기술 스택 한눈에 보기\end{center}
+
+이 늘어놓인 영어에 겁먹지 마세요. 이것들은 부엌의 냄비와 그릇 같은 거예요——지금은 '요리하려면 부엌에 들어가야 한다'는 것만 알면 돼요. 도구 하나하나를 어떻게 쓰는지는 뒤의 장에서 하나씩 풀어 보여 줄게요. 게다가 좋은 소식은: Android Studio는 새 프로젝트를 만들 때 이 일체의 구성을 알아서 잡아 주니까, 여러분은 요리만 하면 돼요.
+
+\booksection{안드로이드 vs iOS: 개발자의 첫 '진영 선택' 수업}
+
+안드로이드와 애플 기기를 둘 다 갖고 계실 수도 있어요. 개발자 입장에서는 양쪽의 경험 차이를 미리 알아 두는 게 좋아요——'어느 쪽이 더 좋은가'의 진영 싸움이 아니라, '어느 쪽이 시작하기에 더 맞는가'라는 현실적인 계산이죠:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{항목} & \textbf{안드로이드 개발} & \textbf{iOS 개발} \tabularnewline
+\hline
+개발용 컴퓨터 & Windows / Mac / Linux 모두 가능 & Mac 필수(Xcode 전용) \tabularnewline
+개발 도구 & Android Studio(무료) & Xcode(무료) + 출시 연간 요금 99달러 \tabularnewline
+출시 심사 & 느슨함, 몇 시간\textasciitilde{}며칠 & 엄격함, 1\textasciitilde{}7일이 보통 \tabularnewline
+기기에 설치해 체험 & APK를 자유롭게 배포하고 자유롭게 설치 & 배포 제한, 테스트에 서명/TestFlight 필요 \tabularnewline
+수익 환경 & 광고/중국 내 채널 위주 & App Store가 인앱 결제 습관이 더 좋아요 \tabularnewline
+학습 비용 & 개념이 많음(안드로이드 4대 컴포넌트 등) & 생태계는 폐쇄적이지만 체계가 통일되고 문서가 훌륭해요 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}안드로이드와 iOS 개발 경로 비교(2026년 8월)\end{center}
+
+솔직히 말할게요: 컴퓨터가 Mac이 아니라면 이 문제는 고민할 것도 없어요——안드로이드가 유일한 선택지예요. Mac이 있다면 이 책의 제8편과 제9편을 나란히 놓고 읽어도 좋아요. 프로그래밍 발상은 통하니까 한쪽을 배우고 나면 다른 쪽도 훨씬 빨리 익혀요.
+
+\begin{tcbpractice}{따라 해 봐요: 휴대전화 속 '안드로이드' 들여다보기}
+휴대전화의 [설정] [휴대전화 정보](또는 '기기 정보')를 열고 '안드로이드 버전' 또는 'Android 버전' 항목을 찾으세요——여기를 연달아 몇 번 누르면 시스템 이스터에그 미니게임이 나타나기도 해요. 버전 번호를 적어 두고 위의 버전 표와 대조해 어떤 세대인지 보세요. 여러분의 휴대전화가 바로 첫 번째 '개발 테스트기'예요.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{이번 장 정리}
+\begin{itemize}
+  \item 안드로이드는 2008년에 태어났고, 2026년 현재 세계 점유율 1위 모바일 시스템, 활성 기기 수십억 대
+  \item 최신 정식 버전은 Android 17. 메이저 앱은 최소 지원을 Android 8\textasciitilde{}10으로 잡아야 사용자 풀이 넉넉해요
+  \item 새 프로젝트는 무조건 Kotlin: 코드 30\% 이상 절약, 널 포인터 방지, 공식 지정
+  \item APK는 직접 설치용, AAB는 스토어 출시용. SDK는 공식 개발 장비 꾸러미
+  \item 2026 표준 기술 스택: Kotlin + Compose + MVVM + Room + Retrofit + Gradle + Android Studio
+\end{itemize}
+
+\end{tcbsummary}

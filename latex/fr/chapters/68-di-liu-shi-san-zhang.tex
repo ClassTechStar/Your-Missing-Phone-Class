@@ -1,0 +1,181 @@
+\bookchapter{Chapitre 63 : Vues, états et navigation}
+
+\chapterintro{Tu sais déjà fabriquer le jouet à une seule page. Ce chapitre résout deux problèmes de « croissance » : comment sauter de page en page (la navigation) et comment les données circulent d'une page à l'autre (la gestion d'état). Au terme du chapitre, tu sauras bâtir le squelette classique d'une App multi-pages : « liste détail édition ».}
+
+\booksection{Le panorama du flux de données pour la gestion d'état}
+
+SwiftUI ne se limite pas à @State pour gérer l'état. Regarde d'abord ce panorama pour comprendre « lequel employer, et quand » :
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Outil} & \textbf{Ce qu'il gère} & \textbf{Portée} & \textbf{Cas typiques} \tabularnewline
+\hline
+@State & État temporaire privé de la page & La vue courante & Compteur, texte d'un champ de saisie \tabularnewline
+@Binding & Emprunter l'état d'un autre & Une vue fille modifie la vue mère & Composant personnalisé \tabularnewline
+@StateObject / @Observable & Logique partagée entre les pages & Modèle de vue (ViewModel) & Chargement de données, logique métier \tabularnewline
+@EnvironmentObject / .environment & État partagé à l'échelle globale & Toute l'App & Session de l'utilisateur, réglages du thème \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Panorama des outils d'état de SwiftUI (en 2026, @Observable est devenu la norme)\end{center}
+
+\begin{lstlisting}[language=Swift]
+// la façon moderne d'iOS 17+ : la macro @Observable (recommandée pour les nouveaux projets)
+import Observation
+
+@Observable
+class CounterModel {                 // le view model
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // détient le modèle
+
+    var body: some View {
+        VStack {
+            Text("Tu as cliqué \(model.count) fois")
+            Button("Appuie ici") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+Conseil brutal pour débutant : @State pour ce qui reste privé à une page, une classe @Observable pour ce qui traverse les pages ou porte de la logique. Le @StateObject/@ObservableObject des anciens tutos, c'est la génération d'avant : sache simplement le lire, et écris le nouveau code comme indiqué ci-dessus.
+
+\booksection{NavigationStack : la « pile » des sauts de page}
+
+Depuis iOS 16, la navigation multi-pages passe par NavigationStack — comme une pile d'assiettes : on en pousse une après l'autre, et au retour on les dépile une à une :
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("Le registre de Léa") {
+                    DetailView(name: "Le registre de Léa")   // page cible
+                }
+                NavigationLink("Le registre d'Emma") {
+                    DetailView(name: "Le registre d'Emma")
+                }
+            }
+            .navigationTitle("Liste des registres")   // grand titre en haut
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("Détails de \(name)")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+NavigationLink, c'est le « lien de navigation cliquable » ; navigationTitle fabrique tout seul le titre de la barre de navigation et le bouton retour. Pour naviguer par le code (par exemple revenir en arrière automatiquement après un « Enregistrer »), emploie @Environment(\textbackslash{}.dismiss) pour fermer la page courante — avec ces deux tours, 90 \% des besoins de navigation sont couverts.
+
+\booksection{Fenêtres modales et onglets : sheet et TabView}
+
+En dehors de « pousser une page », il existe deux interactions classiques :
+
+\begin{lstlisting}[language=Swift]
+// 1. feuille qui monte du bas, demi-écran ou plein écran (la chouchou des formulaires)
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("Ajouter une dépense") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // l'écran de saisie qui s'ouvre
+            }
+    }
+}
+
+// 2. barre d'onglets en bas (le "squelette" de l'app)
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("Registre", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("Stats", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("Réglages", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Astuce : laquelle choisir, et quand ?}
+Règle d'expérience : NavigationStack pour pousser les pages du parcours principal (liste détail), sheet pour les fenêtres temporaires (ajout, édition, confirmation), TabView pour les grandes sections de même rang (onglets en bas). Combinés, les trois forment le squelette de l'immense majorité des Apps.
+
+\end{tcbinfo}
+
+\booksection{List : la liste incontournable d'iOS}
+
+Sur iOS, le composant le plus employé et le plus « pomme » qui soit, c'est List — il apporte d'origine séparateurs, suppression par glissement et surbrillance au tap :
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["Déjeuner 25.5", "Métro 6.0", "Salaire +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // glisse vers la gauche pour supprimer
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Liste + NavigationLink + sheet + TabView — combine ces quatre ingrédients et tu peux déjà monter le squelette complet d'une App : « liste du carnet ouvrir le détail taper + pour faire apparaître la saisie ». C'est exactement ainsi que sera monté le projet carnet de comptes du chapitre suivant.
+
+\begin{tcbpractice}{À toi de jouer : construis un « squelette à trois pages »}
+\booksection{Cycle de vie de l'App : premier plan et arrière-plan}
+
+Comme le cycle de vie des Activity sur Android, une App iOS traverse les états « naissance, premier plan, arrière-plan, mort ». En SwiftUI, observe-les avec la valeur d'environnement scenePhase :
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("retour au premier plan : reprendre le rafraîchissement")
+            case .inactive:  print("en transition (appel ou instant de passage en arrière-plan)")
+            case .background: print("passe en arrière-plan : enregistrer le brouillon")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Usages typiques : rafraîchir les données au retour au premier plan, enregistrer le brouillon en passant en arrière-plan. iOS encadre très strictement l'exécution en arrière-plan — une App ordinaire est vite suspendue (gelée) après y être passée ; n'espère pas y trimer en cachette. Pour une vraie tâche programmée, passe par les notifications locales du chapitre 68 plutôt que par la « résidence permanente en arrière-plan ».
+
+Réalise la version à fausses données du squelette du carnet de comptes : TabView à trois onglets (Carnet / Stats / Réglages) la page Carnet affiche des fausses données dans une List, un tap sur une ligne ouvre le détail (NavigationStack) le bouton « + » en haut à droite fait surgir la saisie en sheet. Aucune sauvegarde, aucun réseau : on ne fait que muscler le squelette — une fois celui-ci au point, remplir de vraies données au chapitre 65 coulera de source.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Résumé du chapitre}
+\begin{itemize}
+  \item Quatre outils d'état : @State (privé à la page), @Binding (emprunt), @Observable (logique), .environment (global)
+  \item Pour un nouveau projet, écris les view models avec la macro @Observable ; l'ancien @ObservableObject des vieux tutos, sache juste le lire
+  \item NavigationStack pousse les pages ; @Environment(\textbackslash{}.dismiss) revient en arrière par le code
+  \item Parcours principal en pages poussées, actions temporaires en sheet, grandes sections de même rang en TabView
+  \item List est la liste incontournable : séparateurs et suppression par glissement prêts à l'emploi
+\end{itemize}
+
+\end{tcbsummary}

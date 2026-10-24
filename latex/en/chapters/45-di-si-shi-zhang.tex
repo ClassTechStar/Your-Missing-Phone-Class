@@ -1,0 +1,139 @@
+\bookchapter{Chapter 40: Requirements Engineering — Turn Ideas into AI-Ready Instructions}
+
+\chapterintro{If context engineering helps AI understand the background, requirements engineering helps AI know what to do this time. It's where people differ most in AI coding — same tools, same models, yet some ship stunning projects while others only make mediocre toys. The gap is rarely raw technical skill; it's the ability to express requirements.}
+
+\booksection{From fuzzy idea to structured requirements}
+
+Every project starts as a fuzzy idea — “I want a budgeting app,” “a personal website,” “a to-do list.” Nothing wrong with that, but toss it straight to AI and quality is pure luck. Requirements engineering turns that fuzzy idea into something AI can execute precisely.
+
+Good news: structured requirements don't need a multi-page PRD. Just answer five questions — the “five requirement elements”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Element} & \textbf{Question} & \textbf{Example: budgeting app} \tabularnewline
+\hline
+Who & Who is it for? & Personal use, tracking daily income and expenses \tabularnewline
+What & What does it do? & An app that records transactions, summarizes monthly, and visualizes spending \tabularnewline
+Why & Why build it? & To understand my spending structure and cut unnecessary expenses \tabularnewline
+How & Roughly how? & React frontend, data in browser localStorage, no backend or login yet \tabularnewline
+Constraint & Any constraints? & Solo developer, 2 weeks, no need to deploy publicly \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}The five requirement elements with example\end{center}
+
+You don't need a formal document for these five — even a quick mental pass is enough. The key is building the habit of “think clearly before you speak.” Once you can answer these five clearly, your requirement descriptions naturally become structured.
+
+\booksection{The art of layered requirement breakdown}
+
+For bigger projects, one requirement description isn't enough. Break the big one into small, independently verifiable sub-requirements. This is “requirement breakdown.” Core rule: each sub-requirement should be completable, verifiable, and deliverable on its own.
+
+For “build a personal budgeting app,” a sensible breakdown:
+
+\begin{enumerate}
+  \item Implement basic transaction recording (add, view, delete entries);
+  \item Add categories (tag entries as dining, transport, etc.);
+  \item Implement monthly summaries (income and expenses by month);
+  \item Add data visualization (charts for spending structure).
+\end{enumerate}
+
+Each step is a feature increment that runs and verifies on its own.
+
+The golden rule of breaking down requirements: after every step, the project should still be a "thing that works" — even if crudely. Never let the project sit in a state where "everything is half done but nothing works."
+
+Two benefits. First, you always see progress — every step adds a feature, and that positive feedback matters for long projects (humans need wins). Second, each AI task stays small, lowering the risk of misunderstanding — smaller tasks, clearer understanding, better output.
+
+\booksection{PRD writing template and practice}
+
+For larger projects (full-stack apps with frontend, backend, and multiple modules), the five elements may not be enough. You'll need a more formal PRD. One common misconception: a PRD is not for AI to read — it's for you, to clarify your thinking so you can give AI more precise instructions.
+
+A good PRD doesn't need to be long, but should cover six parts: project overview (one paragraph on what it is), feature list (each feature defined), technical plan (stack and rough architecture), data model (core structures), interface description (what main screens look like), and development plan (steps to finish).
+
+\begin{lstlisting}
+# Personal finance tracker PRD
+## Project overview
+A lightweight personal finance tracker supporting income/expense records, categories, monthly summaries and data visualization.
+## Feature list
+1. Record income/expenses: amount, type (income/expense), category, note, date
+2. Category management: presets for food, transport, shopping, entertainment, other
+3. Monthly summary: total income, total expenses and balance by month
+4. Spending visualization: a pie chart of each category's share
+5. Data export: export as CSV
+## Technical approach
+- Frontend: React + TypeScript + Tailwind CSS
+- Data storage: localStorage (no backend needed)
+- Charts: Chart.js
+- Build: Vite
+## Data model
+Record {
+  id: string
+  amount: number
+  type: 'income' | 'expense'
+  category: string
+  note: string
+  date: string  // YYYY-MM-DD
+}
+## Development plan
+Step 1: basic record features (CRUD)
+Step 2: category management
+Step 3: monthly summaries
+Step 4: data visualization
+Step 5: data export
+\end{lstlisting}
+
+Note the writing style: concise lists and structured formatting instead of long essays. Each feature has a clear definition; data models use simple type descriptions. This style is easy for you to read and easy for AI to understand precisely when you hand it over.
+
+\booksection{Hands-on: full walkthrough from idea to plan}
+
+Theory is boring — let's walk through a complete requirements engineering example. Suppose your idea is: “I want a study tracker that records what I learned each day.”
+
+Step 1: Run through the five requirement elements.
+
+\begin{itemize}
+  \item Who: Personal use.
+  \item What: A tool that records daily study content, tracks study time, and reviews progress.
+  \item Why: Build a consistent study habit and see the accumulation.
+  \item How: Start with a web version, data in browser localStorage.
+  \item Constraint: Beginner developer, core features done in 1 week.
+\end{itemize}
+
+Step 2: Break down the requirements.
+
+\begin{enumerate}
+  \item Step 1: Implement "record study entries" (date, content, duration);
+  \item Step 2: Add "study time stats" (today, this week total);
+  \item Step 3: Implement a "study calendar" view (like a GitHub contribution graph);
+  \item Step 4: Add "study review" (randomly show a past day's entries for revision).
+\end{enumerate}
+
+Step 3: Write a short PRD. It doesn't need to be long — the breakdown above is already the PRD body. Organize it into a .md file in the project root as the shared reference for you and AI.
+
+Step 4: Start developing the first step. A prompt to AI could be:
+
+\begin{lstlisting}
+I need the first feature of a learning tracker — logging learning entries.
+The user can add a learning record with the date, what was studied and the duration in minutes.
+Data is stored in localStorage.
+The frontend uses React + TypeScript.
+Please give a complete implementation.
+\end{lstlisting}
+
+Notice the prompt's traits: it describes only the current step's goal (recording), without other features mixed in; it states technical constraints (React, TypeScript, localStorage); it gives enough info for AI to know “what” and “how roughly,” while leaving implementation details to AI. That's a high-quality AI coding prompt after requirements engineering.
+
+\begin{tcbpractice}{Hands-on: Write a five-element card for your pet project}
+Pick a small project you've been brewing and spend 5 minutes filling a card: Who / What / Why / How / Constraint, one sentence each. Then break it into 3–5 steps where each step is “usable on its own.” You'll find that once written down, the idea turns from a daydream into a to-do list.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter recap}
+\begin{itemize}
+  \item Five requirement elements: Who / What / Why / How / Constraint — think before you speak
+  \item Golden rule of breakdown: after every step the project is "something that works"
+  \item A PRD is for you: overview, features, technical plan, data model, UI, plan
+  \item Good prompt = only the current step + clear constraints + what, not how
+  \item Full walkthrough template: five elements breakdown PRD prompt — four steps
+\end{itemize}
+
+\end{tcbsummary}

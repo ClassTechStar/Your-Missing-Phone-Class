@@ -1,0 +1,188 @@
+\bookchapter{Capitolo 38: I cinque principi di pensiero della programmazione AI}
+
+\chapterintro{Se di questo libro devi ricordare un solo capitolo, che sia questo. I cinque principi di pensiero sono il cuore del libro; tutti i capitoli successivi — contesto, requisiti, dialogo, qualità — sono lo sviluppo di questi cinque principi in scenari diversi. Non spaventarti: nessuno è difficile da capire, ma ognuno merita di essere interiorizzato attraverso alcuni progetti.}
+
+L'inizio della storia è curioso: Andrej Karpathy, aprendo il codice del suo progetto, allegò un file CLAUDE.md di sole 70 righe con quattro principi fondamentali per collaborare con l'AI. Quel file ottenne oltre 70.000 star su GitHub e divenne il riferimento più citato dai praticanti di programmazione AI. Non sono slogan vuoti, ma abitudini di pensiero operative tratte da molta pratica. Questo libro ne aggiunge un quinto — l'iterazione e verifica — completando il sistema dei cinque principi.
+
+\begin{tcbinfo}{Perché un file di 70 righe vale così tanto?}
+Cosa significano 70.000 star? La maggior parte dei progetti su GitHub non ci arriva mai. Che un file di testo di 70 righe le ottenga dimostra una cosa: nell'era dell'AI ciò che manca non è il codice, ma la capacità di «pensare con chiarezza». Quelle 70 righe sono la versione concentrata del «pensare con chiarezza».
+
+\end{tcbinfo}
+
+\booksection{Principio uno: Think Before Coding (prima pensa, poi codifica)}
+
+È il più controintuitivo dei cinque. Se l'AI ci aiuta a scrivere codice, perché «pensare prima»? La risposta è semplice: la qualità dell'output dell'AI è proporzionale alla qualità del tuo input. Se non hai chiaro cosa fare, l'AI ti farà finire in un ciclo infinito di «correzioni» — il cosiddetto «l'AI si perde insieme a te».
+
+«Pensare prima» significa che prima di dare un'istruzione all'AI devi rispondere a tre domande, un «triangolo del pensiero» inscindibile:
+
+\begin{enumerate}
+  \item Quale problema voglio risolvere? (obiettivo)
+  \item Come deve essere il risultato atteso? (criteri di accettazione)
+  \item Quali vincoli devo rispettare? (confini)
+\end{enumerate}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimensione di pensiero} & \textbf{Input vago (scadente)} & \textbf{Input chiaro (buono)} \tabularnewline
+\hline
+Definizione del problema & Fammi un sito web & Fammi un sito personale con tre schede di accesso a mini-strumenti AI \tabularnewline
+Risultato atteso & Bello da vedere & Layout responsive, tema scuro, schede con animazione al passaggio del mouse, utilizzabile su mobile \tabularnewline
+Vincoli & (non specificato) & Niente framework, solo HTML+CSS+JS, deploy in un file, niente backend \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Confronto tra input vago e input chiaro per lo stesso requisito\end{center}
+
+\begin{tcbwarn}{Attenzione: pensare prima $\neq$ scrivere prima un documento perfetto}
+«Pensare prima» non significa «scrivere un PRD perfetto e poi iniziare». È un processo di pensiero rapido ma ordinato: 30 secondi per chiarire le tre domande valgono molto più di 30 minuti a correggere continuamente in chat. Per i compiti piccoli basta una riga; per i progetti grandi si possono estendere in un documento di requisiti completo (vedi Capitolo 40).
+
+\end{tcbwarn}
+
+\booksection{Principio due: Simplicity First (prima la semplicità)}
+
+La più grande trappola della programmazione AI non è «non riuscire a farlo», ma «fare troppo». Se dici all'AI «fammi un sistema di gestione utenti», potrebbe generare autenticazione, permessi, ruoli, log di audit, esportazione dati e altro — mentre forse ti serve solo una semplice pagina di login. L'over-generation è la principale causa di gonfiore del codice AI.
+
+«Semplicità prima» richiede di seguire il principio del «minimo vitale» a ogni istruzione: meno codice possibile per la funzione core, la soluzione più semplice per il problema, il minor numero di funzioni per validare l'idea. Karpathy ha una metafora efficace: «Se devi calcolare un prezzo scontato, non ti serve un motore e-commerce.»
+
+Nella pratica, «semplicità prima» significa alcune abitudini concrete:
+
+\begin{itemize}
+  \item Chiedi all'AI un solo pezzo di funzionalità alla volta, non l'intero sistema in un colpo;
+  \item Preferisci libreria standard e soluzioni semplici invece di dipendenze complesse;
+  \item Se un problema si risolve in 50 righe, non farne scrivere 500 all'AI;
+  \item Quando l'output dell'AI va oltre l'ambito, digli con coraggio «taglia il superfluo».
+\end{itemize}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Scenario} & \textbf{Soluzione eccessiva (da evitare)} & \textbf{Soluzione semplice (consigliata)} \tabularnewline
+\hline
+Serve memorizzare dati & Database MySQL + ORM & Prima usa file JSON o SQLite \tabularnewline
+Serve l'accesso utente & OAuth2.0 + JWT + ruoli e permessi & Prima una semplice verifica password \tabularnewline
+Serve un framework frontend & React + Redux + Router & Prima prova HTML puro + JS nativo \tabularnewline
+Serve il deploy online & Docker + CI/CD + K8s & Prima falo funzionare in locale \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Confronto tra soluzioni eccessive e semplici negli scenari comuni\end{center}
+
+\booksection{Principio tre: Surgical Changes (modifiche chirurgiche)}
+
+Quando iteri su un progetto esistente, ogni modifica deve essere precisa come un intervento chirurgico: toccare solo ciò che va toccato. Nella programmazione AI è ancora più importante, perché l'AI tende a «cambiare qualcosina per conto suo»: gli chiedi di correggere un bug e si mette a ristrutturare mezzo file.
+
+Il cuore delle «modifiche chirurgiche»: ogni istruzione all'AI deve specificare ambito e confini. Digli «modifica solo la funzione calculate\_discount», «non toccare il resto», «mantieni lo stile del codice». Se le modifiche vanno oltre l'ambito richiesto, chiedigli subito di annullare il superfluo.
+
+Karpathy lo illustra con un esempio di diff. Supponi di chiedere all'AI di aggiungere la logica del «prezzo soci» alla funzione di calcolo degli sconti del carrello: un buon output modifica solo quella funzione aggiungendo qualche riga; un cattivo output riscrive l'intero file — magari più «elegante», ma non sai se ha introdotto nuovi bug. Nella programmazione AI «sembrare meglio» non è mai un motivo per deviare dalle istruzioni.
+
+Istruzione scadente (ambito vago)
+
+\begin{lstlisting}
+Ottimizza la logica di calcolo degli sconti di questo progetto
+\end{lstlisting}
+
+Istruzione buona (ambito preciso)
+
+\begin{lstlisting}
+Modifica solo la funzione calculate\_discount in cart.py: 1. Aggiungi la logica del prezzo soci allo sconto esistente 2. I soci hanno un ulteriore 10\% di sconto 3. Non modificare la firma della funzione né altre funzioni 4. Mantieni lo stile di denominazione delle variabili
+\end{lstlisting}
+
+\booksection{Principio quattro: Goal-Driven Execution (esecuzione orientata all'obiettivo)}
+
+Questo principio risponde a una domanda chiave: devi dare all'AI istruzioni su «come farlo» o su «cosa fare»? La risposta di Karpathy è la seconda. Invece di dire «prima crea una classe, poi aggiungi i metodi, poi scrivi i test», digli «mi serve uno strumento che legga un file CSV e conti i valori unici di ogni colonna». Lascia che l'AI scelga il percorso, tu validi il risultato.
+
+I vantaggi dell'«orientato all'obiettivo» sono doppi: per l'AI c'è più autonomia e può scegliere il percorso migliore senza essere vincolata dai tuoi passaggi intermedi; per te l'attenzione si sposta da «come farlo» a «il risultato è giusto?» — ed è esattamente ciò che deve fare un comandante.
+
+\begin{tcbwarn}{Attenzione: orientato all'obiettivo $\neq$ lasciar fare tutto}
+Richiede una validazione rigorosa dopo l'esecuzione: il risultato soddisfa i requisiti? I casi limite sono gestiti? C'è over-design evidente? Se non è come ti aspettavi, dai un feedback concreto — non «riscrivi», ma «il problema è che con lista vuota viene lanciato IndexError, aggiungi un controllo sul valore nullo».
+
+\end{tcbwarn}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Stile di istruzione} & \textbf{Esempio} & \textbf{Caratteristiche del risultato} \tabularnewline
+\hline
+Imperativo (come farlo) & «Prima crea una classe Python chiamata DataParser, aggiungi un metodo parse che accetta filename, leggi con il modulo csv…» & L'AI diventa una dattilografa; i tuoi passaggi intermedi potrebbero non essere il percorso ottimale \tabularnewline
+Per obiettivo (cosa fare) & «Mi serve uno strumento: leggere un file CSV, contare i valori unici per colonna, restituire JSON. Fornisci l'implementazione completa.» & L'AI sceglie il percorso ottimale, tu validi il risultato \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Confronto tra istruzioni imperative e per obiettivo\end{center}
+
+\booksection{Principio cinque: Iterate and Verify (itera e verifica)}
+
+È il quinto principio aggiunto da questo libro sulle quattro basi di Karpathy. La convinzione di fondo: il primo output dell'AI quasi mai è la versione finale. La programmazione AI efficace è un ciclo «genera-verifica-correggi», non un monolitico «istruzione-output».
+
+«Iterare e verificare» non è un passivo «se non va bene riprova», ma un flusso di verifica strutturato. Dopo ogni output dell'AI verifica su tre livelli:
+
+\begin{itemize}
+  \item Livello 1 · verifica funzionale: gira? Input e output sono corretti?
+  \item Livello 2 · verifica dei casi limite: input vuoto, molto lungo, anomalo — cosa succede?
+  \item Livello 3 · verifica architetturale: la struttura del codice è sensata? Ci sono hardcode? È facile da estendere?
+\end{itemize}
+
+Definire l'obiettivo
+
+L'IA genera codice
+
+Verifica funzionale
+
+Superato
+
+Verifica dei casi limite
+
+Superato
+
+Revisione dell'architettura
+
+Superato — si passa al passo successivo
+
+Non superato
+
+Dai feedback specifici
+
+Rigenera
+
+\begin{center}\small\color{gray}Figura 2: il ciclo di iterazione e verifica della programmazione AI\end{center}
+
+Il punto chiave è il «feedback concreto». Se la verifica fallisce, non dire «sbagliato, rifai», ma «la funzione con lista vuota lancia IndexError, aggiungi un controllo alla riga 15». Un feedback preciso permette all'AI di correggere in modo mirato; uno vago la fa solo reindovinare la tua intenzione.
+
+\booksection{Harness Engineering: Agent = Model + Harness}
+
+A metà 2026 il concetto di Harness Engineering divenne popolare nella community della programmazione AI. La formula è semplice:
+
+La capacità di un agent = capacità del modello × qualità dell'harness
+
+La capacità del modello è il tetto intellettuale del cervello AI; l'Harness è l'«ambiente di lavoro» costruito intorno al modello: gestione del contesto, integrazione strumenti, orchestrazione dei flussi, sistema di memoria.
+
+Questo concetto spiega un dubbio comune: perché con lo stesso GPT-4 o Claude qualcuno fa progetti brillanti e qualcuno ottiene codice mediocre? La differenza non è nel modello, ma nell'Harness. Un buon Harness include: specifiche di progetto chiare, integrazione ragionevole degli strumenti, contesto di dialogo ordinato, flussi di verifica completi. Il modello fissa il tetto, l'Harness determina quanto lo puoi sfruttare.
+
+\begin{tcbinfo}{La metafora del tirocinante geniale}
+Immagina il modello come un tirocinante geniale: altissimo QI, ma senza documentazione di progetto, strumenti, scadenze e criteri di accettazione non produce nulla di buono. L'Harness Engineering è l'ingegneria di «come costruire l'ambiente di lavoro per un tirocinante geniale».
+
+\end{tcbinfo}
+
+I capitoli successivi ti insegnano di fatto a costruire un buon Harness: capitolo 39 gestione del contesto (memoria di progetto), capitolo 40 definizione dei requisiti (PRD), capitolo 43 tecniche di dialogo (prompt a livelli), capitolo 45 qualità (flussi di verifica). Insieme formano il tuo Harness.
+
+\begin{tcbpractice}{Pratica: scompone la tua prossima idea con il «triangolo del pensiero»}
+Scegli una piccola cosa che hai sempre voluto fare (una pagina con il conto alla rovescia, uno script per ricordarti di bere). In 3 minuti rispondi: (1) Quale problema risolve? (2) Come deve risultare? (3) Quali vincoli (tempo, tecnologia, ambiente)? Scrivi le risposte in un paragrafo. Complimenti: hai appena fatto il tuo primo «Think Before Coding» — quel paragrafo è già un'istruzione di qualità.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Riepilogo del capitolo}
+\begin{itemize}
+  \item I cinque principi vengono dal CLAUDE.md di Karpathy (70 righe, 70K+ star); questo libro aggiunge il quinto «itera e verifica»
+  \item Think Before Coding: prima di parlare rispondi a tre domande — cosa fare? Come deve risultare? Quali vincoli?
+  \item Simplicity First: la più grande trappola dell'AI è «fare troppo» — per calcolare uno sconto non serve un motore e-commerce
+  \item Surgical Changes: modifiche precise come in chirurgia, rifiuta il «cambio qualcosina» dell'AI
+  \item Goal-Driven Execution: di «cosa fare», non «come farlo», e lascia scegliere il percorso all'AI
+  \item Iterate and Verify: tre livelli di verifica (funzionale/casi limite/architettura) + feedback concreti, ciclo iterativo
+  \item Harness Engineering: capacità = modello × Harness, gestisci l'AI come un «tirocinante geniale»
+\end{itemize}
+
+\end{tcbsummary}

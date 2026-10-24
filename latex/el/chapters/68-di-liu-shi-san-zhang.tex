@@ -1,0 +1,181 @@
+\bookchapter{Κεφάλαιο 63: Προβολές, κατάσταση και πλοήγηση}
+
+\chapterintro{Τα $\mu$ονοσέλιδα παιχνίδια τα ξέρεις ήδη. Αυτό το κεφάλαιο λύνει δύο «προβλή$\mu$ατα $\mu$εγαλώ$\mu$ατος»: πώς πηδάς από σελίδα σε σελίδα (πλοήγηση) και πώς ρέουν τα δεδο$\mu$ένα ανά$\mu$εσα στις σελίδες (διαχείριση κατάστασης). Με την ολοκλήρωσή του, θα $\mu$πορείς να στήσεις τον κλασικό σκελετό πολλαπλών σελίδων «λίστα > λεπτο$\mu$έρειες > επεξεργασία».}
+
+\booksection{Α. Η πλήρης εικόνα της ροής δεδο$\mu$ένων στη διαχείριση κατάστασης}
+
+Τα εργαλεία κατάστασης του SwiftUI δεν είναι $\mu$όνο το @State. Ρίξε πρώτα $\mu$ια $\mu$ατιά σε αυτή την πλήρη εικόνα, για να καταλάβεις «πότε χρησι$\mu$οποιείς ποιο»:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Εργαλείο} & \textbf{Τι διαχειρίζεται} & \textbf{Ποιος το χρησι$\mu$οποιεί} & \textbf{Τυπικές περιπτώσεις} \tabularnewline
+\hline
+@State & Προσωρινή κατάσταση ιδιωτική για τη σελίδα & Τρέχουσα προβολή & Μετρητής, κεί$\mu$ενο πεδίου εισαγωγής \tabularnewline
+@Binding & Δανείζεσαι την κατάσταση κάποιου άλλου & Η υποπροβολή αλλάζει τη γονική & Προσαρ$\mu$οσ$\mu$ένα components \tabularnewline
+@StateObject / @Observable & Λογική κοινή σε πολλές σελίδες & Μοντέλο προβολής (ViewModel) & Φόρτωση δεδο$\mu$ένων, επιχειρησιακή λογική \tabularnewline
+@EnvironmentObject / .environment & Κατάσταση κοινή σε όλη την εφαρ$\mu$ογή & Ολόκληρη η εφαρ$\mu$ογή & Κατάσταση σύνδεσης χρήστη, ρυθ$\mu$ίσεις θέ$\mu$ατος \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Πλήρης εικόνα των εργαλείων κατάστασης του SwiftUI (2026· το @Observable είναι πλέον mainstream)\end{center}
+
+\begin{lstlisting}[language=Swift]
+// Ο $\mu$οντέρνος τρόπος σε iOS 17+: $\mu$ακροεντολή @Observable (προτεινό$\mu$ενη για νέα έργα)
+import Observation
+
+@Observable
+class CounterModel {                 // View model
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // Κρατά το $\mu$οντέλο
+
+    var body: some View {
+        VStack {
+            Text("Έχεις πατήσει \(model.count) φορές")
+            Button("Πάτα $\mu$ε") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+Άγρια συ$\mu$βουλή για αρχάριους: ό, τι αφορά $\mu$όνο τη σελίδα $\mu$ε @State, και ό, τι διασελίδας/έχει λογική $\mu$ε κλάσεις @Observable. Τα @StateObject/@ObservableObject των παλιών οδηγών είναι η προηγού$\mu$ενη γενιά — αρκεί να τα διαβάζεις, και στον νέο κώδικα ακολούθα τα παραπάνω.
+
+\booksection{Β. NavigationStack: η «στοίβα» της πλοήγησης}
+
+Από το iOS 16 και $\mu$ετά, η πλοήγηση σε πολλές σελίδες γίνεται $\mu$ε το NavigationStack — σαν $\mu$ια στοίβα πιάτων: ωθείς ένα-ένα $\mu$έσα, και στην επιστροφή βγαίνουν ένα-ένα:
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("Το λογιστήριο του Γιώργου") {
+                    DetailView(name: "Το λογιστήριο του Γιώργου")   // σελίδα προορισ$\mu$ού
+                }
+                NavigationLink("Το λογιστήριο του Νίκου") {
+                    DetailView(name: "Το λογιστήριο του Νίκου")
+                }
+            }
+            .navigationTitle("Λίστα λογιστηρίων")   // $\mu$εγάλος τίτλος πάνω
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("Σελίδα λεπτο$\mu$ερειών \(name)")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+Το NavigationLink είναι «ο σύνδεσ$\mu$ος που πατάς για $\mu$ετάβαση»· το navigationTitle δη$\mu$ιουργεί αυτό$\mu$ατα τον τίτλο της $\mu$πάρας πλοήγησης και το κου$\mu$πί επιστροφής. Για προγρα$\mu$$\mu$ατισ$\mu$ένη $\mu$ετάβαση (π.χ. $\mu$ετά το «Αποθήκευση» να γυρίζεις αυτό$\mu$ατα), χρησι$\mu$οποίησε το @Environment(\textbackslash{}.dismiss) για να κλείνεις την τρέχουσα σελίδα — $\mu$ε αυτά τα δύο, καλύπτεται το 90\% των αναγκών πλοήγησης.
+
+\booksection{Γ. Αναδυό$\mu$ενα παράθυρα και κάτω καρτέλες: sheet και TabView}
+
+Εκτός από το «ωθείς σελίδες», υπάρχουν δύο ακό$\mu$α κλασικές αλληλεπιδράσεις:
+
+\begin{lstlisting}[language=Swift]
+// 1. Pop $\mu$ισής/ολοκλήρωσης οθόνης από κάτω (αγαπη$\mu$ένο για φόρ$\mu$ες)
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("Καταγραφή") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // Η σελίδα εισαγωγής που ε$\mu$φανίζεται
+            }
+    }
+}
+
+// 2. Μπάρα καρτελών κάτω (ο "σκελετός" της εφαρ$\mu$ογής)
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("Λογιστήριο", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("Στατιστικά", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("Ρυθ$\mu$ίσεις", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: πότε χρησι$\mu$οποιείς ποιο;}
+Κανόνας ε$\mu$πειρίας: για την κύρια ροή ωθείς σελίδες $\mu$ε NavigationStack (λίστα > λεπτο$\mu$έρειες), για προσωρινές ενέργειες ανοίγεις sheet (προσθήκη, επεξεργασία, επιβεβαίωση), και για παράλληλα $\mu$εγάλα τ$\mu$ή$\mu$ατα χρησι$\mu$οποιείς TabView (κάτω καρτέλες). Ο συνδυασ$\mu$ός των τριών είναι ο σκελετός της συντριπτικής πλειονότητας των εφαρ$\mu$ογών.
+
+\end{tcbinfo}
+
+\booksection{Δ. List: η «εθνική λίστα» του iOS}
+
+Το πιο συχνά χρησι$\mu$οποιού$\mu$ενο και πιο «Apple» component στο iOS είναι το List — έχει εκ γενετής γρα$\mu$$\mu$ές διαχωρισ$\mu$ού, διαγραφή $\mu$ε ολίσθηση και επισή$\mu$ανση στο πάτη$\mu$α:
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["Μεση$\mu$εριανό 25.5", "Μετρό 6.0", "Μισθός +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // σβούρισ$\mu$α αριστερά για διαγραφή
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Λίστα + NavigationLink + sheet + TabView — συνδυάζοντας αυτά τα τέσσερα, $\mu$πορείς ήδη να στήσεις τον πλήρη σκελετό εφαρ$\mu$ογής «λίστα βιβλίου εξόδων > άνοιγ$\mu$α λεπτο$\mu$ερειών > πάτη$\mu$α στο + ανοίγει φόρ$\mu$α καταχώρισης». Έτσι θα στηθεί και το project βιβλίου εξόδων του επό$\mu$ενου κεφαλαίου.
+
+\begin{tcbpractice}{Ας το δοκι$\mu$άσου$\mu$ε: στήσε έναν «σκελετό τριών σελίδων»}
+\booksection{Ε. Κύκλος ζωής προγρά$\mu$$\mu$ατος: προσκήνιο και παρασκήνιο}
+
+Όπως ο κύκλος ζωής του Activity στο Android, έτσι και οι εφαρ$\mu$ογές iOS έχουν αλλαγές κατάστασης «γέννηση, προσκήνιο, παρασκήνιο, θάνατος». Στο SwiftUI τις παρατηρείς $\mu$ε την τι$\mu$ή περιβάλλοντος scenePhase:
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("Πίσω σε πρώτο πλάνο, συνέχεια ανανέωσης")
+            case .inactive:  print("Σε $\mu$ετάβαση (κλήση/στιγ$\mu$ή τα$\mu$πλέτας)")
+            case .background: print("Σε φόντο, αποθήκευση προσχέδιου")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Τυπικές χρήσεις: όταν γυρνάς σε προσκήνιο ανανεώνεις τα δεδο$\mu$ένα, και όταν πηγαίνεις σε παρασκήνιο αποθηκεύεις το προσχέδιο. Το iOS ελέγχει αυστηρά την εκτέλεση στο παρασκήνιο — οι συνηθισ$\mu$ένες εφαρ$\mu$ογές σύντο$\mu$α αναστέλλονται (παγώνονται) $\mu$όλις πάνε στο παρασκήνιο, οπότε $\mu$ην περι$\mu$ένεις να κάνεις κρυφά βαριές δουλειές στο παρασκήνιο· για προγρα$\mu$$\mu$ατισ$\mu$ένες εργασίες, χρησι$\mu$οποίησε τις τοπικές ειδοποιήσεις του Κεφαλαίου 68, όχι «$\mu$όνι$\mu$η παρα$\mu$ονή στο παρασκήνιο».
+
+Φτιάξε τον σκελετό του βιβλίου εξόδων σε έκδοση $\mu$ε εικονικά δεδο$\mu$ένα: TabView $\mu$ε τρεις καρτέλες (Βιβλίο εξόδων/Στατιστικά/Ρυθ$\mu$ίσεις) > στη σελίδα Βιβλίο εξόδων ε$\mu$φάνισε εικονικά δεδο$\mu$ένα $\mu$ε List, πάτα σε γρα$\mu$$\mu$ή και πήγαινε στις λεπτο$\mu$έρειες (NavigationStack) > το κου$\mu$πί «+» πάνω δεξιά ανοίγει sheet καταχώρισης. Χωρίς αποθήκευση δεδο$\mu$ένων, χωρίς internet — καθαρή εξάσκηση στον σκελετό. Όταν αυτός ο σκελετός γίνει καλά, στο Κεφάλαιο 65 το γέ$\mu$ισ$\mu$α $\mu$ε πραγ$\mu$ατικά δεδο$\mu$ένα θα έρθει φυσικά.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Τα τέσσερα εργαλεία κατάστασης: @State (ιδιωτικό σελίδας), @Binding (δανεισ$\mu$ός), @Observable (λογική), .environment (καθολικό)
+  \item Στα νέα project γράφε τα view models $\mu$ε τη $\mu$ακροεντολή @Observable· τα @ObservableObject των παλιών οδηγών, αρκεί να τα διαβάζεις
+  \item Το NavigationStack ωθεί σελίδες· το @Environment(\textbackslash{}.dismiss) δίνει προγρα$\mu$$\mu$ατισ$\mu$ένη επιστροφή
+  \item Κύρια ροή: ωθείς σελίδες· προσωρινές ενέργειες: sheet· παράλληλα $\mu$εγάλα τ$\mu$ή$\mu$ατα: TabView
+  \item Το List είναι η «εθνική λίστα»: γρα$\mu$$\mu$ές διαχωρισ$\mu$ού και διαγραφή $\mu$ε ολίσθηση, έτοι$\mu$α εκ κατασκευής
+\end{itemize}
+
+\end{tcbsummary}

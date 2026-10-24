@@ -1,0 +1,105 @@
+\bookchapter{Kapitel 36: Smartphone und Smart Home – das Zuhause wird clever}
+
+\chapterintro{Das Smartphone übernimmt eine immer wichtigere Rolle: die Fernbedienung für das ganze Haus. Von Lampe und Steckdose bis zur Türschloss-Sperre wird Smart Home vom „Spielzeug für Nerds“ zur „Haushaltsausstattung“. Dieses Kapitel ordnet Protokolle, Ökosysteme, Zentraleinheiten und Einsteiger-Sets und schließt mit einer Sicherheitsliste ab, damit Sie nicht selbst zum Opfer der „Intelligenz“ werden.}
+
+\booksection{Smart-Home-Protokolle: Die Wahl zählt}
+
+Vor dem Kauf prüfen, welches Protokoll ein Gerät unterstützt – davon hängt ab, ob Handy und Ökosystem es „verstehen“. Vier gängige Standards im Überblick:
+
+\begin{itemize}
+  \item Matter: 2022 von der CSA (Connectivity Standards Alliance) veröffentlicht, getragen von Apple, Google, Amazon, Samsung u. a. Ziel: Alle Marken sollen dieselbe Sprache sprechen. 2023–2026 wird Matter schnell zum einheitlichen Standard; unterstützte Geräte lassen sich an Apple HomeKit, Google Home, Amazon Alexa und Mi Home anbinden – kein Lock-in mehr.
+  \item Thread: Die Netzwerk-„Röhre“ unter Matter. Energiesparend, selbstorganisierend (fällt ein Knoten aus, sucht sich das Signal einen Weg), schnell und stabil. Geräte mit Thread-Borderrouter (z. B. HomePod mini, Apple TV 4K, Xiaomi Hub) laufen deutlich zuverlässiger.
+  \item WLAN: Viel Bandbreite, direkte Router-Anbindung, aber höherer Verbrauch; bei vielen Geräten kann der Kanal überfüllt werden. Gut für Kameras, Saugroboter und andere Datenfresser.
+  \item Bluetooth (BLE): Einrichtung einfach, sparsam, aber kurze Reichweite und kein selbstorganisierendes Netz. Gut für Schlösser, Temperatur-/Feuchtesensoren und kleine Datenpakete.
+  \item Zigbee: Bewährtes, sparsames Mesh-Protokoll, braucht einen eigenen Gateway. Geräte günstig und stabil, aber schwache herstellerübergreifende Kompatibilität. Wird zunehmend von Matter+Thread abgelöst.
+\end{itemize}
+
+\begin{tcbinfo}{Faustregel}
+Beim Kauf 2026 zuerst auf „Matter over Thread“ achten – derzeit die zukunftssicherste Wahl. Ältere WLAN-/Bluetooth-Geräte nicht vorschnell aussortieren; bei Neuanschaffungen dann auf Matter umsteigen.
+
+\end{tcbinfo}
+
+\booksection{Die drei großen Ökosysteme im Vergleich}
+
+Protokoll ist die „Sprache“, das Ökosystem der „Kreis“. Selbst mit Matter wählen Sie im Alltag ein Hauptsystem für Automatisierung und Sprachsteuerung. Die drei wichtigsten im Überblick:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Ökosystem} & \textbf{Stärken} & \textbf{Schwächen} & \textbf{Zielgruppe} \tabularnewline
+\hline
+Apple HomeKit & Stärkster Datenschutz (überwiegend lokal), nahtlose Kopplung mit iPhone/Siri/Kurzbefehlen & Weniger und teurere Geräte, HomePod oder Apple TV als Hub nötig & Apple-Haushalte, die Privatsphäre und Erlebnis schätzen \tabularnewline
+Mi Home (Xiaomi) & Größte Gerätevielfalt, bestes Preis-Leistungs-Verhältnis, Xiaoai stark & Relativ geschlossenes Ökosystem, viel Cloud, etwas mehr Werbung & Einsteiger mit knappem Budget, die das ganze Haus ausstatten wollen \tabularnewline
+Huawei HiLink (HarmonyOS) & Nahtloser Übergang mit HarmonyOS-Handy/Tablet/Uhr, Gerätezahl wächst schnell & Im Ausland weniger Geräte, Ökosystem holt auf & Huawei-Nutzer, die „Super Device“-Zusammenarbeit schätzen \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbinfo}{Auswahlhilfe}
+Ökosystem nach dem Handy wählen: iPhone HomeKit, Huawei HiLink, andere Android-Geräte Mi Home am unkompliziertesten. Über Matter lassen sich Geräte verschiedener Ökosysteme mit demselben Handy steuern – kein einmaliges „Lager wählen“ nötig.
+
+\end{tcbinfo}
+
+\booksection{Das Smartphone als Hauszentrale}
+
+In vielen Einsteiger-Szenarien ist das Smartphone die „Hauszentrale“: App steuert Licht, Klima, Jalousien und Sicherheit und legt Automatisierungen an, damit das Haus „von selbst läuft“:
+
+\begin{itemize}
+  \item Gerätesteuerung: In HomeKit/Mi Home/Smart Life Licht an/aus, Farbtemperatur, Klima-Temperatur, Jalousien, Kameras – lokal oder remote.
+  \item Automatisierungen: „Bedingung Aktion“. Drei Klassiker: Zuhause-Modus: Standort Zuhause + dunkel Flurlicht + Klima + Jalousien + Schloss zu.
+  \item Abwesenheits-Modus: Letzte Person geht (Standort weg oder Schloss verriegelt) Licht aus + Klima aus + Steckdosen aus + Kamera an + Alarmanlage scharf.
+  \item Schlaf-Modus: Jeden Abend 23:00 Hauplichter aus + Jalousien zu + Klima 26 °C + Nachtlicht an.
+\end{itemize}
+
+NFC-Tipp: NFC-Tag an die Tür, Handy dranhängen löst Szenen aus (Türöffner-Licht, nochmal tippen für Schlaf). iPhone über „Kurzbefehle“, Android über „Wallet“ oder Hersteller-App beschreibbar.
+
+\begin{tcbpractice}{Ausprobieren: „Zuhause-Modus“ bauen}
+In der Smart-Home-App unter „Automatisierungen“ neu anlegen: Auslöser „Ankunft an Ort“ (Zuhause), Aktionen „Flurlicht an“, „Klima 26 °C“, „Jalousien zu“. Speichern, kurz rausgehen und beim Heimkommen prüfen, ob das Licht von selbst angeht – das erste gelungene Szenario macht oft mehr Freude als ein neues Gerät.
+
+\end{tcbpractice}
+
+\booksection{Einsteiger-Starter-Set}
+
+Nicht alles auf einmal: Mit diesen vier Teilen decken Sie 80 \% des Alltags ab:
+
+\begin{itemize}
+  \item Smart Speaker: Xiaoai (Mi Home, günstig) / HomePod mini (Apple, zugleich Thread-Hub) / Alexa (im Ausland breit). Wichtig: Der Speaker bestimmt die Sprachwelt – erst Ökosystem, dann Speaker.
+  \item Smart Bulb: Yeelight (Mi Home/Matter, Farbtemperatur/Helligkeit, günstig) / Philips Hue (gute Farben, stabil, braucht Hue-Bridge, teurer). Vor dem Kauf Fassung (E27/B22) und Farbwahl prüfen.
+  \item Smart Plug: Xiaomi Smart Plug (günstig, Verbrauchsanzeige) / TP-Link Kasa (im Ausland gute Matter-Unterstützung). Bei starken Verbrauchern (Durchlauferhitzer, Heizung) Nennleistung beachten, nicht überlasten.
+  \item Smartes Türschloss: Lockin/Xiaomi (Preis-Leistung, Mi-Home-Kopplung) / Kaadas (traditioneller Schlosshersteller, solide Mechanik). Matter-/Ökosystem-Unterstützung, Akkulaufzeit und Notfallschlüssel-Position prüfen.
+\end{itemize}
+
+\begin{tcbinfo}{Reihenfolge beim Kauf}
+Zuerst Smart Speaker (Ökosystem festlegen) dann Birne und Steckdose (niedrige Einstiegshürde, sofort spürbar) zuletzt Schloss und Kamera (Sicherheitsrelevant, sorgfältig wählen). Immer nur eine Geräteklasse ergänzen und erst vertraut werden, bevor Sie ausbauen.
+
+\end{tcbinfo}
+
+\booksection{Sicherheitsregeln}
+
+Je mehr smarte Geräte, desto größer die Angriffsfläche. Diese vier Mindestregeln bitte durchgehen:
+
+\begin{enumerate}
+  \item Standardpasswörter ändern: Werks-Passwörter von Kameras, Routern und Schlössern sind öffentlich bekannt. Sofort in lange, einzigartige Passwörter ändern.
+  \item Firmware aktuell halten: Hersteller-Updates schließen Sicherheitslücken. „Automatisch aktualisieren“ einschalten oder mindestens monatlich manuell prüfen.
+  \item Netzwerk trennen: IoT-Geräte in ein eigenes WLAN (oder Gastnetzwerk) legen, getrennt von Handy und PC. Fällt ein Gerät aus, bleibt der Zugriff auf wichtige Daten erschwert.
+  \item Privatsphäre: Bei Kameras „Privatzonen“ maskieren (Schlafzimmer, Bad nicht filmen), 24-Stunden-Cloud-Aufzeichnung abschalten; Kamerabilder nicht dauerhaft an Drittanbieter-Apps freigeben.
+\end{enumerate}
+
+\textbf{Diese Fallstricke vermeiden}\par
+
+\begin{itemize}
+  \item Fernentriegelung des Schlosses nicht für Fremde nutzen – besser temporäre Codes, die nach Gebrauch verfallen.
+  \item Kamera nicht aufs Bett oder aus dem Fenster richten – so schützen Sie Ihre eigene Privatsphäre.
+  \item Keine No-Name-Geräte ohne Marke kaufen – ohne Firmware-Updates ist das wie eine Hintertür im Haus.
+\end{itemize}
+
+\begin{tcbsummary}{Kapitel-Zusammenfassung}
+\begin{itemize}
+  \item Matter+Thread ist 2023–2026 die gemeinsame Richtung – beim Neukauf auf das Siegel achten
+  \item Die drei Ökosysteme haben ihre Stärken: Apple = Datenschutz/Erfahrung, Mi Home = Preis-Leistung, Huawei = Mehrgeräte-Kopplung
+  \item Smartphone als Zentrale: „Zuhause/Abwesend/Schlaf“ aufsetzen – das Haus läuft von selbst
+  \item Einsteiger-Vierer: Speaker, Birne, Steckdose, Schloss – in dieser Reihenfolge erweitern
+  \item Standardpasswörter, Firmware, Netzseparation, Privatsphären-Maskierung – diese vier Sicherheitsregeln nicht weglassen
+\end{itemize}
+
+\end{tcbsummary}

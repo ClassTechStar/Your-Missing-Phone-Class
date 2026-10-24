@@ -1,0 +1,393 @@
+\bookchapter{Capítulo 14: Especial en gestores de contraseñas}
+
+\chapterintro{En la era digital, tus contraseñas son las llaves de tu casa. Pero con demasiadas llaves, demasiado complejas: ¿qué hacer? El gestor de contraseñas es tu «mayordomo de llaves universal».}
+
+\booksection{I. ¿Por qué necesitas un gestor de contraseñas?}
+
+Una persona moderna tiene decenas o incluso cientos de cuentas en línea. Si usas la misma contraseña para todo, basta una brecha para comprometerlas todas. Si usas una contraseña compleja distinta para cada cuenta, no podrás recordarlas.
+
+El gestor de contraseñas resuelve este dilema: solo tienes que recordar una contraseña maestra; él recuerda todas las demás por ti.
+
+\booksection{II. Cómo funciona un gestor de contraseñas}
+
+\begin{enumerate}
+  \item \textbf{Almacenamiento cifrado}: Todas las contraseñas se guardan con un cifrado de alto nivel; solo tú puedes descifrarlas.
+  \item \textbf{Contraseña maestra}: Estableces una contraseña maestra para desbloquear la bóveda. La contraseña maestra no se guarda en el servidor.
+  \item \textbf{Rellenado automático}: En las páginas de inicio de sesión de webs y Apps, el gestor rellena cuenta y contraseña automáticamente.
+  \item \textbf{Generador de contraseñas}: Puede generar contraseñas aleatorias y complejas para aumentar la seguridad.
+\end{enumerate}
+
+\booksection{Introduccion a los principios de cifrado}
+
+Entender el cifrado del gestor de contrasenas te ayuda a decidir si un proveedor es de confianza. A continuacion se explican varios conceptos basicos en lenguaje llano.
+
+\booksubsection{Cifrado AES-256}
+
+AES (estandar de cifrado avanzado) es un algoritmo de cifrado simetrico reconocido por el NIST y ampliamente usado por bancos, militares y gobiernos. “256” indica una clave de 256 bits: en teoria se necesitaria mas tiempo que la edad del universo para forzarlo por fuerza bruta. Los principales gestores (1Password, Bitwarden, KeePass, etc.) cifran tu almacen con AES-256.
+
+\booksubsection{Arquitectura de conocimiento cero (Zero-Knowledge)}
+
+“Conocimiento cero” no significa que el proveedor no almacene nada, sino que\textbf{el cifrado y el descifrado se realizan en tu dispositivo; el servidor solo guarda el texto cifrado}. El flujo es:
+
+\begin{enumerate}
+  \item Introduces la contrasena maestra en el cliente.
+  \item El cliente deriva la clave de cifrado a partir de la contrasena maestra (en tu telefono u ordenador).
+  \item Solo se sube al servidor el texto cifrado.
+  \item Al iniciar sesion de nuevo, el servidor envia el texto cifrado y el cliente lo descifra con la contrasena maestra.
+\end{enumerate}
+
+Punto clave:\textbf{La contrasena maestra nunca sale de tu dispositivo}, ni esta en el servidor. Aunque el proveedor sufra una brecha, el atacante solo obtiene texto cifrado indescifrable, salvo que adivine tu contrasena maestra.
+
+\begin{tcbinfo}{Por que "conocimiento cero" implica que el proveedor tampoco ve tus contrasenas?}
+Porque la clave de descifrado se deriva de tu contrasena maestra, que solo existe en tu mente y se usa en tu dispositivo. En el servidor del proveedor no hay ni contrasena maestra ni clave de descifrado, solo texto cifrado. Por eso Bitwarden, 1Password y otros proveedores serios declaran que “tampoco pueden ver tus contrasenas”: no es que no quieran, es que tecnicamente no pueden.
+
+\end{tcbinfo}
+
+\booksubsection{Funcion de derivacion de claves: PBKDF2 y Argon2}
+
+La contrasena maestra no se puede usar directamente como clave de cifrado; debe pasar por una “funcion de derivacion de claves”. Su funcion es\textbf{ralentizar el calculo a proposito}para que el coste de un ataque por fuerza bruta sea inviable.
+
+\begin{itemize}
+  \item \textbf{PBKDF2}: Estandar clasico usado por iCloud Keychain, Bitwarden, LastPass y otros. Ralentiza el descifrado mediante iteraciones repetidas (normalmente mas de 100.000) de hashing.
+  \item \textbf{Argon2}: Ganador del concurso de hashing de 2015; mas moderno que PBKDF2. Ademas del consumo de CPU, anade consumo de memoria para que el hardware especializado (GPU/ASIC) no pueda acelerar el descifrado. Lo soportan Bitwarden, KeePassXC y otros.
+\end{itemize}
+
+Cuanto mas altas sean las iteraciones, mas seguro, pero mas lento el desbloqueo. Los proveedores serios publican su algoritmo de derivacion y el numero de iteraciones para que la comunidad de seguridad los audite.
+
+\booksubsection{Leccion: filtracion de datos de LastPass en 2022}
+
+En agosto de 2022, el veterano gestor LastPass anuncio que su entorno de desarrollo habia sido comprometido; en noviembre revelo que el atacante se habia llevado copias de los almacenes de contrasenas de los usuarios (texto cifrado). Lecciones clave:
+
+\begin{itemize}
+  \item \textbf{La arquitectura de conocimiento cero resistio}: Como el almacen esta cifrado, el atacante obtuvo texto cifrado pero no pudo descifrarlo, siempre que la contrasena maestra del usuario fuera suficientemente fuerte.
+  \item \textbf{Los usuarios con contrasena maestra debil son los mas vulnerables}: El atacante puede forzar la contrasena debil sin conexion; los usuarios con contrasenas debiles o repetidas asumen un riesgo real.
+  \item \textbf{Tambien se filtraron metadatos}: Aunque el contenido de las contrasenas esta cifrado, metadatos como URL del sitio y notas podrian no estarlo, revelando que servicios usaba cada usuario.
+\end{itemize}
+
+\begin{tcbwarn}{Lecciones del incidente de LastPass}
+Primero, la contrasena maestra debe ser larga y unica (se recomiendan 16 o mas caracteres con mayusculas, minusculas, numeros y simbolos). Segundo, elige proveedores que soporten Argon2id y un alto numero de iteraciones. Tercero, activa verificacion en dos pasos independiente para cuentas de alto valor (banco, correo); no dependas solo del gestor de contrasenas.
+
+\end{tcbwarn}
+
+\booksection{Recomendacion de los principales gestores de contrasenas}
+
+\booksubsection{Integrados en el sistema:}
+
+\begin{itemize}
+  \item \textbf{iCloud Keychain}: La primera opción para usuarios de Apple. Integrado a la perfección con Safari y las Apps, gratuito y seguro. Inconveniente: poco práctico fuera de la plataforma.
+  \item \textbf{Google Password Manager}: Cómodo para usuarios de Android; integrado con Chrome y el sistema Android, gratuito.
+  \item \textbf{Huawei Password Safe}: Integrado en HarmonyOS, ideal para usuarios de Huawei.
+\end{itemize}
+
+\booksubsection{Herramientas de terceros:}
+
+\begin{itemize}
+  \item \textbf{Bitwarden}: Código abierto, gratuito y potente; compatible con todas las plataformas. Muy recomendado para quienes priorizan la privacidad.
+  \item \textbf{1Password}: Interfaz cuidada, muchas funciones, ideal para familias y equipos. De pago.
+  \item \textbf{LastPass}: Gestor de contraseñas veterano; versión gratuita con funciones limitadas.
+  \item \textbf{KeePass}: Almacenamiento totalmente local; código abierto y gratuito. Ideal para usuarios técnicos.
+\end{itemize}
+
+\booksection{Evaluacion real de la seguridad de las contrasenas}
+
+Los gestores de contrasenas muestran una barra de “fortaleza” (rojo, amarillo, verde), pero suele basarse solo en longitud y tipos de caracteres, lo cual es incompleto. Para juzgar de verdad si una contrasena es segura hay que considerar la “entropia” y si “ha sido filtrada”.
+
+\booksubsection{Entropia: la medida cientifica de la seguridad de una contrasena}
+
+La “entropia” mide la incertidumbre de la contrasena; la unidad es el bit. Cuanto mayor sea la entropia, mas intentos se necesitan para forzarla por fuerza bruta.
+
+\begin{itemize}
+  \item \textbf{"123456"}: Entropia bajisima; se descifra al instante.
+  \item \textbf{"P@ssw0rd"}: Parece compleja, pero esta en todas las listas de ataques de diccionario; la entropia sigue siendo baja.
+  \item \textbf{"correct horse battery staple"}: Cuatro palabras aleatorias; entropia de unos 44 bits; mucho mas dificil de descifrar que "P@ssw0rd".
+  \item \textbf{16 caracteres aleatorios (con mayusculas, minusculas, numeros y simbolos)}: Entropia de unos 100 bits; la capacidad de calculo actual no puede forzarla.
+\end{itemize}
+
+Conclusion:\textbf{“Longitud + aleatoriedad” es mas importante que “simbolos complejos”}. Por eso las contrasenas largas y aleatorias generadas por el gestor son realmente seguras.
+
+\booksubsection{HaveIBeenPwned: comprueba si tu contrasena se ha filtrado}
+
+Mantenido por el investigador de seguridad Troy Hunt\href{https://haveibeenpwned.com}{haveibeenpwned.com}recoge cuentas y contrasenas de filtraciones masivas anteriores. Puedes:
+
+\begin{enumerate}
+  \item Introducir tu correo para ver si tu cuenta aparecio en alguna filtracion.
+  \item Usar Pwned Passwords para comprobar si una contrasena esta en una base de datos de filtraciones conocida (los gestores y navegadores ya lo integran).
+\end{enumerate}
+
+Si una contrasena aparece en una filtracion,\textbf{por muy compleja que parezca, hay que cambiarla de inmediato}porque los ataques de diccionario prueban primero estas contrasenas conocidas.
+
+\begin{tcbinfo}{Principio de consulta k-anonimato}
+Te preocupa que introducir la contrasena en HaveIBeenPwned vuelva a filtrarla? No hace falta. Las consultas modernas usan el protocolo “k-anonimato”: el navegador solo envia los primeros 5 caracteres del hash al servidor, que devuelve todos los hashes que empiezan por esos 5 caracteres y luego se comparan localmente. El servidor nunca ve el hash completo de tu contrasena. Asi funcionan las funciones de “deteccion de contrasenas filtradas” de 1Password y Bitwarden.
+
+\end{tcbinfo}
+
+\booksubsection{Funciones de monitorizacion integradas en el gestor}
+
+\begin{itemize}
+  \item \textbf{1Password Watchtower}: Monitoriza en tiempo real contrasenas debiles, repetidas, filtradas, expiradas y sitios sin 2FA; las clasifica en rojo, naranja o amarillo.
+  \item \textbf{Bitwarden Vault Health}: La version gratuita muestra contrasenas debiles y repetidas; la de pago detecta contrasenas filtradas (basandose en HaveIBeenPwned).
+  \item \textbf{"Recomendaciones de seguridad" de iCloud Keychain}: Ajustes de iOS > Contrasenas > Recomendaciones de seguridad; indica que contrasenas aparecen en filtraciones conocidas y cuales estan repetidas.
+  \item \textbf{"Comprobacion de contrasenas" de Google Password Manager}: Integrado en Chrome; comprueba con un toque si hay contrasenas filtradas, debiles o repetidas.
+\end{itemize}
+
+\begin{tcbpractice}{Hazlo ahora: comprueba si tus contrasenas son seguras}
+\begin{enumerate}
+  \item Abre haveibeenpwned.com e introduce tu correo habitual para ver en que filtraciones aparece.
+  \item Usuarios de iPhone: Ajustes > Contrasenas > Recomendaciones de seguridad; resuelve una a una las alertas rojas.
+  \item Usuarios de Chrome: Ajustes > Contrasenas > Comprobar contrasenas; cambia lo que indique.
+  \item Usuarios de 1Password/Bitwarden: abre Watchtower/Health Reports y prioriza lo "filtrado" y lo "repetido".
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{Passkey: el futuro del inicio de sesion sin contrasena}
+
+Entre 2024 y 2026, la tecnologia de contrasenas esta viviendo una revolucion:\textbf{Passkey (clave de acceso)}podria eliminar las contrasenas tradicionales. Apple, Google y Microsoft la impulsan conjuntamente, con el respaldo de la alianza FIDO y el W3C; es el mayor cambio en el inicio de sesion en decadas.
+
+\booksubsection{Que es Passkey?}
+
+Passkey se basa en el estandar FIDO2/WebAuthn y usa\textbf{un par de claves en el dispositivo}en lugar de contrasena. El principio se simplifica asi:
+
+\begin{itemize}
+  \item Tu telefono genera un par de claves:\textbf{Clave publica}(registrada en el sitio) +\textbf{Clave privada}(que permanece en el chip de seguridad de tu dispositivo).
+  \item Al iniciar sesion, el sitio envia un "reto"; tu telefono lo firma con la clave privada y el sitio lo verifica con la clave publica.
+  \item Antes de firmar debes confirmar tu identidad con biometria (Face ID o huella) o el PIN del dispositivo.
+  \item En todo este proceso,\textbf{no se transmite ninguna contrasena por la red}.
+\end{itemize}
+
+\booksubsection{Passkey frente a contrasena tradicional}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimension} & \textbf{Contrasena tradicional} & \textbf{Passkey} \tabularnewline
+\hline
+Resistencia al phishing & Baja; el sitio de phishing puede robar la contrasena & Resistencia natural; la clave privada solo firma para el dominio real \tabularnewline
+Impacto de una filtracion del servidor & El hash de la contrasena podria descifrarse & El servidor solo guarda la clave publica; la filtracion no afecta \tabularnewline
+Comodidad & Hay que memorizar, escribir y gestionar & Inicio de sesion con Face ID o huella en un segundo \tabularnewline
+Ataque de reproduccion & Podria ser interceptado y reproducido por un intermediario & Cada firma es unica; no se puede reproducir \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Soporte por plataforma}
+
+\begin{itemize}
+  \item \textbf{Passkey en iCloud Keychain de Apple}: Soporte nativo en iOS 16+ y macOS Ventura+; Passkey se sincroniza entre todos los dispositivos con el mismo Apple ID; al cambiar de dispositivo no hace falta recrearlo.
+  \item \textbf{Passkey en Google Password Manager}: Soporte nativo en Android + Chrome; Passkey se guarda en la cuenta de Google y se sincroniza entre dispositivos Android; desde 2023, las cuentas personales de Google permiten iniciar sesion con Passkey.
+  \item \textbf{Microsoft}: Windows 11 y Edge ya soportan Passkey; Microsoft account, Outlook, Office y otros servicios lo habilitan progresivamente; se puede gestionar en Microsoft Authenticator.
+  \item \textbf{1Password / Bitwarden}: Soporta la creacion, el almacenamiento y la sincronizacion multiplataforma de Passkey; no estas limitado a un solo ecosistema.
+\end{itemize}
+
+\begin{tcbinfo}{La sincronizacion entre dispositivos es el avance clave}
+Al principio, el mayor problema de Passkey era que se vinculaba a un unico dispositivo: al cambiar de telefono habia que recrearlo. Desde 2023, Apple, Google y Microsoft sincronizan Passkey en la nube: iCloud Keychain entre dispositivos Apple y Google Password Manager entre dispositivos Android. 1Password y otros de terceros permiten la sincronizacion entre ecosistemas. Passkey ya es practico para sustituir a la contrasena.
+
+\end{tcbinfo}
+
+\booksubsection{Como crear y usar Passkey en el telefono}
+
+\textbf{Ruta en iOS (iPhone):}
+
+\begin{enumerate}
+  \item En la pagina de seguridad de la cuenta de un sitio compatible (como Google, Microsoft, Amazon, eBay o PayPal), selecciona "Anadir clave de acceso / Add passkey".
+  \item Aparece la verificacion de Face ID o Touch ID; al confirmarla, Passkey se genera y se guarda en iCloud Keychain.
+  \item La proxima vez, tras introducir el nombre de usuario, elige "Iniciar sesion con iPhone" y un toque de Face ID basta.
+  \item Gestion: Ajustes > Contrasenas > busca el sitio y veras la entrada de Passkey.
+\end{enumerate}
+
+\textbf{Ruta en Android:}
+
+\begin{enumerate}
+  \item En la pagina de seguridad del sitio compatible, selecciona "Anadir clave de acceso".
+  \item Aparece Google Password Manager > elige tu cuenta de Google > verifica con bloqueo de pantalla (huella, patron o PIN).
+  \item Passkey se guarda en Google Password Manager y se sincroniza entre dispositivos Android con la misma cuenta.
+  \item Al iniciar sesion, elige "Usar Passkey" y desbloquea la pantalla.
+  \item Gestion: Ajustes de Android > Contrasenas, claves y autocompletado > Gestor de contrasenas > google.com.
+\end{enumerate}
+
+\booksubsection{Inicio de sesion con Passkey entre dispositivos}
+
+Si inicias sesion en un PC Windows en un sitio donde solo tu iPhone tiene Passkey, puedes autorizar escaneando un codigo QR:
+
+\begin{enumerate}
+  \item En la pagina de inicio de sesion elige "Usar Passkey".
+  \item Elige "Usar otro dispositivo".
+  \item El PC muestra un codigo QR; escanealo con el iPhone.
+  \item El iPhone muestra la verificacion de Face ID; al confirmarla, el inicio de sesion se completa en el PC.
+\end{enumerate}
+
+Este proceso usa comunicacion doblemente cifrada por Bluetooth e Internet; la clave privada de Passkey no sale del iPhone.
+
+\begin{tcbpractice}{Pruebalo ahora: experimenta el inicio sin contrasena}
+\begin{enumerate}
+  \item Inicia sesion en tu cuenta de Google > Seguridad > Claves de acceso > Anadir clave de acceso; prueba el inicio con Face ID o huella.
+  \item Inicia sesion en tu cuenta de Microsoft > Seguridad > Opciones de seguridad avanzadas > Anadir clave de acceso.
+  \item Pruebalo en servicios que ya soportan Passkey, como Taobao, JD.com, eBay o PayPal.
+  \item Conserva la contrasena tradicional como respaldo y migra gradualmente las cuentas de alto valor a Passkey.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbwarn}{Recomendacion para la transicion}
+Passkey no sustituye completamente a la contrasena; muchos sitios siguen en fase de coexistencia. Recomendacion: activa Passkey en las cuentas de alto valor, pero\textbf{no borres la contrasena tradicional de inmediato}como respaldo; sigue usando el gestor de contrasenas porque no todos los sitios soportan Passkey. Considera Passkey un “complemento potente del gestor”, no un “sustituto inmediato”.
+
+\end{tcbwarn}
+
+\booksection{Llaves de seguridad de hardware}
+
+Si tu nivel de seguridad supera al del usuario medio (por ejemplo, posees muchas criptomonedas, eres directivo, periodista o activista, o proteges cuentas criticas de la empresa), una llave de seguridad de hardware es mas fiable que el SMS de verificacion.
+
+\booksubsection{Que es una llave de seguridad de hardware?}
+
+Es un dispositivo fisico (parecido a un pendrive) cuyo chip de seguridad interno almacena tu clave privada; requiere contacto fisico o NFC para verificar. Productos destacados:
+
+\begin{itemize}
+  \item \textbf{YubiKey}(de Yubico): la mas habitual; soporta FIDO2/WebAuthn, U2F, OTP, PIV y OpenPGP; disponible en USB-C, USB-A y NFC; serie 5 entre 50 y 70 dolares.
+  \item \textbf{Google Titan}: De Google; USB-C + NFC o Bluetooth; unos 30-40 dolares.
+  \item \textbf{OnlyKey}: Alternativa de codigo abierto; soporta multiples protocolos.
+  \item \textbf{Alternativas nacionales}: Como ePasskey de Feitian; precios mas asequibles.
+\end{itemize}
+
+\booksubsection{Por que una llave de hardware es mas segura que el SMS?}
+
+\begin{itemize}
+  \item \textbf{Resistencia al phishing}: Como Passkey, la llave solo responde al dominio real; los sitios de phishing no enganan a la llave.
+  \item \textbf{Resistencia al secuestro de SIM}: El SMS puede interceptarse con un ataque de SIM swap; la llave de hardware no depende del numero de telefono.
+  \item \textbf{Resistencia al intermediario}: El protocolo FIDO2 incluye un reto en cada firma; no se puede reproducir.
+  \item \textbf{Aislamiento fisico}: La clave privada permanece en el chip de hardware; aunque el malware comprometa tu ordenador, no podra leerla.
+\end{itemize}
+
+\booksubsection{Escenarios de uso}
+
+\begin{itemize}
+  \item Cuentas de exchanges de criptomonedas y recuperacion de carteras.
+  \item SSO empresarial, VPN de teletrabajo y acceso SSH a servidores.
+  \item Correo, GitHub y redes sociales como "cuenta maestra": si se compromete, permite restablecer las demas.
+  \item Personas de alto perfil: periodistas, abogados, directivos.
+\end{itemize}
+
+\booksubsection{Como configurar la llave de hardware como verificacion en dos pasos}
+
+Ejemplo con cuenta de Google y YubiKey:
+
+\begin{enumerate}
+  \item Compra una YubiKey (recomendado comprar dos: una para uso diario y otra de respaldo, guardadas en lugares distintos).
+  \item Entra en myaccount.google.com > Seguridad > Verificacion en dos pasos.
+  \item Selecciona "Anadir llave de seguridad" > inserta la YubiKey en el puerto USB-C o acerca al lector NFC del telefono.
+  \item Toca el contacto metalico de la YubiKey segun las instrucciones para completar el registro.
+  \item Recomendado registrar una segunda llave de respaldo.
+  \item En los ajustes de verificacion en dos pasos, establece la llave de hardware como metodo principal y el SMS como respaldo.
+\end{enumerate}
+
+Sitios compatibles principales: Google, GitHub, Microsoft, Apple ID, Facebook, Twitter, Dropbox, GitLab, AWS, Coinbase, Binance, entre otros.
+
+\begin{tcbinfo}{Estrategia de dos llaves}
+El mayor riesgo de la llave de hardware es perderla. Recomendaciones: 1) registra dos llaves distintas; 2) lleva una encima (en el llavero) y guarda otra en la caja fuerte de casa o del banco; 3) en algunos sitios puedes imprimir codigos de recuperacion y guardarlos sin conexion. Asi, si pierdes la principal, no te quedas fuera.
+
+\end{tcbinfo}
+
+\begin{tcbwarn}{Cuidado con el canal de compra}
+Compra en la tienda oficial o distribuidor autorizado; evita llaves de segunda mano o de origen dudoso, ya que un hardware preconfigurado podria tener una puerta trasera. El firmware de la YubiKey no se actualiza tras la fabricacion, pero Yubico publica avisos de seguridad; consulta su web.
+
+\end{tcbwarn}
+
+\booksection{Compartir contrasenas en familia o equipo}
+
+En la familia, Netflix, el Wi-Fi, el router y la cerradura inteligente se comparten; en el equipo, servidores, bases de datos y cuentas de redes sociales requieren acceso de varias personas.\textbf{Enviar contrasenas por WeChat o apuntarlas en un documento compartido son practicas de alto riesgo}si se filtran los chats o los permisos del documento, la contrasena queda expuesta.
+
+\booksubsection{“Caja fuerte compartida” (Vault) de 1Password}
+
+1Password es el producto de referencia para compartir en familia y equipos. Su mecanismo central son\textbf{varios almacenes}:
+
+\begin{itemize}
+  \item \textbf{Almacen personal}: Solo tu lo ves; para cuentas privadas como banco o correo.
+  \item \textbf{Almacen compartido}: Lo ven familiares o companeros de equipo; por ejemplo, Netflix, Wi-Fi de casa o tarjetas de credito compartidas.
+  \item \textbf{Permisos por niveles}: La version para equipos permite que algunos miembros solo consulten o consulten sin editar.
+\end{itemize}
+
+Los familiares o companeros no comparten la contrasena maestra; cada uno inicia sesion con su cuenta y ve el contenido del almacen compartido autorizado. Cuando se modifica una contrasena, se sincroniza para todos en tiempo real.
+
+\booksubsection{Funcion “Organizacion” de Bitwarden}
+
+La version gratuita de Bitwarden permite compartir contrasenas individuales (mediante “Send”, con limite de tiempo); la version de pago crea “organizaciones” para compartir entradas con familiares o companeros, con permisos detallados. Bitwarden ofrece ademas la opcion de autoalojamiento para empresas que exigen soberania sobre los datos.
+
+\booksubsection{Entorno familiar: como compartir contrasenas de Netflix, Wi-Fi y similares de forma segura}
+
+\begin{itemize}
+  \item \textbf{Netflix / sitios de video}: Guarda la contrasena en el almacen compartido de 1Password Families; cada miembro inicia sesion por su cuenta sin enviarla por el grupo.
+  \item \textbf{Contrasena del Wi-Fi de casa}: Entre dispositivos iOS se puede compartir el Wi-Fi por AirDrop a los invitados sin decirlo en voz alta; en Android 12+ existe la funcion "Compartir Wi-Fi cercano".
+  \item \textbf{Cerraduras inteligentes y electrodomesticos}: Usa la funcion "miembros de la familia" de la app del fabricante para crear cuentas individuales; evita compartir una sola cuenta de administrador.
+  \item \textbf{Panel del router domestico}: Guarda la contrasena de administrador en el almacen compartido de 1Password; abre un SSID independiente para el Wi-Fi de invitados.
+\end{itemize}
+
+\begin{tcbinfo}{Relacion calidad-precio de 1Password Families}
+1Password Families cuesta unos 4,99 dolares al mes para hasta 5 miembros; cada uno tiene un almacen privado y 4 compartidos. Menos de 1 dolar por persona al mes; es la mejor experiencia de comparticion familiar. La version familiar de Bitwarden cuesta 10 dolares al ano para 6 personas; mejor precio, pero la interfaz es algo inferior.
+
+\end{tcbinfo}
+
+\booksubsection{Entorno de equipo: compartir contrasenas de servidores y bases de datos}
+
+\begin{itemize}
+  \item \textbf{1Password Teams / Business}: Crea almacenes por departamento o equipo de proyecto con permisos detallados; todas las acciones de acceso son auditables.
+  \item \textbf{Bitwarden Teams / Enterprise}: Solucion de codigo abierto autoalojable; la version empresarial soporta SSO y sincronizacion de directorios.
+  \item \textbf{Principio de separacion de funciones}: La contrasena de administrador no debe estar en manos de una sola persona; nombra 2 o 3 "contactos de emergencia" para que la baja o las vacaciones de alguien no detengan el servicio.
+  \item \textbf{Proceso de baja}: Al marcharse un empleado, revoca de inmediato su acceso al gestor y, si es necesario, rota todas las contrasenas sensibles a las que tuvo acceso.
+\end{itemize}
+
+\booksubsection{Acceso de emergencia (Emergency Access): por si te pasa algo}
+
+Imagina que gestionas tu solo todas las cuentas familiares; si tienes un accidente o falleces, tu familia no podra acceder a banco, correo ni seguros.\textbf{La funcion “Acceso de emergencia”}esta diseñada para eso: autorizas a un familiar o amigo de confianza a acceder a tu almacen cuando tu no puedas responder.
+
+\textbf{Configuracion del acceso de emergencia en Bitwarden:}
+
+\begin{enumerate}
+  \item Entra en la caja fuerte web de Bitwarden > Ajustes > Acceso de emergencia.
+  \item Anade el correo del contacto de confianza e invitalo a aceptar.
+  \item Define un "periodo de espera" (recomendado 7-14 dias): el tiempo desde la peticion hasta tu confirmacion.
+  \item Si no respondes durante la espera (no rechazas ni haces nada), el acceso se concede automaticamente al expirar.
+  \item Puedes rechazar la peticion o revocar el acceso cuando quieras.
+\end{enumerate}
+
+\textbf{Acceso de emergencia en 1Password:}
+
+\begin{enumerate}
+  \item 1Password no lo llama "acceso de emergencia" directamente, pero se puede lograr mediante la funcion de "organizacion familiar o de equipo": anade a los familiares y coloca algunas entradas en el almacen compartido.
+  \item Para usuarios individuales, recomendamos dar la contrasena maestra a un familiar de maxima confianza o guardarla en un sobre cerrado en la caja fuerte.
+  \item 1Password ofrece tambien un "codigo de recuperacion"; al activar la verificacion en dos pasos, imprimelo y guardalo.
+\end{enumerate}
+
+\begin{tcbpractice}{Hazlo ahora: deja una "llave de repuesto" para tu familia}
+\begin{enumerate}
+  \item Elige a un familiar de confianza como "contacto de emergencia".
+  \item Configura el acceso de emergencia (Bitwarden) o anadelo al almacen familiar compartido (1Password).
+  \item Escribe en papel la contrasena maestra y el codigo de recuperacion, metelos en un sobre y guardalos en la caja fuerte de casa o comunicaselo a un familiar de confianza.
+  \item Revisalo cada seis meses para confirmar que el contacto de emergencia sigue siendo el adecuado.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{Mejores practicas en el uso del gestor de contrasenas}
+
+\begin{itemize}
+  \item \textbf{Establece una contraseña maestra fuerte}: La contraseña maestra es la última línea de defensa; elige una larga y compleja y memorízala.
+  \item \textbf{Activa la autenticación de dos factores (2FA)}: Activa la verificación en dos pasos para la cuenta de tu gestor: una capa más de protección.
+  \item \textbf{Revisa periódicamente las contraseñas débiles}: La mayoría de los gestores tienen una función de «auditoría de seguridad» que te ayuda a encontrar contraseñas débiles y repetidas.
+  \item \textbf{No olvides la contraseña maestra}: La contraseña maestra no se puede recuperar; olvidarla significa perder todas las contraseñas. Anótala en papel y guárdala en un lugar seguro.
+  \item \textbf{Acceso de emergencia}: Designa un contacto de emergencia para que, si no puedes acceder, una persona de confianza pueda obtener tus contraseñas.
+\end{itemize}
+
+\begin{tcbwarn}{Aviso importante}
+Los gestores de contraseñas son cómodos, pero conllevan riesgos: si se filtra la contraseña maestra, todas quedan expuestas. Nunca uses la misma contraseña maestra que para otras cuentas, ni la escribas donde pueda ser encontrada fácilmente. Además, elige proveedores con buen historial de seguridad.
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{Practica ahora: empieza a usar un gestor de contraseñas}
+\begin{enumerate}
+  \item Elige un gestor (recomiendo Bitwarden o el del sistema).
+  \item Regístrate y establece una contraseña maestra fuerte.
+  \item Importar contraseñas existentes (si las tienes) o empezar a añadir nuevas.
+  \item Instala la extensión del navegador o la App móvil; prueba el relleno automático.
+  \item Revisa el informe de auditoría de seguridad; encuentra contraseñas que mejorar.
+\end{enumerate}
+
+\end{tcbpractice}

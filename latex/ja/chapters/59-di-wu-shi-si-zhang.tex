@@ -1,0 +1,196 @@
+\bookchapter{第五十四章：プロジェクト1——わたしの家計簿（ローカル版）}
+
+\chapterintro{いよいよ最初の「きちんとしたプロジェクト」です。この家計簿はネットにはつながりませんが、中身はそろっています。記録を付けられて、履歴が見られて、月ごとの集計ができて、削除も編集もできる。作り終える頃には、「データ ロジック 画面」の全工程を一通り歩いたことになります。コードを急いで写そうとしないこと。まず考えてから手を動かす。これが本書のいつもの方針です。}
+
+\booksection{要件を考える：まず5つの質問}
+
+手を動かす前に、「要件の5要素」でアイデアを整理しましょう。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{要素} & \textbf{答え} \tabularnewline
+\hline
+Who（誰に使うか） & 自分用。家族や友人でもOK \tabularnewline
+What（何をするか） & 収支を記録、履歴を見る、月ごとにまとめる、カテゴリ別に集計 \tabularnewline
+Why（なぜ作るか） & 練習＋お金を何に使ったかをはっきりさせる \tabularnewline
+How（どう作るか） & Kotlin＋Compose＋Room＋MVVM。完全ローカルでサーバーなし \tabularnewline
+Constraint（制約） & 1週間で完成。Android 8以上に対応。ストアに出さないとしても、出品基準で作っておく \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}家計簿の要件5要素\end{center}
+
+次に、「どの段階でも使える」小さなステップに分解します。(1)Roomのデータ層を作る（1件保存できる）。(2)一覧画面（履歴が見られる）。(3)入力画面（記録を追加できる）。(4)削除と編集。(5)月次のまとめカード。1ステップ終えるたびに、アプリは「使えるもの」になっています。
+
+\booksection{データ層：記録に「住まい」を与える}
+
+まず1件の記録がどんな形かを定義します。フィールドは足りる分だけで、欲張らないこと。
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" 収入 | "expense" 支出
+    val amount: Double,      // 金額（元）
+    val category: String,    // カテゴリー：食費、交通、給料……
+    val note: String = "",   // メモ（任意）
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Daoに「集計用」のクエリを2つ追加します。ここが家計簿の魂です。
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // monthは「2026-08」の形
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{ワンポイント：金額はなぜDouble？}
+真面目な金融アプリは、BigDecimalや「分（セント）単位のInt」で浮動小数点の誤差（0.1+0.2$\neq$0.3という古典的な問題）を避けます。練習のプロジェクトならDoubleで十分です。いつか本物の金融の製品を作るときは「分」単位に替えるのを忘れずに。先人たちが無数に踏んできた落とし穴です。
+
+\end{tcbinfo}
+
+\booksection{MVVM：画面とロジックを「別々の家」にする}
+
+画面から直接データベースを操作させたら？　動きはしますが、画面のコードは長くて読みにくくなります。MVVMアーキテクチャなら、それぞれの役割がはっきりします。View（画面）は描くことだけ、ViewModel（ロジックの中枢）はデータを担当、Model（Room）は保存を担当です。
+
+View（Composeの画面）
+
+ViewModel（状態とロジック）
+
+Model（Roomのデータ層）
+
+\begin{center}\small\color{gray}図5：MVVMの3層構造——データは一方向に流れ、各層は互いに境界を越えない\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // Flowを画面から観察できる状態に変換
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // ユーザー操作：suspend関数を呼ぶ
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+画面（Compose）ではこう書きます。val vm: RecordViewModel = viewModel() として、続いて val list by vm.records.collectAsState()。データが変わればリストが自動で更新され、こちらは何もする必要がありません。これがMVVM＋Flow＋Composeの三本柱がそろった力です。
+
+\booksection{画面：一覧画面＋入力画面}
+
+一覧画面にはLazyColumn（遅延読み込みリスト）を使います。データがどれだけ増えても動きが重くなりません。
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // 上部の集計カード（収入-支出=残高）
+        SummaryCard(records)
+
+        // 明細リスト
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // 浮遊する「記帳」ボタン  入力ダイアログを出す
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+入力にはAlertDialog（ダイアログ）が一番手軽です。入力欄をいくつか並べて、収入／支出の切り替え、カテゴリのプルダウンを付け、「確定」を押したら vm.addRecord(...) を呼ぶだけです。
+
+\begin{tcbwarn}{注意：入力チェックは手を抜かない}
+金額の入力欄は必ずチェックします。空の値、マイナス、「abc」のような不正な入力は全部はじきます（toDoubleOrNull() で判定）。アプリがクラッシュするいちばんよくある原因のひとつが、「ユーザーの入力をいい子だと思い込む」ことです。ユーザーの入力はすべて、敵として吟味する、と覚えてください。
+
+\end{tcbwarn}
+
+\booksection{編集と削除：データを「入れて出せる」ように}
+
+追加だけできて削除できない家計簿は、3日で使わなくなります。操作を2つ足しましょう。
+
+\begin{lstlisting}[language=Kotlin]
+// Daoに2つ追加：
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// 画面では：リスト項目を長押しして「編集/削除」メニューを出す（ComposeはDropdownMenuかAlertDialogを使う）
+// 削除前には確認ダイアログを出すのが一番——「うっかり削除」は家計簿アプリのユーザーが最も嫌うこと
+\end{lstlisting}
+
+操作まわりの細かいコツが2つ。削除は必ず二重確認にする（うっかり操作の防止）。編集はできるだけ元の値を先に入れておく（1文字だけ直すほうが、打ち直すより楽）。この2つの細かい点を舐めてはいけません。製品らしい使い心地は、こうした積み重ねでできているのです。
+
+\booksection{検収：3層のチェック＋2つの上級チャレンジ}
+
+\booksection{検収：3層のチェック＋2つの上級チャレンジ}
+
+プロジェクトができたら、「機能 境界 アーキテクチャ」の3層で検収します。記録できるか、削除できるか、アプリを開き直してもデータが残っているか（機能）。金額に0やマイナスを入れてもクラッシュしないか、画面回転でデータが消えないか（境界）。画面とデータが混ざっていないか、値がハードコーディングされていないか（アーキテクチャ）。
+
+基本版の検収を通ったら、自分に「上級の一品」を2つ追加しましょう。
+
+\begin{enumerate}
+  \item 月別フィルター：上部に月の切り替え（たとえば 2026-08 v）を付け、リストには当月の履歴だけを表示する。
+  \item カテゴリ別の円グラフ：ComposeのCanvasを使うか、軽量なグラフライブラリを入れて、「お金を何に使ったか」を円グラフにします。ここまでできれば、家計簿はだいぶ「製品っぽく」なります。
+\end{enumerate}
+
+\begin{tcbpractice}{やってみよう：今週中に完成させる}
+「データ層 ViewModel 一覧画面 入力画面 まとめカード」の順に手を動かし、1日1ステップで進めます。つまづいたら、エラーをそのまま検索エンジンやAIに投げましょう（第7部『AIプログラミング実戦編』を覚えていますか？　問題を説明するときは「期待する動作·実際の動作·再現手順」をはっきり伝えます）。完成したら、1週間これで家計をつけてみてください。自分で作ったアプリを使うと、達成感が先へ進む力になります。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章のまとめ}
+\begin{itemize}
+  \item 要件の5要素 「どの段階でも使える」小ステップに分解してから手を動かす
+  \item データ層：Recordエンティティ＋Dao（月次集計のSQLを含む）＋Database
+  \item MVVMの分担：Viewは描くだけ、ViewModelはロジック、Modelは保存
+  \item Flow＋stateIn＋collectAsState：データが変われば画面が自動で更新される
+  \item LazyColumnは遅延読み込みリスト。入力にはAlertDialog
+  \item 3層の検収（機能／境界／アーキテクチャ）＋上級チャレンジ（月別フィルター、カテゴリ別円グラフ）
+\end{itemize}
+
+\end{tcbsummary}

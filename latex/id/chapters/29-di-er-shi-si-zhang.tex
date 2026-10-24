@@ -1,0 +1,131 @@
+\bookchapter{Bab 24: Analisis Mendalam Izin Root dan Kunci BL}
+
+\chapterintro{Bab ini adalah perluasan mendalam dari konten Bab 20, cocok untuk pengguna yang benar-benar ingin memahami mekanisme bawah-hood ponsel, bahkan mencoba flashing. Harap diperhatikan, operasi ini memiliki risiko tertentu, lakukan dengan hati-hati.}
+
+\booksection{Memahami Bootloader Secara Mendalam}
+
+Bootloader adalah program pertama yang berjalan saat ponsel dinyalakan, tugasnya adalah menginisialisasi hardware dan memuat kernel sistem operasi. Bootloader bisa dipahami sebagai “penjaga gerbang” ponsel.
+
+\booksubsection{Prinsip Kerja Kunci BL:}
+
+\begin{itemize}
+  \item \textbf{Verifikasi tanda tangan}: Kunci BL akan memverifikasi tanda tangan digital boot image, hanya sistem yang ditandatangani produsen yang bisa boot.
+  \item \textbf{Mencegah downgrade}: Mencegah user flash sistem versi lama untuk memanfaatkan celah keamanan yang diketahui.
+  \item \textbf{Melindungi data}: Bahkan jika flash sistem baru, tanpa kata sandi akun asli tidak bisa mengakses data user.
+\end{itemize}
+
+\booksubsection{Penyimpanan dan Verifikasi Level Hardware}
+
+Status lock BL lock (Locked/Unlocked) dan public key vendor, biasanya disimpan di area hardware yang dilindungi (seperti partisi devinfo Qualcomm, eFuse atau partisi RPMB), mencegah dimodifikasi software. Setiap boot, Bootloader akan membaca status dari area aman ini, dan berdasarkan itu memutuskan apakah execute verifikasi tanda tangan yang ketat.
+
+\booksubsection{Verifikasi Tanda Tangan Digital}
+
+Saat vendor merilis system update atau image, akan memakai private key-nya untuk menandatangani. Saat perangkat boot, Bootloader akan memakai public key built-in untuk verifikasi system image (seperti boot.img, recovery.img). Cara kerjanya:
+
+\begin{enumerate}
+  \item Recalculate hash value untuk system image.
+  \item Dekripsi tanda tangan bawaan image dengan public key, mendapatkan satu hash value.
+  \item Bandingkan kedua hash value, jika konsisten maka lulus verifikasi. Ini memastikan system image tidak di-tamper pihak ketiga.
+\end{enumerate}
+
+\booksubsection{Secure Boot Chain}
+
+BL lock adalah link pertama dari seluruh secure boot chain. Setelah verifikasi lulus, baru load dan execute bootloader tahap berikutnya (seperti kernel), sehingga berlapis-lapis memastikan kredibilitas environment boot sistem.
+
+\booksubsection{Lock vs Unlock: Dampak Dua Sisi BL Lock}
+
+Untuk lebih intuitif memahami pro dan kontra BL lock, kita pakai comparison table untuk menampilkan perbedaannya di 5 dimensi inti:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Fungsi Inti} & \textbf{Status Locked (Default)} & \textbf{Status Setelah Unlock} \tabularnewline
+\hline
+Keamanan Sistem & Mencegah flash sistem non-resmi yang tidak ditandatangani, melindungi integritas sistem dan keamanan low-level\newline Keamanan tinggi: Hanya load image resmi yang ditandatangani, efektif menahan modifikasi firmware malicious & Keamanan turun: Mengizinkan flash ROM pihak ketiga, mekanisme verifikasi integritas sistem gagal, malware jika mendapat permission Root bisa modifikasi sistem mendalam \tabularnewline
+Stabilitas Sistem & Memastikan ponsel menjalankan sistem resmi yang sudah diuji dan dioptimalkan vendor, menjamin stabil dan lancar\newline Stabil: Memakai firmware resmi, fungsi lengkap, OTA upgrade dapat diandalkan & Risiko meningkat: ROM pihak ketiga mungkin ada masalah kompatibilitas, mungkin menyebabkan sistem crash, brick, fungsi hardware abnormal (seperti kamera, fast charge), OTA update mungkin gagal \tabularnewline
+Hak Garansi & Vendor via lock BL menyediakan sistem resmi yang stabil, untuk memberikan layanan garansi\newline Garansi berlaku: Menikmati layanan garansi gratis resmi (bukan kerusakan buatan manusia) & Garansi batal: Mayoritas vendor menganggap unlock BL sebagai perilaku aktif melepaskan garansi, bahkan jika re-lock, mungkin terdeteksi riwayat unlock dan ditolak garansi \tabularnewline
+Keamanan Data & Proses unlock biasanya paksa clear data, mencegah data lama dimanfaatkan secara malicious di environment sistem baru\newline Data aman: Dalam penggunaan harian, BL lock membatasi kemampuan program malicious memodifikasi system partition & Risiko data: Saat unlock akan paksa clear semua data user; jika setelah unlock tidak dienkripsi dengan benar, penyimpanan data mungkin tidak aman; setelah hilang lebih mudah di-flash untuk ekstraksi data \tabularnewline
+Batasan Fungsi & Memastikan fungsi yang bergantung pada environment aman (seperti pembayaran, App bank) berjalan normal\newline Fungsi lengkap: Semua fungsi resmi bisa normal dipakai & Fungsi terbatas: Sebagian app security-sensitive (seperti Google Pay, App bank) mungkin karena mendeteksi status BL unlock menolak running; layanan DRM mungkin degrade, mempengaruhi playback video HD \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksection{Proses Detail Membuka Kunci BL (Contoh: Xiaomi)}
+
+\begin{enumerate}
+  \item \textbf{Ajukan izin unlock}: Ajukan unlock di situs Xiaomi Unlock Tool.
+  \item \textbf{Hubungkan akun}: Hubungkan akun Xiaomi di pengaturan ponsel.
+  \item \textbf{Masa tunggu}: Sesuai level akun, perlu menunggu 7-30 hari.
+  \item \textbf{Operasi unlock}: Gunakan Xiaomi Unlock Tool hubungkan ke komputer untuk unlock.
+\end{enumerate}
+
+\booksection{Berbagai Solusi Root}
+
+\begin{itemize}
+  \item \textbf{Magisk}: Solusi Root modern, desain Systemless, bisa menyembunyikan status Root.
+  \item \textbf{Kernelsu}: Solusi Root berbasis kernel, lebih low-level, penyembunyian lebih baik.
+  \item \textbf{SuperSU}: Solusi Root lama, saat ini sudah berhenti update.
+\end{itemize}
+
+\booksection{Pengenalan Flashing}
+
+Flashing adalah menginstal sistem operasi baru ke ponsel. Jenis flashing yang umum:
+
+\begin{itemize}
+  \item \textbf{Flash ROM resmi}: Instal sistem resmi, untuk recovery atau downgrade.
+  \item \textbf{Flash Recovery pihak ketiga}: Seperti TWRP, untuk backup recovery, flash ROM pihak ketiga.
+  \item \textbf{Flash ROM pihak ketiga}: Seperti LineageOS, Pixel Experience, dll., untuk merasakan sistem yang berbeda.
+\end{itemize}
+
+\booksection{Samsung Knox: Harga Tak Dapat Dibalik dari BL Unlock}
+
+Berbeda dengan vendor Android lain, mekanisme BL unlock ponsel Samsung punya desain “fuse” yang unik:\textbf{Untuk ponsel Samsung, unlock akan trigger Knox fuse, permanen kehilangan sebagian fungsi keamanan (seperti Samsung Pay); akan clear semua data yang dilindungi; mempengaruhi garansi}. Secara spesifik:
+
+\begin{itemize}
+  \item \textbf{Fuse sekali pakai}: Di dalam ponsel ada satu eFuse, sekali mendeteksi BL di-unlock akan permanen putus, tidak bisa recovery.
+  \item \textbf{Fungsi yang Terpengaruh}: Samsung Pay (kartu transportasi/kartu bank), Knox Secure Folder, kontrol MDM enterprise, sebagian App asuransi kesehatan akan berhenti berlaku.
+  \item \textbf{Paksa Clear Data}: Setelah fuse trigger ponsel akan paksa factory reset, semua data lokal dierase (data cloud tidak terpengaruh).
+  \item \textbf{Dampak Garansi}: Official secara eksplisit menyatakan setelah Knox fuse tidak lagi menikmati layanan garansi.
+\end{itemize}
+
+\begin{tcbwarn}{Pikirkan Masak-Masak Sebelum Bertindak}
+Fuse Knox Samsung adalah\textbf{irreversible}, sekali trigger tidak bisa kembali ke status pabrik. Jika Anda hanya ingin memakai beberapa fungsi yang aslinya butuh Root, disarankan pertama cek apakah ada alternatif tanpa Root.
+
+\end{tcbwarn}
+
+\textbf{Peringatan Penting}\par
+
+Flashing memiliki risiko, operasi harus hati-hati. Dapat menyebabkan:
+
+\begin{itemize}
+  \item Ponsel brick (tidak bisa boot)
+  \item Hilang garansi
+  \item Kehilangan data
+  \item Fungsi pembayaran abnormal
+\end{itemize}
+
+Sebelum flashing, wajib melakukan backup lengkap, baca tutorial dengan teliti, konfirmasi model dan versi cocok.
+
+\begin{tcbinfo}{Sumber Daya Rekomendasi}
+\begin{itemize}
+  \item \textbf{XDA Developers}: Komunitas developer Android terbesar di dunia, memiliki tutorial flashing dan sumber daya ROM yang kaya.
+  \item \textbf{Coolapk}: Komunitas digital domestik yang terkenal, banyak tutorial dan diskusi bahasa Mandarin.
+  \item \textbf{Forum masing-masing model}: Seperti Mi Community, OnePlus Community, dll., memiliki tutorial resmi dan komunitas.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{FAQ (Tanya Jawab)}
+
+\textbf{Q1: Setelah unlock BL lock bisa recovery?}\par
+
+\textbf{A:}Bisa re-lock. Biasanya perlu flash official complete flash package, dan pakai flashing script tertentu (seperti Xiaomi\texttt{flash\_all\_lock.\allowbreak bat}) bisa re-lock. Tapi perhatikan, setelah re-lock, beberapa fuse keamanan yang di-trigger karena unlock (seperti Knox Samsung) mungkin tidak bisa di-reverse.
+
+\textbf{Q2: Setelah unlock bagaimana Root?}\par
+
+\textbf{A:}Unlock BL lock hanya langkah pertama. Root biasanya butuh:
+
+\begin{enumerate}
+  \item Flash custom Recovery (seperti TWRP).
+  \item Via Recovery flash Magisk dan Root manager lain untuk patch boot image, lalu mendapatkan Root permission.
+\end{enumerate}

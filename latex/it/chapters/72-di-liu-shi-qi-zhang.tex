@@ -1,0 +1,149 @@
+\bookchapter{Capitolo 67: Lucidatura e pubblicazione — test, debug e approdo sull'App Store}
+
+\chapterintro{L'app è fatta, e adesso? Questo capitolo risponde alle tre questioni del passaggio da “funziona” a “consegnabile”: come fare debug in modo efficiente per trovare i bug, come scrivere test per prevenire le regressioni e come portare l'app sull'App Store perché il mondo intero possa scaricarla. L'approdo sullo store non è solo una cerimonia: è la linea di confine tra un'opera e un prodotto.}
+
+\booksection{I tre strumenti del debug: print, breakpoint, anteprima}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Strumento} & \textbf{A cosa serve} & \textbf{Come si usa} \tabularnewline
+\hline
+print + console & Leggere i log di esecuzione & Nel codice print("valore=\textbackslash{}(x)") e l'output si legge nella console in basso a Xcode \tabularnewline
+Debug con breakpoint & Far fermare il programma su una riga e vedere i valori delle variabili & Tocca accanto al numero di riga per creare il segnalino blu; all'esecuzione il programma si ferma lì e avanzi passo per passo \tabularnewline
+Anteprima SwiftUI + debugger & Vedere in tempo reale l'interfaccia e la gerarchia delle viste & Canvas di \#Preview + l'ispettore View Hierarchy a runtime \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}I tre strumenti del debug\end{center}
+
+\begin{tcbinfo}{Consiglio: come leggere un crash?}
+Quando Swift crasha, la console stampa “Fatal error” con la causa e Xcode si ferma sulla riga incriminata evidenziandola. I crash passati su dispositivo reale si consultano in Xcode Window Organizer Crashes (serve un account a pagamento). Cerca prima di tutto “la prima frase della causa dell'errore + swiftui”: solo una domanda precisa produce una risposta precisa.
+
+\end{tcbinfo}
+
+\booksection{I test: l'assicurazione del codice}
+
+I test a mano non sono affidabili — correggi una funzione e un'altra si rompe senza farsi notare. I test sono la “pillola dei rimpianti” e il “giubbotto antiproiettile”. Su iOS si usa il framework XCTest, in due varianti:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Livello} & \textbf{Cosa verifica} & \textbf{Target} & \textbf{Velocità} \tabularnewline
+\hline
+Test unitari & Logica pura (calcoli, validazioni) & MyFirstAppTests & In secondi \tabularnewline
+Test UI & Comportamento reale dell'interfaccia & MyFirstAppUITests & In minuti \tabularnewline
+Test manuale & Le sensazioni e l'esperienza di una persona vera & —— & Serve sempre \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}I livelli di test iOS (il progetto modello ha già due Test Target predisposti)\end{center}
+
+\begin{lstlisting}[language=Swift]
+import XCTest
+
+// Estrai la logica tipo "stringa importo in numero" in una funzione pura
+func parseAmount(_ input: String) -> Double? {
+    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+          v > 0 else { return nil }
+    return v
+}
+
+final class AmountTests: XCTestCase {
+    func testEmptyInputReturnsNil() {
+        XCTAssertNil(parseAmount(""))
+    }
+    func testNegativeReturnsNil() {
+        XCTAssertNil(parseAmount("-5"))
+    }
+    func testNormalValueParses() {
+        XCTAssertEqual(parseAmount("12.5"), 12.5)
+    }
+}
+\end{lstlisting}
+
+Eseguire i test: CmdU. Quando è tutto verde puoi modificare il codice con serenità. La validazione degli importi e i calcoli di riepilogo del registro delle spese dovrebbero essere coperti da test unitari.
+
+\booksection{Firma e pacchetto: mettere il “sigillo” all'app}
+
+Ogni app iOS deve essere firmata per poter essere installata — prova che “questo pacchetto viene da te e non è stato manomesso”. I rapporti di gerarchia:
+
+\begin{itemize}
+  \item Fase di apprendimento: Apple ID gratuito + firma automatica di Xcode (Personal Team), funziona su dispositivo reale ma va rinnovata ogni 7 giorni;
+  \item Fase di distribuzione: un account sviluppatore a pagamento (99 dollari/anno) emette certificati e profili di provisioning, indispensabili per lo store e per l'installazione di lungo periodo.
+\end{itemize}
+
+Pacchetto: menu di Xcode Product Archive (creare l'archivio), a build conclusa in Organizer Distribute App scegli App Store Connect carica. L'archiviazione richiede come destinazione Generic iOS Device (non il simulatore): è il passaggio che i principianti dimenticano più spesso.
+
+\textbf{Attenzione alle trappole: certificato perso = aggiornamenti in stallo}\par
+
+Se perdi il certificato di firma e la chiave privata, non potrai più inviare aggiornamenti alla vecchia app: gli utenti potranno installare solo l'applicazione da “nuova”. Fai un backup accurato dei certificati (esportazione .p12 dal portachiavi) e custodisci bene la password. Per fortuna Apple offre la “firma automatica” e la gestione dei certificati nel cloud (in Xcode spunta Automatically manage signing), che evita la maggior parte delle insidie manuali.
+
+\booksection{Il percorso completo per arrivare sull'App Store}
+
+Registrare l'account sviluppatore
+
+Preparare gli asset per lo store
+
+Carica la build
+
+Compila info su privacy e revisione
+
+Revisione Apple (1-7 giorni)
+
+Pubblicato
+
+\begin{center}\small\color{gray}Figura 5: i sei passi per l'approdo sull'App Store\end{center}
+
+\begin{itemize}
+  \item Registrazione: developer.apple.com, account personale 99 dollari/anno;
+  \item Materiali: icona (1024×1024, senza angoli arrotondati — li taglia Apple), screenshot (per le varie dimensioni di iPhone), descrizione, link all'informativa sulla privacy;
+  \item Questionario sulla privacy: dichiara con onestà quali dati raccogli — un registro delle spese senza rete può dichiarare "nessun dato raccolto";
+  \item Revisione: alla prima sottomissione l'attesa è spesso di 1-7 giorni; se vieni respinto, correggi punto per punto secondo le "note di revisione" — le motivazioni del rifiuto di Apple sono di solito scritte in modo molto specifico, basta metterle in pratica;
+  \item TestFlight: prima della pubblicazione, manda la versione di prova agli amici per il beta testing (fino a 10000 persone), raccogli un giro di feedback e poi sottometti ufficialmente: tutto da professionisti.
+\end{itemize}
+
+\booksection{Come fare i materiali dello store: la prima impressione vale i download}
+
+La pagina dello store è la vetrina che l'utente vede mentre “gira per i negozi”. Tre materiali decidono la prima impressione:
+
+\begin{itemize}
+  \item Icona: 1024×1024, non improvvisare con uno screenshot. Se non hai competenze di design, genera una forma essenziale con uno strumento di IA: è valida solo se, ridotta sul desktop, resta riconoscibile a colpo d'occhio;
+  \item Screenshot: almeno 2 set (per le dimensioni principali di iPhone), che mostrino le scene funzionali più importanti; a ognuno una frase in parole semplici ("Registra una voce in un secondo" vale dieci volte "Efficiente soluzione di contabilità");
+  \item Descrizione: la prima frase chiarisca "cos'è + per chi è", senza accumulare "il più professionale, il più potente" — la sincerità funziona meglio dell'esagerazione.
+\end{itemize}
+
+\begin{tcbpractice}{Mettiti alla prova: "consegna" una volta il registro delle spese}
+\booksection{Segnalazione dei crash e piccola lista per l'ottimizzazione delle prestazioni}
+
+Prima di portare l'app sullo store, queste due cose meritano mezz'ora ciascuna:
+
+\booksubsection{Monitoraggio dei crash}
+
+Se non crasha nei tuoi test, non significa che non crashi sul telefono dell'utente. Apple offre rapporti di crash gratuiti in Xcode Organizer (con l'account a pagamento si vedono i log dei crash su dispositivo reale); la soluzione più comoda è integrare un SDK di terze parti (per esempio Firebase Crashlytics). Pubblicare senza monitoraggio dei crash è come guidare a occhi chiusi.
+
+\booksubsection{I quattro controlli delle prestazioni}
+
+\begin{enumerate}
+  \item Per gli elenchi usa LazyVStack / List: non impaginare liste lunghe con un normale VStack — il caricamento pigro è la prima lezione di prestazioni;
+  \item Non imporre le immagini originali: usa AsyncImage (immagini remote) e la cache di sistema — un originale da 5MB basta a bloccare i modelli più datati;
+  \item Niente lavori pesanti sul thread principale: rete e file grandi passano per async/await;
+  \item Misura con Instruments: il profiler incluso in Xcode (Time Profiler, controllo delle perdite di memoria) — prima misura, poi ottimizza, non fidarti delle sensazioni.
+\end{enumerate}
+
+(1) Aggiungi 3 test unitari alla logica di parseAmount e simili (verdi con CmdU); (2) con un breakpoint cattura con le tue mani un crash provocato da te e risolvilo; (3) crea un pacchetto con Product Archive e usa TestFlight per invitare gli amici al beta testing; (4) se hai energie in più, registrati come sviluppatore e sottometti davvero il registro delle spese allo store. I primi tre passi si possono completare stasera.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Riepilogo del capitolo}
+\begin{itemize}
+  \item I tre strumenti del debug: log con print, breakpoint, anteprima SwiftUI e ispettore delle viste
+  \item XCTest: test unitari (CmdU) + test UI + test manuale, già predisposti nel modello
+  \item Firma: firma automatica con l'account gratuito (rinnovo ogni 7 giorni); per distribuire serve l'account a pagamento
+  \item Pacchetto: Generic iOS Device + Archive + Distribute; il certificato va assolutamente salvato in backup
+  \item I sei passi dello store: registrazione materiali caricamento questionario privacy revisione pubblicazione; prima il beta testing con TestFlight
+\end{itemize}
+
+\end{tcbsummary}

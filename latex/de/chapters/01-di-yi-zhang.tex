@@ -1,0 +1,367 @@
+\bookchapter{Kapitel 1: Hallo, mein persönlicher Computer}
+
+\chapterintro{Praktische Anwendungsszenarien}
+
+\booksection{Smartphone-Hardware “inneres”: Tiefenanalyse}
+
+Computerfotografie
+
+\booksubsection{: Nachtszenen-Synthese, Porträt-Unschärfe, HDR-Verarbeitung, KI-Verschönerung.}
+
+SoC steht für System on Chip – wörtlich: ein ganzes System auf einem Chip. Es ist nicht nur die CPU (Central Processing Unit), sondern ein riesiger integrierter Schaltkreis, der CPU, GPU (Grafikprozessor), NPU (Neural Processing Unit), ISP (Bildsignalprozessor), Modem (für die Kommunikation) und vieles mehr vereint.
+
+: Spracherkennung, natürliches Sprachverständnis, Sprachsynthese.
+
+\booksubsection{:}
+
+: Die CPU ist das Herzstück des SoC und übernimmt den Großteil der Rechenarbeiten. Handy-CPUs nutzen die ARM-Architektur – anders als die x86-Architektur von Computern; ARM setzt auf einen reduzierten Befehlssatz (RISC) und ist auf niedrigen Verbrauch optimiert.
+
+\textbf{CPU: Design mit großen und kleinen Kernen}: Moderne Smartphone-CPUs setzen meist auf ARMs „big.LITTLE“-Architektur: Die Kerne werden in verschiedene Leistungsstufen aufgeteilt:
+
+\begin{itemize}
+  \item \textbf{: Texterkennung (OCR), Objekterkennung, Szenenerkennung.}Geräteseitiges KI-Großmodell
+  \item \textbf{: Die neuesten Flagship-Chips unterstützen bereits das Ausführen kleiner KI-Großmodelle (7B-Parameter-Klasse) auf dem Smartphone, wodurch Offline-KI-Dialoge, Dokumentzusammenfassungen und intelligentes Schreiben ermöglicht werden. Der Hexagon-NPU des Snapdragon 8 Elite bietet 45 TOPS Rechenleistung, die NPU 890 des Dimensity 9400 unterstützt ebenfalls geräteseitige Großmodelle (LLM-Inferenzgeschwindigkeit um 80 \% gesteigert), und der 6-Kern-NPU des Apple A18 Pro bietet etwa 35 TOPS Rechenleistung.}: Ausgeglichene Balance von Leistung und Verbrauch für alltägliche Mittellast-Aufgaben. Social-Media-Feeds, Videos und Multitasking laufen hauptsächlich darüber.
+  \item \textbf{Effizienzkern (kleiner Kern)}: Niedrigster Verbrauch, für leichte Hintergrundaufgaben. Standby, Musik, Benachrichtigungen – fast ohne Stromverbrauch.
+\end{itemize}
+
+Super-Core / Großkern
+
+\textbf{: Höchste Leistung, für schwere Aufgaben wie Spiele-Loading, App-Starts, komplexe Berechnungen. Höchste Taktfrequenz (3 GHz+), aber auch höchster Stromverbrauch.}Die drei Leistungsklassen arbeiten zusammen: Der System-Scheduler verteilt Aufgaben automatisch nach Last – leichte Aufgaben an die Kleinkerne (Strom sparen), schwere an die Großkerne (volle Power), danach zurück zu den Kleinkernen. Deshalb kann das Smartphone flüssig spielen und trotzdem einen ganzen Tag durchhalten.
+
+\begin{itemize}
+  \item \textbf{Qualcomm Snapdragon 8 Elite}: Nutzt die selbstentwickelte Oryon-CPU-Architektur (aus der Nuvia-Übernahme), 2 Super-Cores (4,32 GHz) + 6 Leistungskerne (3,53 GHz), alle auf TSMCs zweiter 3-nm-Generation. Verabschiedet sich komplett von ARMs Referenzarchitektur; Single- und Multi-Core-Performance legen deutlich zu. GPU ist Adreno 830 mit Slice-Architektur, +40 \% Grafikleistung; Hexagon NPU mit 75 TOPS, +45 \% AI-Inferenz. (Hinweis: Samsung-Galaxy-Custom-Version mit höheren Taktraten, Super-Core bis 4,47 GHz.)
+  \item \textbf{MediaTek Dimensity 9400}: 2 Leistungskerne (ca. 4,04 GHz) + 4 Effizienzkerne (ca. 2,4 GHz), TSMCs zweite 3-nm-Generation. 6-Kern-GPU mit hardwarebeschleunigtem Raytracing; 16-Kern-NPU (ca. 35 TOPS) für lokale AI und Apple Intelligence. Apples selbstentwickelte Architektur führt bei Single-Core und Effizienz weiterhin; die Unified-Memory-Architektur bietet hohe Bandbreite für AI-Inferenz.
+  \item \textbf{Apple A18 Pro}: Verbaut in der Mate-70-Serie, nutzt die selbstentwickelte Taishan-CPU-Architektur; NPU und ISP wurden weiter verstärkt; unterstützt 5.5G und Satellitenkommunikation – der neueste Durchbruch chinesischer Chips.
+  \item \textbf{HiSilicon Kirin 9020}Die GPU (Graphics Processing Unit) ist auf Grafik- und parallele Rechenaufgaben spezialisiert. Sie hat deutlich mehr Kerne als die CPU (oft Hunderte bis Tausende), aber jeder Kern ist einfacher gebaut – ideal, um viele ähnliche Berechnungen gleichzeitig auszuführen.
+\end{itemize}
+
+\booksubsection{GPU: Grafik-Rendering-Engine}
+
+Die GPU (Graphics Processing Unit) ist speziell für Grafik- und Parallelberechnungen zuständig. Sie hat weit mehr Kerne als die CPU (oft hunderte bis tausende), doch jeder Kern ist relativ einfach gestrickt – ideal für riesige Mengen gleichartiger Berechnungen.
+
+\textbf{Die Grafik-Rendering-Pipeline}:
+
+\begin{enumerate}
+  \item \textbf{Vertex-Verarbeitung}: Berechnet die Positionskoordinaten jedes Vertex eines 3D-Modells.
+  \item \textbf{Rasterisierung}: Wandelt 3D-Grafiken in Bildpunkte auf dem 2D-Bildschirm um.
+  \item \textbf{Pixel-Shading}: Berechnet Farbe, Textur und Lichteffekte für jeden Pixel.
+  \item \textbf{Ausgabe-Komposition}: Fasst alle Ebenen zum endgültigen Bild zusammen und schickt es auf den Bildschirm.
+\end{enumerate}
+
+\textbf{: Nicht nur Spiele! UI-Scrollen, Animationen, Videowiedergabe, Foto-Filter, AR-Apps – alle sind auf die GPU angewiesen. Bei schwacher GPU ruckelt die Oberfläche, und Spiele haken direkt.}: Nicht nur Spiele! UI-Scrollen, Animationen, Videowiedergabe, Foto-Filter, AR-Apps – alle sind auf die GPU angewiesen. Bei schwacher GPU ruckelt die Oberfläche, und Spiele haken direkt.
+
+\textbf{Die NPU (Neural Processing Unit) ist ein Prozessor, der speziell für neuronale Netze entwickelt wurde. Im Vergleich zu CPU und GPU ist sie bei AI-Aufgaben effizienter und sparsamer.}: Qualcomm setzt auf den selbst entwickelten Adreno-GPU, MediaTek auf den ARM-Mali-GPU, Apple auf einen Eigenentwicklungs-GPU – Leistung und Effizienz sind Branchenmaßstab.
+
+\booksubsection{NPU: AI-Beschleunigungs-Engine}
+
+: Die Kernoperationen der NPU sind Matrixmultiplikation und Faltung – die grundlegendsten und häufigsten Operationen in neuronalen Netzen. Durch Hardware-Optimierung kann die NPU viele Matrixoperationen parallel ausführen, oft zehnmal schneller als die CPU und mit deutlich geringerem Stromverbrauch.
+
+\textbf{Wie neuronale Netze rechnen}: Die Kernaufgaben der NPU sind Matrixmultiplikation und Faltungsoperationen – die grundlegendsten und häufigsten Berechnungen neuronaler Netze. Mit Hardware-Optimierung führt die NPU viele Matrixoperationen parallel aus, zigfach schneller als die CPU bei viel geringerem Verbrauch.
+
+\textbf{Der KI-Verarbeitungsablauf}:
+
+\begin{enumerate}
+  \item \textbf{Dateneingabe}: Kamerabilder, Mikrofon-Audio, Sensordaten und mehr.
+  \item \textbf{Vorverarbeitung}: Datenformat und -größe anpassen, damit sie den Anforderungen des neuronalen Netzes entsprechen.
+  \item \textbf{Inferenzberechnung}: Die NPU lädt ein trainiertes Modell, führt die Vorwärtsberechnung für die Eingabedaten aus und liefert das Ergebnis.
+  \item \textbf{Nachverarbeitung}: Die KI-Ausgabe wird in nutzbare Ergebnisse umgewandelt – etwa Gesichtskoordinaten, Textinhalt oder Szenen-Labels.
+\end{enumerate}
+
+\textbf{Praktische Anwendungsfälle}:
+
+\begin{itemize}
+  \item \textbf{Computational Photography}: Nachtsicht-Synthese, Porträt-Tiefenschärfe, HDR-Verarbeitung, KI-Beauty.
+  \item \textbf{Sprachassistent}: Spracherkennung, Verstehen natürlicher Sprache, Sprachsynthese.
+  \item \textbf{Echtzeitübersetzung}: KI-Untertitel, Gesprächsübersetzung.
+  \item \textbf{Intelligente Erkennung}: Texterkennung (OCR), Objekterkennung, Szenenerkennung.
+  \item \textbf{Geräteseitiges KI-Großmodell}: Die neuesten Flagship-Chips unterstützen bereits das Ausführen kleiner KI-Großmodelle (7B-Parameter-Klasse) auf dem Smartphone, wodurch Offline-KI-Dialoge, Dokumentzusammenfassungen und intelligentes Schreiben ermöglicht werden. Der Hexagon-NPU des Snapdragon 8 Elite bietet 45 TOPS Rechenleistung, die NPU 890 des Dimensity 9400 unterstützt ebenfalls geräteseitige Großmodelle (LLM-Inferenzgeschwindigkeit um 80 \% gesteigert), und der 6-Kern-NPU des Apple A18 Pro bietet etwa 35 TOPS Rechenleistung.
+  \item \textbf{KI-Bildverarbeitung}: KI-Entfernung (Passanten mit einem Klick entfernen), KI-Bilderweiterung (Bildränder erweitern), KI-Stilübertragung, Text-zu-Bild-Generierung und mehr.
+\end{itemize}
+
+\booksubsection{ISP: Bildsignalprozessor}
+
+Der ISP verarbeitet die Rohdaten der Kamera und wandelt Lichtsignale in ansprechende Fotos um.
+
+\textbf{:}Auf das Modell achten! Apple A18 Pro, Qualcomm Snapdragon 8 Elite, MediaTek Dimensity 9400 und Huawei Kirin 9020 sind allesamt Flagship-Klasse. Im Mittelklasse-Bereich: Snapdragon 8s Gen3/7+ Gen3, Dimensity 9400. Nicht nur auf die Kernzahl schauen — Architektur und Fertigungsprozess (Nanometer) sind wichtiger. Der 3nm-Prozess ist derzeit der fortschrittlichste und hinsichtlich der Energieeffizienz weit überlegen gegenüber 5nm und 7nm.
+
+\booksubsection{Arbeitsspeicher (RAM): Der temporäre Arbeitstisch}
+
+Der Arbeitsspeicher ist wie dein Schreibtisch — je größer, desto mehr Dateien kannst du gleichzeitig ausbreiten. 12GB sind heute der Standard, 16GB eignen sich für Vielnutzer, 24GB und darüber hinaus sind die Wahl von Gamern und Technik-Enthusiasten.
+
+Der RAM-Typ ist ebenfalls wichtig: LPDDR5 ist schneller und sparsamer als LPDDR4X. Apple hat zwar nicht viel Arbeitsspeicher, aber durch gute Systemoptimierung wirkt es „ausreichend“.
+
+\textbf{Apple Apple Intelligence}Apps werden vom System im Hintergrund beendet und müssen beim Wechseln neu geladen werden. Deshalb ist das Spiel manchmal weg, wenn du kurz in WeChat wechselst und zurückkommst.
+
+\booksubsection{Speicher (ROM/Flash): Das langfristige Lager}
+
+Der Speicher ist wie dein Bücherschrank — der Ort, an dem alle Fotos, Videos und Apps liegen. Aktuell dominieren UFS 3.1 oder UFS 4.0, die um ein Vielfaches schneller sind als das ältere eMMC.
+
+\textbf{Warum ist die Speichergeschwindigkeit wichtig?}Sie bestimmt die App-Startgeschwindigkeit, die Ladezeit von Spielen und die Speichergeschwindigkeit von Fotos. Bei längerer Nutzung sorgt langsamer Speicher dafür, dass das Smartphone immer langsamer wird.
+
+\booksubsection{Bildschirm: Deine Augen}
+
+Der Bildschirm ist das Hauptfenster, über das du mit dem Smartphone interagierst — seine Qualität beeinflusst das Erlebnis direkt.
+
+\begin{itemize}
+  \item \textbf{Material}: OLED bietet lebendige Farben, hohen Kontrast und spart mehr Strom (bei schwarzen Bildbereichen leuchten die Pixel nicht), kann aber bei niedriger Helligkeit zu Flackern führen, das die Augen belastet; LCD ist augenfreundlicher und günstiger, aber Kontrast und Farben sind dem OLED unterlegen.
+  \item \textbf{Auflösung}: 1080P ist der Standard, 2K ist schärfer, verbraucht aber mehr Strom. Das Konzept von Apples „Retina-Display" besagt: Bei einem bestimmten Abstand kann das menschliche Auge die einzelnen Pixel nicht mehr erkennen.
+  \item \textbf{Aktualisierungsrate}: 60Hz ist der Standard, 90Hz/120Hz sind flüssiger und sorgen beim Scrollen für seidige Glätte. Hohe Aktualisierungsraten verbrauchen mehr Strom, deshalb unterstützen viele Smartphones adaptive Aktualisierungsraten (LTPO), die sich dynamisch an den Inhalt anpassen.
+  \item \textbf{Touch-Abtastrate}: Beeinflusst die Reaktionsgeschwindigkeit des Touchscreens – Gamer sollten darauf achten: je höher, desto direkter das Ansprechverhalten.
+  \item \textbf{Dimmverfahren}: DC-Dimmen ist augenschonender als PWM-Dimmen – bei geringer Helligkeit ermüden die Augen weniger. Viele Handys unterstützen heute hochfrequentes PWM-Dimmen, auch das dient dem Augenschutz.
+\end{itemize}
+
+\booksubsection{HDR (High Dynamic Range) lässt den Bildschirm gleichzeitig hellere Lichtbereiche und dunklere Schattenbereiche darstellen, wodurch die Bildtiefe deutlich zunimmt.}
+
+: Beim Anschauen von HDR-Videos wirkt das Sonnenlicht greller, die Schatten tiefer und die Farben reicher. Voraussetzung ist, dass das Video selbst in HDR erstellt wurde und der Bildschirm HDR unterstützt.
+
+\begin{itemize}
+  \item \textbf{Funktionsprinzip}: Bei herkömmlichen Bildschirmen ist der Helligkeitsbereich begrenzt (SDR), der Unterschied zwischen dem hellsten und dem dunkelsten Bereich ist nicht groß genug. HDR-Bildschirme erreichen eine höhere Spitzenhelligkeit (üblicherweise über 1000 Nits), einen größeren Kontrast und einen breiteren Farbraum, wodurch mehr Details dargestellt werden können.
+  \item \textbf{Gängige Standards}: HDR10 (die Basis, kostenlos und Open Source), HDR10+ (von Samsung vorangetrieben, mit dynamischen Metadaten), Dolby Vision (Dolby Vision, beste Bildqualität, erfordert jedoch Lizenz). Welchen Standard ein Smartphone unterstützt, hängt von der Bildschirm-Hardware und den Systemlizenzen ab.
+  \item \textbf{Praktische Wirkung}HDR beim Fotografieren und HDR am Bildschirm sind zwei verschiedene Dinge. Bild-HDR löst durch Algorithmen das Problem von „überbelichteten hellen Bereichen und unterbelichteten dunklen Bereichen".
+\end{itemize}
+
+\booksubsection{: Heutige Smartphones können bereits „Echtzeit-HDR“ — das Bild im Sucher ist bereits das nach der HDR-Verarbeitung resultierende Bild, WYSIWYG. Apples Smart HDR und Androids automatisches HDR sind beide sehr ausgereift.}
+
+HDR beim Fotografieren und HDR am Bildschirm sind zwei verschiedene Dinge. Das Foto-HDR löst per Algorithmus das Problem „Lichter überstrahlt, Schatten abgesoffen“.
+
+\begin{itemize}
+  \item \textbf{Algorithmus-Prinzip}: Wenn du den Auslöser drückst, nimmt das Handy tatsächlich mehrere Bilder mit unterschiedlichen Belichtungen auf (unterbelichtet hält Lichter-Details, überbelichtet Schatten-Details, normal belichtet die Mitteltöne) und verschmilzt sie zu einem foto mit hohem Dynamikumfang.
+  \item \textbf{Verarbeitungsablauf}: Mehrfachaufnahme Ausrichtung und Ausgleich (gegen Verwackeln) Belichtungsverschmelzung/Tonwertzuordnung Farbkorrektur fertiges Foto.
+  \item \textbf{Effekt-Optimierung}: Mittlerweile schaffen Handys „Echtzeit-HDR“ – was du im Sucher siehst, ist bereits das HDR-verarbeitete Bild: WYSIWYG. Apples Smart HDR und Androids automatisches HDR sind sehr ausgereift.
+\end{itemize}
+
+\booksubsection{Akku und Laden: die Energiequelle}
+
+Der Akku ist das „kurzlebigste“ Bauteil des Smartphones — nach zwei bis drei Jahren zeigt er deutliche Alterung. Die aktuell übliche Kapazität liegt bei 5500-7500mAh.
+
+\begin{itemize}
+  \item \textbf{Ladeleistung}: Im Android-Lager ist man bereits bei 100W bis 200W angekommen — in zehn bis wenigen Minuten voll geladen; Apple verharrt noch bei 20-30W. Schadet Schnellladen dem Akku? Mit Originalzubehör ist das kaum ein Problem, da das Smartphone einen Temperaturschutz hat.
+  \item \textbf{Kabelloses Laden}: Bequem, aber ineffizient und wärmer. Gut fürs beiläufige Laden im Büro, ungeeignet, wenn es schnell gehen muss.
+  \item \textbf{Rückwärtsladen (Reverse Charging)}: Das Handy wird zur Powerbank und lädt Kopfhörer oder Uhr – für den Notfall.
+\end{itemize}
+
+\booksubsection{Kameras: das Spiel von Licht und Schatten}
+
+Heutige Handys haben oft drei oder vier Kameras – jede mit eigener Aufgabe:
+
+\begin{itemize}
+  \item \textbf{Hauptkamera}: Die am häufigsten genutzte; größter Sensor, beste Bildqualität.
+  \item \textbf{Ultraweitwinkel}: Für Landschaften und Architektur – weiteres Sichtfeld.
+  \item \textbf{Teleobjektiv}: Für Motive in der Ferne; es gibt optischen und digitalen Zoom.
+  \item \textbf{Makro}: Für sehr kleine Objekte aus nächster Nähe.
+\end{itemize}
+
+\textbf{Megapixel sind nicht alles!}OIS optische Bildstabilisierung vs. EIS elektronische Bildstabilisierung
+
+\booksubsection{Periskop-Teleobjektiv}
+
+Herkömmliche Teleobjektive benötigen einen längeren optischen Pfad, was das Smartphone dick macht. Das Periskop-Teleobjektiv bricht das Licht über ein 90-Grad-Prisma und lenkt den Strahlengang im Inneren des Smartphones quer ab, um bei schlankem Gehäuse ein 5-faches bis 10-faches optisches Zoom zu realisieren.
+
+\begin{itemize}
+  \item \textbf{Strukturprinzip}: Das Licht tritt durch das Objektiv ein Prismenbrechung um 90 Grad verläuft quer durch die Linsengruppe entlang der Breite des Smartphones trifft auf den Sensor. Entspricht einem senkrecht stehenden Fernrohr, das liegend verwendet wird.
+  \item \textbf{Optische Eigenschaften}: Hohe optische Zoomfaktoren (5x-10x), Bildqualität weit über der des digitalen Zooms. Der Sensor ist jedoch meist kleiner als der der Hauptkamera, die Leistung bei schwachem Licht ist durchschnittlich.
+  \item \textbf{Bildvorteile}: Mond, weit entfernte Gebäude, Bühnennahaufnahmen – das schafft ein normales Handy nicht.
+\end{itemize}
+
+\booksubsection{OIS (optische Bildstabilisierung)}
+
+Bildstabilisierung ist die Schlüsseltechnik für Foto- und Videoqualität. Die beiden Verfahren beruhen auf völlig unterschiedlichen Prinzipien:
+
+\begin{itemize}
+  \item \textbf{: Für Fotos hat OIS Priorität, für Videos ist die Kombination beider am besten. Viele Flagship-Smartphones unterstützen inzwischen „Sensor-Shift"-Bildstabilisierung (Sensorverschiebung), die besser ist als die herkömmliche Objektivstabilisierung.}: Durch physikalisches Bewegen von Objektiv oder Sensor wird das Verwackeln ausgeglichen. Im Objektiv misst ein winziges Gyroskop Richtung und Stärke der Wackler und treibt dann einen Motor an, der die Linsengruppe gegensteuert. Vorteil: kein Qualitätsverlust. Nachteil: teuer und bauraumintensiv.
+  \item \textbf{EIS (elektronische Bildstabilisierung)}: Kompensiert Verwacklungen durch Software-Algorithmen, die das Bild zuschneiden und verschieben. Das Smartphone nimmt einen etwas größeren Bildbereich auf und schneidet dann anhand der Gyroskopdaten einen stabilen Bereich aus. Vorteil: keine zusätzliche Hardware nötig. Nachteil: Bild wird zugeschnitten (Sichtfeld kleiner), bei schwachem Licht kann es verschwimmen.
+  \item \textbf{Praktische Wahl}: Beim Fotografieren zählt vor allem OIS, beim Filmen ist die Kombination aus beiden am besten. Viele aktuelle Flaggschiffe unterstützen „Sensor-Shift“ – die Sensorverschiebung, die besser wirkt als der klassische Objektiv-Stabilisator.
+\end{itemize}
+
+\booksubsection{Optischer Zoom vs. Digitaler Zoom}
+
+\begin{itemize}
+  \item \textbf{Optischer Zoom}: Verändert die Brennweite durch physische Bewegung der Linsengruppe, ohne Bildqualitätsverlust. Der optische Zoom am Smartphone hat meist nur feste Stufen (wie 2x, 3x, 5x, 10x) und kann nicht wie bei einer Kamera stufenlos zoomen.
+  \item \textbf{Digitaler Zoom}: Vergrößert den mittleren Bildbereich, im Wesentlichen ein Ausschnitt mit Interpolation. Je stärker die Vergrößerung, desto schlechter die Bildqualität. 100-facher digitaler Zoom sieht beeindruckend aus, ist aber in Wirklichkeit schon sehr unscharf.
+  \item \textbf{Hybridzoom}: Kombiniert optischen und digitalen Zoom und nutzt zwischen den optischen Zoomstufen Mehrfachaufnahme-Algorithmen, um Qualitätsverluste auszugleichen. Besser als rein digitaler Zoom, aber immer noch nicht so gut wie optischer.
+\end{itemize}
+
+\booksubsection{Audio: Lautsprecher und dedizierter Grafik-Chip}
+
+\textbf{Einzel-Lautsprecher vs. Doppel-Lautsprecher}:
+
+\begin{itemize}
+  \item \textbf{Einzel-Lautsprecher}: Nur eine Klangeinheit am Boden, der Sound ist auf eine Seite verschoben, ohne räumliche Wirkung. Häufig bei Mittel- und Einsteigerklasse-Smartphones.
+  \item \textbf{Doppel-Lautsprecher (Stereo)}: Jeweils ein Lautsprecher oben und unten, für ein Stereo-Klangfeld. Beim Videoschauen oder Musikhören sind linke und rechte Kanäle getrennt, die Immersion ist deutlich stärker. Der Ohrhörer fungiert oft gleichzeitig als oberer Lautsprecher.
+  \item \textbf{Klangunterschied}: Doppel-Lautsprecher bedeuten nicht nur „lauter", sondern vor allem Räumlichkeit und Tiefe. Einen Blockbuster mit einem Einzel-Lautsprecher anzusehen, fühlt sich immer an, als würde etwas fehlen.
+\end{itemize}
+
+\textbf{Dedizierter Grafik-Chip bei Gaming-Smartphones}:
+
+Einige Gaming- und Leistungssmartphones sind mit einem dedizierten Bildverarbeitungs-Chip ausgestattet. Seine Aufgaben sind:
+
+\begin{itemize}
+  \item \textbf{Frame-Interpolation}: Interpoliert 30fps-Spielbilder per Algorithmus auf 60fps oder 120fps, für flüssigere Darstellung. Dieser Prozess läuft auf dem dedizierten Chip ab und beansprucht nicht die GPU-Ressourcen des SoC.
+  \item \textbf{Super-Auflösung (Super Resolution)}: Eine KI hebt Bilder mit niedriger Auflösung auf höhere Auflösung – schärfere Bildqualität.
+  \item \textbf{Geringerer Verbrauch}: Weil Frame-Interpolation und Super-Auflösung vom eigenen Grafikchip übernommen werden, sinkt die SoC-Last – weniger Wärme und Verbrauch, stabileres Gaming.
+\end{itemize}
+
+\booksubsection{Die Smartphone-Positionierung stützt sich hauptsächlich auf Satellitennavigationssysteme wie GPS.}
+
+Die Ortung des Handys beruht vor allem auf GPS und anderen Satellitennavigationssystemen.
+
+\begin{itemize}
+  \item \textbf{Einfrequenz-GPS}: Empfängt nur das L1-Band, Positionierungsgenauigkeit rund 3-5 Meter. Im freien Gelände ausreichend, doch in dicht bebauten „Stadtschluchten“ sorgen Signalreflexionen für deutliche Abweichungen.
+  \item \textbf{Zweifrequenz-GPS (Dual-Band)}: Empfängt L1 und L5 gleichzeitig. L5 hat die längere Wellenlänge und ist störfester; die gemeinsame Auswertung beider Bänder eliminiert den Großteil der Ionosphärenfehler – Genauigkeit von 1-3 Metern. Deutlich Vorteil bei Navigation und Fahrtbuchung in der Stadt.
+  \item \textbf{Multi-Konstellations-Unterstützung}: Moderne Handys unterstützen nicht nur GPS, sondern auch BeiDou (China), GLONASS (Russland), Galileo (Europa) und weitere Systeme. Je mehr Satelliten gleichzeitig empfangen werden, desto schneller und genauer die Position.
+\end{itemize}
+
+\booksubsection{Sensoren: die Fühler des Handys}
+
+Im Handy stecken über ein Dutzend Sensoren, die still ihren Dienst tun:
+
+\begin{itemize}
+  \item \textbf{Beschleunigungssensor + Gyroskop}: Erfassen die Lage des Handys – für Spielsteuerung und automatische Bildschirmrotation.
+  \item \textbf{Lichtsensor}: Stellt die Bildschirmhelligkeit automatisch ein.
+  \item \textbf{Näherungssensor}: Schaltet den Bildschirm aus, wenn du beim Telefonieren das Handy ans Ohr hältst.
+  \item \textbf{Fingerabdrucksensor}: Heute meist optisch oder ultrasonisch unter dem Display.
+  \item \textbf{Gesichtserkennung}: Apples Face ID verwendet 3D-Strukturlicht mit hoher Sicherheit; viele Android-Geräte nutzen 2D-Fotoerkennung mit durchschnittlicher Sicherheit.
+  \item \textbf{NFC}: Nahfeldkommunikation, für Transit-Karten, Zutrittskarten, Bankkarten.
+  \item \textbf{Barometer}: Misst die Höhe über dem Meeresspiegel, erkennt sogar das Treppensteigen.
+  \item \textbf{Hall-Sensor}: Erkennt das Öffnen und Schließen einer magnetischen Hülle.
+\end{itemize}
+
+\booksection{Zwei. Betriebssysteme: Android VS iOS VS HarmonyOS}
+
+Die Hardware ist der Körper, das Betriebssystem die Seele. Die drei großen Systeme haben jeweils ihre Besonderheiten:
+
+\begin{itemize}
+  \item \textbf{Android}: Wie eine Open-Source-Community — Smartphone-Hersteller können tiefgreifend anpassen, die Auswahl ist groß. Du kannst Themes wechseln, Drittanbieter-App-Stores installieren und verschiedene Funktionen ausprobieren. Aber gerade wegen der Offenheit ist die Fragmentierung ausgeprägt, und die Erfahrung variiert stark zwischen den Marken.
+  \item \textbf{iOS}: Wie ein sorgfältig gepflegter Garten — Apple kontrolliert Hard- und Software gleichermaßen, das Erlebnis ist einheitlich und flüssig. Hohe App-Qualität, guter Datenschutz, aber geringere Freiheit — viele Dinge laufen nach Apples Regeln.
+  \item \textbf{HarmonyOS}: Huaweis neue Spezies, setzt auf verteilte Fähigkeiten, die eine nahtlose Zusammenarbeit zwischen verschiedenen Geräten ermöglichen. Darauf gehen wir später gesondert ein.
+\end{itemize}
+
+Alle drei Ökosysteme sind äußerst reichhaltig — wähle einfach das, das zu deinem Lebensstil passt. Es gibt kein absolut Gutes oder Schlechtes, nur ein Passendes oder Nicht-Passendes.
+
+\booksection{Drei. Smartphone-Anschlüsse im Überblick}
+
+Die Anschlüsse sind die Brücke zur Außenwelt — die Unterschiede sind beträchtlich:
+
+\booksubsection{Micro USB}
+
+\begin{itemize}
+  \item \textbf{Physische Eigenschaften}: Flacher, trapezförmiger Stecker mit Ober- und Unterseite (falsch herum passt er nicht). Am Handy praktisch ausgedient, aber in billigen Geräten und Altgeräten noch im Einsatz.
+  \item \textbf{Übertragungsgrenzen}: Der Lightning-Anschluss unterstützt physisch nur USB 2.0, maximale Übertragungsrate 480Mbps. Auch mit einem USB-C-auf-Lightning-Kabel ist die Übertragungsrate durch den Lightning-Anschluss selbst begrenzt.
+  \item \textbf{Nachteile}: Nicht beidseitig nutzbar, kurze Stecker-Lebensdauer, langsamer Datentransfer, niedrige Ladeleistung.
+\end{itemize}
+
+\booksubsection{Lightning (Apple Blitz-Anschluss, ausgemustert)}
+
+\begin{itemize}
+  \item \textbf{iOS}: Von Apple selbst entwickelter 8-Pin-Anschluss, beidseitig einsteckbar. Verwendet im iPhone 14 und früheren Modellen, mittlerweile vollständig ausgemustert.
+  \item \textbf{Übertragungsgrenzen}: Unterstützt nur den USB-2.0-Standard, maximale Übertragungsrate 480Mbps, Ladeleistung meist nicht über 10W.
+  \item \textbf{Grund des Ausdienstens}: Die EU hat per Verordnung verlangt, dass ab 2024 alle Smartphones einheitlich den USB-C-Anschluss verwenden. Apple hat ab der iPhone-15-Serie vollständig auf Type-C umgestellt. Der Lightning-Anschluss hat die Bühne der Geschichte verlassen.
+  \item \textbf{Achtung}: In MFi-zertifizierten Apple-Kabeln steckt ein Authentifizierungs-Chip; nicht zertifizierte Kabel laden bzw. übertragen Daten womöglich nicht ordentlich. Wer noch ein älteres iPhone nutzt, sollte ein Lightning-Kabel bereithalten.
+\end{itemize}
+
+\booksubsection{: Nicht jeder Type-C-Anschluss unterstützt USB 3.0! Viele Smartphones nutzen zwar den Type-C-Anschluss, sind aber intern nur mit USB-2.0-Pins verbunden — die Übertragungsrate ist dann genauso langsam wie bei alten Anschlüssen. Das iPhone 15/16 in der Standardversion unterstützt nur USB 2.0, die Pro-Version unterstützt USB 3.0 (ein USB-C-auf-USB-C-Kabel erforderlich).}
+
+\begin{itemize}
+  \item \textbf{Physische Eigenschaften}: Die EU verlangt per Verordnung, dass ab 2024 alle Smartphones einheitlich USB-C verwenden; Apple steigt ab der iPhone-15-Serie vollständig auf Type-C um. Der Lightning-Anschluss verabschiedet sich endgültig aus der Geschichte.
+  \item \textbf{Übertragungsprotokolle}: Unterstützt Schnellladen-Protokolle wie USB PD, bis zu 240W Ladeleistung.
+  \item \textbf{Wichtige Unterscheidung}: Nicht jeder Type-C-Anschluss unterstuetzt USB 3.0! Viele Smartphones nutzen zwar den Type-C-Anschluss, haben aber intern nur USB-2.0-Pins – die Uebertragungsgeschwindigkeit ist genauso langsam wie beim alten Anschluss. Das iPhone 16/17 (Standardversion) unterstuetzt nur USB 2.0, die Pro-Version unterstuetzt USB 3.0 (erfordert ein USB-C-auf-USB-C-Kabel).
+  \item \textbf{Ladevermögen}: Unterstützt Schnellladeprotokolle wie USB PD, mit bis zu 240 W Ladeleistung.
+  \item \textbf{Videoausgang}: Unterstützt DisplayPort Alt Mode, kann über ein Adapterkabel Video an einen Monitor ausgeben.
+\end{itemize}
+
+\booksubsection{5mm Audio-Anschluss}
+
+\begin{itemize}
+  \item \textbf{Physische Eigenschaften}: Runder 3-Pol- oder 4-Pol-Stecker, 3-Pol überträgt linken und rechten Audiokanal, 4-Pol hat zusätzlich einen Mikrofonkanal.
+  \item \textbf{: MFi-zertifizierte Apple-Kabel enthalten einen Authentifizierungschip; nicht zertifizierte Kabel laden oder übertragen Daten möglicherweise nicht richtig. Wenn du noch ein älteres iPhone nutzt, halte ein Lightning-Kabel bereit.}: Analoge Signalübertragung, Plug \& Play, ohne Treiber oder Konvertierung. Stabile Tonqualität, null Latenz.
+  \item \textbf{Aktueller Stand}: Die meisten Flagship-Smartphones haben den 3.5mm-Anschluss entfernt — ein Type-C-Adapterkabel oder Bluetooth-Kopfhörer sind nötig. Einige Mittelklasse- und Gaming-Smartphones behalten ihn noch.
+\end{itemize}
+
+\booksection{Vier. Smartphone-Produktlinien und Namensregeln}
+
+Angesichts der verwirrenden Produktlinien der verschiedenen Marken hilft es, die Namensregeln zu kennen, um schnell das passende Modell zu finden.
+
+\booksubsection{Produktlinien der gängigen Marken:}
+
+\begin{itemize}
+  \item \textbf{Apple}: iPhone (Standardversion), iPhone Plus (Großbildversion), iPhone Pro (Profi-Version), iPhone Pro Max (Großbild-Profi-Version), iPhone SE (günstige Version), iPhone 16e (günstige KI-Version, mit A18-Chip und Apples selbstentwickeltem C1-Basisband).
+  \item \textbf{Huawei}: Mate-Serie (Business-Flagship) / P/Pura-Serie (Kamera-Flagship) / Mate X-Serie (Falt-Flagship) / nova-Serie (junge Mittelklasse) / Enjoy-Serie (Einsteiger).
+  \item \textbf{Xiaomi}: Xiaomi Digital-Serie (Flagship), Xiaomi MIX (Explorations-Flagship / Faltgerät), Redmi K-Serie (Performance-Flagship), Redmi Note-Serie (Mittelklasse), Redmi Digital-Serie (Einsteiger).
+  \item \textbf{OPPO}: Find X-Serie (Flagship) / Reno-Serie (Mittelklasse) / A-Serie (Einsteiger) / OnePlus Digital-Serie (Performance-Flagship).
+  \item \textbf{Merkmale}: X-Serie (Kamera-Flagship) / iQOO Digital-Serie (Performance-Flagship) / S-Serie (Selfie-Mittelklasse) / Y-Serie (Einsteiger).
+  \item \textbf{Aktueller Stand}: Galaxy S-Serie (Flagship) / Galaxy Z Fold/Flip (Falt-Flagship) / Galaxy A-Serie (Mittelklasse).
+\end{itemize}
+
+\booksubsection{Bedeutung gängiger Suffixe:}
+
+\begin{itemize}
+  \item \textbf{Pro}: Abkürzung für Professional, Profi-Version. Basiert meist auf der Standardversion und bietet Upgrades bei Kamera, Bildschirm, Prozessor und anderen Kernkomponenten.
+  \item \textbf{: iPhone (Standardversion) / iPhone Plus (Grossbildversion) / iPhone Pro (Profi-Version) / iPhone Pro Max (Grossbild-Profi-Version) / iPhone SE (Guenstigversion) / iPhone 16e (guenstige KI-Version mit A18-Chip und Apples eigenem C1-Modem). 2026 wird die iPhone-17-Serie durchgaengig mit dem A19 Pro Chip ausgestattet, die KI-Faehigkeiten weiter verbessert.}: Die Max-Version. Größtes Display, größter Akku – aber die Ausstattung muss nicht höher sein als beim Pro.
+  \item \textbf{Ultra}: Die Premium-Version. Steht meist für die höchste Konfiguration der Serie, mit der besten Ausstattung und dem höchsten Preis. Wie Samsung S24 Ultra, Xiaomi 14 Ultra.
+  \item \textbf{Xiaomi}: Special Edition, eigentlich meist die günstige Version. Reduzierte Ausstattung, niedrigerer Preis. Wie iPhone SE.
+  \item \textbf{Das Basisband ist der Prozessor im Smartphone, der für die drahtlose Kommunikation zuständig ist. Er moduliert digitale Signale zu Funkwellen und demoduliert empfangene Funkwellen zurück zu digitalen Signalen. Die Basisband-Leistung beeinflusst direkt die Sprachqualität, die Internetgeschwindigkeit und die Signalstabilität. Qualcomm ist der größte Lieferant von Smartphone-Basisbändern, auch MediaTek und Samsung haben selbstentwickelte Basisbänder. Apple hat ab dem iPhone 16e das selbstentwickelte C1-Basisband eingebaut, was Apples offiziellen Eintritt in die Ära der selbstentwickelten Basisbänder markiert. Das C1-Basisband wird im 4nm-Prozess gefertigt und bietet eine hervorragende Energieeffizienz. Das iPhone 16/16 Plus/16 Pro/16 Pro Max verwendet weiterhin ein Qualcomm-Basisband (Snapdragon X75 5G), es wird erwartet, dass spätere Modelle schrittweise auf selbstentwickelte Basisbänder umsteigen. Die früheren iPhone XS/11-Serien mit Intel-Basisband zeigten schwache Signalqualität und waren ein Schmerzpunkt vieler Nutzer.}: Die Plus-Version. Größeres Display als die Standardversion, größerer Akku, technisch aber weitgehend identisch.
+  \item \textbf{Lite/Jugendversion}: Die Leichtversion. Gestauchte Ausstattung, niedrigerer Preis.
+  \item \textbf{: Ursprünglich für Großbild-Smartphones, heute von den Marken unterschiedlich verwendet. Redmi Note ist eine Mittelklasse-Serie.}: Ursprünglich die Bezeichnung für große Displays; inzwischen verwenden die Marken sie unterschiedlich. Redmi Note ist eine Mittelklasse-Serie.
+  \item \textbf{Neo}: Die „e“-Version – meist leistungsorientierte Modelle der Mittelklasse.
+\end{itemize}
+
+\booksection{Modem und Antennen: die heimlichen Helden der Handykommunikation}
+
+Dass dein Handy telefonieren und surfen kann, verdankt es dem Duo aus Baseband-Chip und Antennen.
+
+\booksubsection{Baseband-Chip:}
+
+Das Baseband ist der Prozessor für die Funkkommunikation im Handy: Es moduliert digitale Signale zu Funkwellen und demoduliert empfangene Funkwellen zurück in digitale Signale. Die Baseband-Leistung beeinflusst direkt Gesprächsqualität, Surftempo und Signalstabilität. Qualcomm ist der größte Baseband-Lieferant; MediaTek und Samsung haben eigene Basebands. Apple verbaut seit dem iPhone 16e den selbst entwickelten C1-Baseband-Chip – das offizielle Eintritt in das Zeitalter der Eigenentwicklung. Der C1 fertigt in 4 nm und punktet mit exzellentem Verbrauch; iPhone 16/16 Plus/16 Pro/16 Pro Max nutzen weiterhin Qualcomm-Basebands (Snapdragon X75 5G), künftig wird wohl schrittweise auf die Eigenentwicklung umgestellt. Die älteren iPhone XS/11-Serien mit Intel-Baseband hatten hingegen einen schlechten Ruf beim Empfang – für viele ein Ärgernis.
+
+\booksubsection{Antennendesign:}
+
+Die Handyantennen stecken im Gehäuseinneren, meist rund um den Rahmen verlegt. Das Design beeinflusst den Empfang direkt:
+
+\begin{itemize}
+  \item \textbf{: Multiple Input Multiple Output — mehrere Antennen senden und empfangen gleichzeitig Daten, was Geschwindigkeit und Stabilität erhöht. 4×4 MIMO ist schneller als 2×2 MIMO.}: Multiple Input Multiple Output – mehrere Antennen senden und empfangen gleichzeitig, das erhöht Tempo und Stabilität. 4×4 MIMO ist schneller als 2×2 MIMO.
+  \item \textbf{Anzahl der Antennen}: Flagship-Smartphones haben üblicherweise über zehn Antennen (Mobilfunk, WLAN, Bluetooth, NFC, GPS benötigen jeweils eigene Antennen).
+  \item \textbf{Einfluss des Metallgehäuses}: Metall schirmt Signale ab, daher benötigen Smartphones mit Metallgehäuse Antennenbänder (Kunststoffstreifen am Rahmen). Glas- und Kunststoffgehäuse beeinflussen das Signal weniger.
+\end{itemize}
+
+\booksubsection{Entwicklung der Netzwerktechnologien:}
+
+\begin{itemize}
+  \item \textbf{4G LTE}: Theoretische Spitzenrate 1Gbps Downlink / 500Mbps Uplink (Cat.18), in der Praxis meist 50-150Mbps. Größte Abdeckung, ausreichend.
+  \item \textbf{5G NR}: Theoretische Spitzenrate 10Gbps+ Downlink. Sub-6GHz-Frequenzen bieten eine bessere Abdeckung, mmWave-Millimeterwellen sind extrem schnell, haben aber eine sehr geringe Abdeckung.
+  \item \textbf{5G-A (5G Advanced)}: Die erweiterte Version von 5G, auch als 5.5G bezeichnet. Downlink bis zu 10Gbps, Uplink 1Gbps, Verbindungsdichte und Positionierungsgenauigkeit werden deutlich gesteigert. Ab 2024 haben China Mobile, China Telecom und China Unicom begonnen, in wichtigen Städten 5G-A-Netze auszurollen. Das Huawei Mate 70, das Xiaomi 15 und andere Flagship-Smartphones unterstützen bereits 5G-A. 5G-A bringt zudem die Fähigkeit der „integrierten Wahrnehmung und Kommunikation" — Basisstationen können gleichzeitig kommunizieren und die Umgebung erfassen, was die Infrastruktur für die Niedrigflughöhe-Wirtschaft (Drohnenlieferung) und das vernetzte Auto bereitstellt.
+\end{itemize}
+
+\booksubsection{Klassifizierung der Netzwerkfrequenzbänder:}
+
+Die von einem Smartphone unterstützten Frequenzbänder bestimmen, in welchen Ländern und in welchen Netzen der Betreiber es verwendet werden kann.
+
+\begin{itemize}
+  \item \textbf{FDD-LTE Band (B-Serie)}: Wie B1, B3, B5 usw., 4G-Frequenzbänder. Verschiedene Länder nutzen verschiedene Bänder, in China werden hauptsächlich B1/B3/B5/B8/B34/B38/B39/B40/B41 verwendet.
+  \item \textbf{TDD-LTE Band}: Eine andere Variante von 4G, in China werden B38/B39/B40/B41 intensiv genutzt.
+  \item \textbf{5G NR Band (N-Serie)}: Wie n1, n3, n28, n41, n78, n79 usw. n78 (3,5GHz) ist das Haupt-5G-Band in China, n41 (2,5GHz) wird von China Mobile häufiger verwendet.
+  \item \textbf{Entwicklung der Netzwerktechnologien:}Die Nutzung von Mobilfunkdaten im Ausland kann zu astronomischen Rechnungen führen! Schalte vor der Ausreise in den Einstellungen das Datenroaming aus oder kaufe im Voraus eine lokale SIM-Karte / einen internationalen Roaming-Tarif.
+\end{itemize}
+
+\booksection{Sechs. Dein Smartphone — wie viele Rollen spielt es eigentlich?}
+
+Es ist längst mehr als nur ein Telefon:
+
+\begin{enumerate}
+  \item \textbf{Kommunikationsmittel}: Telefon, SMS, WeChat, E-Mail …
+  \item \textbf{: Die erweiterte Version von 5G, auch 5.5G genannt. Download-Raten bis zu 10 Gbps, Upload 1 Gbps, Geraetedichte und Positionierungsgenauigkeit deutlich verbessert. Seit 2024 bauen China Mobile, China Telecom und China Unicom in Schluesselstaedten 5G-A-Netze auf; Flaggschiff-Smartphones wie die Huawei Mate 70/80-Serie und Xiaomi 15/16-Serie unterstuetzen bereits 5G-A. 5G-A bringt zudem „Kommunikations- und Wahrnehmungsintegration": Basisstationen koennen gleichzeitig kommunizieren und die Umgebung erfassen – Infrastruktur fuer Drohnenlieferungen und Car-to-X.}: Fotos, Videos, Dokumente scannen …
+  \item \textbf{Portemonnaie}: Bezahlen, Transit-Karte, Bankkarte, Mitgliedskarte …
+  \item \textbf{Informationsportal}: Nachrichten, Wetter, Aktien, Wissen …
+  \item \textbf{Spielkonsole}: Vom Casual Game bis zum 3A-Titel …
+  \item \textbf{Mobiles Büro}: Dokumente, Tabellen, Konferenzen, Zusammenarbeit …
+  \item \textbf{Gesundheitsassistent}: Schrittzähler, Herzfrequenz, Schlaf, Bewegung …
+  \item \textbf{Smart-Home-Fernbedienung}: Lampen, Klimaanlage, Fernseher, Saugroboter steuern …
+  \item \textbf{Digitaler Ausweis}: Elektronischer Personalausweis, elektronischer Führerschein, Gesundheitscode …
+  \item \textbf{Unterhaltungszentrum}: Musik, Video, E-Books, Podcasts …
+\end{enumerate}
+
+Denk mal darüber nach — ein kleines Gerät, das so viel vom Leben trägt! Deshalb: Es gut zu beherrschen, heißt, das Leben besser zu beherrschen.
+
+\begin{tcbpractice}{Praxis: Hardware-Konfiguration kennenlernen}
+Schau unter [Einstellungen] nach, ob du Prozessor-Modell, Arbeitsspeicher (RAM) und internen Speicher (ROM) in der genauen Größe findest. So bekommst du ein Gefühl für die Fähigkeiten deines Smartphones. Android-Nutzer können „AnTuTu“ oder „DevCheck” herunterladen, um detaillierte Hardware-Informationen einzusehen.
+
+\end{tcbpractice}

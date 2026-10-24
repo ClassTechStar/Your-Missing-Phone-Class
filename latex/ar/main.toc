@@ -1,0 +1,529 @@
+\contentsline {part}{أولًا: قسم الأساسيات (الفصول 0-7)}{2}{part*.2}%
+\contentsline {chapter}{الفصل 0: مرحباً، قبل أن نبدأ}{2}{chapter*.3}%
+\contentsline {section}{أولاً: ماذا يمكن أن يساعدك هذا الكتاب؟ (وما لا يستطيع فعله)}{2}{section*.4}%
+\contentsline {section}{ثانياً: شرح “الرموز” لدينا}{2}{section*.4}%
+\contentsline {section}{ثالثاً: Android و iOS، نتحدث عن كليهما}{2}{section*.4}%
+\contentsline {section}{رابعاً: سعة الهاتف: لماذا بعد شراء 128GB، المساحة المتاحة أقل من 110GB؟}{2}{section*.4}%
+\contentsline {section}{خامساً: هاتفك “مخزن للأصول الرقمية”}{3}{Item.3}%
+\contentsline {chapter}{الفصل 1: مرحباً، حاسوبي الشخصي}{4}{chapter*.5}%
+\contentsline {section}{أولاً: “الأعضاء الداخلية” لعتاد الهاتف: تحليل معمّق}{4}{section*.6}%
+\contentsline {section}{ثانياً: نظام التشغيل: Android مقابل iOS مقابل HarmonyOS}{10}{Item.11}%
+\contentsline {section}{ثالثاً: تحليل شامل لمنافذ الهاتف}{11}{Item.11}%
+\contentsline {section}{رابعاً: نظام منتجات الهاتف وقواعد التسمية}{12}{Item.11}%
+\contentsline {section}{خامساً: النطاق الأساسي والهوائيات: الأبطال الخفيون لاتصالات الهاتف}{13}{Item.11}%
+\contentsline {section}{سادساً: هاتفك، كم دوراً يلعب في الواقع؟}{14}{Item.11}%
+\contentsline {section}{ملحق: تحليل توسيع ذاكرة هواتف Android}{14}{Item.21}%
+\contentsline {section}{ملحق الفصل 1: موضوع نظام تشغيل HarmonyOS}{16}{Item.25}%
+\contentsline {chapter}{الفصل 2: رتّب غرفتك الرقمية — إدارة الملفات}{20}{chapter*.7}%
+\contentsline {section}{أولاً: نظام التخزين ثلاثي الطبقات: مستودعك الرقمي}{20}{section*.8}%
+\contentsline {section}{ثانياً: تعرّف على “مدير الملفات”}{20}{Item.32}%
+\contentsline {section}{ثالثاً: بنية نظام الملفات: فهم أعمق}{21}{Item.32}%
+\contentsline {section}{رابعاً: النسخ الاحتياطي للبيانات واستعادتها: تأمين بياناتك}{21}{Item.32}%
+\contentsline {section}{خامساً: أمان الملفات: حماية خصوصيتك}{21}{Item.35}%
+\contentsline {section}{سادساً: المساحة لا تكفي؟ قم بتنظيف كبير}{22}{Item.35}%
+\contentsline {section}{سابعاً: تحليل شامل لتنسيقات الملفات الشائعة}{22}{Item.35}%
+\contentsline {section}{ثامناً: إدارة الصور ونظام الملفات: اجعل الأصول منظمة}{24}{Item.35}%
+\contentsline {chapter}{الفصل 3: اربط هاتفك بـ “خط الحياة” — الشبكة}{26}{chapter*.9}%
+\contentsline {section}{صفر: لا تضيع في الاتصال — ميّز “الطريق” و“السيارة” بين Wi-Fi والبيانات الخلوية}{26}{section*.10}%
+\contentsline {section}{أولاً: شبكة الهاتف المحمول (4G/5G) والبيانات}{27}{section*.10}%
+\contentsline {section}{ثانياً: Wi-Fi: الاتصال والمشاركة والأمان}{28}{section*.10}%
+\contentsline {section}{ثالثاً: بلوتوث: اللاعب الشامل للاتصال اللاسلكي قصير المدى}{29}{section*.10}%
+\contentsline {section}{رابعاً: التحكم بالأشعة تحت الحمراء: تحويل الهاتف إلى جهاز تحكم عن بُعد شامل}{30}{section*.10}%
+\contentsline {section}{خامساً: NFC: سحر اللمس}{30}{section*.10}%
+\contentsline {section}{سادساً: نقطة الاتصال الشخصية: تحويل الهاتف إلى موجّه Wi-Fi}{31}{section*.10}%
+\contentsline {chapter}{الفصل 4: تثبيت التطبيقات وإدارتها — “حقيبة المهارات” لهاتفك}{32}{chapter*.11}%
+\contentsline {section}{أولاً: المتاجر الرسمية: “سوبر ماركت التطبيقات” الأكثر أماناً}{32}{section*.12}%
+\contentsline {section}{ثانياً: الوضع النقي/وضع الحماية: تفعيل “جدار الحماية” بهاتفك}{32}{section*.12}%
+\contentsline {section}{ثالثاً: المصادر الخارجية و“الطفيليات الإلكترونية”: مخاطر عالية جداً!}{33}{section*.12}%
+\contentsline {section}{رابعاً: التثبيت والتحديث وإلغاء التثبيت}{34}{Item.47}%
+\contentsline {section}{خامساً: إدارة الأذونات: أنت“المدير” للتطبيق}{34}{Item.47}%
+\contentsline {section}{سادساً: مكونات حزمة تثبيت البرنامج}{34}{Item.50}%
+\contentsline {chapter}{الفصل 5: اجعل هاتفك يفهمك أكثر — الإعدادات الأساسية}{37}{chapter*.13}%
+\contentsline {section}{أولاً: الصوت والاهتزاز}{37}{section*.14}%
+\contentsline {section}{ثانياً: العرض والسطوع}{37}{section*.14}%
+\contentsline {section}{ثالثاً: الخلفيات والسمات وسطح المكتب}{37}{section*.14}%
+\contentsline {section}{رابعاً: إعدادات الكفاءة: اجعل هاتفك“دماغاً مساعداً” لك}{38}{section*.14}%
+\contentsline {section}{خامساً: إمكانية الوصول والاستيعاب: قوة التكنولوجيا من أجل الخير}{39}{section*.14}%
+\contentsline {chapter}{الفصل 6: احمِ حياتك الرقمية — الأمان والخصوصية}{43}{chapter*.15}%
+\contentsline {section}{أولاً: قفل الشاشة: الخط الدفاعي الفيزيائي الأول}{43}{section*.16}%
+\contentsline {section}{ثانياً:“العثور على هاتفي”: الأداة النهائية لمكافحة السرقة}{43}{Item.76}%
+\contentsline {section}{ثالثاً: تحديث النظام: ترقيع الثغرات وسد العيوب}{44}{Item.76}%
+\contentsline {section}{رابعاً: التعرف على الاحتيالعبر الاتصالات ومنعه}{44}{Item.76}%
+\contentsline {section}{خامساً: مقاومة“الفتح”وهجمات الهندسة الاجتماعية: قطع سلسلة تسرب الخصوصية}{45}{Item.76}%
+\contentsline {section}{سادساً: حماية الخصوصية: بياناتك هي ممتلكاتك}{46}{Item.76}%
+\contentsline {section}{سابعاً: قائمة“الإسعافات الأولية”بعد الفقد/السرقة}{46}{Item.76}%
+\contentsline {section}{ثامناً: أمان بطاقة SIM وeSIM}{47}{Item.82}%
+\contentsline {chapter}{الفصل 7: تحليل شامل للوظائف المتقدمة}{48}{chapter*.17}%
+\contentsline {section}{أولاً: اتصال الأقمار الصناعية: الاستغاثة حتى دون إشارة}{48}{section*.18}%
+\contentsline {section}{ثانياً: الاتصال دون شبكة: طريقة جديدة للاتصال قصير المدى}{49}{Item.89}%
+\contentsline {section}{ثالثاً: كشف الحوادث: إنقاذ الأرواح في اللحظات الحرجة}{49}{Item.89}%
+\contentsline {section}{رابعاً: تقنية SparkLink: الاتصال اللاسلكي للجيل القادم}{50}{Item.92}%
+\contentsline {part}{ثانياً: قسم البرمجيات (الفصول 8-14)}{53}{part*.19}%
+\contentsline {chapter}{الفصل 8: الاتصالات: الرسائل النصية والمكالمات والتواصل الاجتماعي}{53}{chapter*.20}%
+\contentsline {section}{أولاً: الميزات المتقدمة لتطبيق الهاتف}{53}{section*.21}%
+\contentsline {section}{ثانيًا: الرسائل النصية وiMessage/RCS}{55}{section*.21}%
+\contentsline {section}{ثالثًا: WeChat/QQ: إدارة تطبيقات التواصل الاجتماعي الشاملة}{56}{section*.21}%
+\contentsline {section}{رابعًا: مقارنة مكالمات الفيديو}{57}{Item.100}%
+\contentsline {section}{خامسًا: البريد الإلكتروني: الإعداد والاستخدام على الهاتف}{58}{Item.100}%
+\contentsline {chapter}{الفصل 9: العمل والتعلم عبر الهاتف المحمول}{60}{chapter*.22}%
+\contentsline {section}{أولاً: معالجة المستندات: التحرير والإبداع في راحة اليد}{60}{section*.23}%
+\contentsline {section}{ثانياً: تطبيقات الملاحظات: من التدوين العفوي إلى نظام المعرفة}{60}{section*.23}%
+\contentsline {section}{ثالثاً: المسح والتعرف الضوئي على الحروف (OCR): نقل العالم الورقي إلى الهاتف}{61}{section*.23}%
+\contentsline {section}{رابعاً: كيف تختار التخزين السحابي: لا يوجد الأفضل، بل الأنسب لك}{61}{section*.23}%
+\contentsline {section}{خامساً: سيناريو عمل حقيقي عبر الهاتف المحمول}{62}{section*.23}%
+\contentsline {chapter}{الفصل 10: الدفع عبر الهاتف المحمول والخدمات الحياتية}{63}{chapter*.24}%
+\contentsline {section}{أولاً: كيف تربط البطاقة البنكية فعلياً؟}{63}{section*.25}%
+\contentsline {section}{ثانياً: رمز الدفع هو “من يراه يستلم المال”}{63}{Item.122}%
+\contentsline {section}{ثالثاً: هذه الإعدادات الأمنية، 5 دقائق لتضبطها توفر عليك الكثير من القلق}{63}{Item.122}%
+\contentsline {section}{رابعاً: الحافلات والمترو: الهاتف هو بطاقة المواصلات}{64}{Item.122}%
+\contentsline {section}{خامساً: فواتير الخدمات، توصيل الطعام، وطلب السيارات}{64}{Item.122}%
+\contentsline {section}{سادساً: التأمين الصحي والضمان الاجتماعي والخدمات الحكومية عبر الهاتف}{64}{Item.122}%
+\contentsline {chapter}{الفصل 11: التصوير وإدارة الصور}{66}{chapter*.26}%
+\contentsline {section}{أولاً: هل وقعت في هذه الأخطاء أيضاً؟}{66}{section*.27}%
+\contentsline {section}{ثانياً: حيل صغيرة لرفع نسبة الصور الجيدة فوراً}{66}{section*.27}%
+\contentsline {section}{ثالثاً: وضع البورتريه والوضع الاحترافي}{67}{section*.27}%
+\contentsline {section}{رابعاً: تحرير الصور: لا تبالغ، المعتدل هو الأفضل}{67}{section*.27}%
+\contentsline {section}{خامساً: ماذا تفعل بكثرة الصور؟ استراتيجيات التنظيم}{67}{section*.27}%
+\contentsline {section}{سادساً: لقطات الشاشة وتسجيل الشاشة}{68}{section*.27}%
+\contentsline {section}{ملحق الفصل 11: المعارف التقنية للتصوير الاحترافي}{68}{Item.131}%
+\contentsline {chapter}{الفصل 12: الترفيه الصوتي والمرئي والقراءة}{77}{chapter*.28}%
+\contentsline {section}{أولاً: الاستماع إلى الموسيقى: أي تطبيق تختار وكيف تستمع براحة}{77}{section*.29}%
+\contentsline {section}{ثانياً: البودكاست: “رفيق الأذن” في طريق العمل}{77}{section*.29}%
+\contentsline {section}{ثالثاً: مشاهدة الفيديو: من المشغّل إلى البث، الطريقة الصحيحة}{78}{section*.29}%
+\contentsline {section}{رابعاً: قراءة الكتب الإلكترونية: القراءة الجيدة على الهاتف ممكنة}{78}{section*.29}%
+\contentsline {section}{خامساً: ألعاب الهاتف: استمتع دون إيذاء الهاتف}{79}{section*.29}%
+\contentsline {chapter}{الفصل 13: توصيات تطبيقات الأدوات}{80}{chapter*.30}%
+\contentsline {section}{أولاً: أدوات الإنتاجية: إدارة وقتك وانتباهك}{80}{section*.31}%
+\contentsline {section}{ثانيًا: الصحة والرياضة}{82}{section*.31}%
+\contentsline {section}{ثالثًا: السفر والتنقل}{83}{section*.31}%
+\contentsline {section}{رابعًا: مدخل لأدوات الأتمتة}{85}{section*.31}%
+\contentsline {section}{خامسًا: المتصفحات ومحركات البحث: بوابتك إلى المعلومات}{85}{section*.31}%
+\contentsline {section}{سادسًا: أدوات النظام المفيدة: التنظيف ومنع الإزعاج والحماية}{87}{Item.147}%
+\contentsline {section}{سابعًا: تحذيرات الطقس والكوارث الطبيعية والزلازل}{89}{Item.151}%
+\contentsline {section}{ثامنًا: التعاون عبر الأجهزة: التحكم عن بُعد والنقل السريع وأمان الحسابات}{92}{Item.155}%
+\contentsline {chapter}{الفصل 14: موضوع خاص عن مديري كلمات المرور}{96}{chapter*.32}%
+\contentsline {section}{أولاً: لماذا تحتاج إلى مدير كلمات المرور؟}{96}{section*.33}%
+\contentsline {section}{ثانياً: مبدأ عمل مدير كلمات المرور}{96}{section*.33}%
+\contentsline {section}{ثالثاً: مقدمة عن مبادئ التشفير}{96}{Item.163}%
+\contentsline {section}{رابعاً: توصيات مديري كلمات المرور الرئيسيين}{98}{Item.167}%
+\contentsline {section}{خامساً: التقييم الحقيقي لقوة كلمة المرور}{98}{Item.167}%
+\contentsline {section}{سادساً: Passkey: مستقبل تسجيل الدخول بدون كلمة مرور}{99}{Item.173}%
+\contentsline {section}{سبعة: مفاتيح الأمان المادية}{102}{Item.190}%
+\contentsline {section}{ثمانية: مشاركة كلمات المرور للأسرة/الفريق}{103}{Item.196}%
+\contentsline {section}{تسعة: أفضل ممارسات استخدام مدير كلمات المرور}{105}{Item.208}%
+\contentsline {part}{ثالثاً: القسم المتقدم (الفصول 15-20)}{107}{part*.34}%
+\contentsline {chapter}{الفصل 15: علم البطارية وتحسين مدة الاستخدام}{107}{chapter*.35}%
+\contentsline {section}{أولاً: كيف تعمل البطارية؟ دورات الشحن ومستوى الصحة}{107}{section*.36}%
+\contentsline {section}{ثانياً: أساطير الشحن؟ الشحن السريع واللاسلكي والقاعدة الذهبية}{107}{section*.36}%
+\contentsline {section}{ثالثاً: تحليل شامل لبروتوكولات الشحن السريع: لماذا لا يشحن شاحنك بسرعة؟}{108}{section*.36}%
+\contentsline {section}{أربعة: تكنولوجيا البطارية الجديدة: بطارية الأنود الكربوني السيليكوني}{111}{Item.217}%
+\contentsline {section}{خمسة: هذه هي نصائح توفير الطاقة الحقيقية}{111}{Item.217}%
+\contentsline {chapter}{الفصل 16: نظام الحسابات والخدمات السحابية}{113}{chapter*.37}%
+\contentsline {section}{أولاً: حساب هاتفك، ماذا يدير فعلاً؟}{113}{section*.38}%
+\contentsline {section}{ثانياً: ثلاثة أمور يجب فعلها، الآن فوراً}{113}{section*.38}%
+\contentsline {section}{ثالثاً: iCloud: “الهواء” لمستخدمي Apple}{114}{Item.223}%
+\contentsline {section}{رابعاً: المزامنة والنسخ الاحتياطي، لا تخلط بينهما}{115}{Item.223}%
+\contentsline {section}{خامساً: مصفوفة حسابات مستخدم أندرويد}{115}{Item.223}%
+\contentsline {section}{سادساً: المشاركة العائلية: ليستفيد أفراد العائلة أيضاً}{115}{Item.223}%
+\contentsline {chapter}{الفصل 17: ربط الهاتف بالأجهزة الأخرى}{117}{chapter*.39}%
+\contentsline {section}{أولاً: التعاون مع الحاسوب: الهاتف والحاسوب لم يعودا عالمين منفصلين}{117}{section*.40}%
+\contentsline {section}{ثانياً: العرض على التلفاز: ليشاهد الجميع معاً}{117}{section*.40}%
+\contentsline {section}{ثالثاً: مع الساعات الذكية/الأساور: مدير صحة على معصمك}{118}{section*.40}%
+\contentsline {section}{رابعاً: مع المنزل الذكي: الهاتف هو “المفتاح الرئيسي” للمنزل}{118}{section*.40}%
+\contentsline {section}{خامساً: سماعات ومكبرات صوت Bluetooth: حرية اللاسلك}{119}{section*.40}%
+\contentsline {section}{سادساً: مع نظام السيارة: شريك آمن أثناء القيادة}{120}{section*.40}%
+\contentsline {section}{سابعاً: الأمان والخصوصية في الربط}{120}{section*.40}%
+\contentsline {chapter}{الفصل 18: النسخ الاحتياطي للبيانات وترحيلها}{121}{chapter*.41}%
+\contentsline {section}{أولاً: اعرف أولاً: ما الذي إذا فُقد من هاتفك لا يعود}{121}{section*.42}%
+\contentsline {section}{ثانياً: النسخ الاحتياطي الكامل للجهاز: احصل على كل شيء دفعة واحدة}{121}{section*.42}%
+\contentsline {section}{ثالثاً: استراتيجية النسخ الاحتياطي المصنّف: الأشياء المهمة احفظ نسخة منفصلة}{122}{section*.42}%
+\contentsline {section}{رابعاً: دليل تغيير الهاتف: من الهاتف القديم إلى الجديد}{123}{section*.42}%
+\contentsline {section}{خامساً: القاعدة الذهبية للنسخ الاحتياطي: مبدأ الثلاثة-اثنين-واحد}{123}{section*.42}%
+\contentsline {chapter}{الفصل 19: تشخيص الأعطال والإنقاذ الذاتي}{125}{chapter*.43}%
+\contentsline {section}{أولاً: بطء الهاتف وارتفاع حرارته — أكثر الأسئلة شيوعاً}{125}{section*.44}%
+\contentsline {section}{ثانياً: انهيار التطبيقات وعدم الاستجابة — التطبيق لم يعد يطيع}{125}{Item.242}%
+\contentsline {section}{ثالثاً: عدم الشحن أو الشحن البطيء — قد لا يكون ذنب البطارية}{126}{Item.247}%
+\contentsline {section}{رابعاً: عدم الاتصال بالشبكة، انقطاع Wi-Fi المتكرر}{126}{Item.247}%
+\contentsline {section}{خامساً: مشاكل الشاشة: لمس غير حساس، وميض، آثار باقية}{127}{Item.251}%
+\contentsline {section}{سادساً: عدم الإقلاع، التعثّر عند شاشة الشعار — لا تذعر}{127}{Item.251}%
+\contentsline {section}{سابعاً: مشاكل الصوت: السماعة لا تعمل، صوت المكالمة منخفض}{127}{Item.251}%
+\contentsline {section}{ثامناً: الصيانة الرسمية، تجنّب هذه الفخاخ}{128}{Item.251}%
+\contentsline {section}{الفصل 20: وضع المطور والصلاحيات المتقدمة}{128}{Item.256}%
+\contentsline {section}{ملحق الفصل 20: Termux — بيئة طرف Linux محمولة على أجهزة Android}{135}{Item.269}%
+\contentsline {part}{رابعاً: قسم ما بعد الأساسيات (الفصول 21-26)}{140}{part*.45}%
+\contentsline {chapter}{الفصل 21: تعمّق في شبكات الهاتف المحمول وأمن المعلومات}{140}{chapter*.46}%
+\contentsline {section}{أولًا: VPN — “عباءة الإخفاء” داخل الشبكة}{140}{section*.47}%
+\contentsline {section}{ثانيًا: “الفخ الحلو” لشبكات Wi-Fi العامة — أخطر مما تتخيل}{140}{section*.47}%
+\contentsline {section}{ثالثًا: كيف يحميك HTTPS؟ — مصافحة SSL/TLS}{141}{section*.47}%
+\contentsline {section}{رابعًا: أمان DNS — هل “دليل هاتف الشبكة” الخاص بك آمن؟}{141}{Item.281}%
+\contentsline {section}{خامسًا: هل “التصفح المتخفي” يمنحك إخفاءً حقيقيًا؟}{142}{Item.281}%
+\contentsline {section}{سادسًا: خصوصية المتصفح — لا تدع المتصفح يبيعك}{142}{Item.281}%
+\contentsline {section}{سابعًا: قائمة أمان عملية — ابدأ بحماية نفسك من الآن}{143}{Item.281}%
+\contentsline {chapter}{الفصل 22: كيف يعمل الذكاء الاصطناعي في الهاتف}{144}{chapter*.48}%
+\contentsline {section}{أولًا: كاميرا الذكاء الاصطناعي — “غرفة التحميض” الخاصة بك انتقلت إلى الهاتف}{144}{section*.49}%
+\contentsline {section}{ثانيًا: المساعد الصوتي — كيف يفهمك “سكرتير الصوت” الخاص بك؟}{144}{section*.49}%
+\contentsline {section}{ثالثًا: الذكاء الاصطناعي على الجهاز مقابل الذكاء الاصطناعي السحابي}{144}{Item.294}%
+\contentsline {section}{رابعًا: النماذج الكبيرة للذكاء الاصطناعي والهاتف — مساعدك الذكي المحمول}{144}{Item.294}%
+\contentsline {section}{خامسًا: بعض سيناريوهات التطبيق النموذجية والتطبيق العملي}{145}{Item.294}%
+\contentsline {section}{سادسًا: تحسين المطالبات — “صيغة التواصل” التي تجعل الذكاء الاصطناعي يطيعك}{146}{Item.294}%
+\contentsline {section}{سابعًا: حدود الذكاء الاصطناعي وتحدياته — حافظ على حكمتك الواعية}{150}{Item.299}%
+\contentsline {chapter}{الفصل 23: التفكير البرمجي ومبادئ الأتمتة}{152}{chapter*.50}%
+\contentsline {section}{أولًا: ما هي الأتمتة بالضبط؟}{152}{section*.51}%
+\contentsline {section}{ثانيًا: “الاختصارات” في iOS — أداة الأتمتة السحرية لمستخدمي آبل}{152}{Item.305}%
+\contentsline {section}{ثالثًا: أتمتة Android — Tasker وأصدقاؤه}{153}{Item.305}%
+\contentsline {section}{رابعًا: التطبيقات اليومية للتفكير الآلي}{154}{Item.305}%
+\contentsline {section}{خامسًا: دليل تجنب الأخطاء — المشكلات الشائعة في الأتمتة}{154}{Item.305}%
+\contentsline {chapter}{ملحق الفصل 23: دليل البدء في GitHub — من استضافة الأكواد إلى منصة التعاون}{156}{chapter*.52}%
+\contentsline {section}{أولًا: ما هو GitHub بالضبط؟}{156}{section*.53}%
+\contentsline {section}{ثانيًا: الفرق بين Git و GitHub (مفاهيم أساسية!)}{156}{section*.53}%
+\contentsline {section}{ثالثًا: المفاهيم والوظائف الأساسية في GitHub}{157}{section*.53}%
+\contentsline {section}{رابعًا: التسجيل والبدء — أنشئ أول مستودع لك في خمس دقائق}{158}{section*.53}%
+\contentsline {section}{خامسًا: سير العمل الأساسي — من المحلي إلى السحابة}{159}{Item.318}%
+\contentsline {section}{سادسًا: سير عمل تعاون الفريق — كيف يعمل Pull Request}{159}{Item.323}%
+\contentsline {section}{سابعًا: سيناريوهات التطبيق النموذجية لـ GitHub}{160}{Item.329}%
+\contentsline {section}{ثامنًا: نصائح للمبتدئين}{160}{Item.329}%
+\contentsline {section}{تاسعًا: الخلاصة — لماذا يجب على الجميع فهم GitHub}{161}{Item.329}%
+\contentsline {chapter}{الفصل 24: تحليل عميق لصلاحيات Root وقفل BL}{162}{chapter*.54}%
+\contentsline {section}{أولًا: فهم متعمق لـ Bootloader}{162}{section*.55}%
+\contentsline {section}{ثانيًا: العملية التفصيلية لفك قفل BL (باستخدام شاومي كمثال)}{163}{Item.337}%
+\contentsline {section}{ثالثًا: حلول Root المتعددة}{163}{Item.341}%
+\contentsline {section}{رابعًا: مدخل إلى فلاش النظام}{164}{Item.341}%
+\contentsline {section}{خمسة: Samsung Knox: الثمن غير القابل للعكس لفتح BL}{164}{Item.341}%
+\contentsline {section}{ستة: أسئلة شائعة (Q\& A)}{165}{Item.341}%
+\contentsline {chapter}{الفصل 25: معالجة الهواتف المستعملة والتراث الرقمي}{166}{chapter*.56}%
+\contentsline {section}{أولًا: “الموت الرحيم” للهاتف القديم — دليل البيع أو الإهداء الآمن}{166}{section*.57}%
+\contentsline {section}{ثانيًا: التراث الرقمي — أين تضع روحك الاجتماعية؟}{167}{Item.346}%
+\contentsline {section}{ثالثًا: الرحلة الأخيرة الصديقة للبيئة}{171}{Item.357}%
+\contentsline {chapter}{الفصل 26: حدود تقنية الهاتف الحالية}{173}{chapter*.58}%
+\contentsline {section}{واحد: هاتف AI: حيلة تسويق أم تغيير حقيقي؟}{173}{section*.59}%
+\contentsline {section}{اثنان: مقارنة استراتيجيات AI للشركات: من يجدّ ومن يلصق العلامات؟}{173}{section*.59}%
+\contentsline {section}{ثلاثة: الاتصال بالأقمار الصناعية: من “حيلة” الرائد إلى معيار المتوسط}{174}{section*.59}%
+\contentsline {section}{أربعة: نضوج منظومة الشاشات القابلة للطي: هل تصلح كهاتف رئيسي؟}{174}{section*.59}%
+\contentsline {section}{خمسة: 6G وWi-Fi 7: سرعة وحدود الجيل القادم من الاتصال}{175}{section*.59}%
+\contentsline {section}{ستة: بطارية الأنود الكربوني السيليكوني: البطارية أخيراً تشهد اختراقاً على مستوى المواد}{175}{section*.59}%
+\contentsline {section}{سبعة: نظرة سريعة على الفصل: جملة واحدة لتذكر هذه الحدود}{175}{section*.59}%
+\contentsline {part}{خامساً: القسم العملي (الفصول 27-32)}{178}{part*.60}%
+\contentsline {chapter}{الفصل 27: يستخدمه الآباء بسهولة — دليل شامل لهاتف مناسب لكبار السن}{178}{chapter*.61}%
+\contentsline {section}{صفر: ضبط العقلية أولاً: ليست “كبار السن لا يستطيعون” بل “الهاتف لم يُصمم جيداً”}{178}{section*.62}%
+\contentsline {section}{واحد: الخطوة الأولى: تفعيل “الوضع البسيط” — الهاتف يصبح أنظف}{178}{section*.62}%
+\contentsline {section}{اثنان: إذا لم تفعّل الوضع البسيط، يمكن التكبير يدوياً — “خط كبير + أيقونات كبيرة” بخطوات خمس}{179}{section*.62}%
+\contentsline {section}{ثلاثة: مكافحة الاحتيال — هذا القسم اقرأه مع كبار السن}{180}{Item.376}%
+\contentsline {section}{أربعة: المساعدة عن بعد — في الخارج تستطيع إصلاح هاتف الوالدين}{181}{Item.379}%
+\contentsline {section}{خمسة: “تعديل WeChat لكبار السن” — قل هذه الجمل للوالدين}{181}{Item.379}%
+\contentsline {section}{ستة: ماذا لو ضاع الهاتف؟ اصنع “خطة طوارئ” لكبار السن}{181}{Item.379}%
+\contentsline {section}{سبعة: توافق السماعات اللاسلكية وسماعات الأذن — وظيفة جيدة مهملة}{182}{Item.382}%
+\contentsline {section}{ثمانية: الوظائف الصحية — الهاتف ليس مجرد أداة اتصال}{182}{Item.382}%
+\contentsline {chapter}{الفصل 28: أنفق بحكمة لتحصل على هاتفك المثالي — الدليل الشامل لشراء الهاتف}{183}{chapter*.63}%
+\contentsline {section}{صفر: طريقة ثلاث خطوات: الاحتياج الميزانية الموديل}{183}{section*.64}%
+\contentsline {section}{واحد: كيف تقرأ المعاملات الأساسية — لا تفهمها كلها، خمسة عناصر تكفي}{183}{Item.385}%
+\contentsline {section}{اثنان: توصيات حسب الميزانية (بناءً على سوق منتصف 2026)}{184}{Item.385}%
+\contentsline {section}{ثلاثة: اختيار الهاتف حسب السيناريو — ما احتياجك؟}{185}{Item.385}%
+\contentsline {section}{أربعة: خمسة فخاخ شائعة — راجعها قبل الشراء}{186}{Item.385}%
+\contentsline {section}{خمسة: متى يكون الشراء أكثر جدوى؟}{186}{Item.390}%
+\contentsline {section}{ستة: اختيار القناة — أين تشتري بثقة؟}{187}{Item.390}%
+\contentsline {chapter}{الفصل 29: الصحة الرقمية — إقامة علاقة صحية مع الهاتف}{188}{chapter*.65}%
+\contentsline {section}{واحد: انظر “وقت الشاشة” أولاً — الأرقام توقظ}{188}{section*.66}%
+\contentsline {section}{اثنان: ضع “حداً يومياً” للتطبيقات — ضع مقيّد سرعة لنفسك}{188}{section*.66}%
+\contentsline {section}{ثلاثة: الاستخدام الصحيح لـ “وضعدم الإزعاج” — لا إغلاق الإشعارات بل إغلاق القلق}{188}{Item.398}%
+\contentsline {section}{أربعة: حماية العين بالعادة لا بالتطبيق — قاعدة 20-20-20}{189}{Item.398}%
+\contentsline {section}{خمسة: دليل إنقاذ الرقبة “للمنخفضين”}{189}{Item.398}%
+\contentsline {section}{ستة: النوم والهاتف — العادة التي يجب تغييرها في غرفة النوم}{189}{Item.398}%
+\contentsline {section}{سبعة: قلق المعلومات — تعلم “العمى الاختياري”}{190}{Item.398}%
+\contentsline {chapter}{الفصل 30: عرض الشاشة والعروض التقديمية والاتصال بالسيارة}{191}{chapter*.67}%
+\contentsline {section}{واحد: ثلاثة معسكرات للبث اللاسلكي — لا تخلط بينها}{191}{section*.68}%
+\contentsline {section}{اثنان: البث السلكي — أكثر استقراراً وصفر تأخير}{191}{section*.68}%
+\contentsline {section}{ثلاثة: الهاتف يتحول لحاسوب — وضع سطح المكتب}{192}{section*.68}%
+\contentsline {section}{أربعة: الاتصال بالسيارة — الطريقة الصحيحة لاستخدام الهاتف أثناء القيادة}{192}{section*.68}%
+\contentsline {section}{خمسة: بث غرفة الاجتماعات عملياً — بلا ارتباك}{193}{section*.68}%
+\contentsline {chapter}{الفصل 31: مقدمة في تصوير الفيديوهات القصيرة وإنشاء المحتوى}{194}{chapter*.69}%
+\contentsline {section}{واحد: فكر قبل التصوير: لمن تصور؟}{194}{section*.70}%
+\contentsline {section}{اثنان: إعدادات التصوير الأساسية — 5 أمور قبل البدء}{194}{Item.413}%
+\contentsline {section}{ثلاثة: خمس حركات كاميرا — اجعل الصورة “تتحرك”}{194}{Item.418}%
+\contentsline {section}{أربعة: مونتاج للمبتدئين — JianYing يكفي}{195}{Item.418}%
+\contentsline {section}{خمسة: أهمية الغلاف — 70\% يحكمون بالغلاف}{195}{Item.424}%
+\contentsline {section}{ستة: ثلاث قواعد لإنشاء المحتوى}{196}{Item.424}%
+\contentsline {chapter}{الفصل 32: دليل الإسعافات الأولية لأمان الهاتف}{197}{chapter*.71}%
+\contentsline {section}{السيناريو صفر: الزلازل/الطقس القاسي — كيف يساعدك الهاتف على النجاة}{197}{section*.72}%
+\contentsline {section}{السيناريو 1: فقدان الهاتف/سرقته — الـ 30 دقيقة الذهبية}{198}{Item.439}%
+\contentsline {section}{السيناريو 2: التعرض للاحتيال — الفترة الذهبية 72 ساعة}{198}{Item.448}%
+\contentsline {section}{السيناريو 3: إصابة الهاتف بفيروس/حصان طروادة — ماذا تفعل؟}{199}{Item.454}%
+\contentsline {section}{السيناريو 4: سرقة الحساب — استعد السيطرة بسرعة}{199}{Item.454}%
+\contentsline {section}{السيناريو 5: استلام رسالة ابتزاز — لا تخف ولا تدفع}{200}{Item.460}%
+\contentsline {section}{السيناريو 6: احتيال تبديل الوجه/تقليد الصوت بالذكاء الاصطناعي — الرؤية لم تعد حقيقة}{200}{Item.460}%
+\contentsline {section}{السيناريو 7: هجوم SIM swap (خطف SIM) — «سرقة» رقمك}{201}{Item.465}%
+\contentsline {part}{سادسًا: قسم النظرة المستقبلية واتصال السيارة (الفصول 33-34)}{204}{part*.73}%
+\contentsline {chapter}{الفصل 33: نظرة مستقبلية — المحطة القادمة للهاتف}{204}{chapter*.74}%
+\contentsline {section}{واحد: AR/VR والحوسبة المكانية: “سطح المكتب الثاني” خارج الهاتف}{204}{section*.75}%
+\contentsline {section}{اثنان: واجهة الدماغ والحاسوب: الفكر كوسيلة تفاعل}{204}{section*.75}%
+\contentsline {section}{ثلاثة: “اختفاء” الهاتف وأساس الهوية الجديد}{205}{section*.75}%
+\contentsline {section}{أربعة: تأملات أخلاقية: هل نحن سادة الهاتف؟}{205}{section*.75}%
+\contentsline {section}{خمسة: ابقَ متصلاً وابقَ مستقلاً — فلسفة حياتك الرقمية}{205}{section*.75}%
+\contentsline {chapter}{الفصل 34: دليل متعمق لاتصال السيارة — اندماج الهاتف مع السيارة}{207}{chapter*.76}%
+\contentsline {section}{واحد: ثلاثة مسارات لاتصال السيارة}{207}{section*.77}%
+\contentsline {section}{اثنان: مقارنة CarPlay / Android Auto / HiCar}{207}{section*.77}%
+\contentsline {section}{ثالثاً: قمرة HarmonyOS: التدفق السلس بين الهاتف ونظام السيارة}{208}{section*.77}%
+\contentsline {section}{رابعاً: أنظمة سيارات الشركات الناشئة}{208}{section*.77}%
+\contentsline {section}{خامساً: الهاتف كنظام سيارة — هل يصلح؟}{208}{section*.77}%
+\contentsline {section}{سادساً: نصائح عملية}{209}{section*.77}%
+\contentsline {part}{الأطفال والهاتف: موضوع خاص (الفصل 35)}{212}{part*.78}%
+\contentsline {chapter}{الفصل 35: الأطفال والهاتف — دليل التربية في العصر الرقمي}{212}{chapter*.79}%
+\contentsline {section}{أولاً: متى نعطي الطفل هاتفاً؟}{212}{section*.80}%
+\contentsline {section}{ثانياً: دليل شامل لنظام رقابة الوالدين}{213}{section*.80}%
+\contentsline {section}{ثالثاً: وضع الشباب}{213}{section*.80}%
+\contentsline {section}{رابعاً: تعليم آداب الإنترنت}{214}{section*.80}%
+\contentsline {section}{خامساً: عادات الاستخدام الصحي}{214}{section*.80}%
+\contentsline {section}{سادساً: التراث الرقمي والأطفال}{215}{section*.80}%
+\contentsline {chapter}{الفصل 36: الهاتف والمنزل الذكي — اجعل منزلك ذكيًا}{216}{chapter*.81}%
+\contentsline {section}{أولاً: بروتوكولات المنزل الذكي: الاختيار مهم}{216}{section*.82}%
+\contentsline {section}{ثانيًا: مقارنة المنظومات الثلاث الكبرى}{216}{section*.82}%
+\contentsline {section}{ثالثًا: الهاتف كمركز للمنزل}{217}{section*.82}%
+\contentsline {section}{رابعًا: أطقم البداية الموصى بها}{217}{section*.82}%
+\contentsline {section}{خامسًا: ملاحظات الأمان}{218}{section*.82}%
+\contentsline {part}{سابعًا: قسم البرمجة بالذكاء الاصطناعي عمليًا (الفصول 37-47)}{220}{part*.83}%
+\contentsline {chapter}{الفصل 37: ثورة النموذج — من «كتابة الكود» إلى «قيادة الذكاء الاصطناعي لكتابة الكود»}{220}{chapter*.84}%
+\contentsline {section}{أولاً: ولادة Vibe Coding: حركة بدأت بجملة واحدة}{220}{section*.85}%
+\contentsline {section}{ثانيًا: واقع 2026: عصر Agentic Engineering}{220}{section*.85}%
+\contentsline {section}{ثالثًا: التحول المعرفي الجوهري: من Coder إلى Conductor}{221}{Item.496}%
+\contentsline {section}{رابعًا: لماذا المنهجية أهم من الأدوات}{222}{Item.496}%
+\contentsline {chapter}{الفصل 38: المبادئ الفكرية الخمسة لبرمجة الذكاء الاصطناعي}{224}{chapter*.86}%
+\contentsline {section}{أولاً، المبدأ الأول: Think Before Coding (فكر قبل الترميز)}{224}{section*.87}%
+\contentsline {section}{ثانيًا، المبدأ الثاني: Simplicity First (البساطة أولًا)}{225}{Item.499}%
+\contentsline {section}{ثالثًا، المبدأ الثالث: Surgical Changes (التعديل الجراحي)}{225}{Item.499}%
+\contentsline {section}{رابعًا، المبدأ الرابع: Goal-Driven Execution (التنفيذ المدفوع بالأهداف)}{226}{lstnumber.-2.1}%
+\contentsline {section}{خامسًا، المبدأ الخامس: Iterate and Verify (التكرار والتحقق)}{226}{lstnumber.-2.1}%
+\contentsline {section}{سادسًا، Harness Engineering: الوكيل = النموذج + الهيكل}{227}{lstnumber.-2.1}%
+\contentsline {chapter}{الفصل 39: هندسة السياق — اجعل الذكاء الاصطناعي يفهم نيتك}{229}{chapter*.88}%
+\contentsline {section}{أولاً: ملف ذاكرة المشروع: «الذاكرة طويلة المدى» للذكاء الاصطناعي}{229}{section*.89}%
+\contentsline {section}{ثانيًا: التطوير المدفوع بالمواصفات (SDD)}{230}{lstnumber.-3.24}%
+\contentsline {section}{ثالثًا: إدارة نافذة السياق}{231}{Item.504}%
+\contentsline {section}{رابعًا: نقاط عملية في هندسة السياق}{231}{Item.504}%
+\contentsline {chapter}{الفصل 40: هندسة المتطلبات — تحويل الأفكار إلى تعليمات يستطيع الذكاء الاصطناعي تنفيذها}{233}{chapter*.90}%
+\contentsline {section}{أولًا: من الفكرة الغامضة إلى المتطلبات المنظمة}{233}{section*.91}%
+\contentsline {section}{ثانيًا: فن تقسيم المتطلبات إلى طبقات}{234}{section*.91}%
+\contentsline {section}{ثالثًا: قالب كتابة وثيقة المتطلبات (PRD) والتطبيق العملي}{234}{Item.513}%
+\contentsline {section}{رابعًا: تطبيق عملي: محاكاة كاملة من الفكرة إلى الخطة}{235}{lstnumber.-4.29}%
+\contentsline {chapter}{الفصل 41: المشهد الكامل لأدوات البرمجة بالذكاء الاصطناعي في 2026}{237}{chapter*.92}%
+\contentsline {section}{أولًا: المدارس الثلاث الكبرى وإطار الاختيار}{237}{section*.93}%
+\contentsline {section}{ثانيًا: مدرسة الذكاء الاصطناعي المدمج في IDE}{238}{section*.93}%
+\contentsline {section}{ثالثًا: مدرسة وكيل الطرفية}{238}{section*.93}%
+\contentsline {section}{رابعًا: مدرسة الباني السحابي}{239}{section*.93}%
+\contentsline {section}{خامسًا: الأدوات تتغير والمنهجية تبقى}{239}{section*.93}%
+\contentsline {chapter}{الفصل 42: مشهد النماذج اللغوية الكبيرة والتطبيق العملي لواجهات API}{241}{chapter*.94}%
+\contentsline {section}{أولًا: النماذج اللغوية الكبيرة الدولية الرائدة: مشهد القوى الثلاث}{241}{section*.95}%
+\contentsline {section}{ثانيًا: النماذج اللغوية الكبيرة الصينية الرائدة: ازدهار متعدد الألوان}{243}{section*.95}%
+\contentsline {section}{ثالثًا: إطار اتخاذ قرار اختيار النموذج}{246}{section*.95}%
+\contentsline {section}{رابعًا: مدخل إلى استدعاء API: ربط النماذج اللغوية الكبيرة من الصفر}{246}{section*.95}%
+\contentsline {section}{خامسًا: دليل شراء باقات التوكنات (Token Plan)}{249}{lstnumber.-8.14}%
+\contentsline {section}{سادساً: تطبيق عملي — دمج واجهة النموذج الكبير API في مشروعك}{252}{Item.522}%
+\contentsline {chapter}{الفصل 43: هندسة الحوار — تقنيات الحوار للتعاون الفعال مع الذكاء الاصطناعي}{255}{chapter*.96}%
+\contentsline {section}{أولاً: استراتيجية طبقات الموجه (Prompt)}{255}{section*.97}%
+\contentsline {section}{ثانياً: حوار التصحيح — كيف تصف الخطأ ليحدده الذكاء الاصطناعي بسرعة}{255}{section*.97}%
+\contentsline {section}{ثالثاً: استراتيجية التكرار — خطوات صغيرة سريعة مقابل إعادة هيكلة كبيرة}{256}{lstnumber.-11.1}%
+\contentsline {section}{رابعاً: إدارة السياق في الحوارات متعددة الجولات}{257}{lstnumber.-11.1}%
+\contentsline {chapter}{الفصل 44: تطبيق عملي من 0 إلى 1 — الدورة الكاملة للمشروع من البداية إلى النهاية}{258}{chapter*.98}%
+\contentsline {section}{أولاً: المشروع الأول — موقع أدوات شخصي فائق البساطة (للمبتدئين)}{258}{section*.99}%
+\contentsline {section}{ثانياً: المشروع الثاني — نظام تسجيل المصروفات المتكامل (مستوى متقدم)}{259}{lstnumber.-12.13}%
+\contentsline {section}{ثالثاً: المشروع الثالث — تطبيق معزز بالذكاء الاصطناعي (مستوى عال)}{260}{lstnumber.-14.18}%
+\contentsline {section}{رابعاً: قائمة سير العمل العملي العامة}{261}{lstnumber.-14.18}%
+\contentsline {chapter}{الفصل 45: ضمان الجودة — اجعل كود الذكاء الاصطناعي موثوقا}{263}{chapter*.100}%
+\contentsline {section}{أولاً: التوجيه بالاختبارات — دع الذكاء الاصطناعي يكتب الاختبارات}{263}{section*.101}%
+\contentsline {section}{ثانياً: مهارات مراجعة الكود}{264}{lstnumber.-15.14}%
+\contentsline {section}{ثالثاً: التحكم في الإصدارات — دور Git في البرمجة بالذكاء الاصطناعي}{264}{lstnumber.-15.14}%
+\contentsline {section}{رابعاً: الفخاخ الشائعة ودليل تجنبها}{265}{Item.530}%
+\contentsline {chapter}{الفصل 46: طريق التقدم — من مستخدم إلى مهندس بنية}{267}{chapter*.102}%
+\contentsline {section}{أولاً: بروتوكول MCP وتوسيع الأدوات}{267}{section*.103}%
+\contentsline {section}{ثانياً: سير العمل المخصص ومهارات Skills}{267}{section*.103}%
+\contentsline {section}{ثالثاً: نمط التعاون متعدد الوكلاء}{268}{section*.103}%
+\contentsline {section}{رابعاً: مسار التعلم المستمر}{268}{section*.103}%
+\contentsline {chapter}{الفصل 47: دليل المراجعة السريعة والموارد}{269}{chapter*.104}%
+\contentsline {section}{أولاً: بطاقات المراجعة السريعة لنماذج التفكير}{269}{section*.105}%
+\contentsline {section}{ثانياً: شجرة قرار اختيار الأدوات}{269}{section*.105}%
+\contentsline {section}{ثالثاً: الأسئلة الشائعة FAQ}{270}{section*.105}%
+\contentsline {section}{رابعاً: مصادر التعلم الموصى بها}{270}{section*.105}%
+\contentsline {section}{خامساً: خاتمة — الأداة بين يديك والمنهجية في قلبك}{271}{section*.105}%
+\contentsline {section}{المراجع}{271}{section*.105}%
+\contentsline {part}{ثامنًا: قسم تطوير أندرويد عمليًا (الفصول 48-58)}{274}{part*.106}%
+\contentsline {chapter}{الفصل 48: التعرف على أندرويد — من نظام التشغيل إلى منظومة التطوير}{274}{chapter*.107}%
+\contentsline {section}{أولاً: قصة أندرويد — من “الروبوت الصغير” إلى “أكبر أنظمة العالم”}{274}{section*.108}%
+\contentsline {section}{ثانياً: بأي لغة نكتب — Java أم Kotlin؟}{275}{section*.108}%
+\contentsline {section}{ثالثاً: كيف يولد التطبيق (App)؟}{276}{lstnumber.-17.6}%
+\contentsline {section}{رابعاً: المشهد الكامل لحزمة تقنيات أندرويد — “قائمة أسلحتك”}{276}{lstnumber.-17.6}%
+\contentsline {section}{خامساً: أندرويد مقابل iOS — أول درس “اختيار المعسكر” للمطور}{277}{lstnumber.-17.6}%
+\contentsline {chapter}{الفصل 49: تجهيز بيئة التطوير — Android Studio وأول مشروع}{279}{chapter*.109}%
+\contentsline {section}{أولًا: تثبيت Android Studio}{279}{section*.110}%
+\contentsline {section}{ثانيًا: إنشاء أول مشروع لك}{279}{Item.542}%
+\contentsline {section}{ثالثًا: لنشغّله: المحاكي والجهاز الحقيقي}{280}{Item.542}%
+\contentsline {section}{رابعًا: تفكيك بنية المشروع: ما وظيفة كل ملف}{280}{Item.546}%
+\contentsline {section}{خامسًا: تجربة أولى: استبدل “Hello” باسمك}{281}{Item.546}%
+\contentsline {section}{سادسًا: إسعافات أولية للأخطاء الشائعة: “قسم الطوارئ” لأول أسبوعين للمبتدئ}{282}{lstnumber.-18.8}%
+\contentsline {chapter}{الفصل 50: انطلاقة سريعة مع Kotlin — اللغة الأولى لتطوير Android}{283}{chapter*.111}%
+\contentsline {section}{أولًا: المتغيرات والأنواع: إعطاء البيانات أسماء}{283}{section*.112}%
+\contentsline {section}{ثانيًا: الدوال: تجميع المنطق في “أزرار”}{284}{lstnumber.-19.8}%
+\contentsline {section}{ثالثًا: الشروط والحلقات: نجعل البرنامج “يفكر”}{284}{lstnumber.-20.10}%
+\contentsline {section}{رابعًا: أمان الفراغ: “تميمة الحماية” في Kotlin}{285}{lstnumber.-21.21}%
+\contentsline {section}{خامسًا: الأصناف والكائنات: قوالب صناعة “القطع”}{285}{lstnumber.-22.10}%
+\contentsline {section}{سادسًا: اللامدا والدوال العليا: “سكر Kotlin النحوي”}{286}{lstnumber.-23.13}%
+\contentsline {section}{سابعًا: بطاقة مراجعة نحوية للمبتدئين من الصفر}{286}{lstnumber.-24.11}%
+\contentsline {chapter}{الفصل 51: تطوير الواجهات — مدخل إلى Jetpack Compose}{288}{chapter*.113}%
+\contentsline {section}{أولًا: فكرة Compose: الواجهة دالة}{288}{section*.114}%
+\contentsline {section}{ثانيًا: المكونات الأساسية: نص، زر، حقل إدخال، صورة}{288}{lstnumber.-25.16}%
+\contentsline {section}{ثالثًا: ثلاثية التخطيط: Column و Row و Box}{289}{lstnumber.-26.15}%
+\contentsline {section}{رابعًا: الحالة: نجعل الواجهة “حية”}{290}{lstnumber.-28.9}%
+\contentsline {section}{خامسًا: المظهر والوضع الداكن: إعداد واحد يسري على الكل}{291}{lstnumber.-29.12}%
+\contentsline {section}{سادسًا: المعاينة والحركة والتحرير الحي: “القوى الخارقة” في Compose}{291}{Item.549}%
+\contentsline {chapter}{الفصل 52: المكونات الأربعة ودورة حياة Activity}{293}{chapter*.115}%
+\contentsline {section}{أولًا: المكونات الأربعة: “الأعمدة الأساسية” في Android}{293}{section*.116}%
+\contentsline {section}{ثانيًا: دورة حياة Activity: أول “خريطة كنز” في تطوير Android}{293}{section*.116}%
+\contentsline {section}{ثالثًا: Intent: “تذكرة السفر” داخل التطبيق وخارجه}{294}{section*.116}%
+\contentsline {section}{رابعًا: الصفحات المتعددة والتنقل}{294}{lstnumber.-31.8}%
+\contentsline {section}{خامسًا: تعارف عرضي: ما هو Fragment (ولماذا لم يشرحه الكتاب)}{295}{lstnumber.-32.13}%
+\contentsline {chapter}{الفصل 53: تخزين البيانات وطلبات الشبكة}{296}{chapter*.117}%
+\contentsline {section}{أولًا: كيف تختار حل التخزين: انظر هذا الجدول أولًا}{296}{section*.118}%
+\contentsline {section}{ثانيًا: DataStore: لتخزين الإعدادات الصغيرة}{296}{section*.118}%
+\contentsline {section}{ثالثًا: Room: بيت “حقيقي” للبيانات}{297}{lstnumber.-33.12}%
+\contentsline {section}{رابعًا: Retrofit: الحديث مع الخادم}{298}{lstnumber.-34.31}%
+\contentsline {section}{خامسًا: تحليل JSON: “ترجمة” بيانات الشبكة}{298}{lstnumber.-35.15}%
+\contentsline {section}{سادسًا: الكوروتينات: “اللغة المشتركة” للتوازي في Android}{299}{lstnumber.-36.10}%
+\contentsline {section}{خامسًا: الكوروتينات: “اللغة المشتركة” للتوازي في Android}{299}{lstnumber.-36.10}%
+\contentsline {chapter}{الفصل 54: المشروع الأول — دفتر حساباتي (النسخة المحلية)}{301}{chapter*.119}%
+\contentsline {section}{أولًا: التفكير في المتطلبات: اسأل خمسة أسئلة أولًا}{301}{section*.120}%
+\contentsline {section}{ثانيًا: طبقة البيانات: بيت لـ“العملية المالية”}{301}{section*.120}%
+\contentsline {section}{ثالثًا: MVVM: “فصل” الواجهة عن المنطق}{302}{lstnumber.-39.17}%
+\contentsline {section}{رابعًا: الواجهة: صفحة القائمة + صفحة الإدخال}{303}{lstnumber.-40.18}%
+\contentsline {section}{خامسًا: التعديل والحذف: بيانات “تدخل وتخرج”}{304}{lstnumber.-41.31}%
+\contentsline {section}{سادسًا: القبول: فحص ثلاثي الطبقات + تحديان متقدميان}{304}{lstnumber.-42.9}%
+\contentsline {section}{خامسًا: القبول: فحص ثلاثي الطبقات + تحديان متقدميان}{304}{lstnumber.-42.9}%
+\contentsline {chapter}{الفصل 55: المشروع الثاني — تطبيق الطقس (النسخة الشبكية)}{306}{chapter*.121}%
+\contentsline {section}{أولًا: طلب API طقس مجاني}{306}{section*.122}%
+\contentsline {section}{ثانيًا: طبقة الشبكة: Retrofit + تحليل JSON}{306}{Item.554}%
+\contentsline {section}{ثالثًا: حالات الواجهة الثلاث: جارٍ التحميل / نجاح / فشل}{307}{lstnumber.-43.18}%
+\contentsline {section}{رابعًا: كود الواجهة عمليًا: لرسم الطقس}{308}{lstnumber.-44.24}%
+\contentsline {section}{خامسًا: تفاصيل الواجهة والتفاعل}{308}{lstnumber.-45.25}%
+\contentsline {section}{رابعًا: تفاصيل الواجهة والتفاعل}{308}{lstnumber.-45.25}%
+\contentsline {chapter}{الفصل 56: الصقل والنشر — الاختبار وتصحيح الأخطاء والنشر على Google Play}{310}{chapter*.123}%
+\contentsline {section}{أولاً: أدوات التصحيح الثلاث — Logcat ونقاط التوقف وفاحص واجهة المستخدم}{310}{section*.124}%
+\contentsline {section}{ثانياً: الاختبارات — تأمين على الكود}{310}{section*.124}%
+\contentsline {section}{ثالثاً: التوقيع والتجزئة — وضع «الختم» على التطبيق}{311}{lstnumber.-46.19}%
+\contentsline {section}{رابعاً: خطوات النشر على Google Play كاملة}{312}{Item.557}%
+\contentsline {section}{خامساً: إعداد مواد المتجر — الانطباع الأول هو تحميلاتك}{312}{Item.557}%
+\contentsline {section}{خامساً: قائمة مختصرة لتحسين الأداء والإبلاغ عن الانهيارات}{312}{Item.557}%
+\contentsline {chapter}{الفصل 57: طريق التقدم — الأذونات والإشعارات والبنية الحديثة}{314}{chapter*.125}%
+\contentsline {section}{أولاً: الأذونات أثناء التشغيل — اطرق الباب قبل الدخول}{314}{section*.126}%
+\contentsline {section}{ثانياً: الإشعارات — قل الكلمة المفيدة في الوقت المناسب}{315}{lstnumber.-47.16}%
+\contentsline {section}{ثالثاً: تقدّم في البنية — حقن التبعيات والتجزئة إلى وحدات}{315}{lstnumber.-48.21}%
+\contentsline {section}{رابعاً: أساليب 2026 الجديدة — تطوير Android بمساعدة الذكاء الاصطناعي}{316}{lstnumber.-48.21}%
+\contentsline {section}{خامساً: تحسين أداء Compose وأدوات تصحيحه}{316}{lstnumber.-48.21}%
+\contentsline {chapter}{الفصل 58: دليل المراجعة السريعة والمصادر}{318}{chapter*.127}%
+\contentsline {section}{أولاً: بطاقة المراجعة السريعة للكود الشائع}{318}{section*.128}%
+\contentsline {section}{ثانياً: الأسئلة الشائعة}{318}{section*.128}%
+\contentsline {section}{ثالثاً: مصادر تعلم موصى بها}{319}{section*.128}%
+\contentsline {section}{رابعاً: مراجعة سريعة لأوامر Gradle الشائعة}{319}{section*.128}%
+\contentsline {section}{خامساً: خاتمة — من أول تطبيق إلى التطبيق رقم N}{320}{section*.128}%
+\contentsline {section}{سابعاً: خاتمة — من أول تطبيق إلى التطبيق رقم N}{320}{section*.128}%
+\contentsline {section}{المراجع}{320}{section*.128}%
+\contentsline {part}{تاسعًا: قسم تطوير iOS عمليًا (الفصول 59-69)}{322}{part*.129}%
+\contentsline {chapter}{الفصل 59: التعرف على iOS — بيئة Apple وبيئة التطوير}{322}{chapter*.130}%
+\contentsline {section}{أولاً: نشأة iOS — هاتف واحد يغيّر صناعة كاملة}{322}{section*.131}%
+\contentsline {section}{ثانياً: الحديقة المسوّرة — «قواعد» بيئة Apple و«أرباحها»}{322}{section*.131}%
+\contentsline {section}{ثالثاً: بأي لغة نكتب — Objective-C أم Swift؟}{323}{section*.131}%
+\contentsline {section}{رابعاً: كيف يولد التطبيق؟}{323}{lstnumber.-50.1}%
+\contentsline {section}{خامساً: منظومة تقنيات iOS الكاملة — «قائمة أسلحتك»}{324}{lstnumber.-50.1}%
+\contentsline {chapter}{الفصل 60: تجهيز بيئة التطوير — Xcode وأول مشروع}{326}{chapter*.132}%
+\contentsline {section}{أولاً: تجهيز جهاز Mac}{326}{section*.133}%
+\contentsline {section}{ثانياً: تثبيت Xcode}{326}{section*.133}%
+\contentsline {section}{ثالثاً: إنشاء أول مشروع لك}{327}{Item.570}%
+\contentsline {section}{رابعاً: تشريح بنية المشروع — ما وظيفة كل ملف}{327}{Item.570}%
+\contentsline {section}{خامساً: التصحيح على الجهاز الحقيقي — تثبيت التطبيق في iPhone الخاص بك}{328}{Item.570}%
+\contentsline {section}{خامساً: حيل إتقان Xcode — خمس «إضافات اختصارات» للمبتدئ}{328}{Item.570}%
+\contentsline {section}{سادساً: التصحيح على الجهاز الحقيقي — تثبيت التطبيق في iPhone الخاص بك}{328}{Item.570}%
+\contentsline {section}{سابعاً: أول تجربة + إسعاف الأخطاء الشائعة}{329}{Item.574}%
+\contentsline {section}{تاسعاً: أول تجربة + إسعاف الأخطاء الشائعة}{329}{Item.574}%
+\contentsline {chapter}{الفصل 61: انطلاقة سريعة مع Swift — اللغة الأولى لتطوير Apple}{330}{chapter*.134}%
+\contentsline {section}{أولاً: المتغيرات والأنواع — تسمية البيانات}{330}{section*.135}%
+\contentsline {section}{ثانياً: القيم الاختيارية (Optional) — «التميمة ضد الانهيار» في Swift}{331}{lstnumber.-51.10}%
+\contentsline {section}{ثالثاً: الدوال والإغلاقات — تغليف المنطق في «أزرار»}{331}{lstnumber.-52.15}%
+\contentsline {section}{رابعاً: البنى والبروتوكولات — نظام «الليغو» في Swift}{332}{lstnumber.-53.13}%
+\contentsline {section}{خامسًا: بطاقة مراجعة سريعة لقواعد اللغة للمبتدئين تمامًا}{333}{lstnumber.-54.16}%
+\contentsline {chapter}{الفصل 62: تطوير الواجهات — مدخل إلى SwiftUI}{334}{chapter*.136}%
+\contentsline {section}{أولًا: فكرة SwiftUI — تقريري لا أمري}{334}{section*.137}%
+\contentsline {section}{ثانيًا: العروض الأساسية — نص وزر وحقل إدخال وصورة}{335}{lstnumber.-55.15}%
+\contentsline {section}{ثالثًا: ثالوث التخطيط — VStack وHStack وZStack}{335}{lstnumber.-55.15}%
+\contentsline {section}{رابعًا: الحالة والربط — كيف تنبض الواجهة بالحياة}{335}{lstnumber.-56.14}%
+\contentsline {section}{خامسًا: المعاينة والسمات والحركة — «قوى SwiftUI الخارقة»}{336}{lstnumber.-58.9}%
+\contentsline {section}{سادسًا: مرجع سريع للمُعدِّلات الشائعة — صفحة بيدك فلا واجهة تقلقك}{337}{lstnumber.-59.16}%
+\contentsline {chapter}{الفصل 63: العروض والحالة والتنقل}{339}{chapter*.138}%
+\contentsline {section}{أولًا: «المشهد الكامل» لتدفق البيانات في إدارة الحالة}{339}{section*.139}%
+\contentsline {section}{ثانيًا: NavigationStack — «المكدس» الذي ينقل بين الصفحات}{340}{lstnumber.-60.19}%
+\contentsline {section}{ثالثًا: النوافذ المنبثقة وعلامات التبويب السفلية — sheet وTabView}{340}{lstnumber.-61.24}%
+\contentsline {section}{رابعًا: List — «قائمة الجميع» في iOS}{341}{lstnumber.-62.24}%
+\contentsline {section}{خامسًا: دورة حياة التطبيق — المقدمة والخلفية}{342}{lstnumber.-63.14}%
+\contentsline {chapter}{الفصل 64: تخزين البيانات وطلبات الشبكة}{344}{chapter*.140}%
+\contentsline {section}{أولًا: كيف تختار حل التخزين — انظر إلى هذا الجدول أولًا}{344}{section*.141}%
+\contentsline {section}{ثانيًا: UserDefaults — لتخزين الإعدادات الصغيرة}{344}{section*.141}%
+\contentsline {section}{ثالثًا: SwiftData — بيت «حقيقي» للبيانات}{345}{lstnumber.-65.10}%
+\contentsline {section}{رابعًا: Codable — «مترجم» JSON}{346}{lstnumber.-66.46}%
+\contentsline {section}{خامسًا: URLSession مع async/await — الحوار مع الخادم}{346}{lstnumber.-67.14}%
+\contentsline {section}{سادسًا: «تصنيف» أخطاء الشبكة أيضًا — لا ترم كل رسائل الخطأ إلى المستخدم}{347}{lstnumber.-68.19}%
+\contentsline {chapter}{الفصل 65: المشروع الأول — دفتر حساباتي (نسخة محلية)}{349}{chapter*.142}%
+\contentsline {section}{أولًا: التفكير في المتطلبات — اسأل خمسة أسئلة أولًا}{349}{section*.143}%
+\contentsline {section}{ثانيًا: طبقة البيانات — بيت لـ«الحساب»}{349}{section*.143}%
+\contentsline {section}{ثالثًا: MVVM — «فصل الواجهة عن المنطق»}{350}{lstnumber.-70.18}%
+\contentsline {section}{رابعًا: الواجهة — صفحة القائمة ونافذة الإدخال}{351}{lstnumber.-71.30}%
+\contentsline {section}{خامسًا: التحرير والحذف والملخص}{352}{lstnumber.-72.31}%
+\contentsline {section}{سادسًا: القبول — فحص بثلاث طبقات وتحديان متقدمان}{352}{lstnumber.-73.13}%
+\contentsline {chapter}{الفصل 66: المشروع الثاني — تطبيق الاستعلام عن الطقس (نسخة شبكية)}{354}{chapter*.144}%
+\contentsline {section}{أولًا: طلب واجهة طقس مجانية (API)}{354}{section*.145}%
+\contentsline {section}{ثانيًا: طبقة الشبكة — URLSession مع Codable}{354}{Item.579}%
+\contentsline {section}{ثالثًا: حالات الواجهة الثلاث — جار التحميل / النجاح / الفشل}{355}{lstnumber.-74.24}%
+\contentsline {section}{رابعًا: كود الواجهة عمليًا — نرسم الطقس}{356}{lstnumber.-75.28}%
+\contentsline {section}{خامسًا: تفاصيل التفاعل والمدن المفضلة}{356}{lstnumber.-76.20}%
+\contentsline {section}{سادسًا: كيف تنقح طلبات الشبكة — الطباعة والتقاط الحزم ومحاكاة الشبكة البطيئة}{357}{lstnumber.-76.20}%
+\contentsline {chapter}{الفصل 67: الصقل والنشر — الاختبار والتنقيح والنشر على App Store}{358}{chapter*.146}%
+\contentsline {section}{أولًا: أدوات التنقيح الثلاث — print ونقاط التوقف والمعاينة}{358}{section*.147}%
+\contentsline {section}{ثانيًا: الاختبار — تأمين على الكود}{358}{section*.147}%
+\contentsline {section}{ثالثًا: التوقيع والتغليف — ختم على التطبيق}{359}{lstnumber.-77.20}%
+\contentsline {section}{رابعًا: الدورة الكاملة للنشر على App Store}{360}{lstnumber.-77.20}%
+\contentsline {section}{خامسًا: كيف تصنع مواد المتجر — الانطباع الأول هو عدد التنزيلات}{360}{lstnumber.-77.20}%
+\contentsline {section}{سادسًا: قائمة مختصرة للإبلاغ عن الانهيارات وتحسين الأداء}{360}{lstnumber.-77.20}%
+\contentsline {chapter}{الفصل 68: طريق التقدم — الأذونات والإشعارات والمعماريات الحديثة}{362}{chapter*.148}%
+\contentsline {section}{أولًا: الأذونات — اطرق الباب أولًا ثم ادخل}{362}{section*.149}%
+\contentsline {section}{ثانيًا: الإشعارات — قل كلامًا نافعًا في الوقت الصحيح}{363}{lstnumber.-78.21}%
+\contentsline {section}{ثالثًا: ترقية المعمارية — تعميق MVVM وقابلية الاختبار}{363}{lstnumber.-79.26}%
+\contentsline {section}{رابعًا: أسلوب 2026 الجديد — تطوير iOS بمساعدة الذكاء الاصطناعي}{364}{lstnumber.-79.26}%
+\contentsline {section}{خامسًا: أساسيات التزامن في Swift — @MainActor وTask}{364}{lstnumber.-79.26}%
+\contentsline {chapter}{الفصل 69: دليل المراجعة السريعة والمصادر}{366}{chapter*.150}%
+\contentsline {section}{أولًا: بطاقة المراجعة السريعة للكود الشائع}{366}{section*.151}%
+\contentsline {section}{ثانيًا: الأسئلة الشائعة FAQ}{366}{section*.151}%
+\contentsline {section}{ثالثًا: مرجع سريع لاختصارات Xcode الأكثر استخدامًا}{367}{section*.151}%
+\contentsline {section}{رابعًا: مصادر التعلم الموصى بها}{368}{section*.151}%
+\contentsline {section}{ثالثًا: مصادر التعلم الموصى بها}{368}{section*.151}%
+\contentsline {section}{خامسًا: الخاتمة — من أول تطبيق إلى التطبيق رقم N}{368}{section*.151}%
+\contentsline {section}{المراجع}{368}{section*.151}%
+\contentsline {chapter}{الملحق A: عملية فتح صندوق الهاتف الجديد “خطوة بخطوة”}{371}{appendix*.153}%
+\contentsline {section}{فحص الصندوق “الثلاثي”:}{371}{section*.154}%
+\contentsline {section}{التنشيط والإعدادات الأولية “تذكير مهم”:}{371}{section*.154}%
+\contentsline {section}{تثبيت التطبيقات “الأمان أولاً”:}{371}{section*.154}%
+\contentsline {chapter}{الملحق B: مرجع تمارين عملية}{372}{appendix*.155}%
+\contentsline {chapter}{الملحق C: جدول مصطلحات تقنية “مبسطة”}{373}{appendix*.156}%
+\contentsline {chapter}{الملحق D: أين أجد مصادر موثوقة؟}{374}{appendix*.157}%
+\contentsline {section}{الدعم الرسمي هو الخيار الأول:}{374}{section*.158}%
+\contentsline {section}{مواقع مفيدة ومنشورون:}{374}{section*.158}%
+\contentsline {section}{قائمة فحص أمني بجملة واحدة:}{374}{section*.158}%
+\contentsline {chapter}{الملحق E: شكر وتوضيحات}{375}{appendix*.159}%
+\contentsline {section}{أبرز مستجدات الإصدار 1.6}{375}{section*.160}%
+\contentsline {section}{أبرز مستجدات الإصدار 1.7}{375}{section*.160}%
+\contentsline {section}{أبرز مستجدات الإصدار 1.8}{377}{section*.160}%
+\contentsline {section}{إضافات المحتوى: البرمجيات العملية وحجب المزعجات}{377}{section*.160}%
+\contentsline {section}{إضافات المحتوى: تحذيرات الطقس / تحذيرات الكوارث الطبيعية / تحذيرات الزلازل}{378}{section*.160}%
+\contentsline {section}{إضافات المحتوى: التعاون عبر الأجهزة وأدوات الإنتاجية}{378}{section*.160}%
+\contentsline {chapter}{الملحق و: موضوع شراء واستخدام الهواتف القابلة للطي}{379}{appendix*.161}%
+\contentsline {section}{أولاً: إلى أي مدى تطورت الشاشات القابلة للطي حاليًا؟}{379}{section*.162}%
+\contentsline {section}{ثانيًا: من هم المناسبون لشراء شاشة قابلة للطي؟}{379}{section*.162}%
+\contentsline {section}{ثالثًا: نقاط الشراء: انظر لهذه 6 مؤشرات}{380}{Item.601}%
+\contentsline {section}{رابعًا: نصائح استخدام خاصة بالشاشات القابلة للطي}{380}{Item.606}%
+\contentsline {section}{خامساً: نقاط الصيانة: اجعل الشاشة القابلة للطي تعيش أطول}{381}{Item.606}%
+\contentsline {section}{سادساً: “المخاطر” والتوقعات النفسية للشاشات القابلة للطي}{382}{Item.606}%
+\contentsline {section}{سابعاً: كيف تختار العلامات (2026)}{382}{Item.606}%
+\contentsline {chapter}{خاتمة: ابقَ فضولياً، ابقَ يقظاً}{384}{appendix*.163}%
+\contentsline {chapter}{الملحق G: الفهرس المرجعي السريع لكامل الكتاب}{385}{appendix*.164}%
+\contentsline {chapter}{الملحق H: خارطة طريق الإصدارات}{389}{appendix*.165}%

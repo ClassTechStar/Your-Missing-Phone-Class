@@ -1,0 +1,146 @@
+\bookchapter{Bab 39: Rekayasa Konteks—Membuat AI Memahami Maksud Anda}
+
+\chapterintro{Pernah mengalami ini: ganti jendela percakapan baru, AI seperti lupa ingatan—semua dasar proyek Anda hilang dari kepalanya? Ini bukan AI sengaja menyebalkan—memang ia “pelupa” sejak lahir. Bab ini mengajarkan cara memasang “sistem memori jangka panjang” untuk AI, sekaligus mengenalkan salah satu paradigma pengembangan paling populer pada 2026—spec-driven development.}
+
+\booksection{File memori proyek: “memori jangka panjang” AI}
+
+Model AI punya keterbatasan mendasar: memorinya “jangka pendek”. Setiap kali percakapan dimulai, pengetahuan AI tentang proyek Anda adalah nol. Anda harus terus-menerus memberi tahu “kami memakai React” “backend-nya Node.js” “databasenya PostgreSQL” “gaya kode pakai tanda kutip ganda”. Ini tidak hanya tidak efisien, tetapi juga mudah terlewat—seperti setiap hari harus melatih karyawan baru dari awal.
+
+Solusinya adalah “file memori proyek”—sebuah file teks biasa di root proyek yang dibaca otomatis oleh alat AI setiap kali percakapan dimulai. Tiap alat punya konvensi penamaan berbeda:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Alat} & \textbf{Nama file} \tabularnewline
+\hline
+Cursor & \texttt{.\allowbreak cursorrules} \tabularnewline
+Claude Code & \texttt{CLAUDE.\allowbreak md} \tabularnewline
+GitHub Copilot & \texttt{copilot-\allowbreak instructions.\allowbreak md} \tabularnewline
+Solusi umum & \texttt{AGENTS.\allowbreak md} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Konvensi penamaan file memori proyek berbagai alat\end{center}
+
+Meski namanya berbeda, prinsipnya sama: tulis informasi yang ingin Anda “selalu ingatkan” kepada AI di file ini. File memori proyek yang baik seharusnya memuat: ikhtisar proyek (proyek apa ini), stack teknologi (teknologi apa yang dipakai), standar kode (penamaan, indentasi, gaya komentar), struktur direktori (bagaimana kode diorganisasi), konvensi pengembangan (strategi branching, standar commit, tuntutan pengujian). CLAUDE.md Karpathy hanya 70 baris—tetapi mencakup semua informasi kunci: ringkas namun lengkap.
+
+\begin{lstlisting}
+# Proyek: aplikasi pencatat keuangan pribadi
+## Gambaran
+Aplikasi pencatat keuangan pribadi full-stack untuk membantu pengguna mencatat pemasukan-pengeluaran harian.
+## Teknologi
+- Frontend: React + TypeScript + Tailwind CSS
+- Backend: Node.js + Express + TypeScript
+- Database: SQLite (pengembangan) / PostgreSQL (produksi)
+- Testing: Vitest
+## Aturan penulisan kode
+- Pakai tanda kutip ganda
+- Indentasi 2 spasi
+- Nama fungsi pakai camelCase
+- Definisi tipe pakai PascalCase
+- Setiap fungsi wajib ada komentar JSDoc
+## Struktur direktori
+/src
+  /frontend  - kode frontend
+  /backend   - kode backend
+  /shared    - tipe yang dipakai bersama
+  /tests     - file pengujian
+## Kesepakatan pengembangan
+- Pesan commit dalam bahasa Mandarin
+- Fitur baru wajib tulis test dulu
+- Respons API seragam dengan format { success, data, error }
+\end{lstlisting}
+
+\begin{tcbwarn}{Catatan: jangan ditulis jadi "dokumen kebutuhan kedua"}
+Perhatikan panjang file ini—jangan sampai menjadi dokumen kebutuhan puluhan halaman. Tujuan file memori proyek adalah “membangun latar belakang pemahaman AI dengan cepat”, bukan “mendeskripsikan setiap fitur secara detail”. Jaga tetap ringkas, terstruktur, dan hanya tulis “yang perlu diketahui AI”.
+
+\end{tcbwarn}
+
+\booksection{Spec-Driven Development (SDD)}
+
+Spec-Driven Development (SDD, pengembangan berbasis spesifikasi) adalah paradigma pengembangan yang mulai matang pada 2026—inti idenya satu kalimat: tulis spesifikasi dulu, baru tulis kode. Berbeda dengan TDD (test-driven development) tradisional, “spesifikasi” SDD tidak hanya kasus uji, tetapi juga deskripsi kebutuhan, definisi antarmuka, model data, dan lainnya. AI menghasilkan kode berdasarkan spesifikasi ini—tugas manusia adalah menulis dan memelihara spesifikasinya.
+
+Alur kerja SDD dalam lima langkah:
+
+\begin{enumerate}
+  \item Deskripsikan spesifikasi kebutuhan dalam bahasa alami (tulis di file .md);
+  \item Definisikan antarmuka dan struktur data (tulis di file spesifikasi);
+  \item Biarkan AI menghasilkan implementasi kode berdasarkan spesifikasi;
+  \item Jalankan tes untuk memverifikasi apakah keluaran sesuai spesifikasi;
+  \item Jika tidak sesuai, perbaiki spesifikasinya atau minta AI memperbaiki kodenya.
+\end{enumerate}
+
+Dalam alur ini, file spesifikasi adalah “sumber kebenaran tunggal”—kode bisa dibuat ulang, tetapi spesifikasi harus lebih dulu benar.
+
+Menulis file spesifikasi
+
+Apakah spesifikasi sudah lengkap?
+
+Lengkap
+
+AI membuat kode dari spesifikasi
+
+Jalankan test untuk memverifikasi hasil
+
+Spesifikasi belum lengkap / test gagal
+
+Masalah kode perbaiki kode; masalah spesifikasi perbaiki spesifikasi
+
+Kembali ke verifikasi
+
+Lulus semua serahkan
+
+\begin{center}\small\color{gray}Gambar 3: Alur kerja Spec-Driven Development (SDD)\end{center}
+
+Keunggulan SDD: file spesifikasi lebih stabil daripada kode. Saat model dasar atau alat berubah, file spesifikasi Anda tetap berlaku—cukup minta alat AI baru menghasilkan ulang kodenya. Inilah sebabnya buku ini menekankan “metodologi lebih penting daripada alat”—file spesifikasi adalah wujud nyata metodologi Anda.
+
+\booksection{Manajemen jendela konteks}
+
+Meski sudah punya file memori proyek, Anda tetap akan menghadapi masalah “konteks tidak cukup” di percakapan. Jendela konteks model AI (jumlah informasi yang bisa diproses sekaligus) itu terbatas. Saat percakapan terlalu panjang dan file yang dirujuk terlalu banyak, AI akan “melupakan” informasi awal—kualitas keluaran pun menurun. Ibarat Anda ngobrol dengan teman selama enam jam—ia sudah lupa apa yang Anda katakan di awal.
+
+Strategi inti manajemen jendela konteks adalah “rujukan berlapis”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tingkat konteks} & \textbf{Isi} & \textbf{Cara mengelola} \tabularnewline
+\hline
+Lapis 1: memori proyek & Stack teknologi, standar, struktur direktori & Tulis di file seperti CLAUDE.md—dimuat otomatis, tidak perlu diulang \tabularnewline
+Lapis 2: rujukan file & File kode yang terlibat tugas saat ini & Rujuk presisi dengan simbol @—jangan tempel seluruh isi ke percakapan \tabularnewline
+Lapis 3: konteks percakapan & Riwayat percakapan tugas saat ini & Setelah satu tugas selesai, buka percakapan baru—hindari konteks membengkak \tabularnewline
+Lapis 4: instruksi sesaat & Tuntutan spesifik langkah saat ini & Jelas, ringkas, terarah—hindari deskripsi bertele-tele \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Strategi manajemen berlapis untuk jendela konteks\end{center}
+
+\booksection{Poin Praktis Rekayasa Konteks}
+
+Rekayasa konteks bukan pengaturan sekali jadi, melainkan proses penyempurnaan yang berkelanjutan. Berikut beberapa poin yang telah teruji berulang kali dalam praktik:
+
+\begin{enumerate}
+  \item Perbarui file memori secara sinkron seiring berkembangnya proyek. Saat memperkenalkan teknologi baru atau mengubah arsitektur, segera perbarui file memorinya, jangan hanya menjelaskannya dadakan di percakapan.
+  \item Manfaatkan referensi @ daripada menempel seluruh teks. Sebagian besar alat pemrograman AI mendukung sintaks @file atau @folder, yang menyuntikkan isi file ke konteks AI di latar belakang — lebih efisien daripada menempel manual dan tidak mencemari percakapan.
+  \item Buat percakapan yang "singkat dan padat". Satu percakapan hanya menangani satu tugas atau satu fitur. Setelah selesai, buka percakapan baru untuk tugas berikutnya. Percakapan yang panjang tidak hanya menguras jendela konteks, tetapi juga membuat AI "terpecah fokus".
+  \item Tunjukkan hasilnya kepada AI, jangan sekadar "mendeskripsikan" hasilnya. Saat menemukan bug, langsung rujuk log errornya dengan @ kepada AI, bukan mendeskripsikannya dengan kata-kata sendiri seperti "sepertinya ada error begitu". AI jauh lebih efektif melihat informasi mentah daripada menerima parafrase dari kamu.
+  \item Bersihkan dan arsipkan secara berkala. Percakapan yang sudah selesai dan file sementara memakan ruang kerja. Rutin membersihkan konten yang tidak relevan dan menjaga kerapian direktori proyek juga membantu AI memahami struktur proyek dengan lebih efisien.
+\end{enumerate}
+
+\begin{tcbpractice}{Praktik Yuk: Tulis File Memori 70 Baris untuk Proyekmu}
+Pilih satu proyek yang sedang (atau akan) kamu kerjakan, lalu tulis sebuah CLAUDE.md: gambaran umum proyek (2-3 kalimat), tech stack (daftar saja), aturan kode (3-5 poin), struktur direktori (gambar diagram pohonnya), dan konvensi pengembangan (2-3 poin). Batasi maksimal 70 baris — setelah menulisnya, kamu akan sadar pemahamanmu tentang proyek menjadi jauh lebih jelas.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Memori AI itu "jangka pendek": setiap percakapan baru, pengetahuannya tentang proyek kembali nol
+  \item File memori proyek (CLAUDE.md dan sejenisnya) adalah "memori jangka panjang" AI, dimuat otomatis di setiap percakapan
+  \item File memori yang baik = gambaran umum + tech stack + aturan + struktur direktori + konvensi, cukup 70 baris
+  \item SDD (pengembangan berbasis spesifikasi): tulis spesifikasi dulu baru kodenya; spesifikasi adalah "sumber kebenaran tunggal" yang lebih stabil daripada kode
+  \item Konteks dikelola dalam empat lapis: memori proyek referensi @file riwayat percakapan instruksi langsung
+  \item Lima poin praktis: perbarui secara sinkron, rujuk dengan @, percakapan singkat, berikan info mentah, bersihkan secara berkala
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,121 @@
+\bookchapter{الفصل 69: دليل المراجعة السريعة والمصادر}
+
+\chapterintro{هذا الفصل دليل مراجعة سريعة يمكن استخدامه مستقلًا. وعندما تختلط عليك صيغة ما أو تحتاج قرارًا سريعًا فافتحه مباشرة. وأنصحك بمعاملته كـ«بطاقة جيب»: مرجع سريع للكود الشائع، والمسائل المتكررة، ومصادر التعلم، دون أن تفوتك صفحة.}
+
+\booksection{أولًا: بطاقة المراجعة السريعة للكود الشائع}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{ماذا تريد أن تفعل} & \textbf{الكود الأساسي} \tabularnewline
+\hline
+حالة خاصة بالصفحة & @State private var x = القيمة الأولية \tabularnewline
+منطق عابر للصفحات & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+تخطيط عمودي/أفقي & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+مساحة مرنة & \texttt{Spacer()} \tabularnewline
+القائمة & List \{ ForEach(المصفوفة) \{ ... \} \} \tabularnewline
+التنقل بين الصفحات & \texttt{NavigationStack + NavigationLink} \tabularnewline
+نافذة منبثقة سفلية & .sheet(isPresented: \$show) \{ المحتوى \} \tabularnewline
+إغلاق الصفحة الحالية & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+جلب البيانات عبر الشبكة & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+تحليل JSON & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+تخزين إعدادات صغيرة & UserDefaults.standard.set(القيمة, forKey: "المفتاح") \tabularnewline
+تخزين بيانات مهيكلة & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+التكيف مع الوضع الداكن & استخدم ألوان النظام (.primary / Color(.systemGray6)) ولا تثبت الألوان يدويًا \tabularnewline
+تشغيل الاختبارات & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}بطاقة مرجعية سريعة لتطوير iOS (نسخة أغسطس 2026)\end{center}
+
+\booksection{ثانيًا: الأسئلة الشائعة FAQ}
+
+س1: لا أملك جهاز Mac، فهل أستطيع تعلّم تطوير iOS؟
+
+يمكنك تعلّم اللغة، لكن لا يمكنك القيام بالتطوير الكامل. تطبيق Swift Playgrounds على iPad/iPhone يكفي لإتقان كامل محتوى الفصل 61؛ لكن Xcode حصري لنظام macOS، وستحتاج حتمًا إلى جهاز Mac. إن كانت ميزانيتك محدودة، يمكنك مبدئيًا استئجار Mac سحابي أو شراء Mac mini مستعمل كحل انتقالي، ثم تقرر حجم الاستثمار بعد إتقان اللغة.
+
+س2: كم يكلّف تعلّم تطوير iOS؟
+
+مرحلة التعلم: 0 دولار (Xcode مجاني + حساب Apple ID مجاني للتصحيح على جهاز حقيقي). مرحلة النشر: حساب مطوّر بـ 99 دولارًا سنويًا (نحو 700 يوان). أضِف إليها تكلفة جهاز Mac، وتلك هي التكلفة كاملة. وبالمقابل — حتى أداة صغيرة على App Store تجد مستخدمين يدفعون ثمنها — فالحسبة مجزية.
+
+س3: أيّهما أتعلم أولًا: SwiftUI أم UIKit؟
+
+SwiftUI. ففي عام 2026 تعتمد المشاريع الجديدة والدروس الجديدة والوظائف الجديدة على SwiftUI أساسًا، وهذا الكتاب يستخدمه من أوله إلى آخره. أما UIKit فهو إطار الجيل السابق وما يزال مستخدمًا في عدد كبير من المشاريع القديمة — بعد إتقانك لـ SwiftUI، أكمل تعلم UIKit حسب الحاجة (توجد دروس توافق رسمية)، وستتقنه بسرعة. لا تعكس الترتيب.
+
+س4: هل من السهل إيجاد عمل في تطوير iOS؟
+
+سوق 2026: الوظائف المبتدئة التي تقتصر على «رسم الواجهات» تنافسية للغاية، لكن المطوّر «الملمّ بـ Swift وSwiftUI ولديه أعمال منشورة في المتجر» ما يزال مطلوبًا بشدة. ويظل الراتب الوسيط لوظائف iOS في الصدارة بين مختلف حزم التقنيات. وأفضل سيرة ذاتية لك في مرحلة التعلم هو ذلك التطبيق الذي صنعته بنفسك والموجود في المتجر.
+
+س5: ماذا أفعل إذا رُفض تطبيقي في المراجعة؟
+
+لا تقلق، فهذا أمر طبيعي — احتمال رفض أول إرسال ليس قليلًا. تكون أسباب الرفض من Apple محددة جدًا عادة (أي صفحة، وأي بند من الإرشادات)، عدّل بناءً عليها بندًا بندًا ثم ردّ بالتوضيح في App Store Connect وأعد الإرسال. أكثر ثلاثة أسباب شيوعًا للرفض: غموض الغرض من الأذونات، ووجود خلل في الواجهة، وعدم تطابق البيانات الوصفية (لقطات الشاشة/الوصف) مع التطبيق الفعلي. افحص هذه البنود الثلاثة مسبقًا لتوفر على نفسك جولة انتظار.
+
+\booksection{ثالثًا: مرجع سريع لاختصارات Xcode الأكثر استخدامًا}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{العملية} & \textbf{الاختصار} \tabularnewline
+\hline
+تشغيل / اختبار & CmdR / CmdU \tabularnewline
+فتح معاينة اللوحة (Canvas) & OptionCmd \tabularnewline
+فتح ملف بسرعة & CmdO \tabularnewline
+بحث شامل & CmdF \tabularnewline
+تنسيق المسافات البادئة & CtrlI \tabularnewline
+تعليق / إزالة التعليق & Cmd/ \tabularnewline
+تنظيف ذاكرة البناء المؤقتة & CmdK \tabularnewline
+الانتقال إلى التعريف & نقر مع Cmd \tabularnewline
+إعادة تسمية (تغيير آمن للاسم في كل مكان) & انقر بزر الفأرة الأيمن ثم Refactor ثم Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}مرجع سريع لاختصارات Xcode الأكثر استخدامًا\end{center}
+
+\begin{tcbinfo}{نصيحة: إن بدت عملية التجميع «غامضة» فنظّف الذاكرة المؤقتة أولًا}
+«أمس كان يعمل واليوم لا يعمل» — في ست أو سبع حالات من كل عشر يكون السبب خللًا في ذاكرة البناء المؤقتة. نظّفها بـ CmdK ثم أعد البناء، فهذا يعالج أغلب هذه الألغاز. وإن لم ينجح الأمر فأعد تشغيل Xcode (مع جهاز Mac أيضًا)، وإن استمرت المشكلة ف«احذف مجلد DerivedData» — هذه هي الثلاثية الختامية التي يتناقلها مطوّرو iOS.
+
+\end{tcbinfo}
+
+\booksection{رابعًا: مصادر التعلم الموصى بها}
+
+\booksection{ثالثًا: مصادر التعلم الموصى بها}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{النوع} & \textbf{المصدر} & \textbf{سبب التوصية} \tabularnewline
+\hline
+رسمي & developer.apple.com & وثائق Apple الرسمية، وفيها دروس SwiftUI/Swift، وهي المرجع الأول الأكثر موثوقية \tabularnewline
+رسمي & دروس SwiftUI Tutorials من Apple & دورة رسمية خطوة بخطوة، وودّية للمبتدئين إلى أقصى حد \tabularnewline
+رسمي & الموقع الرسمي للغة Swift (swift.org) & الوثائق الرسمية للغة وساحة تجربة عبر الإنترنت \tabularnewline
+مجتمع & Hacking with Swift & مكتبة الدروس المجانية من Paul Hudson، وجودتها معترف بها في الصف الأول \tabularnewline
+مجتمع & Stack Overflow (وسم swiftui) & المحطة الأولى لطلب النجدة عند الأخطاء \tabularnewline
+فيديو & قناة Apple Developer الرسمية (فيديوهات WWDC) & شرح موثوق للتقنيات الجديدة كل عام \tabularnewline
+تصميم & دليل Apple لواجهات الإنسان والحاسوب (HIG) & المرجع الرسمي الأقدس لصنع واجهات بروح Apple \tabularnewline
+مكمّل لهذا الكتاب & القسم السابع «برمجة الذكاء الاصطناعي بالتطبيق العملي» (الفصول 37-47) & المنهجية الكاملة للاستعانة بالذكاء الاصطناعي في تطوير iOS \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}قائمة مصادر تعلم تطوير iOS (أغسطس 2026)\end{center}
+
+\booksection{خامسًا: الخاتمة — من أول تطبيق إلى التطبيق رقم N}
+
+بتأمل رحلتك، انتقلت من «لا أعرف ما هو SwiftUI» إلى تثبيت Xcode، وتعلم Swift، ورسم الواجهات بـ SwiftUI، وربط التطبيق بقاعدة بيانات وشبكة الإنترنت، ثم الاختبار والتغليف والنشر في المتجر — في هذا الطريق قطعتَ بالفعل أصعب مرحلة: الانتقال من الصفر إلى الواحد.
+
+عالم التقنية يتغير بسرعة: تترقى الأطر البرمجية، وتتبدل الأدوات، ويتولى الذكاء الاصطناعي عددًا متزايدًا من مهام «الكتابة على لوحة المفاتيح». لكن ثمة شيء لا يقعض أبدًا: قدرتك على تفكيك فكرة غامضة إلى خطوات واضحة ثم تنفيذها خطوة بخطوة. الأدوات مكبِّرات، والفكر هو الأساس؛ المكبِّرات يمكن استبدالها، أما الأساس فلا يهتز.
+
+لم تعد مجرد "شخص يعرف استخدام الهاتف". يمكنك أن تحوّل أفكارك في رأسك إلى تطبيقات تعمل فعلًا على مئات الملايين من أجهزة iPhone. من اليوم، ابتكر بلوحة المفاتيح — هذه هي رومانسية مطوّري iOS.
+
+\booksection{المراجع}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

@@ -1,0 +1,181 @@
+\bookchapter{Глава 63. Представления, состояние и навигация}
+
+\chapterintro{Делать игрушки из одного экрана вы уже умеете. Эта глава решает две проблемы «повзросления»: как перемещаться между несколькими экранами (навигация) и как данные текут между экранами (управление состоянием). Пройдя её, вы сможете собрать классический скелет многоэкранного приложения «список детали редактирование».}
+
+\booksection{«Панорама потоков данных» в управлении состоянием}
+
+У SwiftUI не один инструмент состояния — не только @State. Сначала взгляните на панораму и разберитесь, «когда что использовать»:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Инструмент} & \textbf{За что отвечает} & \textbf{Кто использует} & \textbf{Типичный сценарий} \tabularnewline
+\hline
+@State & временное состояние, приватное для экрана & текущее представление & счётчик, текст в поле ввода \tabularnewline
+@Binding & заимствование чужого состояния & дочернее представление меняет родительское & свои компоненты \tabularnewline
+@StateObject / @Observable & логика, общая для нескольких экранов & модель представления (ViewModel) & загрузка данных, бизнес-логика \tabularnewline
+@EnvironmentObject / .environment & глобальное общее состояние & всё приложение & статус входа пользователя, настройки темы \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Панорама инструментов состояния SwiftUI (2026 год, @Observable уже мейнстрим)\end{center}
+
+\begin{lstlisting}[language=Swift]
+// Современный способ на iOS 17+: макрос @Observable (рекомендуется для новых проектов)
+import Observation
+
+@Observable
+class CounterModel {                 // модель представления
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // хранит модель
+
+    var body: some View {
+        VStack {
+            Text("Вы нажали \(model.count) раз")
+            Button("Нажми") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+Грубый совет новичку: для приватного состояния экрана — @State, для межэкранного/с логикой — классы @Observable. @StateObject/@ObservableObject из старых учебников — вчерашний стиль: достаточно уметь читать, а новый код пишите, как сказано выше.
+
+\booksection{NavigationStack: «стек» переходов между экранами}
+
+Начиная с iOS 16, навигация по нескольким экранам строится на NavigationStack — как стопка тарелок: кладёшь одну сверху, при возврате снимаешь по одной:
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("Записная книжка Ивана") {
+                    DetailView(name: "Записная книжка Ивана")   // целевой экран
+                }
+                NavigationLink("Записная книжка Марии") {
+                    DetailView(name: "Записная книжка Марии")
+                }
+            }
+            .navigationTitle("Список записных книжек")   // крупный заголовок сверху
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("Подробности: \(name)")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+NavigationLink — «кликабельная ссылка-переход»; navigationTitle автоматически создаёт заголовок панели навигации и кнопку «назад». Когда нужен программный переход (например, автоматический возврат после нажатия «Сохранить»), закрывайте текущий экран через @Environment(\textbackslash{}.dismiss) — этих двух приёмов хватает на 90\% навигационных задач.
+
+\booksection{Всплывающие окна и нижние вкладки: sheet и TabView}
+
+Кроме «проталкивания экранов», есть ещё два классических приёма взаимодействия:
+
+\begin{lstlisting}[language=Swift]
+// 1. Выезжает снизу на пол/весь экран (любимый приём для форм ввода)
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("Новая запись") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // появляющаяся форма ввода
+            }
+    }
+}
+
+// 2. Нижняя панель вкладок ("скелет" приложения)
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("Записи", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("Статистика", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("Настройки", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Совет: когда что использовать?}
+Эмпирическое правило: основной поток строим на NavigationStack (список детали), временные действия — во всплывающем окне sheet (добавление, правка, подтверждение), несколько равноправных крупных разделов — в TabView (вкладки внизу). Вместе эти три элемента — скелет подавляющего большинства приложений.
+
+\end{tcbinfo}
+
+\booksection{List: «народный список» iOS}
+
+Самый ходовой и самый «яблочный» компонент в iOS — List: разделители, удаление свайпом и подсветка нажатия идут у него из коробки:
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["Обед 25.5", "Метро 6.0", "Зарплата +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // свайп влево — удалить
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Список + NavigationLink + sheet + TabView — соединив эти четыре элемента, вы уже способны собрать полный скелет приложения «список записей открыть детали нажать + и добавить запись». Именно так построен проект книги учёта в следующей главе.
+
+\begin{tcbpractice}{Практика: соберите «каркас из трёх страниц»}
+\booksection{Жизненный цикл приложения: передний план и фон}
+
+Подобно жизненному циклу Activity в Android, приложение iOS проходит состояния «рождение, передний план, фон, смерть». В SwiftUI за ними наблюдают через значение окружения scenePhase:
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("Снова на переднем плане, возобновляем обновление")
+            case .inactive:  print("Переход (звонок / мгновение в фоне)")
+            case .background: print("Ушёл в фон, сохраняем черновик")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Типичное применение: обновить данные при возвращении на передний план, сохранить черновик при уходе в фон. iOS очень строго следит за фоновой работой — обычное приложение вскоре после ухода в фон приостанавливается («замораживается»), так что не рассчитывайте тайком делать в фоне тяжёлую работу; если нужны задачи по расписанию, используйте локальные уведомления из главы 68, а не «вечное проживание в фоне».
+
+Соберите скелет книги учёта на фиктивных данных: TabView с тремя вкладками (Книга / Статистика / Настройки) страница книги через List показывает фиктивные данные, нажатие на строку ведёт к деталям (NavigationStack) кнопка «+» в правом верхнем углу открывает sheet для ввода. Данные не сохраняются, сеть не используется — чистая тренировка каркаса; когда скелет готов, наполнить его настоящими данными в главе 65 будет уже делом техники.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Краткие итоги главы}
+\begin{itemize}
+  \item Четыре инструмента состояния: @State (приватно для страницы), @Binding (заимствование), @Observable (логика), .environment (глобально)
+  \item В новых проектах пишите модель представления макросом @Observable; @ObservableObject из старых уроков достаточно уметь читать
+  \item NavigationStack открывает страницы; @Environment(\textbackslash{}.dismiss) — программный возврат назад
+  \item Основной поток — страницы, временные действия — sheet, равноправные крупные разделы — TabView
+  \item List — «народный список»: разделители и удаление свайпом доступны из коробки
+\end{itemize}
+
+\end{tcbsummary}

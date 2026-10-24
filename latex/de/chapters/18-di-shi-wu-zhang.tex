@@ -1,0 +1,211 @@
+\bookchapter{Kapitel 15: Batterietechnologie und Akkulaufzeit-Optimierung}
+
+\chapterintro{Schadet Schnellladen dem Akku?}
+
+\booksection{Was ist mit dem Akku los? Ladezyklen und Zustand}
+
+Kabelloses Laden
+
+\begin{itemize}
+  \item \textbf{: Bequem, aber weniger effizient und mit stärkerer Erwärmung. Geeignet für das Laden über Nacht.}Goldene Pflegeregel
+  \item \textbf{: Den Ladestand möglichst zwischen 20 \% und 80 \% halten – nicht ständig hungern lassen (0 \%) oder überfüllen (100 \%).}3. Schnellladeprotokolle umfassend erklärt: Warum lädt Ihr Ladegerät nicht schnell?
+  \item \textbf{Vielleicht kennen Sie das: Ihr Smartphone unterstützt Schnellladen, aber mit einem anderen Ladegerät wird es sehr langsam. Das liegt daran, dass Schnellladen nicht einfach „hohe Leistung" bedeutet – Ladegerät, Kabel und Smartphone müssen „dieselbe Sprache sprechen" – und das ist das Schnellladeprotokoll.}1. Grundprinzip des Schnellladens
+\end{itemize}
+
+\booksubsection{Ladeleistung = Spannung × Stromstärke (P = U × I). Um die Leistung zu steigern, kann man die Spannung, die Stromstärke oder beide erhöhen. Verschiedene Protokolle wählen unterschiedliche Technikwege.}
+
+\begin{itemize}
+  \item Ablauf des Schnellladens:
+  \item Handshake-Phase
+  \item \textbf{: Smartphone und Ladegerät kommunizieren über das Kabel und tauschen die unterstützten Protokolle und Leistungsinformationen aus.}Verhandlungsphase
+\end{itemize}
+
+\booksection{Lademythen? Schnellladen, kabelloses Laden und die goldene Regel}
+
+\begin{itemize}
+  \item \textbf{Lade-Phase}: Das Ladegerät liefert die ausgehandelte Spannung und Stromstärke, das Smartphone übernimmt das Energiemanagement.
+  \item \textbf{Anpassungs-Phase}: Mit steigendem Ladestand senkt das Smartphone schrittweise die Ladeleistung, um den Akku zu schonen.
+  \item \textbf{2. Gängige Schnellladeprotokolle im Detail}USB PD (Power Delivery)
+\end{itemize}
+
+\begin{tcbinfo}{iPhone „80\%-Ladelimit": Die goldene Regel wird zur Systemeinstellung}
+Die iPhone 15/16-Serie (ab iOS 17) hat die „20\%-80\%-Regel“ als Systemfunktion integriert. Wenn aktiviert, stoppt das Laden bei 80 \% und verlangsamt die Akkualterung erheblich. Einstellungspfad:
+
+\texttt{Einstellungen > Akku > Akkugesundheit und Laden > Laden optimieren > 80\%-\allowbreak Limit}
+
+Bedeutung der drei Optionen: 1.\textbf{Unbegrenzt}– laedt bis 100 \%; 2.\textbf{Laden optimieren}– lernt deinen Rhythmus und verzögert erst am Ende der Nacht auf 100 \%; 3.\textbf{80\%-Limit}– stoppt bei 80 \%, am schonendsten fuer den Akku. Wer dauerhaft zu Hause/im Buero laden kann, sollte das 80\%-Limit waehlen; Vielflieger, die mit vollem Akku raus muessen, koennen „Laden optimieren“ waehlen.
+
+\end{tcbinfo}
+
+\begin{tcbinfo}{GaN-Lader – Der Begleiter fuer Geschaeftsreisende}
+Dir ist vielleicht aufgefallen, dass Schnelllader immer kleiner werden. Der Treiber dahinter ist\textbf{GaN (Galliumnitrid)}– ein neuartiges Halbleitermaterial. Gegenueber herkoemmlichen Silizium-Ladern haben GaN-Lader einige klare Vorteile:
+
+\begin{itemize}
+  \item \textbf{Kompakt}: Bei gleicher Leistung ist ein GaN-Lader nur 1/2 bis 1/3 so gross wie ein Silizium-Lader; ein 65-W-GaN-Lader ist kleiner als Apples alter 5-W-Stecker.
+  \item \textbf{Hoher Wirkungsgrad, geringe Erwaermung}: Die Schaltverluste von Galliumnitrid sind deutlich geringer als bei Silizium; der Energieumwandlungsgrad erreicht ueber 95 \%, und der Lader wird beim Laden kaum heiss.
+  \item \textbf{Reisefreundlich}: Ein 65- oder 100-W-GaN-Multi-Port-Lader laedt gleichzeitig Smartphone, Tablet und Notebook – viel leichter als drei „Backsteine".
+  \item \textbf{Kaufempfehlung}: PD-protokollunterstuetzten GaN-Lader auswaehlen (ab 65 W fuer Notebooks); Marken wie Baseus, Anker, Nubia, Xiaomi u. a. sind geeignet. Datenkabel-Kompatibilitaet pruefen (hohe Leistung erfordert Type-C-Kabel mit E-Marker-Chip).
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{– der universelle König}
+
+Kennst du das? Das Handy unterstützt Schnellladen, aber mit einem anderen Ladegerät wird es plötzlich langsam. Das liegt daran, dass Schnellladen nicht einfach “mehr Watt” bedeutet – Ladegerät, Kabel und Handy müssen alle drei “die gleiche Sprache sprechen”. Genau dafür gibt es Schnellladeprotokolle.
+
+\booksubsection{: Offizieller Standard der USB-IF-Organisation, breiteste Abdeckung. PD 3.0 unterstützt bis zu 100 W (20 V/5 A), PD 3.1 erweitert auf 240 W (48 V/5 A).}
+
+Spannungsstufen
+
+: 5 V, 9 V, 15 V, 20 V, PD 3.1 zusätzlich 28 V, 36 V, 48 V.
+
+\begin{enumerate}
+  \item \textbf{Handshake-Phase}: Alle iPhones, Google Pixel, einige Android-Flaggschiffe, Laptops und die Switch-Konsole unterstützen PD.
+  \item \textbf{Verhandlungsphase}: Universell einsetzbar – ein Ladegerät für viele Geräte; unterstützt PPS (Programmable Power Supply) für feine Spannungs-/Stromregelung.
+  \item \textbf{Ladephase}: Benötigt Type-C-Anschluss und spezialisierten Chip, höherer Kosten.
+  \item \textbf{Qualcomm QC (Quick Charge)}– der Veteran im Android-Lager
+\end{enumerate}
+
+\booksubsection{QC 3.0}
+
+\textbf{: Unterstützt einstellbare Spannung von 3,6 V–20 V in 0,2 V-Schritten, maximal 18 W.}QC 4.0/4+
+
+\begin{itemize}
+  \item \textbf{Merkmale}QC 5.0
+  \item \textbf{: Unterstützt 100 W+, 0–50 \% in 5 Minuten, deutlich verbesserte Wärmeprobleme.}: 5 V, 9 V, 15 V, 20 V; PD 3.1 unterstützt zusätzlich 28 V, 36 V und 48 V.
+  \item \textbf{Ladungspumpe}OPPO VOOC / OnePlus WARP / Realme Dart
+  \item \textbf{– Vertreter von Niederspannung und hohem Strom}Technikweg
+  \item \textbf{: Niederspannung, hoher Strom (ab 5 V/4 A), geringere Hitze, höhere Effizienz.}VOOC 1.0
+\end{itemize}
+
+\textbf{: 20 W (5 V/4 A), 2014 vorgestellt, Begründer der Schnelllade-Ära.}SuperVOOC
+
+\begin{itemize}
+  \item \textbf{: 30 W–65 W, mit Dual-Zellen-Seriendesign.}SuperVOOC 2.0
+  \item \textbf{: 65 W, 4000-mAh-Akku in 35 Minuten voll.}150 W/240 W Super Flash Charge
+  \item \textbf{iPhone/iPad}: Unterstützt über 100 W, 0-50 \% in nur 5 Minuten, deutlich weniger Hitzeentwicklung.
+  \item \textbf{Ladungspumpe}Huawei SuperCharge
+\end{itemize}
+
+\textbf{– Evolution des Hochspannungs-Schnellladens}FCP (Fast Charge Protocol)
+
+\begin{itemize}
+  \item \textbf{100 W}SCP (Super Charge Protocol)
+  \item \textbf{: Unterstützt höhere Leistung, von 22,5 W über 40 W bis 100 W.}Technik-Merkmal
+  \item \textbf{: Nutzt Ladungspumpen-Technik, wandelt Hochspannung in Niederspannung mit hohem Strom um, Effizienz bis zu 98 \%.}: 50-65 W, mit in Reihe geschalteten Dual-Akkuzellen.
+  \item \textbf{: Nur für Huawei/Honor-Smartphones, einige Ladegeräte unterstützen PD.}Xiaomi Surge Schnellladen
+  \item \textbf{– Aufstieg der Eigenentwicklung}Surge P1-Chip
+  \item \textbf{Merkmale}Surge G1-Chip
+\end{itemize}
+
+\textbf{: Akku-Management-Chip, arbeitet mit dem P1 für effizienteres Schnellladen zusammen.}Technik-Merkmal
+
+\begin{itemize}
+  \item \textbf{: Dual-Zellen-Serie + Ladungspumpe, unterstützt mehrere Protokolle.}Apple Schnellladen
+  \item \textbf{– konservativ, aber stabil}Protokoll
+  \item \textbf{Technikweg}Leistung
+  \item \textbf{Ladungspumpe}: Exklusiv für Huawei-/Honor-Smartphones; einige Ladegeräte unterstützen auch PD.
+\end{itemize}
+
+\textbf{: Leistung eher konservativ, aber optimierte Ladekurve und hervorragende Wärmekontrolle.}Zubehör-Anforderung
+
+\begin{itemize}
+  \item \textbf{: USB-C-auf-Lightning-Kabel (oder USB-C-auf-USB-C) und PD-Ladegerät nötig.}3. Vergleich der Schnellladeprotokolle
+  \item \textbf{Protokoll}Max. Leistung
+  \item \textbf{Technikweg}: Dual-Zellen in Serie plus Charge-Pump-Architektur, kompatibel mit mehreren Protokollen.
+\end{itemize}
+
+\textbf{Auf das Kabel achten}240 W
+
+\begin{itemize}
+  \item \textbf{OPPO-Familie exklusiv}Am weitesten verbreitet
+  \item \textbf{QC 5.0}100 W+
+  \item \textbf{Merkmale}Snapdragon-Smartphones
+  \item \textbf{VOOC/Dart}240 W
+\end{itemize}
+
+\booksubsection{Niederspannung, hoher Strom}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{OPPO-Familie exklusiv} & \textbf{SuperCharge} & \textbf{100 W} & \textbf{Ladungspumpe} \tabularnewline
+\hline
+Huawei/Honor & Qi2-Standard & \textasciitilde{}27 W & PD-Protokoll \tabularnewline
+iPhone/iPad & 4. Kabelloses Laden – Protokolle & Auch das kabellose Laden hat eigene Standards: & Qi-Standard \tabularnewline
+: Von der WPC (Wireless Power Consortium) festgelegt, der universellste Standard. Basis-Qi unterstützt 5 W–15 W. & Qi2-Standard & : 2023 veröffentlicht, führt magnetische Positionierung ein (ähnlich Apple MagSafe), unterstützt 15 W+. & Private Protokolle \tabularnewline
+: Jede Marke hat eigene Hochleistungs-Wireless-Charger, z. B. Xiaomi 50 W Wireless, Huawei 50 W Wireless – spezielle Ladegeräte erforderlich. & 5. Kaufberatung Schnellladen & Protokoll-Abgleich prüfen & : Beim Kauf eines Ladegeräts bestätigen, dass es das Schnellladeprotokoll Ihres Smartphones unterstützt. Drittanbieter-Ladegeräte sind meist mit den unterstützten Protokollen gekennzeichnet. \tabularnewline
+Auf das Kabel achten & : Hochleistungs-Schnellladen erfordert spezielle Kabel. Normale Kabel unterstützen oft nur bis zu 10 W. & Auf Zertifizierung achten & : Apple-Nutzer sollten MFi-zertifizierte Kabel wählen; Android-Nutzer Originalzubehör oder bekannte Drittanbieter. \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Auf Erwärmung achten}
+
+: Erwärmung beim Schnellladen ist normal, aber wenn das Gerät zu heiß zum Anfassen wird, ist das nicht normal – laden Sie aus oder wechseln Sie das Ladegerät.
+
+\begin{itemize}
+  \item \textbf{Sicherheitshinweise Schnellladen}Vermeiden Sie gleichzeitiges Laden und Spielen von ressourcenintensiven Spielen – das erhöht die Hitze.
+  \item \textbf{Verwenden Sie keine minderwertigen Ladegeräte und Kabel – Sicherheitsrisiko.}Beim Laden dicke Smartphone-Hüllen abnehmen, um die Wärmeabfuhr zu unterstützen.
+  \item \textbf{Wenn Ladegerät oder Smartphone ungewöhnlich heiß werden oder ungewöhnlich riechen – sofort Nutzung einstellen.}4. Das sind die echten Stromspar-Tipps
+\end{itemize}
+
+\booksubsection{Bildschirm (Stromfresser Nr. 1)}
+
+\begin{itemize}
+  \item \textbf{: Helligkeit senken, automatische Sperre verkürzen. Bei OLED-Bildschirmen spart der Dunkelmodus deutlich Strom.}Signal
+  \item \textbf{: In Aufzügen oder Kellern sucht das Smartphone hektisch nach Signal – extrem hoher Verbrauch.}5G
+  \item \textbf{: Bei schlechtem Signal manuell auf 4G zurückschalten – die Akkulaufzeit verbessert sich deutlich.}Standortdienste
+  \item \textbf{: Bei Nicht-Navigations-Apps die Standortberechtigung auf „Nur bei Verwendung" setzen.}Hintergrundaktivität einschränken
+\end{itemize}
+
+\begin{tcbwarn}{: iPhone unter Einstellungen Allgemein Hintergrund-App-Aktualisierung; Android in den Akku-Einstellungen der jeweiligen App.}
+\begin{itemize}
+  \item Prüfen Sie: Eine Gesundheits-Untersuchung für Ihren Akku
+  \item Gesundheitsstand ablesen: Suchen Sie die maximale Kapazität Ihres Akkus und notieren Sie sie.
+  \item Verbrauch analysieren: Sehen Sie sich die Diagramme und App-Listen in den Akku-Einstellungen an und finden Sie die Stromfresser.
+  \item Maßnahmen ergreifen: Hintergrundaktivität für Apps mit abnormal hohem Verbrauch einschränken.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{IV. Neue Akkutechnologie: Silizium-Kohlenstoff-Anode}
+
+Wenn du die Praesentationen der Flaggschiff-Smartphones 2024-2026 verfolgt hast, ist der Begriff „Silizium-Kohlenstoff-Anode“ nahezu synonym fuer Premium-Akkus geworden. Es handelt sich um ein wichtiges Upgrade des Anodenmaterials von Lithium-Akkus; das Prinzip ist nicht kompliziert:
+
+\begin{itemize}
+  \item \textbf{Traditionelle Graphitanode}: Smartphone-Akkus verwenden seit jeher Graphit als Anode; die Technologie ist ausgereift und stabil, aber die Energiedichte naehert sich der theoretischen Obergrenze (ca. 372 mAh/g).
+  \item \textbf{Silizium-Beimischung}: Die theoretische spezifische Kapazitaet von Silizium ist etwa 10-mal hoeher als die von Graphit (ca. 4200 mAh/g). Durch Beimischung von Silizium zum Graphit entsteht eine „Silizium-Kohlenstoff-Kompositanode", die die Energiedichte des gesamten Akkus deutlich erhoht.
+  \item \textbf{Hoehere Energiedichte}: Bei gleichem Volumen kann die Kapazitaet des Silizium-Kohlenstoff-Akkus um etwa\textbf{15\%-20\%}erhoeht werden. Das ist der Schluessel dafuer, dass Flaggschiff-Smartphones 2024-2026 in 7-9 mm duennen Gehaeusen 5500-6000 mAh-Akkus unterbringen.
+\end{itemize}
+
+\begin{tcbinfo}{Welche Modelle verwenden es bereits?}
+\begin{itemize}
+  \item \textbf{Honor}: Die Magic-Serie hat Silizium-Kohlenstoff-Anoden erstmals kommerziell eingesetzt; Magic6 Pro, Magic7-Serie und Magic V3 verwenden sie.
+  \item \textbf{Xiaomi}: Xiaomi 14 Ultra und Xiaomi 15-Serie verwenden die neue Generation der Silizium-Kohlenstoff-Akkus.
+  \item \textbf{vivo}: X100 Ultra und X200 Pro-Serie verwenden eine hoehdichte Silizium-Kohlenstoff-Loesung.
+  \item \textbf{Huawei/OPPO u. a.}: 2025-2026 ziehen Flaggschiffe generell nach; die Silizium-Kohlenstoff-Anode entwickelt sich vom „Black Tech" zum Standard hochwertiger Geraete.
+\end{itemize}
+
+\end{tcbinfo}
+
+\textbf{Praktische Auswirkung auf den Nutzer}: Der groesste Vorteil der Silizium-Kohlenstoff-Anode ist „groessere Kapazitaet bei gleichem Volumen“ – das Smartphone kann duenner werden, ohne an Laufzeit zu verlieren; oder bei gleichem Gehaeuse wächst der Akku von 4500 auf 5500 mAh. Man muss also nicht mehr „dick und schwer” fuer Akkulaufzeit in Kauf nehmen. Beachten: Silizium-Kohlenstoff-Akkus erfordern bei niedrigen Temperaturen und beim Vollladen-Management weiterhin Optimierung durch Schnelllade-Chips – ein Grund, warum Hersteller empfohlenen, langfristig bei 80 \% zu laden.
+
+\booksection{V. Das sind die echten Stromspar-Tipps}
+
+\begin{itemize}
+  \item \textbf{Ein Freund von mir hatte letztes Jahr sein Smartphone gestohlen. Sein erster Gedanke war nicht „Wie teuer war das Smartphone?", sondern „Kann ich meine Fotos wiederbekommen?" Leider hatte er kein Cloud-Backup aktiviert. Das Smartphone ist ein materieller Gegenstand, aber die Daten im Konto sind wirklich unwiederbringlich verloren, wenn sie weg sind. In diesem Kapitel geht es darum, wie Sie Ihrem digitalen Leben eine echte Versicherung verschaffen.}1. Was genau verwaltet Ihr Smartphone-Konto?
+  \item \textbf{Viele denken, ein Konto sei nur zum Herunterladen von Apps da. Tatsächlich hängen an einem Smartphone-Konto viel mehr Dinge, als Sie ahnen:}Kontakte
+  \item \textbf{: Telefonnummern, die Sie über Jahre oder Jahrzehnte gesammelt haben.}Fotos und Videos
+  \item \textbf{: Von der Geburt des Kindes bis zur Abschlussfeier, vom ersten Date bis zur Hochzeitsreise.}Notizen
+  \item \textbf{: Spontane Einfälle, Tagebücher, Passwörter (ja, viele notieren sich Passwörter in der Notiz-App).}App-Käufe
+\end{itemize}
+
+\begin{tcbpractice}{: Bezahlte Apps und In-App-Käufe im Wert von Hunderten Yuan.}
+\begin{enumerate}
+  \item Smartphone finden
+  \item : Nach Verlust des Smartphones das einzige Werkzeug, um es zu orten, zu sperren oder Daten fernzulöschen.
+  \item Wenn Sie ein Apple-Smartphone nutzen, ist all das an Ihre Apple-ID gebunden. Bei Android ist es an Ihr Huawei-/Xiaomi-/OPPO-/vivo-Konto und zusätzlich an Ihr Google-Konto gebunden. Diese Konten sind der „Melderegister-Eintrag" Ihres digitalen Lebens – verlieren Sie den, ist vieles schwer nachzuweisen.
+\end{enumerate}
+
+\end{tcbpractice}

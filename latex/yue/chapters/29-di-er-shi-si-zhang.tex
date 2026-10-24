@@ -1,0 +1,131 @@
+\bookchapter{第二十四章：Root權限與BL鎖深度解析}
+
+\chapterintro{呢一章係對第二十章內容嘅深入擴展，適合嗰啲想要真正理解手機底層機制、甚至嘗試刷機嘅用戶。請注意，呢啲操作有一定風險，請謹慎行事。}
+
+\booksection{一、深入理解Bootloader}
+
+Bootloader係手機啟動時第一個運行嘅程式，佢嘅任務係初始化硬件、載入作業系統內核。可以將Bootloader理解為手機嘅「守門人」。
+
+\booksubsection{BL鎖嘅工作原理：}
+
+\begin{itemize}
+  \item \textbf{驗證簽名}：BL鎖會驗證啟動鏡像嘅數碼簽名，只有廠商簽名嘅系統先至可以啟動。
+  \item \textbf{防止降級}：防止用戶刷入舊版本系統嚟利用已知漏洞。
+  \item \textbf{保護數據}：即使刷入新系統，冇原帳號密碼亦無法訪問用戶數據。
+\end{itemize}
+
+\booksubsection{硬件級儲存與驗證}
+
+BL鎖嘅鎖定狀態（Locked/Unlocked）及廠商嘅公鑰，通常儲存喺受保護嘅硬件區域（如高通嘅 devinfo 分區、eFuse 或 RPMB 分區），防止被軟件篡改。每次啟動時，Bootloader 會由呢個安全區域讀取狀態，並據此決定係咪執行嚴格嘅簽名驗證。
+
+\booksubsection{數碼簽名驗證}
+
+廠商喺發布系統更新或鏡像時，會用自己嘅私鑰對佢進行簽名。設備啟動時，Bootloader 會使用內置嘅公鑰對系統鏡像（如 boot.img、recovery.img）進行驗證。佢嘅工作方式係：
+
+\begin{enumerate}
+  \item 對系統鏡像重新計算哈希值。
+  \item 用公鑰解密鏡像自帶嘅簽名，得到一個哈希值。
+  \item 比較呢兩個哈希值，若一致則通過驗證。呢個確保咗系統鏡像未被第三方篡改。
+\end{enumerate}
+
+\booksubsection{安全啟動鏈}
+
+BL鎖係整個安全啟動鏈嘅第一環。佢驗證通過後，先至會載入並執行下一階段嘅引導程式（如內核），從而層層確保系統啟動環境嘅可信。
+
+\booksubsection{鎖定 vs 解鎖：BL鎖嘅雙面影響}
+
+為咗更直觀咁理解 BL 鎖嘅利弊，我哋用一個對比表嚟展示佢喺 5 個核心維度上嘅差異：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{核心作用} & \textbf{鎖定狀態（預設）} & \textbf{解鎖後狀態} \tabularnewline
+\hline
+系統安全 & 防止刷入未簽名嘅非官方系統，保護系統完整性與底層安全\newline 高安全：僅載入官方簽名鏡像，有效抵禦惡意韌體篡改 & 安全降低：允許刷入第三方 ROM，系統完整性校驗機制失效，惡意軟件若攞到 Root 權限可深度篡改系統 \tabularnewline
+系統穩定性 & 確保手機運行經過廠商測試同優化嘅官方系統，保障穩定流暢\newline 穩定：使用官方韌體，功能完整，OTA 升級可靠 & 風險增加：第三方 ROM 可能存在相容性問題，可能導致系統崩潰、變磚、硬件功能異常（如鏡頭、快充），OTA 更新可能失敗 \tabularnewline
+保修權益 & 廠商透過鎖定 BL 提供穩定嘅官方系統，以提供保修服務\newline 保修有效：享受官方免費保修服務（非人為損壞） & 保修失效：絕大多數廠商將解鎖 BL 視為主動放棄保修嘅行為，即使重新上鎖，亦可能被檢測出歷史解鎖記錄而拒保 \tabularnewline
+數據安全 & 解鎖過程通常強制清除數據，防止舊數據喺新系統環境下被惡意利用\newline 數據安全：日常使用中，BL 鎖限制咗惡意程式對系統分區嘅修改能力 & 數據風險：解鎖時會強制清除所有用戶數據；若解鎖後未正確加密，數據儲存可能唔安全；遺失後更易被刷機提取數據 \tabularnewline
+功能限制 & 確保依賴安全環境嘅功能（如支付、銀行 App）正常運行\newline 功能完整：所有官方功能均可正常使用 & 功能受限：部分安全敏感應用（如 Google Pay、銀行 App）可能因檢測到 BL 解鎖狀態而拒絕運行；DRM 服務可能降級，影響高清影片播放 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksection{二、解鎖BL鎖嘅詳細流程（以小米為例）}
+
+\begin{enumerate}
+  \item \textbf{申請解鎖權限}：喺小米解鎖工具網站申請解鎖。
+  \item \textbf{綁定帳號}：喺手機設定中綁定小米帳號。
+  \item \textbf{等待期}：根據帳號等級，需要等待7-30日。
+  \item \textbf{解鎖操作}：使用小米解鎖工具連接電腦解鎖。
+\end{enumerate}
+
+\booksection{三、Root嘅多種方案}
+
+\begin{itemize}
+  \item \textbf{Magisk}：現代Root方案，Systemless設計，可隱藏Root狀態。
+  \item \textbf{Kernelsu}：基於內核嘅Root方案，更底層，隱藏性更好。
+  \item \textbf{SuperSU}：老牌Root方案，而家已經停止更新。
+\end{itemize}
+
+\booksection{四、刷機入門}
+
+刷機係指畀手機安裝新嘅作業系統。常見嘅刷機類型：
+
+\begin{itemize}
+  \item \textbf{刷官方ROM}：安裝官方系統，用於救磚或降級。
+  \item \textbf{刷第三方Recovery}：如TWRP，用於備份恢復、刷入第三方ROM。
+  \item \textbf{刷第三方ROM}：如LineageOS、Pixel Experience等，體驗唔同嘅系統。
+\end{itemize}
+
+\booksection{五、三星Knox：BL解鎖嘅不可逆代價}
+
+同其他安卓廠商唔同，三星手機嘅BL解鎖機制有一個獨特嘅「熔斷」設計：\textbf{對於三星手機嚟講，解鎖會觸發Knox熔斷，永久失去部分安全功能（如Samsung Pay）；會清除所有受保護數據；影響保修}。具體嚟講：
+
+\begin{itemize}
+  \item \textbf{熔斷器係一次性嘅}：手機內部有一顆 eFuse 熔絲，一旦檢測到 BL 被解鎖就會永久燒斷，無法恢復。
+  \item \textbf{受影響嘅功能}：Samsung Pay（公交卡/銀行卡）、Knox 安全資料夾、企業 MDM 管控、部分健康保險類 App 都會失效。
+  \item \textbf{強制清空數據}：熔斷觸發後手機會強制恢復出廠設定，所有本地數據被擦除（雲端數據唔受影響）。
+  \item \textbf{保修影響}：官方明確表示 Knox 熔斷後唔再享受保修服務。
+\end{itemize}
+
+\begin{tcbwarn}{三思而後行}
+三星嘅 Knox 熔斷係\textbf{不可逆}嘅，一旦觸發就返唔到原廠狀態。如果你淨係想用一啲原本需要 Root 嘅功能，建議先查嚇有冇唔需要 Root 嘅替代方案。
+
+\end{tcbwarn}
+
+\textbf{重要警告}\par
+
+刷機有風險，操作需謹慎。可能導致：
+
+\begin{itemize}
+  \item 手機變磚（無法開機）
+  \item 失去保修
+  \item 數據丟失
+  \item 支付功能異常
+\end{itemize}
+
+刷機前務必做好完整備份，仔細閲讀教程，確認機型同版本匹配。
+
+\begin{tcbinfo}{推薦資源}
+\begin{itemize}
+  \item \textbf{XDA Developers}：全球最大嘅安卓開發者社區，有豐富嘅刷機教程同ROM資源。
+  \item \textbf{酷安}：國內知名嘅數碼社區，有好多中文教程同討論。
+  \item \textbf{各機型論壇}：如小米社區、一加社區等，有官方同民間教程。
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{六、常見問題解答（Q\& A）}
+
+\textbf{Q1：解鎖BL鎖後仲能恢復嗎？}\par
+
+\textbf{A：}可以重新上鎖。通常需要刷入官方完整嘅線刷包，並使用特定嘅刷機腳本（如小米嘅\texttt{flash\_all\_lock.\allowbreak bat}）即可重新上鎖。但注意，重新上鎖後，因解鎖而觸發嘅一啲安全熔斷（如三星嘅Knox）可能無法逆轉。
+
+\textbf{Q2：解鎖後如何Root？}\par
+
+\textbf{A：}解鎖BL鎖淨係第一步。Root通常需要：
+
+\begin{enumerate}
+  \item 刷入自訂Recovery（如TWRP）。
+  \item 透過Recovery刷入Magisk等Root管理器嚟修補boot鏡像，從而攞到Root權限。
+\end{enumerate}

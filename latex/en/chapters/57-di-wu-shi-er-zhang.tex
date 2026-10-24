@@ -1,0 +1,129 @@
+\bookchapter{Chapter 52: The Four Components and the Activity Lifecycle}
+
+\chapterintro{If Compose is an app's “face,” then this chapter is about the app's “skeleton.” Android has four basic components, and every app is assembled from them. The most important one, the Activity, has a “lifecycle diagram” that every Android developer must burn into memory. Once you finish this chapter, you'll finally understand age-old mysteries like “why did my app lose all its state after I switched away and came back?”}
+
+\booksection{The Four Components: Android's Pillars}
+
+Android officially defines four basic components, each responsible for one kind of job:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Component} & \textbf{Job} & \textbf{Think of it as} \tabularnewline
+\hline
+Activity & A visible screen & The storefront — what users see and interact with \tabularnewline
+Service & The invisible workhorse doing jobs in the background & A warehouse worker — playing music, downloading files; no screen needed \tabularnewline
+BroadcastReceiver & Receives system broadcasts & The gatehouse — the loudspeaker for "battery low" and "network lost" \tabularnewline
+ContentProvider & Shares data across apps & A public filing cabinet — for example, sharing contacts with other apps \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Android's four components at a glance\end{center}
+
+As a beginner you'll spend 95\% of your time working with the Activity. The Service and BroadcastReceiver come into play for things like music playback and push notifications, and the ContentProvider is used the least (the system has already wrapped the common data for you). One more thing: all four components must “register their household” in AndroidManifest.xml — if they're not registered, the system can't find them.
+
+\booksection{The Activity Lifecycle: Your First Android “Treasure Map”}
+
+Apps on a phone can be interrupted at any moment: a call comes in, the user hops over to WeChat, the system runs short on memory and kills you... An Activity's whole life is a loop around this diagram:
+
+onCreate (birth: initialization)
+
+onStart (visible)
+
+onResume (in the foreground, interacting)
+
+onPause (partially covered)
+
+onStop (fully hidden)
+
+onDestroy (destroyed)
+
+onRestart / onStart / onResume: the same route in reverse when returning to the foreground
+
+\begin{center}\small\color{gray}Figure 4: The Activity lifecycle (going forward: the top row is birth the bottom row is exit; coming back retraces the same path)\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Callback} & \textbf{When it fires} & \textbf{Typical use} \tabularnewline
+\hline
+onCreate & When the Activity is created (once) & Load the UI, initialize data \tabularnewline
+onStart & The screen becomes visible & Start some lightweight logic \tabularnewline
+onResume & Has focus and can be interacted with & Start animations, resume playback \tabularnewline
+onPause & Partly covered, or the moment the user switches away & Pause animations, save drafts \tabularnewline
+onStop & Fully invisible & Release heavy resources, pause downloads \tabularnewline
+onDestroy & Before being destroyed & Final cleanup \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Typical uses of the six lifecycle callbacks\end{center}
+
+\textbf{Watch out: rotating the screen “kills” the Activity}\par
+
+The most classic beginner fail: you rotate the screen and everything typed into the input fields is gone. Why? By default, rotating the screen destroys and recreates the Activity (running through onDestroy onCreate). The fix: save state with rememberSaveable (the Compose replacement for remember); it automatically recovers the values when the Activity is rebuilt. You'll use it again and again in Chapters 6 and 7.
+
+\booksection{Intents: The “Tickets” for Traveling Inside and Outside the App}
+
+An Intent is the “ticket” components use to talk to each other. Whether you want to jump from one screen to another, open the browser, or launch the camera, you have to “buy a ticket and hop on”:
+
+\begin{lstlisting}[language=Kotlin]
+// Method 1: explicit Intent — you name the exact destination screen
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", Alex)     // carrying "luggage" (data) along for the ride
+startActivity(intent)
+
+// Method 2: implicit Intent — you say what to do, the system finds who does it
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // the system opens a browser / or lets you choose
+\end{lstlisting}
+
+Each kind has its own job: explicit intents are for jumping between screens inside your own app; implicit intents are for using the system's or other apps' abilities (opening a web page, making a call, sharing). In a Compose project, get the Context with LocalContext.current inside a Composable and you can call startActivity.
+
+\booksection{Multiple Screens and Navigation}
+
+Real apps have more than one screen. The navigation solution officially recommended for Compose is Navigation Compose (the androidx.navigation library):
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "Unknown")
+    }
+}
+
+// Navigating from a screen:
+navController.navigate("detail/Alex")     // with arguments
+navController.popBackStack()              // go back
+\end{lstlisting}
+
+\begin{tcbinfo}{Tip: What if you have lots of screens?}
+As the project grows, keep all the screen routes together in one file (say, AppNavGraph.kt) and manage them in one place — don't let the “where do I go next” logic scatter across every screen. It's the first step from “it runs” to “it's maintainable.”
+
+\end{tcbinfo}
+
+\booksection{A Quick Look: What Is a Fragment (and Why This Book Doesn't Teach It)}
+
+Digging through older tutorials, you'll definitely bump into Fragments — reusable pieces of UI embedded in an Activity, the absolute star of the old multi-screen architecture. But in the Compose era, Composable functions plus Navigation routes are all you need, and the official docs have downplayed Fragments. That's why this book leaves them off the main path.
+
+My advice: don't reach for Fragments in new projects; just know they're “UI pieces embedded in an Activity” for when you read old code or get asked in an interview. For learning materials, always prefer anything from 2023 onward — Android's stack of “old almanacs” goes stale faster than you'd think.
+
+\begin{tcbpractice}{Hands-on: Give the Counter a "Memory"}
+Upgrade the counter from Chapter 51: (1) swap remember for rememberSaveable and rotate the screen to confirm the number survives; (2) add an “About” button that uses Navigation to jump to a second screen showing the version number; (3) print logs (Log.d) in onCreate/onPause on both screens and watch the lifecycle call order in Logcat. Finish these three steps and the lifecycle stops being just theory.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter Summary}
+\begin{itemize}
+  \item The four components: Activity (the storefront), Service (the background), BroadcastReceiver (the loudspeaker), ContentProvider (the filing cabinet)
+  \item The six lifecycle callbacks: onCreate onStart onResume onPause onStop onDestroy
+  \item Rotating the screen destroys and recreates the Activity: use rememberSaveable to keep your state
+  \item An Intent is a "ticket": explicit for your own screens, implicit for system abilities
+  \item Multiple screens use Navigation Compose: NavHost + composable routes
+\end{itemize}
+
+\end{tcbsummary}

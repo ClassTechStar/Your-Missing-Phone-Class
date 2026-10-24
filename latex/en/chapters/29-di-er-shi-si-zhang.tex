@@ -1,0 +1,131 @@
+\bookchapter{Chapter 24: Root Access and the Bootloader Lock Explained}
+
+\chapterintro{This chapter is an in-depth expansion of Chapter 20, suitable for users who want to truly understand the underlying mechanisms of phones or even try flashing. Please note that these operations carry certain risks, so proceed with caution.}
+
+\booksection{Deep Understanding of Bootloader}
+
+Bootloader is the first program to run when the phone starts; its task is to initialize hardware and load the operating system kernel. You can think of Bootloader as the phone's “gatekeeper.”
+
+\booksubsection{How BL Lock Works:}
+
+\begin{itemize}
+  \item \textbf{Verify signature}: BL lock verifies the digital signature of the boot image; only manufacturer-signed systems can boot.
+  \item \textbf{Prevent downgrade}: Prevents users from flashing older system versions to exploit known vulnerabilities.
+  \item \textbf{Protect data}: Even if a new system is flashed, user data cannot be accessed without the original account password.
+\end{itemize}
+
+\booksubsection{Detailed Process for Unlocking BL Lock (Using Xiaomi as an Example)}
+
+Apply for unlock permission
+
+\booksubsection{: Apply for unlocking on the Xiaomi Unlock Tool website.}
+
+Bind account
+
+\begin{enumerate}
+  \item : Bind your Xiaomi account in phone settings.
+  \item Hardware-Level Storage and Verification
+  \item The BL lock status (Locked/Unlocked) and the manufacturer's public key are typically stored in protected hardware areas (such as Qualcomm's devinfo partition, eFuse, or RPMB partition) to prevent software tampering. On each boot, the Bootloader reads the status from this secure area and decides whether to perform strict signature verification.
+\end{enumerate}
+
+\booksubsection{Digital Signature Verification}
+
+When manufacturers release system updates or images, they sign them with their private keys. At device boot, the Bootloader verifies the system images (such as boot.img, recovery.img) using the built-in public key. The process works as follows:
+
+\booksubsection{Recalculate the hash value of the system image.}
+
+Decrypt the image's built-in signature with the public key to obtain a hash value.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Compare the two hash values — if they match, verification passes. This ensures the system image hasn't been tampered with by third parties.} & \textbf{Secure Boot Chain} & \textbf{The BL lock is the first link in the entire secure boot chain. Only after it passes verification does it load and execute the next stage bootloader (such as the kernel), ensuring the trustworthiness of the system boot environment layer by layer.} \tabularnewline
+\hline
+Locked vs. Unlocked: The Dual Impact of BL Lock & To more intuitively understand the pros and cons of the BL lock, here's a comparison table showing its impact across 5 core dimensions:\newline Core Role & Locked State (Default) \tabularnewline
+Unlocked State & System Security\newline Prevents flashing unsigned unofficial systems, protects system integrity and low-level security & High security: only loads officially signed images, effectively resists malicious firmware tampering \tabularnewline
+Reduced security: allows flashing third-party ROMs, system integrity verification fails, malware with Root access can deeply tamper with the system & System Stability\newline Ensures the phone runs the manufacturer-tested and optimized official system, guaranteeing stability and smoothness & Stable: uses official firmware, complete features, reliable OTA updates \tabularnewline
+Increased risk: third-party ROMs may have compatibility issues, potentially causing system crashes, bricking, hardware function anomalies (such as camera, fast charging), OTA update failures & Warranty Rights\newline Manufacturers provide warranty service by locking BL to ensure a stable official system & Warranty valid: enjoy official free warranty service (non-artificial damage) \tabularnewline
+Warranty void: most manufacturers consider BL unlocking as voluntarily waiving warranty. Even if relocked, historical unlock records may be detected and warranty refused & Data Security\newline The unlock process usually forces data wipe to prevent old data from being maliciously exploited in the new system environment & Data security: in daily use, BL lock limits the ability of malware to modify the system partition \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksection{Detailed Process for Unlocking BL Lock (Using Xiaomi as an Example)}
+
+\begin{enumerate}
+  \item \textbf{Feature Limitations}Ensures security-dependent features (such as payment, banking apps) work normally
+  \item \textbf{Complete features: all official features work normally}Feature limited: some security-sensitive apps (such as Google Pay, banking apps) may refuse to run upon detecting BL unlock status; DRM services may be downgraded, affecting HD video playback
+  \item \textbf{Waiting period}: Depending on account level, you need to wait 7-30 days.
+  \item \textbf{Unlock operation}: Use the Xiaomi Unlock Tool to connect to your computer to unlock.
+\end{enumerate}
+
+\booksection{Multiple Root Solutions}
+
+\begin{itemize}
+  \item \textbf{Magisk}: Modern Root solution, Systemless design, can hide Root status.
+  \item \textbf{Kernelsu}: Kernel-based Root solution, more low-level, better concealment.
+  \item \textbf{SuperSU}: Old-school Root solution, currently no longer updated.
+\end{itemize}
+
+\booksection{Flashing Introduction}
+
+Flashing refers to installing a new operating system on the phone. Common flashing types:
+
+\begin{itemize}
+  \item \textbf{Flash official ROM}: Install the official system, used for rescuing bricked phones or downgrading.
+  \item \textbf{Flash third-party Recovery}: Such as TWRP, used for backup and recovery, flashing third-party ROMs.
+  \item \textbf{Flash third-party ROM}: Such as LineageOS, Pixel Experience, etc., to experience different systems.
+\end{itemize}
+
+\booksection{V. Samsung Knox: The Irreversible Cost of Unlocking the BL}
+
+Flashing carries risks; proceed with caution. May lead to:\textbf{Phone bricking (cannot boot)}Loss of warranty
+
+\begin{itemize}
+  \item \textbf{Data loss}V. Samsung Knox: The Irreversible Cost of BL Unlocking
+  \item \textbf{Unlike other Android manufacturers, Samsung's BL unlock mechanism has a unique "fuse" design:}For Samsung phones, unlocking triggers Knox fuse tripping, permanently losing some security features (such as Samsung Pay); clears all protected data; affects warranty
+  \item \textbf{. Specifically:}The Fuse Is One-Time
+  \item \textbf{: There's an eFuse inside the phone that permanently burns out once it detects BL has been unlocked — it cannot be restored.}Affected Features
+\end{itemize}
+
+\begin{tcbwarn}{: Samsung Pay (transit cards/bank cards), Knox Secure Folder, enterprise MDM management, and some health insurance apps will all stop working.}
+Forced Data Wipe\textbf{: After the fuse is triggered, the phone forces a factory reset — all local data is erased (cloud data is not affected).}Warranty Impact
+
+\end{tcbwarn}
+
+\textbf{Important Warning}\par
+
+Flashing carries risks—proceed with caution. It may cause:
+
+\begin{itemize}
+  \item Bricked phone (won’t boot)
+  \item Loss of warranty
+  \item Data loss
+  \item Payment function abnormalities
+\end{itemize}
+
+Before flashing, be sure to make a complete backup, carefully read the tutorial, and confirm that the model and version match.
+
+\begin{tcbinfo}{Recommended Resources}
+\begin{itemize}
+  \item \textbf{XDA Developers}: The world's largest Android developer community, with rich flashing tutorials and ROM resources.
+  \item \textbf{Coolapk}: A well-known domestic digital community, with many Chinese tutorials and discussions.
+  \item \textbf{Various model forums}: Such as Xiaomi Community, OnePlus Community, etc., with official and community tutorials.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{VI. FAQ (Q\& A)}
+
+\textbf{Q1: Can BL Unlock Be Reversed?}\par
+
+\textbf{A:}Yes, it can be relocked. Usually requires flashing the official complete firmware package and using a specific flashing script (such as Xiaomi's\texttt{flash\_all\_lock.\allowbreak bat}) to relock. However, note that after relocking, some security fuses triggered by unlocking (such as Samsung's Knox) may be irreversible.
+
+\textbf{Q2: How to Root After Unlocking?}\par
+
+\textbf{A:}Unlocking the BL is just the first step. Rooting usually requires:
+
+\begin{enumerate}
+  \item Flashing a custom Recovery (such as TWRP).
+  \item Flashing Magisk or other Root managers through Recovery to patch the boot image and gain Root access.
+\end{enumerate}

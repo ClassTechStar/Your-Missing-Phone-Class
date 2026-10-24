@@ -1,0 +1,222 @@
+\booksection{Chapter 20: Developer Mode and Advanced Permissions}
+
+\chapterintro{This chapter is for users who want to deeply explore the “hidden features” of their phone. Developer Mode, Root permissions, BL lock... these geeky-sounding concepts are actually not far from ordinary users.}
+
+\booksubsection{Developer Mode: Unlock Hidden Settings}
+
+Developer Mode is a hidden menu built into the phone system, containing many features that ordinary users don't need but developers do.
+
+\subsubsection*{How to enable:}
+
+\begin{itemize}
+  \item \textbf{Android}: Go to Settings > About Phone > tap "Build Number" 7 times continuously, until it prompts "You are now in developer mode".
+  \item \textbf{HarmonyOS}: Settings > About Phone > tap "HarmonyOS Version" 7 times continuously.
+  \item \textbf{iOS}: Ordinary users cannot enable full Developer Mode—it requires a paid Apple Developer account.
+\end{itemize}
+
+\subsubsection*{Commonly Used Features Overview:}
+
+\begin{itemize}
+  \item \textbf{USB Debugging}: A must-enable switch for connecting to a computer for advanced operations (such as flashing, data recovery, ADB commands). See the "ADB Practical Commands" section in this chapter.
+  \item \textbf{Show Taps}: Shows touch points on screen (a small dot following your finger), suitable for recording tutorials or demos.
+\end{itemize}
+
+\subsubsection*{Performance \& Smoothness Related:}
+
+\begin{itemize}
+  \item \textbf{Animation Speed Adjustment (Window Animation Scale / Transition Animation Scale / Animator Duration Scale)}: These three options control the animation duration when opening apps and switching pages. The default is 1x; setting to 0.5x makes the phone "feel" faster (the actual program speed hasn't changed, just the animation is quicker); setting to off disables animations entirely. Most geeks set it to 0.5x — it preserves transition feel while seeming fast. Completely disabling animations can make operations feel abrupt and may mask real program stuttering, misleading you into thinking it's "very smooth."
+  \item \textbf{Force GPU Rendering}: Forces all 2D drawing to be processed by the GPU instead of the CPU. Can improve scrolling smoothness on older models or with poorly optimized apps, but also increases GPU load and power consumption. Modern phones already use GPU rendering extensively by default, so this toggle has limited impact on mid-to-high-end models — it's more of a legacy option. Ordinary users should keep the default.
+  \item \textbf{Profile GPU Rendering}: Displays a real-time bar chart on screen showing the rendering time of each frame. The green horizontal line represents 16.6ms (the frame time threshold for 60fps). Bars above the green line indicate dropped frames. This is a developer tool for troubleshooting app stuttering — ordinary users can also use it to compare which apps are poorly optimized. For example, if an app's bars frequently spike above the red line during scrolling, it's basically that app's fault.
+\end{itemize}
+
+\subsubsection*{Background \& Battery Related:}
+
+\begin{itemize}
+  \item \textbf{Settings in Developer Mode may affect system stability—don't change options you don't understand. After enabling USB Debugging, be careful when connecting to computers, and don't connect to untrusted computers.}: You can set "Standard limit," "At most 1 process," "At most 2 processes," etc. On the surface, limiting background processes seems like it would save battery, but Android's built-in background management is already quite good. Forcibly limiting it causes apps to reload frequently (cold starts actually consume more power and worsen the experience). This option is more suited for debugging — ordinary users shouldn't keep it enabled long-term; "Standard limit" is fine.
+  \item \textbf{Don't Keep Activities}: Destroys every activity as soon as you leave it. Highly discouraged — causes frequent white screens and reloads, only for testing app recovery logic.
+\end{itemize}
+
+\begin{tcbwarn}{Notes}
+: Prevents malicious software from being flashed into the system.
+
+\end{tcbwarn}
+
+\booksubsection{II. OEM Unlocking: The “Flashing Switch” in Developer Options}
+
+In Developer Options, there's an inconspicuous but important toggle — “OEM Unlocking” (some brands call it “Allow OEM Unlocking” or “Device Unlocking”). This toggle doesn't unlock the Bootloader itself — it's a “prerequisite permission”: only when enabled will the manufacturer allow you to unlock the BL via fastboot commands or brand tools.
+
+\begin{itemize}
+  \item \textbf{Purpose of the Toggle}: Equivalent to declaring to the manufacturer "I agree to waive my warranty and accept the risks — please allow me to unlock the BL." If this toggle is off, any BL unlock command will be rejected outright.
+  \item \textbf{Relationship with the BL Lock}: OEM Unlocking is the "qualification application," while BL Unlock is the "actual operation." The former is just a tap in phone settings; the latter requires applying for an unlock code from the manufacturer's website and running fastboot commands on a computer (such as\texttt{fastboot flashing unlock}), and both are indispensable.
+  \item \textbf{Does Factory Reset Reset It?}: Yes. The "OEM Unlocking" toggle returns to off after a factory reset, but once the BL is unlocked, it's a physical-level state — a factory reset won't relock it. You need to manually execute\texttt{fastboot flashing lock}to relock it.
+  \item \textbf{When Should You Enable It}: Unless you're certain you want to flash or Root, keep it off. It and "USB Debugging" are independent toggles — both usually need to be enabled simultaneously when flashing.
+\end{itemize}
+
+\begin{tcbinfo}{Trivia: Why Do Manufacturers Include This Toggle}
+Early Android didn't have this toggle, so malware could silently flash the system as long as it got permissions. Google later required all Android manufacturers to include the “OEM Unlocking” toggle in Developer Options as a “user informed consent” confirmation. This is why even if you've unlocked the BL, reflashing will still fail if the OEM Unlocking toggle is turned off.
+
+\end{tcbinfo}
+
+\booksubsection{III. Bootloader Lock: The First Gate to Flashing}
+
+: Even if the phone is flashed, it can't be used without the original account password.
+
+\subsubsection*{Warranty restriction}
+
+\begin{itemize}
+  \item \textbf{: Unlocking BL usually means losing official warranty.}BL lock policies by brand:
+  \item \textbf{Xiaomi}: Can be unlocked, requires account binding waiting period (7-30 days).
+  \item \textbf{Huawei}: Stopped providing unlock codes after 2018, basically cannot be officially unlocked.
+\end{itemize}
+
+\subsubsection*{OnePlus}
+
+\begin{itemize}
+  \item \textbf{Xiaomi}OPPO/vivo
+  \item \textbf{Huawei}Samsung
+  \item \textbf{: Can be unlocked, but triggers Knox fuse, losing Samsung Pay and other features.}Apple
+  \item \textbf{[Install Apps from External Sources]}3. Root Permission: Android's "Super Administrator"
+  \item \textbf{Samsung}Benefits of Root:
+  \item \textbf{Apple}Use advanced feature apps (like Titanium Backup, Greenify).
+\end{itemize}
+
+\booksubsection{IV. ADB Practical Commands: Controlling Your Phone via Computer}
+
+ADB stands for Android Debug Bridge, an official Google command-line tool that lets a computer communicate with an Android phone via USB or Wi-Fi. It doesn't require Root — as long as the phone has “USB Debugging” enabled, you can use it. Think of it as a “remote control that sends commands from your computer to your phone” — flashing, installing apps, transferring files, checking logs, all rely on it.
+
+\subsubsection*{How to Connect via USB:}
+
+\begin{enumerate}
+  \item On the phone: Enter Developer Options enable "USB Debugging."
+  \item On the computer: Download Platform Tools from Google's official site (includes\texttt{adb}verb\texttt{fastboot}two executable files), extract to any directory.
+  \item Connect the phone and computer with a data cable. The phone will show a popup "Allow USB debugging?" — check "Always allow" and confirm.
+  \item In the computer's command line (Windows PowerShell or cmd), execute\texttt{adb devices}. If the output is similar to\texttt{List of devices attached /\allowbreak  xxxxxxxx device}, the connection is successful.
+\end{enumerate}
+
+\begin{tcbwarn}{Don't Ignore Driver and Authorization Popups}
+If Windows users see\texttt{adb devices}showing “unauthorized” or not listing the device at all, it's usually because the driver isn't installed properly or you forgot to tap “Allow” on the phone. Samsung/Xiaomi and other brands can install their respective “USB Drivers” or “Phone Assistant” to fix the driver; Mac and Linux generally don't need drivers. If you accidentally dismissed the phone popup, just unplug and replug the data cable and it will pop up again.
+
+\end{tcbwarn}
+
+\subsubsection*{Commonly Used ADB Commands:}
+
+\begin{itemize}
+  \item \texttt{adb install app.\allowbreak apk}: Installs an APK from the computer to the phone (\texttt{-\allowbreak r}means reinstall while keeping data;\texttt{-\allowbreak s}installs to SD card).
+  \item \texttt{adb uninstall com.\allowbreak xxx.\allowbreak xxx}: Uninstalls an app by package name.
+  \item \texttt{adb push [computer path] /\allowbreak sdcard/\allowbreak [target path]}: Pushes a file from the computer to the phone.
+  \item \texttt{adb pull /\allowbreak sdcard/\allowbreak [file] [computer path]}: Pulls a file from the phone to the computer (much faster than sending it to yourself on WeChat and downloading).
+  \item \texttt{adb shell}: Enters the phone's Linux shell, can directly execute\texttt{ls}and\texttt{pm}and\texttt{am}and other commands.
+  \item \texttt{adb reboot bootloader}: Reboots the phone into Fastboot mode (the entry point for flashing).
+  \item \texttt{adb reboot recovery}: Reboots into Recovery mode.
+  \item \texttt{adb shell pm list packages}: Lists all installed app package names on the phone (essential for finding package names). Add\texttt{-\allowbreak s}to see only system apps, add\texttt{-\allowbreak 3}to see only third-party apps.
+  \item \texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 [package name]}: Uninstalls pre-installed apps for the current user — no Root required. See the practical guide below.
+\end{itemize}
+
+\subsubsection*{Practical Guide: Uninstalling Pre-installed Apps Without Root:}
+
+This is one of ADB's most practical features: using the\texttt{pm uninstall -\allowbreak -\allowbreak user 0}command, you can uninstall pre-installed apps for the “current user” without Root and without affecting the system partition. Uninstalled apps “disappear” from the system but are actually still in the system partition — they'll come back after a factory reset.
+
+\begin{enumerate}
+  \item First use\texttt{adb shell pm list packages -\allowbreak s}to list all system apps and find the package name you want to uninstall. For example, Xiaomi Browser is\texttt{com.\allowbreak android.\allowbreak browser}, and Huawei AppGallery is\texttt{com.\allowbreak vmall.\allowbreak client}.
+  \item Not sure which app a package name corresponds to? You can use\texttt{adb shell pm list packages | findstr [keyword]}to search on the computer, or install a third-party app "Package Viewer" on the phone to directly view each app's package name.
+  \item Execute the uninstall:\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 [package name]}. For example,\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 com.\allowbreak android.\allowbreak browser}. If it returns\texttt{Success}, it's successful.
+  \item Want to restore? Two methods: (1) Factory reset (most thorough but cumbersome); (2) Reinstall:\texttt{adb shell cmd package install-\allowbreak existing [package name]}.
+\end{enumerate}
+
+\textbf{Never Delete Critical System Packages}\par
+
+Although “pm uninstall --user 0” is a safe method that doesn't require Root, deleting critical system apps (such as\texttt{com.\allowbreak android.\allowbreak systemui}status bar,\texttt{com.\allowbreak android.\allowbreak phone}phone,\texttt{com.\allowbreak android.\allowbreak settings}settings) can cause serious problems like system crashes, black screens, and inability to boot. Before deleting, Google “can this package name be deleted” — better to delete less than to delete wrong. Recommend deleting only one or two at a time and confirming everything is fine before continuing.
+
+\begin{tcbinfo}{Trivia: What Does --user 0 Mean?}
+Android 4.2+ supports multi-user, where each user has an independent ID (the owner is 0, additional users start from 10).\texttt{-\allowbreak -\allowbreak user 0}means “uninstall for the current owner only” — the APK file in the system partition still exists, it's just not shown to the owner. That's why it doesn't need Root — it doesn't touch system files, it just changes the “user configuration.” This is also the biggest difference from Root uninstalling: Root uninstalling actually deletes from the system, so no user has it anymore; ADB uninstalling just “hides it for the current user.”
+
+\end{tcbinfo}
+
+\booksubsection{V. Root Access: Android's “Super Administrator”}
+
+Root access is equivalent to the superuser in Linux (full control over the / directory, can read/write any file), the highest privilege level in Android. It fundamentally differs from Windows Administrator: Windows imposes many restrictions on administrators for security (the true highest privilege is actually TrustedInstaller), and even Administrator can't directly execute like Linux root can.\texttt{sudo rm -\allowbreak rf /\allowbreak *}. After obtaining Root access, you can modify system files, uninstall pre-installed apps, and use advanced apps that require Root.
+
+\subsubsection*{Risks of Root:}
+
+\begin{itemize}
+  \item Loss of warranty
+  \item : Most manufacturers don't warranty Rooted phones.
+  \item Security risks
+  \item : Malicious apps may obtain Root permission, causing serious consequences.
+\end{itemize}
+
+\subsubsection*{System instability}
+
+\begin{itemize}
+  \item \textbf{XDA Developers}Banking apps won't work
+  \item \textbf{: Many banking and payment apps refuse to run when Root is detected.}OTA update failure
+  \item \textbf{: May not be able to receive official system updates normally.}Severe Warning
+  \item \textbf{Root operations carry certain risks and may brick your phone (won't turn on). If you're a beginner, recommend fully understanding the relevant knowledge first and ensuring you have a complete backup. Read tutorials carefully before operating, and confirm your phone model and system version.}4. Advice for Ordinary Users
+  \item \textbf{Developer Mode}: Can be enabled to experience animation acceleration and other features, but don't randomly change other settings.
+\end{itemize}
+
+\textbf{BL lock}\par
+
+: If you don't plan to flash, keeping it locked is safer.
+
+\booksubsection{VI. SafetyNet and Play Integrity Certification: Why Bank Apps Don't Work After Root}
+
+Many Root users have experienced this devastating moment: after Rooting and excitedly installing a bunch of modules, you open your bank app — “Your device is insecure and cannot be used,” Google Pay doesn't work, and even Netflix refuses HD playback. Behind this is Google's two device integrity certification mechanisms: the older SafetyNet and the newer Play Integrity API.
+
+\subsubsection*{What Are SafetyNet / Play Integrity:}
+
+\begin{itemize}
+  \item \textbf{SafetyNet Attestation (Legacy, since 2017)}: Google's early device integrity check API, where apps query Google servers to check "whether this device passed CTS compatibility testing and is in an unmodified official state." Results are divided into Basic Attestation and Strong Attestation (relies on hardware keys). Google has announced that SafetyNet will be gradually deprecated after 2024.
+  \item \textbf{Play Integrity API (New, since 2022)}: Google's replacement, stricter and more comprehensive than SafetyNet. In addition to device integrity, it includes "app integrity" (whether the app has been tampered with) and "account/licensing integrity" (whether the user account is trusted by Google). New apps should migrate to Play Integrity.
+  \item \textbf{Who Uses It}: Banking, financial, and payment apps (such as Google Pay, various banks' mobile banking, some scenarios of Alipay/WeChat Pay), streaming media (Netflix HD copyright protection), some game anti-cheat (such as some Tencent/NetEase games), enterprise office apps (MDM device compliance checks).
+\end{itemize}
+
+\subsubsection*{Play Integrity's Three Certification Levels:}
+
+\begin{itemize}
+  \item \textbf{MEETS\_DEVICE\_INTEGRITY}: The device runs genuine Android, Bootloader is locked, no Root, CTS compatibility test passed. Banking and payment apps work normally.
+  \item \textbf{MEETS\_BASIC\_INTEGRITY}: The device is basically trustworthy, but may have minor anomalies. Some apps will degrade (e.g., Netflix still plays but limits resolution), some strict bank apps will refuse outright.
+  \item \textbf{MEETS\_STRONG\_INTEGRITY}: The highest level, requires hardware key endorsement (such as the Titan M chip in Google Pixel series). Most third-party brand devices can't reach this level even without Root.
+  \item \textbf{No Label (NO\_INTEGRITY)}: The device is Rooted, BL is unlocked, a third-party ROM is flashed, or it's identified as an emulator. The vast majority of payment/banking apps will refuse to run.
+\end{itemize}
+
+\subsubsection*{Why Do These Apps Fail After Root:}
+
+Apps initiate certification requests to Google servers through the Play Integrity API. Google checks multiple device indicators — Bootloader lock status, whether the system partition has been modified, whether su binary files exist, whether SELinux is in permissive mode, etc. Any anomaly causes the returned certification level to be lowered or empty, and bank apps see “device insecure” and naturally refuse service.
+
+\subsubsection*{Modern Hiding Solutions: Magisk Hide / Shamiko / Zygisk:}
+
+To enjoy Root convenience while still using banking apps, the community has developed a series of solutions to “hide the Root state.” The core idea is the same: make the detection program see a “normal-looking” device instead of a modified system.
+
+\begin{itemize}
+  \item \textbf{: Old-school Root solution, currently no longer updated.}: The current mainstream Systemless Root solution — doesn't modify the system partition, but achieves Root through mounting. The benefit of this design is a lower chance of OTA update failure and cleaner uninstall. It's the foundation for all subsequent hiding solutions. However, using Magisk still requires unlocking the BL.
+  \item \textbf{Magisk Hide (Discontinued)}: Magisk's early built-in hiding module, could hide Root from specified apps. But since 2021 it was removed by Magisk officially, because Google continuously upgraded detection methods, and the two sides fell into a "cat-and-mouse game."
+  \item \textbf{Zygisk}: A new mechanism introduced in Magisk 24.0+, similar to Riru, injects into the Zygote process to load modules, more stealthy than directly modifying the system. Enabling Zygisk is a prerequisite for using modern hiding solutions.
+  \item \textbf{Shamiko}: The current mainstream hiding module, works with Zygisk, can hide Root for specified apps ("reverse whitelist" mode), hide Magisk itself, and fake the Bootloader lock status. Shamiko is distributed through the LSPosed repository or GitHub.
+  \item \textbf{Play Integrity Fix(osm0sis)}: A Magisk module specifically targeting Google Play Integrity detection, modifies the device fingerprint to make Google think your device is an unrooted official model.
+\end{itemize}
+
+\begin{tcbwarn}{The Cat-and-Mouse Game Never Ends}
+Google updates detection rules periodically, and app developers follow up with Play Integrity upgrades. A hiding solution that works today may be detected tomorrow. If you fully rely on banking/payment apps (such as daily transfers, QR code payments), the safest choice remains: don't Root, don't unlock the BL. Hiding solutions are more suitable for a “main phone without Root + backup phone for Root experimentation” enthusiast setup.
+
+\end{tcbwarn}
+
+\booksubsection{VII. Advice for Ordinary Users}
+
+\begin{itemize}
+  \item \textbf{: Not recommended for ordinary users—risks outweigh benefits. If you really need certain features, first look into whether there are alternatives that don't require Root.}: You can enable it to experience animation acceleration, GPU rendering analysis, and other features, but don't randomly change other options you don't understand.
+  \item \textbf{OEM Unlocking and BL Lock}: If you don't plan to flash or Root, keep both toggles in their default (off) state for maximum safety.
+  \item \textbf{ADB}: A powerful no-Root tool that ordinary people can use too — for example, using\texttt{pm uninstall -\allowbreak -\allowbreak user 0}to uninstall pre-installed apps. But before deleting, always check whether the package name can be safely deleted.
+  \item \textbf{Root}: Root is not recommended for ordinary users — the risks outweigh the benefits. If you truly need certain features, first check whether there are no-Root alternatives (such as using ADB to uninstall pre-installed apps, or using Shizuku to replace some Root functionality).
+\end{itemize}
+
+\begin{tcbpractice}{Hands-On: Enable Developer Mode and Adjust Animation Speed}
+\begin{enumerate}
+  \item Go to Settings > About Phone.
+  \item Tap "Build Number" 7 times in a row until it says Developer Mode is enabled.
+  \item Go back to Settings and find "Developer Options" (usually at the bottom of Settings or under "System").
+  \item Find "Window animation scale", "Transition animation scale", and "Animator duration scale", and set them all to 0.5x or off.
+  \item Feel whether the phone has become faster.
+\end{enumerate}
+
+\end{tcbpractice}

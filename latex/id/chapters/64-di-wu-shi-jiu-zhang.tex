@@ -1,0 +1,126 @@
+\bookchapter{Bab 59: Mengenal iOS — Ekosistem Apple dan Ekosistem Pengembangan}
+
+\chapterintro{Selamat atas keputusan ini — kamu berubah dari “orang yang memakai iPhone” menjadi “orang yang menulis aplikasi untuk iPhone”. Sebelum mulai, mari bentangkan peta dulu: dari mana iOS berasal? Apa arti “taman berdinding” Apple bagi pengembang? Apa saja yang terjadi dari jarimu mengetik di keyboard hingga App mendarat di ponsel pengguna?}
+
+\booksection{Asal-usul iOS: Satu ponsel mengubah satu industri}
+
+Pada Januari 2007, Steve Jobs mengeluarkan iPhone generasi pertama di panggung peluncuran. Saat itu ia bahkan belum mendukung aplikasi pihak ketiga — sampai 2008, Apple merilis App Store dan iPhone SDK yang membuka pintu bagi pengembang seluruh dunia untuk menulis perangkat lunak iPhone. Dari momen itulah “ekonomi aplikasi” lahir: hingga kini ada jutaan aplikasi di App Store, dan total bagi hasil bagi pengembang menembus ratusan miliar dolar AS.
+
+Sistemnya sendiri juga berevolusi: mula-mula bernama iPhone OS, berganti nama menjadi iOS pada 2010; nomor versinya berjalan sampai iOS 17 (2023), lalu pada 2025 Apple mengubah penamaannya mengikuti tahun — iOS 26 dirilis pada 2025, dan per Agustus 2026 versi terkini adalah iOS 27. Nama boleh berubah, tetapi satu hal tak pernah berubah: kebiasaan pengguna iOS membayar dan reputasi kualitas perangkat lunaknya diakui paling baik di ekosistem seluler — App yang sama, pendapatan sisi iOS kerap jauh lebih tinggi daripada sisi Android.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tonggak} & \textbf{Tahun} & \textbf{Hal penting bagi pengembang} \tabularnewline
+\hline
+App Store diluncurkan & 2008 & Ekosistem pengembangan pihak ketiga dibuka \tabularnewline
+Swift dirilis & 2014 & Bahasa pengembangan iOS modern hadir \tabularnewline
+SwiftUI dirilis & 2019 & Framework tampilan deklaratif, jalur utama buku ini \tabularnewline
+iOS 26 (tahun pertama penamaan baru) & 2025 & Penamaan mengikuti tahun; Apple Intelligence terintegrasi menyeluruh \tabularnewline
+iOS 27 & 2026 & Versi terkini saat ini (patokan buku ini) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Peristiwa penting pengembangan iOS (per Agustus 2026)\end{center}
+
+\booksection{Taman berdinding: “Aturan” dan “dividen” ekosistem Apple}
+
+Ekosistem Apple sering digambarkan sebagai “taman berdinding” (Walled Garden) — aturannya banyak dan pengawasannya ketat: App harus lolos peninjauan dulu untuk tayang, pengembangan wajib memakai Mac dan Xcode, distribusi utamanya lewat App Store. Terdengar menyempitkan? Tetapi bagi pengembang, aturan ini menuai dividen yang nyata:
+
+\begin{itemize}
+  \item Fragmentasi perangkat sangat kecil: model iPhone hanya segitu, ukuran layar dan versi sistem sangat seragam — optimalkan untuk 5 model saja, 95\% pengguna sudah tercakup (di Android bisa jadi harus puluhan model);
+  \item Tingkat pembaruan versi sistem sangat tinggi: dalam beberapa minggu setelah rilis, tujuh-ke-delapan puluh persen pengguna sudah upgrade; API baru bisa dipakai berani tanpa harus menjaga "sistem tua lima tahun silam";
+  \item Kebiasaan membayar pengguna bagus: pengguna App Store lebih bersedia membayar aplikasi dan pembelian dalam aplikasi;
+  \item Peninjauan memang ketat, tetapi tokonya bersih: aplikasi tiruan dan perangkat lunak nakal sedikit, produk bagus lebih mudah terlihat.
+\end{itemize}
+
+\begin{tcbwarn}{Perhatian: Bicarakan biayanya lebih dulu}
+Pengembangan iOS punya syarat mutlak: wajib ada Mac (Xcode eksklusif macOS), tayang butuh akun pengembang 99 dolar AS per tahun (akun gratis pengembang perorangan bisa untuk debug perangkat asli secara lokal, tetapi tidak bisa tayang). Hitung dulu investasi ini sebelum berangkat — kabar baiknya, untuk tahap belajar akun gratis sepenuhnya cukup; akan dibahas di Bab 60.
+
+\end{tcbwarn}
+
+\booksection{Menulis dengan bahasa apa: Objective-C atau Swift?}
+
+Sejarah pengembangan iOS juga punya dua “tokoh utama”. Objective-C adalah pionir pendiri — dipakai dari 2008 sampai 2014; Swift adalah bahasa baru yang dirilis Apple pada 2014, lalu berevolusi hingga Swift 6 (rilis 2024, memperkenalkan pemeriksaan konkurensi yang ketat). Menjelang 2026, hampir semua proyek baru memakai Swift.
+
+Satu pesan lugas untukmu yang nol dasar: langsung pelajari Swift, Objective-C tak perlu dilirik — kecuali kelak kamu harus merawat kode warisan berusia sepuluh tahun. Keunggulan Swift: sintaks bersih (terbebas dari beban titik koma dan berkas header era bahasa C), mekanisme Optional menghapus “crash null pointer” dari level bahasa, nyambung mulus dengan SwiftUI, dan ada Swift Playgrounds di iPad untuk belajar sambil bermain.
+
+Gaya Objective-C (relik kuno)
+
+\begin{lstlisting}
+NSString *name = @"Zhang San"; [name stringByAppendingString:@"Halo"]; // trio tanda kurung siku + pointer + titik koma
+\end{lstlisting}
+
+Gaya Swift (modern dan bersih)
+
+\begin{lstlisting}
+var name = "Zhang San" name += "Halo" // lugas seperti bahasa sehari-hari
+\end{lstlisting}
+
+\booksection{Bagaimana sebuah App lahir?}
+
+Seperti semua platform, kelahiran App iOS juga punya jalur produksinya. Tetapi versi Apple punya dua “pemeriksaan keamanan” ekstra:
+
+Ide
+
+Desain (tampilan+fungsi)
+
+Menulis kode (Swift + SwiftUI)
+
+Kompilasi dan tanda tangani
+
+Pengujian (emulator+perangkat nyata)
+
+Review Apple
+
+Rilis di App Store
+
+\begin{center}\small\color{gray}Gambar 1: Alur lengkap sebuah App iOS dari ide sampai tayang (perhatikan tahap “peninjauan” tambahannya)\end{center}
+
+Konsep kunci dalam alurnya:
+
+\begin{itemize}
+  \item Penandatanganan (Signing): setiap App iOS harus "ditandatangani" dulu agar bisa dipasang — membuktikan "paket ini dari kamu, tak diubah orang". Di tahap belajar, Xcode menandatangani otomatis dengan Apple ID-mu; saat tayang memakai sertifikat pengembang. Dibahas rinci di Bab 67.
+  \item Simulator: iPhone virtual di atas Mac, medan utama develop dan debug. Ia berjalan di CPU Mac, jadi sangat lancar — pengalamannya jauh di atas emulator Android.
+  \item TestFlight: alat "distribusi uji internal" resmi Apple — sebelum tayang, versi uji dikirim ke maksimal 10000 penguji yang memasangnya lewat aplikasi TestFlight. Inilah keanggunan yang khas ekosistem iOS.
+\end{itemize}
+
+\booksection{Panorama tumpukan teknologi iOS: “Daftar senjatamu”}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Lapisan} & \textbf{Pilihan utama (2026)} & \textbf{Dipakai untuk apa} \tabularnewline
+\hline
+Bahasa & Swift 6 & Bahasa untuk menulis logika \tabularnewline
+Tampilan & SwiftUI + pedoman desain Apple (HIG) & Menggambar tampilan dengan kode (jalur utama buku ini) \tabularnewline
+Arsitektur & MVVM + @Observable & Memisahkan tampilan dan logika \tabularnewline
+Penyimpanan data & SwiftData (database) + UserDefaults (konfigurasi) & Menyimpan data ke dalam ponsel \tabularnewline
+Jaringan & URLSession + async/await + Codable & Berbicara dengan server \tabularnewline
+Alat build & Xcode Build System / xcodebuild & Mengubah kode menjadi paket instalasi \tabularnewline
+Lingkungan pengembangan & Xcode (eksklusif macOS) & IDE resmi Apple \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Sekilas tumpukan teknologi utama iOS 2026\end{center}
+
+Sadar tidak: daftar ini lebih pendek sejengkal daripada milik Android — karena Apple sudah “mengurus” banyak hal. Harga ekosistem tertutup adalah kebebasan, imbalannya ketenangan: tak perlu bingung memilih pustaka jaringan atau database mana; yang diberikan resmi biasanya sudah solusi terbaik.
+
+\begin{tcbpractice}{Praktik: Intip "identitas Apple" ponselmu}
+Buka [Pengaturan] [Umum] [Tentang] di iPhone, catat tiga hal: versi iOS, nama model, kapasitas tersedia. Lalu jelajah santai halaman “Hari Ini” di App Store, perhatikan tangkapan layar dan teks App-App andalan — mulai hari ini, sudut pandangmu saat berkeliling di toko bergeser dari “pengguna” menjadi “pengembang”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan bab}
+\begin{itemize}
+  \item 2008 App Store diluncurkan, "ekonomi aplikasi" lahir; versi terkini 2026 adalah iOS 27
+  \item Hitungan taman berdinding: aturan banyak, tetapi perangkat sedikit, versi baru, pengguna mau membayar, toko bersih
+  \item Syarat mutlak: wajib ada Mac; tayang butuh akun pengembang 99 dolar AS/tahun; tahap belajar cukup dengan akun gratis
+  \item Bahasa: langsung pelajari Swift; Objective-C hanya milik kode warisan
+  \item Jalur produksinya satu tahap lebih panjang dari Android: peninjauan Apple; TestFlight adalah alat ampuh distribusi uji internal
+  \item Tumpukan teknologi standar 2026: Swift 6 + SwiftUI + MVVM + SwiftData + URLSession + Xcode
+\end{itemize}
+
+\end{tcbsummary}

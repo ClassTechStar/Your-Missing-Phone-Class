@@ -1,0 +1,529 @@
+\contentsline {part}{1. Bahagian Asas (Bab 0-7)}{2}{part*.2}%
+\contentsline {chapter}{Bab 0: Hai, Sebelum Mula}{2}{chapter*.3}%
+\contentsline {section}{I. Apa yang Buku Ini Bantu Anda Lakukan? (Dan Apa yang Tidak)}{2}{section*.4}%
+\contentsline {section}{II. Penjelasan “Kod Rahsia” Kami}{2}{section*.4}%
+\contentsline {section}{III. Android dan iOS, Kita Bincang Kedua-duanya}{3}{section*.4}%
+\contentsline {section}{IV. Kapasiti Telefon: Mengapa Beli 128G tetapi Kurang daripada 110G Tersedia?}{3}{section*.4}%
+\contentsline {section}{V. Telefon Anda Adalah “Perpustakaan Aset Digital”}{3}{Item.3}%
+\contentsline {chapter}{Bab 1: Hello, Komputer Peribadi Saya}{5}{chapter*.5}%
+\contentsline {section}{I. “Organ Dalam” Perkakasan Telefon: Analisis Mendalam}{5}{section*.6}%
+\contentsline {section}{II. Sistem Pengendalian: Android VS iOS VS HarmonyOS}{14}{Item.11}%
+\contentsline {section}{III. Analisis Lengkap Antaramuka Telefon}{14}{Item.11}%
+\contentsline {section}{IV. Sistem Produk Telefon dan Peraturan Penamaan}{16}{Item.11}%
+\contentsline {section}{V. Baseband dan Antena: Wira di Sebalik Tabir Komunikasi Telefon}{17}{Item.11}%
+\contentsline {section}{VI. Telefon Anda, Sebenarnya Memainkan Berapa Banyak Peranan?}{19}{Item.11}%
+\contentsline {section}{Tambahan: Analisis Pengembangan Ingatan Telefon Android}{19}{Item.21}%
+\contentsline {section}{Tambahan Bab 1: Topik Khas Sistem Pengendalian HarmonyOS}{22}{Item.25}%
+\contentsline {chapter}{Bab 2: Kemas Bilik Digital Anda — Pengurusan Fail}{27}{chapter*.7}%
+\contentsline {section}{I. Sistem Storan Tiga Lapisan: Gudang Digital Anda}{27}{section*.8}%
+\contentsline {section}{II. Mengenali “Pengurus Fail”}{27}{Item.32}%
+\contentsline {section}{III. Struktur Sistem Fail: Mendalami}{28}{Item.32}%
+\contentsline {section}{IV. Sandaran dan Pemulihan Data: Lindungi Data Anda}{28}{Item.32}%
+\contentsline {section}{V. Keselamatan Fail: Lindungi Privasi Anda}{29}{Item.35}%
+\contentsline {section}{VI. Ruang Tidak Cukup? Mari Bersih Besar}{29}{Item.35}%
+\contentsline {section}{VII. Analisis Lengkap Format Fail Biasa}{29}{Item.35}%
+\contentsline {section}{Lapan, Pengurusan Imej dan Sistem Fail: Atur Aset dengan Teratur}{31}{Item.35}%
+\contentsline {chapter}{Bab 3: Sambungkan Telefon ke “Garis Hayat” — Rangkaian}{34}{chapter*.9}%
+\contentsline {section}{Sifar, Tidak Keliru dengan Rangkaian — Bezakan “Jalan” dan “Kenderaan” Wi-Fi dan Data Mudah Alih}{34}{section*.10}%
+\contentsline {section}{Satu, Rangkaian Mudah Alih (4G/5G) dan Data Mudah Alih}{36}{section*.10}%
+\contentsline {section}{Dua, Wi-Fi: Sambungan, Perkongsian dan Keselamatan}{37}{section*.10}%
+\contentsline {section}{Tiga, Bluetooth: Pemain Serbaguna Komunikasi Wayarles Jarak Dekat}{39}{section*.10}%
+\contentsline {section}{Empat, Kawalan Inframerah: Telefon Berubah Menjadi Kawalan Jauh Serbaguna}{40}{section*.10}%
+\contentsline {section}{Lima, NFC: Sihir Sentuhan}{41}{section*.10}%
+\contentsline {section}{Enam, Hotspot Peribadi: Jadikan Telefon sebagai Penghala Wi-Fi}{42}{section*.10}%
+\contentsline {chapter}{Bab 4: Pasang dan Urus Aplikasi — “Pakej Kemahiran” Telefon}{43}{chapter*.11}%
+\contentsline {section}{Satu, Kedai Rasmi: “Supermarket Aplikasi” Paling Selamat}{43}{section*.12}%
+\contentsline {section}{Dua, Mod Tulen / Perlindungan: Aktifkan “Dinding Anti-Virus” Telefon}{43}{section*.12}%
+\contentsline {section}{Tiga, Sumber Pihak Ketiga dan “Parasit Elektronik”: Risiko Sangat Tinggi!}{45}{section*.12}%
+\contentsline {section}{Empat, Pasang, Kemas Kini, Nyahpasang}{46}{Item.47}%
+\contentsline {section}{Lima, Pengurusan Kebenaran: Anda Adalah “Bos” App}{46}{Item.47}%
+\contentsline {section}{AndroidManifest.xml}{46}{Item.50}%
+\contentsline {chapter}{Bab 5: Buat Telefon Lebih Memahami Anda — Tetapan Asas}{50}{chapter*.13}%
+\contentsline {section}{Satu, Bunyi dan GetaranSatu, Bunyi dan Getaran}{50}{section*.14}%
+\contentsline {section}{Dua, Paparan dan KecerahanDua, Paparan dan Kecerahan}{50}{section*.14}%
+\contentsline {section}{Tiga, Kertas Dinding, Tema dan Skrin UtamaTiga, Kertas Dinding, Tema dan Skrin Utama}{51}{section*.14}%
+\contentsline {section}{Empat, Tetapan Kecekapan: Jadikan Telefon sebagai “Otak Luar” AndaEmpat, Tetapan Kecekapan: Jadikan Telefon sebagai “Otak Luar” Anda}{51}{section*.14}%
+\contentsline {section}{Lima, Fungsi Pembantu dan Aksesibiliti: Kuasa Teknologi untuk KebaikanLima, Fungsi Pembantu dan Aksesibiliti: Kuasa Teknologi untuk Kebaikan}{53}{section*.14}%
+\contentsline {chapter}{Bab 6: Lindungi Kehidupan Digital Anda — Keselamatan \& Privasi}{59}{chapter*.15}%
+\contentsline {section}{Satu, Kunci Skrin: Garis Pertahanan Fizikal PertamaSatu, Kunci Skrin: Garis Pertahanan Fizikal Pertama}{59}{section*.16}%
+\contentsline {section}{Dua, “Cari Telefon Saya”: Alat Anti-Kecurian MuktamadDua, “Cari Telefon Saya”: Alat Anti-Kecurian Muktamad}{60}{Item.76}%
+\contentsline {section}{Tiga, Kemas Kini Sistem: Tampal Tampalan, Tutup KelemahanTiga, Kemas Kini Sistem: Tampal Tampalan, Tutup Kelemahan}{60}{Item.76}%
+\contentsline {section}{Empat, Mengenalpasti dan Mencegah Penipuan TelekomunikasiEmpat, Mengenalpasti dan Mencegah Penipuan Telekomunikasi}{60}{Item.76}%
+\contentsline {section}{Lima, Menentang “Pembukaan Kotak” dan Serangan Kejuruteraan Sosial: Putuskan Rantai Kebocoran PrivasiLima, Menentang “Pembukaan Kotak” dan Serangan Kejuruteraan Sosial: Putuskan Rantai Kebocoran Privasi}{62}{Item.76}%
+\contentsline {section}{Enam, Perlindungan Privasi: Data Anda Adalah Harta AndaEnam, Perlindungan Privasi: Data Anda Adalah Harta Anda}{63}{Item.76}%
+\contentsline {section}{Tujuh, Senarai “Pertolongan Cemas” Selepas Kehilangan / KecurianTujuh, Senarai “Pertolongan Cemas” Selepas Kehilangan / Kecurian}{64}{Item.76}%
+\contentsline {section}{Lapan, Keselamatan Kad SIM dan eSIMLapan, Keselamatan Kad SIM dan eSIM}{65}{Item.82}%
+\contentsline {chapter}{Bab 7: Analisis Lengkap Fungsi Terkini}{66}{chapter*.17}%
+\contentsline {section}{Satu, Komunikasi Satelit: Meminta Bantuan Walaupun Tanpa Isyarat}{66}{section*.18}%
+\contentsline {section}{Dua, Komunikasi Tanpa Rangkaian: Kaedah Komunikasi Baharu Jarak Dekat}{67}{Item.89}%
+\contentsline {section}{Tiga, Pengesanan Kemalangan Jalan Raya: Menyelamatkan Nyawa Pada Saat Kritikal}{68}{Item.89}%
+\contentsline {section}{Empat, Teknologi SparkLink: Sambungan Wayarles Generasi Seterusnya}{68}{Item.92}%
+\contentsline {part}{2. Bahagian Perisian (Bab 8-14)}{72}{part*.19}%
+\contentsline {chapter}{Bab 8: Komunikasi: SMS, Telefon dan Sosial}{72}{chapter*.20}%
+\contentsline {section}{Fungsi Lanjutan Aplikasi Telefon}{72}{section*.21}%
+\contentsline {section}{SMS dan iMessage/RCS}{75}{section*.21}%
+\contentsline {section}{WeChat/QQ: Pengurusan Aplikasi Sosial Peringkat Nasional}{76}{section*.21}%
+\contentsline {section}{Perbandingan Panggilan Video}{78}{Item.100}%
+\contentsline {section}{E-mel: Pemasangan dan Penggunaan pada Telefon}{80}{Item.100}%
+\contentsline {chapter}{Bab 9: Pejabat \& Pembelajaran Bergerak}{82}{chapter*.22}%
+\contentsline {section}{Pemprosesan dokumen: Edit \& cipta di telapak tangan}{82}{section*.23}%
+\contentsline {section}{Apl Nota: Daripada catatan ringkas ke sistem pengetahuan}{83}{section*.23}%
+\contentsline {section}{Imbasan \& OCR: Masukkan dunia kertas ke dalam telefon}{83}{section*.23}%
+\contentsline {section}{Cara pilih storan awan: tiada yang terbaik, hanya yang paling sesuai untuk anda}{84}{section*.23}%
+\contentsline {section}{Senario pejabat bergerak yang sebenar}{85}{section*.23}%
+\contentsline {chapter}{Bab 10: Pembayaran Bergerak \& Perkhidmatan Hidup}{86}{chapter*.24}%
+\contentsline {section}{Bank akan hantar SMS kod pengesahan ke nombor telefon yang anda daftarkan. Isi, tetapkan satu kata laluan pembayaran 6 digit.}{86}{section*.25}%
+\contentsline {section}{jangan sekali-kali tangkap skrin dan hantar kepada sesiapa}{86}{Item.122}%
+\contentsline {section}{: Alipay dan WeChat ada fungsi “Kunci Keselamatan”. Selepas diaktifkan, masuk ke halaman “Dompet” App perlukan pengesahan identiti tambahan. Laluan: Alipay Saya Tetapan Akaun \& Keselamatan Pusat Keselamatan Kunci Keselamatan.}{87}{Item.122}%
+\contentsline {section}{Kod menaiki Alipay/WeChat}{87}{Item.122}%
+\contentsline {section}{: Kedai yang sama di Meituan dan Ele.me selalunya harga dan promosi berbeza. Sebelum pes tengok kedua-dua belah, kadang-kadang boleh jimat beberapa yuan. Tambahan pula, fungsi “Pin Hao Fan” Meituan, pesan bersama kawan, harga boleh jauh lebih murah.}{88}{Item.122}%
+\contentsline {section}{Query keselamatan sosial}{88}{Item.122}%
+\contentsline {chapter}{Bab 11: Fotografi \& Pengurusan Gambar}{90}{chapter*.26}%
+\contentsline {section}{Adakah anda juga buat kesilapan ini?}{90}{section*.27}%
+\contentsline {section}{Beberapa tip kecil yang terus tingkatkan kadar kejayaan gambar}{91}{section*.27}%
+\contentsline {section}{Mod Potret \& mod Profesional}{91}{section*.27}%
+\contentsline {section}{Editing gambar: Jangan berlebihan, secukupnya sudah memadai}{92}{section*.27}%
+\contentsline {section}{Gambar terlalu banyak macam mana? Strategi penyusunan}{92}{section*.27}%
+\contentsline {section}{Tangkap skrin \& rakaman skrin}{93}{section*.27}%
+\contentsline {section}{Bab 11 Lampiran: Pengetahuan Teknik Pengimejan Profesional}{93}{Item.131}%
+\contentsline {chapter}{Bab 12: Hiburan Audio-Visual \& Pembacaan}{104}{chapter*.28}%
+\contentsline {section}{Dengar muzik: Pilih App mana, cara dengar macam mana baru selesa}{104}{section*.29}%
+\contentsline {section}{Podcast: “Rakan telinga” dalam perjalanan kerja}{105}{section*.29}%
+\contentsline {section}{Tonton video: Cara betul guna pemain dan streaming}{105}{section*.29}%
+\contentsline {section}{Pembacaan e-buku: Boleh baca buku dengan baik di telefon}{106}{section*.29}%
+\contentsline {section}{Permainan telefon: Main seronok, tak rosakkan telefon}{107}{section*.29}%
+\contentsline {chapter}{Bab 13: Cadangan Aplikasi Alat}{109}{chapter*.30}%
+\contentsline {section}{Alat Keberhasilan: Urus Masa dan Perhatian Anda}{109}{section*.31}%
+\contentsline {section}{Kesihatan dan Sukan}{112}{section*.31}%
+\contentsline {section}{Perjalanan dan Pengangkutan}{114}{section*.31}%
+\contentsline {section}{Pengenalan Alat Automasi}{116}{section*.31}%
+\contentsline {section}{Pelayar dan Enjin Carian: Pintu Masuk Maklumat Anda}{116}{section*.31}%
+\contentsline {section}{Alat Sistem Praktikal: Pembersihan, Anti-Gangguan dan Perlindungan Keselamatan}{120}{Item.147}%
+\contentsline {section}{Amaran Cuaca, Amaran Bencana Alam dan Amaran Gempa Bumi}{123}{Item.151}%
+\contentsline {section}{Kerjasama Merentas Peranti: Kawalan Jauh Komputer, Pemindahan Pantas dan Keselamatan Akaun}{127}{Item.155}%
+\contentsline {chapter}{Bab 14: Topik Khas Pengurus Kata Laluan}{133}{chapter*.32}%
+\contentsline {section}{Mengapa anda perlukan pengurus kata laluan?}{133}{section*.33}%
+\contentsline {section}{Prinsip kerja pengurus kata laluan}{133}{section*.33}%
+\contentsline {section}{III. Pengenalan prinsip penyulitan}{133}{Item.163}%
+\contentsline {section}{IV. Cadangan pengurus kata laluan utama}{135}{Item.167}%
+\contentsline {section}{V. Penilaian sebenar kekuatan kata laluan}{136}{Item.167}%
+\contentsline {section}{VI. Passkey: Login tanpa kata laluan masa depan}{138}{Item.173}%
+\contentsline {section}{VII. Kunci keselamatan perkakasan}{140}{Item.190}%
+\contentsline {section}{VIII. Perkongsian kata laluan keluarga/pasukan}{142}{Item.196}%
+\contentsline {section}{IX. Amalan terbaik pengurus kata laluan}{145}{Item.208}%
+\contentsline {part}{3. Bahagian Lanjutan (Bab 15-20)}{147}{part*.34}%
+\contentsline {chapter}{Bab 15: Sains Bateri \& Pengoptimuman Ketahanan}{147}{chapter*.35}%
+\contentsline {section}{Apakah itu Bateri? Kitaran dan Tahap Kesihatan}{147}{section*.36}%
+\contentsline {section}{Mitos Pengecasan? Cas Pantas, Cas Wayarles \& Peraturan Emas}{148}{section*.36}%
+\contentsline {section}{Aliran kerja cas pantas:}{149}{section*.36}%
+\contentsline {section}{IV. Teknologi bateri baharu: Bateri anod silikon-karbon}{152}{Item.217}%
+\contentsline {section}{V. Ini tip jimat bateri sebenar}{153}{Item.217}%
+\contentsline {chapter}{Bab 16: Sistem Akaun \& Perkhidmatan Awan}{155}{chapter*.37}%
+\contentsline {section}{Akaun telefon pintar anda, sebenarnya mengawal berapa banyak perkara?}{155}{section*.38}%
+\contentsline {section}{Tiga Perkara yang Mesti Dilakukan, Lakukan Sekarang}{156}{section*.38}%
+\contentsline {section}{iCloud: “Udara” bagi Pengguna Apple}{156}{Item.223}%
+\contentsline {section}{Penyegerakan dan Sandaran, Jangan Kelirukan}{158}{Item.223}%
+\contentsline {section}{Matriks Akaun Pengguna Android}{158}{Item.223}%
+\contentsline {section}{Perkongsian Keluarga: Manfaatkan Ahli Keluarga Juga}{159}{Item.223}%
+\contentsline {chapter}{Bab 17: Sambungan Telefon dengan Peranti Lain}{160}{chapter*.39}%
+\contentsline {section}{Android + Windows (Sambung ke Windows)}{160}{section*.40}%
+\contentsline {section}{Android TV}{161}{section*.40}%
+\contentsline {section}{Penyegerakan data kesihatan}{161}{section*.40}%
+\contentsline {section}{: Dalam perjalanan pulang pada musim panas, hidupkan penyaman udara terlebih dahulu dengan telefon pintar, masuk ke rumah sudah sejuk. Beli soket penyaman udara tambahan lebih seratus ringgit boleh merealisasikannya, tidak perlu menukar penyaman udara.}{162}{section*.40}%
+\contentsline {section}{Jenama sama ada bonus}{163}{section*.40}%
+\contentsline {section}{Apa yang boleh dilakukan}{164}{section*.40}%
+\contentsline {section}{Kamera rumah pintar, beli yang bermerek dan disulitkan, jangan beli jenama murahan puluhan ringgit. Terlalu banyak berita tentang kamera digodam dan disiarkan secara langsung.}{165}{section*.40}%
+\contentsline {chapter}{Bab 18: Sandaran Data \& Pemindahan}{167}{chapter*.41}%
+\contentsline {section}{Disimpan di pelayan App, log masuk semula pada telefon pintar baru dan ada semula}{167}{section*.42}%
+\contentsline {section}{: Sambungkan telefon pintar ke komputer dengan kabel data, buka iTunes (Windows versi lama) atau Finder (Mac), dalam halaman peranti pilih “Sandar Sekarang”. Perhatikan bahawa anda perlu menanda “Sulitkan sandaran”, jika tidak kata laluan dan data kesihatan tidak akan disandarkan.}{168}{section*.42}%
+\contentsline {section}{: Aktifkan penyegerakan automatik foto iCloud/Google Foto, pada masa yang sama setiap beberapa bulan salin foto secara manual ke komputer atau cakera keras luaran. Dengan ini satu salinan di awan, satu salinan tempatan, saling menjadi sandaran.}{169}{section*.42}%
+\contentsline {section}{: Semasa mengaktifkan, letakkan telefon pintar lama di sebelahnya, “Mula Cepat” akan muncul secara automatik, imbas corak pada telefon pintar baru dengan telefon pintar lama. Semua data, tetapan, susun atur App akan dipindahkan tanpa perubahan, termasuk kata laluan Wi-Fi juga akan dibawa secara automatik. Kira-kira memerlukan 20-30 minit.}{170}{section*.42}%
+\contentsline {section}{2}{171}{section*.42}%
+\contentsline {chapter}{Bab 19: Pengesanan Kerosakan \& Penyelamatan Diri}{173}{chapter*.43}%
+\contentsline {section}{: Pergi ke Tetapan Penyimpanan lihat ruang yang tinggal. Jika kurang daripada 10\%, sistem akan menjadi sangat lengah, kerana ia berjuang untuk membebaskan ruang. Pengalaman saya: Kekalkan sekurang-kurangnya 15\%-20\% ruang yang tinggal, telefon pintar baru boleh berjalan dengan agak lancar.}{173}{section*.44}%
+\contentsline {section}{Kemas kini App}{174}{Item.242}%
+\contentsline {section}{Cuba tukar kabel dan pengecas}{174}{Item.247}%
+\contentsline {section}{“Lupakan” Wi-Fi dan sambung semula}{175}{Item.247}%
+\contentsline {section}{: Memaparkan gambar yang sama untuk masa yang lama (contohnya sentiasa menyala menatal TikTok), akan meninggalkan “bayangan” pada skrin OLED. Ini bukan skrin rosak, hanya sementara. Matikan skrin rehat setengah jam biasanya boleh pulih.}{176}{Item.251}%
+\contentsline {section}{Mula semula secara paksa}{176}{Item.251}%
+\contentsline {section}{: Periksa sama ada lubang mikrofon tersumbat — lubang kecil di bahagian bawah telefon pintar sangat mudah tersumbat oleh habuk. Bersihkan perlahan-lahan dengan berus lembut. Jangan gunakan jarum atau pic gigi untuk mencucuk keras, akan merosakkan jejaring anti-debu.}{177}{Item.251}%
+\contentsline {section}{Perkara yang mesti dilakukan sebelum menghantar pembaikan}{177}{Item.251}%
+\contentsline {section}{Bab 20: Mod Pembangun \& Kebenaran Lanjutan}{179}{Item.256}%
+\contentsline {section}{Lampiran Bab 20: Termux — Persekitaran Terminal Linux Mudah Alih pada Peranti Android}{188}{Item.269}%
+\contentsline {part}{4. Bahagian Melangkaui (Bab 21-26)}{193}{part*.45}%
+\contentsline {chapter}{Bab 21: Pendalaman Rangkaian Bergerak \& Keselamatan Maklumat}{193}{chapter*.46}%
+\contentsline {section}{VPN: “Jubah Halimunan” dalam Rangkaian}{193}{section*.47}%
+\contentsline {section}{Perangkap Manis Wi-Fi Awam — Lebih Bahaya Daripada Yang Anda Bayangkan}{194}{section*.47}%
+\contentsline {section}{Bagaimana HTTPS Melindungi Anda? — Jabat Tangan SSL/TLS}{195}{section*.47}%
+\contentsline {section}{Keselamatan DNS: Adakah “Buku Telefon Rangkaian” Anda Selamat?}{196}{Item.281}%
+\contentsline {section}{Adakah “Pelayaran Tanpa Jejak” Benar-Benar Menjadikan Anda Halimunan?}{196}{Item.281}%
+\contentsline {section}{Privasi Pelayar: Jangan Biarkan Pelayar Menjual Anda}{197}{Item.281}%
+\contentsline {section}{Senarai Keselamatan Praktikal: Lindungi Diri Anda Mulai Sekarang}{198}{Item.281}%
+\contentsline {chapter}{Bab 22: Cara AI Berfungsi dalam Telefon}{200}{chapter*.48}%
+\contentsline {section}{: Menukar gelombang suara kepada teks.}{200}{section*.49}%
+\contentsline {section}{: Memahami niat, mengekstrak entiti utama.}{200}{section*.49}%
+\contentsline {section}{Apakah Model Besar AI?}{200}{Item.294}%
+\contentsline {section}{Aplikasi model besar AI pada telefon:}{201}{Item.294}%
+\contentsline {section}{: Memesan makanan di Paris tetapi tidak tahu bahasa Perancis? App “Terjemahan” iPhone menyokong mod perbualan bersemuka dua orang, kedua-dua pihak melihat sarikata bahasa masing-masing, malah boleh mentafsir serentak. Galaxy AI Samsung di kem Android boleh membolehkan anda bercakap dalam bahasa Cina terus dalam panggilan, pihak lawan mendengar dalam bahasa Inggeris, dan sebaliknya.}{202}{Item.294}%
+\contentsline {section}{Mengapa perlukan rangka kerja?}{204}{Item.294}%
+\contentsline {section}{Tamat pengetahuan}{209}{Item.299}%
+\contentsline {chapter}{Bab 23: Pemikiran Pengaturcaraan \& Pengenalan Automasi}{212}{chapter*.50}%
+\contentsline {section}{Contohnya: Setiap pagi apabila anda bangun, anda perlu mematikan mod jangan ganggu secara manual, membuka WeChat untuk melihat mesej, membuka App cuaca untuk melihat apa yang perlu dipakai hari ini, membuka NetEase Cloud untuk memainkan lagu. Jika langkah-langkah ini dibungkus menjadi satu aliran automasi, ditetapkan “laksanakan secara automatik setiap pagi jam 7”, maka apabila anda bangun hanya perlu mengambil telefon, semuanya sudah bersedia. Bukankah sangat puas apabila memikirkannya?}{212}{section*.51}%
+\contentsline {section}{“Automasi”}{213}{Item.305}%
+\contentsline {section}{Tahap Lanjutan: Tasker — Raja Automasi Android}{214}{Item.305}%
+\contentsline {section}{Setiap kali selepas mengambil foto, sandaran automatik ke awan kemudian memampatkan foto tempatan kepada saiz kecil untuk menjimatkan ruang.}{216}{Item.305}%
+\contentsline {section}{“Automasi” Pintasan memerlukan kebenaran}{216}{Item.305}%
+\contentsline {chapter}{Lampiran Bab 23: Panduan Permulaan GitHub — Daripada Hos Kod ke Platform Kolaborasi}{219}{chapter*.52}%
+\contentsline {section}{Apakah Sebenarnya GitHub?}{219}{section*.53}%
+\contentsline {section}{Perbezaan Antara Git dan GitHub (Konsep Penting!)}{219}{section*.53}%
+\contentsline {section}{Konsep Teras dan Fungsi GitHub}{220}{section*.53}%
+\contentsline {section}{Pendaftaran dan Permulaan: Lima Minit Mencipta Repositori Pertama Anda}{222}{section*.53}%
+\contentsline {section}{Aliran Kerja Asas: Daripada Tempatan ke Awan}{223}{Item.318}%
+\contentsline {section}{Aliran Kerja Kolaborasi Pasukan: Bagaimana Pull Request Berfungsi}{223}{Item.323}%
+\contentsline {section}{Senario Aplikasi Tipikal GitHub}{224}{Item.329}%
+\contentsline {section}{Beberapa Cadangan untuk Pemula}{225}{Item.329}%
+\contentsline {section}{Ringkasan: Mengapa Setiap Orang Patut Mengenali GitHub}{226}{Item.329}%
+\contentsline {chapter}{Bab 24: Analisis Mendalam Kebenaran Root \& Kunci BL}{228}{chapter*.54}%
+\contentsline {section}{Memahami Bootloader Secara Mendalam}{228}{section*.55}%
+\contentsline {section}{Aliran Terperinci Membuka Kunci BL (Contoh Xiaomi)}{231}{Item.337}%
+\contentsline {section}{Pelbagai Skim Root}{231}{Item.341}%
+\contentsline {section}{Pengenalan Memuat Turun Sistem}{231}{Item.341}%
+\contentsline {section}{Samsung Knox: Harga tidak boleh balik buka kunci BL}{231}{Item.341}%
+\contentsline {section}{Soalan Lazim (Q\& A)}{233}{Item.341}%
+\contentsline {chapter}{Bab 25: Pemprosesan Telefon Terpakai \& Warisan Digital}{234}{chapter*.56}%
+\contentsline {section}{“Eutanasia” Telefon Lama: Panduan Jual atau Hadiah Selamat}{234}{section*.57}%
+\contentsline {section}{Warisan Digital: Bagaimana Menempatkan Jiwa Sosial Anda?}{236}{Item.346}%
+\contentsline {section}{Perjalanan Terakhir Mesra Alam}{241}{Item.357}%
+\contentsline {chapter}{Bab 26: Hadapan Teknologi Telefon Semasa}{243}{chapter*.58}%
+\contentsline {section}{Peranti Generasi Seterusnya: Bentuk Apa Ia Akan Jadi?}{243}{section*.59}%
+\contentsline {section}{“Halimunan” Telefon dan Asas Identiti Baharu}{243}{section*.59}%
+\contentsline {section}{Komunikasi satelit: Dari “gimik” flagship ke standard kelas pertengahan}{244}{section*.59}%
+\contentsline {section}{Kematangan ekosistem skrin lipat: Boleh jadi telefon utama?}{245}{section*.59}%
+\contentsline {section}{6G dan Wi-Fi 7: Kelajuan dan sempadan sambungan generasi akan datang}{246}{section*.59}%
+\contentsline {section}{Bateri anod silikon-karbon: Jangka hayat akhirnya menyambut kerja rehat tahap bahan}{246}{section*.59}%
+\contentsline {section}{Ringkasan bab: Satu ayat untuk mengingat semua ini}{247}{section*.59}%
+\contentsline {part}{V. Bahagian Praktikal (Bab 27-32)}{249}{part*.60}%
+\contentsline {chapter}{Bab 27: Ibu bapa juga boleh guna dengan mudah - Panduan lengkap penyesuaian warga emas telefon}{249}{chapter*.61}%
+\contentsline {section}{Betulkan minda dahulu: Ini bukan “warga emas tak boleh guna”, ini “telefon tak mesra warga emas”}{249}{section*.62}%
+\contentsline {section}{Langkah pertama: Aktifkan “Mod Mudah” — telefon terus lebih ringkas}{250}{section*.62}%
+\contentsline {section}{Kalau tak guna Mod Mudah, ubah manual pun boleh — “Teks besar + ikon besar” lima langkah}{251}{section*.62}%
+\contentsline {section}{Anti-penipuan — Bab ini wajib dibaca bersama warga emas}{252}{Item.376}%
+\contentsline {section}{Bantuan jarak jauh — Anda boleh baiki telefon ibu bapa walaupun jauh}{254}{Item.379}%
+\contentsline {section}{“Penyesuaian warga emas” WeChat - Beritahu warga emas beberapa ayat ini sudah cukup}{254}{Item.379}%
+\contentsline {section}{Telefon hilang macam mana? Sediakan “pelan kecemasan” untuk warga emas}{255}{Item.379}%
+\contentsline {section}{Keserasian headphone wayarles dan alat bantu pendengaran - Fungsi baik yang diabaikan}{255}{Item.382}%
+\contentsline {section}{Fungsi berkaitan kesihatan — Telefon bukan sekadar alat komunikasi}{256}{Item.382}%
+\contentsline {chapter}{Bab 28: Belanjakan dengan Bijak, Dapatkan Telefon Idaman — Panduan Membeli Telefon Ultimat}{257}{chapter*.63}%
+\contentsline {section}{Kaedah pilih telefon tiga langkah: Keperluan Bajet Model}{257}{section*.64}%
+\contentsline {section}{Cara baca spesifikasi teras — Tak perlu faham semua, lima perkara ini sudah cukup}{257}{Item.385}%
+\contentsline {section}{Cadangan mengikut bajet (berdasarkan pasaran pertengahan 2026)}{259}{Item.385}%
+\contentsline {section}{Pilih mengikut senario — Apakah keperluan anda?}{260}{Item.385}%
+\contentsline {section}{Lima perangkap mudah tersilap — Semak sebelum beli}{261}{Item.385}%
+\contentsline {section}{Bila masa paling berbaloi untuk beli?}{262}{Item.390}%
+\contentsline {section}{Cara pilih saluran — Beli di mana lebih dipercayai?}{262}{Item.390}%
+\contentsline {chapter}{Bab 29: Kesihatan Digital — Wujudkan Hubungan Sihat dengan Telefon}{264}{chapter*.65}%
+\contentsline {section}{Dahulu lihat “Masa Skrin” anda - Nombor buat orang sedar}{264}{section*.66}%
+\contentsline {section}{Tetapkan “had penggunaan” App — Pasang pengehad kelajuan untuk diri sendiri}{265}{section*.66}%
+\contentsline {section}{Guna “Mod Jangan Ganggu” dengan betul — Bukan matikan pemberitahuan, tapi matikan kebimbangan}{265}{Item.398}%
+\contentsline {section}{Jaga mata dengan tabiat, bukan App — Peraturan 20-20-20}{265}{Item.398}%
+\contentsline {section}{Panduan menyelamatkan leher “klan tunduk pada telefon”}{266}{Item.398}%
+\contentsline {section}{Tidur dan telefon — Tabiat yang paling perlu diubah dalam bilik tidur}{266}{Item.398}%
+\contentsline {section}{Kebimbangan maklumat — Belajar “buta secara selektif”}{267}{Item.398}%
+\contentsline {chapter}{Bab 30: Pantau Skrin, Pembentangan dan Sambungan Kereta}{269}{chapter*.67}%
+\contentsline {section}{Tiga kubu utama skrin wayarles — Jangan tersilap}{269}{section*.68}%
+\contentsline {section}{Skrin berkabel — Lebih stabil, kelewatan sifar}{270}{section*.68}%
+\contentsline {section}{Telefon jadi komputer — Mod Desktop}{270}{section*.68}%
+\contentsline {section}{Awan dan storan}{271}{section*.68}%
+\contentsline {section}{Praktikal skrin di bilik mesyuarat — Tak lagi kelam-kabut}{271}{section*.68}%
+\contentsline {chapter}{Bab 31: Pengenalan Penggambaran Video Pendek dan Penciptaan Kandungan}{273}{chapter*.69}%
+\contentsline {section}{Sebelum merakam, fikir dulu: Anda merakam untuk siapa?}{273}{section*.70}%
+\contentsline {section}{Tetapan asas rakaman telefon — 5 perkara wajib sebelum merakam}{273}{Item.413}%
+\contentsline {section}{Lima teknik pergerakan kamera — Jadikan imej “hidup”}{274}{Item.418}%
+\contentsline {section}{Asas penyuntingan — CapCut sudah cukup}{274}{Item.418}%
+\contentsline {section}{Kepentingan muka depan — 70\% orang putuskan tonton atau tidak hanya dari muka depan}{275}{Item.424}%
+\contentsline {section}{Tiga prinsip penciptaan kandungan}{275}{Item.424}%
+\contentsline {chapter}{Bab 32: Manual Pertolongan Cemas Keselamatan Telefon}{277}{chapter*.71}%
+\contentsline {section}{Senario Sifar: Gempa bumi / cuaca melampau - bagaimana telefon menyelamatkan nyawa anda}{277}{section*.72}%
+\contentsline {section}{Senario Satu: Telefon hilang/dicuri - 30 minit emas}{279}{Item.439}%
+\contentsline {section}{Senario Dua: Ditipu - tempoh 72 jam emas untuk bertindak}{279}{Item.448}%
+\contentsline {section}{Senario Tiga: Telefon dijangkiti virus/trojan - apa yang perlu dibuat?}{280}{Item.454}%
+\contentsline {section}{Senario Empat: Akaun diretas - rebut semula kawalan dengan cepat}{281}{Item.454}%
+\contentsline {section}{Senario Lima: Menerima mesej ugutan - jangan takut, jangan bayar}{281}{Item.460}%
+\contentsline {section}{Senario Enam: Penipuan AI tukar wajah/AI tiru suara - apa yang dilihat bukan lagi kenyataan}{282}{Item.460}%
+\contentsline {section}{Senario Tujuh: Serangan SIM swap (penculikan SIM) - nombor anda “dicuri”}{283}{Item.465}%
+\contentsline {part}{6. Bahagian Prospek dan Kenderaan Berhubung (Bab 33-34)}{288}{part*.73}%
+\contentsline {chapter}{Bab 33: Pandangan Hadapan — Perjalanan Seterusnya Telefon}{288}{chapter*.74}%
+\contentsline {section}{AR/VR dan pengkomputeran spatial: “Meja kerja kedua” di luar telefon}{288}{section*.75}%
+\contentsline {section}{Antara muka otak-komputer: Fikiran menjadi medium interaksi}{288}{section*.75}%
+\contentsline {section}{“Samaran” telefon dan asas identiti baharu}{289}{section*.75}%
+\contentsline {section}{Refleksi etika: Masihkah kita tuan kepada telefon?}{289}{section*.75}%
+\contentsline {section}{Kekal bersambung, kekal berdikari — Falsafah hidup digital anda}{290}{section*.75}%
+\contentsline {chapter}{Bab 34: Panduan Mendalam Sambungan Kereta — Integrasi Telefon dan Automobil}{291}{chapter*.76}%
+\contentsline {section}{Tiga laluan utama sambungan kereta}{291}{section*.77}%
+\contentsline {section}{Perbandingan CarPlay / Android Auto / HiCar}{291}{section*.77}%
+\contentsline {section}{Kabin HarmonyOS: Peralihan lancar telefon dan unit kabin}{292}{section*.77}%
+\contentsline {section}{Sistem kabin pembuat kereta baharu}{293}{section*.77}%
+\contentsline {section}{Telefon sebagai unit kabin — Boleh guna ke?}{293}{section*.77}%
+\contentsline {section}{Petua praktikal}{294}{section*.77}%
+\contentsline {part}{Topik kanak-kanak dan telefon (Bab 35)}{297}{part*.78}%
+\contentsline {chapter}{Bab 35: Kanak-kanak dan Telefon — Panduan Pendidikan Era Digital}{297}{chapter*.79}%
+\contentsline {section}{Umur berapa patut beri telefon kepada anak?}{297}{section*.80}%
+\contentsline {section}{Panduan lengkap kawalan ibu bapa}{298}{section*.80}%
+\contentsline {section}{Mod remaja}{301}{section*.80}%
+\contentsline {section}{Pendidikan literasi internet}{301}{section*.80}%
+\contentsline {section}{Tabiat penggunaan sihat}{302}{section*.80}%
+\contentsline {section}{Warisan digital dan kanak-kanak}{303}{section*.80}%
+\contentsline {chapter}{Bab 36: Telefon dan rumah pintar - menjadikan rumah anda pintar}{305}{chapter*.81}%
+\contentsline {section}{Protokol rumah pintar: pilihan anda sangat penting}{305}{section*.82}%
+\contentsline {section}{Perbandingan tiga ekosistem utama}{306}{section*.82}%
+\contentsline {section}{Telefon sebagai hab rumah}{307}{section*.82}%
+\contentsline {section}{Cadangan set permulaan}{308}{section*.82}%
+\contentsline {section}{Perkara keselamatan yang perlu diberi perhatian}{308}{section*.82}%
+\contentsline {part}{7. Bahagian Amali Pengekodan AI (Bab 37-47)}{311}{part*.83}%
+\contentsline {chapter}{Bab 37: Revolusi paradigma - daripada “menulis kod” kepada “mengarah AI menulis kod”}{311}{chapter*.84}%
+\contentsline {section}{Kelahiran Vibe Coding: gerakan yang dicetuskan oleh satu ayat}{311}{section*.85}%
+\contentsline {section}{Keadaan 2026: era Agentic Engineering}{312}{section*.85}%
+\contentsline {section}{Peralihan pemahaman teras: daripada Coder kepada Conductor}{313}{Item.496}%
+\contentsline {section}{Mengapa metodologi lebih penting daripada alat}{314}{Item.496}%
+\contentsline {chapter}{Bab 38: Lima prinsip pemikiran pengaturcaraan AI}{316}{chapter*.86}%
+\contentsline {section}{Prinsip satu: Think Before Coding (berfikir dahulu, kemudian mengekod)}{316}{section*.87}%
+\contentsline {section}{Prinsip dua: Simplicity First (utamakan kesederhanaan)}{317}{Item.499}%
+\contentsline {section}{Prinsip tiga: Surgical Changes (pindaan yang tepat)}{318}{Item.499}%
+\contentsline {section}{Prinsip empat: Goal-Driven Execution (pelaksanaan didorong matlamat)}{319}{lstnumber.-2.1}%
+\contentsline {section}{Prinsip lima: Iterate and Verify (iterasi dan pengesahan)}{320}{lstnumber.-2.1}%
+\contentsline {section}{Harness Engineering: Agent = Model + Harness}{321}{lstnumber.-2.1}%
+\contentsline {chapter}{Bab 39: Kejuruteraan konteks - membuat AI memahami niat anda}{323}{chapter*.88}%
+\contentsline {section}{Fail ingatan projek: “ingatan jangka panjang” AI}{323}{section*.89}%
+\contentsline {section}{Pembangunan didorong spesifikasi (SDD)}{324}{lstnumber.-3.24}%
+\contentsline {section}{Pengurusan tetingkap konteks}{325}{Item.504}%
+\contentsline {section}{Perkara Penting Amalan Kejuruteraan Konteks}{326}{Item.504}%
+\contentsline {chapter}{Bab 40: Kejuruteraan Keperluan — Mengubah Idea Menjadi Arahan yang Boleh Dilaksanakan oleh AI}{328}{chapter*.90}%
+\contentsline {section}{Daripada Idea Kabur kepada Keperluan Berstruktur}{328}{section*.91}%
+\contentsline {section}{Seni Pelapisan Pemecahan Keperluan}{329}{section*.91}%
+\contentsline {section}{Templat dan Amalan Penulisan PRD}{330}{Item.513}%
+\contentsline {section}{Praktik: Proses Lengkap daripada Idea kepada Pelan}{331}{lstnumber.-4.29}%
+\contentsline {chapter}{Bab 41: Panorama Alat Pengaturcaraan AI 2026}{334}{chapter*.92}%
+\contentsline {section}{Tiga Aliran Besar dan Kerangka Pemilihan}{334}{section*.93}%
+\contentsline {section}{Aliran AI Terbina dalam IDE}{335}{section*.93}%
+\contentsline {section}{Aliran Agent Terminal}{336}{section*.93}%
+\contentsline {section}{Aliran Builder Awan}{337}{section*.93}%
+\contentsline {section}{Alat Berubah, Metodologi Tidak Berubah}{337}{section*.93}%
+\contentsline {chapter}{Bab 42: Panorama Model Bahasa Besar dan Praktik API}{339}{chapter*.94}%
+\contentsline {section}{Model Bahasa Besar Antarabangsa Utama: Landskap Tiga Kuasa}{339}{section*.95}%
+\contentsline {section}{Model Bahasa Besar Buatan China Utama: Pelbagai Jenis Berkembang}{342}{section*.95}%
+\contentsline {section}{Kerangka Keputusan Pemilihan Model}{346}{section*.95}%
+\contentsline {section}{Asas Panggilan API: Menyambungkan Model Bahasa Besar dari Sifar}{347}{section*.95}%
+\contentsline {section}{Panduan Membeli Token Plan}{350}{lstnumber.-8.14}%
+\contentsline {section}{Amalan praktikal: menyepadukan API model besar ke dalam projek}{355}{Item.522}%
+\contentsline {chapter}{Bab 43: Kejuruteraan Perbualan — Teknik Berbual untuk Kerjasama Cekap dengan AI}{358}{chapter*.96}%
+\contentsline {section}{Strategi lapisan Prompt}{358}{section*.97}%
+\contentsline {section}{Perbualan penyahpepijatan: cara menerangkan ralat supaya AI cepat mengenal pasti}{359}{section*.97}%
+\contentsline {section}{Strategi iterasi: langkah kecil pantas vs refaktor besar-besaran}{360}{lstnumber.-11.1}%
+\contentsline {section}{Pengurusan konteks bagi perbualan berbilang giliran}{361}{lstnumber.-11.1}%
+\contentsline {chapter}{Bab 44: Amalan dari 0 ke 1 — Aliran Kerja Lengkap Sesuatu Projek}{363}{chapter*.98}%
+\contentsline {section}{Projek satu: laman alat peribadi minimalis (peringkat permulaan)}{363}{section*.99}%
+\contentsline {section}{Projek dua: sistem catatan kewangan full-stack (peringkat pertengahan)}{364}{lstnumber.-12.13}%
+\contentsline {section}{Projek tiga: aplikasi dipertingkat AI (peringkat lanjutan)}{366}{lstnumber.-14.18}%
+\contentsline {section}{Senarai semak aliran kerja amalan sejagat}{367}{lstnumber.-14.18}%
+\contentsline {chapter}{Bab 45: Jaminan Kualiti — Menjadikan Kod AI Boleh Dipercayai}{369}{chapter*.100}%
+\contentsline {section}{Dipandu ujian: minta AI menulis ujian}{369}{section*.101}%
+\contentsline {section}{Teknik semakan kod}{370}{lstnumber.-15.14}%
+\contentsline {section}{Kawalan versi: peranan Git dalam pengaturcaraan AI}{371}{lstnumber.-15.14}%
+\contentsline {section}{Perangkap biasa dan panduan mengelaknya}{371}{Item.530}%
+\contentsline {chapter}{Bab 46: Jalan Lanjutan — Daripada Pengguna kepada Arkitek}{374}{chapter*.102}%
+\contentsline {section}{Protokol MCP dan pengembangan alat}{374}{section*.103}%
+\contentsline {section}{Aliran kerja tersuai dan Skills}{374}{section*.103}%
+\contentsline {section}{Mod kerjasama berbilang Agent}{375}{section*.103}%
+\contentsline {section}{Laluan pembelajaran berterusan}{375}{section*.103}%
+\contentsline {chapter}{Bab 47: Buku Rujukan Pantas dan Sumber}{377}{chapter*.104}%
+\contentsline {section}{Kad rujukan pantas prinsip pemikiran}{377}{section*.105}%
+\contentsline {section}{Pokok keputusan pemilihan alat}{378}{section*.105}%
+\contentsline {section}{Soalan lazim (FAQ)}{378}{section*.105}%
+\contentsline {section}{Sumber pembelajaran yang disyorkan}{379}{section*.105}%
+\contentsline {section}{Penutup: alat di tangan, metodologi di hati}{380}{section*.105}%
+\contentsline {section}{Rujukan}{381}{section*.105}%
+\contentsline {part}{8. Bahagian Amali Pembangunan Android (Bab 48-58)}{383}{part*.106}%
+\contentsline {chapter}{Bab 48: Mengenali Android — Daripada Sistem Operasi kepada Ekosistem Pembangunan}{383}{chapter*.107}%
+\contentsline {section}{Asal usul Android: daripada “robot kecil” kepada “sistem terbesar di dunia”}{383}{section*.108}%
+\contentsline {section}{Menulis dengan bahasa apa: Java atau Kotlin?}{384}{section*.108}%
+\contentsline {section}{Bagaimana sebuah App dilahirkan?}{385}{lstnumber.-17.6}%
+\contentsline {section}{Gambaran menyeluruh teknologi Android: “senarai senjata” anda}{386}{lstnumber.-17.6}%
+\contentsline {section}{Android vs iOS: “pelajaran memilih pihak” pertama bagi pembangun}{387}{lstnumber.-17.6}%
+\contentsline {chapter}{Bab 49: Membina Persekitaran Pembangunan — Android Studio dan Projek Pertama}{389}{chapter*.109}%
+\contentsline {section}{Memasang Android Studio}{389}{section*.110}%
+\contentsline {section}{Mencipta Projek Pertama Anda}{390}{Item.542}%
+\contentsline {section}{Menjalankannya: Emulator dan Peranti Sebenar}{390}{Item.542}%
+\contentsline {section}{Membongkar Struktur Projek: Apa Fungsi Setiap Fail}{391}{Item.546}%
+\contentsline {section}{Uji Kemahiran: Gantikan 'Hello' dengan Nama Anda}{392}{Item.546}%
+\contentsline {section}{Pertolongan Cemas Ralat Biasa: 'Bilik Kecemasan' Dua Minggu Pertama Pemula}{392}{lstnumber.-18.8}%
+\contentsline {chapter}{Bab 50: Panduan Pantas Kotlin — Bahasa Pertama Pembangunan Android}{395}{chapter*.111}%
+\contentsline {section}{Pemboleh Ubah dan Jenis: Memberi Nama kepada Data}{395}{section*.112}%
+\contentsline {section}{Fungsi: Membungkus Logik Menjadi 'Butang'}{396}{lstnumber.-19.8}%
+\contentsline {section}{Syarat dan Gelung: Membuat Program 'Berfikir'}{396}{lstnumber.-20.10}%
+\contentsline {section}{Keselamatan Null: 'Penyelamat Nyawa' Kotlin}{397}{lstnumber.-21.21}%
+\contentsline {section}{Kelas dan Objek: Acuan Pembuat 'Komponen'}{398}{lstnumber.-22.10}%
+\contentsline {section}{Lambda dan Fungsi Peringkat Tinggi: 'Gula Sintaks' Kotlin}{398}{lstnumber.-23.13}%
+\contentsline {section}{Kad Rujukan Pantas Tatabahasa untuk Pemula}{399}{lstnumber.-24.11}%
+\contentsline {chapter}{Bab 51: Pembangunan Antara Muka — Pengenalan kepada Jetpack Compose}{401}{chapter*.113}%
+\contentsline {section}{Pemikiran Compose: Antara Muka Ialah Fungsi}{401}{section*.114}%
+\contentsline {section}{Komponen Asas: Teks, Butang, Kotak Input, Imej}{402}{lstnumber.-25.16}%
+\contentsline {section}{Set Tiga Susun Atur: Column, Row, Box}{402}{lstnumber.-26.15}%
+\contentsline {section}{Keadaan: Menghidupkan Antara Muka}{403}{lstnumber.-28.9}%
+\contentsline {section}{Tema dan Mod Gelap: Konfigurasi Sekali, Berkuat Kuasa Global}{404}{lstnumber.-29.12}%
+\contentsline {section}{Pratonton, Animasi dan Sunting Langsung: 'Kuasa Tambahan' Compose}{405}{Item.549}%
+\contentsline {chapter}{Bab 52: Empat Komponen dan Kitaran Hayat Activity}{407}{chapter*.115}%
+\contentsline {section}{Empat Komponen: 'Tiang Seri' Android}{407}{section*.116}%
+\contentsline {section}{Kitaran Hayat Activity: 'Peta Harta Karun' Pertama Pembangunan Android}{408}{section*.116}%
+\contentsline {section}{Intent: 'Tiket Perjalanan' Masuk Keluar Aplikasi}{409}{section*.116}%
+\contentsline {section}{Berbilang Halaman dan Navigasi}{409}{lstnumber.-31.8}%
+\contentsline {section}{Sambil Membiasa Diri: Apa Itu Fragment (dan Kenapa Buku Ini Tidak Mengajarnya)}{410}{lstnumber.-32.13}%
+\contentsline {chapter}{Bab 53: Penyimpanan Data dan Permintaan Rangkaian}{411}{chapter*.117}%
+\contentsline {section}{Macam Mana Memilih Penyelesaian Penyimpanan: Lihat Jadual Ini Dahulu}{411}{section*.118}%
+\contentsline {section}{DataStore: Menyimpan Sedikit Konfigurasi Kecil}{412}{section*.118}%
+\contentsline {section}{Room: Memberi Data 'Rumah Sebenar'}{412}{lstnumber.-33.12}%
+\contentsline {section}{Retrofit: Berbual dengan Pelayan}{413}{lstnumber.-34.31}%
+\contentsline {section}{Penghuraian JSON: 'Menterjemah' Data Rangkaian}{414}{lstnumber.-35.15}%
+\contentsline {section}{Korutin: 'Bahasa Perantaraan' Keserentakan Android}{415}{lstnumber.-36.10}%
+\contentsline {section}{Korutin: 'Bahasa Perantaraan' Keserentakan Android}{415}{lstnumber.-36.10}%
+\contentsline {chapter}{Bab 54: Projek Satu — Buku Perakaunan Saya (Versi Tempatan)}{417}{chapter*.119}%
+\contentsline {section}{Pemikiran Keperluan: Tanya Lima Soalan Dahulu}{417}{section*.120}%
+\contentsline {section}{Lapisan Data: Memberi 'Rekod' Sebuah Rumah}{418}{section*.120}%
+\contentsline {section}{MVVM: Antara Muka dan Logik Diasingkan}{419}{lstnumber.-39.17}%
+\contentsline {section}{Antara Muka: Halaman Senarai + Halaman Input}{419}{lstnumber.-40.18}%
+\contentsline {section}{Sunting dan Padam: Buat Data 'Boleh Masuk Boleh Keluar'}{420}{lstnumber.-41.31}%
+\contentsline {section}{Penerimaan: Semakan Tiga Lapis + Dua Cabaran Lanjutan}{421}{lstnumber.-42.9}%
+\contentsline {section}{Penerimaan: Semakan Tiga Lapis + Dua Cabaran Lanjutan}{421}{lstnumber.-42.9}%
+\contentsline {chapter}{Bab 55: Projek Dua — Aplikasi Semakan Cuaca (Versi Rangkaian)}{423}{chapter*.121}%
+\contentsline {section}{Memohon API Cuaca Percuma}{423}{section*.122}%
+\contentsline {section}{Lapisan Rangkaian: Retrofit + Penghuraian JSON}{423}{Item.554}%
+\contentsline {section}{Tiga Keadaan Antara Muka: Memuatkan / Berjaya / Gagal}{424}{lstnumber.-43.18}%
+\contentsline {section}{Kod Antara Muka Amali: Melukis Cuaca}{425}{lstnumber.-44.24}%
+\contentsline {section}{Butiran Antara Muka dan Interaksi}{426}{lstnumber.-45.25}%
+\contentsline {section}{Butiran Antara Muka dan Interaksi}{426}{lstnumber.-45.25}%
+\contentsline {chapter}{Bab 56: Pengilatan dan Penerbitan — Ujian, Penyahpepijatan dan Penerbitan di Google Play}{428}{chapter*.123}%
+\contentsline {section}{Tiga Senjata Penyahpepijatan: Logcat, Breakpoint, Pemeriksa UI}{428}{section*.124}%
+\contentsline {section}{Ujian: beri 'insurans' kepada kod anda}{429}{section*.124}%
+\contentsline {section}{Tandatangan dan bungkusan: 'cop rasmi' untuk aplikasi anda}{430}{lstnumber.-46.19}%
+\contentsline {section}{Proses penuh menerbitkan di Google Play}{430}{Item.557}%
+\contentsline {section}{Cara menyediakan bahan kedai: tanggapan pertama menentukan muat turun}{431}{Item.557}%
+\contentsline {section}{Senarai semak pengoptimuman prestasi dan laporan ranapan}{432}{Item.557}%
+\contentsline {chapter}{Bab 57: Jalan ke hadapan — kebenaran, pemberitahuan dan seni bina moden}{434}{chapter*.125}%
+\contentsline {section}{Kebenaran masa jalan: ketuk pintu dahulu, kemudian masuk}{434}{section*.126}%
+\contentsline {section}{Pemberitahuan: katakan perkara berguna pada masa yang tepat}{435}{lstnumber.-47.16}%
+\contentsline {section}{Seni bina lanjutan: suntikan kebergantungan dan modularisasi}{436}{lstnumber.-48.21}%
+\contentsline {section}{Cara baharu pada 2026: pembangunan Android dibantu AI}{436}{lstnumber.-48.21}%
+\contentsline {section}{Pengoptimuman prestasi dan alat debug Compose}{437}{lstnumber.-48.21}%
+\contentsline {chapter}{Bab 58: Manual rujukan pantas dan sumber}{439}{chapter*.127}%
+\contentsline {section}{Kad rujukan pantas kod biasa}{439}{section*.128}%
+\contentsline {section}{Soalan lazim (FAQ)}{440}{section*.128}%
+\contentsline {section}{Sumber pembelajaran disyorkan}{441}{section*.128}%
+\contentsline {section}{Rujukan pantas arahan Gradle biasa}{441}{section*.128}%
+\contentsline {section}{Penutup: daripada aplikasi pertama ke aplikasi ke-N}{442}{section*.128}%
+\contentsline {section}{Penutup: daripada aplikasi pertama ke aplikasi ke-N}{442}{section*.128}%
+\contentsline {section}{Rujukan}{443}{section*.128}%
+\contentsline {part}{9. Bahagian Amali Pembangunan iOS (Bab 59-69)}{445}{part*.129}%
+\contentsline {chapter}{Bab 59: Mengenali iOS — ekosistem Apple dan ekosistem pembangunan}{445}{chapter*.130}%
+\contentsline {section}{Asal usul iOS: sebuah telefon mengubah satu industri}{445}{section*.131}%
+\contentsline {section}{Taman berdinding: “peraturan” dan “dividen” ekosistem Apple}{446}{section*.131}%
+\contentsline {section}{Bahasa apa yang digunakan: Objective-C atau Swift?}{447}{section*.131}%
+\contentsline {section}{Bagaimana sebuah aplikasi dilahirkan?}{447}{lstnumber.-50.1}%
+\contentsline {section}{Gambaran penuh tindanan teknologi iOS: “senarai senjata” anda}{448}{lstnumber.-50.1}%
+\contentsline {chapter}{Bab 60: Menyiapkan persekitaran pembangunan — Xcode dan projek pertama}{450}{chapter*.132}%
+\contentsline {section}{Sediakan sebuah Mac}{450}{section*.133}%
+\contentsline {section}{Memasang Xcode}{451}{section*.133}%
+\contentsline {section}{Mencipta projek pertama anda}{451}{Item.570}%
+\contentsline {section}{Mengurai struktur projek: apa fungsi setiap fail}{452}{Item.570}%
+\contentsline {section}{Debug pada peranti sebenar: memasang aplikasi ke dalam iPhone anda}{452}{Item.570}%
+\contentsline {section}{Petua kecekapan Xcode: lima “senjata rahsia pintasan” pemula}{452}{Item.570}%
+\contentsline {section}{Debug pada peranti sebenar: memasang aplikasi ke dalam iPhone anda}{453}{Item.570}%
+\contentsline {section}{Ujian kemahiran pertama + pertolongan cemas ralat biasa}{454}{Item.574}%
+\contentsline {section}{Ujian kemahiran pertama + pertolongan cemas ralat biasa}{454}{Item.574}%
+\contentsline {chapter}{Bab 61: Pengenalan pantas Swift — bahasa utama pembangunan Apple}{455}{chapter*.134}%
+\contentsline {section}{Pemboleh ubah dan jenis: memberi nama kepada data}{455}{section*.135}%
+\contentsline {section}{Optional: “azimat anti-ranap” Swift}{456}{lstnumber.-51.10}%
+\contentsline {section}{Fungsi dan penutupan (closure): membungkus logik menjadi “butang”}{457}{lstnumber.-52.15}%
+\contentsline {section}{Struct dan protokol: sistem “Lego” Swift}{457}{lstnumber.-53.13}%
+\contentsline {section}{Kad rujukan pantas tatabahasa untuk yang tiada asas}{458}{lstnumber.-54.16}%
+\contentsline {chapter}{Bab 62: Pembangunan Antara Muka — Pengenalan SwiftUI}{460}{chapter*.136}%
+\contentsline {section}{Falsafah SwiftUI: deklaratif, bukan imperatif}{460}{section*.137}%
+\contentsline {section}{View asas: teks, butang, medan input, imej}{461}{lstnumber.-55.15}%
+\contentsline {section}{Tiga alat susun atur: VStack, HStack, ZStack}{461}{lstnumber.-55.15}%
+\contentsline {section}{Negeri (state) dan pengikatan: membuat antara muka 'hidup'}{462}{lstnumber.-56.14}%
+\contentsline {section}{Pratonton, tema dan animasi: 'tambahan luar' SwiftUI}{463}{lstnumber.-58.9}%
+\contentsline {section}{Rujukan pantas modifier lazim: satu halaman dalam tangan, antara muka tak jadi masalah}{464}{lstnumber.-59.16}%
+\contentsline {chapter}{Bab 63: View, Negeri (State) dan Navigasi}{466}{chapter*.138}%
+\contentsline {section}{Peta menyeluruh aliran data pengurusan state}{466}{section*.139}%
+\contentsline {section}{NavigationStack: 'tindanan' lompatan halaman}{467}{lstnumber.-60.19}%
+\contentsline {section}{Pop timbul dan tab bawah: sheet dan TabView}{468}{lstnumber.-61.24}%
+\contentsline {section}{List: senarai paling popular di iOS}{469}{lstnumber.-62.24}%
+\contentsline {section}{Kitaran hayat aplikasi: hadapan dan latar belakang}{469}{lstnumber.-63.14}%
+\contentsline {chapter}{Bab 64: Penyimpanan Data dan Permintaan Rangkaian}{471}{chapter*.140}%
+\contentsline {section}{Cara memilih kaedah penyimpanan: lihat jadual ini dahulu}{471}{section*.141}%
+\contentsline {section}{UserDefaults: simpan tetapan kecil}{472}{section*.141}%
+\contentsline {section}{SwiftData: berikan data 'rumah sebenar'}{472}{lstnumber.-65.10}%
+\contentsline {section}{Codable: 'menerjemahkan' JSON}{473}{lstnumber.-66.46}%
+\contentsline {section}{URLSession + async/await: berbual dengan pelayan}{474}{lstnumber.-67.14}%
+\contentsline {section}{Ralat rangkaian juga perlu 'dikelaskan': jangan campak semua ralat kepada pengguna}{475}{lstnumber.-68.19}%
+\contentsline {chapter}{Bab 65: Projek 1 — Buku Rekod Perbelanjaan Saya (Versi Tempatan)}{477}{chapter*.142}%
+\contentsline {section}{Pemikiran keperluan: tanya lima soalan dahulu}{477}{section*.143}%
+\contentsline {section}{Lapisan data: berikan 'rekod' sebuah rumah}{477}{section*.143}%
+\contentsline {section}{MVVM: antara muka dan logik 'berpisah'}{478}{lstnumber.-70.18}%
+\contentsline {section}{Antara muka: halaman senarai + pop timbul kemasukan}{479}{lstnumber.-71.30}%
+\contentsline {section}{Sunting, padam dan rumusan}{480}{lstnumber.-72.31}%
+\contentsline {section}{Penerimaan: tiga lapis semakan + dua cabaran lanjutan}{481}{lstnumber.-73.13}%
+\contentsline {chapter}{Bab 66: Projek 2 — App Carian Cuaca (Versi Rangkaian)}{483}{chapter*.144}%
+\contentsline {section}{Memohon API cuaca percuma}{483}{section*.145}%
+\contentsline {section}{Lapisan rangkaian: URLSession + Codable}{484}{Item.579}%
+\contentsline {section}{Tiga state antara muka: memuatkan / berjaya / gagal}{484}{lstnumber.-74.24}%
+\contentsline {section}{Kod antara muka praktikal: memaparkan cuaca}{485}{lstnumber.-75.28}%
+\contentsline {section}{Butiran interaksi dan bandar kegemaran}{486}{lstnumber.-76.20}%
+\contentsline {section}{Cara menyahpepiat permintaan rangkaian: cetakan, pemeriksaan paket dan simulasi rangkaian perlahan}{486}{lstnumber.-76.20}%
+\contentsline {chapter}{Bab 67: Penggilapan dan Penerbitan — Pengujian, Penyahpepijatan dan Muat Naik ke App Store}{488}{chapter*.146}%
+\contentsline {section}{Tiga senjata penyahpepijatan: print, titik sekatan, pratonton}{488}{section*.147}%
+\contentsline {section}{Pengujian: memberikan insurans kepada kod}{489}{section*.147}%
+\contentsline {section}{Pemeteraian dan pembungkusan: mencap 'cop' pada App}{490}{lstnumber.-77.20}%
+\contentsline {section}{Proses penuh muat naik ke App Store}{490}{lstnumber.-77.20}%
+\contentsline {section}{Cara membuat bahan kedai: tanggapan pertama menentukan muat turun}{491}{lstnumber.-77.20}%
+\contentsline {section}{Senarai ringkas pelaporan ranap dan pengoptimuman prestasi}{491}{lstnumber.-77.20}%
+\contentsline {chapter}{Bab 68: Jalan Lanjutan — Keizinan, Pemberitahuan dan Seni Bina Moden}{493}{chapter*.148}%
+\contentsline {section}{Keizinan: ketuk pintu dahulu, barulah masuk}{493}{section*.149}%
+\contentsline {section}{Pemberitahuan: menyampaikan perkara berguna pada masa yang betul}{494}{lstnumber.-78.21}%
+\contentsline {section}{Seni bina lanjutan: pendalaman MVVM dan kebolehujian}{495}{lstnumber.-79.26}%
+\contentsline {section}{Cara baharu 2026: pembangunan iOS dibantu AI}{495}{lstnumber.-79.26}%
+\contentsline {section}{Perkara penting keserentakan Swift: @MainActor dan Task}{496}{lstnumber.-79.26}%
+\contentsline {chapter}{Bab 69: Buku Rujukan Pantas dan Sumber}{498}{chapter*.150}%
+\contentsline {section}{Kad rujukan pantas kod lazim}{498}{section*.151}%
+\contentsline {section}{Soalan lazim FAQ}{499}{section*.151}%
+\contentsline {section}{Rujukan Pantas Pintasan Xcode yang Kerap Digunakan}{500}{section*.151}%
+\contentsline {section}{Sumber Pembelajaran yang Disyorkan}{501}{section*.151}%
+\contentsline {section}{Sumber Pembelajaran yang Disyorkan}{501}{section*.151}%
+\contentsline {section}{Penutup: Daripada App Pertama ke App ke-N}{501}{section*.151}%
+\contentsline {section}{Rujukan}{502}{section*.151}%
+\contentsline {chapter}{Lampiran A: Proses Unboxing Telefon Baru – Panduan “Peringkat Pengasuh”}{504}{appendix*.153}%
+\contentsline {section}{“Tiga Langkah” Pemeriksaan Unboxing:}{504}{section*.154}%
+\contentsline {section}{Peringatan Penting Pengaktifan \& Tetapan Awal:}{504}{section*.154}%
+\contentsline {section}{Pasang App – “Keselamatan Diutamakan”:}{504}{section*.154}%
+\contentsline {chapter}{Lampiran B: Rujukan Latihan Amali}{506}{appendix*.155}%
+\contentsline {chapter}{Lampiran C: Jadual Istilah Ringkas “Istilah Sandi”}{508}{appendix*.156}%
+\contentsline {chapter}{Lampiran D: Cari Sumber Dipercayai Di Mana?}{509}{appendix*.157}%
+\contentsline {section}{Sokongan rasmi adalah pilihan utama:}{509}{section*.158}%
+\contentsline {section}{Laman sesawang dan blogger praktikal:}{509}{section*.158}%
+\contentsline {section}{Senarai semak keselamatan satu ayat:}{509}{section*.158}%
+\contentsline {chapter}{Lampiran E: Ucapan Terima Kasih dan Penjelasan}{511}{appendix*.159}%
+\contentsline {section}{Poin Kemas Kini Versi 1.6}{511}{section*.160}%
+\contentsline {section}{Poin Kemas Kini Versi 1.7}{512}{section*.160}%
+\contentsline {section}{Poin Kemas Kini Versi 1.8}{514}{section*.160}%
+\contentsline {section}{Tambahan kandungan: Perisian praktikal dan sekatan gangguan}{514}{section*.160}%
+\contentsline {section}{Tambahan kandungan: Amaran cuaca / amaran bencana alam / amaran gempa bumi}{515}{section*.160}%
+\contentsline {section}{Tambahan kandungan: Kerjasama merentas peranti dan alat kecekapan}{515}{section*.160}%
+\contentsline {chapter}{Lampiran F: Topik Khas Pembelian \& Penggunaan Skrin Lipat}{516}{appendix*.161}%
+\contentsline {section}{Sampai mana perkembangan telefon skrin lipat sekarang?}{516}{section*.162}%
+\contentsline {section}{Siapa sesuai membeli telefon skrin lipat?}{517}{section*.162}%
+\contentsline {section}{Perkara utama memilih: Lihat 6 indikator ini}{517}{Item.601}%
+\contentsline {section}{Tip penggunaan khas skrin lipat}{518}{Item.606}%
+\contentsline {section}{Penjagaan: Biar skrin lipat tahan lebih lama}{520}{Item.606}%
+\contentsline {section}{“Perangkap” skrin lipat dan jangkaan realistik}{520}{Item.606}%
+\contentsline {section}{Cara pilih jenama utama (2026)}{521}{Item.606}%
+\contentsline {chapter}{Penutup: Kekal Ingin Tahu, Kekal Berwaspada}{523}{appendix*.163}%
+\contentsline {chapter}{Lampiran G: Indeks Rujukan Pantas Seluruh Buku}{524}{appendix*.164}%
+\contentsline {chapter}{Lampiran H: Peta Jalan Versi}{528}{appendix*.165}%

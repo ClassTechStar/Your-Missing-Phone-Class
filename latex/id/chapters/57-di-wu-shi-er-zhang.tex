@@ -1,0 +1,129 @@
+\bookchapter{Bab 52: Empat Komponen Utama dan Siklus Hidup Activity}
+
+\chapterintro{Kalau Compose adalah 'wajah' aplikasi, bab ini membahas 'kerangka'-nya. Android punya empat komponen dasar; semua aplikasi tersusun daripadanya. Dan yang terpenting, Activity memiliki 'peta siklus hidup' yang wajib terpatri di kepala setiap pengembang Android. Selesai bab ini, kamu bisa memahami teka-teki abadi seperti 'kenapa setelah pindah ke latar belakang lalu kembali, state aplikasiku hilang'.}
+
+\booksection{Empat Komponen Utama: 'Tiang Utama' Android}
+
+Android secara resmi mendefinisikan empat komponen dasar, masing-masing bertanggung jawab atas satu jenis pekerjaan:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Komponen} & \textbf{Tugasnya} & \textbf{Ibaratnya} \tabularnewline
+\hline
+Activity & Satu antarmuka yang terlihat & Etalase toko—bisa dilihat dan bisa diajak berinteraksi oleh pengguna \tabularnewline
+Service & 'Orang tak terlihat' yang bekerja di belakang layar & Pekerja gudang—memutar musik, mengunduh berkas, tanpa perlu antarmuka \tabularnewline
+BroadcastReceiver & Menerima siaran sistem & Ruang penjaga—'pengeras suara' yang meneriakkan 'baterai mau habis', 'jaringan putus' \tabularnewline
+ContentProvider & Berbagi data antar aplikasi & Lemari arsip umum—misalnya membagikan kontak ke aplikasi lain \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Sekilas empat komponen utama Android\end{center}
+
+Di fase pemula, 95\% waktumu berkutat dengan Activity; Service dan BroadcastReceiver dipakai saat memutar musik atau mengirim push notification; ContentProvider paling jarang dipakai (data yang umum sudah dibungkus rapi oleh sistem). Catatan lagi: keempat komponen utama wajib 'mendaftar' di AndroidManifest.xml; kalau tidak terdaftar, sistem tidak akan menemukannya.
+
+\booksection{Siklus Hidup Activity: 'Peta Harta Karun' Pertama Pengembangan Android}
+
+Aplikasi di ponsel kapan pun bisa terinterupsi: ada telepon masuk, pengguna berpindah ke WeChat untuk membalas pesan, sistem kehabisan memori lalu menutupmu... Seumur hidup Activity adalah berkeliling di peta ini:
+
+onCreate (lahir: inisialisasi)
+
+onStart (sudah terlihat)
+
+onResume (aktif di depan)
+
+onPause (sebagian tertutup)
+
+onStop (tidak terlihat sama sekali)
+
+onDestroy (dimusnahkan)
+
+onRestart / onStart / onResume: kembali ke depan lewat jalur yang sama
+
+\begin{center}\small\color{gray}Gambar 4: Siklus hidup Activity (arah maju: baris atas lahir baris bawah pergi; saat kembali, lewat jalur yang sama secara terbalik)\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Callback} & \textbf{Kapan Dipicu} & \textbf{Kegunaan Tipikal} \tabularnewline
+\hline
+onCreate & Saat Activity dibuat (sekali) & Memuat antarmuka, inisialisasi data \tabularnewline
+onStart & Antarmuka menjadi terlihat & Memulai beberapa logika ringan \tabularnewline
+onResume & Mendapat fokus, bisa berinteraksi & Memulai animasi, melanjutkan pemutaran \tabularnewline
+onPause & Saat tertutup sebagian/berpindah & Menghentikan animasi, menyimpan draf \tabularnewline
+onStop & Sama sekali tidak terlihat & Melepas sumber daya berat, menghentikan unduhan \tabularnewline
+onDestroy & Sebelum dihancurkan & Pembersihan terakhir \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kegunaan tipikal enam callback siklus hidup\end{center}
+
+\textbf{Awas Jebakan: Memutar Layar Akan 'Membunuh' Activity}\par
+
+Adegan gagal paling klasik pemula: layar diputar, teks di kolom input hilang semua. Penyebabnya: memutar layar secara bawaan akan menghancurkan lalu membangun ulang Activity (melewati onDestroy onCreate). Solusinya: pakai rememberSaveable untuk menyimpan state (pengganti remember di Compose), ia otomatis mengembalikan nilai saat dibangun ulang. Bab 6 dan 7 akan sering memakainya.
+
+\booksection{Intent: 'Tiket' Perjalanan di Dalam dan Luar Aplikasi}
+
+Intent (niat) adalah 'tiket' komunikasi antar komponen. Ingin berpindah dari satu halaman ke halaman lain, membuka peramban, atau memanggil kamera? Semuanya harus 'beli tiket dulu naik kereta':
+
+\begin{lstlisting}[language=Kotlin]
+// Cara satu: Intent eksplisit—tentukan halaman tujuan secara jelas
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", "Zhang San")     // Seperti menitipkan "barang bawaan" di kendaraan (data)
+startActivity(intent)
+
+// Cara dua: Intent implisit—cukup bilang mau apa, sistem carikan pelakunya
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // Sistem akan membuka browser/atau meminta Anda memilih
+\end{lstlisting}
+
+Kedua cara masing-masing punya gunanya: eksplisit untuk perpindahan halaman di dalam aplikasi sendiri; implisit untuk memanggil kemampuan sistem atau aplikasi lain (membuka web, menelepon, berbagi). Di proyek Compose, ambil Context dengan LocalContext.current di dalam Composable, lalu bisa startActivity.
+
+\booksection{Multi-Halaman dan Navigasi}
+
+Aplikasi nyata pasti punya banyak halaman. Solusi navigasi yang direkomendasikan resmi untuk Compose adalah Navigation Compose (pustaka dependensi androidx.navigation):
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "Tidak diketahui")
+    }
+}
+
+// Berpindah halaman di dalam halaman:
+navController.navigate("detail/Zhang San")     // dengan parameter
+navController.popBackStack()              // kembali ke halaman sebelumnya
+\end{lstlisting}
+
+\begin{tcbinfo}{Tips: Kalau Halamannya Makin Banyak, Bagaimana?}
+Saat proyek membesar, kumpulkan semua rute halaman dalam satu berkas (misalnya AppNavGraph.kt) agar terkelola rapi; jangan biarkan logika 'pergi ke mana' tersebar di tiap halaman. Ini langkah pertama dari 'bisa jalan' menuju 'mudah dirawat'.
+
+\end{tcbinfo}
+
+\booksection{Sekalian Kenalan: Apa Itu Fragment (dan Kenapa Buku Ini Tidak Mengajarkannya)}
+
+Saat membaca tutorial lama kamu pasti bertemu Fragment—'potongan antarmuka yang bisa dipakai ulang' di dalam Activity, pemeran utama mutlak di arsitektur multi-halaman lama. Tetapi di era Compose, halaman cukup memakai fungsi Composable + rute Navigation, dan secara resmi posisi Fragment pun sudah dikurangi. Karena itu buku ini tidak memasukkannya ke jalur utama.
+
+Saran untukmu: pada proyek baru jangan aktif-aktif memakai Fragment; tapi saat membaca kode lama atau ditanya saat wawancara, cukup tahu bahwa ia 'potongan antarmuka yang tertanam di dalam Activity'. Sumber belajar selalu prioritaskan yang terbit 2023 ke atas—'almanak lama' tumpukan teknologi Android ternyata lebih cepat kedaluwarsa dari yang dikira.
+
+\begin{tcbpractice}{Praktik: Memberi 'Ingatan' pada Penghitung}
+Ubah penghitung dari Bab 51: (1) ganti remember dengan rememberSaveable, putar layar dan pastikan angkanya masih ada; (2) tambahkan tombol 'Tentang', pakai Navigation untuk melompat ke halaman kedua yang menampilkan nomor versi; (3) cetak log di onCreate/onPause kedua halaman (Log.d), amati urutan pemanggilan siklus hidup lewat Logcat. Setelah tiga langkah ini, siklus hidup tidak lagi sekadar teori di atas kertas.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Empat komponen utama: Activity (etalase), Service (belakang layar), BroadcastReceiver (pengeras suara), ContentProvider (lemari arsip)
+  \item Enam callback siklus hidup: onCreate onStart onResume onPause onStop onDestroy
+  \item Memutar layar menghancurkan lalu membangun ulang Activity: pakai rememberSaveable untuk menyelamatkan state
+  \item Intent adalah 'tiket': eksplisit untuk melompat ke halaman sendiri, implisit untuk memanggil kemampuan sistem
+  \item Multi-halaman pakai Navigation Compose: rute NavHost + composable
+\end{itemize}
+
+\end{tcbsummary}

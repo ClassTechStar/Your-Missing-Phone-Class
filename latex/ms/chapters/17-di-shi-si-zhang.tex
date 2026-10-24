@@ -1,0 +1,393 @@
+\bookchapter{Bab 14: Topik Khas Pengurus Kata Laluan}
+
+\chapterintro{2. Prinsip kerja pengurus kata laluan}
+
+\booksection{Mengapa anda perlukan pengurus kata laluan?}
+
+: Semua kata laluan disimpan selepas disulitkan kuat, hanya anda boleh nyahsulit.
+
+Kata laluan utama
+
+\booksection{Prinsip kerja pengurus kata laluan}
+
+\begin{enumerate}
+  \item \textbf{Isi automatik}: Pada antara muka log masuk laman web atau App, pengurus kata laluan automatik isi kata laluan akaun.
+  \item \textbf{Jana kata laluan}: Boleh jana kata laluan rawak, kompleks, tingkatkan keselamatan.
+  \item \textbf{3. Cadangan pengurus kata laluan utama}Terbina dalam sistem:
+  \item \textbf{iCloud Keychain}: Pilihan utama pengguna ekosistem Apple. Integrasi tanpa jurang dengan Safari, App, percuma, selamat. Kekurangannya penggunaan merentas platform tak senang.
+\end{enumerate}
+
+\booksection{III. Pengenalan prinsip penyulitan}
+
+Fahami prinsip penyulitan pengurus kata laluan, boleh bantu anda tentukan sama ada pembekal perkhidmatan boleh dipercayai. Berikut dalam bahasa mudah terangkan beberapa konsep teras.
+
+\booksubsection{Penyulitan AES-256}
+
+AES (Advanced Encryption Standard) adalah algoritma penyulitan simetri yang diiktiraf oleh NIST (Institut Standard dan Teknologi Kebangsaan AS), digunakan secara meluas oleh bank, tentera, kerajaan. “256” merujuk panjang kunci 256 bit — secara teori perlu masa melebihi umur alam semesta untuk pecah secara paksa. Pengurus kata laluan utama (1Password, Bitwarden, KeePass dll) semua guna AES-256 untuk menyulitkan perpustakaan kata laluan anda.
+
+\booksubsection{Senibina pengetahuan sifar (Zero-Knowledge Architecture)}
+
+“Pengetahuan sifar” bukan bermakna pembekal perkhidmatan tidak simpan apa-apa, tetapi bermakna\textbf{Penyulitan dan penyahsulitan semua dilakukan pada peranti tempatan anda, pelayan hanya simpan teks tersulit}. Aliran khusus:
+
+\begin{enumerate}
+  \item Anda masukkan kata laluan utama pada klien.
+  \item Klien guna kata laluan utama terbit kunci penyulitan (langkah ini selesai pada telefon/komputer anda).
+  \item Hanya teks tersulit sahaja dimuat naik ke pelayan.
+  \item Log masuk seterusnya, pelayan hantar teks tersulit, klien guna kata laluan utama penyahsulit semula.
+\end{enumerate}
+
+Perkara utama:\textbf{Kata laluan utama tidak pernah meninggalkan peranti anda}, pelayan juga tiada. Jadi walaupun pembekal dihack, hacker dapat hanya teks tersulit yang tidak boleh disahsulit — kecuali mereka boleh teka kata laluan utama anda.
+
+\begin{tcbinfo}{Mengapa "pengetahuan sifar" bermakna pembekal juga tidak nampak kata laluan anda?}
+Kerana kunci penyahsulit diterbitkan dari kata laluan utama anda, manakala kata laluan utama hanya wujud dalam fikiran anda, hanya diguna pada peranti tempatan. Pelayan pembekal tiada kata laluan utama, tiada kunci penyahsulit, hanya teks tersulit. Inilah sebabnya Bitwarden, 1Password dll pembekal sah semuanya nyatakan “kami juga tidak boleh nampak kata laluan anda” — bukan mereka tidak mahu nampak, tetapi secara teknikal tidak boleh.
+
+\end{tcbinfo}
+
+\booksubsection{Fungsi terbitan kunci: PBKDF2 dan Argon2}
+
+Kata laluan utama tidak boleh diguna terus sebagai kunci penyulitan — ia perlu melalui “fungsi terbitan kunci”. Fungsi ini bertujuan\textbf{Sengaja buat pengiraan perlahan}, buat kos pecah paksa hacker terlalu tinggi untuk praktikal.
+
+\begin{itemize}
+  \item \textbf{PBKDF2}: Standard lama, diguna secara meluas oleh iCloud Keychain, Bitwarden, LastPass dll. Melalui iterasi berulang (biasanya 100,000 kali ke atas) hash untuk melambatkan pecah.
+  \item \textbf{Argon2}: Juara pertandingan hash kata laluan 2015, lebih moden daripada PBKDF2. Selain "penggunaan kuasa pengiraan" juga perkenalkan "penggunaan memori" — buat GPU/ASIC dll perkakasan khas juga susah pecah. Bitwarden, KeePassXC dll telah menyokong.
+\end{itemize}
+
+Bilangan iterasi lebih tinggi lebih selamat, tetapi kelajuan buka kunci juga lebih perlahan. Pembekal sah akan umumkan algoritma terbitan dan bilangan iterasi, untuk audit komuniti keselamatan.
+
+\booksubsection{Amaran kes: Kebocoran data LastPass 2022}
+
+Ogos 2022, pengurus kata laluan lama LastPass umumkan persekitaran pembangunannya diceroboh; November tahun sama mendedahkan, hacker ambil sandaran perpustakaan kata laluan pengguna (teks tersulit). Pengajaran utama:
+
+\begin{itemize}
+  \item \textbf{Senibina pengetahuan sifar pertahankan garis asas}: Kerana perpustakaan kata laluan itu sendiri tersulit, hacker dapat teks tersulit tetapi tidak boleh nyahsulit — syaratnya kata laluan utama pengguna cukup kuat.
+  \item \textbf{Pengguna kata laluan utama lemah paling bahaya}: Hacker boleh pecah paksa luar talian kata laluan utama lemah, jadi pengguna kata laluan utama lemah atau berulang menghadapi risiko sebenar.
+  \item \textbf{Metadata juga bocor}: Walaupun kandungan kata laluan tersulit, tetapi URL laman, nota dll metadata mungkin tidak tersulit, akan dedahkan perkhidmatan mana pengguna guna.
+\end{itemize}
+
+\begin{tcbwarn}{Belajaran dari LastPass}
+Pertama, kata laluan utama mesti panjang dan unik (disyorkan 16 karakter ke atas, termasuk huruf besar/kecil, nombor, simbol); Kedua, utamakan pembekal yang menyokong Argon2id, bilangan iterasi tinggi; Ketiga, akaun nilai tinggi (bank, e-mel) mesti aktifkan pengesahan kedua berasingan, jangan hanya bergantung pengurus kata laluan.
+
+\end{tcbwarn}
+
+\booksection{IV. Cadangan pengurus kata laluan utama}
+
+\booksubsection{: Senang untuk pengguna Android. Integrasi dengan Chrome, sistem Android, percuma.}
+
+\begin{itemize}
+  \item \textbf{Huawei Password Vault}: Terbina dalam sistem HarmonyOS, sesuai untuk pengguna Huawei.
+  \item \textbf{Alat profesional pihak ketiga:}Bitwarden
+  \item \textbf{: Sumber terbuka percuma, fungsi kuat, menyokong semua platform. Sangat dicadangkan untuk pengguna yang mengutamakan privasi.}1Password
+\end{itemize}
+
+\booksubsection{: Antara muka cantik, fungsi kaya, sesuai untuk keluarga dan team. Berbayar.}
+
+\begin{itemize}
+  \item \textbf{LastPass}: Pengurus kata laluan lama, fungsi versi percuma terhad.
+  \item \textbf{KeePass}: Storan tempatan sepenuhnya, sumber terbuka percuma. Sesuai untuk pengguna geek.
+  \item \textbf{4. Amalan terbaik penggunaan pengurus kata laluan}Tetapkan kata laluan utama yang kuat
+  \item \textbf{: Kata laluan utama adalah garis pertahanan terakhir, pastikan tetapkan kata laluan yang panjang dan kompleks, dan ingat baik.}Aktifkan pengesahan dua faktor
+\end{itemize}
+
+\booksection{V. Penilaian sebenar kekuatan kata laluan}
+
+Pengurus kata laluan biasanya papar bar penunjuk “kekuatan kata laluan” (merah/kuning/hijau), tetapi penilaian ini selalunya hanya lihat panjang dan jenis aksara, tidak komprehensif. Untuk betul-betul tentukan kata laluan selamat atau tidak, perlu pertimbang “entropi” dan “sama ada telah bocor”.
+
+\booksubsection{Entropi (Entropy): Ukuran saintifik kekuatan kata laluan}
+
+“Entropi” ukur ketidakpastian kata laluan, unit adalah bit. Entropi lebih tinggi, bilangan percubaan pecah paksa lebih banyak.
+
+\begin{itemize}
+  \item \textbf{"123456"}: Entropi sangat rendah, pecah serta-merta.
+  \item \textbf{"P@ssw0rd"}: Nampak kompleks, tetapi muncul dalam semua senarai serangan kamus, entropi masih rendah.
+  \item \textbf{"correct horse battery staple"}: Empat perkataan rawak, entropi kira-kira 44 bit, kesukaran pecah jauh melebihi "P@ssw0rd".
+  \item \textbf{16 aksara rawak (huruf besar+kecil+nombor+simbol)}: Entropi kira-kira 100 bit, kuasa pengiraan semasa tidak boleh pecah paksa.
+\end{itemize}
+
+Kesimpulan:\textbf{“Panjang + rawak” lebih penting daripada “simbol kompleks”}. Inilah sebab kata laluan panjang rawak yang dijana pengurus kata laluan benar-benar selamat.
+
+\booksubsection{HaveIBeenPwned: Semak kata laluan anda sama ada telah bocor}
+
+Diselenggara oleh penyelidik keselamatan Troy Hunt\href{https://haveibeenpwned.com}{haveibeenpwned.com}Mengandungi akaun dan kata laluan yang bocor dalam kebocoran data besar lepas. Anda boleh:
+
+\begin{enumerate}
+  \item Masukkan e-mel, semak akaun anda sama ada terdedah dalam kebocoran tertentu.
+  \item Guna fungsi Pwned Passwords semak kata laluan sama ada dalam pangkalan data bocor diketahui (pengurus kata laluan dan browser telah terbina dalam pertanyaan ini).
+\end{enumerate}
+
+Jika kata laluan muncul dalam pangkalan data bocor,\textbf{tidak kira nampak betapa kompleks mesti tukar serta-merta}— kerana serangan kamus akan utamakan kata laluan diketahui ini.
+
+\begin{tcbinfo}{Prinsip pertanyaan k-Anonimiti}
+Bimbang masukkan kata laluan di HaveIBeenPwned akan bocor lagi? Jangan bimbang. Pertanyaan moden guna protokol “k-anonimiti”: browser hanya hantar 5 bit pertama hash kata laluan ke pelayan, pelayan pulangkan senarai hash bermula dengan 5 bit ini, banding secara tempatan. Maksudnya, pelayan tidak pernah nampak hash kata laluan penuh anda. 1Password, Bitwarden “pengesanan kata laluan bocor” semua berfungsi seperti ini.
+
+\end{tcbinfo}
+
+\booksubsection{Fungsi pemantauan terbina dalam pengurus kata laluan}
+
+\begin{itemize}
+  \item \textbf{1Password Watchtower}: Pantau real-time kata laluan lemah, berulang, bocor, luput, laman tidak guna 2FA, dan papar secara gred merah/orange/kuning.
+  \item \textbf{Bitwarden Vault Health}: Versi percuma boleh lihat kata laluan lemah, berulang; versi berbayar boleh kesan kata laluan bocor (berdasarkan HaveIBeenPwned).
+  \item \textbf{Cadangan keselamatan iCloud Keychain}: iOS Tetapan Kata Laluan Cadangan Keselamatan, akan maklum anda kata laluan mana muncul dalam kebocoran diketahui, mana berulang guna.
+  \item \textbf{Alat semak kata laluan Google Password Manager}: Terbina dalam Chrome, boleh sekali semak kata laluan bocor, lemah, berulang.
+\end{itemize}
+
+\begin{tcbpractice}{Sekarang semak: Adakah kata laluan anda selamat}
+\begin{enumerate}
+  \item Buka haveibeenpwned.com, masukkan e-mel biasa anda, lihat muncul dalam kebocoran mana.
+  \item Pengguna iPhone: Tetapan Kata Laluan Cadangan Keselamatan, proses amaran merah satu demi satu.
+  \item Pengguna Chrome: Tetapan Kata Laluan Semak Kata Laluan, ikut arahan ubah.
+  \item Pengguna 1Password/Bitwarden: Buka Watchtower/Health Reports, utamakan proses "bocor" dan "berulang".
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{VI. Passkey: Login tanpa kata laluan masa depan}
+
+2024-2026, teknologi kata laluan sedang mengalami revolusi —\textbf{Passkey (kunci laluan)}berpotensi ganti sepenuhnya kata laluan tradisional. Apple, Google, Microsoft tiga platform utama bersama dorong, disokong oleh FIDO Alliance dan W3C, ini perubahan cara login terbesar dalam beberapa dekad.
+
+\booksubsection{Apakah Passkey?}
+
+Passkey berasaskan standard FIDO2 / WebAuthn, guna\textbf{Pasangan kunci pada peranti}ganti kata laluan. Prinsip boleh dipermudahkan:
+
+\begin{itemize}
+  \item Telefon anda jana sepasang kunci:\textbf{Kunci awam}(daftar ke laman web) +\textbf{Kunci peribadi}(sentiasa dalam cip keselamatan peranti anda).
+  \item Apabila log masuk, laman web hantar "cabaran", telefon anda guna kunci peribadi tandatangan, kemudian laman web guna kunci awam sahkan.
+  \item Sebelum tandatangan perlu anda lalui pengecaman biometrik (Face ID / cap jari) atau PIN peranti sahkan identiti.
+  \item Sepanjang proses,\textbf{tiada apa-apa kata laluan dihantar dalam rangkaian}.
+\end{itemize}
+
+\booksubsection{Passkey vs kata laluan tradisional}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimensi} & \textbf{Kata laluan tradisional} & \textbf{Passkey} \tabularnewline
+\hline
+Anti pancingan & Lemah, laman pancingan boleh curi kata laluan & Semula jadi anti pancingan, kunci peribadi hanya tandatangan untuk domain sebenar \tabularnewline
+Kesan kebocoran pelayan & Hash kata laluan mungkin dipecah & Pelayan hanya simpan kunci awam, bocor tiada kesan \tabularnewline
+Kemudahan & Perlu ingat/taip/urus & Face ID/cap jari log masuk satu saat \tabularnewline
+Serangan ulangan & Mungkin ditangkap middleman ulang & Setiap tandatangan sekali guna, tidak boleh ulang \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Status sokongan setiap platform}
+
+\begin{itemize}
+  \item \textbf{Apple iCloud Keychain Passkey}: iOS 16+ / macOS Ventura+ sokong native, Passkey boleh segerak antara semua peranti log masuk Apple ID sama, peranti baharu log masuk laman tidak perlu cipta semula.
+  \item \textbf{Google Password Manager Passkey}: Android + Chrome sokong native, Passkey disimpan dalam akaun Google, segerak merentas peranti Android; sejak 2023 akaun peribadi Google telah menyokong login Passkey.
+  \item \textbf{Microsoft}: Windows 11 / Edge telah menyokong Passkey; akaun Microsoft, Outlook, Office dll perkhidmatan beransur buka login Passkey, dan boleh urus dalam Microsoft Authenticator.
+  \item \textbf{1Password / Bitwarden}: Telah menyokong cipta, simpan, segerak merentas platform Passkey, buat anda tidak terhad satu ekosistem.
+\end{itemize}
+
+\begin{tcbinfo}{Segerak merentas peranti adalah pencapaian utama}
+Masalah terbesar Passkey awal adalah “terikat satu peranti” — tukar telefon perlu cipta semula. Sejak 2023 Apple, Google, Microsoft capai segerak awan Passkey: iCloud Keychain segerak merentas Apple, Google Password Manager segerak merentas Android. 1Password dll pihak ketiga pula hubungkan segerak merentas ekosistem. Ini bermakna Passkey telah ada kepraktikal untuk ganti kata laluan.
+
+\end{tcbinfo}
+
+\booksubsection{Cara cipta dan guna Passkey pada telefon}
+
+\textbf{Laluan iOS (iPhone):}
+
+\begin{enumerate}
+  \item Pada laman sokong Passkey (seperti Google, Microsoft, Amazon, eBay, PayPal) halaman keselamatan akaun pilih "Tambah Passkey".
+  \item Sistem popup Face ID / Touch ID pengesahan, selepas lulus Passkey auto dijana dan disimpan ke iCloud Keychain.
+  \item Log masuk seterusnya laman ini, masukkan nama pengguna kemudian pilih "Guna iPhone log masuk", Face ID sekali imbas selesai.
+  \item Pintu pengurusan: Tetapan Kata Laluan cari laman berkenaan, nampak item Passkey.
+\end{enumerate}
+
+\textbf{Laluan Android:}
+
+\begin{enumerate}
+  \item Pada laman sokong Passkey halaman keselamatan akaun pilih "Tambah Passkey".
+  \item Google Password Manager popup pilih akaun Google anda kunci skrin pengesahan (cap jari/pola/PIN).
+  \item Passkey auto disimpan ke Google Password Manager, segerak merentas peranti Android akaun sama.
+  \item Log masuk seterusnya, pilih "Guna Passkey", kunci skrin buka sekali selesai.
+  \item Pintu pengurusan: Android Tetapan Kata laluan, kunci dan auto-isi Password Manager google.com.
+\end{enumerate}
+
+\booksubsection{Login Passkey merentas peranti}
+
+Jika anda log masuk laman yang hanya ada Passkey di iPhone pada komputer Windows, boleh imbas kod sahkan:
+
+\begin{enumerate}
+  \item Halaman log masuk laman pilih "Guna Passkey".
+  \item Pilih "Guna peranti lain".
+  \item Komputer papar kod QR, guna iPhone imbas.
+  \item iPhone popup Face ID pengesahan, sahkan selepas laman selesai log masuk pada komputer.
+\end{enumerate}
+
+Proses ini melalui komunikasi penyulitan dwi Bluetooth+Internet, kunci peribadi Passkey tidak akan meninggalkan iPhone anda.
+
+\begin{tcbpractice}{Cuba sekarang: Alami login tanpa kata laluan}
+\begin{enumerate}
+  \item Log masuk akaun Google Keselamatan Passkey Tambah Passkey, alami Face ID/cap jari log masuk.
+  \item Log masuk akaun Microsoft Keselamatan Pilihan keselamatan lanjutan Tambah Passkey.
+  \item Pada Taobao, JD, eBay, PayPal dll perkhidmatan yang telah sokong Passkey cuba baharu.
+  \item Kekalkan kata laluan tradisional sebagai sandaran, beransur pindah akaun nilai tinggi ke Passkey.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbwarn}{Cadangan peralihan}
+Passkey belum ganti sepenuhnya kata laluan — banyak laman masih dalam fasa “Passkey + kata laluan” wujud serentak. Cadangan: akaun nilai tinggi utamakan aktifkan Passkey, tetapi\textbf{jangan terus padam kata laluan tradisional}, kekal sebagai sandaran; pada masa yang sama terus guna pengurus kata laluan, kerana tidak semua laman sokong Passkey. Anggap Passkey sebagai “tambahan kuat pengurus kata laluan” bukan “ganti serta-merta”.
+
+\end{tcbwarn}
+
+\booksection{VII. Kunci keselamatan perkakasan}
+
+Jika keperluan keselamatan anda lebih tinggi daripada pengguna biasa — contoh pegang jumlah besar cryptocurrency, adalah eksekutif/wartulis/aktivis, atau lindungi akaun teras entreprise — kunci keselamatan perkakasan adalah pilihan lebih boleh dipercayai daripada SMS pengesahan.
+
+\booksubsection{Apakah kunci keselamatan perkakasan?}
+
+Kunci perkakasan adalah peranti fizikal (rupa flash drive), cip keselamatan dalaman simpan kunci peribadi anda, perlu sentuhan fizikal atau NFC untuk selesai pengesahan. Produk wakil:
+
+\begin{itemize}
+  \item \textbf{YubiKey}(Syarikat Yubico): Paling utama, sokong FIDO2/WebAuthn, U2F, OTP, PIV, OpenPGF, USB-C / USB-A / NFC pelbagai interface. Siri 5 \$50-70.
+  \item \textbf{Google Titan}: Keluaran Google, USB-C + NFC / Bluetooth, kira-kira \$30-40.
+  \item \textbf{OnlyKey}: Alternatif sumber terbuka, sokong pelbagai protokol.
+  \item \textbf{Alternatif domestik}: Seperti Feitian ePasskey, harga lebih berpatutan.
+\end{itemize}
+
+\booksubsection{Mengapa kunci perkakasan lebih selamat daripada SMS pengesahan?}
+
+\begin{itemize}
+  \item \textbf{Anti pancingan}: Sama seperti Passkey, kunci perkakasan hanya respons kepada domain sebenar, laman pancingan tidak boleh tipu kod pengesahan.
+  \item \textbf{Anti culik SIM}: SMS pengesahan boleh ditangkap melalui serangan SIM-swap, kunci perkakasan tidak perlu nombor telefon.
+  \item \textbf{Anti middleman}: Protokol FIDO2 setiap tandatangan mengandungi nilai cabaran, tidak boleh ulang.
+  \item \textbf{Pemisahan fizikal}: Kunci peribadi sentiasa dalam cip perkakasan, malware walaupun ceroboh komputer anda juga tidak boleh baca.
+\end{itemize}
+
+\booksubsection{Senario sesuai}
+
+\begin{itemize}
+  \item Akaun bursa cryptocurrency, pemulihan dompet.
+  \item SSO entreprise, VPN kerja jauh, SSH log masuk pelayan.
+  \item E-mel, GitHub, media sosial dll "akaun utama" — sekali ceroboh boleh reset semua akaun lain.
+  \item Wartawan, peguam, eksekutif dll orang sensitif tinggi.
+\end{itemize}
+
+\booksubsection{Cara konfigur kunci perkakasan sebagai pengesahan kedua}
+
+Contoh akaun Google + YubiKey:
+
+\begin{enumerate}
+  \item Beli YubiKey (disyorkan beli dua sekali, satu harian, satu sandaran, simpan di lokasi berbeza).
+  \item Log masuk myaccount.google.com Keselamatan Pengesahan dua langkah.
+  \item Pilih "Tambah kunci keselamatan" Masukkan YubiKey ke port USB-C atau dekatkan NFC telefon.
+  \item Ikut arahan sentuh titik logam YubiKey selesai pendaftaran.
+  \item Disyorkan daftar kunci sandaran kedua.
+  \item Dalam tetapan "pengesahan dua langkah", tetapkan kunci perkakasan sebagai kaedah pengesahan utama, SMS pengesahan sebagai sandaran.
+\end{enumerate}
+
+Laman utama yang menyokong: Google, GitHub, Microsoft, Apple ID, Facebook, Twitter, Dropbox, GitLab, AWS, Coinbase, Binance dll.
+
+\begin{tcbinfo}{Strategi dwi-kunci}
+Risiko terbesar kunci perkakasan adalah “hilang”. Cadangan: (2) serentak daftar dua kunci berbeza; (3) satu bawa (keychain), satu simpan di rumah dalam safe atau bank deposit box; (4) sesetengah laman benarkan “kod pemulihan sandaran” dicetak simpan luar talian. Ini jika kunci utama hilang, juga tidak akan dikunci keluar akaun secara kekal.
+
+\end{tcbinfo}
+
+\begin{tcbwarn}{Saluran pembelian perlu berhati-hati}
+Mesti beli dari kedai rasmi atau ejen sah, jangan beli kunci terpakai atau sumber tidak diketahui — secara teori perkakasan yang telah diprapasang mungkin telah ditanam pintu belakang. Firmware YubiKey tidak boleh dikemas kini selepas kilang, tetapi Yubico akan terus tolak pengumuman keselamatan, ikut laman web rasmi mereka.
+
+\end{tcbwarn}
+
+\booksection{VIII. Perkongsian kata laluan keluarga/pasukan}
+
+Dalam senario keluarga, Netflix, WiFi rumah, router backend, kunci pintar perlu berkongsi keluarga; senario pasukan, pelayan, pangkalan data, akaun media sosial perlu kerjasama berbilang orang.\textbf{Hantar kata laluan melalui WeChat, tulis dalam dokumen kongsi adalah amalan berisiko tinggi}— sekali rekod sembang atau kebenaran dokumen bocor, kata laluan bocor.
+
+\booksubsection{“Vault kongsi” 1Password}
+
+1Password adalah produk contoh perkongsian keluarga dan pasukan. Mekanisme terasnya adalah\textbf{Berbilang vault}:
+
+\begin{itemize}
+  \item \textbf{Vault peribadi}: Hanya anda boleh lihat, seperti bank, e-mel dll akaun peribadi.
+  \item \textbf{Vault kongsi}: Ahli keluarga atau pasukan semua boleh lihat, seperti Netflix, WiFi rumah, kad kredit kongsi.
+  \item \textbf{Pengredan kebenaran}: Versi pasukan boleh tetapkan sesetengah ahli "lihat sahaja" atau "lihat tetapi tidak edit".
+\end{itemize}
+
+Ahli keluarga atau pasukan tidak perlu kongsi kata laluan utama, masing-masing guna akaun sendiri log masuk, tetapi boleh lihat kandungan vault kongsi yang dibenarkan. Selepas kata laluan diubah semua ahli segerak real-time.
+
+\booksubsection{Fungsi “Organization” Bitwarden}
+
+Versi percuma Bitwarden sokong perkongsian kata laluan peribadi (melalui fungsi “Send” kongsi masa terhad satu kata laluan); versi berbayar boleh cipta “Organization”, kongsi beberapa item kepada ahli keluarga atau rakan sepasukan, kebenaran boleh terperinci. Bitwarden juga sediakan pilihan self-hosted, sesuai entreprise yang tuntut kedaulatan data tinggi.
+
+\booksubsection{Senario keluarga: Cara selamat kongsi Netflix, WiFi dll kata laluan}
+
+\begin{itemize}
+  \item \textbf{Netflix / laman video}: Guna "vault kongsi" 1Password Families simpan kata laluan log masuk, ahli keluarga masing-masing log masuk, tidak perlu hantar dalam kumpulan.
+  \item \textbf{Kata laluan WiFi rumah}: Peranti iOS boleh melalui AirDrop terus kongsi kata laluan WiFi kepada tetamu, tidak perlu sebut; Android 12+ juga ada fungsi "Nearby Share WiFi".
+  \item \textbf{Kunci pintar, peranti pintar rumah}: Cuba guna fungsi "ahli keluarga" App pengeluar cipta akaun berasingan untuk setiap orang, bukan kongsi satu akaun pentadbir.
+  \item \textbf{Router rumah backend}: Kata laluan pentadbir simpan ke vault kongsi 1Password, WiFi tetamu buka SSID berasingan.
+\end{itemize}
+
+\begin{tcbinfo}{Nilai untuk wang 1Password Families}
+1Password Families kira-kira \$4.99/bulan, sokong maksimum 5 ahli keluarga, setiap orang ada vault peribadi berasingan + 4 vault kongsi. Kira-kira kurang \$1/bulan setiap orang, adalah skim perkongsian keluarga pengalaman terbaik sekarang. Bitwarden versi keluarga \$10/tahun sokong 6 orang, nilai untuk wang lebih tinggi, tetapi pengalaman antara muka sedikit kurang.
+
+\end{tcbinfo}
+
+\booksubsection{Senario pasukan: Perkongsian kata laluan pelayan/pangkalan data}
+
+\begin{itemize}
+  \item \textbf{1Password Teams / Business}: Boleh cipta berbilang vault mengikut jabatan, kumpulan projek, kawalan kebenaran butiran, semua tingkah laku akses boleh diaudit.
+  \item \textbf{Bitwarden Teams / Enterprise}: Skim sumber terbuka, boleh self-hosted, versi entreprise sokong integrasi SSO, segerak direktori.
+  \item \textbf{Prinsip pemisahan tanggungjawab}: Kata laluan pentadbir tidak patut hanya satu orang pegang — tetapkan 2-3 "contact emergency", pastikan perniagaan tidak terputus apabila personel kunci bertugas/bercuti.
+  \item \textbf{Proses peletakan jawatan}: Apabila peletakan jawatan, serta-merta tarik balik kebenaran pengurus kata laluan, perlu pusing semua kata laluan sensitif tinggi yang dia sentuh.
+\end{itemize}
+
+\booksubsection{Akses Kecemasan (Emergency Access): Jika anda ada masalah}
+
+Bayangkan senario: Anda urus sendiri semua akaun penting keluarga, tetapi kemalangan masuk hospital atau meninggal, keluarga tidak boleh log masuk bank, e-mel, akaun insurans.\textbf{Fungsi “Akses Kecemasan”}direka untuk ini — benarkan keluarga/rakan dipercayai, apabila anda tidak boleh respons, dapat perpustakaan kata laluan anda.
+
+\textbf{Tetapan akses kecemasan Bitwarden:}
+
+\begin{enumerate}
+  \item Log masuk Bitwarden Web Vault Tetapan Akses Kecemasan.
+  \item Tambah e-mel contact yang dipercayai, jemput dia terima.
+  \item Tetapkan "tempoh menunggu" (disyorkan 7-14 hari): dari dia mula permintaan ke anda sahkan.
+  \item Jika anda tidak respons dalam tempoh menunggu (tolak atau tidak bertindak), selepas tamat dia auto dapat akses.
+  \item Anda boleh tolak permintaan atau tarik balik kebenaran akses kecemasan bila-bila masa.
+\end{enumerate}
+
+\textbf{Akses kecemasan 1Password:}
+
+\begin{enumerate}
+  \item 1Password tidak terus panggil "akses kecemasan", tetapi melalui fungsi "organisasi keluarga/pasukan" boleh capai — masukkan keluarga ke versi keluarga, letak sebahagian item ke "vault kongsi".
+  \item Untuk pengguna versi peribadi, disyorkan beritahu kata laluan utama kepada keluarga yang sangat dipercayai, atau tulis dalam sampul dimeterai simpan di safe.
+  \item 1Password juga sediakan "recovery code", apabila aktifkan dwi-faktor mesti cetak simpan.
+\end{enumerate}
+
+\begin{tcbpractice}{Sekarang tetapkan: Tinggalkan "kunci sandaran" untuk keluarga}
+\begin{enumerate}
+  \item Pilih keluarga yang dipercayai sebagai "contact kecemasan".
+  \item Dalam pengurus kata laluan tetapkan akses kecemasan (Bitwarden) atau masukkan vault kongsi keluarga (1Password).
+  \item Tulis kata laluan utama + recovery code pada kertas, sampul, simpan di safe rumah atau beritahu keluarga yang dipercayai.
+  \item Semak setiap separuh tahun, sahkan contact kecemasan masih sesuai.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{IX. Amalan terbaik pengurus kata laluan}
+
+\begin{itemize}
+  \item \textbf{Semak kata laluan lemah secara berkala}: Kebanyakan pengurus kata laluan ada fungsi "Audit Keselamatan", bantu anda cari kata laluan lemah dan kata laluan pendua.
+  \item \textbf{Jangan lupa kata laluan utama}: Kata laluan utama tak boleh dipulihkan, lupa bermakna hilang semua kata laluan. Cadangan tulis di atas kertas, letak di tempat selamat.
+  \item \textbf{Akses kecemasan}: Tetapkan kenalan kecemasan, sekiranya anda tak boleh akses, orang yang dipercayai boleh dapat kata laluan anda.
+  \item \textbf{Peringatan penting}Pengurus kata laluan walaupun senang, tapi ada risiko: jika kata laluan utama bocor, semua kata laluan terdedah. Jadi kata laluan utama tak boleh sama dengan kata laluan lain, juga tak boleh tulis di tempat mudah dijumpai. Tambahan pula, cadangan pilih penyedia perkhidmatan dengan rekod keselamatan baik.
+  \item \textbf{Cuba sekarang: Mula guna pengurus kata laluan}Pilih satu pengurus kata laluan (cadangan Bitwarden atau terbina dalam sistem).
+\end{itemize}
+
+\begin{tcbwarn}{Daftar akaun, tetapkan satu kata laluan utama yang kuat.}
+Import kata laluan sedia ada (jika ada) atau mula tambah kata laluan baharu.
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{Pasang pemalam pelayar atau App telefon, alami fungsi isi automatik.}
+\begin{enumerate}
+  \item Semak laporan audit keselamatan, cari kata laluan yang perlu diperbaiki.
+  \item III. Bahagian Lanjutan (Bab 15-20)
+  \item Selepas menguasai asas dan aplikasi perisian, mari kita terokai fungsi lanjutan telefon pintar dengan lebih mendalam. Kandungan ini akan membantu anda menjadi pakar telefon pintar sejati, malah membuka kunci beberapa "kemahiran tersembunyi".
+  \item Bab 15: Sains Bateri \& Pengoptimuman Ketahanan
+  \item Bateri ialah "jantung tenaga" telefon pintar anda. Bab ini membantu anda memahami perangai bateri, belajar teknik cas dan ketahanan secara saintifik, dan mengucapkan selamat tinggal kepada kebimbangan paras bateri.
+\end{enumerate}
+
+\end{tcbpractice}

@@ -1,0 +1,188 @@
+\bookchapter{Capítulo 4: Instalar y gestionar App — las “habilidades” del teléfono}
+
+\chapterintro{Las App hacen que el teléfono pueda hacer de todo, pero también hay que gestionarlas. Igual que asignarías un puesto y permisos a un nuevo empleado, instalar App requiere un procedimiento normalizado.}
+
+\booksection{I. Tiendas oficiales: el “supermercado de aplicaciones” más seguro}
+
+\begin{itemize}
+  \item \textbf{Android}: Google Play (en el extranjero) o la tienda integrada de cada marca (como Huawei AppGallery, Xiaomi App Store).
+  \item \textbf{iOS}: solo App Store.
+  \item \textbf{HarmonyOS}: Huawei AppGallery.
+\end{itemize}
+
+Importancia central de la seguridad: pasa por una revisión, las actualizaciones están garantizadas y el pago es seguro. Guía de acción:\textbf{¡descarga preferentemente solo desde tiendas oficiales!}
+
+\booksection{II. Modo puro/protección: activa el “antivirus” del teléfono}
+
+Las principales marcas nacionales (Huawei, Xiaomi, OPPO, vivo, Honor) integran un\textbf{modo puro}o\textbf{modo de protección}, un interruptor de seguridad a nivel de sistema.\textbf{Se recomienda encarecidamente a todos los usuarios activarlo}.
+
+\booksubsection{¿Qué es exactamente?}
+
+La función\textbf{central del modo puro (también llamado “modo de protección”) es bloquear la instalación de App de terceros}: cuando está activo, el sistema\textbf{solo permite instalar App desde la tienda oficial}; los paquetes de instalación descargados desde el navegador, códigos QR, software de chat, etc., se interceptan directamente, eliminando el malware desde la raíz.
+
+\booksubsection{Usuaríos a los que aplica}
+
+\begin{itemize}
+  \item \textbf{Usuaríos mayores}: que no distinguen entre publicidad "oficial" y "falsa"; el modo puro es la protección más fiable.
+  \item \textbf{Usuaríos poco sensibles a los permisos de las aplicaciones}: que no necesitan instalar App minoritarias, versiones beta ni juegos de servidores extranjeros.
+  \item \textbf{Cualquier usuario que quiera mejorar la seguridad del dispositivo}: incluso para entusiastas, tenerlo activado es mejor que no hacerlo; si hay una necesidad puntual, se desactiva temporalmente.
+\end{itemize}
+
+\booksubsection{Ruta de activación (ejemplo con Huawei/Xiaomi)}
+
+\begin{itemize}
+  \item \textbf{Huawei/HarmonyOS}: [Configuración] > [Sistema y actualizaciones] >\textbf{[Modo puro]}, elige "Activar".
+  \item \textbf{Xiaomi}: [Configuración] > [Protección de privacidad] >\textbf{[Proteger privacidad]}o [Configuración] > [Ajustes de aplicación] > [Instalación de aplicaciones], desactiva "Instalar aplicaciones de origen desconocido".
+  \item \textbf{: puedes configurar Nginx o Apache para montar servidores web estáticos.}: [Configuración] > [Seguridad] >\textbf{[Instalar aplicaciones de fuentes externas]}, desactiva la autorización una por una.
+\end{itemize}
+
+\booksubsection{Mecanismo de seguridad de la tienda de aplicaciones}
+
+La tienda de aplicaciones no es un “adorno”; detrás hay una cadena de seguridad completa:
+
+\begin{itemize}
+  \item \textbf{Análisis de virus}: antes de publicarse, cada App pasa por un escaneo conjunto de varios motores antivirus que identifica firmas conocidas de troyanos y virus.
+  \item \textbf{Revisión de permisos}: la tienda revisa si los permisos que solicita la App son "razonables": ¿una App de linterna pide acceso a los contactos? Se rechaza o se retira.
+  \item \textbf{Certificación de desarrollador}: para publicar hace falta certificación empresarial, de identidad personal o de tarjeta de crédito. Si surge un problema, se puede localizar a alguien; no es una "App negra".
+  \item \textbf{Supervisión continua}: las App ya publicadas también se reescanean de forma continua; los comportamientos maliciosos detectados se retiran forzosamente.
+\end{itemize}
+
+\booksection{III. Fuentes de terceros y “parásitos electrónicos”: ¡alto riesgo!}
+
+Descargar App desde páginas web o enlaces desconocidos puede traer virus, robar privacidad y clonar pagos. Aquí introducimos un concepto nuevo: el\textbf{“parásito electrónico”}.
+
+\textbf{¿Qué es un “parásito electrónico”?}\par
+
+Se refiere a\textbf{software “pirateado” con troyanos incrustados}: crees que “te has ahorrado dinero”, pero en realidad “te has infectado”. Formás habituales:
+
+\begin{itemize}
+  \item Versiones "pirateadas", "gratuitas", "sin anuncios" de software de pago;
+  \item Herramientas grisáceas como "generadores de likes", "cazadores de sobres rojos", "cheats de juegos";
+  \item App supuestamente "versiones internas" recomendadas por "publicidad pequeña" en grupos de chat.
+\end{itemize}
+
+Estos programas funcionan en apariencia, pero en segúndo plano pueden\textbf{robar contactos, leer SMS, espiar el micrófono o minar criptomonedas}. El modo puro es la\textbf{primera línea de defensa}contra ellos: directamente impide su instalación.
+
+\booksubsection{Recomendaciones para la segúnda línea de defensa:}
+
+\begin{itemize}
+  \item \textbf{Análisis completo de virus periódico}: usa el centro de seguridad integrado en el teléfono (como Huawei Phone Manager, Xiaomi Security Center) para escanear una vez al mes.
+  \item \textbf{Concede permisos sensibles con precaución}: contactos, SMS, ubicación, cámara, micrófono — estos cinco "permisos de alto riesgo" deben revisarse estrictamente.
+  \item \textbf{Vigila anomalías en consumo y datos}: si el teléfono se calienta de repente, la batería cae rápido o los datos se consumen de madrugada, lo más probable es que haya un "parásito" oculto en segúndo plano.
+\end{itemize}
+
+Si no hay más remedio que instalar una App de terceros:
+
+\begin{enumerate}
+  \item Asegúrate de que la fuente sea absolutamente fiable.
+  \item Revisa atentamente los permisos solicitados antes de instalar.
+  \item Después, escanea con una App de seguridad.
+\end{enumerate}
+
+Consejo definitivo: en los ajustes del sistema, desactiva el permiso “Instalar aplicaciones de origen desconocido”.
+
+\booksection{IV. Instalar, actualizar, desinstalar}
+
+\begin{itemize}
+  \item \textbf{Instalar}: en la tienda, pulsa "Obtener" o "Instalar"; al abrir por primera vez tras la instalación, te pedirá permisos.
+  \item \textbf{Actualizar}:\textbf{¡hay que hacerlo!}Principalmente repara vulnerabilidades de seguridad. Se recomienda activar la actualización automática.
+  \item \textbf{Desinstalar}: mantén pulsado el icono y arrástralo a la zona de desinstalación. Para borrar de forma más completa, ve a [Configuración] > [Gestión de aplicaciones], búscala y desinstálala.
+\end{itemize}
+
+\booksection{V. Gestión de permisos: tú eres el “jefe” de la App}
+
+Que una App pida permisos (como contactos o ubicación) a veces es razonable (un mapa necesita la ubicación) y a veces no (una linterna pide contactos).
+
+\begin{itemize}
+  \item \textbf{Opciones de permisos}: "Permitir siempre", "Permitir solo durante el uso", "Denegar", "Preguntar siempre".
+  \item \textbf{Principios de gestión}:
+  \begin{enumerate}
+    \item Minimización: no conceder lo que no sea necesario.
+    \item Auditoría posterior: revisa periódicamente en los ajustes de permisos quién se "pasa de la raya".
+    \item Contextual: con una App de transporte, por ejemplo, concede la ubicación solo cuando la uses.
+  \end{enumerate}
+\end{itemize}
+
+\begin{tcbwarn}{Permisos a vigilar especialmente}
+\begin{itemize}
+  \item Contactos/SMS: pueden usarse para enviar SMS basura.
+  \item Ubicación en tiempo real: puede rastrear tus movimientos.
+  \item Cámara/micrófono: pueden usarse para espiar o grabar a escondidas.
+  \item Acceso a archivos: puede leer tus archivos privados.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{VI. Componentes del paquete de instalación}
+
+¿Te has preguntado qué hay dentro del paquete de instalación que descargas de la tienda de aplicaciones? Conocer la estructura del paquete te ayuda a entender cómo funcionan las App y a saber por dónde empezar cuando surge un problema.
+
+\booksubsection{Estructura del archivo APK de Android}
+
+Un APK (Android Package Kit) es esencialmente un archivo ZIP comprimido; al descomprimirlo se ven los siguientes directoríos y archivos clave:
+
+\begin{itemize}
+  \item \textbf{AndroidManifest.xml}: el "DNI" y el "manual" de la aplicación. Registra el nombre del paquete, el número de versión, los permisos necesarios, las versiones de sistema compatibles, la Activity de entrada y otra información clave. El sistema lee primero este archivo al instalar la aplicación.
+  \item \textbf{classes.dex}: el código central de la aplicación. El código fuente en Java/Kotlin se compila a bytecode Dalvik y se guarda en este archivo. Una aplicación puede tener varios archivos dex (como classes2.dex, classes3.dex).
+  \item \textbf{resources.arsc}: tabla de índices de recursos compilados. Registra los ID de todos los recursos y sus correspondencias.
+  \item \textbf{directorío res/}: carpeta de recursos. Contiene imágenes, archivos de diseño, cadenas, definiciones de color, etc. Las imágenes de distintas resoluciiones se colocan en carpetas drawable distintas (como drawable-hdpi, drawable-xhdpi).
+  \item \textbf{directorío assets/}: carpeta de recursos sin procesar. Almacena recursos que no se compilan, como archivos web, fuentes, audio, etc. La App puede leerlos en tiempo de ejecución a través de AssetManager.
+  \item \textbf{directorío lib/}: carpeta de bibliotecas nativas. Almacena archivos .so compilados (productos de la compilación de código C/C++), clasificados por arquitectura de CPU (como arm64-v8a, armeabi-v7a). Los juegos y las App que necesitan cálculos de alto rendimiento suelen tener este directorío.
+  \item \textbf{directorío META-INF/}: carpeta de información de firma. Contiene tres archivos (MANIFEST.MF, CERT.SF, CERT.RSA) para verificar la integridad y la firma del APK.
+\end{itemize}
+
+\booksubsection{Estructura del archivo IPA de iOS}
+
+Un IPA (iOS App Store Package) también es un paquete comprimido, con una estructura ligeramente distinta:
+
+\begin{itemize}
+  \item \textbf{directorío Payload/}: donde está el contenido central. Dentro hay una carpeta .app que contiene todo el contenido de la aplicación.
+  \item \textbf{Info.plist}: archivo de configuración de la aplicación, similar al AndroidManifest.xml de Android. Registra el ID de la aplicación, la versión, los permisos necesarios, los dispositivos compatibles, etc.
+  \item \textbf{Archivo ejecutable}: programa principal con el mismo nombre que la carpeta .app; es un archivo binario en formato Mach-O compilado.
+  \item \textbf{directorío Frameworks/}: bibliotecas dinámicas y marcos de los que depende la aplicación.
+  \item \textbf{Archivos de recursos}: imágenes, audio, video y otros recursos, normalmente guardados dentro de la carpeta .app.
+  \item \textbf{directorío \_CodeSignature/}: información de firma del código, para verificar la integridad y el origen de la aplicación.
+\end{itemize}
+
+\booksubsection{Mecanismo de verificación de firmas}
+
+¿Por qué las App descargadas de la tienda oficial son más seguras? La verificación de firmas es la clave.
+
+\begin{itemize}
+  \item \textbf{Firma de Android}: el desarrollador firma el APK con su clave privada y el sistema la verifica con la clave pública al instalar. Si el APK ha sido manipulado (por ejemplo, con un virus inyectado), la firma deja de ser válida y el sistema rechaza la instalación. Google Play además exige App Signing, con Google custodíando las claves de firma, para proteger aún más la seguridad de la aplicación.
+  \item \textbf{Firma de iOS}: la revisión de Apple es más estricta. Cada IPA debe estar firmado con un certificado emitido por Apple, de lo contrario no se puede instalar. Por eso en iOS solo se pueden instalar App desde la App Store o con un certificado empresarial. Las App firmadas con certificado empresarial tienen una validez limitada y Apple puede revocarlas en cualquier momento.
+  \item \textbf{Función de la firma}:
+  \begin{enumerate}
+    \item Verificar el origen: confirmar que la aplicación proviene efectivamente del desarrollador que dice ser.
+    \item Verificar la integridad: asegurar que la aplicación no ha sido manipulada durante la transmisión.
+    \item Evitar suplantaciones: una aplicación maliciosa no puede hacerse pasar por otra.
+  \end{enumerate}
+\end{itemize}
+
+\booksubsection{Tamaño del paquete de instalación y optimización}
+
+Puede que notes que el tamaño de la App mostrado en la tienda no coincide con el espacio que ocupa tras la instalación. Esto se debe a:
+
+\begin{itemize}
+  \item \textbf{Tamaño de descarga}: el tamaño del APK/IPA comprimido.
+  \item \textbf{Tamaño de instalación}: el tamaño tras la descompresión, normalmente mucho mayor que el de descarga.
+  \item \textbf{Ocupación en tiempo de ejecución}: al ejecutarse, la App también genera caché y archivos de datos que ocupan más espacio.
+\end{itemize}
+
+Medios de optimización de las App modernas:
+
+\begin{itemize}
+  \item \textbf{App Bundle (Android)}: tecnología de distribución dinámica de Google Play. Al descargar, el usuario solo obtiene los recursos adecuados para su dispositivo (por ejemplo, solo las imágenes de la resolución de su pantalla), lo que reduce enormemente el tamaño de descarga.
+  \item \textbf{App Thinning (iOS)}: tecnología similar; Apple recorta automáticamente los recursos innecesarios según el dispositivo.
+  \item \textbf{Descarga bajo demanda}: las aplicaciones grandes, como los juegos, pueden descargar primero un paquete central y los paquetes de recursos más adelante.
+\end{itemize}
+
+\begin{tcbinfo}{Sabías que: ¿por qué algúnos paquetes de instalación son especialmente grandes?}
+Las App de juegos suelen ser las más grandes, porque contienen muchas texturas en alta definición, modelos 3D y archivos de audio. Las App sociales también son bastante grandes, por la cantidad de módulos funcionales que deben admitir. Las App de herramientas suelen ser las más pequeñas. Si descubres que una App de herramientas es especialmente grande, sospecha si incluye funciones innecesarias.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Práctica: audita los permisos de 3 App}
+Elige 3 App de uso habitual (por ejemplo, social, compras, herramientas), entra en la página de gestión de permisos de [Configuración], revísalas una por una y desactiva los permisos sensibles innecesarios o cámbialos a “Permitir solo durante el uso”.
+
+\end{tcbpractice}

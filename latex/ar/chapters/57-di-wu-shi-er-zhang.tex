@@ -1,0 +1,129 @@
+\bookchapter{الفصل 52: المكونات الأربعة ودورة حياة Activity}
+
+\chapterintro{إذا كان Compose “وجه” التطبيق، فما سيشرحه هذا الفصل هو “هيكل” التطبيق. لنظام Android أربعة مكونات أساسية، وكل التطبيقات مبنية منها؛ وأهمها Activity له “خريطة دورة حياة” يجب على كل مطور Android حفرها في ذهنه. بعد إتمام هذا الفصل ستتمكن من فهم أحاجي مثل “لماذا تختفي حالة تطبيقي عندما أضعه في الخلفية وأعود إليه”.}
+
+\booksection{أولًا: المكونات الأربعة: “الأعمدة الأساسية” في Android}
+
+عرّف Android رسميًا أربعة مكونات أساسية، كل منها مسؤول عن فئة من الأعمال:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{المكون} & \textbf{المسؤولية} & \textbf{تشبيه} \tabularnewline
+\hline
+Activity & واجهة مرئية & واجهة المتجر — يراها المستخدم ويتفاعل معها \tabularnewline
+Service & الرجل الخفي الذي يعمل في الخلفية & عامل المستودع — يشغّل الموسيقى وينزّل الملفات دون حاجة إلى واجهة \tabularnewline
+BroadcastReceiver & استقبال بث النظام & غرفة البريد — مكبر الصوت الذي يعلن "انخفضت البطارية" و"انقطعت الشبكة" \tabularnewline
+ContentProvider & مشاركة البيانات بين التطبيقات & خزانة الملفات العامة — مثل مشاركة جهات الاتصال مع تطبيقات أخرى \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}نظرة سريعة على المكونات الأربعة في Android\end{center}
+
+في مرحلة المبتدئ ستقضي 95\% من وقتك مع Activity؛ وتُستخدم Service و BroadcastReceiver في تشغيل الموسيقى ودفع الرسائل؛ أما ContentProvider فهو الأقل استخدامًا (النظام يغلّف البيانات الشائعة مسبقًا). وانتبه: يجب “تسجيل قيد” المكونات الأربعة جميعًا في AndroidManifest.xml، وإلا فلن يجدها النظام.
+
+\booksection{ثانيًا: دورة حياة Activity: أول “خريطة كنز” في تطوير Android}
+
+قد يُقاطع التطبيق في الهاتف في أي لحظة: مكالمة واردة، أو المستخدم ينتقل للرد على WeChat، أو النظام قتل تطبيقك لنقص الذاكرة… وحياة Activity رحلة دائرية على هذه الخريطة:
+
+onCreate (الولادة: تهيئة)
+
+onStart (أصبح مرئيًا)
+
+onResume (تفاعل في المقدمة)
+
+onPause (مغطى جزئيًا)
+
+onStop (غير مرئي تمامًا)
+
+onDestroy (تدمير)
+
+onRestart / onStart / onResume: عند العودة إلى المقدمة يعود بنفس الطريق معكوسًا
+
+\begin{center}\small\color{gray}الشكل 4: دورة حياة Activity (الاتجاه الأمامي: الصف العلوي للميلاد الصف السفلي للمغادرة، وعند العودة نرتد على نفس الطريق)\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{دالة الاستدعاء} & \textbf{متى تُستدعى} & \textbf{الاستخدام النموذجي} \tabularnewline
+\hline
+onCreate & عند إنشاء Activity (مرة واحدة) & تحميل الواجهة وتهيئة البيانات \tabularnewline
+onStart & تصبح الواجهة مرئية & بدء بعض المنطق الخفيف \tabularnewline
+onResume & الحصول على التركيز وإتاحة التفاعل & بدء الحركات واستئناف التشغيل \tabularnewline
+onPause & لحظة الحجب الجزئي أو الانتقال بعيدًا & إيقاف الحركات وحفظ المسودة \tabularnewline
+onStop & اختفاء تام عن الرؤية & تحرير الموارد الثقيلة وإيقاف التنزيلات \tabularnewline
+onDestroy & قبل التدمير & التنظيف النهائي \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}الاستخدامات النموذجية لدوال دورة الحياة الست\end{center}
+
+\textbf{تحذير من الفخاخ: تدوير الشاشة “يقتل” Activity}\par
+
+أشهر سيناريو فشل عند المبتدئين: تُدار شاشة التطبيق قليلًا فتمحو كل الكلمات من حقول الإدخال. السبب: تدوير الشاشة يدمر Activity ويعيد إنشاءه افتراضيًا (يمر بـ onDestroy ثم onCreate). الحل: استخدم rememberSaveable لحفظ الحالة (بديل remember في Compose)، فهو يستعيد القيم تلقائيًا عند إعادة الإنشاء. سنستخدمه مرارًا في الفصلين 6 و7.
+
+\booksection{ثالثًا: Intent: “تذكرة السفر” داخل التطبيق وخارجه}
+
+الـ Intent (القصد) هو “تذكرة السفر” للتواصل بين المكونات. للانتقال من صفحة إلى أخرى، أو فتح المتصفح، أو تشغيل الكاميرا، عليك “شراء التذكرة ثم الصعود”:
+
+\begin{lstlisting}[language=Kotlin]
+// الطريقة الأولى: Intent صريح — تحدد بوضوح إلى أي شاشة تذهب
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", "أحمد")     // يحمل "أمتعة" في السيارة (البيانات)
+startActivity(intent)
+
+// الطريقة الثانية: Intent ضمني — تقول فقط ما المطلوب والنظام يجد من ينفذه
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // سيفتح النظام المتصفح (أو سيتيح لك الاختيار)
+\end{lstlisting}
+
+لكل من الطريقتين استخدامها: الصريحة للتنقل بين صفحات تطبيقك نفسه؛ والضمنية لاستدعاء قدرات النظام أو تطبيقات أخرى (فتح صفحة ويب، إجراء مكالمة، مشاركة). في مشاريع Compose، احصل على Context عبر LocalContext.current داخل الدالة القابلة للتركيب ثم استدعِ startActivity.
+
+\booksection{رابعًا: الصفحات المتعددة والتنقل}
+
+التطبيقات الحقيقية متعددة الصفحات. الحل الرسمي الموصى به في Compose هو Navigation Compose (مكتبة androidx.navigation):
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "غير معروف")
+    }
+}
+
+// للتنقل من داخل الشاشة:
+navController.navigate("detail/أحمد")     // مع وسيط
+navController.popBackStack()              // العودة إلى الشاشة السابقة
+\end{lstlisting}
+
+\begin{tcbinfo}{نصيحة: ماذا تفعل عندما تكثر الصفحات؟}
+عندما يكبر المشروع اجمع كل مسارات الصفحات في ملف واحد (مثل AppNavGraph.kt) لإدارتها بشكل موحد، ولا تترك منطق “الانتقال إلى أين” مبعثرًا بين الصفحات. هذه أول خطوة من “يعمل” إلى “قابل للصيانة”.
+
+\end{tcbinfo}
+
+\booksection{خامسًا: تعارف عرضي: ما هو Fragment (ولماذا لم يشرحه الكتاب)}
+
+عند تصفح الدروس القديمة ستقابل حتمًا Fragment — إنه “مقطع واجهة قابل لإعادة الاستخدام” داخل Activity، وكان بطلًا لا منازع له في بنية الصفحات المتعددة القديمة. لكن في عصر Compose يكفي استخدام دوال Composable مع مسارات Navigation مباشرة، وقد خفّضت جوجل رسميًا مكانة Fragment. لذلك لم يضعه هذا الكتاب في المسار الرئيسي.
+
+نصيحتي لك: لا تستخدم Fragment طوعًا في المشاريع الجديدة؛ واكتفِ عند قراءة الكود القديم أو مواجهته في مقابلة عمل بمعرفة أنه “مقطع واجهة مدمج داخل Activity”. واختر دائمًا مصادر التعلم الصادرة بعد 2023 — فـ“التقاوين القديمة” لتقنيات Android تتحدث أسرع مما تتصور.
+
+\begin{tcbpractice}{لنتجرب: امنح العدّاد "ذاكرة"}
+عدّل عدّاد الفصل 51: (1) استبدل remember بـ rememberSaveable وتحقق من بقاء الرقم بعد تدوير الشاشة؛ (2) أضف زر “حول” يستخدم Navigation للانتقال إلى صفحة ثانية تعرض رقم الإصدار؛ (3) اطبع سجلات (Log.d) في onCreate/onPause لكلا الصفحتين وراقب ترتيب استدعاءات دورة الحياة عبر Logcat. بعد هذه الخطوات الثلاث لن تكون دورة الحياة حبرًا على ورق.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{خلاصة الفصل}
+\begin{itemize}
+  \item المكونات الأربعة: Activity (الواجهة)، Service (الخلفية)، BroadcastReceiver (مكبر الصوت)، ContentProvider (خزانة الملفات)
+  \item دوال دورة الحياة الست: onCreate onStart onResume onPause onStop onDestroy
+  \item تدوير الشاشة يدمر Activity ويعيد إنشاءه: احفظ الحالة بـ rememberSaveable
+  \item الـ Intent "تذكرة": الصريحة للتنقل داخل صفحاتك، والضمنية لاستدعاء قدرات النظام
+  \item الصفحات المتعددة عبر Navigation Compose: مسارات NavHost + composable
+\end{itemize}
+
+\end{tcbsummary}

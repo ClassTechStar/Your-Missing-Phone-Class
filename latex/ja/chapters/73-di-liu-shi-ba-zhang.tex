@@ -1,0 +1,154 @@
+\bookchapter{第六十八章：ステップアップへの道——権限、通知、モダンなアーキテクチャ}
+
+\chapterintro{App が作れるようになるのは、まだ始まりにすぎません。この章では「作れる」から「うまく作る」までのいくつかのハードル——権限をスマートに要求する方法、嫌われない通知の出し方、アーキテクチャをもう一段引き上げる方法、そして2026年において AI と組んで iOS コードを書く方法——を取り上げます。どれも、実際のプロジェクトですぐに出会う話ばかりです。}
+
+\booksection{権限：まずノック、それから入る}
+
+カメラ、位置情報、連絡先、通知……こうした「センシティブな領域」では、iOS は App が使う場面でユーザーにダイアログを出して許可を求めることを求めています。お作法は「宣言 + 要求 + 代替動作の用意」の3ステップです。
+
+\begin{lstlisting}[language=Swift]
+// 1. Info.plistに用途の文を宣言（宣言しないと即クラッシュ！）
+// Privacy - Location When In Use Usage Description: "現在地の都市の天気を調べるために使用します"
+
+// 2. 使うときに申請
+import CoreLocation
+
+@Observable
+class LocationModel {
+    private let manager = CLLocationManager()
+
+    func request() {
+        switch manager.authorizationStatus {
+        case .notDetermined: manager.requestWhenInUseAuthorization()
+        case .denied, .restricted: /* 設定画面へ誘導 */
+        default: /* 許可済み、始めよう */
+        }
+    }
+}
+
+// 3. 拒否されたときの優雅な代替：案内を表示 + 設定へ誘導
+// UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+\end{lstlisting}
+
+\begin{tcbwarn}{注意：iOS の権限は「一度きり」}
+iOS の権限ダイアログは1度しか表示されません——ユーザーが拒否したら二度と出ません。だからこそ、要求のタイミングは「ユーザーがまさに使おうとしている瞬間」を選び（起動直後にいきなり何個も出さない）、文言では用途を説明しましょう。拒否されたあとの画面での案内（「設定で位置情報をオンにしよう」）は必須の配慮です。ユーザーを行き止まりに追い込まないこと。
+
+\end{tcbwarn}
+
+\booksection{通知：正しいタイミングで役立つ言葉を届ける}
+
+通知は App がユーザーに届く大切な通路であると同時に、もっとも「ブロック」されやすい機能でもあります。iOS では UserNotifications フレームワークを使います。通知の3カ条は、役に立つものだけ送る、ユーザーがオフにできるようにする、深夜に騒がない。基本の使い方は次のとおりです。
+
+\begin{lstlisting}[language=Swift]
+import UserNotifications
+
+// 1. 通知の権限を申請（ポップアップは1回）
+UNUserNotificationCenter.current()
+    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+        print(granted ? "許可された" : "拒否された")
+    }
+
+// 2. 「毎日20:00に記帳リマインダー」を予約
+func scheduleDailyReminder() {
+    let content = UNMutableNotificationContent()
+    content.title = "記帳リマインダー"
+    content.body = "今日はまだ記帳していないよ"
+    content.sound = .default
+
+    var comps = DateComponents()
+    comps.hour = 20
+    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+
+    let request = UNNotificationRequest(
+        identifier: "daily-reminder",
+        content: content,
+        trigger: trigger
+    )
+    UNUserNotificationCenter.current().add(request)
+}
+\end{lstlisting}
+
+注意：iOS の通知権限も同じく「一度きり」で、ユーザーはシステム設定でいつでもオフにできます——だからこそ、通知の中身の「価値」がとても重要です。一度でも乱発すれば、ユーザーを永遠に失いかねません。
+
+\booksection{アーキテクチャのステップアップ：MVVM の深掘りとテスト容易性}
+
+第六十五章で MVVM を使いました。ここで、レベルアップのためのポイントを3つ補足します。
+
+\begin{itemize}
+  \item プロトコル抽象化：ViewModel を具体的なクラスではなくプロトコルに依存させます——テストのときに「偽のデータソース」を注入でき、テスト容易性の土台になります。
+  \item 単一責任：1つの ViewModel は1つのことだけを担当する（家計簿担当は天気を扱わない）。機能が増えたら分割する。
+  \item 設計しすぎない：一人の小さなプロジェクトなら「@Observable クラス + プロトコル抽象化」で十分です。VIPER や Clean Architecture のような重いアーキテクチャは、チームや複雑さが訪れてから考えましょう——ツールは目的に仕えるものであって、見せびらかすためのものではありません。
+\end{itemize}
+
+\begin{tcbinfo}{ワンポイント：SwiftUI の「エコシステムの恩恵」}
+iOS エコシステムには、ここでしか使えないレベルアップの技がもう2つあります。ウィジェット（WidgetKit）は App を開かなくても情報を確認できるようにします（家計簿アプリの「今月の支出」をホーム画面に置くイメージ）。ショートカット（App Intents）は、ユーザーが Siri やオートメーションからあなたの機能を呼び出せるようにします。どちらも公式フレームワークが用意され、導入コストは高くないのに、ユーザー体験への追い風は絶大です——ステップアップの道では優先的に解禁したい能力です。
+
+\end{tcbinfo}
+
+\booksection{2026年の新常識：AI 支援の iOS 開発}
+
+2026年、AI はすでに Apple の開発フローに深く組み込まれています。作業を速めたいなら、次の組み合わせがすっかり定着しています。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{場面} & \textbf{AI の助け方} & \textbf{あなたの役割} \tabularnewline
+\hline
+コードを書く & Xcode 内蔵のコード補完 + サードパーティ AI プラグインによる生成 & 要件を明確に伝え、生成物をレビューする \tabularnewline
+調べもの & 公式ドキュメントやエラーメッセージを AI に渡して解説してもらう & 重要な結論は公式ドキュメントで裏取りする \tabularnewline
+テストを書く & 「正常／境界／異常」の3分類で XCTest ケースを AI に生成させる & ケースが業務の意味に合っているか確認する \tabularnewline
+バグを直す & クラッシュログと関係するコードを貼り、AI に原因特定と修正をしてもらう & 変更を理解し、テストを回して検証する \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}AI 支援 iOS 開発の4つの場面\end{center}
+
+具体的な方法論——AI への指示の出し方、成果物の受け取り方、落とし穴の避け方——は、本書の第7部『AIプログラミング実践編』（第37〜47章）に全11章ぶん収録しています。あわせて読むことを強くおすすめします。Swift の文法はこの部で、AI との協働のコツは第7部で、という分担です。
+
+\begin{tcbpractice}{やってみよう：家計簿アプリに「3点セット」を追加する}
+\booksection{Swift の並行処理の要点：@MainActor と Task}
+
+Swift 6 の並行処理の仕組みには、初心者が必ず知っておくべきルールが2つあります。
+
+\begin{itemize}
+  \item UI はメインスレッドでしか更新できない：SwiftUI のビューはデフォルトで @MainActor なので、ネットワークのコールバックはメインスレッドに戻ってから状態を更新します（await MainActor.run \{ ... \} を使うか、ViewModel を @MainActor としてマーク）。
+  \item 非同期タスクは Task で管理する：.task \{ \} モディファイアはビューが現れると自動で始まり、消えると自動でキャンセルされます——SwiftUI で非同期処理を始める標準の作法です。body の中に Task をむき出しで書き散らかすのは避けましょう。
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct WeatherScreen: View {
+    @State private var vm = WeatherViewModel()
+
+    var body: some View {
+        Group {
+            switch vm.state {
+            case .loading: ProgressView()
+            case .success(let d): WeatherContent(data: d)
+            case .error(let m): Text(m)
+            }
+        }
+        .task {                       // 現れたら開始、消えたら取消
+            await vm.search(city: "北京")
+        }
+    }
+}
+\end{lstlisting}
+
+この2つのルールの背景には、Swift 6 の「データ競合安全」設計があります——間違えたとき、App がクラッシュするのを待たずにコンパイラがその場でエラーを出してくれます。コンパイラのエラーは嫌がらせではなく、あなたに代わって弾丸を受けてくれているのです。
+
+(1) 家計簿アプリに「毎日20:00の記帳リマインダー」を追加する（通知権限 + ローカル通知）。(2) ViewModel のデータソースをプロトコル抽象化に替え、偽データを注入するユニットテストを1つ書く。(3)「今月の支出」のホーム画面ウィジェットを追加する。3点セットが完成すれば、あなたのプロジェクトは「正規軍」の風格を帯びてきます。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{この章のまとめ}
+\begin{itemize}
+  \item 権限の3ステップ：Info.plist での宣言（抜けると必ずクラッシュ）、使うときに要求、拒否されたら設定への案内
+  \item iOS の権限ダイアログは一度きり：タイミングは「まさに使おうとする瞬間」を選び、文言で用途をはっきり書く
+  \item 通知の3カ条：役に立つものだけ、オフにできる、迷惑をかけない。フレームワークは UserNotifications
+  \item MVVM のステップアップ：プロトコル抽象化（テスト可能に）、単一責任、設計しすぎない
+  \item エコシステムの恩恵：WidgetKit ウィジェット + App Intents ショートカット
+  \item AI 支援の4つの場面：コーディング、調べもの、テスト作成、バグ修正。方法論は第7部（第37〜47章）参照
+\end{itemize}
+
+\end{tcbsummary}

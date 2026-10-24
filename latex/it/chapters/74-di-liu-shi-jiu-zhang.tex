@@ -1,0 +1,121 @@
+\bookchapter{Capitolo 69: Manuale di consultazione rapida e risorse}
+
+\chapterintro{Questo capitolo è un manuale di consultazione rapida utilizzabile in autonomia. Quando non ti ricordi una sintassi o devi decidere in fretta, apri direttamente qui. Conservalo come una “carta da taschino”: codice d'uso comune, domande frequenti, risorse per studiare, senza saltare una pagina.}
+
+\booksection{Scheda rapida del codice d'uso comune}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Cosa vuoi fare} & \textbf{Codice chiave} \tabularnewline
+\hline
+Stato privato della pagina & @State private var x = valoreIniziale \tabularnewline
+Logica tra più pagine & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+Layout verticale/orizzontale & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+Spazio elastico & \texttt{Spacer()} \tabularnewline
+Elenco & List \{ ForEach(array) \{ ... \} \} \tabularnewline
+Salto di pagina & \texttt{NavigationStack + NavigationLink} \tabularnewline
+Finestra dal basso & .sheet(isPresented: \$show) \{ contenuto \} \tabularnewline
+Chiudere la pagina corrente & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+Scaricare dati dalla rete & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+Analisi del JSON & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+Salvare piccole configurazioni & UserDefaults.standard.set(valore, forKey: "chiave") \tabularnewline
+Salvare dati strutturati & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+Adattamento alla modalità scura & Usa i colori di sistema (.primary / Color(.systemGray6)), non valori fissi \tabularnewline
+Esegui i test & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Scheda di consultazione rapida dello sviluppo iOS (edizione agosto 2026)\end{center}
+
+\booksection{Domande frequenti (FAQ)}
+
+D1: Non ho un Mac, posso imparare lo sviluppo iOS?
+
+Puoi imparare il linguaggio, ma non fare lo sviluppo completo. Swift Playgrounds su iPad/iPhone ti permette di portare a termine tutto il contenuto del Capitolo 61; però Xcode esiste solo su macOS, quindi alla fine serve per forza un Mac. Con un budget limitato puoi nel frattempo affittare un Mac nel cloud o comprare un Mac mini usato come passaggio, e decidere l'investimento dopo aver imparato il linguaggio.
+
+D2: Quanto costa imparare lo sviluppo iOS?
+
+Fase di studio: 0 euro (Xcode è gratuito + test su dispositivo reale gratuiti con l'ID Apple). Fase di pubblicazione: account sviluppatore a 99 dollari l'anno (circa 90 euro). Sommando l'hardware di un Mac, questo è tutto il costo. Rispetto ai ritorni — sull'App Store anche un piccolo strumento ha utenti disposti a pagare — i conti tornano.
+
+D3: Cosa imparare prima, SwiftUI o UIKit?
+
+SwiftUI. Nel 2026 i nuovi progetti, i nuovi tutorial e le nuove posizioni lavorative sono centrati su SwiftUI, e in tutto il libro usiamo quello. UIKit è il framework della generazione precedente, ancora molto usato nei progetti più datati — quando sarai pratico con SwiftUI potrai aggiungere UIKit secondo necessità (Apple offre tutorial sull'interoperabilità) e impararlo in fretta. Non invertire l'ordine.
+
+D4: Facile trovare lavoro nello sviluppo iOS?
+
+Il mercato nel 2026: le posizioni base che chiedono solo di “saper disegnare interfacce” sono molto contese, ma gli sviluppatori che “conoscono Swift + SwiftUI + hanno un'app pubblicata” restano ricercatissimi. Lo stipendio mediano delle posizioni iOS è da sempre tra i più alti tra gli stack tecnologici. Per te che stai studiando, il miglior curriculum è quell'app fatta da te che si trova sullo store.
+
+D5: L'app è stata rifiutata dalla revisione: che fare?
+
+Niente panico, è normalissimo — alla prima presentazione le probabilità di rifiuto non sono basse. Apple di solito indica il motivo in modo molto preciso (quale pagina, quale linea guida): correggi punto per punto, rispondi con una spiegazione in App Store Connect e ripresenta l'app. I tre motivi di rifiuto più comuni: uso dei permessi spiegato male, bug nell'interfaccia, metadati (screenshot/descrizione) che non corrispondono al prodotto. Controllare da soli questi tre punti in anticipo ti risparmia un giro di attesa.
+
+\booksection{Scorciatoie da tastiera di uso frequente in Xcode}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Azione} & \textbf{Scorciatoia} \tabularnewline
+\hline
+Esegui / Testa & CmdR / CmdU \tabularnewline
+Apri l'anteprima della canvas & OptionCmd \tabularnewline
+Apri rapidamente un file & CmdO \tabularnewline
+Ricerca globale & CmdF \tabularnewline
+Formatta i rientri & CtrlI \tabularnewline
+Commenta / Togli il commento & Cmd/ \tabularnewline
+Pulisci la cache di build & CmdK \tabularnewline
+Vai alla definizione & Cmd + clic \tabularnewline
+Rinomina (rinomina sicura in tutto il progetto) & Clic destro Refactor Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Scorciatoie da tastiera di uso frequente in Xcode\end{center}
+
+\begin{tcbinfo}{Consiglio: di fronte ai misteri della compilazione, prima pulisci la cache}
+“Ieri funzionava, oggi no”: sei volte su dieci sono cache di build impazzite. Con CmdK pulisci e ricompila: risolve più di metà dei problemi inspiegabili. Se non basta, riavvia Xcode (e anche il Mac); se ancora non basta, “cancella la cartella DerivedData” — è la sequenza finale che gli sviluppatori iOS si passano di bocca in bocca.
+
+\end{tcbinfo}
+
+\booksection{Risorse per lo studio consigliate}
+
+\booksection{Risorse per lo studio consigliate}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tipo} & \textbf{Risorsa} & \textbf{Perché consigliarla} \tabularnewline
+\hline
+Ufficiale & developer.apple.com & Documentazione ufficiale Apple, con dentro i tutorial SwiftUI/Swift: la fonte più autorevole \tabularnewline
+Ufficiale & SwiftUI Tutorials di Apple & Corso ufficiale passo a passo, massima accoglienza per i principianti \tabularnewline
+Ufficiale & Sito ufficiale di Swift (swift.org) & Documentazione ufficiale del linguaggio e playground online \tabularnewline
+Community & Hacking with Swift & La raccolta di tutorial gratuiti di Paul Hudson, qualità riconosciuta al vertice \tabularnewline
+Community & Stack Overflow (tag swiftui) & Il primo posto dove chiedere aiuto in caso di errori \tabularnewline
+Video & Canale ufficiale Apple Developer (video WWDC) & Spiegazioni autorevoli delle novità di ogni anno \tabularnewline
+Design & Apple Human Interface Guidelines (HIG) & La bibbia ufficiale per creare interfacce dal "tocco Apple" \tabularnewline
+Di supporto & Parte 7: "Programmazione con l'AI in pratica" (Capitoli 37-47) & Il metodo completo per sviluppare per iOS con l'aiuto dell'AI \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Elenco delle risorse per imparare lo sviluppo iOS (agosto 2026)\end{center}
+
+\booksection{Conclusione: dal primo App all'ennesimo App}
+
+Guardando indietro, sei passato da “non sapere cosa sia SwiftUI” a installare Xcode, imparare Swift, disegnare le interfacce con SwiftUI, collegare l'app a database e rete, fino a test, pacchetto e pubblicazione — su questa strada hai già completato il tratto più difficile del percorso da zero a uno.
+
+Il mondo della tecnologia cambia in fretta: i framework si aggiornano, gli strumenti si rinnovano, l'AI si prende in carico sempre più lavoro da “tastiera”. Ma una cosa non passa mai di moda: la capacità di scomporre un'idea vaga in passi chiari e realizzarla passo dopo passo. Gli strumenti sono un amplificatore, il modo di ragionare è la fondamenta. L'amplificatore si può sostituire, la fondamenta no.
+
+Non sei più solo "uno che sa usare il telefono": puoi trasformare le idee in testa in app vere che girano su centinaia di milioni di iPhone. Da oggi crea con la tastiera — questo è il lato romantico dell'essere sviluppatori iOS.
+
+\booksection{Bibliografia}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

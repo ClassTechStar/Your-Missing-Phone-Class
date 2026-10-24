@@ -1,0 +1,129 @@
+\bookchapter{פרק 52: ארבעת הרכיבים ומחזור החיים של Activity}
+
+\chapterintro{אם Compose הוא “הפנים” של האפליקציה, הפרק הזה עוסק ב“שלד” שלה. למערכת אנדרואיד יש ארבעה רכיבים בסיסיים, וכל אפליקציה בנויה מהם; והחשוב מביניהם, Activity, מלווה ב“מפת מחזור חיים” שכל מפתח אנדרואיד חייב לחרוט בזיכרון. אחרי הפרק הזה תבינו חידות נצחיות כמו “למה כשחוזרים מהרקע, המצב של האפליקציה שלי נעלם”.}
+
+\booksection{א' ארבעת הרכיבים: עמודי התווך של אנדרואיד}
+
+אנדרואיד מגדירה רשמית ארבעה רכיבים בסיסיים, שכל אחד מהם אחראי על סוג עבודה אחר:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{רכיב} & \textbf{תפקיד} & \textbf{אנלוגיה} \tabularnewline
+\hline
+Activity & מסך גלוי לעין & חזית החנות – המשתמש רואה אותה ומקיים איתה אינטראקציה \tabularnewline
+Service & "הבלתי נראה" שעובד ברקע & פועל המחסן – מנגן מוזיקה, מוריד קבצים; לא צריך מסך \tabularnewline
+BroadcastReceiver & קבלת שידורי מערכת & חדר השער – הרמקול שמכריז "הסוללה נגמרה" ו"הרשת התנתקה" \tabularnewline
+ContentProvider & שיתוף נתונים בין אפליקציות & ארון מסמכים ציבורי – למשל לשתף אנשי קשר עם אפליקציות אחרות \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}סקירה מהירה של ארבעת רכיבי אנדרואיד\end{center}
+
+בשלב המתחיל תבלו כ-95\% מהזמן עם Activity; ‏Service ו-BroadcastReceiver נדרשים לנגינת מוזיקה ולדחיפת התראות; את ContentProvider תשתמשו הכי פחות (המערכת כבר עוטפת את הנתונים הנפוצים). שימו לב: כל אחד מארבעת הרכיבים חייב “להירשם” ב-AndroidManifest.xml – בלי רישום, המערכת פשוט לא תמצא אותם.
+
+\booksection{ב' מחזור החיים של Activity: “מפת האוצר” הראשונה בפיתוח אנדרואיד}
+
+אפליקציה בטלפון עלולה להיקטע בכל רגע: שיחה נכנסת, המשתמש עובר לענות ב-WeChat, למערכת אין מספיק זיכרון והיא מסיימת את התהליך שלך... חיי Activity הם מסע מעגלי על המפה הזאת:
+
+onCreate (לידה: אתחול)
+
+onStart (גלוי)
+
+onResume (בחזית, אינטראקציה)
+
+onPause (מוסתר חלקית)
+
+onStop (בלתי נראה לגמרי)
+
+onDestroy (הריסה)
+
+onRestart / onStart / onResume: בחזרה לחזית, אותו מסלול בכיוון הפוך
+
+\begin{center}\small\color{gray}איור 4: מחזור החיים של Activity (כיוון ההתקדמות: השורה העליונה – לידה השורה התחתונה – יציאה; בדרך חזרה – אותו נתיב בכיוון ההפוך)\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{פונקציית Callback} & \textbf{מתי מופעלת} & \textbf{שימוש טיפוסי} \tabularnewline
+\hline
+onCreate & בעת יצירת ה-Activity (פעם אחת) & טעינת המסך ואתחול הנתונים \tabularnewline
+onStart & המסך הופך לגלוי & התחלת לוגיקה קלה \tabularnewline
+onResume & מקבל מיקוד ומוכן לאינטראקציה & התחלת אנימציות, המשך נגינה \tabularnewline
+onPause & ברגע הכיסוי החלקי או המעבר למסך אחר & השהיית אנימציות, שמירת טיוטה \tabularnewline
+onStop & בלתי נראה לגמרי & שחרור משאבים כבדים, השהיית הורדות \tabularnewline
+onDestroy & לפני ההריסה & ניקוי אחרון \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}השימושים הטיפוסיים של שש פונקציות ה-Callback של מחזור החיים\end{center}
+
+\textbf{אזהרה: סיבוב המסך “הורג” את ה-Activity}\par
+
+המקרה הקלאסי של מתחילים: מסובבים את המסך וכל הטקסט בשדות הקלט נעלם. הסיבה: סיבוב מסך כברירת מחדל הורס ובונה מחדש את ה-Activity (עובר על onDestroy onCreate). הפתרון: שמירת מצב עם rememberSaveable (התחליף ל-remember ב-Compose), שמשחזר את הערכים אוטומטית בעת הבנייה מחדש. נשתמש בזה שוב ושוב בפרקים 6 ו-7.
+
+\booksection{ג' Intent: “כרטיס הנסיעה” לתנועה בתוך האפליקציה ומחוצה לה}
+
+‏Intent (כוונה) הוא “כרטיס הנסיעה” לתקשורת בין רכיבים. כדי לקפוץ ממסך אחד לאחר, לפתוח דפדפן או להפעיל מצלמה – צריך “לקנות כרטיס ולעלות לרכבת”:
+
+\begin{lstlisting}[language=Kotlin]
+// דרך 1: Intent מפורש – מציינים בבירור לאיזה מסך ללכת
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", "דני")     // לוקח "מזוודות" לדרך (הנתונים)
+startActivity(intent)
+
+// דרך 2: Intent גלוי-מרומז – אומרים רק מה לעשות והמערכת מוצאת מי יעשה
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // המערכת תפתח את הדפדפן (או תבקש ממך לבחור)
+\end{lstlisting}
+
+לשתי הדרכים שימושים שונים: מפורשת – למעברים בין מסכים בתוך האפליקציה שלכם; מרומזת – להפעלת יכולות של המערכת או של אפליקציות אחרות (פתיחת דף אינטרנט, שיחה, שיתוף). בפרויקט Compose, בתוך Composable משיגים את ה-Context עם LocalContext.current, ואז אפשר להריץ startActivity.
+
+\booksection{ד' מספר מסכים וניווט}
+
+לכל אפליקציה אמיתית יש כמה מסכים. פתרון הניווט הרשמי המומלץ ל-Compose הוא Navigation Compose (ספריית התלות androidx.navigation):
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "לא ידוע")
+    }
+}
+
+// כדי לנווט מתוך המסך:
+navController.navigate("detail/דני")     // עם פרמטר
+navController.popBackStack()              // חזרה למסך הקודם
+\end{lstlisting}
+
+\begin{tcbinfo}{טיפ: מה עושים כשהמסכים מתרבים?}
+כשהפרויקט גדל, רכזו את כל נתיבי המסכים בקובץ אחד (למשל AppNavGraph.kt) לניהול אחיד – אל תפזרו את הלוגיקה של “לאן עוברים” בין המסכים. זהו הצעד הראשון מ“רץ” אל “ניתן לתחזוקה”.
+
+\end{tcbinfo}
+
+\booksection{ה' בדרך אגב: מהו Fragment (ולמה הספר הזה לא מלמד אותו)}
+
+בחיפוש אחר מדריכים ישנים בוודאי תיתקלו ב-Fragment – הוא “קטע מסך לשימוש חוזר” בתוך Activity, והיה הכוכב הראשי בארכיטקטורות רבי-מסכים ישנות. אבל בעידן ה-Compose מספיק לבנות מסכים ישירות עם פונקציות Composable + נתיבי Navigation, וגם הרשויות הפחיתו בחשיבותו של Fragment. לכן הספר הזה לא כולל אותו בקו הראשי.
+
+ההמלצה שלנו: בפרויקט חדש אל תשתמשו ב-Fragment מיוזמתכם; אבל בקריאת קוד ישן או בראיון עבודה, מספיק שתדעו שזהו “קטע מסך משובץ בתוך Activity”. במשאבי לימוד תעדיפו תמיד מ-2023 ואילך – “לוח השנה הישן” של טכנולוגיית האנדרואיד מתעדכן מהר יותר משחושבים.
+
+\begin{tcbpractice}{הגיע הזמן להתנסות: תנו למונה "זיכרון"}
+שדרגו את המונה מפרק 51: ‏(1) החליפו את remember ב-rememberSaveable וסובבו את המסך כדי לוודא שהמספר נשאר; (2) הוסיפו כפתור “אודות” שמנווט עם Navigation למסך שני שמציג את מספר הגרסה; (3) הדפיסו לוגים (Log.d) ב-onCreate/onPause של שני המסכים וצפו בסדר הקריאות של מחזור החיים דרך Logcat. אחרי שלושת הצעדים האלה, מחזור החיים כבר לא יישאר תיאוריה על הנייר.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{סיכום הפרק}
+\begin{itemize}
+  \item ארבעת הרכיבים: Activity (חזית), Service (רקע), BroadcastReceiver (רמקול), ContentProvider (ארון נתונים)
+  \item שש פונקציות ה-Callback של מחזור החיים: onCreate onStart onResume onPause onStop onDestroy
+  \item סיבוב מסך הורס ובונה מחדש את ה-Activity: שמרו מצב עם rememberSaveable
+  \item ‏Intent הוא "כרטיס הנסיעה": מפורש – למסכים שלכם; מרומז – ליכולות המערכת
+  \item ריבוי מסכים עם Navigation Compose: NavHost + נתיבי composable
+\end{itemize}
+
+\end{tcbsummary}

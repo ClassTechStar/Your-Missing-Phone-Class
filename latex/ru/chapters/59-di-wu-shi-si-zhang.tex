@@ -1,0 +1,196 @@
+\bookchapter{Глава 54. Проект 1 — моя учётная книга расходов (локальная версия)}
+
+\chapterintro{Добро пожаловать в ваш первый «серьёзный проект». Эта учётная книга, хоть и не выходит в сеть, полнокровна: записывает траты, показывает список, сводит статистику по месяцам, умеет удалять и править. Закончив её, вы целиком пройдёте маршрут «данные логика интерфейс». Не спешите срисовывать код — сперва подумайте, потом делайте: это наш вечный принцип.}
+
+\booksection{Думаем о требованиях: сначала задайте пять вопросов}
+
+Прежде чем браться за дело, распутайте замысел с помощью «пяти элементов требований»:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Элемент} & \textbf{Ответ} \tabularnewline
+\hline
+Who (для кого) & Для себя; можно и для родных и друзей \tabularnewline
+What (что делаем) & Запись доходов и расходов, список операций, сводка за месяц, статистика по категориям \tabularnewline
+Why (зачем) & Тренировка + наконец понять, куда уходят деньги \tabularnewline
+How (как делаем) & Kotlin + Compose + Room + MVVM, всё локально, без сервера \tabularnewline
+Constraint (ограничения) & Уложиться в неделю; минимум — Android 8; даже без публикации писать по стандартам для релиза \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Пять элементов требований учётной книги\end{center}
+
+Дальше разбейте проект на крошечные шаги, каждый из которых «уже полезен»: (1) слой данных Room (можно сохранить запись); (2) экран списка (можно смотреть операции); (3) экран ввода (можно добавить запись); (4) удаление и редактирование; (5) карточка месячной сводки. После каждого шага приложение остаётся «вещью, которой можно пользоваться».
+
+\booksection{Слой данных: даём записям «дом»}
+
+Сначала определите, как выглядит одна запись, — поля нужны в меру, без жадности:
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" доход | "expense" расход
+    val amount: Double,      // сумма (в юанях)
+    val category: String,    // категория: еда, транспорт, зарплата…
+    val note: String = "",   // заметка (необязательно)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Добавьте в Dao два «статистических» запроса — это душа учётной книги:
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month в виде "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Совет: почему сумма — Double?}
+Строгие финансовые приложения берут BigDecimal или «Int в копейках», чтобы избежать ошибок плавающей точки (старая песня про 0.1+0.2$\neq$0.3). Для тренировочного проекта Double хватает с избытком; если однажды сделаете настоящий финансовый продукт, вспомните про целые «копейки» — об эти грабли споткнулось неисчислимое число предшественников.
+
+\end{tcbinfo}
+
+\booksection{MVVM: интерфейс и логика живут раздельно}
+
+Позволить интерфейсу напрямую трогать базу? Заработает, но код интерфейса разрастётся в зловонную простыню. Архитектура MVVM разводит всех по ролям: View (интерфейс) только рисует, ViewModel (логический штаб) ведёт данными, Model (Room) отвечает за хранение.
+
+View (интерфейс на Compose)
+
+ViewModel (состояние и логика)
+
+Model (слой данных Room)
+
+\begin{center}\small\color{gray}Рисунок 5. Трёхслойная структура MVVM — данные текут в одну сторону, слои друг к другу не лезут\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // Превращаем Flow в наблюдаемое состояние интерфейса
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // Действия пользователя: вызываем suspend-функции
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+В интерфейсе (Compose) это работает так: val vm: RecordViewModel = viewModel(), затем val list by vm.records.collectAsState() — данные изменились, список сам обновился, а вам не нужно ничего делать. Вот сила союза MVVM + Flow + Compose.
+
+\booksection{Интерфейс: экран списка + экран ввода}
+
+Для списка берите LazyColumn («ленивый» список) — он не тормозит даже на огромных данных:
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // сводная карточка сверху (доходы - расходы = баланс)
+        SummaryCard(records)
+
+        // список операций
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // плавающая кнопка «новая запись»  открывает диалог ввода
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+Для ввода проще всего AlertDialog (диалог): несколько полей ввода + переключатель доход/расход + выпадающий список категорий; по «ОК» вызывается vm.addRecord(...).
+
+\begin{tcbwarn}{Внимание: проверяйте ввод, не ленитесь}
+Поле суммы проверять обязательно: пустое значение, отрицательное число, «abc» — всё это надо отсекать (удобно через toDoubleOrNull()). Одна из самых частых причин падений приложения — «считать пользовательский ввод примерным отличником». Запомните: всё, что вводит пользователь, проверяйте как врага на границе.
+
+\end{tcbwarn}
+
+\booksection{Редактирование и удаление: данным нужен и «вход», и «выход»}
+
+Учётная книга, которая умеет только добавлять, но не удалять, надоедает за три дня. Добавьте две операции:
+
+\begin{lstlisting}[language=Kotlin]
+// Добавим в Dao ещё два метода:
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// В интерфейсе: долгое нажатие на пункт списка открывает меню «правка/удалить» (в Compose — DropdownMenu или AlertDialog)
+// Перед удалением лучше показать подтверждение — случайное удаление больше всего ненавидят пользователи финансовых приложений
+\end{lstlisting}
+
+Два правила взаимодействия: удаление — только с повторным подтверждением (защита от случайного нажатия), при редактировании по возможности подставляйте прежние значения (исправить один знак проще, чем вводить заново). Не недооценивайте эти мелочи — из таких мелочей и складывается ощущение настоящего продукта.
+
+\booksection{Приёмка: три уровня проверки + два задания со звёздочкой}
+
+\booksection{Приёмка: три уровня проверки + два задания со звёздочкой}
+
+Закончив проект, проведите приёмку по трём уровням «функциональность крайние случаи архитектура»: записывается ли, удаляется ли, остаются ли данные после перезапуска (функциональность); не падает ли при вводе суммы 0 или отрицательного числа, не теряются ли данные при повороте экрана (крайние случаи); не смешались ли интерфейс с данными, нет ли вписанных напрямую значений (архитектура).
+
+Как только базовая версия пройдёт приёмку, добавьте себе два «блюда со звёздочкой»:
+
+\begin{enumerate}
+  \item Фильтр по месяцам: сверху переключатель месяца (например, 2026-08 v), и в списке остаются операции только выбранного месяца;
+  \item Круговая диаграмма по категориям: через Canvas в Compose или лёгкую библиотеку диаграмм нарисуйте «куда ушли деньги» пирогом — с ней учётная книга уже похожа на продукт.
+\end{enumerate}
+
+\begin{tcbpractice}{Практика: доделайте за эту неделю}
+Двигайтесь по порядку «слой данных ViewModel экран списка экран ввода карточка сводки», шаг в день. Застряли — швыряйте текст ошибки как есть в поисковик или ИИ (помните седьмой раздел «Практика программирования с ИИ»? Описывая проблему, чётко назовите «ожидаемое поведение, фактическое поведение, шаги воспроизведения»). Когда доделаете, ведите в нём учёт неделю — пользоваться приложением собственного изготовления так приятно, что оно само понесёт вас дальше.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Коротко о главном}
+\begin{itemize}
+  \item Пять элементов требований разбить на маленькие шаги, каждый из которых полезен, — и лишь потом браться за дело
+  \item Слой данных: сущность Record + Dao (включая SQL для месячной статистики) + Database
+  \item Разделение в MVVM: View только рисует, ViewModel ведёт логику, Model хранит
+  \item Flow + stateIn + collectAsState: данные изменились — интерфейс обновился сам
+  \item LazyColumn — «ленивый» список; AlertDialog — для ввода
+  \item Трёхуровневая приёмка (функциональность / крайние случаи / архитектура) + задания со звёздочкой (фильтр по месяцам, круговая диаграмма)
+\end{itemize}
+
+\end{tcbsummary}

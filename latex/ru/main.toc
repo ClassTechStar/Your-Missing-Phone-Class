@@ -1,0 +1,530 @@
+\babel@toc {russian}{}\relax 
+\contentsline {part}{Часть 1 «Основы» (главы 0-7)}{2}{part*.2}%
+\contentsline {chapter}{Глава 0: Привет, прежде чем начать}{2}{chapter*.3}%
+\contentsline {section}{I. Что эта книга может (и не может) для вас сделать?}{2}{section*.4}%
+\contentsline {section}{II. Наши условные обозначения}{2}{section*.4}%
+\contentsline {section}{III. Android и iOS — расскажем о обоих}{2}{section*.4}%
+\contentsline {section}{IV. Объём памяти телефона: почему купил 128 ГБ, а доступно меньше 110 ГБ?}{3}{section*.4}%
+\contentsline {section}{V. Ваш телефон — это «хранилище цифровых активов»}{3}{Item.3}%
+\contentsline {chapter}{Глава 1: Привет, мой личный компьютер}{5}{chapter*.5}%
+\contentsline {section}{I. «Внутренние органы» телефона: глубокий разбор}{5}{section*.6}%
+\contentsline {section}{II. Операционные системы: Android VS iOS VS HarmonyOS}{12}{Item.11}%
+\contentsline {section}{III. Полный разбор интерфейсов телефона}{12}{Item.11}%
+\contentsline {section}{IV. Система продуктов телефонов и правила именования}{13}{Item.11}%
+\contentsline {section}{V. Модем и антенна: невидимые герои связи телефона}{14}{Item.11}%
+\contentsline {section}{VI. Сколько ролей на самом деле играет ваш телефон?}{16}{Item.11}%
+\contentsline {section}{Приложение: Разбор расширения памяти на Android-телефонах}{16}{Item.21}%
+\contentsline {section}{Приложение к главе 1: Специальный раздел об операционной системе HarmonyOS}{19}{Item.25}%
+\contentsline {chapter}{Глава 2: Наведи порядок в своей цифровой комнате — управление файлами}{23}{chapter*.7}%
+\contentsline {section}{I. Трёхуровневая система хранения: ваш цифровой склад}{23}{section*.8}%
+\contentsline {section}{II. Знакомство с «Файловым менеджером»}{23}{Item.32}%
+\contentsline {section}{III. Структура файловой системы: углублённое понимание}{24}{Item.32}%
+\contentsline {section}{IV. Резервное копирование и восстановление данных: страховка для ваших данных}{24}{Item.32}%
+\contentsline {section}{V. Безопасность файлов: защитите вашу приватность}{25}{Item.35}%
+\contentsline {section}{VI. Не хватает места? Устроим генеральную уборку}{25}{Item.35}%
+\contentsline {section}{VII. Полный разбор распространённых форматов файлов}{25}{Item.35}%
+\contentsline {section}{VIII. Управление изображениями и файловой системой: наведём порядок в активах}{27}{Item.35}%
+\contentsline {chapter}{Глава 3: Подключаем телефон к «линии жизни» — Сеть}{29}{chapter*.9}%
+\contentsline {section}{Не теряйся в сети — различаем «дороги» и «машины» Wi-Fi и мобильного трафика}{29}{section*.10}%
+\contentsline {section}{Мобильная сеть (4G/5G) и трафик}{30}{section*.10}%
+\contentsline {section}{Wi-Fi: подключение, общий доступ и безопасность}{31}{section*.10}%
+\contentsline {section}{Bluetooth: универсальный боец ближней беспроводной связи}{32}{section*.10}%
+\contentsline {section}{ИК-пульт: телефон как универсальный пульт ДУ}{33}{section*.10}%
+\contentsline {section}{NFC: магия одного касания}{33}{section*.10}%
+\contentsline {section}{Персональная точка доступа: превращаем телефон в Wi-Fi-роутер}{34}{section*.10}%
+\contentsline {chapter}{Глава 4: Установка и управление приложениями — «Набор навыков» телефона}{36}{chapter*.11}%
+\contentsline {section}{Официальные магазины: самый безопасный «супермаркет приложений»}{36}{section*.12}%
+\contentsline {section}{Режим чистоты / защиты: включаем «антивирусную стену» телефона}{36}{section*.12}%
+\contentsline {section}{Сторонние источники и «электронные паразиты»: крайне высокий риск!}{37}{section*.12}%
+\contentsline {section}{Установка, обновление, удаление}{38}{Item.47}%
+\contentsline {section}{Управление разрешениями: вы — «начальник» приложений}{38}{Item.47}%
+\contentsline {section}{Состав установочного пакета приложения}{39}{Item.50}%
+\contentsline {chapter}{Глава 5: Пусть телефон понимает вас лучше — Базовые настройки}{42}{chapter*.13}%
+\contentsline {section}{Звук и вибрация}{42}{section*.14}%
+\contentsline {section}{Дисплей и яркость}{42}{section*.14}%
+\contentsline {section}{Обои, темы и рабочий стол}{43}{section*.14}%
+\contentsline {section}{Настройки эффективности: превращаем телефон в ваш «внешний мозг»}{43}{section*.14}%
+\contentsline {section}{Специальные возможности и универсальный доступ: сила технологий во благо}{44}{section*.14}%
+\contentsline {chapter}{Глава 6: Защита вашей цифровой жизни — Безопасность и конфиденциальность}{49}{chapter*.15}%
+\contentsline {section}{Блокировка экрана: первая физическая линия обороны}{49}{section*.16}%
+\contentsline {section}{«Найти мой телефон»: главный инструмент защиты от кражи}{49}{Item.76}%
+\contentsline {section}{Обновление системы: ставим заплатки, закрываем дыры}{50}{Item.76}%
+\contentsline {section}{Распознавание и предотвращение телекоммуникационного мошенничества}{50}{Item.76}%
+\contentsline {section}{Защита от «доксинга» и атак социальной инженерии: разрываем цепь утечки личных данных}{51}{Item.76}%
+\contentsline {section}{Защита конфиденциальности: ваши данные — ваша собственность}{52}{Item.76}%
+\contentsline {section}{Чек-лист «Скорой помощи» при утере / краже}{53}{Item.76}%
+\contentsline {section}{Безопасность SIM-карты и eSIM}{53}{Item.82}%
+\contentsline {chapter}{Глава 7: Полный разбор передовых функций}{55}{chapter*.17}%
+\contentsline {section}{Спутниковая связь: помощь даже без сигнала}{55}{section*.18}%
+\contentsline {section}{Связь без сети: новый способ ближней коммуникации}{56}{Item.89}%
+\contentsline {section}{Обнаружение аварий: спасение жизни в критический момент}{56}{Item.89}%
+\contentsline {section}{Технология SparkLink: беспроводная связь следующего поколения}{57}{Item.92}%
+\contentsline {part}{II. Раздел программного обеспечения (главы 8–14)}{60}{part*.19}%
+\contentsline {chapter}{Глава 8: Связь: SMS, звонки и соцсети}{60}{chapter*.20}%
+\contentsline {section}{Продвинутые функции приложения «Телефон»}{60}{section*.21}%
+\contentsline {section}{SMS и iMessage/RCS}{62}{section*.21}%
+\contentsline {section}{WeChat/QQ: управление национальными мессенджерами}{63}{section*.21}%
+\contentsline {section}{Сравнение видеозвонков}{64}{Item.100}%
+\contentsline {section}{Электронная почта: настройка и использование на телефоне}{65}{Item.100}%
+\contentsline {chapter}{Глава 9: Мобильный офис и обучение}{67}{chapter*.22}%
+\contentsline {section}{Обработка документов: редактирование и творчество на ладони}{67}{section*.23}%
+\contentsline {section}{Приложения для заметок: от быстрых записей к системе знаний}{67}{section*.23}%
+\contentsline {section}{Сканирование и OCR: перенос бумажного мира в телефон}{68}{section*.23}%
+\contentsline {section}{Как выбрать облачное хранилище: нет лучшего, есть подходящее именно вам}{68}{section*.23}%
+\contentsline {section}{Реальный сценарий мобильной работы}{69}{section*.23}%
+\contentsline {chapter}{Глава 10: Мобильные платежи и бытовые услуги}{71}{chapter*.24}%
+\contentsline {section}{Как привязать банковскую карту?}{71}{section*.25}%
+\contentsline {section}{Код оплаты: «кто видит — тот и получает деньги»}{71}{Item.122}%
+\contentsline {section}{Эти настройки безопасности за 5 минут сэкономят вам массу нервов}{72}{Item.122}%
+\contentsline {section}{Автобус и метро: телефон как транспортная карта}{72}{Item.122}%
+\contentsline {section}{Коммунальные платежи, доставка еды, такси}{72}{Item.122}%
+\contentsline {section}{Медицинская страховка, соцстрахование и госуслуги через телефон}{73}{Item.122}%
+\contentsline {chapter}{Глава 11: Фотография и управление снимками}{74}{chapter*.26}%
+\contentsline {section}{Допускаете ли вы эти ошибки?}{74}{section*.27}%
+\contentsline {section}{Несколько приёмов для мгновенного повышения выхода удачных кадров}{74}{section*.27}%
+\contentsline {section}{Портретный режим и профессиональный режим}{75}{section*.27}%
+\contentsline {section}{Постобработка: не переусердствуйте, достаточно лишь нужного}{75}{section*.27}%
+\contentsline {section}{Слишком много фото? Стратегия организации}{76}{section*.27}%
+\contentsline {section}{Скриншоты и запись экрана}{76}{section*.27}%
+\contentsline {section}{Приложение к главе 11: Профессиональные знания в области технологий изображения}{77}{Item.131}%
+\contentsline {chapter}{Глава 12: Аудиовизуальные развлечения и чтение}{85}{chapter*.28}%
+\contentsline {section}{Прослушивание музыки: какое приложение выбрать и как настроить комфортное звучание}{85}{section*.29}%
+\contentsline {section}{Подкасты: «компаньон для ушей» в дороге}{86}{section*.29}%
+\contentsline {section}{Просмотр видео: правильный подход от плеера до стриминга}{86}{section*.29}%
+\contentsline {section}{Чтение электронных книг: на телефоне тоже можно читать с удовольствием}{87}{section*.29}%
+\contentsline {section}{Мобильные игры: играть с удовольствием и без вреда для телефона}{87}{section*.29}%
+\contentsline {chapter}{Глава 13: Рекомендации приложений-инструментов}{89}{chapter*.30}%
+\contentsline {section}{Инструменты продуктивности: время и внимание}{89}{section*.31}%
+\contentsline {section}{Здоровье и спорт}{91}{section*.31}%
+\contentsline {section}{Путешествия и поездки}{92}{section*.31}%
+\contentsline {section}{Введение в автоматизацию}{94}{section*.31}%
+\contentsline {section}{Браузеры и поисковики: ваш вход в интернет}{94}{section*.31}%
+\contentsline {section}{Практические системные инструменты: чистка, защита от спама и безопасность}{97}{Item.147}%
+\contentsline {section}{Предупреждения о погоде, стихийных бедствиях и землетрясениях}{99}{Item.151}%
+\contentsline {section}{Межсетевое взаимодействие: удалённый доступ, быстрая передача и безопасность аккаунтов}{102}{Item.155}%
+\contentsline {chapter}{Глава 14: Менеджеры паролей — специальная тема}{106}{chapter*.32}%
+\contentsline {section}{Зачем вам нужен менеджер паролей?}{106}{section*.33}%
+\contentsline {section}{Как работает менеджер паролей}{106}{section*.33}%
+\contentsline {section}{Введение в принципы шифрования}{106}{Item.163}%
+\contentsline {section}{Рекомендации популярных менеджеров паролей}{108}{Item.167}%
+\contentsline {section}{Реальная оценка надёжности паролей}{108}{Item.167}%
+\contentsline {section}{Passkey: будущее беспарольного входа}{110}{Item.173}%
+\contentsline {section}{Аппаратные ключи безопасности}{112}{Item.190}%
+\contentsline {section}{Совместное использование паролей в семье и команде}{114}{Item.196}%
+\contentsline {section}{Лучшие практики использования менеджера паролей}{116}{Item.208}%
+\contentsline {part}{III. Продвинутый раздел (главы 15–20)}{118}{part*.34}%
+\contentsline {chapter}{Глава 15: Наука о батареях и оптимизация автономной работы}{118}{chapter*.35}%
+\contentsline {section}{I. Как работает батарея? Циклы и состояние здоровья}{118}{section*.36}%
+\contentsline {section}{II. Мифы о зарядке? Быстрая, беспроводная и золотое правило}{118}{section*.36}%
+\contentsline {section}{III. Полный разбор протоколов быстрой зарядки: почему ваше зарядное устройство заряжает медленно?}{119}{section*.36}%
+\contentsline {section}{IV. Новые технологии батарей: кремний-углеродный отрицательный электрод (SiC)}{122}{Item.217}%
+\contentsline {section}{V. Настоящие советы по экономии заряда}{123}{Item.217}%
+\contentsline {chapter}{Глава 16: Система учётных записей и облачные сервисы}{124}{chapter*.37}%
+\contentsline {section}{I. Сколько всего привязано к вашей учётной записи?}{124}{section*.38}%
+\contentsline {section}{II. Три обязательных дела — сделайте прямо сейчас}{124}{section*.38}%
+\contentsline {section}{III. iCloud: «воздух» для пользователей Apple}{125}{Item.223}%
+\contentsline {section}{IV. Синхронизация и резервное копирование — не путайте}{126}{Item.223}%
+\contentsline {section}{V. Матрица учётных записей пользователя Android}{126}{Item.223}%
+\contentsline {section}{VI. Семейный доступ: пусть близкие тоже получат выгоду}{127}{Item.223}%
+\contentsline {chapter}{Глава 17: Связь телефона с другими устройствами}{128}{chapter*.39}%
+\contentsline {section}{I. Связка с компьютером: телефон и компьютер больше не два разных мира}{128}{section*.40}%
+\contentsline {section}{II. Трансляция на телевизор: смотрим всей семьёй}{128}{section*.40}%
+\contentsline {section}{III. Умные часы и браслеты: монитор здоровья на запястье}{129}{section*.40}%
+\contentsline {section}{IV. Умный дом: телефон как «главный выключатель»}{129}{section*.40}%
+\contentsline {section}{V. Bluetooth-наушники и колонки: свобода без проводов}{130}{section*.40}%
+\contentsline {section}{VI. Автомобильные системы: безопасный партнёр за рулём}{131}{section*.40}%
+\contentsline {section}{VII. Безопасность и конфиденциальность при связке устройств}{131}{section*.40}%
+\contentsline {chapter}{Глава 18: Резервное копирование и миграция данных}{133}{chapter*.41}%
+\contentsline {section}{I. Сначала разберитесь: что в вашем телефоне пропадёт навсегда при потере}{133}{section*.42}%
+\contentsline {section}{II. Полное резервное копирование: всё сразу}{133}{section*.42}%
+\contentsline {section}{III. Стратегия выборочного резервного копирования: важное сохраните отдельно}{134}{section*.42}%
+\contentsline {section}{IV. Руководство по смене телефона: со старого на новый}{135}{section*.42}%
+\contentsline {section}{V. Золотое правило резервного копирования: принцип 3-2-1}{135}{section*.42}%
+\contentsline {chapter}{Глава 19: Диагностика неисправностей и самостоятельное спасение}{137}{chapter*.43}%
+\contentsline {section}{I. Телефон тормозит и греется — самый частый вопрос}{137}{section*.44}%
+\contentsline {section}{II. Приложения вылетают и не отвечают — когда приложение не слушается}{137}{Item.242}%
+\contentsline {section}{III. Не заряжается или медленно заряжается — возможно, батарея не виновата}{138}{Item.247}%
+\contentsline {section}{IV. Сеть не подключается, Wi-Fi постоянно обрывается}{138}{Item.247}%
+\contentsline {section}{V. Проблемы с экраном: не реагирует на касания, мерцает, остаются следы}{139}{Item.251}%
+\contentsline {section}{VI. Не включается, завис на логотипе — не паникуйте}{139}{Item.251}%
+\contentsline {section}{VII. Проблемы со звуком: динамик не работает, тихий голос при разговоре}{139}{Item.251}%
+\contentsline {section}{VIII. Поиск официального ремонта: избегайте подводных камней}{140}{Item.251}%
+\contentsline {section}{Глава 20: Режим разработчика и расширенные права}{141}{Item.256}%
+\contentsline {section}{Приложение к главе 20: Termux — портативная среда Linux-терминала на устройстве Android}{148}{Item.269}%
+\contentsline {part}{IV. Раздел «Выход за пределы» (главы 21–26)}{153}{part*.45}%
+\contentsline {chapter}{Глава 21: Глубокое погружение в мобильные сети и информационную безопасность}{153}{chapter*.46}%
+\contentsline {section}{VPN: «мантия-невидимка» в сети}{153}{section*.47}%
+\contentsline {section}{«Сладкая ловушка» публичного Wi-Fi — опаснее, чем вы думаете}{153}{section*.47}%
+\contentsline {section}{Как HTTPS вас защищает? — SSL/TLS-рукопожатие}{154}{section*.47}%
+\contentsline {section}{Безопасность DNS: ваш «сетевой телефонный справочник» в безопасности?}{155}{Item.281}%
+\contentsline {section}{Действительно ли «режим инкогнито» делает вас невидимым?}{155}{Item.281}%
+\contentsline {section}{Конфиденциальность браузера: не дайте браузеру себя продать}{155}{Item.281}%
+\contentsline {section}{Практический чек-лист безопасности: начните защищать себя прямо сейчас}{156}{Item.281}%
+\contentsline {chapter}{Глава 22: Как AI работает в вашем телефоне}{158}{chapter*.48}%
+\contentsline {section}{AI-камера: ваша «тёмная комната» переехала в телефон}{158}{section*.49}%
+\contentsline {section}{Голосовой помощник: как ваш «секретарь на голосе» вас понимает?}{158}{section*.49}%
+\contentsline {section}{Локальный AI vs. облачный AI}{158}{Item.294}%
+\contentsline {section}{Большие модели AI и телефон: ваш карманный интеллектуальный помощник}{158}{Item.294}%
+\contentsline {section}{Типичные сценарии использования на практике}{160}{Item.294}%
+\contentsline {section}{Оптимизация промптов: «формула общения», чтобы AI слушался вас}{161}{Item.294}%
+\contentsline {section}{Ограничения и вызовы AI: сохраняйте ясность суждений}{164}{Item.299}%
+\contentsline {chapter}{Глава 23: Программное мышление и введение в автоматизацию}{166}{chapter*.50}%
+\contentsline {section}{Что такое автоматизация?}{166}{section*.51}%
+\contentsline {section}{iOS «Быстрые команды» — инструмент автоматизации для пользователей Apple}{166}{Item.305}%
+\contentsline {section}{Автоматизация на Android — Tasker и его друзья}{167}{Item.305}%
+\contentsline {section}{Повседневное применение мышления автоматизации}{168}{Item.305}%
+\contentsline {section}{Руководство по подводным камням: частые проблемы автоматизации}{169}{Item.305}%
+\contentsline {chapter}{Приложение к главе 23: Введение в GitHub — от хостинга кода до платформы сотрудничества}{171}{chapter*.52}%
+\contentsline {section}{Что такое GitHub?}{171}{section*.53}%
+\contentsline {section}{Разница между Git и GitHub (ключевые понятия!)}{171}{section*.53}%
+\contentsline {section}{Ключевые концепции и функции GitHub}{172}{section*.53}%
+\contentsline {section}{Регистрация и первый шаг: за 5 минут создайте свой первый репозиторий}{173}{section*.53}%
+\contentsline {section}{Базовый рабочий процесс: от локального к облачному}{173}{Item.318}%
+\contentsline {section}{Командный рабочий процесс: как работает Pull Request}{174}{Item.323}%
+\contentsline {section}{Типичные сценарии использования GitHub}{174}{Item.329}%
+\contentsline {section}{Советы новичкам}{175}{Item.329}%
+\contentsline {section}{Итог: почему каждый должен знать GitHub}{176}{Item.329}%
+\contentsline {chapter}{Глава 24: Root-права и BL-блокировка: глубокий разбор}{177}{chapter*.54}%
+\contentsline {section}{Глубокое понимание Bootloader}{177}{section*.55}%
+\contentsline {section}{Подробная процедура разблокировки BL (на примере Xiaomi)}{179}{Item.337}%
+\contentsline {section}{Различные решения для Root}{179}{Item.341}%
+\contentsline {section}{Введение в прошивку}{179}{Item.341}%
+\contentsline {section}{Samsung Knox: необратимая цена разблокировки BL}{179}{Item.341}%
+\contentsline {section}{Часто задаваемые вопросы (Q\& A)}{180}{Item.341}%
+\contentsline {chapter}{Глава 25: Утилизация б/у телефона и цифровое наследие}{181}{chapter*.56}%
+\contentsline {section}{«Эвтаназия» старого телефона: руководство по безопасной продаже или передаче}{181}{section*.57}%
+\contentsline {section}{II. Цифровое наследство: как сохранить вашу социальную душу?}{183}{Item.346}%
+\contentsline {section}{III. Экологичный финал}{187}{Item.357}%
+\contentsline {chapter}{Глава 26: Передовые технологии смартфонов сегодня}{189}{chapter*.58}%
+\contentsline {section}{I. AI-смартфон: маркетинговый трюк или реальная революция?}{189}{section*.59}%
+\contentsline {section}{II. Сравнение AI-стратегий производителей: кто делает серьёзно, а кто — наклейка?}{189}{section*.59}%
+\contentsline {section}{III. Спутниковая связь: от флагманского «трюка» к стандарту среднего сегмента}{190}{section*.59}%
+\contentsline {section}{IV. Зрелость экосистемы складных экранов: можно ли использовать как основной телефон?}{190}{section*.59}%
+\contentsline {section}{V. 6G и Wi-Fi 7: скорость и границы связи следующего поколения}{191}{section*.59}%
+\contentsline {section}{VI. Кремний-углеродный анод: автономность наконец совершила прорыв на уровне материалов}{191}{section*.59}%
+\contentsline {section}{VII. Обзор главы: одно предложение для каждой технологии}{192}{section*.59}%
+\contentsline {part}{Пять. Практикум (главы 27-32)}{195}{part*.60}%
+\contentsline {chapter}{Глава 27: Родителям тоже будет легко — полное руководство по адаптации телефона для пожилых}{195}{chapter*.61}%
+\contentsline {section}{Ноль. Сначала настроим правильный настрой: дело не в том, что «пожилые не разбираются», а в том, что «телефон сделан плохо»}{195}{section*.62}%
+\contentsline {section}{Один. Первый шаг: включите «Простой режим» — телефон станет чище и понятнее}{195}{section*.62}%
+\contentsline {section}{Два. Если не включать простой режим, можно настроить вручную — «крупный шрифт + крупные значки» за пять шагов}{196}{section*.62}%
+\contentsline {section}{Три. Защита от мошенничества — эту главу обязательно прочитайте вместе с пожилыми родственниками}{197}{Item.376}%
+\contentsline {section}{Четыре. Удалённая помощь — даже из другого города вы можете починить телефон родителей}{198}{Item.379}%
+\contentsline {section}{Пять. «Адаптация WeChat для пожилых» — достаточно сказать им эти несколько вещей}{198}{Item.379}%
+\contentsline {section}{Шесть. Что делать, если телефон потерялся? Помогите пожилым составить «аварийный план»}{199}{Item.379}%
+\contentsline {section}{Сем. Совместимость беспроводных наушников и слуховых аппаратов — недооценённая полезная функция}{199}{Item.382}%
+\contentsline {section}{Восемь. Функции здоровья — телефон не только средство связи}{200}{Item.382}%
+\contentsline {chapter}{Глава 28: Покупаем с умом — финальное руководство по выбору смартфона}{201}{chapter*.63}%
+\contentsline {section}{Ноль. Метод трёх шагов: потребности бюджет модель}{201}{section*.64}%
+\contentsline {section}{Один. На что смотреть в характеристиках — не нужно знать всё, достаточно пяти пунктов}{201}{Item.385}%
+\contentsline {section}{Два. Рекомендации по бюджету (на середину 2026 года)}{202}{Item.385}%
+\contentsline {section}{Три. Выбор по сценарию — какие у вас задачи?}{204}{Item.385}%
+\contentsline {section}{Четыре. Пять типичных ловушек — проверьте перед покупкой}{204}{Item.385}%
+\contentsline {section}{Пять. Когда покупать выгоднее всего?}{205}{Item.390}%
+\contentsline {section}{Шесть. Где покупать — как выбрать надёжный канал?}{205}{Item.390}%
+\contentsline {chapter}{Глава 29: Цифровое здоровье — как выстроить здоровые отношения со смартфоном}{207}{chapter*.65}%
+\contentsline {section}{Сначала посмотрите на своё «экранное время» — цифры отрезвляют}{207}{section*.66}%
+\contentsline {section}{Установите «лимит использования» для приложений — поставьте себе ограничитель скорости}{207}{section*.66}%
+\contentsline {section}{Правильное использование режима «Не беспокоить» — не отключение уведомлений, а избавление от тревожности}{208}{Item.398}%
+\contentsline {section}{Защита зрения — не приложение, а привычка: правило 20-20-20}{208}{Item.398}%
+\contentsline {section}{Самопомощь для шейного отдела «поколения с опущенной головой»}{208}{Item.398}%
+\contentsline {section}{Сон и смартфон — привычка, которую нужно изменить в первую очередь}{209}{Item.398}%
+\contentsline {section}{Информационная тревожность — учитесь «выборочной слепоте»}{209}{Item.398}%
+\contentsline {chapter}{Глава 30: Трансляция экрана, презентации и автомобильная интеграция}{211}{chapter*.67}%
+\contentsline {section}{I. Три лагеря беспроводной трансляции экрана — не путайте}{211}{section*.68}%
+\contentsline {section}{II. Проводная трансляция экрана — стабильнее и с нулевой задержкой}{212}{section*.68}%
+\contentsline {section}{III. Телефон превращается в компьютер — режим рабочего стола}{212}{section*.68}%
+\contentsline {section}{IV. Автомобильная интеграция — правильный способ пользоваться телефоном за рулём}{212}{section*.68}%
+\contentsline {section}{V. Трансляция экрана в переговорной на практике — без суеты}{213}{section*.68}%
+\contentsline {chapter}{Глава 31: Съёмка коротких видео и введение в создание контента}{215}{chapter*.69}%
+\contentsline {section}{I. Прежде чем снимать, решите: для кого вы снимаете?}{215}{section*.70}%
+\contentsline {section}{II. Базовые настройки съёмки на телефоне — 5 обязательных действий перед съёмкой}{215}{Item.413}%
+\contentsline {section}{III. Пять приёмов движения камеры — оживите кадр}{216}{Item.418}%
+\contentsline {section}{IV. Введение в монтаж — достаточно CapCut}{216}{Item.418}%
+\contentsline {section}{V. Важность обложки — 70\% людей смотрят только по обложке}{216}{Item.424}%
+\contentsline {section}{VI. Три принципа создания контента}{217}{Item.424}%
+\contentsline {chapter}{Глава 32: Экстренная помощь по безопасности телефона}{218}{chapter*.71}%
+\contentsline {section}{Сценарий 0: землетрясение / экстремальная погода — как телефон помогает выжить}{218}{section*.72}%
+\contentsline {section}{Сценарий 1: телефон потерян/украден — золотые 30 минут}{219}{Item.439}%
+\contentsline {section}{Сценарий 2: вас обманули — 72 золотых часа}{220}{Item.448}%
+\contentsline {section}{Сценарий 3: телефон заражён вирусом/трояном — что делать?}{220}{Item.454}%
+\contentsline {section}{Сценарий 4: аккаунт взломан — быстро верните контроль}{220}{Item.454}%
+\contentsline {section}{Сценарий 5: пришло шантажное сообщение — не бойтесь и не платите}{221}{Item.460}%
+\contentsline {section}{Сценарий 6: ИИ-подмена лица/голоса — глазам больше верить нельзя}{221}{Item.460}%
+\contentsline {section}{Сценарий 7: SIM swap (угон SIM) — ваш номер «украли»}{222}{Item.465}%
+\contentsline {part}{Часть 6 «Перспективы и связь с автомобилем» (главы 33-34)}{226}{part*.73}%
+\contentsline {chapter}{Глава 33: Взгляд в будущее — куда идёт смартфон}{226}{chapter*.74}%
+\contentsline {section}{I. AR/VR и пространственные вычисления: «второй рабочий стол» за пределами телефона}{226}{section*.75}%
+\contentsline {section}{II. Нейроинтерфейс: мысль становится средой взаимодействия}{226}{section*.75}%
+\contentsline {section}{III. «Растворение» телефона и новый фундамент идентичности}{227}{section*.75}%
+\contentsline {section}{IV. Этические размышления: мы — хозяева телефона или нет?}{227}{section*.75}%
+\contentsline {section}{V. Оставаясь на связи, оставайтесь независимыми — ваша философия цифровой жизни}{227}{section*.75}%
+\contentsline {chapter}{Глава 34: Глубокое руководство по автомобильной интеграции}{229}{chapter*.76}%
+\contentsline {section}{I. Три маршрута автотелефонной интеграции}{229}{section*.77}%
+\contentsline {section}{II. Сравнение CarPlay / Android Auto / HiCar}{229}{section*.77}%
+\contentsline {section}{III. HarmonyOS Cockpit: бесшовная передача задач между телефоном и мультимедиа}{230}{section*.77}%
+\contentsline {section}{IV. Мультимедиа новых автопроизводителей}{230}{section*.77}%
+\contentsline {section}{V. Телефон вместо мультимедиа — реально ли?}{231}{section*.77}%
+\contentsline {section}{VI. Практические приёмы}{231}{section*.77}%
+\contentsline {part}{Спецтема: дети и смартфон (глава 35)}{234}{part*.78}%
+\contentsline {chapter}{Глава 35: Дети и смартфоны}{234}{chapter*.79}%
+\contentsline {section}{В каком возрасте давать ребёнку телефон?}{234}{section*.80}%
+\contentsline {section}{Полный гид по родительскому контролю}{235}{section*.80}%
+\contentsline {section}{Режим для подростков}{236}{section*.80}%
+\contentsline {section}{Цифровая грамотность}{236}{section*.80}%
+\contentsline {section}{Привычки здорового использования}{237}{section*.80}%
+\contentsline {section}{Цифровое наследие и дети}{237}{section*.80}%
+\contentsline {chapter}{Глава 36: Телефон и умный дом — делаем дом умнее}{239}{chapter*.81}%
+\contentsline {section}{Протоколы умного дома: выбор имеет значение}{239}{section*.82}%
+\contentsline {section}{Сравнение трёх экосистем}{240}{section*.82}%
+\contentsline {section}{Телефон как центр умного дома}{240}{section*.82}%
+\contentsline {section}{Рекомендации по стартовому набору}{241}{section*.82}%
+\contentsline {section}{Вопросы безопасности}{241}{section*.82}%
+\contentsline {part}{Часть 7 «Практика программирования с ИИ» (главы 37-47)}{244}{part*.83}%
+\contentsline {chapter}{Глава 37. Парадигмальная революция — от «писать код» к «командовать ИИ, который пишет код»}{244}{chapter*.84}%
+\contentsline {section}{Рождение Vibe Coding: движение, начавшееся с одной фразы}{244}{section*.85}%
+\contentsline {section}{Ситуация в 2026 году: эра Agentic Engineering}{244}{section*.85}%
+\contentsline {section}{Ключевой сдвиг в сознании: от Coder к Conductor}{245}{Item.496}%
+\contentsline {section}{Почему методология важнее инструментов}{246}{Item.496}%
+\contentsline {chapter}{Глава 38. Пять принципов мышления в ИИ-программировании}{248}{chapter*.86}%
+\contentsline {section}{Принцип 1: Think Before Coding (сначала думай, потом кодируй)}{248}{section*.87}%
+\contentsline {section}{Принцип 2: Simplicity First (простота превыше всего)}{249}{Item.499}%
+\contentsline {section}{Принцип 3: Surgical Changes (хирургически точные правки)}{250}{Item.499}%
+\contentsline {section}{Принцип 4: Goal-Driven Execution (исполнение от цели)}{250}{lstnumber.-2.1}%
+\contentsline {section}{Принцип 5: Iterate and Verify (итерируй и проверяй)}{251}{lstnumber.-2.1}%
+\contentsline {section}{Harness Engineering: Agent = Model + Harness}{252}{lstnumber.-2.1}%
+\contentsline {chapter}{Глава 39. Инженерия контекста — помогите ИИ понять ваши намерения}{253}{chapter*.88}%
+\contentsline {section}{Файл памяти проекта: «долговременная память» ИИ}{253}{section*.89}%
+\contentsline {section}{Разработка по спецификациям (SDD)}{254}{lstnumber.-3.24}%
+\contentsline {section}{Управление окном контекста}{255}{Item.504}%
+\contentsline {section}{Практические приёмы инженерии контекста}{255}{Item.504}%
+\contentsline {chapter}{Глава 40. Инженерия требований — превратите идеи в инструкции, выполнимые для ИИ}{257}{chapter*.90}%
+\contentsline {section}{От смутной идеи к структурированному требованию}{257}{section*.91}%
+\contentsline {section}{Искусство послойной декомпозиции требований}{258}{section*.91}%
+\contentsline {section}{Шаблон PRD и практика написания}{258}{Item.513}%
+\contentsline {section}{Практика: полный прогон от идеи до решения}{259}{lstnumber.-4.29}%
+\contentsline {chapter}{Глава 41. Панорама ИИ-инструментов для программирования в 2026 году}{261}{chapter*.92}%
+\contentsline {section}{Три школы и рамка выбора}{261}{section*.93}%
+\contentsline {section}{Школа ИИ, встроенного в IDE}{262}{section*.93}%
+\contentsline {section}{Школа терминальных агентов}{262}{section*.93}%
+\contentsline {section}{Облачные конструкторы (Builder)}{263}{section*.93}%
+\contentsline {section}{Инструменты меняются — методология остаётся}{263}{section*.93}%
+\contentsline {chapter}{Глава 42: Панорама больших моделей и практика работы с API}{265}{chapter*.94}%
+\contentsline {section}{Ведущие международные модели: расстановка трёх лидеров}{265}{section*.95}%
+\contentsline {section}{Ведущие китайские модели: богатое разнообразие}{267}{section*.95}%
+\contentsline {section}{Каркас принятия решения при выборе модели}{270}{section*.95}%
+\contentsline {section}{Первые шаги с API: подключаем большую модель с нуля}{271}{section*.95}%
+\contentsline {section}{Руководство по покупке Token Plan}{274}{lstnumber.-8.14}%
+\contentsline {section}{Практика: подключаем API большой модели в проекте}{277}{Item.522}%
+\contentsline {chapter}{Глава 43: Инженерия диалога — техника эффективного общения с AI}{280}{chapter*.96}%
+\contentsline {section}{Многослойная стратегия промптов}{280}{section*.97}%
+\contentsline {section}{Диалог при отладке: как описать ошибку, чтобы AI быстро её нашёл}{281}{section*.97}%
+\contentsline {section}{Стратегии итераций: маленькие шаги против большого рефакторинга}{281}{lstnumber.-11.1}%
+\contentsline {section}{Управление контекстом в многоходовом диалоге}{282}{lstnumber.-11.1}%
+\contentsline {chapter}{Глава 44: Практика от 0 до 1 — полный цикл проекта}{284}{chapter*.98}%
+\contentsline {section}{Проект первый: минималистичный сайт личных инструментов (начальный уровень)}{284}{section*.99}%
+\contentsline {section}{Проект второй: fullstack-система учёта финансов (средний уровень)}{285}{lstnumber.-12.13}%
+\contentsline {section}{Проект третий: приложение с усилением ИИ (продвинутый уровень)}{286}{lstnumber.-14.18}%
+\contentsline {section}{Универсальный чек-лист рабочего процесса}{287}{lstnumber.-14.18}%
+\contentsline {chapter}{Глава 45: Гарантия качества — делаем код от ИИ надёжным}{289}{chapter*.100}%
+\contentsline {section}{Тестовая дисциплина: поручите ИИ писать тесты}{289}{section*.101}%
+\contentsline {section}{Приёмы ревью кода}{290}{lstnumber.-15.14}%
+\contentsline {section}{Контроль версий: роль Git в программировании с ИИ}{290}{lstnumber.-15.14}%
+\contentsline {section}{Частые ловушки и как их обходить}{291}{Item.530}%
+\contentsline {chapter}{Глава 46: Путь вглубь — от пользователя к архитектору}{293}{chapter*.102}%
+\contentsline {section}{Протокол MCP и расширение инструментов}{293}{section*.103}%
+\contentsline {section}{Пользовательские рабочие процессы и Skills}{293}{section*.103}%
+\contentsline {section}{Сотрудничество нескольких агентов}{294}{section*.103}%
+\contentsline {section}{Маршрут непрерывного обучения}{294}{section*.103}%
+\contentsline {chapter}{Глава 47: Справочник и ресурсы}{296}{chapter*.104}%
+\contentsline {section}{Карточки шпаргалки мыслительных моделей}{296}{section*.105}%
+\contentsline {section}{Дерево выбора инструментов}{296}{section*.105}%
+\contentsline {section}{Частые вопросы (FAQ)}{297}{section*.105}%
+\contentsline {section}{Рекомендуемые ресурсы для обучения}{297}{section*.105}%
+\contentsline {section}{Заключение: инструменты в руках, методология в голове}{298}{section*.105}%
+\contentsline {section}{Список литературы}{298}{section*.105}%
+\contentsline {part}{Часть 8 «Разработка под Android» (главы 48-58)}{301}{part*.106}%
+\contentsline {chapter}{Глава 48: Знакомство с Android — от операционной системы до экосистемы разработки}{301}{chapter*.107}%
+\contentsline {section}{Происхождение Android: от «маленького робота» до «крупнейшей системы мира»}{301}{section*.108}%
+\contentsline {section}{На каком языке писать: Java или Kotlin?}{302}{section*.108}%
+\contentsline {section}{Как рождается приложение?}{303}{lstnumber.-17.6}%
+\contentsline {section}{Панорама технологий Android: ваш «список вооружений»}{303}{lstnumber.-17.6}%
+\contentsline {section}{Android против iOS: первый «урок выбора стороны» для разработчика}{304}{lstnumber.-17.6}%
+\contentsline {chapter}{Глава 49: Настраиваем окружение — Android Studio и первый проект}{306}{chapter*.109}%
+\contentsline {section}{Устанавливаем Android Studio}{306}{section*.110}%
+\contentsline {section}{Создаём первый проект}{306}{Item.542}%
+\contentsline {section}{Запускаем: эмулятор и реальное устройство}{307}{Item.542}%
+\contentsline {section}{Разбор структуры проекта: за что отвечает каждый файл}{308}{Item.546}%
+\contentsline {section}{Проба пера: меняем «Hello» на своё имя}{308}{Item.546}%
+\contentsline {section}{Скорая помощь при типичных ошибках: «приёмный покой» новичка в первые две недели}{309}{lstnumber.-18.8}%
+\contentsline {chapter}{Глава 50: Быстрый старт с Kotlin — первый язык Android-разработки}{311}{chapter*.111}%
+\contentsline {section}{Переменные и типы: даём данным имена}{311}{section*.112}%
+\contentsline {section}{Функции: упаковываем логику в «кнопки»}{312}{lstnumber.-19.8}%
+\contentsline {section}{Условия и циклы: учим программу «думать»}{312}{lstnumber.-20.10}%
+\contentsline {section}{Null-безопасность: «спасательный круг» Kotlin}{313}{lstnumber.-21.21}%
+\contentsline {section}{Классы и объекты: формы для изготовления «деталей»}{313}{lstnumber.-22.10}%
+\contentsline {section}{Лямбды и функции высшего порядка: «синтаксический сахар» Kotlin}{314}{lstnumber.-23.13}%
+\contentsline {section}{Шпаргалка по синтаксису для тех, кто с нуля}{314}{lstnumber.-24.11}%
+\contentsline {chapter}{Глава 51. Разработка интерфейса — знакомство с Jetpack Compose}{316}{chapter*.113}%
+\contentsline {section}{Идея Compose: интерфейс — это функция}{316}{section*.114}%
+\contentsline {section}{Базовые компоненты: текст, кнопка, поле ввода, изображение}{317}{lstnumber.-25.16}%
+\contentsline {section}{Трио раскладок: Column, Row, Box}{317}{lstnumber.-26.15}%
+\contentsline {section}{Состояние: оживляем интерфейс}{318}{lstnumber.-28.9}%
+\contentsline {section}{Тема и тёмный режим: настроил один раз — работает везде}{319}{lstnumber.-29.12}%
+\contentsline {section}{Предпросмотр, анимации и живое редактирование: «читы» Compose}{319}{Item.549}%
+\contentsline {chapter}{Глава 52. Четыре компонента и жизненный цикл Activity}{321}{chapter*.115}%
+\contentsline {section}{Четыре компонента: несущие опоры Android}{321}{section*.116}%
+\contentsline {section}{Жизненный цикл Activity: первая «карта сокровищ» Android-разработчика}{321}{section*.116}%
+\contentsline {section}{Intent: «билет» на поездку из приложения и внутрь него}{322}{section*.116}%
+\contentsline {section}{Несколько экранов и навигация}{322}{lstnumber.-31.8}%
+\contentsline {section}{Заодно знакомимся: что такое Fragment (и почему книга его не преподаёт)}{323}{lstnumber.-32.13}%
+\contentsline {chapter}{Глава 53. Хранение данных и сетевые запросы}{324}{chapter*.117}%
+\contentsline {section}{Как выбрать хранилище: сначала взгляните на таблицу}{324}{section*.118}%
+\contentsline {section}{DataStore: храним мелкие настройки}{324}{section*.118}%
+\contentsline {section}{Room: строим для данных «настоящий дом»}{325}{lstnumber.-33.12}%
+\contentsline {section}{Retrofit: разговор с сервером}{326}{lstnumber.-34.31}%
+\contentsline {section}{Разбор JSON: «переводим» сетевые данные}{326}{lstnumber.-35.15}%
+\contentsline {section}{Корутины: «общий язык» многозадачности Android}{327}{lstnumber.-36.10}%
+\contentsline {section}{Корутины: «общий язык» многозадачности Android}{327}{lstnumber.-36.10}%
+\contentsline {chapter}{Глава 54. Проект 1 — моя учётная книга расходов (локальная версия)}{329}{chapter*.119}%
+\contentsline {section}{Думаем о требованиях: сначала задайте пять вопросов}{329}{section*.120}%
+\contentsline {section}{Слой данных: даём записям «дом»}{329}{section*.120}%
+\contentsline {section}{MVVM: интерфейс и логика живут раздельно}{330}{lstnumber.-39.17}%
+\contentsline {section}{Интерфейс: экран списка + экран ввода}{331}{lstnumber.-40.18}%
+\contentsline {section}{Редактирование и удаление: данным нужен и «вход», и «выход»}{332}{lstnumber.-41.31}%
+\contentsline {section}{Приёмка: три уровня проверки + два задания со звёздочкой}{333}{lstnumber.-42.9}%
+\contentsline {section}{Приёмка: три уровня проверки + два задания со звёздочкой}{333}{lstnumber.-42.9}%
+\contentsline {chapter}{Глава 55. Проект 2 — приложение для погоды (сетевая версия)}{334}{chapter*.121}%
+\contentsline {section}{Получаем бесплатный API погоды}{334}{section*.122}%
+\contentsline {section}{Сетевой слой: Retrofit + разбор JSON}{334}{Item.554}%
+\contentsline {section}{Три состояния экрана: загрузка / успех / ошибка}{335}{lstnumber.-43.18}%
+\contentsline {section}{Боевой код интерфейса: рисуем погоду}{336}{lstnumber.-44.24}%
+\contentsline {section}{Детали интерфейса и взаимодействия}{336}{lstnumber.-45.25}%
+\contentsline {section}{Детали интерфейса и взаимодействия}{336}{lstnumber.-45.25}%
+\contentsline {chapter}{Глава 56. Шлифовка и публикация — тесты, отладка и выход в Google Play}{338}{chapter*.123}%
+\contentsline {section}{Три кита отладки: Logcat, точки останова, инспектор UI}{338}{section*.124}%
+\contentsline {section}{Тесты: страховка для кода}{338}{section*.124}%
+\contentsline {section}{Подпись и сборка: ставим на приложение «печать»}{339}{lstnumber.-46.19}%
+\contentsline {section}{Публикация в Google Play: весь путь}{340}{Item.557}%
+\contentsline {section}{Материалы для магазина: первое впечатление — это и есть загрузки}{340}{Item.557}%
+\contentsline {section}{Мини-чек-лист: производительность и отчёты о сбоях}{341}{Item.557}%
+\contentsline {chapter}{Глава 57. Путь дальше — разрешения, уведомления и современная архитектура}{342}{chapter*.125}%
+\contentsline {section}{Разрешения во время выполнения: сначала постучались, потом вошли}{342}{section*.126}%
+\contentsline {section}{Уведомления: в нужный момент — полезные слова}{343}{lstnumber.-47.16}%
+\contentsline {section}{Архитектура на вырост: внедрение зависимостей и модульность}{343}{lstnumber.-48.21}%
+\contentsline {section}{Новая реальность 2026 года: Android-разработка с ИИ-напарником}{344}{lstnumber.-48.21}%
+\contentsline {section}{Оптимизация производительности Compose и инструменты отладки}{344}{lstnumber.-48.21}%
+\contentsline {chapter}{Глава 58. Справочник и ресурсы}{346}{chapter*.127}%
+\contentsline {section}{Шпаргалка по часто используемому коду}{346}{section*.128}%
+\contentsline {section}{Частые вопросы (FAQ)}{346}{section*.128}%
+\contentsline {section}{Рекомендуемые учебные ресурсы}{347}{section*.128}%
+\contentsline {section}{Шпаргалка по командам Gradle}{348}{section*.128}%
+\contentsline {section}{Заключение: от первого приложения до N-го}{348}{section*.128}%
+\contentsline {section}{Заключение: от первого приложения до N-го}{348}{section*.128}%
+\contentsline {section}{Список литературы}{348}{section*.128}%
+\contentsline {part}{Часть 9 «Разработка под iOS» (главы 59-69)}{351}{part*.129}%
+\contentsline {chapter}{Глава 59. Знакомство с iOS — экосистема Apple и экосистема разработки}{351}{chapter*.130}%
+\contentsline {section}{Происхождение iOS: один телефон, изменивший целую отрасль}{351}{section*.131}%
+\contentsline {section}{Сад с высокими стенами: «правила» и «дивиденды» экосистемы Apple}{352}{section*.131}%
+\contentsline {section}{На каком языке писать: Objective-C или Swift?}{352}{section*.131}%
+\contentsline {section}{Как рождается приложение?}{352}{lstnumber.-50.1}%
+\contentsline {section}{Технологический стек iOS целиком: ваш «арсенал»}{353}{lstnumber.-50.1}%
+\contentsline {chapter}{Глава 60. Настраиваем среду разработки — Xcode и первый проект}{355}{chapter*.132}%
+\contentsline {section}{Готовим Mac}{355}{section*.133}%
+\contentsline {section}{Устанавливаем Xcode}{355}{section*.133}%
+\contentsline {section}{Создаём ваш первый проект}{356}{Item.570}%
+\contentsline {section}{Разбираем структуру проекта: зачем нужен каждый файл}{356}{Item.570}%
+\contentsline {section}{Отладка на реальном устройстве: устанавливаем приложение на ваш iPhone}{357}{Item.570}%
+\contentsline {section}{Приёмы эффективности в Xcode: пять «читов» с горячими клавишами для новичка}{357}{Item.570}%
+\contentsline {section}{Отладка на реальном устройстве: устанавливаем приложение на ваш iPhone}{357}{Item.570}%
+\contentsline {section}{Первые пробы + скорая помощь при частых ошибках}{358}{Item.574}%
+\contentsline {section}{Первые пробы + скорая помощь при частых ошибках}{358}{Item.574}%
+\contentsline {chapter}{Глава 61. Быстрый старт со Swift — первый язык разработки для Apple}{359}{chapter*.134}%
+\contentsline {section}{Переменные и типы: даём данным имена}{359}{section*.135}%
+\contentsline {section}{Опциональные значения (Optional): «оберег от падений» в Swift}{360}{lstnumber.-51.10}%
+\contentsline {section}{Функции и замыкания: упаковываем логику в «кнопки»}{360}{lstnumber.-52.15}%
+\contentsline {section}{Структуры и протоколы: «лего»-система Swift}{361}{lstnumber.-53.13}%
+\contentsline {section}{Шпаргалка по синтаксису для начинающих с нуля}{362}{lstnumber.-54.16}%
+\contentsline {chapter}{Глава 62. Разработка интерфейсов — введение в SwiftUI}{363}{chapter*.136}%
+\contentsline {section}{Идея SwiftUI: декларативность, а не императивность}{363}{section*.137}%
+\contentsline {section}{Базовые представления: текст, кнопка, поле ввода, картинка}{364}{lstnumber.-55.15}%
+\contentsline {section}{Трио компоновки: VStack, HStack, ZStack}{364}{lstnumber.-55.15}%
+\contentsline {section}{Состояние и привязка: оживляем интерфейс}{365}{lstnumber.-56.14}%
+\contentsline {section}{Предпросмотр, темы и анимация: «читы» SwiftUI}{365}{lstnumber.-58.9}%
+\contentsline {section}{Шпаргалка по частым модификаторам: одна страница под рукой — и интерфейсы не страшны}{366}{lstnumber.-59.16}%
+\contentsline {chapter}{Глава 63. Представления, состояние и навигация}{368}{chapter*.138}%
+\contentsline {section}{«Панорама потоков данных» в управлении состоянием}{368}{section*.139}%
+\contentsline {section}{NavigationStack: «стек» переходов между экранами}{369}{lstnumber.-60.19}%
+\contentsline {section}{Всплывающие окна и нижние вкладки: sheet и TabView}{370}{lstnumber.-61.24}%
+\contentsline {section}{List: «народный список» iOS}{370}{lstnumber.-62.24}%
+\contentsline {section}{Жизненный цикл приложения: передний план и фон}{371}{lstnumber.-63.14}%
+\contentsline {chapter}{Глава 64. Хранение данных и сетевые запросы}{373}{chapter*.140}%
+\contentsline {section}{Как выбрать способ хранения: сначала взгляните на эту таблицу}{373}{section*.141}%
+\contentsline {section}{UserDefaults: храним мелкие настройки}{373}{section*.141}%
+\contentsline {section}{SwiftData: настоящий дом для данных}{374}{lstnumber.-65.10}%
+\contentsline {section}{Codable: «переводчик» для JSON}{375}{lstnumber.-66.46}%
+\contentsline {section}{URLSession + async/await: разговор с сервером}{375}{lstnumber.-67.14}%
+\contentsline {section}{Сетевые ошибки тоже надо «сортировать»: не вываливайте на пользователя всё подряд}{376}{lstnumber.-68.19}%
+\contentsline {chapter}{Глава 65. Проект 1 — моя книга учёта (локальная версия)}{378}{chapter*.142}%
+\contentsline {section}{Мыслим требованиями: сперва задайте пять вопросов}{378}{section*.143}%
+\contentsline {section}{Слой данных: даём записям дом}{378}{section*.143}%
+\contentsline {section}{MVVM: интерфейс и логика живут раздельно}{379}{lstnumber.-70.18}%
+\contentsline {section}{Интерфейс: страница-список + окно ввода}{380}{lstnumber.-71.30}%
+\contentsline {section}{Правка, удаление и сводка}{381}{lstnumber.-72.31}%
+\contentsline {section}{Приёмка: три уровня проверки + два задания со звёздочкой}{381}{lstnumber.-73.13}%
+\contentsline {chapter}{Глава 66. Проект 2 — приложение для погоды (сетевая версия)}{383}{chapter*.144}%
+\contentsline {section}{Получаем бесплатный погодный API}{383}{section*.145}%
+\contentsline {section}{Сетевой слой: URLSession + Codable}{383}{Item.579}%
+\contentsline {section}{Три состояния интерфейса: загрузка / успех / ошибка}{384}{lstnumber.-74.24}%
+\contentsline {section}{Боевой код интерфейса: рисуем погоду}{385}{lstnumber.-75.28}%
+\contentsline {section}{Детали взаимодействия и избранные города}{385}{lstnumber.-76.20}%
+\contentsline {section}{Как отлаживать сетевые запросы: печать, перехват трафика и имитация медленной сети}{386}{lstnumber.-76.20}%
+\contentsline {chapter}{Глава 67. Доводка и выпуск — тесты, отладка и публикация в App Store}{387}{chapter*.146}%
+\contentsline {section}{Три кита отладки: print, точки останова, предпросмотр}{387}{section*.147}%
+\contentsline {section}{Тесты: страховка для кода}{387}{section*.147}%
+\contentsline {section}{Подпись и упаковка: ставим на приложение «печать»}{388}{lstnumber.-77.20}%
+\contentsline {section}{Полный путь публикации в App Store}{389}{lstnumber.-77.20}%
+\contentsline {section}{Материалы для магазина: первое впечатление и есть количество загрузок}{389}{lstnumber.-77.20}%
+\contentsline {section}{Отчёты о падениях и мини-чеклист производительности}{390}{lstnumber.-77.20}%
+\contentsline {chapter}{Глава 68. Путь дальше — разрешения, уведомления и современная архитектура}{391}{chapter*.148}%
+\contentsline {section}{Разрешения: сперва стучим, потом входим}{391}{section*.149}%
+\contentsline {section}{Уведомления: в правильное время говорить полезное}{392}{lstnumber.-78.21}%
+\contentsline {section}{Архитектура: MVVM глубже и тестируемость}{392}{lstnumber.-79.26}%
+\contentsline {section}{Новое в 2026 году: разработка iOS с помощью ИИ}{393}{lstnumber.-79.26}%
+\contentsline {section}{Ключевое о конкурентности Swift: @MainActor и Task}{393}{lstnumber.-79.26}%
+\contentsline {chapter}{Глава 69. Справочник и ресурсы}{395}{chapter*.150}%
+\contentsline {section}{Карточки быстрой справки по ходовому коду}{395}{section*.151}%
+\contentsline {section}{Частые вопросы (FAQ)}{395}{section*.151}%
+\contentsline {section}{Частые горячие клавиши Xcode: шпаргалка}{396}{section*.151}%
+\contentsline {section}{Рекомендуемые ресурсы для учёбы}{397}{section*.151}%
+\contentsline {section}{Рекомендуемые ресурсы для учёбы}{397}{section*.151}%
+\contentsline {section}{Заключение: от первого приложения к N-му}{397}{section*.151}%
+\contentsline {section}{Список литературы}{397}{section*.151}%
+\contentsline {chapter}{Приложение A: Пошаговое руководство по распаковке нового телефона}{400}{appendix*.153}%
+\contentsline {section}{«Три шага» распаковки и проверки устройства:}{400}{section*.154}%
+\contentsline {section}{«Ключевые напоминания» при активации и первоначальной настройке:}{400}{section*.154}%
+\contentsline {section}{«Безопасность прежде всего» при установке приложений:}{400}{section*.154}%
+\contentsline {chapter}{Приложение B: Практические упражнения}{401}{appendix*.155}%
+\contentsline {chapter}{Приложение C: Глоссарий технических терминов}{403}{appendix*.156}%
+\contentsline {chapter}{Приложение D: Ресурсы официальной поддержки}{404}{appendix*.157}%
+\contentsline {section}{Официальная поддержка — в приоритете:}{404}{section*.158}%
+\contentsline {section}{Полезные сайты и блогеры:}{404}{section*.158}%
+\contentsline {section}{Однострочный чек-лист самопроверки безопасности:}{404}{section*.158}%
+\contentsline {chapter}{Приложение E. Благодарности и пояснения}{405}{appendix*.159}%
+\contentsline {section}{Основные обновления версии 1.6}{405}{section*.160}%
+\contentsline {section}{Основные обновления версии 1.7}{406}{section*.160}%
+\contentsline {section}{Основные обновления версии 1.8}{407}{section*.160}%
+\contentsline {section}{Дополнения к содержанию: полезные программы и блокировка назойливых звонков}{407}{section*.160}%
+\contentsline {section}{Дополнения к содержанию: погодные предупреждения / предупреждения о стихийных бедствиях / предупреждения о землетрясениях}{408}{section*.160}%
+\contentsline {section}{Дополнения: связка устройств и инструменты продуктивности}{408}{section*.160}%
+\contentsline {chapter}{Приложение F: Тема складных экранов}{409}{appendix*.161}%
+\contentsline {section}{До какой степени развились складные экраны?}{409}{section*.162}%
+\contentsline {section}{Кому подходят складные экраны?}{409}{section*.162}%
+\contentsline {section}{На что смотреть при выборе: 6 показателей}{410}{Item.601}%
+\contentsline {section}{Приёмы использования, доступные только на складных экранах}{411}{Item.606}%
+\contentsline {section}{Уход: как продлить жизнь складному экрану}{412}{Item.606}%
+\contentsline {section}{«Подводные камни» складных экранов и ожидания}{412}{Item.606}%
+\contentsline {section}{Какой бренд выбрать (2026 год)}{413}{Item.606}%
+\contentsline {chapter}{Заключение: Сохраняйте любопытство, сохраняйте ясность}{414}{appendix*.163}%
+\contentsline {chapter}{Приложение G: быстрый индекс по всей книге}{415}{appendix*.164}%
+\contentsline {chapter}{Приложение H: дорожная карта версий}{419}{appendix*.165}%

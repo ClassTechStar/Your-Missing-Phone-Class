@@ -1,0 +1,154 @@
+\bookchapter{Capitolo 68: La strada del livello successivo — permessi, notifiche e architettura moderna}
+
+\chapterintro{Saper costruire un'app è solo l'inizio. In questo capitolo parliamo di qualche scoglio del passaggio da “saper fare” a “far bene”: come chiedere i permessi con eleganza, come inviare notifiche senza risultare antipatici, come alzare di un livello l'architettura e — nel 2026 — come scrivere codice iOS in coppia con l'IA. Ogni punto è qualcosa che incontrerai subito in un progetto reale.}
+
+\booksection{Permessi: prima bussa alla porta, poi entra}
+
+Fotocamera, posizione, contatti, notifiche… Per queste “zone sensibili” iOS esige che l'app chieda all'utente con un avviso quando le usa. La regola è “dichiarazione + richiesta + degrado elegante”, in tre passi:
+
+\begin{lstlisting}[language=Swift]
+// 1. Dichiara il testo d'uso in Info.plist (senza di esso, crash immediato!)
+// Privacy - Location When In Use Usage Description: "Usata per consultare il meteo della tua città"
+
+// 2. Richiedi al momento dell'uso
+import CoreLocation
+
+@Observable
+class LocationModel {
+    private let manager = CLLocationManager()
+
+    func request() {
+        switch manager.authorizationStatus {
+        case .notDetermined: manager.requestWhenInUseAuthorization()
+        case .denied, .restricted: /* guida l'utente alle Impostazioni */
+        default: /* già autorizzato, si parte */
+        }
+    }
+}
+
+// 3. Dopo il rifiuto, degrada con eleganza: avviso + apertura Impostazioni
+// UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+\end{lstlisting}
+
+\begin{tcbwarn}{Attenzione: la "singola occasione" dei permessi iOS}
+L'avviso dei permessi su iOS compare una volta sola — se l'utente rifiuta, non ricomparirà mai più. Quindi: scegli il momento della richiesta “nell'attimo in cui l'utente sta per usarla” (non una raffica di avvisi all'avvio) e spiega nel testo lo scopo. La guida nell'interfaccia dopo il rifiuto (“vai nelle Impostazioni ad attivare la posizione”) è di serie: non lasciare l'utente intrappolato in un vicolo cieco.
+
+\end{tcbwarn}
+
+\booksection{Notifiche: dire cose utili al momento giusto}
+
+Le notifiche sono il canale con cui l'app raggiunge l'utente, e anche la funzione più facilmente “messa alla lista nera”. Su iOS si usa il framework UserNotifications; tre regole d'oro: manda solo cose utili, lascia l'utente libero di disattivarle, non disturbare a notte fonda. Uso di base:
+
+\begin{lstlisting}[language=Swift]
+import UserNotifications
+
+// 1. Richiedi il permesso di notifica (un dialogo una tantum)
+UNUserNotificationCenter.current()
+    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+        print(granted ? "autorizzato" : "negato")
+    }
+
+// 2. Pianifica un "promemoria spese ogni giorno alle 20:00"
+func scheduleDailyReminder() {
+    let content = UNMutableNotificationContent()
+    content.title = "Promemoria spese"
+    content.body = "Oggi non hai ancora registrato spese"
+    content.sound = .default
+
+    var comps = DateComponents()
+    comps.hour = 20
+    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+
+    let request = UNNotificationRequest(
+        identifier: "daily-reminder",
+        content: content,
+        trigger: trigger
+    )
+    UNUserNotificationCenter.current().add(request)
+}
+\end{lstlisting}
+
+Attenzione: anche il permesso delle notifiche su iOS “compare una volta sola”, e l'utente può disattivarlo in qualunque momento dalle Impostazioni di sistema — per questo il valore percepito del contenuto è fondamentale: un abuso, anche una volta sola, può farti perdere l'utente per sempre.
+
+\booksection{Architettura di livello avanzato: MVVM a fondo e testabilità}
+
+Al capitolo 65 abbiamo già usato MVVM; qui aggiungiamo tre punti di livello avanzato:
+
+\begin{itemize}
+  \item Astrazione tramite protocolli: fai dipendere il ViewModel da protocolli (protocol) e non da classi concrete — nei test puoi iniettare "fonti di dati finte", ed è la pietra angolare della testabilità;
+  \item Responsabilità unica: un ViewModel gestisce una cosa sola (chi tiene le spese non si occupa del meteo); quando le funzioni aumentano, lo dividi;
+  \item Niente sovraingegneria: in un piccolo progetto in solitario, "classi @Observable + astrazione tramite protocolli" basta. Architetture pesanti come VIPER o Clean Architecture aspettino che arrivino il team e la complessità — gli strumenti servono agli obiettivi, non a fare sfoggio.
+\end{itemize}
+
+\begin{tcbinfo}{Consiglio: il "dividendo d'ecosistema" di SwiftUI}
+L'ecosistema iOS offre altri due “privilegi unici” di livello avanzato: i widget (WidgetKit) permettono all'utente di vedere le informazioni senza aprire l'app (la “spesa del mese” del registro delle spese direttamente sul desktop), e le scorciatoie (App Intents) permettono all'utente di invocare le tue funzioni con Siri o con le automazioni. Entrambi hanno framework ufficiali, l'ingresso non costa molto, ma il vantaggio sull'esperienza utente è enorme — sulla strada avanzata meritano lo sblocco prioritario.
+
+\end{tcbinfo}
+
+\booksection{Le novità del 2026: sviluppo iOS assistito dall'IA}
+
+Nel 2026 l'IA è già profondamente incorporata nel flusso di sviluppo Apple. Se vuoi accelerare, questa combinazione è molto matura:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Fase} & \textbf{Come aiuta l'IA} & \textbf{Il tuo compito} \tabularnewline
+\hline
+Scrivere codice & Autocompletamento integrato in Xcode + generazione con plugin IA di terze parti & Descrivere i requisiti con chiarezza, rivedere l'output \tabularnewline
+Cercare informazioni & Passare all'IA documentazione ufficiale e messaggi di errore da interpretare & Verificare le conclusioni chiave sulla documentazione ufficiale \tabularnewline
+Scrivere test & Far generare all'IA casi di test XCTest nelle tre categorie "normale/limite/anomalo" & Confermare che i casi rispettino la semantica del dominio \tabularnewline
+Correggere i bug & Incollare il log del crash + il codice rilevante, l'IA localizza e corregge & Capire le modifiche, verificare eseguendo i test \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}I quattro scenari dello sviluppo iOS assistito dall'IA\end{center}
+
+La metodologia concreta — come dare istruzioni all'IA, come accettare i risultati, come evitare le trappole — è trattata per intero negli 11 capitoli della Parte 7 di questo libro, “Programmazione pratica con l'IA” (capitoli 37-47), la cui lettura è fortemente consigliata in parallelo: la sintassi Swift sta in questa parte, i segreti della collaborazione con l'IA nella Parte 7.
+
+\begin{tcbpractice}{Mettiti alla prova: aggiungi al registro delle spese il "trio"}
+\booksection{Punti chiave della concorrenza Swift: @MainActor e Task}
+
+Il sistema di concorrenza di Swift 6 ha due regole che un principiante deve capire assolutamente:
+
+\begin{itemize}
+  \item L'interfaccia si aggiorna solo sul thread principale: le viste SwiftUI sono @MainActor per impostazione predefinita; le callback di rete tornano al thread principale prima di cambiare lo stato (con await MainActor.run \{ ... \} oppure marcando il ViewModel come @MainActor);
+  \item Le attività asincrone si gestiscono con Task: il modificatore .task \{ \} parte da solo quando la vista compare e si annulla da solo quando scompare — è la postura standard per avviare lavoro asincrono in SwiftUI; non scrivere Task a casaccio nel body, senza controllo.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct WeatherScreen: View {
+    @State private var vm = WeatherViewModel()
+
+    var body: some View {
+        Group {
+            switch vm.state {
+            case .loading: ProgressView()
+            case .success(let d): WeatherContent(data: d)
+            case .error(let m): Text(m)
+            }
+        }
+        .task {                       // parte quando appare, si annulla quando scompare
+            await vm.search(city: "Pechino")
+        }
+    }
+}
+\end{lstlisting}
+
+Dietro queste due regole c'è la “sicurezza dalle data race” di Swift 6 — il compilatore segnala l'errore appena sbagli a scrivere, invece di farti scoprirlo quando l'app crasha. Gli errori del compilatore non sono prese in giro: sono pallottole fermate al posto tuo.
+
+(1) Aggiungi al registro delle spese “un promemoria per annotare le spese ogni giorno alle 20:00” (permesso notifiche + notifiche locali); (2) trasforma la fonte dati del ViewModel in un'astrazione tramite protocollo e scrivi un test unitario che inietta dati finti; (3) aggiungi un widget da desktop “spesa del mese”. Completato il trio, il tuo progetto avrà l'aspetto di un “esercito regolare”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Riepilogo del capitolo}
+\begin{itemize}
+  \item I tre passi dei permessi: dichiarazione nell'Info.plist (se manca, crash garantito), richiesta al momento dell'uso, dopo il rifiuto guida verso le Impostazioni
+  \item L'avviso dei permessi iOS compare una sola volta: il momento giusto è "quando l'utente sta per usarla", e il testo deve spiegare chiaramente lo scopo
+  \item Le tre regole delle notifiche: solo cose utili, possibilità di disattivarle, nessun disturbo; framework UserNotifications
+  \item MVVM avanzato: astrazione tramite protocolli (testabile), responsabilità unica, niente sovraingegneria
+  \item Dividendo d'ecosistema: widget WidgetKit + scorciatoie App Intents
+  \item I quattro scenari assistiti dall'IA: scrivere codice, cercare informazioni, scrivere test, correggere bug; la metodologia è nella Parte 7 (capitoli 37-47)
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,195 @@
+\bookchapter{第六十二章：界面開發——SwiftUI 入門}
+
+\chapterintro{界面係用戶睇到嘅一切。SwiftUI 係蘋果 2019 年推出嘅聲明式界面框架——你只需要“聲明”界面生乜嘢樣，系統自動負責渲染、適配深色模式、適配各種螢幕。到 2026 年，SwiftUI 已經係新項目嘅絕對主流。呢一章，我哋學識“畫畫”。}
+
+\booksection{一、SwiftUI 嘅思想：聲明式，唔係命令式}
+
+舊式界面開發係“命令式”：先話畀系統聽“建立按鈕 放喺(20,30) 設定顏色”，一步一步指揮。SwiftUI 係“聲明式”：你直接描述“界面上面有一個紅色按鈕寫住'點我'”，點樣畫、幾時重畫，系統自己搞掂。
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body：描述"界面係乜嘢樣"
+        VStack {               // 直向排列
+            Text("你好，世界！")
+                .font(.largeTitle)      // 修飾符：大標題
+            Button("㩒我") {
+                print("被㩒咗")
+            }
+            .buttonStyle(.borderedProminent)  // 藍色實心按鈕
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+關鍵點：視圖 = 遵守 View 協議嘅結構體，body 屬性描述界面，.修飾符() 鏈式“上妝”。呢個就係 SwiftUI 嘅全部基本盤。
+
+\booksection{二、基礎視圖：文字、按鈕、輸入框、圖片}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{視圖} & \textbf{做乜嘢} & \textbf{示例} \tabularnewline
+\hline
+Text & 顯示文字 & Text("你好") \tabularnewline
+Button & 按鈕 & Button("點我") \{ 動作 \} \tabularnewline
+TextField & 輸入框 & TextField("提示", text: \$文本) \tabularnewline
+Image & 顯示圖片 & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}SwiftUI 四大基礎視圖\end{center}
+
+注意 Image(systemName:)——蘋果內置咗 SF Symbols 圖標庫（幾千個免費圖標），“star.fill” 呢類名就可以直接顯示一個實心星星。呢個係 iOS 開發嘅隱藏福利：做界面幾乎唔使搵圖標素材。
+
+\booksection{三、佈局三件套：VStack、HStack、ZStack}
+
+\begin{itemize}
+  \item VStack：打直咁排（好似排隊打飯）；
+  \item HStack：打橫咁排（好似並排坐）；
+  \item ZStack：疊住放（好似撲克牌疊埋一齊，適合做角標、遮罩）。
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("賬單")
+        Spacer()                 // 彈性空間：將右邊推到盡頭
+        Text("-25.5 元").foregroundColor(.red)
+    }
+    Divider()                    // 分隔線
+    Text("備註：午餐")
+}
+.padding(16)                     // 四圍留白
+.background(Color(.systemGray6)) // 淺灰底
+.cornerRadius(12)                // 圓角
+
+// 修飾符次序有意義：先 padding 再 background，背景唔包邊距
+\end{lstlisting}
+
+\begin{tcbwarn}{注意：修飾符次序有講究}
+padding(16).background(灰) 同 background(灰).padding(16) 效果唔同——前者“先留白再塗色”（背景唔包含邊距），後者“先塗色再留白”（背景包含邊距）。新手最常見嘅“奇怪白邊”都係由呢度嚟。唔肯定嗰陣調轉次序，預覽即刻話你知答案。
+
+\end{tcbwarn}
+
+\booksection{四、狀態同綁定：令界面“活”起嚟}
+
+靜態界面冇乜意思。SwiftUI 嘅規則：界面永遠忠實反映狀態，狀態一變，界面自動重畫。
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State：呢個值變咗要重畫
+
+    var body: some View {
+        VStack {
+            Text("你㩒咗 \(count) 次")
+            Button("㩒我 +1") {
+                count += 1          // 改狀態，界面自動刷新
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+輸入框要用“雙向綁定”——\$ 符號將“值同修改權”一齊傳入去：
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("輸入啲乜嘢", text: $text)  // $ 雙向綁定
+            .textFieldStyle(.roundedBorder)
+        Text("你輸入咗：\(text)")   // 輸入嗰陣即時更新
+    }
+}
+\end{lstlisting}
+
+用戶操作
+
+狀態改變（count += 1）
+
+SwiftUI 感知到變化
+
+自動重畫界面（body 重新計算）
+
+\begin{center}\small\color{gray}圖 3：SwiftUI 嘅“狀態 界面”單向數據流\end{center}
+
+\booksection{五、預覽、主題同動畫：SwiftUI 嘅“外掛”}
+
+\begin{itemize}
+  \item \#Preview 巨集：喺檔案底部加 \#Preview \{ ContentView() \}，右邊畫布即時渲染——改代碼所見即所得；
+  \item 深色模式免費：用系統顏色（Color(.systemGray6)、.primary）而唔係寫死顏色，深色模式自動適配，一行都唔使多寫；
+  \item 動畫一行搞掂：withAnimation \{ count += 1 \} 或者畀視圖加 .animation(.default, value: count)——過渡絲滑。
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{小貼士：先功能後動畫}
+新手常犯嘅毛病係“界面仲未做啱，就開始糾結動畫”。先令功能行得通，最後先統一加動效——動畫係錦上添花，功能係雪中送炭。呢個都係我哋一貫嘅“簡單至上”原則。
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{嚟動手：做一個"心情按鈕"}
+\booksection{六、常用修飾符速查：一頁在手，界面唔使愁}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{想做乜嘢} & \textbf{修飾符} \tabularnewline
+\hline
+留白 & \texttt{.\allowbreak padding(16)} \tabularnewline
+圓角 & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+背景色 & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+字體同字號 & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+前景色（文字／圖標） & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+撐滿闊度 & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+固定尺寸 & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+對齊方式 & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+透明度 & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+陰影 & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+點擊手勢 & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+鍵盤類型 & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}SwiftUI 常用修飾符速查\end{center}
+
+記唔住唔緊要——呢一頁就係用嚟查嘅。用得最多嘅其實就係頭四個：padding、圓角、背景、字體。
+
+將模板項目改成一個心情切換器：一個按鈕，㩒咗之後喺 開心 難過 嬲 之間循環切換，文字同背景色跟住變。提示：用陣列存三組（文字+顏色），@State 存下標，㩒嗰陣 (index + 1) \% 3。做完傳畀朋友玩，收穫第一波“哇你識做 App 喇”。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小結}
+\begin{itemize}
+  \item SwiftUI 係聲明式：描述"生乜嘢樣"，系統負責畫同重畫
+  \item 視圖 = 遵守 View 協議嘅結構體；body 描述界面；修飾符鏈式"上妝"
+  \item 四大基礎視圖：Text / Button / TextField / Image；SF Symbols 圖標庫免費任用
+  \item 佈局三件套：VStack 直排、HStack 橫排、ZStack 疊放；Spacer 係彈性空間
+  \item @State 令界面活起嚟；\$ 雙向綁定餵畀輸入框
+  \item \#Preview 所見即所得；系統顏色自動適配深色模式；withAnimation 一行動效
+\end{itemize}
+
+\end{tcbsummary}

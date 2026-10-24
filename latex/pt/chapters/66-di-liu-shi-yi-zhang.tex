@@ -1,0 +1,155 @@
+\bookchapter{Capítulo 61: Swift em ritmo acelerado — a primeira linguagem do desenvolvimento Apple}
+
+\chapterintro{Neste capítulo vamos finalmente estudar a linguagem. Sem pânico — o Swift é famoso por ser “amigável com iniciantes”, e você não precisa decorar um livro de sintaxe: dominando 20\% da gramática, você já entende e escreve 80\% do código do dia a dia. O resto, você consulta conforme os projetos avançam. Lembre do nosso princípio de aprendizado: entender > decorar, saber usar > ser mestre.}
+
+\booksection{Variáveis e tipos: dando nomes aos dados}
+
+Um programa é “dados + lógica”. Variável é dar um nome aos dados e guardá-los. No Swift, usamos let e var para declarar:
+
+\begin{lstlisting}[language=Swift]
+let name = "João"        // let: constante (o padrão recomendado)
+var age = 18             // var: variável (pode mudar depois)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var pode mudar
+// name = "Maria"         // <i class="fas fa-times-circle mr-1"></i> let não pode mudar: erro de compilação
+
+let score: Int = 100     // também é possível declarar o tipo explicitamente
+let pi = 3.14            // se omitir, é inferido automaticamente
+
+print("Olá, \(name)")   // interpolação de string: barra invertida + parênteses
+\end{lstlisting}
+
+Decore os tipos mais usados com uma tabela:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tipo} & \textbf{Guarda o quê} & \textbf{Exemplo} \tabularnewline
+\hline
+Int & Número inteiro & 42 \tabularnewline
+Double & Número decimal & 3.14 \tabularnewline
+String & Texto & “Olá” \tabularnewline
+Bool & Verdadeiro/falso & true / false \tabularnewline
+{}[Int] (array) & Um conjunto de dados & {}[1, 2, 3] \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tipos básicos mais usados do Swift\end{center}
+
+\begin{tcbinfo}{Dica: a regra do “let primeiro”}
+Regra de ferro da comunidade Swift: use let por padrão e só recorra ao var quando for realmente necessário. Se você usar var onde daria para usar let, o Xcode avisa com um alerta amarelo. Esse hábito elimina toda uma família de bugs de “variável alterada sem querer” — quanto menos o código muda, mais fácil raciocinar sobre ele.
+
+\end{tcbinfo}
+
+\booksection{Opcionais (Optional): o amuleto anticrash do Swift}
+
+Este é o conceito mais importante do Swift, sem concorrência. Em uma frase: quando um valor pode “não existir”, o Swift te obriga a lidar com isso — eliminando, no nível da linguagem, o pesadelo da indústria chamado “crash de ponteiro nulo”.
+
+\begin{lstlisting}[language=Swift]
+var name: String = "João"   // tipo comum: nunca pode ser nil
+// name = nil                // <i class="fas fa-times-circle mr-1"></i> erro de compilação — te barra direto
+
+var nickname: String? = nil  // adicione um ponto de interrogação: nil permitido (opcional)
+nickname = "Zé"
+
+// Para usar um opcional, é preciso fazer o "unwrap":
+if let n = nickname {        // if let: unwrap seguro
+    print("Olá, \(n)")
+} else {
+    print("Ainda sem apelido")
+}
+
+let len = nickname?.count ?? 0   // ?? fornece valor padrão (operador de coalescência)
+print(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{Atenção: o ! é uma “operação de alto risco”}
+Escrever nickname! no código (desempacotamento forçado) é como gritar para o compilador “eu garanto que não é nil” — se você errar, o app trava na hora. Princípio para iniciantes: prefira sempre if let / ?? e evite o !. Às vezes o autocomplete do Xcode adiciona um ! sem cerimônia; lembre de trocá-lo.
+
+\end{tcbwarn}
+
+\booksection{Funções e closures: empacotando a lógica em “botões”}
+
+Uma função é um trecho de lógica com nome, como um botão do controle remoto. Já a closure é uma “função sem nome”, que você pode passar adiante a qualquer momento:
+
+\begin{lstlisting}[language=Swift]
+// Funções: nome primeiro, parâmetros e tipo de retorno depois
+func greet(name: String) -> String {
+    return "Olá, \(name)!"
+}
+print(greet(name: "João"))     // na chamada é preciso o nome do parâmetro
+
+// Closures: definidas na hora, leves e diretas
+let numbers = [1, 2, 3, 4]
+let doubled = numbers.map { $0 * 2 }   // $0 = elemento atual
+// [2, 4, 6, 8]
+
+let big = numbers.filter { $0 > 2 }    // filtro
+// [3, 4]
+\end{lstlisting}
+
+No SwiftUI, closures estão em toda parte: as chaves depois de Button(“Toque aqui”) \{ ... \} formam uma closure. Grave bem os “golpes combinados” de coleções map, filter e sorted — no futuro, 90\% do processamento de listas será combinação deles.
+
+\booksection{Structs e protocolos: o sistema de “blocos de montar” do Swift}
+
+A preferência oficial do Swift é clara: use struct primeiro e recorra à class apenas quando precisar de herança. Structs são “tipos de valor” — ao copiar, cada um segue seu caminho, o que naturalmente elimina uma família de bugs:
+
+\begin{lstlisting}[language=Swift]
+// A struct: uma caixa para dados
+struct Record {
+    var id = UUID()
+    var amount: Double
+    var category: String
+    var date: Date
+
+    // Structs já vêm com o "memberwise initializer": dá para criar direto
+}
+let r = Record(amount: 25.5, category: "Alimentação", date: Date())
+
+// O protocolo: um contrato de "quais habilidades são exigidas"
+protocol Identifiable {
+    var id: UUID { get }
+}
+struct Record: Identifiable { ... }   // conformar-se a um protocolo = prometer cumprir seus requisitos
+\end{lstlisting}
+
+No SwiftUI, quase tudo é struct (View é um protocolo). Se isso não ficou claro agora, sem problema: você vai se deparar com isso todos os dias no Capítulo 62 — no mundo do Swift, abrace o struct primeiro.
+
+\booksection{Cartão de consulta rápida da sintaxe, escrito para quem parte do zero}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{O que fazer} & \textbf{Como escrever} \tabularnewline
+\hline
+Definir constante/variável & \texttt{let x = 1}/\texttt{var x = 1} \tabularnewline
+Interpolação de strings & "Olá, \textbackslash{}(name)" \tabularnewline
+Definir função & func nome(parâmetro: Tipo) -> TipoDeRetorno \{ ... \} \tabularnewline
+Condicional & if condição \{ ... \} else \{ ... \} \tabularnewline
+Percorrer & for x in array \{ ... \} \tabularnewline
+Desempacotamento seguro & if let x = opcional \{ ... \} \tabularnewline
+Valor padrão & x ?? valorPadrão \tabularnewline
+Definir struct & \texttt{struct X \{ var a: Int; var b: String \}} \tabularnewline
+Closure & \texttt{\{ \$0 * 2 \}} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Cartão de consulta rápida da sintaxe Swift (edição iniciante)\end{center}
+
+\begin{tcbpractice}{Mãos à obra: brinque 15 minutos com Swift no Playgrounds}
+Se você tem Mac, abra o Xcode > Playground; se não tem, use o Swift Playgrounds no iPad ou o playground na versão web. Rode cada trecho de código deste capítulo, mude números e textos e provoque alguns erros de propósito para ver como o Xcode avisa. Esses 15 minutos de “brincar primeiro, estudar depois” vão deixar o Capítulo 62 duas vezes mais fácil.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumo do capítulo}
+\begin{itemize}
+  \item Prefira let e use var com parcimônia; os tipos são inferidos automaticamente, mas dá para declarar explicitamente depois dos dois-pontos
+  \item Opcional é a alma do Swift: se pode estar vazio, precisa ser tratado; if let / ?? são o amuleto, e ! é operação de alto risco
+  \item Na chamada de funções, inclua os nomes dos parâmetros; closure = função sem nome, onipresente no SwiftUI
+  \item Prefira struct e adote protocolos (Protocol); no SwiftUI, quase tudo é struct
+  \item 20\% da sintaxe resolve 80\% do trabalho: primeiro aprenda a usar, depois busque a maestria
+\end{itemize}
+
+\end{tcbsummary}

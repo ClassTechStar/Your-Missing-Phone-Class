@@ -1,0 +1,188 @@
+\bookchapter{Kapitel 38: Fünf Denkprinzipien der KI-Programmierung}
+
+\chapterintro{Wenn Sie aus diesem Buch nur ein Kapitel behalten, dann dieses. Die fünf Denkprinzipien sind sein Herzstück; alle späteren Kapitel – Kontext, Anforderungen, Dialog, Qualität – entfalten sie für verschiedene Situationen. Keines ist schwer zu verstehen, doch jedes lohnt sich, in einigen Projekten „in den Muskeln“ zu verankern.}
+
+Der Ursprung ist spannend: Andrej Karpathy veröffentlichte zu seinem Open-Source-Projekt eine nur 70 Zeilen lange CLAUDE.md mit vier Kernprinzipien für die Zusammenarbeit mit KI. Die Datei erhielt auf GitHub über 70.000 Stars und wurde zur meistzitierten Richtschnur der KI-Programmierer weltweit. Es sind keine leeren Slogans, sondern aus der Praxis destillierte Denkgewohnheiten. Dieses Buch ergänzt die fünfte – iterative Verifikation – und vollendet so das System der fünf Prinzipien.
+
+\begin{tcbinfo}{Warum ist eine 70-Zeilen-Datei so viel wert?}
+Was bedeuten 70.000 Stars? Die meisten GitHub-Projekte erreichen das nie. Dass eine 70-Zeilen-Datei es schafft, zeigt: Im KI-Zeitalter ist nicht Code knapp, sondern die Fähigkeit, klar zu denken. Diese 70 Zeilen sind die destillierte Form dieses „Klar-Denkens“.
+
+\end{tcbinfo}
+
+\booksection{Prinzip 1: Think Before Coding (erst denken, dann kodieren)}
+
+Das kontraintuitivste der fünf Prinzipien. Wenn KI uns beim Programmieren hilft, warum noch „erst denken“? Ganz einfach: Die Qualität der KI-Ausgabe hängt von Ihrer Eingabe ab. Wenn Sie selbst nicht wissen, was Sie wollen, geraten Sie in endlose „Änderungsschleifen“ – im Volksmund „KI irrt gemeinsam mit Ihnen“.
+
+„Erst denken“ heißt: Vor der Anweisung an die KI drei Fragen klären – ein „Denk-Dreieck“, das vollständig sein muss:
+
+\begin{enumerate}
+  \item Welches Problem löse ich? (Ziel)
+  \item Wie soll das Ergebnis aussehen? (Abnahmekriterien)
+  \item Welche Einschränkungen gibt es? (Rahmen)
+\end{enumerate}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Denkdimension} & \textbf{Unklare Eingabe (schlecht)} & \textbf{Klare Eingabe (gut)} \tabularnewline
+\hline
+Problemdefinition & Mach mir eine Website & Baue eine persönliche Tool-Seite mit drei Einstiegskarten für KI-Miniprogramme \tabularnewline
+Erwartetes Ergebnis & Sieht gut aus & Responsives Layout, Dark Theme, Hover-Animationen auf den Karten, mobil nutzbar \tabularnewline
+Einschränkungen & (nicht genannt) & Keine Frameworks, reines HTML+CSS+JS, Einzeldatei-Deployment, kein Backend \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Unklare vs. klare Eingabe für dieselbe Anforderung\end{center}
+
+\begin{tcbwarn}{Hinweis: „Erst denken“ $\neq$ „perfektes Dokument schreiben“}
+„Erst denken“ heißt nicht „zuerst ein perfektes PRD schreiben“. Es ist ein schnelles, aber strukturiertes Denken – 30 Sekunden für die drei Fragen bringen mehr als 30 Minuten hin- und herändern im Chat. Bei kleinen Aufgaben genügt ein kurzer Dreiklang; bei großen Projekten wird daraus ein vollständiges Anforderungsdokument (siehe Kapitel 40).
+
+\end{tcbwarn}
+
+\booksection{Prinzip 2: Simplicity First (Einfachheit zuerst)}
+
+Die größte Falle ist nicht „schafft es nicht“, sondern „macht zu viel“. Sagen Sie „Baue ein Benutzerverwaltungssystem“, generiert die KI oft Authentifizierung, Rechte, Rollen, Audit-Logs, Datenexport – obwohl Sie vielleicht nur eine einfache Login-Seite brauchen. Überproduktion ist die Hauptursache für aufgeblähten KI-Code.
+
+„Einfachheit zuerst“ bedeutet „minimaler Machbarkeitsgrundsatz“: Mit dem wenigsten Code die Kernfunktion, mit der einfachsten Lösung das Problem, mit den wenigsten Features die Idee prüfen. Karpathy hat dafür ein treffendes Bild: „Wenn du nur einen Rabattpreis berechnen willst, brauchst du keinen E-Commerce-Motor.“
+
+In der Praxis heißt das konkrete Gewohnheiten:
+
+\begin{itemize}
+  \item Pro Anweisung nur einen Funktionspunkt umsetzen, nicht das ganze System auf einmal;
+  \item Standardbibliotheken und einfache Lösungen vor komplexen Abhängigkeiten;
+  \item Was in 50 Zeilen geht, nicht auf 500 Zeilen aufblasen;
+  \item Wenn die KI über das Ziel hinausschießt, klar sagen: „Überflüssiges streichen.“
+\end{itemize}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Szenario} & \textbf{Überdimensionierte Lösung (vermeiden)} & \textbf{Einfache Lösung (empfohlen)} \tabularnewline
+\hline
+Daten speichern & MySQL-Datenbank + ORM aufsetzen & Erst JSON-Datei oder SQLite \tabularnewline
+Benutzer-Login & OAuth2.0 + JWT + Rollenrechte & Erst einfache Passwortprüfung \tabularnewline
+Frontend-Framework nötig & React + Redux + Router & Erst reines HTML + natives JS \tabularnewline
+Deployment ins Netz & Docker + CI/CD + K8s & Erst lokal zum Laufen bringen \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Überdimensionierte vs. einfache Lösungen in typischen Szenarien\end{center}
+
+\booksection{Prinzip 3: Surgical Changes (chirurgisch präzise Änderungen)}
+
+Beim Iterieren eines bestehenden Projekts sollte jede Änderung präzise sein wie eine Operation – nur das Nötige anfassen. Besonders wichtig in der KI-Programmierung, weil KI zum „Nebenbei-Mitändern“ neigt: Ein Bugfix wird leicht zur halben Datei-Refactorierung.
+
+Kernanforderung: Jede Anweisung nennt explizit Umfang und Grenzen. „Ändere nur die Funktion calculate\_discount“, „Lass den Rest unangetastet“, „Behalte den vorhandenen Code-Stil“. Geht die Änderung darüber hinaus, sofort die überflüssigen Teile zurückverlangen.
+
+Karpathy illustriert das mit einem Diff-Beispiel: Sie lassen eine „Mitgliedspreis“-Logik in die Rabattfunktion des Warenkorbs einbauen. Gutes Ergebnis: nur diese Funktion, wenige zusätzliche Zeilen. Schlechtes Ergebnis: der ganze File wird umgebaut – der neue Code mag „eleganter“ wirken, aber Sie wissen nicht, ob neue Bugs darin stecken. „Sieht besser aus“ darf in der KI-Programmierung nie ein Grund sein, von der Anweisung abzuweichen.
+
+Schlechte Anweisung (unklarer Umfang)
+
+\begin{lstlisting}
+Optimiere die Rabattlogik dieses Projekts
+\end{lstlisting}
+
+Gute Anweisung (präziser Umfang)
+
+\begin{lstlisting}
+Ändere nur calculate\_discount in cart.py: 1. Ergänze Mitgliedspreis-Logik zur bestehenden Rabattlogik 2. Mitglieder erhalten zusätzlich 10 \% Rabatt 3. Funktionsparameter und andere Funktionen unverändert lassen 4. Vorhandenen Variablennamen-Stil beibehalten
+\end{lstlisting}
+
+\booksection{Prinzip 4: Goal-Driven Execution (zielgetriebene Ausführung)}
+
+Diese Regel beantwortet eine Schlüsselfrage: Soll man der KI sagen, „wie“ sie arbeiten soll, oder „was“ herauskommen soll? Karpathys Antwort: das Letztere. Statt „Erst eine Klasse anlegen, dann Methoden, dann Tests“ besser: „Ich brauche ein Werkzeug, das CSV-Dateien einliest und je Spalte die Anzahl eindeutiger Werte zählt“. Die KI wählt den Weg, Sie nehmen das Ergebnis ab.
+
+Der Vorteil ist doppelt: Die KI bekommt mehr Spielraum und wählt den besten Weg statt an Ihren Zwischenschritten zu kleben; Sie verlagern die Aufmerksamkeit vom „Wie“ auf „Ist es richtig?“ – genau das ist die Aufgabe eines Dirigenten.
+
+\begin{tcbwarn}{Hinweis: Zielgetrieben $\neq$ gewähren lassen}
+Nach der Ausführung muss streng abgenommen werden: Erfüllt das Ergebnis die Anforderung? Sind Randfälle behandelt? Gibt es Überdesign? Bei Abweichung konkretes Feedback geben – nicht „schreib neu“, sondern „Bei leerer Liste entsteht ein IndexError in Zeile 15, bitte eine Leerwertprüfung ergänzen“.
+
+\end{tcbwarn}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Anweisungsstil} & \textbf{Beispiel} & \textbf{Ergebnismerkmal} \tabularnewline
+\hline
+Imperativ (wie) & „Lege eine Python-Klasse DataParser an, füge eine Methode parse mit Parameter filename hinzu, lese mit dem csv-Modul …“ & KI wird zur Tippkraft, Ihre Zwischenschritte sind vielleicht nicht optimal \tabularnewline
+Zielorientiert (was) & „Ich brauche ein Tool: CSV einlesen, je Spalte eindeutige Werte zählen, als JSON ausgeben. Bitte vollständige Implementierung.“ & KI wählt den besten Weg, Sie prüfen das Ergebnis \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Imperative vs. zielorientierte Anweisungen\end{center}
+
+\booksection{Prinzip 5: Iterate and Verify (iterieren und prüfen)}
+
+Dieses Buch ergänzt Karpathys vier Prinzipien um ein fünftes. Kernüberzeugung: Die erste KI-Ausgabe ist fast nie die Endversion. Effektive KI-Programmierung ist ein Kreislauf aus „Erzeugen – Prüfen – Korrigieren“, nicht ein einmaliges „Anweisung – Ergebnis“.
+
+„Iterieren und prüfen“ ist nicht passives „Falsch, nochmal“, sondern ein strukturierter Verifikationsprozess. Nach jeder Ausgabe auf drei Ebenen prüfen:
+
+\begin{itemize}
+  \item Ebene 1 · Funktion: Läuft es? Sind Ein- und Ausgabe korrekt?
+  \item Ebene 2 · Ränder: Was passiert bei leerer, zu langer oder fehlerhafter Eingabe?
+  \item Ebene 3 · Architektur: Ist die Code-Struktur sinnvoll? Gibt es Hardcoding? Ist sie erweiterbar?
+\end{itemize}
+
+Ziel definieren
+
+KI generiert Code
+
+Funktionsprüfung
+
+Bestanden
+
+Grenzfälle prüfen
+
+Bestanden
+
+Architektur-Review
+
+Bestanden, weiter zum nächsten Schritt
+
+Nicht bestanden
+
+Konkretes Feedback geben
+
+Neu generieren
+
+\begin{center}\small\color{gray}Abbildung 2: Iterativer Verifikationskreislauf der KI-Programmierung\end{center}
+
+Der Schlüssel liegt im „konkreten Feedback“. Bei einem Fehlschlag nicht „stimmt nicht, mach neu“, sondern „Bei leerer Liste gibt es einen IndexError, bitte Zeile 15 um eine Leerwertprüfung ergänzen“. Präzises Feedback erlaubt gezielte Korrekturen; vages Feedback lässt die KI nur raten.
+
+\booksection{Harness Engineering: Agent = Modell + Harness}
+
+Mitte 2026 machte der Begriff Harness Engineering in der KI-Programmier-Community die Runde. Die Formel ist einfach:
+
+Agent-Fähigkeit = Modellfähigkeit × Harness-Qualität
+
+Die Modellfähigkeit ist die geistige Obergrenze; das Harness ist die „Arbeitsumgebung“ um das Modell – Kontextmanagement, Werkzeuganbindung, Prozesssteuerung, Gedächtnis.
+
+Das erklärt ein häufiges Rätsel: Warum machen manche mit GPT-4 oder Claude brillante Projekte, andere nur mittelmäßigen Code? Der Unterschied liegt nicht im Modell, sondern im Harness. Ein gutes Harness umfasst klare Projektspezifikationen, sinnvolle Werkzeuge, geordneten Gesprächskontext und einen guten Verifikationsprozess. Das Modell setzt die Obergrenze, das Harness bestimmt, wie weit Sie sie ausschöpfen.
+
+\begin{tcbinfo}{Das Praktikanten-Gleichnis}
+Stellen Sie das Modell wie ein geniales Praktikanten vor – hoher IQ, aber ohne Projekthintergrund, Werkzeuge, Fristen und Abnahmekriterien kommt nichts Gutes heraus. Harness Engineering ist die Kunst, diesem Praktikanten die richtige Arbeitsumgebung zu bauen.
+
+\end{tcbinfo}
+
+Die folgenden Kapitel lehren genau das: Kapitel 39 Kontextmanagement (Projektgedächtnis), Kapitel 40 Anforderungen (PRD), Kapitel 43 Dialogtechnik (Prompt-Schichten), Kapitel 45 Qualitätssicherung (Verifikationsprozess). Zusammen ergeben sie Ihr Harness.
+
+\begin{tcbpractice}{Übung: Die nächste Idee mit dem „Denk-Dreieck“ zerlegen}
+Wählen Sie eine kleine Sache, die Sie schon lange machen wollten (z. B. eine Countdown-Seite, ein Trink-Erinnerungs-Skript). Drei Minuten lang beantworten: (1) Welches Problem löst es? (2) Wie sieht das Ergebnis aus? (3) Welche Rahmenbedingungen (Zeit, Technik, Umgebung)? Schreiben Sie die Antwort als einen Absatz. Glückwunsch – Ihr erstes „Think Before Coding“ ist fertig, und der Absatz ist eine brauchbare, hochwertige Anweisung.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Kapitel-Zusammenfassung}
+\begin{itemize}
+  \item Die fünf Prinzipien stammen aus Karpathys 70-zeiliger CLAUDE.md (70K+ Stars); dieses Buch ergänzt „Iterate and Verify“
+  \item Think Before Coding: Vor dem Sprechen drei Fragen – Was? Wie sieht es aus? Welche Grenzen?
+  \item Simplicity First: Die größte Falle ist „zu viel“ – für einen Rabatt braucht man keinen Shop-Motor
+  \item Surgical Changes: Chirurgisch präzise, kein „Nebenbei-Mitändern“ der KI
+  \item Goal-Driven Execution: „Was“ statt „Wie“ – die KI wählt den Weg
+  \item Iterate and Verify: Drei Prüfebene (Funktion/Rand/Architektur) + konkretes Feedback, im Kreislauf
+  \item Harness Engineering: Fähigkeit = Modell × Harness – KI wie ein geniales Praktikanten führen
+\end{itemize}
+
+\end{tcbsummary}

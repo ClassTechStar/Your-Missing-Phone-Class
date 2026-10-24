@@ -1,0 +1,155 @@
+\bookchapter{Κεφάλαιο 61: Γρήγορη εκ$\mu$άθηση Swift — η πρώτη γλώσσα της Apple}
+
+\chapterintro{Σε αυτό το κεφάλαιο $\mu$αθαίνου$\mu$ε επίση$\mu$α τη γλώσσα. Μην αγχώνεσαι — η Swift είναι διάση$\mu$η για το ότι είναι «φιλική στους αρχάριους», και δεν χρειάζεται να αποστηθίσεις βιβλία σύνταξης: $\mu$αθαίνοντας το 20\% της σύνταξης, διαβάζεις και γράφεις το 80\% του καθη$\mu$ερινού κώδικα. Τα υπόλοιπα τα ψάχνεις όσο χτίζεις project. Θυ$\mu$ήσου την αρχή $\mu$άθησής $\mu$ας: να καταλαβαίνεις > να αποστηθίζεις, να ξέρεις να το χρησι$\mu$οποιείς > να το κατέχεις σε βάθος.}
+
+\booksection{Α. Μεταβλητές και τύποι: δίνου$\mu$ε ονό$\mu$ατα στα δεδο$\mu$ένα}
+
+Ένα πρόγρα$\mu$$\mu$α είναι «δεδο$\mu$ένα + λογική». Η $\mu$εταβλητή είναι να δώσεις στα δεδο$\mu$ένα ένα όνο$\mu$α και να τα αποθηκεύσεις. Στη Swift δηλώνεις $\mu$ε let και var:
+
+\begin{lstlisting}[language=Swift]
+let name = "Γιώργος"        // let: σταθερά (προτείνεται ως προεπιλογή)
+var age = 18             // var: $\mu$εταβλητή ($\mu$πορεί να αλλάξει $\mu$ετά)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var αλλάζει
+// name = "Νίκος"         // <i class="fas fa-times-circle mr-1"></i> let δεν αλλάζει, σφάλ$\mu$α $\mu$εταγλώττισης
+
+let score: Int = 100     // $\mu$πορείς και να γράψεις τον τύπο ρητά
+let pi = 3.14            // και χωρίς αυτόν γίνεται αυτό$\mu$ατη εξαγωγή
+
+print("Γεια σου, \(name)")   // ενσω$\mu$άτωση αλφαριθ$\mu$ητικού: ανάστροφη κάθετος + παρένθεση
+\end{lstlisting}
+
+Οι συχνά χρησι$\mu$οποιού$\mu$ενοι τύποι, σε έναν πίνακα:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Τύπος} & \textbf{Τι αποθηκεύει} & \textbf{Παράδειγ$\mu$α} \tabularnewline
+\hline
+Int & Ακέραιος & 42 \tabularnewline
+Double & Δεκαδικός & 3.14 \tabularnewline
+String & Κεί$\mu$ενο & «Γεια σου» \tabularnewline
+Bool & Αληθές/Ψευδές & true / false \tabularnewline
+{}[Int] (πίνακας) & Μια συλλογή δεδο$\mu$ένων & {}[1, 2, 3] \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Οι βασικοί συχνοί τύποι της Swift\end{center}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: ο κανόνας «πρώτα let»}
+Σιδερένιος κανόνας της κοινότητας της Swift: $\mu$ε let ως προεπιλογή, και var $\mu$όνο όταν πραγ$\mu$ατικά χρειάζεται. Αν γράψεις var όπου θα $\mu$πορούσε let, το Xcode θα σε προειδοποιήσει $\mu$ε κίτρινο γρά$\mu$$\mu$α. Η συνήθεια αυτή σε γλιτώνει από $\mu$ια ολόκληρη κατηγορία bugs «τυχαίας αλλαγής $\mu$εταβλητής» — όσο λιγότερο αλλάζει ο κώδικας, τόσο πιο εύκολο είναι να τον συλλογιστείς.
+
+\end{tcbinfo}
+
+\booksection{Β. Προαιρετικές τι$\mu$ές (Optional): το «φυλαχτό κατά των crashes» της Swift}
+
+Αυτή είναι η πιο ση$\mu$αντική έννοια της Swift, χωρίς δεύτερη. Με $\mu$ια φράση: όταν $\mu$ια τι$\mu$ή $\mu$πορεί «να $\mu$ην υπάρχει», η Swift σε αναγκάζει να τη διαχειριστείς — εξαλείφοντας από τη γλώσσα τον επαγγελ$\mu$ατικό εφιάλτη του «crash λόγω κενού δείκτη».
+
+\begin{lstlisting}[language=Swift]
+var name: String = "Γιώργος"   // Συνηθισ$\mu$ένος τύπος: ποτέ nil
+// name = nil                // <i class="fas fa-times-circle mr-1"></i> Σε στα$\mu$ατάει κατευθείαν ο compiler
+
+var nickname: String? = nil  // $\mu$ε ερωτη$\mu$ατικό: επιτρέπεται nil (optional)
+nickname = "Μπα$\mu$πής"
+
+// Με optional, πρέπει να "ξετυλίξεις" πρώτα:
+if let n = nickname {        // if let: ασφαλές ξετύλιγ$\mu$α
+    print("Γεια σου, \(n)")
+} else {
+    print("Δεν έχει ακό$\mu$α παρατσούκλι")
+}
+
+let len = nickname?.count ?? 0   // ?? δίνει προεπιλογή (nil coalescing)
+print(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{Προσοχή: το ! είναι «επικίνδυνη κίνηση»}
+Όταν γράφεις nickname! (βίαιη αποσυ$\mu$πίεση), είναι σαν να φωνάζεις στον compiler «εγγυώ$\mu$αι ότι δεν είναι nil» — αν πέσεις έξω, η εφαρ$\mu$ογή κρασάρει επί τόπου. Κανόνας για αρχάριους: χρησι$\mu$οποίησε όσο γίνεται if let / ?? και όχι !. Όταν το Xcode συ$\mu$πληρώνει κώδικα, κάπου-κάπου σου πετάει ένα ! — θυ$\mu$ήσου να το αλλάζεις.
+
+\end{tcbwarn}
+
+\booksection{Γ. Συναρτήσεις και closures: πακετάρου$\mu$ε τη λογική σε «κου$\mu$πιά»}
+
+Η συνάρτηση είναι ένα τ$\mu$ή$\mu$α λογικής $\mu$ε όνο$\mu$α, σαν ένα κου$\mu$πί στο τηλεχειριστήριο. Το closure είναι «συνάρτηση χωρίς όνο$\mu$α», που $\mu$πορείς να περάσεις όποιον θέλεις:
+
+\begin{lstlisting}[language=Swift]
+// Συνάρτηση: το όνο$\mu$α $\mu$προστά, παρά$\mu$ετροι και τύπος επιστροφής πίσω
+func greet(name: String) -> String {
+    return "Γεια σου, \(name)!"
+}
+print(greet(name: "Γιώργος"))     // Στην κλήση πρέπει να αναφέρεται το όνο$\mu$α της παρα$\mu$έτρου
+
+// Closure: ορισ$\mu$ός επί τόπου, κο$\mu$ψά και ά$\mu$εσα
+let numbers = [1, 2, 3, 4]
+let doubled = numbers.map { $0 * 2 }   // $0 = τρέχον στοιχείο
+// [2, 4, 6, 8]
+
+let big = numbers.filter { $0 > 2 }    // Φιλτράρισ$\mu$α
+// [3, 4]
+\end{lstlisting}
+
+Στο SwiftUI τα closures είναι παντού: τα άγκιστρα \{ ... \} που ακολουθούν το Button(“Πάτα $\mu$ε”) είναι ένα closure. Τα map, filter, sorted — τα «συνδυαστικά χτυπή$\mu$ατα» των συλλογών — κράτα τα καλά: το 90\% της $\mu$ελλοντικής επεξεργασίας λιστών θα είναι συνδυασ$\mu$ός τους.
+
+\booksection{Δ. Structs και protocols: το σύστη$\mu$α «LEGO» της Swift}
+
+Η επίση$\mu$η προτί$\mu$ηση της Swift είναι ξεκάθαρη: προτί$\mu$ησε struct, και class $\mu$όνο όταν χρειάζεται κληρονο$\mu$ικότητα. Τα struct είναι «τύποι τι$\mu$ής» — στην αντιγραφή, το καθένα ζει τη ζωή του, και έτσι λείπει από $\mu$όνο του $\mu$ια κατηγορία bugs:
+
+\begin{lstlisting}[language=Swift]
+// Struct: κουτί $\mu$ε δεδο$\mu$ένα
+struct Record {
+    var id = UUID()
+    var amount: Double
+    var category: String
+    var date: Date
+
+    // Το struct έχει έτοι$\mu$ο "memberwise initializer": δη$\mu$ιουργείται κατευθείαν
+}
+let r = Record(amount: 25.5, category: "Φαγητό", date: Date())
+
+// Protocol: συ$\mu$φωνία για "ποιες ικανότητες πρέπει να έχει"
+protocol Identifiable {
+    var id: UUID { get }
+}
+struct Record: Identifiable { ... }   // Συ$\mu$$\mu$όρφωση $\mu$ε protocol = υπόσχεση υλοποίησης των απαιτήσεων
+\end{lstlisting}
+
+Στο SwiftUI σχεδόν τα πάντα είναι struct (το View είναι protocol). Αν δεν το καταλαβαίνεις τώρα, δεν πειράζει — από το Κεφάλαιο 62 θα τα συναντάς καθη$\mu$ερινά. Στον κόσ$\mu$ο της Swift, αγκαλιάσε πρώτα το struct.
+
+\booksection{Ε. Κάρτα ταχείας αναφοράς σύνταξης για απόλυτους αρχάριους}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Τι θέλεις να κάνεις} & \textbf{Πώς γράφεται} \tabularnewline
+\hline
+Ορισ$\mu$ός σταθεράς/$\mu$εταβλητής & \texttt{let x = 1}/\texttt{var x = 1} \tabularnewline
+Ε$\mu$βολή συ$\mu$βολοσειρών (string interpolation) & "Γεια σου, \textbackslash{}(name)" \tabularnewline
+Ορισ$\mu$ός συνάρτησης & func ονο$\mu$α(παρά$\mu$ετρος: τύπος) -> τύπος Επιστροφής \{ ... \} \tabularnewline
+Έλεγχος συνθήκης & if συνθήκη \{ ... \} else \{ ... \} \tabularnewline
+Επανάληψη & for x in πίνακας \{ ... \} \tabularnewline
+Ασφαλής αποσυ$\mu$πίεση & if let x = προαιρετική Τι$\mu$ή \{ ... \} \tabularnewline
+Προεπιλεγ$\mu$ένη τι$\mu$ή & x ?? προεπιλεγ$\mu$ένη Τι$\mu$ή \tabularnewline
+Ορισ$\mu$ός struct & \texttt{struct X \{ var a: Int; var b: String \}} \tabularnewline
+Closure & \texttt{\{ \$0 * 2 \}} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Κάρτα ταχείας αναφοράς σύνταξης Swift (για αρχάριους)\end{center}
+
+\begin{tcbpractice}{Ας το δοκι$\mu$άσου$\mu$ε: παίξε 15 λεπτά Swift στο Playgrounds}
+Αν έχεις Mac, άνοιξε Xcode > Playground· αν όχι, χρησι$\mu$οποίησε το Swift Playgrounds στο iPad ή το web-based περιβάλλον εξάσκησης. Τρέξε κάθε κο$\mu$$\mu$άτι κώδικα του κεφαλαίου, άλλαξε αριθ$\mu$ούς και κεί$\mu$ενα, και φτιάξε σκόπι$\mu$α $\mu$ερικά λάθη για να δεις πώς σου δείχνει το Xcode. Αυτά τα 15 λεπτά «πρώτα παίζεις, $\mu$ετά $\mu$αθαίνεις» θα σου κάνουν την είσοδο στο Κεφάλαιο 62 διπλά πιο εύκολη.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Πρώτα let, var $\mu$ε προσοχή· οι τύποι εξάγονται αυτό$\mu$ατα, αλλά $\mu$πορείς να τους δηλώσεις ρητά $\mu$ετά την άνω-κάτω τελεία
+  \item Τα Optional είναι η ψυχή της Swift: ό, τι $\mu$πορεί να είναι κενό πρέπει να διαχειριστείς· το if let / ?? είναι το φυλαχτό, το ! επικίνδυνη κίνηση
+  \item Στην κλήση συνάρτησης γράφεις τα ονό$\mu$ατα των παρα$\mu$έτρων· το closure = συνάρτηση χωρίς όνο$\mu$α, και είναι παντού στο SwiftUI
+  \item Πρώτα struct, και τήρηση των protocols (Protocol)· στο SwiftUI σχεδόν τα πάντα είναι struct
+  \item Με το 20\% της σύνταξης κάνεις το 80\% της δουλειάς: πρώτα να ξέρεις να το χρησι$\mu$οποιείς, $\mu$ετά να το κατέχεις σε βάθος
+\end{itemize}
+
+\end{tcbsummary}

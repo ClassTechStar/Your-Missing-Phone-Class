@@ -1,0 +1,157 @@
+\bookchapter{Κεφάλαιο 66: Έργο 2 — Εφαρ$\mu$ογή αναζήτησης καιρού (δικτυακή έκδοση)}
+
+\chapterintro{Αν το βιβλίο εξόδων ήταν εξάσκηση «$\mu$έσα», η εφαρ$\mu$ογή καιρού είναι η πρώτη σου επαφή $\mu$ε τον «έξω κόσ$\mu$ο» — πρέπει να συνεργάζεται $\mu$ε το internet. Σε αυτό το έργο θα $\mu$άθεις: πώς να αποκτάς δωρεάν API, πώς να αναλύεις JSON, πώς να διαχειρίζεσαι τις τρεις καταστάσεις της οθόνης («φόρτωση/επιτυχία/αποτυχία») και πώς να κρύβεις καλά το κλειδί του API. Όταν το ολοκληρώσεις, θα έχεις αποκτήσει τη δύνα$\mu$η να φτιάχνεις οποιαδήποτε «συνδεδε$\mu$ένη εφαρ$\mu$ογή» — ειδήσεις, συναλλαγ$\mu$ατικές ισοτι$\mu$ίες, $\mu$ετάφραση: η λογική είναι ακριβώς η ίδια.}
+
+\booksection{Απόκτηση δωρεάν API καιρού}
+
+Για προσωπική εξάσκηση προτείνονται το OpenWeatherMap ή η QWeather (He Feng Tianqi, δη$\mu$οφιλής στην Κίνα) — και τα δύο έχουν δωρεάν ποσόστωση και είσαι έτοι$\mu$ος $\mu$όλις εγγραφείς. Πά$\mu$ε $\mu$ε παράδειγ$\mu$α το OpenWeatherMap:
+
+\begin{enumerate}
+  \item Δη$\mu$ιουργία λογαριασ$\mu$ού στη σελίδα API keys φτιάξε ένα κλειδί (apikey)·
+  \item Η δωρεάν έκδοση $\mu$πορεί να καλέσει το endpoint Current Weather: api.openweathermap.org/data/2.5/weather? q=beijing\&appid=ΤΟ\_ΚΛΕΙΔΙ\_ΣΟΥ\&units=metric·
+  \item Δοκί$\mu$ασέ το πρώτα $\mu$ία φορά στον browser για να δεις πώς $\mu$οιάζει το JSON που επιστρέφει — αυτό είναι το υποχρεωτικό «προκαταρκτικό $\mu$άθη$\mu$α» πριν συνδέσεις οποιοδήποτε API.
+\end{enumerate}
+
+\textbf{Προσοχή στην παγίδα: Το κλειδί δεν πρέπει ποτέ να $\mu$παίνει σκληρά στον κώδικα}\par
+
+Το API Key είναι σαν ο «κωδικός του πορτοφολιού σου»: αν γραφτεί στον κώδικα και ανέβει στο GitHub, $\mu$έσα σε λίγες ώρες θα το αρπάξουν crawlers και θα το ξοδέψουν χωρίς εσένα. Ο σωστός τρόπος στο iOS: βάλε το στο Config.xcconfig (αρχείο ρυθ$\mu$ίσεων που το gitignore αγνοεί ήδη) και διάβαζέ το στον κώδικα $\mu$έσω του Info.plist. Ψάξε «iOS xcconfig API key» και κάνε τις αλλαγές ακολουθώντας τις οδηγίες.
+
+\booksection{Δικτυακό στρώ$\mu$α: URLSession + Codable}
+
+Πρώτα όρισε τα $\mu$οντέλα $\mu$ε βάση το JSON που επιστρέφει το API, και $\mu$ετά γράψε το service:
+
+\begin{lstlisting}[language=Swift]
+// JSON: {"weather":[{"description":"Αίθριο"}],"main":{"temp":26.5,"humidity":40},"name":"Πεκίνο"}
+struct WeatherResponse: Codable {
+    let weather: [Weather]
+    let main: Main
+    let name: String
+}
+struct Weather: Codable { let description: String }
+struct Main: Codable { let temp: Double; let humidity: Int }
+
+struct WeatherService {
+    let key: String   // Διαβάζεται από xcconfig
+
+    func fetchWeather(city: String) async throws -> WeatherResponse {
+        var comps = URLComponents(string: "https://api.openweathermap.org/data/2.5/weather")!
+        comps.queryItems = [
+            URLQueryItem(name: "q", value: city),
+            URLQueryItem(name: "appid", value: key),
+            URLQueryItem(name: "units", value: "metric"),
+            URLQueryItem(name: "lang", value: "zh_cn")
+        ]
+        let (data, _) = try await URLSession.shared.data(from: comps.url!)
+        return try JSONDecoder().decode(WeatherResponse.self, from: data)
+    }
+}
+\end{lstlisting}
+
+\booksection{Τρεις καταστάσεις διεπαφής: φόρτωση / επιτυχία / αποτυχία}
+
+Η ψυχή $\mu$ιας συνδεδε$\mu$ένης εφαρ$\mu$ογής βρίσκεται στη «διαχείριση καταστάσεων». Αργό δίκτυο, κο$\mu$$\mu$ένη σύνδεση, λάθος όνο$\mu$α πόλης… για κάθε περίπτωση η οθόνη πρέπει να δίνει απάντηση στον χρήστη. Εκφράσέ τες κο$\mu$ψά $\mu$ε enum + switch:
+
+\begin{lstlisting}[language=Swift]
+enum LoadState {
+    case loading                  // περιστρέφεται
+    case success(WeatherResponse) // επιτυχία
+    case error(String)            // αποτυχία
+}
+
+@Observable
+class WeatherViewModel {
+    var state: LoadState = .loading
+    private let service = WeatherService(key: Config.apiKey)
+
+    func search(city: String) async {
+        state = .loading
+        do {
+            let data = try await service.fetchWeather(city: city)
+            state = .success(data)
+        } catch {
+            state = .error("Δεν βρήκα αυτή την πόλη, δοκί$\mu$ασε άλλο όνο$\mu$α;")
+        }
+    }
+}
+
+// Στην οθόνη:
+switch vm.state {
+case .loading: ProgressView("Φόρτωση…")
+case .success(let d): WeatherContent(data: d)
+case .error(let msg): Text(msg).foregroundColor(.secondary)
+}
+\end{lstlisting}
+
+Το τρι$\mu$ερές σχή$\mu$α loading/success/error είναι το «καθολικό πρότυπο» των συνδεδε$\mu$ένων διεπαφών — $\mu$άθε το αρχικά απ' έξω, και $\mu$ετά σε κάθε συνδεδε$\mu$ένη εφαρ$\mu$ογή ακολούθησε το ίδιο σχή$\mu$α.
+
+\booksection{Πρακτικός κώδικας διεπαφής: απεικόνισε τον καιρό}
+
+\begin{lstlisting}[language=Swift]
+struct WeatherContent: View {
+    let data: WeatherResponse
+
+    var body: some View {
+        VStack(spacing: 12) {
+            Text(data.name)
+                .font(.title.bold())
+            Text("\(Int(data.main.temp))°C")
+                .font(.system(size: 76, weight: .thin))
+            Text(data.weather.first?.description ?? "Άγνωστο")
+                .font(.title3)
+                .foregroundColor(.secondary)
+            HStack(spacing: 24) {
+                Label("Υγρασία \(data.main.humidity)%", systemImage: "humidity")
+                Label("Αίσθηση \(Int(data.main.temp))°C", systemImage: "thermometer")
+            }
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+Μερικές λεπτο$\mu$έρειες που αξίζει να προσέξεις: το first? παίρνει $\mu$ε ασφάλεια το πρώτο στοιχείο (η λίστα $\mu$πορεί να είναι άδεια), το ?? «Άγνωστο» δίνει εφεδρικό κεί$\mu$ενο· οι αριθ$\mu$οί της θερ$\mu$οκρασίας σε λεπτό βάρος γρα$\mu$$\mu$ατοσειράς (76) είναι η κλασική συνταγή των εφαρ$\mu$ογών καιρού· το Label είναι το επίση$\mu$ο στοιχείο «εικονίδιο+κεί$\mu$ενο», πιο σωστό από ένα χειροποίητο HStack.
+
+\booksection{Λεπτο$\mu$έρειες αλληλεπίδρασης και αγαπη$\mu$ένες πόλεις}
+
+\begin{itemize}
+  \item Πεδίο αναζήτησης: ο τροποποιητής .searchable στην κορυφή δίνει την ενσω$\mu$ατω$\mu$ένη αναζήτηση του συστή$\mu$ατος, και στην υποβολή καλεί το vm.search·
+  \item Αγαπη$\mu$ένες πόλεις: αποθήκευσε τις πόλεις που κοιτάς συχνά στο UserDefaults, και την επό$\mu$ενη φορά η αναζήτηση γίνεται αυτό$\mu$ατα·
+  \item Ανανέωση $\mu$ε τράβηγ$\mu$α προς τα κάτω: η $\mu$ία γρα$\mu$$\mu$ή .refreshable \{ await vm.search(...) \} τα κάνει όλα·
+  \item Εικονίδια καιρού: $\mu$ε το Image(systemName:) κάνεις αντιστοίχιση ανά περιγραφή (sun.max / cloud.rain / snowflake) και η οθόνη ζωντανεύει α$\mu$έσως.
+\end{itemize}
+
+\begin{tcbinfo}{Μικρή συ$\mu$βουλή: η «παγίδα» $\mu$ε τα κινέζικα ονό$\mu$ατα πόλεων}
+Το OpenWeatherMap δεν τα πηγαίνει και τόσο καλά $\mu$ε τα κινέζικα ονό$\mu$ατα πόλεων: η αναζήτηση $\mu$ε το κινέζικο όνο$\mu$α της πόλης («Μπεϊτζίνγκ») $\mu$πορεί να $\mu$η δώσει αποτέλεσ$\mu$α, ενώ το «beijing» δουλεύει κανονικά. Η «επαγγελ$\mu$ατική» λύση είναι ένας ενσω$\mu$ατω$\mu$ένος πίνακας αντιστοίχισης «όνο$\mu$α πόλης αγγλικά/συντεταγ$\mu$ένες» ή σύνδεση $\mu$ε κινέζικη υπηρεσία καιρού. Στο στάδιο της εξάσκησης αρκεί να υποστηρίζεις ονό$\mu$ατα πόλεων σε pinyin/αγγλικά — $\mu$ην το παλέψεις.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Φτιάξε το $\mu$όνο σου: λίστα ελέγχου αποδοχής της εφαρ$\mu$ογής καιρού}
+\booksection{Πώς κάνεις debugging στα αιτή$\mu$ατα δικτύου: εκτύπωση, καταγραφή κίνησης και προσο$\mu$οίωση αργού δικτύου}
+
+Όταν $\mu$ια συνδεδε$\mu$ένη εφαρ$\mu$ογή χαλάει, 9 φορές στους 10 φταίει ότι «το αίτη$\mu$α δεν στάλθηκε σωστά» ή «η απόκριση δεν αναλύθηκε σωστά». Τρία εργαλεία debugging:
+
+\begin{enumerate}
+  \item Εκτύπωσε τα ακατέργαστα δεδο$\mu$ένα: τύπωσε το String(data: data, encoding: .utf8) για να δεις το ω$\mu$ό JSON — ονό$\mu$ατα πεδίων και τύποι φαίνονται $\mu$ε $\mu$ια $\mu$ατιά, δέκα φορές πιο γρήγορα από το να $\mu$αντεύεις·
+  \item Εργαλεία καταγραφής κίνησης: στο Mac, το δωρεάν Proxyman / το open source Charles $\mu$πορεί να υποκλέψει όλα τα αιτή$\mu$ατα και τις αποκρίσεις της εφαρ$\mu$ογής, και σου δείχνει το δικτυακό στρώ$\mu$α σαν ακτινογραφία·
+  \item Προσο$\mu$οίωση αργού δικτύου: από το $\mu$ενού του εξο$\mu$οιωτή, Features Network Link Conditioner (το εργαλείο κατεβαίνει από τον ιστότοπο των προγρα$\mu$$\mu$ατιστών), $\mu$πορείς να προσο$\mu$οιώσεις 3G και $\mu$εγάλη καθυστέρηση — και να φέρεις στην επιφάνεια προβλή$\mu$ατα ε$\mu$πειρίας τύπου «γυρίζει ο τροχός $\mu$ια αιωνιότητα».
+\end{enumerate}
+
+\begin{tcbinfo}{Μικρή συ$\mu$βουλή: Το αίτη$\mu$α δεν πέρασε από το ATS;}
+Αν το αίτη$\mu$α πετάει «App Transport Security» σφάλ$\mu$α $\mu$όλις σταλεί, κατά τις 8 στις 10 χρησι$\mu$οποιείς http:// $\mu$η κρυπτογραφη$\mu$ένη διεύθυνση. Τα επίση$\mu$α endpoints πρέπει να είναι HTTPS· για τοπικό debugging άνοιξε προσωρινά εξαίρεση (πρόσθεσε NSAllowsLocalNetworking στο Info.plist), και θυ$\mu$ήσου να την αφήσεις καθαρή πριν την κυκλοφορία.
+
+\end{tcbinfo}
+
+(1) Η αναζήτηση ε$\mu$φανίζει κανονικά τον καιρό· (2) κόψε το δίκτυο — η εφαρ$\mu$ογή δίνει κο$\mu$ψό $\mu$ήνυ$\mu$α σφάλ$\mu$ατος χωρίς να κρασάρει (δοκί$\mu$ασέ το κλείνοντας το δίκτυο του Mac $\mu$ε ενεργό τον εξο$\mu$οιωτή!)· (3) γράψε $\mu$ια ανύπαρκτη πόλη και δες αν το $\mu$ήνυ$\mu$α είναι φιλικό· (4) αποθήκευσε δύο αγαπη$\mu$ένες πόλεις και έλεγξε ότι υπάρχουν και $\mu$ετά την επανεκκίνηση· (5) στη σκοτεινή λειτουργία η οθόνη να $\mu$ην τσούζει τα $\mu$άτια. Αν περάσουν και οι πέντε, το έργο «αποφοιτά».
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Πρώτα δοκί$\mu$ασε το API στον browser και κατάλαβε το JSON, $\mu$ετά γράψε κώδικα — η «προετοι$\mu$ασία» δεν χάνει ποτέ
+  \item Το API Key κρύβεται στο xcconfig, δεν $\mu$παίνει ποτέ στο repository
+  \item Μοντέλο Codable + URLSession $\mu$ε async/await: όταν τα πεδία ταιριάζουν, το JSON αναλύεται αυτό$\mu$ατα
+  \item Οι τρεις καταστάσεις loading/success/error είναι το καθολικό εργαλείο των συνδεδε$\mu$ένων διεπαφών
+  \item Κο$\mu$$\mu$ένο δίκτυο, κενή είσοδος, ανύπαρκτη πόλη — ο χειρισ$\mu$ός σφαλ$\mu$άτων είναι η βάση για να θεωρείται περασ$\mu$ένη $\mu$ια συνδεδε$\mu$ένη εφαρ$\mu$ογή
+\end{itemize}
+
+\end{tcbsummary}

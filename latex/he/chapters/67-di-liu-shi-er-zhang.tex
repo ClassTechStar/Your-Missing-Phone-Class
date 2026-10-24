@@ -1,0 +1,195 @@
+\bookchapter{פרק 62: פיתוח ממשק — מבוא ל-SwiftUI}
+
+\chapterintro{הממשק הוא כל מה שהמשתמש רואה. SwiftUI הוא פריימוורק ממשק הצהרתי שאפל השיקה ב-2019 — אתם רק “מצהירים” איך הממשק אמור להיראות, והמערכת דואגת בעצמה לרינדור, להתאמה למצב הכהה ולהתאמה לכל גדלי המסך. נכון ל-2026, SwiftUI הוא כבר הבחירה המובילה באופן חד-משמעי לפרויקטים חדשים. בפרק הזה נלמד “לצייר”.}
+
+\booksection{תפיסת העולם של SwiftUI: הצהרתי, לא פקודתי}
+
+פיתוח ממשק ישן הוא “פקודתי”: מורים למערכת “צור כפתור שים ב-(20,30) קבע צבע”, שלב אחר שלב. SwiftUI הוא “הצהרתי”: אתם פשוט מתארים “בממשק יש כפתור אדום עם הכיתוב לחצו עליי”, ואיך לצייר ומתי לצייר מחדש — זה כבר כאב הראש של המערכת.
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body: מתאר "איך הממשק נראה"
+        VStack {               // מסודרים אנכית
+            Text("שלום, עולם!")
+                .font(.largeTitle)      // מודיפאייר: כותרת גדולה
+            Button("לחץ כאן") {
+                print("נלחץ!")
+            }
+            .buttonStyle(.borderedProminent)  // כפתור כחול מלא
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+הנקודה המרכזית: תצוגה = מבנה שמקיים את פרוטוקול View; המאפיין body מתאר את הממשק; והמשנים מתשרשרים כמו שכבות “איפור”. זהו כל הבסיס של SwiftUI.
+
+\booksection{תצוגות בסיס: טקסט, כפתור, שדה קלט ותמונה}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{תצוגה} & \textbf{למה זה משמש} & \textbf{דוגמה} \tabularnewline
+\hline
+Text & הצגת טקסט & Text("שלום") \tabularnewline
+Button & כפתור & Button("לחצו עליי") \{ פעולה \} \tabularnewline
+TextField & שדה קלט & TextField("רמז", text: \$טקסט) \tabularnewline
+Image & הצגת תמונה & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}ארבע תצוגות הבסיס של SwiftUI\end{center}
+
+שימו לב ל-Image(systemName:) — אפל משלבת מובנה את ספריית האייקונים SF Symbols (אלפי אייקונים חינמיים), ושם כמו “star.fill” מציג ישר כוכב מלא. זו הטבה נסתרת של פיתוח iOS: כמעט ואין צורך לחפש חומרי אייקונים לממשק.
+
+\booksection{שלישיית הפריסה: VStack, HStack, ZStack}
+
+\begin{itemize}
+  \item VStack: מסדרים אנכית (כמו תור למזנון);
+  \item HStack: מסדרים אופקית (כמו ישיבה זה לצד זה);
+  \item ZStack: עורמים זה על זה (כמו חפיסת קלפים; מתאים לתגיות פינה ולכיסויים).
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("חשבון")
+        Spacer()                 // מרווח אלסטי: דוחף את הצד הימני עד הסוף
+        Text("-25.5 יואן").foregroundColor(.red)
+    }
+    Divider()                    // קו הפרדה
+    Text("הערה: ארוחת צהריים")
+}
+.padding(16)                     // ריווח מכל הצדדים
+.background(Color(.systemGray6)) // רקע אפור בהיר
+.cornerRadius(12)                // פינות מעוגלות
+
+// סדר המודיפאיירים משנה: קודם padding ואז background; הרקע לא כולל את השוליים
+\end{lstlisting}
+
+\begin{tcbwarn}{שימו לב: סדר המשנים משנה}
+ל-padding(16).background(אפור) ול-background(אפור).padding(16) השפעות שונות — הראשון “קודם ריווח ואז צבע” (הרקע לא כולל את השוליים), והשני “קודם צבע ואז ריווח” (הרקע כולל את השוליים). מכאן נובעים “השוליים הלבנים המוזרים” הכי שכיחים אצל מתחילים. כשלא בטוחים — החליפו סדר, והתצוגה המקדימה תענה מיד.
+
+\end{tcbwarn}
+
+\booksection{מצב וקישור: נותנים לממשק “חיים”}
+
+ממשק סטטי זה משעמם. הכלל של SwiftUI: הממשק תמיד משקף נאמנה את המצב; המצב השתנה — הממשק מצויר מחדש אוטומטית.
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State: אם הערך הזה משתנה צריך לצייר מחדש
+
+    var body: some View {
+        VStack {
+            Text("לחצת \(count) פעמים")
+            Button("לחץ +1") {
+                count += 1          // משנים את המצב והממשק מתרענן אוטומטית
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+שדה קלט דורש “קישור דו-כיווני” — הסימן \$ מעביר פנימה גם את הערך וגם את “זכות השינוי”:
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("הקלד משהו", text: $text)  // קישור דו-כיווני עם $
+            .textFieldStyle(.roundedBorder)
+        Text("הקלדת: \(text)")   // מתעדכן בזמן אמת בזמן ההקלדה
+    }
+}
+\end{lstlisting}
+
+פעולת המשתמש
+
+המצב משתנה (count += 1)
+
+‏SwiftUI מזהה את השינוי
+
+מצייר מחדש (body מחושב מחדש)
+
+\begin{center}\small\color{gray}איור 3: זרימת הנתונים החד-כיוונית “מצב ממשק” של SwiftUI\end{center}
+
+\booksection{תצוגה מקדימה, ערכות עיצוב ואנימציה: “הצ׳יטים” של SwiftUI}
+
+\begin{itemize}
+  \item מאקרו \#Preview: מוסיפים בתחתית הקובץ \#Preview \{ ContentView() \}, והקנבס בצד ימין מציג בזמן אמת — משנים קוד ורואים מיד;
+  \item מצב כהה בחינם: משתמשים בצבעי המערכת (Color(.systemGray6), .primary) במקום לקבע צבעים, וההתאמה למצב הכהה מתבצעת אוטומטית בלי שורת קוד נוספת;
+  \item אנימציה בשורה אחת: withAnimation \{ count += 1 \} או הוספת .animation(.default, value: count) לתצוגה — מעברים חלקים כמשי.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{טיפ: קודם פונקציונליות, אחר כך אנימציה}
+הטעות הנפוצה של מתחילים היא “הממשק עוד לא בנוי נכון, וכבר מתלבטים על אנימציות”. קודם דאגו שהפונקציונליות עובדת, ורק בסוף הוסיפו את האפקטים — אנימציה היא קישוט על העוגה, פונקציונליות היא העוגה עצמה. זהו גם העיקרון הקבוע שלנו: “פשטות לפני הכל”.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{הידיים על ההגה: בונים "כפתור מצב רוח"}
+\booksection{מדריך מהיר למשנים נפוצים: עמוד אחד ביד — והממשק נפתר}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{מה רוצים לעשות} & \textbf{משנה} \tabularnewline
+\hline
+ריווח & \texttt{.\allowbreak padding(16)} \tabularnewline
+פינות מעוגלות & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+צבע רקע & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+גופן וגודל גופן & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+צבע חזית (טקסט/אייקון) & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+מילוי כל הרוחב & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+גודל קבוע & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+יישור & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+שקיפות & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+צל & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+מחוות הקשה & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+סוג מקלדת & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}מדריך מהיר למשנים הנפוצים ב-SwiftUI\end{center}
+
+לא זוכרים? לא נורא — העמוד הזה בדיוק בשביל לגלול אליו. בפועל משתמשים הכי הרבה בארבעת הראשונים: padding, פינות מעוגלות, רקע וגופן.
+
+הפכו את פרויקט התבנית למחליף מצבי רוח: כפתור אחד שבכל לחיצה עובר במעגל בין שמח עצוב כועס, והטקסט וצבע הרקע מתחלפים יחד איתו. רמז: אחסנו במערך שלוש קבוצות (טקסט + צבע), אחסנו את האינדקס ב-@State, ובלחיצה חשבו (index + 1) \% 3. כשתסיימו, שלחו לחברים לנסות — ותקבלו את הגל הראשון של “וואו, אתה כבר בונה אפליקציות”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{סיכום הפרק}
+\begin{itemize}
+  \item SwiftUI הוא הצהרתי: מתארים "איך זה אמור להיראות", והמערכת דואגת לצייר ולצייר מחדש
+  \item תצוגה = מבנה שמקיים את פרוטוקול View; body מתאר את הממשק; משנים מתשרשרים כמו שכבות "איפור"
+  \item ארבע תצוגות הבסיס: Text / Button / TextField / Image; ספריית האייקונים SF Symbols חינמית ובשפע
+  \item שלישיית הפריסה: VStack אנכי, HStack אופקי, ZStack עורם; Spacer הוא מרווח גמיש
+  \item @State מעיר את הממשק לחיים; \$ מספק קישור דו-כיווני לשדה הקלט
+  \item \#Preview נותן "מה שרואים זה מה שמקבלים"; צבעי המערכת מתאימים עצמם למצב הכהה; withAnimation אפקט בשורה אחת
+\end{itemize}
+
+\end{tcbsummary}

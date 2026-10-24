@@ -1,0 +1,196 @@
+\bookchapter{الفصل 54: المشروع الأول — دفتر حساباتي (النسخة المحلية)}
+
+\chapterintro{مرحبًا بك في أول “مشروع جاد” لك. هذا الدفتر لا يتصل بالإنترنت لكنه متكامل الأركان: يسجّل عملية مالية، ويعرض سجل العمليات، ويحصي شهريًا، ويتيح الحذف والتعديل. بعد إنجازه ستكون قد مررت بدورة كاملة “بيانات منطق واجهة”. لا تستعجل نسخ الكود — فكّر أولًا ثم نفّذ، وهذا مبدؤنا الدائم.}
+
+\booksection{أولًا: التفكير في المتطلبات: اسأل خمسة أسئلة أولًا}
+
+قبل التنفيذ رتّب فكرتك بعناصر المتطلبات الخمسة:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{العنصر} & \textbf{الجواب} \tabularnewline
+\hline
+Who (لمن؟) & لأجلك، وللأهل والأصدقاء أيضًا \tabularnewline
+What (ماذا؟) & تسجيل الدخل والمصروف، وعرض السجل، والملخص الشهري، والإحصاء حسب الفئة \tabularnewline
+Why (لماذا؟) & تمرين عملي + معرفة أين تذهب الأموال \tabularnewline
+How (كيف؟) & Kotlin + Compose + Room + MVVM، محلي بالكامل دون خادم خلفي \tabularnewline
+Constraint (القيود) & الإنجاز خلال أسبوع؛ الحد الأدنى Android 8؛ وحتى لو لم يُنشر يُكتب بمعايير النشر \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}عناصر المتطلبات الخمسة لدفتر الحسابات\end{center}
+
+ثم قسّمه إلى خطوات صغيرة “قابلة للاستخدام” كل واحدة بمفردها: (1) بناء طبقة بيانات Room (تخزين عملية واحدة)؛ (2) صفحة القائمة (عرض السجل)؛ (3) صفحة الإدخال (إضافة عملية)؛ (4) الحذف والتعديل؛ (5) بطاقة الملخص الشهري. بعد كل خطوة سيكون التطبيق “شيئًا قابلًا للاستخدام”.
+
+\booksection{ثانيًا: طبقة البيانات: بيت لـ“العملية المالية”}
+
+عرّف أولًا شكل العملية المالية — الحقول كافية دون جشع:
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" إيراد | "expense" مصروف
+    val amount: Double,      // المبلغ (يوان)
+    val category: String,    // التصنيف: طعام، مواصلات، راتب…
+    val note: String = "",   // ملاحظة (اختياري)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+أضف إلى الـ Dao استعلامين “للإحصاء” — وهما روح دفتر الحسابات:
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month بصيغة "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{نصيحة: لماذا نستخدم Double للمبلغ؟}
+التطبيقات المالية الدقيقة تستخدم BigDecimal أو “Int بوحدة العملة الصغرى” لتجنب أخطاء الفاصلة العائمة (المشكلة القديمة 0.1+0.2$\neq$0.3). لمشروع تمرين يكفي Double؛ وإذا صنعت يومًا منتجًا ماليًا حقيقيًا فتذكّر التحويل إلى “الوحدة الصغرى” — فخ قديم تعثّر فيه كثيرون من أسلافنا.
+
+\end{tcbinfo}
+
+\booksection{ثالثًا: MVVM: “فصل” الواجهة عن المنطق}
+
+تجعل الواجهة تتعامل مع قاعدة البيانات مباشرة؟ يعمل، لكن كود الواجهة سيصبح طويلًا مقهرًا. بنية MVVM توزع الأدوار: View (الواجهة) ترسم فقط، وViewModel (مركز المنطق) يدير البيانات، وModel (Room) يدير التخزين.
+
+العرض (واجهة Compose)
+
+ViewModel (الحالة والمنطق)
+
+Model (طبقة بيانات Room)
+
+\begin{center}\small\color{gray}الشكل 5: بنية MVVM ثلاثية الطبقات — البيانات تجري باتجاه واحد، وكل طبقة لا تتجاوز حدودها\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // يحوّل الـ Flow إلى حالة تستطيع الواجهة مراقبتها
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // عمليات المستخدم: استدعاء دوال suspend
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+في الواجهة (Compose) تستخدمها هكذا: val vm: RecordViewModel = viewModel() ثم val list by vm.records.collectAsState() — متى تغيرت البيانات تحدث القائمة تلقائيًا دون أن تفعل شيئًا. هذه قوة اجتماع MVVM وFlow وCompose الثلاثة معًا.
+
+\booksection{رابعًا: الواجهة: صفحة القائمة + صفحة الإدخال}
+
+استخدم في صفحة القائمة LazyColumn (قائمة التحميل الكسول) — لن تتجمد مهما كثرت البيانات:
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // بطاقة الملخص العلوية (الإيرادات - المصروفات = الرصيد)
+        SummaryCard(records)
+
+        // قائمة الحركات
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // زر عائم "تسجيل مصروف"  يفتح نافذة الإدخال
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+أما الإدخال فأسهل حل هو AlertDialog (نافذة حوار): بضعة حقول إدخال + مبدّل دخل/مصروف + قائمة فئات منسدلة، وعند النقر على تأكيد يُستدعى vm.addRecord(...).
+
+\begin{tcbwarn}{تنبيه: لا تتهاون في التحقق من المدخلات}
+لا بد من التحقق من حقل المبلغ: أوقف القيم الفارغة والسالبة والمدخلات غير الصالحة مثل “abc” (استخدم toDoubleOrNull() للفحص). من أكثر أسباب انهيار التطبيقات شيوعًا “اعتبار مدخلات المستخدم ولدًا مطيعًا”. تذكّر: كل ما يدخله المستخدم عاملَه كعدو وافحصه.
+
+\end{tcbwarn}
+
+\booksection{خامسًا: التعديل والحذف: بيانات “تدخل وتخرج”}
+
+دفتر حسابات يضيف ولا يحذف يصبح عديم الفائدة بعد ثلاثة أيام. أضف عمليتين:
+
+\begin{lstlisting}[language=Kotlin]
+// أضف دالتين إلى الـ Dao:
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// في الواجهة: الضغط المطول على عنصر يفتح قائمة "تعديل/حذف" (في Compose استخدم DropdownMenu أو AlertDialog)
+// قبل الحذف يُستحسن إظهار مربع تأكيد — "الحذف الخاطئ" أكثر ما يكره مستخدمو تطبيقات تتبع المصروفات
+\end{lstlisting}
+
+خبرتان في تفاصيل التفاعل: الحذف يجب أن يُؤكد مرتين (لمنع الزلل)، والتعديل يُعبأ مسبقًا بالقيمة الأصلية قدر الإمكان (تعديل حرف أسهل من إعادة الكتابة كاملة). لا تحتقر هاتين التفصيلتين — فـ“الإحساس بالمنتج” يُبنى من تفاصيل كهذه.
+
+\booksection{سادسًا: القبول: فحص ثلاثي الطبقات + تحديان متقدميان}
+
+\booksection{خامسًا: القبول: فحص ثلاثي الطبقات + تحديان متقدميان}
+
+بعد إنجاز المشروع اقبله بفحص ثلاث طبقات “الوظائف الحدود البنية”: هل يسجل؟ هل يحذف؟ هل تبقى البيانات بعد إعادة فتح التطبيق (الوظائف)؛ هل ينهار عند إدخال 0 أو رقم سالب للمبلغ، وهل تضيع البيانات عند تدوير الشاشة (الحدود)؛ هل اختلطت الواجهة بالبيانات، وهل الحقول مثبتة في الكود (البنية).
+
+بعد اجتياز قبول النسخة الأساسية أضف لنفسك “طبقين متقدمين”:
+
+\begin{enumerate}
+  \item التصفية الشهرية: أضف مبدّل أشهر في الأعلى (مثل 2026-08 v) فتعرض القائمة عمليات الشهر المختار فقط؛
+  \item المخطط الدائري للفئات: استخدم Canvas في Compose أو مكتبة رسوم بيانية خفيفة لتحويل "أين تذهب الأموال" إلى مخطط دائري — بعد هذا سيبدو الدفتر "شكل منتج حقيقي".
+\end{enumerate}
+
+\begin{tcbpractice}{لنتجرب: أنجزها هذا الأسبوع}
+نفّذ بالترتيب “طبقة البيانات ViewModel صفحة القائمة صفحة الإدخال بطاقة الملخص”، خطوة كل يوم. إذا علقت فألقِ رسالة الخطأ كما هي إلى محرك البحث أو الذكاء الاصطناعي (أتذكر الجزء السابع “ممارسة البرمجة بالذكاء الاصطناعي”؟ عند وصف المشكلة وضّح “السلوك المتوقع، السلوك الفعلي، خطوات إعادة إنتاجها”). وبعد الإنجاز استخدمه لتسجيل نفقات أسبوع كامل — فاستخدام تطبيق صنعته بنفسك يمنحك شعورًا بالإنجاز يدفعك للمضي قدمًا.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{خلاصة الفصل}
+\begin{itemize}
+  \item عناصر المتطلبات الخمسة تقسيمها إلى خطوات صغيرة "كل خطوة قابلة للاستخدام" ثم التنفيذ
+  \item طبقة البيانات: كيان Record + Dao (بما فيه SQL للإحصاء الشهري) + Database
+  \item تقسيم MVVM: View ترسم فقط، وViewModel يدير المنطق، وModel يدير التخزين
+  \item Flow + stateIn + collectAsState: متى تغيرت البيانات تحدث الواجهة تلقائيًا
+  \item LazyColumn قائمة التحميل الكسول؛ وAlertDialog للإدخال
+  \item قبول ثلاثي الطبقات (الوظائف/الحدود/البنية) + التحديان المتقدميان (التصفية الشهرية، المخطط الدائري للفئات)
+\end{itemize}
+
+\end{tcbsummary}

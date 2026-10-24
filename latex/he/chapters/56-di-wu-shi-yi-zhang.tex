@@ -1,0 +1,203 @@
+\bookchapter{פרק 51: פיתוח ממשק — מבוא ל-Jetpack Compose}
+
+\chapterintro{הממשק הוא כל מה שהמשתמש רואה. לפני ש-Compose הופיע, ממשקי אנדרואיד נכתבו ב-XML — מייגע כמו מבחן השלמת חסרים; ב-2021 Google השיקה את Jetpack Compose: מציירים את הממשק ישירות בקוד Kotlin, מה שרואים זה מה שמקבלים, ושינוי שורת קוד אחת מרענן את התצוגה המקדימה מיד. נכון ל-2026, Compose הוא הסטנדרט המוחלט לפרויקטים חדשים. בפרק זה נלמד “לצייר”.}
+
+\booksection{א. הרעיון של Compose: הממשק הוא פונקציה}
+
+הרעיון המרכזי של Compose במשפט אחד: ממשק = פונקציה. כל דבר שמוצג על המסך (טקסט, כפתור, תמונה) הוא “פונקציה קומפוזבילית” (Composable) המסומנת ב-@Composable. מקננים אותן כמו קוביות בנייה — וזה הממשק.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Greeting(name: String) {
+    Text(text = "שלום, $name!")     // "בלוק טקסט"
+}
+
+// הרכבה מקוננת: בלוקים גדולים שמכילים קטנים
+@Composable
+fun HomeScreen() {
+    Column {                          // מסודרים אנכית
+        Greeting(name = "דני")
+        Greeting(name = "נועה")
+        Button(onClick = { /* מה קורה בלחיצה */ }) {
+            Text("לחץ כאן")
+        }
+    }
+}
+\end{lstlisting}
+
+שימו לב ל“כובע” @Composable — הוא אומר למהדר “זו קוביית ממשק”. אפשר לקנן קוביות ללא הגבלה — זהו כל הסוד של Compose.
+
+\booksection{ב. רכיבי יסוד: טקסט, כפתור, שדה קלט ותמונה}
+
+הרכיבים של Compose הם “קוביות בנייה”; אלה ארבעת הנפוצים ביותר:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{רכיב} & \textbf{מה הוא עושה} & \textbf{פרמטרים חובה} \tabularnewline
+\hline
+Text & הצגת טקסט & text (הטקסט להצגה) \tabularnewline
+Button & כפתור & onClick (פונקציית לחיצה) \tabularnewline
+TextField & שדה קלט & value, onValueChange (פונקציית שינוי קלט) \tabularnewline
+Image & הצגת תמונה & painter (משאב התמונה) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}ארבעת רכיבי היסוד של Compose\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun BasicWidgets() {
+    Column {
+        Text(text = "זהו טקסט")
+        Button(onClick = { println("נלחץ!") }) {
+            Text("כפתור")
+        }
+        var input by remember { mutableStateOf("") }
+        TextField(
+            value = input,
+            onValueChange = { input = it },
+            label = { Text("הקלד משהו") }
+        )
+    }
+}
+\end{lstlisting}
+
+בשתי שורות של שדה הקלט הופיע remember \{ mutableStateOf(“”) \} — זהו “קסם המצב” של Compose; נפרט אותו בסעיף 5 של הפרק. לעת עתה — רק להכיר את הפנים.
+
+\booksection{ג. שלישיית הפריסה: Column, Row, Box}
+
+יש רכיבים — איך מסדרים אותם? זכרו שלושה “קופסאות”:
+
+\begin{itemize}
+  \item Column: סידור אנכי (כמו תור בקפטריה);
+  \item Row: סידור אופקי (כמו ישיבה זה לצד זה);
+  \item Box: ערימה זה על זה (כמו קלפים שנערמים; מתאים לתגיות בפינה ולשכבות כיסוי).
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+Column {
+    Text("שורה ראשונה")
+    Row {
+        Text("שמאל")
+        Text("ימין")
+    }
+    Box {
+        Text("השכבה התחתונה")
+        Text("תג מרוחף מעל")
+    }
+}
+\end{lstlisting}
+
+רוצים פריסה יפה יותר? הוסיפו לרכיבים Modifier (מתאם) — זה כמו “לאפות” את הקוביות:
+
+\begin{lstlisting}[language=Kotlin]
+Text(
+    text = "טקסט יפה",
+    modifier = Modifier
+        .padding(16.dp)          // ריווח מכל הצדדים
+        .fillMaxWidth()          // ממלא את כל הרוחב
+        .background(Color.Blue)  // צבע רקע
+        .clickable { /* בלחיצה */ }// ניתן ללחיצה
+)
+// קריאות שרשרת: אחת אחרי השנייה, הסדר משנה (קודם padding ואז רקע; הרקע לא כולל את השוליים)
+\end{lstlisting}
+
+\begin{tcbwarn}{שימו לב: סדר ה-Modifier משנה}
+ל-padding(16.dp).background(Blue) ול-background(Blue).padding(16.dp) יש אפקט שונה — הראשון הוא “קודם רווח, אחר כך צבע” (הרקע לא כולל את השוליים), והשני “קודם צבע, אחר כך רווח” (הרקע כולל את השוליים). זו בדיוק הנקודה שבה מתחילים מציירים “שוליים לבנים מוזרים”. לא בטוחים? החליפו את הסדר — התצוגה המקדימה תענה מיד.
+
+\end{tcbwarn}
+
+\booksection{ד. מצב: לתת לממשק “חיים”}
+
+ממשק סטטי זה משעמם. כדי שהמספר יגדל ב-1 בלחיצה על הכפתור ושיהיה אפשר להקליד בשדה הקלט, צריך מצב (State). הכלל של Compose: הממשק תמיד משקף נאמנה את המצב; המצב השתנה — הממשק מצויר מחדש אוטומטית.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Counter() {
+    // ‏remember + mutableStateOf: זוכר את הערך המשתנה הזה
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "לחצת $count פעמים")
+        Button(onClick = { count++ }) {   // משנה את המצב
+            Text("לחץ +1")                // הממשק מתרענן אוטומטית
+        }
+    }
+}
+\end{lstlisting}
+
+שלוש שורות קוד — ומונה חי. זו בדיוק הנקודה שבה Compose נעים יותר מהסגנון הישן: אין צורך “לרענן את הממשק” ידנית — פשוט משנים את הנתונים. זכרו שתי פונקציות מפתח: remember (מונעת מהערך להימחק כשהממשק נבנה מחדש) ו-mutableStateOf (אומרת ל-Compose “הערך הזה השתנה — צייר מחדש”).
+
+המשתמש לוחץ
+
+המצב משתנה (count++)
+
+‏Compose מזהה את השינוי
+
+מצייר מחדש את הממשק (recomposition)
+
+\begin{center}\small\color{gray}איור 3: זרימת הנתונים החד-כיוונית “מצב ממשק” של Compose\end{center}
+
+\booksection{ה' ערכת עיצוב ומצב כהה: הגדרה אחת שחלה על הכול}
+
+‏MyFirstAppTheme \{ ... \} בפרויקט התבנית הוא ערכת העיצוב. הוא מבוסס על מפרט העיצוב Material 3 ועוזר לך לנהל באופן אחיד צבעים, גופנים וצורות. תמיכה במצב כהה דורשת רק שלושה שלבים:
+
+\begin{enumerate}
+  \item מגדירים בתוך ערכת העיצוב שתי ערכות צבעים – בהירה וכהה (התבנית כבר יוצרת אוטומטית ColorScheme);
+  \item כשהמערכת עוברת למצב כהה, הפונקציה isSystemInDarkTheme() מזהה זאת אוטומטית;
+  \item משתמשים בצבעים שערכת העיצוב מספקת (כמו MaterialTheme.colorScheme.primary) במקום לקבע ערכי צבע בקוד.
+\end{enumerate}
+
+\begin{tcbinfo}{טיפ: הצבעים הדינמיים של Material 3}
+מאז Android 12, התכונה “Material You” מאפשרת לאפליקציה לשלוף צבעים מטפטפת המסך שלך. תבנית Compose תומכת בכך כברירת מחדל (dynamicColor). האפליקציה שלך “מתחלפת בבגדים” אוטומטית בכל מכשיר של משתמש – זהו הקסם של האנדרואיד המודרני.
+
+\end{tcbinfo}
+
+\booksection{ו' תצוגה מקדימה, אנימציה ועריכה חיה: ה“צ'יטים” של Compose}
+
+שלושת ה“צ'יטים” של Compose בחוויית הפיתוח – ברגע שמתחילים להשתמש בהם, אין דרך חזרה:
+
+\begin{itemize}
+  \item תצוגה מקדימה באמצעות @Preview: מוסיפים את ההערה @Preview לפונקציית Composable, ו-Android Studio מציג מיד את המסך בצד ימין – מה שרואים הוא מה שמקבלים בכל שינוי קוד, בלי להתקין על הטלפון בכל פעם;
+  \item עריכה חיה (Live Edit): ב-2026 תומך Android Studio ב"עדכון חם" של חלק מהשינויים ישירות באמולטור או במכשיר אמיתי; שינויים קטנים כמו צבע טקסט מופיעים על המכשיר תוך שניות;
+  \item ממשקי API לאנימציה: animateFloatAsState ו-AnimatedVisibility – כמה שורות קוד בודדות מעניקות מעבר חלק לאלמנטים; תחושת "היוקרה" נמצאת לרוב בדיוק בעשרות השורות האלה.
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun AnimatedBox() {
+    var big by remember { mutableStateOf(false) }
+    // כשהערך משתנה, מעבר חלק לערך היעד
+    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+
+    Box(Modifier
+        .size(size)
+        .background(MaterialTheme.colorScheme.primary)
+        .clickable { big = !big }
+    )
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{טיפ: קודם פונקציונליות, אחר כך אנימציה}
+הטעות הנפוצה של מתחילים: “המסך עוד לא בנוי נכון, וכבר מתלבטים על אנימציות”. קודם תגרמו לפונקציונליות לרוץ, ורק בסוף תוסיפו את האפקטים באופן אחיד – זהו עיקרון “הפשטות לפני הכול”: אנימציה היא קישוט נוסף, פונקציונליות היא הצלה אמיתית.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{הגיע הזמן להתנסות: בנו "כפתור מצב רוח"}
+הפכו את פרויקט התבנית למחליף מצבי רוח: כפתור אחד, שבלחיצה עליו מתחלף במעגל בין שמח עצוב כועס, כשהטקסט וצבע הרקע משתנים יחד איתו. רמז: השתמשו ב-when כדי לבחור טקסט וצבע לפי המצב. שלחו לחברים לשחק – ותקבלו את הגל הראשון של “וואו, אתה יודע לבנות אפליקציות”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{סיכום הפרק}
+\begin{itemize}
+  \item הרעיון של Compose: המסך = פונקציית @Composable, קינון כמו לבני בנייה
+  \item ארבעת הרכיבים המרכזיים: Text / Button / TextField / Image
+  \item שלושת כלי הפריסה: Column לסידור אנכי, Row לסידור אופקי, Box לערימה
+  \item שרשור Modifier כמו "התאפרות": padding, fillMaxWidth, background, clickable – לסדר יש משמעות
+  \item המצב הוא הנשמה: remember + mutableStateOf – משנים נתונים והמסך מצויר מחדש אוטומטית
+  \item ערכת עיצוב עם Material 3 + צבעים דינמיים; מצב כהה – הגדרה אחת שחלה על הכול
+\end{itemize}
+
+\end{tcbsummary}

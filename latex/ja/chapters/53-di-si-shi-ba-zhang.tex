@@ -1,0 +1,154 @@
+\bookchapter{第四十八章：Androidを知る——OSから開発エコシステムまで}
+
+\chapterintro{この決断、おめでとうございます——「スマホで遊ぶ人」から「スマホアプリを作る人」への一歩です。手を動かす前に、まず地図を広げておきましょう。Androidはどこから来たのか？なぜ世界中の開発者がAndroid向けにアプリを作るのか？あなたがキーボードを叩いてから、アプリがユーザーのスマホに届くまで、間で何が起きているのか？}
+
+\booksection{Androidの生い立ち：「小さなロボット」から「世界最大のOS」へ}
+
+Androidの物語は2003年に始まります。Andy RubinというエンジニアがAndroid社を興し、その目標は実に素朴なものでした。「カメラをもっと得意にする」スマートOSを作る、というものです。その後、2005年にGoogleが同社を買収し、2007年には何十社ものメーカーとともにOpen Handset Alliance（OHA）を設立。そして2008年9月、最初のAndroidスマホHTC Dream（G1）が正式に発売されました。
+
+その後の話はご存じのとおりです。2026年には、Androidは世界でいちばんシェアの大きいモバイルOSとなり、稼働するデバイスは数十億台に上ります。あなたのスマホ、テレビのセットトップボックス、カーナビの大画面、スマートウォッチも、おそらくAndroidが動いています。これはどういうことでしょう？あなたが書く1行1行のコードに、世界で最も多くの人に使われるチャンスがある、ということです。
+
+\begin{tcbinfo}{ワンポイント：Androidのオープンソースの血}
+Androidの中核コード（AOSP、Android Open Source Project）はオープンソースです。どのメーカーも持っていって改造·カスタマイズできます。だからXiaomiにはMIUI（今のHyperOS）、HuaweiにはHarmonyOSの互換レイヤー、SamsungにはOne UIがあるのです。これは開発者にとって良いことです。あなたが学ぶのは「Android開発」であって「あるブランドの開発」ではない。1つの技術を磨けば、どの端末でも通用します。
+
+\end{tcbinfo}
+
+バージョン番号の歩みもおもしろいものがあります。1.5のCupcake（カップケーキ）から始まり、長らくメジャーバージョンにはデザートの名前が付いてきました——ドーナツ、エクレア、フローズンヨーグルト、ジンジャーブレッド……2019年のAndroid 10になって、ようやく数字だけの名前に変わりました。2026年8月時点での最新正式版はAndroid 17です。開発で本当に気にすべき「最低サポートバージョン」は、主流アプリならAndroid 8（API 26）〜Android 10（API 29）の間に設定するのが一般的です。数年前の端末までカバーしてこそ、ユーザーの数が大きくなるのです。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{バージョン} & \textbf{コードネーム／年} & \textbf{開発者にとって大事なこと} \tabularnewline
+\hline
+Android 8 (API 26) & Oreo · 2017 & 通知チャネル、バックグラウンド制限——多くの旧型端末の下限ライン \tabularnewline
+Android 10 (API 29) & 2019 & スコープストレージの登場。ファイルアクセスのルールが大きく変わる \tabularnewline
+Android 12 (API 31) & 2021 & Material Youのダイナミックカラー。UIの見た目が大きく進化 \tabularnewline
+Android 13 (API 33) & 2022 & 実行時の通知権限。「通知を許可しますか？」のポップアップが登場 \tabularnewline
+Android 14-15 (API 34-35) & 2023-2024 & 予測型「戻る」、16KBページ、プライバシーがさらに厳格化 \tabularnewline
+Android 16-17 (API 36-37) & 2025-2026 & より速いマイナーアップデートのペース、AI機能の統合（Gemini拡張など） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Androidバージョン略史（2026年8月時点、開発での注目ポイント）\end{center}
+
+\booksection{どの言語で書く？：Javaか、Kotlinか}
+
+Android開発の歴史には、2つの主流言語があります。Javaは「建国の功労者」です。Android誕生のときから使われてきました。Kotlinは2017年にGoogleが「第一級の言語」に指名した存在で、2019年からは公式に「Kotlin-first」を明言。2026年の今では、新規プロジェクトはほぼ全部Kotlinで書かれ、既存プロジェクトもどんどん移行が進んでいます。
+
+率直に言いましょう。完全な初心者なら、まっすぐKotlinを学び、Javaには立ち戻らないことです。理由は3つ。1つは、Kotlinのコード量はJavaより30〜40\%少ないこと（同じ機能なら、Kotlinのほうが短くて明確）。2つは、Null Pointer Exceptionという初心者の悪夢を、言語の仕組みレベルで防いでくれること。3つは、最近のチュートリアル、公式ドキュメント、AIプログラミングツール（本書の前半を思い出してください）のすべてがKotlin基準になっていることです。Javaと出会うのは、古いプロジェクトの保守や古いコードを読むときくらいです。
+
+Java風（くどい版）
+
+\begin{lstlisting}
+public class MainActivity extends Activity \{
+@Override
+protected void onCreate(Bundle b) \{
+super.onCreate(b);
+setContentView(R.layout.activity);
+\}
+\}
+\end{lstlisting}
+
+Kotlin風（すっきり版）
+
+\begin{lstlisting}
+class MainActivity : ComponentActivity() \{
+override fun onCreate(b: Bundle?) \{
+super.onCreate(b)
+setContent \{ App() \}
+\}
+\}
+\end{lstlisting}
+
+同じ内容なのに、Kotlinでは波かっこや定型的な行がひと山減ります。第五十章で正式に学ぶので、今はこれだけ覚えてください。Android開発の「標準語」の名前はKotlinです。
+
+\booksection{アプリはどうやって生まれるのか？}
+
+「アプリ開発」というと、パソコンに向かってひたすらコードを打ち込むイメージを持つ人が多いようです。実際には、アプリはアイデアからユーザーのスマホに届くまで、おおむね次のようなラインをたどります。
+
+アイデア
+
+設計（画面+機能）
+
+コードを書く
+
+コンパイルとパッケージ化（APK/AAB）
+
+テスト（エミュレータ+実機）
+
+リリース（ストア/インストールパッケージ）
+
+\begin{center}\small\color{gray}図1：Androidアプリがアイデアからストア公開までたどる全工程\end{center}
+
+この流れの中で、今すぐ知っておきたい概念が2つあります。
+
+\begin{itemize}
+  \item APK：Androidアプリのインストールパッケージ形式（.apk）。タップするだけでスマホにインストールでき、Windowsの.exeのようなものです。普段の自分用テストや、友人に配って遊んでもらうときはこれを使います。
+  \item AAB：Android App Bundle（.aab）。Google Playに公開するための「高機能パッケージ形式」です。ストアがユーザーの機種に応じて動的に切りつぶしてくれるので、誰もがより小さいサイズでダウンロードできます。自分ではインストールできず、ストアに預けるしかありません。
+\end{itemize}
+
+それから、何度も耳にすることばがもう1つあります。SDK（Software Development Kit、ソフトウェア開発キット）です。Android公式が用意する開発装備の一式——各バージョンのAPIライブラリ、デバッグツール、エミュレータのイメージなど——を指します。コードの中で使うActivityやButtonといったクラスは、みなSDKから来ています。
+
+\booksection{Android技術スタックの全体図：あなたの「武器リスト」}
+
+学びに入る前に、2026年の主流Androidプロジェクトの標準装備をざっと見ておきましょう。今は分からなくて当然です。本書を読み終えて戻ってくれば、すっきり見えてくるはずです。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{層} & \textbf{主流の選択（2026年）} & \textbf{何のためのもの？} \tabularnewline
+\hline
+言語 & Kotlin 2.x & ロジックを書く言語 \tabularnewline
+UI & Jetpack Compose + Material 3 & コードでUIを描く（本書のメインライン） \tabularnewline
+アーキテクチャ & MVVM + ViewModel & UIとロジックを分けて、コードの混乱を防ぐ \tabularnewline
+データ保存 & Room（データベース）＋DataStore（設定） & データをスマホに保存する \tabularnewline
+ネットワーク & Retrofit＋OkHttp＋Kotlinコルーチン & サーバーと会話する \tabularnewline
+ビルドツール & Gradle + Kotlin DSL & コードをインストールパッケージにする \tabularnewline
+開発環境 & Android Studio & Google公式の「フルセット」IDE \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}2026年のAndroid主流技術スタック早見\end{center}
+
+この英語の並びに気おくれしないでください。これらはキッチンの鍋やボウルのようなものです。今は「料理するにはキッチンへ」と分かれば十分で、各道具の使い方はこの先の章で1つずつ解き明かします。しかも朗報です。Android Studioで新規プロジェクトを作れば、この一式を自動でセットアップしてくれます。あとは料理に集中するだけです。
+
+\booksection{Android vs iOS：開発者向け最初の「陣取り」の授業}
+
+手元にAndroid端末とApple端末が両方あるかもしれません。開発者としては、両者の体験の違いを前もって知っておく価値があります。「どちらが上か」の派閥争いではなく、「どちらが自分のスタートに向いているか」という現実的な話です。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{観点} & \textbf{Android開発} & \textbf{iOS開発} \tabularnewline
+\hline
+開発マシン & Windows／Mac／Linuxいずれも可 & Mac必須（XcodeはMac専用） \tabularnewline
+開発ツール & Android Studio（無料） & Xcode（無料）＋ストア公開に年間99ドル \tabularnewline
+ストア審査 & 緩い。数時間〜数日 & 厳しい。1〜7日があたりまえ \tabularnewline
+端末に入れて試す & APKは自由に配れる、自由に入れられる & 配布は制限あり。テストには署名/TestFlightが必要 \tabularnewline
+収益環境 & 広告／中国国内チャネルが中心 & App Storeはアプリ内課金の文化がより定着 \tabularnewline
+学習コスト & 概念が多い（4大コンポーネントなど） & エコシステムは閉じているが体系は統一され、ドキュメントも充実 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}AndroidとiOSの開発パス比較（2026年8月時点）\end{center}
+
+率直に言えば、お使いのパソコンがMacでなければ、この問題はそもそも選ぶ必要がありません。Androidが唯一の選択肢です。Macをお持ちなら、本書の第8篇と第9篇は並行して読めます。プログラミングの考え方は共通なので、片方を学んでからもう片方に入ると、ぐっと速くなります。
+
+\begin{tcbpractice}{やってみよう：あなたのスマホの中の「Android」をのぞいてみる}
+スマホの［設定］［端末情報］（「デバイス情報」など）を開き、「Androidバージョン」の欄を探します——そこを何度か連続タップすると、システムの隠しミニゲームが現れます。バージョン番号を書き留めて、上のバージョン表と見比べ、どの世代か確かめてみましょう。あなたのスマホこそ、最初の「開発テスト機」です。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{この章のまとめ}
+\begin{itemize}
+  \item Androidは2008年誕生。2026年には世界最大シェアのモバイルOSとなり、稼働デバイスは数十億台
+  \item 最新正式版はAndroid 17。主流アプリの最低サポートはAndroid 8〜10。数年前の端末までカバーしてユーザー数を確保
+  \item 新規プロジェクトはとにかくKotlin：コード量30\%減、ヌルポ防止、公式のお墨付き
+  \item APKは自分で入れる用、AABはストア公開用。SDKは公式の開発装備一式
+  \item 2026年の標準技術スタック：Kotlin＋Compose＋MVVM＋Room＋Retrofit＋Gradle＋Android Studio
+\end{itemize}
+
+\end{tcbsummary}

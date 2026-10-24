@@ -1,0 +1,188 @@
+\bookchapter{Capítulo 38: Los cinco principios de pensamiento de la programación con IA}
+
+\chapterintro{Si solo puedes quedarte con un capítulo de este libro, que sea este. Los cinco principios de pensamiento son el corazón de la obra; todos los capítulos posteriores —contexto, requisitos, conversación, calidad— son estos cinco principios desplegados en distintos escenarios. Tranquilo: ninguno es difícil de entender, pero cada uno merece que lo «metas en el músculo» con un par de proyectos.}
+
+El origen de la historia es curioso: al publicar su proyecto como código abierto, Andrej Karpathy adjuntó un archivo CLAUDE.md de apenas 70 líneas que resumía cuatro principios centrales para colaborar con la IA. Ese archivo acumuló más de 70.000 estrellas en GitHub y se convirtió en la guía más citada por la comunidad mundial de programación con IA. No son consignas vacías, sino hábitos de pensamiento accionables destilados de mucha práctica. Sobre esa base, este libro añade un quinto principio —la verificación iterativa— y completa el sistema de los cinco principios.
+
+\begin{tcbinfo}{¿Por qué vale tanto un archivo de 70 líneas?}
+¿Qué significan 70.000 estrellas? En GitHub, la inmensa mayoría de los proyectos jamás llega a esa cifra. Que un archivo de texto de 70 líneas la consiga demuestra una cosa: en la era de la IA, lo escaso no es el código, sino la capacidad de «pensar con claridad». Esas 70 líneas son la versión condensada de «pensar con claridad».
+
+\end{tcbinfo}
+
+\booksection{Principio 1: Think Before Coding (piensa primero, programa después)}
+
+Es el principio más contraintuitivo de los cinco. Si la IA puede escribir el código por nosotros, ¿para qué «pensar primero»? La respuesta es sencilla: la calidad de lo que produce la IA es proporcional a la calidad de tu entrada. Si ni tú tienes claro qué quieres hacer, sus respuestas te meterán en un bucle interminable de «cambiar y volver a cambiar»: lo que popularmente se llama «que la IA se pierda contigo».
+
+«Pensar primero» significa que, antes de dar una instrucción a la IA, respondes tres preguntas que forman un «triángulo de pensamiento» del que no puede faltar ninguna esquina:
+
+\begin{enumerate}
+  \item ¿Qué problema quiero resolver? (objetivo)
+  \item ¿Cómo quiero que sea el resultado? (criterios de aceptación)
+  \item ¿Qué restricciones debo respetar? (límites)
+\end{enumerate}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimensión de pensamiento} & \textbf{Entrada vaga (mal)} & \textbf{Entrada clara (bien)} \tabularnewline
+\hline
+Definición del problema & Hazme una web & Hazme un sitio personal de herramientas con tarjetas de acceso a 3 utilidades de IA \tabularnewline
+Resultado esperado & Que se vea bonito & Diseño responsive, tema oscuro, tarjetas con animación al pasar el cursor y usable en el móvil \tabularnewline
+Restricciones & (no se indican) & Sin frameworks, HTML+CSS+JS puro, despliegue en un solo archivo y sin backend \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Comparación de entrada vaga y entrada clara para la misma necesidad\end{center}
+
+\begin{tcbwarn}{Ojo: pensar primero $\neq$ escribir antes un documento perfecto}
+«Pensar primero» no es «redactar un PRD perfecto antes de empezar». Es un proceso de reflexión rápido pero ordenado: dedicar 30 segundos a las tres preguntas de arriba rinde mucho más que 30 minutos de correcciones repetidas en la conversación. En las tareas pequeñas las tres preguntas pueden ser breves; en los proyectos grandes puedes ampliarlas a un documento completo de requisitos (más detalles en el capítulo 40).
+
+\end{tcbwarn}
+
+\booksection{Principio 2: Simplicity First (primero lo simple)}
+
+La mayor trampa de la programación con IA no es «no poder hacerlo», sino «hacer demasiado». Cuando le pides a la IA «hazme un sistema de gestión de usuarios», puede generar todo un kit: autenticación, permisos, roles, registros de auditoría, exportación de datos… y quizá tú solo necesitabas una página de inicio de sesión sencilla. La sobre-generación es la causa principal de la hinchazón del código de la IA.
+
+«Primero lo simple» exige aplicar el principio del «mínimo viable» en cada instrucción: implementar la función central con el mínimo código, resolver el problema con la solución más sencilla y validar la idea con las funciones justas. Karpathy lo resumió en una metáfora brillante: «si quieres calcular un precio con descuento, no necesitas un motor de e-commerce».
+
+En la práctica, «primero lo simple» se traduce en unos hábitos concretos:
+
+\begin{itemize}
+  \item Pedir a la IA un solo punto de función cada vez, en lugar de describir el sistema entero de un tirón;
+  \item Preferir la biblioteca estándar y las soluciones sencillas antes que introducir dependencias complejas;
+  \item Si algo se resuelve con 50 líneas de código, no dejar que la IA escriba 500;
+  \item Y cuando la producción de la IA se pase del alcance esperado, decirle con valentía: «recorta lo que sobra».
+\end{itemize}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Escenario} & \textbf{Solución excesiva (evitar)} & \textbf{Solución simple (recomendada)} \tabularnewline
+\hline
+Necesitas guardar datos & Montar una base de datos MySQL + ORM & Empezar con un archivo JSON o SQLite \tabularnewline
+Necesitas inicio de sesión de usuarios & OAuth2.0 + JWT + permisos por roles & Empezar con una verificación de contraseña simple \tabularnewline
+Necesitas un framework de frontend & React + Redux + Router & Probar primero HTML puro + JS nativo \tabularnewline
+Necesitas desplegar en producción & Docker + CI/CD + K8s & Primero hacer que funcione en local \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Comparación de soluciones excesivas y simples en escenarios habituales\end{center}
+
+\booksection{Principio 3: Surgical Changes (cambios quirúrgicos)}
+
+Cuando iteras sobre un proyecto ya existente, cada cambio debería ser tan preciso como una operación quirúrgica: tocar solo lo que hay que tocar y no meter mano a lo demás. Esto importa aún más en la programación con IA, porque la IA tiende a «aprovechar para retocar»: le pides arreglar un bug y de paso te refactoriza medio archivo.
+
+La exigencia central de los «cambios quirúrgicos» es: en cada instrucción a la IA, delimita con claridad el alcance y los límites del cambio. Dile «modifica solo la función calculate\_discount», «no toques el resto» y «mantén el estilo de código actual». Si la IA se sale del alcance que pediste, exige de inmediato que revierta lo que sobra.
+
+Karpathy lo ilustró con un ejemplo de diff (comparación de cambios). Imagina que pides a la IA añadir la lógica de «precio de socio» a la función de cálculo de descuentos del carrito: una buena producción modifica solo esa función y añade unas pocas líneas; una mala reescribe el archivo entero — por elegante que quede el código nuevo, no puedes asegurar que no haya introducido bugs nuevos. En la programación con IA, «parece mejor» nunca puede justificar desviarse de la instrucción.
+
+Instrucción mala (alcance vago)
+
+\begin{lstlisting}
+Ayúdame a optimizar la lógica de descuentos de este proyecto
+\end{lstlisting}
+
+Instrucción buena (alcance preciso)
+
+\begin{lstlisting}
+Modifica solo la función calculate\_discount de cart.py: 1. Añade la lógica de precio de socio sobre los descuentos existentes 2. Los socios reciben un 10 \% adicional de descuento 3. No cambies la firma de la función ni las demás funciones 4. Mantén el estilo de nombres de variables actual
+\end{lstlisting}
+
+\booksection{Principio 4: Goal-Driven Execution (ejecución orientada a objetivos)}
+
+Este principio responde a una pregunta clave: ¿debes darle a la IA instrucciones de «cómo hacerlo» o de «qué hacer»? La respuesta de Karpathy es lo segundo. En lugar de decirle «primero crea una clase, luego añade métodos y después escribe las pruebas», dile «necesito una herramienta que lea archivos CSV y cuente los valores únicos de cada columna». Deja que la IA decida la ruta de implementación; tú te encargas de aceptar el resultado.
+
+Las ventajas de «orientarse al objetivo» son dobles. Para la IA: gana un mayor margen de autonomía y puede elegir la ruta de implementación óptima en lugar de quedar atada a tus pasos intermedios. Para ti: trasladas tu atención del «cómo se hace» al «si lo que se hizo está bien», que es justamente lo que debe hacer un director.
+
+\begin{tcbwarn}{Ojo: orientación al objetivo $\neq$ dejarlo suelto}
+Exige que, tras ejecutar la IA, hagas una aceptación rigurosa: ¿el resultado cumple los requisitos? ¿Se manejan los casos límite? ¿Hay sobre-ingeniería evidente? Si el resultado no es el esperado, da una retroalimentación concreta: no «reescríbelo», sino «el problema está en que con una lista vacía como entrada lanza un IndexError; añade una comprobación de valores nulos».
+
+\end{tcbwarn}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Estilo de instrucción} & \textbf{Ejemplo} & \textbf{Cómo resulta} \tabularnewline
+\hline
+Imperativo (cómo hacerlo) & «Primero crea una clase de Python llamada DataParser, añade un método parse que reciba un parámetro filename y lea con el módulo csv…» & La IA se convierte en mecanógrafa; tus pasos intermedios quizá no sean la ruta óptima \tabularnewline
+Por objetivos (qué hacer) & «Necesito una herramienta: lee un archivo CSV, cuenta los valores únicos de cada columna y da la salida en formato JSON. Dame la implementación completa.» & La IA elige sola la ruta óptima y tú te encargas de aceptar el resultado \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Comparación entre instrucciones imperativas y por objetivos\end{center}
+
+\booksection{Principio 5: Iterate and Verify (iterar y verificar)}
+
+Es el quinto principio que este libro añade a los cuatro de Karpathy. Su convicción central: la primera producción de la IA casi nunca es la versión final. Programar bien con IA es un bucle iterativo de «generar-verificar-corregir», no un «instrucción-producción» de una sola vez.
+
+«Iterar y verificar» no es ese «si falla, reintenta» pasivo, sino un proceso de verificación estructurado. Cada vez que la IA entrega algo, verifica en tres niveles:
+
+\begin{itemize}
+  \item Nivel 1 · verificación funcional: ¿funciona? ¿Las entradas y las salidas son correctas?
+  \item Nivel 2 · verificación de límites: ¿qué pasa con entradas vacías, demasiado largas o anómalas?
+  \item Nivel 3 · verificación de arquitectura: ¿la estructura del código es razonable? ¿Hay valores codificados a mano? ¿Se puede ampliar después con facilidad?
+\end{itemize}
+
+Definir el objetivo
+
+La IA genera código
+
+Verificación funcional
+
+Correcto
+
+Verificación de límites
+
+Correcto
+
+Revisión de la arquitectura
+
+Correcto, al siguiente paso
+
+Incorrecto
+
+Dar feedback concreto
+
+Regenerar
+
+\begin{center}\small\color{gray}Figura 2: el bucle de iteración y verificación de la programación con IA\end{center}
+
+La clave del bucle está en el paso «dar retroalimentación concreta». Cuando la verificación falla, no digas «mal, hazlo otra vez», sino «la función lanza un IndexError con listas vacías; añade la comprobación de nulos en la línea 15». La retroalimentación concreta permite a la IA corregir con precisión; la vaga solo la obliga a adivinar otra vez tu intención.
+
+\booksection{Harness Engineering: Agente = Modelo + Harness}
+
+A mediados de 2026 empezó a popularizarse en la comunidad de programación con IA un concepto llamado Harness Engineering. Su fórmula central es muy sencilla:
+
+Capacidad del Agent = capacidad del modelo × calidad del Harness
+
+La capacidad del modelo es el techo intelectual del cerebro de la IA; el Harness es el «entorno de trabajo» construido en torno al modelo: gestión del contexto, integración de herramientas, orquestación de flujos, sistemas de memoria, etc.
+
+Este concepto resuelve una confusión frecuente: ¿por qué, usando el mismo GPT-4 o Claude, hay quien saca proyectos asombrosos y quien solo obtiene código mediocre? La diferencia no está en el modelo, sino en el Harness. Un buen Harness incluye: archivos de especificación del proyecto claros, una integración de herramientas sensata, un contexto de conversación ordenado y un proceso de verificación completo. El modelo fija el techo intelectual; el Harness decide hasta dónde llegas a aprovecharlo.
+
+\begin{tcbinfo}{La metáfora del becario genio}
+Imagina el modelo como un becario genio: cociente intelectual altísimo, pero si no le das la documentación del proyecto, no le dices qué herramientas usar ni le fijas plazos y criterios de aceptación, tampoco producirá nada bueno. El Harness Engineering es la ingeniería de «cómo montar el entorno de trabajo perfecto para un becario genio».
+
+\end{tcbinfo}
+
+Los capítulos que quedan de este libro son, en el fondo, un manual para construir un buen Harness: el capítulo 39 te enseña a gestionar el contexto (el sistema de memoria del proyecto), el 40 a definir los requisitos (PRD), el 43 las técnicas de conversación (capas de prompt) y el 45 la garantía de calidad (procesos de verificación). Todo junto es tu Harness.
+
+\begin{tcbpractice}{Manos a la obra: desmenuza tu próxima idea con el «triángulo de pensamiento»}
+Elige esa cosita que llevas tiempo queriendo hacer y nunca empiezas (por ejemplo, una web de cuenta atrás o un script que te recuerde beber agua). Tómate 3 minutos para responder: (1) ¿Qué problema resuelve? (2) ¿Cómo sería una vez hecha? (3) ¿Qué restricciones hay (tiempo, tecnología, entorno)? Luego escribe las respuestas en un párrafo. Enhorabuena: acabas de completar tu primer «Think Before Coding» de la vida, y ese párrafo ya es una instrucción de calidad digna de ese nombre.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item Los cinco principios vienen del CLAUDE.md de 70 líneas de Karpathy (más de 70.000 estrellas); este libro añade el quinto, «iterar y verificar»
+  \item Think Before Coding: antes de hablar, responde tres preguntas: ¿qué hacer? ¿cómo será el resultado? ¿qué restricciones hay?
+  \item Simplicity First: la mayor trampa de la IA es «hacer demasiado»; para calcular un descuento no hace falta un motor de e-commerce
+  \item Surgical Changes: cambia con precisión quirúrgica y rechaza el «aprovecho para retocar» de la IA
+  \item Goal-Driven Execution: di «qué hacer», no «cómo hacerlo», y deja que la IA elija la ruta
+  \item Iterate and Verify: verificación en tres niveles (funcional/límites/arquitectura) + retroalimentación concreta, iterando en bucle
+  \item Harness Engineering: capacidad = modelo × Harness; trata a la IA como a un «becario genio» y gestiona su entorno
+\end{itemize}
+
+\end{tcbsummary}

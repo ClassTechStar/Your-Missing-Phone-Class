@@ -1,0 +1,162 @@
+\bookchapter{第四十四章：从0到1实战——完整项目全流程}
+
+\chapterintro{理论学完了，现在是动手的时候。本章不是简单的“照着敲”教程，而是一套“怎么想、怎么问、怎么验”的实战方法论。我们会用三个不同难度的项目，展示从需求到成品的完整思考过程。无论你用哪个工具，这套流程都适用。}
+
+\booksection{一、项目一：极简个人工具站（入门级）}
+
+\booksubsection{需求思考}
+
+目标：创建一个个人工具站网页，展示 3-4 个实用小工具的入口。这是一个纯前端项目，不需要后端和数据库。重点不是工具本身有多复杂，而是体验“从需求到成品”的完整流程。
+
+按照需求五要素：Who——个人使用。What——一个展示工具入口的网页。Why——把常用工具集中在一个页面方便访问。How——单文件 HTML+CSS+JS，不使用框架。Constraint——30 分钟内完成，不需要部署。
+
+\booksubsection{下达指令}
+
+基于 Think Before Coding 原则，你的指令应该包含足够的信息让 AI 理解目标，但不需要指定每个实现细节：
+
+\begin{lstlisting}
+请创建一个个人工具站网页，要求：
+1. 单文件HTML（内联CSS和JS），不使用框架
+2. 暗色主题，现代极简风格
+3. 展示4个工具入口卡片：
+   - 文本摘要工具
+   - 字数统计工具
+   - 颜色选择器
+   - 二维码生成器
+4. 每个卡片有图标、标题、简短描述
+5. 卡片有悬停动画效果
+6. 响应式布局，手机上可用
+7. 顶部有一个标题栏
+请直接给出完整的HTML文件。
+\end{lstlisting}
+
+\booksubsection{验收与迭代}
+
+AI 给出代码后，按照迭代验证的三层检查进行验收。第一层功能验证：文件能否在浏览器中打开？4 个卡片是否都显示了？悬停动画是否正常？第二层边界验证：在手机屏幕尺寸下布局是否正常？窗口很窄时卡片是否会换行？第三层架构验证：代码是否可读？CSS 是否内联在一个 style 标签中？有没有明显的冗余？
+
+如果某个工具卡片的功能也想实现（而不只是入口），可以逐步添加——每次添加一个工具的功能，验证后再添加下一个。这就是“小步快跑”策略的实际应用。
+
+\booksection{二、项目二：全栈记账系统（进阶级）}
+
+\booksubsection{需求思考与 PRD}
+
+目标：一个有前端、后端和数据库的全栈记账应用。这个项目比第一个复杂得多，需要用到第四十章的需求工程方法。
+
+先写 PRD。按照第四十章第三节的模板，写出项目概述、功能列表、技术方案、数据模型和开发计划。技术方案的选择要考虑 Simplicity First 原则——前端用 React 但不引入 Redux 等复杂状态管理，后端用 Node.js 但不引入微服务，数据库用 SQLite 而非 PostgreSQL（开发阶段）。
+
+开发计划拆解为 5 步：Step 1 后端 API 骨架（Express 服务器 + SQLite + CRUD 接口）；Step 2 前端基础页面（记录列表 + 添加表单）；Step 3 前后端联调（API 调用 + 数据展示）；Step 4 分类和筛选功能；Step 5 月度汇总和简单图表。\textbf{每步完成后都是“能用的东西”}。
+
+\booksubsection{设置项目记忆文件}
+
+在开始编码之前，先创建项目记忆文件。这是上下文工程的核心实践——让 AI 在每次对话开始时都了解项目背景。
+
+\begin{lstlisting}
+# 项目：全栈记账应用
+## 概述
+个人记账应用，支持收支记录、分类、月度汇总。
+## 技术栈
+- 前端：React + TypeScript + Vite
+- 后端：Node.js + Express + TypeScript
+- 数据库：SQLite (通过 better-sqlite3)
+- 前后端共享类型定义
+## API约定
+- 基础路径：/api
+- 返回格式：{ success: boolean, data: any, error: string }
+- RESTful风格
+## 数据模型
+Record { id, amount, type, category, note, date }
+## 代码规范
+- TypeScript严格模式
+- 缩进2空格
+- 函数有JSDoc注释
+- 中文注释和提交信息
+\end{lstlisting}
+
+\booksubsection{逐步实现}
+
+按照开发计划，每一步用一个独立的对话来完成。以下是第一步的指令示例：
+
+\begin{lstlisting}
+我需要创建后端API骨架。
+要求：
+1. Express服务器，端口3001
+2. SQLite数据库，表名records
+3. records表字段：
+   id (TEXT PRIMARY KEY)
+   amount (REAL)
+   type (TEXT: 'income'|'expense')
+   category (TEXT)
+   note (TEXT)
+   date (TEXT: YYYY-MM-DD)
+4. CRUD接口：
+   GET /api/records - 获取所有记录
+   POST /api/records - 新增记录
+   PUT /api/records/:id - 更新记录
+   DELETE /api/records/:id - 删除记录
+5. 错误处理中间件
+请给出完整的后端代码结构。
+\end{lstlisting}
+
+注意这个指令的特点：它\textbf{只描述当前这一步}（后端骨架），不掺杂前端需求；它\textbf{明确列出了字段和接口}（给 AI 足够的约束），但具体实现由 AI 决定；它遵循了 Goal-Driven Execution 原则——说“做什么”而非“怎么做”。
+
+AI 给出代码后，立即验证：运行服务器，用 curl 或 Postman 测试每个接口是否正常工作。确认无误后，开新对话处理 Step 2（前端基础页面）。每一步都遵循“指令-验证-新对话”的循环。
+
+\booksection{三、项目三：AI 增强应用（高级）}
+
+\booksubsection{项目构思}
+
+目标：一个接入大模型 API 的应用——比如一个“AI 学习助手”，用户输入学习内容，AI 生成摘要、关联知识点、推荐学习资源。这个项目的特殊之处在于：\textbf{你的应用本身就在调用 AI}，你需要处理 API 调用、prompt 工程、错误处理等新问题。
+
+这个项目教会你的最重要的一课是：当你“用 AI 来写调用 AI 的代码”时，你需要格外注意 prompt 工程。你的应用调用大模型 API 时使用的 prompt，也需要遵循本指南讨论的原则——清晰、简洁、目标驱动。
+
+\booksubsection{关键技术点}
+
+这个项目涉及几个你在前两个项目中没遇到的技术点：
+
+\begin{itemize}
+  \item \textbf{API 密钥管理}：密钥绝不能硬编码在代码中，用环境变量管理；
+  \item \textbf{流式响应处理}：大模型的回复通常是流式的，需要逐字显示；
+  \item \textbf{Token 用量控制}：大模型按 token 计费，需要在应用层面控制用量；
+  \item \textbf{Prompt 模板管理}：不同功能用不同的 prompt 模板，需要结构化管理。
+\end{itemize}
+
+这些技术点都可以让 AI 帮你实现，但你需要理解每个技术点的“为什么”——为什么密钥不能硬编码？为什么需要流式响应？为什么 token 用量需要控制？\textbf{理解了“为什么”，你才能判断 AI 的方案是否合理}。
+
+\booksection{四、通用实战流程清单}
+
+无论项目大小，以下是一个通用的 AI 编程实战流程清单。每次开始新项目时，过一遍这个清单，确保没有遗漏关键步骤。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{阶段} & \textbf{做什么} & \textbf{对应原则} \tabularnewline
+\hline
+1. 需求思考 & 过一遍需求五要素，想清楚要做什么 & Think Before Coding \tabularnewline
+2. 需求拆解 & 把大需求拆成可独立验证的小步骤 & Simplicity First \tabularnewline
+3. 写PRD & 整理成结构化文档，作为参考 & Goal-Driven \tabularnewline
+4. 设置记忆文件 & 创建CLAUDE.md或同类文件 & Harness Engineering \tabularnewline
+5. 逐步实现 & 每步一个对话，指令-验证-下一步 & Surgical Changes \tabularnewline
+6. 测试验证 & 每步完成后立即测试功能正确性 & Iterate \& Verify \tabularnewline
+7. 代码审查 & 检查架构合理性、安全性、可维护性 & Iterate \& Verify \tabularnewline
+8. 迭代优化 & 根据测试和审查结果迭代改进 & Iterate \& Verify \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}AI 编程通用实战流程清单\end{center}
+
+\begin{tcbpractice}{来动手：本周完成"项目一"}
+把第四十四章第一节的“个人工具站”当成你的第一个 AI 编程作业：花 5 分钟过五要素，把指令发给 AI（任何工具都行），再按三层验证验收。30 分钟内完成它——你的第一个 AI 编程作品就诞生了。做完记得把它存好，这是你从“读者”变成“实践者”的纪念品。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item 项目一（入门）：纯前端工具站——体验完整流程，30 分钟能完成
+  \item 项目二（进阶）：全栈记账系统——PRD + 记忆文件 + 5 步逐步实现，每步"能用"
+  \item 项目三（高级）：AI 学习助手——用 AI 写调用 AI 的代码，注意 prompt 工程
+  \item 通用流程八步：需求思考拆解PRD记忆文件逐步实现测试审查迭代
+  \item 每一步都遵循"指令-验证-新对话"循环
+\end{itemize}
+
+\end{tcbsummary}

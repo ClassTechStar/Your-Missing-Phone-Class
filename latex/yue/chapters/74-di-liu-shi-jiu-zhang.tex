@@ -1,0 +1,121 @@
+\bookchapter{第六十九章：速查手冊同資源}
+
+\chapterintro{本章係一份可以獨立使用嘅速查手冊。當你記唔清某個寫法或者需要快速決策嗰陣，直接揭到呢度。建議將佢當成“口袋卡”：常用代碼速查、常見問題、學習資源，一頁都唔漏。}
+
+\booksection{一、常用代碼速查卡}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{想做乜嘢} & \textbf{關鍵代碼} \tabularnewline
+\hline
+頁面私有狀態 & @State private var x = 初值 \tabularnewline
+跨頁面邏輯 & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+直排／橫排佈局 & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+彈性空間 & \texttt{Spacer()} \tabularnewline
+列表 & List \{ ForEach(陣列) \{ ... \} \} \tabularnewline
+頁面跳轉 & \texttt{NavigationStack + NavigationLink} \tabularnewline
+底部彈窗 & .sheet(isPresented: \$show) \{ 內容 \} \tabularnewline
+閂當前頁 & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+上網攞數據 & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+JSON 解析 & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+存小配置 & UserDefaults.standard.set(值, forKey: "鍵") \tabularnewline
+儲存結構化數據 & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+深色模式適配 & 用系統顏色（.primary / Color(.systemGray6)），唔好寫死 \tabularnewline
+行測試 & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 開發速查卡（2026 年 8 月版）\end{center}
+
+\booksection{二、常見問題 FAQ}
+
+Q1：我冇 Mac，可唔可以學 iOS 開發？
+
+可以學語言，但做唔到完整開發。iPad/iPhone 上的 Swift Playgrounds 可以學完第 61 章嘅全部內容；不過 Xcode 係 macOS 獨佔，最終一定要有一部 Mac。預算有限可以先租雲端 Mac 或者買二手 Mac mini 過渡，學完語言再決定投入幾多。
+
+Q2：學 iOS 開發要使幾多錢？
+
+學習階段：0 蚊（Xcode 免費 + 免費 Apple ID 真機調試）。發佈階段：開發者帳號 99 美元一年（大概 700 蚊）。加埋一部 Mac 嘅硬件投入，呢個就係全部成本。比起回報——App Store 上就算一個小工具都有人肯畀錢——呢條數好劃算。
+
+Q3：SwiftUI 同 UIKit 應該先學邊個？
+
+SwiftUI。2026 年嘅新項目、新教程、新職位都以 SwiftUI 為主，本書全程都用佢。UIKit 係上一代框架，仍然喺大量舊項目入面用緊——等你 SwiftUI 熟練之後，按需要補返 UIKit（官方有互操作教程），上手會好快。次序唔好掉轉。
+
+Q4：學識 iOS 開發容唔容易搵工？
+
+2026 年嘅行情：淨係「識畫介面」嘅初級職位競爭好激烈，但「識 Swift + SwiftUI + 有上架作品」嘅開發者依然搶手。iOS 職位嘅人工中位數喺各個技術棧入面長期排前列。學習期嘅你，最好嘅履歷就係 App Store 入面你自己整嗰個 App。
+
+Q5：App 俾審核拒絕咗點算？
+
+唔使慌，好正常——第一次提交被拒嘅機率唔低。蘋果嘅拒絕理由通常寫得好具體（邊個頁面、邊條準則），逐條修改之後喺 App Store Connect 入面回覆說明，再重新提交就得。三大常見拒絕原因：權限用途講唔清、介面有 bug、元數據（截圖／描述）同實物唔符。提早自查呢三項，可以慳返一輪等待。
+
+\booksection{三、Xcode 高頻快捷鍵速查}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{操作} & \textbf{快捷鍵} \tabularnewline
+\hline
+運行 / 測試 & CmdR / CmdU \tabularnewline
+打開畫布預覽 & OptionCmd \tabularnewline
+快速打開檔案 & CmdO \tabularnewline
+全域搜尋 & CmdF \tabularnewline
+格式化縮排 & CtrlI \tabularnewline
+註解 / 取消註解 & Cmd/ \tabularnewline
+清理構建快取 & CmdK \tabularnewline
+跳到定義 & Cmd 點按 \tabularnewline
+重新命名（全域安全改名） & 右鍵 Refactor Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Xcode 高頻快捷鍵速查\end{center}
+
+\begin{tcbinfo}{小貼士：編譯玄學先清快取}
+「琴日仲行到今日就行唔到」呢啲靈異事件，十居其六七都係構建快取錯亂。CmdK 清理完重新構建，可以醫好一大半玄學問題。仲唔得就重啟 Xcode（連 Mac 一齊），再唔得就「剷走 DerivedData 資料夾」——呢個係 iOS 開發者口耳相傳嘅終極三連。
+
+\end{tcbinfo}
+
+\booksection{四、推薦學習資源}
+
+\booksection{六、推薦學習資源}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{類型} & \textbf{資源} & \textbf{推薦理由} \tabularnewline
+\hline
+官方 & developer.apple.com & 蘋果官方文件，SwiftUI/Swift 教程全部都喺入面，第一權威 \tabularnewline
+官方 & Apple 嘅 SwiftUI Tutorials & 官方手把手課程，對新手友好度滿分 \tabularnewline
+官方 & Swift 官網 (swift.org) & 語言官方文件同埋線上演練場 \tabularnewline
+社區 & Hacking with Swift & Paul Hudson 嘅免費教程庫，質素公認第一梯隊 \tabularnewline
+社區 & Stack Overflow (swiftui 標籤) & 報錯求救第一站 \tabularnewline
+影片 & Apple Developer 官方頻道（WWDC 影片） & 每年新技術嘅權威講解 \tabularnewline
+設計 & Apple 人機介面指南（HIG） & 做出「蘋果味」介面嘅官方聖經 \tabularnewline
+配套 & 第七篇《AI編程實戰篇》（第37-47章） & 用 AI 輔助 iOS 開發嘅完整心法 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 開發學習資源清單（2026 年 8 月）\end{center}
+
+\booksection{五、結語：由第一個 App 到第 N 個 App}
+
+回頭看，你由「唔知 SwiftUI 係乜嘢」，到裝好 Xcode、學識 Swift、用 SwiftUI 畫出介面、幫個 App 接上資料庫同網絡，再到測試、打包、上架——呢條路上你已經行完咗由零到一最難嗰一段。
+
+技術嘅世界變得好快：框架會升級，工具會換代，AI 會接手越嚟越多「敲鍵盤」嘅嘢。但有一樣嘢唔會過時：你將一個模糊嘅諗法，拆解成清晰嘅步驟，再一步一步實現佢嘅能力。工具係放大器，思路係地基。放大器可以換，地基唔可以郁。
+
+你唔再只係"識玩手機嘅人"。你可以將腦入面嘅諗法，變成喺幾億部 iPhone 上面真實運行嘅 App。由今日開始，用鍵盤去創造——呢個就係 iOS 開發者嘅浪漫。
+
+\booksection{參考文獻}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

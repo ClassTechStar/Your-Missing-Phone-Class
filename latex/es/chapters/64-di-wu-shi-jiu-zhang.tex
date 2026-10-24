@@ -1,0 +1,126 @@
+\bookchapter{Capítulo 59: Conocer iOS: el ecosistema de Apple y el de desarrollo}
+
+\chapterintro{Enhorabuena por tomar esta decisión: pasas de “persona que usa un iPhone” a “persona que escribe apps para iPhone”. Antes de ponernos manos a la obra, despleguemos el mapa: ¿de dónde viene iOS?, ¿qué significa el “jardín amurallado” de Apple para los desarrolladores?, ¿qué pasa entre que tus dedos teclean el código y el App llega al móvil del usuario?}
+
+\booksection{Los orígenes de iOS: un móvil que cambió una industria}
+
+En enero de 2007, Jobs sacó el primer iPhone en una presentación. Por entonces ni siquiera admitía aplicaciones de terceros; hubo que esperar a 2008, cuando Apple lanzó el App Store y el iPhone SDK y permitió a desarrolladores de todo el mundo escribir software para el iPhone. En ese momento nació la “economía de las apps”: hoy el App Store alberga millones de aplicaciones y ha repartido a los desarrolladores, en total, cientos de miles de millones de dólares.
+
+El propio sistema también evolucionó: al principio se llamaba iPhone OS y en 2010 pasó a llamarse iOS; los números de versión llegaron hasta iOS 17 (2023) y, en 2025, Apple cambió la nomenclatura para seguirla según el año: iOS 26 se lanzó en 2025 y, en agosto de 2026, la versión actual es iOS 27. El nombre cambia, pero algo no ha cambiado nunca: los hábitos de pago de los usuarios de iOS y la reputación de calidad de su software son reconocidos como los mejores del ecosistema móvil; la misma App suele generar ingresos notablemente mayores en iOS que en Android.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Hito} & \textbf{Año} & \textbf{Lo importante para los desarrolladores} \tabularnewline
+\hline
+Lanzamiento del App Store & 2008 & Se abre el ecosistema de desarrollo de terceros \tabularnewline
+Se presenta Swift & 2014 & Debuta el lenguaje moderno de desarrollo iOS \tabularnewline
+Se presenta SwiftUI & 2019 & Framework declarativo de interfaces; el hilo principal de este libro \tabularnewline
+iOS 26 (primer año del nuevo nombre) & 2025 & El nombre sigue al año; Apple Intelligence integrada por completo \tabularnewline
+iOS 27 & 2026 & La versión más reciente actual (base de este libro) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Cronología del desarrollo iOS (hasta agosto de 2026)\end{center}
+
+\booksection{El jardín amurallado: las “reglas” y los “dividendos” del ecosistema Apple}
+
+El ecosistema Apple suele describirse como un “Walled Garden” (jardín amurallado): muchas reglas y control estricto. Las Apps deben pasar revisión para publicarse, hay que desarrollar con Mac y Xcode, y la distribución va sobre todo por el App Store. ¿Suena a asfixia? Pues para los desarrolladores, estas reglas se cambian por dividendos en metálico:
+
+\begin{itemize}
+  \item Fragmentación de dispositivos mínima: solo hay unos pocos modelos de iPhone, con tamaños de pantalla y versiones de sistema muy uniformes; adaptarte a 5 modelos cubre al 95\% de los usuarios (en Android quizá tengas que adaptarte a decenas);
+  \item Adopción de versiones altísima: en pocas semanas tras cada lanzamiento, siete u ocho de cada diez usuarios ya se actualizan; puedes usar las API nuevas sin miedo y sin atender a "sistemas de hace cinco años";
+  \item Buenos hábitos de pago: los usuarios del App Store están más dispuestos a gastar en apps y compras integradas;
+  \item La revisión es estricta, pero la tienda está limpia: pocas copias falsas y apps maliciosas; los buenos productos se ven con más facilidad.
+\end{itemize}
+
+\begin{tcbwarn}{Atención: hablemos primero de los costes}
+El desarrollo iOS tiene un requisito duro: necesitas un Mac (Xcode es exclusivo de macOS) y para publicar hace falta una cuenta de desarrollador de 99 USD al año (la cuenta gratuita de desarrollador individual permite depurar en dispositivos reales en local, pero no publicar). Piensa bien esta inversión antes de empezar; la buena noticia es que, para aprender, la cuenta gratuita basta de sobra, como verás en el capítulo 60.
+
+\end{tcbwarn}
+
+\booksection{¿Con qué lenguaje se programa: Objective-C o Swift?}
+
+En la historia del desarrollo iOS también hubo dos “protagonistas”. Objective-C es el fundador: se usó de 2008 a 2014; Swift es el lenguaje nuevo presentado por Apple en 2014 y que evolucionó hasta Swift 6 (lanzado en 2024, con verificación estricta de concurrencia). En 2026, prácticamente todos los proyectos nuevos usan Swift.
+
+Un consejo honesto si partes de cero: aprende Swift directamente; de Objective-C ni te acerques, salvo que en tu trabajo tengas que mantener código heredado de hace diez años. Las ventajas de Swift: sintaxis ligera (sin el lastre de punto y coma y cabeceras de la era C), el mecanismo de opcionales (Optional) que elimina a nivel de lenguaje los cierres por puntero nulo, una integración perfecta con SwiftUI y, además, Swift Playgrounds en el iPad para aprender jugando.
+
+Estilo Objective-C (reliquia ancestral)
+
+\begin{lstlisting}
+NSString *name = @"Pedro"; [name stringByAppendingString:@"Hola"]; // corchetes + puntero + punto y coma: el trío clásico
+\end{lstlisting}
+
+Estilo Swift (moderno y limpio)
+
+\begin{lstlisting}
+var name = "Pedro" name += "Hola" // tan directo como el lenguaje natural
+\end{lstlisting}
+
+\booksection{¿Cómo nace una App?}
+
+Como en todas las plataformas, las Apps de iOS nacen en una cadena de producción. Pero la versión de Apple añade dos “controles de seguridad” más:
+
+Idea
+
+Diseño (interfaz + funciones)
+
+Escribir código (Swift + SwiftUI)
+
+Compilar y firmar
+
+Probar (emulador y dispositivo real)
+
+Revisión de Apple
+
+Publicar en el App Store
+
+\begin{center}\small\color{gray}Figura 1: el proceso completo de una App iOS desde la idea hasta la tienda (fíjate en la etapa extra de “revisión”)\end{center}
+
+Conceptos clave del proceso:
+
+\begin{itemize}
+  \item Firma (Signing): toda App iOS debe estar "firmada" para poder instalarse; certifica que "este paquete sale de ti y no ha sido alterado". Durante el aprendizaje, Xcode firma automáticamente con tu Apple ID; para publicar se usa el certificado de desarrollador. Se detalla en el capítulo 67.
+  \item Simulador (Simulator): un iPhone virtual dentro de tu Mac y el campo de batalla principal del desarrollo y la depuración. Usa la CPU del Mac, por eso va especialmente fluido; la experiencia es muy superior a la del emulador de Android.
+  \item TestFlight: la herramienta oficial de Apple para distribuir betas: antes de publicar, envías la versión de prueba a hasta 10000 usuarios de prueba, que la instalan y prueban con la app TestFlight. Es una elegancia exclusiva del ecosistema iOS.
+\end{itemize}
+
+\booksection{Panorama del stack tecnológico de iOS: tu “arsenal”}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Capa} & \textbf{Elección dominante (2026)} & \textbf{Para qué sirve} \tabularnewline
+\hline
+Lenguaje & Swift 6 & El lenguaje para escribir la lógica \tabularnewline
+Interfaz & SwiftUI + las guías de diseño de Apple (HIG) & Dibujar interfaces con código (el hilo principal de este libro) \tabularnewline
+Arquitectura & MVVM + @Observable & Separar la interfaz de la lógica \tabularnewline
+Almacenamiento de datos & SwiftData (base de datos) + UserDefaults (configuración) & Guardar datos en el móvil \tabularnewline
+Red & URLSession + async/await + Codable & Comunicarse con el servidor \tabularnewline
+Herramienta de compilación & Xcode Build System / xcodebuild & Convertir el código en un paquete instalable \tabularnewline
+Entorno de desarrollo & Xcode (exclusivo de macOS) & El IDE oficial de Apple \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Vista rápida del stack tecnológico dominante de iOS en 2026\end{center}
+
+¿Te fijaste? Esta lista es bastante más corta que la de Android, porque Apple “lo resuelve casi todo”. El precio de un ecosistema cerrado es la libertad; la recompensa, la tranquilidad: no hay que debatirse entre librerías de red o bases de datos; lo oficial suele ser la mejor solución.
+
+\begin{tcbpractice}{Manos a la obra: revisa la "ficha Apple" de tu móvil}
+Abre en tu iPhone [Ajustes] [General] [Información] y anota tres cosas: la versión de iOS, el nombre del modelo y el espacio disponible. Después date una vuelta por la pestaña “Hoy” del App Store y fíjate en las capturas y los textos de las apps destacadas: a partir de hoy, tu mirada sobre la tienda pasa de “usuario” a “desarrollador”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item En 2008 se lanzó el App Store y nació la "economía de las apps"; en 2026 la versión actual es iOS 27
+  \item La cuenta del jardín amurallado: muchas reglas, pero pocos dispositivos, versiones nuevas, usuarios que pagan y una tienda limpia
+  \item Requisito duro: hace falta un Mac; para publicar, cuenta de desarrollador de 99 USD al año; para aprender basta la cuenta gratuita
+  \item Con el lenguaje, ve directo a Swift; Objective-C queda para el código heredado
+  \item La cadena tiene un eslabón más que en Android: la revisión de Apple; TestFlight es la herramienta estrella para distribuir betas
+  \item Stack estándar de 2026: Swift 6 + SwiftUI + MVVM + SwiftData + URLSession + Xcode
+\end{itemize}
+
+\end{tcbsummary}

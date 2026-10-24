@@ -1,0 +1,530 @@
+\babel@toc {german}{}\relax 
+\contentsline {part}{I. Grundlagen (Kap. 0-7)}{2}{part*.2}%
+\contentsline {chapter}{Kapitel 0: Hallo, bevor es losgeht}{2}{chapter*.3}%
+\contentsline {section}{Was dieses Buch für dich tun kann (und was nicht)}{2}{section*.4}%
+\contentsline {section}{Unsere „Geheimzeichen“-Erklärung}{2}{section*.4}%
+\contentsline {section}{Android und iOS, beide dabei}{2}{section*.4}%
+\contentsline {section}{Handyspeicher: warum von 128 GB nach dem Kauf kaum 110 GB übrig bleiben}{3}{section*.4}%
+\contentsline {section}{Dein Smartphone ist eine “digitale Vermögens”-Bibliothek}{3}{Item.3}%
+\contentsline {chapter}{Kapitel 1: Hallo, mein persönlicher Computer}{5}{chapter*.5}%
+\contentsline {section}{Smartphone-Hardware “inneres”: Tiefenanalyse}{5}{section*.6}%
+\contentsline {section}{Zwei. Betriebssysteme: Android VS iOS VS HarmonyOS}{14}{Item.11}%
+\contentsline {section}{Drei. Smartphone-Anschlüsse im Überblick}{14}{Item.11}%
+\contentsline {section}{Vier. Smartphone-Produktlinien und Namensregeln}{16}{Item.11}%
+\contentsline {section}{Modem und Antennen: die heimlichen Helden der Handykommunikation}{18}{Item.11}%
+\contentsline {section}{Sechs. Dein Smartphone — wie viele Rollen spielt es eigentlich?}{19}{Item.11}%
+\contentsline {section}{Anhang: Android-Smartphone Speichererweiterung erklärt}{20}{Item.21}%
+\contentsline {section}{Kapitel 1 Anhang: HarmonyOS-Betriebssystem Spezialthema}{23}{Item.25}%
+\contentsline {chapter}{Kapitel 2: Räum dein digitales Zimmer auf}{28}{chapter*.7}%
+\contentsline {section}{Eins. Das dreistufige Speichersystem: Dein digitales Lager}{28}{section*.8}%
+\contentsline {section}{Zwei. Lerne den Dateimanager kennen}{28}{Item.32}%
+\contentsline {section}{Der Aufbau des Dateisystems: ein tieferer Blick}{29}{Item.32}%
+\contentsline {section}{Backup und Wiederherstellung: eine Versicherung für deine Daten}{29}{Item.32}%
+\contentsline {section}{Dateisicherheit: schütze deine Privatsphäre}{30}{Item.35}%
+\contentsline {section}{Speicher knapp? Zeit für eine Großreinigung}{30}{Item.35}%
+\contentsline {section}{Alle gängigen Dateiformate erklärt}{31}{Item.35}%
+\contentsline {section}{Foto- und Dateiverwaltung: ordentliche Vermögensverwaltung}{33}{Item.35}%
+\contentsline {chapter}{Kapitel 3: Das Handy an die „Lebensader“ anschließen}{36}{chapter*.9}%
+\contentsline {section}{Null. Nicht orientierungslos im Netz — WLAN und Mobilfunk richtig unterscheiden}{36}{section*.10}%
+\contentsline {section}{Mobilfunknetz (4G/5G) und Datenvolumen}{37}{section*.10}%
+\contentsline {section}{WLAN: Verbinden, Teilen, Sicherheit}{38}{section*.10}%
+\contentsline {section}{Bluetooth: der Allrounder unter den Funkverbindungen}{40}{section*.10}%
+\contentsline {section}{Vier. Infrarot-Fernbedienung: Das Smartphone als Universalfernbedienung}{42}{section*.10}%
+\contentsline {section}{Fünf. NFC: Die Magie des Berührens}{42}{section*.10}%
+\contentsline {section}{Sechs. Persönlicher Hotspot: Das Smartphone als WLAN-Router}{43}{section*.10}%
+\contentsline {chapter}{Kapitel 4: Apps installieren und verwalten – der „Fähigkeitsrucksack“ des Smartphones}{45}{chapter*.11}%
+\contentsline {section}{Eins. Offizielle Stores: Der sicherste „App-Supermarkt“}{45}{section*.12}%
+\contentsline {section}{Zwei. Reiner Modus / Schutzmodus: Den „Virenschutz“ des Smartphones aktivieren}{45}{section*.12}%
+\contentsline {section}{Drittanbieter-Quellen und „elektronische Parasiten“: höchst riskant!}{46}{section*.12}%
+\contentsline {section}{Installieren, aktualisieren, deinstallieren}{47}{Item.47}%
+\contentsline {section}{Berechtigungsmanagement: du bist der „Chef“ der Apps}{48}{Item.47}%
+\contentsline {section}{Aufbau eines Software-Installationspakets}{48}{Item.50}%
+\contentsline {chapter}{Kapitel 5: Das Smartphone besser verstehen lassen – Grundeinstellungen}{52}{chapter*.13}%
+\contentsline {section}{Eins. Ton und Vibration}{52}{section*.14}%
+\contentsline {section}{Zwei. Anzeige und Helligkeit}{52}{section*.14}%
+\contentsline {section}{Drei. Hintergrundbild, Theme und Startbildschirm}{53}{section*.14}%
+\contentsline {section}{Vier. Effizienzeinstellungen: Das Smartphone als dein „externes Gehirn“}{53}{section*.14}%
+\contentsline {section}{Fünf. Bedienungshilfen und Barrierefreiheit: Die Kraft der Technik für das Gute}{55}{section*.14}%
+\contentsline {chapter}{Kapitel 6: Beschütze dein digitales Leben – Sicherheit und Datenschutz}{61}{chapter*.15}%
+\contentsline {section}{Eins. Sperrbildschirm: Die erste physische Verteidigungslinie}{61}{section*.16}%
+\contentsline {section}{Zwei. „Mein Smartphone finden“: Das ultimative Diebstahlschutz-Werkzeug}{61}{Item.76}%
+\contentsline {section}{Drei. System-Updates: Patches einspielen, Lücken stopfen}{62}{Item.76}%
+\contentsline {section}{Vier. Telekommunikationsbetrug erkennen und verhindern}{62}{Item.76}%
+\contentsline {section}{Schutz vor „Doxxing“ und Social-Engineering: die Privatkette kappen}{64}{Item.76}%
+\contentsline {section}{Privatsphäre: deine Daten sind dein Eigentum}{65}{Item.76}%
+\contentsline {section}{Sieben. „Erste Hilfe“-Checkliste nach Verlust oder Diebstahl}{66}{Item.76}%
+\contentsline {section}{Acht. SIM-Karte und eSIM-Sicherheit}{66}{Item.82}%
+\contentsline {chapter}{Kapitel 7: Spitzentechnologien im Detail}{68}{chapter*.17}%
+\contentsline {section}{Eins. Satellitenkommunikation: Ohne Empfang trotzdem um Hilfe rufen}{68}{section*.18}%
+\contentsline {section}{Zwei. Off-Grid-Kommunikation: Neue Art der Nahfeldkommunikation}{69}{Item.89}%
+\contentsline {section}{Drei. Unfallerkennung: Lebensrettung im entscheidenden Moment}{70}{Item.89}%
+\contentsline {section}{NearLink (Xinglian): die drahtlose Verbindung der nächsten Generation}{71}{Item.92}%
+\contentsline {part}{II. Softwareteil (Kapitel 8-14)}{74}{part*.19}%
+\contentsline {chapter}{Kapitel 8: Kommunikation: SMS, Telefon und soziale Medien}{74}{chapter*.20}%
+\contentsline {section}{Erweiterte Funktionen der Telefon-App}{74}{section*.21}%
+\contentsline {section}{SMS und iMessage/RCS}{77}{section*.21}%
+\contentsline {section}{WeChat/QQ: Die Super-Apps im Alltag verwalten}{78}{section*.21}%
+\contentsline {section}{Videotelefonie im Vergleich}{80}{Item.100}%
+\contentsline {section}{E-Mail: Auf dem Smartphone einrichten und nutzen}{81}{Item.100}%
+\contentsline {chapter}{Kapitel 9: Mobiles Arbeiten und Lernen}{83}{chapter*.22}%
+\contentsline {section}{Dokumente bearbeiten: Schreiben und Gestalten in der Handfläche}{83}{section*.23}%
+\contentsline {section}{Notiz-Apps: vom spontanen Notieren zum Wissenssystem}{84}{section*.23}%
+\contentsline {section}{Scannen und OCR: Die Papierwelt ins Smartphone holen}{84}{section*.23}%
+\contentsline {section}{Cloud-Speicher wählen: Es gibt nicht den Besten, nur den für Sie Passenden}{85}{section*.23}%
+\contentsline {section}{Ein realistisches Szenario mobiles Arbeiten}{86}{section*.23}%
+\contentsline {chapter}{Kapitel 10: Mobiles Bezahlen und Alltagsdienste}{88}{chapter*.24}%
+\contentsline {section}{Wie bindet man eigentlich eine Bankkarte ein?}{88}{section*.25}%
+\contentsline {section}{Zahlungscode: Wer sieht, wer bekommt das Geld?}{89}{Item.122}%
+\contentsline {section}{Diese Sicherheitseinstellungen – 5 Minuten investieren, viel Ärger sparen}{89}{Item.122}%
+\contentsline {section}{Bus und U-Bahn: Das Smartphone ist die Fahrkarte}{89}{Item.122}%
+\contentsline {section}{Alltagsgebühren, Essenslieferung, Fahrdienste}{90}{Item.122}%
+\contentsline {section}{Krankenversicherung, Sozialversicherung und Behördengänge mit dem Smartphone}{90}{Item.122}%
+\contentsline {chapter}{Kapitel 11: Fotografie und Bildverwaltung}{92}{chapter*.26}%
+\contentsline {section}{Haben Sie auch diese Fehler gemacht?}{92}{section*.27}%
+\contentsline {section}{Kleine Tricks, die die Trefferquote sofort erhöhen}{92}{section*.27}%
+\contentsline {section}{Porträtmodus und Pro-Modus}{93}{section*.27}%
+\contentsline {section}{Nachbearbeitung: Nicht übertreiben, das rechte Maß ist richtig}{94}{section*.27}%
+\contentsline {section}{Zu viele Fotos – was tun? Ordnungsstrategien}{94}{section*.27}%
+\contentsline {section}{Screenshot und Bildschirmaufnahme}{95}{section*.27}%
+\contentsline {section}{Kapitel 11 Anhang: Professionelle Bildtechnik}{96}{Item.131}%
+\contentsline {chapter}{Kapitel 12: Medien, Unterhaltung und Lesen}{107}{chapter*.28}%
+\contentsline {section}{Musik hören: Welche App, wie man am besten hört}{107}{section*.29}%
+\contentsline {section}{Podcasts: Der „Ohren-Begleiter“ auf dem Pendelweg}{108}{section*.29}%
+\contentsline {section}{Videos schauen: Vom Player zum Streaming – der richtige Weg}{108}{section*.29}%
+\contentsline {section}{E-Books: Auch auf dem Smartphone gut lesen}{109}{section*.29}%
+\contentsline {section}{Smartphone-Spiele: Mit Spaß spielen, ohne die Hände zu überlasten}{110}{section*.29}%
+\contentsline {chapter}{Kapitel 13: Empfehlungen für Werkzeug-Apps}{112}{chapter*.30}%
+\contentsline {section}{Produktivität: Zeit und Aufmerksamkeit steuern}{112}{section*.31}%
+\contentsline {section}{Gesundheit \& Sport}{115}{section*.31}%
+\contentsline {section}{Reise \& Mobilität}{116}{section*.31}%
+\contentsline {section}{Automatisierung – erste Schritte}{118}{section*.31}%
+\contentsline {section}{Browser \& Suchmaschinen: Ihr Tor zum Internet}{119}{section*.31}%
+\contentsline {section}{Praktische Systemwerkzeuge: Aufräumen, Anti-Spam und Schutz}{121}{Item.147}%
+\contentsline {section}{Wetterwarnungen, Naturgefahren und Erdbebenwarnung}{125}{Item.151}%
+\contentsline {section}{Geräteübergreifend: PC-Fernsteuerung, Schnelltransfer und Kontosicherheit}{128}{Item.155}%
+\contentsline {chapter}{Kapitel 14: Passwort-Manager im Detail}{133}{chapter*.32}%
+\contentsline {section}{I. Warum brauchst du einen Passwort-Manager?}{133}{section*.33}%
+\contentsline {section}{II. Wie Passwort-Manager funktionieren}{133}{section*.33}%
+\contentsline {section}{III. Kurze Einfuehrung in die Verschluesselung}{133}{Item.163}%
+\contentsline {section}{IV. Empfohlene Passwortmanager}{135}{Item.167}%
+\contentsline {section}{V. Realitaetsnahe Bewertung der Passwortstaerke}{136}{Item.167}%
+\contentsline {section}{VI. Passkey: Die Zukunft des passwortlosen Logins}{138}{Item.173}%
+\contentsline {section}{VII. Hardware-Sicherheitsschluessel}{141}{Item.190}%
+\contentsline {section}{VIII. Passwort-Freigabe fuer Familie/Team}{142}{Item.196}%
+\contentsline {section}{IX. Bewaehrte Praktiken fuer Passwortmanager}{145}{Item.208}%
+\contentsline {part}{Wo nachsehen?}{148}{part*.34}%
+\contentsline {chapter}{Kapitel 15: Batterietechnologie und Akkulaufzeit-Optimierung}{148}{chapter*.35}%
+\contentsline {section}{Was ist mit dem Akku los? Ladezyklen und Zustand}{148}{section*.36}%
+\contentsline {section}{Lademythen? Schnellladen, kabelloses Laden und die goldene Regel}{149}{section*.36}%
+\contentsline {section}{– der universelle König}{150}{section*.36}%
+\contentsline {section}{IV. Neue Akkutechnologie: Silizium-Kohlenstoff-Anode}{153}{Item.217}%
+\contentsline {section}{V. Das sind die echten Stromspar-Tipps}{154}{Item.217}%
+\contentsline {chapter}{Kapitel 16: Kontosysteme und Cloud-Dienste}{156}{chapter*.37}%
+\contentsline {section}{Was genau verwaltet Ihr Smartphone-Konto?}{156}{section*.38}%
+\contentsline {section}{Drei Pflichtaktionen – jetzt sofort}{157}{section*.38}%
+\contentsline {section}{iCloud: Die „Luft“ der Apple-Nutzer}{157}{Item.223}%
+\contentsline {section}{Synchronisation und Backup – nicht verwechseln}{159}{Item.223}%
+\contentsline {section}{Die Konto-Matrix der Android-Nutzer}{159}{Item.223}%
+\contentsline {section}{Familienfreigabe: Auch die Familie profitiert}{159}{Item.223}%
+\contentsline {chapter}{Kapitel 17: Smartphone und Gerätevernetzung}{161}{chapter*.39}%
+\contentsline {section}{I. Synergie mit dem Computer: Smartphone und Computer sind nicht länger zwei verschiedene Welten}{161}{section*.40}%
+\contentsline {section}{II. Spiegelung auf den Fernseher: Die ganze Familie schaut zusammen}{161}{section*.40}%
+\contentsline {section}{III. Smartwatch/Fitness-Armband: Der Gesundheitsmanager am Handgelenk}{162}{section*.40}%
+\contentsline {section}{IV. Smart Home: Das Smartphone ist der „Hauptschalter“ des Zuhauses}{163}{section*.40}%
+\contentsline {section}{V. Bluetooth-Kopfhörer und Lautsprecher: Die Freiheit des Kabellosen}{164}{section*.40}%
+\contentsline {section}{VI. Mit dem Auto-System: Der sichere Beifahrer beim Fahren}{165}{section*.40}%
+\contentsline {section}{VII. Sicherheit und Datenschutz bei der Vernetzung}{166}{section*.40}%
+\contentsline {chapter}{Kapitel 18: Daten-Backup und -Migration}{167}{chapter*.41}%
+\contentsline {section}{: Jede Marke hat ihre eigene Desktop-Software, z. B. Huawei-Telefonassistent, Xiaomi-Assistent, Samsung Smart Switch. An den Computer anschließen und den Anweisungen folgen.}{167}{section*.42}%
+\contentsline {section}{Das vollständige Backup ist ein Auffangnetz, aber manche Dinge sind zu wichtig, als dass du sie nicht separat speichern solltest:}{168}{section*.42}%
+\contentsline {section}{. Auf dem Computer WeChat-PC-Version installieren, unten links drei Striche Migrieren \& Backup Backup \& Wiederherstellung Chat-Verlauf auf Computer sichern. Später, beim Gerätewechsel, kann man ihn auf das neue Smartphone wiederherstellen.}{168}{section*.42}%
+\contentsline {section}{Das ist ein klassisches Prinzip aus dem Bereich Datensicherheit, einfach zu merken:}{170}{section*.42}%
+\contentsline {section}{Sichere WeChat-Chatverläufe: WeChat öffnen Ich Einstellungen Allgemein Chat-Verlauf migrieren \& backup Auf Computer sichern.}{171}{section*.42}%
+\contentsline {chapter}{Kapitel 19: Fehlerbehebung und Selbsthilfe}{173}{chapter*.43}%
+\contentsline {section}{Zuerst schließen und neu öffnen}{173}{section*.44}%
+\contentsline {section}{: Mit einer Zahnstange oder einem nicht leitenden kleinen Werkzeug vorsichtig Staub und Fussel aus dem Ladeanschluss herauskratzen. Das ist mir selbst passiert – ein Faden aus der Tasche hatte sich genau im Ladeanschluss verfangen, beim Einstecken dachte ich an Kontaktprobleme, nach dem Herausnehmen war alles gut.}{174}{Item.242}%
+\contentsline {section}{: In den Wi-Fi-Einstellungen auf das Ausrufezeichen neben dem Netzwerknamen tippen (bei Android das Zahnrad), „Dieses Netzwerk ignorieren“ / „Vergessen” wählen und dann das Passwort neu eingeben.}{174}{Item.247}%
+\contentsline {section}{Bildschirm flackert}{175}{Item.247}%
+\contentsline {section}{Hängt beim Startbildschirm und startet ständig neu}{176}{Item.251}%
+\contentsline {section}{Stimme kratzig/Verzerrung}{176}{Item.251}%
+\contentsline {section}{Akkuwechsel}{177}{Item.251}%
+\contentsline {section}{Erzwungener Neustart}{177}{Item.251}%
+\contentsline {section}{Kapitel 20: Entwicklermodus und erweiterte Berechtigungen}{178}{Item.256}%
+\contentsline {section}{Kapitel 20 Anhang: Termux – eine tragbare Linux-Terminal-Umgebung auf Android-Geräten}{188}{Item.269}%
+\contentsline {part}{IV. Weiterführender Teil (Kapitel 21-26)}{194}{part*.45}%
+\contentsline {chapter}{Kapitel 21: Mobilfunk und Informationssicherheit vertieft}{194}{chapter*.46}%
+\contentsline {section}{I. VPN: Der „Tarnumhang“ im Netz}{194}{section*.47}%
+\contentsline {section}{II. Öffentliches Wi-Fi – die „süße Falle“, gefährlicher als du denkst}{195}{section*.47}%
+\contentsline {section}{III. Wie HTTPS dich schützt – der SSL/TLS-Handshake}{196}{section*.47}%
+\contentsline {section}{IV. DNS-Sicherheit: Ist dein „Netz-Telefonbuch“ sicher?}{196}{Item.281}%
+\contentsline {section}{V. Ist „Privat surfen“ wirklich unsichtbar?}{197}{Item.281}%
+\contentsline {section}{VI. Browser-Datenschutz: Lass deinen Browser dich nicht verkaufen}{197}{Item.281}%
+\contentsline {section}{VII. Praktische Sicherheits-Checkliste: Schütze dich ab jetzt}{198}{Item.281}%
+\contentsline {chapter}{Kapitel 22: Wie KI im Handy arbeitet}{200}{chapter*.48}%
+\contentsline {section}{I. KI-Kamera: Deine „digitale Dunkelkammer“ im Smartphone}{200}{section*.49}%
+\contentsline {section}{II. Sprachassistent: Wie dein „Ton-Sekretär“ dich versteht}{200}{section*.49}%
+\contentsline {section}{III. On-Device-KI vs. Cloud-KI}{200}{Item.294}%
+\contentsline {section}{IV. Große KI-Modelle und das Smartphone: Dein intelligenter Begleiter}{201}{Item.294}%
+\contentsline {section}{V. Fünf typische Anwendungsszenarien mit Praxis}{202}{Item.294}%
+\contentsline {section}{VI. Prompt-Optimierung: Lass die KI nach deiner Pfeife tanzen – das Kommunikations-Prinzip}{204}{Item.294}%
+\contentsline {section}{Sieben. Grenzen und Herausforderungen der KI: Wachsame Urteilskraft bewahren}{209}{Item.299}%
+\contentsline {chapter}{Kapitel 23: Programmier-Denken und Automatisierung für Einsteiger}{211}{chapter*.50}%
+\contentsline {section}{Erstens. Was ist Automatisierung überhaupt?}{211}{section*.51}%
+\contentsline {section}{Zweitens. Apples „Kurzbefehle“ – das Automatisierungswunderwerk für Apple-Nutzer}{212}{Item.305}%
+\contentsline {section}{Drittens. Android-Automatisierung – Tasker und seine Freunde}{213}{Item.305}%
+\contentsline {section}{Viertens. Alltagsanwendungen des Automatisierungsdenkens}{214}{Item.305}%
+\contentsline {section}{Fünftens. Fallenschutz-Leitfaden: Häufige Probleme der Automatisierung}{215}{Item.305}%
+\contentsline {chapter}{Kapitel 23 Anhang: GitHub-Einsteigerleitfaden – vom Code-Hosting zur Kollaborationsplattform}{217}{chapter*.52}%
+\contentsline {section}{Erstens. Was ist GitHub überhaupt?}{217}{section*.53}%
+\contentsline {section}{Zweitens. Der Unterschied zwischen Git und GitHub (Schlüsselkonzept!)}{218}{section*.53}%
+\contentsline {section}{Drittens. Kernkonzepte und Funktionen von GitHub}{218}{section*.53}%
+\contentsline {section}{Viertens. Registrierung und Einstieg: Erstelle in fünf Minuten dein erstes Repository}{220}{section*.53}%
+\contentsline {section}{Fünftens. Grundlegender Workflow: Vom Lokalgerät zur Cloud}{221}{Item.318}%
+\contentsline {section}{Sechstens. Team-Workflow: Wie funktioniert ein Pull Request?}{221}{Item.323}%
+\contentsline {section}{Siebtens. Typische Anwendungsszenarien von GitHub}{222}{Item.329}%
+\contentsline {section}{Achtens. Ein paar Ratschläge für Einsteiger}{223}{Item.329}%
+\contentsline {section}{Neuntens. Zusammenfassung: Warum jeder GitHub kennen sollte}{224}{Item.329}%
+\contentsline {chapter}{Kapitel 24: Root-Zugriff und Bootloader-Sperre vertieft}{226}{chapter*.54}%
+\contentsline {section}{Erstens. Bootloader tiefgehend verstehen}{226}{section*.55}%
+\contentsline {section}{Zweitens. Detaillierter Ablauf der Bootloader-Entsperrung (am Beispiel Xiaomi)}{229}{Item.337}%
+\contentsline {section}{Drittens. Mehrere Methoden für Root}{229}{Item.341}%
+\contentsline {section}{Viertens. Flash-Einsteiger}{229}{Item.341}%
+\contentsline {section}{V. Samsung Knox: Der unumkehrbare Preis der BL-Entsperrung}{229}{Item.341}%
+\contentsline {section}{VI. Haeufige Fragen (Q\& A)}{231}{Item.341}%
+\contentsline {chapter}{Kapitel 25: Gebrauchttelefone und digitales Erbe}{232}{chapter*.56}%
+\contentsline {section}{: Vertrauenswürdige Kontakte benennen, die nach dem Tod Zugang zu iCloud-Daten beantragen können.}{232}{section*.57}%
+\contentsline {section}{Seriöse Recycling-Plattformen}{235}{Item.346}%
+\contentsline {section}{(Optional) Den Speicher mit Mülldateien füllen und noch einmal zurücksetzen.}{240}{Item.357}%
+\contentsline {chapter}{Kapitel 26: Aktuelle Fronten der Smartphone-Technologie}{243}{chapter*.58}%
+\contentsline {section}{I. KI-Smartphone: Marketing-Schlagwort oder echte Revolution?}{243}{section*.59}%
+\contentsline {section}{II. Vergleich der KI-Strategien der Hersteller: Wer macht es ernst, wer klebt nur ein Etikett auf?}{244}{section*.59}%
+\contentsline {section}{III. Satellitenkommunikation: vom Flaggschiff-„Gag“ zum Mittelklasse-Standard}{245}{section*.59}%
+\contentsline {section}{IV. Reife des faltbaren Displays: Bereit als Hauptgeraet?}{245}{section*.59}%
+\contentsline {section}{V. 6G und Wi-Fi 7: Tempo und Grenzen der naechsten Verbindungsgeneration}{246}{section*.59}%
+\contentsline {section}{VI. Silizium-Kohlenstoff-Anode: Die Akkulaufzeit erfaehrt endlich einen Materialdurchbruch}{247}{section*.59}%
+\contentsline {section}{VII. Kapitelueberblick: Diese Fronten in einem Satz merken}{247}{section*.59}%
+\contentsline {part}{V. Praxisteil (Kapitel 27-32)}{250}{part*.60}%
+\contentsline {chapter}{Kapitel 27: Auch fuer Mama und Papa kinderleicht – Der komplette Ratgeber fuer altersgerechte Smartphone-Nutzung}{250}{chapter*.61}%
+\contentsline {section}{Zunaechst die richtige Einstellung: Es heisst nicht »Aeltere koennen es nicht«, sondern »Das Handy ist nicht dafuer gemacht«}{250}{section*.62}%
+\contentsline {section}{Erster Schritt: Den »einfachen Modus« aktivieren – das Handy wird uebersichtlicher}{251}{section*.62}%
+\contentsline {section}{II. Wenn Sie keinen einfachen Modus möchten, geht es auch manuell —— “Große Schrift + große Symbole” in fünf Schritten}{253}{section*.62}%
+\contentsline {section}{III. Betrugsschutz —— dieses Kapitel bitte unbedingt zusammen mit den Eltern lesen}{253}{Item.376}%
+\contentsline {section}{IV. Fernwartung —— auch aus der Ferne das Handy der Eltern reparieren}{255}{Item.379}%
+\contentsline {section}{V. WeChat “seniorengerecht anpassen” —— ein paar Sätze genügen}{256}{Item.379}%
+\contentsline {section}{VI. Was tun, wenn das Handy verloren ist? Einen “Notfallplan” für die Eltern erstellen}{257}{Item.379}%
+\contentsline {section}{VII. Kompatibilität mit kabellosen Kopfhörern und Hörgeräten —— eine übersehene nützliche Funktion}{257}{Item.382}%
+\contentsline {section}{VIII. Gesundheitsbezogene Funktionen —— das Handy ist mehr als ein Kommunikationsgerät}{258}{Item.382}%
+\contentsline {chapter}{Kapitel 28: Geld klug ausgeben fuer das Wunschgeraet – Der ultimative Smartphone-Kaufguide}{259}{chapter*.63}%
+\contentsline {section}{Drei-Schritt-Methode: Bedarf Budget Modell}{259}{section*.64}%
+\contentsline {section}{I. Wie man Kernparameter liest —— Sie müssen nicht alles verstehen, diese fünf Punkte genügen}{260}{Item.385}%
+\contentsline {section}{II. Empfehlungen nach Budget (basierend auf dem Markt Mitte 2026)}{262}{Item.385}%
+\contentsline {section}{Auswahl nach Anwendungsfall – Was sind deine Anforderungen?}{263}{Item.385}%
+\contentsline {section}{Fuenf haeufige Fallstricke – vor dem Kauf ueberpruefen}{264}{Item.385}%
+\contentsline {section}{Wann ist der Kauf am guenstigsten?}{265}{Item.390}%
+\contentsline {section}{VI. Welcher Vertriebskanal —— wo kauft man sicher ein?}{265}{Item.390}%
+\contentsline {chapter}{Kapitel 29: Digitale Gesundheit – Eine gesunde Beziehung zum Smartphone aufbauen}{267}{chapter*.65}%
+\contentsline {section}{I. Schauen Sie zuerst auf Ihre “Bildschirmzeit” —— die Zahlen öffnen die Augen}{267}{section*.66}%
+\contentsline {section}{II. App-“Nutzungslimits” setzen —— einen Geschwindigkeitsbegrenzer einbauen}{268}{section*.66}%
+\contentsline {section}{III. “Nicht stören” richtig nutzen —— nicht Benachrichtigungen ausschalten, sondern Stress}{268}{Item.398}%
+\contentsline {section}{IV. Augenschutz durch Gewohnheit, nicht durch Apps —— die 20-20-20-Regel}{268}{Item.398}%
+\contentsline {section}{V. Nacken-Rettung für die “Kopf-nach-unten-Fraktion”}{269}{Item.398}%
+\contentsline {section}{VI. Schlaf und Handy —— die Gewohnheit, die Sie im Schlafzimmer am meisten ändern sollten}{269}{Item.398}%
+\contentsline {section}{VII. Informationsangst —— “selektive Blindheit” lernen}{270}{Item.398}%
+\contentsline {chapter}{Kapitel 30: Bildschirmuebertragung, Praesentation und Auto-Konnektivitaet}{272}{chapter*.67}%
+\contentsline {section}{I. Drei Lager der kabellosen Übertragung —— nicht verwechseln}{272}{section*.68}%
+\contentsline {section}{II. Kabelgebundene Übertragung —— stabiler, null Verzögerung}{273}{section*.68}%
+\contentsline {section}{III. Handy wird zum Computer —— Desktop-Modus}{273}{section*.68}%
+\contentsline {section}{IV. Auto-Anbindung —— die richtige Art, das Handy im Auto zu nutzen}{274}{section*.68}%
+\contentsline {section}{V. Bildschirmübertragung im Konferenzraum —— nicht mehr gestresst}{274}{section*.68}%
+\contentsline {chapter}{Kapitel 31: Einstieg in Kurzvideo-Drehs und Content-Erstellung}{276}{chapter*.69}%
+\contentsline {section}{I. Vor dem Dreh überlegen: Für wen drehen Sie?}{276}{section*.70}%
+\contentsline {section}{II. Grundlegende Handy-Einstellungen —— 5 Pflichtaktionen vor dem Dreh}{276}{Item.413}%
+\contentsline {section}{III. Fünf Kamera-Bewegungen —— das Bild in Bewegung versetzen}{277}{Item.418}%
+\contentsline {section}{IV. Videoschnitt für Einsteiger —— CapCut reicht}{277}{Item.418}%
+\contentsline {section}{V. Die Bedeutung des Thumbnails —— 70 \% entscheiden nur anhand des Covers}{278}{Item.424}%
+\contentsline {section}{VI. Drei Prinzipien der Content-Erstellung}{278}{Item.424}%
+\contentsline {chapter}{Kapitel 32: Notfallhandbuch für Smartphone-Sicherheit}{280}{chapter*.71}%
+\contentsline {section}{Szenario 0: Erdbeben / Extremwetter – wie das Smartphone Leben rettet}{280}{section*.72}%
+\contentsline {section}{Szenario 1: Handy verloren/gestohlen – die goldenen 30 Minuten}{281}{Item.439}%
+\contentsline {section}{Szenario 2: Betrogen worden – die goldenen 72 Stunden}{282}{Item.448}%
+\contentsline {section}{Szenario 3: Virus/Trojaner auf dem Handy – was tun?}{283}{Item.454}%
+\contentsline {section}{Szenario 4: Konto gekapert – Kontrolle zurückholen}{283}{Item.454}%
+\contentsline {section}{Szenario 5: Erpressungsnachricht – keine Angst, nicht zahlen}{284}{Item.460}%
+\contentsline {section}{Szenario 6: KI-Gesichts-/Stimmklau – Augenzeugen sind nicht mehr Beweis}{284}{Item.460}%
+\contentsline {section}{Szenario 7: SIM-Swap – Ihre Nummer wird „gestohlen“}{285}{Item.465}%
+\contentsline {part}{VI. Ausblick und Vernetztes Auto (Kap. 33-34)}{289}{part*.73}%
+\contentsline {chapter}{Kapitel 33: Zukunftsausblick – Die naechste Etappe des Smartphones}{289}{chapter*.74}%
+\contentsline {section}{AR/VR und Spatial Computing: Der »zweite Desktop« neben dem Handy}{289}{section*.75}%
+\contentsline {section}{Brain-Computer Interface: Gedanken als Interaktionsmedium}{290}{section*.75}%
+\contentsline {section}{Das »Verschwinden« des Handys und das neue Fundament der Identitaet}{290}{section*.75}%
+\contentsline {section}{Ethische Fragen: Sind wir noch die Herren unserer Handys?}{290}{section*.75}%
+\contentsline {section}{Verbunden bleiben und trotzdem unabhaengig – deine Philosophie des digitalen Lebens}{291}{section*.75}%
+\contentsline {chapter}{Kapitel 34: Tiefer Leitfaden zur Auto-Konnektivitaet – Verschmelzung von Smartphone und Auto}{293}{chapter*.76}%
+\contentsline {section}{Die drei Hauptansaetze der Handy-Auto-Vernetzung}{293}{section*.77}%
+\contentsline {section}{Vergleich: CarPlay / Android Auto / HiCar}{294}{section*.77}%
+\contentsline {section}{HarmonyOS Cockpit: Nahtloser Uebergang zwischen Handy und Auto}{294}{section*.77}%
+\contentsline {section}{Infotainment-Systeme der neuen Automobilhersteller}{295}{section*.77}%
+\contentsline {section}{Das Handy als Infotainment – geht das?}{295}{section*.77}%
+\contentsline {section}{Praktische Tipps}{296}{section*.77}%
+\contentsline {part}{Thema Kinder und Handy (Kapitel 35)}{299}{part*.78}%
+\contentsline {chapter}{Kapitel 35: Kinder und Smartphones – Erziehungsleitfaden fuer das digitale Zeitalter}{299}{chapter*.79}%
+\contentsline {section}{Wann gibt man dem Kind ein Handy?}{299}{section*.80}%
+\contentsline {section}{Elternkontrollen – der komplette Ueberblick}{300}{section*.80}%
+\contentsline {section}{III. Jugendmodus}{301}{section*.80}%
+\contentsline {section}{IV. Medienkompetenz-Erziehung}{302}{section*.80}%
+\contentsline {section}{V. Gesunde Nutzungsgewohnheiten}{303}{section*.80}%
+\contentsline {section}{VI. Digitales Erbe und Kinder}{304}{section*.80}%
+\contentsline {chapter}{Kapitel 36: Smartphone und Smart Home – das Zuhause wird clever}{306}{chapter*.81}%
+\contentsline {section}{Smart-Home-Protokolle: Die Wahl zählt}{306}{section*.82}%
+\contentsline {section}{Die drei großen Ökosysteme im Vergleich}{307}{section*.82}%
+\contentsline {section}{Das Smartphone als Hauszentrale}{307}{section*.82}%
+\contentsline {section}{Einsteiger-Starter-Set}{308}{section*.82}%
+\contentsline {section}{Sicherheitsregeln}{309}{section*.82}%
+\contentsline {part}{VII. KI-Programmierung in der Praxis (Kap. 37-47)}{312}{part*.83}%
+\contentsline {chapter}{Kapitel 37: Paradigmenrevolution – vom „Code schreiben“ zum „KI anleiten“}{312}{chapter*.84}%
+\contentsline {section}{Die Geburt von Vibe Coding: Ein Satz startet eine Bewegung}{312}{section*.85}%
+\contentsline {section}{Stand 2026: Das Zeitalter von Agentic Engineering}{313}{section*.85}%
+\contentsline {section}{Der Kernwandel: Vom Coder zum Conductor}{314}{Item.496}%
+\contentsline {section}{Warum Methodik wichtiger ist als Werkzeuge}{315}{Item.496}%
+\contentsline {chapter}{Kapitel 38: Fünf Denkprinzipien der KI-Programmierung}{317}{chapter*.86}%
+\contentsline {section}{Prinzip 1: Think Before Coding (erst denken, dann kodieren)}{317}{section*.87}%
+\contentsline {section}{Prinzip 2: Simplicity First (Einfachheit zuerst)}{318}{Item.499}%
+\contentsline {section}{Prinzip 3: Surgical Changes (chirurgisch präzise Änderungen)}{319}{Item.499}%
+\contentsline {section}{Prinzip 4: Goal-Driven Execution (zielgetriebene Ausführung)}{319}{lstnumber.-2.1}%
+\contentsline {section}{Prinzip 5: Iterate and Verify (iterieren und prüfen)}{320}{lstnumber.-2.1}%
+\contentsline {section}{Harness Engineering: Agent = Modell + Harness}{321}{lstnumber.-2.1}%
+\contentsline {chapter}{Kapitel 39: Kontextengineering – damit KI Ihre Absicht versteht}{323}{chapter*.88}%
+\contentsline {section}{Projektgedächtnisdatei: Das „Langzeitgedächtnis“ der KI}{323}{section*.89}%
+\contentsline {section}{Spec-Driven Development (SDD)}{324}{lstnumber.-3.24}%
+\contentsline {section}{Kontextfenster verwalten}{325}{Item.504}%
+\contentsline {section}{Praxispunkte fürs Kontext-Engineering}{326}{Item.504}%
+\contentsline {chapter}{Kapitel 40: Anforderungsengineering – aus Ideen ausführbare Anweisungen für die KI machen}{328}{chapter*.90}%
+\contentsline {section}{Von der vagen Idee zur strukturierten Anforderung}{328}{section*.91}%
+\contentsline {section}{Die Kunst der gestuften Anforderungszerlegung}{329}{section*.91}%
+\contentsline {section}{PRD-Schreibvorlage und Praxis}{330}{Item.513}%
+\contentsline {section}{Praxis: die komplette Durchrechnung von der Idee zum Plan}{331}{lstnumber.-4.29}%
+\contentsline {chapter}{Kapitel 41: Die KI-Coding-Tools 2026 im Überblick}{333}{chapter*.92}%
+\contentsline {section}{Drei Schulen und der Auswahlrahmen}{333}{section*.93}%
+\contentsline {section}{Die Schule „KI im IDE“}{334}{section*.93}%
+\contentsline {section}{Die Schule „Terminal-Agenten“}{335}{section*.93}%
+\contentsline {section}{Die Schule „Cloud-Builder“}{335}{section*.93}%
+\contentsline {section}{Tools wechseln, die Methode bleibt}{336}{section*.93}%
+\contentsline {chapter}{Kapitel 42: Das Panorama der großen Modelle und die API in der Praxis}{338}{chapter*.94}%
+\contentsline {section}{Die internationalen Leitmodelle: drei starke Anbieter}{338}{section*.95}%
+\contentsline {section}{Die chinesischen Leitmodelle: eine blühende Vielfalt}{341}{section*.95}%
+\contentsline {section}{Der Entscheidungsrahmen für die Modellwahl}{345}{section*.95}%
+\contentsline {section}{Erste Schritte mit der API: große Modelle von null anbinden}{346}{section*.95}%
+\contentsline {section}{Kaufberatung für Token-Pläne}{349}{lstnumber.-8.14}%
+\contentsline {section}{Praxis: Eine LLM-API in dein Projekt einbinden}{353}{Item.522}%
+\contentsline {chapter}{Kapitel 43: Dialog-Engineering – Dialogtechniken für effiziente Zusammenarbeit mit der KI}{357}{chapter*.96}%
+\contentsline {section}{Ebenen-Strategie für Prompts}{357}{section*.97}%
+\contentsline {section}{Debug-Dialoge: Fehler so beschreiben, dass die KI sie schnell findet}{358}{section*.97}%
+\contentsline {section}{Iterationsstrategie: Kleine schnelle Schritte vs. großes Refactoring}{359}{lstnumber.-11.1}%
+\contentsline {section}{Kontextmanagement bei langen Dialogen}{360}{lstnumber.-11.1}%
+\contentsline {chapter}{Kapitel 44: Praxis von 0 auf 1 – Der komplette Ablauf eines Projekts}{362}{chapter*.98}%
+\contentsline {section}{Projekt 1: Eine schlanke persönliche Tool-Seite (Einsteiger)}{362}{section*.99}%
+\contentsline {section}{Projekt 2: Full-Stack-Ausgabenverwaltung (Fortgeschrittene)}{363}{lstnumber.-12.13}%
+\contentsline {section}{Projekt 3: KI-gestützte App (Profi)}{365}{lstnumber.-14.18}%
+\contentsline {section}{Universelle Praxis-Checkliste}{366}{lstnumber.-14.18}%
+\contentsline {chapter}{Kapitel 45: Qualitätssicherung – KI-Code zuverlässig machen}{368}{chapter*.100}%
+\contentsline {section}{Testgetrieben: Die KI Tests schreiben lassen}{368}{section*.101}%
+\contentsline {section}{Techniken fürs Code-Review}{369}{lstnumber.-15.14}%
+\contentsline {section}{Versionskontrolle: Die Rolle von Git beim KI-Programmieren}{370}{lstnumber.-15.14}%
+\contentsline {section}{Häufige Stolperfallen und wie du sie vermeidest}{370}{Item.530}%
+\contentsline {chapter}{Kapitel 46: Der Weg nach vorn – Vom Anwender zum Architekten}{373}{chapter*.102}%
+\contentsline {section}{Das MCP-Protokoll und Tool-Erweiterungen}{373}{section*.103}%
+\contentsline {section}{Eigene Workflows und Skills}{373}{section*.103}%
+\contentsline {section}{Multi-Agent-Kollaboration}{374}{section*.103}%
+\contentsline {section}{Dein Weg zum kontinuierlichen Lernen}{374}{section*.103}%
+\contentsline {chapter}{Kapitel 47: Schnellreferenz und Ressourcen}{376}{chapter*.104}%
+\contentsline {section}{Spickzettel der Denkmodelle}{376}{section*.105}%
+\contentsline {section}{Entscheidungsbaum für die Tool-Wahl}{377}{section*.105}%
+\contentsline {section}{Häufige Fragen (FAQ)}{377}{section*.105}%
+\contentsline {section}{Empfohlene Lernressourcen}{378}{section*.105}%
+\contentsline {section}{Schlusswort: Das Werkzeug in der Hand, die Methodik im Kopf}{379}{section*.105}%
+\contentsline {section}{Literaturverzeichnis}{379}{section*.105}%
+\contentsline {part}{VIII. Android-Entwicklung in der Praxis (Kap. 48-58)}{382}{part*.106}%
+\contentsline {chapter}{Kapitel 48: Android kennenlernen – Vom Betriebssystem zum Entwickler-Ökosystem}{382}{chapter*.107}%
+\contentsline {section}{Androids Lebensgeschichte: Vom „kleinen Roboter“ zum größten System der Welt}{382}{section*.108}%
+\contentsline {section}{In welcher Sprache schreiben: Java oder Kotlin?}{383}{section*.108}%
+\contentsline {section}{Wie entsteht eine App?}{384}{lstnumber.-17.6}%
+\contentsline {section}{Der Android-Tech-Stack im Überblick: Deine „Waffenliste“}{385}{lstnumber.-17.6}%
+\contentsline {section}{Android vs. iOS: die erste “Seitenwahl” für Entwickler}{386}{lstnumber.-17.6}%
+\contentsline {chapter}{Kapitel 49: Die Entwicklungsumgebung einrichten – Android Studio und das erste Projekt}{388}{chapter*.109}%
+\contentsline {section}{Android Studio installieren}{388}{section*.110}%
+\contentsline {section}{Dein erstes Projekt anlegen}{389}{Item.542}%
+\contentsline {section}{Ans Laufen bringen: Emulator und echtes Gerät}{389}{Item.542}%
+\contentsline {section}{Die Projektstruktur zerlegt: wofür jede Datei gut ist}{390}{Item.546}%
+\contentsline {section}{Erste Gehversuche: “Hello” durch deinen Namen ersetzen}{391}{Item.546}%
+\contentsline {section}{Erste Hilfe bei häufigen Fehlermeldungen: die “Notaufnahme” für die ersten zwei Wochen}{392}{lstnumber.-18.8}%
+\contentsline {chapter}{Kapitel 50: Kotlin-Schnelleinstieg – die erste Sprache der Android-Entwicklung}{394}{chapter*.111}%
+\contentsline {section}{Variablen und Typen: Daten bekommen einen Namen}{394}{section*.112}%
+\contentsline {section}{Funktionen: Logik zu “Knöpfen” verpacken}{395}{lstnumber.-19.8}%
+\contentsline {section}{Bedingungen und Schleifen: Das Programm lernt “denken”}{395}{lstnumber.-20.10}%
+\contentsline {section}{Null-Sicherheit: Kotlins “Lebensretter”}{396}{lstnumber.-21.21}%
+\contentsline {section}{Klassen und Objekte: Die Formen für “Bauteile”}{397}{lstnumber.-22.10}%
+\contentsline {section}{Lambdas und Higher-Order-Funktionen: Kotlins “Syntax-Zucker”}{397}{lstnumber.-23.13}%
+\contentsline {section}{Die Syntax-Spickkarte für Absoluteinsteiger}{398}{lstnumber.-24.11}%
+\contentsline {chapter}{Kapitel 51: Oberflächenentwicklung – Einstieg in Jetpack Compose}{400}{chapter*.113}%
+\contentsline {section}{Der Compose-Gedanke: Die Oberfläche ist eine Funktion}{400}{section*.114}%
+\contentsline {section}{Grundbausteine: Text, Button, Eingabefeld, Bild}{401}{lstnumber.-25.16}%
+\contentsline {section}{Das Layout-Trio: Column, Row, Box}{401}{lstnumber.-26.15}%
+\contentsline {section}{Zustand: Die Oberfläche zum “Leben” erwecken}{402}{lstnumber.-28.9}%
+\contentsline {section}{Theme und Dunkelmodus: einmal konfigurieren, überall wirksam}{403}{lstnumber.-29.12}%
+\contentsline {section}{Vorschau, Animation und Live Edit: Composes “Cheats”}{404}{Item.549}%
+\contentsline {chapter}{Kapitel 52: Die vier Grundkomponenten und der Activity-Lebenszyklus}{406}{chapter*.115}%
+\contentsline {section}{Die vier Grundkomponenten: Androids tragende Säulen}{406}{section*.116}%
+\contentsline {section}{Der Activity-Lebenszyklus: die erste “Schatzkarte” der Android-Entwicklung}{407}{section*.116}%
+\contentsline {section}{Intent: das “Ticket” für den Verkehr in der App und nach außen}{408}{section*.116}%
+\contentsline {section}{Mehrere Seiten und Navigation}{408}{lstnumber.-31.8}%
+\contentsline {section}{Nebenbei erklärt: Was ist ein Fragment (und warum lehrt dieses Buch es nicht)}{409}{lstnumber.-32.13}%
+\contentsline {chapter}{Kapitel 53: Datenspeicherung und Netzwerkanfragen}{410}{chapter*.117}%
+\contentsline {section}{Welches Speicherkonzept wofür? Erst diese Tabelle anschauen}{410}{section*.118}%
+\contentsline {section}{DataStore: Kleine Einstellungen wegspeichern}{411}{section*.118}%
+\contentsline {section}{Room: Den Daten ein “richtiges Zuhause” geben}{411}{lstnumber.-33.12}%
+\contentsline {section}{Retrofit: Mit dem Server sprechen}{412}{lstnumber.-34.31}%
+\contentsline {section}{JSON-Parsen: Den Netzdaten eine “Übersetzung” geben}{413}{lstnumber.-35.15}%
+\contentsline {section}{Koroutinen: Die “Gemeinsprache” der Android-Concurrency}{413}{lstnumber.-36.10}%
+\contentsline {section}{Koroutinen: Die “Gemeinsprache” der Android-Concurrency}{413}{lstnumber.-36.10}%
+\contentsline {chapter}{Kapitel 54: Projekt 1 – Mein Haushaltsbuch (Lokalversion)}{415}{chapter*.119}%
+\contentsline {section}{Über die Anforderungen nachdenken: erst fünf Fragen stellen}{415}{section*.120}%
+\contentsline {section}{Die Datenschicht: Den “Buchungen” ein Zuhause geben}{416}{section*.120}%
+\contentsline {section}{MVVM: Oberfläche und Logik ziehen getrennte Wege}{417}{lstnumber.-39.17}%
+\contentsline {section}{Oberfläche: Listenseite + Erfassungsseite}{417}{lstnumber.-40.18}%
+\contentsline {section}{Bearbeiten und Löschen: Daten müssen “rein und raus” können}{418}{lstnumber.-41.31}%
+\contentsline {section}{Abnahme: drei Prüfebenen + zwei Fortgeschrittenen-Herausforderungen}{419}{lstnumber.-42.9}%
+\contentsline {section}{Abnahme: drei Prüfebenen + zwei Fortgeschrittenen-Herausforderungen}{419}{lstnumber.-42.9}%
+\contentsline {chapter}{Kapitel 55: Projekt 2 – Wetter-App (Netzversion)}{421}{chapter*.121}%
+\contentsline {section}{Eine kostenlose Wetter-API beantragen}{421}{section*.122}%
+\contentsline {section}{Die Netzwerkschicht: Retrofit + JSON-Parsen}{421}{Item.554}%
+\contentsline {section}{Drei Oberflächenzustände: lädt / erfolgreich / gescheitert}{422}{lstnumber.-43.18}%
+\contentsline {section}{Oberflächen-Code in der Praxis: Das Wetter auf den Bildschirm malen}{423}{lstnumber.-44.24}%
+\contentsline {section}{Oberflächen- und Interaktionsdetails}{424}{lstnumber.-45.25}%
+\contentsline {section}{Oberflächen- und Interaktionsdetails}{424}{lstnumber.-45.25}%
+\contentsline {chapter}{Kapitel 56: Feinschliff und Veröffentlichung – Testen, Debuggen und der Weg in den Google Play Store}{425}{chapter*.123}%
+\contentsline {section}{Die drei Debug-Werkzeuge: Logcat, Haltepunkte, UI-Inspektor}{425}{section*.124}%
+\contentsline {section}{Testen: die Versicherung für deinen Code}{426}{section*.124}%
+\contentsline {section}{Signieren und Paketieren: deiner App den „Stempel“ geben}{427}{lstnumber.-46.19}%
+\contentsline {section}{Der komplette Weg in den Google Play Store}{427}{Item.557}%
+\contentsline {section}{Store-Materialien gestalten: Der erste Eindruck ist die Downloadzahl}{428}{Item.557}%
+\contentsline {section}{Mini-Checkliste: Performance-Optimierung und Absturzmeldungen}{428}{Item.557}%
+\contentsline {chapter}{Kapitel 57: Der Weg nach vorn – Berechtigungen, Benachrichtigungen und moderne Architektur}{430}{chapter*.125}%
+\contentsline {section}{Laufzeitberechtigungen: erst anklopfen, dann eintreten}{430}{section*.126}%
+\contentsline {section}{Benachrichtigungen: zur richtigen Zeit etwas Nützliches sagen}{431}{lstnumber.-47.16}%
+\contentsline {section}{Architektur für Fortgeschrittene: Dependency Injection und Modularisierung}{432}{lstnumber.-48.21}%
+\contentsline {section}{Die neuen Spielregeln 2026: Android-Entwicklung mit KI-Unterstützung}{432}{lstnumber.-48.21}%
+\contentsline {section}{Compose-Performance und Debug-Werkzeuge}{433}{lstnumber.-48.21}%
+\contentsline {chapter}{Kapitel 58: Schnellreferenz und Ressourcen}{435}{chapter*.127}%
+\contentsline {section}{Der Spickzettel für häufigen Code}{435}{section*.128}%
+\contentsline {section}{Häufige Fragen (FAQ)}{436}{section*.128}%
+\contentsline {section}{Empfohlene Lernressourcen}{437}{section*.128}%
+\contentsline {section}{Spickzettel für gängige Gradle-Befehle}{437}{section*.128}%
+\contentsline {section}{Schlusswort: von der ersten App zur n-ten App}{438}{section*.128}%
+\contentsline {section}{Schlusswort: von der ersten App zur n-ten App}{438}{section*.128}%
+\contentsline {section}{Literaturverzeichnis}{439}{section*.128}%
+\contentsline {part}{IX. iOS-Entwicklung in der Praxis (Kap. 59-69)}{441}{part*.129}%
+\contentsline {chapter}{Kapitel 59: iOS kennenlernen – das Apple-Ökosystem und die Entwicklerwelt}{441}{chapter*.130}%
+\contentsline {section}{Die Herkunft von iOS: ein Telefon verändert eine Branche}{441}{section*.131}%
+\contentsline {section}{Der Walled Garden: „Regeln“ und „Dividenden“ des Apple-Ökosystems}{442}{section*.131}%
+\contentsline {section}{In welcher Sprache: Objective-C oder Swift?}{443}{section*.131}%
+\contentsline {section}{Wie eine App entsteht}{443}{lstnumber.-50.1}%
+\contentsline {section}{Der komplette iOS-Tech-Stack: deine „Waffenliste“}{444}{lstnumber.-50.1}%
+\contentsline {chapter}{Kapitel 60: Entwicklungsumgebung einrichten – Xcode und das erste Projekt}{446}{chapter*.132}%
+\contentsline {section}{Einen Mac besorgen}{446}{section*.133}%
+\contentsline {section}{Xcode installieren}{447}{section*.133}%
+\contentsline {section}{Dein erstes Projekt anlegen}{447}{Item.570}%
+\contentsline {section}{Die Projektstruktur aufgeschlüsselt: was jede Datei macht}{448}{Item.570}%
+\contentsline {section}{Debugging auf dem echten Gerät: die App auf dein iPhone bringen}{448}{Item.570}%
+\contentsline {section}{Xcode-Effizienztricks: die fünf „Tastenkürzel-Cheats“ für Einsteiger}{448}{Item.570}%
+\contentsline {section}{Debugging auf dem echten Gerät: die App auf dein iPhone bringen}{449}{Item.570}%
+\contentsline {section}{Erste Proben + Erste Hilfe bei häufigen Fehlern}{450}{Item.574}%
+\contentsline {section}{Erste Proben + Erste Hilfe bei häufigen Fehlern}{450}{Item.574}%
+\contentsline {chapter}{Kapitel 61: Swift im Schnelldurchlauf – die Hauptsprache der Apple-Entwicklung}{452}{chapter*.134}%
+\contentsline {section}{Variablen und Typen: den Daten Namen geben}{452}{section*.135}%
+\contentsline {section}{Optionals: Swifts „Amulett gegen Abstürze“}{453}{lstnumber.-51.10}%
+\contentsline {section}{Funktionen und Closures: Logik in „Schaltflächen“ verpacken}{454}{lstnumber.-52.15}%
+\contentsline {section}{Structs und Protokolle: Swifts „Lego“-System}{454}{lstnumber.-53.13}%
+\contentsline {section}{Syntax-Spickzettel für absolute Einsteiger}{455}{lstnumber.-54.16}%
+\contentsline {chapter}{Kapitel 62: Oberflächenentwicklung – SwiftUI-Grundlagen}{456}{chapter*.136}%
+\contentsline {section}{SwiftUIs Denkweise: deklarativ statt imperativ}{456}{section*.137}%
+\contentsline {section}{Grundlegende Views: Text, Button, Textfeld, Bild}{457}{lstnumber.-55.15}%
+\contentsline {section}{Das Layout-Trio: VStack, HStack und ZStack}{457}{lstnumber.-55.15}%
+\contentsline {section}{State und Binding: die Oberfläche zum „Leben“ erwecken}{458}{lstnumber.-56.14}%
+\contentsline {section}{Vorschau, Themes und Animationen: SwiftUIs „Geheimwaffen“}{459}{lstnumber.-58.9}%
+\contentsline {section}{Modifier-Spickzettel: eine Seite in der Hand, und die Oberfläche sitzt}{460}{lstnumber.-59.16}%
+\contentsline {chapter}{Kapitel 63: Views, State und Navigation}{462}{chapter*.138}%
+\contentsline {section}{Das Datenfluss-Panorama des State-Managements}{462}{section*.139}%
+\contentsline {section}{NavigationStack: der „Stapel“ für Seitenwechsel}{463}{lstnumber.-60.19}%
+\contentsline {section}{Dialoge und untere Reiter: sheet und TabView}{464}{lstnumber.-61.24}%
+\contentsline {section}{List: iOS' Alleskönner-Liste}{465}{lstnumber.-62.24}%
+\contentsline {section}{Der App-Lebenszyklus: Vordergrund und Hintergrund}{465}{lstnumber.-63.14}%
+\contentsline {chapter}{Kapitel 64: Datenspeicherung und Netzwerkanfragen}{467}{chapter*.140}%
+\contentsline {section}{Welche Speicherlösung passt? Erst ein Blick auf diese Tabelle}{467}{section*.141}%
+\contentsline {section}{UserDefaults: kleine Einstellungen ablegen}{468}{section*.141}%
+\contentsline {section}{SwiftData: den Daten ein „richtiges Zuhause“ geben}{468}{lstnumber.-65.10}%
+\contentsline {section}{Codable: JSON „übersetzen“}{469}{lstnumber.-66.46}%
+\contentsline {section}{URLSession + async/await: mit dem Server sprechen}{470}{lstnumber.-67.14}%
+\contentsline {section}{Auch Netzwerkfehler „staffeln“: nicht jeden Fehler wahllos an den Nutzer werfen}{471}{lstnumber.-68.19}%
+\contentsline {chapter}{Kapitel 65: Projekt 1 – Mein Haushaltsbuch (Lokalversion)}{473}{chapter*.142}%
+\contentsline {section}{Anforderungen überdenken: erst fünf Fragen stellen}{473}{section*.143}%
+\contentsline {section}{Die Datenschicht: den „Buchungen“ ein Zuhause geben}{474}{section*.143}%
+\contentsline {section}{MVVM: Oberfläche und Logik „ziehen getrennte Wege“}{474}{lstnumber.-70.18}%
+\contentsline {section}{Die Oberfläche: Listenseite + Eingabe-Dialog}{475}{lstnumber.-71.30}%
+\contentsline {section}{Bearbeiten, Löschen und Bilanz}{476}{lstnumber.-72.31}%
+\contentsline {section}{Abnahme: Prüfung auf drei Ebenen + zwei Zusatzaufgaben für Fortgeschrittene}{477}{lstnumber.-73.13}%
+\contentsline {chapter}{Kapitel 66: Projekt 2 – Wetter-App (Netzwerkversion)}{479}{chapter*.144}%
+\contentsline {section}{Eine kostenlose Wetter-API beantragen}{479}{section*.145}%
+\contentsline {section}{Die Netzwerkschicht: URLSession + Codable}{479}{Item.579}%
+\contentsline {section}{Die drei Oberflächenzustände: lädt / erfolgreich / fehlgeschlagen}{480}{lstnumber.-74.24}%
+\contentsline {section}{Oberflächencode in der Praxis: das Wetter zeichnen}{481}{lstnumber.-75.28}%
+\contentsline {section}{Interaktionsdetails und Lieblingsstädte}{482}{lstnumber.-76.20}%
+\contentsline {section}{Netzwerkanfragen debuggen: Ausgabe, Mitschnitt und simuliertes langsames Netz}{482}{lstnumber.-76.20}%
+\contentsline {chapter}{Kapitel 67: Feinschliff und Veröffentlichung – Testen, Debuggen und der Weg in den App Store}{484}{chapter*.146}%
+\contentsline {section}{Die drei Debug-Werkzeuge: print, Haltepunkte, Vorschau}{484}{section*.147}%
+\contentsline {section}{Tests: für den Code eine Versicherung abschließen}{485}{section*.147}%
+\contentsline {section}{Signieren und Packen: der App das „Siegel“ aufdrücken}{486}{lstnumber.-77.20}%
+\contentsline {section}{Der komplette Ablauf bis in den App Store}{486}{lstnumber.-77.20}%
+\contentsline {section}{Die Store-Materialien: Der erste Eindruck bestimmt die Download-Zahlen}{487}{lstnumber.-77.20}%
+\contentsline {section}{Mini-Checkliste: Absturzberichte und Performance-Optimierung}{487}{lstnumber.-77.20}%
+\contentsline {chapter}{Kapitel 68: Der Weg nach vorn – Berechtigungen, Benachrichtigungen und moderne Architektur}{489}{chapter*.148}%
+\contentsline {section}{Berechtigungen: erst anklopfen, dann eintreten}{489}{section*.149}%
+\contentsline {section}{Benachrichtigungen: zur richtigen Zeit etwas Nützliches sagen}{490}{lstnumber.-78.21}%
+\contentsline {section}{Architektur im Aufstieg: MVVM vertieft und Testbarkeit}{491}{lstnumber.-79.26}%
+\contentsline {section}{Das Neue von 2026: KI-gestützte iOS-Entwicklung}{491}{lstnumber.-79.26}%
+\contentsline {section}{Swift-Nebenläufigkeit im Kern: @MainActor und Task}{492}{lstnumber.-79.26}%
+\contentsline {chapter}{Kapitel 69: Spickzettel und Ressourcen}{494}{chapter*.150}%
+\contentsline {section}{Code-Spickzettel für den Alltag}{494}{section*.151}%
+\contentsline {section}{Häufige Fragen (FAQ)}{495}{section*.151}%
+\contentsline {section}{Die wichtigsten Xcode-Tastenkürzel}{496}{section*.151}%
+\contentsline {section}{Empfohlene Lernressourcen}{497}{section*.151}%
+\contentsline {section}{Empfohlene Lernressourcen}{497}{section*.151}%
+\contentsline {section}{Fazit: vom ersten App zum N-ten App}{497}{section*.151}%
+\contentsline {section}{Literaturverzeichnis}{498}{section*.151}%
+\contentsline {chapter}{Anhang A: “Babysitter”-Ablauf für ein neues Smartphone}{500}{appendix*.153}%
+\contentsline {section}{Auspacken und Prüfen in drei Schritten}{500}{section*.154}%
+\contentsline {section}{Aktivierung und Ersteinrichtung – “Wichtige Erinnerungen”}{500}{section*.154}%
+\contentsline {section}{App-Installation – “Sicherheit zuerst”}{501}{section*.154}%
+\contentsline {chapter}{Anhang B: Anregungen für praktische Übungen}{502}{appendix*.155}%
+\contentsline {chapter}{Anhang C: Glossar der “Fachsprache”}{504}{appendix*.156}%
+\contentsline {chapter}{Anhang D: Wo findet man verlässliche Ressourcen?}{505}{appendix*.157}%
+\contentsline {section}{Offizieller Support hat Vorrang:}{505}{section*.158}%
+\contentsline {section}{Praktische Websites und Blogger:}{505}{section*.158}%
+\contentsline {section}{Sicherheits-Selbstcheck in einem Satz}{505}{section*.158}%
+\contentsline {chapter}{Anhang E: Danksagung und Hinweise}{507}{appendix*.159}%
+\contentsline {section}{Update-Highlights der Version 1.6}{507}{section*.160}%
+\contentsline {section}{Update-Highlights der Version 1.7}{508}{section*.160}%
+\contentsline {section}{Update-Highlights der Version 1.8}{510}{section*.160}%
+\contentsline {section}{Inhaltliche Ergänzungen: Nützliche Software und Spam-/Belästigungsfilter}{510}{section*.160}%
+\contentsline {section}{Inhaltliche Ergänzungen: Unwetterwarnung / Warnung vor Naturkatastrophen / Erdbeben-Frühwarnung}{511}{section*.160}%
+\contentsline {section}{Inhaltliche Ergänzungen: Geräteübergreifende Zusammenarbeit und Effizienz-Tools}{511}{section*.160}%
+\contentsline {chapter}{Anhang F: Faltbildschirm-Kauf und -Nutzung}{513}{appendix*.161}%
+\contentsline {section}{Erstens. Wie weit sind Klappbildschirme heute entwickelt?}{513}{section*.162}%
+\contentsline {section}{Zweitens. Für wen eignet sich ein Klappbildschirm?}{514}{section*.162}%
+\contentsline {section}{Drittens. Kaufberatung: Achte auf diese Kennzahlen}{514}{Item.601}%
+\contentsline {section}{Viertens. Spezielle Nutzungstechniken des Klappbildschirms}{515}{Item.606}%
+\contentsline {section}{Fünftens. Pflegehinweise: Den Klappbildschirm länger am Leben halten}{517}{Item.606}%
+\contentsline {section}{Sechstens. Preis- und psychologische Vorbereitung des Klappbildschirms}{518}{Item.606}%
+\contentsline {section}{VII. Welche Marke wählen (2026)}{518}{Item.606}%
+\contentsline {chapter}{Epilog: Neugierig bleiben, achtsam bleiben}{520}{appendix*.163}%
+\contentsline {chapter}{Anhang G: Schnellindex für das ganze Buch}{521}{appendix*.164}%
+\contentsline {chapter}{Anhang H: Versions-Roadmap}{525}{appendix*.165}%

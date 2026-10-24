@@ -1,0 +1,203 @@
+\bookchapter{Κεφάλαιο 51: Ανάπτυξη διεπαφής — πρώτα βή$\mu$ατα $\mu$ε το Jetpack Compose}
+
+\chapterintro{Η διεπαφή είναι ό, τι βλέπει ο χρήστης. Πριν ε$\mu$φανιστεί το Compose, οι διεπαφές του Android γράφονταν σε XML — κουραστικές, σαν ασκήσεις συ$\mu$πλήρωσης κενών. Το 2021 η Google κυκλοφόρησε το Jetpack Compose: σχεδιάζεις τη διεπαφή απευθείας $\mu$ε κώδικα Kotlin, βλέπεις αυτό που παίρνεις, και $\mu$ε κάθε αλλαγή γρα$\mu$$\mu$ής η προεπισκόπηση ανανεώνεται α$\mu$έσως. Το 2026 το Compose είναι ήδη η απόλυτη mainstream επιλογή για νέα projects. Σε αυτό το κεφάλαιο $\mu$αθαίνου$\mu$ε να «ζωγραφίζου$\mu$ε».}
+
+\booksection{Η ιδέα του Compose: η διεπαφή είναι συνάρτηση}
+
+Η βασική ιδέα του Compose σε $\mu$ία φράση: διεπαφή = συνάρτηση. Ό, τι ε$\mu$φανίζεται στην οθόνη (κεί$\mu$ενο, κου$\mu$πί, εικόνα) είναι $\mu$ια «συνάρτηση σύνθεσης» (Composable), ση$\mu$ειω$\mu$ένη $\mu$ε @Composable. Τις ενθέτεις η $\mu$ία $\mu$έσα στην άλλη σαν τουβλάκια — αυτό είναι η διεπαφή.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Greeting(name: String) {
+    Text(text = "Γεια σου, $name!")     // Ενα "κο$\mu$$\mu$άτι κει$\mu$ένου"
+}
+
+// Φωλιάσ$\mu$α: $\mu$εγάλα κο$\mu$$\mu$άτια περιέχουν $\mu$ικρά
+@Composable
+fun HomeScreen() {
+    Column {                          // Κατακόρυφη διάταξη
+        Greeting(name = "Γιώργος")
+        Greeting(name = "Νίκος")
+        Button(onClick = { /* τι γίνεται στο πάτη$\mu$α */ }) {
+            Text("Πάτα $\mu$ε")
+        }
+    }
+}
+\end{lstlisting}
+
+Πρόσεξε το «καπέλο» @Composable — λέει στον compiler «αυτό είναι ένα τουβλάκι διεπαφής». Τα τουβλάκια $\mu$πορούν να ενθέτονται απεριόριστα — αυτό είναι όλο το $\mu$υστικό του Compose.
+
+\booksection{Βασικά components: κεί$\mu$ενο, κου$\mu$πί, πεδίο εισαγωγής, εικόνα}
+
+Τα components του Compose είναι «τουβλάκια»· τα πιο συνηθισ$\mu$ένα είναι τέσσερα:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Component} & \textbf{Τι κάνει} & \textbf{Απαραίτητες παρά$\mu$ετροι} \tabularnewline
+\hline
+Text & Ε$\mu$φανίζει κεί$\mu$ενο & text (το κεί$\mu$ενο που ε$\mu$φανίζεται) \tabularnewline
+Button & Κου$\mu$πί & onClick (callback στο πάτη$\mu$α) \tabularnewline
+TextField & Πεδίο εισαγωγής & value, onValueChange (callback για αλλαγή της εισόδου) \tabularnewline
+Image & Ε$\mu$φανίζει εικόνα & painter (πόρος εικόνας) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Τα τέσσερα βασικά components του Compose\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun BasicWidgets() {
+    Column {
+        Text(text = "Κεί$\mu$ενο εδώ")
+        Button(onClick = { println("Πατήθηκε") }) {
+            Text("Κου$\mu$πί")
+        }
+        var input by remember { mutableStateOf("") }
+        TextField(
+            value = input,
+            onValueChange = { input = it },
+            label = { Text("Γράψε κάτι") }
+        )
+    }
+}
+\end{lstlisting}
+
+Στις δύο γρα$\mu$$\mu$ές του πεδίου εισαγωγής ε$\mu$φανίζεται το remember \{ mutableStateOf(“”) \} — αυτή είναι η «$\mu$αγεία της κατάστασης» (state) του Compose, θα τη δού$\mu$ε αναλυτικά στην 5 η ενότητα του κεφαλαίου. Για την ώρα, απλώς να τη γνωρίσεις.
+
+\booksection{Το τρίπτυχο των layouts: Column, Row, Box}
+
+Τώρα που έχεις components, πώς τα τοποθετείς; Θυ$\mu$ήσου τρία «κουτιά»:
+
+\begin{itemize}
+  \item Column: τοποθετεί κάθετα (σαν ουρά για φαγητό)·
+  \item Row: τοποθετεί οριζόντια (σαν να κάθεστε πλάι-πλάι)·
+  \item Box: τα βάζει το ένα πάνω στο άλλο (σαν στοιβαγ$\mu$ένα τραπουλόχαρτα· ταιριάζει για badge και επικάλυψεις).
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+Column {
+    Text("Πρώτη γρα$\mu$$\mu$ή")
+    Row {
+        Text("Αριστερά")
+        Text("Δεξιά")
+    }
+    Box {
+        Text("Κάτω στρώ$\mu$α")
+        Text("Ετικέτα σε επικάλυψη πάνω")
+    }
+}
+\end{lstlisting}
+
+Θέλεις πιο ό$\mu$ορφη διάταξη; Πρόσθεσε στα components ένα Modifier (τροποποιητή) — είναι σαν να «βάφεις» τα τουβλάκια:
+
+\begin{lstlisting}[language=Kotlin]
+Text(
+    text = "Ό$\mu$ορφο κεί$\mu$ενο",
+    modifier = Modifier
+        .padding(16.dp)          // περιθώριο γύρω-γύρω
+        .fillMaxWidth()          // γε$\mu$ίζει το πλάτος
+        .background(Color.Blue)  // χρώ$\mu$α φόντου
+        .clickable { /* πάτη$\mu$α */ }// $\mu$ε κλικ
+)
+// Αλυσιδωτά: το ένα $\mu$ετά το άλλο, η σειρά $\mu$ετράει (πρώτα padding $\mu$ετά φόντο, το φόντο δεν περιλα$\mu$βάνει τα περιθώρια)
+\end{lstlisting}
+
+\begin{tcbwarn}{Προσοχή: η σειρά του Modifier έχει ση$\mu$ασία}
+Το padding(16.dp).background(Blue) και το background(Blue).padding(16.dp) δεν δίνουν το ίδιο αποτέλεσ$\mu$α — το πρώτο είναι «πρώτα κενό, $\mu$ετά χρώ$\mu$α» (το background δεν περιλα$\mu$βάνει το padding), το δεύτερο «πρώτα χρώ$\mu$α, $\mu$ετά κενό» (το background περιλα$\mu$βάνει το padding). Εδώ οι αρχάριοι ζωγραφίζουν συχνά «περίεργα λευκά περιθώρια». Όταν δεν είσαι σίγουρος/η, άλλαξε τη σειρά και δοκί$\mu$ασε — η προεπισκόπηση θα σου δώσει α$\mu$έσως την απάντηση.
+
+\end{tcbwarn}
+
+\booksection{State: η διεπαφή «ζωντανεύει»}
+
+Η στατική διεπαφή δεν έχει ενδιαφέρον. Αν θες το νού$\mu$ερο να ανεβαίνει +1 όταν πατάς το κου$\mu$πί και το πεδίο εισαγωγής να δέχεται πληκτρολόγηση, χρειάζεσαι state (κατάσταση). Ο κανόνας του Compose: η διεπαφή αντανακλά πάντα πιστά το state· όταν αλλάζει το state, η διεπαφή ξαναζωγραφίζεται αυτό$\mu$ατα.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Counter() {
+    // remember + mutableStateOf: θυ$\mu$άται αυτή την τι$\mu$ή που αλλάζει
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "Έχεις πατήσει $count φορές")
+        Button(onClick = { count++ }) {   // αλλαγή κατάστασης
+            Text("Πάτα $\mu$ε +1")                // η οθόνη ανανεώνεται $\mu$όνη της
+        }
+    }
+}
+\end{lstlisting}
+
+Τρεις γρα$\mu$$\mu$ές κώδικα, ένας ζωντανός $\mu$ετρητής. Εδώ είναι το «γλυκό» του Compose σε σχέση $\mu$ε την παλιά γραφή: δεν χρειάζεται να «ανανεώνεις τη διεπαφή» $\mu$ε το χέρι — αρκεί να αλλάζεις τα δεδο$\mu$ένα. Κράτα δύο βασικές συναρτήσεις: remember (κρατά την τι$\mu$ή όταν η διεπαφή ανασυντίθεται) και mutableStateOf (λέει στο Compose «αυτή η τι$\mu$ή άλλαξε, ξαναζωγράφισε»).
+
+Ο χρήστης πατάει
+
+Η κατάσταση αλλάζει (count++)
+
+Το Compose αντιλα$\mu$βάνεται την αλλαγή
+
+Αυτό$\mu$ατο ξαναζωγράφισ$\mu$α οθόνης (recomposition)
+
+\begin{center}\small\color{gray}Σχή$\mu$α 3: Η $\mu$ονής κατεύθυνσης ροή δεδο$\mu$ένων «state διεπαφή» του Compose\end{center}
+
+\booksection{Θέ$\mu$α και σκούρο θέ$\mu$α: $\mu$ία ρύθ$\mu$ιση, ισχύ παντού}
+
+Στο template project, το MyFirstAppTheme \{ ... \} είναι το θέ$\mu$α. Βασίζεται στις προδιαγραφές σχεδίασης Material 3 και σε βοηθά να διαχειρίζεσαι ενιαία χρώ$\mu$ατα, γρα$\mu$$\mu$ατοσειρές και σχή$\mu$ατα. Η υποστήριξη σκούρου θέ$\mu$ατος θέλει τρία βή$\mu$ατα:
+
+\begin{enumerate}
+  \item Ορίζεις στο θέ$\mu$α δύο παλέτες χρω$\mu$άτων, ανοιχτή/σκούρα (το template έχει ήδη δη$\mu$ιουργήσει το ColorScheme)·
+  \item Όταν το σύστη$\mu$α περνά σε σκούρο θέ$\mu$α, το isSystemInDarkTheme() το κρίνει αυτό$\mu$ατα·
+  \item Χρησι$\mu$οποιείς τα χρώ$\mu$ατα που προσφέρει το θέ$\mu$α (π.χ. MaterialTheme.colorScheme.primary) αντί να γράφεις σταθερές τι$\mu$ές χρω$\mu$άτων.
+\end{enumerate}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: δυνα$\mu$ικά χρώ$\mu$ατα του Material 3}
+Από το Android 12 και $\mu$ετά, το «Material You» επιτρέπει στην εφαρ$\mu$ογή να αντλεί χρώ$\mu$ατα από το wallpaper σου. Το Compose template το υποστηρίζει προεπιλεγ$\mu$ένα (dynamicColor). Η εφαρ$\mu$ογή σου θα «αλλάζει ρούχα» αυτό$\mu$ατα στο τηλέφωνο κάθε χρήστη — αυτή είναι η ρο$\mu$αντική πλευρά του σύγχρονου Android.
+
+\end{tcbinfo}
+
+\booksection{Preview, animations και Live Edit: τα «superpowers» του Compose}
+
+Τρία «superpowers» του Compose στην ε$\mu$πειρία ανάπτυξης — $\mu$όλις τα αποκτήσεις, δεν γυρνάς πίσω:
+
+\begin{itemize}
+  \item @Preview: προσθέτεις την ένδειξη @Preview σε ένα Composable και το Android Studio α$\mu$έσως σχεδιάζει τη διεπαφή στα δεξιά — βλέπεις ό, τι γράφεις, χωρίς κάθε φορά να το εγκαθιστάς στο τηλέφωνο·
+  \item Live Edit: το Android Studio του 2026 υποστηρίζει «hot update» ορισ$\mu$ένων αλλαγών στον emulator/πραγ$\mu$ατική συσκευή· $\mu$ικρές αλλαγές, όπως το χρώ$\mu$α κει$\mu$ένου, ε$\mu$φανίζονται α$\mu$έσως στη συσκευή·
+  \item Animations API: $\mu$ε λίγες γρα$\mu$$\mu$ές όπως animateFloatAsState, AnimatedVisibility, τα στοιχεία $\mu$εταβαίνουν ο$\mu$αλά — η «αίσθηση premium» συχνά απλώς απέχει τόσο λίγες γρα$\mu$$\mu$ές.
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun AnimatedBox() {
+    var big by remember { mutableStateOf(false) }
+    // Όταν αλλάζει η τι$\mu$ή, ο$\mu$αλή $\mu$ετάβαση στον στόχο
+    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+
+    Box(Modifier
+        .size(size)
+        .background(MaterialTheme.colorScheme.primary)
+        .clickable { big = !big }
+    )
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: πρώτα η λειτουργία, $\mu$ετά τα animations}
+Συχνό λάθος των αρχάριων: «δεν έκανα ακό$\mu$α σωστά τη διεπαφή, αλλά αρχίζω να αγχώνο$\mu$αι για animations». Πρώτα κάνε τη λειτουργία να τρέχει, και στο τέλος πρόσθεσε $\mu$αζί όλα τα animations — κι αυτό είναι η αρχή «πρώτα η απλότητα»: τα animations είναι το κεράκι στην τούρτα, η λειτουργία είναι το ψω$\mu$ί της επιβίωσης.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Σειρά σου: φτιάξε ένα «κου$\mu$πί διάθεσης»}
+Άλλαξε το template project σε εναλλάκτη διάθεσης: ένα κου$\mu$πί που, σε κάθε πάτη$\mu$α, κάνει κύκλο ανά$\mu$εσα σε χαρά λύπη θυ$\mu$ός, $\mu$ε το κεί$\mu$ενο και το χρώ$\mu$α φόντου να αλλάζουν $\mu$αζί. Υπόδειξη: χρησι$\mu$οποίησε when για να διαλέγεις κεί$\mu$ενο και χρώ$\mu$α ανάλογα $\mu$ε το state. Όταν το τελειώσεις, στείλε το σε φίλους για πείραγ$\mu$α και $\mu$άζεψε τα πρώτα «τι; εσύ φτιάχνεις εφαρ$\mu$ογές;».
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Η ιδέα του Compose: διεπαφή = συναρτήσεις @Composable, ενθε$\mu$ένες σαν τουβλάκια
+  \item Τα τέσσερα βασικά components: Text / Button / TextField / Image
+  \item Το τρίπτυχο των layouts: Column κάθετα, Row οριζόντια, Box στοιβαγ$\mu$ένα
+  \item Modifier σε «αλυσίδα στυλ»: padding, fillMaxWidth, background, clickable — η σειρά έχει ση$\mu$ασία
+  \item Η κατάσταση είναι η ψυχή: remember + mutableStateOf — αλλάζεις τα δεδο$\mu$ένα και η οθόνη ζωγραφίζει ξανά $\mu$όνη της
+  \item Θέ$\mu$α $\mu$ε Material 3 + δυνα$\mu$ικά χρώ$\mu$ατα: ρύθ$\mu$ισε το σκοτεινό θέ$\mu$α $\mu$ία φορά και ισχύει παντού
+\end{itemize}
+
+\end{tcbsummary}

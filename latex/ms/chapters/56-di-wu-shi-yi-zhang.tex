@@ -1,0 +1,203 @@
+\bookchapter{Bab 51: Pembangunan Antara Muka — Pengenalan kepada Jetpack Compose}
+
+\chapterintro{Antara muka ialah segala yang dilihat pengguna. Sebelum Compose muncul, antara muka Android ditulis dengan XML — rumit seperti soalan isi tempat kosong; pada 2021 Google memperkenalkan Jetpack Compose: terus 'melukis' antara muka dengan kod Kotlin, apa yang dilihat itulah yang diperoleh, ubah satu baris kod dan pratonton terus disegar semula. Menjelang 2026, Compose sudah menjadi arus perdana mutlak untuk projek baharu. Dalam bab ini, kita belajar 'melukis'.}
+
+\booksection{Pemikiran Compose: Antara Muka Ialah Fungsi}
+
+Pemikiran teras Compose dalam satu ayat: antara muka = fungsi. Setiap benda yang boleh dipaparkan pada skrin (teks, butang, imej) ialah satu 'fungsi boleh gubal' (Composable), ditanda dengan @Composable. Menyarangnya seperti bongkahan kayu itulah antara muka.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Greeting(name: String) {
+    Text(text = "Hai, $name!")     // Satu "balok teks"
+}
+
+// Komposisi bersarang: balok besar membungkus balok kecil
+@Composable
+fun HomeScreen() {
+    Column {                          // Disusun menegak
+        Greeting(name = "Zhang San")
+        Greeting(name = "Li Si")
+        Button(onClick = { /* apa dibuat selepas ditekan */ }) {
+            Text("Tekan saya")
+        }
+    }
+}
+\end{lstlisting}
+
+Perhatikan 'topi' @Composable ini — ia memberitahu kompiler 'ini bongkahan antara muka'. Bongkahan boleh disarang tanpa had, dan itulah keseluruhan rahsia Compose.
+
+\booksection{Komponen Asas: Teks, Butang, Kotak Input, Imej}
+
+Komponen Compose ialah 'bongkahan kayu'; inilah empat yang paling lazim:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Komponen} & \textbf{Untuk apa} & \textbf{Parameter wajib} \tabularnewline
+\hline
+Text & Papar teks & text (teks yang dipaparkan) \tabularnewline
+Button & Butang & onClick (panggil balik ketikan) \tabularnewline
+TextField & Kotak input & value, onValueChange (panggil balik perubahan input) \tabularnewline
+Image & Papar imej & painter (sumber imej) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Empat komponen asas Compose\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun BasicWidgets() {
+    Column {
+        Text(text = "Ini satu teks")
+        Button(onClick = { println("Ditekan") }) {
+            Text("Butang")
+        }
+        var input by remember { mutableStateOf("") }
+        TextField(
+            value = input,
+            onValueChange = { input = it },
+            label = { Text("Taip sesuatu") }
+        )
+    }
+}
+\end{lstlisting}
+
+Dalam dua baris kotak input itu muncul remember \{ mutableStateOf(“”) \} — inilah 'sihir keadaan' (state) Compose, dijelaskan terperinci dalam Bahagian 5 bab ini. Buat sementara ini, cukup kenal muka dahulu.
+
+\booksection{Set Tiga Susun Atur: Column, Row, Box}
+
+Komponen sudah ada, macam mana menyusunnya? Ingat tiga 'kotak' ini:
+
+\begin{itemize}
+  \item Column: disusun menegak (seperti beratur mengambil makanan);
+  \item Row: disusun mengufuk (seperti duduk bersebelahan);
+  \item Box: ditindih (seperti kad poker disusun bersama, sesuai untuk lencana sudut dan topeng).
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+Column {
+    Text("Baris pertama")
+    Row {
+        Text("Kiri")
+        Text("Kanan")
+    }
+    Box {
+        Text("Lapisan bawah")
+        Text("Lencana kecil tersusun di atas")
+    }
+}
+\end{lstlisting}
+
+Mahu susun atur lebih menawan? Tambahkan Modifier (pengubah) pada komponen — ia umpama memberi 'solekan' kepada bongkahan kayu:
+
+\begin{lstlisting}[language=Kotlin]
+Text(
+    text = "Teks yang menarik",
+    modifier = Modifier
+        .padding(16.dp)          // beri ruang sekeliling
+        .fillMaxWidth()          // penuhi lebar
+        .background(Color.Blue)  // warna latar
+        .clickable { /* klik */ }// boleh diklik
+)
+// Rantaian: dipanggil satu demi satu, susunan berpengaruh (padding dahulu baru latar, latar tidak merangkumi jarak padding)
+\end{lstlisting}
+
+\begin{tcbwarn}{Perhatian: Susunan Modifier Ada Caranya}
+padding(16.dp).background(Blue) dan background(Blue).padding(16.dp) memberi hasil berbeza — yang pertama 'beri ruang dahulu, kemudian warna' (latar belakang tidak termasuk jidar), yang kedua 'warna dahulu, kemudian beri ruang' (latar belakang termasuk jidar). Pemula paling mudah tersilap melukis 'jidar putih pelik' di sini. Jika tidak pasti, tukar susunannya dan cuba; pratonton terus memberitahu jawapannya.
+
+\end{tcbwarn}
+
+\booksection{Keadaan: Menghidupkan Antara Muka}
+
+Antara muka statik tidak menarik. Mahu butang menambah +1 selepas ditekan, mahu kotak input boleh menaip? Anda perlukan keadaan (State). Peraturan Compose: antara muka sentiasa setia mencerminkan keadaan; keadaan berubah, antara muka dilukis semula secara automatik.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Counter() {
+    // remember + mutableStateOf: mengingati nilai yang boleh berubah ini
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "Anda menekan $count kali")
+        Button(onClick = { count++ }) {   // ubah state
+            Text("Tekan saya +1")                // paparan terus segar
+        }
+    }
+}
+\end{lstlisting}
+
+Tiga baris kod, satu pengira yang hidup. Inilah kelebihan Compose berbanding cara lama: tidak perlu 'segar semula antara muka' secara manual, ubah data sahaja. Ingat dua fungsi utama: remember (mengekalkan nilai supaya tidak dikosongkan semasa antara muka disusun semula) dan mutableStateOf (memberitahu Compose 'nilai ini berubah, lukis semula').
+
+Pengguna menekan
+
+State berubah (count++)
+
+Compose mengesan perubahan
+
+Lukis semula paparan automatik (recomposition)
+
+\begin{center}\small\color{gray}Rajah 3: Aliran data satu hala 'keadaan antara muka' Compose\end{center}
+
+\booksection{Tema dan Mod Gelap: Konfigurasi Sekali, Berkuat Kuasa Global}
+
+MyFirstAppTheme \{ ... \} dalam projek templat itulah tema. Ia berasaskan spesifikasi reka bentuk Material 3, membantu anda mengurus warna, fon dan bentuk secara menyeluruh. Menyokong mod gelap hanya perlu tiga langkah:
+
+\begin{enumerate}
+  \item Takrifkan dua set skema warna cerah/gelap dalam tema (templat sudah menjana ColorScheme secara automatik);
+  \item Apabila sistem bertukar ke mod gelap, isSystemInDarkTheme() menilai secara automatik;
+  \item Guna warna yang disediakan tema (contohnya MaterialTheme.colorScheme.primary) dan bukannya nilai warna yang ditulis terus.
+\end{enumerate}
+
+\begin{tcbinfo}{Petua: Pengambilan Warna Dinamik Material 3}
+'Material You' sejak Android 12 membolehkan aplikasi mendapatkan warna daripada kertas dinding anda. Templat Compose menyokongnya secara lalai (dynamicColor). Aplikasi anda akan 'bertukar pakaian' secara automatik pada telefon pengguna berbeza — itulah romantik Android moden.
+
+\end{tcbinfo}
+
+\booksection{Pratonton, Animasi dan Sunting Langsung: 'Kuasa Tambahan' Compose}
+
+Tiga 'kuasa tambahan' Compose dalam pengalaman pembangunan; sekali guna, sukar kembali:
+
+\begin{itemize}
+  \item Pratonton @Preview: tambahkan anotasi @Preview pada Composable, Android Studio terus memaparkan antara muka di sebelah kanan — apa yang dilihat itulah yang diperoleh semasa mengubah kod, tidak perlu memasang ke telefon setiap kali;
+  \item Suntingan langsung (Live Edit): Android Studio 2026 menyokong 'kemas kini panas' sebahagian perubahan pada emulator/peranti sebenar; penyesuaian kecil seperti mengubah warna teks berubah sekelip mata pada peranti;
+  \item API animasi: animateFloatAsState, AnimatedVisibility — beberapa baris kod sudah cukup untuk membuat elemen beralih dengan lancar — 'kesan premium' sering cuma berbeza dengan puluhan baris ini.
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun AnimatedBox() {
+    var big by remember { mutableStateOf(false) }
+    // Apabila nilai berubah, bertransisi secara halus ke nilai sasaran
+    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+
+    Box(Modifier
+        .size(size)
+        .background(MaterialTheme.colorScheme.primary)
+        .clickable { big = !big }
+    )
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Petua: Fungsi Dahulu, Animasi Kemudian}
+Penyakit lazim pemula: 'antara muka belum betul, dah sibuk fikirkan animasi'. Pastikan fungsi berjalan dahulu, barulah tambahkan kesan gerak secara menyeluruh pada akhirnya — ini juga prinsip 'ringkas itu utama': animasi ialah hiasan yang menambah nilai, fungsi ialah pertolongan di saat genting.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Mari cuba: Buat 'Butang Mood'}
+Ubah projek templat menjadi penukar mood: satu butang, setiap ketikan berselang-seli antara gembira sedih marah, dengan teks dan warna latar belakang turut berubah. Petunjuk: guna when untuk memilih teks dan warna mengikut keadaan. Selepas siap, hantar kepada kawan untuk dimainkan, dan terimalah gelombang pertama 'wow, kau boleh buat aplikasi'.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab}
+\begin{itemize}
+  \item Pemikiran Compose: antara muka = fungsi @Composable, disarang gaya bongkahan
+  \item Empat komponen: Text / Button / TextField / Image
+  \item Set tiga susun atur: Column menegak, Row mengufuk, Box bertindih
+  \item Rantai Modifier 'solekan': padding, fillMaxWidth, background, clickable — susunannya bermakna
+  \item Keadaan ialah jiwa: remember + mutableStateOf, ubah data maka antara muka dilukis semula secara automatik
+  \item Tema guna Material 3 + warna dinamik, mod gelap dikonfigurasi sekali dan berkuat kuasa global
+\end{itemize}
+
+\end{tcbsummary}

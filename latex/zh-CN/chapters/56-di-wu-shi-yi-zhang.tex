@@ -1,0 +1,203 @@
+\bookchapter{第五十一章：界面开发——Jetpack Compose 入门}
+
+\chapterintro{界面是用户看到的一切。在 Compose 出现之前，安卓界面用 XML 写——像填空题一样繁琐；2021 年谷歌推出了\textbf{Jetpack Compose}：直接用 Kotlin 代码“画”界面，所见即所得，改一行代码预览立刻刷新。到 2026 年，Compose 已是新项目的绝对主流。这一章，咱们学会“画画”。}
+
+\booksection{一、Compose 的思想：界面就是函数}
+
+Compose 的核心思想一句话：\textbf{界面 = 函数}。每个能显示在屏幕上的东西（文字、按钮、图片）都是一个“可组合函数”（Composable），用\texttt{@Composable}标记。把它们像积木一样嵌套起来，就是界面。
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Greeting(name: String) {
+    Text(text = "你好，$name！")     // 一个"文字积木"
+}
+
+// 嵌套组合：大积木套小积木
+@Composable
+fun HomeScreen() {
+    Column {                          // 竖着排列
+        Greeting(name = "张三")
+        Greeting(name = "李四")
+        Button(onClick = { /* 点击做什么 */ }) {
+            Text("点我")
+        }
+    }
+}
+\end{lstlisting}
+
+注意\texttt{@Composable}这个“帽子”——它告诉编译器“这是一个界面积木”。积木可以无限嵌套，这就是 Compose 的全部秘密。
+
+\booksection{二、基础组件：文字、按钮、输入框、图片}
+
+Compose 的组件就是“积木块”，最常见的四种：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{组件} & \textbf{干什么} & \textbf{必备参数} \tabularnewline
+\hline
+Text & 显示文字 & text（要显示的字） \tabularnewline
+Button & 按钮 & onClick（点击回调） \tabularnewline
+TextField & 输入框 & value、onValueChange（输入变化回调） \tabularnewline
+Image & 显示图片 & painter（图片资源） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Compose 四大基础组件\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun BasicWidgets() {
+    Column {
+        Text(text = "这是一段文字")
+        Button(onClick = { println("被点击了") }) {
+            Text("按钮")
+        }
+        var input by remember { mutableStateOf("") }
+        TextField(
+            value = input,
+            onValueChange = { input = it },
+            label = { Text("输入点什么") }
+        )
+    }
+}
+\end{lstlisting}
+
+输入框那两行里出现了\texttt{remember \{ mutableStateOf(“”) \}}——这就是 Compose 的“状态”魔法，本章第五节细讲。现在先混个脸熟。
+
+\booksection{三、布局三件套：Column、Row、Box}
+
+组件有了，怎么摆放？记住三个“盒子”：
+
+\begin{itemize}
+  \item \textbf{Column}：竖着排（像排队打饭）；
+  \item \textbf{Row}：横着排（像并排坐）；
+  \item \textbf{Box}：叠着放（像扑克牌摞一起，适合做角标、遮罩）。
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+Column {
+    Text("第一行")
+    Row {
+        Text("左边")
+        Text("右边")
+    }
+    Box {
+        Text("底层")
+        Text("叠在上面的角标")
+    }
+}
+\end{lstlisting}
+
+想让布局更好看？给组件加\textbf{Modifier}（修饰符）——它就像给积木“上妆”：
+
+\begin{lstlisting}[language=Kotlin]
+Text(
+    text = "好看的文字",
+    modifier = Modifier
+        .padding(16.dp)          // 四周留白
+        .fillMaxWidth()          // 撑满宽度
+        .background(Color.Blue)  // 背景色
+        .clickable { /* 点击 */ }// 可点击
+)
+// 链式调用：一个接一个，顺序有意义（先 padding 再背景，背景不含边距）
+\end{lstlisting}
+
+\begin{tcbwarn}{注意：Modifier 的顺序有讲究}
+\texttt{padding(16.\allowbreak dp).\allowbreak background(Blue)}和\texttt{background(Blue).\allowbreak padding(16.\allowbreak dp)}效果不同——前者是“先留白再涂色”（背景不含边距），后者是“先涂色再留白”（背景包含边距）。新手最容易在这上面画错“奇怪的白边”。不确定时，调换顺序试试，预览立刻告诉你答案。
+
+\end{tcbwarn}
+
+\booksection{四、状态：让界面“活”起来}
+
+静态界面没意思。想让按钮点击后数字 +1、输入框能打字，就需要\textbf{状态（State）}。Compose 的规则：\textbf{界面永远忠实反映状态，状态变了，界面自动重画}。
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Counter() {
+    // remember + mutableStateOf：记住这个会变化的值
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "你点了 $count 次")
+        Button(onClick = { count++ }) {   // 改状态
+            Text("点我 +1")                // 界面自动刷新
+        }
+    }
+}
+\end{lstlisting}
+
+三行代码，一个活的计数器。这就是 Compose 比老式写法爽的地方：\textbf{不用手动“刷新界面”，改数据就行}。记住两个关键函数：\texttt{remember}（让值在界面重组时不被清空）和\texttt{mutableStateOf}（告诉 Compose“这个值变了要重画”）。
+
+用户点击
+
+状态改变（count++）
+
+Compose 感知到变化
+
+自动重画界面（重组）
+
+\begin{center}\small\color{gray}图 3：Compose 的“状态 界面”单向数据流\end{center}
+
+\booksection{五、主题与深色模式：一次配置，全局生效}
+
+模板项目里的\texttt{MyFirstAppTheme \{ .\allowbreak .\allowbreak .\allowbreak  \}}就是主题。它基于\textbf{Material 3}设计规范，帮你把颜色、字体、形状统一管理。支持深色模式只需三步：
+
+\begin{enumerate}
+  \item 在主题里定义好浅色/深色两套配色（模板已自动生成\texttt{ColorScheme}）；
+  \item 系统切到深色模式时，\texttt{isSystemInDarkTheme()}自动判断；
+  \item 用主题提供的颜色（如\texttt{MaterialTheme.\allowbreak colorScheme.\allowbreak primary}）而不是写死颜色值。
+\end{enumerate}
+
+\begin{tcbinfo}{小贴士：Material 3 动态取色}
+Android 12 起的“Material You”能让 App 从你的壁纸里提取颜色。Compose 模板默认支持（\texttt{dynamicColor}）。你的 App 在不同用户手机上会“自动换装”，这就是现代安卓的浪漫。
+
+\end{tcbinfo}
+
+\booksection{六、预览、动画与实时编辑：Compose 的“外挂”}
+
+Compose 三个开发体验上的“外挂”，用上就回不去：
+
+\begin{itemize}
+  \item \textbf{@Preview 预览}：给 Composable 加\texttt{@Preview}注解，Android Studio 右侧立刻渲染出界面——改代码所见即所得，不用每次装到手机上；
+  \item \textbf{实时编辑（Live Edit）}：2026 年的 Android Studio 支持在模拟器/真机上"热更新"部分改动，改文字颜色之类的小调整，设备上秒变；
+  \item \textbf{动画 API}：\texttt{animateFloatAsState}、\texttt{AnimatedVisibility}几行代码就能让元素平滑过渡——"高级感"往往就差这几十行。
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun AnimatedBox() {
+    var big by remember { mutableStateOf(false) }
+    // 值变化时自动平滑过渡到目标值
+    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+
+    Box(Modifier
+        .size(size)
+        .background(MaterialTheme.colorScheme.primary)
+        .clickable { big = !big }
+    )
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{小贴士：先功能后动画}
+新手常犯的毛病是“界面还没做对，就开始纠结动画”。先让功能跑通，最后再统一加动效——这也是“简单至上”原则：\textbf{动画是锦上添花，功能是雪中送炭}。
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{来动手：做一个"心情按钮"}
+把模板项目改成一个心情切换器：一个按钮，点击后在 开心 难过 生气 之间循环切换，文字和背景色跟着变。提示：用\texttt{when}根据状态选文案和颜色。做完发给朋友玩，收获第一波“哇你会做 App 了”。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item Compose 思想：界面 = @Composable 函数，积木式嵌套
+  \item 四大组件：Text / Button / TextField / Image
+  \item 布局三件套：Column 竖排、Row 横排、Box 叠放
+  \item Modifier 链式"上妆"：padding、fillMaxWidth、background、clickable——顺序有意义
+  \item 状态是灵魂：remember + mutableStateOf，改数据界面自动重画
+  \item 主题用 Material 3 + 动态取色，深色模式一次配置全局生效
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,178 @@
+\bookchapter{Κεφάλαιο 53: Αποθήκευση δεδο$\mu$ένων και αιτή$\mu$ατα δικτύου}
+
+\chapterintro{Μια εφαρ$\mu$ογή που $\mu$όνο «κοιτάζεται» είναι νεκρή· ζωντανή είναι όση $\mu$πορεί να αποθηκεύει δεδο$\mu$ένα και να συνδέεται στο διαδίκτυο. Σε αυτό το κεφάλαιο θα γνωρίσεις το «τρίο» του στρώ$\mu$ατος δεδο$\mu$ένων του Android: DataStore (για $\mu$ικρές ρυθ$\mu$ίσεις), Room (για δο$\mu$η$\mu$ένα δεδο$\mu$ένα), Retrofit (για να $\mu$ιλάς $\mu$ε τον διακο$\mu$ιστή) — και τον «γενικό διευθυντή» τους, τα coroutines. Όταν το τελειώσεις, θα $\mu$πορείς να γράφεις αληθινές εφαρ$\mu$ογές που θυ$\mu$ούνται τις συνήθειες του χρήστη και ανανεώνουν το περιεχό$\mu$ενό τους σε πραγ$\mu$ατικό χρόνο.}
+
+\booksection{Πώς διαλέγεις λύση αποθήκευσης: κοίτα πρώτα αυτόν τον πίνακα}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Λύση} & \textbf{Τι αποθηκεύει} & \textbf{Χαρακτηριστικά} & \textbf{Πού το χρησι$\mu$οποιεί το βιβλίο} \tabularnewline
+\hline
+DataStore & Σκόρπιες ρυθ$\mu$ίσεις (θέ$\mu$α, διακόπτες) & Ζεύγη κλειδιού-τι$\mu$ής, απλό και ασφαλές & Οι ρυθ$\mu$ίσεις του βιβλίου εξόδων (κεφάλαιο 54) \tabularnewline
+Room & Δο$\mu$η$\mu$ένα δεδο$\mu$ένα (εγγραφές, χρήστες) & Πραγ$\mu$ατική περιτύλιξη βάσης SQLite, $\mu$ε ερωτή$\mu$ατα & Οι εγγραφές εξόδων (κεφάλαιο 54) \tabularnewline
+Retrofit & Δεδο$\mu$ένα από διακο$\mu$ιστή (δεν αποθηκεύονται, τα παίρνου$\mu$ε από το δίκτυο) & Το ντε φάκτο πρότυπο βιβλιοθήκη για αιτή$\mu$ατα HTTP & Τα δεδο$\mu$ένα καιρού (κεφάλαιο 55) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Ο κατα$\mu$ερισ$\mu$ός εργασίας του «τρίου» των δεδο$\mu$ένων\end{center}
+
+Κράτα έναν στίχο: «τις $\mu$ικρές ρυθ$\mu$ίσεις στο DataStore, τα δεδο$\mu$ένα σε όγκο στο Room, τα εξωτερικά δεδο$\mu$ένα $\mu$έσω Retrofit». Τα SharedPreferences που συναντάς σε παλιούς οδηγούς έχουν αντικατασταθεί από το DataStore, και το SQL γρα$\mu$$\mu$ένο στο χέρι για SQLite από το Room — $\mu$άθε τα νέα κατευθείαν, $\mu$ην πας τον παλιό δρό$\mu$ο.
+
+\booksection{DataStore: για να αποθηκεύεις $\mu$ικρές ρυθ$\mu$ίσεις}
+
+Για να θυ$\mu$άσαι σκόρπιες τι$\mu$ές όπως «ποιο νό$\mu$ισ$\mu$α διάλεξε τελευταία φορά ο χρήστης» ή «αν είναι ενεργό το σκοτεινό θέ$\mu$α», χρησι$\mu$οποίησε το DataStore (έκδοση Preferences):
+
+\begin{lstlisting}[language=Kotlin]
+val Context.dataStore by preferencesDataStore(name = "settings")
+
+// Γράψι$\mu$ο: αποθήκευση τι$\mu$ής
+suspend fun saveTheme(isDark: Boolean) {
+    context.dataStore.edit { prefs ->
+        prefs[THEME_KEY] = isDark
+    }
+}
+
+// Διάβασ$\mu$α: ανάκτηση τι$\mu$ής (το Flow ειδοποιεί αυτό$\mu$ατα για αλλαγές)
+val themeFlow: Flow<Boolean> = context.dataStore.data
+    .map { it[THEME_KEY] ?: false }
+\end{lstlisting}
+
+Πρόσεξε ότι επιστρέφεται ένα Flow — $\mu$ια ροή δεδο$\mu$ένων που «ρέει». Μόλις αλλάξει η τι$\mu$ή, όλα τα ση$\mu$εία που την παρατηρούν λα$\mu$βάνουν αυτό$\mu$ατα τη νέα τι$\mu$ή. Η έννοια αυτή (αντιδραστικότητα) είναι ακρογωνιαίος λίθος του σύγχρονου Android, και στο κεφάλαιο 54 θα την εφαρ$\mu$όσεις στην πράξη.
+
+\booksection{Room: να δώσεις στα δεδο$\mu$ένα «αληθινό σπίτι»}
+
+Ένα βιβλίο εξόδων έχει εκατοντάδες ή χιλιάδες εγγραφές, και χρειάζεται αναζητήσεις και στατιστικά ανά κατηγορία και ανά $\mu$ήνα — αυτό θέλει βάση δεδο$\mu$ένων. Το Room είναι η επίση$\mu$η περιτύλιξη της SQLite και κάνει τη «δη$\mu$ιουργία πινάκων και την αναζήτηση δεδο$\mu$ένων» τόσο φυσική όσο το να γράφεις Kotlin. Χρειάζεσαι τρία πράγ$\mu$ατα:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Entity: δο$\mu$ή πίνακα (ένας πίνακας = ένα data class)
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val amount: Double,
+    val category: String,
+    val note: String,
+    val date: String
+)
+
+// 2. Dao: διεπαφή λειτουργιών (προσθήκη, διαγραφή, αλλαγή, αναζήτηση)
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+    suspend fun sumByCategory(c: String): Double
+}
+
+// 3. Database: τελική συναρ$\mu$ολόγηση
+@Database(entities = [Record::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun recordDao(): RecordDao
+}
+\end{lstlisting}
+
+Αυτό το πρότυπο «τρίο» $\mu$πορείς να το $\mu$εταφέρεις αυτούσιο σε οποιοδήποτε έργο σου — άλλαξε απλώς τα ονό$\mu$ατα των πεδίων. Τα ερωτή$\mu$ατα επιστρέφουν Flow και η διεπαφή ανανεώνεται αυτό$\mu$ατα $\mu$αζί $\mu$ε τα δεδο$\mu$ένα — $\mu$αγεία.
+
+\booksection{Retrofit: να $\mu$ιλάς $\mu$ε τον διακο$\mu$ιστή}
+
+Καιρός, ειδήσεις, συναλλαγ$\mu$ατικές ισοτι$\mu$ίες… αυτά τα δεδο$\mu$ένα δεν είναι $\mu$έσα στο κινητό, είναι στους διακο$\mu$ιστές των άλλων. Το Retrofit κάνει το «ζήτα δεδο$\mu$ένα από τον διακο$\mu$ιστή» τόσο απλό όσο $\mu$ια κλήση συνάρτησης. Τρία βή$\mu$ατα:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Ορισ$\mu$ός διεπαφής: το αίτη$\mu$α HTTP γίνεται συνάρτηση
+interface WeatherApi {
+    @GET("v1/weather")
+    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+}
+
+// 2. Δη$\mu$ιουργία στιγ$\mu$ιότυπου
+val api = Retrofit.Builder()
+    .baseUrl("https://api.example.com/")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build()
+    .create(WeatherApi::class.java)
+
+// 3. Κλήση σαν συνάρτηση ($\mu$έσα σε coroutine)
+val result = api.getWeather("Πεκίνο")
+\end{lstlisting}
+
+\textbf{Προσοχή στην παγίδα: δύο σιδερένιοι κανόνες δικτύου}\par
+
+(1) Τα αιτή$\mu$ατα δικτύου δεν πρέπει ποτέ να γίνονται στο κύριο νή$\mu$α — θα «παγώσουν» τη διεπαφή ή θα προκαλέσουν κατάρρευση (NetworkOnMainThreadException). Όλες οι κλήσεις δικτύου $\mu$παίνουν $\mu$έσα σε coroutine (viewModelScope.launch). (2) Το HTTP σε καθαρό κεί$\mu$ενο απαγορεύεται από προεπιλογή: από το Android 9 απαιτείται HTTPS. Αν για δοκι$\mu$ές χρειαστείς τοπική διεύθυνση http://, πρέπει να δηλώσεις ρητά το usesCleartextTraffic στο Manifest — αλλά στο τελικό προϊόν όλα πρέπει να πηγαίνουν $\mu$έσω HTTPS.
+
+\booksection{Ανάλυση JSON: «$\mu$ετάφρασε» τα δεδο$\mu$ένα δικτύου}
+
+Τα δεδο$\mu$ένα που επιστρέφει ο διακο$\mu$ιστής είναι ως επί το πλείστον JSON — ένα κεί$\mu$ενο που $\mu$οιάζει $\mu$ε «ε$\mu$φωλευ$\mu$ένο λεξικό». Το Retrofit χρειάζεται έναν «διερ$\mu$ηνέα» για να τα $\mu$ετατρέψει σε αντικεί$\mu$ενα Kotlin. Οι δύο κύριες λύσεις του 2026:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Λύση} & \textbf{Χαρακτηριστικά} & \textbf{Προτεινό$\mu$ενη περίπτωση} \tabularnewline
+\hline
+Gson / Moshi & Κλασική λύση $\mu$ε reflection, $\mu$ηδενικό κόστος ρύθ$\mu$ισης & Γρήγορη εκκίνηση, $\mu$ικρά έργα $\mu$ε λίγα πεδία \tabularnewline
+kotlinx.serialization & Η επίση$\mu$η λύση χρόνου $\mu$εταγλώττισης, πιο γρήγορη και πιο ασφαλής & Πρώτη επιλογή για νέα έργα (το κύριο ρεύ$\mu$α του 2026) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Οι δύο $\mu$εγάλες λύσεις ανάλυσης JSON\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// Προσθήκη annotation @Serializable στο data class
+@Serializable
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+
+// Το Retrofit συνδέει τον αντίστοιχο Converter (παράδειγ$\mu$α $\mu$ε επίση$\mu$η υποστήριξη Retrofit 2.11+):
+// .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+\end{lstlisting}
+
+Όποια λύση κι αν διαλέξεις, ο σιδερένιος κανόνας είναι: δες πρώτα το πραγ$\mu$ατικό JSON που επιστρέφεται, $\mu$ετά ορίσε τα πεδία. Πολλά bugs «αποτυχίας ανάλυσης» οφείλονται σε λάθος όνο$\mu$α πεδίου ή λάθος $\mu$αντε$\mu$ένο επίπεδο ε$\mu$φωλής — τύπωσε το αρχικό JSON και σύγκρινε, και θα το εντοπίσεις σε δέκα δευτερόλεπτα.
+
+\booksection{Coroutines: η «κοινή γλώσσα» του ταυτοχρονισ$\mu$ού στο Android}
+
+\booksection{Coroutines: η «κοινή γλώσσα» του ταυτοχρονισ$\mu$ού στο Android}
+
+Τα suspend και launch που ε$\mu$φανίζονται ξανά και ξανά παραπάνω προέρχονται από τα coroutines της Kotlin — την επίση$\mu$η λύση ταυτοχρονισ$\mu$ού του Android. Ας το πού$\mu$ε χοντρικά: κάνουν τις λειτουργίες που «θέλουν λίγη ανα$\mu$ονή» (δίκτυο, βάση δεδο$\mu$ένων) να $\mu$ην $\mu$πλοκάρουν τη διεπαφή.
+
+\begin{lstlisting}[language=Kotlin]
+// Εκκίνηση coroutine $\mu$έσα στο ViewModel
+viewModelScope.launch {
+    val records = dao.getAll().first()  // suspend: περι$\mu$ένει αυτό$\mu$ατα χωρίς $\mu$πλοκάρισ$\mu$α
+    // Ενη$\mu$έρωση της κατάστασης οθόνης……
+}
+
+// Συντο$\mu$νύσεις λέξεων-κλειδιών:
+// suspend   —— "πρέπει να περι$\mu$ένω, $\mu$ην $\mu$ε ε$\mu$ποδίζεις"
+// launch    —— "Ξεκίνα τη δουλειά!"
+// viewModelScope —— το "εργαστήριο" που ακολουθεί τη σελίδα, κλείνει $\mu$όνο του όταν η σελίδα καταστρέφεται
+\end{lstlisting}
+
+Αν ξεκινάς από το $\mu$ηδέν, αρκεί να θυ$\mu$άσαι τη χρήση· την αρχή του «suspend και resume» που κρύβεται πίσω $\mu$πορείς να τη $\mu$ελετήσεις αργότερα. Στην καθη$\mu$ερινή ανάπτυξη, το 90\% όσων γράφεις είναι αυτό το πρότυπο.
+
+\begin{tcbpractice}{Πρακτική άσκηση: φτιάξε $\mu$ια $\mu$ικρή εφαρ$\mu$ογή «φράση της η$\mu$έρας»}
+Βρες ένα δωρεάν API $\mu$ε αποφθέγ$\mu$ατα (π.χ. κάτι σαν το hitokoto), τράβηξε $\mu$ε το Retrofit τη «φράση της η$\mu$έρας», δείξ’ τη στο κέντρο της οθόνης και πρόσθεσε κου$\mu$πί «άλλη $\mu$ία» (νέο αίτη$\mu$α $\mu$έσα σε coroutine). Μετά αποθήκευσε τις αγαπη$\mu$ένες φράσεις σε «αγαπη$\mu$ένα» $\mu$ε το Room. Η άσκηση αυτή χρησι$\mu$οποιεί ένα-ένα τα DataStore/Room/Retrofit/coroutines — $\mu$όλις την τελειώσεις, τα κεφάλαια 7 και 8 θα σου φανούν παιχνίδι.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Ο στίχος: $\mu$ικρές ρυθ$\mu$ίσεις στο DataStore, δεδο$\mu$ένα σε όγκο στο Room, εξωτερικά δεδο$\mu$ένα $\mu$έσω Retrofit
+  \item Το DataStore επιστρέφει Flow: όταν αλλάζει η τι$\mu$ή, οι παρατηρητές τη λα$\mu$βάνουν αυτό$\mu$ατα
+  \item Το τρίο του Room: @Entity (πίνακας) + @Dao (λειτουργίες) + @Database (συνολική συναρ$\mu$ολόγηση) — πρότυπο ά$\mu$εσα επαναχρησι$\mu$οποιήσι$\mu$ο
+  \item Τρία βή$\mu$ατα Retrofit: ορίζεις το interface δη$\mu$ιουργείς instance καλείς $\mu$έσα σε coroutine
+  \item Δύο σιδερένιοι κανόνες: το δίκτυο δεν $\mu$παίνει στο κύριο νή$\mu$α· το τελικό προϊόν απαιτεί HTTPS
+  \item Coroutine = ανα$\mu$ονή που δεν $\mu$πλοκάρει τη διεπαφή· το viewModelScope είναι το προσωπικό εργαστήριο κάθε οθόνης
+\end{itemize}
+
+\end{tcbsummary}

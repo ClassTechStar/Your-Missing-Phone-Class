@@ -1,0 +1,393 @@
+\bookchapter{Chapitre 14 : Spécial gestionnaires de mots de passe}
+
+\chapterintro{À l'ère numérique, le mot de passe est la clé de votre maison. Mais trop de clés, trop complexes, que faire ? Le gestionnaire de mots de passe est votre « concierge universel des clés ».}
+
+\booksection{I. Pourquoi avez-vous besoin d'un gestionnaire de mots de passe ?}
+
+Une personne moderne a en moyenne des dizaines, voire des centaines de comptes en ligne. Si vous utilisez le même mot de passe pour chaque compte, dès qu'un site est piraté, tous vos comptes sont en danger. Si vous utilisez un mot de passe complexe différent pour chaque compte, impossible de tous les retenir.
+
+Le gestionnaire de mots de passe résout ce dilemme : vous n'avez qu'à retenir un seul mot de passe maître, il retient tous les autres pour vous.
+
+\booksection{II. Principe de fonctionnement du gestionnaire de mots de passe}
+
+\begin{enumerate}
+  \item \textbf{Stockage chiffré}: tous les mots de passe sont stockés avec un chiffrement haute intensité, seul vous pouvez les déchiffrer.
+  \item \textbf{Mot de passe maître}: vous définissez un mot de passe maître pour déverrouiller le coffre-fort. Le mot de passe maître lui-même n'est pas stocké sur les serveurs.
+  \item \textbf{Remplissage automatique}: sur les pages de connexion des sites web ou applications, le gestionnaire remplit automatiquement les identifiants.
+  \item \textbf{Génération de mots de passe}: peut générer des mots de passe aléatoires et complexes, améliorant la sécurité.
+\end{enumerate}
+
+\booksection{III. Introduction aux principes de chiffrement}
+
+Comprendre les principes de chiffrement des gestionnaires de mots de passe vous aide à juger si un prestataire mérite votre confiance. Voici une explication en termes simples de quelques concepts fondamentaux.
+
+\booksubsection{Chiffrement AES-256}
+
+AES (Advanced Encryption Standard) est un algorithme de chiffrement symétrique approuvé par le NIST (National Institute of Standards and Technology), largement utilisé par les banques, l'armée et les gouvernements. « 256 » fait référence à la longueur de clé de 256 bits — il faudrait théoriquement plus que l'âge de l'univers pour le briser par force brute. Les principaux gestionnaires de mots de passe (1Password, Bitwarden, KeePass, etc.) utilisent tous le chiffrement AES-256 pour votre coffre-fort de mots de passe.
+
+\booksubsection{Architecture zéro connaissance (Zero-Knowledge Architecture)}
+
+« Zéro connaissance » ne signifie pas que le prestataire ne stocke rien, mais que\textbf{le chiffrement et le déchiffrement sont effectués localement sur votre appareil, le serveur ne stocke que le texte chiffré}. Processus spécifique :
+
+\begin{enumerate}
+  \item Vous saisissez votre mot de passe principal sur le client.
+  \item Le client dérive la clé de chiffrement à partir du mot de passe principal (cette étape s'effectue sur votre smartphone/ordinateur).
+  \item Seul le texte chiffré est téléchargé sur le serveur.
+  \item Lors de la prochaine connexion, le serveur renvoie le texte chiffré et le client le déchiffre à nouveau avec le mot de passe principal.
+\end{enumerate}
+
+Point clé :\textbf{Le mot de passe principal ne quitte jamais votre appareil}, et n'est pas non plus sur le serveur. Donc même si le prestataire est piraté, le pirate n'obtient qu'un ensemble de textes chiffrés indéchiffrables — à moins qu'il ne devine votre mot de passe principal.
+
+\begin{tcbinfo}{Pourquoi « zéro connaissance » signifie-t-il que le prestataire ne peut pas voir vos mots de passe ?}
+Parce que la clé de déchiffrement est dérivée de votre mot de passe principal, et que celui-ci n'existe que dans votre tête et n'est utilisé que sur votre appareil local. Le serveur du prestataire ne contient ni le mot de passe principal ni la clé de déchiffrement, seulement le texte chiffré. C'est pourquoi les prestataires sérieux comme Bitwarden et 1Password déclarent explicitement « nous ne pouvons pas non plus voir vos mots de passe » — ce n'est pas qu'ils ne le veulent pas, c'est techniquement impossible.
+
+\end{tcbinfo}
+
+\booksubsection{Fonction de dérivation de clé : PBKDF2 et Argon2}
+
+Le mot de passe principal ne peut pas être directement utilisé comme clé de chiffrement — il doit être traité par une « fonction de dérivation de clé ». Le rôle de cette fonction est de\textbf{ralentir volontairement le calcul}, afin de rendre le coût d'une attaque par force brute prohibitif.
+
+\begin{itemize}
+  \item \textbf{PBKDF2}: Standard établi, largement utilisé par le trousseau iCloud, Bitwarden, LastPass, etc. Ralentit le cassage par itérations hachées répétées (généralement plus de 100 000 fois).
+  \item \textbf{Argon2}: Champion du concours de hachage de mots de passe 2015, plus moderne que PBKDF2. Outre la « consommation de calcul », il introduit une « consommation de mémoire » — rendant difficile l'accélération du cassage par du matériel spécialisé comme GPU/ASIC. Bitwarden, KeePassXC, etc. le prennent déjà en charge.
+\end{itemize}
+
+Plus le nombre d'itérations est élevé, plus c'est sécurisé, mais plus le déverrouillage est lent. Les prestataires sérieux publient l'algorithme de dérivation et le nombre d'itérations utilisés, pour permettre l'audit par la communauté de sécurité.
+
+\booksubsection{Étude de cas : la fuite de données LastPass de 2022}
+
+En août 2022, le vétéran des gestionnaires de mots de passe LastPass a annoncé que son environnement de développement avait été compromis ; en novembre de la même année, il a révélé que le pirate avait récupéré les sauvegardes des coffres-forts de mots de passe des utilisateurs (texte chiffré). Leçons clés de l'incident :
+
+\begin{itemize}
+  \item \textbf{L'architecture zéro connaissance a tenu la ligne}: Comme le coffre-fort est lui-même chiffré, le pirate a obtenu le texte chiffré mais ne peut pas le déchiffrer — à condition que le mot de passe principal de l'utilisateur soit suffisamment fort.
+  \item \textbf{Les utilisateurs avec un mot de passe principal faible sont les plus exposés}: Le pirate peut casser les mots de passe principaux faibles hors ligne par force brute, les utilisateurs avec des mots de passe principaux faibles ou réutilisés courent donc un risque réel.
+  \item \textbf{Les métadonnées ont également fuité}: Bien que le contenu des mots de passe soit chiffré, les métadonnées telles que les URL des sites et les notes peuvent ne pas l'être, révélant les services utilisés par l'utilisateur.
+\end{itemize}
+
+\begin{tcbwarn}{Ce qu'on apprend de l'incident LastPass}
+Premièrement, le mot de passe principal doit être long et unique (16 caractères minimum, avec majuscules, minuscules, chiffres et symboles) ; deuxièmement, privilégiez les prestataires prenant en charge Argon2id avec un nombre d'itérations élevé ; troisièmement, pour les comptes à haute valeur (banque, e-mail), activez impérativement une authentification à deux facteurs indépendante, ne vous fiez pas uniquement au gestionnaire de mots de passe.
+
+\end{tcbwarn}
+
+\booksection{IV. Recommandations de gestionnaires de mots de passe}
+
+\booksubsection{Intégrés au système :}
+
+\begin{itemize}
+  \item \textbf{Trousseau iCloud}: premier choix pour les utilisateurs de l'écosystème Apple. Intégration transparente avec Safari et les applications, gratuit, sécurisé. L'inconvénient est l'utilisation multiplateforme peu pratique.
+  \item \textbf{Gestionnaire de mots de passe Google}: pratique pour les utilisateurs Android. Intégré à Chrome et Android, gratuit.
+  \item \textbf{Coffre-fort de mots de passe Huawei}: intégré à HarmonyOS, adapté aux utilisateurs Huawei.
+\end{itemize}
+
+\booksubsection{Outils professionnels tiers :}
+
+\begin{itemize}
+  \item \textbf{Bitwarden}: open source et gratuit, puissant, prend en charge toutes les plateformes. Fortement recommandé pour les utilisateurs soucieux de leur vie privée.
+  \item \textbf{1Password}: belle interface, riche en fonctionnalités, adapté aux familles et aux équipes. Payant.
+  \item \textbf{LastPass}: gestionnaire de mots de passe historique, la version gratuite a des fonctions limitées.
+  \item \textbf{KeePass}: stockage entièrement local, open source et gratuit. Adapté aux utilisateurs avertis.
+\end{itemize}
+
+\booksection{V. Évaluation réelle de la force des mots de passe}
+
+Les gestionnaires de mots de passe affichent généralement un indicateur de « force du mot de passe » (rouge/jaune/vert), mais cette évaluation ne prend souvent en compte que la longueur et les types de caractères, ce qui n'est pas exhaustif. Pour juger vraiment si un mot de passe est sécurisé, il faut considérer l'« entropie » et « s'il a déjà fuité ».
+
+\booksubsection{Entropie : la mesure scientifique de la force d'un mot de passe}
+
+L'« entropie » mesure l'incertitude d'un mot de passe, l'unité est le bit. Plus l'entropie est élevée, plus le nombre de tentatives nécessaires pour une attaque par force brute est important.
+
+\begin{itemize}
+  \item \textbf{"123456"}: Entropie extrêmement faible, cassage instantané.
+  \item \textbf{"P@ssw0rd"}: Semble complexe, mais apparaît dans toutes les listes d'attaque par dictionnaire, l'entropie reste faible.
+  \item \textbf{"correct horse battery staple"}: Quatre mots aléatoires, entropie d'environ 44 bits, difficulté de cassage bien supérieure à « P@ssw0rd ».
+  \item \textbf{16 caractères aléatoires (majuscules + minuscules + chiffres + symboles)}: Entropie d'environ 100 bits, incassable par force brute avec la puissance de calcul actuelle.
+\end{itemize}
+
+Conclusion :\textbf{« Longueur + aléatoire » est plus important que « symboles complexes »}. C'est aussi la raison pour laquelle les mots de passe longs et aléatoires générés par les gestionnaires de mots de passe sont vraiment sécurisés.
+
+\booksubsection{HaveIBeenPwned : vérifiez si votre mot de passe a fuité}
+
+Maintenu par le chercheur en sécurité Troy Hunt\href{https://haveibeenpwned.com}{haveibeenpwned.com}recense les comptes et mots de passe ayant fuité lors des principales fuites de données. Vous pouvez :
+
+\begin{enumerate}
+  \item Saisir votre e-mail pour vérifier si votre compte a été exposé lors d'une fuite.
+  \item Utiliser la fonction Pwned Passwords pour vérifier si un mot de passe figure dans la base des fuites connues (les gestionnaires de mots de passe et les navigateurs intègrent déjà cette vérification).
+\end{enumerate}
+
+Si un mot de passe apparaît dans la base des fuites,\textbf{quelle que soit sa complexité apparente, il faut le changer immédiatement}— car les attaques par dictionnaire essaient en priorité ces mots de passe connus.
+
+\begin{tcbinfo}{Principe de requête k-anonymat}
+Inquiet de saisir votre mot de passe sur HaveIBeenPwned et de provoquer une nouvelle fuite ? Pas d'inquiétude. Les requêtes modernes utilisent le protocole « k-anonymat » : le navigateur n'envoie que les 5 premiers caractères du hachis du mot de passe au serveur, qui renvoie la liste de tous les hachis commençant par ces 5 caractères, puis la comparaison se fait localement. Autrement dit, le serveur ne voit jamais le hachis complet de votre mot de passe. La « détection de mots de passe fuités » de 1Password et Bitwarden fonctionne ainsi.
+
+\end{tcbinfo}
+
+\booksubsection{Fonctions de surveillance intégrées aux gestionnaires de mots de passe}
+
+\begin{itemize}
+  \item \textbf{1Password Watchtower}: Surveillance en temps réel des mots de passe faibles, réutilisés, fuités, périmés et des sites sans 2FA, avec un classement rouge/orange/jaune.
+  \item \textbf{Bitwarden Vault Health}: La version gratuite permet de voir les mots de passe faibles et réutilisés ; la version payante détecte les mots de passe fuités (basé sur HaveIBeenPwned).
+  \item \textbf{« Conseils de sécurité » du trousseau iCloud}: Réglages iOS Mots de passe Conseils de sécurité, indique quels mots de passe figurent dans des fuites connues et lesquels sont réutilisés.
+  \item \textbf{« Outil de vérification des mots de passe » de Google Password Manager}: Intégré à Chrome, vérifie en un clic les mots de passe fuités, faibles et réutilisés.
+\end{itemize}
+
+\begin{tcbpractice}{Vérifiez maintenant : vos mots de passe sont-ils sécurisés ?}
+\begin{enumerate}
+  \item Ouvrez haveibeenpwned.com, saisissez votre e-mail habituel et voyez dans quelles fuites il apparaît.
+  \item Utilisateurs iPhone : Réglages Mots de passe Conseils de sécurité, traitez un par un les avertissements rouges.
+  \item Utilisateurs Chrome : Réglages Mots de passe Vérifier les mots de passe, modifiez selon les suggestions.
+  \item Utilisateurs 1Password/Bitwarden : ouvrez Watchtower/Health Reports, traitez en priorité les éléments « fuités » et « réutilisés ».
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{VI. Passkey : l'avenir de la connexion sans mot de passe}
+
+En 2024-2026, la technologie des mots de passe traverse une révolution —\textbf{Passkey (clé d'accès)}devrait éliminer complètement les mots de passe traditionnels. Promu conjointement par Apple, Google et Microsoft, avec le soutien de la FIDO Alliance et du W3C, c'est le plus grand changement de méthode de connexion depuis des décennies.
+
+\booksubsection{Qu'est-ce qu'un Passkey ?}
+
+Passkey est basé sur la norme FIDO2 / WebAuthn, utilisant\textbf{une paire de clés sur l'appareil}à la place d'un mot de passe. Le principe peut être simplifié ainsi :
+
+\begin{itemize}
+  \item Votre smartphone génère une paire de clés :\textbf{Clé publique}(enregistrée auprès du site) +\textbf{Clé privée}(stockée pour toujours dans la puce de sécurité de votre appareil).
+  \item Lors de la connexion, le site envoie un « défi », votre smartphone le signe avec la clé privée, puis le site vérifie avec la clé publique.
+  \item Avant la signature, vous devez confirmer votre identité par biométrie (Face ID / empreinte) ou code PIN de l'appareil.
+  \item Pendant tout le processus,\textbf{aucun mot de passe n'est transmis sur le réseau}.
+\end{itemize}
+
+\booksubsection{Passkey vs mot de passe traditionnel}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimension} & \textbf{Mot de passe traditionnel} & \textbf{Passkey} \tabularnewline
+\hline
+Résistance au hameçonnage & Faible, les sites d'hameçonnage peuvent voler le mot de passe & Naturellement résistant, la clé privée ne signe que pour le vrai domaine \tabularnewline
+Impact d'une fuite du serveur & Le hachis du mot de passe peut être cassé & Le serveur ne stocke que la clé publique, aucune incidence en cas de fuite \tabularnewline
+Commodité & Nécessite mémorisation/saisie/gestion & Connexion en une seconde avec Face ID/empreinte \tabularnewline
+Attaque par rejeu & Peut être interceptée et rejouée par un homme du milieu & Chaque signature est à usage unique, impossible à rejouer \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Prise en charge par plateforme}
+
+\begin{itemize}
+  \item \textbf{Passkey du trousseau iCloud d'Apple}: Pris en charge nativement à partir d'iOS 16+ / macOS Ventura+, les Passkey se synchronisent entre tous les appareils connectés au même Apple ID, pas besoin de recréer sur un nouvel appareil.
+  \item \textbf{Passkey de Google Password Manager}: Pris en charge nativement par Android + Chrome, les Passkey sont stockés dans le compte Google et synchronisés entre appareils Android ; depuis 2023, les comptes Google personnels prennent en charge la connexion par Passkey.
+  \item \textbf{Microsoft}: Windows 11 / Edge prend déjà en charge Passkey ; les comptes Microsoft, Outlook, Office, etc. ouvrent progressivement la connexion Passkey, gérable dans Microsoft Authenticator.
+  \item \textbf{1Password / Bitwarden}: Prend en charge la création, le stockage et la synchronisation multiplateforme des Passkey, pour ne pas être limité à un seul écosystème.
+\end{itemize}
+
+\begin{tcbinfo}{La synchronisation multi-appareils est une percée clé}
+La plus grande difficulté des premiers Passkey était d'être « liés à un seul appareil » — il fallait les recréer en changeant de smartphone. À partir de 2023, Apple, Google et Microsoft ont mis en œuvre la synchronisation cloud des Passkey : le trousseau iCloud synchronise entre appareils Apple, Google Password Manager entre appareils Android. 1Password et d'autres tiers ont ouvert la synchronisation inter-écosystèmes. Cela signifie que Passkey est désormais assez mature pour remplacer les mots de passe.
+
+\end{tcbinfo}
+
+\booksubsection{Comment créer et utiliser un Passkey sur smartphone}
+
+\textbf{Cheminement iOS (iPhone) :}
+
+\begin{enumerate}
+  \item Sur la page de sécurité du compte d'un site prenant en charge Passkey (par exemple Google, Microsoft, Amazon, eBay, PayPal), choisissez « Ajouter une clé d'accès / Add passkey ».
+  \item Le système affiche la fenêtre de vérification Face ID / Touch ID ; une fois validé, le Passkey est automatiquement généré et enregistré dans le trousseau iCloud.
+  \item Lors de la prochaine connexion, saisissez votre nom d'utilisateur puis choisissez « Se connecter avec iPhone », un scan Face ID suffit.
+  \item Entrée de gestion : Réglages Mots de passe trouvez le site correspondant, l'entrée Passkey est visible.
+\end{enumerate}
+
+\textbf{Cheminement Android :}
+
+\begin{enumerate}
+  \item Sur la page de sécurité du compte d'un site prenant en charge Passkey, choisissez « Ajouter une clé d'accès ».
+  \item Fenêtre Google Password Manager choisissez votre compte Google vérification du verrouillage d'écran (empreinte/schéma/PIN).
+  \item Le Passkey est automatiquement enregistré dans Google Password Manager et synchronisé entre les appareils Android du même compte.
+  \item Lors de la prochaine connexion, choisissez « Utiliser Passkey », déverrouillez l'écran et c'est fait.
+  \item Entrée de gestion : Réglages Android Mots de passe, clés et remplissage automatique Gestionnaire de mots de passe google.com.
+\end{enumerate}
+
+\booksubsection{Connexion Passkey multi-appareils}
+
+Si vous vous connectez sur un ordinateur Windows à un site pour lequel seul votre iPhone a un Passkey, vous pouvez autoriser par scan de code QR :
+
+\begin{enumerate}
+  \item Sur la page de connexion du site, choisissez « Utiliser Passkey ».
+  \item Choisissez « Utiliser un autre appareil ».
+  \item L'ordinateur affiche un code QR, scannez-le avec l'iPhone.
+  \item L'iPhone affiche la vérification Face ID, après confirmation le site se connecte sur l'ordinateur.
+\end{enumerate}
+
+Ce processus utilise une communication doublement chiffrée par Bluetooth + Internet, la clé privée Passkey ne quitte jamais votre iPhone.
+
+\begin{tcbpractice}{Essayez maintenant : découvrez la connexion sans mot de passe}
+\begin{enumerate}
+  \item Connectez-vous à votre compte Google Sécurité Clés d'accès Ajouter une clé d'accès, découvrez la connexion Face ID/empreinte.
+  \item Connectez-vous à votre compte Microsoft Sécurité Options de sécurité avancées Ajouter une clé d'accès.
+  \item Essayez sur Taobao, JD, eBay, PayPal et d'autres services prenant déjà en charge Passkey.
+  \item Conservez les mots de passe traditionnels comme solution de secours, migrez progressivement les comptes à haute valeur vers Passkey.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbwarn}{Recommandations pour la période de transition}
+Passkey n'a pas complètement remplacé les mots de passe — de nombreux sites sont encore au stade « Passkey + mot de passe » coexistant. Recommandation : activez Passkey en priorité pour les comptes à haute valeur, mais\textbf{ne supprimez pas immédiatement les mots de passe traditionnels}, gardez-les comme secours ; continuez à utiliser un gestionnaire de mots de passe, car tous les sites ne prennent pas en charge Passkey. Considérez Passkey comme un « puissant complément au gestionnaire de mots de passe » et non comme un « remplacement immédiat ».
+
+\end{tcbwarn}
+
+\booksection{VII. Clés de sécurité matérielles}
+
+Si vos exigences de sécurité sont supérieures à celles de l'utilisateur ordinaire — par exemple, détention d'une grande quantité de cryptomonnaies, statut de cadre/journaliste/activiste, ou protection de comptes d'entreprise critiques — une clé de sécurité matérielle est un choix plus fiable que le code SMS.
+
+\booksubsection{Qu'est-ce qu'une clé de sécurité matérielle ?}
+
+Une clé matérielle est un dispositif physique (ressemblant à une clé USB), dont la puce de sécurité interne stocke votre clé privée, nécessitant un contact physique ou NFC pour l'authentification. Produits représentatifs :
+
+\begin{itemize}
+  \item \textbf{YubiKey}(Yubico) : Le plus répandu, prend en charge FIDO2/WebAuthn, U2F, OTP, PIV, OpenPGP, avec USB-C / USB-A / NFC, etc. Série 5 : 50-70 USD.
+  \item \textbf{Google Titan}: Produit par Google, USB-C + NFC / Bluetooth, environ 30-40 USD.
+  \item \textbf{OnlyKey}: Alternative open source, prend en charge de multiples protocoles.
+  \item \textbf{Alternatives nationales}: Par exemple ePasskey de Feitian, prix plus abordable.
+\end{itemize}
+
+\booksubsection{Pourquoi les clés matérielles sont-elles plus sûres que les codes SMS ?}
+
+\begin{itemize}
+  \item \textbf{Résistance au hameçonnage}: Comme Passkey, la clé matérielle ne répond qu'au vrai domaine, les sites d'hameçonnage ne peuvent pas obtenir le code.
+  \item \textbf{Résistance au détournement de SIM}: Les codes SMS peuvent être interceptés par une attaque SIM swap, la clé matérielle ne nécessite pas de numéro de téléphone.
+  \item \textbf{Résistance à l'homme du milieu}: Le protocole FIDO2 inclut un défi dans chaque signature, impossible à rejouer.
+  \item \textbf{Isolation physique}: La clé privée reste toujours dans la puce matérielle, même si un logiciel malveillant compromet votre ordinateur, il ne peut pas la lire.
+\end{itemize}
+
+\booksubsection{Scénarios d'utilisation}
+
+\begin{itemize}
+  \item Comptes d'échanges de cryptomonnaies, récupération de portefeuille.
+  \item SSO d'entreprise, VPN de télétravail, connexion SSH à des serveurs.
+  \item E-mail, GitHub, réseaux sociaux et autres « comptes principaux » — une fois compromis, ils permettent de réinitialiser tous les autres comptes.
+  \item Personnes très sensibles : journalistes, avocats, cadres dirigeants, etc.
+\end{itemize}
+
+\booksubsection{Comment configurer une clé matérielle pour l'authentification à deux facteurs}
+
+Exemple avec un compte Google + YubiKey :
+
+\begin{enumerate}
+  \item Achetez un YubiKey (il est recommandé d'en acheter deux à la fois, un pour un usage quotidien et un de secours, stockés dans des endroits différents).
+  \item Connectez-vous à myaccount.google.com Sécurité Validation en deux étapes.
+  \item Choisissez « Ajouter une clé de sécurité » insérez le YubiKey dans le port USB-C ou approchez-le de la zone NFC du smartphone.
+  \item Suivez les instructions pour toucher le contact métallique du YubiKey et terminer l'enregistrement.
+  \item Il est recommandé d'enregistrer une deuxième clé de secours.
+  \item Dans les paramètres de « Validation en deux étapes », définissez la clé matérielle comme méthode de vérification préférée et le code SMS comme secours.
+\end{enumerate}
+
+Sites prenant principalement en charge : Google, GitHub, Microsoft, Apple ID, Facebook, Twitter, Dropbox, GitLab, AWS, Coinbase, Binance, etc.
+
+\begin{tcbinfo}{Stratégie à double clé}
+Le plus grand risque d'une clé matérielle est la « perte ». Recommandations : (1) enregistrez simultanément deux clés différentes ; (2) portez-en une sur vous (porte-clés) et stockez l'autre dans un coffre-fort à domicile ou à la banque ; (3) certains sites permettent d'imprimer des « codes de récupération de secours » à conserver hors ligne. Ainsi, même en cas de perte de la clé principale, vous ne serez pas définitivement verrouillé hors de votre compte.
+
+\end{tcbinfo}
+
+\begin{tcbwarn}{Prudence sur le canal d'achat}
+Achetez impérativement auprès de la boutique officielle ou d'un revendeur autorisé, n'achetez pas de clés d'occasion ou d'origine inconnue — en théorie, du matériel préconfiguré peut avoir été compromis. Le firmware du YubiKey ne peut pas être mis à jour après l'usine, mais Yubico publie continuellement des bulletins de sécurité, suivez son site officiel.
+
+\end{tcbwarn}
+
+\booksection{VIII. Partage de mots de passe en famille / en équipe}
+
+Dans un contexte familial, Netflix, le Wi-Fi familial, l'interface du routeur et le mot de passe de la serrure connectée doivent être partagés par toute la famille ; dans un contexte d'équipe, les serveurs, bases de données et comptes de réseaux sociaux nécessitent une collaboration multi-personnes.\textbf{Envoyer des mots de passe par WeChat ou les écrire dans un document partagé sont des pratiques à haut risque}— dès que l'historique des discussions ou les permissions du document fuitent, le mot de passe fuit aussi.
+
+\booksubsection{« Coffre-fort partagé » (Vault) de 1Password}
+
+1Password est le produit de référence pour le partage familial et en équipe. Son mécanisme central est\textbf{plusieurs coffres-forts}:
+
+\begin{itemize}
+  \item \textbf{Coffre-fort personnel}: Visible uniquement par vous, par exemple les comptes personnels comme la banque et l'e-mail.
+  \item \textbf{Coffre-fort partagé}: Visible par tous les membres de la famille ou de l'équipe, par exemple Netflix, le Wi-Fi familial, la carte de crédit partagée.
+  \item \textbf{Hiérarchie des permissions}: La version équipe permet de définir certains membres en « consultation seule » ou « consultation sans modification ».
+\end{itemize}
+
+Les membres de la famille ou de l'équipe n'ont pas besoin de partager le mot de passe principal, chacun se connecte avec son propre compte, mais peut voir le contenu du coffre-fort partagé autorisé. Les modifications de mot de passe sont synchronisées en temps réel pour tous les membres.
+
+\booksubsection{Fonction « Organisation » de Bitwarden}
+
+La version gratuite de Bitwarden prend en charge le partage de mots de passe personnels (via la fonction « Send » pour un partage à durée limitée d'un seul mot de passe) ; la version payante permet de créer une « Organisation » pour partager plusieurs entrées avec les membres de la famille ou les collègues, avec des permissions fines. Bitwarden propose également une option d'auto-hébergement, adaptée aux entreprises exigeantes en matière de souveraineté des données.
+
+\booksubsection{Scénario familial : partage sécurisé des mots de passe Netflix, Wi-Fi, etc.}
+
+\begin{itemize}
+  \item \textbf{Netflix / sites de streaming}: Stockez le mot de passe de connexion dans le « coffre-fort partagé » de 1Password Families, chaque membre de la famille se connecte individuellement, sans avoir à l'envoyer dans le groupe.
+  \item \textbf{Mot de passe Wi-Fi familial}: Entre appareils iOS, le mot de passe Wi-Fi peut être partagé directement via AirDrop aux invités, sans avoir à le dicter ; Android 12+ dispose également de la fonction « Partage Wi-Fi à proximité ».
+  \item \textbf{Serrures connectées, électroménager intelligent}: Dans la mesure du possible, utilisez la fonction « membres de la famille » de l'application du fabricant pour créer un compte distinct pour chaque personne, plutôt que de partager un compte administrateur.
+  \item \textbf{Interface du routeur domestique}: Stockez le mot de passe administrateur dans le coffre-fort partagé 1Password, et créez un SSID distinct pour le Wi-Fi des invités.
+\end{itemize}
+
+\begin{tcbinfo}{Rapport qualité-prix de 1Password Families}
+1Password Families coûte environ 4,99 USD/mois, prend en charge jusqu'à 5 membres de la famille, chacun disposant d'un coffre-fort personnel indépendant + 4 coffres-forts partagés. Cela représente moins de 1 USD/mois par personne, c'est actuellement la meilleure solution de partage familial. La version familiale de Bitwarden à 10 USD/an prend en charge 6 personnes, avec un meilleur rapport qualité-prix, mais une interface légèrement inférieure.
+
+\end{tcbinfo}
+
+\booksubsection{Scénario d'équipe : partage des mots de passe serveur/base de données}
+
+\begin{itemize}
+  \item \textbf{1Password Teams / Business}: Possibilité de créer plusieurs coffres-forts par département ou groupe de projet, contrôle fin des permissions, auditabilité de toutes les actions d'accès.
+  \item \textbf{Bitwarden Teams / Enterprise}: Solution open source, auto-hébergeable, la version entreprise prend en charge l'intégration SSO et la synchronisation d'annuaire.
+  \item \textbf{Principe de séparation des responsabilités}: Le mot de passe administrateur ne doit pas être détenu par une seule personne — désignez 2-3 « contacts d'urgence » pour garantir la continuité en cas de départ ou de congé du personnel clé.
+  \item \textbf{Procédure de départ}: En cas de départ d'un employé, révoquez immédiatement son accès au gestionnaire de mots de passe et, si nécessaire, faites tourner tous les mots de passe hautement sensibles auxquels il a eu accès.
+\end{itemize}
+
+\booksubsection{Accès d'urgence (Emergency Access) : au cas où il vous arrive quelque chose}
+
+Imaginez un scénario : vous gérez seul tous les comptes familiaux importants, mais vous êtes hospitalisé d'urgence ou décédez, et votre famille ne peut pas se connecter aux comptes bancaires, e-mail et d'assurance.\textbf{La fonction « Accès d'urgence »}est précisément conçue pour cela — autoriser un membre de la famille ou un ami de confiance à accéder à votre coffre-fort de mots de passe lorsque vous ne pouvez pas répondre.
+
+\textbf{Configuration de l'accès d'urgence Bitwarden :}
+
+\begin{enumerate}
+  \item Connectez-vous à Bitwarden Web Vault Réglages Accès d'urgence.
+  \item Ajoutez l'e-mail d'un contact de confiance et invitez-le à accepter.
+  \item Définissez une « période d'attente » (7-14 jours recommandés) : la fenêtre temporelle entre la demande de l'autre partie et votre confirmation.
+  \item Si vous ne répondez pas pendant la période d'attente (refus ou inaction), l'autre partie obtient automatiquement l'accès à l'expiration du délai.
+  \item Vous pouvez à tout moment refuser manuellement la demande ou révoquer l'accès d'urgence.
+\end{enumerate}
+
+\textbf{Accès d'urgence 1Password :}
+
+\begin{enumerate}
+  \item 1Password ne l'appelle pas directement « accès d'urgence », mais cela peut être réalisé via la fonction « organisation familiale/équipe » — après avoir ajouté les membres de la famille à la version familiale, placez certaines entrées dans le « coffre-fort partagé ».
+  \item Pour les utilisateurs de la version personnelle, il est recommandé de communiquer le mot de passe principal à un membre de la famille hautement digne de confiance, ou de le consigner dans une enveloppe scellée conservée dans un coffre-fort.
+  \item 1Password fournit également un « code de récupération », à imprimer et conserver impérativement lors de l'activation de l'authentification à deux facteurs.
+\end{enumerate}
+
+\begin{tcbpractice}{Configurez maintenant : laissez un « double » à votre famille}
+\begin{enumerate}
+  \item Choisissez un membre de la famille de confiance comme « contact d'urgence ».
+  \item Configurez l'accès d'urgence dans le gestionnaire de mots de passe (Bitwarden) ou ajoutez-le au coffre-fort partagé familial (1Password).
+  \item Écrivez le mot de passe principal + le code de récupération sur papier, mettez-les dans une enveloppe scellée, conservez-les dans un coffre-fort à domicile ou informez un membre de la famille digne de confiance.
+  \item Révisez tous les six mois pour confirmer que le contact d'urgence est toujours approprié.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{IX. Bonnes pratiques d'utilisation du gestionnaire de mots de passe}
+
+\begin{itemize}
+  \item \textbf{Définir un mot de passe maître fort}: le mot de passe maître est la dernière ligne de défense, définissez un mot de passe long et complexe, et mémorisez-le bien.
+  \item \textbf{Activer l'authentification à deux facteurs}: activez l'authentification à deux facteurs pour le compte du gestionnaire, ajoutez une couche de protection.
+  \item \textbf{Vérifier régulièrement les mots de passe faibles}: la plupart des gestionnaires ont une fonction « audit de sécurité » qui vous aide à trouver les mots de passe faibles et dupliqués.
+  \item \textbf{Ne pas oublier le mot de passe maître}: le mot de passe maître ne peut pas être récupéré, l'oublier signifie perdre tous les mots de passe. Il est recommandé de l'écrire sur papier et de le garder dans un endroit sûr.
+  \item \textbf{Accès d'urgence}: définissez un contact d'urgence, au cas où vous ne pourriez plus accéder, une personne de confiance peut récupérer vos mots de passe.
+\end{itemize}
+
+\begin{tcbwarn}{Rappel important}
+Le gestionnaire de mots de passe est pratique, mais comporte des risques : si le mot de passe maître fuite, tous les mots de passe sont exposés. Le mot de passe maître ne doit donc jamais être identique aux autres mots de passe, ni écrit dans un endroit facile à trouver. Par ailleurs, il est recommandé de choisir un prestataire avec un bon historique de sécurité.
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{Essayez maintenant : commencez à utiliser un gestionnaire de mots de passe}
+\begin{enumerate}
+  \item Choisissez un gestionnaire de mots de passe (Bitwarden recommandé ou intégré au système).
+  \item Créez un compte, définissez un mot de passe maître fort.
+  \item Importez les mots de passe existants (le cas échéant) ou commencez à ajouter de nouveaux mots de passe.
+  \item Installez l'extension de navigateur ou l'application mobile, essayez le remplissage automatique.
+  \item Consultez le rapport d'audit de sécurité, identifiez les mots de passe à améliorer.
+\end{enumerate}
+
+\end{tcbpractice}

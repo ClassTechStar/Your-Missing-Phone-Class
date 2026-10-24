@@ -1,0 +1,178 @@
+\bookchapter{Capítulo 53: Armazenamento de dados e requisições de rede}
+
+\chapterintro{Um App que só 'mostra' está morto; o App que salva dados e se conecta à rede é que está vivo. Neste capítulo você vai conhecer o 'trio' da camada de dados do Android: DataStore (guarda configurações pequenas), Room (guarda dados estruturados) e Retrofit (conversa com o servidor), além do 'maestro' deles — as corrotinas. Ao fim do capítulo, você será capaz de escrever Apps de verdade, que lembram os hábitos do usuário e atualizam o conteúdo em tempo real.}
+
+\booksection{Como escolher a solução de armazenamento: comece por esta tabela}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Solução} & \textbf{O que é adequado guardar} & \textbf{Características} & \textbf{Onde o livro usa} \tabularnewline
+\hline
+DataStore & Configurações avulsas (tema, opções liga/desliga) & Pares chave-valor, simples e seguros & Configurações do controle de gastos (capítulo 54) \tabularnewline
+Room & Dados estruturados (lançamentos, usuários) & Encapsulamento de verdade de um banco SQLite, com consultas & Registros de gastos (capítulo 54) \tabularnewline
+Retrofit & (Não armazena; busca na rede) Dados do servidor & O padrão de fato entre as bibliotecas de requisições HTTP & Dados de clima (capítulo 55) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}A divisão de trabalho do trio de dados\end{center}
+
+Grave este ditado: 'configurações pequenas vão para o DataStore, dados em lote vão para o Room, dados de fora passam pelo Retrofit'. O SharedPreferences, comum nos tutoriais antigos, já foi substituído pelo DataStore, e o SQL escrito à mão no SQLite já cedeu lugar ao Room — aprenda direto o novo e não pegue o caminho velho.
+
+\booksection{DataStore: guardando configurações pequenas}
+
+Para lembrar valores avulsos como 'a moeda escolhida da última vez' ou 'se o modo escuro está ativado', use o DataStore (versão Preferences):
+
+\begin{lstlisting}[language=Kotlin]
+val Context.dataStore by preferencesDataStore(name = "settings")
+
+// Escrita: salvar um valor
+suspend fun saveTheme(isDark: Boolean) {
+    context.dataStore.edit { prefs ->
+        prefs[THEME_KEY] = isDark
+    }
+}
+
+// Leitura: pegar o valor (o Flow avisa sobre mudanças automaticamente)
+val themeFlow: Flow<Boolean> = context.dataStore.data
+    .map { it[THEME_KEY] ?: false }
+\end{lstlisting}
+
+Repare que o retorno é um Flow — um fluxo de dados que 'flui'. Assim que o valor muda, todos os lugares que o observam recebem o novo valor automaticamente. Esse conceito (reatividade) é a pedra fundamental do Android moderno, e você vai colocá-lo em prática no capítulo 54.
+
+\booksection{Room: dando aos dados uma 'casa de verdade'}
+
+Um controle de gastos acumula centenas ou milhares de lançamentos e ainda precisa consultar e somar por categoria e por mês — isso pede um banco de dados. O Room é o encapsulamento oficial do SQLite; ele deixa 'criar tabelas e consultar dados' tão natural quanto escrever Kotlin. São três peças:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Entity: a estrutura da tabela (uma tabela = um data class)
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val amount: Double,
+    val category: String,
+    val note: String,
+    val date: String
+)
+
+// 2. Dao: a interface de operações (CRUD)
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+    suspend fun sumByCategory(c: String): Double
+}
+
+// 3. Database: montagem final
+@Database(entities = [Record::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun recordDao(): RecordDao
+}
+\end{lstlisting}
+
+Esse modelo de 'trio' pode ser levado tal como está para qualquer projeto seu — basta trocar os nomes dos campos. As consultas retornam Flow e a interface se atualiza sozinha conforme os dados; simplesmente maravilhoso.
+
+\booksection{Retrofit: conversando com o servidor}
+
+Clima, notícias, câmbio... esses dados não estão no celular, e sim nos servidores de outras pessoas. O Retrofit deixa 'pedir dados ao servidor' tão simples quanto chamar uma função. São três passos:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Definir a interface: descreva as requisições HTTP como funções
+interface WeatherApi {
+    @GET("v1/weather")
+    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+}
+
+// 2. Criar a instância
+val api = Retrofit.Builder()
+    .baseUrl("https://api.example.com/")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build()
+    .create(WeatherApi::class.java)
+
+// 3. Chamar como uma função (em uma coroutine)
+val result = api.getWeather("Pequim")
+\end{lstlisting}
+
+\textbf{Alerta de armadilha: duas regras de ferro da rede}\par
+
+(1) Requisições de rede jamais devem ser feitas na thread principal — travaria a interface e poderia até derrubar o App (NetworkOnMainThreadException). Toda chamada de rede precisa ficar dentro de uma corrotina (viewModelScope.launch). (2) HTTP em texto puro é proibido por padrão: desde o Android 9, exige-se HTTPS. Para testar com um endereço local em http://, é preciso declarar usesCleartextTraffic explicitamente no Manifest — mas o produto final deve usar HTTPS de ponta a ponta.
+
+\booksection{Parsing de JSON: 'traduzindo' os dados da rede}
+
+A maior parte dos dados que o servidor devolve vem em JSON — um texto parecido com 'dicionários aninhados'. O Retrofit precisa de um 'tradutor' para convertê-lo em objetos Kotlin. As duas soluções mainstream de 2026:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Solução} & \textbf{Características} & \textbf{Cenário recomendado} \tabularnewline
+\hline
+Gson / Moshi & Solução veterana baseada em reflexão, custo de configuração zero & Projetos pequenos, de arranque rápido e poucos campos \tabularnewline
+kotlinx.serialization & Solução oficial em tempo de compilação, mais rápida e mais segura & Primeira escolha para projetos novos (a preferida em 2026) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}As duas grandes soluções de parsing de JSON\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// Adicione a anotação @Serializable ao data class
+@Serializable
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+
+// O Retrofit recebe o Converter correspondente (suporte oficial a partir do Retrofit 2.11+):
+// .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+\end{lstlisting}
+
+Seja qual for a solução, a regra de ferro é: primeiro olhe o JSON real que volta, depois defina os campos. Muitos bugs de 'falha no parsing' nascem de nomes de campos errados ou níveis de aninhamento adivinhados — imprima o JSON original e compare; dez segundos resolvem.
+
+\booksection{Corrotinas: o 'idioma comum' da concorrência no Android}
+
+\booksection{Corrotinas: o 'idioma comum' da concorrência no Android}
+
+O suspend e o launch, que apareceram várias vezes acima, vêm das corrotinas do Kotlin (Coroutine) — a solução oficial de concorrência do Android. De forma bem grosseira, entenda assim: executar operações que 'precisam esperar um pouco' (rede, banco de dados) sem bloquear a interface.
+
+\begin{lstlisting}[language=Kotlin]
+// Inicie uma coroutine no ViewModel
+viewModelScope.launch {
+    val records = dao.getAll().first()  // suspend: pausa e espera automaticamente
+    // atualiza o estado da tela...
+}
+
+// Cola das palavras-chave:
+// suspend   — "preciso esperar, não bloqueiem os outros"
+// launch    — "Mão na massa!"
+// viewModelScope — a "oficina" ligada à tela; encerra sozinha quando a tela é destruída
+\end{lstlisting}
+
+Se você parte do zero, por agora basta decorar o uso; o princípio de 'suspender e retomar' por trás disso pode ser explorado depois. No dia a dia, 90\% do que você escrever será este modelo.
+
+\begin{tcbpractice}{Mãos à obra: crie um mini-app de 'frase do dia'}
+Encontre uma API gratuita de citações (algo como o hitokoto), use o Retrofit para buscar a 'frase do dia', mostre-a no centro da tela e adicione um botão 'Trocar frase' (refazendo a requisição numa corrotina). Depois, salve as frases favoritas numa 'coleção' com o Room. Esse exercício usa DataStore/Room/Retrofit/corrotinas todos de uma vez — terminando-o, os capítulos 7 e 8 serão mamão com açúcar.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumo do capítulo}
+\begin{itemize}
+  \item Ditado: configurações pequenas no DataStore, dados em lote no Room, dados de fora pelo Retrofit
+  \item O DataStore retorna um Flow: mudou o valor, os observadores recebem na hora
+  \item O trio do Room: @Entity (tabela) + @Dao (operações) + @Database (montagem final); o modelo pode ser reutilizado direto
+  \item Retrofit em três passos: definir a interface criar a instância chamar dentro de uma corrotina
+  \item Duas regras de ferro: nada de rede na thread principal; produto final exige HTTPS
+  \item Corrotina = esperar sem bloquear a interface; o viewModelScope é a sala de trabalho exclusiva da tela
+\end{itemize}
+
+\end{tcbsummary}

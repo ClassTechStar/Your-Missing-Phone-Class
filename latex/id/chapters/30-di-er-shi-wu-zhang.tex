@@ -1,0 +1,236 @@
+\bookchapter{Bab 25: Penanganan Ponsel Bekas dan Warisan Digital}
+
+\chapterintro{Hei, teman-teman, setelah lebih dari dua puluh bab “pelatihan”, saya yakin Anda telah tumbuh dari “pemula digital” menjadi pengguna ponsel yang cukup mahir. Tapi kehidupan teknologi selalu berputar—cinta baru akhirnya menjadi cinta lama. Saat Anda bersiap mempensiunkan “rekan lama” Anda, tahukah Anda bagaimana berpisah dengan layak dan aman?}
+
+\booksection{“Eutanasia” Ponsel Lama: Panduan Jual atau Hadiah dengan Aman}
+
+Prinsip inti: Data cleaning bukan “hapus”, tapi “overwrite”. Banyak orang mengira drag foto ke recycle bin, clear album sudah selesai, hasilnya setelah ponsel berganti tangan, pemilik baru pakai data recovery software scan, foto lama, riwayat chat, foto KTP semua kembali — “skenario memalukan” seperti ini terjadi setiap tahun.
+
+\begin{enumerate}
+  \item \textbf{"Bersih-bersih" mandiri}: Selesaikan backup lengkap terakhir kali, logout semua akun (iCloud, akun Huawei/Xiaomi/Samsung, akun Google), matikan fungsi "Find My Phone" — jika tidak pengguna berikutnya akan diblokir oleh activation lock.
+  \item \textbf{"Format" ultimate}: "Factory reset" ponsel modern biasanya termasuk encrypted wipe — yang dihancurkan adalah encryption key itu sendiri, sekali key hilang, seluruh data disk instan menjadi gibberish.
+  \item \textbf{"Ilusi" Terakhir (hanya perangkat lama)}: Ponsel modern (iOS 8+, Android 6+) sudah default full disk encryption (FBE), factory reset akan menghancurkan encryption key, data secara teori tidak bisa recovery,\textbf{tidak perlu langkah ini}. Hanya untuk perangkat non-encrypted yang sangat lama (sebelum 2015), baru perlu setelah factory reset pakai junk file fill storage, lalu execute factory reset sekali lagi.
+\end{enumerate}
+
+\textbf{Tabel Cepat Path Wipe Data Berbagai Merek}: Meskipun prinsip sama, tapi setiap merek menyembunyikan “factory reset” di posisi yang sedikit berbeda, perbedaan kunci sebagai berikut.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Merek} & \textbf{Entri Wipe} & \textbf{Perbedaan Kunci dan Catatan} \tabularnewline
+\hline
+Huawei & Settings > System \& Update > Reset > Factory Reset & Perlu pertama logout akun Huawei dan matikan "Find My Phone", jika tidak akan trigger activation lock; dalam mode pure mungkin butuh verifikasi password. \tabularnewline
+Xiaomi / Redmi & Settings > My Device > Factory Reset & Di bawah ada opsi "Format Virtual SD Card" dan "Clear All Content \& Settings", keduanya harus dicentang; sebelum logout akun Xiaomi pertama matikan "Find Device". \tabularnewline
+OPPO / OnePlus & Settings > Additional Settings > Restore Phone > Thoroughly Clear All Data & ColorOS menyediakan mode "Thorough Clear", akan multiple overwrite storage; perlu input lock screen password untuk konfirmasi. \tabularnewline
+vivo & Settings > System Management > Backup \& Reset > Clear All Data & Centang "Format Phone Storage" baru bisa clean SD card area; perlu logout akun vivo, matikan "Find Phone". \tabularnewline
+Samsung & Settings > General Management > Reset > Factory Reset & Perlu pertama remove akun Samsung dan matikan "Find My Phone"; sebagian model ada opsi "Auto Overwrite", disarankan aktifkan. \tabularnewline
+: Pengaturan Nama Anda iCloud iCloud Cloud Backup Aktifkan. Ponsel terhubung daya, terhubung Wi-Fi, saat layar terkunci akan otomatis dicadangkan. 5GB gratis kemungkinan besar tidak cukup, disarankan upgrade ke 50GB dengan 6 yuan. & Settings > General > Transfer or Reset iPhone > Erase All Content and Settings & Harus pertama logout Apple ID, jika tidak pengguna berikutnya diblokir iCloud activation lock; iOS 15+ mendukung "Keep iCloud Data on Logout" untuk investigasi nanti. \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{Tiga Hal yang Paling Mudah Diabaikan}
+\begin{itemize}
+  \item \textbf{Tidak Logout Akun}: Ponsel dijual ke pembeli berikutnya lalu di-lock remote, sendiri juga tidak bisa keluar, akhirnya hanya bisa bawa KTP ke service center resmi untuk unlock.
+  \item \textbf{SD Card Tidak Dikeluarkan}: Factory reset tidak akan format foto di external SD card, ingat manual keluarkan atau format terpisah.
+  \item \textbf{USB Drive/Perangkat OTG Tidak Diputus}: Selama proses wipe jika tersambung perangkat external, mungkin salah wipe data perangkat external, juga mungkin menyebabkan wipe terputus.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{Warisan Digital: Bagaimana Menempatkan Jiwa Sosial Anda?}
+
+Data di ponsel, sudah lama bukan “virtual” lagi. Itu membawa dana Anda, hubungan sosial, hasil kreasi, bahkan “identitas digital” Anda.\textbf{Setelah seseorang meninggal, aset ini bagaimana harus ditangani?}Ini bukan lagi masalah abstrak, tapi dilema nyata yang dihadapi semakin banyak keluarga — kerabat tidak tahu password, platform tidak mengizinkan warisan, cryptocurrency selamanya hilang.
+
+\begin{tcbinfo}{Dasar Hukum: Pasal 49 Personal Information Protection Law}
+Pasal 49 Personal Information Protection Law RRT yang berlaku 2021 secara jelas menyatakan:\textbf{Jika natural person meninggal, kerabat dekatnya untuk kepentingan legal dan wajar sendiri, bisa menjalankan hak akses, salin, koreksi, hapus, dll. terhadap personal information terkait almarhum sebagaimana diatur dalam bab ini; kecuali almarhum saat hidup memiliki arranjo lain.}
+
+Ini berarti:
+
+\begin{itemize}
+  \item \textbf{Kerabat dekat punya dasar hukum}untuk mengajukan ke platform memproses akun dan personal information almarhum.
+  \item "Kepentingan legal dan wajar" biasanya termasuk mengurus warisan, menutup akun, menghapus privasi sensitif, dll.
+  \item Jika almarhum saat hidup punya will atau arranjo lain (seperti menunjuk legacy contact), mengikuti arranjo tersebut.
+  \item Platform tidak bisa dengan alasan "privasi pengguna" menolak kooperasi secara umum, tapi proses spesifik berbeda-beda.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksubsection{WeChat dan Alipay: Akun tidak bisa diwariskan, tapi dana bisa}
+
+Kedua App yang paling sering dipakai orang Tiongkok ini, aturannya masing-masing berbeda:
+
+\begin{itemize}
+  \item \textbf{Akun WeChat}: Berdasarkan "Tencent WeChat Software License and Service Agreement", kepemilikan akun milik Tencent, pengguna hanya punya right of use,\textbf{akun itu sendiri tidak bisa diwariskan, tidak bisa ditransfer}. Tapi dalam akun\textbf{dana WeChat Pay Balance, Qianliantong}termasuk personal property, kerabat dekat bisa dengan death certificate, proof of kinship, inheritance notary letter mengajukan ke Tenpay untuk withdraw atau transfer.
+  \item \textbf{Alipay}: Akun juga tidak bisa langsung diwariskan, tapi Alipay Balance, Yu'e Bao, Licaitong, dll.\textbf{dana termasuk inheritable property}. Ahli waris bisa via "Customer Service Hotline" Alipay atau offline submit death certificate, inheritance notary letter untuk proses; produk wealth management Ant Fortune perlu via proses fund company.
+  \item \textbf{Riwayat Chat}: Secara hukum termasuk privasi pribadi, platform tidak akan aktif memberikan ke keluarga. Jika melibatkan clue warisan, bisa via litigasi atau notary apply untuk obtain.
+\end{itemize}
+
+\begin{tcbwarn}{Menggunakan kata sandi lemah seperti tanggal lahir / 123456 / qwerty;}
+\begin{itemize}
+  \item \textbf{Jangan langsung memberikan password akun almarhum ke keluarga untuk "dipakai lanjut"}— ini melanggar agreement platform, saat dana dibekukan atau bahkan trigger risk control pembuktian lebih sulit.
+  \item \textbf{Jangan coba pakai ponsel almarhum terima verification code untuk "withdraw"}— mungkin diidentifikasi sebagai penyalahgunaan, justru melanggar hukum.
+  \item \textbf{Jangan Menunda}: Sebagian akun jika lama tidak login akan auto-cancel, recovery dana akan lebih merepotkan.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksubsection{“Legacy Contact” Apple: Tunjuk Lebih Awal, Hasilnya Berlipat Ganda}
+
+Sejak iOS 15.2 Apple meluncurkan fitur “Legacy Contact”, mengizinkan pengguna menunjuk kontak terpercaya lebih awal, setelah meninggal kontak tersebut bisa dengan\textbf{death certificate + Legacy Contact access key}mengajukan akses ke data iCloud almarhum (foto, notes, kontak, notes, dll.). Langkah operasi:
+
+\begin{enumerate}
+  \item Di iPhone masuk\textbf{[Settings] > [Nama Anda] > [Sign-In \& Security] > [Legacy Contact]}.
+  \item Klik "Add Legacy Contact", gunakan Face ID untuk konfirmasi identitas.
+  \item Pilih kontak (pilih dari contacts), sistem akan generate satu\textbf{access key}.
+  \item Serahkan access key via SMS, email atau cetak fisik ke pihak tersebut, dan ingatkan untuk simpan dengan baik.
+  \item Bisa tambah banyak kontak sebagai backup, menghindari single point of failure.
+\end{enumerate}
+
+Yang ditunjuk tidak butuh perangkat Apple, dengan key dan death certificate bisa apply akses di situs resmi Apple. Seluruh proses biasanya selesai dalam 7 hari.
+
+\booksubsection{“Inactive Account Manager” Google: Otomatis Mengurus Setelah Meninggal}
+
+Google menyediakan “Inactive Account Manager”, bisa saat pengguna lama tidak login otomatis execute operasi preset — ini salah satu mekanisme digital legacy paling lengkap saat ini.
+
+\begin{enumerate}
+  \item Kunjungi\textbf{myaccount.google.com/inactive}, login akun Google.
+  \item Setel periode timeout: trigger setelah 3 / 6 / 12 / 18 bulan tidak login.
+  \item Tambahkan trusted contact (maksimal 10 orang), dan setel masing-masing bisa akses data apa (Gmail, Photos, Drive, dll.).
+  \item Opsional: setel auto-reply email, memberi tahu pengirim bahwa Anda tidak bisa memproses.
+  \item Pilihan terakhir: setelah jatuh tempo apakah\textbf{share data ke kontak}, atau\textbf{langsung hapus akun}.
+  \item Setel nomor ponsel sebagai verifikasi fallback, menghindari false trigger.
+\end{enumerate}
+
+\booksubsection{Akun Media Sosial Domestik: Proses Memorialisasi dan Deaktivasi}
+
+Platform media sosial mainstream domestik menangani akun almarhum dengan dua pendekatan:\textbf{“Memorialisasi” (retain akun untuk kerabat berkenang)}“dalam kondisi apa”\textbf{“Deaktivasi” (hapus total)}. Keluarga bisa dengan death certificate, proof of kinship, ID card pemohon mengajukan ke customer service platform.
+
+\begin{itemize}
+  \item \textbf{Weibo}: Mendukung "memorialisasi" akun, diajukan oleh kerabat dengan death certificate, akun akan di-lock tidak bisa login tapi konten retain, homepage akan menampilkan "Akun ini telah disetel sebagai akun peringatan". Juga bisa apply deaktivasi, perlu menyediakan inheritance notary.
+  \item \textbf{Douyin}: Via "Saya - Settings - Feedback \& Help - Account \& Security - Account Deactivation" atau customer service manual, submit death certificate, proof of kinship, ID card pemohon, setelah review lulus bisa deactivate atau convert ke status memorial.
+  \item \textbf{Bilibili}: Channel customer service submit proof almarhum dan proof kerabat, bisa apply deaktivasi akun atau retain sebagai halaman peringatan; penanganan video historial UP perlu dikombinasikan dengan copyright statement.
+  \item \textbf{Xiaohongshu}: Via customer service resmi appeal, submit death certificate, proof of kinship, bisa apply deaktivasi akun dan hapus konten.
+\end{itemize}
+
+\begin{tcbinfo}{Pengingat Kunci}
+\begin{itemize}
+  \item Aturan setiap platform akan update, sebelum memproses pertama cek panduan terbaru customer service resmi.
+  \item Semua proof document disarankan pertama scan backup baru submit, original simpan dengan baik.
+  \item Saat memproses cross-platform sekali jalan, bisa secara terpadu apply satu\textbf{inheritance notary letter}, menghemat bolak-balik proses.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksubsection{Tantangan Warisan Aset Digital}
+
+Selain akun media sosial, semakin banyak orang memegang\textbf{aset digital yang benar-benar bernilai}, masalah warisannya lebih kompleks:
+
+\begin{itemize}
+  \item \textbf{Cryptocurrency (Bitcoin, Ethereum, dll.)}: Berbasis prinsip "private key adalah kepemilikan",\textbf{tanpa private key berarti aset hilang}. Ahli waris tidak bisa via document legal ke on-chain "appeal". Saran: Simpan mnemonic/private key dengan sharding di banyak lokasi fisik aman (seperti safe deposit box bank + brankas rumah), dan di will tunjukkan cara akses.
+  \item \textbf{Akun Exchange}: Mirip dengan akun bank, bisa dengan inheritance notary letter mengajukan ke exchange (seperti Binance, OKX) untuk disposal, tapi exchange cross-border prosesnya lama.
+  \item \textbf{Domain}: Termasuk inheritable property, ahli waris di domain registrar (seperti Alibaba Cloud, GoDaddy) submit inheritance notary lalu bisa proses transfer.
+  \item \textbf{Kekayaan Intelektual (artikel original, video, paten, copyright software)}: Property rights dalam copyright bisa diwariskan (moral rights tidak diwariskan), right of revenue bisa dinikmati ahli waris sampai 50 tahun setelah kematian penulis.
+  \item \textbf{Cloud Storage dan Cloud Drive}: Konten data milik personal, bisa diwariskan; tapi sebagian platform agreement menyatakan akun itu sendiri tidak bisa ditransfer, perlu pertama download lalu deactivate.
+\end{itemize}
+
+\textbf{Harga Nyata Cryptocurrency “Hilang”}\par
+
+Menurut laporan Chainalysis, global sudah ada\textbf{lebih dari 3 juta Bitcoin}karena private key hilang selamanya tidak bisa recovery, setara dengan seperenam dari total yang ada. Jika Anda memegang crypto asset, pastikan minimal satu orang yang Anda mutlak percaya tahu\textbf{recovery path}— jika tidak kekayaan ini akan selamanya tertidur di blockchain.
+
+\booksubsection{Template “Digital Will”}
+
+Will properti tradisional tidak bisa mengurus aset digital. Disarankan Anda setiap tahun update satu lampiran “digital will”, disimpan bersama dengan will resmi. Template berikut untuk referensi:
+
+\textbf{“Lampiran Disposal Aset Digital Personal” (Template)}\par
+
+\textbf{Bagian 1: Daftar Akun}(Hanya catat nama akun dan platform,\textbf{jangan tulis password})
+
+\begin{itemize}
+  \item Sosial: WeChat (akun xxx), Weibo, Douyin, Bilibili, Xiaohongshu, dll.
+  \item Pembayaran: Alipay, WeChat Pay, berbagai App kartu bank
+  \item Cloud: iCloud, Huawei Cloud, Xiaomi Cloud, akun Google, akun Microsoft
+  \item Email: QQ Mail, NetEase Mail, Gmail, dll.
+  \item Lainnya: Cloud drive, subscription service, akun game, dll.
+\end{itemize}
+
+\textbf{Bagian 2: Skema Escrow Password}
+
+\begin{itemize}
+  \item Cara simpan master password: Pakai password manager (seperti Bitwarden, 1Password), master password ditulis di fisik kertas, disegel di brankas rumah.
+  \item Recovery key/mnemonic: Simpan dengan sharding, minimal dua lokasi fisik (seperti safe deposit box bank + brankas rumah).
+  \item Orang yang berwenang query: Nama, nomor ID, hubungan dengan Anda, kontak.
+\end{itemize}
+
+\textbf{Bagian 3: Keinginan Disposal}
+
+\begin{itemize}
+  \item Berbagai akun apakah ingin "memorialisasi" atau "deaktivasi".
+  \item Apakah data iCloud / Google ditunjuk "Legacy Contact" atau "Inactive Account Manager".
+  \item Crypto asset diwariskan ke siapa, penjelasan path akses private key.
+  \item Revenue karya copyright dinikmati oleh siapa.
+\end{itemize}
+
+\textbf{Bagian 4: Kontak dan Platform}
+
+\begin{itemize}
+  \item Nama eksekutor terpercaya, kontak, kontak cadangan.
+  \item Entri customer service platform tempat tinggal dan daftar proof material yang dibutuhkan.
+  \item Tanggal update lampiran ini: \_\_\_\_ tahun \_\_ bulan \_\_ hari, tanggal review berikutnya: \_\_\_\_ tahun \_\_ bulan \_\_ hari.
+\end{itemize}
+
+\begin{tcbwarn}{Tips Hukum tentang "Password"}
+Menulis password langsung di will ada risiko bocor, dan setelah will dibuka semua ahli waris bisa melihat.\textbf{Cara yang lebih aman: Di will hanya tulis “daftar akun + keinginan disposal + lokasi escrow password”, password asli via master password manager secara terpisah diberikan ke eksekutor terpercaya}. Dengan begitu sesuai requirement legal, juga menurunkan risiko password bocor.
+
+\end{tcbwarn}
+
+\booksection{Perjalanan Terakhir yang Ramah Lingkungan}
+
+Satu ponsel mengandung puluhan jenis logam seperti emas, perak, tembaga, rare earth, membuang sembarangan baik mencemari tanah, juga membuang sumber daya. Channel daur ulang yang benar ada tiga jenis, masing-masing fokus:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Channel} & \textbf{Harga Daur Ulang} & \textbf{Keamanan Data} & \textbf{: Produksi profesional kelas atas. Seri iPhone 15 Pro mendukung shooting video Apple ProRes (hingga 4K 60fps), tetapi format ProRes RAW saat ini perlu digunakan bersama perangkat perekam eksternal, ponsel belum mendukung shooting langsung.} \tabularnewline
+\hline
+Trade-in Resmi (Huawei/Apple/Xiaomi, dll.) & Sedang, sering ditambah voucher subsidi & Tertinggi, resmi punya proses standar & Paling worth it saat berencana ganti ponsel merek yang sama \tabularnewline
+Platform Daur Ulang Pihak Ketiga (Aihuishou, Zhuanzhuan, Huisoubao, dll.) & Sedikit lebih tinggi, bisa compare harga & Cukup tinggi, ada laporan data wipe & Ingin langsung cair, tidak terikat merek \tabularnewline
+Donasi Amal (seperti sekolah pedesaan, lembaga amal) & Tanpa return ekonomi & Perlu wipe menyeluruh sendiri & Perangkat masih usable, ingin berbuat baik \tabularnewline
+Manfaatkan Sisa (Simpan \& Modifikasi) & Hemat uang perangkat baru & Pemilik asli terus pakai, tanpa risiko & Performa perangkat masih OK, ada kebutuhan modifikasi di rumah \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{Recycle resmi/Trade-in}: Cara yang paling direkomendasikan, proses standar, keamanan data terjamin. Situs resmi Apple, Huawei, Xiaomi, dll. semua punya entri "Trade-in", setelah evaluasi bisa dipakai diskon harga ponsel baru.
+  \item \textbf{Platform recycle resmi}: Pilih platform daur ulang berskala besar dengan reputasi baik, setelah order kurir jemput, setelah inspeksi transfer. Pastikan pilih\textbf{yang menyediakan "laporan data wipe"}platform, dan simpan bukti.
+  \item \textbf{Donasi Amal}: Bisa kontak sekolah pedesaan lokal, organisasi amal komunitas, ponsel lama bisa dimodifikasi menjadi tablet pengajaran atau ponsel lansia.\textbf{Sebelum donasi pastikan execute proses wipe lengkap, dan lepas semua SIM/SD card}.
+  \item \textbf{Manfaatkan kembali}: Modifikasi menjadi navigator mobil, smart home hub, kamera CCTV, baby monitor, digital photo frame. Satu ponsel lama bisa bertugas beberapa tahun lagi.
+\end{itemize}
+
+\begin{tcbinfo}{Fakta Sampah Elektronik}
+Circuit board satu ponsel mengandung\textbf{emas, perak, palladium, tembaga}dan logam mulia lainnya, setiap ton circuit board bekas kandungan emasnya puluhan kali dari bijih emas. Tapi jika dibuang sembarangan, timbal, merkuri, kadmium di dalamnya akan meresap ke tanah dan air tanah, polusi berlangsung puluhan tahun.\textbf{Daur ulang yang benar melindungi lingkungan sekaligus mendaur ulang logam langka.}
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Praktik: Lakukan "Pemakaman Standar" untuk Ponsel Lama Anda}
+\begin{enumerate}
+  \item Backup lengkap terakhir kali: foto diunggah ke cloud, file penting disalin ke komputer, riwayat chat diekspor untuk arsip.
+  \item Keluar dari semua akun: iCloud / Huawei / Xiaomi / Google, matikan "Find My Phone".
+  \item Keluarkan kartu SIM dan kartu SD, putuskan semua periferal OTG.
+  \item Lakukan factory reset terenkripsi, jika perlu centang "format penyimpanan" secara manual.
+  \item (Perangkat lama saja) Isi penyimpanan dengan file sampah, lalu factory reset sekali lagi.
+  \item Pilih perhentian berikutnya: trade-in resmi, platform daur ulang formal, donasi amal, atau hadiahkan ke keluarga.
+  \item Perbarui "daftar warisan digital" Anda, coret perangkat yang sudah pensiun dari daftar.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbpractice}{Daftar tugas bulan ini}
+\begin{enumerate}
+  \item Tetapkan Apple "Legacy Contact" atau setel Google "Inactive Account Manager" untuk ponsel utama Anda saat ini.
+  \item Gunakan template bagian ini untuk menyusun "Lampiran Penanganan Aset Digital Pribadi", diskusikan lokasi penyimpanan dengan keluarga.
+  \item Periksa apakah ada 2 ponsel lama menganggur di rumah, jadwalkan daur ulang melalui platform resmi atau formal.
+\end{enumerate}
+
+\end{tcbpractice}

@@ -1,0 +1,196 @@
+\bookchapter{Bab 54: Proyek 1—Aplikasi Catatan Keuangan Saya (Versi Lokal)}
+
+\chapterintro{Selamat datang di 'proyek serius' pertamamu. Aplikasi catatan keuangan ini walau tidak terhubung internet, isinya lengkap: bisa mencatat pemasukan-pengeluaran, melihat riwayat, statistik per bulan, menghapus dan mengubah. Selesai mengerjakannya, kamu sudah menjalani alur lengkap 'data logika antarmuka'. Jangan buru-buru menyalin kode—pikirkan dulu baru bekerja, itu prinsip kita selama ini.}
+
+\booksection{Memikirkan Kebutuhan: Tanya Lima Pertanyaan Dulu}
+
+Sebelum mulai bekerja, gunakan 'lima unsur kebutuhan' untuk merapikan idemu:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Unsur} & \textbf{Jawaban} \tabularnewline
+\hline
+Who (untuk siapa) & Untuk sendiri, boleh juga keluarga dan teman \tabularnewline
+What (membuat apa) & Mencatat pemasukan-pengeluaran, melihat riwayat, rekap per bulan, statistik per kategori \tabularnewline
+Why (kenapa) & Latihan + tahu uang habis ke mana \tabularnewline
+How (bagaimana) & Kotlin + Compose + Room + MVVM, murni lokal tanpa backend \tabularnewline
+Constraint (batasan) & Selesai dalam seminggu; dukung minimal Android 8; walau tidak naik toko, tulis dengan standar naik toko \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Lima unsur kebutuhan aplikasi catatan keuangan\end{center}
+
+Lalu pecah menjadi langkah-langkah kecil yang 'setiap langkahnya bisa dipakai': (1) bangun lapisan data Room (bisa menyimpan satu catatan); (2) halaman daftar (bisa melihat riwayat); (3) halaman input (bisa menambah catatan); (4) hapus dan ubah; (5) kartu rekap bulanan. Setiap langkah selesai, aplikasinya selalu 'sesuatu yang bisa dipakai'.
+
+\booksection{Lapisan Data: Memberi 'Catatan Keuangan' Sebuah Rumah}
+
+Pertama definisikan seperti apa bentuk satu catatan—kolomnya cukup untuk kebutuhan tapi jangan serakah:
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" pemasukan | "expense" pengeluaran
+    val amount: Double,      // Nominal (yuan)
+    val category: String,    // Kategori: makan, transportasi, gaji……
+    val note: String = "",   // Catatan (opsional)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Di Dao tambahkan dua kueri 'untuk statistik'—inilah jiwa aplikasi catatan keuangan:
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month berbentuk "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tips: Kenapa Nominalnya Pakai Double?}
+Aplikasi finansial yang serius akan memakai BigDecimal atau 'Int dengan satuan sen' untuk menghindari galat floating point (masalah lama 0.1+0.2$\neq$0.3). Untuk proyek latihan, Double sudah cukup; kalau suatu hari membuat produk finansial sungguhan, ingat ganti dengan satuan 'sen'—jebakan yang sudah banyak dilewati para pendahulu.
+
+\end{tcbinfo}
+
+\booksection{MVVM: Antarmuka dan Logika 'Pisah Rumah'}
+
+Biar antarmuka langsung mengoperasikan database? Bisa jalan, tapi kode antarmukanya akan panjang lebar dan berantakan. Arsitektur MVVM membuat tiap pihak menjalankan tugasnya: View (antarmuka) hanya menggambar, ViewModel (pusat logika) mengurus data, Model (Room) mengurus penyimpanan.
+
+View (tampilan Compose)
+
+ViewModel (state dan logika)
+
+Model (lapisan data Room)
+
+\begin{center}\small\color{gray}Gambar 5: Struktur tiga lapis MVVM—data mengalir satu arah, tiap lapis tidak melintasi batas\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // Mengubah Flow menjadi state yang bisa diamati tampilan
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // Aksi pengguna: memanggil fungsi suspend
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+Di antarmuka (Compose) dipakai begini: val vm: RecordViewModel = viewModel(), lalu val list by vm.records.collectAsState()—begitu data berubah, daftar otomatis menyegarkan, kamu tidak perlu berbuat apa-apa. Inilah kekuatan gabungan MVVM + Flow + Compose.
+
+\booksection{Antarmuka: Halaman Daftar + Halaman Input}
+
+Halaman daftar memakai LazyColumn (daftar lazy-loading)—datanya sebanyak apa pun tidak akan patah-patah:
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // Kartu rekap di atas (pemasukan-pengeluaran=saldo)
+        SummaryCard(records)
+
+        // Daftar mutasi
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // Tombol melayang "Catat"  memunculkan dialog input
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+Untuk input, paling praktis memakai AlertDialog (dialog): beberapa kolom input + saklar pemasukan/pengeluaran + dropdown kategori, tekan OK lalu panggil vm.addRecord(...).
+
+\begin{tcbwarn}{Perhatian: Jangan Malas Memvalidasi Input}
+Kolom input nominal wajib divalidasi: nilai kosong, angka negatif, input tak sah seperti 'abc' semuanya harus ditahan (pakai toDoubleOrNull() untuk memeriksa). Salah satu penyebab paling umum aplikasi crash adalah 'menganggap input pengguna selalu anak baik'. Ingat: semua input pengguna harus diperlakukan seperti musuh yang diperiksa.
+
+\end{tcbwarn}
+
+\booksection{Ubah dan Hapus: Agar Data 'Bisa Masuk Bisa Keluar'}
+
+Aplikasi catatan keuangan yang hanya bisa menambah tapi tidak bisa menghapus, tiga hari langsung tidak terpakai. Tambahkan dua operasi ini:
+
+\begin{lstlisting}[language=Kotlin]
+// Tambahkan dua fungsi di Dao:
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// Di layar: tekan lama item daftar untuk memunculkan menu "edit/hapus" (Compose pakai DropdownMenu atau AlertDialog)
+// Sebaiknya munculkan dialog konfirmasi sebelum menghapus—"terhapus tak sengaja" adalah hal paling dibenci pengguna aplikasi catatan keuangan
+\end{lstlisting}
+
+Dua pengalaman soal detail interaksi: hapus wajib konfirmasi dua kali (mencegah jari selip), ubah sebisa mungkin sudah terisi nilai lama (mengubah satu kata lebih hemat daripada mengetik ulang). Jangan remehkan dua detail ini—rasa 'produk' memang ditumpuk dari detail-detail begini.
+
+\booksection{Serah Terima: Pemeriksaan Tiga Lapis + Dua Tantangan Lanjutan}
+
+\booksection{Serah Terima: Pemeriksaan Tiga Lapis + Dua Tantangan Lanjutan}
+
+Setelah proyek selesai, lakukan serah terima tiga lapis 'fungsi batas arsitektur': bisa mencatat tidak, bisa menghapus tidak, data masih ada tidak setelah aplikasi dibuka ulang (fungsi); apakah crash saat nominal diisi 0 atau negatif, apakah data hilang saat layar diputar (batas); apakah antarmuka dan data tercampur, apakah ada kolom yang ditulis mati (arsitektur).
+
+Setelah versi dasar lolos serah terima, beri dirimu dua 'hidangan lanjutan':
+
+\begin{enumerate}
+  \item Filter bulanan: tambahkan sakelar bulan di bagian atas (misalnya 2026-08 v), daftar hanya menampilkan riwayat bulan itu;
+  \item Diagram lingkaran kategori: pakai Canvas milik Compose atau pustaka grafik ringan, gambar 'uang habis ke mana' sebagai diagram lingkaran—setelah jadi ini, aplikasi catatan keuanganmu mulai terasa seperti 'produk'.
+\end{enumerate}
+
+\begin{tcbpractice}{Praktik: Selesaikan Minggu Ini}
+Bekerja dengan urutan 'lapisan data ViewModel halaman daftar halaman input kartu rekap', satu langkah per hari. Kalau macet, lempar errornya apa adanya ke mesin pencari atau AI (masih ingat Bagian 7 'Praktik Pemrograman AI'? Saat menjelaskan masalah, sebutkan dengan jelas 'perilaku yang diharapkan, perilaku nyata, langkah reproduksi'). Setelah selesai, pakai untuk mencatat keuangan selama seminggu—memakai aplikasi buatan sendiri, rasa bangganya akan mendorongmu terus melangkah.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Lima unsur kebutuhan pecah menjadi langkah kecil 'setiap langkah bisa dipakai', baru mulai bekerja
+  \item Lapisan data: entitas Record + Dao (termasuk SQL statistik bulanan) + Database
+  \item Pembagian tugas MVVM: View hanya menggambar, ViewModel mengurus logika, Model mengurus penyimpanan
+  \item Flow + stateIn + collectAsState: begitu data berubah, antarmuka otomatis menyegarkan
+  \item LazyColumn daftar lazy-loading; AlertDialog untuk input
+  \item Serah terima tiga lapis (fungsi/batas/arsitektur) + tantangan lanjutan (filter bulanan, diagram lingkaran kategori)
+\end{itemize}
+
+\end{tcbsummary}

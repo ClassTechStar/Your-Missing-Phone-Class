@@ -1,0 +1,154 @@
+\bookchapter{第四十八章：認識安卓——由操作系統到開發生態}
+
+\chapterintro{恭喜你做出呢個決定——由「玩手機嘅人」變成「做手機應用嘅人」。喺動手之前，我哋先攤開張地圖：安卓由邊度嚟？點解全世界嘅開發者都幫佢寫應用？一個 App 由你手指敲鍵盤到用戶手機上面，中間發生咗乜嘢事？}
+
+\booksection{一、安卓嘅身世：由「小機械人」到「全球最大系統」}
+
+安卓（Android）嘅故事始於 2003 年——一個叫 Andy Rubin 嘅工程師創辦咗 Android 公司，目標好樸素：做一套「更識用相機」嘅智能操作系統。後來谷歌喺 2005 年收購咗佢，2007 年聯同幾十間廠商成立開放手機聯盟（OHA），2008 年 9 月，第一款安卓手機 HTC Dream（G1）正式發售。
+
+後面嘅故事大家都知喇：到 2026 年，安卓係全球市場份額最大嘅流動操作系統，活躍設備數以十億計。你嘅手機、電視盒、車載大螢幕、智能手錶，好可能都喺度行緊安卓。呢個意味住乜嘢？意味住你寫嘅每一行代碼，都有機會畀世界上最多人用到。
+
+\begin{tcbinfo}{小貼士：安卓嘅開源基因}
+安卓嘅核心代碼（AOSP，Android Open Source Project）係開源嘅——任何廠商都可以攞去修改定製。所以小米有 MIUI（而家叫澎湃 OS）、華為有鴻蒙兼容層、三星有 One UI。呢樣嘢對開發者係好事：你學嘅係「安卓開發」，唔係「某個品牌嘅開發」，一套功夫，通喫全網。
+
+\end{tcbinfo}
+
+版本號嘅進化都好有趣：由 1.5 嘅紙杯蛋糕（Cupcake）開始，每個大版本都以甜品命名——甜甜圈、閃電泡芙、凍乳酪、薑餅……一直到 2019 年嘅安卓 10 先改成純數字。到 2026 年 8 月，最新正式版係 Android 17，而開發時你真正需要關心嘅「最低支援版本」，主流 App 一般定喺 Android 8（API 26）到 Android 10（API 29）之間——支援到幾年前嘅設備，你嘅用戶羣先夠大。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{版本} & \textbf{代號/年份} & \textbf{對開發者重要嘅事} \tabularnewline
+\hline
+Android 8 (API 26) & Oreo · 2017 & 通知渠道、後臺限制——好多舊機型嘅最低線 \tabularnewline
+Android 10 (API 29) & 2019 & 分區儲存登場，檔案存取規矩大改 \tabularnewline
+Android 12 (API 31) & 2021 & Material You 動態取色，介面觀感大升級 \tabularnewline
+Android 13 (API 33) & 2022 & 執行時通知權限，彈窗問你「準唔準發通知」 \tabularnewline
+Android 14-15 (API 34-35) & 2023-2024 & 預測性返回、16KB 頁、私隱進一步收緊 \tabularnewline
+Android 16-17 (API 36-37) & 2025-2026 & 更快嘅小版本節奏、AI 能力整合（例如 Gemini 擴展） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}安卓版本簡史（截至 2026 年 8 月，開發重點關注項）\end{center}
+
+\booksection{二、用乜嘢語言寫：Java 定 Kotlin？}
+
+安卓開發歷史上出現過兩種主流語言。Java 係「開國元老」——安卓誕生之初就用佢；Kotlin 係 2017 年穀歌欽點嘅「一等公民」，2019 年起官方明確「Kotlin 優先」（Kotlin-first），到 2026 年，新項目幾乎全部用 Kotlin，舊項目都大部分陸續遷移緊。
+
+講句實喺話：如果你係完全零基礎，直接學 Kotlin，唔好返轉頭掂 Java。原因有三：一係 Kotlin 代碼量比 Java 少 30\%-40\%（同樣嘅功能，Kotlin 更短更清晰）；二係佢天生防到「空指標」呢種新手噩夢；三係所有現代教程、官方文檔、AI 編程工具（仲記唔記得我哋本 AI 編程書呀？）都以 Kotlin 為準。Java 只係喺維護舊項目、睇舊代碼嗰陣先會遇到。
+
+Java 風格（長氣版）
+
+\begin{lstlisting}
+public class MainActivity extends Activity \{
+@Override
+protected void onCreate(Bundle b) \{
+super.onCreate(b);
+setContentView(R.layout.activity);
+\}
+\}
+\end{lstlisting}
+
+Kotlin 風格（清爽版）
+
+\begin{lstlisting}
+class MainActivity : ComponentActivity() \{
+override fun onCreate(b: Bundle?) \{
+super.onCreate(b)
+setContent \{ App() \}
+\}
+\}
+\end{lstlisting}
+
+同樣一件事，Kotlin 少咗一堆花括號同樣板。第 50 章我哋會正式學佢，而家你只需要記住：安卓開發嘅「普通話」叫 Kotlin。
+
+\booksection{三、一個 App 係點樣誕生嘅？}
+
+好多人以為「開發 App」就係打開電腦狂寫代碼。實際上，一個 App 由諗法到用戶手機上面，大致要經過咁一條流水線：
+
+想法
+
+設計（界面+功能）
+
+寫代碼
+
+編譯打包（APK/AAB）
+
+測試（模擬器+真機）
+
+發佈（商店/安裝包）
+
+\begin{center}\small\color{gray}圖 1：一個安卓 App 由諗法到上架嘅全流程\end{center}
+
+流程入面有兩個概念你而家就要認識：
+
+\begin{itemize}
+  \item APK：安卓應用嘅安裝包格式（.apk），雙擊就可以裝到手機度，就好似 Windows 嘅 .exe 咁。平時自己測試、傳畀朋友玩下，就用佢。
+  \item AAB：Android App Bundle（.aab），上架 Google Play 用嘅「高級打包格式」。商店會根據用戶嘅手機型號動態裁剪，令每個人下載嘅包更細。自己裝唔到，只可以交畀商店。
+\end{itemize}
+
+另外你仲會不斷聽到一個詞：SDK（Software Development Kit，軟件開發工具包）。佢就係安卓官方提供嘅一整套「開發裝備」——包括各版本嘅 API 庫、除錯工具、模擬器映像等。你寫代碼時呼叫嘅 Activity、Button 呢啲類，都係嚟自 SDK。
+
+\booksection{四、安卓技術棧全景：你嘅「武器清單」}
+
+正式學習之前，先認識嚇 2026 年主流安卓項目嘅標準配置——呢張清單你而家睇唔明唔緊要，全書學完返轉頭睇，就會豁然開朗：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{層次} & \textbf{主流選擇（2026）} & \textbf{做乜嘢用嘅} \tabularnewline
+\hline
+語言 & Kotlin 2.x & 寫邏輯嘅語言 \tabularnewline
+介面 & Jetpack Compose + Material 3 & 用代碼畫介面（本書主線） \tabularnewline
+架構 & MVVM + ViewModel & 將介面同邏輯分開，代碼唔會亂 \tabularnewline
+數據儲存 & Room（數據庫）+ DataStore（配置） & 將數據存入手機 \tabularnewline
+網絡 & Retrofit + OkHttp + Kotlin 協程 & 同伺服器對話 \tabularnewline
+構建工具 & Gradle + Kotlin DSL & 將代碼變成安裝包 \tabularnewline
+開發環境 & Android Studio & 谷歌官方嘅「全家桶」IDE \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}2026 年安卓主流技術棧速覽\end{center}
+
+唔好畀呢串英文字嚇親。佢哋就好似廚房入面嘅鑊鑊罌罌噉——你而家只需要知道「煮飯要入廚房」，至於每樣工具點樣用，後面章節會逐個拆開畀你睇。而且有個好消息：Android Studio 開新項目嗰陣會自動幫你將成套嘢配置好，你淨係負責炒菜就得。
+
+\booksection{五、安卓 vs iOS：開發者第一堂「揀邊邊」課}
+
+你手上可能同時有安卓同蘋果嘅設備。作為開發者，兩邊嘅體驗差異值得提前瞭解——唔係「邊個更好」嘅站隊，而係「邊一邊更加適合你起步」嘅現實賬：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{維度} & \textbf{安卓開發} & \textbf{iOS 開發} \tabularnewline
+\hline
+開發電腦 & Windows / Mac / Linux 都得 & 一定要 Mac（Xcode 獨佔） \tabularnewline
+開發工具 & Android Studio（免費） & Xcode（免費）+ 上架年費 99 美元 \tabularnewline
+上架審核 & 寬鬆，幾個鐘至幾日 & 嚴格，1 至 7 日係常態 \tabularnewline
+裝機試玩 & APK 隨便發、隨便裝 & 分發受限，測試要簽名／TestFlight \tabularnewline
+收入環境 & 以廣告／國內渠道為主 & App Store 內購付費習慣更好 \tabularnewline
+學習成本 & 概念比較多（四大組件等等） & 生態封閉但體系統一、文檔精良 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}安卓同 iOS 開發路徑對比（2026 年 8 月）\end{center}
+
+講句實喺話：如果你部電腦唔係 Mac，呢條題根本唔使揀——安卓係唯一選項。如果你有 Mac，本書第八、九兩篇可以對照住讀，編程思路係相通嘅，學完一邊再學另一邊會快好多。
+
+\begin{tcbpractice}{嚟動手：睇嚇你手機入面嘅「安卓」}
+打開手機嘅 [設定] [關於手機]（或者「關於本機」），搵到「安卓版本」或者「Android 版本」嗰一欄——連續篤佢幾下，仲可以觸發系統嘅彩蛋小遊戲。記低你嘅版本號，對照上面嘅版本表睇嚇佢屬於邊一代。你部手機，就係你嘅第一部「開發測試機」。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小結}
+\begin{itemize}
+  \item 安卓 2008 年誕生，2026 年係全球市場份額最大嘅流動系統，活躍設備有幾十億部
+  \item 最新正式版係 Android 17；主流 App 最低支援 Android 8 至 10，用戶盤子先至夠大
+  \item 新項目一律用 Kotlin：程式碼少 30\% 以上、防空指標、官方欽定
+  \item APK 自己裝，AAB 上商店；SDK 係官方開發裝備包
+  \item 2026 標準技術棧：Kotlin + Compose + MVVM + Room + Retrofit + Gradle + Android Studio
+\end{itemize}
+
+\end{tcbsummary}

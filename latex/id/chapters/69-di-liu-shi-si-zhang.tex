@@ -1,0 +1,185 @@
+\bookchapter{Bab 64: Penyimpanan Data dan Permintaan Jaringan}
+
+\chapterintro{App yang hanya bisa “dilihat” itu mati; App yang bisa menyimpan data dan terhubung ke internet barulah hidup. Bab ini memperkenalkan “trio” lapisan data iOS: UserDefaults (menyimpan konfigurasi kecil), SwiftData (menyimpan data terstruktur), URLSession (berbicara dengan server), ditambah Codable untuk mengurai JSON serta async/await yang modern. Setelah bab ini, kamu bisa menulis App sungguhan yang mengingat kebiasaan pengguna dan memperbarui konten secara real-time.}
+
+\booksection{Cara Memilih Skema Penyimpanan: Lihat Dulu Tabel Ini}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Skema} & \textbf{Cocok untuk menyimpan apa} & \textbf{Ciri} & \textbf{Dipakai di mana di buku ini} \tabularnewline
+\hline
+UserDefaults & Konfigurasi kecil-kecil (sakelar, preferensi) & Pasangan kunci-nilai, sederhana dan langsung & Pengaturan Bab 65, kota favorit Bab 66 \tabularnewline
+SwiftData & Data terstruktur (catatan keuangan, rekaman) & Pembungkus basis data resmi, dideklarasikan cukup @Model satu baris & Catatan keuangan Bab 65 \tabularnewline
+URLSession & (tidak disimpan, diambil lewat internet) Data server & Framework jaringan bawaan sistem, tanpa dependensi pihak ketiga & Data cuaca Bab 66 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Pembagian tugas trio data\end{center}
+
+Hafalkan jembatan keledai ini: “konfigurasi kecil masuk UserDefaults, data dalam jumlah besar masuk SwiftData, data dari luar lewat URLSession”. Core Data di tutorial lama tetap bisa dipakai (SwiftData adalah wajah modernnya), sedangkan SQLite tulis manual hampir tidak perlu disentuh — belajar langsung yang baru, jangan ambil jalan lama.
+
+\booksection{UserDefaults: Menyimpan Konfigurasi Kecil}
+
+\begin{lstlisting}[language=Swift]
+// Tulis: simpan sebuah nilai
+UserDefaults.standard.set(true, forKey: "isDarkMode")
+UserDefaults.standard.set("Beijing", forKey: "favoriteCity")
+
+// Baca: ambil nilainya (kalau tidak ada, kembalikan nilai default)
+let isDark = UserDefaults.standard.bool(forKey: "isDarkMode")
+let city = UserDefaults.standard.string(forKey: "favoriteCity") ?? "Beijing"
+
+// Hapus: buang satu key
+UserDefaults.standard.removeObject(forKey: "isDarkMode")
+\end{lstlisting}
+
+Ingat, ia hanya cocok untuk konfigurasi kecil yang berserakan — puluhan hingga ratusan rekaman serahkan ke SwiftData; jangan menjadikan UserDefaults sebagai basis data (akan memperlambat proses startup dan menyulitkan pencarian).
+
+\booksection{SwiftData: Memberi Data “Rumah yang Sesungguhnya”}
+
+SwiftData adalah solusi basis data resmi sejak iOS 17, yang menyederhanakan “membuat tabel, menambah, menghapus, mengubah, mencari” hingga ekstrem — cukup satu anotasi @Model, kelas data langsung menjadi tabel basis data:
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+// 1. @Model: kelas ini otomatis menjadi "tabel"
+@Model
+class Record {
+    var amount: Double
+    var category: String
+    var note: String
+    var date: Date
+
+    init(amount: Double, category: String, note: String, date: Date) {
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+
+// 2. Pasang kontainer di titik masuk aplikasi
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .modelContainer(for: Record.self)   // database siap
+    }
+}
+
+// 3. Di view pakai @Query untuk baca, @Environment untuk tulis
+struct RecordListView: View {
+    @Query(sort: \Record.date, order: .reverse) var records: [Record]
+    @Environment(\.modelContext) private var context
+
+    var body: some View {
+        List(records) { r in
+            Text("\(r.category) \(r.amount) yuan")
+        }
+    }
+
+    func add(amount: Double, category: String) {
+        let r = Record(amount: amount, category: category, note: "", date: Date())
+        context.insert(r)     // simpan
+        try? context.save()   // tulis ke disk
+    }
+}
+\end{lstlisting}
+
+Templat “@Model + modelContainer + @Query” ini bisa dipindahkan apa adanya ke proyek mana pun milikmu — cukup ganti nama fieldnya. Begitu data berubah, @Query otomatis menyegarkan antarmuka; kenyamanannya luar biasa.
+
+\booksection{Codable: “Menerjemahkan” JSON}
+
+Data dari server sebagian besar berupa teks JSON. Protokol Codable di Swift membuat konversi “JSON struct” terjadi otomatis — begitu nama field cocok, sihirnya langsung bekerja:
+
+\begin{lstlisting}[language=Swift]
+// JSON: {"name":"Beijing","main":{"temp":26.5},"weather":[{"description":"Cerah"}]}
+struct WeatherResponse: Codable {
+    let name: String
+    let main: Main
+    let weather: [Weather]
+}
+struct Main: Codable { let temp: Double }
+struct Weather: Codable { let description: String }
+
+// String JSON  struct
+let decoder = JSONDecoder()
+let data = jsonString.data(using: .utf8)!
+let result = try decoder.decode(WeatherResponse.self, from: data)
+print(result.weather[0].description)   // "Cerah"
+\end{lstlisting}
+
+Aturan besi: lihat dulu JSON asli yang dikembalikan, baru definisikan field. Banyak bug “gagal parsing” penyebabnya nama field salah tulis atau tipe salah tebak (server mengirim string “26.5”, kamu mendeklarasikannya sebagai Double) — cetak JSON mentahnya untuk dibandingkan, masalah ketemu dalam sepuluh detik.
+
+\booksection{URLSession + async/await: Berbicara dengan Server}
+
+Untuk koneksi internet, iOS memakai URLSession bawaan sistem; dikombinasikan dengan async/await Swift (fungsi asinkron), “menunggu jaringan” terasa senatural “menunggu paket kiriman”:
+
+\begin{lstlisting}[language=Swift]
+struct WeatherService {
+    // Fungsi async: async artinya "aku perlu menunggu", throws artinya "bisa gagal"
+    func fetchWeather(city: String) async throws -> WeatherResponse {
+        let url = URL(string:
+            "https://api.example.com/weather?city=\(city)")!
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return try JSONDecoder().decode(WeatherResponse.self, from: data)
+    }
+}
+
+// Titik pemanggilan (di dalam .task):
+.task {
+    do {
+        let weather = try await service.fetchWeather(city: "Beijing")
+        // Perbarui tampilan……
+    } catch {
+        print("Terjadi kesalahan: \(error)")
+    }
+}
+\end{lstlisting}
+
+\textbf{Peringatan Jebakan: Dua Aturan Besi Jaringan}\par
+
+(1) Akses internet wajib async/await, jangan pernah memblokir thread utama — antarmuka yang macet adalah pengalaman selevel crash. Structured concurrency di Swift membuat hal ini terasa alami, tapi jangan lupakan try await dan do/catch. (2) ATS secara bawaan melarang HTTP teks polos: iOS mewajibkan HTTPS. Saat menguji layanan http:// lokal, perlu membuka pengecualian sementara di Info.plist (NSAppTransportSecurity), tetapi produk resmi wajib sepenuhnya lewat HTTPS — pemeriksaan App Store juga mengawasi hal ini.
+
+\begin{tcbpractice}{Praktik: Membuat Aplikasi Kecil "Kalimat Harian"}
+\booksection{Kesalahan Jaringan Juga Perlu “Diklasifikasi”: Jangan Buang Semua Error ke Pengguna}
+
+Koneksi putus, timeout, 404, server 500… kesalahan yang berbeda butuh pesan yang berbeda pula untuk pengguna:
+
+\begin{lstlisting}[language=Swift]
+func friendlyMessage(_ error: Error) -> String {
+    if let urlError = error as? URLError {
+        switch urlError.code {
+        case .notConnectedToInternet: return "Koneksi terputus, cek dulu ya?"
+        case .timedOut:               return "Permintaan habis waktu, coba lagi nanti ya?"
+        case .cannotFindHost:         return "Server tidak ditemukan"
+        default:                      return "Ada masalah jaringan: \(urlError.code)"
+        }
+    }
+    if let d = error as? DecodingError {
+        return "Format data tidak cocok (mungkin API-nya berubah)"
+    }
+    return "Terjadi kesalahan: \(error.localizedDescription)"
+}
+\end{lstlisting}
+
+Tunjukkan “bahasa manusia” kepada pengguna, dan “teks asli” untuk log (print error secara lengkap). Jangan melempar tulisan Inggris rumit dari error.localizedDescription langsung ke pengguna — rasa produk justru tersembunyi di detail seperti ini.
+
+Cari API kutipan gratis (misalnya hitokoto dan sejenisnya), gunakan URLSession + async/await untuk mengambil “kalimat harian”, tampilkan di tengah layar, dan tambahkan tombol “Ganti kalimat”. Lalu simpan kalimat favorit ke “koleksi” dengan SwiftData. Latihan ini memakai UserDefaults/SwiftData/Codable/URLSession semuanya sekaligus — setelah menyelesaikannya, Bab 7 dan 8 akan terasa seperti makan hidangan ringan.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Jembatan keledai: konfigurasi kecil masuk UserDefaults, data dalam jumlah besar masuk SwiftData, data dari luar lewat URLSession
+  \item Tiga jurus SwiftData: @Model mendeklarasikan tabel, modelContainer memasang kontainer, @Query untuk membaca + context.insert untuk menulis
+  \item Codable otomatis "menerjemahkan" JSON: begitu field cocok, sihirnya bekerja
+  \item URLSession + async/await: mengakses internet seperti menunggu paket; do/catch menangani kegagalan
+  \item Dua aturan besi: jangan blokir thread utama; produk resmi wajib HTTPS (ATS)
+\end{itemize}
+
+\end{tcbsummary}

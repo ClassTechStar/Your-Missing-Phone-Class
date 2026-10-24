@@ -1,0 +1,181 @@
+\bookchapter{第六十三章：視圖、狀態同導航}
+
+\chapterintro{單頁面嘅玩具你已經識做喇。呢一章解決兩個“長大”問題：點樣喺多個頁面之間跳嚟跳去（導航），以及數據喺頁面之間點樣流動（狀態管理）。學完本章，你就可以搭出“列表 詳情 編輯”呢種經典嘅多頁面 App 骨架。}
+
+\booksection{一、狀態管理嘅“數據流全景”}
+
+SwiftUI 嘅狀態工具唔止 @State 一個。先睇呢張全景圖，搞清楚“幾時用邊個”：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{工具} & \textbf{管乜嘢} & \textbf{邊個用} & \textbf{典型場景} \tabularnewline
+\hline
+@State & 頁面私有嘅臨時狀態 & 當前視圖 & 計數器、輸入框文字 \tabularnewline
+@Binding & 借人哋嘅狀態 & 子視圖改父視圖 & 自訂組件 \tabularnewline
+@StateObject / @Observable & 跨頁面共享嘅邏輯 & 視圖模型（ViewModel） & 數據加載、業務邏輯 \tabularnewline
+@EnvironmentObject / .environment & 全局共享嘅狀態 & 成個 App & 用戶登入狀態、主題設定 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}SwiftUI 狀態工具全景（2026 年，@Observable 已經係主流）\end{center}
+
+\begin{lstlisting}[language=Swift]
+// iOS 17+ 嘅現代寫法：@Observable 宏（新建項目建議用）
+import Observation
+
+@Observable
+class CounterModel {                 // 視圖模型
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // 持有模型
+
+    var body: some View {
+        VStack {
+            Text("你㩒咗 \(model.count) 次")
+            Button("㩒我") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+畀新手嘅粗暴建議：頁面私有嘅用 @State，跨頁面／有邏輯嘅用 @Observable 類。舊教程入面嘅 @StateObject/@ObservableObject 係上一代寫法，睇得明就得，新代碼照上面咁做。
+
+\booksection{二、NavigationStack：頁面跳轉嘅“棧”}
+
+iOS 16 開始，多頁面導航用 NavigationStack——好似一疊碟咁，推一個入一個，返回嗰陣逐個彈出嚟：
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("張三嘅賬本") {
+                    DetailView(name: "張三嘅賬本")   // 目標頁面
+                }
+                NavigationLink("李四嘅賬本") {
+                    DetailView(name: "李四嘅賬本")
+                }
+            }
+            .navigationTitle("賬本列表")   // 頂部大標題
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("\(name) 嘅詳情頁")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+NavigationLink 就係“㩒得嘅跳轉連結”；navigationTitle 自動生成導航欄標題同返回按鈕。要編程式跳轉（譬如㩒完“保存”自動返回）嗰陣，用 @Environment(\textbackslash{}.dismiss) 關閉當前頁面——呢兩招一齊用，90\% 嘅導航需求就齊喇。
+
+\booksection{三、彈窗同底部標籤：sheet 同 TabView}
+
+除咗“推頁面”，仲有兩種經典交互：
+
+\begin{lstlisting}[language=Swift]
+// 1. 底部彈出半屏/全屏（錄入表單最愛）
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("記一筆") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // 彈出嘅錄入頁
+            }
+    }
+}
+
+// 2. 底部標籤欄（App 嘅"骨架"）
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("賬本", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("統計", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("設定", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{小貼士：幾時用邊種？}
+經驗法則：主流程用 NavigationStack 推頁面（列表詳情），臨時操作用 sheet 彈窗（新增、編輯、確認），並列嘅幾大塊用 TabView（底部標籤）。三者組合，就係絕大多數 App 嘅骨架。
+
+\end{tcbinfo}
+
+\booksection{四、List：iOS 嘅“國民列表”}
+
+iOS 上面最常用、最有“蘋果味”嘅組件就係 List——天生帶分割線、滑動刪除、㩒咗會高亮：
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["午餐 25.5", "地鐵 6.0", "人工 +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // 左掃刪除
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+列表 + NavigationLink + sheet + TabView——將呢四樣組合埋一齊，你已經可以搭出“賬本列表 㩒開詳情 㩒+彈錄入”嘅完整 App 骨架喇。下一章嘅記賬本項目，就係咁搭嘅。
+
+\begin{tcbpractice}{嚟動手：搭一個"三頁骨架"}
+\booksection{五、程式生命週期：前台同後台}
+
+同安卓嘅 Activity 生命週期差唔多，iOS App 都有“出生、前台、後台、死亡”嘅狀態變化。SwiftUI 入面用 scenePhase 環境值嚟觀察：
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("回到前臺，恢復刷新")
+            case .inactive:  print("過渡中（來電/切後臺瞬間）")
+            case .background: print("進後臺，保存草稿")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+典型用途：返到前台嗰陣刷新數據，入咗後台嗰陣保存草稿。iOS 對後台運行管得好嚴——普通 App 入咗後台好快就會被掛起（凍結），唔好指望喺後台偷偷哋做重活；真係要定時任務，用第 68 章嘅本地通知，而唔係“後台常駐”。
+
+做一個假數據版本嘅記賬本骨架：TabView 三個標籤（賬本／統計／設定） 賬本頁用 List 顯示假數據、㩒行跳詳情（NavigationStack） 右上角“+”按鈕彈錄入 sheet。唔存數據、唔上網，純練骨架——呢個骨架做好咗，第 65 章再入去填真數據就水到渠成。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小結}
+\begin{itemize}
+  \item 狀態四工具：@State（頁面私有）、@Binding（借用）、@Observable（邏輯）、.environment（全局）
+  \item 新項目用 @Observable 巨集寫視圖模型；舊教程嘅 @ObservableObject 睇得明就得
+  \item NavigationStack 推頁面；@Environment(\textbackslash{}.dismiss) 編程式返回
+  \item 主流程推頁面、臨時操作彈 sheet、並列大塊用 TabView
+  \item List 係"國民列表"：分割線、滑動刪除開箱即用
+\end{itemize}
+
+\end{tcbsummary}

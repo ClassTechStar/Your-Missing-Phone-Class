@@ -1,0 +1,188 @@
+\bookchapter{第三十八章：AI 編程五大思維原則}
+
+\chapterintro{如果呢本書只可以讓你記住一章，咁就必須係呢一章。五大思維原則係全書嘅心臟，後面所有章節——上下文、需求、對話、質量——都係呢五條原則喺唔同場景下嘅展開。放心，每一條都唔難明，但每一條都值得你用幾個項目去「長入肌肉入面」。}
+
+故事嘅起點好有意思：Andrej Karpathy 喺開源佢嘅項目時，附咗一份僅 70 行嘅 CLAUDE.md 檔案，總結咗同 AI 協作嘅四條核心原則。呢份檔案喺 GitHub 上獲得咗超過 70,000 個 Star，成為全球 AI 編程實踐者最廣泛引用嘅準則。呢四條原則唔係空洞嘅口號，而係由大量實踐中提煉出嚟嘅、可操作嘅思維習慣。本書喺佢嘅基礎上補充咗第五條——迭代驗證——構成完整嘅五大原則體系。
+
+\begin{tcbinfo}{70 行檔案點解咁值錢？}
+70,000 個 Star 係乜嘢概念？GitHub 上絕大多數項目一世都到唔到呢個數字。一個 70 行嘅文本檔案能夠獲得佢，恰恰證明咗一件事：AI 時代最稀缺嘅唔係代碼，而係「想清楚」嘅能力。呢 70 行，就係「想清楚」嘅濃縮版。
+
+\end{tcbinfo}
+
+\booksection{一、原則一：Think Before Coding（先思考，再編碼）}
+
+呢個係五條原則中最反直覺嘅一條。既然 AI 能夠幫我哋寫代碼，點解仲要「先思考」？答案好簡單：AI 嘅產出質量同你嘅輸入質量正相關。你自己都冇想清楚要做乜嘢，AI 畀出嘅答案只會讓你陷入無休止嘅「改咗又改」循環——俗稱「AI 陪你一齊蕩失路」。
+
+「先思考」意味住喺畀 AI 落指令之前，你需要回答三個問題，佢哋構成一個缺一不可嘅「思考三角」：
+
+\begin{enumerate}
+  \item 我要解決乜嘢問題？（目標）
+  \item 我期望嘅結果係點樣嘅？（驗收標準）
+  \item 有邊啲約束條件需要遵守？（邊界）
+\end{enumerate}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{思考維度} & \textbf{模糊輸入（差）} & \textbf{清晰輸入（好）} \tabularnewline
+\hline
+問題定義 & 幫我做個網站 & 幫我做一個個人工具站，展示 3 個 AI 小工具嘅入口卡片 \tabularnewline
+期望結果 & 好睇一啲 & 響應式佈局，暗色主題，卡片有懸停動畫，移動端可用 \tabularnewline
+約束條件 & （未說明） & 唔使用框架，純 HTML+CSS+JS，單檔案部署，唔需要後端 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}同一需求嘅模糊輸入同清晰輸入對比\end{center}
+
+\begin{tcbwarn}{留意：先思考 $\neq$ 先寫完美文檔}
+「先思考」唔等於「寫一份完美嘅 PRD 再開始」。佢係一個快速但有條理嘅思考過程——花 30 秒想清楚上面三個問題，遠比花 30 分鐘喺對話中反覆修改嚟得高效。小任務三問可以好短；大項目可以將佢哋擴展成完整嘅需求文檔（詳見第四十章）。
+
+\end{tcbwarn}
+
+\booksection{二、原則二：Simplicity First（簡單至上）}
+
+AI 編程最大嘅陷阱唔係「做唔出嚟」，而係「做得太多」。當你對 AI 講「做一個用戶管理系統」，佢可能會生成認證、權限、角色、審計日誌、數據導出等一整套功能——但你而家可能只需要一個簡單嘅登入頁面。過度生成，係 AI 代碼膨脹嘅主要原因。
+
+「簡單至上」要求你喺每次落指令時都遵循「最小可行」原則：用最少嘅代碼實現核心功能，用最簡單嘅方案解決問題，用最少嘅功能驗證想法。Karpathy 對此有個精闢嘅比喻：「如果你要計算一個折扣價格，你唔需要一個電商引擎。」
+
+喺實踐中，「簡單至上」意味住幾個具體嘅操作習慣：
+
+\begin{itemize}
+  \item 每次只畀 AI 實現一個功能點，而唔係一口氣描述成個系統；
+  \item 優先揀標準庫同簡單方案，而唔係引入複雜嘅依賴；
+  \item 可以用 50 行代碼解決嘅問題，唔好畀 AI 寫 500 行；
+  \item 當 AI 嘅產出超出預期範圍時，勇敢咁話佢知「斬走多餘嘅部分」。
+\end{itemize}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{場景} & \textbf{過度方案（避免）} & \textbf{簡單方案（推薦）} \tabularnewline
+\hline
+需要儲存數據 & 搭建 MySQL 數據庫 + ORM & 先用 JSON 檔案或者 SQLite \tabularnewline
+需要用戶登入 & OAuth2.0 + JWT + 角色權限 & 先做簡單嘅密碼驗證 \tabularnewline
+需要前端框架 & React + Redux + Router & 先試純 HTML + 原生 JS \tabularnewline
+需要部署上線 & Docker + CI/CD + K8s & 先喺本地跑通再講 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}常見場景嘅過度方案同簡單方案對比\end{center}
+
+\booksection{三、原則三：Surgical Changes（精準修改）}
+
+當你喺迭代一個已有項目時，每次修改都應該好似外科手術一樣精準——只鬱該鬱嘅地方，唔好碰唔該碰嘅。呢一點喺 AI 編程中尤其重要，因為 AI 有「順手改一下」嘅傾向：你畀佢修一個 bug，佢可能順便重構咗半個檔案。
+
+「精準修改」嘅核心要求係：每次畀 AI 嘅指令，都明確指定修改嘅範圍同邊界。話佢知「只修改 calculate\_discount 函數」「唔好鬱其他部分」「保持現有嘅代碼風格」。當 AI 嘅修改超出咗你要求嘅範圍時，即刻要求佢回退多餘嘅部分。
+
+Karpathy 用一個 diff（差異對比）嘅例子說明咗呢一點。假設你畀 AI 畀購物車嘅折扣計算函數添加「會員價」邏輯：好嘅產出係只修改呢一個函數、增加幾行代碼；差嘅產出係將成個檔案重構咗一次——雖然新代碼可能更「優雅」，但你唔能夠確定佢有冇引入新 bug。喺 AI 編程中，「睇起嚟更好」永遠唔能夠成為偏離指令嘅理由。
+
+差嘅指令（範圍模糊）
+
+\begin{lstlisting}
+幫我優化呢個項目嘅 折扣計算邏輯
+\end{lstlisting}
+
+好嘅指令（精準指定範圍）
+
+\begin{lstlisting}
+只修改 cart.py 入面嘅 calculate\_discount 函數： 1. 喺現有折扣基礎上增加會員價邏輯 2. 會員用戶額外享受 10\% 折扣 3. 唔好修改函數簽名同其他函數 4. 保持現有嘅變數命名風格
+\end{lstlisting}
+
+\booksection{四、原則四：Goal-Driven Execution（目標驅動執行）}
+
+呢條原則回答咗一個關鍵問題：你應該畀 AI 落「點樣做」嘅指令，定係「做乜嘢」嘅指令？Karpathy 嘅答案係後者。與其話畀 AI 知「先創建一個類，然後添加方法，然後寫測試」，不如話佢知「我需要一個能夠解析 CSV 檔案並統計每列唯一值數量嘅工具」。等 AI 自己決定實現路徑，你負責驗收結果。
+
+「目標驅動」嘅好處係雙重嘅。對 AI 來說，佢獲得咗更大嘅自主空間，可以揀最優嘅實現路徑，而唔係被你嘅中間步驟束縛；對你來說，你將注意力由「點樣做」轉移到咗「做出嚟啱唔啱」——呢個正正係指揮官該做嘅嘢。
+
+\begin{tcbwarn}{留意：目標驅動 $\neq$ 放任不管}
+佢需要你喺 AI 執行後進行嚴格嘅驗收：結果係咪滿足需求？邊界情況係咪處理咗？有冇明顯嘅過度設計？如果結果唔符合預期，提供具體嘅反饋——唔係「重寫」，而係「呢度嘅問題喺於空列表輸入會報 IndexError，請修改為添加空值檢查」。
+
+\end{tcbwarn}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{指令風格} & \textbf{例子} & \textbf{結果特點} \tabularnewline
+\hline
+命令式（點樣做） & 「先創建一個 Python 類，叫 DataParser，加一個 parse 方法，接收 filename 參數，用 csv 模組讀取…」 & AI 變成打字員，你嘅中間步驟可能唔係最優路徑 \tabularnewline
+目標式（做乜嘢） & 「我需要一個工具：讀取 CSV 檔案，統計每列嘅唯一值數量，輸出為 JSON 格式。請畀出完整實現。」 & AI 自主揀最優路徑，你負責驗收結果 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}命令式指令同目標式指令嘅對比\end{center}
+
+\booksection{五、原則五：Iterate and Verify（迭代驗證）}
+
+呢個係本書喺 Karpathy 四原則基礎上補充嘅第五條。佢嘅核心信念係：AI 嘅第一次產出幾乎永遠唔係最終版本。有效嘅 AI 編程係一個「生成-驗證-修正」嘅迭代循環，而唔係一次性嘅「指令-產出」。
+
+「迭代驗證」唔係被動嘅「唔啱就再試」，而係一個有結構嘅驗證流程。每次 AI 畀出產出後，按三個層次進行驗證：
+
+\begin{itemize}
+  \item 第一層·功能驗證：佢跑唔跑得鬱？輸入輸出啱唔啱？
+  \item 第二層·邊界驗證：空輸入、超長輸入、異常輸入會點？
+  \item 第三層·架構驗證：代碼結構係咪合理？有冇硬編碼？係咪方便後續擴展？
+\end{itemize}
+
+定義目標
+
+AI 生成代碼
+
+功能驗證
+
+通過
+
+邊界驗證
+
+通過
+
+架構審查
+
+通過，進入下一步
+
+不通過
+
+提供具體反饋
+
+重新生成
+
+\begin{center}\small\color{gray}圖 2：AI 編程嘅迭代驗證循環\end{center}
+
+呢個循環嘅關鍵喺於「提供具體反饋」呢一步。當驗證唔通過時，唔好講「唔啱，重做」，而要講「函數喺輸入空列表時報 IndexError，請喺第 15 行添加空值檢查」。具體嘅反饋令 AI 能夠精準修正；模糊嘅反饋只會令佢重新猜測你嘅意圖。
+
+\booksection{六、Harness Engineering：Agent = Model + Harness}
+
+2026 年中期，一個叫 Harness Engineering 嘅概念開始喺 AI 編程社區流行。佢嘅核心公式好簡單：
+
+Agent 嘅能力 = 模型能力 × Harness 質量
+
+模型能力係 AI 大腦嘅智力上限；Harness 係圍繞模型搭建嘅「工作環境」——包括上下文管理、工具整合、流程編排、記憶系統等。
+
+呢個概念解釋咗一個常見嘅困惑：點解同樣用 GPT-4 或者 Claude，有啲人能夠做出驚艷嘅項目，有啲人只能夠得到平庸嘅代碼？區別唔喺模型，而喺 Harness。一個好嘅 Harness 包括：清晰嘅項目規範檔案、合理嘅工具整合、有條理嘅對話上下文、完善嘅驗證流程。模型決定咗智力上限，Harness 決定咗你能夠幾大程度發揮呢個上限。
+
+\begin{tcbinfo}{天才實習生比喻}
+你可以將模型想像成一個天才實習生——智商好高，但如果不畀佢項目背景文檔、唔話佢知用邊啲工具、唔畀佢設定期限同驗收標準，佢亦做唔出好嘢。Harness Engineering 就係「點樣畀天才實習生搭好工作環境」嘅工程。
+
+\end{tcbinfo}
+
+本書嘅後續章節，本質上都喺度教你點樣構建一個好嘅 Harness：第三十九章教你管理上下文（項目記憶系統），第四十章教你定義需求（PRD），第四十三章教你對話技術（Prompt 分層），第四十五章教你質量保障（驗證流程）。呢啲組合起嚟，就係你嘅 Harness。
+
+\begin{tcbpractice}{嚟動手：用「思考三角」拆解你嘅下一個想法}
+揀一個你一直想做但未動手嘅小嘢（例如一個倒數日網頁、一個飲水提醒腳本）。花 3 分鐘回答：(1) 佢解決乜嘢問題？(2) 做出嚟係點樣嘅？(3) 有乜嘢約束（時間、技術、環境）？然後將答案寫成一段話。恭喜你，你已經完成咗人生第一次「Think Before Coding」——呢段話就係一條合格嘅高質量指令。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小結}
+\begin{itemize}
+  \item 五大原則源自 Karpathy 70 行嘅 CLAUDE.md（70K+ Star），本書補充第五條「迭代驗證」
+  \item Think Before Coding：開口前回答三問——做乜嘢？結果係點嘅？有乜嘢約束？
+  \item Simplicity First：AI 最大嘅坑係「做得太多」——算折扣唔需要電商引擎
+  \item Surgical Changes：好似外科手術一樣精準修改，拒絕 AI 嘅「順手改一下」
+  \item Goal-Driven Execution：講「做乜嘢」，唔講「點樣做」，等 AI 自主揀路徑
+  \item Iterate and Verify：三層驗證（功能/邊界/架構）+ 具體反饋，循環迭代
+  \item Harness Engineering：能力 = 模型 × Harness，將 AI 當「天才實習生」嚟管理環境
+\end{itemize}
+
+\end{tcbsummary}

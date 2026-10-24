@@ -1,0 +1,115 @@
+\booksection{Apêndice do Capítulo 20: Termux — Ambiente de terminal Linux portátil em dispositivos Android}
+
+\chapterintro{Se você acha que o modo desenvolvedor não é “hardcore” o suficiente e quer experimentar uma linha de comando Linux completa no celular, o Termux foi feito para você. Sem precisar de root, ele transforma um telefone Android comum em uma estação de trabalho Linux portátil — uma ferramenta poderosa para usuários avançados explorarem desenvolvimento e operações em dispositivos móveis.}
+
+\booksubsection{O que é o Termux}
+
+O Termux é um aplicativo de emulador de terminal e ambiente Linux de código aberto projetado especificamente para dispositivos Android. Ele oferece uma experiência completa de shell Linux no celular sem precisar de root. Como um aplicativo leve (cerca de 30 MB), o Termux suporta um rico ecossistema de software através do sistema de gerenciamento de pacotes APT, permitindo executar ferramentas como Python, Node.js, Git, SSH e até mesmo montar servidores ou realizar testes de penetração em dispositivos móveis.
+
+A principal vantagem do Termux é sua leveza e alta escalabilidade, adequado para desenvolvimento, aprendizado e gerenciamento de sistemas em diversos cenários. Ele combina pacotes de software padrão com emulação de terminal precisa em uma solução de código aberto.
+
+\booksubsection{Funcionalidades e características principais}
+
+\subsubsection*{Ambiente Linux completo}
+
+O Termux\textbf{inclui apenas o Bash}como shell nativo. Se quiser usar Zsh, fish ou outros shells, é necessário instalá-los manualmente pelo gerenciador de pacotes, por exemplo:\texttt{pkg install zsh}ou\texttt{pkg install fish}. O Termux também suporta editores como Vim, Nano, Emacs, oferecendo uma experiência de linha de comando quase nativa. Os usuários podem instalar mais de 2000 pacotes de software via “pkg install”, incluindo ferramentas de desenvolvimento e segurança como GCC, OpenSSH, SQLMap.
+
+\subsubsection*{Gerenciamento de pacotes poderoso}
+
+Usa o gerenciador de pacotes APT (semelhante ao Debian e Ubuntu), podendo instalar milhares de pacotes de software Linux, abrangendo ferramentas de desenvolvimento, ferramentas de rede, etc. Suporta múltiplas linguagens de programação como Python, Ruby, Node.js, Go, Rust, Swift.
+
+\subsubsection*{Recursos de segurança e rede}
+
+\begin{itemize}
+  \item \textbf{Conexão remota SSH}: suporta funções de cliente e servidor SSH, permitindo conectar-se remotamente a outros dispositivos ou transformar o telefone em um host SSH.
+  \item \textbf{Ferramentas de criptografia}: oferece ferramentas como OpenSSL, suportando criptografia de dados e comunicação segura.
+  \item \textbf{Montagem de servidores}: pode configurar Nginx ou Apache para criar servidores web estáticos.
+\end{itemize}
+
+\subsubsection*{Integração e extensão do sistema}
+
+\begin{itemize}
+  \item Acesso à permissão de armazenamento do telefone para gerenciamento local de arquivos.
+  \item Através do plugin Termux:API, é possível acessar sensores, câmera e outros recursos de hardware do Android.
+  \item Suporte a teclado Bluetooth e conexão com monitor externo, com suporte completo a mouse.
+\end{itemize}
+
+\booksubsection{Ecossistema de plugins}
+
+O aplicativo principal do Termux pode ser expandido através de vários plugins opcionais, oferecendo funcionalidades e integrações adicionais:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Nome do plugin} & \textbf{Descrição da função} \tabularnewline
+\hline
+Termux:API & Expõe funcionalidades da API Android para programas de linha de comando \tabularnewline
+Termux: Boot & Permite executar scripts na inicialização do dispositivo \tabularnewline
+Termux: Float & Oferece uma janela de terminal flutuante \tabularnewline
+Termux: Styling & Permite personalizar esquemas de cores e fontes do terminal \tabularnewline
+Termux: Tasker & Integra scripts Termux com o aplicativo de automação Tasker \tabularnewline
+Termux: Widget & Permite executar scripts a partir de widgets na tela inicial \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{Aviso importante}
+O Termux e seus plugins devem ser instalados da mesma fonte, pois compartilham o mesmo sharedUserId. Misturar instalações de fontes diferentes (como F-Droid e GitHub) resultará em erros de instalação.
+
+\end{tcbwarn}
+
+\booksubsection{Guia de instalação e configuração}
+
+\subsubsection*{Etapas de instalação}
+
+\begin{enumerate}
+  \item \textbf{Baixar o aplicativo}: baixe e instale o Termux de fontes oficiais (F-Droid ou GitHub), sem necessidade de root.
+  \item \textbf{Inicializar o sistema}: após a primeira inicialização, aguarde a conclusão de "Installing bootstrap packages".
+  \item \textbf{Obter permissão de armazenamento}: execute\texttt{termux-\allowbreak setup-\allowbreak storage}para obter permissão de acesso ao sistema de arquivos do telefone.
+  \item \textbf{Atualizar fontes de software}: execute\texttt{pkg update \&\& pkg upgrade}para atualizar a lista de pacotes.
+\end{enumerate}
+
+\subsubsection*{Otimizações básicas}
+
+\begin{itemize}
+  \item \textbf{Trocar espelho}: use o comando\texttt{termux-\allowbreak change-\allowbreak repo}para trocar o espelho via interface gráfica (recomenda-se o espelho da Universidade Tsinghua).
+  \item \textbf{Configuração de atalhos}: botão de volume para baixo simula Ctrl, botão de volume para cima simula Esc, aumentando a eficiência de digitação.
+  \item \textbf{Embelezamento da interface}: instale Zsh + Oh My Zsh, configure temas e plugins.
+\end{itemize}
+
+\booksubsection{Cenários típicos de aplicação}
+
+\subsubsection*{Desenvolvimento e testes móveis}
+
+Monte um ambiente de desenvolvimento completo no celular, escreva e execute scripts Python, compile programas C com GCC, gerencie repositórios de código com Git, sincronize com servidores remotos via SSH.
+
+\subsubsection*{Operações de servidor}
+
+Gerencie servidores remotamente via SSH, execute tarefas de manutenção de sistema, análise de logs, resolva problemas de servidor a qualquer hora e em qualquer lugar.
+
+\subsubsection*{Aprendizado de Linux}
+
+Oferece um ambiente Linux real, sendo uma plataforma ideal para aprender linha de comando e gerenciamento de sistema. Permite praticar scripts Shell, gerenciamento de permissões de arquivos Linux (como\texttt{chmod 755}para definir bits de permissão rwxr-xr-x,\texttt{chown user: group}para modificar a propriedade do arquivo,\texttt{ls -\allowbreak l}para visualizar as permissões dos três grupos de nove bits de owner/group/other) e outros comandos básicos. Note que este é o modelo clássico de permissões Unix/Linux de “três grupos, nove bits” (owner / group / other × leitura / escrita / execução), que é um sistema completamente diferente das ACLs (listas de controle de acesso) do Windows NTFS.
+
+\subsubsection*{Testes de segurança de rede}
+
+Instale ferramentas de segurança como Nmap, SQLMap, Hydra, Metasploit para realizar varreduras de rede e testes de penetração.
+
+\booksubsection{Versão e compatibilidade}
+
+A versão estável mais recente do Termux é a v0.118.2, compatível com dispositivos Android $\geq$ 7. É importante notar que o Termux pode apresentar instabilidade no Android 12 e versões superiores. Recomenda-se acompanhar o changelog oficial para obter as informações de compatibilidade mais recentes.
+
+\begin{tcbinfo}{Resumo}
+O Termux traz a poderosa experiência de terminal Linux para dispositivos Android, transformando o celular em uma ferramenta portátil de desenvolvimento e aprendizado. Seja você desenvolvedor, administrador de sistemas ou entusiasta de tecnologia, pode usar o Termux para desfrutar de uma experiência completa de linha de comando em dispositivos móveis, realizando o conceito de “Linux no bolso”.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Mãos à obra: execute seu primeiro comando Linux no celular}
+\begin{enumerate}
+  \item Baixe e instale o Termux do F-Droid, aguarde a inicialização concluir na primeira execução.
+  \item Execute\texttt{pkg update \&\& pkg upgrade}para atualizar os pacotes.
+  \item Instale o Python:\texttt{pkg install python}.
+  \item Digite\texttt{python3 -\allowbreak c "print('Hello from Termux!')"}e sinta a diversão de executar código no celular.
+\end{enumerate}
+
+\end{tcbpractice}

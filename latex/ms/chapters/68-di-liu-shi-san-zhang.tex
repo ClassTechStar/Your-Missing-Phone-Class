@@ -1,0 +1,181 @@
+\bookchapter{Bab 63: View, Negeri (State) dan Navigasi}
+
+\chapterintro{Mainan satu halaman sudah pandai dibuat. Bab ini menyelesaikan dua soalan 'membesar': cara melompat-lompat antara berbilang halaman (navigasi), dan cara data mengalir antara halaman (pengurusan state). Selepas bab ini, anda boleh membina kerangka App berbilang halaman klasik seperti 'senarai butiran sunting'.}
+
+\booksection{Peta menyeluruh aliran data pengurusan state}
+
+Alat state SwiftUI bukan setakat @State. Lihat dahulu peta menyeluruh ini untuk memahami 'bila guna yang mana':
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Alat} & \textbf{Mengurus apa} & \textbf{Digunakan oleh} & \textbf{Senario tipikal} \tabularnewline
+\hline
+@State & State sementara peribadi halaman & View semasa & Pengira, teks medan input \tabularnewline
+@Binding & Meminjam state orang lain & Sub-view mengubah view induk & Komponen tersuai \tabularnewline
+@StateObject / @Observable & Logik dikongsi merentas halaman & Model pandangan (ViewModel) & Pemuatan data, logik perniagaan \tabularnewline
+@EnvironmentObject / .environment & State dikongsi secara global & Keseluruhan App & Status log masuk pengguna, tetapan tema \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Peta menyeluruh alat state SwiftUI (pada 2026, @Observable sudah arus perdana)\end{center}
+
+\begin{lstlisting}[language=Swift]
+// Cara moden iOS 17+: makro @Observable (digalakkan untuk projek baru)
+import Observation
+
+@Observable
+class CounterModel {                 // View model
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // Memegang model
+
+    var body: some View {
+        VStack {
+            Text("Anda menekan \(model.count) kali")
+            Button("Tekan saya") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+Nasihat terus untuk pemula: state peribadi halaman guna @State, yang merentas halaman atau berlogik guna kelas @Observable. @StateObject/@ObservableObject dalam tutorial lama ialah gaya generasi sebelumnya — cukup sekadar boleh membaca; untuk kod baharu, ikut seperti di atas.
+
+\booksection{NavigationStack: 'tindanan' lompatan halaman}
+
+Mulai iOS 16, navigasi berbilang halaman menggunakan NavigationStack — seperti timbunan pinggan: satu dimasukkan satu demi satu, dan dikeluarkan satu demi satu semasa kembali:
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("Buku akaun Zhang San") {
+                    DetailView(name: "Buku akaun Zhang San")   // halaman destinasi
+                }
+                NavigationLink("Buku akaun Li Si") {
+                    DetailView(name: "Buku akaun Li Si")
+                }
+            }
+            .navigationTitle("Senarai buku akaun")   // tajuk besar di atas
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("Halaman butiran \(name)")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+NavigationLink ialah 'pautan lompatan yang boleh ditekan'; navigationTitle menjana tajuk bar navigasi dan butang kembali secara automatik. Untuk lompatan secara berprogram (contohnya kembali automatik selepas menekan 'Simpan'), gunakan @Environment(\textbackslash{}.dismiss) untuk menutup halaman semasa — dengan dua helah ini, 90\% keperluan navigasi sudah lengkap.
+
+\booksection{Pop timbul dan tab bawah: sheet dan TabView}
+
+Selain 'menolak halaman', ada dua lagi interaksi klasik:
+
+\begin{lstlisting}[language=Swift]
+// 1. Pop separuh skrin/skrin penuh dari bawah (kegemaran borang input)
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("Catat") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // Halaman input yang dipaparkan
+            }
+    }
+}
+
+// 2. Bar tab bawah ("rangka" aplikasi)
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("Buku akaun", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("Statistik", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("Tetapan", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Petua: Bila guna yang mana?}
+Peraturan pengalaman: aliran utama guna NavigationStack untuk menolak halaman (senaraibutiran), operasi sementara guna pop timbul sheet (tambah, sunting, sahkan), beberapa bahagian besar yang setara guna TabView (tab bawah). Gabungan ketiga-tiganya ialah kerangka hampir semua App.
+
+\end{tcbinfo}
+
+\booksection{List: senarai paling popular di iOS}
+
+Komponen paling kerap digunakan dan paling 'berbau Apple' di iOS ialah List — sedia ada garis pemisah, padam dengan leretan dan sorotan semasa ditekan:
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["Makan tengah hari 25.5", "LRT 6.0", "Gaji +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // leret kiri untuk padam
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Senarai + NavigationLink + sheet + TabView — gabungkan empat elemen ini, dan anda sudah boleh membina kerangka App lengkap 'senarai rekod buka butiran tekan + muncul borang kemasukan'. Projek buku rekod perbelanjaan bab seterusnya dibina begini.
+
+\begin{tcbpractice}{Praktik: Bina 'kerangka tiga halaman'}
+\booksection{Kitaran hayat aplikasi: hadapan dan latar belakang}
+
+Sama seperti kitaran hayat Activity pada Android, App iOS juga mengalami perubahan state 'lahir, hadapan, latar belakang, mati'. Dalam SwiftUI, gunakan nilai persekitaran scenePhase untuk memerhatikannya:
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("Kembali ke hadapan, sambung segar semula")
+            case .inactive:  print("Dalam peralihan (panggilan masuk/baru beralih ke latar)")
+            case .background: print("Masuk latar, simpan draf")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Kegunaan tipikal: segarkan data semasa kembali ke hadapan, simpan draf semasa masuk ke latar belakang. iOS mengawal pelaksanaan latar belakang dengan sangat ketat — App biasa akan segera digantung (dibekukan) selepas masuk latar belakang; jangan berharap boleh membuat kerja berat secara senyap-senyap di latar belakang. Jika benar-benar perlu tugasan berkala, gunakan pemberitahuan tempatan dalam Bab 68, bukan 'kekal berjalan di latar belakang'.
+
+Bina kerangka versi data palsu buku rekod perbelanjaan: TabView tiga tab (Rekod/Statistik/Tetapan) halaman rekod guna List memaparkan data palsu, tekan baris untuk ke butiran (NavigationStack) butang '+' penjuru atas kanan memunculkan sheet kemasukan. Tanpa menyimpan data, tanpa internet — semata-mata latihan kerangka. Kerangka ini siap, mengisinya dengan data sebenar pada Bab 65 menjadi perkara semula jadi.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan bab ini}
+\begin{itemize}
+  \item Empat alat state: @State (peribadi halaman), @Binding (pinjaman), @Observable (logik), .environment (global)
+  \item Projek baharu guna makro @Observable menulis ViewModel; @ObservableObject tutorial lama cukup sekadar dapat dibaca
+  \item NavigationStack menolak halaman; @Environment(\textbackslash{}.dismiss) kembali secara berprogram
+  \item Aliran utama tolak halaman, operasi sementara munculkan sheet, bahagian besar setara guna TabView
+  \item List ialah senarai paling popular: garis pemisah dan padam leretan sedia guna
+\end{itemize}
+
+\end{tcbsummary}

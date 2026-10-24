@@ -1,0 +1,196 @@
+\bookchapter{Chapter 54: Project 1 — My Expense Tracker (Local Version)}
+
+\chapterintro{Welcome to your first “real project.” This expense tracker never goes online, but it has everything it needs: record a transaction, view the ledger, see monthly summaries, delete and edit. Finishing it means you've walked the full “data logic UI” pipeline from start to end. Don't rush to copy code — think it through first, then build. That's our standing principle.}
+
+\booksection{Thinking Through Requirements: Ask Five Questions First}
+
+Before building, sort out the idea with the “five elements of a requirement”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Element} & \textbf{Answer} \tabularnewline
+\hline
+Who (who's it for) & Me; family and friends are fine too \tabularnewline
+What (what it does) & Record income and spending, view the ledger, monthly summaries, category breakdowns \tabularnewline
+Why (the reason) & Practice + figuring out where the money goes \tabularnewline
+How (the approach) & Kotlin + Compose + Room + MVVM, fully local, no backend \tabularnewline
+Constraint (the limits) & Done within a week; supports Android 8 at minimum; written to store standards even if never published \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}The five requirement elements of the expense tracker\end{center}
+
+Then break it into small steps where “every step is usable”: (1) build the Room data layer (can save one transaction); (2) the list screen (can view the ledger); (3) the entry screen (can add a transaction); (4) delete and edit; (5) a monthly summary card. After each step, the app is something “that works.”
+
+\booksection{The Data Layer: Giving Each Transaction a Home}
+
+First define what one transaction looks like — enough fields to be useful, but don't get greedy:
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" = money in | "expense" = money out
+    val amount: Double,      // amount (in yuan)
+    val category: String,    // category: food, transport, salary...
+    val note: String = "",   // note (optional)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Add two “summary” queries to the Dao — these are the soul of the tracker:
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month looks like "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tip: why use Double for amounts?}
+Rigorous finance apps use BigDecimal or “an Int counted in cents” to avoid floating-point errors (the old 0.1 + 0.2 $\neq$ 0.3 problem). For a practice project, Double is plenty; if you ever build a real financial product, remember to switch to cents as the unit — it's a pitfall countless developers before you have stumbled into.
+
+\end{tcbinfo}
+
+\booksection{MVVM: UI and Logic “Live Apart”}
+
+Let the UI talk to the database directly? It runs, but the UI code turns long and ugly. The MVVM architecture gives each part its own job: the View (UI) only draws, the ViewModel (the logic hub) handles data, and the Model (Room) handles storage.
+
+View (the Compose UI)
+
+ViewModel (state and logic)
+
+Model (the Room data layer)
+
+\begin{center}\small\color{gray}Figure 5: The three layers of MVVM — data flows in one direction, and no layer crosses into another\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // Turn the Flow into observable UI state
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // User actions: call suspend functions
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+In the UI (Compose) you'd write: val vm: RecordViewModel = viewModel(), then val list by vm.records.collectAsState() — the moment the data changes, the list refreshes by itself, and you do nothing. That's the power of MVVM + Flow + Compose working as one.
+
+\booksection{The UI: List Screen + Entry Screen}
+
+The list screen uses LazyColumn (a lazy-loading list) — smooth no matter how much data:
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // summary card at the top (income - expenses = balance)
+        SummaryCard(records)
+
+        // the transactions list
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // floating "add entry" button  opens the entry dialog
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+An AlertDialog (dialog) is the easiest way to enter data: a few input fields + an income/expense toggle + a category dropdown; tap OK and it calls vm.addRecord(...).
+
+\begin{tcbwarn}{Note: don't skimp on input validation}
+Always validate the amount field: empty values, negative numbers, and illegal input like “abc” must all be blocked (check with toDoubleOrNull()). One of the most common reasons apps crash is “trusting the user's input like a well-behaved child.” Remember: treat everything the user types as hostile until proven otherwise.
+
+\end{tcbwarn}
+
+\booksection{Edit and Delete: Let Data “Come and Go”}
+
+An expense tracker that can only add and never delete is useless within three days. Add two more operations:
+
+\begin{lstlisting}[language=Kotlin]
+// Add two more to the Dao:
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// In the UI: long-press a list item to open an "edit/delete" menu (use DropdownMenu or AlertDialog in Compose)
+// Best to confirm before deleting — accidental deletion is what expense-app users hate most
+\end{lstlisting}
+
+Two bits of interaction wisdom: deleting always needs a second confirmation (to prevent fat-finger slips), and editing should pre-fill the original values (fixing one character beats retyping everything). Don't underestimate these details — that “polished product” feel is built exactly from details like these.
+
+\booksection{Acceptance: a three-layer check + two advanced challenges}
+
+\booksection{Acceptance: a three-layer check + two advanced challenges}
+
+When the project is done, accept it across three layers: “features edge cases architecture.” Can you record and delete, is the data still there after reopening the app (features); does entering 0 or a negative amount crash it, does rotating the screen lose data (edge cases); are UI and data tangled together, are any fields hard-coded (architecture).
+
+Once the basic version passes acceptance, serve yourself two “advanced dishes”:
+
+\begin{enumerate}
+  \item Monthly filter: add a month switcher at the top (e.g., 2026-08 v) so the list shows only that month's transactions;
+  \item Category pie chart: use Compose's Canvas or add a lightweight charting library to draw "where the money went" as a pie chart — finish this and the tracker starts to look like a real product.
+\end{enumerate}
+
+\begin{tcbpractice}{Hands-on: finish it this week}
+Build in this order: “data layer ViewModel list screen entry screen summary card,” one step a day. When stuck, paste the error as-is into a search engine or an AI (remember Part 7, “AI Coding in Practice”? When describing a problem, spell out the “expected behavior, actual behavior, and steps to reproduce”). Once it's done, track a week of spending with it — using an app you built yourself gives you a sense of achievement that pushes you forward.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter Summary}
+\begin{itemize}
+  \item Five requirement elements break into "every step usable" small steps, then start building
+  \item Data layer: the Record entity + Dao (including monthly-summary SQL) + Database
+  \item MVVM division of labor: the View only draws, the ViewModel runs the logic, the Model handles storage
+  \item Flow + stateIn + collectAsState: the UI refreshes automatically when data changes
+  \item LazyColumn for lazy-loading lists; AlertDialog for data entry
+  \item Three-layer acceptance (features/edge cases/architecture) + advanced challenges (monthly filter, category pie chart)
+\end{itemize}
+
+\end{tcbsummary}

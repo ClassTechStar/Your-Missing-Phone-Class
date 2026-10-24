@@ -1,0 +1,222 @@
+\booksection{Bab 20: Mod Pembangun \& Kebenaran Lanjutan}
+
+\chapterintro{Bab ini disediakan untuk pengguna yang ingin menerokai “fungsi tersembunyi” telefon pintar dengan lebih mendalam. Mod pembangun, kebenaran Root, kunci BL... konsep-konsep yang kedengaran sangat geek ini sebenarnya tidak jauh dari pengguna biasa.}
+
+\booksubsection{Mod Pembangun: Buka Kunci Tetapan Tersembunyi}
+
+HarmonyOS
+
+\subsubsection*{: Tetapan > Tentang Telefon > Ketik “Versi HarmonyOS” 7 kali berturut-turut.}
+
+\begin{itemize}
+  \item \textbf{iOS}: Pengguna biasa tidak boleh mengaktifkan mod pembangun penuh, memerlukan akaun Apple Developer berbayar.
+  \item \textbf{HarmonyOS}Nyahpepijat USB
+  \item \textbf{Android}Pelarasan kelajuan animasi
+\end{itemize}
+
+\subsubsection*{Laluan tetapan Android biasa:}
+
+\begin{itemize}
+  \item \textbf{Paparkan operasi sentuhan}: Suis wajib buka untuk sambung komputer operasi lanjutan (seperti flash, pemulihan data, arahan ADB), rujuk bahagian "Arahan praktikal ADB" bab ini.
+  \item \textbf{Paksa penggunaan GPU}: Paparkan titik sentuh pada skrin (titik bulat kecil ikut jari), sesuai untuk rakam tutorial operasi atau demonstrasi.
+\end{itemize}
+
+\subsubsection*{Cari laluan dalam sistem HarmonyOS: Tetapan Perihal telefon Ketik “Nombor binaan” berulang kali.}
+
+\begin{itemize}
+  \item \textbf{2. Fungsi praktikal dalam Pilihan Pembangun}Kawal kelajuan animasi — Buat telefon "lebih pantas"
+  \item \textbf{Tiga skala kelajuan animasi: Animasi tingkap, Animasi peralihan, Tempoh animasi. Lalai semua 1x, ubah semua ke 0.5x, telefon akan terasa lebih pantas dan responsif.}Hidupkan perkhidmatan USB — Boleh ADB debug
+  \item \textbf{Selepas aktifkan "Debug USB", komputer boleh hubung telefon melalui ADB untuk pelbagai operasi lanjutan (sandaran penuh, skrin cermin, pasang APK dll).}: Paparkan masa render setiap bingkai dalam graf bar real-time pada skrin, garis hijau wakili 16.6ms (ambang masa bingkai 60fps). Bar melebihi garis hijau bermaksud dropped frame. Ini adalah alat pembangun untuk mengesan App lag, pengguna biasa juga boleh guna untuk bandingkan App mana optimasi teruk - lebih
+\end{itemize}
+
+\subsubsection*{Pilih ART (Android Runtime) dalam pilihan, boleh tingkatkan kelancaran App.}
+
+\begin{itemize}
+  \item \textbf{Perkara yang perlu diperhatikan}Had proses latar belakang — Jimat kuasa dan memori
+  \item \textbf{"Had proses latar belakang" boleh tetapkan bilangan App maksimum yang serentak berjalan, pilih 4 atau "Tidak ada proses latar belakang", boleh kurangkan penggunaan kuasa dan memori (tetapi mungkin kesan pemberitahuan App).}Tunjukkan sentuhan — Alat bantu tunjuk ajar
+\end{itemize}
+
+\begin{tcbwarn}{Fungsi kunci BL}
+Perlindungan keselamatan
+
+\end{tcbwarn}
+
+\booksubsection{OEM Unlocking: Suis “flash” dalam pilihan pembangun}
+
+Dalam pilihan pembangun ada satu suis yang tidak ketara tetapi sangat penting - “OEM Unlocking” (sesetengah jenama panggil “OEM Unlocking Allowed” atau “Device Unlocking”). Suis ini sendiri tidak akan buka kunci BL, tetapi ia adalah “kebenaran awal”: hanya buka ia, pengeluar baru benarkan anda buka kunci BL melalui arahan fastboot atau alat jenama.
+
+\begin{itemize}
+  \item \textbf{Paparkan kadar penyegaran semasa skrin, boleh sahkan sama ada App sokong kadar penyegaran tinggi.}Warna GPU palsu — Alat debug render
+  \item \textbf{Hubungan dengan kunci BL}: OEM Unlocking adalah "permohonan kelayakan", buka kunci BL adalah "operasi sebenar". Yang pertama hanya klik dalam tetapan telefon, yang kedua perlu pergi ke laman web pengeluar memohon kod buka kunci, guna komputer jalankan arahan fastboot (seperti\texttt{fastboot flashing unlock}Berikut adalah pilihan yang boleh menyebabkan ketidakstabilan sistem jika salah tetapkan,
+  \item \textbf{jangan cuba tanpa kepastian}: Ya. Suis "OEM Unlocking" akan kembali ke status tutup selepas set semula kilang, tetapi kunci BL sekali dibuka adalah status peringkat fizikal, tidak akan kembali terkunci kerana set semula kilang - perlu pelaksanaan manual\texttt{fastboot flashing lock}Fake Telephony: Ujian pengecaman pembawa, boleh sebabkan isu rangkaian.
+  \item \textbf{Tetapkan pemilihan DSP: Boleh sebabkan audio tidak normal.}: Kecuali anda pasti mahu flash atau Root, jika tidak kekal tutup. Ia dan "USB debugging" adalah dua suis berasingan, semasa flash biasanya perlu buka kedua-dua serentak.
+\end{itemize}
+
+\begin{tcbinfo}{Mod demo: Mod paparan demo kedai, akan ganggu penggunaan biasa.}
+Android awal tiada suis ini, perisian hasad hanya perlu dapat kebenaran boleh senyap-senyap flash masuk sistem. Google kemudian mewajibkan semua pengeluar Android tambah suis “OEM Unlocking” dalam pilihan pembangun, sebagai pengesahan “persetujuan pengguna”. Inilah sebabnya walaupun anda buka kunci BL, jika suis OEM Unlocking ditutup, flash semula masih akan gagal.
+
+\end{tcbinfo}
+
+\booksubsection{Kunci BL (Kunci Bootloader): Pintu pertama flash}
+
+Anti-curi
+
+\subsubsection*{: Walaupun telefon pintar di-flash, tanpa kata laluan akaun asal ia tidak boleh digunakan.}
+
+\begin{itemize}
+  \item \textbf{Had waranti}: Membuka kunci BL biasanya bermakna kehilangan waranti rasmi.
+  \item \textbf{Dasar kunci BL setiap jenama:}Xiaomi
+  \item \textbf{: Boleh dibuka kuncinya, perlu mengikat akaun dan menunggu tempoh (7-30 hari).}Huawei
+\end{itemize}
+
+\subsubsection*{: Selepas 2018 berhenti menyediakan kod nyahkunci, asasnya tidak boleh dibuka kuncinya secara rasmi.}
+
+\begin{itemize}
+  \item \textbf{OnePlus}: Boleh dibuka kuncinya, agak longgar.
+  \item \textbf{OPPO/vivo}: Sesetengah model boleh dibuka kuncinya, perlu memohon.
+  \item \textbf{Samsung}: Boleh dibuka kuncinya, tetapi akan mencetuskan pemutus Knox, kehilangan fungsi seperti Samsung Pay.
+  \item \textbf{Apple}: Peranti iOS tiada konsep kunci BL dalam erti kata tradisional, tetapi ada mekanisme keselamatan yang serupa.
+  \item \textbf{Samsung}Kebenaran Root bersamaan dengan Administrator Windows, adalah kebenaran tertinggi sistem Android. Selepas mendapat kebenaran Root, anda boleh mengubah suai fail sistem, menyahpasang aplikasi yang dipasang sebelumnya, menggunakan App lanjutan yang memerlukan Root.
+  \item \textbf{Xiaomi}Nyahpasang aplikasi yang dipasang sebelumnya yang tidak boleh dinyahpasang.
+\end{itemize}
+
+\booksubsection{Arahan praktikal ADB: Kawal telefon melalui komputer}
+
+ADB nama penuh Android Debug Bridge, adalah alat baris arahan rasmi Google, benarkan komputer berkomunikasi dengan telefon Android melalui USB atau Wi-Fi. Ia sendiri tidak perlu Root, hanya telefon buka “USB debugging” boleh guna. Boleh faham sebagai “alat kawalan jauh guna komputer beri arahan kepada telefon” - flash, pasang App, pindah fail, semak log, semua bergantung padanya.
+
+\subsubsection*{Cara sambung melalui USB:}
+
+\begin{enumerate}
+  \item Telefon: Masuk pilihan pembangun -> Buka "USB debugging".
+  \item Komputer: Muat turun Platform Tools dari laman web rasmi Google (mengandungi\texttt{adb}Langkah ini perlu dimulakan dengan\texttt{fastboot}2. Pengecaman visual "Selektif Aksesibiliti" ‑ Pilih butang kecil dengan ketat
+  \item Sambung telefon dan komputer dengan kabel data, telefon akan popup "Benarkan USB debugging?", tanda "Sentiasa benarkan" dan sahkan.
+  \item Tetapan Aksesibiliti Selektif Aksesibiliti Hidupkan\texttt{adb devices}Selepas aktif, boleh tetapkan "tindakan automatik" (klik auto, dwi-klik auto dll) pada sebarang butang kecil, sesuai butang terlalu kecil untuk ditekan.\texttt{List of devices attached /\allowbreak  xxxxxxxx device}3. Boleh ubah teks kejutan ‑8 Cakap perintah, operasi auto
+\end{enumerate}
+
+\begin{tcbwarn}{Cara cepat yang sering diabaikan.}
+Tetapan Aksesibiliti Boleh ubah teks kejutan Tambah perintah\texttt{adb devices}Paparan “unauthorized” atau tidak senarai peranti, kebanyakan adalah pemacu tidak dipasang atau lupa klik “benarkan” pada telefon. Samsung/Xiaomi dan jenama lain boleh pasang “USB driver” atau “phone assistant” masing-masing; Mac dan Linux biasanya tidak perlu pemacu. Jika popup telefon tidak sengaja ditutup, cabut dan pasang semula kabel data akan popup semula.
+
+\end{tcbwarn}
+
+\subsubsection*{Imbasan belakang peranti ‑ Logo belakang ketuk dua kali}
+
+\begin{itemize}
+  \item \texttt{adb install app.\allowbreak apk}: Pasang APK dari komputer ke telefon (\texttt{-\allowbreak r}Tetapan Aksesibiliti Sentuh Ketuk Belakang Pilih "Ketuk Dua Kali" atau "Ketuk Tiga Kali"\texttt{-\allowbreak s}Boleh tetapkan tindakan: Tangkap skrin, buka Pusat Kawalan, buka kamera, jalankan pintasan dll.
+  \item \texttt{adb uninstall com.\allowbreak xxx.\allowbreak xxx}5. OCR skrin penuh ‑ Tangkap skrin terus kenalpasti teks
+  \item \texttt{Selepas tangkap skrin penuh, ketik butang teks dalam pratonton, boleh pilih sebarang teks dalam gambar untuk salin atau cari.\allowbreak }Teknologi: Apple panggil "Live Text", diperkenalkan iOS 15, diperkasai iOS 17 dengan keupayaan kenalpasti video.
+  \item \texttt{6.\allowbreak  Pintar Peribadi (Personal Hotspot) ‑ Kongsikan rangkaian tanpa kata laluan}: Tarik fail telefon ke komputer (lebih cepat daripada hantar kepada diri WeChat kemudian muat turun).
+  \item \texttt{adb shell}Tetapan Hotspot Peribadi Benarkan Kebolehpadanan Keluarga\texttt{ls}AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.\texttt{pm}AI. AI tanpa peranan ialah seorang "ahli serba boleh tetapi tidak mahir dalam apa-apa"; dengan peranan, ia boleh "memasuki" identiti itu, berfikir seperti profesional tersebut.\texttt{am}III. ADB: Pengendalian aras kawalan Android
+  \item \texttt{adb reboot bootloader}: Restart telefon masuk mod Fastboot (pintu masuk flash).
+  \item \texttt{adb reboot recovery}1. Pasang ADB
+  \item \texttt{adb shell pm list packages}Muat turin Platform Tools Android SDK (platform-tools-latest-windows.zip) dari laman web rasmi Android.\texttt{-\allowbreak s}Ekstrak ke mana-mana direktori, contoh C:\textbackslash{}adb.\texttt{-\allowbreak 3}Dalam terminal (CMD/PowerShell/Git Bash) laksanakan adb, jika papar nombor versi bermakna pemasangan berjaya.
+  \item \texttt{2.\allowbreak  Sambung telefon}: Nyahpasang App pra-pasang untuk pengguna semasa, tanpa Root, rujuk praktikal di bawah.
+\end{itemize}
+
+\subsubsection*{Praktikal nyahpasang App pra-pasang tanpa Root:}
+
+Ini adalah salah satu fungsi ADB paling praktikal: guna\texttt{pm uninstall -\allowbreak -\allowbreak user 0}Arahan boleh nyahpasang App pra-pasang untuk “pengguna semasa”, tanpa perlu Root, juga tidak kesan partisi sistem. App yang diuninstall “hilang” dalam sistem, tetapi sebenarnya masih dalam partisi sistem, selepas set semula kilang akan kembali.
+
+\begin{enumerate}
+  \item 3. Arahan praktikal ADB\texttt{adb shell pm list packages -\allowbreak s}Senarai semua aplikasi sistem, cari nama pakej yang anda mahu uninstall. Contohnya pelayar Xiaomi adalah\texttt{com.\allowbreak android.\allowbreak browser}, Huawei AppGallery adalah\texttt{com.\allowbreak vmall.\allowbreak client}.
+  \item Pasang APK: adb install [fail apk]\texttt{Sandaran penuh: adb backup -\allowbreak apk -\allowbreak shared -\allowbreak all -\allowbreak f backup.\allowbreak ab}Skrin cermin: adb shell screencap -p /sdcard/screenshot.png
+  \item Rekod skrin: adb shell screenrecord /sdcard/video.mp4\texttt{2.\allowbreak  Sambung telefon}4. Aplikasi tipikal: Padam tanpa padam App sistem\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 com.\allowbreak android.\allowbreak browser}Banyak telefon Android disertai banyak App pra-pasang yang tidak boleh dipadam. Guna ADB boleh:\texttt{Success}Dapatkan nama pakej App: adb shell pm list packages | grep [nama App sebahagian]
+  \item Padam untuk pengguna semasa (tidak berkesan pada semua pengguna): adb shell pm disable-user --user 0 [nama pakej]\texttt{Selepas dilumpuhkan App tidak lagi muncul, tetapi masih dalam sistem, boleh aktifkan semula bila-\allowbreak bila: adb shell pm enable [nama pakej]}.
+\end{enumerate}
+
+\textbf{5. Awas keselamatan ADB}\par
+
+“pm uninstall --user 0” walaupun adalah cara selamat tanpa Root, tetapi padam aplikasi sistem penting secara sembarangan (seperti\texttt{com.\allowbreak android.\allowbreak systemui}Jangan guna komputer awam atau wayar data tidak dipercayai untuk debug USB.\texttt{com.\allowbreak android.\allowbreak phone}IV. Root: Membuka kunci kebenaran tertinggi Android\texttt{com.\allowbreak android.\allowbreak settings}Root bermaksud akses pentadbir tertinggi Android, boleh ubah apa sahaja dalam sistem. Ini kuasa yang sangat kuat tetapi juga sangat berbahaya.
+
+\begin{tcbinfo}{1. Kaedah Root biasa}
+Unlock Bootloader: Langkah pertama, buka kunci pengesan but, kebanyakan pengeluar perlu permohonan rasmi.\texttt{-\allowbreak -\allowbreak user 0}bermaksud “hanya nyahpasang untuk pemilik semasa”, fail APK dalam partisi sistem masih wujud, hanya tidak papar kepada pemilik. Inilah sebabnya ia tidak perlu Root - tidak sentuh fail sistem, hanya ubah “konfigurasi pengguna”. Ini juga sebabnya ia boleh “pasang semula” - kembalikan konfigurasi pengguna. Nyahpasang biasa betul-betul padam dari sistem, semua pengguna tidak lagi ada; nyahpasang ADB hanya “sembunyi dari pengguna semasa”.
+
+\end{tcbinfo}
+
+\booksubsection{Kebenaran Root: “Pentadbir super” Android}
+
+Kebenaran Root setara dengan super user dalam Linux (mempunyai kawalan penuh ke atas direktori /, boleh baca tulis mana-mana fail), adalah kebenaran tertinggi sistem Android. Ia berbeza secara asas dengan Administrator Windows: Windows atas sebab keselamatan telah membuat banyak sekatan kepada pentadbir (kebenaran tertinggi sebenar sebenarnya TrustedInstaller), walaupun Administrator juga tidak boleh seperti Linux root terus melaksanakan\texttt{sudo rm -\allowbreak rf /\allowbreak *}. Selepas dapat kebenaran Root, anda boleh ubah fail sistem, nyahpasang aplikasi pra-pasang, guna App lanjutan yang memerlukan Root.
+
+\subsubsection*{Memasang Recovery pihak ketiga dan ROM tersuai.}
+
+\begin{itemize}
+  \item Risiko Root:
+  \item Kehilangan waranti
+  \item : Kebanyakan pengeluar tidak mewartikan telefon pintar yang telah di-Root.
+  \item Risiko keselamatan
+\end{itemize}
+
+\subsubsection*{: App hasad mungkin mendapat kebenaran Root, menyebabkan akibat yang serius.}
+
+\begin{itemize}
+  \item \textbf{Sistem tidak stabil}: Salah operasi boleh menyebabkan sistem ranap.
+  \item \textbf{App perbankan tidak boleh digunakan}: Ramai App perbankan dan pembayaran akan menolak berjalan apabila mengesan Root.
+  \item \textbf{Kemas kini OTA gagal}: Mungkin tidak boleh menerima kemas kini sistem rasmi secara normal.
+  \item \textbf{Amaran Serius}Operasi Root mempunyai risiko tertentu, boleh menyebabkan telefon pintar menjadi bata (tidak boleh dihidupkan). Jika anda baru mula, disyorkan untuk memahami pengetahuan berkaitan dengan secukupnya terlebih dahulu, dan pastikan ada sandaran yang lengkap. Sebelum beroperasi sila baca tutorial dengan teliti, sahkan model dan versi sistem telefon pintar anda.
+  \item \textbf{4. Cadangan untuk Pengguna Biasa}Mod pembangun
+\end{itemize}
+
+\textbf{: Boleh diaktifkan, alami fungsi seperti percepatan animasi, tetapi jangan ubah tetapan lain sesuka hati.}\par
+
+Kunci BL
+
+\booksubsection{Pengesahan SafetyNet dan Play Integrity: Kenapa App bank tidak boleh guna selepas Root}
+
+Ramai pengguna Root pernah hadapi momen ranap ini: selepas Root bersemangat pasang satu kelompok modul, hasilnya buka App bank - “Peranti anda tidak selamat, tidak boleh guna”, Google Pay juga tidak boleh guna, bahkan Netflix enggan mainkan HD. Di sebalik ini adalah dua mekanisme pengesahan integriti peranti Google: SafetyNet lama dan Play Integrity API baru.
+
+\subsubsection*{Apakah SafetyNet / Play Integrity:}
+
+\begin{itemize}
+  \item \textbf{SafetyNet Attestation (versi lama, sejak 2017)}: API pengesahan integriti peranti awal Google, App melaluinya bertanya pelayan Google "peranti ini sama ada lulus ujian keserasian CTS, sama ada dalam status rasmi tidak diubahsuai". Keputusan dibahagikan kepada Basic Attestation (pengesahan asas) dan Strong Attestation (pengesahan kuat, bergantung kunci perkakasan). Google telah umumkan SafetyNet akan beransur-ansur dihentikan selepas 2024.
+  \item \textbf{Kerosakan sistem: Salah ubah boleh sebabkan telefon tidak boleh but (brick).}: Alternatif yang dilancarkan Google, lebih ketat dan lebih menyeluruh daripada SafetyNet. Selain integriti peranti, juga termasuk "integriti aplikasi" (App sama ada diubahsuai) dan "integriti akaun/kebenaran" (akaun pengguna sama ada dipercayai Google). App baru harus berpindah ke Play Integrity.
+  \item \textbf{Kegagalan App: Banking, pembayaran, Netflix DRM dll App akan enggan berjalan.}: App bank, kewangan, pembayaran (seperti Google Pay, bank dalam talian setiap bank, Alipay/WeChat Pay senario tertentu), media streaming (perlindungan hak cipta HD Netflix), anti-pemipat permainan tertentu (seperti permainan Tencent/NetEase), App pejabat enterprise (semakan pematuhan MDM).
+\end{itemize}
+
+\subsubsection*{Google laksanakan SafetyNet (kini diganti Play Integrity API) untuk mengesan peranti root. Selepas dikesan, App sensitif (bank, pembayaran) akan enggan berjalan. Magisk boleh sembunyi root melalui modul Zygisk DenyList, tetapi ini permainan kucing-dan-tikus berterusan antara Google dan komuniti root.}
+
+\begin{itemize}
+  \item \textbf{5. Cadangan: Jangan root melainkan benar-benar perlu}: Peranti menjalankan sistem Android rasmi, Bootloader tidak dibuka kunci, tiada Root, lulus ujian keserasian CTS. Boleh guna App bank, pembayaran secara normal.
+  \item \textbf{V. Aksesibiliti: Telefon juga "boleh jadi mesra"}Sistem telefon moden ada fungsi aksesibiliti yang kaya, asalnya untuk pengguna kurang upaya, tetapi banyak juga praktikal untuk pengguna biasa.
+  \item \textbf{1. Pembesar Suara (Live Listen)}: Tahap tertinggi, memerlukan sokongan kunci perkakasan (seperti cip Titan M siri Google Pixel), kebanyakan model jenama pihak ketiga walaupun tidak Root juga tidak capai tahap ini.
+  \item \textbf{Tetapan Aksesibiliti Peranti Audio Pembesar Suara}: Peranti telah Root, buka kunci BL, flash ROM pihak ketiga atau dikenalpasti sebagai emulator, kebanyakan App pembayaran/bank akan terus enggan berjalan.
+\end{itemize}
+
+\subsubsection*{Kenapa App ini gagal selepas Root:}
+
+App melalui Play Integrity API hantar permintaan pengesahan ke pelayan Google, Google akan semak pelbagai penunjuk peranti - status kunci Bootloader, sama ada partisi sistem diubahsuai, sama ada wujud fail binari su, sama ada SELinux dalam mod permisif dll. Sebarang kelewatan akan menyebabkan tahap pengesahan dikembalikan rendah atau kosong, App bank nampak “peranti tidak selamat”, semula jadi enggan berkhidmat.
+
+\subsubsection*{Keterangan langsung}
+
+Untuk menikmati kemudahan Root sambil masih boleh guna App bank, komuniti telah membangunkan siri skim “sembunyi status Root”. Idea teras semua adalah: biar program pengesanan nampak bukan sistem yang diubahsuai, tetapi peranti yang “nampak normal”.
+
+\begin{itemize}
+  \item \textbf{SuperSU}: Skim Systemless Root paling utama - tidak ubah partisi sistem, tetapi capai Root melalui mount. Kelebihan reka bentuk ini adalah kebarangkalian kegagalan kemas kini OTA kecil, nyahpasang lebih bersih, adalah asas semua skim sembunyi berikut. Tetapi guna Magisk masih perlu buka kunci BL.
+  \item \textbf{4. Penggera realiti maya}: Modul sembunyi terbina dalam Magisk awal, boleh sembunyikan Root untuk App tertentu. Tetapi sejak 2021 telah dibuang oleh Magisk rasmi, sebab Google berterusan menaiktaraf kaedah pengesanan, kedua-dua pihak terjebak "permainan kucing dan tikus".
+  \item \textbf{Zygisk}Tetapan Aksesibiliti Penggera Realiti Maya
+  \item \textbf{Shamiko}: Modul sembunyi paling utama kini, bekerjasama dengan Zygisk, boleh untuk App tertentu (mod "senarai putih terbalik") sembunyi Root, sembunyi Magisk sendiri, pemalsuan status kunci Bootloader. Shamiko diedarkan melalui repositori LSPosed atau GitHub.
+  \item \textbf{Play Integrity Fix(osm0sis)}: Modul Magisk khusus untuk pengesanan Google Play Integrity, akan ubah cap jari peranti (fingerprint) biar Google fikir peranti anda adalah model rasmi yang tidak Root.
+\end{itemize}
+
+\begin{tcbwarn}{Tetapan Aksesibiliti Kandungan Dibacakan Baca Skrin}
+Google setiap satu masa akan kemas kini peraturan pengesanan, pengeluar App juga akan ikut menaiktaraf pengesahan Play Integrity. Skim sembunyi yang masih boleh guna hari ini, esok mungkin dikenalpasti. Jika anda sepenuhnya bergantung App bank/pembayaran (seperti pemindahan harian, bayar kod imbas), pilihan paling selamat masih: jangan Root, jangan buka kunci BL. Skim sembunyi lebih sesuai untuk konfigurasi pemain “telefon utama tidak Root + telefon sandaran main Root”.
+
+\end{tcbwarn}
+
+\booksubsection{Nasihat untuk pengguna biasa}
+
+\begin{itemize}
+  \item \textbf{Root}7. Input suara
+  \item \textbf{OEM Unlocking dan kunci BL}: Jika anda tidak merancang flash atau Root, kedua-dua suis kekal lalai (tutup) paling selamat.
+  \item \textbf{ADB}: Alat berkuasa tanpa Root, orang biasa juga boleh guna - contohnya guna\texttt{pm uninstall -\allowbreak -\allowbreak user 0}Bab 8: Digital Legacy — Apa yang berlaku kepada akaun selepas kita tiada
+  \item \textbf{Kunci Bootloader}: Pengguna biasa tidak disyorkan Root, risiko lebih besar daripada manfaat. Jika benar-benar perlu fungsi tertentu, boleh dahulu faham sama ada ada alternatif tanpa Root (seperti guna ADB nyahpasang pra-pasang, guna Shizuku ganti sebahagian fungsi Root).
+\end{itemize}
+
+\begin{tcbpractice}{Cari "Penskalaan Animasi Tetingkap", "Penskalaan Animasi Peralihan", "Penskalaan Tempoh Animasi", tetapkan semuanya kepada 0.5x atau matikan.}
+\begin{enumerate}
+  \item Rasakan sama ada telefon pintar menjadi lebih pantas.
+  \item Lampiran Bab 20: Termux — Persekitaran Terminal Linux Mudah Alih pada Peranti Android
+  \item Jika anda rasa mod pembangun masih belum cukup "keras", dan mahu mengalami baris perintah Linux yang lengkap pada telefon pintar, maka Termux adalah untuk anda. Ia tidak memerlukan kebenaran root, dan boleh menjadikan telefon pintar Android biasa menjadi stesen kerja Linux mudah alih, merupakan senjata ampuh bagi pengguna lanjutan untuk menerokai pembangunan dan pentadbiran mudah alih.
+  \item 1. Apakah itu Termux
+  \item Termux adalah emulator terminal sumber terbuka dan aplikasi persekitaran Linux yang direka khusus untuk peranti Android, ia tidak memerlukan kebenaran root untuk menyediakan pengalaman shell Linux yang lengkap pada telefon pintar. Sebagai aplikasi ringan (pakej pemasangan hanya kira-kira 30MB), Termux menyokong ekosistem perisian yang kaya melalui sistem pengurusan pakej APT, membolehkan pengguna menjalankan Python, Node.js, Git, SSH dan alat lain pada peranti mudah alih, malah membina pelayan atau melakukan ujian penembusan.
+\end{enumerate}
+
+\end{tcbpractice}

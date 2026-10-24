@@ -1,0 +1,149 @@
+\bookchapter{Capítulo 67: Pulir y publicar — pruebas, depuración y salir en el App Store}
+
+\chapterintro{Ya tienes la app hecha, ¿y ahora qué? Este capítulo responde a las tres cosas que separan «funciona» de «se puede entregar»: cómo depurar con eficacia para cazar errores, cómo escribir pruebas para evitar regresiones y cómo subir la app al App Store para que la descargue el mundo entero. Publicar no es solo una ceremonia: es la línea que convierte una obra en producto.}
+
+\booksection{Las tres armas de la depuración: print, puntos de interrupción y vista previa}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Herramienta} & \textbf{Para qué sirve} & \textbf{Cómo se usa} \tabularnewline
+\hline
+print + consola & Ver los registros de ejecución & Escribe print("valor=\textbackslash{}(x)") en el código y mira la salida en la consola de abajo de Xcode \tabularnewline
+Depuración con puntos de interrupción & Detener el programa en una línea y ver el valor de las variables & Toca junto al número de línea y sale un marcador azul; al llegar ahí la ejecución se detiene y puedes avanzar paso a paso \tabularnewline
+Vista previa de SwiftUI + depurador & Ver la interfaz y la jerarquía de vistas en tiempo real & Lienzo de \#Preview + inspector de View Hierarchy en ejecución \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Las tres armas de la depuración\end{center}
+
+\begin{tcbinfo}{Consejo: ¿cómo se lee un cuelgue?}
+Cuando Swift se cuelga, la consola imprime “Fatal error” con su motivo y Xcode se detiene en la línea culpable y la resalta. Los cuelgues históricos en dispositivos reales se consultan en Xcode Window Organizer Crashes (requiere cuenta de pago). Busca primero por «primera frase del motivo + swiftui»: solo una pregunta precisa tiene una respuesta precisa.
+
+\end{tcbinfo}
+
+\booksection{Pruebas: ponerle seguro al código}
+
+Probar a mano no es fiable: arreglas una función y otra se rompe a escondidas. Las pruebas son a la vez «la píldora del arrepentimiento» y «el chaleco antibalas». iOS usa el framework XCTest, con dos tipos:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Nivel} & \textbf{Qué prueba} & \textbf{Target} & \textbf{Velocidad} \tabularnewline
+\hline
+Pruebas unitarias & Lógica pura (cálculos, validaciones) & MyFirstAppTests & Segundos \tabularnewline
+Pruebas de UI & El comportamiento real de la interfaz & MyFirstAppUITests & Minutos \tabularnewline
+Pruebas manuales & La sensación y la experiencia de una persona real & —— & Siempre necesarias \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Niveles de pruebas en iOS (el proyecto plantilla ya trae dos Test Target)\end{center}
+
+\begin{lstlisting}[language=Swift]
+import XCTest
+
+// extrae a una función pura la lógica de "convertir el texto del importe en número"
+func parseAmount(_ input: String) -> Double? {
+    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+          v > 0 else { return nil }
+    return v
+}
+
+final class AmountTests: XCTestCase {
+    func testEmptyInputReturnsNil() {
+        XCTAssertNil(parseAmount(""))
+    }
+    func testNegativeReturnsNil() {
+        XCTAssertNil(parseAmount("-5"))
+    }
+    func testNormalValueParses() {
+        XCTAssertEqual(parseAmount("12.5"), 12.5)
+    }
+}
+\end{lstlisting}
+
+Ejecuta las pruebas con CmdU. Con todo en verde, cambias código con tranquilidad. La validación de importes y los cálculos de resumen de la libreta merecen pruebas unitarias que los cuiden.
+
+\booksection{Firma y empaquetado: ponerle «sello» a la app}
+
+Toda app de iOS debe estar firmada para poder instalarse: es la prueba de «este paquete viene de ti y no lo han alterado». La jerarquía:
+
+\begin{itemize}
+  \item Fase de aprendizaje: un Apple ID gratuito + la firma automática de Xcode (Personal Team), que permite instalar en un dispositivo real y se renueva cada 7 días;
+  \item Fase de distribución: una cuenta de desarrollador de pago (99 USD al año) emite certificados y perfiles, y solo así se publica y se instala a largo plazo.
+\end{itemize}
+
+Empaquetar: en el menú de Xcode, Product Archive; cuando acabe la compilación, en Organizer elige Distribute App selecciona App Store Connect sube. El archivado debe hacerse con Generic iOS Device como destino (no el simulador): es el paso que los principiantes olvidan más.
+
+\textbf{Para evitar tropiezos: perder el certificado = dejar de poder actualizar}\par
+
+Si pierdes el certificado de firma y su clave privada, ya no podrás mandar actualizaciones de la app antigua: los usuarios solo podrán instalar una app «nueva». Haz copia de seguridad del certificado (expórtalo del llavero como .p12) y guarda bien la contraseña. Por suerte, Apple ofrece la «firma automática» y la gestión de certificados en la nube (marca Automatically manage signing en Xcode), que te ahorran la mayoría de las trampas manuales.
+
+\booksection{El proceso completo para salir en el App Store}
+
+Registrar cuenta de desarrollador
+
+Preparar material de la tienda
+
+Subir la compilación
+
+Rellenar los datos de privacidad y revisión
+
+Revisión de Apple (1-7 días)
+
+Publicar
+
+\begin{center}\small\color{gray}Figura 5: los seis pasos para publicar en el App Store\end{center}
+
+\begin{itemize}
+  \item Registro: developer.apple.com, cuenta personal a 99 USD al año;
+  \item Material: icono (1024×1024, sin esquinas redondeadas: Apple lo recorta él solo), capturas (en los tamaños de iPhone), descripción y enlace a la política de privacidad;
+  \item Cuestionario de privacidad: declara con verdad qué datos recoges; una libreta sin conexión puede declarar «no se recogen datos»;
+  \item Revisión: el primer envío suele esperar de 1 a 7 días; si te rechazan, corrige punto por punto según las «notas de revisión»: los motivos de rechazo de Apple suelen venir escritos con todo detalle y basta con hacerles caso;
+  \item TestFlight: antes de publicar, manda la versión de pruebas a tus amigos para las pruebas internas (hasta 10000 personas), recoge una ronda de comentarios y presenta oficialmente después: puro estilo profesional.
+\end{itemize}
+
+\booksection{Cómo hacer el material de la tienda: la primera impresión son las descargas}
+
+La página de la tienda es el escaparate que ve el usuario al «pasear por la tienda». Tres materiales deciden la primera impresión:
+
+\begin{itemize}
+  \item Icono: 1024×1024, no te conformes con una captura. Si no tienes mano de diseñador, genera una figura sencilla con una herramienta de IA; solo aprueba si se reconoce de un vistazo incluso reducido en la pantalla de inicio;
+  \item Capturas: al menos 2 juegos (en los tamaños de iPhone habituales) mostrando los escenarios más esenciales; en cada una, una frase en lenguaje humano («Anota un gasto en un segundo» vale diez veces más que «Una solución eficiente de contabilidad»);
+  \item Descripción: la primera frase debe aclarar «qué es + para quién es»; no amontones «lo más profesional, lo más potente»: la sinceridad rinde más que la exageración.
+\end{itemize}
+
+\begin{tcbpractice}{Manos a la obra: «entrega» la libreta una vez}
+\booksection{Informes de cuelgues y una pequeña lista de rendimiento}
+
+Antes de publicar la app, estas dos cosas merecen media hora cada una:
+
+\booksubsection{Vigilancia de cuelgues}
+
+Que no se cuelgue en tus pruebas no quiere decir que no se cuelgue en el teléfono de un usuario. Apple da informes de cuelgues gratuitos en Xcode Organizer (con cuenta de pago se ven los registros de dispositivos reales); una opción aún más cómoda es integrar un SDK de terceros (como Firebase Crashlytics). Publicar sin vigilancia de cuelgues es conducir con los ojos cerrados.
+
+\booksubsection{Cuatro puntos de autochequeo del rendimiento}
+
+\begin{enumerate}
+  \item Listas con LazyVStack / List: no montes una lista larga con un VStack normal; la carga diferida es la primera lección de rendimiento;
+  \item No fuerces las imágenes originales: usa AsyncImage (imágenes remotas) y la caché del sistema; una imagen original de 5 MB basta para asfixiar a los modelos viejos;
+  \item No hagas trabajo pesado en el hilo principal: la red y los archivos grandes van con async/await;
+  \item Mide con Instruments: el analizador de rendimiento que trae Xcode (Time Profiler, chequeo de fugas de memoria): primero mide, luego optimiza, no vayas a corazonadas.
+\end{enumerate}
+
+(1) Añade 3 pruebas unitarias a parseAmount y otras lógicas (que se pongan verdes con CmdU); (2) caza con un punto de interrupción un cuelgue provocado por ti mismo y arréglalo; (3) con Product Archive genera un paquete y usa TestFlight para invitar a tus amigos a las pruebas internas; (4) si te sobran fuerzas, regístrate como desarrollador y presenta de verdad la libreta al App Store. Los tres primeros pasos puedes hacerlos esta misma noche.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item Las tres armas de la depuración: registros con print, puntos de interrupción, vista previa de SwiftUI e inspector de vistas
+  \item XCTest: pruebas unitarias (CmdU) + pruebas de UI + pruebas manuales; la plantilla ya las trae
+  \item Firma: la cuenta gratuita firma automática (renovación cada 7 días); solo la de pago permite distribuir
+  \item Empaquetado: Generic iOS Device + Archive + Distribute; haz siempre copia del certificado
+  \item Los seis pasos para publicar: registro material subida cuestionario de privacidad revisión publicación; TestFlight primero, pruebas internas
+\end{itemize}
+
+\end{tcbsummary}

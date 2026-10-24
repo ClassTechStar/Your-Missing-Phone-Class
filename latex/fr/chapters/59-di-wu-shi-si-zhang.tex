@@ -1,0 +1,196 @@
+\bookchapter{Chapitre 54 : Projet 1 — Mon carnet de comptes (version locale)}
+
+\chapterintro{Bienvenue dans ton premier « vrai projet ». Ce carnet de comptes ne se connecte pas au réseau, mais il a tout d'une grande : enregistrer une écriture, consulter l'historique, faire des statistiques mensuelles, supprimer et modifier. Une fois terminé, tu auras parcouru de bout en bout le flux complet « données logique interface ». Ne te précipite pas pour recopier le code — réfléchis d'abord, agis ensuite : c'est notre principe de toujours.}
+
+\booksection{Réfléchir au besoin : pose d'abord cinq questions}
+
+Avant de te lancer, clarifie ton idée avec les « cinq éléments du besoin » :
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Élément} & \textbf{Réponse} \tabularnewline
+\hline
+Who (pour qui) & Pour soi, et pour la famille ou les amis aussi \tabularnewline
+What (faire quoi) & Enregistrer revenus et dépenses, consulter l'historique, résumer par mois, statistiques par catégorie \tabularnewline
+Why (pourquoi) & S'entraîner + comprendre où part l'argent \tabularnewline
+How (comment) & Kotlin + Compose + Room + MVVM, 100 \% local, sans back-end \tabularnewline
+Constraint (contraintes) & Terminer en une semaine ; Android 8 minimum ; même sans publication, coder selon les critères de publication \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Les cinq éléments du besoin du carnet de comptes\end{center}
+
+Décompose ensuite en petites étapes « utilisables dès leur achèvement » : (1) la couche données Room (stocker une écriture) ; (2) l'écran liste (voir l'historique) ; (3) l'écran de saisie (ajouter une écriture) ; (4) suppression et édition ; (5) la carte de synthèse mensuelle. À chaque étape finie, l'app est déjà « quelque chose d'utilisable ».
+
+\booksection{La couche données : donner un « foyer » aux écritures}
+
+Définis d'abord à quoi ressemble une écriture — des champs suffisants, sans gourmandise :
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" revenu | "expense" dépense
+    val amount: Double,      // montant (yuan)
+    val category: String,    // catégorie : repas, transport, salaire…
+    val note: String = "",   // note (facultatif)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Ajoute dans le Dao deux requêtes « pour les statistiques » — c'est l'âme du carnet de comptes :
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month est au format "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Petit conseil : pourquoi Double pour les montants ?}
+Les apps financières rigoureuses utilisent BigDecimal ou un « Int en centimes » pour éviter les erreurs de virgule flottante (le vieux problème 0,1+0,2$\neq$0,3). Pour un projet d'entraînement, Double suffit ; le jour où tu feras un vrai produit financier, pense à passer aux centimes comme unité — c'est un piège que d'innombrables aînés ont foulé avant toi.
+
+\end{tcbinfo}
+
+\booksection{MVVM : quand interface et logique « quittent la maison commune »}
+
+Laisser l'interface toucher directement à la base de données ? Ça tourne, mais le code de l'interface devient long et pénible. L'architecture MVVM donne à chacun son rôle : la View (l'interface) ne fait que dessiner, le ViewModel (le pivot logique) gère les données, le Model (Room) gère le stockage.
+
+Vue (interface Compose)
+
+ViewModel (état et logique)
+
+Model (couche de données Room)
+
+\begin{center}\small\color{gray}Figure 5 : la structure MVVM en trois couches — les données circulent dans un seul sens, chaque couche reste à sa place\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // convertit le Flow en état observable par l'interface
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // actions utilisateur : appeler des fonctions suspend
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+Dans l'interface (Compose), écris : val vm: RecordViewModel = viewModel(), puis val list by vm.records.collectAsState() — dès que les données changent, la liste se rafraîchit toute seule, sans que tu aies rien à faire. C'est la puissance des trois mousquetaires MVVM + Flow + Compose réunis.
+
+\booksection{L'interface : l'écran liste + l'écran de saisie}
+
+Pour l'écran liste, utilise LazyColumn (liste à chargement paresseux) — jamais de ralentissement, même avec beaucoup de données :
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // carte de synthèse en haut (revenus - dépenses = solde)
+        SummaryCard(records)
+
+        // liste des opérations
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // bouton flottant "ajouter une dépense"  ouvre le formulaire
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+Pour la saisie, un AlertDialog (boîte de dialogue) est le plus simple : quelques champs + un basculement dépense/revenu + un menu déroulant de catégories, et au clic sur OK on appelle vm.addRecord(...).
+
+\begin{tcbwarn}{Attention : ne fais pas l'économe sur la validation des saisies}
+Le champ du montant doit absolument être validé : valeurs vides, négatives, saisies illégales comme « abc », tout doit être intercepté (avec toDoubleOrNull()). L'une des causes les plus courantes de plantage d'une app, c'est de « considérer la saisie de l'utilisateur comme un enfant sage ». Retiens : tout ce que tape l'utilisateur doit être inspecté comme un ennemi.
+
+\end{tcbwarn}
+
+\booksection{Éditer et supprimer : permettre aux données « d'entrer et de sortir »}
+
+Un carnet qui sait ajouter mais pas supprimer est bon à jeter au bout de trois jours. Ajoute deux opérations :
+
+\begin{lstlisting}[language=Kotlin]
+// ajoute deux méthodes au Dao :
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// à l'écran : appui long sur un élément ouvre le menu "modifier/supprimer" (avec Compose : DropdownMenu ou AlertDialog)
+// avant de supprimer, mieux vaut une confirmation : la "suppression accidentelle" est ce que les utilisateurs d'apps de dépenses détestent le plus
+\end{lstlisting}
+
+Deux leçons de détail sur l'interaction : la suppression exige une double confirmation (contre les doigts qui glissent), et l'édition pré-remplit autant que possible les valeurs d'origine (corriger un mot est plus simple que tout retaper). Ne sous-estime pas ces deux détails — le « côté produit » se bâtit sur ce genre de détails.
+
+\booksection{Réception : trois niveaux de vérification + deux défis avancés}
+
+\booksection{Réception : trois niveaux de vérification + deux défis avancés}
+
+Projet terminé, fais la réception selon trois niveaux « fonctionnalités cas limites architecture » : sait-on enregistrer, sait-on supprimer, les données sont-elles encore là à la réouverture de l'app (fonctionnalités) ; l'app plante-t-elle avec un montant à 0 ou négatif, les données se perdent-elles à la rotation de l'écran (cas limites) ; interface et données sont-elles mélangées, des champs sont-ils codés en dur (architecture).
+
+Une fois la version de base réceptionnée, offre-toi deux « plats avancés » :
+
+\begin{enumerate}
+  \item Filtre mensuel : ajoute en haut un sélecteur de mois (par exemple 2026-08 v), la liste n'affichant que les écritures du mois ;
+  \item Camembert par catégorie : avec le Canvas de Compose ou une petite bibliothèque de graphiques, dessine « où part l'argent » en camembert — une fois fait, le carnet de comptes prend un petit « air de produit ».
+\end{enumerate}
+
+\begin{tcbpractice}{À toi de jouer : termine-le cette semaine}
+Avance dans l'ordre « couche données ViewModel écran liste écran de saisie carte de synthèse », une étape par jour. En cas de blocage, balance le message d'erreur tel quel à un moteur de recherche ou à une IA (tu te souviens de la partie 7, « L'IA au service du code » ? Décris le problème en précisant « comportement attendu, comportement observé, étapes de reproduction »). Une fois l'app finie, note tes comptes pendant une semaine — utiliser une app de ta propre fabrication donne une fierté qui te poussera à continuer.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Résumé du chapitre}
+\begin{itemize}
+  \item Cinq éléments du besoin décomposition en petites étapes « utilisables à chaque pas », puis on se lance
+  \item Couche données : entité Record + Dao (avec le SQL de statistiques mensuelles) + Database
+  \item Répartition MVVM : la View ne fait que dessiner, le ViewModel gère la logique, le Model gère le stockage
+  \item Flow + stateIn + collectAsState : dès que les données changent, l'interface se rafraîchit automatiquement
+  \item LazyColumn pour la liste à chargement paresseux ; AlertDialog pour la saisie
+  \item Réception en trois niveaux (fonctionnalités/cas limites/architecture) + défis avancés (filtre mensuel, camembert par catégorie)
+\end{itemize}
+
+\end{tcbsummary}

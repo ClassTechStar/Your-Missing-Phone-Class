@@ -1,0 +1,146 @@
+\bookchapter{Capítulo 39: Ingeniería de contexto — que la IA entienda tu intención}
+
+\chapterintro{¿Te ha pasado? Abres una ventana de chat nueva y la IA parece amnésica: se ha olvidado de todo lo básico de tu proyecto. No es que quiera ponerte a prueba: es que de por sí «tiene mala memoria». Este capítulo te enseña a instalarle un «sistema de memoria a largo plazo» y, de paso, te presenta uno de los paradigmas de desarrollo con más tirón en 2026: el desarrollo guiado por especificaciones.}
+
+\booksection{El archivo de memoria del proyecto: la «memoria a largo plazo» de la IA}
+
+Los modelos de IA tienen una limitación de fondo: su memoria es «a corto plazo». Cada conversación empieza con la IA sabiendo cero de tu proyecto. Tienes que repetirle en el chat «usamos React», «el backend es Node.js», «la base de datos es PostgreSQL», «en el código usamos comillas dobles». No solo es ineficiente, sino que es fácil olvidar algo: como tener que hacer la inducción a un compañero nuevo cada día.
+
+La solución es el «archivo de memoria del proyecto»: un archivo de texto plano en la raíz del proyecto que las herramientas de IA leen automáticamente al empezar cada conversación. Cada herramienta tiene su convención de nombre:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Herramienta} & \textbf{Nombre del archivo} \tabularnewline
+\hline
+Cursor & \texttt{.\allowbreak cursorrules} \tabularnewline
+Claude Code & \texttt{CLAUDE.\allowbreak md} \tabularnewline
+GitHub Copilot & \texttt{copilot-\allowbreak instructions.\allowbreak md} \tabularnewline
+Solución universal & \texttt{AGENTS.\allowbreak md} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Convenciones de nombre del archivo de memoria de proyecto de cada herramienta\end{center}
+
+Aunque cambie el nombre, el principio es el mismo: escribes en este archivo la información que quieres que la IA «recuerde siempre». Un buen archivo de memoria de proyecto debe incluir: el resumen del proyecto (qué es), el stack técnico (qué tecnologías usa), las convenciones de código (nombres, indentación, estilo de comentarios), la estructura de directorios (cómo se organiza el código) y los acuerdos de desarrollo (estrategia de ramas, normas de commits, requisitos de pruebas). El CLAUDE.md de Karpathy tiene solo 70 líneas, pero cubre toda la información clave: conciso y completo.
+
+\begin{lstlisting}
+# Proyecto: app de control de gastos personal
+## Resumen
+Es una app full-stack de control de gastos personales que ayuda al usuario a registrar ingresos y gastos diarios.
+## Stack técnico
+- Frontend: React + TypeScript + Tailwind CSS
+- Backend: Node.js + Express + TypeScript
+- Base de datos: SQLite (desarrollo) / PostgreSQL (producción)
+- Tests: Vitest
+## Estilo de código
+- Usar comillas dobles
+- Indentación de 2 espacios
+- Nombres de función en camelCase
+- Definiciones de tipos en PascalCase
+- Cada función debe tener su comentario JSDoc
+## Estructura de directorios
+/src
+  /frontend  - código del frontend
+  /backend   - código del backend
+  /shared    - tipos compartidos frontend/backend
+  /tests     - archivos de test
+## Convenciones de desarrollo
+- Mensajes de commit en español
+- Toda función nueva debe tener primero su test
+- Las respuestas de la API usan siempre el formato { success, data, error }
+\end{lstlisting}
+
+\begin{tcbwarn}{Ojo: no lo conviertas en «el segundo documento de requisitos»}
+Controla la longitud de este archivo: no lo conviertas en un documento de requisitos de decenas de páginas. El objetivo del archivo de memoria del proyecto es «dar a la IA una visión de contexto rápida», no «describir cada función al detalle». Mantenlo conciso y estructurado, y escribe solo lo que la IA necesita saber.
+
+\end{tcbwarn}
+
+\booksection{Desarrollo guiado por especificaciones (SDD)}
+
+El Spec-Driven Development (SDD, desarrollo guiado por especificaciones) es un paradigma de desarrollo que fue madurando en 2026, con una idea central que cabe en una frase: primero se escribe la especificación, después el código. A diferencia del TDD tradicional (desarrollo guiado por pruebas), la «especificación» del SDD no son solo casos de prueba: incluye la descripción de los requisitos, la definición de las interfaces, los modelos de datos y más. La IA genera el código a partir de esas especificaciones, y la responsabilidad del ser humano es escribirlas y mantenerlas.
+
+El flujo de trabajo del SDD tiene cinco pasos:
+
+\begin{enumerate}
+  \item Describe la especificación de requisitos en lenguaje natural (en un archivo .md);
+  \item Define las interfaces y las estructuras de datos (en el archivo de especificación);
+  \item Pide a la IA que genere la implementación del código según la especificación;
+  \item Ejecuta las pruebas para verificar si el resultado cumple la especificación;
+  \item Si no cumple, corrige la especificación o pide a la IA que corrija el código.
+\end{enumerate}
+
+En este flujo, el archivo de especificación es la «única fuente de verdad»: el código se puede regenerar, pero la especificación debe ser correcta primero.
+
+Escribir el documento de especificaciones
+
+¿La especificación está completa?
+
+Completa
+
+La IA genera código a partir de la especificación
+
+Ejecutar tests para verificar el resultado
+
+Incompleta / tests fallidos
+
+Problema de código corrige el código; problema de especificación corrige la especificación
+
+Volver a verificar
+
+Todo correcto entrega
+
+\begin{center}\small\color{gray}Figura 3: flujo de trabajo del desarrollo guiado por especificaciones (SDD)\end{center}
+
+La gran ventaja del SDD: los archivos de especificación son más estables que el código. Cuando cambie el modelo o las herramientas de base, tus archivos de especificación siguen siendo válidos; basta pedir a la nueva herramienta de IA que regenere el código. Por eso este libro insiste en que «la metodología importa más que las herramientas»: el archivo de especificación es el soporte concreto de tu metodología.
+
+\booksection{Gestión de la ventana de contexto}
+
+Aunque tengas el archivo de memoria del proyecto, seguirás topándote en la conversación con el problema de «contexto que no basta». La ventana de contexto del modelo de IA (la cantidad de información que puede procesar a la vez) es limitada. Cuando la conversación se alarga o citas demasiados archivos, la IA «olvida» la información temprana y la calidad de la producción baja: como hablar seis horas seguidas con un amigo, que ya no recuerda lo primero que le dijiste al empezar.
+
+La estrategia central para gestionar la ventana de contexto es «referenciar por capas»:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Capa de contexto} & \textbf{Contenido} & \textbf{Cómo se gestiona} \tabularnewline
+\hline
+Capa 1: memoria del proyecto & Stack técnico, convenciones, estructura de directorios & Va en archivos como CLAUDE.md; se carga sola y no hay que repetirla \tabularnewline
+Capa 2: referencias a archivos & Los archivos de código implicados en la tarea actual & Se referencian con precisión con el símbolo @, sin pegar el texto completo en la conversación \tabularnewline
+Capa 3: contexto de la conversación & El historial de conversación de la tarea actual & Al terminar una tarea, abre una conversación nueva para evitar que el contexto se sobrecargue \tabularnewline
+Cuarto nivel: instrucciones inmediatas & Los requisitos concretos del paso actual & Claras, concisas y con un objetivo concreto; evita las descripciones largas \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Estrategia de gestión por niveles de la ventana de contexto\end{center}
+
+\booksection{Claves prácticas de la ingeniería de contexto}
+
+La ingeniería de contexto no es una configuración única, sino un proceso de mejora continua. Estos son algunos puntos que la práctica ha validado una y otra vez:
+
+\begin{enumerate}
+  \item Mantén el archivo de memoria actualizado a medida que evoluciona el proyecto. Cuando introduzcas una tecnología nueva o cambies de arquitectura, actualiza el archivo de memoria de inmediato, en lugar de explicarlo sobre la marcha en la conversación.
+  \item Saca partido a las referencias @ en lugar de pegar el texto completo. La mayoría de las herramientas de programación con IA admiten la sintaxis @file o @folder, que inyecta en segundo plano el contenido del archivo en el contexto de la IA: es más eficiente que pegarlo a mano y no contamina la conversación.
+  \item Conversaciones «cortas y al grano». Una conversación para una sola tarea o un solo punto de funcionalidad; al terminar, abre una nueva para lo siguiente. Las conversaciones largas no solo consumen la ventana de contexto, sino que también «distraen» a la IA.
+  \item Enséñale a la IA los resultados en lugar de describírselos. Cuando te salga un error, referencia el registro de errores directamente con @, en vez de describirlo con tus palabras («creo que hay algún error»). Para la IA es más efectivo ver la información original que leer tu paráfrasis.
+  \item Limpia y archiva con regularidad. Las conversaciones terminadas y los archivos temporales ocupan espacio de trabajo. Purga de vez en cuando lo que no sirva y mantén ordenado el directorio del proyecto: eso también ayuda a la IA a entender la estructura del proyecto de manera más eficiente.
+\end{enumerate}
+
+\begin{tcbpractice}{Manos a la obra: escribe un archivo de memoria de 70 líneas para tu proyecto}
+Elige un proyecto que estés haciendo (o que planees hacer) y escribe un CLAUDE.md: descripción general (2 o 3 frases), stack tecnológico (enumerado), normas de código (3 a 5), estructura de directorios (dibuja un árbol) y convenciones de desarrollo (2 o 3). No pases de 70 líneas: al terminarlo descubrirás que entiendes tu proyecto bastante mejor.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item La memoria de la IA es «a corto plazo»: en cada conversación nueva su conocimiento del proyecto parte de cero
+  \item El archivo de memoria del proyecto (CLAUDE.md y similares) es la «memoria a largo plazo» de la IA y se carga automáticamente en cada conversación
+  \item Un buen archivo de memoria = descripción general + stack + normas + directorios + convenciones; con 70 líneas basta
+  \item Desarrollo guiado por especificaciones (SDD): primero la especificación, después el código; la especificación es la «única fuente de verdad» y es más estable que el código
+  \item El contexto se gestiona en cuatro niveles: memoria del proyecto referencias @archivo historial de conversación instrucciones inmediatas
+  \item Cinco claves prácticas: actualizar en sincronía, referencias @, conversaciones cortas, dar la información original y limpiar con regularidad
+\end{itemize}
+
+\end{tcbsummary}

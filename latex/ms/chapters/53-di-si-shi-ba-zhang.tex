@@ -1,0 +1,154 @@
+\bookchapter{Bab 48: Mengenali Android — Daripada Sistem Operasi kepada Ekosistem Pembangunan}
+
+\chapterintro{Tahniah kerana membuat keputusan ini — daripada “orang yang bermain telefon” kepada “orang yang membina aplikasi telefon”. Sebelum bertindak, mari bentangkan peta dahulu: dari mana datangnya Android? Mengapa pembangun sedunia menulis aplikasi untuknya? Dan apa yang berlaku sepanjang perjalanan sebuah App daripada jari anda menaip papan kekunci hingga sampai ke telefon pengguna?}
+
+\booksection{Asal usul Android: daripada “robot kecil” kepada “sistem terbesar di dunia”}
+
+Kisah Android bermula pada 2003 — seorang jurutera bernama Andy Rubin menubuhkan syarikat Android dengan matlamat yang sederhana: membina sistem operasi pintar yang “lebih faham kamera”. Kemudian Google membelinya pada 2005; pada 2007, bersama-sama puluhan pengeluar, ditubuhkan Open Handset Alliance (OHA); dan pada September 2008, telefon Android pertama, HTC Dream (G1), dilancarkan secara rasmi.
+
+Kisah selepasnya sudah semua orang tahu: menjelang 2026, Android ialah sistem operasi mudah alih dengan pangsa pasaran terbesar di dunia, dengan jumlah peranti aktif mencecah bilion. Telefon anda, kotak TV, skrin besar dalam kereta dan jam pintar — kemungkinan besar semuanya berjalan atas Android. Apa maksudnya? Maksudnya, setiap baris kod yang anda tulis mempunyai peluang digunakan oleh paling ramai orang di dunia.
+
+\begin{tcbinfo}{Tip: Gen sumber terbuka Android}
+Kod teras Android (AOSP, Android Open Source Project) ialah sumber terbuka — mana-mana pengeluar boleh mengambilnya untuk diubah suai dan diperibadikan. Itulah sebabnya Xiaomi ada MIUI (kini dipanggil HyperOS), Huawei ada lapisan keserasian HarmonyOS dan Samsung ada One UI. Ini perkara baik untuk pembangun: yang anda pelajari ialah “pembangunan Android”, bukan “pembangunan sesuatu jenama” — satu set kemahiran, boleh digunakan di merata tempat.
+
+\end{tcbinfo}
+
+Evolusi nombor versi juga menarik: bermula dengan Cupcake (kek cawan) 1.5, setiap versi besar dinamakan sempena pencuci mulut — Donut, Eclair, Froyo, Gingerbread... sehinggalah Android 10 pada 2019 baharu ditukar kepada nombor tulen. Sehingga Ogos 2026, versi rasmi terkini ialah Android 17, manakala “versi sokongan minimum” yang sebenarnya perlu anda ambil peduli semasa membangun — App arus utama biasanya menetapkannya antara Android 8 (API 26) dan Android 10 (API 29); dengan menyokong peranti beberapa tahun lalu, barulah pangkalan pengguna anda cukup besar.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Versi} & \textbf{Kod nama/tahun} & \textbf{Perkara penting bagi pembangun} \tabularnewline
+\hline
+Android 8 (API 26) & Oreo · 2017 & Saluran pemberitahuan, had latar belakang — garis minimum bagi banyak peranti lama \tabularnewline
+Android 10 (API 29) & 2019 & Storan berperingkat (scoped storage) muncul; peraturan akses fail berubah besar \tabularnewline
+Android 12 (API 31) & 2021 & Pengambilan warna dinamik Material You; peningkatan besar rupa antara muka \tabularnewline
+Android 13 (API 33) & 2022 & Kebenaran pemberitahuan semasa runtime; pop-up bertanya "benarkah hantar pemberitahuan" \tabularnewline
+Android 14-15 (API 34-35) & 2023-2024 & Kembali ramalan (predictive back), halaman 16KB, privasi makin ketat \tabularnewline
+Android 16-17 (API 36-37) & 2025-2026 & Rentak versi kecil lebih pantas; integrasi keupayaan AI (seperti sambungan Gemini) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Sejarah ringkas versi Android (sehingga Ogos 2026; tumpuan utama pembangunan)\end{center}
+
+\booksection{Menulis dengan bahasa apa: Java atau Kotlin?}
+
+Dalam sejarah pembangunan Android, dua bahasa arus utama pernah muncul. Java ialah “warga tua pengasas” — digunakan sejak Android dilahirkan; Kotlin ialah “warganegara kelas pertama” yang dilantik Google pada 2017, dan sejak 2019 pihak rasmi menyatakan jelas “Kotlin dahulu” (Kotlin-first). Menjelang 2026, hampir semua projek baharu menggunakan Kotlin, dan kebanyakan projek lama juga sedang berhijrah sedikit demi sedikit.
+
+Terus terang sahaja: jika anda benar-benar sifar asas, belajar Kotlin terus; jangan pusing belakang untuk menyentuh Java. Tiga sebabnya: pertama, jumlah kod Kotlin 30\%-40\% lebih sedikit daripada Java (fungsi yang sama, Kotlin lebih pendek dan jelas); kedua, ia secara semula jadi melindungi daripada “null pointer”, mimpi ngeri pemula; ketiga, semua tutorial moden, dokumentasi rasmi dan alat pengaturcaraan AI (masih ingat buku pengaturcaraan AI kita?) semuanya berpandukan Kotlin. Java hanya akan anda jumpa semasa menyelenggara projek lama atau membaca kod lama.
+
+Gaya Java (versi berjela)
+
+\begin{lstlisting}
+public class MainActivity extends Activity \{
+@Override
+protected void onCreate(Bundle b) \{
+super.onCreate(b);
+setContentView(R.layout.activity);
+\}
+\}
+\end{lstlisting}
+
+Gaya Kotlin (versi ringkas)
+
+\begin{lstlisting}
+class MainActivity : ComponentActivity() \{
+override fun onCreate(b: Bundle?) \{
+super.onCreate(b)
+setContent \{ App() \}
+\}
+\}
+\end{lstlisting}
+
+Untuk perkara yang sama, Kotlin menjimatkan seguni kurungan kerinting dan kod templat. Bab 50 kita akan mempelajarinya secara rasmi; buat masa ini anda hanya perlu ingat: “bahasa kebangsaan” pembangunan Android dipanggil Kotlin.
+
+\booksection{Bagaimana sebuah App dilahirkan?}
+
+Ramai orang sangka “membangun App” ialah membuka komputer dan menaip kod secara berlebihan. Sebenarnya, daripada idea hingga ke telefon pengguna, sebuah App secara kasarnya melalui talian pengeluaran seperti berikut:
+
+Idea
+
+Reka bentuk (paparan+fungsi)
+
+Menulis kod
+
+Kompilasi dan bungkus (APK/AAB)
+
+Ujian (emulator+peranti sebenar)
+
+Terbitkan (kedai/pakej pemasangan)
+
+\begin{center}\small\color{gray}Rajah 1: Aliran penuh sebuah App Android daripada idea hingga pelancaran\end{center}
+
+Dalam aliran ini, ada dua konsep yang perlu anda kenali sekarang:
+
+\begin{itemize}
+  \item APK: format pakej pemasangan aplikasi Android (.apk); hanya dua klik sudah boleh dipasang ke telefon, seperti .exe dalam Windows. Untuk ujian sendiri pada kebiasaannya atau dikongsi dengan kawan untuk mencuba, gunakan yang ini.
+  \item AAB: Android App Bundle (.aab), "format pakej canggih" untuk pelancaran di Google Play. Kedai akan memotongnya secara dinamik mengikut model telefon pengguna supaya pakej yang dimuat turun lebih kecil untuk setiap orang. Tidak boleh dipasang sendiri; hanya boleh diserahkan kepada kedai.
+\end{itemize}
+
+Selain itu, anda juga akan sentiasa mendengar satu istilah: SDK (Software Development Kit, kit alat pembangunan perisian). Ia ialah satu set lengkap “peralatan pembangunan” yang disediakan secara rasmi oleh Android — termasuk pustaka API pelbagai versi, alat penyahpepijatan, imej emulator dan sebagainya. Kelas seperti Activity dan Button yang anda panggil semasa menulis kod semuanya datang daripada SDK.
+
+\booksection{Gambaran menyeluruh teknologi Android: “senarai senjata” anda}
+
+Sebelum belajar secara rasmi, kenali dahulu persediaan standard projek Android arus utama pada 2026 — tidak mengapa jika anda belum memahami senarai ini; setelah selesai menghabiskan seluruh buku dan membaca semula, semuanya akan terang dengan jelas:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Lapisan} & \textbf{Pilihan arus utama (2026)} & \textbf{Untuk apa digunakan} \tabularnewline
+\hline
+Bahasa & Kotlin 2.x & Bahasa untuk menulis logik \tabularnewline
+Antara muka & Jetpack Compose + Material 3 & Melukis antara muka dengan kod (garis utama buku ini) \tabularnewline
+Seni bina & MVVM + ViewModel & Memisahkan antara muka dan logik supaya kod tidak berselerak \tabularnewline
+Penyimpanan data & Room (pangkalan data) + DataStore (konfigurasi) & Menyimpan data ke dalam telefon \tabularnewline
+Rangkaian & Retrofit + OkHttp + korutin Kotlin & Bercakap dengan pelayan \tabularnewline
+Alat binaan & Gradle + Kotlin DSL & Mengubah kod menjadi pakej pemasangan \tabularnewline
+Persekitaran pembangunan & Android Studio & IDE "pakej lengkap" rasmi Google \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Sekilas pandang tindanan teknologi Android arus utama 2026\end{center}
+
+Jangan gentar dengan rentetan istilah Inggeris ini. Ia seperti periuk belanga dan pinggan mangkuk di dapur — buat masa ini anda hanya perlu tahu “memasak perlu masuk dapur”; cara menggunakan setiap alat akan dibongkarkan satu demi satu dalam bab-bab berikutnya. Dan berita baiknya: semasa mencipta projek baharu, Android Studio akan menyediakan keseluruhan set ini secara automatik untuk anda; anda hanya perlu fokus memasak.
+
+\booksection{Android vs iOS: “pelajaran memilih pihak” pertama bagi pembangun}
+
+Mungkin anda memegang peranti Android dan Apple secara serentak. Sebagai pembangun, perbezaan pengalaman kedua-dua pihak berbaloi difahami lebih awal — bukan pilihan kubu “mana yang lebih baik”, tetapi kiraan realistik “pihak mana lebih sesuai untuk anda memulakan langkah”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimensi} & \textbf{Pembangunan Android} & \textbf{Pembangunan iOS} \tabularnewline
+\hline
+Komputer pembangunan & Windows / Mac / Linux semuanya boleh & Mesti Mac (Xcode eksklusif) \tabularnewline
+Alat pembangunan & Android Studio (percuma) & Xcode (percuma) + yuran tahunan pelancaran kedai 99 dolar AS \tabularnewline
+Semakan pelancaran & Longgar; beberapa jam hingga beberapa hari & Ketat; 1-7 hari adalah lazim \tabularnewline
+Pasang pada peranti untuk mencuba & APK bebas diedarkan dan bebas dipasang & Pengedaran terhad, ujian perlukan penandatanganan/TestFlight \tabularnewline
+Persekitaran pendapatan & Terutamanya iklan/saluran dalam negara & Tabiat pembelian dalam apl di App Store lebih baik \tabularnewline
+Kos pembelajaran & Banyak konsep (empat komponen utama dan sebagainya) & Ekosistem tertutup tetapi sistem seragam, dokumentasi berkualiti \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Perbandingan laluan pembangunan Android dan iOS (Ogos 2026)\end{center}
+
+Jujur sahaja: jika komputer anda bukan Mac, soalan ini langsung tidak perlu difikirkan — Android adalah satu-satunya pilihan. Jika anda ada Mac, Bahagian 8 dan 9 buku ini boleh dibaca secara berdampingan; cara berfikir pengaturcaraannya serupa, jadi selepas menguasai satu pihak, mempelajari pihak yang satu lagi akan jauh lebih pantas.
+
+\begin{tcbpractice}{Mari cuba: Lihat 'Android' dalam telefon anda}
+Buka [Tetapan] [Mengenai Telefon] pada telefon anda (atau 'Mengenai Peranti'), cari baris 'Versi Android' — ketik beberapa kali berturut-turut dan anda boleh mencetuskan permainan easter egg sistem. Catat nombor versi anda, dan rujuk jadual versi di atas untuk melihat generasinya. Telefon anda itulah 'peranti ujian pembangunan' pertama anda.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab}
+\begin{itemize}
+  \item Android lahir pada 2008; pada 2026 ia ialah sistem mudah alih dengan bahagian pasaran terbesar di dunia, dengan peranti aktif berbilion
+  \item Versi rasmi terkini ialah Android 17; aplikasi arus utama menyokong sekurang-kurangnya Android 8-10 supaya pangkalan pengguna cukup besar
+  \item Semua projek baharu guna Kotlin: kod kurang 30\%+, elak null pointer, pilihan rasmi
+  \item APK dipasang sendiri, AAB untuk kedai; SDK ialah kit peralatan pembangunan rasmi
+  \item Tindanan teknologi standard 2026: Kotlin + Compose + MVVM + Room + Retrofit + Gradle + Android Studio
+\end{itemize}
+
+\end{tcbsummary}

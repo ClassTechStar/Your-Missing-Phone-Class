@@ -1,0 +1,211 @@
+\bookchapter{Capítulo 15: La ciencia de la batería y la optimización de la autonomía}
+
+\chapterintro{La batería es el “corazón energético” de tu móvil. En este capítulo entenderás sus caprichos, aprenderás técnicas científicas de carga y duración, y te desharás definitivamente de la ansiedad por la batería.}
+
+\booksection{¿Qué pasa con la batería? Ciclos y salud}
+
+La batería del móvil (de iones de litio o polímero de litio) es como una esponja de energía: cargarla es absorber agua (almacenar), descargarla es exprimirla (usar). Hay varias carácterísticas que vale la pena recordar:
+
+\begin{itemize}
+  \item \textbf{Carga cuando quieras}: A diferencia de las baterías antiguas, no tiene efecto memoria; no hace falta agotarla por completo antes de cargar.
+  \item \textbf{Teme al calor}: Las altas temperaturas son el enemigo número uno de la batería.
+  \item \textbf{Envejece}: Con el uso, la capacidad máxima disminuye; es algo normal.
+\end{itemize}
+
+\booksubsection{Indicadores clave: ciclos de carga y salud}
+
+\begin{itemize}
+  \item Un ciclo no es una sola carga. Por ejemplo: hoy usas el 60\% y cargas, mañana usas el 40\% y cargas; solo cuando se acumula un consumo total del 100\% cuenta como un ciclo.
+  \item La "salud de la batería" es el porcentaje de la capacidad actual respecto a la de fábrica. Cuando baja del 80\%, notarás claramente que la duración disminuye.
+  \item \textbf{¿Cómo verlo?}iPhone: Ajustes > Batería > Salud de la batería y carga; Android: generalmente busca «salud de la batería» en Ajustes.
+\end{itemize}
+
+\booksection{Mitos sobre la carga: carga rápida, inalámbrica y reglas de oro}
+
+\begin{itemize}
+  \item \textbf{2. Mitos sobre la carga: carga rápida, inalámbrica y reglas de oro}Con accesorios de carga rápida originales o certificados el daño es mínimo. El móvil y el cargador tienen control térmico: si se sobrecalientan, reducen la potencia automáticamente.
+  \item \textbf{Carga inalámbrica}: Cómoda, pero menos eficiente y con más calentamiento. Adecuada para cargar toda la noche.
+  \item \textbf{Regla de oro}: Procura mantener la batería entre el 20 \% y el 80 \%; no la dejes siempre «con hambre» (0 \%) ni «llena» (100 \%).
+\end{itemize}
+
+\begin{tcbinfo}{Funcion de "limite del 80\%" del iPhone: convertir la regla de oro en un ajuste del sistema}
+La serie iPhone 15/16 (con iOS 17 o superior) ha convertido la “regla del 20-80\%” en una funcion del sistema. Al activarla, el telefono deja de cargar al llegar al 80\% y ralentiza el envejecimiento de la bateria. Ruta:
+
+\texttt{Ajustes > Bateria > Salud de la bateria y carga > Optimizacion de carga > Limite del 80\%}
+
+Significado de las tres opciones: 1)\textbf{Sin limite}-- carga al 100\%; 2)\textbf{Optimizacion de carga de bateria}-- aprende tu rutina y solo retrasa el ultimo tramo de la madrugada hasta el 100\%; 3)\textbf{Limite del 80\%}-- se detiene en el 80\%, lo mejor para la bateria. Quien tenga carga disponible en casa o la oficina deberia elegir el limite del 80\%; quien viaja mucho y necesita bateria llena puede elegir la optimizacion de carga.
+
+\end{tcbinfo}
+
+\begin{tcbinfo}{Cargador GaN: el gran aliado de los viajeros}
+Quizas hayas notado que los cargadores rapidos son cada vez mas pequenos; el responsable es\textbf{GaN (nitruro de galio)}este nuevo material semiconductor. Comparado con los cargadores tradicionales de silicio, el GaN tiene varias ventajas:
+
+\begin{itemize}
+  \item \textbf{Tamano reducido}: A igual potencia, un cargador GaN puede ser de la mitad o un tercio del tamano de uno de silicio; un GaN de 65 W es mas pequeno que el viejo cargador de 5 W de Apple.
+  \item \textbf{Alta eficiencia y poco calor}: La perdida por conmutacion del GaN es muy inferior a la del silicio; la eficiencia supera el 95\% y no se calienta tanto al cargar.
+  \item \textbf{Ideal para viajar}: Un cargador GaN multi-puerto de 65 W o 100 W carga a la vez telefono, tablet y portatil; mucho mas ligero que llevar tres "ladrillos".
+  \item \textbf{Recomendacion de compra}: Elige un cargador GaN con protocolo PD ( desde 65 W para portatiles); marcas conocidas como Baseus, Anker, Nubia o Xiaomi son validas. Comprueba que el cable sea compatible (la alta potencia requiere cable Type-C con chip E-Marker).
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{Protocolos de carga rápida: ¿por qué tu cargador no carga rápido?}
+
+Te habrá pasado esto: tu móvil soporta carga rápida, pero al cambiar de cargador se vuelve lento. Esto ocurre porque la carga rápida no es simplemente “mayor potencia”; requiere que el cargador, el cable y el móvil “hablen el mismo idioma”: ese es el protocolo de carga rápida.
+
+\booksubsection{Principio básico de la carga rápida}
+
+Potencia de carga = Voltaje × Corriente (P = U × I). Para aumentar la potencia, puedes subir el voltaje, la corriente o ambos. Los diferentes protocolos eligen distintas rutas tecnológicas.
+
+Flujo de trabajo de la carga rápida:
+
+\begin{enumerate}
+  \item \textbf{Fase de handshake}: El móvil y el cargador se comunican por el cable e intercambian los protocolos y potencias que soportan.
+  \item \textbf{Fase de negociación}: Ambas partes acuerdan el nivel de potencia más alto compatible.
+  \item \textbf{Fase de carga}:El cargador emite según el voltaje y corriente acordados; el móvil gestióna la energía.
+  \item \textbf{Fase de ajuste}: A medida que sube la carga, el móvil reduce poco a poco la potencia de carga para proteger la batería.
+\end{enumerate}
+
+\booksubsection{Protocolos de carga rápida en detalle}
+
+\textbf{USB PD(Power Delivery)}— El rey de los protocolos universales
+
+\begin{itemize}
+  \item \textbf{Características}:Estándar oficial de USB-IF, la cobertura más amplia. PD 3.0 soporta hasta 100W (20V/5A), PD 3.1 se extiende a 240W (48V/5A).
+  \item \textbf{Niveles de voltaje}:5V, 9V, 15V, 20V; PD 3.1 también soporta 28V, 36V, 48V.
+  \item \textbf{Compatibilidad}: Todos los iPhone, Google Pixel, algúnos flagship Android, portátiles y Switch soportan PD.
+  \item \textbf{Ventajas}: Muy versátil: un cargador para varios dispositivos; soporta PPS (fuente programable) para ajustar finamente voltaje y corriente.
+  \item \textbf{Desventajas}: Requiere puerto Type-C y chip dedicado; coste mayor.
+\end{itemize}
+
+\textbf{Qualcomm QC (Quick Charge)}— El veterano del bando Android
+
+\begin{itemize}
+  \item \textbf{QC 3.0}:Soporta voltaje ajustable de 3,6V a 20V en pasos de 0,2V; hasta 18W.
+  \item \textbf{QC 4.0/4+}:Compatible con USB PD; hasta 27W; tecnología de doble canal de carga.
+  \item \textbf{QC 5.0}:Soporta más de 100W+; 0-50\% en solo 5 minutos; mejora significativa del calor.
+  \item \textbf{Compatibilidad}: La mayoría de móviles con procesador Qualcomm lo soportan; pero las marcas suelen priorizar sus protocolos propietaríos.
+\end{itemize}
+
+\textbf{OPPO VOOC/OnePlus WARP/realme Dart}— Representante de bajo voltaje y alta corriente
+
+\begin{itemize}
+  \item \textbf{Ruta tecnológica}: Bajo voltaje y alta corriente (desde 5V/4A); menos calor, mayor eficiencia.
+  \item \textbf{VOOC 1.0}:20W (5V/4A), lanzado en 2014; inauguró la era de carga rápida.
+  \item \textbf{SuperVOOC}:50W-65W; diseño de doble celda en serie.
+  \item \textbf{SuperVOOC 2.0}:65W; llena una batería de 4000mAh en 30 minutos.
+  \item \textbf{Carga súper rápida 150W/240W}:La tecnología de carga rápida de producción más rápida actual.
+  \item \textbf{Características}:Requiere cargador y cable dedicados (con contactos adicionales); incompatible con otros protocolos.
+\end{itemize}
+
+\textbf{Huawei SuperCharge}— Evolución de la carga rápida de alto voltaje
+
+\begin{itemize}
+  \item \textbf{Características}:9V/2A, 18W; compatible con QC 2.0.
+  \item \textbf{SCP(Super Charge Protocol)}:Soporta mayor potencia: desde 22,5W a 66W y hasta 100W.
+  \item \textbf{Compatibilidad}:Usa tecnología de bomba de carga; convierte alto voltaje a baja tensión con alta corriente; eficiencia hasta el 98\%.
+  \item \textbf{Ventajas}: Exclusivo para móviles Huawei/Honor; algúnos cargadores soportan PD.
+\end{itemize}
+
+\textbf{Xiaomi HyperCharge}— Auge de los protocolos propios
+
+\begin{itemize}
+  \item \textbf{Chip HyperCharge P1}:Chip de gestión de carga propio de Xiaomi; soporta carga por cable de 120W.
+  \item \textbf{Chip HyperCharge G1}:Chip de gestión de batería; junto con P1 logra carga más eficiente.
+  \item \textbf{Características técnicas}:Doble celda en serie + bomba de carga; soporta múltiples protocolos.
+\end{itemize}
+
+\textbf{Carga rápida de Apple}— Conservador pero estable
+
+\begin{itemize}
+  \item \textbf{Compatibilidad}:Solo soporta el protocolo USB PD.
+  \item \textbf{Potencia}:Desde iPhone 8 soporta carga rápida; máximo unos 27W (iPhone 15 Pro Max hasta 27W+).
+  \item \textbf{Enfoque técnico}:Potencia conservadora, pero curva de carga optimizada; control térmico excelente.
+  \item \textbf{Requisitos de accesorios}: Necesitas un cable USB-C a Lightning (o USB-C a USB-C) y un cargador con PD.
+\end{itemize}
+
+\booksubsection{Tabla comparativa de protocolos de carga rápida}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Protocolo} & \textbf{Potencia máx.} & \textbf{Ruta tecnológica} & \textbf{Compatibilidad} \tabularnewline
+\hline
+USB PD 3.1 & 240 W & Alto voltaje/múltiples niveles & La más amplia \tabularnewline
+QC 5.0 & 100W+ & Alto voltaje ajustable & Dispositivos Qualcomm \tabularnewline
+VOOC/Dart & 240 W & Bajo voltaje/alta corriente & Exclusivo OPPO \tabularnewline
+SuperCharge & 100W & Bomba de carga & Huawei/Honor \tabularnewline
+Carga rápida Apple & \textasciitilde{}27W & Protocolo PD & iPhone/iPad \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Protocolos de carga inalámbrica}
+
+La carga inalámbrica también tiene sus propios estándares de protocolo:
+
+\begin{itemize}
+  \item \textbf{Estándar Qi}: Definido por la WPC (Wireless Power Consortium), es el estándar más universal. El Qi básico soporta 5W-15W.
+  \item \textbf{Qi2}: Presentado en 2023, añade imanes de alineación (similar al MagSafe de Apple) y soporta 15W+.
+  \item \textbf{Protocolos propietaríos}: Cada marca tiene su carga inalámbrica rápida de alta potencia, como los 50W de Xiaomi o los 50W de Huawei; requieren cargadores dedicados.
+\end{itemize}
+
+\booksubsection{Guía de compra de carga rápida}
+
+\begin{itemize}
+  \item \textbf{Verifica compatibilidad de protocolo}: Al comprar un cargador, confirma que soporta el protocolo de carga rápida de tu móvil. Los de terceros suelen indicar los protocolos compatibles.
+  \item \textbf{Mira el cable}: La carga rápida de alta potencia necesita cables especiales; un cable corriente puede limitarse a menos de 60W.
+  \item \textbf{Verifica certificaciones}: Para Apple, elige cables con certificación MFi; para Android, originales de marca o de terceros conocidos.
+  \item \textbf{Observa el calor}: Es normal que el móvil se caliente durante la carga rápida, pero si quema al tacto algo va mal: pausa la carga o cambia el cargador.
+\end{itemize}
+
+\begin{tcbwarn}{Consejos de seguridad para carga rápida}
+\begin{itemize}
+  \item Evita jugar a juegos pesados mientras cargas; aumenta el calor.
+  \item : No uses cargadores ni cables de mala calidad: pueden suponer un riesgo de seguridad.
+  \item Quita las fundas gruesas al cargar; ayuda a disipar el calor.
+  \item : Si el cargador o el móvil se calientan de forma anómala o huelen mal, deja de usarlos de inmediato.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{Nueva tecnologia de bateria: anodo de silicio-carbono}
+
+Si sigues las presentaciones de gamas altas de 2024-2026, “anodo de silicio-carbono” se ha convertido en sinonimo de bateria premium. Es una actualizacion del material del anodo; el principio no es complejo:
+
+\begin{itemize}
+  \item \textbf{Anodo tradicional de grafito}: Las baterias de telefono siempre han usado grafito como anodo; tecnologia madura y estable, pero su densidad energetica roza el limite teorico (unos 372 mAh/g).
+  \item \textbf{Incorporar silicio}: La capacidad teorica del silicio es unas 10 veces la del grafito (unos 4200 mAh/g). Al mezclar poco silicio con grafito se crea un "anodo compuesto de silicio-carbono" que eleva la densidad energetica de la bateria.
+  \item \textbf{Aumento de densidad energetica}: A igual volumen, la capacidad del anodo de silicio-carbono puede aumentar unos\textbf{15\%-20\%}. Por eso los moviles de gama alta de 2024-2026 logran meter 5500-6000 mAh en cuerpos de 7-9 mm de grosor.
+\end{itemize}
+
+\begin{tcbinfo}{Que modelos lo usan?}
+\begin{itemize}
+  \item \textbf{Honor}: La serie Magic fue la primera en usar anodo de silicio-carbono; Magic6 Pro, Magic7 y el plegable Magic V3 lo incorporan.
+  \item \textbf{Xiaomi}: Xiaomi 14 Ultra y la serie Xiaomi 15 montan baterias de nueva generacion de silicio-carbono.
+  \item \textbf{vivo}: X100 Ultra y X200 Pro usan soluciones de alta densidad de silicio-carbono.
+  \item \textbf{Huawei, OPPO y otros}: Las gamas altas de 2025-2026 lo adoptan de forma general; el anodo de silicio-carbono pasa de "tecnologia magica" a estandar.
+\end{itemize}
+
+\end{tcbinfo}
+
+\textbf{Impacto en el usuario}: La mayor ventaja es “mas capacidad a igual volumen”: el telefono puede ser mas fino sin perder autonomia, o mantener el grosor y subir de 4500 mAh a 5500 mAh. Ya no pagas la autonomia con “mas grosor”. Ojo: el anodo de silicio-carbono necesita optimizacion con el chip de carga rapida a bajas temperaturas y en carga completa, por eso los fabricantes recomiendan mantener el 80\%.
+
+\booksection{Los verdaderos trucos de ahorro de bateria}
+
+\begin{itemize}
+  \item \textbf{Pantalla (la mayor consumidora)}: Baja el brillo y acorta el tiempo de bloqueo automático; en pantallas OLED, el modo oscuro ahorra bastante batería.
+  \item \textbf{Señal débil}:En ascensores o sótanos, el móvil busca señal desesperadamente; consume batería rapidísimo.
+  \item \textbf{5G}:Si la señal es mala, cambia manualmente a 4G; la autonomía mejorará mucho.
+  \item \textbf{Servicios de ubicación}:Para Apps no de navegación, pon el permiso de ubicación en "Solo durante el uso".
+  \item \textbf{Limitar actividad en segúndo plano}:iPhone: Ajustes > General > Actualización en segúndo plano. Android: ajustes de batería de Apps.
+\end{itemize}
+
+\begin{tcbpractice}{Haz una revisión: haz un chequeo a tu batería}
+\begin{enumerate}
+  \item Consulta la salud: encuentra y anota la capacidad máxima de tu batería.
+  \item Analiza el consumo: mira los gráficos y lista de Apps en ajustes de batería; identifica a los culpables.
+  \item Establece contramedidas: limita las Apps con consumo anómalo en segúndo plano.
+\end{enumerate}
+
+\end{tcbpractice}

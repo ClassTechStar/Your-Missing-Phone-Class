@@ -1,0 +1,211 @@
+\bookchapter{第十五章：電池科學與續航優化}
+
+\chapterintro{電池就係你手機嘅「能量心臟」。呢章帶你搞掂電池嘅小脾氣，學識科學嘅充電同續航技巧，徹底告別電量焦慮。}
+
+\booksection{一、電池係點回事？循環與健康度}
+
+手機電池（鋰離子或鋰聚合物）好似一塊能量海綿：充電就係吸水（存電），放電就係揸水（用電）。有幾個特點值得記住：
+
+\begin{itemize}
+  \item \textbf{隨用隨充}：同舊電池唔同，佢冇記憶效應，唔使一定要用完再充。
+  \item \textbf{怕熱}：高温係電池頭號殺手。
+  \item \textbf{會老化}：用得耐，最大容量就會下降，呢個係正常現象。
+\end{itemize}
+
+\booksubsection{核心指標：循環次數與健康度}
+
+\begin{itemize}
+  \item 一次循環唔係充一次電。比如今日用60\%充滿，聽日用40\%充滿，總消耗100\%電量先算一次循環。
+  \item 電池健康度就係當前最大容量佔全新時嘅百分比。低於80\%時，你會明顯感覺續航變短。
+  \item \textbf{點樣睇？}iPhone：設定 > 電池 > 電池健康與充電；安卓：一般去設定入面搜電池健康。
+\end{itemize}
+
+\booksection{二、充電玄學？快充、無線充與黃金法則}
+
+\begin{itemize}
+  \item \textbf{快充傷電池？}用原裝或認證嘅快充配件，傷害好細。手機同充電頭有温控，過熱會自動降功率。
+  \item \textbf{無線充電}：方便但效率較低，發熱更明顯。適合成晚充電。
+  \item \textbf{黃金養生法則}：盡量等電量保持喺20\%-80\%之間，唔好成日等佢餓住（0\%）或撐住（100\%）。
+\end{itemize}
+
+\begin{tcbinfo}{iPhone「80\%充電限制」功能——將黃金法則變成系統設定}
+iPhone 15/16系列（iOS 17以上）已經將「20\%-80\%法則」做成咗系統功能。開啟後，手機充到80\%會自動停止充電，從而大幅延緩電池老化。設定路徑：
+
+\texttt{設定 > 電池 > 電池健康與充電 > 充電優化 > 80\%限制}
+
+三個選項嘅含義：(1)\textbf{不限}——充到100\%；(2)\textbf{優化電池充電}——學習你嘅作息，淨係喺凌晨最後一段延遲到100\%；(3)\textbf{80\%限制}——直接停喺80\%，最護電池。長期喺屋企/辦公室有充電條件嘅人，強烈建議選80\%限制；經常出差、需要滿電出門嘅人，可以選優化電池充電。
+
+\end{tcbinfo}
+
+\begin{tcbinfo}{GaN充電器——出差黨嘅好拍檔}
+你可能注意到而家嘅快充頭越做越細，背後功臣係\textbf{GaN（氮化鎵）}呢種新型半導體材料。相比傳統矽基充電器，GaN充電器有幾個明顯優勢：
+
+\begin{itemize}
+  \item \textbf{體積細}：同等功率下，GaN充電器可以做到傳統矽基嘅1/2甚至1/3大細，65W功率嘅GaN頭比蘋果舊嘅5W頭仲細。
+  \item \textbf{效率高、發熱低}：氮化鎵嘅開關損耗遠低於矽，能量轉換效率可達95\%以上，充電時唔容易燙手。
+  \item \textbf{適合出差}：一個65W或100W嘅GaN多口充電器，可以同時畀手機、平板、筆記本充電，比帶三塊「磚頭」輕便得多。
+  \item \textbf{選購建議}：認準支援PD協議嘅GaN充電器（65W起步可充筆電），知名品牌如倍思、安克、努比亞、小米等均可。注意核對數據線係咪匹配（高功率需用E-Marker晶片嘅Type-C線）。
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{三、快充協議全解析：點解你嘅充電器充唔快？}
+
+你可能遇過呢種情況：明明手機支援快充，換咗充電器卻變得好慢。呢個係因為快充唔係簡單嘅「功率大就得」，而係需要充電頭、數據線、手機三方「講同一種語言」——呢個就係快充協議。
+
+\booksubsection{快充嘅基本原理}
+
+充電功率 = 電壓 × 電流（P = U × I）。要提升功率，要麼提高電壓，要麼提高電流，或者兩者都提高。唔同協議選擇咗唔同嘅技術路線。
+
+快充嘅工作流程：
+
+\begin{enumerate}
+  \item \textbf{握手階段}：手機同充電頭通過數據線通信，交換各自支援嘅協議同功率資訊。
+  \item \textbf{協商階段}：雙方確定一個共同支援嘅最高功率檔位。
+  \item \textbf{充電階段}：充電頭按協商好嘅電壓電流輸出，手機端進行電源管理。
+  \item \textbf{調整階段}：隨住電量增加，手機會逐步降低充電功率，保護電池。
+\end{enumerate}
+
+\booksubsection{主流快充協議詳解}
+
+\textbf{USB PD（Power Delivery）}——通用協議之王
+
+\begin{itemize}
+  \item \textbf{特點}：USB-IF組織制定嘅官方標準，覆蓋範圍最廣。PD 3.0支援最高100W（20V/5A），PD 3.1擴展到240W（48V/5A）。
+  \item \textbf{電壓檔位}：5V、9V、15V、20V，PD 3.1仲支援28V、36V、48V。
+  \item \textbf{兼容性}：iPhone全系、谷歌Pixel、部分安卓旗艦、筆記本電腦、Switch遊戲機都支援PD協議。
+  \item \textbf{優勢}：通用性強，一個充電頭可以畀多種設備充電；支援PPS（可編程電源），可以精細調節電壓電流。
+  \item \textbf{劣勢}：需要Type-C介面同專用晶片，成本較高。
+\end{itemize}
+
+\textbf{高通QC（Quick Charge）}——安卓陣營嘅元老
+
+\begin{itemize}
+  \item \textbf{QC 3.0}：支援3.6V-20V以0.2V為步進嘅可調電壓，最高18W。
+  \item \textbf{QC 4.0/4+}：兼容USB PD協議，支援最高27W，加入雙路充電技術。
+  \item \textbf{QC 5.0}：支援最高100W+，0-50\%僅需5分鐘，大幅改善發熱。
+  \item \textbf{兼容性}：使用高通驍龍處理器嘅手機大多支援，但各品牌通常會優先使用自己嘅私有協議。
+\end{itemize}
+
+\textbf{OPPO VOOC/一加WARP/真我Dart}——低壓大電流嘅代表
+
+\begin{itemize}
+  \item \textbf{技術路線}：低壓大電流（5V/4A起步），發熱更細，效率更高。
+  \item \textbf{VOOC 1.0}：20W（5V/4A），2014年發布，開創快充時代。
+  \item \textbf{SuperVOOC}：50W-65W，採用雙電芯串聯設計。
+  \item \textbf{SuperVOOC 2.0}：65W，30分鐘充滿4000mAh電池。
+  \item \textbf{150W/240W超級閃充}：目前最快嘅量產快充技術。
+  \item \textbf{特點}：需要專用充電頭同數據線（有額外觸點），唔兼容其他協議。
+\end{itemize}
+
+\textbf{華為SuperCharge}——高壓快充嘅演進
+
+\begin{itemize}
+  \item \textbf{FCP（Fast Charge Protocol）}：9V/2A，18W，兼容QC 2.0。
+  \item \textbf{SCP（Super Charge Protocol）}：支援更高功率，由22.5W到66W再到100W。
+  \item \textbf{技術特點}：採用電荷泵技術，將高壓轉換為低壓大電流輸入電池，效率高達98\%。
+  \item \textbf{兼容性}：華為/榮耀手機專用，部分充電器支援PD協議。
+\end{itemize}
+
+\textbf{小米澎湃快充}——自研協議嘅崛起
+
+\begin{itemize}
+  \item \textbf{澎湃P1晶片}：小米自研嘅快充管理晶片，支援120W有線快充。
+  \item \textbf{澎湃G1晶片}：電池管理晶片，同P1配合實現更高效嘅快充。
+  \item \textbf{技術特點}：採用雙電芯串聯+電荷泵方案，支援多種協議兼容。
+\end{itemize}
+
+\textbf{蘋果快充}——保守但穩定
+
+\begin{itemize}
+  \item \textbf{協議}：淨係支援USB PD協議。
+  \item \textbf{功率}：iPhone 8及以後支援快充，最高約27W（iPhone 15 Pro Max可達27W+）。
+  \item \textbf{特點}：功率相對保守，但充電曲線優化好，發熱控制出色。
+  \item \textbf{配件要求}：需要USB-C to Lightning線（或USB-C to USB-C線）同PD充電頭。
+\end{itemize}
+
+\booksubsection{快充協議對比表}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{協議} & \textbf{最高功率} & \textbf{技術路線} & \textbf{兼容性} \tabularnewline
+\hline
+USB PD 3.1 & 240W & 高壓/多檔位 & 最廣泛 \tabularnewline
+QC 5.0 & 100W+ & 高壓可調 & 高通機型 \tabularnewline
+VOOC/Dart & 240W & 低壓大電流 & OPPO系專用 \tabularnewline
+SuperCharge & 100W & 電荷泵 & 華為/榮耀 \tabularnewline
+蘋果快充 & \textasciitilde{}27W & PD協議 & iPhone/iPad \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{無線充電協議}
+
+無線充電都有自己嘅協議標準：
+
+\begin{itemize}
+  \item \textbf{Qi標準}：WPC（無線充電聯盟）制定，最通用嘅標準。基礎Qi支援5W-15W。
+  \item \textbf{Qi2標準}：2023年發布，引入磁吸定位（類似蘋果MagSafe），支援15W+。
+  \item \textbf{私有協議}：各品牌有自己嘅高速無線充電，如小米50W無線充、華為50W無線充等，需要專用充電器。
+\end{itemize}
+
+\booksubsection{快充選購指南}
+
+\begin{itemize}
+  \item \textbf{睇協議匹配}：購買充電器時，確認佢支援你手機嘅快充協議。第三方充電器通常會標註支援嘅協議。
+  \item \textbf{睇數據線}：大功率快充需要專用數據線。普通數據線可能只支援60W以下。
+  \item \textbf{睇認證}：蘋果用戶建議選擇MFi認證嘅數據線；安卓用戶選擇品牌原裝或知名第三方。
+  \item \textbf{睇發熱}：快充時手機發熱係正常嘅，但如果燙手就唔正常喇，建議暫停充電或更換充電器。
+\end{itemize}
+
+\begin{tcbwarn}{快充安全提示}
+\begin{itemize}
+  \item 避免邊充邊玩大型遊戲，會加劇發熱。
+  \item 唔好使用劣質充電器同數據線，可能導致安全隱患。
+  \item 充電時除掉厚重嘅手機殼，幫助散熱。
+  \item 如果充電器或手機異常發熱、有異味，立即停止使用。
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{四、電池新技術：矽碳負極電池}
+
+如果你留意2024-2026年嘅旗艦手機發布會，「矽碳負極」呢個詞幾乎成咗高端電池嘅代名詞。呢個係鋰電池負極材料嘅一次重要升級，原理其實唔複雜：
+
+\begin{itemize}
+  \item \textbf{傳統石墨負極}：手機電池一直用嘅係石墨做負極，技術成熟、穩定，但能量密度已接近理論上限（約372mAh/g）。
+  \item \textbf{摻入矽材料}：矽嘅理論比容量係石墨嘅10倍左右（約4200mAh/g）。將少量矽摻入石墨入面做成「矽碳複合負極」，就可以顯著提升整塊電池嘅能量密度。
+  \item \textbf{能量密度提升}：同等體積下，矽碳負極電池嘅容量可以提升約\textbf{15\%-20\%}。呢個正係2024-2026年旗艦機可以喺7-9mm機身入面塞進5500-6000mAh大電池嘅關鍵原因。
+\end{itemize}
+
+\begin{tcbinfo}{邊啲機型用上咗？}
+\begin{itemize}
+  \item \textbf{榮耀}：Magic系列率先商用矽碳負極，Magic6 Pro、Magic7系列、Magic V3摺疊屏均採用。
+  \item \textbf{小米}：小米14 Ultra、小米15系列搭載新一代矽碳負極電池。
+  \item \textbf{vivo}：X100 Ultra、X200 Pro系列使用高密度矽碳負極方案。
+  \item \textbf{華為/OPPO等}：2025-2026年旗艦普遍跟進，矽碳負極正在由「黑科技」變成高端機嘅標配。
+\end{itemize}
+
+\end{tcbinfo}
+
+\textbf{對用戶嘅實際影響}：矽碳負極帶嚟嘅最大好處係「同體積電池容量更大」——手機可以做得更薄，同時續航唔縮水；或者機身不變厚，但電池由4500mAh漲到5500mAh。換句話講，你唔使為續航付「厚重」嘅代價喇。需要注意嘅係，矽碳負極電池喺低温同滿充管理上仍需配合快充晶片做優化，呢個都係廠商建議長期保持80\%充電嘅原因之一。
+
+\booksection{五、呢個先係真正嘅省電技巧}
+
+\begin{itemize}
+  \item \textbf{螢幕（耗電王）}：調低亮度、縮短自動鎖屏時間。OLED屏手機開深色模式可以省唔少電。
+  \item \textbf{訊號差}：喺電梯、地下室，手機會拼命搜訊號，耗電極快。
+  \item \textbf{5G}：如果訊號唔好，手動切返4G，續航會好好多。
+  \item \textbf{定位服務}：非導航類App，定位權限設為「僅使用時允許」。
+  \item \textbf{限制後台活動}：iPhone喺設定 > 通用 > 後台App刷新；安卓喺應用電池設定入面。
+\end{itemize}
+
+\begin{tcbpractice}{嚟檢查一下：畀你嘅電池做個體檢}
+\begin{enumerate}
+  \item 查看健康度：揾到並記低你嘅電池最大容量。
+  \item 分析耗電詳情：睇電池設定入面嘅圖表同App列表，揾出耗電元兇。
+  \item 制定對策：限制後台耗電異常嘅App。
+\end{enumerate}
+
+\end{tcbpractice}

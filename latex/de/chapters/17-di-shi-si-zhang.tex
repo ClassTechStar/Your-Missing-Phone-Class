@@ -1,0 +1,393 @@
+\bookchapter{Kapitel 14: Passwort-Manager im Detail}
+
+\chapterintro{Im digitalen Zeitalter ist dein Passwort der Schlüssel zu deiner Haustür. Aber bei zu vielen, zu komplexen Schlüsseln: Was tun? Der Passwort-Manager ist dein „Universalverwalter“ für Schlüssel.}
+
+\booksection{I. Warum brauchst du einen Passwort-Manager?}
+
+Ein moderner Mensch hat im Schnitt Dutzende bis Hunderte Online-Konten. Nutzt du für alle dasselbe Passwort, sind nach einem Hack alle Konten gefährdet. Nutzt du für jedes Konto ein anderes, komplexes Passwort, kannst du dir keines merken.
+
+Der Passwort-Manager löst dieses Dilemma: Du musst dir nur ein einziges Master-Passwort merken – er merkt sich alle anderen für dich.
+
+\booksection{II. Wie Passwort-Manager funktionieren}
+
+\begin{enumerate}
+  \item \textbf{Verschlüsselte Speicherung}: Alle Passwörter werden hochverschlüsselt gespeichert – nur du kannst sie entschlüsseln.
+  \item \textbf{Master-Passwort}: Du legst ein Master-Passwort fest, das den Tresor entsperren kann. Das Master-Passwort selbst wird nicht auf dem Server gespeichert.
+  \item \textbf{Automatisches Ausfüllen}: Auf Login-Seiten von Websites und Apps füllt der Passwort-Manager Konto und Passwort automatisch aus.
+  \item \textbf{Passwort-Generator}: Er kann zufällige, komplexe Passwörter erzeugen und so die Sicherheit erhöhen.
+\end{enumerate}
+
+\booksection{III. Kurze Einfuehrung in die Verschluesselung}
+
+Das Verstaendnis der Verschluesselungsprinzipien von Passwortmanagern hilft dir einzuschaetzen, ob ein Anbieter vertrauenswuerdig ist. Im Folgenden werden Kernkonzepte in verstaendlicher Sprache erklaert.
+
+\booksubsection{AES-256-Verschluesselung}
+
+AES (Advanced Encryption Standard) ist ein vom NIST anerkannter symmetrischer Verschluesselungsalgorithmus, der von Banken, dem Militaer und Regierungen weit verbreitet ist. „256“ bezeichnet die Schluessellaenge von 256 Bit – ein Bruetforce-Angriff wuerde laenger dauern als das Alter des Universums. Massgebliche Passwortmanager (1Password, Bitwarden, KeePass u. a.) verschluesseln deine Passwortdatenbank mit AES-256.
+
+\booksubsection{Zero-Knowledge-Architektur}
+
+„Zero Knowledge“ bedeutet nicht, dass der Anbieter nichts speichert, sondern dass\textbf{Verschluesselung und Entschluesselung lokal auf deinem Geraet stattfinden; der Server speichert nur denverschluesselten Geheimtext}. Konkreter Ablauf:
+
+\begin{enumerate}
+  \item Du gibst das Master-Passwort im Client ein.
+  \item Der Client leitet aus dem Master-Passwort den Verschluesselungsschluessel ab (dieser Schritt erfolgt auf deinem Smartphone/Computer).
+  \item Nur der verschluesselte Geheimtext wird zum Server hochgeladen.
+  \item Beim naechsten Login sendet der Server den Geheimtext; der Client entschlüsselt ihn erneut mit dem Master-Passwort.
+\end{enumerate}
+
+Wesentlicher Punkt:\textbf{Das Master-Passwort verlaesst niemals dein Geraet}, auch nicht auf dem Server. Selbst wenn der Anbieter gehackt wird, erhaelt der Angreifer nur unentschluesselbaren Geheimtext – es sei denn, er koennte dein Master-Passwort erraten.
+
+\begin{tcbinfo}{Warum bedeutet „Zero Knowledge", dass auch der Anbieter deine Passwoerter nicht sehen kann?}
+Weil der Entschluesselungsschluessel aus deinem Master-Passwort abgeleitet wird und dieses nur in deinem Kopf und lokal auf deinem Geraet existiert. Auf den Servern des Anbieters gibt es weder das Master-Passwort noch den Entschluesselungsschluessel – nur den Geheimtext. Deshalb erklaeren seriöse Anbieter wie Bitwarden und 1Password ausdruecklich: „Auch wir koennen deine Passwoerter nicht sehen“ – nicht weil sie nicht wollten, sondern weil es technisch unmoeglich ist.
+
+\end{tcbinfo}
+
+\booksubsection{Schluesselableitungsfunktionen: PBKDF2 und Argon2}
+
+Das Master-Passwort kann nicht direkt als Verschluesselungsschluessel verwendet werden – es muss durch eine „Schluesselableitungsfunktion“ verarbeitet werden. Ihre Aufgabe ist es,\textbf{die Berechnung absichtlich zu verlangsamen}, um Bruetforce-Angriffe so teuer zu machen, dass sie unrentabel werden.
+
+\begin{itemize}
+  \item \textbf{PBKDF2}: Etablierter Standard, verwendet von iCloud-Schluesselbund, Bitwarden, LastPass u. a.; verlangsamt Angriffe durch wiederholte Iteration (meist ueber 100.000-mal) des Hashs.
+  \item \textbf{Argon2}: Sieger des Password Hashing Competition 2015; moderner als PBKDF2. Neben „Rechenzeit" auch „Speicherverbrauch" – GPUs/ASICs koennen Angriffe nicht beschleunigen. Bitwarden, KeePassXC u. a. unterstuetzen es bereits.
+\end{itemize}
+
+Hoehere Iterationszahlen sind sicherer, aber das Entsperren wird langsamer. Serioese Anbieter veroeffentlichen ihre Ableitungsalgorithmen und Iterationszahlen zur Pruefung durch die Security-Community.
+
+\booksubsection{Fallbeispiel: LastPass-Datenleck 2022}
+
+Im August 2022 meldete der etablierte Passwortmanager LastPass einen Einbruch in seine Entwicklungsumgebung; im November wurde bekannt, dass Angreifer Backups der Passwortdatenbanken der Nutzer (verschluesselter Geheimtext) entwendet hatten. Die wesentlichen Lehren:
+
+\begin{itemize}
+  \item \textbf{Die Zero-Knowledge-Architektur hielt die Verteidigungslinie}: Da die Passwortdatenbank verschluesselt war, erhielt der Angreifer den Geheimtext, konnte ihn aber nicht entschluesseln – vorausgesetzt, das Master-Passwort des Nutzers war stark genug.
+  \item \textbf{Nutzer mit schwachem Master-Passwort am gefaehrdetsten}: Angreifer koennen schwache Master-Passwoerter offline per Bruetforce knacken; Nutzer mit schwachen oder wiederverwendeten Master-Passwoertern sind real gefaehrdet.
+  \item \textbf{Auch Metadaten wurden geleakt}: Passwortinhalte waren zwar verschluesselt, aber Metadaten wie URLs und Notizen waren moeglicherweise unverschluesselt und zeigen, welche Dienste der Nutzer verwendet.
+\end{itemize}
+
+\begin{tcbwarn}{Lehren aus dem LastPass-Vorfall}
+Erstens: Das Master-Passwort muss lang und einzigartig sein (mindestens 16 Zeichen, mit Gross-/Kleinbuchstaben, Zahlen und Symbolen). Zweitens: Bevorzuge Anbieter, die Argon2id und hohe Iterationszahlen unterstuetzen. Drittens: Fuer hochwertige Konten (Bank, E-Mail) zwingend eine unabhaengige Zwei-Faktor-Authentifizierung aktivieren – nicht nur auf den Passwortmanager vertrauen.
+
+\end{tcbwarn}
+
+\booksection{IV. Empfohlene Passwortmanager}
+
+\booksubsection{Systemeigene:}
+
+\begin{itemize}
+  \item \textbf{iCloud-Schlüsselbund}: Erste Wahl für Apple-Nutzer. Nahtlos in Safari und Apps integriert, kostenlos, sicher. Nachteil: Plattformübergreifende Nutzung unpraktisch.
+  \item \textbf{Google Passwortmanager}: Bequem für Android-Nutzer, in Chrome und Android integriert, kostenlos.
+  \item \textbf{Huawei Passwort-Tresor}: In HarmonyOS integriert, für Huawei-Nutzer.
+\end{itemize}
+
+\booksubsection{Professionelle Drittanbieter:}
+
+\begin{itemize}
+  \item \textbf{Bitwarden}: Open Source, kostenlos, funktionsreich, unterstützt alle Plattformen. Für datenschutzbewusste Nutzer wärmstens empfohlen.
+  \item \textbf{1Password}: Schöne Oberfläche, reich an Funktionen, geeignet für Familie und Team, kostenpflichtig.
+  \item \textbf{LastPass}: Bekannter Passwortmanager, die kostenlose Version ist eingeschränkt.
+  \item \textbf{KeePass}: Vollständig lokale Speicherung, Open Source und kostenlos – für Power-User.
+\end{itemize}
+
+\booksection{V. Realitaetsnahe Bewertung der Passwortstaerke}
+
+Passwortmanager zeigen meist einen „Passwortstaerke“-Indikator (rot/gelb/gruen), der jedoch haeufig nur Laenge und Zeichenvielfalt betrachtet – unzureichend. Um die echte Sicherheit einzuschaetzen, muessen „Entropie” und „bereits geleakt?“ beruecksichtigt werden.
+
+\booksubsection{Entropie: Die wissenschaftliche Messung der Passwortstaerke}
+
+„Entropie“ misst die Unsicherheit eines Passworts in Bit. Hoehere Entropie bedeutet mehr Versuche fuer einen Bruetforce-Angriff.
+
+\begin{itemize}
+  \item \textbf{"123456"}: Sehr geringe Entropie, in Sekunden geknackt.
+  \item \textbf{"P@ssw0rd"}: Scheint komplex, steht aber auf jeder Woerterbuch-Angriffsliste; Entropie weiterhin niedrig.
+  \item \textbf{"correct horse battery staple"}: Vier zufaellige Woerter, ca. 44 Bit Entropie; schwerer zu knacken als „P@ssw0rd".
+  \item \textbf{16 zufaellige Zeichen (Gross-/Kleinbuchstaben + Zahlen + Symbole)}: ca. 100 Bit Entropie; mit heutiger Rechenleistung nicht per Bruetforce knackbar.
+\end{itemize}
+
+Fazit:\textbf{„Laenge + Zufaelligkeit“ ist wichtiger als „komplexe Symbole”}. Genau deshalb sind die zufaelligen Langpasswoerter eines Passwortmanagers wirklich sicher.
+
+\booksubsection{HaveIBeenPwned: Pruefe, ob dein Passwort bereits geleakt wurde}
+
+Vom Security-Forscher Troy Hunt betreute\href{https://haveibeenpwned.com}{haveibeenpwned.com}Datenbank mit Konten und Passwoertern aus grossen Lecks. Du kannst:
+
+\begin{enumerate}
+  \item E-Mail-Adresse eingeben und pruefen, ob dein Konto in einem Leak aufgetaucht ist.
+  \item Mit der Pwned-Passwords-Funktion pruefen, ob ein Passwort in einer bekannten Leak-Datenbank enthalten ist (Passwortmanager und Browser haben dies bereits integriert).
+\end{enumerate}
+
+Wenn ein Passwort in einer Leak-Datenbank auftaucht,\textbf{muss es unabhaengig von der scheinbaren Komplexitaet sofort geaendert werden}, denn Woerterbuchangriffe probieren diese bekannten Passwoerter zuerst.
+
+\begin{tcbinfo}{Prinzip der k-Anonymitaets-Abfrage}
+Sorge, dass die Eingabe bei HaveIBeenPwned zu einem erneuten Leak fuehrt? Keine Sorge. Moderne Abfragen nutzen das „k-Anonymitaets“-Protokoll: Der Browser sendet nur die ersten 5 Zeichen des Passwort-Hashs an den Server; dieser liefert alle Hashes mit diesem Praefix zurueck; der Abgleich erfolgt lokal. Der Server sieht niemals deinen vollstaendigen Passwort-Hash. Die „Leak-Erkennung” von 1Password und Bitwarden funktioniert so.
+
+\end{tcbinfo}
+
+\booksubsection{Integrierte Ueberwachungsfunktionen des Passwortmanagers}
+
+\begin{itemize}
+  \item \textbf{1Password Watchtower}: Ueberwacht in Echtzeit schwache, duplizierte, geleakte und abgelaufene Passwoerter sowie Seiten ohne 2FA; Anzeige in den Stufen rot/orange/gelb.
+  \item \textbf{Bitwarden Vault Health}: Die Gratis-Version zeigt schwache und duplizierte Passwoerter; die Premium-Version erkennt geleakte Passwoerter (basierend auf HaveIBeenPwned).
+  \item \textbf{iCloud-Schluesselbund „Sicherheitsempfehlungen"}: iOS Einstellungen Passwoerter Sicherheitsempfehlungen; zeigt, welche Passwoerter in bekannten Leaks auftauchen oder doppelt verwendet werden.
+  \item \textbf{Google Passwortmanager „Passwortpruefung"}: In Chrome integriert; Ein-Klick-Pruefung auf geleakte, schwache und duplizierte Passwoerter.
+\end{itemize}
+
+\begin{tcbpractice}{Jetzt pruefen: Ist dein Passwort sicher?}
+\begin{enumerate}
+  \item Oeffne haveibeenpwned.com, gib deine haeufig verwendete E-Mail-Adresse ein und pruefe, in welchen Leaks sie auftaucht.
+  \item iPhone-Nutzer: Einstellungen Passwoerter Sicherheitsempfehlungen; jeden roten Eintrag abarbeiten.
+  \item Chrome-Nutzer: Einstellungen Passwoerter Passwoerter pruefen; nach Anleitung aendern.
+  \item 1Password-/Bitwarden-Nutzer: Oeffne Watchtower/Health Reports; zuerst „geleakt" und „dupliziert" behandeln.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{VI. Passkey: Die Zukunft des passwortlosen Logins}
+
+2024-2026 durchlaeuft die Passworttechnologie eine Revolution –\textbf{Passkey}koennte traditionelle Passwoerter vollstaendig abloesen. Apple, Google und Microsoft treiben es gemeinsam voran; unterstuetzt von der FIDO Alliance und dem W3C – die groesste Login-Revolution seit Jahrzehnten.
+
+\booksubsection{Was ist ein Passkey?}
+
+Passkey basiert auf dem FIDO2-/WebAuthn-Standard und verwendet\textbf{ein Schluesselpaar auf dem Geraet}anstelle eines Passworts. Das Prinzip vereinfacht:
+
+\begin{itemize}
+  \item Dein Smartphone erzeugt ein Schluesselpaar:\textbf{Public Key}(bei der Website registriert) +\textbf{Private Key}(bleibt immer im Sicherheitschip deines Geraets).
+  \item Beim Login sendet die Website eine „Challenge"; dein Smartphone signiert sie mit dem Private Key, die Website verifiziert mit dem Public Key.
+  \item Vor der Signatur musst du dich per Biometrie (Face ID / Fingerabdruck) oder Geraete-PIN authentifizieren.
+  \item Waehrend des gesamten Vorgangs\textbf{wird kein Passwort ueber das Netzwerk uebertragen}.
+\end{itemize}
+
+\booksubsection{Passkey vs. traditionelle Passwoerter}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimension} & \textbf{Traditionelles Passwort} & \textbf{Passkey} \tabularnewline
+\hline
+Phishing-Schutz & Schlecht; Phishing-Seiten koennen Passwoerter stehlen & Phishing-resistent; Private Key signiert nur fuer echte Domains \tabularnewline
+Auswirkung eines Server-Lecks & Passwort-Hashs koennten geknackt werden & Server speichert nur Public Key; Leck ohne Auswirkung \tabularnewline
+Komfort & Muss gemerkt/eingegeben/verwaltet werden & Face ID/Fingerabdruck – Login in einer Sekunde \tabularnewline
+Replay-Angriff & Kann per MITM abgefangen und wiedergegeben werden & Jede Signatur ist einmalig; nicht wiederverwendbar \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Plattform-Unterstuetzung}
+
+\begin{itemize}
+  \item \textbf{Apple iCloud-Schluesselbund Passkey}: iOS 16+ / macOS Ventura+ nativ; Passkeys synchronisieren zwischen allen Geraeten mit derselben Apple ID; auf neuen Geraeten keine Neuerstellung erforderlich.
+  \item \textbf{Google Passwortmanager Passkey}: Android + Chrome nativ; Passkeys werden im Google-Konto gespeichert und synchronisieren zwischen Android-Geraeten; seit 2023 unterstuetzt das persoenliche Google-Konto Passkey-Login.
+  \item \textbf{Microsoft}: Windows 11 / Edge unterstuetzen Passkey; Microsoft-Konto, Outlook, Office und weitere Dienste eroeffnen nach und nach Passkey-Login; in Microsoft Authenticator verwaltbar.
+  \item \textbf{1Password / Bitwarden}: Unterstuetzt Erstellung, Speicherung und plattformuebergreifende Synchronisation von Passkeys; unabhaengig von einem einzigen Oekosystem.
+\end{itemize}
+
+\begin{tcbinfo}{Plattformuebergreifende Synchronisation als Durchbruch}
+Frueher war die groesste Schwachstelle von Passkeys die „Bindung an ein einzelnes Geraet“ – bei Geraetewechsel musste man neu erstellen. Seit 2023 haben Apple, Google und Microsoft die Cloud-Synchronisation von Passkeys umgesetzt: iCloud-Schluesselbund synchronisiert zwischen Apple-Geraeten, Google Passwortmanager zwischen Android-Geraeten. 1Password und weitere Drittanbieter ermoeglichen die plattformuebergreifende Synchronisation. Damit ist Passkey praktisch einsatzbereit.
+
+\end{tcbinfo}
+
+\booksubsection{So erstellst und verwendest du Passkeys auf dem Smartphone}
+
+\textbf{iOS (iPhone) Pfad:}
+
+\begin{enumerate}
+  \item Auf der Konto-Sicherheitsseite einer Passkey-unterstuetzenden Website (z. B. Google, Microsoft, Amazon, eBay, PayPal) „Passkey hinzufuegen / Add passkey" auswaehlen.
+  \item Das System zeigt ein Face-ID-/Touch-ID-Fenster; nach Bestaetigung wird der Passkey automatisch erstellt und im iCloud-Schluesselbund gespeichert.
+  \item Beim naechsten Login auf der Website nach Eingabe des Benutzernamens „Mit iPhone anmelden" auswaehlen; Face ID einmal scannen – fertig.
+  \item Verwaltung: Einstellungen Passwoerter entsprechende Website suchen; Passkey-Eintrag sichtbar.
+\end{enumerate}
+
+\textbf{Android-Pfad:}
+
+\begin{enumerate}
+  \item Auf der Konto-Sicherheitsseite einer Passkey-unterstuetzenden Website „Passkey hinzufuegen" auswaehlen.
+  \item Google-Passwortmanager-Popup Google-Konto auswaehlen Bildschirmsperre verifizieren (Fingerabdruck/Muster/PIN).
+  \item Passkey wird automatisch im Google-Passwortmanager gespeichert und zwischen Android-Geraeten desselben Kontos synchronisiert.
+  \item Beim naechsten Login „Passkey verwenden" auswaehlen; Bildschirmsperre einmal entsperren – fertig.
+  \item Verwaltung: Android-Einstellungen Passwoerter, Schluessel und Auto-Ausfuellung Passwortmanager google.com.
+\end{enumerate}
+
+\booksubsection{Passkey-Login ueber Geraetegrenzen hinweg}
+
+Wenn du an einem Windows-PC eine Website aufrufst, fuer die nur dein iPhone einen Passkey hat, kannst du per QR-Code autorisieren:
+
+\begin{enumerate}
+  \item Auf der Login-Seite „Passkey verwenden" auswaehlen.
+  \item „Anderes Geraet verwenden" auswaehlen.
+  \item Der PC zeigt einen QR-Code; mit dem iPhone scannen.
+  \item Das iPhone zeigt eine Face-ID-Bestaetigung; nach Bestaetigung ist der Login am PC abgeschlossen.
+\end{enumerate}
+
+Dieser Vorgang nutzt eine doppelte Verschluesselung per Bluetooth + Internet; der Private Key verlaesst niemals dein iPhone.
+
+\begin{tcbpractice}{Jetzt ausprobieren: Passwortlosen Login erleben}
+\begin{enumerate}
+  \item Google-Konto-Login Sicherheit Passkeys Passkey hinzufuegen; Face-ID-/Fingerabdruck-Login erleben.
+  \item Microsoft-Konto-Login Sicherheit Erweiterte Sicherheitsoptionen Passkey hinzufuegen.
+  \item Bei Taobao, JD.com, eBay, PayPal und weiteren Passkey-unterstuetzenden Diensten ausprobieren.
+  \item Traditionelles Passwort als Backup behalten; schrittweise hochwertige Konten auf Passkey migrieren.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbwarn}{Empfehlung fuer die Uebergangsphase}
+Passkey hat Passwoerter noch nicht vollstaendig abgeloest – viele Websites sind im Uebergang „Passkey + Passwort“. Empfehlung: Hochwertige Konten zuerst mit Passkey aktivieren, aber\textbf{traditionelle Passwoerter nicht sofort loeschen}, als Backup behalten; weiterhin den Passwortmanager nutzen, da nicht alle Websites Passkey unterstuetzen. Passkey als „starke Ergaenzung” zum Passwortmanager betrachten, nicht als „sofortige Ersetzung“.
+
+\end{tcbwarn}
+
+\booksection{VII. Hardware-Sicherheitsschluessel}
+
+Wenn deine Sicherheitsanforderungen ueber die normaler Nutzer hinausgehen – z. B. grosse Kryptowaehrungsbestaende, Vorstandsmitglied/Journalist/Aktivist oder Schutz von Unternehmenskonten – ist ein Hardware-Sicherheitsschluessel zuverlaessiger als eine SMS-Verifizierung.
+
+\booksubsection{Was ist ein Hardware-Sicherheitsschluessel?}
+
+Ein Hardware-Schluessel ist ein physisches Geraet (aehnlich einem USB-Stick) mit einem internen Sicherheitschip, der deinen Private Key speichert. Eine Beruehrung oder NFC ist fuer die Authentifizierung erforderlich. Massgebliche Produkte:
+
+\begin{itemize}
+  \item \textbf{YubiKey}(Yubico): Massgeblich; unterstuetzt FIDO2/WebAuthn, U2F, OTP, PIV, OpenPGP; USB-C / USB-A / NFC. Serie 5: 50-70 USD.
+  \item \textbf{Google Titan}: Von Google; USB-C + NFC / Bluetooth; ca. 30-40 USD.
+  \item \textbf{OnlyKey}: Open-Source-Alternative; unterstuetztmehrere Protokolle.
+  \item \textbf{Chinesische Alternativen}: z. B. Feitian ePasskey; guenstiger.
+\end{itemize}
+
+\booksubsection{Warum sind Hardware-Schluessel sicherer als SMS-Codes?}
+
+\begin{itemize}
+  \item \textbf{Phishing-Schutz}: Wie Passkey antwortet der Hardware-Schluessel nur auf echte Domains; Phishing-Seiten koennen keinen Code erbeuten.
+  \item \textbf{Schutz vor SIM-Swap}: SMS-Codes koennen per SIM-Swap abgefangen werden; der Hardware-Schluessel benoetigt keine Telefonnummer.
+  \item \textbf{MITM-Schutz}: Das FIDO2-Protokoll enthaelt bei jeder Signatur eine Challenge; nicht wiederverwendbar.
+  \item \textbf{Physische Isolierung}: Der Private Key bleibt immer im Hardware-Chip; selbst wenn Schadsoftware deinen Computer kompromittiert, ist er nicht lesbar.
+\end{itemize}
+
+\booksubsection{Einsatzbereiche}
+
+\begin{itemize}
+  \item Kryptoboesen-Konten, Wallet-Wiederherstellung.
+  \item Unternehmens-SSO, Remote-VPN, SSH-Server-Login.
+  \item E-Mail, GitHub, Social Media – „Master-Konten", deren Kompromittierung alle anderen Konten gefaehrden.
+  \item Journalisten, Anwaelte, Führungskräfte und andere hochsensible Personen.
+\end{itemize}
+
+\booksubsection{Einrichtung eines Hardware-Schluessels als zweite Authentifizierung}
+
+Am Beispiel eines Google-Kontos + YubiKey:
+
+\begin{enumerate}
+  \item YubiKey kaufen (empfohlen: zwei Stueck – einer fuer den Alltag, einer als Backup an unterschiedlichen Orten).
+  \item Login auf myaccount.google.com Sicherheit Zwei-Schritt-Verifizierung.
+  \item „Sicherheitsschluessel hinzufuegen" YubiKey in den USB-C-Port einfuegen oder an die NFC-Zone des Smartphones halten.
+  \item Den Metallkontakt des YubiKey beruehren, um die Registrierung abzuschließen.
+  \item Empfohlen: zweiten Backup-Schluessel registrieren.
+  \item In den „Zwei-Schritt"-Einstellungen den Hardware-Schluessel als bevorzugte Methode festlegen; SMS-Code als Backup.
+\end{enumerate}
+
+Unterstützende Websites: Google, GitHub, Microsoft, Apple ID, Facebook, Twitter, Dropbox, GitLab, AWS, Coinbase, Binance u. a.
+
+\begin{tcbinfo}{Zwei-Schluessel-Strategie}
+Das groesste Risiko eines Hardware-Schluessels ist der Verlust. Empfehlung: 1. Zwei verschiedene Schluessel registrieren; 2. Einen dabei haben (Schluesselbund), einen im Haussafe oder Bankschliessfach; 3. Bei einigen Websites „Backup-Codes“ ausdrucken und offline aufbewahren. So bleibt man selbst bei Verlust nicht ausgesperrt.
+
+\end{tcbinfo}
+
+\begin{tcbwarn}{Kaufquelle sorgfaeltig waehlen}
+Zwingend im offiziellen Shop oder bei autorisierten Haendlern kaufen; keine gebrauchten oder unabhaengigen Quellen – theoretisch koennte vorinstallierte Hardware einen Backdoor enthalten. YubiKey-Firmware ist nach Werk nicht aktualisierbar, aber Yubico veroeffentlicht fortlaufend Sicherheits-Hinweise auf der Website.
+
+\end{tcbwarn}
+
+\booksection{VIII. Passwort-Freigabe fuer Familie/Team}
+
+In Familien werden Netflix, WLAN, Router-Admin und Smart-Lock-Passwoerter gemeinsam genutzt; in Teams sind es Server-, Datenbank- und Social-Media-Konten.\textbf{Passwoerter per WeChat zu senden oder in geteilten Dokumenten zu notieren ist hochriskant}, denn sobald Chatverlauf oder Dokumentberechtigungen geleakt werden, sind auch die Passwoerter kompromittiert.
+
+\booksubsection{1Password „Shared Vault“}
+
+1Password ist das Referenzprodukt fuer Familien- und Team-Sharing. Der Kernmechanismus ist\textbf{mehrere Vaults}:
+
+\begin{itemize}
+  \item \textbf{Persoenlicher Vault}: Nur fuer dich sichtbar; z. B. Bank, E-Mail und andere private Konten.
+  \item \textbf{Shared Vault}: Fuer Familien- oder Teammitglieder sichtbar; z. B. Netflix, WLAN, gemeinsame Kreditkarte.
+  \item \textbf{Berechtigungsstufen}: In der Team-Version koennen Mitglieder als „nur Lesen" oder „Lesen, aber nicht Bearbeiten" eingestellt werden.
+\end{itemize}
+
+Familien- oder Teammitglieder teilen nicht das Master-Passwort; jeder nutzt sein eigenes Konto, sieht aber die autorisierten Shared Vaults. Passwortaenderungen werden fuer alle in Echtzeit synchronisiert.
+
+\booksubsection{Bitwarden „Organisation“-Funktion}
+
+Die Gratis-Version von Bitwarden ermoeglicht das Teilen einzelner Passwoerter (per „Send“-Funktion zeitlich befristet); die Premium-Version kann „Organisationen” erstellen, um Eintraege mit Familienmitgliedern oder Kollegen zu teilen – mit feingranularen Berechtigungen. Bitwarden bietet zudem Self-Hosting fuer Unternehmen mit hohen Anforderungen an Datenhoheit.
+
+\booksubsection{Familie: Netflix, WLAN und andere Passwoerter sicher teilen}
+
+\begin{itemize}
+  \item \textbf{Netflix / Video-Streaming}: Login-Passwort im „Shared Vault" von 1Password Families speichern; Familienmitglieder loggen sich selbst ein – kein Versenden im Gruppenchat.
+  \item \textbf{WLAN-Passwort zu Hause}: iOS-Geraete koennen WLAN-Passwoerter per AirDrop direkt mit Gaesten teilen, ohne sie vorlesen; Android 12+ bietet „Wi-Fi per Nearby Share".
+  \item \textbf{Smart-Lock, Smart-Home-Geraete}: Moeglichst die „Familienmitglieder"-Funktion der Hersteller-App nutzen und fuer jede Person ein eigenes Konto erstellen, statt einen Admin-Account zu teilen.
+  \item \textbf{Router-Admin}: Admin-Passwort im 1Password Shared Vault speichern; fuer Gaeste ein separates SSID einrichten.
+\end{itemize}
+
+\begin{tcbinfo}{Preis-Leistungs-Verhaeltnis von 1Password Families}
+1Password Families ca. 4,99 USD/Monat fuer bis zu 5 Familienmitglieder; jeder hat einen privaten Vault + 4 Shared Vaults. Pro Person weniger als 1 USD/Monat – die beste Familie-Sharing-Erfahrung. Bitwarden Familie: 10 USD/Jahr fuer 6 Personen; besseres Preis-Leistungs-Verhaeltnis, aber etwas schlechtere UI.
+
+\end{tcbinfo}
+
+\booksubsection{Team: Server-/Datenbank-Passwort-Sharing}
+
+\begin{itemize}
+  \item \textbf{1Password Teams / Business}: Mehrere Vaults pro Abteilung/Projektgruppe; feingranulare Berechtigungen; alle Zugriffe auditierbar.
+  \item \textbf{Bitwarden Teams / Enterprise}: Open-Source; Self-Hosting moeglich; Enterprise-Version mit SSO-Integration und Verzeichnissynchronisierung.
+  \item \textbf{Trennung der Zustaendigkeiten}: Admin-Passwoerter sollten nicht bei einer einzigen Person liegen; 2-3 „Notfallkontakte" benennen, damit bei Ausscheiden/Urlaub der Betrieb nicht stillsteht.
+  \item \textbf{Austrittsprozess}: Beim Ausscheiden eines Mitarbeiters sofort dessen Passwortmanager-Zugriff entziehen; bei Bedarf alle von ihm beruehrten hochsensiblen Passwoerter rotieren.
+\end{itemize}
+
+\booksubsection{Notfallzugriff (Emergency Access): Falls dir etwas passiert}
+
+Stell dir vor: Du verwaltest allein alle wichtigen Familienkonten; bei unerwartetem Krankenhausaufenthalt oder Ableben koennen Angehoerige nicht auf Bank, E-Mail oder Versicherungen zugreifen.\textbf{Die Funktion „Notfallzugriff“}ist genau dafuer gedacht – sie autorisiert eine vertrauenswuerdige Person, bei deiner Unerreichbarkeit auf deine Passwortdatenbank zuzugreifen.
+
+\textbf{Bitwarden Notfallzugriff einrichten:}
+
+\begin{enumerate}
+  \item Bitwarden Web Vault Einstellungen Notfallzugriff.
+  \item E-Mail-Adresse einer Vertrauensperson hinzufuegen und einladen.
+  \item „Wartezeit" festlegen (empfohlen 7-14 Tage): Das Zeitfenster vom Antrag bis zu deiner Bestaetigung.
+  \item Wenn du innerhalb der Wartezeit nicht reagierst (ablehnst oder nichts tust), erhaelt die Person nach Ablauf automatisch Zugriff.
+  \item Du kannst jederzeit manuell ablehnen oder den Notfallzugriff widerrufen.
+\end{enumerate}
+
+\textbf{1Password Notfallzugriff:}
+
+\begin{enumerate}
+  \item 1Password nennt es nicht direkt „Notfallzugriff", aber ueber die „Familien-/Team-Organisation" realisierbar: Familienmitglieder hinzufuegen und bestimmte Eintraege im „Shared Vault" ablegen.
+  \item Fuer Einzel-Nutzer: Das Master-Passwort einer hochgradig vertrauenswuerdigen Person mitteilen oder in einem versiegelten Umschlag im Safe verwahren.
+  \item 1Password bietet zudem „Wiederherstellungscodes"; bei Aktivierung der Zwei-Faktor-Authentifizierung unbedingt ausdrucken und aufbewahren.
+\end{enumerate}
+
+\begin{tcbpractice}{Jetzt einrichten: Hinterlege einen „Reserveschluessel" fuer die Familie}
+\begin{enumerate}
+  \item Eine vertrauenswuerdige Person als „Notfallkontakt" bestimmen.
+  \item Im Passwortmanager Notfallzugriff aktivieren (Bitwarden) oder dem Familien-Shared-Vault beitreten (1Password).
+  \item Master-Passwort + Wiederherstellungscode auf Papier notieren, in Umschlag versiegeln, im Haussafe verwahren oder einer vertrauenswuerdigen Person mitteilen.
+  \item Halbjaehrlich ueberpruefen, ob der Notfallkontakt noch passend ist.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{IX. Bewaehrte Praktiken fuer Passwortmanager}
+
+\begin{itemize}
+  \item \textbf{Starkes Master-Passwort festlegen}: Das Master-Passwort ist die letzte Verteidigungslinie – wählen Sie ein langes, komplexes Passwort und prägen Sie es sich ein.
+  \item \textbf{Zwei-Faktor-Authentifizierung aktivieren}: Richten Sie für das Passwortmanager-Konto 2FA ein, für eine zusätzliche Sicherheitsebene.
+  \item \textbf{Schwache Passwörter regelmäßig prüfen}: Die meisten Passwortmanager haben eine „Sicherheits-Audit"-Funktion, die schwache und doppelte Passwörter aufspürt.
+  \item \textbf{Master-Passwort nicht vergessen}: Das Master-Passwort kann nicht wiederhergestellt werden – vergessen heißt, alle Passwörter zu verlieren. Am besten aufschreiben und an einem sicheren Ort aufbewahren.
+  \item \textbf{Notfallzugang}: Richten Sie einen Notfallkontakt ein, damit eine Vertrauensperson im Notfall auf Ihre Passwörter zugreifen kann.
+\end{itemize}
+
+\begin{tcbwarn}{Wichtiger Hinweis}
+Ein Passwortmanager ist praktisch, birgt aber auch Risiken: Wenn das Master-Passwort geleakt wird, sind alle Passwörter offen. Daher darf das Master-Passwort niemals mit anderen identisch sein und sollte nicht an leicht auffindbaren Orten notiert werden. Wählen Sie außerdem einen Anbieter mit guter Sicherheits-Historie.
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{Jetzt ausprobieren: Starten Sie mit einem Passwortmanager}
+\begin{enumerate}
+  \item Wählen Sie einen Passwortmanager (Bitwarden oder systemeigen empfohlen).
+  \item Registrieren Sie ein Konto und legen Sie ein starkes Master-Passwort fest.
+  \item Importieren Sie vorhandene Passwörter (falls vorhanden) oder beginnen Sie, neue hinzuzufügen.
+  \item Installieren Sie das Browser-Plugin oder die Smartphone-App und testen Sie das automatische Ausfüllen.
+  \item Prüfen Sie den Sicherheits-Audit-Bericht und finden Sie Passwörter, die verbessert werden sollten.
+\end{enumerate}
+
+\end{tcbpractice}

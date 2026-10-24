@@ -1,0 +1,196 @@
+\bookchapter{Capítulo 54: Projeto 1 — Meu controle de gastos (versão local)}
+
+\chapterintro{Bem-vindo ao seu primeiro 'projeto sério'. Este controle de gastos, embora não se conecte à internet, tem tudo o que precisa: registrar um lançamento, ver o extrato, somar por mês, excluir e editar. Ao terminá-lo, você terá percorrido o fluxo completo de 'dados lógica interface'. Não tenha pressa de copiar código — pense primeiro, aja depois; esse é o nosso princípio de sempre.}
+
+\booksection{Pensando nos requisitos: faça primeiro cinco perguntas}
+
+Antes de pôr a mão na massa, organize a ideia com os 'cinco elementos de requisito':
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Elemento} & \textbf{Resposta} \tabularnewline
+\hline
+Who (para quem é) & Para você mesmo; família e amigos também valem \tabularnewline
+What (o que faz) & Registrar receitas e despesas, ver o extrato, resumir por mês, estatísticas por categoria \tabularnewline
+Why (por que faz) & Praticar + descobrir para onde o dinheiro está indo \tabularnewline
+How (como faz) & Kotlin + Compose + Room + MVVM, 100\% local, sem back-end \tabularnewline
+Constraint (restrições) & Concluir em uma semana; suportar no mínimo o Android 8; mesmo sem publicar, já escrever no padrão de publicação \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Os cinco elementos de requisito do controle de gastos\end{center}
+
+Depois, divida em passos pequenos em que 'cada etapa já serve para algo': (1) criar a camada de dados com Room (conseguir salvar um lançamento); (2) tela de lista (conseguir ver o extrato); (3) tela de entrada (conseguir adicionar); (4) excluir e editar; (5) cartão de resumo mensal. Ao fim de cada passo, o App já é uma 'coisa utilizável'.
+
+\booksection{Camada de dados: dando aos 'lançamentos' um lar}
+
+Primeiro defina como é um lançamento — campos suficientes, mas sem gula:
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" receita | "expense" despesa
+    val amount: Double,      // valor (em yuan)
+    val category: String,    // categoria: alimentação, transporte, salário…
+    val note: String = "",   // observação (opcional)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+No Dao, acrescente duas consultas 'de estatística' — elas são a alma do controle de gastos:
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month no formato "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Dica: por que usar Double para o valor?}
+Apps financeiros rigorosos usam BigDecimal ou 'Int em centavos' para evitar erros de ponto flutuante (o velho problema de 0,1+0,2$\neq$0,3). Para um projeto de estudo, Double basta; se um dia você fizer um produto financeiro de verdade, lembre de trocar para centavos como unidade — é uma armadilha que inúmeros antecessores pisaram.
+
+\end{tcbinfo}
+
+\booksection{MVVM: interface e lógica 'morando separadas'}
+
+Deixar a interface operar o banco direto? Funciona, mas o código da tela fica enorme e desagradável de ler. A arquitetura MVVM reparte as tarefas: a View (interface) só desenha, o ViewModel (centro da lógica) cuida dos dados e o Model (Room) cuida do armazenamento.
+
+View (interface Compose)
+
+ViewModel (estado e lógica)
+
+Model (camada de dados Room)
+
+\begin{center}\small\color{gray}Figura 5: A estrutura de três camadas do MVVM — os dados fluem em um único sentido e cada camada não invade a outra\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // Converte o Flow em estado observável pela tela
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // Ações do usuário: chamar funções suspend
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+Na interface (Compose), use assim: val vm: RecordViewModel = viewModel() e depois val list by vm.records.collectAsState() — assim que os dados mudam, a lista se atualiza sozinha e você não precisa fazer nada. Esse é o poder da união de MVVM + Flow + Compose.
+
+\booksection{Interface: tela de lista + tela de entrada}
+
+Na tela de lista, use LazyColumn (lista de carregamento preguiçoso) — nem com muitos dados ela engasga:
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // card de resumo no topo (receitas - despesas = saldo)
+        SummaryCard(records)
+
+        // lista de lançamentos
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // botão flutuante "nova entrada"  abre o diálogo de entrada
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+Para a entrada, o mais prático é um AlertDialog (caixa de diálogo): alguns campos de texto + alternância receita/despesa + seletor de categorias; ao tocar em confirmar, chame vm.addRecord(...).
+
+\begin{tcbwarn}{Atenção: não seja preguiçoso na validação de entradas}
+O campo de valor precisa de validação: bloqueie entradas inválidas como vazio, número negativo ou 'abc' (use toDoubleOrNull() para verificar). Uma das causas mais comuns de App que cai é 'tratar a entrada do usuário como um anjinho'. Lembre-se: tudo o que o usuário digita deve ser examinado como se fosse inimigo.
+
+\end{tcbwarn}
+
+\booksection{Editar e excluir: deixando os dados 'entrar e sair'}
+
+Um controle de gastos que só adiciona e nunca exclui morre em três dias de uso. Complete com duas operações:
+
+\begin{lstlisting}[language=Kotlin]
+// Adicione mais dois ao Dao:
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// Na tela: toque longo no item abre o menu "editar/excluir" (no Compose use DropdownMenu ou AlertDialog)
+// É melhor mostrar confirmação antes de excluir — exclusão acidental é o que usuários de apps de despesas mais odeiam
+\end{lstlisting}
+
+Duas lições sobre detalhes de interação: excluir exige confirmação dupla (para evitar dedos escorregadios) e editar deve preencher previamente o valor original (corrigir uma letra é mais fácil que digitar tudo de novo). Não menospreze esses detalhes — é deles que nasce a sensação de produto.
+
+\booksection{Aceitação: três níveis de checagem + dois desafios avançados}
+
+\booksection{Aceitação: três níveis de checagem + dois desafios avançados}
+
+Projeto terminado, faça a aceitação em três níveis 'função limite arquitetura': dá para registrar? dá para excluir? ao reabrir o App, os dados continuam lá (função); digitar 0 ou negativo no valor derruba o App? girar a tela perde dados? (limites); interface e dados estão misturados? campos estão hardcoded? (arquitetura).
+
+Depois de passar na aceitação da versão básica, sirva-se de dois 'pratos avançados':
+
+\begin{enumerate}
+  \item Filtro por mês: adicione no topo um seletor de mês (por exemplo, 2026-08 v) e a lista mostra só o extrato do mês;
+  \item Gráfico de pizza por categoria: use o Canvas do Compose ou uma biblioteca de gráficos leve para desenhar 'para onde foi o dinheiro' numa pizza — com isso pronto, o controle de gastos ganha cara de 'produto'.
+\end{enumerate}
+
+\begin{tcbpractice}{Mãos à obra: termine-o nesta semana}
+Trabalhe na ordem 'camada de dados ViewModel tela de lista tela de entrada cartão de resumo', um passo por dia. Se travar, jogue a mensagem de erro tal como está no buscador ou na IA (lembra da Parte 7, 'Prática de Programação com IA'? Ao descrever o problema, deixe claros 'comportamento esperado, comportamento real e passos para reproduzir'). Depois de pronto, use-o para registrar seus gastos por uma semana — usar um App que você mesmo fez dá uma sensação de conquista que empurra você a seguir em frente.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumo do capítulo}
+\begin{itemize}
+  \item Cinco elementos de requisito dividir em passos pequenos em que 'cada etapa já serve' e só então agir
+  \item Camada de dados: entidade Record + Dao (com SQL de estatística mensal) + Database
+  \item Divisão MVVM: a View só desenha, o ViewModel cuida da lógica, o Model do armazenamento
+  \item Flow + stateIn + collectAsState: os dados mudam e a interface se atualiza sozinha
+  \item LazyColumn para a lista de carregamento preguiçoso; AlertDialog para a entrada de dados
+  \item Aceitação em três níveis (função/limite/arquitetura) + desafios avançados (filtro mensal, pizza por categoria)
+\end{itemize}
+
+\end{tcbsummary}

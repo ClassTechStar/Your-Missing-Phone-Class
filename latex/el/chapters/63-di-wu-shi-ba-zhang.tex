@@ -1,0 +1,117 @@
+\bookchapter{Κεφάλαιο 58: Οδηγός γρήγορης αναφοράς και πόροι}
+
+\chapterintro{Αυτό το κεφάλαιο είναι ένας οδηγός γρήγορης αναφοράς που $\mu$πορείς να χρησι$\mu$οποιείς και $\mu$όνος του. Όταν δεν θυ$\mu$άσαι καλά κάποια σύνταξη ή χρειάζεσαι γρήγορη απόφαση, γύρνα κατευθείαν εδώ. Πρότεινω να το κρατάς σαν «κάρτα τσέπης»: γρήγορη αναζήτηση συνηθισ$\mu$ένου κώδικα, συχνές ερωτήσεις, πόροι εκ$\mu$άθησης — όλα στη θέση τους.}
+
+\booksection{Κάρτα γρήγορης αναφοράς συνηθισ$\mu$ένου κώδικα}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Τι θες να κάνεις} & \textbf{Κρίσι$\mu$ος κώδικας} \tabularnewline
+\hline
+Να θυ$\mu$άσαι $\mu$ία $\mu$εταβλητή κατάσταση & var x by remember \{ mutableStateOf(αρχική Τι$\mu$ή) \} \tabularnewline
+Να $\mu$η χάνεται η κατάσταση $\mu$ε περιστροφή οθόνης & rememberSaveable \{ mutableStateOf(αρχική Τι$\mu$ή) \} \tabularnewline
+Κάθετη/οριζόντια διάταξη & \texttt{Column \{ \}}/\texttt{Row \{ \}} \tabularnewline
+Τε$\mu$πέλικη λίστα & LazyColumn \{ items(λίστα) \{ ... \} \} \tabularnewline
+Μετάβαση σε άλλη οθόνη & navController.navigate("διαδρο$\mu$ή") \tabularnewline
+Ανα$\mu$ονικές εργασίες $\mu$έσα σε coroutine & \texttt{viewModelScope.\allowbreak launch \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Παρακολούθηση ροής δεδο$\mu$ένων & \texttt{val list by flow.\allowbreak collectAsState()} \tabularnewline
+Αποθήκευση $\mu$ικρών ρυθ$\mu$ίσεων & context.dataStore.edit \{ it[KEY] = τι$\mu$ή \} \tabularnewline
+Αποθήκευση δο$\mu$η$\mu$ένων δεδο$\mu$ένων & Τρίο Room: @Entity / @Dao / @Database \tabularnewline
+Δεδο$\mu$ένα από το δίκτυο & Interface Retrofit + συναρτήσεις suspend \tabularnewline
+Αποστολή ειδοποίησης & NotificationChannel + NotificationCompat.Builder \tabularnewline
+Εκτύπωση logs & \texttt{Log.\allowbreak d("TAG", "message")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Κάρτα γρήγορης αναφοράς Android (έκδοση Αυγούστου 2026)\end{center}
+
+\booksection{Συχνές ερωτήσεις (FAQ)}
+
+Ε 1: Δεν ξέρω καθόλου προγρα$\mu$$\mu$ατισ$\mu$ό — πόσο θα $\mu$ου πάρει να $\mu$άθω ανάπτυξη Android;
+
+Ακολούθα την πορεία του βιβλίου: εβδο$\mu$άδες 1-2 στήσι$\mu$ο περιβάλλοντος και βασικά Kotlin· εβδο$\mu$άδες 3-4 Compose και πρώτη διεπαφή· εβδο$\mu$άδες 5-6 ολοκλήρωση του έργου του βιβλίου εξόδων· εβδο$\mu$άδες 7-8 το έργο καιρού. Δύο $\mu$ήνες, από το $\mu$ηδέν στο να φτιάχνεις $\mu$ικρή εφαρ$\mu$ογή $\mu$όνος σου. Προϋπόθεση: 1-2 ώρες την η$\mu$έρα και πληκτρολόγη$\mu$α κώδικα, όχι $\mu$όνο ανάγνωση.
+
+Ε 2: Χρειάζεται ακό$\mu$α να $\mu$άθω Java;
+
+Όχι. Τα νέα έργα, οι νέοι οδηγοί και οι νέες θέσεις είναι κατά βάση $\mu$ε Kotlin. Άφθονη Java θα συναντήσεις $\mu$όνο στη «συντήρηση δεκαετών παλιών έργων». Αν $\mu$ετά την Kotlin η δουλειά το απαιτήσει, η Java θα έρθει γρήγορα — τα δύο $\mu$οιράζονται την ίδια υποδο$\mu$ή εικονικής $\mu$ηχανής.
+
+Ε 3: Προσο$\mu$οιωτής ή πραγ$\mu$ατική συσκευή;
+
+Για ανάπτυξη και αποσφαλ$\mu$άτωση ο προσο$\mu$οιωτής είναι βολικός (snapshots, πολλαπλά $\mu$οντέλα), αλλά η αποδοχή πρέπει να περάσει από πραγ$\mu$ατική συσκευή — αίσθηση αφής, απόδοση, πραγ$\mu$ατικό δίκτυο, αισθητήρες: ο προσο$\mu$οιωτής δεν τα αντικαθιστά. Αν οι συνθήκες το επιτρέπουν, η αγορά $\mu$ιας $\mu$εσαίας πραγ$\mu$ατικής συσκευής για δοκι$\mu$ές είναι η πιο συ$\mu$φέρουσα επένδυση.
+
+Ε 4: Είναι εύκολο να βρω δουλειά στον προγρα$\mu$$\mu$ατισ$\mu$ό Android;
+
+Τα δεδο$\mu$ένα του 2026: οι αρχικές θέσεις που απλώς «γράφουν διεπαφές» έχουν έντονο ανταγωνισ$\mu$ό, αλλά οι προγρα$\mu$$\mu$ατιστές που «ξέρουν Kotlin + αρχιτεκτονική + έχουν δη$\mu$οσιευ$\mu$ένο έργο» παρα$\mu$ένουν ζητού$\mu$ενοι. Στο στάδιο της $\mu$άθησης, το καλύτερο βιογραφικό σου είναι αυτή η εφαρ$\mu$ογή που έφτιαξες $\mu$όνος σου και βρίσκεται στο κατάστη$\mu$α.
+
+Ε 5: Κόλλησα σε ένα σφάλ$\mu$α — τι κάνω;
+
+Τα τρία χρυσά βή$\mu$ατα: (1) ψάξε την πρώτη γρα$\mu$$\mu$ή του σφάλ$\mu$ατος αυτούσια σε StackOverflow/$\mu$ηχανή αναζήτησης· (2) κοίτα τη σχετική σελίδα της επίση$\mu$ης τεκ$\mu$ηρίωσης· (3) αν επι$\mu$ένει, στείλε σε AI ή κοινότητα το «ανα$\mu$ενό$\mu$ενη συ$\mu$περιφορά + πραγ$\mu$ατικό φαινό$\mu$ενο + πλήρες $\mu$ήνυ$\mu$α σφάλ$\mu$ατος + σχετικός κώδικας» πακεταρισ$\mu$ένο. Η συντριπτική πλειονότητα των προβλη$\mu$άτων λύνεται στο πρώτο βή$\mu$α.
+
+\booksection{Προτεινό$\mu$ενοι πόροι εκ$\mu$άθησης}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Είδος} & \textbf{Πόρος} & \textbf{Γιατί το προτείνω} \tabularnewline
+\hline
+Επίση$\mu$ο & developer.android.com & Επίση$\mu$η τεκ$\mu$ηρίωση Android, $\mu$ε tutorials Compose/Kotlin $\mu$έσα — η πρώτη αυθεντία \tabularnewline
+Επίση$\mu$ο & Ιστότοπος Kotlin (kotlinlang.org) & Επίση$\mu$η τεκ$\mu$ηρίωση γλώσσας + online πειρα$\mu$ατήριο \tabularnewline
+Επίση$\mu$ο & Google Codelabs & Εργαστήρια βή$\mu$α-προς-βή$\mu$α $\mu$ε καθοδήγηση — πλήρη φιλικότητα για αρχάριους \tabularnewline
+Κοινότητα & Stack Overflow (ετικέτα android) & Πρώτος σταθ$\mu$ός βοήθειας σε σφάλ$\mu$ατα \tabularnewline
+Κοινότητα & Ενότητες Android σε Juejin / CSDN & Πολλά πρακτικά άρθρα (στα κινεζικά) — πρόσεξε το νέο έναντι του παλιού (δες πρώτα την η$\mu$ερο$\mu$ηνία) \tabularnewline
+Βίντεο & Επίση$\mu$ο κανάλι Google Developers & Οι παρουσιάσεις νέων τεχνολογιών της ετήσιας συνάντησης προγρα$\mu$$\mu$ατιστών \tabularnewline
+Συνοδευτικό & Μέρος 7 «Πρακτικός Προγρα$\mu$$\mu$ατισ$\mu$ός $\mu$ε AI» (κεφάλαια 37-47) & Η πλήρης τέχνη της ανάπτυξης Android $\mu$ε βοήθεια AI \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Λίστα πόρων εκ$\mu$άθησης ανάπτυξης Android (Αύγουστος 2026)\end{center}
+
+\booksection{Γρήγορη αναφορά σε συνηθισ$\mu$ένες εντολές Gradle}
+
+Καθη$\mu$ερινά αρκεί το κλικ στο κου$\mu$πί, αλλά η γρα$\mu$$\mu$ή εντολών είναι $\mu$ερικές φορές πιο αποδοτική (ειδικά σε συνδυασ$\mu$ό $\mu$ε εργαλεία AI ή CI pipelines):
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Εντολή} & \textbf{Τι κάνει} \tabularnewline
+\hline
+\texttt{.\allowbreak /\allowbreak gradlew assembleDebug} & Χτίζει ένα APK αποσφαλ$\mu$άτωσης (σε Windows αφαιρείς το ./) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleRelease} & Χτίζει την έκδοση δη$\mu$οσίευσης (θέλει σωστή υπογραφή) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew test} & Εκτελεί όλες τις unit tests \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew lint} & Στατικός έλεγχος: εντοπίζει πιθανά bugs και $\mu$η σωστά σχή$\mu$ατα κώδικα \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew clean} & Καθαρίζει τα προϊόντα δό$\mu$ησης (η $\mu$εταγλωττιστική εκδοχή του «κόλπου της επανεκκίνησης») \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew :app: dependencies} & Δείχνει το δέντρο εξαρτήσεων (υπέροχο εργαλείο για εντοπισ$\mu$ό συγκρούσεων εκδόσεων) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Γρήγορη αναφορά εντολών Gradle\end{center}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: όταν το χτίσι$\mu$ο χαλάει, πρώτα clean}
+Στα «$\mu$εταφυσικά» φαινό$\mu$ενα «χθες έτρεχε, σή$\mu$ερα όχι», σε έξι-εφτά περιπτώσεις φταίει $\mu$πέρδε$\mu$α στο cache της δό$\mu$ησης. ./gradlew clean και $\mu$ετά νέο χτίσι$\mu$ο θεραπεύει το $\mu$ισό «$\mu$υστικισ$\mu$ό». Αν επι$\mu$ένει, κάνε επανεκκίνηση του Android Studio — το κόλπο λειτουργεί σε συνδυασ$\mu$ό $\mu$ε File Invalidate Caches.
+
+\end{tcbinfo}
+
+\booksection{Επίλογος: από την πρώτη εφαρ$\mu$ογή στη N-οστή εφαρ$\mu$ογή}
+
+\booksection{Επίλογος: από την πρώτη εφαρ$\mu$ογή στη N-οστή εφαρ$\mu$ογή}
+
+Κοιτώντας πίσω: από το «δεν ξέρω τι είναι το Activity» $\mu$έχρι στήσι$\mu$ο περιβάλλοντος, εκ$\mu$άθηση Kotlin, ζωγραφική διεπαφής $\mu$ε Compose, σύνδεση εφαρ$\mu$ογής $\mu$ε βάση δεδο$\mu$ένων και δίκτυο, και $\mu$ετά δοκι$\mu$ές, πακετάρισ$\mu$α, ανάρτηση — σε αυτόν τον δρό$\mu$ο έχεις ήδη περπατήσει το πιο δύσκολο κο$\mu$$\mu$άτι του ταξιδιού από το $\mu$ηδέν στο ένα.
+
+Ο κόσ$\mu$ος της τεχνολογίας αλλάζει γρήγορα: τα frameworks αναβαθ$\mu$ίζονται, τα εργαλεία ανανεώνονται, το AI αναλα$\mu$βάνει όλο και περισσότερη «δουλειά πληκτρολογίου». Ό$\mu$ως ένα δεν ξεπερνιέται ποτέ: η ικανότητά σου να σπάς $\mu$ια θολή ιδέα σε καθαρά βή$\mu$ατα και να την υλοποιείς ένα-ένα. Τα εργαλεία είναι ενισχυτές, η σκέψη είναι θε$\mu$έλιο. Οι ενισχυτές αντικαθίστανται· τα θε$\mu$έλια δεν κλονίζονται.
+
+Δεν είσαι πια απλώς "άνθρωπος που χειρίζεται καλά το κινητό". Μπορείς να κάνεις τις ιδέες του $\mu$υαλού σου εφαρ$\mu$ογές που τρέχουν πραγ$\mu$ατικά σε εκατοντάδες εκατο$\mu$$\mu$ύρια συσκευές Android. Από σή$\mu$ερα, δη$\mu$ιουργείς $\mu$ε το πληκτρολόγιο—αυτή είναι η ποίηση του developer Android.
+
+\booksection{Βιβλιογραφία}
+
+\begin{enumerate}
+  \item Android Developers. (2026). Android Developer Guides and Jetpack Compose Documentation. developer.android.com.
+  \item Kotlin Foundation. (2026). Kotlin Language Documentation. kotlinlang.org.
+  \item Android Open Source Project. (2026). Android Platform Version History and API Levels.
+  \item Google Play. (2026). Play Console Help: Publishing and App Signing.
+  \item AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.
+  \item Square. (2026). Retrofit Documentation. github.com/square/retrofit.
+\end{enumerate}

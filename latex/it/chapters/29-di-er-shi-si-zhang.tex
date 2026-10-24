@@ -1,0 +1,131 @@
+\bookchapter{Capitolo 24: Permessi Root e BL lock in profondità}
+
+\chapterintro{Questo capitolo è un approfondimento del Capitolo 20, adatto a chi vuole capire davvero i meccanismi di basso livello del telefono o persino cimentarsi nel flashing. Attenzione: queste operazioni comportano rischi, procedi con cautela.}
+
+\booksection{Comprendere a fondo il Bootloader}
+
+Il Bootloader è il primo programma eseguito all'avvio del telefono; il suo compito è inizializzare l'hardware e caricare il kernel del sistema operativo. Puoi considerarlo come il “buttafuori” del telefono.
+
+\booksubsection{Principio di funzionamento del BL lock:}
+
+\begin{itemize}
+  \item \textbf{Verifica della firma}: il BL lock verifica la firma digitale dell'immagine di avvio; solo i sistemi firmati dal produttore possono essere avviati.
+  \item \textbf{Prevenzione del downgrade}: impedisce all'utente di flashare versioni precedenti del sistema per sfruttare vulnerabilità note.
+  \item \textbf{Protezione dei dati}: anche se si flasha un nuovo sistema, senza l'account e la password originali non è possibile accedere ai dati utente.
+\end{itemize}
+
+\booksubsection{Archiviazione e verifica a livello hardware}
+
+Lo stato del BL lock (Locked/Unlocked) e la chiave pubblica del produttore sono di solito memorizzati in un'area hardware protetta (come la partizione devinfo di Qualcomm, eFuse o partizione RPMB), per impedire manomissioni software. A ogni avvio, il Bootloader legge lo stato da questa area sicura e in base a ciò decide se eseguire o meno una verifica rigorosa della firma.
+
+\booksubsection{Verifica della firma digitale}
+
+Quando il produttore rilascia un aggiornamento di sistema o un'immagine, la firma con la propria chiave privata. All'avvio del dispositivo, il Bootloader usa la chiave pubblica integrata per verificare l'immagine di sistema (come boot.img, recovery.img). Il funzionamento è:
+
+\begin{enumerate}
+  \item Ricalcola l'hash dell'immagine di sistema.
+  \item Decrittografa con la chiave pubblica la firma contenuta nell'immagine, ottenendo un hash.
+  \item Confronta i due hash: se coincidono, la verifica ha esito positivo. Questo garantisce che l'immagine di sistema non sia stata manomessa da terzi.
+\end{enumerate}
+
+\booksubsection{Catena di avvio sicura}
+
+Il BL lock è il primo anuncio dell'intera catena di avvio sicura. Solo dopo che la sua verifica ha esito positivo, carica ed esegue il programma di bootstrap della fase successiva (come il kernel), garantendo così stratificatamente l'attendibilità dell'ambiente di avvio del sistema.
+
+\booksubsection{Lock vs Unlock: il duplice impatto del BL lock}
+
+Per capire in modo più intuitivo pro e contro del BL lock, usiamo una tabella comparativa che mostra le differenze su 5 dimensioni chiave:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Funzione chiave} & \textbf{Stato bloccato (default)} & \textbf{Stato dopo lo sblocco} \tabularnewline
+\hline
+Sicurezza di sistema & Impedisce di flashare sistemi non ufficiali non firmati, proteggendo l'integrità del sistema e la sicurezza di basso livello\newline Alta sicurezza: carica solo immagini firmate ufficialmente, respingendo efficacemente le manomissioni malevole del firmware & Sicurezza ridotta: consente di flashare ROM di terze parti, il meccanismo di verifica dell'integrità del sistema viene meno; se un malware ottiene i permessi Root può alterare profondamente il sistema \tabularnewline
+Stabilità del sistema & Garantisce che il telefono esegua il sistema ufficiale testato e ottimizzato dal produttore, assicurando stabilità e scorrevolezza\newline Stabile: usa firmware ufficiali, funzioni complete, aggiornamenti OTA affidabili & Più rischi: le ROM di terze parti possono avere problemi di compatibilità, possono causare crash, brick, malfunzionamenti hardware (come fotocamera, ricarica rapida), gli aggiornamenti OTA possono fallire \tabularnewline
+Diritti di garanzia & Il produttore fornisce un sistema ufficiale stabile bloccando il BL, per offrire il servizio di garanzia\newline Garanzia valida: goditi la garanzia gratuita ufficiale (danni non dolosi) & Garanzia persa: la maggior parte dei produttori considera lo sblocco del BL come rinuncia volontaria alla garanzia; anche ribloccando, lo storico di sblocco può essere rilevato e la garanzia rifiutata \tabularnewline
+Sicurezza dei dati & Il processo di sblocco di solito cancella i dati, per evitare che i vecchi dati siano sfruttati malevolmente nel nuovo ambiente di sistema\newline Dati sicuri: nell'uso quotidiano, il BL lock limita la capacità dei malware di modificare le partizioni di sistema & Rischio per i dati: lo sblocco cancella forzatamente tutti i dati utente; se dopo lo sblocco non cifri correttamente, la memorizzazione dei dati può essere insicura; in caso di smarrimento, i dati sono più facilmente estraibili tramite flashing \tabularnewline
+Limitazioni funzionali & Garantisce il funzionamento di funzioni che dipendono da un ambiente sicuro (come pagamenti, app bancarie)\newline Funzioni complete: tutte le funzioni ufficiali sono utilizzabili & Funzioni limitate: alcune app sensibili alla sicurezza (come Google Pay, app bancarie) possono rifiutarsi di girare rilevando lo stato di BL sbloccato; i servizi DRM possono essere declassati, con impatto sulla riproduzione di video ad alta definizione \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksection{Procedura dettagliata di sblocco del BL lock (esempio Xiaomi)}
+
+\begin{enumerate}
+  \item \textbf{Richiedere l'autorizzazione di sblocco}: sul sito dell'utility di sblocco Xiaomi.
+  \item \textbf{Associare l'account}: nelle impostazioni del telefono, collega l'account Xiaomi.
+  \item \textbf{Periodo di attesa}: in base al livello dell'account, da 7 a 30 giorni.
+  \item \textbf{Operazione di sblocco}: usa l'utility di sblocco Xiaomi collegando il telefono al PC.
+\end{enumerate}
+
+\booksection{Diverse soluzioni per il Root}
+
+\begin{itemize}
+  \item \textbf{Magisk}: soluzione Root moderna, design Systemless, può nascondere lo stato di Root.
+  \item \textbf{KernelSU}: soluzione Root basata sul kernel, più di basso livello, nascondimento migliore.
+  \item \textbf{SuperSU}: soluzione Root storica, oggi non più aggiornata.
+\end{itemize}
+
+\booksection{Introduzione al flashing}
+
+Per flashing si intende l'installazione di un nuovo sistema operativo sul telefono. Tipi comuni:
+
+\begin{itemize}
+  \item \textbf{Flash di ROM ufficiale}: installazione del sistema ufficiale, per ripristinare un brick o fare un downgrade.
+  \item \textbf{Flash di Recovery di terze parti}: come TWRP, per backup/ripristino e flash di ROM di terze parti.
+  \item \textbf{Flash di ROM di terze parti}: come LineageOS, Pixel Experience, per provare sistemi diversi.
+\end{itemize}
+
+\booksection{Samsung Knox: il prezzo irreversibile dello sblocco BL}
+
+A differenza di altri produttori Android, il meccanismo di sblocco BL dei telefoni Samsung ha un design “fuse” unico:\textbf{per i telefoni Samsung, lo sblocco innesca il fuse Knox, perdendo permanentemente alcune funzioni di sicurezza (come Samsung Pay); cancella tutti i dati protetti; influisce sulla garanzia}. Nel dettaglio:
+
+\begin{itemize}
+  \item \textbf{Il fuse è monouso}: nel telefono c'è un fusibile eFuse, che si brucia in modo permanente non appena rileva lo sblocco del BL, senza possibilità di ripristino.
+  \item \textbf{Funzioni interessate}: Samsung Pay (carte di trasporto/bancarie), cartella protetta Knox, gestione MDM aziendale, alcune app di assicurazione sanitaria smettono di funzionare.
+  \item \textbf{Cancellazione obbligatoria dei dati}: quando il fuse scatta, il telefono forza un ripristino di fabbrica, tutti i dati locali vengono cancellati (i dati cloud non sono interessati).
+  \item \textbf{Impatto sulla garanzia}: la documentazione ufficiale dichiara che dopo il fuse Knox non si ha più diritto alla garanzia.
+\end{itemize}
+
+\begin{tcbwarn}{Pensa due volte prima di agire}
+Il fuse Knox di Samsung è\textbf{irreversibile}: una volta innescato non si torna allo stato di fabbrica. Se vuoi solo usare funzioni che di solito richiedono il Root, ti conviene prima cercare alternative che non lo richiedano.
+
+\end{tcbwarn}
+
+\textbf{Avvertenza importante}\par
+
+Il flashing comporta rischi, procedi con cautela. Può causare:
+
+\begin{itemize}
+  \item Brick del telefono (impossibile avviarlo)
+  \item Perdita della garanzia
+  \item Perdita di dati
+  \item Malfunzionamenti delle funzioni di pagamento
+\end{itemize}
+
+Prima del flashing fai un backup completo, leggi con attenzione il tutorial e verifica la corrispondenza di modello e versione.
+
+\begin{tcbinfo}{Risorse consigliate}
+\begin{itemize}
+  \item \textbf{XDA Developers}: la più grande community di sviluppatori Android al mondo, con tutorial di flashing e risorse ROM.
+  \item \textbf{Coolapk}: nota community digitale cinese, con molti tutorial e discussioni in cinese.
+  \item \textbf{Forum dei vari modelli}: come community Xiaomi, OnePlus, con guide ufficiali e non.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{FAQ (Domande e risposte)}
+
+\textbf{Q1: si può tornare indietro dopo lo sblocco del BL?}\par
+
+\textbf{A:}è possibile ribloccare. In genere serve flashare il pacchetto ufficiale completo di flashing cablato e usare uno script di flashing specifico (come\texttt{flash\_all\_lock.\allowbreak bat}di Xiaomi). Attenzione: dopo il riblocco, alcuni fuse di sicurezza innescati dallo sblocco (come Knox di Samsung) potrebbero non essere reversibili.
+
+\textbf{Q2: come si fa il Root dopo lo sblocco?}\par
+
+\textbf{A:}lo sblocco del BL è solo il primo passo. Il Root di solito richiede:
+
+\begin{enumerate}
+  \item Flashare una Recovery personalizzata (come TWRP).
+  \item Tramite Recovery, flashare un gestore Root come Magisk per patchare l'immagine di boot e ottenere i permessi di Root.
+\end{enumerate}

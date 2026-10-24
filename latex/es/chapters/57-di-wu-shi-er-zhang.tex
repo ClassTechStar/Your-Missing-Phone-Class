@@ -1,0 +1,129 @@
+\bookchapter{Capítulo 52: Los cuatro componentes y el ciclo de vida de la Activity}
+
+\chapterintro{Si Compose es la “cara” de la app, este capítulo trata de su “esqueleto”. Android tiene cuatro componentes básicos y toda app se monta con ellos; el más importante, la Activity, lleva consigo un “mapa del ciclo de vida” que todo desarrollador Android debe tener grabado en la cabeza. Al acabar el capítulo entenderás esos enigmas de siempre como “por qué mi app vuelve del segundo plano con el estado perdido”.}
+
+\booksection{Los cuatro componentes: las vigas maestras de Android}
+
+Android define oficialmente cuatro componentes básicos, cada uno a cargo de un tipo de trabajo:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Componente} & \textbf{Función} & \textbf{Una comparación} \tabularnewline
+\hline
+Activity & Una interfaz visible & El escaparate de la tienda: el usuario lo ve y puede interactuar \tabularnewline
+Service & El "invisible" que trabaja en segundo plano & El obrero del almacén: pone música, descarga archivos, no necesita interfaz \tabularnewline
+BroadcastReceiver & Recibe avisos del sistema & La portería: el altavoz que anuncia "batería baja" o "se cortó la conexión" \tabularnewline
+ContentProvider & Comparte datos entre apps & El archivador público: por ejemplo, presta los contactos a otras apps \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Vistazo rápido a los cuatro componentes de Android\end{center}
+
+En la etapa de principiante pasarás el 95 \% del tiempo con la Activity; Service y BroadcastReceiver entran en juego al reproducir música o al lanzar notificaciones; ContentProvider es el menos usado (el sistema ya tiene bien envueltos los datos habituales). Y una cosa más: los cuatro componentes deben “empadronarse” en AndroidManifest.xml; si no consta el padrón, el sistema no los encuentra.
+
+\booksection{El ciclo de vida de la Activity: el primer “mapa del tesoro” del desarrollo Android}
+
+Una app del móvil puede interrumpirse en cualquier momento: suena una llamada, el usuario se va un rato a WeChat, el sistema te mata por falta de memoria... La vida de una Activity es un viaje en bucle por este mapa:
+
+onCreate (nace: inicializa)
+
+onStart (ya visible)
+
+onResume (en primer plano, interactivo)
+
+onPause (parcialmente tapado)
+
+onStop (totalmente invisible)
+
+onDestroy (destruido)
+
+onRestart / onStart / onResume: al volver al primer plano, se repite el camino a la inversa
+
+\begin{center}\small\color{gray}Figura 4: ciclo de vida de la Activity (sentido de avance: la fila de arriba es el nacimiento, la de abajo la salida; al volver se regresa por el mismo camino)\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Retrollamada} & \textbf{Cuándo se dispara} & \textbf{Uso típico} \tabularnewline
+\hline
+onCreate & Al crear la Activity (una vez) & Cargar la interfaz, preparar los datos \tabularnewline
+onStart & La interfaz pasa a ser visible & Arrancar alguna lógica ligera \tabularnewline
+onResume & Toma el foco y admite interacción & Iniciar animaciones, reanudar la reproducción \tabularnewline
+onPause & Al quedar tapada en parte o al cambiar de app & Pausar animaciones, guardar borradores \tabularnewline
+onStop & Ya del todo invisible & Soltar recursos pesados, pausar descargas \tabularnewline
+onDestroy & Antes de ser destruida & La última limpieza \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Usos típicos de las seis retrollamadas del ciclo de vida\end{center}
+
+\textbf{Aviso para esquivar problemas: girar la pantalla “mata” la Activity}\par
+
+La caída más clásica del principiante: giras la pantalla y desaparece todo lo escrito en el campo de texto. Motivo: al girar, la Activity se destruye y se reconstruye por defecto (pasa por onDestroy onCreate). Remedio: guardar el estado con rememberSaveable (el relevo de remember en Compose), que recupera los valores solo al reconstruir. Lo usaremos una y otra vez en los capítulos 6 y 7.
+
+\booksection{Intent: el “billete” para circular dentro y fuera de la app}
+
+El Intent (intención) es el “billete” con el que se comunican los componentes. Para saltar de una pantalla a otra, o abrir el navegador o la cámara, toca “comprar billete y subir”:
+
+\begin{lstlisting}[language=Kotlin]
+// forma 1: Intent explícito — se indica claramente a qué página ir
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", "Luis")     // lleva "equipaje" en el coche (los datos)
+startActivity(intent)
+
+// forma 2: Intent implícito — solo dices qué hacer y el sistema busca quién lo hace
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // el sistema abrirá el navegador (o te dejará elegir)
+\end{lstlisting}
+
+Cada modalidad tiene su terreno: el explícito sirve para saltos entre pantallas de tu propia app; el implícito, para usar capacidades del sistema o de otras apps (abrir webs, llamar por teléfono, compartir). En proyectos con Compose, coge el Context en el Composable con LocalContext.current y ya puedes hacer startActivity.
+
+\booksection{Varias pantallas y navegación}
+
+Las apps de verdad tienen varias pantallas. El esquema de navegación recomendado oficialmente en Compose es Navigation Compose (la biblioteca androidx.navigation):
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "Desconocido")
+    }
+}
+
+// para navegar desde la pantalla:
+navController.navigate("detail/Luis")     // con parámetro
+navController.popBackStack()              // volver a la página anterior
+\end{lstlisting}
+
+\begin{tcbinfo}{Consejo: ¿y cuando las pantallas son muchas?}
+Cuando el proyecto crezca, reúne todas las rutas de pantallas en un único archivo (por ejemplo, AppNavGraph.kt) y gestiónalas desde ahí; no dejes la lógica de “a dónde saltar” esparcida por cada pantalla. Es el primer paso de “funciona” a “se puede mantener”.
+
+\end{tcbinfo}
+
+\booksection{De regalo, conocer: qué es un Fragment (y por qué este libro no lo enseña)}
+
+Rastreando tutoriales viejos te toparás seguro con el Fragment: un “fragmento de interfaz reutilizable” dentro de la Activity, protagonista absoluto de las arquitecturas multipantalla antiguas. Pero en la era de Compose basta con funciones Composable + rutas de Navigation, y Google ya le ha bajado el protagonismo. Por eso este libro no lo mete en su línea principal.
+
+Mi consejo: en los proyectos nuevos no lo uses por iniciativa propia; con saber que es “un fragmento de interfaz incrustado en la Activity” te basta para leer código antiguo o salir del paso en una entrevista. A la hora de elegir material de estudio, prioriza siempre lo publicado desde 2023 en adelante: el “almanaque” del stack de Android caduca más rápido de lo que parece.
+
+\begin{tcbpractice}{Manos a la obra: dale "memoria" al contador}
+Retoca el contador del capítulo 51: (1) sustituye remember por rememberSaveable y gira la pantalla para comprobar que el número sigue ahí; (2) añade un botón “Acerca de” que salte con Navigation a una segunda pantalla donde se muestre el número de versión; (3) imprime registros (Log.d) en onCreate/onPause de las dos pantallas y observa en Logcat el orden en que se llaman los estados del ciclo de vida. Hechos estos tres pasos, el ciclo de vida deja de ser teoría de sobremesa.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item Los cuatro componentes: Activity (escaparate), Service (segundo plano), BroadcastReceiver (altavoz), ContentProvider (archivador)
+  \item Las seis retrollamadas del ciclo de vida: onCreate onStart onResume onPause onStop onDestroy
+  \item Girar la pantalla destruye y reconstruye la Activity: salva el estado con rememberSaveable
+  \item El Intent es el "billete": explícito para saltar a tus pantallas, implícito para las capacidades del sistema
+  \item Varias pantallas con Navigation Compose: NavHost + rutas composable
+\end{itemize}
+
+\end{tcbsummary}

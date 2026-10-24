@@ -1,0 +1,126 @@
+\bookchapter{第五十九章：認識 iOS——蘋果生態與開發生態}
+
+\chapterintro{恭喜你做出這個決定——從“用 iPhone 的人”變成“給 iPhone 寫應用的人”。在動手之前，咱們先把地圖攤開：iOS 從哪裡來？蘋果的“圍牆花園”對開發者意味著什麼？一個 App 從你的手指敲鍵盤到使用者手機上，中間都發生了什麼？}
+
+\booksection{一、iOS 的身世：一部手機改變一個行業}
+
+2007 年 1 月，喬布斯在發佈會上掏出了第一代 iPhone。當時它連第三方應用都不支援——直到 2008 年，蘋果推出 App Store 和 iPhone SDK，允許全世界開發者給 iPhone 寫軟體。那一刻，“應用經濟”誕生了：到今天，App Store 上有數百萬個應用，為開發者累計分成超過數千億美元。
+
+系統本身也在進化：最初叫 iPhone OS，2010 年更名 iOS；版本號一路走到 iOS 17（2023），然後在 2025 年，蘋果把命名改為跟隨年份——iOS 26 於 2025 年發佈，2026 年 8 月的當前版本是 iOS 27。命名會變，但一件事沒變過：iOS 的使用者付費習慣和軟體品質口碑，是移動生態裡公認最好的——同樣的 App，iOS 端的收入往往顯著高於安卓端。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{節點} & \textbf{年份} & \textbf{對開發者重要的事} \tabularnewline
+\hline
+App Store 上線 & 2008 & 第三方開發生態開啟 \tabularnewline
+Swift 發佈 & 2014 & 現代 iOS 開發語言登場 \tabularnewline
+SwiftUI 發佈 & 2019 & 宣告式介面框架，本書主線 \tabularnewline
+iOS 26（改名元年） & 2025 & 命名跟隨年份；Apple Intelligence 全面整合 \tabularnewline
+iOS 27 & 2026 & 當前最新版（本書基準） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 開發大事記（截至 2026 年 8 月）\end{center}
+
+\booksection{二、圍牆花園：蘋果生態的“規矩”與“紅利”}
+
+蘋果生態常被形容為 “圍牆花園”（Walled Garden）——規則多、管得嚴：App 必須稽核才能上架、開發必須用 Mac 和 Xcode、分發主要走 App Store。聽起來憋屈？但對開發者，這套規矩換來了真金白銀的紅利：
+
+\begin{itemize}
+  \item 裝置碎片化極小：iPhone 型號就那麼幾款，螢幕尺寸、系統版本高度統一——你適配 5 臺機型，就覆蓋了 95\% 的使用者（安卓可能要適配幾十款）；
+  \item 系統版本更新率極高：新系統發佈幾周內就有七八成使用者升級，新 API 可以大膽用，不用照顧"五年前的老系統"；
+  \item 使用者付費習慣好：App Store 使用者更願意為應用和內購花錢；
+  \item 稽核雖然嚴格，但商店乾淨：山寨、流氓軟體少，好產品更容易被看見。
+\end{itemize}
+
+\begin{tcbwarn}{注意：先說清楚成本}
+iOS 開發有硬門檻：必須有一臺 Mac（Xcode 是 macOS 獨佔），上架需要 99 美元/年的開發者帳號（個人開發者免費帳號可以本地真機除錯，但不能上架）。想清楚這筆投入再啟程——不過好訊息是，學習階段用免費帳號完全夠用，第 60 章會講。
+
+\end{tcbwarn}
+
+\booksection{三、用什麼語言寫：Objective-C 還是 Swift？}
+
+iOS 開發歷史上也有兩位“主角”。Objective-C 是開國元老——從 2008 年用到 2014 年；Swift 是蘋果 2014 年發佈的新語言，此後一路進化到 Swift 6（2024 年發佈，引入嚴格併發檢查），到 2026 年，新專案幾乎全部用 Swift。
+
+給零基礎的你一句實在話：直接學 Swift，Objective-C 連看都不用看——除非你入職後要維護十年前的遺產程式碼。Swift 的好處：語法清爽（沒有 C 語言時代的分號與標頭檔案包袱）、可選值（Optional）機制從語言層面消滅“空指標崩潰”、和 SwiftUI 無縫配合、還有 iPad 上的 Swift Playgrounds 可以邊玩邊學。
+
+Objective-C 風格（上古遺蹟）
+
+\begin{lstlisting}
+NSString *name = @"張三"; [name stringByAppendingString:@"你好"]; // 方括號 + 指標 + 分號三件套
+\end{lstlisting}
+
+Swift 風格（現代清爽）
+
+\begin{lstlisting}
+var name = "張三" name += "你好" // 像自然語言一樣直白
+\end{lstlisting}
+
+\booksection{四、一個 App 是怎麼誕生的？}
+
+和所有平臺一樣，iOS App 的誕生也有一條流水線。但蘋果版多了兩道“安檢”：
+
+想法
+
+設計（介面+功能）
+
+寫程式碼（Swift + SwiftUI）
+
+編譯簽名
+
+測試（模擬器+真機）
+
+蘋果稽核
+
+上架 App Store
+
+\begin{center}\small\color{gray}圖 1：一個 iOS App 從想法到上架的全流程（注意多出的“稽核”環節）\end{center}
+
+流程裡的關鍵概念：
+
+\begin{itemize}
+  \item 簽名（Signing）：每個 iOS App 都必須"簽名"才能安裝——證明"這個包出自你，沒被篡改"。學習階段 Xcode 用你的 Apple ID 自動簽名；上架時用開發者證書。第 67 章細講。
+  \item 模擬器（Simulator）：Mac 上虛擬出的 iPhone，開發除錯的主戰場。它跑的是 Mac 的 CPU，所以特別流暢，比安卓模擬器體驗好一大截。
+  \item TestFlight：蘋果官方的"內測分發"工具——上架前把測試版發給最多 10000 名測試使用者，他們用 TestFlight 應用安裝試用。這是 iOS 生態獨有的優雅。
+\end{itemize}
+
+\booksection{五、iOS 技術棧全景：你的“武器清單”}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{層次} & \textbf{主流選擇（2026）} & \textbf{幹什麼用的} \tabularnewline
+\hline
+語言 & Swift 6 & 寫邏輯的語言 \tabularnewline
+介面 & SwiftUI + 蘋果設計規範（HIG） & 用程式碼畫介面（本書主線） \tabularnewline
+架構 & MVVM + @Observable & 把介面和邏輯分開 \tabularnewline
+資料儲存 & SwiftData（資料庫）+ UserDefaults（配置） & 把資料存進手機 \tabularnewline
+網路 & URLSession + async/await + Codable & 和伺服器對話 \tabularnewline
+構建工具 & Xcode Build System / xcodebuild & 把程式碼變成安裝包 \tabularnewline
+開發環境 & Xcode（macOS 獨佔） & 蘋果官方 IDE \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}2026 年 iOS 主流技術棧速覽\end{center}
+
+注意到沒：這套清單比安卓的短一截——因為蘋果把很多事都“包辦”了。封閉生態的代價是自由度，回報是省心：不用糾結選哪個網路庫、哪個資料庫，官方給的往往就是最優解。
+
+\begin{tcbpractice}{來動手：看看你手機的"蘋果戶口"}
+開啟 iPhone 的 [設定] [通用] [關於本機]，記下三樣：iOS 版本、機型名稱、可用容量。再去 App Store 的“今天”頁隨便逛逛，注意那些精品 App 的截圖和文案——從今天起，你逛商店的視角要從“使用者”切換到“開發者”了。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小結}
+\begin{itemize}
+  \item 2008 年 App Store 上線，"應用經濟"誕生；2026 年當前版本 iOS 27
+  \item 圍牆花園的賬：規矩多，但裝置少、版本新、使用者肯花錢、商店乾淨
+  \item 硬門檻：必須有 Mac；上架要 99 美元/年開發者帳號；學習階段免費帳號夠用
+  \item 語言直接學 Swift；Objective-C 只屬於遺產程式碼
+  \item 流水線比安卓多一環：蘋果稽核；TestFlight 是內測分發神器
+  \item 2026 標準技術棧：Swift 6 + SwiftUI + MVVM + SwiftData + URLSession + Xcode
+\end{itemize}
+
+\end{tcbsummary}

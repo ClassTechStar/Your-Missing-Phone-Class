@@ -1,0 +1,153 @@
+\bookchapter{Chapter 56: Polish and Release — Testing, Debugging, and Publishing on Google Play}
+
+\chapterintro{The app is built — now what? This chapter covers the three things that take you from “it runs” to “it ships”: how to debug efficiently to find bugs, how to write tests to prevent regressions, and how to put the app on Google Play for the whole world to download. Publishing isn't just ceremony — it's the dividing line between a finished work and a product.}
+
+\booksection{The Three Debugging Tools: Logcat, Breakpoints, and the UI Inspector}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tool} & \textbf{What it does} & \textbf{How to use it} \tabularnewline
+\hline
+Logcat & View system and your own logs & In code: Log.d("TAG","value=\$x"); filter by searching TAG in the panel \tabularnewline
+Breakpoint debugging & Pause the program at a line and inspect variable values & Click next to the line number to drop a red dot, run in Debug mode, and step through \tabularnewline
+Layout Inspector & Inspect the live UI structure & Menu Tools Layout Inspector; watch the component tree in real time \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}The three debugging tools\end{center}
+
+\begin{tcbinfo}{Tip: how do you read an error?}
+After a crash, Logcat shows a red stack trace. Scan from the bottom up for the first line that starts with your own package name (e.g., com.example.yourapp) — that line is basically the crime scene. First check the “Exception type” (a null pointer? a bad cast?), then the “at ... yourfile: line”. This one trick solves 80\% of crashes.
+
+\end{tcbinfo}
+
+\booksection{Testing: Insuring Your Code}
+
+Manual testing can't be trusted — fix one feature and another quietly breaks. Tests are both “regret medicine” and a “bulletproof vest.” Android testing comes in three layers; as a beginner, master the first one first:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Layer} & \textbf{What it tests} & \textbf{Where it lives} & \textbf{Speed} \tabularnewline
+\hline
+Unit tests & Pure logic (calculations, validation) & app/src/test/ & Seconds \tabularnewline
+Instrumented tests & UI behavior on a real device & app/src/androidTest/ & Minutes \tabularnewline
+Manual testing & A real human feeling out the experience & —— & Always needed \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}The three testing layers\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// Extract logic like "amount string to number" into a pure function
+fun parseAmount(input: String): Double? {
+    val v = input.trim().toDoubleOrNull()
+    return if (v != null && v > 0) v else null
+}
+
+// Testing it (JUnit4)
+@Test
+fun emptyInputReturnsNull() {
+    assertEquals(null, parseAmount(""))
+}
+@Test
+fun negativeReturnsNull() {
+    assertEquals(null, parseAmount("-5"))
+}
+@Test
+fun normalValueParses() {
+    assertEquals(12.5, parseAmount("12.5"))
+}
+\end{lstlisting}
+
+The amount validation and summary calculations in the tracker should all be covered by unit tests. To run them: right-click the test directory Run. Green across the board means you can change code with confidence.
+
+\booksection{Signing and Packaging: Stamping Your App}
+
+Android requires every installable package to be signed — like an official seal proving “this package came from me and hasn't been tampered with.” While debugging, Android Studio signs automatically with the debug key; for release you use your own release signature. The process:
+
+\begin{enumerate}
+  \item Menu Build Generate Signed Bundle / APK;
+  \item Create the keystore file — set a password and keep it safe;
+  \item Choose release + the AAB format, and the build is done.
+\end{enumerate}
+
+\textbf{Watch out: losing the keystore = losing the app}\par
+
+Updates after publishing must use the same signature, or the store will reject the update. If the keystore file and password are lost, your only option is to publish as a brand-new app — none of your existing users can come along. Back up the keystore and password somewhere secure (encrypted cloud storage + a notebook). It's one of the most expensive lessons an Android developer can learn.
+
+\booksection{The Full Google Play Publishing Process}
+
+Register a developer account
+
+Prepare store assets
+
+Upload the AAB
+
+Fill in the data-safety form
+
+Review (hours to days)
+
+Published
+
+\begin{center}\small\color{gray}Figure 6: The six steps to publishing on Google Play\end{center}
+
+\begin{itemize}
+  \item Register: a one-time \$25 registration fee; you need a working Google account;
+  \item Assets: an app icon (512×512), screenshots (at least 2), a feature description, and a privacy policy link (required if you collect data);
+  \item Data safety form: honestly declare what data you collect — an offline expense tracker can declare "zero collection";
+  \item Review: a new account's first submission is often reviewed by a human, taking anywhere from hours to days; if it's rejected, fix things per the feedback.
+\end{itemize}
+
+A note for users in mainland China: Google Play requires special network access, and distribution in mainland China usually goes through domestic stores (Huawei, Xiaomi, Tencent MyApp, etc.). Publishing to domestic stores is a similar process, but each store has its own review quirks — the same AAB/APK can be distributed to several stores. As practice, getting through just one store is already a win.
+
+\booksection{Making Store Assets: First Impressions Are Downloads}
+
+The store page is the shop window users see while browsing. Three assets decide the first impression:
+
+\begin{itemize}
+  \item Icon: 512×512; don't just make do with a screenshot. If design isn't your thing, use an AI tool to generate a clean geometric shape — it only counts if it's still recognizable at home-screen size;
+  \item Screenshots: at least 2, ideally 4-6, showing your most core feature scenes; pair each with one line of plain speech ("Log an expense in a second" is ten times better than "An efficient expense-tracking solution");
+  \item Description: the first sentence should make clear "what this is + who it's for"; don't pile up "most professional, most powerful" — store search ranking depends mainly on keywords and download conversion, and honesty works better than exaggeration.
+\end{itemize}
+
+\begin{tcbinfo}{Tip: A/B against your peers}
+Before publishing, browse the top ten apps in your category and screenshot them for comparison: what style are their icons? What selling points do their screenshots push? How are their titles written? Imitating isn't copying — learn the playbook and swap in your own content. It's the fastest cold-start lesson in every product's life.
+
+\end{tcbinfo}
+
+\booksection{A quick checklist for performance and crash reporting}
+
+Before publishing, these two things are each worth half an hour:
+
+\booksubsection{Four performance self-checks}
+
+\begin{enumerate}
+  \item Use LazyColumn for lists: never lay out long lists with a plain Column — lazy loading is Android performance lesson one;
+  \item Don't shove full-size images in: use the Coil image library to auto-scale and cache; a single 5MB original is enough to choke a low-end phone;
+  \item Keep heavy work off the main thread: database, network, and large files all belong in coroutines;
+  \item Measure with the Profiler: Android Studio's built-in profiler shows memory, CPU, and battery use — measure first, then optimize; don't go by feel.
+\end{enumerate}
+
+\booksubsection{Crash reporting}
+
+Not crashing during your tests doesn't mean it won't crash on users' phones. Before publishing, add Firebase Crashlytics (Google's official, free tool): a few lines of config, and when a user hits a crash it automatically reports the stack trace, so from the console you can see “which device model, which version, and which line it crashed on.” Publishing without crash monitoring is driving with your eyes closed.
+
+\begin{tcbpractice}{Hands-on: "deliver" the tracker once}
+(1) Add 3 unit tests for logic like parseAmount; (2) use Logcat to catch a crash you created on purpose and fix it; (3) generate a release-signed APK and send it to a friend to install (that's the real “finished work” ceremony); (4) if you have energy to spare, register a developer account and actually submit the tracker for publication. The first three can be done tonight.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter Summary}
+\begin{itemize}
+  \item The three debugging tools: Logcat for logs, breakpoints for variables, Layout Inspector for the UI
+  \item Reading crashes: scan the stack from the bottom up for the first line with your package name
+  \item Three testing layers: unit (seconds — learn this first) / instrumented / manual
+  \item Publishing requires signing: back up the keystore and password; lose them and the app "changes identity"
+  \item Six publishing steps: register assets upload the AAB data safety form review live
+\end{itemize}
+
+\end{tcbsummary}

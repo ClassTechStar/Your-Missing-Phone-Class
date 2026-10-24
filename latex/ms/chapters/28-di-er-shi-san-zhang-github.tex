@@ -1,0 +1,188 @@
+\bookchapter{Lampiran Bab 23: Panduan Permulaan GitHub — Daripada Hos Kod ke Platform Kolaborasi}
+
+\chapterintro{Bab sebelumnya kita bincangkan “pemikiran pengaturcaraan”, dan untuk benar-benar melaksanakan pemikiran pengaturcaraan dan membuat projek bersama orang lain, tidak boleh lari dari satu nama—GitHub. Sama ada anda pelajar jabatan sains komputer yang ingin menyertai pertandingan, ingin menyimpan karya kod anda, atau sekadar ingin melihat apa yang sedang dikerjakan oleh pembangun di seluruh dunia, GitHub adalah platform yang mesti anda kenali. Bahagian ini bermula dari konsep paling asas, membantu anda membina satu pemahaman yang jelas.}
+
+\booksection{Apakah Sebenarnya GitHub?}
+
+Git ialah buku harian di komputer anda, GitHub ialah platform blog awam\textbf{—anda boleh menerbitkan karya sendiri, mengikuti projek orang lain, menyertai perbincangan dan kolaborasi. Ia bukan sahaja “gudang belakang pentas pengaturcara”, lebih seperti sebuah “bandar teknologi” yang dibina bersama oleh pembangun di seluruh dunia—projek dilahirkan di sini, diulang, dibincangkan, diguna semula.}Bagi orang biasa, GitHub juga bukan sesuatu yang jauh dari jangkauan. Ramai bukan pengaturcara menggunakannya untuk menghoskan nota, buku elektronik, blog peribadi, malah untuk menyandarkan fail konfigurasi. Selagi anda mempunyai sedikit keperluan “mahu mengemas benda anda dengan baik dan berkongsi”, GitHub berbaloi untuk anda kenali.
+
+2. Perbezaan Antara Git dan GitHub (Konsep Penting!)\textbf{Ramai orang akan mengelirukan dua perkataan ini ketika pertama kali terdedah, di sini membantu anda menyusun dengan jelas:}Perbandingan
+
+Git
+
+\booksection{Perbezaan Antara Git dan GitHub (Konsep Penting!)}
+
+Hakikat
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Alat kawalan versi (perisian)} & \textbf{Platform hos kod (laman web)} & \textbf{Lokasi pelaksanaan} \tabularnewline
+\hline
+Pada komputer tempatan & Awan (diakses melalui pelayar) & Tanggungjawab teras \tabularnewline
+Merakam setiap perubahan fail (bagaimana diubah, siapa mengubah, bila diubah) & Meletakkan repositori Git di awan, memudahkan storan, paparan, kolaborasi & Perlukan rangkaian \tabularnewline
+Tidak perlu, boleh digunakan luar talian & Perlu sambungan rangkaian untuk mengakses & Kepemilikan \tabularnewline
+Perisian sumber terbuka, dicipta oleh Linus Torvalds (bapa Linux) & Produk di bawah Microsoft & Pesaing serupa \tabularnewline
+SVN, Mercurial & GitLab, Gitee, Bitbucket & Ringkasnya: \tabularnewline
+Git mengurus "bagaimana merakam perubahan", GitHub mengurus "perubahan diletakkan di mana, bagaimana berkolaborasi" & . Git ialah alat, berjalan secara tempatan; GitHub ialah platform, meletakkan repositori Git di awan, memudahkan kolaborasi dan paparan. Anda boleh guna Git sahaja tanpa GitHub (contohnya menulis kod sendiri untuk pengurusan versi), tetapi menggunakan GitHub mesti guna Git (kerana GitHub berasaskan Git). & 3. Konsep Teras dan Fungsi GitHub \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+Konsep Asas\textbf{Sebelum bertindak, kenali beberapa perkataan berfrekuensi tinggi dahulu, jika tidak melihat antara muka GitHub akan keliru:}Repositori (Repository, singkatannya Repo)
+
+\booksection{Konsep Teras dan Fungsi GitHub}
+
+\booksubsection{Konsep Asas}
+
+: Rekod satu pengubahsuaian kod. Setiap Commit disertakan mesej maklumat, merakam “apa yang diubah kali ini, mengapa diubah”. Ini adalah asas bagi Git/GitHub untuk “mengembalikan masa”.
+
+\begin{itemize}
+  \item \textbf{Cabang (Branch)}: Garis pembangunan bebas yang bercabang dari garisan utama. Contohnya anda ingin menambah fungsi baharu, boleh buka satu cabang untuk membangunkan secara berasingan, selepas selesai kemudian gabungkan kembali ke garisan utama, tidak menjejaskan orang lain.
+  \item \textbf{Klon (Clone)}: Menyalin repositori awan secara lengkap ke komputer tempatan, selepas itu boleh mengubah kod secara tempatan.
+  \item \textbf{Dorong (Push)/Tarik (Pull)}: Push ialah memuat naik kod tempatan ke GitHub, Pull ialah memuat turun kod terkini dari GitHub ke tempatan. Ini adalah dua tindakan teras untuk menyegerakkan kod semasa kolaborasi pasukan.
+  \item \textbf{Permintaan Gabung (Pull Request, singkatannya PR)}: Apabila anda selesai mengubah kod pada satu cabang dan ingin menggabungkannya ke cabang utama, anda memulakan satu PR, membolehkan ahli pasukan menyemak kod sebelum menggabungkan. Ini adalah mekanisme teras kolaborasi GitHub.
+  \item \textbf{Isu (Issue)}: Digunakan untuk merakam bug, permintaan fungsi, topik perbincangan. Setiap Issue seperti satu hantaran perbincangan, boleh ditugaskan orang bertanggungjawab, diberikan label.
+  \item \textbf{Fork}: Menyalin repositori orang lain ke akaun anda sendiri, anda boleh mengubah salinan anda sesuka hati, tidak menjejaskan repositori asal. Selepas siap mengubah, boleh hantar PR kepada penulis asal, meminta menggabungkan penambahbaikan anda.
+  \item \textbf{Fungsi Teras}GitHub menyediakan bukan sahaja storan kod, tetapi juga termasuk:
+  \item \textbf{Kawalan versi}: Merakam sejarah setiap perubahan kod, kod rosak boleh kembali ke versi normal sebelumnya bila-bila masa.
+\end{itemize}
+
+\booksubsection{Fungsi Teras}
+
+: Menyokong pembangunan selari berbilang pengguna pada projek yang sama, ramai orang membangunkan serentak tidak akan menimpa, tidak akan berkonflik.
+
+\begin{itemize}
+  \item \textbf{Penjejakan masalah}: Gunakan Issue merakam bug dan permintaan fungsi, memudahkan pasukan menjejaki.
+  \item \textbf{Pengurusan projek}: Mengintegrasikan item tindakan, papan projek (Projects) dan alat pengurusan lain, setara dengan Trello ringan terbina dalam.
+  \item \textbf{Automasi}: Melalui
+  \item \textbf{GitHub Actions}merealisasikan kompilasi automatik, ujian, pembungkusan, penyebaran selepas kod dihantar, merupakan alat teras "CI/CD (Integrasi Berterusan/Penyebaran Berterusan)" moden.
+  \item \textbf{Pengurusan dokumentasi}: README memperkenalkan projek, Wiki menyimpan seni bina terperinci dan spesifikasi pembangunan, Pages malah boleh terus menghoskan laman web statik.\textbf{Hos kod dan paparan}: Setiap repositori mempunyai paparan laman web yang cantik, menyokong penonjolan sintaks, merupakan "muka depan" karya teknikal anda.
+  \item \textbf{Komuniti sumber terbuka}: Anda boleh Star (kutip) projek yang disukai, Watch (ikuti) dinamik projek, Follow (ikuti) pembangun, menyertai kolaborasi sumber terbuka global.
+  \item \textbf{4. Pendaftaran dan Permulaan: Lima Minit Mencipta Repositori Pertama Anda}Daftar akaun
+  \item \textbf{Lawati}github.com
+\end{itemize}
+
+\booksection{Pendaftaran dan Permulaan: Lima Minit Mencipta Repositori Pertama Anda}
+
+\booksubsection{Daftar akaun}
+
+\begin{enumerate}
+  \item github.com/yourname\href{https://github.com}{).}Selesaikan pengesahan e-mel dan pengesahan manusia-mesin.
+  \item Pilih pelan percuma (Free) sudah memadai, untuk pengguna peribadi cukup sepenuhnya.\texttt{Cipta repositori pertama}Selepas log masuk klik tanda "+" di penjuru kanan atas, pilih "New repository".
+  \item Isikan nama repositori (Repository name), contohnya
+  \item my-first-project
+\end{enumerate}
+
+\booksubsection{Cipta repositori pertama}
+
+\begin{enumerate}
+  \item Tulis satu penerangan ringkas (Description), membiarkan orang lain tahu repositori ini untuk apa.
+  \item Pilih Awam (Public) atau Peribadi (Private). Repositori awam boleh dilihat semua orang, peribadi hanya boleh dilihat diri sendiri dan kolaborator. Akaun percuma juga menyokong repositori peribadi tanpa had.\texttt{Tandakan "Add a README file"—README ialah "manual arahan" projek, setiap repositori disyorkan mempunyainya.\allowbreak }
+  \item Pengetahuan Kecil: Apakah README
+  \item README.md ialah fail format Markdown, kandungan pertama yang dilihat orang lain apabila membuka repositori anda. README yang baik biasanya mengandungi: pengenalan projek, kaedah pemasangan, contoh penggunaan, lesen, maklumat hubungan. Menulis README yang baik adalah kualiti asas pengaturcara, juga merupakan ambang pertama sama ada projek boleh digunakan oleh orang lain.
+  \item 5. Aliran Kerja Asas: Daripada Tempatan ke Awan
+  \item Memahami aliran kerja GitHub, terasnya ialah mengingat kitaran ini:
+\end{enumerate}
+
+\begin{tcbinfo}{Ubah tempatan Peringkat Commit Push Kemas kini awan}
+. Di bawah ini dijelaskan setiap langkah dalam bahasa mudah:
+
+\end{tcbinfo}
+
+\booksection{Aliran Kerja Asas: Daripada Tempatan ke Awan}
+
+: Tulis kod atau ubah dokumen menggunakan editor di komputer tempatan.\textbf{git add}: Masukkan fail yang diubah ke “kawasan peringatan”, setara dengan memberitahu Git “perubahan ini saya bersedia merakamnya”.
+
+\begin{enumerate}
+  \item \textbf{git commit}: Merakam perubahan di kawasan peringatan secara rasmi menjadi satu "commit", disertakan satu ayat penjelasan, contohnya "baiki bug log masuk". Langkah ini hanya dilengkapkan secara tempatan.
+  \item \textbf{git push}: Memuat naik commit tempatan ke awan GitHub, supaya orang lain boleh melihatnya.
+  \item \textbf{git pull}: Sebelum mula bekerja, tarik kod terkini dari awan dahulu, memastikan tempatan kekal disegerakkan dengan ahli pasukan yang lain.
+  \item \textbf{Bagi pemula, ingat formula ini:}"Pull dulu baru ubah, selepas ubah add, commit bawa penjelasan, akhirnya push ke atas"
+  \item \textbf{. Biasakan tabiat ini, kolaborasi pasukan tidak akan kacau.}6. Aliran Kerja Kolaborasi Pasukan: Bagaimana Pull Request Berfungsi
+\end{enumerate}
+
+Tempat paling kuat GitHub terletak pada mekanisme kolaborasinya. Satu aliran kerja kolaborasi pasukan yang tipikal adalah seperti ini:\textbf{Buka cabang}: Buka satu cabang baharu dari cabang utama (biasanya dipanggil main atau master), contohnya
+
+\booksection{Aliran Kerja Kolaborasi Pasukan: Bagaimana Pull Request Berfungsi}
+
+, membangunkan fungsi baharu pada cabang ini.
+
+\begin{enumerate}
+  \item \textbf{Bangun dan commit}: Tulis kod pada cabang baharu, commit berkali-kali merakam kemajuan.\texttt{Dorong ke GitHub}: Dorong cabang ke repositori awan.
+  \item \textbf{Mulakan Pull Request}: Mulakan PR di laman web GitHub, meminta menggabungkan cabang anda ke cabang utama. Jelaskan dengan jelas apa perubahan yang dilakukan PR ini, mengapa diubah.
+  \item \textbf{Semakan kod (Code Review)}: Ahli pasukan melihat kod anda, mengemukakan pendapat atau cadangan pengubahsuaian. Anda boleh terus commit berdasarkan maklum balas, PR akan dikemas kini secara automatik.
+  \item \textbf{Gabung}: Selepas semakan lulus, klik "Merge" untuk menggabungkan kod ke cabang utama. Sumbangan anda secara rasmi memasuki projek!
+  \item \textbf{Aliran ini menjamin}mana-mana kod sebelum memasuki cabang utama telah disemak
+  \item \textbf{, sangat mengurangkan kebarangkalian kesilapan. Projek sumber terbuka juga menggunakan mekanisme ini untuk menerima sumbangan daripada orang asing di seluruh dunia—anda benar-benar boleh menghantar PR pada sesetengah projek sumber terbuka terkenal, selepas diterima anda menjadi penyumbang projek tersebut.}7. Senario Aplikasi Tipikal GitHub
+\end{enumerate}
+
+Pelajar menyertai pertandingan dan projek kursus\textbf{Pelajar jabatan sains komputer menyertai ACM, hackathon, reka bentuk pengijazahan, hampir semuanya tidak boleh lari dari GitHub. Ia bukan sahaja boleh menjadi platform kolaborasi pasukan, juga boleh menjadi tetingkap pameran karya—juri pertandingan boleh terus melihat repositori anda, memahami kualiti kod dan proses kolaborasi. Ramai syarikat semasa merekrut juga meminta melampirkan halaman utama GitHub, sebagai bukti keupayaan teknikal.}Pangkalan pengetahuan peribadi dan hos nota
+
+\booksection{Senario Aplikasi Tipikal GitHub}
+
+\booksubsection{Pelajar menyertai pertandingan dan projek kursus}
+
+GitHub adalah pusat gerakan sumber terbuka global. Anda boleh Fork projek yang disukai, mengubah dan menghantar PR untuk membalas komuniti; juga boleh sekadar Star mengutip projek baik, menjejaki kemas kini. Menyertai sumber terbuka adalah jalan terbaik untuk meningkatkan teknologi dan mengumpul reputasi.
+
+\booksubsection{Pangkalan pengetahuan peribadi dan hos nota}
+
+Dengan bantuan GitHub Actions, boleh merealisasikan aliran sepenuhnya automatik “kod sekali push, automatik uji + automatik sebar ke pelayan”. Ramai blog peribadi dan laman dokumentasi dibina sedemikian, selepas menulis artikel push sekali, laman web dikemas kini secara automatik.
+
+\booksubsection{Menyertai projek sumber terbuka}
+
+Gunakan repositori kod sebagai pemacu awan, tukar komputer, bekerja berbilang peranti, git pull sekali boleh mendapatkan kod terkini, tidak perlu lagi salin bolak-balik menggunakan pemacu USB.
+
+\booksubsection{Penyebaran automatik dan CI/CD}
+
+Mesej commit mesti ditulis dengan jelas
+
+\booksubsection{Sandaran kod dan penyegerakan berbilang peranti}
+
+Rajin commit, langkah kecil berlari pantas
+
+\booksection{Beberapa Cadangan untuk Pemula}
+
+\begin{itemize}
+  \item \textbf{Gunakan cabang untuk membangun, jangan ubah terus cabang utama}: Walaupun projek peribadi, biasakan membuka cabang, semasa kolaborasi pasukan pada masa hadapan tidak akan tergopoh-gopoh.
+  \item \textbf{Manfaatkan .gitignore}: Fail ini digunakan untuk memberitahu Git fail mana yang tidak perlu dimasukkan dalam pengurusan versi (contohnya konfigurasi kata laluan, keluaran kompilasi, folder kebergantungan), mengelakkan memuat naik fail sampah.
+  \item \textbf{Banyak melihat projek sumber terbuka yang cemerlang}: Layari GitHub Trending, lihat struktur kod projek bintang tinggi, cara menulis README, aliran kolaborasi, adalah cara percuma paling cepat untuk meningkatkan diri.
+  \item \textbf{Mohon pakej pelajar GitHub}: Selepas pengesahan pelajar boleh mendapatkan kuota banyak alat dan perkhidmatan berbayar secara percuma (Copilot, nama domain, perkhidmatan awan dll.), bernilai ribuan dolar.
+  \item \textbf{Peringatan Keselamatan}Jangan sekali-kali memuat naik kata laluan, kunci API, rentetan sambungan pangkalan data dan maklumat sensitif lain ke GitHub, terutamanya repositori awam—selepas bocor, akan ditangkap oleh perayau dalam beberapa saat, akibatnya serius.
+  \item \textbf{Tidak sengaja memuat naik maklumat sensitif, hanya memadam fail tidak cukup (masih ada dalam rekod sejarah), perlu gunakan}git filter-branch
+\end{itemize}
+
+\begin{tcbwarn}{atau alat profesional membersihkan sejarah, dan segera tukar kunci yang bocor.}
+\begin{itemize}
+  \item Repositori peribadi juga tidak mutlak selamat, maklumat sensitif lebih baik diurus menggunakan pemboleh ubah persekitaran, jangan masuk ke repositori kod.
+  \item Perkara yang perlu diperhatikan apabila mengakses GitHub dari dalam negara\texttt{GitHub kadang-\allowbreak kadang tidak stabil apabila diakses dari dalam negara, mungkin muncul tidak boleh dibuka, klon perlahan.\allowbreak  Boleh cuba: (1) Gunakan tapak cermin dalam negara (seperti GitClone, ghproxy) mempercepat klon; (2) Konfigurasikan Hosts atau gunakan proksi; (3) Jika utamanya untuk kolaborasi dalam negara, juga boleh pertimbangkan pengganti domestik}Gitee
+  \item , fungsinya serupa dan kelajuan akses pantas. Ramai pasukan akan menghoskan di GitHub dan Gitee serentak, mengambil kira kedua-dua pengantarabangsaan dan kelajuan domestik.
+\end{itemize}
+
+\end{tcbwarn}
+
+\begin{tcbinfo}{Gaya lanjutan: Gunakan GitHub Pages membina blog peribadi percuma}
+GitHub Pages membolehkan anda menghoskan satu laman web statik secara percuma, dipadankan dengan penjana tapak statik seperti Jekyll, Hexo, Hugo, boleh membina blog peribadi dengan mudah. Selepas menulis artikel Markdown push ke repositori, blog dikemas kini secara automatik, juga dilengkapi HTTPS dan nama domain tersuai. Blog ramai blogger teknikal dibina sedemikian, kos sifar, tiada iklan, versi terkawal.\textbf{9. Ringkasan: Mengapa Setiap Orang Patut Mengenali GitHub}GitHub sudah lama bukan sekadar “alat pengaturcara”, ia lebih seperti satu
+
+\end{tcbinfo}
+
+\textbf{cara kerja era digital}\par
+
+: pengurusan versi menjadikan semua boleh dijejak, mekanisme kolaborasi menjadikan pasukan beroperasi cekap, semangat sumber terbuka menjadikan pengetahuan mengalir bebas. Walaupun anda tidak menulis kod, memahami konsep “commit, cabang, gabung” juga boleh membantu anda menguruskan lebih baik apa-apa kandungan yang memerlukan “pengubahsuaian berulang + kolaborasi berbilang orang”—daripada tesis kepada dokumen, daripada nota kepada cadangan.
+
+\booksection{Ringkasan: Mengapa Setiap Orang Patut Mengenali GitHub}
+
+Mari bertindak: Selesaikan pengalaman pertama GitHub anda\textbf{Daftar satu akaun GitHub, lengkapkan profil peribadi (avatar, pengenalan, bidang teknologi yang diminati).}Cipta satu repositori awam bernama
+
+hello-github
+
+\begin{tcbpractice}{, tandakan "Add a README file".}
+\begin{enumerate}
+  \item Masuk ke repositori, klik butang edit README.md (ikon pensil), tulis satu pengenalan diri dengan Markdown, commit perubahan.
+  \item Dalam bar carian GitHub cari satu kata kunci yang anda minati (contohnya\texttt{python-\allowbreak tutorial}), Star dua projek yang anda suka.
+  \item (Lanjutan) Pasang Git di komputer, klon repositori ke tempatan, ubah README kemudian push kembali ke awan, selesaikan satu aliran kerja "tempatan awan" yang lengkap.
+  \item Bab 24: Analisis Mendalam Kebenaran Root \& Kunci BL\texttt{Bab ini adalah pengembangan mendalam terhadap kandungan Bab 20, sesuai untuk pengguna yang benar-\allowbreak benar ingin memahami mekanisme peringkat bawah telefon, malah mencuba memuat turun sistem.\allowbreak  Sila ambil perhatian, operasi ini mempunyai risiko tertentu, sila berhati-\allowbreak hati.\allowbreak }1. Memahami Bootloader Secara Mendalam
+  \item Bootloader ialah program pertama yang berjalan semasa telefon dimulakan, tugasnya ialah memulakan perkakasan, memuatkan kernel sistem pengoperasian. Boleh anggap Bootloader sebagai "penjaga pintu" telefon.
+\end{enumerate}
+
+\end{tcbpractice}

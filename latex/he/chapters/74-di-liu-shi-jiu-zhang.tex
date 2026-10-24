@@ -1,0 +1,121 @@
+\bookchapter{פרק 69: מדריך עיון מהיר ומקורות}
+
+\chapterintro{הפרק הזה הוא מדריך עיון מהיר שמיועד לשימוש עצמאי. כשאינכם בטוחים בתחביר מסוים או צריכים להחליט מהר — פתחו ישר כאן. מומלץ להתייחס אליו כאל “כרטיסי כיס”: קוד שימושי לעיון מהיר, שאלות נפוצות ומקורות למידה — בלי לדלג על אף עמוד.}
+
+\booksection{כרטיסי עיון מהיר לקוד נפוץ}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{מה רוצים לעשות} & \textbf{הקוד המרכזי} \tabularnewline
+\hline
+מצב פרטי של מסך & @State private var x = ערך התחלתי \tabularnewline
+לוגיקה חוצת מסכים & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+פריסה אנכית / אופקית & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+מרווח גמיש & \texttt{Spacer()} \tabularnewline
+רשימה & List \{ ForEach(מערך) \{ ... \} \} \tabularnewline
+מעבר בין מסכים & \texttt{NavigationStack + NavigationLink} \tabularnewline
+חלונית תחתונה & .sheet(isPresented: \$show) \{ תוכן \} \tabularnewline
+סגירת המסך הנוכחי & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+אחזור נתונים מהרשת & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+ניתוח JSON & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+שמירת הגדרות קטנות & UserDefaults.standard.set(ערך, forKey: "מפתח") \tabularnewline
+שמירת נתונים מובנים & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+התאמה למצב כהה & משתמשים בצבעי המערכת (.primary / Color(.systemGray6)) במקום לקבע צבעים \tabularnewline
+הרצת בדיקות & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}כרטיסי עיון מהיר לפיתוח iOS (מהדורת אוגוסט 2026)\end{center}
+
+\booksection{שאלות נפוצות (FAQ)}
+
+Q1: אין לי מק — האם אפשר בכל זאת ללמוד פיתוח iOS?
+
+אפשר ללמוד את השפה, אבל לא לפתח מסוף לסוף. Swift Playgrounds ב-iPad/iPhone מספיק ללמידת כל החומר של פרק 61; אבל Xcode שמור ל-macOS בלבד, ובסופו של דבר חייבים מק. אם התקציב מוגבל, אפשר בינתיים לשכור מק בענן או לקנות Mac mini יד שנייה כפתרון מעבר, ולהחליט על ההשקעה אחרי שסיימתם ללמוד את השפה.
+
+Q2: כמה עולה ללמוד פיתוח iOS?
+
+שלב הלמידה: 0 (Xcode חינם + Apple ID חינמי לדיבוג על מכשיר אמיתי). שלב ההפצה: חשבון מפתח ב-99 דולר לשנה (כ-700 יואן). מוסיפים את ההשקעה במחשב מק — וזו כל העלות. ביחס לתמורה — גם כלי קטן ב-App Store מוצא משתמשים שמשלמים עבורו — החשבון הזה משתלם.
+
+Q3: מה לומדים קודם — SwiftUI או UIKit?
+
+SwiftUI. ב-2026, פרויקטים חדשים, מדריכים חדשים ומשרות חדשות כולם סובבים סביב SwiftUI, וגם הספר הזה משתמש בו מההתחלה ועד הסוף. UIKit הוא הפריימוורק מהדור הקודם, עדיין נפוץ בהרבה פרויקטים ישנים — אחרי שתשלטו ב-SwiftUI תשלימו UIKit לפי הצורך (יש תיעוד רשמי על אינטראופרביליות), ותסתדרו מהר. רק אל תהפכו את הסדר.
+
+Q4: קל למצוא עבודה בפיתוח iOS?
+
+המצב ב-2026: על משרות ג׳וניור שדורשות רק “לצייר ממשקים” התחרות קשה, אבל מפתחים ש“שולטים ב-Swift + SwiftUI + יש להם אפליקציה בחנות” עדיין מבוקשים מאוד. השכר החציוני במשרות iOS נמצא באופן קבוע בראש ערימת הטכנולוגיות. בשלב הלמידה, קורות החיים הכי טובים שלכם הם האפליקציה שבניתם בעצמכם ושיושבת בחנות.
+
+Q5: האפליקציה נדחתה בביקורת — מה עושים?
+
+אל תיבהלו, זה נורמלי לגמרי — הסיכוי שהגשה ראשונה תידחה לא נמוך. סיבות הדחייה של אפל בדרך כלל מנוסחות במפורש מאוד (איזה מסך, איזה כלל); מתקנים סעיף-סעיף, עונים עם הסבר ב-App Store Connect ומגישים מחדש. שלוש הסיבות הנפוצות לדחייה: לא ברור למה מיועדת ההרשאה, באגים בממשק, ואי-התאמה בין המטא-דאטה (צילומי מסך/תיאור) למוצר האמיתי. בדיקה עצמית מראש של שלושת הסעיפים חוסכת סבב המתנה שלם.
+
+\booksection{קיצורי מקלדת נפוצים ב-Xcode}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{פעולה} & \textbf{קיצור} \tabularnewline
+\hline
+הרצה / בדיקות & CmdR / CmdU \tabularnewline
+פתיחת התצוגה המקדימה בבד & OptionCmd \tabularnewline
+פתיחת קובץ במהירות & CmdO \tabularnewline
+חיפוש בכל הפרויקט & CmdF \tabularnewline
+עיצוב הזחות & CtrlI \tabularnewline
+הערה / ביטול הערה & Cmd/ \tabularnewline
+ניקוי מטמון הבנייה & CmdK \tabularnewline
+מעבר להגדרה & Cmd + לחיצה \tabularnewline
+שינוי שם (בכל הפרויקט, בבטחה) & לחיצה ימנית Refactor Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}קיצורי מקלדת נפוצים ב-Xcode\end{center}
+
+\begin{tcbinfo}{טיפ: "שדים" בקומפילציה? קודם נקו את המטמון}
+“אתמול זה רץ והיום פתאום לא” — בשישה או שבעה מתוך עשרה מקרים כאלה האשמה היא מטמון בנייה משובש. CmdK לניקוי ואז בנייה מחדש מרפא את רוב התופעות העל-טבעיות. עדיין לא עוזר? הפעילו מחדש את Xcode (וגם את המק), ואם גם זה לא עוזר — “מחקו את תיקיית DerivedData”. זהו שילוב ההצלה האולטימטיבי שמסופר מפה לאוזן בקהילת מפתחי ה-iOS.
+
+\end{tcbinfo}
+
+\booksection{מקורות למידה מומלצים}
+
+\booksection{מקורות למידה מומלצים}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{סוג} & \textbf{מקור} & \textbf{למה מומלץ} \tabularnewline
+\hline
+רשמי & developer.apple.com & התיעוד הרשמי של אפל — בתוכו מדריכי SwiftUI/Swift, הסמכות מספר אחת \tabularnewline
+רשמי & ה-SwiftUI Tutorials של אפל & קורס רשמי צעד אחר צעד, ידידותיות מקסימלית למתחילים \tabularnewline
+רשמי & האתר הרשמי של Swift (swift.org) & תיעוד רשמי של השפה וסביבת ניסוי מקוונת \tabularnewline
+קהילה & Hacking with Swift & ספריית המדריכים החינמית של Paul Hudson, מוכרת באיכות עלית \tabularnewline
+קהילה & Stack Overflow (התג swiftui) & התחנה הראשונה לקבלת עזרה בשגיאות \tabularnewline
+וידאו & ערוץ Apple Developer הרשמי (סרטוני WWDC) & ההסבר הסמכותי על הטכנולוגיות החדשות מדי שנה \tabularnewline
+עיצוב & מדריך ממשק האדם של אפל (HIG) & ספר הקודש הרשמי לממשקים ב"טעם של אפל" \tabularnewline
+נלווה & החלק השביעי "פרקטיקת תכנות בעזרת AI" (פרקים 37–47) & המתודולוגיה המלאה לפיתוח iOS בסיוע AI \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}רשימת מקורות למידה לפיתוח iOS (אוגוסט 2026)\end{center}
+
+\booksection{סיכום: מהאפליקציה הראשונה ועד האפליקציה מספר N}
+
+אם נסתכל אחורה: התחלתם מ“לא יודעים מה זה SwiftUI”, עברתם התקנת Xcode, למדתם Swift, ציירתם ממשקים עם SwiftUI, חיברתם לאפליקציה מסד נתונים ורשת, והגעתם לבדיקות, אריזה ועלייה לחנות — בדרך הזאת כבר סיימתם את הקטע הקשה ביותר של המסע מאפס לאחת.
+
+עולם הטכנולוגיה משתנה במהירות: פריימוורקים מתעדכנים, כלים מתחלפים, ו-AI לוקח על עצמו יותר ויותר מהעבודה “על המקלדת”. אבל דבר אחד לא מתיישן: היכולת שלכם לפרק רעיון מעורפל לשלבים ברורים ולממש אותו צעד אחר צעד. הכלים הם המגבר, החשיבה היא היסודות. מגבר אפשר להחליף; יסודות לא זזים.
+
+אתה כבר לא רק "מי שיודע להפעיל טלפון". אתה יכול להפוך רעיונות שבראשך לאפליקציות שרצות באמת על מאות מיליוני iPhone. מהיום, צור במקלדת – זו הרומנטיקה של מפתחי ה-iOS.
+
+\booksection{רשימת מקורות}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

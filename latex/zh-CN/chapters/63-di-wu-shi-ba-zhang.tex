@@ -1,0 +1,115 @@
+\bookchapter{第五十八章：速查手册与资源}
+
+\chapterintro{本章是一份可以独立使用的速查手册。当你记不清某个写法或需要快速决策时，直接翻到这里。建议把它当成“口袋卡片”：常用代码速查、常见问题、学习资源，一页不落。}
+
+\booksection{一、常用代码速查卡}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{要做什么} & \textbf{关键代码} \tabularnewline
+\hline
+记住一个可变状态 & \texttt{var x by remember \{ mutableStateOf(初值) \}} \tabularnewline
+转屏不丢状态 & \texttt{rememberSaveable \{ mutableStateOf(初值) \}} \tabularnewline
+竖排/横排布局 & \texttt{Column \{ \}}/\texttt{Row \{ \}} \tabularnewline
+懒加载列表 & \texttt{LazyColumn \{ items(列表) \{ .\allowbreak .\allowbreak .\allowbreak  \} \}} \tabularnewline
+页面跳转 & \texttt{navController.\allowbreak navigate("路由")} \tabularnewline
+协程里干等活儿 & \texttt{viewModelScope.\allowbreak launch \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+观察数据流 & \texttt{val list by flow.\allowbreak collectAsState()} \tabularnewline
+存小配置 & \texttt{context.\allowbreak dataStore.\allowbreak edit \{ it[KEY] = 值 \}} \tabularnewline
+存结构化数据 & Room 三件套：@Entity / @Dao / @Database \tabularnewline
+联网取数据 & Retrofit 接口 + suspend 函数 \tabularnewline
+发通知 & NotificationChannel + NotificationCompat.Builder \tabularnewline
+打日志 & \texttt{Log.\allowbreak d("TAG", "message")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}安卓开发速查卡（2026 年 8 月版）\end{center}
+
+\booksection{二、常见问题 FAQ}
+
+\textbf{Q1：我完全不会编程，学安卓开发要多久？}
+
+按本书路径走：第 1-2 周装环境、学 Kotlin 基础；第 3-4 周学 Compose 做出界面；第 5-6 周完成记账本项目；第 7-8 周做完天气项目。\textbf{两个月，从零到能独立做小 App}。前提是每天投入 1-2 小时，且动手敲代码而不是只看书。
+
+\textbf{Q2：Java 还要学吗？}
+
+不用。新项目、新教程、新岗位基本都以 Kotlin 为准。只在“维护十年老项目”时才会遇到大量 Java。学完 Kotlin 后如果工作需要，再补 Java 会很快——两者底层是同一个虚拟机生态。
+
+\textbf{Q3：模拟器还是真机？}
+
+开发调试用模拟器方便（快照、多机型），但\textbf{验收必须过真机}——触感、性能、真网络、传感器，模拟器替代不了。条件允许，买一台中端真机当测试机，是最划算的投资。
+
+\textbf{Q4：安卓开发好找工作吗？}
+
+2026 年的行情：纯“会写界面”的初级岗位竞争激烈，但“懂 Kotlin + 会架构 + 有上线作品”的开发者依然抢手。学习期的你，\textbf{最好的简历就是商店里那个自己做的 App}。
+
+\textbf{Q5：遇到报错卡住了怎么办？}
+
+黄金三步：(1) 把报错第一行原样搜 StackOverflow/搜索引擎；(2) 查官方文档对应页面；(3) 还不行，就把“期望行为 + 实际现象 + 报错全文 + 相关代码”打包发给 AI 或社区提问。绝大多数问题，第一步就解决了。
+
+\booksection{三、推荐学习资源}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{类型} & \textbf{资源} & \textbf{推荐理由} \tabularnewline
+\hline
+官方 & developer.android.com & 安卓官方文档，Compose/Kotlin 教程都在里面，第一权威 \tabularnewline
+官方 & Kotlin 官网 (kotlinlang.org) & 语言官方文档 + 在线演练场 \tabularnewline
+官方 & Google Codelabs & 手把手的分步实验课，新手友好度满分 \tabularnewline
+社区 & Stack Overflow (android 标签) & 报错求救第一站 \tabularnewline
+社区 & 掘金 / CSDN 安卓专区 & 中文实战文章多，注意甄别新旧（先看日期） \tabularnewline
+视频 & Google Developers 官方频道 & 每年的开发者大会新技术讲解 \tabularnewline
+配套 & 第七篇《AI编程实战篇》（第37-47章） & 用 AI 辅助安卓开发的完整心法 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}安卓开发学习资源清单（2026 年 8 月）\end{center}
+
+\booksection{四、Gradle 常用命令速查}
+
+平时点按钮就够，但命令行有时更高效（尤其是配合 AI 工具或 CI 流水线时）：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{命令} & \textbf{作用} \tabularnewline
+\hline
+\texttt{.\allowbreak /\allowbreak gradlew assembleDebug} & 打一个调试版 APK（Windows 把 ./ 去掉） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleRelease} & 打发布版（需配好签名） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew test} & 跑全部单元测试 \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew lint} & 静态检查：找出潜在 bug 和不规范写法 \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew clean} & 清空构建产物（"重启大法"的编译版） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew :app: dependencies} & 查看依赖树（排查版本冲突神器） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Gradle 常用命令速查\end{center}
+
+\begin{tcbinfo}{小贴士：构建出问题先 clean}
+“昨天还能跑今天就不行”的灵异事件，十有六七是构建缓存错乱。\texttt{.\allowbreak /\allowbreak gradlew clean}之后重新构建，能治愈一大半玄学问题。还不行再重启 Android Studio——这招请配合 File Invalidate Caches 一起服用。
+
+\end{tcbinfo}
+
+\booksection{五、结语：从第一个 App 到第 N 个 App}
+
+回头看，你从“不知道 Activity 是什么”，到装好环境、学会 Kotlin、用 Compose 画出界面、给 App 接上数据库和网络，再到测试、打包、上架——\textbf{这条路上你已经走完了从零到一最难的一段}。
+
+技术的世界变化很快：框架会升级，工具会换代，AI 会接手越来越多“敲键盘”的活。但有一样东西不会过时：\textbf{你把一个模糊的想法，拆解成清晰的步骤，再一步步实现它的能力}。工具是放大器，思路是地基。放大器可以替换，地基不能动摇。
+
+你不再只是"会玩手机的人"。你能把脑海里的想法，变成三亿安卓设备上真实运行的 App。从今天开始，用键盘去创造——这就是安卓开发者的浪漫。
+
+\booksection{参考文献}
+
+\begin{enumerate}
+  \item Android Developers. (2026). Android Developer Guides and Jetpack Compose Documentation. developer.android.com.
+  \item Kotlin Foundation. (2026). Kotlin Language Documentation. kotlinlang.org.
+  \item Android Open Source Project. (2026). Android Platform Version History and API Levels.
+  \item Google Play. (2026). Play Console Help: Publishing and App Signing.
+  \item AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.
+  \item Square. (2026). Retrofit Documentation. github.com/square/retrofit.
+\end{enumerate}

@@ -1,0 +1,194 @@
+\bookchapter{Chapitre 65 : Projet 1 — mon carnet de comptes (version locale)}
+
+\chapterintro{Bienvenue dans ton premier « vrai projet ». Ce carnet de comptes ne va pas sur Internet, mais il a tout d'un grand : enregistrer une écriture, consulter le relevé, faire les statistiques par mois, supprimer et corriger. En l'achevant, tu auras parcouru d'un bout à l'autre le cycle complet « données logique interface ». Ne te hâte pas pour copier le code — réfléchis d'abord, agis ensuite : c'est notre principe de toujours.}
+
+\booksection{Réfléchir aux besoins : commencer par cinq questions}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Élément} & \textbf{Réponse} \tabularnewline
+\hline
+Who (pour qui ?) & Pour soi ; famille et amis conviennent aussi \tabularnewline
+What (quoi faire ?) & Saisir dépenses et revenus, consulter le relevé, résumés mensuels, statistiques par catégorie \tabularnewline
+Why (pourquoi ?) & S'entraîner + comprendre où passe l'argent \tabularnewline
+How (comment ?) & Swift + SwiftUI + SwiftData + MVVM, 100 \% local, sans backend \tabularnewline
+Constraint (contraintes) & Terminer en une semaine ; iOS 17 au minimum (le seuil de SwiftData) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Les cinq éléments du cahier des charges du carnet de comptes\end{center}
+
+Découpe ensuite en petites étapes « utilisables à chaque pas » : (1) bâtir la couche données SwiftData (savoir stocker une écriture) ; (2) la page liste (voir le relevé) ; (3) la fenêtre de saisie (ajouter une écriture) ; (4) suppression et édition ; (5) la carte de synthèse mensuelle. À chaque étape bouclée, l'App reste « quelque chose d'utilisable ».
+
+\booksection{La couche données : un toit pour les « écritures »}
+
+Définis d'abord à quoi ressemble une écriture — assez de champs, mais sans gloutonnerie :
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+@Model
+class Record {
+    var type: String      // "income" revenu | "expense" dépense
+    var amount: Double    // montant (yuan)
+    var category: String  // catégorie : repas, transport, salaire…
+    var note: String      // note (facultatif)
+    var date: Date        // date de l'opération
+
+    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+        self.type = type
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Astuce : pourquoi un Double pour les montants ?}
+Une App financière rigoureuse emploie Decimal (décimal exact) pour esquiver les erreurs de virgule flottante (le vieux problème 0,1+0,2$\neq$0,3). Pour un projet d'entraînement, Double suffit ; si un jour tu bâtis un vrai produit financier, pense à passer à Decimal ou à un « Int exprimé en centimes » — c'est un piège où d'innombrables aînés sont tombés.
+
+\end{tcbinfo}
+
+\booksection{MVVM : l'interface et la logique « font ménage à part »}
+
+Laisser l'interface manipuler directement la base ? Ça tourne, mais le code de l'interface devient long et pénible. L'architecture MVVM fait régner chacun à son poste : la View (interface) ne fait que dessiner, le ViewModel (centre logique) gère les données, le Model (SwiftData) gère le stockage.
+
+Vue (interface SwiftUI)
+
+ViewModel (centre logique @Observable)
+
+Model (couche de données SwiftData)
+
+\begin{center}\small\color{gray}Figure 4 : la structure à trois étages de MVVM — les données coulent dans un seul sens, aucune couche ne dépasse chez les autres\end{center}
+
+\begin{lstlisting}[language=Swift]
+import Observation
+
+@Observable
+class RecordViewModel {
+    var records: [Record] = []
+    private let context: ModelContext
+
+    init(context: ModelContext) { self.context = context }
+
+    func load() {
+        // filtre avec #Predicate de SwiftData + tri
+        let descriptor = FetchDescriptor<Record>(
+            sortBy: [SortDescriptor(\.date, order: .reverse)]
+        )
+        records = (try? context.fetch(descriptor)) ?? []
+    }
+
+    func add(type: String, amount: Double, category: String, note: String) {
+        let r = Record(type: type, amount: amount, category: category, note: note)
+        context.insert(r)
+        try? context.save()
+        load()                       // recharge ; l'interface se rafraîchit
+    }
+
+    func delete(_ record: Record) {
+        context.delete(record)
+        try? context.save()
+        load()
+    }
+}
+\end{lstlisting}
+
+Dans l'interface, écris @State private var vm = RecordViewModel(...), puis rends la liste directement avec vm.records — dès que les données bougent, l'interface se rafraîchit toute seule.
+
+\booksection{L'interface : page liste + fenêtre de saisie}
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var vm: RecordViewModel
+    @State private var showAdd = false
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section("Solde du mois") {          // carte de synthèse
+                    SummaryRow(records: vm.records)
+                }
+                Section("Transactions") {
+                    ForEach(vm.records) { r in
+                        RecordRow(record: r)
+                    }
+                    .onDelete { idx in
+                        idx.forEach { vm.delete(vm.records[$0]) }
+                    }
+                }
+            }
+            .navigationTitle("Mon registre de dépenses")
+            .toolbar {
+                Button { showAdd = true } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView(vm: vm)          // formulaire d'ajout
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Points clés de la fenêtre de saisie : pour le champ du montant, clavier .keyboardType(.decimalPad) (clavier numérique) ; dépense/revenu via un contrôle segmenté (Picker) ; catégorie choisie dans un menu ; au tap sur « Enregistrer », appelle vm.add(...) puis dismiss() pour refermer la fenêtre.
+
+\begin{tcbwarn}{Attention : ne fais pas l'économie de la validation des saisies}
+Le champ du montant doit impérativement être validé : valeurs vides, négatives, saisies illégales du genre “abc” doivent être barrées (teste avec Double(text), qui renvoie nil en cas d'échec). Une des causes les plus banales de plantage d'une App, c'est de « croire que ce que l'utilisateur tape est un enfant sage ». Retiens : tout ce que l'utilisateur saisit doit être inspecté comme un ennemi.
+
+\end{tcbwarn}
+
+\booksection{Éditer, supprimer et résumer}
+
+\begin{itemize}
+  \item Suppression : .onDelete de List pour glisser vers la gauche et effacer + fenêtre de confirmation (la suppression par mégarde est ce que les utilisateurs d'Apps de comptes détestent le plus au monde) ;
+  \item Édition : taper une ligne ouvre la fenêtre d'édition préremplie avec les valeurs d'origine (corriger un mot épargne la ressaisie complète) ;
+  \item Synthèse : calcule « revenus / dépenses / solde du mois » avec filter + reduce et présente-les dans une carte en haut :
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
+    let cal = Calendar.current
+    let monthRecords = records.filter {
+        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+    }
+    let income = monthRecords
+        .filter { $0.type == "income" }
+        .reduce(0) { $0 + $1.amount }
+    let expense = monthRecords
+        .filter { $0.type == "expense" }
+        .reduce(0) { $0 + $1.amount }
+    return (income, expense)
+}
+\end{lstlisting}
+
+\booksection{La recette : trois niveaux de contrôle + deux défis pour aller plus loin}
+
+Projet fini ? Passe la recette sur trois niveaux « fonctionnel limites architecture » : peut-on enregistrer, supprimer, les données survivent-elles au redémarrage de l'App (fonctionnel) ; l'App plante-t-elle si on saisit 0 ou un montant négatif (limites) ; l'interface et les données sont-elles bien séparées, les champs sont-ils codés en dur (architecture).
+
+Une fois la recette de la version de base franchie, offre-toi deux « plats plus relevés » :
+
+\begin{enumerate}
+  \item Statistiques par catégorie : ajoute un onglet « Stats » et dessine les dépenses par catégorie en camembert / histogramme avec Swift Charts — la bibliothèque de graphiques officielle d'Apple produit un graphique en quelques lignes ;
+  \item Synchronisation iCloud : activer la synchro iCloud de SwiftData demande à peine quelques réglages — le carnet se synchronise tout seul entre iPhone/iPad, et prend d'un coup des « allures haut de gamme ».
+\end{enumerate}
+
+\begin{tcbpractice}{À toi de jouer : achève-le cette semaine}
+Avance dans l'ordre « couche données ViewModel page liste fenêtre de saisie carte de synthèse », une étape par jour. Si tu restes bloqué, donne l'erreur telle quelle à un moteur de recherche ou à une IA (tu te souviens de la septième partie, « Pratique de la programmation avec l'IA » ? En décrivant un problème, précise « comportement attendu, comportement observé, étapes pour reproduire »). Une fois terminé, tiens tes comptes avec pendant une semaine — se servir d'une App faite de ses mains procure un élan de fierté qui te poussera à continuer.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Résumé du chapitre}
+\begin{itemize}
+  \item Cinq éléments de besoin découpés en petites étapes « utilisables à chaque pas », puis on se lance
+  \item Couche données : modèle @Model + conteneur modelContainer + requêtes FetchDescriptor
+  \item Répartition MVVM : la View dessine, le ViewModel @Observable tient la logique, SwiftData tient le stockage
+  \item Interface : List + Section + toolbar + fenêtre de saisie en sheet
+  \item Recette en trois niveaux (fonctionnel/limites/architecture) + défis avancés (Swift Charts, synchro iCloud)
+\end{itemize}
+
+\end{tcbsummary}

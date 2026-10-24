@@ -1,0 +1,181 @@
+\bookchapter{الفصل 63: العروض والحالة والتنقل}
+
+\chapterintro{أصبحت تعرف صناعة التطبيقات الصغيرة ذات الصفحة الواحدة. يعالج هذا الفصل مسألتَي «النمو»: كيف تتنقل بين عدة صفحات (التنقل)، وكيف تتدفق البيانات بين الصفحات (إدارة الحالة). وبإتمام هذا الفصل ستستطيع بناء الهيكل الكلاسيكي لتطبيق متعدد الصفحات: «قائمة تفاصيل تحرير».}
+
+\booksection{أولًا: «المشهد الكامل» لتدفق البيانات في إدارة الحالة}
+
+أدوات الحالة في SwiftUI لا تقتصر على @State. انظر أولًا إلى هذه الصورة الشاملة لتفهم «متى تستخدم أيّها»:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{الأداة} & \textbf{ماذا تدير} & \textbf{من يستخدمها} & \textbf{السيناريو النموذجي} \tabularnewline
+\hline
+@State & حالة مؤقتة خاصة بالصفحة & العرض الحالي & العدادات ونص حقول الإدخال \tabularnewline
+@Binding & استعارة حالة من جهة أخرى & عرض فرعي يعدل عرضًا أبًا & المكونات المخصصة \tabularnewline
+@StateObject / @Observable & منطق مشترك بين الصفحات & نموذج العرض (ViewModel) & تحميل البيانات ومنطق الأعمال \tabularnewline
+@EnvironmentObject / .environment & حالة مشتركة عالميًا & التطبيق بأكمله & حالة تسجيل دخول المستخدم وإعدادات السمة \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}منظور شامل لأدوات الحالة في SwiftUI (في عام 2026 صار @Observable هو السائد)\end{center}
+
+\begin{lstlisting}[language=Swift]
+// الأسلوب الحديث في iOS 17+: ماكرو @Observable (موصى به للمشاريع الجديدة)
+import Observation
+
+@Observable
+class CounterModel {                 // نموذج العرض
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // يحتفظ بالنموذج
+
+    var body: some View {
+        VStack {
+            Text("ضغطت \(model.count) مرات")
+            Button("اضغط هنا") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+نصيحة صريحة بلا مجاملة للمبتدئين: ما هو خاص بالصفحة فاستخدم له @State، وما هو عابر للصفحات أو ذا منطق فاستخدم له صنف @Observable. أما @StateObject/@ObservableObject في الدروس القديمة فهو أسلوب الجيل السابق؛ يكفي أن تقرأه وتفهمه، وفي الكود الجديد اتبع ما مرّ أعلاه.
+
+\booksection{ثانيًا: NavigationStack — «المكدس» الذي ينقل بين الصفحات}
+
+منذ iOS 16 يُستخدم NavigationStack للتنقل بين عدة صفحات — فهو كرصة أطباق: تدفع طبقًا فدخله، وعند العودة تُسحب الأطباق واحدًا تلو الآخر:
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("دفتر أحمد") {
+                    DetailView(name: "دفتر أحمد")   // الشاشة الهدف
+                }
+                NavigationLink("دفتر سارة") {
+                    DetailView(name: "دفتر سارة")
+                }
+            }
+            .navigationTitle("قائمة الدفاتر")   // عنوان كبير في الأعلى
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("تفاصيل \(name)")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+NavigationLink هو «رابط تنقل قابل للنقر»؛ وnavigationTitle يولد تلقائيًا عنوان شريط التنقل وزر الرجوع. وعندما تحتاج إلى تنقل برمجي (كالعودة تلقائيًا بعد الضغط على «حفظ»)، استخدم @Environment(\textbackslash{}.dismiss) لإغلاق الصفحة الحالية — بهاتين الحركتين تكتمل 90\% من احتياجات التنقل.
+
+\booksection{ثالثًا: النوافذ المنبثقة وعلامات التبويب السفلية — sheet وTabView}
+
+إلى جانب «دفع الصفحات» هناك نمطان كلاسيكيان للتفاعل:
+
+\begin{lstlisting}[language=Swift]
+// 1. لوحة تنبثق من الأسفل، نصف شاشة أو كاملة (المفضلة لنماذج الإدخال)
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("تسجيل مصروف") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // شاشة الإدخال المنبثقة
+            }
+    }
+}
+
+// 2. شريط التبويبات السفلي ("الهيكل العظمي" للتطبيق)
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("الدفتر", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("إحصاءات", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("الإعدادات", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{نصيحة: متى تستخدم أيّها؟}
+قاعدة الخبرة: استخدم NavigationStack لدفع الصفحات في المسار الرئيسي (قائمة تفاصيل)، وsheet للنوافذ المنبثقة في العمليات المؤقتة (إضافة وتحرير وتأكيد)، وTabView للأقسام الكبيرة المتوازية (علامات التبويب السفلية). وتوليفة الثلاثة معًا هي هيكل أغلب التطبيقات.
+
+\end{tcbinfo}
+
+\booksection{رابعًا: List — «قائمة الجميع» في iOS}
+
+المكون الأكثر استخدامًا والأكثر «نكهة أبل» في iOS هو List — فهو يأتي بطبيعته بفواصل بين الصفوف وحذف بالسحب وإبراز عند النقر:
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["غداء 25.5", "مترو 6.0", "راتب +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // اسحب لليسار للحذف
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+قائمة + NavigationLink + sheet + TabView — بجمع هذه الأربعة تصبح قادرًا على بناء هيكل تطبيق كامل: «قائمة دفتر الحسابات فتح التفاصيل الضغط على + لإظهار نافذة الإدخال». وهكذا تمامًا بُني مشروع دفتر الحسابات في الفصل التالي.
+
+\begin{tcbpractice}{هيا نجرّب: ابنِ «هيكلًا من ثلاث صفحات»}
+\booksection{خامسًا: دورة حياة التطبيق — المقدمة والخلفية}
+
+كما لدورة حياة Activity في Android، يمر تطبيق iOS أيضًا بحالات «الولادة والمقدمة والخلفية والموت». في SwiftUI تراقب ذلك عبر قيمة البيئة scenePhase:
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("عودة إلى المقدمة: استئناف التحديث")
+            case .inactive:  print("في الانتقال (مكالمة أو لحظة الانتقال إلى الخلفية)")
+            case .background: print("إلى الخلفية: حفظ المسودة")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+الاستخدام النموذجي: حدّث البيانات عند العودة إلى المقدمة، واحفظ المسودة عند الانتقال إلى الخلفية. iOS صارم جدًا في تشغيل الخلفية — فالتطبيق العادي يعلق (يُجمّد) سريعًا بعد دخول الخلفية، فلا تتمنى إنجاز أعمال ثقيلة سرًا في الخلفية؛ وإن احتجت مهامًا مجدولة فاستخدم الإشعارات المحلية كما في الفصل 68، لا «الإقامة الدائمة في الخلفية».
+
+اصنع نسخة ببيانات وهمية من هيكل دفتر الحسابات: TabView بثلاث علامات (الدفتر / الإحصاءات / الإعدادات) صفحة الدفتر تعرض بيانات وهمية بـ List، والنقر على صف ينقل إلى التفاصيل (NavigationStack) زر «+» في الزاوية العلوية يفتح نافذة إدخال sheet. بلا تخزين وبلا اتصال بالشبكة، تدريب صرف على الهيكل — وإذا أتقنت هذا الهيكل فملء البيانات الحقيقية فيه في الفصل 65 سيأتي تلقائيًا.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{خلاصة الفصل}
+\begin{itemize}
+  \item أدوات الحالة الأربع: @State (خاصة بالصفحة) و@Binding (استعارة) و@Observable (منطق) و.environment (عالمي)
+  \item في المشاريع الجديدة اكتب نماذج العرض بماكرو @Observable؛ أما @ObservableObject في الدروس القديمة فيكفي أن تقرأه
+  \item NavigationStack لدفع الصفحات؛ و@Environment(\textbackslash{}.dismiss) للعودة برمجيًا
+  \item المسار الرئيسي بدفع الصفحات، والعمليات المؤقتة بنافذة sheet، والأقسام الكبيرة المتوازية بـ TabView
+  \item List هي «قائمة الجميع»: فواصل وحذف بالسحب جاهزة فور فتح العلبة
+\end{itemize}
+
+\end{tcbsummary}

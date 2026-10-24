@@ -1,0 +1,57 @@
+\bookchapter{Capítulo 46: El camino de avance — de usuario a arquitecto}
+
+\chapterintro{Cuando domines la metodología de los capítulos 37 a 44 y seas capaz de llevar proyectos con la IA con soltura, ¿qué viene después? Este capítulo explora el camino de avance de “usuario de herramientas de IA” a “arquitecto de sistemas con IA”. A esta altura, la preocupación ya no es “cómo conseguir que la IA escriba buen código”, sino “cómo integrar mejor la IA en todo el flujo de desarrollo”.}
+
+\booksection{I. El protocolo MCP y la extensión de herramientas}
+
+MCP (Model Context Protocol) es un protocolo abierto surgido en 2025 y popularizado en 2026 que define un estándar de comunicación entre los modelos de IA y las herramientas externas. En pocas palabras, MCP permite a la IA “usar herramientas”: ya no solo genera código, sino que también puede ejecutar comandos, consultar bases de datos, llamar a APIs y operar el sistema de archivos.
+
+Antes de MCP, cada herramienta de IA tenía su propia forma de integrar herramientas, incompatibles entre sí. La llegada de MCP significa que una herramienta conforme al estándar puede ser usada por cualquier herramienta de IA compatible con MCP. Eso reduce muchísimo el coste de integrar herramientas y amplía la frontera de la IA, de “generar texto” a “ejecutar acciones”.
+
+Para el usuario avanzado, el valor de MCP está en que puedes construir capacidades de herramienta a medida para la IA. Por ejemplo, si tu equipo tiene un sistema de despliegue interno, puedes escribir una herramienta MCP para que la IA llame directamente a ese sistema, sin cambiar manualmente a la terminal. Esa capacidad de “IA que llama a herramientas” es la infraestructura de la ingeniería agéntica (Agentic Engineering).
+
+\booksection{II. Flujos de trabajo personalizados y Skills}
+
+Cuando repitas cierto flujo fijo de programación con IA una y otra vez, puedes solidificarlo como “flujo de trabajo personalizado” o “Skill”. Por ejemplo, tu equipo puede tener un proceso estándar de revisión de código: primero seguridad, después rendimiento y por último mantenibilidad. Puedes escribir ese proceso como una Skill para que la IA lo siga automáticamente en cada revisión de código.
+
+El valor central de los flujos personalizados es la “consistencia”: garantizan que cada ejecución siga el mismo estándar, sin desviarse por la longitud de la conversación o por un contexto distinto. Esto pesa especialmente en el trabajo en equipo: si cada miembro usa el mismo flujo, el estilo del código y los estándares de calidad tienden a igualarse.
+
+El método para construir flujos personalizados cambia según la herramienta. Cursor admite Rules y Custom Instructions; Claude Code, comandos personalizados; Replit, Runme. La idea de fondo es la misma: “codificar” tus mejores prácticas en plantillas de instrucciones que la IA pueda ejecutar.
+
+\booksection{III. El modo de colaboración multiagente}
+
+Hacia 2026, la colaboración multiagente se volvió un tema candente. Su idea central: no encargar la tarea a una sola IA, sino hacer colaborar varias IA con repartos distintos. Por ejemplo, una IA escribe el código, otra escribe las pruebas y otra revisa el código: cada una atiende lo suyo y se revisan entre ellas.
+
+Las ventajas de la colaboración multiagente están en el “reparto” y la “verificación cruzada”: cada agente se concentra en su terreno y produce más calidad; los chequeos cruzados entre agentes destapan problemas que uno podría pasar por alto. Pero la desventaja también es clara: coste de coordinación alto, mucha carga de comunicación y una depuración más compleja.
+
+\begin{tcbinfo}{Consejo: incluso en solitario puedes jugar al "multiagente"}
+Si eres desarrollador individual, no necesitas montar un sistema multiagente complejo: puedes “representar” distintos roles para simular la colaboración multiagente. Por ejemplo: primero, en una conversación, pides a la IA el código de la función; después abres una conversación nueva (con el contexto de CLAUDE.md) y le pides que “como revisor de código, revise este código”; por último, abres otra conversación y le pides que “corrija el código según las observaciones de la revisión”. Con este “una persona, varios papeles” obtienes la mayor parte de los beneficios de la colaboración multiagente, sin una infraestructura complicada.
+
+\end{tcbinfo}
+
+\booksection{IV. El camino del aprendizaje continuo}
+
+La programación con IA es un terreno que cambia a toda velocidad. La mejor práctica de hoy quizá haya que actualizarla mañana. Estas son algunas recomendaciones para seguir aprendiendo:
+
+Primero, ve a la fuente y no a las lecturas de segunda mano. Los tuits originales de Andrej Karpathy, el CLAUDE.md, la documentación oficial de Anthropic y OpenAI, los registros de cambios de cada herramienta: eso es información de primera mano. Los artículos y tutoriales de la comunidad son interpretaciones y resúmenes de esa información: tienen valor, pero pueden deformarla. Haz del hábito de leer las fuentes originales.
+
+Segundo, aprende practicando. No “primero aprender y después hacer”, sino “aprender mientras haces”. Cada vez que se presente un tipo de problema nuevo (por ejemplo, tu primera subida de archivos o tu primera integración con una API de terceros), tómalo como ocasión para aprender lo relacionado. Aprender en la práctica rinde muchísimo más que la teoría fuera de contexto.
+
+Tercero, conserva el olfato para las herramientas sin perseguir novedades en exceso. Cada mes o dos, dedica media jornada a conocer las herramientas y tendencias más recientes, pero no cambies de herramienta cada vez que aparece una nueva. El criterio es: ¿la nueva herramienta mejora de forma notable alguno de tus cuellos de botella? Si no, tu combinación actual basta.
+
+Cuarto, construye tu base de conocimiento personal. Registra las conversaciones con las que resolviste cada problema complejo, la lección de cada tropiezo y cada método que funcionó. No hace falta publicarlo: son tus “apuntes de metodología” personales. Con el tiempo se convertirán en tu activo más valioso.
+
+\begin{tcbpractice}{Manos a la obra: abre un "cuaderno de tropiezos"}
+Crea hoy mismo un documento (vale una app de notas o un archivo .md) y escribe las tres ideas de programación con IA que más quieras recordar hasta ahora, aunque sea “recuerda pensar bien antes de preguntar”. A partir de ahí, cada tropiezo y cada truco nuevo que aprendas, añade una entrada. Cuando lo relees dentro de medio año, te agradecerás el gesto.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item MCP es el estándar de comunicación entre la IA y las herramientas: permite a la IA ejecutar comandos, consultar bases de datos y llamar a APIs
+  \item El valor central de los flujos personalizados y las Skills es la "consistencia": codificar las mejores prácticas en plantillas de instrucciones
+  \item Multiagente = reparto + verificación cruzada; el desarrollador individual puede simularlo con "una persona, varios papeles"
+  \item Cuatro claves del aprendizaje continuo: leer las fuentes, aprender haciendo, no perseguir novedades en exceso y crear una base de conocimiento personal
+\end{itemize}
+
+\end{tcbsummary}

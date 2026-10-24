@@ -1,0 +1,195 @@
+\bookchapter{פרק 50: Kotlin במהירות — השפה הראשונה של פיתוח אנדרואיד}
+
+\chapterintro{בפרק זה נלמד את השפה כהלכה. אל תילחצו — Kotlin ידועה כ“ידידותית למתחילים”, ואין צורך לשנן ספר תחביר: שליטה ב-20\% מהתחביר מספיקה כדי להבין ולכתוב 80\% מהקוד היומיומי. את השאר תחפשו תוך כדי עבודה על הפרויקט. זכרו את עקרון הלמידה שלנו: להבין > לשנן, להשתמש > לשלוט.}
+
+\booksection{א. משתנים וטיפוסים: לתת שם לנתונים}
+
+תוכנית היא בעצם “נתונים + לוגיקה”. משתנה הוא שם שנותנים לנתונים כדי לשמור אותם. ב-Kotlin יש שתי דרכי הצהרה:
+
+\begin{lstlisting}[language=Kotlin]
+val name = "דני"        // val: משתנה לקריאה בלבד (מומלץ כברירת מחדל)
+var age = 18             // var: משתנה שאפשר לשנות (אפשר לשנותו אחר כך)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var אפשר לשנות
+// name = "נועה"         // <i class="fas fa-times-circle mr-1"></i> val לא ניתן לשינוי, הקומפילציה תדווח שגיאה
+
+val score: Int = 100     // אפשר גם לציין את הטיפוס במפורש
+val pi = 3.14            // גם בלי לכתוב אותו הוא יוסק אוטומטית
+\end{lstlisting}
+
+הטיפוסים הנפוצים הם בודדים — טבלה אחת וזוכרים:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{טיפוס} & \textbf{מה שומרים} & \textbf{דוגמה} \tabularnewline
+\hline
+Int & מספר שלם & 42 \tabularnewline
+Double & מספר עשרוני & 3.14 \tabularnewline
+String & טקסט & "שלום" \tabularnewline
+Boolean & אמת/שקר & true / false \tabularnewline
+List< T> & קבוצת נתונים & listOf(1, 2, 3) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}הטיפוסים הבסיסיים הנפוצים ב-Kotlin\end{center}
+
+\begin{tcbinfo}{טיפ: עקרון val קודם כל}
+חוק ברזל בקהילת Kotlin: כברירת מחדל משתמשים ב-val, ו-var רק כשבאמת צריך. אם תשתמשו ב-var במקום שבו אפשר val, ה-IDE יזהיר אתכם בצהוב. ההרגל הזה חוסך מכם קטגוריה שלמה של bug-ים של “משתנה שהשתנה בטעות” — ככל שהקוד משתנה פחות, כך קל יותר להתחקות אחריו.
+
+\end{tcbinfo}
+
+\booksection{ב. פונקציות: לארוז לוגיקה כ“כפתור”}
+
+פונקציה היא מקטע לוגיקה בעל שם, כמו כפתור על שלט רחוק — לוחצים עליו (קוראים לו) והוא מריץ רצף פעולות. ב-Kotlin מצהירים עליה במילה fun:
+
+\begin{lstlisting}[language=Kotlin]
+fun greet(name: String): String {
+    return "שלום, $name!"     // הסימן $ מכניס את המשתנה למחרוזת
+}
+
+println(greet("דני"))        // פלט: שלום דני!
+
+// פונקציות של שורה אחת אפשר לכתוב כביטוי
+fun add(a: Int, b: Int) = a + b
+
+println(add(3, 5))            // פלט: 8
+\end{lstlisting}
+
+כמה נקודות חשובות: הפרמטרים נכתבים בתוך הסוגריים (שם קודם, טיפוס אחרי, מופרדים בנקודתיים); טיפוס ההחזרה נכתב אחרי הסוגריים; ושילוב משתנים במחרוזות באמצעות \$שם המשתנה הוא היתרון המובהק של Kotlin — אין צורך לשרשר “מחרוזת + משתנה” כמו ב-Java.
+
+\booksection{ג. תנאים ולולאות: לתת לתוכנית “לחשוב”}
+
+ה“אינטליגנציה” של תוכנית נובעת משני דברים: יכולת לשפוט (if/when) ויכולת לחזור (for/while).
+
+\begin{lstlisting}[language=Kotlin]
+// תנאי: if / else
+val age = 17
+if (age >= 18) {
+    println("מבוגר")
+} else {
+    println("קטין")
+}
+
+// מספר ענפים: when (פי מאה יותר טוב מ-switch)
+val score = 85
+val level = when {
+    score >= 90 -> "מצוין"
+    score >= 60 -> "עובר"
+    else -> "המשך כך!"
+}
+
+// חזרה: לולאת for
+val fruits = listOf("תפוח", "בננה", "תפוז")
+for (fruit in fruits) {
+    println("אני אוהב לאכול $fruit")
+}
+\end{lstlisting}
+
+when היא הדרך הנפוצה ביותר ב-Kotlin לענפים מרובים; בפיתוח אנדרואיד תשתמשו בה מדי יום (למשל להציג ממשק שונה לפי מצב).
+
+\booksection{ד. בטיחות ריק: “קמיע ההישרדות” של Kotlin}
+
+ה-bug המפורסם ביותר מתקופת Java נקרא NullPointerException (חריגת מצביע ריק) — התוכנית ניגשת ל“משהו שאין בו כלום” וקורסת מיד. לפי הסטטיסטיקה, הוא ראש טבלת הקריסות באנדרואיד שנה אחר שנה. Kotlin פתרה את זה ברמת השפה: כברירת מחדל ערכי ריק אסורים.
+
+\begin{lstlisting}[language=Kotlin]
+var name: String = "דני"   // טיפוס רגיל: לעולם לא יכול להיות null
+// name = null                // <i class="fas fa-times-circle mr-1"></i> שגיאת קומפילציה: עוצרת אותך מיד
+
+var nickname: String? = null // מוסיף סימן שאלה: מאפשר null
+nickname = "טומי"
+
+// עם טיפוסים שיכולים להיות null חובה לטפל בבטחה:
+println(nickname?.length)    // קריאה בטוחה: אם null מחזיר null, בלי קריסה
+val len = nickname?.length ?: 0   // אופרטור Elvis: ערך ברירת מחדל כש-null
+println(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{שימו לב: אל תתבלבלו בין ? ו-?}
+String? פירושו “מותר להיות ריק”, ו-a ?: b פירושו “אם a ריק, השתמשו ב-b” (נראה כמו תסרוקת של אלביס, ולכן קרוי אופרטור Elvis). כשמתחילים לכתוב קוד והמהדר מדווח על “שגיאת null”, הסיכוי הגדול ששכחתם לטפל בטיפוס ריק-אפשרי — דווקא השפה מגינה עליכם.
+
+\end{tcbwarn}
+
+\booksection{ה. מחלקות ואובייקטים: התבניות לייצור “חלקים”}
+
+מחלקה היא ה“תבנית” של האובייקט, ואובייקט הוא “המוצר המוגמר” של המחלקה. כל דבר באנדרואיד — מסכים, כפתורים, נתונים — הוא אובייקט. ל-Kotlin יש כלי נפלא בשם data class (מחלקת נתונים), המיועד במיוחד “לאחסן נתונים” — שורה אחת במקום עשרות שורות ב-Java:
+
+\begin{lstlisting}[language=Kotlin]
+// מחלקה רגילה: התבנית
+class Dog(val name: String) {
+    fun bark() = println("$name: האו האו!")
+}
+
+val dog = Dog("Rex")      // יוצר אובייקט
+dog.bark()                 // Rex: האו האו!
+
+// data class: קופסת הנתונים (כולל equals/copy וכו' אוטומטית)
+data class User(val id: Int, val name: String, val email: String)
+
+val me = User(1, "דני", "zhangsan@example.com")
+val twin = me.copy(name = "איתי")   // מעתיק ומשנה שדה אחד
+\end{lstlisting}
+
+כשתבנו בעתיד פנקס הוצאות, כל רשומה תהיה data class: data class Record(val amount: Double, val category: String, val date: String). מבינים? כבר עכשיו אתם מסוגלים לכתוב מבנה קוד של פרויקט אמיתי.
+
+\booksection{ו. lambda ופונקציות מסדר גבוה: “סוכר תחבירי” של Kotlin}
+
+בקוד אנדרואיד תראו מדי יום את ה-\{ ... \} הזה — “פונקציה חסרת שם”, הנקראת lambda (פונקציה אנונימית). ה-onClick = \{ count++ \} של ה-Button הוא lambda — “מה קורה אחרי הלחיצה” נארז לחבילה אחת ונמסר לכפתור.
+
+\begin{lstlisting}[language=Kotlin]
+// הדרך הרגילה: להגדיר פונקציה עם שם ואז להעביר אותה
+fun double(x: Int) = x * 2
+val result = listOf(1, 2, 3).map(::double)
+
+// דרך lambda: מוגדרת במקום, קלילה וישירה
+val result2 = listOf(1, 2, 3).map { it * 2 }   // it = האיבר הנוכחי
+
+// סינון + המרה בשרשרת (נפוץ מאוד בפרויקטים אמיתיים)
+val bills = listOf(12.5, 88.0, 5.0, 200.0)
+val bigBills = bills.filter { it > 50 }.sorted()
+// [88.0, 200.0]——"חשבונות מעל 50, ממוינים"
+\end{lstlisting}
+
+שמרו בזיכרון כמה “קומבינציות אוספים” בתדירות גבוהה: filter (סינון), map (טרנספורמציה), sorted (מיון), sum (סכימה). 90\% מעיבודי הרשימות שלכם בעתיד יהיו שילוב של ארבע הטכניקות האלה. הפילוסופיה של Kotlin: לוגיקה שאפשר לומר במשפט אחד — לא תיכתב בחמישה.
+
+\booksection{ז. כרטיס עיון מהיר לתחביר, למתחילים מאפס}
+
+אל תנסו לשנן את כל התחביר ביום אחד. שמרו את הכרטיס הזה, עיינו בו בזמן כתיבת קוד — בעוד שבועיים זה ייכנס לראש מעצמו:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{מה רוצים לעשות} & \textbf{איך כותבים} \tabularnewline
+\hline
+הגדרת משתנה לקריאה בלבד & \texttt{val x = 1} \tabularnewline
+הגדרת משתנה ניתן לשינוי & \texttt{var x = 1} \tabularnewline
+הגדרת פונקציה & fun שם(פרמטרים): טיפוס החזרה \{ ... \} \tabularnewline
+תנאי & if (תנאי) \{...\} else \{...\} \tabularnewline
+ענפים מרובים & when \{ תנאי -> תוצאה \} \tabularnewline
+מעבר על פריטים & for (x in רשימה) \{ ... \} \tabularnewline
+חיבור מחרוזות & "שלום, \$name" \tabularnewline
+טיפול בערכים ריקים & \texttt{x?.\allowbreak length ?: 0} \tabularnewline
+הגדרת מחלקת נתונים & \texttt{data class X(val a: Int, val b: String)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}כרטיס עיון מהיר לתחביר Kotlin (מהדורת מתחילים)\end{center}
+
+\begin{tcbpractice}{היד על הדופק: שחקו 10 דקות ב-Kotlin בלי להתקין דבר}
+פתחו בדפדפן את play.kotlinlang.org (מגרש המשחקים המקוון הרשמי של Kotlin), הדביקו לשם כל מקטע קוד מהפרק הזה והריצו, שנו מספרים וטקסטים וצפו איך הפלט משתנה. ה-10 דקות האלה של “לשחק קודם וללמוד אחר כך” יקלו עליכם פי שניים כשתגיעו לפרק 51.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{סיכום הפרק}
+\begin{itemize}
+  \item עדיף val, ב-var להשתמש בזהירות; טיפוסים יכולים להיגזר אוטומטית, ואפשר גם להצהיר עליהם במפורש אחרי הנקודתיים
+  \item פונקציה = לוגיקה ארוזה; תבניות מחרוזת עם \$ הן היתרון המובהק
+  \item if/when לשיפוט, for ללולאות; when הוא "הרב-גוני" של פיתוח האנדרואיד
+  \item בטיחות הריק היא קמיע ההישרדות של Kotlin: טיפוס רגיל דוחה null; טיפוס ריק-אפשרי מחייב טיפול ב-? / ?:
+  \item data class היא קופסה לנתונים — שדה אחד בכל שורה, בשימוש יומיומי בפרויקטים אמיתיים
+  \item 20\% מהתחביר עושים 80\% מהעבודה: קודם להשתמש, אחר כך לשלוט
+\end{itemize}
+
+\end{tcbsummary}

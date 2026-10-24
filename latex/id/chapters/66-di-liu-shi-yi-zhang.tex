@@ -1,0 +1,155 @@
+\bookchapter{Bab 61: Kilat Mengenal Swift — Bahasa Pertama Pengembangan Apple}
+
+\chapterintro{Di bab ini kita resmi belajar bahasanya. Jangan tegang — Swift terkenal “ramah pemula”, dan kamu tak perlu menghafal buku sintaks: kuasai dulu 20\% sintaksnya, kamu sudah bisa membaca dan menulis 80\% kode sehari-hari. Sisanya dicari sambil mengerjakan proyek. Ingat prinsip belajar kita: pahami > hafalkan, bisa pakai > mahir.}
+
+\booksection{Variabel dan tipe: Memberi nama pada data}
+
+Program adalah “data + logika”. Variabel adalah memberi nama pada data agar tersimpan. Swift mendeklarasikannya dengan let dan var:
+
+\begin{lstlisting}[language=Swift]
+let name = "Zhang San"        // let: konstanta (disarankan jadi default)
+var age = 18             // var: variabel (masih bisa diubah)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var bisa diubah
+// name = "Li Si"         // <i class="fas fa-times-circle mr-1"></i> let tidak bisa diubah, error saat kompilasi
+
+let score: Int = 100     // juga bisa menuliskan tipenya secara eksplisit
+let pi = 3.14            // tidak ditulis pun otomatis terdeteksi
+
+print("Halo, \(name)")   // interpolasi string: backslash + tanda kurung
+\end{lstlisting}
+
+Tipe yang sering dipakai, cukup dihafal dengan satu tabel:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tipe} & \textbf{Menyimpan apa} & \textbf{Contoh} \tabularnewline
+\hline
+Int & Bilangan bulat & 42 \tabularnewline
+Double & Bilangan desimal & 3.14 \tabularnewline
+String & Teks & "Halo" \tabularnewline
+Bool & Benar/salah & true / false \tabularnewline
+{}[Int] (array) & Sekumpulan data & {}[1, 2, 3] \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tipe dasar Swift yang sering dipakai\end{center}
+
+\begin{tcbinfo}{Tips: Prinsip utamakan let}
+Hukum besi komunitas Swift: bawaannya pakai let, var baru kalau memang perlu. Memakai var di tempat yang bisa let akan kena peringatan kuning dari Xcode. Kebiasaan ini menghilangkan satu kelas besar bug “variabel berubah tanpa sengaja” — makin sedikit kode yang bisa berubah, makin mudah ditelusuri.
+
+\end{tcbinfo}
+
+\booksection{Optional: “Jimat anti-crash” milik Swift}
+
+Ini konsep terpenting Swift, tanpa pesaing. Satu kalimat: saat sebuah nilai mungkin “tak ada”, Swift memaksamu menanganinya — menghapus “crash null pointer”, mimpi buruk industri ini, dari level bahasa.
+
+\begin{lstlisting}[language=Swift]
+var name: String = "Zhang San"   // Tipe biasa: sama sekali tidak boleh nil
+// name = nil                // <i class="fas fa-times-circle mr-1"></i> Ditemukan langsung oleh compiler
+
+var nickname: String? = nil  // beri tanda tanya: mengizinkan nil (optional)
+nickname = "San Er"
+
+// Memakai optional wajib "membungkusnya dibuka":
+if let n = nickname {        // if let: membuka dengan aman
+    print("Halo, \(n)")
+} else {
+    print("Belum ada nama panggilan")
+}
+
+let len = nickname?.count ?? 0   // ?? memberi nilai default (nil coalescing)
+print(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{Perhatian: ! adalah "operasi berisiko tinggi"}
+Menulis nickname! di kode (forced unwrap) sama saja berteriak ke compiler “saya jamin ini bukan nil” — begitu tebakanmu salah, App langsung crash. Prinsip masa pemula: sebisa mungkin pakai if let / ??, jangan pakai !. Saat melengkapi kode, Xcode kadang iseng menyisipkan ! sekalian — ingat untuk menghapusnya.
+
+\end{tcbwarn}
+
+\booksection{Fungsi dan closure: Mengemas logika menjadi “tombol”}
+
+Fungsi adalah logika yang punya nama, seperti tombol di remote. Closure adalah “fungsi tanpa nama” yang bisa langsung disodorkan ke pihak lain:
+
+\begin{lstlisting}[language=Swift]
+// Fungsi: nama di depan, parameter dan tipe kembalian di belakang
+func greet(name: String) -> String {
+    return "Halo, \(name)!"
+}
+print(greet(name: "Zhang San"))     // Saat memanggil harus menyebut nama parameter
+
+// Closure: didefinisikan di tempat, ringkas
+let numbers = [1, 2, 3, 4]
+let doubled = numbers.map { $0 * 2 }   // $0 = elemen saat ini
+// [2, 4, 6, 8]
+
+let big = numbers.filter { $0 > 2 }    // Menyaring
+// [3, 4]
+\end{lstlisting}
+
+Di SwiftUI closure ada di mana-mana: kurung kurawal setelah Button(“Tekan aku”) \{ ... \} adalah sebuah closure. Hafalkan baik-baik “kombinasi jurus” koleksi: map, filter, sorted — 90\% pengolahan daftar kelak adalah gabungan ketiganya.
+
+\booksection{Struct dan protokol: Sistem “LEGO”-nya Swift}
+
+Preferensi resmi Swift jelas: utamakan struct (structure), pakai class baru saat butuh pewarisan. Struct adalah “value type” — saat disalin masing-masing jalan sendiri, alami bebas dari satu kelas bug:
+
+\begin{lstlisting}[language=Swift]
+// Struct: kotak penyimpan data
+struct Record {
+    var id = UUID()
+    var amount: Double
+    var category: String
+    var date: Date
+
+    // Struct punya "memberwise initializer" bawaan: langsung bisa dibuat
+}
+let r = Record(amount: 25.5, category: "Makan", date: Date())
+
+// Protocol: kesepakatan "kemampuan apa saja yang wajib dimiliki"
+protocol Identifiable {
+    var id: UUID { get }
+}
+struct Record: Identifiable { ... }   // Mengikuti protocol = berjanji mengimplementasikan tuntutannya
+\end{lstlisting}
+
+Di SwiftUI hampir semuanya struct (View adalah protokol). Belum paham kalimat ini tidak apa-apa — kamu akan bertemu terus di Bab 62; di dunia Swift, peluk dulu struct.
+
+\booksection{Kartu cepat sintaks untuk kamu yang nol dasar}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Ingin melakukan apa} & \textbf{Cara menulis} \tabularnewline
+\hline
+Mendefinisikan konstanta/variabel & \texttt{let x = 1}/\texttt{var x = 1} \tabularnewline
+Interpolasi string & "Halo, \textbackslash{}(name)" \tabularnewline
+Mendefinisikan fungsi & func nama(parameter: Tipe) -> TipeHasil \{ ... \} \tabularnewline
+Percabangan & if kondisi \{ ... \} else \{ ... \} \tabularnewline
+Perulangan & for x in array \{ ... \} \tabularnewline
+Unwrap aman & if let x = nilaiOpsional \{ ... \} \tabularnewline
+Nilai default & x ?? nilaiDefault \tabularnewline
+Mendefinisikan struct & \texttt{struct X \{ var a: Int; var b: String \}} \tabularnewline
+Closure & \texttt{\{ \$0 * 2 \}} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kartu contekan sintaks Swift (versi pemula)\end{center}
+
+\begin{tcbpractice}{Praktik: Bermain Swift 15 Menit di Playgrounds}
+Punya Mac? Buka Xcode Playground; belum punya Mac? Gunakan Swift Playgrounds di iPad atau berlatih di versi web di browser. Jalankan setiap potongan kode di bab ini, ubah-ubah angka dan teksnya, dan sengaja buat beberapa kesalahan untuk melihat bagaimana Xcode memberi peringatan. Lima belas menit “bermain dulu, belajar kemudian” ini akan membuat kamu dua kali lebih mudah saat memulai Bab 62.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Utamakan let, hati-hati dengan var; tipe diinferensi otomatis, boleh juga dideklarasikan eksplisit setelah titik dua
+  \item Nilai opsional adalah jiwa Swift: yang bisa kosong wajib ditangani, if let / ?? adalah jimat penyelamat, dan ! adalah operasi berisiko tinggi
+  \item Pemanggilan fungsi harus menyertakan nama parameter; closure = fungsi tanpa nama, ada di mana-mana di SwiftUI
+  \item Utamakan struct, ikuti protokol (Protocol); hampir semua di SwiftUI adalah struct
+  \item 20\% sintaks mengerjakan 80\% pekerjaan: kuasai dulu cara pakainya, baru dalami
+\end{itemize}
+
+\end{tcbsummary}

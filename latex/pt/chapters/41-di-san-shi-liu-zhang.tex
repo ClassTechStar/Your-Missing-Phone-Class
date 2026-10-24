@@ -1,0 +1,105 @@
+\bookchapter{Capítulo 36: Celular e casa inteligente — torne a casa esperta}
+
+\chapterintro{O celular tem mais uma função cada vez mais importante: ser o “controle remoto” da casa. De uma lâmpada a uma tomada e uma fechadura, a casa inteligente deixou de ser brinquedo de entusiasta. Este capítulo organiza protocolos, ecossistemas, hub e kits de entrada e encerra com uma lista de segurança para o “inteligente” não virar contra você.}
+
+\booksection{Protocolos de casa inteligente: a escolha importa}
+
+Antes de comprar, veja o protocolo: ele define se o aparelho obedece ao seu celular e ao seu ecossistema. Há quatro principais, cada um com o seu temperamento:
+
+\begin{itemize}
+  \item Matter: lançado em 2022 pela CSA, com Apple, Google, Amazon e Samsung por trás. O objetivo é único: que todos os aparelhos falem a mesma língua. Entre 2023 e 2026 está se tornando o padrão unificado; com Matter, o aparelho entra em Apple HomeKit, Google Home, Amazon Alexa e Mi Home ao mesmo tempo, sem ficar refém de um só ecossistema.
+  \item Thread: a "tubulação" de rede do Matter. Baixo consumo, auto-organização (se um nó cai, o sinal desvia), resposta rápida e sem travar. Aparelhos com roteador de borda Thread (HomePod mini, Apple TV 4K, hub Xiaomi) são bem mais estáveis.
+  \item Wi-Fi: boa largura de banda e conexão direta ao roteador, mas consome mais e congestionam com muitos aparelhos. Ideal para câmeras e robôs aspiradores, que movem muitos dados.
+  \item Bluetooth (BLE): configuração simples e econômico, mas alcance curto e sem auto-organização. Bom para fechaduras e sensores de temperatura/umidade.
+  \item Zigbee: veterano de baixo consumo, exige hub dedicado; aparelhos baratos e estáveis, mas pouca interoperabilidade entre marcas. Vem sendo substituído por Matter + Thread.
+\end{itemize}
+
+\begin{tcbinfo}{Princípio em uma frase}
+Em 2026, prefira aparelhos com selo “Matter over Thread” — a escolha mais à prova de tempo. Os antigos que só têm Wi-Fi ou Bluetooth não precisam ser descartados agora; use-os e migre para Matter nas próximas compras.
+
+\end{tcbinfo}
+
+\booksection{Comparação dos três grandes ecossistemas}
+
+Protocolo é “língua”; ecossistema é “círculo”. Mesmo com Matter, você escolhe um principal para automações e voz. Veja o comparativo:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Ecossistema} & \textbf{Pontos fortes} & \textbf{Limites} & \textbf{Público} \tabularnewline
+\hline
+Apple HomeKit & Máxima privacidade (processamento local), integração fluida com iPhone/Siri/Atalhos & Menos aparelhos e mais caros; exige HomePod ou Apple TV como hub & Casas 100\% Apple que valorizam privacidade e experiência \tabularnewline
+Mi Home (Xiaomi) & Maior variedade, ótimo custo-benefício, assistente Xiao AI competente & Ecossistema mais fechado, muitos dados na nuvem e mais anúncios & Iniciantes com orçamento limitado que querem equipar a casa de uma vez \tabularnewline
+Huawei HiLink (HarmonyOS) & Fluxo perfeito com celulares/tablets/relógios HarmonyOS; catálogo em rápida expansão & Menos aparelhos fora da China; ecossistema ainda em construção & Usuários de celular Huawei que querem o "Super Device" \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbinfo}{Como escolher o ecossistema}
+Escolha pelo celular: iPhone HomeKit; Huawei HiLink; outros Androids Mi Home. Com Matter, aparelhos de ecossistemas diferentes podem ser controlados pelo mesmo celular — não é preciso “escolher lado” de uma vez.
+
+\end{tcbinfo}
+
+\booksection{O celular como hub da casa}
+
+Na maioria dos casos iniciantes, o celular é o seu hub: controla luzes, ar, cortinas e segurança pelo app e cria automações para a casa “se mexer sozinha”:
+
+\begin{itemize}
+  \item Controle: abra HomeKit/Mi Home/Smart Life para ligar luzes, ajustar cor e temperatura, definir o ar, abrir/fechar cortinas e ver câmeras, à distância ou na rede local.
+  \item Automações: combine "condição ação". Três clássicas: | | Modo Chegada: localização em casa + escureceu luz da entrada + ar + cortinas + trancar a porta.
+  \item Modo Saída: o último a sair (geolocalização ou porta trancada) apagar luzes + desligar ar + desligar tomadas + ativar câmeras + armar.
+  \item Modo Dormir: toda noite às 23:00 apagar luzes principais + fechar cortinas + ar a 26 °C + luz noturna.
+\end{itemize}
+
+Toque NFC: cole uma etiqueta NFC na porta; ao encostar o celular, dispare o cenário (um toque acende a luz da entrada, outro ativa o modo dormir). No iPhone use Atalhos; no Android, a Carteira ou o app da marca escreve a etiqueta.
+
+\begin{tcbpractice}{Teste: monte o "Modo Chegada"}
+No app de casa inteligente, crie uma automação: gatilho “chegar a um local” (casa), ações “acender luz da entrada”, “ar a 26 °C”, “fechar cortinas”. Salve, saia e volte para ver a luz acender sozinha — a sensação de sucesso na primeira vez é melhor do que comprar aparelho novo.
+
+\end{tcbpractice}
+
+\booksection{Kit de entrada recomendado}
+
+Não é preciso tudo de uma vez; com estas quatro peças você cobre uns 80\% do dia a dia:
+
+\begin{itemize}
+  \item Caixa de som inteligente: Xiao AI (Mi Home, ótimo custo-benefício) / HomePod mini (Apple, também é hub Thread) / Alexa (amplo no exterior). Atenção: a caixa define o seu assistente de voz — escolha o ecossistema antes.
+  \item Lâmpada inteligente: Yeelight (Mi Home/Matter, ajuste de cor e brilho, barata) / Philips Hue (cores e estabilidade ótimas, mas exige hub Hue e é mais cara). Atenção: confira o soquete (E27/B22) e se precisa de cor ajustável.
+  \item Tomada inteligente: Xiaomi Smart Plug (barata, mede consumo) / TP-Link Kasa (bom suporte a Matter no exterior). Atenção: em aparelhos de alta potência (aquecedor, chuveiro), confira a potência nominal e evite sobrecarga.
+  \item Fechadura inteligente: Loock/Xiaomi (custo-benefício e integração Mi Home) / Kaadas (fabricante tradicional, estrutura mecânica robusta). Atenção: veja se suporta Matter ou o seu ecossistema, autonomia de bateria e posição da chave de emergência.
+\end{itemize}
+
+\begin{tcbinfo}{Ordem de compra sugerida}
+Primeiro a caixa de som (define o ecossistema) depois lâmpada e tomada (fáceis e com retorno imediato) por fim fechadura e câmeras (envolvem segurança, escolha com cuidado). Adicione um tipo de cada vez e evite “comprei e não sei usar”.
+
+\end{tcbinfo}
+
+\booksection{Cuidados de segurança}
+
+Quanto mais aparelhos, maior a superfície de ataque. Estas quatro regras são o mínimo:
+
+\begin{enumerate}
+  \item Troque a senha padrão: senhas de câmeras, roteadores e fechaduras ficam públicas na internet. A primeira coisa ao instalar é criar uma senha longa e não repetida.
+  \item Atualize o firmware: as atualizações costumam corrigir falhas. Ative "atualização automática" no app ou verifique todo mês.
+  \item Isole a rede: coloque os aparelhos IoT em um Wi-Fi (ou rede de visitas) separado do celular e do PC. Se um aparelho for invadido, é mais difícil chegar aos seus dados importantes.
+  \item Privacidade: ative áreas privadas nas câmeras (quarto e banheiro sem gravação), desligue a gravação em nuvem 24h e não deixe a imagem da câmera de casa aberta por longos períodos a apps de terceiros.
+\end{enumerate}
+
+\textbf{Armadilhas a evitar}\par
+
+\begin{itemize}
+  \item Não use "abrir a porta remotamente" para estranhos — prefira senha temporária que expira.
+  \item Não aponte a cama ou a janela — quem vaza a sua privacidade é você.
+  \item Não compre aparelhos genéricos sem marca só por serem baratos — costumam não receber atualizações e viram uma porta dos fundos em casa.
+\end{itemize}
+
+\begin{tcbsummary}{Resumo do capítulo}
+\begin{itemize}
+  \item Matter + Thread é a direção de 2023–2026; em compras novas, priorize esse selo
+  \item Cada ecossistema tem o seu ponto: Apple em privacidade, Mi Home em custo-benefício, Huawei em colaboração multiaparelho
+  \item O celular pode ser o hub; com os modos Chegada/Saída/Dormir, a casa se move sozinha
+  \item Kit inicial: caixa de som, lâmpada, tomada e fechadura, nesta ordem
+  \item Senha padrão, firmware, isolamento de rede e privacidade das câmeras: as quatro regras de segurança não podem faltar
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,188 @@
+\bookchapter{Chapter 4: Installing and Managing Apps}
+
+\chapterintro{Apps make your phone capable of anything, but they need to be managed. Just like you'd assign a new employee a desk and permissions, installing apps requires a standardized process.}
+
+\booksection{I. Official App Stores: The Safest “App Supermarket”}
+
+\begin{itemize}
+  \item \textbf{Android}: Google Play (outside China) or each brand's built-in store (such as Huawei AppGallery or Xiaomi GetApps).
+  \item \textbf{iOS}: Only the App Store.
+  \item \textbf{HarmonyOS}: Huawei AppGallery.
+\end{itemize}
+
+Core security value: reviewed, guaranteed updates, payment security. Action guideline:\textbf{prioritize downloading only from official stores!}
+
+\booksection{II. Pure/Protection Mode: Turn On Your Phone's “Antivirus Wall”}
+
+Mainstream domestic brands (Huawei, Xiaomi, OPPO, vivo, Honor) all have a built-in\textbf{Pure Mode}or\textbf{Protection Mode}—a system-level security switch.\textbf{Strongly recommended for all users to enable}.
+
+\booksubsection{What exactly is it?}
+
+The core function of Pure Mode (also called “Protection Mode”) is to\textbf{block third-party app installations}: when enabled, the system will\textbf{only allow app installations from the official app store}. Installation packages downloaded from browsers, QR codes, chat apps, and other channels will be directly intercepted, eliminating malware at the source.
+
+\booksubsection{Who it's for}
+
+\begin{itemize}
+  \item \textbf{Elderly users}: Can't tell "official" from "fake" ads—Pure Mode is the most reliable safeguard.
+  \item \textbf{Users insensitive to app permissions}: Don't need to install niche apps, beta versions, or foreign-region games.
+  \item \textbf{All users who want to improve device security}: Even for power users, having it on is better than off—if you have a temporary need, just turn it off briefly.
+\end{itemize}
+
+\booksubsection{How to enable (taking Huawei/Xiaomi as examples)}
+
+\begin{itemize}
+  \item \textbf{Huawei/HarmonyOS}: [Settings] > [System \& Updates] >\textbf{[Pure Mode]}, select "Enable."
+  \item \textbf{Xiaomi}: [Settings] > [Privacy Protection] >\textbf{[Protect Privacy]}, or [Settings] > [App Settings] > [App Installation], turn off "Install unknown apps."
+  \item \textbf{OPPO/vivo}: [Settings] > [Security] >\textbf{[Install Apps from External Sources]}, turn off each authorization one by one.
+\end{itemize}
+
+\booksubsection{App Store Security Detection Mechanisms}
+
+App stores aren't just for show—there's a complete security pipeline behind them:
+
+\begin{itemize}
+  \item \textbf{Virus scanning}: Each app is jointly scanned by multiple antivirus engines before listing, to identify known trojan and virus signatures.
+  \item \textbf{Permission review}: The store reviews whether the permissions an app requests are "reasonable"—a flashlight app asking for contacts? Directly rejected or delisted.
+  \item \textbf{Developer certification}: Listing requires enterprise qualification, personal ID, or credit card verification. If problems arise, someone can be held accountable—not a "black app."
+  \item \textbf{Continuous monitoring}: Listed apps are also continuously rescanned, and newly discovered malicious behavior results in forced delisting.
+\end{itemize}
+
+\booksection{III. Third-Party Sources and “Electronic Parasites”: Extremely High Risk!}
+
+Downloading apps from webpages or unknown links may bundle viruses, steal privacy, or commit payment fraud. Here we specifically mention a new concept:\textbf{“electronic parasites.”}.
+
+\textbf{What are “electronic parasites”?}\par
+
+This refers to\textbf{.}—you think you “saved money,” but actually “got infected.” Common forms:
+
+\begin{itemize}
+  \item "Cracked," "free," "ad-free" versions of paid software;
+  \item "Like-farming," "red packet grabbing," "game cheats" and other gray-area tools;
+  \item So-called "internal versions" of apps recommended by "small ads" in group chats.
+\end{itemize}
+
+These programs appear usable, but behind the scenes they may be\textbf{stealing contacts, reading SMS, eavesdropping on the microphone, mining in the background}. Pure Mode is the\textbf{first line of defense}against them—simply not letting you install them.
+
+\booksubsection{Second line of defense recommendations:}
+
+\begin{itemize}
+  \item \textbf{Regular full virus scans}: Use the phone's built-in security center (like Huawei Phone Manager, Xiaomi Security Center) to scan once a month.
+  \item \textbf{Cautiously grant sensitive permissions}: Contacts, SMS, location, camera, microphone—these five "high-risk permissions" must be strictly reviewed.
+  \item \textbf{Watch for battery and data anomalies}: Phone suddenly heating up, battery draining fast, data running at night—most likely a "parasite" hiding in the background.
+\end{itemize}
+
+If you absolutely must install a third-party app:
+
+\begin{enumerate}
+  \item Ensure the source is absolutely trustworthy.
+  \item Carefully review permission requests before installing.
+  \item Scan with a security app afterward.
+\end{enumerate}
+
+Ultimate advice: In system settings, turn off the “Install unknown apps” permission.
+
+\booksection{IV. Install, Update, Uninstall}
+
+\begin{itemize}
+  \item \textbf{Install}: Tap "Get" or "Install" in the store. After installation, the first launch will ask for permissions.
+  \item \textbf{Update}:\textbf{Must update!}Mainly to fix security vulnerabilities. Recommend enabling auto-update.
+  \item \textbf{Uninstall}: Long-press the icon and drag to the uninstall area. For a more thorough clean, go to [Settings] > [App Management] to find and uninstall.
+\end{itemize}
+
+\booksection{V. Permission Management: You Are the App's “Boss”}
+
+Apps requesting permissions (like contacts, location) is sometimes reasonable (maps need location), sometimes not (flashlight needs contacts).
+
+\begin{itemize}
+  \item \textbf{Permission options}: "Always allow," "Only while using the app," "Deny," "Ask every time."
+  \item \textbf{Management principles}:
+  \begin{enumerate}
+    \item Minimization: Don't grant unless necessary.
+    \item Post-audit: Regularly check permission settings to see who's "overstepping."
+    \item Context-based: Like ride-hailing apps, only grant location permission while in use.
+  \end{enumerate}
+\end{itemize}
+
+\begin{tcbwarn}{Key Permissions to Watch}
+\begin{itemize}
+  \item Contacts/SMS: May be used to send spam messages.
+  \item Real-time location: Your movements may be tracked.
+  \item Camera/Microphone: May be used for secret photography/recording.
+  \item File access: May read your private files.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{VI. Components of an App Installation Package}
+
+Have you ever wondered what's inside that installation package you download from the app store? Understanding the components of an installation package helps you better understand how apps work, and when problems arise, you'll know where to look.
+
+\booksubsection{Android APK File Structure}
+
+An APK (Android Package Kit) is essentially a ZIP archive. After extraction, you can see the following core directories and files:
+
+\begin{itemize}
+  \item \textbf{AndroidManifest.xml}: The app's "ID card" and "instruction manual." Records core information like app package name, version number, required permissions, supported system versions, entry Activity, etc. The system reads this file first when installing the app.
+  \item \textbf{classes.dex}: The app's core code. Java/Kotlin source code is compiled into Dalvik bytecode and stored in this file. An app may have multiple dex files (like classes2.dex, classes3.dex).
+  \item \textbf{resources.arsc}: The compiled resource index table. Records the IDs and corresponding relationships of all resources.
+  \item \textbf{res/ directory}: Resource folder. Contains images, layout files, strings, color definitions, etc. Images for different resolutions are placed in different drawable folders (like drawable-hdpi, drawable-xhdpi).
+  \item \textbf{assets/ directory}: Raw resource folder. Stores resources that don't need compilation, such as web files, fonts, audio, etc. Apps can read them via AssetManager at runtime.
+  \item \textbf{lib/ directory}: Native library folder. Stores compiled .so files (C/C++ compilation output), categorized by CPU architecture (like arm64-v8a, armeabi-v7a). Games and apps requiring high-performance computation usually have this directory.
+  \item \textbf{META-INF/ directory}: Signature information folder. Contains MANIFEST.MF, CERT.SF, CERT.RSA files, used to verify the APK's integrity and signature.
+\end{itemize}
+
+\booksubsection{iOS IPA File Structure}
+
+IPA (iOS App Store Package) is also a compressed archive, with a slightly different structure:
+
+\begin{itemize}
+  \item \textbf{Payload/ directory}: Where the core content lives. Inside is a .app folder containing all the app's content.
+  \item \textbf{Info.plist}: The app's configuration file, similar to Android's AndroidManifest.xml. Records app ID, version, permission requirements, supported devices, etc.
+  \item \textbf{Executable file}: The main program with the same name as the .app folder, a compiled Mach-O format binary.
+  \item \textbf{Frameworks/ directory}: Dynamic libraries and frameworks the app depends on.
+  \item \textbf{Resource files}: Images, audio, video, and other resources, usually stored inside the .app folder.
+  \item \textbf{\_CodeSignature/ directory}: Code signature information, used to verify the app's integrity and origin.
+\end{itemize}
+
+\booksubsection{Signature Verification Mechanism}
+
+Why are apps downloaded from official stores safer? Signature verification is key.
+
+\begin{itemize}
+  \item \textbf{Android signing}: Developers sign APKs with private keys, and the system verifies with public keys during installation. If an APK is tampered with (e.g., implanted with a virus), the signature becomes invalid and the system refuses to install. Google Play also requires App Signing, where Google holds the signing key, further protecting app security.
+  \item \textbf{iOS signing}: Apple's review is stricter. Every IPA must be signed with a certificate issued by Apple, otherwise it cannot be installed. This is why iOS can only install apps from the App Store or enterprise certificates. Apps signed with enterprise certificates have limited validity and Apple can revoke them at any time.
+  \item \textbf{Role of signatures}:
+  \begin{enumerate}
+    \item Verify origin: Confirm the app indeed comes from the claimed developer.
+    \item Verify integrity: Ensure the app wasn't tampered with during transmission.
+    \item Prevent impersonation: A malicious app cannot disguise itself as another app.
+  \end{enumerate}
+\end{itemize}
+
+\booksubsection{Installation Package Size and Optimization}
+
+You may notice that the app size shown in the app store differs from the space it occupies after installation. This is because:
+
+\begin{itemize}
+  \item \textbf{Download size}: The compressed APK/IPA size.
+  \item \textbf{Installation size}: The extracted size, usually much larger than the download size.
+  \item \textbf{Runtime footprint}: Apps also generate cache and data files at runtime, occupying more space.
+\end{itemize}
+
+Modern app optimization methods:
+
+\begin{itemize}
+  \item \textbf{App Bundle (Android)}: Google Play's dynamic delivery technology. Users only download resources suited to their device when downloading (e.g., only images for the corresponding screen resolution), greatly reducing download size.
+  \item \textbf{App Thinning (iOS)}: Similar technology—Apple automatically trims unneeded resources based on the device.
+  \item \textbf{On-demand download}: Large apps like games can download the core package first, then download resource packs later.
+\end{itemize}
+
+\begin{tcbinfo}{Trivia: Why are some app installation packages so large?}
+Game apps are usually the largest because they contain lots of high-definition textures, 3D models, and audio files. Social apps are also quite large because they need to support various functional modules. Tool apps are usually the smallest. If you find a tool app that's unusually large, be alert to whether it bundles unnecessary features.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Hands-On: Audit 3 Apps' Permissions}
+Pick 3 commonly used apps (e.g., social, shopping, tool), go to the app permission management page in [Settings], review each item, and turn off or change unnecessary sensitive permissions to “Only while using the app.”
+
+\end{tcbpractice}

@@ -1,0 +1,126 @@
+\bookchapter{第五十九章：iOSを知る——Appleの生態系と開発の生態系}
+
+\chapterintro{この決断、おめでとうございます。「iPhoneを使う人」から「iPhoneのためにアプリを書く人」になる第一歩です。手を動かす前に、まず地図を広げましょう。iOSはどこから来たのか？　Appleの「壁に囲まれた庭」は開発者にとって何を意味するのか？　アプリが、あなたがキーボードを叩いてからユーザーのスマホに届くまで、何が起きているのか？}
+
+\booksection{iOSの生い立ち：1台のスマホがひとつの業界を変えた}
+
+2007年1月、ジョブズは発表会で初代iPhoneを取り出しました。当時はサードパーティ製アプリにすら対応していませんでした。2008年になってAppleがApp StoreとiPhone SDKを出し、世界中の開発者がiPhone向けのソフトを書けるようになります。その瞬間に「アプリ経済」が生まれました。今日ではApp Storeには数百万のアプリが並び、開発者への累計の分配額は数千億ドルを超えています。
+
+システム自体も進化しています。最初はiPhone OSという名で、2010年にiOSへ改名。バージョン番号はiOS 17（2023年）まで進み、2025年にはAppleが命名を年に合わせる方式へ変えました。iOS 26は2025年にリリースされ、2026年8月時点の最新はiOS 27です。名前は変わりましたが、変わらないことがひとつあります。iOSユーザーの支払い習慣とソフトの品質への評判は、モバイルの生態系でいちばん良いと認められていることです。同じアプリでも、iOS側の収入はAndroid側を大きく上回ることがよくあります。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{節目} & \textbf{年} & \textbf{開発者にとって重要なこと} \tabularnewline
+\hline
+App Storeの開始 & 2008 & サードパーティ開発の生態系が始動 \tabularnewline
+Swiftの登場 & 2014 & 現代のiOS開発言語が登場 \tabularnewline
+SwiftUIの登場 & 2019 & 宣言型UIフレームワーク。本書の本編 \tabularnewline
+iOS 26（改名の初年度） & 2025 & 命名が年号方式へ。Apple Intelligenceを全面的に統合 \tabularnewline
+iOS 27 & 2026 & 現行の最新版（本書の基準） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS開発の年表（2026年8月時点）\end{center}
+
+\booksection{壁に囲まれた庭：Appleの生態系の「ルール」と「配当」}
+
+Appleの生態系は、よく「壁に囲まれた庭」（Walled Garden）と表現されます。ルールが多く、管理が厳しい。アプリは審査を通らなければ出品できず、開発にはMacとXcodeが必須で、配信は主にApp Store経由です。窮屈に聞こえますか？　でも開発者にとって、このルールの代わりに、本物の金になる配当が返ってきます。
+
+\begin{itemize}
+  \item デバイスの断片化がとても小さい：iPhoneの型番はごくわずかで、画面サイズもシステムバージョンも高度にそろっています。5機種に対応すれば、ユーザーの95\%をカバーできます（Androidでは数十機種が必要になることも）。
+  \item システムバージョンの更新率がとても高い：新しいシステムが出て数週間のうちに、ユーザーの7〜8割がアップデートします。新しいAPIも思い切って使えて、「5年前の古いシステム」への配慮は不要です。
+  \item ユーザーの支払い習慣が良い：App Storeのユーザーは、アプリやアプリ内課金にお金を払いやすい。
+  \item 審査は厳しい反面、ストアがきれい：コピー品や迷惑なソフトが少なく、良い製品は見つけてもらいやすい。
+\end{itemize}
+
+\begin{tcbwarn}{注意：まずコストをはっきり}
+iOS開発には高いハードルがあります。Macが1台必須（XcodeはmacOS専用）で、出品には年99ドルの開発者アカウントが必要です（個人開発者の無料アカウントでも、ローカルでの実機デバッグはできますが、出品はできません）。この投資をよく考えてから旅立ちましょう。とはいえ朗報です。学習の段階なら無料アカウントで十分で、第六十章で説明します。
+
+\end{tcbwarn}
+
+\booksection{どの言語で書くか：Objective-C？　それともSwift？}
+
+iOS開発の歴史にも、2人の「主役」がいます。Objective-Cは開国の功労者で、2008年から2014年まで使われました。SwiftはAppleが2014年に発表した新しい言語で、その後Swift 6（2024年リリース、厳格な並行処理チェックを導入）まで進化を続けてきました。2026年のいま、新しいプロジェクトはほぼすべてSwiftです。
+
+ゼロからの人への、正直なひと言です。まっすぐSwiftを学びましょう。Objective-Cは見る必要すらありません——入社後に10年前の遺産コードを保守することになる場合を除きます。Swiftの利点はこうです。文法がすっきりしている（C言語時代のセミコロンやヘッダーファイルのしがらみがない）。オプショナル（Optional）の仕組みが、言語のレベルで「ヌルポインタクラッシュ」をなくす。SwiftUIとシームレスに組み合わさる。さらにiPadのSwift Playgroundsで、遊びながら学べる。
+
+Objective-C風（古代の遺跡）
+
+\begin{lstlisting}
+NSString *name = @"山田太郎"; [name stringByAppendingString:@"こんにちは"]; // 角括号＋ポインタ＋セミコロンの3点セット
+\end{lstlisting}
+
+Swift風（現代のすっきりスタイル）
+
+\begin{lstlisting}
+var name = "山田太郎" name += "こんにちは" // 自然な言葉のように率直
+\end{lstlisting}
+
+\booksection{アプリはどうやって生まれるのか？}
+
+どのプラットフォームでも同じように、iOSアプリの誕生にも一連の流れがあります。ただしApple版には、「保安検査」が2つ余分にあります。
+
+アイデア
+
+設計（画面+機能）
+
+コードを書く（Swift + SwiftUI）
+
+コンパイルと署名
+
+テスト（エミュレータ+実機）
+
+Appleの審査
+
+App Storeにリリース
+
+\begin{center}\small\color{gray}図1：iOSアプリがアイデアから出品までたどる全工程（余分な「審査」に注目）\end{center}
+
+流れの中の重要な用語です。
+
+\begin{itemize}
+  \item 署名（Signing）：iOSアプリは必ず「署名」しなければインストールできません。「このパッケージはあなたが作ったもので、改ざんされていない」ことの証明です。学習の段階ではXcodeがあなたのApple IDで自動署名し、出品のときには開発者証明書を使います。詳しくは第六十七章で。
+  \item シミュレーター（Simulator）：Mac上に仮想で立てたiPhoneで、開発とデバッグの主戦場です。MacのCPUで動くので特に軽快で、Androidのエミュレーターより体験が格段に良いです。
+  \item TestFlight：Apple公式の「テスト配布」ツールです。出品の前にテスト版を最大10,000人のテスターへ送り、彼らはTestFlightアプリでインストールして試します。iOSの生態系ならではの、上品な仕組みです。
+\end{itemize}
+
+\booksection{iOS技術スタックの全体像：あなたの「武器リスト」}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{レイヤー} & \textbf{主流の選択肢（2026年）} & \textbf{何に使う？} \tabularnewline
+\hline
+言語 & Swift 6 & ロジックを書く言語 \tabularnewline
+UI（画面） & SwiftUI＋Appleデザインガイドライン（HIG） & コードで画面を描く（本書のメイン路線） \tabularnewline
+アーキテクチャ & MVVM + @Observable & 画面とロジックを分ける \tabularnewline
+データ保存 & SwiftData（データベース）＋UserDefaults（設定） & データをスマホに保存する \tabularnewline
+ネットワーク & URLSession + async/await + Codable & サーバーとやり取りする \tabularnewline
+ビルドツール & Xcode Build System / xcodebuild & コードをインストール用パッケージに変える \tabularnewline
+開発環境 & Xcode（macOS専用） & Apple公式のIDE \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}2026年のiOS主流テックスタック早見表\end{center}
+
+気づきましたか？　このリストはAndroidよりずっと短い——Appleが多くのことをぜんぶ「お任せ」にしてくれているからです。閉じたエコシステムの代償は自由度、見返りはラクさ：どのネットワークライブラリにするか、どのデータベースにするか悩む必要はなく、公式が用意したものがたいてい最適解です。
+
+\begin{tcbpractice}{やってみよう：あなたのiPhoneの「Apple戸籍」をのぞいてみる}
+iPhoneの［設定］［一般］［情報］を開いて、3つをメモしましょう：iOSのバージョン、機種名、使用可能な容量。さらにApp Storeの「今日」タブをぶらぶら眺めて、優れたアプリのスクリーンショットや説明文に注目してみてください——今日から、お店を見る目は「ユーザー」から「開発者」へ切り替わります。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章のまとめ}
+\begin{itemize}
+  \item 2008年にApp Storeが登場し「アプリ経済」が誕生。2026年の現行バージョンはiOS 27
+  \item 「囲われた庭」の収支：ルールは多いが、機種は少なくバージョンは新しく、ユーザーはお金を払い、ストアはきれい
+  \item ハードル：Macが必須。公開には年99ドルの開発者アカウントが必要。学習段階なら無料アカウントで十分
+  \item 言語はいきなりSwiftを学ぶ。Objective-Cはレガシーコードだけのもの
+  \item 流れはAndroidより1段多い：Appleの審査。TestFlightはベータテスト配布の強い味方
+  \item 2026年の標準テックスタック：Swift 6＋SwiftUI＋MVVM＋SwiftData＋URLSession＋Xcode
+\end{itemize}
+
+\end{tcbsummary}

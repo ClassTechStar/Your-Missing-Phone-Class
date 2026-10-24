@@ -1,0 +1,129 @@
+\bookchapter{Kapitel 52: Die vier Grundkomponenten und der Activity-Lebenszyklus}
+
+\chapterintro{Wenn Compose das “Gesicht” der App ist, dann ist dieses Kapitel das “Skelett”. Android kennt vier Grundkomponenten, aus denen jede App zusammengesetzt ist; und die wichtigste davon, die Activity, hat eine “Lebenszyklus-Karte”, die jeder Android-Entwickler ins Gehirn gebrannt haben muss. Nach diesem Kapitel verstehst du so alte Rätsel wie “Warum ist mein App-Zustand weg, wenn ich kurz in den Hintergrund wechsle und zurückkomme?”}
+
+\booksection{Die vier Grundkomponenten: Androids tragende Säulen}
+
+Android definiert offiziell vier Grundkomponenten, die jeweils eine Art von Arbeit übernehmen:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Komponente} & \textbf{Aufgabe} & \textbf{Zum Vergleich} \tabularnewline
+\hline
+Activity & Eine sichtbare Oberfläche & Die Schaufensterfront des Ladens – sichtbar und bedienbar \tabularnewline
+Service & Der "Unsichtbare", der im Hintergrund schuftet & Der Lagerarbeiter – Musik abspielen, Dateien herunterladen, ganz ohne Oberfläche \tabularnewline
+BroadcastReceiver & System-Broadcasts empfangen & Die Pförtnerloge – der Lautsprecher für "Akku ist leer" und "Netz ist weg" \tabularnewline
+ContentProvider & Daten app-übergreifend teilen & Der öffentliche Aktenschrank – z. B. Kontakte für andere Apps freigeben \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Die vier Grundkomponenten von Android auf einen Blick\end{center}
+
+Als Einsteiger verbringst du 95 \% deiner Zeit mit der Activity; Service und BroadcastReceiver brauchst du für Musikwiedergabe und Push-Nachrichten; ContentProvider nutzt du am seltensten (das System kapselt die gebräuchlichen Daten bereits). Und beachte: Alle vier Komponenten müssen sich im AndroidManifest.xml “anmelden” – ohne Registrierung findet das System sie nicht.
+
+\booksection{Der Activity-Lebenszyklus: die erste “Schatzkarte” der Android-Entwicklung}
+
+Eine App auf dem Telefon kann jederzeit unterbrochen werden: Ein Anruf kommt, der Nutzer wechselt kurz zu WeChat, das System beendet dich wegen Speichermangels … Das Leben einer Activity ist eine Rundreise auf dieser Karte:
+
+onCreate (Geburt: Initialisierung)
+
+onStart (sichtbar)
+
+onResume (im Vordergrund aktiv)
+
+onPause (teilweise verdeckt)
+
+onStop (ganz unsichtbar)
+
+onDestroy (zerstört)
+
+onRestart / onStart / onResume: beim Zurückkehren in den Vordergrund umgekehrt
+
+\begin{center}\small\color{gray}Abbildung 4: Der Activity-Lebenszyklus (vorwärts: obere Reihe Geburt untere Reihe Abschied; auf dem Rückweg genau umgekehrt)\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Callback} & \textbf{Wann wird er ausgelöst?} & \textbf{Typischer Einsatz} \tabularnewline
+\hline
+onCreate & Beim Erzeugen der Activity (einmal) & Oberfläche laden, Daten initialisieren \tabularnewline
+onStart & Die Oberfläche wird sichtbar & Ein wenig leichtgewichtige Logik starten \tabularnewline
+onResume & Hat den Fokus, ist bedienbar & Animationen starten, Wiedergabe fortsetzen \tabularnewline
+onPause & Teilweise verdeckt oder im Begriff, verlassen zu werden & Animationen pausieren, Entwurf speichern \tabularnewline
+onStop & Vollständig unsichtbar & Schwere Ressourcen freigeben, Downloads pausieren \tabularnewline
+onDestroy & Unmittelbar vor dem Entfernen & Die letzten Aufräumarbeiten \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Typische Einsätze der sechs Lifecycle-Callbacks\end{center}
+
+\textbf{Stolperfalle: Eine Drehung des Bildschirms “tötet” die Activity}\par
+
+Der klassischste Stolperstein: Man dreht den Bildschirm, und der ganze Text im Eingabefeld ist weg. Grund: Eine Bildschirmdrehung zerstört die Activity standardmäßig und baut sie neu auf (durchlaufen von onDestroy onCreate). Lösung: Den Zustand mit rememberSaveable sichern (in Compose der Ersatz für remember) – es holt die Werte beim Neuaufbau automatisch zurück. In den Kapiteln 6 und 7 wirst du es immer wieder brauchen.
+
+\booksection{Intent: das “Ticket” für den Verkehr in der App und nach außen}
+
+Der Intent (die “Absicht”) ist das “Fahrticket” für die Kommunikation zwischen Komponenten. Ob du von einer Seite zur anderen springen, den Browser öffnen oder die Kamera aufrufen willst – immer musst du “ein Ticket lösen und einsteigen”:
+
+\begin{lstlisting}[language=Kotlin]
+// Variante 1: expliziter Intent – klar angegeben, zu welcher Seite
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", "Max")     // nimmt "Gepäck" mit (die Daten)
+startActivity(intent)
+
+// Variante 2: impliziter Intent – du sagst nur, was zu tun ist; das System sucht, wer es tut
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // das System öffnet den Browser (oder lässt dich wählen)
+\end{lstlisting}
+
+Beide Varianten haben ihren Zweck: Explizit für Seitensprünge innerhalb der eigenen App; implizit, um Fähigkeiten des Systems oder anderer Apps zu nutzen (Webseite öffnen, anrufen, teilen). In Compose-Projekten holst du in einer Composable mit LocalContext.current den Context und kannst dann startActivity aufrufen.
+
+\booksection{Mehrere Seiten und Navigation}
+
+Echte Apps haben mehrere Seiten. Die offiziell empfohlene Navigationslösung für Compose ist Navigation Compose (Bibliothek androidx.navigation):
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "Unbekannt")
+    }
+}
+
+// um innerhalb der Ansicht zu navigieren:
+navController.navigate("detail/Max")     // mit Parameter
+navController.popBackStack()              // zurück zur vorherigen Seite
+\end{lstlisting}
+
+\begin{tcbinfo}{Tipp: Und wenn es zu viele Seiten werden?}
+Sobald das Projekt wächst, schreib alle Seitenrouten gebündelt in eine Datei (z. B. AppNavGraph.kt) und verwalte sie zentral – lass die Logik “Wohin springe ich?” nicht auf alle Seiten verstreuen. Das ist der erste Schritt von “läuft irgendwie” zu “wartbar”.
+
+\end{tcbinfo}
+
+\booksection{Nebenbei erklärt: Was ist ein Fragment (und warum lehrt dieses Buch es nicht)}
+
+In alten Tutorials wirst du unweigerlich auf Fragment stoßen – einen “wiederverwendbaren Oberflächen-Schnipsel” innerhalb einer Activity, in der alten Mehrseiten-Architektur der absolute Star. Im Compose-Zeitalter reichen aber Composable-Funktionen + Navigation-Routen für Seiten, und auch offiziell ist Fragment zurückgestuft worden. Deshalb taucht es in diesem Buch nicht im Hauptweg auf.
+
+Mein Rat: In neuen Projekten Fragment nicht aktiv einsetzen; aber wenn du alten Code liest oder im Vorstellungsgespräch danach gefragt wirst, reicht zu wissen: “Ein Fragment ist ein Oberflächen-Schnipsel, das in einer Activity steckt.” Lernmaterialien immer bevorzugt ab 2023 wählen – die “alten Kalenderblätter” des Android-Stacks veralten schneller, als man denkt.
+
+\begin{tcbpractice}{Selbst ausprobieren: Dem Zähler ein "Gedächtnis" verpassen}
+Bau den Zähler aus Kapitel 51 um: (1) Ersetze remember durch rememberSaveable und prüfe nach einer Bildschirmdrehung, ob die Zahl überlebt hat; (2) füge einen “Über”-Button hinzu, der mit Navigation auf eine zweite Seite springt und dort die Versionsnummer zeigt; (3) lass in onCreate bzw. onPause beider Seiten Logausgaben schreiben (Log.d) und beobachte in Logcat die Reihenfolge der Lifecycle-Aufrufe. Nach diesen drei Schritten ist der Lebenszyklus keine Theorie mehr.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Zusammenfassung des Kapitels}
+\begin{itemize}
+  \item Die vier Grundkomponenten: Activity (Schaufenster), Service (Hintergrund), BroadcastReceiver (Lautsprecher), ContentProvider (Aktenschrank)
+  \item Sechs Lifecycle-Callbacks: onCreate onStart onResume onPause onStop onDestroy
+  \item Eine Bildschirmdrehung zerstört die Activity und baut sie neu: Mit rememberSaveable den Zustand retten
+  \item Intent ist das "Ticket": explizit zur eigenen Seite, implizit für System-Fähigkeiten
+  \item Mehrere Seiten mit Navigation Compose: NavHost + composable-Routen
+\end{itemize}
+
+\end{tcbsummary}

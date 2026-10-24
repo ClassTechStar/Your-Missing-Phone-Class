@@ -1,0 +1,117 @@
+\bookchapter{第五十八章：クイックリファレンスとリソース}
+
+\chapterintro{この章は、単独で使えるクイックリファレンスです。書き方を思い出せないときや、素早く決めたいときは、直接ここを開いてください。「ポケットカード」として使うのがおすすめです。よく使うコードの速査、よくある質問、学習リソースを、1ページも漏らさずまとめました。}
+
+\booksection{よく使うコードのクイックカード}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{やりたいこと} & \textbf{キーコード} \tabularnewline
+\hline
+可変状態を1つ覚えておく & var x by remember \{ mutableStateOf(初期値) \} \tabularnewline
+画面回転でも状態を失わない & rememberSaveable \{ mutableStateOf(初期値) \} \tabularnewline
+縦並び／横並びのレイアウト & \texttt{Column \{ \}}/\texttt{Row \{ \}} \tabularnewline
+遅延読み込みリスト & LazyColumn \{ items(リスト) \{ ... \} \} \tabularnewline
+画面遷移 & navController.navigate("ルート") \tabularnewline
+コルーチンで待ち時間の仕事をする & \texttt{viewModelScope.\allowbreak launch \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+データフローを監視する & \texttt{val list by flow.\allowbreak collectAsState()} \tabularnewline
+小さな設定を保存する & context.dataStore.edit \{ it[KEY] = 値 \} \tabularnewline
+構造化データを保存する & Roomの三種の神器：@Entity / @Dao / @Database \tabularnewline
+ネットからデータを取る & Retrofitインターフェース＋suspend関数 \tabularnewline
+通知を出す & NotificationChannel + NotificationCompat.Builder \tabularnewline
+ログを出す & \texttt{Log.\allowbreak d("TAG", "message")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Android開発クイックカード（2026年8月版）\end{center}
+
+\booksection{よくある質問FAQ}
+
+Q1：プログラミングがまったくできませんが、Android開発を学ぶにはどれくらいかかりますか？
+
+本書の道順に従いましょう。第1〜2週で環境を整えてKotlinの基礎を学び、第3〜4週でComposeを学んで画面を作り、第5〜6週で家計簿プロジェクトを完成させ、第7〜8週で天気プロジェクトをやり遂げます。2か月で、ゼロから小さなアプリを独力で作れるまで進めます。条件は、毎日1〜2時間を投じて、本を読むだけでなく実際にコードを打つことです。
+
+Q2：Javaも学ぶ必要がありますか？
+
+不要です。新しいプロジェクト、新しいチュートリアル、新しい求人は、ほぼすべてKotlin基準です。大量のJavaに出会うのは「10年前のプロジェクトの保守」を頼まれたときだけです。Kotlinを終えてから、仕事で必要になれば、Javaの補習もすぐ済みます。両者の土台は同じ仮想マシンの世界だからです。
+
+Q3：エミュレーター？　それとも実機？
+
+開発やデバッグにはエミュレーターが便利です（スナップショット、複数機種）。でも検収は必ず実機で行いましょう。操作感、性能、本物のネットワーク、センサーは、エミュレーターでは代えられません。条件が許すなら、ミドルクラスの実機を1台テスト機として買うのが、いちばん費用対効果の高い投資です。
+
+Q4：Android開発は仕事にありつきやすいですか？
+
+2026年の相場はこうです。単に「画面が書ける」だけの初級ポストは競争が激しいものの、「Kotlinが分かる＋アーキテクチャができる＋リリース作品がある」開発者は、いまだに引っ張りだこです。学習中のあなたにとって、いちばんいい履歴書は、ストアにある自分で作ったアプリです。
+
+Q5：エラーで先へ進めなくなったら、どうすればいいですか？
+
+黄金の3ステップです。(1) エラーの最初の行を、そのままStackOverflowや検索エンジンで調べる。(2) 公式ドキュメントの該当ページを確認する。(3) それでもだめなら、「期待する動作＋実際の現象＋エラー全文＋関係するコード」をまとめて、AIやコミュニティに質問する。ほとんどの問題は、最初のステップで解決します。
+
+\booksection{おすすめ学習リソース}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{種類} & \textbf{リソース} & \textbf{おすすめの理由} \tabularnewline
+\hline
+公式 & developer.android.com & Androidの公式ドキュメント。ComposeやKotlinのチュートリアルもここにあります。第一の権威 \tabularnewline
+公式 & Kotlin公式サイト (kotlinlang.org) & 言語の公式ドキュメント＋オンラインの演習場 \tabularnewline
+公式 & Google Codelabs & 手取り足取りのステップ式実習コース。初心者へのやさしさは満点 \tabularnewline
+コミュニティ & Stack Overflow（androidタグ） & エラーで助けを求める最初の場所 \tabularnewline
+コミュニティ & 掘金 / CSDNのAndroidコーナー & 中国語の実践記事が多い。新しさの見極めに注意（まず日付を見る） \tabularnewline
+動画 & Google Developers公式チャンネル & 毎年の開発者会議での新技術の解説 \tabularnewline
+本書連動 & 第7部『AIプログラミング実戦編』（第37〜47章） & AIでAndroid開発を支援するための完全な心得 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Android開発の学習リソース一覧（2026年8月）\end{center}
+
+\booksection{Gradleのよく使うコマンド速査}
+
+ふだんはボタンで十分ですが、コマンドラインのほうが効率的なこともあります（特にAIツールやCIパイプラインと組み合わせるとき）。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{コマンド} & \textbf{役割} \tabularnewline
+\hline
+\texttt{.\allowbreak /\allowbreak gradlew assembleDebug} & デバッグ版APKをビルドする（Windowsでは ./ を外す） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleRelease} & リリース版をビルドする（署名の設定が必要） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew test} & ユニットテストを全部実行する \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew lint} & 静的チェック：潜在的なバグや行儀の悪い書き方を見つける \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew clean} & ビルド成果物を空にする（「再起動の大技」のコンパイル版） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew :app: dependencies} & 依存ツリーを見る（バージョン競合の調査に便利な道具） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Gradleのよく使うコマンド速査\end{center}
+
+\begin{tcbinfo}{ワンポイント：ビルドでおかしくなったら、まずclean}
+「昨日は動いたのに今日は動かない」という不思議な出来事は、十中六七がビルドキャッシュの乱れです。./gradlew clean のあとにビルドし直せば、オカルト的な問題の大半は治ります。それでもだめならAndroid Studioを再起動しましょう——この技は File Invalidate Caches と併用するのがお約束です。
+
+\end{tcbinfo}
+
+\booksection{おわりに：最初のアプリからN個目のアプリへ}
+
+\booksection{おわりに：最初のアプリからN個目のアプリへ}
+
+振り返れば、あなたは「Activityが何かも知らない」状態から始まって、環境を整え、Kotlinを学び、Composeで画面を描き、アプリにデータベースとネットワークをつなぎ、さらにテスト、パッケージング、出品まで進みました。ゼロから一を生み出す、いちばん大変な一区間を、歩き終えたところです。
+
+技術の世界は変化が速いものです。フレームワークは更新され、道具は世代交代し、AIはますます多くの「キーボードを叩く仕事」を引き受けていきます。でも、ひとつだけ色あせないものがあります。ぼんやりしたアイデアを明確なステップに分解し、それを一歩ずつ実現していく力です。道具は増幅器、考え方は地盤です。増幅器は取り替えられますが、地盤は動かせません。
+
+あなたはもう「スマホが使える人」だけではありません。頭の中のアイデアを、数億台のAndroid端末で実際に動くアプリに変えられるのです。今日からキーボードで創造しよう——これがAndroid開発者のロマンです。
+
+\booksection{参考文献}
+
+\begin{enumerate}
+  \item Android Developers. (2026). Android Developer Guides and Jetpack Compose Documentation. developer.android.com.
+  \item Kotlin Foundation. (2026). Kotlin Language Documentation. kotlinlang.org.
+  \item Android Open Source Project. (2026). Android Platform Version History and API Levels.
+  \item Google Play. (2026). Play Console Help: Publishing and App Signing.
+  \item AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.
+  \item Square. (2026). Retrofit Documentation. github.com/square/retrofit.
+\end{enumerate}

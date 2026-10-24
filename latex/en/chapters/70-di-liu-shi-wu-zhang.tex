@@ -1,0 +1,194 @@
+\bookchapter{Chapter 65: Project One—My Expense Tracker (Local Version)}
+
+\chapterintro{Welcome to your first “serious project.” This expense tracker never touches the internet, but it's complete in every part: you can record a transaction, view the running history, see monthly totals, and edit or delete entries. Finishing it means you've walked the whole “data logic interface” path end to end. Don't rush to copy code—think it through first, then build. That's our standing principle.}
+
+\booksection{Thinking About Requirements: Ask Five Questions First}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Element} & \textbf{Answer} \tabularnewline
+\hline
+Who (who's it for) & For yourself; family and friends too \tabularnewline
+What (what it does) & Record income and spending, view the history, monthly summaries, statistics by category \tabularnewline
+Why (the reason) & Practice + finding out where the money goes \tabularnewline
+How (the approach) & Swift + SwiftUI + SwiftData + MVVM, purely local, no backend \tabularnewline
+Constraint (the limits) & Done within one week; supports iOS 17 at minimum (the SwiftData requirement) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}The five requirement elements of the expense tracker\end{center}
+
+Then break it into small steps where “every step is usable”: 1) build the SwiftData data layer (can save a transaction); 2) the list screen (can view the history); 3) the entry sheet (can add a transaction); 4) deleting and editing; 5) the monthly summary card. After every step, the app is a “usable thing.”
+
+\booksection{The Data Layer: Giving Transactions a Home}
+
+First, define what a transaction looks like—enough fields to do the job, but don't get greedy:
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+@Model
+class Record {
+    var type: String      // "income" = money in | "expense" = money out
+    var amount: Double    // amount (in yuan)
+    var category: String  // category: food, transport, salary...
+    var note: String      // note (optional)
+    var date: Date        // expense date
+
+    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+        self.type = type
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tip: Why Use Double for Amounts?}
+Rigorous financial apps use Decimal (exact decimal arithmetic) to avoid floating-point errors (the old 0.1 + 0.2 $\neq$ 0.3 problem). Double is plenty for a practice project; if you ever build a real financial product, remember to switch to Decimal or “an Int counted in cents”—a pitfall countless developers before you have stumbled into.
+
+\end{tcbinfo}
+
+\booksection{MVVM: When Interface and Logic “Move Apart”}
+
+Let the interface talk to the database directly? It runs, but the interface code becomes bloated and ugly. The MVVM architecture gives each part its own job: the View (interface) only draws, the ViewModel (logic hub) manages the data, and the Model (SwiftData) handles storage.
+
+View (the SwiftUI interface)
+
+ViewModel (the @Observable logic hub)
+
+Model (the SwiftData data layer)
+
+\begin{center}\small\color{gray}Figure 4: MVVM's three layers—data flows in one direction, and no layer oversteps its bounds\end{center}
+
+\begin{lstlisting}[language=Swift]
+import Observation
+
+@Observable
+class RecordViewModel {
+    var records: [Record] = []
+    private let context: ModelContext
+
+    init(context: ModelContext) { self.context = context }
+
+    func load() {
+        // filtering + sorting with SwiftData's #Predicate
+        let descriptor = FetchDescriptor<Record>(
+            sortBy: [SortDescriptor(\.date, order: .reverse)]
+        )
+        records = (try? context.fetch(descriptor)) ?? []
+    }
+
+    func add(type: String, amount: Double, category: String, note: String) {
+        let r = Record(type: type, amount: amount, category: category, note: note)
+        context.insert(r)
+        try? context.save()
+        load()                       // reload; the UI refreshes
+    }
+
+    func delete(_ record: Record) {
+        context.delete(record)
+        try? context.save()
+        load()
+    }
+}
+\end{lstlisting}
+
+In the interface, write @State private var vm = RecordViewModel(...), then render the list straight from vm.records—the moment the data changes, the interface refreshes automatically.
+
+\booksection{The Interface: List Screen + Entry Sheet}
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var vm: RecordViewModel
+    @State private var showAdd = false
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section("This month's balance") {          // summary card
+                    SummaryRow(records: vm.records)
+                }
+                Section("Transactions") {
+                    ForEach(vm.records) { r in
+                        RecordRow(record: r)
+                    }
+                    .onDelete { idx in
+                        idx.forEach { vm.delete(vm.records[$0]) }
+                    }
+                }
+            }
+            .navigationTitle("My expense tracker")
+            .toolbar {
+                Button { showAdd = true } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView(vm: vm)          // the entry dialog
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Entry sheet essentials: use .keyboardType(.decimalPad) for the amount field (a number pad), a segmented control (Picker) for income/expense, a menu picker for the category, and on “Save,” call vm.add(...) and dismiss() to close the sheet.
+
+\begin{tcbwarn}{Note: Don't Get Lazy with Input Validation}
+Always validate the amount field: block empty values, negative numbers, and invalid input like “abc” (check with Double(text), which returns nil on failure). One of the most common reasons apps crash is “treating the user's input like a well-behaved child.” Remember: treat everything the user types as hostile until proven otherwise.
+
+\end{tcbwarn}
+
+\booksection{Editing, Deleting, and Summaries}
+
+\begin{itemize}
+  \item Delete: List's .onDelete swipe-to-delete plus a confirmation dialog (accidental deletion is what users of expense apps hate most);
+  \item Edit: tapping a row opens an edit sheet pre-filled with the original values (fixing one word beats retyping everything);
+  \item Summaries: use filter + reduce to compute "this month's income / spending / balance," shown in a card at the top:
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
+    let cal = Calendar.current
+    let monthRecords = records.filter {
+        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+    }
+    let income = monthRecords
+        .filter { $0.type == "income" }
+        .reduce(0) { $0 + $1.amount }
+    let expense = monthRecords
+        .filter { $0.type == "expense" }
+        .reduce(0) { $0 + $1.amount }
+    return (income, expense)
+}
+\end{lstlisting}
+
+\booksection{Acceptance: A Three-Layer Check + Two Advanced Challenges}
+
+When the project is done, run acceptance across three layers—“function edge cases architecture”: can you record and delete, and does the data survive restarting the app (function); does entering 0 or a negative amount crash it (edge cases); are interface and data mixed together, and are any fields hard-coded (architecture)?
+
+Once the basic version passes acceptance, serve yourself two “advanced dishes”:
+
+\begin{enumerate}
+  \item Category statistics: add a "Stats" tab and use Swift Charts to draw category spending as a pie chart or bar chart—Apple's official charting library, charts in just a few lines of code;
+  \item iCloud sync: With SwiftData, turning on iCloud sync only takes a few settings—the ledger syncs automatically between iPhone and iPad, and instantly feels "pro."
+\end{enumerate}
+
+\begin{tcbpractice}{Get hands-on: finish it this week}
+Work in the order “data layer ViewModel list page entry sheet summary card,” one step a day. If you get stuck, paste the error message straight into a search engine or an AI (remember Part 7, “Hands-On AI Coding”? When describing a problem, clearly state the “expected behavior, actual behavior, and steps to reproduce”). Once it's done, use it to track a week of expenses—using an app you built yourself gives you a sense of accomplishment that will push you forward.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter summary}
+\begin{itemize}
+  \item Five elements of a requirement break it into small, "usable at every step" steps, then start building
+  \item Data layer: @Model models + the modelContainer container + FetchDescriptor queries
+  \item MVVM division of labor: the View only draws, the @Observable ViewModel handles logic, SwiftData handles storage
+  \item UI: List + Section + toolbar + a sheet for the entry dialog
+  \item Three-layer acceptance (features/edge cases/architecture) + advanced challenges (Swift Charts, iCloud sync)
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,105 @@
+\bookchapter{Bab 43: Kejuruteraan Perbualan — Teknik Berbual untuk Kerjasama Cekap dengan AI}
+
+\chapterintro{Perbualan ialah cara interaksi teras dalam pengaturcaraan AI. Tetapi ingat: “berbual” tidak sama dengan “bercakap santai” — perbualan pengaturcaraan AI yang cekap ialah teknik komunikasi berstruktur, dan kita namakan “kejuruteraan perbualan”. Ia mengkaji: bagaimana memperoleh output kod berkualiti tertinggi dengan bilangan giliran perbualan paling sedikit. Terus terang, bab ini mengajar anda cara “bercakap jelas” dengan AI.}
+
+\booksection{Strategi lapisan Prompt}
+
+Perbualan dengan AI boleh dibahagikan kepada tiga lapisan, dan setiap lapisan menjalankan fungsi berbeza. Dengan memahami ketiga-tiga lapisan ini, anda boleh menggabungkan Prompt yang cekap seperti menyusun blok binaan.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Lapisan} & \textbf{Fungsi} & \textbf{Contoh} & \textbf{Kekerapan} \tabularnewline
+\hline
+Lapisan sistem & Menetapkan peranan AI dan kekangan menyeluruh & "Anda seorang pakar React; kod mesti ditulis dalam TypeScript" & Ditetapkan sekali pada permulaan projek \tabularnewline
+Lapisan tugasan & Menerangkan tugasan khusus yang hendak dibuat semasa ini & "Bina satu komponen borang yang mengandungi medan nama pengguna dan kata laluan" & Diberikan pada permulaan setiap tugasan \tabularnewline
+Lapisan maklum balas & Menilai dan membetulkan output AI & "Medan kata laluan tiada suis papar/sembunyi, sila tambahkan" & Diberikan mengikut kualiti output \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tiga lapisan Prompt perbualan\end{center}
+
+Prompt lapisan sistem biasanya ditulis dalam fail memori projek (contohnya CLAUDE.md) dan tidak perlu diulang pada setiap perbualan. Lapisan tugasan ialah yang paling kerap anda gunakan dalam perbualan — ia patut mengandungi tiga unsur: “buat apa”, “guna teknologi apa” dan “ada kekangan apa”. Lapisan maklum balas paling menguji kemahiran — maklum balas yang baik membolehkan AI membetulkan dengan tepat; maklum balas yang buruk hanya membuatnya meneka semula.
+
+\begin{tcbinfo}{Tip: Tiga senjata utama maklum balas}
+Templat maklum balas yang praktikal ialah “nyatakan masalah + terangkan jangkaan + berikan konteks”. Contohnya: “Pengendalian ralat pada baris 25 hanya menggunakan console.log (nyatakan masalah); persekitaran pengeluaran patut menggunakan pengendali ralat yang seragam dan memulangkan mesej mesra pengguna (terangkan jangkaan); projek ini ada fungsi handleError yang boleh digunakan (berikan konteks)”. Maklum balas sebegini sepuluh kali lebih berkesan daripada “ubah sikit pengendalian ralat”.
+
+\end{tcbinfo}
+
+\booksection{Perbualan penyahpepijatan: cara menerangkan ralat supaya AI cepat mengenal pasti}
+
+Penyahpepijatan ialah salah satu situasi paling kerap dalam pengaturcaraan AI. Apabila anda menemui bug, cara anda menerangkan masalah kepada AI terus menentukan sama ada ia dapat membantu anda mengenal pasti dan membaikinya dengan cepat. Berikut ialah empat perkara penting dalam perbualan penyahpepijatan:
+
+\begin{enumerate}
+  \item Tunjukkan maklumat asal kepada AI, bukan penerangan ulangan anda. Rujuk terus log ralat, tindanan pengecualian (exception stack) dan kod berkaitan kepada AI menggunakan @, bukan menerangkannya dengan "macam ada ralat entah apa". AI melihat maklumat asal jauh lebih tepat berbanding melihat tafsiran anda.
+  \item Terangkan perbezaan antara "tingkah laku dijangka" dan "tingkah laku sebenar". "Saya jangka selepas butang diklik ia akan pergi ke halaman utama (dijangka), tetapi sebenarnya selepas diklik halaman langsung tiada tindak balas (sebenar)" — penerangan sedemikian jauh lebih berguna daripada "butang rosak".
+  \item Berikan langkah penghasilan semula. "Masukkan nama pengguna dahulu, kemudian klik butang log masuk, maka ralat ini akan muncul" — langkah penghasilan semula membolehkan AI mensimulasikan laluan operasi anda, dan lebih mudah mengenal pasti masalah.
+  \item Nyatakan dengan jelas apa yang telah anda cuba. "Saya sudah semak permintaan rangkaian; ia memulangkan 200 dan data normal" — ini membantu AI mengetepikan arah yang telah disahkan, tanpa membazir masa mengulang siasatan.
+\end{enumerate}
+
+Penerangan penyahpepijatan yang kurang baik
+
+\begin{lstlisting}
+Butang diklik tiada tindak balas, tolong tengokkan
+\end{lstlisting}
+
+Penerangan penyahpepijatan yang baik
+
+\begin{lstlisting}
+Selepas butang log masuk diklik, halaman langsung tiada tindak balas. Tingkah laku dijangka: selepas diklik, pergi ke halaman /home Tingkah laku sebenar: selepas diklik, langsung tiada tindak balas, konsol tiada ralat Langkah penghasilan semula: 1. Masukkan nama pengguna admin dan kata laluan 123456 di halaman log masuk 2. Klik butang "Log Masuk" 3. Halaman tiada tindak balas Sudah disiasat: - Permintaan rangkaian normal, pulangan 200 - Peristiwa onClick telah diikat - Kod komponen LoginButton telah disemak Fail berkaitan: @src/components/LoginButton.tsx @src/pages/Login.tsx
+\end{lstlisting}
+
+\booksection{Strategi iterasi: langkah kecil pantas vs refaktor besar-besaran}
+
+Iterasi dalam pengaturcaraan AI mempunyai dua strategi asas, sesuai untuk situasi berbeza. Memahami perbezaannya membantu anda membuat pilihan yang betul dalam keadaan berbeza.
+
+Strategi “langkah kecil pantas” sesuai untuk pembangunan fungsi dan pembaikan bug. Intipatinya: setiap kali, minta AI membuat satu ubah suai kecil sahaja, dan buat yang berikutnya selepas pengesahan lulus. Kelebihannya: setiap langkah boleh disahkan dan boleh dikembalikan, risiko terkawal; kekurangannya: kelajuan lebih perlahan dan memerlukan interaksi perbualan yang kerap. Sesuai untuk: pembangunan fungsi baharu, penerokaan ketika tidak pasti penyelesaian optimum, dan iterasi berhati-hati ketika kurang yakin dengan output AI.
+
+Strategi “refaktor besar-besaran” sesuai untuk ubah suai berskala besar apabila sasaran sudah jelas. Intipatinya: terangkan sasaran lengkap sekali gus, dan biarkan AI merancang serta melaksanakan keseluruhan ubah suai secara autonomi. Kelebihannya: kelajuan tinggi; AI dapat melihat gambaran menyeluruh untuk membuat keputusan seni bina yang lebih baik. Kekurangannya: risiko tinggi; jika tafsiran AI tersasar, kos pembetulan besar. Sesuai untuk: naik taraf seni bina yang jelas, migrasi kod berskala besar dan refaktor yang dijamin dengan ujian secukupnya.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimensi} & \textbf{Langkah kecil pantas} & \textbf{Refaktor besar-besaran} \tabularnewline
+\hline
+Jumlah ubah suai setiap kali & Satu fungsi atau satu bug & Satu modul atau satu lapisan seni bina \tabularnewline
+Kekerapan pengesahan & Disahkan serta-merta selepas setiap ubah suai & Disahkan serentak selepas semua ubah suai selesai \tabularnewline
+Bilangan giliran perbualan & Banyak (5-10 giliran/fungsi) & Sedikit (1-3 giliran/modul) \tabularnewline
+Risiko & Rendah; setiap langkah boleh dikembalikan & Tinggi; kos pembetulan sisihan besar \tabularnewline
+Situasi sesuai & Fungsi baharu, pembangunan penerokaan & Refaktor dan migrasi bersasaran jelas \tabularnewline
+Prasyarat & Tiada keperluan khas & Perlu ada liputan ujian \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Perbandingan dua strategi iterasi\end{center}
+
+Dalam amalan, kedua-dua strategi sering digunakan secara bergabung. Contohnya, semasa refaktor satu modul, gunakan dahulu “refaktor besar-besaran” untuk meminta AI mengemukakan pelan menyeluruh; selepas pelan disemak, gunakan “langkah kecil pantas” untuk melaksanakannya langkah demi langkah. Dengan itu, perspektif menyeluruh dijamin dan risiko pelaksanaan terkawal.
+
+\booksection{Pengurusan konteks bagi perbualan berbilang giliran}
+
+Seiring bertambahnya bilangan giliran perbualan, anda perlu menguruskan konteks perbualan secara proaktif untuk mengelakkan masalah “AI terlupa maklumat awal”. Berikut ialah beberapa teknik pengurusan konteks yang praktikal.
+
+Pertama, “sauhkan” maklumat penting. Pada permulaan perbualan, tuliskan kekangan penting dengan jelas, dan ulanginya semula pada masa yang sesuai dalam perbualan seterusnya. Contohnya “ingat, data kita disimpan dalam localStorage, tidak boleh guna pangkalan data” — ulangkan kekangan ini dalam permintaan ubah suai yang berkaitan untuk mengelakkan AI terlupa.
+
+Kedua, gunakan dengan bijak teknik “ringkasan-sambungan”. Apabila perbualan menjadi sangat panjang, minta AI “meringkaskan kemajuan setakat ini dan senarai tugas yang belum selesai”, kemudian buka perbualan baharu dengan ringkasan itu sebagai titik permulaan. Dengan itu, konteks penting dikekalkan dan kemerosotan perbualan panjang dielakkan.
+
+Ketiga, “satu perbualan satu tugasan”. Ini strategi pengurusan konteks paling mudah dan juga paling berkesan. Setiap perbualan hanya mengendalikan satu tugasan atau satu fungsi; selepas selesai, buka perbualan baharu untuk yang berikutnya. Ini secara semula jadi mengehadkan panjang perbualan dan mengekalkan kejelasan konteks.
+
+Keempat, manfaatkan fungsi pengurusan konteks pada alat. Kebanyakan alat pengaturcaraan AI mempunyai butang “kosongkan konteks” atau “sesi baharu” — apabila anda berasa kualiti jawapan AI menurun, jangan teragak-agak, buka sesi baharu. Kehilangan sebahagian sejarah perbualan jauh lebih baik daripada terus berjuang dalam konteks yang telah merosot.
+
+\begin{tcbpractice}{Mari praktik: menjadi "pesakit" untuk AI anda sekali}
+Sengaja bina satu halaman kecil di dalam pelayar dan ciptakan satu bug (contohnya butang tiada tindak balas). Kemudian, mengikut format “penerangan penyahpepijatan yang baik” dalam bab ini, terangkan kepada AI secara lengkap sekali: maklumat asal, dijangka vs sebenar, langkah penghasilan semula dan perkara yang sudah disiasat. Rasakan perbezaan kelajuan AI mengenal pasti masalah — anda akan memahami mengapa “menerangkan masalah” itu sendiri satu kemahiran.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan bab ini}
+\begin{itemize}
+  \item Tiga lapisan Prompt: lapisan sistem (ditulis dalam fail memori), lapisan tugasan (buat apa + teknologi + kekangan), lapisan maklum balas (nyatakan masalah + jangkaan + konteks)
+  \item Empat perkara penting penyahpepijatan: beri maklumat asal, dijangka vs sebenar, langkah penghasilan semula, perkara sudah disiasat
+  \item Langkah kecil pantas: risiko rendah giliran banyak, sesuai untuk fungsi baharu; refaktor besar-besaran: risiko tinggi giliran sedikit, perlukan jaminan ujian
+  \item Empat teknik pengurusan konteks: sauhkan maklumat penting, ringkasan-sambungan, satu perbualan satu tugasan, buka sesi baharu dengan tegas
+\end{itemize}
+
+\end{tcbsummary}

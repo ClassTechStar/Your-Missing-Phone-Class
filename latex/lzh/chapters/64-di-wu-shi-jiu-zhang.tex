@@ -1,0 +1,126 @@
+\bookchapter{第五十九章：識 iOS——蘋果生態與開發生態}
+
+\chapterintro{賀爾成此決——自「用 iPhone 之人」而為「為 iPhone 作應用之人」。動手之前，吾儕且先攤開輿圖：iOS 何自而來？蘋果「圍牆之園」於開發者何謂？一 App 自爾指敲鍵盤至用戶之機，其中何事之有？}
+
+\booksection{一、iOS 之身世：一機改一行}
+
+2007 年正月，喬布斯於發布會出首代之 iPhone。其時尚不容第三方之應用——至 2008 年，蘋果出 App Store 與 iPhone SDK，許天下開發者為 iPhone 作軟件。當是時，「應用經濟」生焉：至今 App Store 之上有應用數百萬，為開發者累分成逾數千億美元。
+
+系統亦自進化：初名 iPhone OS，2010 年改曰 iOS；版本號行至 iOS 17（2023），至 2025 年，蘋果改命名以隨年份——iOS 26 於 2025 年發布，2026 年 8 月今之版乃 iOS 27。命名雖變，然一事未嘗變：iOS 用戶付費之習與軟件質量之譽，移動生態之中公認至善——同一之 App，iOS 端之入往往顯高於安卓端。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{節點} & \textbf{年份} & \textbf{於開發者至要之事} \tabularnewline
+\hline
+App Store 上線 & 2008 & 第三方開發之生態啟 \tabularnewline
+Swift 發布 & 2014 & 現代 iOS 開發之語登場 \tabularnewline
+SwiftUI 發布 & 2019 & 聲明式界面之框架，本書主線 \tabularnewline
+iOS 26（改名之元年） & 2025 & 命名隨年份；Apple Intelligence 全面整合 \tabularnewline
+iOS 27 & 2026 & 今之最新版（本書基準） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 開發大事記（截至 2026 年 8 月）\end{center}
+
+\booksection{二、圍牆之園：蘋果生態之「規」與「利」}
+
+蘋果生態常被謂為「圍牆之園」（Walled Garden）——規多而管嚴：App 必經審核方得上架、開發必用 Mac 與 Xcode、分發多走 App Store。聞之豈不憋悶？然於開發者，此套規矩換得真金白銀之利：
+
+\begin{itemize}
+  \item 設備碎片之化至微：iPhone 之型不過數款，屏之尺寸、系統之版高度劃一——爾適 5 型之機，即覆 95\% 之用戶（安卓或須適數十款）；
+  \item 系統版本更新之率至高：新系統發布數週之內，七八成用戶已升，新 API 可大膽用之，不必顧「五年前之舊系統」；
+  \item 用戶付費之習善：App Store 之用戶更樂為應用與內購出資；
+  \item 審核雖嚴，然商店潔：山寨流氓之軟件少，佳品易為人所見。
+\end{itemize}
+
+\begin{tcbwarn}{注意：先明其成本}
+iOS 開發有硬檻：必有 Mac 一台（Xcode 為 macOS 所獨佔），上架須 99 美元一年之開發者帳號（個人開發者免費之帳可於本地真機調試，然不能上架）。思此投入而後啟程——然可喜者，學習之期用免費之帳綽綽有餘，第 60 章將言之。
+
+\end{tcbwarn}
+
+\booksection{三、以何語言書寫：Objective-C 抑或 Swift？}
+
+iOS 開發之史亦有二「主角」。Objective-C 者開國之元老也——自 2008 年用至 2014 年；Swift 者蘋果 2014 年所發之新語也，其後進化至 Swift 6（2024 年發布，引入嚴格並發之檢查），至 2026 年，新項目幾盡用 Swift。
+
+贈零基之爾一句實話：徑學 Swift，Objective-C 並觀亦不必——除非爾就職之後須守十年前之遺產代碼。Swift 之利：語法清爽（無 C 語之世分號與頭文件之累）、可選值（Optional）之制自語言之層滅「空指針崩潰」之業中惡夢、與 SwiftUI 無縫相合、且 iPad 之上 Swift Playgrounds 可且玩且學。
+
+Objective-C 之風（上古之遺跡）
+
+\begin{lstlisting}
+NSString *name = @"張三"; [name stringByAppendingString:@"你好"]; // 方括號 + 指針 + 分號三件套
+\end{lstlisting}
+
+Swift 之風（今世之清爽）
+
+\begin{lstlisting}
+var name = "張三" name += "你好" // 直白如自然之言
+\end{lstlisting}
+
+\booksection{四、一個 App 何以誕生？}
+
+與諸平臺同，iOS App 之生亦有一條流水之線。然蘋果之版多兩道「安檢」：
+
+想法
+
+設計（界面+功能）
+
+寫代碼（Swift + SwiftUI）
+
+編譯簽名
+
+測試（模擬器+真機）
+
+蘋果審覈
+
+上架 App Store
+
+\begin{center}\small\color{gray}圖一：一 iOS App 自念頭至上架之全流程（注意多出之「審核」環節）\end{center}
+
+流程中之關鍵概念：
+
+\begin{itemize}
+  \item 簽名（Signing）：每 iOS App 皆必「簽名」方能安裝——以證「此包出於爾，未被篡改」。學習之期 Xcode 以爾之 Apple ID 自動簽之；上架則用開發者之證書。第 67 章詳之。
+  \item 模擬器（Simulator）：Mac 上虛擬而出之 iPhone，開發調試之主戰場也。其所行者 Mac 之 CPU，故特流暢，較安卓之模擬器體驗勝一大截。
+  \item TestFlight：蘋果官方「內測分發」之器——上架之前以測試之版致至多 10000 名測試之用戶，彼等以 TestFlight 之應用安裝而試之。此 iOS 生態獨有之雅也。
+\end{itemize}
+
+\booksection{五、iOS 技術棧全景：爾之「武器清單」}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{層次} & \textbf{主流之擇（2026）} & \textbf{何所用} \tabularnewline
+\hline
+語言 & Swift 6 & 作邏輯之語言 \tabularnewline
+界面 & SwiftUI 加蘋果設計之規範（HIG） & 以代碼繪界面（本書主線） \tabularnewline
+架構 & MVVM + @Observable & 分界面與邏輯 \tabularnewline
+數據儲存 & SwiftData（數據庫）加 UserDefaults（配置） & 存數據於手機之中 \tabularnewline
+網絡 & URLSession + async/await + Codable & 與服務器對話 \tabularnewline
+構建之器 & Xcode Build System / xcodebuild & 化代碼為安裝之包 \tabularnewline
+開發環境 & Xcode（macOS 獨佔） & 蘋果官方之 IDE \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}2026 年 iOS 主流技術棧速覽\end{center}
+
+覺之否：此單較安卓者短一截——以蘋果多事皆「包辦」矣。封閉生態之價，自由度也；其償，省心也：不必糾結擇何網絡之庫、何數據庫，官方所予往往即至優之解。
+
+\begin{tcbpractice}{來動手：看看爾手機之「蘋果戶口」}
+開 iPhone 之［設定］［一般］［關於本機］，記三事：iOS 之版本、機型之名、可用之容量。再往 App Store「今日」之頁隨意遊之，留意精品 App 之截圖與文案——自今日始，爾遊商店之目，當自「用戶」而易為「開發者」矣。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小結}
+\begin{itemize}
+  \item 2008 年 App Store 上線，「應用經濟」生焉；2026 年今之版乃 iOS 27
+  \item 圍牆之園之帳：規矩多，然設備少、版本新、用戶肯出資、商店潔
+  \item 硬檻：必有 Mac；上架須 99 美元一年之開發者帳號；學習之期免費之帳足矣
+  \item 語言徑學 Swift；Objective-C 惟屬遺產之代碼
+  \item 流水線較安卓多一環：蘋果審核；TestFlight 乃內測分發之利器
+  \item 2026 標準技術棧：Swift 6 加 SwiftUI 加 MVVM 加 SwiftData 加 URLSession 加 Xcode
+\end{itemize}
+
+\end{tcbsummary}

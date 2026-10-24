@@ -1,0 +1,149 @@
+\bookchapter{第六十七章：打磨与发布——测试、调试与上架 App Store}
+
+\chapterintro{App 做出来了，然后呢？这一章回答“从能跑”到“能交付”的三件事：怎么高效地调试找 bug、怎么写测试防回归、怎么把 App 送上 App Store 让全世界下载。上架不只是仪式感——它是把一个作品变成产品的分水岭。}
+
+\booksection{一、调试三板斧：print、断点、预览}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{工具} & \textbf{干什么} & \textbf{怎么用} \tabularnewline
+\hline
+print + 控制台 & 看运行日志 & 代码里 print("值=\textbackslash{}(x)")，Xcode 底部控制台看输出 \tabularnewline
+断点调试 & 让程序停在某行，看变量值 & 行号旁点一下出蓝标，运行到那里暂停，逐步走 \tabularnewline
+SwiftUI 预览 + 调试器 & 实时看界面与视图层级 & \#Preview 画布 + 运行时的 View Hierarchy 检查器 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}调试三板斧\end{center}
+
+\begin{tcbinfo}{小贴士：崩溃了怎么读？}
+Swift 崩溃时控制台会打印 “Fatal error” 加原因，Xcode 会停在出错那一行并高亮。真机上的历史崩溃可以在 Xcode Window Organizer Crashes 里看（需付费账号）。关键词优先搜\textbf{“错误原因第一句 + swiftui”}——精确的问题，才有精确的答案。
+
+\end{tcbinfo}
+
+\booksection{二、测试：给代码上保险}
+
+手测靠不住——改了这个功能，另一个悄悄坏了。测试就是“后悔药”兼“防弹衣”。iOS 用\textbf{XCTest}框架，分两种：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{层级} & \textbf{测什么} & \textbf{Target} & \textbf{速度} \tabularnewline
+\hline
+单元测试 & 纯逻辑（计算、校验） & MyFirstAppTests & 秒级 \tabularnewline
+UI 测试 & 真实界面行为 & MyFirstAppUITests & 分钟级 \tabularnewline
+手动测试 & 真人感受、体验 & —— & 永远需要 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 测试层级（模板项目已预置两个 Test Target）\end{center}
+
+\begin{lstlisting}[language=Swift]
+import XCTest
+
+// 把"金额字符串转数字"这种逻辑抽成纯函数
+func parseAmount(_ input: String) -> Double? {
+    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+          v > 0 else { return nil }
+    return v
+}
+
+final class AmountTests: XCTestCase {
+    func testEmptyInputReturnsNil() {
+        XCTAssertNil(parseAmount(""))
+    }
+    func testNegativeReturnsNil() {
+        XCTAssertNil(parseAmount("-5"))
+    }
+    func testNormalValueParses() {
+        XCTAssertEqual(parseAmount("12.5"), 12.5)
+    }
+}
+\end{lstlisting}
+
+跑测试：CmdU。全绿之后再改代码，心里有底。记账本里的金额校验、汇总计算，都该有单元测试罩着。
+
+\booksection{三、签名与打包：给 App 盖上“印章”}
+
+每个 iOS App 都必须\textbf{签名}才能安装——证明“这个包出自你，没被篡改”。层级关系：
+
+\begin{itemize}
+  \item \textbf{学习阶段}：免费 Apple ID + Xcode 自动签名（Personal Team），真机可跑，7 天续期一次；
+  \item \textbf{分发阶段}：付费开发者账号（99 美元/年）签发证书与描述文件，才能上架和长期安装。
+\end{itemize}
+
+打包：Xcode 菜单 Product Archive（归档），构建完成后在 Organizer 里Distribute App选 App Store Connect 上传。\textbf{归档必须用 Generic iOS Device 作为目标}（不是模拟器），这是新手常忘的一步。
+
+\textbf{避坑提醒：证书丢了 = 更新断档}\par
+
+签名证书和私钥一旦丢失，你无法再给旧 App 发更新——用户只能装“全新”应用。妥善备份证书（钥匙串导出 .p12）并记好密码。好在苹果提供了“自动签名”和云证书管理（Xcode 里勾选 Automatically manage signing），能省掉大部分手工操作的坑。
+
+\booksection{四、上架 App Store 全流程}
+
+注册开发者账号
+
+准备商店素材
+
+上传构建包
+
+填隐私与审核信息
+
+苹果审核（1-7 天）
+
+上架
+
+\begin{center}\small\color{gray}图 5：App Store 上架六步走\end{center}
+
+\begin{itemize}
+  \item \textbf{注册}：developer.apple.com，个人账号 99 美元/年；
+  \item \textbf{素材}：图标（1024×1024，别带圆角——苹果自己切）、截图（iPhone 各尺寸）、描述、隐私政策链接；
+  \item \textbf{隐私问卷}：如实申报收集了哪些数据——不联网的记账本可以"不收集任何数据"；
+  \item \textbf{审核}：首次提交常有 1-7 天等待，被拒就按"审核备注"逐条改——苹果的拒绝理由通常写得非常具体，照做即可；
+  \item \textbf{TestFlight}：上架前先把测试版发给朋友内测（最多 10000 人），收集一轮反馈再正式提交，专业范儿十足。
+\end{itemize}
+
+\booksection{五、商店素材怎么做：第一印象就是下载量}
+
+商店页是用户“逛店”时看到的橱窗。三个素材决定第一印象：
+
+\begin{itemize}
+  \item \textbf{图标}：1024×1024，别用截图凑合。没设计能力就用 AI 工具生成一个简洁图形，\textbf{在桌面上缩小后还能一眼认出}才算合格；
+  \item \textbf{截图}：至少 2 套（iPhone 主流尺寸），展示最核心的功能场景；每张配一句人话文案（"一秒记一笔"比"高效的记账解决方案"好十倍）；
+  \item \textbf{描述}：第一句说清"这是什么 + 给谁用"，别堆砌"最专业、最强"——真诚比夸张有效。
+\end{itemize}
+
+\begin{tcbpractice}{来动手：把记账本"交付"一次}
+\booksection{六、崩溃上报与性能优化小清单}
+
+App 上架前，这两件事值得各花半小时：
+
+\booksubsection{崩溃监控}
+
+你测试时没崩，不代表用户手机不崩。苹果在 Xcode Organizer 里提供免费的崩溃报告（付费账号可看真机崩溃日志）；更省心的方案是接入第三方 SDK（如 Firebase Crashlytics）。\textbf{没有崩溃监控的上架，等于闭着眼睛开车}。
+
+\booksubsection{性能自查四条}
+
+\begin{enumerate}
+  \item \textbf{列表用 LazyVStack / List}：长列表别用普通 VStack 硬排——懒加载是性能第一课；
+  \item \textbf{图片别硬塞原图}：用 AsyncImage（远程图）和系统缓存，5MB 原图足以卡爆老机型；
+  \item \textbf{别在主线程干重活}：网络、大文件都走 async/await；
+  \item \textbf{用 Instruments 量一量}：Xcode 自带的性能分析器（Time Profiler、内存泄漏检查）——先测量，再优化，别凭感觉。
+\end{enumerate}
+
+(1) 给 parseAmount 等逻辑补 3 个单元测试（CmdU 跑绿）；(2) 用断点亲手抓一个自己制造的崩溃并修好；(3) Product Archive 打一个包，走 TestFlight 邀请朋友内测；(4) 有余力就注册开发者账号，把记账本真正提交上架。前三步今晚就能做完。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item 调试三板斧：print 日志、断点、SwiftUI 预览与视图检查器
+  \item XCTest：单元测试（CmdU）+ UI 测试 + 手动测试，模板已预置
+  \item 签名：免费账号自动签名（7 天续期）；付费账号才能分发
+  \item 打包：Generic iOS Device + Archive + Distribute；证书务必备份
+  \item 上架六步：注册 素材 上传 隐私问卷 审核 上架；TestFlight 先内测
+\end{itemize}
+
+\end{tcbsummary}

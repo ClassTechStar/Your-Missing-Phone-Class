@@ -1,0 +1,149 @@
+\bookchapter{Bab 67: Penyempurnaan dan Rilis — Pengujian, Debugging, dan Terbit di App Store}
+
+\chapterintro{App sudah jadi, lalu apa? Bab ini menjawab tiga hal untuk bergerak “dari bisa jalan” menuju “siap diserahkan”: cara debug yang efisien untuk mencari bug, cara menulis tes untuk mencegah regresi, dan cara mengirim App ke App Store agar diunduh seluruh dunia. Menerbitkan bukan sekadar seremoni — itulah garis pemisah antara sebuah karya dan sebuah produk.}
+
+\booksection{Tiga Jurus Debug: print, Breakpoint, dan Pratinjau}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Alat} & \textbf{Fungsi} & \textbf{Cara memakai} \tabularnewline
+\hline
+print + konsol & Melihat log saat berjalan & Di kode tulis print("nilai=\textbackslash{}(x)"), lihat keluarannya di konsol bagian bawah Xcode \tabularnewline
+Debug dengan breakpoint & Menghentikan program di baris tertentu untuk melihat nilai variabel & Klik sekali di samping nomor baris hingga muncul tanda biru; program berhenti saat mencapai titik itu, lalu telusuri selangkah demi selangkah \tabularnewline
+Pratinjau SwiftUI + debugger & Melihat antarmuka dan hierarki view secara real-time & Kanvas \#Preview + pemeriksa View Hierarchy saat runtime \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tiga jurus debug\end{center}
+
+\begin{tcbinfo}{Tips: Cara Membaca Log Crash?}
+Saat Swift crash, konsol menampilkan “Fatal error” beserta penyebabnya, dan Xcode berhenti di baris yang salah sambil menyorotnya. Riwayat crash di perangkat asli bisa dilihat di Xcode Window Organizer Crashes (perlu akun berbayar). Untuk kata kunci pencarian, utamakan “kalimat pertama penyebab error + swiftui” — pertanyaan yang presisi menghasilkan jawaban yang presisi.
+
+\end{tcbinfo}
+
+\booksection{Pengujian: Memberi Asuransi pada Kode}
+
+Tes manual tidak bisa diandalkan — mengubah satu fitur, fitur lain bisa rusak diam-diam. Tes adalah “obat penyesalan” sekaligus “rompi anti-peluru”. iOS memakai framework XCTest, terbagi dua:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Tingkatan} & \textbf{Menguji apa} & \textbf{Target} & \textbf{Kecepatan} \tabularnewline
+\hline
+Tes unit & Logika murni (perhitungan, validasi) & MyFirstAppTests & Hitungan detik \tabularnewline
+Tes UI & Perilaku antarmuka sungguhan & MyFirstAppUITests & Hitungan menit \tabularnewline
+Tes manual & Perasaan dan pengalaman pengguna sungguhan & —— & Selalu dibutuhkan \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tingkatan pengujian iOS (proyek templat sudah menyiapkan dua Test Target)\end{center}
+
+\begin{lstlisting}[language=Swift]
+import XCTest
+
+// Pisahkan logika "mengubah teks nominal menjadi angka" menjadi fungsi murni
+func parseAmount(_ input: String) -> Double? {
+    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+          v > 0 else { return nil }
+    return v
+}
+
+final class AmountTests: XCTestCase {
+    func testEmptyInputReturnsNil() {
+        XCTAssertNil(parseAmount(""))
+    }
+    func testNegativeReturnsNil() {
+        XCTAssertNil(parseAmount("-5"))
+    }
+    func testNormalValueParses() {
+        XCTAssertEqual(parseAmount("12.5"), 12.5)
+    }
+}
+\end{lstlisting}
+
+Jalankan tes: CmdU. Setelah semuanya hijau baru ubah kode — hati pun tenang. Validasi nominal dan perhitungan ringkasan di buku catatan keuangan semuanya sebaiknya dilindungi tes unit.
+
+\booksection{Penandatanganan dan Packaging: Memberi App “Cap Resmi”}
+
+Setiap App iOS harus ditandatangani sebelum bisa dipasang — sebagai bukti “paket ini berasal dari kamu dan tidak diutak-atik”. Hubungan tingkatannya:
+
+\begin{itemize}
+  \item Tahap belajar: Apple ID gratis + penandatanganan otomatis Xcode (Personal Team), bisa dijalankan di perangkat asli, perlu diperpanjang setiap 7 hari;
+  \item Tahap distribusi: akun pengembang berbayar (99 dolar AS/tahun) menerbitkan sertifikat dan provisioning profile, barulah bisa terbit di App Store dan dipasang jangka panjang.
+\end{itemize}
+
+Packaging: menu Xcode Product Archive (mengarsipkan); setelah build selesai, di Organizer pilih Distribute App pilih App Store Connect unggah. Pengarsipan wajib memakai Generic iOS Device sebagai target (bukan simulator) — langkah yang sering terlupakan pemula.
+
+\textbf{Peringatan Jebakan: Sertifikat Hilang = Pembaruan Terputus}\par
+
+Begitu sertifikat penandatanganan dan kunci privat hilang, kamu tidak bisa lagi mengirim pembaruan untuk App lama — pengguna hanya bisa memasang aplikasi “benar-benar baru”. Backup sertifikat dengan baik (ekspor .p12 dari Keychain) dan simpan kata sandinya. Untungnya Apple menyediakan “penandatanganan otomatis” dan manajemen sertifikat cloud (centang Automatically manage signing di Xcode), yang menghemat sebagian besar kerumitan manual.
+
+\booksection{Alur Lengkap Menerbitkan ke App Store}
+
+Mendaftar akun developer
+
+Menyiapkan materi store
+
+Unggah paket build
+
+Isi informasi privasi dan review
+
+Review Apple (1-7 hari)
+
+Rilis di store
+
+\begin{center}\small\color{gray}Gambar 5: Enam langkah menerbitkan ke App Store\end{center}
+
+\begin{itemize}
+  \item Registrasi: developer.apple.com, akun pribadi 99 dolar AS/tahun;
+  \item Aset: ikon (1024×1024, jangan pakai sudut membulat — Apple yang memotongnya sendiri), tangkapan layar (berbagai ukuran iPhone), deskripsi, tautan kebijakan privasi;
+  \item Kuesioner privasi: laporkan dengan jujur data apa saja yang dikumpulkan — buku catatan keuangan tanpa internet boleh memilih "tidak mengumpulkan data apa pun";
+  \item Review: pengajuan pertama biasanya menunggu 1–7 hari; jika ditolak, perbaiki satu per satu sesuai "catatan review" — alasan penolakan Apple biasanya ditulis sangat spesifik, tinggal diikuti;
+  \item TestFlight: sebelum terbit, kirim dulu versi tes ke teman-teman untuk uji internal (maksimal 10.000 orang), kumpulkan satu putaran masukan sebelum mengajukan resmi — sangat profesional.
+\end{itemize}
+
+\booksection{Membuat Aset Toko: Kesan Pertama Menentukan Jumlah Unduhan}
+
+Halaman toko adalah etalase yang dilihat pengguna saat “berkunjung”. Tiga aset menentukan kesan pertama:
+
+\begin{itemize}
+  \item Ikon: 1024×1024, jangan asal pakai tangkapan layar. Kalau tidak punya kemampuan desain, buat grafis sederhana dengan alat AI; baru dianggap layak jika tetap mudah dikenali sekali lihat setelah diperkecil di layar utama;
+  \item Tangkapan layar: minimal 2 set (ukuran utama iPhone), memperlihatkan skenario fitur paling inti; setiap gambar diberi satu kalimat caption berbahasa manusia ("Catat dalam sekejap" sepuluh kali lebih baik daripada "Solusi pencatatan keuangan yang efisien");
+  \item Deskripsi: kalimat pertama menjelaskan dengan jelas "ini apa + untuk siapa"; jangan menumpuk kata "paling profesional, paling hebat" — kejujuran lebih efektif daripada bombastis.
+\end{itemize}
+
+\begin{tcbpractice}{Praktik: "Menyerahkan" Buku Catatan Keuangan Sekali}
+\booksection{Daftar Singkat Pelaporan Crash dan Optimasi Performa}
+
+Sebelum App terbit, dua hal ini layak masing-masing diberi waktu setengah jam:
+
+\booksubsection{Pemantauan crash}
+
+Tidak crash saat kamu menguji belum berarti tidak crash di ponsel pengguna. Apple menyediakan laporan crash gratis di Xcode Organizer (log crash perangkat asli untuk akun berbayar); solusi yang lebih praktis adalah mengintegrasikan SDK pihak ketiga (seperti Firebase Crashlytics). Menerbitkan tanpa pemantauan crash sama dengan menyetir dengan mata terpejam.
+
+\booksubsection{Empat pemeriksaan performa}
+
+\begin{enumerate}
+  \item Daftar memakai LazyVStack / List: daftar panjang jangan dipaksakan dengan VStack biasa — lazy loading adalah pelajaran performa pertama;
+  \item Gambar jangan langsung pakai resolusi asli: gunakan AsyncImage (gambar jarak jauh) dan cache sistem; gambar asli 5MB cukup untuk membuat ponsel tua tersendat;
+  \item Jangan mengerjakan tugas berat di thread utama: jaringan dan file besar semuanya lewat async/await;
+  \item Ukur dengan Instruments: profiler bawaan Xcode (Time Profiler, pemeriksa kebocoran memori) — ukur dulu, baru optimasi; jangan mengandalkan perasaan.
+\end{enumerate}
+
+(1) Lengkapi 3 tes unit untuk logika seperti parseAmount (jalankan hijau dengan CmdU); (2) gunakan breakpoint untuk menangkap sendiri satu crash buatanmu dan perbaiki; (3) buat satu paket lewat Product Archive, lalu ajak teman uji internal via TestFlight; (4) jika ada sisa tenaga, daftar akun pengembang dan benar-benar ajukan buku catatan keuanganmu ke App Store. Tiga langkah pertama bisa diselesaikan malam ini juga.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Tiga jurus debug: log print, breakpoint, pratinjau SwiftUI dan pemeriksa view
+  \item XCTest: tes unit (CmdU) + tes UI + tes manual, sudah disiapkan di templat
+  \item Penandatanganan: akun gratis pakai penandatanganan otomatis (perpanjang tiap 7 hari); hanya akun berbayar yang bisa mendistribusikan
+  \item Packaging: Generic iOS Device + Archive + Distribute; sertifikat wajib di-backup
+  \item Enam langkah menerbitkan: registrasi aset unggah kuesioner privasi review terbit; uji internal dulu lewat TestFlight
+\end{itemize}
+
+\end{tcbsummary}

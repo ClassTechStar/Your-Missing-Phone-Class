@@ -1,0 +1,188 @@
+\bookchapter{Chapter 38: Five Thinking Principles of AI Coding}
+
+\chapterintro{If this book makes you remember only one chapter, make it this one. The five thinking principles are the book's heart. Everything after — context, requirements, prompts, quality — expands these five in different scenarios. Don't worry: none are hard to grasp, but each deserves a few projects to sink into muscle memory.}
+
+The story starts with a fun origin: when Andrej Karpathy open-sourced his project, he attached a 70-line CLAUDE.md summarizing four core principles for working with AI. That file earned 70,000+ GitHub Stars and became the most widely cited playbook for AI coding practitioners worldwide. These four principles aren't empty slogans — they're actionable thinking habits distilled from massive practice. This book adds a fifth — Iterate and Verify — completing the five-principle system.
+
+\begin{tcbinfo}{Why is a 70-line file so valuable?}
+What do 70,000 Stars mean? Most GitHub projects never get close. That a 70-line text file earned them proves one thing: in the AI era the scarcest resource isn't code — it's the ability to “think clearly.” Those 70 lines are a concentrated form of clarity.
+
+\end{tcbinfo}
+
+\booksection{Principle 1: Think Before Coding}
+
+This is the most counterintuitive of the five. If AI can write code for us, why think first? Simple: AI output quality tracks your input quality. If you haven't figured out what you want, AI's answers will trap you in endless revision loops — aka “AI getting lost with you.”
+
+“Think first” means answering three questions before prompting AI — an inseparable “thinking triangle”:
+
+\begin{enumerate}
+  \item What problem am I solving? (Goal)
+  \item What should the result look like? (Acceptance criteria)
+  \item What constraints must I respect? (Boundaries)
+\end{enumerate}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Thinking dimension} & \textbf{Vague input (bad)} & \textbf{Clear input (good)} \tabularnewline
+\hline
+Problem definition & Make me a website & Make a personal tool site with entry cards for 3 small AI tools \tabularnewline
+Expected result & Make it look nice & Responsive layout, dark theme, hover animation on cards, works on mobile \tabularnewline
+Constraints & (Not stated) & No frameworks, pure HTML+CSS+JS, single-file deploy, no backend \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Vague vs. clear input for the same request\end{center}
+
+\begin{tcbwarn}{Note: Think first $\neq$ write a perfect spec first}
+“Think first” doesn't mean “write a perfect PRD before starting.” It's a quick but structured thinking pass — 30 seconds on those three questions beats 30 minutes of back-and-forth in chat. Small tasks need short answers; big projects can expand them into full requirement docs (see Chapter 40).
+
+\end{tcbwarn}
+
+\booksection{Principle 2: Simplicity First}
+
+The biggest trap in AI coding isn't “can't build it” — it's “builds too much.” Ask AI for a “user management system” and it may generate auth, permissions, roles, audit logs, data export — when all you need is a simple login page. Overbuilding is the main cause of bloated AI code.
+
+“Simplicity First” means following the “minimum viable” rule every time you prompt: implement the core with the least code, solve the problem with the simplest design, validate the idea with the fewest features. Karpathy put it well: “If you need a discounted price, you don't need an e-commerce engine.”
+
+In practice, Simplicity First means a few concrete habits:
+
+\begin{itemize}
+  \item Have AI implement one feature at a time, not the entire system in one prompt;
+  \item Prefer standard libraries and simple designs over heavy dependencies;
+  \item If 50 lines can solve it, don't let AI write 500;
+  \item When AI's output goes beyond scope, boldly tell it to cut the extras.
+\end{itemize}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Scenario} & \textbf{Overbuilt (avoid)} & \textbf{Simple (recommended)} \tabularnewline
+\hline
+Need to store data & Set up MySQL + ORM & Start with JSON files or SQLite \tabularnewline
+Need user login & OAuth2.0 + JWT + role permissions & Start with simple password auth \tabularnewline
+Need a frontend framework & React + Redux + Router & Try plain HTML + vanilla JS first \tabularnewline
+Need to deploy & Docker + CI/CD + K8s & Get it running locally first \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Overbuilt vs. simple approaches for common scenarios\end{center}
+
+\booksection{Principle 3: Surgical Changes}
+
+When iterating an existing project, every change should be surgical — touch only what must change. This matters especially in AI coding because AI loves to “tidy up while it's in there”: you ask it to fix one bug and it refactors half a file.
+
+Surgical Changes means every prompt explicitly states the scope and boundaries: “Only modify the calculate\_discount function,” “don't touch anything else,” “keep the existing code style.” If AI goes beyond scope, immediately tell it to revert the extras.
+
+Karpathy illustrated this with a diff example. Say you ask AI to add “member pricing” to a cart discount function. Good output: only that function changes, a few lines added. Bad output: the whole file is refactored — the new code might look “cleaner,” but you can't be sure it didn't introduce bugs. In AI coding, “looks better” is never a reason to ignore instructions.
+
+Bad prompt (vague scope)
+
+\begin{lstlisting}
+Help me optimize this project's discount logic
+\end{lstlisting}
+
+Good prompt (precise scope)
+
+\begin{lstlisting}
+Only modify the calculate\_discount function in cart.py: 1. Add member pricing on top of existing discounts 2. Members get an extra 10\% off 3. Do not change the function signature or other functions 4. Keep the existing variable naming style
+\end{lstlisting}
+
+\booksection{Principle 4: Goal-Driven Execution}
+
+This principle answers a key question: should you tell AI “how to do it” or “what to do”? Karpathy's answer is the latter. Instead of “create a class, then add methods, then write tests,” say “I need a tool that parses a CSV and counts unique values per column.” Let AI pick the implementation path; you accept the result.
+
+Goal-driven execution has a double payoff. AI gets room to choose the best path instead of being boxed in by your middle steps. You shift attention from “how” to “is the result right” — exactly what a conductor should do.
+
+\begin{tcbwarn}{Note: Goal-driven $\neq$ hands-off}
+You still need strict acceptance after AI runs: Does the result meet the need? Are edge cases handled? Any obvious overengineering? If it's off, give specific feedback — not “redo it,” but “this raises IndexError on empty list input; please add a null/empty check.”
+
+\end{tcbwarn}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Instruction style} & \textbf{Example} & \textbf{Outcome} \tabularnewline
+\hline
+Imperative (how) & "First create a Python class called DataParser, add a parse method that takes filename, use the csv module to read…" & AI becomes a typist; your middle steps may not be optimal \tabularnewline
+Goal-based (what) & "I need a tool: read a CSV, count unique values per column, output JSON. Please implement it fully." & AI picks the best path; you accept the result \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Imperative vs. goal-based instructions\end{center}
+
+\booksection{Principle 5: Iterate and Verify}
+
+This is the fifth principle this book adds to Karpathy's four. Core belief: AI's first output is almost never final. Effective AI coding is a generate verify correct loop, not one-shot prompt output.
+
+“Iterate and Verify” isn't passive “try again if wrong” — it's a structured validation flow. After each AI output, verify on three levels:
+
+\begin{itemize}
+  \item Level 1 · Functional: Does it run? Are inputs and outputs right?
+  \item Level 2 · Boundary: What about empty, oversized, or invalid inputs?
+  \item Level 3 · Architectural: Is the structure sound? Hardcoded values? Easy to extend later?
+\end{itemize}
+
+Define the goal
+
+AI generates code
+
+Feature check
+
+Pass
+
+Edge-case check
+
+Pass
+
+Architecture review
+
+Passed — go to the next step
+
+Fail
+
+Give specific feedback
+
+Regenerate
+
+\begin{center}\small\color{gray}Figure 2: The iterative verification loop in AI coding\end{center}
+
+The key step is “give specific feedback.” When verification fails, don't say “wrong, redo.” Say “the function raises IndexError on empty list input; please add an empty check on line 15.” Specific feedback lets AI fix precisely; vague feedback just makes it re-guess your intent.
+
+\booksection{Harness Engineering: Agent = Model + Harness}
+
+In mid-2026, Harness Engineering started trending in the AI coding community. The core formula is simple:
+
+An agent's capability = model capability × harness quality
+
+Model capability is the brain's intelligence ceiling; the Harness is the “work environment” around it — context management, tool integration, workflow orchestration, memory systems, and more.
+
+This explains a common puzzle: with the same GPT-4 or Claude, why do some people ship stunning projects while others get mediocre code? The difference isn't the model — it's the harness. A good harness includes clear project spec files, sensible tool integration, organized conversation context, and solid verification flow. The model sets the ceiling; the harness decides how much of it you can use.
+
+\begin{tcbinfo}{The genius intern analogy}
+Think of the model as a genius intern — sky-high IQ, but without project docs, tool guidance, deadlines, and acceptance criteria, they won't ship great work. Harness Engineering is the craft of “setting up a genius intern's workspace.”
+
+\end{tcbinfo}
+
+The rest of this book is essentially about building a good harness: Chapter 39 teaches context management (project memory), Chapter 40 requirements (PRD), Chapter 43 conversation technique (prompt layering), Chapter 45 quality assurance (verification flow). Together, that's your harness.
+
+\begin{tcbpractice}{Hands-on: Break down your next idea with the "thinking triangle"}
+Pick a small thing you've wanted to build but never started (a countdown page, a drink-water reminder script). Spend 3 minutes answering: (1) What problem does it solve? (2) What should it look like done? (3) What constraints (time, tech, environment)? Write the answers as one paragraph. Congratulations — you just did your first Think Before Coding. That paragraph is a solid high-quality prompt.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter recap}
+\begin{itemize}
+  \item Five principles from Karpathy's 70-line CLAUDE.md (70K+ Stars); this book adds "Iterate and Verify"
+  \item Think Before Coding: Answer three questions first — what, what result, what constraints?
+  \item Simplicity First: AI's biggest trap is building too much — a discount doesn't need an e-commerce engine
+  \item Surgical Changes: Change with surgical precision; refuse AI's "while I'm in here" refactors
+  \item Goal-Driven Execution: Say what, not how — let AI choose the path
+  \item Iterate and Verify: Three-level checks (functional/boundary/architecture) + specific feedback, loop
+  \item Harness Engineering: Ability = Model × Harness — manage AI like a genius intern's workspace
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,113 @@
+\bookchapter{Chapter 21: In-depth Exploration of Mobile Networks and Information Security}
+
+\chapterintro{Using a VPN}
+
+\booksection{: Your phone VPN encrypted tunnel VPN server target website. The data is encrypted and encapsulated, so “peeping toms” can only see a bunch of garbled text. Additionally, the target website sees the IP address of the VPN server, not your real IP.}
+
+So what can a VPN actually do? Simply put: first,
+
+\begin{itemize}
+  \item \textbf{protect your privacy on public Wi-Fi}; second,
+  \item \textbf{bypass geographical restrictions}(such as watching content only available in certain countries); third,
+\end{itemize}
+
+prevent your Internet Service Provider (ISP) from logging your browsing habits\textbf{. But I must remind you:}don't use free VPNs!\textbf{Free often means your data is their “commodity.” I have a friend who used a free VPN, and his phone started popping up ads for no reason. Later we found out that the VPN had packaged and sold his browsing data to advertisers. So when choosing a VPN, either choose a paid big brand (like NordVPN, ExpressVPN), or simply don't use one.}Also, VPN is not omnipotent. It can only protect data “in transit.” If the target website itself is insecure, or your phone already has malware, a VPN can't help you.\textbf{2. The “Sweet Trap” of Public Wi-Fi—More Dangerous Than You Think}You might think, it's just connecting to free Wi-Fi, how much risk can there be? Let me tell you a true story: security researchers once did an experiment where they set up a Wi-Fi hotspot called “Starbucks\_Free” at an airport, and within an hour, over a hundred people connected. In reality, this hotspot was set up by the researchers themselves, and all\textbf{unencrypted traffic}passing through this hotspot—such as the content of HTTP web pages you visit and App communications without TLS enabled—they could indeed intercept and view.
+
+But note a key premise: today, the WeChat, online banking, and Alipay you use daily have mostly already adopted HTTPS encryption. In other words, even if attackers intercept the data packets, what they see is just a bunch of garbled text, and they
+
+\booksection{cannot directly read your chat content or payment password}
+
+. However, they can still know which websites you visited (domains). If certain old Apps or web pages are still using HTTP plaintext transmission, the content will be completely exposed. This type of attack is called a “Man-in-the-Middle” attack, and the principle is that the attacker “inserts themselves” between you and the real Wi-Fi router. What's more frightening is that many people's phones are set to “automatically connect to known Wi-Fi.” Attackers only need to set their hotspot name to one you've connected to before (such as “ChinaNet” or “CMCC”), and your phone will automatically connect to it.\textbf{So how to defend against this? Here are a few practical suggestions:}Look for HTTPS
+
+: The address bar starts with https://, and the extra “s” stands for Secure. When accessing any website that requires a password, if you see http:// (without the s), stop immediately and don't enter anything! Now mainstream browsers will display an “insecure” warning before non-HTTPS websites, so be alert when you see this mark.\textbf{Turn off “auto-connect”}: Whether iPhone or Android, turn off “auto-join” or “auto-connect” in Wi-Fi settings. Rather than letting your phone judge for itself, manually tap each time.
+
+Use mobile data for sensitive operations
+
+\begin{itemize}
+  \item \textbf{: Transfers, logging into online banking, entering ID numbers... honestly use your own 4G/5G data for these operations, don't save that little bit of data.}Forget infrequently used Wi-Fi
+  \item \textbf{: After returning from a business trip or travel, "forget" all the hotel Wi-Fi and airport Wi-Fi you temporarily connected to before. This way, next time your phone won't automatically connect to a fake hotspot with the same name.}3. How Does HTTPS Protect You?—SSL/TLS Handshake
+  \item \textbf{I just mentioned HTTPS, so how does it actually work? Every time you visit an HTTPS website, an "SSL/TLS handshake" occurs between the browser and the server. The whole process goes something like this:}Your browser says: "Hey, server, I want to communicate securely with you, here's my list of encryption capabilities (supported encryption algorithms, etc.)."
+  \item \textbf{The server replies: "Okay, I've selected this set of encryption schemes from your list, here's my digital certificate, which contains my public key, signed and certified by a certain CA organization."}The browser verifies the certificate's authenticity: Was it issued by a trusted CA? Has it expired? Does the domain name match?
+\end{itemize}
+
+\booksection{After verification passes, both parties use public key encryption to negotiate a “session key,” and all subsequent communication is encrypted with this key.}
+
+This is like going to a bank to do business: you first hand over your ID card (certificate), the teller verifies your identity, then the two of you agree on a secret code, and subsequent conversations can only be understood by the two of you. Even if someone eavesdrops nearby, they can only hear encrypted garbled text.
+
+\begin{enumerate}
+  \item But note: HTTPS only guarantees that the "transmission process" is encrypted, not that the target website is a good actor. Phishing websites can also use HTTPS—that little lock icon only indicates that you're connected to "some website," not that the website is the one you want to visit. So you still need to verify the URL yourself.
+  \item 4. DNS Security: Is Your "Network Phonebook" Safe?
+  \item DNS (Domain Name System) is like the internet's phonebook: you type "baidu.com," and DNS helps you look up which IP address it corresponds to (such as 110.242.68.66), and then the browser can connect. The problem is that traditional DNS queries are
+  \item plaintext
+\end{enumerate}
+
+It's just like going to a bank: you hand over your ID (the certificate), the teller verifies who you are, and then the two of you agree on a secret code. From that point on, only you two can understand the conversation — even if someone eavesdrops nearby, all they hear is encrypted gibberish.
+
+not encrypted
+
+\booksection{! This means your ISP, Wi-Fi provider, or any intermediate node can see which websites you've visited.}
+
+What's even more disgusting is “DNS hijacking”: attackers tamper with the DNS process to point “baidu.com” to a fake phishing website. You clearly typed the correct URL, but you're taken to an identical but actually fake login page, and once you enter your account password, you're done for.\textbf{Fortunately, there are now encrypted DNS solutions:}DNS over HTTPS (DoH)\textbf{: Hides DNS queries in HTTPS traffic, mixed in with normal web browsing traffic, making it impossible to distinguish which ones are DNS queries.}DNS over TLS (DoT)
+
+: Uses the TLS encryption protocol to specifically protect DNS queries, with an independent port. Network administrators can know you're using DoT but can't see the content.
+
+I personally recommend using Cloudflare's 1.1.1.1 or Google's 8.8.8.8 as DNS servers; both support encrypted DNS. In Android's “Private DNS” setting, just enter “one.one.one.one” or “dns.google,” super simple. iPhone is a bit more troublesome, requiring you to install a profile or set it up through an App, but it's worth doing.
+
+\begin{itemize}
+  \item \textbf{5. Does "Incognito Browsing" Really Make You Invisible?}First, the conclusion:
+  \item \textbf{Incognito mode is your window curtain, not an invisibility cloak.}What it does: It doesn't leave traces locally—after closing the incognito window, the browser doesn't save your browsing history, cookies, form fill-in records, or search history. It's appropriate to use incognito mode when looking something up on someone else's computer or buying a gift without family members finding out from browsing records.
+\end{itemize}
+
+What it can't do:
+
+\booksection{The website you visit}
+
+: When closed, it's the size of a regular phone; when opened, it's nearly square like a small tablet. Representatives: Huawei Mate X series, Samsung Galaxy Z Fold series, Xiaomi MIX Fold series, vivo X Fold series. Main selling point: “one phone = phone + tablet”.\textbf{; your IP address, device information, and browsing behavior are clear on the website's end.}
+
+Your network operator
+
+can still see which websites you visited
+
+\begin{itemize}
+  \item , just not the specific content (if HTTPS is used).\textbf{Company/school network administrators}can also monitor
+  \item your internet behavior.\textbf{Files you download and bookmarks you add will}be retained
+  \item and won't disappear when you close the window.\textbf{So remember: Incognito mode is a "local eraser," not a "network invisibility cloak." If you really need to hide your internet traces, you need a combination punch like VPN + Tor browser, but for daily use, knowing this much is enough.}6. Browser Privacy: Don't Let the Browser Sell You Out
+  \item You may not realize that the browser itself is a huge information collector. Cookies, browsing history, cache, autofill, location permissions... each one could leak your privacy. A few suggestions:\textbf{Clean browsing data regularly}: Every once in a while, go to settings and clean out cookies, cache, and history. Not to prevent "being tracked"—that's no longer very effective by clearing cookies—but to prevent your phone from getting slower and slower. Browser cache can take up several GB of space.
+\end{itemize}
+
+Give up the “Do Not Track” fantasy
+
+\booksection{: The “Send 'Do Not Track' request” option in browsers is essentially “asking” websites not to track you. But whether websites listen is another matter entirely; most websites simply ignore it. Don't count on it.}
+
+Make good use of privacy-protecting browsers
+
+\begin{itemize}
+  \item \textbf{: Firefox Focus, DuckDuckGo browser, Brave—these browsers block trackers and ads by default, much cleaner than the default settings of Chrome and Safari.}Search engines matter too
+  \item \textbf{: Use DuckDuckGo instead of Baidu/Google search; it doesn't record your search history or build user profiles. Honestly, the search results are indeed not as precise as Google, but it's enough for daily research.}Check App permissions
+  \item \textbf{: Go to phone settings and see what permissions your browser has been granted. Does it really need to access your location, microphone, contacts? Probably not.}7. Practical Security Checklist: Protect Yourself Starting Now
+  \item \textbf{Having said all this, here's a simple and straightforward security checklist. Spend half an hour to get it done, and your phone's security will have a qualitative leap:}Turn off Wi-Fi auto-connect
+  \item \textbf{: iPhone in Settings-Wireless LAN, Android in Wi-Fi settings.}Switch to an encrypted DNS
+\end{itemize}
+
+\booksection{: Android directly set Private DNS to “dns.google”; iPhone use an App or profile to set up 1.1.1.1's DoH.}
+
+Enable Two-Factor Authentication (2FA)
+
+\begin{enumerate}
+  \item \textbf{: WeChat, Alipay, Apple ID, Google account—enable 2FA wherever possible. SMS verification codes are already the lowest level of 2FA; using TOTP (such as Google Authenticator, Microsoft Authenticator) is even better.}Review all App permissions
+  \item \textbf{: Go through each App's permissions, especially these five: location, contacts, SMS, microphone, camera. You'll find some flashlight Apps surprisingly want your contacts—uninstall them immediately.}Clean browser data regularly
+  \item \textbf{: Set a calendar reminder, once a month, to clean cache and cookies.}Don't use data cables from public charging stations
+  \item \textbf{: USB ports can both charge and transmit data; malicious charging stations (called "Juice Jacking") can steal data while you charge. Bring your own charger head and cable when going out.}Do It Now: Give Your Phone a "Security Checkup"
+  \item \textbf{DNS upgrade}: Android: Settings > Connections \& Sharing > Private DNS > enter "one.one.one.one" or "dns.google". iPhone: Use Safari to search "1.1.1.1 DNS profile" to install the profile, or download Cloudflare's 1.1.1.1 App.
+  \item \textbf{Wi-Fi audit}: Open the Wi-Fi list and "forget" all unfamiliar, infrequently used, and strangely named hotspots.
+\end{enumerate}
+
+\begin{tcbpractice}{Permission cleanup}
+\begin{enumerate}
+  \item \textbf{: Go to Settings > Privacy/Permission management, review permissions for each App. Mark Apps with unreasonable permission requirements (such as a calculator wanting contacts), and consider uninstalling or using alternatives.}Check account security
+  \item \textbf{: Open the security page of your Apple ID or Google account, see if there are any unknown device logins, confirm 2FA is enabled, and check whether recovery contacts are trustworthy.}Chapter 22: How AI Works in Mobile Phones
+  \item \textbf{Welcome to the coolest "magic show" on mobile phones, starring: Artificial Intelligence. The "snap-and-get" beautiful photos you use every day, the voice assistant that responds as soon as you open your mouth, the input method that understands you better the more you use it—all have this invisible brain standing behind them.}1. AI Camera: Your "Post-Production Darkroom" Moved into the Phone
+  \item \textbf{Today's AI computational photography is more like stuffing a professional retoucher + photographer team directly into the shutter button. Before you press the shutter, AI has already started working: scanning the scene, identifying "this is blue sky," "this is a face," "this is a night scene."}2. Voice Assistant: How Does Your "Voice Secretary" Understand You?
+\end{enumerate}
+
+\end{tcbpractice}

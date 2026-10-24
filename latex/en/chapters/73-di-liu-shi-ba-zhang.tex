@@ -1,0 +1,154 @@
+\bookchapter{Chapter 68: The Road Ahead—Permissions, Notifications, and Modern Architecture}
+
+\chapterintro{Being able to build an app is only the start. This chapter is about the hurdles between “can build” and “builds well”: how to ask for permissions gracefully, how to send notifications without being annoying, how to lift your architecture another level, and—here in 2026—how to team up with AI to write iOS code. Every item is something you'll run into right away in a real project.}
+
+\booksection{Permissions: knock before you enter}
+
+Camera, location, contacts, notifications... for these “sensitive zones,” iOS requires the app to show a prompt asking the user at the moment of use. The rule is three steps: “declare + ask + degrade gracefully”:
+
+\begin{lstlisting}[language=Swift]
+// 1. Declare the usage text in Info.plist (without it, instant crash!)
+// Privacy - Location When In Use Usage Description: "Used to look up the weather in your city"
+
+// 2. Request it when you need it
+import CoreLocation
+
+@Observable
+class LocationModel {
+    private let manager = CLLocationManager()
+
+    func request() {
+        switch manager.authorizationStatus {
+        case .notDetermined: manager.requestWhenInUseAuthorization()
+        case .denied, .restricted: /* guide the user to Settings */
+        default: /* already granted, go ahead */
+        }
+    }
+}
+
+// 3. Degrade gracefully after denial: show a hint + open Settings
+// UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+\end{lstlisting}
+
+\begin{tcbwarn}{Note: iOS permissions are "one-shot"}
+The iOS permission prompt appears only once—once the user declines, it never pops up again. So: time the request for “the exact moment the user is about to use the feature” (not a pile of prompts at launch), and write the copy so it explains the purpose. Post-denial guidance (“go to Settings and turn on location”) is standard equipment—don't leave users stuck in a dead end.
+
+\end{tcbwarn}
+
+\booksection{Notifications: say something useful at the right time}
+
+Notifications are the channel apps use to reach users, and also the feature most easily “blocked” by them. iOS uses the UserNotifications framework. Three rules for notifications: only send what's useful, let users turn them off, and never pester people in the middle of the night. Basic usage:
+
+\begin{lstlisting}[language=Swift]
+import UserNotifications
+
+// 1. Request notification permission (one-time dialog)
+UNUserNotificationCenter.current()
+    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+        print(granted ? "granted" : "denied")
+    }
+
+// 2. Schedule a "daily 20:00 expense reminder"
+func scheduleDailyReminder() {
+    let content = UNMutableNotificationContent()
+    content.title = "Expense reminder"
+    content.body = "You haven't recorded today's expenses yet"
+    content.sound = .default
+
+    var comps = DateComponents()
+    comps.hour = 20
+    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+
+    let request = UNNotificationRequest(
+        identifier: "daily-reminder",
+        content: content,
+        trigger: trigger
+    )
+    UNUserNotificationCenter.current().add(request)
+}
+\end{lstlisting}
+
+Note: the iOS notification permission is also “one prompt only,” and users can switch it off anytime in system settings—so the sense of value in each notification matters a lot. One spam blast can lose a user forever.
+
+\booksection{Architecture, going deeper: MVVM and testability}
+
+Chapter 65 used MVVM; here are three advanced points to add:
+
+\begin{itemize}
+  \item Protocol abstraction: make the ViewModel depend on a protocol rather than a concrete class—then tests can inject a "fake data source." This is the cornerstone of testability;
+  \item Single responsibility: one ViewModel handles one thing only (the expense-tracking one doesn't handle weather); when features grow, split it up;
+  \item Don't over-engineer: for a solo small project, "an @Observable class + protocol abstraction" is plenty. Heavy architectures like VIPER or Clean Architecture can wait until team size and complexity come knocking—tools serve the goal; they're not for showing off.
+\end{itemize}
+
+\begin{tcbinfo}{Tip: SwiftUI's "ecosystem dividend"}
+The iOS ecosystem has two more “only-here” advanced tricks: widgets (WidgetKit) let users see information without opening the app (put the expense tracker's “spending this month” on the home screen), and Shortcuts (App Intents) let users invoke your features through Siri or automations. Both have official frameworks and are cheap to learn, yet they massively boost the user experience—worth unlocking early on the road to mastery.
+
+\end{tcbinfo}
+
+\booksection{The 2026 twist: AI-assisted iOS development}
+
+By 2026, AI is deeply embedded in Apple's development workflow. If you want to speed up, this combo is mature:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Stage} & \textbf{How AI helps} & \textbf{Your responsibility} \tabularnewline
+\hline
+Writing code & Xcode's built-in code completion + third-party AI plugins generate it & Describe requirements clearly, review the output \tabularnewline
+Looking things up & Hand official docs and error messages to AI to interpret & Verify key conclusions against the official docs \tabularnewline
+Writing tests & Have AI generate XCTest cases in the "normal/boundary/exception" categories & Confirm the cases match the business meaning \tabularnewline
+Fixing bugs & Paste the crash log + relevant code, and AI locates and fixes it & Understand the changes, run tests to verify \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Four scenarios for AI-assisted iOS development\end{center}
+
+For the full methodology—how to give AI instructions, how to review its work, how to avoid pitfalls—the complete 11 chapters are in Part 7 of this book, “Hands-On AI Coding” (Chapters 37–47), which I strongly recommend reading alongside this one: leave the Swift syntax to this part, and the art of working with AI to Part 7.
+
+\begin{tcbpractice}{Get hands-on: add the "power trio" to the expense tracker}
+\booksection{Swift concurrency essentials: @MainActor and Task}
+
+Swift 6's concurrency system has two rules every beginner must understand:
+
+\begin{itemize}
+  \item The UI can only be updated on the main thread: SwiftUI views are @MainActor by default, so bring network callbacks back to the main thread before changing state (await MainActor.run \{ ... \}, or mark the ViewModel @MainActor);
+  \item Manage async work with Task: the .task \{ \} modifier starts automatically when the view appears and cancels automatically when it disappears—that's the standard way to kick off async work in SwiftUI; don't scatter raw Tasks in body.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct WeatherScreen: View {
+    @State private var vm = WeatherViewModel()
+
+    var body: some View {
+        Group {
+            switch vm.state {
+            case .loading: ProgressView()
+            case .success(let d): WeatherContent(data: d)
+            case .error(let m): Text(m)
+            }
+        }
+        .task {                       // starts when it appears, cancels when it disappears
+            await vm.search(city: "Beijing")
+        }
+    }
+}
+\end{lstlisting}
+
+Behind these two rules is Swift 6's “data-race safety” design—the compiler errors out the moment you get it wrong, instead of waiting for the app to crash to find out. The compiler's errors aren't nitpicking; they're taking a bullet for you.
+
+(1) Add a “daily 8:00 PM expense reminder” to the tracker (notification permission + local notifications); (2) switch the ViewModel's data source to a protocol abstraction and write a unit test that injects fake data; (3) add a “spending this month” home-screen widget. Finish the trio and your project starts to look like a regular army.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter summary}
+\begin{itemize}
+  \item Permissions in three steps: declare in Info.plist (miss it and it crashes), ask at the moment of use, guide to Settings when denied
+  \item iOS permission prompts appear only once: pick the timing of "the moment they're about to use it," and write the purpose clearly
+  \item Three rules for notifications: only send useful ones, let users turn them off, don't pester; UserNotifications framework
+  \item MVVM advanced: protocol abstraction (testable), single responsibility, no over-engineering
+  \item Ecosystem dividends: WidgetKit widgets + App Intents Shortcuts
+  \item Four AI-assisted scenarios: writing code, research, writing tests, fixing bugs; methodology in Part 7 (Chapters 37–47)
+\end{itemize}
+
+\end{tcbsummary}

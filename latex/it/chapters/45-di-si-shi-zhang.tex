@@ -1,0 +1,139 @@
+\bookchapter{Capitolo 40: Ingegneria dei requisiti — trasformare le idee in istruzioni eseguibili dall'AI}
+
+\chapterintro{Se l'ingegneria del contesto risolve il problema di “far capire all'AI il contesto”, l'ingegneria dei requisiti risolve quello di “far sapere all'AI cosa deve fare esattamente questa volta”. È la fase della programmazione AI che mostra meglio le differenze tra le persone: con gli stessi strumenti e gli stessi modelli, c'è chi realizza progetti sorprendenti e chi solo giocattoli mediocri. La differenza spesso non sta nelle capacità tecniche, ma nella capacità di esprimere i requisiti.}
+
+\booksection{Da un'idea vaga a requisiti strutturati}
+
+Ogni progetto nasce da un'idea vaga: “voglio fare un'app per tenere le spese”, “voglio un sito personale”, “voglio uno strumento per le cose da fare”. Le idee in sé non sono un problema, ma se le lanci direttamente all'AI la qualità del risultato dipende interamente dalla fortuna. L'obiettivo dell'ingegneria dei requisiti è trasformare quell'idea vaga in un requisito strutturato che l'AI possa eseguire con precisione.
+
+La buona notizia è che un requisito strutturato non richiede un PRD di decine di pagine. Ti basta rispondere a cinque domande, che chiamiamo i “cinque elementi del requisito”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Elemento} & \textbf{Domanda} & \textbf{Esempio: app per le spese} \tabularnewline
+\hline
+Who & Per chi è? & Uso personale, per registrare entrate e uscite quotidiane \tabularnewline
+What & Cosa fa? & Un'app che registra ogni voce di entrata e uscita, riepiloga per mese e offre grafici \tabularnewline
+Why & Perché farla? & Voglio capire la struttura delle mie spese ed individuare le uscite superflue \tabularnewline
+How & Come, in grandi linee? & Frontend in React, dati salvati in locale nel browser, per ora niente backend né login \tabularnewline
+Constraint & Quali vincoli? & Sviluppo individuale, da completare in 2 settimane, senza necessità di pubblicazione online \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}I cinque elementi del requisito con esempi\end{center}
+
+Questi cinque elementi non vanno scritti in un documento formale: basta passarli velocemente in mente. La chiave è abituarsi a “pensare bene prima di parlare”. Scoprirai che quando riesci a rispondere con chiarezza a queste cinque domande, la descrizione dei tuoi requisiti diventa naturalmente strutturata.
+
+\booksection{L'arte della scomposizione dei requisiti a livelli}
+
+Per i progetti più grandi non basta una sola descrizione del requisito. Devi scomporre il grande requisito in sotto-requisiti piccoli e verificabili indipendentemente. Questo processo si chiama “scomposizione dei requisiti” e il principio fondamentale è: ogni sotto-requisito deve poter essere completato, verificato e consegnato in modo indipendente.
+
+Prendendo come esempio “fare un'app personale per le spese”, una scomposizione ragionevole è:
+
+\begin{enumerate}
+  \item Implementare la funzione base di registrazione di entrate e uscite (aggiungere, visualizzare, eliminare le voci);
+  \item Aggiungere le categorie (etichettare ogni voce con pasti, trasporti e così via);
+  \item Implementare il riepilogo mensile (statistiche di entrate e uscite mese per mese);
+  \item Aggiungere la visualizzazione dei dati (grafici della struttura delle spese).
+\end{enumerate}
+
+Ogni passaggio è un incremento funzionale che può essere eseguito e verificato da solo.
+
+La regola d'oro della scomposizione dei requisiti: dopo ogni passo il progetto deve restare una "cosa che funziona", per quanto rozza. Non lasciare mai il progetto in uno stato in cui "tutto è fatto a metà ma niente funziona".
+
+Questa scomposizione ha due vantaggi. Primo, ti fa sempre vedere i progressi: a ogni passaggio completato la tua app guadagna una funzione, e questo feedback positivo è vitale per i progetti di lunga durata (della soddisfazione tutti abbiamo bisogno). Secondo, tiene ogni compito dell'AI abbastanza piccolo, riducendo il rischio di “fraintendimento da parte dell'AI”: più il compito è piccolo, più l'AI lo capisce con precisione e migliore è la qualità del risultato.
+
+\booksection{Modello di scrittura del PRD e pratica}
+
+Per i progetti più grandi (per esempio un'applicazione full-stack con frontend, backend e più moduli funzionali), i soli cinque elementi del requisito potrebbero non bastare. In quel caso devi scrivere un documento dei requisiti di progetto (PRD) più formale. Un punto su cui ci si sbaglia spesso: il PRD non è scritto per l'AI — è scritto per te stesso, per mettere in ordine le idee; solo dopo potrai dare all'AI istruzioni più precise.
+
+Un buon PRD non deve essere lungo, ma dovrebbe contenere sei parti: panoramica del progetto (cosa fa, detto in un paragrafo), elenco delle funzioni (cos'è ogni funzionalità), soluzione tecnica (quale stack e architettura di massima), modello dei dati (le strutture dati principali), descrizione dell'interfaccia (come sono le pagine principali) e piano di sviluppo (in quanti passaggi si completa).
+
+\begin{lstlisting}
+# PRD app di finanza personale
+## Panoramica del progetto
+Un'app leggera di finanza personale con registrazione entrate/uscite, categorie, totali mensili e visualizzazione dei dati.
+## Elenco funzionalità
+1. Registrare entrate/uscite: importo, tipo (entrata/uscita), categoria, nota, data
+2. Gestione categorie: preset per pasti, trasporti, shopping, svago, altro
+3. Riepilogo mensile: entrate, uscite e saldo totali per mese
+4. Visualizzazione delle spese: grafico a torta delle quote per categoria
+5. Esportazione dati: esporta in CSV
+## Soluzione tecnica
+- Frontend: React + TypeScript + Tailwind CSS
+- Archiviazione dati: localStorage (nessun backend)
+- Grafici: Chart.js
+- Build: Vite
+## Modello dati
+Record {
+  id: string
+  amount: number
+  type: 'income' | 'expense'
+  category: string
+  note: string
+  date: string  // YYYY-MM-DD
+}
+## Piano di sviluppo
+Step 1: funzioni base di registrazione (CRUD)
+Step 2: gestione categorie
+Step 3: riepilogo mensile
+Step 4: visualizzazione dati
+Step 5: esportazione dati
+\end{lstlisting}
+
+Nota lo stile di scrittura di questo PRD: elenchi concisi e formati strutturati, non lunghi discorsi. Ogni funzionalità ha una definizione chiara e il modello dei dati è descritto con tipi semplici. Un PRD in questo stile non solo lo leggi con chiarezza tu, ma quando lo dai all'AI anche l'AI capisce con precisione ogni punto del requisito.
+
+\booksection{Nella pratica: deduzione completa dall'idea al piano}
+
+Restare sulla carta non è divertente: facciamo un esempio completo per ripercorrere tutto il processo dell'ingegneria dei requisiti. Supponiamo che la tua idea sia: “voglio fare un tracker degli studi che tenga traccia di cosa imparo ogni giorno”.
+
+Primo passaggio: passiamo in rassegna i cinque elementi del requisito.
+
+\begin{itemize}
+  \item Who: uso personale.
+  \item What: uno strumento che registra cosa studi ogni giorno, monitora il tempo di studio e permette di rivedere i progressi.
+  \item Why: voglio coltivare l'abitudine allo studio continuo e vedere le mie conquiste accumularsi.
+  \item How: prima faccio una versione web, con i dati salvati in locale nel browser.
+  \item Constraint: sviluppo da zero, funzioni principali completate entro 1 settimana.
+\end{itemize}
+
+Secondo passaggio: scomponiamo i requisiti.
+
+\begin{enumerate}
+  \item Step 1: implementare la funzione “registra voce di studio” (data, contenuto, durata);
+  \item Step 2: aggiungere le “statistiche del tempo di studio” (oggi, totale settimanale);
+  \item Step 3: implementare la vista “calendario dello studio” (mostrata come il grafico dei contributi di GitHub);
+  \item Step 4: aggiungere la funzione “riassunto dello studio” (mostra a caso le registrazioni di un giorno passato, per ripassare).
+\end{enumerate}
+
+Terzo passaggio: scrivi un PRD breve. Non serve lungo — la scomposizione di sopra costituisce già il corpo principale del PRD. Mettilo in ordine in un file .md, nella cartella radice del progetto, come riferimento comune per te e per l'AI.
+
+Quarto passaggio: inizia a sviluppare il primo step. L'istruzione da dare all'AI può essere:
+
+\begin{lstlisting}
+Mi serve la prima funzione di un tracker dell'apprendimento — registrare le voci di studio.
+L'utente può aggiungere un record con data, cosa studiato e durata in minuti.
+I dati sono salvati in localStorage.
+Il frontend usa React + TypeScript.
+Fornisci un'implementazione completa.
+\end{lstlisting}
+
+Nota le caratteristiche di questa istruzione: descrive solo l'obiettivo del passaggio corrente (la funzione di registrazione), senza mescolare altre funzioni; esplicita i vincoli tecnici (React, TypeScript, localStorage); fornisce informazioni sufficienti perché l'AI sappia “cosa fare” e “come muoversi”, lasciando però all'AI le scelte di implementazione. È questa un'istruzione di programmazione AI di alta qualità, elaborata con l'ingegneria dei requisiti.
+
+\begin{tcbpractice}{Mettiti alla prova: scrivi la scheda dei cinque elementi per il tuo “progetto del cuore”}
+Scegli un piccolo progetto che rimugini da tempo e dedica 5 minuti a riempire una scheda: Who / What / Why / How / Constraint, una frase ciascuno. Poi scomponilo in 3-5 passaggi in cui “ogni fase è già utilizzabile”. Scoprirai che, una volta scritta su carta, l'idea passa da “sogno a occhi aperti” a “lista di cose da fare”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Riepilogo del capitolo}
+\begin{itemize}
+  \item I cinque elementi del requisito: Who / What / Why / How / Constraint — pensa bene prima di parlare
+  \item Regola d'oro della scomposizione dei requisiti: a ogni passaggio completato il progetto è una “cosa utilizzabile”
+  \item Il PRD è scritto per te stesso: panoramica, elenco funzioni, soluzione tecnica, modello dati, interfaccia, piano
+  \item Una buona istruzione = descrivere solo il passaggio corrente + vincoli chiari + dire “cosa fare” senza dire “come farlo”
+  \item Modello di deduzione completa: cinque elementi scomposizione PRD istruzione, in quattro passi
+\end{itemize}
+
+\end{tcbsummary}

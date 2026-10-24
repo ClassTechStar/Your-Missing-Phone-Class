@@ -1,0 +1,115 @@
+\booksection{第二十章附：Termux——Android設備上嘅便攜式Linux終端環境}
+
+\chapterintro{如果你覺得開發者模式仲唔夠「硬核」，想要喺手機上體驗完整嘅Linux命令行，咁Termux正係為你準備嘅。佢無需root權限，就可以將一臺普通嘅安卓手機變成一臺便攜嘅Linux工作站，係進階用戶探索流動端開發與運維嘅利器。}
+
+\booksubsection{一、乜嘢係Termux}
+
+Termux係一款專為Android設備設計嘅開源終端模擬器同Linux環境應用程式，佢無需root權限即可喺手機上提供完整嘅Linux shell體驗。作為一個輕量級應用（安裝包淨係30MB左右），Termux通過APT包管理系統支援豐富嘅軟件生態，允許用戶喺流動設備上運行Python、Node.js、Git、SSH等工具，甚至搭建伺服器或進行滲透測試。
+
+Termux嘅核心優勢喺於輕量化同高度可擴展性，適合開發、學習及系統管理等多種場景。佢將標準嘅軟件包同精確嘅終端仿真結合喺一個開源解決方案中。
+
+\booksubsection{二、核心功能與特性}
+
+\subsubsection*{完整嘅Linux環境}
+
+Termux\textbf{淨係內置Bash}呢一種Shell。如果想使用Zsh或fish等其他Shell，需要通過包管理器手動安裝，例如：\texttt{pkg install zsh}或\texttt{pkg install fish}。同時Termux支援Vim、Nano、Emacs等編輯器，提供接近原生嘅命令行體驗。用戶可以通過“pkg install”安裝2000+軟件包，包括GCC、OpenSSH、SQLMap等開發同安全工具。
+
+\subsubsection*{強大嘅包管理}
+
+使用APT包管理器（類似Debian同Ubuntu），可安裝數千種Linux軟件包，涵蓋開發工具、網絡工具等。支援Python、Ruby、Node.js、Go、Rust、Swift等多種編程語言環境。
+
+\subsubsection*{安全與網絡功能}
+
+\begin{itemize}
+  \item \textbf{SSH遠端連接}：支援SSH用戶端同伺服器功能，可遠端連接其他設備或等手機成為SSH主機。
+  \item \textbf{加密工具}：提供OpenSSL等加密工具，支援數據加密同安全通信。
+  \item \textbf{伺服器搭建}：可配置Nginx或Apache搭建靜態網頁伺服器。
+\end{itemize}
+
+\subsubsection*{系統集成與擴展}
+
+\begin{itemize}
+  \item 訪問手機存儲權限，實現本地檔案管理。
+  \item 通過Termux:API插件調用傳感器、鏡頭等Android硬件功能。
+  \item 支援藍牙鍵盤同外部顯示器連接，具有完整嘅滑鼠支援。
+\end{itemize}
+
+\booksubsection{三、插件生態系統}
+
+Termux嘅核心應用程式可以通過幾個可選嘅插件應用進行擴展，提供額外嘅功能同埋集成：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{插件名稱} & \textbf{功能描述} \tabularnewline
+\hline
+Termux:API & 向命令行程式公開Android API功能 \tabularnewline
+Termux: Boot & 允許喺設備啟動時運行腳本 \tabularnewline
+Termux: Float & 提供浮動終端視窗 \tabularnewline
+Termux: Styling & 為終端啟用顏色方案同埋字體自定義 \tabularnewline
+Termux: Tasker & 將Termux腳本同Tasker自動化應用集成 \tabularnewline
+Termux: Widget & 允許從主螢幕小工具運行腳本 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{重要提示}
+Termux同埋佢嘅插件必須從同一來源安裝，因為佢哋共享相同嘅sharedUserId。混合來自唔同來源（如F-Droid同GitHub）嘅安裝會導致安裝錯誤。
+
+\end{tcbwarn}
+
+\booksubsection{四、安裝與配置指南}
+
+\subsubsection*{安裝步驟}
+
+\begin{enumerate}
+  \item \textbf{下載應用}：從官方渠道（F-Droid或GitHub）下載安裝Termux，無需root權限。
+  \item \textbf{初始化系統}：首次啟動後等待"Installing bootstrap packages"完成。
+  \item \textbf{獲取存儲權限}：執行\texttt{termux-\allowbreak setup-\allowbreak storage}獲取手機檔案系統權限。
+  \item \textbf{更新軟件源}：執行\texttt{pkg update \&\& pkg upgrade}更新軟件包列表。
+\end{enumerate}
+
+\subsubsection*{基礎優化}
+
+\begin{itemize}
+  \item \textbf{換鏡像源}：使用\texttt{termux-\allowbreak change-\allowbreak repo}命令通過圖形界面更換鏡像源（推薦清華大學鏡像源）。
+  \item \textbf{快捷鍵設定}：音量減鍵模擬Ctrl，音量加鍵模擬Esc，提升輸入效率。
+  \item \textbf{界面美化}：安裝Zsh + Oh My Zsh，配置主題同埋插件。
+\end{itemize}
+
+\booksubsection{五、典型應用場景}
+
+\subsubsection*{移動開發測試}
+
+喺手機上搭建完整嘅開發環境，編寫並運行Python腳本，使用GCC編譯C程式，通過Git管理代碼倉庫，結合SSH同遠程伺服器同步。
+
+\subsubsection*{伺服器運維}
+
+通過SSH遠程管理伺服器，執行系統維護、日誌分析等任務，隨時隨地處理伺服器問題。
+
+\subsubsection*{學習Linux操作}
+
+提供真實嘅Linux環境，係學習命令行同埋系統管理嘅理想平臺，可練習Shell腳本編寫、Linux檔案權限管理（如\texttt{chmod 755}設定 rwxr-xr-x 權限位、\texttt{chown user: group}修改檔案歸屬、\texttt{ls -\allowbreak l}查看 owner/group/other 三組九位權限）等基礎命令。注意呢個係Unix/Linux經典嘅“三組九位”權限模型（owner / group / other × 讀 / 寫 / 執行），同Windows NTFS嘅ACL訪問控制列表係完全唔同嘅兩套體系。
+
+\subsubsection*{網絡安全測試}
+
+安裝Nmap、SQLMap、Hydra、Metasploit等安全工具，進行網絡掃描同埋滲透測試。
+
+\booksubsection{六、版本與兼容性}
+
+Termux嘅最新穩定版本係v0.118.2，適用於Android $\geq$ 7嘅設備。需要注意嘅係，Termux喺Android 12同埋更高版本上可能存在唔穩定性，建議關注官方更新日誌以獲取最新兼容性資訊。
+
+\begin{tcbinfo}{總結}
+Termux將強大嘅Linux終端體驗帶到咗Android設備上，等手機成為一臺便攜嘅開發同埋學習工具。無論係開發者、系統管理員定係技術愛好者，都可以利用Termux喺移動設備上享受完整嘅命令行體驗，實現“口袋入面嘅Linux”呢個理念。
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{嚟動手：喺手機上跑通第一條Linux命令}
+\begin{enumerate}
+  \item 從F-Droid下載並安裝Termux，首次啟動等待初始化完成。
+  \item 執行\texttt{pkg update \&\& pkg upgrade}更新軟件包。
+  \item 安裝Python：\texttt{pkg install python}。
+  \item 輸入\texttt{python3 -\allowbreak c "print('Hello from Termux!')"}，感受喺手機上運行代碼嘅樂趣。
+\end{enumerate}
+
+\end{tcbpractice}

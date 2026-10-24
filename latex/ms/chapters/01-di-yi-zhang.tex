@@ -1,0 +1,367 @@
+\bookchapter{Bab 1: Hello, Komputer Peribadi Saya}
+
+\chapterintro{Telefon anda sebenarnya adalah komputer super peribadi dalam poket anda. Ia jauh lebih hebat berjuta kali ganda daripada komputer yang pernah mendaratkan manusia di bulan, namun berdiam diri di tapak tangan anda. Hari ini, mari kita kenali “gergasi senyap” ini dengan baik.}
+
+\booksection{I. “Organ Dalam” Perkakasan Telefon: Analisis Mendalam}
+
+Telefon walaupun kecil, organ lengkap. Mari kita kenali komponen-komponen tepat ini satu demi satu seperti kelas anatomi.
+
+\booksubsection{SoC (System on Chip): “Otak + Jantung” Telefon}
+
+SoC adalah singkatan System on Chip, diterjemahkan sebagai “keseluruhan sistem dimasukkan ke dalam satu cip”. Ia bukan sahaja CPU (Pemproses Pusat), tetapi mengintegrasikan CPU, GPU (Pemproses Grafik), NPU (Pemproses Neural), ISP (Pemproses Isyarat Imej), baseband (bertanggungjawab untuk komunikasi) dan lain-lain semuanya bersama.
+
+Ini seperti membina bangunan kerajaan bandar, loji kuasa, pusat komunikasi, balai polis semua dalam satu bangunan, kecekapan sangat tinggi.
+
+\booksubsection{CPU: Teras Pengiraan Universal}
+
+CPU adalah komponen paling teras dalam SoC, bertanggungjawab mengendalikan kebanyakan tugas pengiraan. CPU telefon menggunakan seni bina ARM, berbeza dengan seni bina x86 komputer, seni bina ARM menggunakan set arahan ringkas (RISC) sebagai ciri, penggunaan kuasa lebih rendah, lebih sesuai untuk peranti mudah alih.
+
+\textbf{Reka bentuk saiz teras CPU}: CPU telefon moden secara umum menggunakan seni bina “besar-kecil” (teknologi big.LITTLE ARM), membahagikan teras kepada tahap prestasi berbeza:
+
+\begin{itemize}
+  \item \textbf{Teras super besar/teras besar}: Prestasi paling kuat, bertanggungjawab untuk tugas berat. Seperti muat turun permainan, pelancaran aplikasi, pengiraan kompleks. Frekuensi tertinggi (3GHz+), tetapi penggunaan kuasa juga paling besar.
+  \item \textbf{Teras sederhana}: Imbangan prestasi dan penggunaan kuasa, mengendalikan tugas beban sederhana harian. Menyapu Weibo, menonton video, bertukar pelbagai tugas bergantung kepadanya.
+  \item \textbf{Teras kecil/teras kecekapan}: Penggunaan kuasa paling rendah, mengendalikan tugas latar belakang ringan. Mod sedia, mendengar muzik, menerima mesej dan lain-lain, hampir tidak menggunakan kuasa.
+\end{itemize}
+
+Tiga tahap teras bekerjasama: penjadual sistem mengikut beban tugas menguntukkan secara automatik — tugas ringan diberikan kepada teras kecil untuk menjimatkan kuasa, kerja berat diberikan kepada teras besar untuk berkuasa, selepas selesai bertukar kembali ke teras kecil. Inilah sebabnya telefon boleh bermain permainan dengan lancar dan juga sedia satu hari penuh.
+
+\textbf{Ciri seni bina setiap jenama}:
+
+\begin{itemize}
+  \item \textbf{Qualcomm Snapdragon 8 Elite}: Menggunakan seni bina CPU Oryon buatan sendiri (diperolehi dari pengambilalihan Nuvia), 2 teras super (4.32GHz) + 6 teras prestasi (3.53GHz), semuanya berdasarkan proses 3nm generasi kedua TSMC. Sepenuhnya meninggalkan seni bina awam ARM, prestasi teras tunggal dan berbilang teras mencapai peningkatan melompat. GPU ialah Adreno 830, menggunakan seni bina kepingan, prestasi grafik meningkat 40\%, Hexagon NPU kuasa pengiraan kira-kira 45 TOPS, prestasi inferens AI meningkat 45\%. (Nota: Versi tersuai Galaxy Samsung mempunyai frekuensi lebih tinggi, teras super boleh mencapai 4.47GHz.)
+  \item \textbf{MediaTek Dimensity 9400}: 1 teras super besar (Cortex-X925, 3.62GHz) + 3 teras prestasi (Cortex-X4, 3.3GHz) + 4 teras kecekapan (Cortex-A720, 2.4GHz), seni bina semua teras besar diteruskan, proses 3nm generasi kedua TSMC. GPU ialah Immortalis-G925 (12 teras), prestasi puncak meningkat 41\%, prestasi penjejakan sinar meningkat 40\%. Pemproses AI ialah NPU 890 generasi kelapan, menyokong operasi model besar sisi peranti, latihan LoRA sisi peranti dan penjanaan video sisi peranti.
+  \item \textbf{Apple A18 Pro}: 2 teras prestasi (kira-kira 4.04GHz) + 4 teras kecekapan (kira-kira 2.4GHz), proses 3nm generasi kedua TSMC. GPU 6 teras menyokong penjejakan sinar tahap perkakasan, NPU 16 teras (kira-kira 35 TOPS) menyediakan kuasa pengiraan yang kuat untuk AI sisi peranti dan Apple Intelligence. Seni bina buatan sendiri Apple masih memimpin dalam prestasi teras tunggal dan nisbah kecekapan, seni bina ingatan bersatu menyediakan kelebihan lebar jalur tinggi untuk inferens AI.
+  \item \textbf{Huawei Kirin 9020}: Dipasang pada siri Mate 70, menggunakan seni bina CPU Taishan buatan sendiri, keupayaan NPU dan ISP terus diperkuat, menyokong 5.5G dan komunikasi satelit, mewakili kejayaan terbaru cip domestik.
+\end{itemize}
+
+\booksubsection{GPU: Enjin Pemaparan Grafik}
+
+GPU (Graphics Processing Unit) khusus bertanggungjawab untuk tugas grafik dan pengiraan selari. Bilangan terasnya jauh lebih banyak daripada CPU (mudah beratus-ratus ribu teras), tetapi fungsi setiap teras agak mudah, sesuai untuk memproses sejumlah besar pengiraan serupa secara serentak.
+
+\textbf{Aliran pemaparan grafik}:
+
+\begin{enumerate}
+  \item \textbf{Pemprosesan bucu}: Mengira koordinat kedudukan setiap bucu dalam model 3D.
+  \item \textbf{Rasterisasi}: Menukar grafik 3D kepada piksel pada skrin 2D.
+  \item \textbf{Bayang piksel}: Mengira warna, tekstur, kesan pencahayaan untuk setiap piksel.
+  \item \textbf{Penggabungan output}: Menggabungkan semua lapisan menjadi gambar akhir, dihantar ke skrin untuk dipaparkan.
+\end{enumerate}
+
+\textbf{Pengaruh GPU terhadap penggunaan harian}: Bukan sahaja permainan! Luncuran antara muka, kesan animasi, main balik video, penapis foto, aplikasi AR semuanya bergantung kepada GPU. Telefon dengan GPU lemah, luncuran antara muka mungkin kehilangan bingkai, permainan langsung tersekat.
+
+\textbf{GPU setiap jenama}: Qualcomm menggunakan GPU Adreno buatan sendiri; MediaTek menggunakan GPU ARM Mali; Apple menggunakan GPU buatan sendiri, prestasi dan kecekapan adalah penanda aras industri.
+
+\booksubsection{NPU: Enjin Pecutan AI}
+
+NPU (Neural Processing Unit) adalah pemproses yang direka khusus untuk operasi rangkaian neural. Berbanding dengan CPU dan GPU, NPU lebih cekap dan penggunaan kuasa lebih rendah apabila memproses tugas AI.
+
+\textbf{Cara operasi rangkaian neural}: Operasi teras NPU ialah pendaraban matriks dan operasi konvolusi — inilah pengiraan paling asas dan paling kerap dalam rangkaian neural. NPU melalui pengoptimuman tahap perkakasan, boleh memproses sejumlah besar operasi matriks secara selari, kelajuan puluhan kali lebih cepat daripada CPU, tetapi penggunaan kuasa jauh lebih rendah.
+
+\textbf{Aliran pemprosesan AI}:
+
+\begin{enumerate}
+  \item \textbf{Input data}: Imej kamera, audio mikrofon, data sensor dan lain-lain.
+  \item \textbf{Prapemprosesan}: Melaraskan format dan saiz data, menyesuaikan keperluan input rangkaian neural.
+  \item \textbf{Pengiraan inferens}: NPU memuatkan model yang dilatih, melakukan pengiraan maju ke atas data input, menghasilkan output.
+  \item \textbf{Pascapemprosesan}: Menukar output AI kepada hasil yang boleh digunakan, seperti koordinat muka, kandungan teks, label adegan.
+\end{enumerate}
+
+\textbf{Senario aplikasi sebenar}:
+
+\begin{itemize}
+  \item \textbf{Fotografi pengiraan}: Sintesis waktu malam, kabur potret, pemprosesan HDR, kecantikan AI.
+  \item \textbf{Pembantu suara}: Pengecaman suara, pemahaman bahasa semula jadi, sintesis suara.
+  \item \textbf{Terjemahan masa nyata}: Sari kata AI, terjemahan perbualan.
+  \item \textbf{Pengecaman pintar}: Pengecaman teks (OCR), pengecaman objek, pengecaman adegan.
+  \item \textbf{Model besar sisi peranti}: Cip perdana terkini telah menyokong operasi model AI besar kecil (aras parameter 7B) di sisi peranti, merealisasikan dialog AI luar talian, ringkasan dokumen, penulisan pintar dan lain-lain. Hexagon NPU Snapdragon 8 Elite mempunyai kuasa pengiraan kira-kira 45 TOPS, NPU 890 Dimensity 9400 juga menyokong model besar sisi peranti (kelajuan inferens LLM meningkat 80\%), NPU 16 teras A18 Pro Apple menyediakan kuasa pengiraan kira-kira 35 TOPS.
+  \item \textbf{Pemprosesan imej AI}: Penyingkiran AI (buang pelakon dalam foto dengan satu ketik), pengembangan gambar AI (memperluas sempadan imej), penukaran gaya AI, penjanaan gambar teks dan lain-lain.
+\end{itemize}
+
+\booksubsection{ISP: Pemproses Isyarat Imej}
+
+ISP memproses data mentah dari kamera, menukar isyarat cahaya kepada gambar yang cantik.
+
+\textbf{Bagaimana menilai prestasi?}Lihat modelnya! Apple A18 Pro, Qualcomm Snapdragon 8 Elite, MediaTek Dimensity 9400, Huawei Kirin 9020 semuanya tahap perdana. Pertengahan lihat Snapdragon 8s Gen3/7+ Gen3, Dimensity 8400. Jangan hanya lihat bilangan teras, seni bina dan proses (nombor nanometer) lebih penting. Proses 3nm adalah paling maju kini, nisbah kecekapan jauh lebih baik daripada 5nm dan 4nm.
+
+\booksubsection{RAM (Ingatan Akses Rawak): Meja Kerja Sementara}
+
+RAM seperti meja pejabat anda, lebih besar, lebih banyak fail boleh dibuka serentak. 12GB adalah arus perdana sekarang, 16GB sesuai untuk pengguna berat, 24GB ke atas adalah pilihan pemain permainan dan geek.
+
+Jenis RAM juga penting: LPDDR5 lebih cepat dan lebih menjimatkan kuasa daripada LPDDR4X. Walaupun RAM Apple tidak besar, pengoptimuman sistem baik, jadi nampak “cukup”.
+
+\textbf{Apakah yang berlaku jika RAM tidak mencukupi?}App akan dibunuh oleh sistem di latar belakang, perlu muat semula apabila bertukar. Inilah sebabnya kadang-kadang bertukar WeChat kembali, permainan sudah hilang.
+
+\booksubsection{Storan (ROM/Flash Memory): Gudang Jangka Panjang}
+
+Storan seperti rak buku anda, tempat semua gambar, video, App disimpan. Arus perdana kini ialah UFS 3.1 atau UFS 4.0, kelajuan beberapa kali ganda lebih cepat daripada eMMC lama.
+
+\textbf{Mengapa kelajuan storan penting?}Ia menentukan kelajuan pembukaan App, kelajuan muat turun permainan, kelajuan penyimpanan gambar. Selepas digunakan lama, storan perlahan akan menjadikan telefon semakin tersekat.
+
+\booksubsection{Skrin: Mata Anda}
+
+Skrin adalah tetingkap utama interaksi antara anda dan telefon, kualiti secara langsung mempengaruhi pengalaman.
+
+\begin{itemize}
+  \item \textbf{Bahan}: OLED warna cerah, kontras tinggi, lebih menjimatkan kuasa (apabila memaparkan hitam piksel tidak memancar), tetapi pada kecerahan rendah mungkin ada kelipan frekuensi yang merosakkan mata; LCD lebih melindungi mata, kos rendah, tetapi kontras dan warna tidak sebaik OLED.
+  \item \textbf{Resolusi}: 1080P adalah arus perdana, 2K lebih jelas tetapi lebih menggunakan kuasa. Konsep "skrin retina" Apple ialah: pada jarak tertentu, mata manusia tidak dapat membezakan piksel.
+  \item \textbf{Kadar segar semula}: 60Hz adalah standard, 90Hz/120Hz lebih lancar, luncuran seperti sutera. Kadar segar semula tinggi menggunakan kuasa, jadi banyak telefon menyokong kadar segar semula adaptif (LTPO), laraskan secara dinamik mengikut kandungan.
+  \item \textbf{Kadar persampelan sentuh}: Mempengaruhi kelajuan tindak balas sentuh, pemain permainan perlu ambil perhatian, semakin tinggi semakin responsif.
+  \item \textbf{Kaedah peredupan}: Peredupan DC lebih melindungi mata daripada peredupan PWM, pada kecerahan rendah tidak mudah penat mata. Kini banyak telefon menyokong peredupan PWM frekuensi tinggi, juga untuk melindungi mata.
+\end{itemize}
+
+\booksubsection{Teknologi HDR Skrin}
+
+HDR (High Dynamic Range) membolehkan skrin memaparkan bahagian terang yang lebih terang dan bahagian gelap yang lebih gelap serentak, rasa hierarki gambar meningkat dengan ketara.
+
+\begin{itemize}
+  \item \textbf{Prinsip pelaksanaan}: Julat kecerahan skrin biasa terhad (SDR), jurang antara paling terang dan paling gelap tidak cukup besar. Skrin HDR mempunyai kecerahan puncak lebih tinggi (biasanya 1000 nit ke atas), kontras lebih besar, gamut warna lebih luas, boleh memaparkan lebih banyak butiran.
+  \item \textbf{Standard arus perdana}: HDR10 (paling asas, sumber terbuka percuma), HDR10+ (dipromosikan oleh Samsung, metadata dinamik), Dolby Vision (kualiti gambar terbaik tetapi memerlukan kebenaran). Standard yang disokong telefon bergantung kepada perkakasan skrin dan kebenaran sistem.
+  \item \textbf{Kesan sebenar}: Apabila menonton video HDR, cahaya matahari lebih menyilaukan, bayang lebih dalam, warna lebih kaya. Prasyaratnya video itu sendiri dibuat HDR, skrin juga menyokong paparan HDR.
+\end{itemize}
+
+\booksubsection{Teknologi HDR Imej}
+
+HDR semasa mengambil gambar dan HDR skrin adalah dua perkara berbeza. HDR imej adalah menyelesaikan masalah “bahagian terang terlebih dedahan, bahagian gelap hitam mati” melalui algoritma.
+
+\begin{itemize}
+  \item \textbf{Prinsip algoritma}: Apabila menekan butang pengatup, telefon sebenarnya mengambil beberapa gambar dengan dedahan berbeza (kurang dedahan mengekalkan butiran bahagian terang, terlebih dedahan mengekalkan butiran bahagian gelap, dedahan normal mengekalkan nada tengah), kemudian menggabungkannya menjadi satu gambar julat dinamik tinggi.
+  \item \textbf{Aliran pemprosesan}: Tangkapan pelbagai bingkai pampasan jajaran (anti-goyangan tangan) penggabungan dedahaan/pemetaan nada pembetulan warna output gambar akhir.
+  \item \textbf{Pengoptimuman kesan}: Telefon kini telah mencapai "HDR masa nyata" — gambar yang dilihat dalam viewfinder adalah kesan selepas pemprosesan HDR, apa yang dilihat adalah apa yang diperolehi. Smart HDR Apple dan HDR automatik Android sangat matang.
+\end{itemize}
+
+\booksubsection{Bateri dan Pengecasan: Sumber Tenaga}
+
+Bateri adalah komponen paling “berumur pendek” telefon, digunakan dua tiga tahun akan jelas menua. Kapasiti arus perdana kini 5500-7500mAh.
+
+\begin{itemize}
+  \item \textbf{Kuasa pengecasan}: Kem Android telah bergolak hingga 100W malah 200W, penuh dalam lebih sepuluh minit; Apple masih berkisar 20-30W. Pengecasan pantas merosakkan bateri? Gunakan aksesori asli tiada masalah besar, telefon mempunyai perlindungan kawalan suhu.
+  \item \textbf{Pengecasan wayarles}: Mudah tetapi kecekapan rendah, haba banyak. Sesuai untuk pengecasan sewenang-wenangnya di pejabat, tidak sesuai apabila tergesa-gesa keluar.
+  \item \textbf{Pengecasan songsang}: Telefon menjadi power bank, mengecas fon kepala, jam tangan, untuk kecemasan.
+\end{itemize}
+
+\booksubsection{Kamera: Sihir Cahaya dan Bayang}
+
+Telefon kini mudah mempunyai tiga empat kamera, masing-masing dengan pembahagian kerja:
+
+\begin{itemize}
+  \item \textbf{Kamera utama}: Paling kerap digunakan, sensor terbesar, kualiti gambar terbaik.
+  \item \textbf{Sudut ultra luas}: Mengambil gambar landskap, bangunan, medan pandang lebih luas.
+  \item \textbf{Telefoto}: Mengambil gambar jauh, ada zoom optik dan zoom digital.
+  \item \textbf{Makro}: Mengambil gambar objek kecil pada jarak sangat dekat.
+\end{itemize}
+
+\textbf{Bilangan piksel bukan segalanya!}Saiz sensor (sensor besar menekan sensor kecil), saiz bukaan (f/1.8 lebih besar daripada f/2.4), anti-goyangan (OIS anti-goyangan optik sangat penting) semuanya mempengaruhi kualiti gambar. Fotografi pengiraan (algoritma AI) semakin penting kini, boleh menggabungkan beberapa gambar menjadi satu gambar yang baik.
+
+\booksubsection{Lens Telefoto Periskop}
+
+Lens telefoto tradisional memerlukan laluan optik yang panjang, akan menjadikan telefon sangat tebal. Telefoto periskop melalui prisma 90 darjah membengkokkan cahaya, membolehkan laluan cahaya berkembang melintang di dalam telefon, dengan itu mencapai zoom optik 5x malah 10x sambil mengekalkan telefon nipis.
+
+\begin{itemize}
+  \item \textbf{Prinsip struktur}: Cahaya masuk dari lensa prisma membengkok 90 darjah melintasi kumpulan lensa sepanjang lebar telefon sampai ke sensor. Setara dengan meletakkan teleskop menegak secara mendatar.
+  \item \textbf{Ciri optik}: Gandaan zoom optik tinggi (5x-10x), kualiti gambar jauh lebih baik daripada zoom digital. Tetapi saiz sensor biasanya lebih kecil daripada kamera utama, prestasi cahaya malap secara umum.
+  \item \textbf{Kelebihan pengimejan}: Mengambil gambar bulan, bangunan jauh, gambar rapat pentas, adalah yang tidak dapat dicapai oleh telefon biasa.
+\end{itemize}
+
+\booksubsection{OIS Anti-goyangan Optik vs EIS Anti-goyangan Elektronik}
+
+Anti-goyangan adalah teknologi utama yang mempengaruhi kualiti gambar dan rakaman video, prinsip dua kaedah berbeza sepenuhnya:
+
+\begin{itemize}
+  \item \textbf{OIS (anti-goyangan optik)}: Melalui pergerakan fizikal lensa atau sensor untuk mengimbangi goyangan tangan. Lensa mempunyai giroskop mikro dalaman untuk mengesan arah dan amplitud goyangan, kemudian memandu motor untuk menggerakkan kumpulan lensa secara songsang. Kelebihannya tidak kehilangan kualiti gambar, kelemahannya kos tinggi, mengambil ruang.
+  \item \textbf{EIS (anti-goyangan elektronik)}: Melalui algoritma perisian memotong dan mengimbangi gambar untuk mengimbangi goyangan. Telefon merakam julat gambar yang sedikit lebih besar, kemudian mengikut data giroskop memotong kawasan yang stabil. Kelebihannya tidak memerlukan perkakasan tambahan, kelemahannya akan memotong gambar (medan pandang menjadi kecil), mungkin kabur dalam cahaya malap.
+  \item \textbf{Pilihan sebenar}: Mengambil gambar utamakan OIS, merakam video gabungan kedua-dua paling baik. Kini banyak telefon perdana menyokong "Sensor-Shift" anti-goyangan anjakan sensor, lebih baik daripada anti-goyangan lensa tradisional.
+\end{itemize}
+
+\booksubsection{Zoom Optik vs Zoom Digital}
+
+\begin{itemize}
+  \item \textbf{Zoom optik}: Melalui pergerakan fizikal kumpulan lensa menukar jarak fokus, kualiti gambar tidak hilang. Zoom optik pada telefon biasanya hanya gandaan tetap (seperti 2x, 3x, 5x, 10x), tidak boleh zoom berterusan seperti kamera.
+  \item \textbf{Zoom digital}: Memperbesar kawasan tengah gambar, pada asasnya pemotongan + interpolasi pembesaran. Semakin banyak pembesaran, semakin teruk kualiti gambar. Zoom digital 100x nampak sangat hebat, tetapi kualiti gambar sebenar sudah sangat kabur.
+  \item \textbf{Zoom campuran}: Menggabungkan optik dan digital, menggunakan algoritma sintesis pelbagai bingkai untuk mengimbangi kehilangan kualiti gambar antara gandaan zoom optik. Kesannya lebih baik daripada digital tulen, tetapi masih tidak sebaik optik.
+\end{itemize}
+
+\booksubsection{Audio: Pembesar Suara dan Cip Paparan Berasingan}
+
+\textbf{Pembesar suara tunggal vs pembesar suara berganda}:
+
+\begin{itemize}
+  \item \textbf{Pembesar suara tunggal}: Hanya satu unit pembesar suara di bahagian bawah, bunyi cenderung ke satu sisi, tiada rasa stereo. Telefon pertengahan hingga bawah biasa.
+  \item \textbf{Pembesar suara berganda (stereo)}: Pembesar suara di bahagian atas dan bawah, membentuk medan bunyi stereo. Menonton video, mendengar muzik saluran kiri kanan jelas, rasa imersif jauh lebih kuat. Earpiece juga berfungsi sebagai pembesar suara atas adalah skim biasa.
+  \item \textbf{Perbezaan kualiti bunyi}: Pembesar suara berganda bukan sahaja "bunyi lebih kuat", kuncinya rasa ruang dan rasa hierarki. Menonton filem dengan pembesar suara tunggal, selalu rasa kurang sesuatu.
+\end{itemize}
+
+\textbf{Cip paparan berasingan telefon permainan}:
+
+Sesetengah telefon permainan dan telefon prestasi dilengkapi dengan cip pemprosesan paparan berasingan, fungsinya:
+
+\begin{itemize}
+  \item \textbf{Penyisipan bingkai}: Menyisipkan bingkai permainan 30fps kepada 60fps atau 120fps melalui algoritma, gambar lebih lancar. Proses ini dilakukan pada cip paparan berasingan, tidak menggunakan sumber GPU SoC.
+  \item \textbf{Super resolusi}: Meningkatkan gambar resolusi rendah kepada resolusi tinggi melalui algoritma AI, kualiti gambar lebih jelas.
+  \item \textbf{Mengurangkan penggunaan kuasa}: Kerana penyisipan bingkai dan super resolusi dikendalikan oleh cip paparan berasingan, beban SoC berkurang, haba dan penggunaan kuasa berkurang, permainan lebih stabil.
+\end{itemize}
+
+\booksubsection{Penentuan GPS: Frekuensi Tunggal dan Frekuensi Berganda}
+
+Penentuan telefon terutamanya bergantung kepada sistem navigasi satelit seperti GPS.
+
+\begin{itemize}
+  \item \textbf{GPS frekuensi tunggal}: Hanya menerima isyarat jalur L1, ketepatan penentuan kira-kira 3-5 meter. Cukup di kawasan terbuka, tetapi di ngarai bandar dengan bangunan tinggi, pantulan isyarat akan menyebabkan anjakan penentuan yang besar.
+  \item \textbf{GPS frekuensi berganda}: Menerima isyarat dua jalur L1 dan L5 serentak. Jalur L5 mempunyai panjang gelombang lebih panjang, keupayaan anti-gangguan lebih kuat, pengiraan gabungan frekuensi berganda boleh menghapuskan kebanyakan ralat ionosfera, ketepatan penentuan boleh mencapai 1-3 meter. Kelebihan jelas apabila navigasi bandar, penentuan teksi.
+  \item \textbf{Sokongan pelbagai buruj}: Telefon moden bukan sahaja menyokong GPS, tetapi juga menyokong BeiDou (China), GLONASS (Rusia), Galileo (Eropah) dan pelbagai sistem satelit. Semakin banyak satelit disambungkan serentak, semakin cepat dan tepat penentuan.
+\end{itemize}
+
+\booksubsection{Sensor: Antena Kecil Telefon}
+
+Telefon menyembunyikan lebih sedozen sensor, bekerja senyap:
+
+\begin{itemize}
+  \item \textbf{Pemecut + Giroskop}: Mengesan postur telefon, bermain permainan stereng, auto putar skrin.
+  \item \textbf{Sensor cahaya}: Auto laraskan kecerahan skrin.
+  \item \textbf{Sensor jarak}: Apabila memanggil telefon menghampiri telinga auto padam skrin.
+  \item \textbf{Sensor cap jari}: Arus perdana kini cap jari optik bawah skrin atau ultrasonik.
+  \item \textbf{Pengecaman muka}: Face ID Apple ialah cahaya berstruktur 3D, tahap keselamatan tinggi; banyak Android ialah pengecaman foto 2D, keselamatan secara umum.
+  \item \textbf{Peningkatan sistem wayarles}: Komunikasi medan dekat, kad bas, kad akses, kad bank.
+  \item \textbf{Barometer}: Mengukur ketinggian, memanjat tangga juga boleh dikesan.
+  \item \textbf{Sensor Hall}: Mengesan pembukaan dan penutupan kes magnet.
+\end{itemize}
+
+\booksection{II. Sistem Pengendalian: Android VS iOS VS HarmonyOS}
+
+Perkakasan adalah badan, sistem pengendalian adalah jiwa. Tiga sistem besar masing-masing ada ciri:
+
+\begin{itemize}
+  \item \textbf{iOS}: Seperti komuniti sumber terbuka, pengeluar telefon boleh menyesuaikan secara mendalam, pilihan banyak. Anda boleh menukar tema, pasang kedai aplikasi pihak ketiga, bermain pelbagai cara. Tetapi juga kerana keterbukaan, fragmentasi serius, pengalaman berbeza jenama sangat berbeza.
+  \item \textbf{Android}: Seperti taman yang dijaga dengan baik, Apple mengawal perkakasan dan perisian, pengalaman bersatu dan lancar. Kualiti aplikasi tinggi, perlindungan privasi baik, tetapi kebebasan rendah, banyak perkara perlu ikut peraturan Apple.
+  \item \textbf{HarmonyOS}: Spesies baru Huawei, keupayaan teragih sebagai ciri utama, boleh membolehkan peranti berbeza bekerjasama dengan lancar. Akan dibincangkan khusus kemudian.
+\end{itemize}
+
+Ekosistem ketiga-tiga sangat kaya, pilih gaya hidup yang anda suka. Tiada baik buruk mutlak, hanya sesuai atau tidak.
+
+\booksection{III. Analisis Lengkap Antaramuka Telefon}
+
+Antaramuka telefon adalah jambatan menghubungkan dunia luar, antaramuka berbeza sangat berbeza:
+
+\booksubsection{Micro USB}
+
+\begin{itemize}
+  \item \textbf{Ciri fizikal}: Antaramuka trapezoid rata, ada bahagian depan belakang (jika terbalik tidak boleh dimasukkan). Pada asasnya telah dihapuskan pada telefon, tetapi sesetengah peranti murah dan peranti lama masih menggunakan.
+  \item \textbf{Had penghantaran}: Hanya menyokong standard USB 2.0, kelajuan penghantaran tertinggi 480Mbps, kuasa pengecasan biasanya tidak melebihi 10W.
+  \item \textbf{Kelemahan}: Bahagian depan belakang tidak universal, hayat plug pendek, kelajuan penghantaran perlahan, kuasa pengecasan rendah.
+\end{itemize}
+
+\booksubsection{Lightning (Antaramuka Kilat Apple, Telah Dihapuskan)}
+
+\begin{itemize}
+  \item \textbf{Ciri fizikal}: Antaramuka 8 pin buatan sendiri Apple, depan belakang boleh dimasukkan. iPhone 14 dan model lebih awal menggunakan, kini telah dihapuskan sepenuhnya.
+  \item \textbf{Had penghantaran}: Antaramuka Lightning secara fizikal hanya menyokong standard USB 2.0, kelajuan penghantaran tertinggi 480Mbps. Walaupun menggunakan kabel USB-C ke Lightning, kelajuan penghantaran juga terhad oleh antaramuka Lightning itu sendiri.
+  \item \textbf{Sebab dihapuskan}: EU melalui peraturan memerlukan semua telefon mulai 2024 menggunakan antaramuka USB-C secara seragam, Apple mula dari siri iPhone 15 sepenuhnya bertukar ke Type-C. Antaramuka Lightning secara rasmi keluar dari pentas sejarah.
+  \item \textbf{Nota}: Kabel data berpensijilan MFi Apple mengandungi cip pengesahan, kabel tidak berpensijilan mungkin tidak boleh mengecas atau menghantar data dengan normal. Jika anda masih menggunakan iPhone lama, cadangkan simpan kabel data Lightning.
+\end{itemize}
+
+\booksubsection{USB Type-C}
+
+\begin{itemize}
+  \item \textbf{Ciri fizikal}: Antaramuka bujur 24 pin, depan belakang boleh dimasukkan. Telah menjadi antaramuka standard telefon dan kebanyakan peranti elektronik. EU telah menggubal peraturan memerlukan semua telefon, tablet, fon kepala dan peranti mudah alih lain menggunakan antaramuka USB-C secara seragam mulai 2024, kawasan lain di dunia juga mengikuti.
+  \item \textbf{Protokol penghantaran}: Type-C hanya bentuk antaramuka, keupayaan penghantaran sebenar bergantung kepada protokol dalaman. Menyokong USB 2.0 (480Mbps), USB 3.0/3.1/3.2 (5-20Gbps) malah USB4 (40Gbps).
+  \item \textbf{Perbezaan penting}: Bukan semua port Type-C menyokong USB 3.0! Walaupun banyak telefon guna port Type-C, dalamanannya hanya sambung pin USB 2.0, kelajuan pemindahan sama perlahan seperti port lama. iPhone 16/17 versi standard hanya menyokong kelajuan USB 2.0, versi Pro sahaja yang menyokong USB 3.0 (perlu guna kabel USB-C to USB-C).
+  \item \textbf{Keupayaan pengecasan}: Menyokong protokol pengecasan pantas seperti USB PD, boleh menyokong pengecasan sehingga 240W.
+  \item \textbf{Output video}: Menyokong DisplayPort Alt Mode, boleh output video ke monitor melalui kabel penyesuai.
+\end{itemize}
+
+\booksubsection{Antaramuka Audio 3.5mm}
+
+\begin{itemize}
+  \item \textbf{Ciri fizikal}: Jack bulat 3 segmen atau 4 segmen, 3 segmen menghantar audio saluran kiri kanan, 4 segmen tambah saluran mikrofon.
+  \item \textbf{FCP (Fast Charge Protocol)}: Penghantaran isyarat analog, plug and play, tidak memerlukan pemacu atau penukaran. Kualiti bunyi stabil, kependaman sifar.
+  \item \textbf{Status semasa}: Kebanyakan telefon perdana telah membatalkan antaramuka 3.5mm, perlu kabel penyesuai Type-C atau menggunakan fon kepala Bluetooth. Sesetengah telefon pertengahan dan telefon permainan masih mengekalkan.
+\end{itemize}
+
+\booksection{IV. Sistem Produk Telefon dan Peraturan Penamaan}
+
+Menghadapi pelbagai laluan produk yang membingungkan setiap jenama, memahami peraturan penamaan boleh membantu anda dengan cepat menempah model yang sesuai untuk diri sendiri.
+
+\booksubsection{Siri produk jenama arus perdana:}
+
+\begin{itemize}
+  \item \textbf{Xiaomi}: iPhone (versi standard) / iPhone Plus (versi skrin besar) / iPhone Pro (versi pro) / iPhone Pro Max (versi pro skrin besar) / iPhone SE (versi mampan) / iPhone 16e (versi AI mampan, dengan cip A18 dan modem C1 buatan Apple). Siri iPhone 17 2026 sepenuhnya menggunakan cip A19 Pro, keupayaan AI ditingkatkan lagi.
+  \item \textbf{OPPO/vivo}: Siri Mate (perdana perniagaan) / Siri P/Pura (perdana pengimejan) / Siri Mate X (perdana lipat) / Siri nova (pertengahan muda) / Siri Changxiang (pemula)
+  \item \textbf{OnePlus}: Siri nombor Xiaomi (perdana) / Xiaomi MIX (perdana penerokaan/lipat) / Redmi Siri K (perdana prestasi) / Redmi Siri Note (pertengahan) / Redmi siri nombor (pemula)
+  \item \textbf{OPPO}: Find Siri X (perdana) / Reno Siri (pertengahan) / Siri A (pemula) / OnePlus siri nombor (perdana prestasi)
+  \item \textbf{vivo}: Siri X (perdana pengimejan) / iQOO siri nombor (perdana prestasi) / Siri S (selfie pertengahan) / Siri Y (pemula)
+  \item \textbf{Samsung}: Galaxy Siri S (perdana) / Galaxy Z Fold/Flip (perdana lipat) / Galaxy Siri A (pertengahan)
+\end{itemize}
+
+\booksubsection{Maksud akhiran biasa:}
+
+\begin{itemize}
+  \item \textbf{Pro}: Singkatan Professional, versi profesional. Biasanya menaik taraf kamera, skrin, pemproses dan konfigurasi teras lain berdasarkan versi standard.
+  \item \textbf{Max}: Versi terbesar. Skrin terbesar, bateri terbesar, tetapi konfigurasi tidak semestinya lebih tinggi daripada Pro.
+  \item \textbf{Ultra}: Versi ekstrem. Biasanya mewakili konfigurasi tertinggi siri ini, bahan paling banyak, harga juga tertinggi. Seperti Samsung S24 Ultra, Xiaomi 14 Ultra.
+  \item \textbf{SE}: Special Edition versi khas, sebenarnya kebanyakannya versi mampu milik. Konfigurasi dikurangkan, harga diturunkan. Seperti iPhone SE.
+  \item \textbf{Plus}: Versi diperbesar. Skrin lebih besar daripada versi standard, bateri juga besar, tetapi konfigurasi asasnya sama.
+  \item \textbf{Lite/Versi belia}: Versi ringan. Konfigurasi ringkas, harga lebih rendah.
+  \item \textbf{Note}: Pada asalnya merujuk kepada telefon skrin besar, kini penggunaan setiap jenama berbeza. Redmi Note ialah siri pertengahan.
+  \item \textbf{Neo}: Versi baru. Biasanya merujuk kepada model pertengahan berorientasikan prestasi.
+\end{itemize}
+
+\booksection{V. Baseband dan Antena: Wira di Sebalik Tabir Komunikasi Telefon}
+
+Telefon boleh memanggil, melayari internet, bergantung kepada pasangan baseband cip dan antena.
+
+\booksubsection{Cip baseband:}
+
+Baseband adalah pemproses yang bertanggungjawab untuk komunikasi wayarles dalam telefon, ia memodulasi isyarat digital kepada gelombang radio untuk dihantar, juga memdemodulasi gelombang radio yang diterima kepada isyarat digital. Prestasi baseband secara langsung mempengaruhi kualiti panggilan, kelajuan internet dan kestabilan isyarat. Qualcomm adalah pembekal baseband telefon terbesar, MediaTek, Samsung juga ada baseband buatan sendiri. Apple mula dari iPhone 16e memasang cip baseband C1 buatan sendiri, menandakan Apple secara rasmi memasuki era baseband buatan sendiri, baseband C1 menggunakan proses 4nm, prestasi penggunaan kuasa sangat baik; iPhone 16/16 Plus/16 Pro/16 Pro Max masih menggunakan baseband Qualcomm (Snapdragon X75 5G), dijangka model berikutnya akan beransur-ansur bertukar ke baseband buatan sendiri. iPhone XS/11 siri lebih awal menggunakan baseband Intel, prestasi isyarat tidak baik, adalah masalah banyak pengguna.
+
+\booksubsection{Reka bentuk antena:}
+
+Antena telefon disembunyikan dalam badan, biasanya disusun di sekitar bingkai. Reka bentuk antena secara langsung mempengaruhi prestasi penerimaan isyarat:
+
+\begin{itemize}
+  \item \textbf{Teknologi MIMO}: Pelbagai input pelbagai output, menggunakan pelbagai antena untuk menghantar dan menerima data serentak, meningkatkan kelajuan dan kestabilan. 4×4 MIMO lebih cepat daripada 2×2 MIMO.
+  \item \textbf{Bilangan antena}: Telefon perdana biasanya ada lebih sedozen antena (selular, Wi-Fi, Bluetooth, NFC, GPS masing-masing memerlukan antena berasingan).
+  \item \textbf{Pengaruh badan logam}: Logam akan menahan isyarat, jadi telefon badan logam perlu reka bentuk jalur antena (jalur plastik pada bingkai). Badan kaca dan plastik kurang mempengaruhi isyarat.
+\end{itemize}
+
+\booksubsection{Evolusi teknologi rangkaian:}
+
+\begin{itemize}
+  \item \textbf{5G SA vs NSA}: Kelajuan puncak teori muat turun 1Gbps/muat naik 500Mbps (Cat.18), pengalaman sebenar biasanya 50-150Mbps. Liputan paling luas, cukup.
+  \item \textbf{5G NR}: Kelajuan puncak teori muat turun 10Gbps+. Jalur Sub-6GHz liputan agak baik, gelombang milimeter mmWave kelajuan sangat pantas tetapi liputan sangat kecil.
+  \item \textbf{5G-A (5G Advanced)}: Versi dipertingkat 5G, juga dipanggil 5.5G. Kelajuan turun boleh capai 10Gbps, naik 1Gbps, ketumpatan sambungan dan ketepatan penentuan kedudukan meningkat mendadak. Sejak 2024, China Mobile, Telecom dan Unicom mula melancarkan rangkaian 5G-A di bandar utama, telefon flagship seperti Huawei Mate 70/80, Xiaomi 15/16 telah menyokong 5G-A. 5G-A juga membawa keupayaan "integrasi komunikasi-penginderaan", stesen bes boleh berkomunikasi dan mengindera persekitaran serentak, menyediakan infrastruktur untuk ekonomi altitud rendah (penghantaran dron) dan rangkaian kenderaan.
+\end{itemize}
+
+\booksubsection{Pengelasan jalur frekuensi rangkaian:}
+
+Jalur frekuensi rangkaian yang disokong telefon menentukan rangkaian negara dan pengendali mana yang boleh digunakan:
+
+\begin{itemize}
+  \item \textbf{FDD-LTE Band (siri B)}: Seperti B1, B3, B5 dan lain-lain, jalur 4G. Negara berbeza menggunakan jalur berbeza, China terutamanya menggunakan B1/B3/B5/B8/B34/B38/B39/B40/B41.
+  \item \textbf{TDD-LTE Band}: Standard 4G yang lain, China banyak menggunakan B38/B39/B40/B41.
+  \item \textbf{5G NR Band (siri N)}: Seperti n1, n3, n28, n41, n78, n79 dan lain-lain. n78 (3.5GHz) adalah jalur frekuensi utama 5G China, n41 (2.5GHz) lebih banyak digunakan oleh Mobile.
+  \item \textbf{Saranan pembelian}: Jika perlu guna di luar negara, sebelum membeli sahkan sama ada telefon menyokong jalur frekuensi negara sasaran. Telefon versi China biasanya paling lengkap menyokong jalur China, tetapi mungkin tiada sesetengah jalur luar negara.
+\end{itemize}
+
+\booksection{VI. Telefon Anda, Sebenarnya Memainkan Berapa Banyak Peranan?}
+
+Ia lama bukan sekadar telefon:
+
+\begin{enumerate}
+  \item \textbf{Alat komunikasi}: Panggilan, SMS, WeChat, e-mel...
+  \item \textbf{Kamera pintar}: Mengambil gambar, merakam video, mengimbas dokumen...
+  \item \textbf{Dompet}: Pembayaran, kad bas, kad bank, kad keahlian...
+  \item \textbf{Portal maklumat}: Berita, cuaca, saham, pengetahuan...
+  \item \textbf{Konsol permainan}: Dari Match-3 hingga karya AAA...
+  \item \textbf{Pejabat bergerak}: Dokumen, jadual, mesyuarat, kerjasama...
+  \item \textbf{Pembantu kesihatan}: Kira langkah, kadar jantung, tidur, sukan...
+  \item \textbf{Pengawal rumah pintar}: Mengawal lampu, penyaman udara, TV, robot pembersih...
+  \item \textbf{Identiti digital}: Kad pengenalan elektronik, lesen memandu elektronik, kod kesihatan...
+  \item \textbf{Pusat hiburan}: Muzik, video, e-buku, podcast...
+\end{enumerate}
+
+Fikirkan, peranti kecil, berapa banyak kehidupan yang dipikul! Jadi, belajar menggunakannya dengan baik, adalah belajar hidup lebih baik.
+
+\begin{tcbpractice}{Praktik: Fahami Konfigurasi Perkakasan}
+Dalam [Tetapan], lihat sama ada boleh mencari model pemproses, saiz khusus RAM dan ROM. Ada gambaran tentang keupayaan telefon anda. Pengguna Android boleh muat turun “AnTuTu” atau “DevCheck” untuk melihat maklumat perkakasan terperinci.
+
+\end{tcbpractice}

@@ -1,0 +1,203 @@
+\bookchapter{Bab 51: Pengembangan Antarmuka—Pengantar Jetpack Compose}
+
+\chapterintro{Antarmuka adalah segala sesuatu yang dilihat pengguna. Sebelum Compose muncul, antarmuka Android ditulis dengan XML—rumit seperti mengerjakan soal isian; pada 2021 Google merilis Jetpack Compose: antarmuka 'digambar' langsung dengan kode Kotlin, apa yang terlihat itulah hasilnya—ubah satu baris kode, pratinjau langsung menyegar. Memasuki 2026, Compose sudah menjadi arus utama mutlak proyek-proyek baru. Bab ini kita belajar 'menggambar'.}
+
+\booksection{Cara Berpikir Compose: Antarmuka Adalah Fungsi}
+
+Inti pemikiran Compose dalam satu kalimat: antarmuka = fungsi. Setiap hal yang bisa tampil di layar (teks, tombol, gambar) adalah 'fungsi composable' (Composable), ditandai dengan @Composable. Menyusunnya bertingkat seperti balok susun, itulah antarmuka.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Greeting(name: String) {
+    Text(text = "Halo, $name!")     // Satu "balok teks"
+}
+
+// Komposisi bersarang: balok besar membungkus balok kecil
+@Composable
+fun HomeScreen() {
+    Column {                          // Disusun vertikal
+        Greeting(name = "Zhang San")
+        Greeting(name = "Li Si")
+        Button(onClick = { /* apa yang dilakukan saat diklik */ }) {
+            Text("Tekan aku")
+        }
+    }
+}
+\end{lstlisting}
+
+Perhatikan 'topi' @Composable—ia memberi tahu kompiler 'ini balok susun antarmuka'. Baloknya bisa disusun bertingkat tanpa batas, itulah seluruh rahasia Compose.
+
+\booksection{Komponen Dasar: Teks, Tombol, Kolom Input, Gambar}
+
+Komponen Compose adalah 'balok-baloknya'; empat di antaranya paling sering dipakai:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Komponen} & \textbf{Fungsinya Apa} & \textbf{Parameter Wajib} \tabularnewline
+\hline
+Text & Menampilkan teks & text (teks yang ditampilkan) \tabularnewline
+Button & Tombol & onClick (callback saat ditekan) \tabularnewline
+TextField & Kolom input & value, onValueChange (callback saat input berubah) \tabularnewline
+Image & Menampilkan gambar & painter (sumber daya gambar) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Empat komponen dasar Compose\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun BasicWidgets() {
+    Column {
+        Text(text = "Ini sebuah teks")
+        Button(onClick = { println("Ditekan") }) {
+            Text("Tombol")
+        }
+        var input by remember { mutableStateOf("") }
+        TextField(
+            value = input,
+            onValueChange = { input = it },
+            label = { Text("Ketik sesuatu") }
+        )
+    }
+}
+\end{lstlisting}
+
+Pada dua baris kolom input muncul remember \{ mutableStateOf(“”) \}—itulah 'sihir state' milik Compose, akan dibahas tuntas di bagian 5 bab ini. Sekarang cukup kenalan dulu.
+
+\booksection{Trio Tata Letak: Column, Row, Box}
+
+Komponen sudah ada, bagaimana menatanya? Ingat tiga 'kotak' ini:
+
+\begin{itemize}
+  \item Column: menyusun ke bawah (seperti antre mengambil makanan);
+  \item Row: menyusun menyamping (seperti duduk berjajar);
+  \item Box: menyusun menumpuk (seperti kartu poker ditumpuk, cocok untuk lencana sudut dan lapisan penutup).
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+Column {
+    Text("Baris pertama")
+    Row {
+        Text("Kiri")
+        Text("Kanan")
+    }
+    Box {
+        Text("Lapisan bawah")
+        Text("Lencana kecil yang menumpuk di atas")
+    }
+}
+\end{lstlisting}
+
+Ingin tata letaknya lebih cantik? Tambahkan Modifier (pemberi efek) pada komponen—ia seperti 'menata rias' balok susun:
+
+\begin{lstlisting}[language=Kotlin]
+Text(
+    text = "Teks yang menarik",
+    modifier = Modifier
+        .padding(16.dp)          // beri ruang di sekeliling
+        .fillMaxWidth()          // penuhi lebar
+        .background(Color.Blue)  // warna latar
+        .clickable { /* klik */ }// bisa diklik
+)
+// Rantai: dipanggil satu per satu, urutan berpengaruh (padding dulu baru latar, latar tidak termasuk jarak padding)
+\end{lstlisting}
+
+\begin{tcbwarn}{Perhatian: Urutan Modifier Ada Aturannya}
+padding(16.dp).background(Blue) dan background(Blue).padding(16.dp) hasilnya berbeda—yang pertama 'memberi ruang dulu lalu mengecat' (latar tidak menutupi margin), yang kedua 'mengecat dulu lalu memberi ruang' (latar ikut menutupi margin). Pemula paling sering salah menggambar 'pinggiran putih aneh' di sini. Kalau ragu, tukar saja urutannya dan pratinjau langsung memberi jawaban.
+
+\end{tcbwarn}
+
+\booksection{State: Membuat Antarmuka 'Hidup'}
+
+Antarmuka statis itu membosankan. Ingin angka bertambah 1 saat tombol ditekan, kolom input bisa diketik? Itu butuh state (keadaan). Aturan Compose: antarmuka selalu setia mencerminkan state; state berubah, antarmuka otomatis digambar ulang.
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun Counter() {
+    // remember + mutableStateOf: mengingat nilai yang bisa berubah ini
+    var count by remember { mutableStateOf(0) }
+
+    Column {
+        Text(text = "Kamu menekan $count kali")
+        Button(onClick = { count++ }) {   // ubah state
+            Text("Tekan aku +1")                // tampilan menyegarkan sendiri
+        }
+    }
+}
+\end{lstlisting}
+
+Tiga baris kode, satu penghitung yang hidup. Di sinilah Compose terasa enak dibanding cara lama: tidak perlu 'menyegarkan antarmuka' secara manual, cukup ubah datanya. Ingat dua fungsi kunci: remember (menjaga nilai agar tidak terhapus saat antarmuka tersusun ulang) dan mutableStateOf (memberi tahu Compose 'jika nilai ini berubah, gambar ulang').
+
+Pengguna menekan
+
+State berubah (count++)
+
+Compose mendeteksi perubahan
+
+Menggambar ulang tampilan otomatis (recomposition)
+
+\begin{center}\small\color{gray}Gambar 3: Aliran data satu arah 'state antarmuka' pada Compose\end{center}
+
+\booksection{Tema dan Mode Gelap: Sekali Atur, Berlaku Global}
+
+MyFirstAppTheme \{ ... \} di proyek templat itulah temanya. Ia berbasis spesifikasi desain Material 3, membantumu mengatur warna, font, dan bentuk secara terpadu. Mendukung mode gelap hanya butuh tiga langkah:
+
+\begin{enumerate}
+  \item Tentukan dua set palet warna terang/gelap di tema (templat sudah otomatis membuat ColorScheme);
+  \item Saat sistem beralih ke mode gelap, isSystemInDarkTheme() otomatis mendeteksinya;
+  \item Gunakan warna yang disediakan tema (misalnya MaterialTheme.colorScheme.primary), bukan nilai warna yang ditulis langsung.
+\end{enumerate}
+
+\begin{tcbinfo}{Tips: Warna Dinamis Material 3}
+Mulai Android 12, 'Material You' memungkinkan aplikasi mengambil warna dari wallpaper-mu. Templat Compose mendukungnya secara bawaan (dynamicColor). Aplikasimu akan 'berganti kostum' otomatis di ponsel tiap pengguna—itulah romantisme Android modern.
+
+\end{tcbinfo}
+
+\booksection{Pratinjau, Animasi, dan Live Edit: 'Cheat' Compose}
+
+Tiga 'cheat' Compose soal pengalaman pengembangan; sekali memakai, tidak mau kembali:
+
+\begin{itemize}
+  \item Pratinjau @Preview: beri anotasi @Preview pada Composable, Android Studio langsung merender tampilannya di sisi kanan—ubah kode, hasilnya langsung terlihat, tidak perlu memasang ke ponsel tiap kali;
+  \item Live Edit: Android Studio versi 2026 mendukung 'pembaruan panas' sebagian perubahan di emulator/ponsel asli; penyesuaian kecil seperti warna teks langsung berubah di perangkat dalam sekejap;
+  \item API animasi: animateFloatAsState, AnimatedVisibility—beberapa baris kode membuat elemen berpindah dengan mulus—'kesan premium' sering hanya selisih puluhan baris ini.
+\end{itemize}
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun AnimatedBox() {
+    var big by remember { mutableStateOf(false) }
+    // Saat nilai berubah, otomatis bertransisi halus ke nilai target
+    val size by animateDpAsState(if (big) 120.dp else 60.dp)
+
+    Box(Modifier
+        .size(size)
+        .background(MaterialTheme.colorScheme.primary)
+        .clickable { big = !big }
+    )
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tips: Fungsi Dulu, Animasi Kemudian}
+Kebiasaan buruk pemula: 'antarmuka belum benar, tapi sudah sibuk memikirkan animasi'. Pastikan fungsinya jalan dulu, tambahkan efek gerak di akhir secara serentak—ini juga prinsip 'kesederhanaan di atas segalanya': animasi adalah pemanis, fungsi adalah penyelamat.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Praktik: Membuat 'Tombol Suasana Hati'}
+Ubah proyek templat menjadi pengganti suasana hati: satu tombol, setiap ditekan berputar antara senang sedih marah, teks dan warna latar ikut berubah. Petunjuk: pakai when untuk memilih teks dan warna berdasarkan state. Setelah jadi, kirim ke teman untuk dimainkan, panen gelombang pertama 'wow, kamu sudah bisa bikin aplikasi'.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Pemikiran Compose: antarmuka = fungsi @Composable, disusun bertingkat seperti balok
+  \item Empat komponen utama: Text / Button / TextField / Image
+  \item Trio tata letak: Column menyusun ke bawah, Row menyusun menyamping, Box menyusun menumpuk
+  \item Modifier berantai 'menata rias': padding, fillMaxWidth, background, clickable—urutannya bermakna
+  \item State adalah jiwa: remember + mutableStateOf; data berubah, antarmuka otomatis digambar ulang
+  \item Tema pakai Material 3 + warna dinamis; mode gelap sekali atur berlaku global
+\end{itemize}
+
+\end{tcbsummary}

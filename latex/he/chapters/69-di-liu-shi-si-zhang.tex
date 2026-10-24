@@ -1,0 +1,185 @@
+\bookchapter{פרק 64: אחסון נתונים ובקשות רשת}
+
+\chapterintro{אפליקציה שאפשר רק “להסתכל” בה היא אפליקציה מתה; אפליקציה שיודעת לשמור נתונים ולהתחבר לרשת היא אפליקציה חיה. בפרק הזה נכיר את “שלישיית שכבת הנתונים” של iOS: UserDefaults (להגדרות קטנות), SwiftData (לנתונים מובנים) ו-URLSession (לתקשורת עם השרת), ולצידן את Codable לפענוח JSON ואת הגישה המודרנית async/await. אחרי הפרק הזה תוכלו לכתוב אפליקציות אמיתיות שזוכרות את הרגלי המשתמש ומעדכנות תוכן בזמן אמת.}
+
+\booksection{איך בוחרים פתרון אחסון: קודם כל הטבלה}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{פתרון} & \textbf{מה מתאים לאחסן} & \textbf{מאפיינים} & \textbf{איפה בספר} \tabularnewline
+\hline
+UserDefaults & הגדרות מפוזרות (מתגים, העדפות) & צמדי מפתח-ערך, פשוט וישיר & ההגדרות בפרק 65; הערים המועדפות בפרק 66 \tabularnewline
+SwiftData & נתונים מובנים (חשבונות, רשומות) & עטיפת מסד הנתונים הרשמית; הצהרה בשורת @Model & רשומות החשבונות בפרק 65 \tabularnewline
+URLSession & נתוני שרת (לא שומרים — מביאים מהרשת) & פריימוורק הרשת המובנה של המערכת, בלי תלות בצד שלישי & נתוני מזג האוויר בפרק 66 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}חלוקת התפקידים בשלישיית הנתונים\end{center}
+
+שיננו את הפזמון: “הגדרות קטנות נכנסות ל-UserDefaults, נתונים בכמויות נכנסים ל-SwiftData, ונתונים מבחוץ עוברים דרך URLSession”. Core Data מהמדריכים הישנים עדיין עובד (SwiftData הוא המעטפת המודרנית שלו), אבל SQLite ידני אין כמעט סיבה לגעת — למדו ישר את החדש ואל תלכו בדרך הישנה.
+
+\booksection{UserDefaults: שומרים כמה הגדרות קטנות}
+
+\begin{lstlisting}[language=Swift]
+// כתיבה: לשמור ערך
+UserDefaults.standard.set(true, forKey: "isDarkMode")
+UserDefaults.standard.set("תל אביב", forKey: "favoriteCity")
+
+// קריאה: להוציא אותו (אם אין, מחזיר את ברירת המחדל)
+let isDark = UserDefaults.standard.bool(forKey: "isDarkMode")
+let city = UserDefaults.standard.string(forKey: "favoriteCity") ?? "תל אביב"
+
+// מחיקה: הסרת מפתח
+UserDefaults.standard.removeObject(forKey: "isDarkMode")
+\end{lstlisting}
+
+זכרו שהוא מתאים רק להגדרות מפוזרות וקטנות — עשרות ומאות רשומות מפקידים אצל SwiftData; אל תתייחסו ל-UserDefaults כאל מסד נתונים (זה מאט את הפעלת האפליקציה ולא נוח לשאילתות).
+
+\booksection{SwiftData: נותנים לנתונים “בית אמיתי”}
+
+SwiftData הוא פתרון מסד הנתונים הרשמי החל מ-iOS 17, שמפשט את “יצירת הטבלאות והוספה, מחיקה, עדכון ושליפה” לקצה: אנוטציית @Model אחת, ומחלקת הנתונים הופכת לטבלה במסד:
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+// 1. ‏@Model: המחלקה הזאת הופכת אוטומטית ל"טבלה"
+@Model
+class Record {
+    var amount: Double
+    var category: String
+    var note: String
+    var date: Date
+
+    init(amount: Double, category: String, note: String, date: Date) {
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+
+// 2. לחבר את הקונטיינר בנקודת הכניסה של האפליקציה
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .modelContainer(for: Record.self)   // מסד הנתונים מוכן
+    }
+}
+
+// 3. ב-View קוראים עם @Query וכותבים עם @Environment
+struct RecordListView: View {
+    @Query(sort: \Record.date, order: .reverse) var records: [Record]
+    @Environment(\.modelContext) private var context
+
+    var body: some View {
+        List(records) { r in
+            Text("\(r.category) \(r.amount) יואן")
+        }
+    }
+
+    func add(amount: Double, category: String) {
+        let r = Record(amount: amount, category: category, note: "", date: Date())
+        context.insert(r)     // לשמור
+        try? context.save()   // שמירה לדיסק
+    }
+}
+\end{lstlisting}
+
+את התבנית “@Model + modelContainer + @Query” אפשר להעביר כמו שהיא לכל פרויקט שלכם — רק להחליף שמות שדות. ברגע שהנתונים משתנים, @Query מרענן את הממשק אוטומטית — קסם ממש.
+
+\booksection{Codable: “מתרגם” את ה-JSON}
+
+רוב הנתונים מהשרת מגיעים כטקסט JSON. פרוטוקול Codable של Swift גורם להמרה בין “JSON מבנים” להתרחש אוטומטית — שמות השדות תואמים, והקסם קורה:
+
+\begin{lstlisting}[language=Swift]
+// JSON: {"name":"תל אביב","main":{"temp":26.5},"weather":[{"description":"בהיר"}]}
+struct WeatherResponse: Codable {
+    let name: String
+    let main: Main
+    let weather: [Weather]
+}
+struct Main: Codable { let temp: Double }
+struct Weather: Codable { let description: String }
+
+// ממחרוזת JSON למבנה
+let decoder = JSONDecoder()
+let data = jsonString.data(using: .utf8)!
+let result = try decoder.decode(WeatherResponse.self, from: data)
+print(result.weather[0].description)   // "בהיר"
+\end{lstlisting}
+
+חוק ברזל: קודם מסתכלים על ה-JSON האמיתי שמגיע, ורק אז מגדירים שדות. הרבה באגים של “פענוח נכשל” נובעים משם שדה שגוי או מטיפוס שניחש שגוי (השרת שולח את המחרוזת “26.5” ואתם הצהרתם Double) — הדפיסו את ה-JSON הגולמי והשוו, ותאתרו את הבעיה בעשר שניות.
+
+\booksection{URLSession + async/await: מדברים עם השרת}
+
+ב-iOS מתחברים לרשת עם ה-URLSession המובנה של המערכת, יחד עם async/await של Swift (פונקציות אסינכרוניות) — “לחכות לרשת” הופך טבעי כמו “לחכות לשליח”:
+
+\begin{lstlisting}[language=Swift]
+struct WeatherService {
+    // פונקציה אסינכרונית: async מסמן "אני צריך לחכות רגע", throws מסמן "עלול להיכשל"
+    func fetchWeather(city: String) async throws -> WeatherResponse {
+        let url = URL(string:
+            "https://api.example.com/weather?city=\(city)")!
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return try JSONDecoder().decode(WeatherResponse.self, from: data)
+    }
+}
+
+// נקודת הקריאה (בתוך .task):
+.task {
+    do {
+        let weather = try await service.fetchWeather(city: "תל אביב")
+        // לעדכן את הממשק…
+    } catch {
+        print("שגיאה: \(error)")
+    }
+}
+\end{lstlisting}
+
+\textbf{אזהרת מוקשים: שני חוקי ברזל של רשת}\par
+
+(1) חיבור לרשת חייב async/await, ובשום פנים לא חוסמים את הת׳רד הראשי — ממשק קפוא הוא חוויה ברמת התרסקות. התכנות המקבילי המובנה של Swift הופך את זה לטבעי, אבל אל תשכחו try await ו-do/catch. (2) ATS אוסר כברירת מחדל על HTTP גלוי: iOS דורש HTTPS. בבדיקות מול שירות http:// מקומי צריך לפתוח חריגה זמנית ב-Info.plist (NSAppTransportSecurity), אבל מוצר רשמי חייב לעבוד כולו על HTTPS — גם צוות האישור של החנות משגיח על זה.
+
+\begin{tcbpractice}{הידיים על ההגה: בונים אפליקציה קטנה של "משפט ליום"}
+\booksection{גם לשגיאות רשת יש “דרגות”: אל תשליכו את כל השגיאות על המשתמש}
+
+אין רשת, פסק זמן, 404, שרת 500... לכל שגיאה יש משפט אחר שהמשתמש צריך לראות:
+
+\begin{lstlisting}[language=Swift]
+func friendlyMessage(_ error: Error) -> String {
+    if let urlError = error as? URLError {
+        switch urlError.code {
+        case .notConnectedToInternet: return "אין רשת, לבדוק את החיבור?"
+        case .timedOut:               return "פסק הזמן חלף, לנסות שוב מאוחר יותר?"
+        case .cannotFindHost:         return "השרת לא נמצא"
+        default:                      return "בעיית רשת: \(urlError.code)"
+        }
+    }
+    if let d = error as? DecodingError {
+        return "פורמט הנתונים שגוי (ייתכן שה-API השתנתה)"
+    }
+    return "שגיאה: \(error.localizedDescription)"
+}
+\end{lstlisting}
+
+תנו למשתמש “שפה אנושית” וליומן “שפת מקור” (print של ה-error המלא). אל תשלחו את הג׳יבריש האנגלי של error.localizedDescription ישר אל המשתמש — תחושת המוצר מסתתרת בפרטים האלה.
+
+מצאו API חינמי לציטוטים (למשל hitokoto או דומיו), משכו עם URLSession + async/await את “המשפט ליום”, הציגו אותו במרכז המסך והוסיפו כפתור “החלף משפט”. אחר כך שמרו משפטים אהובים ב“מועדפים” עם SwiftData. התרגיל הזה מפעיל את UserDefaults/SwiftData/Codable/URLSession כולם יחד — אחרי שתסיימו אותו, פרקים 7 ו-8 יהיו קלים למדי.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{סיכום הפרק}
+\begin{itemize}
+  \item הפזמון: הגדרות קטנות ל-UserDefaults, נתונים בכמויות ל-SwiftData, נתונים מבחוץ דרך URLSession
+  \item שלושת כלי הקסם של SwiftData: @Model מצהיר על הטבלה, modelContainer מצמיד את הקונטיינר, @Query לקריאה ו-context.insert לכתיבה
+  \item Codable מתרגם את ה-JSON אוטומטית: השדות תואמים, והקסם קורה
+  \item URLSession + async/await: חיבור לרשת הוא כמו לחכות לשליח; do/catch מטפל בכישלונות
+  \item שני חוקי ברזל: לא חוסמים את הת׳רד הראשי; מוצר רשמי חייב HTTPS (ATS)
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,211 @@
+\bookchapter{Capitolo 15: Scienza della batteria e ottimizzazione dell'autonomia}
+
+\chapterintro{La batteria è il “cuore energetico” del telefono. Questo capitolo ti aiuta a capire le piccole stranezze della batteria e a imparare tecniche scientifiche di ricarica e di autonomia, per dire addio all'ansia da batteria scarica.}
+
+\booksection{Come funziona la batteria? Cicli e stato di salute}
+
+La batteria del telefono (agli ioni di litio o al polimero di litio) è come una spugna di energia: la ricarica è come assorbire acqua (immagazzinare elettricità), la scarica come spremere acqua (usare elettricità). Vale la pena ricordare alcune caratteristiche:
+
+\begin{itemize}
+  \item \textbf{Ricarica al bisogno}: a differenza delle vecchie batterie, non ha effetto memoria, non serve scaricarla completamente prima di ricaricare.
+  \item \textbf{Temibile calore}: le alte temperature sono il nemico numero uno della batteria.
+  \item \textbf{Invecchia}: con il tempo la capacità massima si riduce; è un fenomeno normale.
+\end{itemize}
+
+\booksubsection{Indicatore chiave: cicli di ricarica e stato di salute}
+
+\begin{itemize}
+  \item Un ciclo non è una singola ricarica. Ad esempio, se oggi si usa il 60\% e poi si ricarica al 100\%, domani si usa il 40\% e si ricarica al 100\%, il consumo totale del 100\% conta come un ciclo.
+  \item Lo stato di salute della batteria è la percentuale della capacità massima attuale rispetto a quella da nuova. Sotto l'80\% si avverte un calo netto dell'autonomia.
+  \item \textbf{Dove vederlo?}iPhone: Impostazioni > Batteria > Salute e ricarica della batteria; Android: in genere si cerca "salute batteria" nelle impostazioni.
+\end{itemize}
+
+\booksection{Mito della ricarica? Ricarica rapida, wireless e regola d'oro}
+
+\begin{itemize}
+  \item \textbf{La ricarica rapida danneggia la batteria?}Con accessori originali o certificati, il danno è minimo. Telefono e caricabatterie hanno un controllo termico e riducono la potenza se si surriscaldano.
+  \item \textbf{Ricarica wireless}: comoda ma meno efficiente, con più calore. Adatta alla ricarica notturna.
+  \item \textbf{Regola d'oro}: cerca di mantenere la carica tra il 20\% e l'80\%, non lasciarla spesso "affamata" (0\%) o "sazia" (100\%).
+\end{itemize}
+
+\begin{tcbinfo}{Funzione "Limite 80\%" di iPhone — la regola d'oro diventa un'impostazione di sistema}
+Sugli iPhone 15/16 (iOS 17 o superiore) la “regola del 20-80\%” è diventata una funzione di sistema. Una volta attivata, il telefono si ferma automaticamente all'80\%, rallentando notevolmente l'invecchiamento della batteria. Percorso:
+
+\texttt{Impostazioni > Batteria > Salute e ricarica della batteria > Ottimizzazione ricarica > Limite 80\%}
+
+Significato delle tre opzioni: (1)\textbf{Senza limiti}—ricarica al 100\%; (2)\textbf{Ottimizzazione ricarica}—impara le tue abitudini e posticipa la ricarica al 100\% solo nell'ultima fase notturna; (3)\textbf{Limite 80\%}—si ferma all'80\%, la più protettiva per la batteria. Per chi ha sempre una presa a disposizione in casa o in ufficio, consiglio vivamente il limite 80\%; per chi viaggia spesso e ha bisogno della batteria piena, può scegliere l'ottimizzazione della ricarica.
+
+\end{tcbinfo}
+
+\begin{tcbinfo}{Caricabatterie GaN — il compagno ideale per chi viaggia}
+Avrai notato che i caricabatterie rapidi sono sempre più piccoli: il protagonista è il\textbf{GaN (nitruro di gallio)}, un nuovo materiale semiconduttore. Rispetto ai caricabatterie tradizionali al silicio, quelli in GaN offrono diversi vantaggi evidenti:
+
+\begin{itemize}
+  \item \textbf{Volume ridotto}: a parità di potenza, un caricabatterie GaN può essere la metà o un terzo di uno al silicio; un GaN da 65 W è più piccolo del vecchio caricabatterie Apple da 5 W.
+  \item \textbf{Elevata efficienza, poco calore}: le perdite di commutazione del nitruro di gallio sono molto inferiori a quelle del silicio, l'efficienza di conversione energetica può superare il 95\%, e durante la ricarica non scotta.
+  \item \textbf{Adatto ai viaggi}: un caricabatterie GaN multiporta da 65 o 100 W può caricare contemporaneamente telefono, tablet e portatile, molto più leggero di tre "mattoni".
+  \item \textbf{Consigli d'acquisto}: scegli caricabatterie GaN con supporto al protocollo PD (da 65 W in su per caricare anche i portatili), come Baseus, Anker, Nubia, Xiaomi e altre marche note. Verifica la compatibilità del cavo (per alte potenze serve un cavo Type-C con chip E-Marker).
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{Analisi completa dei protocolli di ricarica rapida: perché il tuo caricabatterie non carica velocemente?}
+
+Potresti esserti trovato in questa situazione: il telefono supporta la ricarica rapida, ma cambiando caricabatterie diventa lentissimo. Questo perché la ricarica rapida non è solo “potenza alta”, ma richiede che caricabatterie, cavo e telefono “parlino la stessa lingua”: questo è il protocollo di ricarica rapida.
+
+\booksubsection{Principio di base della ricarica rapida}
+
+Potenza di ricarica = tensione × corrente (P = U × I). Per aumentare la potenza occorre aumentare la tensione, la corrente o entrambe. Diversi protocolli hanno scelto strade diverse.
+
+Flusso di lavoro della ricarica rapida:
+
+\begin{enumerate}
+  \item \textbf{Fase di handshake}: telefono e caricabatterie comunicano tramite il cavo, scambiandosi i protocolli e le potenze supportate.
+  \item \textbf{Fase di negoziazione}: le parti concordano il livello di potenza massimo comune supportato.
+  \item \textbf{Fase di ricarica}: il caricabatterie eroga tensione e corrente concordate; il telefono gestisce l'alimentazione.
+  \item \textbf{Fase di regolazione}: all'aumentare della carica, il telefono riduce progressivamente la potenza di ricarica per proteggere la batteria.
+\end{enumerate}
+
+\booksubsection{Dettagli dei principali protocolli di ricarica rapida}
+
+\textbf{USB PD (Power Delivery)}—il re dei protocolli universali
+
+\begin{itemize}
+  \item \textbf{Caratteristiche}: standard ufficiale definito dall'USB-IF, con la copertura più ampia. PD 3.0 supporta fino a 100 W (20 V/5 A), PD 3.1 arriva a 240 W (48 V/5 A).
+  \item \textbf{Livelli di tensione}: 5 V, 9 V, 15 V, 20 V; PD 3.1 supporta anche 28 V, 36 V, 48 V.
+  \item \textbf{Compatibilità}: tutti gli iPhone, Google Pixel, alcuni flagship Android, portatili e la console Switch supportano il protocollo PD.
+  \item \textbf{Vantaggi}: elevata universalità, un unico caricabatterie per più dispositivi; supporta PPS (Programmable Power Supply) per regolare con precisione tensione e corrente.
+  \item \textbf{Svantaggi}: richiede porta Type-C e chip dedicati, costi più alti.
+\end{itemize}
+
+\textbf{Qualcomm QC (Quick Charge)}—il decano del mondo Android
+
+\begin{itemize}
+  \item \textbf{QC 3.0}: supporta tensioni regolabili da 3,6 V a 20 V con step di 0,2 V, fino a 18 W.
+  \item \textbf{QC 4.0/4+}: compatibile con USB PD, fino a 27 W, introduce la tecnologia di ricarica a doppia via.
+  \item \textbf{QC 5.0}: supporta oltre 100 W, dallo 0 al 50\% in 5 minuti, con calore notevolmente ridotto.
+  \item \textbf{Compatibilità}: è supportato da molti telefoni con processore Snapdragon Qualcomm, ma i vari brand di solito privilegiano i propri protocolli proprietari.
+\end{itemize}
+
+\textbf{OPPO VOOC / OnePlus WARP / realme Dart}—rappresentante della bassa tensione ad alta corrente
+
+\begin{itemize}
+  \item \textbf{Strada tecnica}: bassa tensione ad alta corrente (da 5 V/4 A in su), con meno calore e maggiore efficienza.
+  \item \textbf{VOOC 1.0}: 20 W (5 V/4 A), lanciato nel 2014, apre l'era della ricarica rapida.
+  \item \textbf{SuperVOOC}: 50-65 W, con design a doppia cella in serie.
+  \item \textbf{SuperVOOC 2.0}: 65 W, carica una batteria da 4000 mAh in 30 minuti.
+  \item \textbf{SuperFlash 150 W/240 W}: la tecnologia di ricarica rapida di massa più veloce attualmente.
+  \item \textbf{Caratteristiche}: richiede caricabatterie e cavo dedicati (con contatti aggiuntivi), non compatibile con altri protocolli.
+\end{itemize}
+
+\textbf{Huawei SuperCharge}—l'evoluzione della ricarica rapida ad alta tensione
+
+\begin{itemize}
+  \item \textbf{FCP (Fast Charge Protocol)}: 9 V/2 A, 18 W, compatibile con QC 2.0.
+  \item \textbf{SCP (Super Charge Protocol)}: supporta potenze più alte, da 22,5 W a 66 W fino a 100 W.
+  \item \textbf{Caratteristiche tecniche}: usa la tecnologia charge pump per convertire l'alta tensione in bassa tensione ad alta corrente in ingresso alla batteria, con un'efficienza fino al 98\%.
+  \item \textbf{Compatibilità}: esclusiva dei telefoni Huawei/Honor; alcuni caricabatterie supportano anche il protocollo PD.
+\end{itemize}
+
+\textbf{Ricarica rapida Xiaomi Surge}—l'ascesa di un protocollo proprietario
+
+\begin{itemize}
+  \item \textbf{Chip Surge P1}: chip di gestione della ricarica rapida autoprodotto da Xiaomi, supporta la ricarica cablata a 120 W.
+  \item \textbf{Chip Surge G1}: chip di gestione della batteria, abbinato al P1 per una ricarica rapida più efficiente.
+  \item \textbf{Caratteristiche tecniche}: usa una soluzione a doppia cella in serie + charge pump, con compatibilità multi-protocollo.
+\end{itemize}
+
+\textbf{Ricarica rapida Apple}—prudente ma stabile
+
+\begin{itemize}
+  \item \textbf{Protocollo}: supporta solo USB PD.
+  \item \textbf{Potenza}: dall'iPhone 8 in poi supporta la ricarica rapida, fino a circa 27 W (iPhone 15 Pro Max può superare i 27 W).
+  \item \textbf{Caratteristiche}: potenza relativamente prudente, ma curva di ricarica ottimizzata e ottimo controllo del calore.
+  \item \textbf{Requisiti accessori}: serve un cavo USB-C to Lightning (o USB-C to USB-C) e un caricabatterie PD.
+\end{itemize}
+
+\booksubsection{Tabella comparativa dei protocolli di ricarica rapida}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Protocollo} & \textbf{Potenza massima} & \textbf{Strada tecnica} & \textbf{Compatibilità} \tabularnewline
+\hline
+USB PD 3.1 & 240 W & Alta tensione/multilivello & La più ampia \tabularnewline
+QC 5.0 & 100 W+ & Alta tensione regolabile & Modelli Qualcomm \tabularnewline
+VOOC/Dart & 240 W & Bassa tensione ad alta corrente & Esclusiva OPPO e affini \tabularnewline
+SuperCharge & 100W & Charge pump & Huawei/Honor \tabularnewline
+Ricarica Apple & \textasciitilde{}27W & Protocollo PD & iPhone/iPad \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Protocolli di ricarica wireless}
+
+Anche la ricarica wireless ha i suoi standard di protocollo:
+
+\begin{itemize}
+  \item \textbf{Standard Qi}: definito dal WPC (Wireless Power Consortium), è lo standard più diffuso. Il Qi di base supporta 5 W-15 W.
+  \item \textbf{Standard Qi2}: pubblicato nel 2023, introduce il posizionamento magnetico (simile al MagSafe di Apple) e supporta 15 W+.
+  \item \textbf{Protocolli proprietari}: i vari brand hanno la loro ricarica wireless ad alta velocità, come la ricarica wireless Xiaomi da 50 W, Huawei da 50 W, ecc., che richiedono caricabatterie dedicati.
+\end{itemize}
+
+\booksubsection{Guida all'acquisto della ricarica rapida}
+
+\begin{itemize}
+  \item \textbf{Verifica la compatibilità del protocollo}: quando compri un caricabatterie, conferma che supporti il protocollo di ricarica rapida del tuo telefono. I caricabatterie di terze parti di solito indicano i protocolli supportati.
+  \item \textbf{Verifica il cavo dati}: la ricarica rapida ad alta potenza richiede cavi dedicati. I cavi normali potrebbero supportare solo potenze sotto i 60 W.
+  \item \textbf{Verifica le certificazioni}: gli utenti Apple dovrebbero scegliere cavi con certificazione MFi; gli utenti Android dovrebbero scegliere accessori originali o di terze parti noti.
+  \item \textbf{Verifica il calore}: durante la ricarica rapida è normale che il telefono si scaldi, ma se scotta troppo non è normale: sospendi la ricarica o cambia caricabatterie.
+\end{itemize}
+
+\begin{tcbwarn}{Suggerimenti di sicurezza per la ricarica rapida}
+\begin{itemize}
+  \item Evita di giocare a giochi pesanti durante la ricarica, aumenterebbe il calore.
+  \item Non usare caricabatterie e cavi di scarsa qualità, potrebbero creare rischi per la sicurezza.
+  \item Durante la ricarica togli la cover spessa del telefono, per aiutare la dispersione del calore.
+  \item Se il caricabatterie o il telefono si scaldano in modo anomalo o emanano odori strani, interrompi immediatamente l'uso.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{Nuove tecnologie per le batterie: anodo in silicio-carbonio}
+
+Se hai seguito le presentazioni dei flagship del 2024-2026, la parola “anodo in silicio-carbonio” è diventata quasi sinonimo di batteria di fascia alta. Si tratta di un importante aggiornamento del materiale dell'anodo delle batterie al litio, e il principio non è complesso:
+
+\begin{itemize}
+  \item \textbf{Anodo tradizionale in grafite}: le batterie dei telefoni hanno sempre usato la grafite come anodo, una tecnologia matura e stabile, ma la densità di energia si è avvicinata al limite teorico (circa 372 mAh/g).
+  \item \textbf{Aggiunta di silicio}: la capacità teorica specifica del silicio è circa 10 volte quella della grafite (circa 4200 mAh/g). Aggiungendo una piccola quantità di silicio alla grafite per creare un "anodo composito silicio-carbonio", si aumenta significativamente la densità di energia dell'intera batteria.
+  \item \textbf{Aumento della densità di energia}: a parità di volume, la capacità di una batteria con anodo in silicio-carbonio può aumentare di circa\textbf{15\%-20\%}. È il motivo per cui i flagship del 2024-2026 riescono a inserire batterie da 5500-6000 mAh in corpi di 7-9 mm di spessore.
+\end{itemize}
+
+\begin{tcbinfo}{Quali modelli li usano?}
+\begin{itemize}
+  \item \textbf{Honor}: la serie Magic ha introdotto per prima l'anodo in silicio-carbonio; Magic6 Pro, serie Magic7 e il pieghevole Magic V3 lo adottano.
+  \item \textbf{Xiaomi}: Xiaomi 14 Ultra e serie Xiaomi 15 montano una nuova generazione di batterie ad anodo in silicio-carbonio.
+  \item \textbf{vivo}: X100 Ultra e serie X200 Pro usano una soluzione ad alta densità in silicio-carbonio.
+  \item \textbf{Huawei/OPPO e altri}: nel 2025-2026 i flagship seguono diffusamente; l'anodo in silicio-carbonio sta passando da "tecnologia magica" a standard dei telefoni di fascia alta.
+\end{itemize}
+
+\end{tcbinfo}
+
+\textbf{Impatto pratico per l'utente}: il vantaggio maggiore dell'anodo in silicio-carbonio è “una capacità maggiore a parità di volume”: il telefono può essere più sottile senza che l'autonomia si riduca; oppure il corpo resta sottile ma la batteria passa da 4500 a 5500 mAh. In altre parole, non devi più pagare in “spessore e peso” l'autonomia. Nota: le batterie ad anodo in silicio-carbonio richiedono ancora ottimizzazioni con il chip di ricarica rapida nella gestione delle basse temperature e della carica completa, ed è uno dei motivi per cui i produttori consigliano di mantenere a lungo termine l'80\% di carica.
+
+\booksection{I veri consigli per risparmiare batteria}
+
+\begin{itemize}
+  \item \textbf{Schermo (il re dei consumi)}: abbassa la luminosità, riduci il tempo di blocco automatico. Sui telefoni OLED la modalità scura fa risparmiare molta batteria.
+  \item \textbf{Segnale debole}: in ascensore o in cantina il telefono cerca segnale con tutte le forze, consumando rapidamente.
+  \item \textbf{5G}: se il segnale è debole, passa manualmente al 4G: l'autonomia migliorerà molto.
+  \item \textbf{Servizi di localizzazione}: per le App non di navigazione, imposta il permesso di localizzazione su "solo durante l'uso".
+  \item \textbf{Limita le attività in background}: iPhone in Impostazioni > Generali > Aggiornamento App in background; Android nelle impostazioni della batteria delle App.
+\end{itemize}
+
+\begin{tcbpractice}{Verifica: fai un check-up alla tua batteria}
+\begin{enumerate}
+  \item Verifica lo stato di salute: trova e annota la capacità massima della tua batteria.
+  \item Analizza i dettagli dei consumi: guarda i grafici e l'elenco delle App nelle impostazioni della batteria, individua i "colpevoli" dei consumi.
+  \item Definisci un piano: limita le App con consumi anomali in background.
+\end{enumerate}
+
+\end{tcbpractice}

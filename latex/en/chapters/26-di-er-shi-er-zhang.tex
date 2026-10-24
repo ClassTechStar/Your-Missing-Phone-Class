@@ -1,0 +1,275 @@
+\bookchapter{Chapter 22: How AI Works in Phones}
+
+\chapterintro{: Converts sound waves into text.}
+
+\booksection{Understanding (natural language understanding)}
+
+: Understands intent, extracts key entities.
+
+\booksection{Execution and response}
+
+\begin{enumerate}
+  \item \textbf{: Calls the corresponding App or service, then "speaks" to you through speech synthesis.}3. On-Device AI vs. Cloud AI
+  \item \textbf{On-device AI keeps computation in the phone, with fast speed, high privacy, and offline capability. Cloud AI requires internet connection but can handle more complex tasks.}4. AI LLMs and Mobile Phones: Your Portable Smart Assistant
+  \item \textbf{In 2024-2025, the explosion of AI LLMs (such as DeepSeek, ChatGPT, Wenxin Yiyan, Tongyi Qianwen, etc.) profoundly changed the way mobile phones are used. Phones are no longer just tools that execute instructions, but intelligent partners that can understand, reason, and create.}What is an AI LLM?
+\end{enumerate}
+
+\booksection{AI LLMs (Large Language Models) are AI systems trained on massive amounts of text data that can understand and generate natural language. You can imagine it as a “super scholar” who has read almost all the text on the internet, capable of answering questions, writing articles, translating, programming, and analyzing data.}
+
+AI LLM Applications on Mobile Phones:
+
+\booksection{Conversational assistants}
+
+In 2025-2026, the explosion of AI large models (such as DeepSeek R1, ChatGPT-5, ERNIE Bot 5.0, Tongyi Qianwen 3, etc.) profoundly changed how phones are used. Phones are no longer just tools that execute commands — they have become intelligent partners that can understand, reason, and create. On-device AI chips (NPU computing power exceeding 80 TOPS) made large model inference run locally on phones for the first time, enabling AI without an internet connection.
+
+\booksubsection{Writing and creation}
+
+: Let AI help you write emails, summarize meeting minutes, polish articles, and generate creative copy.
+
+\booksubsection{Image generation and editing}
+
+\begin{itemize}
+  \item \textbf{: AI can one-click remove passersby from photos, expand image boundaries, convert styles, and even generate images based on text descriptions.}Real-time translation
+  \item \textbf{: Real-time call translation, face-to-face dialogue translation, photo translation—no more language barriers when traveling abroad.}Learning tutoring
+  \item \textbf{: AI can explain concepts, create practice questions, and grade homework; it's a portable tutor.}On-Device LLMs: Phones Run AI Themselves
+  \item \textbf{Real-time translation}No network needed
+  \item \textbf{: AI functions work even offline—on airplanes, in subways, anywhere.}More secure privacy
+\end{itemize}
+
+\booksubsection{: Your conversations and data are not uploaded to the cloud; everything is processed locally on the phone.}
+
+Faster response
+
+\begin{itemize}
+  \item \textbf{: No network latency; AI replies are almost instantaneous.}Current limitations
+  \item \textbf{: On-device models still can't match cloud-based LLMs in capability; complex tasks still require internet. But as chip AI computing power improves, on-device models will become increasingly powerful.}System-Level AI Integration:
+  \item \textbf{Apple Apple Intelligence}: The AI system introduced in iOS 18, integrating writing tools, image magic wand, enhanced Siri, notification summaries, and more. On-device processing first; only complex tasks go to the cloud.
+  \item \textbf{Huawei Pangu LLM}: Integrated into the HarmonyOS system, the Xiaoyi assistant gains LLM capabilities, supporting document summaries, smart screen reading, AI photo editing, and more.
+\end{itemize}
+
+\booksubsection{Xiaomi Pengpai AI}
+
+\begin{itemize}
+  \item \textbf{: System-level AI capabilities, supporting AI image search, AI summaries, AI real-time captions, on-device LLM conversations, and more.}Samsung Galaxy AI
+  \item \textbf{: Real-time call translation, note AI summaries, image generation and editing, search circle selection, and other functions.}5. Several Typical Application Scenarios and Practical Operations
+  \item \textbf{To give you a more intuitive feel for the "superpowers" of mobile AI, below we use five specific scenarios to show how AI "comes to the rescue" in daily life:}Scenario 1: Real-Time Translation—Your Personal Translator for Traveling Abroad
+  \item \textbf{Actual performance}: Can't speak French when ordering in Paris? iPhone's "Translate" App supports a face-to-face dual-person dialogue mode, where both parties see subtitles in their own language, and can even do simultaneous interpretation. On the Android side, Samsung Galaxy AI's real-time call translation lets you speak Chinese directly on the phone, and the other party hears English, and vice versa.
+\end{itemize}
+
+\booksection{Underlying principle}
+
+: A three-step pipeline of speech recognition (ASR) machine translation (NMT) speech synthesis (TTS), with end-to-end latency now controllable within 1 second.
+
+\booksubsection{Scenario 2: AI Erase—Saving Tourist Photos “Ruined” by Passersby}
+
+\textbf{Actual performance}: Took a beautiful selfie at a scenic spot, but the background is crowded with other tourists? Use “Magic Erase” to circle the passersby, and the phone will automatically identify and “erase” them, then intelligently fill in the background. The results are often stunning.
+
+\textbf{Underlying principle}: The image segmentation (Inpainting) model first identifies and deletes the selected area, then “imagines” reasonable fill content based on surrounding pixels and semantic understanding. The AI model behind this is trained on millions of images.
+
+\booksubsection{Scenario 3: AI Photo Editing—One-Click to Become a “Photography Master”}
+
+\textbf{Actual performance}: Took a gray, hazy landscape photo on a cloudy day? AI “Magic Sky” can one-click replace the sky with clear sky, sunset, or even starry sky. AI image expansion can turn a vertical composition into a horizontal one, with the phone “imagining” scenes beyond the frame.
+
+\textbf{Underlying principle}: Based on Generative AI's Diffusion Model, it understands the semantic content of the image and then generates new pixels. This is the “cutting edge” of current AI image processing.
+
+\booksubsection{Scenario 4: Document Processing—An Efficiency Multiplier for Office Workers}
+
+\textbf{Actual performance}: After a meeting, throw the meeting recording to AI, and it can automatically organize structured meeting minutes, extract action items, and generate summaries. A 10-page English PDF report can be distilled by AI in 10 seconds to give you the core conclusions.
+
+\textbf{Underlying principle}: Long Context LLMs can “read through” documents of tens of thousands of words, performing multi-round reasoning and information extraction. Apple Intelligence, Huawei Xiaoyi, WPS AI, Tencent Yuanbao, etc., all have this capability.
+
+\booksubsection{Scenario 5: AI Image Search and Object Recognition—Your “Visual Search Engine”}
+
+\textbf{Actual performance}: See an unfamiliar flower on the street, open the camera, and AI immediately tells you “This is a hibiscus.” Looking through your album for photos taken at the beach last year, search for “ocean,” and AI automatically finds all photos containing the sea, without manual scrolling.
+
+\textbf{Underlying principle}: Computer Vision (CV) models vectorize (Embedding) image content, then match it with text queries for similarity. This “multimodal search” is a major leap in phone album management.
+
+\booksubsection{Prompt Optimization: The “Communication Formula” That Makes AI Follow Your Commands}
+
+\textbf{Actual performance}most practical, easiest-to-use “Role-Background-Task-Constraint” communication approach
+
+\textbf{Underlying principle}Why do we need a framework?
+
+\booksection{Many people use AI like using Baidu—typing in a few keywords. But AI is not a search engine; it's a language model that “reads, understands, and then answers.”}
+
+Give it more context, clearly state what you want, and constrain it from going off track\textbf{, and it can give you precise results. A framework translates “what a good answer looks like” in your head into instructions AI can understand.}1. Role: Tell AI Who It Is
+
+\begin{tcbinfo}{Give AI a specific "identity," and it will draw on the professional knowledge and expression style of the corresponding field.}
+The more specific the role setting, the more professional the output\textbf{.}Practical examples:
+
+\end{tcbinfo}
+
+\booksubsection{“You are a}
+
+Xiaomi phone repair engineer with 10 years of experience\textbf{.“ (Technical question)}.
+
+\booksubsection{The tone should be warm and natural, like chatting with a friend}
+
+\begin{itemize}
+  \item knowledge scope\textbf{"You are a}book editor with good aesthetics, well-read, and your own style
+  \item knowledge scope\textbf{"You are a}cooking blogger who makes breakfast for office workers every day
+  \item knowledge scope\textbf{"You are a}patient, gentle Traditional Chinese Medicine practitioner who never laughs at beginners
+  \item knowledge scope\textbf{Why is it effective?}The role sets AI's
+  \item knowledge scope\textbf{,}expression style
+\end{itemize}
+
+\textbf{, then send to AI:}professional depth\textbf{. An AI without a role is a “jack of all trades but master of none”; with a role, it can “enter” that identity and think like that professional.}and\textbf{Clearly state “who you are, your current situation, your constraints” in advance, and AI can give answers that are}verb\textbf{, rather than generic talk.}Practical examples:
+
+\booksubsection{“My phone is a}
+
+Xiaomi 14, bought half a year ago, recently overheating severely when playing games\textbf{.“ (Device situation)}”I am
+
+\booksubsection{The tone should be warm and natural, like chatting with a friend}
+
+\begin{itemize}
+  \item ." (User profile)\textbf{"I am}preparing for the June 2026 CET-6 English exam, with average foundation
+  \item ." (Study background)\textbf{"I run}a small coffee shop in a third-tier city, with monthly revenue of 30,000 yuan and two employees
+  \item ." (Business background)\textbf{"I}just had a baby and am doing postpartum confinement at home, severely sleep-deprived
+  \item ." (Life stage)\textbf{Why is it effective?}Background information lets AI know
+  \item "who to serve"\textbf{just had a baby and I'm on postpartum confinement at home, severely short of sleep}"under what conditions"
+\end{itemize}
+
+\textbf{, then send to AI:}3. Task: Clearly Tell AI What to Do\textbf{This step should start with a}verb\textbf{(write, list, compare, translate, explain, summarize...), and describe the task}specifically and executably
+
+\booksubsection{. Vague tasks only get vague answers.}
+
+Practical examples:\textbf{“Please}list 5 permissions I should immediately turn off\textbf{and explain why.” (Clear action)}“Please
+
+\booksubsection{The tone should be warm and natural, like chatting with a friend}
+
+\begin{itemize}
+  \item The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"\textbf{"Please}compare these four phones in the 3,000 yuan price range
+  \item The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"\textbf{"Please}explain 'what is 5G' in words a primary school student can understand
+  \item The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"\textbf{"Please}write three short video scripts for my breakfast shop
+  \item The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"\textbf{Why is it effective?}The task part is the "command center" for AI's actions.
+  \item The clearer the verb and the more specific the requirements, the better AI knows "what to deliver"\textbf{. Vague words like "do something," "make a," "take a look" are taboos for AI—it will guess your meaning, and the results often go off track.}4. Constraints: Tell AI What Not to Do
+\end{itemize}
+
+\textbf{, then send to AI:}making AI converge on the output that suits you best\textbf{. Common dimensions include: word count, format, tone, things to avoid, things to include.}Practical examples:
+
+\booksubsection{“}
+
+No more than 200 words, list in bullet points\textbf{.“ (Length + format)}”
+
+\booksubsection{The tone should be warm and natural, like chatting with a friend}
+
+\begin{itemize}
+  \item , only explain principles." (Boundaries)\textbf{"}Don't use technical terms
+  \item , only explain principles." (Boundaries)\textbf{"}Each paragraph no more than 3 lines
+  \item , only explain principles." (Boundaries)\textbf{"}Must include: usage scenarios, pros and cons, my budget match
+  \item , only explain principles." (Boundaries)\textbf{"}Don't give specific investment advice
+  \item , only explain principles." (Boundaries)\textbf{Why is it effective?}Without constraints, AI tends to "freestyle"—either too academic, too long, or off-topic. Clear constraints = clear "delivery standards," aligning expectations on both sides, making results controllable.
+  \item , only explain principles." (Boundaries)\textbf{Writing good prompts is not a one-time thing.}After writing, first self-check these five points
+\end{itemize}
+
+\textbf{, then send to AI:}Specific rather than abstract
+
+\booksubsection{: Not “write an article,” but “write an 800-word, 3-section phone buying guide for new moms.”}
+
+Include background rather than isolated\textbf{: Tell AI “who I am, why I'm asking this,” so it can give you a “customized” answer.}Have a clear output format
+
+\begin{enumerate}
+  \item \textbf{: Is it a table, list, paragraph, or JSON? State it in advance.}Constraints in place
+  \item \textbf{: Word count, style, things to avoid—any one of these three brings noticeable improvement.}Verifiable by AI
+  \item \textbf{: After asking, have AI repeat your requirements; if it can't articulate them clearly, you haven't been clear.}6. Common Problems and Solutions
+  \item \textbf{Symptom}Solution
+  \item \textbf{Answer too generic, not practical}Add background (who you are/what scenario)
+\end{enumerate}
+
+\booksubsection{Answer too academic/too official}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Add tone constraints + reject "bureaucratic language" list} & \textbf{Answer off-topic/not answering the question} \tabularnewline
+\hline
+Restate the task with verbs and require "only answer this" & Answer too long to finish reading \tabularnewline
+Hard limit on word count (within 200 words) & AI speaks nonsense with a straight face \tabularnewline
+Add "if uncertain, mark 'I'm not sure'" + self-check important facts & Not satisfied with the first version \tabularnewline
+Don't rewrite; append "a bit more..." to the original prompt & 7. Three Complete Scenario Cases \tabularnewline
+Scenario 1: Life Assistant (Breakfast Pairing Suggestions) & Prompt \tabularnewline
+: & You are a breakfast blogger who excels at nutritional pairing ( \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Role}
+
+\begin{tcbinfo}{). I am an office worker mom with only 15 minutes every morning to make breakfast, with a 6-year-old child and a 60-year-old mother-in-law at home (}
+\textbf{discussing the Q2 marketing promotion plan}:
+
+list 7 days of non-repeating breakfast pairings\textbf{(}Task\textbf{). Each breakfast requires: (1) Preparation time no more than 15 minutes (2) Nutritionally balanced (protein + carbs + fruits/vegetables) (3) Suitable for all ages (4) Ingredients available at ordinary supermarkets (}Constraints\textbf{).}Why it's effective\textbf{: Role sets professionalism, background gives the commonalities of three types of people, task clearly defines deliverables, and 4 constraints ensure executability.}Scenario 2: Study Assistance (CET-6 Exam Preparation)\textbf{Prompt}Fill in the repository name, such as
+
+\textbf{: When unsatisfied with AI's answer, you can say “This is too professional, please explain again in words a primary school student can understand.”}experienced CET-6 English teacher
+
+\end{tcbinfo}
+
+\begin{tcbinfo}{(Role). I am an ordinary undergraduate student,}
+\textbf{discussing the Q2 marketing promotion plan}:
+
+Please organize the following meeting notes into structured minutes\textbf{(Task). Requirements: (1) Clear time allocation for listening, speaking, reading, and writing each week (2) Give the key breakthrough direction for each month (3) Recommend 3 suitable review materials (explain reasons in Chinese) (4) Output in table format (Constraints).}Why it's effective\textbf{: Role sets professional background, background gives score and time anchors, task clearly defines “phased plan,” constraints require “tabular” and “executable.”}Scenario 3: Work Efficiency (Meeting Minutes Organization)\textbf{Prompt}:
+
+\textbf{: When unsatisfied with AI's answer, you can say “This is too professional, please explain again in words a primary school student can understand.”}senior administrative assistant
+
+\end{tcbinfo}
+
+\begin{tcbinfo}{(Role). I just finished a 1-hour department meeting,}
+\textbf{discussing the Q2 marketing promotion plan}:
+
+Please organize the following meeting notes into structured minutes\textbf{(Task). Requirements: (1) Divide into three parts: “Resolutions / Action Items / Risks and Dissents” (2) Mark the responsible person and deadline for action items (if not mentioned, write “to be confirmed”) (3) Total word count within 600 words (4) Output in markdown format (Constraints).}Why it's effective\textbf{: Role sets administrative perspective, background gives meeting topic, task clearly defines structured output, 4 constraints make the result directly reusable.}Advanced Techniques: Make AI Your “Personal Assistant”\textbf{Try these advanced uses to experience AI's true power:}Multi-round dialogue optimization
+
+\textbf{: When unsatisfied with AI's answer, you can say “This is too professional, please explain again in words a primary school student can understand.”}Chain of Thought (CoT)
+
+\end{tcbinfo}
+
+\textbf{: Have AI “think step by step”; answer quality is usually higher: “Please analyze this math problem step by step.”}\par
+
+Multi-AI collaboration
+
+\begin{itemize}
+  \item \textbf{: Use A to write the first draft, B to polish, C to translate—combining them works even better.}System prompts
+  \item \textbf{: Preset your identity, preferences, taboos, etc. in AI settings to make answers better fit your needs.}7. AI's Limitations and Challenges: Maintain Clear Judgment
+  \item \textbf{Although AI is powerful, it's by no means "omnipotent." Clearly understanding its limitations is key to using it better:}"Hallucination" problem
+  \item \textbf{Challenge 2: AI Photo Editing}Knowledge cutoff
+\end{itemize}
+
+\booksection{: Most AI's training data has a cutoff date (such as early 2024); it doesn't know what happened after that.}
+
+Limited reasoning ability
+
+\begin{itemize}
+  \item \textbf{: Complex multi-step reasoning, mathematical proofs, and logical traps—AI still easily makes mistakes.}Privacy risks
+  \item \textbf{: In cloud AI services, your conversations may be used for model training. For sensitive information, prioritize on-device AI.}Bias and values
+  \item \textbf{: AI may carry biases from training data; you need to maintain independent thinking.}AI Usage Tips
+  \item \textbf{AI-generated content may be inaccurate ("hallucination" problem); important information must be verified.}Don't enter personal privacy information into AI (ID numbers, passwords, bank information, etc.).
+  \item \textbf{Make good use of prompts: The more specific and clear the description, the higher the quality of AI's answer.}AI is a tool, not an authority; maintain independent thinking and judgment.
+\end{itemize}
+
+\begin{tcbinfo}{For key decisions (medical, legal, financial), consult professionals rather than relying on AI.}
+\begin{itemize}
+  \item Advanced Techniques: Make AI Your "Personal Assistant"
+  \item Try these advanced uses to experience AI's true power:
+  \item Multi-round dialogue optimization
+  \item : When unsatisfied with AI's answer, you can say "This is too professional, please explain again in words a primary school student can understand."
+  \item Chain of Thought (CoT)
+\end{itemize}
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Challenge 3: Prompt Optimization}
+\begin{enumerate}
+  \item \textbf{: First use a simple prompt "write a travel guide" to ask AI, then use the CRISPE framework to write a detailed prompt. Compare the quality difference of the two answers.}Chapter 23: Programming Thinking and Automation Enlightenment
+  \item \textbf{In the previous two chapters, we built a secure "boundary wall" for our phones and witnessed its increasingly smart "AI brain" within the wall. Now, let's unlock one of the phone's ultimate potentials: letting it "think" like a programmer and automatically complete the continuous tasks you set. You might say: "I don't know how to write code, what does this have to do with me?" Don't worry, this chapter doesn't require you to write a single line of code—modern phones have lowered the threshold for "programming" to the point where you can do it with simple dragging and dropping.}1. What Exactly Is Automation?
+  \item \textbf{In plain language, automation is:}letting your phone automatically do a series of things for you when a certain condition is met.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbinfo}{Case 2: Complete Phone Replacement Data Migration}
+\begin{itemize}
+  \item \textbf{Scenario}: iPhone 13 Xiaomi 15 cross-brand phone replacement.
+  \item \textbf{Steps}: (1) Old phone iCloud/WeChat built-in backup (2) Sign out of Apple ID + turn off "Find" (3) New phone uses "Xiaomi Migration" app to scan QR code (4) Select migration items (5) WeChat uses built-in "Chat History Migration" separately (6) Verify key data (contacts/photos/WeChat) (7) Old phone encrypted wipe.
+  \item \textbf{Expected Result}: Zero data loss, old phone can be safely resold.
+\end{itemize}
+
+\end{tcbinfo}

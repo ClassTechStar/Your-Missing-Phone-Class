@@ -1,0 +1,188 @@
+\bookchapter{Capitolo 2: Riordina la tua stanza digitale — Gestione dei file}
+
+\chapterintro{Con il tempo il telefono si riempie di confusione; le buone abitudini iniziano dalla gestione dei file. Proprio come la tua stanza ha bisogno di essere riordinata periodicamente, anche il tuo spazio digitale va tenuto in ordine. Un telefono ben organizzato non solo rende più facile trovare le cose, ma anche più fluido il funzionamento.}
+
+\booksection{Il sistema di archiviazione a tre livelli: il tuo magazzino digitale}
+
+\begin{enumerate}
+  \item \textbf{Memoria del dispositivo}: area principale, veloce, dove si trovano sistema e app. È lo spazio più prezioso del tuo telefono, va usato con cura.
+  \item \textbf{Scheda SD (se supportata)}: un armadio extra, più lento, adatto a file grandi come film e foto. Nota: molti flagship oggi non supportano più le schede SD.
+  \item \textbf{Archiviazione cloud}: una cassaforte + disco di sincronizzazione. Previene la perdita dei dati e li sincronizza tra più dispositivi. iCloud, Baidu Netdisk, OneDrive sono scelte comuni.
+\end{enumerate}
+
+\booksection{Conoscere il “gestore file”}
+
+Su Android c'è in genere un'app [File] o [Gestore file]; su iOS c'è l'app [File] preinstallata. Sono il tuo “resource manager” per visualizzare tutti i file sul telefono.
+
+\booksubsection{Significato delle cartelle più comuni:}
+
+\begin{itemize}
+  \item \textbf{DCIM}: foto e video scattati con la fotocamera.
+  \item \textbf{Pictures}: altre immagini, come screenshot e immagini salvate.
+  \item \textbf{Download}: file scaricati dal browser.
+  \item \textbf{Music}: file musicali.
+  \item \textbf{Movies}: file video.
+  \item \textbf{Documents}: file di documenti.
+  \item \textbf{Android}: cartella di sistema Android, contiene i dati delle app; in genere non va eliminata manualmente.
+\end{itemize}
+
+\booksection{Struttura del file system: approfondimento}
+
+Android è basato su Linux e il suo file system ha una struttura gerarchica. Anche se un utente comune non ha bisogno di conoscerla in profondità, sapere qualche concetto di base è utile.
+
+\booksubsection{Partizioni di archiviazione:}
+
+\begin{itemize}
+  \item \textbf{/system}: partizione di sistema, contiene i file del sistema operativo. L'utente comune non ha accesso; richiede permessi di root.
+  \item \textbf{/data}: partizione dati, contiene i dati utente e delle app. È lo spazio che usi quotidianamente.
+  \item \textbf{/sdcard oppure /storage/emulated/0}: spazio di archiviazione accessibile all'utente, dove si trovano le foto e i file scaricati.
+\end{itemize}
+
+\booksubsection{Archiviazione dati delle app:}
+
+\begin{itemize}
+  \item \textbf{Memoria interna}: spazio privato dell'app, non accessibile ad altre app. Viene eliminato quando disinstalli l'app.
+  \item \textbf{Memoria esterna}: file che l'app salva nell'area accessibile all'utente, come foto e download. Non necessariamente eliminata quando disinstalli l'app.
+\end{itemize}
+
+\booksection{Backup e ripristino dei dati: assicura i tuoi dati}
+
+I dati non hanno prezzo: il backup è un'abitudine da coltivare.
+
+\booksubsection{Strategie di backup:}
+
+\begin{enumerate}
+  \item \textbf{Backup sul cloud}: automatico e comodo, ma richiede rete e spazio cloud. iCloud, Huawei Cloud, Xiaomi Cloud ecc. lo supportano.
+  \item \textbf{Backup locale}: collega il computer con il cavo dati ed esegui il backup con gli strumenti ufficiali. Veloce e con tanto spazio, ma richiede operazioni manuali.
+  \item \textbf{Backup doppio}: cloud + locale, la soluzione più sicura.
+\end{enumerate}
+
+\booksubsection{Cosa fare il backup?}
+
+\begin{itemize}
+  \item \textbf{Foto e video}: occupano più spazio e sono i più preziosi.
+  \item \textbf{Contatti}: meglio salvarli nell'account cloud.
+  \item \textbf{Cronologia chat di WeChat}: usa la funzione di backup integrata di WeChat.
+  \item \textbf{Documenti importanti}: salvali sul cloud o sul computer.
+\end{itemize}
+
+\booksection{Sicurezza dei file: proteggi la tua privacy}
+
+\begin{itemize}
+  \item \textbf{Crittografa i file sensibili}: molti telefoni hanno una funzione "cartella sicura" o "spazio privato" in cui puoi inserire i file sensibili, accessibili solo con password o impronta.
+  \item \textbf{Eliminare non significa distruggere}: l'eliminazione comune si limita a marcare lo spazio come sovrascrivibile, i dati ci sono ancora. Per eliminare definitivamente, usa strumenti dedicati di cancellazione sicura o sovrascrivi più volte.
+  \item \textbf{Sicurezza cloud}: scegli provider cloud affidabili, attiva l'autenticazione a due fattori e controlla periodicamente i dispositivi connessi.
+\end{itemize}
+
+\booksection{Spazio insufficiente? Fai una bella pulizia}
+
+\begin{itemize}
+  \item \textbf{Pulisci la cache}: memoria temporanea delle app; pulendola liberi spazio. Puoi farlo in Impostazioni > Memoria.
+  \item \textbf{Trova i file grandi}: usa il gestore file per ordinarli per dimensione e individuare i "colpevoli" che occupano spazio.
+  \item \textbf{Elimina i residui}: dopo aver disinstallato un'app, a volte restano file spazzatura da rimuovere manualmente.
+  \item \textbf{Pulisci la galleria}: elimina foto duplicate, sfocate e screenshot non necessari.
+  \item \textbf{Pulisci WeChat}: WeChat occupa molto spazio, è utile pulire periodicamente cronologia chat e cache.
+\end{itemize}
+
+\booksection{Panoramica dei formati di file comuni}
+
+Le estensioni dei file sul telefono possono disorientare; capirle ti aiuterà a gestire meglio i file:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Formato} & \textbf{Tipo} & \textbf{Caratteristiche} & \textbf{Apertura consigliata} \tabularnewline
+\hline
+JPG/JPEG & Immagine & Compressione con perdita, dimensioni ridotte, la compatibilità migliore. Formato predefinito delle foto del telefono. & Galleria/qualsiasi visualizzatore di immagini \tabularnewline
+PNG & Immagine & Compressione senza perdita, supporta sfondo trasparente. Usato per screenshot e icone. Più grande del JPG. & Galleria/qualsiasi visualizzatore di immagini \tabularnewline
+MP3 & Audio & Compressione con perdita, dimensioni ridotte, compatibilità eccellente. Il formato audio più diffuso. & Qualsiasi lettore musicale \tabularnewline
+FLAC & Audio & Compressione senza perdita, qualità pari al CD, dimensioni 3-5 volte maggiori dell'MP3. La prima scelta degli appassionati. & Lettore musicale/app di riproduzione professionale \tabularnewline
+WAV & Audio & Audio originale non compresso, qualità migliore ma dimensioni enormi. Usato in registrazioni professionali. & Lettore musicale \tabularnewline
+M4A & Audio & Codifica AAC, a parità di bitrate qualità migliore dell'MP3. Comune nell'ecosistema Apple. & Apple Music/lettore musicale \tabularnewline
+MP4 & Video & Il formato contenitore video più diffuso, compatibilità eccellente. Formato predefinito dei video registrati dal telefono. & Galleria/qualsiasi lettore video \tabularnewline
+MKV & Video & Formato contenitore open source, supporta più tracce audio e sottotitoli. Comune per i film. & VLC/nPlayer \tabularnewline
+DOC/DOCX & Documento & Documento Word. DOCX è compresso, più piccolo. DOC è il vecchio formato. & WPS/Office \tabularnewline
+PPT/PPTX & Presentazione & Presentazione PowerPoint. PPTX è compresso. & WPS/Office \tabularnewline
+XLS/XLSX & Foglio & Foglio di calcolo Excel. XLSX è compresso. & WPS/Office \tabularnewline
+PDF & Documento & Formato multipiattaforma, impaginazione fissa non modificabile. Comune per contratti, tesi ed ebook. & Adobe Reader/WPS \tabularnewline
+ZIP & Compresso & Il formato compresso più diffuso, buona compatibilità multipiattaforma. & Di sistema/app di decompressione \tabularnewline
+RAR & Compresso & Compressione migliore dello ZIP, ma richiede software dedicato per l'estrazione. & App di decompressione \tabularnewline
+ISO & Immagine & File immagine disco, copia integralmente il contenuto di un disco. Comune per i pacchetti di installazione di sistemi. & App di decompressione/unità virtuale \tabularnewline
+HTML & Pagina web & File di pagina web, si apre con il browser. Le pagine web salvate usano questo formato. & Browser \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbpractice}{Esercizio: riordina la cartella "Download"}
+Apri il gestore file > entra nella cartella “Download”. Vedi cosa c'è dentro? Elimina l'inutile e organizza ciò che serve (ad esempio creando cartelle “Materiali di lavoro”, “Sticker” e spostandoci i file). Approfittane per controllare lo spazio di archiviazione e capire quali tipi di file occupano di più.
+
+\end{tcbpractice}
+
+\booksection{Gestione delle immagini e del file system: rendi i tuoi asset ordinati}
+
+Nella sezione precedente abbiamo imparato a “riconoscere le cartelle”, ma non basta. In questa sezione spiegheremo\textbf{come costruire attivamente un insieme di regole di gestione eseguibili nel lungo periodo}, in modo che i tuoi file siano sempre reperibili, non persi e non spiati.
+
+\booksubsection{Classificazione e convenzioni di denominazione dei file}
+
+La radice del caos è l'assenza di regole. Creare regole è in realtà semplice, la chiave è la\textbf{costanza}.
+
+\begin{itemize}
+  \item \textbf{Nomenclatura "data + evento"}: inserisci nel nome della cartella un timestamp e una descrizione dell'evento, per ritrovarli facilmente in futuro. Ad esempio\texttt{202606\_biglietti\_di\_viaggio},\texttt{2025\_riepilogo\_annuale},\texttt{2024\_compleanno\_bambino}. Così vedi subito la cronologia e capisci il contenuto a colpo d'occhio.
+  \item \textbf{Sistema di classificazione a tre livelli}:
+  \begin{itemize}
+    \item \textbf{Livello 1}: per tipo di file (documento / immagine / video / audio)
+    \item \textbf{Livello 2}: per scenario d'uso (lavoro / vita / studio)
+    \item \textbf{Livello 3}: per evento o progetto specifico (es. "2026Q2\_ProgettoA")
+  \end{itemize}
+  \item \textbf{Piano di pulizia mensile}: fissa un giorno ogni mese (consigliato il giorno dello stipendio o il 1° del mese) per riordinare la cartella "Download":\textbf{archivia l'utile, elimina l'inutile, salva in modo sicuro il prezioso}. 12 piccoli riordini all'anno sono molto più leggeri di una grande pulizia annuale.
+\end{itemize}
+
+\begin{tcbpractice}{Lista delle attività di questo mese}
+Scegli un weekend libero e procedi in questo ordine:
+
+\begin{enumerate}
+  \item Crea nel gestore file la cartella di lavoro del mese nel formato\texttt{2026Q2\_ProgettoA};
+  \item Passa in rassegna tutti i file di questa settimana nella cartella "Download": conserva l'utile, archivia ed elimina l'inutile;
+  \item Crea cartelle annuali per le foto di famiglia di quest'anno, come\texttt{2025\_famiglia},\texttt{2026\_famiglia}.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksubsection{Strategie per gestire i file ridondanti}
+
+Con il tempo il telefono “si allarga”: spesso la colpa è dei file ridondanti.
+
+\begin{itemize}
+  \item \textbf{Pulizia automatica ogni 72 ore}: i file temporanei ricevuti da app social come WeChat e QQ (sticker, immagini di chat, brevi video), per lo più, dopo essere stati visti una volta non servono più. In [WeChat] > [Impostazioni] > [Generali] > [Spazio di archiviazione] attiva la "pulizia automatica" e imposta la cache scaduta su 72 ore. Il telefono diventa subito molto più scattante, senza perdere registrazioni importanti.
+  \item \textbf{Pulizia mirata dello spazio di archiviazione}: su Android [Impostazioni] > [Memoria] > [Pulizia e accelerazione]; su iOS [Impostazioni] > [Generali] > [Spazio iPhone]; il sistema elenca i contenuti suddivisi per "cache / file temporanei / app disinstallabili / file grandi". Da pulire con priorità: (1) file di cache; (2) pacchetti di installazione scaduti (quelli delle vecchie versioni rimasti dopo l'aggiornamento delle app); (3) file duplicati (foto con stesso nome e stessa dimensione).
+  \item \textbf{Regole di classificazione automatica}: la maggior parte delle app galleria di marca supporta la classificazione intelligente: persone, paesaggi, documenti, screenshot. Una volta attivata, una nuova foto di gruppo viene classificata automaticamente in "Persone > Mario Rossi", un contratto scansionato finisce in "Documenti".\textbf{Abbinata al riordino mensile, riduce drasticamente la probabilità di "non trovare le cose"}.
+\end{itemize}
+
+\booksubsection{Convenzioni per la gestione sicura delle immagini}
+
+Le immagini sono il tipo di dato più “sensibile” sul telefono: una foto qualsiasi può rivelare la tua posizione, il dispositivo e l'ora. Consigliamo di\textbf{costruire un flusso di lavoro a “doppia protezione”}:
+
+\begin{tcbwarn}{Procedura standard per l'invio di foto di documenti o screenshot sensibili}
+\begin{enumerate}
+  \item \textbf{Maschera le informazioni visibili}: con strumenti di sistema o di terzi (come Meitu XiuXiu, Snapseed)\textbf{offri le cifre centrali del numero di carta d'identità, la targa, il numero civico, il nome, l'importo}e altri campi chiave;
+  \item \textbf{Rimuovi i metadati}: prima dell'invio, nella galleria tocca "Condividi" o "Esporta"; il sistema chiederà se mantenere le informazioni di posizione, scegli\textbf{"Non mantenere"}. In questo modo modello del dispositivo, coordinate GPS e ora di scatto non seguiranno l'immagine;
+  \item \textbf{Filigrana temporanea}(opzionale): aggiungi agli screenshot sensibili una filigrana testuale come "Solo per uso di pratica XX", per evitare abusi.
+\end{enumerate}
+
+\end{tcbwarn}
+
+Metodi comuni per la pulizia dei metadati (EXIF) (operazioni di base; per una protezione approfondita vedi il Capitolo 6 “Anonimizzazione delle foto”):
+
+\begin{itemize}
+  \item \textbf{Strumenti di sistema}: su iOS [Impostazioni] > [Privacy e sicurezza] > [Fotocamera], puoi disattivare "Posizione precisa"; scegliendo "Solo questa foto" in condivisione\textbf{verrà rimosso automaticamente gran parte dell'EXIF}.
+  \item \textbf{Android}: nella maggior parte delle app galleria di marca, in fase di "condivisione" viene chiesto se rimuovere le informazioni sulla posizione; basta spuntare l'opzione.
+  \item \textbf{Strumenti professionali}: ExifTool (su computer), Metapho (iOS), Photo Metadata Remover (Android) possono eliminare completamente tutti i metadati.
+\end{itemize}
+
+Per le immagini sensibili da\textbf{conservare a lungo}(carta d'identità, carta bancaria, scansioni del libretto di famiglia, passaporto), si consiglia di inserirle in una\textbf{galleria cifrata}:
+
+\begin{itemize}
+  \item iPhone: [Foto] > seleziona la foto > Nascondi (visibile solo dopo verifica Face ID);
+  \item Huawei/Xiaomi: [Galleria] > tieni premuto sulla foto > "Sposta nella cassaforte";
+  \item App di crittografia di terze parti:\textbf{360 Safe Album},\textbf{Tencent Album Manager (album privato)},\textbf{KeepSafe}ecc., con password separata e maggiore occultabilità.
+\end{itemize}

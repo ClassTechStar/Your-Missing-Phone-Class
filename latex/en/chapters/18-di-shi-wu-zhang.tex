@@ -1,0 +1,211 @@
+\bookchapter{Chapter 15: Battery Science and Battery Life Optimization}
+
+\chapterintro{Afraid of heat}
+
+\booksection{What's the Deal with Batteries? Cycles and Health}
+
+Aging
+
+\begin{itemize}
+  \item \textbf{: Over time, the maximum capacity will decrease—this is normal.}Core Metrics: Cycle Count and Battery Health
+  \item \textbf{One cycle is not one charge. For example, if you use 60\% today and recharge to full, then use 40\% tomorrow and recharge to full, the total 100\% consumed counts as one cycle.}Battery health is the current maximum capacity as a percentage of brand-new. Below 80\%, you'll noticeably feel the battery life shorten.
+  \item \textbf{How to check?}iPhone: Settings > Battery > Battery Health \& Charging; Android: usually search "battery health" in Settings.
+\end{itemize}
+
+\booksubsection{Charging Mysticism? Fast Charging, Wireless Charging, and the Golden Rule}
+
+\begin{itemize}
+  \item Does fast charging damage the battery?
+  \item Using original or certified fast-charging accessories causes minimal harm. The phone and charger have temperature control and will automatically reduce power if overheated.
+  \item \textbf{Wireless charging}: Convenient but less efficient, with more noticeable heat. Suitable for overnight charging.
+\end{itemize}
+
+\booksection{Charging Mysticism? Fast Charging, Wireless Charging, and the Golden Rule}
+
+\begin{itemize}
+  \item \textbf{: Try to keep the battery level between 20\%-80\%. Don't keep it starving (0\%) or stuffed (100\%).}3. Complete Guide to Fast Charging Protocols: Why Won't Your Charger Charge Fast?
+  \item \textbf{Wireless charging}1. Basic Principles of Fast Charging
+  \item \textbf{Charging power = voltage × current (P = U × I). To increase power, you either raise the voltage, raise the current, or both. Different protocols choose different technical approaches.}Fast charging workflow:
+\end{itemize}
+
+\begin{tcbinfo}{iPhone "80\% Charge Limit" Feature — Turning the Golden Rule into a System Setting}
+The iPhone 15/16 series (iOS 17+) has turned the “20\%-80\% rule” into a system feature. When enabled, the phone automatically stops charging at 80\%, significantly slowing battery aging. Settings path:
+
+\texttt{Settings > Battery > Battery Health \& Charging > Charging Optimization > 80\% Limit}
+
+The three options mean: (1)\textbf{No Limit}— charges to 100\%; (2)\textbf{Optimized Battery Charging}— learns your routine, only delays to 100\% during the last portion of overnight charging; (3)\textbf{80\% Limit}— stops at 80\% directly, best for battery longevity. For people who are always at home/office with charging available, the 80\% Limit is strongly recommended; for frequent travelers who need a full charge on the go, Optimized Battery Charging is a good choice.
+
+\end{tcbinfo}
+
+\begin{tcbinfo}{GaN Chargers — A Traveler's Best Companion}
+You may have noticed that fast chargers are getting smaller and smaller — the hero behind this is\textbf{GaN (Gallium Nitride)}this new semiconductor material. Compared to traditional silicon-based chargers, GaN chargers have several clear advantages:
+
+\begin{itemize}
+  \item \textbf{Compact Size}: At the same power output, GaN chargers can be 1/2 or even 1/3 the size of traditional silicon ones. A 65W GaN charger is smaller than Apple's old 5W charger.
+  \item \textbf{High Efficiency, Low Heat}: Gallium nitride's switching loss is far lower than silicon, with energy conversion efficiency reaching 95\%+, so it doesn't get hot during charging.
+  \item \textbf{Travel-Friendly}: A single 65W or 100W multi-port GaN charger can simultaneously charge a phone, tablet, and laptop — much lighter than carrying three "bricks."
+  \item \textbf{Buying Advice}: Look for GaN chargers that support the PD protocol (65W+ can charge laptops). Well-known brands like Baseus, Anker, Nubia, and Xiaomi are all good choices. Make sure to check that the cable is compatible (high-power charging requires a Type-C cable with an E-Marker chip).
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{Handshake phase}
+
+: The phone and charger communicate through the data cable, exchanging their supported protocols and power information.
+
+\booksubsection{Negotiation phase}
+
+: Both parties determine a commonly supported maximum power level.
+
+Charging phase
+
+\begin{enumerate}
+  \item \textbf{: The charger outputs voltage and current according to the negotiated values, and the phone manages the power.}Adjustment phase
+  \item \textbf{: As the battery level increases, the phone gradually reduces the charging power to protect the battery.}2. Mainstream Fast Charging Protocols in Detail
+  \item \textbf{USB PD (Power Delivery)}—King of Universal Protocols
+  \item \textbf{Features}: Official standard developed by USB-IF organization, with the widest coverage. PD 3.0 supports up to 100W (20V/5A), PD 3.1 extends to 240W (48V/5A).
+\end{enumerate}
+
+\booksubsection{Voltage levels}
+
+\textbf{: 5V, 9V, 15V, 20V; PD 3.1 also supports 28V, 36V, 48V.}Compatibility
+
+\begin{itemize}
+  \item \textbf{Protocol}Advantages
+  \item \textbf{: Strong universality—one charger can charge multiple devices; supports PPS (Programmable Power Supply) for fine-tuning voltage and current.}Disadvantages
+  \item \textbf{QC 5.0}Qualcomm QC (Quick Charge)
+  \item \textbf{—Veteran of the Android Camp}QC 3.0
+  \item \textbf{: Supports adjustable voltage from 3.6V-20V in 0.2V steps, up to 18W.}QC 4.0/4+
+\end{itemize}
+
+\textbf{: Compatible with USB PD protocol, supports up to 27W, adds dual-path charging technology.}QC 5.0
+
+\begin{itemize}
+  \item \textbf{: Supports 100W+, 0-50\% in just 5 minutes, significantly improved heat.}Compatibility
+  \item \textbf{: Most phones with Qualcomm Snapdragon processors support it, but brands usually prioritize their own proprietary protocols.}OPPO VOOC / OnePlus WARP / Realme Dart
+  \item \textbf{240W}Technical approach
+  \item \textbf{QC 5.0}VOOC 1.0
+\end{itemize}
+
+\textbf{: 20W (5V/4A), released in 2014, pioneered the fast charging era.}SuperVOOC
+
+\begin{itemize}
+  \item \textbf{Widest}SuperVOOC 2.0
+  \item \textbf{: 65W, fully charges a 4000mAh battery in 30 minutes.}150W/240W Super Flash Charge
+  \item \textbf{: Currently the fastest mass-produced fast charging technology.}Features
+  \item \textbf{: Requires dedicated charger and cable (with extra contacts), not compatible with other protocols.}Huawei SuperCharge
+  \item \textbf{—Evolution of High-Voltage Fast Charging}FCP (Fast Charge Protocol)
+  \item \textbf{Protocol}SCP (Super Charge Protocol)
+\end{itemize}
+
+\textbf{: Supports higher power, from 22.5W to 66W to 100W.}Technical features
+
+\begin{itemize}
+  \item \textbf{: Uses charge pump technology to convert high voltage into low voltage, high current input to the battery, with efficiency up to 98\%.}Compatibility
+  \item \textbf{: Exclusive to Huawei/Honor phones; some chargers support PD protocol.}Xiaomi Surge Fast Charging
+  \item \textbf{: Only supports USB PD protocol.}Surge P1 chip
+  \item \textbf{QC 5.0}Surge G1 chip
+\end{itemize}
+
+\textbf{: Battery management chip, works with P1 to achieve more efficient fast charging.}Technical features
+
+\begin{itemize}
+  \item \textbf{: Uses dual-cell series + charge pump solution, supports multi-protocol compatibility.}Apple Fast Charging
+  \item \textbf{—Conservative but Stable}Protocol
+  \item \textbf{: Only supports USB PD protocol.}Power
+\end{itemize}
+
+\textbf{Wireless charging also has its own protocol standards:}Features
+
+\begin{itemize}
+  \item \textbf{240W}Accessory requirements
+  \item \textbf{: Requires USB-C to Lightning cable (or USB-C to USB-C cable) and PD charger.}3. Fast Charging Protocol Comparison Table
+  \item \textbf{Protocol}Max Power
+  \item \textbf{Technical Approach}Compatibility
+\end{itemize}
+
+\booksubsection{USB PD 3.1}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{240W} & \textbf{High voltage/Multi-level} & \textbf{Widest} & \textbf{QC 5.0} \tabularnewline
+\hline
+100W+ & Charge pump & Qualcomm models & VOOC/Dart \tabularnewline
+240W & Low voltage, high current & OPPO family exclusive & SuperCharge \tabularnewline
+100W & Charge pump & Huawei/Honor & Apple Fast Charging \tabularnewline
+\textasciitilde{}27W & PD protocol & iPhone/iPad & 4. Wireless Charging Protocols \tabularnewline
+Wireless charging also has its own protocol standards: & Qi standard & : Developed by WPC (Wireless Power Consortium), the most universal standard. Basic Qi supports 5W-15W. & Qi2 standard \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{: Released in 2023, introduces magnetic alignment (similar to Apple MagSafe), supports 15W+.}
+
+Proprietary protocols
+
+\begin{itemize}
+  \item \textbf{: Each brand has its own high-speed wireless charging, such as Xiaomi 50W wireless charging, Huawei 50W wireless charging, etc., requiring dedicated chargers.}5. Fast Charging Purchasing Guide
+  \item \textbf{Check protocol matching}: When purchasing a charger, confirm it supports your phone's fast charging protocol. Third-party chargers usually list supported protocols.
+  \item \textbf{Check the cable}: High-power fast charging requires a dedicated cable. Ordinary cables may only support below 60W.
+\end{itemize}
+
+\booksubsection{Check certification}
+
+\begin{itemize}
+  \item \textbf{: Apple users should choose MFi-certified cables; Android users should choose original brand or well-known third-party.}Check heat
+  \item \textbf{: It's normal for the phone to heat up during fast charging, but if it's burning hot, that's not normal—pause charging or change the charger.}Fast Charging Safety Tips
+  \item \textbf{Avoid playing heavy games while charging, which will increase heat.}Do not use low-quality chargers and cables, which may cause safety hazards.
+  \item \textbf{Remove thick phone cases while charging to help with heat dissipation.}If the charger or phone heats abnormally or has an unusual smell, stop using it immediately.
+\end{itemize}
+
+\begin{tcbwarn}{4. These Are the Real Battery-Saving Tips}
+\begin{itemize}
+  \item Screen (the power hog)
+  \item : Lower brightness, shorten auto-lock time. OLED screen phones can save a lot of power with dark mode.
+  \item Poor signal
+  \item : In elevators and basements, the phone will desperately search for signal, draining power quickly.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{IV. New Battery Technology: Silicon-Carbon Anode Batteries}
+
+If you've been paying attention to 2024-2026 flagship phone launches, “silicon-carbon anode” has practically become synonymous with premium batteries. This is an important upgrade to lithium battery anode materials, and the principle isn't complicated:
+
+\begin{itemize}
+  \item \textbf{Traditional Graphite Anode}: Phone batteries have always used graphite as the anode — the technology is mature and stable, but energy density has approached the theoretical limit (approximately 372mAh/g).
+  \item \textbf{Adding Silicon Material}: Silicon's theoretical specific capacity is about 10 times that of graphite (approximately 4200mAh/g). By adding a small amount of silicon to graphite to create a "silicon-carbon composite anode," the overall energy density of the battery can be significantly improved.
+  \item \textbf{Energy Density Improvement}: At the same volume, silicon-carbon anode batteries can increase capacity by approximately\textbf{15\%-20\%}. This is the key reason 2024-2026 flagship phones can fit 5500-6000mAh batteries in 7-9mm bodies.
+\end{itemize}
+
+\begin{tcbinfo}{Which Models Use It?}
+\begin{itemize}
+  \item \textbf{Honor}: The Magic series pioneered the commercial use of silicon-carbon anodes. The Magic6 Pro, Magic7 series, and Magic V3 foldable all use it.
+  \item \textbf{Xiaomi}: The Xiaomi 14 Ultra and Xiaomi 15 series feature a new generation of silicon-carbon anode batteries.
+  \item \textbf{vivo}: The X100 Ultra and X200 Pro series use a high-density silicon-carbon anode solution.
+  \item \textbf{Huawei/OPPO, etc.}: 2025-2026 flagships are widely following suit, and silicon-carbon anodes are transitioning from "black tech" to standard equipment for premium phones.
+\end{itemize}
+
+\end{tcbinfo}
+
+\textbf{Practical Impact on Users}: The biggest benefit of silicon-carbon anodes is “larger battery capacity at the same size” — phones can be thinner without sacrificing battery life, or the body stays the same thickness but the battery goes from 4500mAh to 5500mAh. In other words, you no longer need to pay the price of “thick and heavy” for battery life. Note that silicon-carbon anode batteries still need optimization with fast-charging chips for low-temperature and full-charge management, which is one reason manufacturers recommend keeping charging at 80\% long-term.
+
+\booksection{V. The Real Battery-Saving Tips}
+
+\begin{itemize}
+  \item \textbf{: If the signal is poor, manually switch back to 4G, and battery life will be much better.}Location services
+  \item \textbf{: For non-navigation apps, set location permission to "Only while using".}Limit background activity
+  \item \textbf{: iPhone in Settings > General > Background App Refresh; Android in app battery settings.}Let's Check: Give Your Battery a Health Exam
+  \item \textbf{Check health: Find and note your battery's maximum capacity.}Analyze power consumption details: Look at the charts and app list in battery settings to find the power-hungry culprits.
+  \item \textbf{Formulate a strategy: Restrict apps with abnormal background power consumption.}Chapter 16: Account Systems and Cloud Services
+\end{itemize}
+
+\begin{tcbpractice}{I have a friend whose phone was stolen last year. His first thought wasn't "how much was the phone worth", but "can I get my photos back?" Unfortunately, he hadn't enabled cloud backup. A phone is just a physical object, but the data in your account—once truly lost, can never be recovered. In this chapter, we'll talk about how to put real insurance on your digital life.}
+\begin{enumerate}
+  \item 1. How Much Does Your Phone Account Actually Manage?
+  \item Many people think an account is just for downloading apps. In reality, a phone account is tied to much more than you imagine:
+  \item Contacts
+\end{enumerate}
+
+\end{tcbpractice}

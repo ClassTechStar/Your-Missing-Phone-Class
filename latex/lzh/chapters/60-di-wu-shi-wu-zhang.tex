@@ -1,0 +1,143 @@
+\bookchapter{第五十五章：項目二——天氣查詢 App（網絡版）}
+
+\chapterintro{記賬冊者「練內功」也，天氣 App 者「見世面」也——其將與互聯網相交接。此項目汝將學：請免費之 API、析 JSON、理「載中/成/敗」三種界面之態，及何以善藏 API 之鑰。既成之，汝遂具作任何「連網 App」之能——新聞、匯率、翻譯，其術一也。}
+
+\booksection{一、申請免費天氣之 API}
+
+個人練手，薦 OpenWeatherMap 或國內之和風天氣（QWeather）——皆有免費之額，註冊即用。以 OpenWeatherMap 為例：
+
+\begin{enumerate}
+  \item 註冊一賬 於 API keys 之頁生一 Key（apikey）；
+  \item 免費版可調 Current Weather（當前天氣）之接口：api.openweathermap.org/data/2.5/weather? q=beijing\&appid=汝之Key\&units=metric；
+  \item 先於瀏覽器試一遭，觀所返 JSON 之形——此接任何 API 前必為之「預習」也。
+\end{enumerate}
+
+\textbf{避坑之警：密鑰決不可硬寫於代碼}\par
+
+API Key 者，猶汝「錢囊之密碼」也，一書入代碼而提交於 GitHub，數時之內即為爬蟲掃而盜用。正法：置於 local.properties（此文件已為 gitignore 所忽），復由 Gradle 之 buildConfig 讀入代碼。搜「Android 隱藏 API Key 之最佳實踐」依而改之可也。
+
+\booksection{二、網絡之層：Retrofit + JSON 之析}
+
+先依 API 所返之 JSON 定「數據之模」，字段不相合者一切忽之：
+
+\begin{lstlisting}[language=Kotlin]
+// JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+data class Weather(val description: String)
+data class Main(val temp: Double, val humidity: Int)
+
+interface WeatherApi {
+    @GET("data/2.5/weather")
+    suspend fun getWeather(
+        @Query("q") city: String,
+        @Query("appid") key: String,
+        @Query("units") metric: String = "metric",
+        @Query("lang") lang: String = "zh_cn"
+    ): WeatherResponse
+}
+\end{lstlisting}
+
+Gson 自以 JSON 塞入此諸 data class——字段之名相合，魔法自生。
+
+\booksection{三、三種界面之態：載中 / 成 / 敗}
+
+連網 App 之魂在「狀態之理」。網遲、網斷、城名書誤……每一情形，界面皆須白於用戶。以一 sealed class（密封之類）雅而表之：
+
+\begin{lstlisting}[language=Kotlin]
+sealed class UiState {
+    object Loading : UiState()                    // 旋轉中
+    data class Success(val data: WeatherResponse) : UiState()  // 成功
+    data class Error(val message: String) : UiState()          // 失敗
+}
+
+// ViewModel 中：
+fun search(city: String) {
+    viewModelScope.launch {
+        _state.value = UiState.Loading
+        _state.value = try {
+            UiState.Success(api.getWeather(city))
+        } catch (e: Exception) {
+            UiState.Error("查無此城，易其名再試之？")
+        }
+    }
+}
+
+// 界面中：
+when (val s = state) {
+    is UiState.Loading -> CircularProgressIndicator()   // 旋轉
+    is UiState.Success -> WeatherContent(s.data)        // 展示
+    is UiState.Error -> Text(s.message)                 // 報錯
+}
+\end{lstlisting}
+
+此 Loading/Success/Error 三段式者，連網界面之「萬金油模板」也，先背之，後凡連網之 App 依樣畫葫蘆可也。
+
+\booksection{四、實戰界面之碼：繪天氣以出}
+
+狀態既有，界面如斯（關鍵之片段）：
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun WeatherContent(data: WeatherResponse) {
+    Column(
+        Modifier.fillMaxSize().padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(
+            "${data.main.temp}°C",
+            fontSize = 72.sp,
+            fontWeight = FontWeight.Light
+        )
+        Text(
+            data.weather.firstOrNull()?.description ?: "未知",
+            fontSize = 20.sp,
+            color = Color.Gray
+        )
+        Spacer(Modifier.height(16.dp))
+        Row {
+            Text(" 溼度 ${data.main.humidity}%")
+            Spacer(Modifier.width(24.dp))
+            Text(" 體感 ${data.main.temp}°C")
+        }
+    }
+}
+\end{lstlisting}
+
+小細數者可學：firstOrNull() 安取其首元（列表或空），?: 「未知」以為兜底之文——空安全之則於界面亦然。溫度以 72.sp 大字之號壯其場面，「輕」字重（Light）使數顯雅，此天氣類 App 之經典之方也。
+
+\booksection{五、界面與交互之細}
+
+\booksection{七、界面與交互之細}
+
+\begin{itemize}
+  \item 搜索之框：頂置 TextField，書城名而點搜（鍵上設「搜索」之動，回車即搜）；
+  \item 天氣之卡：大字之溫（26.5°）、天氣之述（晴）、濕度、城名；
+  \item 收藏之城：常觀之城存於 DataStore，次啟自查之——便而溫習第六章；
+  \item 下拉而新：Compose 中用 PullToRefreshBox（Material 3 所供），手感頓「專業」矣。
+\end{itemize}
+
+\begin{tcbinfo}{小識：圖片使界面活}
+每種天氣配一 emoji 或圖標（），以 when(description) 映之——三行代碼，界面溫情倍之。亦可載第三方天氣圖標之庫，然練手之階 emoji 足矣。
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{來動手：天氣 App 驗收之單}
+(1) 循常搜索而得天氣；(2) 斷網，App 雅而報錯不崩（啟飛行之模式以測！）；(3) 入不存之城，其提示也善；(4) 藏二城，重啟 App 尚在；(5) 轉屏不失其態。五條皆過，此項目方算卒業。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小結}
+\begin{itemize}
+  \item 先於瀏覽器試 API、曉 JSON，而後書碼——「預習」恆無虧
+  \item API Key 藏於 local.properties，決不入代碼之庫
+  \item Retrofit 接口 + data class：字段相合，JSON 自析
+  \item Loading/Success/Error 三段之態，連網界面之萬金油也
+  \item 網斷、空入、城之不存——理錯者，連網 App 及格之線也
+\end{itemize}
+
+\end{tcbsummary}

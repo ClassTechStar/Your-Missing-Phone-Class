@@ -1,0 +1,195 @@
+\bookchapter{Bab 62: Pengembangan Antarmuka — Pengenalan SwiftUI}
+
+\chapterintro{Antarmuka adalah segala sesuatu yang dilihat pengguna. SwiftUI adalah framework antarmuka deklaratif yang diperkenalkan Apple pada 2019 — kamu cukup “mendeklarasikan” seperti apa tampilan antarmukanya, dan sistem otomatis menangani render, adaptasi dark mode, serta penyesuaian ke berbagai ukuran layar. Pada 2026, SwiftUI sudah menjadi arus utama mutlak untuk proyek baru. Di bab ini, kita belajar “menggambar”.}
+
+\booksection{Gagasan SwiftUI: Deklaratif, Bukan Imperatif}
+
+Pengembangan antarmuka gaya lama bersifat “imperatif”: kamu mengarahkan sistem langkah demi langkah — “buat tombol taruh di (20,30) atur warna”. SwiftUI bersifat “deklaratif”: kamu cukup mendeskripsikan “di layar ada tombol merah bertuliskan 'Klik Aku'”, lalu bagaimana menggambarnya dan kapan menggambar ulang menjadi urusan sistem sendiri.
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body: mendeskripsikan "wujud tampilan"
+        VStack {               // disusun vertikal
+            Text("Halo, dunia!")
+                .font(.largeTitle)      // modifier: judul besar
+            Button("Tekan aku") {
+                print("Ditekan")
+            }
+            .buttonStyle(.borderedProminent)  // tombol solid biru
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+Poin kunci: view = struct yang mengikuti protokol View, properti body mendeskripsikan antarmuka, dan .modifier() menyusun “make-up” secara berantai. Inilah seluruh fondasi dasar SwiftUI.
+
+\booksection{View Dasar: Teks, Tombol, Kolom Input, Gambar}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{View} & \textbf{Fungsi} & \textbf{Contoh} \tabularnewline
+\hline
+Text & Menampilkan teks & Text("Halo") \tabularnewline
+Button & Tombol & Button("Klik Aku") \{ aksi \} \tabularnewline
+TextField & Kolom input & TextField("Petunjuk", text: \$teks) \tabularnewline
+Image & Menampilkan gambar & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Empat view dasar SwiftUI\end{center}
+
+Perhatikan Image(systemName:) — Apple menyediakan pustaka ikon bawaan SF Symbols (ribuan ikon gratis), dan nama seperti “star.fill” langsung menampilkan bintang penuh. Ini bonus tersembunyi pengembangan iOS: membuat antarmuka hampir tidak perlu mencari aset ikon.
+
+\booksection{Trio Layout: VStack, HStack, ZStack}
+
+\begin{itemize}
+  \item VStack: tersusun vertikal (seperti antre mengambil makanan di kantin);
+  \item HStack: tersusun horizontal (seperti duduk berjajar);
+  \item ZStack: ditumpuk (seperti kartu remi ditumpuk, cocok untuk badge dan overlay).
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("Tagihan")
+        Spacer()                 // Ruang elastis: mendorong kanan sampai ujung
+        Text("-25.5 yuan").foregroundColor(.red)
+    }
+    Divider()                    // Garis pemisah
+    Text("Catatan: makan siang")
+}
+.padding(16)                     // beri ruang di sekeliling
+.background(Color(.systemGray6)) // latar abu muda
+.cornerRadius(12)                // sudut membulat
+
+// Urutan modifier berpengaruh: padding dulu baru background, latar tidak termasuk jarak padding
+\end{lstlisting}
+
+\begin{tcbwarn}{Perhatian: Urutan modifier berpengaruh}
+padding(16).background(abu) dan background(abu).padding(16) hasilnya berbeda — yang pertama “memberi jarak dulu, lalu mewarnai” (latar tidak termasuk jarak), yang kedua “mewarnai dulu, lalu memberi jarak” (latar termasuk jarak). “Garis putih aneh” yang paling sering membingungkan pemula berasal dari sini. Kalau ragu, tukar saja urutannya — pratinjau langsung memberi jawaban.
+
+\end{tcbwarn}
+
+\booksection{State dan Binding: Menghidupkan Antarmuka}
+
+Antarmuka statis itu membosankan. Aturan SwiftUI: antarmuka selalu setia mencerminkan state; begitu state berubah, antarmuka otomatis digambar ulang.
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State: saat nilai ini berubah, gambar ulang
+
+    var body: some View {
+        VStack {
+            Text("Kamu menekan \(count) kali")
+            Button("Tekan aku +1") {
+                count += 1          // ubah state, tampilan menyegarkan sendiri
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Kolom input memakai “binding dua arah” — simbol \$ mengirimkan “nilai beserta hak mengubahnya” sekaligus:
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("Ketik sesuatu", text: $text)  // binding dua arah dengan $
+            .textFieldStyle(.roundedBorder)
+        Text("Kamu mengetik: \(text)")   // ter-update langsung saat mengetik
+    }
+}
+\end{lstlisting}
+
+Aksi pengguna
+
+State berubah (count += 1)
+
+SwiftUI mendeteksi perubahan
+
+Menggambar ulang tampilan otomatis (body dihitung ulang)
+
+\begin{center}\small\color{gray}Gambar 3: Aliran data satu arah “state antarmuka” pada SwiftUI\end{center}
+
+\booksection{Pratinjau, Tema, dan Animasi: “Senjata Ampuh” SwiftUI}
+
+\begin{itemize}
+  \item Makro \#Preview: tambahkan \#Preview \{ ContentView() \} di bagian bawah file, dan kanvas di sebelah kanan langsung merender secara real-time — mengubah kode terlihat hasilnya saat itu juga;
+  \item Dark mode gratis: gunakan warna sistem (Color(.systemGray6), .primary) alih-alih warna yang ditulis tetap; dark mode otomatis menyesuaikan tanpa kode tambahan;
+  \item Animasi selesai dalam satu baris: withAnimation \{ count += 1 \} atau tambahkan .animation(.default, value: count) pada view — transisinya mulus.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tips: Fungsinya Dulu, Animasi Belakangan}
+Celah umum pemula adalah “antarmuka belum benar, tapi sudah sibuk memikirkan animasi”. Pastikan fiturnya berjalan dulu, baru tambahkan efek gerak secara seragam di tahap akhir — animasi adalah hiasan pelengkap, fungsi adalah kebutuhan pokok. Ini juga sesuai prinsip kita selama ini: “kesederhanaan di atas segalanya”.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Praktik: Membuat "Tombol Suasana Hati"}
+\booksection{Contekan Modifier yang Sering Dipakai: Satu Halaman, Antarmuka Beres}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Ingin melakukan apa} & \textbf{Modifier} \tabularnewline
+\hline
+Jarak sisi & \texttt{.\allowbreak padding(16)} \tabularnewline
+Sudut membulat & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+Warna latar & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+Font dan ukuran huruf & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+Warna latar depan (teks/ikon) & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+Memenuhi lebar & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+Ukuran tetap & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+Perataan & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+Transparansi & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+Bayangan & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+Gerakan ketuk (tap) & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Jenis keyboard & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Contekan modifier SwiftUI yang sering dipakai\end{center}
+
+Tidak apa-apa kalau tidak hafal — halaman ini memang untuk dibuka saat perlu. Yang paling sering dipakai sebenarnya hanya empat yang pertama: padding, sudut membulat, warna latar, dan font.
+
+Ubah proyek templat menjadi pengganti suasana hati: satu tombol yang setiap diklik berganti siklus antara senang sedih marah, dengan teks dan warna latar ikut berubah. Petunjuk: simpan tiga pasangan (teks + warna) dalam array, simpan indeksnya di @State, dan saat diklik gunakan (index + 1) \% 3. Setelah jadi, kirim ke teman untuk dicoba, dan rasakan gelombang pertama “wow kamu bisa bikin App”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item SwiftUI bersifat deklaratif: kamu mendeskripsikan "tampilannya seperti apa", sistem yang menggambar dan menggambar ulang
+  \item View = struct yang mengikuti protokol View; body mendeskripsikan antarmuka; modifier menyusun "make-up" berantai
+  \item Empat view dasar: Text / Button / TextField / Image; pustaka ikon SF Symbols gratis sebanyak-banyaknya
+  \item Trio layout: VStack vertikal, HStack horizontal, ZStack bertumpuk; Spacer adalah ruang elastis
+  \item @State menghidupkan antarmuka; \$ untuk binding dua arah ke kolom input
+  \item \#Preview hasilnya terlihat langsung; warna sistem otomatis menyesuaikan dark mode; withAnimation efek gerak satu baris
+\end{itemize}
+
+\end{tcbsummary}

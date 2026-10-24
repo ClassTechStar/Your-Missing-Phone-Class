@@ -1,0 +1,178 @@
+\bookchapter{第五十三章：データ保存とネットワーク通信}
+
+\chapterintro{「見る」ことしかできないアプリは生きていません。データを保存できて、ネットにつながるアプリこそが本物です。この章ではAndroidデータ層の「三種の神器」を学びます。DataStore（小さな設定の保存）、Room（構造化データの保存）、Retrofit（サーバーとのやりとり）の3つと、それらを取り仕切る「総指揮者」であるコルーチンです。この章を終える頃には、ユーザーの使い方を覚えて、中身をリアルタイムに更新できる本物のアプリが書けるようになっています。}
+
+\booksection{保存方式の選び方：まずこの表を見る}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{方式} & \textbf{何の保存に向くか} & \textbf{特徴} & \textbf{本書での使用箇所} \tabularnewline
+\hline
+DataStore & こまごました設定（テーマ、スイッチなど） & キーと値のペア。シンプルで安全 & 第五十四章の家計簿の設定 \tabularnewline
+Room & 構造化データ（明細、ユーザーなど） & 本物のSQLiteデータベースのラッパー。検索できる & 第五十四章の収支の記録 \tabularnewline
+Retrofit & （保存せず、ネットで取得）サーバーのデータ & HTTP通信ライブラリの事実上の標準 & 第五十五章の天気データ \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}データ三種の神器の分担\end{center}
+
+覚え言葉をひとつ。「小さな設定はDataStoreへ、まとまったデータはRoomへ、外のデータはRetrofitで」。古いチュートリアルでよく出てくるSharedPreferencesはDataStoreに、手書きSQLのSQLiteはRoomに取って代わられました。最初から新しいやり方を学び、古い道へは戻らないことです。
+
+\booksection{DataStore：小さな設定を保存する}
+
+「ユーザーが前回選んだ通貨」「ダークモードを有効にしているか」のようなこまごました値を覚えておきたいときは、DataStore（Preferences版）を使います。
+
+\begin{lstlisting}[language=Kotlin]
+val Context.dataStore by preferencesDataStore(name = "settings")
+
+// 書く：値を保存
+suspend fun saveTheme(isDark: Boolean) {
+    context.dataStore.edit { prefs ->
+        prefs[THEME_KEY] = isDark
+    }
+}
+
+// 読む：取り出す（Flowが変化を自動通知）
+val themeFlow: Flow<Boolean> = context.dataStore.data
+    .map { it[THEME_KEY] ?: false }
+\end{lstlisting}
+
+返ってくるのがFlow、つまり「流れる」データの流れである点に注目しましょう。値がひとたび変われば、それを監視しているすべての場所に新しい値が自動で届きます。この概念（リアクティブ）が現代Android開発の土台で、第五十四章で実戦します。
+
+\booksection{Room：データに「本物の家」を用意する}
+
+家計簿には何百、何千件もの記録がたまり、しかもカテゴリ別·月別に集計もしたい。そこで必要になるのがデータベースです。RoomはSQLiteの公式ラッパーで、「テーブルを作る·データを引く」をKotlinを書くのと同じように自然にしてくれます。登場するのは3つ。
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Entity：テーブル構造（1テーブル = 1 data class）
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val amount: Double,
+    val category: String,
+    val note: String,
+    val date: String
+)
+
+// 2. Dao：操作用インターフェース（追加·削除·変更·検索）
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+    suspend fun sumByCategory(c: String): Double
+}
+
+// 3. Database：組み立て
+@Database(entities = [Record::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun recordDao(): RecordDao
+}
+\end{lstlisting}
+
+この「三種の神器」のテンプレートは、そのままどんなプロジェクトにも持ち込めます。フィールド名を変えるだけでOKです。クエリはFlowを返し、データが変われば画面が自動で更新される。なかなか気持ちのいい仕組みです。
+
+\booksection{Retrofit：サーバーと会話する}
+
+天気、ニュース、為替レート……こうしたデータはスマホの中にはなく、他人のサーバー上にあります。Retrofitは「サーバーにデータをねだる」ことを、関数を呼ぶのと同じくらい簡単にしてくれます。3ステップで進みます。
+
+\begin{lstlisting}[language=Kotlin]
+// 1. インターフェースを定義：HTTPリクエストを関数として書き表す
+interface WeatherApi {
+    @GET("v1/weather")
+    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+}
+
+// 2. インスタンスを作成
+val api = Retrofit.Builder()
+    .baseUrl("https://api.example.com/")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build()
+    .create(WeatherApi::class.java)
+
+// 3. 関数のように呼び出す（コルーチンの中で）
+val result = api.getWeather("北京")
+\end{lstlisting}
+
+\textbf{落とし穴注意：ネットワークの2大鉄則}\par
+
+(1) ネットワーク通信はメインスレッドで絶対にしてはいけません。画面が固まり、最悪クラッシュします（NetworkOnMainThreadException）。ネットワーク呼び出しは必ずコルーチン（viewModelScope.launch）の中に入れます。(2) 平文のHTTPはデフォルトで禁止です。Android 9からHTTPSが求められます。テストで http:// のローカルアドレスを使いたい場合は、Manifestに usesCleartextTraffic を明示的に宣言する必要がありますが、正式な製品は必ずすべてHTTPSにすること。
+
+\booksection{JSON解析：ネットのデータに「翻訳」をつける}
+
+サーバーが返すデータの多くはJSONです。入れ子になった辞書のようなテキストのことです。RetrofitはこれをKotlinオブジェクトに変えてくれる「翻訳者」を必要とします。2026年の主流は2つあります。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{方式} & \textbf{特徴} & \textbf{おすすめの場面} \tabularnewline
+\hline
+Gson / Moshi & 昔からの定番、リフレクション方式。設定の手間ゼロ & 手早く始めたい小規模プロジェクト、フィールドの少ないもの \tabularnewline
+kotlinx.serialization & 公式のコンパイル時方式。より速く、より安全 & 新規プロジェクトの第一候補（2026年の主流） \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}JSON解析の2大方式\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// data classに@Serializableアノテーションを付ける
+@Serializable
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+
+// Retrofitに対応するConverterを取り付ける（Retrofit 2.11+の公式サポートを例に）：
+// .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+\end{lstlisting}
+
+どちらの方式でも鉄則は同じです。まず実際に返ってくるJSONを見て、それからフィールドを定義すること。「解析に失敗した」バグの多くは、フィールド名の書き間違いや、入れ子の階層の読み違いが原因です。元のJSONを印字して見比べれば、10秒で原因がつかめます。
+
+\booksection{コルーチン：Androidの並行処理の「共通語」}
+
+\booksection{コルーチン：Androidの並行処理の「共通語」}
+
+さきほどから何度も出てきた suspend と launch は、Kotlinコルーチン（Coroutine）のものです。Android公式の並行処理の仕組みです。乱暴に言えば、「少し待つ必要がある」処理（ネットワークやデータベース）が画面を止めないようにするためのもの、と覚えてください。
+
+\begin{lstlisting}[language=Kotlin]
+// ViewModelの中でコルーチンを起動
+viewModelScope.launch {
+    val records = dao.getAll().first()  // suspend：自動的に待機する
+    // 画面の状態を更新……
+}
+
+// キーワードの覚え方：
+// suspend   —— 「待ちたい、他を止めないで」
+// launch    —— 「仕事開始！」
+// viewModelScope —— 画面について回る「作業場」。画面が壊れると自動で片付く
+\end{lstlisting}
+
+まずは使い方だけ覚えれば大丈夫です。その裏にある「一時停止と再開」の仕組みは、後からじっくり掘ればいい。ふだんの開発で書くコードの9割は、このテンプレートです。
+
+\begin{tcbpractice}{やってみよう：「今日のひとこと」アプリを作る}
+無料の名言API（hitokotoなど）を探して、Retrofitで「今日のひとこと」を取得し、画面の中央に表示しましょう。「別のひとこと」ボタン（コルーチン内で再リクエスト）も付けます。さらに気に入った文はRoomで「お気に入り」に保存します。この練習でDataStore/Room/Retrofit/コルーチンを全部使うことになります。これができれば、第7·8章は楽勝です。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章のまとめ}
+\begin{itemize}
+  \item 覚え言葉：小さな設定はDataStoreへ、まとまったデータはRoomへ、外のデータはRetrofitで
+  \item DataStoreはFlowを返す：値が変われば、監視している側に自動で届く
+  \item Roomの三種の神器：@Entity（テーブル）＋@Dao（操作）＋@Database（組み立て）。テンプレートはそのまま再利用できる
+  \item Retrofitの3ステップ：インターフェースを定義 インスタンスを作る コルーチン内で呼ぶ
+  \item 2大鉄則：ネットワークはメインスレッドに入れない。正式な製品は必ずHTTPS
+  \item コルーチン＝画面を止めない待ち方。viewModelScopeは画面専用の作業場
+\end{itemize}
+
+\end{tcbsummary}

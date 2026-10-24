@@ -1,0 +1,367 @@
+\bookchapter{Bab 1: Halo, komputer pribadiku}
+
+\chapterintro{Ponsel Anda sebenarnya adalah superkomputer pribadi di saku Anda. Ia jutaan kali lebih kuat dari komputer yang dulu mendaratkan manusia di bulan, namun dengan tenang berbaring di telapak tangan Anda. Hari ini, mari kita kenali “raksasa yang diam” ini dengan baik.}
+
+\booksection{Perangkat keras ponsel “organ dalam”: Analisis mendalam}
+
+Ponsel kecil tapi lengkap. Mari kita kenali komponen-komponen presisi ini satu per satu seperti di kelas anatomi.
+
+\booksubsection{SoC (System on Chip): “Otak + jantung” ponsel}
+
+SoC kepanjangan dari System on Chip, diterjemahkan menjadi “memasukkan seluruh sistem ke dalam satu chip”. Ia bukan hanya CPU (Central Processing Unit), tapi mengintegrasikan CPU, GPU (Graphics Processing Unit), NPU (Neural Processing Unit), ISP (Image Signal Processor), baseband (bertanggung jawab untuk komunikasi), dan lainnya semuanya dalam satu chip.
+
+Ini seperti membangun gedung pemerintahan kota, pembangkit listrik, pusat komunikasi, dan kantor polisi semua dalam satu gedung, efisiensinya sangat tinggi.
+
+\booksubsection{CPU: Inti komputasi umum}
+
+CPU adalah komponen paling inti dalam SoC, bertanggung jawab menangani sebagian besar tugas komputasi. CPU ponsel menggunakan arsitektur ARM, berbeda dengan arsitektur x86 komputer, arsitektur ARM menggunakan set instruksi sederhana (RISC) sebagai ciri khasnya, konsumsi daya lebih rendah, lebih cocok untuk perangkat mobile.
+
+\textbf{Desain CPU big.LITTLE}: CPU ponsel modern umumnya menggunakan arsitektur “big.LITTLE” (teknologi big.LITTLE ARM), membagi core menjadi tingkat performa yang berbeda:
+
+\begin{itemize}
+  \item \textbf{Super core/Big core}: Performa terkuat, menangani tugas berat. Seperti loading game, peluncuran aplikasi, komputasi kompleks. Frekuensi tertinggi (3GHz+), tapi konsumsi daya juga terbesar.
+  \item \textbf{Medium core}: Seimbang antara performa dan konsumsi daya, menangani tugas beban menengah sehari-hari. Men-scroll Weibo, menonton video, multi-tasking utamanya mengandalkan ini.
+  \item \textbf{Small core/Efficiency core}: Konsumsi daya terendah, menangani tugas latar belakang ringan. Mode standby, mendengarkan musik, menerima pesan, hampir tidak boros listrik.
+\end{itemize}
+
+Tiga tingkat core bekerja sama: scheduler sistem mengalokasikan secara otomatis berdasarkan beban tugas—tugas ringan diserahkan ke small core untuk hemat daya, pekerjaan berat diserahkan ke big core untuk bekerja keras, setelah selesai kembali ke small core. Inilah sebabnya ponsel bisa bermain game dengan lancar sekaligus standby seharian.
+
+\textbf{Karakteristik arsitektur tiap merek}:
+
+\begin{itemize}
+  \item \textbf{Qualcomm Snapdragon 8 Elite}: Menggunakan arsitektur CPU Oryon self-developed (berasal dari akuisisi Nuvia), 2 super core (4.32GHz) + 6 performance core (3.53GHz), semuanya berdasarkan proses 3nm generasi kedua TSMC. Sepenuhnya meninggalkan arsitektur ARM public, performa single-core dan multi-core keduanya meningkat melompat. GPU Adreno 830, menggunakan arsitektur slice, performa grafis meningkat 40\%, Hexagon NPU computing power sekitar 45 TOPS, performa inferensi AI meningkat 45\%. (Catatan: Versi kustom Samsung Galaxy memiliki frekuensi lebih tinggi, super core mencapai 4.47GHz.)
+  \item \textbf{MediaTek Dimensity 9400}: 1 super core (Cortex-X925, 3.62GHz) + 3 performance core (Cortex-X4, 3.3GHz) + 4 efficiency core (Cortex-A720, 2.4GHz), arsitektur all-big-core dilanjutkan, proses 3nm generasi kedua TSMC. GPU Immortalis-G925 (12 core), performa puncak meningkat 41\%, performa ray tracing meningkat 40\%. AI processor generasi kedelapan NPU 890, mendukung on-device large model, on-device LoRA training dan on-device video generation.
+  \item \textbf{Apple A18 Pro}: 2 performance core (sekitar 4.04GHz) + 4 efficiency core (sekitar 2.4GHz), proses 3nm generasi kedua TSMC. 6-core GPU mendukung hardware ray tracing, 16-core NPU (sekitar 35 TOPS) memberikan computing power kuat untuk on-device AI dan Apple Intelligence. Arsitektur self-developed Apple masih memimpin dalam performa single-core dan efisiensi daya, arsitektur unified memory memberikan keunggulan bandwidth tinggi untuk inferensi AI.
+  \item \textbf{HiSilicon Kirin 9020 Huawei}: Hadir di seri Mate 70, menggunakan arsitektur CPU Taishan self-developed, kemampuan NPU dan ISP terus diperkuat, mendukung 5.5G dan komunikasi satelit, mewakili terobosan terbaru chip domestik.
+\end{itemize}
+
+\booksubsection{GPU: Mesin rendering grafis}
+
+GPU (Graphics Processing Unit) khusus menangani tugas grafis dan komputasi paralel. Jumlah core-nya jauh lebih banyak dari CPU (sering ratusan hingga ribuan core), tapi fungsi setiap core relatif sederhana, cocok untuk menangani banyak perhitungan serupa secara bersamaan.
+
+\textbf{Alur rendering grafis}:
+
+\begin{enumerate}
+  \item \textbf{Vertex processing}: Menghitung koordinat posisi setiap vertex dalam model 3D.
+  \item \textbf{Rasterization}: Mengubah grafis 3D menjadi piksel di layar 2D.
+  \item \textbf{Pixel shading}: Menghitung warna, tekstur, efek pencahayaan untuk setiap piksel.
+  \item \textbf{Output composition}: Menggabungkan semua layer menjadi gambar akhir, dikirim ke layar untuk ditampilkan.
+\end{enumerate}
+
+\textbf{Pengaruh GPU pada penggunaan sehari-hari}: Bukan hanya game! Scroll antarmuka, efek animasi, pemutaran video, filter foto, aplikasi AR semua bergantung pada GPU. Ponsel dengan GPU lemah, scroll antarmuka mungkin drop frame, game bahkan langsung lag.
+
+\textbf{GPU tiap merek}: Qualcomm menggunakan GPU Adreno self-developed; MediaTek menggunakan GPU ARM Mali; Apple menggunakan GPU self-developed, performa dan efisiensi daya keduanya benchmark industri.
+
+\booksubsection{NPU: Mesin akselerasi AI}
+
+NPU (Neural Processing Unit) adalah prosesor yang dirancang khusus untuk komputasi neural network. Dibandingkan CPU dan GPU, NPU lebih efisien dan konsumsi daya lebih rendah saat menangani tugas AI.
+
+\textbf{Cara komputasi neural network}: Komputasi inti NPU adalah perkalian matriks dan konvolusi—ini adalah komputasi paling dasar dan paling sering dalam neural network. NPU melalui optimisasi hardware-level, bisa memproses banyak komputasi matriks secara paralel, kecepatannya puluhan kali lebih cepat dari CPU, tapi konsumsi daya jauh lebih rendah.
+
+\textbf{Alur pemrosesan AI}:
+
+\begin{enumerate}
+  \item \textbf{Input data}: Gambar kamera, audio mikrofon, data sensor, dll.
+  \item \textbf{Preprocessing}: Menyesuaikan format dan ukuran data, menyesuaikan dengan persyaratan input neural network.
+  \item \textbf{Inferensi komputasi}: NPU memuat model yang sudah dilatih, melakukan forward computation pada data input, menghasilkan output.
+  \item \textbf{Post-processing}: Mengubah output AI menjadi hasil yang bisa digunakan, seperti koordinat wajah, konten teks, label scene.
+\end{enumerate}
+
+\textbf{Skenario aplikasi aktual}:
+
+\begin{itemize}
+  \item \textbf{Fotografi komputasional}: Synthesis malam hari, bokeh portrait, pemrosesan HDR, AI beauty.
+  \item \textbf{Asisten suara}: Pengenalan suara, pemahaman bahasa alami, sintesis suara.
+  \item \textbf{Terjemahan real-time}: Subtitle AI, terjemahan percakapan.
+  \item \textbf{Pengenalan cerdas}: Pengenalan teks (OCR), pengenalan objek, pengenalan scene.
+  \item \textbf{On-device large model}: Chip flagship terbaru sudah mendukung menjalankan small AI large model (level parameter 7B) di perangkat ponsel, mewujudkan dialog AI offline, ringkasan dokumen, penulisan cerdas, dll. Hexagon NPU Snapdragon 8 Elite computing power sekitar 45 TOPS, NPU 890 Dimensity 9400 juga mendukung on-device large model (kecepatan inferensi LLM meningkat 80\%), 16-core NPU Apple A18 Pro memberikan computing power sekitar 35 TOPS.
+  \item \textbf{Pemrosesan gambar AI}: AI removal (hapus orang dalam foto dengan satu klik), AI outpainting (perluas batas gambar), AI style transfer, text-to-image, dll.
+\end{itemize}
+
+\booksubsection{ISP: Image Signal Processor}
+
+ISP memproses data mentah dari kamera, mengubah sinyal cahaya menjadi foto yang bagus.
+
+\textbf{Bagaimana menilai performa?}Lihat modelnya! Apple A18 Pro, Qualcomm Snapdragon 8 Elite, MediaTek Dimensity 9400, HiSilicon Kirin 9020 Huawei semua kelas flagship. Kelas mid-range lihat Snapdragon 8s Gen3/7+ Gen3, Dimensity 8400. Jangan hanya lihat jumlah core, arsitektur dan proses (nomor nanometer) lebih penting. Proses 3nm adalah yang paling canggih saat ini, efisiensi daya jauh lebih baik dari 5nm dan 4nm.
+
+\booksubsection{RAM (memori operasi): Meja kerja sementara}
+
+RAM seperti meja kerja Anda, semakin besar, semakin banyak file yang bisa dibuka bersamaan. 12GB adalah mainstream sekarang, 16GB cocok untuk pengguna berat, 24GB ke atas adalah pilihan gamer dan geek.
+
+Tipe RAM juga penting: LPDDR5 lebih cepat dan lebih hemat daya dibanding LPDDR4X. Meskipun RAM Apple tidak besar, tapi optimisasi sistem bagus, jadi terlihat “cukup”.
+
+\textbf{Bagaimana jika RAM tidak cukup?}Aplikasi akan dimatikan dari latar belakang oleh sistem, perlu reload saat switch. Inilah sebabnya kadang setelah switch ke WeChat sebentar, game sudah hilang.
+
+\booksubsection{Penyimpanan (ROM/flash memory): Gudang jangka panjang}
+
+Penyimpanan seperti rak buku Anda, tempat menyimpan semua foto, video, aplikasi. Mainstream sekarang adalah UFS 3.1 atau UFS 4.0, kecepatannya beberapa kali lebih cepat dari eMMC lawas.
+
+\textbf{Mengapa kecepatan penyimpanan penting?}Ini menentukan kecepatan buka aplikasi, kecepatan loading game, kecepatan simpan foto. Setelah dipakai lama, penyimpanan yang lambat akan membuat ponsel semakin lag.
+
+\booksubsection{Layar: Mata Anda}
+
+Layar adalah jendela utama interaksi Anda dengan ponsel, kualitasnya langsung mempengaruhi pengalaman.
+
+\begin{itemize}
+  \item \textbf{Material}: OLED warna cerah, kontras tinggi, lebih hemat daya (saat menampilkan hitam piksel tidak menyala), tapi pada brightness rendah mungkin ada flicker yang menyakiti mata; LCD lebih ramah mata, biaya rendah, tapi kontras dan warna tidak sebaik OLED.
+  \item \textbf{Resolusi}: 1080P adalah mainstream, 2K lebih jernih tapi lebih boros daya. Konsep "Retina display" Apple adalah: pada jarak tertentu, mata manusia tidak bisa membedakan titik piksel.
+  \item \textbf{Refresh rate}: 60Hz adalah standar, 90Hz/120Hz lebih lancar, scroll terasa halus seperti sutra. Refresh rate tinggi akan boros daya, jadi banyak ponsel mendukung adaptive refresh rate (LTPO), menyesuaikan secara dinamis sesuai konten.
+  \item \textbf{Touch sampling rate}: Mempengaruhi kecepatan respons touch, gamer perlu memperhatikan, semakin tinggi semakin responsif.
+  \item \textbf{Metode dimming}: DC dimming lebih ramah mata daripada PWM dimming, pada brightness rendah tidak mudah membuat mata lelah. Sekarang banyak ponsel mendukung high-frequency PWM dimming, juga untuk melindungi mata.
+\end{itemize}
+
+\booksubsection{Teknologi HDR layar}
+
+HDR (High Dynamic Range) membuat layar menampilkan bagian terang yang lebih terang dan bagian gelap yang lebih gelap secara bersamaan, sense of depth gambar meningkat signifikan.
+
+\begin{itemize}
+  \item \textbf{Prinsip implementasi}: Rentang brightness layar biasa terbatas (SDR), perbedaan antara yang paling terang dan paling gelap tidak cukup besar. Layar HDR memiliki peak brightness lebih tinggi (biasanya di atas 1000 nit), kontras lebih besar, color gamut lebih luas, bisa menampilkan lebih banyak detail.
+  \item \textbf{Standar mainstream}: HDR10 (paling dasar, gratis open source), HDR10+ (didorong Samsung, metadata dinamis), Dolby Vision (kualitas gambar terbaik tapi butuh lisensi). Ponsel mendukung standar mana tergantung pada hardware layar dan lisensi sistem.
+  \item \textbf{Efek aktual}: Saat menonton video HDR, sinar matahari lebih menyilaukan, bayangan lebih dalam, warna lebih kaya. Prasyaratnya video itu sendiri dibuat dengan HDR, dan layar juga mendukung tampilan HDR.
+\end{itemize}
+
+\booksubsection{Teknologi HDR imaging}
+
+HDR saat foto dan HDR layar adalah dua hal berbeda. HDR imaging adalah menyelesaikan masalah “bagian terang overexposed, bagian gelap pitch black” melalui algoritma.
+
+\begin{itemize}
+  \item \textbf{Prinsip algoritma}: Saat menekan shutter, ponsel sebenarnya mengambil beberapa foto dengan exposure berbeda (underexposed untuk retain detail bagian terang, overexposed untuk retain detail bagian gelap, normal exposure untuk retain midtone), lalu menggabungkannya menjadi satu foto high dynamic range.
+  \item \textbf{Alur pemrosesan}: Multi-frame capture alignment compensation (anti-handshake) exposure fusion/tone mapping color correction output foto akhir.
+  \item \textbf{Optimisasi efek}: Sekarang ponsel sudah bisa melakukan "real-time HDR"—gambar yang terlihat di viewfinder adalah efek setelah pemrosesan HDR, what you see is what you get. Smart HDR Apple dan auto HDR Android sudah sangat matang.
+\end{itemize}
+
+\booksubsection{Baterai dan pengisian daya: Sumber energi}
+
+Baterai adalah komponen ponsel yang paling “berumur pendek”, dipakai dua-tiga tahun akan mengalami penuaan yang jelas. Kapasitas mainstream sekarang 5500-7500mAh.
+
+\begin{itemize}
+  \item \textbf{Daya pengisian}: Kubu Android sudah berebut hingga 100W bahkan 200W, penuh dalam belasan menit; Apple masih berkutat di 20-30W. Apakah fast charge merusak baterai? Gunakan aksesori original tidak masalah besar, ponsel memiliki perlindungan suhu.
+  \item \textbf{Wireless charging}: Praktis tapi efisiensi rendah, panas berlebih. Cocok untuk charging santai di kantor, tidak cocok saat buru-buru keluar.
+  \item \textbf{Reverse charging}: Ponsel menjadi power bank, mengisi daya earphone, jam tangan, untuk darurat.
+\end{itemize}
+
+\booksubsection{Kamera: Magisnya cahaya dan bayangan}
+
+Sekarang kamera ponsel sering tiga-empat, masing-masing dengan pembagian tugas:
+
+\begin{itemize}
+  \item \textbf{Kamera utama}: Paling sering digunakan, sensor terbesar, kualitas gambar terbaik.
+  \item \textbf{Ultra wide angle}: Memotret pemandangan, arsitektur, bidang pandang lebih luas.
+  \item \textbf{Telephoto}: Memotret jarak jauh, ada optical zoom dan digital zoom.
+  \item \textbf{Makro}: Memotret benda kecil dari jarak sangat dekat.
+\end{itemize}
+
+\textbf{Jumlah piksel bukan segalanya!}Ukuran sensor (sensor besar satu level menekan sensor kecil), ukuran aperture (f/1.8 lebih besar dari f/2.4), image stabilization (OIS optical image stabilization sangat penting) semua mempengaruhi kualitas gambar. Computational photography (algoritma AI) sekarang semakin penting, bisa menggabungkan beberapa foto menjadi satu foto bagus.
+
+\booksubsection{Lensa telephoto periskop}
+
+Lensa telephoto tradisional membutuhkan jalur optik yang panjang, akan membuat ponsel sangat tebal. Telephoto periskop melalui prisma 90 derajat membelokkan cahaya, membuat jalur cahaya berkembang horizontal di dalam ponsel, sehingga sambil menjaga ponsel tetap tipis bisa mewujudkan optical zoom 5x bahkan 10x.
+
+\begin{itemize}
+  \item \textbf{Prinsip struktur}: Cahaya masuk dari lensa prisma membelokkan 90 derajat melewati lens group sepanjang arah lebar ponsel mencapai sensor. Setara dengan menelentangkan teleskop yang berdiri.
+  \item \textbf{Karakteristik optik}: Multiplier optical zoom tinggi (5x-10x), kualitas gambar jauh melampaui digital zoom. Tapi ukuran sensor biasanya lebih kecil dari kamera utama, performa low light biasa-biasa saja.
+  \item \textbf{Keunggulan imaging}: Memotret bulan, memotret bangunan jauh, memotret close-up panggung, adalah yang tidak bisa dicapai ponsel biasa.
+\end{itemize}
+
+\booksubsection{OIS optical image stabilization vs EIS electronic image stabilization}
+
+Image stabilization adalah teknologi kunci yang mempengaruhi kualitas gambar foto dan video, prinsip kedua cara sepenuhnya berbeda:
+
+\begin{itemize}
+  \item \textbf{OIS (optical image stabilization)}: Mengimbangi tangan gemetar dengan menggerakkan lensa atau sensor secara fisik. Di dalam lensa ada gyroscope mikro untuk mendeteksi arah dan amplitudo gemetar, lalu menggerakkan motor untuk memindahkan lens group ke arah berlawanan. Kelebihannya tidak mengurangi kualitas gambar, kekurangannya biaya tinggi, menempati ruang.
+  \item \textbf{EIS (electronic image stabilization)}: Mengimbangi gemetar melalui algoritma software dengan cropping dan offset gambar. Ponsel merekam rentang gambar yang sedikit lebih besar, lalu sesuai data gyroscope cropping area yang stabil. Kelebihannya tidak butuh hardware tambahan, kekurangannya akan cropping gambar (bidang pandang mengecil), low light mungkin blur.
+  \item \textbf{Pilihan aktual}: Foto utama lihat OIS, video kombinasi keduanya efek terbaik. Sekarang banyak ponsel flagship mendukung "Sensor-Shift" sensor shift image stabilization, efek lebih baik dari traditional lens image stabilization.
+\end{itemize}
+
+\booksubsection{Optical zoom vs Digital zoom}
+
+\begin{itemize}
+  \item \textbf{Optical zoom}: Mengubah focal length dengan memindahkan lens group secara fisik, kualitas gambar tidak hilang. Optical zoom di ponsel biasanya hanya multiplier tetap (seperti 2x, 3x, 5x, 10x), tidak bisa zoom kontinu seperti kamera.
+  \item \textbf{Digital zoom}: Memperbesar area tengah gambar, pada dasarnya cropping + interpolation upscale. Semakin banyak diperbesar, semakin buruk kualitas gambar. 100x digital zoom terlihat keren, tapi kualitas gambar aktual sudah sangat blur.
+  \item \textbf{Hybrid zoom}: Menggabungkan optical dan digital, mengisi kehilangan kualitas gambar dengan algoritma multi-frame synthesis di antara multiplier optical zoom. Efek lebih baik dari pure digital, tapi masih kalah dari optical.
+\end{itemize}
+
+\booksubsection{Audio: Speaker dan chip display terpisah}
+
+\textbf{Single speaker vs Dual speaker}:
+
+\begin{itemize}
+  \item \textbf{Single speaker}: Hanya satu unit suara di bagian bawah, suara condong ke satu sisi, tidak ada sense of stereo. Umum di ponsel mid-low end.
+  \item \textbf{Dual speaker (stereo)}: Speaker di bagian atas dan bawah masing-masing satu, membentuk sound field stereo. Saat menonton video, mendengarkan musik, left dan right channel jelas, sense of immersion jauh lebih kuat. Earpiece yang juga berfungsi sebagai speaker atas adalah solusi umum.
+  \item \textbf{Perbedaan kualitas suara}: Dual speaker bukan hanya "suara lebih besar", kuncinya sense of space dan sense of layer. Menonton film dengan single speaker, selalu merasa kurang sesuatu.
+\end{itemize}
+
+\textbf{Chip display terpisah ponsel gaming}:
+
+Sebagian ponsel gaming dan ponsel performa dilengkapi chip pemrosesan display terpisah, fungsinya adalah:
+
+\begin{itemize}
+  \item \textbf{Frame interpolation}: Meng-interpolasi gambar game 30fps menjadi 60fps atau 120fps melalui algoritma, gambar lebih lancar. Proses ini selesai di chip display terpisah, tidak membebani GPU SoC.
+  \item \textbf{Super resolution}: Meningkatkan gambar resolusi rendah ke resolusi tinggi melalui algoritma AI, kualitas gambar lebih jernih.
+  \item \textbf{Mengurangi konsumsi daya}: Karena frame interpolation dan super resolution ditangani chip display terpisah, beban SoC berkurang, panas dan konsumsi daya keduanya berkurang, game lebih stabil.
+\end{itemize}
+
+\booksubsection{GPS positioning: Single frequency dan dual frequency}
+
+Positioning ponsel utamanya bergantung pada sistem navigasi satelit seperti GPS.
+
+\begin{itemize}
+  \item \textbf{Single frequency GPS}: Hanya menerima sinyal band L1, akurasi positioning sekitar 3-5 meter. Cukup di area terbuka, tapi di urban canyon dengan gedung tinggi rapat, refleksi sinyal menyebabkan offset positioning cukup besar.
+  \item \textbf{Dual frequency GPS}: Secara bersamaan menerima sinyal dua band L1 dan L5. Band L5 panjang gelombang lebih panjang, kemampuan anti-interferensi lebih kuat, joint solution dual frequency bisa menghilangkan sebagian besar error ionosfer, akurasi positioning bisa mencapai 1-3 meter. Keunggulan jelas saat navigasi di kota, positioning taksi.
+  \item \textbf{Multi-constellation support}: Ponsel modern tidak hanya mendukung GPS, juga mendukung BeiDou (Tiongkok), GLONASS (Rusia), Galileo (Eropa), dan beberapa sistem satelit lainnya. Semakin banyak satelit yang terhubung secara bersamaan, semakin cepat dan akurat positioning.
+\end{itemize}
+
+\booksubsection{Sensor: Antena kecil ponsel}
+
+Di dalam ponsel tersembunyi belasan sensor, bekerja diam-diam:
+
+\begin{itemize}
+  \item \textbf{Akselerometer + gyroscope}: Mendeteksi orientasi ponsel, belok saat bermain game, auto-rotate layar.
+  \item \textbf{Sensor cahaya}: Otomatis mengatur brightness layar.
+  \item \textbf{Sensor jarak}: Saat menelepon ponsel menempel ke telinga otomatis mati layar.
+  \item \textbf{Sensor sidik jari}: Mainstream sekarang adalah optical under-display atau ultrasonic fingerprint.
+  \item \textbf{Pengenalan wajah}: Face ID Apple adalah 3D structured light, level keamanan tinggi; banyak Android adalah pengenalan foto 2D, keamanan biasa-biasa saja.
+  \item \textbf{NFC}: Near field communication, tap kartu bus, kartu akses, kartu bank.
+  \item \textbf{Barometer}: Mengukur ketinggian, mendaki tangga juga bisa terdeteksi.
+  \item \textbf{Hall sensor}: Mendeteksi buka-tutup case magnetik.
+\end{itemize}
+
+\booksection{Sistem operasi: Android VS iOS VS HarmonyOS}
+
+Hardware adalah tubuh, sistem operasi adalah jiwa. Tiga sistem besar masing-masing memiliki karakteristik:
+
+\begin{itemize}
+  \item \textbf{Android}: Seperti komunitas open source, produsen ponsel bisa customisasi mendalam, pilihan banyak. Anda bisa ganti tema, instal toko aplikasi pihak ketiga, utak-atik berbagai cara. Tapi juga karena keterbukaan, fragmentasi serius, perbedaan pengalaman antar merek besar.
+  \item \textbf{: Pengguna biasa tidak dapat mengaktifkan mode pengembang lengkap, membutuhkan akun Apple Developer berbayar.}: Seperti taman yang dirawat dengan baik, Apple menguasai hardware dan software, pengalaman unified dan lancar. Kualitas aplikasi tinggi, perlindungan privasi baik, tapi freedom rendah, banyak hal harus mengikuti aturan Apple.
+  \item \textbf{HarmonyOS}: Spesies baru Huawei, fokus pada kemampuan distributed, bisa membuat perangkat berbeda berkolaborasi seamlessly. Akan kita bahas khusus nanti.
+\end{itemize}
+
+Ekosistem ketiganya semua sangat kaya, pilih gaya hidup yang Anda suka. Tidak ada yang mutlak baik atau buruk, hanya cocok atau tidak.
+
+\booksection{Analisis lengkap interface ponsel}
+
+Interface ponsel adalah jembatan yang menghubungkan ke dunia luar, perbedaan interface berbeda jauh:
+
+\booksubsection{Micro USB}
+
+\begin{itemize}
+  \item \textbf{Karakteristik fisik}: Interface trapesium pipih, dibedakan sisi depan dan belakang (terbalik tidak bisa masuk). Pada dasarnya sudah dieliminasi di ponsel, tapi sebagian perangkat low-end dan perangkat lama masih menggunakan.
+  \item \textbf{Batasan transmisi}: Hanya mendukung standar USB 2.0, kecepatan transmisi tertinggi 480Mbps, daya pengisian biasanya tidak melebihi 10W.
+  \item \textbf{Kekurangan}: Sisi depan dan belakang tidak universal, umur insert pendek, kecepatan transmisi lambat, daya pengisian rendah.
+\end{itemize}
+
+\booksubsection{Lightning (interface kilat Apple, sudah dieliminasi)}
+
+\begin{itemize}
+  \item \textbf{Karakteristik fisik}: Interface 8-pin self-developed Apple, depan dan belakang bisa dimasukkan. iPhone 14 dan model sebelumnya menggunakan, sekarang sudah sepenuhnya dieliminasi.
+  \item \textbf{Batasan transmisi}: Interface Lightning secara fisik hanya mendukung standar USB 2.0, kecepatan transmisi tertinggi 480Mbps. Bahkan menggunakan kabel USB-C to Lightning, kecepatan transmisi juga terbatas oleh interface Lightning itu sendiri.
+  \item \textbf{Alasan eliminasi}: Uni Eropa melalui regulasi mewajibkan mulai 2024 semua ponsel menggunakan interface USB-C yang unified, Apple mulai seri iPhone 15 sepenuhnya beralih ke Type-C. Interface Lightning resmi keluar dari panggung sejarah.
+  \item \textbf{Catatan}: Kabel data bersertifikat Apple MFi mengandung chip sertifikasi, kabel non-sertifikasi mungkin tidak bisa mengisi daya atau transfer data dengan normal. Jika Anda masih menggunakan iPhone lama, disarankan menyiapkan kabel data Lightning.
+\end{itemize}
+
+\booksubsection{USB Type-C}
+
+\begin{itemize}
+  \item \textbf{Karakteristik fisik}: Interface oval 24-pin, depan dan belakang bisa dimasukkan. Sudah menjadi standar interface ponsel dan sebagian besar perangkat elektronik. Uni Eropa sudah legislasikan mewajibkan mulai 2024 semua ponsel, tablet, earphone dan perangkat portable lainnya menggunakan interface USB-C yang unified, wilayah lain di dunia juga mengikuti.
+  \item \textbf{Protokol transmisi}: Type-C hanya bentuk interface, kemampuan transmisi aktual tergantung pada protokol internal. Mendukung USB 2.0 (480Mbps), USB 3.0/3.1/3.2 (5-20Gbps) bahkan USB4 (40Gbps).
+  \item \textbf{Pembedaan penting}: Tidak semua port Type-C mendukung USB 3.0! Banyak ponsel memakai port Type-C, tetapi internalnya hanya terhubung ke pin USB 2.0, kecepatan transfer sama lambatnya dengan port lama. iPhone 16/17 standar hanya mendukung kecepatan USB 2.0, versi Pro baru mendukung USB 3.0 (perlu kabel USB-C to USB-C).
+  \item \textbf{Kemampuan pengisian}: Mendukung protokol fast charge seperti USB PD, tertinggi bisa mendukung pengisian 240W.
+  \item \textbf{Output video}: Mendukung DisplayPort Alt Mode, bisa output video ke monitor melalui kabel adapter.
+\end{itemize}
+
+\booksubsection{5mm interface audio}
+
+\begin{itemize}
+  \item \textbf{Karakteristik fisik}: Jack bulat 3 segmen atau 4 segmen, 3 segmen mentransmisikan audio channel kiri dan kanan, 4 segmen lebih satu channel mikrofon.
+  \item \textbf{Karakteristik}: Transmisi sinyal analog, plug and play, tidak butuh driver atau konversi. Kualitas suara stabil, latency nol.
+  \item \textbf{Status saat ini}: Sebagian besar ponsel flagship sudah menghapus interface 3.5mm, butuh kabel adapter Type-C atau menggunakan earphone Bluetooth. Sebagian ponsel mid-range dan ponsel gaming masih mempertahankan.
+\end{itemize}
+
+\booksection{Sistem produk ponsel dan aturan penamaan}
+
+Menghadapi berbagai product line merek yang membingungkan, memahami aturan penamaan bisa membantu Anda cepat menemukan model yang cocok.
+
+\booksubsection{Seri produk merek mainstream:}
+
+\begin{itemize}
+  \item \textbf{Apple}: iPhone (versi standar) / iPhone Plus (versi layar besar) / iPhone Pro (versi profesional) / iPhone Pro Max (versi profesional layar besar) / iPhone SE (versi ekonomis) / iPhone 16e (versi AI ekonomis, dengan chip A18 dan modem C1 buatan Apple). Pada 2026, seri iPhone 17 sepenuhnya menggunakan chip A19 Pro, kemampuan AI semakin ditingkatkan.
+  \item \textbf{Huawei}: Seri Mate (business flagship) / Seri P/Pura (imaging flagship) / Seri Mate X (foldable flagship) / Seri nova (young mid-range) / Seri Enjoy (entry)
+  \item \textbf{Xiaomi}: Seri angka Xiaomi (flagship) / Xiaomi MIX (exploration flagship/foldable) / Redmi Seri K (performance flagship) / Redmi Seri Note (mid-range) / Redmi seri angka (entry)
+  \item \textbf{OPPO}: Seri Find X (flagship) / Seri Reno (mid-range) / Seri A (entry) / Seri angka OnePlus (performance flagship)
+  \item \textbf{vivo}: Seri X (imaging flagship) / Seri angka iQOO (performance flagship) / Seri S (selfie mid-range) / Seri Y (entry)
+  \item \textbf{Samsung}: Galaxy Seri S (flagship) / Galaxy Z Fold/Flip (foldable flagship) / Galaxy Seri A (mid-range)
+\end{itemize}
+
+\booksubsection{Arti suffix umum:}
+
+\begin{itemize}
+  \item \textbf{Pro}: Singkatan dari Professional, versi profesional. Biasanya upgrade kamera, layar, prosesor dan konfigurasi inti lainnya berdasarkan versi standar.
+  \item \textbf{Max}: Versi terbesar. Layar terbesar, baterai terbesar, tapi konfigurasi belum tentu lebih tinggi dari Pro.
+  \item \textbf{Ultra}: Versi ultimate. Biasanya mewakili konfigurasi tertinggi seri tersebut, material paling banyak, harga juga tertinggi. Seperti Samsung S24 Ultra, Xiaomi 14 Ultra.
+  \item \textbf{SE}: Special Edition special edition, aktualnya kebanyakan versi affordable. Konfigurasi dikurangi, harga diturunkan. Seperti iPhone SE.
+  \item \textbf{Plus}: Versi diperbesar. Layar lebih besar dari versi standar, baterai juga besar, tapi konfigurasi dasarnya sama.
+  \item \textbf{Lite/Youth Edition}: Versi ringan. Konfigurasi disederhanakan, harga lebih rendah.
+  \item \textbf{Note}: Awalnya merujuk ponsel layar besar, sekarang penggunaan tiap merek berbeda. Redmi Note adalah seri mid-range.
+  \item \textbf{Neo}: Versi baru. Biasanya merujuk model mid-range berorientasi performa.
+\end{itemize}
+
+\booksection{Baseband dan antena: Pahlawan di balik layar komunikasi ponsel}
+
+Ponsel bisa menelepon dan online, bergantung pada pasangan chip baseband dan antena.
+
+\booksubsection{Chip baseband:}
+
+Baseband adalah prosesor di ponsel yang bertanggung jawab untuk komunikasi nirkabel, ia memodulasi sinyal digital menjadi gelombang radio untuk dikirim, juga mendemodulasi gelombang radio yang diterima menjadi sinyal digital. Performa baseband langsung mempengaruhi kualitas panggilan, kecepatan internet dan stabilitas sinyal. Qualcomm adalah pemasok baseband ponsel terbesar, MediaTek dan Samsung juga memiliki baseband self-developed. Apple mulai iPhone 16e membawa chip baseband C1 self-developed, menandai Apple resmi memasuki era baseband self-developed, baseband C1 menggunakan proses 4nm, performa konsumsi daya sangat baik; iPhone 16/16 Plus/16 Pro/16 Pro Max masih menggunakan baseband Qualcomm (Snapdragon X75 5G), diperkirakan model selanjutnya akan bertahap transisi ke baseband self-developed. Lebih awal seri iPhone XS/11 menggunakan baseband Intel saat performa sinyal kurang baik, adalah pain point banyak pengguna.
+
+\booksubsection{Desain antena:}
+
+Antena ponsel tersembunyi di dalam bodi, biasanya dipasang mengelilingi bingkai. Desain antena langsung mempengaruhi performa penerimaan sinyal:
+
+\begin{itemize}
+  \item \textbf{Teknologi MIMO}: Multiple input multiple output, menggunakan beberapa antena untuk mengirim dan menerima data secara bersamaan, meningkatkan kecepatan dan stabilitas. 4×4 MIMO lebih cepat dari 2×2 MIMO.
+  \item \textbf{Jumlah antena}: Ponsel flagship biasanya memiliki belasan antena (seluler, Wi-Fi, Bluetooth, NFC, GPS masing-masing butuh antena independen).
+  \item \textbf{Pengaruh bodi logam}: Logam akan menahan sinyal, jadi ponsel bodi logam perlu desain antenna band (strip plastik di bingkai). Bodi kaca dan plastik pengaruhnya kecil pada sinyal.
+\end{itemize}
+
+\booksubsection{Evolusi teknologi jaringan:}
+
+\begin{itemize}
+  \item \textbf{4G LTE}: Kecepatan puncak teoretis downlink 1Gbps/uplink 500Mbps (Cat.18), pengalaman aktual biasanya 50-150Mbps. Coverage terluas, cukup digunakan.
+  \item \textbf{5G NR}: Kecepatan puncak teoretis downlink 10Gbps+. Band Sub-6GHz coverage cukup baik, mmWave millimeter wave kecepatan sangat cepat tapi coverage sangat kecil.
+  \item \textbf{5G-A (5G Advanced)}: Versi enhanced dari 5G, juga disebut 5.5G. Kecepatan download bisa mencapai 10Gbps, upload 1Gbps, densitas koneksi dan akurasi posisi meningkat drastis. Sejak 2024, China Mobile, China Telecom, dan China Unicom mulai menyebarkan jaringan 5G-A di kota-kota utama, seri Huawei Mate 70/80, seri Xiaomi 15/16, dan ponsel flagship lain sudah mendukung 5G-A. 5G-A juga membawa kemampuan "integrasi komunikasi dan sensing", base station dapat sekaligus berkomunikasi dan merasakan lingkungan, menyediakan infrastruktur untuk ekonomi altitud rendah (pengiriman drone) dan kendaraan terhubung.
+\end{itemize}
+
+\booksubsection{Klasifikasi band jaringan:}
+
+Band jaringan yang didukung ponsel menentukan di negara mana dan jaringan operator mana bisa digunakan:
+
+\begin{itemize}
+  \item \textbf{FDD-LTE Band (seri B)}: Seperti B1, B3, B5, dll, band 4G. Negara berbeda menggunakan band berbeda, Tiongkok utamanya menggunakan B1/B3/B5/B8/B34/B38/B39/B40/B41.
+  \item \textbf{TDD-LTE Band}: Standar lain 4G, Tiongkok banyak menggunakan B38/B39/B40/B41.
+  \item \textbf{5G NR Band (seri N)}: Seperti n1, n3, n28, n41, n78, n79, dll. n78 (3.5GHz) adalah band utama 5G Tiongkok, n41 (2.5GHz) lebih banyak digunakan China Mobile.
+  \item \textbf{Saran pembelian}: Jika butuh digunakan ke luar negeri, sebelum membeli konfirmasi apakah ponsel mendukung band negara tujuan. Ponsel versi Tiongkok biasanya paling lengkap mendukung band Tiongkok, tapi mungkin kurang sebagian band luar negeri.
+\end{itemize}
+
+\booksection{Ponsel Anda, sebenarnya memainkan berapa banyak peran?}
+
+Ia sudah lama bukan sekadar telepon:
+
+\begin{enumerate}
+  \item \textbf{Alat komunikasi}: Telepon, SMS, WeChat, email...
+  \item \textbf{Kamera cerdas}: Foto, video, scan dokumen...
+  \item \textbf{Dompet}: Pembayaran, kartu bus, kartu bank, kartu member...
+  \item \textbf{Portal informasi}: Berita, cuaca, saham, pengetahuan...
+  \item \textbf{Konsol game}: Dari match-3 hingga AAA title...
+  \item \textbf{Kantor mobile}: Dokumen, spreadsheet, meeting, kolaborasi...
+  \item \textbf{Asisten kesehatan}: Step counter, heart rate, sleep, olahraga...
+  \item \textbf{Remote smart home}: Mengontrol lampu, AC, TV, robot vacuum...
+  \item \textbf{ID digital}: KTP elektronik, SIM elektronik, health code...
+  \item \textbf{Pusat hiburan}: Musik, video, e-book, podcast...
+\end{enumerate}
+
+Pikirkan, perangkat kecil ini, menanggung berapa banyak kehidupan! Jadi, belajar menggunakan dengan baik, adalah belajar hidup lebih baik.
+
+\begin{tcbpractice}{Praktik: Pahami konfigurasi hardware}
+Di [Pengaturan], lihat apakah bisa menemukan model prosesor, ukuran spesifik RAM dan ROM. Punya gambaran tentang kemampuan ponsel Anda. Pengguna Android bisa download “AnTuTu” atau “DevCheck” untuk melihat informasi hardware detail.
+
+\end{tcbpractice}

@@ -1,0 +1,121 @@
+\bookchapter{Bab 69: Buku Rujukan Pantas dan Sumber}
+
+\chapterintro{Bab ini ialah buku rujukan pantas yang boleh digunakan secara berasingan. Apabila tidak ingat sesuatu gaya penulisan atau perlu membuat keputusan pantas, terus buka di sini. Disyorkan menjadikannya 'kad poket': rujukan pantas kod lazim, soalan lazim, sumber pembelajaran — jangan terlepas satu halaman pun.}
+
+\booksection{Kad rujukan pantas kod lazim}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Apa yang mahu dibuat} & \textbf{Kod utama} \tabularnewline
+\hline
+State peribadi halaman & @State private var x = nilai awal \tabularnewline
+Logik merentas halaman & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+Susun atur menegak/mengufuk & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+Ruang fleksibel & \texttt{Spacer()} \tabularnewline
+Senarai & List \{ ForEach(tatasusunan) \{ ... \} \} \tabularnewline
+Lompatan halaman & \texttt{NavigationStack + NavigationLink} \tabularnewline
+Pop timbul bawah & .sheet(isPresented: \$show) \{ kandungan \} \tabularnewline
+Tutup halaman semasa & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+Ambil data melalui internet & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+Penghuraian JSON & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+Simpan tetapan kecil & UserDefaults.standard.set(nilai, forKey: "kunci") \tabularnewline
+Simpan data berstruktur & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+Penyesuaian mod gelap & Guna warna sistem (.primary / Color(.systemGray6)), jangan tulis secara tetap \tabularnewline
+Jalankan ujian & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kad rujukan pantas pembangunan iOS (edisi Ogos 2026)\end{center}
+
+\booksection{Soalan lazim FAQ}
+
+Q1: Saya tiada Mac, boleh belajar pembangunan iOS?
+
+Boleh belajar bahasa, tetapi tidak boleh membuat pembangunan penuh. Swift Playgrounds pada iPad/iPhone boleh menyiapkan keseluruhan kandungan Bab 61; tetapi Xcode eksklusif untuk macOS, akhirnya anda mesti mempunyai sebuah Mac. Bajet terhad? Sewa Mac awan atau beli Mac mini terpakai dahulu sebagai peralihan, kemudian tentukan pelaburan selepas menamatkan bahasa.
+
+Q2: Berapa kos untuk belajar pembangunan iOS?
+
+Peringkat pembelajaran: 0 kos (Xcode percuma + Apple ID percuma untuk ujian pada peranti sebenar). Peringkat penerbitan: akaun pembangun 99 dolar AS/tahun (kira-kira 700 yuan). Ditambah pelaburan perkakasan sebuah Mac, itulah keseluruhan kosnya. Berbanding pulangannya — walaupun alat kecil di App Store juga mempunyai pengguna berbayar — perakaunan ini berbaloi.
+
+Q3: Belajar SwiftUI atau UIKit dahulu?
+
+SwiftUI. Projek baharu, tutorial baharu dan jawatan baharu pada 2026 semuanya berasaskan SwiftUI, dan buku ini menggunakannya dari mula hingga akhir. UIKit ialah rangka kerja generasi sebelumnya dan masih digunakan dalam banyak projek lama — selepas anda mahir SwiftUI, tambah UIKit mengikut keperluan (dokumen rasmi menyediakan tutorial interoperasi); ia mudah dikuasai kemudian. Jangan terbalikkan urutannya.
+
+Q4: Mudahkah mencari kerja dalam pembangunan iOS?
+
+Keadaan pasaran pada 2026: jawatan peringkat permulaan yang hanya 'boleh melukis antara muka' bersaing sengit, tetapi pembangun yang 'faham Swift + SwiftUI + mempunyai karya diterbitkan' tetap dicari-cari. Gaji sederhana jawatan iOS sentiasa berada di tangga teratas antara pelbagai tumpukan teknologi. Untuk anda yang masih dalam peringkat pembelajaran, resume terbaik ialah App buatan sendiri yang ada di dalam kedai itu.
+
+Q5: Apa yang perlu dilakukan jika App ditolak semasa semakan?
+
+Jangan panik, ini perkara biasa—kebarangkalian ditolak pada penghantaran pertama tidak rendah. Sebab penolakan Apple biasanya ditulis dengan sangat terperinci (halaman mana, garis panduan yang mana). Baiki satu demi satu, kemudian balas dengan penerangan dalam App Store Connect dan hantar semula. Tiga sebab penolakan yang paling biasa: kegunaan kebenaran tidak dijelaskan dengan jelas, antara muka mempunyai bug, dan metadata (tangkapan skrin/penerangan) tidak sepadan dengan aplikasi sebenar. Memeriksa ketiga-tiga perkara ini lebih awal boleh menjimatkan satu pusingan penantian.
+
+\booksection{Rujukan Pantas Pintasan Xcode yang Kerap Digunakan}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Tindakan} & \textbf{Pintasan} \tabularnewline
+\hline
+Jalankan / Uji & CmdR / CmdU \tabularnewline
+Buka pratonton kanvas & OptionCmd \tabularnewline
+Buka fail dengan pantas & CmdO \tabularnewline
+Carian menyeluruh & CmdF \tabularnewline
+Format indentasi & CtrlI \tabularnewline
+Komen / Buang komen & Cmd/ \tabularnewline
+Kosongkan cache binaan & CmdK \tabularnewline
+Lompat ke definisi & Cmd + klik \tabularnewline
+Namakan semula (tukar nama dengan selamat di seluruh projek) & Klik kanan Refactor Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Rujukan Pantas Pintasan Xcode yang Kerap Digunakan\end{center}
+
+\begin{tcbinfo}{Tips: Masalah kompilasi misteri? Kosongkan cache dahulu}
+“Semalam boleh jalan, hari ini tak boleh lagi”—daripada sepuluh kejadian aneh sebegini, enam atau tujuh daripadanya berpunca daripada cache binaan yang bercelaru. Kosongkan dengan CmdK kemudian bina semula, ini boleh menyembuhkan lebih separuh masalah misteri. Kalau masih tidak boleh, mulakan semula Xcode (sekali dengan Mac), dan kalau masih gagal juga, “padam folder DerivedData”—inilah tiga langkah muktamad yang diwarisi secara lisan dalam kalangan pembangun iOS.
+
+\end{tcbinfo}
+
+\booksection{Sumber Pembelajaran yang Disyorkan}
+
+\booksection{Sumber Pembelajaran yang Disyorkan}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Jenis} & \textbf{Sumber} & \textbf{Sebab disyorkan} \tabularnewline
+\hline
+Rasmi & developer.apple.com & Dokumentasi rasmi Apple, semua tutorial SwiftUI/Swift ada di dalamnya, rujukan paling sahih \tabularnewline
+Rasmi & SwiftUI Tutorials daripada Apple & Kursus rasmi tunjuk ajar langkah demi langkah, sangat mesra untuk pengguna baharu \tabularnewline
+Rasmi & Laman rasmi Swift (swift.org) & Dokumentasi rasmi bahasa dan tapak latihan dalam talian \tabularnewline
+Komuniti & Hacking with Swift & Perpustakaan tutorial percuma Paul Hudson, kualitinya diakui berada di peringkat teratas \tabularnewline
+Komuniti & Stack Overflow (tag swiftui) & Tempat pertama meminta pertolongan apabila berlaku ralat \tabularnewline
+Video & Saluran rasmi Apple Developer (video WWDC) & Penerangan sahih tentang teknologi baharu setiap tahun \tabularnewline
+Reka bentuk & Panduan Antara Muka Manusia Apple (HIG) & Kitab rasmi untuk menghasilkan antara muka ber"rasa Apple" \tabularnewline
+Pelengkap & Bahagian Ketujuh "Praktik Pengaturcaraan AI" (Bab 37-47) & Panduan lengkap menggunakan AI bagi membantu pembangunan iOS \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Senarai Sumber Pembelajaran Pembangunan iOS (Ogos 2026)\end{center}
+
+\booksection{Penutup: Daripada App Pertama ke App ke-N}
+
+Bila dilihat kembali, anda telah bergerak daripada “tidak tahu apa itu SwiftUI” kepada memasang Xcode, mempelajari Swift, melukis antara muka dengan SwiftUI, menyambungkan App kepada pangkalan data dan rangkaian, kemudian menguji, membungkus dan menerbitkannya—sepanjang perjalanan ini, anda telah menamatkan bahagian yang paling sukar dalam perjalanan daripada sifar ke satu.
+
+Dunia teknologi berubah dengan sangat pantas: rangka kerja akan dinaik taraf, alat akan ditukar ganti, dan AI akan mengambil alih lebih banyak kerja “menaip papan kekunci”. Tetapi ada satu perkara yang tidak akan lapuk: kebolehan anda menguraikan idea yang kabur menjadi langkah yang jelas, kemudian melaksanakannya langkah demi langkah. Alat ialah pembesar, manakala cara berfikir ialah asas. Pembesar boleh diganti, tetapi asas tidak boleh tergugat.
+
+Anda bukan lagi sekadar "orang yang mahir guna telefon". Anda boleh mengubah idea dalam kepala menjadi aplikasi yang benar-benar berjalan pada ratusan juta iPhone. Mulai hari ini, berkarya dengan papan kekunci—itulah romantisme pembangun iOS.
+
+\booksection{Rujukan}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

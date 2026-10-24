@@ -1,0 +1,115 @@
+\booksection{Bab 20 Lampiran: Termux — Lingkungan terminal Linux portabel pada perangkat Android}
+
+\chapterintro{Jika Anda merasa mode pengembang belum cukup “hardcore”, dan ingin mengalami command line Linux lengkap di ponsel, maka Termux adalah untuk Anda. Tanpa perlu izin root, ia dapat mengubah ponsel Android biasa menjadi workstation Linux portabel, merupakan senjata ampuh bagi pengguna lanjutan untuk menjelajahi pengembangan dan operasi mobile.}
+
+\booksubsection{Apa itu Termux}
+
+Keunggulan inti Termux terletak pada ringan dan sangat dapat diperluas, cocok untuk berbagai skenario seperti pengembangan, pembelajaran, dan administrasi sistem. Ini menggabungkan paket perangkat lunak standar dengan emulasi terminal yang presisi dalam satu solusi open source.
+
+2. Fungsi dan karakteristik inti
+
+\booksubsection{Fungsi dan karakteristik inti}
+
+\subsubsection*{Lingkungan Linux lengkap}
+
+Termux\textbf{Hanya Built-in Bash}satu jenis Shell ini. Jika ingin memakai Zsh atau fish dan Shell lain, perlu via package manager install manual, misalnya:\texttt{pkg install zsh}atau\texttt{pkg install fish}. Bersamaan Termux mendukung editor Vim, Nano, Emacs, dll., memberikan pengalaman command line mendekati native. Pengguna bisa via “pkg install” install 2000+ package, termasuk GCC, OpenSSH, SQLMap, dan tool development serta security lain.
+
+\subsubsection*{Manajemen paket yang kuat}
+
+Fungsi keamanan dan jaringan
+
+\subsubsection*{Fungsi keamanan dan jaringan}
+
+\begin{itemize}
+  \item \textbf{: Mendukung fungsi klien dan server SSH, dapat terhubung remote ke perangkat lain atau menjadikan ponsel sebagai host SSH.}Alat enkripsi
+  \item \textbf{: Menyediakan alat enkripsi seperti OpenSSL, mendukung enkripsi data dan komunikasi aman.}Pembangunan server
+  \item \textbf{: Dapat mengkonfigurasi Nginx atau Apache untuk membangun server halaman web statis.}Integrasi sistem dan ekstensi
+\end{itemize}
+
+\subsubsection*{Integrasi sistem dan ekstensi}
+
+\begin{itemize}
+  \item Memanggil fungsi perangkat keras Android seperti sensor, kamera melalui plugin Termux:API.
+  \item Mendukung koneksi keyboard Bluetooth dan layar eksternal, memiliki dukungan mouse lengkap.
+  \item 3. Ekosistem plugin
+\end{itemize}
+
+\booksubsection{Ekosistem plugin}
+
+Nama plugin
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Deskripsi fungsi} & \textbf{Termux:API} \tabularnewline
+\hline
+Mengekspos fungsi Android API ke program command line & Termux: Boot \tabularnewline
+Memungkinkan menjalankan script saat perangkat booting & Termux: Float \tabularnewline
+Menyediakan jendela terminal mengambang & Termux: Styling \tabularnewline
+Mengaktifkan skema warna dan kustomisasi font untuk terminal & Termux: Tasker \tabularnewline
+Mengintegrasikan script Termux dengan aplikasi otomasi Tasker & Termux: Widget \tabularnewline
+Memungkinkan menjalankan script dari widget layar utama & Penting \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{Termux dan plugin-nya harus diinstal dari sumber yang sama, karena mereka berbagi sharedUserId yang sama. Mencampur instalasi dari sumber berbeda (seperti F-Droid dan GitHub) akan menyebabkan error instalasi.}
+4. Panduan instalasi dan konfigurasi
+
+\end{tcbwarn}
+
+\booksubsection{Panduan instalasi dan konfigurasi}
+
+\subsubsection*{Langkah instalasi}
+
+\begin{enumerate}
+  \item \textbf{: Unduh dan instal Termux dari saluran resmi (F-Droid atau GitHub), tanpa perlu izin root.}Inisialisasi sistem
+  \item \textbf{: Setelah pertama kali dijalankan tunggu "Installing bootstrap packages" selesai.}Dapatkan izin penyimpanan
+  \item \textbf{: Jalankan}pkg update \&\& pkg upgrade\texttt{untuk mendapatkan izin sistem file ponsel.\allowbreak }Update sumber perangkat lunak
+  \item \textbf{: Jalankan}pkg update \&\& pkg upgrade\texttt{untuk memperbarui paket perangkat lunak.\allowbreak }Optimasi dasar
+\end{enumerate}
+
+\subsubsection*{Optimasi dasar}
+
+\begin{itemize}
+  \item \textbf{: Gunakan perintah}termux-change-repo\texttt{untuk mengganti mirror source melalui antarmuka grafis (rekomendasi mirror Tsinghua University).\allowbreak }Pengaturan shortcut
+  \item \textbf{: Tombol volume turun mensimulasikan Ctrl, tombol volume naik mensimulasikan Esc, meningkatkan efisiensi input.}Pempercantik antarmuka
+  \item \textbf{: Pasang Zsh + Oh My Zsh, konfigurasikan tema dan plugin.}5. Skenario aplikasi tipikal
+\end{itemize}
+
+\booksubsection{Skenario aplikasi tipikal}
+
+\subsubsection*{Pengujian pengembangan mobile}
+
+Operasi dan pemeliharaan server
+
+\subsubsection*{Operasi dan pemeliharaan server}
+
+Belajar operasi Linux
+
+\subsubsection*{Belajar operasi Linux}
+
+Menyediakan environment Linux nyata, adalah platform ideal untuk belajar command line dan manajemen sistem, bisa latih Shell scripting, manajemen permission file Linux (seperti\texttt{chmod 755}setel permission bit rwxr-xr-x,\texttt{chown user: group}modifikasi ownership file,\texttt{ls -\allowbreak l}lihat permission tiga kelompok sembilan bit owner/group/other) dan perintah dasar lain. Perhatikan ini adalah model permission “tiga kelompok sembilan bit” klasik Unix/Linux (owner / group / other × read / write / execute), berbeda total dengan ACL access control list Windows NTFS, dua sistem yang berbeda.
+
+\subsubsection*{Pengujian keamanan jaringan}
+
+6. Versi dan kompatibilitas
+
+\booksubsection{Versi dan kompatibilitas}
+
+Kesimpulan
+
+\begin{tcbinfo}{Termux membawa pengalaman terminal Linux yang kuat ke perangkat Android, menjadikan ponsel sebagai alat pengembangan dan pembelajaran portabel. Baik pengembang, administrator sistem, maupun penggemar teknologi, semua dapat memanfaatkan Termux untuk menikmati pengalaman command line lengkap di perangkat mobile, mewujudkan konsep "Linux di saku".}
+Mari praktik: Jalankan perintah Linux pertama di ponsel
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Unduh dan instal Termux dari F-Droid, tunggu inisialisasi selesai saat pertama dijalankan.}
+\begin{enumerate}
+  \item Jalankan
+  \item pkg update \&\& pkg upgrade\texttt{untuk memperbarui paket perangkat lunak.\allowbreak }Pasang Python:
+  \item pkg install python\texttt{.\allowbreak }.
+  \item python3 -c "print('Hello from Termux!')"\texttt{, rasakan keseruan menjalankan kode di ponsel.\allowbreak }IV. Bagian Melampaui (Bab 21-26)
+\end{enumerate}
+
+\end{tcbpractice}

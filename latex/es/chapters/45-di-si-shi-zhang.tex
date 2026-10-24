@@ -1,0 +1,139 @@
+\bookchapter{Capítulo 40: Ingeniería de requisitos: convertir ideas en instrucciones que la IA pueda ejecutar}
+
+\chapterintro{Si la ingeniería de contexto resuelve «que la IA conozca el contexto», la ingeniería de requisitos resuelve «que la IA sepa qué hay que hacer exactamente esta vez». Es la etapa donde más se nota la diferencia entre personas en la programación con IA: con las mismas herramientas y los mismos modelos, hay quien logra proyectos impresionantes y quien solo consigue juguetes mediocres. La diferencia suele estar no en la capacidad técnica, sino en la capacidad de expresar los requisitos.}
+
+\booksection{De la idea vaga al requisito estructurado}
+
+Todo proyecto empieza con una idea vaga: «quiero hacer una app de gastos», «quiero una web personal», «quiero una herramienta de tareas pendientes». Las ideas en sí no tienen nada de malo, pero si se las lanzas directamente a la IA, la calidad del resultado depende por completo de la suerte. El objetivo de la ingeniería de requisitos es convertir esa idea vaga en un requisito estructurado que la IA pueda ejecutar con precisión.
+
+La buena noticia: los requisitos estructurados no exigen escribir un PRD de decenas de páginas. Solo necesitas responder cinco preguntas, a las que llamamos «los cinco elementos del requisito»:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Elemento} & \textbf{Pregunta} & \textbf{Ejemplo: app de gastos} \tabularnewline
+\hline
+Who & ¿Para quién es? & Uso personal, para registrar ingresos y gastos diarios \tabularnewline
+What & ¿Qué hace? & Una aplicación que registre cada ingreso y gasto, los resuma por mes y los visualice \tabularnewline
+Why & ¿Por qué hacerla? & Quiero conocer mi estructura de gastos y detectar gastos innecesarios \tabularnewline
+How & ¿Cómo hacerla, a grandes rasgos? & Frontend con React, datos guardados en el navegador; de momento sin backend ni inicio de sesión \tabularnewline
+Constraint & ¿Qué limitaciones hay? & Desarrollo en solitario, terminada en 2 semanas, sin necesidad de publicarla en producción \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Los cinco elementos del requisito, con ejemplos\end{center}
+
+Estos cinco elementos no hace falta convertirlos en un documento formal; basta con repasarlos rápidamente en la cabeza. La clave es adquirir el hábito de «pensarlo bien antes de hablar». Descubrirás que, cuando puedes responder con claridad estas cinco preguntas, tu descripción de requisitos se vuelve estructurada de forma natural.
+
+\booksection{El arte de descomponer requisitos por niveles}
+
+En proyectos grandes, una sola descripción de requisitos no basta. Necesitas descomponer el requisito grande en subrequisitos pequeños que se puedan verificar por separado. Este proceso se llama «descomposición de requisitos» y su principio central es: cada subrequisito debe poder completarse, verificarse y entregarse de forma independiente.
+
+Tomemos como ejemplo «hacer una app personal de gastos»; una forma razonable de descomponerla sería:
+
+\begin{enumerate}
+  \item Implementar la función básica de registro de ingresos y gastos (añadir, ver y eliminar registros);
+  \item Añadir la función de categorías (etiquetar cada registro como comida, transporte, etc.);
+  \item Implementar el resumen mensual (estadísticas de ingresos y gastos mes a mes);
+  \item Añadir la visualización de datos (mostrar la estructura de gastos con gráficos).
+\end{enumerate}
+
+Cada paso es un incremento de funcionalidad que puede ejecutarse y verificarse por separado.
+
+Regla de oro para trocear requisitos: al terminar cada paso, el proyecto debe ser "algo que se pueda usar", aunque las funciones sean toscas. No dejes nunca el proyecto en el estado de "todo a medias y nada funciona".
+
+Esta forma de descomponer tiene dos ventajas. Primera: te permite ver siempre el progreso; cada paso completado añade una función a tu app, y esa retroalimentación positiva es vital en los proyectos largos (todos necesitamos sentirnos realizados). Segunda: mantiene cada tarea de la IA lo bastante pequeña, lo que reduce el riesgo de «malentendidos de la IA»: cuanto más pequeña es la tarea, más precisa es su comprensión y mejor es la calidad del resultado.
+
+\booksection{Plantilla y práctica para escribir un PRD}
+
+Para proyectos más grandes (por ejemplo, una aplicación full-stack con frontend, backend y varios módulos de funcionalidad), los cinco elementos del requisito pueden quedarse cortos. Entonces necesitas escribir un documento de requisitos del proyecto (PRD) más formal. Un punto que suele malinterpretarse: el PRD no está escrito para la IA; está escrito para ti. Te ayuda a aclarar tus ideas, y solo después podrás darle a la IA instrucciones más precisas.
+
+Un buen PRD no tiene que ser largo, pero debe incluir seis partes: descripción general (un párrafo que aclare qué se va a hacer), lista de funciones (qué es cada punto de funcionalidad), plan técnico (qué stack y arquitectura aproximada se usará), modelo de datos (las estructuras de datos centrales), descripción de la interfaz (cómo son las páginas principales) y plan de desarrollo (en cuántos pasos se completará).
+
+\begin{lstlisting}
+# PRD de la app de control de gastos personal
+## Descripción del proyecto
+Una app ligera de control de gastos personales que permite registrar ingresos y gastos, categorizarlos, ver resúmenes mensuales y visualizar los datos.
+## Lista de funciones
+1. Registrar movimientos: importe, tipo (ingreso/gasto), categoría, nota, fecha
+2. Gestión de categorías: precargadas comida, transporte, compras, ocio, otras
+3. Resumen mensual: ingresos totales, gastos totales y balance por mes
+4. Visualización del gasto: gráfico circular con la proporción de cada categoría
+5. Exportación de datos: exportar a CSV
+## Solución técnica
+- Frontend: React + TypeScript + Tailwind CSS
+- Almacenamiento: localStorage (sin backend)
+- Gráficos: Chart.js
+- Build: Vite
+## Modelo de datos
+Record {
+  id: string
+  amount: number
+  type: 'income' | 'expense'
+  category: string
+  note: string
+  date: string  // YYYY-MM-DD
+}
+## Plan de desarrollo
+Step 1: registro básico de movimientos (CRUD)
+Step 2: gestión de categorías
+Step 3: resumen mensual
+Step 4: visualización de datos
+Step 5: exportación de datos
+\end{lstlisting}
+
+Fíjate en el estilo de escritura de este PRD: listas concisas y formato estructurado, en lugar de discursos interminables. Cada punto de funcionalidad tiene una definición clara y el modelo de datos se describe con tipos sencillos. Un PRD con este estilo no solo lo entiendes tú con facilidad: cuando se lo das a la IA, también comprende con precisión cada punto del requisito.
+
+\booksection{En la práctica: una demostración completa, de la idea al plan}
+
+Teorizar sin práctica es aburrido; vamos a recorrer todo el proceso de la ingeniería de requisitos con un ejemplo completo. Supongamos que tu idea es: «quiero hacer un rastreador de aprendizaje que registre qué estudio cada día».
+
+Primer paso: repasar los cinco elementos del requisito.
+
+\begin{itemize}
+  \item Who (quién): uso personal.
+  \item What (qué): una herramienta que registre lo que estudias cada día, controle el tiempo de estudio y permita repasar tu progreso.
+  \item Why (por qué): quiero crear el hábito de aprender continuamente y ver cómo se acumula lo aprendido.
+  \item How (cómo): primero hago una versión web, con los datos guardados en el navegador.
+  \item Constraint (restricción): desarrollo desde cero, funcionalidades centrales terminadas en 1 semana.
+\end{itemize}
+
+Segundo paso: descomponer los requisitos.
+
+\begin{enumerate}
+  \item Paso 1: implementar la función «registrar entradas de estudio» (fecha, contenido, duración);
+  \item Paso 2: añadir las «estadísticas de tiempo de estudio» (hoy y acumulado semanal);
+  \item Paso 3: implementar la vista «calendario de estudio» (mostrada como el gráfico de contribuciones de GitHub);
+  \item Paso 4: añadir la función «repaso de estudio» (muestra al azar los registros de un día pasado para ayudarte a repasar).
+\end{enumerate}
+
+Tercer paso: escribir un PRD breve. No hace falta que sea largo: la descomposición de arriba ya constituye el cuerpo del PRD. Organízalo en un archivo .md, colócalo en la raíz del proyecto y úsalo como referencia compartida entre tú y la IA.
+
+Cuarto paso: empezar a desarrollar el primer paso. La instrucción para la IA podría ser:
+
+\begin{lstlisting}
+Necesito la primera función de un registrador de estudio: registrar sesiones de estudio.
+El usuario puede añadir un registro con fecha, contenido estudiado y duración (minutos).
+Los datos se guardan en localStorage.
+Frontend con React + TypeScript.
+Dame la implementación completa.
+\end{lstlisting}
+
+Fíjate en las características de esta instrucción: describe solo el objetivo del paso actual (la función de registro), sin mezclar otras funciones; explicita las restricciones técnicas (React, TypeScript, localStorage); da la información suficiente para que la IA sepa «qué hacer» y «cómo abordarlo», pero deja la implementación concreta en manos de la IA. Esta es una instrucción de programación con IA de alta calidad, pulida mediante la ingeniería de requisitos.
+
+\begin{tcbpractice}{Manos a la obra: escribe una ficha de cinco elementos para tu «proyecto favorito»}
+Elige un pequeño proyecto que llevas tiempo rumiando y dedica 5 minutos a rellenar una ficha: Who / What / Why / How / Constraint, una frase para cada uno. Después descomponla en 3 a 5 pasos en los que «cada paso sea utilizable». Descubrirás algo: al poner la idea por escrito, deja de ser un «sueño fantasioso» y se convierte en una «lista de tareas».
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item Los cinco elementos del requisito: Who / What / Why / How / Constraint; piénsalo bien antes de hablar
+  \item Regla de oro para descomponer requisitos: al terminar cada paso, el proyecto es «algo que ya funciona»
+  \item El PRD lo escribes para ti: descripción general, lista de funciones, plan técnico, modelo de datos, interfaz y plan de desarrollo
+  \item Buena instrucción = describir solo el paso actual + restricciones claras + decir «qué hacer», no «cómo hacerlo»
+  \item Plantilla del proceso completo: cinco elementos descomposición PRD instrucción, en cuatro pasos
+\end{itemize}
+
+\end{tcbsummary}

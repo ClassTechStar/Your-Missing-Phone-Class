@@ -1,0 +1,121 @@
+\bookchapter{第六十九章：クイックリファレンスと学習リソース}
+
+\chapterintro{この章は、それ単体で使えるクイックリファレンスです。書き方を思い出せないときや、すばやく判断したいときは、直接ここを開きましょう。「ポケットカード」として活用するのがおすすめです。よく使うコードの一覧、よくある質問、学習リソース——この3つをまるごと収めています。}
+
+\booksection{よく使うコードのクイックカード}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{やりたいこと} & \textbf{キーコード} \tabularnewline
+\hline
+画面内のプライベートな状態 & @State private var x = 初期値 \tabularnewline
+画面をまたぐロジック & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+縦並び／横並びのレイアウト & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+伸縮する余白 & \texttt{Spacer()} \tabularnewline
+リスト & List \{ ForEach(配列) \{ ... \} \} \tabularnewline
+画面遷移 & \texttt{NavigationStack + NavigationLink} \tabularnewline
+ボトムシート & .sheet(isPresented: \$show) \{ 中身 \} \tabularnewline
+現在の画面を閉じる & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+ネットワークからデータを取得 & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+JSON のパース & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+小さな設定を保存 & UserDefaults.standard.set(値, forKey: "キー") \tabularnewline
+構造化データを保存 & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+ダークモード対応 & システムカラー（.primary / Color(.systemGray6)）を使い、色を決め打ちしない \tabularnewline
+テストを実行 & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 開発クイックカード（2026年8月版）\end{center}
+
+\booksection{よくある質問 FAQ}
+
+Q1：Mac を持っていません。iOS 開発は学べますか？
+
+言語の学習はできますが、本格的な開発はできません。iPad／iPhone の Swift Playgrounds なら第六十一章の内容までは学べます。ただし Xcode は macOS 専用なので、最終的には Mac が1台必要です。予算が限られているなら、クラウド Mac をレンタルしたり中古の Mac mini を買ってしのいだりして、言語を学び終えてから本格投資を決めるのもよいでしょう。
+
+Q2：iOS 開発の学習には、いくらお金がかかりますか？
+
+学習段階：0円（Xcode は無料 + 無料の Apple ID で実機デバッグ可能）。リリース段階：開発者アカウントが年間99ドル。これに Mac 1台のハードウェアへの投資を加えたものが総コストです。見返りと比べれば——App Store では小さなツールでも有料ユーザーがつくもの——十分に割に合う勘定です。
+
+Q3：SwiftUI と UIKit、どちらを先に学ぶべき？
+
+SwiftUI です。2026年の新規プロジェクト·新しいチュートリアル·新しい求人はいずれも SwiftUI が中心で、本書も通して SwiftUI を使います。UIKit は前世代のフレームワークで、多くの古いプロジェクトでは今も使われています——SwiftUI に慣れてから必要に応じて UIKit を補えば（公式に相互運用のチュートリアルがあります）、習得は速いはずです。順序だけは逆にしないこと。
+
+Q4：iOS 開発は仕事探しに強いですか？
+
+2026年の市況：単に「画面が描けるだけ」の初級ポジションは競争が激しいものの、「Swift + SwiftUI を理解し、リリース実績がある」開発者は今も引く手あまたです。iOS 関連職の給与中央値は、各技術スタックの中で長年上位にあります。学習中のあなたにとって最高の履歴書は、ストアに並んだ自分の App です。
+
+Q5：App が審査で却下されたら、どうすればいい？
+
+慌てなくて大丈夫、ごく普通のことです——初回提出が却下される確率は決して低くありません。Apple の却下理由は通常とても具体的に書かれている（どの画面か、どのガイドラインか）ので、1件ずつ修正し、App Store Connect で回答を添えて再提出すればOK。よくある却下理由のビッグ3は、権限の用途説明が不明瞭、画面にバグがある、メタデータ（スクリーンショット／説明文）と実際の中身が合っていない、の3つ。事前にこの3点をセルフチェックすれば、1回ぶんの待ち時間を節約できます。
+
+\booksection{Xcode のよく使うショートカット一覧}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{操作} & \textbf{ショートカット} \tabularnewline
+\hline
+実行／テスト & CmdR / CmdU \tabularnewline
+キャンバスプレビューを開く & OptionCmd \tabularnewline
+ファイルをすばやく開く & CmdO \tabularnewline
+プロジェクト全体を検索 & CmdF \tabularnewline
+インデントを整形 & CtrlI \tabularnewline
+コメント／コメント解除 & Cmd/ \tabularnewline
+ビルドキャッシュをクリーン & CmdK \tabularnewline
+定義へジャンプ & Cmdクリック \tabularnewline
+リネーム（全体を安全に改名） & 右クリック Refactor Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Xcode のよく使うショートカット一覧\end{center}
+
+\begin{tcbinfo}{ワンポイント：コンパイルの怪奇現象は、まずキャッシュクリア}
+「昨日は動いたのに今日は動かない」という怪奇現象は、六七割がビルドキャッシュの不調です。CmdK でクリーンしてから再ビルドすれば、怪奇現象の大半は解決します。それでもだめなら Xcode を再起動（Mac ごとでも）、さらにだめなら「DerivedData フォルダを削除」——iOS 開発者の間で口伝えに受け継がれてきた究極の三連コンボです。
+
+\end{tcbinfo}
+
+\booksection{おすすめ学習リソース}
+
+\booksection{おすすめ学習リソース}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{種類} & \textbf{リソース} & \textbf{おすすめの理由} \tabularnewline
+\hline
+公式 & developer.apple.com & Apple の公式ドキュメント。SwiftUI／Swift のチュートリアルもここに。第一の権威です \tabularnewline
+公式 & Apple の SwiftUI Tutorials & 公式のきめ細かいハンズオン。初心者へのやさしさは満点 \tabularnewline
+公式 & Swift 公式サイト（swift.org） & 言語の公式ドキュメントとオンラインの実行環境 \tabularnewline
+コミュニティ & Hacking with Swift & Paul Hudson の無料チュートリアル集。品質は誰もが認めるトップクラス \tabularnewline
+コミュニティ & Stack Overflow（swiftui タグ） & エラーで困ったときの最初の駆け込み先 \tabularnewline
+動画 & Apple Developer 公式チャンネル（WWDC 動画） & 毎年の新技術を権威者が解説 \tabularnewline
+デザイン & Apple ヒューマンインターフェースガイドライン（HIG） & 「Apple らしい」画面を作るための公式のバイブル \tabularnewline
+本書の関連 & 第7部『AIプログラミング実践編』（第37〜47章） & AI で iOS 開発を支援するための完全な心得 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 開発の学習リソース一覧（2026年8月）\end{center}
+
+\booksection{おわりに：最初の App から N 個目の App へ}
+
+振り返ってみれば、「SwiftUI が何かも知らなかった」あなたが、Xcode をインストールし、Swift を学び、SwiftUI で画面を描き、App にデータベースとネットワークを接続し、さらにテスト·パッケージング·リリースまで進みました——この道のりで、あなたはもうゼロからイチへ至るいちばん難しい区間を歩き終えています。
+
+技術の世界は変化が速いものです。フレームワークは更新され、ツールは世代交代し、AI は「キーボードを叩く」作業をどんどん引き受けていくでしょう。でも、色あせないものがひとつあります。ぼんやりしたアイデアを明確なステップに分解し、一歩ずつ形にしていくあなたの力です。ツールは増幅器、考え方は土台。増幅器は取り替えられますが、土台は揺るぎません。
+
+あなたはもう「スマホが使える人」だけではありません。頭の中のアイデアを、数億台のiPhoneで実際に動くアプリに変えられるのです。今日からキーボードで創造しよう——これがiOS開発者のロマンです。
+
+\booksection{参考文献}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

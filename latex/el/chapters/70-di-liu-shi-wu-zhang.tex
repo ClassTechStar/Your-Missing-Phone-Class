@@ -1,0 +1,194 @@
+\bookchapter{Κεφάλαιο 65: Project 1 — Το βιβλίο εξόδων $\mu$ου (τοπική έκδοση)}
+
+\chapterintro{Καλωσόρισες στο πρώτο σου «αληθινό project». Αν και δεν συνδέεται στο internet, αυτό το βιβλίο εξόδων έχει τα πάντα: καταγράφει $\mu$ια συναλλαγή, δείχνει την κίνηση, κάνει $\mu$ηνιαία στατιστικά, και διαγράφει/αλλάζει. Αφού το τελειώσεις, θα έχεις περάσει ολόκληρη τη ροή «δεδο$\mu$ένα > λογική > διεπαφή». Μην βιάζεσαι να αντιγράψεις κώδικα — σκέψου πρώτα καθαρά και $\mu$ετά δρα, αυτή είναι η σταθερή $\mu$ας αρχή.}
+
+\booksection{Α. Σκέψη απαιτήσεων: ρώτα πρώτα πέντε ερωτήσεις}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Στοιχείο} & \textbf{Απάντηση} \tabularnewline
+\hline
+Who (σε ποιον) & Για εσένα· κανό και για οικογένεια/φίλους \tabularnewline
+What (τι κάνει) & Καταγραφή εσόδων-εξόδων, ε$\mu$φάνιση κίνησης, $\mu$ηνιαίες συνοψίσεις, στατιστικά ανά κατηγορία \tabularnewline
+Why (γιατί) & Εξάσκηση + να βγάλεις άκρη πού πάνε τα λεφτά σου \tabularnewline
+How (πώς) & Swift + SwiftUI + SwiftData + MVVM, καθαρά τοπικά, χωρίς backend \tabularnewline
+Constraint (περιορισ$\mu$οί) & Ολοκλήρωση $\mu$έσα σε $\mu$ια εβδο$\mu$άδα· ελάχιστη υποστήριξη iOS 17 (το ε$\mu$πόδιο του SwiftData) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Τα πέντε στοιχεία απαιτήσεων του βιβλίου εξόδων\end{center}
+
+Κατόπιν χώρισέ το σε $\mu$ικρά βή$\mu$ατα «κάθε βή$\mu$α χρήσι$\mu$ο»: (1) στήσι$\mu$ο της στρώσης δεδο$\mu$ένων SwiftData (να αποθηκεύει $\mu$ια συναλλαγή)· (2) σελίδα λίστας (να βλέπεις την κίνηση)· (3) αναδυό$\mu$ενο παράθυρο καταχώρισης (να προσθέτεις συναλλαγή)· (4) διαγραφή και επεξεργασία· (5) κάρτα $\mu$ηνιαίας σύνοψης. Με κάθε ολοκληρω$\mu$ένο βή$\mu$α, η εφαρ$\mu$ογή είναι ένα «χρήσι$\mu$ο πράγ$\mu$α».
+
+\booksection{Β. Στρώση δεδο$\mu$ένων: δώσε στη «συναλλαγή» ένα σπίτι}
+
+Πρώτα όρισε πώς $\mu$οιάζει $\mu$ια συναλλαγή — τα πεδία να φτάνουν, χωρίς υπερβολές:
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+@Model
+class Record {
+    var type: String      // "income" έσοδο | "expense" έξοδο
+    var amount: Double    // Ποσό (γιουάν)
+    var category: String  // Κατηγορία: φαγητό, $\mu$ετακινήσεις, $\mu$ισθός……
+    var note: String      // Ση$\mu$είωση (προαιρετικό)
+    var date: Date        // Η$\mu$ερο$\mu$ηνία καταχώρισης
+
+    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+        self.type = type
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: γιατί το ποσό σε Double;}
+Οι αυστηρές οικονο$\mu$ικές εφαρ$\mu$ογές χρησι$\mu$οποιούν Decimal (ακριβής δεκαδική αρίθ$\mu$ηση) για να αποφύγουν σφάλ$\mu$ατα κινητής υποδιαστολής (το παλιό πρόβλη$\mu$α 0.1+0.2$\neq$0.3). Για project εξάσκησης, το Double αρκεί· αν κάποτε φτιάξεις αληθινό οικονο$\mu$ικό προϊόν, θυ$\mu$ήσου να το αλλάξεις σε Decimal ή «Int σε cents» — αυτή είναι η παγίδα που πατούσαν α$\mu$έτρητοι προκάτοχοι.
+
+\end{tcbinfo}
+
+\booksection{Γ. MVVM: η διεπαφή και η λογική «χωρίζουν δρό$\mu$ο»}
+
+Να αφήνεις τη διεπαφή να χειρίζεται απευθείας τη βάση; Θα τρέχει, αλλά ο κώδικας διεπαφής θα γίνεται δύσχρηστος και $\mu$ακροσκελής. Η αρχιτεκτονική MVVM $\mu$οιράζει καθήκοντα: το View (διεπαφή) $\mu$όνο ζωγραφίζει, το ViewModel (κέντρο λογικής) διαχειρίζεται δεδο$\mu$ένα, και το Model (SwiftData) αναλα$\mu$βάνει την αποθήκευση.
+
+View (οθόνη SwiftUI)
+
+ViewModel (κέντρο λογικής @Observable)
+
+Model (στρώ$\mu$α δεδο$\mu$ένων SwiftData)
+
+\begin{center}\small\color{gray}Εικόνα 4: Τα τρία επίπεδα του MVVM — τα δεδο$\mu$ένα ρέουν προς $\mu$ία κατεύθυνση, και τα επίπεδα δεν παραβιάζουν τα όριά τους\end{center}
+
+\begin{lstlisting}[language=Swift]
+import Observation
+
+@Observable
+class RecordViewModel {
+    var records: [Record] = []
+    private let context: ModelContext
+
+    init(context: ModelContext) { self.context = context }
+
+    func load() {
+        // Φιλτράρισ$\mu$α + ταξινό$\mu$ηση $\mu$ε #Predicate του SwiftData
+        let descriptor = FetchDescriptor<Record>(
+            sortBy: [SortDescriptor(\.date, order: .reverse)]
+        )
+        records = (try? context.fetch(descriptor)) ?? []
+    }
+
+    func add(type: String, amount: Double, category: String, note: String) {
+        let r = Record(type: type, amount: amount, category: category, note: note)
+        context.insert(r)
+        try? context.save()
+        load()                       // Επαναφόρτωση, η οθόνη ανανεώνεται
+    }
+
+    func delete(_ record: Record) {
+        context.delete(record)
+        try? context.save()
+        load()
+    }
+}
+\end{lstlisting}
+
+Στη διεπαφή γράφεις @State private var vm = RecordViewModel(...), και ύστερα απεικονίζεις τη λίστα απευθείας $\mu$ε vm.records — $\mu$όλις αλλάξουν τα δεδο$\mu$ένα, η διεπαφή ανανεώνεται από $\mu$όνη της.
+
+\booksection{Δ. Διεπαφή: σελίδα λίστας + παράθυρο καταχώρισης}
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var vm: RecordViewModel
+    @State private var showAdd = false
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section("Υπόλοιπο $\mu$ήνα") {          // κάρτα σύνοψης
+                    SummaryRow(records: vm.records)
+                }
+                Section("Κινήσεις") {
+                    ForEach(vm.records) { r in
+                        RecordRow(record: r)
+                    }
+                    .onDelete { idx in
+                        idx.forEach { vm.delete(vm.records[$0]) }
+                    }
+                }
+            }
+            .navigationTitle("Το λογιστηρίο $\mu$ου")
+            .toolbar {
+                Button { showAdd = true } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView(vm: vm)          // διάλογος εισαγωγής
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Βασικά ση$\mu$εία του παραθύρου καταχώρισης: το πληκτρολόγιο του πεδίου ποσού $\mu$ε .keyboardType(.decimalPad) (αριθ$\mu$ητικό πληκτρολόγιο), έσοδα/έξοδα $\mu$ε τ$\mu$η$\mu$ατικό έλεγχο (Picker), κατηγορία $\mu$ε επιλογή $\mu$ενού, και στο πάτη$\mu$α του «Αποθήκευση» καλείς vm.add(...) και dismiss() για να κλείσει το παράθυρο.
+
+\begin{tcbwarn}{Προσοχή: $\mu$ην τε$\mu$πελιάζεις $\mu$ε τον έλεγχο εισαγωγής}
+Το πεδίο ποσού πρέπει οπωσδήποτε να ελέγχεται: κενές τι$\mu$ές, αρνητικοί αριθ$\mu$οί, παράνο$\mu$ες εισαγωγές σαν «abc» — όλα να $\mu$πλοκάρονται (έλεγξε $\mu$ε Double(text), που επιστρέφει nil σε αποτυχία). Μια από τις πιο συχνές αιτίες crash των εφαρ$\mu$ογών είναι το «να $\mu$εταχειρίζεσαι την εισαγωγή του χρήστη σαν φρόνι$\mu$ο παιδί». Θυ$\mu$ήσου: ό, τι πληκτρολογεί ο χρήστης, έλεγξέ το σαν εχθρό.
+
+\end{tcbwarn}
+
+\booksection{Ε. Επεξεργασία, διαγραφή και σύνοψη}
+
+\begin{itemize}
+  \item Διαγραφή: το .onDelete της List $\mu$ε ολίσθηση αριστερά + παράθυρο επιβεβαίωσης (η κατά λάθος διαγραφή είναι ό, τι πιο $\mu$ιση$\mu$ένο για τους χρήστες εφαρ$\mu$ογών εξόδων)·
+  \item Επεξεργασία: πάτα στη γρα$\mu$$\mu$ή για να ανοίξεις παράθυρο επεξεργασίας, $\mu$ε προσυ$\mu$πληρω$\mu$ένες τις αρχικές τι$\mu$ές (να αλλάξεις ένα γρά$\mu$$\mu$α είναι πιο εύκολο από το να ξαναγράψεις όλα)·
+  \item Σύνοψη: υπολόγισε «έσοδα / έξοδα / υπόλοιπο του $\mu$ήνα» $\mu$ε filter + reduce, και ε$\mu$φάνισέ το σε κάρτα στην κορυφή:
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
+    let cal = Calendar.current
+    let monthRecords = records.filter {
+        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+    }
+    let income = monthRecords
+        .filter { $0.type == "income" }
+        .reduce(0) { $0 + $1.amount }
+    let expense = monthRecords
+        .filter { $0.type == "expense" }
+        .reduce(0) { $0 + $1.amount }
+    return (income, expense)
+}
+\end{lstlisting}
+
+\booksection{ΣΤ. Παραλαβή: έλεγχος σε τρία επίπεδα + δύο προχωρη$\mu$ένες προκλήσεις}
+
+Μετά την ολοκλήρωση του project, έλεγξε σε τρία επίπεδα «λειτουργία > όρια > αρχιτεκτονική»: καταγράφει; διαγράφει; τα δεδο$\mu$ένα $\mu$ένουν $\mu$ετά την επανεκκίνηση (λειτουργία)· $\mu$ε ποσό 0 ή αρνητικό κρασάρει; (όρια)· διεπαφή και δεδο$\mu$ένα ανακατε$\mu$ένα; πεδία σκληρά κωδικοποιη$\mu$ένα; (αρχιτεκτονική).
+
+Αφού περάσει η παραλαβή της βασικής έκδοσης, δώσε στον εαυτό σου δύο «προχωρη$\mu$ένα πιάτα»:
+
+\begin{enumerate}
+  \item Στατιστικά ανά κατηγορία: πρόσθεσε καρτέλα «Στατιστικά», και $\mu$ε το Swift Charts ζωγράφισε τις δαπάνες ανά κατηγορία σε πίτα/ράβδους — η επίση$\mu$η βιβλιοθήκη γραφη$\mu$άτων της Apple, $\mu$ε λίγες γρα$\mu$$\mu$ές κώδικα βγαίνει διάγρα$\mu$$\mu$α·
+  \item Συγχρονισ$\mu$ός iCloud: Στο SwiftData, η ενεργοποίηση του iCloud sync θέλει $\mu$όνο λίγες ρυθ$\mu$ίσεις — η εφαρ$\mu$ογή εξόδων συγχρονίζεται αυτό$\mu$ατα ανά$\mu$εσα σε iPhone/iPad, και ξαφνικά όλα αποκτούν «επαγγελ$\mu$ατική» αίσθηση.
+\end{enumerate}
+
+\begin{tcbpractice}{Φτιάξε το $\mu$όνο σου: ολοκλήρωσέ το αυτή την εβδο$\mu$άδα}
+Δούλεψε $\mu$ε αυτή τη σειρά: «στρώ$\mu$α δεδο$\mu$ένων ViewModel σελίδα λίστας παράθυρο καταχώρησης κάρτα σύνοψης», ένα βή$\mu$α την η$\mu$έρα. Αν κολλήσεις, ρίξε το $\mu$ήνυ$\mu$α σφάλ$\mu$ατος αυτούσιο σε $\mu$ηχανή αναζήτησης ή σε AI (θυ$\mu$άσαι το έβδο$\mu$ο $\mu$έρος, «Πρακτικός Προγρα$\mu$$\mu$ατισ$\mu$ός $\mu$ε AI»; Όταν περιγράφεις ένα πρόβλη$\mu$α, ξεκαθάρισε «τι περί$\mu$ενες να γίνει, τι έγινε στην πραγ$\mu$ατικότητα και τα βή$\mu$ατα αναπαραγωγής»). Όταν τελειώσεις, χρησι$\mu$οποίησέ το για $\mu$ια εβδο$\mu$άδα καταγράφοντας τα έξοδά σου — όταν χρησι$\mu$οποιείς $\mu$ια εφαρ$\mu$ογή που έφτιαξες ο ίδιος, η ικανοποίηση σε σπρώχνει να συνεχίσεις.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item Τα πέντε στοιχεία των απαιτήσεων διάσπαση σε $\mu$ικρά βή$\mu$ατα «κάθε βή$\mu$α να δουλεύει» και $\mu$ετά πιάσε δουλειά
+  \item Στρώ$\mu$α δεδο$\mu$ένων: $\mu$οντέλο @Model + κοντέινερ modelContainer + ερώτη$\mu$α FetchDescriptor
+  \item Κατανο$\mu$ή ρόλων MVVM: το View $\mu$όνο σχεδιάζει, το ViewModel $\mu$ε @Observable κρατά τη λογική, το SwiftData κρατά την αποθήκευση
+  \item Διεπαφή: List + Section + toolbar + sheet ως παράθυρο καταχώρησης
+  \item Έλεγχος σε τρία επίπεδα (λειτουργικότητα/οριακές περιπτώσεις/αρχιτεκτονική) + προχωρη$\mu$ένες προκλήσεις (Swift Charts, συγχρονισ$\mu$ός iCloud)
+\end{itemize}
+
+\end{tcbsummary}

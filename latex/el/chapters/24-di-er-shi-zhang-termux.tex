@@ -1,0 +1,115 @@
+\booksection{Κεφάλαιο 20 Παράρτη$\mu$α: Termux — φορητό περιβάλλον τερ$\mu$ατικού Linux σε Android}
+
+\chapterintro{Αν νιώθετε ότι η λειτουργία προγρα$\mu$$\mu$ατιστή δεν είναι αρκετά «hardcore» και θέλετε $\mu$ια ολοκληρω$\mu$ένη ε$\mu$πειρία Linux command line στο κινητό, το Termux είναι για εσάς. Χωρίς root, $\mu$ετατρέπει ένα απλό Android κινητό σε φορητό Linux σταθ$\mu$ό εργασίας — ιδανικό για προχωρη$\mu$ένους χρήστες που εξερευνούν την ανάπτυξη και τη λειτουργία σε κινητά.}
+
+\booksubsection{I. Τι είναι το Termux}
+
+Το Termux είναι εφαρ$\mu$ογή ανοιχτού κώδικα για Android, παρέχει πλήρη ε$\mu$πειρία Linux shell χωρίς root. Ως ελαφριά εφαρ$\mu$ογή (\textasciitilde{}30MB), $\mu$έσω APT υποστηρίζει πλούσιο οικοσύστη$\mu$α, επιτρέποντας Python, Node.js, Git, SSH, ακό$\mu$α και στήσι$\mu$ο διακο$\mu$ιστή ή penetration testing.
+
+Το βασικό πλεονέκτη$\mu$α του Termux είναι η ελαφριά αρχιτεκτονική και η υψηλή επεκτασι$\mu$ότητα, κατάλληλο για ανάπτυξη, $\mu$άθηση και διαχείριση συστη$\mu$άτων. Συνδυάζει τυποποιη$\mu$ένα πακέτα $\mu$ε ακριβή προσο$\mu$οίωση τερ$\mu$ατικού σε λύση ανοιχτού κώδικα.
+
+\booksubsection{II. Βασικές λειτουργίες και χαρακτηριστικά}
+
+\subsubsection*{Πλήρες περιβάλλον Linux}
+
+Termux\textbf{Μόνο ενσω$\mu$ατω$\mu$ένο Bash}Shell.ZshfishShell, χειροκίνητο εγκατάσταση,:\texttt{pkg install zsh}ή\texttt{pkg install fish}.TermuxVim, Nano, Emacs Επεξεργασία, εγγενές Εντολή.Χρήστης “pkg install”εγκατάσταση 2000+,GCC, OpenSSH, SQLMap Ασφάλεια.
+
+\subsubsection*{Ισχυρός package manager}
+
+Χρήση APT (όπως Debian, Ubuntu), εγκαθιστά χιλιάδες πακέτα Linux, εργαλεία ανάπτυξης και δικτύου. Υποστηρίζει Python, Ruby, Node.js, Go, Rust, Swift.
+
+\subsubsection*{Ασφάλεια και δίκτυο}
+
+\begin{itemize}
+  \item \textbf{SSH απο$\mu$ακρυσ$\mu$ένη σύνδεση}. SSH client και server.
+  \item \textbf{Εργαλείο κρυπτογράφησης}. OpenSSL κ.λπ., κρυπτογράφηση και ασφαλής επικοινωνία.
+  \item \textbf{Στήσι$\mu$ο διακο$\mu$ιστή}: Nginx ή Apache για static server.
+\end{itemize}
+
+\subsubsection*{Ενσω$\mu$άτωση και επέκταση}
+
+\begin{itemize}
+  \item Πρόσβαση αποθήκευσης για τοπική διαχείριση αρχείων.
+  \item Καλέστε αισθητήρες και κά$\mu$ερα Android $\mu$έσω Termux:API.
+  \item Υποστηρίζει $\mu$πλουτούθ πληκτρολόγιο και εξωτερική οθόνη, $\mu$ε πλήρη υποστήριξη ποντικιού.
+\end{itemize}
+
+\booksubsection{III. Οικοσύστη$\mu$α πρόσθετων}
+
+Η κεντρική εφαρ$\mu$ογή Termux επεκτείνεται $\mu$ε προαιρετικά πρόσθετα, παρέχοντας επιπλέον λειτουργίες:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Όνο$\mu$α πρόσθετου} & \textbf{Περιγραφή λειτουργίας} \tabularnewline
+\hline
+Termux:API & Έκθεση λειτουργιών Android API σε προγρά$\mu$$\mu$ατα γρα$\mu$$\mu$ής εντολών \tabularnewline
+Termux: Boot & Επιτρέπει εκτέλεση σεναρίων κατά την εκκίνηση \tabularnewline
+Termux: Float & Παρέχει παράθυρο πλωτού τερ$\mu$ατικού \tabularnewline
+Termux: Styling & Ενεργοποίηση σχη$\mu$άτων χρω$\mu$άτων και προσαρ$\mu$ογής γρα$\mu$$\mu$ατοσειρών \tabularnewline
+Termux: Tasker & Ενσω$\mu$άτωση σεναρίων Termux $\mu$ε την εφαρ$\mu$ογή αυτο$\mu$ατισ$\mu$ού Tasker \tabularnewline
+Termux: Widget & Επιτρέπει εκτέλεση σεναρίων από widget αρχικής \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{Ση$\mu$αντική υπόδειξη}
+Το Termux και τα πρόσθετά του πρέπει να εγκαθίστανται από την ίδια πηγή, διότι $\mu$οιράζονται το ίδιο sharedUserId. Ανά$\mu$ειξη πηγών (π.χ. F-Droid και GitHub) προκαλεί σφάλ$\mu$α εγκατάστασης.
+
+\end{tcbwarn}
+
+\booksubsection{IV. Οδηγός εγκατάστασης και ρύθ$\mu$ισης}
+
+\subsubsection*{Βή$\mu$ατα εγκατάστασης}
+
+\begin{enumerate}
+  \item \textbf{Λήψη εφαρ$\mu$ογής}: Από F-Droid ή GitHub, χωρίς root.
+  \item \textbf{Αρχικοποίηση συστή$\mu$ατος}. Περι$\mu$ένετε "Installing bootstrap packages".
+  \item \textbf{Λήψη δι και ω$\mu$άτων αποθήκευσης}: εκτέλεση\texttt{termux-\allowbreak setup-\allowbreak storage}Λήψη δι και ω$\mu$άτων συστή$\mu$ατος αρχείων.
+  \item \textbf{Ενη$\mu$έρωση πηγής λογισ$\mu$ικού}: εκτέλεση\texttt{pkg update \&\& pkg upgrade}Ενη$\mu$έρωση λίστας πακέτων.
+\end{enumerate}
+
+\subsubsection*{Βασική βελτιστοποίηση}
+
+\begin{itemize}
+  \item \textbf{Αλλαγή mirror}: Χρήση\texttt{termux-\allowbreak change-\allowbreak repo}Εντολή αλλαγής mirror $\mu$έσω γραφικού περιβάλλοντος (συνιστάται mirror του Πανεπιστη$\mu$ίου Tsinghua).
+  \item \textbf{Ρυθ$\mu$ίσεις συντο$\mu$εύσεων πληκτρολογίου}. Τόνος- = Ctrl, τόνος+ = Esc, ταχύτητα.
+  \item \textbf{Ο$\mu$ορφοποίηση διεπαφής}: Zsh + Oh My Zsh, theme και plugins.
+\end{itemize}
+
+\booksubsection{V. Τυπικά σενάρια χρήσης}
+
+\subsubsection*{Mobile dev testing}
+
+Στήστε ένα πλήρες περιβάλλον ανάπτυξης στο κινητό: γράψτε και τρέξτε Python scripts, $\mu$εταγλωττίστε C προγρά$\mu$$\mu$ατα $\mu$ε GCC, διαχειριστείτε αποθετήρια $\mu$ε Git, συγχρονιστείτε $\mu$ε απο$\mu$ακρυσ$\mu$ένους servers $\mu$έσω SSH.
+
+\subsubsection*{Διαχείριση διακο$\mu$ιστή}
+
+Διαχειριστείτε διακο$\mu$ιστές $\mu$έσω SSH, συντήρηση και ανάλυση log, από παντού.
+
+\subsubsection*{Εκ$\mu$άθηση Linux}
+
+Linux, Εντολή Σύστη$\mu$α Πλατφόρ$\mu$α, ShellScript, Linux Αρχείο Δικαίω$\mu$α(\texttt{chmod 755}Ορισ$\mu$ός δι και ω$\mu$άτων rwxr-xr-x,\texttt{chown user: group}Αλλαγή ιδιοκτησίας αρχείου,\texttt{ls -\allowbreak l}Προβολή owner/group/other Δικαίω$\mu$α)βασικό Εντολή.Unix/Linux“”Δικαίω$\mu$α(owner / group / other × / / ),Windows NTFSACL.
+
+\subsubsection*{Network security testing}
+
+Εγκατάσταση εργαλείων ασφαλείας όπως Nmap, SQLMap, Hydra, Metasploit για σάρωση δικτύου και δοκι$\mu$ές διείσδυσης.
+
+\booksubsection{VI. Εκδόσεις και συ$\mu$βατότητα}
+
+Η τελευταία σταθερή έκδοση του Termux είναι η v0.118.2, για Android $\geq$ 7. Στο Android 12+ ενδέχεται να υπάρχουν αστάθειες· παρακολουθήστε το επίση$\mu$ο changelog.
+
+\begin{tcbinfo}{Συ$\mu$πέρασ$\mu$α}
+Το Termux φέρνει την ισχυρή ε$\mu$πειρία τερ$\mu$ατικού Linux σε Android, κάνοντας το κινητό φορητό εργαλείο ανάπτυξης και $\mu$άθησης. Developers, διαχειριστές συστη$\mu$άτων και λάτρεις της τεχνολογίας απολα$\mu$βάνουν πλήρη ε$\mu$πειρία γρα$\mu$$\mu$ής εντολών, υλοποιώντας την ιδέα “Linux στην τσέπη”.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Δοκι$\mu$ή: τρέξτε την πρώτη εντολή Linux στο κινητό}
+\begin{enumerate}
+  \item Κατεβάστε και εγκαταστήστε το Termux από F-Droid, περι$\mu$ένετε την αρχικοποίηση.
+  \item Εκτέλεση\texttt{pkg update \&\& pkg upgrade}Ενη$\mu$έρωση πακέτων λογισ$\mu$ικού.
+  \item Εγκατάσταση Python:\texttt{pkg install python}.
+  \item Εισαγωγή\texttt{python3 -\allowbreak c "print('Hello from Termux!')"}, νιώστε τη χαρά του κώδικα στο κινητό.
+\end{enumerate}
+
+\end{tcbpractice}

@@ -1,0 +1,149 @@
+\bookchapter{제67장: 다듬기와 출시 — 테스트, 디버깅, 앱스토어 출시}
+
+\chapterintro{앱을 만들었는데, 그다음은요? 이번 장은 '돌아가는 수준'에서 '납품할 수 있는 수준'으로 가는 세 가지를 다뤄요. 효율적으로 디버깅해 버그를 찾는 법, 테스트를 작성해 회귀를 막는 법, 앱을 앱스토어에 올려 전 세계가 내려받게 하는 법이에요. 출시는 단순한 의식이 아니에요. 작품을 제품으로 바꾸는 갈림길이죠.}
+
+\booksection{디버깅 3대 무기: print, 중단점, 프리뷰}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{도구} & \textbf{하는 일} & \textbf{사용 방법} \tabularnewline
+\hline
+print + 콘솔 & 실행 로그 확인 & 코드에 print("값=\textbackslash{}(x)")를 쓰고 Xcode 하단 콘솔에서 출력 확인 \tabularnewline
+중단점 디버깅 & 프로그램을 특정 줄에서 멈추게 하고 변수 값 확인 & 줄 번호 옆을 클릭해 파란 표시를 만들고, 실행이 거기까지 가면 멈추며 한 단계씩 진행 \tabularnewline
+SwiftUI 프리뷰 + 디버거 & 화면과 뷰 계층을 실시간으로 확인 & \#Preview 캔버스 + 실행 중 View Hierarchy 검사기 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}디버깅 3대 무기\end{center}
+
+\begin{tcbinfo}{팁: 크래시가 나면 어떻게 읽나요?}
+Swift가 크래시되면 콘솔에 'Fatal error'와 원인이 출력되고, Xcode는 오류가 난 줄에서 멈춰 하이라이트해 줘요. 실제 기기에서의 과거 크래시 기록은 Xcode Window Organizer Crashes에서 볼 수 있어요(유료 계정 필요). 검색은 '오류 원인 첫 문장 + swiftui' 키워드부터 해 보세요. 정확한 문제여야 정확한 답이 나와요.
+
+\end{tcbinfo}
+
+\booksection{테스트: 코드에 보험 들기}
+
+수동 테스트만 믿을 수는 없어요. 이 기능을 고쳤더니 다른 기능이 몰래 망가지는 일이 생기죠. 테스트는 '실수를 되돌려 주는 약'이자 '방탄 조끼'예요. iOS는 XCTest 프레임워크를 쓰며 두 종류로 나뉘어요:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{계층} & \textbf{테스트 대상} & \textbf{Target} & \textbf{속도} \tabularnewline
+\hline
+단위 테스트 & 순수 로직(계산, 검증) & MyFirstAppTests & 초 단위 \tabularnewline
+UI 테스트 & 실제 화면 동작 & MyFirstAppUITests & 분 단위 \tabularnewline
+수동 테스트 & 사람이 직접 느끼는 체험 & —— & 항상 필요 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 테스트 계층(템플릿 프로젝트에 Test Target 두 개가 이미 포함돼 있어요)\end{center}
+
+\begin{lstlisting}[language=Swift]
+import XCTest
+
+// "금액 문자열을 숫자로" 같은 로직은 순수 함수로 분리
+func parseAmount(_ input: String) -> Double? {
+    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+          v > 0 else { return nil }
+    return v
+}
+
+final class AmountTests: XCTestCase {
+    func testEmptyInputReturnsNil() {
+        XCTAssertNil(parseAmount(""))
+    }
+    func testNegativeReturnsNil() {
+        XCTAssertNil(parseAmount("-5"))
+    }
+    func testNormalValueParses() {
+        XCTAssertEqual(parseAmount("12.5"), 12.5)
+    }
+}
+\end{lstlisting}
+
+테스트 실행: CmdU. 모두 초록불이 뜨는 걸 확인한 다음 코드를 고쳐야 마음이 놓여요. 가계부의 금액 검증과 합계 계산은 모두 단위 테스트의 보호를 받아야 해요.
+
+\booksection{서명과 패키징: 앱에 '도장' 찍기}
+
+모든 iOS 앱은 서명해야 설치할 수 있어요. '이 패키지는 당신이 만들었고 변조되지 않았다'는 증명이죠. 계층 관계:
+
+\begin{itemize}
+  \item 학습 단계: 무료 Apple ID + Xcode 자동 서명(Personal Team)이면 실기기에서 실행할 수 있고 7일마다 갱신이 필요해요;
+  \item 배포 단계: 유료 개발자 계정(연 99달러)이 인증서와 프로비저닝 프로파일을 발급해야 스토어 출시와 장기 설치가 가능해요.
+\end{itemize}
+
+패키징: Xcode 메뉴 Product Archive(아카이브)로 빌드가 끝나면 Organizer에서 Distribute App App Store Connect 선택 업로드. 아카이브는 반드시 Generic iOS Device를 대상으로 해야 해요(시뮬레이터 아님). 초보자가 자주 잊는 단계예요.
+
+\textbf{실수 방지 경고: 인증서 분실 = 업데이트 끊김}\par
+
+서명 인증서와 개인 키를 한번 잃어버리면 더 이상 기존 앱에 업데이트를 보낼 수 없어요. 사용자는 '완전히 새로운' 앱만 설치할 수 있게 되죠. 인증서를 잘 백업하고(키체인에서 .p12 내보내기) 비밀번호를 꼭 기억하세요. 다행히 애플은 '자동 서명'과 클라우드 인증서 관리를 제공해(Xcode에서 Automatically manage signing 체크) 수작업에서 오는 대부분의 문제를 피할 수 있어요.
+
+\booksection{앱스토어 출시 전체 과정}
+
+개발자 계정 등록
+
+스토어 자료 준비
+
+빌드 패키지 업로드
+
+개인정보·심사 정보 작성
+
+애플 심사(1\textasciitilde{}7일)
+
+출시
+
+\begin{center}\small\color{gray}그림 5: 앱스토어 출시 6단계\end{center}
+
+\begin{itemize}
+  \item 등록: developer.apple.com, 개인 계정 연 99달러;
+  \item 소재: 아이콘(1024×1024, 둥근 모서리는 넣지 마세요 — 애플이 알아서 잘라요), 스크린샷(iPhone 각 크기), 설명, 개인정보 처리방침 링크;
+  \item 개인정보 설문: 어떤 데이터를 수집하는지 사실대로 신고 — 네트워크를 쓰지 않는 가계부는 '어떤 데이터도 수집하지 않음'으로 할 수 있어요;
+  \item 심사: 첫 제출은 보통 1\textasciitilde{}7일 기다려요. 반려되면 '심사 메모'대로 하나씩 고치면 돼요. 애플의 반려 사유는 보통 매우 구체적으로 적혀 있으니 그대로 따르면 돼요;
+  \item TestFlight: 출시 전에 테스트 버전을 친구들에게 보내 내부 테스트(최대 10000명)를 하고, 피드백을 한 바퀴 받은 뒤 정식 제출하면 아주 프로페셔널한 느낌이에요.
+\end{itemize}
+
+\booksection{스토어 소재 만들기: 첫인상이 곧 다운로드 수}
+
+스토어 페이지는 사용자가 '가게를 구경할 때' 보는 쇼윈도예요. 세 가지 소재가 첫인상을 결정해요:
+
+\begin{itemize}
+  \item 아이콘: 1024×1024, 스크린샷으로 대충 때우지 마세요. 디자인이 어렵다면 AI 도구로 간결한 그래픽을 하나 만들고, 홈 화면에서 줄였을 때도 한눈에 알아볼 수 있어야 합격이에요;
+  \item 스크린샷: 최소 2세트(iPhone 주요 크기), 가장 핵심적인 기능 장면을 보여 주세요. 각 장마다 사람다운 문장을 하나 곁들이세요('1초면 장부 한 줄'이 '효율적인 가계부 솔루션'보다 열 배 좋아요);
+  \item 설명: 첫 문장에서 '이것이 무엇인지 + 누구를 위한 것인지'를 분명히 하고, '가장 전문적, 최강' 같은 말을 늘어놓지 마세요. 진정성이 과장보다 효과적이에요.
+\end{itemize}
+
+\begin{tcbpractice}{직접 해 보기: 가계부를 한번 '납품'해 보기}
+\booksection{크래시 보고와 성능 최적화 짧은 체크리스트}
+
+앱을 출시하기 전, 다음 두 가지에 각각 30분씩 쓸 가치가 있어요:
+
+\booksubsection{크래시 모니터링}
+
+당신이 테스트할 때 크래시가 없었다고 사용자 폰에서도 안 나는 건 아니에요. 애플은 Xcode Organizer에서 무료 크래시 리포트를 제공해요(유료 계정은 실기기 크래시 로그도 볼 수 있어요). 더 편한 방법은 서드파티 SDK(예: Firebase Crashlytics)를 붙이는 거예요. 크래시 모니터링 없이 출시하는 건 눈을 감고 운전하는 것과 같아요.
+
+\booksubsection{성능 자가 점검 4가지}
+
+\begin{enumerate}
+  \item 리스트는 LazyVStack / List 사용: 긴 리스트를 평범한 VStack으로 억지로 나열하지 마세요. 지연 로딩이 성능 최적화의 첫걸음이에요;
+  \item 이미지는 원본을 그대로 넣지 마세요: AsyncImage(원격 이미지)와 시스템 캐시를 쓰고, 5MB짜리 원본 이미지 하나면 구형 기기가 버벅일 수 있어요;
+  \item 메인 스레드에서 무거운 작업 금지: 네트워크, 큰 파일은 모두 async/await로 처리;
+  \item Instruments로 측정: Xcode에 내장된 성능 분석기(Time Profiler, 메모리 누수 검사). 먼저 측정하고 나서 최적화하세요. 감에 의존하지 마세요.
+\end{enumerate}
+
+(1) parseAmount 같은 로직에 단위 테스트 3개 추가(CmdU로 초록불 확인); (2) 중단점으로 스스로 만든 크래시를 직접 잡아 고치기; (3) Product Archive로 패키지를 만들고 TestFlight로 친구를 초대해 내부 테스트; (4) 여유가 되면 개발자 계정을 등록해 가계부를 진짜로 출시 신청. 앞의 세 단계는 오늘 밤에도 끝낼 수 있어요.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{이번 장 정리}
+\begin{itemize}
+  \item 디버깅 3대 무기: print 로그, 중단점, SwiftUI 프리뷰와 뷰 검사기
+  \item XCTest: 단위 테스트(CmdU) + UI 테스트 + 수동 테스트, 템플릿에 이미 포함
+  \item 서명: 무료 계정은 자동 서명(7일 갱신); 배포는 유료 계정만 가능
+  \item 패키징: Generic iOS Device + Archive + Distribute; 인증서는 반드시 백업
+  \item 출시 6단계: 등록 소재 업로드 개인정보 설문 심사 출시; TestFlight로 먼저 내부 테스트
+\end{itemize}
+
+\end{tcbsummary}

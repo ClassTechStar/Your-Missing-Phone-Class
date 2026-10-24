@@ -1,0 +1,195 @@
+\bookchapter{Kapitel 50: Kotlin-Schnelleinstieg – die erste Sprache der Android-Entwicklung}
+
+\chapterintro{In diesem Kapitel lernen wir richtig die Sprache. Keine Sorge – Kotlin ist berühmt dafür, einsteigerfreundlich zu sein, und du brauchst kein Grammatikbuch auswendig zu lernen: Mit 20 \% der Syntax verstehst und schreibst du schon 80 \% des Alltagscodes. Den Rest schlägst du nebenbei im Projekt nach. Unser Lernprinzip bleibt: Verstehen schlägt Auswendiglernen, Anwenden schlägt Meisterschaft.}
+
+\booksection{Variablen und Typen: Daten bekommen einen Namen}
+
+Ein Programm ist “Daten + Logik”. Eine Variable gibt den Daten einen Namen und speichert sie. Kotlin kennt zwei Arten der Deklaration:
+
+\begin{lstlisting}[language=Kotlin]
+val name = "Max"        // val: schreibgeschützte Variable (standardmäßig empfohlen)
+var age = 18             // var: veränderliche Variable (später änderbar)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var ist änderbar
+// name = "Lena"         // <i class="fas fa-times-circle mr-1"></i> val ist nicht änderbar: Kompilierfehler
+
+val score: Int = 100     // der Typ lässt sich auch explizit angeben
+val pi = 3.14            // ohne Angabe wird er automatisch abgeleitet
+\end{lstlisting}
+
+Die gebräuchlichen Typen lassen sich an einer Hand abzählen – eine Tabelle, und du hast sie:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Typ} & \textbf{Was wird gespeichert?} & \textbf{Beispiel} \tabularnewline
+\hline
+Int & Ganze Zahl & 42 \tabularnewline
+Double & Dezimalzahl & 3.14 \tabularnewline
+String & Text & "Hallo" \tabularnewline
+Boolean & wahr/falsch & true / false \tabularnewline
+List< T> & Eine Sammlung von Daten & listOf(1, 2, 3) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Die gebräuchlichen Basistypen in Kotlin\end{center}
+
+\begin{tcbinfo}{Tipp: Der val-zuerst-Grundsatz}
+Eisernes Gesetz der Kotlin-Community: Standardmäßig val nehmen, var nur, wenn es wirklich nötig ist. Wo val möglich wäre und du var nutzt, mahnt dich die IDE mit gelber Schrift. Diese Gewohnheit erspart dir eine ganze Klasse von Bugs (“Variable wurde unerwartet verändert”) – je weniger sich im Code ändert, desto leichter ist er zu durchschauen.
+
+\end{tcbinfo}
+
+\booksection{Funktionen: Logik zu “Knöpfen” verpacken}
+
+Eine Funktion ist ein Stück Logik mit Namen, wie eine Taste auf der Fernbedienung – einmal drücken (aufrufen), und eine Kette von Aktionen läuft ab. In Kotlin deklariert man sie mit fun:
+
+\begin{lstlisting}[language=Kotlin]
+fun greet(name: String): String {
+    return "Hallo, $name!"     // das $-Symbol setzt die Variable in den String
+}
+
+println(greet("Max"))        // Ausgabe: Hallo Max!
+
+// Einzeiler-Funktionen gehen auch als Ausdruck
+fun add(a: Int, b: Int) = a + b
+
+println(add(3, 5))            // Ausgabe: 8
+\end{lstlisting}
+
+Ein paar Punkte: Parameter stehen in den Klammern (erst der Name, dann der Typ, getrennt durch Doppelpunkt); der Rückgabetyp steht hinter der Klammer; String-Templates mit \$variablenname sind Kotlins Markenzeichen an Bequemlichkeit – kein mühsames Zusammenkleben von “Zeichenkette + Variable” wie in Java.
+
+\booksection{Bedingungen und Schleifen: Das Programm lernt “denken”}
+
+Die Intelligenz eines Programms kommt von zwei Dingen: es kann entscheiden (if/when) und es kann wiederholen (for/while).
+
+\begin{lstlisting}[language=Kotlin]
+// Bedingung: if / else
+val age = 17
+if (age >= 18) {
+    println("Erwachsener")
+} else {
+    println("Minderjährig")
+}
+
+// mehrere Zweige: when (hundertmal besser als switch)
+val score = 85
+val level = when {
+    score >= 90 -> "Hervorragend"
+    score >= 60 -> "Ausreichend"
+    else -> "Weiter so!"
+}
+
+// Wiederholung: for-Schleife
+val fruits = listOf("Apfel", "Banane", "Orange")
+for (fruit in fruits) {
+    println("Ich esse gern $fruit")
+}
+\end{lstlisting}
+
+when ist die gebräuchlichste Form für mehrere Verzweigungen in Kotlin – in der Android-Entwicklung benutzt du sie täglich (etwa um je nach Zustand unterschiedliche Oberflächen zu zeigen).
+
+\booksection{Null-Sicherheit: Kotlins “Lebensretter”}
+
+Der berühmteste Bug aus dem Java-Zeitalter heißt NullPointerException – das Programm greift auf etwas zu, das “gar nicht da ist”, und stürzt ab. Statistiken zufolge führt diese Ausnahme seit Jahren die Android-Absturz-Charts an. Kotlin löst das Problem auf Sprachebene: Null-Werte sind standardmäßig verboten.
+
+\begin{lstlisting}[language=Kotlin]
+var name: String = "Max"   // normaler Typ: darf nie null sein
+// name = null                // <i class="fas fa-times-circle mr-1"></i> Kompilierfehler: stoppt dich sofort
+
+var nickname: String? = null // mit Fragezeichen: null erlaubt
+nickname = "Tommy"
+
+// bei Nullable-Typen musst du sicher damit umgehen:
+println(nickname?.length)    // Safe Call: bei null kommt null zurück, kein Absturz
+val len = nickname?.length ?: 0   // Elvis-Operator: Standardwert bei null
+println(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{Achtung: ? und ?: nicht verwechseln}
+String? heißt “darf null sein”, a ?: b heißt “wenn a null ist, nimm b” (die Zeichenkombination sieht aus wie Elvis' Frisur, daher der Name Elvis-Operator). Wenn der Compiler am Anfang über “null-Fehler” meckert, hast du höchstwahrscheinlich vergessen, einen nullable Typ zu behandeln – genau das ist die Sprache, die dich schützt.
+
+\end{tcbwarn}
+
+\booksection{Klassen und Objekte: Die Formen für “Bauteile”}
+
+Die Klasse ist die “Gussform” des Objekts, das Objekt das “Fertigprodukt” der Klasse. Alles in Android – Seiten, Buttons, Daten – sind Objekte. Kotlin hat ein Zauberwerkzeug, die data class (Datenklasse), die speziell zum “Verpacken von Daten” gedacht ist – eine Zeile ersetzt in Java Dutzende:
+
+\begin{lstlisting}[language=Kotlin]
+// normale Klasse: die Form
+class Dog(val name: String) {
+    fun bark() = println("$name: wuff!")
+}
+
+val dog = Dog("Rex")      // Objekt erzeugen
+dog.bark()                 // Rex: wuff!
+
+// data class: die Daten-Box (mit equals/copy usw. ab Werk)
+data class User(val id: Int, val name: String, val email: String)
+
+val me = User(1, "Max", "zhangsan@example.com")
+val twin = me.copy(name = "Fritz")   // kopiert und ändert ein Feld
+\end{lstlisting}
+
+Wenn du später dein Haushaltsbuch baust, ist jede Buchung eine data class: data class Record(val amount: Double, val category: String, val date: String). Siehst du – du kannst bereits die Code-Struktur eines echten Projekts schreiben.
+
+\booksection{Lambdas und Higher-Order-Funktionen: Kotlins “Syntax-Zucker”}
+
+In Android-Code begegnest du täglich Konstrukten wie \{ ... \} – “Funktionen ohne Namen”, genannt Lambdas (anonyme Funktionen). Button onClick = \{ count++ \} ist ein solches Lambda: “Was nach dem Antippen passiert” wird als Päckchen verpackt und dem Button übergeben.
+
+\begin{lstlisting}[language=Kotlin]
+// normaler Weg: eine benannte Funktion definieren und übergeben
+fun double(x: Int) = x * 2
+val result = listOf(1, 2, 3).map(::double)
+
+// Lambda-Weg: direkt vor Ort definiert, leicht und direkt
+val result2 = listOf(1, 2, 3).map { it * 2 }   // it = das aktuelle Element
+
+// filtern + umwandeln hintereinander (in echten Projekten sehr häufig)
+val bills = listOf(12.5, 88.0, 5.0, 200.0)
+val bigBills = bills.filter { it > 50 }.sorted()
+// [88.0, 200.0]——"Rechnungen über 50, sortiert"
+\end{lstlisting}
+
+Merke dir ein paar häufige “Sammelkombos”: filter (ausfiltern), map (umformen), sorted (sortieren), sum (aufsummieren). 90 \% deiner künftigen Listenverarbeitung sind Kombinationen dieser vier Züge. Die Kotlin-Philosophie: Was sich in einem Satz sagen lässt, wird niemals in fünf geschrieben.
+
+\booksection{Die Syntax-Spickkarte für Absoluteinsteiger}
+
+Versuche nicht, die ganze Syntax an einem Tag auswendig zu lernen. Speichere diese Karte und schlag beim Schreiben von Code nach – in zwei Wochen sitzt sie von allein:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Was willst du tun?} & \textbf{Schreibweise} \tabularnewline
+\hline
+Eine schreibgeschützte Variable definieren & \texttt{val x = 1} \tabularnewline
+Eine veränderbare Variable definieren & \texttt{var x = 1} \tabularnewline
+Eine Funktion definieren & fun name(parameter): rückgabetyp \{ ... \} \tabularnewline
+Entscheiden & if (bedingung) \{...\} else \{...\} \tabularnewline
+Mehrere Verzweigungen & when \{ bedingung -> ergebnis \} \tabularnewline
+Durchlaufen & for (x in liste) \{ ... \} \tabularnewline
+Strings zusammenbauen & "Hallo, \$name" \tabularnewline
+Mit null umgehen & \texttt{x?.\allowbreak length ?: 0} \tabularnewline
+Eine data class definieren & \texttt{data class X(val a: Int, val b: String)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kotlin-Syntax-Spickkarte (Einsteigerversion)\end{center}
+
+\begin{tcbpractice}{Selbst ausprobieren: Ohne Software-Installation erst mal 10 Minuten Kotlin spielen}
+Öffne im Browser play.kotlinlang.org (den offiziellen Kotlin-Online-Spielplatz), füge dort jeden Codeabschnitt aus diesem Kapitel ein und führe ihn aus; ändere Zahlen und Texte und beobachte, wie sich die Ausgabe verändert. Diese 10 Minuten “erst spielen, dann lernen” machen dir den Einstieg in Kapitel 51 doppelt so leicht.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Zusammenfassung des Kapitels}
+\begin{itemize}
+  \item val zuerst, var mit Bedacht; Typen werden automatisch hergeleitet, nach dem Doppelpunkt geht auch explizit
+  \item Funktion = verpackte Logik; das String-Template \$ ist das Markenzeichen
+  \item if/when zum Entscheiden, for zum Wiederholen; when ist das "Multitalent" der Android-Entwicklung
+  \item Null-Sicherheit ist Kotlins Lebensretter: normale Typen lehnen null ab, nullable Typen brauchen ? bzw. ?:
+  \item Die data class ist die Schachtel für Daten – ein Feld pro Zeile, im echten Projekt täglich im Einsatz
+  \item 20 \% Syntax erledigen 80 \% der Arbeit: erst anwenden, dann meistern
+\end{itemize}
+
+\end{tcbsummary}

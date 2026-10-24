@@ -1,0 +1,143 @@
+\bookchapter{Bab 55: Proyek 2—Aplikasi Cek Cuaca (Versi Jaringan)}
+
+\chapterintro{Aplikasi catatan keuangan melatih 'kekuatan dasar', aplikasi cuaca 'memperluas wawasan'—ia harus bergaul dengan internet. Di proyek ini kamu belajar: mendaftar API gratis, parsing JSON, menangani tiga keadaan antarmuka 'memuat/berhasil/gagal', serta cara menyembunyikan kunci API dengan baik. Setelah selesai, kamu punya kemampuan membuat aplikasi 'terhubung internet' apa pun—berita, nilai tukar, terjemahan, polanya persis sama.}
+
+\booksection{Mendaftar API Cuaca Gratis}
+
+Untuk latihan pribadi, disarankan OpenWeatherMap atau QWeather—keduanya punya kuota gratis, langsung bisa dipakai setelah mendaftar. Contoh dengan OpenWeatherMap:
+
+\begin{enumerate}
+  \item Daftar akun buat satu Key (apikey) di halaman API keys;
+  \item Versi gratis bisa memanggil antarmuka Current Weather (cuaca saat ini): api.openweathermap.org/data/2.5/weather? q=beijing\&appid=KeyAnda\&units=metric;
+  \item Coba dulu sekali di peramban, lihat seperti apa bentuk JSON yang dikembalikan—ini 'pralatihan' yang wajib dilakukan sebelum menyambung API apa pun.
+\end{enumerate}
+
+\textbf{Awas Jebakan: Kunci API Dilarang Keras Ditulis Langsung di Kode}\par
+
+API Key setara 'kata sandi dompet'-mu; begitu ditulis di kode dan dikomit ke GitHub, dalam beberapa jam akan diambil crawler dan disalahgunakan. Cara yang benar: taruh di local.properties (berkas ini sudah diabaikan oleh gitignore), lalu bacakan ke kode lewat buildConfig Gradle. Cari 'praktik terbaik menyembunyikan API Key di Android' dan ikuti petunjuknya.
+
+\booksection{Lapisan Jaringan: Retrofit + Parsing JSON}
+
+Pertama definisikan 'model data' sesuai JSON yang dikembalikan API; kolom yang tidak cocok abaikan saja:
+
+\begin{lstlisting}[language=Kotlin]
+// JSON: {"weather":[{"description":"Cerah"}],"main":{"temp":26.5,"humidity":40},"name":"Beijing"}
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+data class Weather(val description: String)
+data class Main(val temp: Double, val humidity: Int)
+
+interface WeatherApi {
+    @GET("data/2.5/weather")
+    suspend fun getWeather(
+        @Query("q") city: String,
+        @Query("appid") key: String,
+        @Query("units") metric: String = "metric",
+        @Query("lang") lang: String = "zh_cn"
+    ): WeatherResponse
+}
+\end{lstlisting}
+
+Gson otomatis memasukkan JSON ke data class ini—nama kolomnya cocok, sihir terjadi sendiri.
+
+\booksection{Tiga Keadaan Antarmuka: Memuat / Berhasil / Gagal}
+
+Jiwa aplikasi terhubung internet ada pada 'manajemen status'. Jaringan lambat, koneksi putus, nama kota salah ketik... setiap keadaan antarmukanya harus memberi kabar ke pengguna. Nyatakan dengan elegan memakai sealed class (kelas tertutup):
+
+\begin{lstlisting}[language=Kotlin]
+sealed class UiState {
+    object Loading : UiState()                    // sedang berputar
+    data class Success(val data: WeatherResponse) : UiState()  // sukses
+    data class Error(val message: String) : UiState()          // gagal
+}
+
+// Di ViewModel:
+fun search(city: String) {
+    viewModelScope.launch {
+        _state.value = UiState.Loading
+        _state.value = try {
+            UiState.Success(api.getWeather(city))
+        } catch (e: Exception) {
+            UiState.Error("Kota ini tidak ditemukan, coba nama lain ya?")
+        }
+    }
+}
+
+// Di tampilan:
+when (val s = state) {
+    is UiState.Loading -> CircularProgressIndicator()   // berputar
+    is UiState.Success -> WeatherContent(s.data)        // tampilkan
+    is UiState.Error -> Text(s.message)                 // tampilkan error
+}
+\end{lstlisting}
+
+Pola tiga bagian Loading/Success/Error ini adalah 'templat serbaguna' antarmuka jaringan; hafalkan dulu, nanti semua aplikasi jaringan tinggal meniru polanya.
+
+\booksection{Kode Antarmuka Praktis: Menggambar Cuaca}
+
+State-nya sudah ada, antarmukanya seperti ini (potongan kuncinya):
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun WeatherContent(data: WeatherResponse) {
+    Column(
+        Modifier.fillMaxSize().padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(
+            "${data.main.temp}°C",
+            fontSize = 72.sp,
+            fontWeight = FontWeight.Light
+        )
+        Text(
+            data.weather.firstOrNull()?.description ?: "Tidak diketahui",
+            fontSize = 20.sp,
+            color = Color.Gray
+        )
+        Spacer(Modifier.height(16.dp))
+        Row {
+            Text(" Kelembapan ${data.main.humidity}%")
+            Spacer(Modifier.width(24.dp))
+            Text(" Terasa ${data.main.temp}°C")
+        }
+    }
+}
+\end{lstlisting}
+
+Beberapa detail kecil layak dipelajari: firstOrNull() mengambil elemen pertama dengan aman (daftarnya bisa kosong), ?: “Tidak diketahui” memberi teks cadangan—prinsip null safety juga berlaku di antarmuka. Suhu memakai ukuran huruf besar 72.sp agar menguasai tampilan, dan ketebalan 'Light' membuat angkanya terlihat elegan—ini resep klasik aplikasi cuaca.
+
+\booksection{Detail Antarmuka dan Interaksi}
+
+\booksection{Detail Antarmuka dan Interaksi}
+
+\begin{itemize}
+  \item Kolom pencarian: TextField di bagian atas, ketik nama kota lalu tekan cari (atur aksi 'cari' di keyboard, tekan enter langsung mencari);
+  \item Kartu cuaca: suhu huruf besar (26.5°), deskripsi cuaca (cerah), kelembapan, nama kota;
+  \item Kota favorit: simpan kota yang sering dilihat ke DataStore, otomatis dicek saat dibuka berikutnya—sekalian mengulang Bab 6;
+  \item Tarik untuk menyegarkan: di Compose pakai PullToRefreshBox (disediakan Material 3), rasanya langsung 'profesional'.
+\end{itemize}
+
+\begin{tcbinfo}{Tips: Gambar Membuat Antarmuka Hidup}
+Beri satu emoji atau ikon untuk tiap jenis cuaca (), petakan dengan when(description)—tiga baris kode, kehangatan antarmuka berlipat. Bisa juga memuat pustaka ikon cuaca pihak ketiga, tapi di tahap latihan emoji sudah cukup.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Praktik: Daftar Periksa Serah Terima Aplikasi Cuaca}
+(1) Pencarian cuaca normal berhasil; (2) putuskan jaringan, aplikasi memberi error dengan anggun tanpa crash (uji dengan mode pesawat!); (3) ketik kota yang tidak ada, pesannya ramah; (4) simpan dua kota favorit, buka ulang aplikasi masih ada; (5) putar layar tidak menghilangkan state. Lolos kelima-nya, proyek ini baru resmi lulus.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Coba API di peramban dulu, pahami JSON-nya, baru tulis kode—'pralatihan' tidak pernah merugikan
+  \item Sembunyikan API Key di local.properties, dilarang keras masuk repositori kode
+  \item Antarmuka Retrofit + data class: kolomnya cocok, JSON terurai otomatis
+  \item Keadaan tiga bagian Loading/Success/Error adalah obat serbaguna antarmuka jaringan
+  \item Jaringan putus, input kosong, kota tidak ada—penanganan error adalah garis lulus aplikasi jaringan
+\end{itemize}
+
+\end{tcbsummary}

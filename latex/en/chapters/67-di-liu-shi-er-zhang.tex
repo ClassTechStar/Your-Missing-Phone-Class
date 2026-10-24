@@ -1,0 +1,195 @@
+\bookchapter{Chapter 62: Building Interfaces—Getting Started with SwiftUI}
+
+\chapterintro{The interface is everything the user sees. SwiftUI is the declarative interface framework Apple launched in 2019—you only need to “declare” what the interface looks like, and the system automatically takes care of rendering, dark mode, and every kind of screen. By 2026, SwiftUI is the clear mainstream for new projects. In this chapter, we learn to “paint.”}
+
+\booksection{The SwiftUI Idea: Declarative, Not Imperative}
+
+Old-style interface development is “imperative”: you give the system orders one step at a time—“create a button place it at (20,30) set the color.” SwiftUI is “declarative”: you simply describe “there's a red button on the screen that says 'Tap me',” and the system takes care of how to draw it and when to redraw it.
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body: describes "what the screen looks like"
+        VStack {               // vertical stack
+            Text("Hello, world!")
+                .font(.largeTitle)      // modifier: large title
+            Button("Tap me") {
+                print("clicked")
+            }
+            .buttonStyle(.borderedProminent)  // solid blue button
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+Key point: a view = a struct that conforms to the View protocol, the body property describes the interface, and .modifier() chains “apply the makeup.” That's the entire foundation of SwiftUI.
+
+\booksection{The Basic Views: Text, Buttons, Text Fields, Images}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{View} & \textbf{What it does} & \textbf{Example} \tabularnewline
+\hline
+Text & Displays text & Text("Hello") \tabularnewline
+Button & Button & Button("Tap me") \{ action \} \tabularnewline
+TextField & Text field & TextField("Placeholder", text: \$text) \tabularnewline
+Image & Displays an image & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}SwiftUI's four basic views\end{center}
+
+Notice Image(systemName:)—Apple ships a built-in icon library called SF Symbols (thousands of free icons); a name like “star.fill” instantly shows a solid star. This is a hidden perk of iOS development: you almost never have to hunt for icon assets.
+
+\booksection{The Layout Trio: VStack, HStack, ZStack}
+
+\begin{itemize}
+  \item VStack: lines things up vertically (like queuing for lunch);
+  \item HStack: lines things up horizontally (like sitting side by side);
+  \item ZStack: stacks things on top of each other (like a pile of playing cards—perfect for badges and overlays).
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("Bill")
+        Spacer()                 // flexible space: pushes the right side to the edge
+        Text("-25.5 yuan").foregroundColor(.red)
+    }
+    Divider()                    // divider
+    Text("Note: lunch")
+}
+.padding(16)                     // padding on all sides
+.background(Color(.systemGray6)) // light gray background
+.cornerRadius(12)                // rounded corners
+
+// Modifier order matters: padding first, then background — the background excludes the padding
+\end{lstlisting}
+
+\begin{tcbwarn}{Note: Modifier Order Matters}
+padding(16).background(gray) and background(gray).padding(16) produce different results—the former “spaces first, then paints” (the background excludes the padding), the latter “paints first, then spaces” (the background includes the padding). This is the source of beginners' most common “mystery white edge.” When in doubt, swap the order and the preview will tell you the answer instantly.
+
+\end{tcbwarn}
+
+\booksection{State and Binding: Bringing the Interface to Life}
+
+A static interface is dull. SwiftUI's rule: the interface always faithfully reflects the state—when the state changes, the interface redraws automatically.
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State: when this value changes, redraw
+
+    var body: some View {
+        VStack {
+            Text("You tapped \(count) times")
+            Button("Tap me +1") {
+                count += 1          // change the state; the UI refreshes automatically
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+A text field needs “two-way binding”—the \$ symbol hands over both the value and the right to change it:
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("Type something", text: $text)  // $ = two-way binding
+            .textFieldStyle(.roundedBorder)
+        Text("You typed: \(text)")   // updates live as you type
+    }
+}
+\end{lstlisting}
+
+User action
+
+State changes (count += 1)
+
+SwiftUI notices the change
+
+UI redraws automatically (body recomputed)
+
+\begin{center}\small\color{gray}Figure 3: SwiftUI's one-way “state interface” data flow\end{center}
+
+\booksection{Previews, Theming, and Animation: SwiftUI's “Power-Ups”}
+
+\begin{itemize}
+  \item The \#Preview macro: add \#Preview \{ ContentView() \} at the bottom of a file, and the canvas on the right renders in real time—change the code and see the result immediately;
+  \item Dark mode for free: use system colors (Color(.systemGray6), .primary) instead of hard-coded ones, and dark mode adapts automatically without a single extra line;
+  \item Animation in one line: withAnimation \{ count += 1 \} or add .animation(.default, value: count) to a view—buttery-smooth transitions.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tip: Function First, Animation Later}
+A classic beginner mistake is “polishing animations before the interface even works.” Get the functionality running first, then add motion at the end—animation is the icing, function is the cake. That's also our standing “simplicity first” principle.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Hands-on: Build a "Mood Button"}
+\booksection{Common Modifiers Cheat Sheet: One Page in Hand, No Interface Worries}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{What you want to do} & \textbf{Modifier} \tabularnewline
+\hline
+Spacing & \texttt{.\allowbreak padding(16)} \tabularnewline
+Rounded corners & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+Background color & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+Font and size & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+Foreground color (text/icons) & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+Fill the width & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+Fixed size & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+Alignment & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+Opacity & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+Shadow & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+Tap gesture & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Keyboard type & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Common SwiftUI modifiers cheat sheet\end{center}
+
+No need to memorize any of this—this page is for looking things up. The ones you'll use most are actually just the first four: padding, rounded corners, background, and font.
+
+Turn the template project into a mood switcher: one button that cycles through happy sad angry with each tap, while the text and background color change along with it. Hint: store the three pairs (text + color) in an array, keep the index in @State, and on each tap use (index + 1) \% 3. Send it to a friend when you're done and collect your first round of “wow, you can make apps now.”
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter summary}
+\begin{itemize}
+  \item SwiftUI is declarative: you describe "what it looks like," and the system handles drawing and redrawing
+  \item A view = a struct conforming to the View protocol; body describes the interface; modifiers chain on like "makeup"
+  \item The four basic views: Text / Button / TextField / Image; the SF Symbols icon library is free and all-you-can-eat
+  \item The layout trio: VStack stacks vertically, HStack horizontally, ZStack in layers; Spacer is flexible space
+  \item @State brings the interface to life; \$ feeds two-way bindings into text fields
+  \item \#Preview is WYSIWYG; system colors adapt to dark mode automatically; withAnimation adds motion in one line
+\end{itemize}
+
+\end{tcbsummary}

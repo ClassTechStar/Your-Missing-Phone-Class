@@ -1,0 +1,236 @@
+\bookchapter{Capítulo 25: Descarte de celulares usados e herança digital}
+
+\chapterintro{Ei, pessoal, depois de mais de vinte capítulos de “treinamento”, acredito que você já passou de um “novato digital” a um usuário de celular bastante confiante. Mas a vida tecnológica sempre tem ciclos — o novo amor eventualmente se torna um velho conhecido. Quando você estiver pronto para “aposentar” seu velho companheiro, sabe como se despedir de forma digna e segura?}
+
+\booksection{I. A “eutanásia” do celular antigo: guia de venda ou doação segura}
+
+Princípio fundamental: a limpeza de dados não é “excluir”, é “sobrescrever”. Muitas pessoas acham que basta arrastar as fotos para a lixeira e esvaziar a galeria para resolver tudo. Resultado: depois de repassar o celular, o novo dono usa um software de recuperação de dados e — pronto — fotos antigas, históricos de conversa, fotos de documentos de identidade, tudo de volta. Esse tipo de “vexame público” acontece todos os anos.
+
+\begin{enumerate}
+  \item \textbf{"Faxina geral" pessoal}: faça um último backup completo, saia de todas as contas (iCloud, Huawei/Xiaomi/Samsung, Google), desative a função "Buscar meu celular" — caso contrário, o próximo usuário será barrado pela tela de bloqueio de ativação.
+  \item \textbf{Execute a "formatação" definitiva}: a "Restauração de fábrica" dos celulares modernos geralmente inclui exclusão criptografada — ela destrói a própria chave de criptografia. Sem a chave, todos os dados do disco se tornam instantaneamente ilegíveis.
+  \item \textbf{Última "camuflagem" (apenas para dispositivos muito antigos)}: celulares modernos (iOS 8+, Android 6+) já possuem criptografia completa de disco (FBE) por padrão. A restauração de fábrica destrói a chave de criptografia, tornando os dados teoricamente irrecuperáveis.\textbf{Esta etapa não é necessária}. Apenas para dispositivos muito antigos sem criptografia (anteriores a 2015), é necessário preencher o armazenamento com arquivos inúteis após a restauração de fábrica e executar a restauração novamente.
+\end{enumerate}
+
+\textbf{Tabela de referência rápida de caminhos de exclusão de dados por marca}: embora o princípio seja o mesmo, cada marca esconde a “restauração de fábrica” em um local ligeiramente diferente. As principais diferenças estão abaixo.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Marca} & \textbf{Caminho de exclusão} & \textbf{Diferenças principais e observações} \tabularnewline
+\hline
+Huawei & Config. > Sistema e atualizações > Redefinir > Restaurar padrão de fábrica & É necessário sair da conta Huawei e desativar "Buscar dispositivo" primeiro, caso contrário, o bloqueio de ativação será acionado; no modo puro, pode ser necessária verificação de senha. \tabularnewline
+Xiaomi / Redmi & Config. > Meu dispositivo > Restaurar padrão de fábrica & Na parte inferior, há as opções "Formatar cartão SD virtual" e "Limpar todo o conteúdo e configurações", ambas devem ser marcadas; saia da conta Xiaomi e desative "Buscar dispositivo" primeiro. \tabularnewline
+OPPO / OnePlus & Config. > Outras configurações > Restaurar telefone > Limpar completamente todos os dados & O ColorOS oferece o modo "Limpeza completa", que sobrescreve o armazenamento várias vezes; é necessário inserir a senha de bloqueio de tela para confirmar. \tabularnewline
+vivo & Config. > Gerenciamento do sistema > Backup e redefinição > Limpar todos os dados & Marque "Formatar armazenamento do telefone" para limpar também a área do cartão SD; é necessário sair da conta vivo e desativar "Buscar telefone". \tabularnewline
+Samsung & Config. > Gerenciamento geral > Redefinir > Restaurar padrão de fábrica & É necessário remover a conta Samsung e desativar "Buscar meu celular" primeiro; alguns modelos possuem a opção "Sobrescrita automática", recomenda-se ativá-la. \tabularnewline
+iPhone & Config. > Geral > Transferir ou Redefinir iPhone > Apagar Todo o Conteúdo e Ajustes & É necessário sair do Apple ID primeiro, caso contrário, o próximo usuário será bloqueado pelo bloqueio de ativação do iCloud; iOS 15+ suporta "Manter dados do iCloud ao sair" para consulta posterior. \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{As três coisas mais fáceis de esquecer}
+\begin{itemize}
+  \item \textbf{Não sair das contas}: o celular é vendido, o comprador é bloqueado remotamente e você também não consegue acessar. No final, só resta ir ao suporte oficial com documento de identidade para desbloquear.
+  \item \textbf{Cartão SD não removido}: a restauração de fábrica não formata as fotos no cartão SD externo. Lembre-se de removê-lo manualmente ou formatá-lo separadamente.
+  \item \textbf{Periféricos USB/OTG não desconectados}: se houver periféricos conectados durante o processo de exclusão, os dados do periférico podem ser apagados por engano, ou a exclusão pode ser interrompida.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{II. Herança digital: como sua alma social será preservada?}
+
+Os dados dentro do celular há muito deixaram de ser “virtuais”. Eles carregam suas finanças, relações sociais, produções criativas e até sua “identidade digital”.\textbf{Após o falecimento de uma pessoa, como esses ativos devem ser tratados?}Isso não é mais uma questão abstrata, mas um problema real enfrentado por cada vez mais famílias — parentes não sabem as senhas, plataformas não permitem herança, criptomoedas se perdem para sempre.
+
+\begin{tcbinfo}{Base legal: Artigo 49 da Lei de Proteção de Informações Pessoais}
+O Artigo 49 da Lei de Proteção de Informações Pessoais da República Popular da China, em vigor desde 2021, estabelece claramente:\textbf{Em caso de falecimento de uma pessoa natural, seus parentes próximos podem, para seus próprios interesses legítimos e justos, exercer os direitos de consulta, cópia, correção, exclusão, etc., sobre as informações pessoais do falecido, conforme previsto neste capítulo; salvo disposição em contrário feita pelo falecido em vida.}
+
+Isso significa que:
+
+\begin{itemize}
+  \item \textbf{Parentes próximos têm base legal}para solicitar às plataformas o tratamento das contas e informações pessoais do falecido.
+  \item "Interesses legítimos e justos" geralmente incluem tratar de herança, fechar contas, excluir dados sensíveis de privacidade, etc.
+  \item Se o falecido tiver deixado testamento ou acordo dispondo de outra forma (como designar um contato de herança), prevalece o disposto.
+  \item As plataformas não podem recusar com base genérica em "privacidade do usuário", mas os procedimentos específicos variam de plataforma para plataforma.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksubsection{WeChat e Alipay: a conta não pode ser herdada, mas os fundos podem}
+
+Estes dois aplicativos mais usados pelos chineses têm regras diferentes:
+
+\begin{itemize}
+  \item \textbf{Conta WeChat}: de acordo com o "Contrato de Licença e Serviço do Software WeChat da Tencent", a propriedade da conta pertence à Tencent, e o usuário possui apenas o direito de uso.\textbf{A conta em si não pode ser herdada nem transferida}. No entanto, o\textbf{saldo e os fundos do WeChat Pay}são propriedade pessoal. Parentes próximos podem solicitar o saque ou transferência à Tenpay apresentando certidão de óbito, comprovante de parentesco e escritura pública de herança.
+  \item \textbf{Alipay}: a conta também não pode ser herdada diretamente, mas o saldo do Alipay, Yu'ebao, Licaitong e outros\textbf{fundos são bens herdáveis}. Os herdeiros podem fazer a solicitação pela linha direta de atendimento do Alipay ou presencialmente, apresentando certidão de óbito e escritura pública de herança; produtos financeiros do Ant Fortune exigem o processo da gestora do fundo.
+  \item \textbf{Histórico de conversas}: legalmente, é considerado privacidade pessoal. A plataforma não fornecerá ativamente aos familiares. Se envolver pistas sobre herança, pode ser solicitado por via judicial ou notarial.
+\end{itemize}
+
+\begin{tcbwarn}{O que nunca fazer}
+\begin{itemize}
+  \item \textbf{Não entregue a senha da conta do falecido diretamente para familiares "continuarem usando"}— isso viola os termos da plataforma e, se os fundos forem congelados ou o controle de risco for acionado, será ainda mais difícil provar.
+  \item \textbf{Não tente usar o celular do falecido para receber códigos de verificação e "sacar"}— pode ser considerado uso indevido e, ao contrário, violar a lei.
+  \item \textbf{Não demore}: algumas contas que ficam muito tempo sem login são automaticamente canceladas, e recuperar os fundos se torna mais difícil.
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksubsection{“Contato de Herança” da Apple: designar com antecedência, metade do trabalho com o dobro do resultado}
+
+A partir do iOS 15.2, a Apple introduziu a função “Contato de Herança”, permitindo que o usuário designe antecipadamente um contato de confiança. Após o falecimento, esse contato pode solicitar acesso aos dados do iCloud do falecido (fotos, notas, contatos, etc.) apresentando\textbf{certidão de óbito + chave de acesso de contato de herança}. Passos:
+
+\begin{enumerate}
+  \item No iPhone, acesse\textbf{[Ajustes] > [seu nome] > [Início de Sessão e Segurança] > [Contato de Herança]}.
+  \item Toque em "Adicionar Contato de Herança" e confirme a identidade com Face ID.
+  \item Selecione o contato (da lista de contatos). O sistema gerará uma\textbf{chave de acesso}.
+  \item Envie a chave de acesso por SMS, e-mail ou em papel impresso para a pessoa e lembre-a de guardar em local seguro.
+  \item É possível adicionar vários contatos como backup, evitando ponto único de falha.
+\end{enumerate}
+
+A pessoa designada não precisa de um dispositivo Apple. Com a chave e a certidão de óbito, pode solicitar acesso no site oficial da Apple. Todo o processo geralmente é concluído em até 7 dias.
+
+\booksubsection{“Gerenciador de Conta Inativa” do Google: cuidando automaticamente do pós-vida}
+
+O Google oferece o “Gerenciador de Conta Inativa (Inactive Account Manager)”, que executa automaticamente ações predefinidas quando o usuário fica muito tempo sem fazer login — este é um dos mecanismos de herança digital mais completos atualmente.
+
+\begin{enumerate}
+  \item Acesse\textbf{myaccount.google.com/inactive}e faça login na sua conta Google.
+  \item Defina o período de timeout: 3 / 6 / 12 / 18 meses sem login para acionar.
+  \item Adicione contatos de confiança (até 10 pessoas) e configure quais dados cada um pode acessar (Gmail, Google Fotos, Google Drive, etc.).
+  \item Opcional: configure uma resposta automática de e-mail informando aos remetentes que você não pode mais responder.
+  \item Escolha final: ao expirar,\textbf{compartilhar os dados com os contatos}ou\textbf{excluir diretamente a conta}.
+  \item Configure um número de telefone como verificação de segurança para evitar acionamento acidental.
+\end{enumerate}
+
+\booksubsection{Contas sociais chinesas: processos de memorialização e exclusão}
+
+As principais plataformas sociais chinesas tratam as contas de falecidos de duas formas:\textbf{“memorialização” (manter a conta para homenagem de amigos e familiares)}e\textbf{“exclusão” (remoção completa)}. Os familiares podem solicitar ao suporte da plataforma apresentando certidão de óbito, comprovante de parentesco e documento de identidade do solicitante.
+
+\begin{itemize}
+  \item \textbf{Weibo}: suporta "memorialização" de conta. Familiares fornecem certidão de óbito para solicitar. A conta é bloqueada (não é possível fazer login), mas o conteúdo é preservado. A página principal exibe "Esta conta foi definida como conta memorial". Também é possível solicitar exclusão, exigindo escritura pública de herança.
+  \item \textbf{Douyin (TikTok chinês)}: através de "Eu - Configurações - Feedback e Ajuda - Conta e Segurança - Excluir conta" ou atendimento humano, enviar certidão de óbito, comprovante de parentesco e documento do solicitante. Após aprovação, pode-se excluir ou converter para estado memorial.
+  \item \textbf{Bilibili}: pelo canal de suporte, enviar comprovante de falecimento e comprovante de parentesco para solicitar exclusão da conta ou preservação como página memorial; o tratamento de conteúdo histórico de criadores exige declaração de direitos autorais.
+  \item \textbf{Xiaohongshu (RED)}: através do suporte oficial, enviar certidão de óbito e comprovante de parentesco para solicitar exclusão da conta e remoção de conteúdo.
+\end{itemize}
+
+\begin{tcbinfo}{Lembretes importantes}
+\begin{itemize}
+  \item As regras de cada plataforma são atualizadas; consulte as orientações mais recentes do suporte oficial antes de prosseguir.
+  \item Recomenda-se digitalizar todos os documentos comprobatórios antes de enviar; guarde os originais em local seguro.
+  \item Ao tratar de várias plataformas de uma vez, solicite uma\textbf{escritura pública de herança}unificada, economizando idas repetidas a cartórios.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksubsection{Os desafios da herança de ativos digitais}
+
+Além das contas sociais, cada vez mais pessoas possuem\textbf{ativos digitais de real valor}, cuja herança é ainda mais complexa:
+
+\begin{itemize}
+  \item \textbf{Criptomoedas (Bitcoin, Ethereum, etc.)}: baseadas no princípio "chave privada = propriedade".\textbf{Sem a chave privada, o ativo desaparece}. Herdeiros não podem "recorrer" na blockchain com documentos legais. Sugestão: armazene a frase mnemônica/chave privada em partes, em vários locais físicos seguros (como cofre bancário + cofre doméstico), e indique o método de acesso no testamento.
+  \item \textbf{Contas em exchanges}: semelhantes a contas bancárias. Pode-se solicitar à exchange (como Binance, OKX) com escritura pública de herança, mas o processo em exchanges internacionais é demorado.
+  \item \textbf{Domínios}: são bens herdáveis. O herdeiro pode solicitar a transferência no registrador de domínios (como Alibaba Cloud, GoDaddy) apresentando a escritura pública de herança.
+  \item \textbf{Propriedade intelectual (artigos originais, vídeos, patentes, direitos autorais de software)}: os direitos patrimoniais de autor são herdáveis (direitos morais não). Os rendimentos podem ser usufruídos pelos herdeiros até 50 anos após a morte do autor.
+  \item \textbf{Armazenamento em nuvem e drives virtuais}: o conteúdo dos dados pertence ao indivíduo e é herdável; mas algumas plataformas estipulam que a conta em si não pode ser transferida, sendo necessário baixar os dados antes de excluir a conta.
+\end{itemize}
+
+\textbf{O custo real do “desaparecimento” de criptomoedas}\par
+
+De acordo com o relatório da Chainalysis, globalmente já existem\textbf{mais de 3 milhões de bitcoins}perdidos para sempre devido à perda de chaves privadas, o equivalente a um sexto do total existente. Se você possui ativos em criptomoedas, certifique-se de que pelo menos uma pessoa de sua absoluta confiança conheça o\textbf{caminho de recuperação}— caso contrário, essa riqueza permanecerá para sempre adormecida na blockchain.
+
+\booksubsection{Um modelo de “testamento digital”}
+
+O testamento tradicional de bens não cobre ativos digitais. Recomenda-se que você atualize anualmente um anexo de “testamento digital” e o mantenha junto com o testamento formal. O modelo a seguir serve como referência:
+
+\textbf{“Anexo de Disposição de Ativos Digitais Pessoais”(Modelo)}\par
+
+\textbf{Parte I: Lista de contas}(registre apenas o nome da conta e a plataforma,\textbf{não escreva senhas})
+
+\begin{itemize}
+  \item Redes sociais: WeChat (conta xxx), Weibo, Douyin, Bilibili, Xiaohongshu, etc.
+  \item Pagamentos: Alipay, WeChat Pay, apps de cada banco
+  \item Nuvem: iCloud, Huawei Cloud, Xiaomi Cloud, conta Google, conta Microsoft
+  \item E-mail: QQ Mail, NetEase Mail, Gmail, etc.
+  \item Outros: drives virtuais, serviços de assinatura, contas de jogos, etc.
+\end{itemize}
+
+\textbf{Parte II: Plano de custódia de senhas}
+
+\begin{itemize}
+  \item Método de armazenamento da senha mestra: use um gerenciador de senhas (como Bitwarden, 1Password). A senha mestra deve ser escrita em papel e lacrada no cofre doméstico.
+  \item Chave de recuperação/frase mnemônica: armazenamento fragmentado, em pelo menos dois locais físicos (como caixa de segurança bancária + cofre doméstico).
+  \item Pessoa autorizada para consulta: nome, número do documento de identidade, relação com o titular, contato.
+\end{itemize}
+
+\textbf{Parte III: Vontades de disposição}
+
+\begin{itemize}
+  \item Para cada tipo de conta, deseja "memorialização" ou "exclusão".
+  \item Se os dados do iCloud / Google devem ter "Contato de Herança" ou "Gerenciador de Conta Inativa" designado.
+  \item Quem herda os ativos criptografados, com instruções sobre o caminho de obtenção da chave privada.
+  \item Quem usufrui dos rendimentos de obras com direitos autorais.
+\end{itemize}
+
+\textbf{Parte IV: Contatos e plataformas}
+
+\begin{itemize}
+  \item Nome do executor de confiança, contato, contato reserva.
+  \item Canais de suporte das plataformas habituais e lista de documentos comprobatórios necessários.
+  \item Data de atualização deste anexo: \_\_\_\_/\_\_/\_\_\_\_, data da próxima revisão: \_\_\_\_/\_\_/\_\_\_\_.
+\end{itemize}
+
+\begin{tcbwarn}{Aviso legal sobre "senhas"}
+Escrever senhas diretamente no testamento apresenta risco de vazamento, e após a divulgação do testamento, todos os herdeiros poderão vê-las.\textbf{A prática mais segura é: no testamento, escreva apenas “lista de contas + vontades de disposição + local de custódia da senha”. A senha real deve ser transmitida separadamente ao executor de confiança através da senha mestra do gerenciador de senhas}. Isso atende aos requisitos legais e reduz o risco de vazamento de senhas.
+
+\end{tcbwarn}
+
+\booksection{III. A última etapa ecológica}
+
+Um celular contém dezenas de metais, incluindo ouro, prata, cobre e terras raras. O descarte inadequado polui o solo e desperdiça recursos. Existem três categorias de canais de reciclagem corretos, cada uma com seu foco:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Canal} & \textbf{Valor de reciclagem} & \textbf{Segurança de dados} & \textbf{Cenário aplicável} \tabularnewline
+\hline
+Troca oficial (Huawei/Apple/Xiaomi, etc.) & Médio, frequentemente com cupons de subsídio adicionais & Mais alto, processo padronizado oficial & Mais vantajoso quando se pretende trocar por um modelo novo da mesma marca \tabularnewline
+Plataformas de reciclagem de terceiros (Aihuishou, Zhuanzhuan, Huishoubao, etc.) & Ligeiramente mais alto, comparável & Alto, com relatório de limpeza de dados & Para converter diretamente em dinheiro, sem vínculo com marca \tabularnewline
+Doação solidária (escolas rurais, instituições de caridade) & Sem retorno financeiro & É necessário fazer a exclusão completa por conta própria & Dispositivo ainda funcional, desejo de fazer o bem \tabularnewline
+Reaproveitamento próprio (adaptação para outro uso) & Economiza o custo de um novo dispositivo & O proprietário original continua usando, sem risco & Desempenho do dispositivo ainda razoável, necessidade de adaptação em casa \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{Reciclagem/troca oficial}: a forma mais recomendada, processo padronizado, segurança de dados garantida. Apple, Huawei, Xiaomi e outras marcas têm portais de "troca" em seus sites oficiais. Após avaliação, o valor pode ser abatido na compra de um novo aparelho.
+  \item \textbf{Plataformas de reciclagem confiáveis}: escolha plataformas de reciclagem grandes e de boa reputação. Após o pedido, a coleta é feita por transportadora em domicílio. Após a inspeção, o pagamento é liberado. Certifique-se de escolher plataformas que\textbf{forneçam "relatório de limpeza de dados"}e guarde o comprovante.
+  \item \textbf{Doação solidária}: entre em contato com escolas rurais locais ou organizações comunitárias de caridade. Celulares antigos podem ser convertidos em tablets educacionais ou telefones para idosos.\textbf{Antes de doar, execute obrigatoriamente o processo completo de exclusão e remova todos os cartões SIM/SD}.
+  \item \textbf{Reaproveitamento}: transforme em navegador GPS para carro, central de controle de casa inteligente, câmera de monitoramento, babá eletrônica, porta-retratos digital. Um celular antigo pode durar vários anos adicionais.
+\end{itemize}
+
+\begin{tcbinfo}{A verdade sobre o lixo eletrônico}
+A placa de circuito de um celular contém metais preciosos como\textbf{ouro, prata, paládio e cobre}. Cada tonelada de placas de circuito descartadas contém dezenas de vezes mais ouro do que o minério de ouro. Mas se descartadas incorretamente, o chumbo, mercúrio e cádmio nelas presentes penetram no solo e nas águas subterrâneas, poluindo por décadas.\textbf{Reciclar corretamente protege o meio ambiente e permite que metais escassos sejam reciclados.}
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Prática: realize um "funeral padrão" para seu celular antigo}
+\begin{enumerate}
+  \item Último backup completo: fotos para a nuvem, arquivos importantes para o computador, exportação e arquivamento do histórico de conversas.
+  \item Saia de todas as contas: iCloud / Huawei / Xiaomi / Google, desative "Buscar meu celular".
+  \item Remova o cartão SIM e o cartão SD, desconecte todos os periféricos OTG.
+  \item Execute a restauração de fábrica com criptografia. Se necessário, marque manualmente "Formatar armazenamento".
+  \item (Apenas dispositivos antigos) Preencha o armazenamento com arquivos inúteis e execute a restauração de fábrica mais uma vez.
+  \item Escolha seu próximo destino: troca oficial, plataforma de reciclagem confiável, doação solidária ou repasse para familiares.
+  \item Atualize simultaneamente sua "lista de herança digital", riscando o dispositivo descartado da lista.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbpractice}{Lista de tarefas do mês}
+\begin{enumerate}
+  \item Para seu celular principal atual, designe um "Contato de Herança" da Apple ou configure o "Gerenciador de Conta Inativa" do Google.
+  \item Use o modelo desta seção para redigir um "Anexo de Disposição de Ativos Digitais Pessoais" e comunique à família o local de guarda.
+  \item Verifique se há mais de 2 celulares antigos ociosos em casa e agende uma reciclagem por canal oficial ou plataforma confiável.
+\end{enumerate}
+
+\end{tcbpractice}

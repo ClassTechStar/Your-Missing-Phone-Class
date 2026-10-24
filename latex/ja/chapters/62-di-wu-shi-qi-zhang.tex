@@ -1,0 +1,124 @@
+\bookchapter{第五十七章：ステップアップへの道——権限、通知、モダンなアーキテクチャ}
+
+\chapterintro{アプリが作れるようになるのは、スタートにすぎません。この章では「作れる」から「うまく作れる」へ進むための関門をいくつか扱います。権限を上品に申請する方法。嫌われない通知の出し方。アーキテクチャをもう一段引き上げる方法。そして、2026年のいま、AIと組んでAndroidコードを書く方法です。どれも、実際のプロジェクトですぐに出会うものばかりです。}
+
+\booksection{実行時権限：まずノックして、それから入る}
+
+カメラ、位置情報、連絡先、通知……こうした「センシティブな領域」については、Androidはアプリの実行時にユーザーへ申請することを求めます（Android 6から）。ルールはこうです。まず宣言（Manifest）、次に申請（コード）、そして拒否されたら上品に縮小して動くこと。Composeでは公式ライブラリAccompanistの rememberPermissionState を使うのが一番楽です。
+
+\begin{lstlisting}[language=Kotlin]
+// まずManifestに宣言：
+// <uses-permission android:name="android.permission.CAMERA" />
+
+@Composable
+fun CameraButton() {
+    val permission = rememberPermissionState(
+        permission = android.Manifest.permission.CAMERA
+    )
+    Button(onClick = {
+        when {
+            permission.status.isGranted -> openCamera()
+            permission.status.shouldShowRationale -> showExplainDialog()
+            else -> permission.launchPermissionRequest()
+        }
+    }) { Text("撮影") }
+}
+\end{lstlisting}
+
+\begin{tcbwarn}{注意：完全に拒否されたら？}
+ユーザーが「今後表示しない」を選ぶと、launchPermissionRequest はもうダイアログを出しません。その場合は、Intentでアプリ設定のページへ飛ばして、システム設定から手動で有効にするよう誘導し、画面で「この権限を何に使うのか」を説明します。態度を丁寧にすれば、ユーザーが権限を許可してくれる気持ちもぐっと高まります。権限申請の文面は、真剣に書く価値があります。
+
+\end{tcbwarn}
+
+\booksection{通知：正しいタイミングで、役に立つことを伝える}
+
+通知はアプリからユーザーへ届く経路であると同時に、ユーザーに「ブロック」されやすい機能でもあります。通知を出す3つの規律。役に立つことだけ送る。ユーザーが切れるようにする。真夜中に攻めない。基本の使い方はこうです。
+
+\begin{lstlisting}[language=Kotlin]
+// Android 13+では先にPOST_NOTIFICATIONS権限を申請する必要がある（前の節を参照）
+
+// 1. 通知チャンネルを作成（Android 8+で必須）
+val channel = NotificationChannel(
+    "reminder", "リマインダー", NotificationManager.IMPORTANCE_DEFAULT
+)
+val manager = getSystemService(NotificationManager::class.java)
+manager.createNotificationChannel(channel)
+
+// 2. 通知を送る
+val notification = NotificationCompat.Builder(this, "reminder")
+    .setSmallIcon(R.drawable.ic_notification)
+    .setContentTitle("記帳リマインダー")
+    .setContentText("今日はまだ記帳していないよ")
+    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+    .build()
+if (ActivityCompat.checkSelfPermission(this,
+        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+) {
+    manager.notify(1, notification)
+}
+\end{lstlisting}
+
+定期タスク（たとえば「毎日20:00に記録を促す」）にはWorkManagerを使います。公式おすすめの「バックグラウンド調整の執事」で、タスクが適切なタイミングで実行されることを保証してくれ、バッテリー最適化を自分で気にする必要がありません。目覚まし系の要望には、これで間違いありません。
+
+\booksection{アーキテクチャのステップアップ：依存性注入とモジュール化}
+
+プロジェクトが大きくなると、2つの「うれしい悩み」がやってきます。
+
+\begin{itemize}
+  \item オブジェクトの生成が乱れる：各画面が自分でデータベースをnewし、APIをnewする——Hilt（依存性注入フレームワーク）で一元管理して、「誰が何を欲しければ、口を開けば渡してくれる」ようにする。
+  \item コードが山になる：単一モジュールのプロジェクトは、直すたびに遅くなる——マルチモジュール（app / core / feature-xxx）に分割して、機能ごとに独立して開発·テストする。
+\end{itemize}
+
+\begin{tcbinfo}{ワンポイント：設計しすぎない}
+Hiltもモジュール化も良い道具ですが、個人プロジェクトなら急いで導入しないこと。家計簿は単一モジュール＋依存の手動生成で十分です。コードが数万行を超えて、ビルドが遅くなり、複数人で作業するようになったら、必要に応じて入れましょう。道具は目的のためにあるのであって、見せびらかすためではありません。これが本書で言う「シンプル至上主義」の原則です。
+
+\end{tcbinfo}
+
+\booksection{2026年の新しいやり方：AI支援のAndroid開発}
+
+2026年、AIはすでにAndroid開発の流れの中に深く入り込んでいます。作業を速くしたいなら、この連携プレーがとても固まっています。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{段階} & \textbf{AIの助け方} & \textbf{あなたの役割} \tabularnewline
+\hline
+コードを書く & Android Studio内蔵のGeminiやサードパーティAIプラグインで補完·生成 & 要件をはっきり説明し、成果物をチェックする \tabularnewline
+調べ物 & 公式ドキュメントやエラー情報をAIに渡して解説してもらう & 大事な結論は公式ドキュメントで確認する \tabularnewline
+テストを書く & AIに「正常／境界／異常」の3種類でテストケースを生成させる & テストケースが業務の意味に合っているか確認する \tabularnewline
+バグを直す & スタックトレース＋関係するコードを貼って、AIが原因の特定と修正を行う & 変更内容を理解し、テストを実行して確認する \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}AI支援Android開発の4つの場面\end{center}
+
+具体的な方法論——AIへの指示の出し方、検収のやり方、落とし穴の避け方——は、本書第7部『AIプログラミング実戦編』（第37〜47章）に全11章でまとまっています。あわせて読むことを強くおすすめします。Androidの文法は本編で、AIとの協働のコツは第7部で、と分担してください。
+
+\booksection{Composeの性能最適化とデバッグツール}
+
+Composeは書いていて気持ちいいものの、「再構成のしすぎ」で重くなることもあります。実用的な技を3つ。
+
+\begin{itemize}
+  \item パラメータを安定させる：データクラスに @Immutable を付けるか、derivedStateOf を使って、関係のない状態変化で広範囲の再構成が起きるのを防ぐ。
+  \item keyを忘れない：items(list, key = \{ it.id \}) とすれば、リストの追加·削除のときに動かすべき項目だけが動きます。keyがないと、1項目の削除で表全体が描き直されることもあります。
+  \item Layout InspectorのComposeモード：各Composableの再構成回数をリアルタイムに見られます。どれが頻繁に再構成されているか一目瞭然なので、その重点箇所を狙って最適化します。
+\end{itemize}
+
+さらにComposeコンパイラのレポート（Metrics）を有効にすると、「どのコンポーネントが不安定か」のレポートが生成できます。ステップアップの道では、データのほうが感覚よりいつでも信頼できます。
+
+\begin{tcbpractice}{やってみよう：家計簿に「三種の神器」を追加する}
+(1) 家計簿に「毎日20:00の記録リマインダー」を追加する（WorkManager＋通知チャネル＋Android 13の通知権限）。(2) データベースとAPIの生成を、Hiltによる注入に替える。(3) AIツールを使って「月別フィルター」機能の実装を速めてみて、3層検収の方法で成果物をチェックする。3つそろえば、あなたのプロジェクトも「正規軍」らしくなります。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章のまとめ}
+\begin{itemize}
+  \item センシティブな権限：Manifestで宣言＋実行時に申請＋拒否されたら上品に誘導
+  \item 通知の3規律：役に立つものだけ、切れる、攻めない。チャネル＋権限のどちらも必須
+  \item 定期タスクはWorkManager。車輪の再発明をしない
+  \item オブジェクトはHilt、コードはモジュール化——個人プロジェクトでは急いで導入しない
+  \item AI支援の4場面：コード作成、調べ物、テスト作成、バグ修正。方法論は第7部（第37〜47章）を参照
+\end{itemize}
+
+\end{tcbsummary}

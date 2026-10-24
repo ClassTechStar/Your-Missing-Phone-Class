@@ -26,7 +26,11 @@ latex/*.pdf
 latex/*.txt
 latex/smoke*
 
-# 各语言 LaTeX 产物目录（bookkit latex --out latex/<lang> 生成，体积大不入库；
-# 只保留根目录 latex/ 的 zh 源稿与产物）
-latex/*/
+# 脚本临时文件
 scripts/_*.py
+
+# 各语言 LaTeX 编译瞬态（保留 main.tex/.toc/.pdf 与 chapters/ figures/）
+latex/*/main.aux
+latex/*/main.log
+latex/*/main.out
+latex/*/pass*.log

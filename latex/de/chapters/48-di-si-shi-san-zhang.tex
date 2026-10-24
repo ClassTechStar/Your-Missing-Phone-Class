@@ -1,0 +1,105 @@
+\bookchapter{Kapitel 43: Dialog-Engineering – Dialogtechniken für effiziente Zusammenarbeit mit der KI}
+
+\chapterintro{Dialog ist die zentrale Interaktionsform beim KI-Programmieren. Aber Achtung: „Dialog“ ist nicht gleich „Plaudern“ – ein effizientes KI-Programmiergespräch ist eine strukturierte Kommunikationstechnik, die wir „Dialog-Engineering“ nennen. Es untersucht: Wie bekommt man mit möglichst wenigen Dialogrunden die höchste Codequalität? Ganz platt gesagt: Dieses Kapitel zeigt dir, wie du mit der KI „klar redest“.}
+
+\booksection{Ebenen-Strategie für Prompts}
+
+Der Dialog mit der KI lässt sich in drei Ebenen gliedern, und jede Ebene übernimmt eine eigene Aufgabe. Wenn du diese drei Ebenen verstehst, kannst du effiziente Prompts wie mit Bauklötzen zusammenbauen.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Ebene} & \textbf{Funktion} & \textbf{Beispiel} & \textbf{Häufigkeit} \tabularnewline
+\hline
+Systemebene & Legt die Rolle der KI und die globalen Rahmenbedingungen fest & „Du bist ein React-Experte, der Code muss in TypeScript geschrieben werden“ & Einmal zu Beginn des Projekts festlegen \tabularnewline
+Aufgabenebene & Beschreibt die konkrete anstehende Aufgabe & „Baue eine Formularkomponente mit Feldern für Benutzername und Passwort“ & Zu Beginn jeder Aufgabe geben \tabularnewline
+Feedback-Ebene & Bewertet und korrigiert die Ergebnisse der KI & „Beim Passwortfeld fehlt der Umschalter für Anzeigen/Verbergen, bitte ergänzen“ & Je nach Qualität der Ergebnisse geben \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Die drei Ebenen des Dialog-Prompts\end{center}
+
+Prompts der Systemebene stehen meist in der Projektgedächtnis-Datei (z. B. CLAUDE.md) und müssen nicht bei jedem Dialog wiederholt werden. Die Aufgabenebene nutzt du im Dialog am häufigsten – sie sollte die drei Elemente „Was ist zu tun“, „Mit welcher Technik“, „Welche Rahmenbedingungen“ enthalten. Die Feedback-Ebene verlangt das meiste Können – gutes Feedback lässt die KI präzise korrigieren, schlechtes Feedback lässt sie nur erneut raten.
+
+\begin{tcbinfo}{Tipp: Feedback in drei Schritten}
+Eine praktische Feedback-Vorlage lautet: „Problem benennen + Erwartung erklären + Kontext liefern“. Zum Beispiel: „Die Fehlerbehandlung in Zeile 25 nutzt nur console.log (Problem benennen), in der Produktionsumgebung sollte ein einheitlicher Fehlerbehandler mit nutzerfreundlichen Meldungen zum Einsatz kommen (Erwartung erklären), im Projekt gibt es dafür eine handleError-Funktion (Kontext liefern)“. Ein solches Feedback ist zehnmal wirksamer als „Ändere mal die Fehlerbehandlung“.
+
+\end{tcbinfo}
+
+\booksection{Debug-Dialoge: Fehler so beschreiben, dass die KI sie schnell findet}
+
+Debugging ist eine der häufigsten Situationen beim KI-Programmieren. Wenn du auf einen Bug stößt, entscheidet die Beschreibung des Problems gegenüber der KI direkt darüber, wie schnell sie es eingrenzen und beheben kann. Hier die vier Kernpunkte für Debug-Dialoge:
+
+\begin{enumerate}
+  \item Lass die KI die Originaldaten „sehen“, nicht nur deine Wiedergabe. Hänge Fehlerprotokolle, Stacktraces und den relevanten Code direkt per @-Verweis an, statt sie mit „da gab's wohl irgendeinen Fehler“ zu umschreiben. Mit den Originaldaten arbeitet die KI genauer als mit deiner Interpretation.
+  \item Beschreibe den Unterschied zwischen erwartetem und tatsächlichem Verhalten. „Ich erwarte, dass der Klick auf den Button zur Startseite führt (erwartet), aber tatsächlich passiert beim Klick nichts (tatsächlich)“ – diese Beschreibung nützt viel mehr als „Der Button ist kaputt“.
+  \item Liefere Reproduktionsschritte. „Erst den Benutzernamen eingeben, dann auf den Anmelde-Button klicken – und der Fehler erscheint“ – Reproduktionsschritte lassen die KI deinen Weg nachspielen und das Problem leichter eingrenzen.
+  \item Sage klar, was du schon probiert hast. „Ich habe die Netzwerkanfrage geprüft, sie antwortet mit 200, die Daten sind in Ordnung“ – so kann die KI bereits Geprüftes ausschließen und keine Zeit mit doppelter Suche verschwenden.
+\end{enumerate}
+
+Schlechte Fehlerbeschreibung
+
+\begin{lstlisting}
+Auf den Buttonklick reagiert nichts, schau mal nach
+\end{lstlisting}
+
+Gute Fehlerbeschreibung
+
+\begin{lstlisting}
+Nach dem Klick auf den Anmelde-Button reagiert die Seite nicht. Erwartetes Verhalten: Nach dem Klick wird zur Seite /home navigiert Tatsächliches Verhalten: Nach dem Klick passiert nichts, die Konsole zeigt keinen Fehler Reproduktionsschritte: 1. Auf der Login-Seite Benutzername admin und Passwort 123456 eingeben 2. Auf den Button „Anmelden“ klicken 3. Die Seite reagiert nicht Bereits geprüft: - Netzwerkanfrage normal, Rückgabe 200 - onClick-Ereignis ist gebunden - Code der Komponente LoginButton geprüft Relevante Dateien: @src/components/LoginButton.tsx @src/pages/Login.tsx
+\end{lstlisting}
+
+\booksection{Iterationsstrategie: Kleine schnelle Schritte vs. großes Refactoring}
+
+Beim KI-Programmieren gibt es zwei grundlegende Iterationsstrategien für unterschiedliche Situationen. Wer den Unterschied versteht, trifft in jeder Lage die richtige Wahl.
+
+Die Strategie der „kleinen schnellen Schritte“ eignet sich für Funktionsentwicklung und Bugfixes. Ihr Kern: Die KI macht jeweils nur eine kleine Änderung, und erst nach bestandener Prüfung kommt die nächste. Vorteil: Jeder Schritt ist prüfbar und rückholbar, das Risiko bleibt kontrollierbar. Nachteil: Es geht langsamer und braucht viele Dialogrunden. Geeignet für: Entwicklung neuer Funktionen, exploratives Vorgehen, wenn die beste Lösung noch unklar ist, und vorsichtiges Iterieren, solange du den Ergebnissen der KI noch nicht ganz traust.
+
+Die Strategie des „großen Refactorings“ eignet sich für großflächige Änderungen mit klarem Ziel. Ihr Kern: Das vollständige Ziel wird auf einmal beschrieben, und die KI plant und führt die gesamte Änderung selbstständig aus. Vorteil: Es geht schnell, und weil die KI das Gesamtbild sieht, trifft sie bessere Architekturentscheidungen. Nachteil: Das Risiko ist hoch – versteht die KI etwas falsch, ist die Korrektur aufwendig. Geeignet für: klar umrissene Architektur-Upgrades, groß angelegte Code-Migrationen und Refactorings mit ausreichender Testabdeckung.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Aspekt} & \textbf{Kleine schnelle Schritte} & \textbf{Großes Refactoring} \tabularnewline
+\hline
+Umfang pro Änderung & Ein Funktionspunkt oder ein Bug & Ein Modul oder eine Architekturebene \tabularnewline
+Prüffrequenz & Direkt nach jeder Änderung prüfen & Prüfen, sobald alle Änderungen fertig sind \tabularnewline
+Dialogrunden & Viele (5–10 Runden pro Funktion) & Wenige (1–3 Runden pro Modul) \tabularnewline
+Risiko & Niedrig, jeder Schritt ist rückholbar & Hoch, Korrekturen bei Abweichungen sind aufwendig \tabularnewline
+Geeignete Szenarien & Neue Funktionen, explorative Entwicklung & Refactoring und Migration mit klarem Ziel \tabularnewline
+Voraussetzungen & Keine besonderen Anforderungen & Testabdeckung erforderlich \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Vergleich der beiden Iterationsstrategien\end{center}
+
+In der Praxis kombiniert man beide Strategien oft. Bei einem Modul-Refactoring lässt du die KI zunächst mit dem „großen Refactoring“ einen Gesamtplan erstellen; nach der Prüfung des Plans setzt du ihn mit „kleinen schnellen Schritten“ Stück für Stück um. So behältst du die Gesamtübersicht und kontrollierst zugleich das Ausführungsrisiko.
+
+\booksection{Kontextmanagement bei langen Dialogen}
+
+Mit jeder zusätzlichen Dialogrunde musst du den Kontext aktiv verwalten, damit die KI frühere Informationen nicht „vergisst“. Hier einige praktische Techniken fürs Kontextmanagement.
+
+Erstens: Kerninformationen „verankern“. Schreibe die wichtigsten Rahmenbedingungen zu Beginn des Dialogs klar nieder und wiederhole sie im weiteren Verlauf passend. Zum Beispiel: „Denk dran, unsere Daten liegen im localStorage, eine Datenbank können wir nicht benutzen“ – wiederhole diese Bedingung bei passenden Änderungswünschen, damit die KI sie nicht vergisst.
+
+Zweitens: Nutze die Technik „Zusammenfassen und Weitermachen“. Wenn der Dialog sehr lang geworden ist, lass die KI „den bisherigen Stand und die offenen Aufgaben zusammenfassen“, und starte dann einen neuen Dialog mit dieser Zusammenfassung als Ausgangspunkt. So bleibt der wichtige Kontext erhalten, ohne dass der lange Dialog sich abnutzt.
+
+Drittens: „Ein Dialog, eine Aufgabe“. Das ist die einfachste und zugleich wirksamste Strategie fürs Kontextmanagement. Jeder Dialog behandelt nur eine Aufgabe oder einen Funktionspunkt; danach startest du einen neuen Dialog für die nächste. Das begrenzt die Dialoglänge ganz natürlich und hält den Kontext klar.
+
+Viertens: Nutze die Kontextfunktionen deiner Tools. Die meisten KI-Programmier-Tools haben einen Button „Kontext löschen“ oder „Neue Sitzung“ – wenn du spürst, dass die Antworten der KI nachlassen, zögere nicht: Neue Sitzung. Etwas Dialoghistorie zu verlieren ist viel besser, als sich weiter durch einen abgenutzten Kontext zu kämpfen.
+
+\begin{tcbpractice}{Los geht's: Spiel für deine KI einmal den „Patienten“}
+Baue absichtlich eine kleine Seite im Browser und erzeuge einen Bug (etwa einen Button, der nicht reagiert). Beschreibe das Problem dann einmal vollständig nach dem Muster der „guten Fehlerbeschreibung“ aus diesem Kapitel: Originaldaten, erwartet vs. tatsächlich, Reproduktionsschritte, bereits Geprüftes. Spüre, wie unterschiedlich schnell die KI das Problem eingrenzt – dann verstehst du, warum „Probleme beschreiben“ selbst ein Handwerk ist.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Kapitelfazit}
+\begin{itemize}
+  \item Prompt in drei Ebenen: Systemebene (in die Gedächtnis-Datei), Aufgabenebene (Was + Technik + Rahmenbedingungen), Feedback-Ebene (Problem + Erwartung + Kontext)
+  \item Debugging in vier Punkten: Originaldaten liefern, erwartet vs. tatsächlich, Reproduktionsschritte, bereits Geprüftes
+  \item Kleine schnelle Schritte: wenig Risiko, viele Runden, ideal für neue Funktionen; großes Refactoring: hohes Risiko, wenige Runden, braucht Tests als Absicherung
+  \item Kontextmanagement in vier Zügen: Kerninfos verankern, Zusammenfassen und Weitermachen, ein Dialog pro Aufgabe, konsequent neue Sitzung starten
+\end{itemize}
+
+\end{tcbsummary}

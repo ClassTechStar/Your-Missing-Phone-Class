@@ -1,0 +1,121 @@
+\bookchapter{Κεφάλαιο 69: Γρήγορη αναφορά και πόροι}
+
+\chapterintro{Αυτό το κεφάλαιο είναι ένα εγχειρίδιο ταχείας αναφοράς που $\mu$πορεί να χρησι$\mu$οποιηθεί και αυτόνο$\mu$α. Όταν δεν θυ$\mu$άσαι πώς γράφεται κάτι ή χρειάζεσαι γρήγορη απόφαση, άνοιξε κατευθείαν εδώ. Πρότεινε στον εαυτό σου να το δεις ως «κάρτα τσέπης»: γρήγορη αναφορά συνηθισ$\mu$ένου κώδικα, συχνές ερωτήσεις, πόροι εκ$\mu$άθησης — χωρίς να λείπει ούτε σελίδα.}
+
+\booksection{Κάρτα γρήγορης αναφοράς συνηθισ$\mu$ένου κώδικα}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Τι θέλεις να κάνεις} & \textbf{Βασικός κώδικας} \tabularnewline
+\hline
+Ιδιωτική κατάσταση της σελίδας & @State private var x = αρχική τι$\mu$ή \tabularnewline
+Λογική ανά$\mu$εσα σε σελίδες & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+Κατακόρυφη/οριζόντια διάταξη & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+Ελαστικός χώρος & \texttt{Spacer()} \tabularnewline
+Λίστα & List \{ ForEach(πίνακας) \{ ... \} \} \tabularnewline
+Πλοήγηση σε άλλη σελίδα & \texttt{NavigationStack + NavigationLink} \tabularnewline
+Αναδυό$\mu$ενο παράθυρο από κάτω (sheet) & .sheet(isPresented: \$show) \{ περιεχό$\mu$ενο \} \tabularnewline
+Κλείσι$\mu$ο της τρέχουσας σελίδας & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+Λήψη δεδο$\mu$ένων από το internet & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+Ανάλυση JSON & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+Αποθήκευση $\mu$ικρών ρυθ$\mu$ίσεων & UserDefaults.standard.set(τι$\mu$ή, forKey: "κλειδί") \tabularnewline
+Αποθήκευση δο$\mu$η$\mu$ένων δεδο$\mu$ένων & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+Προσαρ$\mu$ογή σκοτεινής λειτουργίας & Χρησι$\mu$οποίησε χρώ$\mu$ατα συστή$\mu$ατος (.primary / Color(.systemGray6)), $\mu$ην τα σκληροκωδικοποιείς \tabularnewline
+Τρέξι$\mu$ο δοκι$\mu$ών & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Κάρτα γρήγορης αναφοράς ανάπτυξης iOS (έκδοση Αυγούστου 2026)\end{center}
+
+\booksection{Συχνές ερωτήσεις (FAQ)}
+
+Ε 1: Δεν έχω Mac — $\mu$πορώ να $\mu$άθω ανάπτυξη iOS;
+
+Μπορείς να $\mu$άθεις τη γλώσσα, όχι ό$\mu$ως να κάνεις την πλήρη ανάπτυξη. Το Swift Playgrounds σε iPad/iPhone καλύπτει όλα τα περιεχό$\mu$ενα του Κεφαλαίου 61· αλλά το Xcode είναι αποκλειστικά macOS, οπότε τελικά χρειάζεσαι ένα Mac. Αν ο προϋπολογισ$\mu$ός είναι περιορισ$\mu$ένος, $\mu$πορείς προς το παρόν να νοικιάσεις cloud Mac ή να αγοράσεις $\mu$εταχειρισ$\mu$ένο Mac mini ως προσωρινή λύση, και να αποφασίσεις την επένδυση αφού $\mu$άθεις τη γλώσσα.
+
+Ε 2: Πόσα κοστίζει η εκ$\mu$άθηση ανάπτυξης iOS;
+
+Στάδιο εκ$\mu$άθησης: 0 κόστος (το Xcode είναι δωρεάν + δωρεάν Apple ID για debugging σε πραγ$\mu$ατική συσκευή). Στάδιο κυκλοφορίας: λογαριασ$\mu$ός προγρα$\mu$$\mu$ατιστή 99 δολάρια/έτος (περίπου 700 γιουάν). Συν την επένδυση σε ένα Mac, αυτό είναι όλο το κόστος. Σε σύγκριση $\mu$ε την απόδοση — στο App Store ακό$\mu$α και ένα $\mu$ικρό εργαλείο έχει πληρώνοντες χρήστες — ο υπολογισ$\mu$ός συ$\mu$φέρει.
+
+Ε 3: SwiftUI ή UIKit — ποιο $\mu$αθαίνω πρώτα;
+
+Το SwiftUI. Το 2026, τα νέα έργα, οι νέοι οδηγοί και οι νέες θέσεις εργασίας βασίζονται κυρίως στο SwiftUI, και όλο το βιβλίο το χρησι$\mu$οποιεί. Το UIKit είναι framework προηγού$\mu$ενης γενιάς, αλλά εξακολουθεί να χρησι$\mu$οποιείται σε πολλά παλιά έργα — όταν εξοικειωθείς $\mu$ε το SwiftUI, συ$\mu$πλήρωσε UIKit ανάλογα $\mu$ε τις ανάγκες (η επίση$\mu$η τεκ$\mu$ηρίωση έχει οδηγούς διαλειτουργικότητας) και θα το πιάσεις γρήγορα. Μην αντιστρέψεις τη σειρά.
+
+Ε 4: Είναι εύκολο να βρεις δουλειά ως προγρα$\mu$$\mu$ατιστής iOS;
+
+Η εικόνα του 2026: οι αρχικές θέσεις που ζητούν $\mu$όνο «να σχεδιάζεις διεπαφές» έχουν σκληρό ανταγωνισ$\mu$ό, αλλά οι προγρα$\mu$$\mu$ατιστές που «γνωρίζουν Swift + SwiftUI και έχουν έργο ανεβασ$\mu$ένο στο κατάστη$\mu$α» εξακολουθούν να ζητούνται. Ο $\mu$έσος $\mu$ισθός στις θέσεις iOS παρα$\mu$ένει εδώ και χρόνια ψηλά ανά$\mu$εσα στα διάφορα tech stacks. Στη φάση της εκ$\mu$άθησης, το καλύτερο βιογραφικό σου είναι το App που έφτιαξες $\mu$όνος σου και υπάρχει στο κατάστη$\mu$α.
+
+Ε 5: Η εφαρ$\mu$ογή $\mu$ου απορρίφθηκε στο review — τι κάνω;
+
+Μην πανικοβλήσαι, είναι πολύ συνηθισ$\mu$ένο — η πιθανότητα απόρριψης στην πρώτη υποβολή δεν είναι $\mu$ικρή. Οι λόγοι απόρριψης της Apple συνήθως είναι γρα$\mu$$\mu$ένοι πολύ συγκεκρι$\mu$ένα (ποια σελίδα, ποιος κανόνας)· διόρθωσε ση$\mu$είο-ση$\mu$είο, απάντησε $\mu$ε εξηγήσεις στο App Store Connect και ξαναπήδα την υποβολή. Οι τρεις συχνότεροι λόγοι απόρριψης: ασαφής εξήγηση χρήσης των δι και ω$\mu$άτων, bugs στη διεπαφή, ασυνέπεια $\mu$εταξύ metadata (στιγ$\mu$ιότυπα/περιγραφή) και πραγ$\mu$ατικής εφαρ$\mu$ογής. Αν ελέγξεις εκ των προτέρων αυτά τα τρία, γλιτώνεις έναν γύρο ανα$\mu$ονής.
+
+\booksection{Συχνά χρησι$\mu$οποιού$\mu$ενες συντο$\mu$εύσεις Xcode — γρήγορη αναφορά}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Ενέργεια} & \textbf{Συντό$\mu$ευση} \tabularnewline
+\hline
+Εκτέλεση / Δοκι$\mu$ή & CmdR / CmdU \tabularnewline
+Άνοιγ$\mu$α προεπισκόπησης κα$\mu$βά & OptionCmd \tabularnewline
+Γρήγορο άνοιγ$\mu$α αρχείου & CmdO \tabularnewline
+Καθολική αναζήτηση & CmdF \tabularnewline
+Ευθυγρά$\mu$$\mu$ιση εσοχών & CtrlI \tabularnewline
+Σχόλιο / αφαίρεση σχολίου & Cmd/ \tabularnewline
+Καθαρισ$\mu$ός cache του build & CmdK \tabularnewline
+Μετάβαση στον ορισ$\mu$ό & Cmd + κλικ \tabularnewline
+Μετονο$\mu$ασία (ασφαλής καθολική αλλαγή ονό$\mu$ατος) & Δεξί κλικ Refactor Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Συχνές συντο$\mu$εύσεις Xcode\end{center}
+
+\begin{tcbinfo}{Μικρή συ$\mu$βουλή: «$\mu$υστηριώδη» σφάλ$\mu$ατα build — καθάρισε πρώτα την cache}
+Στα «παράξενα» φαινό$\mu$ενα τύπου «χθες έτρεχε, σή$\mu$ερα δεν τρέχει», σε 6 στις 7 περιπτώσεις φταίει αλλοίωση της cache του build. Καθάρισέ τη $\mu$ε CmdK και ξαναχτίσε — γιατρεύει τα περισσότερα $\mu$υστηριώδη προβλή$\mu$ατα. Αν επι$\mu$ένει, επανεκκίνησε το Xcode ($\mu$αζί $\mu$ε το Mac), και αν συνεχίζει, «σβήσε τον φάκελο DerivedData» — αυτό είναι το τελικό τρίπλο που περνά από στό$\mu$α σε στό$\mu$α $\mu$εταξύ προγρα$\mu$$\mu$ατιστών iOS.
+
+\end{tcbinfo}
+
+\booksection{Προτεινό$\mu$ενοι πόροι εκ$\mu$άθησης}
+
+\booksection{Προτεινό$\mu$ενοι πόροι εκ$\mu$άθησης}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Τύπος} & \textbf{Πόρος} & \textbf{Γιατί το προτείνου$\mu$ε} \tabularnewline
+\hline
+Επίση$\mu$ο & developer.apple.com & Η επίση$\mu$η τεκ$\mu$ηρίωση της Apple — εκεί $\mu$έσα είναι όλα τα tutorials SwiftUI/Swift· η απόλυτη αυθεντία \tabularnewline
+Επίση$\mu$ο & Τα SwiftUI Tutorials της Apple & Επίση$\mu$ο $\mu$άθη$\mu$α βή$\mu$α-βή$\mu$α, εξαιρετικά φιλικό για αρχάριους \tabularnewline
+Επίση$\mu$ο & Επίση$\mu$ος ιστότοπος της Swift (swift.org) & Επίση$\mu$η τεκ$\mu$ηρίωση της γλώσσας και online playground \tabularnewline
+Κοινότητα & Hacking with Swift & Η δωρεάν βιβλιοθήκη οδηγών του Paul Hudson, $\mu$ε ποιότητα που αναγνωρίζεται ως κορυφαία \tabularnewline
+Κοινότητα & Stack Overflow (ετικέτα swiftui) & Ο πρώτος σταθ$\mu$ός για βοήθεια $\mu$ε σφάλ$\mu$ατα \tabularnewline
+Βίντεο & Επίση$\mu$ο κανάλι Apple Developer (βίντεο WWDC) & Η έγκυρη παρουσίαση των νέων τεχνολογιών κάθε χρόνο \tabularnewline
+Σχεδιασ$\mu$ός & Οδηγός Ανθρώπινης Διεπαφής της Apple (HIG) & Η «βίβλος» του επίση$\mu$ου σχεδιασ$\mu$ού για διεπαφές $\mu$ε άρω$\mu$α Apple \tabularnewline
+Συνοδευτικό & Έβδο$\mu$ο $\mu$έρος «Πρακτικός Προγρα$\mu$$\mu$ατισ$\mu$ός $\mu$ε AI» (Κεφάλαια 37-47) & Η πλήρης $\mu$εθοδολογία για ανάπτυξη iOS $\mu$ε βοήθεια AI \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Λίστα πόρων εκ$\mu$άθησης ανάπτυξης iOS (Αύγουστος 2026)\end{center}
+
+\booksection{Επίλογος: από το πρώτο App στο N-οστό App}
+
+Κοιτάζοντας πίσω: από το «δεν ήξερα τι είναι το SwiftUI» έχεις φτάσει στο να εγκαταστήσεις το Xcode, να $\mu$άθεις Swift, να σχεδιάσεις διεπαφές $\mu$ε SwiftUI, να συνδέσεις την εφαρ$\mu$ογή $\mu$ε βάση δεδο$\mu$ένων και δίκτυο, και $\mu$ετά σε δοκι$\mu$ές, πακετάρισ$\mu$α και ανέβασ$\mu$α στο κατάστη$\mu$α — σε αυτόν τον δρό$\mu$ο έχεις ήδη διανύσει το πιο δύσκολο κο$\mu$$\mu$άτι της διαδρο$\mu$ής από το $\mu$ηδέν στο ένα.
+
+Ο κόσ$\mu$ος της τεχνολογίας αλλάζει γρήγορα: τα frameworks αναβαθ$\mu$ίζονται, τα εργαλεία αντικαθίστανται, και το AI αναλα$\mu$βάνει όλο και περισσότερη δουλειά «πληκτρολόγησης». Ένα ό$\mu$ως δεν περνάει ποτέ από τη $\mu$όδα: η ικανότητά σου να παίρνεις $\mu$ια ασαφή ιδέα, να τη διασπάς σε καθαρά βή$\mu$ατα και να την υλοποιείς βή$\mu$α-βή$\mu$α. Τα εργαλεία είναι ενισχυτές, η σκέψη είναι τα θε$\mu$έλια. Οι ενισχυτές αντικαθίστανται· τα θε$\mu$έλια δεν ταράζονται.
+
+Δεν είσαι πια απλώς "άνθρωπος που χειρίζεται καλά το κινητό". Μπορείς να κάνεις τις ιδέες του $\mu$υαλού σου εφαρ$\mu$ογές που τρέχουν πραγ$\mu$ατικά σε εκατοντάδες εκατο$\mu$$\mu$ύρια iPhone. Από σή$\mu$ερα, δη$\mu$ιουργείς $\mu$ε το πληκτρολόγιο—αυτή είναι η ποίηση του developer iOS.
+
+\booksection{Βιβλιογραφία}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

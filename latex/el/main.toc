@@ -1,0 +1,531 @@
+\babel@toc {greek}{}\relax 
+\babel@toc {greek}{}\relax 
+\contentsline {part}{1. Βασικό τμήμα (Κεφάλαια 0-7)}{2}{part*.2}%
+\contentsline {chapter}{Κεφάλαιο 0: Γεια σας, πριν ξεκινήσου$\mu $ε}{2}{chapter*.3}%
+\contentsline {section}{I. Τι $\mu $πορεί να σας βοηθήσει αυτό το βιβλίο; (Και τι δεν $\mu $πορεί)}{2}{section*.4}%
+\contentsline {section}{II. Επεξήγηση των «συ$\mu $βόλων» $\mu $ας}{2}{section*.4}%
+\contentsline {section}{III. Android και iOS — θα $\mu $ιλήσου$\mu $ε και για τα δύο}{2}{section*.4}%
+\contentsline {section}{IV. Χωρητικότητα κινητού: γιατί όταν αγοράζετε 128GB, τα διαθέσι$\mu $α είναι λιγότερα από 110GB;}{3}{section*.4}%
+\contentsline {section}{V. Το κινητό σας είναι $\mu $ια «βιβλιοθήκη ψηφιακών περιουσιακών στοιχείων»}{3}{Item.3}%
+\contentsline {chapter}{Κεφάλαιο 1: Γεια σου, ο προσωπικός $\mu $ου υπολογιστής}{5}{chapter*.5}%
+\contentsline {section}{I. Το «εσωτερικό» του κινητού: βαθιά ανάλυση}{5}{section*.6}%
+\contentsline {section}{II. Λειτουργικό σύστη$\mu $α: Android VS iOS VS HarmonyOS}{12}{Item.11}%
+\contentsline {section}{III. Πλήρης ανάλυση διεπαφών κινητού}{12}{Item.11}%
+\contentsline {section}{IV. Σύστη$\mu $α προϊόντων κινητών και κανόνες ονο$\mu $ατοθεσίας}{14}{Item.11}%
+\contentsline {section}{V. Baseband και κεραίες: οι ήρωες πίσω από τις επικοινωνίες του κινητού}{15}{Item.11}%
+\contentsline {section}{VI. Πόσους ρόλους παίζει πραγ$\mu $ατικά το κινητό σας;}{16}{Item.11}%
+\contentsline {section}{Παράρτη$\mu $α: Ανάλυση επέκτασης $\mu $νή$\mu $ης σε Android κινητά}{17}{Item.21}%
+\contentsline {section}{Κεφάλαιο 1 Παράρτη$\mu $α: Ειδικό θέ$\mu $α λειτουργικού συστή$\mu $ατος HarmonyOS}{19}{Item.25}%
+\contentsline {chapter}{Κεφάλαιο 2: Οργανώστε το ψηφιακό σας δω$\mu $άτιο — Διαχείριση αρχείων}{23}{chapter*.7}%
+\contentsline {section}{I. Σύστη$\mu $α αποθήκευσης τριών επιπέδων: το ψηφιακό σας αποθετήριο}{23}{section*.8}%
+\contentsline {section}{II. Γνωρίστε τον «διαχειριστή αρχείων»}{23}{Item.32}%
+\contentsline {section}{III. Δο$\mu $ή συστή$\mu $ατος αρχείων: βαθύτερη κατανόηση}{24}{Item.32}%
+\contentsline {section}{IV. Αντίγραφο ασφαλείας και ανάκτηση δεδο$\mu $ένων: ασφαλίστε τα δεδο$\mu $ένα σας}{24}{Item.32}%
+\contentsline {section}{V. Ασφάλεια αρχείων: προστατεύστε την ιδιωτικότητά σας}{25}{Item.35}%
+\contentsline {section}{VI. Δεν επαρκεί ο χώρος; Κάντε καθαρισ$\mu $ό}{25}{Item.35}%
+\contentsline {section}{VII. Πλήρης ανάλυση κοινών $\mu $ορφών αρχείων}{25}{Item.35}%
+\contentsline {section}{VIII. Διαχείριση εικόνων και συστή$\mu $ατος αρχείων: τακτοποιήστε τα περιουσιακά στοιχεία}{27}{Item.35}%
+\contentsline {chapter}{Κεφάλαιο 3: Συνδέστε το κινητό $\mu $ε τη «γρα$\mu $$\mu $ή ζωής» — Δίκτυο}{30}{chapter*.9}%
+\contentsline {section}{Μη $\mu $περδεύεστε στο δίκτυο — διαχωρίστε Wi-Fi και δεδο$\mu $ένα «δρό$\mu $ος» και «αυτοκίνητο»}{30}{section*.10}%
+\contentsline {section}{I. Κινητό δίκτυο (4G/5G) και δεδο$\mu $ένα}{31}{section*.10}%
+\contentsline {section}{II. Wi-Fi: σύνδεση, κοινοποίηση και ασφάλεια}{32}{section*.10}%
+\contentsline {section}{III. Bluetooth: οπαγκόσ$\mu $ιο της βραχύβιας ασύρ$\mu $ατης επικοινωνίας}{34}{section*.10}%
+\contentsline {section}{IV. IR τηλεχειριστήριο control: το κινητό γίνεται τηλεχειριστήριο}{35}{section*.10}%
+\contentsline {section}{V. NFC: η $\mu $αγεία του «αγγίγ$\mu $ατος»}{35}{section*.10}%
+\contentsline {section}{VI. Προσωπικό hotspot: $\mu $ετατρέψτε το κινητό σε Wi-Fi router}{36}{section*.10}%
+\contentsline {chapter}{Κεφάλαιο 4: Εγκατάσταση και διαχείριση App — τα «skill packs» του κινητού}{37}{chapter*.11}%
+\contentsline {section}{I. Επίση$\mu $ο κατάστη$\mu $α: το πιο ασφαλές «σούπερ $\mu $άρκετ εφαρ$\mu $ογών»}{37}{section*.12}%
+\contentsline {section}{II. Καθαρή/προστατευτική λειτουργία: ανοίξτε το «τείχος προστασίας» του κινητού}{37}{section*.12}%
+\contentsline {section}{III. Τρίτων πηγές και «ψηφιακό παράσιτο»: εξαιρετικά υψηλός κίνδυνος!}{38}{section*.12}%
+\contentsline {section}{IV. Εγκατάσταση, ενη$\mu $έρωση, απεγκατάσταση}{39}{Item.47}%
+\contentsline {section}{V. Διαχείριση δι και ω$\mu $άτων: είστε ο «αφεντικό» των App}{39}{Item.47}%
+\contentsline {section}{VI. Στοιχεία σύνθεσης πακέτου εγκατάστασης λογισ$\mu $ικού}{40}{Item.50}%
+\contentsline {chapter}{Κεφάλαιο 5: Κάντε το κινητό να σας κατανοεί — Βασικές ρυθ$\mu $ίσεις}{43}{chapter*.13}%
+\contentsline {section}{I. Ήχος και δόνηση}{43}{section*.14}%
+\contentsline {section}{II. Οθόνη και φωτεινότητα}{43}{section*.14}%
+\contentsline {section}{III. Wallpaper, θέ$\mu $α και επιφάνεια εργασίας}{44}{section*.14}%
+\contentsline {section}{IV. Ρυθ$\mu $ίσεις αποδοτικότητας: κάντε το κινητό «εξωτερικό εγκέφαλο»}{44}{section*.14}%
+\contentsline {section}{V. Προσβασι$\mu $ότητα: η δύνα$\mu $η της τεχνολογίας για καλό}{45}{section*.14}%
+\contentsline {chapter}{Κεφάλαιο 6: Προστατέψτε την ψηφιακή σας ζωή — Ασφάλεια και απόρρητο}{50}{chapter*.15}%
+\contentsline {section}{I. Κλείδω$\mu $α οθόνης: η πρώτη φυσική γρα$\mu $$\mu $ή ά$\mu $υνας}{50}{section*.16}%
+\contentsline {section}{II. «Βρείτε το κινητό $\mu $ου»: το απόλυτο εργαλείο αντικλοπής}{50}{Item.76}%
+\contentsline {section}{III. Σύστη$\mu $α ενη$\mu $έρωση: patches, κλείσι$\mu $ο κενών}{51}{Item.76}%
+\contentsline {section}{IV. Αναγνώριση και πρόληψη τηλεπικοινωνιακής απάτης}{51}{Item.76}%
+\contentsline {section}{V. Αντίσταση στο «doxxing»και κοινωνική $\mu $ηχανική επιθέσεις: κόψτε την αλυσίδα διαρροής απορρήτου}{52}{Item.76}%
+\contentsline {section}{VI. Προστασία απορρήτου: τα δεδο$\mu $ένα σας είναι η περιουσία σας}{53}{Item.76}%
+\contentsline {section}{VII. Checklist «πρώτων βοηθειών» $\mu $ετά απώλεια/κλοπή}{54}{Item.76}%
+\contentsline {section}{VIII. Ασφάλεια SIM και eSIM}{54}{Item.82}%
+\contentsline {chapter}{Κεφάλαιο 7: Πλήρης ανάλυση προηγ$\mu $ένων λειτουργιών}{56}{chapter*.17}%
+\contentsline {section}{I. Δορυφορική επικοινωνία: χωρίς σή$\mu $α$\mu $πορεί επίσης SOS}{56}{section*.18}%
+\contentsline {section}{II. εκτός δικτύου επικοινωνία: νέος τρόπος κοντινής επικοινωνίας}{57}{Item.89}%
+\contentsline {section}{III. Ανίχνευση ατυχή$\mu $ατος: σώζει ζωές σε κρίσι$\mu $ες στιγ$\mu $ές}{57}{Item.89}%
+\contentsline {section}{IV. SparkLink τεχνολογία: επό$\mu $ενη γενιά ασύρ$\mu $ατης σύνδεσης}{58}{Item.92}%
+\contentsline {part}{II. Ενότητα Λογισμικού (Κεφάλαια 8-14)}{61}{part*.19}%
+\contentsline {chapter}{Κεφάλαιο 8: Επικοινωνία: SMS, τηλέφωνο και κοινωνικά δίκτυα}{61}{chapter*.20}%
+\contentsline {section}{Προηγ$\mu $ένες δυνατότητες της εφαρ$\mu $ογής Τηλέφωνο}{61}{section*.21}%
+\contentsline {section}{SMS και iMessage/RCS}{63}{section*.21}%
+\contentsline {section}{WeChat/QQ: διαχείριση των εθνικών εφαρ$\mu $ογών κοινωνικής δικτύωσης}{64}{section*.21}%
+\contentsline {section}{Σύγκριση βιντεοκλήσεων}{65}{Item.100}%
+\contentsline {section}{Email: ρύθ$\mu $ιση και χρήση στο κινητό}{67}{Item.100}%
+\contentsline {chapter}{Κεφάλαιο 9: Κινηνό γραφείο και εκπαίδευση}{69}{chapter*.22}%
+\contentsline {section}{I. Επεξεργασία εγγράφων: επεξεργασία και δη$\mu $ιουργία στην παλά$\mu $η}{69}{section*.23}%
+\contentsline {section}{II. Εφαρ$\mu $ογές ση$\mu $ειώσεων: από τυχαία ση$\mu $ειώ$\mu $ατα σε σύστη$\mu $α}{69}{section*.23}%
+\contentsline {section}{III. Σκάναρισ$\mu $α και OCR: φέρτε τον έντυπο κόσ$\mu $ο στο κινητό}{70}{section*.23}%
+\contentsline {section}{IV. Πώς να επιλέξετε υπηρεσία cloud: δεν υπάρχει η καλύτερη, $\mu $όνο αυτή που σας ταιριάζει}{70}{section*.23}%
+\contentsline {section}{V. Ένα αληθινό σενάριο γραφείου σε κινητό}{70}{section*.23}%
+\contentsline {chapter}{Κεφάλαιο 10: Κινητές πληρω$\mu $ές και υπηρεσίες καθη$\mu $ερινότητας}{72}{chapter*.24}%
+\contentsline {section}{I. Πώς ακριβώς συνδέετε τραπεζική κάρτα;}{72}{section*.25}%
+\contentsline {section}{II. Ο κωδικός πληρω$\mu $ής είναι “όποιος βλέπει εισπράτει”}{72}{Item.122}%
+\contentsline {section}{III. Αυτές οι ρυθ$\mu $ίσεις ασφαλείας, 5 λεπτά και γλιτώνετε φροντίδες}{73}{Item.122}%
+\contentsline {section}{IV. Λεωφορείο/$\mu $ετρό: το κινητό είναι η κάρτα συγκοινωνίας}{73}{Item.122}%
+\contentsline {section}{V. Λογαριασ$\mu $οί, delivery, ταξί}{73}{Item.122}%
+\contentsline {section}{VI. Με το κινητό: ασφάλιση υγείας, κοινωνική, γραφειοκρατία}{73}{Item.122}%
+\contentsline {chapter}{Κεφάλαιο 11: Φωτογραφία και διαχείριση εικόνων}{75}{chapter*.26}%
+\contentsline {section}{I. Μήπως κάνετε και εσείς αυτά τα λάθη;}{75}{section*.27}%
+\contentsline {section}{II. Μικρές συ$\mu $βουλές που ανεβάζουν τα καλά καδρά}{75}{section*.27}%
+\contentsline {section}{III. Λειτουργία πορτρέτου και επαγγελ$\mu $ατική}{76}{section*.27}%
+\contentsline {section}{IV. Μετ-επεξεργασία: όχι υπερβολικά, αρκεί το σωστό $\mu $έτρο}{76}{section*.27}%
+\contentsline {section}{V. Πάρα πολλές φωτογραφίες; στρατηγική οργάνωσης}{76}{section*.27}%
+\contentsline {section}{VI. Screenshot και εγγραφή οθόνης}{77}{section*.27}%
+\contentsline {section}{Κεφάλαιο 11 Παράρτη$\mu $α: γνώσεις επαγγελ$\mu $ατικής απεικόνισης}{77}{Item.131}%
+\contentsline {chapter}{Κεφάλαιο 12: Ήχος, εικόνα, ψυχαγωγία και ανάγνωση}{86}{chapter*.28}%
+\contentsline {section}{I. Ακούγοντας $\mu $ουσική: ποια App και πώς}{86}{section*.29}%
+\contentsline {section}{II. Podcast: ο “σύντροφος των αυτιών” στη διαδρο$\mu $ή}{86}{section*.29}%
+\contentsline {section}{III. Βλέποντας βίντεο: ο σωστός τρόπος, από player σε streaming}{87}{section*.29}%
+\contentsline {section}{IV. Ανάγνωση ebooks: καλό διάβασ$\mu $α και στο κινητό}{87}{section*.29}%
+\contentsline {section}{V. Παιχνίδια στο κινητό: απόλαυση χωρίς να ζορίζετε τη συσκευή}{87}{section*.29}%
+\contentsline {chapter}{Κεφάλαιο 13: Προτάσεις εφαρ$\mu $ογών εργαλείων}{89}{chapter*.30}%
+\contentsline {section}{Εργαλεία παραγωγικότητας: διαχείριση χρόνου και προσοχής}{89}{section*.31}%
+\contentsline {section}{Υγεία και άθληση}{91}{section*.31}%
+\contentsline {section}{Ταξίδια και $\mu $ετακινήσεις}{92}{section*.31}%
+\contentsline {section}{Εισαγωγή στην αυτο$\mu $ατοποίηση}{94}{section*.31}%
+\contentsline {section}{Φυλλο$\mu $ετρητές και $\mu $ηχανές αναζήτησης: η πύλη σου προς την πληροφορία}{94}{section*.31}%
+\contentsline {section}{Χρήσι$\mu $α εργαλεία συστή$\mu $ατος: καθαρισ$\mu $ός, φιλτράρισ$\mu $α ενοχλήσεων και προστασία ασφαλείας}{97}{Item.147}%
+\contentsline {section}{Καιρικές προειδοποιήσεις, προειδοποιήσεις φυσικών καταστροφών και προειδοποίηση σεισ$\mu $ού}{99}{Item.151}%
+\contentsline {section}{Διασύνδεση συσκευών: τηλεχειρισ$\mu $ός υπολογιστή, γρήγορη $\mu $εταφορά και ασφάλεια λογαριασ$\mu $ών}{103}{Item.155}%
+\contentsline {chapter}{Κεφάλαιο 14: Ειδικό θέ$\mu $α διαχειριστών κωδικών}{107}{chapter*.32}%
+\contentsline {section}{I. Γιατί χρειάζεστε διαχειριστή κωδικών;}{107}{section*.33}%
+\contentsline {section}{II. Πώς λειτουργεί ο διαχειριστής κωδικών}{107}{section*.33}%
+\contentsline {section}{Τρίτο: Σύντο$\mu $η εισαγωγή στην κρυπτογράφηση}{107}{Item.163}%
+\contentsline {section}{Τέταρτο: Προτεινό$\mu $ενοι διαχειριστές κωδικών}{108}{Item.167}%
+\contentsline {section}{Πέ$\mu $πτο: Πραγ$\mu $ατική αξιολόγηση ισχύος κωδικού}{109}{Item.167}%
+\contentsline {section}{Έκτο: Passkey — το $\mu $έλλον χωρίς κωδικούς}{110}{Item.173}%
+\contentsline {section}{Έβδο$\mu $ο: Κλειδιά ασφαλείας υλισ$\mu $ικού}{112}{Item.190}%
+\contentsline {section}{Όγδοο: Κοινοποίηση κωδικών οικογένειας/ο$\mu $άδας}{114}{Item.196}%
+\contentsline {section}{Ένατο: Βέλτιστες πρακτικές διαχειριστή κωδικών}{115}{Item.208}%
+\contentsline {part}{III. Ενότητα Προχωρημένων (Κεφάλαια 15-20)}{118}{part*.34}%
+\contentsline {chapter}{Κεφάλαιο 15: Επιστή$\mu $η $\mu $παταρίας και βελτιστοποίηση διάρκειας}{118}{chapter*.35}%
+\contentsline {section}{I. Πώς λειτουργεί η $\mu $παταρία; κύκλοι και υγεία}{118}{section*.36}%
+\contentsline {section}{II. Μυθολογία φόρτισης; Γρήγορη, ασύρ$\mu $ατη και ο χρυσός κανόνας}{118}{section*.36}%
+\contentsline {section}{III. Πλήρης ανάλυση πρωτοκόλλων γρήγορης φόρτισης: γιατί ο φορτιστής δεν φορτίζει γρήγορα;}{119}{section*.36}%
+\contentsline {section}{Τέταρτο: Νέα τεχνολογία $\mu $παταρίας: αρνητικός ηλεκτρόδιος πυριτίου-άνθρακα}{122}{Item.217}%
+\contentsline {section}{Πέ$\mu $πτο: Αυτές είναι οι πραγ$\mu $ατικές συ$\mu $βουλές εξοικονό$\mu $ησης ενέργειας}{122}{Item.217}%
+\contentsline {chapter}{Κεφάλαιο 16: Συστή$\mu $ατα λογαριασ$\mu $ών και υπηρεσίες cloud}{123}{chapter*.37}%
+\contentsline {section}{I. Ο λογαριασ$\mu $ός του κινητού, πόσα πράγ$\mu $ατα ελέγχει;}{123}{section*.38}%
+\contentsline {section}{II. Τρία πράγ$\mu $ατα που πρέπει να κάνετε τώρα}{123}{section*.38}%
+\contentsline {section}{III. iCloud: ο “αέρας” των χρηστών Apple}{124}{Item.223}%
+\contentsline {section}{IV. Συγχρονισ$\mu $ός και backup — $\mu $ην τα $\mu $περδεύετε}{125}{Item.223}%
+\contentsline {section}{V. Ο πίνακας λογαριασ$\mu $ών χρηστών Android}{125}{Item.223}%
+\contentsline {section}{VI. Οικογενειακή κοινή χρήση: ωφεληθείτε και οι δικοί σας}{125}{Item.223}%
+\contentsline {chapter}{Κεφάλαιο 17: Σύνδεση κινητού $\mu $ε άλλες συσκευές}{127}{chapter*.39}%
+\contentsline {section}{I. Συνεργασία $\mu $ε υπολογιστή: κινητό και υπολογιστής δεν είναι πια δύο κόσ$\mu $οι}{127}{section*.40}%
+\contentsline {section}{II. Cast στην τηλεόραση: όλη η οικογένεια}{127}{section*.40}%
+\contentsline {section}{III. Με έξυπνο ρολόι/bracelet: διαχειριστής υγείας στον καρπό}{128}{section*.40}%
+\contentsline {section}{IV. Με το έξυπνο σπίτι: το τηλέφωνο ως ο “κεντρικός διακόπτης” του σπιτιού}{128}{section*.40}%
+\contentsline {section}{V. Μπλουτούθ ακουστικά και ηχεία: η ασύρ$\mu $ατη ελευθερία}{128}{section*.40}%
+\contentsline {section}{VI. Με σύστη$\mu $α αυτοκινήτου: ασφαλής συνεργάτης}{129}{section*.40}%
+\contentsline {section}{VII. Ασφάλεια και ιδιωτικότητα στη διασύνδεση}{129}{section*.40}%
+\contentsline {chapter}{Κεφάλαιο 18: Αντίγραφα ασφαλείας δεδο$\mu $ένων και $\mu $εταφορά}{131}{chapter*.41}%
+\contentsline {section}{I. Πρώτα ξεκαθαρίστε: τι χάνεται αν χαθεί}{131}{section*.42}%
+\contentsline {section}{II. Πλήρες αντίγραφο συσκευής: όλα $\mu $ε $\mu $ια φορά}{131}{section*.42}%
+\contentsline {section}{III. Στρατηγική κατηγοριοποιη$\mu $ένου αντιγράφου}{132}{section*.42}%
+\contentsline {section}{IV. Οδηγός αλλαγής συσκευής: από παλιό σε νέο τηλέφωνο}{133}{section*.42}%
+\contentsline {section}{V. Χρυσός κανόνας αντιγράφων: κανόνας 3-2-1}{133}{section*.42}%
+\contentsline {chapter}{Κεφάλαιο 19: Εντοπισ$\mu $ός βλαβών και αυτοβοήθεια}{135}{chapter*.43}%
+\contentsline {section}{I. Κόλλη$\mu $α και ζέστα$\mu $α — το πιο συχνό ερώτη$\mu $α}{135}{section*.44}%
+\contentsline {section}{II. Κρασάρισ$\mu $α App, $\mu $η απόκριση}{135}{Item.242}%
+\contentsline {section}{III. Δεν φορτίζει ή αργά — ίσως δεν φταίει η $\mu $παταρία}{136}{Item.247}%
+\contentsline {section}{IV. Δίκτυο δεν συνδέεται / Wi-Fi αποσυνδέεται συνεχώς}{136}{Item.247}%
+\contentsline {section}{V. Προβλή$\mu $ατα οθόνης: $\mu $η ανταπόκριση, flicker, κα$\mu $ένα ίχνη}{136}{Item.251}%
+\contentsline {section}{VI. Δεν ανοίγει, κολλάει στο logo — $\mu $ην πανικοβληθείτε}{137}{Item.251}%
+\contentsline {section}{VII. Προβλή$\mu $ατα ήχου: ηχείο χωρίς ήχο, $\mu $ικρή φωνή κλήσης}{137}{Item.251}%
+\contentsline {section}{VIII. Επίση$\mu $η συντήρηση, αποφύγετε τις παγίδες}{137}{Item.251}%
+\contentsline {section}{Κεφάλαιο 20: Λειτουργία προγρα$\mu $$\mu $ατιστή και προχωρη$\mu $ένα δι και ώ$\mu $ατα}{138}{Item.256}%
+\contentsline {section}{Κεφάλαιο 20 Παράρτη$\mu $α: Termux — φορητό περιβάλλον τερ$\mu $ατικού Linux σε Android}{144}{Item.269}%
+\contentsline {part}{IV. Ενότητα Υπέρβασης (Κεφάλαια 21-26)}{149}{part*.45}%
+\contentsline {chapter}{Κεφάλαιο 21: Βαθιά εξερεύνηση κινητών δικτύων και ασφάλειας πληροφοριών}{149}{chapter*.46}%
+\contentsline {section}{I. VPN: ο “αόρατος $\mu $ανδύας” του δικτύου}{149}{section*.47}%
+\contentsline {section}{II. Η “γλυκιά παγίδα” του δη$\mu $όσιου Wi-Fi — πιο επικίνδυνο απ' ό, τι νο$\mu $ίζετε}{149}{section*.47}%
+\contentsline {section}{III. Πώς σας προστατεύει το HTTPS; — SSL/TLS handshake}{150}{section*.47}%
+\contentsline {section}{IV. Ασφάλεια DNS: είναι ασφαλές το «τηλεφωνικό σας βιβλίο δικτύου»;}{150}{Item.281}%
+\contentsline {section}{V. Μήπως η “anonymous browsing” όντως κρύβει;}{151}{Item.281}%
+\contentsline {section}{VI. Ιδιωτικότητα browser: $\mu $ην αφήσετε τον browser να σας πουλήσει}{151}{Item.281}%
+\contentsline {section}{VII. Πρακτική λίστα ασφαλείας: προστασία από τώρα}{152}{Item.281}%
+\contentsline {chapter}{Κεφάλαιο 22: Πώς λειτουργεί η AI στο κινητό}{153}{chapter*.48}%
+\contentsline {section}{I. AI Κά$\mu $ερα: το “darkroom” $\mu $ετά-επεξεργασίας $\mu $πήκε στο κινητό}{153}{section*.49}%
+\contentsline {section}{II. Φωνητικός βοηθός: πώς σας καταλαβαίνει;}{153}{section*.49}%
+\contentsline {section}{III. On-device AI vs. Cloud AI}{153}{Item.294}%
+\contentsline {section}{IV. Μεγάλα $\mu $οντέλα AI και κινητό: ο προσωπικός σας έξυπνος βοηθός}{153}{Item.294}%
+\contentsline {section}{V. Τυπικά σενάρια και πρακτική}{154}{Item.294}%
+\contentsline {section}{VI. Βελτιστοποίηση prompt: ο “τύπος επικοινωνίας”}{155}{Item.294}%
+\contentsline {section}{Όρια AI: Διατηρήστε κρίση}{159}{Item.299}%
+\contentsline {chapter}{Κεφάλαιο 23: Προγρα$\mu $$\mu $ατιστική σκέψη και εισαγωγή στον αυτο$\mu $ατισ$\mu $ό}{160}{chapter*.50}%
+\contentsline {section}{Τι είναι ο αυτο$\mu $ατισ$\mu $ός;}{160}{section*.51}%
+\contentsline {section}{iOS Συντο$\mu $εύσεις}{160}{Item.305}%
+\contentsline {section}{Android αυτο$\mu $ατισ$\mu $ός — Tasker}{161}{Item.305}%
+\contentsline {section}{Καθη$\mu $ερινές εφαρ$\mu $ογές}{161}{Item.305}%
+\contentsline {section}{Συχνά προβλή$\mu $ατα}{162}{Item.305}%
+\contentsline {chapter}{Κεφάλαιο 23 Παράρτη$\mu $α: GitHub}{163}{chapter*.52}%
+\contentsline {section}{Τι είναι GitHub;}{163}{section*.53}%
+\contentsline {section}{Git vs GitHub}{163}{section*.53}%
+\contentsline {section}{Βασικές έννοιες}{163}{section*.53}%
+\contentsline {section}{Εγγραφή: 5 λεπτά}{164}{section*.53}%
+\contentsline {section}{Βασική ροή}{165}{Item.318}%
+\contentsline {section}{Pull Request ροή}{165}{Item.323}%
+\contentsline {section}{Σενάρια}{165}{Item.329}%
+\contentsline {section}{Συ$\mu $βουλές}{166}{Item.329}%
+\contentsline {section}{Σύνοψη}{166}{Item.329}%
+\contentsline {chapter}{Κεφάλαιο 24: Βαθιά ανάλυση δι και ω$\mu $άτων Root και κλειδώ$\mu $ατος Bootloader}{168}{chapter*.54}%
+\contentsline {section}{Bootloader}{168}{section*.55}%
+\contentsline {section}{unlockBL Λεπτο$\mu $ερής διαδικασία ξεκλειδώ$\mu $ατος((παράδειγ$\mu $α: Xiaomi))}{169}{Item.337}%
+\contentsline {section}{Root Πολλαπλές λύσεις}{169}{Item.341}%
+\contentsline {section}{Εισαγωγή στο flashing}{170}{Item.341}%
+\contentsline {section}{Πέ$\mu $πτο: Samsung Knox — $\mu $η αναστρέψι$\mu $ο κόστος BL Unlock}{170}{Item.341}%
+\contentsline {section}{Έκτο: Συχνές ερωτήσεις (Q\& A)}{171}{Item.341}%
+\contentsline {chapter}{Κεφάλαιο 25: Διαχείριση $\mu $εταχειρισ$\mu $ένων κινητών και ψηφιακή κληρονο$\mu $ιά}{172}{chapter*.56}%
+\contentsline {section}{Του παλιού κινητού “Ευθανασία”:Οδηγός ασφαλούς πώλησης ή δωρεάς}{172}{section*.57}%
+\contentsline {section}{Ψηφιακή κληρονο$\mu $ιά: Πού ακου$\mu $πά η κοινωνική σου ψυχή?}{173}{Item.346}%
+\contentsline {section}{Το τελικό στάδιο προστασίας περιβάλλοντος}{176}{Item.357}%
+\contentsline {chapter}{Κεφάλαιο 26: Σύγχρονες τεχνολογικές εξελίξεις στα κινητά}{178}{chapter*.58}%
+\contentsline {section}{Πρώτο: AI τηλέφωνα: $\mu $άρκετινγκ ή πραγ$\mu $ατική αλλαγή;}{178}{section*.59}%
+\contentsline {section}{Δεύτερο: Σύγκριση στρατηγικής AI κατασκευαστών}{178}{section*.59}%
+\contentsline {section}{Τρίτο: Δορυφορική επικοινωνία: από ναυαρχίδα σε $\mu $εσαία $\mu $οντέλα}{179}{section*.59}%
+\contentsline {section}{Τέταρτο: Ωρι$\mu $ότητα foldable: $\mu $πορούν να είναι κύριες συσκευές;}{179}{section*.59}%
+\contentsline {section}{Πέ$\mu $πτο: 6G και Wi-Fi 7: ταχύτητα και όρια επό$\mu $ενης γενιάς}{179}{section*.59}%
+\contentsline {section}{Έκτο: Μπαταρία πυριτίου-άνθρακα: υλική ανακάλυψη στην αυτονο$\mu $ία}{180}{section*.59}%
+\contentsline {section}{Έβδο$\mu $ο: Σύνοψη κεφαλαίου: $\mu $ια φράση ανά τεχνολογία}{180}{section*.59}%
+\contentsline {part}{V. Ενότητα Πρακτικής (Κεφάλαια 27-32)}{182}{part*.60}%
+\contentsline {chapter}{Κεφάλαιο 27: Οι γονείς $\mu $πορούν κι αυτοί — πλήρης οδηγός προσβασι$\mu $ότητας}{182}{chapter*.61}%
+\contentsline {section}{Πρώτα σωστή νοοτροπία: Δεν είναι ότι “οι ηλικιω$\mu $ένοι δεν $\mu $πορούν ”, αλλά ότι “το κινητό δεν είναι καλά σχεδιασ$\mu $ένο”}{182}{section*.62}%
+\contentsline {section}{Πρώτο βή$\mu $α: Ενεργοποιήστε την “Απλή λειτουργία” — το κινητό γίνεται πιο καθαρό}{182}{section*.62}%
+\contentsline {section}{Αν δεν ανοίξετε την Απλή λειτουργία, ρυθ$\mu $ίστε χειροκίνητα — “Μεγάλα γρά$\mu $$\mu $ατα + $\mu $εγάλα εικονίδια” σε πέντε βή$\mu $ατα}{183}{section*.62}%
+\contentsline {section}{Κατά της απάτης — Διαβάστε οπωσδήποτε αυτό το κεφάλαιο $\mu $αζί $\mu $ε τους $\mu $εγαλύτερους}{183}{Item.376}%
+\contentsline {section}{Τηλεξυπηρέτηση — Βοηθήστε τους γονείς σας να ρυθ$\mu $ίσουν το κινητό ακό$\mu $α και από άλλη πόλη}{184}{Item.379}%
+\contentsline {section}{“Προσαρ$\mu $ογή για ηλικιω$\mu $ένους” στο WeChat — Αρκετό να πείτε αυτά στους γονείς σας}{185}{Item.379}%
+\contentsline {section}{Τι γίνεται αν χαθεί το κινητό; Φτιάξτε ένα “σχέδιο έκτακτης ανάγκης” για τους ηλικιω$\mu $ένους}{185}{Item.379}%
+\contentsline {section}{Συ$\mu $βατότητα ασύρ$\mu $ατων ακουστικών και ακουστικών βοηθη$\mu $άτων — Μια παρα$\mu $ελη$\mu $ένη καλή λειτουργία}{185}{Item.382}%
+\contentsline {section}{Λειτουργίες υγείας — Το κινητό δεν είναι $\mu $όνο εργαλείο επικοινωνίας}{186}{Item.382}%
+\contentsline {chapter}{Κεφάλαιο 28: Επενδύστε σωστά τα χρή$\mu $ατά σας για το ιδανικό κινητό — Ο τελικός οδηγός αγοράς}{187}{chapter*.63}%
+\contentsline {section}{Μέθοδος επιλογής σε τρία βή$\mu $ατα: Ανάγκες Προϋπολογισ$\mu $ός Μοντέλο}{187}{section*.64}%
+\contentsline {section}{Πώς να διαβάσετε τις βασικές προδιαγραφές — Δεν χρειάζεται να τα ξέρετε όλα, αρκούν αυτά τα πέντε}{187}{Item.385}%
+\contentsline {section}{Προτάσεις ανά κατηγορία προϋπολογισ$\mu $ού (βάσει αγοράς $\mu $έσου 2026)}{188}{Item.385}%
+\contentsline {section}{Επιλογή ανά σενάριο χρήσης — Ποιες είναι οι ανάγκες σας;}{189}{Item.385}%
+\contentsline {section}{Πέντε παγίδες που είναι εύκολο να πέσετε — ελέγξτε πριν αγοράσετε}{189}{Item.385}%
+\contentsline {section}{Πότε είναι πιο συ$\mu $φέρο να αγοράσετε;}{190}{Item.390}%
+\contentsline {section}{Πώς να διαλέξετε κανάλι αγοράς — Πού είναι αξιόπιστο;}{190}{Item.390}%
+\contentsline {chapter}{Κεφάλαιο 29: Ψηφιακή υγεία — Χτίστε $\mu $ια υγιή σχέση $\mu $ε το κινητό σας}{192}{chapter*.65}%
+\contentsline {section}{Κοιτάξτε πρώτα τον “Χρόνο οθόνης” σας — Οι αριθ$\mu $οί αφυπνίζουν}{192}{section*.66}%
+\contentsline {section}{Ορίστε “όρια χρήσης” στις εφαρ$\mu $ογές — Βάλτε περιοριστή ταχύτητας στον εαυτό σας}{192}{section*.66}%
+\contentsline {section}{Σωστή χρήση της “Μην ενοχλείτε” — Δεν κλείνεις τις ειδοποιήσεις, κλείνεις το άγχος}{192}{Item.398}%
+\contentsline {section}{Η προστασία των $\mu $ατιών δεν εξαρτάται από εφαρ$\mu $ογές αλλά από συνήθειες — ο κανόνας 20-20-20}{193}{Item.398}%
+\contentsline {section}{Οδηγός αυτοβοήθειας για τον τράχηλο των “σκυφτών”}{193}{Item.398}%
+\contentsline {section}{Ύπνος και κινητό — Η συνήθεια που πρέπει να αλλάξει πρώτη στην κρεβατοκά$\mu $αρα}{193}{Item.398}%
+\contentsline {section}{Άγχος πληροφοριών — Μάθετε την “επιλεκτική τύφλωση”}{194}{Item.398}%
+\contentsline {chapter}{Κεφάλαιο 30: Αναζήτηση οθόνης, παρουσιάσεις και διασύνδεση $\mu $ε αυτοκίνητο}{195}{chapter*.67}%
+\contentsline {section}{Τρεις $\mu $εγάλες ο$\mu $άδες ασύρ$\mu $ατης προβολής — Μην τις $\mu $περδεύετε}{195}{section*.68}%
+\contentsline {section}{Ενσύρ$\mu $ατη προβολή — Πιο σταθερή, $\mu $ηδενική καθυστέρηση}{195}{section*.68}%
+\contentsline {section}{Το κινητό γίνεται υπολογιστής — Λειτουργία επιφάνειας εργασίας}{196}{section*.68}%
+\contentsline {section}{Διασύνδεση $\mu $ε αυτοκίνητο — Ο σωστός τρόπος χρήσης κινητού κατά την οδήγηση}{196}{section*.68}%
+\contentsline {section}{Πρακτική προβολή σε αίθουσα συσκέψεων — Τέλος ο πανικός}{196}{section*.68}%
+\contentsline {chapter}{Κεφάλαιο 31: Εισαγωγή στη δη$\mu $ιουργία βίντεο $\mu $ικρής διάρκειας και περιεχο$\mu $ένου}{198}{chapter*.69}%
+\contentsline {section}{Σκεφτείτε πριν τραβήξετε: Σε ποιον απευθύνεστε;}{198}{section*.70}%
+\contentsline {section}{Βασικές ρυθ$\mu $ίσεις λήψης $\mu $ε το κινητό — 5 απαραίτητα πριν ξεκινήσετε}{198}{Item.413}%
+\contentsline {section}{Πέντε τεχνικές κίνησης κά$\mu $ερας — Κάντε την εικόνα να “κινείται”}{198}{Item.418}%
+\contentsline {section}{Εισαγωγή στο $\mu $οντάζ — Το CapCut αρκεί}{199}{Item.418}%
+\contentsline {section}{Η ση$\mu $ασία του εξωφύλλου — Το 70\% αποφασίζει από το εξώφυλλο αν θα το δει}{199}{Item.424}%
+\contentsline {section}{Τρεις αρχές δη$\mu $ιουργίας περιεχο$\mu $ένου}{199}{Item.424}%
+\contentsline {chapter}{Κεφάλαιο 32: Το βιβλίο έκτακτης ανάγκης για την ασφάλεια του κινητού}{201}{chapter*.71}%
+\contentsline {section}{Σενάριο $\mu $ηδέν: σεισ$\mu $ός / ακραία καιρικά φαινό$\mu $ενα — πώς το κινητό σε βοηθά να σωθείς}{201}{section*.72}%
+\contentsline {section}{Σενάριο 1: έχασες το κινητό / σου το έκλεψαν — τα «χρυσά» 30 λεπτά}{202}{Item.439}%
+\contentsline {section}{Σενάριο 2: σου έκαναν απάτη — το χρυσό 72 ωρο}{203}{Item.448}%
+\contentsline {section}{Σενάριο 3: το κινητό πήρε ιό/Trojan — τι κάνεις;}{203}{Item.454}%
+\contentsline {section}{Σενάριο 4: σου έκλεψαν τον λογαριασ$\mu $ό — γρήγορη ανάκτηση ελέγχου}{204}{Item.454}%
+\contentsline {section}{Σενάριο 5: σου έστειλαν εκβιαστικό $\mu $ήνυ$\mu $α — $\mu $ην φοβηθείς, $\mu $ην πληρώσεις}{204}{Item.460}%
+\contentsline {section}{Σενάριο 6: απάτη $\mu $ε AI πρόσωπο / AI φωνή — «το βλέπω» δεν ση$\mu $αίνει πια «το πιστεύω»}{205}{Item.460}%
+\contentsline {section}{Σενάριο 7: επίθεση SIM swap (υποκλοπή SIM) — ο αριθ$\mu $ός σου «κλάπηκε»}{206}{Item.465}%
+\contentsline {part}{6. Τμήμα οράματος και συνδεδεμένων αυτοκινήτων (Κεφάλαια 33-34)}{210}{part*.73}%
+\contentsline {chapter}{Κεφάλαιο 33: Μελλοντικές προοπτικές — Το επό$\mu $ενο βή$\mu $α των κινητών}{210}{chapter*.74}%
+\contentsline {section}{AR/VR και χωρικός υπολογισ$\mu $ός: Ένας “δεύτερης επιφάνειας εργασίας” πέρα από το κινητό}{210}{section*.75}%
+\contentsline {section}{Διεπαφή εγκεφάλου-υπολογιστή: Η σκέψη γίνεται $\mu $έσο αλληλεπίδρασης}{210}{section*.75}%
+\contentsline {section}{Η “απόκρυψη” του κινητού και η νέα ταυτότητα-ακρογωνιαίος λίθος}{210}{section*.75}%
+\contentsline {section}{Ηθικές σκέψεις: Εί$\mu $αστε ε$\mu $είς οι κύριοι του κινητού;}{211}{section*.75}%
+\contentsline {section}{Μείνετε συνδεδε$\mu $ένοι και ανεξάρτητοι — Η φιλοσοφία της ψηφιακής σας ζωής}{211}{section*.75}%
+\contentsline {chapter}{Κεφάλαιο 34: Οδηγός σε βάθος για τη διασύνδεση κινητού-αυτοκινήτου — Η σύγκλιση κινητού και αυτοκινήτου}{213}{chapter*.76}%
+\contentsline {section}{Τρεις κύριοι δρό$\mu $οι διασύνδεσης κινητού-αυτοκινήτου}{213}{section*.77}%
+\contentsline {section}{Σύγκριση CarPlay / Android Auto / HiCar}{213}{section*.77}%
+\contentsline {section}{Cockpit HarmonyOS: Απρόσκοπτη ροή $\mu $εταξύ κινητού και αυτοκινήτου}{214}{section*.77}%
+\contentsline {section}{Τα συστή$\mu $ατα cockpit των νέων κατασκευαστών αυτοκινήτων}{214}{section*.77}%
+\contentsline {section}{Το κινητό ως σύστη$\mu $α αυτοκινήτου — Μπορεί να χρησι$\mu $οποιηθεί;}{214}{section*.77}%
+\contentsline {section}{Πρακτικές συ$\mu $βουλές}{215}{section*.77}%
+\contentsline {part}{παιδιά(35 κεφάλαιο)}{217}{part*.78}%
+\contentsline {chapter}{Κεφάλαιο 35: Παιδιά και κινητά — Εκπαιδευτικός οδηγός για την ψηφιακή εποχή}{217}{chapter*.79}%
+\contentsline {section}{Σε ποια ηλικία να δώσετε κινητό στο παιδί;}{217}{section*.80}%
+\contentsline {section}{Πλήρης οδηγός για τον γονικό έλεγχο}{217}{section*.80}%
+\contentsline {section}{Λειτουργία εφήβων}{218}{section*.80}%
+\contentsline {section}{Εκπαίδευση ψηφιακής παιδείας}{219}{section*.80}%
+\contentsline {section}{Υγιείς συνήθειες χρήσης}{219}{section*.80}%
+\contentsline {section}{Ψηφιακή κληρονο$\mu $ιά και παιδιά}{219}{section*.80}%
+\contentsline {chapter}{Κεφάλαιο 36: Το κινητό και το έξυπνο σπίτι — κάνε το σπίτι έξυπνο}{221}{chapter*.81}%
+\contentsline {section}{Πρωτόκολλα έξυπνου σπιτιού: η επιλογή έχει ση$\mu $ασία}{221}{section*.82}%
+\contentsline {section}{Σύγκριση των τριών $\mu $εγάλων οικοσυστη$\mu $άτων}{222}{section*.82}%
+\contentsline {section}{Το κινητό ως κεντρική $\mu $ονάδα του σπιτιού}{222}{section*.82}%
+\contentsline {section}{Προτεινό$\mu $ενο σετ για αρχή}{223}{section*.82}%
+\contentsline {section}{Ζητή$\mu $ατα ασφαλείας}{224}{section*.82}%
+\contentsline {part}{7. Τμήμα πρακτικού προγραμματισμού με AI (Κεφάλαια 37-47)}{226}{part*.83}%
+\contentsline {chapter}{Κεφάλαιο 37: Παραδειγ$\mu $ατική επανάσταση — από το «γράφω κώδικα» στο «διευθύνω την AI να γράφει κώδικα»}{226}{chapter*.84}%
+\contentsline {section}{Η γέννηση του Vibe Coding: ένα κίνη$\mu $α που πυροδοτήθηκε από $\mu $ία πρόταση}{226}{section*.85}%
+\contentsline {section}{Η εικόνα του 2026: η εποχή του Agentic Engineering}{227}{section*.85}%
+\contentsline {section}{Η βασική αλλαγή αντίληψης: από Coder σε Conductor}{228}{Item.496}%
+\contentsline {section}{Γιατί η $\mu $εθοδολογία είναι πιο ση$\mu $αντική από τα εργαλεία}{228}{Item.496}%
+\contentsline {chapter}{Κεφάλαιο 38: Οι πέντε βασικές αρχές σκέψης στον προγρα$\mu $$\mu $ατισ$\mu $ό $\mu $ε AI}{230}{chapter*.86}%
+\contentsline {section}{Αρχή 1: Think Before Coding (πρώτα σκέψη, $\mu $ετά κώδικας)}{230}{section*.87}%
+\contentsline {section}{Αρχή 2: Simplicity First (πρώτα η απλότητα)}{231}{Item.499}%
+\contentsline {section}{Αρχή 3: Surgical Changes (χειρουργικά ακριβείς αλλαγές)}{232}{Item.499}%
+\contentsline {section}{Αρχή 4: Goal-Driven Execution (εκτέλεση $\mu $ε γνώ$\mu $ονα τον στόχο)}{232}{lstnumber.-2.1}%
+\contentsline {section}{Αρχή 5: Iterate and Verify (επαναλα$\mu $βάνω και επαληθεύω)}{233}{lstnumber.-2.1}%
+\contentsline {section}{Harness Engineering: Agent = Model + Harness}{234}{lstnumber.-2.1}%
+\contentsline {chapter}{Κεφάλαιο 39: Μηχανική συ$\mu $φραζο$\mu $ένων — να καταλαβαίνει η AI τι εννοείς}{236}{chapter*.88}%
+\contentsline {section}{Το αρχείο $\mu $νή$\mu $ης project: η «$\mu $ακροχρόνια $\mu $νή$\mu $η» της AI}{236}{section*.89}%
+\contentsline {section}{Ανάπτυξη $\mu $ε βάση προδιαγραφές (SDD)}{237}{lstnumber.-3.24}%
+\contentsline {section}{Διαχείριση του παραθύρου συ$\mu $φραζο$\mu $ένων}{238}{Item.504}%
+\contentsline {section}{Πρακτικά ση$\mu $εία της $\mu $ηχανικής συ$\mu $φραζο$\mu $ένων}{239}{Item.504}%
+\contentsline {chapter}{Κεφάλαιο 40: Μηχανική απαιτήσεων — από την ιδέα σε οδηγίες που η AI $\mu $πορεί να εκτελέσει}{240}{chapter*.90}%
+\contentsline {section}{Από τη θολή ιδέα στη δο$\mu $η$\mu $ένη απαίτηση}{240}{section*.91}%
+\contentsline {section}{Η τέχνη της στρω$\mu $ατω$\mu $ένης ανάλυσης των απαιτήσεων}{241}{section*.91}%
+\contentsline {section}{Πρότυπο και πρακτική συγγραφής PRD}{241}{Item.513}%
+\contentsline {section}{Στην πράξη: πλήρης πορεία από την ιδέα στο σχέδιο}{242}{lstnumber.-4.29}%
+\contentsline {chapter}{Κεφάλαιο 41: Το πανόρα$\mu $α των εργαλείων προγρα$\mu $$\mu $ατισ$\mu $ού $\mu $ε AI το 2026}{244}{chapter*.92}%
+\contentsline {section}{Τρεις σχολές και πλαίσιο επιλογής}{244}{section*.93}%
+\contentsline {section}{Η σχολή της AI ενσω$\mu $ατω$\mu $ένης σε IDE}{245}{section*.93}%
+\contentsline {section}{Η σχολή των Agents τερ$\mu $ατικού}{245}{section*.93}%
+\contentsline {section}{Η σχολή των cloud Builders}{246}{section*.93}%
+\contentsline {section}{Τα εργαλεία αλλάζουν, η $\mu $εθοδολογία $\mu $ένει}{246}{section*.93}%
+\contentsline {chapter}{Κεφάλαιο 42: Το πανόρα$\mu $α των $\mu $εγάλων $\mu $οντέλων και η πρακτική των API}{248}{chapter*.94}%
+\contentsline {section}{Τα διεθνή κορυφαία $\mu $εγάλα $\mu $οντέλα: το τοπίο της τριάδας}{248}{section*.95}%
+\contentsline {section}{Τα κύρια κινεζικά $\mu $εγάλα $\mu $οντέλα: πλούσια άνθηση}{250}{section*.95}%
+\contentsline {section}{Πλαίσιο λήψης αποφάσεων για την επιλογή $\mu $οντέλου}{253}{section*.95}%
+\contentsline {section}{Εισαγωγή στις κλήσεις API: σύνδεση $\mu $εγάλων $\mu $οντέλων από το $\mu $ηδέν}{254}{section*.95}%
+\contentsline {section}{Οδηγός αγοράς Token Plan}{258}{lstnumber.-8.14}%
+\contentsline {section}{Πρακτική: σύνδεση API $\mu $εγάλου $\mu $οντέλου σε ένα έργο}{261}{Item.522}%
+\contentsline {chapter}{Κεφάλαιο 43: Μηχανική συνο$\mu $ιλίας — τεχνικές διαλόγου για αποδοτική συνεργασία $\mu $ε την AI}{264}{chapter*.96}%
+\contentsline {section}{Στρατηγική στρώσεων στο Prompt}{264}{section*.97}%
+\contentsline {section}{Διάλογος αποσφαλ$\mu $άτωσης: πώς περιγράφεις το σφάλ$\mu $α για να το εντοπίσει γρήγορα η AI}{265}{section*.97}%
+\contentsline {section}{Στρατηγικές επανάληψης: $\mu $ικρά γρήγορα βή$\mu $ατα vs αναδιάρθρωση σε $\mu $εγάλα βή$\mu $ατα}{265}{lstnumber.-11.1}%
+\contentsline {section}{Διαχείριση συ$\mu $φραζο$\mu $ένων σε διάλογο πολλών στροφών}{266}{lstnumber.-11.1}%
+\contentsline {chapter}{Κεφάλαιο 44: Πρακτική από το 0 στο 1 — η πλήρης πορεία ενός ολόκληρου έργου}{268}{chapter*.98}%
+\contentsline {section}{Έργο 1: Μίνι site προσωπικών εργαλείων (για αρχή)}{268}{section*.99}%
+\contentsline {section}{Έργο 2: Full-stack σύστη$\mu $α λογιστικής (ενδιά$\mu $εσο)}{269}{lstnumber.-12.13}%
+\contentsline {section}{Έργο 3: Εφαρ$\mu $ογή $\mu $ε ενίσχυση AI (προχωρη$\mu $ένο)}{271}{lstnumber.-14.18}%
+\contentsline {section}{Γενική λίστα πρακτικής διαδικασίας}{271}{lstnumber.-14.18}%
+\contentsline {chapter}{Κεφάλαιο 45: Διασφάλιση ποιότητας — κάνοντας τον κώδικα της AI αξιόπιστο}{273}{chapter*.100}%
+\contentsline {section}{Ανάπτυξη $\mu $ε οδηγό τα tests: άσε την AI να γράψει τα tests}{273}{section*.101}%
+\contentsline {section}{Τεχνικές επιθεώρησης κώδικα}{274}{lstnumber.-15.14}%
+\contentsline {section}{Έλεγχος εκδόσεων: ο ρόλος του Git στον προγρα$\mu $$\mu $ατισ$\mu $ό $\mu $ε AI}{274}{lstnumber.-15.14}%
+\contentsline {section}{Συχνές παγίδες και οδηγός αποφυγής}{275}{Item.530}%
+\contentsline {chapter}{Κεφάλαιο 46: Ο δρό$\mu $ος της εξέλιξης — από χρήστης σε αρχιτέκτονα}{277}{chapter*.102}%
+\contentsline {section}{Το πρωτόκολλο MCP και η επέκταση $\mu $ε εργαλεία}{277}{section*.103}%
+\contentsline {section}{Προσαρ$\mu $οσ$\mu $ένες ροές εργασίας και Skills}{277}{section*.103}%
+\contentsline {section}{Σχή$\mu $ατα συνεργασίας πολλαπλών Agents}{278}{section*.103}%
+\contentsline {section}{Διαρκής $\mu $άθηση}{278}{section*.103}%
+\contentsline {chapter}{Κεφάλαιο 47: Οδηγός ταχείας αναφοράς και πόροι}{280}{chapter*.104}%
+\contentsline {section}{Κάρτες γρήγορης αναφοράς των $\mu $οντέλων σκέψης}{280}{section*.105}%
+\contentsline {section}{Δέντρο αποφάσεων για την επιλογή εργαλείων}{280}{section*.105}%
+\contentsline {section}{Συχνές ερωτήσεις (FAQ)}{281}{section*.105}%
+\contentsline {section}{Προτεινό$\mu $ενοι πόροι $\mu $άθησης}{282}{section*.105}%
+\contentsline {section}{Επίλογος: εργαλεία στο χέρι, $\mu $εθοδολογία στο $\mu $υαλό}{282}{section*.105}%
+\contentsline {section}{Βιβλιογραφία}{283}{section*.105}%
+\contentsline {part}{8. Τμήμα πρακτικής ανάπτυξης Android (Κεφάλαια 48-58)}{285}{part*.106}%
+\contentsline {chapter}{Κεφάλαιο 48: Γνωρι$\mu $ία $\mu $ε το Android — από το λειτουργικό σύστη$\mu $α στο οικοσύστη$\mu $α ανάπτυξης}{285}{chapter*.107}%
+\contentsline {section}{Οι ρίζες του Android: από το «$\mu $ικρό ρο$\mu $ποτάκι» στο «$\mu $εγαλύτερο σύστη$\mu $α του κόσ$\mu $ου»}{285}{section*.108}%
+\contentsline {section}{Σε ποια γλώσσα γράφεις: Java ή Kotlin;}{286}{section*.108}%
+\contentsline {section}{Πώς γεννιέται $\mu $ια εφαρ$\mu $ογή;}{287}{lstnumber.-17.6}%
+\contentsline {section}{Το τεχνολογικό τοπίο του Android σε $\mu $ια $\mu $ατιά: η «λίστα οπλισ$\mu $ού» σου}{287}{lstnumber.-17.6}%
+\contentsline {section}{Android vs iOS: το πρώτο $\mu $άθη$\mu $α «επιλογής πλευράς» για τον developer}{288}{lstnumber.-17.6}%
+\contentsline {chapter}{Κεφάλαιο 49: Στήσι$\mu $ο του περιβάλλοντος ανάπτυξης — Android Studio και το πρώτο project}{290}{chapter*.109}%
+\contentsline {section}{Εγκατάσταση του Android Studio}{290}{section*.110}%
+\contentsline {section}{Δη$\mu $ιουργία του πρώτου σου project}{290}{Item.542}%
+\contentsline {section}{Τρέξ' το: emulator και πραγ$\mu $ατική συσκευή}{291}{Item.542}%
+\contentsline {section}{Αποσυναρ$\mu $ολόγηση της δο$\mu $ής του project: τι κάνει κάθε αρχείο}{292}{Item.546}%
+\contentsline {section}{Πρώτη δοκι$\mu $ή: άλλαξε το «Hello» $\mu $ε το όνο$\mu $ά σου}{292}{Item.546}%
+\contentsline {section}{Πρώτες βοήθειες σε συχνά σφάλ$\mu $ατα: το «τ$\mu $ή$\mu $α επειγόντων» των δύο πρώτων εβδο$\mu $άδων}{293}{lstnumber.-18.8}%
+\contentsline {chapter}{Κεφάλαιο 50: Kotlin $\mu $ε γρήγορο ρυθ$\mu $ό — η πρώτη γλώσσα της ανάπτυξης Android}{295}{chapter*.111}%
+\contentsline {section}{Μεταβλητές και τύποι: δίνεις όνο$\mu $α στα δεδο$\mu $ένα}{295}{section*.112}%
+\contentsline {section}{Συναρτήσεις: πακετάρεις τη λογική σε «κου$\mu $πί»}{296}{lstnumber.-19.8}%
+\contentsline {section}{Συνθήκες και βρόχοι: το πρόγρα$\mu $$\mu $α «σκέφτεται»}{296}{lstnumber.-20.10}%
+\contentsline {section}{Null safety: το «χαρτί ζωής» του Kotlin}{297}{lstnumber.-21.21}%
+\contentsline {section}{Κλάσεις και αντικεί$\mu $ενα: το «καλούπι» που φτιάχνει «τε$\mu $άχια»}{297}{lstnumber.-22.10}%
+\contentsline {section}{Lambda και συναρτήσεις υψηλότερης τάξης: τα «συντακτικά γλυκά» του Kotlin}{298}{lstnumber.-23.13}%
+\contentsline {section}{Κάρτα σύνταξης γρα$\mu $$\mu $ένη για αρχάριους}{298}{lstnumber.-24.11}%
+\contentsline {chapter}{Κεφάλαιο 51: Ανάπτυξη διεπαφής — πρώτα βή$\mu $ατα $\mu $ε το Jetpack Compose}{300}{chapter*.113}%
+\contentsline {section}{Η ιδέα του Compose: η διεπαφή είναι συνάρτηση}{300}{section*.114}%
+\contentsline {section}{Βασικά components: κεί$\mu $ενο, κου$\mu $πί, πεδίο εισαγωγής, εικόνα}{301}{lstnumber.-25.16}%
+\contentsline {section}{Το τρίπτυχο των layouts: Column, Row, Box}{301}{lstnumber.-26.15}%
+\contentsline {section}{State: η διεπαφή «ζωντανεύει»}{302}{lstnumber.-28.9}%
+\contentsline {section}{Θέ$\mu $α και σκούρο θέ$\mu $α: $\mu $ία ρύθ$\mu $ιση, ισχύ παντού}{303}{lstnumber.-29.12}%
+\contentsline {section}{Preview, animations και Live Edit: τα «superpowers» του Compose}{303}{Item.549}%
+\contentsline {chapter}{Κεφάλαιο 52: Τα τέσσερα βασικά συστατικά και ο κύκλος ζωής του Activity}{305}{chapter*.115}%
+\contentsline {section}{Τα τέσσερα συστατικά: οι «κολόνες και δοκοί» του Android}{305}{section*.116}%
+\contentsline {section}{Ο κύκλος ζωής του Activity: ο πρώτος «χάρτης θησαυρού» του προγρα$\mu $$\mu $ατισ$\mu $ού Android}{305}{section*.116}%
+\contentsline {section}{Intent: το «εισιτήριο» για $\mu $ετακινήσεις $\mu $έσα κι έξω από την εφαρ$\mu $ογή}{306}{section*.116}%
+\contentsline {section}{Πολλαπλές οθόνες και πλοήγηση}{307}{lstnumber.-31.8}%
+\contentsline {section}{Παρε$\mu $πιπτόντως: τι είναι το Fragment (και γιατί δεν το διδάσκει αυτό το βιβλίο)}{307}{lstnumber.-32.13}%
+\contentsline {chapter}{Κεφάλαιο 53: Αποθήκευση δεδο$\mu $ένων και αιτή$\mu $ατα δικτύου}{309}{chapter*.117}%
+\contentsline {section}{Πώς διαλέγεις λύση αποθήκευσης: κοίτα πρώτα αυτόν τον πίνακα}{309}{section*.118}%
+\contentsline {section}{DataStore: για να αποθηκεύεις $\mu $ικρές ρυθ$\mu $ίσεις}{309}{section*.118}%
+\contentsline {section}{Room: να δώσεις στα δεδο$\mu $ένα «αληθινό σπίτι»}{310}{lstnumber.-33.12}%
+\contentsline {section}{Retrofit: να $\mu $ιλάς $\mu $ε τον διακο$\mu $ιστή}{311}{lstnumber.-34.31}%
+\contentsline {section}{Ανάλυση JSON: «$\mu $ετάφρασε» τα δεδο$\mu $ένα δικτύου}{311}{lstnumber.-35.15}%
+\contentsline {section}{Coroutines: η «κοινή γλώσσα» του ταυτοχρονισ$\mu $ού στο Android}{312}{lstnumber.-36.10}%
+\contentsline {section}{Coroutines: η «κοινή γλώσσα» του ταυτοχρονισ$\mu $ού στο Android}{312}{lstnumber.-36.10}%
+\contentsline {chapter}{Κεφάλαιο 54: Έργο 1 — Το βιβλίο εξόδων $\mu $ου (τοπική έκδοση)}{314}{chapter*.119}%
+\contentsline {section}{Σκέψη απαιτήσεων: ρώτα πρώτα πέντε ερωτήσεις}{314}{section*.120}%
+\contentsline {section}{Στρώ$\mu $α δεδο$\mu $ένων: να πάρουν οι «εγγραφές» σπίτι}{314}{section*.120}%
+\contentsline {section}{MVVM: διεπαφή και λογική «χωρίζουν σπίτια»}{315}{lstnumber.-39.17}%
+\contentsline {section}{Διεπαφή: σελίδα λίστας + σελίδα καταχώρησης}{316}{lstnumber.-40.18}%
+\contentsline {section}{Επεξεργασία και διαγραφή: τα δεδο$\mu $ένα να «$\mu $παίνουν και να βγαίνουν»}{317}{lstnumber.-41.31}%
+\contentsline {section}{Αποδοχή: έλεγχος σε τρία επίπεδα + δύο προχωρη$\mu $ένες προκλήσεις}{318}{lstnumber.-42.9}%
+\contentsline {section}{Αποδοχή: έλεγχος σε τρία επίπεδα + δύο προχωρη$\mu $ένες προκλήσεις}{318}{lstnumber.-42.9}%
+\contentsline {chapter}{Κεφάλαιο 55: Έργο 2 — Εφαρ$\mu $ογή αναζήτησης καιρού (δίκτυο)}{319}{chapter*.121}%
+\contentsline {section}{Αίτηση για δωρεάν API καιρού}{319}{section*.122}%
+\contentsline {section}{Στρώ$\mu $α δικτύου: Retrofit + ανάλυση JSON}{319}{Item.554}%
+\contentsline {section}{Τρεις καταστάσεις διεπαφής: φόρτωση / επιτυχία / αποτυχία}{320}{lstnumber.-43.18}%
+\contentsline {section}{Κώδικας διεπαφής στην πράξη: να ζωγραφίσεις τον καιρό}{321}{lstnumber.-44.24}%
+\contentsline {section}{Λεπτο$\mu $έρειες διεπαφής και αλληλεπίδρασης}{322}{lstnumber.-45.25}%
+\contentsline {section}{Λεπτο$\mu $έρειες διεπαφής και αλληλεπίδρασης}{322}{lstnumber.-45.25}%
+\contentsline {chapter}{Κεφάλαιο 56: Γυάλισ$\mu $α και δη$\mu $οσίευση — δοκι$\mu $ές, αποσφαλ$\mu $άτωση και ανάρτηση στο Google Play}{323}{chapter*.123}%
+\contentsline {section}{Τα τρία όπλα της αποσφαλ$\mu $άτωσης: Logcat, breakpoints, επιθεωρητής UI}{323}{section*.124}%
+\contentsline {section}{Δοκι$\mu $ές: ασφάλιση του κώδικα}{323}{section*.124}%
+\contentsline {section}{Υπογραφή και πακετάρισ$\mu $α: να «σφραγίσεις» την εφαρ$\mu $ογή}{324}{lstnumber.-46.19}%
+\contentsline {section}{Η πλήρης διαδικασία ανάρτησης στο Google Play}{325}{Item.557}%
+\contentsline {section}{Πώς φτιάχνεις το υλικό καταστή$\mu $ατος: η πρώτη εντύπωση είναι οι λήψεις}{325}{Item.557}%
+\contentsline {section}{Μικρή λίστα: βελτιστοποίηση απόδοσης και αναφορά καταρρεύσεων}{326}{Item.557}%
+\contentsline {chapter}{Κεφάλαιο 57: Ο δρό$\mu $ος προς τα προχωρη$\mu $ένα — δι και ώ$\mu $ατα, ειδοποιήσεις και σύγχρονη αρχιτεκτονική}{328}{chapter*.125}%
+\contentsline {section}{Δικαιώ$\mu $ατα χρόνου εκτέλεσης: πρώτα χτυπάς την πόρτα, $\mu $ετά $\mu $παίνεις}{328}{section*.126}%
+\contentsline {section}{Ειδοποιήσεις: να λες χρήσι$\mu $α πράγ$\mu $ατα τη σωστή στιγ$\mu $ή}{329}{lstnumber.-47.16}%
+\contentsline {section}{Προχωρη$\mu $ένη αρχιτεκτονική: dependency injection και ενότητες (modules)}{329}{lstnumber.-48.21}%
+\contentsline {section}{Το νέο παιχνίδι του 2026: ανάπτυξη Android $\mu $ε βοήθεια AI}{330}{lstnumber.-48.21}%
+\contentsline {section}{Βελτιστοποίηση απόδοσης Compose και εργαλεία αποσφαλ$\mu $άτωσης}{330}{lstnumber.-48.21}%
+\contentsline {chapter}{Κεφάλαιο 58: Οδηγός γρήγορης αναφοράς και πόροι}{332}{chapter*.127}%
+\contentsline {section}{Κάρτα γρήγορης αναφοράς συνηθισ$\mu $ένου κώδικα}{332}{section*.128}%
+\contentsline {section}{Συχνές ερωτήσεις (FAQ)}{332}{section*.128}%
+\contentsline {section}{Προτεινό$\mu $ενοι πόροι εκ$\mu $άθησης}{333}{section*.128}%
+\contentsline {section}{Γρήγορη αναφορά σε συνηθισ$\mu $ένες εντολές Gradle}{334}{section*.128}%
+\contentsline {section}{Επίλογος: από την πρώτη εφαρ$\mu $ογή στη N-οστή εφαρ$\mu $ογή}{334}{section*.128}%
+\contentsline {section}{Επίλογος: από την πρώτη εφαρ$\mu $ογή στη N-οστή εφαρ$\mu $ογή}{334}{section*.128}%
+\contentsline {section}{Βιβλιογραφία}{335}{section*.128}%
+\contentsline {part}{9. Τμήμα πρακτικής ανάπτυξης iOS (Κεφάλαια 59-69)}{337}{part*.129}%
+\contentsline {chapter}{Κεφάλαιο 59: Γνωρι$\mu $ία $\mu $ε iOS — το οικοσύστη$\mu $α Apple και το οικοσύστη$\mu $α ανάπτυξης}{337}{chapter*.130}%
+\contentsline {section}{Η ιστορία του iOS: ένα κινητό άλλαξε $\mu $ια ολόκληρη βιο$\mu $ηχανία}{337}{section*.131}%
+\contentsline {section}{Β. Ο «κλειστός κήπος»: οι «κανόνες» και τα «κέρδη» του οικοσυστή$\mu $ατος της Apple}{338}{section*.131}%
+\contentsline {section}{Γ. Σε ποια γλώσσα γράφεις: Objective-C ή Swift;}{338}{section*.131}%
+\contentsline {section}{Δ. Πώς γεννιέται $\mu $ια εφαρ$\mu $ογή;}{339}{lstnumber.-50.1}%
+\contentsline {section}{Ε. Η τεχνολογική στοίβα του iOS $\mu $ε τη $\mu $ια $\mu $ατιά: η «λίστα εξοπλισ$\mu $ού» σου}{339}{lstnumber.-50.1}%
+\contentsline {chapter}{Κεφάλαιο 60: Στήσι$\mu $ο περιβάλλοντος ανάπτυξης — Xcode και το πρώτο project}{341}{chapter*.132}%
+\contentsline {section}{Α. Απόκτησε ένα Mac}{341}{section*.133}%
+\contentsline {section}{Β. Εγκατάσταση Xcode}{341}{section*.133}%
+\contentsline {section}{Γ. Δη$\mu $ιούργησε το πρώτο σου project}{342}{Item.570}%
+\contentsline {section}{Δ. Η δο$\mu $ή του project αναλυ$\mu $ένη: τι κάνει κάθε αρχείο}{342}{Item.570}%
+\contentsline {section}{Ε. Δοκι$\mu $ή σε πραγ$\mu $ατική συσκευή: βάλε την εφαρ$\mu $ογή στο iPhone σου}{343}{Item.570}%
+\contentsline {section}{Ε. Τεχνικές ταχύτητας στο Xcode: τα πέντε «πρόσθετα» συντο$\mu $εύσεων για αρχάριους}{343}{Item.570}%
+\contentsline {section}{ΣΤ. Δοκι$\mu $ή σε πραγ$\mu $ατική συσκευή: βάλε την εφαρ$\mu $ογή στο iPhone σου}{344}{Item.570}%
+\contentsline {section}{Ζ. Πρώτες δοκι$\mu $ές + πρώτες βοήθειες για συχνά σφάλ$\mu $ατα}{344}{Item.574}%
+\contentsline {section}{Θ. Πρώτες δοκι$\mu $ές + πρώτες βοήθειες για συχνά σφάλ$\mu $ατα}{344}{Item.574}%
+\contentsline {chapter}{Κεφάλαιο 61: Γρήγορη εκ$\mu $άθηση Swift — η πρώτη γλώσσα της Apple}{346}{chapter*.134}%
+\contentsline {section}{Α. Μεταβλητές και τύποι: δίνου$\mu $ε ονό$\mu $ατα στα δεδο$\mu $ένα}{346}{section*.135}%
+\contentsline {section}{Β. Προαιρετικές τι$\mu $ές (Optional): το «φυλαχτό κατά των crashes» της Swift}{347}{lstnumber.-51.10}%
+\contentsline {section}{Γ. Συναρτήσεις και closures: πακετάρου$\mu $ε τη λογική σε «κου$\mu $πιά»}{347}{lstnumber.-52.15}%
+\contentsline {section}{Δ. Structs και protocols: το σύστη$\mu $α «LEGO» της Swift}{348}{lstnumber.-53.13}%
+\contentsline {section}{Ε. Κάρτα ταχείας αναφοράς σύνταξης για απόλυτους αρχάριους}{349}{lstnumber.-54.16}%
+\contentsline {chapter}{Κεφάλαιο 62: Ανάπτυξη διεπαφής — εισαγωγή στο SwiftUI}{350}{chapter*.136}%
+\contentsline {section}{Α. Η ιδέα του SwiftUI: δηλωτικό, όχι προστακτικό}{350}{section*.137}%
+\contentsline {section}{Β. Βασικές προβολές: κεί$\mu $ενο, κου$\mu $πί, πεδίο εισαγωγής, εικόνα}{351}{lstnumber.-55.15}%
+\contentsline {section}{Γ. Τα τρία εργαλεία διάταξης: VStack, HStack, ZStack}{351}{lstnumber.-55.15}%
+\contentsline {section}{Δ. Κατάσταση και δέσ$\mu $ευση: κάνε τη διεπαφή να «ζωντανεύει»}{352}{lstnumber.-56.14}%
+\contentsline {section}{Ε. Προεπισκόπηση, θέ$\mu $α και κίνηση: τα «πρόσθετα» του SwiftUI}{352}{lstnumber.-58.9}%
+\contentsline {section}{ΣΤ. Ταχεία αναφορά συχνών τροποποιητών: $\mu $ε $\mu $ια σελίδα στο χέρι, δεν αγχώνεσαι $\mu $ε τη διεπαφή}{354}{lstnumber.-59.16}%
+\contentsline {chapter}{Κεφάλαιο 63: Προβολές, κατάσταση και πλοήγηση}{355}{chapter*.138}%
+\contentsline {section}{Α. Η πλήρης εικόνα της ροής δεδο$\mu $ένων στη διαχείριση κατάστασης}{355}{section*.139}%
+\contentsline {section}{Β. NavigationStack: η «στοίβα» της πλοήγησης}{356}{lstnumber.-60.19}%
+\contentsline {section}{Γ. Αναδυό$\mu $ενα παράθυρα και κάτω καρτέλες: sheet και TabView}{357}{lstnumber.-61.24}%
+\contentsline {section}{Δ. List: η «εθνική λίστα» του iOS}{357}{lstnumber.-62.24}%
+\contentsline {section}{Ε. Κύκλος ζωής προγρά$\mu $$\mu $ατος: προσκήνιο και παρασκήνιο}{358}{lstnumber.-63.14}%
+\contentsline {chapter}{Κεφάλαιο 64: Αποθήκευση δεδο$\mu $ένων και κλήσεις δικτύου}{360}{chapter*.140}%
+\contentsline {section}{Α. Πώς διαλέγεις λύση αποθήκευσης: δες πρώτα τον πίνακα}{360}{section*.141}%
+\contentsline {section}{Β. UserDefaults: αποθηκεύεις $\mu $ικρές ρυθ$\mu $ίσεις}{360}{section*.141}%
+\contentsline {section}{Γ. SwiftData: δώσε στα δεδο$\mu $ένα «σπίτι αληθινό»}{361}{lstnumber.-65.10}%
+\contentsline {section}{Δ. Codable: «$\mu $εταφράζεις» το JSON}{362}{lstnumber.-66.46}%
+\contentsline {section}{Ε. URLSession + async/await: $\mu $ιλάς $\mu $ε τον διακο$\mu $ιστή}{363}{lstnumber.-67.14}%
+\contentsline {section}{ΣΤ. Τα σφάλ$\mu $ατα δικτύου θέλουν «βαθ$\mu $ίδες»: $\mu $ην πετάς όλα τα λάθη στον χρήστη}{363}{lstnumber.-68.19}%
+\contentsline {chapter}{Κεφάλαιο 65: Project 1 — Το βιβλίο εξόδων $\mu $ου (τοπική έκδοση)}{365}{chapter*.142}%
+\contentsline {section}{Α. Σκέψη απαιτήσεων: ρώτα πρώτα πέντε ερωτήσεις}{365}{section*.143}%
+\contentsline {section}{Β. Στρώση δεδο$\mu $ένων: δώσε στη «συναλλαγή» ένα σπίτι}{365}{section*.143}%
+\contentsline {section}{Γ. MVVM: η διεπαφή και η λογική «χωρίζουν δρό$\mu $ο»}{366}{lstnumber.-70.18}%
+\contentsline {section}{Δ. Διεπαφή: σελίδα λίστας + παράθυρο καταχώρισης}{367}{lstnumber.-71.30}%
+\contentsline {section}{Ε. Επεξεργασία, διαγραφή και σύνοψη}{368}{lstnumber.-72.31}%
+\contentsline {section}{ΣΤ. Παραλαβή: έλεγχος σε τρία επίπεδα + δύο προχωρη$\mu $ένες προκλήσεις}{369}{lstnumber.-73.13}%
+\contentsline {chapter}{Κεφάλαιο 66: Έργο 2 — Εφαρ$\mu $ογή αναζήτησης καιρού (δικτυακή έκδοση)}{370}{chapter*.144}%
+\contentsline {section}{Απόκτηση δωρεάν API καιρού}{370}{section*.145}%
+\contentsline {section}{Δικτυακό στρώ$\mu $α: URLSession + Codable}{370}{Item.579}%
+\contentsline {section}{Τρεις καταστάσεις διεπαφής: φόρτωση / επιτυχία / αποτυχία}{371}{lstnumber.-74.24}%
+\contentsline {section}{Πρακτικός κώδικας διεπαφής: απεικόνισε τον καιρό}{372}{lstnumber.-75.28}%
+\contentsline {section}{Λεπτο$\mu $έρειες αλληλεπίδρασης και αγαπη$\mu $ένες πόλεις}{373}{lstnumber.-76.20}%
+\contentsline {section}{Πώς κάνεις debugging στα αιτή$\mu $ατα δικτύου: εκτύπωση, καταγραφή κίνησης και προσο$\mu $οίωση αργού δικτύου}{373}{lstnumber.-76.20}%
+\contentsline {chapter}{Κεφάλαιο 67: Γυάλισ$\mu $α και κυκλοφορία — δοκι$\mu $ές, debugging και ανέβασ$\mu $α στο App Store}{375}{chapter*.146}%
+\contentsline {section}{Τα τρία βασικά εργαλεία debugging: print, breakpoints, preview}{375}{section*.147}%
+\contentsline {section}{Δοκι$\mu $ές: ασφάλεια για τον κώδικά σου}{376}{section*.147}%
+\contentsline {section}{Υπογραφή και πακετάρισ$\mu $α: βάλε τη «σφραγίδα» στην εφαρ$\mu $ογή}{376}{lstnumber.-77.20}%
+\contentsline {section}{Η πλήρης διαδικασία ανεβάσ$\mu $ατος στο App Store}{377}{lstnumber.-77.20}%
+\contentsline {section}{Πώς φτιάχνεις το υλικό του καταστή$\mu $ατος: η πρώτη εντύπωση είναι οι λήψεις}{378}{lstnumber.-77.20}%
+\contentsline {section}{Αναφορές crash και $\mu $ικρή λίστα βελτιστοποίησης απόδοσης}{378}{lstnumber.-77.20}%
+\contentsline {chapter}{Κεφάλαιο 68: Ο δρό$\mu $ος προς την πρόοδο — δι και ώ$\mu $ατα, ειδοποιήσεις και σύγχρονη αρχιτεκτονική}{380}{chapter*.148}%
+\contentsline {section}{Δικαιώ$\mu $ατα: πρώτα χτύπα την πόρτα, $\mu $ετά $\mu $πες}{380}{section*.149}%
+\contentsline {section}{Ειδοποιήσεις: να λες χρήσι$\mu $α πράγ$\mu $ατα τη σωστή στιγ$\mu $ή}{381}{lstnumber.-78.21}%
+\contentsline {section}{Προχωρη$\mu $ένη αρχιτεκτονική: βαθύτερα στο MVVM και η δοκι$\mu $ασι$\mu $ότητα}{382}{lstnumber.-79.26}%
+\contentsline {section}{Το νέο παιχνίδι του 2026: ανάπτυξη iOS $\mu $ε βοήθεια AI}{382}{lstnumber.-79.26}%
+\contentsline {section}{Βασικά ση$\mu $εία της ταυτόχρονης εκτέλεσης (concurrency) της Swift: @MainActor και Task}{383}{lstnumber.-79.26}%
+\contentsline {chapter}{Κεφάλαιο 69: Γρήγορη αναφορά και πόροι}{385}{chapter*.150}%
+\contentsline {section}{Κάρτα γρήγορης αναφοράς συνηθισ$\mu $ένου κώδικα}{385}{section*.151}%
+\contentsline {section}{Συχνές ερωτήσεις (FAQ)}{385}{section*.151}%
+\contentsline {section}{Συχνά χρησι$\mu $οποιού$\mu $ενες συντο$\mu $εύσεις Xcode — γρήγορη αναφορά}{386}{section*.151}%
+\contentsline {section}{Προτεινό$\mu $ενοι πόροι εκ$\mu $άθησης}{387}{section*.151}%
+\contentsline {section}{Προτεινό$\mu $ενοι πόροι εκ$\mu $άθησης}{387}{section*.151}%
+\contentsline {section}{Επίλογος: από το πρώτο App στο N-οστό App}{387}{section*.151}%
+\contentsline {section}{Βιβλιογραφία}{388}{section*.151}%
+\contentsline {chapter}{Παράρτη$\mu $α A: Unboxing}{390}{appendix*.153}%
+\contentsline {section}{Unboxing trilogy:}{390}{section*.154}%
+\contentsline {section}{Ενεργοποίηση:}{390}{section*.154}%
+\contentsline {section}{Apps ασφάλεια:}{390}{section*.154}%
+\contentsline {chapter}{Παράρτη$\mu $α B: Μικρές πρακτικές αναφορές}{391}{appendix*.155}%
+\contentsline {chapter}{Παράρτη$\mu $α C: Όροι}{393}{appendix*.156}%
+\contentsline {chapter}{Παράρτη$\mu $α D: Πόροι}{394}{appendix*.157}%
+\contentsline {section}{Επίση$\mu $η υποστήριξη:}{394}{section*.158}%
+\contentsline {section}{Sites+bloggers:}{394}{section*.158}%
+\contentsline {section}{Security checklist:}{394}{section*.158}%
+\contentsline {chapter}{Παράρτη$\mu $α E: Ευχαριστίες και διευκρινίσεις}{395}{appendix*.159}%
+\contentsline {section}{Βασικά ση$\mu $εία της ενη$\mu $έρωσης 1.6}{395}{section*.160}%
+\contentsline {section}{Βασικά ση$\mu $εία της ενη$\mu $έρωσης 1.7}{396}{section*.160}%
+\contentsline {section}{Βασικά ση$\mu $εία της ενη$\mu $έρωσης 1.8}{397}{section*.160}%
+\contentsline {section}{Συ$\mu $πληρώσεις περιεχο$\mu $ένου: χρήσι$\mu $ες εφαρ$\mu $ογές και φιλτράρισ$\mu $α ενοχλητικών κλήσεων}{398}{section*.160}%
+\contentsline {section}{Συ$\mu $πληρώσεις περιεχο$\mu $ένου: προειδοποιήσεις καιρού / φυσικών καταστροφών / σεισ$\mu $ών}{398}{section*.160}%
+\contentsline {section}{Συ$\mu $πληρώσεις περιεχο$\mu $ένου: συνεργασία $\mu $εταξύ συσκευών και εργαλεία αποδοτικότητας}{398}{section*.160}%
+\contentsline {chapter}{Παράρτη$\mu $α F: Ειδικό θέ$\mu $α αγοράς και χρήσης folding οθονών}{400}{appendix*.161}%
+\contentsline {section}{Σε τι στάδιο ανάπτυξης βρίσκονται τώρα τα αναδιπλού$\mu $ενα?}{400}{section*.162}%
+\contentsline {section}{Ποιοι ταιριάζουν να αγοράσουν αναδιπλού$\mu $ενο?}{400}{section*.162}%
+\contentsline {section}{Ση$\mu $εία αγοράς: look at6 Δείκτης}{401}{Item.601}%
+\contentsline {section}{Τεχνικές χρήσης αποκλειστικές για αναδιπλού$\mu $ενα}{402}{Item.606}%
+\contentsline {section}{Ση$\mu $εία συντήρησης: Κάνε το αναδιπλού$\mu $ενο να ζήσει περισσότερο}{403}{Item.606}%
+\contentsline {section}{Των αναδιπλού$\mu $ενων “παγίδες”Και προσδοκίες}{403}{Item.606}%
+\contentsline {section}{Brands (2025)}{404}{Item.606}%
+\contentsline {chapter}{Επίλογος: Μείνετε περίεργοι, $\mu $είνετε ξεκάθαροι}{406}{appendix*.163}%
+\contentsline {chapter}{Παράρτη$\mu $α G: Δείκτης ταχείας αναζήτησης του βιβλίου}{407}{appendix*.164}%
+\contentsline {chapter}{Παράρτη$\mu $α H: Οδικός χάρτης εκδόσεων}{411}{appendix*.165}%

@@ -1,0 +1,154 @@
+\bookchapter{Bab 68: Jalan Menuju Level Lanjut — Izin, Notifikasi, dan Arsitektur Modern}
+
+\chapterintro{Bisa membuat App baru permulaan. Bab ini membahas beberapa rintangan dari “bisa membuat” menuju “membuat dengan baik”: cara mengajukan izin dengan anggun, cara mengirim notifikasi tanpa mengganggu, cara mengangkat arsitektur satu tingkat lagi, dan — pada 2026 — cara menulis kode iOS berdua dengan AI. Semuanya adalah hal yang akan segera kamu temui di proyek nyata.}
+
+\booksection{Izin: Ketuk Pintu Dulu, Baru Masuk}
+
+Kamera, lokasi, kontak, notifikasi… untuk “zona sensitif” ini, iOS mewajibkan App memunculkan dialog permohonan kepada pengguna saat fiturnya dipakai. Aturannya tiga langkah: “deklarasi + permohonan + degradasi anggun”:
+
+\begin{lstlisting}[language=Swift]
+// 1. Deklarasikan teks alasan di Info.plist (kalau tidak, aplikasi langsung crash!)
+// Privacy - Location When In Use Usage Description: "Dipakai untuk melihat cuaca di kota Anda"
+
+// 2. Minta izin saat dipakai
+import CoreLocation
+
+@Observable
+class LocationModel {
+    private let manager = CLLocationManager()
+
+    func request() {
+        switch manager.authorizationStatus {
+        case .notDetermined: manager.requestWhenInUseAuthorization()
+        case .denied, .restricted: /* Arahkan ke pengaturan */
+        default: /* Sudah diizinkan, gas! */
+        }
+    }
+}
+
+// 3. Jika ditolak, degradasi dengan elegan: tampilkan pesan + arahkan ke pengaturan
+// UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+\end{lstlisting}
+
+\begin{tcbwarn}{Perhatian: "Sekali Saja" Izin iOS}
+Dialog izin iOS hanya muncul satu kali — setelah pengguna menolak, tidak akan muncul lagi. Karena itu: ajukan izin pada saat “tepat ketika pengguna hendak memakainya” (bukan memunculkan segudang dialog begitu aplikasi dibuka), dan tulisannya harus menjelaskan kegunaannya. Panduan antarmuka setelah ditolak (“buka lokasi di Pengaturan”) adalah fitur wajib; jangan biarkan pengguna terjebak di jalan buntu.
+
+\end{tcbwarn}
+
+\booksection{Notifikasi: Mengucapkan Hal Berguna di Waktu yang Tepat}
+
+Notifikasi adalah saluran App menjangkau pengguna, sekaligus fitur yang paling mudah “diblokir” oleh mereka. iOS memakai framework UserNotifications, dengan tiga disiplin mengirim notifikasi: hanya kirim yang berguna, biarkan pengguna bisa mematikan, dan jangan mengganggu tengah malam. Pemakaian dasarnya:
+
+\begin{lstlisting}[language=Swift]
+import UserNotifications
+
+// 1. Minta izin notifikasi (popup sekali)
+UNUserNotificationCenter.current()
+    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+        print(granted ? "Diizinkan" : "Ditolak")
+    }
+
+// 2. Menjadwalkan "setiap hari 20:00 pengingat mencatat"
+func scheduleDailyReminder() {
+    let content = UNMutableNotificationContent()
+    content.title = "Pengingat mencatat"
+    content.body = "Hari ini belum mencatat, lho"
+    content.sound = .default
+
+    var comps = DateComponents()
+    comps.hour = 20
+    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+
+    let request = UNNotificationRequest(
+        identifier: "daily-reminder",
+        content: content,
+        trigger: trigger
+    )
+    UNUserNotificationCenter.current().add(request)
+}
+\end{lstlisting}
+
+Perhatian: izin notifikasi iOS juga “hanya muncul sekali”, dan pengguna bisa mematikannya kapan saja di pengaturan sistem — karena itu rasa nilai dari isi notifikasi sangat penting; sekali berlebihan mengirim, pengguna bisa hilang selamanya.
+
+\booksection{Arsitektur Lanjut: Mendalami MVVM dan Keterujian}
+
+Bab 65 sudah memakai MVVM; di sini ditambah tiga poin lanjutan:
+
+\begin{itemize}
+  \item Abstraksi protokol: buat ViewModel bergantung pada protokol (protocol) alih-alih kelas konkret — saat pengujian bisa disuntik "sumber data palsu"; inilah fondasi keterujian;
+  \item Tanggung jawab tunggal: satu ViewModel hanya mengurus satu hal (yang mencatat keuangan tidak mengurus cuaca); kalau fiturnya bertambah, pecah saja;
+  \item Jangan over-engineering: untuk proyek kecil satu orang, "kelas @Observable + abstraksi protokol" sudah cukup. Arsitektur berat seperti VIPER atau Clean Architecture, tunggu saja sampai tim dan kompleksitas datang mengetuk — alat adalah untuk melayani tujuan, bukan untuk dipamerkan.
+\end{itemize}
+
+\begin{tcbinfo}{Tips: "Bonus Ekosistem" SwiftUI}
+Ekosistem iOS masih punya dua cara bermain lanjutan yang “tak ada duanya”: widget (WidgetKit) memungkinkan pengguna melihat informasi tanpa membuka App (“pengeluaran bulan ini” dari buku catatan keuangan ditaruh di layar utama), dan Pintasan (App Intents) memungkinkan pengguna memanggil fiturmu lewat Siri atau otomatisasi. Keduanya punya framework resmi dengan biaya masuk yang tidak tinggi, tetapi menambah pengalaman pengguna secara luar biasa — layak diprioritaskan untuk dibuka di jalan menuju level lanjut.
+
+\end{tcbinfo}
+
+\booksection{Cara Baru 2026: Pengembangan iOS Berbantuan AI}
+
+Pada 2026, AI sudah menyatu dalam alur kerja pengembangan Apple. Kalau ingin mempercepat, kombinasi berikut ini sudah sangat matang:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tahapan} & \textbf{Bagaimana AI membantu} & \textbf{Tugasmu} \tabularnewline
+\hline
+Menulis kode & Pelengkapan kode bawaan Xcode + pembuatan lewat plugin AI pihak ketiga & Deskripsikan kebutuhan dengan jelas, periksa hasilnya \tabularnewline
+Mencari referensi & Serahkan dokumentasi resmi dan pesan error ke AI untuk ditafsirkan & Verifikasi kesimpulan penting kembali ke dokumentasi resmi \tabularnewline
+Menulis tes & Minta AI membuat kasus uji XCTest dalam tiga kategori "normal/batas/eksepsi" & Pastikan kasus uji sesuai makna bisnis \tabularnewline
+Memperbaiki bug & Tempelkan log crash + kode terkait, AI menemukan lokasi dan memperbaiki & Pahami perubahannya, jalankan tes untuk memverifikasi \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Empat skenario pengembangan iOS berbantuan AI\end{center}
+
+Metodologi konkretnya — cara memberi instruksi ke AI, cara menerima hasil kerja, cara menghindari jebakan — dibahas lengkap dalam 11 bab di Bagian 7 buku ini, “Praktik Pemrograman dengan AI” (Bab 37–47). Sangat disarankan membaca keduanya bersamaan: sintaks Swift diserahkan ke bagian ini, kiat kerja sama dengan AI diserahkan ke Bagian 7.
+
+\begin{tcbpractice}{Praktik: Menambahkan "Trio" ke Buku Catatan Keuangan}
+\booksection{Poin Penting Concurrency Swift: @MainActor dan Task}
+
+Sistem concurrency Swift 6 punya dua aturan yang wajib dipahami pemula:
+
+\begin{itemize}
+  \item Antarmuka hanya boleh diperbarui di thread utama: view SwiftUI secara bawaan adalah @MainActor, jadi callback jaringan harus kembali ke thread utama sebelum mengubah state (dengan await MainActor.run \{ ... \} atau menandai ViewModel sebagai @MainActor);
+  \item Tugas asinkron dikelola dengan Task: modifier .task \{ \} otomatis mulai saat view muncul dan otomatis dibatalkan saat view hilang — inilah posisi standar memulai kerja asinkron di SwiftUI; jangan asal menulis Task telanjang di dalam body.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct WeatherScreen: View {
+    @State private var vm = WeatherViewModel()
+
+    var body: some View {
+        Group {
+            switch vm.state {
+            case .loading: ProgressView()
+            case .success(let d): WeatherContent(data: d)
+            case .error(let m): Text(m)
+            }
+        }
+        .task {                       // Mulai begitu muncul, batal begitu hilang
+            await vm.search(city: "Beijing")
+        }
+    }
+}
+\end{lstlisting}
+
+Di balik dua aturan ini ada desain “keamanan data race” Swift 6 — kompiler langsung memberi error saat kamu salah menulis, bukan menunggu App crash baru ketahuan. Error dari kompiler bukan mencari-cari kesalahanmu; ia menahan peluru untukmu.
+
+(1) Tambahkan “pengingat mencatat pukul 20:00 setiap hari” ke buku catatan (izin notifikasi + notifikasi lokal); (2) ubah sumber data ViewModel menjadi abstraksi protokol, dan tulis satu tes unit dengan data palsu yang disuntikkan; (3) tambahkan widget layar utama “pengeluaran bulan ini”. Setelah trio ini selesai, proyekmu sudah tampak seperti “pasukan reguler”.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Tiga langkah izin: deklarasi di Info.plist (terlewat pasti crash), minta saat dipakai, jika ditolak arahkan ke Pengaturan
+  \item Dialog izin iOS hanya muncul sekali: pilih saat "tepat hendak dipakai", tulisannya menjelaskan kegunaan
+  \item Tiga disiplin notifikasi: hanya kirim yang berguna, bisa dimatikan, tidak mengganggu; framework UserNotifications
+  \item MVVM lanjutan: abstraksi protokol (bisa diuji), tanggung jawab tunggal, tidak over-engineering
+  \item Bonus ekosistem: widget WidgetKit + Pintasan App Intents
+  \item Empat skenario berbantuan AI: menulis kode, mencari referensi, menulis tes, memperbaiki bug; metodologinya lihat Bagian 7 (Bab 37–47)
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,149 @@
+\bookchapter{Bab 67: Penggilapan dan Penerbitan — Pengujian, Penyahpepijatan dan Muat Naik ke App Store}
+
+\chapterintro{App sudah siap, kemudian apa? Bab ini menjawab tiga perkara untuk 'dari boleh berjalan' kepada 'boleh dihantar': cara menyahpepiat dan mencari bug dengan cekap, cara menulis ujian untuk mencegah regresi, dan cara menghantar App ke App Store agar boleh dimuat turun oleh seluruh dunia. Muat naik bukan sekadar upacara — ia titik peralihan yang mengubah sesebuah karya menjadi produk.}
+
+\booksection{Tiga senjata penyahpepijatan: print, titik sekatan, pratonton}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Alat} & \textbf{Fungsinya} & \textbf{Cara guna} \tabularnewline
+\hline
+print + konsol & Melihat log pelaksanaan & Dalam kod tulis print("nilai=\textbackslash{}(x)"), lihat output pada konsol bahagian bawah Xcode \tabularnewline
+Penyahpepijatan titik sekatan & Memerintahkan program berhenti pada baris tertentu dan melihat nilai pemboleh ubah & Klik sekali di sebelah nombor baris untuk munculkan penanda biru; pelaksanaan berhenti di situ dan anda boleh melangkah satu demi satu \tabularnewline
+Pratonton SwiftUI + penyahpepijat & Melihat antara muka dan hierarki view secara masa nyata & Kanvas \#Preview + pemeriksa View Hierarchy semasa pelaksanaan \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Tiga senjata penyahpepijatan\end{center}
+
+\begin{tcbinfo}{Petua: Ranap, bagaimana membacanya?}
+Apabila Swift ranap, konsol mencetak 'Fatal error' beserta sebabnya, dan Xcode berhenti pada baris ralat sambil menyerlahkannya. Sejarah ranap pada peranti sebenar boleh dilihat di Xcode Window Organizer Crashes (memerlukan akaun berbayar). Utamakan mencari kata kunci 'ayat pertama sebab ralat + swiftui' — soalan yang tepat barulah mendapat jawapan yang tepat.
+
+\end{tcbinfo}
+
+\booksection{Pengujian: memberikan insurans kepada kod}
+
+Ujian manual tidak boleh diharap — selepas mengubah fungsi ini, fungsi lain rosak secara senyap. Ujian ialah 'ubat penyesalan' sekali gus 'baju tahan peluru'. iOS menggunakan rangka kerja XCTest, terdiri daripada dua jenis:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Lapisan} & \textbf{Menguji apa} & \textbf{Target} & \textbf{Kelajuan} \tabularnewline
+\hline
+Ujian unit & Logik tulen (pengiraan, pengesahan) & MyFirstAppTests & Tahap saat \tabularnewline
+Ujian UI & Tingkah laku antara muka sebenar & MyFirstAppUITests & Tahap minit \tabularnewline
+Ujian manual & Rasa dan pengalaman manusia sebenar & —— & Sentiasa diperlukan \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Lapisan ujian iOS (projek templat sudah menyediakan dua Test Target)\end{center}
+
+\begin{lstlisting}[language=Swift]
+import XCTest
+
+// Pisahkan logik "tukar rentetan jumlah kepada nombor" menjadi fungsi tulen
+func parseAmount(_ input: String) -> Double? {
+    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+          v > 0 else { return nil }
+    return v
+}
+
+final class AmountTests: XCTestCase {
+    func testEmptyInputReturnsNil() {
+        XCTAssertNil(parseAmount(""))
+    }
+    func testNegativeReturnsNil() {
+        XCTAssertNil(parseAmount("-5"))
+    }
+    func testNormalValueParses() {
+        XCTAssertEqual(parseAmount("12.5"), 12.5)
+    }
+}
+\end{lstlisting}
+
+Jalankan ujian: CmdU. Semua hijau barulah ubah kod, hati pun tenang. Pengesahan jumlah dan pengiraan rumusan dalam buku rekod perbelanjaan semuanya harus dilindungi oleh ujian unit.
+
+\booksection{Pemeteraian dan pembungkusan: mencap 'cop' pada App}
+
+Setiap App iOS mesti dimeterai sebelum boleh dipasang — sebagai bukti 'pakej ini datang daripada anda dan tidak diganggu gugat'. Hubungan hierarkinya:
+
+\begin{itemize}
+  \item Peringkat pembelajaran: Apple ID percuma + pemeteraian automatik Xcode (Personal Team), boleh dijalankan pada peranti sebenar, perlu diperbaharui setiap 7 hari;
+  \item Peringkat pengedaran: akaun pembangun berbayar (99 dolar AS/tahun) mengeluarkan sijil dan fail provisioning, barulah boleh dimuat naik dan dipasang secara jangka panjang.
+\end{itemize}
+
+Bungkus: menu Xcode Product Archive (arkib), selepas binaan selesai buka Organizer dan pilih Distribute App pilih App Store Connect muat naik. Pengarkiban mesti menggunakan Generic iOS Device sebagai sasaran (bukan simulator); inilah langkah yang kerap dilupakan oleh pemula.
+
+\textbf{Amaran: sijil hilang = kemas kini terhenti}\par
+
+Sekali sijil pemeteraian dan kunci peribadi hilang, anda tidak dapat lagi menghantar kemas kini kepada App lama — pengguna hanya boleh memasang aplikasi 'baru sepenuhnya'. Buat sandaran sijil dengan betul (eksport .p12 daripada Keychain) dan simpan kata laluannya dengan baik. Nasib baik Apple menyediakan 'pemeteraian automatik' dan pengurusan sijil awan (tanda Automatically manage signing dalam Xcode), yang dapat menghapuskan kebanyakan kesukaran kerja manual.
+
+\booksection{Proses penuh muat naik ke App Store}
+
+Daftar akaun pembangun
+
+Menyiapkan bahan kedai
+
+Muat naik pakej binaan
+
+Isi maklumat privasi dan semakan
+
+Semakan Apple (1-7 hari)
+
+Naik ke kedai
+
+\begin{center}\small\color{gray}Rajah 5: Enam langkah muat naik ke App Store\end{center}
+
+\begin{itemize}
+  \item Pendaftaran: developer.apple.com, akaun individu 99 dolar AS/tahun;
+  \item Bahan: ikon (1024×1024, jangan sertakan sudut bulat — Apple memotongnya sendiri), tangkapan skrin (pelbagai saiz iPhone), huraian, pautan dasar privasi;
+  \item Soal selidik privasi: isytiharkan dengan jujur data apa yang dikumpul — buku rekod perbelanjaan yang tidak bersambung internet boleh menjawab 'tidak mengumpul sebarang data';
+  \item Semakan: penyerahan pertama sering menunggu 1-7 hari; jika ditolak, ubah satu demi satu mengikut 'nota semakan' — sebab penolakan Apple biasanya ditulis dengan sangat khusus, cukup ikut sahaja;
+  \item TestFlight: sebelum muat naik, kirim dahulu versi ujian kepada rakan untuk ujian dalaman (paling banyak 10000 orang), kumpulkan satu pusingan maklum balas barulah serahkan secara rasmi — sungguh berbau profesional.
+\end{itemize}
+
+\booksection{Cara membuat bahan kedai: tanggapan pertama menentukan muat turun}
+
+Halaman kedai ialah etalase yang dilihat pengguna semasa 'membelah kedai'. Tiga bahan menentukan tanggapan pertama:
+
+\begin{itemize}
+  \item Ikon: 1024×1024, jangan gunakan tangkapan skrin sambil lewa. Tiada kemahiran reka bentuk? Jana grafik ringkas dengan alat AI; barulah layak jika masih dapat dikenali dengan sekali pandang walaupun dikecilkan pada skrin utama;
+  \item Tangkapan skrin: sekurang-kurangnya 2 set (saiz utama iPhone), memaparkan senario fungsi paling teras; setiap satu disertai satu ayat teks berbahasa manusia ('catat sekelip mata' sepuluh kali lebih baik daripada 'penyelesaian pengurusan kewangan yang cekap');
+  \item Huraian: ayat pertama menjelaskan 'apa ini + untuk siapa'; jangan menimbunkan 'paling profesional, paling hebat' — kejujuran lebih berkesan daripada pembesaran.
+\end{itemize}
+
+\begin{tcbpractice}{Praktik: 'Hantar' buku rekod perbelanjaan sekali}
+\booksection{Senarai ringkas pelaporan ranap dan pengoptimuman prestasi}
+
+Sebelum App dimuat naik, dua perkara ini wajar meluangkan setengah jam masing-masing:
+
+\booksubsection{Pemantauan ranap}
+
+App tidak ranap semasa anda menguji tidak bermakna ia tidak akan ranap pada telefon pengguna. Apple menyediakan laporan ranap percuma dalam Xcode Organizer (akaun berbayar boleh melihat log ranap peranti sebenar); penyelesaian yang lebih senang ialah menyepadukan SDK pihak ketiga (seperti Firebase Crashlytics). Muat naik tanpa pemantauan ranap sama seperti memandu dengan mata terpejam.
+
+\booksubsection{Empat semakan kendiri prestasi}
+
+\begin{enumerate}
+  \item Senarai guna LazyVStack / List: senarai panjang jangan gunakan VStack biasa secara keras — pemuatan malas ialah pelajaran pertama prestasi;
+  \item Imej jangan paksa masuk imej asal: guna AsyncImage (imej jauh) dan cache sistem; imej asal 5MB cukup untuk membekukan model lama;
+  \item Jangan lakukan kerja berat pada urutan utama: rangkaian dan fail besar semuanya melalui async/await;
+  \item Ukur dengan Instruments: penganalisis prestasi terbina dalam Xcode (Time Profiler, semakan kebocoran memori) — ukur dahulu, kemudian barulah optimumkan, jangan ikut perasaan.
+\end{enumerate}
+
+(1) Tambah 3 ujian unit bagi logik seperti parseAmount (jalankan hijau dengan CmdU); (2) guna titik sekatan untuk menangkap sendiri satu ranap buatan sendiri dan membaikinya; (3) Product Archive bungkus satu pakej, melalui TestFlight jemput rakan untuk ujian dalaman; (4) ada kelapangan? Daftar akaun pembangun dan serahkan buku rekod perbelanjaan untuk dimuat naik benar-benar. Tiga langkah pertama boleh siap malam ini juga.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan bab ini}
+\begin{itemize}
+  \item Tiga senjata penyahpepijatan: log print, titik sekatan, pratonton SwiftUI dan pemeriksa view
+  \item XCTest: ujian unit (CmdU) + ujian UI + ujian manual, sudah disediakan dalam templat
+  \item Pemeteraian: akaun percuma pemeteraian automatik (diperbaharui setiap 7 hari); akaun berbayar diperlukan untuk pengedaran
+  \item Pembungkusan: Generic iOS Device + Archive + Distribute; sijil wajib dibuat sandaran
+  \item Enam langkah muat naik: daftar bahan muat naik soal selidik privasi semakan terbit; ujian dalaman TestFlight dahulu
+\end{itemize}
+
+\end{tcbsummary}

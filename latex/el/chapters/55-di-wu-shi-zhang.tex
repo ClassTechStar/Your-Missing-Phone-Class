@@ -1,0 +1,195 @@
+\bookchapter{Κεφάλαιο 50: Kotlin $\mu$ε γρήγορο ρυθ$\mu$ό — η πρώτη γλώσσα της ανάπτυξης Android}
+
+\chapterintro{Σε αυτό το κεφάλαιο $\mu$αθαίνου$\mu$ε επίση$\mu$α τη γλώσσα. Μην αγχώνεσαι — το Kotlin είναι φη$\mu$ισ$\mu$ένο «φιλικό προς τους αρχάριους», και δεν χρειάζεται να απο$\mu$νη$\mu$ονεύσεις βιβλίο σύνταξης: $\mu$ε το 20\% της σύνταξης, $\mu$πορείς να διαβάσεις και να γράψεις το 80\% της καθη$\mu$ερινής δουλειάς. Την υπόλοιπη θα τη ψάχνεις παράλληλα $\mu$ε τα projects. Κράτα την αρχή $\mu$άθησής $\mu$ας: να καταλαβαίνεις > να απο$\mu$νη$\mu$ονεύεις, να ξέρεις να το χρησι$\mu$οποιείς > να το έχεις τελειοποιήσει.}
+
+\booksection{Μεταβλητές και τύποι: δίνεις όνο$\mu$α στα δεδο$\mu$ένα}
+
+Ένα πρόγρα$\mu$$\mu$α είναι «δεδο$\mu$ένα + λογική». Η $\mu$εταβλητή είναι το όνο$\mu$α $\mu$ε το οποίο αποθηκεύεις τα δεδο$\mu$ένα. Στο Kotlin υπάρχουν δύο τρόποι δήλωσης:
+
+\begin{lstlisting}[language=Kotlin]
+val name = "Γιώργος"        // val: $\mu$εταβλητή $\mu$όνο για ανάγνωση (προτείνεται ως προεπιλογή)
+var age = 18             // var: $\mu$εταβλητή που αλλάζει ($\mu$πορεί να ξαναγραφτεί)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var αλλάζει
+// name = "Νίκος"         // <i class="fas fa-times-circle mr-1"></i> val δεν αλλάζει, σφάλ$\mu$α $\mu$εταγλώττισης
+
+val score: Int = 100     // $\mu$πορείς και να γράψεις τον τύπο ρητά
+val pi = 3.14            // και χωρίς αυτόν γίνεται αυτό$\mu$ατη εξαγωγή
+\end{lstlisting}
+
+Οι συνηθισ$\mu$ένοι τύποι είναι λίγοι — τους θυ$\mu$άσαι $\mu$ε έναν πίνακα:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Τύπος} & \textbf{Τι αποθηκεύει} & \textbf{Παράδειγ$\mu$α} \tabularnewline
+\hline
+Int & Ακέραιος & 42 \tabularnewline
+Double & Δεκαδικός & 3.14 \tabularnewline
+String & Κεί$\mu$ενο & "Γεια σου" \tabularnewline
+Boolean & Αλήθεια/ψέ$\mu$α & true / false \tabularnewline
+List< T> & Μια συλλογή δεδο$\mu$ένων & listOf(1, 2, 3) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Συνηθισ$\mu$ένοι βασικοί τύποι του Kotlin\end{center}
+
+\begin{tcbinfo}{Συ$\mu$βουλή: η αρχή του «val πρώτα»}
+Ο σιδερένιος κανόνας της κοινότητας Kotlin: προεπιλογή val, var $\mu$όνο όταν πραγ$\mu$ατικά χρειάζεται. Αν χρησι$\mu$οποιήσεις var όπου θα έπρεπε val, το IDE θα σε προειδοποιήσει $\mu$ε κίτρινη επισή$\mu$ανση. Αυτή η συνήθεια σε γλιτώνει από $\mu$ια ολόκληρη κατηγορία bugs του τύπου «η $\mu$εταβλητή άλλαξε κατά λάθος» — όσο λιγότερο $\mu$εταβάλλεται ο κώδικας, τόσο πιο εύκολα τον σκέφτεσαι λογικά.
+
+\end{tcbinfo}
+
+\booksection{Συναρτήσεις: πακετάρεις τη λογική σε «κου$\mu$πί»}
+
+Η συνάρτηση είναι ένα κο$\mu$$\mu$άτι λογικής $\mu$ε όνο$\mu$α, σαν κου$\mu$πί στο τηλεχειριστήριο — το πατάς (την καλείς) και εκτελεί $\mu$ια σειρά ενεργειών. Στο Kotlin δηλώνεται $\mu$ε fun:
+
+\begin{lstlisting}[language=Kotlin]
+fun greet(name: String): String {
+    return "Γεια σου, $name!"     // το σύ$\mu$βολο $ εισάγει τη $\mu$εταβλητή στο αλφαριθ$\mu$ητικό
+}
+
+println(greet("Γιώργος"))        // Έξοδος: Γεια σου, Γιώργο!
+
+// Μονογρα$\mu$$\mu$ικές συναρτήσεις γράφονται ως εκφράσεις
+fun add(a: Int, b: Int) = a + b
+
+println(add(3, 5))            // Έξοδος: 8
+\end{lstlisting}
+
+Μερικά κλειδιά: οι παρά$\mu$ετροι γράφονται $\mu$έσα σε παρένθεση (πρώτα το όνο$\mu$α, $\mu$ετά ο τύπος, χωρισ$\mu$ένα $\mu$ε άνω-κάτω τελεία)· ο τύπος επιστροφής γράφεται $\mu$ετά την παρένθεση· και το string template \$όνο$\mu$α Μεταβλητής είναι η ε$\mu$βλη$\mu$ατική ευκολία του Kotlin — δεν χρειάζεται να «κολλάς» string και $\mu$εταβλητές $\mu$ε + όπως στη Java.
+
+\booksection{Συνθήκες και βρόχοι: το πρόγρα$\mu$$\mu$α «σκέφτεται»}
+
+Η «ευφυΐα» του προγρά$\mu$$\mu$ατος προέρχεται από δύο πράγ$\mu$ατα: να κρίνει (if/when) και να επαναλα$\mu$βάνει (for/while).
+
+\begin{lstlisting}[language=Kotlin]
+// Έλεγχος: if / else
+val age = 17
+if (age >= 18) {
+    println("Ενήλικας")
+} else {
+    println("Ανήλικος")
+}
+
+// Πολλαπλοί κλάδοι: when (εκατοντάδες φορές πιο βολικό από το switch)
+val score = 85
+val level = when {
+    score >= 90 -> "Άριστα"
+    score >= 60 -> "Βάση"
+    else -> "Συνέχεια, $\mu$προστά!"
+}
+
+// Επανάληψη: βρόχος for
+val fruits = listOf("$\mu$ήλο", "$\mu$πανάνα", "πορτοκάλι")
+for (fruit in fruits) {
+    println("Μου αρέσει να τρώω$fruit")
+}
+\end{lstlisting}
+
+Το when είναι ο πιο συνηθισ$\mu$ένος τρόπος πολλαπλής διακλάδωσης στο Kotlin — στην ανάπτυξη Android θα το χρησι$\mu$οποιείς καθη$\mu$ερινά (π.χ. να ε$\mu$φανίζεις διαφορετική οθόνη ανάλογα $\mu$ε την κατάσταση).
+
+\booksection{Null safety: το «χαρτί ζωής» του Kotlin}
+
+Το πιο διάση$\mu$ο bug της εποχής Java λέγεται NullPointerException («εξαίρεση κενού δείκτη») — το πρόγρα$\mu$$\mu$α προσπελάζει κάτι που «δεν υπάρχει» και καταρρέει α$\mu$έσως. Σύ$\mu$φωνα $\mu$ε τα στατιστικά, είναι χρόνια πρώτο στη λίστα των crashes του Android. Το Kotlin το λύνει σε επίπεδο γλώσσας: προεπιλεγ$\mu$ένα δεν επιτρέπει null τι$\mu$ές.
+
+\begin{lstlisting}[language=Kotlin]
+var name: String = "Γιώργος"   // Συνηθισ$\mu$ένος τύπος: ποτέ null
+// name = null                // <i class="fas fa-times-circle mr-1"></i> Σε στα$\mu$ατάει κατευθείαν ο compiler
+
+var nickname: String? = null // $\mu$ε ερωτη$\mu$ατικό: επιτρέπεται null
+nickname = "Μπα$\mu$πής"
+
+// Με nullable type, η διαχείριση πρέπει να είναι ασφαλής:
+println(nickname?.length)    // safe call: null επιστρέφει null, χωρίς κρασ
+val len = nickname?.length ?: 0   // Elvis operator: σε null δίνει προεπιλογή
+println(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{Προσοχή: $\mu$ην $\mu$περδέψεις το ? $\mu$ε το ?}
+Το String? ση$\mu$αίνει «επιτρέπεται null», ενώ το a ?: b ση$\mu$αίνει «αν το a είναι null, χρησι$\mu$οποίησε το b» ($\mu$οιάζει $\mu$ε τα $\mu$αλλιά του Elvis, γι' αυτό λέγεται τελεστής Elvis). Όταν ξεκινάς και βλέπεις από τον compiler σφάλ$\mu$α που αφορά null, κατά τα δύο τρίτα έχεις ξεχάσει να χειριστείς nullable τύπο — και αυτό ακριβώς είναι η γλώσσα που σε προστατεύει.
+
+\end{tcbwarn}
+
+\booksection{Κλάσεις και αντικεί$\mu$ενα: το «καλούπι» που φτιάχνει «τε$\mu$άχια»}
+
+Η κλάση είναι το «καλούπι» και το αντικεί$\mu$ενο το «προϊόν» που βγαίνει από αυτό. Στο Android όλα — σελίδες, κου$\mu$πιά, δεδο$\mu$ένα — είναι αντικεί$\mu$ενα. Στο Kotlin υπάρχει ένα εργαλείο-θαύ$\mu$α, το data class (κλάση δεδο$\mu$ένων), ειδικό για «να κουβαλάει δεδο$\mu$ένα»: $\mu$ια γρα$\mu$$\mu$ή αναπληρώνει δεκάδες στη Java:
+
+\begin{lstlisting}[language=Kotlin]
+// Συνηθισ$\mu$ένη κλάση: καλούπι
+class Dog(val name: String) {
+    fun bark() = println("$name γαβ γαβ!")
+}
+
+val dog = Dog("Λάκης")      // Δη$\mu$ιουργία αντικει$\mu$ένου
+dog.bark()                 // Λάκης γαβ γαβ!
+
+// data class: κουτί $\mu$ε δεδο$\mu$ένα (έτοι$\mu$α equals/copy κ.λπ.)
+data class User(val id: Int, val name: String, val email: String)
+
+val me = User(1, "Γιώργος", "zhangsan@example.com")
+val twin = me.copy(name = "Γιώργος Παπαδόπουλος")   // Αντιγραφή $\mu$ε αλλαγή ενός πεδίου
+\end{lstlisting}
+
+Αργότερα, όταν φτιάξεις λογιστήριο εξόδων, κάθε εγγραφή θα είναι ένα data class: data class Record(val amount: Double, val category: String, val date: String). Βλέπεις; Μπορείς ήδη να γράψεις τη δο$\mu$ή κώδικα ενός πραγ$\mu$ατικού project.
+
+\booksection{Lambda και συναρτήσεις υψηλότερης τάξης: τα «συντακτικά γλυκά» του Kotlin}
+
+Στον κώδικα Android θα βλέπεις συνέχεια \{ ... \} — «συναρτήσεις χωρίς όνο$\mu$α», που λέγονται lambda (ανώνυ$\mu$ες συναρτήσεις). Το onClick = \{ count++ \} του Button είναι $\mu$ια lambda — «πακετάρει» το «τι θα γίνει $\mu$ετά το κλικ» και το παραδίδει στο κου$\mu$πί.
+
+\begin{lstlisting}[language=Kotlin]
+// Συνηθισ$\mu$ένος τρόπος: ορίζου$\mu$ε επώνυ$\mu$η συνάρτηση και $\mu$ετά την περνά$\mu$ε
+fun double(x: Int) = x * 2
+val result = listOf(1, 2, 3).map(::double)
+
+// Με lambda: ορισ$\mu$ός επί τόπου, κο$\mu$ψά και ά$\mu$εσα
+val result2 = listOf(1, 2, 3).map { it * 2 }   // it = τρέχον στοιχείο
+
+// Φίλτρο + $\mu$ετασχη$\mu$ατισ$\mu$ός σε σύνδεση (πολύ συνηθισ$\mu$ένο σε πραγ$\mu$ατικά έργα)
+val bills = listOf(12.5, 88.0, 5.0, 200.0)
+val bigBills = bills.filter { it > 50 }.sorted()
+// [88.0, 200.0]—"τα τι$\mu$ολόγια άνω των 50, ταξινο$\mu$η$\mu$ένα"
+\end{lstlisting}
+
+Κράτα $\mu$ερικές συχνές «συνδυαστικές κινήσεις» για συλλογές: filter (φιλτράρισ$\mu$α), map ($\mu$ετασχη$\mu$ατισ$\mu$ός), sorted (ταξινό$\mu$ηση), sum (άθροισ$\mu$α). Το 90\% της επεξεργασίας λιστών που θα κάνεις στο $\mu$έλλον είναι συνδυασ$\mu$ός αυτών των τεσσάρων. Η φιλοσοφία του Kotlin είναι: ό, τι λέγεται $\mu$ε $\mu$ία φράση, $\mu$ην το γράφεις $\mu$ε πέντε.
+
+\booksection{Κάρτα σύνταξης γρα$\mu$$\mu$ένη για αρχάριους}
+
+Μην προσπαθείς να απο$\mu$νη$\mu$ονεύσεις όλη τη σύνταξη σε $\mu$ια $\mu$έρα. Κράτα την κάρτα και συ$\mu$βουλεύεσαι την όσο γράφεις κώδικα — σε δύο εβδο$\mu$άδες θα σου είναι φυσική:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Τι θες να κάνεις} & \textbf{Πώς γράφεται} \tabularnewline
+\hline
+Δήλωση $\mu$εταβλητής $\mu$όνο για ανάγνωση & \texttt{val x = 1} \tabularnewline
+Δήλωση $\mu$εταβλητής που αλλάζει & \texttt{var x = 1} \tabularnewline
+Δήλωση συνάρτησης & fun όνο$\mu$α(παρά$\mu$ετροι): τύπος Επιστροφής \{ ... \} \tabularnewline
+Συνθήκη & if (συνθήκη) \{...\} else \{...\} \tabularnewline
+Πολλαπλή διακλάδωση & when \{ συνθήκη -> αποτέλεσ$\mu$α \} \tabularnewline
+Επανάληψη & for (x in λίστα) \{ ... \} \tabularnewline
+Ένωση string & "Γεια σου, \$name" \tabularnewline
+Χειρισ$\mu$ός nullable τι$\mu$ών & \texttt{x?.\allowbreak length ?: 0} \tabularnewline
+Δήλωση data class & \texttt{data class X(val a: Int, val b: String)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Κάρτα γρήγορης αναφοράς σύνταξης Kotlin (για αρχάριους)\end{center}
+
+\begin{tcbpractice}{Σειρά σου: παίξε 10 λεπτά Kotlin χωρίς να εγκαταστήσεις τίποτα}
+Άνοιξε το play.kotlinlang.org στον browser (το επίση$\mu$ο online playground του Kotlin), επικόλλησε και τρέξε κάθε κο$\mu$$\mu$άτι κώδικα του κεφαλαίου, άλλαξε νού$\mu$ερα και κεί$\mu$ενα και δες πώς αλλάζει η έξοδος. Αυτά τα 10 λεπτά «πρώτα παίξε, $\mu$ετά $\mu$άθε» θα σου κάνουν την εκκίνηση στο κεφάλαιο 51 πολύ πιο εύκολη.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Σύνοψη κεφαλαίου}
+\begin{itemize}
+  \item val πρώτα, var $\mu$ε φειδώ· οι τύποι $\mu$πορούν να συνάγονται αυτό$\mu$ατα, αλλά $\mu$πορείς και να τους δηλώσεις ρητά $\mu$ετά το άνω-κάτω τελεία
+  \item Συνάρτηση = πακεταρισ$\mu$ένη λογική· το string template \$ είναι η ε$\mu$βλη$\mu$ατική ευκολία
+  \item if/when για κρίσεις, for για βρόχους· το when είναι ο «πανκαλωτήρας» της ανάπτυξης Android
+  \item Το null safety είναι το «χαρτί ζωής» του Kotlin: ο κανονικός τύπος δεν δέχεται null, ο nullable τύπος χρειάζεται υποχρεωτικά ? / ?:
+  \item Το data class είναι το κουτί για τα δεδο$\mu$ένα: ένα πεδίο ανά γρα$\mu$$\mu$ή, καθη$\mu$ερινό εργαλείο σε πραγ$\mu$ατικά projects
+  \item 20\% σύνταξη κάνει το 80\% της δουλειάς: πρώτα να ξέρεις να το χρησι$\mu$οποιείς, $\mu$ετά να το εξειδικεύεις
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,393 @@
+\bookchapter{Capitolo 14: Gestione delle password}
+
+\chapterintro{Nell'era digitale, la password è la chiave di casa. Ma se le chiavi sono troppe e troppo complesse, cosa fare? Il gestore di password è il tuo “maggiordomo universale delle chiavi”.}
+
+\booksection{Perché serve un gestore di password?}
+
+Oggi una persona ha in media decine o centinaia di account online. Se si usa la stessa password per tutti, quando un sito viene violato tutti gli account sono a rischio. Se invece si usano password complesse diverse per ogni account, è impossibile ricordarle tutte.
+
+Il gestore di password risolve questo dilemma: basta ricordare una sola password principale e lui ricorderà tutte le altre al posto tuo.
+
+\booksection{Come funziona un gestore di password}
+
+\begin{enumerate}
+  \item \textbf{Archiviazione cifrata}: tutte le password sono memorizzate con crittografia ad alta intensità; solo tu puoi decifrarle.
+  \item \textbf{Password principale}: imposti una password principale per sbloccare la cassaforte delle password. La password principale non è archiviata sul server.
+  \item \textbf{Compilazione automatica}: nelle pagine di login di siti o App, il gestore compila automaticamente username e password.
+  \item \textbf{Generazione di password}: può generare password casuali e complesse per aumentare la sicurezza.
+\end{enumerate}
+
+\booksection{Cenni sui principi di crittografia}
+
+Capire i principi di crittografia del gestore di password aiuta a giudicare se un provider sia affidabile. Di seguito una spiegazione, in linguaggio accessibile, dei concetti chiave.
+
+\booksubsection{Crittografia AES-256}
+
+AES (Advanced Encryption Standard) è uno standard di crittografia simmetrica riconosciuto dal NIST (National Institute of Standards and Technology) ed è ampiamente usato da banche, esercito e governi. “256” indica una chiave di 256 bit: per forzarla bruta occorrerebbe, in teoria, un tempo superiore all'età dell'universo. I principali gestori di password (1Password, Bitwarden, KeePass ecc.) usano AES-256 per cifrare la tua cassaforte.
+
+\booksubsection{Architettura Zero-Knowledge}
+
+“Zero-Knowledge” non significa che il provider non archivi nulla, ma che\textbf{crittografia e decrittografia avvengono localmente sul tuo dispositivo, e il server conserva solo il testo cifrato}. Il flusso:
+
+\begin{enumerate}
+  \item Inserisci la password principale nel client.
+  \item Il client deriva da essa una chiave di crittografia (questo passaggio avviene sul tuo telefono/computer).
+  \item Solo il testo cifrato viene caricato sul server.
+  \item Al login successivo, il server scarica il testo cifrato e il client lo decifra di nuovo con la password principale.
+\end{enumerate}
+
+Punto chiave:\textbf{la password principale non lascia mai il tuo dispositivo}e non è presente sul server. Anche se il provider venisse violato, l'hacker otterrebbe solo un mucchio di testo cifrato indecifrabile, a meno che non riesca a indovinare la tua password principale.
+
+\begin{tcbinfo}{Perché "Zero-Knowledge" significa che nemmeno il provider vede le tue password?}
+Perché la chiave di decrittazione è derivata dalla tua password principale, che esiste solo nella tua testa ed è usata solo sul tuo dispositivo locale. Sul server del provider non c'è né la password principale né la chiave di decrittazione, ma solo il testo cifrato. Ecco perché provider seri come Bitwarden e 1Password dichiarano esplicitamente “non possiamo vedere le tue password nemmeno noi”: non è che non vogliano, è che tecnicamente non possono.
+
+\end{tcbinfo}
+
+\booksubsection{Funzioni di derivazione delle chiavi: PBKDF2 e Argon2}
+
+La password principale non può essere usata direttamente come chiave di crittografia: deve essere elaborata da una “funzione di derivazione delle chiavi”. Il ruolo di questa funzione è\textbf{rendere intenzionalmente lento il calcolo}, portando il costo di un attacco brute-force a livelli irrealizzabili.
+
+\begin{itemize}
+  \item \textbf{PBKDF2}: standard storico, usato da iCloud Keychain, Bitwarden, LastPass e altri. Rallenta il cracking tramite iterazione ripetuta (in genere oltre 100.000 volte) dell'hash.
+  \item \textbf{Argon2}: vincitore del Password Hashing Competition 2015, più moderno di PBKDF2. Oltre al "consumo di calcolo" introduce un "consumo di memoria", rendendo difficile l'accelerazione anche con hardware dedicato come GPU/ASIC. Già supportato da Bitwarden, KeePassXC e altri.
+\end{itemize}
+
+Più alto è il numero di iterazioni, maggiore è la sicurezza, ma più lento lo sblocco. I provider seri pubblicano l'algoritmo di derivazione usato e il numero di iterazioni, per consentire l'audit da parte della comunità di sicurezza.
+
+\booksubsection{Caso di studio: violazione dei dati di LastPass nel 2022}
+
+Nell'agosto 2022 lo storico gestore LastPass ha annunciato la violazione del proprio ambiente di sviluppo; a novembre ha rivelato che gli aggressori avevano preso i backup delle casseforti degli utenti (testo cifrato). Le lezioni chiave dell'evento:
+
+\begin{itemize}
+  \item \textbf{L'architettura Zero-Knowledge ha tenuto la linea}: poiché la cassaforte è cifrata, l'hacker ha ottenuto testo cifrato ma non riesce a decifrarlo, a condizione che la password principale dell'utente sia sufficientemente forte.
+  \item \textbf{Gli utenti con password principale debole sono i più a rischio}: l'hacker può tentare un brute-force offline della password principale debole, quindi chi usa password deboli o riutilizzate è di fronte a un rischio concreto.
+  \item \textbf{Anche i metadati sono trapelati}: sebbene il contenuto delle password sia cifrato, metadati come gli URL dei siti e le note potrebbero non esserlo, esponendo quali servizi l'utente utilizza.
+\end{itemize}
+
+\begin{tcbwarn}{Cosa imparare dal caso LastPass}
+Primo: la password principale deve essere lunga e unica (consigliato almeno 16 caratteri, con maiuscole, minuscole, numeri e simboli). Secondo: preferire provider che supportino Argon2id con un alto numero di iterazioni. Terzo: per gli account ad alto valore (banca, email) attiva sempre una seconda verifica indipendente, senza affidarti solo al gestore di password.
+
+\end{tcbwarn}
+
+\booksection{Principali gestori di password consigliati}
+
+\booksubsection{Di sistema:}
+
+\begin{itemize}
+  \item \textbf{iCloud Keychain}: la prima scelta per gli utenti dell'ecosistema Apple. Integrata senza soluzione di continuità con Safari e le App, gratuita, sicura. Lo svantaggio è che è poco comoda da usare su altre piattaforme.
+  \item \textbf{Gestore password Google}: comoda per gli utenti Android. Integrata con Chrome e Android, gratuita.
+  \item \textbf{Cassaforte password Huawei}: integrata in HarmonyOS, adatta agli utenti Huawei.
+\end{itemize}
+
+\booksubsection{Strumenti professionali di terze parti:}
+
+\begin{itemize}
+  \item \textbf{Bitwarden}: open source e gratuito, potente, supporta tutte le piattaforme. Fortemente consigliato per gli utenti attenti alla privacy.
+  \item \textbf{1Password}: interfaccia curata, funzioni ricche, adatto a famiglie e team. A pagamento.
+  \item \textbf{LastPass}: gestore storico, la versione gratuita ha funzioni limitate.
+  \item \textbf{KeePass}: archiviazione totalmente locale, open source e gratuito. Adatto agli utenti geek.
+\end{itemize}
+
+\booksection{Valutazione reale della forza di una password}
+
+I gestori di password mostrano in genere un indicatore di “forza” (rosso/giallo/verde), ma questa valutazione spesso si basa solo su lunghezza e varietà di caratteri, e non è completa. Per giudicare davvero se una password sia sicura occorre considerare l'“entropia” e “se è già trapelata”.
+
+\booksubsection{Entropia: la misura scientifica della forza di una password}
+
+L'“entropia” misura l'incertezza di una password, in bit. Più alta è l'entropia, maggiore è il numero di tentativi necessari per un brute-force.
+
+\begin{itemize}
+  \item \textbf{"123456"}: entropia bassissima, cracking istantaneo.
+  \item \textbf{"P@ssw0rd"}: sembra complessa, ma è presente in tutte le liste di dictionary attack, quindi l'entropia resta bassa.
+  \item \textbf{"correct horse battery staple"}: quattro parole casuali, entropia di circa 44 bit, difficoltà di cracking di gran lunga superiore a "P@ssw0rd".
+  \item \textbf{16 caratteri casuali (con maiuscole + minuscole + numeri + simboli)}: entropia di circa 100 bit, con la potenza di calcolo attuale impossibile da forzare.
+\end{itemize}
+
+Conclusione:\textbf{“lunghezza + casualità” contano più di “simboli complessi”}. Questo è il motivo per cui le password lunghe e casuali generate dal gestore sono davvero sicure.
+
+\booksubsection{HaveIBeenPwned: verifica se la tua password è già trapelata}
+
+Il sito\href{https://haveibeenpwned.com}{haveibeenpwned.com}, gestito dal ricercatore di sicurezza Troy Hunt, raccoglie gli account e le password trapelati nelle principali violazioni di dati. Puoi:
+
+\begin{enumerate}
+  \item Inserire l'email per verificare se il tuo account è stato esposto in una violazione.
+  \item Usare la funzione Pwned Passwords per verificare se una password è nei database noti di fughe di dati (i gestori di password e i browser hanno già integrato questa query).
+\end{enumerate}
+
+Se una password è presente nel database delle fughe,\textbf{per quanto complessa possa sembrare, va sostituita immediatamente}: gli attacchi a dizionario proveranno per primi queste password note.
+
+\begin{tcbinfo}{Principio di query k-Anonymity}
+Temi che inserire la password in HaveIBeenPwned provochi un'altra fuga? Non preoccuparti. Le query moderne usano il protocollo “k-Anonimity”: il browser invia al server solo i primi 5 caratteri dell'hash della password, il server restituisce l'elenco di tutti gli hash che iniziano con quei 5 caratteri e il confronto avviene in locale. In altre parole, il server non vede mai l'hash completo della tua password. Il “controllo password trapelate” di 1Password e Bitwarden funziona così.
+
+\end{tcbinfo}
+
+\booksubsection{Funzioni di monitoraggio integrate nel gestore di password}
+
+\begin{itemize}
+  \item \textbf{1Password Watchtower}: monitora in tempo reale password deboli, duplicate, trapelate, scadute e siti senza 2FA, con classificazione rosso/arancio/giallo.
+  \item \textbf{Bitwarden Vault Health}: la versione gratuita mostra password deboli e duplicate; la versione a pagamento rileva le password trapelate (basata su HaveIBeenPwned).
+  \item \textbf{"Suggerimenti di sicurezza" di iCloud Keychain}: in iOS Impostazioni Password Suggerimenti di sicurezza, segnala quali password sono presenti in fughe note e quali sono riusate.
+  \item \textbf{"Controllo password" di Gestore password Google}: integrato in Chrome, con un clic verifica password trapelate, deboli e duplicate.
+\end{itemize}
+
+\begin{tcbpractice}{Verifica ora: la tua password è sicura?}
+\begin{enumerate}
+  \item Apri haveibeenpwned.com, inserisci la tua email abituale e guarda in quali violazioni è presente.
+  \item Utenti iPhone: Impostazioni Password Suggerimenti di sicurezza, gestisci uno per uno gli avvisi rossi.
+  \item Utenti Chrome: Impostazioni Password Verifica password, modifica secondo le indicazioni.
+  \item Utenti 1Password/Bitwarden: apri Watchtower/Health Reports e dai priorità alle voci "trapelate" e "duplicate".
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{Passkey: il futuro del login senza password}
+
+Tra il 2024 e il 2026 la tecnologia delle password sta vivendo una rivoluzione: i\textbf{Passkey (chiavi di accesso)}potrebbero eliminare del tutto le password tradizionali. Spinti congiuntamente da Apple, Google e Microsoft, con il supporto della FIDO Alliance e del W3C, è il più grande cambiamento nel modo di accedere degli ultimi decenni.
+
+\booksubsection{Cos'è un Passkey?}
+
+Il Passkey si basa sullo standard FIDO2 / WebAuthn e sostituisce la password con una\textbf{coppia di chiavi sul dispositivo}. Il principio si può semplificare così:
+
+\begin{itemize}
+  \item Il tuo telefono genera una coppia di chiavi:\textbf{chiave pubblica}(registrata presso il sito) +\textbf{chiave privata}(sempre nel chip di sicurezza del tuo dispositivo).
+  \item Al login, il sito invia una "sfida"; il tuo telefono la firma con la chiave privata e il sito la verifica con la chiave pubblica.
+  \item Prima della firma devi confermare l'identità con biometria (Face ID / impronta) o PIN del dispositivo.
+  \item In tutto il processo,\textbf{nessuna password viaggia nella rete}.
+\end{itemize}
+
+\booksubsection{Passkey vs password tradizionali}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimensione} & \textbf{Password tradizionale} & \textbf{Passkey} \tabularnewline
+\hline
+Resistenza al phishing & bassa, i siti di phishing possono rubare la password & naturalmente anti-phishing, la chiave privata firma solo il dominio reale \tabularnewline
+Effetto di una violazione del server & l'hash della password può essere cracked & il server conserva solo la chiave pubblica, la violazione non ha impatto \tabularnewline
+Comodità & da ricordare/inserire/gestire & login in un secondo con Face ID/impronta \tabularnewline
+Attacchi di replay & possono essere intercettati e replicati da un man-in-the-middle & ogni firma è monouso, non può essere replicata \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{Supporto delle piattaforme}
+
+\begin{itemize}
+  \item \textbf{Apple iCloud Keychain Passkey}: supporto nativo in iOS 16+ / macOS Ventura+, i Passkey si sincronizzano tra tutti i dispositivi con lo stesso Apple ID; sui nuovi dispositivi non è necessario ricrearli per accedere ai siti.
+  \item \textbf{Gestore password Google Passkey}: supporto nativo in Android + Chrome, i Passkey sono archiviati nell'account Google e sincronizzati tra dispositivi Android; dal 2023 l'account Google personale supporta il login con Passkey.
+  \item \textbf{Microsoft}: Windows 11 / Edge supporta i Passkey; account Microsoft, Outlook, Office e altri servizi stanno aprendo al login con Passkey, gestibile in Microsoft Authenticator.
+  \item \textbf{1Password / Bitwarden}: supportano creazione, archiviazione e sincronizzazione multipiattaforma dei Passkey, così non sei vincolato a un unico ecosistema.
+\end{itemize}
+
+\begin{tcbinfo}{La sincronizzazione tra dispositivi è il breakthrough chiave}
+Il maggiore limite iniziale dei Passkey era il “vincolo a un singolo dispositivo”: cambiando telefono bisognava ricrearli. Dal 2023 Apple, Google e Microsoft hanno realizzato la sincronizzazione cloud dei Passkey: iCloud Keychain sincronizza tra dispositivi Apple, il Gestore password Google sincronizza tra dispositivi Android. 1Password e altri terzi hanno reso possibile la sincronizzazione tra ecosistemi. Questo significa che i Passkey hanno ormai la maturità pratica per sostituire le password.
+
+\end{tcbinfo}
+
+\booksubsection{Come creare e usare i Passkey sul telefono}
+
+\textbf{Percorso iOS (iPhone):}
+
+\begin{enumerate}
+  \item Nella pagina di sicurezza dell'account di un sito che supporta i Passkey (es. Google, Microsoft, Amazon, eBay, PayPal) seleziona "Aggiungi passkey".
+  \item Comparirà la finestra di verifica Face ID / Touch ID; dopo la conferma il Passkey viene generato e salvato automaticamente in iCloud Keychain.
+  \item Al login successivo, inserito lo username scegli "Usa iPhone per accedere": basta un Face ID.
+  \item Gestione: Impostazioni Password trova il sito per vedere la voce Passkey.
+\end{enumerate}
+
+\textbf{Percorso Android:}
+
+\begin{enumerate}
+  \item Nella pagina di sicurezza dell'account del sito che supporta i Passkey seleziona "Aggiungi passkey".
+  \item Popup del Gestore password Google seleziona il tuo account Google verifica del blocco schermo (impronta/disegno/PIN).
+  \item Il Passkey viene salvato nel Gestore password Google e sincronizzato tra dispositivi Android con lo stesso account.
+  \item Al login successivo, scegli "Usa passkey": basta sbloccare lo schermo.
+  \item Gestione: Impostazioni Android Password, passkey e compilazione automatica Gestore password google.com.
+\end{enumerate}
+
+\booksubsection{Login Passkey tra dispositivi}
+
+Se su un PC Windows vuoi accedere a un sito che ha il Passkey solo sull'iPhone, puoi autorizzare tramite scansione del QR:
+
+\begin{enumerate}
+  \item Nella pagina di login del sito scegli "Usa passkey".
+  \item Seleziona "Usa un altro dispositivo".
+  \item Il PC mostra un QR code: scansiona con l'iPhone.
+  \item L'iPhone propone la verifica Face ID; dopo la conferma il login sul PC è completato.
+\end{enumerate}
+
+Il processo usa una doppia comunicazione cifrata via Bluetooth + Internet: la chiave privata del Passkey non lascia mai il tuo iPhone.
+
+\begin{tcbpractice}{Prova ora: scopri il login senza password}
+\begin{enumerate}
+  \item Accedi all'account Google Sicurezza Passkey Aggiungi passkey e prova il login con Face ID/impronta.
+  \item Accedi all'account Microsoft Sicurezza Opzioni di sicurezza avanzate Aggiungi passkey.
+  \item Su Taobao, JD, eBay, PayPal e altri servizi che supportano i Passkey, provali.
+  \item Conserva la password tradizionale come backup e migra gradualmente gli account ad alto valore ai Passkey.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbwarn}{Consigli per la fase di transizione}
+I Passkey non hanno ancora sostituito del tutto le password: molti siti sono in una fase di convivenza “Passkey + password”. Consiglio: attiva prima i Passkey sugli account ad alto valore, ma\textbf{non eliminare subito la password tradizionale}, tienila come backup; continua a usare un gestore di password, perché non tutti i siti supportano i Passkey. Considera i Passkey come un “potente complemento” al gestore di password, non come una “sostituzione immediata”.
+
+\end{tcbwarn}
+
+\booksection{Chiavi di sicurezza hardware}
+
+Se le tue esigenze di sicurezza sono superiori a quelle dell'utente medio (ad esempio detieni molte criptovalute, sei manager/giornalista/attivista o protegge account aziendali chiave), la chiave di sicurezza hardware è una scelta più affidabile del codice via SMS.
+
+\booksubsection{Cos'è una chiave di sicurezza hardware?}
+
+Una chiave hardware è un dispositivo fisico (a forma di chiavetta USB) con un chip di sicurezza interno che custodisce la tua chiave privata; richiede contatto fisico o NFC per completare la verifica. Prodotti rappresentativi:
+
+\begin{itemize}
+  \item \textbf{YubiKey}(Yubico): la più diffusa, supporta FIDO2/WebAuthn, U2F, OTP, PIV, OpenPGP, con interfacce USB-C / USB-A / NFC. Serie 5: 50-70 dollari.
+  \item \textbf{Google Titan}: prodotta da Google, USB-C + NFC / Bluetooth, circa 30-40 dollari.
+  \item \textbf{OnlyKey}: alternativa open source, supporta più protocolli.
+  \item \textbf{Alternative cinesi}: come ePasskey di Feitian, più economiche.
+\end{itemize}
+
+\booksubsection{Perché una chiave hardware è più sicura del codice SMS?}
+
+\begin{itemize}
+  \item \textbf{Anti-phishing}: come i Passkey, la chiave hardware risponde solo al dominio reale, i siti di phishing non possono ingannarla.
+  \item \textbf{Resistente al SIM-swap}: il codice SMS può essere intercettato con un attacco SIM-swap, la chiave hardware non richiede un numero di telefono.
+  \item \textbf{Anti man-in-the-middle}: il protocollo FIDO2 include un challenge in ogni firma, non replicabile.
+  \item \textbf{Isolamento fisico}: la chiave privata resta sempre nel chip hardware; anche se un malware compromette il tuo computer, non riesce a leggerla.
+\end{itemize}
+
+\booksubsection{Scenari d'uso}
+
+\begin{itemize}
+  \item Account di exchange di criptovalute, recupero di wallet.
+  \item SSO aziendale, VPN per smart working, login SSH ai server.
+  \item Email, GitHub, social media e altri "account principali": una volta compromessi, permettono il reset di tutti gli altri account.
+  \item Giornalisti, avvocati, manager e altre persone ad alta sensibilità.
+\end{itemize}
+
+\booksubsection{Come configurare una chiave hardware come verifica a due fattori}
+
+Esempio con account Google + YubiKey:
+
+\begin{enumerate}
+  \item Acquista una YubiKey (consigliato comprarne due: una per l'uso quotidiano e una di backup, conservate in luoghi diversi).
+  \item Accedi a myaccount.google.com Sicurezza Verifica in due passaggi.
+  \item Seleziona "Aggiungi chiave di sicurezza" inserisci la YubiKey nella porta USB-C o avvicinala al sensore NFC del telefono.
+  \item Segui le indicazioni e tocca il contatto metallico della YubiKey per completare la registrazione.
+  \item Consiglio di registrare anche una seconda chiave di backup.
+  \item Nelle impostazioni della verifica in due passaggi, imposta la chiave hardware come metodo preferito e il codice SMS come backup.
+\end{enumerate}
+
+Siti principali che la supportano: Google, GitHub, Microsoft, Apple ID, Facebook, Twitter, Dropbox, GitLab, AWS, Coinbase, Binance e altri.
+
+\begin{tcbinfo}{Strategia a due chiavi}
+Il rischio maggiore di una chiave hardware è lo “smarrimento”. Consiglio: (1) registra contemporaneamente due chiavi diverse; (2) una da portare con sé (portachiavi), una da conservare in cassaforte di casa o in una cassetta di sicurezza in banca; (3) alcuni siti consentono di stampare “codici di recupero” da conservare offline. Così, anche se la chiave principale viene persa, non resterai chiuso fuori per sempre dall'account.
+
+\end{tcbinfo}
+
+\begin{tcbwarn}{Attenzione al canale di acquisto}
+Acquista sempre nel negozio ufficiale o da rivenditori autorizzati; evita chiavi di seconda mano o di origine sconosciuta: in teoria un hardware preconfigurato potrebbe avere un backdoor. Il firmware di YubiKey non può essere aggiornato dopo la fabbricazione, ma Yubico pubblica continuamente avvisi di sicurezza: basta seguire il sito ufficiale.
+
+\end{tcbwarn}
+
+\booksection{Condivisione di password in famiglia/team}
+
+In ambito familiare, Netflix, WiFi di casa, backend del router e password della serratura smart devono essere condivisi da tutta la famiglia; in ambito di team, server, database e account dei social media richiedono la collaborazione di più persone.\textbf{Inviare password su WeChat o scriverle in documenti condivisi sono pratiche ad alto rischio}: se la cronologia chat o i permessi del documento vengono esposti, la password è esposta.
+
+\booksubsection{“Cassaforte condivisa” (Vault) di 1Password}
+
+1Password è il prodotto di riferimento per la condivisione in famiglia e team. Il suo meccanismo centrale è\textbf{più casseforti}:
+
+\begin{itemize}
+  \item \textbf{Cassaforte personale}: visibile solo a te, ad esempio conti bancari ed email privati.
+  \item \textbf{Cassaforte condivisa}: visibile a tutti i membri della famiglia o del team, ad esempio Netflix, WiFi di casa, carta di credito condivisa.
+  \item \textbf{Permessi gerarchici}: la versione team può impostare alcuni membri come "sola lettura" o "sola lettura senza modifica".
+\end{itemize}
+
+I membri della famiglia o del team non devono condividere la password principale: ciascuno accede con il proprio account ma può vedere il contenuto delle casseforti condivise autorizzate. Le modifiche alle password si sincronizzano in tempo reale per tutti i membri.
+
+\booksubsection{Funzione “Organizzazione” di Bitwarden}
+
+La versione gratuita di Bitwarden supporta la condivisione di password tra singoli (tramite la funzione “Send”, condivisione a tempo di una singola password); la versione a pagamento permette di creare “organizzazioni” e condividere diverse voci con i membri della famiglia o colleghi del team, con permessi granulari. Bitwarden offre anche l'opzione self-hosted, adatta alle aziende con forti esigenze di sovranità sui dati.
+
+\booksubsection{Scenario familiare: come condividere in sicurezza password di Netflix, WiFi e altro}
+
+\begin{itemize}
+  \item \textbf{Netflix / siti video}: usa la "cassaforte condivisa" di 1Password Famiglia per archiviare la password di login; ciascun membro accede autonomamente, senza doverla inviare nel gruppo chat.
+  \item \textbf{Password WiFi di casa}: tra dispositivi iOS la password WiFi può essere condivisa via AirDrop direttamente agli ospiti, senza doverla dettare; su Android 12+ è disponibile la funzione "Condivisione WiFi nelle vicinanze".
+  \item \textbf{Serrature smart ed elettrodomestici smart}: cerca di usare la funzione "Membri famiglia" dell'App del produttore per creare account separati per ciascuno, invece di condividere un unico account amministratore.
+  \item \textbf{Backend del router di casa}: la password amministratore va nella cassaforte condivisa di 1Password; per il WiFi degli ospiti attiva un SSID separato.
+\end{itemize}
+
+\begin{tcbinfo}{Rapporto qualità-prezzo di 1Password Famiglia}
+1Password Families costa circa 4,99 dollari al mese e supporta fino a 5 membri della famiglia; ciascuno ha una cassaforte personale + 4 casseforti condivise. A persona sono meno di 1 dollaro al mese: è la soluzione con la migliore esperienza di condivisione familiare oggi disponibile. La versione famiglia di Bitwarden a 10 dollari all'anno supporta 6 persone ed è più economica, ma l'interfaccia è leggermente inferiore.
+
+\end{tcbinfo}
+
+\booksubsection{Scenario team: condivisione di password di server/database}
+
+\begin{itemize}
+  \item \textbf{1Password Teams / Business}: permette di creare più casseforti per dipartimento o progetto, con controllo granulare dei permessi e auditing di tutti gli accessi.
+  \item \textbf{Bitwarden Teams / Enterprise}: soluzione open source, self-hostable, la versione enterprise supporta l'integrazione SSO e la sincronizzazione con la directory.
+  \item \textbf{Principio di separazione dei ruoli}: le password amministrative non dovrebbero essere in mano a una sola persona: designare 2-3 "contatti di emergenza" per evitare interruzioni in caso di partenza/ferie del personale chiave.
+  \item \textbf{Procedura di uscita}: quando un dipendente se ne va, revoca immediatamente il suo accesso al gestore di password e, se necessario, ruota tutte le password ad alta sensibilità a cui aveva accesso.
+\end{itemize}
+
+\booksubsection{Accesso di emergenza (Emergency Access): in caso ti succeda qualcosa}
+
+Immagina uno scenario: gestisci da solo tutti gli account familiari importanti, ma a causa di un ricovero improvviso o di un decesso la famiglia non può accedere a banca, email e assicurazione. La funzione\textbf{“Accesso di emergenza”}è pensata proprio per questo: autorizza una persona di fiducia (familiare o amico) a ottenere la tua cassaforte quando tu non puoi rispondere.
+
+\textbf{Configurazione dell'accesso di emergenza in Bitwarden:}
+
+\begin{enumerate}
+  \item Accedi a Bitwarden Web Vault Impostazioni Accesso di emergenza.
+  \item Aggiungi l'email del contatto fidato e invita ad accettare.
+  \item Imposta il "periodo di attesa" (consigliato 7-14 giorni): il lasso di tempo tra la richiesta dell'altra parte e la tua conferma.
+  \item Se non rispondi entro il periodo di attesa (rifiuti o non fai nulla), allo scadere l'altra parte ottiene automaticamente l'accesso.
+  \item Puoi rifiutare manualmente la richiesta o revocare l'accesso di emergenza in qualsiasi momento.
+\end{enumerate}
+
+\textbf{Accesso di emergenza in 1Password:}
+
+\begin{enumerate}
+  \item 1Password non lo chiama direttamente "accesso di emergenza", ma può essere realizzato tramite la funzione "organizzazione famiglia/team": dopo aver invitato i familiari nella versione famiglia, si pongono alcune voci nella "cassaforte condivisa".
+  \item Per gli utenti della versione personale, consiglio di comunicare la password principale a un familiare altamente fidato, o di scriverla in una busta sigillata conservata in cassaforte.
+  \item 1Password fornisce anche un "codice di recupero": quando si attiva la verifica in due fattori, va stampato e conservato.
+\end{enumerate}
+
+\begin{tcbpractice}{Imposta ora: lascia ai tuoi cari una "chiave di riserva"}
+\begin{enumerate}
+  \item Scegli un familiare fidato come "contatto di emergenza".
+  \item Nel gestore di password imposta l'accesso di emergenza (Bitwarden) o aggiungilo alla cassaforte condivisa di famiglia (1Password).
+  \item Scrivi su carta la password principale + il codice di recupero, sigilla la busta e conservala in cassaforte di casa o affidala a un familiare fidato.
+  \item Rivedi ogni sei mesi che il contatto di emergenza sia ancora la persona giusta.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{Buone pratiche per l'uso del gestore di password}
+
+\begin{itemize}
+  \item \textbf{Imposta una password principale forte}: la password principale è l'ultima linea di difesa; scegline una lunga e complessa e memorizzala bene.
+  \item \textbf{Attiva la verifica in due fattori}: attiva il 2FA sull'account del gestore di password, per aggiungere un livello di protezione.
+  \item \textbf{Controlla regolarmente le password deboli}: la maggior parte dei gestori ha una funzione di "audit di sicurezza" che aiuta a trovare password deboli e duplicate.
+  \item \textbf{Non dimenticare la password principale}: la password principale non è recuperabile; dimenticarla significa perdere tutte le password. Consiglio di scriverla su carta e conservarla in un luogo sicuro.
+  \item \textbf{Accesso di emergenza}: imposta un contatto di emergenza, così se tu non puoi accedere, una persona fidata può ottenere le tue password.
+\end{itemize}
+
+\begin{tcbwarn}{Promemoria importante}
+Il gestore di password è comodo ma comporta anche rischi: se la password principale viene esposta, tutte le password sono compromesse. La password principale non deve quindi essere uguale alle altre, né essere scritta in un luogo facilmente reperibile. Inoltre, preferisci provider con una buona storia di sicurezza.
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{Prova ora: inizia a usare un gestore di password}
+\begin{enumerate}
+  \item Scegli un gestore di password (consigliato Bitwarden o quello di sistema).
+  \item Registra un account e imposta una password principale forte.
+  \item Importa le password esistenti (se ne hai) o inizia ad aggiungerne di nuove.
+  \item Installa l'estensione del browser o l'App mobile e prova la compilazione automatica.
+  \item Esamina il report di audit di sicurezza e individua le password da migliorare.
+\end{enumerate}
+
+\end{tcbpractice}

@@ -1,0 +1,154 @@
+\bookchapter{Kapitel 68: Der Weg nach vorn – Berechtigungen, Benachrichtigungen und moderne Architektur}
+
+\chapterintro{Eine App bauen zu können ist erst der Anfang. Dieses Kapitel handelt von den Hürden auf dem Weg vom „Können“ zum „Gutkönnen“: wie du Berechtigungen elegant anforderst, wie du Benachrichtigungen verschickst, ohne zu nerven, wie du die Architektur eine Stufe hebst und – im Jahr 2026 – wie du iOS-Code Seite an Seite mit KI schreibst. Jeder dieser Punkte begegnet dir in echten Projekten sofort.}
+
+\booksection{Berechtigungen: erst anklopfen, dann eintreten}
+
+Kamera, Standort, Kontakte, Benachrichtigungen … Für diese „sensiblen Zonen“ verlangt iOS, dass die App beim Benutzen einen Dialog beim Nutzer anfordert. Die Regel sind drei Schritte: „deklarieren, anfragen, elegant mit Ablehnung umgehen“:
+
+\begin{lstlisting}[language=Swift]
+// 1. in Info.plist den Verwendungstext deklarieren (ohne Deklaration: sofortiger Crash!)
+// Privacy - Location When In Use Usage Description: "Wird verwendet, um das Wetter deiner Stadt abzurufen"
+
+// 2. bei der Nutzung anfragen
+import CoreLocation
+
+@Observable
+class LocationModel {
+    private let manager = CLLocationManager()
+
+    func request() {
+        switch manager.authorizationStatus {
+        case .notDetermined: manager.requestWhenInUseAuthorization()
+        case .denied, .restricted: /* zu den Einstellungen führen, um es zu aktivieren */
+        default: /* erlaubt, los geht's */
+        }
+    }
+}
+
+// 3. nach Ablehnung elegant abfallen: Hinweis zeigen und zu den Einstellungen springen
+// UIApplication.shared.open(URL(string: UIApplication.openSettingsURLString)!)
+\end{lstlisting}
+
+\begin{tcbwarn}{Achtung: iOS-Berechtigungen fragen nur „einmal“}
+Der Berechtigungsdialog unter iOS erscheint nur ein einziges Mal – lehnt der Nutzer ab, kommt er nie wieder. Deshalb: Den Zeitpunkt der Anfrage auf den Moment legen, „in dem der Nutzer die Funktion gerade braucht“ (nicht gleich beim Start ein Bündel anfragen), und der Text muss den Zweck erklären. Eine Oberflächenführung nach der Ablehnung („Standort in den Einstellungen aktivieren“) gehört zum Standard – lass die Nutzer nicht in der Sackgasse stecken.
+
+\end{tcbwarn}
+
+\booksection{Benachrichtigungen: zur richtigen Zeit etwas Nützliches sagen}
+
+Benachrichtigungen sind der Kanal, über den die App ihre Nutzer erreicht – und zugleich die Funktion, die am ehesten „blockiert“ wird. iOS nutzt das UserNotifications-Framework; drei Disziplinen beim Versenden: nur Nützliches senden, dem Nutzer das Abschalten ermöglichen, nachts nicht stören. Die Grundverwendung:
+
+\begin{lstlisting}[language=Swift]
+import UserNotifications
+
+// 1. Benachrichtigungsberechtigung anfragen (einmaliger Dialog)
+UNUserNotificationCenter.current()
+    .requestAuthorization(options: [.alert, .sound, .badge]) { granted, _ in
+        print(granted ? "Erlaubt" : "Abgelehnt")
+    }
+
+// 2. eine "Erinnerung zum Ausgaben-Erfassen jeden Tag um 20:00 Uhr" planen
+func scheduleDailyReminder() {
+    let content = UNMutableNotificationContent()
+    content.title = "Ausgaben-Erinnerung"
+    content.body = "Heute hast du noch nichts erfasst"
+    content.sound = .default
+
+    var comps = DateComponents()
+    comps.hour = 20
+    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: true)
+
+    let request = UNNotificationRequest(
+        identifier: "daily-reminder",
+        content: content,
+        trigger: trigger
+    )
+    UNUserNotificationCenter.current().add(request)
+}
+\end{lstlisting}
+
+Achtung: Auch die Benachrichtigungsberechtigung unter iOS fragt „nur einmal“ nach, und Nutzer können sie jederzeit in den Systemeinstellungen abschalten – der wahrgenommene Wert der Inhalte ist daher entscheidend. Ein einziger Missbrauch kann die Nutzer für immer kosten.
+
+\booksection{Architektur im Aufstieg: MVVM vertieft und Testbarkeit}
+
+In Kapitel 65 hast du MVVM benutzt; hier kommen drei weiterführende Punkte:
+
+\begin{itemize}
+  \item Protokoll-Abstraktion: Das ViewModel soll von einem Protokoll (protocol) abhängen, nicht von einer konkreten Klasse – beim Testen lässt sich dann eine „Fake-Datenquelle“ injizieren; das ist der Grundstein der Testbarkeit;
+  \item Einzelpflicht: Ein ViewModel kümmert sich nur um eine Sache (das Haushaltsbuch nicht ums Wetter); werden es mehr Funktionen, aufteilen;
+  \item Nicht überdesignen: Für ein kleines Einzelprojekt genügen „@Observable-Klasse + Protokoll-Abstraktion“. Schwergewichtige Architekturen wie VIPER oder Clean Architecture warten, bis Team und Komplexität an der Tür klopfen – Werkzeuge dienen dem Ziel, sie sind kein Selbstzweck.
+\end{itemize}
+
+\begin{tcbinfo}{Tipp: SwiftUIs „Ökosystem-Dividende“}
+Das iOS-Ökosystem hat zwei weitere „Exklusiv-Tricks“ für Fortgeschrittene: Widgets (WidgetKit) zeigen Informationen, ohne dass die App geöffnet werden muss (die „Ausgaben dieses Monats“ aus dem Haushaltsbuch direkt auf dem Startbildschirm), und Kurzbefehle (App Intents) lassen Nutzer deine Funktionen über Siri oder Automatisierungen aufrufen. Beides gibt es als offizielle Frameworks, der Einstieg ist nicht teuer, doch der Zugewinn an Nutzererlebnis ist riesig – auf dem Weg nach vorn lohnt es sich, diese zuerst freizuschalten.
+
+\end{tcbinfo}
+
+\booksection{Das Neue von 2026: KI-gestützte iOS-Entwicklung}
+
+2026 ist KI längst tief in Apples Entwicklungsprozess eingebettet. Wer Tempo aufnehmen will, greift zu diesem erprobten Set:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Arbeitsschritt} & \textbf{Wie die KI hilft} & \textbf{Deine Aufgabe} \tabularnewline
+\hline
+Code schreiben & Eingebaute Codevervollständigung von Xcode + Generierung über KI-Plugins von Drittanbietern & Anforderungen klar beschreiben, die Ergebnisse prüfen \tabularnewline
+Recherche & Offizielle Doku und Fehlermeldungen der KI zum Deuten hinwerfen & Zentrale Schlüsse in der offiziellen Doku nachprüfen \tabularnewline
+Tests schreiben & Die KI XCTest-Fälle nach „normal/Grenzfall/Ausnahme“ in drei Klassen erzeugen lassen & Bestätigen, dass die Fälle zur Fachlichkeit passen \tabularnewline
+Bugs beheben & Absturz-Log + betreffenden Code einfügen; die KI ortet und repariert & Änderungen verstehen und mit Testläufen verifizieren \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Vier Szenarien der KI-gestützten iOS-Entwicklung\end{center}
+
+Die konkrete Methodik – wie man der KI Anweisungen gibt, wie man abnimmt, wie man Stolperfallen meidet – findest du vollständig in den 11 Kapiteln von Teil 7 dieses Buches, „KI-Programmierung in der Praxis“ (Kapitel 37–47); es ist sehr zu empfehlen, beides zusammen zu lesen: Die Swift-Syntax bleibt bei diesem Teil, die Kunst der KI-Zusammenarbeit bei Teil 7.
+
+\begin{tcbpractice}{Jetzt bist du dran: dem Haushaltsbuch das „Trio“ spendieren}
+\booksection{Swift-Nebenläufigkeit im Kern: @MainActor und Task}
+
+Das Nebenläufigkeitssystem von Swift 6 hat zwei Regeln, die Einsteiger unbedingt verstehen müssen:
+
+\begin{itemize}
+  \item Die Oberfläche darf nur im Haupt-Thread aktualisiert werden: SwiftUI-Views sind standardmäßig @MainActor; Netzwerk-Rückrufe kehren in den Haupt-Thread zurück, bevor sie den Zustand ändern (await MainActor.run \{ ... \} oder das ViewModel als @MainActor markieren);
+  \item Asynchrone Aufgaben mit Task verwalten: Der Modifier .task \{ \} startet automatisch, wenn der View erscheint, und bricht automatisch ab, wenn er verschwindet – das ist die Standardmethode, in SwiftUI asynchrone Arbeit zu beginnen; schreib nicht wahllos nackte Tasks in den body.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct WeatherScreen: View {
+    @State private var vm = WeatherViewModel()
+
+    var body: some View {
+        Group {
+            switch vm.state {
+            case .loading: ProgressView()
+            case .success(let d): WeatherContent(data: d)
+            case .error(let m): Text(m)
+            }
+        }
+        .task {                       // startet beim Erscheinen, bricht beim Verschwinden ab
+            await vm.search(city: "Berlin")
+        }
+    }
+}
+\end{lstlisting}
+
+Hinter diesen beiden Regeln steckt Swift 6s Design für „Datenrennen-Sicherheit“ – der Compiler meckert sofort, wenn du etwas falsch schreibst, statt es erst beim Absturz der App merken zu lassen. Compilerfehler sind keine Spitzfindigkeiten, sie fangen für dich die Kugeln ab.
+
+1) Ergänze im Haushaltsbuch eine „Erinnerung um 20:00 Uhr zu buchen“ (Berechtigung + lokale Benachrichtigung); 2) stelle die Datenquelle des ViewModels auf Protokoll-Abstraktion um und schreibe einen Unit-Test mit injizierten Fake-Daten; 3) baue ein „Ausgaben dieses Monats“-Widget für den Startbildschirm. Ist das Trio fertig, wirkt dein Projekt auf einmal „wie aus einem Guss professionell“.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Kapitelfazit}
+\begin{itemize}
+  \item Berechtigungen in drei Schritten: in Info.plist deklarieren (fehlt es, kracht es garantiert), erst bei Bedarf anfragen, nach Ablehnung zu den Einstellungen führen
+  \item Der iOS-Berechtigungsdialog kommt nur einmal: den Zeitpunkt auf den Moment legen, in dem die Funktion gebraucht wird, und im Text den Zweck klar nennen
+  \item Drei Benachrichtigungs-Disziplinen: nur Nützliches, abschaltbar, nicht störend; UserNotifications-Framework
+  \item MVVM im Aufbau: Protokoll-Abstraktion (testbar), Einzelpflicht, kein Overdesign
+  \item Ökosystem-Dividende: Widgets mit WidgetKit + Kurzbefehle mit App Intents
+  \item Vier KI-Szenarien: Code schreiben, recherchieren, Tests schreiben, Bugs beheben; Methodik in Teil 7 (Kapitel 37–47)
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,222 @@
+\booksection{פרק 20: מצב מפתח והרשאות מתקדמות}
+
+\chapterintro{פרק זה מיועד למשתמשים שרוצים לחקור לעומק את “הפונקציות הנסתרות” של הטלפון. מצב מפתח, הרשאות Root, נעילת BL... מושגים שנשמעים גיקיים, אבל למעשה לא רחוקים מהמשתמש הרגיל.}
+
+\booksubsection{אחת, מצב מפתח: פתיחת הגדרות נסתרות}
+
+אנדרואיד
+
+\subsubsection*{: כנס להגדרות > אודות הטלפון > לחץ 7 פעמים על “מספר גרסה”, עד שמופיע “אתה עכשיו במצב מפתח”.}
+
+\begin{itemize}
+  \item \textbf{HarmonyOS}: הגדרות > אודות הטלפון > לחץ 7 פעמים על "גרסת HarmonyOS".
+  \item \textbf{iOS}: משתמשים רגילים לא יכולים להפעיל מצב מפתח מלא, דורש חשבון Apple Developer בתשלום.
+  \item \textbf{פונקציות נפוצות:}איתור באגים USB
+\end{itemize}
+
+\subsubsection*{סקירת פונקציות נפוצות:}
+
+\begin{itemize}
+  \item \textbf{USB Debugging}:חיבור למחשב לפעולות מתקדמות (ADB). ראה "ADB".
+  \item \textbf{הגבלת תהליכי רקע}:הצגת מגע (נקודה), למדריכים.
+\end{itemize}
+
+\subsubsection*{קשור לביצועים וחלקות:}
+
+\begin{itemize}
+  \item \textbf{מהירות אנימציה (חלון/מעבר/תוכנית)}:שלוש אפשרויות אלו שולטות במשך אנימציית פתיחת App ומעבר בין דפים. ברירת המחדל היא 1x, הגדרה ל-0.5x תגרום לטלפון ל"היראות" מהיר יותר (בפועל מהירות התוכנית לא השתנתה, רק האנימציה מהירה יותר), וכיבוי משמעו קפיצה ללא אנימציה. רוב הגיקים מגדירים 0.5x - שומר על תחושת מעבר ונראה מהיר; כיבוי מלא יגרום לתחושה קשיחה, ועלול להסתיר קיתקון אמיתי, כך שתחשוב בטעות שהכל "זורם".
+  \item \textbf{Force GPU Rendering}:2D דרך GPU. בישנים/לא מאופטמם = זרימה, אך עומס וסוללה. מודרני = השפעה מוגבלת, היסטורי. השאר ברירת מחדל.
+  \item \textbf{Profile GPU Rendering}:מציג גרף עמודות בזמן אמת על המסך לכל פריים, קו ירוק מייצג 16.6ms (סף זמן פריים של 60fps). עמודה מעל הקו הירוק = פריים מושמט. זהו כלי למפתחים לאבחון קיתקון, אך גם משתמש רגיל יכול להשתמש בו כדי להשוות איזה App מותאם גרוע - למשל App שבגלילה העמודות מטפסות מעל הקו האדום, זה בעצם האשם.
+\end{itemize}
+
+\subsubsection*{קשור לרקע וחיי סוללה:}
+
+\begin{itemize}
+  \item \textbf{אילוץ רינדור GPU}:ניתן להגדיר "הגבלה סטנדרטית" "מקסימום תהליך 1" "מקסימום 2 תהליכים" וכו'. נראה שהגבלת תהליכי רקע חוסכת סוללה, אך בפועל ניהול הרקע המובנה של Android כבר טוב, והגבלה כפויה תגרום לטעינה תכופה מחדש של App (הפעלה קרה דווקא צורכת יותר ופוגעת בחוויה). אפשרות זו מתאימה יותר לדיבוג, לא מומלץ למשתמש רגיל להפעיל לטווח ארוך, השאר "הגבלה סטנדרטית".
+  \item \textbf{אל תשמור פעילויות}:הורס בכל יציאה. לא מומלץ, מסך לבן, לבדיקות בלבד.
+\end{itemize}
+
+\begin{tcbwarn}{הערות חשובות}
+Bootloader הוא התוכנית שטוענת את מערכת ההפעלה באתחול הטלפון. נעילת BL היא מנעול שהיצרנים מוסיפים מטעמי אבטחה, למנוע מהמשתמש לצרוב מערכות לא רשמיות.
+
+\end{tcbwarn}
+
+\booksubsection{ב', OEM Unlock: “מתג צריבה”}
+
+ב-Developer Options יש “OEM Unlock”. לא משחרר BL, אלא “רישיון”: בלעדיו, fastboot/כלי יצרן נדחים.
+
+\begin{itemize}
+  \item \textbf{תפקיד המתג}:"אני מוותר על אחריות". סגור = כל פקודה נדחית.
+  \item \textbf{קשר לנעילת BL}:OEM = "בקשה", BL = "ביצוע". הראשון בהגדרות, השני אתר + fastboot (\texttt{fastboot flashing unlock}), שניהם חיוניים.
+  \item \textbf{האם שחזור להגדרות יצרן יאפס}:כן. OEM חוזר לסגור אחרי איפוס, BL נשאר פתוח - דורש\texttt{fastboot flashing lock}כדי לנעול מחדש.
+  \item \textbf{מתי כדאי להפעיל}:אלא אם צריבה/Root, השאר סגור. עצמאי מ-"USB Debugging".
+\end{itemize}
+
+\begin{tcbinfo}{ידיעון: למה יצרנים מגדירים את המתג הזה}
+בישנים לא היה, תוכנה זדונית יכלה לצרוב. Google דרש “OEM Unlock” כ“הסכמה”. לכן גם BL פתוח, אם OEM סגור, צריבה נכשלת.
+
+\end{tcbinfo}
+
+\booksubsection{ג', BL Lock: הדלת הראשונה}
+
+הגנת אבטחה
+
+\subsubsection*{: מונע צריבת תוכנות זדוניות למערכת.}
+
+\begin{itemize}
+  \item \textbf{הגנה מפני גניבה}: גם אם הטלפון נצרב, בלי סיסמת החשבון המקורי לא ניתן להשתמש.
+  \item \textbf{הגבלת אחריות}: פתיחת BL בדרך כלל אומרת אובדן אחריות רשמית.
+  \item \textbf{מדיניות נעילת BL לפי מותג:}Xiaomi
+\end{itemize}
+
+\subsubsection*{: ניתן לפתוח, דורש חשבון ותקופת המתנה (7-30 יום).}
+
+\begin{itemize}
+  \item \textbf{Huawei}: אחרי 2018 הפסיקו לספק קוד פתיחה, כמעט בלתי אפשרי לפתוח רשמית.
+  \item \textbf{OnePlus}: ניתן לפתוח, יחסית מקל.
+  \item \textbf{OPPO/vivo}: חלק מהדגמים ניתנים לפתיחה, דורש בקשה.
+  \item \textbf{Samsung}: ניתן לפתוח, אבל יפעיל Knox fuse, אובדן Samsung Pay וכו'.
+  \item \textbf{Apple}: למכשירי iOS אין מושג BL lock מסורתי, אבל יש מנגנוני אבטחה דומים.
+  \item \textbf{אנדרואיד}הרשאות Root שקולות ל-Administrator ב-Windows, ההרשאה הגבוהה ביותר במערכת אנדרואיד. אחרי השגת Root, ניתן לשנות קבצי מערכת, להסיר אפליקציות מובנות, להשתמש באפליקציות מתקדמות הדורשות Root.
+\end{itemize}
+
+\booksubsection{ד. פקודות ADB שימושיות: שליטה בטלפון דרך המחשב}
+
+ADB = Android Debug Bridge, כלי שורת פקודה רשמי של Google המאפשר למחשב לתקשר עם טלפון Android דרך USB או Wi-Fi. אינו דורש Root, מספיק ש“USB Debugging” מופעל בטלפון. אפשר לחשוב עליו כ“שלט” שמאפשר למחשב לשלוח פקודות לטלפון - צריבת ROM, התקנת App, העברת קבצים, בדיקת לוגים - הכל דרכו.
+
+\subsubsection*{איך מתחברים דרך USB:}
+
+\begin{enumerate}
+  \item טלפון: Developer Options > "USB Debugging".
+  \item מחשב: Platform Tools (\texttt{adb}. אותה שאלה, מוסברת אחרת לתלמיד ולהורה; המלצות שונות לתושב עיר ולתושב עיירה. בלי רקע, AI יכול לתת רק תשובות "המכנה המשותף הגדול ביותר", לרוב לא משמעותיות.\texttt{fastboot}שני קבצי הפעלה), חלץ לכל תיקייה.
+  \item חבר כבל, "אפשר USB Debugging?" > "תמיד" > אישור.
+  \item ב-cmd/PowerShell:\texttt{adb devices}, אם הפלט דומה ל-\texttt{List of devices attached /\allowbreak  xxxxxxxx device}, זה אומר שהחיבור הצליח.
+\end{enumerate}
+
+\begin{tcbwarn}{אל תתעלם מדרייבר וחלון הרשאה}
+משתמשי Windows אם\texttt{adb devices}“unauthorized” או שהמכשיר לא מופיע כלל, כנראה הדרייבר לא מותקן או שכחת ללחוץ “אפשר” בטלפון. Samsung/Xiaomi ומותגים אחרים מספקים “USB Driver” או “Phone Assistant”; Mac ו-Linux בדרך כלל לא דורשים דרייבר. אם חלון האישור נעלם, נתק וחבר מחדש את הכבל.
+
+\end{tcbwarn}
+
+\subsubsection*{פקודות ADB נפוצות:}
+
+\begin{itemize}
+  \item \texttt{adb install app.\allowbreak apk}: התקן APK מהמחשב לטלפון (\texttt{-\allowbreak r}מציין התקנה על-גבי תוך שמירת נתונים;\texttt{-\allowbreak s}התקן ל-SD card).
+  \item \texttt{adb uninstall com.\allowbreak xxx.\allowbreak xxx}: הסר App לפי שם חבילה.
+  \item \texttt{adb push PC /\allowbreak sdcard/\allowbreak target}: דחוף קובץ מהמחשב לטלפון.
+  \item \texttt{adb pull /\allowbreak sdcard/\allowbreak file PC}:מהטלפון למחשב (מהיר מ-WeChat).
+  \item \texttt{adb shell}:Linux Shell, בצע\texttt{ls}ו\texttt{pm}ו\texttt{am}ופקודות נוספות.
+  \item \texttt{adb reboot bootloader}:הפעלה ל-Fastboot (צריבה).
+  \item \texttt{adb reboot recovery}: הפעל מחדש למצב Recovery.
+  \item \texttt{adb shell pm list packages}:רשימת חבילות App. הוסף\texttt{-\allowbreak s}לצפייה ב-App מערכת בלבד, הוסף\texttt{-\allowbreak 3}לצפייה ב-App צד שלישי בלבד.
+  \item \texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 package}:הסרת App מובנה, בלי Root.
+\end{itemize}
+
+\subsubsection*{הסרת App מובנית ללא Root בפועל:}
+
+זוהי אחת מהפונקציות השימושיות ביותר של ADB: באמצעות\texttt{pm uninstall -\allowbreak -\allowbreak user 0}מסיר App מובנה ל“משתמש נוכחי”, בלי Root, ללא שינוי מחיצה. ה-App “נעלם” אך נשאר, חוזר אחרי איפוס.
+
+\begin{enumerate}
+  \item תחילה השתמש ב-\texttt{adb shell pm list packages -\allowbreak s}רשימת App מערכת, מצא חבילה. דפדפן Xiaomi:\texttt{com.\allowbreak android.\allowbreak browser}, Huawei AppGallery הוא\texttt{com.\allowbreak vmall.\allowbreak client}.
+  \item לא בטוח? במחשב,\texttt{adb shell pm list packages | findstr keyword}או "Package Viewer" בטלפון.
+  \item בצע הסרה:\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 package}, למשל\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 com.\allowbreak android.\allowbreak browser}. מחזיר\texttt{Success}מציין הצלחה.
+  \item שחזור? 1) איפוס; 2) התקן:\texttt{adb shell cmd package install-\allowbreak existing package}.
+\end{enumerate}
+
+\textbf{אל תמחק חבילות ליבה של המערכת!}\par
+
+“pm uninstall” בלי Root, אך מחיקת App קריטי (\texttt{com.\allowbreak android.\allowbreak systemui}סרגל מצב,\texttt{com.\allowbreak android.\allowbreak phone}טלפון,\texttt{com.\allowbreak android.\allowbreak settings}) = קריסה, מסך שחור. Google לפני מחיקה. מעט בכל פעם.
+
+\begin{tcbinfo}{ידיעון: מה המשמעות של --user 0}
+Android 4.2+ רב-משתמש, ID (בעלים 0, נוסף 10+).\texttt{-\allowbreak -\allowbreak user 0}“הסרה רק לבעלים הנוכחי” - קובץ ה-APK במחיצת המערכת עדיין קיים, פשוט לא מוצג לבעלים. לכן אינו דורש Root - לא נגע בקבצי מערכת, רק שינה “הגדרות משתמש”. זה ההבדל מ-Root: Root מוחק באמת מהמערכת, כל המשתמשים לא רואים; ADB רק “מסתיר למשתמש הנוכחי”.
+
+\end{tcbinfo}
+
+\booksubsection{ה. הרשאת Root: “מנהל-העל” של Android}
+
+Root מקביל לסופר-יוזר ב-Linux (שליטה מלאה ב-/ , קריאה/כתיבה של כל קובץ), ההרשאה הגבוהה ב-Android. שונה מ-Administrator ב-Windows: Windows מגביל את המנהל (ההרשאה הגבוהה באמת היא TrustedInstaller), גם Administrator לא יכול לבצע ישירות כמו root ב-Linux\texttt{sudo rm -\allowbreak rf /\allowbreak *}. עם Root: שינוי מערכת, הסרת App, App מתקדמים.
+
+\subsubsection*{שימוש באפליקציות פונקציה מתקדמות (כמו Titanium Backup, Greenify).}
+
+\begin{itemize}
+  \item שינוי ממשק ופונקציות מערכת.
+  \item התקנת Recovery צד שלישי ו-ROM מותאם אישית.
+  \item סיכוני Root:
+  \item אובדן אחריות
+\end{itemize}
+
+\subsubsection*{: רוב היצרנים לא מכסים טלפונים שעברו Root.}
+
+\begin{itemize}
+  \item \textbf{תקלה בפונקציות תשלום}: אפליקציות זדוניות עשויות להשיג הרשאות Root, תוצאות חמורות.
+  \item \textbf{אי יציבות מערכת}: פעולה שגויה עשויה לגרום לקריסת מערכת.
+  \item \textbf{אפליקציות בנק לא עובדות}: הרבה אפליקציות בנק ותשלום מזהות Root ומסרבות לרוץ.
+  \item \textbf{כשל בעדכון OTA}: עשוי לא לקבל עדכוני מערכת רשמיים.
+  \item \textbf{אזהרה חמורה}פעולת Root כרוכה בסיכון, עשויה לגרום ל-bricking של הטלפון (לא נדלק). אם אתה מתחיל, מומלץ קודם ללמוד היטב, ולוודא שיש גיבוי מלא. לפני פעולה קרא את המדריך בעיון, אשר את דגם המכשיר וגרסת המערכת.
+\end{itemize}
+
+\textbf{ארבע, המלצות למשתמשים רגילים}\par
+
+מצב מפתח
+
+\booksubsection{ו', SafetyNet/Play Integrity: למה Root = בנק לא עובד}
+
+Root משתמשים רבים חוו את הרגע: מתקינים מודולים בהתלהבות, פותחים App בנק - “המכשיר שלך לא בטוח, לא ניתן להשתמש”, Google Pay לא עובד, אפילו Netflix מסרב ל-HD. מאחורי זה שני מנגנוני אימות שלמות: SafetyNet הישן ו-Play Integrity API החדש.
+
+\subsubsection*{SafetyNet / Play Integrity:}
+
+\begin{itemize}
+  \item \textbf{SafetyNet Attestation (ישן, 2017)}:API ישן של Google לבדיקת שלמות מכשיר, App שואל את שרת Google "האם המכשיר עבר CTS ובמצב רשמי ללא שינוי". התוצאה מתחלקת ל-Basic (בסיסי) ו-Strong (חזק, דורש מפתח חומרה). Google הודיע ש-SafetyNet יושבת בהדרגה אחרי 2024.
+  \item \textbf{Play Integrity API (חדש, 2022)}:תחליף, קפדני יותר. מכשיר + App + חשבון. App חדשים יעברו.
+  \item \textbf{מי משתמש}:בנק, תשלום (Google Pay, Alipay, WeChat), Netflix HD, משחקים, MDM.
+\end{itemize}
+
+\subsubsection*{Play Integrity 3 רמות:}
+
+\begin{itemize}
+  \item \textbf{MEETS\_DEVICE\_INTEGRITY}:Android רשמי, BL נעול, ללא Root, CTS. בנק/תשלום עובד.
+  \item \textbf{MEETS\_BASIC\_INTEGRITY}:בסיסי, אולי חריג. Netflix מוגבל, בנק עלול לדחות.
+  \item \textbf{MEETS\_STRONG\_INTEGRITY}:גבוה, מפתח חומרה (Titan M), רוב המכשירים לא מגיעים.
+  \item \textbf{ללא תגית (NO\_INTEGRITY)}:Root/BL פתוח/ROM/אמולטור, בנק דוחה.
+\end{itemize}
+
+\subsubsection*{למה Root = App נכשל:}
+
+App שולח בקשה לשרת Google דרך Play Integrity API, Google בודק מספר מדדים - מצב BL, האם מחיצת מערכת שונתה, האם קיים su, האם SELinux במצב permissive. כל חריגה תגרום לירידת רמת האימות או החזרת ערך ריק, App בנק רואה “מכשיר לא בטוח” ומסרב.
+
+\subsubsection*{הסתרה: Magisk Hide / Shamiko / Zygisk:}
+
+כדי להשתמש ב-Root ובבנק, פיתחו “הסתרת Root”. עיקרון: להראות “נורמלי”.
+
+\begin{itemize}
+  \item \textbf{Magisk}:Systemless Root - לא משנה מחיצה, מעלה. OTA נקי, בסיס להסתרה. דורש BL פתוח.
+  \item \textbf{Magisk Hide (הופסק)}:מודול ישן, מסתיר Root. 2021 הוסר, Google משדרג, "משחק חתול ועכבר".
+  \item \textbf{Zygisk}:Magisk 24.0+, כמו Riru, Zygote, חבוי יותר. תנאי להסתרה.
+  \item \textbf{Shamiko}:מודול מרכזי, עם Zygisk, "רשימה לבנה", מסתיר Root/Magisk/BL. דרך LSPosed/GitHub.
+  \item \textbf{Play Integrity Fix(osm0sis)}:מודול ל-Play Integrity, משנה fingerprint, Google "רואה" רשמי.
+\end{itemize}
+
+\begin{tcbwarn}{משחק החתול והעכבר לעולם לא יסתיים}
+Google מעדכן כללים מעת לעת, ויצרני App עוקבים ומשדרגים Play Integrity. מה שעובד היום עשוי להיחשף מחר. אם אתה תלוי לחלוטין ב-App בנק/תשלום, הבחירה הבטוחה: אל תעשה Root, אל תפתח BL. שיטות הסתרה מתאימות יותר ל“מכשיר ראשי בלי Root + מכשיר גיבוי עם Root”.
+
+\end{tcbwarn}
+
+\booksubsection{ז. עצות למשתמשים רגילים}
+
+\begin{itemize}
+  \item \textbf{נעילת BL}:אפשר לפתוח, אנימציה/GPU, אל תשנה מה שלא מבין.
+  \item \textbf{פתיחת OEM ונעילת BL}:אם לא צריבה/Root, שניהם סגורים.
+  \item \textbf{ADB}:כלי חזק בלי Root - כמו\texttt{pm uninstall -\allowbreak -\allowbreak user 0}הסר App. בדוק חבילה לפני מחיקה.
+  \item \textbf{Root}:לא מומלץ Root, סיכון > תועלת. חלופות: ADB, Shizuku.
+\end{itemize}
+
+\begin{tcbpractice}{לחץ 7 פעמים על "מספר גרסה", עד שמופיע שמצב מפתח הופעל.}
+\begin{enumerate}
+  \item חזור להגדרות, מצא "אפשרויות מפתח" (בדרך כלל בתחתית ההגדרות או ב"מערכת").
+  \item מצא "Window animation scale", "Transition animation scale", "Animator duration scale", קבע את כולם ל-0.5x או כבה.
+  \item הרגש אם הטלפון מהיר יותר.
+  \item נספח לפרק 20: Termux — סביבת טרמינל לינוקס ניידת על מכשירי Android
+  \item אם נראה לך שמצב מפתח עדיין לא מספיק "הארדקור", ואתה רוצה לחוות שורת פקודה מלאה של לינוקס על הטלפון שלך, אז Termux מיועד בדיוק עבורך. הוא אינו דורש הרשאות root, ויכול להפוך טלפון Android רגיל לתחנת עבודת לינוקס ניידת, והוא כלי רב עוצמה למשתמשים מתקדמים החוקרים פיתוח ותפעול במובייל.
+\end{enumerate}
+
+\end{tcbpractice}

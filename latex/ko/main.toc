@@ -1,0 +1,479 @@
+\contentsline {part}{제1편 〈기초편〉(0\textasciitilde {}7장)}{2}{part*.2}%
+\contentsline {chapter}{제0장: 안녕, 시작하기 전에}{2}{chapter*.3}%
+\contentsline {section}{이 책이 무엇을 도와줄 수 있는가? (그리고 할 수 없는 것)}{2}{section*.4}%
+\contentsline {section}{우리의 “암호” 설명}{2}{section*.4}%
+\contentsline {section}{안드로이드와 iOS, 둘 다 이야기하기}{2}{section*.4}%
+\contentsline {section}{스마트폰 용량: 왜 128G를 샀는데 사용 가능 공간이 110G도 안 될까?}{3}{section*.4}%
+\contentsline {section}{당신의 스마트폰은 “디지털 자산 저장소”}{3}{Item.3}%
+\contentsline {chapter}{제1장: 안녕, 나의 개인 컴퓨터}{5}{chapter*.5}%
+\contentsline {section}{스마트폰 하드웨어 “오장육부”: 심층 분석}{5}{section*.6}%
+\contentsline {section}{운영체제: 안드로이드 vs iOS vs HarmonyOS}{12}{Item.11}%
+\contentsline {section}{부록: 안드로이드 스마트폰 메모리 확장 분석}{15}{Item.11}%
+\contentsline {section}{제1장 부록: HarmonyOS 운영체제 특집}{17}{Item.11}%
+\contentsline {chapter}{제2장: 디지털 방을 정리하세요 - 파일 관리}{21}{chapter*.7}%
+\contentsline {chapter}{제3장: 스마트폰에 “생명선” 연결하기 - 네트워크}{24}{chapter*.8}%
+\contentsline {section}{인터넷 연결에 혼란 없기 - Wi-Fi와 데이터의 “길”과 “차” 구분하기}{24}{section*.9}%
+\contentsline {section}{모바일 네트워크(4G/5G)와 데이터}{25}{section*.9}%
+\contentsline {section}{Wi-Fi: 연결, 공유 및 보안}{26}{section*.9}%
+\contentsline {section}{블루투스: 단거리 무선 통신의 만능 선수}{28}{section*.9}%
+\contentsline {section}{적외선 리모컨: 스마트폰이 만능 리모컨으로 변신}{29}{section*.9}%
+\contentsline {section}{NFC: 터치의 마법}{29}{section*.9}%
+\contentsline {section}{개인 핫스팟: 스마트폰을 Wi-Fi 라우터로 변신}{30}{section*.9}%
+\contentsline {chapter}{제4장: 앱 설치 및 관리 - 스마트폰의 “기술 패키지”}{31}{chapter*.10}%
+\contentsline {section}{공식 스토어: 가장 안전한 “앱 마트”}{31}{section*.11}%
+\contentsline {section}{순수/보호 모드: 스마트폰의 “백신 방화벽” 활성화}{31}{section*.11}%
+\contentsline {section}{타사 출처와 “전자 기생충”: 위험이 매우 높습니다!}{32}{section*.11}%
+\contentsline {section}{설치, 업데이트, 제거}{33}{Item.16}%
+\contentsline {section}{권한 관리: 당신은 앱의 “상사”}{33}{Item.16}%
+\contentsline {section}{소프트웨어 설치 패키지 구성 요소}{34}{Item.19}%
+\contentsline {chapter}{제5장: 스마트폰이 나를 더 잘 이해하도록 - 기본 설정}{37}{chapter*.12}%
+\contentsline {section}{사운드와 진동}{37}{section*.13}%
+\contentsline {section}{디스플레이와 밝기}{37}{section*.13}%
+\contentsline {section}{배경화면, 테마 및 데스크톱}{38}{section*.13}%
+\contentsline {section}{효율성 설정: 스마트폰을 “외장 두뇌”로 만들기}{38}{section*.13}%
+\contentsline {section}{접근성과 배리어프리: 기술의 선행 힘}{39}{section*.13}%
+\contentsline {chapter}{제6장: 당신의 디지털 라이프 지키기 - 보안 및 프라이버시}{44}{chapter*.14}%
+\contentsline {section}{잠금 화면: 첫 번째 물리적 방어선}{44}{section*.15}%
+\contentsline {section}{“나의 스마트폰 찾기”:최종 도난 방지 도구}{44}{Item.45}%
+\contentsline {section}{시스템 업데이트:패치 적용, 취약점 차단}{45}{Item.45}%
+\contentsline {section}{인식과 통신 사기 방지}{45}{Item.45}%
+\contentsline {section}{“개인정보 유출(켜기박스)”와 사회공학 공격 방어:프라이버시 유출 사슬 끊기}{46}{Item.45}%
+\contentsline {section}{프라이버시 보호:당신의 데이터는 당신의 재산입니다}{47}{Item.45}%
+\contentsline {section}{분실 / 도난 후의 “응급” 체크리스트}{48}{Item.45}%
+\contentsline {section}{SIM 카드와 eSIM 보안}{49}{Item.51}%
+\contentsline {chapter}{제7장: 최첨단 기능 완전 해설}{50}{chapter*.16}%
+\contentsline {section}{위성 통신: 신호가 없어도 구조 요청}{50}{section*.17}%
+\contentsline {section}{무선망 통신: 근거리 통신 새로운 방식}{51}{Item.58}%
+\contentsline {section}{차량 사고 감지:위급 순간 목숨 구하기}{51}{Item.58}%
+\contentsline {section}{SparkLink(SparkLink) 기술: 차세대 무선 연결}{52}{Item.61}%
+\contentsline {part}{2. 소프트웨어 편(제8-14장)}{55}{part*.18}%
+\contentsline {chapter}{제8장: 커뮤니케이션 — 문자, 전화, 소셜}{55}{chapter*.19}%
+\contentsline {section}{전화 앱의 고급 기능}{55}{section*.20}%
+\contentsline {section}{문자 메시지와 iMessage/RCS}{57}{section*.20}%
+\contentsline {section}{WeChat/QQ: 국민 메신저 관리}{58}{section*.20}%
+\contentsline {section}{영상 통화 비교}{60}{Item.69}%
+\contentsline {section}{이메일: 휴대폰에서 설정하고 쓰기}{61}{Item.69}%
+\contentsline {chapter}{제9장: 모바일 사무와 학습}{63}{chapter*.21}%
+\contentsline {section}{하나, 문서 처리: 손 안에서 편집과 창작}{63}{section*.22}%
+\contentsline {chapter}{제10장: 모바일 결제와 생활 서비스}{66}{chapter*.23}%
+\contentsline {chapter}{제11장: 사진 촬영과 이미지 관리}{68}{chapter*.24}%
+\contentsline {section}{제11장 부록:전문가용 이미징기술 지식}{70}{section*.25}%
+\contentsline {chapter}{제12장: 영상/음악 엔터테인먼트와 독서}{75}{chapter*.26}%
+\contentsline {section}{일,음악 듣기: 어떤 App을 고를지, 어떻게 들어야 편한지}{75}{section*.27}%
+\contentsline {section}{이,팟캐스트(Podcast): 출퇴근 길의 “귀 동반자”}{76}{section*.27}%
+\contentsline {section}{삼,영상 보기: 재생기에서 스트리밍까지 올바른 열기 방식}{76}{section*.27}%
+\contentsline {section}{사,전자책 독서: 스마트폰에서도 잘 책 읽을 수 있습니다}{77}{section*.27}%
+\contentsline {section}{오,스마트폰 게임: 즐겁게즐기기, 스마트폰도 상하지 않게}{77}{section*.27}%
+\contentsline {chapter}{제13장: 유틸리티 앱 추천}{79}{chapter*.28}%
+\contentsline {section}{생산성 도구: 시간과 집중력 관리}{79}{section*.29}%
+\contentsline {section}{건강과 운동}{81}{section*.29}%
+\contentsline {section}{여행·이동}{83}{section*.29}%
+\contentsline {section}{자동화 도구 입문}{84}{section*.29}%
+\contentsline {section}{브라우저와 검색 엔진: 당신의 정보 입구}{85}{section*.29}%
+\contentsline {section}{유용한 시스템 도구: 정리, 스팸 차단, 보안}{87}{Item.80}%
+\contentsline {section}{날씨 경보, 자연재해 경보, 지진 경보}{89}{Item.84}%
+\contentsline {section}{크로스 기기 협업: 원격 제어, 고속 전송, 계정 보안}{92}{Item.88}%
+\contentsline {chapter}{제14장:비밀번호 관리자특집}{97}{chapter*.30}%
+\contentsline {section}{왜 비밀번호 관리자가 필요한가?}{97}{section*.31}%
+\contentsline {section}{비밀번호 관리자의 작동 원리}{97}{section*.31}%
+\contentsline {section}{암호화 원리 간략 소개}{97}{Item.96}%
+\contentsline {section}{비밀번호 관리자 사용 모범 사례}{99}{Item.100}%
+\contentsline {section}{다섯, 비밀번호 강도 진짜 평가}{100}{Item.100}%
+\contentsline {section}{여섯, Passkey: 비밀번호 없는 로그인의 미래}{101}{Item.106}%
+\contentsline {section}{일곱, 하드웨어 보안 키}{104}{Item.123}%
+\contentsline {section}{여덟, 가족/팀 비밀번호 공유}{105}{Item.129}%
+\contentsline {section}{아홉, 비밀번호 관리자 사용 모범 사례}{107}{Item.141}%
+\contentsline {part}{3. 심화편(제15-20장)}{110}{part*.32}%
+\contentsline {chapter}{제15장: 배터리 과학과 배터리 타임 최적화}{110}{chapter*.33}%
+\contentsline {section}{하나, 배터리는 어떻게 된 걸까? 사이클과 건강도}{110}{section*.34}%
+\contentsline {section}{둘, 충전 미신? 고속 충전, 무선 충전과 황금 법칙}{110}{section*.34}%
+\contentsline {section}{셋, 고속 충전 프로토콜 완전 해석: 왜 당신의 충전기는 빠르게 충전하지 못할까?}{111}{section*.34}%
+\contentsline {section}{넷, 배터리 신기술: 실리콘 탄소 음극 배터리}{114}{Item.150}%
+\contentsline {section}{다섯, 이것이 진짜 절전 기술}{115}{Item.150}%
+\contentsline {chapter}{제16장: 계정 체계와 클라우드 서비스}{116}{chapter*.35}%
+\contentsline {section}{하나, 당신의 스마트폰 계정은 도대체 얼마나 많은 것을 관리하나요?}{116}{section*.36}%
+\contentsline {section}{둘, 반드시 해야 할 세 가지, 지금 바로}{116}{section*.36}%
+\contentsline {section}{셋, iCloud: Apple 사용자의 “공기”}{117}{Item.156}%
+\contentsline {section}{넷, 동기화와 백업, 헷갈리지 마세요}{118}{Item.156}%
+\contentsline {section}{다섯, Android 사용자의 계정 매트릭스}{118}{Item.156}%
+\contentsline {section}{여섯, 가족 공유: 가족도 혜택 보게}{119}{Item.156}%
+\contentsline {chapter}{제17장: 스마트폰과 다른 기기의 연동}{120}{chapter*.37}%
+\contentsline {section}{하나, 컴퓨터와 협업: 스마트폰과 컴퓨터는 더 이상 두 세계가 아님}{120}{section*.38}%
+\contentsline {section}{둘, TV로 화면 미러링: 온 가족이 함께 보기}{120}{section*.38}%
+\contentsline {section}{셋, 스마트워치/밴드와: 손목 위의 건강 관리자}{121}{section*.38}%
+\contentsline {section}{넷, 스마트 홈과: 스마트폰은 집의 “총 스위치”}{121}{section*.38}%
+\contentsline {section}{다섯, Bluetooth 이어폰과 스피커: 무선의 자유}{122}{section*.38}%
+\contentsline {section}{여섯, 차량 연동 시스템과: 운전 중의 안전 파트너}{123}{section*.38}%
+\contentsline {section}{일곱, 연동 중의 보안과 프라이버시}{123}{section*.38}%
+\contentsline {chapter}{제18장: 데이터 백업과 이전}{125}{chapter*.39}%
+\contentsline {section}{하나, 먼저 파악: 스마트폰 안의 어떤 것을 잃어버리면 되돌릴 수 없나}{125}{section*.40}%
+\contentsline {section}{둘, 전체 백업: 한 번에 모든 것 해결}{125}{section*.40}%
+\contentsline {section}{셋, 분류 백업 전략: 중요한 것은 별도로 한 부 더 저장}{126}{section*.40}%
+\contentsline {section}{넷, 기기 변경 가이드: 구형 스마트폰에서 신형으로}{127}{section*.40}%
+\contentsline {section}{다섯, 백업의 황금 법칙: 3-2-1 원칙}{127}{section*.40}%
+\contentsline {chapter}{제19장: 고장 진단과 자가 구조}{129}{chapter*.41}%
+\contentsline {section}{하나, 스마트폰이 버벅거리고 발열——가장 자주 묻는 질문}{129}{section*.42}%
+\contentsline {section}{둘, 앱 강제 종료, 응답 없음——앱이 말을 안 들어요}{130}{Item.175}%
+\contentsline {section}{셋, 충전 불량 또는 충전 느림——배터리 탓이 아닐 수도}{130}{Item.180}%
+\contentsline {section}{넷, 네트워크 연결 불량, Wi-Fi 자주 끊김}{130}{Item.180}%
+\contentsline {section}{다섯, 화면 문제: 터치 불량, 깜빡임, 잔상}{131}{Item.184}%
+\contentsline {section}{여섯, 부팅 불가, Logo 화면에서 멈춤——먼저 진정}{131}{Item.184}%
+\contentsline {section}{일곱, 소리 문제: 스피커 안 울림, 통화 소리 작음}{132}{Item.184}%
+\contentsline {section}{여덟, 공식 수리 찾기, 함정 피하기}{132}{Item.184}%
+\contentsline {section}{제20장: 개발자 모드와 고급 권한}{133}{Item.189}%
+\contentsline {section}{제20장 부록: Termux — Android 기기의 휴대용 Linux 터미널 환경}{140}{Item.197}%
+\contentsline {part}{넷, 초월 편(제21-26장)}{144}{part*.43}%
+\contentsline {chapter}{제21장: 모바일 네트워크와 정보 보안 심층 탐구}{144}{chapter*.44}%
+\contentsline {section}{하나, VPN: 네트워크의 “투명 망토”}{144}{section*.45}%
+\contentsline {section}{둘, 공용 Wi-Fi의 “달콤한 함정” — 상상보다 위험하다}{145}{section*.45}%
+\contentsline {chapter}{제22장: AI는 스마트폰에서 어떻게 작동하는가}{148}{chapter*.46}%
+\contentsline {chapter}{제23장: 프로그래밍 사고방식과 자동화 입문}{153}{chapter*.47}%
+\contentsline {section}{하나, 자동화란 도대체 무엇인가?}{153}{section*.48}%
+\contentsline {section}{둘, iOS “단축어” — 애플 사용자의 자동화 신기}{154}{Item.200}%
+\contentsline {section}{셋, 안드로이드 자동화 — Tasker와 그 친구들}{155}{Item.200}%
+\contentsline {section}{넷, 자동화 사고방식의 일상 응용}{156}{Item.200}%
+\contentsline {chapter}{제23장 부록: GitHub 입문 가이드 — 코드 호스팅에서 협업 플랫폼까지}{158}{chapter*.49}%
+\contentsline {section}{하나, GitHub란 도대체 무엇인가?}{158}{section*.50}%
+\contentsline {section}{둘, Git와 GitHub의 차이(핵심 개념!)}{158}{section*.50}%
+\contentsline {section}{셋, GitHub의 핵심 개념과 기능}{159}{section*.50}%
+\contentsline {section}{넷, 가입 및 시작: 5분 만에 첫 번째 저장소 만들기}{160}{section*.50}%
+\contentsline {section}{다섯, 기본 작업 흐름: 로컬에서 클라우드로}{161}{Item.210}%
+\contentsline {section}{여섯, 팀 협업 흐름: Pull Request는 어떻게 작동하는가}{162}{Item.215}%
+\contentsline {chapter}{제24장: Root 권한과 BL 잠금 심층 분석}{164}{chapter*.51}%
+\contentsline {section}{하나, Bootloader 심층 이해}{164}{section*.52}%
+\contentsline {section}{BL 잠금 해제의 상세 절차(샤오미를 예로)}{166}{Item.224}%
+\contentsline {section}{Root의 다양한 방안}{167}{Item.228}%
+\contentsline {section}{플래싱 입문}{167}{Item.228}%
+\contentsline {section}{삼성 Knox: BL 잠금 해제의 비가역적 대가}{167}{Item.228}%
+\contentsline {section}{자주 묻는 질문 (Q\& A)}{168}{Item.228}%
+\contentsline {chapter}{제25장: 중고 스마트폰 처리와 디지털 유산}{169}{chapter*.53}%
+\contentsline {section}{구형 스마트폰의 “안락사”: 안전한 판매 또는 양도 가이드}{169}{section*.54}%
+\contentsline {section}{디지털 유산: 당신의 소셜 영혼을 어떻게 안장할 것인가?}{171}{Item.233}%
+\contentsline {section}{환경 보호의 마지막 여정}{175}{Item.244}%
+\contentsline {chapter}{제26장: 현재 스마트폰 기술 최전선}{177}{chapter*.55}%
+\contentsline {section}{AI 스마트폰: 마케팅 허세인가, 진정한 변화인가?}{177}{section*.56}%
+\contentsline {section}{각 제조사의 AI 전략 대비: 누가 진지하게 하고, 누가 OEM인가?}{177}{section*.56}%
+\contentsline {section}{위성 통신: 플래그십 “허세”에서 중급 표준으로}{178}{section*.56}%
+\contentsline {section}{폴더블 생태계 성숙도: 주력 기기로 사용할 수 있는가?}{178}{section*.56}%
+\contentsline {section}{6G와 Wi-Fi 7: 차세대 연결의 속도와 경계}{179}{section*.56}%
+\contentsline {section}{실리콘-탄소 음극 배터리: 배터리 수명 드디어 맞이한 소재 수준의 돌파}{180}{section*.56}%
+\contentsline {section}{본 챕터 요약: 한 문장으로 이러한 최전선 기억하기}{180}{section*.56}%
+\contentsline {part}{5. 실전 편(제27-32장)}{183}{part*.57}%
+\contentsline {chapter}{제27장: 부모님도 쉽게 사용——시니어 친화 스마트폰 완전 가이드}{183}{chapter*.58}%
+\contentsline {section}{먼저 마인드셋 바로잡기: 이건 “어르신이 못 쓰시는” 게 아니라 “스마트폰이 잘 못 만든” 것}{183}{section*.59}%
+\contentsline {section}{첫 번째 단계: “간편 모드” 켜기——스마트폰이 산뜻해지다}{183}{section*.59}%
+\contentsline {section}{간편 모드를 켜지 않는다면, 수동으로 조절도 가능——“큰 글자+큰 아이콘” 5단계}{184}{section*.59}%
+\contentsline {section}{사기 방지——이 챕터는 반드시 어르신과 함께 보세요}{185}{Item.263}%
+\contentsline {section}{원격 지원——외지에 있어도 부모님 스마트폰 수리 돕기}{186}{Item.266}%
+\contentsline {section}{위챗의 “어르신 친화 개조”——어르신에게 이 몇 마디면 충분}{187}{Item.266}%
+\contentsline {section}{스마트폰을 잃어버리면? 어르신의 “비상 대응 예안” 만들기}{187}{Item.266}%
+\contentsline {section}{무선 이어폰과 보청기 호환——간과된 좋은 기능}{188}{Item.269}%
+\contentsline {chapter}{제28장: 돈을 알맞게 써서 마음에 드는 기기 사기——스마트폰 구매 궁극 가이드}{189}{chapter*.60}%
+\contentsline {section}{세 단계 기기 선택법: 요구예산기종}{189}{section*.61}%
+\contentsline {section}{핵심 파라미터 어떻게 보는지——모두 알 필요 없이, 이 5가지만 알면 충분}{189}{Item.272}%
+\contentsline {section}{예산별 등급 추천(2026년 중 시장 기준)}{191}{Item.272}%
+\contentsline {section}{시나리오별 기기 선택——당신의 요구는 무엇인가?}{192}{Item.272}%
+\contentsline {section}{다섯 가지 쉽게 빠지는 함정——구매 전 대비하여 한 번 보기}{193}{Item.272}%
+\contentsline {section}{언제 사는 것이 가장 합산한가?}{193}{Item.277}%
+\contentsline {section}{채널 선택——어디서 사는 것이 신뢰할 수 있는가?}{194}{Item.277}%
+\contentsline {chapter}{제29장: 디지털 건강——스마트폰과 건강한 관계 구축}{195}{chapter*.62}%
+\contentsline {section}{먼저 당신의 “화면 시간”을 보라——디지털이 사람을 맑게 함}{195}{section*.63}%
+\contentsline {section}{앱에 “사용 한도” 설정——자신에게 속도 제한 장치 달기}{195}{section*.63}%
+\contentsline {section}{“방해 금지 모드”의 올바른 사용법——알림을 끄는 것이 아니라 불안을 끄는 것}{196}{Item.285}%
+\contentsline {section}{눈 보호는 앱에 의존하지 말고 습관에 의존——20-20-20 법칙}{196}{Item.285}%
+\contentsline {section}{“스마트폰 중독족”의 목 자구 가이드}{196}{Item.285}%
+\contentsline {section}{수면과 스마트폰——침실에서 가장 고쳐야 할 습관}{197}{Item.285}%
+\contentsline {section}{정보 불안증——“선택적 실명” 배우기}{197}{Item.285}%
+\contentsline {chapter}{제30장: 화면 미러링, 발표 및 차량 연동}{199}{chapter*.64}%
+\contentsline {section}{무선 화면 미러링의 세 가지 진영——혼동하지 말 것}{199}{section*.65}%
+\contentsline {section}{유선 화면 미러링——더 안정적이고, 지연 시간 0}{200}{section*.65}%
+\contentsline {section}{스마트폰이 컴퓨터로——데스크톱 모드}{200}{section*.65}%
+\contentsline {section}{차량 연동——운전 중 스마트폰 사용의 올바른 방식}{200}{section*.65}%
+\contentsline {section}{회의실 화면 미러링 실전——더 이상 허둥지둥}{201}{section*.65}%
+\contentsline {chapter}{제31장: 숏폼 영상 촬영과 콘텐츠 제작 입문}{203}{chapter*.66}%
+\contentsline {section}{촬영 전에 먼저 명확히: 누구를 위해 촬영하나요?}{203}{section*.67}%
+\contentsline {section}{스마트폰 촬영 기본 설정——촬영 전 반드시 해야 할 5가지}{203}{Item.300}%
+\contentsline {section}{5가지 카메라 워크——화면을 “움직이게” 만들기}{204}{Item.305}%
+\contentsline {section}{편집 입문——CapCut이면 충분합니다}{204}{Item.305}%
+\contentsline {section}{커버의 중요성——70\%의 사람은 커버만 보고 볼지 말지 결정}{205}{Item.311}%
+\contentsline {section}{콘텐츠 제작의 세 가지 마음가짐}{205}{Item.311}%
+\contentsline {chapter}{제32장: 휴대폰 보안 응급 처치 매뉴얼}{207}{chapter*.68}%
+\contentsline {section}{장면 0: 지진 / 극단적 날씨 — 휴대폰이 목숨을 구하는 법}{207}{section*.69}%
+\contentsline {section}{장면 1: 휴대폰을 잃어버렸다/도난당했다 — 골든타임 30분}{208}{Item.326}%
+\contentsline {section}{장면 2: 사기를 당했다 — 72시간 골든 처리 기간}{209}{Item.335}%
+\contentsline {section}{장면 3: 휴대폰에 바이러스/트로이 목마가 걸렸다 — 어떻게?}{209}{Item.341}%
+\contentsline {section}{장면 4: 계정을 도난당했다 — 빠르게 되찾기}{210}{Item.341}%
+\contentsline {section}{장면 5: 협박 메시지를 받았다 — 겁먹지 말고, 돈 내지 마세요}{210}{Item.347}%
+\contentsline {section}{장면 6: AI 얼굴 합성 / AI 목소리 합성 사기 — 보이는 게 다가 아니다}{211}{Item.347}%
+\contentsline {section}{장면 7: SIM 스와프 공격(SIM 납치) — 번호를 “도둑맞았다”}{212}{Item.352}%
+\contentsline {part}{제6편 〈전망편·차량 연동편〉(33\textasciitilde {}34장)}{216}{part*.70}%
+\contentsline {chapter}{제33장:미래 전망——스마트폰의 다음 여정}{216}{chapter*.71}%
+\contentsline {section}{AR/VR과 공간 컴퓨팅: 스마트폰 외의 “두 번째 데스크톱”}{216}{section*.72}%
+\contentsline {section}{뇌-컴퓨터 인터페이스: 생각이 상호작용 매체가 되다}{216}{section*.72}%
+\contentsline {section}{스마트폰의 “은신”과 새 정체성의 기반}{217}{section*.72}%
+\contentsline {section}{윤리적 사고: 우리, 여전히 스마트폰의 주인인가?}{217}{section*.72}%
+\contentsline {section}{연결을 유지하고, 독립도 유지——당신의 디지털 라이프 철학}{217}{section*.72}%
+\contentsline {chapter}{제34장: 차량 연동 심층 가이드——스마트폰과 자동차의 융합}{219}{chapter*.73}%
+\contentsline {section}{차량 연동의 3대 노선}{219}{section*.74}%
+\contentsline {section}{CarPlay / Android Auto / HiCar 비교}{219}{section*.74}%
+\contentsline {section}{HarmonyOS 콕핏: 스마트폰과 차량 시스템의 끊김 없는 흐름}{220}{section*.74}%
+\contentsline {section}{신생 자동차 제조업체의 차량 시스템}{220}{section*.74}%
+\contentsline {section}{스마트폰을 차량 시스템으로——사용할 수 있는가?}{221}{section*.74}%
+\contentsline {section}{실용 팁}{221}{section*.74}%
+\contentsline {part}{어린이와 스마트폰 특별(제35장)}{224}{part*.75}%
+\contentsline {chapter}{제35장: 어린이와 스마트폰——디지털 시대의 교육 가이드}{224}{chapter*.76}%
+\contentsline {section}{몇 살에 아이에게 스마트폰을 줄 것인가?}{224}{section*.77}%
+\contentsline {chapter}{제36장: 휴대폰과 스마트홈 — 집을 똑똑하게}{227}{chapter*.78}%
+\contentsline {section}{스마트홈 프로토콜: 무엇을 고를지가 중요합니다}{227}{section*.79}%
+\contentsline {section}{3대 생태계 비교}{228}{section*.79}%
+\contentsline {section}{휴대폰을 홈 허브로}{228}{section*.79}%
+\contentsline {section}{입문 키트 추천}{229}{section*.79}%
+\contentsline {section}{보안 주의사항}{229}{section*.79}%
+\contentsline {part}{제7편 〈AI 코딩 실전편〉(37\textasciitilde {}47장)}{232}{part*.80}%
+\contentsline {chapter}{제37장: 패러다임 혁명 — '코드 짜기'에서 'AI를 지휘해 코드 짜기'로}{232}{chapter*.81}%
+\contentsline {section}{Vibe Coding의 탄생: 한 문장이 일으킨 운동}{232}{section*.82}%
+\contentsline {section}{2026년의 현재: Agentic Engineering 시대}{233}{section*.82}%
+\contentsline {section}{핵심 인식 전환: Coder에서 Conductor로}{234}{Item.383}%
+\contentsline {section}{왜 방법론이 도구보다 더 중요할까요?}{234}{Item.383}%
+\contentsline {chapter}{제38장: AI 프로그래밍 5가지 사고 원칙}{236}{chapter*.83}%
+\contentsline {section}{원칙 1: Think Before Coding(먼저 생각하고, 그다음 코딩하기)}{236}{section*.84}%
+\contentsline {section}{원칙 2: Simplicity First(단순함이 최우선)}{237}{Item.386}%
+\contentsline {section}{원칙 3: Surgical Changes(정밀 수정)}{238}{Item.386}%
+\contentsline {section}{원칙 4: Goal-Driven Execution(목표 기반 실행)}{238}{lstnumber.-2.1}%
+\contentsline {section}{원칙 5: Iterate and Verify(반복하고 검증하기)}{239}{lstnumber.-2.1}%
+\contentsline {section}{Harness Engineering: Agent = Model + Harness}{240}{lstnumber.-2.1}%
+\contentsline {chapter}{제39장: 컨텍스트 엔지니어링 — AI가 내 의도를 이해하게 만들기}{242}{chapter*.85}%
+\contentsline {section}{프로젝트 기억 파일: AI의 '장기 기억'}{242}{section*.86}%
+\contentsline {section}{스펙 기반 개발(SDD)}{243}{lstnumber.-3.24}%
+\contentsline {section}{컨텍스트 윈도우 관리}{244}{Item.391}%
+\contentsline {section}{컨텍스트 엔지니어링 실전 포인트}{245}{Item.391}%
+\contentsline {chapter}{제40장: 요구사항 엔지니어링 — 아이디어를 AI가 실행 가능한 지시로 바꾸기}{246}{chapter*.87}%
+\contentsline {section}{모호한 아이디어에서 구조화된 요구사항으로}{246}{section*.88}%
+\contentsline {section}{요구사항 분해의 계층화 기술}{247}{section*.88}%
+\contentsline {section}{PRD 작성 템플릿과 실전}{247}{Item.400}%
+\contentsline {section}{실전: 아이디어에서 방안까지 전 과정 훑어보기}{248}{lstnumber.-4.29}%
+\contentsline {chapter}{제41장: 2026년 AI 프로그래밍 도구 전체 지도}{250}{chapter*.89}%
+\contentsline {section}{3대 진영과 선택 프레임}{250}{section*.90}%
+\contentsline {section}{IDE 내장 AI 진영}{251}{section*.90}%
+\contentsline {section}{터미널 Agent 진영}{251}{section*.90}%
+\contentsline {section}{클라우드 Builder 진영}{252}{section*.90}%
+\contentsline {section}{도구는 바뀌어도 방법론은 그대로}{252}{section*.90}%
+\contentsline {chapter}{제42장: 대형 모델 전체 지도와 API 실전}{254}{chapter*.91}%
+\contentsline {section}{국제 주류 대형 모델: 3강 구도}{254}{section*.92}%
+\contentsline {section}{중국 주요 대형 모델: 다채로운 경쟁}{256}{section*.92}%
+\contentsline {section}{모델 선택 의사결정 프레임워크}{259}{section*.92}%
+\contentsline {section}{API 호출 입문: 제로부터 대형 모델 연동하기}{260}{section*.92}%
+\contentsline {section}{토큰 플랜(Token Plan) 구매 가이드}{263}{lstnumber.-8.14}%
+\contentsline {section}{실전: 프로젝트에 대형 모델 API 연동하기}{266}{Item.409}%
+\contentsline {chapter}{제43장: 대화 엔지니어링 — AI와 효율적으로 협업하는 대화 기술}{270}{chapter*.93}%
+\contentsline {section}{프롬프트 계층화 전략}{270}{section*.94}%
+\contentsline {section}{디버깅 대화: AI가 빨리 원인을 찾도록 오류 설명하기}{271}{section*.94}%
+\contentsline {section}{반복 전략: 작은 단계 빠르게 vs 큰 단계 리팩터링}{272}{lstnumber.-11.1}%
+\contentsline {section}{여러 차례 대화의 컨텍스트 관리}{272}{lstnumber.-11.1}%
+\contentsline {chapter}{제44장: 0에서 1까지 실전 — 완성 프로젝트 전 과정}{274}{chapter*.95}%
+\contentsline {section}{프로젝트 1: 미니멀 개인 도구 사이트(입문)}{274}{section*.96}%
+\contentsline {section}{프로젝트 2: 풀스택 가계부 시스템(중급)}{275}{lstnumber.-12.13}%
+\contentsline {section}{프로젝트 3: AI 강화 앱(고급)}{277}{lstnumber.-14.18}%
+\contentsline {section}{범용 실전 흐름 체크리스트}{277}{lstnumber.-14.18}%
+\contentsline {chapter}{제45장: 품질 보증 — AI가 쓴 코드를 믿을 수 있게 만들기}{279}{chapter*.97}%
+\contentsline {section}{테스트 주도: AI에게 테스트 시키기}{279}{section*.98}%
+\contentsline {section}{코드 리뷰 노하우}{280}{lstnumber.-15.14}%
+\contentsline {section}{버전 관리: AI 코딩에서 Git의 역할}{280}{lstnumber.-15.14}%
+\contentsline {section}{자주 겪는 함정과 피하는 법}{281}{Item.417}%
+\contentsline {chapter}{제46장: 심화 여정——사용자에서 아키텍트로}{283}{chapter*.99}%
+\contentsline {section}{MCP 프로토콜과 도구 확장}{283}{section*.100}%
+\contentsline {section}{커스텀 워크플로와 Skills}{283}{section*.100}%
+\contentsline {section}{멀티 에이전트 협업 방식}{284}{section*.100}%
+\contentsline {section}{꾸준히 배우는 길}{284}{section*.100}%
+\contentsline {chapter}{제47장: 빠른 참조 매뉴얼과 리소스}{286}{chapter*.101}%
+\contentsline {section}{사고 모델 빠른 참조 카드}{286}{section*.102}%
+\contentsline {section}{도구 선택 의사결정 트리}{286}{section*.102}%
+\contentsline {section}{자주 묻는 질문 FAQ}{287}{section*.102}%
+\contentsline {section}{추천 학습 리소스}{288}{section*.102}%
+\contentsline {section}{맺음말: 도구는 손에, 방법론은 마음에}{288}{section*.102}%
+\contentsline {section}{참고 문헌}{289}{section*.102}%
+\contentsline {part}{제8편 〈안드로이드 개발 실전편〉(48\textasciitilde {}58장)}{291}{part*.103}%
+\contentsline {chapter}{제48장: 안드로이드 알아보기——운영체제에서 개발 생태계까지}{291}{chapter*.104}%
+\contentsline {section}{안드로이드의 내력: '작은 로봇'에서 '세계 최대 시스템'까지}{291}{section*.105}%
+\contentsline {section}{어떤 언어로 쓸까: Java 아니면 Kotlin?}{292}{section*.105}%
+\contentsline {section}{앱 하나는 어떻게 태어날까?}{293}{lstnumber.-17.6}%
+\contentsline {section}{안드로이드 기술 스택 전경: 여러분의 '무기 목록}{293}{lstnumber.-17.6}%
+\contentsline {section}{안드로이드 vs iOS: 개발자의 첫 '진영 선택' 수업}{294}{lstnumber.-17.6}%
+\contentsline {chapter}{제49장: 개발 환경 구축——Android Studio와 첫 프로젝트}{296}{chapter*.106}%
+\contentsline {section}{Android Studio 설치}{296}{section*.107}%
+\contentsline {section}{첫 프로젝트 만들기}{296}{Item.429}%
+\contentsline {section}{실행하기: 에뮬레이터와 실기기}{297}{Item.429}%
+\contentsline {section}{프로젝트 구조 뜯어보기: 각 파일은 무슨 일을 할까}{298}{Item.432}%
+\contentsline {section}{맛보기 실습: “Hello”를 여러분의 이름으로 바꾸기}{299}{Item.432}%
+\contentsline {section}{자주 나오는 오류 응급처치: 초보자 첫 2주의 '응급실}{299}{lstnumber.-18.8}%
+\contentsline {chapter}{제50장: Kotlin 빠르게 시작하기——안드로이드 개발의 첫 언어}{301}{chapter*.108}%
+\contentsline {section}{변수와 타입: 데이터에 이름 붙이기}{301}{section*.109}%
+\contentsline {section}{함수: 로직을 '버튼'으로 포장하기}{302}{lstnumber.-19.8}%
+\contentsline {section}{조건과 반복: 프로그램에게 '생각' 가르치기}{302}{lstnumber.-20.10}%
+\contentsline {section}{널 안전성: Kotlin의 '생명 부적}{303}{lstnumber.-21.21}%
+\contentsline {section}{클래스와 객체: '부품'을 찍어 내는 틀}{303}{lstnumber.-22.10}%
+\contentsline {section}{lambda와 고차 함수: Kotlin의 '문법 설탕}{304}{lstnumber.-23.13}%
+\contentsline {section}{왕초보를 위한 문법 빠른 참조 카드}{304}{lstnumber.-24.11}%
+\contentsline {chapter}{제51장: 화면 개발——Jetpack Compose 입문}{306}{chapter*.110}%
+\contentsline {section}{Compose의 발상: 화면이 곧 함수}{306}{section*.111}%
+\contentsline {section}{기본 컴포넌트: 글자, 버튼, 입력란, 이미지}{307}{lstnumber.-25.16}%
+\contentsline {section}{레이아웃 3형제: Column, Row, Box}{307}{lstnumber.-26.15}%
+\contentsline {section}{상태: 화면에 '생명' 불어넣기}{308}{lstnumber.-28.9}%
+\contentsline {section}{테마와 다크 모드: 한 번 설정, 전체 적용}{309}{lstnumber.-29.12}%
+\contentsline {section}{미리보기, 애니메이션, 실시간 편집: Compose의 “치트키”}{309}{Item.435}%
+\contentsline {chapter}{제52장: 안드로이드 4대 컴포넌트와 Activity 생명주기}{311}{chapter*.112}%
+\contentsline {section}{4대 컴포넌트: 안드로이드의 “기둥과 보”}{311}{section*.113}%
+\contentsline {section}{Activity 생명주기: 안드로이드 개발의 첫 번째 “보물지도”}{312}{section*.113}%
+\contentsline {section}{Intent: 앱 안팎을 오가는 “차표”}{312}{section*.113}%
+\contentsline {section}{여러 화면과 내비게이션}{313}{lstnumber.-31.8}%
+\contentsline {section}{곁가지로 알아두기: Fragment란 무엇일까(그리고 이 책에서 다루지 않은 이유)}{313}{lstnumber.-32.13}%
+\contentsline {chapter}{제53장: 데이터 저장과 네트워크 요청}{315}{chapter*.114}%
+\contentsline {section}{저장 방식 고르기: 먼저 이 표부터 보기}{315}{section*.115}%
+\contentsline {section}{DataStore: 작은 설정 저장하기}{315}{section*.115}%
+\contentsline {section}{Room: 데이터에게 “진짜 집” 마련해 주기}{316}{lstnumber.-33.12}%
+\contentsline {section}{Retrofit: 서버와 말 걸기}{317}{lstnumber.-34.31}%
+\contentsline {section}{JSON 파싱: 네트워크 데이터 “통역”하기}{317}{lstnumber.-35.15}%
+\contentsline {section}{코루틴: 안드로이드 동시성의 “공용어”}{318}{lstnumber.-36.10}%
+\contentsline {section}{코루틴: 안드로이드 동시성의 “공용어”}{318}{lstnumber.-36.10}%
+\contentsline {chapter}{제54장: 프로젝트 1 — 나만의 가계부(로컬 버전)}{320}{chapter*.116}%
+\contentsline {section}{요구사항 고민: 먼저 다섯 가지 질문하기}{320}{section*.117}%
+\contentsline {section}{데이터 계층: “장부”에 집 주기}{320}{section*.117}%
+\contentsline {section}{MVVM: 화면과 로직 “분가시키기”}{321}{lstnumber.-39.17}%
+\contentsline {section}{화면: 목록 화면 + 입력 화면}{322}{lstnumber.-40.18}%
+\contentsline {section}{편집과 삭제: 데이터 “들어오고 나가기”}{323}{lstnumber.-41.31}%
+\contentsline {section}{검수: 3단계 점검 + 심화 도전 두 가지}{324}{lstnumber.-42.9}%
+\contentsline {section}{검수: 3단계 점검 + 심화 도전 두 가지}{324}{lstnumber.-42.9}%
+\contentsline {chapter}{제55장: 프로젝트 2 — 날씨 조회 앱(네트워크 버전)}{325}{chapter*.118}%
+\contentsline {section}{무료 날씨 API 신청하기}{325}{section*.119}%
+\contentsline {section}{네트워크 계층: Retrofit + JSON 파싱}{325}{Item.440}%
+\contentsline {section}{세 가지 화면 상태: 로딩 중 / 성공 / 실패}{326}{lstnumber.-43.18}%
+\contentsline {section}{실전 화면 코드: 날씨 그려 내기}{327}{lstnumber.-44.24}%
+\contentsline {section}{화면과 인터랙션 디테일}{328}{lstnumber.-45.25}%
+\contentsline {section}{화면과 인터랙션 디테일}{328}{lstnumber.-45.25}%
+\contentsline {chapter}{제56장: 갈고닦기와 출시 — 테스트, 디버깅, Google Play 출시}{329}{chapter*.120}%
+\contentsline {section}{디버깅 3대 필살기: Logcat, 중단점, UI 인스펙터}{329}{section*.121}%
+\contentsline {section}{테스트: 코드에 보험 들기}{329}{section*.121}%
+\contentsline {section}{서명과 패키징: 앱에 “도장” 찍기}{330}{lstnumber.-46.19}%
+\contentsline {section}{Google Play 출시 전 과정}{331}{Item.443}%
+\contentsline {section}{스토어 소재 만들기: 첫인상이 곧 다운로드예요}{331}{Item.443}%
+\contentsline {section}{성능 최적화와 크래시 리포트 체크리스트}{332}{Item.443}%
+\contentsline {chapter}{제57장: 심화의 길 — 권한, 알림, 그리고 현대적 아키텍처}{334}{chapter*.122}%
+\contentsline {section}{런타임 권한: 먼저 노크하고, 그다음 들어가기}{334}{section*.123}%
+\contentsline {section}{알림: 올바른 시간에 유용한 말 하기}{335}{lstnumber.-47.16}%
+\contentsline {section}{아키텍처 심화: 의존성 주입과 모듈화}{335}{lstnumber.-48.21}%
+\contentsline {section}{2026년의 새 놀이: AI 보조 안드로이드 개발}{336}{lstnumber.-48.21}%
+\contentsline {section}{Compose 성능 최적화와 디버깅 도구}{336}{lstnumber.-48.21}%
+\contentsline {chapter}{제58장: 빠른 참조 매뉴얼과 리소스}{338}{chapter*.124}%
+\contentsline {section}{자주 쓰는 코드 빠른 참조 카드}{338}{section*.125}%
+\contentsline {section}{자주 묻는 질문 FAQ}{338}{section*.125}%
+\contentsline {section}{추천 학습 리소스}{339}{section*.125}%
+\contentsline {section}{Gradle 자주 쓰는 명령어 빠른 참조}{340}{section*.125}%
+\contentsline {section}{맺음말: 첫 앱에서 N번째 앱으로}{340}{section*.125}%
+\contentsline {section}{맺음말: 첫 앱에서 N번째 앱으로}{340}{section*.125}%
+\contentsline {section}{참고 문헌}{341}{section*.125}%
+\contentsline {part}{제9편 〈iOS 개발 실전편〉(59\textasciitilde {}69장)}{343}{part*.126}%
+\contentsline {chapter}{제59장: iOS 알아보기 — 애플 생태계와 개발 생태계}{343}{chapter*.127}%
+\contentsline {section}{iOS의 내력: 한 대의 휴대폰이 한 산업을 바꾸다}{343}{section*.128}%
+\contentsline {section}{울타리 쳐진 정원: 애플 생태계의 '규칙'과 '이익'}{344}{section*.128}%
+\contentsline {section}{어떤 언어로 쓸까: Objective-C 아니면 Swift?}{344}{section*.128}%
+\contentsline {section}{앱은 어떻게 태어날까?}{345}{lstnumber.-50.1}%
+\contentsline {section}{iOS 기술 스택 전체 그림: 여러분의 '무기 목록'}{345}{lstnumber.-50.1}%
+\contentsline {chapter}{제60장: 개발 환경 구축 — Xcode와 첫 번째 프로젝트}{347}{chapter*.129}%
+\contentsline {section}{Mac 한 대 준비하기}{347}{section*.130}%
+\contentsline {section}{Xcode 설치하기}{347}{section*.130}%
+\contentsline {section}{여러분의 첫 프로젝트 만들기}{348}{Item.456}%
+\contentsline {section}{프로젝트 구조 해부: 파일마다 하는 일}{348}{Item.456}%
+\contentsline {section}{실기기 디버깅: 앱을 여러분의 아이폰에 설치하기}{349}{Item.456}%
+\contentsline {section}{Xcode 생산성 팁: 초보자의 다섯 가지 '단축키 치트키'}{349}{Item.456}%
+\contentsline {section}{실기기 디버깅: 앱을 여러분의 아이폰에 설치하기}{350}{Item.456}%
+\contentsline {section}{맛보기 실습 + 자주 나오는 오류 응급 처치}{350}{Item.460}%
+\contentsline {section}{맛보기 실습 + 자주 나오는 오류 응급 처치}{350}{Item.460}%
+\contentsline {chapter}{제61장: Swift 빠르게 시작하기 — 애플 개발의 첫 번째 언어}{352}{chapter*.131}%
+\contentsline {section}{변수와 타입: 데이터에 이름 붙이기}{352}{section*.132}%
+\contentsline {section}{옵셔널(Optional): Swift의 '크래시 방지 부적'}{353}{lstnumber.-51.10}%
+\contentsline {section}{함수와 클로저: 로직을 '버튼'으로 포장하기}{353}{lstnumber.-52.15}%
+\contentsline {section}{구조체와 프로토콜: Swift의 '레고' 체계}{354}{lstnumber.-53.13}%
+\contentsline {section}{기초 없는 분을 위한 문법 빠른 참조 카드}{355}{lstnumber.-54.16}%
+\contentsline {chapter}{제62장: 화면 개발 — SwiftUI 입문}{356}{chapter*.133}%
+\contentsline {section}{SwiftUI의 사상: 선언형이지 명령형이 아니다}{356}{section*.134}%
+\contentsline {section}{기본 뷰: 텍스트, 버튼, 입력창, 이미지}{357}{lstnumber.-55.15}%
+\contentsline {section}{레이아웃 3종 세트: VStack, HStack, ZStack}{357}{lstnumber.-55.15}%
+\contentsline {section}{상태와 바인딩: 화면을 '살아 있게' 만들기}{358}{lstnumber.-56.14}%
+\contentsline {section}{미리보기, 테마와 애니메이션: SwiftUI의 '치트키'}{358}{lstnumber.-58.9}%
+\contentsline {section}{자주 쓰는 수정자 빠른 참조: 한 페이지 있으면 화면 걱정 없어요}{360}{lstnumber.-59.16}%
+\contentsline {chapter}{제63장: 뷰, 상태와 내비게이션}{361}{chapter*.135}%
+\contentsline {section}{상태 관리의 '데이터 흐름 전체 그림'}{361}{section*.136}%
+\contentsline {section}{NavigationStack: 페이지 이동의 '스택'}{362}{lstnumber.-60.19}%
+\contentsline {section}{팝업과 하단 탭: sheet와 TabView}{363}{lstnumber.-61.24}%
+\contentsline {section}{List: iOS의 '국민 리스트'}{363}{lstnumber.-62.24}%
+\contentsline {section}{앱 생명주기: 포그라운드와 백그라운드}{364}{lstnumber.-63.14}%
+\contentsline {chapter}{제64장: 데이터 저장과 네트워크 요청}{366}{chapter*.137}%
+\contentsline {section}{저장 방식 고르기: 먼저 이 표를 보세요}{366}{section*.138}%
+\contentsline {section}{UserDefaults: 작은 설정 저장하기}{366}{section*.138}%
+\contentsline {section}{SwiftData: 데이터에 '진짜 집' 마련해 주기}{367}{lstnumber.-65.10}%
+\contentsline {section}{Codable: JSON '통역'하기}{368}{lstnumber.-66.46}%
+\contentsline {section}{URLSession + async/await: 서버와 말하기}{369}{lstnumber.-67.14}%
+\contentsline {section}{네트워크 오류도 '등급을 나눠요': 모든 오류를 사용자에게 던지지 마세요}{369}{lstnumber.-68.19}%
+\contentsline {chapter}{제65장: 프로젝트 1 — 나의 가계부(로컬 버전)}{371}{chapter*.139}%
+\contentsline {section}{요구 사항 생각: 먼저 다섯 가지 질문}{371}{section*.140}%
+\contentsline {section}{데이터 계층: '장부'에 집 주기}{371}{section*.140}%
+\contentsline {section}{MVVM: 화면과 로직 '분가'}{372}{lstnumber.-70.18}%
+\contentsline {section}{화면: 리스트 페이지 + 입력 팝업}{373}{lstnumber.-71.30}%
+\contentsline {section}{편집, 삭제와 합계}{374}{lstnumber.-72.31}%
+\contentsline {section}{검수: 3단계 점검 + 심화 도전 2가지}{375}{lstnumber.-73.13}%
+\contentsline {chapter}{제66장: 프로젝트 2 — 날씨 조회 앱(네트워크 버전)}{376}{chapter*.141}%
+\contentsline {section}{무료 날씨 API 신청하기}{376}{section*.142}%
+\contentsline {section}{네트워크 계층: URLSession + Codable}{376}{Item.465}%
+\contentsline {section}{세 가지 화면 상태: 로딩 중 / 성공 / 실패}{377}{lstnumber.-74.24}%
+\contentsline {section}{실전 화면 코드: 날씨를 화면에 그리기}{378}{lstnumber.-75.28}%
+\contentsline {section}{인터랙션 디테일과 즐겨찾는 도시}{379}{lstnumber.-76.20}%
+\contentsline {section}{네트워크 요청 디버깅: 출력, 패킷 캡처, 느린 네트워크 시뮬레이션}{379}{lstnumber.-76.20}%
+\contentsline {chapter}{제67장: 다듬기와 출시 — 테스트, 디버깅, 앱스토어 출시}{381}{chapter*.143}%
+\contentsline {section}{디버깅 3대 무기: print, 중단점, 프리뷰}{381}{section*.144}%
+\contentsline {section}{테스트: 코드에 보험 들기}{381}{section*.144}%
+\contentsline {section}{서명과 패키징: 앱에 '도장' 찍기}{382}{lstnumber.-77.20}%
+\contentsline {section}{앱스토어 출시 전체 과정}{383}{lstnumber.-77.20}%
+\contentsline {section}{스토어 소재 만들기: 첫인상이 곧 다운로드 수}{383}{lstnumber.-77.20}%
+\contentsline {section}{크래시 보고와 성능 최적화 짧은 체크리스트}{384}{lstnumber.-77.20}%
+\contentsline {chapter}{제68장: 심화 여정 — 권한, 알림, 현대 아키텍처}{385}{chapter*.145}%
+\contentsline {section}{권한: 먼저 노크하고 들어가기}{385}{section*.146}%
+\contentsline {section}{알림: 알맞은 시간에 유용한 말 하기}{386}{lstnumber.-78.21}%
+\contentsline {section}{아키텍처 심화: MVVM 깊이 들어가기와 테스트 가능성}{387}{lstnumber.-79.26}%
+\contentsline {section}{2026년의 새로운 방식: AI가 돕는 iOS 개발}{387}{lstnumber.-79.26}%
+\contentsline {section}{Swift 동시성 핵심: @MainActor와 Task}{388}{lstnumber.-79.26}%
+\contentsline {chapter}{제69장: 빠른 참조 매뉴얼과 리소스}{390}{chapter*.147}%
+\contentsline {section}{자주 쓰는 코드 빠른 참조 카드}{390}{section*.148}%
+\contentsline {section}{자주 묻는 질문 FAQ}{390}{section*.148}%
+\contentsline {section}{Xcode 자주 쓰는 단축키 빠른 참조}{391}{section*.148}%
+\contentsline {section}{추천 학습 리소스}{392}{section*.148}%
+\contentsline {section}{추천 학습 리소스}{392}{section*.148}%
+\contentsline {section}{맺음말: 첫 번째 앱에서 N번째 앱까지}{392}{section*.148}%
+\contentsline {section}{참고 문헌}{393}{section*.148}%
+\contentsline {chapter}{부록 A: 새 스마트폰 개봉 “파워풀” 절차}{395}{appendix*.150}%
+\contentsline {section}{개봉 및 기기 점검 “3부작”:}{395}{section*.151}%
+\contentsline {section}{활성화 및 초기 설정 “핵심 리마인더”:}{395}{section*.151}%
+\contentsline {section}{앱 설치 “보안 우선”:}{395}{section*.151}%
+\contentsline {chapter}{부록 B:실습 연습 참고 자료}{396}{appendix*.152}%
+\contentsline {chapter}{부록 C: 극간 용어 “은어” 대조표}{398}{appendix*.153}%
+\contentsline {chapter}{부록 D:믿을 수 있는 리소스 찾기?}{399}{appendix*.154}%
+\contentsline {section}{공식 지원이 최우선:}{399}{section*.155}%
+\contentsline {section}{실용 웹사이트 및 블로거:}{399}{section*.155}%
+\contentsline {section}{보안 자가 점검 한 마디 체크리스트:}{399}{section*.155}%
+\contentsline {chapter}{부록 E: 감사와 안내}{400}{appendix*.156}%
+\contentsline {section}{6판 업데이트 요점}{400}{section*.157}%
+\contentsline {section}{7판 업데이트 요점}{400}{section*.157}%
+\contentsline {section}{8판 업데이트 요점}{402}{section*.157}%
+\contentsline {section}{내용 보충: 유용한 소프트웨어와 스팸 차단}{402}{section*.157}%
+\contentsline {section}{내용 보충: 날씨 경보 / 자연재해 경보 / 지진 조기 경보}{403}{section*.157}%
+\contentsline {section}{내용 보충: 기기 간 연동과 생산성 도구}{403}{section*.157}%
+\contentsline {chapter}{부록 F: 폴더블 구매 가이드와 사용 특별}{404}{appendix*.158}%
+\contentsline {section}{폴더블은 현재 어느 정도까지 발전했나요?}{404}{section*.159}%
+\contentsline {section}{어떤 사람이 폴더블 구매에 적합한가?}{404}{section*.159}%
+\contentsline {section}{구매 가이드 포인트: 이 6개 지표를 보세요}{405}{Item.487}%
+\contentsline {section}{폴더블 스마트폰만의 사용 팁}{406}{Item.492}%
+\contentsline {section}{다섯, 관리 포인트: 폴더블을 더 오래 사용하려면}{407}{Item.492}%
+\contentsline {section}{여섯, 폴더블의 “함정”과 심리적 기대치}{407}{Item.492}%
+\contentsline {section}{일곱, 메인 브랜드 선택 가이드(2026년)}{408}{Item.492}%
+\contentsline {chapter}{맺음말: 호기심을 유지하고, 깨어 있으세요}{410}{appendix*.160}%
+\contentsline {chapter}{부록 G: 책 전체 빠른 참조 색인}{411}{appendix*.161}%
+\contentsline {chapter}{부록 H: 버전 로드맵}{415}{appendix*.162}%

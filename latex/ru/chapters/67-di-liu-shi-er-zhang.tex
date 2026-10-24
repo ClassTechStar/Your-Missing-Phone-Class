@@ -1,0 +1,195 @@
+\bookchapter{Глава 62. Разработка интерфейсов — введение в SwiftUI}
+
+\chapterintro{Интерфейс — это всё, что видит пользователь. SwiftUI — декларативный фреймворк интерфейсов, представленный Apple в 2019 году: вам нужно лишь «объявить», как выглядит интерфейс, а система сама займётся отрисовкой, тёмной темой и разными экранами. К 2026 году SwiftUI — безоговорочный мейнстрим для новых проектов. В этой главе мы научимся «рисовать».}
+
+\booksection{Идея SwiftUI: декларативность, а не императивность}
+
+Старая разработка интерфейсов — «императивная»: вы инструктируете систему шаг за шагом — «создай кнопку помести в (20,30) задай цвет». SwiftUI — «декларативный»: вы просто описываете «на экране есть красная кнопка с надписью “Нажми меня”», а как рисовать и когда перерисовывать — система решает сама.
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body: описывает «как выглядит экран»
+        VStack {               // вертикально
+            Text("Привет, мир!")
+                .font(.largeTitle)      // модификатор: крупный заголовок
+            Button("Нажми") {
+                print("Нажато")
+            }
+            .buttonStyle(.borderedProminent)  // сплошная синяя кнопка
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+Ключевой момент: представление = структура, соблюдающая протокол View; свойство body описывает интерфейс, а модификаторы через точку «наносят макияж» цепочкой. Это и есть весь фундамент SwiftUI.
+
+\booksection{Базовые представления: текст, кнопка, поле ввода, картинка}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Представление} & \textbf{Для чего} & \textbf{Пример} \tabularnewline
+\hline
+Text & показывать текст & Text("Привет") \tabularnewline
+Button & кнопка & Button("Нажми меня") \{ действие \} \tabularnewline
+TextField & поле ввода & TextField("подсказка", text: \$текст) \tabularnewline
+Image & показывать картинку & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Четыре базовых представления SwiftUI\end{center}
+
+Обратите внимание на Image(systemName:) — у Apple есть встроенная библиотека иконок SF Symbols (несколько тысяч бесплатных иконок): имя вроде “star.fill” сразу покажет залитую звёздочку. Это скрытый бонус разработки под iOS: для интерфейсов почти не нужно искать иконки.
+
+\booksection{Трио компоновки: VStack, HStack, ZStack}
+
+\begin{itemize}
+  \item VStack: выстраивает по вертикали (как очередь в столовой);
+  \item HStack: выстраивает по горизонтали (как сидящие рядом);
+  \item ZStack: накладывает друг на друга (как стопка игральных карт, подходит для бейджей и масок).
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("Счёт")
+        Spacer()                 // гибкое пространство: отталкивает правую часть к краю
+        Text("-25.5 юаня").foregroundColor(.red)
+    }
+    Divider()                    // разделитель
+    Text("Заметка: обед")
+}
+.padding(16)                     // отступы со всех сторон
+.background(Color(.systemGray6)) // светло-серый фон
+.cornerRadius(12)                // скругление углов
+
+// Порядок модификаторов важен: сначала padding, потом background — фон не включает отступы
+\end{lstlisting}
+
+\begin{tcbwarn}{Внимание: порядок модификаторов имеет значение}
+padding(16).background(серый) и background(серый).padding(16) дают разный эффект: первый — «сначала отступ, потом краска» (фон без отступов), второй — «сначала краска, потом отступ» (фон включает отступы). Отсюда и самые частые у новичков «странные белые полосы». Сомневаетесь — поменяйте порядок, и предпросмотр тут же покажет ответ.
+
+\end{tcbwarn}
+
+\booksection{Состояние и привязка: оживляем интерфейс}
+
+Статичный интерфейс скучен. Правило SwiftUI: интерфейс всегда верно отражает состояние; изменилось состояние — интерфейс перерисовывается сам.
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State: при изменении значения перерисовать
+
+    var body: some View {
+        VStack {
+            Text("Вы нажали \(count) раз")
+            Button("Нажми +1") {
+                count += 1          // меняем состояние — интерфейс обновится сам
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Для поля ввода нужна «двусторонняя привязка» — знак \$ передаёт одновременно «значение и право его менять»:
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("Введите что-нибудь", text: $text)  // $ — двусторонняя связь
+            .textFieldStyle(.roundedBorder)
+        Text("Вы ввели: \(text)")   // обновляется на лету
+    }
+}
+\end{lstlisting}
+
+Действие пользователя
+
+Состояние меняется (count += 1)
+
+SwiftUI замечает изменение
+
+Интерфейс перерисовывается сам (body пересчитывается)
+
+\begin{center}\small\color{gray}Рисунок 3. Однонаправленный поток данных «состояние интерфейс» в SwiftUI\end{center}
+
+\booksection{Предпросмотр, темы и анимация: «читы» SwiftUI}
+
+\begin{itemize}
+  \item Макрос \#Preview: добавьте в конец файла \#Preview \{ ContentView() \} — холст справа начнёт рендерить в реальном времени, и правки кода будут видны сразу;
+  \item Тёмная тема бесплатно: используйте системные цвета (Color(.systemGray6), .primary), а не жёстко заданные — тёмная тема подстроится автоматически, без единой лишней строки;
+  \item Анимация в одну строку: withAnimation \{ count += 1 \} или добавьте к представлению .animation(.default, value: count) — переходы станут шелковистыми.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Совет: сначала функция, потом анимация}
+Типичная ошибка новичка — «интерфейс ещё не доделан, а он уже мучается с анимациями». Сначала добейтесь, чтобы всё работало, а эффекты добавьте в конце разом: анимация — украшение, функциональность — спасение. Это и есть наш вечный принцип «простота превыше всего».
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Попробуйте сами: сделайте «кнопку настроения»}
+\booksection{Шпаргалка по частым модификаторам: одна страница под рукой — и интерфейсы не страшны}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Что хотите сделать} & \textbf{Модификатор} \tabularnewline
+\hline
+Отступы & \texttt{.\allowbreak padding(16)} \tabularnewline
+Скругление углов & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+Цвет фона & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+Шрифт и размер & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+Цвет переднего плана (текст/иконки) & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+Растянуть на всю ширину & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+Фиксированный размер & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+Выравнивание & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+Прозрачность & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+Тень & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+Жест нажатия & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Тип клавиатуры & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Шпаргалка по частым модификаторам SwiftUI\end{center}
+
+Ничего страшного, если не запомнили — эта страница и существует для справки. На деле чаще всего используются первые четыре: padding, скругление, фон, шрифт.
+
+Переделайте шаблонный проект в переключатель настроений: одна кнопка, при каждом нажатии циклически меняется радость грусть злость, а текст и цвет фона меняются вместе с ней. Подсказка: храните три пары (текст + цвет) в массиве, индекс — в @State, при нажатии — (index + 1) \% 3. Когда сделаете, отправьте друзьям поиграть и соберите первую волну «вау, ты уже умеешь делать приложения!».
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Краткие итоги главы}
+\begin{itemize}
+  \item SwiftUI декларативен: вы описываете, «как это выглядит», а система рисует и перерисовывает
+  \item представление = структура, соблюдающая протокол View; body описывает интерфейс; модификаторы «наносят макияж» цепочкой
+  \item четыре базовых представления: Text / Button / TextField / Image; библиотека иконок SF Symbols — бесплатно и вдоволь
+  \item трио компоновки: VStack — вертикаль, HStack — горизонталь, ZStack — наложение; Spacer — упругое пространство
+  \item @State оживляет интерфейс; \$ — двусторонняя привязка для поля ввода
+  \item \#Preview — что видишь, то и получаешь; системные цвета сами подстраиваются под тёмную тему; withAnimation — анимация в одну строку
+\end{itemize}
+
+\end{tcbsummary}

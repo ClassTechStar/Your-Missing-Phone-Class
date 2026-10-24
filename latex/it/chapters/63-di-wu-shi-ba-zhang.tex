@@ -1,0 +1,117 @@
+\bookchapter{Capitolo 58: Manuale rapido e risorse}
+
+\chapterintro{Questo capitolo è un manuale di consultazione rapida che funziona anche da solo. Quando non ti ricordi una sintassi o devi decidere al volo, apri direttamente qui. Ti consiglio di tenerlo come «biglietto da tasca»: codice di uso quotidiano, domande ricorrenti, risorse per studiare — senza saltare nemmeno una pagina.}
+
+\booksection{Le schede di consultazione rapida del codice quotidiano}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Cosa vuoi fare} & \textbf{Codice chiave} \tabularnewline
+\hline
+Ricordare uno stato mutabile & var x by remember \{ mutableStateOf(valoreIniziale) \} \tabularnewline
+Non perdere lo stato ruotando lo schermo & rememberSaveable \{ mutableStateOf(valoreIniziale) \} \tabularnewline
+Layout in colonna / in riga & \texttt{Column \{ \}}/\texttt{Row \{ \}} \tabularnewline
+Lista a caricamento lazy & LazyColumn \{ items(lista) \{ ... \} \} \tabularnewline
+Passare da una schermata all'altra & navController.navigate("percorso") \tabularnewline
+Lavori in attesa dentro una coroutine & \texttt{viewModelScope.\allowbreak launch \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Osservare flussi di dati & \texttt{val list by flow.\allowbreak collectAsState()} \tabularnewline
+Salvare piccole impostazioni & context.dataStore.edit \{ it[CHIAVE] = valore \} \tabularnewline
+Salvare dati strutturati & Il tris di Room: @Entity / @Dao / @Database \tabularnewline
+Prendere dati dalla rete & Interfaccia Retrofit + funzioni suspend \tabularnewline
+Inviare una notifica & NotificationChannel + NotificationCompat.Builder \tabularnewline
+Scrivere log & \texttt{Log.\allowbreak d("TAG", "message")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Scheda rapida dello sviluppo Android (edizione agosto 2026)\end{center}
+
+\booksection{Domande frequenti (FAQ)}
+
+D1: Non so proprio programmare: quanto tempo serve per imparare lo sviluppo Android?
+
+Segui la strada del libro: nelle settimane 1-2 allestisci l'ambiente e impari le basi di Kotlin; nelle settimane 3-4 studi Compose e costruisci l'interfaccia; nelle settimane 5-6 completi il progetto del registro delle spese; nelle settimane 7-8 finisci il progetto del meteo. Due mesi per andare da zero a costruire in autonomia una piccola app. A patto di investire 1-2 ore al giorno e di battere davvero i tasti, non solo leggere.
+
+D2: Java va imparato comunque?
+
+No. Progetti nuovi, tutorial nuovi e offerte di lavoro nuove puntano ormai quasi tutti su Kotlin. Java in abbondanza lo incontri solo «manutenendo progetti di dieci anni fa». Imparato Kotlin, se il lavoro lo chiede, aggiungere Java è rapido: in fondo condividono la stessa macchina virtuale.
+
+D3: Emulatore o telefono vero?
+
+Per sviluppare e fare debug l'emulatore è comodo (istantanee, tanti modelli), ma il collaudo finale passa per forza dal telefono vero: sensazioni al tocco, prestazioni, rete vera e sensori non li sostituisce. Se le condizioni lo permettono, comprare un telefono di fascia media da destinare ai test è l'investimento più conveniente.
+
+D4: Si trova facilmente lavoro nello sviluppo Android?
+
+Il mercato del 2026: le posizioni entry-level che sanno solo «costruire interfacce» sono molto affollate, ma gli sviluppatori che «conoscono Kotlin + sanno di architettura + hanno un'app pubblicata» restano molto ricercati. Da studente, il tuo miglior curriculum è quella app fatta da te che sta sullo store.
+
+D5: Un errore ti blocca: che fare?
+
+I tre passi d'oro: (1) cerca su StackOverflow o in un motore di ricerca la prima riga dell'errore così com'è; (2) controlla la pagina corrispondente della documentazione ufficiale; (3) se ancora non va, spedisci all'AI o alla community un pacchetto con «comportamento atteso + sintomo reale + testo completo dell'errore + codice correlato». La stragrande maggioranza dei problemi si chiude al primo passo.
+
+\booksection{Le risorse di studio consigliate}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tipo} & \textbf{Risorsa} & \textbf{Perché consigliarla} \tabularnewline
+\hline
+Ufficiale & developer.android.com & La documentazione ufficiale di Android: dentro anche i tutorial su Compose e Kotlin, la fonte più autorevole \tabularnewline
+Ufficiale & Sito ufficiale di Kotlin (kotlinlang.org) & Documentazione ufficiale del linguaggio + palestra online \tabularnewline
+Ufficiale & Google Codelabs & Laboratori guidati passo a passo, il massimo dell'accoglienza per i principianti \tabularnewline
+Community & Stack Overflow (tag android) & La prima tappa per chiedere aiuto sugli errori \tabularnewline
+Community & Juejin / la sezione Android di CSDN & Tanti articoli pratici in cinese: occhio a distinguere i nuovi dai vecchi (guarda prima la data) \tabularnewline
+Video & Il canale ufficiale Google Developers & Le novità spiegate alla conferenza degli sviluppatori di ogni anno \tabularnewline
+Di accompagnamento & Parte 7 «Programmazione AI in pratica» (capitoli 37-47) & Il metodo completo per sviluppare Android con l'aiuto dell'AI \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Elenco delle risorse per imparare lo sviluppo Android (agosto 2026)\end{center}
+
+\booksection{Comandi Gradle di uso quotidiano in breve}
+
+Di solito bastano i pulsanti, ma la riga di comando a volte rende di più (soprattutto con strumenti AI o pipeline CI):
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Comando} & \textbf{A cosa serve} \tabularnewline
+\hline
+\texttt{.\allowbreak /\allowbreak gradlew assembleDebug} & Costruire un APK di debug (su Windows togli ./) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleRelease} & Costruire la release (serve la firma pronta) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew test} & Far girare tutti i test di unità \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew lint} & Analisi statica: scova bug potenziali e codice poco corretto \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew clean} & Svuotare gli artefatti di build (la versione da compilazione del «grande riavvio») \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew :app: dependencies} & Vedere l'albero delle dipendenze (il salvavita per i conflitti di versione) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Comandi Gradle di uso quotidiano\end{center}
+
+\begin{tcbinfo}{Consiglio: se la build dà fastidio, parti da clean}
+Il caso paranormale «ieri funzionava, oggi no» è per sei o sette volte su dieci colpa di cache di build impastate. Un ./gradlew clean seguito da una nuova build cura la gran parte di questi misteri. Se non basta, riavvia Android Studio — questo rimedio funziona al meglio se abbinato a File Invalidate Caches.
+
+\end{tcbinfo}
+
+\booksection{Conclusione: dalla prima app alla ennesima app}
+
+\booksection{Conclusione: dalla prima app alla ennesima app}
+
+Guardando indietro, sei passato da «non sapevo cos'era un Activity» ad aver allestito l'ambiente, imparato Kotlin, disegnato interfacce con Compose, agganciato l'app a database e rete, fino a test, pacchetto e pubblicazione — su questa strada hai già coperto il pezzo più difficile, quello da zero a uno.
+
+Il mondo della tecnologia corre: i framework si aggiornano, gli strumenti si rinnovano, l'AI si prenderà sempre più del lavoro «da tastiera». Ma una cosa non passa mai di moda: la capacità di prendere un'idea vaga, scomporla in passi chiari e realizzarla un passo alla volta. Gli strumenti sono l'amplificatore, il modo di pensare è la fondamenta. L'amplificatore si può sostituire, la fondamenta no.
+
+Non sei più solo "uno che sa usare il telefono": puoi trasformare le idee in testa in app vere che girano su 300 milioni di dispositivi Android. Da oggi crea con la tastiera — questo è il lato romantico dell'essere sviluppatori Android.
+
+\booksection{Bibliografia}
+
+\begin{enumerate}
+  \item Android Developers. (2026). Android Developer Guides and Jetpack Compose Documentation. developer.android.com.
+  \item Kotlin Foundation. (2026). Kotlin Language Documentation. kotlinlang.org.
+  \item Android Open Source Project. (2026). Android Platform Version History and API Levels.
+  \item Google Play. (2026). Play Console Help: Publishing and App Signing.
+  \item AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.
+  \item Square. (2026). Retrofit Documentation. github.com/square/retrofit.
+\end{enumerate}

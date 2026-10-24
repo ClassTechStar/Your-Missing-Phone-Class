@@ -1,0 +1,194 @@
+\bookchapter{Capítulo 65: Projeto 1 — meu diário financeiro (versão local)}
+
+\chapterintro{Bem-vindo ao seu primeiro “projeto de verdade”. Este diário financeiro não se conecta à internet, mas tem tudo o que importa: registrar lançamentos, ver o extrato, fazer estatísticas mensais e editar ou excluir. Ao terminá-lo, você terá percorrido o ciclo completo de “dados lógica interface”. Não corra para copiar o código — pense primeiro, execute depois; é o nosso princípio de sempre.}
+
+\booksection{Pensando nos requisitos: cinco perguntas primeiro}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Elemento} & \textbf{Resposta} \tabularnewline
+\hline
+Who (para quem é) & Para mim; família e amigos também \tabularnewline
+What (o que faz) & Registrar receitas e despesas, ver o extrato, resumir por mês e por categoria \tabularnewline
+Why (por quê) & Praticar + entender para onde o dinheiro vai \tabularnewline
+How (como fazer) & Swift + SwiftUI + SwiftData + MVVM, tudo local, sem back-end \tabularnewline
+Constraint (restrições) & Concluir em uma semana; iOS 17 no mínimo (exigência do SwiftData) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Os cinco elementos de requisitos do diário financeiro\end{center}
+
+Depois, divida em passos pequenos em que “cada passo já serve para algo”: (1) camada de dados com SwiftData (guardar um lançamento); (2) tela de lista (ver o extrato); (3) janela de lançamento (adicionar registros); (4) exclusão e edição; (5) cartão de resumo mensal. A cada passo concluído, o app já é uma “coisa utilizável”.
+
+\booksection{Camada de dados: dando um lar aos lançamentos}
+
+Primeiro, defina como um lançamento se parece — campos suficientes, sem gula:
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+@Model
+class Record {
+    var type: String      // "income" receita | "expense" despesa
+    var amount: Double    // valor (em yuan)
+    var category: String  // categoria: alimentação, transporte, salário…
+    var note: String      // observação (opcional)
+    var date: Date        // data do registro
+
+    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+        self.type = type
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Dica: por que usar Double para o valor?}
+Apps financeiros rigorosos usam Decimal (decimais exatos) para evitar erros de ponto flutuante (o clássico problema de 0.1+0.2$\neq$0.3). Para um projeto de treino, Double basta; se um dia você fizer um produto financeiro de verdade, lembre de trocar por Decimal ou por um “Int em centavos” — uma armadilha que inúmeros veteranos já pisaram.
+
+\end{tcbinfo}
+
+\booksection{MVVM: separando interface e lógica}
+
+Deixar a interface falar direto com o banco? Funciona, mas o código da tela vira um monstro comprido. A arquitetura MVVM dá um papel a cada um: a View (interface) só desenha, o ViewModel (cérebro da lógica) cuida dos dados e o Model (SwiftData) cuida do armazenamento.
+
+View (interface SwiftUI)
+
+ViewModel (o hub lógico @Observable)
+
+Model (camada de dados SwiftData)
+
+\begin{center}\small\color{gray}Figura 4: as três camadas do MVVM — os dados fluem em uma direção e cada camada fica no seu lugar\end{center}
+
+\begin{lstlisting}[language=Swift]
+import Observation
+
+@Observable
+class RecordViewModel {
+    var records: [Record] = []
+    private let context: ModelContext
+
+    init(context: ModelContext) { self.context = context }
+
+    func load() {
+        // filtro + ordenação com #Predicate do SwiftData
+        let descriptor = FetchDescriptor<Record>(
+            sortBy: [SortDescriptor(\.date, order: .reverse)]
+        )
+        records = (try? context.fetch(descriptor)) ?? []
+    }
+
+    func add(type: String, amount: Double, category: String, note: String) {
+        let r = Record(type: type, amount: amount, category: category, note: note)
+        context.insert(r)
+        try? context.save()
+        load()                       // recarrega; a tela atualiza
+    }
+
+    func delete(_ record: Record) {
+        context.delete(record)
+        try? context.save()
+        load()
+    }
+}
+\end{lstlisting}
+
+Na interface, use @State private var vm = RecordViewModel(...) e renderize a lista direto com vm.records — quando os dados mudam, a tela se atualiza sozinha.
+
+\booksection{Interface: tela de lista + janela de lançamento}
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var vm: RecordViewModel
+    @State private var showAdd = false
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section("Saldo do mês") {          // card de resumo
+                    SummaryRow(records: vm.records)
+                }
+                Section("Lançamentos") {
+                    ForEach(vm.records) { r in
+                        RecordRow(record: r)
+                    }
+                    .onDelete { idx in
+                        idx.forEach { vm.delete(vm.records[$0]) }
+                    }
+                }
+            }
+            .navigationTitle("Meu livro de despesas")
+            .toolbar {
+                Button { showAdd = true } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView(vm: vm)          // diálogo de entrada
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Pontos-chave da janela de lançamento: o campo de valor usa o teclado .keyboardType(.decimalPad) (teclado numérico), receita/despesa usam um controle segmentado (Picker), a categoria usa um menu de seleção; ao tocar em “Salvar”, chame vm.add(...) e feche com dismiss().
+
+\begin{tcbwarn}{Atenção: não seja preguiçoso na validação}
+O campo de valor precisa de validação obrigatória: bloqueie valores vazios, negativos e entradas inválidas como “abc” (use Double(text); se falhar, ele devolve nil). Uma das causas mais comuns de app travando é “tratar a entrada do usuário como criança bem-comportada”. Lembre: toda entrada do usuário deve ser interrogada como suspeita.
+
+\end{tcbwarn}
+
+\booksection{Edição, exclusão e resumo}
+
+\begin{itemize}
+  \item Exclusão: o .onDelete do List permite apagar arrastando para o lado, com janela de confirmação (apagar sem querer é o que mais irrita usuários de apps de finanças);
+  \item Editar: tocar em uma linha abre o pop-up de edição já preenchido com o valor original (corrigir um caractere é mais prático do que digitar tudo de novo);
+  \item Resumo: usar filter + reduce para calcular "receitas / despesas / saldo do mês", exibidos no cartão do topo:
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
+    let cal = Calendar.current
+    let monthRecords = records.filter {
+        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+    }
+    let income = monthRecords
+        .filter { $0.type == "income" }
+        .reduce(0) { $0 + $1.amount }
+    let expense = monthRecords
+        .filter { $0.type == "expense" }
+        .reduce(0) { $0 + $1.amount }
+    return (income, expense)
+}
+\end{lstlisting}
+
+\booksection{Validação: três níveis de verificação + dois desafios avançados}
+
+Depois de terminar o projeto, valide em três camadas “funcionalidade casos-limite arquitetura”: dá para registrar e excluir? Os dados continuam lá após reiniciar o App (funcionalidade); digitar 0 ou um valor negativo no campo de valor faz o app travar? (casos-limite); interface e dados estão misturados? Há campos fixados no código? (arquitetura).
+
+Depois de passar na validação da versão básica, prepare dois “pratos avançados” para você:
+
+\begin{enumerate}
+  \item Estatísticas por categoria: adicione uma aba "Estatísticas" e use o Swift Charts para desenhar as despesas por categoria em gráfico de pizza/barras — é a biblioteca de gráficos oficial da Apple, com poucas linhas de código;
+  \item Sincronização com iCloud: ativar a sincronização iCloud no SwiftData exige apenas algumas configurações — o livro-caixa passa a sincronizar automaticamente entre iPhone/iPad e, de repente, tudo fica bem mais "profissional".
+\end{enumerate}
+
+\begin{tcbpractice}{Mãos à obra: conclua nesta semana}
+Siga a ordem “camada de dados ViewModel tela de lista pop-up de entrada cartão de resumo”, um passo por dia. Se travar, cole a mensagem de erro exatamente como apareceu no buscador ou na IA (lembra da Parte 7, “Prática de Programação com IA”? Ao descrever o problema, deixe claros o “comportamento esperado, o comportamento real e os passos para reproduzir”). Depois de pronto, use-o para anotar os gastos por uma semana — usar um App feito por você mesmo gera uma sensação de conquista que empurra você a continuar.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumo do capítulo}
+\begin{itemize}
+  \item Os cinco elementos do requisito dividir em pequenos passos "utilizáveis a cada etapa" e só então começar
+  \item Camada de dados: modelo @Model + contêiner modelContainer + consulta FetchDescriptor
+  \item Divisão MVVM: a View só desenha, o ViewModel @Observable cuida da lógica e o SwiftData cuida do armazenamento
+  \item Interface: List + Section + toolbar + pop-up de entrada com sheet
+  \item Validação em três camadas (funcionalidade/casos-limite/arquitetura) + desafios avançados (Swift Charts, sincronização iCloud)
+\end{itemize}
+
+\end{tcbsummary}

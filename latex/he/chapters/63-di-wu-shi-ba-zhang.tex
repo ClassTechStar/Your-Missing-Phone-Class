@@ -1,0 +1,117 @@
+\bookchapter{פרק 58: מדריך עיון מהיר ומקורות}
+
+\chapterintro{הפרק הזה הוא מדריך עיון מהיר שאפשר להשתמש בו באופן עצמאי. כשאתם לא זוכרים צורת כתיבה מסוימת או צריכים החלטה מהירה – פשוט דלפו לכאן. מומלץ להתייחס אליו כ“כרטיס כיס”: עיון מהיר בקוד נפוץ, שאלות נפוצות, מקורות לימוד – בלי לדלג על אף עמוד.}
+
+\booksection{א' כרטיס עיון לקוד נפוץ}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{מה לעשות} & \textbf{קוד מפתח} \tabularnewline
+\hline
+לזכור מצב ניתן לשינוי & var x by remember \{ mutableStateOf(initialValue) \} \tabularnewline
+מצב שלא אובד בסיבוב מסך & rememberSaveable \{ mutableStateOf(initialValue) \} \tabularnewline
+פריסה אנכית/אופקית & \texttt{Column \{ \}}/\texttt{Row \{ \}} \tabularnewline
+רשימה בטעינה עצלה & LazyColumn \{ items(list) \{ ... \} \} \tabularnewline
+מעבר בין מסכים & navController.navigate("route") \tabularnewline
+הרצת עבודה ממושכת בתוך קורוטינה & \texttt{viewModelScope.\allowbreak launch \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+צפייה בזרימת נתונים & \texttt{val list by flow.\allowbreak collectAsState()} \tabularnewline
+שמירת הגדרה קטנה & context.dataStore.edit \{ it[KEY] = value \} \tabularnewline
+שמירת נתונים מובנים & שלושת אביזרי Room: ‏@Entity / @Dao / @Database \tabularnewline
+אחזור נתונים מהרשת & ממשק Retrofit + פונקציית suspend \tabularnewline
+שליחת התראה & NotificationChannel + NotificationCompat.Builder \tabularnewline
+רישום לוגים & \texttt{Log.\allowbreak d("TAG", "message")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}כרטיס עיון מהיר לפיתוח אנדרואיד (מהדורת אוגוסט 2026)\end{center}
+
+\booksection{ב' שאלות נפוצות (FAQ)}
+
+Q1: אני לא יודע לתכנת בכלל – כמה זמן ייקח ללמוד פיתוח אנדרואיד?
+
+לכו בנתיב של הספר: בשבועות 1-2 מתקינים את הסביבה ולומדים יסודות Kotlin; בשבועות 3-4 לומדים Compose ובונים מסכים; בשבועות 5-6 משלימים את פרויקט ספר החשבונות; בשבועות 7-8 מסיימים את פרויקט מזג האוויר. חודשיים – מאפס ועד יכולת לבנות באופן עצמאי אפליקציה קטנה. בתנאי שתשקיעו 1-2 שעות ביום, ושתקלידו קוד בעצמכם ולא רק תקראו.
+
+Q2: עדיין צריך ללמוד Java?
+
+לא צריך. פרויקטים חדשים, מדריכים חדשים ומשרות חדשות מתבססים בעיקר על Kotlin. Java בכמויות תפגשו רק ב“תחזוקת פרויקט בן עשור”. אחרי Kotlin, אם העבודה תדרוש – השלמת Java תהיה מהירה; שניהם פועלים על אותה מערכת אקולוגית של מכונה וירטואלית.
+
+Q3: אמולטור או מכשיר אמיתי?
+
+לפיתוח וניפוי האמולטור נוח (תמונות מצב, מגוון דגמים), אבל קבלת פרויקט חייבת לעבור על מכשיר אמיתי – מגע, ביצועים, רשת אמיתית, חיישנים; האמולטור לא מחליף זאת. אם התנאים מאפשרים, קניית מכשיר אמיתי בינוני לבדיקות היא ההשקעה המשתלמת ביותר.
+
+Q4: קל למצוא עבודה בפיתוח אנדרואיד?
+
+המצב ב-2026: משרות זוטרות של “יודע לבנות מסכים” בלבד תחרותיות מאוד, אבל מפתחים “שמבינים Kotlin + יודעים ארכיטקטורה + יש להם מוצר שעלה לאוויר” עדיין מבוקשים. בתקופת הלימודים, קורות החיים הטובים ביותר שלכם הם האפליקציה שבניתם בעצמכם בחנות.
+
+Q5: נתקעתם עם הודעת שגיאה – מה עושים?
+
+שלושת הצעדים של הזהב: (1) מחפשים את שורת השגיאה הראשונה כמו שהיא ב-StackOverflow או במנוע חיפוש; (2) בודקים את העמוד המתאים בתיעוד הרשמי; (3) אם עדיין לא עזר – אורזים “התנהגות צפויה + מה שקורה בפועל + הודעת השגיאה המלאה + הקוד הרלוונטי” ושואלים את ה-AI או הקהילה. לרוב הבעיות המוחלטות הצעד הראשון פותר.
+
+\booksection{ג' מקורות לימוד מומלצים}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{סוג} & \textbf{מקור} & \textbf{הסיבה להמלצה} \tabularnewline
+\hline
+רשמי & developer.android.com & התיעוד הרשמי לאנדרואיד; בתוכו כל מדריכי ה-Compose/Kotlin, הסמכות הראשונה \tabularnewline
+רשמי & אתר Kotlin הרשמי (kotlinlang.org) & תיעוד רשמי של השפה + זירת תרגול מקוונת \tabularnewline
+רשמי & Google Codelabs & שיעורי מעבדה מדורגים שלב אחר שלב עם הכוונה צמודה; ידידותיות למתחילים – ציון מלא \tabularnewline
+קהילה & Stack Overflow (תגית android) & התחנה הראשונה לבקשת עזרה בשגיאות \tabularnewline
+קהילה & אזור האנדרואיד ב-Juejin / CSDN & הרבה מאמרים מעשיים בסינית; שימו לב להבחין בין חדש לישן (קודם כול בודקים את התאריך) \tabularnewline
+וידאו & ערוץ Google Developers הרשמי & הסברים על הטכנולוגיות החדשות מכנסי המפתחים מדי שנה \tabularnewline
+נלווה & החלק השביעי "AI לקידוד בפועל" (פרקים 37-47) & השיטה המלאה לפיתוח אנדרואיד בסיוע AI \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}רשימת מקורות ללימוד פיתוח אנדרואיד (אוגוסט 2026)\end{center}
+
+\booksection{ד' עיון מהיר: פקודות Gradle נפוצות}
+
+בדרך כלל מספיקה לחיצה על כפתור, אך לעיתים שורת הפקודה יעילה יותר (במיוחד בשילוב עם כלי AI או צינורות CI):
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{פקודה} & \textbf{תפקיד} \tabularnewline
+\hline
+\texttt{.\allowbreak /\allowbreak gradlew assembleDebug} & לבנות APK גרסת דיבוג (ב-Windows משמיטים את ./) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleRelease} & לבנות גרסת הפצה (דרושה הגדרת חתימה) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew test} & הרצת כל בדיקות היחידה \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew lint} & בדיקה סטטית: איתור באגים פוטנציאליים וקוד לא תקני \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew clean} & ניקוי תוצרי הבנייה (הגרסה המהודרת של "הפעלה מחדש") \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew :app: dependencies} & הצגת עץ התלויות (כלי קסם לאיתור התנגשויות בין גרסאות) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}מדריך מהיר לפקודות Gradle הנפוצות\end{center}
+
+\begin{tcbinfo}{טיפ: אם הבנייה משתבשת, התחילו ב-clean}
+תופעות על-טבעיות מהסוג “אתמול זה עבד והיום פתאום לא” נובעות בשישה מתוך עשרה מקרים ממטמון בנייה שהשתבש. ./gradlew clean ואז בנייה מחדש מרפאים רוב ענק של בעיות מסתוריות. אם זה עדיין לא עוזר — הפעילו מחדש את Android Studio, ומוטב לשלב זאת עם File Invalidate Caches.
+
+\end{tcbinfo}
+
+\booksection{סיכום: מהאפליקציה הראשונה ועד האפליקציה מספר N}
+
+\booksection{סיכום: מהאפליקציה הראשונה ועד האפליקציה מספר N}
+
+מבט לאחור: התחלתם מ“לא יודעים מה זה Activity”, התקנתם את הסביבה, למדתם Kotlin, ציירתם ממשק עם Compose, חיברתם את האפליקציה למסד נתונים ולרשת, ועד בדיקות, אריזה ועלייה לחנות — בדרך הזאת סיימתם כבר את הקטע הקשה ביותר של המסע מאפס לאחד.
+
+עולם הטכנולוגיה משתנה במהירות: פריימוורקים מתעדכנים, כלים מתחלפים, וה-AI לוקח על עצמו יותר ויותר מהעבודה של “הקשה על מקשים”. אבל דבר אחד לא מתיישן: היכולת לפרק רעיון מעורפל לשלבים ברורים ולממש אותו צעד אחר צעד. הכלים הם מגבר, החשיבה היא היסוד. מגבר אפשר להחליף, יסוד לא זז.
+
+אתה כבר לא רק "מי שיודע להפעיל טלפון". אתה יכול להפוך רעיונות שבראשך לאפליקציות שרצות באמת על שלוש מאות מיליון מכשירי אנדרואיד. מהיום, צור במקלדת – זו הרומנטיקה של מפתחי האנדרואיד.
+
+\booksection{מקורות}
+
+\begin{enumerate}
+  \item Android Developers. (2026). Android Developer Guides and Jetpack Compose Documentation. developer.android.com.
+  \item Kotlin Foundation. (2026). Kotlin Language Documentation. kotlinlang.org.
+  \item Android Open Source Project. (2026). Android Platform Version History and API Levels.
+  \item Google Play. (2026). Play Console Help: Publishing and App Signing.
+  \item AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.
+  \item Square. (2026). Retrofit Documentation. github.com/square/retrofit.
+\end{enumerate}

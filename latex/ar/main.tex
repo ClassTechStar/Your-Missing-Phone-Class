@@ -1,0 +1,198 @@
+\documentclass[11pt,a4paper,openany]{book}
+\usepackage[UTF8, fontset=windows]{ctex}
+\usepackage{geometry}
+\geometry{a4paper,left=2.6cm,right=2.6cm,top=2.6cm,bottom=2.4cm}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{tcolorbox}
+\tcbuselibrary{skins,breakable}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}
+\usepackage{titlesec}
+
+\setlength{\emergencystretch}{3em}
+\tolerance=2000
+
+\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}
+\setCJKsansfont{SimHei}
+\setCJKmonofont{SimSun}
+\setlength{\parindent}{2em}
+\setlength{\parskip}{3pt}
+\renewcommand{\baselinestretch}{1.25}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[RE]{\small\nouppercase{\leftmark}}
+\fancyhead[LO]{\small\nouppercase{\rightmark}}
+\setlength{\headheight}{14pt}
+
+\definecolor{codebg}{gray}{0.96}
+\lstset{
+  basicstyle=\ttfamily\small,
+  backgroundcolor=\color{codebg},
+  frame=single,framerule=0.3pt,rulecolor=\color{gray!60},
+  breaklines=true,breakatwhitespace=false,
+  columns=fullflexible,keepspaces=true,
+  xleftmargin=6pt,xrightmargin=6pt,
+  aboveskip=6pt,belowskip=6pt,
+  showstringspaces=false,tabsize=2,
+  extendedchars=true,
+}
+
+\newtcolorbox{tcbinfo}[1]{breakable,enhanced,
+  colback=blue!5,colframe=blue!40,
+  boxrule=0.4pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\bfseries,arc=2pt,title={#1}}
+\newtcolorbox{tcbwarn}[1]{breakable,enhanced,
+  colback=orange!6,colframe=orange!55,
+  boxrule=0.4pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\bfseries,arc=2pt,title={#1}}
+\newtcolorbox{tcbpractice}[1]{breakable,enhanced,
+  colback=green!5,colframe=green!45,
+  boxrule=0.4pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\bfseries,arc=2pt,title={#1}}
+\newtcolorbox{tcbsummary}[1]{breakable,enhanced,
+  colback=gray!6,colframe=gray!45,
+  boxrule=0.4pt,left=6pt,right=6pt,top=4pt,bottom=4pt,
+  fonttitle=\bfseries,arc=2pt,title={#1}}
+
+\newcommand{\chapterintro}[1]{\textit{#1}\par\bigskip}
+\newcommand{\bookchapter}[1]{\chapter*{#1}\addcontentsline{toc}{chapter}{#1}\markboth{#1}{}}
+\newcommand{\booksection}[1]{\section*{#1}\addcontentsline{toc}{section}{#1}\markright{#1}}
+\newcommand{\booksubsection}[1]{\subsection*{#1}}
+\lstdefinelanguage{Kotlin}{keywords={fun,val,var,class,object,interface,when,if,else,return,for,while,do,try,catch,finally,import,package,is,in,null,true,false,this,super,override,suspend,data,sealed,companion,lazy,by},sensitive=true,comment=[l]{//},morecomment=[s]{/*}{*/},morestring=[b]",morestring=[b]\'}
+\lstdefinelanguage{Swift}{keywords={func,let,var,class,struct,enum,protocol,extension,import,if,else,return,for,in,while,guard,switch,case,default,try,catch,throw,throws,self,init,deinit,override,public,private,internal,static,mutating,async,await,nil,true,false,some,any},sensitive=true,comment=[l]{//},morecomment=[s]{/*}{*/},morestring=[b]"}
+\lstdefinelanguage{JavaScript}{keywords={function,const,let,var,if,else,return,for,while,class,import,export,from,async,await,new,try,catch,typeof,null,true,false,this,undefined},sensitive=true,comment=[l]{//},morecomment=[s]{/*}{*/},morestring=[b]",morestring=[b]\',morestring=[b]`}
+\lstdefinelanguage{TypeScript}{keywords={function,const,let,var,if,else,return,for,while,class,interface,type,import,export,from,async,await,new,try,catch,typeof,null,true,false,this,undefined,enum,implements,extends},sensitive=true,comment=[l]{//},morecomment=[s]{/*}{*/},morestring=[b]",morestring=[b]\',morestring=[b]`}
+
+\title{إتقان الهاتف V1.8\\ \large v1.8}
+\author{ClassTechStar}
+\date{}
+
+\hypersetup{pdftitle={إتقان الهاتف V1.8 v1.8},
+  pdfauthor={ClassTechStar},pdfcreator={XeLaTeX + ctex},
+  pdfsubject={69 章 + 8 附录的智能手机使用指南},bookmarksnumbered=true}
+\begin{document}
+\begin{titlepage}
+\centering
+\vspace*{0.28\textheight}
+{\Huge\bfseries إتقان الهاتف V1.8\par}
+\vspace{1.2em}
+{\Large v1.8\par}
+\vfill
+{\large ClassTechStar\par}
+\end{titlepage}
+\frontmatter
+\tableofcontents
+\mainmatter
+\part*{أولًا: قسم الأساسيات (الفصول 0-7)}
+\addcontentsline{toc}{part}{أولًا: قسم الأساسيات (الفصول 0-7)}
+\input{chapters/00-di-ling-zhang.tex}
+\input{chapters/01-di-yi-zhang.tex}
+\input{chapters/02-di-yi-zhang-memory.tex}
+\input{chapters/03-di-yi-zhang-harmony.tex}
+\input{chapters/04-di-er-zhang.tex}
+\input{chapters/05-di-san-zhang.tex}
+\input{chapters/06-di-si-zhang.tex}
+\input{chapters/07-di-wu-zhang.tex}
+\input{chapters/08-di-liu-zhang.tex}
+\input{chapters/09-di-qi-zhang-jichu.tex}
+\part*{ثانياً: قسم البرمجيات (الفصول 8-14)}
+\addcontentsline{toc}{part}{ثانياً: قسم البرمجيات (الفصول 8-14)}
+\input{chapters/10-di-ba-zhang.tex}
+\input{chapters/11-di-jiu-zhang.tex}
+\input{chapters/12-di-shi-zhang.tex}
+\input{chapters/13-di-shi-yi-zhang.tex}
+\input{chapters/14-di-shi-yi-zhang-advanced.tex}
+\input{chapters/15-di-shi-er-zhang.tex}
+\input{chapters/16-di-shi-san-zhang.tex}
+\input{chapters/17-di-shi-si-zhang.tex}
+\part*{ثالثاً: القسم المتقدم (الفصول 15-20)}
+\addcontentsline{toc}{part}{ثالثاً: القسم المتقدم (الفصول 15-20)}
+\input{chapters/18-di-shi-wu-zhang.tex}
+\input{chapters/19-di-shi-liu-zhang.tex}
+\input{chapters/20-di-shi-qi-zhang.tex}
+\input{chapters/21-di-shi-ba-zhang.tex}
+\input{chapters/22-di-shi-jiu-zhang.tex}
+\input{chapters/23-di-er-shi-zhang-jinjie.tex}
+\input{chapters/24-di-er-shi-zhang-termux.tex}
+\part*{رابعاً: قسم ما بعد الأساسيات (الفصول 21-26)}
+\addcontentsline{toc}{part}{رابعاً: قسم ما بعد الأساسيات (الفصول 21-26)}
+\input{chapters/25-di-er-shi-yi-zhang.tex}
+\input{chapters/26-di-er-shi-er-zhang.tex}
+\input{chapters/27-di-er-shi-san-zhang.tex}
+\input{chapters/28-di-er-shi-san-zhang-github.tex}
+\input{chapters/29-di-er-shi-si-zhang.tex}
+\input{chapters/30-di-er-shi-wu-zhang.tex}
+\input{chapters/31-di-er-shi-liu-zhang.tex}
+\part*{خامساً: القسم العملي (الفصول 27-32)}
+\addcontentsline{toc}{part}{خامساً: القسم العملي (الفصول 27-32)}
+\input{chapters/32-di-er-shi-qi-zhang.tex}
+\input{chapters/33-di-er-shi-ba-zhang.tex}
+\input{chapters/34-di-er-shi-jiu-zhang.tex}
+\input{chapters/35-di-san-shi-zhang.tex}
+\input{chapters/36-di-san-shi-yi-zhang.tex}
+\input{chapters/37-di-san-shi-er-zhang.tex}
+\part*{سادسًا: قسم النظرة المستقبلية واتصال السيارة (الفصول 33-34)}
+\addcontentsline{toc}{part}{سادسًا: قسم النظرة المستقبلية واتصال السيارة (الفصول 33-34)}
+\input{chapters/38-di-san-shi-san-zhang.tex}
+\input{chapters/39-di-san-shi-si-zhang.tex}
+\part*{الأطفال والهاتف: موضوع خاص (الفصل 35)}
+\addcontentsline{toc}{part}{الأطفال والهاتف: موضوع خاص (الفصل 35)}
+\input{chapters/40-di-san-shi-wu-zhang.tex}
+\input{chapters/41-di-san-shi-liu-zhang.tex}
+\part*{سابعًا: قسم البرمجة بالذكاء الاصطناعي عمليًا (الفصول 37-47)}
+\addcontentsline{toc}{part}{سابعًا: قسم البرمجة بالذكاء الاصطناعي عمليًا (الفصول 37-47)}
+\input{chapters/42-di-san-shi-qi-zhang.tex}
+\input{chapters/43-di-san-shi-ba-zhang.tex}
+\input{chapters/44-di-san-shi-jiu-zhang.tex}
+\input{chapters/45-di-si-shi-zhang.tex}
+\input{chapters/46-di-si-shi-yi-zhang.tex}
+\input{chapters/47-di-si-shi-er-zhang.tex}
+\input{chapters/48-di-si-shi-san-zhang.tex}
+\input{chapters/49-di-si-shi-si-zhang.tex}
+\input{chapters/50-di-si-shi-wu-zhang.tex}
+\input{chapters/51-di-si-shi-liu-zhang.tex}
+\input{chapters/52-di-si-shi-qi-zhang.tex}
+\part*{ثامنًا: قسم تطوير أندرويد عمليًا (الفصول 48-58)}
+\addcontentsline{toc}{part}{ثامنًا: قسم تطوير أندرويد عمليًا (الفصول 48-58)}
+\input{chapters/53-di-si-shi-ba-zhang.tex}
+\input{chapters/54-di-si-shi-jiu-zhang.tex}
+\input{chapters/55-di-wu-shi-zhang.tex}
+\input{chapters/56-di-wu-shi-yi-zhang.tex}
+\input{chapters/57-di-wu-shi-er-zhang.tex}
+\input{chapters/58-di-wu-shi-san-zhang.tex}
+\input{chapters/59-di-wu-shi-si-zhang.tex}
+\input{chapters/60-di-wu-shi-wu-zhang.tex}
+\input{chapters/61-di-wu-shi-liu-zhang.tex}
+\input{chapters/62-di-wu-shi-qi-zhang.tex}
+\input{chapters/63-di-wu-shi-ba-zhang.tex}
+\part*{تاسعًا: قسم تطوير iOS عمليًا (الفصول 59-69)}
+\addcontentsline{toc}{part}{تاسعًا: قسم تطوير iOS عمليًا (الفصول 59-69)}
+\input{chapters/64-di-wu-shi-jiu-zhang.tex}
+\input{chapters/65-di-liu-shi-zhang.tex}
+\input{chapters/66-di-liu-shi-yi-zhang.tex}
+\input{chapters/67-di-liu-shi-er-zhang.tex}
+\input{chapters/68-di-liu-shi-san-zhang.tex}
+\input{chapters/69-di-liu-shi-si-zhang.tex}
+\input{chapters/70-di-liu-shi-wu-zhang.tex}
+\input{chapters/71-di-liu-shi-liu-zhang.tex}
+\input{chapters/72-di-liu-shi-qi-zhang.tex}
+\input{chapters/73-di-liu-shi-ba-zhang.tex}
+\input{chapters/74-di-liu-shi-jiu-zhang.tex}
+\appendix
+\part*{عاشرًا: الملاحق}
+\input{chapters/75-fu-lu-a.tex}
+\input{chapters/76-fu-lu-b.tex}
+\input{chapters/77-fu-lu-c.tex}
+\input{chapters/78-fu-lu-d.tex}
+\input{chapters/79-fu-lu-e.tex}
+\input{chapters/80-fu-lu-f.tex}
+\input{chapters/81-jie-yu.tex}
+\input{chapters/82-fu-lu-g.tex}
+\input{chapters/83-fu-lu-h.tex}
+\end{document}

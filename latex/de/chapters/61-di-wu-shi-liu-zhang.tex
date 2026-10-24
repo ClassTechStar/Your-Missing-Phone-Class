@@ -1,0 +1,153 @@
+\bookchapter{Kapitel 56: Feinschliff und Veröffentlichung – Testen, Debuggen und der Weg in den Google Play Store}
+
+\chapterintro{Die App ist fertig – und nun? In diesem Kapitel geht es um die drei Schritte von „läuft irgendwie“ zu „auslieferungsfertig“: Wie debuggst du effizient, um Bugs zu finden? Wie schreibst du Tests, die Rückfälle verhindern? Und wie bekommst du die App in den Google Play Store, damit die ganze Welt sie herunterladen kann? Die Veröffentlichung ist nicht bloß ein Ritual – sie ist die Schwelle, an der aus einem Werk ein Produkt wird.}
+
+\booksection{Die drei Debug-Werkzeuge: Logcat, Haltepunkte, UI-Inspektor}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Werkzeug} & \textbf{Wofür} & \textbf{Wie du es einsetzt} \tabularnewline
+\hline
+Logcat & System- und eigene Logmeldungen ansehen & Im Code Log.d("TAG","Wert=\$x") schreiben und im Panel nach dem TAG filtern \tabularnewline
+Haltepunkt-Debugging & Das Programm an einer bestimmten Zeile anhalten und Variablenwerte ansehen & Neben der Zeilennummer klicken, bis der rote Punkt erscheint, im Debug-Modus starten und Schritt für Schritt durchgehen \tabularnewline
+Layout Inspector & Die Struktur der laufenden Oberfläche ansehen & Menü Tools Layout Inspector, um den Komponentenbaum in Echtzeit zu sehen \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Die drei Debug-Werkzeuge\end{center}
+
+\begin{tcbinfo}{Tipp: Wie liest man eine Fehlermeldung?}
+Nach einem Absturz zeigt Logcat einen roten Stacktrace. Suche von unten nach oben die erste Zeile, die mit deinem eigenen Paketnamen beginnt (z. B. com.example.yourapp) – diese Zeile ist fast immer der Tatort. Schau zuerst auf den Exception-Typ (NullPointer? Typumwandlung?), dann auf „at ... deineDatei: Zeilennummer“. Mit diesem Trick löst du 80 \% aller Abstürze.
+
+\end{tcbinfo}
+
+\booksection{Testen: die Versicherung für deinen Code}
+
+Manuelles Testen ist unzuverlässig – du änderst die eine Funktion, und eine andere bricht unbemerkt. Tests sind „Bittermedizin im Nachhinein“ und „kugelsichere Weste“ zugleich. Android-Tests gibt es in drei Ebenen; als Einsteiger verinnerlichst du zuerst die erste:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Ebene} & \textbf{Was wird getestet} & \textbf{Wo liegt es} & \textbf{Tempo} \tabularnewline
+\hline
+Unit-Tests & Reine Logik (Berechnungen, Prüfungen) & app/src/test/ & Sekunden \tabularnewline
+Instrumentierungstests & Oberflächenverhalten auf einem echten Gerät & app/src/androidTest/ & Minuten \tabularnewline
+Manuelle Tests & Gefühl und Erlebnis von echten Menschen & —— & Immer nötig \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Die drei Test-Ebenen\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// die Logik "Betragstext in Zahl umwandeln" in eine reine Funktion auslagern
+fun parseAmount(input: String): Double? {
+    val v = input.trim().toDoubleOrNull()
+    return if (v != null && v > 0) v else null
+}
+
+// teste sie (JUnit4)
+@Test
+fun emptyInputReturnsNull() {
+    assertEquals(null, parseAmount(""))
+}
+@Test
+fun negativeReturnsNull() {
+    assertEquals(null, parseAmount("-5"))
+}
+@Test
+fun normalValueParses() {
+    assertEquals(12.5, parseAmount("12.5"))
+}
+\end{lstlisting}
+
+Die Betragsprüfung und die Statistikberechnungen im Haushaltsbuch sollten alle von Unit-Tests abgedeckt sein. Tests laufen lassen: Rechtsklick auf den Ordner test Run. Wenn alles grün bleibt, kannst du den Code beruhigt anfassen.
+
+\booksection{Signieren und Paketieren: deiner App den „Stempel“ geben}
+
+Android verlangt, dass jedes Installationspaket signiert ist – wie ein offizieller Siegel, der beweist: „Dieses Paket stammt von mir und wurde nicht verändert.“ Beim Debuggen signiert Android Studio automatisch mit dem Debug-Schlüssel; zum Veröffentlichen brauchst du deinen eigenen Release-Schlüssel. Der Ablauf:
+
+\begin{enumerate}
+  \item Menü Build Generate Signed Bundle / APK;
+  \item Eine Keystore-Datei (Schlüsselspeicher) anlegen – Passwort setzen und gut verwahren;
+  \item Release und das AAB-Format wählen – der Build ist fertig.
+\end{enumerate}
+
+\textbf{Warnung: Keystore verloren = App verloren}\par
+
+Jedes Update nach der Veröffentlichung muss mit derselben Signatur erfolgen, sonst lehnt der Store es ab. Sind Keystore-Datei und Passwort einmal verloren, bleibt dir nur, unter neuem Namen neu zu starten – alle bisherigen Nutzer kommen nicht mehr an die Updates. Sichere Keystore und Passwort unbedingt an einem sicheren Ort (verschlüsselte Cloud + Notizheft): Das ist eine der teuersten Lektionen im Android-Entwicklerleben.
+
+\booksection{Der komplette Weg in den Google Play Store}
+
+Entwicklerkonto registrieren
+
+Store-Material vorbereiten
+
+AAB hochladen
+
+Formular zur Datensicherheit ausfüllen
+
+Prüfung (Stunden bis Tage)
+
+Veröffentlichen
+
+\begin{center}\small\color{gray}Abbildung 6: Sechs Schritte bis in den Google Play Store\end{center}
+
+\begin{itemize}
+  \item Registrieren: einmalige Registrierungsgebühr von 25 US-Dollar, du brauchst ein nutzbares Google-Konto;
+  \item Materialien: App-Icon (512×512), Screenshots (mindestens 2), Funktionsbeschreibung, Link zur Datenschutzerklärung (Pflicht, sobald Daten erhoben werden);
+  \item Formular zur Datensicherheit: ehrlich angeben, welche Daten erhoben werden – ein Haushaltsbuch ohne Internetzugriff darf „Null“ melden;
+  \item Prüfung: Bei der ersten Veröffentlichung mit einem neuen Konto wird oft von Hand geprüft, das dauert von Stunden bis Tagen; bei einer Rückgabe einfach die Hinweise umsetzen.
+\end{itemize}
+
+Hinweis für Nutzer in China: Google Play braucht eine besondere Netzwerkumgebung, und die Verbreitung auf dem chinesischen Festland läuft meist über chinesische Stores (Huawei, Xiaomi, MyApp von Tencent usw.). Der Ablauf in chinesischen Stores ist ähnlich, aber jeder Store hat eigene Prüfgewohnheiten – dieselbe AAB/APK-Datei darf in mehreren Stores erscheinen. Für die Übung ist ein Store, der ganz durchläuft, schon ein Sieg.
+
+\booksection{Store-Materialien gestalten: Der erste Eindruck ist die Downloadzahl}
+
+Die Store-Seite ist das Schaufenster, das Nutzer beim „Bummeln“ sehen. Drei Materialien entscheiden über den ersten Eindruck:
+
+\begin{itemize}
+  \item Icon: 512×512, kein Notbehelf-Screenshot. Ohne Designgeschick lässt du dir von einem KI-Tool eine schlichte geometrische Form erzeugen – sie taugt nur, wenn man sie auf dem Handy-Startbildschirm verkleinert noch auf den ersten Blick erkennt;
+  \item Screenshots: mindestens 2, besser 4–6, mit den zentralen Funktionsszenarien; zu jedem ein Satz in echter Alltagssprache („In einer Sekunde eine Ausgabe erfasst“ ist zehnmal besser als „Effiziente Buchhaltungslösung“);
+  \item Beschreibung: Der erste Satz klärt „Was ist das + wofür ist es da“, statt Superlative wie „am professionellsten, am stärksten“ aufzutürmen – das Suchranking im Store hängt vor allem von Schlüsselwörtern und der Download-Quote ab, Ehrlichkeit wirkt besser als Übertreibung.
+\end{itemize}
+
+\begin{tcbinfo}{Tipp: Ein A/B-Blick auf die Kollegen}
+Schlender vor der Veröffentlichung durch die Top 10 der ähnlichen Apps im Store und vergleiche Screenshots: Welchen Stil haben ihre Icons? Welches Verkaufsargument zeigen ihre Screenshots? Wie lauten ihre Titel? Nachahmen ist nicht kopieren – lerne das Muster und fülle es mit deinem eigenen Inhalt. Das ist die schnellste Lektion für den Kaltstart eines jeden Produkts.
+
+\end{tcbinfo}
+
+\booksection{Mini-Checkliste: Performance-Optimierung und Absturzmeldungen}
+
+Vor der Veröffentlichung lohnen sich für diese beiden Punkte je eine halbe Stunde:
+
+\booksubsection{Vier Punkte der Performance-Selbstkontrolle}
+
+\begin{enumerate}
+  \item Listen mit LazyColumn: Lange Listen niemals mit Column hart anordnen – Lazy Loading ist die erste Lektion in Android-Performance;
+  \item Bilder nicht im Original einbauen: Mit der Bildbibliothek Coil automatisch skalieren und cachen – ein 5-MB-Originalbild bringt ein schwaches Gerät zum Wackeln;
+  \item Schwere Arbeit auf dem Main-Thread vermeiden: Datenbank, Netzwerk und große Dateien gehören in Coroutinen;
+  \item Mit dem Profiler nachmessen: Der eingebaute Performance-Profiler von Android Studio zeigt Arbeitsspeicher, CPU und Akkuverbrauch – erst messen, dann optimieren, nicht nach Gefühl.
+\end{enumerate}
+
+\booksubsection{Absturzmeldungen}
+
+Dass es bei deinen Tests nicht abstürzt, beweist nicht, dass es auf Nutzerhandys stabil bleibt. Binde vor der Veröffentlichung Firebase Crashlytics ein (offiziell von Google, kostenlos): Ein paar Zeilen Konfiguration, und bei jedem Absturz wird automatisch der Stacktrace gemeldet – im Dashboard siehst du dann, „welches Modell, welche Version, welche Zeile“. Veröffentlichen ohne Absturzüberwachung ist wie Autofahren mit geschlossenen Augen.
+
+\begin{tcbpractice}{Jetzt bist du dran: das Haushaltsbuch einmal „ausliefern“}
+(1) Ergänze 3 Unit-Tests für Logik wie parseAmount; (2) fange mit Logcat einen selbst erzeugten Absturz ein und behebe ihn; (3) erzeuge ein release-signiertes APK und schicke es einem Freund zur Installation (das ist erst die „Werkszeremonie“); (4) wenn noch Zeit bleibt, registriere ein Entwicklerkonto und reiche das Haushaltsbuch wirklich zur Veröffentlichung ein. Die ersten drei Punkte schaffst du noch heute Abend.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Zusammenfassung des Kapitels}
+\begin{itemize}
+  \item Die drei Debug-Werkzeuge: Logcat für Logs, Haltepunkte für Variablen, Layout Inspector für die Oberfläche
+  \item Abstürze lesen: im Stacktrace von unten die erste Zeile mit deinem Paketnamen suchen
+  \item Drei Test-Ebenen: Unit (Sekunden, das zuerst lernen), Instrumentierung, manuell
+  \item Veröffentlichen heißt signieren: Keystore und Passwort sichern – sonst „gehört“ die App plötzlich jemand anderem
+  \item Sechs Schritte in den Store: Registrieren Materialien AAB hochladen Datensicherheitsformular Prüfung Veröffentlichung
+\end{itemize}
+
+\end{tcbsummary}

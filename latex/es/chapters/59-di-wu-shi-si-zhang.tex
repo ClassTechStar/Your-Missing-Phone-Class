@@ -1,0 +1,196 @@
+\bookchapter{Capítulo 54: Proyecto 1: mi app de gastos (versión local)}
+
+\chapterintro{Bienvenido a tu primer “proyecto en serio”. Esta app de gastos no se conecta a internet, pero no le falta nada: anota movimientos, muestra el historial, resume por meses y permite borrar y editar. Al terminarla habrás recorrido el ciclo completo “datos lógica interfaz”. No corras a copiar código: primero piensa y luego actúa; ese es nuestro principio de siempre.}
+
+\booksection{Pensar los requisitos: cinco preguntas primero}
+
+Antes de poner manos a la obra, ordena la idea con las “cinco preguntas del requisito”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Elemento} & \textbf{Respuesta} \tabularnewline
+\hline
+Who (¿para quién?) & Para ti; también vale familia y amigos \tabularnewline
+What (¿qué hace?) & Anotar ingresos y gastos, ver el historial, resumir por mes y por categoría \tabularnewline
+Why (¿por qué?) & Practicar + enterarte de a dónde va el dinero \tabularnewline
+How (¿cómo?) & Kotlin + Compose + Room + MVVM, todo local y sin backend \tabularnewline
+Constraint (¿con qué límites?) & Terminar en una semana; soportar como mínimo Android 8; escribir con estándar de tienda aunque no se publique \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Las cinco preguntas del requisito de la app de gastos\end{center}
+
+Luego divídela en pasos pequeños donde “cada uno se pueda usar”: (1) montar la capa de datos con Room (guardar un movimiento); (2) la pantalla de lista (ver el historial); (3) la pantalla de registro (añadir movimientos); (4) borrar y editar; (5) la tarjeta de resumen mensual. Con cada paso terminado, la app sigue siendo algo “que se puede usar”.
+
+\booksection{La capa de datos: que cada “apunte” tenga casa}
+
+Primero define cómo es un apunte: los campos deben bastar, pero no pidas de más:
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" ingreso | "expense" gasto
+    val amount: Double,      // importe (yuan)
+    val category: String,    // categoría: comida, transporte, salario…
+    val note: String = "",   // nota (opcional)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Añade al Dao dos consultas “para estadísticas”: son el alma de la app de gastos:
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month tiene el formato "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Consejo: ¿por qué Double para el importe?}
+Las apps financieras serias usan BigDecimal o “un Int en céntimos” para esquivar los errores de coma flotante (el viejo problema de que 0,1+0,2$\neq$0,3). Para un proyecto de práctica basta Double; si algún día montas un producto financiero de verdad, recuerda pasar a céntimos: es una trampa que pisaron incontables predecesores.
+
+\end{tcbinfo}
+
+\booksection{MVVM: interfaz y lógica “se separan”}
+
+¿Dejar que la interfaz toque la base de datos directamente? Funciona, pero el código de interfaz se vuelve largo y farragoso. La arquitectura MVVM reparte papeles: View (interfaz) solo dibuja, ViewModel (centro de la lógica) lleva los datos y Model (Room) guarda.
+
+Vista (interfaz Compose)
+
+ViewModel (estado y lógica)
+
+Model (capa de datos Room)
+
+\begin{center}\small\color{gray}Figura 5: las tres capas de MVVM: los datos fluyen en una sola dirección y ninguna capa pisa el terreno ajeno\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // convierte el Flow en un estado observable por la interfaz
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // acciones del usuario: llamar a funciones suspend
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+En la interfaz (Compose) se usa así: val vm: RecordViewModel = viewModel() y luego val list by vm.records.collectAsState(): en cuanto cambian los datos, la lista se refresca sola y tú no tocas nada. Ese es el poder de la unión de MVVM + Flow + Compose.
+
+\booksection{La interfaz: pantalla de lista + pantalla de registro}
+
+La lista usa LazyColumn (lista de carga diferida): por muchos datos que haya, sin tirones:
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // tarjeta de resumen superior (ingresos - gastos = balance)
+        SummaryCard(records)
+
+        // lista de movimientos
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // botón flotante "apuntar gasto"  abre el diálogo de alta
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+Para registrar, lo más cómodo es un AlertDialog (cuadro de diálogo): unos campos de texto + un conmutador ingreso/gasto + un desplegable de categorías; al pulsar aceptar se llama a vm.addRecord(...).
+
+\begin{tcbwarn}{Atención: con la validación de entradas no seas perezoso}
+El campo del importe hay que validarlo sí o sí: corta nulos, negativos y entradas ilegales como “abc” (compruébalo con toDoubleOrNull()). Una de las causas más comunes de caídas es “tratar la entrada del usuario como si fuera un niño modelo”. Recuerda: todo lo que escriba el usuario, examínalo como a un enemigo.
+
+\end{tcbwarn}
+
+\booksection{Editar y borrar: que los datos “entren y salgan”}
+
+Una app de gastos que solo añade y no borra muere a los tres días. Añade dos operaciones:
+
+\begin{lstlisting}[language=Kotlin]
+// añade dos métodos al Dao:
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// en la interfaz: mantener pulsado un ítem abre el menú "editar/borrar" (en Compose, DropdownMenu o AlertDialog)
+// antes de borrar, conviene un diálogo de confirmación: el "borrado por accidente" es lo que más odian los usuarios de apps de gastos
+\end{lstlisting}
+
+Dos reglas de detalle en la interacción: el borrado exige una segunda confirmación (por si el dedo resbala) y la edición conviene que traiga el valor original precargado (corregir una letra es más barato que reescribirlo todo). No subestimes estos dos detalles: la sensación de producto se amontona justo ahí.
+
+\booksection{La entrega: revisión en tres capas + dos retos avanzados}
+
+\booksection{La entrega: revisión en tres capas + dos retos avanzados}
+
+Terminado el proyecto, revisa en tres capas “función límites arquitectura”: ¿anota? ¿borra? ¿al reabrir la app siguen los datos ahí? (función); ¿se cae si introduces 0 o un negativo? ¿pierde datos al girar la pantalla? (límites); ¿interfaz y datos están revueltos? ¿hay valores clavados en el código? (arquitectura).
+
+Aprobada la versión básica, apúntate dos “platos avanzados”:
+
+\begin{enumerate}
+  \item Filtro por mes: añade arriba un selector de mes (por ejemplo, 2026-08 v) y que la lista muestre solo los movimientos de ese mes;
+  \item Gráfico circular por categoría: usa el Canvas de Compose o mete una biblioteca ligera de gráficos para pintar "a dónde fue el dinero" en forma de quesito; con esto hecho, la app de gastos empieza a tener cara de "producto".
+\end{enumerate}
+
+\begin{tcbpractice}{Manos a la obra: termínala esta semana}
+Trabaja en el orden “capa de datos ViewModel pantalla de lista pantalla de registro tarjeta de resumen”, un paso cada día. Si te atascas, pega el error tal cual a un buscador o a una IA (¿recuerdas la parte séptima, “Programación con IA en la práctica”? Al describir el problema, deja claros “comportamiento esperado, comportamiento real y pasos para reproducirlo”). Cuando la acabes, úsala una semana para anotar tus gastos: el orgullo de usar una app hecha por ti te empuja a seguir adelante.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item Cinco preguntas del requisito dividir en pasos pequeños "cada uno útil" y luego actuar
+  \item Capa de datos: entidad Record + Dao (con SQL de estadísticas por mes) + Database
+  \item Reparto MVVM: View solo dibuja, ViewModel lleva la lógica, Model guarda
+  \item Flow + stateIn + collectAsState: cambian los datos y la interfaz se refresca sola
+  \item LazyColumn para la lista de carga diferida; AlertDialog para registrar
+  \item Entrega en tres capas (función/límites/arquitectura) + retos avanzados (filtro por mes, gráfico circular por categoría)
+\end{itemize}
+
+\end{tcbsummary}

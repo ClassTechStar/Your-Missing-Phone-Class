@@ -1,0 +1,124 @@
+\bookchapter{Kapitel 57: Der Weg nach vorn – Berechtigungen, Benachrichtigungen und moderne Architektur}
+
+\chapterintro{Eine App bauen zu können ist erst der Anfang. In diesem Kapitel geht es um die Hürden auf dem Weg von „kann es bauen“ zu „baut es gut“: Wie beantragst du Berechtigungen mit Anstand? Wie verschickst du Benachrichtigungen, ohne zu nerven? Wie hebst du die Architektur eine Stufe höher – und wie schreibst du 2026 mit der KI als Partner Android-Code? All das begegnet dir in echten Projekten sofort.}
+
+\booksection{Laufzeitberechtigungen: erst anklopfen, dann eintreten}
+
+Kamera, Standort, Kontakte, Benachrichtigungen ... Diese „sensiblen Zonen“ muss die App zur Laufzeit beim Nutzer anfragen (seit Android 6). Die Regel: erst im Manifest deklarieren, dann im Code anfragen, und bei Ablehnung elegant abfedern. In Compose geht das am bequemsten mit rememberPermissionState aus der offiziellen Bibliothek Accompanist:
+
+\begin{lstlisting}[language=Kotlin]
+// zuerst im Manifest deklarieren:
+// <uses-permission android:name="android.permission.CAMERA" />
+
+@Composable
+fun CameraButton() {
+    val permission = rememberPermissionState(
+        permission = android.Manifest.permission.CAMERA
+    )
+    Button(onClick = {
+        when {
+            permission.status.isGranted -> openCamera()
+            permission.status.shouldShowRationale -> showExplainDialog()
+            else -> permission.launchPermissionRequest()
+        }
+    }) { Text("Foto aufnehmen") }
+}
+\end{lstlisting}
+
+\begin{tcbwarn}{Achtung: Was tun nach einer dauerhaften Ablehnung?}
+Wenn der Nutzer „Nicht mehr fragen“ angehakt hat, öffnet launchPermissionRequest kein Dialogfenster mehr. Dann leite den Nutzer zu den Systemeinstellungen (per Intent zur App-Einstellungsseite springen) und erkläre in der Oberfläche, „wofür diese Berechtigung gebraucht wird“. Mit freundlichem Ton steigt die Bereitschaft, die Berechtigung zu erteilen, deutlich – der Text einer Berechtigungsanfrage lohnt echtes Bemühen.
+
+\end{tcbwarn}
+
+\booksection{Benachrichtigungen: zur richtigen Zeit etwas Nützliches sagen}
+
+Benachrichtigungen sind der Kanal, über den eine App Nutzer erreicht – und zugleich die Funktion, die Nutzer am ehesten „blockieren“. Drei Disziplinen: nur Nützliches senden, das Ausschalten ermöglichen und nachts nicht stören. Die Grundanwendung:
+
+\begin{lstlisting}[language=Kotlin]
+// ab Android 13 muss zuerst die Berechtigung POST_NOTIFICATIONS angefragt werden (siehe voriger Abschnitt)
+
+// 1. Benachrichtigungskanal anlegen (ab Android 8 Pflicht)
+val channel = NotificationChannel(
+    "reminder", "Erinnerungen", NotificationManager.IMPORTANCE_DEFAULT
+)
+val manager = getSystemService(NotificationManager::class.java)
+manager.createNotificationChannel(channel)
+
+// 2. Benachrichtigung senden
+val notification = NotificationCompat.Builder(this, "reminder")
+    .setSmallIcon(R.drawable.ic_notification)
+    .setContentTitle("Ausgaben-Erinnerung")
+    .setContentText("Heute hast du noch nichts erfasst")
+    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+    .build()
+if (ActivityCompat.checkSelfPermission(this,
+        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+) {
+    manager.notify(1, notification)
+}
+\end{lstlisting}
+
+Für geplante Aufgaben (etwa „jeden Tag um 20:00 ans Buchen erinnern“) nimm WorkManager – der offiziell empfohlene „Hintergrund-Planer“ sorgt dafür, dass Aufgaben zum passenden Zeitpunkt laufen, ohne dass du dich um Akkuoptimierung kümmern musst. Für alles Weckerartige ist er die sichere Wahl.
+
+\booksection{Architektur für Fortgeschrittene: Dependency Injection und Modularisierung}
+
+Sobald das Projekt wächst, melden sich zwei „süße Sorgen“:
+
+\begin{itemize}
+  \item Chaos beim Objekterzeugen: Jede Seite erstellt selbst Datenbank und API – mit Hilt (Framework für Dependency Injection) wird das zentral verwaltet: „Wer etwas braucht, braucht nur zu fragen, und es wird gereicht“;
+  \item Der Code wird zum Berg: Einkomponentige Projekte werden mit jeder Änderung langsamer – teile sie in mehrere Module auf (app / core / feature-xxx), dann entwickelt und testet jedes Feature unabhängig.
+\end{itemize}
+
+\begin{tcbinfo}{Tipp: Kein Over-Engineering}
+Hilt und Modularisierung sind gute Werkzeuge, aber greif bei Ein-Personen-Projekten nicht vorschnell dazu. Für das Haushaltsbuch reichen ein einzelnes Modul plus manuell erzeugte Abhängigkeiten völlig. Erst wenn der Code über zigtausend Zeilen wächst, das Kompilieren langsamer wird oder mehrere Leute zusammenarbeiten, führst du sie bei Bedarf ein. Werkzeuge dienen dem Ziel, sie sind kein Selbstzweck – auch das ist das Prinzip „Einfachheit zuerst“ aus unserem KI-Programmierbuch.
+
+\end{tcbinfo}
+
+\booksection{Die neuen Spielregeln 2026: Android-Entwicklung mit KI-Unterstützung}
+
+2026 ist KI tief in den Android-Entwicklungsprozess eingebettet. Wenn du schneller werden willst, ist diese Schlagkombination längst erprobt:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Station} & \textbf{Wie die KI hilft} & \textbf{Deine Aufgabe} \tabularnewline
+\hline
+Code schreiben & Gemini ist in Android Studio integriert; KI-Plugins von Drittanbietern vervollständigen und erzeugen Code & Anforderungen klar beschreiben, Ergebnisse prüfen \tabularnewline
+Recherchieren & Offizielle Dokumentation und Fehlermeldungen der KI zur Auslegung geben & Wichtige Schlüsse in der offiziellen Dokumentation nachprüfen \tabularnewline
+Tests schreiben & Die KI Testfälle nach „normal/Grenzwert/Fehlerfall“ erzeugen lassen & Prüfen, dass die Testfälle zur Fachlogik passen \tabularnewline
+Bugs beheben & Stacktrace + betroffenen Code einfügen, die KI ortet und repariert & Die Änderungen verstehen und mit Tests verifizieren \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Vier Szenarien der Android-Entwicklung mit KI-Unterstützung\end{center}
+
+Die konkrete Methodik – wie du der KI Anweisungen gibst, wie du Ergebnisse abnimmst, wie du Fallen meidest – steht komplett in 11 Kapiteln in Teil 7 dieses Buches, „KI-Programmierung in der Praxis“ (Kapitel 37–47). Lese es unbedingt parallel: Die Android-Syntax liefert dieser Teil, das Handwerk der KI-Zusammenarbeit Teil 7.
+
+\booksection{Compose-Performance und Debug-Werkzeuge}
+
+Mit Compose zu schreiben macht Spaß, aber „zu viele Recompositions“ können es zäh machen. Drei praktische Tricks:
+
+\begin{itemize}
+  \item Parameter stabilisieren: Datenklassen mit @Immutable versehen oder derivedStateOf verwenden, damit irrelevante Zustandsänderungen keine großflächige Recomposition auslösen;
+  \item Denk an den key: items(list, key = \{ it.id \}) sorgt dafür, dass beim Einfügen und Löschen nur der betroffene Eintrag angefasst wird – ohne key kann ein einziges Löschen die ganze Liste neu zeichnen;
+  \item Der Compose-Modus des Layout Inspectors: Er zeigt in Echtzeit, wie oft jedes Composable rekompiniert wurde – auf einen Blick erkennst du die Häufigen und optimierst gezielt an den Hotspots.
+\end{itemize}
+
+Schalte zusätzlich den Compose-Compiler-Bericht (Metrics) ein; er erzeugt eine Übersicht, „welche Komponenten instabil“ sind – auf dem Weg nach vorn sind Daten immer verlässlicher als Gefühl.
+
+\begin{tcbpractice}{Jetzt bist du dran: das „Dreier-Set“ fürs Haushaltsbuch}
+(1) Baue die Erinnerung „jeden Tag um 20:00 ans Buchen denken“ ein (WorkManager + Benachrichtigungskanal + Android-13-Benachrichtigungsberechtigung); (2) stelle die Erzeugung von Datenbank und API auf Hilt-Injektion um; (3) versuche, mit KI-Werkzeugen die Funktion „Monatsfilter“ schneller zu bauen, und nimm das Ergebnis nach der Drei-Ebenen-Abnahme ab. Ist das Dreier-Set fertig, sieht dein Projekt aus wie von der „regulären Truppe“.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Zusammenfassung des Kapitels}
+\begin{itemize}
+  \item Sensible Berechtigungen: im Manifest deklarieren + zur Laufzeit anfragen + bei Ablehnung elegant weiterhelfen
+  \item Drei Disziplinen für Benachrichtigungen: nur Nützliches, abschaltbar, nicht störend; Kanal + Berechtigung, beides unverzichtbar
+  \item Geplante Aufgaben mit WorkManager, keine eigenen Räder erfinden
+  \item Hilt verwaltet Objekte, Modularisierung verwaltet Code – bei kleinen Ein-Personen-Projekten nicht vorschnell einsetzen
+  \item Vier KI-Szenarien: Code schreiben, recherchieren, Tests schreiben, Bugs beheben; die Methodik in Teil 7 (Kapitel 37–47)
+\end{itemize}
+
+\end{tcbsummary}

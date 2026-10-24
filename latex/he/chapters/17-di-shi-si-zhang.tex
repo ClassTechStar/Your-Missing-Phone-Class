@@ -1,0 +1,393 @@
+\bookchapter{פרק 14: נושא מנהל סיסמאות}
+
+\chapterintro{לאדם המודרני יש בממוצע עשרות ואפילו מאות חשבונות אינטרנט. אם כל חשבון משתמש באותה סיסמה, ברגע שאתר אחד נפרץ, כל החשבונות בסכנה. אם כל חשבון משתמש בסיסמה מורכבת שונה, פשוט אי אפשר לזכור.}
+
+\booksection{למה אתה צריך מנהל סיסמאות？}
+
+2.איך מנהל סיסמאות עובד
+
+אחסון מוצפן
+
+\booksection{איך מנהל סיסמאות עובד}
+
+\begin{enumerate}
+  \item \textbf{סיסמת מאסטר}:אתה מגדיר סיסמת מאסטר אחת לפתיחת כספת הסיסמאות. סיסמת המאסטר עצמה לא מאוחסנת בשרת.
+  \item \textbf{מילוי אוטומטי}:במסך התחברות לאתר או אפליקציה, מנהל הסיסמאות ממלא אוטומטית את שם המשתמש והסיסמה.
+  \item \textbf{יצירת סיסמאות}:יכול ליצור סיסמאות אקראיות ומורכבות, להגברת האבטחה.
+  \item \textbf{3.המלצות למנהלי סיסמאות מובילים}מובנה במערכת:
+\end{enumerate}
+
+\booksection{ג. מבוא לעקרונות הצפנה}
+
+הבנת הצפנת מנהל סיסמאות עוזרת לשפוט אמון בספק. הסבר פשוט למושגים מרכזיים.
+
+\booksubsection{הצפנת AES-256}
+
+AES (Advanced Encryption Standard) הוא אלגוריתם הצפנה סימטרי שאושר על ידי NIST, ונמצא בשימוש נרחב על ידי בנקים, צבא וממשלות. “256” מתייחס לאורך המפתח - 256 סיביות, שפיצוחו התיאורטי דורש זמן ארוך מגיל היקום. מנהלי סיסמאות מובילים (1Password, Bitwarden, KeePass) משתמשים ב-AES-256 להצפנת כספת הסיסמאות שלך.
+
+\booksubsection{ארכיטקטורת Zero-Knowledge}
+
+“ידע אפס” לא אומר שספק השירות לא שומר כלום, אלא ש\textbf{הצפנה ופענוח במכשיר המקומי, השרת שומר רק טקסט מוצפן}. התהליך המדויק:
+
+\begin{enumerate}
+  \item אתה מזין את הסיסמה הראשית בצד הלקוח.
+  \item הלקוח גוזר מפתח מהסיסמה הראשית (במכשיר שלך).
+  \item רק הטקסט המוצפן מועלה לשרת.
+  \item בהתחברות הבאה, השרת שולח טקסט מוצפן, הלקוח פוענח עם הסיסמה.
+\end{enumerate}
+
+נקודות מפתח:\textbf{הסיסמה הראשית עצמה לעולם לא עוזבת את המכשיר שלך}, גם בשרת. גם אם הספק נפרץ, ההאקר מקבל טקסט מוצפן - אלא אם ינחש את הסיסמה.
+
+\begin{tcbinfo}{למה "Zero-Knowledge" אומר שהספק לא רואה את הסיסמה?}
+מפתח הפענוח נגזר מהסיסמה הראשית שלך, שנמצאת רק בראשך ובמכשיר המקומי. השרת של הספק אינו מכיל גם את הסיסמה הראשית וגם לא את מפתח הפענוח - רק טקסט מוצפן. לכן ספקים כמו Bitwarden ו-1Password מצהירים במפורש “גם אנחנו לא יכולים לראות את הסיסמאות שלך” - לא מפני שהם לא רוצים, אלא כי טכנית זה בלתי אפשרי.
+
+\end{tcbinfo}
+
+\booksubsection{פונקציית גזירת מפתח: PBKDF2 ו-Argon2}
+
+הסיסמה הראשית לא יכולה לשמש ישירות כמפתח - היא עוברת “פונקציית גזירה”. תפקיד:\textbf{מכוון להאטת החישוב}, כדי שעלות פריצה בכוח תהיה גבוהה מדי להאקרים.
+
+\begin{itemize}
+  \item \textbf{PBKDF2}:תקן ותיק, בשימוש iCloud, Bitwarden, LastPass. האטת פיצוח על ידי איטרציות (100,000+).
+  \item \textbf{Argon2}:זוכה 2015, מודרני יותר מ-PBKDF2. צריכת זיכרון + חישוב - קשה ל-GPU/ASIC. Bitwarden, KeePassXC תומכים.
+\end{itemize}
+
+איטרציות גבוהות = בטוח יותר אך איטי. ספקים רציניים מפרסמים אלגוריתם ואיטרציות לביקורת.
+
+\booksubsection{אזהרה: דליפת LastPass 2022}
+
+אוגוסט 2022, LastPass הודיעה על חדירה; נובמבר, ההאקר לקח גיבוי מוצפן. לקחים:
+
+\begin{itemize}
+  \item \textbf{ארכיטקטורת ידע-אפס שומרת על הקו האדום}:הספרייה מוצפנת, ההאקר לא יכול לפענח - בתנאי שהסיסמה חזקה.
+  \item \textbf{משתמשים עם סיסמה ראשית חלשה בסכנה הגדולה ביותר}:האקר יכול לפרוץ סיסמה חלשה ללא רשת, משתמשים עם סיסמה חלשה/חוזרת בסיכון.
+  \item \textbf{גם מטה-נתונים דולפים}:תוכן מוצפן, אך URL והערות אולי לא, חושף אילו שירותים בשימוש.
+\end{itemize}
+
+\begin{tcbwarn}{לקחים מתקרית LastPass}
+1) סיסמה ארוכה וייחודית (16+, גדול/קטן/מספר/סמל); 2) העדף Argon2id, איטרציות גבוהות; 3) 2FA עצמאי לחשבונות רגישים (בנק, דוא“ל), אל תסתמך רק על מנהל סיסמאות.
+
+\end{tcbwarn}
+
+\booksection{ד. המלצות על מנהלי סיסמאות מובילים}
+
+\booksubsection{:בחירה מועדפת למשתמשי אקוסיסטם אפל. אינטגרציה חלקה עם Safari ואפליקציות, חינמי, מאובטח. החיסרון הוא שימוש לא נוח בפלטפורמות אחרות.}
+
+\begin{itemize}
+  \item \textbf{Google Password Manager}:נוח למשתמשי אנדרואיד. אינטגרציה עם Chrome ומערכת אנדרואיד, חינמי.
+  \item \textbf{Huawei Password Vault}:מובנה במערכת HarmonyOS, מתאים למשתמשי Huawei.
+  \item \textbf{כלים מקצועיים צד שלישי:}Bitwarden
+\end{itemize}
+
+\booksubsection{:קוד פתוח וחינמי, פונקציונלי מאוד, תומך בכל הפלטפורמות. מומלץ בחום למשתמשים שמעריכים פרטיות.}
+
+\begin{itemize}
+  \item \textbf{1Password}:ממשק יפה, פונקציות עשירות, מתאים למשפחות וצוותים. בתשלום.
+  \item \textbf{LastPass}:מנהל סיסמאות ותיק, הגרסה החינמית מוגבלת.
+  \item \textbf{KeePass}:אחסון מקומי לחלוטין, קוד פתוח וחינמי. מתאים למשתמשי גיקים.
+  \item \textbf{4.שיטות עבודה מומלצות למנהל סיסמאות}הגדר סיסמת מאסטר חזקה
+\end{itemize}
+
+\booksection{ה. הערכת חוזק סיסמה בפועל}
+
+מנהלי סיסמאות מציגים “חוזק” (אדום/צהוב/ירוק), אך בודק רק אורך וסוג. לבדיקה אמיתית דרוש “אנטרופיה” ו“האם הודלף”.
+
+\booksubsection{אנטרופיה: מדידה מדעית של חוזק סיסמה}
+
+“אנטרופיה” מודדת אי-ודאות, ביחידת סיביות. גבוהה יותר = יותר ניסיונות לפריצה.
+
+\begin{itemize}
+  \item \textbf{"123456"}: אנטרופיה נמוכה מאוד, פריצה מיידית.
+  \item \textbf{"P@ssw0rd"}:נראה מורכב, אך בכל רשימת מילון, אנטרופיה נמוכה.
+  \item \textbf{"correct horse battery staple"}:4 מילים אקראיות, \textasciitilde{}44 סיביות, קשה יותר מ-"P@ssw0rd".
+  \item \textbf{16 תווים אקראיים (אותיות גדולות+קטנות+מספרים+סמלים)}:\textasciitilde{}100 סיביות, כוח נוכחי לא יכול לפרוץ.
+\end{itemize}
+
+מסקנה:\textbf{“אורך + אקראיות” חשוב יותר מ“סמלים מורכבים”}. לכן סיסמאות ארוכות אקראיות של מנהל הסיסמאות בטוחות באמת.
+
+\booksubsection{HaveIBeenPwned: בדוק אם הסיסמה הודלפה}
+
+מתוחזק על ידי חוקר האבטחה Troy Hunt\href{https://haveibeenpwned.com}{haveibeenpwned.com}מכיל חשבונות וסיסמאות מדליפות גדולות. אפשר:
+
+\begin{enumerate}
+  \item הזן דוא"ל, בדוק אם החשבון נחשף.
+  \item Pwned Passwords - בדוק אם סיסמה במאגר (מובנה במנהלים ודפדפנים).
+\end{enumerate}
+
+אם סיסמה מופיעה במאגר דליפות,\textbf{לא משנה כמה מורכבת היא נראית, יש להחליף אותה מיד}– כי התקפת מילון מנסה סיסמאות ידועות אלה קודם.
+
+\begin{tcbinfo}{עיקרון שאילתת k-Anonymity}
+דואג שהזנת הסיסמה ב-HaveIBeenPwned תגרום לדליפה נוספת? אל תדאג. שאילתות מודרניות משתמשות בפרוטוקול “k-אנונימיות”: הדפדפן שולח רק את 5 התווים הראשונים של ה-hash לשרת, השרת מחזיר רשימת hashes שמתחילים ב-5 תווים אלה, וההשוואה נעשית מקומית. כלומר, השרת לעולם לא רואה את ה-hash המלא של הסיסמה. “בדיקת סיסמאות שדלפו” של 1Password ו-Bitwarden פועלות בדיוק כך.
+
+\end{tcbinfo}
+
+\booksubsection{פונקציית ניטור מובנית במנהל סיסמאות}
+
+\begin{itemize}
+  \item \textbf{1Password Watchtower}:ניטור סיסמאות חלשות/חוזרות/מודלפות/ישנות/ללא 2FA, אדום/כתום/צהוב.
+  \item \textbf{Bitwarden Vault Health}:חינם: חלשות/חוזרות; בתשלום: מודלפות (HaveIBeenPwned).
+  \item \textbf{"המלצות אבטחה" ב-iCloud Keychain}:iOS > סיסמאות > המלצות, מצביע על מודלפות/חוזרות.
+  \item \textbf{"בדיקת סיסמאות" ב-Google Password Manager}:Chrome מובנה, בדיקת מודלפות/חלשות/חוזרות.
+\end{itemize}
+
+\begin{tcbpractice}{בדוק עכשיו: האם הסיסמה שלך בטוחה}
+\begin{enumerate}
+  \item פתח haveibeenpwned.com, הזן דוא"ל, בדוק דליפות.
+  \item iPhone: הגדרות > סיסמאות > המלצות, טפל באדומים.
+  \item Chrome: הגדרות > סיסמאות > בדוק, תקן.
+  \item 1Password/Bitwarden: Watchtower/Health, "מודלף" ו"חוזר" קודם.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{ו. Passkey: העתיד של התחברות ללא סיסמה}
+
+2024-2026, מהפכת סיסמאות -\textbf{Passkey (מפתח גישה)}צפוי להחליף סיסמאות. Apple, Google, Microsoft, FIDO, W3C, השינוי הגדול ביותר בעשרות שנים.
+
+\booksubsection{מהו Passkey?}
+
+Passkey מבוסס FIDO2/WebAuthn, משתמש\textbf{זוג מפתחות על המכשיר}תחליף לסיסמה. העיקרון מפושט:
+
+\begin{itemize}
+  \item הטלפון שלך מייצר זוג מפתחות:\textbf{מפתח ציבורי}(נרשם אצל האתר) +\textbf{מפתח פרטי}(נשמר תמיד בשבב האבטחה של המכשיר שלך).
+  \item בהתחברות, האתר שולח "אתגר", הטלפון חותם במפתח פרטי, האתר מאמת במפתח ציבורי.
+  \item לפני חתימה, אימות ביומטרי (Face ID/טביעת אצבע) או PIN.
+  \item בכל התהליך,\textbf{שום סיסמה לא מועברת ברשת}.
+\end{itemize}
+
+\booksubsection{Passkey מול סיסמה מסורתית}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{ממד} & \textbf{סיסמה מסורתית} & \textbf{Passkey} \tabularnewline
+\hline
+עמידות לדיוג & חלש, אתר דיוג יכול לגנוב סיסמה & עמיד טבעית לדיוג, מפתח פרטי חותם רק על דומיין אמיתי \tabularnewline
+השפעת דליפת שרת & גיבוב סיסמה עלול להיפרץ & השרת שומר רק מפתח ציבורי, דליפה ללא השפעה \tabularnewline
+נוחות & דורש זיכרון/הקלדה/ניהול & התחברות בשנייה עם Face ID/טביעת אצבע \tabularnewline
+התקפת השמעה חוזרת & עלולה להיחטף ולהיות מושמעת חזרה על ידי אדם באמצע & כל חתימה חד-פעמית, לא ניתנת להשמעה חוזרת \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{תמיכת פלטפורמות}
+
+\begin{itemize}
+  \item \textbf{Apple iCloud Passkey}:iOS 16+/macOS Ventura+, סנכרון בין מכשירי Apple, ללא יצירה מחדש.
+  \item \textbf{Passkey ב-Google Password Manager}:Android+Chrome, Passkey ב-Google, סנכרון; 2023 Google תומך.
+  \item \textbf{Microsoft}:Windows 11/Edge תומכים; Microsoft, Outlook, Office, ב-Authenticator.
+  \item \textbf{1Password / Bitwarden}:יצירה, אחסון, סנכרון חוצה פלטפורמות, לא תלוי באקוסיסטם.
+\end{itemize}
+
+\begin{tcbinfo}{סנכרון חוצה-מכשירים הוא פריצת דרך מרכזית}
+הבעיה הגדולה ביותר של Passkey בגרסאותיו המוקדמות הייתה “קשירה למכשיר יחיד” - החלפת טלפון דרשה יצירה מחדש. החל מ-2023, Apple, Google ו-Microsoft יישמו סנכרון ענן של Passkey: iCloud Keychain מסנכרן בין מכשירי Apple, Google Password Manager מסנכרן בין מכשירי Android. 1Password וספקים אחרים חיברו סנכרון חוצה-אקוסיסטמים. משמעות הדבר: ל-Passkey יש עתיד כתחליף מעשי לסיסמאות.
+
+\end{tcbinfo}
+
+\booksubsection{יצירה ושימוש ב-Passkey}
+
+\textbf{נתיב iOS (iPhone):}
+
+\begin{enumerate}
+  \item באתר תומך (Google, Microsoft, Amazon, eBay, PayPal) > "Add passkey".
+  \item Face ID/Touch ID, Passkey נוצר ונשמר ב-iCloud.
+  \item בכניסה הבאה, "התחבר עם iPhone", Face ID.
+  \item ניהול: הגדרות > סיסמאות > אתר.
+\end{enumerate}
+
+\textbf{נתיב Android:}
+
+\begin{enumerate}
+  \item באתר > "Add passkey".
+  \item Google Password Manager > חשבון > נעילת מסך (טביעת אצבע/תבנית/PIN).
+  \item Passkey נשמר ב-Google, סנכרון בין מכשירי Android.
+  \item בכניסה, "Passkey", נעילת מסך.
+  \item ניהול: הגדרות > סיסמאות > Password Manager > google.com.
+\end{enumerate}
+
+\booksubsection{התחברות Passkey חוצה-מכשירים}
+
+ב-Windows ללא Passkey, סרוק קוד QR מ-iPhone:
+
+\begin{enumerate}
+  \item בעמוד ההתחברות של האתר בחר "השתמש ב-Passkey".
+  \item בחר "השתמש במכשיר אחר".
+  \item המחשב מציג קוד QR, סרוק עם ה-iPhone.
+  \item iPhone Face ID, האתר נפתח במחשב.
+\end{enumerate}
+
+Bluetooth+אינטרנט מוצפן, המפתח לא עוזב את ה-iPhone.
+
+\begin{tcbpractice}{נסה עכשיו: חווית התחברות ללא סיסמה}
+\begin{enumerate}
+  \item Google > אבטחה > Passkey > הוסף, Face ID/טביעת אצבע.
+  \item Microsoft > אבטחה > אפשרויות > Passkey.
+  \item Taobao, JD, eBay, PayPal.
+  \item שמור סיסמה כגיבוי, העבר חשבונות רגישים ל-Passkey.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbwarn}{המלצה לתקופת מעבר}
+Passkey לא מחליף לגמרי - אתרים ב“Passkey+סיסמה”. המלצה: חשבונות רגישים קודם, אך\textbf{אל תמחק מיד סיסמאות מסורתיות}, כגיבוי; המשך להשתמש במנהל סיסמאות. Passkey = “תוספת חזקה” לא “החלפה”.
+
+\end{tcbwarn}
+
+\booksection{ז. מפתחות אבטחה חומרתיים}
+
+אם דרישות האבטחה שלך גבוהות - קריפטו, מנהל/עיתונאי/פעיל, חשבונות ארגון - מפתח חומרה אמין יותר מ-SMS.
+
+\booksubsection{מהו מפתח אבטחה חומרתי?}
+
+מפתח חומרה (דמוי USB), שבב מאובטח, דורש מגע/NFC. מוצרים:
+
+\begin{itemize}
+  \item \textbf{YubiKey}(Yubico): פופולרי, FIDO2/WebAuthn/U2F/OTP/PIV/OpenPGP, USB-C/USB-A/NFC. 5 Series 50-70 USD.
+  \item \textbf{Google Titan}:Google, USB-C+NFC/Bluetooth, 30-40 USD.
+  \item \textbf{OnlyKey}: חלופת קוד פתוח, תומך בפרוטוקולים מרובים.
+  \item \textbf{תחליף מקומי}:Feitian ePasskey, זול יותר.
+\end{itemize}
+
+\booksubsection{למה מפתח חומרתי בטוח יותר מקוד SMS?}
+
+\begin{itemize}
+  \item \textbf{עמידות לדיוג}:כמו Passkey, רק לדומיין אמיתי, פישינג לא עובד.
+  \item \textbf{עמיד לחטיפת SIM}:SMS פגיע ל-SIM-swap, מפתח לא צריך מספר.
+  \item \textbf{עמיד לאיש-באמצע}:FIDO2 כולל challenge, לא ניתן לשחזר.
+  \item \textbf{בידוד פיזי}:מפתח בשבב, תוכנה זדונית לא קורא.
+\end{itemize}
+
+\booksubsection{תרחישים מתאימים}
+
+\begin{itemize}
+  \item חשבונות בורסת מטבעות קריפטו, שחזור ארנק.
+  \item SSO ארגוני, VPN, SSH.
+  \item דוא"ל, GitHub, "חשבונות ראשיים" - פריצה = איפוס הכל.
+  \item עיתונאים, עורכי דין, מנהלים בכירים – אנשים בסיכון גבוה.
+\end{itemize}
+
+\booksubsection{איך מגדירים מפתח חומרתי כאימות דו-שלבי}
+
+Google + YubiKey:
+
+\begin{enumerate}
+  \item קנה YubiKey (שניים: יומיומי + גיבוי, מיקומים שונים).
+  \item myaccount.google.com > אבטחה > 2FA.
+  \item "הוסף מפתח" > USB-C או NFC.
+  \item גע במגע המתכת.
+  \item מומלץ לרשום מפתח גיבוי שני.
+  \item הגדר מפתח כעדיפות, SMS כגיבוי.
+\end{enumerate}
+
+אתרים: Google, GitHub, Microsoft, Apple, Facebook, Twitter, Dropbox, GitLab, AWS, Coinbase, Binance.
+
+\begin{tcbinfo}{אסטרטגיית מפתח כפול}
+הסיכון: “איבוד”. 1) שני מפתחות; 2) אחד עליך (קליפ), אחד בכספת; 3) קודי גיבוי מודפסים. איבוד = לא נעילה.
+
+\end{tcbinfo}
+
+\begin{tcbwarn}{יש להיזהר בערוץ הרכישה}
+קנה רשמי, לא יד שנייה - עלול להיות backdoor. קושחה לא מתעדכנת, אך Yubico מפרסמת אזהרות.
+
+\end{tcbwarn}
+
+\booksection{ח. שיתוף סיסמאות למשפחה/צוות}
+
+משפחה: Netflix, Wi-Fi, מנעול. צוות: שרתים, מסד נתונים, רשתות חברתיות.\textbf{שליחת סיסמה ב-WeChat או כתיבה במסמך משותף הם פעולות בסיכון גבוה}—ברגע שצ'אט או מסמך נודע, הסיסמה נחשפת.
+
+\booksubsection{“Vault” משותף ב-1Password}
+
+1Password הוא תקן לשיתוף. מנגנון הליבה שלו הוא\textbf{מספר כספות}:
+
+\begin{itemize}
+  \item \textbf{כספת אישית}: רק אתה רואה, כגון בנק, דוא"ל וחשבונות פרטיים.
+  \item \textbf{כספת משותפת}:כולם רואים: Netflix, Wi-Fi, כרטיס.
+  \item \textbf{רמות הרשאה}:צוות: "קריאה בלבד" או "קריאה ללא עריכה".
+\end{itemize}
+
+כל אחד מתחבר בחשבונו, רואה Vault משותף. שינוי = סנכרון מיידי.
+
+\booksubsection{פונקציית “ארגון” ב-Bitwarden}
+
+Bitwarden חינם: Send (שיתוף זמני); בתשלום: ארגון, הרשאות. גם self-hosted, לארגונים עם דרישות ריבונות נתונים.
+
+\booksubsection{משפחה: Netflix, Wi-Fi}
+
+\begin{itemize}
+  \item \textbf{Netflix / אתרי וידאו}:1Password Family Vault, כל אחד מתחבר, בלי צ'אט.
+  \item \textbf{סיסמת Wi-Fi ביתית}:AirDrop Wi-Fi (iOS); Android 12+ "Nearby Share".
+  \item \textbf{מנעול חכם, מכשירי חשמל חכמים}:"משפחה" ב-App, חשבון לכל אחד, לא מנהל משותף.
+  \item \textbf{ממשק ניהול נתב ביתי}:מנהל ב-1Password, Wi-Fi אורח SSID נפרד.
+\end{itemize}
+
+\begin{tcbinfo}{יחס עלות-תועלת של 1Password משפחתי}
+1Password Families עולה כ-4.99 USD לחודש, תומך בעד 5 בני משפחה, לכל אחד כספת פרטית עצמאית + 4 כספות משותפות. בחישוב זה פחות מ-1 USD לאדם לחודש - זהו פתרון שיתוף המשפחתי עם החוויה הטובה ביותר כיום. Bitwarden Family עולה 10 USD לשנה ותומך ב-6 אנשים, עם יחס איכות-מחיר גבוה יותר, אך חוויית הממשק מעט נחותה.
+
+\end{tcbinfo}
+
+\booksubsection{תרחיש צוות: שיתוף סיסמאות שרת/מסד נתונים}
+
+\begin{itemize}
+  \item \textbf{1Password Teams / Business}:Vault לפי מחלקה/פרויקט, הרשאות, ביקורת.
+  \item \textbf{Bitwarden Teams / Enterprise}:קוד פתוח, self-hosted, SSO.
+  \item \textbf{עיקרון הפרדת תפקידים}:מנהל לא רק אחד - 2-3 "אנשי חירום", רצף עסקי.
+  \item \textbf{תהליך עזיבה}:עזיבה = בטל גישה, שנה סיסמאות רגישות.
+\end{itemize}
+
+\booksubsection{Emergency Access: אם משהו קורה}
+
+תרחיש: אתה מנהל את כל החשבונות, ונפגעת/נפטרת - המשפחה לא יכולה להיכנס.\textbf{פונקציית “גישת חירום”}מתוכנן לזה - איש קשר מהימן, כשאתה לא יכול.
+
+\textbf{הגדרת גישת חירום ב-Bitwarden:}
+
+\begin{enumerate}
+  \item Bitwarden Web Vault > הגדרות > Emergency Access.
+  \item הוסף את הדוא"ל של איש קשר מהימן והזמן אותו לקבל.
+  \item "תקופת המתנה" (7-14 ימים): מבקש עד שאתה מאשר.
+  \item אם לא מגיב, אחרי התקופה הוא מקבל גישה.
+  \item אתה יכול לדחות או לבטל.
+\end{enumerate}
+
+\textbf{גישת חירום ב-1Password:}
+
+\begin{enumerate}
+  \item 1Password: "משפחה/צוות" - שים פריטים ב-Vault משותף.
+  \item לגרסה אישית: מסור סיסמה לאדם מהימן, או במעטפה בכספת.
+  \item 1Password: "קוד שחזור", הדפס.
+\end{enumerate}
+
+\begin{tcbpractice}{הגדר עכשיו: השאר "מפתח גיבוי" למשפחה}
+\begin{enumerate}
+  \item בחר בן משפחה מהימן כ"איש קשר לחירום".
+  \item הגדר Emergency Access (Bitwarden) או Family Vault (1Password).
+  \item סיסמה + קוד על נייר, במעטפה, בכספת.
+  \item כחצי שנה, ודא איש קשר.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksection{ט. שיטות עבודה מומלצות למנהל סיסמאות}
+
+\begin{itemize}
+  \item \textbf{הפעל אימות דו-שלבי}:הפעל אימות דו-שלבי לחשבון מנהל הסיסמאות, להוספת שכבת הגנה.
+  \item \textbf{בדוק סיסמאות חלשות באופן קבוע}:לרוב מנהלי הסיסמאות יש פונקציית "ביקורת אבטחה", שעוזרת לך למצוא סיסמאות חלשות וכפולות.
+  \item \textbf{אל תשכח את סיסמת המאסטר}:סיסמת המאסטר לא ניתנת לשחזור, לשכוח פירושו לאבד את כל הסיסמאות. מומלץ לרשום על נייר ולשמור במקום בטוח.
+  \item \textbf{גישת חירום}:הגדר איש קשר לשעת חירום, למקרה שלא תוכל לגשת, אדם מהימן יוכל לקבל את הסיסמאות שלך.
+  \item \textbf{תזכורת חשובה}מנהל סיסמאות אמנם נוח, אבל יש גם סיכון:אם סיסמת המאסטר דולפת, כל הסיסמאות חשופות. לכן סיסמת המאסטר ממש לא יכולה להיות זהה לסיסמאות אחרות, וגם לא להיכתב במקום שקל למצוא. בנוסף, מומלץ לבחור ספק שירות עם רקורד אבטחה טוב.
+\end{itemize}
+
+\begin{tcbwarn}{נסה עכשיו:התחל להשתמש במנהל סיסמאות}
+בחר מנהל סיסמאות (מומלץ Bitwarden או המובנה במערכת).
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{הירשם לחשבון, הגדר סיסמת מאסטר חזקה.}
+\begin{enumerate}
+  \item ייבא סיסמאות קיימות (אם יש) או התחל להוסיף סיסמאות חדשות.
+  \item התקן תוסף דפדפן או אפליקציית טלפון, חווה את פונקציית המילוי האוטומטי.
+  \item בדוק את דוח ביקורת האבטחה, מצא סיסמאות שדורשות שיפור.
+  \item ג. חלק מתקדם(פרקים 15-20)
+  \item אחרי ששלטת ביסודות וביישומי תוכנה, בוא נצלול עמוק יותר לפונקציות המתקדמות של הטלפון. תוכן זה יעזור לך להפוך למומחה טלפונים אמיתי, ואפילו לפתוח כמה "כישורים נסתרים".
+\end{enumerate}
+
+\end{tcbpractice}

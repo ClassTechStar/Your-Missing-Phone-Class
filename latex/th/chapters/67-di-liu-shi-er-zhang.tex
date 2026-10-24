@@ -1,0 +1,195 @@
+\bookchapter{บทที่ 62: การพัฒนาอินเทอร์เฟซ — เริ่มต้นกับ SwiftUI}
+
+\chapterintro{อินเทอร์เฟซคือทุกสิ่งที่ผู้ใช้เห็น SwiftUI คือเฟรมเวิร์กอินเทอร์เฟซแบบประกาศ (declarative) ที่ Apple เปิดตัวในปี 2019 — คุณแค่'ประกาศ'ว่าอินเทอร์เฟซหน้าตาเป็นอย่างไร ระบบจะจัดการเรนเดอร์ ปรับให้เข้ากับโหมดมืด และรองรับหน้าจอทุกขนาดให้อัตโนมัติ ถึงปี 2026 SwiftUI กลายเป็นกระแสหลักของโปรเจกต์ใหม่ไปแล้ว ในบทนี้ เราจะมาเรียนรู้การ'วาดภาพ'กัน}
+
+\booksection{แนวคิดของ SwiftUI: แบบประกาศ ไม่ใช่แบบสั่ง}
+
+การพัฒนาอินเทอร์เฟซแบบเก่าเป็นแบบ'สั่งการ': บอกระบบทีละขั้นว่า'สร้างปุ่ม วางที่ (20,30) ตั้งค่าสี' SwiftUI เป็นแบบ'ประกาศ': คุณบรรยายตรง ๆ ว่า'บนอินเทอร์เฟซมีปุ่มสีแดงเขียนว่า “แตะฉัน”' ส่วนจะวาดอย่างไร เมื่อไหร่วาดใหม่ ปล่อยให้ระบบจัดการเอง
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body: บอกว่า "หน้าจอหน้าตาเป็นยังไง"
+        VStack {               // เรียงตามแนวตั้ง
+            Text("สวัสดีชาวโลก!")
+                .font(.largeTitle)      // มอดิฟายเออร์: หัวเรื่องใหญ่
+            Button("แตะฉัน") {
+                print("ถูกแตะแล้ว")
+            }
+            .buttonStyle(.borderedProminent)  // ปุ่มทึบสีน้ำเงิน
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+จุดสำคัญ: วิว = struct ที่คอนฟอร์มกับโปรโตคอล View, พร็อพเพอร์ตี้ body ใช้บรรยายอินเทอร์เฟซ, และ .modifier() ตกแต่งแบบต่อทอดกันเป็นโซ่ นี่คือพื้นฐานทั้งหมดของ SwiftUI
+
+\booksection{วิวพื้นฐาน: ข้อความ ปุ่ม ช่องกรอก รูปภาพ}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{วิว} & \textbf{ทำหน้าที่อะไร} & \textbf{ตัวอย่าง} \tabularnewline
+\hline
+Text & แสดงข้อความ & Text("สวัสดี") \tabularnewline
+Button & ปุ่ม & Button("แตะฉัน") \{ การทำงาน \} \tabularnewline
+TextField & ช่องกรอกข้อความ & TextField("ข้อความนำ", text: \$ข้อความ) \tabularnewline
+Image & แสดงรูปภาพ & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}วิวพื้นฐานทั้ง 4 ของ SwiftUI\end{center}
+
+สังเกต Image(systemName:) — Apple มีคลังไอคอน SF Symbols ในตัว (ไอคอนฟรีหลายพันตัว) แค่พิมพ์ชื่ออย่าง “star.fill” ก็แสดงดาวทึบได้เลย นี่คือของดีที่ซ่อนอยู่ของการพัฒนา iOS: ทำอินเทอร์เฟซแทบไม่ต้องหาไฟล์ไอคอนเลย
+
+\booksection{ชุดจัดวางสามพี่น้อง: VStack, HStack, ZStack}
+
+\begin{itemize}
+  \item VStack: เรียงตามแนวตั้ง (เหมือนต่อแถวรับอาหาร)
+  \item HStack: เรียงตามแนวนอน (เหมือนนั่งเคียงกัน)
+  \item ZStack: วางซ้อนกัน (เหมือนไพ่กองทับกัน เหมาะทำป้ายมุมหรือเลเยอร์บัง)
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("บิล")
+        Spacer()                 // ช่องยืดหยุ่น: ดันฝั่งขวาไปสุด
+        Text("-25.5 หยวน").foregroundColor(.red)
+    }
+    Divider()                    // เส้นแบ่ง
+    Text("โน้ต: มื้อกลางวัน")
+}
+.padding(16)                     // เว้นรอบด้าน
+.background(Color(.systemGray6)) // พื้นเทาอ่อน
+.cornerRadius(12)                // มุมโค้ง
+
+// ลำดับมอดิฟายเออร์มีผล: padding ก่อน แล้ว background พื้นหลังไม่รวมช่องว่าง
+\end{lstlisting}
+
+\begin{tcbwarn}{ข้อควรระวัง: ลำดับของ modifier มีผล}
+padding(16).background(สีเทา) กับ background(สีเทา).padding(16) ให้ผลไม่เหมือนกัน — แบบแรกคือ'เว้นระยะก่อนแล้วระบายสี' (พื้นหลังไม่รวมระยะขอบ) ส่วนแบบหลังคือ'ระบายสีก่อนแล้วเว้นระยะ' (พื้นหลังรวมระยะขอบด้วย) ปัญหา'ขอบขาวปริศนา'ที่มือใหม่เจอบ่อยที่สุดก็มาจากจุดนี้ ไม่แน่ใจเมื่อไหร่ให้สลับลำดับดู พรีวิวจะบอกคำตอบทันที
+
+\end{tcbwarn}
+
+\booksection{สเตตและการไบนด์: ทำให้อินเทอร์เฟซ'มีชีวิต'}
+
+อินเทอร์เฟซนิ่ง ๆ ไม่สนุกหรอก กฎของ SwiftUI คือ: อินเทอร์เฟซสะท้อนสเตตอย่างซื่อสัตย์เสมอ พอสเตตเปลี่ยน อินเทอร์เฟซจะวาดใหม่เองอัตโนมัติ
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State: ค่านี้เปลี่ยนเมื่อไร วาดใหม่เมื่อนั้น
+
+    var body: some View {
+        VStack {
+            Text("คุณแตะไป \(count) ครั้ง")
+            Button("แตะฉัน +1") {
+                count += 1          // แก้สเตต หน้าจอเด้งเอง
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+ช่องกรอกข้อความต้องใช้'การไบนด์สองทาง' — สัญลักษณ์ \$ ส่งทั้ง'ค่าและสิทธิ์แก้ไข'เข้าไปพร้อมกัน:
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("พิมพ์อะไรก็ได้", text: $text)  // $ ไบนดิ้งสองทาง
+            .textFieldStyle(.roundedBorder)
+        Text("คุณพิมพ์ว่า: \(text)")   // อัปเดตสด ๆ ระหว่างพิมพ์
+    }
+}
+\end{lstlisting}
+
+ผู้ใช้ดำเนินการ
+
+สเตตเปลี่ยน (count += 1)
+
+SwiftUI ตรวจจับการเปลี่ยนแปลง
+
+วาด UI ใหม่อัตโนมัติ (body คำนวณใหม่)
+
+\begin{center}\small\color{gray}ภาพที่ 3: การไหลของข้อมูลทางเดียว'สเตต อินเทอร์เฟซ'ของ SwiftUI\end{center}
+
+\booksection{พรีวิว ธีม และแอนิเมชัน: 'ไอเทมเสริมพลัง'ของ SwiftUI}
+
+\begin{itemize}
+  \item มาโคร \#Preview: เพิ่ม \#Preview \{ ContentView() \} ไว้ท้ายไฟล์ แคนวาสด้านขวาจะเรนเดอร์แบบเรียลไทม์ — แก้โค้ดปุ๊บเห็นผลปั๊บ ตาเห็นอะไรก็ได้อย่างนั้น
+  \item โหมดมืดได้ฟรี: ใช้สีของระบบ (Color(.systemGray6), .primary) แทนการกำหนดสีตายตัว โหมดมืดจะปรับให้เองอัตโนมัติ ไม่ต้องเขียนเพิ่มแม้แต่บรรทัดเดียว
+  \item แอนิเมชันจบในบรรทัดเดียว: ใช้ withAnimation \{ count += 1 \} หรือใส่ .animation(.default, value: count) ให้วิว — ทรานซิชันลื่นไหลสุด ๆ
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{เคล็ดลับ: ฟังก์ชันมาก่อน แอนิเมชันมาทีหลัง}
+โรคที่มือใหม่เป็นกันบ่อยคือ'อินเทอร์เฟซยังทำไม่ถูกเลย แต่ไปเป็นกังวลกับแอนิเมชันเสียก่อน' ให้ฟังก์ชันรันผ่านก่อน แล้วค่อยใส่ลูกเล่นทั้งหมดตอนท้าย — แอนิเมชันคือของตกแต่งให้งานที่ดีอยู่แล้วเด่นขึ้น แต่ฟังก์ชันคือสิ่งที่ช่วยชีวิตตอนยากจนที่สุด นี่ก็คือหลัก'เรียบง่ายเหนือสิ่งอื่นใด'ที่เรายึดมาตลอด
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{ลงมือทำ: สร้าง'ปุ่มอารมณ์'}
+\booksection{สรุป modifier ที่ใช้บ่อย: มีหน้าเดียวในมือ จัดอินเทอร์เฟซได้ไม่ยาก}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{อยากทำอะไร} & \textbf{Modifier} \tabularnewline
+\hline
+เว้นระยะขอบ & \texttt{.\allowbreak padding(16)} \tabularnewline
+มุมโค้ง & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+สีพื้นหลัง & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+ฟอนต์และขนาดตัวอักษร & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+สีพื้นหน้า (ข้อความ/ไอคอน) & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+กว้างเต็มจอ & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+ขนาดคงที่ & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+การจัดตำแหน่ง & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+ความโปร่งใส & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+เงา & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+เจสเชอร์การแตะ & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+ชนิดคีย์บอร์ด & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}สรุป modifier ที่ใช้บ่อยของ SwiftUI\end{center}
+
+จำไม่ได้ก็ไม่เป็นไร — หน้านี้ไว้เปิดค้นเฉย ๆ จริง ๆ ที่ใช้บ่อยที่สุดมีแค่สี่ตัวแรก: padding, มุมโค้ง, สีพื้นหลัง, ฟอนต์
+
+ลองแปลงโปรเจกต์เทมเพลตเป็นตัวสลับอารมณ์: มีปุ่มหนึ่งปุ่ม แตะแล้ววนสลับไปมาระหว่าง ดีใจ เศร้า โมโห โดยข้อความและสีพื้นหลังเปลี่ยนตาม คำใบ้: ใช้อาร์เรย์เก็บสามชุด (ข้อความ+สี), ใช้ @State เก็บค่าอินเด็กซ์ และเวลาแตะใช้ (index + 1) \% 3 ทำเสร็จส่งให้เพื่อนเล่นดู รับคำว้าวแรกว่า “โห ทำแอปเป็นแล้วเหรอ”
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{สรุปบทนี้}
+\begin{itemize}
+  \item SwiftUI เป็นแบบประกาศ: คุณบรรยายว่า'หน้าตาเป็นอย่างไร' ระบบจัดการวาดและวาดใหม่ให้
+  \item วิว = struct ที่คอนฟอร์มกับโปรโตคอล View; body ใช้บรรยายอินเทอร์เฟซ; modifier ตกแต่งแบบต่อกันเป็นโซ่
+  \item วิวพื้นฐานสี่ตัว: Text / Button / TextField / Image; คลังไอคอน SF Symbols ฟรีเพียบ ใช้ไม่อั้น
+  \item ชุดจัดวางสามพี่น้อง: VStack แนวตั้ง, HStack แนวนอน, ZStack ซ้อนกัน; Spacer คือพื้นที่ยืดหยุ่น
+  \item @State ทำให้อินเทอร์เฟซมีชีวิต; \$ ไบนด์สองทางป้อนให้ช่องกรอก
+  \item \#Preview เห็นอะไรได้อย่างนั้น; สีของระบบปรับเข้ากับโหมดมืดอัตโนมัติ; withAnimation ใส่ลูกเล่นได้ในบรรทัดเดียว
+\end{itemize}
+
+\end{tcbsummary}

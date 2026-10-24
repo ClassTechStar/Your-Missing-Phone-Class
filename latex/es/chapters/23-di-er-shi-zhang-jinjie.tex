@@ -1,0 +1,222 @@
+\booksection{Capítulo 20: Modo desarrollador y permisos avanzados}
+
+\chapterintro{Inestabilidad del sistema}
+
+\booksubsection{I. Modo desarrollador: desbloquear ajustes ocultos}
+
+Apps bancarias inútilizables
+
+\subsubsection*{: muchas Apps bancarias y de pago detectan Root y se niegan a ejecutarse.}
+
+\begin{itemize}
+  \item \textbf{Android}: es posible que no puedas recibir normalmente las actualizaciones oficiales del sistema.
+  \item \textbf{HarmonyOS}Las operaciones de Root conllevan ciertos riesgos y podrían dejar el móvil "brickeado" (no arranca). Si eres principiante, te recomiendo informarte bien primero y asegúrate de tener una copia de seguridad completa. Antes de operar, lee cuidadosamente el tutoríal y confirma tu modelo y versión del sistema.
+  \item \textbf{iOS}Modo desarrollador
+\end{itemize}
+
+\subsubsection*{Lista de funciones habituales:}
+
+\begin{itemize}
+  \item \textbf{Bloqueo BL}: Interruptor necesario para conectar el telefono al ordenador y hacer operaciones avanzadas (flashear, recuperar datos, comandos ADB); ver la seccion "Comandos ADB utiles" de este capitulo.
+  \item \textbf{Dato: Magisk}: Muestra el punto de toque en la pantalla (un pequeno circulo sigue el dedo); util para grabar tutoriales o demostraciones.
+\end{itemize}
+
+\subsubsection*{Rendimiento y fluidez:}
+
+\begin{itemize}
+  \item \textbf{Ajuste de velocidad de animacion (escala de animacion de ventana / transicion / duracion de animacion)}: Estas tres opciones controlan la duracion de las animaciones al abrir apps o cambiar de pagina. Por defecto 1x; en 0.5x el telefono "parece" mas rapido (la app no va mas rapida, solo la animacion). Si se desactivan, los cambios son instantaneos. Los geeks suelen poner 0.5x para mantener la transicion pero dar sensacion de rapidez; desactivarlas hace la interaccion brusca y puede enmascarar bloqueos reales.
+  \item \textbf{Forzar renderizado GPU (Force GPU Rendering)}: Fuerza que todo el dibujo 2D lo haga la GPU en vez de la CPU. En moviles antiguos o apps mal optimizadas mejora el desplazamiento, pero aumenta la carga de la GPU y el consumo. Los moviles modernos ya usan la GPU por defecto; esta opcion tiene poco impacto en gamas medias y altas y queda como vestigio; el usuario normal debe dejarla por defecto.
+  \item \textbf{Analisis de presentacion GPU (Profile GPU Rendering)}: Muestra en pantalla un grafico de barras con el tiempo de renderizado de cada fotograma; la linea verde marca 16,6 ms (el umbral de 60 fps). Si la barra supera la linea, hay caida de fotogramas. Es la herramienta de los desarrolladores para diagnosticar bloqueos; el usuario tambien puede comparar que app esta peor optimizada.
+\end{itemize}
+
+\subsubsection*{Segundo plano y autonomia:}
+
+\begin{itemize}
+  \item \textbf{Practica: activa el modo desarrollador y ajusta velocidad de animación}: Permite establecer "limite estandar", "maximo 1 proceso" o "maximo 2 procesos". Parece que limitar procesos ahorra bateria, pero Android ya gestiona bien el segundo plano; forzar el limite provoca recargas frecuentes (el arranque en frio consume mas y la experiencia empeora). Es mas propio de depuracion; el usuario normal debe dejar "limite estandar".
+  \item \textbf{No conservar actividades}: Destruye la actividad al salir de cada pantalla. Muy poco recomendable; provoca pantallas en blanco y recargas frecuentes; solo sirve para probar la logica de recuperacion de una app.
+\end{itemize}
+
+\begin{tcbwarn}{Precauciones}
+Siente si el móvil se volvio más rápido.
+
+\end{tcbwarn}
+
+\booksubsection{Desbloqueo OEM: el “interruptor de flasheo” en opciones de desarrollador}
+
+En las opciones de desarrollador hay un interruptor discreto pero importante: “Desbloqueo OEM” (algunas marcas lo llaman “Permitir desbloqueo OEM” o “Desbloqueo de dispositivo”). No desbloquea el BL por si mismo, sino que concede el “permiso previo”: solo al activarlo el fabricante permite desbloquear el BL mediante fastboot o su herramienta.
+
+\begin{itemize}
+  \item \textbf{Funcion del interruptor}: Equivale a declarar al fabricante que "acepto perder la garantia y asumo el riesgo; permitidme desbloquear el BL". Si esta apagado, cualquier comando de desbloqueo se rechaza.
+  \item \textbf{Relacion con el bloqueo BL}: El desbloqueo OEM es la "solicitud de cualificacion"; el desbloqueo BL es la "operacion real". El primero se activa en los ajustes del telefono; el segundo requiere pedir el codigo de desbloqueo en la web del fabricante y ejecutar fastboot desde el ordenador (por ejemplo\texttt{fastboot flashing unlock}); ambos son imprescindibles.
+  \item \textbf{Se reinicia al restaurar de fabrica?}: Si. El interruptor "Desbloqueo OEM" vuelve a estar apagado tras la restauracion, pero el BL, una vez desbloqueado, es un estado fisico que no se vuelve a bloquear por restaurar; hay que ejecutar manualmente\texttt{fastboot flashing lock}para volver a bloquearlo.
+  \item \textbf{Cuando activarlo}: Salvo que vayas a flashear o a hacer Root, mantenlo apagado. Es independiente de "Depuracion USB"; al flashear suelen hacer falta ambos activados.
+\end{itemize}
+
+\begin{tcbinfo}{Curiosidad: por que el fabricante anade este interruptor}
+Antes no existia este interruptor y el malware con permisos podia flashear el sistema a escondidas. Google obligo despues a todos los fabricantes a incluir “Desbloqueo OEM” en las opciones de desarrollador como confirmacion del “consentimiento del usuario”. Por eso, aunque el BL este desbloqueado, si el OEM esta apagado, el flasheo falla.
+
+\end{tcbinfo}
+
+\booksubsection{Bloqueo BL (Bootloader): la primera puerta del flasheo}
+
+Si crees que el modo desarrollador no es suficientemente “hardcore” y quieres experimentar con una linea de comandos Linux completa en tu móvil, Termux es para ti. No necesita permisos Root y puede convertir un Android común en una estacion de trabajo Linux portátil; es una herramienta poderosa para usuarios intermedios que exploran desarrollo y operaciones móviles.
+
+\subsubsection*{I. Que es Termux}
+
+\begin{itemize}
+  \item \textbf{Termux es un emulador de terminal y entorno Linux de código abierto disenado para Android. No necesita permisos Root para ofrecer una experiencia completa de shell Linux en el móvil. Como App ligera (unos 30 MB), Termux soporta un rico ecosistema de software via gestor de paquetes APT, permitiendo ejecutar Python, Node.js, Git, SSH e incluso montar servidores o hacer pruebas de penetracion.}La ventaja principal de Termux es su ligereza y alta escalabilidad, adecuada para desarrollo, aprendizaje y administración de sistemas. Combina paquetes estándar con emulación de terminal precisa en una solución de código abierto.
+  \item \textbf{II. Funciones principales y carácterísticas}Entorno Linux completo
+  \item \textbf{Termux incluye Bash, Zsh, fish y otros entornos Shell; soporta Vim, Nano, Emacs y más editores; ofrece una experiencia de línea de comandos cercana a la nativa. Los usuarios pueden instalar 2000+ paquetes con "pkg install", incluyendo GCC, OpenSSH, SQLMap y otras herramientas de desarrollo y seguridad.}Gestor de paquetes potente
+\end{itemize}
+
+\subsubsection*{Usa el gestor de paquetes APT (similar a Debian/Ubuntu) para instalar miles de paquetes Linux: herramientas de desarrollo, red, etc. Soporta Python, Ruby, Node.js, Go, Rust, Swift y más.}
+
+\begin{itemize}
+  \item \textbf{Xiaomi}Conexión SSH remota
+  \item \textbf{Huawei}Herramientas de cifrado
+  \item \textbf{: proporciona herramientas como OpenSSL; soporta cifrado de datos y comunicaciones seguras.}Configuración de servidores
+  \item \textbf{: puedes configurar Nginx o Apache para montar servidores web estáticos.}Integración del sistema y extensiones
+  \item \textbf{Samsung}Llamar a sensores, cámara y otras funciones hardware de Android mediante el plugin Termux:API.
+  \item \textbf{Apple}III. Ecosistema de plugins
+\end{itemize}
+
+\booksubsection{Comandos ADB utiles: controlar el telefono desde el ordenador}
+
+ADB (Android Debug Bridge) es una herramienta de linea de comandos oficial de Google que permite al ordenador comunicarse con el telefono por USB o Wi-Fi. No requiere Root; basta con activar “Depuracion USB”. Es como un mando a distancia para dar ordenes al telefono: flashear, instalar apps, pasar archivos o ver registros.
+
+\subsubsection*{Como conectar por USB:}
+
+\begin{enumerate}
+  \item En el telefono: entra en opciones de desarrollador y activa "Depuracion USB".
+  \item En el ordenador: descarga Platform Tools de Google (incluye\texttt{adb}Incluir contexto en vez de aislarlo\texttt{fastboot}dos ejecutables) y descomprime en cualquier carpeta.
+  \item Conecta el telefono por cable; aparecera "Permitir depuracion USB", marca "Permitir siempre" y acepta.
+  \item En la linea de comandos del ordenador (PowerShell o cmd en Windows) ejecuta\texttt{adb devices}; si la respuesta es algo como\texttt{List of devices attached /\allowbreak  xxxxxxxx device}esta conectado.
+\end{enumerate}
+
+\begin{tcbwarn}{No ignores los drivers ni el cuadro de autorizacion}
+Si los usuarios de Windows ven\texttt{adb devices}muestra “unauthorized” o no lista el dispositivo, suele ser por falta de driver o por no haber pulsado “Permitir” en el telefono. Samsung/Xiaomi y otras marcas tienen sus “drivers USB” o “asistentes” para completarlos; en Mac y Linux no suele hacer falta. Si descartas el cuadro por error, vuelve a conectar el cable y volvera a aparecer.
+
+\end{tcbwarn}
+
+\subsubsection*{Comandos ADB habituales:}
+
+\begin{itemize}
+  \item \texttt{adb install app.\allowbreak apk}: Instala un APK del ordenador en el telefono (\texttt{-\allowbreak r}reinstala conservando datos;\texttt{-\allowbreak s}instala en la tarjeta SD).
+  \item \texttt{adb uninstall com.\allowbreak xxx.\allowbreak xxx}: Desinstala una app por nombre de paquete.
+  \item \texttt{adb push ruta\_del\_ordenador /\allowbreak sdcard/\allowbreak ruta\_destino}: Envia un archivo del ordenador al telefono.
+  \item \texttt{adb pull /\allowbreak sdcard/\allowbreak archivo ruta\_del\_ordenador}: Trae un archivo del telefono al ordenador (mas rapido que enviartelo por WeChat y descargarlo).
+  \item \texttt{adb shell}: Entra en la shell de Linux del telefono; puedes ejecutar directamente\texttt{ls},\texttt{pm},\texttt{am}y otros comandos.
+  \item \texttt{adb reboot bootloader}: Reinicia el telefono en modo Fastboot (entrada para flashear).
+  \item \texttt{adb reboot recovery}: Reinicia en modo Recovery.
+  \item \texttt{adb shell pm list packages}: Lista los nombres de paquete de todas las apps instaladas (imprescindible para encontrarlos). Anadiendo\texttt{-\allowbreak s}solo apps del sistema; anadiendo\texttt{-\allowbreak 3}solo apps de terceros.
+  \item \texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 nombre\_paquete}: Desinstala una app preinstalada para el usuario actual sin Root; ver la practica mas abajo.
+\end{itemize}
+
+\subsubsection*{Practica: desinstalar apps preinstaladas sin Root:}
+
+Es una de las funciones mas utiles de ADB: con\texttt{pm uninstall -\allowbreak -\allowbreak user 0}puedes desinstalar apps preinstaladas para el “usuario actual” sin Root ni alterar la particion del sistema. La app “desaparece” del sistema pero sigue en la particion; al restaurar de fabrica vuelve.
+
+\begin{enumerate}
+  \item Primero usa\texttt{adb shell pm list packages -\allowbreak s}para listar las apps del sistema y encontrar el nombre del paquete. Por ejemplo, el navegador de Xiaomi es\texttt{com.\allowbreak android.\allowbreak browser}, la tienda de Huawei es\texttt{com.\allowbreak vmall.\allowbreak client}.
+  \item No sabes que paquete es cada app? En el ordenador usa\texttt{adb shell pm list packages | findstr palabra\_clave}para buscar, o instala una app de terceros como "Package Viewer" para ver el paquete de cada app en el telefono.
+  \item Ejecuta la desinstalacion:\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 nombre\_paquete}, por ejemplo\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 com.\allowbreak android.\allowbreak browser}. Si devuelve\texttt{Success}ha tenido exito.
+  \item Como restaurar? Dos metodos: 1) restaurar de fabrica (mas completo pero engorroso); 2) reinstalar con\texttt{adb shell cmd package install-\allowbreak existing nombre\_paquete}.
+\end{enumerate}
+
+\textbf{Nunca borres paquetes basicos del sistema}\par
+
+“pm uninstall --user 0” es un metodo seguro sin Root, pero borrar apps criticas del sistema (como\texttt{com.\allowbreak android.\allowbreak systemui}la barra de estado,\texttt{com.\allowbreak android.\allowbreak phone}el telefono,\texttt{com.\allowbreak android.\allowbreak settings}los ajustes) puede provocar cuelgues, pantalla negra o imposibilidad de encender. Antes de borrar, busca en Google “se puede borrar este paquete”. Borra pocos cada vez y comprueba que todo va bien.
+
+\begin{tcbinfo}{Curiosidad: que significa --user 0}
+Desde Android 4.2 se soportan varios usuarios; cada uno tiene un ID (el propietario es 0 y los invitados empiezan en 10).\texttt{-\allowbreak -\allowbreak user 0}significa “desinstalar solo para el propietario”; el APK sigue en la particion del sistema pero no se muestra. Por eso no necesita Root: no toca los archivos del sistema, solo cambia la configuracion del usuario. Se diferencia del Root en que este borra de verdad para todos los usuarios; ADB solo “oculta al usuario actual”.
+
+\end{tcbinfo}
+
+\booksubsection{Permisos Root: el “superadministrador” de Android}
+
+El permiso Root equivale al superusuario de Linux (control total sobre / y lectura/escritura de cualquier archivo); es el nivel mas alto de Android. Se diferencia del Administrador de Windows, que por motivos de seguridad tiene muchas restricciones (el verdadero maximo es TrustedInstaller); ni siquiera el Administrador puede ejecutar directamente como root de Linux\texttt{sudo rm -\allowbreak rf /\allowbreak *}. Al obtener Root puedes modificar archivos del sistema, desinstalar apps preinstaladas y usar apps avanzadas que lo requieren.
+
+\subsubsection*{Descripcion de función}
+
+\begin{itemize}
+  \item Termux:API
+  \item Expone funciones de API de Android a programas de linea de comandos
+  \item Termux: Boot
+  \item Permite ejecutar scripts al iniciar el dispositivo
+\end{itemize}
+
+\subsubsection*{Termux: Float}
+
+\begin{itemize}
+  \item \textbf{Móviles plegables}Termux: Styling
+  \item \textbf{Habilita esquemas de color y personalizacion de fuentes para la terminal}Termux: Tasker
+  \item \textbf{Integra scripts de Termux con la App de automatización Tasker}Termux: Widget
+  \item \textbf{Permite ejecutar scripts desde widgets de la pantalla principal}Nota importante
+  \item \textbf{Termux y sus plugins deben instalarse desde la misma fuente porque comparten el mismo sharedUserId. Mezclar fuentes (F-Droid y GitHub) causará errores de instalación.}IV. Guia de instalación y configuración
+\end{itemize}
+
+\textbf{Pasos de instalación}\par
+
+Descargar App
+
+\booksubsection{SafetyNet y Play Integrity: por que las apps de banco no funcionan tras hacer Root}
+
+Muchos usuarios Root han vivido este momento: tras instalar modulos, abren la app del banco y ven “Su dispositivo no es seguro, no se puede usar”; Google Pay tampoco funciona y Netflix se niega a reproducir en HD. Detras estan los dos mecanismos de integridad de Google: el antiguo SafetyNet y el nuevo Play Integrity API.
+
+\subsubsection*{Que son SafetyNet y Play Integrity:}
+
+\begin{itemize}
+  \item \textbf{SafetyNet Attestation (antiguo, desde 2017)}: API de comprobacion de integridad lanzado por Google; la app consulta al servidor "este dispositivo ha pasado el CTS y esta sin modificar". Devuelve Basic Attestation (basica) y Strong Attestation (fuerte, con clave de hardware). Google anunciara su desuso progresivo a partir de 2024.
+  \item \textbf{Play Integrity API (nuevo, desde 2022)}: La alternativa de Google, mas estricta y completa. Ademas de la integridad del dispositivo, incluye la integridad de la app (si ha sido manipulada) y la de la cuenta o autorizacion (si Google confia en el usuario). Las apps nuevas deberian migrar a Play Integrity.
+  \item \textbf{Quienes lo usan}: Apps de banca, finanzas y pagos (Google Pay, banca online, Alipay/WeChat Pay en ciertos casos), streaming (Netflix para proteger HD), algunos juegos anti-trampas (Tencent, NetEase) y apps empresariales (MDM de cumplimiento de dispositivos).
+\end{itemize}
+
+\subsubsection*{Tres niveles de Play Integrity:}
+
+\begin{itemize}
+  \item \textbf{MEETS\_DEVICE\_INTEGRITY (integridad del dispositivo)}: El dispositivo tiene Android oficial, Bootloader bloqueado, sin Root y supera el CTS. Permite usar apps de banco y pago.
+  \item \textbf{MEETS\_BASIC\_INTEGRITY (integridad basica)}: El dispositivo es basicamente fiable, pero puede tener anomalias leves. Algunas apps bajan su nivel (Netflix puede reproducir pero limita la resolucion) y las mas estrictas rechazan el acceso.
+  \item \textbf{MEETS\_STRONG\_INTEGRITY (integridad fuerte)}: El nivel mas alto; requiere respaldo de clave de hardware (como Titan M en Google Pixel); la mayoria de marcas no lo alcanza ni sin Root.
+  \item \textbf{Sin etiqueta (NO\_INTEGRITY)}: El dispositivo esta rooteado, BL desbloqueado, con ROM de terceros o detectado como emulador; casi todas las apps de banco y pago se niegan a funcionar.
+\end{itemize}
+
+\subsubsection*{Por que estas apps fallan tras el Root:}
+
+La app pide a Play Integrity la certificacion al servidor de Google, que revisa varios indicadores (Bootloader bloqueado, particion del sistema modificada, binario su, SELinux en modo permisivo...). Cualquier anomalia reduce el nivel o lo deja vacio; la app del banco ve “dispositivo no seguro” y rechaza el servicio.
+
+\subsubsection*{Soluciones de ocultacion modernas: Magisk Hide / Shamiko / Zygisk:}
+
+Para poder usar apps bancarias sin perder las ventajas del Root, la comunidad ha desarrollado una serie de métodos para “ocultar el estado de Root”. La idea central es hacer que el programa de detección vea un dispositivo “con apariencia normal” en lugar de un sistema modificado.
+
+\begin{itemize}
+  \item \textbf{Respaldo manual}: El método de Root sin sistema más popular actualmente; no modifica la partición del sistema, sino que implementa el Root mediante montaje. La ventaja es menor probabilidad de fallo en actualizaciones OTA y una desinstalación más limpia, siendo la base de todos los métodos de ocultación posteriores. Sin embargo, usar Magisk sigue requiriendo desbloquear el bootloader.
+  \item \textbf{Magisk Hide (descontinuado)}: Un módulo de ocultación integrado en Magisk que podía ocultar el Root a apps específicas. Sin embargo, fue eliminado oficialmente en 2021 debido a que Google mejoró continuamente sus métodos de detección, creando un "juego del gato y el ratón".
+  \item \textbf{Zygisk}: Un nuevo mecanismo introducido en Magisk 24.0+, similar a Riru, que carga los módulos inyectándose en el proceso Zygote, siendo más discreto que la modificación directa del sistema. Activar Zygisk es un requisito previo para usar los métodos modernos de ocultación.
+  \item \textbf{Shamiko}: El módulo de ocultación más popular actualmente, que funciona junto con Zygisk para ocultar el Root, ocultar el propio Magisk y falsificar el estado del bootloader a apps específicas (modo "lista blanca inversa"). Shamiko se distribuye a través del repositorio LSPosed o GitHub.
+  \item \textbf{Play Integrity Fix(osm0sis)}: Un módulo de Magisk diseñado específicamente contra la detección de Google Play Integrity, que modifica la huella digital del dispositivo para que Google crea que tu dispositivo es un modelo oficial sin Root.
+\end{itemize}
+
+\begin{tcbwarn}{El juego del gato y el ratón nunca terminará}
+Google actualiza periódicamente las reglas de detección y los desarrolladores de apps también mejoran la verificación de Play Integrity. Los métodos de ocultación que funcionan hoy pueden ser detectados mañana. Si dependes completamente de apps bancarias o de pago (como transferencias diarias, pagos con código QR), la opción más segura sigue siendo: no hacer Root, no desbloquear el bootloader. Los métodos de ocultación son más adecuados para una configuración de “teléfono principal sin Root + teléfono de respaldo con Root”.
+
+\end{tcbwarn}
+
+\booksubsection{VII. Recomendaciones para usuarios comunes}
+
+\begin{itemize}
+  \item \textbf{Inicializar sistema}: Puedes activarlos para probar aceleración de animaciones, análisis de renderizado GPU, etc., pero no cambies otras opciones que no entiendas.
+  \item \textbf{Desbloqueo OEM y bloqueo del bootloader}: Si no planeas flashear ROMs ni hacer Root, mantén ambos interruptores en su estado predeterminado (apagado) por seguridad.
+  \item \textbf{ADB}: Herramientas potentes sin Root que incluso los usuarios comunes pueden usar, como usar\texttt{pm uninstall -\allowbreak -\allowbreak user 0}para desinstalar apps preinstaladas. Pero asegúrate de verificar si el nombre del paquete se puede eliminar antes de borrarlo.
+  \item \textbf{Gracias por leer hasta el final este "curso de móviles"! Durante la escritura consultamos amplios manuales oficiales de fabricantes, guías de usuario y artículos de divulgacion técnica publicos para garantizar la exactitud de la información.}: No se recomienda hacer Root para usuarios comunes; los riesgos superan a los beneficios. Si necesitas ciertas funciones, primero investiga si hay alternativas que no requieran Root (como desinstalar apps preinstaladas con ADB o usar Shizuku para reemplazar algunas funciones de Root).
+\end{itemize}
+
+\begin{tcbpractice}{pkg update \&\& pkg upgrade}
+\begin{enumerate}
+  \item para actualizar la lista de paquetes.
+  \item Optimizacion básica
+  \item Cambiar repositorio espejo
+  \item :usa el comando
+  \item termux-change-repo
+\end{enumerate}
+
+\end{tcbpractice}

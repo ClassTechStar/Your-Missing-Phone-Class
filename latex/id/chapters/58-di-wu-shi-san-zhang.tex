@@ -1,0 +1,178 @@
+\bookchapter{Bab 53: Penyimpanan Data dan Permintaan Jaringan}
+
+\chapterintro{Aplikasi yang hanya bisa 'dilihat' adalah aplikasi mati; aplikasi yang bisa menyimpan data dan tersambung ke internet barulah hidup. Bab ini memperkenalkan 'trio' lapisan data Android: DataStore (menyimpan konfigurasi kecil), Room (menyimpan data terstruktur), Retrofit (berbicara dengan server), plus 'pengatur jalannya semuanya'—coroutine. Selesai bab ini, kamu bisa menulis aplikasi sungguhan yang mengingat kebiasaan pengguna dan memperbarui konten secara real-time.}
+
+\booksection{Memilih Skema Penyimpanan: Lihat Tabel Ini Dulu}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Skema} & \textbf{Cocok Menyimpan Apa} & \textbf{Ciri} & \textbf{Dipakai di Mana di Buku Ini} \tabularnewline
+\hline
+DataStore & Konfigurasi kecil-kecil (tema, saklar) & Pasangan kunci-nilai, sederhana dan aman & Pengaturan aplikasi catatan keuangan Bab 54 \tabularnewline
+Room & Data terstruktur (catatan keuangan, pengguna) & Pembungkus database SQLite sungguhan, bisa dikueri & Catatan keuangan Bab 54 \tabularnewline
+Retrofit & Data server (tidak disimpan, diambil lewat jaringan) & Standar de facto pustaka permintaan HTTP & Data cuaca Bab 55 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Pembagian tugas trio data\end{center}
+
+Hafalkan pegangan ini: 'konfigurasi kecil masuk DataStore, data dalam jumlah besar masuk Room, data dari luar lewat Retrofit'. SharedPreferences yang sering muncul di tutorial lama sudah digantikan DataStore, dan penulisan SQL manual juga sudah digantikan Room—belajar langsung yang baru, jangan lewat jalan lama.
+
+\booksection{DataStore: Menyimpan Konfigurasi Kecil}
+
+Ingin mengingat nilai-nilai kecil seperti 'mata uang yang terakhir dipilih pengguna' atau 'apakah mode gelap diaktifkan'? Pakai DataStore (versi Preferences):
+
+\begin{lstlisting}[language=Kotlin]
+val Context.dataStore by preferencesDataStore(name = "settings")
+
+// Tulis: simpan sebuah nilai
+suspend fun saveTheme(isDark: Boolean) {
+    context.dataStore.edit { prefs ->
+        prefs[THEME_KEY] = isDark
+    }
+}
+
+// Baca: ambil nilainya (Flow otomatis memberi tahu perubahan)
+val themeFlow: Flow<Boolean> = context.dataStore.data
+    .map { it[THEME_KEY] ?: false }
+\end{lstlisting}
+
+Perhatikan yang dikembalikan adalah Flow—aliran data yang 'mengalir'. Begitu nilai berubah, semua tempat yang mengamatinya otomatis menerima nilai baru. Konsep ini (reaktif) adalah batu fondasi Android modern, akan dipraktikkan di Bab 54.
+
+\booksection{Room: Memberi Data 'Rumah Sungguhan'}
+
+Aplikasi catatan keuangan punya ratusan hingga ribuan catatan, dan perlu kueri statistik per kategori, per bulan—ini butuh database. Room adalah pembungkus resmi SQLite, membuat 'membuat tabel, mengambil data' menjadi senatural menulis Kotlin. Ada tiga hal:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Entity: struktur tabel (satu tabel = satu data class)
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val amount: Double,
+    val category: String,
+    val note: String,
+    val date: String
+)
+
+// 2. Dao: antarmuka operasi data (tambah, hapus, ubah, cari)
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+    suspend fun sumByCategory(c: String): Double
+}
+
+// 3. Database: perakitan akhir
+@Database(entities = [Record::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun recordDao(): RecordDao
+}
+\end{lstlisting}
+
+Templat 'trio' ini bisa dibawa apa adanya ke proyek mana pun—cukup ganti nama kolomnya. Kueri mengembalikan Flow, antarmuka otomatis menyegarkan mengikuti data. Nikmat sekali.
+
+\booksection{Retrofit: Berbicara dengan Server}
+
+Cuaca, berita, nilai tukar... data-data itu tidak ada di ponsel, melainkan di server orang lain. Retrofit membuat 'meminta data ke server' semudah memanggil fungsi. Tiga langkah:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Definisikan antarmuka: deskripsikan permintaan HTTP sebagai fungsi
+interface WeatherApi {
+    @GET("v1/weather")
+    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+}
+
+// 2. Buat instance
+val api = Retrofit.Builder()
+    .baseUrl("https://api.example.com/")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build()
+    .create(WeatherApi::class.java)
+
+// 3. Panggil seperti memanggil fungsi (di dalam coroutine)
+val result = api.getWeather("Beijing")
+\end{lstlisting}
+
+\textbf{Awas Jebakan: Dua Hukum Besi Jaringan}\par
+
+(1) Permintaan jaringan sama sekali tidak boleh dilakukan di thread utama—bisa membekukan antarmuka bahkan crash (NetworkOnMainThreadException). Semua panggilan jaringan wajib ditaruh dalam coroutine (viewModelScope.launch). (2) HTTP teks terbuka dimatikan secara bawaan: sejak Android 9 wajib HTTPS. Saat pengujian kalau perlu alamat lokal http://, harus menyatakan usesCleartextTraffic secara eksplisit di Manifest—tetapi produk resmi wajib sepenuhnya HTTPS.
+
+\booksection{Parsing JSON: 'Menerjemahkan' Data Jaringan}
+
+Data yang dikembalikan server umumnya berupa JSON—rangkaian teks seperti 'kamus bersarang'. Retrofit butuh seorang 'penerjemah' untuk mengubahnya menjadi objek Kotlin. Dua skema arus utama di 2026:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Skema} & \textbf{Ciri} & \textbf{Skenario yang Disarankan} \tabularnewline
+\hline
+Gson / Moshi & Skema refleksi veteran, tanpa biaya konfigurasi & Proyek kecil yang ingin cepat jalan dengan kolom tidak banyak \tabularnewline
+kotlinx.serialization & Skema resmi saat kompilasi, lebih cepat dan lebih aman & Pilihan pertama proyek baru (arus utama 2026) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Dua skema parsing JSON\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// Tambahkan anotasi @Serializable ke data class
+@Serializable
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+
+// Retrofit memasang Converter terkait (contoh dengan dukungan resmi Retrofit 2.11+):
+// .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+\end{lstlisting}
+
+Apa pun skemanya, hukum besinya: lihat dulu JSON asli yang dikembalikan, baru definisikan kolomnya. Banyak bug 'parsing gagal' ternyata hanya karena nama kolom salah tulis atau level bersarang salah duga—cetak JSON mentahnya dan cocokkan, sepuluh detik langsung ketemu.
+
+\booksection{Coroutine: 'Bahasa Umum' Konkurensi Android}
+
+\booksection{Coroutine: 'Bahasa Umum' Konkurensi Android}
+
+suspend dan launch yang muncul berulang-ulang di atas berasal dari coroutine Kotlin (Coroutine)—skema konkurensi resmi Android. Bisa dipahami kasarnya: membuat operasi yang 'perlu menunggu sebentar' (jaringan, database) tidak memblokir antarmuka.
+
+\begin{lstlisting}[language=Kotlin]
+// Menjalankan coroutine di ViewModel
+viewModelScope.launch {
+    val records = dao.getAll().first()  // suspend: otomatis menunggu tanpa menghambat
+    // Perbarui state tampilan……
+}
+
+// Cara cepat ingat kata kunci:
+// suspend   —— "aku perlu menunggu, jangan halangi yang lain"
+// launch    —— "Mulai kerja!"
+// viewModelScope —— "ruang kerja" yang mengikuti halaman, otomatis berhenti saat halaman dimusnahkan
+\end{lstlisting}
+
+Kalau kamu pemula total, cukup ingat dulu cara pakainya; prinsip 'penangguhan dan pemulihan' di baliknya boleh digali belakangan. 90\% dari yang kamu tulis dalam pengembangan harian adalah templat ini.
+
+\begin{tcbpractice}{Praktik: Membuat Aplikasi Kecil 'Kalimat Hari Ini'}
+Cari API kutipan gratis (semacam hitokoto), pakai Retrofit untuk menarik 'kalimat hari ini', tampilkan di tengah layar, tambahkan tombol 'Ganti Kalimat' (minta ulang lewat coroutine). Lalu simpan kalimat yang disukai ke dalam 'koleksi' memakai Room. Latihan ini memakai DataStore/Room/Retrofit/coroutine semuanya—selesai mengerjakannya, Bab 7 dan 8 akan mudah seperti membalik telapak tangan.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Pegangan: konfigurasi kecil masuk DataStore, data dalam jumlah besar masuk Room, data dari luar lewat Retrofit
+  \item DataStore mengembalikan Flow: nilai berubah, pengamat otomatis menerima
+  \item Trio Room: @Entity (tabel) + @Dao (operasi) + @Database (perakitan akhir), templat bisa dipakai ulang langsung
+  \item Tiga langkah Retrofit: definisikan antarmuka buat instance panggil dalam coroutine
+  \item Dua hukum besi: jaringan tidak masuk thread utama; produk resmi wajib HTTPS
+  \item Coroutine = menunggu tanpa memblokir antarmuka; viewModelScope adalah ruang kerja khusus halaman
+\end{itemize}
+
+\end{tcbsummary}

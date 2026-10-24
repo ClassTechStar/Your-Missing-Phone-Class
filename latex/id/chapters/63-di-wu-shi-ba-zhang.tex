@@ -1,0 +1,117 @@
+\bookchapter{Bab 58: Panduan Cepat dan Sumber Belajar}
+
+\chapterintro{Bab ini adalah panduan cepat yang bisa dipakai berdiri sendiri. Saat kamu lupa suatu cara penulisan atau perlu keputusan cepat, langsung buka bagian ini. Jadikan sebagai “kartu saku”: kartu cepat kode yang sering dipakai, pertanyaan umum, sumber belajar — tak ada yang terlewat.}
+
+\booksection{Kartu cepat kode yang sering dipakai}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Ingin melakukan apa} & \textbf{Kode kuncinya} \tabularnewline
+\hline
+Menyimpan satu state yang bisa berubah & var x by remember \{ mutableStateOf(nilaiAwal) \} \tabularnewline
+State tidak hilang saat layar diputar & rememberSaveable \{ mutableStateOf(nilaiAwal) \} \tabularnewline
+Tata letak vertikal / horizontal & \texttt{Column \{ \}}/\texttt{Row \{ \}} \tabularnewline
+Daftar lazy loading & LazyColumn \{ items(daftar) \{ ... \} \} \tabularnewline
+Berpindah halaman & navController.navigate("rute") \tabularnewline
+Kerja yang perlu menunggu di dalam coroutine & \texttt{viewModelScope.\allowbreak launch \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Mengamati aliran data & \texttt{val list by flow.\allowbreak collectAsState()} \tabularnewline
+Menyimpan konfigurasi kecil & context.dataStore.edit \{ it[KEY] = nilai \} \tabularnewline
+Menyimpan data terstruktur & Trio Room: @Entity / @Dao / @Database \tabularnewline
+Mengambil data lewat internet & Antarmuka Retrofit + fungsi suspend \tabularnewline
+Mengirim notifikasi & NotificationChannel + NotificationCompat.Builder \tabularnewline
+Menulis log & \texttt{Log.\allowbreak d("TAG", "message")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kartu cepat pengembangan Android (edisi Agustus 2026)\end{center}
+
+\booksection{Pertanyaan umum (FAQ)}
+
+Q1: Saya sama sekali tidak bisa coding, berapa lama belajar pengembangan Android?
+
+Ikuti jalur buku ini: minggu 1-2 menyiapkan lingkungan dan dasar Kotlin; minggu 3-4 belajar Compose hingga bisa membuat antarmuka; minggu 5-6 menuntaskan proyek aplikasi catatan keuangan; minggu 7-8 menuntaskan proyek cuaca. Dua bulan, dari nol hingga mampu membuat App kecil secara mandiri. Syaratnya: meluangkan 1-2 jam setiap hari dan benar-benar mengetik kode, bukan sekadar membaca.
+
+Q2: Apakah Java masih perlu dipelajari?
+
+Tidak perlu. Proyek baru, tutorial baru, dan lowongan baru hampir semuanya berbasis Kotlin. Java dalam jumlah besar hanya kamu temui saat “merawat proyek berusia sepuluh tahun”. Setelah menguasai Kotlin, menambah Java bila pekerjaan menuntut akan cepat saja — keduanya di lapisan bawah berbagi ekosistem mesin virtual yang sama.
+
+Q3: Emulator atau perangkat asli?
+
+Emulator memang praktis untuk develop dan debug (snapshot, banyak model perangkat), tetapi verifikasi akhir harus lewat perangkat asli — rabaan, performa, jaringan nyata, dan sensor tak tergantikan emulator. Bila memungkinkan, membeli satu ponsel kelas menengah sebagai perangkat uji adalah investasi paling hemat.
+
+Q4: Apakah mudah mencari kerja sebagai pengembang Android?
+
+Kondisi pasar 2026: posisi pemula yang “cuma bisa membuat tampilan” persaingannya sengit, tetapi pengembang yang “paham Kotlin + menguasai arsitektur + punya karya yang sudah tayang” tetap diburu. Untuk kamu yang masih belajar, CV terbaik adalah App buatanmu sendiri yang ada di toko.
+
+Q5: Kalau macet karena error, bagaimana?
+
+Tiga langkah emas: (1) salin baris pertama error apa adanya, cari di StackOverflow/mesin pencari; (2) periksa halaman dokumentasi resmi yang terkait; (3) kalau masih gagal, kirim paket “perilaku yang diharapkan + gejala nyata + teks error lengkap + kode terkait” kepada AI atau komunitas. Sebagian besar masalah selesai di langkah pertama.
+
+\booksection{Sumber belajar yang direkomendasikan}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Jenis} & \textbf{Sumber} & \textbf{Alasan direkomendasikan} \tabularnewline
+\hline
+Resmi & developer.android.com & Dokumentasi resmi Android; tutorial Compose/Kotlin semuanya ada di sini, otoritas nomor satu \tabularnewline
+Resmi & Situs resmi Kotlin (kotlinlang.org) & Dokumentasi resmi bahasa + tempat latihan daring \tabularnewline
+Resmi & Google Codelabs & Kelas eksperimen langkah demi langkah dengan pendampingan penuh, keramahan untuk pemula nilai sempurna \tabularnewline
+Komunitas & Stack Overflow (tag android) & Stasiun pertama meminta tolong saat error \tabularnewline
+Komunitas & Juejin / zona Android di CSDN & Banyak artikel praktis berbahasa Mandarin; pilih-pilih mana yang lama atau baru (lihat tanggalnya dulu) \tabularnewline
+Video & Saluran resmi Google Developers & Penjelasan teknologi baru dari konferensi pengembang tiap tahun \tabularnewline
+Pendamping & Bagian 7 "Praktik Pemrograman AI" (Bab 37-47) & Kiat lengkap pengembangan Android berbantuan AI \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Daftar sumber belajar pengembangan Android (Agustus 2026)\end{center}
+
+\booksection{Kartu cepat perintah Gradle yang sering dipakai}
+
+Sehari-hari menekan tombol sudah cukup, tetapi baris perintah kadang lebih efisien (terutama saat dipadukan dengan alat AI atau pipeline CI):
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Perintah} & \textbf{Fungsi} \tabularnewline
+\hline
+\texttt{.\allowbreak /\allowbreak gradlew assembleDebug} & Membuat APK versi debug (di Windows, buang ./) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleRelease} & Membuat versi rilis (perlu tanda tangan siap) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew test} & Menjalankan semua unit test \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew lint} & Pemeriksaan statis: menemukan bug potensial dan penulisan yang tidak baku \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew clean} & Membersihkan hasil build (versi kompilasi dari "jurus restart") \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew :app: dependencies} & Melihat pohon dependensi (senjata ampuh melacak konflik versi) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kartu cepat perintah Gradle yang sering dipakai\end{center}
+
+\begin{tcbinfo}{Tips: Kalau build bermasalah, jalankan clean dulu}
+Kejadian gaib “kemarin bisa jalan, hari ini tidak” enam dari sepuluh kali disebabkan cache build yang kacau. ./gradlew clean lalu build ulang menyembuhkan sebagian besar masalah misterius. Kalau masih belum, restart Android Studio — jurus ini sebaiknya diminum bersama File Invalidate Caches.
+
+\end{tcbinfo}
+
+\booksection{Penutup: Dari App pertama ke App ke-N}
+
+\booksection{Penutup: Dari App pertama ke App ke-N}
+
+Ditarik ke belakang, kamu berangkat dari “tidak tahu Activity itu apa”, lalu menyiapkan lingkungan, menguasai Kotlin, menggambar antarmuka dengan Compose, menghubungkan App ke database dan jaringan, sampai menguji, mengemas, dan tayang — di jalan ini kamu sudah melewati bagian tersulit dari nol ke satu.
+
+Dunia teknologi berubah cepat: framework di-upgrade, alat berganti generasi, AI mengambil alih makin banyak kerja “mengetik di keyboard”. Tetapi ada satu hal yang tidak usang: kemampuanmu mengurai ide yang kabur menjadi langkah-langkah yang jelas, lalu mewujudkannya langkah demi langkah. Alat adalah penguat, cara berpikir adalah fondasi. Penguat bisa diganti, fondasi tidak boleh goyah.
+
+Anda tidak lagi sekadar "orang yang pandai memakai ponsel". Anda bisa mengubah ide di kepala menjadi aplikasi yang benar-benar berjalan di ratusan juta perangkat Android. Mulai hari ini, berkarya lewat keyboard—itulah romantisme developer Android.
+
+\booksection{Referensi}
+
+\begin{enumerate}
+  \item Android Developers. (2026). Android Developer Guides and Jetpack Compose Documentation. developer.android.com.
+  \item Kotlin Foundation. (2026). Kotlin Language Documentation. kotlinlang.org.
+  \item Android Open Source Project. (2026). Android Platform Version History and API Levels.
+  \item Google Play. (2026). Play Console Help: Publishing and App Signing.
+  \item AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.
+  \item Square. (2026). Retrofit Documentation. github.com/square/retrofit.
+\end{enumerate}

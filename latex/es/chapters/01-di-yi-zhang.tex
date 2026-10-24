@@ -1,0 +1,367 @@
+\bookchapter{Capítulo 1: Hola, mi computadora personal}
+
+\chapterintro{Tu móvil, en realidad, es la computadora personal más poderosa en tu bolsillo. Es infinitamente más potente que la computadora que llevó al ser humano a la Luna, y sin embargo descansa silenciosamente en tu palma. Hoy, vamos a conocer bien a este “gigante silencioso”.}
+
+\booksection{Las “vísceras” del hardware del móvil: análisis profundo}
+
+Aunque el móvil es pequeño, tiene todos los órganos. Como en una clase de anatomía, conozcamos uno por uno estos componentes de precisión.
+
+\booksubsection{SoC (System on Chip): el “cerebro + corazón” del móvil}
+
+SoC significa System on Chip, que se traduce como “todo el sistema metido en un chip”. No es solo la CPU (unidad central de procesamiento), sino que integra CPU, GPU (unidad de procesamiento gráfico), NPU (unidad de procesamiento neuronal), ISP (procesador de señales de imagen), módem (responsable de comunicación), etc., todo en uno.
+
+Es como construir el edificio del gobierno, la central eléctrica, el centro de comunicaciones y la comisaría de una ciudad todos en un solo edificio, la eficiencia es altísima.
+
+\booksubsection{CPU: el núcleo de la computación general}
+
+La CPU es el componente más central del SoC, responsable de procesar la mayoría de las tareas de cálculo. Las CPU de móviles usan la arquitectura ARM, a diferencia de la arquitectura x86 de las computadoras, ARM se carácteriza por un conjunto de instrucciones reducido (RISC), con menor consumo de energía, más adecuada para dispositivos móviles.
+
+\textbf{Diseño big.LITTLE de la CPU}: las CPU modernas de móviles adoptan comúnmente una arquitectura “big.LITTLE” (tecnología big.LITTLE de ARM), dividiendo los núcleos en diferentes niveles de rendimiento:
+
+\begin{itemize}
+  \item \textbf{Supernúcleo/Núcleo grande}: el de mayor rendimiento, responsable de tareas pesadas. Como carga de juegos, inicio de aplicaciones, cálculos complejos. Frecuencia más alta (3GHz+), pero también mayor consumo.
+  \item \textbf{Núcleo medio}: equilibrio entre rendimiento y consumo, procesa tareas de carga media diaria. Navegar redes sociales, ver videos, cambiar entre aplicaciones depende principalmente de él.
+  \item \textbf{Núcleo pequeño/Núcleo de eficiencia}: el de menor consumo, procesa tareas ligeras en segúndo plano. Reposo, escuchar música, recibir mensajes, etc., casi no gasta batería.
+\end{itemize}
+
+Los tres niveles de núcleos trabajan juntos: el planificador del sistema asigna automáticamente según la carga de la tarea—las tareas ligeras al núcleo pequeño para ahorrar energía, el trabajo pesado al núcleo grande a toda máquina, y vuelve al pequeño al terminar. Por eso el móvil puede ejecutar juegos fluidamente y también estar en reposo todo el día.
+
+\textbf{Características de cada marca}:
+
+\begin{itemize}
+  \item \textbf{Qualcomm Snapdragon 8 Elite}: adopta la arquitectura CPU auto-desarrollada Oryon (originada de la adquisición de Nuvia), 2 supernúcleos (4.32GHz) + 6 núcleos de rendimiento (3.53GHz), todos basados en el proceso de 3nm de segúnda generación de TSMC. Se despide definitivamente de la arquitectura de referencia ARM, con mejoras saltadas en rendimiento single-core y multi-core. La GPU es Adreno 830, adopta arquitectura de tiles, el rendimiento gráfico mejora un 40\%, la NPU Hexagon tiene una potencia de cálculo de unos 45 TOPS, el rendimiento de inferencia de IA mejora un 45\%. (Nota: la versión personalizada de Samsung Galaxy tiene frecuencias más altas, el supernúcleo puede alcanzar 4.47GHz.)
+  \item \textbf{MedíaTek Dimensity 9400}: 1 supernúcleo (Cortex-X925, 3.62GHz) + 3 núcleos de rendimiento (Cortex-X4, 3.3GHz) + 4 núcleos de eficiencia (Cortex-A720, 2.4GHz), continúa la arquitectura all-big-core, proceso de 3nm de segúnda generación de TSMC. La GPU es Immortalis-G925 (12 núcleos), el rendimiento pico mejora un 41\%, el rendimiento de trazado de rayos mejora un 40\%. El procesador de IA es la NPU 890 de octava generación, soporta ejecución de grandes modelos en el dispositivo, entrenamiento LoRA en el dispositivo y generación de video en el dispositivo.
+  \item \textbf{Apple A18 Pro}: 2 núcleos de rendimiento (aprox. 4.04GHz) + 4 núcleos de eficiencia (aprox. 2.4GHz), proceso de 3nm de segúnda generación de TSMC. La GPU de 6 núcleos soporta trazado de rayos a nivel de hardware, la NPU de 16 núcleos (aprox. 35 TOPS) proporciona potencia de cálculo para IA en el dispositivo y Apple Intelligence. La arquitectura auto-desarrollada de Apple sigue líderando en rendimiento single-core y eficiencia energética, la arquitectura de memoria unificada proporciona ventaja de ancho de banda para la inferencia de IA.
+  \item \textbf{HiSilicon Kirin 9020 de Huawei}: montado en la serie Mate 70, adopta la arquitectura CPU auto-desarrollada Taishan, las capacidades de NPU e ISP se refuerzan continuamente, soporta 5.5G y comunicación por satélite, representa el último avance de los chips nacionales.
+\end{itemize}
+
+\booksubsection{GPU: motor de renderizado gráfico}
+
+La GPU (Graphics Processing Unit) se encarga específicamente de tareas gráficas y de cálculo paralelo. Su número de núcleos es muy superior al de la CPU (fácilmente cientos o miles de núcleos), pero cada núcleo tiene una función relativamente simple, adecuada para procesar simultáneamente grandes cantidades de cálculos similares.
+
+\textbf{Flujo de renderizado gráfico}:
+
+\begin{enumerate}
+  \item \textbf{Procesamiento de vértices}: calcula las coordenadas de posición de cada vértice en el modelo 3D.
+  \item \textbf{Rasterización}: convierte los gráficos 3D en píxeles en la pantalla 2D.
+  \item \textbf{Sombreado de píxeles}: calcula color, textura, efectos de iluminación para cada píxel.
+  \item \textbf{Composición de salida}: compone todas las capas en la imagen final y la envía a la pantalla.
+\end{enumerate}
+
+\textbf{Impacto de la GPU en el uso diario}: ¡no solo juegos! El deslizamiento por la interfaz, efectos de animación, reproducción de video, filtros de fotos, aplicaciones AR dependen de la GPU. Un móvil con GPU débil puede tener caídas de frames al deslizar la interfaz, y los juegos se atascan directamente.
+
+\textbf{GPU de cada marca}: Qualcomm usa la GPU Adreno auto-desarrollada; MedíaTek usa la GPU Mali de ARM; Apple usa GPU auto-desarrollada, el rendimiento y la eficiencia son referentes en la industria.
+
+\booksubsection{NPU: motor de aceleración de IA}
+
+La NPU (Neural Processing Unit) es un procesador diseñado específicamente para cálculos de redes neuronales. Comparada con CPU y GPU, la NPU es más eficiente y consume menos en tareas de IA.
+
+\textbf{Método de cálculo de redes neuronales}: la operación central de la NPU es la multiplicación de matrices y la convolución—precisamente los cálculos más básicos y frecuentes en redes neuronales. La NPU, mediante optimización a nivel de hardware, puede procesar en paralelo grandes cantidades de operaciones matriciales, decenas de veces más rápida que la CPU, con un consumo mucho menor.
+
+\textbf{Flujo de procesamiento de IA}:
+
+\begin{enumerate}
+  \item \textbf{Entrada de datos}: imagen de la cámara, audio del micrófono, datos de sensores, etc.
+  \item \textbf{Preprocesamiento}: ajusta el formato y tamaño de los datos, adapta los requisitos de entrada de la red neuronal.
+  \item \textbf{Cálculo de inferencia}: la NPU carga el modelo entrenado, realiza el cálculo forward con los datos de entrada, obtiene el resultado.
+  \item \textbf{Postprocesamiento}: convierte la salida de IA en un resultado útilizable, como coordenadas faciales, contenido de texto, etiquetas de escena.
+\end{enumerate}
+
+\textbf{Escenarios de aplicación reales}:
+
+\begin{itemize}
+  \item \textbf{Fotografía computacional}: síntesis nocturna, desenfoque de retrato, procesamiento HDR, embellecimiento con IA.
+  \item \textbf{Asistente de voz}: reconocimiento de voz, comprensión del lenguaje natural, síntesis de voz.
+  \item \textbf{Traducción en tiempo real}: subtítulos con IA, traducción de diálogo.
+  \item \textbf{Reconocimiento inteligente}: reconocimiento de texto (OCR), reconocimiento de objetos, reconocimiento de escenas.
+  \item \textbf{Grandes modelos en el dispositivo}: los últimos chips insignia ya soportan ejecutar pequeños modelos de IA en el móvil (nivel de 7B parámetros), logrando diálogo de IA sin conexión, resumen de documentos, escritura inteligente, etc. La NPU Hexagon del Snapdragon 8 Elite tiene una potencia de unos 45 TOPS, la NPU 890 del Dimensity 9400 también soporta grandes modelos en el dispositivo (velocidad de inferencia LLM mejora un 80\%), la NPU de 16 núcleos del Apple A18 Pro proporciona unos 35 TOPS.
+  \item \textbf{Procesamiento de imágenes con IA}: eliminación con IA (eliminar personas de fotos con un toque), expansión de imagen con IA (expandir los bórdenes), conversión de estilo con IA, generación de imágenes a partir de texto, etc.
+\end{itemize}
+
+\booksubsection{ISP: procesador de señales de imagen}
+
+El ISP procesa los datos originales de la cámara, convirtiendo señales de luz en fotos bonitas.
+
+\textbf{¿Cómo evaluar el rendimiento?}¡Mira el modelo! Apple A18 Pro, Qualcomm Snapdragon 8 Elite, MedíaTek Dimensity 9400, HiSilicon Kirin 9020 de Huawei son todos de nivel insignia. En la gama media mira el Snapdragon 8s Gen3/7+ Gen3, Dimensity 8400. No mires solo el número de núcleos, la arquitectura y el proceso (nanómetros) son más importantes. El proceso de 3nm es el más avanzado actualmente, con eficiencia energética muy superior a 5nm y 4nm.
+
+\booksubsection{RAM (memoria de trabajo): mesa de trabajo temporal}
+
+La RAM es como tu escritorío, cuanto más grande, más archivos puedes extender a la vez. 12GB es lo mainstream ahora, 16GB para usuarios intensos, más de 24GB es para gamers y geeks.
+
+El tipo de RAM también es importante: LPDDR5 es más rápida y eficiente que LPDDR4X. Apple aunque no tiene mucha RAM, la optimización del sistema es buena, por eso parece “suficiente”.
+
+\textbf{¿Qué pasa si no hay suficiente RAM?}Las Apps serán cerradas por el sistema en segúndo plano, al cambiar necesitarán recargar. Por eso a veces al cambiar a WeChat, el juego se ha ido.
+
+\booksubsection{Almacenamiento (ROM/flash): almacén a largo plazo}
+
+El almacenamiento es como tu librería, donde se guardan todas las fotos, videos, Apps. Ahora lo mainstream es UFS 3.1 o UFS 4.0, varias veces más rápido que el antiguo eMMC.
+
+\textbf{¿Por qué es importante la velocidad de almacenamiento?}Determina la velocidad de apertura de Apps, de carga de juegos, de guardado de fotos. Con el uso, un almacenamiento lento hará el móvil cada vez más lento.
+
+\booksubsection{Pantalla: tus ojos}
+
+La pantalla es la principal ventana de interacción entre tú y el móvil, su calidad afecta directamente la experiencia.
+
+\begin{itemize}
+  \item \textbf{Material}: OLED tiene colores vivos, alto contraste, más eficiente (al mostrar negro los píxeles no emiten luz), pero a baja luminosidad puede tener parpadeo que cansa la vista; LCD es más amable con los ojos, más barato, pero el contraste y los colores no son tan buenos como OLED.
+  \item \textbf{Resolución}: 1080P es lo mainstream, 2K es más nítido pero gasta más batería. El concepto de "pantalla Retina" de Apple es: a cierta distancia, el ojo humano no distingue los píxeles.
+  \item \textbf{Tasa de refresco}: 60Hz es el estándar, 90Hz/120Hz es más fluido, el deslizamiento es sedoso. La alta tasa de refresco gasta batería, por eso muchos móviles soportan tasa de refresco adaptativa (LTPO), ajustándose dinámicamente según el contenido.
+  \item \textbf{Tasa de muestreo táctil}: afecta la velocidad de respuesta táctil, los gamers deben prestarle atención, cuanto más alta, más responde.
+  \item \textbf{Método de atenuación}: la atenuación DC es más amable con los ojos que la PWM, a baja luminosidad cansa menos. Ahora muchos móviles soportan PWM de alta frecuencia, también para cuidar los ojos.
+\end{itemize}
+
+\booksubsection{Tecnología HDR de pantalla}
+
+HDR (High Dynamic Range) permite a la pantalla mostrar simultáneamente zonas más brillantes y más oscuras, mejorando mucho la sensación de profundidad de la imagen.
+
+\begin{itemize}
+  \item \textbf{Principio de implementación}: el rango de luminosidad de una pantalla normal es limitado (SDR), la diferencia entre lo más brillante y lo más oscuro no es suficiente. Las pantallas HDR tienen mayor luminosidad pico (normalmente más de 1000 nits), mayor contraste, gama de colores más amplia, pueden mostrar más detalles.
+  \item \textbf{Estándares principales}: HDR10 (el más básico, gratuito y de código abierto), HDR10+ (impulsado por Samsung, metadatos dinámicos), Dolby Vision (la mejor calidad pero requiere licencia). Qué estándar soporta el móvil depende del hardware de pantalla y la licencia del sistema.
+  \item \textbf{Efecto real}: al ver video HDR, la luz del sol es más deslumbrante, las sombras más profundas, los colores más ricos. La condición es que el video mismo esté producido en HDR y la pantalla soporte HDR.
+\end{itemize}
+
+\booksubsection{Tecnología HDR de imagen}
+
+El HDR al fotografiar y el HDR de pantalla son dos cosas distintas. El HDR de imagen resuelve mediante algoritmos el problema de “sobreexposición en zonas claras, negro muerto en zonas oscuras”.
+
+\begin{itemize}
+  \item \textbf{Principio del algoritmo}: al pulsar el obturador, el móvil en realidad toma varias fotos con diferentes exposiciónes (subexpuesta para conservar detalles de zonas claras, sobreexpuesta para conservar detalles de zonas oscuras, exposición normal para conservar tonos medios), luego las sintetiza en una foto de alto rango dinámico.
+  \item \textbf{Flujo de procesamiento}: captura multi-fotograma alineación y compensación (anti-sacudida) fusión de exposición/mapeo de tonos corrección de color salida de la foto final.
+  \item \textbf{Optimización del efecto}: ahora los móviles ya pueden hacer "HDR en tiempo real"—lo que ves en el visor es el efecto procesado con HDR, lo que ves es lo que obtienes. El Smart HDR de Apple y el HDR automático de Android son muy maduros.
+\end{itemize}
+
+\booksubsection{Batería y carga: la fuente de energía}
+
+La batería es el componente “más efímero” del móvil, tras dos o tres años se degrada notablemente. La capacidad mainstream ahora es 5500-7500mAh.
+
+\begin{itemize}
+  \item \textbf{Potencia de carga}: el campo Android ha llegado a 100W incluso 200W, se llena en unos minutos; Apple sigue en 20-30W. ¿La carga rápida daña la batería? Con accesorios originales no hay mucho problema, el móvil tiene protección de temperatura.
+  \item \textbf{QC 5.0}: cómoda pero ineficiente y con mucho calor. Adecuada para cargar en la oficina, no para cuando tienes prisa por salir.
+  \item \textbf{Carga inversa}: el móvil se convierte en power bank, carga auriculares, reloj, para emergencias.
+\end{itemize}
+
+\booksubsection{Cámara: la magia de luz y sombra}
+
+Ahora los móviles tienen fácilmente tres o cuatro cámaras, cada una con su función:
+
+\begin{itemize}
+  \item \textbf{Cámara principal}: la más usada, con el sensor más grande, la mejor calidad.
+  \item \textbf{Ultra gran angular}: para paisajes, edificios, campo de visión más amplio.
+  \item \textbf{Teleobjetivo}: para cosas lejanas, hay zoom óptico y zoom digital.
+  \item \textbf{Macro}: para cosas muy pequeñas de muy cerca.
+\end{itemize}
+
+\textbf{¡Los megapíxeles no lo son todo!}El tamaño del sensor (un sensor mayor es mejor), la apertura (f/1.8 es mayor que f/2.4), el estabilizador (el OIS óptico es importante) afectan la calidad. La fotografía computacional (algoritmos de IA) es cada vez más importante, puede combinar varias fotos en una buena foto.
+
+\booksubsection{Teleobjetivo periscópico}
+
+Los teleobjetivos tradicionales necesitan una ruta óptica larga, lo que haría el móvil muy grueso. El teleobjetivo periscópico usa un prisma de 90 grados para refractar la luz, permitiendo que la ruta óptica se despliegue horizontalmente dentro del móvil, logrando así zoom óptico de 5x o incluso 10x manteniendo el móvil delgado.
+
+\begin{itemize}
+  \item \textbf{Principio estructural}: la luz entra por la lente el prisma la refracta 90 grados atraviesa el grupo de lentes a lo ancho del móvil llega al sensor. Equivale a poner un telescopio vertical en horizontal.
+  \item \textbf{Características ópticas}: alto zoom óptico (5x-10x), calidad muy superior al zoom digital. Pero el sensor suele ser más pequeño que el de la cámara principal, el rendimiento en poca luz es normal.
+  \item \textbf{Ventajas de imagen}: fotografiar la luna, edificios lejanos, primeros planos en un escenario, inalcanzable para móviles normales.
+\end{itemize}
+
+\booksubsection{OIS estabilización óptica vs EIS estabilización electrónica}
+
+La estabilización es una tecnología clave que afecta la calidad de fotos y video, los dos métodos tienen principios completamente distintos:
+
+\begin{itemize}
+  \item \textbf{OIS (estabilización óptica)}: compensa el temblor de la mano moviendo físicamente la lente o el sensor. La lente tiene internamente un giroscopio miniatura que detecta la dirección y amplitud del temblor, luego accióna un motor para mover el grupo de lentes en sentido contrario. La ventaja es que no pierde calidad, la desventaja es el coste y el espacio.
+  \item \textbf{EIS (estabilización electrónica)}: compensa el temblor recortando y desplazando la imagen mediante algoritmos. El móvil graba un área ligeramente mayor, luego recorta la zona estable según los datos del giroscopio. La ventaja es que no necesita hardware adicional, la desventaja es que recorta la imagen (menor campo de visión), en poca luz puede salir borrosa.
+  \item \textbf{Elección práctica}: para fotos prioriza OIS, para video la combinación de ambos es lo mejor. Ahora muchos móviles insignia soportan estabilización por desplazamiento del sensor "Sensor-Shift", mejor que la estabilización tradicional de lente.
+\end{itemize}
+
+\booksubsection{Zoom óptico vs zoom digital}
+
+\begin{itemize}
+  \item \textbf{Zoom óptico}: cambia la distancia focal moviendo físicamente el grupo de lentes, sin pérdida de calidad. El zoom óptico en móviles suele ser de multiplicadores fijos (como 2x, 3x, 5x, 10x), no puede hacer zoom continuo como una cámara.
+  \item \textbf{Zoom digital}: amplía la zona central de la imagen, en esencia es recorte + interpolación. Cuanto más amplíes, peor calidad. Un zoom digital de 100x parece impresionante, pero la calidad ya es muy borrosa.
+  \item \textbf{Zoom híbrido}: combina óptico y digital, entre los multiplicadores de zoom óptico usa algoritmos de síntesis multi-fotograma para compensar la pérdida de calidad. Mejor que el digital puro, pero aún inferior al óptico.
+\end{itemize}
+
+\booksubsection{Audio: altavoces y chip gráfico dedicado}
+
+\textbf{Altavoz único vs altavoces duales}:
+
+\begin{itemize}
+  \item \textbf{Altavoz único}: solo una unidad de sonido en la parte inferior, el sonido se desvía a un lado, sin sensación estéreo. Común en móviles de gama media-baja.
+  \item \textbf{Altavoces duales (estéreo)}: un altavoz arriba y otro abajo, formando un campo sonoro estéreo. Al ver videos o escuchar música, los canales izquierdo y derecho son nítidos, la inmersión es mucho mayor. Que el auricular funcióne también como altavoz superior es una solución común.
+  \item \textbf{Diferencia de calidad de sonido}: los altavoces duales no solo son "más ruidosos", la clave es la sensación espacial y la jerarquía. Ver películas con un solo altavoz siempre parece faltar algo.
+\end{itemize}
+
+\textbf{Chip gráfico dedicado para móviles gaming}:
+
+Algunos móviles gaming y de rendimiento equipan un chip dedicado de procesamiento de pantalla, su función es:
+
+\begin{itemize}
+  \item \textbf{Insertar frames}: interpola la imagen de juego de 30fps a 60fps o 120fps mediante algoritmos, la imagen es más fluida. Este proceso se completa en el chip gráfico dedicado, sin ocupar recursos GPU del SoC.
+  \item \textbf{Superresolución}: mejora la imagen de baja resolución a alta resolución mediante algoritmos de IA, la calidad es más nítida.
+  \item \textbf{Reducción de consumo}: como la inserción de frames y la superresolución las hace el chip dedicado, la carga del SoC se reduce, el calor y el consumo disminuyen, el juego es más estable.
+\end{itemize}
+
+\booksubsection{GPS: single-frequency y dual-frequency}
+
+El posiciónamiento del móvil depende principalmente de sistemas de navegación por satélite como el GPS.
+
+\begin{itemize}
+  \item \textbf{GPS single-frequency}: solo recibe señales de la banda L1, precisión de posiciónamiento de unos 3-5 metros. Suficiente en zonas abiertas, pero en cañones urbanos con muchos rascacielos, la reflexión de señales causa mayores desviaciones.
+  \item \textbf{GPS dual-frequency}: recibe simultáneamente las bandas L1 y L5. La banda L5 tiene una longitud de onda mayor y mayor resistencia a interferencias, el cálculo conjunto dual-frequency puede eliminar la mayoría del error ionosférico, la precisión llega a 1-3 metros. Ventaja evidente en navegación urbana y posiciónamiento de taxis.
+  \item \textbf{Soporte multi-constelación}: los móviles modernos no solo soportan GPS, también soportan BeiDou (China), GLONASS (Rusia), Galileo (Europa) y otros sistemas de satélites. Cuantos más satélites se conecten simultáneamente, más rápido y preciso es el posiciónamiento.
+\end{itemize}
+
+\booksubsection{Sensores: las pequeñas antenas del móvil}
+
+El móvil esconde más de una docena de sensores, trabajando silenciosamente:
+
+\begin{itemize}
+  \item \textbf{Acelerómetro + giroscopio}: percibe la postura del móvil, giro en juegos, rotación automática de pantalla.
+  \item \textbf{Sensor de luz}: ajusta automáticamente el brillo de la pantalla.
+  \item \textbf{Sensor de proximidad}: apaga la pantalla al acercar el móvil a la oreja en una llamada.
+  \item \textbf{Sensor de huellas}: ahora lo mainstream es huella óptica o ultrasónica bajo la pantalla.
+  \item \textbf{Reconocimiento facial}: el Face ID de Apple es estructura de luz 3D, nivel de seguridad alto; muchos Android usan reconocimiento de foto 2D, seguridad normal.
+  \item \textbf{Has establecido contrasena de bloqueo?}: comunicación de campo cercano, tarjetas de transporte, tarjetas de acceso, tarjetas bancarias.
+  \item \textbf{Barómetro}: mide la altitud, hasta subir escaleras lo detecta.
+  \item \textbf{Sensor Hall}: detecta la apertura/cierre de fundas magnéticas.
+\end{itemize}
+
+\booksection{Sistema operativo: Android VS iOS VS HarmonyOS}
+
+El hardware es el cuerpo, el sistema operativo es el alma. Los tres sistemas tienen sus carácterísticas:
+
+\begin{itemize}
+  \item \textbf{Android}: como una comunidad de código abierto, los fabricantes pueden personalizarlo profundamente, muchas opciones. Puedes cambiar temas, instalar tiendas de aplicaciones de terceros, probar todo tipo de cosas. Pero precisamente por ser abierto, la fragmentación es grave, la experiencia varía mucho entre marcas.
+  \item \textbf{iOS}: como un jardín cuidado, Apple controla hardware y software, experiencia unificada y fluida. Calidad de aplicaciones alta, protección de privacidad buena, pero libertad baja, muchas cosas se hacen según las reglas de Apple.
+  \item \textbf{HarmonyOS}: la nueva especie de Huawei, su capacidad distribuida permite que diferentes dispositivos colaboren sin fisuras. Lo trataremos especialmente más adelante.
+\end{itemize}
+
+Los tres ecosistemas son extremadamente ricos, elige el estilo de vida que te guste. No hay buenos ni malos absolutos, solo adecuado o no.
+
+\booksection{Análisis completo de interfaces del móvil}
+
+Las interfaces del móvil son el puente que conecta con el mundo exterior, las diferentes interfaces tienen grandes diferencias:
+
+\booksubsection{Micro USB}
+
+\begin{itemize}
+  \item \textbf{Características físicas}: interfaz trapezoidal plana, diferencia frente/dorso (no entra si la insertas al revés). Básicamente eliminada en móviles, pero algúnos dispositivos de gama baja y antiguos aún la usan.
+  \item \textbf{Limitaciones de transmisión}: solo soporta el estándar USB 2.0, velocidad máxima de 480Mbps, potencia de carga normalmente no superior a 10W.
+  \item \textbf{Desventajas}: sin inserción reversible, corta vida útil de inserción/extracción, velocidad de transmisión lenta, baja potencia de carga.
+\end{itemize}
+
+\booksubsection{Lightning (interfaz relámpago de Apple, obsoleta)}
+
+\begin{itemize}
+  \item \textbf{Características físicas}: interfaz de 8 pines auto-desarrollada por Apple, se puede insertar por ambos lados. Usada en iPhone 14 y modelos anteriores, ahora completamente obsoleta.
+  \item \textbf{Limitaciones de transmisión}: la interfaz Lightning físicamente solo soporta el estándar USB 2.0, velocidad máxima de 480Mbps. Incluso con cable USB-C a Lightning, la velocidad está limitada por la propia interfaz Lightning.
+  \item \textbf{Razón de obsolescencia}: la UE aprobó una normativa que exige que desde 2024 todos los móviles unifiquen el uso de interfaz USB-C, Apple desde la serie iPhone 15 cambió completamente a Type-C. La interfaz Lightning sale oficialmente del escenario histórico.
+  \item \textbf{Nota}: los cables certificados MFi de Apple contienen un chip de certificación, los cables no certificados pueden no cargar o transmitir datos correctamente. Si aún usas un iPhone antiguo, conviene tener cables Lightning a mano.
+\end{itemize}
+
+\booksubsection{USB Type-C}
+
+\begin{itemize}
+  \item \textbf{Características físicas}: interfaz ovalada de 24 pines, se puede insertar por ambos lados. Se ha convertido en la interfaz estándar de móviles y la mayoría de dispositivos electrónicos. La UE ha legislado que desde 2024 todos los móviles, tablets, auriculares y otros dispositivos portátiles unifiquen el uso de interfaz USB-C, y otras regiones del mundo le siguen.
+  \item \textbf{Protocolo de transmisión}: Type-C es solo la forma de la interfaz, la capacidad real de transmisión depende del protocolo interno. Soporta USB 2.0 (480Mbps), USB 3.0/3.1/3.2 (5-20Gbps) e incluso USB4 (40Gbps).
+  \item \textbf{Distinción importante}: ¡No todos los puertos Type-C soportan USB 3.0! Muchos móviles usan el puerto Type-C, pero internamente solo conectan los pines de USB 2.0, por lo que la velocidad de transferencia es igual de lenta que con el puerto antiguo. Las versiones estándar del iPhone 16/17 solo soportan velocidad USB 2.0; las versiones Pro soportan USB 3.0 (necesita cable USB-C a USB-C).
+  \item \textbf{Capacidad de carga}: soporta protocolos de carga rápida como USB PD, hasta 240W.
+  \item \textbf{Salida de video}: soporta DisplayPort Alt Mode, puede salida de video a un monitor mediante cable adaptador.
+\end{itemize}
+
+\booksubsection{Interfaz de audio de 3.5mm}
+
+\begin{itemize}
+  \item \textbf{Características físicas}: jack circular de 3 o 4 segmentos, el de 3 segmentos transmite audio de canal izquierdo/derecho, el de 4 segmentos añade un canal de micrófono.
+  \item \textbf{Características}: transmisión de señal analógica, plug-and-play, sin necesidad de driver o conversión. Calidad de sonido estable, latencia cero.
+  \item \textbf{Situación actual}: la mayoría de móviles insignia han eliminado el jack de 3.5mm, necesita cable adaptador Type-C o auriculares bluetooth. Algunos móviles de gama media y móviles gaming aún lo conservan.
+\end{itemize}
+
+\booksection{Sistema de productos del móvil y reglas de nomenclatura}
+
+Ante la deslumbrante gama de productos de cada marca, entender las reglas de nomenclatura te ayuda a localizar rápidamente el modelo adecuado.
+
+\booksubsection{Series de productos de marcas principales:}
+
+\begin{itemize}
+  \item \textbf{Apple}: iPhone (versión estándar) / iPhone Plus (pantalla grande) / iPhone Pro (versión profesional) / iPhone Pro Max (pantalla grande profesional) / iPhone SE (versión económica) / iPhone 16e (versión económica con IA, con chip A18 y módem C1 propio de Apple). En 2026, la serie iPhone 17 incorpora el chip A19 Pro en todos sus modelos, con capacidades de IA mejoradas.
+  \item \textbf{Huawei}: serie Mate (insignia business) / serie P/Pura (insignia imagen) / serie Mate X (insignia plegable) / serie nova (gama media joven) / serie Enjoy (entrada)
+  \item \textbf{Xiaomi}: serie numérica Xiaomi (insignia) / Xiaomi MIX (insignia exploración/plegable) / serie Redmi K (insignia rendimiento) / serie Redmi Note (gama media) / serie numérica Redmi (entrada)
+  \item \textbf{OPPO}: serie Find X (insignia) / serie Reno (gama media) / serie A (entrada) / serie numérica OnePlus (insignia rendimiento)
+  \item \textbf{vivo}: serie X (insignia imagen) / serie numérica iQOO (insignia rendimiento) / serie S (selfie gama media) / serie Y (entrada)
+  \item \textbf{Samsung}: serie Galaxy S (insignia) / Galaxy Z Fold/Flip (insignia plegable) / serie Galaxy A (gama media)
+\end{itemize}
+
+\booksubsection{Significado de sufijos comunes:}
+
+\begin{itemize}
+  \item \textbf{Pro}: abreviatura de Professional, versión profesional. Normalmente mejora cámara, pantalla, procesador y otras configuraciones clave sobre la versión estándar.
+  \item \textbf{Max}: versión máxima. Pantalla más grande, batería más grande, pero la configuración no necesariamente supera a Pro.
+  \item \textbf{Ultra}: versión extrema. Normalmente representa la configuración más alta de la serie, los mejores componentes, también el precio más alto. Como Samsung S24 Ultra, Xiaomi 14 Ultra.
+  \item \textbf{SE}: Special Editíon, edición especial, en realidad suele ser versión económica. Configuración reducida, precio más bajo. Como iPhone SE.
+  \item \textbf{Plus}: versión ampliada. Pantalla más grande que la estándar, batería también, pero configuración básicamente igual.
+  \item \textbf{Lite/Versión Youth}: versión ligera. Configuración simplificada, precio más bajo.
+  \item \textbf{Note}: originalmente se refería a móviles de pantalla grande, ahora cada marca lo usa diferente. Redmi Note es una serie de gama media.
+  \item \textbf{Neo}: versión nueva. Normalmente se refiere a modelos de gama media orientados al rendimiento.
+\end{itemize}
+
+\booksection{Módem y antena: los héroes anónimos de la comunicación del móvil}
+
+El móvil puede llamar y conectarse gracias a la pareja del chip módem y la antena.
+
+\booksubsection{Chip módem:}
+
+El módem es el procesador responsable de la comunicación inalámbrica en el móvil, modula señales digitales en ondas de radio para emitir, y demodula las ondas de radio recibidas en señales digitales. El rendimiento del módem afecta directamente la calidad de llamada, la velocidad de conexión y la estabilidad de la señal. Qualcomm es el mayor proveedor de módems de móvil, MedíaTek y Samsung también tienen módems auto-desarrollados. Apple desde el iPhone 16e monta su chip módem C1 auto-desarrollado, marcando la entrada oficial de Apple en la era de módems auto-desarrollados, el módem C1 usa proceso de 4nm, excelente rendimiento de consumo; el iPhone 16/16 Plus/16 Pro/16 Pro Max aún usan módem Qualcomm (Snapdragon X75 5G), se espera que modelos posteriores transiciónen gradualmente a módems auto-desarrollados. Los iPhone XS/11 anteriores usaban módem Intel con rendimiento de señal deficiente, fue un dolor para muchos usuarios.
+
+\booksubsection{Diseño de antena:}
+
+Las antenas del móvil están escondidas dentro del cuerpo, normalmente dispuestas alrededor del marco. El diseño de la antena afecta directamente al rendimiento de recepción de señal:
+
+\begin{itemize}
+  \item \textbf{Tecnología MIMO}: multiple-input multiple-output, usa múltiples antenas para enviar y recibir datos simultáneamente, mejora velocidad y estabilidad. 4×4 MIMO es más rápido que 2×2 MIMO.
+  \item \textbf{Número de antenas}: los móviles insignia suelen tener más de una docena de antenas (celular, Wi-Fi, bluetooth, NFC, GPS cada uno necesita antena independiente).
+  \item \textbf{Impacto del cuerpo metálico}: el metal apantalla la señal, por eso los móviles con cuerpo metálico necesitan bandas de antena (las tiras de plástico en el marco). Los cuerpos de cristal y plástico afectan menos a la señal.
+\end{itemize}
+
+\booksubsection{Evolución de la tecnología de red:}
+
+\begin{itemize}
+  \item \textbf{4G LTE}: tasa pico teórica 1Gbps bajada/500Mbps subida (Cat.18), experiencia real normalmente 50-150Mbps. Cobertura más amplia, suficiente.
+  \item \textbf{5G NR}: tasa pico teórica 10Gbps+ bajada. La banda Sub-6GHz tiene mejor cobertura, la onda milimétrica mmWave es muy rápida pero con cobertura muy pequeña.
+  \item \textbf{5G-A (5G Advanced)}: La versión mejorada del 5G, también llamada 5.5G. La velocidad de bajada puede alcanzar 10 Gbps y la de subida 1 Gbps, con gran mejora en la densidad de conexiones y la precisión de posicionamiento. Desde 2024, China Mobile, China Telecom y China Unicom han comenzado a desplegar redes 5G-A en ciudades clave. Los buques insignia como la serie Huawei Mate 70/80 y la serie Xiaomi 15/16 ya soportan 5G-A. El 5G-A también aporta la capacidad de "integración de comunicación y percepción": las estaciones base pueden comunicarse y percibir el entorno simultáneamente, proporcionando infraestructura para la economía de baja altitud (entregas con drones) y la conectividad vehicular.
+\end{itemize}
+
+\booksubsection{Clasificación de bandas de red:}
+
+Las bandas de red soportadas por el móvil determinan en qué países y redes de operadores puede usarse:
+
+\begin{itemize}
+  \item \textbf{FDD-LTE Band (serie B)}: como B1, B3, B5, etc., bandas 4G. Diferentes países usan diferentes bandas, China usa principalmente B1/B3/B5/B8/B34/B38/B39/B40/B41.
+  \item \textbf{TDD-LTE Band}: otro estándar de 4G, China usa mucho B38/B39/B40/B41.
+  \item \textbf{5G NR Band (serie N)}: como n1, n3, n28, n41, n78, n79, etc. n78 (3.5GHz) es la banda principal de 5G en China, n41 (2.5GHz) la usa mucho Mobile.
+  \item \textbf{Consejo de compra}: si necesitas usarlo en el extranjero, confirma antes de comprar si el móvil soporta las bandas del país de destino. Los móviles de versión china normalmente soportan mejor las bandas chinas, pero pueden faltar algunas bandas extranjeras.
+\end{itemize}
+
+\booksection{Tu móvil, ¿cuántos roles está desempeñando?}
+
+Hace tiempo que no es solo un teléfono:
+
+\begin{enumerate}
+  \item \textbf{Herramienta de comunicación}: teléfono, SMS, WeChat, email...
+  \item \textbf{Cámara inteligente}: fotos, video, escanear documentos...
+  \item \textbf{Billetera}: pagos, tarjeta de transporte, tarjeta bancaria, tarjeta de miembro...
+  \item \textbf{Portal de información}: noticias, clima, bolsa, conocimiento...
+  \item \textbf{Consola de juegos}: desde match-3 hasta títulos AAA...
+  \item \textbf{Oficina móvil}: documentos, hojas de cálculo, reuniones, colaboración...
+  \item \textbf{Asistente de salud}: podómetro, ritmo cardíaco, sueño, ejercicio...
+  \item \textbf{Control remoto de hogar inteligente}: controlar luces, aire acondiciónado, TV, robot aspirador...
+  \item \textbf{Identidad digital}: documento de identidad electrónico, licencia de conducir electrónica, código de salud...
+  \item \textbf{Centro de entretenimiento}: música, video, libros electrónicos, podcasts...
+\end{enumerate}
+
+Piénsalo, ¡un pequeño dispositivo cargando cuánta vida! Por eso, aprender a usarlo bien es aprender a vivir mejor.
+
+\begin{tcbpractice}{Practica: conoce la configuración de hardware}
+En [Configuración], mira si puedes encontrar el modelo de procesador, el tamaño específico de la memoria (RAM) y del almacenamiento (ROM). Ten una idea de las capacidades de tu móvil. Los usuarios de Android pueden descargar “AnTuTu” o “DevCheck” para ver información detallada del hardware.
+
+\end{tcbpractice}

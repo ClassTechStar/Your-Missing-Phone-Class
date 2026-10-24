@@ -1,0 +1,222 @@
+\booksection{第二十章：開発者モードと高度な権限}
+
+\chapterintro{一、開発者モード：隠し設定のアンロック}
+
+\booksubsection{一、開発者モード：隠し設定のアンロック}
+
+有効化方法：
+
+\subsubsection*{有効にする方法：}
+
+\begin{itemize}
+  \item \textbf{Android}：設定 端末情報 「ビルド番号」を7回連続タップし、「開発者モードになりました」と表示されるまで操作。
+  \item \textbf{HarmonyOS}iOS
+  \item \textbf{iOS}よく使う機能：
+\end{itemize}
+
+\subsubsection*{よく使う機能一覧：}
+
+\begin{itemize}
+  \item \textbf{：パソコンに接続して高度な操作、フラッシュやデータ復元など。}: PCに接続して高度な操作（フラッシュ、データ復元、ADB コマンドなど）を行うために必ず有効化するスイッチ。本章の「ADB 実用コマンド」小節を参照。
+  \item \textbf{：画面にタッチポイントを表示、チュートリアル録画に適する。}: 画面にタッチポイントを表示（小さな丸が指に追従）。操作チュートリアルやデモの録画に適しています。
+\end{itemize}
+
+\subsubsection*{パフォーマンスと快適さ関連：}
+
+\begin{itemize}
+  \item \textbf{アニメーション速度調整（ウィンドウアニメーションスケール / トランジションアニメーションスケール / アニメーション時間スケール）}: これら3つのオプションは App を開く時やページ切り替え時のアニメーション時間を制御します。デフォルトは1x。0.5xにするとスマホが「見た目上」速くなります（実際の処理速度は変わらず、アニメーションが速くなるだけ）。完全にオフにするとアニメーションなしで直接ジャンプします。多くのギークは0.5xに設定し、遷移感を残しつつ速さを演出。完全オフは操作がぎこちなくなり、本来のカクつきを隠して「とても滑らか」と誤認させる原因にもなります。
+  \item \textbf{GPU レンダリングの強制（Force GPU Rendering）}: すべての2D描画を CPU ではなく GPU に強制的に処理させます。旧機種や最適化の不十分な App でスクロールの滑らかさが向上することがありますが、GPU 負荷と消費電力も増加します。現代のスマホはデフォルトで GPU レンダリングを多用しているため、このスイッチは中高級機種への影響は限定的で、歴史的な名残のオプションです。一般ユーザーはデフォルトのままで問題ありません。
+  \item \textbf{GPU レンダリングプロファイリングの表示（Profile GPU Rendering）}: 画面上に棒グラフで毎フレームのレンダリング所要時間をリアルタイム表示。緑色の横線は16.6ms（60fps のフレーム時間閾値）を表します。棒が緑線を超えるとフレームドロップが発生しています。これは開発者が App のカクつきを調査する強力なツールで、一般ユーザーもどの App の最適化が不十分かを比較できます——例えば、ある App のスクロール時に棒が頻繁に赤線を超えるなら、ほぼその App が原因です。
+\end{itemize}
+
+\subsubsection*{バックグラウンドとバッテリー持ち関連：}
+
+\begin{itemize}
+  \item \textbf{：バックグラウンドで動作するアプリ数を制限し、省電力。}: 「標準制限」「最大1プロセス」「最大2プロセス」などが設定できます。一見バックグラウンドプロセスを制限すると省電力になりそうですが、実際には Android のバックグラウンド管理は既に十分機能しており、強制制限は App の頻繁な再読み込みを引き起こし（コールドスタートはかえって消費電力が多く、体験も低下します）。このオプションはデバッグ向けで、一般ユーザーが長期有効にすることは推奨されません。「標準制限」のままで問題ありません。
+  \item \textbf{アクティビティを保持しない}: 画面から離れるたびに即座に破棄します。非常に非推奨。App が頻繁にホワイトスクリーンになり、再読み込みが発生します。App の復元ロジックのテスト用のみ。
+\end{itemize}
+
+\begin{tcbwarn}{注意事項}
+二、BLロック（Bootloaderロック）：フラッシュの第一の門
+
+\end{tcbwarn}
+
+\booksubsection{二、OEM ロック解除：開発者オプション内の「フラッシュスイッチ」}
+
+開発者オプションの中に目立たないが重要なスイッチがあります——「OEM ロック解除」（一部ブランドでは「OEM アンロック許可」や「デバイスアンロック」と呼ばれます）。このスイッチ自体は BL ロックを解除しませんが、「事前許可」です：これをオンにして初めて、メーカーが fastboot コマンドやブランドツールで BL の解除を許可します。
+
+\begin{itemize}
+  \item \textbf{スイッチの役割}: メーカーに「私は保証を放棄し、自己責任で BL の解除を許可してほしい」と宣言するようなものです。このスイッチがオフの場合、BL 解除コマンドはすべて直接拒否されます。
+  \item \textbf{BL ロックとの関係}: OEM ロック解除は「資格申請」、BL 解除が「実際の操作」です。前者はスマホの設定でタップするだけ、後者はメーカーの公式サイトで解除コードを申請し、PC で fastboot コマンド（例：\texttt{fastboot flashing unlock}）を実行する必要があり、両方が不可欠です。
+  \item \textbf{初期化するとリセットされるか}: はい。「OEM ロック解除」スイッチは初期化後にオフに戻りますが、BL ロックは一度解除すると物理レベルの状態となり、初期化では再ロックされません——手動で\texttt{fastboot flashing lock}を実行して再ロックする必要があります。
+  \item \textbf{いつオンにすべきか}: フラッシュや Root を確実に行う場合を除き、オフのままにしてください。「USB デバッグ」とは独立したスイッチで、フラッシュ時は通常両方をオンにします。
+\end{itemize}
+
+\begin{tcbinfo}{豆知識：なぜメーカーはこのスイッチを設けるのか}
+初期の Android にはこのスイッチがなく、マルウェアは権限を取得すれば密かにシステムをフラッシュできました。Google は後にすべての Android メーカーに対し、開発者オプションに「OEM ロック解除」スイッチを追加し、「ユーザーの知情同意」の確認とすることを要求しました。これが、BL ロックを解除していても OEM ロック解除スイッチがオフなら再フラッシュが失敗する理由です。
+
+\end{tcbinfo}
+
+\booksubsection{三、BL ロック（Bootloader ロック）：フラッシュの第一の門}
+
+BLロックの役割：
+
+\subsubsection*{セキュリティ保護}
+
+\begin{itemize}
+  \item \textbf{：マルウェアのシステムフラッシュを防止。}盗難防止
+  \item \textbf{：スマホがフラッシュされても、元のアカウントパスワードがなければ使用不可。}保証制限
+  \item \textbf{：BLアンロックは通常、公式保証の喪失を意味します。}各ブランドBLロックポリシー：
+\end{itemize}
+
+\subsubsection*{各ブランドのBLロック方針：}
+
+\begin{itemize}
+  \item \textbf{Xiaomi}：ロック解除可能。アカウント連携と待機期間（7〜30日）が必要。
+  \item \textbf{Huawei}OnePlus
+  \item \textbf{：アンロック可能、比較的緩和。}OPPO/vivo
+  \item \textbf{：一部機種はアンロック可能、申請が必要。}Samsung
+  \item \textbf{Samsung}Apple
+  \item \textbf{Apple}三、Root権限：Androidの「スーパーアドミン」
+\end{itemize}
+
+\booksubsection{四、ADB 実用コマンド：PC からスマホを操作}
+
+ADB の正式名称は Android Debug Bridge で、Google が公式提供するコマンドラインツールです。PC から USB または Wi-Fi 経由で Android スマホと通信できます。Root 不要で、スマホの「USB デバッグ」がオンなら使えます。「PC からスマホに指示を出すリモコン」と理解してください——フラッシュ、App インストール、ファイル転送、ログ確認にすべて必要です。
+
+\subsubsection*{USB で接続する方法：}
+
+\begin{enumerate}
+  \item スマホ側：開発者オプション 「USB デバッグ」をオン。
+  \item PC 側：Google 公式から Platform Tools（\texttt{adb}3. タスク（Task）：AIに何をするか明確に伝える\texttt{fastboot}の2つの実行ファイルを含む）をダウンロードし、任意のディレクトリに解凍。
+  \item データケーブルでスマホと PC を接続。スマホに「USB デバッグを許可しますか？」のポップアップが表示されるので、「常に許可」にチェックを入れて確定。
+  \item PC のコマンドライン（Windows の PowerShell や cmd）で\texttt{adb devices}を実行し、\texttt{List of devices attached /\allowbreak  xxxxxxxx device}のような出力があれば接続成功です。
+\end{enumerate}
+
+\begin{tcbwarn}{ドライバーと認証ポップアップを見逃さないで}
+Windows ユーザーで\texttt{adb devices}が「unauthorized」と表示されるかデバイスがリストされない場合、多くはドライバーが未インストールかスマホで「許可」を押し忘れたのが原因です。Samsung/Xiaomi などのブランドは各社の「USB ドライバー」や「スマホアシスタント」をインストールしてドライバーを補完できます。Mac と Linux は通常ドライバー不要です。スマホのポップアップを誤って消してしまった場合は、ケーブルを挿し直すと再表示されます。
+
+\end{tcbwarn}
+
+\subsubsection*{よく使う ADB コマンド：}
+
+\begin{itemize}
+  \item \texttt{adb install app.\allowbreak apk}: PC 上の APK をスマホにインストール（\texttt{-\allowbreak r}は上書きインストールでデータ保持；\texttt{-\allowbreak s}は SD カードにインストール）。
+  \item \texttt{adb uninstall com.\allowbreak xxx.\allowbreak xxx}: パッケージ名で App をアンインストール。
+  \item \texttt{adb push PCパス /\allowbreak sdcard/\allowbreak 目標パス}: PC のファイルをスマホにプッシュ。
+  \item \texttt{adb pull /\allowbreak sdcard/\allowbreak ファイル PCパス}: スマホのファイルを PC に取り込む（WeChat で自分に送ってダウンロードするよりはるかに速い）。
+  \item \texttt{adb shell}: スマホの Linux Shell に入り、直接\texttt{ls}、\texttt{pm}、\texttt{am}などのコマンドを実行できます。
+  \item \texttt{adb reboot bootloader}: スマホを Fastboot モードで再起動（フラッシュの入口）。
+  \item \texttt{adb reboot recovery}: Recovery モードで再起動。
+  \item \texttt{adb shell pm list packages}: スマホにインストールされたすべての App のパッケージ名をリスト（パッケージ名検索に必須）。\texttt{-\allowbreak s}を付けるとシステム App のみ、\texttt{-\allowbreak 3}を付けるとサードパーティ App のみ。
+  \item \texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 パッケージ名}: 現在のユーザーのプリインストール App をアンインストール。Root 不要。下記の実戦を参照。
+\end{itemize}
+
+\subsubsection*{Root 不要でプリインストール App をアンインストールする実戦：}
+
+これは ADB の最も実用的な機能の一つです：\texttt{pm uninstall -\allowbreak -\allowbreak user 0}コマンドで「現在のユーザー」のプリインストール App をアンインストールでき、Root 不要でシステムパーティションにも影響しません。アンインストールされた App はシステムから「消滅」しますが、実際にはシステムパーティションに残っており、初期化すれば戻ります。
+
+\begin{enumerate}
+  \item まず\texttt{adb shell pm list packages -\allowbreak s}で全システム App をリストし、アンインストールしたいパッケージ名を見つけます。例えば Xiaomi ブラウザは\texttt{com.\allowbreak android.\allowbreak browser}、Huawei アプリストアは\texttt{com.\allowbreak vmall.\allowbreak client}。
+  \item パッケージ名がどの App か不明な場合は、PC で\texttt{adb shell pm list packages | findstr キーワード}で検索するか、サードパーティ App「Package Viewer」をインストールしてスマホ上で各 App のパッケージ名を直接確認できます。
+  \item アンインストールを実行：\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 パッケージ名}、例えば\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 com.\allowbreak android.\allowbreak browser}。戻り値が\texttt{Success}なら成功です。
+  \item 復元したい場合は？2つの方法：(1) 初期化（最も徹底だが面倒）；(2) 再インストール：\texttt{adb shell cmd package install-\allowbreak existing パッケージ名}。
+\end{enumerate}
+
+\textbf{システムコアパッケージをむやみに削除しないでください}\par
+
+「pm uninstall --user 0」は Root 不要の安全な方法ですが、重要システム App（\texttt{com.\allowbreak android.\allowbreak systemui}ステータスバー、\texttt{com.\allowbreak android.\allowbreak phone}電話、\texttt{com.\allowbreak android.\allowbreak settings}設定など）をむやみに削除すると、システムクラッシュ、ブラックスクリーン、起動不能などの深刻な問題を引き起こします。削除前に「このパッケージ名は削除できるか」を検索し、少なくとも間違えないようにしてください。一度に1-2個だけ削除し、問題ないことを確認してから続行することを推奨します。
+
+\begin{tcbinfo}{豆知識：--user 0 とは何か}
+Android 4.2 以降はマルチユーザーをサポートし、各ユーザーに独立した ID があります（機主は0、追加ユーザーは10から開始）。\texttt{-\allowbreak -\allowbreak user 0}は「現在の機主のみアンインストール」を意味し、システムパーティション内の APK ファイルは依然存在し、機主に表示されなくなるだけです。これが Root 不要の理由——システムファイルは変更せず、「ユーザー設定」を変えただけです。Root 後のアンインストールとの最大の違いもここにあります：Root アンインストールはシステムから本当に削除し、全ユーザーから消えますが、ADB アンインストールは「現在のユーザーに非表示」にするだけです。
+
+\end{tcbinfo}
+
+\booksubsection{五、Root 権限：Android の「スーパー管理者」}
+
+Root 権限は Linux のスーパーユーザーに相当し（/ ディレクトリに対して完全な制御権を持ち、任意のファイルの読み書きが可能）、Android システムの最高権限です。Windows の Administrator とは本質的な違いがあります：Windows はセキュリティ上の理由から管理者に多くの制限を設けており（真の最高権限は TrustedInstaller）、Administrator であっても Linux root のように直接\texttt{sudo rm -\allowbreak rf /\allowbreak *}を実行できません。Root 権限を取得すると、システムファイルの変更、プリインストール App のアンインストール、Root 必要な高度な App の使用が可能になります。
+
+\subsubsection*{アンインストールできないプリインストールアプリを削除。}
+
+\begin{itemize}
+  \item 高度な機能Appの使用（Titanium Backup、Greenifyなど）。
+  \item システムインターフェースと機能の修正。
+  \item サードパーティRecoveryとカスタムROMのインストール。
+  \item Rootのリスク：
+\end{itemize}
+
+\subsubsection*{保証喪失}
+
+\begin{itemize}
+  \item \textbf{ROM焼きにはリスクがあり、操作には慎重さが必要です。次のような問題が発生する可能性があります：}セキュリティリスク
+  \item \textbf{：マルウェアAppがRoot権限を取得し、深刻な結果を招く可能性。}システム不安定
+  \item \textbf{：誤操作でシステムクラッシュの可能性。}銀行App使用不可
+  \item \textbf{：多くの銀行·決済AppはRootを検出すると実行を拒否。}OTA更新失敗
+  \item \textbf{：公式システム更新を正常に受信できない可能性。}深刻な警告
+\end{itemize}
+
+\textbf{Root操作にはリスクがあり、スマホがレンガ化（起動不可）する可能性があります。初心者の場合、まず関連知識を十分に学び、完全なバックアップがあることを確認してください。操作前にチュートリアルを注意深く読み、あなたの機種とシステムバージョンを確認してください。}\par
+
+四、一般ユーザーへのアドバイス
+
+\booksubsection{六、SafetyNet と Play Integrity 認証：なぜ Root 後に銀行 App が使えないのか}
+
+多くの Root ユーザーがこんな絶望的瞬間を経験しています：Root 後、意気揚々とモジュールをインストールしたのに、銀行 App を開くと——「お使いのデバイスは安全でないため使用できません」。Google Pay も使えず、Netflix すら高画質再生を拒否されます。その背後にあるのは Google の2つのデバイス完全性認証メカニズム：旧式の SafetyNet と新型の Play Integrity API です。
+
+\subsubsection*{SafetyNet / Play Integrity とは：}
+
+\begin{itemize}
+  \item \textbf{SafetyNet Attestation（旧版、2017年〜）}: Google が早期に発表したデバイス完全性チェック API。App はこれを通じて Google サーバーに「このデバイスは CTS 互換性テストに合格しているか、未変更の公式状態か」を問い合わせます。戻り値は Basic Attestation（基本検証）と Strong Attestation（強力検証、ハードウェアキー依存）に分かれます。Google は SafetyNet を2024年以降順次廃止すると発表しています。
+  \item \textbf{Play Integrity API（新版、2022年〜）}: Google が発表した代替方案で、SafetyNet より厳格かつ包括的です。デバイス完全性に加え、「アプリ完全性」（App が改ざんされていないか）と「アカウント/認可完全性」（ユーザーアカウントが Google に信頼されているか）も含みます。新規 App は Play Integrity に移行すべきです。
+  \item \textbf{誰が使うか}: 銀行、金融、決済系 App（Google Pay、各銀行のネットバンキング、支付宝/WeChat Pay の一部シーン）、ストリーミング（Netflix の高画質著作権保護）、一部ゲームのアンチチート（Tencent/NetEase の一部ゲーム）、企業オフィス App（MDM デバイスコンプライアンスチェック）。
+\end{itemize}
+
+\subsubsection*{Play Integrity の3段階認証結果：}
+
+\begin{itemize}
+  \item \textbf{MEETS\_DEVICE\_INTEGRITY（デバイス完全性合格）}: デバイスは正規 Android システムを実行し、Bootloader は未解除、Root なし、CTS 互換性テスト合格。銀行·決済系 App を正常に使用できます。
+  \item \textbf{MEETS\_BASIC\_INTEGRITY（基本完全性合格）}: デバイスは基本的に信頼できるが、軽微な異常の可能性あり。一部 App はダウングレード使用（Netflix は再生可能だが画質制限など）、厳格な銀行 App は直接拒否します。
+  \item \textbf{MEETS\_STRONG\_INTEGRITY（強力完全性合格）}: 最高レベル。ハードウェアキーの裏付けが必要（Google Pixel シリーズの Titan M チップなど）。ほとんどのサードパーティブランドは Root なしでもこのレベルに達しません。
+  \item \textbf{ラベルなし（NO\_INTEGRITY）}: デバイスが Root 済み、BL 解除済み、サードパーティ ROM フラッシュ済み、またはエミュレータと認識され、ほとんどの決済/銀行 App が直接実行を拒否します。
+\end{itemize}
+
+\subsubsection*{なぜ Root 後にこれらの App が使えなくなるのか：}
+
+App は Play Integrity API で Google サーバーに認証リクエストを送信し、Google はデバイスの複数指標をチェックします——Bootloader ロック状態、システムパーティションの変更有無、su バイナリの存在、SELinux が Permissive モードかなど。いずれかの異常が認証レベルの低下または空を引き起こし、銀行 App は「デバイスが安全でない」と判断してサービスを拒否します。
+
+\subsubsection*{現代の隠蔽方案：Magisk Hide / Shamiko / Zygisk：}
+
+Root の利便性を享受しながら銀行 App も使えるよう、コミュニティは一連の「Root 状態隠蔽」方案を開発しました。核心的な考え方はすべて同じです：検出プログラムが見るのは変更されたシステムではなく、「正常に見える」デバイスにする。
+
+\begin{itemize}
+  \item \textbf{：古参のRoot方案、現在は更新停止。}: 現在最も主流な Systemless Root 方案——システムパーティションを変更せず、マウント方式で Root を実現します。この設計の利点は OTA 更新失敗の確率が低く、アンインストールが比較的クリーンで、後続のすべての隠蔽方案の基盤となることです。ただし Magisk の使用には BL ロック解除が依然として必要です。
+  \item \textbf{Magisk Hide（開発終了）}: Magisk に初期内蔵されていた隠蔽モジュールで、指定 App に対して Root を隠せました。しかし2021年以降 Magisk 公式から削除されました。理由は Google が検出手法を継続強化し、双方が「いたちごっこ」に陥ったためです。
+  \item \textbf{Zygisk}: Magisk 24.0+ で導入された新メカニズム。Riru に似て、Zygote プロセスへの注入でモジュール読み込みを実現し、システム直接変更より隠蔽性が高いです。Zygisk の有効化は現代隠蔽方案使用の前提です。
+  \item \textbf{Shamiko}: 現在最も主流な隠蔽モジュール。Zygisk と連携し、指定 App（「リバースホワイトリスト」モード）に対して Root を隠蔽、Magisk 自身を隠蔽、Bootloader ロック状態を偽装します。Shamiko は LSPosed リポジトリまたは GitHub から配布されます。
+  \item \textbf{Play Integrity Fix（osm0sis）}: Google Play Integrity 検出に特化した Magisk モジュール。デバイスのフィンガープリントを変更し、Google に未 Root の公式機種と認識させます。
+\end{itemize}
+
+\begin{tcbwarn}{いたちごっこは永遠に終わらない}
+Google は定期的に検出ルールを更新し、App メーカーも Play Integrity 検証をアップグレードします。今日使える隠蔽方案が明日認識されるかもしれません。もし銀行/決済 App に完全に依存している（日常送金、QRコード決済など）なら、最も確実な選択は依然として：Root しない、BL ロックを解除しない。隠蔽方案は「メイン機 Root なし + サブ機で Root 遊び」のプレイヤー構成により適しています。
+
+\end{tcbwarn}
+
+\booksubsection{七、一般ユーザーへのアドバイス}
+
+\begin{itemize}
+  \item \textbf{：有効化して、アニメーション加速などの機能を体験しても良いが、他の設定は変更しない。}: オンにして、アニメーション加速、GPU レンダリングプロファイリングなどの機能を体験できますが、理解できない他のオプションはむやみに変更しないでください。
+  \item \textbf{OEM ロック解除と BL ロック}: フラッシュや Root の予定がなければ、両方のスイッチをデフォルト（オフ）のままが最も安全です。
+  \item \textbf{ADB}: Root 不要の強力ツールで、一般でも使えます——例えば\texttt{pm uninstall -\allowbreak -\allowbreak user 0}でプリインストール App をアンインストール。ただし削除前にパッケージ名が削除可能か必ず確認してください。
+  \item \textbf{ワイヤレスシステムアップデート}: 一般ユーザーの Root は推奨しません。リスクが利益を上回ります。どうしても必要な機能がある場合は、Root 不要の代替方案を先に調べましょう（ADB でプリインストール削除、Shizuku で一部 Root 機能を代替など）。
+\end{itemize}
+
+\begin{tcbpractice}{設定 > デバイス情報に入る。}
+\begin{enumerate}
+  \item 「ビルド番号」を連続7回タップ、開発者モードが有効化されたと表示されるまで。
+  \item 設定に戻り、「開発者オプション」を見つける（通常は設定下部または「システム」内）。
+  \item 「ウィンドウアニメーションスケール」、「トランジションアニメーションスケール」、「アニメーション時間スケール」を見つけ、すべて0.5xまたはオフに設定。
+  \item スマホが速くなったか感じてみる。
+  \item 第二十章付録：Termux——Androidデバイス上のポータブルLinuxターミナル環境
+\end{enumerate}
+
+\end{tcbpractice}

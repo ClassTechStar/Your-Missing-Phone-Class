@@ -1,0 +1,188 @@
+\bookchapter{Anexo del Capítulo 23: Guia de inicio de GitHub}
+
+\chapterintro{En el capítulo anterior hablamos del “pensamiento computacional”, pero para llevarlo a la practica y colaborar con otros en proyectos, hay un nombre inevitable: GitHub. Tanto si eres estudiante de informática participando en competencias, si quieres guardar tus proyectos de código, o simplemente quieres ver que estan desarrollando los programadores de todo el mundo, GitHub es una plataforma que debes conocer. En esta sección empezamos desde los conceptos más básicos para ayudarte a construir una comprensión clara.}
+
+\booksection{I. ¿Qué es GitHub exactamente?}
+
+Dicho simplemente, GitHub es una\textbf{plataforma de alojamiento y colaboración de código basada en Git}. Se lanzó en 2008, fue adquirida por Microsoft en 2018 y sigue siendo la plataforma de alojamiento de código abierto más grande del mundo, albergando cientos de millones de repositorios que cubren casi todos los lenguajes de programación principales.
+
+Para entenderlo con una analogía:\textbf{Git es tu diario en el ordenador, GitHub es una plataforma de blog pública}— puedes publicar tus propios trabajos, seguir proyectos de otros, participar en discusiones y colaboraciones. No es solo un “almacén trasero para programadores”, sino más bien una “ciudad tecnológica” construida conjuntamente por desarrolladores de todo el mundo — los proyectos nacen aquí, se iteran, se discuten y se reútilizan.
+
+Para la gente común, GitHub tampoco está fuera de alcance. Muchos no programadores lo usan para alojar notas, libros electrónicos, blogs personales e incluso para respaldar archivos de configuración. Mientras tengas aunque sea un poco de necesidad de “organizar tus cosas y compartirlas”, GitHub merece que lo conozcas.
+
+\booksection{II. Diferencia entre Git y GitHub (concepto clave)}
+
+Mucha gente confunde estos dos términos al contacto por primera vez; aquí te ayudo a aclararlo:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Elemento de comparación} & \textbf{Git} & \textbf{GitHub} \tabularnewline
+\hline
+Naturaleza & Herramienta de control de versiones (software) & Plataforma de alojamiento de código (sitio web) \tabularnewline
+Ubicación de ejecución & En ordenador local & En la nube (acceso por navegador) \tabularnewline
+Responsabilidad principal & Registra cada cambio de archivo (qué cambió, quién lo cambió, cuándo) & Pone repositorios Git en la nube para facilitar almacenamiento, visualización y colaboración \tabularnewline
+¿Requiere internet? & No, funciona sin conexión & Requiere conexión a internet \tabularnewline
+Pertenencia & Software de código abierto, creado por Linus Torvalds (padre de Linux) & Producto de Microsoft \tabularnewline
+Competidores similares & SVN, Mercurial & GitLab, Gitee, Bitbucket \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+En resumen:\textbf{Git gestióna “como registrar cambios”, GitHub gestióna “donde guardar los cambios y como colaborar”}. Git es una herramienta que funciona localmente; GitHub es una plataforma que pone repositorios Git en la nube para facilitar colaboracion y visualización. Puedes usar Git sin GitHub (por ejemplo para gestionar versiones de tu propio código), pero si usas GitHub debes usar obligatoriamente Git (porque GitHub se basa en Git).
+
+\booksection{III. Conceptos y funciones principales de GitHub}
+
+\booksubsection{Conceptos básicos}
+
+Antes de empezar, conoce algúnos terminos frecuentes; de lo contrario la interfaz de GitHub te parecera confusa:
+
+\begin{itemize}
+  \item \textbf{Repositorío (Repository, abreviado Repo)}: cada proyecto corresponde a un repositorio que contiene todos los archivos de código, versiones históricas y documentos del proyecto. Puedes entenderlo como una "carpeta de proyecto".
+  \item \textbf{Commit}: un registro de modificación del código. Cada commit incluye un mensaje descriptivo que registra "que se cambio y por que". Esta es la base de la "viaje en el tiempo" de Git/GitHub.
+  \item \textbf{Rama (Branch)}: una linea de desarrollo independiente que se separa de la rama principal. Por ejemplo, si quieres anadir una nueva función, puedes crear una rama para desarrollarla por separado y luego fusionarla de vuelta a la rama principal sin afectar a otros.
+  \item \textbf{Clonar (Clone)}: copiar completamente un repositorio de la nube a tu ordenador local para poder modificar el código localmente.
+  \item \textbf{Push / Pull}: Push sube código local a GitHub; Pull descarga el último código de GitHub a tu ordenador local. Son las dos acciones básicas para sincronizar código en colaboracion de equipo.
+  \item \textbf{Pull Request (PR)}: cuando terminas de modificar código en una rama y quieres fusionarlo con la rama principal, inicias un PR para que los miembros del equipo revisen el código antes de fusionar. Este es el mecanismo central de colaboracion en GitHub.
+  \item \textbf{Issue}: se usa para registrar bugs, solicitudes de funciones y temas de discusion. Cada Issue es como un hilo de discussion donde se puede asignar un responsable y etiquetar.
+  \item \textbf{Fork}: copiar el repositorio de otra persona a tu propia cuenta. Puedes modificar libremente tu copia sin afectar el repositorio original. Cuando hayas terminado, puedes enviar un PR al autor original solicitando fusionar tus mejoras.
+\end{itemize}
+
+\booksubsection{Funciones principales}
+
+GitHub ofrece no solo almacenamiento de código, sino también:
+
+\begin{itemize}
+  \item \textbf{Control de versiones}: registra el historial de cada cambio en el código; si algo sale mal, puedes volver a cualquier versión anterior normal.
+  \item \textbf{Colaboracion en equipo}: soporta desarrollo paralelo multip usuario en un mismo proyecto; multiples personas pueden desarrollar simultaneamente sin sobrescribir ni crear conflictos.
+  \item \textbf{Seguimiento de problemas}: usa Issues para registrar bugs y solicitudes de funciones, facilitando el seguimiento del equipo.
+  \item \textbf{Gestíon de proyectos}: integra tareas, tableros de proyecto (Projects) y otras herramientas de gestión; equivalente a tener un Trello ligero integrado.
+  \item \textbf{Automatización}: mediante\textbf{GitHub Actions}, compila, prueba, empaqueta e despliega automáticamente tras cada envío de código. Es la herramienta central de "CI/CD (integracion/despliegue continuo)" moderno.
+  \item \textbf{Gestíon de documentación}: README presenta el proyecto, Wiki almacena arquitectura detallada y normas de desarrollo, Pages incluso puede alojar sitios web estaticos.
+  \item \textbf{Alojamiento y presentación de código}: cada repositorio tiene una hermosa pagina web con resaltado de sintaxis; es la "carta de presentación" de tu obra técnica.
+  \item \textbf{Comunidad open source}: puedes Star (Guardar) proyectos que te gusten, Watch (seguir) la actividad de proyectos, Follow (seguir) desarrolladores, participando en la colaboracion open source global.
+\end{itemize}
+
+\booksection{IV. Registro e inicio: Crea tu primer repositorio en 5 minutos}
+
+\booksubsection{Registrar cuenta}
+
+\begin{enumerate}
+  \item Visita\href{https://github.com}{github.com}y haz clic en "Sign up".
+  \item Introduce tu correo electrónico, establece una contrasena y un nombre de usuario (aparecera en la URL de tu perfil; se recomienda usar inglés, ej.\texttt{github.\allowbreak com/\allowbreak tunombre}).
+  \item Completa la verificación de correo y el captcha.
+  \item Elige el plan gratuito (Free); es completamente suficiente para usuarios individuales.
+\end{enumerate}
+
+\booksubsection{Crear tu primer repositorio}
+
+\begin{enumerate}
+  \item Tras iniciar sesion, haz clic en "+" en la esquina superior derecha y selecciona "New repository".
+  \item Introduce el nombre del repositorio (Repository name), por ejemplo\texttt{my-\allowbreak first-\allowbreak project}.
+  \item Escribe una breve descripción (Descriptíon) para que otros sepan de que trata este repositorio.
+  \item Elige Publico (Public) o Privado (Private). Los repositorios publicos son visibles para todos; los privados solo para ti y tus colaboradores. La cuenta gratuita soporta repositorios privados ilimitados.
+  \item Marca "Add a README file" — README es el "manual de instrucciones" del proyecto; se recomienda en cada repositorio.
+  \item Haz clic en "Create repository" y tu primer repositorio GitHub nacera!
+\end{enumerate}
+
+\begin{tcbinfo}{Mini-dato: que es README}
+README.md es un archivo en formato Markdown, lo primero que ven otros al abrir tu repositorio. Un buen README suele contener: descripción del proyecto, método de instalación, ejemplos de uso, licencia, contacto. Escribir un buen README es una competencia básica de programador y la primera barrera para que otros usen tu proyecto.
+
+\end{tcbinfo}
+
+\booksection{V. Flujo de trabajo básico: de local a la nube}
+
+Para entender el flujo de trabajo de GitHub, recuerda este ciclo:\textbf{modificación local -> area de preparación (stage) -> commit -> push -> actualización en la nube}. A continuacion explico cada paso con palabras sencillas:
+
+\begin{enumerate}
+  \item \textbf{Modificar archivos}: escribe código o edita documentos en tu editor local.
+  \item \textbf{git add}: anade los archivos modificados al "area de preparación (staging)", equivalente a decirle a Git "estos cambios estoy listo para registrarlos".
+  \item \textbf{git commit}: registra oficialmente los cambios del staging como un "commit", acompanado de un mensaje descriptivo como "corregir bug de inicio de sesion". Este paso se completa solo localmente.
+  \item \textbf{git push}: sube tus commits locales a GitHub en la nube para que otros puedan verlos.
+  \item \textbf{git pull}: antes de empezar a trabajar, descarga el último código desde la nube para mantener tu local sincronizado con el resto del equipo.
+\end{enumerate}
+
+Para principiantes, recuerda esta fórmula:\textbf{“primero pull, luego modificas, al terminar haces add, commit con descripción, finalmente push”}. Adopta este hábito y la colaboracion en equipo sera ordenada.
+
+\booksection{VI. Flujo de colaboración en equipo: cómo funciona Pull Request}
+
+Lo más poderoso de GitHub es su mecanismo de colaboracion. Un flujo tipico de colaboracion en equipo es el siguiente:
+
+\begin{enumerate}
+  \item \textbf{Crear rama}: desde la rama principal (generalmente llamada main o máster) crea una nueva rama, por ejemplo\texttt{feature/\allowbreak login}, y desarrolla la nueva función en ella.
+  \item \textbf{Desarrollar y hacer commits}: escribe código en la nueva rama, haciendo multiples commits para registrar el progreso.
+  \item \textbf{Push a GitHub}: sube la rama al repositorio en la nube.
+  \item \textbf{Iniciar Pull Request}: en la web de GitHub inicia un PR solicitando fusionar tu rama con la principal. Explica claramente que cambios hace este PR y por que.
+  \item \textbf{Revisión de código (Code Review)}: los miembros del equipo revisan tu código, dan opiniones o sugieren modificaciones. Puedes seguir haciendo commits según los comentarios; el PR se actualiza automáticamente.
+  \item \textbf{Fusionar (Merge)}: tras aprobar la revisión, haz clic en "Merge" para fusionar el código con la rama principal. Tu contribucion entra oficialmente en el proyecto!
+\end{enumerate}
+
+Este flujo garantiza que\textbf{todo código que entra en la rama principal pasa por revisión}, reduciendo enormemente la probabilidad de errores. Los proyectos open source también usan este mecanismo para aceptar contribuciones de extraños de todo el mundo — puedes enviar un PR a cualquier proyecto open source conocido y, si se acepta, te conviertes en colaborador de ese proyecto.
+
+\booksection{VII. Escenarios típicos de uso de GitHub}
+
+\booksubsection{Estudíantes: competencias y proyectos academicos}
+
+Los estudiantes de informática que participan en ACM, hackathons o trabajos de fin de carrera casi siempre usan GitHub. Sirve tanto como plataforma de colaboracion en equipo como como ventana de exhibicion de trabajos — los jueces pueden ver directamente tu repositorio para evaluar la calidad del código y el proceso de colaboracion. Muchas empresas piden el enlace a tu perfil de GitHub como prueba de capacidad técnica al contratar.
+
+\booksubsection{Base de conocimiento personal y alojamiento de notas}
+
+Los no programadores también pueden usar GitHub. Muchos lo usan para alojar notas de estudio, blogs técnicos (con GitHub Pages se puede crear un sitio web gratis), libros electrónicos. Escritura en Markdown + control de versiones con Git + respaldo en la nube, tres en uno.
+
+\booksubsection{Participar en proyectos open source}
+
+GitHub es la fortaleza central del movimiento open source global. Puedes Forkar proyectos que te gusten, modificarlos y enviar PRs para devolver mejoras a la comunidad; o simplemente StarGuardar buenos proyectos para seguir sus actualizaciones. Participar en open source es una via excelente para mejorar tus habilidades técnicas y acumular reputacion.
+
+\booksubsection{Despliegue automatizado y CI/CD}
+
+Con GitHub Actions puedes implementar un flujo totalmente automático de “código push -> prueba automática + despliegue al servidor”. Muchos blogs personales y sitios de documentación funcionan asi: escribes un artículo, haces push y el sitio se actualiza automáticamente.
+
+\booksubsection{Respaldo de código y sincronización multidispositivo}
+
+Usa los repositorios como nube; al cambiar de ordenador o trabajar con multiples dispositivos, un git pull te da el último código sin necesidad de copiar con USB.
+
+\booksection{VIII. Consejos para principiantes}
+
+\begin{itemize}
+  \item \textbf{Escribe mensajes de commit claros}: no uses mensajes inútiles como "update". Un buen commit message seria "corregir problema de redireccion tras inicio de sesion"; seis meses después seguiras sabiendo que hiciste.
+  \item \textbf{Comitea frecuentemente, avanza a pasos pequenos}: haz un commit cada vez que completes una función pequena, en vez de una sola vez al final del día. Asi es más fácil localizar problemas.
+  \item \textbf{Desarrolla en ramas, no modifiques directamente la rama principal}: incluso en proyectos personales, acostumbra a crear ramas; cuando colabores en equipo no estaras perdido.
+  \item \textbf{Usa bien .gitignore}: este archivo le dice a Git que archivos no incluir en el control de versiones (configuraciones de contraseñas, compilados, carpetas de dependencias), evitando subir archivos basura.
+  \item \textbf{Estudía proyectos open source excelentes}: navega por GitHub Trending, observa la estructura de código, la redacción del README y el flujo de colaboracion de los proyectos con más estrellas; es la forma más rápida y gratuita de mejorar.
+  \item \textbf{Solicitar el paquete estudíantil de GitHub}: tras verificar tu condición de estudiante, puedes obtener gratis créditos de númerosas herramientas y servicios de pago (Copilot, dominios, servicios en la nube, etc.), valor de miles de dólares.
+\end{itemize}
+
+\begin{tcbwarn}{Recordatorío de seguridad}
+\begin{itemize}
+  \item Nunca subas contraseñas, claves API, cadenas de conexión a bases de datos u otra información sensible a GitHub, especialmente en repositorios públicos — una vez filtrada, los rastreadores la capturarán al instante con graves consecuencias.
+  \item Si por error subiste información sensible, no basta con borrar el archivo (todavía está en el historial); usa\texttt{git filter-\allowbreak branch}o herramientas profesionales para limpiar el historial y cambia inmediatamente las claves filtradas.
+  \item Los repositorios privados tampoco son absolutamente seguros; lo mejor es gestionar la información sensible con variables de entorno, sin incluirla en el repositorio de código.
+\end{itemize}
+
+\end{tcbwarn}
+
+\begin{tcbinfo}{Notas importantes: acceso a GitHub desde China}
+El acceso a GitHub desde China a veces es inestable; puede que no se abra o que el clonado sea lento. Puedes intentar: (1) Usar sitios mirror nacionales (como GitClone, ghproxy) para acelerar el clonado; (2) Configurar Hosts o usar proxy; (3) Si colaboras principalmente dentro de China, también puedes considerar la alternativa nacional\textbf{Gitee}, con funciones similares y acceso rápido. Muchos equipos alojan simultáneamente en GitHub y Gitee, equilibrando internacionalización y velocidad doméstica.
+
+\end{tcbinfo}
+
+\textbf{Nivel intermedio: crea tu blog personal gratis con GitHub Pages}\par
+
+GitHub Pages te permite alojar gratis un sitio estático; combinado con generadores de sitios estáticos como Jekyll, Hexo o Hugo, puedes crear fácilmente un blog personal. Escribe artículos en Markdown, haz push al repositorio y el blog se actualiza automáticamente, con HTTPS y dominio personalizado incluidos. Innumerables blogs de tecnólogos están construidos así: costo cero, sin anuncios, con control de versiones.
+
+\booksection{IX. Resumen: por qué todos deberían conocer GitHub}
+
+GitHub hace tiempo que dejó de ser solo “una herramienta de programadores”; es más bien una\textbf{forma de trabajar en la era digital}: el control de versiones hace todo rastreable, los mecanismos de colaboración hacen que los equipos funciónen eficientemente, y el espíritu open source deja fluir libremente el conocimiento. Aunque no escribas código, entender conceptos como “commit, branch, merge” te ayudará a gestionar mejor cualquier contenido que necesite “modificaciones repetidas + colaboración entre varias personas” — desde tesis y documentos hasta notas y propuestas.
+
+Para los estudiantes de informática, GitHub es una hábilidad indispensable: es tu portafolio, plataforma de colaboración, repositorio de recursos de aprendizaje, y también el “currículum” más convincente cuando busques empleo en el futuro. Regístrate pronto, sube tus tareas de curso y pequeños proyectos, acumula poco a poco, y en unos años tendrás un historial técnico que deslumbrará a los entrevistadores.
+
+\begin{tcbpractice}{Práctica: completa tu primera experiencia con GitHub}
+\begin{enumerate}
+  \item Regístrate en una cuenta de GitHub, completa tu perfil (avatar, biografía, áreas tecnológicas de interés).
+  \item Crea un repositorio público llamado\texttt{hello-\allowbreak github}, marcando "Add a README file".
+  \item Entra al repositorio, haz clic en el botón de edición de README.md (icono de lápiz), escribe una presentación personal en Markdown y confirma los cambios.
+  \item Busca en la barra de búsqueda de GitHub una palabra clave que te interése (por ejemplo\texttt{python-\allowbreak tutoríal}) y dale Star a dos proyectos que te gusten.
+  \item (Intermedio) Instala Git en tu ordenador, clona el repositorio localmente, modifica el README y haz push de vuelta a la nube, completando un flujo de trabajo completo "local nube".
+\end{enumerate}
+
+\end{tcbpractice}

@@ -1,0 +1,222 @@
+\booksection{Chapitre 20 : Mode développeur et permissions avancées}
+
+\chapterintro{Ce chapitre est destiné à ceux qui veulent explorer en profondeur les « fonctionnalités cachées » du smartphone. Mode développeur, permissions Root, verrouillage BL... ces concepts très geek ne sont en réalité pas si éloignés des utilisateurs ordinaires.}
+
+\booksubsection{I. Mode développeur : déverrouiller les réglages cachés}
+
+Le mode développeur est un menu caché intégré au système du téléphone, contenant de nombreuses fonctions inutiles aux utilisateurs ordinaires mais nécessaires aux développeurs.
+
+\subsubsection*{Comment l'activer :}
+
+\begin{itemize}
+  \item \textbf{Android}: allez dans Réglages > À propos du téléphone > appuyez 7 fois sur « numéro de build », jusqu'à ce que le message « Vous êtes maintenant en mode développeur » apparaisse.
+  \item \textbf{HarmonyOS}: Réglages > À propos du téléphone > appuyez 7 fois sur « version HarmonyOS ».
+  \item \textbf{iOS}: les utilisateurs ordinaires ne peuvent pas activer le mode développeur complet, nécessite un compte Apple Developer payant.
+\end{itemize}
+
+\subsubsection*{Aperçu des fonctions courantes :}
+
+\begin{itemize}
+  \item \textbf{Débogage USB}: Interrupteur obligatoire pour les opérations avancées via ordinateur (flash, récupération de données, commandes ADB), voir la section « Commandes pratiques ADB » de ce chapitre.
+  \item \textbf{Afficher les opérations tactiles}: Affiche les points de contact sur l'écran (un petit point suit le doigt), idéal pour enregistrer des tutoriels ou des démonstrations.
+\end{itemize}
+
+\subsubsection*{Lié aux performances et à la fluidité :}
+
+\begin{itemize}
+  \item \textbf{Réglage de la vitesse d'animation (échelle d'animation de fenêtre / échelle d'animation de transition / échelle de durée d'animation)}: Ces trois options contrôlent la durée des animations lors de l'ouverture d'applications et du changement de page. La valeur par défaut est 1x ; régler sur 0,5x rend le smartphone « apparemment » plus rapide (la vitesse d'exécution du programme ne change pas, seules les animations sont plus rapides) ; désactiver supprime les animations pour des transitions directes. La plupart des geeks règlent sur 0,5x, gardant une sensation de transition tout en paraissant plus rapide ; tout désactiver rend les opérations brutes et peut masquer les vrais ralentissements, vous donnant l'illusion que « c'est fluide ».
+  \item \textbf{Rendu GPU forcé (Force GPU Rendering)}: Force tout le dessin 2D à être traité par le GPU plutôt que par le CPU. Sur les anciens modèles ou certaines applications mal optimisées, cela peut améliorer la fluidité de défilement, mais augmente également la charge du GPU et la consommation d'énergie. Les smartphones modernes utilisent déjà massivement le rendu GPU par défaut, cet interrupteur a un impact limité sur les modèles milieu et haut de gamme, c'est surtout une option héritée du passé, les utilisateurs ordinaires peuvent laisser la valeur par défaut.
+  \item \textbf{Analyse du mode de rendu GPU (Profile GPU Rendering)}: Affiche en temps réel sur l'écran un histogramme du temps de rendu de chaque image, la ligne verte horizontale représente 16,6 ms (le seuil de temps d'image pour 60 fps). Si les barres dépassent la ligne verte, cela indique une perte d'images. C'est l'outil de prédilection des développeurs pour diagnostiquer les ralentissements d'applications, les utilisateurs ordinaires peuvent aussi l'utiliser pour comparer quelle application est mal optimisée — par exemple, si les barres d'une application dépassent souvent la ligne rouge lors du défilement, c'est probablement de sa faute.
+\end{itemize}
+
+\subsubsection*{Lié à l'arrière-plan et à l'autonomie :}
+
+\begin{itemize}
+  \item \textbf{Limitation des processus en arrière-plan}: Permet de définir « limitation standard », « 1 processus maximum », « 2 processus maximum », etc. En apparence, limiter les processus d'arrière-plan permet d'économiser de l'énergie, mais en réalité, la gestion intégrée d'Android est déjà performante, une limitation forcée provoque au contraire des rechargements fréquents des applications (le démarrage à froid consomme plus d'énergie et l'expérience se dégrade). Cette option est plutôt destinée au débogage, il n'est pas recommandé aux utilisateurs ordinaires de l'activer en permanence, conservez « limitation standard ».
+  \item \textbf{Ne pas conserver les activités}: Détruit chaque interface dès que vous la quittez. Fortement déconseillé, provoque des écrans blancs fréquents et des rechargements d'applications, à utiliser uniquement pour tester la logique de restauration d'une application.
+\end{itemize}
+
+\begin{tcbwarn}{Précautions}
+Les réglages du mode développeur peuvent affecter la stabilité du système, ne modifiez pas les options que vous ne comprenez pas. Après avoir activé le débogage USB, soyez prudent lors de la connexion à un ordinateur, ne vous connectez pas à des ordinateurs non fiables.
+
+\end{tcbwarn}
+
+\booksubsection{II. Déverrouillage OEM : l'« interrupteur de flash » dans les options de développement}
+
+Dans les options de développement se trouve un interrupteur discret mais important — « Déverrouillage OEM » (certaines marques l'appellent « Autoriser le déverrouillage OEM » ou « Déverrouillage de l'appareil »). Cet interrupteur ne déverrouille pas lui-même le bootloader, mais c'est une « autorisation préalable » : ce n'est qu'en l'activant que le fabricant vous permet de déverrouiller le BL via la commande fastboot ou l'outil de la marque.
+
+\begin{itemize}
+  \item \textbf{Rôle de l'interrupteur}: Équivaut à déclarer au fabricant « j'accepte de renoncer à la garantie et d'assumer les risques, veuillez m'autoriser à déverrouiller le BL ». Si cet interrupteur est fermé, toute commande de déverrouillage du BL sera directement rejetée.
+  \item \textbf{Relation avec le verrouillage BL}: Le déverrouillage OEM est la « demande de qualification », le déverrouillage BL est l'« opération réelle ». Le premier se fait d'un simple touché dans les réglages du smartphone, le second nécessite de demander un code de déverrouillage sur le site du fabricant et d'exécuter une commande fastboot sur ordinateur (par exemple\texttt{fastboot flashing unlock}), les deux sont indispensables.
+  \item \textbf{Une réinitialisation d'usine réinitialise-t-elle l'interrupteur ?}: Oui. L'interrupteur « Déverrouillage OEM » revient à l'état fermé après une réinitialisation d'usine, mais le verrouillage BL, une fois déverrouillé, est un état physique qui ne se reverrouille pas avec une réinitialisation d'usine — il faut exécuter manuellement\texttt{fastboot flashing lock}pour le reverrouiller.
+  \item \textbf{Quand faut-il l'activer ?}: À moins que vous ne soyez certain de vouloir flasher ou rooter, laissez-le fermé. Il est indépendant de l'« Débogage USB », les deux interrupteurs doivent généralement être activés simultanément lors du flash.
+\end{itemize}
+
+\begin{tcbinfo}{Le saviez-vous : pourquoi les fabricants ont-ils ajouté cet interrupteur ?}
+Les premières versions d'Android ne disposaient pas de cet interrupteur, les logiciels malveillants pouvaient flasher secrètement le système dès qu'ils obtenaient les permissions. Google a ensuite exigé que tous les fabricants Android intègrent un interrupteur « Déverrouillage OEM » dans les options de développement, comme une confirmation de « consentement éclairé de l'utilisateur ». C'est pourquoi, même si vous avez déverrouillé le BL, si l'interrupteur OEM est fermé, le reflash échouera.
+
+\end{tcbinfo}
+
+\booksubsection{III. Verrouillage BL (Bootloader) : la première porte du flash}
+
+Le Bootloader est le programme qui charge le système d'exploitation au démarrage du téléphone. Le verrou BL est un verrou ajouté par les fabricants pour la sécurité, empêchant les utilisateurs de flasher un système non officiel.
+
+\subsubsection*{Rôle du verrou BL :}
+
+\begin{itemize}
+  \item \textbf{Protection de sécurité}: empêche les logiciels malveillants d'être flashés dans le système.
+  \item \textbf{Anti-vol}: même si le téléphone est flashé, il ne peut pas être utilisé sans le mot de passe du compte d'origine.
+  \item \textbf{Restriction de garantie}: déverrouiller le BL signifie généralement perdre la garantie officielle.
+\end{itemize}
+
+\subsubsection*{Politique de verrou BL par marque :}
+
+\begin{itemize}
+  \item \textbf{Xiaomi}: peut être déverrouillé, nécessite de lier le compte et une période d'attente (7-30 jours).
+  \item \textbf{Huawei}: a cessé de fournir les codes de déverrouillage après 2018, officiellement impossible à déverrouiller.
+  \item \textbf{OnePlus}: peut être déverrouillé, relativement permissif.
+  \item \textbf{OPPO/vivo}: certains modèles peuvent être déverrouillés, nécessite une demande.
+  \item \textbf{Samsung}: peut être déverrouillé, mais déclenche le fusible Knox, perd Samsung Pay et d'autres fonctions.
+  \item \textbf{Apple}: les appareils iOS n'ont pas de concept de verrou BL au sens traditionnel, mais ont un mécanisme de sécurité similaire.
+\end{itemize}
+
+\booksubsection{IV. Commandes pratiques ADB : contrôler le smartphone depuis l'ordinateur}
+
+ADB signifie Android Debug Bridge, un outil en ligne de commande officiellement fourni par Google, permettant à un ordinateur de communiquer avec un smartphone Android via USB ou Wi-Fi. Il ne nécessite pas de Root, il suffit d'activer le « Débogage USB » sur le smartphone. On peut le comparer à une « télécommande permettant à l'ordinateur de donner des instructions au smartphone » — flash, installation d'applications, transfert de fichiers, consultation des journaux, tout dépend de lui.
+
+\subsubsection*{Comment se connecter via USB :}
+
+\begin{enumerate}
+  \item Côté smartphone : accédez aux options de développement activez « Débogage USB ».
+  \item Côté ordinateur : téléchargez Platform Tools depuis le site officiel de Google (incluant\texttt{adb}et\texttt{fastboot}deux fichiers exécutables), décompressez dans n'importe quel répertoire.
+  \item Connectez le smartphone et l'ordinateur avec un câble de données, le smartphone affichera la fenêtre « Autoriser le débogage USB ? », cochez « Toujours autoriser » et confirmez.
+  \item Dans la ligne de commande de l'ordinateur (PowerShell ou cmd sous Windows), exécutez\texttt{adb devices}, si la sortie ressemble à\texttt{List of devices attached /\allowbreak  xxxxxxxx device}, la connexion est établie.
+\end{enumerate}
+
+\begin{tcbwarn}{N'ignorez pas les pilotes et la fenêtre d'autorisation}
+Si les utilisateurs Windows voient\texttt{adb devices}afficher « unauthorized » ou ne pas lister du tout l'appareil, c'est probablement parce que les pilotes ne sont pas correctement installés ou que vous avez oublié de cliquer sur « Autoriser » sur le smartphone. Les marques comme Samsung/Xiaomi peuvent installer leurs « pilotes USB » ou « assistants smartphone » respectifs pour compléter les pilotes ; Mac et Linux sont généralement sans pilote. Si vous avez accidentellement fermé la fenêtre contextuelle du smartphone, débranchez et rebranchez le câble pour la faire réapparaître.
+
+\end{tcbwarn}
+
+\subsubsection*{Commandes ADB courantes :}
+
+\begin{itemize}
+  \item \texttt{adb install app.\allowbreak apk}: Installe un APK de l'ordinateur vers le smartphone (\texttt{-\allowbreak r}indique une installation par-dessus en conservant les données ;\texttt{-\allowbreak s}installer sur la carte SD).
+  \item \texttt{adb uninstall com.\allowbreak xxx.\allowbreak xxx}: Désinstalle une application par nom de package.
+  \item \texttt{adb push chemin\_ordinateur /\allowbreak sdcard/\allowbreak chemin\_destination}: Pousse un fichier de l'ordinateur vers le smartphone.
+  \item \texttt{adb pull /\allowbreak sdcard/\allowbreak fichier chemin\_ordinateur}: Tire un fichier du smartphone vers l'ordinateur (bien plus rapide que de s'envoyer sur WeChat puis de télécharger).
+  \item \texttt{adb shell}: Entre dans le shell Linux du smartphone, permet d'exécuter directement\texttt{ls}, le\texttt{pm}, le\texttt{am}et d'autres commandes.
+  \item \texttt{adb reboot bootloader}: Redémarre le smartphone en mode Fastboot (point d'entrée du flash).
+  \item \texttt{adb reboot recovery}: Redémarre en mode Recovery.
+  \item \texttt{adb shell pm list packages}: Liste les noms de package de toutes les applications installées sur le smartphone (indispensable pour trouver un nom de package). Ajoutez\texttt{-\allowbreak s}pour ne voir que les applications système, ajoutez\texttt{-\allowbreak 3}pour ne voir que les applications tierces.
+  \item \texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 nom\_de\_package}: Désinstalle une application préinstallée pour l'utilisateur actuel, sans Root, voir la section pratique ci-dessous.
+\end{itemize}
+
+\subsubsection*{Pratique : désinstallation d'applications préinstallées sans Root :}
+
+C'est l'une des fonctions ADB les plus pratiques : utiliser la commande\texttt{pm uninstall -\allowbreak -\allowbreak user 0}permet de désinstaller une application préinstallée pour « l'utilisateur actuel », sans nécessiter de Root et sans affecter la partition système. L'application désinstallée « disparaît » du système, mais est toujours présente dans la partition système et reviendra après une réinitialisation d'usine.
+
+\begin{enumerate}
+  \item Utilisez d'abord\texttt{adb shell pm list packages -\allowbreak s}pour lister toutes les applications système et trouver le nom de package que vous souhaitez désinstaller. Par exemple, le navigateur Xiaomi est\texttt{com.\allowbreak android.\allowbreak browser}, le magasin d'applications Huawei est\texttt{com.\allowbreak vmall.\allowbreak client}.
+  \item Vous ne savez pas à quelle application correspond un nom de package ? Sur l'ordinateur, utilisez\texttt{adb shell pm list packages | findstr mot-\allowbreak clé}pour rechercher, ou installez une application tierce « Package Viewer » pour consulter directement le nom de package de chaque application sur le smartphone.
+  \item Exécutez la désinstallation :\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 nom\_de\_package}, par exemple\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 com.\allowbreak android.\allowbreak browser}. Le retour de\texttt{Success}indique le succès.
+  \item Comment restaurer ? Deux méthodes : (1) réinitialisation d'usine (la plus radicale mais fastidieuse) ; (2) réinstallation :\texttt{adb shell cmd package install-\allowbreak existing nom\_de\_package}.
+\end{enumerate}
+
+\textbf{Ne supprimez jamais les packages système critiques}\par
+
+Bien que « pm uninstall --user 0 » soit une méthode sûre sans Root, supprimer aveuglément des applications système critiques (comme\texttt{com.\allowbreak android.\allowbreak systemui}barre d'état,\texttt{com.\allowbreak android.\allowbreak phone}téléphone,\texttt{com.\allowbreak android.\allowbreak settings}réglages) peut provoquer des crashs système, des écrans noirs, des impossibilités de démarrage et d'autres problèmes graves. Avant de supprimer, faites une recherche Google pour « ce nom de package peut-il être supprimé », mieux vaut supprimer moins que de se tromper. Il est recommandé de n'en supprimer qu'un ou deux à la fois, de confirmer qu'il n'y a pas de problème, puis de continuer.
+
+\begin{tcbinfo}{Le saviez-vous : que signifie --user 0 ?}
+Depuis Android 4.2, le multi-utilisateur est pris en charge, chaque utilisateur a un ID indépendant (le propriétaire est 0, les utilisateurs supplémentaires commencent à 10).\texttt{-\allowbreak -\allowbreak user 0}signifie « désinstaller uniquement pour le propriétaire actuel », le fichier APK dans la partition système existe toujours, il est simplement masqué pour le propriétaire. C'est pourquoi il ne nécessite pas de Root — aucun fichier système n'est modifié, seule la « configuration utilisateur » est changée. C'est aussi la plus grande différence avec la désinstallation après Root : la désinstallation après Root supprime réellement du système, aucun utilisateur ne l'a plus ; la désinstallation ADB ne fait que « masquer pour l'utilisateur actuel ».
+
+\end{tcbinfo}
+
+\booksubsection{V. Permissions Root : le « super administrateur » d'Android}
+
+Les permissions Root équivalent au superutilisateur sous Linux (contrôle total du répertoire /, lecture et écriture de n'importe quel fichier), c'est la permission la plus élevée du système Android. Il diffère fondamentalement de l'Administrator de Windows : Windows impose de nombreuses restrictions à l'administrateur par sécurité (la véritable permission la plus élevée est en fait TrustedInstaller), même l'Administrator ne peut pas exécuter directement comme le root Linux\texttt{sudo rm -\allowbreak rf /\allowbreak *}. Après avoir obtenu les permissions Root, vous pouvez modifier les fichiers système, désinstaller les applications préinstallées et utiliser des applications avancées nécessitant le Root.
+
+\subsubsection*{Avantages du Root :}
+
+\begin{itemize}
+  \item Désinstaller les applications préinstallées non désinstallables.
+  \item Utiliser des applications à fonctions avancées (comme Titanium Backup, Greenify).
+  \item Modifier l'interface et les fonctions du système.
+  \item Installer un Recovery tiers et des ROM personnalisées.
+\end{itemize}
+
+\subsubsection*{Risques du Root :}
+
+\begin{itemize}
+  \item \textbf{Perte de la garantie}: la plupart des fabricants ne garantissent pas les téléphones rootés.
+  \item \textbf{Risque de sécurité}: les applications malveillantes peuvent obtenir les permissions Root, avec des conséquences graves.
+  \item \textbf{Instabilité du système}: une mauvaise manipulation peut provoquer un crash du système.
+  \item \textbf{Applications bancaires inutilisables}: de nombreuses applications bancaires et de paiement détectent le Root et refusent de fonctionner.
+  \item \textbf{Échec des mises à jour OTA}: peut ne pas recevoir correctement les mises à jour système officielles.
+\end{itemize}
+
+\textbf{Avertissement sérieux}\par
+
+L'opération de Root comporte des risques, peut rendre le téléphone inutilisable (brique). Si vous êtes débutant, il est conseillé de bien vous renseigner au préalable et de vous assurer d'avoir une sauvegarde complète. Avant toute opération, lisez attentivement le tutoriel, confirmez votre modèle de téléphone et la version du système.
+
+\booksubsection{VI. Certification SafetyNet et Play Integrity : pourquoi les applications bancaires ne fonctionnent plus après le Root}
+
+Beaucoup d'utilisateurs Root ont connu ce moment de désarroi : après le Root, ils ont enthousiastement installé un tas de modules, puis en ouvrant l'application bancaire — « Votre appareil n'est pas sécurisé, utilisation impossible », Google Pay ne fonctionne plus, et même Netflix refuse la lecture HD. Derrière cela se cachent les deux mécanismes de certification d'intégrité d'appareil de Google : l'ancien SafetyNet et la nouvelle API Play Integrity.
+
+\subsubsection*{Qu'est-ce que SafetyNet / Play Integrity :}
+
+\begin{itemize}
+  \item \textbf{SafetyNet Attestation (ancienne version, depuis 2017)}: API de vérification d'intégrité d'appareil lancée précocement par Google, les applications interrogent les serveurs de Google pour savoir « si cet appareil a passé les tests de compatibilité CTS et s'il est dans un état officiel non modifié ». Les résultats sont divisés en Basic Attestation (vérification de base) et Strong Attestation (vérification forte, reposant sur des clés matérielles). Google a annoncé que SafetyNet sera progressivement abandonné après 2024.
+  \item \textbf{Play Integrity API (nouvelle version, depuis 2022)}: Solution de remplacement introduite par Google, plus stricte et plus complète que SafetyNet. Outre l'intégrité de l'appareil, elle inclut l'« intégrité de l'application » (l'app est-elle modifiée) et l'« intégrité du compte/autorisation » (le compte utilisateur est-il approuvé par Google). Les nouvelles applications devraient migrer vers Play Integrity.
+  \item \textbf{Qui l'utilise}: Applications bancaires, financières et de paiement (par exemple Google Pay, les services bancaires en ligne de chaque banque, certains scénarios d'Alipay/WeChat Pay), streaming (protection des droits d'auteur Netflix HD), anti-triche pour certains jeux (par exemple certains jeux de Tencent/NetEase), applications de bureau d'entreprise (vérification de conformité des appareils MDM).
+\end{itemize}
+
+\subsubsection*{Trois niveaux de certification Play Integrity :}
+
+\begin{itemize}
+  \item \textbf{MEETS\_DEVICE\_INTEGRITY (intégrité de l'appareil validée)}: L'appareil exécute un système Android officiel, le bootloader n'est pas déverrouillé, pas de Root, les tests de compatibilité CTS sont passés. Les applications bancaires et de paiement peuvent être utilisées normalement.
+  \item \textbf{MEETS\_BASIC\_INTEGRITY (intégrité de base validée)}: L'appareil est globalement fiable, mais peut présenter des anomalies mineures. Certaines applications peuvent être dégradées (par exemple, Netflix peut toujours lire mais avec une résolution limitée), certaines applications bancaires strictes refuseront directement.
+  \item \textbf{MEETS\_STRONG\_INTEGRITY (intégrité forte validée)}: Le niveau le plus élevé, nécessite une attestation par clé matérielle (par exemple la puce Titan M de la série Google Pixel), la plupart des modèles de marques tierces ne l'atteignent pas même sans Root.
+  \item \textbf{Aucune étiquette (NO\_INTEGRITY)}: L'appareil est rooté, le BL est déverrouillé, une ROM tierce a été flashée ou l'appareil est identifié comme émulateur, la grande majorité des applications de paiement/bancaires refuseront de fonctionner.
+\end{itemize}
+
+\subsubsection*{Pourquoi ces applications cessent-elles de fonctionner après le Root :}
+
+Les applications envoient une demande de certification aux serveurs de Google via l'API Play Integrity, Google vérifie plusieurs indicateurs de l'appareil — l'état de verrouillage du bootloader, si la partition système a été modifiée, la présence du binaire su, si SELinux est en mode permissif, etc. Toute anomalie entraîne une baisse ou un vide du niveau de certification renvoyé, et l'application bancaire, voyant « appareil non sécurisé », refuse naturellement le service.
+
+\subsubsection*{Solutions de masquage modernes : Magisk Hide / Shamiko / Zygisk :}
+
+Pour profiter de la commodité du Root tout en continuant à utiliser les applications bancaires, la communauté a développé une série de solutions pour « masquer l'état Root ». L'idée centrale est toujours : faire en sorte que le programme de détection voie non pas un système modifié, mais un appareil « d'apparence normale ».
+
+\begin{itemize}
+  \item \textbf{Magisk}: La solution Systemless Root la plus répandue actuellement — ne modifie pas la partition système, mais implémente le Root par montage. L'avantage de cette conception est que le risque d'échec des mises à jour OTA est faible, la désinstallation est propre, et c'est la base de toutes les solutions de masquage ultérieures. Cependant, l'utilisation de Magisk nécessite toujours le déverrouillage du BL.
+  \item \textbf{Magisk Hide (abandonné)}: Module de masquage intégré aux premières versions de Magisk, capable de masquer le Root pour des applications spécifiques. Mais il a été retiré de Magisk officiellement depuis 2021, la raison étant que Google n'a cessé d'améliorer ses méthodes de détection, les deux parties étant engagées dans un « jeu du chat et de la souris ».
+  \item \textbf{Zygisk}: Nouveau mécanisme introduit dans Magisk 24.0+, similaire à Riru, implémente le chargement de modules en injectant le processus Zygote, plus discret que la modification directe du système. L'activation de Zygisk est un prérequis pour l'utilisation des solutions de masquage modernes.
+  \item \textbf{Shamiko}: Le module de masquage le plus répandu actuellement, fonctionne avec Zygisk, peut masquer le Root pour des applications spécifiques (mode « liste blanche inversée »), masquer Magisk lui-même et falsifier l'état de verrouillage du bootloader. Shamiko est distribué via le dépôt LSPosed ou GitHub.
+  \item \textbf{Play Integrity Fix(osm0sis)}: Module Magisk spécifiquement conçu contre la détection Google Play Integrity, modifie l'empreinte de l'appareil (fingerprint) pour que Google considère votre appareil comme un modèle officiel non rooté.
+\end{itemize}
+
+\begin{tcbwarn}{Le jeu du chat et de la souris ne finira jamais}
+Google met à jour les règles de détection de temps en temps, et les éditeurs d'applications suivent en améliorant la vérification Play Integrity. Une solution de masquage qui fonctionne aujourd'hui peut être identifiée demain. Si vous dépendez entièrement des applications bancaires/de paiement (par exemple, transferts quotidiens, paiements par code QR), le choix le plus sûr reste de ne pas rooter et de ne pas déverrouiller le BL. Les solutions de masquage conviennent mieux à une configuration de joueur du type « smartphone principal non rooté + smartphone de secours rooté ».
+
+\end{tcbwarn}
+
+\booksubsection{VII. Conseils aux utilisateurs ordinaires}
+
+\begin{itemize}
+  \item \textbf{Mode développeur}: Peut être activé pour expérimenter l'accélération des animations, l'analyse du rendu GPU, etc., mais ne modifiez pas aveuglément d'autres options que vous ne comprenez pas.
+  \item \textbf{Déverrouillage OEM et verrouillage BL}: Si vous n'avez pas l'intention de flasher ou de rooter, laissez les deux interrupteurs dans leur état par défaut (fermé) pour une sécurité maximale.
+  \item \textbf{ADB}: Un outil puissant sans Root, utilisable par tout le monde — par exemple, utiliser\texttt{pm uninstall -\allowbreak -\allowbreak user 0}pour désinstaller des applications préinstallées. Mais avant de supprimer, vérifiez impérativement si le nom de package peut être supprimé.
+  \item \textbf{Root}: Le Root n'est pas recommandé pour les utilisateurs ordinaires, les risques l'emportent sur les bénéfices. Si vous avez vraiment besoin de certaines fonctions, renseignez-vous d'abord sur l'existence d'alternatives ne nécessitant pas de Root (par exemple, désinstaller les applications préinstallées via ADB, utiliser Shizuku pour remplacer certaines fonctionnalités Root).
+\end{itemize}
+
+\begin{tcbpractice}{À faire : activez le mode développeur et ajustez la vitesse d'animation}
+\begin{enumerate}
+  \item Allez dans Réglages > À propos du téléphone.
+  \item Appuyez 7 fois sur « numéro de build », jusqu'à ce que le message indique que le mode développeur est activé.
+  \item Revenez aux réglages, trouvez « Options de développement » (généralement en bas des réglages ou dans « Système »).
+  \item Trouvez « Échelle d'animation de fenêtre », « Échelle d'animation de transition », « Échelle de durée d'animation », réglez-les toutes sur 0,5x ou désactivez-les.
+  \item Sentez si le téléphone est devenu plus rapide.
+\end{enumerate}
+
+\end{tcbpractice}

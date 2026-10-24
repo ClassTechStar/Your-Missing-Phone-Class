@@ -1,0 +1,195 @@
+\bookchapter{第五十章：Kotlin 快速上手——安卓开发的第一语言}
+
+\chapterintro{这一章咱们正式学语言。别紧张——Kotlin 是出了名的“对新手友好”，而且你不需要背语法书：先掌握 20\% 的语法，就能看懂和写出 80\% 的日常代码。剩下的边做项目边查。记住咱们的学习原则：\textbf{看懂 > 记住，会用 > 精通}。}
+
+\booksection{一、变量与类型：给数据起名字}
+
+程序就是“数据 + 逻辑”。变量，就是给数据起个名字存起来。Kotlin 有两种声明方式：
+
+\begin{lstlisting}[language=Kotlin]
+val name = "张三"        // val：只读变量（推荐默认用这个）
+var age = 18             // var：可变变量（以后还能改）
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var 可以改
+// name = "李四"         // <i class="fas fa-times-circle mr-1"></i> val 不能改，编译会报错
+
+val score: Int = 100     // 也可以显式写明类型
+val pi = 3.14            // 不写也能自动推断
+\end{lstlisting}
+
+常用类型就几种，一张表记住：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{类型} & \textbf{存什么} & \textbf{示例} \tabularnewline
+\hline
+Int & 整数 & 42 \tabularnewline
+Double & 小数 & 3.14 \tabularnewline
+String & 文字 & "你好" \tabularnewline
+Boolean & 真/假 & true / false \tabularnewline
+List< T> & 一组数据 & listOf(1, 2, 3) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kotlin 常用基础类型\end{center}
+
+\begin{tcbinfo}{小贴士：val 优先原则}
+Kotlin 社区的铁律：\textbf{默认用 val，确有必要再用 var}。能用 val 的地方用 var，IDE 会黄字警告你。这个习惯能帮你少掉一大类“变量被意外修改”的 bug——代码越少变化，越容易推理。
+
+\end{tcbinfo}
+
+\booksection{二、函数：把逻辑打包成“按钮”}
+
+函数是一段有名字的逻辑，像遥控器上的按钮——按一下（调用），就执行一串动作。Kotlin 里用\texttt{fun}声明：
+
+\begin{lstlisting}[language=Kotlin]
+fun greet(name: String): String {
+    return "你好，$name！"     // $ 符号把变量插进字符串
+}
+
+println(greet("张三"))        // 输出：你好，张三！
+
+// 单行函数可以简写成表达式
+fun add(a: Int, b: Int) = a + b
+
+println(add(3, 5))            // 输出：8
+\end{lstlisting}
+
+几个要点：参数写在括号里（名字在前、类型在后，用冒号隔开）；返回类型写在括号后；\textbf{字符串模板}\texttt{\$变量名}是 Kotlin 的招牌便利——不用再像 Java 那样“字符串 + 变量”地拼来拼去。
+
+\booksection{三、条件与循环：让程序会“思考”}
+
+程序的智能来自两件事：\textbf{会判断}（if/when）和\textbf{会重复}（for/while）。
+
+\begin{lstlisting}[language=Kotlin]
+// 判断：if / else
+val age = 17
+if (age >= 18) {
+    println("成年人")
+} else {
+    println("未成年")
+}
+
+// 多分支：when（比 switch 好用一百倍）
+val score = 85
+val level = when {
+    score >= 90 -> "优秀"
+    score >= 60 -> "及格"
+    else -> "再接再厉"
+}
+
+// 重复：for 循环
+val fruits = listOf("苹果", "香蕉", "橙子")
+for (fruit in fruits) {
+    println("我爱吃$fruit")
+}
+\end{lstlisting}
+
+\texttt{when}是 Kotlin 里最常用的多分支写法，安卓开发里你会天天用到它（比如根据状态显示不同界面）。
+
+\booksection{四、空安全：Kotlin 的“保命符”}
+
+Java 时代最著名的 bug 叫\textbf{NullPointerException（空指针异常）}——程序访问了一个“什么都没有”的东西，直接崩溃。据统计它是安卓崩溃排行榜的常年第一。Kotlin 从语言层面解决了它：\textbf{默认不允许空值}。
+
+\begin{lstlisting}[language=Kotlin]
+var name: String = "张三"   // 普通类型：绝不允许是 null
+// name = null                // <i class="fas fa-times-circle mr-1"></i> 编译错误，直接把你拦住
+
+var nickname: String? = null // 加个问号：允许为 null
+nickname = "三儿"
+
+// 使用可空类型时，必须安全地处理：
+println(nickname?.length)    // 安全调用：null 就返回 null，不崩
+val len = nickname?.length ?: 0   // Elvis 操作符：null 时给默认值
+println(len)
+\end{lstlisting}
+
+\begin{tcbwarn}{注意：? 和 ?: 别搞混}
+\texttt{String?}是“允许为空”，\texttt{a ?: b}是“a 为空时用 b”（长得像猫王发型，所以叫 Elvis 操作符）。刚开始写代码时，看到编译器报“null 相关错误”，八成是你忘了处理可空类型——这正是语言在保护你。
+
+\end{tcbwarn}
+
+\booksection{五、类与对象：造“零件”的模具}
+
+类是对象的“模具”，对象是类的“成品”。安卓里的一切——页面、按钮、数据——都是对象。Kotlin 里有个神器叫\textbf{data class}（数据类），专门用来“装数据”，一行顶 Java 几十行：
+
+\begin{lstlisting}[language=Kotlin]
+// 普通类：模具
+class Dog(val name: String) {
+    fun bark() = println("$name 汪汪！")
+}
+
+val dog = Dog("旺财")      // 造对象
+dog.bark()                 // 旺财 汪汪！
+
+// data class：装数据的盒子（自动带 equals/copy 等）
+data class User(val id: Int, val name: String, val email: String)
+
+val me = User(1, "张三", "zhangsan@example.com")
+val twin = me.copy(name = "张三丰")   // 复制并改一个字段
+\end{lstlisting}
+
+以后你做记账本，一笔账就是一个 data class：\texttt{data class Record(val amount: Double, val category: String, val date: String)}。看，你已经能写出真实项目的代码结构了。
+
+\booksection{六、lambda 与高阶函数：Kotlin 的“语法糖”}
+
+安卓代码里你会天天看到\texttt{\{ .\allowbreak .\allowbreak .\allowbreak  \}}这种“没名字的函数”，它叫\textbf{lambda（匿名函数）}。Button 的\texttt{onClick = \{ count++ \}}就是一个 lambda——把“点击后做什么”打包成一坨，递给按钮。
+
+\begin{lstlisting}[language=Kotlin]
+// 普通写法：定义一个有名函数再传入
+fun double(x: Int) = x * 2
+val result = listOf(1, 2, 3).map(::double)
+
+// lambda 写法：就地定义，轻快直接
+val result2 = listOf(1, 2, 3).map { it * 2 }   // it = 当前元素
+
+// 筛选 + 变换连招（真实项目里极常见）
+val bills = listOf(12.5, 88.0, 5.0, 200.0)
+val bigBills = bills.filter { it > 50 }.sorted()
+// [88.0, 200.0]——"超过 50 的账单，排好序"
+\end{lstlisting}
+
+几个高频“集合连招”记一下：\texttt{filter}（筛选）、\texttt{map}（变换）、\texttt{sorted}（排序）、\texttt{sum}（求和）。你未来 90\% 的列表处理，都是这四招的组合。Kotlin 的哲学就是：\textbf{能用一句话说清楚的逻辑，绝不写五句}。
+
+\booksection{七、写给零基础的语法速查卡}
+
+别试图一天背完所有语法。把这张卡存下来，写代码时对照着查，两周后自然就熟了：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{要做什么} & \textbf{写法} \tabularnewline
+\hline
+定义只读变量 & \texttt{val x = 1} \tabularnewline
+定义可变变量 & \texttt{var x = 1} \tabularnewline
+定义函数 & \texttt{fun 名字(参数): 返回类型 \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+判断 & \texttt{if (条件) \{.\allowbreak .\allowbreak .\allowbreak \} else \{.\allowbreak .\allowbreak .\allowbreak \}} \tabularnewline
+多分支 & \texttt{when \{ 条件 -\allowbreak > 结果 \}} \tabularnewline
+遍历 & \texttt{for (x in 列表) \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+字符串拼接 & \texttt{"你好，\$name"} \tabularnewline
+处理可空 & \texttt{x?.\allowbreak length ?: 0} \tabularnewline
+定义数据类 & \texttt{data class X(val a: Int, val b: String)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Kotlin 语法速查卡（新手版）\end{center}
+
+\begin{tcbpractice}{来动手：不装任何软件，先玩 10 分钟 Kotlin}
+浏览器打开 play.kotlinlang.org（Kotlin 官方在线演练场），把本章的每一段代码都粘进去跑一遍，改改数字和文字，看看输出怎么变。这个“先玩后学”的 10 分钟，会让你第 51 章上手时轻松一倍。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小结}
+\begin{itemize}
+  \item val 优先，var 慎用；类型可自动推断，冒号后显式声明也行
+  \item 函数 = 打包的逻辑；字符串模板 \$ 是招牌便利
+  \item if/when 判断，for 循环；when 是安卓开发里的"多面手"
+  \item 空安全是 Kotlin 的保命符：普通类型拒绝 null，可空类型必须 ? / ?: 处理
+  \item data class 是装数据的盒子，一个字段一行，真实项目天天用
+  \item 20\% 语法干 80\% 的活：先会用，再精通
+\end{itemize}
+
+\end{tcbsummary}

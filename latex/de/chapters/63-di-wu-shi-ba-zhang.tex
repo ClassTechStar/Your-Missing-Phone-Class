@@ -1,0 +1,117 @@
+\bookchapter{Kapitel 58: Schnellreferenz und Ressourcen}
+
+\chapterintro{Dieses Kapitel ist eine Schnellreferenz, die auch für sich allein brauchbar ist. Wenn dir eine Schreibweise entfallen ist oder du schnell entscheiden musst, schlag einfach hier nach. Behandle es wie eine „Taschenkarte“: Code-Spickzettel für häufige Fälle, häufige Fragen, Lernressourcen – keine Seite fehlt.}
+
+\booksection{Der Spickzettel für häufigen Code}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Was du tun willst} & \textbf{Schlüsselcode} \tabularnewline
+\hline
+Einen veränderbaren Zustand merken & var x by remember \{ mutableStateOf(Anfangswert) \} \tabularnewline
+Zustand beim Drehen des Bildschirms behalten & rememberSaveable \{ mutableStateOf(Anfangswert) \} \tabularnewline
+Vertikales/horizontales Layout & \texttt{Column \{ \}}/\texttt{Row \{ \}} \tabularnewline
+Listen mit Lazy Loading & LazyColumn \{ items(Liste) \{ ... \} \} \tabularnewline
+Seitenwechsel & navController.navigate("Route") \tabularnewline
+Wartearbeiten in Coroutinen & \texttt{viewModelScope.\allowbreak launch \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Datenströme beobachten & \texttt{val list by flow.\allowbreak collectAsState()} \tabularnewline
+Kleine Einstellungen speichern & context.dataStore.edit \{ it[KEY] = Wert \} \tabularnewline
+Strukturierte Daten speichern & Room-Dreier-Set: @Entity / @Dao / @Database \tabularnewline
+Daten übers Netz holen & Retrofit-Interface + suspend-Funktion \tabularnewline
+Benachrichtigung senden & NotificationChannel + NotificationCompat.Builder \tabularnewline
+Loggen & \texttt{Log.\allowbreak d("TAG", "message")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Android-Entwicklung: Der Spickzettel (Stand August 2026)\end{center}
+
+\booksection{Häufige Fragen (FAQ)}
+
+F1: Ich kann überhaupt nicht programmieren – wie lange dauert es, Android-Entwicklung zu lernen?
+
+Folge dem Weg dieses Buches: In den Wochen 1–2 richtest du die Umgebung ein und lernst Kotlin-Grundlagen; in den Wochen 3–4 lernst du Compose und baust Oberflächen; in den Wochen 5–6 vollendest du das Haushaltsbuch-Projekt; in den Wochen 7–8 das Wetter-Projekt. In zwei Monaten von null zur eigenständig gebauten kleinen App. Voraussetzung: täglich 1–2 Stunden investieren und selbst Code tippen, statt nur zu lesen.
+
+F2: Muss ich nebenbei noch Java lernen?
+
+Nein. Neue Projekte, neue Tutorials, neue Stellen setzen praktisch durchweg auf Kotlin. Auf viel Java triffst du erst, wenn du „zehnjährige Altprojekte“ warten musst. Wenn der Job es verlangt, holst du Java nach dem Kotlin-Lernen schnell auf – beide laufen auf derselben virtuellen Maschine.
+
+F3: Emulator oder echtes Gerät?
+
+Zum Entwickeln und Debuggen ist der Emulator praktisch (Snapshots, viele Gerätetypen), aber die Abnahme gehört aufs echte Gerät – Haptik, Performance, echtes Netz, Sensoren: Das ersetzt kein Emulator. Wenn das Budget es erlaubt, ist ein Mittelklasse-Handy als Testgerät die beste Investition.
+
+F4: Findet man mit Android-Entwicklung leicht Arbeit?
+
+Die Lage 2026: Einstiegsstellen, die nur „Oberflächen schreiben können“ verlangen, sind hart umkämpft; Entwickler mit „Kotlin + Architektur + einer veröffentlichten App“ bleiben gefragt. In der Lernphase ist dein bester Lebenslauf die App, die du selbst in den Store gebracht hast.
+
+F5: Was tun, wenn ein Fehler dich blockiert?
+
+Die goldenen drei Schritte: (1) die erste Fehlerzeile wortwörtlich bei StackOverflow/einer Suchmaschine suchen; (2) die passende Seite der offiziellen Dokumentation nachschlagen; (3) hilft das nicht, schickst du „erwartetes Verhalten + tatsächliches Phänomen + vollständige Fehlermeldung + betroffenen Code“ an eine KI oder die Community. Die allermeisten Probleme lösen sich schon im ersten Schritt.
+
+\booksection{Empfohlene Lernressourcen}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Typ} & \textbf{Ressource} & \textbf{Warum empfohlen} \tabularnewline
+\hline
+Offiziell & developer.android.com & Die offizielle Android-Dokumentation, Compose-/Kotlin-Tutorials inbegriffen – die erste Autorität \tabularnewline
+Offiziell & Kotlin-Website (kotlinlang.org) & Offizielle Sprachdokumentation + Online-Spielwiese \tabularnewline
+Offiziell & Google Codelabs & Geführte Übungen Schritt für Schritt, maximale Einsteigerfreundlichkeit \tabularnewline
+Community & Stack Overflow (Tag „android“) & Die erste Anlaufstelle bei Fehlermeldungen \tabularnewline
+Community & Juejin / CSDN, Android-Bereiche & Viele chinesische Praxisartikel; achte auf Aktualität (erst das Datum prüfen) \tabularnewline
+Video & Der offizielle Kanal von Google Developers & Die jährlichen Entwicklerkonferenzen erklären die neuen Technologien \tabularnewline
+Begleitmaterial & Teil 7 „KI-Programmierung in der Praxis“ (Kapitel 37–47) & Die komplette Methodik für Android-Entwicklung mit KI-Unterstützung \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Lernressourcen für die Android-Entwicklung (August 2026)\end{center}
+
+\booksection{Spickzettel für gängige Gradle-Befehle}
+
+Im Alltag reichen Mausklicks, aber die Kommandozeile ist manchmal effizienter (besonders mit KI-Werkzeugen oder CI-Pipelines):
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Befehl} & \textbf{Wirkung} \tabularnewline
+\hline
+\texttt{.\allowbreak /\allowbreak gradlew assembleDebug} & Ein Debug-APK bauen (unter Windows ./ weglassen) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleRelease} & Einen Release-Build bauen (Signatur muss eingerichtet sein) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew test} & Alle Unit-Tests ausführen \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew lint} & Statische Analyse: potenzielle Bugs und unsaubere Schreibweisen finden \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew clean} & Build-Artefakte löschen (die Compile-Version des „Neustart-Tricks“) \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew :app: dependencies} & Den Abhängigkeitsbaum ansehen (ein Wundermittel gegen Versionskonflikte) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Spickzettel: gängige Gradle-Befehle\end{center}
+
+\begin{tcbinfo}{Tipp: Bei Build-Problemen zuerst clean}
+Bei Spukfällen der Art „gestern lief es noch, heute nicht mehr“ steckt in sechs von zehn Fällen ein verhunzter Build-Cache. Nach ./gradlew clean und neuem Build ist der Großteil der Mysterien geheilt. Wenn nicht, starte Android Studio neu – am besten gemeinsam mit File Invalidate Caches.
+
+\end{tcbinfo}
+
+\booksection{Schlusswort: von der ersten App zur n-ten App}
+
+\booksection{Schlusswort: von der ersten App zur n-ten App}
+
+Blick zurück: Du hast von „keine Ahnung, was eine Activity ist“ bis zur eingerichteten Umgebung, zum gelernten Kotlin, zu mit Compose gebauten Oberflächen und zur App mit Datenbank und Netzwerk, bis hin zu Testen, Paketieren und Veröffentlichen zurückgelegt – den schwersten Abschnitt von null auf eins hast du hinter dir.
+
+Die Welt der Technik wandelt sich schnell: Frameworks werden aktualisiert, Werkzeuge wechseln, und die KI übernimmt immer mehr „Tastaturarbeit“. Eines aber veraltet nie: deine Fähigkeit, eine vage Idee in klare Schritte zu zerlegen und sie Schritt für Schritt zu verwirklichen. Werkzeuge sind Verstärker, das Denken ist das Fundament. Verstärker kann man austauschen, das Fundament darf nicht wackeln.
+
+Du bist nicht mehr nur "jemand, der mit dem Handy umgehen kann": Du kannst die Ideen in deinem Kopf in Apps verwandeln, die wirklich auf dreihundert Millionen Android-Geräten laufen. Ab heute erschaffst du mit der Tastatur – das ist die Romantik des Android-Entwicklers.
+
+\booksection{Literaturverzeichnis}
+
+\begin{enumerate}
+  \item Android Developers. (2026). Android Developer Guides and Jetpack Compose Documentation. developer.android.com.
+  \item Kotlin Foundation. (2026). Kotlin Language Documentation. kotlinlang.org.
+  \item Android Open Source Project. (2026). Android Platform Version History and API Levels.
+  \item Google Play. (2026). Play Console Help: Publishing and App Signing.
+  \item AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.
+  \item Square. (2026). Retrofit Documentation. github.com/square/retrofit.
+\end{enumerate}

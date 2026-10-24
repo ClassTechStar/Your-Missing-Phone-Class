@@ -1,0 +1,108 @@
+\booksection{Anexo del Capítulo 1: Tema especial del sistema operativo HarmonyOS}
+
+\chapterintro{HarmonyOS es el sistema operativo auto-desarrollado por Huawei, desde su lanzamiento en 2019 ha pasado por varias versiones mayores. No es solo “otro sustituto de Android”, es una nueva especie con una filosofía de diseño única. Conozcamos a fondo este sistema operativo en ascenso.}
+
+\booksubsection{¿Qué es HarmonyOS? ¿Por qué es diferente?}
+
+La filosofía central de HarmonyOS es “interconexión de todas las cosas”. A diferencia de los sistemas operativos tradicionales que sirven principalmente a un único dispositivo, HarmonyOS desde su diseño consideró la colaboración multi-dispositivo.
+
+\textbf{La arquitectura distribuida}es el alma de HarmonyOS. En pocas palabras, puede virtualizar múltiples dispositivos en un “supertérmino”. Tu móvil, tablet, computadora, reloj, TV, ya no son individuos aislados, sino “órganos” de un todo, pueden invocar capacidades entre sí.
+
+Un ejemplo: estás viendo un video en el móvil y quieres verlo en pantalla grande, la forma tradicional es proyectar la pantalla; en HarmonyOS, puedes “transferir” el video a la TV para seguir viéndolo, el móvil se convierte en control remoto. No es una simple proyección, es la propia aplicación ejecutándose entre dispositivos.
+
+\booksubsection{HarmonyOS 4.3: versión madura basada en AOSP}
+
+HarmonyOS 4.3 es la versión ampliamente desplegada actualmente en móviles Huawei. Cabe señalar que HarmonyOS 4.3 es compatible con el marco de código del proyecto de código abierto Android (AOSP), por lo que puede ser totalmente compatible con aplicaciones Android—la mayoría de las Apps que descargas de la AppGallery de Huawei son esencialmente aplicaciones Android, ejecutadas a través de la capa de compatibilidad de HarmonyOS. Pero HarmonyOS 4.3 no es simplemente un Android recubierto, sobre AOSP añade muchas capacidades distribuidas auto-desarrolladas por Huawei, el motor Ark, etc.
+
+\subsubsection*{Características principales:}
+
+\begin{itemize}
+  \item \textbf{Compatibilidad con aplicaciones Android}: al desarrollarse sobre AOSP, HarmonyOS 4.3 puede ejecutar casi todas las aplicaciones Android, el usuario casi no nota diferencia.
+  \item \textbf{Motor Ark}: compilador y runtime auto-desarrollado por Huawei, hace que las aplicaciones se ejecuten más fluidas y eficientes. Comparado con versiones tempranas, la fluidez mejora notablemente.
+  \item \textbf{Supertérmino}: en el centro de control, puedes ver intuitivamente otros dispositivos HarmonyOS alrededor, con arrastrar se conectan. El móvil invoca el teclado/ratón del ordenador, la tablet invoca la cámara del móvil, muy práctico.
+  \item \textbf{Tarjetas de servicio}: similares a los widgets de iOS, pero más flexibles. Puedes deslizar hacía arriba el icono de una App para expandir la tarjeta y mostrar información clave, sin abrir la App.
+  \item \textbf{modo puro}: solo permite instalar aplicaciones desde la AppGallery oficial, reduce el riesgo de malware.
+  \item \textbf{Centro de privacidad}: gestión centralizada de permisos de aplicaciones, consulta del registro de comportamiento de aplicaciones.
+\end{itemize}
+
+\subsubsection*{Características de la interfaz de usuario:}
+
+\begin{itemize}
+  \item \textbf{Bloqueo de pantalla magazine}: la pantalla de bloqueo muestra imágenes y artículos bonitos, desliza para entrar al escritorío.
+  \item \textbf{Tarjetas universales}: los iconos del escritorío pueden expandirse en tarjetas, mostrando más información.
+  \item \textbf{Supertérmino de transferencia}: un área de almacenamiento temporal, puedes guardar texto, imágenes, archivos y luego arrastrarlos a cualquier App. Compartir entre aplicaciones se vuelve súper fluido.
+  \item \textbf{Búsqueda inteligente}: búsqueda global, puede buscar aplicaciones, archivos, ajustes, páginas web.
+\end{itemize}
+
+\booksubsection{HarmonyOS NEXT (HarmonyOS 6): el verdadero punto de partida del sistema operativo autónomo de Huawei}
+
+HarmonyOS NEXT (HarmonyOS NEXT 5.0) tiene una diferencia fundamental con HarmonyOS 4.3—adopta el microkernel HarmonyOS auto-desarrollado por Huawei, ya no depende del kernel Linux ni del código AOSP, y\textbf{ya no soporta directamente aplicaciones Android}. Este es el paso clave de HarmonyOS de “forma tránsitoria compatible con Android” a “sistema operativo completamente independiente”.
+
+\subsubsection*{Cambios importantes:}
+
+\begin{itemize}
+  \item \textbf{Kernel completamente autónomo}: HarmonyOS NEXT usa el kernel auto-desarrollado por Huawei, ya no contiene código AOSP. Sistema más ligero, más seguro, más eficiente.
+  \item \textbf{Ya no soporta aplicaciones Android}: este es el mayor cambio. HarmonyOS NEXT solo puede ejecutar aplicaciones nativas de HarmonyOS, no puede instalar ni ejecutar archivos APK. Antes de actualizar, confirma que tus Apps habituales ya tienen versión nativa de HarmonyOS.
+  \item \textbf{Ecosistema de aplicaciones nativas}: Huawei está impulsando a los desarrolladores a migrar aplicaciones a la plataforma nativa de HarmonyOS. Actualmente las Apps principales como WeChat, Alipay, Taobao ya tienen versión nativa de HarmonyOS, pero algunas aplicaciones de nicho pueden no estar adaptadas.
+  \item \textbf{Arquitectura de seguridad XingDun}: nuevo sistema de seguridad, protección de cadena completa de hardware a software. Soporta control de permisos más fino, como "ubicación borrosa"—la aplicación solo puede saber aproximadamente dónde estás, no la posición precisa.
+  \item \textbf{Integración profunda de IA}: capacidad de IA a nivel de sistema, no solo una App con IA. Por ejemplo, los subtítulos con IA pueden traducir video en tiempo real, el recorte con IA puede identificar inteligentemente el sujeto.
+  \item \textbf{Transferencia sin fisuras entre dispositivos}: capacidad distribuida aún mayor. El estado de la aplicación puede cambiar sin fisuras entre dispositivos, el documento que editas en el móvil se abre automáticamente en el ordenador al acercarte.
+  \item \textbf{Meta-servicios}: servicios ligeros usables sin instalar. Por ejemplo, escanear un código QR abre directamente una función, sin descargar primero una App.
+\end{itemize}
+
+\begin{tcbwarn}{Lectura obligatoria antes de actualizar a HarmonyOS NEXT}
+Tras actualizar a HarmonyOS NEXT, tu móvil no podrá ejecutar aplicaciones Android. Asegúrate antes de actualizar de: (1) que tus Apps habituales ya tienen versión nativa de HarmonyOS; (2) que tu trabajo o vida no depende de escenarios con aplicaciones Android. No se puede revertir a HarmonyOS 4.3 después de actualizar.
+
+\end{tcbwarn}
+
+\subsubsection*{Cambios en la lógica de operación:}
+
+\begin{itemize}
+  \item \textbf{Navegación por gestos}: deslizar desde el borde izquierdo/derecho para volver, deslizar hacía arriba desde abajo para ir al escritorío, deslizar hacía arriba y pausar para multitarea.
+  \item \textbf{Multiventana inteligente}: soporta pantalla dividida, ventana flotante, vista paralela y otras formas de multitarea.
+  \item \textbf{Llamada Celia}: servicio de videollamada de Huawei, soporta compartir pantalla, embellecimiento, desenfoque de fondo.
+\end{itemize}
+
+\booksubsection{Ecosistema HarmonyOS: dispositivos y aplicaciones}
+
+HarmonyOS no es solo un sistema de móvil, es un ecosistema que cubre múltiples dispositivos.
+
+\subsubsection*{Tipos de dispositivos soportados:}
+
+\begin{itemize}
+  \item \textbf{Móvil y tablet}: dispositivos centrales, funciones más completas.
+  \item \textbf{Relojes inteligentes y pulseras}: funcionamiento independiente o en colaboración con el móvil.
+  \item \textbf{Pantalla inteligente (TV)}: centro de entretenimiento del hogar.
+  \item \textbf{Altavoz inteligente}: entrada de interacción por voz.
+  \item \textbf{Automóvil}: cabina HarmonyOS, experiencia de cabina inteligente.
+  \item \textbf{Hogar inteligente}: frigorífico, aire acondiciónado, lavadora, etc.
+\end{itemize}
+
+\subsubsection*{Estado del ecosistema de aplicaciones:}
+
+La tienda de aplicaciones de HarmonyOS ya cuenta con millones de apps; las apps principales están prácticamente todas disponibles. Huawei también está impulsando activamente a los desarrolladores a crear aplicaciones nativas de HarmonyOS. A mediados de 2026, WeChat, Alipay, Taobao, Douyin, Meituan y JD.com ya han lanzado versiones nativas de HarmonyOS, y el uso diario es básicamente sin obstáculos. Algunas aplicaciones de nicho y sectoriales pueden seguir en proceso de adaptación; antes de actualizar, se recomienda confirmar si tus apps habituales ya están soportadas.
+
+\booksubsection{Trucos prácticos de HarmonyOS}
+
+\begin{itemize}
+  \item \textbf{Supertérmino}: desliza hacía abajo desde la esquina superior derecha para abrir el centro de control, toca "Supertérmino", puedes ver otros dispositivos alrededor, arrastra para conectar.
+  \item \textbf{Supertérmino de transferencia}: mantén pulsado texto/imagen/archivo, selecciona "Copiar al terminal de transferencia", luego en otras Apps mantén pulsado para pegar, o arrastra.
+  \item \textbf{Tarjetas de servicio}: desliza hacía arriba el icono de la App para expandir la tarjeta, mantén pulsada la tarjeta para ajustar el tamaño o añadirla al escritorío.
+  \item \textbf{Multiventana inteligente}: desliza desde el borde izquierdo/derecho hacía dentro y pausa, abre la barra lateral, toca la aplicación para abrirla como ventana flotante.
+  \item \textbf{Protección de privacidad}: Configuración > Privacidad, puedes consultar el registro de uso de permisos, configurar ubicación borrosa, etc.
+\end{itemize}
+
+\begin{tcbwarn}{Precauciones}
+HarmonyOS se actualiza continuamente, diferentes versiones pueden tener algunas diferencias. Esta descripción se basa en las principales carácterísticas de HarmonyOS 4.3 y 6, las funciones específicas dependerán de la versión real de tu móvil. Se recomienda mantener el sistema actualizado para obtener las últimas funciones y parches de seguridad.
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{Prueba ahora: experimenta las funciones carácterísticas de HarmonyOS}
+\begin{enumerate}
+  \item Abre el centro de control, busca "Super Terminal" y verifica si hay otros dispositivos HarmonyOS alrededor.
+  \item Prueba la "Super Estación de Transferencia": copia un texto a la estación de transferencia y luego arrástralo en Notas.
+  \item Desliza hacía arriba varios iconos de App de uso frecuente y observa qué contenido muestran sus tarjetas de servicio.
+  \item Ve a Configuración > Privacidad y revisa qué aplicaciones han usado permisos sensibles recientemente.
+\end{enumerate}
+
+\end{tcbpractice}

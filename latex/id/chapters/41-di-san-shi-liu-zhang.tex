@@ -1,0 +1,105 @@
+\bookchapter{Bab 36: Ponsel dan Rumah Pintar—Membuat Rumah Lebih Cerdas}
+
+\chapterintro{Ponsel masih bisa melakukan satu hal yang makin penting—menjadi “remote” untuk seluruh rumah. Dari satu lampu, satu colokan, sampai satu kunci pintu—rumah pintar berubah dari “mainan geek” menjadi “perlengkapan sehari-hari”. Bab ini membantu Anda memahami protokol, ekosistem, pusat kendali, dan paket pemula, lalu ditutup dengan daftar keamanan agar Anda tidak dimakan sendiri oleh “kecerdasan” itu.}
+
+\booksection{Protokol rumah pintar: memilih itu penting}
+
+Sebelum membeli perangkat pintar, perhatikan protokol yang didukung—ini menentukan apakah perangkat bisa “diperintah” ponsel dan ekosistem Anda. Saat ini ada empat protokol utama, masing-masing dengan karakter sebagai berikut:
+
+\begin{itemize}
+  \item Protokol Matter: dirilis 2022 oleh CSA (Connectivity Standards Alliance), didukung raksasa seperti Apple, Google, Amazon, dan Samsung. Tujuannya satu—membuat semua merek perangkat pintar berbicara dalam bahasa yang sama. Pada 2023–2026 dengan cepat menjadi standar terpadu; perangkat yang mendukungnya bisa langsung terhubung ke Apple HomeKit, Google Home, Amazon Alexa, dan Mi Home—tidak lagi terkunci satu ekosistem.
+  \item Protokol Thread: "pipa" jaringan dasar Matter. Hemat daya, membentuk jaringan sendiri (bila satu node mati, sinyal otomatis mencari jalur lain)—respons cepat, tidak tersendat. Beli perangkat dengan border router Thread (seperti HomePod mini, Apple TV 4K, Xiaomi Central Hub) agar pengalaman jauh lebih stabil.
+  \item Wi-Fi: bandwidth besar, bisa langsung ke router—tetapi boros daya dan kalau perangkat banyak mudah memadati kanal; cocok untuk kamera dan robot penyedot debu yang perlu mengirim data besar.
+  \item Bluetooth (BLE): mudah dipasangkan, hemat daya—tetapi jaraknya pendek dan tidak bisa membentuk jaringan sendiri; cocok untuk kunci pintu dan termometer-kelembapan yang datanya kecil.
+  \item Zigbee: protokol lama hemat daya dengan jaringan sendiri—perlu gateway khusus, perangkat murah dan stabil, tetapi interoperabilitas antarmerek buruk; kini perlahan digantikan Matter+Thread.
+\end{itemize}
+
+\begin{tcbinfo}{Prinsip satu kalimat}
+Membeli perangkat pintar pada 2026, utamakan yang berlabel “Matter over Thread”—ini pilihan paling tahan uji waktu saat ini. Perangkat lama yang hanya mendukung Wi-Fi atau Bluetooth tidak perlu buru-buru dibuang—dipakai dulu, nanti saat beli baru beralih ke Matter.
+
+\end{tcbinfo}
+
+\booksection{Perbandingan tiga ekosistem besar}
+
+Protokol adalah “bahasa”, ekosistem adalah “lingkaran pergaulan”. Meski semuanya mendukung Matter, sehari-hari Anda tetap memilih satu ekosistem utama untuk membangun otomasi dan kendali suara. Berikut perbandingan tiga ekosistem utama:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Ekosistem} & \textbf{Keunggulan} & \textbf{Kelemahan} & \textbf{Untuk siapa} \tabularnewline
+\hline
+Apple HomeKit & Privasi terkuat (utamanya proses lokal), mulus terhubung dengan iPhone/Siri/Pintasan & Perangkat lebih sedikit dan mahal, perlu HomePod atau Apple TV sebagai pusat & Keluarga dengan perangkat Apple, yang mengutamakan privasi dan pengalaman \tabularnewline
+Mi Home (Xiaomi) & Perangkat paling lengkap, nilai terbaik, Xiao Ai mudah dipakai & Ekosistem relatif tertutup, banyak data ke awan, iklan agak banyak & Pemula dengan anggaran terbatas yang ingin melengkapi seluruh rumah sekaligus \tabularnewline
+Huawei HiLink (HarmonyOS) & Mulus berpindah dengan ponsel/tablet/jam HarmonyOS, jumlah perangkat tumbuh cepat & Dukungan perangkat luar negeri sedikit, ekosistem masih mengejar & Pengguna ponsel Huawei, yang mengutamakan kolaborasi multi-perangkat "Super Device" \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbinfo}{Saran keputusan memilih ekosistem}
+Pilih ekosistem dari ponsel Anda: pengguna iPhone utamakan HomeKit, pengguna Huawei utamakan HiLink, pengguna Android lain Mi Home paling praktis. Berkat protokol Matter, perangkat lintas ekosistem tetap bisa dikendalikan satu ponsel yang sama—tidak perlu langsung “memihak”.
+
+\end{tcbinfo}
+
+\booksection{Ponsel sebagai pusat rumah}
+
+Di banyak skenario pemula, ponsel adalah “pusat rumah” Anda—mengendalikan lampu, AC, gorden, dan keamanan lewat App, sekaligus membangun skenario otomasi agar rumah “bergerak sendiri”:
+
+\begin{itemize}
+  \item Kendali perangkat: buka App HomeKit/Mi Home/Smart Life—bisa menyalakan atau mematikan lampu, mengatur suhu warna, mengatur suhu AC, membuka-menutup gorden, dan melihat kamera, baik dari jarak jauh maupun lokal.
+  \item Skenario otomasi: gabungkan "syarataksi"—tiga skenario yang sering dipakai: Mode Pulang: lokasi tiba di rumah + sudah gelap nyalakan lampu depan + nyalakan AC + tutup gorden + kunci pintu.
+  \item Mode Pergi: orang terakhir keluar (lokasi menjauh atau pintu terkunci) matikan lampu + matikan AC + matikan colokan + nyalakan kamera + aktifkan alarm.
+  \item Mode Tidur: setiap malam pukul 23.00 matikan lampu utama seluruh rumah + tutup gorden + AC ke 26 derajat + nyalakan lampu malam.
+\end{itemize}
+
+NFC tap-to-run: tempel tag NFC di dekat pintu—ponsel disentuhkan untuk memicu skenario (sekali sentuh nyalakan lampu depan, sentuh lagi ganti ke mode tidur). Di iPhone pakai otomasi "Pintasan"; di Android bisa lewat "Dompet" atau App merek.
+
+\begin{tcbpractice}{Coba sekarang: bangun "Mode Pulang"}
+Di App rumah pintar ponsel, buat baru di “Otomasi”: pilih syarat pemicu “Tiba di lokasi” (rumah), lalu tambahkan aksi berurutan “nyalakan lampu depan”, “AC ke 26 derajat”, “tutup gorden”. Simpan, lalu keluar rumah sebentar—saat pulang, lihat apakah lampu menyala sendiri. Kebanggaan saat pertama kali berhasil, lebih seru daripada memesan perangkat baru.
+
+\end{tcbpractice}
+
+\booksection{Rekomendasi paket pemula}
+
+Tidak perlu melengkapi semuanya sekaligus—mulai dari empat perangkat berikut sudah mencakup delapan persen kebutuhan harian:
+
+\begin{itemize}
+  \item Speaker pintar: Xiao Ai (ekosistem Mi Home, nilai terbaik) / HomePod mini (ekosistem Apple, sekaligus pusat Thread) / Alexa (ekosistem luas luar negeri). Catatan: speaker menentukan ekosistem suara Anda—tentukan ekosistem dulu baru beli speaker.
+  \item Bohlam pintar: Yeelight (Mi Home/Matter, suhu warna dan kecerahan bisa diatur, murah) / Philips Hue (warna bagus, stabil, tetapi perlu Hue Bridge, agak mahal). Catatan: sebelum beli, pastikan soket lampu (E27/B22) dan apakah perlu pengaturan warna.
+  \item Colokan pintar: Xiaomi Smart Plug (murah, ada statistik daya) / TP-Link Kasa (dukungan Matter bagus di luar negeri). Catatan: untuk alat berdaya besar (pemanas air, heater), perhatikan daya terpasangnya—jangan sampai kelebihan beban.
+  \item Kunci pintu pintar: Loock/Xiaomi (nilai terbaik, terhubung Mi Home) / Kaadas (pabrikan kunci tradisional, struktur mekanis kokoh). Catatan: pastikan mendukung Matter atau ekosistem Anda; perhatikan daya tahan baterai dan posisi lubang kunci darurat.
+\end{itemize}
+
+\begin{tcbinfo}{Saran urutan pembelian}
+Beli speaker pintar dulu (menentukan ekosistem) lalu bohlam dan colokan pintar (ambang rendah, langsung terasa manfaatnya) terakhir kunci pintu dan kamera (menyangkut keamanan, pilih hati-hati). Tambah satu jenis perangkat setiap kali—setelah terbiasa, baru perluas; hindari “sudah dibeli tapi tidak bisa dipakai”.
+
+\end{tcbinfo}
+
+\booksection{Catatan keamanan}
+
+Makin banyak perangkat pintar di rumah, makin luas pula permukaan serangan. Empat aturan berikut adalah garis dasar—periksa satu per satu:
+
+\begin{enumerate}
+  \item Ubah kata sandi bawaan: kata sandi bawaan kamera, router, dan kunci pintu tersebar luas di internet—hal pertama setelah beli adalah menggantinya dengan kata sandi kuat yang "panjang dan tidak berulang".
+  \item Perbarui firmware tepat waktu: firmware dari pabrikan sering menambal celah keamanan—aktifkan "pembaruan otomatis" di App, atau setidaknya periksa manual sebulan sekali.
+  \item Isolasi jaringan: pisahkan perangkat IoT ke Wi-Fi tersendiri (atau jaringan tamu), terpisah dari jaringan utama ponsel dan komputer. Jika satu perangkat berhasil ditembus, sulit menyerang data penting Anda secara lateral.
+  \item Perlindungan privasi: aktifkan penyamaran "area privasi" pada kamera (misalnya kamar tidur dan kamar mandi tidak direkam), matikan rekaman awan 24 jam; jangan terus-menerus membagikan tampilan kamera rumah ke App pihak ketiga.
+\end{enumerate}
+
+\textbf{Jebakan yang harus dihindari}\par
+
+\begin{itemize}
+  \item Jangan gunakan fitur "buka kunci jarak jauh" untuk orang asing—utamakan kata sandi sementara yang otomatis kedaluwarsa setelah dipakai.
+  \item Jangan arahkan kamera langsung ke tempat tidur atau ke luar jendela—yang bocor adalah privasi Anda sendiri.
+  \item Jangan tergoda perangkat merek abal-abal yang murah—biasanya tidak pernah memperbarui firmware, sama saja memasang pintu belakang di rumah sendiri.
+\end{itemize}
+
+\begin{tcbsummary}{Ringkasan bab ini}
+\begin{itemize}
+  \item Matter+Thread adalah arah terpadu 2023–2026—saat beli perangkat baru, utamakan label ini
+  \item Tiga ekosistem punya keunggulan masing-masing: Apple mengutamakan privasi dan pengalaman, Mi Home nilai terbaik, Huawei unggul dalam kolaborasi multi-perangkat
+  \item Ponsel bisa jadi pusat kendali—bangun tiga skenario "Pulang/Pergi/Tidur", rumah pun bergerak sendiri
+  \item Paket pemula empat perangkat: speaker pintar, bohlam, colokan, kunci pintu—tambahkan bertahap sesuai urutan ini
+  \item Ubah kata sandi bawaan, perbarui firmware, isolasi jaringan, samarkan area privasi—empat garis dasar keamanan tidak boleh dilewatkan
+\end{itemize}
+
+\end{tcbsummary}

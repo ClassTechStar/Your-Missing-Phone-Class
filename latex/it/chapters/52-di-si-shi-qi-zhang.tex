@@ -1,0 +1,105 @@
+\bookchapter{Capitolo 47: Manuale di consultazione rapida e risorse}
+
+\chapterintro{Questo capitolo è un manuale di consultazione rapida che si può usare anche da solo. Quando non ricordi un principio o devi decidere in fretta, apri direttamente qui. Consigliamo di considerarlo la tua «carta da tasca»: ripasso dei cinque grandi principi, albero decisionale degli strumenti, domande frequenti, risorse per studiare — senza saltare una pagina.}
+
+\booksection{Schede rapide dei modelli mentali}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Principio} & \textbf{In una frase} & \textbf{Punti operativi} \tabularnewline
+\hline
+Think Before Coding & Prima pensa bene, poi parla & Rispondi alle tre domande: cosa va fatto? Che aspetto avrà il risultato? Quali sono i vincoli? \tabularnewline
+Simplicity First & Risolvere il problema con il minimo codice & Una funzione per volta, taglia la complessità non necessaria \tabularnewline
+Surgical Changes & Modifiche precise, senza uscire dai confini & Specifica con precisione l'ambito della modifica, rifiutando il «colgo per sistemare anche questo» dell'AI \tabularnewline
+Goal-Driven Execution & Dire «cosa fare», non «come farlo» & Dai l'obiettivo e non i passi: lascia all'AI la libertà di scegliere il percorso \tabularnewline
+Iterate \& Verify & Ciclo genera-verifica-correggi & Verifica su tre livelli: funzioni, casi limite, architettura \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Scheda rapida dei cinque grandi principi di pensiero\end{center}
+
+\booksection{L'albero decisionale per la scelta degli strumenti}
+
+Quando devi scegliere uno strumento di programmazione AI, segui questo percorso decisionale. Attenzione: non è una classifica del «migliore in assoluto», ma un quadro per giudicare «quale fa per te».
+
+Cosa vuoi fare?
+
+Parti da zero, vuoi provare subito scegli un Builder cloud (v0/Bolt/Replit)
+
+Sviluppo quotidiano, serve il completamento del codice scegli un IDE con IA integrata (Cursor/Trae)
+
+Progetti grandi, servono operazioni in blocco scegli un Agent da terminale (Claude Code)
+
+Validare un'idea con un prototipo rapido scegli un Builder cloud o Trae SOLO
+
+\begin{center}\small\color{gray}Figura 6: albero decisionale per la scelta degli strumenti di programmazione AI\end{center}
+
+\booksection{Domande frequenti (FAQ)}
+
+D1: Non so proprio programmare, posso comunque programmare con l'AI?
+
+Sì. Gli strumenti di programmazione AI del 2026 sono ormai abbastanza potenti da permetterti di descrivere i requisiti in linguaggio naturale e far generare il codice all'AI. Due consigli: primo, inizia dagli strumenti Builder nel cloud (come v0 e Bolt), che non richiedono di configurare l'ambiente di sviluppo; secondo, impara i concetti di base mentre li usi — non serve padroneggiare la sintassi, ma devi riuscire a «capire nel complesso» il codice che l'AI scrive, perché senza questo il collaudo non è efficace.
+
+D2: Quale linguaggio di programmazione dovrei imparare?
+
+Dipende da cosa vuoi fare. Frontend di siti web — JavaScript/TypeScript; elaborazione dati o AI — Python; backend aziendale — Java o Go. Ma conta di più quest'altro: nell'era della programmazione con l'AI, l'importanza del «linguaggio» sta calando. L'AI ti aiuta con i dettagli di sintassi; quello che devi capire è la «struttura dei programmi» — cos'è una funzione, cos'è un ciclo, cos'è una struttura dati. Sono concetti trasversali ai linguaggi: una volta capiti, passare a qualunque linguaggio è rapido.
+
+D3: Il codice scritto dall'AI ha problemi di copyright?
+
+Ad agosto 2026 resta una questione legale controversa. In genere, il codice generato dall'AI non è considerato avere un titolare del copyright chiaro nella maggior parte delle giurisdizioni. Ma se lo usi per progetti commerciali, consigliamo: (1) leggi le clausole sulla proprietà intellettuale nei termini di servizio degli strumenti AI che usi; (2) revisiona e modifica a mano il codice chiave, perché porti il tuo contributo creativo; (3) evita di far copiare all'AI direttamente codice open source potenzialmente protetto da copyright.
+
+D4: L'AI sostituirà i programmatori?
+
+Non a breve termine. L'AI non sostituisce la professione del «programmatore», ma il lavoro dello «scrivere codice riga per riga». Come la calcolatrice non ha sostituito i matematici, ma li ha liberati dai calcoli a mano più faticosi. Gli strumenti di programmazione AI spostano i programmatori dallo «scrivere codice» al «pensare ai problemi» — e questo in effetti alza il tetto di valore del programmatore. La competitività del futuro non sarà «quante righe di codice sai scrivere», ma «quanto complessi sono i problemi che sai risolvere».
+
+D5: Come capire se l'output dell'AI è corretto?
+
+Con la verifica a tre livelli. Primo livello: verifica funzionale — funziona? Input e output sono giusti? È il minimo indispensabile. Secondo livello: verifica dei casi limite — cosa succede con input vuoti, input lunghissimi, input anomali? Qui emergono i problemi nascosti. Terzo livello: verifica dell'architettura — la struttura del codice è sensata? Ci sono valori scritti direttamente nel codice? È facile da estendere? Serve un minimo di giudizio tecnico. Se non riesci a valutare il terzo livello, fai almeno i primi due — se gira e i casi limite si comportano, sei già davanti alla maggior parte dei principianti.
+
+\booksection{Risorse di studio consigliate}
+
+Ecco le risorse di studio consigliate ad agosto 2026. Nota bene: i link delle risorse in rete possono cambiare; se un link non funziona più, cercandone il titolo di solito trovi la versione aggiornata.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tipo} & \textbf{Risorsa} & \textbf{Perché consigliarla} \tabularnewline
+\hline
+Fonte primaria & Il CLAUDE.md di Andrej Karpathy & La fonte dei cinque principi: 70 righe ma ogni parola è oro \tabularnewline
+Fonte primaria & Documentazione ufficiale di Anthropic (Claude Code) & La guida alle buone pratiche per l'Agent da terminale \tabularnewline
+Tutorial & La raccolta di Skills curata dalla community di Vibe Coding & Raccolta di tecniche operative riassunte dai praticanti della community \tabularnewline
+Tutorial & Documentazione ufficiale di Cursor e canale YouTube & La guida di riferimento all'AI integrata nell'IDE \tabularnewline
+Community & Il repository awesome-claude-code su GitHub & Buone pratiche e raccolta di plugin di Claude Code \tabularnewline
+Community & La community r/cursor su Reddit & Condivisioni di esperienze e discussioni degli utenti Cursor di tutto il mondo \tabularnewline
+Fondamenti & MDN Web Docs (developer.mozilla.org) & La documentazione di riferimento più autorevole per lo sviluppo frontend \tabularnewline
+Fondamenti & Il tutorial ufficiale di Python (docs.python.org) & Il punto di partenza ufficiale per studiare Python \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Elenco delle risorse di studio consigliate\end{center}
+
+\booksection{Conclusione: gli strumenti in mano, la metodologia nel cuore}
+
+Torniamo alla convinzione centrale di questo libro: gli strumenti si aggiornano ogni tre mesi, la metodologia evolve solo ogni tre anni. Oggi, ad agosto 2026, gli strumenti di programmazione AI sono potenti fino a lasciare a bocca aperta: puoi creare un sito con una frase, generare un'applicazione full stack con una descrizione, completare un refactoring complesso con una sola istruzione. Ma più gli strumenti sono potenti, più spicca l'importanza della metodologia — perché la potenza degli strumenti amplifica ognuna delle tue decisioni.
+
+Se i tuoi requisiti sono chiari, l'AI li realizza con efficienza; se sono vaghi, l'AI costruisce con la stessa efficienza la cosa sbagliata. Se segui la semplicità prima di tutto, l'AI ti aiuta a validare le idee in fretta; se vuoi tutto e subito, l'AI ti aiuta ad accumulare debito tecnico altrettanto in fretta. Se modifichi con precisione, l'AI ottimizza il codice come un chirurgo; se le istruzioni sono vaghe, l'AI introduce bug a colpi d'ascia.
+
+Ecco perché questo libro dedica la maggior parte dello spazio alla metodologia e non all'uso degli strumenti. Non perché gli strumenti non contino, ma perché la metodologia è il «moltiplicatore» degli strumenti — migliore è la metodologia, maggiore è il valore degli strumenti; con una metodologia pari a zero, anche gli strumenti più potenti valgono zero, perché zero moltiplicato per qualunque numero resta zero.
+
+Non programmi più da solo. Tu sei il comandante e l'IA è il tuo esercito; la qualità del tuo pensiero determina la forza del tuo esercito. Da oggi armati di metodo e amplifica le tue capacità con gli strumenti — questo è l'intero segreto della programmazione con l'IA.
+
+\booksection{Bibliografia}
+
+\begin{enumerate}
+  \item Andrej Karpathy. (2025). Vibe Coding. Social media post introducing the concept of vibe-driven programming with AI.
+  \item Andrej Karpathy. (2025). CLAUDE.md - Project guidelines for AI-assisted development. GitHub repository, 70+K stars.
+  \item Anthropic. (2026). Claude Code: Terminal-native AI programming. Official documentation and best practices.
+  \item Cursor Team. (2026). Cursor 3: The next generation of AI-first IDE. Release notes and documentation.
+  \item OpenAI. (2026). Codex CLI: Bringing AI to the terminal. Technical documentation.
+  \item Model Context Protocol (MCP) Specification. (2025-2026). Open protocol for AI-tool integration.
+  \item Vibe Coding Community. (2026). Community-curated skills and best practices for AI-assisted programming.
+  \item Spec-Driven Development (SDD) methodology. (2026). Emerging practices in specification-first AI programming.
+\end{enumerate}

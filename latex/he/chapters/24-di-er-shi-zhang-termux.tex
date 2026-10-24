@@ -1,0 +1,116 @@
+\booksection{נספח לפרק 20: Termux — סביבת טרמינל לינוקס ניידת על מכשירי Android}
+
+\chapterintro{אם נראה לך שמצב מפתח עדיין לא מספיק “הארדקור”, ואתה רוצה לחוות שורת פקודה מלאה של לינוקס על הטלפון שלך, אז Termux מיועד בדיוק עבורך. הוא אינו דורש הרשאות root, ויכול להפוך טלפון Android רגיל לתחנת עבודת לינוקס ניידת, והוא כלי רב עוצמה למשתמשים מתקדמים החוקרים פיתוח ותפעול במובייל.}
+
+\booksubsection{אחד, מה זה Termux}
+
+שניים, פונקציות ותכונות מרכזיות
+
+סביבת לינוקס מלאה
+
+\booksubsection{שניים, פונקציות ותכונות מרכזיות}
+
+\subsubsection*{סביבת לינוקס מלאה}
+
+Termux\textbf{Bash מובנה בלבד}Shell. ל-Zsh/fish, התקן ידנית:\texttt{pkg install zsh}.\texttt{pkg install fish}. Termux: Vim/Nano/Emacs. “pkg install” 2000+ חבילות, GCC, OpenSSH, SQLMap.
+
+\subsubsection*{ניהול חבילות חזק}
+
+חיבור SSH מרוחק
+
+\subsubsection*{פונקציות אבטחה ורשת}
+
+\begin{itemize}
+  \item \textbf{כלי הצפנה}: מספק כלי הצפנה כמו OpenSSL, תומך בהצפנת נתונים ותקשורת מאובטחת.
+  \item \textbf{בניית שרת}: ניתן להגדיר Nginx או Apache לבניית שרת אתרים סטטיים.
+  \item \textbf{שילוב מערכת והרחבה}גישה להרשאות אחסון הטלפון לניהול קבצים מקומי.
+\end{itemize}
+
+\subsubsection*{שילוב מערכת והרחבה}
+
+\begin{itemize}
+  \item תומך בחיבור מקלדת בלוטות' וצגים חיצוניים, עם תמיכה מלאה בעכבר.
+  \item שלוש, מערכת אקולוגית של תוספים
+  \item היישום המרכזי של Termux ניתן להרחבה דרך מספר יישומי תוספים אופציונליים, המספקים פונקציות ושילובים נוספים:
+\end{itemize}
+
+\booksubsection{שלוש, מערכת אקולוגית של תוספים}
+
+תיאור פונקציה
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Termux:API} & \textbf{חושף פונקציות Android API לתוכניות שורת פקודה} \tabularnewline
+\hline
+Termux: Boot & מאפשר הרצת סקריפטים בעת אתחול המכשיר \tabularnewline
+Termux: Float & מספק חלון טרמינל צף \tabularnewline
+Termux: Styling & מאפשר סכמות צבעים והתאמת גופנים לטרמינל \tabularnewline
+Termux: Tasker & משלב סקריפטים של Termux עם אפליקציית האוטומציה Tasker \tabularnewline
+Termux: Widget & מאפשר הרצת סקריפטים מווידג'ט במסך הבית \tabularnewline
+הערה חשובה & את Termux והתוספים שלו חובה להתקין מאותו מקור, מכיוון שהם חולקים את אותו sharedUserId. ערבוב התקנות ממקורות שונים (כמו F-Droid ו-GitHub) יגרום לשגיאות התקנה. \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{ארבע, מדריך התקנה והגדרה}
+שלבי התקנה
+
+\end{tcbwarn}
+
+\booksubsection{ארבע, מדריך התקנה והגדרה}
+
+\subsubsection*{שלבי התקנה}
+
+\begin{enumerate}
+  \item \textbf{אתחול המערכת}: לאחר ההפעלה הראשונה המתן עד להשלמת "Installing bootstrap packages".
+  \item \textbf{קבלת הרשאות אחסון}: הרץ את
+  \item \textbf{termux-setup-storage}לעדכון רשימת החבילות.\texttt{עדכון מקורות תוכנה}: הרץ את
+  \item \textbf{pkg update \&\& pkg upgrade}לעדכון רשימת החבילות.\texttt{התקן את Python:}החלפת מקור מראה
+\end{enumerate}
+
+\subsubsection*{אופטימיזציה בסיסית}
+
+\begin{itemize}
+  \item \textbf{termux-change-repo}כדי להחליף מקור מראה דרך ממשק גרפי (מומלץ מקור המראה של אוניברסיטת Tsinghua).\texttt{הגדרת מקשי קיצור}: מקש הורדת עוצמת הקול מדמה Ctrl, מקש העלאת עוצמת הקול מדמה Esc, לשיפור יעילות הקלט.
+  \item \textbf{עיצוב ממשק}: התקן Zsh + Oh My Zsh, הגדר ערכות נושא ותוספים.
+  \item \textbf{חמישה, תרחישי שימוש אופייניים}בדיקות פיתוח במובייל
+\end{itemize}
+
+\booksubsection{חמישה, תרחישי שימוש אופייניים}
+
+\subsubsection*{בדיקות פיתוח במובייל}
+
+נהל שרתים מרחוק דרך SSH, בצע משימות תחזוקת מערכת, ניתוח יומנים ועוד, טפל בבעיות שרת בכל זמן ובכל מקום.
+
+\subsubsection*{תפעול ותחזוקת שרתים}
+
+מספק סביבת לינוקס אמיתית, פלטפורמה אידיאלית ללימוד שורת פקודה וניהול מערכת, ניתן לתרגל כתיבת סקריפטים ב-Shell, ניהול הרשאות קבצים ופקודות בסיסיות.
+
+\subsubsection*{למידת פעולות לינוקס}
+
+Linux אמיתי, ללימוד Shell והרשאות (\texttt{chmod 755}הגדרת סיביות הרשאה rwxr-xr-x,\texttt{chown user: group}שינוי בעלות קובץ,\texttt{ls -\allowbreak l}הצגת owner/group/other 3 קבוצות 9 סיביות) ופקודות בסיסיות. זהו מודל ההרשאות הקלאסי של Unix/Linux (owner / group / other × קריאה / כתיבה / ביצוע), שונה לחלוטין מ-ACL של NTFS ב-Windows.
+
+\subsubsection*{בדיקות אבטחת רשת}
+
+הגרסה היציבה האחרונה של Termux היא v0.118.2, המיועדת למכשירי Android $\geq$ 7. חשוב לציין ש-Termux עלול להיות לא יציב ב-Android 12 ומעלה, מומלץ לעקוב אחר יומן העדכונים הרשמי למידע תאימות עדכני.
+
+\booksubsection{שישה, גרסאות ותאימות}
+
+Termux מביא את חוויית טרמינל הלינוקס העוצמתית למכשירי Android, והופך את הטלפון לכלי פיתוח ולמידה נייד. בין אם אתה מפתח, מנהל מערכת או חובב טכנולוגיה, תוכל לנצל את Termux כדי ליהנות מחוויית שורת פקודה מלאה על מכשיר נייד, ולממש את הרעיון של “לינוקס בכיס”.
+
+\begin{tcbinfo}{בוא ננסה: הרץ את פקודת הלינוקס הראשונה שלך על הטלפון}
+הורד והתקן את Termux מ-F-Droid, בהפעלה הראשונה המתן לסיום האתחול.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{הרץ את}
+\begin{enumerate}
+  \item pkg update \&\& pkg upgrade
+  \item הריצו\texttt{pkg update \&\& pkg upgrade}לעדכון חבילות התוכנה.
+  \item התקינו את Python:\texttt{pkg install python}.
+  \item הקלידו\texttt{python3 -\allowbreak c "print('Hello from Termux!')"}וחושו בהנאה שבהרצת קוד על הטלפון.
+  \item , ותרגיש את ההנאה של הרצת קוד על הטלפון.\texttt{ארבע, מעבר (פרקים 21-\allowbreak 26)}חלק זה ייקח אותך אל העולם הדיגיטלי העמוק יותר. מאבטחת מידע ועד עקרונות AI, מחשיבה תכנותית ועד מורשת דיגיטלית, תכנים אלו יעזרו לך להפוך לאזרח דיגיטלי אמיתי.
+\end{enumerate}
+
+\end{tcbpractice}

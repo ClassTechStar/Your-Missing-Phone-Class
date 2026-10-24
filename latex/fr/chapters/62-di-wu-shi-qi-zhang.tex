@@ -1,0 +1,124 @@
+\bookchapter{Chapitre 57 : Le chemin de la maîtrise — permissions, notifications et architecture moderne}
+
+\chapterintro{Savoir fabriquer une app n’est que le début. Ce chapitre aborde les marches qui mènent de « savoir faire » à « bien faire » : demander des permissions avec élégance, envoyer des notifications sans agacer, hisser l’architecture d’un étage, et — en 2026 — coder Android en duo avec l’IA. Chaque point est un obstacle que tu rencontreras très vite dans un vrai projet.}
+
+\booksection{Les permissions à l’exécution : frapper avant d’entrer}
+
+Caméra, localisation, contacts, notifications… pour ces « zones sensibles », Android exige que l’app les demande à l’utilisateur à l’exécution (depuis Android 6). La règle : déclarer d’abord (Manifest), demander ensuite (code), et dégrader élégamment en cas de refus. Dans Compose, le plus paisible est d’utiliser rememberPermissionState de la bibliothèque officielle Accompanist :
+
+\begin{lstlisting}[language=Kotlin]
+// déclare d'abord dans le Manifest :
+// <uses-permission android:name="android.permission.CAMERA" />
+
+@Composable
+fun CameraButton() {
+    val permission = rememberPermissionState(
+        permission = android.Manifest.permission.CAMERA
+    )
+    Button(onClick = {
+        when {
+            permission.status.isGranted -> openCamera()
+            permission.status.shouldShowRationale -> showExplainDialog()
+            else -> permission.launchPermissionRequest()
+        }
+    }) { Text("Prendre une photo") }
+}
+\end{lstlisting}
+
+\begin{tcbwarn}{Attention : que faire en cas de refus définitif ?}
+Une fois que l’utilisateur a coché « ne plus demander », launchPermissionRequest n’affiche plus de fenêtre. Il faut alors le guider vers les réglages du système pour une activation manuelle (avec un Intent vers la page de réglages de l’app) et expliquer dans l’interface « à quoi servira cette permission ». Un ton bienveillant augmente nettement l’envie de l’utilisateur d’accorder la permission — le texte de demande de permission mérite d’être rédigé avec soin.
+
+\end{tcbwarn}
+
+\booksection{Les notifications : dire des choses utiles au bon moment}
+
+Les notifications sont le canal par lequel l’app atteint l’utilisateur, et aussi la fonctionnalité la plus vite « mise sur liste noire ». Trois règles d’or : n’envoyer que l’utile, laisser l’utilisateur pouvoir couper, ne pas harceler en pleine nuit. Usage de base :
+
+\begin{lstlisting}[language=Kotlin]
+// sur Android 13+, il faut d'abord demander la permission POST_NOTIFICATIONS (voir section précédente)
+
+// 1. créer le canal de notification (obligatoire sur Android 8+)
+val channel = NotificationChannel(
+    "reminder", "Rappels", NotificationManager.IMPORTANCE_DEFAULT
+)
+val manager = getSystemService(NotificationManager::class.java)
+manager.createNotificationChannel(channel)
+
+// 2. envoyer la notification
+val notification = NotificationCompat.Builder(this, "reminder")
+    .setSmallIcon(R.drawable.ic_notification)
+    .setContentTitle("Rappel de dépenses")
+    .setContentText("Tu n'as encore rien noté aujourd'hui")
+    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+    .build()
+if (ActivityCompat.checkSelfPermission(this,
+        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+) {
+    manager.notify(1, notification)
+}
+\end{lstlisting}
+
+Pour les tâches planifiées (par exemple « rappeler de noter ses dépenses chaque jour à 20 h »), utilise WorkManager — c’est le « majordome de l’ordonnancement en arrière-plan » recommandé par Google : il garantit que la tâche s’exécute au bon moment, sans que tu aies à te soucier de l’optimisation de batterie. Pour tout besoin de type réveil, c’est le bon choix, à coup sûr.
+
+\booksection{Architecture avancée : injection de dépendances et modularisation}
+
+Quand le projet grossit, deux « douces misères » se présentent :
+
+\begin{itemize}
+  \item La création d’objets part en vrille : chaque écran crée sa propre base de données, son propre API — utilise Hilt (framework d’injection de dépendances) pour tout centraliser : « qui veut quoi n’a qu’à demander, et on lui tend » ;
+  \item Le code s’entasse en montagne : un projet mono-module devient de plus en plus lent à modifier — découpe-le en multi-modules (app / core / feature-xxx), chaque fonctionnalité se développant et se testant de façon indépendante.
+\end{itemize}
+
+\begin{tcbinfo}{Astuce : ne surconçois pas}
+Hilt et la modularisation sont de bons outils, mais ne t’y précipite pas sur un projet solo. Le carnet de comptes en un seul module + création manuelle des dépendances suffit largement. Attends que le code dépasse quelques dizaines de milliers de lignes, que la compilation ralentisse ou que tu passes à plusieurs, et introduis-les selon les besoins. Les outils servent l’objectif, ils ne servent pas à épater — c’est aussi le principe de « simplicité d’abord » de notre livre sur le codage avec l’IA.
+
+\end{tcbinfo}
+
+\booksection{La nouveauté de 2026 : le développement Android assisté par l’IA}
+
+En 2026, l’IA est déjà profondément encastrée dans le flux de développement Android. Si tu veux accélérer, cette combinaison est bien rodée :
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Étape} & \textbf{Comment l’IA aide} & \textbf{Ton rôle} \tabularnewline
+\hline
+Écrire du code & Complétion et génération par Gemini intégré à Android Studio ou par extensions d’IA tierces & Décrire clairement le besoin, relire le résultat \tabularnewline
+Chercher de la documentation & Donner à l’IA la documentation officielle et les messages d’erreur à interpréter & Vérifier les conclusions clés dans la documentation officielle \tabularnewline
+Écrire les tests & Faire générer par l’IA des cas selon trois catégories : « normal / limite / erreur » & Vérifier que les cas collent au sens métier \tabularnewline
+Corriger les bugs & Coller la pile d’erreurs + le code concerné, l’IA localise et corrige & Comprendre les modifications, lancer les tests pour valider \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Les quatre scénarios du développement Android assisté par l’IA\end{center}
+
+La méthodologie concrète — comment donner des instructions à l’IA, comment réceptionner les livraisons, comment éviter les pièges — est développée sur 11 chapitres complets dans la septième partie de ce livre, « L’IA en pratique » (chapitres 37 à 47) ; sa lecture en parallèle est vivement conseillée : la syntaxe Android ici, l’art de collaborer avec l’IA dans la septième partie.
+
+\booksection{Optimisation des performances Compose et outils de débogage}
+
+Écrire avec Compose est un plaisir, mais un « excès de recomposition » peut provoquer des à-coups. Trois astuces pratiques :
+
+\begin{itemize}
+  \item Stabilise les paramètres : ajoute @Immutable à tes data classes ou utilise derivedStateOf pour éviter que des changements d’état sans rapport ne déclenchent de vastes recompositions ;
+  \item Pense à utiliser key : items(list, key = \{ it.id \}) fait que les ajouts et suppressions ne touchent que les éléments concernés — sans key, supprimer un élément peut redessiner toute la liste ;
+  \item Le mode Compose de Layout Inspector : il montre en temps réel le nombre de recompositions de chaque Composable — tu vois d’un coup d’œil qui se recompose trop souvent, et tu optimises ces points chauds.
+\end{itemize}
+
+Active aussi le rapport du compilateur Compose (Metrics) : il génère un rapport sur « quels composants sont instables » — sur la route de la maîtrise, les données sont toujours plus fiables que les impressions.
+
+\begin{tcbpractice}{À toi de jouer : ajoute le « trio » au carnet de comptes}
+(1) Ajoute au carnet de comptes le « rappel de comptes à 20 h chaque jour » (WorkManager + canal de notification + permission de notification d’Android 13) ; (2) remplace la création de la base de données et de l’API par une injection Hilt ; (3) essaie d’accélérer la fonction « filtre mensuel » avec un outil d’IA, puis contrôle le résultat selon la méthode de réception en trois niveaux. Une fois le trio terminé, ton projet aura des allures « d’armée régulière ».
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Résumé du chapitre}
+\begin{itemize}
+  \item Permissions sensibles : déclaration dans le Manifest + demande à l’exécution + orientation élégante en cas de refus
+  \item Les trois règles des notifications : n’envoyer que l’utile, pouvoir couper, ne pas harceler ; canal + permission, rien ne manque
+  \item Tâches planifiées : WorkManager, ne réinvente pas la roue
+  \item Hilt gère les objets, la modularisation gère le code — pas la peine de s’y précipiter sur un petit projet solo
+  \item Quatre scénarios d’assistance IA : coder, chercher la doc, écrire les tests, corriger les bugs ; la méthodologie est dans la septième partie (chapitres 37 à 47)
+\end{itemize}
+
+\end{tcbsummary}

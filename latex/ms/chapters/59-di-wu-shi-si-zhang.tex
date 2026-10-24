@@ -1,0 +1,196 @@
+\bookchapter{Bab 54: Projek Satu — Buku Perakaunan Saya (Versi Tempatan)}
+
+\chapterintro{Selamat datang ke 'projek serius' pertama anda. Walaupun buku perakaunan ini tidak berhubung rangkaian, ia lengkap dari segala segi: boleh mencatat rekod, melihat senarai transaksi, statistik mengikut bulan, memadam dan mengubah. Selepas menyiapkannya, anda telah melalui sepenuhnya aliran 'data logik antara muka'. Jangan terburu-buru menyalin kod — fikir dahulu dengan jelas barulah bertindak; itulah prinsip kita sepanjang buku ini.}
+
+\booksection{Pemikiran Keperluan: Tanya Lima Soalan Dahulu}
+
+Sebelum bertindak, gunakan 'lima elemen keperluan' untuk menyusun idea dengan jelas:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Elemen} & \textbf{Jawapan} \tabularnewline
+\hline
+Who (untuk siapa) & Untuk guna sendiri, keluarga dan rakan pun boleh \tabularnewline
+What (buat apa) & Catat pendapatan \& perbelanjaan, lihat senarai transaksi, ringkasan bulanan, statistik ikut kategori \tabularnewline
+Why (kenapa) & Latihan praktik + tahu ke mana wang dibelanjakan \tabularnewline
+How (macam mana) & Kotlin + Compose + Room + MVVM, sepenuhnya tempatan, tanpa backend \tabularnewline
+Constraint (kekangan) & Siap dalam tempoh seminggu; sokongan minimum Android 8; walaupun tidak akan diterbitkan, tulis ikut standard penerbitan dahulu \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Lima elemen keperluan buku perakaunan\end{center}
+
+Kemudian pecahkan kepada langkah kecil 'setiap langkah boleh guna': (1) bina lapisan data Room (boleh simpan satu rekod); (2) halaman senarai (boleh lihat transaksi); (3) halaman input (boleh tambah rekod); (4) padam dan sunting; (5) kad ringkasan bulanan. Setiap kali satu langkah siap, aplikasi sentiasa 'benda yang boleh guna'.
+
+\booksection{Lapisan Data: Memberi 'Rekod' Sebuah Rumah}
+
+Takrifkan dahulu rupa satu rekod — medan cukup guna tetapi jangan tamak:
+
+\begin{lstlisting}[language=Kotlin]
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val type: String,        // "income" pendapatan | "expense" perbelanjaan
+    val amount: Double,      // Jumlah (yuan)
+    val category: String,    // Kategori: makanan, pengangkutan, gaji……
+    val note: String = "",   // Nota (pilihan)
+    val date: String         // "2026-08-15"
+)
+\end{lstlisting}
+
+Tambah dua pertanyaan 'untuk statistik' dalam Dao — inilah jiwa buku perakaunan:
+
+\begin{lstlisting}[language=Kotlin]
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC, id DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='income' AND date LIKE :month || '%'")
+    suspend fun monthIncome(month: String): Double   // month berbentuk "2026-08"
+
+    @Query("SELECT COALESCE(SUM(amount),0) FROM records WHERE type='expense' AND date LIKE :month || '%'")
+    suspend fun monthExpense(month: String): Double
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Petua: Kenapa Jumlah Guna Double?}
+Aplikasi kewangan yang teliti akan guna BigDecimal atau 'Int dengan unit sen' untuk mengelakkan ralat titik terapung (masalah lama 0.1+0.2$\neq$0.3). Projek latihan guna Double sudah memadai; jika suatu hari membina produk kewangan sebenar, ingat tukar kepada unit 'sen' — inilah perangkap yang dilanggar oleh ramai pendahulu.
+
+\end{tcbinfo}
+
+\booksection{MVVM: Antara Muka dan Logik Diasingkan}
+
+Terus biarkan antara muka mengendalikan pangkalan data? Boleh berjalan, tetapi kod antara muka akan bercokol dan panjang. Seni bina MVVM memastikan setiap satu menjalankan tugasnya: View (antara muka) hanya melukis, ViewModel (pusat logik) mengurus data, Model (Room) mengurus penyimpanan.
+
+View (paparan Compose)
+
+ViewModel (state dan logik)
+
+Model (lapisan data Room)
+
+\begin{center}\small\color{gray}Rajah 5: Struktur tiga lapis MVVM — data mengalir satu hala, setiap lapis tidak melampaui bidangnya\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+class RecordViewModel(private val dao: RecordDao) : ViewModel() {
+
+    // Menukar Flow kepada state yang boleh diperhatikan paparan
+    val records = dao.getAll()
+        .stateIn(viewModelScope, SharingStarted.WhileSubscribed(), emptyList())
+
+    // Tindakan pengguna: memanggil fungsi suspend
+    fun addRecord(type: String, amount: Double, category: String, note: String, date: String) {
+        viewModelScope.launch {
+            dao.insert(Record(type = type, amount = amount,
+                category = category, note = note, date = date))
+        }
+    }
+
+    fun deleteRecord(record: Record) {
+        viewModelScope.launch { dao.delete(record) }
+    }
+}
+\end{lstlisting}
+
+Guna begini dalam antara muka (Compose): val vm: RecordViewModel = viewModel(), kemudian val list by vm.records.collectAsState() — data berubah, senarai segar semula secara automatik, anda tidak perlu buat apa-apa. Inilah kuasa gabungan MVVM + Flow + Compose.
+
+\booksection{Antara Muka: Halaman Senarai + Halaman Input}
+
+Halaman senarai guna LazyColumn (senarai muat malas) — data banyak macam mana pun tidak tersekat:
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun RecordListScreen(vm: RecordViewModel) {
+    val records by vm.records.collectAsState()
+
+    Column {
+        // Kad ringkasan di atas (pendapatan-perbelanjaan=baki)
+        SummaryCard(records)
+
+        // Senarai urus niaga
+        LazyColumn {
+            items(records, key = { it.id }) { record ->
+                RecordRow(record) { vm.deleteRecord(record) }
+            }
+        }
+
+        // Butang terapung "Catat"  paparkan dialog input
+        FloatingActionButton(onClick = { showAddDialog = true }) {
+            Text("+")
+        }
+    }
+}
+
+@Composable
+fun RecordRow(record: Record, onDelete: () -> Unit) {
+    Row(Modifier.fillMaxWidth().padding(12.dp)) {
+        Text(record.category, fontWeight = FontWeight.Bold)
+        Spacer(Modifier.weight(1f))
+        Text(if (record.type == "income") "+${record.amount}" else "-${record.amount}",
+             color = if (record.type == "income") Color(0xFF27AE60) else Color(0xFFC0392B))
+    }
+}
+\end{lstlisting}
+
+Input guna AlertDialog (kotak dialog) paling mudah: beberapa kotak input + suis pendapatan/perbelanjaan + juntai bawah kategori, tekan OK maka panggil vm.addRecord(...).
+
+\begin{tcbwarn}{Perhatian: Jangan Malas Menyemak Input}
+Kotak input jumlah mesti disemak: nilai kosong, nombor negatif, input haram seperti “abc” semuanya mesti disekat (guna toDoubleOrNull() untuk menilai). Salah satu punca paling lazim aplikasi ranap ialah 'menganggap input pengguna budak baik'. Ingat: semua yang dimasukkan pengguna mesti diperiksa seperti musuh.
+
+\end{tcbwarn}
+
+\booksection{Sunting dan Padam: Buat Data 'Boleh Masuk Boleh Keluar'}
+
+Buku perakaunan yang hanya boleh tambah tetapi tidak boleh padam, tiga hari sudah terkudung. Tambah dua operasi:
+
+\begin{lstlisting}[language=Kotlin]
+// Tambah dua fungsi dalam Dao:
+@Query("UPDATE records SET amount=:amount, category=:category, note=:note WHERE id=:id")
+suspend fun update(id: Long, amount: Double, category: String, note: String)
+
+@Query("DELETE FROM records WHERE id=:id")
+suspend fun deleteById(id: Long)
+
+// Di skrin: tekan lama item senarai untuk papar menu "sunting/padam" (Compose guna DropdownMenu atau AlertDialog)
+// Sebaiknya paparkan kotak pengesahan sebelum padam—"terpadam tersilap" ialah perkara paling dibenci pengguna aplikasi perakaunan
+\end{lstlisting}
+
+Dua pengalaman dalam butiran interaksi: padam mesti ada pengesahan kali kedua (mengelakkan tersalah tekan), sunting sebolehnya praisi nilai asal (mengubah satu aksara lebih jimat daripada menaip semula). Jangan pandang rendah dua butiran ini — rasa 'produk' memang dibina daripada butiran begini.
+
+\booksection{Penerimaan: Semakan Tiga Lapis + Dua Cabaran Lanjutan}
+
+\booksection{Penerimaan: Semakan Tiga Lapis + Dua Cabaran Lanjutan}
+
+Selepas projek siap, buat penerimaan mengikut tiga lapis 'fungsi sempadan seni bina': boleh catat atau tidak, boleh padam atau tidak, data masih ada atau tidak selepas membuka semula aplikasi (fungsi); adakah ranap apabila jumlah dimasukkan 0 atau negatif, adakah data hilang semasa skrin dipusing (sempadan); adakah antara muka dan data bercampur, adakah medan dikodkan keras (seni bina).
+
+Selepas lulus penerimaan versi asas, tambahkan dua 'hidangan lanjutan' untuk diri sendiri:
+
+\begin{enumerate}
+  \item Tapisan bulanan: tambah penukar bulan di bahagian atas (contohnya 2026-08 v), senarai hanya memaparkan transaksi bulan semasa;
+  \item Carta pai kategori: guna Canvas Compose atau bawa masuk pustaka carta ringan, lukiskan 'ke mana wang dibelanjakan' menjadi carta pai — selepas siap ini, buku perakaunan sudah ada sedikit 'rupa produk'.
+\end{enumerate}
+
+\begin{tcbpractice}{Mari cuba: Siapkan Minggu Ini}
+Bertindak mengikut urutan 'lapisan data ViewModel halaman senarai halaman input kad ringkasan', satu langkah sehari. Kalau tersangkut, campakkan ralat itu seadanya kepada enjin carian atau AI (masih ingat Bahagian 7 'Praktik Pengaturcaraan AI'? Semasa menghuraikan masalah, jelaskan 'tingkah laku dijangka, tingkah laku sebenar, langkah mengulangi'). Selepas siap, gunakannya mencatat perbelanjaan seminggu — menggunakan aplikasi buatan sendiri, rasa pencapaian akan mendorong anda terus mara.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab}
+\begin{itemize}
+  \item Lima elemen keperluan pecahkan kepada langkah kecil 'setiap langkah boleh guna', barulah bertindak
+  \item Lapisan data: entiti Record + Dao (termasuk SQL statistik bulanan) + Database
+  \item Pembahagian MVVM: View hanya melukis, ViewModel urus logik, Model urus penyimpanan
+  \item Flow + stateIn + collectAsState: data berubah, antara muka segar semula secara automatik
+  \item LazyColumn senarai muat malas; AlertDialog untuk input
+  \item Penerimaan tiga lapis (fungsi/sempadan/seni bina) + cabaran lanjutan (tapisan bulanan, carta pai kategori)
+\end{itemize}
+
+\end{tcbsummary}

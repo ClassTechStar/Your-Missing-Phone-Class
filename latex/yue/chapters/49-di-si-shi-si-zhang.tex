@@ -1,0 +1,162 @@
+\bookchapter{第四十四章：從0到1實戰——完整項目全流程}
+
+\chapterintro{理論學完喇，而家係動手嘅時候。本章唔係簡單嘅「跟住打」教程，而係一套「點諗、點問、點驗」嘅實戰方法論。我哋會用三個唔同難度嘅項目，展示由需求到成品嘅完整思考過程。無論你用邊個工具，呢套流程都啱用。}
+
+\booksection{一、項目一：極簡個人工具站（入門級）}
+
+\booksubsection{需求思考}
+
+目標：整一個個人工具站網頁，展示 3-4 個實用小工具嘅入口。呢個係一個純前端項目，唔需要後端同數據庫。重點唔係工具本身有幾複雜，而係體驗「由需求到成品」嘅完整流程。
+
+跟住需求五要素：Who——個人使用。What——一個展示工具入口嘅網頁。Why——將常用工具集中喺一個頁面方便存取。How——單檔案 HTML+CSS+JS，唔用框架。Constraint——30 分鐘內完成，唔使部署。
+
+\booksubsection{下達指令}
+
+根據 Think Before Coding 原則，你嘅指令應該包含足夠嘅資訊畀 AI 明白目標，但唔使指定每個實現細節：
+
+\begin{lstlisting}
+請整一個個人工具站網頁，要求：
+1. 單檔案HTML（內聯CSS同JS），唔用框架
+2. 暗色主題，現代簡約風格
+3. 展示4個工具入口卡片：
+   - 文字摘要工具
+   - 字數統計工具
+   - 顏色選擇器
+   - 二維碼生成器
+4. 每個卡片有圖標、標題、簡短描述
+5. 卡片有懸停動畫效果
+6. 響應式佈局，手機上用得
+7. 頂部有一個標題欄
+請直接畀出完整嘅HTML檔案。
+\end{lstlisting}
+
+\booksubsection{驗收同迭代}
+
+AI 畀咗代碼之後，跟迭代驗證嘅三層檢查嚟驗收。第一層功能驗證：檔案能否喺瀏覽器入面打開？4 張卡係咪全部都顯示咗？懸停動畫正唔正常？第二層邊界驗證：喺手機螢幕尺寸下佈局正唔正常？窗口好窄嗰陣啲卡會唔會換行？第三層架構驗證：代碼可唔可以讀得明？CSS 係咪內聯喺一個 style 標籤入面？有冇明顯嘅冗餘？
+
+如果某個工具卡嘅功能都想實現埋（而唔係齋入口），可以逐步添加——每次添加一個工具嘅功能，驗證完先添加下一個。呢個就係「小步快跑」策略嘅實際應用。
+
+\booksection{二、項目二：全端記賬系統（進階級）}
+
+\booksubsection{需求思考同 PRD}
+
+目標：一個有前端、後端同數據庫嘅全端記賬應用。呢個項目比第一個複雜好多，需要用到第四十章嘅需求工程方法。
+
+先寫 PRD。跟第四十章第三節嘅模板，寫出項目概述、功能列表、技術方案、數據模型同開發計劃。揀技術方案要考慮 Simplicity First 原則——前端用 React 但唔引入 Redux 等複雜狀態管理，後端用 Node.js 但唔引入微服務，數據庫用 SQLite 而唔係 PostgreSQL（開發階段）。
+
+開發計劃拆解做 5 步：Step 1 後端 API 骨架（Express 伺服器 + SQLite + CRUD 接口）；Step 2 前端基礎頁面（記錄列表 + 添加表單）；Step 3 前後端對接（API 呼叫 + 數據展示）；Step 4 分類同篩選功能；Step 5 月度匯總同簡單圖表。每步做完都係「用得嘅嘢」。
+
+\booksubsection{設定項目記憶檔案}
+
+喺開始寫代碼之前，先整項目記憶檔案。呢個係上下文工程嘅核心實踐——畀 AI 每次對話開始嗰陣都瞭解項目背景。
+
+\begin{lstlisting}
+# 項目：全棧記賬應用
+## 概述
+個人記賬應用，支援收支記錄、分類、月度匯總。
+## 技術棧
+- 前端：React + TypeScript + Vite
+- 後端：Node.js + Express + TypeScript
+- 數據庫：SQLite (通過 better-sqlite3)
+- 前後端共享類型定義
+## API約定
+- 基礎路徑：/api
+- 返回格式：{ success: boolean, data: any, error: string }
+- RESTful風格
+## 數據模型
+Record { id, amount, type, category, note, date }
+## 代碼規範
+- TypeScript嚴格模式
+- 縮進2空格
+- 函數有JSDoc註釋
+- 中文註釋同提交資訊
+\end{lstlisting}
+
+\booksubsection{逐步實現}
+
+跟住開發計劃，每一步用一個獨立嘅對話嚟完成。以下係第一步嘅指令例子：
+
+\begin{lstlisting}
+我需要整一個後端API骨架。
+要求：
+1. Express伺服器，端口3001
+2. SQLite數據庫，表名records
+3. records表字段：
+   id (TEXT PRIMARY KEY)
+   amount (REAL)
+   type (TEXT: 'income'|'expense')
+   category (TEXT)
+   note (TEXT)
+   date (TEXT: YYYY-MM-DD)
+4. CRUD接口：
+   GET /api/records - 攞曬所有記錄
+   POST /api/records - 新增記錄
+   PUT /api/records/:id - 更新記錄
+   DELETE /api/records/:id - 刪除記錄
+5. 錯誤處理中間件
+請畀出完整嘅後端代碼結構。
+\end{lstlisting}
+
+留意呢個指令嘅特點：佢只描述而家呢一步（後端骨架），冇溝埋前端需求；佢明確列出咗欄位同接口（畀足約束 AI），但具體實現由 AI 決定；佢跟足 Goal-Driven Execution 原則——講「做乜嘢」而唔係「點樣做」。
+
+AI 畀咗代碼之後，即刻驗證：行嚇伺服器，用 curl 或者 Postman 測試每個接口係咪正常運作。確認冇錯之後，開新對話處理 Step 2（前端基礎頁面）。每一步都跟「指令-驗證-新對話」嘅循環。
+
+\booksection{三、項目三：AI 增強應用（高級）}
+
+\booksubsection{項目構思}
+
+目標：一個接入大模型 API 嘅應用——例如一個「AI 學習助手」，用戶輸入學習內容，AI 產生摘要、關聯知識點、推薦學習資源。呢個項目嘅特別之處喺於：你嘅應用本身就喺呼叫 AI，你需要處理 API 呼叫、prompt 工程、錯誤處理等新問題。
+
+呢個項目教你最重要嘅一課係：當你「用 AI 嚟寫呼叫 AI 嘅代碼」嗰陣，你需要份外留意 prompt 工程。你嘅應用呼叫大模型 API 時用嘅 prompt，都要跟本指南討論嘅原則——清晰、簡潔、目標驅動。
+
+\booksubsection{關鍵技術點}
+
+呢個項目涉及幾個你喺頭兩個項目入面未遇過嘅技術點：
+
+\begin{itemize}
+  \item API 金鑰管理：金鑰絕對唔可以寫死喺代碼入面，要用環境變數管理；
+  \item 串流回應處理：大模型嘅回覆通常係串流式嘅，需要逐個字咁顯示；
+  \item Token 用量控制：大模型按 token 計費，需要喺應用層面控制用量；
+  \item Prompt 模板管理：唔同功能用唔同嘅 prompt 模板，需要結構化管理。
+\end{itemize}
+
+呢啲技術點都可以叫 AI 幫你實現，但你需要明白每個技術點嘅「點解」——點解金鑰唔可以寫死？點解需要串流回應？點解 token 用量需要控制？明白咗「點解」，你先至可以判斷 AI 嘅方案合唔合理。
+
+\booksection{四、通用實戰流程清單}
+
+無論項目大細，以下係一個通用嘅 AI 編程實戰流程清單。每次開新項目嗰陣，行一遍呢個清單，確保冇漏咗關鍵步驟。
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{階段} & \textbf{做乜嘢} & \textbf{對應原則} \tabularnewline
+\hline
+1. 需求思考 & 行一遍需求五要素，諗清楚要做乜嘢 & Think Before Coding \tabularnewline
+2. 需求拆解 & 將大需求拆做可以獨立驗證嘅小步驟 & Simplicity First \tabularnewline
+3. 寫PRD & 整理成結構化文檔，用嚟做參考 & Goal-Driven \tabularnewline
+4. 設定記憶檔案 & 整CLAUDE.md或者同類檔案 & Harness Engineering \tabularnewline
+5. 逐步實現 & 每步一個對話，指令-驗證-下一步 & Surgical Changes \tabularnewline
+6. 測試驗證 & 每步做完即刻測試功能正確性 & Iterate \& Verify \tabularnewline
+7. 代碼審查 & 檢查架構合理性、安全性、可維護性 & Iterate \& Verify \tabularnewline
+8. 迭代優化 & 根據測試同審查結果迭代改進 & Iterate \& Verify \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}AI 編程通用實戰流程清單\end{center}
+
+\begin{tcbpractice}{嚟動手：今個星期完成「項目一」}
+將第四十四章第一節嘅「個人工具站」當係你第一份 AI 編程功課：花 5 分鐘行五要素，將指令發畀 AI（邊個工具都得），再跟三層驗證嚟驗收。30 分鐘內完成佢——你嘅第一個 AI 編程作品就誕生喇。做完記得存好佢，呢個係你由「讀者」變成「實踐者」嘅紀念品。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章小結}
+\begin{itemize}
+  \item 項目一（入門）：純前端工具站——體驗完整流程，30 分鐘搞得掂
+  \item 項目二（進階）：全端記賬系統——PRD + 記憶檔案 + 5 步逐步實現，每步都「用得」
+  \item 項目三（高級）：AI 學習助手——用 AI 寫呼叫 AI 嘅代碼，留意 prompt 工程
+  \item 通用流程八步：需求思考拆解PRD記憶檔案逐步實現測試審查迭代
+  \item 每一步都跟「指令-驗證-新對話」循環
+\end{itemize}
+
+\end{tcbsummary}

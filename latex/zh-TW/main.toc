@@ -1,0 +1,529 @@
+\contentsline {part}{一、基礎篇（第0-7章）}{2}{part*.2}%
+\contentsline {chapter}{第零章：嗨，開始之前}{2}{chapter*.3}%
+\contentsline {section}{一、這本書能幫你做什麼？（和不能做的）}{2}{section*.4}%
+\contentsline {section}{二、我們的“暗號”說明}{2}{section*.4}%
+\contentsline {section}{三、安卓和iOS，咱都說說}{2}{section*.4}%
+\contentsline {section}{四、手機容量：為啥買了128G，可用卻不到110G？}{2}{section*.4}%
+\contentsline {section}{五、你的手機是一座“數字資產庫”}{3}{Item.3}%
+\contentsline {chapter}{第一章：你好，我的私人電腦}{5}{chapter*.5}%
+\contentsline {section}{一、手機硬體“五臟六腑”：深度解析}{5}{section*.6}%
+\contentsline {section}{二、作業系統：安卓 VS iOS VS 鴻蒙}{11}{Item.11}%
+\contentsline {section}{三、手機介面全解析}{12}{Item.11}%
+\contentsline {section}{四、手機產品體系與命名規則}{13}{Item.11}%
+\contentsline {section}{五、基帶與天線：手機通訊的幕後功臣}{14}{Item.11}%
+\contentsline {section}{六、你的手機，到底在扮演多少角色？}{15}{Item.11}%
+\contentsline {section}{附：安卓手機記憶體拓展解析}{16}{Item.21}%
+\contentsline {section}{第一章附：鴻蒙作業系統專題}{18}{Item.25}%
+\contentsline {chapter}{第二章：整理你的數字房間——檔案管理}{22}{chapter*.7}%
+\contentsline {section}{一、三層儲存體系：你的數字倉庫}{22}{section*.8}%
+\contentsline {section}{二、認識“檔案管理器”}{22}{Item.32}%
+\contentsline {section}{三、檔案系統結構：深入瞭解}{23}{Item.32}%
+\contentsline {section}{四、資料備份與恢復：給你的資料上保險}{23}{Item.32}%
+\contentsline {section}{五、檔案安全：保護你的隱私}{24}{Item.35}%
+\contentsline {section}{六、空間不夠？來場大掃除}{24}{Item.35}%
+\contentsline {section}{七、常見檔案格式全解析}{24}{Item.35}%
+\contentsline {section}{八、圖片與檔案系統管理：讓資產井井有條}{26}{Item.35}%
+\contentsline {chapter}{第三章：讓手機接上“生命線”——網路}{28}{chapter*.9}%
+\contentsline {section}{〇、聯網不迷茫——分清Wi-Fi與流量的“路”與“車”}{28}{section*.10}%
+\contentsline {section}{一、行動網路（4G/5G）與流量}{29}{section*.10}%
+\contentsline {section}{二、Wi-Fi：連線、分享與安全}{30}{section*.10}%
+\contentsline {section}{三、藍芽：短距離無線通訊的萬能選手}{31}{section*.10}%
+\contentsline {section}{四、紅外遙控：手機變身萬能遙控器}{32}{section*.10}%
+\contentsline {section}{五、NFC：碰一碰的魔法}{32}{section*.10}%
+\contentsline {section}{六、個人熱點：把手機變Wi-Fi路由器}{33}{section*.10}%
+\contentsline {chapter}{第四章：安裝和管理App——手機的“技能包”}{34}{chapter*.11}%
+\contentsline {section}{一、官方商店：最安全的“應用超市”}{34}{section*.12}%
+\contentsline {section}{二、純淨/防護模式：開啟手機的“防毒牆”}{34}{section*.12}%
+\contentsline {section}{三、第三方來源與“電子寄生蟲”：風險極高！}{35}{section*.12}%
+\contentsline {section}{四、裝、更新、解除安裝}{36}{Item.47}%
+\contentsline {section}{五、許可權管理：你是App的“老闆”}{36}{Item.47}%
+\contentsline {section}{六、軟體安裝包的構成要素}{37}{Item.50}%
+\contentsline {chapter}{第五章：讓手機更懂你——基礎設定}{39}{chapter*.13}%
+\contentsline {section}{一、聲音與震動}{39}{section*.14}%
+\contentsline {section}{二、顯示與亮度}{39}{section*.14}%
+\contentsline {section}{三、桌布、主題與桌面}{39}{section*.14}%
+\contentsline {section}{四、效率設定：讓手機成為你的“外掛大腦”}{40}{section*.14}%
+\contentsline {section}{五、輔助功能與無障礙：科技向善的力量}{41}{section*.14}%
+\contentsline {chapter}{第六章：守護你的數字生活——安全與隱私}{46}{chapter*.15}%
+\contentsline {section}{一、鎖屏：第一道物理防線}{46}{section*.16}%
+\contentsline {section}{二、“查詢我的手機”：終極防盜工具}{46}{Item.76}%
+\contentsline {section}{三、系統更新：打補丁，堵漏洞}{47}{Item.76}%
+\contentsline {section}{四、識別與防範電信詐騙}{47}{Item.76}%
+\contentsline {section}{五、抵禦“開盒”與社工攻擊：斬斷隱私洩露鏈條}{48}{Item.76}%
+\contentsline {section}{六、隱私保護：你的資料是你的財產}{49}{Item.76}%
+\contentsline {section}{七、丟失 / 被盜後的“急救”清單}{50}{Item.76}%
+\contentsline {section}{八、SIM 卡與 eSIM 安全}{50}{Item.82}%
+\contentsline {chapter}{第七章：前沿功能全解析}{52}{chapter*.17}%
+\contentsline {section}{一、衛星通訊：沒訊號也能求救}{52}{section*.18}%
+\contentsline {section}{二、無網通：近距離通訊新方式}{53}{Item.89}%
+\contentsline {section}{三、車禍檢測：關鍵時刻救命}{53}{Item.89}%
+\contentsline {section}{四、星閃技術：下一代無線連線}{54}{Item.92}%
+\contentsline {part}{二、軟體篇（第8-14章）}{57}{part*.19}%
+\contentsline {chapter}{第八章：通訊：簡訊、電話與社交}{57}{chapter*.20}%
+\contentsline {section}{一、電話 App的進階功能}{57}{section*.21}%
+\contentsline {section}{二、簡訊與iMessage/RCS}{59}{section*.21}%
+\contentsline {section}{三、微信/QQ：國民級社交應用程式的管理}{60}{section*.21}%
+\contentsline {section}{四、視訊通話對比}{61}{Item.100}%
+\contentsline {section}{五、電子郵件：在手機上配置與使用}{62}{Item.100}%
+\contentsline {chapter}{第九章：移動辦公與學習}{64}{chapter*.22}%
+\contentsline {section}{一、文件處理：在掌中編輯與創作}{64}{section*.23}%
+\contentsline {section}{二、筆記應用：從隨手記到知識體系}{64}{section*.23}%
+\contentsline {section}{三、掃描與OCR：把紙質世界搬進手機}{65}{section*.23}%
+\contentsline {section}{四、網盤怎麼選：沒有最好的，只有最適合你的}{65}{section*.23}%
+\contentsline {section}{五、一個真實的移動辦公場景}{66}{section*.23}%
+\contentsline {chapter}{第十章：移動支付與生活服務}{67}{chapter*.24}%
+\contentsline {section}{一、到底怎麼繫結銀行卡？}{67}{section*.25}%
+\contentsline {section}{二、付款碼是“誰看誰收錢”}{67}{Item.122}%
+\contentsline {section}{三、這些安全設定，花5分鐘設好能省很多心}{68}{Item.122}%
+\contentsline {section}{四、公交地鐵：手機就是交通卡}{68}{Item.122}%
+\contentsline {section}{五、生活繳費、外賣、打車}{68}{Item.122}%
+\contentsline {section}{六、用手機搞定醫保、社保、政務}{69}{Item.122}%
+\contentsline {chapter}{第十一章：攝影與圖片管理}{70}{chapter*.26}%
+\contentsline {section}{一、你是不是也犯過這些錯？}{70}{section*.27}%
+\contentsline {section}{二、幾個立刻提升出片率的小技巧}{70}{section*.27}%
+\contentsline {section}{三、人像模式與專業模式}{71}{section*.27}%
+\contentsline {section}{四、後期修圖：不要過度，恰到好處就行}{71}{section*.27}%
+\contentsline {section}{五、照片太多怎麼辦？整理策略}{72}{section*.27}%
+\contentsline {section}{六、截圖與錄屏}{72}{section*.27}%
+\contentsline {section}{第十一章附：專業影像技術知識}{73}{Item.131}%
+\contentsline {chapter}{第十二章：影音娛樂與閱讀}{81}{chapter*.28}%
+\contentsline {section}{一、聽音樂：選哪個App，怎麼聽才舒服}{81}{section*.29}%
+\contentsline {section}{二、播客（Podcast）：通勤路上的“耳朵伴侶”}{81}{section*.29}%
+\contentsline {section}{三、看影片：從播放器到流媒體的正確開啟方式}{82}{section*.29}%
+\contentsline {section}{四、電子書閱讀：手機上也能好好看書}{82}{section*.29}%
+\contentsline {section}{五、手機遊戲：玩得爽，也不傷手機}{83}{section*.29}%
+\contentsline {chapter}{第十三章：工具類App推薦}{85}{chapter*.30}%
+\contentsline {section}{一、效率工具：管理你的時間與注意力}{85}{section*.31}%
+\contentsline {section}{二、健康運動}{87}{section*.31}%
+\contentsline {section}{三、旅行出行}{88}{section*.31}%
+\contentsline {section}{四、自動化工具啟蒙}{90}{section*.31}%
+\contentsline {section}{五、瀏覽器與搜尋引擎：你的資訊入口}{90}{section*.31}%
+\contentsline {section}{六、實用系統工具：清理、防騷擾與安全防護}{93}{Item.147}%
+\contentsline {section}{七、天氣預警、自然災害預警與地震預警}{95}{Item.151}%
+\contentsline {section}{八、跨裝置協同：遠控電腦、快傳與帳號安全}{97}{Item.155}%
+\contentsline {chapter}{第十四章：密碼管理器專題}{101}{chapter*.32}%
+\contentsline {section}{一、為什麼你需要密碼管理器？}{101}{section*.33}%
+\contentsline {section}{二、密碼管理器的工作原理}{101}{section*.33}%
+\contentsline {section}{三、加密原理簡介}{101}{Item.163}%
+\contentsline {section}{四、主流密碼管理器推薦}{103}{Item.167}%
+\contentsline {section}{五、密碼強度真實評估}{103}{Item.167}%
+\contentsline {section}{六、Passkey：無密碼登入的未來}{105}{Item.173}%
+\contentsline {section}{七、硬體安全金鑰}{107}{Item.190}%
+\contentsline {section}{八、家庭/團隊密碼共享}{108}{Item.196}%
+\contentsline {section}{九、密碼管理器使用最佳實踐}{110}{Item.208}%
+\contentsline {part}{三、進階篇（第15-20章）}{113}{part*.34}%
+\contentsline {chapter}{第十五章：電池科學與續航最佳化}{113}{chapter*.35}%
+\contentsline {section}{一、電池是怎麼回事？迴圈與健康度}{113}{section*.36}%
+\contentsline {section}{二、充電玄學？快充、無線充與黃金法則}{113}{section*.36}%
+\contentsline {section}{三、快充協議全解析：為什麼你的充電器充不快？}{114}{section*.36}%
+\contentsline {section}{四、電池新技術：矽碳負極電池}{117}{Item.217}%
+\contentsline {section}{五、這才是真正的省電技巧}{117}{Item.217}%
+\contentsline {chapter}{第十六章：賬號體系與雲服務}{119}{chapter*.37}%
+\contentsline {section}{一、你的手機賬號，到底管著多少東西？}{119}{section*.38}%
+\contentsline {section}{二、三個必須做的事，現在就做}{119}{section*.38}%
+\contentsline {section}{三、iCloud：蘋果使用者的“空氣”}{120}{Item.223}%
+\contentsline {section}{四、同步和備份，別搞混了}{121}{Item.223}%
+\contentsline {section}{五、安卓使用者的賬號矩陣}{121}{Item.223}%
+\contentsline {section}{六、家庭共享：讓家人也受益}{121}{Item.223}%
+\contentsline {chapter}{第十七章：手機與其他裝置的聯動}{123}{chapter*.39}%
+\contentsline {section}{一、與電腦協同：手機和電腦不再是兩個世界}{123}{section*.40}%
+\contentsline {section}{二、投屏到電視：全家一起看}{123}{section*.40}%
+\contentsline {section}{三、與智慧手錶/手環：健康管家長在手腕上}{124}{section*.40}%
+\contentsline {section}{四、與智慧家居：手機是家裡的“總開關”}{124}{section*.40}%
+\contentsline {section}{五、藍芽耳機與音箱：無線的自由}{125}{section*.40}%
+\contentsline {section}{六、與車載系統：開車時的安全搭檔}{126}{section*.40}%
+\contentsline {section}{七、聯動中的安全和隱私}{126}{section*.40}%
+\contentsline {chapter}{第十八章：資料備份與遷移}{128}{chapter*.41}%
+\contentsline {section}{一、先搞清楚：你手機裡哪些東西丟了就沒了}{128}{section*.42}%
+\contentsline {section}{二、整機備份：一次搞定所有東西}{128}{section*.42}%
+\contentsline {section}{三、分類備份策略：重要的單獨另存一份}{129}{section*.42}%
+\contentsline {section}{四、換機指南：從舊手機到新手機}{130}{section*.42}%
+\contentsline {section}{五、備份的黃金法則：三二一原則}{130}{section*.42}%
+\contentsline {chapter}{第十九章：故障排查與自救}{132}{chapter*.43}%
+\contentsline {section}{一、手機變卡、發熱——最常被問的問題}{132}{section*.44}%
+\contentsline {section}{二、應用閃退、無響應——App不聽話了}{132}{Item.242}%
+\contentsline {section}{三、充不進電或充電慢——可能不是電池的鍋}{133}{Item.247}%
+\contentsline {section}{四、網路連不上、Wi-Fi老是斷}{133}{Item.247}%
+\contentsline {section}{五、螢幕問題：觸控不靈、閃屏、留印子}{134}{Item.251}%
+\contentsline {section}{六、無法開機、卡在Logo介面——先別慌}{134}{Item.251}%
+\contentsline {section}{七、聲音問題：喇叭不響、通話聲音小}{134}{Item.251}%
+\contentsline {section}{八、找官方維修，避開那些坑}{135}{Item.251}%
+\contentsline {section}{第二十章：開發者模式與高階許可權}{136}{Item.256}%
+\contentsline {section}{第二十章附：Termux——Android裝置上的行動式Linux終端環境}{143}{Item.269}%
+\contentsline {part}{四、超越篇（第21-26章）}{147}{part*.45}%
+\contentsline {chapter}{第二十一章：行動網路與資訊保安深探}{147}{chapter*.46}%
+\contentsline {section}{一、VPN：網路裡的“隱形斗篷”}{147}{section*.47}%
+\contentsline {section}{二、公共Wi-Fi的“甜蜜陷阱”——比你想象的危險}{147}{section*.47}%
+\contentsline {section}{三、HTTPS是怎麼保護你的？——SSL/TLS握手}{148}{section*.47}%
+\contentsline {section}{四、DNS安全：你的“網路電話本”安全嗎？}{149}{Item.281}%
+\contentsline {section}{五、“無痕瀏覽”真的能隱身嗎？}{149}{Item.281}%
+\contentsline {section}{六、瀏覽器隱私：別讓瀏覽器把你賣了}{149}{Item.281}%
+\contentsline {section}{七、實用安全清單：保護自己從現在開始}{150}{Item.281}%
+\contentsline {chapter}{第二十二章：AI如何在手機中工作}{152}{chapter*.48}%
+\contentsline {section}{一、AI相機：你的“後期暗房”搬進了手機}{152}{section*.49}%
+\contentsline {section}{二、語音助手：你的“聲音秘書”如何聽懂你？}{152}{section*.49}%
+\contentsline {section}{三、端側AI vs. 雲端AI}{152}{Item.294}%
+\contentsline {section}{四、AI大模型與手機：你的隨身智慧助手}{152}{Item.294}%
+\contentsline {section}{五、幾個典型應用場景與實操}{154}{Item.294}%
+\contentsline {section}{六、提示詞最佳化：讓 AI 聽你指揮的“溝通公式”}{155}{Item.294}%
+\contentsline {section}{七、AI的侷限與挑戰：保持清醒的判斷力}{158}{Item.299}%
+\contentsline {chapter}{第二十三章：程式設計思維與自動化啟蒙}{160}{chapter*.50}%
+\contentsline {section}{一、自動化到底是個啥？}{160}{section*.51}%
+\contentsline {section}{二、iOS“快捷指令”——蘋果使用者的自動化神器}{160}{Item.305}%
+\contentsline {section}{三、安卓自動化——Tasker和它的朋友們}{161}{Item.305}%
+\contentsline {section}{四、自動化思維的日常應用}{162}{Item.305}%
+\contentsline {section}{五、踩坑指南：自動化的常見問題}{163}{Item.305}%
+\contentsline {chapter}{第二十三章附：GitHub入門指南——從程式碼託管到協作平臺}{165}{chapter*.52}%
+\contentsline {section}{一、GitHub到底是什麼？}{165}{section*.53}%
+\contentsline {section}{二、Git和GitHub的區別（關鍵概念！）}{165}{section*.53}%
+\contentsline {section}{三、GitHub的核心概念與功能}{166}{section*.53}%
+\contentsline {section}{四、註冊與上手：五分鐘建立你的第一個倉庫}{167}{section*.53}%
+\contentsline {section}{五、基本工作流：從本地到雲端}{168}{Item.318}%
+\contentsline {section}{六、團隊協作流程：Pull Request是怎麼工作的}{168}{Item.323}%
+\contentsline {section}{七、GitHub的典型應用場景}{169}{Item.329}%
+\contentsline {section}{八、給新手的幾點建議}{169}{Item.329}%
+\contentsline {section}{九、總結：為什麼每個人都該瞭解GitHub}{170}{Item.329}%
+\contentsline {chapter}{第二十四章：Root權限與BL鎖深度解析}{172}{chapter*.54}%
+\contentsline {section}{一、深入理解Bootloader}{172}{section*.55}%
+\contentsline {section}{二、解鎖BL鎖的詳細流程（以小米為例）}{173}{Item.337}%
+\contentsline {section}{三、Root的多種方案}{174}{Item.341}%
+\contentsline {section}{四、刷機入門}{174}{Item.341}%
+\contentsline {section}{五、三星Knox：BL解鎖的不可逆代價}{174}{Item.341}%
+\contentsline {section}{六、常見問題解答（Q\& A）}{175}{Item.341}%
+\contentsline {chapter}{第二十五章：二手手機處理與數字遺產}{176}{chapter*.56}%
+\contentsline {section}{一、舊手機的“安樂死”：安全出售或轉贈指南}{176}{section*.57}%
+\contentsline {section}{二、數字遺產：你的社交靈魂如何安放？}{177}{Item.346}%
+\contentsline {section}{三、環保的最後一程}{181}{Item.357}%
+\contentsline {chapter}{第二十六章：當下手機技術前沿}{183}{chapter*.58}%
+\contentsline {section}{一、AI手機：是營銷噱頭，還是真變革？}{183}{section*.59}%
+\contentsline {section}{二、各廠商AI戰略對比：誰在認真做，誰在貼牌？}{183}{section*.59}%
+\contentsline {section}{三、衛星通訊：從旗艦“噱頭”到中端標配}{184}{section*.59}%
+\contentsline {section}{四、摺疊屏生態成熟度：能當主力機了嗎？}{184}{section*.59}%
+\contentsline {section}{五、6G與Wi-Fi 7：下一代連線的速度與邊界}{185}{section*.59}%
+\contentsline {section}{六、矽碳負極電池：續航終於迎來材料級突破}{185}{section*.59}%
+\contentsline {section}{七、本章速覽：一句話記住這些前沿}{186}{section*.59}%
+\contentsline {part}{五、實戰篇（第27-32章）}{188}{part*.60}%
+\contentsline {chapter}{第二十七章：爸媽也能輕鬆用——適老化手機完全指南}{188}{chapter*.61}%
+\contentsline {section}{零、先把心態擺正：這不是“老人用不來”，是“手機沒做好”}{188}{section*.62}%
+\contentsline {section}{一、第一步：開啟“簡易模式”——手機變清爽了}{188}{section*.62}%
+\contentsline {section}{二、如果不開簡易模式，手動調也可以——“大字+大圖示”五步走}{189}{section*.62}%
+\contentsline {section}{三、防詐騙——這章請一定帶著長輩一起看}{190}{Item.376}%
+\contentsline {section}{四、遠端協助——你在外地也能幫爸媽修手機}{191}{Item.379}%
+\contentsline {section}{五、微信的“適老改造”——跟長輩說這幾句就夠了}{191}{Item.379}%
+\contentsline {section}{六、手機丟了怎麼辦？幫長輩做個“應急預案”}{192}{Item.379}%
+\contentsline {section}{七、無線耳機和助聽器相容——被忽視的好功能}{192}{Item.382}%
+\contentsline {section}{八、健康相關功能——手機不只是通訊工具}{192}{Item.382}%
+\contentsline {chapter}{第二十八章：花對錢買到心儀機——手機選購終極指南}{194}{chapter*.63}%
+\contentsline {section}{零、三步選機法：需求預算機型}{194}{section*.64}%
+\contentsline {section}{一、核心引數怎麼看——不用全懂，看懂這五項就夠了}{194}{Item.385}%
+\contentsline {section}{二、按預算分檔推薦（以2026年中市場為基準）}{195}{Item.385}%
+\contentsline {section}{三、按場景選機——你的需求是什麼？}{197}{Item.385}%
+\contentsline {section}{四、五個容易踩的坑——買之前對照看一眼}{197}{Item.385}%
+\contentsline {section}{五、什麼時候買最劃算？}{198}{Item.390}%
+\contentsline {section}{六、渠道怎麼選——在哪買靠譜？}{198}{Item.390}%
+\contentsline {chapter}{第二十九章：數字健康——和手機建立健康關係}{200}{chapter*.65}%
+\contentsline {section}{一、先看看你的“螢幕時間”——數字讓人清醒}{200}{section*.66}%
+\contentsline {section}{二、給App設定“使用限額”——給自己裝個限速器}{200}{section*.66}%
+\contentsline {section}{三、“勿擾模式”的正確用法——不是關掉通知，是關掉焦慮}{201}{Item.398}%
+\contentsline {section}{四、護眼不靠App靠習慣——20-20-20法則}{201}{Item.398}%
+\contentsline {section}{五、“低頭族”的頸椎自救指南}{201}{Item.398}%
+\contentsline {section}{六、睡眠與手機——臥室裡最該改的習慣}{202}{Item.398}%
+\contentsline {section}{七、資訊焦慮症——學會“選擇性失明”}{202}{Item.398}%
+\contentsline {chapter}{第三十章：投屏、演示與車載互聯}{204}{chapter*.67}%
+\contentsline {section}{一、無線投屏三大陣營——別搞混了}{204}{section*.68}%
+\contentsline {section}{二、有線投屏——更穩定、零延遲}{204}{section*.68}%
+\contentsline {section}{三、手機變電腦——桌面模式}{205}{section*.68}%
+\contentsline {section}{四、車載互聯——開車用手機的正確方式}{205}{section*.68}%
+\contentsline {section}{五、會議室投屏實戰——不再手忙腳亂}{206}{section*.68}%
+\contentsline {chapter}{第三十一章：短影片拍攝與內容創作入門}{207}{chapter*.69}%
+\contentsline {section}{一、拍之前先想清楚：你要拍給誰看？}{207}{section*.70}%
+\contentsline {section}{二、手機拍攝基礎設定——開拍前必做的5件事}{207}{Item.413}%
+\contentsline {section}{三、運鏡五招——讓畫面“動”起來}{208}{Item.418}%
+\contentsline {section}{四、剪輯入門——剪映就夠了}{208}{Item.418}%
+\contentsline {section}{五、封面的重要性——70\%的人只看封面決定看不看}{208}{Item.424}%
+\contentsline {section}{六、內容創作的三條心法}{209}{Item.424}%
+\contentsline {chapter}{第三十二章：手機安全急救手冊}{210}{chapter*.71}%
+\contentsline {section}{場景零：地震 / 極端天氣——手機怎麼幫你保命}{210}{section*.72}%
+\contentsline {section}{場景一：手機丟了/被偷了——黃金30分鐘}{211}{Item.439}%
+\contentsline {section}{場景二：被騙了——72小時黃金處理期}{211}{Item.448}%
+\contentsline {section}{場景三：手機中了病毒/木馬——怎麼辦？}{212}{Item.454}%
+\contentsline {section}{場景四：帳號被盜——快速奪回控制權}{212}{Item.454}%
+\contentsline {section}{場景五：收到勒索資訊——不要怕，不要付}{213}{Item.460}%
+\contentsline {section}{場景六：AI換臉/AI擬聲詐騙——眼見不再為實}{213}{Item.460}%
+\contentsline {section}{場景七：SIM swap攻擊（SIM劫持）——你的號碼被“偷”走了}{214}{Item.465}%
+\contentsline {part}{六、展望篇與車聯篇（第33-34章）}{218}{part*.73}%
+\contentsline {chapter}{第三十三章：未來展望——手機的下一程}{218}{chapter*.74}%
+\contentsline {section}{一、AR/VR與空間計算：手機之外的“第二桌面”}{218}{section*.75}%
+\contentsline {section}{二、腦機介面：思想成為互動媒介}{218}{section*.75}%
+\contentsline {section}{三、手機的“隱身”與新身份基石}{219}{section*.75}%
+\contentsline {section}{四、倫理思考：我們，還是手機的主人嗎？}{219}{section*.75}%
+\contentsline {section}{五、保持連線，也保持獨立——你的數字生活哲學}{219}{section*.75}%
+\contentsline {chapter}{第三十四章：車機互聯深度指南——手機與汽車的融合}{221}{chapter*.76}%
+\contentsline {section}{一、車機互聯的三大路線}{221}{section*.77}%
+\contentsline {section}{二、CarPlay / Android Auto / HiCar 對比}{221}{section*.77}%
+\contentsline {section}{三、鴻蒙座艙：手機與車機的無縫流轉}{222}{section*.77}%
+\contentsline {section}{四、造車新勢力的車機系統}{222}{section*.77}%
+\contentsline {section}{五、手機當車機——能用嗎？}{223}{section*.77}%
+\contentsline {section}{六、實用技巧}{223}{section*.77}%
+\contentsline {part}{兒童與手機專題（第35章）}{226}{part*.78}%
+\contentsline {chapter}{第三十五章：兒童與手機——數字時代的教育指南}{226}{chapter*.79}%
+\contentsline {section}{一、幾歲給孩子手機？}{226}{section*.80}%
+\contentsline {section}{二、家長控制系統全攻略}{227}{section*.80}%
+\contentsline {section}{三、青少年模式}{228}{section*.80}%
+\contentsline {section}{四、網路素養教育}{228}{section*.80}%
+\contentsline {section}{五、健康使用習慣}{229}{section*.80}%
+\contentsline {section}{六、數字遺產與兒童}{229}{section*.80}%
+\contentsline {chapter}{第三十六章：手機與智慧家居——讓家變聰明}{231}{chapter*.81}%
+\contentsline {section}{一、智慧家居協議：選誰很重要}{231}{section*.82}%
+\contentsline {section}{二、三大生態對比}{232}{section*.82}%
+\contentsline {section}{三、手機當家居中樞}{232}{section*.82}%
+\contentsline {section}{四、入門套件推薦}{233}{section*.82}%
+\contentsline {section}{五、安全注意事項}{233}{section*.82}%
+\contentsline {part}{七、AI程式設計實戰篇（第37-47章）}{236}{part*.83}%
+\contentsline {chapter}{第三十七章：正規化革命——從“寫程式碼”到“指揮AI寫程式碼”}{236}{chapter*.84}%
+\contentsline {section}{一、Vibe Coding 的誕生：一句話引發的運動}{236}{section*.85}%
+\contentsline {section}{二、2026 年現狀：Agentic Engineering 時代}{236}{section*.85}%
+\contentsline {section}{三、核心認知轉變：從 Coder 到 Conductor}{237}{Item.496}%
+\contentsline {section}{四、為什麼方法論比工具更重要}{238}{Item.496}%
+\contentsline {chapter}{第三十八章：AI程式設計五大思維原則}{240}{chapter*.86}%
+\contentsline {section}{一、原則一：Think Before Coding（先思考，再編碼）}{240}{section*.87}%
+\contentsline {section}{二、原則二：Simplicity First（簡單至上）}{241}{Item.499}%
+\contentsline {section}{三、原則三：Surgical Changes（精準修改）}{242}{Item.499}%
+\contentsline {section}{四、原則四：Goal-Driven Execution（目標驅動執行）}{242}{lstnumber.-2.1}%
+\contentsline {section}{五、原則五：Iterate and Verify（迭代驗證）}{243}{lstnumber.-2.1}%
+\contentsline {section}{六、Harness Engineering：Agent = Model + Harness}{244}{lstnumber.-2.1}%
+\contentsline {chapter}{第三十九章：上下文工程——讓AI理解你的意圖}{246}{chapter*.88}%
+\contentsline {section}{一、專案記憶檔案：AI 的“長期記憶”}{246}{section*.89}%
+\contentsline {section}{二、規範驅動開發（SDD）}{247}{lstnumber.-3.24}%
+\contentsline {section}{三、上下文視窗管理}{248}{Item.504}%
+\contentsline {section}{四、上下文工程的實踐要點}{248}{Item.504}%
+\contentsline {chapter}{第四十章：需求工程——把想法變成AI可執行的指令}{250}{chapter*.90}%
+\contentsline {section}{一、從模糊想法到結構化需求}{250}{section*.91}%
+\contentsline {section}{二、需求拆解的分層藝術}{251}{section*.91}%
+\contentsline {section}{三、PRD 寫作模板與實踐}{251}{Item.513}%
+\contentsline {section}{四、實戰：從想法到方案的完整推演}{252}{lstnumber.-4.29}%
+\contentsline {chapter}{第四十一章：2026年AI程式設計工具全景}{254}{chapter*.92}%
+\contentsline {section}{一、三大流派與選擇框架}{254}{section*.93}%
+\contentsline {section}{二、IDE 內建 AI 流派}{255}{section*.93}%
+\contentsline {section}{三、終端 Agent 流派}{255}{section*.93}%
+\contentsline {section}{四、雲端 Builder 流派}{256}{section*.93}%
+\contentsline {section}{五、工具會變，方法論不變}{256}{section*.93}%
+\contentsline {chapter}{第四十二章：大型語言模型全景與API實戰}{258}{chapter*.94}%
+\contentsline {section}{一、國際主流大型語言模型：三強格局}{258}{section*.95}%
+\contentsline {section}{二、國產主流大型語言模型：百花齊放}{260}{section*.95}%
+\contentsline {section}{三、模型選擇決策框架}{263}{section*.95}%
+\contentsline {section}{四、API 呼叫入門：從零開始接入大型語言模型}{264}{section*.95}%
+\contentsline {section}{五、Token Plan 購買指南}{267}{lstnumber.-8.14}%
+\contentsline {section}{六、實戰：在專案中接入大型語言模型 API}{270}{Item.522}%
+\contentsline {chapter}{第四十三章：對話工程——與AI高效協作的對話技術}{273}{chapter*.96}%
+\contentsline {section}{一、Prompt 分層策略}{273}{section*.97}%
+\contentsline {section}{二、除錯對話：如何描述錯誤讓 AI 快速定位}{274}{section*.97}%
+\contentsline {section}{三、迭代策略：小步快跑 vs 大步重構}{274}{lstnumber.-11.1}%
+\contentsline {section}{四、多輪對話的上下文管理}{275}{lstnumber.-11.1}%
+\contentsline {chapter}{第四十四章：從0到1實戰——完整專案全流程}{277}{chapter*.98}%
+\contentsline {section}{一、專案一：極簡個人工具站（入門級）}{277}{section*.99}%
+\contentsline {section}{二、專案二：全棧記帳系統（進階級）}{278}{lstnumber.-12.13}%
+\contentsline {section}{三、專案三：AI 增強應用（進階）}{279}{lstnumber.-14.18}%
+\contentsline {section}{四、通用實戰流程清單}{280}{lstnumber.-14.18}%
+\contentsline {chapter}{第四十五章：品質保障——讓AI寫的程式碼可靠}{282}{chapter*.100}%
+\contentsline {section}{一、測試驅動：讓 AI 寫測試}{282}{section*.101}%
+\contentsline {section}{二、程式碼審查技巧}{283}{lstnumber.-15.14}%
+\contentsline {section}{三、版本控制：Git 在 AI 程式設計中的角色}{283}{lstnumber.-15.14}%
+\contentsline {section}{四、常見陷阱與避坑指南}{284}{Item.530}%
+\contentsline {chapter}{第四十六章：進階之路——從使用者到架構師}{286}{chapter*.102}%
+\contentsline {section}{一、MCP 協議與工具擴充套件}{286}{section*.103}%
+\contentsline {section}{二、自定義工作流與 Skills}{286}{section*.103}%
+\contentsline {section}{三、多 Agent 協作模式}{287}{section*.103}%
+\contentsline {section}{四、持續學習路徑}{287}{section*.103}%
+\contentsline {chapter}{第四十七章：速查手冊與資源}{289}{chapter*.104}%
+\contentsline {section}{一、思維模型速查卡}{289}{section*.105}%
+\contentsline {section}{二、工具選擇決策樹}{289}{section*.105}%
+\contentsline {section}{三、常見問題 FAQ}{290}{section*.105}%
+\contentsline {section}{四、推薦學習資源}{290}{section*.105}%
+\contentsline {section}{五、結語：工具在手，方法論在心}{291}{section*.105}%
+\contentsline {section}{參考文獻}{292}{section*.105}%
+\contentsline {part}{八、安卓開發實戰篇（第48-58章）}{294}{part*.106}%
+\contentsline {chapter}{第四十八章：認識安卓——從作業系統到開發生態}{294}{chapter*.107}%
+\contentsline {section}{一、安卓的身世：從“小機器人”到“全球最大系統”}{294}{section*.108}%
+\contentsline {section}{二、用什麼語言寫：Java 還是 Kotlin？}{295}{section*.108}%
+\contentsline {section}{三、一個 App 是怎麼誕生的？}{296}{lstnumber.-17.6}%
+\contentsline {section}{四、安卓技術棧全景：你的“武器清單”}{296}{lstnumber.-17.6}%
+\contentsline {section}{五、安卓 vs iOS：開發者的第一堂“選邊課”}{297}{lstnumber.-17.6}%
+\contentsline {chapter}{第四十九章：搭建開發環境——Android Studio 與第一個專案}{299}{chapter*.109}%
+\contentsline {section}{一、安裝 Android Studio}{299}{section*.110}%
+\contentsline {section}{二、建立你的第一個專案}{299}{Item.542}%
+\contentsline {section}{三、跑起來：模擬器與真機}{300}{Item.542}%
+\contentsline {section}{四、工程結構拆解：每個檔案是幹嘛的}{301}{Item.546}%
+\contentsline {section}{五、小試牛刀：把“Hello”換成你的名字}{301}{Item.546}%
+\contentsline {section}{六、常見報錯急救：新手前兩週的“急診室”}{302}{lstnumber.-18.8}%
+\contentsline {chapter}{第五十章：Kotlin 快速上手——安卓開發的第一語言}{303}{chapter*.111}%
+\contentsline {section}{一、變數與型別：給資料起名字}{303}{section*.112}%
+\contentsline {section}{二、函式：把邏輯打包成“按鈕”}{304}{lstnumber.-19.8}%
+\contentsline {section}{三、條件與迴圈：讓程式會“思考”}{304}{lstnumber.-20.10}%
+\contentsline {section}{四、空安全：Kotlin 的“保命符”}{305}{lstnumber.-21.21}%
+\contentsline {section}{五、類與物件：造“零件”的模具}{305}{lstnumber.-22.10}%
+\contentsline {section}{六、lambda 與進階函式：Kotlin 的“語法糖”}{306}{lstnumber.-23.13}%
+\contentsline {section}{七、寫給零基礎的語法速查卡}{306}{lstnumber.-24.11}%
+\contentsline {chapter}{第五十一章：介面開發——Jetpack Compose 入門}{308}{chapter*.113}%
+\contentsline {section}{一、Compose 的思想：介面就是函式}{308}{section*.114}%
+\contentsline {section}{二、基礎元件：文字、按鈕、輸入框、圖片}{309}{lstnumber.-25.16}%
+\contentsline {section}{三、佈局三件套：Column、Row、Box}{309}{lstnumber.-26.15}%
+\contentsline {section}{四、狀態：讓介面“活”起來}{310}{lstnumber.-28.9}%
+\contentsline {section}{五、主題與深色模式：一次配置，全域性生效}{311}{lstnumber.-29.12}%
+\contentsline {section}{六、預覽、動畫與實時編輯：Compose 的“外掛”}{311}{Item.549}%
+\contentsline {chapter}{第五十二章：四大元件與 Activity 生命週期}{313}{chapter*.115}%
+\contentsline {section}{一、四大元件：安卓的“四梁八柱”}{313}{section*.116}%
+\contentsline {section}{二、Activity 生命週期：安卓開發的第一張“藏寶圖”}{313}{section*.116}%
+\contentsline {section}{三、Intent：App 裡外通行的“車票”}{314}{section*.116}%
+\contentsline {section}{四、多頁面與導航}{315}{lstnumber.-31.8}%
+\contentsline {section}{五、順帶認識：Fragment 是什麼（以及為什麼本書沒教）}{315}{lstnumber.-32.13}%
+\contentsline {chapter}{第五十三章：資料儲存與網路請求}{317}{chapter*.117}%
+\contentsline {section}{一、儲存方案怎麼選：先看這張表}{317}{section*.118}%
+\contentsline {section}{二、DataStore：存點小配置}{317}{section*.118}%
+\contentsline {section}{三、Room：給資料安個“真正的家”}{318}{lstnumber.-33.12}%
+\contentsline {section}{四、Retrofit：和伺服器說話}{319}{lstnumber.-34.31}%
+\contentsline {section}{五、JSON 解析：給網路資料“翻譯”}{319}{lstnumber.-35.15}%
+\contentsline {section}{六、協程：安卓併發的“普通話”}{320}{lstnumber.-36.10}%
+\contentsline {section}{八、協程：安卓併發的“普通話”}{320}{lstnumber.-36.10}%
+\contentsline {chapter}{第五十四章：專案一——我的記帳本（本地版）}{322}{chapter*.119}%
+\contentsline {section}{一、需求思考：先問五個問題}{322}{section*.120}%
+\contentsline {section}{二、資料層：讓“賬”有個家}{322}{section*.120}%
+\contentsline {section}{三、MVVM：介面與邏輯“分家”}{323}{lstnumber.-39.17}%
+\contentsline {section}{四、介面：列表頁 + 錄入頁}{324}{lstnumber.-40.18}%
+\contentsline {section}{五、編輯與刪除：讓資料“能進能出”}{325}{lstnumber.-41.31}%
+\contentsline {section}{六、驗收：三層檢查 + 兩個進階挑戰}{326}{lstnumber.-42.9}%
+\contentsline {section}{八、驗收：三層檢查 + 兩個進階挑戰}{326}{lstnumber.-42.9}%
+\contentsline {chapter}{第五十五章：專案二——天氣查詢 App（網路版）}{327}{chapter*.121}%
+\contentsline {section}{一、申請免費天氣 API}{327}{section*.122}%
+\contentsline {section}{二、網路層：Retrofit + JSON 解析}{327}{Item.554}%
+\contentsline {section}{三、三種介面狀態：載入中 / 成功 / 失敗}{328}{lstnumber.-43.18}%
+\contentsline {section}{四、實戰介面程式碼：把天氣畫出來}{329}{lstnumber.-44.24}%
+\contentsline {section}{五、介面與互動細節}{329}{lstnumber.-45.25}%
+\contentsline {section}{七、介面與互動細節}{329}{lstnumber.-45.25}%
+\contentsline {chapter}{第五十六章：打磨與發佈——測試、除錯與上架 Google Play}{331}{chapter*.123}%
+\contentsline {section}{一、除錯三板斧：Logcat、斷點、UI 檢查器}{331}{section*.124}%
+\contentsline {section}{二、測試：給程式碼上保險}{331}{section*.124}%
+\contentsline {section}{三、簽名打包：給 App 蓋上“印章”}{332}{lstnumber.-46.19}%
+\contentsline {section}{四、上架 Google Play 全流程}{333}{Item.557}%
+\contentsline {section}{五、商店素材怎麼做：第一印象就是下載量}{333}{Item.557}%
+\contentsline {section}{五、效能最佳化與崩潰上報小清單}{333}{Item.557}%
+\contentsline {chapter}{第五十七章：進階之路——權限、通知與現代架構}{335}{chapter*.125}%
+\contentsline {section}{一、執行時權限：先敲門，再進門}{335}{section*.126}%
+\contentsline {section}{二、通知：在正確的時間說有用的話}{336}{lstnumber.-47.16}%
+\contentsline {section}{三、架構進階：依賴注入與模組化}{336}{lstnumber.-48.21}%
+\contentsline {section}{四、2026 年的新玩法：AI 輔助安卓開發}{337}{lstnumber.-48.21}%
+\contentsline {section}{五、Compose 效能最佳化與除錯工具}{337}{lstnumber.-48.21}%
+\contentsline {chapter}{第五十八章：速查手冊與資源}{339}{chapter*.127}%
+\contentsline {section}{一、常用程式碼速查卡}{339}{section*.128}%
+\contentsline {section}{二、常見問題 FAQ}{339}{section*.128}%
+\contentsline {section}{三、推薦學習資源}{340}{section*.128}%
+\contentsline {section}{四、Gradle 常用命令速查}{340}{section*.128}%
+\contentsline {section}{五、結語：從第一個 App 到第 N 個 App}{341}{section*.128}%
+\contentsline {section}{七、結語：從第一個 App 到第 N 個 App}{341}{section*.128}%
+\contentsline {section}{參考文獻}{341}{section*.128}%
+\contentsline {part}{九、iOS開發實戰篇（第59-69章）}{343}{part*.129}%
+\contentsline {chapter}{第五十九章：認識 iOS——蘋果生態與開發生態}{343}{chapter*.130}%
+\contentsline {section}{一、iOS 的身世：一部手機改變一個行業}{343}{section*.131}%
+\contentsline {section}{二、圍牆花園：蘋果生態的“規矩”與“紅利”}{343}{section*.131}%
+\contentsline {section}{三、用什麼語言寫：Objective-C 還是 Swift？}{344}{section*.131}%
+\contentsline {section}{四、一個 App 是怎麼誕生的？}{344}{lstnumber.-50.1}%
+\contentsline {section}{五、iOS 技術棧全景：你的“武器清單”}{345}{lstnumber.-50.1}%
+\contentsline {chapter}{第六十章：搭建開發環境——Xcode 與第一個專案}{347}{chapter*.132}%
+\contentsline {section}{一、準備一臺 Mac}{347}{section*.133}%
+\contentsline {section}{二、安裝 Xcode}{347}{section*.133}%
+\contentsline {section}{三、建立你的第一個專案}{348}{Item.570}%
+\contentsline {section}{四、工程結構拆解：每個檔案是幹嘛的}{348}{Item.570}%
+\contentsline {section}{五、真機除錯：把 App 裝進你的 iPhone}{349}{Item.570}%
+\contentsline {section}{五、Xcode 效率技巧：新手的五個“快速鍵外掛”}{349}{Item.570}%
+\contentsline {section}{六、真機除錯：把 App 裝進你的 iPhone}{349}{Item.570}%
+\contentsline {section}{七、小試牛刀 + 常見報錯急救}{350}{Item.574}%
+\contentsline {section}{九、小試牛刀 + 常見報錯急救}{350}{Item.574}%
+\contentsline {chapter}{第六十一章：Swift 快速上手——蘋果開發的第一語言}{351}{chapter*.134}%
+\contentsline {section}{一、變數與型別：給資料起名字}{351}{section*.135}%
+\contentsline {section}{二、可選值（Optional）：Swift 的“防崩護身符”}{352}{lstnumber.-51.10}%
+\contentsline {section}{三、函式與閉包：把邏輯打包成“按鈕”}{352}{lstnumber.-52.15}%
+\contentsline {section}{四、結構體與協議：Swift 的“樂高”體系}{353}{lstnumber.-53.13}%
+\contentsline {section}{五、寫給零基礎的語法速查卡}{354}{lstnumber.-54.16}%
+\contentsline {chapter}{第六十二章：介面開發——SwiftUI 入門}{355}{chapter*.136}%
+\contentsline {section}{一、SwiftUI 的思想：宣告式，不是命令式}{355}{section*.137}%
+\contentsline {section}{二、基礎檢視：文字、按鈕、輸入框、圖片}{356}{lstnumber.-55.15}%
+\contentsline {section}{三、佈局三件套：VStack、HStack、ZStack}{356}{lstnumber.-55.15}%
+\contentsline {section}{四、狀態與繫結：讓介面“活”起來}{357}{lstnumber.-56.14}%
+\contentsline {section}{五、預覽、主題與動畫：SwiftUI 的“外掛”}{357}{lstnumber.-58.9}%
+\contentsline {section}{六、常用修飾符速查：一頁在手，介面不愁}{358}{lstnumber.-59.16}%
+\contentsline {chapter}{第六十三章：檢視、狀態與導航}{360}{chapter*.138}%
+\contentsline {section}{一、狀態管理的“資料流全景”}{360}{section*.139}%
+\contentsline {section}{二、NavigationStack：頁面跳轉的“棧”}{361}{lstnumber.-60.19}%
+\contentsline {section}{三、跳出視窗與底部標籤：sheet 與 TabView}{361}{lstnumber.-61.24}%
+\contentsline {section}{四、List：iOS 的“國民列表”}{362}{lstnumber.-62.24}%
+\contentsline {section}{五、程式生命週期：前臺與後臺}{363}{lstnumber.-63.14}%
+\contentsline {chapter}{第六十四章：資料儲存與網路請求}{365}{chapter*.140}%
+\contentsline {section}{一、儲存方案怎麼選：先看這張表}{365}{section*.141}%
+\contentsline {section}{二、UserDefaults：存點小配置}{365}{section*.141}%
+\contentsline {section}{三、SwiftData：給資料安個“真正的家”}{366}{lstnumber.-65.10}%
+\contentsline {section}{四、Codable：給 JSON“翻譯”}{367}{lstnumber.-66.46}%
+\contentsline {section}{五、URLSession + async/await：和伺服器說話}{367}{lstnumber.-67.14}%
+\contentsline {section}{六、網路錯誤也要“分級”：別把一切報錯都丟給使用者}{368}{lstnumber.-68.19}%
+\contentsline {chapter}{第六十五章：專案一——我的記帳本（本地版）}{370}{chapter*.142}%
+\contentsline {section}{一、需求思考：先問五個問題}{370}{section*.143}%
+\contentsline {section}{二、資料層：讓“賬”有個家}{370}{section*.143}%
+\contentsline {section}{三、MVVM：介面與邏輯“分家”}{371}{lstnumber.-70.18}%
+\contentsline {section}{四、介面：列表頁 + 錄入跳出視窗}{372}{lstnumber.-71.30}%
+\contentsline {section}{五、編輯、刪除與彙總}{373}{lstnumber.-72.31}%
+\contentsline {section}{六、驗收：三層檢查 + 兩個進階挑戰}{373}{lstnumber.-73.13}%
+\contentsline {chapter}{第六十六章：專案二——天氣查詢 App（網路版）}{375}{chapter*.144}%
+\contentsline {section}{一、申請免費天氣 API}{375}{section*.145}%
+\contentsline {section}{二、網路層：URLSession + Codable}{375}{Item.579}%
+\contentsline {section}{三、三種介面狀態：載入中 / 成功 / 失敗}{376}{lstnumber.-74.24}%
+\contentsline {section}{四、實戰介面程式碼：把天氣畫出來}{377}{lstnumber.-75.28}%
+\contentsline {section}{五、互動細節與收藏城市}{377}{lstnumber.-76.20}%
+\contentsline {section}{六、網路請求怎麼除錯：列印、抓包與模擬慢網}{378}{lstnumber.-76.20}%
+\contentsline {chapter}{第六十七章：打磨與發佈——測試、除錯與上架 App Store}{379}{chapter*.146}%
+\contentsline {section}{一、除錯三板斧：print、斷點、預覽}{379}{section*.147}%
+\contentsline {section}{二、測試：給程式碼上保險}{379}{section*.147}%
+\contentsline {section}{三、簽名與打包：給 App 蓋上“印章”}{380}{lstnumber.-77.20}%
+\contentsline {section}{四、上架 App Store 全流程}{381}{lstnumber.-77.20}%
+\contentsline {section}{五、商店素材怎麼做：第一印象就是下載量}{381}{lstnumber.-77.20}%
+\contentsline {section}{六、崩潰上報與效能最佳化小清單}{381}{lstnumber.-77.20}%
+\contentsline {chapter}{第六十八章：進階之路——權限、通知與現代架構}{383}{chapter*.148}%
+\contentsline {section}{一、權限：先敲門，再進門}{383}{section*.149}%
+\contentsline {section}{二、通知：在正確的時間說有用的話}{384}{lstnumber.-78.21}%
+\contentsline {section}{三、架構進階：MVVM 深入與可測試性}{384}{lstnumber.-79.26}%
+\contentsline {section}{四、2026 年的新玩法：AI 輔助 iOS 開發}{385}{lstnumber.-79.26}%
+\contentsline {section}{五、Swift 併發要點：@MainActor 與 Task}{385}{lstnumber.-79.26}%
+\contentsline {chapter}{第六十九章：速查手冊與資源}{387}{chapter*.150}%
+\contentsline {section}{一、常用程式碼速查卡}{387}{section*.151}%
+\contentsline {section}{二、常見問題 FAQ}{387}{section*.151}%
+\contentsline {section}{三、Xcode 高頻快速鍵速查}{388}{section*.151}%
+\contentsline {section}{四、推薦學習資源}{389}{section*.151}%
+\contentsline {section}{六、推薦學習資源}{389}{section*.151}%
+\contentsline {section}{五、結語：從第一個 App 到第 N 個 App}{389}{section*.151}%
+\contentsline {section}{參考文獻}{389}{section*.151}%
+\contentsline {chapter}{附錄A：新手機開箱“保姆級”流程}{392}{appendix*.153}%
+\contentsline {section}{開箱驗機“三部曲”：}{392}{section*.154}%
+\contentsline {section}{啟用與初始設定“重點提醒”：}{392}{section*.154}%
+\contentsline {section}{裝App“安全第一”：}{392}{section*.154}%
+\contentsline {chapter}{附錄B：動手練習小參考}{393}{appendix*.155}%
+\contentsline {chapter}{附錄C：極簡術語“黑話”對照表}{394}{appendix*.156}%
+\contentsline {chapter}{附錄D：靠譜資源去哪裡找？}{395}{appendix*.157}%
+\contentsline {section}{官方支援是首選：}{395}{section*.158}%
+\contentsline {section}{實用網站與博主：}{395}{section*.158}%
+\contentsline {section}{安全自查一句話清單：}{395}{section*.158}%
+\contentsline {chapter}{附錄E：感謝與說明}{396}{appendix*.159}%
+\contentsline {section}{6版更新要點}{396}{section*.160}%
+\contentsline {section}{7版更新要點}{396}{section*.160}%
+\contentsline {section}{8版更新要點}{398}{section*.160}%
+\contentsline {section}{內容增補：實用軟體與騷擾攔截}{398}{section*.160}%
+\contentsline {section}{內容增補：天氣預警 / 自然災害預警 / 地震預警}{398}{section*.160}%
+\contentsline {section}{內容增補：跨裝置協同與效率工具}{399}{section*.160}%
+\contentsline {chapter}{附錄F：摺疊屏選購與使用專題}{400}{appendix*.161}%
+\contentsline {section}{一、摺疊屏現在發展到什麼程度了？}{400}{section*.162}%
+\contentsline {section}{二、什麼人適合買摺疊屏？}{400}{section*.162}%
+\contentsline {section}{三、選購要點：看這6個指標}{401}{Item.601}%
+\contentsline {section}{四、摺疊屏獨有的使用技巧}{402}{Item.606}%
+\contentsline {section}{五、保養要點：讓摺疊屏活得久一點}{402}{Item.606}%
+\contentsline {section}{六、摺疊屏的“坑”和心理預期}{403}{Item.606}%
+\contentsline {section}{七、主流品牌怎麼選（2026年）}{403}{Item.606}%
+\contentsline {chapter}{結語：保持好奇，保持清醒}{405}{appendix*.163}%
+\contentsline {chapter}{附錄G：全書速查索引}{406}{appendix*.164}%
+\contentsline {chapter}{附錄H：版本路線圖}{410}{appendix*.165}%

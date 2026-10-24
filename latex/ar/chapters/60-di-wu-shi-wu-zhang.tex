@@ -1,0 +1,143 @@
+\bookchapter{الفصل 55: المشروع الثاني — تطبيق الطقس (النسخة الشبكية)}
+
+\chapterintro{دفتر الحسابات “تمرين داخلي”، أما تطبيق الطقس فـ“انطلاق إلى العالم” — فهو يتعامل مع الإنترنت. في هذا المشروع ستتعلم: طلب API مجاني، وتحليل JSON، ومعالجة حالات الواجهة الثلاث “جارٍ التحميل/نجاح/فشل”، وكيفية إخفاء مفتاح API جيدًا. بعد إنجازه ستكتسب القدرة على بناء أي “تطبيق متصل بالشبكة” — أخبار، أسعار صرف، ترجمة؛ والطريقة واحدة تمامًا.}
+
+\booksection{أولًا: طلب API طقس مجاني}
+
+لتمرين شخصي أنصح بـ OpenWeatherMap أو “هيفنغ للطقس” (QWeather) — كلاهما يوفر حصة مجانية، وسجّل فاستخدم. لنأخذ OpenWeatherMap مثالًا:
+
+\begin{enumerate}
+  \item سجّل حسابًا أنشئ مفتاحًا (apikey) من صفحة API keys؛
+  \item النسخة المجانية تستدعي واجهة Current Weather (الطقس الحالي): api.openweathermap.org/data/2.5/weather? q=beijing\&appid=مفتاحك\&units=metric؛
+  \item جرّبها أولًا في المتصفح وانظر كيف يبدو JSON المعاد — هذا "واجب التحضير" اللازم قبل استدعاء أي API.
+\end{enumerate}
+
+\textbf{تحذير من الفخاخ: لا تثبّت المفتاح في الكود إطلاقًا}\par
+
+مفتاح API يشبه “كلمة سر محفظتك”؛ إذا كتبته في الكود ودفعت إلى GitHub ستسرقه الزواحف خلال ساعات ويُستهلك دون إذنك. الطريقة الصحيحة: ضعه في local.properties (وهذا الملف مستثنى عبر gitignore)، ثم اقرأه في الكود عبر buildConfig من Gradle. ابحث عن “أفضل الممارسات لإخفاء مفتاح API في Android” واتبع الشرح.
+
+\booksection{ثانيًا: طبقة الشبكة: Retrofit + تحليل JSON}
+
+عرّف “نموذج البيانات” وفق JSON المعاد من الـ API، وتجاهل الحقول غير المتطابقة:
+
+\begin{lstlisting}[language=Kotlin]
+// JSON: {"weather":[{"description":"صافٍ"}],"main":{"temp":26.5,"humidity":40},"name":"الرياض"}
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+data class Weather(val description: String)
+data class Main(val temp: Double, val humidity: Int)
+
+interface WeatherApi {
+    @GET("data/2.5/weather")
+    suspend fun getWeather(
+        @Query("q") city: String,
+        @Query("appid") key: String,
+        @Query("units") metric: String = "metric",
+        @Query("lang") lang: String = "zh_cn"
+    ): WeatherResponse
+}
+\end{lstlisting}
+
+سيضع Gson بيانات JSON تلقائيًا في صنوف data class هذه — متى تطابقت أسماء الحقول حدث السحر تلقائيًا.
+
+\booksection{ثالثًا: حالات الواجهة الثلاث: جارٍ التحميل / نجاح / فشل}
+
+روح التطبيق المتصل بالشبكة في “إدارة الحالات”. الشبكة بطيئة، أو منقطعة، أو اسم المدينة مكتوب خطأ… كل حالة تستحق ردًا واضحًا للمستخدم. عبّر عنها بأناقة عبر sealed class (صنف مغلق):
+
+\begin{lstlisting}[language=Kotlin]
+sealed class UiState {
+    object Loading : UiState()                    // جارٍ التحميل
+    data class Success(val data: WeatherResponse) : UiState()  // نجاح
+    data class Error(val message: String) : UiState()          // فشل
+}
+
+// في الـ ViewModel:
+fun search(city: String) {
+    viewModelScope.launch {
+        _state.value = UiState.Loading
+        _state.value = try {
+            UiState.Success(api.getWeather(city))
+        } catch (e: Exception) {
+            UiState.Error("تعذر العثور على هذه المدينة، جرّب اسمًا آخر؟")
+        }
+    }
+}
+
+// في الواجهة:
+when (val s = state) {
+    is UiState.Loading -> CircularProgressIndicator()   // مؤشر تحميل دائري
+    is UiState.Success -> WeatherContent(s.data)        // يعرض
+    is UiState.Error -> Text(s.message)                 // يعرض الخطأ
+}
+\end{lstlisting}
+
+قالب Loading/Success/Error ثلاثي المراحل هو “الوصفة الذهبية” لواجهات الشبكة؛ احفظه أولًا ثم استخدمه في كل تطبيق متصل مستقبلًا.
+
+\booksection{رابعًا: كود الواجهة عمليًا: لرسم الطقس}
+
+بعد الحالة هكذا تبدو الواجهة (المقاطع الأساسية):
+
+\begin{lstlisting}[language=Kotlin]
+@Composable
+fun WeatherContent(data: WeatherResponse) {
+    Column(
+        Modifier.fillMaxSize().padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(
+            "${data.main.temp}°C",
+            fontSize = 72.sp,
+            fontWeight = FontWeight.Light
+        )
+        Text(
+            data.weather.firstOrNull()?.description ?: "غير معروف",
+            fontSize = 20.sp,
+            color = Color.Gray
+        )
+        Spacer(Modifier.height(16.dp))
+        Row {
+            Text(" الرطوبة ${data.main.humidity}%")
+            Spacer(Modifier.width(24.dp))
+            Text(" الإحساس ${data.main.temp}°C")
+        }
+    }
+}
+\end{lstlisting}
+
+تفاصيل صغيرة تستحق التعلم: firstOrNull() تلتقط العنصر الأول بأمان (قد تكون القائمة فارغة)، و?: “غير معروف” يوفر نصًا احتياطيًا — فمبدأ أمان الفراغ يسري على الواجهة أيضًا. تُعرض الحرارة بخط 72.sp الكبير ليحتل الصدارة، ووزن الخط “الخفيف” (Light) يجعل الأرقام تبدو أنيقة — هذه الوصفة الكلاسيكية لتطبيقات الطقس.
+
+\booksection{خامسًا: تفاصيل الواجهة والتفاعل}
+
+\booksection{رابعًا: تفاصيل الواجهة والتفاعل}
+
+\begin{itemize}
+  \item مربع البحث: TextField في الأعلى، اكتب اسم المدينة وانقر بحث (اضبط إجراء "بحث" على لوحة المفاتيح فيبحث Enter مباشرة)؛
+  \item بطاقة الطقس: حرارة بخط كبير (26.5°)، ووصف الطقس (صافٍ)، والرطوبة، واسم المدينة؛
+  \item المدن المفضلة: خزّن المدن التي تتابعها كثيرًا في DataStore لتبحث عنها تلقائيًا عند الفتح القادم — وفرصة لمراجعة الفصل 6؛
+  \item السحب للتحديث: استخدم في Compose مكوّن PullToRefreshBox (الموفر من Material 3) فيصبح "الإحساس الاحترافي" فوريًا.
+\end{itemize}
+
+\begin{tcbinfo}{نصيحة: الصور تنبض بالواجهة حياة}
+أعطِ كل حالة طقس رمزًا تعبيريًا أو أيقونة () عبر التعيين when(description) — ثلاثة أسطر تضاعف “الدفء البصري” للواجهة. يمكن أيضًا استخدام مكتبة أيقونات طقس من طرف ثالث، لكن الرموز التعبيرية تكفي في مرحلة التمرين.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{لنتجرب: قائمة قبول تطبيق الطقس}
+(1) البحث عن الطقس يعمل طبيعيًا؛ (2) عند قطع الشبكة يعرض التطبيق رسالة خطأ أنيقة دون انهيار (جرّب وضع الطيران!)؛ (3) عند إدخال مدينة غير موجودة تظهر رسالة لطيفة؛ (4) احفظ مدينتين في المفضلة وتبقيان بعد إعادة تشغيل التطبيق؛ (5) تدوير الشاشة لا يفقد الحالة. اجتياز البنود الخمسة كلها يعني تخرج هذا المشروع.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{خلاصة الفصل}
+\begin{itemize}
+  \item جرّب الـ API في المتصفح وافهم JSON أولًا ثم اكتب الكود — "التحضير" لا يخسر أبدًا
+  \item خزّن مفتاح API داخل ملف local.properties ولا تدعه يدخل مستودع الكود أبداً
+  \item واجهة Retrofit مع data class: بتطابق الحقول يُحلَّل JSON تلقائياً
+  \item حالات التحميل/النجاح/الخطأ الثلاث هي الحل الجامع لأي واجهة متصلة بالإنترنت
+  \item انقطاع الشبكة، وإدخال فارغ، ومدينة غير موجودة — معالجة الأخطاء هي الحد الأدنى للقبول في أي تطبيق متصل بالإنترنت
+\end{itemize}
+
+\end{tcbsummary}

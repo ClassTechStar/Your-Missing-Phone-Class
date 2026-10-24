@@ -1,0 +1,69 @@
+\booksection{Anexo: Análisis de expansión de memoria en móviles Android}
+
+\chapterintro{Al comprar un móvil, a menudo ves publicidad como “12GB+8GB RAM”—como si tuvieras 8GB extra de memoria de trabajo. ¿Pero realmente puede hacer el móvil más rápido? ¿Podría incluso dañar el móvil? En esta sección explicamos a fondo la tecnología de “expansión de memoria”.}
+
+\booksubsection{Definición esencial}
+
+La “expansión de memoria” de los móviles Android (también llamada extensión de memoria, fusión de memoria, RAM Plus, etc.)\textbf{no aumenta físicamente el chip de memoria de trabajo}, es una tecnología de software a nivel de sistema: mediante la asignación dinámica de parte del espacio de almacenamiento interno (ROM/flash UFS) del móvil, se simula como memoria de trabajo virtual (RAM).
+
+Una metáfora: la RAM física es la “mesa de trabajo de alta velocidad”, la memoria expandida es el “almacén temporal”. Cuando la mesa no es suficiente, el sistema mueve los datos temporalmente no usados al almacén, y los trae de vuelta cuando hacen falta. El almacén tiene gran capacidad, pero el transporte es más lento que tenerlos en la mesa.
+
+\booksubsection{Principio técnico}
+
+La implementación de los principales fabricantes tiene principalmente dos formas:
+
+\subsubsection*{zRAM comprimido}
+
+Se divide un espacio de datos comprimidos dentro de la RAM, se almacena comprimido el código de aplicaciones inactivas, ratio de compresión aprox. 2:1. Los datos siguen en RAM, rápido, no daña el flash, pero requiere CPU para comprimir/descomprimir.
+
+\subsubsection*{Partición swap}
+
+Se divide directamente un espacio fijo en el flash UFS como memoria virtual, se escriben en el almacenamiento los datos de procesos en segúndo plano. Depende del ancho de banda de almacenamiento, velocidad de lectura/escritura muy inferior a la memoria física.
+
+La publicidad “12GB+8GB RAM” normalmente es la combinación de 12GB RAM física + 8GB memoria virtual en flash. Cabe señalar que zRAM por defecto no ocupa almacenamiento del dispositivo, solo cuando zRAM se llena completamente de datos el sistema crea un archivo de intercambio en el almacenamiento, y esto es extremadamente raro.
+
+\booksubsection{La diferencia de velocidad es el cuello de botella clave}
+
+La limitación fundamental de esta tecnología está en la diferencia de velocidad. El flash UFS 4.0 mainstream actual tiene una velocidad de lectura secuencial de unos 4200MB/s, solo 1/10–1/15 de la memoria física LPDDR5X. Por tanto, en la fase de compresión zRAM con carga ligera la velocidad se acerca a la RAM real, pero al entrar en escenarios de alta carga, la velocidad cae a unas decenas de veces menos.
+
+\booksubsection{Escenarios aplicables y límites de beneficio}
+
+La expansión de memoria no es omnipotente, el efecto varía según el modelo y el escenario de uso:
+
+\begin{itemize}
+  \item \textbf{Casos en que es útil}: modelos con 6GB RAM física + UFS 3.1 o superior, espacio libre $\geq$30GB, al activar 3GB de expansión el número de apps en segúndo plano puede aumentar en 3-4, la tasa de recarga se reduce un 68\%, adecuado para usuarios intensivos de multitarea como repartidores, conductores de ride-hailing.
+  \item \textbf{Escenarios diarios}: mejora notable en mantener múltiples WeChat abiertos, pestañas del navegador, respuesta de mensajería instantánea, el tiempo de arranque en frío de apps en segúndo plano se acorta notablemente.
+  \item \textbf{Escenarios limitados}: mejora limitada en carga de juegos grandes, edición de video 4K y otros escenarios de alto ancho de banda.
+  \item \textbf{Casos perjudiciales}: modelos con 8GB RAM + UFS 2.2 y espacio libre insuficiente, al activar la fluctuación de frames del juego se amplía, ver videos cortos gasta más batería, el cambio se atasca.
+  \item \textbf{Casos inútiles}: modelos con más de 16GB de RAM apenas se benefician, como mucho mantienen 1 app más activa, pero aumentan la carga de CPU un 12\%, la temperatura sube 2-3°C. Para modelos con más de 12GB de RAM, se recomienda desactivarla para evitar cálculos de compresión sin sentido.
+\end{itemize}
+
+\booksubsection{Nomenclatura y activación por fabricante}
+
+Cada marca lo llama diferente: Xiaomi “extensión de memoria”, Huawei “fusión de memoria”, Samsung “RAM Plus”, vivo “Extended RAM”, OnePlus “Memory Extension”. Es una capacidad nativa del sistema, sin relación directa con la versión subyacente de Android.
+
+La ruta habitual de activación: entrar en [Configuración] [Más ajustes] buscar el submenú [Memoria] o [Rendimiento] activar “expansión de memoria” y elegir el tamaño (normalmente 2GB–7GB), surte efecto tras reiniciar. Al activarlo el sistema muestra una combinación como “8GB+4GB”.
+
+\begin{tcbwarn}{Precauciones}
+\begin{itemize}
+  \item La expansión de memoria ocupa parte del almacenamiento del dispositivo, asegúrate de tener al menos 20-30GB libres, de lo contrario puede afectar a la fluidez del sistema.
+  \item El flash como memoria virtual tiene desgaste de lectura/escritura, aunque el flash UFS moderno tiene larga vida, el swap frecuente a largo plazo puede acelerar el envejecimiento del almacenamiento.
+  \item Si el móvil tiene poca RAM física (4GB o menos), activar la expansión solo alivia temporalmente, no resuelve fundamentalmente el atasco.
+\end{itemize}
+
+\end{tcbwarn}
+
+\begin{tcbinfo}{Resumen}
+La expansión de memoria es una tecnología madura de optimización a nivel de sistema, puede mejorar la capacidad multitarea y la tasa de apps activas en segúndo plano de modelos de gama media-baja sin cambiar el hardware, pero está limitada por la enorme brecha de velocidad entre flash y memoria física, no es una “panacea”. Si activarla y cuánto, debe juzgarse según el tamaño de RAM física, la específicación del flash, el espacio libre y los hábitos de uso.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Manos a la obra: comprueba si tu móvil tiene expansión de memoria}
+\begin{enumerate}
+  \item Abre [Configuración], busca "extensión de memoria", "fusión de memoria", "RAM Plus" o "Extended RAM".
+  \item Cuando lo encuentres, comprueba si está activado y cuál es el tamaño de expansión.
+  \item Según esta sección, juzga: ¿cuánta RAM física tiene tu modelo? ¿Qué específicación de flash? ¿Hay suficiente espacio libre?
+  \item Prueba a desactivarla o reducirla, observa durante una semana los cambios en apps activas y temperatura, encuentra el ajuste más adecuado.
+\end{enumerate}
+
+\end{tcbpractice}

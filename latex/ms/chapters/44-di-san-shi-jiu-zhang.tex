@@ -1,0 +1,146 @@
+\bookchapter{Bab 39: Kejuruteraan konteks - membuat AI memahami niat anda}
+
+\chapterintro{Pernahkah anda mengalami ini: bertukar kepada tetingkap perbualan baharu, dan AI seperti hilang ingatan, lupa segala keadaan asas projek anda? Ini bukan AI sengaja menyakitkan hati anda, tetapi ia memang “pelupa” dari asal. Bab ini mengajar anda memasang satu “sistem ingatan jangka panjang” untuk AI, dan sekali gus mengenali salah satu paradigma pembangunan paling popular 2026 - pembangunan didorong spesifikasi.}
+
+\booksection{Fail ingatan projek: “ingatan jangka panjang” AI}
+
+Model AI mempunyai satu had asas: ingatannya bersifat “jangka pendek”. Setiap kali perbualan bermula, pengetahuan AI tentang projek anda ialah sifar. Anda perlu sentiasa memberitahunya dalam perbualan “kita guna React” “backend ialah Node.js” “pangkalan data ialah PostgreSQL” “gaya kod guna petikan berganda”. Ini bukan sahaja tidak cekap, malah mudah tertinggal - seperti perlu melakukan orientasi semula setiap hari kepada rakan sekerja baharu.
+
+Penyelesaiannya ialah “fail ingatan projek” - satu fail teks tulen yang diletakkan di direktori akar projek, dan alat AI akan membacanya secara automatik setiap kali perbualan bermula. Alat yang berbeza mempunyai konvensyen penamaan yang berbeza:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Alat} & \textbf{Nama fail} \tabularnewline
+\hline
+Cursor & \texttt{.\allowbreak cursorrules} \tabularnewline
+Claude Code & \texttt{CLAUDE.\allowbreak md} \tabularnewline
+GitHub Copilot & \texttt{copilot-\allowbreak instructions.\allowbreak md} \tabularnewline
+Penyelesaian generik & \texttt{AGENTS.\allowbreak md} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Konvensyen penamaan fail ingatan projek bagi setiap alat\end{center}
+
+Walaupun penamaannya berbeza, prinsipnya sama: tulis maklumat yang anda mahu AI “sentiasa ingat” dalam fail ini. Fail ingatan projek yang baik patut mengandungi: gambaran keseluruhan projek (apa projek ini), timbunan teknologi (teknologi apa yang digunakan), piawaian kod (penamaan, inden, gaya komen), struktur direktori (bagaimana kod disusun), dan konvensyen pembangunan (strategi cawangan, piawaian commit, keperluan ujian). CLAUDE.md Karpathy hanya 70 baris, tetapi meliputi semua maklumat utama - ringkas tetapi lengkap.
+
+\begin{lstlisting}
+# Projek: aplikasi perakaunan peribadi
+## Ringkasan
+Aplikasi perakaunan peribadi penuh untuk membantu pengguna merekod pendapatan-perbelanjaan harian.
+## Teknologi
+- Frontend: React + TypeScript + Tailwind CSS
+- Backend: Node.js + Express + TypeScript
+- Pangkalan data: SQLite (pembangunan) / PostgreSQL (pengeluaran)
+- Ujian: Vitest
+## Peraturan penulisan kod
+- Guna petikan berganda
+- Inden 2 ruang
+- Nama fungsi guna camelCase
+- Definisi jenis guna PascalCase
+- Setiap fungsi mesti ada komen JSDoc
+## Struktur direktori
+/src
+  /frontend  - kod frontend
+  /backend   - kod backend
+  /shared    - jenis dikongsi bersama
+  /tests     - fail ujian
+## Persetujuan pembangunan
+- Mesej komit dalam bahasa Mandarin
+- Fungsi baru mesti tulis ujian dahulu
+- Respons API seragam dengan format { success, data, error }
+\end{lstlisting}
+
+\begin{tcbwarn}{Perhatian: jangan tulisnya menjadi "dokumen keperluan kedua"}
+Perhatikan panjang fail ini - jangan tulisnya menjadi dokumen keperluan berpuluh halaman. Tujuan fail ingatan projek ialah “membolehkan AI cepat membina pemahaman latar”, bukan “menerangkan setiap fungsi secara terperinci”. Kekalkan ringkas, berstruktur, dan hanya tulis “apa yang AI perlu tahu”.
+
+\end{tcbwarn}
+
+\booksection{Pembangunan didorong spesifikasi (SDD)}
+
+Spec-Driven Development (SDD, pembangunan didorong spesifikasi) ialah satu paradigma pembangunan yang semakin matang pada 2026; ide terasnya dalam satu ayat: tulis spesifikasi dahulu, kemudian tulis kod. Berbeza dengan TDD tradisional (pembangunan didorong ujian), “spesifikasi” SDD bukan sahaja kes ujian, malah merangkumi penerangan keperluan, takrif antara muka, model data dan sebagainya. AI menjana kod berdasarkan spesifikasi ini, manakala tugas manusia ialah menulis dan menyelenggara spesifikasi.
+
+Aliran kerja SDD lima langkah:
+
+\begin{enumerate}
+  \item Terangkan spesifikasi keperluan dengan bahasa semula jadi (tulis dalam satu fail .md);
+  \item Takrifkan antara muka dan struktur data (tulis dalam fail spesifikasi);
+  \item Biarkan AI menjana pelaksanaan kod berdasarkan spesifikasi;
+  \item Jalankan ujian untuk mengesahkan sama ada hasil memenuhi spesifikasi;
+  \item Jika tidak memenuhi, baik pulih spesifikasi atau biarkan AI membaiki kodnya.
+\end{enumerate}
+
+Dalam aliran kerja ini, fail spesifikasi ialah “sumber kebenaran tunggal” - kod boleh dijana semula, tetapi spesifikasi mesti betul dahulu.
+
+Menulis fail spesifikasi
+
+Adakah spesifikasi sudah lengkap?
+
+Lengkap
+
+AI menjana kod daripada spesifikasi
+
+Jalankan ujian untuk sahkan hasil
+
+Spesifikasi tidak lengkap / ujian gagal
+
+Masalah kod betulkan kod; masalah spesifikasi betulkan spesifikasi
+
+Kembali ke pengesahan
+
+Lulus semua serah
+
+\begin{center}\small\color{gray}Rajah 3: Aliran kerja pembangunan didorong spesifikasi (SDD)\end{center}
+
+Kelebihan SDD terletak pada: fail spesifikasi lebih stabil daripada kod. Apabila model atau alat asas berubah, fail spesifikasi anda tetap sah; anda hanya perlu membiarkan alat AI baharu menjana semula kod. Itulah sebabnya buku ini menekankan “metodologi lebih penting daripada alat” - fail spesifikasi itulah pembawa konkrit metodologi anda.
+
+\booksection{Pengurusan tetingkap konteks}
+
+Walaupun sudah ada fail ingatan projek, anda masih akan menghadapi masalah “konteks tidak cukup” dalam perbualan. Tetingkap konteks model AI (jumlah maklumat yang boleh diproses serentak) adalah terhad. Apabila perbualan terlalu panjang atau fail yang dirujuk terlalu banyak, AI akan “lupa” maklumat awal, menyebabkan kualiti hasil menurun - seperti anda berbual dengan seorang kawan selama enam jam, dia sudah lama lupa perkara pertama yang anda katakan pada awalnya.
+
+Strategi teras mengurus tetingkap konteks ialah “rujukan berlapis”:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Lapisan konteks} & \textbf{Kandungan} & \textbf{Cara pengurusan} \tabularnewline
+\hline
+Lapisan satu: ingatan projek & Timbunan teknologi, spesifikasi, struktur direktori & Ditulis dalam fail seperti CLAUDE.md, dimuatkan secara automatik, tidak perlu diulang \tabularnewline
+Lapisan dua: rujukan fail & Fail kod yang terlibat dalam tugas semasa & Rujuk dengan tepat menggunakan simbol @, jangan tampal teks penuh ke dalam perbualan \tabularnewline
+Lapisan tiga: konteks perbualan & Sejarah perbualan tugas semasa & Buka perbualan baharu selepas menyiapkan satu tugas, elak konteks membengkak \tabularnewline
+Lapisan empat: arahan serta-merta & Keperluan khusus langkah semasa ini & Jelas, ringkas, bersasar, elak penerangan berjela \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Strategi pengurusan berlapis tetingkap konteks\end{center}
+
+\booksection{Perkara Penting Amalan Kejuruteraan Konteks}
+
+Kejuruteraan konteks bukan sekadar tetapan sekali sahaja, tetapi satu proses penambahbaikan berterusan. Berikut ialah beberapa perkara penting yang telah terbukti berulang kali dalam amalan:
+
+\begin{enumerate}
+  \item Kemas kini fail memori selari dengan perkembangan projek. Apabila memperkenalkan teknologi baharu atau mengubah seni bina, kemas kini fail memori dengan segera, jangan hanya jelaskan secara sementara dalam perbualan.
+  \item Gunakan rujukan @ dengan bijak berbanding menampal keseluruhan teks. Kebanyakan alat pengaturcaraan AI menyokong sintaks @file atau @folder, yang menyuntik kandungan fail ke dalam konteks AI di latar belakang — lebih cekap daripada menampal secara manual dan tidak mencemarkan perbualan.
+  \item Perbualan perlu "pendek dan padat". Satu perbualan hanya mengurus satu tugasan atau satu ciri. Selepas selesai, buka perbualan baharu untuk yang seterusnya. Perbualan panjang bukan sahaja menghabiskan tetingkap konteks, malah boleh membuat AI "hilang tumpuan".
+  \item Berikan AI "melihat" hasil, bukan "menerangkan" hasil. Apabila menghadapi bug, rujuk log ralat terus kepada AI dengan @, jangan hanya terangkan dengan kata-kata sendiri "macam ada sebarang ralat". AI lebih berkesan apabila melihat maklumat asli berbanding huraian anda.
+  \item Mengarkib dan membersih secara berkala. Perbualan yang telah selesai dan fail sementara akan memenuhi ruang kerja. Membersihkan kandungan yang tidak berkaitan secara berkala serta mengekalkan direktori projek yang kemas juga membantu AI memahami struktur projek dengan lebih cekap.
+\end{enumerate}
+
+\begin{tcbpractice}{Mari praktik: Tulis satu fail memori 70 baris untuk projek anda}
+Pilih satu projek yang sedang anda buat (atau ingin buat), dan tulis satu fail CLAUDE.md: gambaran keseluruhan projek (2-3 ayat), tindanan teknologi (senaraikan), peraturan kod (3-5 perkara), struktur direktori (lukis pepohon) dan konvensyen pembangunan (2-3 perkara). Kekalkan dalam 70 baris — selepas menulis, anda akan mendapati pemahaman anda terhadap projek menjadi jauh lebih jelas.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Ringkasan Bab Ini}
+\begin{itemize}
+  \item Memori AI bersifat "jangka pendek": setiap kali perbualan baharu bermula, pengetahuannya tentang projek ialah sifar
+  \item Fail memori projek (CLAUDE.md dan sebagainya) ialah "memori jangka panjang" AI, dimuatkan secara automatik pada setiap perbualan
+  \item Fail memori yang baik = gambaran keseluruhan + tindanan teknologi + peraturan + direktori + konvensyen, 70 baris sudah memadai
+  \item Pembangunan dipacu spesifikasi (SDD): tulis spesifikasi dahulu sebelum menulis kod; spesifikasi ialah "sumber kebenaran tunggal", lebih stabil daripada kod
+  \item Konteks diurus dalam empat lapisan: memori projek rujukan @fail sejarah perbualan arahan serta-merta
+  \item Lima perkara penting amalan: kemas kini serentak, rujukan @, perbualan pendek, beri maklumat asli, bersih secara berkala
+\end{itemize}
+
+\end{tcbsummary}

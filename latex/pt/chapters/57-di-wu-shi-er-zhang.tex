@@ -1,0 +1,129 @@
+\bookchapter{Capítulo 52: Os quatro componentes básicos e o ciclo de vida da Activity}
+
+\chapterintro{Se o Compose é o 'rosto' do App, este capítulo trata do 'esqueleto' dele. O Android define quatro componentes básicos, e todo App é montado com eles; o mais importante deles, a Activity, tem um 'mapa do ciclo de vida' que todo desenvolvedor Android precisa gravar na cabeça. Ao terminar este capítulo, você vai entender mistérios de longa data como 'por que, quando o meu App volta do segundo plano, o estado dele desapareceu?'.}
+
+\booksection{Os quatro componentes básicos: os 'pilares' do Android}
+
+O Android define oficialmente quatro componentes básicos, cada um responsável por um tipo de tarefa:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Componente} & \textbf{Função} & \textbf{Uma analogia} \tabularnewline
+\hline
+Activity & Uma interface visível & A fachada da loja — o usuário vê e interage \tabularnewline
+Service & O 'invisível' que trabalha em segundo plano & O operário do armazém — toca música, baixa arquivos; não precisa de interface \tabularnewline
+BroadcastReceiver & Recebe avisos do sistema & A portaria — o alto-falante que anuncia 'a bateria está acabando', 'a internet caiu' \tabularnewline
+ContentProvider & Compartilha dados entre Apps & O arquivo público — por exemplo, compartilhar os contatos com outros Apps \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Visão rápida dos quatro componentes do Android\end{center}
+
+Na fase de iniciante, você passa 95\% do tempo lidando com a Activity; o Service e o BroadcastReceiver entram em cena ao reproduzir música e enviar notificações push; o ContentProvider é o menos usado (o sistema já encapsula os dados mais comuns). E atenção: os quatro componentes precisam ser 'registrados' no AndroidManifest.xml — sem o registro, o sistema não os encontra.
+
+\booksection{O ciclo de vida da Activity: o primeiro 'mapa do tesouro' do desenvolvedor Android}
+
+No celular, um App pode ser interrompido a qualquer momento: chega uma ligação, o usuário troca de app para responder o WeChat, o sistema fica sem memória e encerra o seu processo... A vida de uma Activity é uma viagem em loop por este mapa:
+
+onCreate (nascimento: inicialização)
+
+onStart (visível)
+
+onResume (em primeiro plano, interagindo)
+
+onPause (parcialmente coberto)
+
+onStop (totalmente oculto)
+
+onDestroy (destruído)
+
+onRestart / onStart / onResume: ao voltar ao primeiro plano, o mesmo caminho de volta
+
+\begin{center}\small\color{gray}Figura 4: Ciclo de vida da Activity (sentido de avanço: nasce na linha de cima sai na de baixo; na volta, retorna pelo mesmo caminho)\end{center}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Callback} & \textbf{Quando é disparado} & \textbf{Uso típico} \tabularnewline
+\hline
+onCreate & Quando a Activity é criada (uma vez) & Carregar a interface e inicializar os dados \tabularnewline
+onStart & A interface fica visível & Iniciar algumas lógicas leves \tabularnewline
+onResume & Recebe o foco e fica interativa & Iniciar animações, retomar a reprodução \tabularnewline
+onPause & No momento em que é parcialmente coberta ou trocada de tela & Pausar animações, salvar rascunhos \tabularnewline
+onStop & Totalmente invisível & Liberar recursos pesados, pausar downloads \tabularnewline
+onDestroy & Antes de ser destruída & A limpeza final \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Usos típicos dos seis callbacks do ciclo de vida\end{center}
+
+\textbf{Alerta de armadilha: girar a tela 'mata' a Activity}\par
+
+O clássico tombo de iniciante: você gira a tela do App e o texto dos campos de entrada desaparece. Motivo: por padrão, girar a tela destrói e recria a Activity (passando por onDestroy onCreate). Solução: use rememberSaveable para guardar o estado (o substituto do remember no Compose); ele recupera o valor automaticamente na recriação. Isso será usado repetidamente nos capítulos 6 e 7.
+
+\booksection{Intent: o 'bilhete' de passagem dentro e fora do App}
+
+A Intent (intenção) é o 'bilhete' de comunicação entre componentes. Para saltar de uma tela a outra, abrir o navegador ou acionar a câmera, é preciso 'comprar o bilhete e embarcar':
+
+\begin{lstlisting}[language=Kotlin]
+// Modo 1: Intent explícito — você indica exatamente para qual tela ir
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", João)     // leva a "bagagem" (dados) junto
+startActivity(intent)
+
+// Modo 2: Intent implícito — você diz o que quer e o sistema acha quem faz
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // o sistema abre o navegador / ou deixa você escolher
+\end{lstlisting}
+
+Cada modo tem seu uso: o explícito serve para navegar entre telas dentro do seu próprio App; o implícito serve para acionar recursos do sistema ou de outros Apps (abrir páginas, ligar, compartilhar). Em projetos Compose, dentro de um Composable, basta obter o Context com LocalContext.current para poder chamar startActivity.
+
+\booksection{Múltiplas telas e navegação}
+
+Apps de verdade têm várias telas. A solução de navegação recomendada oficialmente pelo Compose é o Navigation Compose (biblioteca androidx.navigation):
+
+\begin{lstlisting}[language=Kotlin]
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "Desconhecido")
+    }
+}
+
+// Navegar dentro da tela:
+navController.navigate("detail/João")     // com argumentos
+navController.popBackStack()              // voltar
+\end{lstlisting}
+
+\begin{tcbinfo}{Dica: e quando as telas se multiplicam?}
+Quando o projeto crescer, centralize todas as rotas de telas em um único arquivo (por exemplo, AppNavGraph.kt) e gerencie tudo de um só lugar; não deixe a lógica de 'para onde saltar' espalhada pelas telas. Esse é o primeiro passo para sair do 'funciona' e chegar ao 'fácil de manter'.
+
+\end{tcbinfo}
+
+\booksection{De quebra: o que é Fragment (e por que este livro não o ensina)}
+
+Folheando tutoriais antigos, você certamente vai esbarrar no Fragment — um 'trecho de interface reutilizável' dentro da Activity, protagonista absoluto da arquitetura antiga de múltiplas telas. Mas na era do Compose, as telas se resolvem com funções Composable + rotas de Navigation, e a própria Google já reduziu o papel do Fragment. Por isso este livro não o colocou na linha principal.
+
+Sugestão: em projetos novos, não use Fragment por iniciativa própria; mas, ao ler código antigo ou se o tema surgir numa entrevista, basta saber que é um 'trecho de interface embutido na Activity'. Ao buscar material de estudo, priorize sempre o que é de 2023 em diante — o 'almanaque' do ecossistema Android envelhece mais rápido do que se imagina.
+
+\begin{tcbpractice}{Mãos à obra: dê 'memória' ao contador}
+Modifique o contador do capítulo 51: (1) troque remember por rememberSaveable e gire a tela para conferir que o número continua lá; (2) adicione um botão 'Sobre' que use o Navigation para saltar a uma segunda tela e mostrar o número da versão; (3) imprima logs (Log.d) no onCreate/onPause das duas telas e observe no Logcat a ordem de chamada do ciclo de vida. Feitos esses três passos, o ciclo de vida deixa de ser teoria de papel.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumo do capítulo}
+\begin{itemize}
+  \item Os quatro componentes: Activity (fachada), Service (segundo plano), BroadcastReceiver (alto-falante), ContentProvider (arquivo)
+  \item Os seis callbacks do ciclo de vida: onCreate onStart onResume onPause onStop onDestroy
+  \item Girar a tela destrói e recria a Activity: use rememberSaveable para preservar o estado
+  \item A Intent é o 'bilhete': explícita para navegar nas telas de casa, implícita para acionar recursos do sistema
+  \item Múltiplas telas com Navigation Compose: NavHost + rotas composable
+\end{itemize}
+
+\end{tcbsummary}

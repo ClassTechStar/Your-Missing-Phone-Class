@@ -1,0 +1,105 @@
+\bookchapter{Capítulo 43: Ingeniería del diálogo — técnicas de conversación para colaborar con eficiencia con la IA}
+
+\chapterintro{El diálogo es la forma central de interacción en la programación con IA. Pero ojo: “diálogo” no es lo mismo que “charlar”: una conversación eficiente de programación con IA es una técnica de comunicación con estructura, y la llamamos “ingeniería del diálogo”. Estudia cómo obtener el código de máxima calidad con el mínimo número de turnos de conversación. Dicho sin rodeos: este capítulo te enseña a “expresarte con claridad” con la IA.}
+
+\booksection{I. Estrategia de prompts por capas}
+
+La conversación con la IA se puede dividir en tres capas, y cada una cumple una función distinta. Si entiendes esas tres capas, podrás combinar prompts eficientes como quien apila bloques.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Capa} & \textbf{Función} & \textbf{Ejemplo} & \textbf{Frecuencia} \tabularnewline
+\hline
+Capa de sistema & Fija el rol de la IA y las restricciones globales & "Eres un experto en React y el código debe ir en TypeScript" & Se configura una vez, al iniciar el proyecto \tabularnewline
+Capa de tarea & Describe la tarea concreta que toca hacer & "Crea un componente de formulario con campos de usuario y contraseña" & Se da al empezar cada tarea \tabularnewline
+Capa de retroalimentación & Evalúa y corrige lo que produce la IA & "Al campo de contraseña le falta el interruptor de mostrar/ocultar; añádelo" & Se da según la calidad del resultado \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Las tres capas del prompt de conversación\end{center}
+
+El prompt de la capa de sistema suele escribirse en el archivo de memoria del proyecto (como CLAUDE.md) y no hace falta repetirlo en cada conversación. La capa de tarea es la que más usarás al conversar: debe incluir tres elementos: “qué hacer”, “con qué tecnología” y “con qué restricciones”. La capa de retroalimentación es la que más pone a prueba tu nivel: una buena retroalimentación permite a la IA corregir con precisión; una mala solo la llevará a adivinar otra vez.
+
+\begin{tcbinfo}{Consejo: las tres claves de la retroalimentación}
+Una plantilla práctica de retroalimentación es “señalar el problema + decir qué esperas + aportar contexto”. Por ejemplo: “el manejo de errores de la línea 25 solo usa console.log (señala el problema), en producción debería usarse un gestor de errores unificado y devolver mensajes comprensibles para el usuario (dices qué esperas), en el proyecto hay una función handleError que puedes usar (aportas contexto)”. Este tipo de retroalimentación es diez veces más eficaz que un “arregla el manejo de errores”.
+
+\end{tcbinfo}
+
+\booksection{II. Diálogos de depuración: cómo describir un error para que la IA lo localice rápido}
+
+La depuración es uno de los escenarios más frecuentes de la programación con IA. Cuando te encuentres con un bug, la manera de describirle el problema a la IA decide directamente si puede ayudarte a localizarlo y arreglarlo rápido. Estos son los cuatro puntos clave del diálogo de depuración:
+
+\begin{enumerate}
+  \item Dale a la IA la información "en crudo", no tu paráfrasis. Cítale directamente los registros de error, las trazas de excepciones y el código relacionado (con @), en lugar de describirlo con un "creo que salió un error". La IA lee la información original con más precisión que tu interpretación.
+  \item Describe la diferencia entre el "comportamiento esperado" y el "comportamiento real". "Espero que al pulsar el botón salte a la página de inicio (esperado), pero al pulsarlo la página no reacciona (real)": esta descripción sirve muchísimo más que "el botón está roto".
+  \item Aporta los pasos de reproducción. "Primero escribo el nombre de usuario, luego pulso el botón de iniciar sesión y aparece este error": con los pasos de reproducción, la IA puede simular tu ruta de uso y localizar el problema con más facilidad.
+  \item Aclara qué has probado ya. "Ya revisé la petición de red: devuelve 200 y los datos llegan bien": eso ayuda a la IA a descartar caminos ya verificados y no perder el tiempo repitiendo pruebas.
+\end{enumerate}
+
+Descripción de depuración mala
+
+\begin{lstlisting}
+El botón no responde al pulsar, échale un ojo
+\end{lstlisting}
+
+Descripción de depuración buena
+
+\begin{lstlisting}
+Al pulsar el botón de iniciar sesión, la página no reacciona. Comportamiento esperado: al pulsar, navegar a la página /home Comportamiento real: al pulsar no pasa nada y la consola no muestra errores Pasos de reproducción: 1. En la página de inicio de sesión, introduce el usuario admin y la contraseña 123456 2. Pulsa el botón "Iniciar sesión" 3. La página no reacciona Comprobaciones ya hechas: - La petición de red funciona y devuelve 200 - El evento onClick está vinculado - Revisé el código del componente LoginButton Archivos relacionados: @src/components/LoginButton.tsx @src/pages/Login.tsx
+\end{lstlisting}
+
+\booksection{III. Estrategias de iteración: pasos pequeños y rápidos frente a la gran refactorización}
+
+En la programación con IA hay dos estrategias básicas de iteración, válidas para escenarios distintos. Entender sus diferencias te ayudará a elegir bien en cada situación.
+
+La estrategia de “pasos pequeños y rápidos” sirve para desarrollar funciones y corregir bugs. Su esencia: cada vez pides a la IA un solo cambio pequeño y, cuando lo validas, pasas al siguiente. Ventaja: cada paso es verificable y reversible, con el riesgo bajo control. Desventaja: es más lenta y exige muchas interacciones. Apta para: desarrollar funciones nuevas, explorar cuando aún no tienes clara la mejor solución e iterar con cautela cuando no te fías del todo del resultado de la IA.
+
+La estrategia de “gran refactorización” sirve para cambios a gran escala con un objetivo claro. Su esencia: describes el objetivo completo de una sola vez y dejas que la IA planifique y ejecute todo el cambio de forma autónoma. Ventaja: es rápida y, al ver el panorama global, la IA toma mejores decisiones de arquitectura. Desventaja: el riesgo es alto: si la IA se equivoca de interpretación, corregir sale caro. Apta para: mejoras de arquitectura bien definidas, migraciones masivas de código y refactorizaciones respaldadas por suficientes pruebas.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Dimensión} & \textbf{Pasos pequeños y rápidos} & \textbf{Gran refactorización} \tabularnewline
+\hline
+Tamaño de cada cambio & Un punto de función o un bug & Un módulo o una capa de arquitectura \tabularnewline
+Frecuencia de verificación & Se verifica justo después de cada cambio & Se verifica todo junto al terminar todos los cambios \tabularnewline
+Turnos de conversación & Muchos (5-10 por función) & Pocos (1-3 por módulo) \tabularnewline
+Riesgo & Bajo, cada paso puede revertirse & Alto, corregir desvíos sale caro \tabularnewline
+Escenarios indicados & Funciones nuevas, desarrollo exploratorio & Refactorizaciones y migraciones con objetivo claro \tabularnewline
+Requisito previo & Ninguno especial & Necesita cobertura de pruebas \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Comparación de las dos estrategias de iteración\end{center}
+
+En la práctica, las dos estrategias suelen combinarse. Por ejemplo, al refactorizar un módulo, primero usa la “gran refactorización” para que la IA presente el plan general y, una vez revisado el plan, ejecuta paso a paso con “pasos pequeños y rápidos”. Así conservas la visión global y controlas el riesgo de ejecución.
+
+\booksection{IV. Gestión del contexto en conversaciones de varios turnos}
+
+A medida que aumentan los turnos, tienes que gestionar activamente el contexto de la conversación para evitar el problema de que “la IA olvide la información de los primeros mensajes”. Estos son algunos trucos prácticos de gestión del contexto.
+
+Primero, “ancla” la información clave. Al empezar la conversación, escribe con claridad las restricciones clave y recuérdalas en su momento durante los mensajes siguientes. Por ejemplo: “recuerda que guardamos los datos en localStorage y no podemos usar base de datos”: reitera esa restricción en las peticiones de cambio relacionadas para que la IA no la olvide.
+
+Segundo, domina el truco de “resumir y continuar”. Cuando la conversación se haga muy larga, pide a la IA que “resuma el avance actual y las tareas pendientes”, abre una conversación nueva y parte de ese resumen. Así conservas el contexto clave y evitas la degradación de las conversaciones largas.
+
+Tercero, “una conversación, una tarea”. Es la estrategia de gestión del contexto más simple y más eficaz. Cada conversación atiende una sola tarea o un solo punto de función; al terminar, abres una nueva para lo siguiente. Esto limita de forma natural la longitud de la conversación y mantiene el contexto despejado.
+
+Cuarto, aprovecha las funciones de gestión de contexto de las herramientas. Casi todas las herramientas de programación con IA tienen un botón de “limpiar contexto” o de “nueva sesión”: cuando notes que baja la calidad de las respuestas, no lo dudes, abre una sesión nueva. Perder parte del historial es mucho mejor que seguir batallando dentro de un contexto degradado.
+
+\begin{tcbpractice}{Manos a la obra: haz de "paciente" ante tu IA}
+Crea a propósito una página pequeña en el navegador y provoca un bug (por ejemplo, un botón que no reacciona). Después descríbeselo a la IA de una pieza siguiendo el formato de la “descripción de depuración buena” de este capítulo: información en crudo, esperado frente a real, pasos de reproducción y comprobaciones ya hechas. Nota la diferencia de velocidad con la que la IA localiza el problema y entenderás por qué “describir un problema” es, en sí mismo, un oficio.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Resumen del capítulo}
+\begin{itemize}
+  \item Tres capas del prompt: sistema (va al archivo de memoria), tarea (qué hacer + tecnología + restricciones) y retroalimentación (problema + expectativa + contexto)
+  \item Cuatro claves de la depuración: dar la información en crudo, esperado frente a real, pasos de reproducción y comprobaciones ya hechas
+  \item Pasos pequeños y rápidos: riesgo bajo y muchos turnos, ideal para funciones nuevas; gran refactorización: riesgo alto y pocos turnos, necesita respaldo de pruebas
+  \item Cuatro trucos de gestión del contexto: anclar la información clave, resumir y continuar, una conversación una tarea y abrir sesión nueva sin vacilar
+\end{itemize}
+
+\end{tcbsummary}

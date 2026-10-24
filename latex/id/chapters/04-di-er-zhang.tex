@@ -1,0 +1,188 @@
+\bookchapter{Bab 2: Rapikan ruangan digital Anda—Manajemen file}
+
+\chapterintro{Ponsel dipakai lama akan berantakan, kebiasaan baik dimulai dari mengelola file. Sama seperti kamar Anda perlu dirapikan secara berkala, ruang digital Anda juga perlu dirawat. Ponsel yang tertata rapi, tidak hanya memudahkan mencari barang, juga berjalan lebih lancar.}
+
+\booksection{Sistem penyimpanan tiga lapis: Gudang digital Anda}
+
+\begin{enumerate}
+  \item \textbf{Penyimpanan bodi}: Area inti, kecepatan cepat, sistem dan aplikasi semua di sini. Ini adalah ruang paling berharga di ponsel Anda, perlu dikelola dengan hemat.
+  \item \textbf{Kartu SD (jika didukung)}: Lemari ekspansi, kecepatan lebih lambat, cocok untuk menaruh film, foto dan file besar lainnya. Catatan: Sekarang banyak ponsel flagship tidak mendukung kartu SD lagi.
+  \item \textbf{Cloud storage}: Brankas + network disk sync. Mencegah kehilangan, juga bisa sync antar beberapa perangkat. iCloud, Baidu Netdisk, OneDrive adalah pilihan yang umum digunakan.
+\end{enumerate}
+
+\booksection{Mengenal “File Manager”}
+
+Android umumnya punya aplikasi [File] atau [File Management], iOS punya aplikasi [Files] bawaan. Mereka adalah “file explorer” Anda untuk melihat semua file di ponsel.
+
+\booksubsection{Arti folder umum:}
+
+\begin{itemize}
+  \item \textbf{DCIM}: Foto dan video yang diambil kamera.
+  \item \textbf{Pictures}: Gambar lain, seperti screenshot, gambar yang disimpan.
+  \item \textbf{Download}: File yang diunduh browser.
+  \item \textbf{Music}: File musik.
+  \item \textbf{Movies}: File video.
+  \item \textbf{Documents}: File dokumen.
+  \item \textbf{Android}: Folder sistem Android, di dalamnya adalah data tiap aplikasi, umumnya jangan dihapus manual.
+\end{itemize}
+
+\booksection{Struktur file system: Pemahaman mendalam}
+
+Android berbasis Linux, file system memiliki struktur hierarki tertentu. Meskipun pengguna biasa tidak perlu memahami secara mendalam, mengetahui beberapa konsep dasar membantu.
+
+\booksubsection{Partisi penyimpanan:}
+
+\begin{itemize}
+  \item \textbf{/system}: Partisi sistem, menyimpan file sistem operasi. Pengguna biasa tidak berhak akses, butuh izin root.
+  \item \textbf{/data}: Partisi data, menyimpan data pengguna dan data aplikasi. Ini adalah ruang yang Anda gunakan sehari-hari.
+  \item \textbf{/sdcard atau /storage/emulated/0}: Ruang penyimpanan yang bisa diakses pengguna, foto dan file unduhan Anda semua di sini.
+\end{itemize}
+
+\booksubsection{Penyimpanan data aplikasi:}
+
+\begin{itemize}
+  \item \textbf{Internal storage}: Ruang privat aplikasi, aplikasi lain tidak bisa akses. Akan dihapus saat aplikasi di-uninstal.
+  \item \textbf{External storage}: File yang disimpan aplikasi di area yang bisa diakses pengguna, seperti foto, konten unduhan. Belum tentu dihapus saat aplikasi di-uninstal.
+\end{itemize}
+
+\booksection{Backup dan restore data: Asuransikan data Anda}
+
+Data tak ternilai, backup adalah kebiasaan yang harus dibiasakan.
+
+\booksubsection{Strategi backup:}
+
+\begin{enumerate}
+  \item \textbf{Cloud backup}: Otomatis, praktis, tapi butuh jaringan dan ruang cloud. iCloud, Huawei Cloud, Xiaomi Cloud, dll mendukung.
+  \item \textbf{Local backup}: Hubungkan ke komputer dengan kabel data, backup dengan tool resmi. Cepat, ruang besar, tapi perlu operasi manual.
+  \item \textbf{Dual backup}: Cloud backup + local backup, paling aman.
+\end{enumerate}
+
+\booksubsection{Backup apa?}
+
+\begin{itemize}
+  \item \textbf{Foto dan video}: Paling banyak memakan ruang, juga paling berharga.
+  \item \textbf{Kontak}: Paling praktis disimpan di akun cloud.
+  \item \textbf{Riwayat chat WeChat}: Gunakan fitur backup bawaan WeChat.
+  \item \textbf{Dokumen penting}: Simpan di cloud disk atau komputer.
+\end{itemize}
+
+\booksection{Keamanan file: Lindungi privasi Anda}
+
+\begin{itemize}
+  \item \textbf{Enkripsi file sensitif}: Banyak ponsel punya fitur "Secure Folder" atau "Private Space", bisa memasukkan file sensitif, butuh kata sandi atau sidik jari untuk akses.
+  \item \textbf{Hapus tidak sama dengan hancur}: Hapus biasa hanya menandai ruang bisa ditimpa, data masih ada. Untuk hapus permanen, perlu tool secure erase khusus, atau overwrite berkali-kali.
+  \item \textbf{Keamanan cloud}: Pilih penyedia cloud dengan reputasi baik, aktifkan two-factor authentication, periksa perangkat login secara berkala.
+\end{itemize}
+
+\booksection{Ruang tidak cukup? Lakukan pembersihan besar}
+
+\begin{itemize}
+  \item \textbf{Bersihkan cache}: Memori sementara aplikasi, dibersihkan bisa mengosongkan ruang. Bisa dibersihkan di Pengaturan > Penyimpanan.
+  \item \textbf{Cari file besar}: Gunakan file manager urutkan berdasarkan ukuran, temukan "penjahat" yang memakan ruang.
+  \item \textbf{Hapus residu}: Setelah uninstall aplikasi, kadang meninggalkan file sampah, hapus manual.
+  \item \textbf{Bersihkan album}: Hapus foto duplikat, foto blur, screenshot yang tidak diperlukan.
+  \item \textbf{Bersihkan WeChat}: WeChat adalah pengguna ruang besar, membersihkan riwayat chat dan cache secara berkala sangat perlu.
+\end{itemize}
+
+\booksection{Analisis lengkap format file umum}
+
+Berbagai ekstensi file di ponsel membingungkan, memahaminya bisa membantu Anda mengelola file dengan lebih baik:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Format} & \textbf{Tipe} & \textbf{Karakteristik} & \textbf{Cara buka yang disarankan} \tabularnewline
+\hline
+JPG/JPEG & Gambar & Lossy compression, ukuran kecil, kompatibilitas terbaik. Format default foto ponsel. & Album/image viewer apa saja \tabularnewline
+PNG & Gambar & Lossless compression, mendukung background transparan. Sering digunakan untuk screenshot, icon. Ukuran lebih besar dari JPG. & Album/image viewer apa saja \tabularnewline
+MP3 & Audio & Lossy compression, ukuran kecil, kompatibilitas sangat baik. Format audio paling universal. & Music player apa saja \tabularnewline
+FLAC & Audio & Lossless compression, kualitas suara sama dengan CD, ukuran 3-5 kali lebih besar dari MP3. Pilihan audiophile. & Music player/aplikasi player profesional \tabularnewline
+WAV & Audio & Audio mentah tanpa kompresi, kualitas suara terbaik tapi ukuran sangat besar. Sering digunakan untuk rekaman profesional. & Music player \tabularnewline
+M4A & Audio & AAC encoding, kualitas suara lebih baik dari MP3 pada bitrate sama. Sering digunakan di ekosistem Apple. & Apple Music/music player \tabularnewline
+MP4 & Video & Format container video paling universal, kompatibilitas sangat baik. Format default video yang direkam ponsel. & Album/video player apa saja \tabularnewline
+MKV & Video & Format container open source, mendukung multi audio track, multi subtitle. Sering digunakan untuk resource film. & VLC/nPlayer \tabularnewline
+DOC/DOCX & Dokumen & Dokumen Word. DOCX adalah format terkompresi, ukuran lebih kecil. DOC adalah format lama. & WPS/Office \tabularnewline
+PPT/PPTX & Presentasi & Presentasi PowerPoint. PPTX adalah format terkompresi. & WPS/Office \tabularnewline
+XLS/XLSX & Spreadsheet & Spreadsheet Excel. XLSX adalah format terkompresi. & WPS/Office \tabularnewline
+PDF & Dokumen & Format cross-platform, layout tetap tidak bisa diedit. Sering digunakan untuk kontrak, tesis, e-book. & Adobe Reader/WPS \tabularnewline
+ZIP & Kompresi & Format kompresi paling universal, kompatibilitas cross-platform baik. & Bawaan sistem/aplikasi unzip \tabularnewline
+RAR & Kompresi & Rasio kompresi lebih tinggi dari ZIP, tapi butuh software khusus untuk unzip. & Aplikasi unzip \tabularnewline
+ISO & Image & File image disc, menyalin lengkap konten disc. Sering digunakan untuk package instalasi sistem. & Aplikasi unzip/virtual drive \tabularnewline
+HTML & Webpage & File webpage, dibuka dengan browser. Webpage yang disimpan sering menggunakan format ini. & Browser \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbpractice}{Berlatih: Rapikan folder "Download"}
+Buka file manager > masuk folder “Download”. Lihat apa saja isinya? Hapus yang tidak berguna, yang berguna dikategorikan (misalnya buat folder “Materi Kerja”, “Sticker” untuk menaruhnya). Sekalian lihat ruang penyimpanan, pahami tipe file mana yang paling banyak memakan ruang.
+
+\end{tcbpractice}
+
+\booksection{Manajemen gambar dan file system: Jadikan aset tertata rapi}
+
+Bagian sebelumnya kita belajar “mengenal folder”, tapi sekadar mengenal tidak cukup. Bagian ini akan membahas\textbf{bagaimana secara aktif membangun satu set standar manajemen yang bisa dijalankan jangka panjang}, agar file Anda selalu bisa ditemukan, tidak hilang, tidak diintip.
+
+\booksubsection{Klasifikasi file dan standar penamaan}
+
+Akar kekacauan adalah tidak adanya aturan. Membangun aturan sebenarnya sederhana, kuncinya adalah\textbf{konsistensi}.
+
+\begin{itemize}
+  \item \textbf{Penamaan "Waktu + Kejadian"}: Nama folder mengandung timestamp dan deskripsi kejadian, memudahkan recall dan retrieval di kemudian hari. Misalnya\texttt{202606\_TiketPerjalanan},\texttt{2025RingkasanAkhirTahun},\texttt{2024UlangTahunAnak}. Dengan begitu bisa melihat timeline, juga bisa tahu kontennya dengan sekali lihat.
+  \item \textbf{Sistem klasifikasi tiga tingkat}:
+  \begin{itemize}
+    \item \textbf{Tingkat 1}: Berdasarkan tipe file (Dokumen / Gambar / Video / Audio)
+    \item \textbf{Tingkat 2}: Berdasarkan skenario penggunaan (Kerja / Kehidupan / Belajar)
+    \item \textbf{Tingkat 3}: Berdasarkan kejadian atau proyek spesifik (seperti "2026Q2\_ProyekA")
+  \end{itemize}
+  \item \textbf{Rencana pembersihan bulanan}: Setiap bulan pada tanggal tetap (disarankan hari gajian atau tanggal 1 awal bulan), lakukan penyortiran terpusat pada direktori "Download":\textbf{arsipkan yang berguna, hapus yang tidak berguna, simpan ulang yang berharga}. 12 kali penyortiran kecil setahun, jauh lebih ringan daripada menumpuk setahun untuk pembersihan besar.
+\end{itemize}
+
+\begin{tcbpractice}{Daftar tugas bulan ini}
+Pilih satu akhir pekan yang luang, operasikan dengan urutan berikut:
+
+\begin{enumerate}
+  \item Buat folder kerja bulan ini dengan format\texttt{2026Q2\_ProyekA}di file manager;
+  \item Telusuri semua file minggu ini di direktori "Download", simpan yang berguna, arsipkan, hapus yang tidak berguna;
+  \item Buat folder tahunan seperti\texttt{2025Keluarga},\texttt{2026Keluarga}untuk foto keluarga tahun ini.
+\end{enumerate}
+
+\end{tcbpractice}
+
+\booksubsection{Strategi penanganan file redundan}
+
+Ponsel dipakai lama akan “bertambah gemuk”, kebanyakan karena file redundan yang menjadi biang kerok.
+
+\begin{itemize}
+  \item \textbf{Pembersihan otomatis 72 jam}: File sementara yang diterima aplikasi sosial seperti WeChat, QQ (sticker, gambar chat, video pendek), kebanyakan setelah dilihat sekali tidak berguna lagi. Di [WeChat] > [Pengaturan] > [Umum] > [Ruang Penyimpanan] aktifkan "Pembersihan Otomatis", set cache kedaluwarsa menjadi 72 jam. Ponsel seketika lebih segar, tanpa kehilangan record penting.
+  \item \textbf{Pembersihan terarah ruang penyimpanan}: Android [Pengaturan] > [Penyimpanan] > [Pembersihan Akselerasi], iOS [Pengaturan] > [Umum] > [Ruang Penyimpanan iPhone], sistem akan mendaftar berdasarkan klasifikasi "Cache / File sementara / Aplikasi yang bisa di-uninstal / File besar". Fokus pembersihan: (1) File cache; (2) Package instalasi kedaluwarsa (package instalasi versi lama yang tersisa setelah upgrade aplikasi); (3) File duplikat (foto dengan nama dan ukuran sama).
+  \item \textbf{Aturan klasifikasi otomatis}: Sebagian besar aplikasi album merek mendukung klasifikasi cerdas: Orang, Pemandangan, Dokumen, Screenshot. Setelah diaktifkan, foto bersama yang baru diambil akan otomatis masuk ke "Orang > Zhang San", kontrak yang di-scan akan otomatis masuk ke "Dokumen".\textbf{Dikombinasikan dengan penyortiran bulanan, bisa sangat menurunkan probabilitas "tidak menemukan barang"}.
+\end{itemize}
+
+\booksubsection{Standar penanganan keamanan gambar}
+
+Gambar adalah tipe data paling “sensitif” di ponsel—satu foto sembarangan bisa membocorkan lokasi, perangkat, waktu Anda. Kami menyarankan\textbf{membangun workflow “perlindungan ganda”}:
+
+\begin{tcbwarn}{Prosedur standar mengirim foto ID/screenshot sensitif}
+\begin{enumerate}
+  \item \textbf{Pixelasi informasi yang terlihat}: Dengan tool bawaan sistem atau pihak ketiga (seperti Meitu XiuXiu, Snapseed)\textbf{coret beberapa digit tengah nomor KTP, nomor plat, nomor rumah, nama, jumlah}dan field kunci lainnya;
+  \item \textbf{Pengupasan metadata}: Sebelum mengirim, di album klik "Share" atau "Export", sistem akan menanyakan apakah ingin menyimpan informasi lokasi, pilih\textbf{"Tidak Simpan"}. Dengan begitu model perangkat pengambil, koordinat GPS, waktu pengambilan tidak akan ikut terkirim bersama gambar;
+  \item \textbf{Watermark sementara}(opsional): Tambahkan watermark teks "Hanya untuk pengurusan XX" pada screenshot sensitif, hindari penyalahgunaan.
+\end{enumerate}
+
+\end{tcbwarn}
+
+Metode umum pembersihan metadata (EXIF) (operasi dasar, untuk perlindungan mendalam lihat Bab 6 “Anonimisasi Foto”):
+
+\begin{itemize}
+  \item \textbf{Bawaan sistem}: iOS [Pengaturan] > [Privasi \& Keamanan] > [Kamera], bisa matikan "Lokasi Presisi"; saat share pilih "Hanya Foto Saat Ini" akan\textbf{otomatis mengupas sebagian besar EXIF}.
+  \item \textbf{Android}: Sebagian besar aplikasi album merek saat "Share" akan meminta "Apakah hapus informasi lokasi", centang saja.
+  \item \textbf{Tool profesional}: ExifTool (desktop), Metapho (iOS), Photo Metadata Remover (Android) bisa menghapus semua metadata secara menyeluruh.
+\end{itemize}
+
+Untuk gambar sensitif yang perlu\textbf{disimpan jangka panjang}(KTP, kartu bank, scan buku keluarga, paspor), disarankan disimpan di\textbf{album terenkripsi}:
+
+\begin{itemize}
+  \item iPhone: [Foto] > pilih foto > Hide (hanya bisa dilihat setelah verifikasi Face ID);
+  \item Huawei/Xiaomi: [Album] > long press foto > "Pindahkan ke Brankas";
+  \item Aplikasi enkripsi pihak ketiga:\textbf{360 Secure Album},\textbf{Tencent Album Manager (Album Privat)},\textbf{KeepSafe}, dll, perlindungan kata sandi terpisah, lebih tersembunyi.
+\end{itemize}

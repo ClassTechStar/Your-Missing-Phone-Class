@@ -1,0 +1,178 @@
+\bookchapter{제53장: 데이터 저장과 네트워크 요청}
+
+\chapterintro{“볼” 수만 있는 앱은 죽은 앱이에요. 데이터를 저장하고 네트워크에 연결할 수 있는 앱이 살아 있는 앱이죠. 이번 장에서는 안드로이드 데이터 계층의 “3종 세트”를 만나요. DataStore(작은 설정 저장), Room(구조화된 데이터 저장), Retrofit(서버와 대화), 그리고 이들의 “총지휘”인 코루틴까지요. 이 장을 끝내면 사용자 습관을 기억하고 콘텐츠를 실시간으로 업데이트하는 진짜 앱을 만들 수 있어요.}
+
+\booksection{저장 방식 고르기: 먼저 이 표부터 보기}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{방식} & \textbf{무엇을 저장하기 좋나} & \textbf{특징} & \textbf{이 책에서 쓰이는 곳} \tabularnewline
+\hline
+DataStore & 흩어진 설정(테마, 스위치) & 키-값 쌍, 단순하고 안전 & 54장 가계부 설정 \tabularnewline
+Room & 구조화된 데이터(거래 내역, 사용자) & 진짜 SQLite 데이터베이스를 감싼 래퍼, 쿼리 가능 & 54장 거래 기록 \tabularnewline
+Retrofit & (저장하지 않고 네트워크에서 가져옴) 서버 데이터 & HTTP 요청 라이브러리의 사실상 표준 & 55장 날씨 데이터 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}데이터 3종 세트의 역할 분담\end{center}
+
+이 구절을 외워 두세요. “작은 설정은 DataStore로, 한데 모인 데이터는 Room으로, 바깥의 데이터는 Retrofit으로”. 옛 튜토리얼에 자주 나오던 SharedPreferences는 DataStore로 대체됐고, SQLite에 손으로 SQL 쓰던 방식도 Room으로 대체됐어요. 바로 새 것을 배우고 옛길로 가지 마세요.
+
+\booksection{DataStore: 작은 설정 저장하기}
+
+“사용자가 마지막으로 고른 통화” “다크 모드 켜기” 같은 흩어진 값을 기억하려면 DataStore(Preferences 버전)를 쓰세요:
+
+\begin{lstlisting}[language=Kotlin]
+val Context.dataStore by preferencesDataStore(name = "settings")
+
+// 쓰기: 값 저장
+suspend fun saveTheme(isDark: Boolean) {
+    context.dataStore.edit { prefs ->
+        prefs[THEME_KEY] = isDark
+    }
+}
+
+// 읽기: 꺼내 오기(Flow가 변화를 자동 알림)
+val themeFlow: Flow<Boolean> = context.dataStore.data
+    .map { it[THEME_KEY] ?: false }
+\end{lstlisting}
+
+반환되는 것이 Flow라는 점에 주목하세요. “흐르는” 데이터 스트림이에요. 값이 바뀌면 그 값을 관찰하는 모든 곳에 새 값이 자동으로 전달돼요. 이 개념(반응형)이 현대 안드로이드 개발의 초석이고, 54장에서 실전으로 써 봐요.
+
+\booksection{Room: 데이터에게 “진짜 집” 마련해 주기}
+
+가계부에는 수백, 수천 건의 거래가 쌓이고, 카테고리별·월별 조회와 통계도 필요해요. 데이터베이스가 필요한 순간이죠. Room은 SQLite의 공식 래퍼로, “테이블 만들기, 데이터 조회”를 Kotlin 쓰듯 자연스럽게 만들어 줘요. 세 가지가 필요해요:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. Entity: 표 구조(한 표 = data class 하나)
+@Entity(tableName = "records")
+data class Record(
+    @PrimaryKey(autoGenerate = true) val id: Long = 0,
+    val amount: Double,
+    val category: String,
+    val note: String,
+    val date: String
+)
+
+// 2. Dao: 조작 인터페이스(생성·조회·수정·삭제)
+@Dao
+interface RecordDao {
+    @Query("SELECT * FROM records ORDER BY date DESC")
+    fun getAll(): Flow<List<Record>>
+
+    @Insert
+    suspend fun insert(record: Record)
+
+    @Delete
+    suspend fun delete(record: Record)
+
+    @Query("SELECT SUM(amount) FROM records WHERE category = :c")
+    suspend fun sumByCategory(c: String): Double
+}
+
+// 3. Database: 총조립
+@Database(entities = [Record::class], version = 1)
+abstract class AppDatabase : RoomDatabase() {
+    abstract fun recordDao(): RecordDao
+}
+\end{lstlisting}
+
+이 “3종 세트” 템플릿은 어떤 프로젝트에도 그대로 옮길 수 있어요. 필드 이름만 바꾸면 돼요. 조회가 Flow를 반환하니 화면이 데이터에 맞춰 자동으로 새로 고침되죠. 이만큼 좋을 수 없어요.
+
+\booksection{Retrofit: 서버와 말 걸기}
+
+날씨, 뉴스, 환율…… 이런 데이터는 휴대폰 안에 있는 게 아니라 남의 서버에 있어요. Retrofit은 “서버에 데이터 달라고 하기”를 함수 호출만큼 간단하게 만들어 줘요. 세 단계로 갑니다:
+
+\begin{lstlisting}[language=Kotlin]
+// 1. 인터페이스 정의: HTTP 요청을 함수로 기술
+interface WeatherApi {
+    @GET("v1/weather")
+    suspend fun getWeather(@Query("city") city: String): WeatherResponse
+}
+
+// 2. 인스턴스 생성
+val api = Retrofit.Builder()
+    .baseUrl("https://api.example.com/")
+    .addConverterFactory(GsonConverterFactory.create())
+    .build()
+    .create(WeatherApi::class.java)
+
+// 3. 함수 호출하듯 사용(코루틴 안에서)
+val result = api.getWeather("베이징")
+\end{lstlisting}
+
+\textbf{주의: 네트워크 철칙 두 가지}\par
+
+(1) 네트워크 요청은 절대 메인 스레드에서 하면 안 돼요. 화면이 멈추거나 앱이 크래시될 수 있어요(NetworkOnMainThreadException). 모든 네트워크 호출은 코루틴(viewModelScope.launch) 안에 넣으세요. (2) 평문 HTTP는 기본적으로 금지예요. 안드로이드 9부터 HTTPS가 요구돼요. 테스트에서 http:// 로컬 주소를 쓰려면 Manifest에 usesCleartextTraffic을 명시적으로 선언해야 하지만, 정식 제품은 반드시 전부 HTTPS로 가야 해요.
+
+\booksection{JSON 파싱: 네트워크 데이터 “통역”하기}
+
+서버가 돌려주는 데이터는 대부분 JSON이에요. “중첩된 사전”처럼 생긴 텍스트죠. Retrofit에는 이것을 Kotlin 객체로 바꿔 줄 “통역사”가 필요해요. 2026년의 두 가지 주류 방식이에요:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{방식} & \textbf{특징} & \textbf{추천 상황} \tabularnewline
+\hline
+Gson / Moshi & 오래된 리플렉션 방식, 설정 비용 제로 & 빠르게 시작하는, 필드가 많지 않은 소규모 프로젝트 \tabularnewline
+kotlinx.serialization & 공식 컴파일 시점 방식, 더 빠르고 더 안전 & 새 프로젝트의 첫 선택(2026년 주류) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}JSON 파싱 두 가지 방식\end{center}
+
+\begin{lstlisting}[language=Kotlin]
+// 데이터 클래스에 @Serializable 어노테이션 추가
+@Serializable
+data class WeatherResponse(
+    val weather: List<Weather>,
+    val main: Main,
+    val name: String
+)
+
+// Retrofit에 맞는 Converter 연결(Retrofit 2.11+ 공식 지원 기준):
+// .addConverterFactory(json.asConverterFactory("application/json".toMediaType()))
+\end{lstlisting}
+
+어떤 방식이든 철칙은 같아요. 실제로 돌아오는 JSON을 먼저 보고 필드를 정의하세요. “파싱 실패” 버그의 상당수는 필드 이름 오타, 중첩 단계 착각에서 나와요. 원본 JSON을 출력해 대조하면 10초 만에 원인을 찾아요.
+
+\booksection{코루틴: 안드로이드 동시성의 “공용어”}
+
+\booksection{코루틴: 안드로이드 동시성의 “공용어”}
+
+위에서 계속 나온 suspend와 launch는 Kotlin 코루틴(Coroutine)에서 와요. 안드로이드 공식 동시성 방식이죠. 거칠게 이해하면 이래요. “조금 기다려야 하는” 작업(네트워크, 데이터베이스)이 화면을 막지 않게 하는 거예요.
+
+\begin{lstlisting}[language=Kotlin]
+// ViewModel에서 코루틴 시작
+viewModelScope.launch {
+    val records = dao.getAll().first()  // suspend: 자동으로 중단하고 기다려요
+    // 화면 상태 업데이트……
+}
+
+// 키워드 암기 노트:
+// suspend   — "기다려야 해요, 다른 일 막지 마세요"
+// launch    — "일 시작!"
+// viewModelScope — 화면을 따라다니는 "작업실"로, 화면이 소멸하면 자동 마감
+\end{lstlisting}
+
+기초 단계에서는 사용법만 기억하면 돼요. 그 뒤에 있는 “중단과 재개” 원리는 나중에 파도 늦지 않아요. 일상 개발에서 여러분이 쓰는 코드의 90\%는 이 템플릿이에요.
+
+\begin{tcbpractice}{직접 해 보기: "오늘의 한 문장" 미니 앱 만들기}
+무료 명언 API(hitokoto 같은 것)를 찾아 Retrofit으로 “오늘의 한 문장”을 가져와 화면 한가운데에 보여 주세요. “다른 문장” 버튼도 달고요(코루틴에서 다시 요청). 마음에 드는 문장은 Room으로 “즐겨찾기”에 저장해요. 이 연습은 DataStore/Room/Retrofit/코루틴을 모두 한 바퀴 써 보는 거예요. 이걸 끝내면 7장과 8장은 식은 죽 먹기예요.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{이번 장 정리}
+\begin{itemize}
+  \item 구절: 작은 설정은 DataStore로, 한데 모인 데이터는 Room으로, 바깥의 데이터는 Retrofit으로
+  \item DataStore는 Flow를 반환: 값이 바뀌면 관찰자가 자동으로 받아요
+  \item Room 3종 세트: @Entity(테이블) + @Dao(동작) + @Database(총조립), 템플릿 그대로 재사용 가능
+  \item Retrofit 3단계: 인터페이스 정의 인스턴스 생성 코루틴에서 호출
+  \item 두 가지 철칙: 네트워크는 메인 스레드에 두지 않기, 정식 제품은 반드시 HTTPS
+  \item 코루틴 = 화면을 막지 않는 대기, viewModelScope는 화면 전용 작업실
+\end{itemize}
+
+\end{tcbsummary}

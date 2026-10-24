@@ -1,0 +1,115 @@
+\booksection{ملحق الفصل 20: Termux — بيئة طرف Linux محمولة على أجهزة Android}
+
+\chapterintro{إذا كنت ترى أن وضع المطور ليس “قوياً” بما يكفي، وتريد تجربة سطر أوامر Linux كامل على هاتفك، فإن Termux هو ما تبحث عنه. لا يتطلب صلاحية root، ويحوّل هاتف أندرويد عادي إلى محطة عمل Linux محمولة، وهو أداة قوية للمستخدمين المتقدمين لاستكشاف تطوير وإدارة الأنظمة على الأجهزة المحمولة.}
+
+\booksubsection{أولاً: ما هو Termux}
+
+Termux هو تطبيق مفتوح المصدر لمحاكاة الطرف وبيئة Linux مصمم خصيصاً لأجهزة Android، يوفّر تجربة shell كاملة لـ Linux على الهاتف دون الحاجة إلى صلاحية root. كتطبيق خفيف (حجم التثبيت حوالي 30 ميغابايت فقط)، يدعم Termux نظام إدارة الحزم APT بمنظومة برمجيات غنية، ويتيح للمستخدمين تشغيل Python وNode.js وGit وSSH وغيرها على الأجهزة المحمولة، بل وبناء خوادم أو إجراء اختبارات اختراق.
+
+قوة Termux الأساسية في خفّته وقابليته العالية للتوسعة، مما يجعله مناسباً لمختلف السيناريوهات مثل التطوير والتعلم وإدارة الأنظمة. يجمع بين الحزم البرمجية القياسية ومحاكاة الطرف الدقيقة في حل مفتوح المصدر واحد.
+
+\booksubsection{ثانياً: الوظائف والخصائص الأساسية}
+
+\subsubsection*{بيئة Linux كاملة}
+
+Termux\textbf{Bash مدمج فقط}هذا النوع من Shell. إذا أردت استخدام Zsh أو fish أو غيرها، تحتاج تثبيتها يدوياً عبر مدير الحزم، مثلاً:\texttt{pkg install zsh}أو\texttt{pkg install fish}. يدعم Termux أيضاً محررات مثل Vim وNano وEmacs، ويوفر تجربة سطر أوامر قريبة من الأصلية. يمكن للمستخدم تثبيت أكثر من 2000 حزمة برمجية عبر “pkg install”، بما فيها GCC وOpenSSH وSQLMap وغيرها من أدوات التطوير والأمان.
+
+\subsubsection*{إدارة حزم قوية}
+
+يستخدم مدير الحزم APT (مشابه لـ Debian وUbuntu)، يمكن تثبيت آلاف حزم Linux، تغطي أدوات التطوير وأدوات الشبكة وغيرها. يدعم بيئات لغات برمجة متعددة مثل Python وRuby وNode.js وGo وRust وSwift.
+
+\subsubsection*{وظائف الأمان والشبكة}
+
+\begin{itemize}
+  \item \textbf{اتصال SSH عن بُعد}: يدعم وظائف عميل وخادم SSH، يمكن الاتصال بأجهزة أخرى عن بُعد أو جعل الهاتف مضيف SSH.
+  \item \textbf{أدوات التشفير}: يوفّر أدوات تشفير مثل OpenSSL، يدعم تشفير البيانات والاتصال الآمن.
+  \item \textbf{بناء الخوادم}: يمكن تهيئة Nginx أو Apache لبناء خادم صفحات ثابتة.
+\end{itemize}
+
+\subsubsection*{تكامل النظام والتوسعة}
+
+\begin{itemize}
+  \item الوصول إلى صلاحية تخزين الهاتف، لتحقيق إدارة الملفات المحلية.
+  \item استدعاء وظائف أجهزة Android مثل المستشعرات والكاميرا عبر إضافة Termux:API.
+  \item دعم لوحة مفاتيح Bluetooth والشاشات الخارجية، مع دعم كامل للماوس.
+\end{itemize}
+
+\booksubsection{ثالثاً: منظومة إضافات النظام البيئية}
+
+يمكن توسعة تطبيق Termux الأساسي بعدة تطبيقات إضافات اختيارية، توفّر وظائف وتكاملات إضافية:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{اسم الإضافة} & \textbf{وصف الوظيفة} \tabularnewline
+\hline
+Termux:API & يعرّض وظائف Android API لبرامج سطر الأوامر \tabularnewline
+Termux: Boot & يسمح بتشغيل السكربتات عند إقلاع الجهاز \tabularnewline
+Termux: Float & يوفّر نافذة طرف عائمة \tabularnewline
+Termux: Styling & يفعّل أنظمة ألوان وتخصيص الخطوط للطرف \tabularnewline
+Termux: Tasker & يدمج سكربتات Termux مع تطبيق الأتمتة Tasker \tabularnewline
+Termux: Widget & يسمح بتشغيل السكربتات من عنصر واجهة على الشاشة الرئيسية \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{tcbwarn}{تنبيه مهم}
+يجب تثبيت Termux وإضافاته من المصدر نفسه، لأنها تتشارك نفس sharedUserId. خلط التثبيتات من مصادر مختلفة (مثل F-Droid وGitHub) سيؤدي إلى أخطاء في التثبيت.
+
+\end{tcbwarn}
+
+\booksubsection{رابعاً: دليل التثبيت والتهيئة}
+
+\subsubsection*{خطوات التثبيت}
+
+\begin{enumerate}
+  \item \textbf{تنزيل التطبيق}: نزّل Termux من القناة الرسمية (F-Droid أو GitHub)، لا يتطلب صلاحية root.
+  \item \textbf{تهيئة النظام}: بعد أول تشغيل انتظر حتى يكتمل "Installing bootstrap packages".
+  \item \textbf{الحصول على صلاحية التخزين}: نفّذ\texttt{termux-\allowbreak setup-\allowbreak storage}للحصول على صلاحية نظام ملفات الهاتف.
+  \item \textbf{تحديث مصادر البرمجيات}: نفّذ\texttt{pkg update \&\& pkg upgrade}لتحديث قائمة الحزم.
+\end{enumerate}
+
+\subsubsection*{التحسين الأساسي}
+
+\begin{itemize}
+  \item \textbf{تغيير مصدر المرآة}: استخدم الأمر\texttt{termux-\allowbreak change-\allowbreak repo}لتغيير مصدر المرآة عبر واجهة رسومية (يُوصى بمصدر مرآة جامعة Tsinghua).
+  \item \textbf{إعداد الاختصارات}: مفتاح خفض الصوت يحاكي Ctrl، مفتاح رفع الصوت يحاكي Esc، لتحسين كفاءة الإدخال.
+  \item \textbf{تجميل الواجهة}: ثبّت Zsh + Oh My Zsh، وتهيئة السمات والإضافات.
+\end{itemize}
+
+\booksubsection{خامساً: سيناريوهات التطبيق النموذجية}
+
+\subsubsection*{اختبار التطوير المحمول}
+
+بناء بيئة تطوير كاملة على الهاتف، كتابة وتشغيل سكربتات Python، استخدام GCC لتجميع برامج C، إدارة مستودعات الأكواد عبر Git، والمزامنة مع الخوادم البعيدة عبر SSH.
+
+\subsubsection*{تشغيل وصيانة الخوادم}
+
+إدارة الخوادم عن بُعد عبر SSH، تنفيذ مهام صيانة النظام وتحليل السجلات، ومعالجة مشاكل الخوادم في أي وقت وأي مكان.
+
+\subsubsection*{تعلم عمليات Linux}
+
+يوفر بيئة Linux حقيقية، وهو منصة مثالية لتعلم سطر الأوامر وإدارة النظام، يمكن التدرب على كتابة سكربتات Shell وإدارة صلاحيات ملفات Linux (مثل\texttt{chmod 755}ضبط صلاحيات rwxr-xr-x،\texttt{chown user: group}تعديل مالك الملف،\texttt{ls -\allowbreak l}عرض owner/group/other ثلاث مجموعات تسع بتات) وغيرها من الأوامر الأساسية. تجدر الإشارة إلى أن هذا نموذج الصلاحيات “ثلاث مجموعات تسع بتات” الكلاسيكي في Unix/Linux (owner / group / other × قراءة / كتابة / تنفيذ)، وهو نظام مختلف تماماً عن نظام ACL لقائمة التحكم بالوصول في Windows NTFS.
+
+\subsubsection*{اختبار أمن الشبكات}
+
+تثبيت أدوات أمنية مثل Nmap وSQLMap وHydra وMetasploit، لإجراء مسح الشبكات واختبارات الاختراق.
+
+\booksubsection{سادساً: الإصدارات والتوافق}
+
+أحدث إصدار مستقر من Termux هو v0.118.2، مناسب لأجهزة Android $\geq$ 7. تجدر الإشارة إلى أن Termux قد يكون غير مستقر على Android 12 والإصدارات الأحدث، يُنصح بمتابعة سجل التحديثات الرسمي للحصول على أحدث معلومات التوافق.
+
+\begin{tcbinfo}{خلاصة}
+يجلب Termux تجربة طرف Linux القوية إلى أجهزة Android، ويجعل الهاتف أداة تطوير وتعلم محمولة. سواء كنت مطوراً أو مدير أنظمة أو هاوياً للتقنية، يمكنك الاستفادة من Termux على الأجهزة المحمولة للاستمتاع بتجربة سطر أوامر كاملة، وتحقيق مفهوم “Linux في جيبك”.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{جرّب: شغّل أول أمر Linux على هاتفك}
+\begin{enumerate}
+  \item نزّل Termux من F-Droid وثبّته، وعند أول تشغيل انتظر اكتمال التهيئة.
+  \item نفّذ\texttt{pkg update \&\& pkg upgrade}لتحديث الحزم.
+  \item ثبّت Python:\texttt{pkg install python}.
+  \item أدخل\texttt{python3 -\allowbreak c "print('Hello from Termux!')"}، واستمتع بمتعة تشغيل الكود على الهاتف.
+\end{enumerate}
+
+\end{tcbpractice}

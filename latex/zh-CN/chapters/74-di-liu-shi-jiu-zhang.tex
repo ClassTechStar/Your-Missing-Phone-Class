@@ -1,0 +1,119 @@
+\bookchapter{第六十九章：速查手册与资源}
+
+\chapterintro{本章是一份可以独立使用的速查手册。当你记不清某个写法或需要快速决策时，直接翻到这里。建议把它当成“口袋卡片”：常用代码速查、常见问题、学习资源，一页不落。}
+
+\booksection{一、常用代码速查卡}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{要做什么} & \textbf{关键代码} \tabularnewline
+\hline
+页面私有状态 & \texttt{@State private var x = 初值} \tabularnewline
+跨页面逻辑 & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
+竖排/横排布局 & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
+弹性空间 & \texttt{Spacer()} \tabularnewline
+列表 & \texttt{List \{ ForEach(数组) \{ .\allowbreak .\allowbreak .\allowbreak  \} \}} \tabularnewline
+页面跳转 & \texttt{NavigationStack + NavigationLink} \tabularnewline
+底部弹窗 & \texttt{.\allowbreak sheet(isPresented: \$show) \{ 内容 \}} \tabularnewline
+关当前页 & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+联网取数据 & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+JSON 解析 & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+存小配置 & \texttt{UserDefaults.\allowbreak standard.\allowbreak set(值, forKey: "键")} \tabularnewline
+存结构化数据 & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
+深色模式适配 & 用系统颜色（.primary / Color(.systemGray6)），不写死 \tabularnewline
+跑测试 & CmdU \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 开发速查卡（2026 年 8 月版）\end{center}
+
+\booksection{二、常见问题 FAQ}
+
+\textbf{Q1：我没有 Mac，能学 iOS 开发吗？}
+
+能学语言，不能做完整开发。iPad/iPhone 上的 Swift Playgrounds 可以学完第 61 章的全部内容；但 Xcode 是 macOS 独占，最终必须有一台 Mac。预算有限可以先租云 Mac 或买二手 Mac mini 过渡，学完语言再决定投入。
+
+\textbf{Q2：学 iOS 开发要花多少钱？}
+
+学习阶段：0 元（Xcode 免费 + 免费 Apple ID 真机调试）。发布阶段：开发者账号 99 美元/年（约 700 元）。加上一台 Mac 的硬件投入，这是全部成本。相比回报——App Store 上哪怕一个小工具也有付费用户——这笔账划算。
+
+\textbf{Q3：SwiftUI 和 UIKit 先学哪个？}
+
+\textbf{SwiftUI}。2026 年的新项目、新教程、新岗位都以 SwiftUI 为主，本书全程用它。UIKit 是上一代框架，仍在大量老项目中使用——等你 SwiftUI 熟练后，按需补 UIKit（官方有互操作教程），上手会很快。顺序别反了。
+
+\textbf{Q4：iOS 开发好找工作吗？}
+
+2026 年的行情：纯“会画界面”的初级岗位竞争激烈，但“懂 Swift + SwiftUI + 有上架作品”的开发者依然抢手。iOS 岗位的薪资中位数在各技术栈里常年靠前。学习期的你，\textbf{最好的简历就是商店里那个自己做的 App}。
+
+\textbf{Q5：App 被审核拒绝了怎么办？}
+
+别慌，很正常——首次提交被拒的概率不低。苹果的拒绝理由通常写得非常具体（哪个页面、哪条准则），逐条修改后在 App Store Connect 里回复说明，重新提交即可。常见的三大拒绝原因：权限用途说不清、界面有 bug、元数据（截图/描述）与实物不符。提前自查这三项，能省一轮等待。
+
+\booksection{三、Xcode 高频快捷键速查}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{操作} & \textbf{快捷键} \tabularnewline
+\hline
+运行 / 测试 & CmdR / CmdU \tabularnewline
+打开画布预览 & OptionCmd \tabularnewline
+快速打开文件 & CmdO \tabularnewline
+全局搜索 & CmdF \tabularnewline
+格式化缩进 & CtrlI \tabularnewline
+注释 / 取消注释 & Cmd/ \tabularnewline
+清理构建缓存 & CmdK \tabularnewline
+跳转到定义 & Cmd 点按 \tabularnewline
+重命名（全局安全改名） & 右键 Refactor Rename \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Xcode 高频快捷键速查\end{center}
+
+\begin{tcbinfo}{小贴士：编译玄学先清缓存}
+“昨天还能跑今天就不行”的灵异事件，十有六七是构建缓存错乱。CmdK清理后重新构建，能治愈一大半玄学问题。还不行就重启 Xcode（连 Mac 一起），再不行就“删掉 DerivedData 文件夹”——这是 iOS 开发者口口相传的终极三连。
+
+\end{tcbinfo}
+
+\booksection{四、推荐学习资源}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{类型} & \textbf{资源} & \textbf{推荐理由} \tabularnewline
+\hline
+官方 & developer.apple.com & 苹果官方文档，SwiftUI/Swift 教程都在里面，第一权威 \tabularnewline
+官方 & Apple 的 SwiftUI Tutorials & 官方手把手课程，新手友好度满分 \tabularnewline
+官方 & Swift 官网 (swift.org) & 语言官方文档与在线演练场 \tabularnewline
+社区 & Hacking with Swift & Paul Hudson 的免费教程库，质量公认第一梯队 \tabularnewline
+社区 & Stack Overflow (swiftui 标签) & 报错求救第一站 \tabularnewline
+视频 & Apple Developer 官方频道（WWDC 视频） & 每年新技术的权威讲解 \tabularnewline
+设计 & Apple 人机界面指南（HIG） & 做出"苹果味"界面的官方圣经 \tabularnewline
+配套 & 第七篇《AI编程实战篇》（第37-47章） & 用 AI 辅助 iOS 开发的完整心法 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS 开发学习资源清单（2026 年 8 月）\end{center}
+
+\booksection{五、结语：从第一个 App 到第 N 个 App}
+
+回头看，你从“不知道 SwiftUI 是什么”，到装好 Xcode、学会 Swift、用 SwiftUI 画出界面、给 App 接上数据库和网络，再到测试、打包、上架——\textbf{这条路上你已经走完了从零到一最难的一段}。
+
+技术的世界变化很快：框架会升级，工具会换代，AI 会接手越来越多“敲键盘”的活。但有一样东西不会过时：\textbf{你把一个模糊的想法，拆解成清晰的步骤，再一步步实现它的能力}。工具是放大器，思路是地基。放大器可以替换，地基不能动摇。
+
+你不再只是"会玩手机的人"。你能把脑海里的想法，变成数亿台 iPhone 上真实运行的 App。从今天开始，用键盘去创造——这就是 iOS 开发者的浪漫。
+
+\booksection{参考文献}
+
+\begin{enumerate}
+  \item Apple Inc. (2026). SwiftUI Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). Swift Programming Language Guide. swift.org.
+  \item Apple Inc. (2026). SwiftData Framework Documentation. developer.apple.com.
+  \item Apple Inc. (2026). App Store Review Guidelines. developer.apple.com/app-store/review.
+  \item Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.
+  \item Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.
+\end{enumerate}

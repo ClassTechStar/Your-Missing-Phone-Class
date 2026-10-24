@@ -1,0 +1,131 @@
+\bookchapter{Kapitel 24: Root-Zugriff und Bootloader-Sperre vertieft}
+
+\chapterintro{Zweitens. Detaillierter Ablauf der Bootloader-Entsperrung (am Beispiel Xiaomi)}
+
+\booksection{Erstens. Bootloader tiefgehend verstehen}
+
+: Auf der Xiaomi-Entsperr-Tool-Website Entsperrrechte beantragen.
+
+\booksubsection{Konto binden}
+
+\begin{itemize}
+  \item \textbf{: In den Smartphone-Einstellungen das Xiaomi-Konto binden.}Warten
+  \item \textbf{: Abhängig von der Konto-Stufe sind 7–30 Tage Wartezeit nötig.}Entsperrung durchführen
+  \item \textbf{: Mit dem Xiaomi-Entsperr-Tool das Smartphone mit dem PC verbinden und entsperren.}Drittens. Mehrere Methoden für Root
+\end{itemize}
+
+\booksubsection{Hardware-Level-Speicherung und Verifizierung}
+
+Der Sperrzustand des BL (Locked/Unlocked) und der oeffentliche Schluessel des Herstellers sind meist in geschuetzten Hardware-Bereichen gespeichert (z. B. die devinfo-Partition von Qualcomm, eFuse oder RPMB-Partition), um Manipulation per Software zu verhindern. Bei jedem Start liest der Bootloader den Zustand aus diesem Sicherheitsbereich und entscheidet anhand dessen, ob eine strenge Signaturpruefung durchgefuehrt wird.
+
+\booksubsection{Pruefung der digitalen Signatur}
+
+Beim Veroeffentlichen von System-Updates oder Images signiert der Hersteller diese mit seinem privaten Schluessel. Beim Geraetestart prueft der Bootloader die System-Images (z. B. boot.img, recovery.img) mit dem integrierten oeffentlichen Schluessel. Die Funktionsweise:
+
+\begin{enumerate}
+  \item Den Hash-Wert des System-Images neu berechnen.
+  \item Die im Image enthaltene Signatur mit dem oeffentlichen Schluessel entschluesseln, um einen Hash-Wert zu erhalten.
+  \item Die beiden Hash-Werte vergleichen; bei Uebereinstimmung ist die Pruefung bestanden. So wird sichergestellt, dass das System-Image nicht von Dritten manipuliert wurde.
+\end{enumerate}
+
+\booksubsection{Sichere Startkette}
+
+Das BL-Schloss ist das erste Glied der gesamten sicheren Startkette. Erst nach bestandener Pruefung wird die naechste Boot-Phase (z. B. der Kernel) geladen und ausgefuehrt – so wird die Vertrauenswuerdigkeit der Systemstartumgebung schrittweise gewaehrleistet.
+
+\booksubsection{Gesperrt vs. entsperrt: Die zwei Seiten des BL-Schlosses}
+
+Um Vor- und Nachteile des BL-Schlosses anschaulicher zu verstehen, zeigen wir eine Vergleichstabelle mit den Unterschieden in 5 Kernbereichen:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Kernfunktion} & \textbf{Gesperrter Zustand (Standard)} & \textbf{Entsperrter Zustand} \tabularnewline
+\hline
+Systemsicherheit & Verhindert das Flashen nicht signierter inoffizieller Systeme und schuetzt Systemintegritaet und Sicherheit der unteren Ebene\newline Hohe Sicherheit: Es werden nur offiziell signierte Images geladen; effektiv gegen Manipulation boesartiger Firmware & Verringerte Sicherheit: Drittanbieter-ROMs koennen geflasht werden; die Systemintegritaetspruefung wird unwirksam. Erlangt Malware Root-Rechte, kann sie das System tiefgreifend manipulieren \tabularnewline
+Systemstabilitaet & Stellt sicher, dass das Handy mit dem vom Hersteller getesteten und optimierten offiziellen System laeuft – fuer Stabilitaet und Fluessigkeit\newline Stabil: Offizielle Firmware, vollstaendige Funktionen, zuverlaessige OTA-Updates & Erhoehtes Risiko: Drittanbieter-ROMs koennen Kompatibilitaetsprobleme haben, was zu Systemabstuerzen, Brick-Zustaenden, Hardware-Fehlfunktionen (z. B. Kamera, Schnellladen) oder fehlgeschlagenen OTA-Updates fuehren kann \tabularnewline
+Garantierechte & Der Hersteller liefert durch die BL-Sperre ein stabiles offizielles System als Grundlage fuer die Garantie\newline Garantie gueltig: Kostenlose offizielle Garantie (bei nicht selbst verschuldeten Schaeden) & Garantie erloschen: Die meisten Hersteller werten die BL-Entsperrung als freiwilligen Garantieverzicht. Selbst nach erneuter Sperrung kann der Entsperrverlauf erkannt und die Garantie abgelehnt werden \tabularnewline
+Datensicherheit & Der Entsperrvorgang loescht in der Regel alle Daten, um zu verhindern, dass alte Daten im neuen Systemumfeld missbraeucht werden\newline Datensicherheit: Im Alltag beschraenkt die BL-Sperre die Moeglichkeit boesartiger Programme, die Systempartition zu aendern & Datenrisiko: Beim Entsperren werden alle Nutzerdaten zwangsgeloescht. Wird nach dem Entsperren nicht korrekt verschluesselt, koennen Daten unsicher sein. Bei Verlust lassen sich Daten durch Flashen leichter extrahieren \tabularnewline
+Funktionseinschraenkungen & Stellt sicher, dass sicherheitsabhaengige Funktionen (wie Zahlungen, Banking-Apps) normal laufen\newline Vollstaendige Funktionen: Alle offiziellen Features sind nutzbar & Einschraenkungen: Einige sicherheitskritische Apps (z. B. Google Pay, Banking-Apps) koennen bei erkanntem entsperrtem BL die Ausfuehrung verweigern. DRM-Dienste koennen herabgestuft werden, was die HD-Videowiedergabe beeintraechtigt \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksection{Zweitens. Detaillierter Ablauf der Bootloader-Entsperrung (am Beispiel Xiaomi)}
+
+\begin{enumerate}
+  \item \textbf{: Moderne Root-Lösung, Systemless-Design, kann den Root-Status verbergen.}KernelSU
+  \item \textbf{: Kernel-basierte Root-Lösung, tieferliegend, bessere Tarnung.}SuperSU
+  \item \textbf{: Klassische Root-Lösung, wird nicht mehr weiterentwickelt.}Viertens. Flash-Einsteiger
+  \item \textbf{Flashen bedeutet, dem Smartphone ein neues Betriebssystem zu installieren. Häufige Flash-Arten:}Offizielles ROM flashen
+\end{enumerate}
+
+\booksection{Drittens. Mehrere Methoden für Root}
+
+\begin{itemize}
+  \item \textbf{Custom Recovery flashen}: z. B. TWRP, für Backup/Wiederherstellung und zum Flashen von Custom-ROMs.
+  \item \textbf{Custom-ROM flashen}: z. B. LineageOS, Pixel Experience usw., um ein anderes System zu erleben.
+  \item \textbf{Wichtige Warnung}Flashen ist riskant, die Eingriffe müssen mit Bedacht vorgenommen werden. Mögliche Folgen:
+\end{itemize}
+
+\booksection{Viertens. Flash-Einsteiger}
+
+Garantieverlust
+
+\begin{itemize}
+  \item \textbf{Datenverlust}Zahlungsfunktionen gestört
+  \item \textbf{Erstelle vor dem Flashen unbedingt ein vollständiges Backup, lies die Anleitung sorgfältig durch und vergewissere dich, dass Modell und Version übereinstimmen.}Empfohlene Ressourcen
+  \item \textbf{XDA Developers}: Weltweit größte Android-Entwickler-Community mit reichhaltigen Flash-Anleitungen und ROM-Ressourcen.
+\end{itemize}
+
+\booksection{V. Samsung Knox: Der unumkehrbare Preis der BL-Entsperrung}
+
+Anders als andere Android-Hersteller hat Samsung beim BL-Entsperrmechanismus ein einzigartiges „Ausloese“-Design:\textbf{Bei Samsung-Smartphones loest die Entsperrung den Knox-Ausloeser aus, womit einige Sicherheitsfunktionen (wie Samsung Pay) dauerhaft verloren gehen; alle geschuetzten Daten werden geloescht; die Garantie ist betroffen}. Im Einzelnen:
+
+\begin{itemize}
+  \item \textbf{Der Ausloeser ist einmalig}: Im Handy befindet sich eine eFuse-Sicherung; sobald die BL-Entsperrung erkannt wird, schmilzt sie unwiderruflich und kann nicht wiederhergestellt werden.
+  \item \textbf{Betroffene Funktionen}: Samsung Pay (Transit-/Bankkarten), Knox Sicherer Ordner, unternehmenstaugliche MDM-Kontrolle und einige Krankenversicherungs-Apps werden unbrauchbar.
+  \item \textbf{Erzwungenes Loeschen der Daten}: Nach dem Ausloesen wird das Handy zwangsweise auf Werkseinstellungen zurueckgesetzt; alle lokalen Daten werden geloescht (Cloud-Daten sind nicht betroffen).
+  \item \textbf{Garantiewirkung}: Offiziell heisst es, dass nach dem Knox-Ausloesen keine Garantie mehr gewaehrt wird.
+\end{itemize}
+
+\begin{tcbwarn}{Zweimal nachdenken vor dem Handeln}
+Der Knox-Ausloeser bei Samsung ist\textbf{unumkehrbar}; einmal ausgeloest, gibt es keinen Weg zurueck in den Werkszustand. Wenn du nur Funktionen nutzen moechtest, die eigentlich Root erfordern, pruefe zunaechst, ob es Alternativen ohne Root gibt.
+
+\end{tcbwarn}
+
+\textbf{Coolapk}\par
+
+: Bekannte chinesische Digital-Community mit vielen chinesischsprachigen Anleitungen und Diskussionen.
+
+\begin{itemize}
+  \item Modellspezifische Foren
+  \item : z. B. Xiaomi-Community, OnePlus-Community usw., mit offiziellen und inoffiziellen Anleitungen.
+  \item Kapitel 25: Gebrauchthandy-Verarbeitung und digitales Erbe
+  \item Hey Leute, nach über zwanzig Kapiteln "Training" seid ihr sicherlich vom "digitalen Anfänger" zu einem ziemlich souveränen Smartphone-Nutzer herangewachsen. Aber das Tech-Leben kennt einen Kreislauf – die neue Liebe wird irgendwann zur alten. Wenn es heißt, sich vom alten Begleiter zu verabschieden: Wisst ihr, wie man würdevoll und sicher Abschied nimmt?
+\end{itemize}
+
+Erstens. “Sterben” des alten Smartphones: Leitfaden für sicheres Verkaufen oder Verschenken
+
+\begin{tcbinfo}{Kernprinzip: Datenbereinigung ist nicht "Löschen", sondern "Überschreiben".}
+\begin{itemize}
+  \item \textbf{"Großreinemachen"}: Ein letztes vollständiges Backup durchführen, alle Konten abmelden.
+  \item \textbf{Endgültige "Formatierung"}: Die "Auf Werkseinstellungen zurücksetzen"-Funktion moderner Smartphones umfasst meist eine verschlüsselte Löschung.
+  \item \textbf{Letzte "Täuschung"}: Nach dem Zurücksetzen auf Werkseinstellungen den Speicher mit Mülldateien füllen und noch einmal auf Werkseinstellungen zurücksetzen.
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{VI. Haeufige Fragen (Q\& A)}
+
+\textbf{F1: Kann man den BL nach dem Entsperren wieder sperren?}\par
+
+\textbf{A:}Ja, er kann neu gesperrt werden. In der Regel muss das komplette offizielle Flash-Paket geflasht und ein spezielles Flash-Skript (z. B. das von Xiaomi)\texttt{flash\_all\_lock.\allowbreak bat}) verwendet werden. Aber Achtung: Einige durch die Entsperrung ausgeloeste Sicherungen (wie Samsung Knox) koennen auch nach dem erneuten Sperren nicht rueckgaengig gemacht werden.
+
+\textbf{F2: Wie rootet man nach dem Entsperren?}\par
+
+\textbf{A:}Die BL-Entsperrung ist nur der erste Schritt. Root erfordert in der Regel:
+
+\begin{enumerate}
+  \item Flashen eines Custom-Recovery (wie TWRP).
+  \item Ueber das Recovery einen Root-Manager wie Magisk flashen, um das Boot-Image zu patchen und Root zu erhalten.
+\end{enumerate}

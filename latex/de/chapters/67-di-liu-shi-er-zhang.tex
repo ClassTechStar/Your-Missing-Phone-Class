@@ -1,0 +1,195 @@
+\bookchapter{Kapitel 62: Oberflächenentwicklung – SwiftUI-Grundlagen}
+
+\chapterintro{Die Oberfläche ist alles, was der Nutzer sieht. SwiftUI ist Apples 2019 vorgestelltes deklaratives UI-Framework – du beschreibst nur, wie die Oberfläche aussieht, und das System kümmert sich automatisch ums Rendern, den Dunkelmodus und alle möglichen Bildschirme. 2026 ist SwiftUI für neue Projekte längst der absolute Standard. In diesem Kapitel lernen wir „Zeichnen“.}
+
+\booksection{SwiftUIs Denkweise: deklarativ statt imperativ}
+
+Die klassische Oberflächenentwicklung ist imperativ: Du kommandierst Schritt für Schritt „Button erstellen an Position (20,30) setzen Farbe festlegen“. SwiftUI ist deklarativ: Du beschreibst direkt „Auf der Oberfläche gibt es einen roten Button mit der Aufschrift ‚Tippe mich'“ – wie gezeichnet und wann neu gezeichnet wird, darum kümmert sich das System selbst.
+
+\begin{lstlisting}[language=Swift]
+import SwiftUI
+
+struct ContentView: View {
+    var body: some View {      // body: beschreibt, "wie die Oberfläche aussieht"
+        VStack {               // vertikal gestapelt
+            Text("Hallo, Welt!")
+                .font(.largeTitle)      // Modifier: große Überschrift
+            Button("Klick mich") {
+                print("Geklickt!")
+            }
+            .buttonStyle(.borderedProminent)  // ausgefüllter blauer Button
+        }
+        .padding()
+    }
+}
+\end{lstlisting}
+
+Der Kern: Ein View ist ein struct, das das View-Protokoll erfüllt, die body-Eigenschaft beschreibt die Oberfläche, und mit .modifier()-Ketten verpasst du ihr den „Feinschliff“. Das ist bereits das gesamte Fundament von SwiftUI.
+
+\booksection{Grundlegende Views: Text, Button, Textfeld, Bild}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{View} & \textbf{Funktion} & \textbf{Beispiel} \tabularnewline
+\hline
+Text & Text anzeigen & Text("Hallo") \tabularnewline
+Button & Button & Button("Tippe mich") \{ Aktion \} \tabularnewline
+TextField & Textfeld & TextField("Hinweis", text: \$eingabe) \tabularnewline
+Image & Bild anzeigen & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}Die vier Grundviews von SwiftUI\end{center}
+
+Beachte Image(systemName:) – Apple liefert die SF-Symbols-Symbolbibliothek mit (mehrere tausend kostenlose Icons). Ein Name wie “star.fill” genügt, und schon erscheint ein ausgefüllter Stern. Das ist ein versteckter Bonus der iOS-Entwicklung: Beim Bau von Oberflächen musst du kaum noch nach Icon-Material suchen.
+
+\booksection{Das Layout-Trio: VStack, HStack und ZStack}
+
+\begin{itemize}
+  \item VStack: untereinander (wie in der Essensschlange);
+  \item HStack: nebeneinander (wie nebeneinander auf der Sitzbank);
+  \item ZStack: übereinander gestapelt (wie ein Haufen Spielkarten – ideal für Badges und Overlays).
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+VStack(alignment: .leading, spacing: 12) {
+    HStack {
+        Text("Rechnung")
+        Spacer()                 // elastischer Abstand: schiebt das Rechte ans Ende
+        Text("-25.5 Yuan").foregroundColor(.red)
+    }
+    Divider()                    // Trennlinie
+    Text("Notiz: Mittagessen")
+}
+.padding(16)                     // Abstand an allen Seiten
+.background(Color(.systemGray6)) // heller grauer Hintergrund
+.cornerRadius(12)                // abgerundete Ecken
+
+// die Reihenfolge der Modifier zählt: erst padding, dann background; der Hintergrund ohne Rand
+\end{lstlisting}
+
+\begin{tcbwarn}{Achtung: Die Reihenfolge der Modifier ist entscheidend}
+padding(16).background(grau) und background(grau).padding(16) wirken unterschiedlich – Ersteres heißt „erst Abstand, dann Farbe“ (der Hintergrund umfasst den Abstand nicht), Letzteres „erst Farbe, dann Abstand“ (der Hintergrund umfasst den Abstand). Genau daher stammen die seltsamen weißen Ränder, die Einsteiger am häufigsten verwirren. Im Zweifel tausch die Reihenfolge – die Vorschau verrät dir sofort die Antwort.
+
+\end{tcbwarn}
+
+\booksection{State und Binding: die Oberfläche zum „Leben“ erwecken}
+
+Eine statische Oberfläche ist langweilig. SwiftUIs Regel: Die Oberfläche spiegelt jederzeit treu den Zustand wider – ändert sich der Zustand, zeichnet sie sich automatisch neu.
+
+\begin{lstlisting}[language=Swift]
+struct CounterView: View {
+    @State private var count = 0   // @State: ändert sich dieser Wert, muss neu gezeichnet werden
+
+    var body: some View {
+        VStack {
+            Text("Du hast \(count) Mal geklickt")
+            Button("Klick +1") {
+                count += 1          // Zustand ändern, die Oberfläche aktualisiert sich automatisch
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+Textfelder brauchen eine „bidirektionale Bindung“ – das \$-Zeichen übergibt Wert und Änderungsrecht zusammen:
+
+\begin{lstlisting}[language=Swift]
+struct InputView: View {
+    @State private var text = ""
+
+    var body: some View {
+        TextField("Etwas eingeben", text: $text)  // Zweiwege-Bindung mit $
+            .textFieldStyle(.roundedBorder)
+        Text("Du hast eingegeben: \(text)")   // aktualisiert sich live während der Eingabe
+    }
+}
+\end{lstlisting}
+
+Nutzeraktion
+
+Zustand ändert sich (count += 1)
+
+SwiftUI bemerkt die Änderung
+
+Zeichnet neu (body wird neu berechnet)
+
+\begin{center}\small\color{gray}Abbildung 3: SwiftUIs unidirektionaler Datenfluss von „Zustand Oberfläche“\end{center}
+
+\booksection{Vorschau, Themes und Animationen: SwiftUIs „Geheimwaffen“}
+
+\begin{itemize}
+  \item Das \#Preview-Makro: Ergänze am Dateiende \#Preview \{ ContentView() \}, und die Leinwand rechts rendert in Echtzeit – Code ändern, sofort sehen;
+  \item Dunkelmodus gratis: Systemfarben verwenden (Color(.systemGray6), .primary) statt fest codierter Farben – dann passt sich der Dunkelmodus automatisch an, ohne eine einzige Zusatzzeile;
+  \item Animation mit einer Zeile: withAnimation \{ count += 1 \} oder .animation(.default, value: count) am View – Übergänge werden seidenweich.
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+struct AnimatedHeartView: View {
+    @State private var liked = false
+
+    var body: some View {
+        Button {
+            withAnimation(.spring(duration: 0.4)) {
+                liked.toggle()
+            }
+        } label: {
+            Image(systemName: liked ? "heart.fill" : "heart")
+                .font(.system(size: 48))
+                .foregroundColor(liked ? .red : .gray)
+                .scaleEffect(liked ? 1.3 : 1.0)
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{Tipp: erst die Funktion, dann die Animation}
+Der typische Anfängerfehler: über Animationen grübeln, obwohl die Oberfläche noch gar nicht stimmt. Bring erst die Funktion zum Laufen und lege die Effekte am Ende gebündelt auf – Animationen sind das i-Tüpfelchen, Funktionen sind die Rettung in der Not. Auch das folgt unserem Prinzip „Einfachheit zuerst“.
+
+\end{tcbinfo}
+
+\begin{tcbpractice}{Jetzt bist du dran: Baue einen „Stimmungs-Button“}
+\booksection{Modifier-Spickzettel: eine Seite in der Hand, und die Oberfläche sitzt}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{Was du erreichen willst} & \textbf{Modifier} \tabularnewline
+\hline
+Abstand & \texttt{.\allowbreak padding(16)} \tabularnewline
+Eckenradius & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+Hintergrundfarbe & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+Schrift und Schriftgröße & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+Vordergrundfarbe (Text/Icons) & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+Volle Breite füllen & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+Feste Größe & \texttt{.\allowbreak frame(width: 100, height: 44)} \tabularnewline
+Ausrichtung & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+Transparenz & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+Schatten & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+Tipp-Geste & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+Tastaturtyp & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}SwiftUI-Modifier-Spickzettel\end{center}
+
+Kein Problem, wenn du dir nichts merkst – diese Seite ist zum Nachschlagen da. Am häufigsten brauchst du ohnehin nur die ersten vier: padding, Eckenradius, Hintergrund, Schrift.
+
+Verwandle das Vorlagenprojekt in einen Stimmungsschalter: ein Button, der beim Tippen im Kreis zwischen fröhlich traurig wütend wechselt, während Text und Hintergrundfarbe mitwechseln. Tipp: Speichere die drei Paare (Text + Farbe) in einem Array, den Index in @State und tippe dich mit (index + 1) \% 3 weiter. Schick das Ergebnis hinterher an deine Freunde – und ernte die erste Welle von „Wow, du kannst Apps bauen!“.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Kapitelfazit}
+\begin{itemize}
+  \item SwiftUI ist deklarativ: Du beschreibst, wie etwas aussieht, das System zeichnet und zeichnet neu
+  \item View = struct, das das View-Protokoll erfüllt; body beschreibt die Oberfläche; Modifier verpassen ihr den „Feinschliff“
+  \item Die vier Grundviews: Text / Button / TextField / Image; die SF-Symbols-Bibliothek liefert gratis Icons ohne Ende
+  \item Das Layout-Trio: VStack untereinander, HStack nebeneinander, ZStack übereinander; Spacer ist der flexible Zwischenraum
+  \item @State erweckt die Oberfläche zum Leben; \$ liefert die bidirektionale Bindung ans Textfeld
+  \item \#Preview zeigt sofort, was du tust; Systemfarben passen sich automatisch an den Dunkelmodus an; withAnimation setzt Effekte mit einer Zeile
+\end{itemize}
+
+\end{tcbsummary}

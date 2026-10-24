@@ -1,0 +1,162 @@
+\bookchapter{Chapter 44: From 0 to 1 — A Complete Project, End to End}
+
+\chapterintro{The theory is done; now it is time to get your hands dirty. This chapter is not a simple 'type along' tutorial but a practical methodology covering how to think, how to ask, and how to verify. Using three projects of rising difficulty, we will show the complete thought process from requirements to finished product. No matter which tool you use, this workflow applies.}
+
+\booksection{Project 1: A Minimal Personal Tools Site (Beginner)}
+
+\booksubsection{Thinking Through the Requirements}
+
+Goal: build a personal tools page that shows entry points to 3-4 handy little tools. This is a pure front-end project — no back end and no database needed. The point is not how fancy the tools are but experiencing the full 'from requirements to finished product' process.
+
+Applying the five requirement elements: Who — personal use. What — a web page showing tool entry points. Why — gather your frequently used tools on one page for easy access. How — a single-file HTML+CSS+JS build with no frameworks. Constraint — finish within 30 minutes, no deployment needed.
+
+\booksubsection{Giving the Instruction}
+
+Following the Think Before Coding principle, your instruction should carry enough information for the AI to understand the goal, without specifying every implementation detail:
+
+\begin{lstlisting}
+Please create a personal toolbox web page with these requirements:
+1. Single-file HTML (inline CSS and JS), no frameworks
+2. Dark theme, modern minimalist style
+3. Show 4 tool entry cards:
+   - Text summarizer
+   - Word counter
+   - Color picker
+   - QR code generator
+4. Each card has an icon, a title and a short description
+5. Cards have a hover animation
+6. Responsive layout, usable on phones
+7. A title bar at the top
+Please give the complete HTML file directly.
+\end{lstlisting}
+
+\booksubsection{Acceptance and Iteration}
+
+Once the AI hands over code, accept it using the three-layer check from iterative verification. First layer, functional check: does the file open in the browser? Do all 4 cards display? Do the hover animations work? Second layer, edge-case check: does the layout hold up at phone screen sizes? Do the cards wrap when the window gets narrow? Third layer, architecture check: is the code readable? Is the CSS inlined in a single style tag? Is there obvious redundancy?
+
+If you want one of the tool cards to actually work (rather than just be an entry point), add it gradually — implement one tool's functionality, verify it, then add the next. That is the 'small quick steps' strategy in action.
+
+\booksection{Project 2: A Full-Stack Expense Tracker (Intermediate)}
+
+\booksubsection{Requirements Thinking and the PRD}
+
+Goal: a full-stack expense-tracking app with a front end, a back end, and a database. This project is far more complex than the first and calls for the requirements engineering method from Chapter 40.
+
+Start by writing the PRD. Following the template from Section 3 of Chapter 40, lay out the project overview, feature list, technical plan, data model, and development plan. When choosing the tech stack, apply the Simplicity First principle — React on the front end but no complex state management like Redux; Node.js on the back end but no microservices; SQLite instead of PostgreSQL for the database (during development).
+
+Break the development plan into 5 steps: Step 1, the back-end API skeleton (an Express server + SQLite + CRUD endpoints); Step 2, the basic front-end pages (a records list + an add form); Step 3, hooking the front end to the back end (API calls + data display); Step 4, categories and filtering; Step 5, monthly summaries and simple charts. After every step you have 'something that works.'
+
+\booksubsection{Setting Up the Project Memory File}
+
+Before any coding begins, create the project memory file. This is a core context engineering practice — it gives the AI the project background at the start of every conversation.
+
+\begin{lstlisting}
+# Project: full-stack finance tracker
+## Overview
+A personal finance tracker with income/expense records, categories and monthly summaries.
+## Tech stack
+- Frontend: React + TypeScript + Vite
+- Backend: Node.js + Express + TypeScript
+- Database: SQLite (via better-sqlite3)
+- Shared type definitions for frontend and backend
+## API conventions
+- Base path: /api
+- Response format:{ success: boolean, data: any, error: string }
+- RESTful style
+## Data model
+Record { id, amount, type, category, note, date }
+## Code style
+- TypeScript strict mode
+- 2-space indentation
+- Functions have JSDoc comments
+- Comments and commit messages in English
+\end{lstlisting}
+
+\booksubsection{Building It Step by Step}
+
+Follow the development plan, completing each step in its own separate conversation. Here is a sample instruction for the first step:
+
+\begin{lstlisting}
+I need a backend API skeleton.
+Requirements:
+1. Express server, port 3001
+2. SQLite database, table name records
+3. Fields of the records table:
+   id (TEXT PRIMARY KEY)
+   amount (REAL)
+   type (TEXT: 'income'|'expense')
+   category (TEXT)
+   note (TEXT)
+   date (TEXT: YYYY-MM-DD)
+4. CRUD endpoints:
+   GET /api/records - get all records
+   POST /api/records - add a record
+   PUT /api/records/:id - update a record
+   DELETE /api/records/:id - delete a record
+5. Error-handling middleware
+Please give the complete backend code structure.
+\end{lstlisting}
+
+Notice what makes this instruction work: it describes only the current step (the back-end skeleton) without mixing in front-end requirements; it explicitly lists the fields and endpoints (giving the AI firm constraints) while leaving the concrete implementation to the AI; and it follows the Goal-Driven Execution principle — saying 'what to do' rather than 'how to do it.'
+
+As soon as the AI hands over code, verify it immediately: run the server and test each endpoint with curl or Postman. Once everything checks out, open a new conversation for Step 2 (the basic front-end pages). Every step follows the 'instruct - verify - new conversation' loop.
+
+\booksection{Project 3: An AI-Powered App (Advanced)}
+
+\booksubsection{Conceiving the Project}
+
+Goal: an app that connects to a large model API — say, an 'AI Study Assistant' where the user enters study material and the AI generates a summary, links related concepts, and recommends learning resources. What makes this project special: your application itself is calling the AI, so you have to handle new problems like API calls, prompt engineering, and error handling.
+
+The most important lesson this project teaches: when you 'use AI to write code that calls AI,' you must pay extra attention to prompt engineering. The prompt your app sends to the large model API also needs to follow the principles discussed in this guide — clear, concise, and goal-driven.
+
+\booksubsection{Key Technical Points}
+
+This project involves a few technical points you did not meet in the first two projects:
+
+\begin{itemize}
+  \item API key management: keys must never be hardcoded in the code; manage them with environment variables;
+  \item Streaming response handling: large model replies usually arrive as a stream and need to be displayed bit by bit;
+  \item Token usage control: large models bill by the token, so usage must be controlled at the application level;
+  \item Prompt template management: different features use different prompt templates, which need to be managed in a structured way.
+\end{itemize}
+
+The AI can help you implement all of these technical points, but you need to understand the 'why' behind each one — why can't keys be hardcoded? Why are streaming responses needed? Why must token usage be controlled? Only once you understand the 'why' can you judge whether the AI's solution makes sense.
+
+\booksection{The Universal Hands-On Checklist}
+
+Whatever the size of the project, here is a universal AI coding workflow checklist. Run through it every time you start a new project to make sure no key step slips through.
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Stage} & \textbf{What to Do} & \textbf{Principle Applied} \tabularnewline
+\hline
+1. Requirements thinking & Go through the five requirement elements and get clear on what to build & Think Before Coding \tabularnewline
+2. Breaking down requirements & Split big requirements into small, independently verifiable steps & Simplicity First \tabularnewline
+3. Writing the PRD & Organize it into a structured document for reference & Goal-Driven \tabularnewline
+4. Setting up the memory file & Create CLAUDE.md or a similar file & Harness Engineering \tabularnewline
+5. Building step by step & One conversation per step: instruct - verify - next & Surgical Changes \tabularnewline
+6. Testing and verifying & Test that each step works correctly right after finishing it & Iterate \& Verify \tabularnewline
+7. Reviewing the code & Check architecture soundness, security, and maintainability & Iterate \& Verify \tabularnewline
+8. Iterating and improving & Iterate based on the test and review results & Iterate \& Verify \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}The Universal AI Coding Workflow Checklist\end{center}
+
+\begin{tcbpractice}{Try It Yourself: Finish 'Project 1' This Week}
+Treat the 'personal tools site' from Section 1 of Chapter 44 as your first AI coding assignment: spend 5 minutes on the five elements, send the instruction to the AI (any tool will do), then accept the result with the three-layer verification. Finish it within 30 minutes — and your first AI coding creation is born. When you are done, save it somewhere safe; it is the keepsake of your move from 'reader' to 'practitioner.'
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter Recap}
+\begin{itemize}
+  \item Project 1 (beginner): a pure front-end tools site — experience the full workflow, done in 30 minutes
+  \item Project 2 (intermediate): a full-stack expense tracker — PRD + memory file + 5 steps, with something that 'works' at every step
+  \item Project 3 (advanced): an AI study assistant — use AI to write code that calls AI, with attention to prompt engineering
+  \item The universal eight-step workflow: requirements thinking break down PRD memory file build step by step test review iterate
+  \item Every step follows the 'instruct - verify - new conversation' loop
+\end{itemize}
+
+\end{tcbsummary}

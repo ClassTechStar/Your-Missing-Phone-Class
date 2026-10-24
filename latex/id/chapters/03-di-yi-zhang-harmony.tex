@@ -1,0 +1,108 @@
+\booksection{Lampiran Bab 1: Topik khusus sistem operasi HarmonyOS}
+
+\chapterintro{HarmonyOS adalah sistem operasi self-developed Huawei, sejak dirilis 2019 hingga sekarang, sudah melewati beberapa versi besar. Ia bukan sekadar “pengganti Android lain”, melainkan spesies baru dengan filosofi desain unik. Mari kita pelajari lebih dalam sistem operasi yang sedang naik daun ini.}
+
+\booksubsection{Apa itu HarmonyOS? Mengapa ia berbeda?}
+
+Filosofi inti HarmonyOS adalah “interkoneksi dari segala hal”. Berbeda dari sistem operasi tradisional yang utamanya melayani perangkat tunggal, HarmonyOS sejak awal desain sudah mempertimbangkan kolaborasi multi-perangkat.
+
+\textbf{Arsitektur distributed}adalah jiwa HarmonyOS. Sederhananya, ia bisa memvirtualkan beberapa perangkat menjadi satu “super terminal”. Ponsel, tablet, komputer, jam tangan, TV Anda, bukan lagi individu terisolasi, melainkan “organ” dari satu kesatuan, bisa saling memanggil kemampuan satu sama lain.
+
+Contoh: Anda menggunakan ponsel menonton video, ingin menonton di layar besar, cara tradisional adalah screen casting; sedangkan di HarmonyOS, Anda bisa langsung “mengalirkan” video ke TV untuk lanjut menonton, ponsel menjadi remote. Ini bukan screen casting sederhana, melainkan aplikasi itu sendiri berjalan lintas perangkat.
+
+\booksubsection{HarmonyOS 4.3: Versi matang berbasis AOSP}
+
+HarmonyOS 4.3 adalah versi yang saat ini banyak di-deploy di ponsel Huawei. Perlu dijelaskan, HarmonyOS 4.3 kompatibel dengan code framework Android Open Source Project (AOSP), karena itu ia bisa kompatibel penuh dengan aplikasi Android—sebagian besar aplikasi yang Anda download dari Huawei AppGallery pada dasarnya masih aplikasi Android, berjalan melalui compatibility layer HarmonyOS. Tapi HarmonyOS 4.3 bukan sekadar shell Android, ia menambahkan banyak kemampuan distributed self-developed Huawei, Ark Engine, dan teknologi lain di atas AOSP.
+
+\subsubsection*{Fitur inti:}
+
+\begin{itemize}
+  \item \textbf{Kompatibilitas aplikasi Android}: Karena dikembangkan berbasis AOSP, HarmonyOS 4.3 bisa menjalankan hampir semua aplikasi Android, pengguna hampir tidak merasakan perbedaan.
+  \item \textbf{Ark Engine}: Compiler dan runtime self-developed Huawei, membuat aplikasi berjalan lebih lancar, lebih hemat daya. Dibanding versi awal, kelancaran meningkat jelas.
+  \item \textbf{Super terminal}: Di control center, bisa secara intuitif melihat perangkat HarmonyOS lain di sekitar, drag untuk connect. Ponsel memanggil keyboard mouse komputer, tablet memanggil kamera ponsel, semua sangat mudah.
+  \item \textbf{Service card}: Mirip widget iOS, tapi lebih fleksibel. Bisa swipe up icon aplikasi untuk expand card, menampilkan informasi kunci, tanpa membuka aplikasi.
+  \item \textbf{Mode Murni}: Hanya mengizinkan instalasi aplikasi dari AppGallery resmi, mengurangi risiko malware.
+  \item \textbf{Privacy center}: Mengelola izin aplikasi secara terpusat, melihat record perilaku aplikasi.
+\end{itemize}
+
+\subsubsection*{Karakteristik user interface:}
+
+\begin{itemize}
+  \item \textbf{Magazine lock screen}: Lock screen menampilkan gambar dan artikel cantik, swipe untuk masuk ke desktop.
+  \item \textbf{Universal card}: Icon desktop bisa di-expand menjadi card, menampilkan lebih banyak informasi.
+  \item \textbf{Super hub}: Area penyimpanan sementara, bisa menampung teks, gambar, file sementara, lalu drag ke aplikasi mana saja untuk digunakan. Sharing lintas aplikasi menjadi sangat halus.
+  \item \textbf{Smart search}: Global search, bisa mencari aplikasi, file, pengaturan, webpage.
+\end{itemize}
+
+\booksubsection{HarmonyOS NEXT (HarmonyOS 6): Titik awal sejati sistem operasi self-developed Huawei}
+
+HarmonyOS NEXT (HarmonyOS NEXT 5.0) dan HarmonyOS 4.3 memiliki perbedaan mendasar—ia menggunakan microkernel HarmonyOS self-developed Huawei, tidak lagi bergantung pada kernel Linux dan kode AOSP, juga\textbf{tidak lagi langsung mendukung aplikasi Android}. Ini adalah langkah kunci HarmonyOS dari “bentuk transisi kompatibel Android” resmi menuju “sistem operasi sepenuhnya independen”.
+
+\subsubsection*{Perubahan besar:}
+
+\begin{itemize}
+  \item \textbf{Kernel sepenuhnya self-developed}: HarmonyOS NEXT menggunakan kernel self-developed Huawei, tidak lagi mengandung kode AOSP apa pun. Sistem lebih ringkas, lebih aman, lebih efisien.
+  \item \textbf{Tidak lagi mendukung aplikasi Android}: Ini perubahan terbesar. HarmonyOS NEXT hanya bisa menjalankan aplikasi native HarmonyOS, tidak bisa instal dan jalankan file APK. Sebelum upgrade harap konfirmasi aplikasi yang sering Anda gunakan sudah punya versi native HarmonyOS.
+  \item \textbf{Ekosistem aplikasi native}: Huawei sedang mendorong pengembang untuk migrasi aplikasi ke platform native HarmonyOS. Saat ini aplikasi mainstream seperti WeChat, Alipay, Taobao sudah merilis versi native HarmonyOS, tapi sebagian aplikasi niche mungkin belum diadaptasi.
+  \item \textbf{Arsitektur keamanan Star Shield}: Sistem keamanan baru, perlindungan full-chain dari hardware ke software. Mendukung kontrol izin lebih granular, seperti "fuzzy location"—aplikasi hanya tahu Anda kira-kira di mana, tidak tahu lokasi presisi.
+  \item \textbf{Integrasi AI mendalam}: Kemampuan AI system-level, bukan hanya aplikasi tertentu yang punya AI. Misalnya AI subtitle bisa real-time translate video, AI cutout bisa smart recognize subject.
+  \item \textbf{Cross-device seamless flow}: Kemampuan distributed lebih lanjut. State aplikasi bisa switch seamlessly antar perangkat, dokumen yang Anda edit di ponsel, saat berjalan ke komputer otomatis terbuka di komputer.
+  \item \textbf{Meta service}: Layanan lightweight yang bisa digunakan tanpa instalasi. Misalnya scan QR code langsung membuka fungsi tertentu, tanpa download aplikasi dulu.
+\end{itemize}
+
+\begin{tcbwarn}{Wajib baca sebelum upgrade ke HarmonyOS NEXT}
+Setelah upgrade ke HarmonyOS NEXT, ponsel Anda tidak akan bisa menjalankan aplikasi Android. Harap pastikan sebelum upgrade: (1) Aplikasi yang sering Anda gunakan sudah punya versi native HarmonyOS; (2) Pekerjaan atau kehidupan Anda tidak ada skenario yang harus bergantung pada aplikasi Android. Setelah upgrade tidak bisa rollback ke HarmonyOS 4.3.
+
+\end{tcbwarn}
+
+\subsubsection*{Perubahan logika operasi:}
+
+\begin{itemize}
+  \item \textbf{Gesture navigation}: Swipe edge kiri-kanan untuk back, swipe up dari bawah untuk kembali ke desktop, swipe up dan tahan untuk multi-task.
+  \item \textbf{Smart multi-window}: Mendukung split-screen, floating window, parallel view dan berbagai bentuk multi-task lainnya.
+  \item \textbf{Changlian call}: Layanan video call Huawei, mendukung screen sharing, beauty, background blur.
+\end{itemize}
+
+\booksubsection{Ekosistem HarmonyOS: Perangkat dan aplikasi}
+
+HarmonyOS bukan hanya sistem ponsel, melainkan ekosistem yang mencakup berbagai perangkat.
+
+\subsubsection*{Tipe perangkat yang didukung:}
+
+\begin{itemize}
+  \item \textbf{Ponsel dan tablet}: Perangkat inti, fungsi paling lengkap.
+  \item \textbf{Smartwatch dan band}: Berjalan independen atau berkolaborasi dengan ponsel.
+  \item \textbf{Smart screen (TV)}: Pusat hiburan keluarga.
+  \item \textbf{Smart speaker}: Portal interaksi suara.
+  \item \textbf{Mobil}: HarmonyOS cockpit, pengalaman smart driving cabin.
+  \item \textbf{Rumah pintar}: Kulkas, AC, mesin cuci, dll.
+\end{itemize}
+
+\subsubsection*{Status ekosistem aplikasi:}
+
+AppGallery HarmonyOS sudah memiliki jutaan aplikasi, App mainstream pada dasarnya tersedia. Huawei juga aktif mendorong pengembang membuat aplikasi native HarmonyOS. Per pertengahan 2026, WeChat, Alipay, Taobao, Douyin, Meituan, JD.com, dan aplikasi top lainnya sudah meluncurkan versi native HarmonyOS, penggunaan sehari-hari pada dasarnya tanpa hambatan. Beberapa aplikasi niche dan industri mungkin masih dalam penyesuaian, sebelum upgrade disarankan konfirmasi apakah App yang sering Anda gunakan sudah didukung.
+
+\booksubsection{Tips praktis HarmonyOS}
+
+\begin{itemize}
+  \item \textbf{Super terminal}: Swipe down dari pojok kanan atas layar untuk membuka control center, klik "Super Terminal", bisa melihat perangkat lain di sekitar, drag untuk connect.
+  \item \textbf{Super hub}: Long press teks/gambar/file, pilih "Copy to hub", lalu di aplikasi lain long press untuk paste, atau drag keluar.
+  \item \textbf{Service card}: Swipe up icon aplikasi untuk expand card, long press card bisa adjust size atau add to desktop.
+  \item \textbf{Smart multi-window}: Swipe dari edge kiri-kanan layar ke dalam dan tahan, buka sidebar, klik aplikasi untuk buka sebagai floating window.
+  \item \textbf{Privacy protection}: Pengaturan > Privasi, bisa melihat record penggunaan izin aplikasi, mengatur fuzzy location, dll.
+\end{itemize}
+
+\begin{tcbwarn}{Pengaturan dalam mode pengembang dapat mempengaruhi stabilitas sistem, opsi yang tidak dipahami jangan diubah sembarangan. Setelah mengaktifkan debugging USB, berhati-hatilah saat menghubungkan ke komputer, jangan hubungkan ke komputer yang tidak dipercaya.}
+Sistem HarmonyOS terus update dan iterasi, versi berbeda mungkin ada beberapa perbedaan. Deskripsi artikel ini berdasarkan fitur utama HarmonyOS 4.3 dan 6, fungsi spesifik harap merujuk pada versi aktual ponsel Anda. Disarankan menjaga sistem update, untuk mendapatkan fitur terbaru dan security patch.
+
+\end{tcbwarn}
+
+\begin{tcbpractice}{Coba sekarang: Rasakan fitur khas HarmonyOS}
+\begin{enumerate}
+  \item Buka control center, temukan "Super Terminal", lihat apakah ada perangkat HarmonyOS lain di sekitar.
+  \item Coba "Super hub": Copy sebagian teks ke hub, lalu drag keluar di Notes.
+  \item Swipe up beberapa icon aplikasi yang sering digunakan, lihat service card menampilkan konten apa.
+  \item Ke Pengaturan > Privasi, lihat aplikasi mana yang baru-baru ini menggunakan izin sensitif.
+\end{enumerate}
+
+\end{tcbpractice}

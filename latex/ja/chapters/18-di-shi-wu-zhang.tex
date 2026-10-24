@@ -1,0 +1,211 @@
+\bookchapter{第十五章：バッテリーの科学と連続駆動時間の最適化}
+
+\chapterintro{一、バッテリーとは？サイクルと健康度}
+
+\booksection{一、バッテリーとは？サイクルと健康度}
+
+使いながら充電
+
+\begin{itemize}
+  \item \textbf{：旧式バッテリーと異なり、メモリー効果がなく、使い切ってから充電する必要はありません。}熱に弱い
+  \item \textbf{：高温はバッテリーの頭号キラー。}経年劣化する
+  \item \textbf{：長く使うと最大容量が低下しますが、これは正常な現象。}核心指標：サイクル回数と健康度
+\end{itemize}
+
+\booksubsection{1サイクルは1回の充電ではありません。例えば今日60\%使って満充電、明日40\%使って満充電、合計100\%消費で1サイクル。}
+
+\begin{itemize}
+  \item バッテリー健康度は現在の最大容量の新品時に対する割合。80\%を下回ると駆動時間が明確に短くなると感じます。
+  \item 確認方法
+  \item \textbf{：iPhone：設定 > バッテリー > バッテリーの状態と充電。Android：通常は設定でバッテリー健康度を検索。}二、充電の迷信？急速充電、ワイヤレス充電と黄金の法則
+\end{itemize}
+
+\booksection{二、充電の迷信？急速充電、ワイヤレス充電と黄金の法則}
+
+\begin{itemize}
+  \item \textbf{：純正または認証済みの急速充電アクセサリを使えば、ダメージはわずか。スマホと充電ヘッドには温度制御があり、過熱すると自動的に出力を下げます。}ワイヤレス充電
+  \item \textbf{ワイヤレス充電}黄金の養生法則
+  \item \textbf{：電池残量を20\%-80\%の間に保つよう努め、常に飢え（0\%）や満腹（100\%）状態にしない。}三、急速充電プロトコル完全解説：なぜあなたの充電器は速く充電できない？
+\end{itemize}
+
+\begin{tcbinfo}{iPhone「80\%充電制限」機能——ゴールデンルールをシステム設定に}
+iPhone 15/16シリーズ（iOS 17以上）は「20\%-80\%の法則」をシステム機能にしました。有効化すると、充電が80\%に達した時点で自動的に停止し、バッテリー劣化を大幅に遅らせます。設定パス：
+
+\texttt{設定 > バッテリー > バッテリーの状態と充電 > 充電の最適化 > 80\%制限}
+
+3つのオプションの意味：(1)\textbf{制限なし}——100\%まで充電；(2)\textbf{バッテリー充電の最適化}——生活リズムを学習し、早朝の最終段階まで100\%到達を遅延；(3)\textbf{80\%制限}——80\%で停止、最もバッテリーに優しい。長期的に自宅/オフィスで充電環境がある人には80\%制限を強く推奨。頻繁に出張し、満充電で出かけたい人は「バッテリー充電の最適化」を選択。
+
+\end{tcbinfo}
+
+\begin{tcbinfo}{GaN充電器——出張組の良い相棒}
+最近の急速充電アダプタがどんどん小型化しているのに気づいているかもしれません。その立役者は\textbf{GaN（窒化ガリウム）}という新型半導体材料です。従来のシリコンベース充電器と比べ、GaN充電器にはいくつかの明確な利点があります：
+
+\begin{itemize}
+  \item \textbf{小型}: 同出力で、GaN充電器は従来シリコン製の1/2から1/3のサイズにでき、65WのGaNアダプタはApple旧5Wアダプタより小さい。
+  \item \textbf{高効率·低発熱}: 窒化ガリウムのスイッチング損失はシリコンよりはるかに低く、エネルギー変換効率は95\%以上に達し、充電時に熱くなりにくい。
+  \item \textbf{出張に適している}: 65Wまたは100WのGaNマルチポート充電器1つで、スマホ、タブレット、ノートPCを同時に充電でき、「レンガ」3つ持参よりはるかに軽量。
+  \item \textbf{選び方のアドバイス}：PDプロトコル対応のGaN充電器を選ぼう（65W以上ならノートPCも充電可能）。Baseus、Anker、Nubia、Xiaomiなどが定評あり。ケーブルの互換性も要確認（大電力にはE-Markerチップ内蔵のType-Cケーブルが必要）。
+\end{itemize}
+
+\end{tcbinfo}
+
+\booksection{こんな経験はありませんか：スマホは急速充電対応なのに、充電器を変えたら遅くなった。これは急速充電が単なる「高出力ならOK」ではなく、充電ヘッド、ケーブル、スマホの三者が「同じ言語を話す」必要があるから——これが急速充電プロトコルです。}
+
+1. 急速充電の基本原理
+
+\booksubsection{充電電力 = 電圧 × 電流（P = U × I）。電力を上げるには、電圧を上げるか、電流を上げるか、または両方を上げる。異なるプロトコルが異なる技術路線を選択しています。}
+
+急速充電のワークフロー：
+
+ハンドシェイク段階
+
+\begin{enumerate}
+  \item \textbf{：スマホと充電ヘッドがケーブルを通じて通信し、それぞれ対応するプロトコルと電力情報を交換。}ネゴシエーション段階
+  \item \textbf{：双方が共通対応する最高電力レベルを確定。}充電段階
+  \item \textbf{：充電ヘッドがネゴシエートされた電圧·電流を出力、スマホ側で電源管理。}調整段階
+  \item \textbf{：電池残量が増加するにつれ、スマホは段階的に充電電力を下げ、バッテリーを保護。}2. 主流急速充電プロトコル詳細
+\end{enumerate}
+
+\booksubsection{USB PD（Power Delivery）}
+
+\textbf{——汎用プロトコルの王}特徴
+
+\begin{itemize}
+  \item \textbf{特徴}電圧レベル
+  \item \textbf{：5V、9V、15V、20V、PD 3.1は28V、36V、48Vにも対応。}：5V、9V、15V、20V。PD 3.1ではさらに28V、36V、48Vにも対応。
+  \item \textbf{USB PD 3.1}優位性
+  \item \textbf{：汎用性が高く、一つの充電ヘッドで多種デバイスを充電可能。PPS（プログラマブル電源）に対応し、電圧電流を細かく調整可能。}劣位性
+  \item \textbf{：Type-Cインターフェースと専用チップが必要、コストが高め。}Qualcomm QC（Quick Charge）
+\end{itemize}
+
+\textbf{——Android陣営の元老}QC 3.0
+
+\begin{itemize}
+  \item \textbf{：3.6V-20Vを0.2Vステップで可変電圧に対応、最大18W。}QC 4.0/4+
+  \item \textbf{：USB PDプロトコルと互換、最大27Wに対応、デュアルチャネル充電技術を追加。}QC 5.0
+  \item \textbf{100W+}：最大100W以上に対応し、0〜50\%まではわずか5分。発熱も大幅に改善。
+  \item \textbf{USB PD 3.1}OPPO VOOC/OnePlus WARP/realme Dart
+\end{itemize}
+
+\textbf{——低電圧大電流の代表}技術路線
+
+\begin{itemize}
+  \item \textbf{技術路線}VOOC 1.0
+  \item \textbf{：20W（5V/4A）、2014年発表、急速充電時代を開創。}SuperVOOC
+  \item \textbf{：50W-65W、デュアルセル直列設計を採用。}SuperVOOC 2.0
+  \item \textbf{：65W、30分で4000mAhバッテリーを満充電。}150W/240Wスーパーフラッシュ充電
+  \item \textbf{：現在最速の量産急速充電技術。}特徴
+  \item \textbf{特徴}Huawei SuperCharge
+\end{itemize}
+
+\textbf{——高電圧急速充電の進化}FCP（Fast Charge Protocol）
+
+\begin{itemize}
+  \item \textbf{：9V/2A、18W、QC 2.0と互換。}SCP（Super Charge Protocol）
+  \item \textbf{：より高い電力に対応、22.5Wから66W、さらに100Wへ。}技術的特徴
+  \item \textbf{：デュアルセル直列＋チャージポンプ方式を採用、複数プロトコル互換に対応。}：チャージポンプ技術を採用し、高電圧を低電圧·大電流に変換してバッテリーへ供給。効率は最大98\%。
+  \item \textbf{USB PD 3.1}Xiaomi 澎湃急速充電
+\end{itemize}
+
+\textbf{——自研プロトコルの台頭}澎湃P1チップ
+
+\begin{itemize}
+  \item \textbf{：Xiaomi自研の急速充電管理チップ、120W有線急速充電に対応。}澎湃G1チップ
+  \item \textbf{：バッテリー管理チップ、P1と組み合わせてより効率的な急速充電を実現。}技術的特徴
+  \item \textbf{：デュアルセル直列＋チャージポンプ方式を採用、複数プロトコル互換に対応。}Apple急速充電
+\end{itemize}
+
+\textbf{\textasciitilde{}27W}プロトコル
+
+\begin{itemize}
+  \item \textbf{最大電力}電力
+  \item \textbf{：iPhone 8以降が急速充電に対応、最大約27W（iPhone 15 Pro Maxは27W+）。}特徴
+  \item \textbf{特徴}アクセサリ要件
+  \item \textbf{：USB-C to Lightningケーブル（またはUSB-C to USB-Cケーブル）とPD充電ヘッドが必要。}3. 急速充電プロトコル比較表
+\end{itemize}
+
+\booksubsection{プロトコル}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{最大電力} & \textbf{技術路線} & \textbf{技術路線} & \textbf{USB PD 3.1} \tabularnewline
+\hline
+240W & 低電圧大電流 & 最も広範 & QC 5.0 \tabularnewline
+100W+ & 高電圧可変 & Qualcomm機種 & VOOC/Dart \tabularnewline
+240W & 低電圧大電流 & OPPO系専用 & SuperCharge \tabularnewline
+100W & チャージポンプ & Huawei/Honor & Apple急速充電 \tabularnewline
+\textasciitilde{}27W & PDプロトコル & iPhone/iPad & 4. ワイヤレス充電プロトコル \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\booksubsection{ワイヤレス充電にも独自のプロトコル標準があります：}
+
+Qi標準
+
+\begin{itemize}
+  \item \textbf{：WPC（ワイヤレス充電アライアンス）が制定、最も汎用的な標準。基本Qiは5W-15Wに対応。}Qi2標準
+  \item \textbf{：2023年発表、マグネット位置決め（Apple MagSafe類似）を導入、15W+に対応。}プライベートプロトコル
+  \item \textbf{：各社が独自の高速ワイヤレス充電を持つ、Xiaomi 50Wワイヤレス充電、Huawei 50Wワイヤレス充電など、専用充電器が必要。}5. 急速充電選びのガイド
+\end{itemize}
+
+\booksubsection{プロトコルマッチングを確認}
+
+\begin{itemize}
+  \item \textbf{：充電器購入時、あなたのスマホの急速充電プロトコルに対応しているか確認。サードパーティ充電器は通常対応プロトコルを表示しています。}ケーブルを確認
+  \item \textbf{：大電力急速充電には専用ケーブルが必要。普通のケーブルは60W以下しか対応しない可能性。}認証を確認
+  \item \textbf{：AppleユーザーはMFi認証ケーブルを選ぶことを推奨。Androidユーザーはブランド純正または有名サードパーティ製を選ぶ。}発熱を確認
+  \item \textbf{：急速充電時のスマホ発熱は正常ですが、火傷するほど熱いのは異常です。充電を一時停止するか充電器を交換することを推奨。}急速充電の安全ヒント
+\end{itemize}
+
+\begin{tcbwarn}{充電しながら大型ゲームをプレイするのを避ける、発熱が悪化。}
+\begin{itemize}
+  \item 粗悪な充電器やケーブルを使用しない、安全上のリスクがあり。
+  \item 充電時は分厚いスマホケースを外し、放熱を助ける。
+  \item 充電器やスマホが異常発熱、異臭がする場合は直ちに使用中止。
+  \item 四、これが本当の節電テクニック
+\end{itemize}
+
+\end{tcbwarn}
+
+\booksection{四、バッテリー新技術：シリコン炭素負極バッテリー}
+
+2024-2026年のフラッグシップスマホ発表会に注目しているなら、「シリコン炭素負極」という言葉がハイエンドバッテリーの代名詞になっているのに気づくでしょう。これはリチウムイオンバッテリー負極材料の重要なアップグレードで、原理はそれほど複雑ではありません：
+
+\begin{itemize}
+  \item \textbf{従来の黒鉛負極}: スマホバッテリーは従来黒鉛を負極に使用してきました。技術は成熟し安定していますが、エネルギー密度は理論上限界（約372mAh/g）に接近しています。
+  \item \textbf{シリコン材料の導入}: シリコンの理論比容量は黒鉛の約10倍（約4200mAh/g）です。少量のシリコンを黒鉛に混ぜて「シリコン炭素複合負極」を作ると、バッテリー全体のエネルギー密度を大幅に向上できます。
+  \item \textbf{エネルギー密度の向上}: 同等体積で、シリコン炭素負極バッテリーの容量は約\textbf{15\%-20\%}向上します。これが2024-2026年のフラッグシップが7-9mmのボディに5500-6000mAhの大容量バッテリーを搭載できる決定的な理由です。
+\end{itemize}
+
+\begin{tcbinfo}{どの機種が採用しているか？}
+\begin{itemize}
+  \item \textbf{HONOR（栄耀）}: Magic シリーズがシリコン炭素負極を業界初採用。Magic6 Pro、Magic7 シリーズ、Magic V3 折りたたみスクリーンに採用。
+  \item \textbf{Xiaomi}: Xiaomi 14 Ultra、Xiaomi 15 シリーズに次世代シリコン炭素負極バッテリーを搭載。
+  \item \textbf{vivo}: X100 Ultra、X200 Pro シリーズに高密度シリコン炭素負極方案を採用。
+  \item \textbf{Huawei/OPPO など}: 2025-2026年のフラッグシップに広く普及し、シリコン炭素負極は「ブラックテクノロジー」からハイエンド機の標準装備へと移行しています。
+\end{itemize}
+
+\end{tcbinfo}
+
+\textbf{ユーザーへの実際の影響}: シリコン炭素負極の最大のメリットは「同体積でバッテリー容量が大きい」こと——スマホはより薄くでき、同時にバッテリー持ちも犠牲になりません。あるいはボディはそのままでもバッテリーが4500mAhから5500mAhに増加します。つまり、バッテリー持ちのために「分厚く重く」する代償を払う必要がなくなったのです。ただし、シリコン炭素負極バッテリーは低温環境と満充電管理において急速充電チップとの連携最適化がまだ必要で、これもメーカーが長期的な80\%充電維持を推奨する理由の一つです。
+
+\booksection{五、これこそ本当の省エネテクニック}
+
+\begin{itemize}
+  \item \textbf{：輝度を下げる、自動ロック時間を短縮。OLED画面スマホはダークモードでかなり節電。}電波不良
+  \item \textbf{：エレベーター、地下室ではスマホが必死に電波を探し、消費が激しい。}5G
+  \item \textbf{：電波が悪い場合、手動で4Gに切り替えると駆動時間が大幅に改善。}位置情報サービス
+  \item \textbf{：非ナビ系Appは位置情報権限を「使用時のみ許可」に。}バックグラウンド活動を制限
+  \item \textbf{：iPhoneは設定 > 一般 > バックグラウンドApp更新。Androidはアプリバッテリー設定で。}チェックしてみよう：バッテリーの健康診断
+\end{itemize}
+
+\begin{tcbpractice}{健康度を確認：バッテリーの最大容量を見つけて記録。}
+\begin{enumerate}
+  \item 消費詳細を分析：バッテリー設定のグラフとAppリストで消費の元凶を見つける。
+  \item 対策を策定：バックグラウンド消費異常のAppを制限。
+  \item 第十六章：アカウント体系とクラウドサービス
+\end{enumerate}
+
+\end{tcbpractice}

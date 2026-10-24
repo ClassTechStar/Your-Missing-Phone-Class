@@ -1,0 +1,120 @@
+\bookchapter{Capítulo 23: Pensamiento de programación e iniciación a la automatización}
+
+\chapterintro{En los dos capítulos anteriores, construimos un “muro de seguridad” para tu móvil y conocimos su “cerebro IA”, cada vez más inteligente dentro de ese muro. Ahora, desbloqueemos uno de los últimos potenciales del móvil: hacer que “piense” como un programador y ejecute automáticamente tareas continuas que tu configures. Podrias decir: “Yo no se programar, que tiene que ver conmigo?” Tranquilo: este capítulo no requiere que escribas ni una sola linea de código — los móviles modernos han bajado la barrera de la “programacion” al nivel de arrastrar y soltar.}
+
+\booksection{I. ¿Qué es la automatización?}
+
+En palabras simples: automatización es:\textbf{hacer que el móvil ejecute una serie de acciones automáticamente cuando se cumple cierta condición.}No necesitas operar manualmente cada vez ni recordar que hacer — el móvil juzga el momento y ejecuta por si mismo.
+
+Un ejemplo: cada mañana al despertar apagas a mano el modo No molestar, abres WeChat para ver los mensajes, abres la App del tiempo para ver qué ponerte y abres tu música. Si empaquetas estos pasos en un flujo de automatización configurado como «ejecutar cada día a las 7:00», al despertar solo tienes que coger el móvil: todo está listo.
+
+En esencia, la automatización es una cadena lógica de “si... entonces...”, el if-else de la programacion. Una vez que entiendas este modo de pensamiento, aunque nunca escribas código en tu vida, tu capacidad para resolver problemas de forma sistematica mejorara notablemente. Elementos clave:
+
+\begin{enumerate}
+  \item \textbf{Condicion disparadora (trigger)}: cuando empezar? Puede ser "cada día a las 7", "cuando me conecto al Wi-Fi de casa", "cuando llego a cierto lugar", "cuando la batería baja del 20\%".
+  \item \textbf{Accion a ejecutar}: que hacer exactamente? Puede ser enviar un mensaje de WeChat, abrir una App, ajustar el volumen, cambiar el fondo de pantalla, reproducir música, enviar notificaciones... casi todo lo que puedas hacer manualmente en tu móvil, la automatización puede hacerlo.
+  \item \textbf{Lógica intermedia}(opcional pero potente): si la situación es A, haz X; si no, haz Y. Por ejemplo: "si es día laborable reproduce podcasts de noticias, si es fin de semana reproduce música". Esto se llama "ramificación condicional".
+\end{enumerate}
+
+\booksection{II. “Atajos” de iOS: la herramienta de automatización para usuarios Apple}
+
+La App “Atajos” (Shortcuts) de Apple viene preinstalada, no necesita descarga. Su concepto central es ensamblar varias operaciones como si fueran bloques de construccion. Primero algúnos conceptos clave:
+
+\begin{itemize}
+  \item \textbf{"Atajos"}: un flujo de automatización completo; puede ejecutarse manualmente o activarse por voz con Siri. Por ejemplo, dices "Oye Siri, modo casa" y ejecuta automáticamente las operaciones que configuraste.
+  \item \textbf{"Automatización"}: instrucciones que se ejecutan automáticamente cuando se cumple el trigger, sin necesidad de activacíon manual. Por ejemplo: "cuando el móvil se conecta al Bluetooth del coche, abre automáticamente la App de mapas". La automatización se configura en la pestana "Automatización", separada de "Atajos".
+  \item \textbf{"Accion"}: la unidad mínima de ejecucion. Abrir una App es una acción, enviar un mensaje es una acción, obtener el clima es una acción, ajustar el brillo es una acción. Puedes encadenar cientos o miles de acciones.
+\end{itemize}
+
+Aqui tienes varios ejemplos realmente útiles; siguiendolos una vez lo entenderas todo:
+
+\booksubsection{Ejemplo 1: Flujo “Buenos días” con un toque}
+
+Cada manana tocas una vez (o dices a Siri “buenos días”) y el móvil automáticamente: obtiene el clima del día lee el clima y la temperatura muestra tu agenda del día abre tu App de música favorita y empieza a reproducir. Pasos: crear nuevo atajo -> anadir acción “obtener clima actual” -> anadir “leer texto” -> anadir “obtener eventos del calendario” -> anadir “mostrar recordatorío” -> anadir “abrir App” seleccionar NetEase Cloud Music. Asi de simple, todo arrastrando y soltando.
+
+\booksubsection{Ejemplo 2: “Modo ahorro de energía” automático}
+
+: en la pestana «Automatización», crea una nueva automatización «nivel de batería» «por debajo del 30 \%» añade «activar el modo de ahorro de energía», «bajar el brillo al 30 \%» y «apagar el Bluetooth». Desde entonces, con menos del 30 \% el móvil entra solo en ahorro de energía, sin que te preocupes.
+
+\booksubsection{Ejemplo 3: escanear el código registra los gastos automáticamente}
+
+Cada vez que pagas con WeChat/Alipay escaneando un código QR, el móvil lee la notificación de pago y registra automáticamente el monto y el comerciante en una nota o tabla de Numbers. Esto requiere usar el trigger “recibir SMS/notificación” de “Automatización” (iOS 17+ soporta lectura de transacciones de monedero), combinado con la acción “anadir a Numbers”. Para quienes quieren llevar cuentas pero son perezosos para registrar manualmente, es una salvacíon.
+
+Otro truco que poca gente conoce: puedes añadir un Atajo a la pantalla de inicio para que parezca un icono de App. Por ejemplo, crea un Atajo «taxi a casa», pon el icono en el escritorio y, con un toque, se abre DiDi con tu casa como destino: mucho más rápido que abrir la App y escribir la dirección.
+
+\booksection{III. Automatización Android - Tasker y amigos}
+
+En Android la cosa es un poco más compleja, pero el techo también es más alto. Empecemos por lo sencillo:
+
+\booksubsection{Nivel de entrada: el auto-clicker}
+
+Muchos móviles Android traen un «auto-clicker» de serie o se descarga de la tienda de Apps. Su principio es simple: operas una vez a mano, graba tus coordenadas e intervalos y luego los reproduce a alta velocidad. Si una App da una recompensa diaria por iniciar sesión, grabas el proceso una vez y lo dejas correr solo cada día. Inconveniente: solo reconoce coordenadas; si cambia la interfaz (por ejemplo, por un anuncio), clicka donde no es.
+
+\booksubsection{Nivel intermedio: Tasker — el rey de la automatización Android}
+
+Tasker es la herramienta de automatización más potente y reconocida de Android, lidera los rankings desde hace años. Seamos sinceros: su curva de aprendizaje es algo empinada y su interfaz no es precisamente bonita, pero una vez dominado sentirás que tu móvil puede cualquier cosa. El núcleo de Tasker también es el patrón «trigger tarea»:
+
+\begin{itemize}
+  \item \textbf{Perfil (Profile)}: define "cuándo activar". Los triggers pueden ser: tiempo, ubicación, estado de conexión Wi-Fi, Bluetooth, recepción de notificaciones específicas, estado de batería, orientación de pantalla... Tasker soporta una cantidad absurda de triggers — decenas de tipos.
+  \item \textbf{Tarea (Task)}: define "qué hacer al activarse". Una tarea puede contener múltiples acciones que se ejecutan secuencialmente. Tipos de acciones: ajustar configuración del sistema (volumen, brillo, Wi-Fi, Bluetooth, modo avión), enviar SMS, peticiones HTTP, ejecutar comandos Shell, control de reproducción multimedia, mostrar diálogos, etc.
+\end{itemize}
+
+Aqui tienes algúnos escenarios clásicos y prácticos de Tasker:
+
+\begin{itemize}
+  \item \textbf{Encender Wi-Fi al llegar a casa}: configura el trigger como "conexión a antena específica" (porque cerca de casa te conectas a una antena fija) -> tarea "activar Wi-Fi". No usa GPS ni consume batería; el móvil enciende el Wi-Fi automáticamente en cuanto entra en tu vecindad.
+  \item \textbf{Modo reunión}: condición disparadora (trigger) ="título de evento de calendario contiene'reunión'"-> tarea "activar modo silencioso, bajar volumen multimedia, auto-responder WeChat (requiere plugin)". Nunca más tendrás que preocuparte de que suene el móvil durante una reunión.
+  \item \textbf{Protección nocturna para los ojos}: condición disparadora (trigger) ="22:00-06:00"-> tarea"activa el modo protección visual,, reducir brillo al 20\%, poner pantalla en blanco y negro (modo escala de grises)". La pantalla en blanco y negro tiene un efecto mágico contra la adicción a videos cortos — en cuanto se pone gris, ya no quieres seguir deslizando.
+  \item \textbf{Auriculares automáticos para podcasts}: trigger "conexión de auricular con cable / conexión Bluetooth" -> tarea "abrir App Xiaoyuzhou y reproducir último episodio". Ponte los auriculares y escucha, sin tener que desbloquear el móvil ni buscar la App.
+\end{itemize}
+
+Si Tasker te resulta demasiado complicado, prueba su hermano simplificado:\textbf{MacroDroid}. Su interfaz es mucho más amigable, tiene plantillas abundantes e ideal para usuarios que no quieren complicarse. Además, muchos sistemas Android chinos (MIUI de Xiaomi, HarmonyOS de Huawei, ColorOS de OPPO) incluyen funciones de “Escenas” o “Asistente inteligente”; aunque no tan potentes como Tasker, son suficientes para la automatización diaria.
+
+\booksection{IV. Aplicacion cotidiana del pensamiento de automatización}
+
+El mayor beneficio de aprender automatización no es ahorrar ese poco tiempo, sino\textbf{cambiar tu forma de pensar}. Una vez que te acostumbras al modo de pensamiento “si ocurre X, haz automáticamente Y”, descubriras que un monton de tareas repetitivas de la vida pueden eliminarse. Por ejemplo:
+
+\begin{itemize}
+  \item Tras cada foto, respaldo automático a la nube y compresión de fotos locales a tamano reducido para ahorrar espacio.
+  \item Cada manana lee automáticamente la agenda del día, genera un texto y lo envia por WeChat a tu familia.
+  \item Al recibir SMS de confirmacion de entrega de paquete, anade automáticamente una tarea "recoger paquete" en notas.
+  \item Cuando la batería se llena completamente, emite un aviso de voz para desconectar el cargador (evitar sobrecarga).
+  \item A la hora de salida del trabajo, si sigues cerca de la oficina (por localización de antena), recuerda automáticamente "es hora de irse".
+\end{itemize}
+
+Esto suena avanzado, pero en realidad solo necesitas dominar los dos conceptos básicos “trigger + acción”, combinados con Atajos o Tasker, y puedes hacerlo todo. La clave es\textbf{darte cuenta primero de “esto puede automatizarse”}— mucha gente no es que no sepa, es que ni se le cruza por la cabeza.
+
+\booksection{V. Guia de trampas: problemas comunes de la automatización}
+
+La automatización tampoco es un camino de rosas; aquí te adelanto algúnos obstáculos que ya he encontrado:
+
+\begin{itemize}
+  \item \textbf{Los triggers por ubicación pueden fallar}: el trigger "llegar/salir de ubicación" de iOS usa tecnología de geocercado; la precision depende de la senal GPS y la optimización del sistema. A veces tarda 10 minutos en activarse después de llegar. Se recomienda usar conexión Wi-Fi o antena como trigger en lugar de ubicación: más fiable y ahorra batería.
+  \item \textbf{La "Automatización" de Atajos requiere autorización}: en iOS, la mayoría de los triggers bajo la pestana "Automatización" requieren confirmacion manual (mecanismo de seguridad de iOS). Sin embargo, los triggers de conexión Wi-Fi, Bluetooth y alarma detenida pueden ejecutarse totalmente automáticos sin confirmacion.
+  \item \textbf{Tasker necesita permisos de accesibilidad}: muchas funciones avanzadas (como simulación de clics) requieren el servicio de accesibilidad, lo que muestra una notificación persistente en configuración. Es un diseno de seguridad de Android y no se puede eliminar.
+  \item \textbf{No compliques demasiado la automatización}: al empezar, comienza con flujos pequenos de "2-3 acciones". No intentes crear un superflujo de 20 pasos de inmediato — depurarlo te volvera loco.
+\end{itemize}
+
+\textbf{Consejo: La postura correcta para un Principiante en automatización}\par
+
+Dedica primero 5 minutos a pensar: cuales son las 3 cosas que más repites en tu móvil cada día? Por ejemplo: tu rutina matinal de cada día, tus hábitos al conectar los auriculares Bluetooth, tu configuración antes de salir... Empieza por estas pequenas tareas frecuentes y crea una automatización simple para cada una. Aunque cada una solo te ahorre 5 segundos, con el tiempo suma mucho. Y la satisfacción de crearlas es realmente adictiva.
+
+\begin{tcbpractice}{Practica: tres desafios de automatización para Principiantes}
+Elige el que mejor se adapte a ti; cuando lo completes, ya seras Principiante:
+
+\begin{enumerate}
+  \item \textbf{Desafio 1: Automatización de buenos días}: iOS: en Atajos crea nuevo atajo -> anadir "obtener clima actual" -> "leer texto" -> "abrir App" seleccionar NetEase Cloud Music. Luego puedes decir a Siri "buenos días" para activarlo. Android: en Tasker nueva tarea -> anadir "obtener clima" -> "leer" -> "abrir App" -> configurar trigger a las 7:00 diarias.
+  \item \textbf{Desafio 2: Ahorro automático de batería baja}: iOS: pestana Automatización -> nuevo -> "nivel de batería" -> menos del 25\% -> anadir "activar modo bajo consumo" + "fijar brillo 25\%". Android: Tasker nuevo Profile -> Estado -> Bateria -> 0-25\% -> tarea "activar modo ahorro" + "reducir brillo".
+  \item \textbf{Desafio 3: Navegacion automática al conectar Bluetooth del coche}: iOS: Automatización -> nuevo -> "Bluetooth" -> selecciona tu Bluetooth de coche -> anadir "abrir App Amap/Gaode" + "volumen multimedia al 80\%". Android: Tasker -> Profile -> Estado -> Bluetooth conectado -> selecciona Bluetooth de coche -> tarea "abrir Amap" + "subir volumen multimedia".
+\end{enumerate}
+
+\end{tcbpractice}
+
+\begin{tcbinfo}{Caso 3: Automatización del "flujo de buenos días"}
+\begin{itemize}
+  \item \textbf{Escenario}: Todos los días a las 7:00, pronóstico del tiempo automático + silencio desactivado + abrir noticias.
+  \item \textbf{Pasos}: iOS: Atajos > Automatización > Activación por hora > añadir "Obtener clima" + "Ajustar volumen" + "Abrir app"; Android: MacroDroid > Disparador (hora 7:00) > Acción (volumen multimedia / abrir URL / TTS leer clima).
+  \item \textbf{Resultado esperado}: Se puede usar sin instalación, reduciendo la barrera de entrada.
+\end{itemize}
+
+\end{tcbinfo}

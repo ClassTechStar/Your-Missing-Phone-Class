@@ -1,0 +1,209 @@
+\bookchapter{Capitolo 3: Collegare il telefono alla “linea di vita” — La rete}
+
+\chapterintro{Senza rete, lo smartphone perde metà della sua “intelligenza”. La rete è la linea di vita del telefono moderno: capirla, usarla bene e proteggerla è una materia obbligatoria per ogni utente.}
+
+\booksection{Non perdersi nella connessione — distinguere “strada” e “veicolo” tra Wi-Fi e traffico dati}
+
+Molte persone vedono contemporaneamente accese le icone Wi-Fi e segnale sul telefono, ma sono totalmente confuse sulla differenza essenziale. L'equivoco più classico è:\textbf{sei connesso al Wi-Fi ma le pagine non si caricano}— perché il router ha perso la connessione, e il telefono non è tornato automaticamente al traffico dati. Per capire a fondo il problema, dobbiamo costruire un modello cognitivo “strada e veicolo”.
+
+\begin{tcbinfo}{Metafora centrale: strada e veicolo}
+Immagina Internet come una città. La\textbf{“strada”}è il canale tra il tuo telefono e Internet; il\textbf{“veicolo”}sono i dati che viaggiano sulla strada. Wi-Fi e traffico dati sono due strade diverse, ma i dati (i veicoli) sono gli stessi.
+
+\end{tcbinfo}
+
+\booksubsection{Differenza essenziale: canale locale vs autostrada remota}
+
+Il Wi-Fi è essenzialmente una\textbf{tecnologia LAN}, come una strada senza fili sotto casa, che trasmette i dati dal router al telefono. Ma se la linea broadband non è pagata o il cavo ottico è rotto, la strada c'è ancora ma l'“autostrada” esterna è interrotta, e non si va da nessuna parte. Il traffico dati (dati mobili), invece, viaggia attraverso le stazioni base 4G/5G dell'operatore: è come salire direttamente sull'autostrada dedicata dell'operatore; finché c'è segnale, sei connesso a Internet.
+
+\booksubsection{Costi e scenari: abbonamento fisso vs tariffazione a consumo}
+
+Il Wi-Fi di solito è un investimento una tantum (canone mensile della linea): finché c'è corrente, tutta la famiglia lo usa senza limiti, ideale per scaricare film o giocare, scenari ad alto consumo di dati. Il traffico dati, invece, viene tariffato a consumo; superato il bundle può esserci rallentamento o addebiti extra, ed è più adatto a task leggeri in mobilità, come in metropolitana o in viaggio di lavoro.
+
+\begin{tcbpractice}{Prova: controlla il tuo piano dati}
+Apri [Impostazioni] > [Rete mobile] > [Gestione traffico] e verifica quanti GB ti restano questo mese e quali app consumano di più. Sapere cosa hai ti fa uscire di casa senza ansie.
+
+\end{tcbpractice}
+
+\booksubsection{Considerazioni di sicurezza: il Wi-Fi pubblico è un “campo di pesca” nascosto}
+
+Per la sicurezza, i dati mobili sono in genere più sicuri del Wi-Fi pubblico. I dati mobili sono cifrati dall'operatore, mentre il Wi-Fi pubblico può essere facilmente trasformato in “hotspot falso” dai hacker per intercettare traffico non cifrato. Va però chiarito: oggi, con la diffusione capillare di HTTPS, l'attaccante può intercettare\textbf{quali siti hai visitato}(dominio) e i\textbf{contenuti HTTP non cifrati}; ma i messaggi WeChat, le password di login delle app bancarie e altri dati cifrati con HTTPS\textbf{non possono essere letti direttamente}— a meno che non venga messo in atto un attacco SSL stripping più complesso e l'utente ignori gli avvisi sui certificati. In ogni caso, per pagamenti fuori casa, usare direttamente i dati mobili resta la scelta più sicura.
+
+\textbf{Promemoria di sicurezza}\par
+
+In aeroporti, centri commerciali, caffè e altri luoghi pubblici, non connetterti a Wi-Fi gratuiti con nomi sospetti (es. “Free\_WiFi\_2024”). Anche se ti connetti, non usarli mai per accedere a un'app bancaria o per inserire password.
+
+\booksubsection{Verifica lato telefono: capire il “linguaggio segreto” della barra di stato}
+
+Come sapere cosa sta usando il telefono in questo momento? Su un telefono Huawei, ad esempio, la comparsa dell'\textbf{icona a doppia freccia}accanto al segnale dell'operatore o al segnale WLAN nella barra di stato indica che si sta usando quel metodo per la connessione; se entrambe sono accese, l'accelerazione di rete è attiva e il telefono sta usando entrambi i canali.
+
+Per gli utenti iPhone è più diretto: se l'icona Wi-Fi è accesa, si sta usando il Wi-Fi; se è spenta, guarda le barre di segnale in alto a destra per capire che stai usando il traffico dati. Alcuni telefoni Android mostrano anche “5G” o “4G” nella barra di stato, indicando il tipo di rete mobile corrente.
+
+\booksection{Reti mobili (4G/5G) e traffico dati}
+
+La rete mobile è la base per connettersi ovunque. Da 2G a 5G la velocità è aumentata di migliaia di volte, ma il principio è simile.
+
+\booksubsection{Standard di rete:}
+
+\begin{itemize}
+  \item \textbf{4G LTE}: attualmente la copertura più ampia, velocità sufficiente (teoricamente fino a 100 Mbps+), consumo energetico relativamente basso.
+  \item \textbf{5G}: velocità elevata (teoricamente fino a 10 Gbps), ma la copertura è ancora in via di completamento, consumo energetico alto. Adatta a scaricare file grandi e guardare video ad alta risoluzione.
+  \item \textbf{5G SA vs NSA}: SA è la rete autonoma, NSA si appoggia alle stazioni base 4G. L'esperienza SA è migliore, ma richiede il supporto sia dell'operatore sia del telefono.
+\end{itemize}
+
+\booksubsection{Gestione del traffico:}
+
+\begin{itemize}
+  \item \textbf{Cosa sono i dati}: è il volume di dati generato navigando sul telefono. Video e immagini consumano di più, testo e voce consumano meno.
+  \item \textbf{Dritta per risparmiare}: attiva la "modalità risparmio dati" nelle impostazioni e aggiorna le app o guarda video ad alta risoluzione solo sotto Wi-Fi.
+  \item \textbf{Barre di segnale $\neq$ velocità}: un segnale forte indica solo una buona connessione; la velocità dipende anche dal carico della stazione base e dalla tua distanza da essa.
+\end{itemize}
+
+\textbf{Avviso importante: prima di andare all'estero disattiva il [data roaming]!}\par
+
+Usare i dati mobili all'estero può generare bollette astronomiche! Prima di partire, disattiva il data roaming nelle impostazioni oppure acquista in anticipo una scheda SIM locale o un pacchetto di roaming internazionale.
+
+\booksection{Wi-Fi: connessione, condivisione e sicurezza}
+
+Il Wi-Fi è la connessione principale in casa e in ufficio: veloce e senza consumo di traffico. Ma anche il Wi-Fi si evolve e le differenze tra gli standard sono notevoli.
+
+\booksubsection{Connessione Wi-Fi:}
+
+Vai in [Impostazioni] > [WLAN], scegli la rete e inserisci la password. Molti telefoni oggi supportano la connessione tramite scansione di codice QR, ancora più comoda.
+
+\booksubsection{Condivisione della password:}
+
+Sia Android che iOS permettono a un telefono già connesso di condividere rapidamente la password con un amico. Android genera un codice QR, iOS può condividere automaticamente per prossimità.
+
+\booksubsection{Evoluzione degli standard Wi-Fi:}
+
+Gli standard Wi-Fi sono definiti dall'IEEE; ogni generazione porta miglioramenti significativi:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|X|}
+\hline
+\textbf{Standard} & \textbf{Protocollo} & \textbf{Banda} & \textbf{Velocità massima} & \textbf{Caratteristiche} \tabularnewline
+\hline
+Wi-Fi 4 & 802.11n & 2.4/5GHz & 600Mbps & Standard datato, copertura discreta \tabularnewline
+Wi-Fi 5 & 802.11ac & 5GHz & 3.5Gbps & Oggi il più diffuso, velocità adeguata \tabularnewline
+Wi-Fi 6 & 802.11ax & 2.4/5GHz & 9.6Gbps & Prestazioni multi-dispositivo elevate, latenza bassa \tabularnewline
+Wi-Fi 6E & 802.11ax & 2.4/5/6GHz & 9.6Gbps & Aggiunge la banda 6GHz, meno congestione \tabularnewline
+Wi-Fi 7 & 802.11be & 2.4/5/6GHz & 46Gbps & Trasmissione ultra veloce, aggregazione multi-link \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{itemize}
+  \item \textbf{Tecnologie chiave del Wi-Fi 6}: OFDMA (Orthogonal Frequency-Division Multiple Access) consente la trasmissione simultanea di più dispositivi; MU-MIMO (Multi-User Multiple Input Multiple Output) migliora l'efficienza multi-dispositivo; TWT (Target Wake Time) riduce i consumi.
+  \item \textbf{Wi-Fi 6E}: aggiunge la banda 6GHz al Wi-Fi 6, offrendo più canali e meno interferenze. Richiede che telefono e router lo supportino entrambi.
+  \item \textbf{Wi-Fi 7}: introduce MLO (Multi-Link Operation), può usare contemporaneamente più bande per trasmettere dati, riducendo drasticamente la latenza. Il canale ultra-largo a 320 MHz porta un salto nelle velocità. Piattaforme flagship come Snapdragon 8 Elite Gen5 e Dimensity 9400 supportano già il Wi-Fi 7; modelli come Xiaomi 17, Huawei Mate 80, Samsung S26 possono usare reti Wi-Fi 7 (in abbinamento a un router Wi-Fi 7).
+  \item \textbf{2.4GHz vs 5GHz}: 2.4GHz attraversa meglio i muri ma è più lento e soggetto a interferenze; 5GHz è più veloce ma attraversa peggio i muri. La banda 6GHz del Wi-Fi 6E/7 è la più veloce, ma la più debole nell'attraversare i muri, adatta all'uso nella stessa stanza.
+\end{itemize}
+
+\booksubsection{Rischi del Wi-Fi pubblico:}
+
+Il Wi-Fi pubblico può esporre a intercettazioni o a hotspot esca. Regole d'oro:
+
+\begin{itemize}
+  \item Evita di accedere a conti bancari o di inserire password.
+  \item Usa preferibilmente una VPN per cifrare la connessione.
+  \item Non connetterti automaticamente a Wi-Fi sconosciuti.
+  \item Usa siti HTTPS (icona del lucchetto nella barra degli indirizzi).
+\end{itemize}
+
+\booksection{Bluetooth: l'onnipresente della comunicazione wireless a breve distanza}
+
+Il Bluetooth è probabilmente una delle tecnologie wireless più usate sul tuo telefono — cuffie wireless, smartwatch, sistemi auto, tastiere e mouse si connettono tutti grazie a essa.
+
+\booksubsection{Principio tecnico:}
+
+Il Bluetooth opera nella banda ISM a 2.4GHz e usa la tecnica FHSS (Frequency Hopping Spread Spectrum) per distribuire i dati su 79 canali a salti rapidi, evitando le interferenze. La distanza di comunicazione è divisa in tre classi: Classe 1 circa 100 m, Classe 2 circa 10 m (comune sui telefoni), Classe 3 circa 1 m.
+
+\booksubsection{Evoluzione delle versioni:}
+
+\begin{itemize}
+  \item \textbf{Bluetooth 4.0}: introduce il Bluetooth a basso consumo (BLE), consentendo a dispositivi con batteria piccola come braccialetti e fasce cardiache di connettersi senza fili; l'autonomia passa da giorni a mesi.
+  \item \textbf{Bluetooth 4.2}: migliora velocità di trasmissione e protezione della privacy, supporta la connessione diretta IPv6.
+  \item \textbf{Bluetooth 5.0}: velocità raddoppiata (2 Mbps), portata quadrupla (teoricamente 300 m), capacità di broadcast otto volte superiore. Supporta il doppio audio (due cuffie contemporanee).
+  \item \textbf{Bluetooth 5.1}: introduce la funzione di indirizzamento direzionale (AoA/AoD), con precisione di localizzazione centimetrica.
+  \item \textbf{Bluetooth 5.2}: nuovo standard LE Audio, supporta la codifica LC3 (qualità audio migliore e consumi più bassi), audio multi-flusso e audio broadcast.
+  \item \textbf{Bluetooth 5.3/5.4}: ottimizzazioni ulteriori su consumi e stabilità della connessione, broadcast periodico migliorato.
+\end{itemize}
+
+\textbf{Diffusione del LE Audio}: nel 2025-2026, il LE Audio è entrato in una fase di rapida diffusione. Le nuove cuffie true wireless dei principali brand (come Huawei FreeBuds Pro 5, Xiaomi Buds 6 Pro, Samsung Galaxy Buds3 Pro) supportano già LE Audio e la codifica LC3, offrendo latenza più bassa e qualità audio superiore. Quando acquisti nuove cuffie, è consigliabile scegliere prodotti che supportano LE Audio.
+
+\booksubsection{Scenari applicativi:}
+
+\begin{itemize}
+  \item \textbf{Trasmissione audio}: cuffie wireless, impianti auto. Il LE Audio del Bluetooth 5.2 porta un salto qualitativo in audio e latenza.
+  \item \textbf{Trasmissione dati}: scambio di file e foto a breve distanza. Pur essendo più lento del Wi-Fi Direct, vince per semplicità.
+  \item \textbf{Accoppiamento dispositivi}: smartwatch, braccialetti, tastiere e mouse, gamepad.
+  \item \textbf{Servizi di posizione}: Beacon Bluetooth per navigazione indoor e tracciamento oggetti (es. Apple AirTag).
+  \item \textbf{Casa intelligente}: rete Bluetooth Mesh per controllare lampadine, serrature ecc.
+\end{itemize}
+
+\booksection{Telecommando a infrarossi: il telefono diventa un telecomando universale}
+
+Il telecommando a infrarossi è una delle tecnologie di controllo wireless più antiche, ma ancora utile sui telefoni. Alcuni telefoni Android (come alcuni modelli Xiaomi e Huawei) integrano un trasmettitore IR, in grado di controllare TV, condizionatori, decoder e altri elettrodomestici.
+
+\booksubsection{Principio di funzionamento:}
+
+Il telecommando IR emette, tramite un LED a infrarossi, impulsi luminosi a una frequenza specifica (in genere 38 kHz); il ricevitore IR dell'elettrodomestico decodifica gli impulsi ed esegue l'azione corrispondente. Marche diverse usano protocolli di codifica diversi, tra i più comuni NEC, RC5, RC6, SONY. L'app IR del telefono integra il database di codici di ciascun marchio: basta selezionare marca e modello per la corrispondenza.
+
+\booksubsection{Limiti:}
+
+\begin{itemize}
+  \item \textbf{Direzionalità}: gli infrarossi viaggiano in linea retta, occorre puntare il dispositivo, non attraversano i muri.
+  \item \textbf{Breve distanza}: portata utile in genere 5-8 metri.
+  \item \textbf{Non supportato da Apple}: l'iPhone non ha il trasmettitore IR e non può usare questa funzione.
+\end{itemize}
+
+\booksection{NFC: la magia del “tocca e vai”}
+
+NFC (Near Field Communication) è una tecnologia di comunicazione wireless ad alta frequenza a brevissima distanza (entro 10 cm), operante a 13.56 MHz, con velocità massima di 424 Kbps.
+
+\booksubsection{Principio di comunicazione e modalità:}
+
+NFC deriva dalla tecnologia RFID e supporta tre modalità di funzionamento:
+
+\begin{itemize}
+  \item \textbf{Modalità lettura/scrittura}: il telefono legge informazioni da un tag NFC, ad esempio un adesivo NFC che attiva un'azione.
+  \item \textbf{Modalità peer-to-peer}: due dispositivi NFC si scambiano dati, come Android Beam (discontinuato).
+  \item \textbf{Modalità card emulation}: il telefono emula una smart card — è la modalità più usata: carte bus, badge di accesso, carte bancarie si basano su di essa.
+\end{itemize}
+
+\booksubsection{Meccanismi di sicurezza:}
+
+\begin{itemize}
+  \item \textbf{Brevissima distanza}: la comunicazione entro 10 cm è di per sé una garanzia di sicurezza fisica; l'intercettazione remota è praticamente impossibile.
+  \item \textbf{Chip di sicurezza}: il telefono integra un chip di sicurezza dedicato (SE) o usa HCE (Host Card Emulation); le chiavi di pagamento sono conservate in un'area sicura e non possono essere estratte nemmeno con il telefono in root.
+  \item \textbf{Verifica impronta/volto}: il pagamento richiede conferma biometrica, così anche se il telefono viene smarrito non si può frodare.
+  \item \textbf{Tokenizzazione}: Apple Pay, Huawei Pay e simili non trasmettono il numero reale della carta, ma un token monouso; anche se intercettato, non può essere riusato.
+\end{itemize}
+
+\booksubsection{Applicazioni tipiche:}
+
+\begin{itemize}
+  \item \textbf{Carta bus / badge di accesso}: si scrivono nel telefono le informazioni della carta fisica e si usa il telefono per transitare.
+  \item \textbf{Pagamento mobile}: Apple Pay, Huawei Pay ecc., collegando la carta bancaria al telefono per pagare con un tocco.
+  \item \textbf{Accoppiamento dispositivi}: NFC per accoppiare rapidamente cuffie e casse Bluetooth.
+  \item \textbf{Autenticazione d'identità}: lettura di carte d'identità NFC, verifica della patente elettronica.
+\end{itemize}
+
+\booksection{Hotspot personale: trasforma il telefono in un router Wi-Fi}
+
+Quando hai molto traffico dati, puoi attivare l'hotspot per tablet e computer.
+
+\begin{itemize}
+  \item \textbf{Come attivarlo}: Impostazioni > Hotspot personale / Tethering, e attivalo.
+  \item \textbf{Note}: consuma molta batteria e traffico; imposta una password complessa e limita il numero di dispositivi connessi.
+  \item \textbf{Tethering USB}: collega il computer con il cavo dati, più stabile e veloce del hotspot wireless.
+\end{itemize}
+
+\begin{tcbpractice}{Prova sul campo: configura e gestisci l'hotspot}
+\begin{enumerate}
+  \item Apri [Impostazioni], trova "Hotspot personale" o "Tethering", attivalo e imposta nome e password.
+  \item Con un altro dispositivo (ad esempio il computer) cerca e connettiti a questo Wi-Fi.
+  \item Sul telefono verifica se riesci a gestire i dispositivi connessi o a espellere quelli sconosciuti.
+\end{enumerate}
+
+\end{tcbpractice}

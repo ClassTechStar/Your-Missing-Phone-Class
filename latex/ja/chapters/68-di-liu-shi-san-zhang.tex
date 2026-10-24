@@ -1,0 +1,181 @@
+\bookchapter{第六十三章：ビュー、状態、ナビゲーション}
+
+\chapterintro{1ページだけのおもちゃなら、もう作れます。この章で解決するのは「成長」にまつわる2つの問題：複数のページの間をどう行き来するか（ナビゲーション）と、データがページの間をどう流れるか（状態管理）です。この章を終えれば、「リスト 詳細 編集」という定番のマルチページアプリの骨組みが組めるようになります。}
+
+\booksection{状態管理の「データフロー全体図」}
+
+SwiftUIの状態管理ツールは@Stateだけではありません。まずこの全体図を見て、「いつどれを使うか」をつかみましょう：
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{ツール} & \textbf{担当するもの} & \textbf{使う側} & \textbf{典型的な場面} \tabularnewline
+\hline
+@State & そのページだけの一時的な状態 & いまのビュー & カウンター、入力欄の文字 \tabularnewline
+@Binding & ほかの状態を借りる & 子ビューから親ビューを書き換える & 自作コンポーネント \tabularnewline
+@StateObject / @Observable & ページをまたいで共有するロジック & ビューモデル（ViewModel） & データ読み込み、ビジネスロジック \tabularnewline
+@EnvironmentObject / .environment & アプリ全体で共有する状態 & アプリ全体 & ログイン状態、テーマ設定 \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}SwiftUIの状態管理ツール全体図（2026年、@Observableが主流）\end{center}
+
+\begin{lstlisting}[language=Swift]
+// iOS 17+のモダンな書き方：@Observableマクロ（新規プロジェクトにおすすめ）
+import Observation
+
+@Observable
+class CounterModel {                 // ビューモデル
+    var count = 0
+    func increment() { count += 1 }
+}
+
+struct CounterView: View {
+    @State private var model = CounterModel()   // モデルを保持
+
+    var body: some View {
+        VStack {
+            Text("\(model.count)回押しました")
+            Button("押して") { model.increment() }
+        }
+    }
+}
+\end{lstlisting}
+
+初心者へのぶっきらぼうなアドバイス：ページの中だけで使うものは@State、ページをまたぐもの／ロジックを含むものは@Observableのクラスへ。古いチュートリアルの@StateObject/@ObservableObjectは前世代の書き方なので、読めればOK。新しいコードは上のルールに従いましょう。
+
+\booksection{NavigationStack：ページ移動の「スタック」}
+
+iOS 16以降、複数ページのナビゲーションにはNavigationStackを使います——お皿を積むようなもので、進むときに1枚ずつ積んでいき、戻るときは1枚ずつ取り出します：
+
+\begin{lstlisting}[language=Swift]
+struct HomeView: View {
+    var body: some View {
+        NavigationStack {
+            List {
+                NavigationLink("たろうの家計簿") {
+                    DetailView(name: "たろうの家計簿")   // 行き先のページ
+                }
+                NavigationLink("はなこの家計簿") {
+                    DetailView(name: "はなこの家計簿")
+                }
+            }
+            .navigationTitle("家計簿リスト")   // 上の大きな見出し
+        }
+    }
+}
+
+struct DetailView: View {
+    let name: String
+    var body: some View {
+        Text("\(name) の詳細ページ")
+            .navigationTitle(name)
+            .navigationBarTitleDisplayMode(.inline)
+    }
+}
+\end{lstlisting}
+
+NavigationLinkは「タップできる移動リンク」です。navigationTitleはナビゲーションバーのタイトルと戻るボタンを自動で生成します。プログラムで移動させたいとき（たとえば「保存」を押したら自動で戻る）は、@Environment(\textbackslash{}.dismiss)で現在のページを閉じます——この2つの合わせ技で、ナビゲーションのニーズの90％はカバーできてしまいます。
+
+\booksection{ポップアップと下部タブ：sheetとTabView}
+
+ページを「押し込む」以外にも、定番の操作が2つあります：
+
+\begin{lstlisting}[language=Swift]
+// 1. 下から半画面/全画面で表示（入力フォームの定番）
+struct HomeView: View {
+    @State private var showAdd = false
+    var body: some View {
+        Button("記帳する") { showAdd = true }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView()     // 表示される入力ページ
+            }
+    }
+}
+
+// 2. 下部タブバー（アプリの「骨格」）
+struct MainTabView: View {
+    var body: some View {
+        TabView {
+            RecordListView()
+                .tabItem { Label("家計簿", systemImage: "book") }
+            StatsView()
+                .tabItem { Label("統計", systemImage: "chart.pie") }
+            SettingsView()
+                .tabItem { Label("設定", systemImage: "gear") }
+        }
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{ワンポイント：どの場面でどれを使う？}
+経験則：メインの流れはNavigationStackでページをpush（リスト詳細）、一時的な操作はsheetのポップアップ（追加·編集·確認）、並び立つ大ブロックはTabView（下部タブ）。この3つの組み合わせこそ、ほとんどのアプリの骨組みです。
+
+\end{tcbinfo}
+
+\booksection{List：iOSの「国民的リスト」}
+
+iOSでいちばんよく使い、いちばん「Appleらしい」コンポーネントがListです——区切り線、スワイプ削除、タップ時のハイライトが、はじめから付いてきます：
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var records = ["昼ごはん 25.5", "地下鉄 6.0", "給料 +8000"]
+
+    var body: some View {
+        List {
+            ForEach(records, id: \.self) { r in
+                Text(r)
+            }
+            .onDelete { indexSet in          // 左スワイプで削除
+                records.remove(atOffsets: indexSet)
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+リスト＋NavigationLink＋sheet＋TabView——この4つを組み合わせれば、「帳簿リスト タップで詳細 ＋で入力ポップアップ」という完全なアプリの骨組みがもう組めます。次章の家計簿プロジェクトは、まさにこの組み方で作ります。
+
+\begin{tcbpractice}{やってみよう：「3ページの骨組み」を組む}
+\booksection{アプリのライフサイクル：フォアグラウンドとバックグラウンド}
+
+AndroidのActivityのライフサイクルと同じように、iOSアプリにも「誕生、フォアグラウンド、バックグラウンド、終了」という状態の変化があります。SwiftUIではscenePhaseという環境値で観察します：
+
+\begin{lstlisting}[language=Swift]
+@main
+struct MyApp: App {
+    @Environment(\.scenePhase) private var phase
+
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .onChange(of: phase) { _, newPhase in
+            switch newPhase {
+            case .active:    print("前面に戻る。更新を再開")
+            case .inactive:  print("移行中（着信/バックグラウンド切替の瞬間）")
+            case .background: print("バックグラウンドへ。下書きを保存")
+            @unknown default: break
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+典型的な使い方：フォアグラウンドに戻ったらデータを更新、バックグラウンドに入ったら下書きを保存。iOSはバックグラウンド動作にとても厳しく——普通のアプリはバックグラウンドに入るとすぐ停止（凍結）されるので、裏でこっそり重い処理をさせるのは期待しないでください。どうしても定期実行したいなら、「バックグラウンド常駐」ではなく第六十八章のローカル通知を使います。
+
+ダミーデータ版の家計簿の骨組みを作りましょう：TabViewの3つのタブ（帳簿／統計／設定） 帳簿ページはListでダミーデータを表示し、行をタップしたら詳細へ（NavigationStack） 右上の「＋」ボタンで入力用のsheetを出す。データ保存も通信もなし、純粋に骨組みの練習——この骨組みができていれば、第六十五章で本物のデータを流し込むのは水到渠成です。
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{本章のまとめ}
+\begin{itemize}
+  \item 状態管理の4ツール：@State（ページ内）、@Binding（借用）、@Observable（ロジック）、.environment（全体）
+  \item 新規プロジェクトのビューモデルは@Observableマクロで書く。古いチュートリアルの@ObservableObjectは読めればOK
+  \item ページ移動はNavigationStack。@Environment(\textbackslash{}.dismiss)でプログラムから戻る
+  \item メインの流れはページをpush、一時的な操作はsheet、並び立つ大ブロックはTabView
+  \item Listは「国民的リスト」：区切り線もスワイプ削除も、はじめから使える
+\end{itemize}
+
+\end{tcbsummary}

@@ -1,0 +1,149 @@
+\bookchapter{Chapter 67: Polish and Ship—Testing, Debugging, and the App Store}
+
+\chapterintro{The app works—now what? This chapter covers the three things on the road from “it runs” to “it's deliverable”: how to debug efficiently to find bugs, how to write tests to prevent regressions, and how to get your app onto the App Store for the whole world to download. Shipping isn't just ceremony—it's the dividing line between a project and a product.}
+
+\booksection{The three debugging essentials: print, breakpoints, and previews}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|}
+\hline
+\textbf{Tool} & \textbf{What it does} & \textbf{How to use it} \tabularnewline
+\hline
+print + console & View run logs & In code: print("value = \textbackslash{}(x)"), and watch the output in the Xcode console at the bottom \tabularnewline
+Breakpoint debugging & Pause the program at a given line and inspect variable values & Click next to a line number to place a blue marker; execution pauses there and you can step through \tabularnewline
+SwiftUI previews + debugger & See the UI and view hierarchy in real time & \#Preview canvas + the runtime View Hierarchy inspector \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}The three debugging essentials\end{center}
+
+\begin{tcbinfo}{Tip: how do you read a crash?}
+When Swift crashes, the console prints “Fatal error” plus the reason, and Xcode stops on the offending line and highlights it. Historical crashes on real devices can be viewed in Xcode Window Organizer Crashes (paid account required). When searching, prioritize “the first sentence of the error message + swiftui”—precise questions get precise answers.
+
+\end{tcbinfo}
+
+\booksection{Testing: insurance for your code}
+
+Manual testing can't be trusted—fix one feature and another quietly breaks. Tests are both the “undo button” and the “bulletproof vest.” iOS uses the XCTest framework, in two flavors:
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|X|X|}
+\hline
+\textbf{Level} & \textbf{What it tests} & \textbf{Target} & \textbf{Speed} \tabularnewline
+\hline
+Unit tests & Pure logic (calculations, validation) & MyFirstAppTests & Seconds \tabularnewline
+UI tests & Real interface behavior & MyFirstAppUITests & Minutes \tabularnewline
+Manual testing & Human feel and experience & —— & Always needed \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}iOS testing levels (the template project already includes two Test Targets)\end{center}
+
+\begin{lstlisting}[language=Swift]
+import XCTest
+
+// Extract logic like "amount string to number" into a pure function
+func parseAmount(_ input: String) -> Double? {
+    guard let v = Double(input.trimmingCharacters(in: .whitespaces)),
+          v > 0 else { return nil }
+    return v
+}
+
+final class AmountTests: XCTestCase {
+    func testEmptyInputReturnsNil() {
+        XCTAssertNil(parseAmount(""))
+    }
+    func testNegativeReturnsNil() {
+        XCTAssertNil(parseAmount("-5"))
+    }
+    func testNormalValueParses() {
+        XCTAssertEqual(parseAmount("12.5"), 12.5)
+    }
+}
+\end{lstlisting}
+
+Run tests with CmdU. Change code only once everything is green, and you'll feel confident. The amount validation and summary calculations in the expense tracker should all be covered by unit tests.
+
+\booksection{Signing and packaging: stamping your app}
+
+Every iOS app must be signed before it can be installed—proof that “this package came from you and hasn't been tampered with.” The hierarchy:
+
+\begin{itemize}
+  \item Learning stage: a free Apple ID + Xcode automatic signing (Personal Team) runs on a real device, renewed every 7 days;
+  \item Distribution stage: a paid developer account (99 USD/year) issues the certificates and provisioning profiles needed to ship and install long-term.
+\end{itemize}
+
+Packaging: in Xcode, Product Archive; once the build finishes, in Organizer choose Distribute App App Store Connect upload. Archiving must target the Generic iOS Device (not the Simulator)—a step beginners often forget.
+
+\textbf{Pitfall warning: lose the certificate = updates cut off}\par
+
+Once a signing certificate and its private key are lost, you can no longer push updates to your old app—users can only install it as a “brand-new” app. Back up your certificates carefully (export a .p12 from Keychain) and keep the password safe. Fortunately, Apple offers “automatic signing” and cloud certificate management (check Automatically manage signing in Xcode), which spares you most of the manual pitfalls.
+
+\booksection{The full App Store submission process}
+
+Register a developer account
+
+Prepare store assets
+
+Upload the build
+
+Fill in privacy and review info
+
+Apple review (1-7 days)
+
+Published
+
+\begin{center}\small\color{gray}Figure 5: Six steps to the App Store\end{center}
+
+\begin{itemize}
+  \item Register: developer.apple.com, personal accounts 99 USD/year;
+  \item Assets: icon (1024×1024, no rounded corners—Apple does the rounding itself), screenshots (each iPhone size), description, privacy policy link;
+  \item Privacy questionnaire: honestly declare what data you collect—an offline expense tracker can declare "no data collected";
+  \item Review: the first submission often waits 1–7 days; if rejected, fix things one by one per the "review notes"—Apple's rejection reasons are usually written very specifically, so just follow them;
+  \item TestFlight: before release, send a beta build to friends for internal testing (up to 10,000 people), gather a round of feedback, then submit officially—very professional.
+\end{itemize}
+
+\booksection{Store assets: first impressions drive downloads}
+
+The store page is the shop window users see while “browsing.” Three assets decide the first impression:
+
+\begin{itemize}
+  \item Icon: 1024×1024, don't just make do with a screenshot. If you have no design skills, use an AI tool to generate a simple graphic; it only passes if it's still recognizable when shrunk down on a home screen;
+  \item Screenshots: at least 2 sets (mainstream iPhone sizes), showing your most core feature scenarios; give each one a plain-language caption ("Log an expense in one second" beats "An efficient expense-tracking solution" ten times over);
+  \item Description: the first sentence should make clear "what this is + who it's for." Don't pile on "the most professional, the most powerful"—sincerity works better than hype.
+\end{itemize}
+
+\begin{tcbpractice}{Get hands-on: "ship" the expense tracker once}
+\booksection{A mini checklist for crash reporting and performance}
+
+Before release, these two things are each worth half an hour:
+
+\booksubsection{Crash monitoring}
+
+Just because it didn't crash in your testing doesn't mean it won't on users' phones. Apple provides free crash reports in the Xcode Organizer (paid accounts can see real-device crash logs); an even more hassle-free option is a third-party SDK (such as Firebase Crashlytics). Shipping without crash monitoring is like driving with your eyes closed.
+
+\booksubsection{Four performance self-checks}
+
+\begin{enumerate}
+  \item Use LazyVStack / List for lists: don't lay out long lists with a plain VStack—lazy loading is lesson one of performance;
+  \item Don't force in full-size images: use AsyncImage (for remote images) and the system cache; a 5MB original can bog down older phones badly;
+  \item Don't do heavy work on the main thread: route network calls and large files through async/await;
+  \item Measure with Instruments: Xcode's built-in profiler (Time Profiler, memory leak checks)—measure first, then optimize; don't go by feel.
+\end{enumerate}
+
+(1) Add 3 unit tests for logic like parseAmount (green with CmdU); (2) use a breakpoint to catch a crash you created yourself and fix it; (3) build a package with Product Archive and invite friends to test via TestFlight; (4) if you have the bandwidth, register a developer account and actually submit the expense tracker to the store. The first three steps can be done tonight.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{Chapter summary}
+\begin{itemize}
+  \item The three debugging essentials: print logs, breakpoints, and SwiftUI previews with the view inspector
+  \item XCTest: unit tests (CmdU) + UI tests + manual testing, prebuilt in the template
+  \item Signing: free accounts get automatic signing (renewed every 7 days); distribution requires a paid account
+  \item Packaging: Generic iOS Device + Archive + Distribute; always back up your certificates
+  \item Six steps to release: register assets upload privacy questionnaire review go live; beta test with TestFlight first
+\end{itemize}
+
+\end{tcbsummary}

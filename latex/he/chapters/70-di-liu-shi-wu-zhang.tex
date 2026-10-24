@@ -1,0 +1,194 @@
+\bookchapter{פרק 65: פרויקט 1 — ספר החשבונות שלי (גרסה מקומית)}
+
+\chapterintro{ברוכים הבאים ל“פרויקט הרציני” הראשון שלכם. ספר החשבונות הזה לא מתחבר לרשת, אבל יש בו הכול: אפשר לרשום תנועה, לצפות בפירוט, לסכם לפי חודש ולמחוק ולערוך. אחרי שתסיימו אותו, תעברו מסע מלא של “נתונים לוגיקה ממשק”. אל תמהרו להעתיק קוד — קודם חושבים לעומק ואז עושים; זה העיקרון הקבוע שלנו.}
+
+\booksection{חשיבה על דרישות: קודם שואלים חמש שאלות}
+
+\begin{center}
+\begin{tabularx}{\linewidth}{|X|X|}
+\hline
+\textbf{מרכיב} & \textbf{תשובה} \tabularnewline
+\hline
+Who (למי זה מיועד) & לשימוש עצמי; גם משפחה וחברים \tabularnewline
+What (מה עושים) & רישום הכנסות והוצאות, צפייה בפירוט התנועות, סיכום חודשי, סטטיסטיקה לפי קטגוריה \tabularnewline
+Why (למה) & תרגול ידיים + הבנה לאן הכסף הולך \tabularnewline
+How (איך) & Swift + SwiftUI + SwiftData + MVVM, מקומי לחלוטין בלי שרת \tabularnewline
+Constraint (אילוצים) & להשלים תוך שבוע; תמיכה מ-iOS 17 ומעלה (מחסום SwiftData) \tabularnewline
+\hline
+\end{tabularx}
+\end{center}
+
+\begin{center}\small\color{gray}חמשת מרכיבי הדרישות של ספר החשבונות\end{center}
+
+ואז מפרקים אותו לשלבים קטנים ש“כל אחד מהם שמיש”: (1) בניית שכבת נתונים ב-SwiftData (שתדע לשמור רשומה אחת); (2) מסך רשימה (שיציג את התנועות); (3) חלון הזנה (שיאפשר להוסיף רשומה); (4) מחיקה ועריכה; (5) כרטיס סיכום חודשי. בסיום כל שלב, האפליקציה היא “משהו שאפשר להשתמש בו”.
+
+\booksection{שכבת הנתונים: נותנים ל“רישומים” בית}
+
+קודם מגדירים איך נראית רשומה אחת — השדות צריכים להספיק לצרכים, אבל אל תהיו חמדנים:
+
+\begin{lstlisting}[language=Swift]
+import SwiftData
+
+@Model
+class Record {
+    var type: String      // "income" הכנסה | "expense" הוצאה
+    var amount: Double    // סכום (יואן)
+    var category: String  // קטגוריה: אוכל, תחבורה, משכורת…
+    var note: String      // הערה (רשות)
+    var date: Date        // תאריך הרישום
+
+    init(type: String, amount: Double, category: String, note: String = "", date: Date = Date()) {
+        self.type = type
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+\end{lstlisting}
+
+\begin{tcbinfo}{טיפ: למה הסכום מסוג Double?}
+אפליקציות פיננסיות רציניות משתמשות ב-Decimal (עשרון מדויק) כדי להימנע משגיאות נקודה צפה (הבעיה הישנה והמפורסמת שבה 0.1+0.2 $\neq$ 0.3). לפרויקט אימון Double מספיק בהחלט; אם יום אחד תפתחו מוצר פיננסי אמיתי, זכרו לעבור ל-Decimal או ל-“מספר Int שמחושב באגורות” — מלכודת שמפתחים רבים לפניכם נפלו בה.
+
+\end{tcbinfo}
+
+\booksection{MVVM: מפרידים בין הממשק ללוגיקה}
+
+לתת לממשק לגשת ישירות למסד הנתונים? זה יעבוד, אבל קוד הממשק יהפוך ארוך ומבולגן. ארכיטקטורת MVVM מחלקת תפקידים: View (הממשק) רק מצייר, ViewModel (מרכז הלוגיקה) מנהל נתונים, ו-Model (SwiftData) מנהל אחסון.
+
+תצוגה (ממשק SwiftUI)
+
+ViewModel (מוקד הלוגיקה @Observable)
+
+Model (שכבת נתונים SwiftData)
+
+\begin{center}\small\color{gray}איור 4: מבנה שלוש השכבות של MVVM — הנתונים זורמים בכיוון אחד, וכל שכבה נשארת בגבולותיה\end{center}
+
+\begin{lstlisting}[language=Swift]
+import Observation
+
+@Observable
+class RecordViewModel {
+    var records: [Record] = []
+    private let context: ModelContext
+
+    init(context: ModelContext) { self.context = context }
+
+    func load() {
+        // סינון עם #Predicate של SwiftData + מיון
+        let descriptor = FetchDescriptor<Record>(
+            sortBy: [SortDescriptor(\.date, order: .reverse)]
+        )
+        records = (try? context.fetch(descriptor)) ?? []
+    }
+
+    func add(type: String, amount: Double, category: String, note: String) {
+        let r = Record(type: type, amount: amount, category: category, note: note)
+        context.insert(r)
+        try? context.save()
+        load()                       // טעינה מחדש, הממשק מתרענן
+    }
+
+    func delete(_ record: Record) {
+        context.delete(record)
+        try? context.save()
+        load()
+    }
+}
+\end{lstlisting}
+
+בממשק כותבים @State private var vm = RecordViewModel(...) ואז מציגים את הרשימה ישירות מ-vm.records — ברגע שהנתונים משתנים, הממשק מתרענן אוטומטית.
+
+\booksection{הממשק: מסך רשימה + חלון הזנה}
+
+\begin{lstlisting}[language=Swift]
+struct RecordListView: View {
+    @State private var vm: RecordViewModel
+    @State private var showAdd = false
+
+    var body: some View {
+        NavigationStack {
+            List {
+                Section("יתרת החודש") {          // כרטיס סיכום
+                    SummaryRow(records: vm.records)
+                }
+                Section("רשומות") {
+                    ForEach(vm.records) { r in
+                        RecordRow(record: r)
+                    }
+                    .onDelete { idx in
+                        idx.forEach { vm.delete(vm.records[$0]) }
+                    }
+                }
+            }
+            .navigationTitle("פנקס ההוצאות שלי")
+            .toolbar {
+                Button { showAdd = true } label: {
+                    Image(systemName: "plus")
+                }
+            }
+            .sheet(isPresented: $showAdd) {
+                AddRecordView(vm: vm)          // דיאלוג הזנה
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+עיקרי חלון ההזנה: לשדה הסכום מגדירים מקלדת .keyboardType(.decimalPad) (מקלדת מספרים), להכנסה/הוצאה — פקד מקטעים (Picker), לקטגוריה — בחירה מתפריט, ובלחיצה על “שמור” קוראים ל-vm.add(...) וסוגרים עם dismiss().
+
+\begin{tcbwarn}{שימו לב: אל תתעצלו על בדיקות קלט}
+חובה לבדוק את שדה הסכום: ערך ריק, מספר שלילי וקלט בלתי חוקי כמו “abc” — את כולם צריך לחסום (בודקים עם Double(text); אם ההמרה נכשלת מתקבל nil). אחת הסיבות הנפוצות ביותר לקריסת אפליקציות היא “להניח שהקלט של המשתמש תמיד מתנהג יפה”. זכרו: כל מה שמגיע מהמשתמש בודקים כאילו זה אויב.
+
+\end{tcbwarn}
+
+\booksection{עריכה, מחיקה וסיכום}
+
+\begin{itemize}
+  \item מחיקה: .onDelete של List נותן מחיקה בהחלקה שמאלה + חלון אישור (מחיקה בטעות היא הדבר שמשתמשי אפליקציות ניהול חשבונות שונאים יותר מכל);
+  \item עריכה: לחיצה על שורה פותחת חלון עריכה עם הערכים המקוריים ממולאים מראש (לתקן מילה אחת קל יותר מלהקליד הכל מחדש);
+  \item סיכום: מחשבים "הכנסות / הוצאות / יתרה של החודש" באמצעות filter + reduce ומציגים בכרטיס שבראש המסך:
+\end{itemize}
+
+\begin{lstlisting}[language=Swift]
+func monthSummary(_ records: [Record]) -> (income: Double, expense: Double) {
+    let cal = Calendar.current
+    let monthRecords = records.filter {
+        cal.isDate($0.date, equalTo: Date(), toGranularity: .month)
+    }
+    let income = monthRecords
+        .filter { $0.type == "income" }
+        .reduce(0) { $0 + $1.amount }
+    let expense = monthRecords
+        .filter { $0.type == "expense" }
+        .reduce(0) { $0 + $1.amount }
+    return (income, expense)
+}
+\end{lstlisting}
+
+\booksection{קבלה: שלוש שכבות בדיקה + שני אתגרים למתקדמים}
+
+אחרי שסיימתם את הפרויקט, ערכו קבלה בשלוש שכבות לפי הסדר “תפקוד קצוות ארכיטקטורה”: האם אפשר לרשום, האם אפשר למחוק, והאם הנתונים שורדים הפעלה מחדש של האפליקציה (תפקוד); האם הזנת 0 או מספר שלילי גורמת לקריסה (קצוות); האם הממשק והנתונים מעורבבים זה בזה, והאם יש ערכים מקודדים קשיח בשדות (ארכיטקטורה).
+
+אחרי שהגרסה הבסיסית עברה קבלה, תנו לעצמכם שתי “מנות מתקדמות”:
+
+\begin{enumerate}
+  \item סטטיסטיקה לפי קטגוריות: מוסיפים כרטיסיית "סטטיסטיקה" ומציירים את ההוצאות לפי קטגוריה כתרשים עוגה/עמודות עם Swift Charts — ספריית התרשימים הרשמית של אפל; כמה שורות קוד ויש גרף;
+  \item סנכרון iCloud: הפעלת סנכרון iCloud ב-SwiftData דורשת רק כמה הגדרות — ספר החשבונות מסתנכרן אוטומטית בין iPhone ל-iPad, ופתאום הכל נראה "מתקדם" באמת.
+\end{enumerate}
+
+\begin{tcbpractice}{הידיים על ההגה: מסיימים את זה השבוע}
+עבדו לפי הסדר “שכבת נתונים ViewModel מסך רשימה חלון הזנה כרטיס סיכום”, שלב אחד בכל יום. נתקעתם? שלחו את הודעת השגיאה כמו שהיא למנוע חיפוש או ל-AI (זוכרים את החלק השביעי “פרקטיקת תכנות בעזרת AI”? בתיאור הבעיה הקפידו לציין “התנהגות צפויה, התנהגות בפועל ושלבי שחזור”). אחרי שתסיימו, נהלו איתו את החשבונות שבוע — כשמשתמשים באפליקציה שבניתם בעצמכם, תחושת ההישג דוחפת אתכם להמשיך קדימה.
+
+\end{tcbpractice}
+
+\begin{tcbsummary}{סיכום הפרק}
+\begin{itemize}
+  \item חמישה מרכיבי דרישות פירוק לשלבים קטנים ש"כל אחד שמיש", ורק אז מתחילים לעבוד
+  \item שכבת נתונים: מודל @Model + מיכל modelContainer + שאילתות FetchDescriptor
+  \item חלוקת תפקידים ב-MVVM: View רק מצייר, ViewModel עם @Observable מנהל את הלוגיקה, ו-SwiftData מנהל את האחסון
+  \item ממשק: List + Section + toolbar + חלון הזנה עם sheet
+  \item קבלה בשלוש שכבות (תפקוד/קצוות/ארכיטקטורה) + אתגרים למתקדמים (Swift Charts, סנכרון iCloud)
+\end{itemize}
+
+\end{tcbsummary}
