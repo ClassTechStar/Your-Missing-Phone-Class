@@ -34,3 +34,11 @@ latex/*/main.aux
 latex/*/main.log
 latex/*/main.out
 latex/*/pass*.log
+
+# LaTeX-PDF 排版管线（仓库内副本）：脚本入库，大资产与中间物不入库
+# （成品 PDF 走 GitHub Releases：latex-pdf-v1.5 ~ latex-pdf-v1.8-final）
+手机课-LaTeX-PDF/pdf/
+手机课-LaTeX-PDF/work/
+手机课-LaTeX-PDF/render-*/
+手机课-LaTeX-PDF/fonttest/
+手机课-LaTeX-PDF/fonts/
