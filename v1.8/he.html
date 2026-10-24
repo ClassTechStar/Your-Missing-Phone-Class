@@ -2803,12 +2803,12 @@
                     <h5 class="font-semibold mt-3 mb-1">:הטלפון מכיל שבב אבטחה עצמאי(SE)או משתמש ב-HCE(הדמיית כרטיס מארח),מפתחות התשלום מאוחסנים באזור מאובטח,גם אם הטלפון עבר root לא ניתן לחלץ אותם.</h5>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>אימות טביעת אצבע/זיהוי פנים</strong>:התשלום דורש אימות ביומטרי,גם אם הטלפון אבד לא ניתן לגנוב כסף.</li>
-                        <li><strong>טוקניזציה</strong>:Apple Pay,Huawei Pay וכו' לא מעבירים מספר כרטיס אמיתי,אלא משתמשים באסימון חד-פעמי,גם אם יורט לא ניתן לשימוש חוזר.</li>
+                        <li><strong>טוקניזציה</strong>:Apple Pay, Huawei Pay וכו' לא מעבירים מספר כרטיס אמיתי,אלא משתמשים באסימון חד-פעמי,גם אם יורט לא ניתן לשימוש חוזר.</li>
                         <li><strong>יישומים אופייניים:</strong>כרטיס תחבורה ציבורית/כרטיס כניסה</li>
                         <li><strong>:כתוב את פרטי הכרטיס הפיזי לטלפון,הצמד את הטלפון וזהו.</strong>תשלום נייד</li>
                     </ul>
 
-                    <h5 class="font-semibold mt-3 mb-1">:Apple Pay,Huawei Pay וכו',קשר כרטיס בנק לטלפון,הצמד לשלם.</h5>
+                    <h5 class="font-semibold mt-3 mb-1">:Apple Pay, Huawei Pay וכו',קשר כרטיס בנק לטלפון,הצמד לשלם.</h5>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>התאמת מכשירים</strong>:NFC הצמד-הצמד להתאמה מהירה של אוזניות בלוטות',רמקולים.</li>
                         <li><strong>אימות זהות</strong>:קריאת תעודת זהות ב-NFC,אימות רישיון נהיגה אלקטרוני.</li>
@@ -2941,12 +2941,12 @@
                     <h5 class="font-semibold mt-3 mb-1">AndroidManifest.xml</h5>
                     <p class="mb-2">:"תעודת הזהות" ו"ספר ההוראות" של האפליקציה.מתעד שם חבילה,מספר גרסה,הרשאות נדרשות,גרסת מערכת נתמכת,Activity כניסה ומידע מרכזי נוסף.המערכת קוראת קובץ זה ראשון בעת התקנת האפליקציה.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
-                        <li><strong>classes.dex</strong>:קוד הליבה של האפליקציה.קוד מקור Java/Kotlin מהודר ל-Dalvik bytecode,מאוחסן בקובץ זה.לאפליקציה עשויים להיות מספר קבצי dex(כגון classes2.dex,classes3.dex).</li>
+                        <li><strong>classes.dex</strong>:קוד הליבה של האפליקציה.קוד מקור Java/Kotlin מהודר ל-Dalvik bytecode,מאוחסן בקובץ זה.לאפליקציה עשויים להיות מספר קבצי dex(כגון classes2.dex, classes3.dex).</li>
                         <li><strong>resources.arsc</strong>:טבלת אינדקס משאבים מהודרת.מתעדת את כל מזהי המשאבים והקשרים ביניהם.</li>
-                        <li><strong>תיקיית res/</strong>:תיקיית משאבים.מכילה תמונות,קבצי פריסה,מחרוזות,הגדרות צבע ועוד.תמונות ברזולוציות שונות ממוקמות בתיקיות drawable שונות(כגון drawable-hdpi,drawable-xhdpi).</li>
+                        <li><strong>תיקיית res/</strong>:תיקיית משאבים.מכילה תמונות,קבצי פריסה,מחרוזות,הגדרות צבע ועוד.תמונות ברזולוציות שונות ממוקמות בתיקיות drawable שונות(כגון drawable-hdpi, drawable-xhdpi).</li>
                         <li><strong>תיקיית assets/</strong>:תיקיית משאבים גולמיים.מאחסנת משאבים שאינם עוברים הידור,כגון קבצי דפי אינטרנט,גופנים,שמע ועוד.ניתן לקרוא בזמן ריצה דרך AssetManager.</li>
-                        <li><strong>תיקיית lib/</strong>:תיקיית ספריות מקומיות.מאחסנת קבצי .so מהודרים(תוצרי הידור קוד C/C++),מסווגים לפי ארכיטקטורת CPU(כגון arm64-v8a,armeabi-v7a).משחקים ואפליקציות הדורשות חישוב בביצועים גבוהים בדרך כלל כוללות תיקייה זו.</li>
-                        <li><strong>תיקיית META-INF/</strong>:תיקיית מידע חתימה.מכילה שלושה קבצים MANIFEST.MF,CERT.SF,CERT.RSA,לצורך אימות שלמות וחתימת APK.</li>
+                        <li><strong>תיקיית lib/</strong>:תיקיית ספריות מקומיות.מאחסנת קבצי .so מהודרים(תוצרי הידור קוד C/C++),מסווגים לפי ארכיטקטורת CPU(כגון arm64-v8a, armeabi-v7a).משחקים ואפליקציות הדורשות חישוב בביצועים גבוהים בדרך כלל כוללות תיקייה זו.</li>
+                        <li><strong>תיקיית META-INF/</strong>:תיקיית מידע חתימה.מכילה שלושה קבצים MANIFEST.MF, CERT.SF, CERT.RSA,לצורך אימות שלמות וחתימת APK.</li>
                         <li><strong>2. מבנה קובץ IPA של iOS</strong>IPA(iOS App Store Package)הוא גם קובץ דחוס,המבנה שונה מעט:</li>
                     </ul>
 
@@ -2962,7 +2962,7 @@
                     </ul>
 
                     <h5 class="font-semibold mt-3 mb-1">חתימת Android</h5>
-                    <p class="mb-2">:המפתח חותם על APK במפתח פרטי,המערכת מאמתת במפתח ציבורי בעת ההתקנה.אם APK שונה(למשל הוחדר וירוס),החתימה תיפסל,המערכת תסרב להתקין.Google Play גם דורש App Signing,Google שומרת על מפתחות החתימה,מגנה עוד יותר על אבטחת האפליקציה.</p>
+                    <p class="mb-2">:המפתח חותם על APK במפתח פרטי,המערכת מאמתת במפתח ציבורי בעת ההתקנה.אם APK שונה(למשל הוחדר וירוס),החתימה תיפסל,המערכת תסרב להתקין.Google Play גם דורש App Signing, Google שומרת על מפתחות החתימה,מגנה עוד יותר על אבטחת האפליקציה.</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>חתימת iOS</strong>:הביקורת של אפל מחמירה יותר.כל IPA חייב להיות חתום בתעודה שהונפקה על ידי אפל,אחרת לא ניתן להתקין.זו הסיבה ש-iOS יכולה להתקין אפליקציות רק מ-App Store או מתעודות ארגוניות.לאפליקציות חתומות בתעודה ארגונית יש תוקף מוגבל,ואפל יכולה לבטל בכל עת.</li>
                         <li><strong>תפקידי החתימה</strong>:
@@ -3464,7 +3464,7 @@
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li>מסתמכת על חיישנים ואלגוריתמים, אינה אמינה ב-100%, אך מספקת שכבת הגנה נוספת.</li>
                         <li>4. טכנולוגיית SparkLink: הדור הבא של קישוריות אלחוטית</li>
-                        <li>SparkLink (SparkLink) היא טכנולוגיית תקשורת אלחוטית מהדור החדש שפותחה בהובלת Huawei, במטרה להחליף Bluetooth ו-Wi-Fi בתרחישים מסוימים. היא משווה ואף עולה על הפתרונות הקיימים במדדים מרכזיים: קצב נתונים באוויר של עד 900Mbps (הרבה מעבר ל-50Mbps של Bluetooth), השהיה נמוכה עד 20μs (Bluetooth כ-15ms), תמיכה בעד 4096 מכשירים מחוברים בו-זמנית ברשת אחת (Bluetooth בדרך כלל עד 8).</li>
+                        <li>SparkLink (SparkLink) היא טכנולוגיית תקשורת אלחוטית מהדור החדש שפותחה בהובלת Huawei, במטרה להחליף Bluetooth ו-Wi-Fi בתרחישים מסוימים. היא משווה ואף עולה על הפתרונות הקיימים במדדים מרכזיים: קצב נתונים באוויר של עד 900Mbps (הרבה מעבר ל-50Mbps של Bluetooth), השהיה נמוכה עד 20 μ s (Bluetooth כ-15ms), תמיכה בעד 4096 מכשירים מחוברים בו-זמנית ברשת אחת (Bluetooth בדרך כלל עד 8).</li>
                     </ul>
 
                     <h4 class="text-lg font-semibold mt-4 mb-2">מאפיינים טכניים:</h4>
@@ -6027,23 +6027,23 @@
                         </thead>
                         <tbody>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Boot</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר הרצת סקריפטים בעת אתחול המכשיר</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Float</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספק חלון טרמינל צף</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Styling</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר סכמות צבעים והתאמת גופנים לטרמינל</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Tasker</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">משלב סקריפטים של Termux עם אפליקציית האוטומציה Tasker</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Widget</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מאפשר הרצת סקריפטים מווידג'ט במסך הבית</td>
                             </tr>
                             <tr>
@@ -6084,7 +6084,7 @@
                     <p class="mb-2">מספק סביבת לינוקס אמיתית, פלטפורמה אידיאלית ללימוד שורת פקודה וניהול מערכת, ניתן לתרגל כתיבת סקריפטים ב-Shell, ניהול הרשאות קבצים ופקודות בסיסיות.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">🔐 בדיקות אבטחת רשת</h5>
-                    <p class="mb-2">Linux אמיתי, ללימוד Shell והרשאות ( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> הגדרת סיביות הרשאה rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> שינוי בעלות קובץ,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> הצגת owner/group/other 3 קבוצות 9 סיביות) ופקודות בסיסיות. זהו מודל ההרשאות הקלאסי של Unix/Linux (owner / group / other × קריאה / כתיבה / ביצוע), שונה לחלוטין מ-ACL של NTFS ב-Windows.</p>
+                    <p class="mb-2">Linux אמיתי, ללימוד Shell והרשאות ( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> הגדרת סיביות הרשאה rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user: group</code> שינוי בעלות קובץ,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> הצגת owner/group/other 3 קבוצות 9 סיביות) ופקודות בסיסיות. זהו מודל ההרשאות הקלאסי של Unix/Linux (owner / group / other × קריאה / כתיבה / ביצוע), שונה לחלוטין מ-ACL של NTFS ב-Windows.</p>
 
                     <h5 class="font-semibold mt-3 mb-1">שישה, גרסאות ותאימות</h5>
                     <p class="mb-2">הגרסה היציבה האחרונה של Termux היא v0.118.2, המיועדת למכשירי Android ≥ 7. חשוב לציין ש-Termux עלול להיות לא יציב ב-Android 12 ומעלה, מומלץ לעקוב אחר יומן העדכונים הרשמי למידע תאימות עדכני.</p>
@@ -6894,7 +6894,7 @@
                         </ul>
                     </div>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">ו. שאלות נפוצות (Q&amp;A)</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">ו. שאלות נפוצות (Q&amp; A)</h4>
 
                     <div class="qa-item mt-3">
                         <p class="font-semibold mb-1"><i class="fas fa-question-circle text-primary mr-1"></i>Q1: האם ניתן לשחזר לאחר פתיחת נעילת BL?</p>
@@ -7543,7 +7543,7 @@
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">👶 תלמיד</td>
                                     <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">יחס, עמיד, סוללה, בקרת הורים</td>
-                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo,realme GT,iQOO Neo</td>
+                                    <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Redmi Note/Turbo, realme GT, iQOO Neo</td>
                                 </tr>
                                 <tr>
                                     <td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">📱 Apple</td>
@@ -9830,11 +9830,11 @@ Record { id, amount, type, category, note, date }
   <div class="grid md:grid-cols-2 gap-3 my-3">
     <div class="border rounded-md p-3 border-t-4 border-t-red-500">
       <p class="vs-title">בסגנון Java (הגרסה הארוכה והמסורבלת)</p>
-      <p class="font-mono text-xs leading-relaxed">public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&nbsp;protected void onCreate(Bundle b) {<br>&nbsp;&nbsp;&nbsp;&nbsp;super.onCreate(b);<br>&nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity);<br>&nbsp;&nbsp;}<br>}</p>
+      <p class="font-mono text-xs leading-relaxed">public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&nbsp;protected void onCreate(Bundle b) {<br>&nbsp;&nbsp;&nbsp;&nbsp; super.onCreate(b);<br>&nbsp;&nbsp;&nbsp;&nbsp; setContentView(R.layout.activity);<br>&nbsp;&nbsp;}<br>}</p>
     </div>
     <div class="border rounded-md p-3 border-t-4 border-t-green-500">
       <p class="vs-title">בסגנון Kotlin (הגרסה הקלילה והברורה)</p>
-      <p class="font-mono text-xs leading-relaxed">class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(b: Bundle?) {<br>&nbsp;&nbsp;&nbsp;&nbsp;super.onCreate(b)<br>&nbsp;&nbsp;&nbsp;&nbsp;setContent { App() }<br>&nbsp;&nbsp;}<br>}</p>
+      <p class="font-mono text-xs leading-relaxed">class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(b: Bundle?) {<br>&nbsp;&nbsp;&nbsp;&nbsp; super.onCreate(b)<br>&nbsp;&nbsp;&nbsp;&nbsp;setContent { App() }<br>&nbsp;&nbsp;}<br>}</p>
     </div>
   </div>
   <p class="mb-2">אותה פעולה בדיוק — ו-Kotlin חוסכת המון סוגריים מסולסלים וקוד שגרתי. בפרק 50 נלמד אותה כראוי; לעת עתה פשוט זכרו: "השפה המדוברת" של פיתוח אנדרואיד נקראת Kotlin.</p>
@@ -10027,7 +10027,7 @@ val score: Int = 100     // אפשר גם לציין את הטיפוס במפו�
 val pi = 3.14            // גם בלי לכתוב אותו הוא יוסק אוטומטית</pre>
   </div>
   <p class="mb-2">הטיפוסים הנפוצים הם בודדים — טבלה אחת וזוכרים:</p>
-  <div class="overflow-x-auto"><table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">טיפוס</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מה שומרים</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">דוגמה</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Int</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספר שלם</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">42</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Double</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספר עשרוני</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.14</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">String</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טקסט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"שלום"</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Boolean</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אמת/שקר</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">true / false</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">List&lt;T&gt;</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">קבוצת נתונים</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">listOf(1, 2, 3)</td></tr></tbody></table></div>
+  <div class="overflow-x-auto"><table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">טיפוס</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">מה שומרים</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">דוגמה</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Int</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספר שלם</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">42</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Double</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">מספר עשרוני</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.14</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">String</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">טקסט</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"שלום"</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Boolean</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">אמת/שקר</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">true / false</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">List&lt; T&gt;</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">קבוצת נתונים</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">listOf(1, 2, 3)</td></tr></tbody></table></div>
   <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">הטיפוסים הבסיסיים הנפוצים ב-Kotlin</p>
   <div class="info-box rounded-lg p-4 mt-4">
     <p class="font-semibold">טיפ: עקרון val קודם כל</p>
@@ -10751,7 +10751,7 @@ suspend fun deleteById(id: Long)
   <p class="mb-2">לתרגול אישי מומלץ OpenWeatherMap או QWeather הסינית – לשניהם מכסה חינמית, נרשמים ומתחילים להשתמש מיד. ניקח לדוגמה את OpenWeatherMap:</p>
   <ol class="list-decimal pl-6 mb-3 space-y-1">
     <li>נרשמים לחשבון → יוצרים Key (apikey) בעמוד API keys;</li>
-    <li>בגרסה החינמית אפשר לקרוא לממשק Current Weather (מזג האוויר הנוכחי): api.openweathermap.org/data/2.5/weather?q=beijing&appid=YOUR_KEY&units=metric;</li>
+    <li>בגרסה החינמית אפשר לקרוא לממשק Current Weather (מזג האוויר הנוכחי): api.openweathermap.org/data/2.5/weather? q=beijing&appid=YOUR_KEY&units=metric;</li>
     <li>קודם כול נסו פעם אחת בדפדפן ותראו איך נראה ה-JSON שמוחזר – זהו "תרגול מקדים" שחובה לעשות לפני חיבור לכל API.</li>
   </ol>
   <div class="danger-box rounded-lg p-4 mt-4">
@@ -11118,7 +11118,7 @@ if (ActivityCompat.checkSelfPermission(this,
 
     <h4 class="text-lg font-semibold mt-4 mb-2">ד' עיון מהיר: פקודות Gradle נפוצות</h4>
   <p class="mb-2">בדרך כלל מספיקה לחיצה על כפתור, אך לעיתים שורת הפקודה יעילה יותר (במיוחד בשילוב עם כלי AI או צינורות CI):</p>
-  <div class="overflow-x-auto"><table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פקודה</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תפקיד</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew assembleDebug</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לבנות APK גרסת דיבוג (ב-Windows משמיטים את ./)</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew assembleRelease</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לבנות גרסת הפצה (דרושה הגדרת חתימה)</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew test</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הרצת כל בדיקות היחידה</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew lint</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בדיקה סטטית: איתור באגים פוטנציאליים וקוד לא תקני</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew clean</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ניקוי תוצרי הבנייה (הגרסה המהודרת של "הפעלה מחדש")</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew :app:dependencies</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הצגת עץ התלויות (כלי קסם לאיתור התנגשויות בין גרסאות)</td></tr></tbody></table></div>
+  <div class="overflow-x-auto"><table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">פקודה</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">תפקיד</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew assembleDebug</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לבנות APK גרסת דיבוג (ב-Windows משמיטים את ./)</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew assembleRelease</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">לבנות גרסת הפצה (דרושה הגדרת חתימה)</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew test</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הרצת כל בדיקות היחידה</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew lint</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">בדיקה סטטית: איתור באגים פוטנציאליים וקוד לא תקני</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew clean</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ניקוי תוצרי הבנייה (הגרסה המהודרת של "הפעלה מחדש")</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">./gradlew :app: dependencies</code></td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">הצגת עץ התלויות (כלי קסם לאיתור התנגשויות בין גרסאות)</td></tr></tbody></table></div>
   <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">מדריך מהיר לפקודות Gradle הנפוצות</p>
   <div class="info-box rounded-lg p-4 mt-4">
     <p class="font-semibold">טיפ: אם הבנייה משתבשת, התחילו ב-clean</p>
@@ -12120,7 +12120,7 @@ class RecordViewModel {
   <p class="mb-2">לתרגול אישי מומלצים OpenWeatherMap או השירות הסיני QWeather (HeFeng) — לשניהם מכסה חינמית, ואפשר להתחיל מיד אחרי הרשמה. נדגים עם OpenWeatherMap:</p>
   <ol class="list-decimal pl-6 mb-3 space-y-1">
     <li>נרשמים לחשבון → יוצרים מפתח (apikey) בעמוד API keys;</li>
-    <li>בגרסה החינמית אפשר לקרוא ל-Current Weather: api.openweathermap.org/data/2.5/weather?q=beijing&appid=המפתח-שלך&units=metric;</li>
+    <li>בגרסה החינמית אפשר לקרוא ל-Current Weather: api.openweathermap.org/data/2.5/weather? q=beijing&appid=המפתח-שלך&units=metric;</li>
     <li>קודם נסו פעם אחת בדפדפן וראו איך נראה ה-JSON שחוזר — זו "ההכנה המוקדמת" שחובה לעשות לפני חיבור לכל API.</li>
   </ol>
   <div class="danger-box rounded-lg p-4 mt-4">
