@@ -25,3 +25,8 @@ latex/*.lot
 latex/*.pdf
 latex/*.txt
 latex/smoke*
+
+# 各语言 LaTeX 产物目录（bookkit latex --out latex/<lang> 生成，体积大不入库；
+# 只保留根目录 latex/ 的 zh 源稿与产物）
+latex/*/
+scripts/_*.py

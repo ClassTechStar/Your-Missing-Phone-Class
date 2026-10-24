@@ -51,6 +51,8 @@ def clean(text: str) -> str:
     t = RE_EMOJI.sub('', t)
     t = re.sub(r'\s*\n\s*', ' ', t)
     t = re.sub(r'[ \t]{2,}', ' ', t)
+    # 窄不换行空格等特殊空格：西文字体缺字形，统一为普通空格
+    t = re.sub(r'[\u00a0\u202f\u2009\u200a\u2007\u2028\u2029]', ' ', t)
     return symbols(esc(t.strip()))
 
 
@@ -82,6 +84,7 @@ SYMBOL_MAP['\u00b1'] = '$\\pm$'                   # ±
 SYMBOL_MAP['\u03bc'] = '$\\mu$'                   # μ
 SYMBOL_MAP['\u2248'] = '$\\approx$'               # ≈
 SYMBOL_MAP['\u221e'] = '$\\infty$'                # ∞
+SYMBOL_MAP['\u30fb'] = '\u00b7'                  # ・ (SimSun 缺字形)
 SYMBOL_MAP['\ufe0f'] = ''                          # 变体选择符
 
 
@@ -126,7 +129,11 @@ def inline(node, out: list) -> None:
         return
     if tag == 'code':
         out.append(r'\texttt{')
-        out.append(clean(node.text()))
+        # 长标识符（com.android.settings 等）在 . - _ / 后允许断行；
+        # 跳过转义序列（\_ 等）内部，避免拆坏命令
+        code = clean(node.text())
+        code = re.sub(r'(?<!\\)([._/-])', r'\1\\allowbreak ', code)
+        out.append(code)
         out.append('}')
         return
     if tag == 'br':
@@ -339,7 +346,7 @@ def blocks(node, ctx) -> list:
             return []
         text = pair_quotes(text)
         if 'font-mono' in classes:
-            return _mono_paragraph(node)
+            return [_mono_paragraph(node)]
         if 'chapter-intro' in classes:
             return [r'\chapterintro{' + text + '}']
         if 'font-semibold' in classes:
@@ -491,6 +498,15 @@ PARTS_LABEL = {
     'fu-lu': '附录',
 }
 
+# 非中文语言的连字支持（babel；不在表内的语言靠 \emergencystretch 兜底）
+LANG_BABEL = {
+    'de': 'german', 'ru': 'russian', 'el': 'greek', 'fr': 'french',
+    'es': 'spanish', 'it': 'italian', 'pt': 'portuguese', 'id': 'indonesian',
+    'vi': 'vietnamese',
+}
+# babel 简写符会误伤正文标点（德语 "、法语 ;:!?!），加载后关闭
+LANG_SHORTHANDS_OFF = {'de': '"'}
+
 
 def _flatten(items):
     """把嵌套列表摊平为字符串序列（防御性，抵住各分支返回类型不一致）。"""
@@ -533,6 +549,18 @@ def build(root: Path, out_dir: Path = None, lang: str = 'zh-CN',
         if 'content-section' in n.classes:
             sections[n.get('id')] = n
 
+    # 篇标题取自 HTML（各语言自己的翻译），zh PARTS_LABEL 仅作兜底
+    part_ids = {p['id'] for p in book['parts']}
+    part_titles = {}
+    for n in tree.find_all('section'):
+        if n.get('id') in part_ids:
+            h2 = n.find('h2')
+            if h2 is not None:
+                t = re.sub(r'\s+', ' ',
+                           html_mod.unescape(h2.text())).strip()
+                if t:
+                    part_titles[n.get('id')] = t
+
     ctx = {'figure_seq': 0, 'chapter_id': 'x', 'kind': 'chapter', 'top': r'\chapter',
            'figures_dir': out / 'figures', 'svg_converter': make_svg_converter()}
 
@@ -568,6 +596,13 @@ def build(root: Path, out_dir: Path = None, lang: str = 'zh-CN',
     lines.append(r'\usepackage{fancyhdr}')
     lines.append(r'\usepackage[colorlinks=true,linkcolor=black,urlcolor=blue,citecolor=black]{hyperref}')
     lines.append(r'\usepackage{titlesec}')
+    babel = LANG_BABEL.get(lang)
+    if babel:
+        lines.append(r'\usepackage[' + babel + r']{babel}')
+    lines.append('')
+    # 非中文语言的断行韧性：允许行距放宽换取消溢出（de/ru 长复合词等）
+    lines.append(r'\setlength{\emergencystretch}{3em}')
+    lines.append(r'\tolerance=2000')
     lines.append('')
     # 版式
     lines.append(r'\setCJKmainfont[BoldFont=SimHei,ItalicFont=KaiTi]{SimSun}')
@@ -617,7 +652,18 @@ def build(root: Path, out_dir: Path = None, lang: str = 'zh-CN',
     lines.append(r'\lstdefinelanguage{TypeScript}{keywords={function,const,let,var,if,else,return,for,while,class,interface,type,import,export,from,async,await,new,try,catch,typeof,null,true,false,this,undefined,enum,implements,extends},sensitive=true,comment=[l]{//},morecomment=[s]{/*}{*/},morestring=[b]",morestring=[b]\',morestring=[b]`}')
     lines.append('')
     title = book.get('title', '你缺失的那门手机课')
-    lines.append(r'\title{' + esc(title) + r'\\ \large ' + version + r'}')
+    # 书名优先取 manifest 的各语言书名（如 ja「スマホ攻略 V1.8」）
+    manifest_path = root / 'manifest' / 'languages.json'
+    if manifest_path.exists():
+        try:
+            mf = json.loads(manifest_path.read_text(encoding='utf-8'))
+            t = (mf.get('language_descriptions', {}).get(version, {}) or {}).get(lang)
+            if t:
+                title = t
+        except Exception:
+            pass
+    title_has_ver = version in title
+    lines.append(r'\title{' + esc(title) + ('' if title_has_ver else r'\\ \large ' + version) + r'}')
     lines.append(r'\author{ClassTechStar}')
     lines.append(r'\date{}')
     lines.append('')
@@ -625,14 +671,18 @@ def build(root: Path, out_dir: Path = None, lang: str = 'zh-CN',
     lines.append(r'  pdfauthor={ClassTechStar},pdfcreator={XeLaTeX + ctex},')
     lines.append(r'  pdfsubject={69 章 + 8 附录的智能手机使用指南},bookmarksnumbered=true}')
     lines.append(r'\begin{document}')
+    if lang in LANG_SHORTHANDS_OFF:
+        lines.append(r'\shorthandoff{' + LANG_SHORTHANDS_OFF[lang] + '}')
     lines.append(r'\begin{titlepage}')
     lines.append(r'\centering')
     lines.append(r'\vspace*{0.28\textheight}')
     lines.append(r'{\Huge\bfseries ' + esc(title) + r'\par}')
-    lines.append(r'\vspace{1.2em}')
-    lines.append(r'{\Large ' + version + r'\par}')
-    lines.append(r'\vspace{3em}')
-    lines.append(r'{\large 69 章 + 8 附录 \quad 从零基础到 App 开发者\par}')
+    if not title_has_ver:
+        lines.append(r'\vspace{1.2em}')
+        lines.append(r'{\Large ' + version + r'\par}')
+    if lang == 'zh-CN':
+        lines.append(r'\vspace{3em}')
+        lines.append(r'{\large 69 章 + 8 附录 \quad 从零基础到 App 开发者\par}')
     lines.append(r'\vfill')
     lines.append(r'{\large ClassTechStar\par}')
     lines.append(r'\end{titlepage}')
@@ -645,7 +695,8 @@ def build(root: Path, out_dir: Path = None, lang: str = 'zh-CN',
         pid = ch.get('part') or ch.get('after_part')
         if pid and pid != current_part:
             current_part = pid
-            label = PARTS_LABEL.get(pid) or (parts.get(pid, {}).get('nav', pid))
+            label = (part_titles.get(pid) or PARTS_LABEL.get(pid)
+                     or (parts.get(pid, {}).get('nav', pid)))
             if pid == 'fu-lu':
                 lines.append(r'\appendix')
             lines.append(r'\part*{' + esc(label) + '}')
