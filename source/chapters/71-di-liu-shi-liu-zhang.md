@@ -17,7 +17,7 @@ kind: chapter
 个人练手，推荐 <strong>OpenWeatherMap</strong> 或国内的 <strong>和风天气（QWeather）</strong>——都有免费额度，注册即用。以 OpenWeatherMap 为例：
 
 1. 注册账号 → 在 API keys 页面生成一个 Key（<code class="inline">apikey</code>）；
-2. 免费版可调用 Current Weather 接口：<code class="inline">api.openweathermap.org/data/2.5/weather?q=beijing&appid=你的Key&units=metric</code>；
+2. 免费版可调用 Current Weather 接口：<code class="inline">api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric</code>；
 3. 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的"预习"。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4

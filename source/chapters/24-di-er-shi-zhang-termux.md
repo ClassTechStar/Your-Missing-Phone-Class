@@ -57,23 +57,23 @@ Termux的核心应用程序可以通过几个可选的插件应用进行扩展�
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">向命令行程序公开Android API功能</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Boot</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允许在设备启动时运行脚本</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Float</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提供浮动终端窗口</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Styling</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">为终端启用颜色方案和字体自定义</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Tasker</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">将Termux脚本与Tasker自动化应用集成</td>
                             </tr>
                             <tr>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux: Widget</td>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允许从主屏幕小部件运行脚本</td>
                             </tr>
                         </tbody>
@@ -115,7 +115,7 @@ Termux及其插件必须从同一来源安装，因为它们共享相同的share
 
 ##### 📚 学习Linux操作
 
-提供真实的Linux环境，是学习命令行和系统管理的理想平台，可练习Shell脚本编写、Linux文件权限管理（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> 设置 rwxr-xr-x 权限位、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> 修改文件归属、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> 查看 owner/group/other 三组九位权限）等基础命令。注意这是Unix/Linux经典的"三组九位"权限模型（owner / group / other × 读 / 写 / 执行），与Windows NTFS的ACL访问控制列表是完全不同的两套体系。
+提供真实的Linux环境，是学习命令行和系统管理的理想平台，可练习Shell脚本编写、Linux文件权限管理（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> 设置 rwxr-xr-x 权限位、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user: group</code> 修改文件归属、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> 查看 owner/group/other 三组九位权限）等基础命令。注意这是Unix/Linux经典的"三组九位"权限模型（owner / group / other × 读 / 写 / 执行），与Windows NTFS的ACL访问控制列表是完全不同的两套体系。
 
 ##### 🔐 网络安全测试
 

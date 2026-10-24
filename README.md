@@ -117,8 +117,8 @@ python -m bookkit i18n --report coverage.md
 ## 已知问题
 
 - **v1.7 六种语言缺章**：`it` / `ko` / `pt` / `ru` / `yue` / `zh-TW` 的 v1.7 版本仅含 51 个内容区块（其余语言为 56），缺第 37–41 章；请阅读 [v1.8](v1.8/) 对应语言版获取完整内容。
-- **v1.6 缺章**：`yue` 缺第一章及两个附章，`he` 缺第二十三章。
-- **v1.7/lzh.html 文件损坏**：含 NUL 字节，文言文版请阅读 [v1.8/lzh.html](v1.8/lzh.html) 或 [v1.5/lzh.html](v1.5/lzh.html)。
+- **v1.6 缺章**：`yue` 缺第一章及两个附章，`he` 缺第二十三章，`ru` 缺第四、十三章。
+- **v1.7/lzh.html 历史损坏**：早期版本含 NUL 字节（已清理），历史上章节标题受损，文言文版推荐阅读 [v1.8/lzh.html](v1.8/lzh.html)。
 - **工具链已重建**：`bookkit` 取代了被删除的 `scripts/*.py`，CI 由"仅 v1.8 内联脚本"升级为
   "全版本矩阵 + 宣称值校验 + 构建等价性"，用法见 [scripts/README.md](scripts/README.md)。
 - **构建仅覆盖简体中文源稿**：其余 18 种语言仍以 `v1.8/<语言>.html` 成品为准，由 `bookkit lint` 与

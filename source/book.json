@@ -205,18 +205,17 @@
     {
       "id": "er-tong-pian",
       "group": "er-tong-pian",
-      "nav": "儿童与手机专题（第35章）",
+      "nav": "儿童与手机专题（第35-36章）",
       "short": "儿童与手机专题",
       "file": "parts/06-er-tong-pian.md",
       "open_tag": "<section id=\"er-tong-pian\" class=\"mb-12\">",
       "toc_comment": "<!-- 儿童与手机专题（第35章） -->",
       "comment": "<!-- 儿童与手机专题（第35章） -->",
       "chapters": [
-        "di-san-shi-wu-zhang"
-      ],
-      "orphans": [
+        "di-san-shi-wu-zhang",
         "di-san-shi-liu-zhang"
       ],
+      "orphans": [],
       "toc": [
         "di-san-shi-wu-zhang",
         "di-san-shi-liu-zhang"
@@ -704,8 +703,8 @@
     {
       "id": "di-san-shi-liu-zhang",
       "file": "chapters/41-di-san-shi-liu-zhang.md",
-      "part": "",
-      "after_part": "er-tong-pian",
+      "part": "er-tong-pian",
+      "after_part": "",
       "kind": "chapter",
       "comment": "<!-- 第三十六章：手机与智能家居——让家变聪明 -->"
     },

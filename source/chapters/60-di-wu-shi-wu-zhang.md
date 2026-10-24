@@ -17,7 +17,7 @@ kind: chapter
 个人练手，推荐 <strong>OpenWeatherMap</strong> 或国内的 <strong>和风天气（QWeather）</strong>——都有免费额度，注册即用。以 OpenWeatherMap 为例：
 
 1. 注册账号 → 在 API keys 页面生成一个 Key（<code class="inline">apikey</code>）；
-2. 免费版可调用 Current Weather（当前天气）接口：<code class="inline">api.openweathermap.org/data/2.5/weather?q=beijing&appid=你的Key&units=metric</code>；
+2. 免费版可调用 Current Weather（当前天气）接口：<code class="inline">api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric</code>；
 3. 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的"预习"。
 
 ::: div .danger-box .rounded-lg .p-4 .mt-4
@@ -141,8 +141,6 @@ fun WeatherContent(data: WeatherResponse) {
 几个小细节值得学：<code class="inline">firstOrNull()</code> 安全取第一个元素（列表可能为空），<code class="inline">?: "未知"</code> 给兜底文案——空安全原则在界面里同样适用。温度用 <code class="inline">72.sp</code> 的大字号撑场面，"轻"字重（Light）让数字显得优雅，这是天气类 App 的经典配方。
 
 #### 五、界面与交互细节
-
-#### 四、界面与交互细节
 
 - <strong>搜索框</strong>：顶部 TextField，输城市名点搜索（键盘上设"搜索"动作，回车即搜）；
 - <strong>天气卡片</strong>：大字号温度（26.5°）、天气描述（晴）、湿度、城市名；

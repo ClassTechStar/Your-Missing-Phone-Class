@@ -1513,7 +1513,7 @@
                     <!--兒童與手機專題（第35章）-->
                     <li class="toc-parent" data-group="er-tong-pian">
                         <div class="flex items-center justify-between w-full px-3 py-2 rounded-md group/toc">
-                            <a href="#er-tong-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">兒童與手機專題（第35章）</a>
+                            <a href="#er-tong-pian" class="flex-1 text-gray-700 dark:text-gray-300 font-medium group-hover/toc:text-primary transition-colors">兒童與手機專題（第35-36章）</a>
                             <button class="toc-toggle-btn" type="button" aria-label="展開/收起兒童與手機專題" data-target="child-er-tong-pian">
                                 <i class="fas fa-chevron-down toc-toggle-icon text-xs transition-transform duration-300"></i>
                             </button>
@@ -2815,7 +2815,7 @@
                         <li><strong>身份驗證</strong>：NFC身份證讀取、電子駕照驗證。</li>
                     </ul>
 
-                    <h4 class="text-lg font-semibold mt-4 mb-2">五、個人熱點：把手機變Wi-Fi路由器</h4>
+                    <h4 class="text-lg font-semibold mt-4 mb-2">六、個人熱點：把手機變Wi-Fi路由器</h4>
                     <p class="mb-2">自己流量多時，可以開熱點給平板、電腦用。</p>
                     <ul class="list-disc pl-6 mb-3 space-y-1">
                         <li><strong>開啟方法</strong>：設定 > 個人熱點/網路共享，開啟它。</li>
@@ -8271,7 +8271,7 @@
 
             <!-- 兒童與手機專題（第35章） -->
             <section id="er-tong-pian" class="mb-12">
-                <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">兒童與手機專題（第35章）</h2>
+                <h2 class="text-2xl font-bold text-dark dark:text-gray-200 mb-6 pb-2 border-b-2 border-primary">兒童與手機專題（第35-36章）</h2>
                 <p class="chapter-intro mb-4">孩子和手機的關係，是這一代父母最頭疼的難題之一。給早了怕上癮，給晚了怕脫節；管多了怕逆反，管少了怕失控。這一章不站隊、不說教，只把"幾歲給、怎麼管、怎麼教、怎麼護"拆解成可執行的步驟，幫你在數字時代做個有底氣的家長。</p>
 
                 <!-- 第三十五章 -->
@@ -8419,9 +8419,8 @@
                         </ul>
                     </div>
                 </div>
-            </section>
-
-            <!-- 第三十六章：手機與智慧家居——讓家變聰明 -->
+            
+                        <!-- 第三十六章：手機與智慧家居——讓家變聰明 -->
             <div id="di-san-shi-liu-zhang" class="mb-10 content-section">
                 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第三十六章：手機與智慧家居——讓家變聰明</h3>
                 <p class="chapter-intro mb-4">手機還能幹一件越來越重要的事——當整個家的"遙控器"。從一盞燈、一個插座到一把門鎖，智慧家居正在從"極客玩具"變成"家常配置"。這一章幫你理清協議、生態、中樞和入門套件，再用一份安全清單收尾，讓你不被"智慧"反噬。</p>
@@ -8536,6 +8535,9 @@
                     </ul>
                 </div>
             </div>
+            </section>
+
+
 
             <!-- 十、附錄 -->
             
@@ -10129,7 +10131,7 @@ val bigBills = bills.filter { it > 50 }.sorted()
   </div>
   <p class="mb-2">幾個高頻"集合連招"記一下：filter（篩選）、map（變換）、sorted（排序）、sum（求和）。你未來 90% 的列表處理，都是這四招的組合。Kotlin 的哲學就是：能用一句話說清楚的邏輯，絕不寫五句。</p>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">七、寫給零基礎的語法速查卡</h4><h4 class="text-lg font-semibold mt-4 mb-2">IGNORED</h4>
+  <h4 class="text-lg font-semibold mt-4 mb-2">七、寫給零基礎的語法速查卡</h4>
   <p class="mb-2">別試圖一天背完所有語法。把這張卡存下來，寫程式碼時對照著查，兩週後自然就熟了：</p>
   <div class="overflow-x-auto"><table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要做什麼</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">寫法</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定義只讀變數</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">val x = 1</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定義可變變數</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">var x = 1</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定義函式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">fun 名字(引數): 返回型別 { ... }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">判斷</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">if (條件) {...} else {...}</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多分支</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">when { 條件 -> 結果 }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">遍歷</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">for (x in 列表) { ... }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">字串拼接</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"你好，$name"</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">處理可空</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">x?.length ?: 0</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">定義資料類</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">data class X(val a: Int, val b: String)</code></td></tr></tbody></table></div>
   <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Kotlin 語法速查卡（新手版）</p>
@@ -10533,7 +10535,7 @@ data class WeatherResponse(
   </div>
   <p class="mb-2">無論哪種方案，鐵律都是：先看真實返回的 JSON，再定義欄位。很多"解析失敗"的 bug，都是因為欄位名寫錯、巢狀層級猜錯——把原始 JSON 列印出來對照，十秒定位。</p>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">六、協程：安卓併發的"普通話"</h4><h4 class="text-lg font-semibold mt-4 mb-2">五、協程：安卓併發的"普通話"</h4>
+  <h4 class="text-lg font-semibold mt-4 mb-2">六、協程：安卓併發的"普通話"</h4>
   <p class="mb-2">上面反覆出現的 suspend 和 launch 來自 Kotlin 協程（Coroutine）——安卓官方的併發方案。你可以粗暴地理解為：讓"要等一會兒"的操作（網路、資料庫）不阻塞介面。</p>
   <div class="code-block">
     <div class="code-head"><span>KOTLIN · 協程初體驗</span><span class="dots">···</span></div>
@@ -10709,7 +10711,7 @@ suspend fun deleteById(id: Long)
   </div>
   <p class="mb-2">互動細節兩條經驗：刪除必須二次確認（防止手滑），編輯儘量預填原值（改一個字比重新輸入省事）。別小看這兩個細節——產品感就是這些細節堆出來的。</p>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">六、驗收：三層檢查 + 兩個進階挑戰</h4>  <h4 class="text-lg font-semibold mt-4 mb-2">五、驗收：三層檢查 + 兩個進階挑戰</h4>
+    <h4 class="text-lg font-semibold mt-4 mb-2">六、驗收：三層檢查 + 兩個進階挑戰</h4>
   <p class="mb-2">專案做完，按"功能 → 邊界 → 架構"三層驗收：能不能記、能不能刪、重開 App 資料還在不在（功能）；金額輸 0 或負數會不會崩、轉屏會不會丟資料（邊界）；介面和資料有沒有混在一起、欄位有沒有硬編碼（架構）。</p>
   <p class="mb-2">基礎版驗收透過後，給自己加兩道"進階菜"：</p>
   <ol class="list-decimal pl-6 mb-3 space-y-1">
@@ -10839,7 +10841,7 @@ fun WeatherContent(data: WeatherResponse) {
   </div>
   <p class="mb-2">幾個小細節值得學：firstOrNull() 安全取第一個元素（列表可能為空），?: "未知" 給兜底文案——空安全原則在介面裡同樣適用。溫度用 72.sp 的大字號撐場面，"輕"字重（Light）讓數字顯得優雅，這是天氣類 App 的經典配方。</p>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">五、介面與互動細節</h4><h4 class="text-lg font-semibold mt-4 mb-2">四、介面與互動細節</h4>
+  <h4 class="text-lg font-semibold mt-4 mb-2">五、介面與互動細節</h4>
   <ul class="list-disc pl-6 mb-3 space-y-1">
     <li>搜尋框：頂部 TextField，輸城市名點搜尋（鍵盤上設"搜尋"動作，回車即搜）；</li>
     <li>天氣卡片：大字號溫度（26.5°）、天氣描述（晴）、溼度、城市名；</li>
@@ -10954,7 +10956,7 @@ fun normalValueParses() {
     <p class="mt-1">上架前逛一圈商店裡同類 App 的前十名，截圖對比：他們圖示什麼風格？截圖講什麼賣點？標題怎麼寫？模仿不是抄襲——學套路、換自己的內容，這是所有產品冷啟動最快的一課。</p>
   </div>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">五、效能最佳化與崩潰上報小清單</h4>
+  <h4 class="text-lg font-semibold mt-4 mb-2">六、效能最佳化與崩潰上報小清單</h4>
   <p class="mb-2">App 上架前，這兩件事值得各花半小時：</p>
   <h5 class="font-semibold mt-3 mb-1">1. 效能自查四條</h5>
   <ol class="list-decimal pl-6 mb-3 space-y-1">
@@ -11117,7 +11119,7 @@ if (ActivityCompat.checkSelfPermission(this,
     <p class="mt-1">"昨天還能跑今天就不行"的靈異事件，十有六七是構建快取錯亂。./gradlew clean 之後重新構建，能治癒一大半玄學問題。還不行再重啟 Android Studio——這招請配合 File → Invalidate Caches 一起服用。</p>
   </div>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">五、結語：從第一個 App 到第 N 個 App</h4><h4 class="text-lg font-semibold mt-4 mb-2">四、結語：從第一個 App 到第 N 個 App</h4>
+  <h4 class="text-lg font-semibold mt-4 mb-2">五、結語：從第一個 App 到第 N 個 App</h4>
   <p class="mb-2">回頭看，你從"不知道 Activity 是什麼"，到裝好環境、學會 Kotlin、用 Compose 畫出介面、給 App 接上資料庫和網路，再到測試、打包、上架——這條路上你已經走完了從零到一最難的一段。</p>
   <p class="mb-2">技術的世界變化很快：框架會升級，工具會換代，AI 會接手越來越多"敲鍵盤"的活。但有一樣東西不會過時：你把一個模糊的想法，拆解成清晰的步驟，再一步步實現它的能力。工具是放大器，思路是地基。放大器可以替換，地基不能動搖。</p>
   <div class="quote-line">你不再只是"會玩手機的人"。你能把腦海裡的想法，變成三億安卓裝置上真實執行的 App。從今天開始，用鍵盤去創造——這就是安卓開發者的浪漫。</div>
@@ -11295,7 +11297,7 @@ name += "你好"
     <li>Target 設定：點左側藍色工程圖示進去，版本號、最低 iOS 版本、簽名都在裡面。App 顯示名、圖示也在這配置。</li>
   </ul>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">五、真機除錯：把 App 裝進你的 iPhone</h4>  <h4 class="text-lg font-semibold mt-4 mb-2">五、Xcode 效率技巧：新手的五個"快速鍵外掛"</h4>
+    <h4 class="text-lg font-semibold mt-4 mb-2">五、Xcode 效率技巧：新手的五個"快速鍵外掛"</h4>
   <p class="mb-2">用熟這幾個，你會顯得"很專業"：</p>
   <div class="overflow-x-auto"><table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">操作</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">快速鍵</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">作用</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">執行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">⌘R</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">編譯並跑起來</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開啟/切換畫布預覽</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">⌥⌘↩</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">所見即所得的開關</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">格式化縮排</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">⌃I</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自動整理選中程式碼的縮排</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快速開啟檔案</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">⇧⌘O</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">輸入檔名秒開（最常用！）</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">註釋/取消註釋</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">⌘/</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">除錯時隨手開關程式碼</td></tr></tbody></table></div>
   <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Xcode 高頻快速鍵（新手五件套）</p>
@@ -11314,7 +11316,7 @@ name += "你好"
     <p class="mt-1">免費 Apple ID 簽署的 App 7 天後會失效（重新執行一次即可續期）。這是蘋果的防濫用機制，學習階段完全夠用；付費開發者帳號（99 美元/年）則沒有這個限制，第 67 章會細說。</p>
   </div>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">七、小試牛刀 + 常見報錯急救</h4><h4 class="text-lg font-semibold mt-4 mb-2">六、小試牛刀 + 常見報錯急救</h4>
+  <h4 class="text-lg font-semibold mt-4 mb-2">七、小試牛刀 + 常見報錯急救</h4>
   <p class="mb-2">開啟 ContentView.swift，把 Text("Hello, world!") 裡的字換成你的名字，按 ⌘R 重新執行——幾秒後模擬器上就顯示你的名字。恭喜，你完成了第一次完整的"改程式碼 → 編譯 → 安裝 → 執行"迴圈。</p>
   <div class="overflow-x-auto"><table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">報錯現象</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常見原因</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">解藥</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Signing 報錯</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Team 沒選、證書過期</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Target → Signing 裡勾上你的帳號；免費帳號重跑一次</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模擬器黑屏/打不開</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">映象損壞</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">選單 Device → Erase All Content；或刪掉重加模擬器</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 下載慢/裝不上</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Store 網路波動</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">換時段；或到蘋果開發者網站下載 .xip 離線包</td></tr></tbody></table></div>
   <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">新手環境報錯急救表</p>
@@ -12523,7 +12525,7 @@ func scheduleDailyReminder() {
     <p class="mt-1">"昨天還能跑今天就不行"的靈異事件，十有六七是構建快取錯亂。⇧⌘K 清理後重新構建，能治癒一大半玄學問題。還不行就重啟 Xcode（連 Mac 一起），再不行就"刪掉 DerivedData 資料夾"——這是 iOS 開發者口口相傳的終極三連。</p>
   </div>
 
-  <h4 class="text-lg font-semibold mt-4 mb-2">四、推薦學習資源</h4><h4 class="text-lg font-semibold mt-4 mb-2">三、推薦學習資源</h4>
+  <h4 class="text-lg font-semibold mt-4 mb-2">四、推薦學習資源</h4>
   <div class="overflow-x-auto"><table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">型別</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">資源</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">推薦理由</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">developer.apple.com</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蘋果官方文件，SwiftUI/Swift 教學都在裡面，第一權威</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple 的 SwiftUI Tutorials</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方手把手課程，新手友好度滿分</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Swift 官網 (swift.org)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">語言官方文件與線上演練場</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">社群</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Hacking with Swift</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Paul Hudson 的免費教學庫，品質公認第一梯隊</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">社群</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Stack Overflow (swiftui 標籤)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">報錯求救第一站</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">影片</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple Developer 官方頻道（WWDC 影片）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每年新技術的權威講解</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設計</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple 人機介面指南（HIG）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">做出"蘋果味"介面的官方聖經</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">配套</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第七篇《AI程式設計實戰篇》（第37-47章）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用 AI 輔助 iOS 開發的完整心法</td></tr></tbody></table></div>
   <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">iOS 開發學習資源清單（2026 年 8 月）</p>
 

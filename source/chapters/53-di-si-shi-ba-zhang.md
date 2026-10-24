@@ -49,7 +49,7 @@ kind: chapter
 <i class="fas fa-times-circle mr-1"></i> Java 风格（啰嗦版）
 
 {class="font-mono text-xs leading-relaxed"}
-public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&nbsp;protected void onCreate(Bundle b) {<br>&nbsp;&nbsp;&nbsp;&nbsp;super.onCreate(b);<br>&nbsp;&nbsp;&nbsp;&nbsp;setContentView(R.layout.activity);<br>&nbsp;&nbsp;}<br>}
+public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&nbsp;protected void onCreate(Bundle b) {<br>&nbsp;&nbsp;&nbsp;&nbsp; super.onCreate(b);<br>&nbsp;&nbsp;&nbsp;&nbsp; setContentView(R.layout.activity);<br>&nbsp;&nbsp;}<br>}
 :::
 
 ::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
@@ -57,7 +57,7 @@ public class MainActivity extends Activity {<br>&nbsp;&nbsp;@Override<br>&nbsp;&
 <i class="fas fa-check-circle mr-1"></i> Kotlin 风格（清爽版）
 
 {class="font-mono text-xs leading-relaxed"}
-class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(b: Bundle?) {<br>&nbsp;&nbsp;&nbsp;&nbsp;super.onCreate(b)<br>&nbsp;&nbsp;&nbsp;&nbsp;setContent { App() }<br>&nbsp;&nbsp;}<br>}
+class MainActivity : ComponentActivity() {<br>&nbsp;&nbsp;override fun onCreate(b: Bundle?) {<br>&nbsp;&nbsp;&nbsp;&nbsp; super.onCreate(b)<br>&nbsp;&nbsp;&nbsp;&nbsp;setContent { App() }<br>&nbsp;&nbsp;}<br>}
 :::
 :::
 

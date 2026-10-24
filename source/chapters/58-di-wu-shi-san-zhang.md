@@ -170,8 +170,6 @@ data class WeatherResponse(
 
 #### 六、协程：安卓并发的"普通话"
 
-#### 五、协程：安卓并发的"普通话"
-
 上面反复出现的 <code class="inline">suspend</code> 和 <code class="inline">launch</code> 来自 Kotlin 协程（Coroutine）——安卓官方的并发方案。你可以粗暴地理解为：<strong>让"要等一会儿"的操作（网络、数据库）不阻塞界面</strong>。
 
 ::: div .code-block

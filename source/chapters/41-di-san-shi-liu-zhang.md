@@ -1,10 +1,10 @@
 ---
 id: di-san-shi-liu-zhang
 num: 36
+part: er-tong-pian
 nav: 第三十六章：手机与智能家居——让家变聪明
 toc: default
 kind: chapter
-after_part: er-tong-pian
 ---
 
 ### 第三十六章：手机与智能家居——让家变聪明
