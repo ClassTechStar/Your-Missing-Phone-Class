@@ -2,7 +2,11 @@
 
 用法：
   python -m bookkit build --lang zh-CN --out dist/v1.8/zh-CN.html
+  python -m bookkit build --lang en    --out v1.8/en.html   # 翻译源稿
   python -m bookkit build --lang zh-CN --verify      # 与已发布成品做等价性比对
+
+语言解析：zh-CN 用 source/book.json；其余语言用
+source/translations/<lang>/book.json（缺省回退主源稿）。
 """
 
 import json
@@ -12,6 +16,18 @@ from pathlib import Path
 from . import markdown as M
 
 DEFAULT_BOOK = 'source/book.json'
+TRANSLATIONS = 'source/translations'
+
+
+def book_path_for(root: Path, lang: str, book_path: Path = None) -> Path:
+    """按语言解析 book.json 路径。显式传入 book_path 时优先。"""
+    if book_path:
+        return Path(book_path)
+    if lang and lang != 'zh-CN':
+        cand = root / TRANSLATIONS / lang / 'book.json'
+        if cand.is_file():
+            return cand
+    return root / DEFAULT_BOOK
 
 TOC_HEAD = '{comment}\n' \
            '                    <li class="toc-parent" data-group="{group}">\n' \
@@ -38,8 +54,8 @@ class BookError(RuntimeError):
     pass
 
 
-def load_book(root: Path, book_path: Path = None) -> dict:
-    path = Path(book_path) if book_path else (root / DEFAULT_BOOK)
+def load_book(root: Path, book_path: Path = None, lang: str = 'zh-CN') -> dict:
+    path = book_path_for(root, lang, book_path)
     if not path.is_file():
         raise BookError(f'源稿清单不存在：{path}（先运行 python -m bookkit extract）')
     return json.loads(path.read_text(encoding='utf-8'))
@@ -84,8 +100,9 @@ def render_toc(book: dict) -> str:
 
 
 def build(root: Path, lang: str = 'zh-CN', out: Path = None, book_path: Path = None) -> dict:
-    book = load_book(root, book_path)
-    src = (Path(book_path).parent if book_path else root / 'source')
+    book = load_book(root, book_path, lang)
+    bp = book_path_for(root, lang, book_path)
+    src = bp.parent
     _BOOK_ROOTS[str(root)] = src
 
     shell_path = src / book['template']
@@ -161,7 +178,7 @@ def verify(root: Path, lang: str = 'zh-CN', book_path: Path = None) -> dict:
     from . import htmlparse as H
     from . import textutil as T
 
-    book = load_book(root, book_path)
+    book = load_book(root, book_path, lang)
     built = build(root, lang=lang, book_path=book_path)['html']
     published_path = root / book['version'] / f'{lang}.html'
     published = published_path.read_text(encoding='utf-8')

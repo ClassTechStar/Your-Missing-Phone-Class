@@ -7,6 +7,7 @@
 - console 零 error
 - 侧栏目录锚点全部可解析（getElementById 命中）
 - 章节标题数量符合预期（v1.8 = 84）
+- PWA：manifest 可解析且图标齐全；Service Worker 注册成功并激活
 
 用法：python scripts/web_smoke.py [--base http://127.0.0.1:8642]
 退出码：0 全过；1 有失败页。
@@ -32,6 +33,47 @@ def serve():
     socketserver.TCPServer.allow_reuse_address = True
     with socketserver.TCPServer(('127.0.0.1', PORT), H) as httpd:
         httpd.serve_forever()
+
+
+def check_pwa(page, base):
+    """PWA 断言：manifest 可解析、图标齐全、SW 注册并激活。"""
+    problems = []
+    href = page.evaluate(
+        "() => { const l = document.querySelector('link[rel=manifest]'); return l && l.href; }")
+    if not href:
+        return ['缺少 <link rel="manifest">']
+    try:
+        resp = page.request.get(href)
+        if resp.status != 200:
+            problems.append(f'manifest HTTP {resp.status}')
+        else:
+            man = resp.json()
+            for key in ('name', 'short_name', 'start_url', 'display', 'icons'):
+                if key not in man:
+                    problems.append(f'manifest 缺字段 {key}')
+            for ic in man.get('icons', []):
+                r = page.request.get(base + '/' + ic['src'].lstrip('./'))
+                if r.status != 200:
+                    problems.append(f"图标不可达 {ic['src']} ({r.status})")
+    except Exception as e:
+        problems.append(f'manifest 解析失败：{str(e)[:60]}')
+    sw = page.evaluate("""async () => {
+        // SW 从注册到 active 需要几秒（安装 + 激活），不能加载完就查
+        const race = new Promise((_, rej) =>
+            setTimeout(() => rej(new Error('timeout')), 15000));
+        try {
+            const reg = await Promise.race([navigator.serviceWorker.ready, race]);
+            return reg.active ? 'active'
+                 : reg.installing ? 'installing'
+                 : reg.waiting ? 'waiting' : 'registered';
+        } catch (e) {
+            const reg = await navigator.serviceWorker.getRegistration();
+            return reg ? 'pending' : 'no-registration';
+        }
+    }""")
+    if sw != 'active':
+        problems.append(f'SW 状态：{sw}')
+    return problems
 
 
 def main():
@@ -65,7 +107,9 @@ def main():
                 }''')
                 n_h3 = page.evaluate("document.querySelectorAll('.content-section > h3').length") \
                     if expect_h3 else None
-                ok = (not errors) and (not missing) and (expect_h3 is None or n_h3 == expect_h3)
+                pwa = check_pwa(page, base)
+                ok = (not errors) and (not missing) and (not pwa) \
+                    and (expect_h3 is None or n_h3 == expect_h3)
                 status = '✓' if ok else '✗'
                 detail = []
                 if errors:
@@ -74,6 +118,8 @@ def main():
                     detail.append(f'锚点缺失×{len(missing)}: {missing[:3]}')
                 if expect_h3 and n_h3 != expect_h3:
                     detail.append(f'h3={n_h3}≠{expect_h3}')
+                if pwa:
+                    detail.append(f'PWA: {pwa[0]}')
                 print(f'{status} {path}: {detail[0] if detail else "ok"}')
                 if not ok:
                     fails.append(path)

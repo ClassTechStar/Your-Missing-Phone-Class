@@ -19,6 +19,8 @@
     <meta name="twitter:title" content="Kuasai Ponsel! Kelas Wajib Digital untuk Pemula">
     <meta name="twitter:description" content="Dari dasar hingga mahir, kendalikan sepenuhnya kehidupan digitalmu">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+    <link rel="apple-touch-icon" href="../icons/icon-192.png">
+    <link rel="manifest" href="../manifest.webmanifest">
     <title>{{TITLE}} · {{VERSION}}</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -3062,6 +3064,15 @@
             onScroll();
             tryRestorePosition();
         })();
+    </script>
+    <script>
+        /* Service Worker：离线阅读。只在 http(s) 下注册，file:// 打开时跳过。 */
+        if ('serviceWorker' in navigator && location.protocol.startsWith('http')) {
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('../sw.js', { scope: '../' })
+                    .catch(function (err) { console.warn('SW 注册失败：', err); });
+            });
+        }
     </script>
 </body>
 </html>
