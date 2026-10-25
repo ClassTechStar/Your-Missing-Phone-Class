@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>章节自测 · 你缺失的那门手机课</title>
+<style>
+:root { --bg:#f7f8fa; --card:#fff; --text:#1f2937; --muted:#6b7280; --primary:#2563eb; --ok:#16a34a; --no:#dc2626; --line:#e5e7eb; }
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#111827; --card:#1f2937; --text:#f3f4f6; --muted:#9ca3af; --line:#374151; }
+}
+* { box-sizing:border-box; margin:0; padding:0; }
+body { font-family:system-ui,-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+  background:var(--bg); color:var(--text); line-height:1.7; padding:24px 16px; max-width:760px; margin:0 auto; }
+header { text-align:center; margin-bottom:28px; }
+header h1 { font-size:1.6rem; }
+header p { color:var(--muted); font-size:.95rem; margin-top:6px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; margin-bottom:16px; }
+.chapter-h { font-size:1.05rem; font-weight:700; margin-bottom:4px; }
+.q { margin-top:16px; }
+.q-text { font-weight:600; }
+.opt { display:block; width:100%; text-align:left; margin-top:8px; padding:10px 14px; border:1.5px solid var(--line);
+  border-radius:10px; background:transparent; color:var(--text); font-size:.95rem; cursor:pointer; }
+.opt:hover { border-color:var(--primary); }
+.opt.sel { border-color:var(--primary); background:rgba(37,99,235,.08); }
+.opt.right { border-color:var(--ok); background:rgba(22,163,74,.1); }
+.opt.wrong { border-color:var(--no); background:rgba(220,38,38,.08); }
+.explain { margin-top:8px; padding:10px 14px; border-radius:10px; background:rgba(37,99,235,.06);
+  font-size:.88rem; color:var(--muted); display:none; }
+.explain.show { display:block; }
+.bar { position:fixed; top:0; left:0; height:4px; background:var(--primary); width:0; transition:width .3s; }
+.score { text-align:center; margin:28px 0; }
+.score b { font-size:2.2rem; color:var(--primary); }
+footer { text-align:center; color:var(--muted); font-size:.85rem; margin:32px 0 12px; }
+footer a { color:var(--primary); text-decoration:none; }
+.lang-pick { display:flex; gap:8px; justify-content:center; margin-top:14px; flex-wrap:wrap; }
+.lang-pick button { padding:6px 14px; border-radius:20px; border:1px solid var(--line); background:var(--card); color:var(--text); cursor:pointer; }
+.lang-pick button.on { border-color:var(--primary); color:var(--primary); font-weight:600; }
+</style>
+</head>
+<body>
+<div class="bar" id="bar"></div>
+<header>
+  <h1>章节自测</h1>
+  <p>《你缺失的那门手机课》· 基础篇（第 0–7 章）</p>
+  <div class="lang-pick" id="langpick"></div>
+</header>
+<main id="app"><p style="text-align:center;color:var(--muted)">加载中…</p></main>
+<div class="score card" id="score" style="display:none"></div>
+<footer>
+  <a href="index.html">← 返回书目</a> · <a href="v1.8/zh-CN.html#di-ling-zhang">去读书</a>
+  <p>答完一节会即时批改并给出解析；答案只存在你的浏览器里。</p>
+</footer>
+<script>
+const LANGS = { 'zh-CN': '简体中文' };   // 后续题库按 quiz/<lang>.json 扩展
+const app = document.getElementById('app');
+const bar = document.getElementById('bar');
+
+async function load() {
+  const pick = document.getElementById('langpick');
+  const keys = Object.keys(LANGS);
+  keys.forEach((k, i) => {
+    const b = document.createElement('button');
+    b.textContent = LANGS[k];
+    if (i === 0) b.classList.add('on');
+    b.onclick = () => location.hash = k;
+    pick.appendChild(b);
+  });
+  const lang = location.hash.replace('#', '') || keys[0];
+  [...pick.children].forEach(b => b.classList.toggle('on', b.textContent === LANGS[lang]));
+  let data;
+  try {
+    data = await (await fetch(`quiz/${lang}.json`)).json();
+  } catch (e) {
+    app.innerHTML = '<p style="text-align:center;color:var(--muted)">该语言题库即将上线，敬请期待 📚</p>';
+    return;
+  }
+  let answered = 0, correct = 0;
+  const total = data.chapters.reduce((s, c) => s + c.questions.length, 0);
+  const upd = () => { bar.style.width = (answered / total * 100) + '%';
+    if (answered === total) showScore(); };
+
+  data.chapters.forEach(ch => {
+    const card = document.createElement('div');
+    card.className = 'card';
+    card.innerHTML = `<div class="chapter-h">${ch.title}</div>`;
+    ch.questions.forEach(q => {
+      const div = document.createElement('div');
+      div.className = 'q';
+      div.innerHTML = `<div class="q-text">${q.q}</div>`;
+      q.options.forEach((opt, i) => {
+        const b = document.createElement('button');
+        b.className = 'opt'; b.textContent = opt;
+        b.onclick = () => {
+          if (div.dataset.done) return;
+          div.dataset.done = '1'; answered++;
+          [...div.querySelectorAll('.opt')].forEach((x, xi) => {
+            if (xi === q.answer) x.classList.add('right');
+            else if (x === b) x.classList.add('wrong');
+          });
+          if (i === q.answer) correct++;
+          div.querySelector('.explain').classList.add('show');
+          upd();
+        };
+        div.appendChild(b);
+      });
+      const ex = document.createElement('div');
+      ex.className = 'explain'; ex.textContent = '💡 ' + q.explain;
+      div.appendChild(ex);
+      card.appendChild(div);
+    });
+    app.appendChild(card);
+  });
+
+  function showScore() {
+    const s = document.getElementById('score');
+    const pct = Math.round(correct / total * 100);
+    s.style.display = 'block';
+    s.innerHTML = `<b>${correct} / ${total}</b><p>${pct >= 80 ? '🎉 学得不错！可以去读下一章了'
+      : pct >= 60 ? '👍 基础打牢了，错题回书里找找解析' : '📖 建议回读基础篇，再看一遍解析'}</p>`;
+    s.scrollIntoView({ behavior: 'smooth' });
+  }
+}
+load();
+window.addEventListener('hashchange', () => location.reload());
+</script>
+</body>
+</html>
