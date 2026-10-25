@@ -2,13 +2,6 @@
 
 **副标题：** Your Missing Phone Class —— 从基础操作到数字生活掌控
 
-<img src="docs/promotion/assets/cover-og.png" width="100%" alt="你缺失的那门手机课：84 章 · 11 篇 · 19 种语言 · 全部免费">
-
-[![Release](https://img.shields.io/github/v/release/ClassTechStar/Your-Missing-Phone-Class?label=最新版本)](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases)
-[![Languages](https://img.shields.io/badge/语言-19%20种-blue)](#-在线阅读)
-[![Chapters](https://img.shields.io/badge/内容-84%20章%20·%2011%20篇-green)](#-在线阅读)
-[![PDF](https://img.shields.io/badge/PDF-74%20本免费下载-orange)](#-pdf-下载)
-[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey)](#版权声明)
 
 > **一门写给所有人的手机素养课。** 84 章、11 篇，从"认识手机硬件"一路讲到"用 AI 写出你的第一个 App"——
 > 没有晦涩术语，像朋友聊天一样把原理讲透。每章配"动手练习"，手机是用会的，不是看会的。
