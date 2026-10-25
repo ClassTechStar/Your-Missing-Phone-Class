@@ -101,6 +101,27 @@ jobs:
       - name: 翻译源稿保真验证（18 语言逐章等价）
         run: python scripts/extract_translations.py
 
+      - name: 题库与源稿同步（防止改了正文题库没跟着变）
+        run: |
+          python scripts/gen_quiz.py --out dist/quiz-check.json
+          python - <<'EOF'
+          import json, sys
+          from pathlib import Path
+          a = json.loads(Path('quiz/zh-CN.json').read_text(encoding='utf-8'))
+          b = json.loads(Path('dist/quiz-check.json').read_text(encoding='utf-8'))
+          if a != b:
+              print('题库与源稿不同步，请运行 python scripts/gen_quiz.py 并提交')
+              ai = {c['id']: c for c in a['chapters']}
+              bi = {c['id']: c for c in b['chapters']}
+              print('  仅题库有:', sorted(set(ai) - set(bi))[:5])
+              print('  仅源稿有:', sorted(set(bi) - set(ai))[:5])
+              diff = [k for k in ai if k in bi and ai[k] != bi[k]]
+              print('  内容不同:', diff[:5])
+              sys.exit(1)
+          print(f"题库同步 OK：{len(a['chapters'])} 章，"
+                f"{sum(len(c['questions']) for c in a['chapters'])} 题")
+          EOF
+
       - name: 安装 Playwright
         run: pip install playwright -q && python -m playwright install chromium --with-deps
 
