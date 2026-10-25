@@ -101,7 +101,7 @@ Compose 写起来爽，但“重组过多”也会卡。三个实用技巧：
 
 \begin{itemize}
   \item \textbf{稳定参数}：给数据类加\texttt{@Immutable}或使用\texttt{derivedStateOf}，避免无关状态变化触发大面积重组；
-  \item \textbf{记得用 key}：\texttt{items(list, key = \{ it.id \})}让列表增删时只动该动的项——不加 key，删除一项可能整表重画；
+  \item \textbf{记得用 key}：\texttt{items(list, key = \{ it.\allowbreak id \})}让列表增删时只动该动的项——不加 key，删除一项可能整表重画；
   \item \textbf{Layout Inspector 的 Compose 模式}：实时看每个 Composable 的重组次数，谁频繁重组一目了然，照着热点优化。
 \end{itemize}
 

@@ -143,7 +143,7 @@ struct WeatherService {
 
 \textbf{避坑提醒：两条网络铁律}\par
 
-(1)\textbf{联网必须 async/await，绝不阻塞主线程}——卡住界面是崩溃级体验。Swift 的结构化并发让这变得很自然，但别忘了\texttt{try await}和\texttt{do/catch}。(2)\textbf{ATS 默认禁止明文 HTTP}：iOS 要求 HTTPS。测试本地 http:// 服务时需要在 Info.plist 里临时开例外（NSAppTransportSecurity），但正式产品必须全走 HTTPS——审核也会盯这个。
+(1)\textbf{联网必须 async/await，绝不阻塞主线程}——卡住界面是崩溃级体验。Swift 的结构化并发让这变得很自然，但别忘了\texttt{try await}和\texttt{do/\allowbreak catch}。(2)\textbf{ATS 默认禁止明文 HTTP}：iOS 要求 HTTPS。测试本地 http:// 服务时需要在 Info.plist 里临时开例外（NSAppTransportSecurity），但正式产品必须全走 HTTPS——审核也会盯这个。
 
 \begin{tcbpractice}{来动手：做一个"每日一句"小应用}
 \booksection{六、网络错误也要“分级”：别把一切报错都丢给用户}
@@ -167,7 +167,7 @@ func friendlyMessage(_ error: Error) -> String {
 }
 \end{lstlisting}
 
-给用户看“人话”，给日志看“原话”（print 完整 error）。别把\texttt{error.localizedDescription}的英文天书直接甩给用户——产品感就藏在这些细节里。
+给用户看“人话”，给日志看“原话”（print 完整 error）。别把\texttt{error.\allowbreak localizedDescription}的英文天书直接甩给用户——产品感就藏在这些细节里。
 
 找一个免费的名言 API（比如 hitokoto 之类），用 URLSession + async/await 拉取“每日一句”，显示在屏幕中央，加个“换一句”按钮。再把喜欢的句子用 SwiftData 存进“收藏夹”。这个练习把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍——做完它，第 7、8 章就是小菜一碟。
 

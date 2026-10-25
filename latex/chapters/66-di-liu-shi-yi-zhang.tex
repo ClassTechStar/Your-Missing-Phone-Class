@@ -89,7 +89,7 @@ let big = numbers.filter { $0 > 2 }    // 筛选
 // [3, 4]
 \end{lstlisting}
 
-SwiftUI 里闭包无处不在：按钮的\texttt{Button(“点我”) \{ ... \}}后面的大括号就是一个闭包。\texttt{map}、\texttt{filter}、\texttt{sorted}这几个“集合连招”请记牢——未来 90\% 的列表处理都是它们的组合。
+SwiftUI 里闭包无处不在：按钮的\texttt{Button(“点我”) \{ .\allowbreak .\allowbreak .\allowbreak  \}}后面的大括号就是一个闭包。\texttt{map}、\texttt{filter}、\texttt{sorted}这几个“集合连招”请记牢——未来 90\% 的列表处理都是它们的组合。
 
 \booksection{四、结构体与协议：Swift 的“乐高”体系}
 
@@ -125,10 +125,10 @@ SwiftUI 里几乎一切都是 struct（View 就是协议）。这句现在不懂
 \hline
 定义常量/变量 & \texttt{let x = 1}/\texttt{var x = 1} \tabularnewline
 字符串插值 & \texttt{"你好，\textbackslash{}(name)"} \tabularnewline
-定义函数 & \texttt{func 名字(参数: 类型) -> 返回类型 \{ ... \}} \tabularnewline
-判断 & \texttt{if 条件 \{ ... \} else \{ ... \}} \tabularnewline
-遍历 & \texttt{for x in 数组 \{ ... \}} \tabularnewline
-安全解包 & \texttt{if let x = 可选值 \{ ... \}} \tabularnewline
+定义函数 & \texttt{func 名字(参数: 类型) -\allowbreak > 返回类型 \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+判断 & \texttt{if 条件 \{ .\allowbreak .\allowbreak .\allowbreak  \} else \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+遍历 & \texttt{for x in 数组 \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+安全解包 & \texttt{if let x = 可选值 \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
 默认值 & \texttt{x ?? 默认值} \tabularnewline
 定义结构体 & \texttt{struct X \{ var a: Int; var b: String \}} \tabularnewline
 闭包 & \texttt{\{ \$0 * 2 \}} \tabularnewline

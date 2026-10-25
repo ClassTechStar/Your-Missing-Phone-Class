@@ -112,8 +112,8 @@ iOS 生态还有两个“只此一家”的进阶玩法：\textbf{小组件（Wi
 Swift 6 的并发体系有两条新手必懂的规则：
 
 \begin{itemize}
-  \item \textbf{界面只能在主线程更新}：SwiftUI 视图默认是\texttt{@MainActor}，网络回调回到主线程再改状态（\texttt{await MainActor.run \{ ... \}}或把 ViewModel 标成 @MainActor）；
-  \item \textbf{异步任务用 Task 管理}：\texttt{.task \{ \}}修饰符随视图出现自动开始、消失自动取消——这是 SwiftUI 里启动异步工作的标准姿势，别在 body 里乱写 Task 裸奔。
+  \item \textbf{界面只能在主线程更新}：SwiftUI 视图默认是\texttt{@MainActor}，网络回调回到主线程再改状态（\texttt{await MainActor.\allowbreak run \{ .\allowbreak .\allowbreak .\allowbreak  \}}或把 ViewModel 标成 @MainActor）；
+  \item \textbf{异步任务用 Task 管理}：\texttt{.\allowbreak task \{ \}}修饰符随视图出现自动开始、消失自动取消——这是 SwiftUI 里启动异步工作的标准姿势，别在 body 里乱写 Task 裸奔。
 \end{itemize}
 
 \begin{lstlisting}[language=Swift]

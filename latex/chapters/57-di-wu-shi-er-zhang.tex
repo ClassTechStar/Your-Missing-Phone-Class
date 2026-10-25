@@ -79,7 +79,7 @@ val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
 startActivity(web)   // 系统会打开浏览器/或让你选
 \end{lstlisting}
 
-两种方式各有用途：\textbf{显式}用于自己 App 内部的页面跳转；\textbf{隐式}用于调用系统或其他 App 的能力（开网页、打电话、分享）。Compose 项目里，在 Composable 中用\texttt{LocalContext.current}拿到 Context 就能\texttt{startActivity}。
+两种方式各有用途：\textbf{显式}用于自己 App 内部的页面跳转；\textbf{隐式}用于调用系统或其他 App 的能力（开网页、打电话、分享）。Compose 项目里，在 Composable 中用\texttt{LocalContext.\allowbreak current}拿到 Context 就能\texttt{startActivity}。
 
 \booksection{四、多页面与导航}
 
@@ -102,7 +102,7 @@ navController.popBackStack()              // 返回上一页
 \end{lstlisting}
 
 \begin{tcbinfo}{小贴士：页面多了怎么办？}
-项目长大后，把所有页面路由集中写在一个文件里（比如\texttt{AppNavGraph.kt}），统一管理，别让“跳转到哪”的逻辑散落在各个页面。这是从“能跑”走向“可维护”的第一步。
+项目长大后，把所有页面路由集中写在一个文件里（比如\texttt{AppNavGraph.\allowbreak kt}），统一管理，别让“跳转到哪”的逻辑散落在各个页面。这是从“能跑”走向“可维护”的第一步。
 
 \end{tcbinfo}
 

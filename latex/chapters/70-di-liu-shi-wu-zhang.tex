@@ -97,7 +97,7 @@ class RecordViewModel {
 }
 \end{lstlisting}
 
-界面里\texttt{@State private var vm = RecordViewModel(...)}，然后直接\texttt{vm.records}渲染列表——数据一变，界面自动刷新。
+界面里\texttt{@State private var vm = RecordViewModel(.\allowbreak .\allowbreak .\allowbreak )}，然后直接\texttt{vm.\allowbreak records}渲染列表——数据一变，界面自动刷新。
 
 \booksection{四、界面：列表页 + 录入弹窗}
 
@@ -135,7 +135,7 @@ struct RecordListView: View {
 }
 \end{lstlisting}
 
-录入弹窗要点：金额输入框键盘用\texttt{.keyboardType(.decimalPad)}（数字键盘），收入/支出用分段控件（Picker），分类用菜单选择，点“保存”调\texttt{vm.add(...)}并\texttt{dismiss()}关窗。
+录入弹窗要点：金额输入框键盘用\texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)}（数字键盘），收入/支出用分段控件（Picker），分类用菜单选择，点“保存”调\texttt{vm.\allowbreak add(.\allowbreak .\allowbreak .\allowbreak )}并\texttt{dismiss()}关窗。
 
 \begin{tcbwarn}{注意：输入校验别偷懒}
 金额输入框一定要校验：空值、负数、“abc”这类非法输入都要拦住（用\texttt{Double(text)}判断，失败返回 nil）。App 崩掉最常见的原因之一就是“把用户的输入当成了乖孩子”。记住：\textbf{用户输入的一切，都要当敌人审查}。

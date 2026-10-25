@@ -90,7 +90,7 @@ ADB 全称 Android Debug Bridge（安卓调试桥），是 Google 官方提供�
   \item 手机端：进入开发者选项 打开"USB调试"。
   \item 电脑端：从 Google 官方下载 Platform Tools（含\texttt{adb}和\texttt{fastboot}两个可执行文件），解压到任意目录。
   \item 用数据线连接手机和电脑，手机上会弹窗"是否允许USB调试"，勾选"始终允许"并确定。
-  \item 在电脑命令行（Windows 的 PowerShell 或 cmd）里执行\texttt{adb devices}，如果输出类似\texttt{List of devices attached / xxxxxxxx device}，就说明连上了。
+  \item 在电脑命令行（Windows 的 PowerShell 或 cmd）里执行\texttt{adb devices}，如果输出类似\texttt{List of devices attached /\allowbreak  xxxxxxxx device}，就说明连上了。
 \end{enumerate}
 
 \begin{tcbwarn}{驱动和授权弹窗别忽略}
@@ -101,40 +101,40 @@ Windows 用户如果\texttt{adb devices}显示 “unauthorized” 或根本不�
 \subsubsection*{常用 ADB 命令：}
 
 \begin{itemize}
-  \item \texttt{adb install app.apk}：把电脑上的 APK 装到手机（\texttt{-r}表示覆盖安装并保留数据；\texttt{-s}装到 SD 卡）。
-  \item \texttt{adb uninstall com.xxx.xxx}：按包名卸载 App。
-  \item \texttt{adb push 电脑路径 /sdcard/目标路径}：把电脑文件推送到手机。
-  \item \texttt{adb pull /sdcard/文件 电脑路径}：把手机文件拉到电脑（比发给自己微信再下载快得多）。
+  \item \texttt{adb install app.\allowbreak apk}：把电脑上的 APK 装到手机（\texttt{-\allowbreak r}表示覆盖安装并保留数据；\texttt{-\allowbreak s}装到 SD 卡）。
+  \item \texttt{adb uninstall com.\allowbreak xxx.\allowbreak xxx}：按包名卸载 App。
+  \item \texttt{adb push 电脑路径 /\allowbreak sdcard/\allowbreak 目标路径}：把电脑文件推送到手机。
+  \item \texttt{adb pull /\allowbreak sdcard/\allowbreak 文件 电脑路径}：把手机文件拉到电脑（比发给自己微信再下载快得多）。
   \item \texttt{adb shell}：进入手机的 Linux Shell，可以直接执行\texttt{ls}、\texttt{pm}、\texttt{am}等命令。
   \item \texttt{adb reboot bootloader}：重启手机进入 Fastboot 模式（刷机的入口）。
   \item \texttt{adb reboot recovery}：重启进入 Recovery 模式。
-  \item \texttt{adb shell pm list packages}：列出手机上所有已安装应用的包名（找包名必用）。加\texttt{-s}只看系统应用，加\texttt{-3}只看第三方应用。
-  \item \texttt{adb shell pm uninstall --user 0 包名}：为当前用户卸载预装 App，免 Root，详见下方实战。
+  \item \texttt{adb shell pm list packages}：列出手机上所有已安装应用的包名（找包名必用）。加\texttt{-\allowbreak s}只看系统应用，加\texttt{-\allowbreak 3}只看第三方应用。
+  \item \texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 包名}：为当前用户卸载预装 App，免 Root，详见下方实战。
 \end{itemize}
 
 \subsubsection*{免 Root 卸载预装 App 实战：}
 
-这是 ADB 最实用的功能之一：用\texttt{pm uninstall --user 0}命令可以为“当前用户”卸载预装 App，而不需要 Root，也不影响系统分区。被卸载的 App 在系统里“消失”，但实际还在系统分区里，恢复出厂设置后会回来。
+这是 ADB 最实用的功能之一：用\texttt{pm uninstall -\allowbreak -\allowbreak user 0}命令可以为“当前用户”卸载预装 App，而不需要 Root，也不影响系统分区。被卸载的 App 在系统里“消失”，但实际还在系统分区里，恢复出厂设置后会回来。
 
 \begin{enumerate}
-  \item 先用\texttt{adb shell pm list packages -s}列出所有系统应用，找到你想卸载的包名。比如小米浏览器是\texttt{com.android.browser}，华为应用市场是\texttt{com.vmall.client}。
+  \item 先用\texttt{adb shell pm list packages -\allowbreak s}列出所有系统应用，找到你想卸载的包名。比如小米浏览器是\texttt{com.\allowbreak android.\allowbreak browser}，华为应用市场是\texttt{com.\allowbreak vmall.\allowbreak client}。
   \item 不确定包名对应哪个 App？可以在电脑上用\texttt{adb shell pm list packages | findstr 关键字}搜索，或者装一个第三方 App "Package Viewer"在手机上直接查看每个 App 的包名。
-  \item 执行卸载：\texttt{adb shell pm uninstall --user 0 包名}，比如\texttt{adb shell pm uninstall --user 0 com.android.browser}。返回\texttt{Success}就成功了。
-  \item 想恢复怎么办？两种方法：(1) 恢复出厂设置（最彻底但麻烦）；(2) 重新安装：\texttt{adb shell cmd package install-existing 包名}。
+  \item 执行卸载：\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 包名}，比如\texttt{adb shell pm uninstall -\allowbreak -\allowbreak user 0 com.\allowbreak android.\allowbreak browser}。返回\texttt{Success}就成功了。
+  \item 想恢复怎么办？两种方法：(1) 恢复出厂设置（最彻底但麻烦）；(2) 重新安装：\texttt{adb shell cmd package install-\allowbreak existing 包名}。
 \end{enumerate}
 
 \textbf{千万别乱删系统核心包}\par
 
-“pm uninstall --user 0”虽然是免 Root 的安全方式，但乱删关键系统应用（如\texttt{com.android.systemui}状态栏、\texttt{com.android.phone}电话、\texttt{com.android.settings}设置）会导致系统崩溃、黑屏、无法开机等严重问题。删之前先 Google 一下“这个包名能不能删”，宁可少删不要错删。建议一次只删一两个，确认没问题再继续。
+“pm uninstall --user 0”虽然是免 Root 的安全方式，但乱删关键系统应用（如\texttt{com.\allowbreak android.\allowbreak systemui}状态栏、\texttt{com.\allowbreak android.\allowbreak phone}电话、\texttt{com.\allowbreak android.\allowbreak settings}设置）会导致系统崩溃、黑屏、无法开机等严重问题。删之前先 Google 一下“这个包名能不能删”，宁可少删不要错删。建议一次只删一两个，确认没问题再继续。
 
 \begin{tcbinfo}{小知识：--user 0 是什么意思}
-安卓 4.2 之后支持多用户，每个用户有独立的 ID（机主是 0，附加用户从 10 开始）。\texttt{--user 0}表示“只对当前机主卸载”，系统分区里的 APK 文件依然存在，只是不给机主显示了。这就是为什么它不需要 Root——没动系统文件，只是改了“用户配置”。这也是它和 Root 后卸载最大的区别：Root 卸载是真正从系统里删掉，所有用户都不再有；ADB 卸载只是“对当前用户隐藏”。
+安卓 4.2 之后支持多用户，每个用户有独立的 ID（机主是 0，附加用户从 10 开始）。\texttt{-\allowbreak -\allowbreak user 0}表示“只对当前机主卸载”，系统分区里的 APK 文件依然存在，只是不给机主显示了。这就是为什么它不需要 Root——没动系统文件，只是改了“用户配置”。这也是它和 Root 后卸载最大的区别：Root 卸载是真正从系统里删掉，所有用户都不再有；ADB 卸载只是“对当前用户隐藏”。
 
 \end{tcbinfo}
 
 \booksubsection{五、Root权限：安卓的“超级管理员”}
 
-Root权限相当于Linux中的超级用户（对/目录拥有完全控制权，可以读写任意文件），是安卓系统的最高权限。它与Windows的Administrator有本质区别：Windows出于安全考虑对管理员做了诸多限制（真正的最高权限其实是 TrustedInstaller），即便是 Administrator 也无法像 Linux root 那样直接执行\texttt{sudo rm -rf /*}。获得Root权限后，你可以修改系统文件、卸载预装应用、使用需要Root的高级App。
+Root权限相当于Linux中的超级用户（对/目录拥有完全控制权，可以读写任意文件），是安卓系统的最高权限。它与Windows的Administrator有本质区别：Windows出于安全考虑对管理员做了诸多限制（真正的最高权限其实是 TrustedInstaller），即便是 Administrator 也无法像 Linux root 那样直接执行\texttt{sudo rm -\allowbreak rf /\allowbreak *}。获得Root权限后，你可以修改系统文件、卸载预装应用、使用需要Root的高级App。
 
 \subsubsection*{Root的好处：}
 
@@ -206,7 +206,7 @@ Google 每隔一段时间就会更新检测规则，App 厂商也会跟进升级
 \begin{itemize}
   \item \textbf{开发者模式}：可以开启，体验一下动画加速、GPU 呈现分析等功能，但不要乱改其他不理解的选项。
   \item \textbf{OEM 解锁与 BL 锁}：如果你不打算刷机或 Root，两个开关都保持默认（关闭）状态最安全。
-  \item \textbf{ADB}：免 Root 的强大工具，普通人也能用——比如用\texttt{pm uninstall --user 0}卸载预装 App。但删之前一定要查清楚包名能不能删。
+  \item \textbf{ADB}：免 Root 的强大工具，普通人也能用——比如用\texttt{pm uninstall -\allowbreak -\allowbreak user 0}卸载预装 App。但删之前一定要查清楚包名能不能删。
   \item \textbf{Root}：普通用户不建议 Root，风险大于收益。如果确实需要某些功能，可以先了解有没有不需要 Root 的替代方案（比如用 ADB 卸载预装、用 Shizuku 替代部分 Root 功能）。
 \end{itemize}
 

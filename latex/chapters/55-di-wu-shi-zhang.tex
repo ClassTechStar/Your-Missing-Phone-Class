@@ -135,7 +135,7 @@ val twin = me.copy(name = "张三丰")   // 复制并改一个字段
 
 \booksection{六、lambda 与高阶函数：Kotlin 的“语法糖”}
 
-安卓代码里你会天天看到\texttt{\{ ... \}}这种“没名字的函数”，它叫\textbf{lambda（匿名函数）}。Button 的\texttt{onClick = \{ count++ \}}就是一个 lambda——把“点击后做什么”打包成一坨，递给按钮。
+安卓代码里你会天天看到\texttt{\{ .\allowbreak .\allowbreak .\allowbreak  \}}这种“没名字的函数”，它叫\textbf{lambda（匿名函数）}。Button 的\texttt{onClick = \{ count++ \}}就是一个 lambda——把“点击后做什么”打包成一坨，递给按钮。
 
 \begin{lstlisting}[language=Kotlin]
 // 普通写法：定义一个有名函数再传入
@@ -164,12 +164,12 @@ val bigBills = bills.filter { it > 50 }.sorted()
 \hline
 定义只读变量 & \texttt{val x = 1} \tabularnewline
 定义可变变量 & \texttt{var x = 1} \tabularnewline
-定义函数 & \texttt{fun 名字(参数): 返回类型 \{ ... \}} \tabularnewline
-判断 & \texttt{if (条件) \{...\} else \{...\}} \tabularnewline
-多分支 & \texttt{when \{ 条件 -> 结果 \}} \tabularnewline
-遍历 & \texttt{for (x in 列表) \{ ... \}} \tabularnewline
+定义函数 & \texttt{fun 名字(参数): 返回类型 \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+判断 & \texttt{if (条件) \{.\allowbreak .\allowbreak .\allowbreak \} else \{.\allowbreak .\allowbreak .\allowbreak \}} \tabularnewline
+多分支 & \texttt{when \{ 条件 -\allowbreak > 结果 \}} \tabularnewline
+遍历 & \texttt{for (x in 列表) \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
 字符串拼接 & \texttt{"你好，\$name"} \tabularnewline
-处理可空 & \texttt{x?.length ?: 0} \tabularnewline
+处理可空 & \texttt{x?.\allowbreak length ?: 0} \tabularnewline
 定义数据类 & \texttt{data class X(val a: Int, val b: String)} \tabularnewline
 \hline
 \end{tabularx}

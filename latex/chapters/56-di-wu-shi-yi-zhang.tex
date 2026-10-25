@@ -105,7 +105,7 @@ Text(
 \end{lstlisting}
 
 \begin{tcbwarn}{注意：Modifier 的顺序有讲究}
-\texttt{padding(16.dp).background(Blue)}和\texttt{background(Blue).padding(16.dp)}效果不同——前者是“先留白再涂色”（背景不含边距），后者是“先涂色再留白”（背景包含边距）。新手最容易在这上面画错“奇怪的白边”。不确定时，调换顺序试试，预览立刻告诉你答案。
+\texttt{padding(16.\allowbreak dp).\allowbreak background(Blue)}和\texttt{background(Blue).\allowbreak padding(16.\allowbreak dp)}效果不同——前者是“先留白再涂色”（背景不含边距），后者是“先涂色再留白”（背景包含边距）。新手最容易在这上面画错“奇怪的白边”。不确定时，调换顺序试试，预览立刻告诉你答案。
 
 \end{tcbwarn}
 
@@ -142,12 +142,12 @@ Compose 感知到变化
 
 \booksection{五、主题与深色模式：一次配置，全局生效}
 
-模板项目里的\texttt{MyFirstAppTheme \{ ... \}}就是主题。它基于\textbf{Material 3}设计规范，帮你把颜色、字体、形状统一管理。支持深色模式只需三步：
+模板项目里的\texttt{MyFirstAppTheme \{ .\allowbreak .\allowbreak .\allowbreak  \}}就是主题。它基于\textbf{Material 3}设计规范，帮你把颜色、字体、形状统一管理。支持深色模式只需三步：
 
 \begin{enumerate}
   \item 在主题里定义好浅色/深色两套配色（模板已自动生成\texttt{ColorScheme}）；
   \item 系统切到深色模式时，\texttt{isSystemInDarkTheme()}自动判断；
-  \item 用主题提供的颜色（如\texttt{MaterialTheme.colorScheme.primary}）而不是写死颜色值。
+  \item 用主题提供的颜色（如\texttt{MaterialTheme.\allowbreak colorScheme.\allowbreak primary}）而不是写死颜色值。
 \end{enumerate}
 
 \begin{tcbinfo}{小贴士：Material 3 动态取色}

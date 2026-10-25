@@ -13,13 +13,13 @@
 跨页面逻辑 & \texttt{@Observable class VM \{ var x = 0 \}} \tabularnewline
 竖排/横排布局 & \texttt{VStack \{ \}}/\texttt{HStack \{ \}} \tabularnewline
 弹性空间 & \texttt{Spacer()} \tabularnewline
-列表 & \texttt{List \{ ForEach(数组) \{ ... \} \}} \tabularnewline
+列表 & \texttt{List \{ ForEach(数组) \{ .\allowbreak .\allowbreak .\allowbreak  \} \}} \tabularnewline
 页面跳转 & \texttt{NavigationStack + NavigationLink} \tabularnewline
-底部弹窗 & \texttt{.sheet(isPresented: \$show) \{ 内容 \}} \tabularnewline
-关当前页 & \texttt{@Environment(\textbackslash{}.dismiss) var dismiss} \tabularnewline
-联网取数据 & \texttt{try await URLSession.shared.data(from: url)} \tabularnewline
-JSON 解析 & \texttt{struct X: Codable}+\texttt{JSONDecoder().decode} \tabularnewline
-存小配置 & \texttt{UserDefaults.standard.set(值, forKey: "键")} \tabularnewline
+底部弹窗 & \texttt{.\allowbreak sheet(isPresented: \$show) \{ 内容 \}} \tabularnewline
+关当前页 & \texttt{@Environment(\textbackslash{}.\allowbreak dismiss) var dismiss} \tabularnewline
+联网取数据 & \texttt{try await URLSession.\allowbreak shared.\allowbreak data(from: url)} \tabularnewline
+JSON 解析 & \texttt{struct X: Codable}+\texttt{JSONDecoder().\allowbreak decode} \tabularnewline
+存小配置 & \texttt{UserDefaults.\allowbreak standard.\allowbreak set(值, forKey: "键")} \tabularnewline
 存结构化数据 & \texttt{@Model}+\texttt{modelContainer}+\texttt{@Query} \tabularnewline
 深色模式适配 & 用系统颜色（.primary / Color(.systemGray6)），不写死 \tabularnewline
 跑测试 & CmdU \tabularnewline

@@ -8,13 +8,13 @@
 
 \begin{enumerate}
   \item 注册账号 在 API keys 页面生成一个 Key（\texttt{apikey}）；
-  \item 免费版可调用 Current Weather 接口：\texttt{api.openweathermap.org/data/2.5/weather? q=beijing\&appid=你的Key\&units=metric}；
+  \item 免费版可调用 Current Weather 接口：\texttt{api.\allowbreak openweathermap.\allowbreak org/\allowbreak data/\allowbreak 2.\allowbreak 5/\allowbreak weather? q=beijing\&appid=你的Key\&units=metric}；
   \item 浏览器里先试一次，看看返回的 JSON 长什么样——这是接任何 API 前必做的"预习"。
 \end{enumerate}
 
 \textbf{避坑提醒：密钥绝不能写死在代码里}\par
 
-API Key 相当于你的“钱包密码”，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。iOS 的正确做法：放进\texttt{Config.xcconfig}（配置文件，已被 gitignore 忽略），通过 Info.plist 读入代码。搜索“iOS xcconfig 管理密钥”照着改即可。
+API Key 相当于你的“钱包密码”，写进代码一提交到 GitHub，几小时内就会被爬虫扫走盗刷。iOS 的正确做法：放进\texttt{Config.\allowbreak xcconfig}（配置文件，已被 gitignore 忽略），通过 Info.plist 读入代码。搜索“iOS xcconfig 管理密钥”照着改即可。
 
 \booksection{二、网络层：URLSession + Codable}
 
@@ -82,7 +82,7 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 }
 \end{lstlisting}
 
-这个\texttt{loading/success/error}三段式是联网界面的“万金油模板”，先背下来，以后所有联网 App 照葫芦画瓢。
+这个\texttt{loading/\allowbreak success/\allowbreak error}三段式是联网界面的“万金油模板”，先背下来，以后所有联网 App 照葫芦画瓢。
 
 \booksection{四、实战界面代码：把天气画出来}
 
@@ -114,9 +114,9 @@ struct WeatherContent: View {
 \booksection{五、交互细节与收藏城市}
 
 \begin{itemize}
-  \item \textbf{搜索框}：顶部\texttt{.searchable}修饰符，系统自带搜索交互，提交时调\texttt{vm.search}；
+  \item \textbf{搜索框}：顶部\texttt{.\allowbreak searchable}修饰符，系统自带搜索交互，提交时调\texttt{vm.\allowbreak search}；
   \item \textbf{收藏城市}：把常看的城市存进 UserDefaults，下次打开自动查；
-  \item \textbf{下拉刷新}：\texttt{.refreshable \{ await vm.search(...) \}}一行搞定；
+  \item \textbf{下拉刷新}：\texttt{.\allowbreak refreshable \{ await vm.\allowbreak search(.\allowbreak .\allowbreak .\allowbreak ) \}}一行搞定；
   \item \textbf{天气图标}：用\texttt{Image(systemName:)}按描述映射（sun.max / cloud.rain / snowflake），界面立刻活起来。
 \end{itemize}
 
@@ -131,7 +131,7 @@ OpenWeatherMap 对中文城市名支持一般，搜“北京”可能无结果�
 联网 App 出问题，十有八九在“请求没发对”或“响应没解析对”。三个调试手段：
 
 \begin{enumerate}
-  \item \textbf{打印原始数据}：把\texttt{String(data: data, encoding: .utf8)}打印出来看原始 JSON——字段名、类型一目了然，比猜快十倍；
+  \item \textbf{打印原始数据}：把\texttt{String(data: data, encoding: .\allowbreak utf8)}打印出来看原始 JSON——字段名、类型一目了然，比猜快十倍；
   \item \textbf{抓包工具}：Mac 上免费的 Proxyman / 开源 Charles 能截获 App 的全部请求和响应，像 X 光一样看清网络层；
   \item \textbf{模拟弱网}：模拟器菜单 Features Network Link Conditioner（需从开发者网站下载工具），能模拟 3G、高延迟——测出"转圈半天"的体验问题。
 \end{enumerate}

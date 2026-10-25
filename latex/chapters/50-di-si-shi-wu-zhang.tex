@@ -58,9 +58,9 @@ AI 编程中 Git 的最佳实践是“频繁提交、小步快进”。每完成
 另一个实用技巧是“分支隔离”。对于不确定结果的 AI 修改（比如大步重构），先创建一个新分支来做。如果结果满意，合并回主分支；如果不满意，直接删除分支，不影响主分支。这比在主分支上反复修改安全得多。
 
 \begin{enumerate}
-  \item 每次 AI 修改前，确保工作区是干净的（没有未提交的更改）。这样如果 AI 的修改不满意，可以用\texttt{git checkout .}快速回退。
+  \item 每次 AI 修改前，确保工作区是干净的（没有未提交的更改）。这样如果 AI 的修改不满意，可以用\texttt{git checkout .\allowbreak }快速回退。
   \item 每次 AI 修改后、验证通过后，立即提交。提交信息描述这次修改做了什么，比如"feat: 添加用户注册功能"。
-  \item 对于大步重构，先创建分支：\texttt{git checkout -b refactor/auth-system}。在分支上完成修改，测试通过后再合并。
+  \item 对于大步重构，先创建分支：\texttt{git checkout -\allowbreak b refactor/\allowbreak auth-\allowbreak system}。在分支上完成修改，测试通过后再合并。
   \item 养成查看 diff 的习惯。每次 AI 修改后，用\texttt{git diff}查看具体改了什么。这不仅能帮你发现问题，还能帮你学习代码。
 \end{enumerate}
 

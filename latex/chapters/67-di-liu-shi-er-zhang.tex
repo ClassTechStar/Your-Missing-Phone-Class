@@ -24,7 +24,7 @@ struct ContentView: View {
 }
 \end{lstlisting}
 
-关键点：\textbf{视图 = 遵守 View 协议的结构体}，\texttt{body}属性描述界面，\texttt{.修饰符()}链式“上妆”。这就是 SwiftUI 的全部基本盘。
+关键点：\textbf{视图 = 遵守 View 协议的结构体}，\texttt{body}属性描述界面，\texttt{.\allowbreak 修饰符()}链式“上妆”。这就是 SwiftUI 的全部基本盘。
 
 \booksection{二、基础视图：文字、按钮、输入框、图片}
 
@@ -36,7 +36,7 @@ struct ContentView: View {
 Text & 显示文字 & \texttt{Text("你好")} \tabularnewline
 Button & 按钮 & \texttt{Button("点我") \{ 动作 \}} \tabularnewline
 TextField & 输入框 & \texttt{TextField("提示", text: \$文本)} \tabularnewline
-Image & 显示图片 & \texttt{Image(systemName: "star.fill")} \tabularnewline
+Image & 显示图片 & \texttt{Image(systemName: "star.\allowbreak fill")} \tabularnewline
 \hline
 \end{tabularx}
 \end{center}
@@ -71,7 +71,7 @@ VStack(alignment: .leading, spacing: 12) {
 \end{lstlisting}
 
 \begin{tcbwarn}{注意：修饰符顺序有讲究}
-\texttt{padding(16).background(灰)}和\texttt{background(灰).padding(16)}效果不同——前者“先留白再涂色”（背景不含边距），后者“先涂色再留白”（背景包含边距）。新手最常见的“奇怪白边”都源于此。不确定时调换顺序，预览立刻告诉你答案。
+\texttt{padding(16).\allowbreak background(灰)}和\texttt{background(灰).\allowbreak padding(16)}效果不同——前者“先留白再涂色”（背景不含边距），后者“先涂色再留白”（背景包含边距）。新手最常见的“奇怪白边”都源于此。不确定时调换顺序，预览立刻告诉你答案。
 
 \end{tcbwarn}
 
@@ -122,8 +122,8 @@ SwiftUI 感知到变化
 
 \begin{itemize}
   \item \textbf{\#Preview 宏}：文件底部加\texttt{\#Preview \{ ContentView() \}}，右侧画布实时渲染——改代码所见即所得；
-  \item \textbf{深色模式免费}：用系统颜色（\texttt{Color(.systemGray6)}、\texttt{.primary}）而不是写死颜色，深色模式自动适配，一行不用多写；
-  \item \textbf{动画一行搞定}：\texttt{withAnimation \{ count += 1 \}}或给视图加\texttt{.animation(.default, value: count)}——过渡丝滑。
+  \item \textbf{深色模式免费}：用系统颜色（\texttt{Color(.\allowbreak systemGray6)}、\texttt{.\allowbreak primary}）而不是写死颜色，深色模式自动适配，一行不用多写；
+  \item \textbf{动画一行搞定}：\texttt{withAnimation \{ count += 1 \}}或给视图加\texttt{.\allowbreak animation(.\allowbreak default, value: count)}——过渡丝滑。
 \end{itemize}
 
 \begin{lstlisting}[language=Swift]
@@ -158,18 +158,18 @@ struct AnimatedHeartView: View {
 \hline
 \textbf{想做什么} & \textbf{修饰符} \tabularnewline
 \hline
-留白 & \texttt{.padding(16)} \tabularnewline
-圆角 & \texttt{.cornerRadius(12)} \tabularnewline
-背景色 & \texttt{.background(Color(.systemGray6))} \tabularnewline
-字体与字号 & \texttt{.font(.title.bold())}/\texttt{.font(.system(size: 20))} \tabularnewline
-前景色（文字/图标） & \texttt{.foregroundColor(.red)} \tabularnewline
-撑满宽度 & \texttt{.frame(maxWidth: .infinity)} \tabularnewline
-固定尺寸 & \texttt{.frame(width: 100, height: 44)} \tabularnewline
-对齐方式 & \texttt{VStack(alignment: .leading)} \tabularnewline
-透明度 & \texttt{.opacity(0.6)} \tabularnewline
-阴影 & \texttt{.shadow(radius: 5)} \tabularnewline
-点击手势 & \texttt{.onTapGesture \{ ... \}} \tabularnewline
-键盘类型 & \texttt{.keyboardType(.decimalPad)} \tabularnewline
+留白 & \texttt{.\allowbreak padding(16)} \tabularnewline
+圆角 & \texttt{.\allowbreak cornerRadius(12)} \tabularnewline
+背景色 & \texttt{.\allowbreak background(Color(.\allowbreak systemGray6))} \tabularnewline
+字体与字号 & \texttt{.\allowbreak font(.\allowbreak title.\allowbreak bold())}/\texttt{.\allowbreak font(.\allowbreak system(size: 20))} \tabularnewline
+前景色（文字/图标） & \texttt{.\allowbreak foregroundColor(.\allowbreak red)} \tabularnewline
+撑满宽度 & \texttt{.\allowbreak frame(maxWidth: .\allowbreak infinity)} \tabularnewline
+固定尺寸 & \texttt{.\allowbreak frame(width:100, height: 44)} \tabularnewline
+对齐方式 & \texttt{VStack(alignment: .\allowbreak leading)} \tabularnewline
+透明度 & \texttt{.\allowbreak opacity(0.\allowbreak 6)} \tabularnewline
+阴影 & \texttt{.\allowbreak shadow(radius: 5)} \tabularnewline
+点击手势 & \texttt{.\allowbreak onTapGesture \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+键盘类型 & \texttt{.\allowbreak keyboardType(.\allowbreak decimalPad)} \tabularnewline
 \hline
 \end{tabularx}
 \end{center}

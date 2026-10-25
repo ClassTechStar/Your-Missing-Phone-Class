@@ -12,15 +12,15 @@
 记住一个可变状态 & \texttt{var x by remember \{ mutableStateOf(初值) \}} \tabularnewline
 转屏不丢状态 & \texttt{rememberSaveable \{ mutableStateOf(初值) \}} \tabularnewline
 竖排/横排布局 & \texttt{Column \{ \}}/\texttt{Row \{ \}} \tabularnewline
-懒加载列表 & \texttt{LazyColumn \{ items(列表) \{ ... \} \}} \tabularnewline
-页面跳转 & \texttt{navController.navigate("路由")} \tabularnewline
-协程里干等活儿 & \texttt{viewModelScope.launch \{ ... \}} \tabularnewline
-观察数据流 & \texttt{val list by flow.collectAsState()} \tabularnewline
-存小配置 & \texttt{context.dataStore.edit \{ it[KEY] = 值 \}} \tabularnewline
+懒加载列表 & \texttt{LazyColumn \{ items(列表) \{ .\allowbreak .\allowbreak .\allowbreak  \} \}} \tabularnewline
+页面跳转 & \texttt{navController.\allowbreak navigate("路由")} \tabularnewline
+协程里干等活儿 & \texttt{viewModelScope.\allowbreak launch \{ .\allowbreak .\allowbreak .\allowbreak  \}} \tabularnewline
+观察数据流 & \texttt{val list by flow.\allowbreak collectAsState()} \tabularnewline
+存小配置 & \texttt{context.\allowbreak dataStore.\allowbreak edit \{ it[KEY] = 值 \}} \tabularnewline
 存结构化数据 & Room 三件套：@Entity / @Dao / @Database \tabularnewline
 联网取数据 & Retrofit 接口 + suspend 函数 \tabularnewline
 发通知 & NotificationChannel + NotificationCompat.Builder \tabularnewline
-打日志 & \texttt{Log.d("TAG", "message")} \tabularnewline
+打日志 & \texttt{Log.\allowbreak d("TAG", "message")} \tabularnewline
 \hline
 \end{tabularx}
 \end{center}
@@ -78,12 +78,12 @@
 \hline
 \textbf{命令} & \textbf{作用} \tabularnewline
 \hline
-\texttt{./gradlew assembleDebug} & 打一个调试版 APK（Windows 把 ./ 去掉） \tabularnewline
-\texttt{./gradlew assembleRelease} & 打发布版（需配好签名） \tabularnewline
-\texttt{./gradlew test} & 跑全部单元测试 \tabularnewline
-\texttt{./gradlew lint} & 静态检查：找出潜在 bug 和不规范写法 \tabularnewline
-\texttt{./gradlew clean} & 清空构建产物（"重启大法"的编译版） \tabularnewline
-\texttt{./gradlew :app: dependencies} & 查看依赖树（排查版本冲突神器） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleDebug} & 打一个调试版 APK（Windows 把 ./ 去掉） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew assembleRelease} & 打发布版（需配好签名） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew test} & 跑全部单元测试 \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew lint} & 静态检查：找出潜在 bug 和不规范写法 \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew clean} & 清空构建产物（"重启大法"的编译版） \tabularnewline
+\texttt{.\allowbreak /\allowbreak gradlew :app:dependencies} & 查看依赖树（排查版本冲突神器） \tabularnewline
 \hline
 \end{tabularx}
 \end{center}
@@ -91,7 +91,7 @@
 \begin{center}\small\color{gray}Gradle 常用命令速查\end{center}
 
 \begin{tcbinfo}{小贴士：构建出问题先 clean}
-“昨天还能跑今天就不行”的灵异事件，十有六七是构建缓存错乱。\texttt{./gradlew clean}之后重新构建，能治愈一大半玄学问题。还不行再重启 Android Studio——这招请配合 File Invalidate Caches 一起服用。
+“昨天还能跑今天就不行”的灵异事件，十有六七是构建缓存错乱。\texttt{.\allowbreak /\allowbreak gradlew clean}之后重新构建，能治愈一大半玄学问题。还不行再重启 Android Studio——这招请配合 File Invalidate Caches 一起服用。
 
 \end{tcbinfo}
 

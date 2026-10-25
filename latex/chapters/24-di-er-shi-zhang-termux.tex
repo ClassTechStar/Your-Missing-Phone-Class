@@ -44,11 +44,11 @@ Termux的核心应用程序可以通过几个可选的插件应用进行扩展�
 \textbf{插件名称} & \textbf{功能描述} \tabularnewline
 \hline
 Termux:API & 向命令行程序公开Android API功能 \tabularnewline
-Termux: Boot & 允许在设备启动时运行脚本 \tabularnewline
-Termux: Float & 提供浮动终端窗口 \tabularnewline
-Termux: Styling & 为终端启用颜色方案和字体自定义 \tabularnewline
-Termux: Tasker & 将Termux脚本与Tasker自动化应用集成 \tabularnewline
-Termux: Widget & 允许从主屏幕小部件运行脚本 \tabularnewline
+Termux:Boot & 允许在设备启动时运行脚本 \tabularnewline
+Termux:Float & 提供浮动终端窗口 \tabularnewline
+Termux:Styling & 为终端启用颜色方案和字体自定义 \tabularnewline
+Termux:Tasker & 将Termux脚本与Tasker自动化应用集成 \tabularnewline
+Termux:Widget & 允许从主屏幕小部件运行脚本 \tabularnewline
 \hline
 \end{tabularx}
 \end{center}
@@ -65,14 +65,14 @@ Termux及其插件必须从同一来源安装，因为它们共享相同的share
 \begin{enumerate}
   \item \textbf{下载应用}：从官方渠道（F-Droid或GitHub）下载安装Termux，无需root权限。
   \item \textbf{初始化系统}：首次启动后等待"Installing bootstrap packages"完成。
-  \item \textbf{获取存储权限}：执行\texttt{termux-setup-storage}获取手机文件系统权限。
+  \item \textbf{获取存储权限}：执行\texttt{termux-\allowbreak setup-\allowbreak storage}获取手机文件系统权限。
   \item \textbf{更新软件源}：执行\texttt{pkg update \&\& pkg upgrade}更新软件包列表。
 \end{enumerate}
 
 \subsubsection*{基础优化}
 
 \begin{itemize}
-  \item \textbf{换镜像源}：使用\texttt{termux-change-repo}命令通过图形界面更换镜像源（推荐清华大学镜像源）。
+  \item \textbf{换镜像源}：使用\texttt{termux-\allowbreak change-\allowbreak repo}命令通过图形界面更换镜像源（推荐清华大学镜像源）。
   \item \textbf{快捷键设置}：音量减键模拟Ctrl，音量加键模拟Esc，提升输入效率。
   \item \textbf{界面美化}：安装Zsh + Oh My Zsh，配置主题和插件。
 \end{itemize}
@@ -89,7 +89,7 @@ Termux及其插件必须从同一来源安装，因为它们共享相同的share
 
 \subsubsection*{学习Linux操作}
 
-提供真实的Linux环境，是学习命令行和系统管理的理想平台，可练习Shell脚本编写、Linux文件权限管理（如\texttt{chmod 755}设置 rwxr-xr-x 权限位、\texttt{chown user: group}修改文件归属、\texttt{ls -l}查看 owner/group/other 三组九位权限）等基础命令。注意这是Unix/Linux经典的“三组九位”权限模型（owner / group / other × 读 / 写 / 执行），与Windows NTFS的ACL访问控制列表是完全不同的两套体系。
+提供真实的Linux环境，是学习命令行和系统管理的理想平台，可练习Shell脚本编写、Linux文件权限管理（如\texttt{chmod 755}设置 rwxr-xr-x 权限位、\texttt{chown user:group}修改文件归属、\texttt{ls -\allowbreak l}查看 owner/group/other 三组九位权限）等基础命令。注意这是Unix/Linux经典的“三组九位”权限模型（owner / group / other × 读 / 写 / 执行），与Windows NTFS的ACL访问控制列表是完全不同的两套体系。
 
 \subsubsection*{网络安全测试}
 
@@ -109,7 +109,7 @@ Termux将强大的Linux终端体验带到了Android设备上，让手机成为�
   \item 从F-Droid下载并安装Termux，首次启动等待初始化完成。
   \item 执行\texttt{pkg update \&\& pkg upgrade}更新软件包。
   \item 安装Python：\texttt{pkg install python}。
-  \item 输入\texttt{python3 -c "print('Hello from Termux!')"}，感受在手机上运行代码的乐趣。
+  \item 输入\texttt{python3 -\allowbreak c "print('Hello from Termux!')"}，感受在手机上运行代码的乐趣。
 \end{enumerate}
 
 \end{tcbpractice}
