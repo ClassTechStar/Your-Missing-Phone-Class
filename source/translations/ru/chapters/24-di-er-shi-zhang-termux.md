@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  Прил.: Портативный Linux-терминал Termux
+nav: Прил.: Портативный Linux-терминал Termux
 toc: sub
 kind: supplement
 ---

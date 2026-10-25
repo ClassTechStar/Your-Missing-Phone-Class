@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  Tambahan Bab 11: Teknik Imej Profesional
+nav: Tambahan Bab 11: Teknik Imej Profesional
 toc: default
 kind: supplement
 ---

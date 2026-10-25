@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  Anexo del Capítulo 11: Técnicas de imagen profesionales
+nav: Anexo del Capítulo 11: Técnicas de imagen profesionales
 toc: default
 kind: supplement
 ---

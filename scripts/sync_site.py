@@ -25,6 +25,9 @@ DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # 站点根要带的 PWA 资产
 ASSETS = ['sw.js', 'manifest.webmanifest']
 ASSET_DIRS = ['icons']
+# 书页里的 og:image 是绝对地址（manifest 的 site_url + cover-og.png），
+# 图必须一起部署到站点根，否则分享卡片抓不到图。
+COVER = ('docs/promotion/assets/cover-og.png', 'cover-og.png')
 
 # 书页 → 站点根，路径降一级
 REWRITES = [
@@ -68,6 +71,10 @@ def main():
             print(f'!! 缺少资产：{a}')
             return 1
         plan.append((a, '复制'))
+    if not (ROOT / COVER[0]).is_file():
+        print(f'!! 缺少封面：{COVER[0]}（先运行 python scripts/gen_cover.py）')
+        return 1
+    plan.append((COVER[1], '分享卡片'))
     for d in ASSET_DIRS:
         n = len(list((ROOT / d).glob('*'))) if (ROOT / d).is_dir() else 0
         plan.append((d + '/', f'{n} 个文件'))
@@ -81,6 +88,7 @@ def main():
     (dest / 'index.html').write_text(html, encoding='utf-8', newline='')
     for a in ASSETS:
         shutil.copy2(ROOT / a, dest / a)
+    shutil.copy2(ROOT / COVER[0], dest / COVER[1])
     for d in ASSET_DIRS:
         tgt = dest / d
         if tgt.exists():

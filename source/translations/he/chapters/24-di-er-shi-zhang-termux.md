@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  פרק 20 נספח
+nav: פרק 20 נספח
 toc: sub
 kind: supplement
 ---

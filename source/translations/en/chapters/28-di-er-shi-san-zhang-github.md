@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-san-zhang-github
 part: chao-yue-pian
-nav:  Appendix: GitHub Getting Started Guide
+nav: Appendix: GitHub Getting Started Guide
 toc: sub
 kind: chapter
 ---

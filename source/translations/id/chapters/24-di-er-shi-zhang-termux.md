@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  Bab 20 Appendix
+nav: Bab 20 Appendix
 toc: sub
 kind: supplement
 ---

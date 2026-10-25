@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  Appendice al Capitolo 1: Speciale sistema operativo HarmonyOS
+nav: Appendice al Capitolo 1: Speciale sistema operativo HarmonyOS
 toc: default
 kind: supplement
 ---

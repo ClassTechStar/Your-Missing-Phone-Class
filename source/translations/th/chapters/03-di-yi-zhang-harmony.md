@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  บทที่ 1 ภาคผนวก: หัวข้อพิเศษระบบปฏิบัติการฮาร์โมนีโอเอส
+nav: บทที่ 1 ภาคผนวก: หัวข้อพิเศษระบบปฏิบัติการฮาร์โมนีโอเอส
 toc: default
 kind: supplement
 ---

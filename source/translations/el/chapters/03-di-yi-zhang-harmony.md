@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  Κεφάλαιο 1 Παράρτημα: Ειδικό θέμα λειτουργικού συστήματος HarmonyOS
+nav: Κεφάλαιο 1 Παράρτημα: Ειδικό θέμα λειτουργικού συστήματος HarmonyOS
 toc: default
 kind: supplement
 ---

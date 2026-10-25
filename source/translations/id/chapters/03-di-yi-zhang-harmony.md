@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  Lampiran Bab 1: Topik khusus sistem operasi HarmonyOS
+nav: Lampiran Bab 1: Topik khusus sistem operasi HarmonyOS
 toc: default
 kind: supplement
 ---

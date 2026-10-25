@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-san-zhang-github
 part: chao-yue-pian
-nav:  Παράρτημα: Εισαγωγικός οδηγός GitHub
+nav: Παράρτημα: Εισαγωγικός οδηγός GitHub
 toc: sub
 kind: chapter
 ---

@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  Lampiran: Analisis ekspansi memori ponsel Android
+nav: Lampiran: Analisis ekspansi memori ponsel Android
 toc: sub
 kind: supplement
 ---

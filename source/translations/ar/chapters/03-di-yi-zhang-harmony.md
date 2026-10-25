@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  ملحق الفصل 1: موضوع نظام تشغيل HarmonyOS
+nav: ملحق الفصل 1: موضوع نظام تشغيل HarmonyOS
 toc: default
 kind: supplement
 ---

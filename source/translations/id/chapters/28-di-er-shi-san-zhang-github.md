@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-san-zhang-github
 part: chao-yue-pian
-nav:  Lampiran: Panduan pemula GitHub
+nav: Lampiran: Panduan pemula GitHub
 toc: sub
 kind: chapter
 ---

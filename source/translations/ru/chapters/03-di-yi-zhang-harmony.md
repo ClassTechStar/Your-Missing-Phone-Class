@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  Прил. к главе 1: Спецтема — ОС Harmony
+nav: Прил. к главе 1: Спецтема — ОС Harmony
 toc: default
 kind: supplement
 ---

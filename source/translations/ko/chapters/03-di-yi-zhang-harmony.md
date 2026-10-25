@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  제1장 부록: HarmonyOS 운영체제 특집
+nav: 제1장 부록: HarmonyOS 운영체제 특집
 toc: default
 kind: supplement
 ---

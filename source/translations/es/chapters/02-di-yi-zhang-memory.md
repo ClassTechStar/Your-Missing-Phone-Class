@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  Anexo: Análisis de expansión de memoria en móviles Android
+nav: Anexo: Análisis de expansión de memoria en móviles Android
 toc: sub
 kind: supplement
 ---

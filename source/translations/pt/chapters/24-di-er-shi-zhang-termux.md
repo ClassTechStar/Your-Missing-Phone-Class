@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  Anexo: Terminal Linux portátil Termux
+nav: Anexo: Terminal Linux portátil Termux
 toc: sub
 kind: supplement
 ---

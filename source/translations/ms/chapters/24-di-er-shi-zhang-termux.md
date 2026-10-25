@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  Lampiran Bab 20
+nav: Lampiran Bab 20
 toc: sub
 kind: supplement
 ---

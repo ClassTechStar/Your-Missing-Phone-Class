@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  บทที่ 11 ภาคผนวก: เทคโนโลยีภาพระดับมืออาชีพ
+nav: บทที่ 11 ภาคผนวก: เทคโนโลยีภาพระดับมืออาชีพ
 toc: default
 kind: supplement
 ---

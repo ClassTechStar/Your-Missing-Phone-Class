@@ -2,7 +2,7 @@
 
 **标题（≤80 字符，三选一）：**
 
-1. Show HN: I wrote a 69-chapter smartphone literacy book for everyone – free, in 19 languages
+1. Show HN: I wrote an 84-chapter smartphone literacy book for everyone – free, in 19 languages
 2. Show HN: Your Missing Phone Class – 84 lessons from "what is a SoC" to shipping your first app
 3. Show HN: A free phone-literacy textbook for parents and beginners, 19 languages, PDF/APK/Web
 

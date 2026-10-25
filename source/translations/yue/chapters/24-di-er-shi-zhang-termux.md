@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  附：Termux便攜式Linux終端
+nav: 附：Termux便攜式Linux終端
 toc: sub
 kind: supplement
 ---

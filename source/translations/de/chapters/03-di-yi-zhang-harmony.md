@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  Kapitel 1 Anhang: HarmonyOS-Betriebssystem Spezialthema
+nav: Kapitel 1 Anhang: HarmonyOS-Betriebssystem Spezialthema
 toc: default
 kind: supplement
 ---

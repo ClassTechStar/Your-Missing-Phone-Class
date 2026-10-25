@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  次十章附
+nav: 次十章附
 toc: sub
 kind: supplement
 ---

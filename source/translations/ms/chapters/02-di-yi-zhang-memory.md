@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  Tambahan: Analisis Pengembangan Ingatan Telefon Android
+nav: Tambahan: Analisis Pengembangan Ingatan Telefon Android
 toc: sub
 kind: supplement
 ---

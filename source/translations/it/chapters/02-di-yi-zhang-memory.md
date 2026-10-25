@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  Appendice: Analisi dell'espansione memoria su Android
+nav: Appendice: Analisi dell'espansione memoria su Android
 toc: sub
 kind: supplement
 ---

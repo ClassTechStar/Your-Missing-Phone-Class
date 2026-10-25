@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  부록: 안드로이드 스마트폰 메모리 확장 분석
+nav: 부록: 안드로이드 스마트폰 메모리 확장 분석
 toc: sub
 kind: supplement
 ---

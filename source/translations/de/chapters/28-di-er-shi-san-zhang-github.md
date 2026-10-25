@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-san-zhang-github
 part: chao-yue-pian
-nav:  Anhang: GitHub-Einsteigerleitfaden
+nav: Anhang: GitHub-Einsteigerleitfaden
 toc: sub
 kind: chapter
 ---

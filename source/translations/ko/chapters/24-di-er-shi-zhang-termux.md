@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  부록: Termux 휴대용 Linux 터미널
+nav: 부록: Termux 휴대용 Linux 터미널
 toc: sub
 kind: supplement
 ---

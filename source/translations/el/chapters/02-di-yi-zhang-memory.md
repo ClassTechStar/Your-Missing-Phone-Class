@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  Παράρτημα: Ανάλυση επέκτασης μνήμης σε Android κινητά
+nav: Παράρτημα: Ανάλυση επέκτασης μνήμης σε Android κινητά
 toc: sub
 kind: supplement
 ---

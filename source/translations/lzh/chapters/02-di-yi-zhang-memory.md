@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  第一章：敬禮，吾之私用电腦
+nav: 第一章：敬禮，吾之私用电腦
 toc: sub
 kind: supplement
 ---

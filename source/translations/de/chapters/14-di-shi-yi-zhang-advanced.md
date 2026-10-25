@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  Kapitel 11 Anhang: Professionelle Bildtechnik
+nav: Kapitel 11 Anhang: Professionelle Bildtechnik
 toc: default
 kind: supplement
 ---

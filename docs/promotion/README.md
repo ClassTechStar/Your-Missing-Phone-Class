@@ -4,9 +4,11 @@
 
 | 文件 | 渠道 | 内容 |
 |------|------|------|
+| [launch.md](launch.md) | 全渠道 | **发出去的执行清单**：发布前核验、素材规格、逐渠道点选步骤、数据回收 |
 | [show-hn.md](show-hn.md) | Hacker News / Reddit r/smartphone r/Android | 英文发布帖全文 + 答问预案 |
 | [小红书.md](小红书.md) | 小红书 | 主笔记文案 + 10 期系列选题 + 60 秒视频脚本模板 |
 | [bilibili.md](bilibili.md) | 哔哩哔哩 @ClassTechStar | 10 期知识区系列脚本 |
+| [assets/](assets/) | 全渠道 | 封面三件套：OG 1200×630 / 小红书 1080×1440 / B 站 1920×1080 |
 
 ## 核心信息（所有渠道统一口径）
 

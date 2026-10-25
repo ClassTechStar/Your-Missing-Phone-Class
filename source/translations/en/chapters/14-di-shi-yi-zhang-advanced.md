@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  Chapter 11 Appendix:Professional Imaging Techniques
+nav: Chapter 11 Appendix:Professional Imaging Techniques
 toc: default
 kind: supplement
 ---

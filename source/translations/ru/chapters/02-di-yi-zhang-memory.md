@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  Прил.: Разбор расширения памяти на Android
+nav: Прил.: Разбор расширения памяти на Android
 toc: sub
 kind: supplement
 ---

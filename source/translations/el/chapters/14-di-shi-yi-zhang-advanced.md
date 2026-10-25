@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  Συμπλήρωμα στο Κεφάλαιο 11: Επαγγελματικές τεχνικές απεικόνισης
+nav: Συμπλήρωμα στο Κεφάλαιο 11: Επαγγελματικές τεχνικές απεικόνισης
 toc: default
 kind: supplement
 ---

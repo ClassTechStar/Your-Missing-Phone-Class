@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  Tambahan Bab 1: Topik Khas Sistem Pengendalian HarmonyOS
+nav: Tambahan Bab 1: Topik Khas Sistem Pengendalian HarmonyOS
 toc: default
 kind: supplement
 ---

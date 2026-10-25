@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  ملحق الفصل 20
+nav: ملحق الفصل 20
 toc: sub
 kind: supplement
 ---

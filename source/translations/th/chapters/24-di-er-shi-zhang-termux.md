@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  บทที่ 20 ภาคผนวก
+nav: บทที่ 20 ภาคผนวก
 toc: sub
 kind: supplement
 ---

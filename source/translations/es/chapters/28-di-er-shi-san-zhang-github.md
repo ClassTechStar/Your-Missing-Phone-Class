@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-san-zhang-github
 part: chao-yue-pian
-nav:  Anexo: Guía de introducción a GitHub
+nav: Anexo: Guía de introducción a GitHub
 toc: sub
 kind: chapter
 ---

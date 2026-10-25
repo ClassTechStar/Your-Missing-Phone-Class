@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  제11장 부록: 전문 이미지 기술
+nav: 제11장 부록: 전문 이미지 기술
 toc: default
 kind: supplement
 ---

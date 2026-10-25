@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  Anhang: Android-Smartphone Speichererweiterung erklärt
+nav: Anhang: Android-Smartphone Speichererweiterung erklärt
 toc: sub
 kind: supplement
 ---

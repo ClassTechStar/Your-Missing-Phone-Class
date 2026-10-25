@@ -2,10 +2,13 @@
   "schema_version": 2,
   "description": "语言与版本单一数据源（bookkit 读取）。语言元数据在此维护；各版本包含哪些 HTML 由目录扫描发现，避免双重维护。",
   "default_version": "v1.8",
+  "site_url": "https://classtechstar.github.io/Yihggh.github.io/",
+  "og_image": "cover-og.png",
   "languages": {
     "zh-CN": {
       "name": "简体中文",
       "html_lang": "zh-CN",
+      "og_locale": "zh_CN",
       "dir": "ltr",
       "script": "Hans",
       "priority": 1,
@@ -15,6 +18,7 @@
     "zh-TW": {
       "name": "繁體中文",
       "html_lang": "zh-TW",
+      "og_locale": "zh_TW",
       "dir": "ltr",
       "script": "Hant",
       "priority": 2,
@@ -24,6 +28,7 @@
     "yue": {
       "name": "粵語",
       "html_lang": "yue",
+      "og_locale": "zh_HK",
       "dir": "ltr",
       "script": "Hant",
       "priority": 3,
@@ -33,6 +38,7 @@
     "en": {
       "name": "English",
       "html_lang": "en",
+      "og_locale": "en_US",
       "dir": "ltr",
       "script": "Latn",
       "priority": 4,
@@ -42,6 +48,7 @@
     "ko": {
       "name": "한국어",
       "html_lang": "ko",
+      "og_locale": "ko_KR",
       "dir": "ltr",
       "script": "Hang",
       "priority": 5,
@@ -51,6 +58,7 @@
     "ja": {
       "name": "日本語",
       "html_lang": "ja",
+      "og_locale": "ja_JP",
       "dir": "ltr",
       "script": "Jpan",
       "priority": 6,
@@ -60,6 +68,7 @@
     "ru": {
       "name": "Русский",
       "html_lang": "ru",
+      "og_locale": "ru_RU",
       "dir": "ltr",
       "script": "Cyrl",
       "priority": 7,
@@ -69,6 +78,7 @@
     "it": {
       "name": "Italiano",
       "html_lang": "it",
+      "og_locale": "it_IT",
       "dir": "ltr",
       "script": "Latn",
       "priority": 8,
@@ -78,6 +88,7 @@
     "pt": {
       "name": "Português",
       "html_lang": "pt-BR",
+      "og_locale": "pt_PT",
       "dir": "ltr",
       "script": "Latn",
       "priority": 9,
@@ -87,6 +98,7 @@
     "es": {
       "name": "Español",
       "html_lang": "es",
+      "og_locale": "es_ES",
       "dir": "ltr",
       "script": "Latn",
       "priority": 10,
@@ -96,6 +108,7 @@
     "fr": {
       "name": "Français",
       "html_lang": "fr",
+      "og_locale": "fr_FR",
       "dir": "ltr",
       "script": "Latn",
       "priority": 11,
@@ -105,6 +118,7 @@
     "de": {
       "name": "Deutsch",
       "html_lang": "de",
+      "og_locale": "de_DE",
       "dir": "ltr",
       "script": "Latn",
       "priority": 12,
@@ -114,6 +128,7 @@
     "ar": {
       "name": "العربية",
       "html_lang": "ar",
+      "og_locale": "ar_SA",
       "dir": "rtl",
       "script": "Arab",
       "priority": 13,
@@ -123,6 +138,7 @@
     "he": {
       "name": "עברית",
       "html_lang": "he",
+      "og_locale": "he_IL",
       "dir": "rtl",
       "script": "Hebr",
       "priority": 14,
@@ -132,6 +148,7 @@
     "th": {
       "name": "ภาษาไทย",
       "html_lang": "th",
+      "og_locale": "th_TH",
       "dir": "ltr",
       "script": "Thai",
       "priority": 15,
@@ -141,6 +158,7 @@
     "id": {
       "name": "Bahasa Indonesia",
       "html_lang": "id",
+      "og_locale": "id_ID",
       "dir": "ltr",
       "script": "Latn",
       "priority": 16,
@@ -150,6 +168,7 @@
     "ms": {
       "name": "Bahasa Melayu",
       "html_lang": "ms",
+      "og_locale": "ms_MY",
       "dir": "ltr",
       "script": "Latn",
       "priority": 17,
@@ -159,6 +178,7 @@
     "el": {
       "name": "Ελληνικά",
       "html_lang": "el",
+      "og_locale": "el_GR",
       "dir": "ltr",
       "script": "Grek",
       "priority": 18,
@@ -168,6 +188,7 @@
     "lzh": {
       "name": "文言文",
       "html_lang": "lzh",
+      "og_locale": "zh_CN",
       "dir": "ltr",
       "script": "Hant",
       "priority": 19,
@@ -207,7 +228,8 @@
         "residual": "error",
         "coverage": "error",
         "source_sync": "error",
-        "orphan": "error"
+        "orphan": "error",
+        "social": "error"
       }
     }
   },

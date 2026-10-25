@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  Дополнение к главе 11: Профессиональные техники съёмки
+nav: Дополнение к главе 11: Профессиональные техники съёмки
 toc: default
 kind: supplement
 ---

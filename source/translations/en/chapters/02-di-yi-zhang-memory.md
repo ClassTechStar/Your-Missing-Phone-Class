@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  Appendix: Android Phone Memory Expansion Explained
+nav: Appendix: Android Phone Memory Expansion Explained
 toc: sub
 kind: supplement
 ---

@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  Appendice al Capitolo 11: Tecniche fotografiche professionali
+nav: Appendice al Capitolo 11: Tecniche fotografiche professionali
 toc: default
 kind: supplement
 ---

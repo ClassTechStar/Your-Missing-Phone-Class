@@ -13,6 +13,7 @@ import json
 import re
 from pathlib import Path
 
+from . import manifest as MF
 from . import markdown as M
 
 DEFAULT_BOOK = 'source/book.json'
@@ -73,6 +74,24 @@ def _read_md(root: Path, rel: str):
         raise BookError(f'源稿缺失：{src}/{rel}')
     meta, body = M.split_front_matter(p.read_text(encoding='utf-8'))
     return meta, body
+
+
+def social_meta(root: Path, lang: str) -> tuple:
+    """社交卡片元数据：og:locale 与绝对可访问的分享图地址。
+
+    分享卡片是三件事的唯一交叉点——标题（book.json）、语言（manifest）、
+    封面（docs/promotion/assets/cover-og.png 同步到站点根）。写死在模板里必然漂移
+    （历史上前 18 语模板里的 v3.2 / 69 章就是这么烂掉的），所以统一由数据注入。
+    """
+    try:
+        mf = MF.load_manifest(root)
+    except MF.ManifestError:
+        return lang.replace('-', '_'), ''
+    meta = mf.lang_meta(lang)
+    locale = meta.get('og_locale') or (meta.get('html_lang') or lang).replace('-', '_')
+    site = (mf.data.get('site_url') or '').rstrip('/')
+    image = f'{site}/{mf.data.get("og_image", "cover-og.png")}' if site else ''
+    return locale, image
 
 
 def render_toc(book: dict) -> str:
@@ -151,9 +170,12 @@ def build(root: Path, lang: str = 'zh-CN', out: Path = None, book_path: Path = N
     body_html = '\n\n'.join(blocks)
 
     g = book.get('glossary', {})
+    og_locale, og_image = social_meta(root, lang)
     html = (shell
             .replace('{{TITLE}}', book.get('title', ''))
             .replace('{{VERSION}}', book.get('version', ''))
+            .replace('{{OG_LOCALE}}', og_locale)
+            .replace('{{OG_IMAGE}}', og_image)
             .replace('{{CH_COUNT}}', str(g.get('ch_count', '')))
             .replace('{{APP_COUNT}}', str(g.get('app_count', '')))
             .replace('{{TOC}}', toc)

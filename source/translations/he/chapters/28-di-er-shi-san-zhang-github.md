@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-san-zhang-github
 part: chao-yue-pian
-nav:  נספח: מדריך מתחילים ל-GitHub
+nav: נספח: מדריך מתחילים ל-GitHub
 toc: sub
 kind: chapter
 ---

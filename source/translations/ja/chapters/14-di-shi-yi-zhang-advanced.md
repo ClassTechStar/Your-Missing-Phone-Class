@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  第十一章付録：プロ級の撮影テクニック
+nav: 第十一章付録：プロ級の撮影テクニック
 toc: default
 kind: supplement
 ---

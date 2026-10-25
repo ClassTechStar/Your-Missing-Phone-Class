@@ -12,8 +12,14 @@ from .model import ERROR, Issue, OFF, WARN
 
 CHECK_ORDER = [
     "structure", "coverage", "toc", "orphan", "anchors",
-    "title_version", "lang", "nul", "residual", "source_sync",
+    "title_version", "lang", "nul", "residual", "source_sync", "social",
 ]
+
+
+def _meta(raw: str, attr: str, key: str) -> str:
+    """取 <meta attr="key" content="…"> 的取值（无则空串）。"""
+    m = re.search(rf'<meta {attr}="{re.escape(key)}" content="([^"]*)"', raw)
+    return m.group(1) if m else ''
 
 
 def _rel(root: Path, p: Path) -> str:
@@ -170,6 +176,37 @@ def lint_version(root: Path, mf, version: str) -> list:
                 if bad:
                     _emit(issues, version, "residual", lvl,
                           f"{code} 残留仅简体字形", file=rel, detail=f"{bad[:10]}")
+
+        # --- social：分享卡片元数据（og / twitter） ---
+        # 渠道分发时用户只看到这张卡片：图缺了就没有缩略图，locale 错了会被推到错的地区，
+        # 标题里的版本串旧了会指向不存在的版本（历史上 v3.2 / 69 章就是这么留下来的）。
+        lvl = mf.check_level(version, "social")
+        if lvl != OFF:
+            og_img = _meta(raw, 'property', 'og:image')
+            og_locale = _meta(raw, 'property', 'og:locale')
+            og_title = _meta(raw, 'property', 'og:title')
+            tw_img = _meta(raw, 'name', 'twitter:image')
+            want = meta.get("og_locale", "")
+            if not og_img.startswith(("https://", "http://")):
+                _emit(issues, version, "social", lvl,
+                      f"{code} og:image 缺失或非绝对地址", file=rel, detail=f"og:image={og_img!r}")
+            if want and og_locale != want:
+                _emit(issues, version, "social", lvl,
+                      f"{code} og:locale={og_locale!r}，期望 {want!r}", file=rel)
+            if og_title and version not in og_title:
+                _emit(issues, version, "social", lvl,
+                      f"{code} og:title 不含 {version}", file=rel, detail=f"og:title={og_title[:60]!r}")
+            if not tw_img:
+                _emit(issues, version, "social", lvl, f"{code} 缺 twitter:image", file=rel)
+
+    # --- social：分享图必须真的在仓库里（部署脚本要把它拷到站点根） ---
+    lvl = mf.check_level(version, "social")
+    og_name = mf.data.get("og_image", "")
+    if lvl != OFF and og_name:
+        cover = root / "docs" / "promotion" / "assets" / og_name
+        if not cover.is_file():
+            _emit(issues, version, "social", lvl,
+                  f"分享图不存在：{cover.relative_to(root).as_posix()}（先运行 python scripts/gen_cover.py）")
 
     # --- source_sync：根目录源文件与规范文件一致 ---
     lvl = mf.check_level(version, "source_sync")

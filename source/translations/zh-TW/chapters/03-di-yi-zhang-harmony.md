@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  第一章附：鴻蒙作業系統專題
+nav: 第一章附：鴻蒙作業系統專題
 toc: default
 kind: supplement
 ---

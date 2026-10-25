@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  附：安卓手機記憶體拓展解析
+nav: 附：安卓手機記憶體拓展解析
 toc: sub
 kind: supplement
 ---

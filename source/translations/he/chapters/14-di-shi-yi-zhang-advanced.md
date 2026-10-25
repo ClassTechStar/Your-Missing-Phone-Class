@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  נספח לפרק 11: טכניקות צילום מקצועיות
+nav: נספח לפרק 11: טכניקות צילום מקצועיות
 toc: default
 kind: supplement
 ---

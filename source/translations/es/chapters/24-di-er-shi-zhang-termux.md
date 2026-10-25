@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  Usa el emisor infrarrojo como mando a distancia
+nav: Usa el emisor infrarrojo como mando a distancia
 toc: sub
 kind: supplement
 ---

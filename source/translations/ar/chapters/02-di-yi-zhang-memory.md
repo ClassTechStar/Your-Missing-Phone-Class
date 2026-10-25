@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-memory
 part: ji-chu-pian
-nav:  ملحق: تحليل توسيع ذاكرة هواتف Android
+nav: ملحق: تحليل توسيع ذاكرة هواتف Android
 toc: sub
 kind: supplement
 ---

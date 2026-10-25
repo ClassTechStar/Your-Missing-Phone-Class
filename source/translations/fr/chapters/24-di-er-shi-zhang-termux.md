@@ -1,7 +1,7 @@
 ---
 id: di-er-shi-zhang-termux
 part: jin-jie-pian
-nav:  Annexe du Chapitre 20
+nav: Annexe du Chapitre 20
 toc: sub
 kind: supplement
 ---

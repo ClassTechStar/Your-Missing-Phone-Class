@@ -1,7 +1,7 @@
 ---
 id: di-yi-zhang-harmony
 part: ji-chu-pian
-nav:  Chapitre 1 Annexe : spécial HarmonyOS
+nav: Chapitre 1 Annexe : spécial HarmonyOS
 toc: default
 kind: supplement
 ---

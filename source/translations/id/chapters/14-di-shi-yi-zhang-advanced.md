@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  Tambahan Bab 11:Teknologi Pencitraan Profesional
+nav: Tambahan Bab 11:Teknologi Pencitraan Profesional
 toc: default
 kind: supplement
 ---

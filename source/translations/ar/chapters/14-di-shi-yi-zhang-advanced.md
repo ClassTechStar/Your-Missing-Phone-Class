@@ -1,7 +1,7 @@
 ---
 id: di-shi-yi-zhang-advanced
 part: ruan-jian-pian
-nav:  ملحق الفصل 11: تقنيات التصوير الاحترافي
+nav: ملحق الفصل 11: تقنيات التصوير الاحترافي
 toc: default
 kind: supplement
 ---
