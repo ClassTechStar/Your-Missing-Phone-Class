@@ -1,0 +1,3066 @@
+ <!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Domine o Celular! Do iniciante a expert, o curso essencial de tecnologia realmente feito para pessoas comuns. São 69 capítulos que explicam de forma sistemática hardware, sistema, redes, segurança, IA, programação com IA na prática, desenvolvimento Android, desenvolvimento iOS, automação, acessibilidade para idosos, guia de compra, bem-estar digital, espelhamento de tela e carro, vídeos curtos, primeiros socorros de segurança e tendências futuras, com muitos exemplos reais, exercícios práticos, leitura em voz alta, painel de aprendizado, backup de progresso e glossário de consulta rápida. A v3.2 traz três grandes partes práticas novas: programação com IA, desenvolvimento Android e desenvolvimento iOS (Capítulos 37-69, 33 capítulos no total).">
+    <meta name="keywords" content="tutorial de celular,noções essenciais de tecnologia,smartphone,Android,iOS,HarmonyOS,dicas de celular,vida digital,grandes modelos de IA,programação com IA,API de grandes modelos,engenharia de prompts,desenvolvimento Android,desenvolvimento iOS,Swift,Kotlin,SwiftUI,Jetpack Compose,computação fotográfica,segurança da informação,gerenciamento de senhas,automação,como escolher celular">
+    <meta name="author" content="Guia da Vida Digital">
+    <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="Domine o Celular! O Curso Essencial de Tecnologia para Iniciantes v3.2">
+    <meta property="og:description" content="Do básico ao avançado, assuma o controle total da sua vida digital. 69 capítulos com explicações sistemáticas + muita prática + leitura em voz alta + painel de aprendizado + backup de progresso + glossário de consulta rápida. A v3.2 traz três grandes partes práticas novas: programação com IA, desenvolvimento Android e desenvolvimento iOS.">
+    <meta property="og:type" content="book">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="Domine o Celular! Noções Essenciais de Tecnologia">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Domine o Celular! O Curso Essencial de Tecnologia para Iniciantes">
+    <meta name="twitter:description" content="Do básico ao avançado, assuma o controle total da sua vida digital">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+    <title>{{TITLE}} · {{VERSION}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f46e5',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                        accent: '#7c3aed',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .focus-ring:focus-visible {
+                outline: 2px solid #4f46e5;
+                outline-offset: 2px;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark body {
+            background-color: #111827;
+        }
+        .toc-item.active {
+            color: #4f46e5;
+            font-weight: 600;
+            background-color: #eef2ff;
+            border-left: 3px solid #4f46e5;
+        }
+        .dark .toc-item.active {
+            background-color: #1e1b4b;
+            border-left-color: #818cf8;
+        }
+        /* Estilos básicos dos links da barra lateral */
+        #sidebar a {
+            display: block;
+            transition: all 0.2s ease;
+            position: relative;
+            text-decoration: none;
+        }
+        #sidebar a:hover {
+            color: #4f46e5 !important;
+            background-color: #eef2ff;
+            transform: translateX(2px);
+        }
+        .dark #sidebar a:hover {
+            background-color: rgba(79, 70, 229, 0.12);
+        }
+        /* Títulos dos grupos pai */
+        .toc-parent > div {
+            transition: background-color 0.15s ease;
+        }
+        .toc-parent > div:hover {
+            background-color: #f8fafc;
+        }
+        .dark .toc-parent > div:hover {
+            background-color: rgba(255,255,255,0.03);
+        }
+        /* Área separada para o ícone de recolher */
+        .toc-toggle-btn {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: background-color 0.15s, transform 0.3s ease;
+            color: #9ca3af;
+        }
+        .toc-toggle-btn:hover {
+            background-color: #e5e7eb;
+            color: #374151;
+        }
+        .dark .toc-toggle-btn:hover {
+            background-color: #374151;
+            color: #e5e7eb;
+        }
+        /* Transições dos itens filhos */
+        .toc-child li {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .toc-child:not(.open) + .toc-child li,
+        .toc-child:not(.open) li {
+            /* quando recolhido, controlado por max-height */
+        }
+        /* indicador da posição de leitura atual */
+        .toc-reading-indicator {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4f46e5;
+            border-radius: 0;
+            transition: top 0.3s ease, height 0.3s ease;
+            z-index: 1;
+        }
+        /* Melhorias na área superior da barra lateral */
+        #sidebar > nav > div:first-child {
+            background: #f5f6f8;
+            border-radius: 0;
+            padding: 0.875rem 1rem !important;
+        }
+        .dark #sidebar > nav > div:first-child {
+            background: #1a2230;
+        }
+        /* Melhorias gerais da barra lateral */
+        #sidebar {
+            box-shadow: none;
+            border-right: 1px solid #e5e7eb;
+        }
+        .dark #sidebar {
+            border-right-color: #374151;
+        }
+        @media (max-width: 1023px) {
+            #sidebar {
+                box-shadow: 4px 0 24px rgba(0,0,0,0.12);
+                border-right: none;
+            }
+        }
+        /* Estilos dos números de capítulo */
+        .toc-item span[class*="font-mono"] {
+            display: inline-block;
+            min-width: 1.5rem;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+            opacity: 0.6;
+            transition: opacity 0.2s, color 0.2s;
+        }
+        .toc-item:hover span[class*="font-mono"],
+        .toc-item.active span[class*="font-mono"] {
+            opacity: 1;
+            color: #4f46e5;
+        }
+        .dark .toc-item:hover span[class*="font-mono"],
+        .dark .toc-item.active span[class*="font-mono"] {
+            color: #818cf8;
+        }
+        /* Destaque piscante do capítulo de destino */
+        .scroll-target-flash {
+            animation: targetFlash 1.2s ease-out;
+        }
+        @keyframes targetFlash {
+            0% { box-shadow: inset 0 0 0 2px rgba(79,70,229,0.25); background-color: rgba(79,70,229,0.02); }
+            100% { box-shadow: none; background-color: transparent; }
+        }
+        .dark .scroll-target-flash {
+            animation: targetFlashDark 1.2s ease-out;
+        }
+        @keyframes targetFlashDark {
+            0% { box-shadow: inset 0 0 0 2px rgba(150,180,200,0.2); background-color: rgba(150,180,200,0.04); }
+            100% { box-shadow: none; background-color: transparent; }
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 3000px;
+        }
+        .content-section {
+            content-visibility: auto;
+            contain-intrinsic-size: 0 800px;
+        }
+        .content-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            max-width: 95ch;
+        }
+        .content-section h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .content-section h5 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .content-section ul, .content-section ol {
+            margin-bottom: 1rem;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(180deg);
+        }
+        .callout-box {
+            border-left: 4px solid;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            max-width: 82ch;
+        }
+        .info-box {
+            border-color: #4f46e5;
+            background: #eef2f5;
+        }
+        .dark .info-box {
+            background: #1e2a36;
+        }
+        .warning-box {
+            border-color: #d4a017;
+            background: #fdf8ef;
+        }
+        .dark .warning-box {
+            background: #3d2e0f;
+        }
+        .danger-box {
+            border-color: #c0392b;
+            background: #fdf0ef;
+        }
+        .dark .danger-box {
+            background: #3d1a1a;
+        }
+        .success-box {
+            border-color: #27ae60;
+            background: #eef9f2;
+        }
+        .dark .success-box {
+            background: #0d2c1a;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        .dark th, .dark td {
+            border-color: #374151;
+        }
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+        .dark th {
+            background-color: #1f2937;
+        }
+        .practice-box {
+            background: #f0f4f8;
+            border: 1px solid #d0d8e0;
+        }
+        .dark .practice-box {
+            background: #1e2a36;
+            border-color: #354152;
+        }
+        .chapter-intro {
+            font-size: 1.05em;
+            color: #4b5563;
+            padding: 1rem 1.25rem;
+            border-radius: 0.25rem;
+            background: #f5f6f8;
+            border-left: 3px solid #4f46e5;
+        }
+        .dark .chapter-intro {
+            color: #9ca3af;
+            background: #1a2230;
+        }
+        .key-point {
+            background: #eef2f5;
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+        .dark .key-point {
+            background: #1e2a36;
+        }
+        #reading-progress {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            height: 3px;
+            background: #4f46e5;
+            z-index: 51;
+            transition: width 0.1s linear;
+        }
+        .search-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 60;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 15vh;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+        .search-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .search-panel {
+            background: white;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 70vh;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+        .dark .search-panel {
+            background: #1f2937;
+        }
+        .search-input-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid #e5e7eb;
+            gap: 0.75rem;
+        }
+        .dark .search-input-wrapper {
+            border-color: #374151;
+        }
+        .search-input-wrapper input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            background: transparent;
+            color: inherit;
+        }
+        .search-results {
+            overflow-y: auto;
+            max-height: calc(70vh - 60px);
+            padding: 0.5rem;
+        }
+        .search-result-item {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .search-result-item:hover {
+            background: #f3f4f6;
+        }
+        .dark .search-result-item:hover {
+            background: #374151;
+        }
+        .search-result-item .result-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .search-result-item .result-excerpt {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .dark .search-result-item .result-excerpt {
+            color: #9ca3af;
+        }
+        .search-result-item mark {
+            background: #fef08a;
+            color: inherit;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+        .dark .search-result-item mark {
+            background: #854d0e;
+        }
+        .font-size-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background 0.15s;
+            font-weight: 700;
+            user-select: none;
+        }
+        .font-size-btn:hover {
+            background: #f3f4f6;
+        }
+        .dark .font-size-btn:hover {
+            background: #374151;
+        }
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .dark .chapter-nav {
+            border-color: #374151;
+        }
+        .chapter-nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+            color: #4f46e5;
+            transition: background 0.15s;
+            text-decoration: none;
+            max-width: 45%;
+        }
+        .chapter-nav a:hover {
+            background: #eef2f5;
+        }
+        .dark .chapter-nav a:hover {
+            background: #1e2a36;
+        }
+        .chapter-nav a.next {
+            margin-left: auto;
+            text-align: right;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .search-panel {
+                width: 95%;
+                max-height: 75vh;
+            }
+        }
+        @media print {
+            #navbar, #sidebar, #overlay, #back-to-top, #reading-progress, .chapter-nav, #quick-tools, #tts-controls, #shortcuts-overlay, #backup-overlay, #streak-toast, .chapter-rating, .no-print {
+                display: none !important;
+            }
+            main {
+                margin: 0 !important;
+                padding: 1rem !important;
+                box-shadow: none !important;
+                max-width: 100% !important;
+            }
+            .content-section {
+                content-visibility: visible !important;
+                contain-intrinsic-size: none !important;
+                page-break-inside: avoid;
+            }
+            body {
+                font-size: 12pt !important;
+                color: #000 !important;
+                background: #fff !important;
+            }
+            a {
+                color: #000 !important;
+                text-decoration: underline;
+            }
+        }
+
+        /* ===== Estilos de melhoria: cards de guia, resumos de capítulo, caminho de aprendizado ===== */
+        .reading-guide-card {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.25rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .dark .reading-guide-card {
+            background: #1a2230;
+            border-color: #354152;
+        }
+        .hero-banner {
+            background: #4f46e5;
+            border-radius: 0.25rem;
+            color: #fff;
+            padding: 2rem 1.5rem;
+        }
+        .stat-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.7rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 0.25rem;
+            font-size: 0.78rem;
+        }
+        .learning-path {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .path-step {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            position: relative;
+        }
+        .path-step:hover {
+            border-color: #4f46e5;
+        }
+        .dark .path-step {
+            background: #1a2230;
+            border-color: #354152;
+        }
+        .path-step .step-num {
+            position: absolute;
+            top: -0.7rem;
+            left: 1rem;
+            background: #4f46e5;
+            color: #fff;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .chapter-summary {
+            background: #fdf8ef;
+            border-left: 4px solid #d4a017;
+            border-radius: 0.25rem;
+            padding: 1rem 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .dark .chapter-summary {
+            background: #3d2e0f;
+        }
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            padding: 0.6rem 0;
+        }
+        .dark .breadcrumb { color: #9ca3af; }
+        .breadcrumb a:hover { color: #4f46e5; text-decoration: underline; }
+        .breadcrumb .sep { color: #cbd5e1; }
+        .quick-tools {
+            position: fixed;
+            right: 1rem;
+            bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 40;
+        }
+        .quick-tool-btn {
+            width: 2.6rem;
+            height: 2.6rem;
+            background: #fff;
+            color: #374151;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .dark .quick-tool-btn {
+            background: #1f2937;
+            color: #e5e7eb;
+        }
+        .quick-tool-btn:hover {
+            transform: translateY(-1px);
+            color: #4f46e5;
+        }
+        .reading-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .dark .reading-time { color: #9ca3af; }
+        .difficulty-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.15rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+        .difficulty-beginner { background: #d1fae5; color: #065f46; }
+        .difficulty-intermediate { background: #dbeafe; color: #1e40af; }
+        .difficulty-advanced { background: #fce7f3; color: #9f1239; }
+        .dark .difficulty-beginner { background: #064e3b; color: #6ee7b7; }
+        .dark .difficulty-intermediate { background: #1e3a5f; color: #93c5fd; }
+        .dark .difficulty-advanced { background: #831843; color: #fbcfe8; }
+        .pill-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .toc-section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #9ca3af;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.5rem 0.75rem 0.25rem;
+        }
+        .dark .toc-section-label { color: #6b7280; }
+        .toc-progress-bar {
+            height: 2px;
+            background: #4f46e5;
+            margin: 0.3rem 0;
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #4f46e5;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            z-index: 100;
+        }
+        .skip-link:focus { left: 0; }
+        .glossary-item {
+            display: flex;
+            gap: 1rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+        .dark .glossary-item { border-color: #374151; }
+        .glossary-item:last-child { border-bottom: 0; }
+        .glossary-term {
+            flex-shrink: 0;
+            font-weight: 700;
+            color: #4f46e5;
+            min-width: 90px;
+        }
+        .comparison-table th { font-weight: 700; }
+        .comparison-table tr:nth-child(even) td { background: #f9fafb; }
+        .dark .comparison-table tr:nth-child(even) td { background: #111827; }
+        .highlight-quote {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem 1.25rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #075985;
+        }
+        .dark .highlight-quote {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            color: #bae6fd;
+        }
+        .kbd {
+            display: inline-block;
+            padding: 0.1rem 0.45rem;
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-bottom-width: 2px;
+            border-radius: 0.3rem;
+            font-family: ui-monospace, monospace;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        .dark .kbd { background: #374151; color: #e5e7eb; border-color: #4b5563; }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .search-panel {
+                width: 95%;
+                max-height: 75vh;
+            }
+            .hero-banner { padding: 1.5rem 1rem; }
+            .hero-banner h1 { font-size: 1.5rem !important; }
+            .learning-path { grid-template-columns: 1fr; }
+            .quick-tools { right: 0.5rem; bottom: 4.5rem; }
+            .quick-tool-btn { width: 2.3rem; height: 2.3rem; }
+        }
+        @media (max-width: 480px) {
+            .breadcrumb { font-size: 0.78rem; }
+        }
+        @media (min-width: 1280px) {
+            main { max-width: 56rem; }
+        }
+
+        /* ===== Estilos de refinamento ===== */
+
+        /* Barra de progresso de leitura com gradiente */
+        #reading-progress {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
+            background-size: 200% 100% !important;
+            animation: progressShimmer 3s ease infinite;
+            height: 3px;
+            box-shadow: 0 0 8px rgba(79,70,229,0.3);
+        }
+        .dark #reading-progress {
+            background: linear-gradient(90deg, #818cf8, #a78bfa, #818cf8) !important;
+            background-size: 200% 100% !important;
+        }
+        @keyframes progressShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Animação de entrada ao rolar */
+        .content-section {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* o conteúdo da primeira tela é visível imediatamente */
+        .content-section:first-of-type,
+        .content-section.immediately-visible {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        /* Melhorias no banner hero */
+        .hero-banner {
+            background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(167,139,250,0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 40%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(236,72,153,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-banner > * { position: relative; z-index: 1; }
+
+        /* Efeito hover dos cards */
+        .path-step {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+        .path-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(79,70,229,0.15);
+        }
+        .dark .path-step:hover {
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+        .reading-guide-card {
+            transition: box-shadow 0.3s ease;
+        }
+        .reading-guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .dark .reading-guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Melhorias do botão voltar ao topo */
+        #back-to-top {
+            position: fixed;
+            right: 1rem;
+            bottom: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: #4f46e5;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(79,70,229,0.3);
+            cursor: pointer;
+            z-index: 40;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            border: none;
+            font-size: 1rem;
+        }
+        .dark #back-to-top {
+            background: #374151;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+        }
+        #back-to-top:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(79,70,229,0.35);
+        }
+        #back-to-top .progress-ring {
+            position: absolute;
+            inset: -3px;
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
+        }
+        #back-to-top .progress-ring circle {
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+        }
+        #back-to-top .progress-ring .bg {
+            stroke: rgba(255,255,255,0.15);
+        }
+        #back-to-top .progress-ring .fg {
+            stroke: #60a5fa;
+            transition: stroke-dashoffset 0.15s linear;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+
+        /* Botão de marcador */
+        .bookmark-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            color: #6b7280;
+        }
+        .dark .bookmark-btn {
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        .bookmark-btn:hover {
+            border-color: #4f46e5;
+            color: #4f46e5;
+        }
+        .dark .bookmark-btn:hover {
+            border-color: #818cf8;
+            color: #818cf8;
+        }
+        .bookmark-btn.active {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
+        .dark .bookmark-btn.active {
+            background: #818cf8;
+            border-color: #818cf8;
+        }
+
+        /* Caixa de capítulo concluído */
+        .chapter-check {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            color: #6b7280;
+            user-select: none;
+        }
+        .dark .chapter-check {
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        .chapter-check:hover {
+            border-color: #27ae60;
+            color: #27ae60;
+        }
+        .chapter-check.checked {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+        .chapter-check .check-icon {
+            width: 14px;
+            height: 14px;
+            border: 2px solid currentColor;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .chapter-check.checked .check-icon {
+            border-color: #fff;
+            background: #fff;
+        }
+        .chapter-check.checked .check-icon::after {
+            content: '✓';
+            color: #27ae60;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Resultado de pesquisa selecionado pelo teclado */
+        .search-result-item.selected {
+            background: #eef2f5;
+        }
+        .dark .search-result-item.selected {
+            background: #374151;
+        }
+
+        /* Card do painel */
+        .dashboard-card {
+            transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
+        }
+
+        /* Emblema de dias seguidos de leitura */
+        #streak-toast {
+            transform: translateX(-50%) translateY(100px);
+            left: 50%;
+            right: auto;
+            font-weight: 600;
+        }
+        #streak-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Estrelas de avaliação do capítulo */
+        .chapter-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.15rem;
+            margin-left: 0.5rem;
+        }
+        .chapter-rating .star {
+            font-size: 0.85rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: color 0.15s, transform 0.15s;
+            user-select: none;
+        }
+        .chapter-rating .star:hover { transform: scale(1.2); }
+        .chapter-rating .star.active { color: #fbbf24; }
+        .dark .chapter-rating .star { color: #4b5563; }
+        .dark .chapter-rating .star.active { color: #fbbf24; }
+
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(79,70,229,0.12);
+        }
+        .dark .dashboard-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+        }
+        .check-item:hover span { color: #4f46e5; }
+        .dark .check-item:hover span { color: #818cf8; }
+        .check-item input:checked + span {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        /* Controles de leitura em voz alta */
+        .tts-controls {
+            position: fixed;
+            bottom: 6rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(79,70,229,0.18);
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .tts-controls.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .dark .tts-controls {
+            background: #1f2937;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+        }
+        .tts-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-size: 1rem;
+            background: #f3f4f6;
+            color: #374151;
+        }
+        .dark .tts-btn { background: #374151; color: #e5e7eb; }
+        .tts-btn:hover { background: #4f46e5; color: #fff; }
+        .dark .tts-btn:hover { background: #818cf8; }
+        .tts-btn.play-btn {
+            background: #4f46e5;
+            color: #fff;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.2rem;
+        }
+        .dark .tts-btn.play-btn { background: #818cf8; }
+        .tts-btn.play-btn:hover { background: #1a252f; }
+        .tts-btn.play-btn.playing { background: #e74c3c; animation: ttsPulse 1.5s ease-in-out infinite; }
+        @keyframes ttsPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(231,76,60,0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(231,76,60,0); }
+        }
+        .tts-speed-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #6b7280;
+            min-width: 2rem;
+            text-align: center;
+        }
+        .dark .tts-speed-badge { color: #9ca3af; }
+        .tts-controls .tts-chapter-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            max-width: 12rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .dark .tts-controls .tts-chapter-label { color: #9ca3af; }
+        .quick-tool-btn.tts-active {
+            color: #4f46e5;
+            box-shadow: 0 0 0 2px #4f46e5;
+        }
+        .dark .quick-tool-btn.tts-active { color: #818cf8; box-shadow: 0 0 0 2px #818cf8; }
+        @media (max-width: 768px) {
+            .tts-controls {
+                bottom: 5rem;
+                padding: 0.4rem 0.75rem;
+                gap: 0.4rem;
+            }
+            .tts-btn { width: 2.2rem; height: 2.2rem; font-size: 0.9rem; }
+            .tts-btn.play-btn { width: 2.6rem; height: 2.6rem; font-size: 1rem; }
+            .tts-controls .tts-chapter-label { max-width: 8rem; }
+        }
+
+        /* Botão de copiar */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+            color: #6b7280;
+            vertical-align: middle;
+        }
+        .dark .copy-btn {
+            border-color: #374151;
+            background: #1f2937;
+            color: #9ca3af;
+        }
+        .copy-btn:hover {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
+        .copy-btn.copied {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+
+        /* Blocos recolhíveis */
+        .collapsible-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .collapsible-header:hover {
+            color: #4f46e5;
+        }
+        .dark .collapsible-header:hover {
+            color: #818cf8;
+        }
+        .collapsible-header .collapse-icon {
+            transition: transform 0.3s ease;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+        .collapsible-header.collapsed .collapse-icon {
+            transform: rotate(-90deg);
+        }
+        .collapsible-body {
+            max-height: 5000px;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+        .collapsible-body.collapsed {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        /* Aviso de restauração da posição de leitura */
+        .restore-position-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #4f46e5;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            z-index: 55;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            white-space: nowrap;
+        }
+        .dark .restore-position-toast {
+            background: #374151;
+        }
+        .restore-position-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+        .restore-position-toast button {
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .restore-position-toast .btn-restore {
+            background: #fff;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+        .restore-position-toast .btn-dismiss {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* Melhorias nos separadores de capítulo */
+        .content-section {
+            position: relative;
+            padding-top: 1rem;
+        }
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d1d5db 20%, #d1d5db 80%, transparent);
+        }
+        .dark .content-section::before {
+            background: linear-gradient(90deg, transparent, #374151 20%, #374151 80%, transparent);
+        }
+        .content-section:first-of-type::before {
+            display: none;
+        }
+
+        /* Melhorias nas caixas de destaque */
+        .callout-box {
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .callout-box:hover {
+            transform: translateX(2px);
+        }
+
+        /* Hover nas linhas da tabela */
+        table tbody tr {
+            transition: background-color 0.15s ease;
+        }
+        table tbody tr:hover {
+            background-color: #f0f4f8;
+        }
+        .dark table tbody tr:hover {
+            background-color: rgba(255,255,255,0.04);
+        }
+
+        /* Melhorias nos botões de navegação de capítulo */
+        .chapter-nav a {
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .chapter-nav a:hover {
+            transform: translateX(4px);
+            background: #eef2f5;
+        }
+        .chapter-nav a.next:hover {
+            transform: translateX(-4px);
+        }
+        .dark .chapter-nav a:hover {
+            background: #1e2a36;
+        }
+
+        /* Marcador de favoritos na barra lateral */
+        .toc-item.bookmarked::after {
+            content: '★';
+            color: #d4a017;
+            font-size: 0.65rem;
+            margin-left: 0.3rem;
+        }
+        .toc-item.completed-toc {
+            color: #27ae60 !important;
+        }
+
+        /* Melhorias nos botões de ferramentas */
+        .quick-tool-btn {
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .quick-tool-btn:hover {
+            transform: translateY(-2px) scale(1.08);
+        }
+        .quick-tool-btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        /* Área segura inferior no celular */
+        @media (max-width: 768px) {
+            #back-to-top {
+                right: 0.75rem;
+                bottom: 1.25rem;
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            .restore-position-toast {
+                font-size: 0.8rem;
+                padding: 0.6rem 1rem;
+                left: 1rem;
+                right: 1rem;
+                transform: translateX(0) translateY(100px);
+                white-space: normal;
+                text-align: center;
+                justify-content: center;
+            }
+            .restore-position-toast.show {
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        /* Ocultar elementos adicionados ao imprimir */
+        @media print {
+            .bookmark-btn, .chapter-check, .copy-btn,
+            .restore-position-toast, #back-to-top .progress-ring,
+            #tts-controls, .quick-tool-btn.tts-active {
+                display: none !important;
+            }
+            .content-section {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+<style>
+        /* ===== Novidade da v1.8: estilos da parte de programação com IA ===== */
+        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; }
+        .code-head { background: #374151; color: #e5e7eb; font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
+        .code-head .dots { letter-spacing: 3px; color: #9ca3af; }
+        .code-block pre { background: #1f2937; color: #e5e7eb; padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
+        .dark .code-block { border-color: #4b5563; }
+        code.inline { background: #eef2f5; color: #4f46e5; padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+        .dark code.inline { background: #1e2a36; color: #818cf8; }
+        .quote-line { border-left: 4px solid #4f46e5; background: #eef2ff; color: #1e1b4b; padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
+        .dark .quote-line { background: #1e1b4b; color: #c7d2fe; }
+        @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <a class="skip-link focus-ring" href="#content">Pular para o conteúdo principal</a>
+    <div id="reading-progress" style="width:0%" aria-hidden="true"></div>
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" role="banner">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3 min-w-0">
+                <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="Abrir menu de conteúdo" aria-expanded="false" aria-controls="sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#top" class="flex items-center gap-2 min-w-0" aria-label="Voltar à página inicial">Domine o Celular · Noções Essenciais de Tecnologia</a>
+            </div>
+            <nav class="flex items-center gap-1 md:gap-2" aria-label="Ação principal">
+                <a href="#ji-chu-pian" class="hidden md:inline-flex items-center gap-1 text-sm text-secondary dark:text-gray-400 hover:text-primary px-2 py-1 rounded-md transition-colors focus-ring" title="Começar pelo básico">Começar a aprender</a>
+                <button id="search-toggle" class="text-lg p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="Pesquisar (Ctrl+K)" aria-label="Pesquisar conteúdo">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div class="hidden md:flex items-center border border-gray-200 dark:border-gray-600 rounded-md overflow-hidden" role="group" aria-label="Ajustar tamanho da fonte">
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="decrease" title="Diminuir fonte" aria-label="Diminuir fonte">A-</button>
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="reset" title="Redefinir tamanho da fonte" aria-label="Redefinir tamanho da fonte">A</button>
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="increase" title="Aumentar fonte" aria-label="Aumentar fonte">A+</button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="Alternar modo escuro/claro" aria-label="Alternar modo escuro/claro">
+                    <i class="fas fa-moon dark:hidden" aria-hidden="true"></i>
+                    <i class="fas fa-sun hidden dark:inline" aria-hidden="true"></i>
+                </button>
+                <button id="print-btn" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary p-2 rounded-md transition-colors focus-ring" title="Imprimir / Exportar PDF" aria-label="Imprimir ou exportar PDF">
+                    <i class="fas fa-print" aria-hidden="true"></i>
+                </button>
+                <a href="#top" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary transition-colors focus-ring px-2 py-1 rounded-md" aria-label="Voltar ao topo">
+                    <i class="fas fa-arrow-up mr-1" aria-hidden="true"></i>Topo
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0" role="navigation" aria-label="Índice do artigo">
+            <nav class="p-4">
+                <div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+                    <h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
+                        <i class="fas fa-list-ul text-primary" aria-hidden="true"></i>Sumário
+                    </h2>
+                    <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        <span id="reading-progress-text">0 / 38 capítulos</span>
+                        <span id="reading-percent" class="font-semibold text-primary">0%</span>
+                    </div>
+                    <div class="toc-progress-bar mt-1.5" id="toc-progress-bar" style="transform: scaleX(0);" aria-hidden="true"></div>
+                </div>
+                <div class="mb-3 px-1">
+                    <input type="text" id="toc-filter" placeholder="Filtrar capítulos..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="Filtrar capítulos">
+                </div>
+                <ul class="space-y-1 text-sm" id="toc-list">{{TOC}}</ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <div id="search-overlay" class="search-overlay" role="dialog" aria-label="Pesquisar">
+            <div class="search-panel">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="Pesquisar conteúdo..." autocomplete="off" aria-label="Palavras-chave da pesquisa">
+                    <button id="search-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Fechar pesquisa">ESC</button>
+                </div>
+                <div id="search-results" class="search-results scrollbar-hide">
+                    <div class="p-4 text-center text-gray-400 text-sm">Digite palavras-chave para começar a pesquisar</div>
+                </div>
+            </div>
+        </div>
+
+        <main id="content" class="w-full lg:ml-72 px-5 md:px-10 py-8 bg-white dark:bg-gray-800 min-h-screen">
+            <div class="content-col">
+            <a id="top"></a>
+
+            <!-- Topo (breadcrumbs) -->
+            <nav class="breadcrumb no-print" aria-label="Localização">
+                <a href="#top">Início</a>
+                <span class="sep" aria-hidden="true">›</span>
+                <span class="text-gray-700 dark:text-gray-300">Curso Essencial de Tecnologia · v1.8</span>
+            </nav>
+
+            <!-- Banner hero -->
+            <section class="hero-banner mb-8" aria-labelledby="hero-title">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>69 capítulos + 8 apêndices</span>
+                    <span class="stat-pill"><i class="fas fa-clock" aria-hidden="true"></i>cerca de 40-55 horas</span>
+                    <span class="stat-pill"><i class="fas fa-signal" aria-hidden="true"></i>Do básico ao domínio</span>
+                </div>
+                <h1 id="hero-title" class="text-3xl md:text-4xl font-bold mb-2">Domine o Celular! O Curso Essencial de Tecnologia para Iniciantes</h1>
+                <p class="text-base md:text-lg opacity-90 mb-4 text-balance">Partindo do "computador pessoal" do seu bolso, você vai dominar de forma sistemática hardware, sistema, redes, segurança, IA e tendências futuras.</p>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#ji-chu-pian" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-4 py-2 rounded-md hover:bg-blue-50 transition-colors focus-ring text-sm">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>Começar pelo básico
+                    </a>
+                    <a href="#ruan-jian-pian" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">
+                        <i class="fas fa-th-large" aria-hidden="true"></i>Ver as partes
+                    </a>
+                    <a href="#fu-lu-c" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">C Apêndice C: Glossário mínimo de termos</a>
+                </div>
+            </section>
+
+            <!-- Como usar este livro -->
+            <section class="reading-guide-card" aria-labelledby="how-to-use-title">
+                <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
+                    <i class="fas fa-compass text-primary" aria-hidden="true"></i>Como usar este livro?
+                </h2>
+                <div class="grid md:grid-cols-2 gap-3 text-sm">
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-bullseye mr-1" aria-hidden="true"></i>O objetivo deste livro</p>
+                        <p class="text-gray-700 dark:text-gray-300">Com um livro pequeno que "explica e põe a mão na massa", ele te ajuda a sair do "usar" o celular para "entender" o celular, de receptor passivo a comandante ativo.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-route mr-1" aria-hidden="true"></i>Percursos de leitura</p>
+                        <p class="text-gray-700 dark:text-gray-300">Oito partes no total:<strong>Fundamentos → Software → Avançado → Além → Prática → IA e código → Desenvolvimento Android → Desenvolvimento iOS</strong>, cobrindo 69 capítulos. Iniciantes podem ler em ordem; quem já tem experiência pode ir direto aos capítulos de interesse. A v3.2 traz três novas partes práticas de desenvolvimento (Capítulos 37-69, 33 no total): programação com IA, desenvolvimento Android e desenvolvimento iOS, levando você de usuário digital a desenvolvedor de apps.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-hand-pointer mr-1" aria-hidden="true"></i>Guia de símbolos</p>
+                        <p class="text-gray-700 dark:text-gray-300"><span class="kbd">[Botão]</span> indica um botão específico na tela;<span class="kbd">&gt;</span> indica a ordem das operações;<strong>negrito</strong> marca os pontos-chave que você precisa lembrar.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-magic mr-1" aria-hidden="true"></i>Dicas interativas</p>
+                        <p class="text-gray-700 dark:text-gray-300">Topo <span class="kbd">Ctrl+K</span> pesquisa; <span class="kbd">A+/A-</span> ajusta o tamanho da fonte; <span class="kbd">R</span> leitura em voz alta; suporta alternar tema claro/escuro, imprimir e exportar em PDF.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Trilha de aprendizagem em 5 passos -->
+            <section class="mb-8" aria-labelledby="learning-path-title">
+                <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">Caminho de aprendizado: cinco passos para virar craque no celular</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">O livro segue a progressão natural "entender, dominar e pôr em prática": cada parte é a base da seguinte.</p>
+                <div class="learning-path">
+                    <a href="#ji-chu-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">1</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Fundamentos</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Capítulos 0-7</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Conheça seu celular: hardware, sistema, arquivos, rede, apps, segurança e recursos de ponta.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Iniciante</span>
+                    </a>
+                    <a href="#ruan-jian-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">2</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Software</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Capítulos 8-14</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Aproveite todos os tipos de app: mensagens, trabalho, pagamentos, fotos, entretenimento e gerenciamento de senhas.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Iniciante</span>
+                    </a>
+                    <a href="#jin-jie-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">3</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Avançado</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Capítulos 15-20</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Desbloqueie habilidades de expert: ciência da bateria, contas e nuvem, backup e migração, solução de problemas por conta própria.</p>
+                        <span class="difficulty-tag difficulty-intermediate mt-2 inline-block"><i class="fas fa-mountain" aria-hidden="true"></i>Intermediário</span>
+                    </a>
+                    <a href="#chao-yue-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">4</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Além</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Capítulos 21-26</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Na fronteira da tecnologia: segurança da informação, grandes modelos de IA, pensamento computacional e a vida digital do futuro.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Avançado</span>
+                    </a>
+                    <a href="#shi-zhan-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">5</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Prática</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Capítulos 27-32</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Uso real: ensinar os pais a usar o celular, escolher um celular, bem-estar digital, espelhamento e carro, vídeos curtos, primeiros socorros de segurança.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Iniciante</span>
+                    </a>
+                    <a href="#ai-biancheng-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">6</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Programação com IA na prática</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Capítulos 37-47</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Dirigir a IA para escrever código: da revolução de paradigma e dos cinco princípios de pensamento à escolha de ferramentas e modelos, APIs na prática e um projeto completo.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Avançado</span>
+                    </a>
+                    <a href="#an-zhuo-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">7</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Desenvolvimento Android na prática</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Capítulos 48-58</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Dirigir a IA para criar apps Android: Kotlin, Jetpack Compose, dois projetos completos, publicação no Google Play.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Avançado</span>
+                    </a>
+                    <a href="#ios-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">8</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Desenvolvimento iOS na prática</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Capítulos 59-69</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Dirigir a IA para criar apps Apple: Swift, SwiftUI, dois projetos completos, publicação na App Store.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Avançado</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Mapa rápido de capítulos (tabela) -->
+            <section class="reading-guide-card" aria-labelledby="chapter-map-title">
+                <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
+                    <i class="fas fa-map text-primary" aria-hidden="true"></i>Mapa rápido de capítulos
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Encontre capítulos rápido por objetivo de aprendizado.</p>
+                <div class="grid md:grid-cols-2 gap-2 text-sm">
+                    <div class="flex items-start gap-2"><i class="fas fa-microchip text-primary mt-1" aria-hidden="true"></i><span><strong>Quer entender o hardware</strong> → <a href="#di-yi-zhang" class="text-primary hover:underline">01 Capítulo 1: Olá, meu computador pessoal</a> · <a href="#di-san-zhang" class="text-primary hover:underline">03 Capítulo 3: Conecte o celular à sua "linha vital"</a>(rede e banda base)</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-shield-halved text-primary mt-1" aria-hidden="true"></i><span><strong>Se preocupa com privacidade e segurança</strong> → <a href="#di-liu-zhang" class="text-primary hover:underline">06 Capítulo 6: Proteja sua vida digital</a> · <a href="#di-shi-si-zhang" class="text-primary hover:underline">14 Capítulo 14: Especial sobre gerenciadores de senhas</a> · <a href="#di-er-shi-yi-zhang" class="text-primary hover:underline">Capítulo 21</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-camera text-primary mt-1" aria-hidden="true"></i><span><strong>Quer tirar fotos melhores</strong> → <a href="#di-shi-yi-zhang" class="text-primary hover:underline">11 Capítulo 11: Fotografia e gerenciamento de imagens</a> + <a href="#di-shi-yi-zhang-advanced" class="text-primary hover:underline">Apêndice do Capítulo 11: Técnicas de imagem profissionais</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-robot text-primary mt-1" aria-hidden="true"></i><span><strong>Dominar assistentes de IA</strong> → <a href="#di-er-shi-er-zhang" class="text-primary hover:underline">22 Capítulo 22: Como a IA funciona dentro do celular</a> · <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">07 Capítulo 7: Análise completa dos recursos de ponta</a>(fronteira)</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-code text-primary mt-1" aria-hidden="true"></i><span><strong>Quer que a IA escreva código</strong> → <a href="#ai-biancheng-pian" class="text-primary hover:underline">Capítulos 37-47</a>: a revolução de paradigma, os cinco princípios, escolha de ferramentas e modelos, APIs na prática e um projeto completo</span></div>
+                    <div class="flex items-start gap-2"><i class="fab fa-android text-primary mt-1" aria-hidden="true"></i><span><strong>Quer aprender desenvolvimento Android</strong> → <a href="#an-zhuo-kai-fa-pian" class="text-primary hover:underline">Capítulos 48-58</a>: Kotlin, Compose, dois projetos e publicação no Google Play</span></div>
+                    <div class="flex items-start gap-2"><i class="fab fa-apple text-primary mt-1" aria-hidden="true"></i><span><strong>Quer aprender desenvolvimento iOS</strong> → <a href="#ios-kai-fa-pian" class="text-primary hover:underline">Capítulos 59-69</a>: Swift, SwiftUI, dois projetos e publicação na App Store</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-bolt text-primary mt-1" aria-hidden="true"></i><span><strong>Ansiedade com a bateria</strong> → <a href="#di-shi-wu-zhang" class="text-primary hover:underline">Capítulo 15</a> + <a href="#di-shi-wu-zhang-kuichong" class="text-primary hover:underline">Apêndice: Análise completa dos protocolos de carregamento rápido</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-bug text-primary mt-1" aria-hidden="true"></i><span><strong>Celular com defeito</strong> → <a href="#di-shi-jiu-zhang" class="text-primary hover:underline">19 Capítulo 19: Solução de problemas e como se virar sozinho</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-arrows-rotate text-primary mt-1" aria-hidden="true"></i><span><strong>Troca de celular / migração de dados</strong> → <a href="#di-shi-ba-zhang" class="text-primary hover:underline">18 Capítulo 18: Backup e migração de dados</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-wand-magic-sparkles text-primary mt-1" aria-hidden="true"></i><span><strong>Explorar automação</strong> → <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">23 Capítulo 23: Pensamento computacional e iniciação à automação</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-mobile-screen text-primary mt-1" aria-hidden="true"></i><span><strong>Como escolher um dobrável</strong> → <a href="#fu-lu-f" class="text-primary hover:underline">F Apêndice F: Especial sobre como escolher e usar celulares dobráveis</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-heart text-primary mt-1" aria-hidden="true"></i><span><strong>Ajudar os pais com o celular</strong> → <a href="#di-er-shi-qi-zhang" class="text-primary hover:underline">Capítulo 27</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-cart-shopping text-primary mt-1" aria-hidden="true"></i><span><strong>Comprar um celular</strong> → <a href="#di-er-shi-ba-zhang" class="text-primary hover:underline">28 Capítulo 28: Gastar certo e levar o celular dos sonhos — guia definitivo de compra de celular</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-heart-pulse text-primary mt-1" aria-hidden="true"></i><span><strong>Bem-estar digital / controle de tempo de tela</strong> → <a href="#di-er-shi-jiu-zhang" class="text-primary hover:underline">29 Capítulo 29: Bem-estar digital — construindo uma relação saudável com o celular</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-tv text-primary mt-1" aria-hidden="true"></i><span><strong>Espelhamento / carro</strong> → <a href="#di-san-shi-zhang" class="text-primary hover:underline">30 Capítulo 30: Espelhamento de tela, apresentações e conectividade no carro</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-video text-primary mt-1" aria-hidden="true"></i><span><strong>Vídeos curtos</strong> → <a href="#di-san-shi-yi-zhang" class="text-primary hover:underline">31 Capítulo 31: Introdução à gravação de vídeos curtos e à criação de conteúdo</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-primary mt-1" aria-hidden="true"></i><span><strong>Celular perdido / caiu em golpe</strong> → <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">32 Capítulo 32: Manual de primeiros socorros de segurança do celular</a></span></div>
+                </div>
+            </section>
+
+            <!-- Palavras finais: o que este livro não ensina -->
+            <div class="highlight-quote">
+                <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Este livro não ensina a "assistir vídeos com mais prazer". Ele quer te ajudar a entender: por que o celular funciona assim? O que ele pode e não pode fazer? E como fazê-lo trabalhar de verdade para você — em vez de escravizar sua atenção e seu tempo.</p>
+                <p class="text-right text-sm">— Por que este livro existe</p>
+            </div>
+
+            <!-- Checklist interativa + painel de leitura -->
+            <section class="mb-8" aria-labelledby="dashboard-title">
+                <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
+                    <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>Painel de aprendizado
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Acompanhe seu progresso de leitura e verifique a saúde do celular.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <!-- Progresso de leitura (cartão) -->
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>Progresso de leitura</h3>
+                        <div class="flex items-center gap-4">
+                            <div class="relative w-20 h-20 flex-shrink-0">
+                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90">
+                                    <circle cx="40" cy="40" r="34" fill="none" stroke="#e5e7eb" stroke-width="8" class="dark:stroke-gray-700"/>
+                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
+                                </svg>
+                                <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span>
+                            </div>
+                            <div class="flex-1 text-sm space-y-1">
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Capítulos lidos</span><span id="read-count" class="font-semibold">0 / 38</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Marcadores</span><span id="bookmark-count" class="font-semibold">0</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Última leitura</span><span id="last-chapter" class="font-semibold text-xs truncate max-w-[8rem]">—</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Autodiagnóstico de saúde do celular (cartão) -->
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>Autodiagnóstico de saúde do celular</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Marque os itens que já pratica e veja a "pontuação de saúde" do celular:</p>
+                        <div id="checklist-items" class="space-y-1.5 text-sm">
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Senha de bloqueio de tela definida (não 1234/0000)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Autenticação de dois fatores ativada (Apple ID/conta da marca)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>"Encontrar meu celular" ativado</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Fotos com backup na nuvem (pelo menos um)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Histórico de conversas do WeChat com backup no computador</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Apps de pagamento com pagamento por digital/rosto ativado</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>App "Centro Nacional Antifraude" instalado</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Pagamentos sem senha: autorizações desnecessárias removidas</span></label>
+                        </div>
+                        <div class="mt-3 flex items-center justify-between">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Pontuação de saúde</span>
+                            <span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span>
+                        </div>
+                        <div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">Conclua o diagnóstico e veja o nível de segurança do celular</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- conteúdo "top" antigo mantido por compatibilidade -->
+            <div class="sr-only" aria-hidden="true">v3.2 · O curso essencial de tecnologia realmente feito para pessoas comuns</div>
+
+            {{BODY}}sulte as análises e os comentários de usuários mais recentes.</p>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Ferramentas rápidas: grupo de botões flutuantes -->
+    <div id="quick-tools" class="quick-tools no-print" aria-label="Ferramentas rápidas">
+        <button id="quick-search" class="quick-tool-btn" title="Pesquisar (Ctrl+K)" aria-label="Pesquisar">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        <button id="quick-theme" class="quick-tool-btn" title="Alternar escuro/claro" aria-label="Alternar tema">
+            <i class="fas fa-circle-half-stroke" aria-hidden="true"></i>
+        </button>
+        <button id="quick-print" class="quick-tool-btn" title="Imprimir / Exportar PDF" aria-label="Imprimir ou exportar">
+            <i class="fas fa-print" aria-hidden="true"></i>
+        </button>
+        <button id="quick-toc" class="quick-tool-btn" title="Índice" aria-label="Abrir índice">
+            <i class="fas fa-list" aria-hidden="true"></i>
+        </button>
+        <button id="quick-tts" class="quick-tool-btn" title="Leitura em voz alta" aria-label="Leitura em voz alta">
+            <i class="fas fa-headphones" aria-hidden="true"></i>
+        </button>
+        <button id="quick-shortcuts" class="quick-tool-btn" title="Atalhos de teclado (?)" aria-label="Painel de atalhos">
+            <i class="fas fa-keyboard" aria-hidden="true"></i>
+        </button>
+        <button id="quick-backup" class="quick-tool-btn" title="Backup/restauração do progresso" aria-label="Progresso de backup">
+            <i class="fas fa-cloud-arrow-up" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- Painel de atalhos -->
+    <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="Atalhos de teclado">
+        <div class="search-panel" style="max-width:480px">
+            <div class="search-input-wrapper">
+                <i class="fas fa-keyboard text-gray-400"></i>
+                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">Atalhos de teclado</span>
+                <button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Fechar">ESC</button>
+            </div>
+            <div class="p-4 space-y-2 text-sm">
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Pesquisar conteúdo</span><span class="kbd">Ctrl + K</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Alternar escuro/claro</span><span class="kbd">T</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Leitura em voz alta: reproduzir/pausar</span><span class="kbd">R</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Parar a leitura</span><span class="kbd">ESC</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Abrir o painel de atalhos</span><span class="kbd">?</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Fonte maior / menor</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div>
+                <div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">Imprimir / exportar PDF</span><span class="kbd">Ctrl + P</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diálogo de backup/restauração -->
+    <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="Backup e restauração">
+        <div class="search-panel" style="max-width:520px">
+            <div class="search-input-wrapper">
+                <i class="fas fa-cloud-arrow-up text-gray-400"></i>
+                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">Backup e restauração do progresso de leitura</span>
+                <button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Fechar">ESC</button>
+            </div>
+            <div class="p-5 space-y-4 text-sm">
+                <div class="info-box rounded-lg p-3">
+                    <p class="text-xs">O backup inclui: capítulos lidos, marcadores, posição de leitura, preferência de tamanho de fonte e resultados do autoteste de saúde. Os dados ficam salvos localmente no navegador e são perdidos ao trocar de navegador ou limpar o cache; recomenda-se exportar o backup periodicamente.</p>
+                </div>
+                <div>
+                    <button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-download"></i> Exportar arquivo de backup
+                    </button>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">Baixar um arquivo JSON e guardá-lo em um local seguro</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-upload"></i> Importar backup para restaurar
+                    </button>
+                    <input type="file" id="backup-import-input" accept=".json" class="hidden">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">Escolher um arquivo de backup exportado antes para restaurar o progresso</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-trash"></i> Limpar todos os dados de leitura
+                    </button>
+                    <p class="text-xs text-red-400 mt-1 text-center">Não dá para recuperar! Exporte o backup primeiro</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Aviso de dias seguidos de leitura -->
+    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
+        <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
+        <span id="streak-toast-text">Dia X de leitura seguida!</span>
+    </div>
+
+    <!-- Barra de controles de leitura em voz alta -->
+    <div id="tts-controls" class="tts-controls" role="region" aria-label="Controles da leitura em voz alta" aria-live="polite">
+        <span class="tts-chapter-label" id="tts-label" title="Capítulo atual em leitura">Não iniciado</span>
+        <button class="tts-btn" id="tts-prev" title="Parágrafo anterior" aria-label="Parágrafo anterior"><i class="fas fa-step-backward"></i></button>
+        <button class="tts-btn play-btn" id="tts-play" title="Reproduzir/Pausar" aria-label="Reproduzir leitura"><i class="fas fa-play"></i></button>
+        <button class="tts-btn" id="tts-next" title="Próximo parágrafo" aria-label="Próximo parágrafo"><i class="fas fa-step-forward"></i></button>
+        <button class="tts-btn" id="tts-speed-down" title="Reduzir velocidade" aria-label="Reduzir velocidade">−</button>
+        <span class="tts-speed-badge" id="tts-speed-display">1.0x</span>
+        <button class="tts-btn" id="tts-speed-up" title="Aumentar velocidade" aria-label="Aumentar velocidade">+</button>
+        <button class="tts-btn" id="tts-stop" title="Parar leitura" aria-label="Parar leitura"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Botão «Topo» -->
+    <button id="back-to-top" class="opacity-0 invisible" aria-label="Voltar ao topo">
+        <svg class="progress-ring" viewBox="0 0 40 40">
+            <circle class="bg" cx="20" cy="20" r="18"/>
+            <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/>
+        </svg>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Aviso de restauração da posição de leitura -->
+    <div id="restore-toast" class="restore-position-toast" role="alert">
+        <i class="fas fa-bookmark" aria-hidden="true"></i>
+        <span id="restore-toast-text">Última leitura: ...</span>
+        <button class="btn-restore" id="restore-btn">Continuar lendo</button>
+        <button class="btn-dismiss" id="dismiss-btn">Ignorar</button>
+    </div>
+
+    <!-- Script JS -->
+    <script>
+        (function() {
+            'use strict';
+
+            const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+            const $$ = (sel, ctx) => [...(ctx || document).querySelectorAll(sel)];
+
+            const html = document.documentElement;
+            const body = document.body;
+            const navbar = $('#navbar');
+            const sidebar = $('#sidebar');
+            const overlay = $('#overlay');
+            const menuToggle = $('#menu-toggle');
+            const backToTop = $('#back-to-top');
+            const progressBar = $('#reading-progress');
+            const searchOverlay = $('#search-overlay');
+            const searchInput = $('#search-input');
+            const searchResults = $('#search-results');
+            const tocProgressBar = $('#toc-progress-bar');
+            const readingProgressText = $('#reading-progress-text');
+            const readingPercent = $('#reading-percent');
+            const contentEl = $('#content');
+            const tocList = $('#toc-list');
+            const tocFilter = $('#toc-filter');
+            const printBtn = $('#print-btn');
+            const quickSearch = $('#quick-search');
+            const quickTheme = $('#quick-theme');
+            const quickPrint = $('#quick-print');
+            const quickToc = $('#quick-toc');
+            let themeToggle = null;
+            const restoreToast = $('#restore-toast');
+            const restoreToastText = $('#restore-toast-text');
+            const restoreBtn = $('#restore-btn');
+            const dismissBtn = $('#dismiss-btn');
+
+            // ===== Tema =====
+            function syncThemeControls() {
+                const isDark = html.classList.contains('dark');
+                const nextLabel = isDark ? 'Mudar para o modo claro' : 'Mudar para o modo escuro';
+                [themeToggle, quickTheme].filter(Boolean).forEach(btn => {
+                    btn.setAttribute('aria-label', nextLabel);
+                    btn.setAttribute('title', nextLabel);
+                    btn.setAttribute('aria-pressed', String(isDark));
+                });
+            }
+            function applyTheme(theme) {
+                const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
+                html.classList.toggle('dark', resolvedTheme === 'dark');
+                body.classList.toggle('dark', resolvedTheme === 'dark');
+                html.setAttribute('data-theme', resolvedTheme);
+                body.setAttribute('data-theme', resolvedTheme);
+                localStorage.setItem('theme', resolvedTheme);
+                syncThemeControls();
+            }
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                applyTheme('dark');
+            } else {
+                applyTheme('light');
+            }
+            function toggleTheme() {
+                applyTheme(html.classList.contains('dark') ? 'light' : 'dark');
+            }
+            themeToggle = $('#theme-toggle');
+            if (themeToggle) themeToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+            if (quickTheme) quickTheme.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+
+            // ===== Rolagem: progresso + sombra + voltar ao topo + progresso do índice + anel de progresso =====
+            const sections = $$('.content-section');
+            const totalChapters = sections.length;
+            if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} capítulos`;
+
+            // Parâmetros do anel de progresso
+            const progressRingFg = backToTop ? backToTop.querySelector('.progress-ring .fg') : null;
+            const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
+            if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
+
+            let ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                        const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+                        if (progressBar) progressBar.style.width = progress + '%';
+
+                        // Atualização do anel de progresso
+                        if (progressRingFg) {
+                            const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
+                            progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
+                        }
+
+                        if (navbar) {
+                            if (scrollY > 50) {
+                                navbar.classList.add('shadow-md', 'bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-sm');
+                            } else {
+                                navbar.classList.remove('shadow-md', 'bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-sm');
+                            }
+                        }
+
+                        if (backToTop) {
+                            if (scrollY > 300) {
+                                backToTop.classList.remove('opacity-0', 'invisible');
+                                backToTop.classList.add('opacity-100', 'visible');
+                            } else {
+                                backToTop.classList.add('opacity-0', 'invisible');
+                                backToTop.classList.remove('opacity-100', 'visible');
+                            }
+                        }
+
+                        // Até que capítulo se leu
+                        let passedChapters = 0;
+                        const viewportTop = scrollY + 100;
+                        sections.forEach(sec => {
+                            if (sec.offsetTop <= viewportTop) passedChapters++;
+                        });
+                        if (readingProgressText) {
+                            const passed = Math.max(0, Math.min(totalChapters, passedChapters));
+                            readingProgressText.textContent = `${passed} / ${totalChapters} capítulos`;
+                        }
+                        if (readingPercent) {
+                            const pct = Math.round(progress);
+                            readingPercent.textContent = pct + '%';
+                        }
+                        if (tocProgressBar) {
+                            tocProgressBar.style.transform = `scaleX(${Math.min(1, progress/100)})`;
+                        }
+
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            if (backToTop) {
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ===== Memória da posição de leitura =====
+            const POSITION_KEY = 'phoneCourse_scrollPos';
+            const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
+            let savePosTimer = null;
+            function saveReadingPosition() {
+                const scrollY = window.scrollY;
+                if (scrollY < 200) return; // Cedo demais para salvar
+                localStorage.setItem(POSITION_KEY, scrollY.toString());
+                // Encontra o nome do capítulo atual
+                let currentChapter = '';
+                const viewportTop = scrollY + 100;
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    if (sections[i].offsetTop <= viewportTop) {
+                        const h3 = sections[i].querySelector('h3');
+                        if (h3) currentChapter = h3.textContent;
+                        break;
+                    }
+                }
+                if (currentChapter) localStorage.setItem(POSITION_CHAPTER_KEY, currentChapter);
+            }
+            window.addEventListener('scroll', () => {
+                clearTimeout(savePosTimer);
+                savePosTimer = setTimeout(saveReadingPosition, 1000);
+            }, { passive: true });
+
+            // Restaura a posição ao carregar a página
+            function tryRestorePosition() {
+                const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
+                const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+                if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
+                    restoreToastText.textContent = `Última leitura: ${savedChapter}`;
+                    setTimeout(() => restoreToast.classList.add('show'), 800);
+                    // Oculta automaticamente após 10 segundos
+                    setTimeout(() => restoreToast.classList.remove('show'), 15000);
+                }
+            }
+            if (restoreBtn) {
+                restoreBtn.addEventListener('click', () => {
+                    const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
+                    if (savedPos > 0) {
+                        window.scrollTo({ top: savedPos, behavior: 'smooth' });
+                    }
+                    if (restoreToast) restoreToast.classList.remove('show');
+                });
+            }
+            if (dismissBtn) {
+                dismissBtn.addEventListener('click', () => {
+                    if (restoreToast) restoreToast.classList.remove('show');
+                });
+            }
+
+            // ===== Animação de entrada na rolagem =====
+            const visibleObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        visibleObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+            // O conteúdo da primeira tela fica visível direto
+            sections.forEach((sec, i) => {
+                const rect = sec.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    sec.classList.add('visible');
+                } else {
+                    visibleObserver.observe(sec);
+                }
+            });
+
+            // ===== Abrir/fechar a barra lateral =====
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                body.classList.add('overflow-hidden');
+                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+            }
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                body.classList.remove('overflow-hidden');
+                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+            }
+            if (menuToggle) menuToggle.addEventListener('click', () => {
+                if (sidebar.classList.contains('-translate-x-full')) openSidebar();
+                else closeSidebar();
+            });
+            if (overlay) overlay.addEventListener('click', closeSidebar);
+
+            // Ferramentas rápidas: abrir o índice
+            if (quickToc) quickToc.addEventListener('click', () => {
+                if (window.innerWidth < 1024) openSidebar();
+                else window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== Navegação global por âncoras: compensa o deslocamento da barra fixa =====
+            // É preciso usar scrollIntoView em vez de calcular coordenadas: .content-section tem
+            // content-visibility:auto + contain-intrinsic-size(0 800px): capítulos fora da tela
+            // ocupam espaços reservados de 800px, getBoundingClientRect devolve as coordenadas do placeholder e um scrollTo direto
+            // cairia no lugar errado (quanto mais adiante o capítulo, maior o desvio acumulado). O scrollIntoView deixa o navegador
+            // renderiza o destino sob demanda e o posiciona, e html{scroll-padding-top:5rem} compensa a barra
+            // fixa.
+            function scrollToAnchor(id) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                // Passo 1: o modo instant primeiro força a renderização do capítulo e o posiciona, evitando que o content-visibility
+                // desvio durante o scroll suave causado pela renderização adiada.
+                el.scrollIntoView({ behavior: 'instant', block: 'start' });
+                // Passo 2: quando o destino já está renderizado e as coordenadas estáveis, dispara um scroll suave para uma experiência agradável.
+                requestAnimationFrame(() => {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.classList.add('scroll-target-flash');
+                    setTimeout(() => el.classList.remove('scroll-target-flash'), 1200);
+                });
+            }
+            document.addEventListener('click', (e) => {
+                const link = e.target.closest('a[href^="#"]');
+                if (!link) return;
+                const href = link.getAttribute('href');
+                if (!href || href === '#' || href === '#top') return;
+                e.preventDefault();
+                const targetId = href.slice(1);
+                if (window.innerWidth < 1024) closeSidebar();
+                requestAnimationFrame(() => scrollToAnchor(targetId));
+            }, { passive: false });
+
+            // ===== Recolher o índice =====
+            $$('.toc-toggle-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const targetId = btn.dataset.target;
+                    if (!targetId) return;
+                    const childList = document.getElementById(targetId);
+                    if (!childList) return;
+                    const icon = btn.querySelector('.toc-toggle-icon');
+                    const isOpen = childList.classList.contains('open');
+                    childList.classList.toggle('open', !isOpen);
+                    if (icon) {
+                        icon.classList.toggle('fa-chevron-down', !isOpen);
+                        icon.classList.toggle('fa-chevron-up', isOpen);
+                    }
+                });
+            });
+
+            // ===== Filtrar o índice =====
+            if (tocFilter && tocList) {
+                tocFilter.addEventListener('input', () => {
+                    const q = tocFilter.value.trim().toLowerCase();
+                    $$('.toc-parent', tocList).forEach(parent => {
+                        let hasMatch = false;
+                        $$('a', parent).forEach(a => {
+                            const txt = a.textContent.toLowerCase();
+                            const show = !q || txt.includes(q);
+                            a.closest('li').style.display = show ? '' : 'none';
+                            if (show) hasMatch = true;
+                        });
+                        parent.style.display = hasMatch ? '' : 'none';
+                    });
+                });
+            }
+
+            // ===== Realçar no índice =====
+            const tocLinkMap = new Map();
+            $$('#sidebar a').forEach(item => {
+                const href = item.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    tocLinkMap.set(href.slice(1), item);
+                }
+            });
+
+            let currentActive = null;
+            function ensureParentExpanded(link) {
+                if (!link) return;
+                const parentLi = link.closest('.toc-parent');
+                if (!parentLi) return;
+                const childList = parentLi.querySelector(':scope > ul.toc-child');
+                if (childList && !childList.classList.contains('open')) {
+                    childList.classList.add('open');
+                    const btn = parentLi.querySelector('.toc-toggle-btn .toc-toggle-icon');
+                    if (btn) {
+                        btn.classList.remove('fa-chevron-up');
+                        btn.classList.add('fa-chevron-down');
+                    }
+                }
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        if (currentActive) currentActive.classList.remove('active');
+                        const link = tocLinkMap.get(id);
+                        if (link) {
+                            link.classList.add('active');
+                            currentActive = link;
+                            ensureParentExpanded(link);
+                            try { link.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { link.scrollIntoView(); }
+                        }
+                    }
+                });
+            }, { root: null, rootMargin: '0px 0px -60% 0px', threshold: 0 });
+
+            sections.forEach(section => observer.observe(section));
+
+            // ===== Sistema de favoritos =====
+            const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
+            function getBookmarks() {
+                try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
+            }
+            function saveBookmarks(bm) { localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(bm)); }
+            function toggleBookmark(id) {
+                let bm = getBookmarks();
+                const idx = bm.indexOf(id);
+                if (idx >= 0) bm.splice(idx, 1);
+                else bm.push(id);
+                saveBookmarks(bm);
+                return idx < 0; // true = added
+            }
+            function isBookmarked(id) { return getBookmarks().includes(id); }
+
+            // Adiciona a cada capítulo um botão de favorito
+            sections.forEach(sec => {
+                const id = sec.id;
+                if (!id) return;
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                const btn = document.createElement('button');
+                btn.className = 'bookmark-btn' + (isBookmarked(id) ? ' active' : '');
+                btn.innerHTML = '<i class="fas fa-bookmark"></i><span>' + (isBookmarked(id) ? 'Nos favoritos' : 'Favorito') + '</span>';
+                btn.setAttribute('aria-label', isBookmarked(id) ? 'Remover dos favoritos' : 'Adicionar o capítulo aos favoritos');
+                btn.addEventListener('click', () => {
+                    const added = toggleBookmark(id);
+                    btn.classList.toggle('active', added);
+                    btn.querySelector('span').textContent = added ? 'Nos favoritos' : 'Favorito';
+                    btn.setAttribute('aria-label', added ? 'Remover dos favoritos' : 'Adicionar o capítulo aos favoritos');
+                    // Atualiza as marcações da barra lateral
+                    updateTocBookmark(id, added);
+                });
+                // Insere depois do h3
+                h3.parentNode.insertBefore(btn, h3.nextSibling);
+            });
+
+            function updateTocBookmark(id, isBookmarked) {
+                const tocLink = tocLinkMap.get(id);
+                if (tocLink) {
+                    tocLink.classList.toggle('bookmarked', isBookmarked);
+                }
+            }
+            // Inicializa as marcações de favoritos na barra lateral
+            getBookmarks().forEach(id => updateTocBookmark(id, true));
+
+            // ===== Marcações de capítulo lido =====
+            const COMPLETED_KEY = 'phoneCourse_completed';
+            function getCompleted() {
+                try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
+            }
+            function saveCompleted(arr) { localStorage.setItem(COMPLETED_KEY, JSON.stringify(arr)); }
+            function toggleCompleted(id) {
+                let arr = getCompleted();
+                const idx = arr.indexOf(id);
+                if (idx >= 0) arr.splice(idx, 1);
+                else arr.push(id);
+                saveCompleted(arr);
+                return idx < 0;
+            }
+            function isCompleted(id) { return getCompleted().includes(id); }
+
+            sections.forEach(sec => {
+                const id = sec.id;
+                if (!id) return;
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                // Encontra a linha de meta ou o elemento antes do h3
+                const metaDiv = h3.previousElementSibling;
+                const check = document.createElement('button');
+                check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
+                check.innerHTML = '<span class="check-icon"></span><span>' + (isCompleted(id) ? 'Lido' : 'Lido') + '</span>';
+                check.setAttribute('aria-label', isCompleted(id) ? 'Desmarcar lido' : 'Marcar como lido');
+                check.addEventListener('click', () => {
+                    const done = toggleCompleted(id);
+                    check.classList.toggle('checked', done);
+                    check.querySelector('span:last-child').textContent = done ? 'Lido' : 'Lido';
+                    check.setAttribute('aria-label', done ? 'Desmarcar lido' : 'Marcar como lido');
+                    // Atualiza a barra lateral
+                    updateTocCompleted(id, done);
+                    // Atualiza o progresso de leitura
+                    updateCompletedProgress();
+                });
+                if (metaDiv && metaDiv.classList.contains('flex')) {
+                    metaDiv.appendChild(check);
+                } else {
+                    h3.parentNode.insertBefore(check, h3.nextSibling.nextSibling);
+                }
+            });
+
+            function updateTocCompleted(id, done) {
+                const tocLink = tocLinkMap.get(id);
+                if (tocLink) {
+                    tocLink.classList.toggle('completed-toc', done);
+                }
+            }
+            getCompleted().forEach(id => updateTocCompleted(id, true));
+
+            function updateCompletedProgress() {
+                const completed = getCompleted().length;
+                if (readingProgressText) {
+                    // Também atualiza a contagem de lidos
+                    const passed = parseInt(readingProgressText.textContent) || 0;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} capítulos`;
+                }
+            }
+
+            // ===== Busca (aprimorada: navegação por teclado + contagem de resultados) =====
+            let searchData = null;
+            let searchSelectedIdx = -1;
+            let searchResultItems = [];
+
+            function buildSearchIndex() {
+                if (searchData) return;
+                searchData = sections.map(section => {
+                    const id = section.getAttribute('id');
+                    const h3 = section.querySelector('h3');
+                    const title = h3 ? h3.textContent : '';
+                    const text = section.textContent;
+                    return { id, title, text };
+                });
+            }
+
+            function renderSearchPlaceholder(message) {
+                if (searchResults) {
+                    searchResults.innerHTML = `<div class="p-4 text-center text-gray-400 text-sm">${message}</div>`;
+                }
+            }
+            function runSearch(query) {
+                buildSearchIndex();
+                const normalizedQuery = (query || '').trim().toLowerCase();
+                if (!normalizedQuery) {
+                    renderSearchPlaceholder('Digite palavras-chave para buscar');
+                    searchSelectedIdx = -1;
+                    searchResultItems = [];
+                    return;
+                }
+                const results = searchData.filter(item =>
+                    item.title.toLowerCase().includes(normalizedQuery) || item.text.toLowerCase().includes(normalizedQuery)
+                ).slice(0, 20);
+
+                if (results.length === 0) {
+                    renderSearchPlaceholder('Nada encontrado');
+                    searchSelectedIdx = -1;
+                    searchResultItems = [];
+                    return;
+                }
+
+                const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">${results.length} resultados encontrados</div>`;
+                searchResults.innerHTML = countHtml + results.map(item => {
+                    const idx = item.text.toLowerCase().indexOf(normalizedQuery);
+                    const start = Math.max(0, idx - 40);
+                    const end = Math.min(item.text.length, idx + normalizedQuery.length + 80);
+                    let excerpt = (start > 0 ? '...' : '') + item.text.slice(start, end) + (end < item.text.length ? '...' : '');
+                    const re = new RegExp(normalizedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                    const highlightedTitle = item.title.replace(re, '<mark>$&</mark>');
+                    const highlightedExcerpt = excerpt.replace(re, '<mark>$&</mark>');
+                    return `<div class="search-result-item" data-target="${item.id}">
+                        <div class="result-title">${highlightedTitle}</div>
+                        <div class="result-excerpt">${highlightedExcerpt}</div>
+                    </div>`;
+                }).join('');
+
+                searchResultItems = $$('.search-result-item', searchResults);
+                searchSelectedIdx = -1;
+
+                searchResultItems.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const targetId = el.dataset.target;
+                        if (targetId) {
+                            closeSearch();
+                            scrollToAnchor(targetId);
+                        }
+                    });
+                });
+            }
+            function openSearch() {
+                if (!searchOverlay) return;
+                buildSearchIndex();
+                searchOverlay.classList.add('active');
+                searchOverlay.setAttribute('aria-hidden', 'false');
+                if (searchInput) {
+                    setTimeout(() => {
+                        searchInput.focus();
+                        if (searchInput.value) {
+                            runSearch(searchInput.value);
+                        }
+                    }, 100);
+                }
+            }
+            function closeSearch() {
+                if (searchOverlay) {
+                    searchOverlay.classList.remove('active');
+                    searchOverlay.setAttribute('aria-hidden', 'true');
+                }
+                if (searchInput) searchInput.value = '';
+                renderSearchPlaceholder('Digite palavras-chave para buscar');
+                searchSelectedIdx = -1;
+                searchResultItems = [];
+            }
+
+            function updateSearchSelection() {
+                searchResultItems.forEach((el, i) => {
+                    el.classList.toggle('selected', i === searchSelectedIdx);
+                });
+                if (searchSelectedIdx >= 0 && searchResultItems[searchSelectedIdx]) {
+                    searchResultItems[searchSelectedIdx].scrollIntoView({ block: 'nearest' });
+                }
+            }
+
+            const searchToggle = $('#search-toggle');
+            if (searchToggle) searchToggle.addEventListener('click', openSearch);
+            if (quickSearch) quickSearch.addEventListener('click', openSearch);
+            const searchClose = $('#search-close');
+            if (searchClose) searchClose.addEventListener('click', closeSearch);
+            if (searchOverlay) searchOverlay.addEventListener('click', (e) => {
+                if (e.target === searchOverlay) closeSearch();
+            });
+
+            let searchTimer = null;
+            if (searchInput) searchInput.addEventListener('input', () => {
+                clearTimeout(searchTimer);
+                searchTimer = setTimeout(() => runSearch(searchInput.value), 200);
+            });
+
+            // Navegação da busca por teclado
+            if (searchInput) searchInput.addEventListener('keydown', (e) => {
+                if (!searchResultItems.length) return;
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    searchSelectedIdx = Math.min(searchSelectedIdx + 1, searchResultItems.length - 1);
+                    updateSearchSelection();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    searchSelectedIdx = Math.max(searchSelectedIdx - 1, 0);
+                    updateSearchSelection();
+                } else if (e.key === 'Enter' && searchSelectedIdx >= 0) {
+                    e.preventDefault();
+                    const el = searchResultItems[searchSelectedIdx];
+                    if (el) {
+                        const targetId = el.dataset.target;
+                        if (targetId) {
+                            closeSearch();
+                            scrollToAnchor(targetId);
+                        }
+                    }
+                }
+            });
+
+            // ===== Tamanho da fonte =====
+            const DEFAULT_FONT_SIZE = 16;
+            function setFontSize(size) {
+                contentEl.style.fontSize = size + 'px';
+                localStorage.setItem('fontSize', size + 'px');
+            }
+            const savedFontSize = parseInt(localStorage.getItem('fontSize') || '', 10);
+            setFontSize(Number.isFinite(savedFontSize) ? savedFontSize : DEFAULT_FONT_SIZE);
+
+            $$('.font-size-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const action = btn.dataset.action;
+                    const current = parseFloat(getComputedStyle(contentEl).fontSize);
+                    let newSize;
+                    if (action === 'reset') newSize = DEFAULT_FONT_SIZE;
+                    else if (action === 'increase') newSize = Math.min(current + 2, 24);
+                    else newSize = Math.max(current - 2, 12);
+                    setFontSize(newSize);
+                });
+            });
+
+            // ===== Fechar a barra lateral com deslize =====
+            let touchStartX = 0;
+            let touchStartY = 0;
+            sidebar.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+            sidebar.addEventListener('touchend', (e) => {
+                const dx = e.changedTouches[0].clientX - touchStartX;
+                const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+                if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
+            }, { passive: true });
+
+            // ===== Navegação entre capítulos =====
+            const sectionIds = sections.map(s => s.id);
+            sections.forEach((section, i) => {
+                const nav = document.createElement('div');
+                nav.className = 'chapter-nav';
+                let navHtml = '';
+                if (i > 0) {
+                    navHtml += `<a href="#${sectionIds[i-1]}" class="prev"><i class="fas fa-arrow-left" aria-hidden="true"></i><span class="truncate">${sections[i-1].querySelector('h3')?.textContent || 'Capítulo anterior'}</span></a>`;
+                } else {
+                    navHtml += '<span></span>';
+                }
+                if (i < sections.length - 1) {
+                    navHtml += `<a href="#${sectionIds[i+1]}" class="next"><span class="truncate">${sections[i+1].querySelector('h3')?.textContent || 'Próximo capítulo'}</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>`;
+                }
+                nav.innerHTML = navHtml;
+                section.appendChild(nav);
+            });
+
+            // ===== Impressão =====
+            function doPrint() { window.print(); }
+            if (printBtn) printBtn.addEventListener('click', doPrint);
+            if (quickPrint) quickPrint.addEventListener('click', doPrint);
+
+            // ===== Atalhos globais de teclado =====
+            const shortcutsOverlay = $('#shortcuts-overlay');
+            const backupOverlay = $('#backup-overlay');
+            function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
+            function closeShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.remove('active'); }
+            function openBackup() { if (backupOverlay) backupOverlay.classList.add('active'); }
+            function closeBackup() { if (backupOverlay) backupOverlay.classList.remove('active'); }
+
+            const quickShortcuts = $('#quick-shortcuts');
+            const quickBackup = $('#quick-backup');
+            if (quickShortcuts) quickShortcuts.addEventListener('click', openShortcuts);
+            if (quickBackup) quickBackup.addEventListener('click', openBackup);
+            const shortcutsClose = $('#shortcuts-close');
+            const backupClose = $('#backup-close');
+            if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
+            if (backupClose) backupClose.addEventListener('click', closeBackup);
+
+            // Fecha as janelas ao clicar no véu
+            if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
+                if (e.target === shortcutsOverlay) closeShortcuts();
+            });
+            if (backupOverlay) backupOverlay.addEventListener('click', (e) => {
+                if (e.target === backupOverlay) closeBackup();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
+                    else openSearch();
+                } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    // A impressão o navegador já trata
+                } else if (e.key === 'Escape') {
+                    if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
+                    if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
+                    if (backupOverlay && backupOverlay.classList.contains('active')) closeBackup();
+                } else if (e.key === 't' || e.key === 'T') {
+                    if (!e.ctrlKey && !e.metaKey) toggleTheme();
+                } else if (e.key === '?') {
+                    if (!e.ctrlKey && !e.metaKey && shortcutsOverlay) {
+                        shortcutsOverlay.classList.contains('active') ? closeShortcuts() : openShortcuts();
+                    }
+                }
+            });
+
+            // ===== Rastreamento de dias seguidos de leitura =====
+            const STREAK_KEY = 'reading-streak';
+            const STREAK_DATE_KEY = 'reading-streak-date';
+            const streakToast = $('#streak-toast');
+            const streakToastText = $('#streak-toast-text');
+
+            function updateStreak() {
+                try {
+                    const today = new Date().toDateString();
+                    const lastDate = localStorage.getItem(STREAK_DATE_KEY);
+                    let streak = parseInt(localStorage.getItem(STREAK_KEY) || '0', 10);
+
+                    if (lastDate !== today) {
+                        const yesterday = new Date(Date.now() - 86400000).toDateString();
+                        if (lastDate === yesterday) {
+                            streak += 1;
+                        } else if (lastDate !== today) {
+                            streak = 1;
+                        }
+                        localStorage.setItem(STREAK_KEY, streak.toString());
+                        localStorage.setItem(STREAK_DATE_KEY, today);
+
+                        // Mostra o aviso da sequência de dias
+                        if (streak >= 2 && streakToast && streakToastText) {
+                            streakToastText.textContent = '🔥 Dia ' + streak + ' de leitura seguida. Continue assim!';
+                            streakToast.classList.add('show');
+                            setTimeout(() => streakToast.classList.remove('show'), 5000);
+                        }
+                    }
+                } catch(e) { /* localStorage pode estar indisponível */ }
+            }
+            updateStreak();
+
+            // ===== Backup/restauração =====
+            function exportBackup() {
+                try {
+                    const data = {
+                        version: '3.0',
+                        exportDate: new Date().toISOString(),
+                        theme: localStorage.getItem('theme'),
+                        fontSize: localStorage.getItem('fontSize'),
+                        readingPosition: localStorage.getItem(POSITION_KEY),
+                        readingChapter: localStorage.getItem(POSITION_CHAPTER_KEY),
+                        streak: localStorage.getItem(STREAK_KEY),
+                        streakDate: localStorage.getItem(STREAK_DATE_KEY),
+                        healthChecks: {},
+                        chapterChecks: {},
+                        bookmarks: [],
+                        ratings: {}
+                    };
+                    // Coleta os estados da autodiagnóstico
+                    for (let i = 0; i < 8; i++) {
+                        data.healthChecks[i] = localStorage.getItem('health-check-' + i);
+                    }
+                    // Coleta os estados de leitura dos capítulos
+                    $$('.chapter-check.checked').forEach(c => {
+                        const sec = c.closest('.content-section');
+                        if (sec) data.chapterChecks[sec.id] = true;
+                    });
+                    // Coleta os favoritos
+                    $$('.toc-item.bookmarked').forEach(b => {
+                        data.bookmarks.push(b.getAttribute('href').replace('#', ''));
+                    });
+                    // Coleta as avaliações
+                    $$('.chapter-rating').forEach(r => {
+                        const sec = r.closest('.content-section');
+                        if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
+                    });
+
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Backup-leitura-PhoneClass_' + new Date().toISOString().slice(0,10) + '.json';
+                    a.click();
+                    URL.revokeObjectURL(url);
+                } catch(e) {
+                    alert('Falha ao exportar backup: ' + e.message);
+                }
+            }
+
+            function importBackup(file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (data.theme) localStorage.setItem('theme', data.theme);
+                        if (data.fontSize) localStorage.setItem('fontSize', data.fontSize);
+                        if (data.readingPosition) localStorage.setItem(POSITION_KEY, data.readingPosition);
+                        if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
+                        if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
+                        if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
+                        // Restaura os estados da autodiagnóstico
+                        if (data.healthChecks) {
+                            Object.keys(data.healthChecks).forEach(i => {
+                                localStorage.setItem('health-check-' + i, data.healthChecks[i]);
+                            });
+                        }
+                        // Restaura os estados de leitura dos capítulos
+                        if (data.chapterChecks) {
+                            Object.keys(data.chapterChecks).forEach(id => {
+                                const sec = document.getElementById(id);
+                                if (sec) {
+                                    const check = sec.querySelector('.chapter-check');
+                                    if (check) check.classList.add('checked');
+                                    const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
+                                    if (tocItem) tocItem.classList.add('completed-toc');
+                                }
+                            });
+                        }
+                        // Restaura os favoritos
+                        if (data.bookmarks) {
+                            data.bookmarks.forEach(id => {
+                                const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
+                                if (tocItem) tocItem.classList.add('bookmarked');
+                            });
+                        }
+                        alert('Restauração concluída! A página será recarregada para aplicar todos os dados.');
+                        location.reload();
+                    } catch(err) {
+                        alert('Falha na restauração: formato de arquivo inválido. ' + err.message);
+                    }
+                };
+                reader.readAsText(file);
+            }
+
+            function resetAllData() {
+                if (!confirm('Apagar todos os dados de leitura? A ação é irreversível! Exporte um backup antes.')) return;
+                if (!confirm('Confirme de novo: todo o progresso de leitura, os favoritos e as avaliações serão excluídos. Continuar?')) return;
+                localStorage.clear();
+                alert('Todos os dados apagados. A página será recarregada.');
+                location.reload();
+            }
+
+            const backupExport = $('#backup-export');
+            const backupImportBtn = $('#backup-import-btn');
+            const backupImportInput = $('#backup-import-input');
+            const backupReset = $('#backup-reset');
+            if (backupExport) backupExport.addEventListener('click', exportBackup);
+            if (backupImportBtn && backupImportInput) {
+                backupImportBtn.addEventListener('click', () => backupImportInput.click());
+            }
+            if (backupImportInput) backupImportInput.addEventListener('change', (e) => {
+                if (e.target.files[0]) importBackup(e.target.files[0]);
+            });
+            if (backupReset) backupReset.addEventListener('click', resetAllData);
+
+            // ===== Sistema de avaliação de capítulos =====
+            sections.forEach(sec => {
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                const ratingDiv = document.createElement('div');
+                ratingDiv.className = 'chapter-rating';
+                ratingDiv.dataset.rating = localStorage.getItem('rating-' + sec.id) || '0';
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.createElement('span');
+                    star.className = 'star';
+                    star.textContent = '★';
+                    star.dataset.value = i;
+                    star.addEventListener('click', () => {
+                        const current = parseInt(ratingDiv.dataset.rating, 10);
+                        const newRating = current === i ? 0 : i;
+                        ratingDiv.dataset.rating = newRating;
+                        localStorage.setItem('rating-' + sec.id, newRating);
+                        updateStars(ratingDiv);
+                    });
+                    ratingDiv.appendChild(star);
+                }
+                // Insere depois do h3
+                h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
+                updateStars(ratingDiv);
+            });
+
+            function updateStars(container) {
+                const rating = parseInt(container.dataset.rating, 10);
+                container.querySelectorAll('.star').forEach(s => {
+                    s.classList.toggle('active', parseInt(s.dataset.value, 10) <= rating);
+                });
+            }
+
+            // ===== Otimização anti-tremedeira do scroll =====
+            let scrollTicking = false;
+            const originalOnScroll = onScroll;
+            function debouncedScroll() {
+                if (!scrollTicking) {
+                    requestAnimationFrame(() => {
+                        originalOnScroll();
+                        scrollTicking = false;
+                    });
+                    scrollTicking = true;
+                }
+            }
+            window.removeEventListener('scroll', onScroll);
+            window.addEventListener('scroll', debouncedScroll, { passive: true });
+
+            // ===== Segue o modo escuro do sistema =====
+            if (window.matchMedia) {
+                const mq = window.matchMedia('(prefers-color-scheme: dark)');
+                if (mq.addEventListener) {
+                    mq.addEventListener('change', (e) => {
+                        if (!localStorage.getItem('theme')) {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                } else if (mq.addListener) {
+                    mq.addListener((e) => {
+                        if (!localStorage.getItem('theme')) {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                }
+            }
+
+            // ===== Adiciona automaticamente breadcrumbs e etiquetas de dificuldade aos títulos =====
+            sections.forEach(sec => {
+                const id = sec.id || '';
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+
+                let level = 'intermediate';
+                if (id.startsWith('di-ling') || id.startsWith('di-yi') || id.startsWith('di-er') || id.startsWith('di-san') || id.startsWith('di-er-shi-qi') || id.startsWith('di-er-shi-ba') || id.startsWith('di-er-shi-jiu') || id.startsWith('di-san-shi') || id.startsWith('fu-lu')) {
+                    level = 'beginner';
+                } else if (id.startsWith('di-shi-wu') || id.startsWith('di-shi-liu') || id.startsWith('di-shi-qi') || id.startsWith('di-shi-ba') || id.startsWith('di-shi-jiu') || id.startsWith('di-er-shi')) {
+                    level = 'intermediate';
+                } else {
+                    level = 'advanced';
+                }
+
+                const text = sec.textContent || '';
+                const minutes = Math.max(2, Math.round(text.length / 900));
+
+                const meta = document.createElement('div');
+                meta.className = 'flex flex-wrap items-center gap-2 mb-2 text-xs';
+                meta.innerHTML = `
+                    <span class="difficulty-tag difficulty-${level}">
+                        <i class="fas ${level === 'beginner' ? 'fa-seedling' : level === 'intermediate' ? 'fa-mountain' : 'fa-rocket'}" aria-hidden="true"></i>
+                        ${level === 'beginner' ? 'Básico' : level === 'intermediate' ? 'Intermediário' : 'Avançado'}
+                    </span>
+                    <span class="reading-time">
+                        <i class="far fa-clock" aria-hidden="true"></i>~${minutes} min de leitura
+                    </span>
+                `;
+                h3.parentNode.insertBefore(meta, h3);
+            });
+
+            // ===== Adiciona aos capítulos um bloco “Resumo” =====
+            function addChapterSummary(sec, points) {
+                const div = document.createElement('div');
+                div.className = 'chapter-summary';
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Resumo do capítulo</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                const nav = sec.querySelector('.chapter-nav');
+                if (nav) sec.insertBefore(div, nav);
+                else sec.appendChild(div);
+            }
+            const summaries = {
+                'fu-lu-f': ['Dobráveis estão maduros, mas não são mainstream: um “enfeite”, não um “salva-vidas”', 'Dobra na horizontal = celular + tablet; dobra na vertical = bolso + espiadinha na tela externa', 'Ideal para: leitura intensa/negócios/criação em hover/mulheres que valorizam portabilidade', 'Seis checagens na compra: tipo da dobradiça, tela interna UTG, marca da dobra, tamanho da tela externa, peso e espessura, preço do reparo fora da garantia', 'Truques exclusivos: multitarefa em tela dividida, hover a 90 graus, espiadinha na tela externa, modo PC', 'Cuidados essenciais: não abrir/fechar no frio, proteger de poeira e areia, nunca película comum na tela interna, dobradiça livre de poeira', 'Expectativas: a marca da dobra é permanente, é mais pesado e grosso, a bateria é mediana, a revenda desvaloriza, o reparo é caro', 'Filosofia de compra: você o compra pela forma única, não porque é “mais avançado”'],
+                'di-ling-zhang': ['Entenda a proposta do livro: ciência digital falada com clareza e com as mãos na massa', 'Domine o sistema de símbolos: o que significam [botões], >, negrito e itálico', 'Por que a capacidade do celular “encolhe”: as principais razões', 'Crie o hábito de anotar as especificações do seu celular', 'Celular = cofre de ativos digitais; prevenir primeiro é a ideia central', 'Os dados costumam valer mais que o próprio hardware'],
+                'di-yi-zhang': ['SoC = CPU + GPU + NPU + ISP + modem e outros módulos num único chip', 'Núcleos grandes e pequenos da CPU trabalham juntos: desempenho e bateria em equilíbrio', 'Tela: OLED/LCD, taxa de atualização, brilho automático', 'Núcleo do sistema de imagem: o sensor importa mais que a contagem de pixels', 'Evolução das portas: Micro USB → Lightning → USB-C unificado', 'O 5G-A traz a nova capacidade de “união de comunicação e sensoriamento”'],
+                'di-yi-zhang-harmony': ['HarmonyOS = sistema operacional distribuído, pensado para muitos dispositivos desde o início', 'HarmonyOS 4.3 é compatível com AOSP e pode rodar apps Android', 'HarmonyOS NEXT é totalmente autônomo e não suporta mais apps Android', 'Antes de atualizar, confirme que seus apps de uso diário já têm versões nativas'],
+                'di-er-zhang': ['Armazenamento em três camadas: aparelho / cartão SD / nuvem', 'O que significam as pastas comuns do Android (DCIM, Download etc.)', 'Backup de dados = cópia na nuvem + cópia local, proteção dupla', 'Apagar não é destruir; só “sobrescrever” elimina de verdade', 'Guia rápido dos formatos de arquivo comuns (imagem/áudio/vídeo/documento)', 'Nomenclatura “data + evento” é a convenção básica', 'A limpeza automática de 72 horas resolve o acúmulo de cache dos apps sociais', 'Proteção dupla para fotos: ocultação + remoção de EXIF'],
+                'di-san-zhang': ['4G/5G têm papéis diferentes; o 5G-A é a versão reforçada', 'Diferenças técnicas-chave do Wi-Fi 6/6E/7', 'Wi-Fi público exige cautela: evite digitar informações sensíveis', 'O Bluetooth 5.x segue evoluindo, o LE Audio começa a se popularizar', 'O NFC trabalha a até 10cm: a proximidade física é a própria garantia'],
+                'di-si-zhang': ['Instale apps de preferência nas lojas oficiais', 'Um pacote APK = certificado + recursos + configuração + binário', 'Cuidado com apps “limpadores-aceleradores”; apps residentes em segundo plano podem ser legítimos', 'A verificação de assinatura do app impede adulteração: proteção a nível de sistema', 'Modo puro = só instalações da loja oficial: a primeira muralha contra malware', '“Parasitas digitais” se refere a versões crackeadas com cavalos de Troia dentro', 'Mecanismo de revisão das lojas de apps: varredura de vírus + revisão de permissões + verificação do desenvolvedor'],
+                'di-wu-zhang': ['Tela: resolução, taxa de atualização, brilho automático', 'Som: volumes de toque/mídia/notificações geridos separadamente', 'Armazenamento: limpe com regularidade cache e arquivos desnecessários', 'Biometria: digital contra rosto; 3D vence 2D em segurança', 'Leitores de tela: VoiceOver no iOS / TalkBack no Android são os olhos de usuários com deficiência visual', 'Ampliação: alto contraste, texto em negrito e filtros de cor - o trio', 'Descrição de imagens por IA: a IA lê imagens, cardápios e captchas para você', 'Legendas ao vivo: um salva-vidas para quem não ouve e para ambientes barulhentos', 'RTT/TTY: quem perdeu a voz ou a audição também pode telefonar'],
+                'di-liu-zhang': ['Senha de bloqueio + autenticação de dois fatores são a linha de base da defesa', 'Permissões de apps: ative conforme a necessidade, princípio do menor privilégio', 'Nenhum pagamento ou login em Wi-Fi público', 'Na era da IA, ver não é crer: rostos e vozes clonados, falsa autoridade e investimentos falsos são os golpes mais comuns', 'Roteiro de reação: verificação por ação + palavra de confirmação + segunda checagem', 'Antes de compartilhar fotos, anonimize: desative localização e dados do aparelho nos EXIF', 'Dispositivos IoT: troque a senha padrão', 'Se cair num golpe, lembre: não confie, não revele, não transfira'],
+                'di-qi-zhang-jichu': ['Satélite: o “cordão de salvação” nas emergências', 'Comunicação sem rede: rádio de longo alcance mesmo sem cobertura', 'Detecção de acidente: a fusão de sensores reconhece colisões graves', 'StarFlash: conexão sem fio de baixa latência com potencial enorme'],
+                'di-ba-zhang': ['Gravação de chamadas: atenção à legalidade', 'iMessage/RCS elevam o SMS tradicional a mídia rica', 'O histórico do WeChat precisa da própria função de backup dele', 'Apps de e-mail gerenciam várias contas de forma unificada', 'Bloqueio de incômodos: reconhecimento do sistema + listas negra/branca + filtros de palavras-chave em SMS', '“Silenciar desconhecidos” no iOS barra o incômodo, mas atenção às chamadas perdidas', 'Marcações erradas de spam podem ser contestadas via Dianhua Bang/360/Tencent e canais da operadora'],
+                'di-jiu-zhang': ['WPS Office funciona melhor na China, Microsoft 365 tem a melhor compatibilidade', 'Notas em três etapas: anotou → ler depois → sistema de conhecimento', 'Digitalizar pelo celular: Notas/Mic Lens/Baimiao/CamScanner', 'Nuvem conforme a necessidade: iCloud/OneDrive/Baidu/Aliyun Drive, cada um com seus cenários'],
+                'di-shi-zhang': ['Quem vê o código de pagamento recebe o dinheiro: jamais mande um print dele a alguém', 'Check-up de segurança de 5 minutos: pagamento biométrico + trava de segurança + revisão de pagamentos sem senha + gestão de dispositivos', 'No metrô e no ônibus, prefira o cartão de transporte virtual na carteira do celular: funciona até offline', 'Certificado eletrônico do plano de saúde, consulta previdenciária, imposto de renda: tudo pelo celular', 'Quatro não contra golpes: nunca transfira para “conta segura”, nunca mande o código de pagamento, nunca toque em links desconhecidos, nunca passe o número do cartão'],
+                'di-shi-yi-zhang': ['Quatro erros comuns: lente suja, exposição sem ajuste, abuso do flash, zoom digital mal usado', 'O modo noturno funde vários quadros; mão firme por 2-4 segundos', 'Modo pro: ISO mais baixo, imagem mais limpa; o obturador comanda a luz', 'Fluxo de pós-produção: corrija → ajustes básicos → retoque local → estilize', 'Busca inteligente + limpeza regular + álbuns manuais = o trio do gerenciamento de fotos'],
+                'di-shi-yi-zhang-advanced': ['Os três elementos do vídeo: resolução, taxa de quadros, bitrate', 'H.265 comprime 50% a mais que o H.264', 'ProRes é o codec profissional da Apple: arquivos enormes', 'HDR10/10+/Dolby Vision: cada um tem seu nicho'],
+                'di-shi-er-zhang': ['NetEase Cloud Music é a melhor em playlists e comunidade, QQ Music tem o catálogo mais amplo, Apple Music é limpa e sem perdas, Spotify tem recomendações fortes', 'Xiaoyuzhou é a primeira escolha de podcasts em chinês; use bem velocidade e limpeza automática', 'Vídeo local: VLC (todos os formatos) ou nPlayer (controle por gestos)', 'Marcações no WeChat Read têm função social + sincronização com Kindle; o modo de proteção ocular deve ficar sempre ligado', 'O modo de jogo prioriza a fluidez dos frames; contra o superaquecimento ajuda a ventoinha de presilha'],
+                'di-shi-san-zhang': ['Ferramentas de produtividade: tarefas + pomodoro + calendário', 'Saúde e esporte: Apple Health/Google Fit como centro de dados', 'Navegador: Edge primeiro, com Copilot para turbinar a produtividade', 'Busque o verdadeiro: confie em domínios oficiais, evite sufixos baratos como .xyz', 'Prefira a limpeza nativa; terceiros como Qingzhuo são só complemento - nunca limpar tudo com um toque', 'Apps antienrolação: Centro Nacional Antifraude + guardiões das marcas + bloqueio da operadora', 'Bloqueio nativo: no iOS, Silenciar desconhecidos; no Android, ative no app de telefone de cada marca', 'Três camadas somadas: bloqueio do sistema + operadora + centro antifraude; cuide da lista branca para não bloquear os seus', 'Alertas do tempo: app de tempo do sistema + canais oficiais; aja conforme os níveis azul/amarelo/laranja/vermelho', 'Alertas de desastres naturais: meteorologia + defesa civil; em chuvas fortes e tufões fique longe de áreas baixas e outdoors', 'Alerta de terremoto não é previsão: segundos a dezenas de segundos de antecedência; no Android costuma ficar nas configurações de segurança', 'TickTick: listas + calendário + pomodoro, agenda em linguagem natural', 'Digitalizar papel: câmera do sistema/Mic Lens/Baimiao/CamScanner; fotografe nítido e depois OCR', 'Controle remoto do PC: Sunflower/ToDesk; se um desconhecido pedir para instalar controle remoto = golpe', 'IA no escritório: Trae e outros; o trabalho pesado no computador, pelo celular você acompanha de longe', 'Transferência rápida em rede local: LocalSend/AirDrop/Feige; área de transferência: KDE Connect/ferramentas da marca', 'Códigos descartáveis de 2FA: Aegis/Microsoft Authenticator, cópias em papel dos códigos de reserva'],
+                'di-shi-si-zhang': ['Com um gerenciador de senhas, basta lembrar uma senha-mestre', 'Bitwarden é de código aberto e gratuito, 1Password tem a melhor experiência', 'A senha-mestre deve ser longa e complexa, com 2FA ativado', 'Faça auditoria de segurança das senhas com regularidade', 'Arquitetura de conhecimento zero: nem o fornecedor vê suas senhas; a criptografia acontece localmente', 'AES-256 + derivação PBKDF2/Argon2 são a pedra fundamental da segurança de um cofre de senhas', 'A lição do caso LastPass 2022: os mais expostos foram usuários com senha-mestre fraca', 'A força da senha é a “entropia”: comprimento + aleatoriedade vencem símbolos complicados', 'HaveIBeenPwned verifica vazamentos, 1Password Watchtower monitora incidentes', 'Passkeys se baseiam em FIDO2/WebAuthn: imunes a phishing, nenhuma senha transmitida', 'Sincronização de Passkey entre dispositivos: chaveiro iCloud/Google Password Manager já suportam', 'Chaves físicas (YubiKey/Titan) resistem a phishing e sequestro de SIM - ideais para quem tem mais exposição', 'Cofres compartilhados do 1Password + acesso de emergência do Bitwarden deixam o compartilhamento em família e em equipe mais seguro'],
+                'di-shi-wu-zhang': ['Baterias de lítio: carregue conforme o uso, odeiam calor, envelhecem', 'Abaixo de 80% de saúde da bateria, a autonomia cai de forma notável', 'Protocolos de carga rápida: PD/QC/VOOC/SuperCharge não são intercambiáveis', 'O carregamento sem fio Qi2 introduz alinhamento magnético', 'Núcleo da economia de bateria: baixe o brilho + feche o segundo plano + mude para o 4G'],
+                'di-shi-liu-zhang': ['A conta é o registro civil da sua vida digital: junta contatos, fotos, compras e Encontrar o celular', 'Três obrigações: ative o 2FA, defina a chave de recuperação, confirme que Encontrar o celular está ativo', 'Os 5GB do iCloud não bastam: limpe ou passe para 50GB por cerca de ¥1/mês', 'Sincronização é bidirecional (apagou aqui, some em todo lugar), backup é retrato de mão única (apagou aqui, lá fica)', 'Usuários Android, confiram separadamente: backup na nuvem da marca, backup Google, backup WeChat'],
+                'di-shi-qi-zhang': ['Colaboração entre dispositivos: AirDrop da Apple/Huawei Multi-Screen Collaboration/Xiaomi Mi Share/Conectar ao Windows', 'Transmitir para a TV: iPhone usa Espelhamento de Tela, Android usa transmissão sem fio; se falhar, confira se está no mesmo Wi-Fi', 'Relógio inteligente = filtro de notificações + posto de saúde + pagamento no pulso; um para os pais pode salvar o dia', 'Casa inteligente: escolha pelo ecossistema - Apple HomeKit/Xiaomi Mijia/Huawei HarmonyOS Connect', 'Segurança dos vínculos: em público cuidado com a privacidade ao transmitir, e desvincule os aparelhos antigos a tempo'],
+                'di-shi-ba-zhang': ['Backup completo: local no computador (o mais confiável) + nuvem (o mais prático), proteção dupla', 'O histórico do WeChat é o caso mais especial: só o backup interno do WeChat o leva; ferramentas de migração não dão conta', 'Regra 3-2-1: 3 cópias, 2 tipos de mídia, 1 fora de casa', 'Troca de celular: mesma marca usa o app oficial de migração; entre marcas, prepare antes um relevo de dados'],
+                'di-shi-jiu-zhang': ['Travamento e aquecimento em quatro passos: lembre o que mudou → confira o armazenamento → confira o consumo → confira o sinal', 'Rotina para app que trava: feche e reabra → atualize → confira permissões → limpe o cache → reinstale', 'Não carrega: primeiro limpe a porta, depois cruze cabos e carregadores para isolar o culpado', 'Sem rede: ligue e desligue o modo avião → esqueça o Wi-Fi e reconecte → reinicie o roteador', 'A reinicialização universal resolve a maioria dos problemas estranhos; para conserto escolha assistências autorizadas, antes faça backup e saia das contas'],
+                'di-er-shi-zhang-jinjie': ['Modo desenvolvedor: sete toques no número da versão para ativar', 'Bloqueio BL: proteção do fabricante; desbloqueie com cautela', 'Root: o risco supera o benefício; para usuários comuns não é recomendado', 'Magisk ainda exige BL desbloqueado, mas consegue esconder o estado de root'],
+                'di-er-shi-yi-zhang': ['VPN = túnel criptografado; uma VPN gratuita pode ser ela mesma a roubar seus dados', 'Defesa contra homem-do-meio no Wi-Fi público: confie no HTTPS, desligue a conexão automática, tarefas sensíveis só no dados móveis', 'O handshake HTTPS criptografa em quatro trocas, mas sites de phishing também usam HTTPS', 'DoH/DoT criptografam as consultas DNS: a operadora não espia sua navegação', 'Modo anônimo = borracha local, não capa de invisibilidade: operadora e sites continuam vendo você', 'Checklist de segurança: desligue a conexão automática de Wi-Fi, use DNS criptografado, ative o 2FA, revise permissões de apps, bloqueie o Juice Jacking'],
+                'di-er-shi-er-zhang': ['Câmera com IA: reconhece a cena → funde vários quadros → otimiza de forma inteligente', 'Assistentes de voz: ouvir → entender → executar, três passos', 'IA no aparelho: rápida, privada, funciona offline', 'Grandes modelos de IA cobrem conversa/escrita/tradução/imagem/estudo', 'Usos típicos: tradução ao vivo, borracha de IA, retoque de IA, trabalho com documentos, busca de imagens com IA', 'Framework de prompts CRISPE: papel + pedido + contexto + saída + tom + exemplos', 'Com IA, cuidado com alucinações e vazamentos de privacidade', '“Papel-Contexto-Tarefa-Restrições” é um caminho mais fácil para começar com prompts', 'Traços de um bom prompt: específico, com contexto, com formato, com restrições, verificável'],
+                'di-er-shi-san-zhang': ['Elementos da automação: gatilho + ação + lógica de decisão opcional', 'Atalhos do iOS: rotina de bom-dia num toque, economia automática, despesas registradas por leitura de código', 'Android: clicadores automáticos (macros de tela), Tasker (a automação mais poderosa), MacroDroid (amigável a iniciantes)', 'Armadilhas: gatilhos de localização imprecisos, iOS não roda em automático sem confirmação manual, Tasker exige permissão de acessibilidade', 'Mentalidade de automação: transforme tarefas repetitivas em condição → ação, e o celular vira seu assistente pessoal'],
+                'di-er-shi-si-zhang': ['O Bootloader é o porteiro da inicialização; a verificação de assinatura impede adulteração', 'Políticas de desbloqueio BL variam por marca (Xiaomi permite/Huawei bloqueia)', 'Opções de root: Magisk/KernelSU/SuperSU', 'Três tipos de flash: ROM oficial/Recovery de terceiros/ROM de terceiros'],
+                'di-er-shi-wu-zhang': ['Vender o celular antigo: primeiro backup → saia das contas → apagar criptografado → preencher e apagar de novo', 'Herança digital: Contato legado do iCloud/Conta inativa do Google', 'Reciclagem: prefira programas oficiais de trade-in; o celular velho ainda pode servir como câmera ou navegador'],
+                'di-er-shi-liu-zhang': ['Três critérios do celular com IA: modelo grande no aparelho, potência da NPU em TOPS, AI Agent entre apps', 'Estratégias de IA dos fabricantes: Apple/Google/Huawei/Xiaomi/OPPO/vivo, cada um com seus pontos fortes', 'Satélite: as mensagens curtas do BeiDou chegaram à faixa intermediária, as ligações Tiantong seguem de topo de linha', 'Dobráveis: hardware maduro, apps adaptados uns 70%, hover/tela dividida são a experiência exclusiva', 'O 6G ainda vem chegando, o Wi-Fi 7 já pousou, o Bluetooth LE Audio começa a se espalhar', 'Baterias com anodo de silício-carbono tornam 5000-6000mAh padrão nos topo de linha'],
+                'di-er-shi-qi-zhang': ['Primeiro ative o modo fácil ou aumente fontes/ícones: com o ambiente ajustado, metade dos problemas desaparece', 'Três regras de ferro com os mais velhos: não apresse, use analogias, escreva', 'Seis golpes comuns para avisar sempre de novo; três linhas de defesa barram 90% das fraudes', 'A assistência remota permite consertar o celular dos pais mesmo de outra cidade', 'Modo cuidado do WeChat + entrada por voz: as duas funções mais úteis para os mais velhos', 'Chamada SOS e detecção de queda: configurações que salvam vidas na hora crítica'],
+                'di-er-shi-ba-zhang': ['Escolha do celular em três passos: primeiro as necessidades → depois o orçamento → por fim o modelo', 'Só cinco parâmetros importam: processador, tela, câmera, bateria e carregamento, promessa de atualizações', '¥1500-3500 é a faixa de melhor custo-benefício, a mais recomendada', 'O topo de linha do ano passado rende mais que o intermediário deste ano', 'Cinco armadilhas: mito das multicâmeras, culto aos megapixels, edições da operadora, culto às telas curvas, truques de IA', '618 e Double 11 são as duas melhores janelas do ano para comprar um celular'],
+                'di-er-shi-jiu-zhang': ['Primeiro olhe os dados de tempo de tela; enxergar a realidade é o primeiro passo para mudar', 'Limites para apps de diversão e horários para Não perturbe: recupere sua atenção', 'A regra 20-20-20 é o hábito mais simples e eficaz para os olhos', 'Olhar para o celular sobrecarrega o pescoço com 5-6 vezes o peso da cabeça; erga o aparelho e movimente o pescoço', 'Uma hora antes de dormir, sem celular; deixe o carregador fora do alcance do braço', 'O antídoto à ansiedade de informação é “bloquear ativamente”, não “receber mais”'],
+                'di-san-shi-zhang': ['Três campos da transmissão sem fio: AirPlay (Apple), Miracast (Android), DLNA (envio de mídia multiplataforma)', 'Transmissão por cabo é mais estável e com lag zero; na sala de reunião não pode faltar o adaptador HDMI', 'Samsung DeX/modo desktop da Huawei transformam o celular num PC leve de escritório', 'Conexão no carro: quatro soluções - CarPlay/Android Auto/HiCar/CarLife', 'Regras da transmissão na sala de reunião: teste antes, prepare o plano B, oculte a prévia das notificações'],
+                'di-san-shi-yi-zhang': ['Antes de gravar, deixe claro: quem é o público, que valor você entrega, em que plataforma vai postar', 'Cinco coisas antes de gravar: 1080P/30fps, limpe a lente, trave foco e exposição, escolha a orientação, ative a grade', 'Cinco movimentos de câmera: aproximar, afastar, girar, deslocar, seguir - estabilidade em primeiro lugar', 'Edição no CapCut: corte → transições → legendas → BGM → exportação, em seis passos', 'Os primeiros 3 segundos decidem tudo; um vídeo conta uma história só; constância vale mais que talento'],
+                'di-san-shi-er-zhang': ['Celular perdido, 30 minutos de ouro: peça um celular emprestado e ligue para si → bloqueio remoto → bloqueio do SIM → congelar pagamentos → avisar família e amigos → boletim de ocorrência', '72 horas após o golpe: pare transferências → guarde as provas → ligue 96110 → registre boletim → fale com o banco → troque as senhas', 'Celular infectado: modo de segurança → desinstale apps suspeitos → varredura de segurança → restauração de fábrica (último recurso)', 'Conta roubada: troque a senha → deslogue nos dispositivos → confira histórico de login → ative o 2FA → revise vínculos → revise pagamentos', '99,9% das mensagens de resgate são golpes: não responda, não pague, tire print e bloqueie', 'Golpes com rosto/voz clonados: procure falhas em piscadas, boca, contornos e luz; peça para virar a cabeça, cobrir o rosto, faça perguntas pessoais, retorne para um número já conhecido', 'Sequestro de SIM: se o celular mostra de repente “Sem serviço”, é alerta; defina PIN do SIM, ative a segunda verificação da operadora, passe as contas-chave para apps autenticadores', 'Cinco hábitos diários: bloqueio de tela + 2FA, Encontrar o celular, PIN do SIM, nada de apps desconhecidos, backups regulares', 'Terremoto/clima extremo: primeiro abrigue-se perto, depois evacue; um SMS gasta menos bateria que uma ligação longa', 'Sem sinal, prefira o SOS via satélite (se o modelo suporta); alertas e configurações no Capítulo 13'],
+                'di-san-shi-san-zhang': ['Vision Pro e óculos AR são novas portas de computação além do celular, mas não o substituirão em breve', 'As interfaces cérebro-computador estão a 10-20 anos do consumidor; a ética amadurece antes da tecnologia', 'O celular evolui para a “invisibilidade”: do centro no dispositivo ao centro na identidade', 'Ética da IA, soberania de dados e divisão digital são os temas centrais da próxima década', 'Estar conectado e continuar independente: a filosofia imutável da vida digital'],
+            };
+            Object.keys(summaries).forEach(id => {
+                const sec = document.getElementById(id);
+                // Pula capítulos que já têm resumo embutido, para não duplicar
+                if (sec && !sec.querySelector('.chapter-summary')) {
+                    addChapterSummary(sec, summaries[id]);
+                }
+            });
+
+            // ===== Botão de copiar (adicionado aos elementos kbd) =====
+            $$('.kbd').forEach(kbd => {
+                const btn = document.createElement('button');
+                btn.className = 'copy-btn';
+                btn.innerHTML = '<i class="fas fa-copy"></i>';
+                btn.setAttribute('aria-label', 'Copiar');
+                btn.addEventListener('click', () => {
+                    const text = kbd.textContent.trim();
+                    navigator.clipboard.writeText(text).then(() => {
+                        btn.classList.add('copied');
+                        btn.innerHTML = '<i class="fas fa-check"></i>';
+                        setTimeout(() => {
+                            btn.classList.remove('copied');
+                            btn.innerHTML = '<i class="fas fa-copy"></i>';
+                        }, 1500);
+                    }).catch(() => {});
+                });
+                kbd.parentNode.insertBefore(btn, kbd.nextSibling);
+            });
+
+            // ===== Conteúdo longo recolhível (nível h4) =====
+            sections.forEach(sec => {
+                const h4s = $$('h4', sec);
+                h4s.forEach(h4 => {
+                    // Só recolhe seções h4 longas
+                    let sibling = h4.nextElementSibling;
+                    let contentLength = 0;
+                    let elements = [];
+                    while (sibling && !sibling.matches('h4, h3, .chapter-nav, .chapter-summary')) {
+                        contentLength += (sibling.textContent || '').length;
+                        elements.push(sibling);
+                        sibling = sibling.nextElementSibling;
+                    }
+                    if (contentLength > 800) {
+                        // Adiciona o cabeçalho recolhível
+                        const header = document.createElement('div');
+                        header.className = 'collapsible-header';
+                        header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
+                        h4.replaceWith(header);
+
+                        const body = document.createElement('div');
+                        body.className = 'collapsible-body';
+                        elements.forEach(el => body.appendChild(el));
+
+                        header.after(body);
+
+                        header.addEventListener('click', () => {
+                            const isCollapsed = body.classList.contains('collapsed');
+                            body.classList.toggle('collapsed', !isCollapsed);
+                            header.classList.toggle('collapsed', !isCollapsed);
+                        });
+                    }
+                });
+            });
+
+            // ===== Painel de aprendizado: progresso de leitura + autodiagnóstico do celular =====
+            const dashProgressRing = $('#progress-ring-fg');
+            const progressPercent = $('#progress-percent');
+            const readCountEl = $('#read-count');
+            const bookmarkCountEl = $('#bookmark-count');
+            const lastChapterEl = $('#last-chapter');
+            const healthScoreEl = $('#health-score');
+            const healthBarEl = $('#health-bar');
+            const healthMsgEl = $('#health-msg');
+            const checkInputs = $$('.check-input');
+            const DASH_RING_CIRCUMFERENCE = 213.6;
+
+            function updateDashboard() {
+                // Progresso de leitura
+                const completed = $$('.chapter-check.checked').length;
+                const total = sections.length;
+                const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+                if (dashProgressRing) {
+                    dashProgressRing.style.strokeDashoffset = DASH_RING_CIRCUMFERENCE * (1 - pct / 100);
+                }
+                if (progressPercent) progressPercent.textContent = pct + '%';
+                if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
+
+                // Contagem de favoritos
+                const bookmarks = $$('.toc-item.bookmarked').length;
+                if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
+
+                // Último capítulo
+                const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+                if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
+
+                // Autodiagnóstico de saúde
+                const checked = checkInputs.filter(c => c.checked).length;
+                const totalChecks = checkInputs.length;
+                const healthPct = totalChecks > 0 ? Math.round((checked / totalChecks) * 100) : 0;
+                if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
+                if (healthBarEl) healthBarEl.style.width = healthPct + '%';
+                if (healthMsgEl) {
+                    if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>Nota máxima! A segurança do seu celular está em ótimo estado';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'Boa! ' + (totalChecks - checked) + ' itens ainda para melhorar';
+                    else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'Na média - priorize os itens de segurança ainda não marcados';
+                    else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>Seu celular tem brechas de segurança - corrija o quanto antes';
+                }
+            }
+
+            // Restaura os estados das marcações
+            checkInputs.forEach((input, i) => {
+                const saved = localStorage.getItem('health-check-' + i);
+                if (saved === 'true') input.checked = true;
+                input.addEventListener('change', () => {
+                    localStorage.setItem('health-check-' + i, input.checked);
+                    updateDashboard();
+                });
+            });
+
+            updateDashboard();
+            // Atualiza a cada 3 segundos (captura as marcações dos capítulos)
+            setInterval(updateDashboard, 3000);
+
+            // ===== Leitura em voz alta (TTS) =====
+            const ttsControls = $('#tts-controls');
+            const ttsPlayBtn = $('#tts-play');
+            const ttsPrevBtn = $('#tts-prev');
+            const ttsNextBtn = $('#tts-next');
+            const ttsStopBtn = $('#tts-stop');
+            const ttsSpeedUp = $('#tts-speed-up');
+            const ttsSpeedDown = $('#tts-speed-down');
+            const ttsSpeedDisplay = $('#tts-speed-display');
+            const ttsLabel = $('#tts-label');
+            const quickTtsBtn = $('#quick-tts');
+            let ttsUtterance = null;
+            let ttsSpeed = 1.0;
+            let ttsActive = false;
+            let ttsSectionIndex = -1;
+            let ttsPendingPlay = false;
+            const ttsSectionIds = sections.map(s => s.id);
+
+            function updateTtsSpeedDisplay() {
+                ttsSpeedDisplay.textContent = ttsSpeed.toFixed(1) + 'x';
+            }
+
+            function getSectionText(sec) {
+                if (!sec) return '';
+                // Clona e remove os elementos que não devem ser lidos em voz alta
+                const clone = sec.cloneNode(true);
+                const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
+                removes.forEach(el => el.remove());
+                // Remove os corpos recolhidos mas mantém o texto deles
+                const text = clone.textContent.replace(/\s+/g, ' ').trim();
+                return text;
+            }
+
+            function speakSection(index) {
+                if (!('speechSynthesis' in window)) {
+                    alert('Desculpe, seu navegador não suporta leitura em voz alta. Tente Chrome ou Edge.');
+                    return;
+                }
+                if (index < 0 || index >= sections.length) return;
+
+                window.speechSynthesis.cancel();
+                ttsSectionIndex = index;
+                const sec = sections[index];
+                const text = getSectionText(sec);
+                if (!text) return;
+
+                const h3 = sec.querySelector('h3');
+                ttsLabel.textContent = h3 ? h3.textContent : 'Capítulo sem título';
+
+                ttsUtterance = new SpeechSynthesisUtterance(text);
+                ttsUtterance.lang = 'pt-BR';
+                ttsUtterance.rate = ttsSpeed;
+                ttsUtterance.pitch = 1.0;
+                ttsUtterance.volume = 1.0;
+
+                // Tenta usar uma voz em português mais natural
+                const voices = window.speechSynthesis.getVoices();
+                const zhVoice = voices.find(v => v.lang.startsWith('pt'));
+                if (zhVoice) ttsUtterance.voice = zhVoice;
+
+                ttsUtterance.onstart = () => {
+                    ttsActive = true;
+                    ttsPlayBtn.classList.add('playing');
+                    ttsPlayBtn.querySelector('i').className = 'fas fa-pause';
+                    ttsControls.classList.add('active');
+                    if (quickTtsBtn) quickTtsBtn.classList.add('tts-active');
+                };
+
+                ttsUtterance.onend = () => {
+                    // Lê automaticamente o próximo capítulo
+                    if (ttsSectionIndex < sections.length - 1 && ttsActive) {
+                        ttsSectionIndex++;
+                        speakSection(ttsSectionIndex);
+                    } else {
+                        stopTts();
+                    }
+                };
+
+                ttsUtterance.onerror = (e) => {
+                    if (e.error !== 'interrupted' && e.error !== 'canceled') {
+                        console.warn('TTS error:', e.error);
+                    }
+                    stopTts();
+                };
+
+                window.speechSynthesis.speak(ttsUtterance);
+                ttsPendingPlay = false;
+            }
+
+            function toggleTtsPlay() {
+                if (!ttsActive) {
+                    // Encontra o capítulo visível no momento
+                    if (ttsSectionIndex < 0) {
+                        // Começa do início ou do capítulo mais próximo da posição de rolagem
+                        const scrollCenter = window.scrollY + window.innerHeight / 2;
+                        let closestIdx = 0;
+                        let closestDist = Infinity;
+                        sections.forEach((sec, i) => {
+                            const rect = sec.getBoundingClientRect();
+                            const secCenter = rect.top + window.scrollY + rect.height / 2;
+                            const dist = Math.abs(scrollCenter - secCenter);
+                            if (dist < closestDist) {
+                                closestDist = dist;
+                                closestIdx = i;
+                            }
+                        });
+                        ttsSectionIndex = closestIdx;
+                    }
+                    speakSection(ttsSectionIndex);
+                } else if (window.speechSynthesis.speaking) {
+                    if (window.speechSynthesis.paused) {
+                        window.speechSynthesis.resume();
+                        ttsPlayBtn.classList.add('playing');
+                        ttsPlayBtn.querySelector('i').className = 'fas fa-pause';
+                    } else {
+                        window.speechSynthesis.pause();
+                        ttsPlayBtn.classList.remove('playing');
+                        ttsPlayBtn.querySelector('i').className = 'fas fa-play';
+                    }
+                }
+            }
+
+            function stopTts() {
+                window.speechSynthesis.cancel();
+                ttsActive = false;
+                ttsSectionIndex = -1;
+                ttsUtterance = null;
+                ttsPlayBtn.classList.remove('playing');
+                ttsPlayBtn.querySelector('i').className = 'fas fa-play';
+                ttsControls.classList.remove('active');
+                ttsLabel.textContent = 'Não iniciado';
+                if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
+            }
+
+            // Ligação dos eventos
+            if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
+            if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
+            if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
+                if (ttsSectionIndex > 0) {
+                    ttsSectionIndex -= 2;
+                    if (ttsSectionIndex < 0) ttsSectionIndex = 0;
+                    speakSection(ttsSectionIndex);
+                }
+            });
+            if (ttsNextBtn) ttsNextBtn.addEventListener('click', () => {
+                if (ttsSectionIndex < sections.length - 1) {
+                    speakSection(ttsSectionIndex + 1);
+                }
+            });
+            if (ttsSpeedUp) ttsSpeedUp.addEventListener('click', () => {
+                ttsSpeed = Math.min(2.5, ttsSpeed + 0.25);
+                updateTtsSpeedDisplay();
+                if (ttsActive && ttsUtterance) {
+                    ttsUtterance.rate = ttsSpeed;
+                    // Recria e reproduz a seção atual
+                    const idx = ttsSectionIndex;
+                    window.speechSynthesis.cancel();
+                    setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
+                }
+            });
+            if (ttsSpeedDown) ttsSpeedDown.addEventListener('click', () => {
+                ttsSpeed = Math.max(0.5, ttsSpeed - 0.25);
+                updateTtsSpeedDisplay();
+                if (ttsActive && ttsUtterance) {
+                    ttsUtterance.rate = ttsSpeed;
+                    const idx = ttsSectionIndex;
+                    window.speechSynthesis.cancel();
+                    setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
+                }
+            });
+            if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
+
+            // Atalho: a tecla R alterna a leitura em voz alta
+            document.addEventListener('keydown', (e) => {
+                if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+                if (e.key === 'r' || e.key === 'R') {
+                    if (!e.ctrlKey && !e.metaKey && !e.altKey) {
+                        toggleTtsPlay();
+                    }
+                } else if (e.key === 'Escape' && ttsActive) {
+                    stopTts();
+                }
+            });
+
+            // ===== Inicialização =====
+            onScroll();
+            tryRestorePosition();
+        })();
+    </script>
+</body>
+</html>

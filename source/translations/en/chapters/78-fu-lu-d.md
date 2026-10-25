@@ -1,0 +1,30 @@
+---
+id: fu-lu-d
+num: D
+part: fu-lu
+nav: DAppendix D: Where to Find Reliable Resources
+toc: default
+kind: appendix
+---
+
+### Appendix D: Where to Find Reliable Resources?
+
+#### Official Support Is Your First Choice:
+
+- <strong>: Apple uses iTunes, Huawei uses Huawei Phone Assistant, Xiaomi uses Xiaomi Device Transfer.</strong> Useful Websites &amp; Bloggers:
+- <strong>Look Up Tips</strong>: Search "[Your Phone Model] tips" on Bilibili.
+- <strong>Watch Reviews</strong>: Watch review videos from several different bloggers.
+
+#### Useful Websites & Bloggers:
+
+- <strong>: Follow bloggers who teach mobile photography tutorials.</strong> Security Self-Check One-Sentence Checklist:
+- <strong>Have you set a lock screen password?</strong> Is "Find My Phone" turned on?
+- <strong>Have you enabled two-factor authentication for important accounts?</strong> Do you regularly back up photos and WeChat chat history?
+
+#### Security Self-Check One-Sentence Checklist:
+
+1. Appendix E: Acknowledgments &amp; Notes
+2. Thank you for sticking with this "phone course" to the end! During the writing process, we referenced extensive manufacturer official documentation, user manuals, and publicly available tech education articles to ensure accuracy of information.
+3. Technology evolves rapidly. The content in this book is based on mainstream technology and products at the time of writing. By the time you read this, there may already be new features and products available. We hope the thinking patterns and methods taught in this book will help you confidently face even more digital innovations in the future.
+4. Version 1.6 Update Highlights
+5. Expanded "Digital Asset Value &amp; Management Philosophy", added new "Image &amp; File System Management" chapter (time+event naming, categorization &amp; organization, 72-hour auto-cleanup, EXIF sanitization).

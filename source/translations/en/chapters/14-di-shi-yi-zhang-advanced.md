@@ -1,0 +1,263 @@
+---
+id: di-shi-yi-zhang-advanced
+part: ruan-jian-pian
+nav:  Chapter 11 Appendix:Professional Imaging Techniques
+toc: default
+kind: supplement
+---
+
+### Chapter 11 Appendix:Professional Imaging Techniques
+
+{class="chapter-intro mb-4"}
+To truly understand the mysteries of phone photography and video, you need to know some professional imaging technology. This knowledge not only helps you better use your phone's camera, but also makes you more discerning when choosing devices.
+
+#### 1. Resolution, Frame Rate, and Bitrate: The Three Elements of Video Quality
+
+##### Resolution:
+
+Resolution determines image clarity, expressed in pixel count.
+
+- <strong>720P (HD)</strong>: 1280×720 pixels, entry-level clarity.
+- <strong>1080P (Full HD)</strong>: 1920×1080 pixels, currently the most mainstream resolution.
+- <strong>2K (QHD)</strong>: 2560×1440 pixels, clearer than 1080P.
+- <strong>4K (UHD)</strong>: 3840×2160 pixels, ultra HD with rich detail.
+- <strong>8K</strong>: 7680×4320 pixels, the future standard, currently with limited device support.
+
+The higher the resolution, the clearer the image, but the larger the file and the higher the demands on storage and processing power.
+
+##### Frame Rate:
+
+Frame rate determines image smoothness, expressed in frames per second (fps).
+
+- <strong>24fps</strong>: The standard cinema frame rate, with a unique "cinematic feel".
+- <strong>30fps</strong>: Commonly used for TV and web video, smooth and natural.
+- <strong>60fps</strong>: High frame rate, suitable for sports scenes and game recording, very smooth.
+- <strong>120fps/240fps</strong>: Ultra-high frame rate, can be used for slow-motion video.
+
+The higher the frame rate, the smoother the image and the better the slow-motion effect, but the larger the file.
+
+##### Bitrate:
+
+Bitrate determines the data density of video, expressed in data per second (Mbps).
+
+- The higher the bitrate, the better the image quality and the more detail preserved, but the larger the file.
+- Too low a bitrate causes compression artifacts like mosaic blocks and color banding in the image.
+- Professional video shooting usually requires high bitrate to preserve more room for post-processing.
+
+#### 2. Video Coding Formats: H.264, H.265, and ProRes
+
+##### H.264 (AVC):
+
+- <strong>Characteristics</strong>: The most widely used coding format, with excellent compatibility.
+- <strong>Pros</strong>: Almost all devices can play it, with moderate compression efficiency.
+- <strong>Cons</strong>: Compared with newer formats, lower compression efficiency and larger files.
+- <strong>Applicable scenarios</strong>: Web video sharing and everyday shooting for ordinary users.
+
+##### H.265 (HEVC):
+
+- <strong>Characteristics</strong>: An upgrade to H.264, with about 50% better compression efficiency.
+- <strong>Pros</strong>: Smaller files at the same quality, supports higher resolutions and frame rates.
+- <strong>Cons</strong>: Encoding and decoding require a more powerful processor; some older devices are incompatible.
+- <strong>Applicable scenarios</strong>: 4K video shooting and scenarios with limited storage space.
+
+##### Apple ProRes:
+
+- <strong>Characteristics</strong>: A professional video codec developed by Apple, with nearly lossless compression.
+- <strong>Pros</strong>: Extremely high image quality, large room for post-processing, accurate color.
+- <strong>Cons</strong>: Extremely large files, requiring substantial storage and professional hardware to process.
+- <strong>Applicable scenarios</strong>: Professional video production and cinema-grade shooting.
+
+##### ProRes RAW:
+
+- <strong>Characteristics</strong>: Combines the advantages of ProRes and RAW formats.
+- <strong>What is RAW</strong>: Unprocessed raw sensor data, preserving maximum information.
+- <strong>Pros</strong>: Huge room for post adjustment—exposure, white balance, and other parameters can be changed without any quality loss.
+- <strong>Cons</strong>: Extremely huge files, requiring professional post-production software to process.
+- <strong>Applicable scenarios</strong>: High-end professional production. iPhone 15 Pro series and later support Apple ProRes video recording (up to 4K 60fps), and iPhone 17 Pro further supports ProRes RAW direct in-device recording.
+
+#### 3. HDR: High Dynamic Range Technology
+
+HDR (High Dynamic Range) technology preserves detail in both the brightest and darkest parts of the image at the same time.
+
+- <strong>HDR10</strong>: The most basic HDR standard, with good compatibility.
+- <strong>HDR10+</strong>: A standard promoted by Samsung, supporting dynamic metadata.
+- <strong>Dolby Vision</strong>: The top-tier HDR standard developed by Dolby, with the best image quality, but requires licensing.
+- <strong>HLG</strong>: Broadcast-grade HDR standard, compatible with ordinary displays.
+
+When shooting HDR video, you need an HDR-capable display to see the full effect.
+
+#### 4. Color Space and Color Depth
+
+##### Color Space:
+
+- <strong>sRGB</strong>: The standard color space, with the best compatibility.
+- <strong>Display P3</strong>: A wide-gamut standard promoted by Apple, with richer colors.
+- <strong>Rec.2020</strong>: The standard color space for HDR video, with the widest gamut.
+
+##### Color Depth:
+
+- <strong>8-bit</strong>: 16.7 million colors, the standard for ordinary video.
+- <strong>10-bit</strong>: 1.07 billion colors, the standard for professional video, with smoother color transitions.
+- <strong>12-bit</strong>: 68 billion colors, a high-end professional standard.
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-info-circle mr-2"></i>Practical Advice
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Everyday shooting: 1080P/4K + 30fps + H.265 encoding, balancing quality and file size.
+- Sports shooting: 1080P/4K + 60fps, to ensure smoothness.
+- Professional creation: 4K + ProRes (if supported), to preserve maximum post-production room.
+- Storage advice: High-bitrate video takes up a lot of space — back up to your computer or cloud drive regularly.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>Explore: Your Phone's Video Settings
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Open the Camera app and switch to video mode.
+2. View the resolution and frame rate options, and try different combinations.
+3. If supported, check whether there are advanced options like HDR and ProRes.
+4. Shoot a few video clips with different settings, and compare the image quality and file size.
+:::
+
+#### V. RAW vs HEIF vs JPEG Comparison
+
+##### What Is RAW Format:
+
+RAW format is the "raw data" recorded by the camera sensor — pure, unprocessed original information without any compression. It's like raw ingredients that need post-processing "cooking" to become a finished product. Phones, due to storage and processing limitations, default to "pre-cooked" JPEG or HEIF. RAW must be explicitly enabled.
+
+##### RAW vs HEIF vs JPEG Comparison:
+
+- <strong>JPEG</strong>: The oldest format, best compatibility (any device can open it). 8-bit color depth, lossy compression, smallest files (2-5MB per photo). Limited post-processing room — forcing detail out of shadows produces banding artifacts.
+- <strong>HEIF/HEIC</strong>: Apple's newer format, files are half the size of JPEG at the same quality (1-3MB per photo). Supports 10-bit color depth and transparency channel. Drawback: some older devices and Windows require plugins to open.
+- <strong>RAW</strong>: Uncompressed raw data, largest files (20-100MB per photo). Color depth typically 12-16 bit, maximum post-processing room. Drawback: requires professional software (Lightroom, Snapseed, etc.) to open and process — cannot be shared directly.
+
+##### Why Professional Photographers Shoot RAW:
+
+- <strong>Lossless White Balance Adjustment in Post</strong>: If white balance is wrong in JPEG (e.g., yellow under tungsten lighting), correcting it in post degrades quality; RAW lets you reset color temperature with zero loss.
+- <strong>Greater Exposure Tolerance</strong>: In JPEG, shadows underexposed by 2 stops are basically dead black — brightening produces noise. RAW can recover usable detail from shadows underexposed by 3-4 stops. Same applies to overexposure.
+- <strong>Richer Shadow and Highlight Detail</strong>: RAW's dynamic range far exceeds JPEG — much more latitude for preserving highlights without blowing out and shadows without crushing.
+- <strong>Sharpening, Noise Reduction, and Lens Correction All Controllable in Post</strong>: In-camera processing is a "one-shot deal." RAW can be adjusted repeatedly, always starting from the original data.
+
+##### How to Enable RAW on Phones:
+
+- <strong>iPhone ProRAW</strong>: Only iPhone 12 Pro and later Pro models. Go to "Settings → Camera → Formats" and enable "Apple ProRAW." A "RAW" button appears at the top of the camera interface — tap to enable. Files are about 25MB each — enable only when needed.
+- <strong>Android Motion Raw / Ultra RAW</strong>: Naming varies by brand. Xiaomi/OPPO/vivo flagships have RAW toggle in camera "Pro Mode" or "More"; Huawei enables RAW in "Pro Mode"; Samsung Galaxy S series has RAW option in "Pro" mode. Files are typically 20-50MB.
+- <strong>General Advice</strong>: No need to enable RAW for casual daily shooting — files are too large and waste space. Only enable for important scenes (landscape, portrait, post-processing needed).
+
+#### VI. Computational Photography Principles
+
+Modern phone photography is inseparable from "computational photography" — using algorithms, not just lenses and sensors, to generate photos. Understanding these core principles helps you understand what your phone does the moment you press the shutter.
+
+##### Multi-Frame Fusion:
+
+When you press the shutter once, the phone actually takes multiple photos. The algorithm aligns and fuses the frames to produce one high-quality image.
+
+- <strong>Night Mode</strong>: Takes multiple underexposed photos within 1-3 seconds, aligns and stacks them — noise cancels out, brightness accumulates. The result: clean images even in low light.
+- <strong>HDR (High Dynamic Range)</strong>: Shoots underexposed, normal, and overexposed frames (or more), then composites them into one photo with detail in both highlights and shadows. Especially effective for backlit scenes.
+- <strong>Deep Fusion (Apple) / Photonic Engine</strong>: For medium-to-low light scenes, analyzes and fuses multiple frames pixel by pixel, focusing on improving texture and detail — sweaters, hair, and similar details become noticeably clearer.
+
+##### Semantic Segmentation:
+
+AI doesn't process the entire image uniformly — it first "understands" what's in the scene — sky, faces, grass, buildings, clothing — then applies different processing strategies to each region.
+
+- <strong>Sky</strong>: Selectively enhance blue, reduce brightness to prevent overexposure.
+- <strong>Faces</strong>: Identifies skin tone areas, selectively brightens and smooths skin, leaving facial features and hair untouched.
+- <strong>Grass/Leaves</strong>: Enhance green saturation, boost detail sharpening.
+- <strong>Background Blur</strong>: In Portrait mode, AI identifies the subject's outline, blurring the background while keeping the subject sharp.
+
+##### Deep Learning Applications:
+
+- <strong>AI Scene Recognition</strong>: The camera automatically recognizes scenes like "food," "pets," "night," "document" and optimizes parameters accordingly. For example, food mode enhances warm tones and saturation to make food look more appetizing.
+- <strong>AI Portrait Bokeh</strong>: Phone lenses physically can't achieve DSLR-level shallow depth of field. Deep learning models predict subject edges, then blur the background. Latest algorithms correctly handle details like hair strands and glass edges.
+- <strong>AI Eraser/AI Outpainting</strong>: Select passersby or objects in the frame, and AI "fills in" the occluded areas based on context. This is generative AI applied to imaging.
+
+##### Computational vs Optical Photography:
+
+- <strong>Computational Photography Advantages</strong>: Good image quality in a small form factor, usable shots in extreme scenes like low light and backlight, and ordinary users can take "good-looking" photos without photography knowledge.
+- <strong>Computational Photography Disadvantages</strong>: Images can be "over-processed" — excessive sharpening, color distortion, unnatural sky colors; multi-frame fusion creates ghosting when subjects move; detail is "computed" rather than truly recorded.
+- <strong>Optical Photography Advantages</strong>: Large sensor + wide-aperture lens truly captures light, natural image quality, large post-processing room; no artifacts from algorithmic "hallucination."
+- <strong>Trend</strong>: Modern flagship phones combine "optical + computational" — large sensors capture real data, algorithms optimize the result. The two aren't opposed.
+
+#### VII. Lens Types and Focal Lengths
+
+Modern flagship phones typically have three to four lenses, each corresponding to a different focal length. Understanding focal lengths helps you choose the right lens for each scenario.
+
+##### Common Lenses and Equivalent Focal Lengths:
+
+- <strong>Ultrawide (13-24mm equivalent)</strong>: Widest field of view, suitable for landscapes, architecture, and interior spaces. Captures expansive scenes, but edges have distortion (straight lines curve), and faces stretch in portraits. Good for "big scenes," not for "close-ups."
+- <strong>Main Camera (24-28mm equivalent)</strong>: The most commonly used lens, best image quality, widest aperture. Balances field of view and quality — works for both people and scenery. The "1x" on most phones is the main camera.
+- <strong>Telephoto (70-200mm equivalent)</strong>: For distant subjects and portrait close-ups. Telephoto compresses spatial perception (distant mountains and nearby people appear closer together), producing more natural facial proportions and background blur in portraits.
+- <strong>Periscope Telephoto (200mm+ equivalent)</strong>: Uses a folded reflective optical path to achieve longer focal lengths within the phone's thickness. Captures clear detail at great distances — suitable for concerts, sports, wildlife. Only on flagship models.
+
+##### Sensor Size vs Pixel Size Trade-off:
+
+The sensor is the "foundation," determining how much light can be captured. The industry says "a bigger sensor crushes the competition" — at the same pixel count, a larger sensor means larger individual pixels, more light intake, and better image quality.
+
+- <strong>Large Sensor</strong>: More light intake, better night image quality, wider dynamic range. Disadvantages: phone must be thicker (camera bump), higher cost.
+- <strong>High Pixel Count, Small Sensor</strong>: In sufficient daylight, high pixel count produces sharper photos, convenient for post-cropping. But in low light, each pixel receives insufficient light, producing more noise.
+- <strong>Mainstream Flagship Choices</strong>: Main cameras are typically 1/1.3-inch to 1-inch (some models already use 1-inch sensors), around 50MP — the balance point between image quality and size.
+
+##### Pixel Binning Technology:
+
+To balance high pixel count in daylight and large pixels at night, manufacturers use "pixel binning" — merging multiple small pixels into one large pixel for output.
+
+- <strong>Quad Bayer (4-in-1)</strong>: 50MP sensor outputs 12.5MP photos. Each output pixel is synthesized from 4 adjacent pixels, increasing light intake 4x for cleaner images.
+- <strong>Nonacell (9-in-1)</strong>: Used for 100MP+ sensors, outputs approximately 11-12MP. Same principle, even greater light intake.
+- <strong>Practical effect</strong>: In default shooting mode, you get the binned low-pixel photo — good quality, small file. When you need maximum detail (e.g., documents, distant subjects), manually switch to "high-resolution mode" for full-resolution output.
+
+#### VIII. Special Shooting Modes
+
+Beyond everyday photography, your phone has several special modes that, when used correctly, can capture shots you normally can't get.
+
+##### Panorama Mode:
+
+- Move the phone slowly and steadily in the direction of the arrow — don't go fast, or stitching misalignment will occur.
+- Keep the phone vertically stable and only pan horizontally. If it bobs up and down, the horizon will become wavy.
+- Use with caution when there are moving people or cars — stitching may produce "half bodies" or "ghosts."
+- Panorama can also be shot vertically — vertical shooting with horizontal stitching, suitable for tall buildings or waterfalls.
+
+##### Slow Motion and Time-Lapse:
+
+- <strong>Slow Motion</strong>: Shot at 120fps or 240fps high frame rates, played back as slow motion. Great for capturing water droplets, sports moments, and pets jumping. Requires ample light — slow motion mode has shorter exposure time, resulting in poor low-light quality.
+- <strong>Time-Lapse</strong>: Takes photos at intervals and combines them into a fast-forward video. Great for traffic, cloud movement, sunsets, and flower blooming. Shooting can take minutes to hours — always use a tripod to secure the phone; handheld shots will be blurry.
+- <strong>Tip</strong>: For time-lapse cloud photography, set up the phone and shoot for 15-30 minutes. The result is about 10 seconds of stunning time-lapse footage.
+
+##### Starry Sky / Astronomy Mode:
+
+- You need to get away from urban light pollution — find a rural area or mountain with no streetlight interference at all. You can't capture the Milky Way in the city.
+- A tripod is mandatory — handheld shots will be blurry. The phone must be held steady for several seconds to tens of seconds.
+- Weather should be clear and cloudless, with the moon not too large (a full moon will overwhelm starlight). Dark nights around the beginning or end of the lunar month are best.
+- iPhone's "Night Mode" automatically detects starry skies and extends exposure time (up to 30 seconds); Android flagships' "Star Mode" or "Astronomy Mode" works similarly. Be patient — don't move the phone after pressing the shutter.
+
+##### Macro Mode:
+
+- Used for photographing flowers, insects, jewelry, text close-ups, and other small objects. Can focus as close as 1-2 centimeters.
+- Some phones have a dedicated macro lens (usually a 2MP or 5MP small-sensor lens) with average quality; flagship phones use the ultra-wide lens to double as macro, producing better quality.
+- When shooting up close, the lens is very near the subject and may block light — use a desk lamp or flashlight to supplement lighting if needed.
+- The focus distance is extremely close, creating a very shallow depth of field — moving the subject a few millimeters forward or back can cause focus loss. Keep your hands steady and ideally have the subject stay still.
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-info-circle mr-2"></i>Practical Tips for Still Photography
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Daily shooting: HEIF/JPEG default is fine — small file size and adequate quality.
+- Important scenes (landscape, portrait, post-processing needed): Enable RAW to preserve maximum post-processing flexibility.
+- Choose the right lens: ultra-wide for landscapes, telephoto for portraits, main camera for everyday use.
+- Night scenes and starry skies: Always secure the phone and enable Night Mode or Astronomy Mode.
+- Phones with large sensors (e.g., 1-inch sensor models) have higher quality ceilings, but shooting technique remains the key.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>Try It Yourself: Understand Your Camera's Capabilities
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Check if your phone supports RAW shooting (Settings → Camera → Format). Try enabling it and take a shot, then compare the JPEG and RAW file sizes of the same scene.
+2. Switch between the ultrawide, main camera, and telephoto focal lengths and shoot the same distant scene with each, to feel the differences in perspective and quality.
+3. Find a scene with Night Mode or Starry Sky Mode, secure the phone, and take a night photo.
+4. Try shooting a wide scene in Panorama Mode, keeping the phone moving smoothly and steadily.
+:::

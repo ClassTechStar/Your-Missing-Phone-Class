@@ -1,0 +1,72 @@
+---
+id: di-shi-er-zhang
+num: 12
+part: ruan-jian-pian
+nav: Capitolo 12: Intrattenimento audio-video e lettura
+toc: default
+kind: chapter
+---
+
+### Capitolo 12: Intrattenimento audiovisivo e lettura
+
+{class="chapter-intro mb-4"}
+Oggi il telefono ha sostanzialmente sostituito il lettore MP3, il telecomando TV, il Kindle e la console portatile. A dire il vero, però, molte persone usano solo le funzioni più basiche di queste App, trascurando tante caratteristiche utili ancora da scoprire. In questo capitolo parliamo di come rendere l'intrattenimento sul telefono più scorrevole e più piacevole.
+
+#### 1. Ascoltare musica: quale App scegliere e come ascoltarla bene
+
+Le App musicali oggi hanno funzioni simili, ma ciascuna ha il suo punto forte; scegliere quella giusta ti fa risparmiare un sacco di grattacapi:
+
+- <strong>NetEase Cloud Music</strong>: il suo punto di forza sono le playlist della community e i commenti. Se vuoi ascoltare "canzoni adatte a un giorno di pioggia" oppure "musica strumentale per rilassarsi dopo lo studio", basta cercare e troverai playlist già pronte da altri utenti. A volte i commenti sono più interessanti del brano stesso. Lo svantaggio è che il catalogo dei diritti d'autore non è completo: alcuni brani a un certo punto diventano grigi (non più disponibili).
+- <strong>QQ Music</strong>: ha il catalogo di diritti più completo; artisti pop come Jay Chou e Mayday si trovano praticamente solo qui. Le opzioni di qualità audio sono ricche e gli abbonati possono attivare la qualità lossless. Se tieni molto al fatto che "qualsiasi brano voglia ascoltare sia trovato", QQ Music è la scelta più sicura.
+- <strong>Apple Music</strong>: la prima scelta per gli utenti Apple. Interfaccia pulita, senza pubblicità, buona qualità audio, con supporto a lossless e Dolby Atmos. Tuttavia l'algoritmo di raccomandazione non capisce i gusti degli utenti cinesi bene quanto le App nazionali, e la cultura delle playlist è meno sviluppata rispetto a NetEase. Adatto a chi ama un'esperienza essenziale e non si cura troppo delle funzioni social.
+- <strong>Spotify</strong>: l'App con più utenti al mondo, con l'algoritmo di raccomandazione universalmente riconosciuto come il migliore. Le playlist "Discover Weekly" e "Daily Mix" hanno una precisione spaventosa: più la usi, più ti capisce. Gli svantaggi sono la versione gratuita piena di pubblicità e una copertura incompleta di alcuni brani cinesi. Richiede una rete speciale per l'utilizzo.
+
+<strong>Alcuni consigli pratici per ascoltare</strong>: se usi cuffie Bluetooth, controlla nelle impostazioni dell'App musicale se c'è una sezione "effetti audio" o "equalizzatore": regolando leggermente bassi e alti il miglioramento è evidente. Inoltre, lo streaming consuma molto traffico dati, quindi ricordati di attivare nelle impostazioni l'opzione "riproduci lossless solo in WiFi", oppure scarica in anticipo le playlist che preferisci per l'ascolto offline.
+
+#### 2. Podcast: il "compagno per le orecchie" nel tragitto casa-lavoro
+
+I podcast sembrano roba che non ci riguarda finché non si inizia ad ascoltarli; una volta cominciato, non si torna più indietro. In sostanza sono "la versione Netflix dei programmi radiofonici": c'è chi parla di tecnologia, chi racconta storia, chi legge storie; c'è qualsiasi tipo tu voglia ascoltare.
+
+- <strong>App Xiaoyuzhou</strong>: la migliore App per podcast in Cina, con un'interfaccia pulita e senza funzioni superflue. Le sezioni "Raccomandazione del giorno" e "Scelte della redazione" ti aiutano a scoprire nuovi programmi, e i commenti sono molto attivi. Personalmente ascolto soprattutto "Hu Zuo Hu You" (cultura e storia) e "Bu He Shi Yi" (temi sociali): ogni puntata è come origliare una conversazione tra persone intelligenti.
+- <strong>Apple Podcasts</strong>: preinstallato sull'iPhone, non richiede download aggiuntivi. L'integrazione con CarPlay è la migliore, molto comodo mentre si guida.
+- <strong>Consigli per l'ascolto</strong>: la maggior parte delle App per podcast supporta la riproduzione a velocità 1.2x o 1.5x; una volta abituati, si risparmia molto tempo. Io di solito ascolto il cinese a 1.2x e l'inglese a 1.5x. Inoltre, ricordati di attivare "download automatico dei nuovi episodi" e "eliminazione automatica dopo l'ascolto", così il telefono non si riempirà di file audio già ascoltati.
+
+#### 3. Guardare video: il modo corretto, dal lettore locale allo streaming
+
+Molti non lo sanno, ma i formati riproducibili sul telefono sono molti di più di quelli offerti dalle App di streaming. Un buon lettore locale risolve un sacco di problemi.
+
+- <strong>Lettore VLC</strong>: open source e gratuito, riproduce praticamente qualsiasi formato: MKV, AVI, FLAC e persino immagini ISO di dischi. Se hai scaricato un video che si vede sul computer ma non sul telefono, molto probabilmente è un problema di formato: installa VLC e il problema è risolto. Supporta anche i sottotitoli esterni: mettendo il file .srt dei sottotitoli nella stessa cartella del video, VLC li caricherà automaticamente.
+- <strong>nPlayer</strong>: se vuoi un'esperienza più rifinita, quest'App a pagamento merita l'acquisto. L'interfaccia è bella e il controllo tramite gesti è fluido: scorrendo su e giù a sinistra si regola la luminosità, a destra il volume, scorrendo a sinistra e destra si va avanti e indietro. Supporta l'audio DTS e Dolby, con una sensazione di presenza molto maggiore quando guardi un blockbuster.
+- <strong>Bilibili (B-site)</strong>: non è più solo un sito per appassionati di anime e manga; oggi offre risorse di studio incredibili. C'è di tutto: esami di ammissione alla laurea, programmazione, fotografia, cucina. La cultura dei commenti fluttuanti (danmaku) è l'anima di Bilibili: guardare un video con i danmaku attivi ti fa sentire come se fossi in compagnia. Per i video di studio, però, meglio disattivarli per non distrarsi.
+- <strong>Trasmettere sul TV (cast)</strong>: per quanto grande, lo schermo del telefono non è mai comodo come un televisore. Sotto la stessa rete WiFi, basta toccare il pulsante "TV" in alto a destra dell'App video per proiettare l'immagine sulla TV. La maggior parte delle smart TV e dei proiettori lo supporta: l'esperienza di guardare serie e film è di gran lunga migliore. Gli utenti iPhone possono usare AirPlay per trasmettere in mirror l'intero schermo.
+
+#### 4. Lettura di e-book: leggere bene anche sul telefono
+
+C'è chi dice che leggere sul telefono affatica gli occhi e distrae; in parte è vero. Ma i vantaggi della lettura sul telefono sono evidenti: ovunque e in qualsiasi momento, sfruttando al massimo i tempi frammentati. Sulla metropolitana, in fila, prima di dormire: con il telefono ho letto un sacco di libri.
+
+- <strong>WeChat Reading</strong>: attualmente l'App di lettura con la migliore esperienza in Cina. Il catalogo è molto ampio, con sia libri editi che web novel. Usa il modello "tempo di lettura in cambio di monete-libro": più leggi, più libri gratuiti puoi ottenere, ideale per gli studenti. La funzione "sottolineature" permette di vedere quali paragrafi sono stati segnati da altri; a volte, imbattersi in una frase bella sottolineata da altri crea una vera sintonia. La "classifica di lettura", però, è un po' stressante: si rischia di leggere "per accumulare minuti", meglio disattivarla.
+- <strong>App Kindle</strong>: se hai un dispositivo Kindle, l'App Kindle sul telefono sincronizza l'avanzamento della lettura. La qualità tipografica degli e-book ufficiali Kindle è di gran lunga superiore ai PDF pirata, ma il negozio Kindle per la Cina è stato chiuso: bisogna passare a un account di un'altra regione.
+- <strong>Apple Books (Libri)</strong>: preinstallato sull'iPhone, adatto per leggere EPUB e PDF. Interfaccia minimalista, l'animazione di sfogliatura pagina è molto piacevole. Se hai scaricato un file e-book da Internet, basta "condividerlo con Libri" per importarlo.
+- <strong>Consigli per le impostazioni di lettura</strong>: qualsiasi App tu usi, imposta lo sfondo su una tonalità gialla calda (modalità riposo occhi), ingrandisci un po' il carattere e aumenta l'interlinea. La sera attiva la "modalità scura": sfondo nero e testo bianco affaticano molto meno gli occhi. Non leggere a lungo con sfondo bianco, testo nero piccolo e in condizioni di luce fioca: l'affaticamento degli occhi si accumula.
+
+#### 5. Giochi su telefono: godersela senza rovinare il telefono
+
+Il mio atteggiamento verso i giochi su telefono è: giocare va bene, ma non lasciare che sia il gioco a controllare te. Usando in modo ragionato gli strumenti pensati per i giochi, si gioca meglio e non si trascurano le cose importanti.
+
+- <strong>Modalità gioco / Game Space</strong>: la maggior parte dei telefoni di fascia media-alta oggi ha questa funzione. Una volta attivata, il telefono pulisce automaticamente la memoria, blocca le notifiche e previene tocchi accidentali; se mentre sei in una battaglia di gruppo salta fuori una chiamata, la modalità gioco te la intercetta. Alcuni telefoni supportano anche una modalità prestazioni o e-sports che spinge al massimo il processore, al prezzo però di maggior calore e consumo della batteria.
+- <strong>Come regolare qualità grafica e frame rate</strong>: non impostare tutto al massimo senza pensare. Assicurati prima il frame rate (fluidità), poi cerca la qualità grafica. 60 fps sono molto più comodi di 30, ma 120 fps mettono sotto pressione il telefono: su un telefono di fascia media non ha senso pretendere troppo. Se giochi a titoli competitivi (come Honor of Kings o PUBG Mobile), il frame rate conta molto più della qualità grafica: la fluidità di gioco è cento volte più importante di un'erba più bella.
+- <strong>Cosa fare se il telefono si surriscalda durante il gioco</strong>: è normale, ma temperature alte a lungo danneggiano la batteria. Alcuni rimedi: togli la cover per disperdere il calore; abbassa la luminosità dello schermo a circa il 70% (la luminosità è una grande fonte di calore); non giocare mentre il telefono è in carica (il calore si somma, la batteria muore in fretta). Se il telefono diventa troppo caldo per tenerlo in mano, chiudi il gioco e lascialo riposare un po'.
+- <strong>Strumenti anti-dipendenza</strong>: "Tempo di utilizzo" su iOS e "Benessere digitale" su Android consentono di impostare un limite quotidiano di tempo per le App di gioco. Io ho impostato un massimo di un'ora nei giorni feriali e due ore nel weekend. Allo scadere del tempo, l'icona dell'App diventa grigia e non è più accessibile. Questo limite è davvero utile, non è una finta.
+- <strong>Cloud gaming</strong>: se il tuo telefono non è abbastanza potente ma vuoi giocare a titoli importanti, puoi provare le piattaforme di cloud gaming (come Tencent START Cloud Gaming o NetEase Cloud Gaming). Il gioco gira su server remoti e l'immagine ti arriva sul telefono come flusso video. Le esigenze sulla rete sono alte, ma quelle sulla potenza del telefono sono quasi nulle. Lo svantaggio è una latenza inevitabile: adatto a giochi strategici e RPG, meno ai giochi FPS sparatutto.
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>Prova: costruisci il tuo sistema di intrattenimento mobile
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Nell'App musicale, scarica i tuoi 3 album o playlist preferiti, in modo da poterli ascoltare offline.
+2. Iscriviti a 3 canali di tuo interesse su Xiaoyuzhou o Apple Podcasts e scarica una puntata da provare.
+3. Installa il lettore VLC e prova a riprodurre un file video copiato dal computer.
+4. Su WeChat Reading trova un libro che ti interessa leggere, imposta sfondo caldo e modalità riposo occhi, e regola il carattere alla dimensione giusta per te.
+5. Se giochi, apri la modalità gioco e vedi quali impostazioni puoi ottimizzare (non disturbare, priorità al frame rate, ecc.).
+:::

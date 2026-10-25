@@ -1,0 +1,109 @@
+---
+id: di-san-shi-zhang
+num: 30
+part: shi-zhan-pian
+nav: 第三十章：投屏、演示與車載互聯
+toc: default
+kind: chapter
+---
+
+### 第三十章：投屏、演示與車載互聯
+
+{class="chapter-intro mb-4"}
+手機屏幕再大亦遂7英寸，但汝之電視有55英寸、汝之投影儀有100英寸。將手機畫面"扔"至大屏幕上，體驗乃完全不同維度之。此一章講清楚投屏、演示與車載互聯此三個高頻場景，幫汝將手機之能力延伸至更大之屏幕上。
+
+#### 一、無線投屏三大陣營——勿搞混矣
+
+無線投屏看起來皆乃"手機畫面至電視上"，但底層技術有三種，互不通用：
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                            <thead>
+                                <tr class="bg-light dark:bg-gray-700">
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">技術</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">誰用</th>
+                                    <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最高速率</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">AirPlay</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone/iPad/Mac</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">蘋果生態，體驗最流暢。須Apple TV或支持AirPlay之電視</td></tr>
+                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">Miracast</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安卓手機</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Wi-Fi Direct直連，不須路由器。安卓手機"無線投屏"默認用此</td></tr>
+                                <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2 font-semibold">DLNA</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">凡平臺</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">唯推送媒體文件（視頻/音樂/圖片），不鏡像屏幕。適合推視頻至電視上播放</td></tr>
+                            </tbody>
+                        </table>
+```
+:::
+
+##### 各平臺操法：
+
+- <strong>iPhone</strong>：控制中心 &gt; 屏幕鏡像 &gt; 選擇汝之電視/Apple TV。若電視不支持AirPlay，可買一個Apple TV盒子或支持AirPlay之電視棒。
+- <strong>安卓</strong>：下拉通知欄 &gt; 尋到"無線投屏"/"智能投屏"/"多屏互動"按鈕 &gt; 選擇電視。須手機與電視連同一個Wi-Fi。
+- <strong>萬能策</strong>：若電視太老不支持任何無線投屏，買一個Chromecast或小米盒子/華爲盒子插至電視HDMI口上，遂能接收投屏矣。
+
+#### 二、有線投屏——更穩、零延遲
+
+無線投屏方便但有延遲，玩遊戲與作演示時體驗不好。有線投屏能解決此問題：
+
+- <strong>iPhone</strong>：須一根Lightning/USB-C轉HDMI之轉換線（約100-200元）。插上後手機畫面直接輸出至電視/投影儀之HDMI口。
+- <strong>安卓</strong>：部分手機支持USB-C轉HDMI直連（須手機支持DP Alt Mode，大部分旗艦皆支持）。買一根USB-C to HDMI線即可。
+- <strong>會議室場景</strong>：若汝屢須用手機作演示，建議於包裏常備一根轉HDMI線。會議室之電視/投影儀幾皆有HDMI口，插上遂能用，比折騰無線投屏靠譜多矣。
+
+#### 三、手機變電腦——桌面模式
+
+部分安卓手機支持"桌面模式"——連上顯示器後，手機會輸出一個類似電腦桌面之界面，可用鼠標鍵盤操作：
+
+- <strong>Samsung DeX</strong>：三星旗艦之招牌功能。連接顯示器後彈出桌面界面，可多窗口操作，體驗最接近真正之電腦。配合藍牙鍵鼠，出差可不帶筆記本。
+- <strong>華爲桌面模式</strong>：華爲Mate系列/Pura系列連顯器後亦有類似之能。支多窗口、文管、辦公App。
+- <strong>摩託羅拉Ready For</strong>：Moto旗艦亦支持，功能類似DeX。
+- <strong>適用場景</strong>：輕辦公（回郵件、改文檔）、演示PPT、大屏觀視頻。不適合重度Excel操作或專業設計。
+
+#### 四、車載互聯——開車以手機之正法
+
+開車時操作手機乃違法之，但導航、聽音樂、接電話又乃剛需。車載互聯繫統使汝於車機屏幕上使用手機之核心功能，手機可放於一邊不碰：
+
+- <strong>Apple CarPlay</strong>：iPhone用戶之首選。通過USB或無線連接車機，車機屏幕上出現iPhone之精簡界面——導航（高德/百度）、音樂、電話、信息、播客。Siri語音控制全程免手。
+- <strong>Android Auto</strong>：安卓用戶對策。能與CarPlay似，支Google Maps、Spotify等。國內因Google服限，部能不可用。
+- <strong>華爲HiCar</strong>：華爲自研方案，國內車型支持率高。除矣導航音樂，還能用華爲視頻通話、泊車影像融合等特色功能。
+- <strong>百度CarLife</strong>：跨平臺方案，iOS與安卓皆能用。功能較少但兼容性廣，甚多老車型唯支持CarLife。
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>安全提醒
+
+{class="mt-1"}
+無論哪種車載互聯方案，開車時皆應儘量使用語音控制。導航提前設好目的地，音樂提前選好歌單，勿於行駛中操作車機屏幕。
+:::
+
+#### 五、會議室投屏實戰——不復手忙腳亂
+
+開將乃投屏最高頻之場景，亦乃最容易出問題之場景。以下乃幾條實戰經驗：
+
+- <strong>提前至場測試</strong>：永遠勿等至會議開始方連投屏。提前10分鐘到場，測試好連接方式。Wi-Fi投屏失敗之概率比汝欲之高得多。
+- <strong>準備有線方案作Plan B</strong>：於包裏放一根轉HDMI線。無線投屏連不上之時，有線即救命稻草。
+- <strong>閉告預覽</strong>：投屏時汝之微信消息將顯示於會議室大屏上。投屏前於設置裏關閉"鎖屏通知內容預覽"，或開啓"演示模式"（部分手機支持，投屏時自動隱藏通知）。
+- <strong>用"演示文檔"而非"操作手機"</strong>：若汝要展示PPT，直接以PPT存到手機裏用WPS打開全屏播放，而非投屏整個手機桌面。此樣更專業、更流暢。
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>動手：完成一次手機至電視之投屏
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 確保手機與電視連同一Wi-Fi。
+2. 以手機開一張照片或一個視頻。
+3. 試無線投屏（iPhone用屏幕鏡像，安卓用無線投屏之鍵）。
+4. 若失敗，檢查電視為否支持對應協議，或嘗試DLNA推送（於相冊/視頻App裏點"投屏"按鈕）。
+5. 投屏成功後，試試於手機上作其他操作，觀大屏為否同步顯示。
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+本章之要
+
+{class="list-disc pl-5 text-sm space-y-0.5"}
+- 無線投屏三陣營：AirPlay（蘋果）、Miracast（安卓）、DLNA（跨平臺推媒體）
+- 有線投屏更穩零延遲，會議室場景必備轉HDMI線
+- Samsung DeX/華爲桌面模式使手機變身輕辦公電腦
+- 車載互聯：CarPlay/Android Auto/HiCar/CarLife四大策
+- 會議室投屏鐵律：提前測試、準備Plan B、閉告預覽
+:::

@@ -1,0 +1,175 @@
+---
+id: di-wu-shi-wu-zhang
+num: 55
+part: an-zhuo-kai-fa-pian
+nav: 第五十五章：專案二——天氣查詢App（網路版）
+toc: default
+kind: chapter
+---
+
+### 第五十五章：專案二——天氣查詢 App（網路版）
+
+{class="chapter-intro mb-4"}
+記帳本是"練內功"，天氣 App 是"見世面"——它要和網際網路打交道。這個專案你會學到：申請免費 API、解析 JSON、處理"載入中/成功/失敗"三種介面狀態，以及怎麼把 API 金鑰藏好。做完它，你就具備了做任何"聯網 App"的能力——新聞、匯率、翻譯，套路一模一樣。
+
+#### 一、申請免費天氣 API
+
+個人練手，推薦 OpenWeatherMap 或國內的 和風天氣（QWeather）——都有免費額度，註冊即用。以 OpenWeatherMap 為例：
+
+1. 註冊帳號 → 在 API keys 頁面生成一個 Key（apikey）；
+2. 免費版可呼叫 Current Weather（當前天氣）介面：api.openweathermap.org/data/2.5/weather? q=beijing&appid=你的Key&units=metric；
+3. 瀏覽器裡先試一次，看看返回的 JSON 長什麼樣——這是接任何 API 前必做的"預習"。
+
+::: div .danger-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+避坑提醒：金鑰絕不能寫死在程式碼裡
+
+{class="mt-1"}
+API Key 相當於你的"錢包密碼"，寫進程式碼一提交到 GitHub，幾小時內就會被爬蟲掃走盜刷。正確做法：放進 local.properties（這個檔案已被 gitignore 忽略），再透過 Gradle 的 buildConfig 讀進程式碼。搜尋"Android 隱藏 API Key 的最佳實踐"照著改即可。
+:::
+
+#### 二、網路層：Retrofit + JSON 解析
+
+先照 API 返回的 JSON 定義"資料模型"，欄位對不上的一律忽略：
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · 資料模型 + 介面</span><span class="dots">···</span>
+:::
+
+```
+// JSON: {"weather":[{"description":"晴"}],"main":{"temp":26.5,"humidity":40},"name":"北京"}
+data class WeatherResponse(
+    val weather: List&lt;Weather&gt;,
+    val main: Main,
+    val name: String
+)
+data class Weather(val description: String)
+data class Main(val temp: Double, val humidity: Int)
+
+interface WeatherApi {
+    @GET("data/2.5/weather")
+    suspend fun getWeather(
+        @Query("q") city: String,
+        @Query("appid") key: String,
+        @Query("units") metric: String = "metric",
+        @Query("lang") lang: String = "zh_cn"
+    ): WeatherResponse
+}
+```
+:::
+
+Gson 會自動把 JSON 塞進這些 data class——欄位名一致，魔法自動發生。
+
+#### 三、三種介面狀態：載入中 / 成功 / 失敗
+
+聯網 App 的靈魂在於"狀態管理"。網路慢、斷網、城市名打錯……每種情況介面都要給使用者交代。用一個 sealed class（密封類）優雅地表示：
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · 介面狀態</span><span class="dots">···</span>
+:::
+
+```
+sealed class UiState {
+    object Loading : UiState()                    // 轉圈中
+    data class Success(val data: WeatherResponse) : UiState()  // 成功
+    data class Error(val message: String) : UiState()          // 失敗
+}
+
+// ViewModel 裡：
+fun search(city: String) {
+    viewModelScope.launch {
+        _state.value = UiState.Loading
+        _state.value = try {
+            UiState.Success(api.getWeather(city))
+        } catch (e: Exception) {
+            UiState.Error("查不到這個城市，換個名字試試？")
+        }
+    }
+}
+
+// 介面裡：
+when (val s = state) {
+    is UiState.Loading -&gt; CircularProgressIndicator()   // 轉圈
+    is UiState.Success -&gt; WeatherContent(s.data)        // 展示
+    is UiState.Error -&gt; Text(s.message)                 // 報錯
+}
+```
+:::
+
+這個 Loading/Success/Error 三段式是聯網介面的"萬金油模板"，先背下來，以後所有聯網 App 照葫蘆畫瓢。
+
+#### 四、實戰介面程式碼：把天氣畫出來
+
+狀態有了，介面長這樣（關鍵片段）：
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · 天氣介面（核心片段）</span><span class="dots">···</span>
+:::
+
+```
+@Composable
+fun WeatherContent(data: WeatherResponse) {
+    Column(
+        Modifier.fillMaxSize().padding(24.dp),
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
+        Text(data.name, fontSize = 28.sp, fontWeight = FontWeight.Bold)
+        Text(
+            "${data.main.temp}°C",
+            fontSize = 72.sp,
+            fontWeight = FontWeight.Light
+        )
+        Text(
+            data.weather.firstOrNull()?.description ?: "未知",
+            fontSize = 20.sp,
+            color = Color.Gray
+        )
+        Spacer(Modifier.height(16.dp))
+        Row {
+            Text("💧 溼度 ${data.main.humidity}%")
+            Spacer(Modifier.width(24.dp))
+            Text("🌡️ 體感 ${data.main.temp}°C")
+        }
+    }
+}
+```
+:::
+
+幾個小細節值得學：firstOrNull() 安全取第一個元素（列表可能為空），?: "未知" 給兜底文案——空安全原則在介面裡同樣適用。溫度用 72.sp 的大字號撐場面，"輕"字重（Light）讓數字顯得優雅，這是天氣類 App 的經典配方。
+
+#### 五、介面與互動細節
+
+- 搜尋框：頂部 TextField，輸城市名點搜尋（鍵盤上設"搜尋"動作，回車即搜）；
+- 天氣卡片：大字號溫度（26.5°）、天氣描述（晴）、溼度、城市名；
+- 收藏城市：把常看的城市存進 DataStore，下次開啟自動查——順手複習第 6 章；
+- 下拉重新整理：Compose 裡用 PullToRefreshBox（Material 3 提供），手感立刻"專業"起來。
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+小貼士：圖片讓介面活起來
+
+{class="mt-1"}
+給每種天氣配一個 emoji 或圖示（☀️🌧️❄️），用 when(description) 對映——三行程式碼，介面溫度感翻倍。也可以載入第三方的天氣圖示庫，但練手階段 emoji 足夠。
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+來動手：天氣 App 驗收清單
+
+{class="mt-1"}
+① 正常搜尋出天氣；② 斷開網路，App 優雅報錯不崩潰（開飛航模式測！）；③ 輸一個不存在的城市，提示友好；④ 收藏兩個城市，重啟 App 還在；⑤ 轉屏不丟狀態。五條全過，這個專案才算畢業。
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+本章小結
+
+- 先瀏覽器試 API、看懂 JSON，再寫程式碼——"預習"永遠不虧
+- API Key 藏進 local.properties，絕不進程式碼庫
+- Retrofit 介面 + data class：欄位對上，JSON 自動解析
+- Loading/Success/Error 三段式狀態是聯網介面萬金油
+- 斷網、空輸入、城市不存在——錯誤處理是聯網 App 的及格線
+:::

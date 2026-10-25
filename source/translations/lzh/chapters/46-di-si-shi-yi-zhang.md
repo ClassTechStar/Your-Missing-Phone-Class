@@ -1,0 +1,101 @@
+---
+id: di-si-shi-yi-zhang
+num: 41
+part: ai-biancheng-pian
+nav: 第四十一章：2026年AI編程工具全景
+toc: default
+kind: chapter
+---
+
+### 第四十一章：2026 年 AI 編程工具全景
+
+{class="chapter-intro mb-4"}
+先為君打一預防針：本章乃 2026 年 8 月工具生態之一「快照」。半年之後即將過時——此正本章欲教君之第一課。本章之旨非教君「用何工具」，乃助君立「如何擇工具」之判斷框架。君既解不同工具之設計哲學，則任何時皆能為適己之擇。
+
+#### 一、三大流派與選擇框架
+
+2026 年之 AI 編程工具大別為三大流派，每派之後皆有一不同之設計哲學。先觀此全景圖：
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">流派</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">代表工具</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">設計哲學</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">適合場景</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">IDE 內置 AI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor 3, Trae, Windsurf, CodeBuddy</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">深度集成 AI 之能於編輯器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常開發、代碼審查、漸進式增強</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">終端 Agent</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Code, Codex CLI, Aider</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">以終端為界面，AI 直接操作檔案系統與命令</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">專案級操作、批量修改、CI/CD 集成</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">雲端 Builder</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">v0, Bolt, Replit Agent</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">於瀏覽器中從零創建完整專案</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">快速原型、零配置上手、即時預覽</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+AI 編程工具之三大流派
+
+擇具之要，非「孰最善」，乃「孰最宜君當前之場景」。三實用之判斷維度：
+
+- 君編程基礎何如？零基礎擇雲端 Builder，有基礎擇 IDE 內置 AI，高階用戶擇終端 Agent。
+- 君專案於何階段？從零始擇雲端 Builder，迭代開發擇 IDE 內置 AI，維護重構擇終端 Agent。
+- 君部署之需為何？速驗擇雲端 Builder，正經之業擇 IDE 內置 AI，自動化流程擇終端 Agent。
+
+#### 二、IDE 內置 AI 流派
+
+IDE 內置 AI 為最主流之流派：嵌 AI 之能於君之代碼編輯器，存傳統編程體驗之同時疊加 AI 增強。2026 年此流派之代表為 Cursor 3、Trae、Windsurf 與 CodeBuddy。
+
+##### 1. Cursor 3
+
+Cursor 為今全球使用最廣之 AI 編程 IDE。2026 年 4 月發布之 Cursor 3，標誌 AI 編程工具之一重要轉折：Agent 模式之使用率首次逾 Tab 補全模式——開發者自「AI 助我補全代碼」轉為「AI 代我完成任務」。Cursor 3 之核心特性有三：多檔編輯（AI 可同時改多檔以成任務）、上下文感知（自動解專案結構與依賴之關）、與終端深度集成（AI 可於編輯器內徑行命令而觀其輸出）。
+
+##### 2. Trae
+
+Trae 者，字節跳動所出之 AI 編程 IDE 也，於國內市場用戶基數甚大。其 SOLO 模式（亦稱 Builder 模式）乃典型「一語創建專案」之能——君述其需，AI 自主完成自專案初始化至代碼生成之全流程。Trae 之長，於中文之援與國內網絡環境之適配，宜國內用戶快速上手。
+
+##### 3. 其他工具
+
+Windsurf（原 Codeium）以補全代碼流暢之驗著稱，宜求「打字如飛」之驗之開發者。騰訊雲 CodeBuddy 為 VS Code 之插件，長於與雲生態集成，宜擬部署於騰訊雲或開發微信小程序之專案。阿里通義靈碼與百度 Comate 亦供相類之 IDE 集成之驗，各於中文場景優化有其特色。
+
+#### 三、終端 Agent 流派
+
+終端 Agent 者，2026 年增長最速之流派也。核心理念：AI 不當徒為編輯器之一插件，當能如開發者然操作整個開發環境——讀寫檔案、運行命令、查看輸出、安裝依賴。Claude Code 即此流派之代表。
+
+##### 1. Claude Code
+
+Claude Code 者，Anthropic 所出終端 AI 編程之具也，至 2026 年中期，年化收入已達 25 億美元之規模。其運作與傳統 IDE 全然不同：君於終端以自然語言述任務，Claude Code 則自主讀相關之檔、改代碼、運行測試、查看結果、迭代修正——整個過程不需君啟編輯器。
+
+Claude Code 之長於「全專案感知」：不為編輯器之窗所限，可自由遍覽整個專案目錄，解檔間依賴之關。亦支援 CLAUDE.md 專案記憶之檔，使 AI 於每會話之始即悉專案背景。至若大型專案之重構、批量修改、測試編寫諸務，終端 Agent 較 IDE 插件更高效。
+
+##### 2. Codex CLI 與 Aider
+
+OpenAI 之 Codex CLI 供相類之終端編程之驗，且支援 /import 之功能——可導入既有代碼庫使 AI 解之。Aider 者開源之終端 AI 編程工具也，支援多種模型（GPT、Claude、DeepSeek 等），宜欲靈活切換模型之用者。諸工具各有特色，然核心理念一也：使 AI 於終端握完整開發環境操作之能。
+
+#### 四、雲端 Builder 流派
+
+雲端 Builder 者，最宜零基礎用戶之流派也。君不必安裝任何軟體，惟啟瀏覽器，述君之需，AI 即於雲端創建完整專案，且供即時預覽。
+
+- v0（Vercel 出品）：長於生成前端 UI 組件與頁面，宜快速製作網頁原型。
+- Bolt：支援從一語創建全棧應用，含前端、後端與資料庫。
+- Replit Agent：運作於 Replit 之雲端 IDE，非惟創建專案，亦可徑於雲端運行與部署。
+
+諸工具共同之優勢於「零配置上手」——啟瀏覽器即可始。其侷限於：專案既趨複雜，雲端編輯環境之靈活不如本地 IDE。故其最宜「從 0 到 1」之原型階段：以雲端 Builder 速驗想法，驗證通過後乃遷於本地 IDE 深度開發。
+
+#### 五、工具屢變，方法論不易
+
+:::inline div .quote-line
+若明日 AI 編程之器盡亡，汝所當守者三習：先思而後動、每作一步、作畢即驗。器者放大之器也，方法論者基也。器可代，基不可搖。
+:::
+
+回顧 2024 至 2026 年工具之變遷：2024 年 GitHub Copilot 為王者，2025 年 Cursor 取而代之，2026 年 Claude Code 異軍突起。每一新工具出現時，皆有人宣稱「此次不同」，然終究發現：善用新工具者，正方法論紮實之人。彼換工具只需數日適應期，而僅學工具操作者一換即須重新學起。
+
+故本書建議之學習路徑：先以一工具（任一皆可）入門，於實踐中體會五大思維原則；方法論既足紮實，乃試不同流派之工具，感受其設計哲學之異；最終君將形成己之工具組合——如以 Cursor 為日常開發，以 Claude Code 為重構與測試，以 v0 為快速原型。工具組合因人而異，然方法論共通。
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+來動手：為君自配一「兵器之組合」
+
+{class="mt-1"}
+以三判斷維度（編程基礎、專案階段、部署需求）為己定位：君若零基礎 → 試以 Bolt 或 v0 作一頁面；有基礎 → 以 Cursor 或 Trae 作一迭代任務；欲挑戰 → 於終端跑一次 Claude Code。然後答之：何種流派最合君當前之階段？
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+本章小結
+
+- 三大流派：IDE 內置 AI（日常開發）、終端 Agent（專案級操作）、雲端 Builder（零基礎原型）
+- 擇具觀三問：編程基礎？專案階段？部署需求？
+- Cursor 3 之 Agent 模式首次反超 Tab 補全；Claude Code 年化收入 25 億美元
+- 雲端 Builder 宜「從 0 到 1」，驗後遷回本地 IDE 深度開發
+- 工具每三月一迭代：學方法論者換工具只需數日適應期
+:::

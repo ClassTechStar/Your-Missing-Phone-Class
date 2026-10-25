@@ -1,0 +1,3066 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Kuasai Ponsel! Dari pemula menjadi ahli—kelas wajib digital yang benar-benar ditujukan untuk orang awam. 69 bab menjelaskan secara sistematis perangkat keras, sistem operasi, jaringan, keamanan, AI, praktik pemrograman AI, praktik pengembangan Android, praktik pengembangan iOS, otomatisasi, fitur ramah lansia, panduan membeli ponsel, kesehatan digital, screencasting dan mobil, pembuatan video pendek, P3K keamanan, serta tren masa depan, dilengkapi banyak contoh kasus, latihan langsung, pembacaan suara, dasbor belajar, pencadangan progres, dan glosarium cepat. v3.2 menambahkan tiga bagian praktik baru: pemrograman AI, pengembangan Android, dan pengembangan iOS (Bab 37-69, total 33 bab).">
+    <meta name="keywords" content="tutorial ponsel,kelas wajib digital,ponsel pintar,Android,iOS,HarmonyOS,tip dan trik ponsel,kehidupan digital,model besar AI,pemrograman AI,API model besar,prompt engineering,pengembangan Android,pengembangan iOS,Swift,Kotlin,SwiftUI,Jetpack Compose,fotografi komputasi,keamanan informasi,pengelolaan kata sandi,otomatisasi,panduan membeli ponsel">
+    <meta name="author" content="Pemandu Kehidupan Digital">
+    <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="Kuasai Ponsel! Kelas Wajib Digital untuk Pemula v3.2">
+    <meta property="og:description" content="Dari dasar hingga mahir, kendalikan sepenuhnya kehidupan digitalmu. 69 bab penjelasan sistematis + banyak praktik langsung + pembacaan suara + dasbor belajar + pencadangan progres + glosarium cepat. v3.2 menambahkan tiga bagian praktik baru: pemrograman AI, pengembangan Android, dan pengembangan iOS.">
+    <meta property="og:type" content="book">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="Kuasai Ponsel! Kelas Wajib Digital">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Kuasai Ponsel! Kelas Wajib Digital untuk Pemula">
+    <meta name="twitter:description" content="Dari dasar hingga mahir, kendalikan sepenuhnya kehidupan digitalmu">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+    <title>{{TITLE}} · {{VERSION}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f46e5',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                        accent: '#7c3aed',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .focus-ring:focus-visible {
+                outline: 2px solid #4f46e5;
+                outline-offset: 2px;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark body {
+            background-color: #111827;
+        }
+        .toc-item.active {
+            color: #4f46e5;
+            font-weight: 600;
+            background-color: #eef2ff;
+            border-left: 3px solid #4f46e5;
+        }
+        .dark .toc-item.active {
+            background-color: #1e1b4b;
+            border-left-color: #818cf8;
+        }
+        /* Gaya dasar tautan sidebar */
+        #sidebar a {
+            display: block;
+            transition: all 0.2s ease;
+            position: relative;
+            text-decoration: none;
+        }
+        #sidebar a:hover {
+            color: #4f46e5 !important;
+            background-color: #eef2ff;
+            transform: translateX(2px);
+        }
+        .dark #sidebar a:hover {
+            background-color: rgba(79, 70, 229, 0.12);
+        }
+        /* Judul grup induk */
+        .toc-parent > div {
+            transition: background-color 0.15s ease;
+        }
+        .toc-parent > div:hover {
+            background-color: #f8fafc;
+        }
+        .dark .toc-parent > div:hover {
+            background-color: rgba(255,255,255,0.03);
+        }
+        /* Zona ikon lipat terpisah */
+        .toc-toggle-btn {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: background-color 0.15s, transform 0.3s ease;
+            color: #9ca3af;
+        }
+        .toc-toggle-btn:hover {
+            background-color: #e5e7eb;
+            color: #374151;
+        }
+        .dark .toc-toggle-btn:hover {
+            background-color: #374151;
+            color: #e5e7eb;
+        }
+        /* Animasi transisi sub-item */
+        .toc-child li {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .toc-child:not(.open) + .toc-child li,
+        .toc-child:not(.open) li {
+            /* Saat dilipat dikontrol oleh max-height */
+        }
+        /* Bilah penunjuk posisi baca saat ini */
+        .toc-reading-indicator {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4f46e5;
+            border-radius: 0;
+            transition: top 0.3s ease, height 0.3s ease;
+            z-index: 1;
+        }
+        /* Area atas sidebar (penyempurnaan) */
+        #sidebar > nav > div:first-child {
+            background: #f5f6f8;
+            border-radius: 0;
+            padding: 0.875rem 1rem !important;
+        }
+        .dark #sidebar > nav > div:first-child {
+            background: #1a2230;
+        }
+        /* Sidebar keseluruhan (penyempurnaan) */
+        #sidebar {
+            box-shadow: none;
+            border-right: 1px solid #e5e7eb;
+        }
+        .dark #sidebar {
+            border-right-color: #374151;
+        }
+        @media (max-width: 1023px) {
+            #sidebar {
+                box-shadow: 4px 0 24px rgba(0,0,0,0.12);
+                border-right: none;
+            }
+        }
+        /* Gaya nomor bab */
+        .toc-item span[class*="font-mono"] {
+            display: inline-block;
+            min-width: 1.5rem;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+            opacity: 0.6;
+            transition: opacity 0.2s, color 0.2s;
+        }
+        .toc-item:hover span[class*="font-mono"],
+        .toc-item.active span[class*="font-mono"] {
+            opacity: 1;
+            color: #4f46e5;
+        }
+        .dark .toc-item:hover span[class*="font-mono"],
+        .dark .toc-item.active span[class*="font-mono"] {
+            color: #818cf8;
+        }
+        /* Kelip sorot bab tujuan navigasi */
+        .scroll-target-flash {
+            animation: targetFlash 1.2s ease-out;
+        }
+        @keyframes targetFlash {
+            0% { box-shadow: inset 0 0 0 2px rgba(79,70,229,0.25); background-color: rgba(79,70,229,0.02); }
+            100% { box-shadow: none; background-color: transparent; }
+        }
+        .dark .scroll-target-flash {
+            animation: targetFlashDark 1.2s ease-out;
+        }
+        @keyframes targetFlashDark {
+            0% { box-shadow: inset 0 0 0 2px rgba(150,180,200,0.2); background-color: rgba(150,180,200,0.04); }
+            100% { box-shadow: none; background-color: transparent; }
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 3000px;
+        }
+        .content-section {
+            content-visibility: auto;
+            contain-intrinsic-size: 0 800px;
+        }
+        .content-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            max-width: 95ch;
+        }
+        .content-section h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .content-section h5 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .content-section ul, .content-section ol {
+            margin-bottom: 1rem;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(180deg);
+        }
+        .callout-box {
+            border-left: 4px solid;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            max-width: 82ch;
+        }
+        .info-box {
+            border-color: #4f46e5;
+            background: #eef2f5;
+        }
+        .dark .info-box {
+            background: #1e2a36;
+        }
+        .warning-box {
+            border-color: #d4a017;
+            background: #fdf8ef;
+        }
+        .dark .warning-box {
+            background: #3d2e0f;
+        }
+        .danger-box {
+            border-color: #c0392b;
+            background: #fdf0ef;
+        }
+        .dark .danger-box {
+            background: #3d1a1a;
+        }
+        .success-box {
+            border-color: #27ae60;
+            background: #eef9f2;
+        }
+        .dark .success-box {
+            background: #0d2c1a;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        .dark th, .dark td {
+            border-color: #374151;
+        }
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+        .dark th {
+            background-color: #1f2937;
+        }
+        .practice-box {
+            background: #f0f4f8;
+            border: 1px solid #d0d8e0;
+        }
+        .dark .practice-box {
+            background: #1e2a36;
+            border-color: #354152;
+        }
+        .chapter-intro {
+            font-size: 1.05em;
+            color: #4b5563;
+            padding: 1rem 1.25rem;
+            border-radius: 0.25rem;
+            background: #f5f6f8;
+            border-left: 3px solid #4f46e5;
+        }
+        .dark .chapter-intro {
+            color: #9ca3af;
+            background: #1a2230;
+        }
+        .key-point {
+            background: #eef2f5;
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+        .dark .key-point {
+            background: #1e2a36;
+        }
+        #reading-progress {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            height: 3px;
+            background: #4f46e5;
+            z-index: 51;
+            transition: width 0.1s linear;
+        }
+        .search-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 60;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 15vh;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+        .search-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .search-panel {
+            background: white;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 70vh;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+        .dark .search-panel {
+            background: #1f2937;
+        }
+        .search-input-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid #e5e7eb;
+            gap: 0.75rem;
+        }
+        .dark .search-input-wrapper {
+            border-color: #374151;
+        }
+        .search-input-wrapper input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            background: transparent;
+            color: inherit;
+        }
+        .search-results {
+            overflow-y: auto;
+            max-height: calc(70vh - 60px);
+            padding: 0.5rem;
+        }
+        .search-result-item {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .search-result-item:hover {
+            background: #f3f4f6;
+        }
+        .dark .search-result-item:hover {
+            background: #374151;
+        }
+        .search-result-item .result-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .search-result-item .result-excerpt {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .dark .search-result-item .result-excerpt {
+            color: #9ca3af;
+        }
+        .search-result-item mark {
+            background: #fef08a;
+            color: inherit;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+        .dark .search-result-item mark {
+            background: #854d0e;
+        }
+        .font-size-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background 0.15s;
+            font-weight: 700;
+            user-select: none;
+        }
+        .font-size-btn:hover {
+            background: #f3f4f6;
+        }
+        .dark .font-size-btn:hover {
+            background: #374151;
+        }
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .dark .chapter-nav {
+            border-color: #374151;
+        }
+        .chapter-nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+            color: #4f46e5;
+            transition: background 0.15s;
+            text-decoration: none;
+            max-width: 45%;
+        }
+        .chapter-nav a:hover {
+            background: #eef2f5;
+        }
+        .dark .chapter-nav a:hover {
+            background: #1e2a36;
+        }
+        .chapter-nav a.next {
+            margin-left: auto;
+            text-align: right;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .search-panel {
+                width: 95%;
+                max-height: 75vh;
+            }
+        }
+        @media print {
+            #navbar, #sidebar, #overlay, #back-to-top, #reading-progress, .chapter-nav, #quick-tools, #tts-controls, #shortcuts-overlay, #backup-overlay, #streak-toast, .chapter-rating, .no-print {
+                display: none !important;
+            }
+            main {
+                margin: 0 !important;
+                padding: 1rem !important;
+                box-shadow: none !important;
+                max-width: 100% !important;
+            }
+            .content-section {
+                content-visibility: visible !important;
+                contain-intrinsic-size: none !important;
+                page-break-inside: avoid;
+            }
+            body {
+                font-size: 12pt !important;
+                color: #000 !important;
+                background: #fff !important;
+            }
+            a {
+                color: #000 !important;
+                text-decoration: underline;
+            }
+        }
+
+        /* ===== Gaya tambahan: kartu panduan, ringkasan bab, jalur belajar ===== */
+        .reading-guide-card {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.25rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .dark .reading-guide-card {
+            background: #1a2230;
+            border-color: #354152;
+        }
+        .hero-banner {
+            background: #4f46e5;
+            border-radius: 0.25rem;
+            color: #fff;
+            padding: 2rem 1.5rem;
+        }
+        .stat-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.7rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 0.25rem;
+            font-size: 0.78rem;
+        }
+        .learning-path {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .path-step {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            position: relative;
+        }
+        .path-step:hover {
+            border-color: #4f46e5;
+        }
+        .dark .path-step {
+            background: #1a2230;
+            border-color: #354152;
+        }
+        .path-step .step-num {
+            position: absolute;
+            top: -0.7rem;
+            left: 1rem;
+            background: #4f46e5;
+            color: #fff;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .chapter-summary {
+            background: #fdf8ef;
+            border-left: 4px solid #d4a017;
+            border-radius: 0.25rem;
+            padding: 1rem 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .dark .chapter-summary {
+            background: #3d2e0f;
+        }
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            padding: 0.6rem 0;
+        }
+        .dark .breadcrumb { color: #9ca3af; }
+        .breadcrumb a:hover { color: #4f46e5; text-decoration: underline; }
+        .breadcrumb .sep { color: #cbd5e1; }
+        .quick-tools {
+            position: fixed;
+            right: 1rem;
+            bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 40;
+        }
+        .quick-tool-btn {
+            width: 2.6rem;
+            height: 2.6rem;
+            background: #fff;
+            color: #374151;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .dark .quick-tool-btn {
+            background: #1f2937;
+            color: #e5e7eb;
+        }
+        .quick-tool-btn:hover {
+            transform: translateY(-1px);
+            color: #4f46e5;
+        }
+        .reading-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .dark .reading-time { color: #9ca3af; }
+        .difficulty-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.15rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+        .difficulty-beginner { background: #d1fae5; color: #065f46; }
+        .difficulty-intermediate { background: #dbeafe; color: #1e40af; }
+        .difficulty-advanced { background: #fce7f3; color: #9f1239; }
+        .dark .difficulty-beginner { background: #064e3b; color: #6ee7b7; }
+        .dark .difficulty-intermediate { background: #1e3a5f; color: #93c5fd; }
+        .dark .difficulty-advanced { background: #831843; color: #fbcfe8; }
+        .pill-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .toc-section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #9ca3af;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.5rem 0.75rem 0.25rem;
+        }
+        .dark .toc-section-label { color: #6b7280; }
+        .toc-progress-bar {
+            height: 2px;
+            background: #4f46e5;
+            margin: 0.3rem 0;
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #4f46e5;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            z-index: 100;
+        }
+        .skip-link:focus { left: 0; }
+        .glossary-item {
+            display: flex;
+            gap: 1rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+        .dark .glossary-item { border-color: #374151; }
+        .glossary-item:last-child { border-bottom: 0; }
+        .glossary-term {
+            flex-shrink: 0;
+            font-weight: 700;
+            color: #4f46e5;
+            min-width: 90px;
+        }
+        .comparison-table th { font-weight: 700; }
+        .comparison-table tr:nth-child(even) td { background: #f9fafb; }
+        .dark .comparison-table tr:nth-child(even) td { background: #111827; }
+        .highlight-quote {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem 1.25rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #075985;
+        }
+        .dark .highlight-quote {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            color: #bae6fd;
+        }
+        .kbd {
+            display: inline-block;
+            padding: 0.1rem 0.45rem;
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-bottom-width: 2px;
+            border-radius: 0.3rem;
+            font-family: ui-monospace, monospace;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        .dark .kbd { background: #374151; color: #e5e7eb; border-color: #4b5563; }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .search-panel {
+                width: 95%;
+                max-height: 75vh;
+            }
+            .hero-banner { padding: 1.5rem 1rem; }
+            .hero-banner h1 { font-size: 1.5rem !important; }
+            .learning-path { grid-template-columns: 1fr; }
+            .quick-tools { right: 0.5rem; bottom: 4.5rem; }
+            .quick-tool-btn { width: 2.3rem; height: 2.3rem; }
+        }
+        @media (max-width: 480px) {
+            .breadcrumb { font-size: 0.78rem; }
+        }
+        @media (min-width: 1280px) {
+            main { max-width: 56rem; }
+        }
+
+        /* ===== Gaya penyempurnaan mendalam ===== */
+
+        /* Bilah progres baca gradasi */
+        #reading-progress {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
+            background-size: 200% 100% !important;
+            animation: progressShimmer 3s ease infinite;
+            height: 3px;
+            box-shadow: 0 0 8px rgba(79,70,229,0.3);
+        }
+        .dark #reading-progress {
+            background: linear-gradient(90deg, #818cf8, #a78bfa, #818cf8) !important;
+            background-size: 200% 100% !important;
+        }
+        @keyframes progressShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Animasi masuk saat menggulir */
+        .content-section {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Konten layar pertama langsung terlihat */
+        .content-section:first-of-type,
+        .content-section.immediately-visible {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        /* Banner Hero (penyempurnaan) */
+        .hero-banner {
+            background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(167,139,250,0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 40%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(236,72,153,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-banner > * { position: relative; z-index: 1; }
+
+        /* Efek hover kartu */
+        .path-step {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+        .path-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(79,70,229,0.15);
+        }
+        .dark .path-step:hover {
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+        .reading-guide-card {
+            transition: box-shadow 0.3s ease;
+        }
+        .reading-guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .dark .reading-guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Tombol kembali ke atas (penyempurnaan) */
+        #back-to-top {
+            position: fixed;
+            right: 1rem;
+            bottom: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: #4f46e5;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(79,70,229,0.3);
+            cursor: pointer;
+            z-index: 40;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            border: none;
+            font-size: 1rem;
+        }
+        .dark #back-to-top {
+            background: #374151;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+        }
+        #back-to-top:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(79,70,229,0.35);
+        }
+        #back-to-top .progress-ring {
+            position: absolute;
+            inset: -3px;
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
+        }
+        #back-to-top .progress-ring circle {
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+        }
+        #back-to-top .progress-ring .bg {
+            stroke: rgba(255,255,255,0.15);
+        }
+        #back-to-top .progress-ring .fg {
+            stroke: #60a5fa;
+            transition: stroke-dashoffset 0.15s linear;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+
+        /* Tombol bookmark */
+        .bookmark-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            color: #6b7280;
+        }
+        .dark .bookmark-btn {
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        .bookmark-btn:hover {
+            border-color: #4f46e5;
+            color: #4f46e5;
+        }
+        .dark .bookmark-btn:hover {
+            border-color: #818cf8;
+            color: #818cf8;
+        }
+        .bookmark-btn.active {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
+        .dark .bookmark-btn.active {
+            background: #818cf8;
+            border-color: #818cf8;
+        }
+
+        /* Ceklis bab selesai */
+        .chapter-check {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            color: #6b7280;
+            user-select: none;
+        }
+        .dark .chapter-check {
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        .chapter-check:hover {
+            border-color: #27ae60;
+            color: #27ae60;
+        }
+        .chapter-check.checked {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+        .chapter-check .check-icon {
+            width: 14px;
+            height: 14px;
+            border: 2px solid currentColor;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .chapter-check.checked .check-icon {
+            border-color: #fff;
+            background: #fff;
+        }
+        .chapter-check.checked .check-icon::after {
+            content: '✓';
+            color: #27ae60;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Hasil pencarian terpilih via keyboard */
+        .search-result-item.selected {
+            background: #eef2f5;
+        }
+        .dark .search-result-item.selected {
+            background: #374151;
+        }
+
+        /* Kartu dashboard */
+        .dashboard-card {
+            transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
+        }
+
+        /* Lencana hari baca beruntun */
+        #streak-toast {
+            transform: translateX(-50%) translateY(100px);
+            left: 50%;
+            right: auto;
+            font-weight: 600;
+        }
+        #streak-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Bintang penilaian bab */
+        .chapter-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.15rem;
+            margin-left: 0.5rem;
+        }
+        .chapter-rating .star {
+            font-size: 0.85rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: color 0.15s, transform 0.15s;
+            user-select: none;
+        }
+        .chapter-rating .star:hover { transform: scale(1.2); }
+        .chapter-rating .star.active { color: #fbbf24; }
+        .dark .chapter-rating .star { color: #4b5563; }
+        .dark .chapter-rating .star.active { color: #fbbf24; }
+
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(79,70,229,0.12);
+        }
+        .dark .dashboard-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+        }
+        .check-item:hover span { color: #4f46e5; }
+        .dark .check-item:hover span { color: #818cf8; }
+        .check-item input:checked + span {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        /* Kontrol baca nyaring */
+        .tts-controls {
+            position: fixed;
+            bottom: 6rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(79,70,229,0.18);
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .tts-controls.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .dark .tts-controls {
+            background: #1f2937;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+        }
+        .tts-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-size: 1rem;
+            background: #f3f4f6;
+            color: #374151;
+        }
+        .dark .tts-btn { background: #374151; color: #e5e7eb; }
+        .tts-btn:hover { background: #4f46e5; color: #fff; }
+        .dark .tts-btn:hover { background: #818cf8; }
+        .tts-btn.play-btn {
+            background: #4f46e5;
+            color: #fff;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.2rem;
+        }
+        .dark .tts-btn.play-btn { background: #818cf8; }
+        .tts-btn.play-btn:hover { background: #1a252f; }
+        .tts-btn.play-btn.playing { background: #e74c3c; animation: ttsPulse 1.5s ease-in-out infinite; }
+        @keyframes ttsPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(231,76,60,0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(231,76,60,0); }
+        }
+        .tts-speed-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #6b7280;
+            min-width: 2rem;
+            text-align: center;
+        }
+        .dark .tts-speed-badge { color: #9ca3af; }
+        .tts-controls .tts-chapter-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            max-width: 12rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .dark .tts-controls .tts-chapter-label { color: #9ca3af; }
+        .quick-tool-btn.tts-active {
+            color: #4f46e5;
+            box-shadow: 0 0 0 2px #4f46e5;
+        }
+        .dark .quick-tool-btn.tts-active { color: #818cf8; box-shadow: 0 0 0 2px #818cf8; }
+        @media (max-width: 768px) {
+            .tts-controls {
+                bottom: 5rem;
+                padding: 0.4rem 0.75rem;
+                gap: 0.4rem;
+            }
+            .tts-btn { width: 2.2rem; height: 2.2rem; font-size: 0.9rem; }
+            .tts-btn.play-btn { width: 2.6rem; height: 2.6rem; font-size: 1rem; }
+            .tts-controls .tts-chapter-label { max-width: 8rem; }
+        }
+
+        /* Tombol salin */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+            color: #6b7280;
+            vertical-align: middle;
+        }
+        .dark .copy-btn {
+            border-color: #374151;
+            background: #1f2937;
+            color: #9ca3af;
+        }
+        .copy-btn:hover {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
+        .copy-btn.copied {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+
+        /* Blok konten yang bisa dilipat */
+        .collapsible-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .collapsible-header:hover {
+            color: #4f46e5;
+        }
+        .dark .collapsible-header:hover {
+            color: #818cf8;
+        }
+        .collapsible-header .collapse-icon {
+            transition: transform 0.3s ease;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+        .collapsible-header.collapsed .collapse-icon {
+            transform: rotate(-90deg);
+        }
+        .collapsible-body {
+            max-height: 5000px;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+        .collapsible-body.collapsed {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        /* Notifikasi kembali ke posisi baca */
+        .restore-position-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #4f46e5;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            z-index: 55;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            white-space: nowrap;
+        }
+        .dark .restore-position-toast {
+            background: #374151;
+        }
+        .restore-position-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+        .restore-position-toast button {
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .restore-position-toast .btn-restore {
+            background: #fff;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+        .restore-position-toast .btn-dismiss {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* Garis pemisah bab (penyempurnaan) */
+        .content-section {
+            position: relative;
+            padding-top: 1rem;
+        }
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d1d5db 20%, #d1d5db 80%, transparent);
+        }
+        .dark .content-section::before {
+            background: linear-gradient(90deg, transparent, #374151 20%, #374151 80%, transparent);
+        }
+        .content-section:first-of-type::before {
+            display: none;
+        }
+
+        /* Kotak Callout (penyempurnaan) */
+        .callout-box {
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .callout-box:hover {
+            transform: translateX(2px);
+        }
+
+        /* Baris tabel saat hover */
+        table tbody tr {
+            transition: background-color 0.15s ease;
+        }
+        table tbody tr:hover {
+            background-color: #f0f4f8;
+        }
+        .dark table tbody tr:hover {
+            background-color: rgba(255,255,255,0.04);
+        }
+
+        /* Tombol navigasi bab (penyempurnaan) */
+        .chapter-nav a {
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .chapter-nav a:hover {
+            transform: translateX(4px);
+            background: #eef2f5;
+        }
+        .chapter-nav a.next:hover {
+            transform: translateX(-4px);
+        }
+        .dark .chapter-nav a:hover {
+            background: #1e2a36;
+        }
+
+        /* Penanda bookmark di sidebar */
+        .toc-item.bookmarked::after {
+            content: '★';
+            color: #d4a017;
+            font-size: 0.65rem;
+            margin-left: 0.3rem;
+        }
+        .toc-item.completed-toc {
+            color: #27ae60 !important;
+        }
+
+        /* Alat cepat (penyempurnaan) */
+        .quick-tool-btn {
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .quick-tool-btn:hover {
+            transform: translateY(-2px) scale(1.08);
+        }
+        .quick-tool-btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        /* Area aman bawah di ponsel */
+        @media (max-width: 768px) {
+            #back-to-top {
+                right: 0.75rem;
+                bottom: 1.25rem;
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            .restore-position-toast {
+                font-size: 0.8rem;
+                padding: 0.6rem 1rem;
+                left: 1rem;
+                right: 1rem;
+                transform: translateX(0) translateY(100px);
+                white-space: normal;
+                text-align: center;
+                justify-content: center;
+            }
+            .restore-position-toast.show {
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        /* Sembunyikan elemen tambahan saat mencetak */
+        @media print {
+            .bookmark-btn, .chapter-check, .copy-btn,
+            .restore-position-toast, #back-to-top .progress-ring,
+            #tts-controls, .quick-tool-btn.tts-active {
+                display: none !important;
+            }
+            .content-section {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+<style>
+        /* ===== Tambahan v1.8: gaya pendamping bagian praktik coding AI ===== */
+        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; }
+        .code-head { background: #374151; color: #e5e7eb; font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
+        .code-head .dots { letter-spacing: 3px; color: #9ca3af; }
+        .code-block pre { background: #1f2937; color: #e5e7eb; padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
+        .dark .code-block { border-color: #4b5563; }
+        code.inline { background: #eef2f5; color: #4f46e5; padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+        .dark code.inline { background: #1e2a36; color: #818cf8; }
+        .quote-line { border-left: 4px solid #4f46e5; background: #eef2ff; color: #1e1b4b; padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
+        .dark .quote-line { background: #1e1b4b; color: #c7d2fe; }
+        @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <a class="skip-link focus-ring" href="#content">Lewati ke konten utama</a>
+    <div id="reading-progress" style="width:0%" aria-hidden="true"></div>
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" role="banner">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3 min-w-0">
+                <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="Buka menu daftar isi" aria-expanded="false" aria-controls="sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#top" class="flex items-center gap-2 min-w-0" aria-label="Kembali ke beranda">Kuasai Ponsel · Kelas Wajib Digital</a>
+            </div>
+            <nav class="flex items-center gap-1 md:gap-2" aria-label="Aksi utama">
+                <a href="#ji-chu-pian" class="hidden md:inline-flex items-center gap-1 text-sm text-secondary dark:text-gray-400 hover:text-primary px-2 py-1 rounded-md transition-colors focus-ring" title="Mulai dari dasar">Mulai Belajar</a>
+                <button id="search-toggle" class="text-lg p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="Cari (Ctrl+K)" aria-label="Cari konten">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div class="hidden md:flex items-center border border-gray-200 dark:border-gray-600 rounded-md overflow-hidden" role="group" aria-label="Penyesuaian ukuran huruf">
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="decrease" title="Perkecil huruf" aria-label="Perkecil huruf">A-</button>
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="reset" title="Atur ulang ukuran huruf" aria-label="Atur ulang ukuran huruf">A</button>
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="increase" title="Perbesar huruf" aria-label="Perbesar huruf">A+</button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="Beralih mode gelap/terang" aria-label="Beralih mode gelap/terang">
+                    <i class="fas fa-moon dark:hidden" aria-hidden="true"></i>
+                    <i class="fas fa-sun hidden dark:inline" aria-hidden="true"></i>
+                </button>
+                <button id="print-btn" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary p-2 rounded-md transition-colors focus-ring" title="Cetak / Ekspor PDF" aria-label="Cetak atau ekspor PDF">
+                    <i class="fas fa-print" aria-hidden="true"></i>
+                </button>
+                <a href="#top" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary transition-colors focus-ring px-2 py-1 rounded-md" aria-label="Kembali ke atas">
+                    <i class="fas fa-arrow-up mr-1" aria-hidden="true"></i>Atas
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0" role="navigation" aria-label="Daftar isi artikel">
+            <nav class="p-4">
+                <div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+                    <h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
+                        <i class="fas fa-list-ul text-primary" aria-hidden="true"></i>Daftar isi
+                    </h2>
+                    <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        <span id="reading-progress-text">0 / 38 bab</span>
+                        <span id="reading-percent" class="font-semibold text-primary">0%</span>
+                    </div>
+                    <div class="toc-progress-bar mt-1.5" id="toc-progress-bar" style="transform: scaleX(0);" aria-hidden="true"></div>
+                </div>
+                <div class="mb-3 px-1">
+                    <input type="text" id="toc-filter" placeholder="Saring bab..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="Saring bab">
+                </div>
+                <ul class="space-y-1 text-sm" id="toc-list">{{TOC}}</ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <div id="search-overlay" class="search-overlay" role="dialog" aria-label="Cari">
+            <div class="search-panel">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="Cari konten..." autocomplete="off" aria-label="Kata kunci pencarian">
+                    <button id="search-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Tutup pencarian">ESC</button>
+                </div>
+                <div id="search-results" class="search-results scrollbar-hide">
+                    <div class="p-4 text-center text-gray-400 text-sm">Ketik kata kunci untuk mulai mencari</div>
+                </div>
+            </div>
+        </div>
+
+        <main id="content" class="w-full lg:ml-72 px-5 md:px-10 py-8 bg-white dark:bg-gray-800 min-h-screen">
+            <div class="content-col">
+            <a id="top"></a>
+
+            <!-- Breadcrumb atas -->
+            <nav class="breadcrumb no-print" aria-label="Posisi">
+                <a href="#top">Beranda</a>
+                <span class="sep" aria-hidden="true">›</span>
+                <span class="text-gray-700 dark:text-gray-300">Pelajaran Wajib Digital · v1.8</span>
+            </nav>
+
+            <!-- Banner hero -->
+            <section class="hero-banner mb-8" aria-labelledby="hero-title">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>69 bab + 8 lampiran</span>
+                    <span class="stat-pill"><i class="fas fa-clock" aria-hidden="true"></i>sekitar 40-55 jam</span>
+                    <span class="stat-pill"><i class="fas fa-signal" aria-hidden="true"></i>Dari dangkal ke dalam</span>
+                </div>
+                <h1 id="hero-title" class="text-3xl md:text-4xl font-bold mb-2">Taklukkan ponsel! Pelajaran wajib digital untuk pemula</h1>
+                <p class="text-base md:text-lg opacity-90 mb-4 text-balance">Berangkat dari "komputer pribadi" di saku, menguasai hardware, sistem, jaringan, keamanan, AI, dan tren masa depan secara sistematis.</p>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#ji-chu-pian" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-4 py-2 rounded-md hover:bg-blue-50 transition-colors focus-ring text-sm">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>Mulai dari dasar
+                    </a>
+                    <a href="#ruan-jian-pian" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">
+                        <i class="fas fa-th-large" aria-hidden="true"></i>Lihat daftar bagian
+                    </a>
+                    <a href="#fu-lu-c" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">C Lampiran C: Tabel Istilah Ringkas</a>
+                </div>
+            </section>
+
+            <!-- Cara menggunakan buku ini -->
+            <section class="reading-guide-card" aria-labelledby="how-to-use-title">
+                <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
+                    <i class="fas fa-compass text-primary" aria-hidden="true"></i>Bagaimana memakai buku ini?
+                </h2>
+                <div class="grid md:grid-cols-2 gap-3 text-sm">
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-bullseye mr-1" aria-hidden="true"></i>Tujuan buku ini</p>
+                        <p class="text-gray-700 dark:text-gray-300">Dengan buku kecil yang "bisa bicara dan bisa diajak praktik" ini, ponsel Anda dibawa dari "bisa pakai" menjadi "paham memakai", dari "pasif menerima" menjadi "mengendalikan secara aktif".</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-route mr-1" aria-hidden="true"></i>Jalur membaca</p>
+                        <p class="text-gray-700 dark:text-gray-300">Terbagi menjadi 8 bagian:<strong>Dasar→Perangkat Lunak→Menengah→Melampaui→Praktik→Coding AI→Android→iOS</strong> mencakup 69 bab. Pemula bisa membaca berurutan; yang berpengalaman bisa langsung lompat ke bab yang diminati. v3.2 menambah tiga bagian praktik pengembangan (Bab 37-69, total 33 bab): Coding AI, Pengembangan Android, dan Pengembangan iOS, menemani Anda tumbuh dari pengguna digital menjadi developer aplikasi.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-hand-pointer mr-1" aria-hidden="true"></i>Penjelasan simbol</p>
+                        <p class="text-gray-700 dark:text-gray-300"><span class="kbd">[Tombol]</span> berarti tombol konkret di layar <span class="kbd">&gt;</span> berarti urutan langkah <strong>Tebal</strong> adalah poin kunci yang wajib diingat.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-magic mr-1" aria-hidden="true"></i>Trik interaksi</p>
+                        <p class="text-gray-700 dark:text-gray-300">Atas <span class="kbd">Ctrl+K</span> cari  <span class="kbd">A+/A-</span> mengatur ukuran huruf  <span class="kbd">R</span> Baca nyaring; mendukung ganti terang/gelap serta cetak dan ekspor PDF.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Jalur belajar 5 langkah -->
+            <section class="mb-8" aria-labelledby="learning-path-title">
+                <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">Jalur belajar: lima langkah menjadi ahli ponsel</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Buku ini disusun mengikuti pola kognitif dari mengenal, mahir, sampai praktik; tiap bagian adalah fondasi bagi bagian berikutnya.</p>
+                <div class="learning-path">
+                    <a href="#ji-chu-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">1</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Bagian Dasar</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Bab 0 - 7</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Mengenal ponsel Anda: hardware, sistem, file, jaringan, aplikasi, keamanan, fitur terdepan.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Pemula</span>
+                    </a>
+                    <a href="#ruan-jian-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">2</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Bagian Perangkat Lunak</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Bab 8 - 14</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Menguasai berbagai aplikasi: komunikasi, kantor, pembayaran, fotografi, hiburan, manajemen sandi.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Pemula</span>
+                    </a>
+                    <a href="#jin-jie-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">3</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Bagian Menengah</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Bab 15 - 20</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Buka kunci keterampilan tingkat lanjut: sains baterai, akun dan layanan cloud, backup dan migrasi, perbaikan mandiri.</p>
+                        <span class="difficulty-tag difficulty-intermediate mt-2 inline-block"><i class="fas fa-mountain" aria-hidden="true"></i>Menengah</span>
+                    </a>
+                    <a href="#chao-yue-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">4</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Bagian Melampaui</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Bab 21 - 26</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Menjangkau garis depan teknologi: keamanan informasi, model besar AI, pola pikir coding, dan kehidupan digital masa depan.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Lanjutan</span>
+                    </a>
+                    <a href="#shi-zhan-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">5</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Bagian Praktik</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Bab 27 - 32</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Penerapan: mengajari orang tua pakai ponsel, memilih ponsel, kesehatan digital, layar lebar dan mobil, video pendek, pertolongan darurat.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Pemula</span>
+                    </a>
+                    <a href="#ai-biancheng-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">6</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Bagian Praktik Coding AI</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Bab 37 - 47</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Memerintah AI menulis kode: dari revolusi paradigma, lima prinsip berpikir, pemilihan alat dan model, praktik API, sampai proyek lengkap.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Lanjutan</span>
+                    </a>
+                    <a href="#an-zhuo-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">7</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Bagian Praktik Pengembangan Android</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Bab 48 - 58</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Memerintah AI membuat aplikasi Android: Kotlin, Jetpack Compose, dua proyek lengkap, rilis di Google Play.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Lanjutan</span>
+                    </a>
+                    <a href="#ios-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">8</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Bagian Praktik Pengembangan iOS</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Bab 59 - 69</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Memerintah AI membuat aplikasi Apple: Swift, SwiftUI, dua proyek lengkap, rilis di App Store.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Lanjutan</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Peta bab ringkas -->
+            <section class="reading-guide-card" aria-labelledby="chapter-map-title">
+                <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
+                    <i class="fas fa-map text-primary" aria-hidden="true"></i>Peta bab cepat
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Temukan bab sesuai tujuan belajar dengan cepat.</p>
+                <div class="grid md:grid-cols-2 gap-2 text-sm">
+                    <div class="flex items-start gap-2"><i class="fas fa-microchip text-primary mt-1" aria-hidden="true"></i><span><strong>Ingin paham hardware</strong> → <a href="#di-yi-zhang" class="text-primary hover:underline">01 Bab 1: Halo, Komputer Pribadiku</a> · <a href="#di-san-zhang" class="text-primary hover:underline">03 Bab 3: Menghubungkan Ponsel dengan "Tali Kehidupan"</a>(jaringan dan baseband)</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-shield-halved text-primary mt-1" aria-hidden="true"></i><span><strong>Peduli privasi dan keamanan</strong> → <a href="#di-liu-zhang" class="text-primary hover:underline">06 Bab 6: Menjaga Hidup Digitalmu</a> · <a href="#di-shi-si-zhang" class="text-primary hover:underline">14 Bab 14: Khusus Pengelola Kata Sandi</a> · <a href="#di-er-shi-yi-zhang" class="text-primary hover:underline">Bab 21</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-camera text-primary mt-1" aria-hidden="true"></i><span><strong>Ingin memotret bagus</strong> → <a href="#di-shi-yi-zhang" class="text-primary hover:underline">11 Bab 11: Fotografi dan Pengelolaan Gambar</a> + <a href="#di-shi-yi-zhang-advanced" class="text-primary hover:underline">Tambahan Bab 11:Teknologi Pencitraan Profesional</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-robot text-primary mt-1" aria-hidden="true"></i><span><strong>Jadi jago asisten AI</strong> → <a href="#di-er-shi-er-zhang" class="text-primary hover:underline">22 Bab 22: Bagaimana AI Bekerja di dalam Ponsel</a> · <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">07 Bab 7: Bedah Tuntas Semua Fitur Terkini</a>(garis depan)</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-code text-primary mt-1" aria-hidden="true"></i><span><strong>Ingin memerintah AI menulis kode</strong> → <a href="#ai-biancheng-pian" class="text-primary hover:underline">Bab 37 - 47</a>: revolusi paradigma, lima prinsip, pemilihan alat dan model, praktik API, dan proyek lengkap</span></div>
+                    <div class="flex items-start gap-2"><i class="fab fa-android text-primary mt-1" aria-hidden="true"></i><span><strong>Ingin belajar pengembangan Android</strong> → <a href="#an-zhuo-kai-fa-pian" class="text-primary hover:underline">Bab 48 - 58</a>: Kotlin, Compose, dua proyek, dan rilis di Google Play</span></div>
+                    <div class="flex items-start gap-2"><i class="fab fa-apple text-primary mt-1" aria-hidden="true"></i><span><strong>Ingin belajar pengembangan iOS</strong> → <a href="#ios-kai-fa-pian" class="text-primary hover:underline">Bab 59 - 69</a>: Swift, SwiftUI, dua proyek, dan rilis di App Store</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-bolt text-primary mt-1" aria-hidden="true"></i><span><strong>Cemas daya tahan baterai</strong> → <a href="#di-shi-wu-zhang" class="text-primary hover:underline">Bab 15</a> + <a href="#di-shi-wu-zhang-kuichong" class="text-primary hover:underline">Tambahan: Bedah Tuntas Protokol Pengisian Cepat</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-bug text-primary mt-1" aria-hidden="true"></i><span><strong>Ponsel rusak</strong> → <a href="#di-shi-jiu-zhang" class="text-primary hover:underline">19 Bab 19: Pemecahan Masalah dan Penyelamatan Mandiri</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-arrows-rotate text-primary mt-1" aria-hidden="true"></i><span><strong>Ganti ponsel/migrasi data</strong> → <a href="#di-shi-ba-zhang" class="text-primary hover:underline">18 Bab 18: Cadangan dan Migrasi Data</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-wand-magic-sparkles text-primary mt-1" aria-hidden="true"></i><span><strong>Menjelajah otomatisasi</strong> → <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">23 Bab 23: Pengenalan Berpikir Pemrograman dan Otomatisasi</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-mobile-screen text-primary mt-1" aria-hidden="true"></i><span><strong>Cara memilih ponsel lipat</strong> → <a href="#fu-lu-f" class="text-primary hover:underline">F Lampiran F: Khusus Memilih dan Menggunakan Layar Lipat</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-heart text-primary mt-1" aria-hidden="true"></i><span><strong>Membantu orang tua pakai ponsel</strong> → <a href="#di-er-shi-qi-zhang" class="text-primary hover:underline">Bab 27</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-cart-shopping text-primary mt-1" aria-hidden="true"></i><span><strong>Ingin beli ponsel</strong> → <a href="#di-er-shi-ba-zhang" class="text-primary hover:underline">28 Bab 28: Menggunakan Uang dengan Tepat untuk Ponsel Idaman—Panduan Utama Memilih Ponsel</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-heart-pulse text-primary mt-1" aria-hidden="true"></i><span><strong>Kesehatan digital/anti kecanduan</strong> → <a href="#di-er-shi-jiu-zhang" class="text-primary hover:underline">29 Bab 29:Kesehatan Digital—Membangun Hubungan Sehat dengan Ponsel</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-tv text-primary mt-1" aria-hidden="true"></i><span><strong>Layar lebar/mobil</strong> → <a href="#di-san-shi-zhang" class="text-primary hover:underline">30 Bab 30: Screencasting, Presentasi, dan Konektivitas Mobil</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-video text-primary mt-1" aria-hidden="true"></i><span><strong>Video pendek</strong> → <a href="#di-san-shi-yi-zhang" class="text-primary hover:underline">31 Bab 31:Pengenalan Syuting Video Pendek dan Pembuatan Konten</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-primary mt-1" aria-hidden="true"></i><span><strong>Ponsel hilang/kena tipu</strong> → <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">32 Bab 32: Panduan P3K Keamanan Ponsel</a></span></div>
+                </div>
+            </section>
+
+            <!-- Penutup: apa yang tidak diajarkan buku ini -->
+            <div class="highlight-quote">
+                <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Buku ini tidak mengajarkan "cara nonton video makin asyik", tetapi ingin membantu Anda paham: kenapa ponsel bekerja seperti ini? Apa yang bisa dan tidak bisa dilakukannya? Dan bagaimana membuatnya benar-benar bekerja untuk Anda, bukan sebaliknya memperbudak perhatian dan waktu Anda.</p>
+                <p class="text-right text-sm">— Niat awal buku ini</p>
+            </div>
+
+            <!-- Checklist interaktif + dasbor membaca -->
+            <section class="mb-8" aria-labelledby="dashboard-title">
+                <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
+                    <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>Dashboard belajar
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Pantau progres baca Anda dan periksa kondisi kesehatan ponsel.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <!-- Kartu kemajuan membaca -->
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>Progres baca</h3>
+                        <div class="flex items-center gap-4">
+                            <div class="relative w-20 h-20 flex-shrink-0">
+                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90">
+                                    <circle cx="40" cy="40" r="34" fill="none" stroke="#e5e7eb" stroke-width="8" class="dark:stroke-gray-700"/>
+                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
+                                </svg>
+                                <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span>
+                            </div>
+                            <div class="flex-1 text-sm space-y-1">
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Bab yang sudah dibaca</span><span id="read-count" class="font-semibold">0 / 38</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Jumlah bookmark</span><span id="bookmark-count" class="font-semibold">0</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Terakhir dibaca</span><span id="last-chapter" class="font-semibold text-xs truncate max-w-[8rem]">—</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Kartu cek kesehatan ponsel -->
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>Cek kesehatan ponsel sendiri</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Centang item yang sudah Anda lakukan, lalu lihat "skor kesehatan" ponsel Anda:</p>
+                        <div id="checklist-items" class="space-y-1.5 text-sm">
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Kunci layar sudah dipasang (bukan 1234/0000)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Verifikasi dua langkah sudah aktif (Apple ID/akun merek)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>"Temukan Ponsel Saya" sudah aktif</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Foto punya backup cloud (minimal satu)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Riwayat chat WeChat sudah dibackup ke komputer</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Aplikasi pembayaran sudah aktifkan bayar sidik jari/wajah</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Aplikasi "National Anti-Fraud Center" sudah terpasang</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Penagihan tanpa sandi: kontrak yang tidak perlu sudah dibersihkan</span></label>
+                        </div>
+                        <div class="mt-3 flex items-center justify-between">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Skor kesehatan</span>
+                            <span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span>
+                        </div>
+                        <div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">Selesaikan cek mandiri untuk mengetahui kondisi keamanan ponsel Anda</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- konten "top" lama dipertahankan untuk kompatibilitas -->
+            <div class="sr-only" aria-hidden="true">v3.2 · buku wajib digital yang benar-benar ditujukan untuk orang awam</div>
+
+            {{BODY}}ek ulasan dan umpan balik pengguna terbaru.</p>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Alat cepat: kelompok tombol melayang -->
+    <div id="quick-tools" class="quick-tools no-print" aria-label="Alat pintas">
+        <button id="quick-search" class="quick-tool-btn" title="Cari (Ctrl+K)" aria-label="Cari">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        <button id="quick-theme" class="quick-tool-btn" title="Beralih gelap/terang" aria-label="Ganti tema">
+            <i class="fas fa-circle-half-stroke" aria-hidden="true"></i>
+        </button>
+        <button id="quick-print" class="quick-tool-btn" title="Cetak / Ekspor PDF" aria-label="Cetak atau ekspor">
+            <i class="fas fa-print" aria-hidden="true"></i>
+        </button>
+        <button id="quick-toc" class="quick-tool-btn" title="Daftar isi" aria-label="Buka daftar isi">
+            <i class="fas fa-list" aria-hidden="true"></i>
+        </button>
+        <button id="quick-tts" class="quick-tool-btn" title="Bacakan suara" aria-label="Bacakan suara">
+            <i class="fas fa-headphones" aria-hidden="true"></i>
+        </button>
+        <button id="quick-shortcuts" class="quick-tool-btn" title="Pintasan keyboard (?)" aria-label="Panel pintasan">
+            <i class="fas fa-keyboard" aria-hidden="true"></i>
+        </button>
+        <button id="quick-backup" class="quick-tool-btn" title="Cadangkan/pulihkan progres" aria-label="Cadangkan progres">
+            <i class="fas fa-cloud-arrow-up" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- Panel pintasan -->
+    <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="Pintasan keyboard">
+        <div class="search-panel" style="max-width:480px">
+            <div class="search-input-wrapper">
+                <i class="fas fa-keyboard text-gray-400"></i>
+                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">Pintasan keyboard</span>
+                <button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Tutup">ESC</button>
+            </div>
+            <div class="p-4 space-y-2 text-sm">
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Cari konten</span><span class="kbd">Ctrl + K</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Ganti mode gelap/terang</span><span class="kbd">T</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Baca nyaring putar/jeda</span><span class="kbd">R</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Berhenti membacakan</span><span class="kbd">ESC</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Buka panel pintasan keyboard</span><span class="kbd">?</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Perbesar / perkecil ukuran huruf</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div>
+                <div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">Cetak / ekspor PDF</span><span class="kbd">Ctrl + P</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dialog cadangan/pemulihan -->
+    <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="Cadangan dan pemulihan">
+        <div class="search-panel" style="max-width:520px">
+            <div class="search-input-wrapper">
+                <i class="fas fa-cloud-arrow-up text-gray-400"></i>
+                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">Backup dan pulihkan progres baca</span>
+                <button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Tutup">ESC</button>
+            </div>
+            <div class="p-5 space-y-4 text-sm">
+                <div class="info-box rounded-lg p-3">
+                    <p class="text-xs">Cadangan mencakup: bab yang sudah dibaca, penanda, posisi baca, preferensi ukuran huruf, dan hasil seari mandiri kesehatan. Data tersimpan lokal di browser dan akan hilang jika kamu berganti browser atau membersihkan cache; disarankan mengekspor cadangan secara berkala.</p>
+                </div>
+                <div>
+                    <button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-download"></i> Ekspor file backup
+                    </button>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">Unduh satu file JSON dan simpan di tempat yang aman</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-upload"></i> Impor backup untuk memulihkan
+                    </button>
+                    <input type="file" id="backup-import-input" accept=".json" class="hidden">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">Pilih file cadangan yang diekspor sebelumnya untuk memulihkan progres</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-trash"></i> Hapus semua data baca
+                    </button>
+                    <p class="text-xs text-red-400 mt-1 text-center">Tidak dapat dipulihkan! Ekspor cadangan terlebih dahulu</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notifikasi hari membaca berturut-turut -->
+    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
+        <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
+        <span id="streak-toast-text">Hari ke-X membaca beruntun!</span>
+    </div>
+
+    <!-- Bilah kontrol baca suara -->
+    <div id="tts-controls" class="tts-controls" role="region" aria-label="Kontrol pembacaan suara" aria-live="polite">
+        <span class="tts-chapter-label" id="tts-label" title="Bab yang sedang dibacakan">Belum mulai</span>
+        <button class="tts-btn" id="tts-prev" title="Bagian sebelumnya" aria-label="Bagian sebelumnya"><i class="fas fa-step-backward"></i></button>
+        <button class="tts-btn play-btn" id="tts-play" title="Putar/Jeda" aria-label="Putar pembacaan"><i class="fas fa-play"></i></button>
+        <button class="tts-btn" id="tts-next" title="Bagian berikutnya" aria-label="Bagian berikutnya"><i class="fas fa-step-forward"></i></button>
+        <button class="tts-btn" id="tts-speed-down" title="Perlambat" aria-label="Perlambat">−</button>
+        <span class="tts-speed-badge" id="tts-speed-display">1.0x</span>
+        <button class="tts-btn" id="tts-speed-up" title="Percepat" aria-label="Percepat">+</button>
+        <button class="tts-btn" id="tts-stop" title="Hentikan pembacaan" aria-label="Hentikan pembacaan"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Tombol kembali ke atas -->
+    <button id="back-to-top" class="opacity-0 invisible" aria-label="Kembali ke atas">
+        <svg class="progress-ring" viewBox="0 0 40 40">
+            <circle class="bg" cx="20" cy="20" r="18"/>
+            <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/>
+        </svg>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Notifikasi pemulihan posisi membaca -->
+    <div id="restore-toast" class="restore-position-toast" role="alert">
+        <i class="fas fa-bookmark" aria-hidden="true"></i>
+        <span id="restore-toast-text">Terakhir dibaca: ...</span>
+        <button class="btn-restore" id="restore-btn">Lanjutkan membaca</button>
+        <button class="btn-dismiss" id="dismiss-btn">Abaikan</button>
+    </div>
+
+    <!-- Skrip JS -->
+    <script>
+        (function() {
+            'use strict';
+
+            const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+            const $$ = (sel, ctx) => [...(ctx || document).querySelectorAll(sel)];
+
+            const html = document.documentElement;
+            const body = document.body;
+            const navbar = $('#navbar');
+            const sidebar = $('#sidebar');
+            const overlay = $('#overlay');
+            const menuToggle = $('#menu-toggle');
+            const backToTop = $('#back-to-top');
+            const progressBar = $('#reading-progress');
+            const searchOverlay = $('#search-overlay');
+            const searchInput = $('#search-input');
+            const searchResults = $('#search-results');
+            const tocProgressBar = $('#toc-progress-bar');
+            const readingProgressText = $('#reading-progress-text');
+            const readingPercent = $('#reading-percent');
+            const contentEl = $('#content');
+            const tocList = $('#toc-list');
+            const tocFilter = $('#toc-filter');
+            const printBtn = $('#print-btn');
+            const quickSearch = $('#quick-search');
+            const quickTheme = $('#quick-theme');
+            const quickPrint = $('#quick-print');
+            const quickToc = $('#quick-toc');
+            let themeToggle = null;
+            const restoreToast = $('#restore-toast');
+            const restoreToastText = $('#restore-toast-text');
+            const restoreBtn = $('#restore-btn');
+            const dismissBtn = $('#dismiss-btn');
+
+            // ===== Tema =====
+            function syncThemeControls() {
+                const isDark = html.classList.contains('dark');
+                const nextLabel = isDark ? 'Beralih ke mode terang' : 'Beralih ke mode gelap';
+                [themeToggle, quickTheme].filter(Boolean).forEach(btn => {
+                    btn.setAttribute('aria-label', nextLabel);
+                    btn.setAttribute('title', nextLabel);
+                    btn.setAttribute('aria-pressed', String(isDark));
+                });
+            }
+            function applyTheme(theme) {
+                const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
+                html.classList.toggle('dark', resolvedTheme === 'dark');
+                body.classList.toggle('dark', resolvedTheme === 'dark');
+                html.setAttribute('data-theme', resolvedTheme);
+                body.setAttribute('data-theme', resolvedTheme);
+                localStorage.setItem('theme', resolvedTheme);
+                syncThemeControls();
+            }
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                applyTheme('dark');
+            } else {
+                applyTheme('light');
+            }
+            function toggleTheme() {
+                applyTheme(html.classList.contains('dark') ? 'light' : 'dark');
+            }
+            themeToggle = $('#theme-toggle');
+            if (themeToggle) themeToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+            if (quickTheme) quickTheme.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+
+            // ===== Gulir: progres + bayangan + kembali ke atas + progres daftar isi + cincin progres =====
+            const sections = $$('.content-section');
+            const totalChapters = sections.length;
+            if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} bab`;
+
+            // Parameter cincin progres
+            const progressRingFg = backToTop ? backToTop.querySelector('.progress-ring .fg') : null;
+            const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
+            if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
+
+            let ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                        const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+                        if (progressBar) progressBar.style.width = progress + '%';
+
+                        // Pembaruan cincin progres
+                        if (progressRingFg) {
+                            const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
+                            progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
+                        }
+
+                        if (navbar) {
+                            if (scrollY > 50) {
+                                navbar.classList.add('shadow-md', 'bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-sm');
+                            } else {
+                                navbar.classList.remove('shadow-md', 'bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-sm');
+                            }
+                        }
+
+                        if (backToTop) {
+                            if (scrollY > 300) {
+                                backToTop.classList.remove('opacity-0', 'invisible');
+                                backToTop.classList.add('opacity-100', 'visible');
+                            } else {
+                                backToTop.classList.add('opacity-0', 'invisible');
+                                backToTop.classList.remove('opacity-100', 'visible');
+                            }
+                        }
+
+                        // Sudah membaca sampai bab mana
+                        let passedChapters = 0;
+                        const viewportTop = scrollY + 100;
+                        sections.forEach(sec => {
+                            if (sec.offsetTop <= viewportTop) passedChapters++;
+                        });
+                        if (readingProgressText) {
+                            const passed = Math.max(0, Math.min(totalChapters, passedChapters));
+                            readingProgressText.textContent = `${passed} / ${totalChapters} bab`;
+                        }
+                        if (readingPercent) {
+                            const pct = Math.round(progress);
+                            readingPercent.textContent = pct + '%';
+                        }
+                        if (tocProgressBar) {
+                            tocProgressBar.style.transform = `scaleX(${Math.min(1, progress/100)})`;
+                        }
+
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            if (backToTop) {
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ===== Ingatan posisi membaca =====
+            const POSITION_KEY = 'phoneCourse_scrollPos';
+            const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
+            let savePosTimer = null;
+            function saveReadingPosition() {
+                const scrollY = window.scrollY;
+                if (scrollY < 200) return; // Terlalu awal untuk menyimpan
+                localStorage.setItem(POSITION_KEY, scrollY.toString());
+                // Menemukan nama bab saat ini
+                let currentChapter = '';
+                const viewportTop = scrollY + 100;
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    if (sections[i].offsetTop <= viewportTop) {
+                        const h3 = sections[i].querySelector('h3');
+                        if (h3) currentChapter = h3.textContent;
+                        break;
+                    }
+                }
+                if (currentChapter) localStorage.setItem(POSITION_CHAPTER_KEY, currentChapter);
+            }
+            window.addEventListener('scroll', () => {
+                clearTimeout(savePosTimer);
+                savePosTimer = setTimeout(saveReadingPosition, 1000);
+            }, { passive: true });
+
+            // Memulihkan posisi saat halaman dimuat
+            function tryRestorePosition() {
+                const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
+                const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+                if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
+                    restoreToastText.textContent = `Terakhir dibaca: ${savedChapter}`;
+                    setTimeout(() => restoreToast.classList.add('show'), 800);
+                    // Tersembunyi otomatis setelah 10 detik
+                    setTimeout(() => restoreToast.classList.remove('show'), 15000);
+                }
+            }
+            if (restoreBtn) {
+                restoreBtn.addEventListener('click', () => {
+                    const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
+                    if (savedPos > 0) {
+                        window.scrollTo({ top: savedPos, behavior: 'smooth' });
+                    }
+                    if (restoreToast) restoreToast.classList.remove('show');
+                });
+            }
+            if (dismissBtn) {
+                dismissBtn.addEventListener('click', () => {
+                    if (restoreToast) restoreToast.classList.remove('show');
+                });
+            }
+
+            // ===== Animasi muncul saat menggulir =====
+            const visibleObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        visibleObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+            // Konten layar pertama langsung ditandai terlihat
+            sections.forEach((sec, i) => {
+                const rect = sec.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    sec.classList.add('visible');
+                } else {
+                    visibleObserver.observe(sec);
+                }
+            });
+
+            // ===== Membuka/menutup bilah samping =====
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                body.classList.add('overflow-hidden');
+                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+            }
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                body.classList.remove('overflow-hidden');
+                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+            }
+            if (menuToggle) menuToggle.addEventListener('click', () => {
+                if (sidebar.classList.contains('-translate-x-full')) openSidebar();
+                else closeSidebar();
+            });
+            if (overlay) overlay.addEventListener('click', closeSidebar);
+
+            // Perkakas cepat: membuka daftar isi
+            if (quickToc) quickToc.addEventListener('click', () => {
+                if (window.innerWidth < 1024) openSidebar();
+                else window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== Navigasi jangkar global: mengompensasi geser bilah tetap =====
+            // Harus pakai scrollIntoView, bukan menghitung koordinat sendiri: .content-section memakai
+            // content-visibility:auto + contain-intrinsic-size(0 800px): bab di luar layar
+            // memakai placeholder 800px, getBoundingClientRect mengembalikan koordinat placeholder, dan scrollTo langsung
+            // akan mendarat di posisi salah (makin ke belakang bab, makin besar deviasinya). scrollIntoView menyerahkan pada peramban
+            // merender target sesuai permintaan dan memposisikannya, dan html{scroll-padding-top:5rem} mengompensasi bilah tetap
+            // tetap.
+            function scrollToAnchor(id) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                // Langkah 1: mode instant memaksa render bab target dan memposisikannya lebih dulu, agar content-visibility tidak
+                // pergeseran saat gulir halus yang diakibatkan render tertunda.
+                el.scrollIntoView({ behavior: 'instant', block: 'start' });
+                // Langkah 2: setelah target terrender dan koordinat stabil, baru picu gulir halus untuk pengalaman yang mulus.
+                requestAnimationFrame(() => {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.classList.add('scroll-target-flash');
+                    setTimeout(() => el.classList.remove('scroll-target-flash'), 1200);
+                });
+            }
+            document.addEventListener('click', (e) => {
+                const link = e.target.closest('a[href^="#"]');
+                if (!link) return;
+                const href = link.getAttribute('href');
+                if (!href || href === '#' || href === '#top') return;
+                e.preventDefault();
+                const targetId = href.slice(1);
+                if (window.innerWidth < 1024) closeSidebar();
+                requestAnimationFrame(() => scrollToAnchor(targetId));
+            }, { passive: false });
+
+            // ===== Melipat daftar isi =====
+            $$('.toc-toggle-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const targetId = btn.dataset.target;
+                    if (!targetId) return;
+                    const childList = document.getElementById(targetId);
+                    if (!childList) return;
+                    const icon = btn.querySelector('.toc-toggle-icon');
+                    const isOpen = childList.classList.contains('open');
+                    childList.classList.toggle('open', !isOpen);
+                    if (icon) {
+                        icon.classList.toggle('fa-chevron-down', !isOpen);
+                        icon.classList.toggle('fa-chevron-up', isOpen);
+                    }
+                });
+            });
+
+            // ===== Menyaring daftar isi =====
+            if (tocFilter && tocList) {
+                tocFilter.addEventListener('input', () => {
+                    const q = tocFilter.value.trim().toLowerCase();
+                    $$('.toc-parent', tocList).forEach(parent => {
+                        let hasMatch = false;
+                        $$('a', parent).forEach(a => {
+                            const txt = a.textContent.toLowerCase();
+                            const show = !q || txt.includes(q);
+                            a.closest('li').style.display = show ? '' : 'none';
+                            if (show) hasMatch = true;
+                        });
+                        parent.style.display = hasMatch ? '' : 'none';
+                    });
+                });
+            }
+
+            // ===== Menyorot di daftar isi =====
+            const tocLinkMap = new Map();
+            $$('#sidebar a').forEach(item => {
+                const href = item.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    tocLinkMap.set(href.slice(1), item);
+                }
+            });
+
+            let currentActive = null;
+            function ensureParentExpanded(link) {
+                if (!link) return;
+                const parentLi = link.closest('.toc-parent');
+                if (!parentLi) return;
+                const childList = parentLi.querySelector(':scope > ul.toc-child');
+                if (childList && !childList.classList.contains('open')) {
+                    childList.classList.add('open');
+                    const btn = parentLi.querySelector('.toc-toggle-btn .toc-toggle-icon');
+                    if (btn) {
+                        btn.classList.remove('fa-chevron-up');
+                        btn.classList.add('fa-chevron-down');
+                    }
+                }
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        if (currentActive) currentActive.classList.remove('active');
+                        const link = tocLinkMap.get(id);
+                        if (link) {
+                            link.classList.add('active');
+                            currentActive = link;
+                            ensureParentExpanded(link);
+                            try { link.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { link.scrollIntoView(); }
+                        }
+                    }
+                });
+            }, { root: null, rootMargin: '0px 0px -60% 0px', threshold: 0 });
+
+            sections.forEach(section => observer.observe(section));
+
+            // ===== Sistem penanda =====
+            const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
+            function getBookmarks() {
+                try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
+            }
+            function saveBookmarks(bm) { localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(bm)); }
+            function toggleBookmark(id) {
+                let bm = getBookmarks();
+                const idx = bm.indexOf(id);
+                if (idx >= 0) bm.splice(idx, 1);
+                else bm.push(id);
+                saveBookmarks(bm);
+                return idx < 0; // true = added
+            }
+            function isBookmarked(id) { return getBookmarks().includes(id); }
+
+            // Menambah tombol penanda ke tiap bab
+            sections.forEach(sec => {
+                const id = sec.id;
+                if (!id) return;
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                const btn = document.createElement('button');
+                btn.className = 'bookmark-btn' + (isBookmarked(id) ? ' active' : '');
+                btn.innerHTML = '<i class="fas fa-bookmark"></i><span>' + (isBookmarked(id) ? 'Tersimpan' : 'Penanda') + '</span>';
+                btn.setAttribute('aria-label', isBookmarked(id) ? 'Hapus dari penanda' : 'Tambahkan bab ini ke penanda');
+                btn.addEventListener('click', () => {
+                    const added = toggleBookmark(id);
+                    btn.classList.toggle('active', added);
+                    btn.querySelector('span').textContent = added ? 'Tersimpan' : 'Penanda';
+                    btn.setAttribute('aria-label', added ? 'Hapus dari penanda' : 'Tambahkan bab ini ke penanda');
+                    // Memperbarui tanda di bilah samping
+                    updateTocBookmark(id, added);
+                });
+                // Menyisipkan setelah h3
+                h3.parentNode.insertBefore(btn, h3.nextSibling);
+            });
+
+            function updateTocBookmark(id, isBookmarked) {
+                const tocLink = tocLinkMap.get(id);
+                if (tocLink) {
+                    tocLink.classList.toggle('bookmarked', isBookmarked);
+                }
+            }
+            // Menginisialisasi tanda penanda di bilah samping
+            getBookmarks().forEach(id => updateTocBookmark(id, true));
+
+            // ===== Centang bab selesai dibaca =====
+            const COMPLETED_KEY = 'phoneCourse_completed';
+            function getCompleted() {
+                try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
+            }
+            function saveCompleted(arr) { localStorage.setItem(COMPLETED_KEY, JSON.stringify(arr)); }
+            function toggleCompleted(id) {
+                let arr = getCompleted();
+                const idx = arr.indexOf(id);
+                if (idx >= 0) arr.splice(idx, 1);
+                else arr.push(id);
+                saveCompleted(arr);
+                return idx < 0;
+            }
+            function isCompleted(id) { return getCompleted().includes(id); }
+
+            sections.forEach(sec => {
+                const id = sec.id;
+                if (!id) return;
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                // Cari baris meta atau elemen sebelum h3
+                const metaDiv = h3.previousElementSibling;
+                const check = document.createElement('button');
+                check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
+                check.innerHTML = '<span class="check-icon"></span><span>' + (isCompleted(id) ? 'Sudah dibaca' : 'Sudah dibaca') + '</span>';
+                check.setAttribute('aria-label', isCompleted(id) ? 'Batalkan tandai dibaca' : 'Tandai sudah dibaca');
+                check.addEventListener('click', () => {
+                    const done = toggleCompleted(id);
+                    check.classList.toggle('checked', done);
+                    check.querySelector('span:last-child').textContent = done ? 'Sudah dibaca' : 'Sudah dibaca';
+                    check.setAttribute('aria-label', done ? 'Batalkan tandai dibaca' : 'Tandai sudah dibaca');
+                    // Memperbarui bilah samping
+                    updateTocCompleted(id, done);
+                    // Memperbarui progres membaca
+                    updateCompletedProgress();
+                });
+                if (metaDiv && metaDiv.classList.contains('flex')) {
+                    metaDiv.appendChild(check);
+                } else {
+                    h3.parentNode.insertBefore(check, h3.nextSibling.nextSibling);
+                }
+            });
+
+            function updateTocCompleted(id, done) {
+                const tocLink = tocLinkMap.get(id);
+                if (tocLink) {
+                    tocLink.classList.toggle('completed-toc', done);
+                }
+            }
+            getCompleted().forEach(id => updateTocCompleted(id, true));
+
+            function updateCompletedProgress() {
+                const completed = getCompleted().length;
+                if (readingProgressText) {
+                    // Memperbarui penghitung bab selesai juga
+                    const passed = parseInt(readingProgressText.textContent) || 0;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} bab`;
+                }
+            }
+
+            // ===== Pencarian (ditingkatkan: navigasi papan tuts + penghitung hasil) =====
+            let searchData = null;
+            let searchSelectedIdx = -1;
+            let searchResultItems = [];
+
+            function buildSearchIndex() {
+                if (searchData) return;
+                searchData = sections.map(section => {
+                    const id = section.getAttribute('id');
+                    const h3 = section.querySelector('h3');
+                    const title = h3 ? h3.textContent : '';
+                    const text = section.textContent;
+                    return { id, title, text };
+                });
+            }
+
+            function renderSearchPlaceholder(message) {
+                if (searchResults) {
+                    searchResults.innerHTML = `<div class="p-4 text-center text-gray-400 text-sm">${message}</div>`;
+                }
+            }
+            function runSearch(query) {
+                buildSearchIndex();
+                const normalizedQuery = (query || '').trim().toLowerCase();
+                if (!normalizedQuery) {
+                    renderSearchPlaceholder('Ketik kata kunci untuk mulai mencari');
+                    searchSelectedIdx = -1;
+                    searchResultItems = [];
+                    return;
+                }
+                const results = searchData.filter(item =>
+                    item.title.toLowerCase().includes(normalizedQuery) || item.text.toLowerCase().includes(normalizedQuery)
+                ).slice(0, 20);
+
+                if (results.length === 0) {
+                    renderSearchPlaceholder('Tidak ada hasil yang cocok');
+                    searchSelectedIdx = -1;
+                    searchResultItems = [];
+                    return;
+                }
+
+                const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">${results.length} hasil ditemukan</div>`;
+                searchResults.innerHTML = countHtml + results.map(item => {
+                    const idx = item.text.toLowerCase().indexOf(normalizedQuery);
+                    const start = Math.max(0, idx - 40);
+                    const end = Math.min(item.text.length, idx + normalizedQuery.length + 80);
+                    let excerpt = (start > 0 ? '...' : '') + item.text.slice(start, end) + (end < item.text.length ? '...' : '');
+                    const re = new RegExp(normalizedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                    const highlightedTitle = item.title.replace(re, '<mark>$&</mark>');
+                    const highlightedExcerpt = excerpt.replace(re, '<mark>$&</mark>');
+                    return `<div class="search-result-item" data-target="${item.id}">
+                        <div class="result-title">${highlightedTitle}</div>
+                        <div class="result-excerpt">${highlightedExcerpt}</div>
+                    </div>`;
+                }).join('');
+
+                searchResultItems = $$('.search-result-item', searchResults);
+                searchSelectedIdx = -1;
+
+                searchResultItems.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const targetId = el.dataset.target;
+                        if (targetId) {
+                            closeSearch();
+                            scrollToAnchor(targetId);
+                        }
+                    });
+                });
+            }
+            function openSearch() {
+                if (!searchOverlay) return;
+                buildSearchIndex();
+                searchOverlay.classList.add('active');
+                searchOverlay.setAttribute('aria-hidden', 'false');
+                if (searchInput) {
+                    setTimeout(() => {
+                        searchInput.focus();
+                        if (searchInput.value) {
+                            runSearch(searchInput.value);
+                        }
+                    }, 100);
+                }
+            }
+            function closeSearch() {
+                if (searchOverlay) {
+                    searchOverlay.classList.remove('active');
+                    searchOverlay.setAttribute('aria-hidden', 'true');
+                }
+                if (searchInput) searchInput.value = '';
+                renderSearchPlaceholder('Ketik kata kunci untuk mulai mencari');
+                searchSelectedIdx = -1;
+                searchResultItems = [];
+            }
+
+            function updateSearchSelection() {
+                searchResultItems.forEach((el, i) => {
+                    el.classList.toggle('selected', i === searchSelectedIdx);
+                });
+                if (searchSelectedIdx >= 0 && searchResultItems[searchSelectedIdx]) {
+                    searchResultItems[searchSelectedIdx].scrollIntoView({ block: 'nearest' });
+                }
+            }
+
+            const searchToggle = $('#search-toggle');
+            if (searchToggle) searchToggle.addEventListener('click', openSearch);
+            if (quickSearch) quickSearch.addEventListener('click', openSearch);
+            const searchClose = $('#search-close');
+            if (searchClose) searchClose.addEventListener('click', closeSearch);
+            if (searchOverlay) searchOverlay.addEventListener('click', (e) => {
+                if (e.target === searchOverlay) closeSearch();
+            });
+
+            let searchTimer = null;
+            if (searchInput) searchInput.addEventListener('input', () => {
+                clearTimeout(searchTimer);
+                searchTimer = setTimeout(() => runSearch(searchInput.value), 200);
+            });
+
+            // Navigasi pencarian dengan tuts
+            if (searchInput) searchInput.addEventListener('keydown', (e) => {
+                if (!searchResultItems.length) return;
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    searchSelectedIdx = Math.min(searchSelectedIdx + 1, searchResultItems.length - 1);
+                    updateSearchSelection();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    searchSelectedIdx = Math.max(searchSelectedIdx - 1, 0);
+                    updateSearchSelection();
+                } else if (e.key === 'Enter' && searchSelectedIdx >= 0) {
+                    e.preventDefault();
+                    const el = searchResultItems[searchSelectedIdx];
+                    if (el) {
+                        const targetId = el.dataset.target;
+                        if (targetId) {
+                            closeSearch();
+                            scrollToAnchor(targetId);
+                        }
+                    }
+                }
+            });
+
+            // ===== Ukuran huruf =====
+            const DEFAULT_FONT_SIZE = 16;
+            function setFontSize(size) {
+                contentEl.style.fontSize = size + 'px';
+                localStorage.setItem('fontSize', size + 'px');
+            }
+            const savedFontSize = parseInt(localStorage.getItem('fontSize') || '', 10);
+            setFontSize(Number.isFinite(savedFontSize) ? savedFontSize : DEFAULT_FONT_SIZE);
+
+            $$('.font-size-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const action = btn.dataset.action;
+                    const current = parseFloat(getComputedStyle(contentEl).fontSize);
+                    let newSize;
+                    if (action === 'reset') newSize = DEFAULT_FONT_SIZE;
+                    else if (action === 'increase') newSize = Math.min(current + 2, 24);
+                    else newSize = Math.max(current - 2, 12);
+                    setFontSize(newSize);
+                });
+            });
+
+            // ===== Menutup bilah samping dengan gesekan =====
+            let touchStartX = 0;
+            let touchStartY = 0;
+            sidebar.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+            sidebar.addEventListener('touchend', (e) => {
+                const dx = e.changedTouches[0].clientX - touchStartX;
+                const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+                if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
+            }, { passive: true });
+
+            // ===== Navigasi antar bab =====
+            const sectionIds = sections.map(s => s.id);
+            sections.forEach((section, i) => {
+                const nav = document.createElement('div');
+                nav.className = 'chapter-nav';
+                let navHtml = '';
+                if (i > 0) {
+                    navHtml += `<a href="#${sectionIds[i-1]}" class="prev"><i class="fas fa-arrow-left" aria-hidden="true"></i><span class="truncate">${sections[i-1].querySelector('h3')?.textContent || 'Bab sebelumnya'}</span></a>`;
+                } else {
+                    navHtml += '<span></span>';
+                }
+                if (i < sections.length - 1) {
+                    navHtml += `<a href="#${sectionIds[i+1]}" class="next"><span class="truncate">${sections[i+1].querySelector('h3')?.textContent || 'Bab berikutnya'}</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>`;
+                }
+                nav.innerHTML = navHtml;
+                section.appendChild(nav);
+            });
+
+            // ===== Cetak =====
+            function doPrint() { window.print(); }
+            if (printBtn) printBtn.addEventListener('click', doPrint);
+            if (quickPrint) quickPrint.addEventListener('click', doPrint);
+
+            // ===== Pintasan papan tuts global =====
+            const shortcutsOverlay = $('#shortcuts-overlay');
+            const backupOverlay = $('#backup-overlay');
+            function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
+            function closeShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.remove('active'); }
+            function openBackup() { if (backupOverlay) backupOverlay.classList.add('active'); }
+            function closeBackup() { if (backupOverlay) backupOverlay.classList.remove('active'); }
+
+            const quickShortcuts = $('#quick-shortcuts');
+            const quickBackup = $('#quick-backup');
+            if (quickShortcuts) quickShortcuts.addEventListener('click', openShortcuts);
+            if (quickBackup) quickBackup.addEventListener('click', openBackup);
+            const shortcutsClose = $('#shortcuts-close');
+            const backupClose = $('#backup-close');
+            if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
+            if (backupClose) backupClose.addEventListener('click', closeBackup);
+
+            // Menutup jendela saat mengeklik tirai
+            if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
+                if (e.target === shortcutsOverlay) closeShortcuts();
+            });
+            if (backupOverlay) backupOverlay.addEventListener('click', (e) => {
+                if (e.target === backupOverlay) closeBackup();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
+                    else openSearch();
+                } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    // Pencetakan sudah diurus peramban
+                } else if (e.key === 'Escape') {
+                    if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
+                    if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
+                    if (backupOverlay && backupOverlay.classList.contains('active')) closeBackup();
+                } else if (e.key === 't' || e.key === 'T') {
+                    if (!e.ctrlKey && !e.metaKey) toggleTheme();
+                } else if (e.key === '?') {
+                    if (!e.ctrlKey && !e.metaKey && shortcutsOverlay) {
+                        shortcutsOverlay.classList.contains('active') ? closeShortcuts() : openShortcuts();
+                    }
+                }
+            });
+
+            // ===== Pelacakan hari membaca berturut-turut =====
+            const STREAK_KEY = 'reading-streak';
+            const STREAK_DATE_KEY = 'reading-streak-date';
+            const streakToast = $('#streak-toast');
+            const streakToastText = $('#streak-toast-text');
+
+            function updateStreak() {
+                try {
+                    const today = new Date().toDateString();
+                    const lastDate = localStorage.getItem(STREAK_DATE_KEY);
+                    let streak = parseInt(localStorage.getItem(STREAK_KEY) || '0', 10);
+
+                    if (lastDate !== today) {
+                        const yesterday = new Date(Date.now() - 86400000).toDateString();
+                        if (lastDate === yesterday) {
+                            streak += 1;
+                        } else if (lastDate !== today) {
+                            streak = 1;
+                        }
+                        localStorage.setItem(STREAK_KEY, streak.toString());
+                        localStorage.setItem(STREAK_DATE_KEY, today);
+
+                        // Menampilkan pemberitahuan hari berturut-turut
+                        if (streak >= 2 && streakToast && streakToastText) {
+                            streakToastText.textContent = '🔥 Hari ' + streak + ' membaca berturut-turut. Terus semangat!';
+                            streakToast.classList.add('show');
+                            setTimeout(() => streakToast.classList.remove('show'), 5000);
+                        }
+                    }
+                } catch(e) { /* localStorage mungkin tidak tersedia */ }
+            }
+            updateStreak();
+
+            // ===== Cadangan/pemulihan =====
+            function exportBackup() {
+                try {
+                    const data = {
+                        version: '3.0',
+                        exportDate: new Date().toISOString(),
+                        theme: localStorage.getItem('theme'),
+                        fontSize: localStorage.getItem('fontSize'),
+                        readingPosition: localStorage.getItem(POSITION_KEY),
+                        readingChapter: localStorage.getItem(POSITION_CHAPTER_KEY),
+                        streak: localStorage.getItem(STREAK_KEY),
+                        streakDate: localStorage.getItem(STREAK_DATE_KEY),
+                        healthChecks: {},
+                        chapterChecks: {},
+                        bookmarks: [],
+                        ratings: {}
+                    };
+                    // Mengumpulkan status pemeriksaan kesehatan
+                    for (let i = 0; i < 8; i++) {
+                        data.healthChecks[i] = localStorage.getItem('health-check-' + i);
+                    }
+                    // Mengumpulkan status bab selesai dibaca
+                    $$('.chapter-check.checked').forEach(c => {
+                        const sec = c.closest('.content-section');
+                        if (sec) data.chapterChecks[sec.id] = true;
+                    });
+                    // Mengumpulkan penanda
+                    $$('.toc-item.bookmarked').forEach(b => {
+                        data.bookmarks.push(b.getAttribute('href').replace('#', ''));
+                    });
+                    // Mengumpulkan penilaian
+                    $$('.chapter-rating').forEach(r => {
+                        const sec = r.closest('.content-section');
+                        if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
+                    });
+
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Cadangan-Membaca-PhoneClass_' + new Date().toISOString().slice(0,10) + '.json';
+                    a.click();
+                    URL.revokeObjectURL(url);
+                } catch(e) {
+                    alert('Ekspor cadangan gagal: ' + e.message);
+                }
+            }
+
+            function importBackup(file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (data.theme) localStorage.setItem('theme', data.theme);
+                        if (data.fontSize) localStorage.setItem('fontSize', data.fontSize);
+                        if (data.readingPosition) localStorage.setItem(POSITION_KEY, data.readingPosition);
+                        if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
+                        if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
+                        if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
+                        // Memulihkan status pemeriksaan kesehatan
+                        if (data.healthChecks) {
+                            Object.keys(data.healthChecks).forEach(i => {
+                                localStorage.setItem('health-check-' + i, data.healthChecks[i]);
+                            });
+                        }
+                        // Memulihkan status bab selesai dibaca
+                        if (data.chapterChecks) {
+                            Object.keys(data.chapterChecks).forEach(id => {
+                                const sec = document.getElementById(id);
+                                if (sec) {
+                                    const check = sec.querySelector('.chapter-check');
+                                    if (check) check.classList.add('checked');
+                                    const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
+                                    if (tocItem) tocItem.classList.add('completed-toc');
+                                }
+                            });
+                        }
+                        // Memulihkan penanda
+                        if (data.bookmarks) {
+                            data.bookmarks.forEach(id => {
+                                const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
+                                if (tocItem) tocItem.classList.add('bookmarked');
+                            });
+                        }
+                        alert('Pemulihan berhasil! Halaman akan dimuat ulang untuk menerapkan semua data.');
+                        location.reload();
+                    } catch(err) {
+                        alert('Pemulihan gagal: format berkas tidak valid. ' + err.message);
+                    }
+                };
+                reader.readAsText(file);
+            }
+
+            function resetAllData() {
+                if (!confirm('Hapus semua data membaca? Tidak bisa dibatalkan! Ekspor cadangan dulu.')) return;
+                if (!confirm('Konfirmasi lagi: seluruh progres membaca, penanda, dan penilaian akan dihapus. Lanjutkan?')) return;
+                localStorage.clear();
+                alert('Semua data dihapus. Halaman akan dimuat ulang.');
+                location.reload();
+            }
+
+            const backupExport = $('#backup-export');
+            const backupImportBtn = $('#backup-import-btn');
+            const backupImportInput = $('#backup-import-input');
+            const backupReset = $('#backup-reset');
+            if (backupExport) backupExport.addEventListener('click', exportBackup);
+            if (backupImportBtn && backupImportInput) {
+                backupImportBtn.addEventListener('click', () => backupImportInput.click());
+            }
+            if (backupImportInput) backupImportInput.addEventListener('change', (e) => {
+                if (e.target.files[0]) importBackup(e.target.files[0]);
+            });
+            if (backupReset) backupReset.addEventListener('click', resetAllData);
+
+            // ===== Sistem penilaian bab =====
+            sections.forEach(sec => {
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                const ratingDiv = document.createElement('div');
+                ratingDiv.className = 'chapter-rating';
+                ratingDiv.dataset.rating = localStorage.getItem('rating-' + sec.id) || '0';
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.createElement('span');
+                    star.className = 'star';
+                    star.textContent = '★';
+                    star.dataset.value = i;
+                    star.addEventListener('click', () => {
+                        const current = parseInt(ratingDiv.dataset.rating, 10);
+                        const newRating = current === i ? 0 : i;
+                        ratingDiv.dataset.rating = newRating;
+                        localStorage.setItem('rating-' + sec.id, newRating);
+                        updateStars(ratingDiv);
+                    });
+                    ratingDiv.appendChild(star);
+                }
+                // Menyisipkan setelah h3
+                h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
+                updateStars(ratingDiv);
+            });
+
+            function updateStars(container) {
+                const rating = parseInt(container.dataset.rating, 10);
+                container.querySelectorAll('.star').forEach(s => {
+                    s.classList.toggle('active', parseInt(s.dataset.value, 10) <= rating);
+                });
+            }
+
+            // ===== Optimasi anti-debounce gulir =====
+            let scrollTicking = false;
+            const originalOnScroll = onScroll;
+            function debouncedScroll() {
+                if (!scrollTicking) {
+                    requestAnimationFrame(() => {
+                        originalOnScroll();
+                        scrollTicking = false;
+                    });
+                    scrollTicking = true;
+                }
+            }
+            window.removeEventListener('scroll', onScroll);
+            window.addEventListener('scroll', debouncedScroll, { passive: true });
+
+            // ===== Mengikuti mode gelap sistem =====
+            if (window.matchMedia) {
+                const mq = window.matchMedia('(prefers-color-scheme: dark)');
+                if (mq.addEventListener) {
+                    mq.addEventListener('change', (e) => {
+                        if (!localStorage.getItem('theme')) {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                } else if (mq.addListener) {
+                    mq.addListener((e) => {
+                        if (!localStorage.getItem('theme')) {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                }
+            }
+
+            // ===== Menambah breadcrumb dan label kesulitan ke judul bab secara otomatis =====
+            sections.forEach(sec => {
+                const id = sec.id || '';
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+
+                let level = 'intermediate';
+                if (id.startsWith('di-ling') || id.startsWith('di-yi') || id.startsWith('di-er') || id.startsWith('di-san') || id.startsWith('di-er-shi-qi') || id.startsWith('di-er-shi-ba') || id.startsWith('di-er-shi-jiu') || id.startsWith('di-san-shi') || id.startsWith('fu-lu')) {
+                    level = 'beginner';
+                } else if (id.startsWith('di-shi-wu') || id.startsWith('di-shi-liu') || id.startsWith('di-shi-qi') || id.startsWith('di-shi-ba') || id.startsWith('di-shi-jiu') || id.startsWith('di-er-shi')) {
+                    level = 'intermediate';
+                } else {
+                    level = 'advanced';
+                }
+
+                const text = sec.textContent || '';
+                const minutes = Math.max(2, Math.round(text.length / 900));
+
+                const meta = document.createElement('div');
+                meta.className = 'flex flex-wrap items-center gap-2 mb-2 text-xs';
+                meta.innerHTML = `
+                    <span class="difficulty-tag difficulty-${level}">
+                        <i class="fas ${level === 'beginner' ? 'fa-seedling' : level === 'intermediate' ? 'fa-mountain' : 'fa-rocket'}" aria-hidden="true"></i>
+                        ${level === 'beginner' ? 'Pemula' : level === 'intermediate' ? 'Menengah' : 'Lanjutan'}
+                    </span>
+                    <span class="reading-time">
+                        <i class="far fa-clock" aria-hidden="true"></i>baca ~${minutes} menit
+                    </span>
+                `;
+                h3.parentNode.insertBefore(meta, h3);
+            });
+
+            // ===== Menambah blok "Ringkasan" ke bab =====
+            function addChapterSummary(sec, points) {
+                const div = document.createElement('div');
+                div.className = 'chapter-summary';
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>Ringkasan bab</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                const nav = sec.querySelector('.chapter-nav');
+                if (nav) sec.insertBefore(div, nav);
+                else sec.appendChild(div);
+            }
+            const summaries = {
+                'fu-lu-f': ['Lipat sudah matang tapi belum arus utama: perangkat "pemanis", bukan "penyelamat"', 'Lipat melintang = ponsel + tablet; lipat memanjang = muat saku + lirik layar luar', 'Cocok untuk: membaca berat/bisnis/karya saat lipat gantung/perempuan yang menjaga portabilitas', 'Enam pemeriksaan saat membeli: jenis engsel, layar dalam UTG, bekas lipatan, ukuran layar luar, bobot dan tebal, harga perbaikan purna jual', 'Trik eksklusif: multitugas layar terbagi, lipat gantung 90 derajat, lirik layar luar, mode PC', 'Inti perawatan: jangan buka-tutup di dingin ekstrem, lindungi dari kotoran, jangan tempel pelindung biasa di layar dalam, jaga engsel bebas debu', 'Ekspektasi: lipatan permanen, lebih berat dan tebal, daya tahan baterai biasa, harga jual kembali rendah, perbaikan mahal', 'Filosofi membeli: dibeli karena bentuknya khas, bukan karena "lebih canggih"'],
+                'di-ling-zhang': ['Pahami posisi buku ini: sains digital yang bicara lugas dan bisa langsung dipraktikkan', 'Kuasai sistem simbol: arti [tombol], >, tebal, dan miring', 'Mengapa kapasitas ponsel "menyusut": penyebab utamanya', 'Bangun kebiasaan mencatat spesifikasi ponselmu sendiri', 'Ponsel = brankas aset digital; pencegahan lebih dulu adalah gagasan inti', 'Data seringkali lebih berharga daripada perangkat kerasnya sendiri'],
+                'di-yi-zhang': ['SoC = CPU + GPU + NPU + ISP + modem dan modul lain dalam satu chip', 'Core besar dan kecil CPU bekerja bersama: keseimbangan performa dan baterai', 'Layar: OLED/LCD, laju pembaruan, kecerahan otomatis', 'Inti sistem citra: ukuran sensor lebih menentukan daripada jumlah piksel', 'Evolusi port: Micro USB → Lightning → terpadu di USB-C', '5G-A membawa kemampuan baru "penyatuan komunikasi dan sensorik"'],
+                'di-yi-zhang-harmony': ['HarmonyOS = sistem operasi terdistribusi, dirancang untuk banyak perangkat sejak awal', 'HarmonyOS 4.3 kompatibel dengan AOSP dan dapat menjalankan aplikasi Android', 'HarmonyOS NEXT sepenuhnya mandiri dan tak lagi mendukung aplikasi Android', 'Sebelum memperbarui, pastikan aplikasi andalanmu sudah punya versi native'],
+                'di-er-zhang': ['Penyimpanan tiga lapis: perangkat / kartu SD / cloud', 'Arti folder umum di Android (DCIM, Download, dll.)', 'Cadangan data = cadangan cloud + cadangan lokal, perlindungan ganda', 'Menghapus bukan memusnahkan; hanya "menimpa" yang benar-benar menghapus', 'Panduan cepat format berkas umum (gambar/audio/video/dokumen)', 'Penamaan "tanggal + peristiwa" adalah konvensi dasar', 'Pembersihan otomatis 72 jam menyelesaikan menumpuknya cache aplikasi sosial', 'Perlindungan ganda foto: penyamaran + pengupasan EXIF'],
+                'di-san-zhang': ['4G/5G punya peran masing-masing; 5G-A adalah versi peningkatan', 'Perbedaan teknis kunci Wi-Fi 6/6E/7', 'Wi-Fi publik menuntut kewaspadaan: jangan mengetik data sensitif', 'Bluetooth 5.x terus berkembang, LE Audio mulai menyebar', 'NFC bekerja dalam 10 cm: kedekatan fisik itu sendiri adalah jaminannya'],
+                'di-si-zhang': ['Pasang aplikasi terutama dari toko resmi', 'Paket APK = sertifikat + sumber daya + konfigurasi + biner', 'Hati-hati aplikasi "pembersih-pengakselerasi"; aplikasi bertahan di latar belakang bisa jadi wajar', 'Verifikasi tanda tangan aplikasi mencegah manipulasi: perlindungan di level sistem', 'Mode murni = pemasangan hanya dari toko resmi: tembok pertama melawan malware', '"Parasit digital" berarti aplikasi bajakan yang ditanami trojan', 'Mekanisme tinjauan toko aplikasi: pemindaian virus + tinjauan izin + verifikasi pengembang'],
+                'di-wu-zhang': ['Layar: resolusi, laju pembaruan, kecerahan otomatis', 'Suara: volume dering/media/notifikasi diatur terpisah', 'Penyimpanan: bersihkan cache dan berkas tak perlu secara rutin', 'Biometrik: sidik jari lawan wajah; 3D lebih aman dari 2D', 'Pembaca layar: VoiceOver di iOS / TalkBack di Android adalah mata pengguna tunanetra', 'Pembesaran: kontras tinggi, teks tebal, dan filter warna - trio', 'Deskripsi gambar AI: biarkan AI membacakan gambar, menu, dan captcha untukmu', 'Takarir langsung: penyelamat pengguna kurang dengar dan lingkungan bising', 'RTT/TTY: yang kehilangan suara atau pendengaran tetap bisa menelepon'],
+                'di-liu-zhang': ['Sandi layar kunci + autentikasi dua faktor adalah garis pertahanan dasar', 'Izin aplikasi: aktifkan sesuai kebutuhan, prinsip hak minimum', 'Tidak ada pembayaran atau masuk akun lewat Wi-Fi publik', 'Di era AI, melihat bukan berarti percaya: wajah dan suara gandaan, menyamar sebagai tokoh berwibawa, investasi palsu adalah trik terbanyak', 'Rencana keluar: verifikasi lewat gerakan + kata sandi bersama + konfirmasi kedua', 'Anonimkan sebelum berbagi: matikan lokasi dan info perangkat di EXIF', 'Perangkat IoT: ganti sandi bawaan', 'Jika tertipu, ingat: jangan mudah percaya, jangan membocorkan, jangan mentransfer'],
+                'di-qi-zhang-jichu': ['Satelit: "tali penyelamat" dalam keadaan darurat', 'Berkomunikasi tanpa jaringan: radio jarak jauh walau tanpa sinyal', 'Deteksi kecelakaan: fusi sensor mengenali tabrakan berat', 'StarFlash: koneksi nirkabel latensi rendah dengan potensi besar'],
+                'di-ba-zhang': ['Merekam panggilan: perhatikan sisi hukumnya', 'iMessage/RCS mengangkat SMS tradisional menjadi media kaya', 'Riwayat obrolan WeChat butuh fitur cadangan bawaan WeChat', 'Aplikasi surat mengelola banyak akun secara terpadu', 'Pemblokiran gangguan: pengenalan sistem + daftar hitam/putih + saring kata kunci SMS', '"Senyap panggilan tak dikenal" di iOS menahan gangguan, tapi waspadai panggilan yang terlewat', 'Penandaan spam yang salah bisa digugat lewat Dianhua Bang/360/Tencent dan kanal operator'],
+                'di-jiu-zhang': ['WPS Office paling nyaman di Tiongkok, Microsoft 365 paling kompatibel', 'Catatan tiga tahap: tercatat → dibaca nanti → sistem pengetahuan', 'Memindai dengan ponsel: Catatan/Mic Lens/Baimiao/CamScanner', 'Cloud sesuai kebutuhan: iCloud/OneDrive/Baidu/Aliyun Drive, masing-masing punya skenario sendiri'],
+                'di-shi-zhang': ['Siapa melihat kode pembayaran dialah yang menerima uang: jangan pernah kirim tangkapan layarnya kepada siapa pun', 'Pemeriksaan keamanan 5 menit: bayar biometrik + kunci keamanan + cek pembayaran tanpa sandi + kelola perangkat', 'Di MRT dan bus, lebih baik kartu transportasi virtual di dompet ponsel: tetap jalan walau luring', 'Sertifikat elektronik asuransi kesehatan, cek pensiun, lapor pajak tahunan: semua bisa dari ponsel', 'Empat jangan melawan penipuan: jangan transfer ke "rekening aman", jangan kirim kode pembayaran, jangan sentuh tautan asing, jangan beri nomor kartu'],
+                'di-shi-yi-zhang': ['Empat kesalahan umum: lensa kotor, eksposur tak diatur, kelebihan pakai flash, zoom digital salah tempat', 'Mode malam menggabungkan banyak frame; tangan stabil 2-4 detik', 'Mode pro: ISO rendah gambar bersih, shutter mengendalikan cahaya', 'Alur pascaproduksi: luruskan → penyetelan dasar → poles lokal → beri gaya', 'Pencarian pintar + pembersihan rutin + album manual = trio pengelolaan foto'],
+                'di-shi-yi-zhang-advanced': ['Tiga pilar video: resolusi, laju frame, bitrate', 'H.265 mengompresi 50% lebih baik daripada H.264', 'ProRes adalah codec profesional Apple: berkasnya raksasa', 'HDR10/10+/Dolby Vision: masing-masing punya ceruknya sendiri'],
+                'di-shi-er-zhang': ['NetEase Cloud Music terkuat di playlist dan komunitas, QQ Music katalognya paling luas, Apple Music bersih dan tanpa penurunan kualitas, Spotify kuat dalam rekomendasi', 'Xiaoyuzhou pilihan pertama podcast berbahasa Mandarin; manfaatkan percepatan dan pembersihan otomatis', 'Video lokal: VLC (semua format) atau nPlayer (kontrol gestur)', 'Garis bawah di WeChat Read sosial + sinkron Kindle; mode pelindung mata wajib menyala', 'Mode game memprioritaskan frame rate mulus; saat panas, pendingin penjepit membantu'],
+                'di-shi-san-zhang': ['Perkakas produktivitas: tugas + pomodoro + kalender', 'Kesehatan dan olahraga: Apple Health/Google Fit sebagai pusat data', 'Peramban: Edge dulu, berpasangan Copilot untuk produktivitas', 'Cari yang benar: percayai domain resmi, hindari akhiran murah seperti .xyz', 'Utamakan pembersih bawaan; pihak ketiga seperti Qingzhuo hanya pelengkap, jangan sekali ketuk bersihkan semua', 'Aplikasi anti-gangguan: Pusat Antipenipuan Nasional + penjaga merek + pemblokiran operator', 'Pemblokiran bawaan: iOS aktifkan Senyap Panggilan Tak Dikenal; Android aktifkan di aplikasi telepon masing-masing merek', 'Tiga lapis digabung: blokir sistem + operator + pusat antipenipuan; jaga daftar putih agar tidak memblokir milik sendiri', 'Peringatan cuaca: aplikasi cuaca sistem + kanal resmi meteorologi; bertindak sesuai tingkat biru/kuning/oranye/merah', 'Peringatan bencana alam: meteorologi + kanal tanggap darurat; hujan lebat dan badai, jauhi dataran rendah dan papan reklame', 'Peringatan dini gempa bukan ramalan: beberapa detik hingga puluhan detik lebih awal; di Android biasanya di pengaturan keamanan', 'TickTick: daftar + kalender + pomodoro, penjadwalan bahasa alami', 'Memindai kertas: kamera sistem/Mic Lens/Baimiao/CamScanner; jepret tajam lalu OCR', 'Kendali jarak jauh PC: Sunflower/ToDesk; orang asing menyuruh memasang kendali jarak jauh = penipuan', 'AI untuk kantor: Trae dan lainnya; pekerjaan berat di komputer, dari ponsel diawasi jarak jauh', 'Transfer cepat di jaringan lokal: LocalSend/AirDrop/Feige; papan klip: KDE Connect/perkakas merek', 'Kode sekali pakai 2FA: Aegis/Microsoft Authenticator, salinan kertas kode cadangan di dua tempat'],
+                'di-shi-si-zhang': ['Dengan pengelola sandi cukup ingat satu sandi utama', 'Bitwarden sumber terbuka dan gratis, 1Password pengalamannya terbaik', 'Sandi utama harus panjang dan kompleks, dengan 2FA aktif', 'Lakukan audit keamanan sandi secara berkala', 'Arsitektur pengetahuan-nol: bahkan penyedianya pun tak melihat sandimu; enkripsi terjadi di lokal', 'AES-256 + derivasi kunci PBKDF2/Argon2 adalah batu fondasi keamanan brankas sandi', 'Pelajaran dari kasus LastPass 2022: yang paling berbahaya adalah pengguna dengan sandi utama lemah', 'Kekuatan sandi ada pada "entropi": panjang + keacakan mengalahkan simbol rumit', 'HaveIBeenPwned memeriksa kebocoran, 1Password Watchtower memantau insiden', 'Passkey dibangun di atas FIDO2/WebAuthn: tahan phishing, tanpa sandi yang dikirim', 'Sinkronisasi Passkey lintas perangkat: iCloud Keychain/Google Password Manager sudah mendukungnya', 'Kunci fisik (YubiKey/Titan) tahan phishing dan pembajakan SIM - ideal bagi yang paling terpapar risiko', 'Lemari besi bersama 1Password + akses darurat Bitwarden membuat berbagi dalam keluarga dan tim lebih aman'],
+                'di-shi-wu-zhang': ['Baterai litium: isi sesuai pakai, benci panas, menua', 'Di bawah 80% kesehatan baterai, waktu pakai turun terasa', 'Protokol pengisian cepat: PD/QC/VOOC/SuperCharge tidak saling dipertukarkan', 'Pengisian nirkabel Qi2 menambah penyelarasan magnet', 'Inti hemat baterai: turunkan kecerahan + tutup latar belakang + pindah ke 4G'],
+                'di-shi-liu-zhang': ['Akun adalah akta kelahiran kehidupan digitalmu: menyatukan kontak, foto, pembelian, dan Temukan Ponsel', 'Tiga wajib: aktifkan 2FA, tetapkan kunci pemulihan, pastikan Temukan Ponsel menyala', 'iCloud 5GB tidak cukup: rapikan atau naik ke 50GB sekitar ¥1/bulan', 'Sinkronisasi dua arah (hapus di sini, hilang di mana-mana), cadangan potret satu arah (hapus di sini, tetap ada di sana)', 'Pengguna Android, periksa terpisah: cadangan cloud merek, cadangan Google, cadangan WeChat'],
+                'di-shi-qi-zhang': ['Kerja lintas perangkat: AirDrop Apple/Huawei Multi-Screen Collaboration/Xiaomi Mi Share/Tautkan ke Windows', 'Transmisi ke TV: iPhone lewat Screen Mirroring, Android lewat transmisi nirkabel; bila gagal, pastikan di Wi-Fi yang sama', 'Smartwatch = penyaring notifikasi + pos kesehatan + bayar dari pergelangan; untuk orang tua bisa menyelamatkan situasi', 'Rumah pintar dipilih per ekosistem: Apple HomeKit/Xiaomi Mijia/Huawei HarmonyOS Connect', 'Keamanan keterkaitan: saat transmisi di tempat umum perhatikan privasi, dan lepas tautan perangkat lama tepat waktu'],
+                'di-shi-ba-zhang': ['Cadangan penuh: lokal di komputer (paling andal) + cloud (paling tenang), perlindungan ganda', 'Riwayat obrolan WeChat paling istimewa: hanya cadangan bawaan WeChat yang membawanya, alat pindah tidak sanggup', 'Aturan 3-2-1: 3 salinan, 2 jenis media, 1 di luar rumah', 'Pindah ponsel: merek sama pakai aplikasi migrasi resmi; lintas merek siapkan jembatan data lebih dulu'],
+                'di-shi-jiu-zhang': ['Lambat dan panas empat langkah: ingat apa yang berubah → cek penyimpanan → cek pemakaian daya → cek sinyal', 'Rutinitas aplikasi crash: tutup dan buka lagi → perbarui → cek izin → bersihkan cache → pasang ulang', 'Tidak terisi: bersihkan port dulu, lalu tukar silang kabel dan adaptor untuk menemukan pelakunya', 'Tidak ada jaringan: mode pesawat off/on → lupakan Wi-Fi dan sambung ulang → mulai ulang router', 'Restart universal menyelesaikan sebagian besar masalah aneh; untuk perbaikan pilih layanan resmi, sebelum diserahkan: cadangan + keluar dari akun'],
+                'di-er-shi-zhang-jinjie': ['Mode pengembang: ketuk nomor build 7 kali untuk mengaktifkan', 'Kunci BL: perlindungan pabrikan; buka dengan hati-hati', 'Root: risikonya melebihi manfaat; tidak disarankan untuk pengguna biasa', 'Magisk tetap butuh BL terbuka, tetapi bisa menyembunyikan status root'],
+                'di-er-shi-yi-zhang': ['VPN = terowongan terenkripsi; VPN gratis justru bisa mencuri datamu', 'Bertahan dari man-in-the-middle di Wi-Fi publik: percayai HTTPS, matikan koneksi otomatis, urusan sensitif pakai data seluler', 'Jabat tangan HTTPS mengenkripsi dalam empat putaran, tetapi situs phishing juga bisa HTTPS', 'DoH/DoT mengenkripsi kueri DNS: operator tak bisa mengintip penjelajahanmu', 'Mode samaran = penghapus lokal, bukan jubah tak kasat: ISP dan situs tetap melihatmu', 'Checklist keamanan: matikan koneksi Wi-Fi otomatis, pindah ke DNS terenkripsi, aktifkan 2FA, audit izin aplikasi, dan blokir Juice Jacking'],
+                'di-er-shi-er-zhang': ['Kamera AI: kenali adegan → gabung banyak frame → optimasi cerdas', 'Asisten suara: mendengar → memahami → melaksanakan, tiga langkah', 'AI di perangkat: cepat, ramah privasi, bisa luring', 'Model besar AI terbagi skenario obrolan/menulis/menerjemahkan/gambar/belajar', 'Pemakaian khas: terjemahan langsung, penghapus AI, retouching AI, pengelolaan dokumen, pencarian gambar AI', 'Kerangka prompt CRISPE: peran + permintaan + konteks + keluaran + nada + contoh', 'Dengan AI, waspadai halusinasi dan kebocoran privasi', '"Peran-Konteks-Tugas-Batasan" adalah pintu masuk penulisan prompt yang lebih mudah', 'Ciri prompt bagus: spesifik, ada konteks, ada format, ada batasan, bisa diverifikasi'],
+                'di-er-shi-san-zhang': ['Unsur otomatisasi: pemicu + tindakan + logika keputusan opsional', 'Pintasan iOS: rutinitas pagi satu ketukan, mode hemat otomatis, pencatatan belanja lewat pemindaian', 'Android: auto clicker (makro layar), Tasker (otomatisasi paling kuat), MacroDroid (ramah pemula)', 'Jebakan: pemicu lokasi tak presisi, iOS tidak berjalan otomatis tanpa konfirmasi manual, Tasker butuh izin aksesibilitas', 'Cara berpikir otomatisasi: ubah pekerjaan berulang menjadi kondisi → tindakan, dan ponsel menjadi asisten pribadimu'],
+                'di-er-shi-si-zhang': ['Bootloader penjaga gerbang saat booting; verifikasi tanda tangan mencegah manipulasi', 'Kebijakan buka kunci BL berbeda per merek (Xiaomi mengizinkan/Huawei mengunci)', 'Pilihan root: Magisk/KernelSU/SuperSU', 'Tiga jenis flash: ROM resmi/Recovery pihak ketiga/ROM pihak ketiga'],
+                'di-er-shi-wu-zhang': ['Menjual ponsel lama: cadangan dulu → keluar akun → hapus terenkripsi → isi dan hapus lagi', 'Warisan digital: Kontak Warisan iCloud/Akun Nonaktif Google', 'Daur ulang: utamakan program tukar tambah resmi; ponsel lama bisa jadi kamera atau navigator'],
+                'di-er-shi-liu-zhang': ['Tiga standar ponsel AI: model besar di perangkat, tenaga NPU dalam TOPS, AI Agent lintas aplikasi', 'Strategi AI para pabrikan: Apple/Google/Huawei/Xiaomi/OPPO/vivo, masing-masing punya keunggulan', 'Satelit: pesan singkat BeiDou sudah turun ke kelas menengah, panggilan Tiantong tetap milik unggulan', 'Lipat: perangkat keras matang, aplikasi teradaptasi sekitar tujuh puluh persen, lipat gantung dan layar terbagi adalah pengalaman khasnya', '6G masih di perjalanan, Wi-Fi 7 sudah mendarat, Bluetooth LE Audio mulai menyebar', 'Baterai anoda silikon-karbon menjadikan 5000-6000mAh standar ponsel unggulan'],
+                'di-er-shi-qi-zhang': ['Aktifkan dulu mode sederhana atau perbesar huruf/ikon: lingkungan yang pas menghapus separuh masalah', 'Tiga hukum besi mendampingi lansia: jangan buru-buru, pakai analogi, tuliskan', 'Enam penipuan umum yang perlu diingatkan berulang; tiga lini pertahanan menahan 90% penipuan', 'Bantuan jarak jauh membuatmu bisa memperbaiki ponsel orang tua walau dari kota lain', 'Mode perhatian WeChat + masukan suara adalah dua fitur paling berguna bagi lansia', 'Panggilan SOS dan deteksi jatuh: pengaturan yang menyelamatkan nyawa di saat genting'],
+                'di-er-shi-ba-zhang': ['Memilih ponsel tiga langkah: dulu kebutuhan → lalu anggaran → akhirnya model', 'Hanya lima parameter inti: prosesor, layar, kamera, baterai dan pengisian, janji pembaruan', '¥1500-3500 adalah rentang paling menguntungkan dan paling direkomendasikan', 'Unggulan tahun lalu lebih untung daripada kelas menengah tahun ini', 'Lima perangkap: mitos multi-kamera, pemujaan megapiksel, versi operator, pemujaan layar melengkung, gimmick AI', '618 dan Double 11 adalah dua jendela waktu terbaik membeli ponsel dalam setahun'],
+                'di-er-shi-jiu-zhang': ['Lihat dulu data waktu layar; melihat keadaan dengan jernih adalah langkah pertama berubah', 'Pasang batas untuk aplikasi hiburan dan jadwal untuk Jangan Ganggu, dan kembali menguasai atensimu', 'Aturan 20-20-20 adalah kebiasaan merawat mata paling sederhana dan efektif', 'Menunduk melihat ponsel membebani leher 5-6 kali berat kepala; angkat ponsel dan regangkan leher berkala', 'Satu jam sebelum tidur tanpa ponsel; letakkan pengisi daya di luar jangkauan tangan', 'Antidot kecemasan informasi adalah "memblokir aktif", bukan "menerima lebih banyak"'],
+                'di-san-shi-zhang': ['Tiga kubu transmisi nirkabel: AirPlay (Apple), Miracast (Android), DLNA (dorong media lintas platform)', 'Transmisi berkabel lebih stabil dan tanpa jeda; ruang rapat wajib punya adaptor HDMI', 'Samsung DeX/mode desktop Huawei mengubah ponsel menjadi PC kantor ringan', 'Koneksi di mobil: empat solusi - CarPlay/Android Auto/HiCar/CarLife', 'Aturan transmisi di ruang rapat: uji lebih dulu, siapkan rencana B, sembunyikan pratinjau notifikasi'],
+                'di-san-shi-yi-zhang': ['Sebelum merekam, pastikan: siapa audiensnya, nilai apa yang diberikan, di platform mana unggah', 'Lima hal sebelum merekam: 1080P/30fps, bersihkan lensa, kunci fokus dan eksposur, pilih orientasi, aktifkan grid', 'Lima gerakan kamera: maju, mundur, goyang, geser, ikuti - stabilitas utama', 'Menyunting dengan CapCut: potong → transisi → takarir → BGM → ekspor, enam langkah', 'Tiga detik pertama menentukan segalanya; satu video satu pesan; kegigihan mengalahkan bakat'],
+                'di-san-shi-er-zhang': ['Ponsel hilang, 30 menit emas: pinjam ponsel orang dan telepon dirimu → kunci jarak jauh → blokir SIM → bekukan pembayaran → beri tahu keluarga dan teman → lapor polisi', '72 jam setelah tertipu: hentikan transfer → simpan bukti → telepon 96110 → lapor polisi → hubungi bank → ganti sandi', 'Ponsel terinfeksi: mode aman → hapus aplikasi mencurigakan → pemindaian keamanan → reset pabrik (upaya terakhir)', 'Akun dicuri: ganti sandi → keluar dari perangkat → periksa riwayat masuk → aktifkan 2FA → periksa tautan akun → periksa pembayaran', '99,9% pesan tebusan adalah penipuan: jangan balas, jangan bayar, tangkap layar dan blokir', 'Penipuan wajah/suara gandaan: cari cacat pada kedipan, mulut, tepi, dan cahaya; minta ia menoleh atau menutup wajah, ajukan pertanyaan pribadi, telepon balik ke nomor yang dikenal', 'Pembajakan SIM swap: jika ponsel tiba-tiba tampil "No service" itu alarm; pasang PIN SIM, aktifkan verifikasi kedua dari operator, dan pindahkan akun penting ke aplikasi authenticator', 'Lima kebiasaan harian: layar kunci + 2FA, Temukan Ponsel, PIN SIM, jangan pasang aplikasi asing, cadangan rutin', 'Gempa/cuaca ekstrem: berlindung di dekat dulu, lalu mengungsi; SMS menghemat baterai lebih dari panggilan panjang', 'Tanpa sinyal, utamakan SOS satelit (jika model mendukung); peringatan dan pengaturan ada di Bab 13'],
+                'di-san-shi-san-zhang': ['Vision Pro dan kacamata AR adalah pintu masuk komputasi baru di luar ponsel, tetapi belum menggantikannya dalam waktu dekat', 'Antarmuka otak-komputer masih 10-20 tahun dari konsumen; etika matang lebih dulu daripada teknologi', 'Ponsel berevolusi ke arah "tak terlihat": dari berpusat pada perangkat ke berpusat pada identitas', 'Etika AI, kedaulatan data, dan kesenjangan digital adalah isu inti dekade berikutnya', 'Tetap terhubung dan tetap mandiri: filsafat abadi kehidupan digital'],
+            };
+            Object.keys(summaries).forEach(id => {
+                const sec = document.getElementById(id);
+                // Lewati bab yang sudah punya ringkasan inline, agar tidak dobel
+                if (sec && !sec.querySelector('.chapter-summary')) {
+                    addChapterSummary(sec, summaries[id]);
+                }
+            });
+
+            // ===== Tombol salin (ditambahkan ke elemen kbd) =====
+            $$('.kbd').forEach(kbd => {
+                const btn = document.createElement('button');
+                btn.className = 'copy-btn';
+                btn.innerHTML = '<i class="fas fa-copy"></i>';
+                btn.setAttribute('aria-label', 'Salin');
+                btn.addEventListener('click', () => {
+                    const text = kbd.textContent.trim();
+                    navigator.clipboard.writeText(text).then(() => {
+                        btn.classList.add('copied');
+                        btn.innerHTML = '<i class="fas fa-check"></i>';
+                        setTimeout(() => {
+                            btn.classList.remove('copied');
+                            btn.innerHTML = '<i class="fas fa-copy"></i>';
+                        }, 1500);
+                    }).catch(() => {});
+                });
+                kbd.parentNode.insertBefore(btn, kbd.nextSibling);
+            });
+
+            // ===== Konten panjang yang bisa dilipat (level h4) =====
+            sections.forEach(sec => {
+                const h4s = $$('h4', sec);
+                h4s.forEach(h4 => {
+                    // Lipat hanya bagian h4 yang panjang
+                    let sibling = h4.nextElementSibling;
+                    let contentLength = 0;
+                    let elements = [];
+                    while (sibling && !sibling.matches('h4, h3, .chapter-nav, .chapter-summary')) {
+                        contentLength += (sibling.textContent || '').length;
+                        elements.push(sibling);
+                        sibling = sibling.nextElementSibling;
+                    }
+                    if (contentLength > 800) {
+                        // Menambah kepala lipatan
+                        const header = document.createElement('div');
+                        header.className = 'collapsible-header';
+                        header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
+                        h4.replaceWith(header);
+
+                        const body = document.createElement('div');
+                        body.className = 'collapsible-body';
+                        elements.forEach(el => body.appendChild(el));
+
+                        header.after(body);
+
+                        header.addEventListener('click', () => {
+                            const isCollapsed = body.classList.contains('collapsed');
+                            body.classList.toggle('collapsed', !isCollapsed);
+                            header.classList.toggle('collapsed', !isCollapsed);
+                        });
+                    }
+                });
+            });
+
+            // ===== Dasbor belajar: progres membaca + pemeriksaan kesehatan ponsel =====
+            const dashProgressRing = $('#progress-ring-fg');
+            const progressPercent = $('#progress-percent');
+            const readCountEl = $('#read-count');
+            const bookmarkCountEl = $('#bookmark-count');
+            const lastChapterEl = $('#last-chapter');
+            const healthScoreEl = $('#health-score');
+            const healthBarEl = $('#health-bar');
+            const healthMsgEl = $('#health-msg');
+            const checkInputs = $$('.check-input');
+            const DASH_RING_CIRCUMFERENCE = 213.6;
+
+            function updateDashboard() {
+                // Progres membaca
+                const completed = $$('.chapter-check.checked').length;
+                const total = sections.length;
+                const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+                if (dashProgressRing) {
+                    dashProgressRing.style.strokeDashoffset = DASH_RING_CIRCUMFERENCE * (1 - pct / 100);
+                }
+                if (progressPercent) progressPercent.textContent = pct + '%';
+                if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
+
+                // Jumlah penanda
+                const bookmarks = $$('.toc-item.bookmarked').length;
+                if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
+
+                // Bab terakhir
+                const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+                if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
+
+                // Pemeriksaan kesehatan
+                const checked = checkInputs.filter(c => c.checked).length;
+                const totalChecks = checkInputs.length;
+                const healthPct = totalChecks > 0 ? Math.round((checked / totalChecks) * 100) : 0;
+                if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
+                if (healthBarEl) healthBarEl.style.width = healthPct + '%';
+                if (healthMsgEl) {
+                    if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>Nilai sempurna! Keamanan ponselmu dalam kondisi prima';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'Bagus! ' + (totalChecks - checked) + ' butir masih bisa disempurnakan';
+                    else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'Cukup lulus - prioritaskan butir keamanan yang belum dicentang';
+                    else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>Ponselmu masih punya celah keamanan - segera perbaiki';
+                }
+            }
+
+            // Memulihkan status centang
+            checkInputs.forEach((input, i) => {
+                const saved = localStorage.getItem('health-check-' + i);
+                if (saved === 'true') input.checked = true;
+                input.addEventListener('change', () => {
+                    localStorage.setItem('health-check-' + i, input.checked);
+                    updateDashboard();
+                });
+            });
+
+            updateDashboard();
+            // Menyegarkan tiap 3 detik (menangkap centang bab)
+            setInterval(updateDashboard, 3000);
+
+            // ===== Membaca bersuara (TTS) =====
+            const ttsControls = $('#tts-controls');
+            const ttsPlayBtn = $('#tts-play');
+            const ttsPrevBtn = $('#tts-prev');
+            const ttsNextBtn = $('#tts-next');
+            const ttsStopBtn = $('#tts-stop');
+            const ttsSpeedUp = $('#tts-speed-up');
+            const ttsSpeedDown = $('#tts-speed-down');
+            const ttsSpeedDisplay = $('#tts-speed-display');
+            const ttsLabel = $('#tts-label');
+            const quickTtsBtn = $('#quick-tts');
+            let ttsUtterance = null;
+            let ttsSpeed = 1.0;
+            let ttsActive = false;
+            let ttsSectionIndex = -1;
+            let ttsPendingPlay = false;
+            const ttsSectionIds = sections.map(s => s.id);
+
+            function updateTtsSpeedDisplay() {
+                ttsSpeedDisplay.textContent = ttsSpeed.toFixed(1) + 'x';
+            }
+
+            function getSectionText(sec) {
+                if (!sec) return '';
+                // Menggandakan dan menghapus elemen yang tak perlu dibacakan
+                const clone = sec.cloneNode(true);
+                const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
+                removes.forEach(el => el.remove());
+                // Menghapus bagian terlipat namun menyimpan teksnya
+                const text = clone.textContent.replace(/\s+/g, ' ').trim();
+                return text;
+            }
+
+            function speakSection(index) {
+                if (!('speechSynthesis' in window)) {
+                    alert('Maaf, perambanmu tidak mendukung pembacaan suara. Coba Chrome atau Edge.');
+                    return;
+                }
+                if (index < 0 || index >= sections.length) return;
+
+                window.speechSynthesis.cancel();
+                ttsSectionIndex = index;
+                const sec = sections[index];
+                const text = getSectionText(sec);
+                if (!text) return;
+
+                const h3 = sec.querySelector('h3');
+                ttsLabel.textContent = h3 ? h3.textContent : 'Bab tanpa judul';
+
+                ttsUtterance = new SpeechSynthesisUtterance(text);
+                ttsUtterance.lang = 'id-ID';
+                ttsUtterance.rate = ttsSpeed;
+                ttsUtterance.pitch = 1.0;
+                ttsUtterance.volume = 1.0;
+
+                // Mencoba memakai suara bahasa Indonesia yang lebih natural
+                const voices = window.speechSynthesis.getVoices();
+                const zhVoice = voices.find(v => v.lang.startsWith('id'));
+                if (zhVoice) ttsUtterance.voice = zhVoice;
+
+                ttsUtterance.onstart = () => {
+                    ttsActive = true;
+                    ttsPlayBtn.classList.add('playing');
+                    ttsPlayBtn.querySelector('i').className = 'fas fa-pause';
+                    ttsControls.classList.add('active');
+                    if (quickTtsBtn) quickTtsBtn.classList.add('tts-active');
+                };
+
+                ttsUtterance.onend = () => {
+                    // Membacakan bab berikutnya otomatis
+                    if (ttsSectionIndex < sections.length - 1 && ttsActive) {
+                        ttsSectionIndex++;
+                        speakSection(ttsSectionIndex);
+                    } else {
+                        stopTts();
+                    }
+                };
+
+                ttsUtterance.onerror = (e) => {
+                    if (e.error !== 'interrupted' && e.error !== 'canceled') {
+                        console.warn('TTS error:', e.error);
+                    }
+                    stopTts();
+                };
+
+                window.speechSynthesis.speak(ttsUtterance);
+                ttsPendingPlay = false;
+            }
+
+            function toggleTtsPlay() {
+                if (!ttsActive) {
+                    // Menemukan bab yang sedang terlihat
+                    if (ttsSectionIndex < 0) {
+                        // Mulai dari awal atau dari bab terdekat ke posisi gulir
+                        const scrollCenter = window.scrollY + window.innerHeight / 2;
+                        let closestIdx = 0;
+                        let closestDist = Infinity;
+                        sections.forEach((sec, i) => {
+                            const rect = sec.getBoundingClientRect();
+                            const secCenter = rect.top + window.scrollY + rect.height / 2;
+                            const dist = Math.abs(scrollCenter - secCenter);
+                            if (dist < closestDist) {
+                                closestDist = dist;
+                                closestIdx = i;
+                            }
+                        });
+                        ttsSectionIndex = closestIdx;
+                    }
+                    speakSection(ttsSectionIndex);
+                } else if (window.speechSynthesis.speaking) {
+                    if (window.speechSynthesis.paused) {
+                        window.speechSynthesis.resume();
+                        ttsPlayBtn.classList.add('playing');
+                        ttsPlayBtn.querySelector('i').className = 'fas fa-pause';
+                    } else {
+                        window.speechSynthesis.pause();
+                        ttsPlayBtn.classList.remove('playing');
+                        ttsPlayBtn.querySelector('i').className = 'fas fa-play';
+                    }
+                }
+            }
+
+            function stopTts() {
+                window.speechSynthesis.cancel();
+                ttsActive = false;
+                ttsSectionIndex = -1;
+                ttsUtterance = null;
+                ttsPlayBtn.classList.remove('playing');
+                ttsPlayBtn.querySelector('i').className = 'fas fa-play';
+                ttsControls.classList.remove('active');
+                ttsLabel.textContent = 'Belum dimulai';
+                if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
+            }
+
+            // Mengikat peristiwa
+            if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
+            if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
+            if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
+                if (ttsSectionIndex > 0) {
+                    ttsSectionIndex -= 2;
+                    if (ttsSectionIndex < 0) ttsSectionIndex = 0;
+                    speakSection(ttsSectionIndex);
+                }
+            });
+            if (ttsNextBtn) ttsNextBtn.addEventListener('click', () => {
+                if (ttsSectionIndex < sections.length - 1) {
+                    speakSection(ttsSectionIndex + 1);
+                }
+            });
+            if (ttsSpeedUp) ttsSpeedUp.addEventListener('click', () => {
+                ttsSpeed = Math.min(2.5, ttsSpeed + 0.25);
+                updateTtsSpeedDisplay();
+                if (ttsActive && ttsUtterance) {
+                    ttsUtterance.rate = ttsSpeed;
+                    // Membuat ulang bagian saat ini lalu memutarnya
+                    const idx = ttsSectionIndex;
+                    window.speechSynthesis.cancel();
+                    setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
+                }
+            });
+            if (ttsSpeedDown) ttsSpeedDown.addEventListener('click', () => {
+                ttsSpeed = Math.max(0.5, ttsSpeed - 0.25);
+                updateTtsSpeedDisplay();
+                if (ttsActive && ttsUtterance) {
+                    ttsUtterance.rate = ttsSpeed;
+                    const idx = ttsSectionIndex;
+                    window.speechSynthesis.cancel();
+                    setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
+                }
+            });
+            if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
+
+            // Pintasan: tombol R menyalakan/mematikan pembacaan suara
+            document.addEventListener('keydown', (e) => {
+                if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+                if (e.key === 'r' || e.key === 'R') {
+                    if (!e.ctrlKey && !e.metaKey && !e.altKey) {
+                        toggleTtsPlay();
+                    }
+                } else if (e.key === 'Escape' && ttsActive) {
+                    stopTts();
+                }
+            });
+
+            // ===== Inisialisasi =====
+            onScroll();
+            tryRestorePosition();
+        })();
+    </script>
+</body>
+</html>

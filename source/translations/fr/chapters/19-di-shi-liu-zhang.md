@@ -1,0 +1,118 @@
+---
+id: di-shi-liu-zhang
+num: 16
+part: jin-jie-pian
+nav: Chapitre 16 : Comptes et services cloud
+toc: default
+kind: chapter
+---
+
+### Chapitre 16 : Système de comptes et services cloud
+
+{class="chapter-intro mb-4"}
+J'ai un ami dont le téléphone a été volé l'année dernière. Sa première pensée n'était pas « combien vaut le téléphone », mais « est-ce que je peux récupérer les photos à l'intérieur ? ». Malheureusement, il n'avait pas activé la sauvegarde cloud. Le téléphone est un bien matériel, mais les données dans le compte, une fois perdues, ne reviennent jamais. Ce chapitre parle de comment souscrire une véritable assurance pour votre vie numérique.
+
+#### I. Votre compte de smartphone, que gère-t-il vraiment ?
+
+Beaucoup de gens pensent qu'un compte sert uniquement à télécharger des applications. En réalité, ce qui se cache derrière un compte de smartphone est bien plus important que vous ne l'imaginez :
+
+- <strong>Carnet de contacts</strong>: les numéros de téléphone que vous avez enregistrés pendant des années, voire des dizaines d'années.
+- <strong>Photos et vidéos</strong>: de la naissance de l'enfant à la cérémonie de remise des diplômes, du premier rendez-vous au voyage de mariage.
+- <strong>Notes</strong>: vos inspirations notées au fil de l'eau, journal intime, mots de passe (oui, beaucoup de gens notent leurs mots de passe dans les notes).
+- <strong>Historique d'achats d'applications</strong>: les applications payantes et les achats in-app pour lesquels vous avez dépensé des centaines de yuans.
+- <strong>Localiser mon téléphone</strong>: après la perte du téléphone, c'est le seul outil qui peut vous aider à localiser, verrouiller et effacer à distance les données.
+
+Si vous utilisez un iPhone, tout ce qui précède est lié à votre identifiant Apple. Si vous utilisez Android, c'est lié à votre compte Huawei/Xiaomi/OPPO/vivo, ainsi qu'à votre compte Google. Ces comptes sont le « livret de famille » de votre vie numérique, sans lui, beaucoup de choses deviennent compliquées.
+
+#### II. Trois choses à faire absolument, maintenant
+
+1. <strong>Activer l'authentification à deux facteurs</strong>: que vous utilisiez Apple ou Android, la première chose à faire est d'aller dans les réglages du compte pour activer « l'authentification à deux facteurs » ou « la vérification en deux étapes ». C'est comme ajouter un verrou à votre porte — le mot de passe seul ne suffit plus, il faut aussi un code de vérification sur votre téléphone. Même si quelqu'un devine votre mot de passe en ligne, sans votre téléphone, il ne peut pas entrer.
+2. <strong>Lier un mode de récupération fiable</strong>: l'authentification à deux facteurs est très sûre, mais comporte aussi un risque — que faire si vous perdez votre propre téléphone ? Le système vous demandera donc de configurer une « clé de récupération » ou un « e-mail/téléphone de secours ». C'est le seul moyen de récupérer votre compte en cas d'urgence, il vaut mieux l'écrire sur papier, ne le stockez pas dans le téléphone.
+3. <strong>Confirmer que « Localiser mon téléphone » est activé</strong>: cette fonction permet, après la perte du téléphone, de le localiser, le verrouiller, faire sonner, voire d'effacer à distance toutes les données. C'est la dernière ligne de défense. Beaucoup de gens sautent cette étape lors de l'achat du téléphone, et lorsqu'ils veulent l'utiliser plus tard, ils découvrent qu'elle n'est pas activée, et il est trop tard.
+
+#### III. iCloud : « l'air » des utilisateurs Apple
+
+Pour ceux qui utilisent un iPhone, tôt ou tard, il faut faire face à la question cruciale : que faire quand l'espace iCloud est plein ?
+
+Apple vous offre gratuitement 5 Go, honnêtement, ces 5 Go ne suffisent même pas pour une seule sauvegarde. La plupart des gens finissent donc par recevoir la fenêtre popup ennuyeuse : « Espace de stockage iCloud plein ». À ce moment-là, vous avez trois options :
+
+- <strong>Nettoyer</strong>: allez dans Réglages → votre nom → iCloud → Gérer le stockage, regardez qui occupe votre espace. Généralement, les photos et les sauvegardes sont les plus grosses. Vous pouvez d'abord supprimer les anciennes sauvegardes inutiles.
+- <strong>Mettre à niveau</strong>: 50 Go pour 6 yuans par mois, 200 Go pour 21 yuans par mois. Personnellement, je trouve que 50 Go suffisent pour la plupart des gens, principalement pour les sauvegardes et les vignettes de photos.
+- <strong>Solution alternative</strong>: si vous ne voulez pas payer, vous pouvez exporter régulièrement les photos vers l'ordinateur, puis désactiver la synchronisation des photos iCloud. Mais vous perdez alors la commodité de la sauvegarde automatique des photos.
+
+Un rappel important : la photothèque iCloud n'est pas un « disque réseau » — c'est une « synchronisation ». Si vous supprimez une photo sur le téléphone, elle sera aussi supprimée sur iCloud. Si ce que vous voulez est « sauvegarder sur le cloud puis vider le téléphone », alors les photos iCloud ne sont pas ce qu'il vous faut, vous avez besoin de la sauvegarde iCloud, ou d'un disque réseau tiers.
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-crown mr-2"></i>iCloud+ : la trinité de confidentialité réservée aux utilisateurs payants
+
+{class="mt-1"}
+Il suffit de passer à n'importe quel palier iCloud payant (50 Go/200 Go/2 To, etc.) pour devenir automatiquement <strong>iCloud+</strong> utilisateur et débloquer trois fonctions de protection de la vie privée :
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- <strong>Private Relay (relais privé)</strong> : Le « VPN » version Apple. Le trafic de navigation Safari transit par les serveurs d'Apple avant d'être envoyé au site, personne (y compris Apple) ne peut voir à la fois qui vous êtes et ce que vous consultez. Idéal pour protéger la vie privée sur Wi-Fi public. Chemin de paramétrage :<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Réglages &gt; Votre nom &gt; iCloud &gt; Relais privé</code>.
+- <strong>Hide My Email (masquer mon e-mail)</strong> : Génère une adresse e-mail aléatoire à usage unique lors de l'inscription sur un site/application, les e-mails sont automatiquement transférés vers votre vraie adresse e-mail. Si vous ne voulez plus recevoir d'e-mails de ce site, désactivez simplement cette adresse aléatoire, votre vraie adresse n'est pas exposée. Chemin de paramétrage :<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Réglages &gt; Votre nom &gt; iCloud &gt; Masquer mon e-mail</code>.
+- <strong>Domaine de messagerie personnalisé</strong> : Permet d'utiliser votre propre domaine (par exemple @votrenom.com) pour envoyer et recevoir des e-mails iCloud, idéal pour la marque personnelle ou la gestion des e-mails familiaux.
+
+{class="mt-1"}
+Remarque : Private Relay n'est pas disponible dans certains pays/régions, les utilisateurs en Chine peuvent avoir besoin de solutions alternatives.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-shield-halved mr-2"></i>Protection avancée des données iCloud (ADP) — le véritable chiffrement de bout en bout
+
+{class="mt-1"}
+Fin 2022, Apple a lancé <strong>Protection avancée des données iCloud (Advanced Data Protection, ADP)</strong>, étendant le chiffrement de bout en bout (E2EE) des quelques données de santé et de mots de passe à <strong>la grande majorité des données iCloud</strong> — photos, notes, sauvegardes iCloud, informations sur l'appareil, etc., soit 23 catégories de données au total.
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- <strong>Qu'est-ce que l'E2EE</strong> : La clé de chiffrement n'existe que sur votre appareil, même les serveurs d'Apple ne l'ont pas. Même si Apple était piraté ou si les autorités exigeaient les données, Apple ne pourrait pas fournir de données en clair déchiffrables.
+- <strong>Chemin d'activation</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Réglages &gt; Votre nom &gt; iCloud &gt; Protection avancée des données</code>, suivez les instructions pour configurer un contact de récupération / une clé de récupération (<strong>obligatoire</strong>, si vous perdez la clé, vos données ne pourront pas être récupérées).
+- <strong>Précautions</strong> : ① Après activation, conservez soigneusement la clé de récupération, sinon les données ne pourront pas être récupérées en cas de perte de compte ; ② Les albums photo partagés, la photothèque iCloud partagée et quelques autres fonctions ne participent pas à l'E2EE ; ③ Les Apple ID de la région Chine continentale ne prennent pas encore en charge l'ADP, il faut basculer vers un compte d'une autre région.
+
+{class="mt-1"}
+En un mot : si votre compte contient des données privées importantes et que la région de votre compte le permet, il est fortement recommandé d'activer l'ADP — c'est la protection la plus forte des données cloud accessible à l'utilisateur ordinaire.
+:::
+
+#### IV. Synchronisation et sauvegarde, ne les confondez pas
+
+Ces deux mots se ressemblent, mais les conséquences sont totalement différentes :
+
+- <strong>La synchronisation</strong> est bidirectionnelle : si vous supprimez sur le téléphone, le cloud supprime aussi ; si vous supprimez sur le cloud, le téléphone supprime aussi. Les photos iCloud, les contacts, les notes sont tous synchronisés. L'avantage est la cohérence entre plusieurs appareils, l'inconvénient est « une fois supprimé, c'est vraiment parti ».
+- <strong>La sauvegarde</strong> est unidirectionnelle : le téléphone prend un « instantané » de son état actuel et le stocke dans le cloud. Ensuite, si vous supprimez quelque chose sur le téléphone, la version dans la sauvegarde cloud est toujours là. La sauvegarde iCloud, la sauvegarde locale sur ordinateur, sont des sauvegardes. L'avantage est que les données sont plus sûres, l'inconvénient est qu'elles occupent de l'espace et ne se mettent pas à jour en temps réel.
+
+#### V. La matrice de comptes des utilisateurs Android
+
+Côté Android, la situation est un peu plus complexe que chez Apple, car vos données peuvent être réparties sur plusieurs comptes :
+
+- <strong>Compte de marque</strong>(Huawei/Xiaomi/OPPO/vivo) : gère votre espace cloud, la localisation du téléphone, la boutique d'applications, le portefeuille. Chaque marque a son propre service cloud, généralement avec un modèle de base gratuit + extension payante.
+- <strong>Compte Google</strong>: si vous utilisez Gmail, Google Photos, Google Contacts, ces éléments sont dans le compte Google. Google offre 15 Go gratuits, plus généreux qu'Apple, mais partagé avec Gmail et Drive.
+- <strong>WeChat/QQ</strong>: ils sont indépendants du système du téléphone. Vos historiques de discussion et favoris WeChat ne sont ni dans le compte de marque ni dans le compte Google, uniquement sur les serveurs de WeChat.
+
+Ainsi, lorsque les utilisateurs Android font des sauvegardes, ils doivent vérifier séparément : la sauvegarde cloud de la marque, la sauvegarde Google, la sauvegarde de l'historique WeChat, les trois sont indispensables.
+
+#### VI. Partage familial : pour que la famille en bénéficie aussi
+
+Le « partage familial » d'Apple permet de partager avec votre famille les achats d'applications, la musique, les films, l'espace iCloud, et même la position. Jusqu'à 6 personnes peuvent être ajoutées. Méthode de configuration : Réglages → votre nom → Partage familial. Huawei et Xiaomi ont des fonctions similaires, dans les réglages du compte vous trouverez « partage familial » ou « cloud familial ».
+
+Un scénario très pratique : configurez le partage familial sur le téléphone de vos parents, ainsi vous pourrez voir leur position à tout moment (à condition qu'ils soient d'accord), au cas où une personne âgée se perdrait ou serait injoignable, vous auriez une localisation.
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>Les conséquences d'un piratage de compte sont plus graves que vous ne le pensez
+
+{class="mt-1"}
+Si un hacker obtient votre mot de passe de compte, il peut : verrouiller à distance votre téléphone et extorquer une rançon, consulter vos photos et contacts, utiliser vos moyens de paiement pour acheter. Plus problématique encore, si votre compte est lié à trop de choses, la récupération du compte elle-même est un cauchemar. Donc, l'authentification à deux facteurs, activez-la maintenant.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>Pratique : faites un check-up complet de votre compte
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Ouvrez les réglages du téléphone, allez sur la page du compte, confirmez que l'authentification à deux facteurs est activée.
+2. Vérifiez si les « numéros de téléphone de confiance » et la « clé de récupération » sont configurés, notez la clé sur papier.
+3. Entrez dans la gestion iCloud ou de l'espace cloud, regardez quelles données sont synchronisées, désactivez ce qui n'est pas nécessaire.
+4. Confirmez que « Localiser mon téléphone » est activé.
+5. Si vous utilisez Android, vérifiez que la sauvegarde cloud de la marque, la sauvegarde Google et la sauvegarde WeChat sont toutes couvertes.
+:::

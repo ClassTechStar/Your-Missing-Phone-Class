@@ -1,0 +1,181 @@
+---
+id: di-si-shi-si-zhang
+num: 44
+part: ai-biancheng-pian
+nav: 第四十四章：從0到1實戰——完整專案全流程
+toc: default
+kind: chapter
+---
+
+### 第四十四章：從0到1實戰——完整專案全流程
+
+{class="chapter-intro mb-4"}
+理論學完了，現在是動手的時候。本章不是簡單的"照著敲"教學，而是一套"怎麼想、怎麼問、怎麼驗"的實戰方法論。我們會用三個不同難度的專案，展示從需求到成品的完整思考過程。無論你用哪個工具，這套流程都適用。
+
+#### 一、專案一：極簡個人工具站（入門級）
+
+##### 1. 需求思考
+
+目標：建立一個個人工具站網頁，展示 3-4 個實用小工具的入口。這是一個純前端專案，不需要後端和資料庫。重點不是工具本身有多複雜，而是體驗"從需求到成品"的完整流程。
+
+按照需求五要素：Who——個人使用。What——一個展示工具入口的網頁。Why——把常用工具集中在一個頁面方便訪問。How——單檔案 HTML+CSS+JS，不使用框架。Constraint——30 分鐘內完成，不需要部署。
+
+##### 2. 下達指令
+
+基於 Think Before Coding 原則，你的指令應該包含足夠的資訊讓 AI 理解目標，但不需要指定每個實現細節：
+
+::: div .code-block
+:::inline div .code-head
+<span>給 AI 的指令</span><span class="dots">···</span>
+:::
+
+```
+請建立一個個人工具站網頁，要求：
+1. 單檔案HTML（內聯CSS和JS），不使用框架
+2. 暗色主題，現代極簡風格
+3. 展示4個工具入口卡片：
+   - 文字摘要工具
+   - 字數統計工具
+   - 顏色選擇器
+   - 二維碼生成器
+4. 每個卡片有圖示、標題、簡短描述
+5. 卡片有懸停動畫效果
+6. 響應式佈局，手機上可用
+7. 頂部有一個標題欄
+請直接給出完整的HTML檔案。
+```
+:::
+
+##### 3. 驗收與迭代
+
+AI 給出程式碼後，按照迭代驗證的三層檢查進行驗收。第一層功能驗證：檔案能否在瀏覽器中開啟？4 個卡片是否都顯示了？懸停動畫是否正常？第二層邊界驗證：在手機螢幕尺寸下佈局是否正常？視窗很窄時卡片是否會換行？第三層架構驗證：程式碼是否可讀？CSS 是否內聯在一個 style 標籤中？有沒有明顯的冗餘？
+
+如果某個工具卡片的功能也想實現（而不只是入口），可以逐步新增——每次新增一個工具的功能，驗證後再新增下一個。這就是"小步快跑"策略的實際應用。
+
+#### 二、專案二：全棧記帳系統（進階級）
+
+##### 1. 需求思考與 PRD
+
+目標：一個有前端、後端和資料庫的全棧記帳應用。這個專案比第一個複雜得多，需要用到第四十章的需求工程方法。
+
+先寫 PRD。按照第四十章第三節的模板，寫出專案概述、功能列表、技術方案、資料模型和開發計劃。技術方案的選擇要考慮 Simplicity First 原則——前端用 React 但不引入 Redux 等複雜狀態管理，後端用 Node.js 但不引入微服務，資料庫用 SQLite 而非 PostgreSQL（開發階段）。
+
+開發計劃拆解為 5 步：Step 1 後端 API 骨架（Express 伺服器 + SQLite + CRUD 介面）；Step 2 前端基礎頁面（記錄列表 + 新增表單）；Step 3 前後端聯調（API 呼叫 + 資料展示）；Step 4 分類和篩選功能；Step 5 月度彙總和簡單圖表。每步完成後都是"能用的東西"。
+
+##### 2. 設定專案記憶檔案
+
+在開始編碼之前，先建立專案記憶檔案。這是上下文工程的核心實踐——讓 AI 在每次對話開始時都瞭解專案背景。
+
+::: div .code-block
+:::inline div .code-head
+<span>CLAUDE.md</span><span class="dots">···</span>
+:::
+
+```
+# 專案：全棧記帳應用
+## 概述
+個人記帳應用，支援收支記錄、分類、月度彙總。
+## 技術棧
+- 前端：React + TypeScript + Vite
+- 後端：Node.js + Express + TypeScript
+- 資料庫：SQLite (透過 better-sqlite3)
+- 前後端共享型別定義
+## API約定
+- 基礎路徑：/api
+- 返回格式：{ success: boolean, data: any, error: string }
+- RESTful風格
+## 資料模型
+Record { id, amount, type, category, note, date }
+## 程式碼規範
+- TypeScript嚴格模式
+- 縮排2空格
+- 函式有JSDoc註釋
+- 中文註釋和提交資訊
+```
+:::
+
+##### 3. 逐步實現
+
+按照開發計劃，每一步用一個獨立的對話來完成。以下是第一步的指令示例：
+
+::: div .code-block
+:::inline div .code-head
+<span>給 AI 的指令（Step 1）</span><span class="dots">···</span>
+:::
+
+```
+我需要建立後端API骨架。
+要求：
+1. Express伺服器，埠3001
+2. SQLite資料庫，表名records
+3. records表欄位：
+   id (TEXT PRIMARY KEY)
+   amount (REAL)
+   type (TEXT: 'income'|'expense')
+   category (TEXT)
+   note (TEXT)
+   date (TEXT: YYYY-MM-DD)
+4. CRUD介面：
+   GET /api/records - 獲取所有記錄
+   POST /api/records - 新增記錄
+   PUT /api/records/:id - 更新記錄
+   DELETE /api/records/:id - 刪除記錄
+5. 錯誤處理中介軟體
+請給出完整的後端程式碼結構。
+```
+:::
+
+注意這個指令的特點：它只描述當前這一步（後端骨架），不摻雜前端需求；它明確列出了欄位和介面（給 AI 足夠的約束），但具體實現由 AI 決定；它遵循了 Goal-Driven Execution 原則——說"做什麼"而非"怎麼做"。
+
+AI 給出程式碼後，立即驗證：執行伺服器，用 curl 或 Postman 測試每個介面是否正常工作。確認無誤後，開新對話處理 Step 2（前端基礎頁面）。每一步都遵循"指令-驗證-新對話"的迴圈。
+
+#### 三、專案三：AI 增強應用（進階）
+
+##### 1. 專案構思
+
+目標：一個接入大型語言模型 API 的應用——比如一個"AI 學習助手"，使用者輸入學習內容，AI 生成摘要、關聯知識點、推薦學習資源。這個專案的特殊之處在於：你的應用本身就在呼叫 AI，你需要處理 API 呼叫、prompt 工程、錯誤處理等新問題。
+
+這個專案教會你的最重要的一課是：當你"用 AI 來寫呼叫 AI 的程式碼"時，你需要格外注意 prompt 工程。你的應用呼叫大型語言模型 API 時使用的 prompt，也需要遵循本指南討論的原則——清晰、簡潔、目標驅動。
+
+##### 2. 關鍵技術點
+
+這個專案涉及幾個你在前兩個專案中沒遇到的技術點：
+
+- API 金鑰管理：金鑰絕不能硬編碼在程式碼中，用環境變數管理；
+- 流式響應處理：大型語言模型的回覆通常是流式的，需要逐字顯示；
+- Token 用量控制：大型語言模型按 token 計費，需要在應用層面控制用量；
+- Prompt 模板管理：不同功能用不同的 prompt 模板，需要結構化管理。
+
+這些技術點都可以讓 AI 幫你實現，但你需要理解每個技術點的"為什麼"——為什麼金鑰不能硬編碼？為什麼需要流式響應？為什麼 token 用量需要控制？理解了"為什麼"，你才能判斷 AI 的方案是否合理。
+
+#### 四、通用實戰流程清單
+
+無論專案大小，以下是一個通用的 AI 程式設計實戰流程清單。每次開始新專案時，過一遍這個清單，確保沒有遺漏關鍵步驟。
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">階段</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">做什麼</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">對應原則</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1. 需求思考</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">過一遍需求五要素，想清楚要做什麼</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Think Before Coding</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2. 需求拆解</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把大需求拆成可獨立驗證的小步驟</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Simplicity First</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3. 寫PRD</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">整理成結構化檔案，作為參考</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Goal-Driven</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. 設定記憶檔案</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">建立CLAUDE.md或同類檔案</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Harness Engineering</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5. 逐步實現</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每步一個對話，指令-驗證-下一步</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Surgical Changes</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6. 測試驗證</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每步完成後立即測試功能正確性</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Iterate &amp; Verify</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">7. 程式碼審查</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">檢查架構合理性、安全性、可維護性</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Iterate &amp; Verify</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">8. 迭代最佳化</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">根據測試和審查結果迭代改進</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Iterate &amp; Verify</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+AI 程式設計通用實戰流程清單
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+來動手：本週完成"專案一"
+
+{class="mt-1"}
+把第四十四章第一節的"個人工具站"當成你的第一個 AI 程式設計作業：花 5 分鐘過五要素，把指令發給 AI（任何工具都行），再按三層驗證驗收。30 分鐘內完成它——你的第一個 AI 程式設計作品就誕生了。做完記得把它存好，這是你從"讀者"變成"實踐者"的紀念品。
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+本章小結
+
+- 專案一（入門）：純前端工具站——體驗完整流程，30 分鐘能完成
+- 專案二（進階）：全棧記帳系統——PRD + 記憶檔案 + 5 步逐步實現，每步"能用"
+- 專案三（進階）：AI 學習助手——用 AI 寫呼叫 AI 的程式碼，注意 prompt 工程
+- 通用流程八步：需求思考→拆解→PRD→記憶檔案→逐步實現→測試→審查→迭代
+- 每一步都遵循"指令-驗證-新對話"迴圈
+:::

@@ -1,0 +1,112 @@
+---
+id: di-si-shi-san-zhang
+num: 43
+part: ai-biancheng-pian
+nav: 第四十三章：對話工程——高效對話之術
+toc: default
+kind: chapter
+---
+
+### 第四十三章：對話工程——與AI高效協作之對話技術
+
+{class="chapter-intro mb-4"}
+對話乃AI編程核心之交互方式。然請注意：「對話」不等於「聊天」——高效之AI編程對話乃一種有結構之溝通技術，吾儕謂之「對話工程」。其所研究者：如何以最少之對話輪次，獲得最高質量之代碼產出。直言之，此章即教汝如何與AI「將話說清楚」。
+
+#### 一、Prompt分層策略
+
+與AI之對話可分為三個層次，每層承擔不同之功能。理解此三個層次，汝便能如搭積木一般，組合出高效之Prompt。
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">層次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">示例</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">頻率</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系統層</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">設定AI之角色與全局約束</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「汝乃React專家，代碼必須用TypeScript」</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">項目開始時設定一次</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">任務層</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">描述當前所欲作之具體任務</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「實現一個表單組件，包含用戶名與密碼字段」</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每個任務開始時予出</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">反饋層</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">對AI產出進行評價與修正</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">「密碼字段缺少顯示／隱藏切換，請添加」</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">根據產出質量予出</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+對話Prompt之三個層次
+
+系統層之Prompt通常寫於項目記憶檔案中（如CLAUDE.md），不須每次對話重複。任務層乃汝於對話中最常用者——它應包含「做何」「用何技術」「有何約束」三個要素。反饋層最考驗功力——好之反饋能使AI精準修正，壞之反饋只會使其重新猜測。
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+小訣：反饋三板斧
+
+{class="mt-1"}
+一個實用之反饋模板乃「指出問題＋說明期望＋提供上下文」。譬如：「第25行之錯誤處理只用了console.log（指出問題），生產環境當用統一之錯誤處理器並返回用戶友好提示（說明期望），項目裡有一個handleError函數可用（提供上下文）」。此種反饋比「改一下錯誤處理」有效十倍。
+:::
+
+#### 二、調試對話：如何描述錯誤使AI快速定位
+
+調試乃AI編程中最頻繁之場景之一。汝遇bug時，如何向AI描述問題，直接決定其能否快速助汝定位與修復。以下為調試對話之四個要點：
+
+1. 予AI「看」原始信息，而非汝之轉述。將錯誤日誌、異常堆棧、相關代碼直接以@引用予AI，勿用「好像有個何報錯」來描述。AI看到原始信息比看到汝之理解更準確。
+2. 描述「期望行為」與「實際行為」之差異。「吾期望點擊按鈕後跳轉至首頁（期望），但實際點擊後頁面無反應（實際）」——此種描述比「按鈕壞了」有用得多。
+3. 提供復現步驟。「先輸入用戶名，然後點擊登錄按鈕，就會出現此錯誤」——復現步驟使AI能模擬汝操作之路徑，更容易定位問題。
+4. 說清楚汝已嘗試了何。「吾已檢查了網絡請求，返回200，數據正常」——此能助AI排除已驗證之方向，不浪費時間重複排查。
+
+::: div .grid .md:grid-cols-2 .gap-3 .my-3
+::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
+{class="vs-title"}
+差之調試描述
+
+{class="font-mono text-xs leading-relaxed"}
+按鈕點擊沒反應，助吾看看
+:::
+
+::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
+{class="vs-title"}
+好之調試描述
+
+{class="font-mono text-xs leading-relaxed"}
+點擊登錄按鈕後頁面無反應。 期望行為：點擊後跳轉至/home頁面 實際行為：點擊後無任何反應，控制臺無報錯 復現步驟： 1. 於登錄頁輸入用戶名admin與密碼123456 2. 點擊「登錄」按鈕 3. 頁面無反應 已排查： - 網絡請求正常，返回200 - onClick事件已綁定 - 已檢查LoginButton組件之代碼 相關文件：@src/components/LoginButton.tsx @src/pages/Login.tsx
+:::
+:::
+
+#### 三、迭代策略：小步快跑對大步重構
+
+AI編程中之迭代有兩種基本策略，適用於不同場景。理解它等之區別，能助汝於不同情況下作出正確選擇。
+
+「小步快跑」策略適用於功能開發與bug修復。其核心乃：每次使AI只作一個小之修改，驗證通過後再作下一個。優勢乃每一步皆可驗證、可回退，風險可控；劣勢乃速度較慢，須頻繁之對話交互。適合：新功能開發、不確定最優方案時之探索、對AI產出不太放心時之謹慎迭代。
+
+「大步重構」策略適用於明確知曉目標之大規模修改。其核心乃：一次性描述完整之目標，使AI自主規劃並執行整個修改。優勢乃速度快，AI能看到全局圖景作出更優之架構決策；劣勢乃風險高，若AI理解有偏差，修正成本大。適合：明確之架構升級、大規模代碼遷移、有充分測試保障之重構。
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">維度</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">小步快跑</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">大步重構</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每次修改量</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一個功能點或一個bug</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一個模組或一個架構層</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">驗證頻率</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">每次修改後立即驗證</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全部修改完成後統一驗證</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">對話輪次</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多（每功能5-10輪）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">少（每模組1-3輪）</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">風險</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">低，每步可回退</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">其弊也，偏差既現，修正之費甚鉅</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">適用場景</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新功能、探索性開發</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">目標明確之重構、遷移</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">前提條件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">無特殊要求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">須有測試覆蓋</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+兩種迭代策略之對比
+
+實踐中，兩種策略常常組合使用。譬如重構一個模組時，先用「大步重構」使AI予出整體方案，審查方案後，再用「小步快跑」逐步執行。如此既保全局之視角，又控執行之風險。
+
+#### 四、多輪對話之上下文管理
+
+隨著對話輪次增加，汝須主動管理對話上下文，避免「AI忘記了早期信息」之問題。以下為幾個實用之上下文管理技巧。
+
+第一，「錨定」關鍵信息。對話開始時，將關鍵約束寫清楚，並於後續對話中適時重申。譬如「記住，吾儕之數據存在localStorage，不能用數據庫」——於相關之修改請求中重申此約束，防止AI遺忘。
+
+第二，善用「總結—續接」技巧。當對話變得甚長時，可使AI「總結一下目前之進展與待辦事項」，然後開一個新對話，將此總結作為起點。如此既保留了關鍵上下文，又避免了長對話之退化。
+
+第三，「一個對話一個任務」。此乃最簡單亦最有效之上下文管理策略。每個對話只處理一個任務或一個功能點，完成後開新對話處理下一個。此天然限制了對話長度，保持上下文清晰。
+
+第四，利用工具之上下文管理功能。大多數AI編程工具皆有「清除上下文」或「新會話」按鈕——當汝感覺AI之回答質量下降時，勿猶豫，開一個新會話。丟失一些對話歷史，勝過繼續於退化之上下文中掙扎多矣。
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+動手一試：為汝之AI當一次「病人」
+
+{class="mt-1"}
+故意於瀏覽器裡作一個小頁面，製造一個bug（譬如按鈕沒反應）。然後按本章「好之調試描述」之格式，向AI完整描述一次：原始信息、期望對實際、復現步驟、已排查項。感受一下AI定位問題速度之差異——汝便會理解為何「描述問題」本身即門手藝。
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+本章小結
+
+- Prompt三層：系統層（寫於記憶檔案）、任務層（做何＋技術＋約束）、反饋層（指出問題＋期望＋上下文）
+- 調試四要點：予原始信息、期望對實際、復現步驟、已排查項
+- 小步快跑：低風險高輪次，適合新功能；大步重構：高風險低輪次，須測試保障
+- 上下文管理四招：錨定關鍵信息、總結—續接、一個對話一個任務、果斷開新會話
+:::

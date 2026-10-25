@@ -1,0 +1,145 @@
+---
+id: di-wu-shi-qi-zhang
+num: 57
+part: an-zhuo-kai-fa-pian
+nav: 제57장: 고급 성장 경로 — 권한, 알림과 최신 아키텍처
+toc: default
+kind: chapter
+---
+
+### 제57장: 심화의 길 — 권한, 알림, 그리고 현대적 아키텍처
+
+{class="chapter-intro mb-4"}
+앱을 만들 수 있는 것은 시작일 뿐이에요. 이번 장은 "만들 줄 안다"에서 "잘 만든다"로 가는 몇 개의 고개를 다뤄요. 어떻게 우아하게 권한을 요청하는지, 어떻게 알림을 보내도 미움받지 않는지, 어떻게 아키텍처를 한 단계 더 끌어올리는지, 그리고 — 2026년에는 AI와 짝이 되어 안드로이드 코드를 어떻게 쓰는지까지요. 하나하나 모두 실제 프로젝트에서 곧 만나게 될 내용이에요.
+
+#### 1. 런타임 권한: 먼저 노크하고, 그다음 들어가기
+
+카메라, 위치, 연락처, 알림…… 이런 "민감 구역"은 안드로이드가 앱 실행 중에 사용자에게 요청하도록 요구해요(Android 6부터). 규칙은 이래요. 먼저 선언하고(Manifest), 다음에 요청하고(코드), 사용자가 거절하면 우아하게 기능을 줄이기. Compose에서는 공식 라이브러리 Accompanist의 rememberPermissionState가 가장 마음 편해요:
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · 런타임 권한(Compose 버전)</span><span class="dots">···</span>
+:::
+
+```
+// 먼저 Manifest에 선언:
+// &lt;uses-permission android:name="android.permission.CAMERA" /&gt;
+
+@Composable
+fun CameraButton() {
+    val permission = rememberPermissionState(
+        permission = android.Manifest.permission.CAMERA
+    )
+    Button(onClick = {
+        when {
+            permission.status.isGranted -&gt; openCamera()
+            permission.status.shouldShowRationale -&gt; showExplainDialog()
+            else -&gt; permission.launchPermissionRequest()
+        }
+    }) { Text("사진 촬영") }
+}
+```
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+주의: 영구 거절당했다면 어떻게 할까요?
+
+{class="mt-1"}
+사용자가 "다시 묻지 않음"에 체크하면 launchPermissionRequest가 더 이상 창을 띄우지 않아요. 이때는 사용자를 시스템 설정으로 안내해 직접 켜게 하고(Intent로 앱 설정 화면으로 이동), 화면에서 "이 권한을 무엇에 쓰는지"를 설명하세요. 태도가 좋으면 사용자가 권한을 켜려는 마음도 훨씬 커져요. 권한 요청 문구는 정성 들여 쓸 가치가 있어요.
+:::
+
+#### 2. 알림: 올바른 시간에 유용한 말 하기
+
+알림은 앱이 사용자에게 닿는 통로이자, 가장 쉽게 사용자에게 "차단"당하는 기능이기도 해요. 알림 발송의 세 가지 규율: 유용한 것만 보내기, 사용자가 끌 수 있게 하기, 한밤에 괴롭히지 않기. 기본 사용법이에요:
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · 알림 하나 보내기</span><span class="dots">···</span>
+:::
+
+```
+// Android 13+에서는 POST_NOTIFICATIONS 권한을 먼저 요청해야 해요(앞 절 참고)
+
+// 1. 알림 채널 생성(Android 8+ 필수)
+val channel = NotificationChannel(
+    "reminder", "알림", NotificationManager.IMPORTANCE_DEFAULT
+)
+val manager = getSystemService(NotificationManager::class.java)
+manager.createNotificationChannel(channel)
+
+// 2. 알림 발송
+val notification = NotificationCompat.Builder(this, "reminder")
+    .setSmallIcon(R.drawable.ic_notification)
+    .setContentTitle("가계부 알림")
+    .setContentText("오늘 가계부 기록이 아직 없어요")
+    .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+    .build()
+if (ActivityCompat.checkSelfPermission(this,
+        Manifest.permission.POST_NOTIFICATIONS) == PackageManager.PERMISSION_GRANTED
+) {
+    manager.notify(1, notification)
+}
+```
+:::
+
+예약 작업(예: "매일 20:00에 기록 알림")은 WorkManager를 쓰세요. 공식 추천 "백그라운드 일정 관리 집사"로, 작업이 적절한 시점에 실행되도록 보장해 주고 배터리 최적화를 직접 신경 쓸 필요가 없어요. 알람류 요구사항은 이걸로 하면 틀림없어요.
+
+#### 3. 아키텍처 심화: 의존성 주입과 모듈화
+
+프로젝트가 커지면 "달콤한 고민" 두 가지가 찾아와요:
+
+- 객체 생성이 난잡: 화면마다 데이터베이스를 new하고 API를 new해요 — Hilt(의존성 주입 프레임워크)로 통일해 관리하면 "누가 필요하다고 말하면 누군가 건네 줘요";
+- 코드가 산더미: 단일 모듈 프로젝트는 고칠수록 느려져요 — 멀티 모듈(app / core / feature-xxx)로 쪼개 기능별로 독립 개발, 독립 테스트하세요.
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+팁: 과한 설계는 하지 않기
+
+{class="mt-1"}
+Hilt와 모듈화 모두 좋은 도구지만, 1인 프로젝트는 서두르지 마세요. 가계부는 단일 모듈 + 의존성 수동 생성으로도 완전히 충분해요. 코드량이 몇만 줄을 넘고 컴파일이 느려지기 시작하고 여러 사람이 협업할 때, 필요에 맞춰 도입하세요. 도구는 목표를 위해 존재하지 자랑용이 아니에요. 이것이 우리 AI 코딩 책의 "단순함이 최고" 원칙이기도 하죠.
+:::
+
+#### 4. 2026년의 새 놀이: AI 보조 안드로이드 개발
+
+2026년, AI는 이미 안드로이드 개발 흐름 깊숙이 스며들었어요. 속도를 올리고 싶다면 이 콤비네이션이 아주 성숙해 있어요:
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">단계</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">AI가 어떻게 도우나</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">여러분의 역할</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">코드 작성</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Studio 내장 Gemini/서드파티 AI 플러그인으로 자동 완성과 생성</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">요구사항을 분명히 설명하고 결과물 검수</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">자료 찾기</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">공식 문서와 오류 메시지를 AI에 던져 해석</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">핵심 결론은 공식 문서로 재확인</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">테스트 작성</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AI가 "정상/경계/예외" 세 부류로 테스트 케이스를 생성하게 하기</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">케이스가 비즈니스 의미에 맞는지 확인</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">버그 수정</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">스택 + 관련 코드를 붙여 넣으면 AI가 원인을 찾아 수정</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">변경 내용을 이해하고 테스트 실행으로 검증</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+AI 보조 안드로이드 개발의 네 가지 장면
+
+구체적인 방법론 — AI에게 지시하는 법, 검수하는 법, 함정 피하는 법 — 은 이 책 제7편 〈AI 코딩 실전편〉(37~47장)에 11장 분량으로 완비돼 있어요. 함께 읽기를 강력히 추천해요. 안드로이드 문법은 이 편에, AI 협업의 마음가짐은 제7편에 맡기면 돼요.
+
+#### 5. Compose 성능 최적화와 디버깅 도구
+
+Compose는 쓰면서 즐겁지만 "과도한 리컴포지션"도 버벅임을 만들어요. 실용적인 팁 세 가지예요:
+
+- 안정적인 파라미터: 데이터 클래스에 @Immutable을 붙이거나 derivedStateOf를 써서 무관한 상태 변화가 넓은 범위의 리컴포지션을 유발하지 않게 하기;
+- key 쓰는 것 잊지 않기: items(list, key = { it.id })는 리스트에 항목이 추가되거나 삭제될 때 움직여야 할 항목만 다루게 해요. key가 없으면 한 항목을 삭제할 때 표 전체가 다시 그려질 수도 있어요;
+- Layout Inspector의 Compose 모드: 각 Composable의 리컴포지션 횟수를 실시간으로 봐요. 누가 자주 재구성되는지 한눈에 보이니 핫스팟을 따라 최적화하세요.
+
+또한 Compose 컴파일러 리포트(Metrics)를 켜면 "어떤 컴포저블이 불안정한지" 보고서를 만들 수 있어요. 심화의 길에서는 데이터가 언제나 감각보다 믿음직해요.
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+직접 해 보기: 가계부에 "3종 세트" 달기
+
+{class="mt-1"}
+① 가계부에 "매일 20:00 기록 알림"을 달기(WorkManager + 알림 채널 + Android 13 알림 권한); ② 데이터베이스와 API 생성을 Hilt 주입으로 바꾸기; ③ AI 도구로 "월별 필터" 기능 구현 속도를 높여 보고, 3단계 검수법으로 결과물을 점검하기. 3종 세트를 다 갖추면 여러분의 프로젝트가 "정규군"다운 모습이 돼요.
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+이번 장 정리
+
+- 민감 권한: Manifest 선언 + 런타임 요청 + 거절당하면 우아하게 안내
+- 알림 3규율: 유용한 것만, 끌 수 있게, 괴롭히지 않기. 채널 + 권한 둘 다 필수
+- 예약 작업은 WorkManager, 바퀴를 다시 발명하지 않기
+- Hilt는 객체를, 모듈화는 코드를 관리 — 1인 소규모 프로젝트는 서두르지 않기
+- AI 보조 4장면: 코드 작성, 자료 찾기, 테스트 작성, 버그 수정. 방법론은 제7편(37~47장) 참고
+:::

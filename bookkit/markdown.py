@@ -78,14 +78,60 @@ def _fence(text: str, info: str = '') -> str:
     return f'{fence}{info}\n{body}{fence}'
 
 
+RE_LISTY_OL = re.compile(r'^(\d+)\.\s')
+RE_LISTY_UL = re.compile(r'^([-*])\s')
+
+
+def _escape_listy(text: str) -> str:
+    """行首列表形态的普通文本转义，避免 md→html 误判为列表。"""
+    text = RE_LISTY_OL.sub(r'\1\\. ', text)
+    text = RE_LISTY_UL.sub(r'\\\1 ', text)
+    return text
+
+
+def _unescape_listy(line: str) -> str:
+    """还原 _escape_listy 的转义（仅行首）。"""
+    line = re.sub(r'^(\d+)\\\.\s', r'\1. ', line)
+    line = re.sub(r'^\\([-*])\s', r'\1 ', line)
+    return line
+
+
 def to_markdown(node: Node, depth: int = 0) -> str:
-    """把一组子节点转成 Markdown 文本。"""
+    """把一组子节点转成 Markdown 文本。
+
+    历史翻译稿存在"游离闭标签把 <ul> 提前截断、后续 <li> 裸露在块级"的损伤；
+    这里把连续的裸 <li> 兄弟节点合成一个列表再转换，保留列表语义（可编辑）。
+    """
+    from . import htmlparse as H
     blocks = []
+    li_run = []
+
+    def flush_li_run():
+        if not li_run:
+            return
+        synth = H.Node('ul', [], '<ul>')
+        synth.children = list(li_run)
+        for li in li_run:
+            li.parent = synth
+        li_run.clear()
+        md = _list_to_md(synth, depth)
+        if md is None:
+            blocks.append(_fence(chr(10).join(serialize_child(li) for li in synth.children), 'html'))
+        else:
+            blocks.append(md)
+
     for child in node.children:
+        if isinstance(child, H.Node) and child.tag == 'li':
+            li_run.append(child)
+            continue
+        if isinstance(child, str) and not child.strip() and li_run:
+            continue          # 列表连跑内的空白不中断收集
+        flush_li_run()
         block = _block_to_md(child, depth)
         if block:
             blocks.append(block)
-    return '\n\n'.join(blocks)
+    flush_li_run()
+    return (chr(10) + chr(10)).join(blocks)
 
 
 def _block_to_md(node, depth: int) -> str:
@@ -93,13 +139,16 @@ def _block_to_md(node, depth: int) -> str:
         return ''
     if isinstance(node, str):
         text = node.strip()
-        return text if text else ''
+        return _escape_listy(text) if text else ''
     tag = node.tag
 
     if tag in ('h1', 'h2', 'h3', 'h4', 'h5', 'h6'):
         level = int(tag[1])
         prefix = '#' * max(1, level)
         body = _heading_inner(node)
+        if not body:
+            # 空标题（常为带 id 的锚点）：原样保留
+            return _fence(serialize_child(node), 'html')
         attrs = _attrs_of(node, DEFAULT_CLASSES.get(tag))
         if attrs is None:
             return _fence(serialize_child(node), 'html')
@@ -111,6 +160,7 @@ def _block_to_md(node, depth: int) -> str:
         inner = _squash(node.inner_raw())
         if not inner:
             return ''
+        inner = _escape_listy(inner)
         attrs = _attrs_of(node, DEFAULT_CLASSES['p'])
         if attrs is None:
             return _fence(serialize_child(node), 'html')
@@ -141,6 +191,9 @@ def _block_to_md(node, depth: int) -> str:
         if _is_inline_only(node):
             inner = _squash(node.inner_raw())
             if not inner:
+                # 空容器：带属性/类的原样保留（如翻译稿遗留的 hidden-close），裸空容器丢弃
+                if node.attrs:
+                    return _fence(serialize_child(node), 'html')
                 return ''
             spec = ''.join(f' .{c}' for c in (classes.split() if classes else []))
             return f':::inline {tag}{spec}\n{inner}\n:::'
@@ -364,7 +417,8 @@ def from_markdown(text: str) -> str:
             i += 1
         attrs = pending_attrs
         flush_pending()
-        out.append(f'{_tag_open("p", attrs, DEFAULT_CLASSES["p"])}{" ".join(x.strip() for x in para)}</p>')
+        body = ' '.join(_unescape_listy(x.strip()) for x in para)
+        out.append(f'{_tag_open("p", attrs, DEFAULT_CLASSES["p"])}{body}</p>')
 
     return '\n'.join(out)
 
@@ -456,7 +510,12 @@ RE_TAG = re.compile(r'<[^>]+>')
 
 
 def normalize(html: str) -> str:
-    """忽略无意义空白的结构归一化（<pre> 内容保持原样）。"""
+    """忽略无意义空白的结构归一化（<pre> 内容保持原样）。
+
+    在标签间空白折叠之外，额外折叠"闭标签前的空白"——HTML 渲染语义下
+    `x. </li>` 与 `x.</li>` 等价（连续空白折叠），翻译稿的历史尾随空格
+    不应影响等价判定。
+    """
     blocks = []
 
     def keep(m):
@@ -465,7 +524,10 @@ def normalize(html: str) -> str:
 
     protected = re.sub(r'<pre[\s\S]*?</pre>', keep, html)
     collapsed = re.sub(r'\s+', ' ', protected).replace('> <', '><')
+    collapsed = re.sub(r' +</', '</', collapsed)
+    collapsed = re.sub(r'> +', '>', collapsed)
     return re.sub(r'\x00(\d+)\x00', lambda m: blocks[int(m.group(1))], collapsed).strip()
+
 
 
 def text_digest(html: str) -> str:

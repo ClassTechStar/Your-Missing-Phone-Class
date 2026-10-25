@@ -1,0 +1,72 @@
+---
+id: di-shi-er-zhang
+num: 12
+part: ruan-jian-pian
+nav: Capítulo 12: Entretenimiento audiovisual y lectura
+toc: default
+kind: chapter
+---
+
+### Capítulo 12: Entretenimiento audiovisual y lectura
+
+{class="chapter-intro mb-4"}
+El móvil ya ha sustituido prácticamente al MP3, al mando de la TV, al Kindle y a las consolas portátiles. Pero sinceramente, la mayoría solo usa las funciones más básicas de estas Apps y hay muchas útilidades que pasan desapercibidas. En este capítulo hablaremos de cómo hacer la experiencia de entretenimiento en el móvil más cómoda y agradable.
+
+#### 1. Escuchar música: qué App elegir y cómo escuchar cómodamente
+
+Las Apps de música hoy tienen funciones similares, pero cada una tiene sus puntos fuertes. Elegir bien te ahorrará muchos problemas:
+
+- <strong>NetEase Cloud Music</strong>:Su punto fuerte son las listas de reproducción comúnitarias y los comentarios. Si quieres escuchar "canciones para días lluviosos" o "música instrumental para relajarte después de estudíar", buscas y encuentras listas curadas por otros. A veces los comentarios son más interésantes que las canciones. Desventaja: algúnos temas tienen problemas de derechos y se desactivan.
+- <strong>QQ Music</strong>:Tiene los derechos de autor más completos; artistas populares como Jay Chou y Mayday básicamente solo están en QQ Music. Las opciones de calidad de audio también son muy variadas; los miembros pueden activar calidad sin pérdida. Si te importa mucho poder encontrar cualquier canción que quieras escuchar, QQ Music es la opción más segura.
+- <strong>Apple Music</strong>:La elección predilecta para usuarios Apple. Interfaz limpia, sin anuncios, buena calidad de audio, soporta sin pérdida y Dolby Atmos. Pero su algoritmo de recomendación no conoce tan bien los gustos de los usuarios chinos como las Apps locales, y su cultura de listas no está tan desarrollada como la de Netease. Ideal para quienes prefieren una experiencia simple sin importarles las funciones sociales.
+- <strong>Spotify</strong>:Más usuarios en todo el mundo, algoritmo de recomendación reconocido como el mejor. "Discover Weekly" y "Daily Mix" con precisión asustadora; cuanto más lo uses, mejor te conocerá. Desventajas: anuncios en la versión gratis y cobertura incompleta de algunas canciones chinas. Requiere red especial para usarlo.
+
+<strong>Algunos trucos para escuchar música</strong>:Si usas auriculares Bluetooth, revisa los ajustes de tu App de música: busca "ecualizador" o "ajuste de efectos de sonido", ajusta un poco los graves y agudos —la mejora es notable. Además, el streaming consume muchos datos; activa "reproducir sin pérdida solo con Wi-Fi" o descarga tus listas favoritas para escucharlas sin conexión.
+
+#### 2. Podcasts: tu "compañero de oído" en el camino al trabajo
+
+Los podcasts: quien nunca ha escuchado uno cree que no van con él, pero una vez empieza ya no puede parar. Esencialmente es "la versión Netflix de la radio" —hay gente charlando de tecnología, otros contando historia, leyendo relatos; hay algo para todos los gustos.
+
+- <strong>Xiaoyuzhou App</strong>:La mejor App de podcasts en China. Interfaz limpia, sin funciones innecesarias. Su "Recomendación diaria" y "Selección editorial" te ayudan a descubrir nuevos programas; la sección de comentarios es muy activa. Personalmente escucho más "Zuozuoyou" (cultura e historia) y "Buheshiyi" (temas sociales); cada episodio es como escuchar a gente inteligente charlar.
+- <strong>Apple Podcasts</strong>:Incluida en iPhone, no necesitas descargar nada extra. La mejor integración con CarPlay; muy práctica para conducir.
+- <strong>Trucos de escucha</strong>:La mayoría de Apps de podcasts soportan reproducción a 1,2x o 1,5x; una vez que te acostumbras, ahorras mucho tiempo. Yo uso 1,2x para chino y 1,5x para inglés. Activa "descargar automáticamente nuevos episodios" y "eliminar tras reproducir"; así tu móvil no se llenará de archivos de audio ya escuchados.
+
+#### 3. Ver video: de reproductor local a streaming, la forma correcta
+
+Mucha gente ignora que el móvil puede reproducir muchos más formatos que los que ofrecen las Apps de streaming. Un buen reproductor local resuelve muchos problemas.
+
+- <strong>VLC</strong>:Código abierto y gratuito; reproduce casi cualquier formato —MKV, AVI, FLAC, incluso imágenes ISO. Si descargas un video que funciona en el ordenador pero no en el móvil, casi seguro es un problema de formato; instala VLC y listo. Soporta subtítulos externos: pon el archivo .srt en la misma carpeta del video y VLC lo carga automáticamente.
+- <strong>nPlayer</strong>:Si quieres una experiencia más refinada, esta App de pago merece la pena. Interfaz bonita, gestos intuitivos —deslizar izquierda arriba/abajo para brillo, derecha para volumen, izquierda/derecha para avanzar/retroceder. Soporta DTS y Dolby; para películas, la inmersión es mucho mayor.
+- <strong>Bilibili (sitio B)</strong>:Ya no es solo un sitio de anime; ahora tiene recursos de aprendizaje absurdamente abundantes. Exámenes de posgrado, programación, fotografía, cocina... hay tutoríales de todo. Los "danmu" (comentarios flotantes) son el alma de Bilibili; ver videos con ellos da sensación de estar viendo con un grupo de gente. Pero para videos de estudio, mejor apagarlos para no distraerte.
+- <strong>Proyectar a la TV</strong>:Por grande que sea la pantalla del móvil, nada como verlo en la tele. Conectados a la misma Wi-Fi, toca el botón "TV" en la esquina superior derecha de la App de video y proyecta la imagen. La mayoría de smart TV y proyectores lo soportan; la experiencia de ver series o películas mejora muchísimo. Los usuarios iPhone también pueden usar AirPlay para espejar toda la pantalla.
+
+#### 4. Lectura de libros electrónicos: también puedes leer bien en el móvil
+
+Dicen que leer en el móvil daña la vista y distrae; hay algo de verdad. Pero las ventajas son evidentes —en cualquier momento, aprovechando al máximo los tiempos muertos. Yo he leído muchos libros en el metro, haciendo cola, antes de dormir.
+
+- <strong>WeChat Read</strong>:Actualmente la mejor App de lectura en China.Biblioteca muy completa, con libros publicados y ficción online. Usa un sistema de "tiempo de lectura por monedas de libro": cuanto más lees, más libros gratis puedes canjear; muy amable con los estudiantes. Su función de "subrayado" permite ver qué párrafos han marcado otros; a veces encuentras frases marcadas que realmente resuenan. Pero el "ranking de lectura" puede volverse obsesivo; recomiendo desactivarlo.
+- <strong>Kindle App</strong>:Si tienes un dispositivo Kindle, la App Kindle para móvil sincroniza el progreso de lectura. Los ebooks legítimos de Kindle tienen una calidad tipográfica muy superior a los PDFs piratas, pero la tienda china de Kindle ya cerró; necesitas cambiar a una región internacional.
+- <strong>Apple Books (Libros)</strong>:Incluida en iPhone, ideal para EPUB y PDF. Interfaz mínimalista, animación de pase de página muy agradable. Si descargas archivos de ebook, simplemente "comparte a Libros" para importarlos.
+- <strong>Sugerencias de configuración de lectura</strong>:Sea cual sea la App, pon el fondo en tono cálido (modo protección visual), aumenta la fuente y espacia las líneas. De noche activa "modo oscuro" —fondo negro, texto blanco— mucho mejor para los ojos. Nunca leas mucho tiempo con fondo blanco, texto pequeño y poca luz: la fatiga ocular se acumula.
+
+#### 5. Juegos móviles: disfruta sin dañar tu móvil
+
+Mi postura sobre juegos móviles: jugar está bien, pero no dejes que te controlen a ti. Usa bien las herramientas de juego para disfrutar más sin descuidar lo importante.
+
+- <strong>Modo juego / Espacio de juego</strong>:La mayoría de móviles modernos tienen esta función. Al activarla, el móvil limpia automáticamente apps en segúndo plano, bloquea notificaciones y evita toques accidentales —estás en medio de una batalla clave y de repente suena una llamada: el modo juego evita eso. Algunos móviles soportan modo rendimiento/modo e-sports que fuerzan el procesador al máximo, pero generan más calor y consumen más batería.
+- <strong>Cómo ajustar calidad gráfica y tasa de frames</strong>:No subas todo al máximo sin pensar. Príoriza la tasa de frames (fluidez), luego la calidad gráfica. 60fps se siente mucho mejor que 30fps, pero 120fps estrésa mucho al móvil; los gama media no necesitan forzarlo. Si juegas juegos competitivos (como Honor of Kings o PUBG Mobile), la fluidez es mucho más importante que la hierba bonita.
+- <strong>Qué hacer si el móvil se calienta al jugar</strong>:Es normal, pero las temperaturas altas prolongadas dañan la batería. Cómo enfriar: quita la funda; baja el brillo al ~70% (el brillo genera mucho calor); nunca juegues mientras cargas (calor acumulado, la batería muere rápido). Si el móvil quema al tacto, sal del juego y déjalo descansar.
+- <strong>Herramientas contra la adicción</strong>:El "Tiempo de pantalla" de iOS y el "Bienestar digital" de Android permiten establecer límites diarios de tiempo para Apps de juego. Me pongo máximo 1 hora entre semana, 2 horas el fin de semana. Cuando se acaba el tiempo, el icono se pone gris y no puedes entrar. Este límite funciona de verdad, no es solo decorativo.
+- <strong>Juegos en la nube (Cloud Gaming)</strong>:Si tu móvil no tiene potencia suficiente para juegos AAA, prueba plataformas de cloud gaming (como Tencent START o Netease Cloud Gaming). El juego corre en un servidor remoto y se transmite como video a tu móvil. Requiere buena red pero casi nada de potencia del móvil. La latencia es inevitable; adecuado para estrategia/RPG, no para FPS.
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>Practica: crea tu sistema de entretenimiento móvil
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. En tu App de música, descarga tus canciones favoritas en 3 álbumes o listas; asegúrate de poder escucharlas sin conexión.
+2. Suscríbete a 3 canales interésantes en Xiaoyuzhou o Apple Podcasts; descarga un episodio para probar.
+3. Instala VLC e intenta reproducir un video copiado del ordenador.
+4. En WeChat Read, busca un libro que quieras leer; configura fondo cálido y modo protección visual; ajusta el tamaño de fuente a tu gusto.
+5. Si juegas, abre el modo juego y revisa qué ajustes puedes optimizar (no molestar, prioridad de frames, etc.)
+:::

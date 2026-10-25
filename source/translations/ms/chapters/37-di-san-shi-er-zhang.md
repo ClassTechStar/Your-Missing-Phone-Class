@@ -1,0 +1,225 @@
+---
+id: di-san-shi-er-zhang
+num: 32
+part: shi-zhan-pian
+nav: Bab 32:Manual Pertolongan Cemas Keselamatan Telefon
+toc: default
+kind: chapter
+---
+
+### Bab 32:Manual Pertolongan Cemas Keselamatan Telefon
+
+{class="chapter-intro mb-4"}
+Bab ini ialah sebuah "pelan tindakan kecemasan". Semoga anda tidak perlu menggunakannya, tetapi jika benar-benar menghadapi keadaan telefon hilang, dicuri, atau ditipu, manual ini dapat membantu anda meminimumkan kerugian; apabila bencana seperti gempa bumi atau hujan lebat melanda, telefon juga merupakan alat untuk menerima amaran, menunjukkan lokasi untuk meminta pertolongan, dan mengekalkan hubungan. Disyorkan agar anda membacanya sekali sekarang, kemudian simpan tangkapan skrin langkah-langkah penting, atau cetak dan letakkan di rumah - kerana apabila berlaku kejadian, telefon anda mungkin sudah tidak ada dalam tangan, dan ketika bencana pula bateri mungkin habis atau tiada isyarat.
+
+#### Senario Sifar: Gempa bumi / cuaca melampau - bagaimana telefon menyelamatkan nyawa anda
+
+Yang dilindungi ialah keselamatan diri, bukan akaun dan wang. Tetapan amaran diterangkan dalam Bab 13 "Amaran cuaca, amaran bencana alam dan amaran gempa bumi"; di sini hanya diterangkan apa yang perlu dilakukan selepas penggera berbunyi.
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Penggera gempa berbunyi: berlindung dahulu, baru beredar, jangan sibuk merakam video
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Lindungi diri di tempat terdekat: merangkak rendah, berlindung, berpegang kuat (di bawah meja, di sudut dinding penahan beban, di sebelah perabot yang kukuh), lindungi kepala dan leher; jauhi kaca, dinding luar, dan lampu gantung.
+2. Jangan terburu-buru lari turun bangunan: gegaran utama biasanya hanya berlangsung 10-30 saat, dan tangga mungkin lebih berbahaya; lif dilarang sama sekali digunakan.
+3. Selepas gegaran berhenti, baru beredar secara teratur: gunakan tangga, awasi gegaran susulan dan benda jatuh; menuju ke kawasan terbuka, jauhi tiang elektrik, papan iklan, dan bangunan rosak.
+4. Gunakan telefon hanya untuk yang penting: menghantar mesej pendek kepada kenalan kecemasan ("Saya di XX, selamat/ceder, perlukan bantuan") lebih jimat bateri berbanding panggilan panjang; jika boleh hantar SMS/WeChat, utamakan teks.
+5. Apabila tiada isyarat: lihat Bab 7 mengenai SOS satelit / mesej satelit (jika model telefon menyokong); atau naik ke tempat tinggi/terbuka dan cuba semula; dalam sesetengah keadaan, komunikasi Bluetooth tanpa internet juga membantu.
+6. Matikan fungsi yang tidak perlu: semasa kecemasan, aktifkan mod kapal terbang dan aktifkan berkala semula, matikan imbasan Bluetooth, kurangkan kecerahan - ini boleh menambah beberapa jam; simpan bateri terakhir untuk memberi khabar selamat dan maklumat penyelamatan.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Hujan lebat / taufan / banjir kilat gunung: bertindak seawal peringkat amaran
+
+{class="list-disc pl-6 mt-1 space-y-1 text-sm"}
+- Bila muncul amaran merah: kurangkan aktiviti keluar rumah sebanyak mungkin, jauhi ruang bawah tanah, jambatan bawah laluan, sungai, dan cerun curam.
+- Jika terperangkap di luar: menuju ke bahagian tinggi bangunan yang kukuh, jangan paksa berjalan melalui air (air bertakung mungkin ada tudung perigi hilang dan kebocoran elektrik); apabila menelefon 119/110, nyatakan dengan jelas mercu tanda dan paras air.
+- Sebelum bertolak: sahkan risiko menggunakan aplikasi cuaca dan saluran amaran rasmi tempatan; semasa memandu jauh, elakkan laluan di kawasan gunung yang berhampiran air dan tebing.
+- Berhubung antara keluarga: bersetuju "jika hilang hubungan, rujuk lokasi terakhir dalam WeChat/SMS", supaya elak setiap orang menelefon dengan gila-gila sehingga bateri habis.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+4 perkara yang perlu disediakan sejak awal
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Aktifkan amaran gempa bumi sistem / aplikasi amaran rasmi, dan benarkan ia menembusi mod senyap.
+2. Pin 2-3 orang "kenalan kecemasan" di bahagian atas buku alamat, supaya dapat dipaparkan pada skrin kunci (kad perubatan kecemasan iOS/Android atau maklumat skrin kunci).
+3. Sediakan power bank di rumah dan dalam beg; sebelum perjalanan jauh, caj penuh dan bawa kabel.
+4. Hafal sekurang-kurangnya satu nombor yang "boleh didail tanpa buku alamat" (nombor telefon ahli keluarga), tulis di atas kertas dan simpan dalam dompet.
+:::
+
+#### Senario Satu: Telefon hilang/dicuri - 30 minit emas
+
+30 minit pertama selepas telefon hilang ialah "masa emas"; tindakan yang betul dapat menyelamatkan wang dan privasi anda. Ikut langkah berikut mengikut turutan, jangan langkau satu langkah pun:
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Prosedur operasi standard 30 minit selepas kehilangan
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Pinjam telefon orang lain untuk mendail nombor anda sendiri (minit pertama): mungkin telefon hanya jatuh berdekatan, dan jika orang baik menjawab, anda boleh dapatkannya semula.
+2. Kunci telefon dari jauh (minit ke-2-5): gunakan telefon orang lain atau komputer untuk log masuk perkhidmatan carian: iPhone: iCloud.com > Cari > pilih peranti anda > Tandakan sebagai Hilang
+3. Jenama Android: Huawei cloud.huawei.com / Xiaomi i.mi.com / OPPO cloud.oppo.com dan sebagainya
+4. Lapor hilang kad SIM (minit ke-5-10): telefon khidmat pelanggan operator (China Mobile 10086 / China Unicom 10010 / China Telecom 10000), laporkan telefon hilang dan minta perkhidmatan kad SIM digantung. Langkah ini paling penting - jika penipu mendapat kad SIM anda, mereka boleh menerima kod pengesahan dan menetapkan semula semua kata laluan anda.
+5. Bekukan akaun pembayaran (minit ke-10-20): Alipay: laporkan hilang di 95188, atau log masuk Alipay di telefon orang lain > Saya > Tetapan > Pusat Keselamatan > Bekukan Segera
+6. WeChat: selepas melaporkan polis di 110, hubungi khidmat pelanggan WeChat, atau di Pusat Keselamatan WeChat > Bekukan Akaun
+7. Aplikasi bank: telefon khidmat pelanggan di belakang kad bank, minta perbankan internet dibekukan
+8. Maklumkan kenalan (minit ke-20-25): umumkan di Moments atau minta keluarga bantu menghantar mesej, beritahu kenalan bahawa telefon anda hilang, supaya penipu tidak menyalahgunakan identiti anda untuk menipu orang lain.
+9. Lapor polis (minit ke-25-30): dail 110 atau pergi ke balai polis terdekat untuk membuat laporan, dan dapatkan resit laporan. Resit ini diperlukan kemudian untuk tuntutan insurans dan pertikaian bank.
+:::
+
+#### Senario Dua: Ditipu - tempoh 72 jam emas untuk bertindak
+
+Selepas sedar anda ditipu, yang paling penting ialah kekal tenang. Keputusan yang dibuat dalam kekeliruan akan menyebabkan kerugian kedua. Ikut langkah berikut:
+
+1. Berhenti serta-merta semua pemindahan wang: apa pun kata penipu, jangan pindahkan lagi sesen pun. "Pindah satu lagi deposit dan wang sebelumnya akan dipulangkan" ialah ayat klasik penipuan kali kedua.
+2. Simpan semua bukti: jangan padam rekod sembang! Jangan padam rekod panggilan! Tangkap skrin dan simpan rekod sembang, rekod pemindahan, dan maklumat akaun pihak lain. Semua ini ialah bukti penting untuk laporan polis dan pengejaran semula wang.
+3. Dail 96110 serta-merta: ini talian khas antipenipuan nasional. Operator akan membimbing anda membuat pembekukan pembayaran kecemasan - jika pemindahan tidak lama berlalu (biasanya dalam 24 jam), bank mungkin dapat membekukan akaun pihak lain dan menyekat wang itu.
+4. Dail 110 untuk lapor polis: bawa telefon, kad pengenalan, dan bukti pemindahan ke balai polis terdekat untuk membuat keterangan.
+5. Hubungi bank/platform pembayaran: beritahu keadaan penipuan, minta akaun terlibat dibekukan. Jika kad kredit dicuri dan digunakan, minta bank memulakan proses bantahan caj (chargeback).
+6. Tukar semua kata laluan: pada peranti selamat yang lain, tukar kata laluan Apple ID/akaun jenama, WeChat, Alipay, dan aplikasi bank anda, serta aktifkan pengesahan dua faktor.
+
+#### Senario Tiga: Telefon dijangkiti virus/trojan - apa yang perlu dibuat?
+
+Jika anda mendapati telefon menunjukkan gejala berikut - iklan muncul tanpa sebab, aplikasi pelik terpasang secara automatik, bil telefon melonjak, data mudah alih habis secara luar biasa - kemungkinan besar telefon dijangkiti perisian hasad:
+
+- Langkah pertama: masuk mod selamat - pada telefon Android, tekan lama butang kuasa untuk memadam, kemudian tekan lama butang kuasa untuk menghidupkan; selepas telefon bergetar semasa hidup, tekan lama butang volum turun tanpa dilepaskan sehingga masuk mod selamat (perkataan "Mod selamat" akan dipaparkan di penjuru kiri bawah). Dalam mod selamat, semua aplikasi pihak ketiga dilumpuhkan, memudahkan siasatan.
+- Langkah kedua: nyahpasang aplikasi yang mencurigakan - dalam mod selamat, masuk Tetapan > Pengurusan aplikasi, susun mengikut masa, cari aplikasi yang tidak dikenali dan baru dipasang, kemudian nyahpasang.
+- Langkah ketiga: pasang aplikasi keselamatan untuk imbasan - muat turun "Tencent Mobile Manager" atau "360 Mobile Guard" dan buat satu imbasan menyeluruh.
+- Langkah keempat: tetapan semula kilat (penyelesaian terakhir) - jika kaedah di atas tidak berkesan, sandarkan data penting dahulu, kemudian buat tetapan semula kilat. Perhatian: tetapan semula kilat akan memadam semua data; pastikan sandarkan gambar, buku alamat, dan fail penting dahulu.
+- iPhone hampir tidak pernah dijangkiti virus - mekanisme sandbox iOS menyukarkan perisian hasad untuk hidup. Jika iPhone anda bermasalah, kemungkinan besar itu bug sesebuah aplikasi atau masalah tetapan, bukan virus. Tetapan semula kilat dapat menyelesaikan 99% masalah.
+
+#### Senario Empat: Akaun diretas - rebut semula kawalan dengan cepat
+
+1. Tukar kata laluan serta-merta: jika anda masih boleh log masuk akaun, tukar kata laluan secepat mungkin. Kata laluan baharu mesti sama sekali berbeza daripada yang lama.
+2. Keluarkan peranti lain: dalam tetapan keselamatan akaun, cari "Pengurusan peranti log masuk", dan log keluarkan semua peranti yang tidak dikenali.
+3. Semak rekod log masuk: lihat rekod log masuk 7 hari terkini; jika ada log masuk dari lokasi lain, bermakna akaun memang telah diretas.
+4. Aktifkan pengesahan dua faktor: jika anda belum mengaktifkannya, aktifkan sekarang juga. Ini kaedah paling berkesan untuk mengelakkan akaun diretas semula.
+5. Semak maklumat terikat: periksa sama ada nombor telefon atau e-mel yang terikat pada akaun telah diubah. Jika telah diubah, gunakan fungsi rayuan akaun untuk mendapatkannya semula.
+6. Semak tetapan pembayaran: jika yang diretas ialah WeChat/Alipay, periksa sama ada pembayaran tanpa kata laluan atau potongan automatik telah diubah, dan sama ada kad bank ditambah ke akaun asing.
+
+#### Senario Lima: Menerima mesej ugutan - jangan takut, jangan bayar
+
+Terdapat dua taktik ugutan yang biasa: (1) "Saya ada video/gambar tidak senonoh anda; kalau tidak bayar, saya hantar kepada semua orang dalam buku alamat anda"; (2) "Telefon anda telah dikawal oleh penggodam; kalau tidak bayar, ia akan dikunci". Jika menghadapi keadaan begini:
+
+- 99.9% adalah penipuan: mereka sebenarnya tidak mempunyai sebarang data peribadi anda. Mereka menghantar mesej ugutan yang sama kepada berpuluh ribu orang, dan pasti ada yang takut dan membayar.
+- Jangan balas, jangan bayar: membalas bermakna memberitahu pihak itu "nombor ini ada orang gunakan"; anda akan ditanda sebagai "sasaran boleh diugut", dan gangguan seterusnya akan lebih banyak.
+- Tangkap skrin untuk simpan bukti: kemudian sekat pihak itu.
+- Tukar kata laluan: jika berasa bimbang, tukar kata laluan akaun utama anda untuk ketenangan hati.
+- Jika benar-benar ada risiko kebocoran privasi: laporkan polis. Polis berpengalaman mengendalikan kes sebegini.
+
+#### Senario Enam: Penipuan AI tukar wajah/AI tiru suara - apa yang dilihat bukan lagi kenyataan
+
+Sejak 2024, teknologi AI tukar wajah dan AI tiru suara membolehkan penipu "menjelma" sebagai wajah dan suara keluarga, ketua, atau kawan anda dalam panggilan video. "Mak, saya kena masalah, cepat pindahkan wang" - orang dalam video nampak dan bunyi sama persis seperti anak anda, tetapi sebenarnya palsu. Ini antara kaedah penipuan yang paling sukar dicegah dan paling berbahaya pada masa kini.
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Langkah pertama: kenal pasti kelemahan - empat celah biasa pada palsuan AI
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Kekerapan kelipan mata tidak normal: manusia sebenar berkelip 15-20 kali seminit; AI tukar wajah sering berkelip terlalu sedikit atau dengan rentak kaku.
+- Bentuk mulut tidak segerak dengan audio: perhatikan dengan teliti, ada sela beberapa perpuluhan saat antara gerakan bibir dan bunyi yang didengar.
+- Tepi wajah kabur: garis luar wajah, kawasan berhampiran telinga, dan tepi rambut mudah menunjukkan "tepi berbulu" atau berkelip-kelip.
+- Arah cahaya tidak konsisten: arah sorotan dan bayangan pada wajah tidak sepadan dengan cahaya latar belakang, atau apabila menoleh, kedudukan ciri wajah "berpusing" dengan tidak betul.
+:::
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Langkah kedua: tiga cara mengesahkan kebenaran pihak sebelah
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Minta lakukan gerakan tertentu: suruh pihak itu menoleh, menutup wajah, atau menutup mulut dengan tangan sambil membuka-menutup mulut. AI tukar wajah paling mudah "terbongkar" ketika ada halangan atau ketika menoleh sudut besar - wajah akan berubah bentuk atau tidak mengikut gerakan.
+- Tanya soalan yang hanya pihak itu tahu: reka satu soalan palsu, contohnya "Kali lepas anjing kita hantar ke hospital mana?" - jika itu penipu, dia tidak dapat menjawab atau berbelit-belit.
+- Dail semula nombor yang diketahui: matikan panggilan video, dan dail semula terus menggunakan nombor yang tersimpan dalam buku alamat anda. Penipu tidak boleh mengawal nombor telefon sebenar; sekali dail, tipunya terbongkar.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Langkah ketiga: proses laporan polis selepas disahkan ditipu
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Hentikan pemindahan serta-merta: walaupun "tergesa-gesa", berhenti dahulu; sesiapa yang mendesak anda "cepat pindahkan wang, jangan tutup telefon" hampir pasti penipu.
+2. Simpan semua bukti: rakam skrin dan tangkap skrin paparan panggilan video, rekod sembang, akaun pihak lain, dan bukti pemindahan - ini bahan penting untuk pemeriksaan teknikal.
+3. Dail talian antipenipuan 96110: nyatakan bahawa ini penipuan jenis "AI tukar wajah/tiru suara"; operator akan memulakan pembekukan pembayaran kecemasan.
+4. Dail 110 untuk lapor polis: bawa semua bukti ke balai polis untuk membuat keterangan, dan jelaskan khusus bahawa teknologi pemalsuan AI digunakan, memudahkan polis mengklasifikasikan kes.
+5. Maklumkan kenalan: penipu mungkin menggunakan video palsu anda untuk menipu orang lain; awalkan dengan menghantar peringatan di Moments atau dalam kumpulan keluarga.
+:::
+
+#### Senario Tujuh: Serangan SIM swap (penculikan SIM) - nombor anda "dicuri"
+
+Ini serangan yang tidak banyak orang dengar tentangnya tetapi kesannya sangat besar. SIM swap (penculikan kad SIM) bermaksud penyerang memalsukan maklumat identiti anda, menyamar sebagai anda ke pusat perkhidmatan untuk menggantikan kad SIM baharu. Sebaik sahaja penggantian berjaya, isyarat telefon anda tiba-tiba hilang, manakala telefon penyerang yang memasukkan kad baharu itu boleh menerima semua kod pengesahan SMS anda - Alipay, bank, WeChat, semua pintu terbuka luas.
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Bagaimana mengesan? Tiga isyarat awal SIM swap
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Telefon tiba-tiba memaparkan "Tiada perkhidmatan"/"Tiada kad SIM", sedangkan anda tidak menyentuh kad itu, dan mula semula pun tiada guna - ini selalunya saat penculikan berlaku.
+- Menerima SMS daripada operator "penggantian kad berjaya" atau "perkhidmatan berjaya diproses" - sedangkan anda sendiri tidak pernah memintanya.
+- Tiba-tiba tidak menerima kod pengesahan, malah SMS lain pun tidak diterima - kerana SMS telah dialih ke kad penyerang.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Langkah perlindungan - "kunci" juga kad SIM
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Tetapkan PIN kad SIM: laluan Tetapan &gt; Telefon &gt; PIN kad SIM. Selepas diaktifkan, setiap kali telefon dimula semula atau kad ditukar, PIN mesti dimasukkan untuk menggunakan kad itu. Penyerang yang mendapat kad pun tidak boleh menggunakannya.
+- Aktifkan pengesahan dua peringkat operator: log masuk aplikasi China Mobile/China Unicom/China Telecom, cari "Pusat Keselamatan" atau "Pengesahan urusan perkhidmatan", aktifkan peringatan SMS untuk penggantian kad bukan sendiri dan pengesahan kata laluan kedua untuk urusan. Dengan itu, apabila orang lain cuba mengganti kad anda, juru perkhidmatan akan meminta pengesahan identiti tambahan.
+- Jangan bergantung semata-mata pada pengesahan SMS untuk akaun penting: untuk akaun bernilai tinggi seperti bank dan Apple ID, utamakan aplikasi pengesah (Google Authenticator, Microsoft Authenticator) atau kunci perkakasan, bukan kod pengesahan SMS.
+- Letak tera air pada salinan kad pengenalan: pada salinan yang diperlukan untuk urusan, tulis "Hanya untuk urusan XX" - penyerang selalunya menyamar sebagai anda bergantung pada maklumat kad pengenalan yang bocor.
+:::
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Tindakan kecemasan selepas diculik - kelajuan adalah segalanya
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Dail khidmat pelanggan operator serta-merta untuk lapor hilang: China Mobile 10086 / China Unicom 10010 / China Telecom 10000, minta perkhidmatan digantung segera dan urusan penggantian kad dibekukan, menghalang penyerang terus menggunakan nombor anda.
+2. Log masuk akaun penting menggunakan peranti lain: gunakan komputer atau telefon keluarga, segera tukar kata laluan bank, Alipay, WeChat, dan Apple ID, serta keluarkan peranti asing.
+3. Bekukan akaun pembayaran: laporkan hilang Alipay di 95188, bekukan melalui Pusat Keselamatan WeChat, dan hubungi khidmat pelanggan bank untuk membekukan perbankan internet.
+4. Bawa kad pengenalan ke pusat perkhidmatan: pergi sendiri ke pusat perkhidmatan rasmi dengan kad pengenalan untuk mengganti kad baharu dan memulihkan penggunaan nombor.
+5. Lapor polis: SIM swap sudah merupakan "kesalahan menceroboh maklumat peribadi warganegara"; bawa semua bukti (rekod masa perkhidmatan digantung, kerugian kewangan, rekod penggantian kad) untuk membuat laporan.
+6. Siasatan menyeluruh: selepas nombor dipulihkan, periksa satu persatu rekod log masuk dan aliran kewangan terkini, pastikan tiada kesan penyalahgunaan.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Pencegahan lebih baik daripada rawatan - 5 perkara harian
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Kata laluan skrin kunci + pengesahan dua faktor, aktifkan kedua-duanya
+2. Pastikan "Cari Telefon Saya" diaktifkan
+3. Tetapkan PIN kad SIM (Tetapan > Telefon > PIN kad SIM), supaya orang lain tidak boleh guna kad anda bila telefon hilang
+4. Jangan pasang aplikasi yang tidak diketahui asalnya, jangan klik pautan asing
+5. Sandarkan data penting secara berkala (gambar, buku alamat, rekod sembang)
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Praktik: buat "kad kenalan kecemasan" milik anda sendiri
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Ambil sekeping kertas, tulis nombor-nombor berikut: khidmat pelanggan operator (China Mobile 10086 / China Unicom 10010 / China Telecom 10000), khidmat pelanggan bank, talian antipenipuan 96110, nombor polis 110, dan nombor telefon keluarga.
+2. Tulis e-mel pendaftaran Apple ID/akaun jenama anda dan kaedah hubungan sandaran.
+3. Letakkan kertas itu dalam dompet atau tampal pada peti sejuk - jangan simpan dalam telefon, kerana ketika kejadian telefon mungkin tidak ada di dekat.
+4. Semak sekarang: adakah "Cari Telefon Saya" telah diaktifkan, dan adakah PIN kad SIM telah ditetapkan.
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+Ringkasan bab ini
+
+{class="list-disc pl-5 text-sm space-y-0.5"}
+- 30 minit emas selepas telefon hilang: pinjam telefon untuk mendail -> kunci dari jauh -> lapor hilang kad SIM -> bekukan pembayaran -> maklumkan kenalan -> lapor polis
+- 72 jam selepas ditipu: hentikan pemindahan -> simpan bukti -> dail 96110 -> lapor polis -> hubungi bank -> tukar kata laluan
+- Telefon dijangkiti virus: mod selamat -> nyahpasang aplikasi mencurigakan -> imbasan keselamatan -> tetapan semula kilat (penyelesaian terakhir)
+- Akaun diretas: tukar kata laluan -> keluarkan peranti -> semak rekod log masuk -> aktifkan pengesahan dua faktor -> semak maklumat terikat -> semak pembayaran
+- Mesej ugutan 99.9% adalah penipuan; jangan balas, jangan bayar; tangkap skrin dan sekat penghantinya
+- Penipuan AI tukar wajah/tiru suara: perhatikan celah kelipan mata/bentuk mulut/tepi wajah/arah cahaya, minta pihak itu menoleh dan menutup wajah, tanya soalan peribadi, dan dail semula nombor yang diketahui
+- Penculikan SIM swap: berwaspada sebaik telefon tiba-tiba "tiada perkhidmatan"; tetapkan PIN kad SIM, aktifkan pengesahan dua peringkat operator, dan gunakan aplikasi pengesah untuk akaun penting
+- Lima perkara pencegahan harian: skrin kunci + 2FA, cari telefon, PIN kad SIM, jangan pasang aplikasi asal tak diketahui, sandarkan secara berkala
+:::

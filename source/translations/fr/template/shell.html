@@ -1,0 +1,3066 @@
+ <!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Maîtrise ton téléphone ! De débutant à expert : un cours numérique véritablement pensé pour les débutants. 69 chapitres qui expliquent de façon systématique le matériel, le système, les réseaux, la sécurité, l'IA, la pratique de la programmation par IA, la pratique du développement Android, la pratique du développement iOS, l'automatisation, l'usage senior, le guide d'achat, la santé numérique, la projection d'écran et la voiture, la création de vidéos courtes, les secours sécurité et les tendances du futur, avec de nombreux cas concrets, des exercices pratiques, la lecture vocale, un tableau de bord d'apprentissage, la sauvegarde de progression et un lexique de recherche. La v3.2 ajoute trois grandes parties pratiques : programmation par IA, développement Android et développement iOS (chapitres 37 à 69, soit 33 chapitres).">
+    <meta name="keywords" content="tutoriel téléphone,cours numérique obligatoire,smartphone,Android,iOS,HarmonyOS,astuces téléphone,vie numérique,grands modèles IA,programmation par IA,API grands modèles,ingénierie des prompts,développement Android,développement iOS,Swift,Kotlin,SwiftUI,Jetpack Compose,photographie computationnelle,sécurité informatique,gestion des mots de passe,automatisation,achat de téléphone">
+    <meta name="author" content="Guide de la vie numérique">
+    <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="Maîtrise ton téléphone ! Le cours numérique obligatoire des débutants v3.2">
+    <meta property="og:description" content="De l'initiation à la maîtrise, prends en main toute ta vie numérique. 69 chapitres d'explications systématiques + nombreux exercices pratiques + lecture vocale + tableau de bord d'apprentissage + sauvegarde de progression + lexique de recherche. La v3.2 ajoute trois grandes parties pratiques : programmation par IA, développement Android et développement iOS.">
+    <meta property="og:type" content="book">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="Maîtrise ton téléphone ! Cours obligatoire du numérique">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Maîtrise ton téléphone ! Le cours numérique obligatoire des débutants">
+    <meta name="twitter:description" content="De l'initiation à la maîtrise, prends en main toute ta vie numérique">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+    <title>{{TITLE}} · {{VERSION}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f46e5',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                        accent: '#7c3aed',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .focus-ring:focus-visible {
+                outline: 2px solid #4f46e5;
+                outline-offset: 2px;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark body {
+            background-color: #111827;
+        }
+        .toc-item.active {
+            color: #4f46e5;
+            font-weight: 600;
+            background-color: #eef2ff;
+            border-left: 3px solid #4f46e5;
+        }
+        .dark .toc-item.active {
+            background-color: #1e1b4b;
+            border-left-color: #818cf8;
+        }
+        /* Style de base des liens de la barre latérale */
+        #sidebar a {
+            display: block;
+            transition: all 0.2s ease;
+            position: relative;
+            text-decoration: none;
+        }
+        #sidebar a:hover {
+            color: #4f46e5 !important;
+            background-color: #eef2ff;
+            transform: translateX(2px);
+        }
+        .dark #sidebar a:hover {
+            background-color: rgba(79, 70, 229, 0.12);
+        }
+        /* Titre du groupe parent */
+        .toc-parent > div {
+            transition: background-color 0.15s ease;
+        }
+        .toc-parent > div:hover {
+            background-color: #f8fafc;
+        }
+        .dark .toc-parent > div:hover {
+            background-color: rgba(255,255,255,0.03);
+        }
+        /* Zone indépendante de l'icône de repli */
+        .toc-toggle-btn {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: background-color 0.15s, transform 0.3s ease;
+            color: #9ca3af;
+        }
+        .toc-toggle-btn:hover {
+            background-color: #e5e7eb;
+            color: #374151;
+        }
+        .dark .toc-toggle-btn:hover {
+            background-color: #374151;
+            color: #e5e7eb;
+        }
+        /* Transition des sous-éléments */
+        .toc-child li {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .toc-child:not(.open) + .toc-child li,
+        .toc-child:not(.open) li {
+            /* Repli contrôlé par max-height */
+        }
+        /* Indicateur de la position de lecture actuelle */
+        .toc-reading-indicator {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4f46e5;
+            border-radius: 0;
+            transition: top 0.3s ease, height 0.3s ease;
+            z-index: 1;
+        }
+        /* Amélioration de la zone haute de la barre latérale */
+        #sidebar > nav > div:first-child {
+            background: #f5f6f8;
+            border-radius: 0;
+            padding: 0.875rem 1rem !important;
+        }
+        .dark #sidebar > nav > div:first-child {
+            background: #1a2230;
+        }
+        /* Amélioration de l'ensemble de la barre latérale */
+        #sidebar {
+            box-shadow: none;
+            border-right: 1px solid #e5e7eb;
+        }
+        .dark #sidebar {
+            border-right-color: #374151;
+        }
+        @media (max-width: 1023px) {
+            #sidebar {
+                box-shadow: 4px 0 24px rgba(0,0,0,0.12);
+                border-right: none;
+            }
+        }
+        /* Style du numéro de chapitre */
+        .toc-item span[class*="font-mono"] {
+            display: inline-block;
+            min-width: 1.5rem;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+            opacity: 0.6;
+            transition: opacity 0.2s, color 0.2s;
+        }
+        .toc-item:hover span[class*="font-mono"],
+        .toc-item.active span[class*="font-mono"] {
+            opacity: 1;
+            color: #4f46e5;
+        }
+        .dark .toc-item:hover span[class*="font-mono"],
+        .dark .toc-item.active span[class*="font-mono"] {
+            color: #818cf8;
+        }
+        /* Clignotement du chapitre cible lors de la navigation */
+        .scroll-target-flash {
+            animation: targetFlash 1.2s ease-out;
+        }
+        @keyframes targetFlash {
+            0% { box-shadow: inset 0 0 0 2px rgba(79,70,229,0.25); background-color: rgba(79,70,229,0.02); }
+            100% { box-shadow: none; background-color: transparent; }
+        }
+        .dark .scroll-target-flash {
+            animation: targetFlashDark 1.2s ease-out;
+        }
+        @keyframes targetFlashDark {
+            0% { box-shadow: inset 0 0 0 2px rgba(150,180,200,0.2); background-color: rgba(150,180,200,0.04); }
+            100% { box-shadow: none; background-color: transparent; }
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 3000px;
+        }
+        .content-section {
+            content-visibility: auto;
+            contain-intrinsic-size: 0 800px;
+        }
+        .content-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            max-width: 95ch;
+        }
+        .content-section h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .content-section h5 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .content-section ul, .content-section ol {
+            margin-bottom: 1rem;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(180deg);
+        }
+        .callout-box {
+            border-left: 4px solid;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            max-width: 82ch;
+        }
+        .info-box {
+            border-color: #4f46e5;
+            background: #eef2f5;
+        }
+        .dark .info-box {
+            background: #1e2a36;
+        }
+        .warning-box {
+            border-color: #d4a017;
+            background: #fdf8ef;
+        }
+        .dark .warning-box {
+            background: #3d2e0f;
+        }
+        .danger-box {
+            border-color: #c0392b;
+            background: #fdf0ef;
+        }
+        .dark .danger-box {
+            background: #3d1a1a;
+        }
+        .success-box {
+            border-color: #27ae60;
+            background: #eef9f2;
+        }
+        .dark .success-box {
+            background: #0d2c1a;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        .dark th, .dark td {
+            border-color: #374151;
+        }
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+        .dark th {
+            background-color: #1f2937;
+        }
+        .practice-box {
+            background: #f0f4f8;
+            border: 1px solid #d0d8e0;
+        }
+        .dark .practice-box {
+            background: #1e2a36;
+            border-color: #354152;
+        }
+        .chapter-intro {
+            font-size: 1.05em;
+            color: #4b5563;
+            padding: 1rem 1.25rem;
+            border-radius: 0.25rem;
+            background: #f5f6f8;
+            border-left: 3px solid #4f46e5;
+        }
+        .dark .chapter-intro {
+            color: #9ca3af;
+            background: #1a2230;
+        }
+        .key-point {
+            background: #eef2f5;
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+        .dark .key-point {
+            background: #1e2a36;
+        }
+        #reading-progress {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            height: 3px;
+            background: #4f46e5;
+            z-index: 51;
+            transition: width 0.1s linear;
+        }
+        .search-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 60;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 15vh;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+        .search-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .search-panel {
+            background: white;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 70vh;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+        .dark .search-panel {
+            background: #1f2937;
+        }
+        .search-input-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid #e5e7eb;
+            gap: 0.75rem;
+        }
+        .dark .search-input-wrapper {
+            border-color: #374151;
+        }
+        .search-input-wrapper input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            background: transparent;
+            color: inherit;
+        }
+        .search-results {
+            overflow-y: auto;
+            max-height: calc(70vh - 60px);
+            padding: 0.5rem;
+        }
+        .search-result-item {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .search-result-item:hover {
+            background: #f3f4f6;
+        }
+        .dark .search-result-item:hover {
+            background: #374151;
+        }
+        .search-result-item .result-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .search-result-item .result-excerpt {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .dark .search-result-item .result-excerpt {
+            color: #9ca3af;
+        }
+        .search-result-item mark {
+            background: #fef08a;
+            color: inherit;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+        .dark .search-result-item mark {
+            background: #854d0e;
+        }
+        .font-size-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background 0.15s;
+            font-weight: 700;
+            user-select: none;
+        }
+        .font-size-btn:hover {
+            background: #f3f4f6;
+        }
+        .dark .font-size-btn:hover {
+            background: #374151;
+        }
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .dark .chapter-nav {
+            border-color: #374151;
+        }
+        .chapter-nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+            color: #4f46e5;
+            transition: background 0.15s;
+            text-decoration: none;
+            max-width: 45%;
+        }
+        .chapter-nav a:hover {
+            background: #eef2f5;
+        }
+        .dark .chapter-nav a:hover {
+            background: #1e2a36;
+        }
+        .chapter-nav a.next {
+            margin-left: auto;
+            text-align: right;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .search-panel {
+                width: 95%;
+                max-height: 75vh;
+            }
+        }
+        @media print {
+            #navbar, #sidebar, #overlay, #back-to-top, #reading-progress, .chapter-nav, #quick-tools, #tts-controls, #shortcuts-overlay, #backup-overlay, #streak-toast, .chapter-rating, .no-print {
+                display: none !important;
+            }
+            main {
+                margin: 0 !important;
+                padding: 1rem !important;
+                box-shadow: none !important;
+                max-width: 100% !important;
+            }
+            .content-section {
+                content-visibility: visible !important;
+                contain-intrinsic-size: none !important;
+                page-break-inside: avoid;
+            }
+            body {
+                font-size: 12pt !important;
+                color: #000 !important;
+                background: #fff !important;
+            }
+            a {
+                color: #000 !important;
+                text-decoration: underline;
+            }
+        }
+
+        /* ===== Styles améliorés : cartes de lecture guidée, résumés de chapitre et parcours d'apprentissage ===== */
+        .reading-guide-card {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.25rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .dark .reading-guide-card {
+            background: #1a2230;
+            border-color: #354152;
+        }
+        .hero-banner {
+            background: #4f46e5;
+            border-radius: 0.25rem;
+            color: #fff;
+            padding: 2rem 1.5rem;
+        }
+        .stat-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.7rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 0.25rem;
+            font-size: 0.78rem;
+        }
+        .learning-path {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .path-step {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            position: relative;
+        }
+        .path-step:hover {
+            border-color: #4f46e5;
+        }
+        .dark .path-step {
+            background: #1a2230;
+            border-color: #354152;
+        }
+        .path-step .step-num {
+            position: absolute;
+            top: -0.7rem;
+            left: 1rem;
+            background: #4f46e5;
+            color: #fff;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .chapter-summary {
+            background: #fdf8ef;
+            border-left: 4px solid #d4a017;
+            border-radius: 0.25rem;
+            padding: 1rem 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .dark .chapter-summary {
+            background: #3d2e0f;
+        }
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            padding: 0.6rem 0;
+        }
+        .dark .breadcrumb { color: #9ca3af; }
+        .breadcrumb a:hover { color: #4f46e5; text-decoration: underline; }
+        .breadcrumb .sep { color: #cbd5e1; }
+        .quick-tools {
+            position: fixed;
+            right: 1rem;
+            bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 40;
+        }
+        .quick-tool-btn {
+            width: 2.6rem;
+            height: 2.6rem;
+            background: #fff;
+            color: #374151;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .dark .quick-tool-btn {
+            background: #1f2937;
+            color: #e5e7eb;
+        }
+        .quick-tool-btn:hover {
+            transform: translateY(-1px);
+            color: #4f46e5;
+        }
+        .reading-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .dark .reading-time { color: #9ca3af; }
+        .difficulty-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.15rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+        .difficulty-beginner { background: #d1fae5; color: #065f46; }
+        .difficulty-intermediate { background: #dbeafe; color: #1e40af; }
+        .difficulty-advanced { background: #fce7f3; color: #9f1239; }
+        .dark .difficulty-beginner { background: #064e3b; color: #6ee7b7; }
+        .dark .difficulty-intermediate { background: #1e3a5f; color: #93c5fd; }
+        .dark .difficulty-advanced { background: #831843; color: #fbcfe8; }
+        .pill-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .toc-section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #9ca3af;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.5rem 0.75rem 0.25rem;
+        }
+        .dark .toc-section-label { color: #6b7280; }
+        .toc-progress-bar {
+            height: 2px;
+            background: #4f46e5;
+            margin: 0.3rem 0;
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #4f46e5;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            z-index: 100;
+        }
+        .skip-link:focus { left: 0; }
+        .glossary-item {
+            display: flex;
+            gap: 1rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+        .dark .glossary-item { border-color: #374151; }
+        .glossary-item:last-child { border-bottom: 0; }
+        .glossary-term {
+            flex-shrink: 0;
+            font-weight: 700;
+            color: #4f46e5;
+            min-width: 90px;
+        }
+        .comparison-table th { font-weight: 700; }
+        .comparison-table tr:nth-child(even) td { background: #f9fafb; }
+        .dark .comparison-table tr:nth-child(even) td { background: #111827; }
+        .highlight-quote {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem 1.25rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #075985;
+        }
+        .dark .highlight-quote {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            color: #bae6fd;
+        }
+        .kbd {
+            display: inline-block;
+            padding: 0.1rem 0.45rem;
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-bottom-width: 2px;
+            border-radius: 0.3rem;
+            font-family: ui-monospace, monospace;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        .dark .kbd { background: #374151; color: #e5e7eb; border-color: #4b5563; }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .search-panel {
+                width: 95%;
+                max-height: 75vh;
+            }
+            .hero-banner { padding: 1.5rem 1rem; }
+            .hero-banner h1 { font-size: 1.5rem !important; }
+            .learning-path { grid-template-columns: 1fr; }
+            .quick-tools { right: 0.5rem; bottom: 4.5rem; }
+            .quick-tool-btn { width: 2.3rem; height: 2.3rem; }
+        }
+        @media (max-width: 480px) {
+            .breadcrumb { font-size: 0.78rem; }
+        }
+        @media (min-width: 1280px) {
+            main { max-width: 56rem; }
+        }
+
+        /* ===== Styles des améliorations profondes ===== */
+
+        /* Barre de progression de lecture en dégradé */
+        #reading-progress {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
+            background-size: 200% 100% !important;
+            animation: progressShimmer 3s ease infinite;
+            height: 3px;
+            box-shadow: 0 0 8px rgba(79,70,229,0.3);
+        }
+        .dark #reading-progress {
+            background: linear-gradient(90deg, #818cf8, #a78bfa, #818cf8) !important;
+            background-size: 200% 100% !important;
+        }
+        @keyframes progressShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* Animation d'entrée au défilement */
+        .content-section {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* Le contenu du premier écran est visible directement */
+        .content-section:first-of-type,
+        .content-section.immediately-visible {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        /* Amélioration de la bannière Hero */
+        .hero-banner {
+            background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(167,139,250,0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 40%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(236,72,153,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-banner > * { position: relative; z-index: 1; }
+
+        /* Effet hover des cartes */
+        .path-step {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+        .path-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(79,70,229,0.15);
+        }
+        .dark .path-step:hover {
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+        .reading-guide-card {
+            transition: box-shadow 0.3s ease;
+        }
+        .reading-guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .dark .reading-guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        /* Bouton retour en haut amélioré */
+        #back-to-top {
+            position: fixed;
+            right: 1rem;
+            bottom: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: #4f46e5;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(79,70,229,0.3);
+            cursor: pointer;
+            z-index: 40;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            border: none;
+            font-size: 1rem;
+        }
+        .dark #back-to-top {
+            background: #374151;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+        }
+        #back-to-top:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(79,70,229,0.35);
+        }
+        #back-to-top .progress-ring {
+            position: absolute;
+            inset: -3px;
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
+        }
+        #back-to-top .progress-ring circle {
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+        }
+        #back-to-top .progress-ring .bg {
+            stroke: rgba(255,255,255,0.15);
+        }
+        #back-to-top .progress-ring .fg {
+            stroke: #60a5fa;
+            transition: stroke-dashoffset 0.15s linear;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+
+        /* Bouton signet */
+        .bookmark-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            color: #6b7280;
+        }
+        .dark .bookmark-btn {
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        .bookmark-btn:hover {
+            border-color: #4f46e5;
+            color: #4f46e5;
+        }
+        .dark .bookmark-btn:hover {
+            border-color: #818cf8;
+            color: #818cf8;
+        }
+        .bookmark-btn.active {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
+        .dark .bookmark-btn.active {
+            background: #818cf8;
+            border-color: #818cf8;
+        }
+
+        /* Case chapitre terminé */
+        .chapter-check {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            color: #6b7280;
+            user-select: none;
+        }
+        .dark .chapter-check {
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        .chapter-check:hover {
+            border-color: #27ae60;
+            color: #27ae60;
+        }
+        .chapter-check.checked {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+        .chapter-check .check-icon {
+            width: 14px;
+            height: 14px;
+            border: 2px solid currentColor;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .chapter-check.checked .check-icon {
+            border-color: #fff;
+            background: #fff;
+        }
+        .chapter-check.checked .check-icon::after {
+            content: '✓';
+            color: #27ae60;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* Sélection clavier des résultats */
+        .search-result-item.selected {
+            background: #eef2f5;
+        }
+        .dark .search-result-item.selected {
+            background: #374151;
+        }
+
+        /* Cartes du tableau de bord */
+        .dashboard-card {
+            transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
+        }
+
+        /* Badge de jours d'affilée */
+        #streak-toast {
+            transform: translateX(-50%) translateY(100px);
+            left: 50%;
+            right: auto;
+            font-weight: 600;
+        }
+        #streak-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* Étoiles de notation du chapitre */
+        .chapter-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.15rem;
+            margin-left: 0.5rem;
+        }
+        .chapter-rating .star {
+            font-size: 0.85rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: color 0.15s, transform 0.15s;
+            user-select: none;
+        }
+        .chapter-rating .star:hover { transform: scale(1.2); }
+        .chapter-rating .star.active { color: #fbbf24; }
+        .dark .chapter-rating .star { color: #4b5563; }
+        .dark .chapter-rating .star.active { color: #fbbf24; }
+
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(79,70,229,0.12);
+        }
+        .dark .dashboard-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+        }
+        .check-item:hover span { color: #4f46e5; }
+        .dark .check-item:hover span { color: #818cf8; }
+        .check-item input:checked + span {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        /* Contrôles de lecture vocale */
+        .tts-controls {
+            position: fixed;
+            bottom: 6rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(79,70,229,0.18);
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .tts-controls.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .dark .tts-controls {
+            background: #1f2937;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+        }
+        .tts-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-size: 1rem;
+            background: #f3f4f6;
+            color: #374151;
+        }
+        .dark .tts-btn { background: #374151; color: #e5e7eb; }
+        .tts-btn:hover { background: #4f46e5; color: #fff; }
+        .dark .tts-btn:hover { background: #818cf8; }
+        .tts-btn.play-btn {
+            background: #4f46e5;
+            color: #fff;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.2rem;
+        }
+        .dark .tts-btn.play-btn { background: #818cf8; }
+        .tts-btn.play-btn:hover { background: #1a252f; }
+        .tts-btn.play-btn.playing { background: #e74c3c; animation: ttsPulse 1.5s ease-in-out infinite; }
+        @keyframes ttsPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(231,76,60,0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(231,76,60,0); }
+        }
+        .tts-speed-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #6b7280;
+            min-width: 2rem;
+            text-align: center;
+        }
+        .dark .tts-speed-badge { color: #9ca3af; }
+        .tts-controls .tts-chapter-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            max-width: 12rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .dark .tts-controls .tts-chapter-label { color: #9ca3af; }
+        .quick-tool-btn.tts-active {
+            color: #4f46e5;
+            box-shadow: 0 0 0 2px #4f46e5;
+        }
+        .dark .quick-tool-btn.tts-active { color: #818cf8; box-shadow: 0 0 0 2px #818cf8; }
+        @media (max-width: 768px) {
+            .tts-controls {
+                bottom: 5rem;
+                padding: 0.4rem 0.75rem;
+                gap: 0.4rem;
+            }
+            .tts-btn { width: 2.2rem; height: 2.2rem; font-size: 0.9rem; }
+            .tts-btn.play-btn { width: 2.6rem; height: 2.6rem; font-size: 1rem; }
+            .tts-controls .tts-chapter-label { max-width: 8rem; }
+        }
+
+        /* Bouton copier */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+            color: #6b7280;
+            vertical-align: middle;
+        }
+        .dark .copy-btn {
+            border-color: #374151;
+            background: #1f2937;
+            color: #9ca3af;
+        }
+        .copy-btn:hover {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
+        .copy-btn.copied {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+
+        /* Blocs repliables */
+        .collapsible-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .collapsible-header:hover {
+            color: #4f46e5;
+        }
+        .dark .collapsible-header:hover {
+            color: #818cf8;
+        }
+        .collapsible-header .collapse-icon {
+            transition: transform 0.3s ease;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+        .collapsible-header.collapsed .collapse-icon {
+            transform: rotate(-90deg);
+        }
+        .collapsible-body {
+            max-height: 5000px;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+        .collapsible-body.collapsed {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        /* Avis de restauration de la position */
+        .restore-position-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #4f46e5;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            z-index: 55;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            white-space: nowrap;
+        }
+        .dark .restore-position-toast {
+            background: #374151;
+        }
+        .restore-position-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+        .restore-position-toast button {
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .restore-position-toast .btn-restore {
+            background: #fff;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+        .restore-position-toast .btn-dismiss {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* Séparateurs de chapitre améliorés */
+        .content-section {
+            position: relative;
+            padding-top: 1rem;
+        }
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d1d5db 20%, #d1d5db 80%, transparent);
+        }
+        .dark .content-section::before {
+            background: linear-gradient(90deg, transparent, #374151 20%, #374151 80%, transparent);
+        }
+        .content-section:first-of-type::before {
+            display: none;
+        }
+
+        /* Encadrés améliorés */
+        .callout-box {
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .callout-box:hover {
+            transform: translateX(2px);
+        }
+
+        /* Lignes de tableau au survol */
+        table tbody tr {
+            transition: background-color 0.15s ease;
+        }
+        table tbody tr:hover {
+            background-color: #f0f4f8;
+        }
+        .dark table tbody tr:hover {
+            background-color: rgba(255,255,255,0.04);
+        }
+
+        /* Boutons de navigation de chapitre */
+        .chapter-nav a {
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .chapter-nav a:hover {
+            transform: translateX(4px);
+            background: #eef2f5;
+        }
+        .chapter-nav a.next:hover {
+            transform: translateX(-4px);
+        }
+        .dark .chapter-nav a:hover {
+            background: #1e2a36;
+        }
+
+        /* Marqueurs de signets en barre latérale */
+        .toc-item.bookmarked::after {
+            content: '★';
+            color: #d4a017;
+            font-size: 0.65rem;
+            margin-left: 0.3rem;
+        }
+        .toc-item.completed-toc {
+            color: #27ae60 !important;
+        }
+
+        /* Outils rapides améliorés */
+        .quick-tool-btn {
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .quick-tool-btn:hover {
+            transform: translateY(-2px) scale(1.08);
+        }
+        .quick-tool-btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        /* Zone sécurisée en bas sur mobile */
+        @media (max-width: 768px) {
+            #back-to-top {
+                right: 0.75rem;
+                bottom: 1.25rem;
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            .restore-position-toast {
+                font-size: 0.8rem;
+                padding: 0.6rem 1rem;
+                left: 1rem;
+                right: 1rem;
+                transform: translateX(0) translateY(100px);
+                white-space: normal;
+                text-align: center;
+                justify-content: center;
+            }
+            .restore-position-toast.show {
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        /* Masquer les nouveaux éléments à l'impression */
+        @media print {
+            .bookmark-btn, .chapter-check, .copy-btn,
+            .restore-position-toast, #back-to-top .progress-ring,
+            #tts-controls, .quick-tool-btn.tts-active {
+                display: none !important;
+            }
+            .content-section {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+<style>
+        /* ===== v1.8 nouveau : styles de la partie programmation par IA ===== */
+        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; }
+        .code-head { background: #374151; color: #e5e7eb; font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
+        .code-head .dots { letter-spacing: 3px; color: #9ca3af; }
+        .code-block pre { background: #1f2937; color: #e5e7eb; padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
+        .dark .code-block { border-color: #4b5563; }
+        code.inline { background: #eef2f5; color: #4f46e5; padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+        .dark code.inline { background: #1e2a36; color: #818cf8; }
+        .quote-line { border-left: 4px solid #4f46e5; background: #eef2ff; color: #1e1b4b; padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
+        .dark .quote-line { background: #1e1b4b; color: #c7d2fe; }
+        @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <a class="skip-link focus-ring" href="#content">Aller au contenu principal</a>
+    <div id="reading-progress" style="width:0%" aria-hidden="true"></div>
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" role="banner">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3 min-w-0">
+                <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="Ouvrir le menu du sommaire" aria-expanded="false" aria-controls="sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#top" class="flex items-center gap-2 min-w-0" aria-label="Retour à l'accueil">Maîtrise ton téléphone · Cours obligatoire du numérique</a>
+            </div>
+            <nav class="flex items-center gap-1 md:gap-2" aria-label="Action principale">
+                <a href="#ji-chu-pian" class="hidden md:inline-flex items-center gap-1 text-sm text-secondary dark:text-gray-400 hover:text-primary px-2 py-1 rounded-md transition-colors focus-ring" title="Commencer par les bases">Commencer l'apprentissage</a>
+                <button id="search-toggle" class="text-lg p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="Rechercher (Ctrl+K)" aria-label="Rechercher dans le contenu">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div class="hidden md:flex items-center border border-gray-200 dark:border-gray-600 rounded-md overflow-hidden" role="group" aria-label="Ajustement de la taille du texte">
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="decrease" title="Réduire la police" aria-label="Réduire la police">A-</button>
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="reset" title="Réinitialiser la taille" aria-label="Réinitialiser la taille">A</button>
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="increase" title="Agrandir la police" aria-label="Agrandir la police">A+</button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="Basculer sombre/clair" aria-label="Basculer mode sombre/clair">
+                    <i class="fas fa-moon dark:hidden" aria-hidden="true"></i>
+                    <i class="fas fa-sun hidden dark:inline" aria-hidden="true"></i>
+                </button>
+                <button id="print-btn" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary p-2 rounded-md transition-colors focus-ring" title="Imprimer / Exporter en PDF" aria-label="Imprimer ou exporter en PDF">
+                    <i class="fas fa-print" aria-hidden="true"></i>
+                </button>
+                <a href="#top" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary transition-colors focus-ring px-2 py-1 rounded-md" aria-label="Retour en haut">
+                    <i class="fas fa-arrow-up mr-1" aria-hidden="true"></i>Haut de page
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0" role="navigation" aria-label="Sommaire de l'article">
+            <nav class="p-4">
+                <div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+                    <h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
+                        <i class="fas fa-list-ul text-primary" aria-hidden="true"></i>Sommaire
+                    </h2>
+                    <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        <span id="reading-progress-text">0 / 38 chap.</span>
+                        <span id="reading-percent" class="font-semibold text-primary">0%</span>
+                    </div>
+                    <div class="toc-progress-bar mt-1.5" id="toc-progress-bar" style="transform: scaleX(0);" aria-hidden="true"></div>
+                </div>
+                <div class="mb-3 px-1">
+                    <input type="text" id="toc-filter" placeholder="Filtrer les chapitres..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="Filtrer les chapitres">
+                </div>
+                <ul class="space-y-1 text-sm" id="toc-list">{{TOC}}</ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <div id="search-overlay" class="search-overlay" role="dialog" aria-label="Rechercher">
+            <div class="search-panel">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="Rechercher dans le contenu..." autocomplete="off" aria-label="Mots-clés de recherche">
+                    <button id="search-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Fermer la recherche">ESC</button>
+                </div>
+                <div id="search-results" class="search-results scrollbar-hide">
+                    <div class="p-4 text-center text-gray-400 text-sm">Saisis un mot-clé pour lancer la recherche</div>
+                </div>
+            </div>
+        </div>
+
+        <main id="content" class="w-full lg:ml-72 px-5 md:px-10 py-8 bg-white dark:bg-gray-800 min-h-screen">
+            <div class="content-col">
+            <a id="top"></a>
+
+            <!-- Haut de page (fil d’Ariane) -->
+            <nav class="breadcrumb no-print" aria-label="Emplacement">
+                <a href="#top">Accueil</a>
+                <span class="sep" aria-hidden="true">›</span>
+                <span class="text-gray-700 dark:text-gray-300">Cours numérique essentiel · v1.8</span>
+            </nav>
+
+            <!-- Bannière hero -->
+            <section class="hero-banner mb-8" aria-labelledby="hero-title">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>69 chapitres + 8 annexes</span>
+                    <span class="stat-pill"><i class="fas fa-clock" aria-hidden="true"></i>≈ 40-55 heures</span>
+                    <span class="stat-pill"><i class="fas fa-signal" aria-hidden="true"></i>Du simple au complexe</span>
+                </div>
+                <h1 id="hero-title" class="text-3xl md:text-4xl font-bold mb-2">Maîtrise ton téléphone ! Le cours de tech essentiel pour débutants</h1>
+                <p class="text-base md:text-lg opacity-90 mb-4 text-balance">En partant de l'«ordinateur de poche» que tu portes sur toi, tu vas maîtriser de façon systématique le matériel, le système, le réseau, la sécurité, l'IA et les tendances du futur.</p>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#ji-chu-pian" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-4 py-2 rounded-md hover:bg-blue-50 transition-colors focus-ring text-sm">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>Commencer par les bases
+                    </a>
+                    <a href="#ruan-jian-pian" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">
+                        <i class="fas fa-th-large" aria-hidden="true"></i>Voir les parties
+                    </a>
+                    <a href="#fu-lu-c" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">C Annexe C : lexique minimal des termes</a>
+                </div>
+            </section>
+
+            <!-- Comment utiliser ce livre -->
+            <section class="reading-guide-card" aria-labelledby="how-to-use-title">
+                <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
+                    <i class="fas fa-compass text-primary" aria-hidden="true"></i>Comment utiliser ce livre ?
+                </h2>
+                <div class="grid md:grid-cols-2 gap-3 text-sm">
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-bullseye mr-1" aria-hidden="true"></i>Objectif du livre</p>
+                        <p class="text-gray-700 dark:text-gray-300">Avec ce petit livre «qui t'explique et te fait pratiquer», tu passeras de «savoir utiliser» ton téléphone à «le comprendre», et de «recevoir passivement» à «le piloter activement».</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-route mr-1" aria-hidden="true"></i>Parcours de lecture</p>
+                        <p class="text-gray-700 dark:text-gray-300">Il se divise en huit parties :<strong>Bases→Logiciels→Avancé→Au-delà→Pratique→Programmation IA→Android→iOS</strong>, et couvre 69 chapitres. Les débutants peuvent lire dans l'ordre ; les plus expérimentés peuvent sauter directement aux chapitres qui les intéressent. La v3.2 ajoute trois parties de développement pratique (chap. 37-69, soit 33 chapitres) : programmation par IA, développement Android et développement iOS, pour te conduire d'utilisateur numérique à développeur d'apps.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-hand-pointer mr-1" aria-hidden="true"></i>Légende des symboles</p>
+                        <p class="text-gray-700 dark:text-gray-300"><span class="kbd">[Bouton]</span> désigne un bouton précis à l'écran;<span class="kbd">&gt;</span> indique l'ordre des opérations;<strong>le gras</strong> marque les points clés à retenir.</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-magic mr-1" aria-hidden="true"></i>Astuces interactives</p>
+                        <p class="text-gray-700 dark:text-gray-300">Haut de page <span class="kbd">Ctrl+K</span> rechercher; <span class="kbd">A+/A-</span> ajuster la taille du texte; <span class="kbd">R</span> lecture vocale ; comprend bascule clair/sombre et export PDF.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Parcours d’apprentissage en 5 étapes -->
+            <section class="mb-8" aria-labelledby="learning-path-title">
+                <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">Parcours d'apprentissage : cinq étapes pour dompter ton téléphone</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Le livre suit la progression naturelle «découvrir, maîtriser, pratiquer» : chaque partie est le socle de la suivante.</p>
+                <div class="learning-path">
+                    <a href="#ji-chu-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">1</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Les bases</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Chap. 0 - 7</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Apprends à connaître ton téléphone : matériel, système, fichiers, réseau, apps, sécurité et fonctions de pointe.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Initiation</span>
+                    </a>
+                    <a href="#ruan-jian-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">2</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Logiciels</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Chap. 8 - 14</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Maîtrise tous les types d'apps : communication, bureautique, paiement, photo, vidéo/musique, mots de passe.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Initiation</span>
+                    </a>
+                    <a href="#jin-jie-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">3</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Perfectionnement</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Chap. 15 - 20</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Compétences d'expert : science de la batterie, comptes et cloud, sauvegarde/migration, dépannage autonome.</p>
+                        <span class="difficulty-tag difficulty-intermediate mt-2 inline-block"><i class="fas fa-mountain" aria-hidden="true"></i>Progression</span>
+                    </a>
+                    <a href="#chao-yue-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">4</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Plus loin</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Chap. 21 - 26</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Touche la frontière technologique : sécurité de l'information, grands modèles d'IA, pensée algorithmique et vie numérique future.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Niveau avancé</span>
+                    </a>
+                    <a href="#shi-zhan-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">5</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Pratique</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Chap. 27 - 32</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Application concrète : apprendre le téléphone à ses parents, bien acheter, santé numérique, écran de voiture, vidéos courtes, secours numérique.</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>Initiation</span>
+                    </a>
+                    <a href="#ai-biancheng-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">6</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Programmation par IA en pratique</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Chap. 37 - 47</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Fais écrire du code par l'IA : de la révolution des paradigmes et des cinq principes de pensée au choix d'outils et de modèles, avec la pratique de l'API et des projets complets.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Niveau avancé</span>
+                    </a>
+                    <a href="#an-zhuo-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">7</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Développement Android en pratique</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Chap. 48 - 58</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Fais créer des apps Android par l'IA : Kotlin, Jetpack Compose, deux projets complets et publication sur Google Play.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Niveau avancé</span>
+                    </a>
+                    <a href="#ios-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">8</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">Développement iOS en pratique</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">Chap. 59 - 69</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">Fais créer des apps Apple par l'IA : Swift, SwiftUI, deux projets complets et publication sur l'App Store.</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>Niveau avancé</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- Carte express des chapitres (tableau) -->
+            <section class="reading-guide-card" aria-labelledby="chapter-map-title">
+                <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
+                    <i class="fas fa-map text-primary" aria-hidden="true"></i>Carte express des chapitres
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Repère vite le chapitre selon ton objectif.</p>
+                <div class="grid md:grid-cols-2 gap-2 text-sm">
+                    <div class="flex items-start gap-2"><i class="fas fa-microchip text-primary mt-1" aria-hidden="true"></i><span><strong>Comprendre le matériel</strong> → <a href="#di-yi-zhang" class="text-primary hover:underline">01 Chapitre 1 : Bonjour, mon ordinateur personnel</a> · <a href="#di-san-zhang" class="text-primary hover:underline">03 Chapitre 3 : Brancher le téléphone à sa « ligne de vie »</a>(réseau et modem)</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-shield-halved text-primary mt-1" aria-hidden="true"></i><span><strong>Protéger sa vie privée</strong> → <a href="#di-liu-zhang" class="text-primary hover:underline">06 Chapitre 6 : Protéger ta vie numérique</a> · <a href="#di-shi-si-zhang" class="text-primary hover:underline">14 Chapitre 14 : Dossier spécial gestionnaires de mots de passe</a> · <a href="#di-er-shi-yi-zhang" class="text-primary hover:underline">Chap. 21</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-camera text-primary mt-1" aria-hidden="true"></i><span><strong>Réussir ses photos</strong> → <a href="#di-shi-yi-zhang" class="text-primary hover:underline">11 Chapitre 11 : Photo et gestion des images</a> + <a href="#di-shi-yi-zhang-advanced" class="text-primary hover:underline">Complément du chapitre 11 : techniques d'image professionnelle</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-robot text-primary mt-1" aria-hidden="true"></i><span><strong>Maîtriser les assistants IA</strong> → <a href="#di-er-shi-er-zhang" class="text-primary hover:underline">22 Chapitre 22 : Comment l'IA fonctionne dans le téléphone</a> · <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">07 Chapitre 7 : Décryptage complet des fonctions de pointe</a>(pointe)</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-code text-primary mt-1" aria-hidden="true"></i><span><strong>Faire coder par l'IA</strong> → <a href="#ai-biancheng-pian" class="text-primary hover:underline">Chap. 37 - 47</a>: révolution des paradigmes, cinq principes, choix d'outils et de modèles, API en pratique et projets complets</span></div>
+                    <div class="flex items-start gap-2"><i class="fab fa-android text-primary mt-1" aria-hidden="true"></i><span><strong>Apprendre le développement Android</strong> → <a href="#an-zhuo-kai-fa-pian" class="text-primary hover:underline">Chap. 48 - 58</a>: Kotlin, Compose, deux projets et publication sur Google Play</span></div>
+                    <div class="flex items-start gap-2"><i class="fab fa-apple text-primary mt-1" aria-hidden="true"></i><span><strong>Apprendre le développement iOS</strong> → <a href="#ios-kai-fa-pian" class="text-primary hover:underline">Chap. 59 - 69</a>: Swift, SwiftUI, deux projets et publication sur l'App Store</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-bolt text-primary mt-1" aria-hidden="true"></i><span><strong>Angoisse d'autonomie</strong> → <a href="#di-shi-wu-zhang" class="text-primary hover:underline">Chap. 15</a> + <a href="#di-shi-wu-zhang-kuichong" class="text-primary hover:underline">Complément : décryptage complet des protocoles de charge rapide</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-bug text-primary mt-1" aria-hidden="true"></i><span><strong>Le téléphone tombe en panne</strong> → <a href="#di-shi-jiu-zhang" class="text-primary hover:underline">19 Chapitre 19 : Dépannage et autodiagnostic</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-arrows-rotate text-primary mt-1" aria-hidden="true"></i><span><strong>Changer de téléphone/migrer les données</strong> → <a href="#di-shi-ba-zhang" class="text-primary hover:underline">18 Chapitre 18 : Sauvegarde et migration des données</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-wand-magic-sparkles text-primary mt-1" aria-hidden="true"></i><span><strong>Explorer l'automatisation</strong> → <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">23 Chapitre 23 : Pensée algorithmique et initiation à l'automatisation</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-mobile-screen text-primary mt-1" aria-hidden="true"></i><span><strong>Bien choisir un pliable</strong> → <a href="#fu-lu-f" class="text-primary hover:underline">F Annexe F : dossier écrans pliables — achat et utilisation</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-heart text-primary mt-1" aria-hidden="true"></i><span><strong>Aider ses parents avec le téléphone</strong> → <a href="#di-er-shi-qi-zhang" class="text-primary hover:underline">Chap. 27</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-cart-shopping text-primary mt-1" aria-hidden="true"></i><span><strong>Acheter un téléphone</strong> → <a href="#di-er-shi-ba-zhang" class="text-primary hover:underline">28 Chapitre 28 : Bien dépenser pour acheter le téléphone de tes rêves — le guide ultime d'achat</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-heart-pulse text-primary mt-1" aria-hidden="true"></i><span><strong>Santé numérique/antiaddiction</strong> → <a href="#di-er-shi-jiu-zhang" class="text-primary hover:underline">29 Chapitre 29 : Santé numérique — construire une relation saine avec ton téléphone</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-tv text-primary mt-1" aria-hidden="true"></i><span><strong>Écran dupliqué/voiture</strong> → <a href="#di-san-shi-zhang" class="text-primary hover:underline">30 Chapitre 30 : Projection d'écran, présentation et connectivité embarquée</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-video text-primary mt-1" aria-hidden="true"></i><span><strong>Tourner des vidéos courtes</strong> → <a href="#di-san-shi-yi-zhang" class="text-primary hover:underline">31 Chapitre 31 : Initiation au tournage de vidéos courtes et à la création de contenu</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-primary mt-1" aria-hidden="true"></i><span><strong>Téléphone perdu/arnaque</strong> → <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">32 Chapitre 32 : Manuel de secours sécurité du téléphone</a></span></div>
+                </div>
+            </section>
+
+            <!-- Pour finir: ce que ce livre n’enseigne pas -->
+            <div class="highlight-quote">
+                <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>Ce livre ne t'apprend pas à «scroller plus confortablement», il t'aide à comprendre : pourquoi ton téléphone fonctionne-t-il ainsi ? Que peut-il faire, que ne peut-il pas faire ? Et comment le mettre réellement à ton service, au lieu qu'il asservisse ton attention et ton temps ?</p>
+                <p class="text-right text-sm">—— L'intention derrière ce livre</p>
+            </div>
+
+            <!-- Check-list interactive + tableau de bord de lecture -->
+            <section class="mb-8" aria-labelledby="dashboard-title">
+                <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
+                    <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>Tableau de bord d'apprentissage
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Suis ta progression de lecture et vérifie la santé de ton téléphone.</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <!-- Progression de lecture (carte) -->
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>Progression de lecture</h3>
+                        <div class="flex items-center gap-4">
+                            <div class="relative w-20 h-20 flex-shrink-0">
+                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90">
+                                    <circle cx="40" cy="40" r="34" fill="none" stroke="#e5e7eb" stroke-width="8" class="dark:stroke-gray-700"/>
+                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
+                                </svg>
+                                <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span>
+                            </div>
+                            <div class="flex-1 text-sm space-y-1">
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Chapitres lus</span><span id="read-count" class="font-semibold">0 / 38</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Signets</span><span id="bookmark-count" class="font-semibold">0</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">Dernière lecture</span><span id="last-chapter" class="font-semibold text-xs truncate max-w-[8rem]">—</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Autodiagnostic du téléphone (carte) -->
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>Autodiagnostic du téléphone</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Coche ce que tu fais déjà et découvre le "score santé" de ton téléphone :</p>
+                        <div id="checklist-items" class="space-y-1.5 text-sm">
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Code de verrouillage défini (pas 1234/0000)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Double authentification activée (Apple ID/compte constructeur)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>"Localiser mon téléphone" activé</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Photos sauvegardées dans le cloud (au moins une)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Discussions WeChat sauvegardées sur l'ordinateur</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Apps de paiement avec empreinte/visage activées</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>App "Centre national antifraude" installée</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Paiement sans mot de passe : abonnements inutiles résiliés</span></label>
+                        </div>
+                        <div class="mt-3 flex items-center justify-between">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">Score santé</span>
+                            <span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span>
+                        </div>
+                        <div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">Fais l'autodiagnostic et découvre la sécurité de ton téléphone</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- contenu « top » conservé pour compatibilité -->
+            <div class="sr-only" aria-hidden="true">v3.2 · Un vrai cours numérique pour gens ordinaires</div>
+
+            {{BODY}}'achat, consulte les derniers tests et les retours d'utilisateurs.</p>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Outils rapides: groupe de boutons flottants -->
+    <div id="quick-tools" class="quick-tools no-print" aria-label="Outils rapides">
+        <button id="quick-search" class="quick-tool-btn" title="Rechercher (Ctrl+K)" aria-label="Rechercher">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        <button id="quick-theme" class="quick-tool-btn" title="Basculer sombre/clair" aria-label="Changer de thème">
+            <i class="fas fa-circle-half-stroke" aria-hidden="true"></i>
+        </button>
+        <button id="quick-print" class="quick-tool-btn" title="Imprimer / Exporter en PDF" aria-label="Imprimer ou exporter">
+            <i class="fas fa-print" aria-hidden="true"></i>
+        </button>
+        <button id="quick-toc" class="quick-tool-btn" title="Sommaire" aria-label="Ouvrir le sommaire">
+            <i class="fas fa-list" aria-hidden="true"></i>
+        </button>
+        <button id="quick-tts" class="quick-tool-btn" title="Lecture vocale" aria-label="Lecture vocale">
+            <i class="fas fa-headphones" aria-hidden="true"></i>
+        </button>
+        <button id="quick-shortcuts" class="quick-tool-btn" title="Raccourcis clavier (?)" aria-label="Panneau des raccourcis">
+            <i class="fas fa-keyboard" aria-hidden="true"></i>
+        </button>
+        <button id="quick-backup" class="quick-tool-btn" title="Sauvegarder/Restaurer la progression" aria-label="Sauvegarde de la progression">
+            <i class="fas fa-cloud-arrow-up" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- Panneau des raccourcis -->
+    <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="Raccourcis clavier">
+        <div class="search-panel" style="max-width:480px">
+            <div class="search-input-wrapper">
+                <i class="fas fa-keyboard text-gray-400"></i>
+                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">Raccourcis clavier</span>
+                <button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Fermer">ESC</button>
+            </div>
+            <div class="p-4 space-y-2 text-sm">
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Rechercher du contenu</span><span class="kbd">Ctrl + K</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Basculer sombre/clair</span><span class="kbd">T</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Lecture vocale : lecture/pause</span><span class="kbd">R</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Arrêter la lecture</span><span class="kbd">ESC</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Ouvrir le panneau de raccourcis</span><span class="kbd">?</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">Augmenter / réduire la taille du texte</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div>
+                <div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">Imprimer / exporter en PDF</span><span class="kbd">Ctrl + P</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boîte de dialogue sauvegarde/restauration -->
+    <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="Sauvegarde et restauration">
+        <div class="search-panel" style="max-width:520px">
+            <div class="search-input-wrapper">
+                <i class="fas fa-cloud-arrow-up text-gray-400"></i>
+                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">Sauvegarde et restauration de la progression</span>
+                <button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="Fermer">ESC</button>
+            </div>
+            <div class="p-5 space-y-4 text-sm">
+                <div class="info-box rounded-lg p-3">
+                    <p class="text-xs">La sauvegarde contient : chapitres lus, signets, position de lecture, préférence de taille de police, résultats de l'autodiagnostic santé. Les données sont stockées localement dans le navigateur : elles sont perdues si tu changes de navigateur ou vides le cache ; pense à exporter régulièrement une sauvegarde.</p>
+                </div>
+                <div>
+                    <button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-download"></i> Exporter le fichier de sauvegarde
+                    </button>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">Télécharger un fichier JSON et l'enregistrer dans un endroit sûr</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-upload"></i> Importer une sauvegarde et restaurer
+                    </button>
+                    <input type="file" id="backup-import-input" accept=".json" class="hidden">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">Choisir un fichier de sauvegarde exporté auparavant pour restaurer la progression</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-trash"></i> Effacer toutes les données de lecture
+                    </button>
+                    <p class="text-xs text-red-400 mt-1 text-center">Irrécupérable ! Exporte d'abord une sauvegarde</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification de jours de lecture consécutifs -->
+    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
+        <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
+        <span id="streak-toast-text">Jour X de lecture d'affilée !</span>
+    </div>
+
+    <!-- Barre de commandes de lecture vocale -->
+    <div id="tts-controls" class="tts-controls" role="region" aria-label="Contrôle de la lecture vocale" aria-live="polite">
+        <span class="tts-chapter-label" id="tts-label" title="Chapitre en cours de lecture">Pas commencé</span>
+        <button class="tts-btn" id="tts-prev" title="Paragraphe précédent" aria-label="Paragraphe précédent"><i class="fas fa-step-backward"></i></button>
+        <button class="tts-btn play-btn" id="tts-play" title="Lecture/Pause" aria-label="Lire à voix haute"><i class="fas fa-play"></i></button>
+        <button class="tts-btn" id="tts-next" title="Paragraphe suivant" aria-label="Paragraphe suivant"><i class="fas fa-step-forward"></i></button>
+        <button class="tts-btn" id="tts-speed-down" title="Ralentir" aria-label="Ralentir">−</button>
+        <span class="tts-speed-badge" id="tts-speed-display">1.0x</span>
+        <button class="tts-btn" id="tts-speed-up" title="Accélérer" aria-label="Accélérer">+</button>
+        <button class="tts-btn" id="tts-stop" title="Arrêter la lecture" aria-label="Arrêter la lecture"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- Bouton «Haut de page» -->
+    <button id="back-to-top" class="opacity-0 invisible" aria-label="Retour en haut">
+        <svg class="progress-ring" viewBox="0 0 40 40">
+            <circle class="bg" cx="20" cy="20" r="18"/>
+            <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/>
+        </svg>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Notification de restauration de la position de lecture -->
+    <div id="restore-toast" class="restore-position-toast" role="alert">
+        <i class="fas fa-bookmark" aria-hidden="true"></i>
+        <span id="restore-toast-text">Dernière lecture : ...</span>
+        <button class="btn-restore" id="restore-btn">Continuer la lecture</button>
+        <button class="btn-dismiss" id="dismiss-btn">Ignorer</button>
+    </div>
+
+    <!-- Script JS -->
+    <script>
+        (function() {
+            'use strict';
+
+            const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+            const $$ = (sel, ctx) => [...(ctx || document).querySelectorAll(sel)];
+
+            const html = document.documentElement;
+            const body = document.body;
+            const navbar = $('#navbar');
+            const sidebar = $('#sidebar');
+            const overlay = $('#overlay');
+            const menuToggle = $('#menu-toggle');
+            const backToTop = $('#back-to-top');
+            const progressBar = $('#reading-progress');
+            const searchOverlay = $('#search-overlay');
+            const searchInput = $('#search-input');
+            const searchResults = $('#search-results');
+            const tocProgressBar = $('#toc-progress-bar');
+            const readingProgressText = $('#reading-progress-text');
+            const readingPercent = $('#reading-percent');
+            const contentEl = $('#content');
+            const tocList = $('#toc-list');
+            const tocFilter = $('#toc-filter');
+            const printBtn = $('#print-btn');
+            const quickSearch = $('#quick-search');
+            const quickTheme = $('#quick-theme');
+            const quickPrint = $('#quick-print');
+            const quickToc = $('#quick-toc');
+            let themeToggle = null;
+            const restoreToast = $('#restore-toast');
+            const restoreToastText = $('#restore-toast-text');
+            const restoreBtn = $('#restore-btn');
+            const dismissBtn = $('#dismiss-btn');
+
+            // ===== Thème =====
+            function syncThemeControls() {
+                const isDark = html.classList.contains('dark');
+                const nextLabel = isDark ? 'Passer en mode clair' : 'Passer en mode sombre';
+                [themeToggle, quickTheme].filter(Boolean).forEach(btn => {
+                    btn.setAttribute('aria-label', nextLabel);
+                    btn.setAttribute('title', nextLabel);
+                    btn.setAttribute('aria-pressed', String(isDark));
+                });
+            }
+            function applyTheme(theme) {
+                const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
+                html.classList.toggle('dark', resolvedTheme === 'dark');
+                body.classList.toggle('dark', resolvedTheme === 'dark');
+                html.setAttribute('data-theme', resolvedTheme);
+                body.setAttribute('data-theme', resolvedTheme);
+                localStorage.setItem('theme', resolvedTheme);
+                syncThemeControls();
+            }
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                applyTheme('dark');
+            } else {
+                applyTheme('light');
+            }
+            function toggleTheme() {
+                applyTheme(html.classList.contains('dark') ? 'light' : 'dark');
+            }
+            themeToggle = $('#theme-toggle');
+            if (themeToggle) themeToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+            if (quickTheme) quickTheme.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+
+            // ===== Défilement : progression + ombre + retour en haut + progression du sommaire + anneau de progression =====
+            const sections = $$('.content-section');
+            const totalChapters = sections.length;
+            if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} chapitres`;
+
+            // Paramètres de l’anneau de progression
+            const progressRingFg = backToTop ? backToTop.querySelector('.progress-ring .fg') : null;
+            const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
+            if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
+
+            let ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                        const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+                        if (progressBar) progressBar.style.width = progress + '%';
+
+                        // Mise à jour de l’anneau de progression
+                        if (progressRingFg) {
+                            const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
+                            progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
+                        }
+
+                        if (navbar) {
+                            if (scrollY > 50) {
+                                navbar.classList.add('shadow-md', 'bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-sm');
+                            } else {
+                                navbar.classList.remove('shadow-md', 'bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-sm');
+                            }
+                        }
+
+                        if (backToTop) {
+                            if (scrollY > 300) {
+                                backToTop.classList.remove('opacity-0', 'invisible');
+                                backToTop.classList.add('opacity-100', 'visible');
+                            } else {
+                                backToTop.classList.add('opacity-0', 'invisible');
+                                backToTop.classList.remove('opacity-100', 'visible');
+                            }
+                        }
+
+                        // Jusqu’à quel chapitre on a lu
+                        let passedChapters = 0;
+                        const viewportTop = scrollY + 100;
+                        sections.forEach(sec => {
+                            if (sec.offsetTop <= viewportTop) passedChapters++;
+                        });
+                        if (readingProgressText) {
+                            const passed = Math.max(0, Math.min(totalChapters, passedChapters));
+                            readingProgressText.textContent = `${passed} / ${totalChapters} chapitres`;
+                        }
+                        if (readingPercent) {
+                            const pct = Math.round(progress);
+                            readingPercent.textContent = pct + '%';
+                        }
+                        if (tocProgressBar) {
+                            tocProgressBar.style.transform = `scaleX(${Math.min(1, progress/100)})`;
+                        }
+
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            if (backToTop) {
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ===== Mémoire de la position de lecture =====
+            const POSITION_KEY = 'phoneCourse_scrollPos';
+            const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
+            let savePosTimer = null;
+            function saveReadingPosition() {
+                const scrollY = window.scrollY;
+                if (scrollY < 200) return; // Trop tôt pour enregistrer
+                localStorage.setItem(POSITION_KEY, scrollY.toString());
+                // Trouve le nom du chapitre en cours
+                let currentChapter = '';
+                const viewportTop = scrollY + 100;
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    if (sections[i].offsetTop <= viewportTop) {
+                        const h3 = sections[i].querySelector('h3');
+                        if (h3) currentChapter = h3.textContent;
+                        break;
+                    }
+                }
+                if (currentChapter) localStorage.setItem(POSITION_CHAPTER_KEY, currentChapter);
+            }
+            window.addEventListener('scroll', () => {
+                clearTimeout(savePosTimer);
+                savePosTimer = setTimeout(saveReadingPosition, 1000);
+            }, { passive: true });
+
+            // Restaure la position au chargement de la page
+            function tryRestorePosition() {
+                const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
+                const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+                if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
+                    restoreToastText.textContent = `Dernière lecture : ${savedChapter}`;
+                    setTimeout(() => restoreToast.classList.add('show'), 800);
+                    // Masquage automatique après 10 secondes
+                    setTimeout(() => restoreToast.classList.remove('show'), 15000);
+                }
+            }
+            if (restoreBtn) {
+                restoreBtn.addEventListener('click', () => {
+                    const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
+                    if (savedPos > 0) {
+                        window.scrollTo({ top: savedPos, behavior: 'smooth' });
+                    }
+                    if (restoreToast) restoreToast.classList.remove('show');
+                });
+            }
+            if (dismissBtn) {
+                dismissBtn.addEventListener('click', () => {
+                    if (restoreToast) restoreToast.classList.remove('show');
+                });
+            }
+
+            // ===== Animation d’entrée au défilement =====
+            const visibleObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        visibleObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+            // Le contenu du premier écran est visible directement
+            sections.forEach((sec, i) => {
+                const rect = sec.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    sec.classList.add('visible');
+                } else {
+                    visibleObserver.observe(sec);
+                }
+            });
+
+            // ===== Ouverture/fermeture de la barre latérale =====
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                body.classList.add('overflow-hidden');
+                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+            }
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                body.classList.remove('overflow-hidden');
+                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+            }
+            if (menuToggle) menuToggle.addEventListener('click', () => {
+                if (sidebar.classList.contains('-translate-x-full')) openSidebar();
+                else closeSidebar();
+            });
+            if (overlay) overlay.addEventListener('click', closeSidebar);
+
+            // Outils rapides : ouvrir le sommaire
+            if (quickToc) quickToc.addEventListener('click', () => {
+                if (window.innerWidth < 1024) openSidebar();
+                else window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== Navigation globale par ancres : compense le décalage de la barre fixe =====
+            // Il faut utiliser scrollIntoView plutôt que calculer les coordonnées à la main : .content-section a
+            // content-visibility:auto + contain-intrinsic-size(0 800px) : les chapitres hors écran
+            // occupent des espaces réservés de 800px, getBoundingClientRect renvoie les coordonnées du prototype et un scrollTo direct
+            // atterrirait au mauvais endroit (plus le chapitre est loin, plus l’écart s’accumule). scrollIntoView laisse au navigateur
+            // affiche la cible à la demande et la positionne, et html{scroll-padding-top:5rem} compense la barre
+            // fixe.
+            function scrollToAnchor(id) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                // Étape 1 : le mode instant force d’abord le rendu du chapitre visé et le positionne, pour éviter que content-visibility
+                // dérive pendant le défilement fluide causée par le rendu différé.
+                el.scrollIntoView({ behavior: 'instant', block: 'start' });
+                // Étape 2 : une fois la cible rendue et les coordonnées stables, on relance un défilement fluide pour un confort optimal.
+                requestAnimationFrame(() => {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.classList.add('scroll-target-flash');
+                    setTimeout(() => el.classList.remove('scroll-target-flash'), 1200);
+                });
+            }
+            document.addEventListener('click', (e) => {
+                const link = e.target.closest('a[href^="#"]');
+                if (!link) return;
+                const href = link.getAttribute('href');
+                if (!href || href === '#' || href === '#top') return;
+                e.preventDefault();
+                const targetId = href.slice(1);
+                if (window.innerWidth < 1024) closeSidebar();
+                requestAnimationFrame(() => scrollToAnchor(targetId));
+            }, { passive: false });
+
+            // ===== Repliage du sommaire =====
+            $$('.toc-toggle-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const targetId = btn.dataset.target;
+                    if (!targetId) return;
+                    const childList = document.getElementById(targetId);
+                    if (!childList) return;
+                    const icon = btn.querySelector('.toc-toggle-icon');
+                    const isOpen = childList.classList.contains('open');
+                    childList.classList.toggle('open', !isOpen);
+                    if (icon) {
+                        icon.classList.toggle('fa-chevron-down', !isOpen);
+                        icon.classList.toggle('fa-chevron-up', isOpen);
+                    }
+                });
+            });
+
+            // ===== Filtre du sommaire =====
+            if (tocFilter && tocList) {
+                tocFilter.addEventListener('input', () => {
+                    const q = tocFilter.value.trim().toLowerCase();
+                    $$('.toc-parent', tocList).forEach(parent => {
+                        let hasMatch = false;
+                        $$('a', parent).forEach(a => {
+                            const txt = a.textContent.toLowerCase();
+                            const show = !q || txt.includes(q);
+                            a.closest('li').style.display = show ? '' : 'none';
+                            if (show) hasMatch = true;
+                        });
+                        parent.style.display = hasMatch ? '' : 'none';
+                    });
+                });
+            }
+
+            // ===== Surlignage dans le sommaire =====
+            const tocLinkMap = new Map();
+            $$('#sidebar a').forEach(item => {
+                const href = item.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    tocLinkMap.set(href.slice(1), item);
+                }
+            });
+
+            let currentActive = null;
+            function ensureParentExpanded(link) {
+                if (!link) return;
+                const parentLi = link.closest('.toc-parent');
+                if (!parentLi) return;
+                const childList = parentLi.querySelector(':scope > ul.toc-child');
+                if (childList && !childList.classList.contains('open')) {
+                    childList.classList.add('open');
+                    const btn = parentLi.querySelector('.toc-toggle-btn .toc-toggle-icon');
+                    if (btn) {
+                        btn.classList.remove('fa-chevron-up');
+                        btn.classList.add('fa-chevron-down');
+                    }
+                }
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        if (currentActive) currentActive.classList.remove('active');
+                        const link = tocLinkMap.get(id);
+                        if (link) {
+                            link.classList.add('active');
+                            currentActive = link;
+                            ensureParentExpanded(link);
+                            try { link.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { link.scrollIntoView(); }
+                        }
+                    }
+                });
+            }, { root: null, rootMargin: '0px 0px -60% 0px', threshold: 0 });
+
+            sections.forEach(section => observer.observe(section));
+
+            // ===== Système de favoris =====
+            const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
+            function getBookmarks() {
+                try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
+            }
+            function saveBookmarks(bm) { localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(bm)); }
+            function toggleBookmark(id) {
+                let bm = getBookmarks();
+                const idx = bm.indexOf(id);
+                if (idx >= 0) bm.splice(idx, 1);
+                else bm.push(id);
+                saveBookmarks(bm);
+                return idx < 0; // true = added
+            }
+            function isBookmarked(id) { return getBookmarks().includes(id); }
+
+            // Ajoute un bouton favori à chaque chapitre
+            sections.forEach(sec => {
+                const id = sec.id;
+                if (!id) return;
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                const btn = document.createElement('button');
+                btn.className = 'bookmark-btn' + (isBookmarked(id) ? ' active' : '');
+                btn.innerHTML = '<i class="fas fa-bookmark"></i><span>' + (isBookmarked(id) ? 'Aux favoris' : 'Favori') + '</span>';
+                btn.setAttribute('aria-label', isBookmarked(id) ? 'Retirer des favoris' : 'Ajouter le chapitre aux favoris');
+                btn.addEventListener('click', () => {
+                    const added = toggleBookmark(id);
+                    btn.classList.toggle('active', added);
+                    btn.querySelector('span').textContent = added ? 'Aux favoris' : 'Favori';
+                    btn.setAttribute('aria-label', added ? 'Retirer des favoris' : 'Ajouter le chapitre aux favoris');
+                    // Met à jour les marques de la barre latérale
+                    updateTocBookmark(id, added);
+                });
+                // Insère après le h3
+                h3.parentNode.insertBefore(btn, h3.nextSibling);
+            });
+
+            function updateTocBookmark(id, isBookmarked) {
+                const tocLink = tocLinkMap.get(id);
+                if (tocLink) {
+                    tocLink.classList.toggle('bookmarked', isBookmarked);
+                }
+            }
+            // Initialise les marques de favoris dans la barre latérale
+            getBookmarks().forEach(id => updateTocBookmark(id, true));
+
+            // ===== Coches des chapitres lus =====
+            const COMPLETED_KEY = 'phoneCourse_completed';
+            function getCompleted() {
+                try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
+            }
+            function saveCompleted(arr) { localStorage.setItem(COMPLETED_KEY, JSON.stringify(arr)); }
+            function toggleCompleted(id) {
+                let arr = getCompleted();
+                const idx = arr.indexOf(id);
+                if (idx >= 0) arr.splice(idx, 1);
+                else arr.push(id);
+                saveCompleted(arr);
+                return idx < 0;
+            }
+            function isCompleted(id) { return getCompleted().includes(id); }
+
+            sections.forEach(sec => {
+                const id = sec.id;
+                if (!id) return;
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                // Trouver la ligne de meta ou l’élément avant le h3
+                const metaDiv = h3.previousElementSibling;
+                const check = document.createElement('button');
+                check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
+                check.innerHTML = '<span class="check-icon"></span><span>' + (isCompleted(id) ? 'Lu' : 'Lu') + '</span>';
+                check.setAttribute('aria-label', isCompleted(id) ? 'Retirer lu' : 'Marquer comme lu');
+                check.addEventListener('click', () => {
+                    const done = toggleCompleted(id);
+                    check.classList.toggle('checked', done);
+                    check.querySelector('span:last-child').textContent = done ? 'Lu' : 'Lu';
+                    check.setAttribute('aria-label', done ? 'Retirer lu' : 'Marquer comme lu');
+                    // Met à jour la barre latérale
+                    updateTocCompleted(id, done);
+                    // Met à jour la progression de lecture
+                    updateCompletedProgress();
+                });
+                if (metaDiv && metaDiv.classList.contains('flex')) {
+                    metaDiv.appendChild(check);
+                } else {
+                    h3.parentNode.insertBefore(check, h3.nextSibling.nextSibling);
+                }
+            });
+
+            function updateTocCompleted(id, done) {
+                const tocLink = tocLinkMap.get(id);
+                if (tocLink) {
+                    tocLink.classList.toggle('completed-toc', done);
+                }
+            }
+            getCompleted().forEach(id => updateTocCompleted(id, true));
+
+            function updateCompletedProgress() {
+                const completed = getCompleted().length;
+                if (readingProgressText) {
+                    // Met aussi à jour le compteur de lectures
+                    const passed = parseInt(readingProgressText.textContent) || 0;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} chapitres`;
+                }
+            }
+
+            // ===== Recherche (enrichie : navigation clavier + compteur de résultats) =====
+            let searchData = null;
+            let searchSelectedIdx = -1;
+            let searchResultItems = [];
+
+            function buildSearchIndex() {
+                if (searchData) return;
+                searchData = sections.map(section => {
+                    const id = section.getAttribute('id');
+                    const h3 = section.querySelector('h3');
+                    const title = h3 ? h3.textContent : '';
+                    const text = section.textContent;
+                    return { id, title, text };
+                });
+            }
+
+            function renderSearchPlaceholder(message) {
+                if (searchResults) {
+                    searchResults.innerHTML = `<div class="p-4 text-center text-gray-400 text-sm">${message}</div>`;
+                }
+            }
+            function runSearch(query) {
+                buildSearchIndex();
+                const normalizedQuery = (query || '').trim().toLowerCase();
+                if (!normalizedQuery) {
+                    renderSearchPlaceholder('Saisissez des mots-clés pour chercher');
+                    searchSelectedIdx = -1;
+                    searchResultItems = [];
+                    return;
+                }
+                const results = searchData.filter(item =>
+                    item.title.toLowerCase().includes(normalizedQuery) || item.text.toLowerCase().includes(normalizedQuery)
+                ).slice(0, 20);
+
+                if (results.length === 0) {
+                    renderSearchPlaceholder('Aucun résultat trouvé');
+                    searchSelectedIdx = -1;
+                    searchResultItems = [];
+                    return;
+                }
+
+                const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">${results.length} résultats trouvés</div>`;
+                searchResults.innerHTML = countHtml + results.map(item => {
+                    const idx = item.text.toLowerCase().indexOf(normalizedQuery);
+                    const start = Math.max(0, idx - 40);
+                    const end = Math.min(item.text.length, idx + normalizedQuery.length + 80);
+                    let excerpt = (start > 0 ? '...' : '') + item.text.slice(start, end) + (end < item.text.length ? '...' : '');
+                    const re = new RegExp(normalizedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                    const highlightedTitle = item.title.replace(re, '<mark>$&</mark>');
+                    const highlightedExcerpt = excerpt.replace(re, '<mark>$&</mark>');
+                    return `<div class="search-result-item" data-target="${item.id}">
+                        <div class="result-title">${highlightedTitle}</div>
+                        <div class="result-excerpt">${highlightedExcerpt}</div>
+                    </div>`;
+                }).join('');
+
+                searchResultItems = $$('.search-result-item', searchResults);
+                searchSelectedIdx = -1;
+
+                searchResultItems.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const targetId = el.dataset.target;
+                        if (targetId) {
+                            closeSearch();
+                            scrollToAnchor(targetId);
+                        }
+                    });
+                });
+            }
+            function openSearch() {
+                if (!searchOverlay) return;
+                buildSearchIndex();
+                searchOverlay.classList.add('active');
+                searchOverlay.setAttribute('aria-hidden', 'false');
+                if (searchInput) {
+                    setTimeout(() => {
+                        searchInput.focus();
+                        if (searchInput.value) {
+                            runSearch(searchInput.value);
+                        }
+                    }, 100);
+                }
+            }
+            function closeSearch() {
+                if (searchOverlay) {
+                    searchOverlay.classList.remove('active');
+                    searchOverlay.setAttribute('aria-hidden', 'true');
+                }
+                if (searchInput) searchInput.value = '';
+                renderSearchPlaceholder('Saisissez des mots-clés pour chercher');
+                searchSelectedIdx = -1;
+                searchResultItems = [];
+            }
+
+            function updateSearchSelection() {
+                searchResultItems.forEach((el, i) => {
+                    el.classList.toggle('selected', i === searchSelectedIdx);
+                });
+                if (searchSelectedIdx >= 0 && searchResultItems[searchSelectedIdx]) {
+                    searchResultItems[searchSelectedIdx].scrollIntoView({ block: 'nearest' });
+                }
+            }
+
+            const searchToggle = $('#search-toggle');
+            if (searchToggle) searchToggle.addEventListener('click', openSearch);
+            if (quickSearch) quickSearch.addEventListener('click', openSearch);
+            const searchClose = $('#search-close');
+            if (searchClose) searchClose.addEventListener('click', closeSearch);
+            if (searchOverlay) searchOverlay.addEventListener('click', (e) => {
+                if (e.target === searchOverlay) closeSearch();
+            });
+
+            let searchTimer = null;
+            if (searchInput) searchInput.addEventListener('input', () => {
+                clearTimeout(searchTimer);
+                searchTimer = setTimeout(() => runSearch(searchInput.value), 200);
+            });
+
+            // Navigation clavier de la recherche
+            if (searchInput) searchInput.addEventListener('keydown', (e) => {
+                if (!searchResultItems.length) return;
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    searchSelectedIdx = Math.min(searchSelectedIdx + 1, searchResultItems.length - 1);
+                    updateSearchSelection();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    searchSelectedIdx = Math.max(searchSelectedIdx - 1, 0);
+                    updateSearchSelection();
+                } else if (e.key === 'Enter' && searchSelectedIdx >= 0) {
+                    e.preventDefault();
+                    const el = searchResultItems[searchSelectedIdx];
+                    if (el) {
+                        const targetId = el.dataset.target;
+                        if (targetId) {
+                            closeSearch();
+                            scrollToAnchor(targetId);
+                        }
+                    }
+                }
+            });
+
+            // ===== Taille de police =====
+            const DEFAULT_FONT_SIZE = 16;
+            function setFontSize(size) {
+                contentEl.style.fontSize = size + 'px';
+                localStorage.setItem('fontSize', size + 'px');
+            }
+            const savedFontSize = parseInt(localStorage.getItem('fontSize') || '', 10);
+            setFontSize(Number.isFinite(savedFontSize) ? savedFontSize : DEFAULT_FONT_SIZE);
+
+            $$('.font-size-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const action = btn.dataset.action;
+                    const current = parseFloat(getComputedStyle(contentEl).fontSize);
+                    let newSize;
+                    if (action === 'reset') newSize = DEFAULT_FONT_SIZE;
+                    else if (action === 'increase') newSize = Math.min(current + 2, 24);
+                    else newSize = Math.max(current - 2, 12);
+                    setFontSize(newSize);
+                });
+            });
+
+            // ===== Fermer la barre latérale au balayage =====
+            let touchStartX = 0;
+            let touchStartY = 0;
+            sidebar.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+            sidebar.addEventListener('touchend', (e) => {
+                const dx = e.changedTouches[0].clientX - touchStartX;
+                const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+                if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
+            }, { passive: true });
+
+            // ===== Navigation entre chapitres =====
+            const sectionIds = sections.map(s => s.id);
+            sections.forEach((section, i) => {
+                const nav = document.createElement('div');
+                nav.className = 'chapter-nav';
+                let navHtml = '';
+                if (i > 0) {
+                    navHtml += `<a href="#${sectionIds[i-1]}" class="prev"><i class="fas fa-arrow-left" aria-hidden="true"></i><span class="truncate">${sections[i-1].querySelector('h3')?.textContent || 'Chapitre précédent'}</span></a>`;
+                } else {
+                    navHtml += '<span></span>';
+                }
+                if (i < sections.length - 1) {
+                    navHtml += `<a href="#${sectionIds[i+1]}" class="next"><span class="truncate">${sections[i+1].querySelector('h3')?.textContent || 'Chapitre suivant'}</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>`;
+                }
+                nav.innerHTML = navHtml;
+                section.appendChild(nav);
+            });
+
+            // ===== Impression =====
+            function doPrint() { window.print(); }
+            if (printBtn) printBtn.addEventListener('click', doPrint);
+            if (quickPrint) quickPrint.addEventListener('click', doPrint);
+
+            // ===== Raccourcis clavier globaux =====
+            const shortcutsOverlay = $('#shortcuts-overlay');
+            const backupOverlay = $('#backup-overlay');
+            function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
+            function closeShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.remove('active'); }
+            function openBackup() { if (backupOverlay) backupOverlay.classList.add('active'); }
+            function closeBackup() { if (backupOverlay) backupOverlay.classList.remove('active'); }
+
+            const quickShortcuts = $('#quick-shortcuts');
+            const quickBackup = $('#quick-backup');
+            if (quickShortcuts) quickShortcuts.addEventListener('click', openShortcuts);
+            if (quickBackup) quickBackup.addEventListener('click', openBackup);
+            const shortcutsClose = $('#shortcuts-close');
+            const backupClose = $('#backup-close');
+            if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
+            if (backupClose) backupClose.addEventListener('click', closeBackup);
+
+            // Ferme les fenêtres au clic sur le voile
+            if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
+                if (e.target === shortcutsOverlay) closeShortcuts();
+            });
+            if (backupOverlay) backupOverlay.addEventListener('click', (e) => {
+                if (e.target === backupOverlay) closeBackup();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
+                    else openSearch();
+                } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    // L’impression est déjà gérée par le navigateur
+                } else if (e.key === 'Escape') {
+                    if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
+                    if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
+                    if (backupOverlay && backupOverlay.classList.contains('active')) closeBackup();
+                } else if (e.key === 't' || e.key === 'T') {
+                    if (!e.ctrlKey && !e.metaKey) toggleTheme();
+                } else if (e.key === '?') {
+                    if (!e.ctrlKey && !e.metaKey && shortcutsOverlay) {
+                        shortcutsOverlay.classList.contains('active') ? closeShortcuts() : openShortcuts();
+                    }
+                }
+            });
+
+            // ===== Suivi des jours de lecture consécutifs =====
+            const STREAK_KEY = 'reading-streak';
+            const STREAK_DATE_KEY = 'reading-streak-date';
+            const streakToast = $('#streak-toast');
+            const streakToastText = $('#streak-toast-text');
+
+            function updateStreak() {
+                try {
+                    const today = new Date().toDateString();
+                    const lastDate = localStorage.getItem(STREAK_DATE_KEY);
+                    let streak = parseInt(localStorage.getItem(STREAK_KEY) || '0', 10);
+
+                    if (lastDate !== today) {
+                        const yesterday = new Date(Date.now() - 86400000).toDateString();
+                        if (lastDate === yesterday) {
+                            streak += 1;
+                        } else if (lastDate !== today) {
+                            streak = 1;
+                        }
+                        localStorage.setItem(STREAK_KEY, streak.toString());
+                        localStorage.setItem(STREAK_DATE_KEY, today);
+
+                        // Affiche l’avis de jours consécutifs
+                        if (streak >= 2 && streakToast && streakToastText) {
+                            streakToastText.textContent = '🔥 Jour ' + streak + ' de lecture d’affilée. Continuez ainsi !';
+                            streakToast.classList.add('show');
+                            setTimeout(() => streakToast.classList.remove('show'), 5000);
+                        }
+                    }
+                } catch(e) { /* localStorage peut être indisponible */ }
+            }
+            updateStreak();
+
+            // ===== Sauvegarde/restauration =====
+            function exportBackup() {
+                try {
+                    const data = {
+                        version: '3.0',
+                        exportDate: new Date().toISOString(),
+                        theme: localStorage.getItem('theme'),
+                        fontSize: localStorage.getItem('fontSize'),
+                        readingPosition: localStorage.getItem(POSITION_KEY),
+                        readingChapter: localStorage.getItem(POSITION_CHAPTER_KEY),
+                        streak: localStorage.getItem(STREAK_KEY),
+                        streakDate: localStorage.getItem(STREAK_DATE_KEY),
+                        healthChecks: {},
+                        chapterChecks: {},
+                        bookmarks: [],
+                        ratings: {}
+                    };
+                    // Recueille les états de l’autodiagnostic
+                    for (let i = 0; i < 8; i++) {
+                        data.healthChecks[i] = localStorage.getItem('health-check-' + i);
+                    }
+                    // Recueille les états des chapitres lus
+                    $$('.chapter-check.checked').forEach(c => {
+                        const sec = c.closest('.content-section');
+                        if (sec) data.chapterChecks[sec.id] = true;
+                    });
+                    // Recueille les favoris
+                    $$('.toc-item.bookmarked').forEach(b => {
+                        data.bookmarks.push(b.getAttribute('href').replace('#', ''));
+                    });
+                    // Recueille les notes
+                    $$('.chapter-rating').forEach(r => {
+                        const sec = r.closest('.content-section');
+                        if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
+                    });
+
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'Sauvegarde-lecture-PhoneClass_' + new Date().toISOString().slice(0,10) + '.json';
+                    a.click();
+                    URL.revokeObjectURL(url);
+                } catch(e) {
+                    alert('Échec de l’export de la sauvegarde : ' + e.message);
+                }
+            }
+
+            function importBackup(file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (data.theme) localStorage.setItem('theme', data.theme);
+                        if (data.fontSize) localStorage.setItem('fontSize', data.fontSize);
+                        if (data.readingPosition) localStorage.setItem(POSITION_KEY, data.readingPosition);
+                        if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
+                        if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
+                        if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
+                        // Restaure les états de l’autodiagnostic
+                        if (data.healthChecks) {
+                            Object.keys(data.healthChecks).forEach(i => {
+                                localStorage.setItem('health-check-' + i, data.healthChecks[i]);
+                            });
+                        }
+                        // Restaure les états des chapitres lus
+                        if (data.chapterChecks) {
+                            Object.keys(data.chapterChecks).forEach(id => {
+                                const sec = document.getElementById(id);
+                                if (sec) {
+                                    const check = sec.querySelector('.chapter-check');
+                                    if (check) check.classList.add('checked');
+                                    const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
+                                    if (tocItem) tocItem.classList.add('completed-toc');
+                                }
+                            });
+                        }
+                        // Restaure les favoris
+                        if (data.bookmarks) {
+                            data.bookmarks.forEach(id => {
+                                const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
+                                if (tocItem) tocItem.classList.add('bookmarked');
+                            });
+                        }
+                        alert('Restauration réussie ! La page va se recharger pour appliquer toutes les données.');
+                        location.reload();
+                    } catch(err) {
+                        alert('Échec de la restauration : format de fichier invalide. ' + err.message);
+                    }
+                };
+                reader.readAsText(file);
+            }
+
+            function resetAllData() {
+                if (!confirm('Effacer toutes les données de lecture ? C’est irréversible ! Exportez d’abord une sauvegarde.')) return;
+                if (!confirm('Confirmez encore : toute la progression de lecture, les favoris et les notes seront supprimés. Continuer ?')) return;
+                localStorage.clear();
+                alert('Toutes les données effacées. La page va se recharger.');
+                location.reload();
+            }
+
+            const backupExport = $('#backup-export');
+            const backupImportBtn = $('#backup-import-btn');
+            const backupImportInput = $('#backup-import-input');
+            const backupReset = $('#backup-reset');
+            if (backupExport) backupExport.addEventListener('click', exportBackup);
+            if (backupImportBtn && backupImportInput) {
+                backupImportBtn.addEventListener('click', () => backupImportInput.click());
+            }
+            if (backupImportInput) backupImportInput.addEventListener('change', (e) => {
+                if (e.target.files[0]) importBackup(e.target.files[0]);
+            });
+            if (backupReset) backupReset.addEventListener('click', resetAllData);
+
+            // ===== Système de notation des chapitres =====
+            sections.forEach(sec => {
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                const ratingDiv = document.createElement('div');
+                ratingDiv.className = 'chapter-rating';
+                ratingDiv.dataset.rating = localStorage.getItem('rating-' + sec.id) || '0';
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.createElement('span');
+                    star.className = 'star';
+                    star.textContent = '★';
+                    star.dataset.value = i;
+                    star.addEventListener('click', () => {
+                        const current = parseInt(ratingDiv.dataset.rating, 10);
+                        const newRating = current === i ? 0 : i;
+                        ratingDiv.dataset.rating = newRating;
+                        localStorage.setItem('rating-' + sec.id, newRating);
+                        updateStars(ratingDiv);
+                    });
+                    ratingDiv.appendChild(star);
+                }
+                // Insère après le h3
+                h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
+                updateStars(ratingDiv);
+            });
+
+            function updateStars(container) {
+                const rating = parseInt(container.dataset.rating, 10);
+                container.querySelectorAll('.star').forEach(s => {
+                    s.classList.toggle('active', parseInt(s.dataset.value, 10) <= rating);
+                });
+            }
+
+            // ===== Optimisation anti-rebond du scroll =====
+            let scrollTicking = false;
+            const originalOnScroll = onScroll;
+            function debouncedScroll() {
+                if (!scrollTicking) {
+                    requestAnimationFrame(() => {
+                        originalOnScroll();
+                        scrollTicking = false;
+                    });
+                    scrollTicking = true;
+                }
+            }
+            window.removeEventListener('scroll', onScroll);
+            window.addEventListener('scroll', debouncedScroll, { passive: true });
+
+            // ===== Suit le mode sombre du système =====
+            if (window.matchMedia) {
+                const mq = window.matchMedia('(prefers-color-scheme: dark)');
+                if (mq.addEventListener) {
+                    mq.addEventListener('change', (e) => {
+                        if (!localStorage.getItem('theme')) {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                } else if (mq.addListener) {
+                    mq.addListener((e) => {
+                        if (!localStorage.getItem('theme')) {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                }
+            }
+
+            // ===== Ajoute automatiquement fil d’Ariane et étiquettes de difficulté aux titres =====
+            sections.forEach(sec => {
+                const id = sec.id || '';
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+
+                let level = 'intermediate';
+                if (id.startsWith('di-ling') || id.startsWith('di-yi') || id.startsWith('di-er') || id.startsWith('di-san') || id.startsWith('di-er-shi-qi') || id.startsWith('di-er-shi-ba') || id.startsWith('di-er-shi-jiu') || id.startsWith('di-san-shi') || id.startsWith('fu-lu')) {
+                    level = 'beginner';
+                } else if (id.startsWith('di-shi-wu') || id.startsWith('di-shi-liu') || id.startsWith('di-shi-qi') || id.startsWith('di-shi-ba') || id.startsWith('di-shi-jiu') || id.startsWith('di-er-shi')) {
+                    level = 'intermediate';
+                } else {
+                    level = 'advanced';
+                }
+
+                const text = sec.textContent || '';
+                const minutes = Math.max(2, Math.round(text.length / 900));
+
+                const meta = document.createElement('div');
+                meta.className = 'flex flex-wrap items-center gap-2 mb-2 text-xs';
+                meta.innerHTML = `
+                    <span class="difficulty-tag difficulty-${level}">
+                        <i class="fas ${level === 'beginner' ? 'fa-seedling' : level === 'intermediate' ? 'fa-mountain' : 'fa-rocket'}" aria-hidden="true"></i>
+                        ${level === 'beginner' ? 'Débutant' : level === 'intermediate' ? 'Intermédiaire' : 'Avancé'}
+                    </span>
+                    <span class="reading-time">
+                        <i class="far fa-clock" aria-hidden="true"></i>~${minutes} min de lecture
+                    </span>
+                `;
+                h3.parentNode.insertBefore(meta, h3);
+            });
+
+            // ===== Ajoute aux chapitres un bloc « À retenir » =====
+            function addChapterSummary(sec, points) {
+                const div = document.createElement('div');
+                div.className = 'chapter-summary';
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>À retenir</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                const nav = sec.querySelector('.chapter-nav');
+                if (nav) sec.insertBefore(div, nav);
+                else sec.appendChild(div);
+            }
+            const summaries = {
+                'fu-lu-f': ['Les pliables sont matures mais pas dominants : un « agrément », pas une « bouée de sauvetage »', 'Pli transversal = téléphone + tablette ; pli longitudinal = poche + coup d’œil sur l’écran externe', 'Idéal pour : lecture intensive/business/création en hover/femmes attachées à la portabilité', 'Six points à vérifier à l’achat : type de charnière, écran interne UTG, pli, taille de l’écran externe, poids et épaisseur, prix de la réparation hors garantie', 'Astuces exclusives : multitâche en écran partag, hover à 90 degrés, coup d’œil sur l’écran externe, mode PC', 'Soins essentiels : pas d’ouverture/fermeture par grand froid, à l’abri des poussières, jamais de film ordinaire sur l’écran interne, charnière protégée de la poussière', 'Attentes : le pli est définitif, c’est plus lourd et plus épais, l’autonomie est moyenne, la valeur de revente est faible, la réparation coûteuse', 'Philosophie d’achat : on l’achète pour sa forme unique, pas parce qu’il serait « plus avancé »'],
+                'di-ling-zhang': ['Comprendre la position du livre : une vulgarisation tech claire et les mains dans le cambouis', 'Maîtrisez le système de symboles : ce que veulent dire [boutons], >, gras et italique', 'Pourquoi la capacité du téléphone « fond » : les principales raisons', 'Prenez l’habitude de noter les spécifications de votre propre téléphone', 'Téléphone = coffre-fort d’actifs numériques ; prévenir d’abord est l’idée centrale', 'Les données valent souvent plus cher que le matériel lui-même'],
+                'di-yi-zhang': ['SoC = CPU + GPU + NPU + ISP + modem et autres modules réunis sur une seule puce', 'Les cœurs rapides et lents du CPU travaillent ensemble : performance et autonomie en équilibre', 'Écran : OLED/LCD, taux de rafraîchissement, luminosité automatique', 'Le cœur de l’image : le capteur compte plus que le nombre de mégapixels', 'Évolution des ports : Micro USB → Lightning → USB-C unifié', 'La 5G-A apporte la nouvelle capacité d’« union communication-perception »'],
+                'di-yi-zhang-harmony': ['HarmonyOS = un système d’exploitation distribué, pensé multi-appareils dès la conception', 'HarmonyOS 4.3 est compatible AOSP et peut exécuter des applis Android', 'HarmonyOS NEXT est pleinement autonome et ne prend plus en charge les applis Android', 'Avant de mettre à niveau, assurez-vous que vos applis habituelles ont des versions natives'],
+                'di-er-zhang': ['Stockage à trois étages : appareil / carte SD / cloud', 'Ce que signifient les dossiers Android courants (DCIM, Download, etc.)', 'Sauvegarde des données = copie cloud + copie locale, double protection', 'Supprimer n’est pas détruire ; seul « l’écrasement » efface vraiment', 'Aide-mémoire des formats de fichiers courants (image/audio/vidéo/document)', 'Nommer « date + événement » est la convention de base', 'Le nettoyage automatique à 72 heures règle l’engorgement du cache des applis sociales', 'Double protection des photos : masquage + retrait des EXIF'],
+                'di-san-zhang': ['4G/5G ont chacune leur rôle ; la 5G-A est la version renforcée', 'Différences techniques clés du Wi-Fi 6/6E/7', 'Le Wi-Fi public exige de la vigilance : n’y saisissez pas d’informations sensibles', 'Le Bluetooth 5.x progresse sans cesse, le LE Audio commence à se généraliser', 'Le NFC travaille à moins de 10cm : la proximité physique est la garantie en soi'],
+                'di-si-zhang': ['Installez les applis d’abord depuis les boutiques officielles', 'Un paquet APK = certificat + ressources + configuration + binaire', 'Méfiez-vous des applis « nettoyeurs-accélérateurs » ; qu’une appli résidente en arrière-plan est raisonnable', 'La vérification de signature des applis empêche la falsification : protection au niveau du système', 'Mode pur = installations uniquement depuis la boutique officielle : le premier mur contre les maliciels', '« Parasites numériques » désigne les versions piratées avec des chevaux de Troie à l’intérieur', 'Mécanisme de revue des boutiques : analyse antivirale + revue des permissions + vérification des développeurs'],
+                'di-wu-zhang': ['Écran : résolution, taux de rafraîchissement, luminosité automatique', 'Son : volumes sonnerie/média/notifications gérés séparément', 'Stockage : nettoyez régulièrement cache et fichiers inutiles', 'Biométrie : empreinte contre visage ; le 3D l’emporte sur le 2D en sécurité', 'Lecteurs d’écran : VoiceOver sur iOS / TalkBack sur Android sont les yeux des utilisateurs malvoyants', 'Agrandissement : contraste élevé, texte en gras, filtres de couleur : le trio', 'Description d’images par l’IA : l’IA lit pour vous images, menus et captchas', 'Les sous-titres en direct : une bouée pour les malentendants et les environnements bruyants', 'RTT/TTY : ceux qui ont perdu la voix ou l’ouïe peuvent téléphoner'],
+                'di-liu-zhang': ['Mot de passe de verrouillage + authentification à deux facteurs : la défense de base', 'Permissions des applis : activer selon le besoin, principe du moindre privilège', 'Aucun paiement ni connexion sur un Wi-Fi public', 'À l’ère de l’IA, voir n’est pas croire : visages et voix clonés, fausse autorité, faux investissements sont les arnaques les plus courantes', 'Plan de sortie : vérification par un geste + mot de contrôle + seconde confirmation', 'Anonymisez avant de partager : coupez la localisation et les données d’appareil dans les EXIF', 'Appareils IoT : changez le mot de passe par défaut', 'Face à l’arnaque, retenez : ne pas croire à la légère, ne pas divulguer, ne pas virer'],
+                'di-qi-zhang-jichu': ['Satellite : la « corde de secours » en situation d’urgence', 'Communiquer sans réseau : radio longue portée même sans couverture', 'Détection d’accident : la fusion de capteurs reconnaît les collisions graves', 'StarFlash : liaison sans fil à faible latence au potentiel énorme'],
+                'di-ba-zhang': ['Enregistrement des appels : attention à la légalité', 'iMessage/RCS font passer le SMS traditionnel aux messages enrichis', 'L’historique WeChat exige la fonction de sauvegarde propre à WeChat', 'Les applis de messagerie gèrent plusieurs comptes de façon unifiée', 'Filtrage du harcèlement : reconnaissance système + listes noire/blanche + filtres par mots-clés des SMS', '« Ignorer les appelants inconnus » sur iOS bloque le harcèlement, mais attention aux appels manqués', 'Les signalements erronés se contestent via Dianhua Bang/360/Tencent et les canaux de l’opérateur'],
+                'di-jiu-zhang': ['WPS Office est le meilleur en Chine, Microsoft 365 offre la meilleure compatibilité', 'Notes en trois phases : griffonné → à lire plus tard → système de connaissances', 'Scanner au téléphone : Notes/Mic Lens/Baimiao/CamScanner', 'Cloud au fil des besoins : iCloud/OneDrive/Baidu/Aliyun Drive, chacun ses scénarios'],
+                'di-shi-zhang': ['Qui voit le code de paiement encaisse : ne lui envoyez jamais de capture d’écran', 'Bilan de sécurité en 5 minutes : paiement biométrique + verrou de sécurité + vérification des paiements sans mot de passe + gestion des appareils', 'En métro et en bus, préférez la carte de transport virtuelle du portefeuille du téléphone : elle marche même hors ligne', 'Attestation d’assurance maladie, demandes de retraite, déclaration d’impôts : tout se règle au téléphone', 'Quatre « non » face aux arnaques : jamais de virement vers un « compte sûr », jamais d’envoi du code de paiement, jamais de clic sur des liens inconnus, jamais de numéro de carte communiqué'],
+                'di-shi-yi-zhang': ['Quatre erreurs fréquentes : objectif sale, exposition non réglée, abus du flash, zoom numérique mal employé', 'Le mode nuit fusionne plusieurs images ; main stable 2-4 secondes', 'Mode pro : ISO bas, image propre ; l’obturateur commande la lumière', 'Flux de post-traitement : redresser → ajustements de base → retouches locales → styliser', 'Recherche intelligente + nettoyage régulier + albums manuels = le trio de la gestion photo'],
+                'di-shi-yi-zhang-advanced': ['Les trois piliers de la vidéo : résolution, cadence, débit', 'H.265 compresse 50 % de mieux que H.264', 'ProRes est le codec professionnel d’Apple : fichiers énormes', 'HDR10/10+/Dolby Vision : chacun sa niche'],
+                'di-shi-er-zhang': ['NetEase Cloud Music est la meilleure pour les playlists et la communauté, QQ Music a le catalogue le plus vaste, Apple Music est épurée et sans perte, Spotify recommande avec brio', 'Xiaoyuzhou est le premier choix de podcasts en chinois ; exploitez bien vitesse et nettoyage automatique', 'Vidéo locale : VLC (tous formats) ou nPlayer (contrôle par gestes)', 'Les surlignages de WeChat Read sont sociaux + synchronisation Kindle ; le mode confort oculaire toujours activé', 'Le mode jeu privilégie d’abord la fluidité des images ; contre la surchauffe, le ventilateur à pince aide'],
+                'di-shi-san-zhang': ['Outils de productivité : tâches + pomodoro + calendrier', 'Santé et sport : Apple Health/Google Fit en tour de contrôle des données', 'Navigateur : Edge d’abord, avec Copilot pour gagner en efficacité', 'Cherchez le vrai : fiez-vous aux domaines officiels, évitez les extensions bon marché comme .xyz', 'Préférez le nettoyage natif ; les tiers comme Qingzhuo ne sont qu’un appoint, jamais le grand nettoyage en un geste', 'Applis anti-harcèlement : Centre national antifraude + gardiens de marque + blocage opérateur', 'Blocage intégré : sur iOS « Ignorer les appelants inconnus » ; sur Android, à activer dans l’appli téléphone de chaque marque', 'Trois niveaux cumulés : blocage système + opérateur + centre antifraude ; attention à la liste blanche pour ne pas bloquer les vôtres', 'Alertes météo : appli météo du système + canaux officiels ; réagissez selon les niveaux bleu/jaune/orange/rouge', 'Alertes catastrophes naturelles : météo + protection civile ; en pluie torrentielle ou typhon, fuyez les zones basses et les panneaux publicitaires', 'L’alerte séisme n’est pas une prédiction : de quelques secondes à quelques dizaines de secondes ; sur Android, souvent dans les paramètres de sécurité', 'TickTick : listes + calendrier + pomodoro, agenda en langage naturel', 'Numériser le papier : appareil photo du système/Mic Lens/Baimiao/CamScanner ; visez net, puis OCR', 'Contrôle à distance du PC : Sunflower/ToDesk ; qu’un inconnu vous demande d’installer une prise en main à distance = arnaque', 'IA au bureau : Trae et autres ; le lourd sur l’ordinateur, du téléphone vous suivez à distance', 'Transfert rapide en réseau local : LocalSend/AirDrop/Feige ; presse-papiers : KDE Connect/outils de marque', 'Codes à usage unique 2FA : Aegis/Microsoft Authenticator, copies papier des codes de secours'],
+                'di-shi-si-zhang': ['Avec un gestionnaire de mots de passe, un seul mot de passe maître à retenir', 'Bitwarden est open source et gratuit, 1Password offre la meilleure expérience', 'Le mot de passe maître doit être long et complexe, avec le 2FA activé', 'Auditez régulièrement la sécurité de vos mots de passe', 'Architecture à connaissance zéro : même le fournisseur ne voit pas vos mots de passe ; le chiffrement se fait en local', 'AES-256 + dérivation PBKDF2/Argon2 sont la pierre angulaire de la sécurité d’un coffre à mots de passe', 'La leçon de l’incident LastPass 2022 : les plus exposés sont les utilisateurs à mot de passe maître faible', 'La force du mot de passe est « l’entropie » : longueur + caractère aléatoire valent mieux que les symboles savants', 'HaveIBeenPwned vérifie les fuites, 1Password Watchtower surveille les incidents', 'Les Passkey reposent sur FIDO2/WebAuthn : immunisées contre le phishing, aucun mot de passe transmis', 'Synchronisation des Passkey entre appareils : trousseau iCloud/Google Password Manager la prennent déjà en charge', 'Les clés matérielles (YubiKey/Titan) résistent au phishing et au détournement de SIM : idéales pour les profils très exposés', 'Coffres partagés 1Password + accès d’urgence Bitwarden rendent le partage en famille et en équipe plus sûr'],
+                'di-shi-wu-zhang': ['Batteries au lithium : rechargez au fil de l’usage, elles redoutent la chaleur et vieillissent', 'Sous 80 % de santé de batterie, l’autonomie chute nettement', 'Protocoles de charge rapide : PD/QC/VOOC/SuperCharge ne sont pas interchangeables', 'La charge sans fil Qi2 introduit l’alignement magnétique', 'Le cœur de l’économie : baisser la luminosité + fermer l’arrière-plan + passer en 4G'],
+                'di-shi-liu-zhang': ['Le compte est l’état civil de votre vie numérique : il relie contacts, photos, achats et Localiser mon téléphone', 'Trois indispensables : activer le 2FA, définir une clé de récupération, vérifier que Localiser est activé', 'Les 5 Go d’iCloud ne suffisent pas : nettoyez, ou passez à 50 Go pour environ ¥1/mois', 'La synchronisation est bidirectionnelle (supprimé ici, parti partout), la sauvegarde un instantané à sens unique (supprimé ici, conservé là)', 'Utilisateurs Android, vérifiez séparément : sauvegarde cloud de marque, sauvegarde Google, sauvegarde WeChat'],
+                'di-shi-qi-zhang': ['Collaboration entre appareils : AirDrop d’Apple/Huawei Multi-Screen Collaboration/Xiaomi Mi Share/Lier à Windows', 'Diffuser vers la TV : l’iPhone passe par Recopie de l’écran, Android par la diffusion sans fil ; en cas d’échec, vérifiez que vous êtes sur le même Wi-Fi', 'Montre connectée = filtre de notifications + poste de santé + paiement au poignet ; pour vos parents, cela peut sauver la mise', 'Maison intelligente : choisissez selon l’écosystème - Apple HomeKit/Xiaomi Mijia/Huawei HarmonyOS Connect', 'Sécurité des liens : en public, gare à la vie privée pendant la diffusion, et dissociez à temps les anciens appareils'],
+                'di-shi-ba-zhang': ['Sauvegarde complète : en local sur ordinateur (la plus fiable) + cloud (la plus tranquille), double protection', 'L’historique WeChat est le cas le plus particulier : seul le système de sauvegarde intégré de WeChat l’emporte, les outils de migration échouent', 'Règle 3-2-1 : 3 copies, 2 types de support, 1 hors du domicile', 'Changement de téléphone : même marque, applis officielle de migration ; entre marques, préparez d’abord un relais de données'],
+                'di-shi-jiu-zhang': ['Lenteurs et chauffe en quatre étapes : rappelez-vous ce qui a changé → vérifiez le stockage → vérifiez la consommation → vérifiez le signal', 'Routine pour applis qui plantent : fermer et rouvrir → mettre à jour → vérifier les permissions → vider le cache → réinstaller', 'Ne charge plus : nettoyez d’abord le port, puis croisez câbles et chargeurs pour isoler le coupable', 'Pas de réseau : mode avion off/on → oublier le Wi-Fi et se reconnecter → redémarrer la box', 'Le redémarrage universel résout la plupart des bizarreries ; pour la réparation, choisissez un service agréé, et avant : sauvegarde + déconnexion des comptes'],
+                'di-er-shi-zhang-jinjie': ['Mode développeur : sept pressions sur le numéro de build pour l’activer', 'Verrou BL : protection du fabricant ; déverrouillez avec prudence', 'Root : le risque l’emporte sur le bénéfice ; déconseillé aux utilisateurs ordinaires', 'Magisk exige toujours le BL déverrouillé, mais sait masquer l’état de root'],
+                'di-er-shi-yi-zhang': ['VPN = tunnel chiffré ; un VPN gratuit peut être lui-même à voler vos données', 'Défense contre l’homme du milieu en Wi-Fi public : faites confiance à HTTPS, coupez la connexion automatique, le sensible uniquement en données mobiles', 'La poignée de main HTTPS chiffre en quatre échanges, mais les sites de phishing font aussi du HTTPS', 'DoH/DoT chiffrent les requêtes DNS : votre opérateur n’espionne plus votre navigation', 'Le mode incognito est une gomme locale, pas une cape d’invisibilité : votre fournisseur d’accès et les sites vous voient toujours', 'Liste de sécurité : coupez la connexion Wi-Fi automatique, passez à un DNS chiffré, activez le 2FA, vérifiez les permissions des applis, bloquez le Juice Jacking'],
+                'di-er-shi-er-zhang': ['Caméra IA : reconnaître la scène → fusionner les images → optimiser intelligemment', 'Assistants vocaux : entendre → comprendre → exécuter, en trois temps', 'IA sur l’appareil : rapide, respectueuse de la vie privée, fonctionne hors ligne', 'Les grands modèles d’IA couvrent conversation/écriture/traduction/image/étude', 'Usages typiques : traduction en direct, gomme IA, retouche IA, gestion de documents, recherche d’images par IA', 'Framework de prompts CRISPE : rôle + requête + contexte + sortie + ton + exemples', 'Avec l’IA, gare aux hallucinations et aux fuites de vie privée', '« Rôle-Contexte-Tâche-Contraintes » est une approche des prompts plus facile pour débuter', 'Qualités d’un bon prompt : précis, avec du contexte, avec un format, avec des limites, vérifiable'],
+                'di-er-shi-san-zhang': ['Éléments de l’automatisation : déclencheur + action + logique de décision facultative', 'Raccourcis iOS : routine du matin en un geste, économiseur automatique, dépenses enregistrées au scan', 'Android : cliqueurs automatiques (macros d’écran), Tasker (l’automatisation la plus puissante), MacroDroid (convivial pour débutants)', 'Pièges : déclencheurs de localisation imprécis, iOS exige une confirmation manuelle pour s’exécuter, Tasker demande l’accessibilité', 'État d’esprit automatisation : transformer la corvée répétitive en condition → action, et le téléphone devient votre assistant personnel'],
+                'di-er-shi-si-zhang': ['Le Bootloader est le gardien du démarrage ; la vérification de signature empêche la falsification', 'Les politiques de déverrouillage BL varient selon les marques (Xiaomi l’autorise/Huawei le verrouille)', 'Options de root : Magisk/KernelSU/SuperSU', 'Trois types de flashage : ROM officielle/Recovery tiers/ROM tierce'],
+                'di-er-shi-wu-zhang': ['Vendre son ancien téléphone : d’abord sauvegarde → déconnexion → effacement chiffré → remplir et effacer à nouveau', 'Héritage numérique : Contact hérité iCloud/Compte inactif Google', 'Recyclage : d’abord les reprises officielles ; le vieux téléphone peut encore servir de caméra ou de GPS'],
+                'di-er-shi-liu-zhang': ['Trois critères du téléphone à IA : grand modèle embarqué, puissance NPU en TOPS, AI Agent au-dessus des applis', 'Stratégies IA des fabricants : Apple/Google/Huawei/Xiaomi/OPPO/vivo, chacun ses forces', 'Satellite : les messages courts BeiDou descendent dans le milieu de gamme, les appels Tiantong restent l’apanage des fleurons', 'Pliables : matériel mature, applis adaptées à environ 70 %, hover/écran partag sont l’expérience unique', 'La 6G est encore en route, le Wi-Fi 7 est là, le Bluetooth LE Audio commence à se répandre', 'Les batteries à anode silicium-carbone rendent les 5000-6000mAh la norme des fleurons'],
+                'di-er-shi-qi-zhang': ['Activez d’abord le mode facile ou agrandissez polices/icônes : un environnement bien réglé dissout la moitié des problèmes', 'Trois règles d’or avec les aînés : ne pas presser, user d’analogies, écrire', 'Six arnaques courantes à répéter sans relâche ; trois lignes de défense stoppent 90 % des fraudes', 'L’assistance à distance permet de dépanner le téléphone de vos parents même depuis une autre ville', 'Mode bienveillance de WeChat + saisie vocale : les deux fonctions les plus utiles pour les aînés', 'Appel SOS et détection de chute : des réglages qui sauvent la vie au moment décisif'],
+                'di-er-shi-ba-zhang': ['Choisir son téléphone en trois temps : d’abord les besoins → puis le budget → enfin le modèle', 'Cinq paramètres clés seulement : processeur, écran, caméra, batterie et charge, promesse de mises à jour', '¥1500-3500 est la fourchette au meilleur rapport qualité-prix, la plus recommandée', 'Le fleuron de l’an dernier est plus rentable que le milieu de gamme de cette année', 'Cinq pièges : mythe des multi-caméras, culte des mégapixels, versions opérateur, culte de l’écran incurvé, artifices IA', 'Le 618 et le Double 11 sont les deux meilleures fenêtres de l’année pour acheter un téléphone'],
+                'di-er-shi-jiu-zhang': ['Regardez d’abord les données de temps d’écran : voir clair est le premier pas pour changer', 'Des limites pour les applis de divertissement, des horaires pour Ne pas déranger : reprenez le contrôle de votre attention', 'La règle 20-20-20 est l’habitude la plus simple et la plus efficace pour les yeux', 'Tête penchée vers le téléphone, la nuque porte 5 à 6 fois le poids de la tête ; levez le téléphone et étirez la nuque régulièrement', 'L’heure avant le coucher sans téléphone ; le chargeur hors de portée du bras', 'L’antidote à l’anxiété informationnelle est le « blocage actif », pas « en recevoir plus »'],
+                'di-san-shi-zhang': ['Trois camps de la diffusion sans fil : AirPlay (Apple), Miracast (Android), DLNA (envoi multimédia multiplateforme)', 'La diffusion par câble est plus stable et sans latence ; en salle de réunion, l’adaptateur HDMI est incontournable', 'Samsung DeX/mode bureau de Huawei transforment le téléphone en PC de bureau léger', 'Connexion en voiture : quatre solutions - CarPlay/Android Auto/HiCar/CarLife', 'Règles de diffusion en salle de réunion : tester à l’avance, prévoir un plan B, masquer l’aperçu des notifications'],
+                'di-san-shi-yi-zhang': ['Avant de tourner, tranchez : qui est le public, quelle valeur vous apportez, sur quelle plateforme vous publiez', 'Cinq choses avant de filmer : 1080P/30fps, nettoyer l’objectif, verrouiller mise au point et exposition, choisir l’orientation, activer la grille', 'Cinq mouvements de caméra : avancer, reculer, panoramique, déplacement, suivi - la stabilité d’abord', 'Montage avec CapCut : couper → transitions → sous-titres → BGM → export, en six étapes', 'Les 3 premières secondes décident de tout ; une vidéo, un seul message ; la constance vaut mieux que le talent'],
+                'di-san-shi-er-zhang': ['Téléphone perdu, les 30 minutes d’or : empruntez un téléphone et appelez-vous → verrouillage à distance → blocage de la SIM → gel des paiements → prévenir proches → dépôt de plainte', '72 heures après l’arnaque : stoppez les virements → conservez les preuves → appelez le 96110 → plainte → contactez la banque → changez les mots de passe', 'Téléphone infecté : mode sans échec → désinstaller les applis suspectes → analyse de sécurité → réinitialisation d’usine (dernier recours)', 'Compte volé : changez le mot de passe → déconnectez les appareils → vérifiez l’historique de connexion → activez le 2FA → vérifiez les liens → vérifiez les paiements', '99,9 % des demandes de rançon sont des arnaques : ne répondez pas, ne payez pas, capturez et bloquez', 'Arnaques au visage/à la voix clonés : guettez les défauts de clignement, de bouche, de contours et de lumière ; demandez de tourner la tête, de couvrir le visage, posez des questions personnelles, rappelez un numéro déjà connu', 'Détournement de SIM : si le téléphone affiche soudain « Pas de réseau », c’est une alerte ; définis un code PIN de la SIM, active la double vérification de l’opérateur, bascule les comptes clés sur des applis d’authentification', 'Cinq habitudes quotidiennes : verrouillage d’écran + 2FA, Localiser mon téléphone, code PIN de la SIM, pas d’applis inconnues, sauvegardes régulières', 'Séisme/intempéries : se mettre à l’abri sur place d’abord, évacuer ensuite ; un SMS économise plus de batterie qu’un long appel', 'Sans signal, privilégiez le SOS satellite (si le modèle le permet) ; alertes et réglages au Chapitre 13'],
+                'di-san-shi-san-zhang': ['Vision Pro et les lunettes AR sont de nouvelles portes d’entrée informatiques au-delà du téléphone, mais ne le remplaceront pas vite', 'Les interfaces cerveau-machine sont encore à 10-20 ans du grand public ; l’éthique mûrit avant la technologie', 'Le téléphone évolue vers l’« invisibilité » : du centre-appareil au centre-identité', 'Éthique de l’IA, souveraineté des données et fracture numérique sont les thèmes majeurs de la décennie', 'Rester connecté tout en restant indépendant : la philosophie immuable de la vie numérique'],
+            };
+            Object.keys(summaries).forEach(id => {
+                const sec = document.getElementById(id);
+                // Ignorer les chapitres qui ont déjà un résumé en ligne, pour éviter les doublons
+                if (sec && !sec.querySelector('.chapter-summary')) {
+                    addChapterSummary(sec, summaries[id]);
+                }
+            });
+
+            // ===== Bouton copier (ajouté aux éléments kbd) =====
+            $$('.kbd').forEach(kbd => {
+                const btn = document.createElement('button');
+                btn.className = 'copy-btn';
+                btn.innerHTML = '<i class="fas fa-copy"></i>';
+                btn.setAttribute('aria-label', 'Copier');
+                btn.addEventListener('click', () => {
+                    const text = kbd.textContent.trim();
+                    navigator.clipboard.writeText(text).then(() => {
+                        btn.classList.add('copied');
+                        btn.innerHTML = '<i class="fas fa-check"></i>';
+                        setTimeout(() => {
+                            btn.classList.remove('copied');
+                            btn.innerHTML = '<i class="fas fa-copy"></i>';
+                        }, 1500);
+                    }).catch(() => {});
+                });
+                kbd.parentNode.insertBefore(btn, kbd.nextSibling);
+            });
+
+            // ===== Contenu long repliable (niveau h4) =====
+            sections.forEach(sec => {
+                const h4s = $$('h4', sec);
+                h4s.forEach(h4 => {
+                    // Ne replier que les longues sections h4
+                    let sibling = h4.nextElementSibling;
+                    let contentLength = 0;
+                    let elements = [];
+                    while (sibling && !sibling.matches('h4, h3, .chapter-nav, .chapter-summary')) {
+                        contentLength += (sibling.textContent || '').length;
+                        elements.push(sibling);
+                        sibling = sibling.nextElementSibling;
+                    }
+                    if (contentLength > 800) {
+                        // Ajoute l’en-tête repliable
+                        const header = document.createElement('div');
+                        header.className = 'collapsible-header';
+                        header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
+                        h4.replaceWith(header);
+
+                        const body = document.createElement('div');
+                        body.className = 'collapsible-body';
+                        elements.forEach(el => body.appendChild(el));
+
+                        header.after(body);
+
+                        header.addEventListener('click', () => {
+                            const isCollapsed = body.classList.contains('collapsed');
+                            body.classList.toggle('collapsed', !isCollapsed);
+                            header.classList.toggle('collapsed', !isCollapsed);
+                        });
+                    }
+                });
+            });
+
+            // ===== Tableau de bord d’apprentissage : progression de lecture + autodiagnostic du téléphone =====
+            const dashProgressRing = $('#progress-ring-fg');
+            const progressPercent = $('#progress-percent');
+            const readCountEl = $('#read-count');
+            const bookmarkCountEl = $('#bookmark-count');
+            const lastChapterEl = $('#last-chapter');
+            const healthScoreEl = $('#health-score');
+            const healthBarEl = $('#health-bar');
+            const healthMsgEl = $('#health-msg');
+            const checkInputs = $$('.check-input');
+            const DASH_RING_CIRCUMFERENCE = 213.6;
+
+            function updateDashboard() {
+                // Progression de lecture
+                const completed = $$('.chapter-check.checked').length;
+                const total = sections.length;
+                const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+                if (dashProgressRing) {
+                    dashProgressRing.style.strokeDashoffset = DASH_RING_CIRCUMFERENCE * (1 - pct / 100);
+                }
+                if (progressPercent) progressPercent.textContent = pct + '%';
+                if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
+
+                // Nombre de favoris
+                const bookmarks = $$('.toc-item.bookmarked').length;
+                if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
+
+                // Dernier chapitre
+                const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+                if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
+
+                // Autodiagnostic de santé
+                const checked = checkInputs.filter(c => c.checked).length;
+                const totalChecks = checkInputs.length;
+                const healthPct = totalChecks > 0 ? Math.round((checked / totalChecks) * 100) : 0;
+                if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
+                if (healthBarEl) healthBarEl.style.width = healthPct + '%';
+                if (healthMsgEl) {
+                    if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>Note parfaite ! La sécurité de ton téléphone est en excellent état';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'Bien ! ' + (totalChecks - checked) + ' points encore à peaufiner';
+                    else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'Passable : priorisez les points de sécurité non cochés';
+                    else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>Ton téléphone présente des failles de sécurité : corrige-les au plus vite';
+                }
+            }
+
+            // Restaure les états des coches
+            checkInputs.forEach((input, i) => {
+                const saved = localStorage.getItem('health-check-' + i);
+                if (saved === 'true') input.checked = true;
+                input.addEventListener('change', () => {
+                    localStorage.setItem('health-check-' + i, input.checked);
+                    updateDashboard();
+                });
+            });
+
+            updateDashboard();
+            // Rafraîchit toutes les 3 secondes (capte les coches des chapitres)
+            setInterval(updateDashboard, 3000);
+
+            // ===== Lecture vocale (TTS) =====
+            const ttsControls = $('#tts-controls');
+            const ttsPlayBtn = $('#tts-play');
+            const ttsPrevBtn = $('#tts-prev');
+            const ttsNextBtn = $('#tts-next');
+            const ttsStopBtn = $('#tts-stop');
+            const ttsSpeedUp = $('#tts-speed-up');
+            const ttsSpeedDown = $('#tts-speed-down');
+            const ttsSpeedDisplay = $('#tts-speed-display');
+            const ttsLabel = $('#tts-label');
+            const quickTtsBtn = $('#quick-tts');
+            let ttsUtterance = null;
+            let ttsSpeed = 1.0;
+            let ttsActive = false;
+            let ttsSectionIndex = -1;
+            let ttsPendingPlay = false;
+            const ttsSectionIds = sections.map(s => s.id);
+
+            function updateTtsSpeedDisplay() {
+                ttsSpeedDisplay.textContent = ttsSpeed.toFixed(1) + 'x';
+            }
+
+            function getSectionText(sec) {
+                if (!sec) return '';
+                // Clone et retire les éléments qui ne doivent pas être lus à voix haute
+                const clone = sec.cloneNode(true);
+                const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
+                removes.forEach(el => el.remove());
+                // Retire les corps repliés mais conserve leur texte
+                const text = clone.textContent.replace(/\s+/g, ' ').trim();
+                return text;
+            }
+
+            function speakSection(index) {
+                if (!('speechSynthesis' in window)) {
+                    alert('Désolé, ton navigateur ne prend pas en charge la lecture vocale. Essaie Chrome ou Edge.');
+                    return;
+                }
+                if (index < 0 || index >= sections.length) return;
+
+                window.speechSynthesis.cancel();
+                ttsSectionIndex = index;
+                const sec = sections[index];
+                const text = getSectionText(sec);
+                if (!text) return;
+
+                const h3 = sec.querySelector('h3');
+                ttsLabel.textContent = h3 ? h3.textContent : 'Chapitre sans titre';
+
+                ttsUtterance = new SpeechSynthesisUtterance(text);
+                ttsUtterance.lang = 'fr-FR';
+                ttsUtterance.rate = ttsSpeed;
+                ttsUtterance.pitch = 1.0;
+                ttsUtterance.volume = 1.0;
+
+                // Essaie d’utiliser une voix française plus naturelle
+                const voices = window.speechSynthesis.getVoices();
+                const zhVoice = voices.find(v => v.lang.startsWith('fr'));
+                if (zhVoice) ttsUtterance.voice = zhVoice;
+
+                ttsUtterance.onstart = () => {
+                    ttsActive = true;
+                    ttsPlayBtn.classList.add('playing');
+                    ttsPlayBtn.querySelector('i').className = 'fas fa-pause';
+                    ttsControls.classList.add('active');
+                    if (quickTtsBtn) quickTtsBtn.classList.add('tts-active');
+                };
+
+                ttsUtterance.onend = () => {
+                    // Lit automatiquement le chapitre suivant
+                    if (ttsSectionIndex < sections.length - 1 && ttsActive) {
+                        ttsSectionIndex++;
+                        speakSection(ttsSectionIndex);
+                    } else {
+                        stopTts();
+                    }
+                };
+
+                ttsUtterance.onerror = (e) => {
+                    if (e.error !== 'interrupted' && e.error !== 'canceled') {
+                        console.warn('TTS error:', e.error);
+                    }
+                    stopTts();
+                };
+
+                window.speechSynthesis.speak(ttsUtterance);
+                ttsPendingPlay = false;
+            }
+
+            function toggleTtsPlay() {
+                if (!ttsActive) {
+                    // Trouve le chapitre actuellement visible
+                    if (ttsSectionIndex < 0) {
+                        // Démarre du début ou du chapitre le plus proche de la position de défilement
+                        const scrollCenter = window.scrollY + window.innerHeight / 2;
+                        let closestIdx = 0;
+                        let closestDist = Infinity;
+                        sections.forEach((sec, i) => {
+                            const rect = sec.getBoundingClientRect();
+                            const secCenter = rect.top + window.scrollY + rect.height / 2;
+                            const dist = Math.abs(scrollCenter - secCenter);
+                            if (dist < closestDist) {
+                                closestDist = dist;
+                                closestIdx = i;
+                            }
+                        });
+                        ttsSectionIndex = closestIdx;
+                    }
+                    speakSection(ttsSectionIndex);
+                } else if (window.speechSynthesis.speaking) {
+                    if (window.speechSynthesis.paused) {
+                        window.speechSynthesis.resume();
+                        ttsPlayBtn.classList.add('playing');
+                        ttsPlayBtn.querySelector('i').className = 'fas fa-pause';
+                    } else {
+                        window.speechSynthesis.pause();
+                        ttsPlayBtn.classList.remove('playing');
+                        ttsPlayBtn.querySelector('i').className = 'fas fa-play';
+                    }
+                }
+            }
+
+            function stopTts() {
+                window.speechSynthesis.cancel();
+                ttsActive = false;
+                ttsSectionIndex = -1;
+                ttsUtterance = null;
+                ttsPlayBtn.classList.remove('playing');
+                ttsPlayBtn.querySelector('i').className = 'fas fa-play';
+                ttsControls.classList.remove('active');
+                ttsLabel.textContent = 'Non commencé';
+                if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
+            }
+
+            // Branchement des événements
+            if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
+            if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
+            if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
+                if (ttsSectionIndex > 0) {
+                    ttsSectionIndex -= 2;
+                    if (ttsSectionIndex < 0) ttsSectionIndex = 0;
+                    speakSection(ttsSectionIndex);
+                }
+            });
+            if (ttsNextBtn) ttsNextBtn.addEventListener('click', () => {
+                if (ttsSectionIndex < sections.length - 1) {
+                    speakSection(ttsSectionIndex + 1);
+                }
+            });
+            if (ttsSpeedUp) ttsSpeedUp.addEventListener('click', () => {
+                ttsSpeed = Math.min(2.5, ttsSpeed + 0.25);
+                updateTtsSpeedDisplay();
+                if (ttsActive && ttsUtterance) {
+                    ttsUtterance.rate = ttsSpeed;
+                    // Recrée et lit la section en cours
+                    const idx = ttsSectionIndex;
+                    window.speechSynthesis.cancel();
+                    setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
+                }
+            });
+            if (ttsSpeedDown) ttsSpeedDown.addEventListener('click', () => {
+                ttsSpeed = Math.max(0.5, ttsSpeed - 0.25);
+                updateTtsSpeedDisplay();
+                if (ttsActive && ttsUtterance) {
+                    ttsUtterance.rate = ttsSpeed;
+                    const idx = ttsSectionIndex;
+                    window.speechSynthesis.cancel();
+                    setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
+                }
+            });
+            if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
+
+            // Raccourci : la touche R active/coupe la lecture vocale
+            document.addEventListener('keydown', (e) => {
+                if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+                if (e.key === 'r' || e.key === 'R') {
+                    if (!e.ctrlKey && !e.metaKey && !e.altKey) {
+                        toggleTtsPlay();
+                    }
+                } else if (e.key === 'Escape' && ttsActive) {
+                    stopTts();
+                }
+            });
+
+            // ===== Initialisation =====
+            onScroll();
+            tryRestorePosition();
+        })();
+    </script>
+</body>
+</html>

@@ -121,12 +121,14 @@ def _front_matter(meta: dict) -> str:
 
 
 def extract(root: Path, version: str = 'v1.8', lang: str = 'zh-CN',
-            src_dir: Path = None, dry_run: bool = False) -> dict:
+            src_dir: Path = None, dry_run: bool = False,
+            strict: bool = True) -> dict:
     html_path = root / version / f'{lang}.html'
     raw = html_path.read_text(encoding='utf-8')
     tree = H.parse(raw)
-    if H.serialize(tree) != raw:
-        raise RuntimeError('解析器未能无损往返，拒绝据此生成源稿')
+    if strict and H.serialize(tree) != raw:
+        raise RuntimeError('解析器未能无损往返，拒绝据此生成源稿（'
+                           '翻译反解可用 --no-strict，提取按树位置进行，不受影响）')
     pos = H.index_nodes(tree)
 
     main = _find_by_id(tree, 'content')

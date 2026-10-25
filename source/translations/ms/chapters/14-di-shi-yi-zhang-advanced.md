@@ -1,0 +1,263 @@
+---
+id: di-shi-yi-zhang-advanced
+part: ruan-jian-pian
+nav:  Tambahan Bab 11: Teknik Imej Profesional
+toc: default
+kind: supplement
+---
+
+### Bab 11 Lampiran: Pengetahuan Teknik Pengimejan Profesional
+
+{class="chapter-intro mb-4"}
+Untuk benar-benar memahami rahsia fotografi telefon pintar dan video, anda perlu faham beberapa pengetahuan teknik pengimejan profesional. Pengetahuan ini bukan sahaja membantu anda guna kamera telefon dengan lebih baik, juga buat anda lebih bijak memilih peranti.
+
+#### 1. Resolusi, kadar bingkai & kadar bit: Tiga elemen kualiti video
+
+##### 1080P (Full HD)
+
+: 1920×1080 piksel, resolusi paling utama buat masa ini.
+
+- <strong>2K (QHD)</strong>: 2560×1440 piksel, lebih jelas daripada 1080P.
+- <strong>4K (UHD)</strong>: 3840×2160 piksel, ultra HD, butiran kaya.
+- <strong>8K</strong>: 7680×4320 piksel, standard masa depan, sokongan peranti buat masa ini terhad.
+- <strong>Resolusi lebih tinggi, gambar lebih jelas, tapi fail juga lebih besar, keperluan terhadap storan dan keupayaan pemprosesan lebih tinggi.</strong> Kadar Bingkai (Frame Rate):
+- <strong>Kadar bingkai menentukan kelembutan gambar, dinyatakan dengan bingkai per saat (fps).</strong>24fps
+
+: Kadar bingkai standard filem, ada "rasa filem" yang unik.
+
+##### 30fps
+
+: Biasa digunakan TV dan video internet, lancar semula jadi.
+
+- <strong>60fps</strong>: Kadar bingkai tinggi, sesuai adegan sukan dan rakaman permainan, sangat lancar.
+- <strong>120fps/240fps</strong>: Kadar bingkai ultra tinggi, boleh guna untuk video gerakan perlahan.
+- <strong>Kadar bingkai lebih tinggi, gambar lebih lancar, kesan gerakan perlahan lebih baik, tapi fail juga lebih besar.</strong> Kadar Bit (Bitrate):
+- <strong>Kadar bit menentukan ketumpatan data video, dinyatakan dengan jumlah data per saat (Mbps).</strong> Kadar bit lebih tinggi, kualiti gambar lebih baik, butiran lebih banyak dikekalkan, tapi fail juga lebih besar.
+
+Kadar bit terlalu rendah akan menyebabkan gambar muncul mozek, blok warna dan jejak mampatan lain.
+
+##### Penggambaran video profesional selalunya perlukan kadar bit tinggi untuk mengekalkan lebih banyak ruang pemprosesan lewat.
+
+2\. Format pengekodan video: H.264, H.265 &amp; ProRes
+
+- H.264 (AVC):
+- Ciri
+- : Format pengekodan paling meluas digunakan, keserasian sangat baik.
+
+#### 2. Format pengekodan video: H.264, H.265 & ProRes
+
+##### : Hampir semua peranti boleh mainkan, kecekapan mampatan sederhana.
+
+- <strong>FCP (Fast Charge Protocol)</strong>: Berbanding format baharu, kecekapan mampatan lebih rendah, fail lebih besar.
+- <strong>Senario sesuai</strong>: Perkongsian video internet, penggambaran harian pengguna biasa.
+- <strong>Kelemahan</strong> Ciri
+- <strong>HDR10</strong> Kelebihan
+
+##### : Fail lebih kecil dengan kualiti gambar sama, menyokong resolusi dan kadar bingkai lebih tinggi.
+
+- <strong>FCP (Fast Charge Protocol)</strong>: Pengekodan dan penyahkodan perlukan pemproses lebih kuat, sebahagian peranti lama tak serasi.
+- <strong>Senario sesuai</strong>: Penggambaran video 4K, senario ruang storan terhad.
+- <strong>Kelemahan</strong> Ciri
+- <strong>HDR10</strong> Kelebihan
+
+##### : Kualiti gambar sangat tinggi, ruang pemprosesan lewat besar, warna tepat.
+
+- <strong>FCP (Fast Charge Protocol)</strong>: Fail sangat besar, perlukan ruang storan besar, pemprosesan perlukan peranti profesional.
+- <strong>Senario sesuai</strong>: Penerbitan video profesional, penggambaran tahap filem.
+- <strong>Kelemahan</strong> Ciri
+- <strong>HDR10</strong> Apakah RAW
+
+##### : Data sensor asal yang belum diproses, mengekalkan maklumat maksimum.
+
+- <strong>FCP (Fast Charge Protocol)</strong>: Ruang pelarasan lewat sangat besar, boleh ubah dedahan, white balance dan parameter lain tanpa hilang kualiti gambar.
+- <strong>Kekurangan</strong>: Fail sangat besar, perlukan perisian pemprosesan lewat profesional.
+- <strong>Senario sesuai</strong>: Penerbitan profesional bertaraf tinggi. Siri iPhone 15 Pro menyokong penggambaran video Apple ProRes (sehingga 4K 60fps), tapi format ProRes RAW buat masa ini perlu guna bersama peranti rakaman luaran, telefon belum menyokong penggambaran terus.
+- <strong>Kelemahan</strong> Teknik HDR (High Dynamic Range) boleh mengekalkan butiran bahagian paling cerah dan paling gelap dalam gambar serentak.
+- <strong>HDR10</strong>: Pengeluaran profesional tinggi. Siri iPhone 15 Pro dan selepasnya menyokong penggambaran video Apple ProRes (maksimum 4K 60fps), iPhone 17 Pro seterusnya menyokong ProRes RAW rakaman dalam peranti.
+
+#### 3. HDR: Teknik Julat Dinamik Tinggi
+
+: Standard dipromosikan Samsung, menyokong metadata dinamik.
+
+- <strong>Dolby Vision</strong>: Standard HDR terbaik dibangunkan Dolby, kualiti gambar terbaik, tapi perlukan lesen.
+- <strong>HLG</strong>: Standard HDR tahap penyiaran, serasi dengan monitor biasa.
+- <strong>Semasa mengambil video HDR, perlukan monitor yang menyokong HDR baru boleh nampak kesan penuh.</strong>4. Ruang warna &amp; kedalaman warna
+- <strong>Ruang warna:</strong> sRGB
+
+: Ruang warna standard, keserasian terbaik.
+
+#### 4. Ruang warna & kedalaman warna
+
+##### : Standard gamut warna luas dipromosikan Apple, warna lebih kaya.
+
+- <strong>Rec.2020</strong>: Ruang warna standard video HDR, gamut warna paling luas.
+- <strong>Kedalaman warna:</strong>8-bit
+- <strong>: 16.7 juta warna, standard video biasa.</strong>10-bit
+
+##### : 1.07 bilion warna, standard video profesional, peralihan warna lebih halus.
+
+- <strong>12-bit</strong>: 68 bilion warna, standard profesional bertaraf tinggi.
+- <strong>Cadangan praktikal</strong> Penggambaran harian: 1080P/4K + 30fps + pengekodan H.265, seimbangkan kualiti gambar dan saiz fail.
+- <strong>Penggambaran sukan: 1080P/4K + 60fps, jamin kelembutan.</strong> Penciptaan profesional: 4K + ProRes (jika disokong), kekalkan ruang lewat maksimum.
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-info-circle mr-2"></i>Cadangan storan: video kadar bit tinggi sangat memenuhi ruang, cadangan sandarkan ke komputer atau storan awan secara berkala.
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Terokai: Tetapan video telefon anda
+- Buka Apl kamera, tukar ke mod video.
+- Tengok pilihan resolusi dan kadar bingkai, cuba gabungan berbeza.
+- Jika disokong, tengok ada pilihan lanjutan HDR, ProRes dll. atau tidak.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>Ambil beberapa segmen video dengan tetapan berbeza, bandingkan kualiti gambar dan saiz fail.
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Bab 12: Hiburan Audio-Visual &amp; Pembacaan
+2. Telefon sekarang asasnya telah menggantikan MP3, alat kawalan jauh TV, Kindle dan kons permainan tangan. Tapi sejujurnya, ramai orang hanya guna fungsi paling asas App ini, masih banyak kegunaan bagus yang belum ditemui. Bab ini mari kita cakap cara buat hiburan telefon lebih lancar, lebih selesa.
+3. 1. Dengar muzik: Pilih App mana, cara dengar macam mana baru selesa
+4. App muzik sekarang fungsinya lebih kurang sama, tapi setiap satu ada fokus tersendiri, pilih yang betul boleh jimat banyak masalah:
+:::
+
+#### V. Perbandingan format RAW dengan HEIF/JPEG
+
+##### Apakah format RAW:
+
+Format RAW adalah "data mentah" yang direkodkan oleh sensor kamera — maklumat mentah tanpa pemampatan dan pemprosesan. Ia seperti bahan mentah, perlu "dimasak" dalam pasca-pemprosesan untuk menjadi produk siap. Telefon kerana storan dan kuasa pengiraan terhad, lalai menghasilkan JPEG atau HEIF yang sudah "siap dimasak", RAW perlu diaktifkan khas.
+
+##### Perbandingan RAW vs HEIF vs JPEG:
+
+- <strong>JPEG</strong>: Format paling lama, keserasian terbaik (mana-mana peranti boleh buka). 8-bit color depth, pemampatan berbahaya, fail paling kecil (sebuah foto 2-5MB). Ruang pasca terhad, paksa cerahkan bahagian gelap mudah muncul blok warna.
+- <strong>HEIF/HEIC</strong>: Format baharu yang dipromosikan Apple, saiz fail hanya separuh JPEG untuk kualiti yang sama (sebuah foto 1-3MB). Menyokong 10-bit color depth dan saluran telus. Kelemahannya sesetengah peranti lama dan Windows perlu pasang plugin untuk buka.
+- <strong>RAW</strong>: Data mentah tanpa pemampatan, fail paling besar (sebuah foto 20-100MB). Color depth biasanya 12-16bit, ruang pasca terbesar. Kelemahannya mesti guna perisian profesional (Lightroom, Snapseed dll) untuk buka dan proses, tidak boleh kongsi terus.
+
+##### Mengapa jurugambar profesional tangkap RAW:
+
+- <strong>Imbang semula putih boleh laras tanpa kerugian</strong>: JPEG tangkap salah imbang putih (contoh kuning di bawah lampu pijar), pembetulan pasca akan rugi kualiti; RAW boleh tetapkan semula suhu warna, tanpa kerugian.
+- <strong>Toleransi dedahan besar</strong>: JPEG kurang dedahan 2 stop bahagian gelap asasnya hitam pekat, cerahkan penuh bising; RAW boleh "selamatkan" butiran berguna dari bahagian gelap kurang dedahan 3-4 stop. Lebih dedahan sama.
+- <strong>Butiran bahagian gelap dan tonjolan lebih kaya</strong> Julat dinamik RAW jauh lebih besar daripada JPEG, ruang tonjolan tidak lebih dedahan, bahagian gelap tidak hitam pekat lebih luas.
+- <strong>Penajaman, pengurangan bising, pembetulan kanta semua boleh dikawal dalam pasca</strong>: Pemprosesan dalam kamera adalah "sekali untuk semua", RAW boleh laras berulang kali, setiap kali bermula dari data mentah.
+
+##### Cara mengaktifkan RAW pada telefon:
+
+- <strong>iPhone ProRAW</strong>: Hanya iPhone 12 Pro dan ke atas model Pro menyokong. Buka "Tetapan → Kamera → Format" aktifkan "Apple ProRAW". Kemudian pada antara muka kamera akan muncul butang "RAW", ketik untuk aktifkan. Fail kira-kira 25MB/sekeping, disyorkan buka hanya bila perlu.
+- <strong>Android Motion Raw / Ultra RAW</strong>: Setiap jenama nama berbeza. Xiaomi/OPPO/vivo model flagship dalam kamera "Mod Profesional" atau "Lagi" boleh cari suis RAW; Huawei buka dalam "Mod Profesional"; Samsung Galaxy Siri S dalam mod "Profesional" ada pilihan RAW. Saiz fail biasanya 20-50MB.
+- <strong>Cadangan umum</strong>: Tangkap harian tidak perlu buka RAW, fail terlalu besar ambil ruang; hanya dalam senario penting (landskap, potret, perlu pasca) baru aktifkan.
+
+#### VI. Prinsip fotografi pengiraan
+
+Fotografi telefon moden tidak boleh dipisahkan daripada "fotografi pengiraan" — iaitu bergantung kepada algoritma dan bukan hanya kanta dan sensor untuk menghasilkan foto. Fahami beberapa prinsip teras ini, boleh buat anda lebih faham apa yang telefon lakukan saat menekan shutter.
+
+##### Penggabungan berbilang bingkai:
+
+Telefon menekan shutter sekali, sebenarnya tangkap berbilang foto. Algoritma jajarkan, gabungkan berbilang bingkai, dapat satu foto kualiti tinggi.
+
+- <strong>Mod malam</strong>: Dalam 1-3 saat tangkap berbilang foto kurang dedahan, jajarkan dan tindih — bising saling membatalkan, kecerahan terkumpul. Hasilnya cahaya malap juga boleh tangkap gambar bersih.
+- <strong>HDR (Julat Dinamik Tinggi)</strong>: Tangkap berasingan kurang dedahan, normal, lebih dedahan tiga (atau lebih) keping, gabungkan satu foto yang tonjolan dan bahagian gelap ada butiran. Senario cahaya belakang sangat berkesan.
+- <strong>Deep Fusion (Apple)/Photonic Engine (Enjin Fotonik)</strong>: Untuk senario cahaya sederhana-rendah, analisis piksel demi piksel berbilang bingkai dan gabungkan, fokus tingkatkan tekstur dan butiran, sweter, rambut jenis butiran akan jelas lebih jelas.
+
+##### Pembahagian semantik:
+
+AI bukan hanya proses seluruh gambar sekali, tetapi dahulu "faham" apa ada dalam gambar — langit, muka, rumput, bangunan, pakaian — kemudian aplikasi strategi pemprosesan berbeza untuk setiap kawasan.
+
+- <strong>Langit</strong>: Tingkatkan biru secara berasingan, turunkan kecerahan, elakkan lebih dedahan.
+- <strong>Muka</strong>: Kenalpasti kawasan kulit, cerahkan secara berasingan, licinkan kulit, tidak ubah muka dan butiran rambut.
+- <strong>Rumput/daun</strong>: Tingkatkan tepu hijau, tingkatkan penajaman butiran.
+- <strong>Latar belakang kabur</strong>: Mod potret, AI kenalpasti kontur subjek, latar belakang kabur, subjek jelas.
+
+##### Aplikasi pembelajaran mendalam:
+
+- <strong>Pengecaman suasana AI</strong>: Kamera auto kenalpasti suasana "makanan""haiwan peliharaan""malam""dokumen" dll, dan optimumkan parameter sepadan. Contoh mod makanan akan tingkatkan warna hangat dan tepu, buat makanan nampak lebih menarik.
+- <strong>Potret kabur AI</strong>: Kanta telefon secara fizikal tidak boleh capai depth of field cetek seperti DSLR, guna model pembelajaran mendalam ramal tepi subjek, kemudian kaburkan latar belakang. Algoritma terkini sudah boleh proses dengan betul butiran rambut, tepi kaca.
+- <strong>Padam AI/Perluas gambar AI</strong>: Pilih orang lalu atau objek dalam gambar, AI berdasarkan konteks "isi semula" bahagian tertutup. Ini aplikasi AI generatif dalam bidang imej.
+
+##### Fotografi pengiraan vs fotografi optik:
+
+- <strong>Kelebihan fotografi pengiraan</strong>: Saiz kecil juga boleh dapat kualiti baik, senario cahaya malap, cahaya belakang juga boleh hasilkan gambar, pengguna biasa tidak perlu faham ilmu fotografi untuk tangkap foto "cantik".
+- <strong>Kelemahan fotografi pengiraan</strong>: Gambar kadangkala "lebih diproses" — penajaman berlebihan, warna tidak tepat, warna langit tidak semula jadi; penggabungan berbilang bingkai apabila subjek bergerak akan meninggalkan bayang; butiran "dikira" bukan direkodkan sebenar.
+- <strong>Kelebihan fotografi optik</strong>: Sensor besar + kanta bukaan besar boleh tangkap cahaya sebenar, kualiti semula jadi, ruang pasca besar; tidak akan ada artifak akibat algoritma "tekaan".
+- <strong>Trend</strong>: Telefon flagship moden adalah gabungan "optik + pengiraan" — guna sensor besar dapat maklumat sebenar, guna algoritma optimumkan paparan. Kedua-duanya tidak bertentangan.
+
+#### VII. Jenis kanta dan jarak fokus
+
+Telefon flagship moden biasanya dilengkapi tiga hingga empat kanta, setiap satu untuk jarak fokus berbeza. Fahami jarak fokus, boleh buat anda pilih kanta yang betul dalam senario berbeza.
+
+##### Kanta biasa dan jarak fokus setara:
+
+- <strong>Ultra lebar (13-24mm setara)</strong>: Medan paling luas, sesuai untuk landskap, bangunan, ruang dalaman. Boleh tangkap adegan besar yang dilihat, tetapi tepi akan herot (garis lurus jadi bengkok), tangkap potret muka akan diregangkan. Sesuai untuk "adegan besar", tidak sesuai untuk "close-up".
+- <strong>Kamera utama (24-28mm setara)</strong>: Kanta paling kerap digunakan harian, kualiti terbaik, bukaan terbesar. Seimbang medan dan kualiti, tangkap orang dan pemandangan boleh guna. "1x" kebanyakan telefon adalah kamera utama.
+- <strong>Telefoto (70-200mm setara)</strong>: Untuk tangkap jauh, close-up potret. Telefoto boleh mampatkan rasa ruang (gunung jauh dan orang dekat nampak lebih dekat), tangkap potret boleh dapat proporsi muka lebih semula jadi dan latar kabur.
+- <strong>Telefoto periskop (200mm+ setara)</strong>: Melalui reka bentuk laluan cahaya pantulan, dalam ketebalan telefon capai jarak fokus lebih panjang. Boleh tangkap jelas butiran dari jauh, sesuai untuk konsert, sukan, hidupan liar. Hanya model flagship ada.
+
+##### Pertukaran saiz sensor dan saiz piksel:
+
+Sensor adalah "asas", tentukan berapa banyak cahaya boleh diterima. Industri mengatakan "asas besar satu tahap menindih" — bilangan piksel yang sama, sensor lebih besar, setiap piksel juga lebih besar, cahaya masuk lebih banyak, kualiti lebih baik.
+
+- <strong>Sensor besar</strong>: Cahaya masuk banyak, kualiti malam baik, julat dinamik lebar. Kelemahannya telefon perlu buat tebal (modul kanta menonjol), kos tinggi.
+- <strong>Piksel tinggi sensor kecil</strong>: Siang cahaya mencukupi, piksel tinggi boleh tangkap foto lebih jelas, mudah untuk potong pasca. Tetapi cahaya malap setiap piksel cahaya masuk tidak cukup, bising banyak.
+- <strong>Pilihan flagship utama</strong>: Kamera utama kebanyakannya 1/1.3 inci hingga 1 inci (sesetengah model telah guna 1 inci besar), bilangan piksel kira-kira 50 juta - ini titik keseimbangan kualiti dan saiz.
+
+##### Teknologi penggabungan piksel (Pixel Binning):
+
+Untuk seimbangkan piksel tinggi siang dan piksel besar malam, pengeluar telefon guna "penggabungan piksel" — gabungkan beberapa piksel kecil menjadi satu piksel besar output.
+
+- <strong>Piksel empat-dalam-satu (Quad Bayer)</strong>: Sensor 50 juta piksel, output 12.5 juta piksel foto. Setiap piksel output disintesiskan dari 4 piksel bersebelahan, cahaya masuk tinggi 4 kali, kualiti lebih bersih.
+- <strong>Piksel sembilan-dalam-satu (Nonacell)</strong>: Untuk sensor lebih 100 juta piksel, output kira-kira 11-12 juta piksel. Prinsip sama, cahaya masuk lebih besar.
+- <strong>Kesan sebenar</strong>: Mod tangkap lalai, yang anda dapat adalah foto piksel rendah selepas penggabungan — kualiti baik, fail kecil. Perlu butiran ekstrem (contoh tangkap dokumen, jauh), boleh tukar ke "mod piksel tinggi" output resolusi penuh.
+
+#### VIII. Mod penggambaran khas
+
+Selain tangkap harian, telefon ada beberapa mod khas, guna betul boleh tangkap gambar yang biasanya tidak boleh.
+
+##### Mod panorama:
+
+- Apabila tangkap ikut arah panah pergerakan perlahan stabil mendatar, jangan cepat — cepat akan ada salah jajar.
+- Kekalkan telefon stabil menegak, hanya gerak mendatar. Jika bergoyang atas bawah, ufuk akan jadi bergelombang.
+- Berhati-hati apabila ada orang atau kereta bergerak — apabila jajar akan muncul "separuh badan" atau "bayang hantu".
+- Mod panorama juga boleh tangkap menegak — tangkap menegak jajar mendatar, sesuai untuk bangunan tinggi atau air terjun.
+
+##### Slow motion dan time-lapse:
+
+- <strong>Slow motion</strong>: Guna 120fps atau 240fps frame rate tinggi tangkap, main balik jadi slow motion. Sesuai tangkap titisan air, saat sukan, lompatan haiwan. Cahaya perlu mencukupi, mod slow motion masa cahaya masuk pendek, kualiti malap teruk.
+- <strong>Time-lapse</strong>: Tangkap berbilang foto pada selang masa, gabung menjadi video pantas. Sesuai tangkap aliran kereta, pergerakan awan, matahari terbenam, bunga mekar. Masa tangkap beberapa minit hingga beberapa jam, mesti guna tripod tetapkan telefon, tangan pasti kabur.
+- <strong>Tip kecil</strong>: Time-lapse tangkap awan, letak telefon, tangkap 15-30 minit, akhir dapat video time-lapse kira-kira 10 saat, kesan mengagumkan.
+
+##### Mod bintang/astronomi:
+
+- Perlu jauh dari pencemaran cahaya bandar, cari kawasan luar bandar atau pergunungan tanpa gangguan lampu jalan. Dalam bandar tidak boleh tangkap Bima Sakti.
+- Mesti guna tripod, tangan pasti kabur. Telefon perlu stabil beberapa saat hingga beberapa puluh saat.
+- Cuaca perlu cerah tanpa awan, bulan jangan terlalu besar (bulan purnama akan tutup cahaya bintang). Awal atau akhir kalendar lunar malam gelap paling sesuai.
+- "Mod malam" iPhone akan auto kenalpasti bintang dan panjangkan masa dedahan (maksimum 30 saat); model flagship Android "mod bintang" atau "mod astronomi" kesan sama. Perlu sabar menunggu, selepas tekan shutter jangan gerak telefon.
+
+##### Mod makro:
+
+- Untuk tangkap bunga, serangga, perhiasan, teks close-up dll objek kecil. Boleh dekat hingga 1-2 cm jarak fokus.
+- Sebahagian telefon ada kanta makro khas (kebanyakannya 2 juta atau 5 juta piksel sensor kecil), kualiti biasa; model flagship guna kanta ultra lebar berganda makro, kualiti lebih baik.
+- Apabila dekat tangkap, kanta dekat subjek, akan halang cahaya, perlu guna lampu meja atau lampu suluh tambah cahaya.
+- Jarak fokus terlalu dekat, depth of field sangat cetek, subjek gerak beberapa milimeter mungkin hilang fokus. Tangkap tangan perlu stabil, terbaik biar subjek kekal tidak bergerak.
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-info-circle mr-2"></i>Cadangan praktikal fotografi statik
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Tangkap harian: HEIF/JPEG lalai sudah memadai, fail kecil, kualiti cukup.
+- Senario penting (landskap, potret, perlu pasca): aktifkan RAW, kekal ruang pasca maksimum.
+- Pilih kanta betul: landskap guna ultra lebar, potret guna telefoto, harian guna kamera utama.
+- Malam dan bintang: mesti tetapkan telefon, buka mod malam atau mod astronomi.
+- Telefon sensor besar (seperti model 1 inci) had kualiti lebih tinggi, tetapi tabiat operasi masih kunci.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>Cuba sendiri: Kenal pasti keupayaan kamera anda
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Semak telefon anda sama ada menyokong tangkap RAW (Tetapan → Kamera → Format), cuba aktifkan dan tangkap satu, bandingkan saiz fail JPEG dan RAW adegan yang sama.
+2. Tukar ke ultra lebar, kamera utama, telefoto tiga jarak fokus, tangkap adegan jauh yang sama, alami perbezaan sudut dan kualiti.
+3. Cari senario dengan mod malam atau mod bintang, tetapkan telefon dan tangkap foto malam.
+4. Cuba guna mod panorama tangkap mendatar satu adegan besar, perhatikan telefon bergerak stabil.
+:::

@@ -1,0 +1,112 @@
+---
+id: di-si-shi-san-zhang
+num: 43
+part: ai-biancheng-pian
+nav: Chapter 43: Conversation Engineering — Techniques for Effective Dialogue
+toc: default
+kind: chapter
+---
+
+### Chapter 43: Conversation Engineering — How to Talk with AI Effectively
+
+{class="chapter-intro mb-4"}
+Conversation is the core mode of interaction in AI coding. But note: 'conversation' is not the same as 'chatting' — an effective AI coding conversation is a structured communication technique, which we call 'conversation engineering.' It studies how to get the highest-quality code output in the fewest rounds of dialogue. Plainly put, this chapter teaches you how to 'make yourself clear' to the AI.
+
+#### 1. Prompt Layering
+
+A conversation with the AI can be split into three layers, each with its own job. Once you understand these three layers, you can stack them like building blocks to assemble highly effective prompts.
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Layer</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Purpose</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Example</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Frequency</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">System layer</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sets the AI's role and the global constraints</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"You are a React expert; all code must be written in TypeScript"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Set once at the start of the project</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Task layer</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Describes the specific task at hand</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Build a form component with username and password fields"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Given at the start of each task</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Feedback layer</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Evaluates and corrects the AI's output</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"The password field is missing a show/hide toggle — please add it"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Given based on the quality of the output</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+The Three Layers of a Conversation Prompt
+
+The system-layer prompt usually lives in the project memory file (such as CLAUDE.md) and doesn't need to be repeated in every conversation. The task layer is what you'll use most in conversation — it should contain three elements: 'what to do,' 'what technology to use,' and 'what constraints apply.' The feedback layer is where real skill shows — good feedback lets the AI make precise corrections, while bad feedback only makes it guess again.
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Tip: The Three-Part Feedback Formula
+
+{class="mt-1"}
+A practical feedback template is 'point out the problem + state the expectation + provide context.' For example: 'The error handling on line 25 only uses console.log (point out the problem); production should use the unified error handler and return a user-friendly message (state the expectation); there is a handleError function in the project you can use (provide context).' Feedback like this is ten times more effective than 'fix the error handling.'
+:::
+
+#### 2. Debug Conversations: Describing Errors So the AI Can Pinpoint Them Fast
+
+Debugging is one of the most frequent scenarios in AI coding. When you hit a bug, how you describe the problem to the AI directly determines how quickly it can locate and fix it. Here are the four keys to a good debugging conversation:
+
+1. Let the AI 'see' the raw information, not your paraphrase of it. Reference the error logs, exception stack traces, and relevant code directly with @, rather than describing it as 'there seems to be some kind of error.' The AI reading the raw information is more accurate than the AI reading your interpretation.
+2. Describe the gap between 'expected behavior' and 'actual behavior.' 'I expect clicking the button to take me to the home page (expected), but when I actually click it, nothing happens (actual)' — that is far more useful than 'the button is broken.'
+3. Provide reproduction steps. 'First I enter the username, then I click the login button, and this error appears' — reproduction steps let the AI retrace your path, which makes the problem easier to pinpoint.
+4. Be clear about what you have already tried. 'I already checked the network request — it returns 200 and the data is fine' — this helps the AI rule out the directions you have already verified, instead of wasting time rechecking them.
+
+::: div .grid .md:grid-cols-2 .gap-3 .my-3
+::: div .border .rounded-md .p-3 .border-t-4 .border-t-red-500
+{class="vs-title"}
+A Poor Debugging Description
+
+{class="font-mono text-xs leading-relaxed"}
+The button doesn't do anything when I click it, take a look
+:::
+
+::: div .border .rounded-md .p-3 .border-t-4 .border-t-green-500
+{class="vs-title"}
+A Good Debugging Description
+
+{class="font-mono text-xs leading-relaxed"}
+Clicking the login button does nothing. Expected behavior: clicking it should navigate to the /home page Actual behavior: nothing happens at all, and the console shows no errors Reproduction steps: 1. On the login page, enter username admin and password 123456 2. Click the "Log In" button 3. Nothing happens on the page Already ruled out: - Network requests are fine, returning 200 - The onClick event is bound - Reviewed the LoginButton component code Related files: @src/components/LoginButton.tsx @src/pages/Login.tsx
+:::
+:::
+
+#### 3. Iteration Strategy: Small Quick Steps vs. Big Refactors
+
+Iteration in AI coding has two basic strategies, each suited to different situations. Understanding the difference helps you make the right choice in each case.
+
+The 'small quick steps' strategy suits feature development and bug fixes. Its core: have the AI make one small change at a time, and only move on to the next after verifying it. The advantage is that every step can be verified and rolled back, so risk stays under control; the drawback is that it is slower and takes frequent back-and-forth. Good for: developing new features, exploring when you are not sure of the best approach, and careful iteration whenever you are not fully confident in the AI's output.
+
+The 'big refactor' strategy suits large-scale changes where the goal is clear. Its core: describe the complete goal in one go and let the AI plan and carry out the entire change on its own. The advantage is speed — the AI sees the whole picture and can make better architectural decisions; the drawback is high risk — if the AI misunderstands, correcting it is costly. Good for: clear-cut architecture upgrades, large code migrations, and refactors protected by thorough tests.
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Aspect</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Small quick steps</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Big refactor</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Change Size</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">One feature or one bug</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">One module or one architectural layer</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Verification Frequency</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Verify right after every change</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Verify everything together once all changes are done</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Conversation Rounds</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Many (5-10 rounds per feature)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Few (1-3 rounds per module)</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Risk</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Low — every step can be rolled back</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">High — fixing a misunderstanding is costly</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Best For</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">New features, exploratory development</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Refactors and migrations with a clear goal</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Prerequisites</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">None in particular</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Needs test coverage</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+Comparing the Two Iteration Strategies
+
+In practice, the two strategies are often combined. For example, when refactoring a module, first use the 'big refactor' approach to have the AI produce an overall plan; after you review the plan, execute it step by step with 'small quick steps.' That way you keep the big-picture view while keeping execution risk under control.
+
+#### 4. Context Management for Multi-Turn Conversations
+
+As the number of turns grows, you need to actively manage the conversation's context to avoid the 'the AI forgot what we said earlier' problem. Here are a few practical context management techniques.
+
+First, 'anchor' key information. At the start of a conversation, spell out the key constraints, and restate them when the time comes. For example, 'Remember, our data lives in localStorage — we can't use a database.' Repeat that constraint in the relevant change requests so the AI doesn't forget.
+
+Second, use the 'summarize and continue' technique. When a conversation gets very long, ask the AI to 'summarize the progress so far and what is left to do,' then open a new conversation and use that summary as the starting point. That preserves the key context while sidestepping the decay of a long conversation.
+
+Third, 'one conversation, one task.' This is the simplest and most effective context management strategy. Each conversation handles just one task or one feature; when it is done, open a new conversation for the next one. This naturally caps the conversation length and keeps the context clean.
+
+Fourth, use your tool's context management features. Most AI coding tools have a 'clear context' or 'new session' button — when you sense the quality of the AI's answers slipping, don't hesitate: open a new session. Losing a bit of conversation history beats struggling on inside a degraded context.
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Try It Yourself: Play 'Patient' for Your AI
+
+{class="mt-1"}
+Deliberately build a small page in the browser with a planted bug (say, a button that does nothing). Then, following the 'good debugging description' format from this chapter, give the AI one complete description: raw information, expected vs. actual, reproduction steps, and what you have already ruled out. Feel the difference in how fast the AI pins down the problem — you will understand why 'describing the problem' is a craft of its own.
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+Chapter Recap
+
+- Three prompt layers: system layer (kept in the memory file), task layer (what to do + technology + constraints), feedback layer (problem + expectation + context)
+- Four debugging essentials: give the raw information, expected vs. actual, reproduction steps, and what you have already ruled out
+- Small quick steps: low risk, many rounds, good for new features; big refactor: high risk, few rounds, needs test coverage
+- Four context management moves: anchor key information, summarize-and-continue, one conversation per task, and open a new session without hesitation
+:::

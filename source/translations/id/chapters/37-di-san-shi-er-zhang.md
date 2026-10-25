@@ -1,0 +1,225 @@
+---
+id: di-san-shi-er-zhang
+num: 32
+part: shi-zhan-pian
+nav: Bab 32: Panduan P3K Keamanan Ponsel
+toc: default
+kind: chapter
+---
+
+### Bab 32: Buku Panduan Pertolongan Pertama Keamanan Ponsel
+
+{class="chapter-intro mb-4"}
+Bab ini adalah "rencana darurat". Semoga tidak pernah Anda perlukan—tetapi jika benar-benar menghadapi ponsel hilang, dicuri, atau penipuan, panduan ini membantu meminimalkan kerugian. Saat gempa, badai, dan bencana lain, ponsel juga jadi alat menerima peringatan, mengirim lokasi minta tolong, dan menjaga komunikasi. Disarankan membaca sekali sekarang, lalu tangkap layar langkah kuncinya atau cetak dan simpan di rumah—karena saat kejadian, ponsel Anda mungkin sudah tidak di tangan; saat bencana, bisa jadi mati atau tanpa sinyal.
+
+#### Skenario nol: gempa / cuaca ekstrem—bagaimana ponsel menyelamatkan nyawa Anda
+
+Yang dilindungi adalah keselamatan diri, bukan dana akun. Pengaturan peringatan ada di Bab 13 "Peringatan Cuaca, Bencana Alam, dan Gempa"; di sini hanya membahas apa yang dilakukan setelah alarm berbunyi.
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Alarm gempa berbunyi: berlindung dulu baru evakuasi—jangan sibuk merekam video
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Berlindung di tempat terdekat: merunduk, berlindung, berpegangan (di bawah meja, sudut dinding penahan, di samping perabot kokoh)—lindungi kepala dan leher; jauhi kaca, dinding luar, dan lampu gantung.
+2. Jangan asal berlari ke tangga: guncangan utama sering hanya belasan hingga puluhan detik—tangga bisa lebih berbahaya; lift sama sekali tidak boleh dipakai.
+3. Setelah guncangan berhenti, evakuasi tertib: lewat tangga, waspada gempa susulan dan benda jatuh; ke tempat terbuka, jauhi tiang listrik, papan iklan, dan bangunan rawan roboh.
+4. Pakai ponsel seperlunya: kirim pesan singkat ke kontak darurat ("Saya di XX, aman/terluka, butuh bantuan") lebih hemat daya daripada telepon panjang; bila bisa SMS/WeChat, utamakan teks.
+5. Saat tidak ada sinyal: lihat Bab 7 SOS Satelit / Pesan Satelit (jika model mendukung); atau coba lagi di tempat tinggi dan terbuka; di sebagian skenario, walkie-talkie Bluetooth tanpa jaringan juga membantu.
+6. Matikan fitur yang tidak perlu: dalam keadaan darurat, aktifkan mode pesawat lalu nyalakan sesekali, matikan pemindaian Bluetooth, turunkan kecerahan—bisa bertahan beberapa jam lebih lama; simpan sisa daya terakhir untuk kabar selamat dan pesan penyelamatan.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Badai hujan / topan / banjir bandang: bertindaklah sejak tahap peringatan
+
+{class="list-disc pl-6 mt-1 space-y-1 text-sm"}
+- Saat peringatan merah: kurangi keluar rumah, jauhi ruang bawah tanah, jembatan bawah, aliran sungai, dan lereng curam.
+- Terjebak di luar: naik ke lantai atas bangunan kokoh, jangan memaksa menerobos air (genangan bisa menyembunyikan tutup gorong-gorong yang lepas dan kebocoran listrik); saat menelepon 119/110, sebutkan patokan dan tinggi air dengan jelas.
+- Sebelum bepergian: konfirmasi risiko lewat App cuaca dan akun peringatan lokal; untuk perjalanan jauh berkendara, hindari ruas pegunungan di tepi air dan tebing.
+- Saling lapor dalam keluarga: sepakati "jika terputus kontak, gunakan lokasi terakhir dari WeChat/SMS"—hindari saling menelepon membabi-buta sampai baterai habis.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+4 hal yang sebaiknya disiapkan sejak awal
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Aktifkan peringatan gempa sistem / App peringatan resmi, dan izinkan menembus mode hening.
+2. Sematkan 2–3 "Kontak Darurat" di bagian atas kontak, agar tampil di layar kunci (kartu medis darurat iOS/Android atau info layar kunci).
+3. Sediakan power bank di rumah dan tas; sebelum perjalanan jauh, isi penuh dan bawa kabelnya.
+4. Hafalkan setidaknya satu nomor yang "bisa ditelepon tanpa buku kontak" (nomor HP keluarga), tulis di kertas dan simpan di dompet.
+:::
+
+#### Skenario satu: ponsel hilang/dicuri—30 menit emas
+
+30 menit pertama setelah ponsel hilang adalah "waktu emas". Penanganan yang tepat bisa menyelamatkan uang dan privasi Anda. Ikuti urutan berikut tanpa melompat satu langkah pun:
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Prosedur standar 30 menit setelah kehilangan
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Pinjam ponsel orang lain untuk menelepon nomor Anda (menit ke-1): mungkin hanya jatuh di sekitar—orang baik yang mengangkat bisa langsung mengembalikannya.
+2. Kunci ponsel dari jarak jauh (menit ke-2–5): pakai ponsel atau komputer orang lain untuk masuk ke layanan temukan perangkat: iPhone: iCloud.com > Cari > pilih perangkat Anda > Tandai Hilang
+3. Android per merek: Huawei cloud.huawei.com / Xiaomi i.mi.com / OPPO cloud.oppo.com, dll.
+4. Blokir SIM (menit ke-5–10): telepon layanan pelanggan operator (China Mobile 10086 / Unicom 10010 / Telecom 10000), laporkan ponsel hilang dan minta penangguhan layanan SIM. Langkah ini paling kritis—begitu penipu memegang SIM Anda, mereka bisa menerima kode verifikasi dan mengatur ulang semua kata sandi Anda.
+5. Bekukan akun pembayaran (menit ke-10–20): Alipay: blokir lewat 95188, atau masuk Alipay di ponsel orang lain > Saya > Pengaturan > Pusat Keamanan > Pembekuan Darurat
+6. WeChat: setelah lapor 110, hubungi layanan pelanggan WeChat, atau Pusat Keamanan WeChat > Bekukan Akun
+7. App bank: telepon nomor layanan pelanggan di belakang kartu bank, minta bekukan perbankan internet
+8. Beri tahu keluarga dan teman (menit ke-20–25): unggah di Moments atau minta keluarga membantu mengabarkan bahwa ponsel Anda hilang—cegah penipu menipu orang lain atas nama Anda.
+9. Lapor polisi (menit ke-25–30): telepon 110 atau datang ke kantor polisi terdekat untuk membuat laporan, dan minta bukti laporan. Klaim asuransi dan sengketa bank berikutnya membutuhkan bukti ini.
+:::
+
+#### Skenario dua: tertipu—masa penanganan emas 72 jam
+
+Setelah sadar tertipu, yang paling penting adalah tetap tenang. Keputusan salah saat panik menimbulkan kerugian kedua. Ikuti langkah berikut:
+
+1. Hentikan semua transfer sekarang juga: apa pun yang dikatakan penipu, jangan transfer sepeser pun. "Transfer uang jaminan lagi supaya uang sebelumnya dikembalikan" adalah skrip penipuan lanjutan klasik.
+2. Simpan semua bukti: jangan hapus riwayat chat! Jangan hapus riwayat panggilan! Tangkap layar chat, bukti transfer, dan informasi akun lawan bicara. Semua ini bukti kunci untuk laporan polisi dan upaya pengembalian dana.
+3. Segera telepon 96110: ini adalah hotline anti-penipuan nasional. Petugas akan memandu Anda melakukan penghentian pembayaran darurat—jika transfer belum lama (biasanya dalam 24 jam), bank mungkin bisa membekukan akun lawan dan menahan dana.
+4. Telepon 110 untuk lapor polisi: bawa ponsel, KTP, dan bukti transfer ke kantor polisi terdekat untuk membuat berita acara.
+5. Hubungi bank/platform pembayaran: beri tahu bahwa Anda tertipu, minta bekukan akun yang terlibat. Jika kartu kredit dibobol, minta bank memulai proses penolakan tagihan.
+6. Ubah semua kata sandi: di perangkat aman lain, ganti kata sandi Apple ID/akun merek, WeChat, Alipay, dan App bank Anda, lalu aktifkan autentikasi dua faktor.
+
+#### Skenario tiga: ponsel kena virus/trojan—apa yang harus dilakukan?
+
+Jika ponsel Anda menunjukkan gejala berikut—iklan muncul entah dari mana, App aneh terpasang otomatis, pulsa membengkak, kuota terkuras tidak wajar—kemungkinan besar terkena perangkat lunak berbahaya:
+
+- Langkah 1: masuk mode aman—di Android, tekan lama tombol daya untuk mematikan, tekan lama lagi untuk menyalakan; setelah bergetar, tekan terus tombol volume turun hingga masuk mode aman (tulisan "Mode Aman" muncul di kiri bawah). Di mode aman, semua App pihak ketiga dinonaktifkan—memudahkan penyelidikan.
+- Langkah 2: hapus App mencurigakan—di mode aman, buka Pengaturan > Manajemen Aplikasi, urutkan berdasarkan waktu, temukan dan hapus App asing yang baru dipasang.
+- Langkah 3: pasang App keamanan dan pindai—unduh "Tencent Mobile Manager" atau "360 Mobile Guard" untuk pemindaian penuh.
+- Langkah 4: setel ulang pabrik (solusi pamungkas)—jika cara di atas tidak berhasil, cadangkan data penting lalu setel ulang pabrik. Catatan: setel ulang pabrik menghapus semua data—pastikan foto, kontak, dan file penting sudah dicadangkan.
+- iPhone hampir tidak bisa terkena virus—mekanisme sandbox iOS membuat perangkat lunak berbahaya sulit bertahan. Jika iPhone Anda bermasalah, kemungkinan besar itu bug App atau masalah pengaturan, bukan virus. Setel ulang pabrik bisa menyelesaikan 99% masalah.
+
+#### Skenario empat: akun dibobol—ambil kembali kendali dengan cepat
+
+1. Segera ubah kata sandi: jika Anda masih bisa masuk ke akun, hal pertama yang dilakukan adalah mengganti kata sandi. Kata sandi baru harus benar-benar berbeda dari yang lama.
+2. Keluarkan perangkat lain: di pengaturan keamanan akun, cari "Manajemen Perangkat Login" dan keluarkan semua perangkat yang tidak Anda kenal.
+3. Periksa riwayat login: lihat catatan login 7 hari terakhir—jika ada login dari lokasi lain, berarti akun memang dibobol.
+4. Aktifkan autentikasi dua faktor: jika belum, aktifkan sekarang juga. Ini cara paling efektif mencegah akun dibobol lagi.
+5. Periksa info terkait: pastikan nomor HP dan email yang terikat ke akun tidak diubah. Jika sudah diubah, gunakan fitur banding akun untuk mengambil alih kembali.
+6. Periksa pengaturan pembayaran: jika yang dibobol WeChat/Alipay, periksa apakah pembayaran tanpa PIN dan debit otomatis diubah, dan apakah kartu bank ditambahkan ke akun asing.
+
+#### Skenario lima: menerima pesan pemerasan—jangan takut, jangan bayar
+
+Dua modus pemerasan yang umum: ①"Saya punya video/foto memalukanmu—kalau tidak bayar, saya sebar ke semua kontakmu"; ②"Ponselmu sudah diretas—kalau tidak bayar, saya kunci". Jika menghadapi ini:
+
+- 99,9% penipuan: mereka sebenarnya tidak punya data privasi Anda. Pesan pemerasan yang sama dikirim ke puluhan ribu orang—selalu ada yang panik lalu membayar.
+- Jangan balas, jangan bayar: membalas sama saja memberi tahu "nomor ini aktif digunakan"—Anda ditandai sebagai "target pemerasan" dan gangguan berikutnya makin banyak.
+- Tangkap layar sebagai bukti: lalu blokir lawan bicaranya.
+- Ubah kata sandi: kalau khawatir, ganti kata sandi akun utama Anda untuk ketenangan pikiran.
+- Jika benar-benar ada risiko kebocoran privasi: lapor polisi. Kepolisian punya pengalaman menangani kasus semacam ini.
+
+#### Skenario enam: penipuan tukar wajah AI / suara AI—yang terlihat belum tentu nyata
+
+Sejak 2024, teknologi tukar wajah AI dan kloning suara AI sudah memungkinkan penipu "menjadi" wajah dan suara keluarga, atasan, atau teman Anda di panggilan video. "Bu, saya ada masalah—cepat transfer uang!" Orang di video tampak dan terdengar persis anak Anda, padahal palsu. Ini salah satu modus penipuan paling sulit dideteksi dan paling berbahaya saat ini.
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Langkah 1: kenali celahnya—empat kebocoran umum pemalsuan AI
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Frekuensi kedip tidak wajar: orang asli berkedip 15–20 kali per menit—wajah AI sering terlalu jarang berkedip atau ritmenya kaku.
+- Gerak bibir tidak sinkron dengan audio: perhatikan baik-baik—ada selisih sepersekian detik antara mulut yang bergerak dan suara yang terdengar.
+- Tepi wajah buram: kontur wajah, sekitar telinga, dan garis rambut mudah menampilkan "tepian berbulu" atau kedipan.
+- Arah cahaya tidak konsisten: sorotan dan bayangan di wajah tidak cocok dengan arah cahaya latar, atau saat wajah menoleh, fitur wajah "ikut berputar" dengan cara yang tidak wajar.
+:::
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Langkah 2: tiga cara memverifikasi lawan bicara asli atau palsu
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Minta melakukan gerakan tertentu: suruh menoleh, menutupi wajah, atau menutup mulut dengan tangan lalu membuka-menutup. Wajah AI paling mudah "ketahuan" saat tertutup atau menoleh besar—wajahnya bisa melengkung atau tidak mengikuti gerakan.
+- Ajukan pertanyaan yang hanya diketahui lawan bicara: ciptakan pertanyaan palsu, misalnya "kemarin anjing kita dibawa ke dokter hewan yang mana?"—kalau penipu, dia tidak bisa menjawab atau menjawab sambil menggantung.
+- Telepon balik ke nomor yang sudah Anda kenal: tutup panggilan video, lalu telepon langsung ke nomor yang tersimpan di kontak Anda. Penipu tidak bisa mengendalikan nomor asli—begitu ditelepon, kedoknya terbongkar.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Langkah 3: prosedur lapor polisi setelah dipastikan tertipu
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Hentikan transfer sekarang juga: sesibuk apa pun, berhenti dulu—siapa pun yang mendesak "cepat transfer, jangan tutup telepon" hampir pasti penipu.
+2. Simpan semua bukti: rekam layar, tangkap gambar panggilan video, riwayat chat, akun lawan, bukti transfer—ini bahan kunci untuk verifikasi teknis.
+3. Telepon hotline anti-penipuan 96110: sampaikan bahwa ini penipuan jenis "tukar wajah/suara AI"—petugas akan memulai penghentian pembayaran darurat.
+4. Telepon 110 untuk lapor polisi: bawa semua bukti ke kantor polisi untuk berita acara—jelaskan khusus bahwa dipakai teknologi pemalsuan AI agar polisi lebih mudah menetapkan perkara.
+5. Beri tahu keluarga dan teman: penipu mungkin memakai video palsu Anda untuk menipu orang lain—sebarkan peringatan lebih awal di Moments atau grup keluarga.
+:::
+
+#### Skenario tujuh: serangan SIM swap (pembajakan SIM)—nomor Anda "dicuri"
+
+Ini serangan yang jarang didengar orang, tetapi dampaknya sangat besar. SIM swap berarti penyerang memalsukan identitas Anda, lalu mengaku sebagai Anda di gerai operator untuk mencetak SIM baru. Begitu berhasil, sinyal ponsel Anda tiba-tiba hilang—sementara ponsel penyerang memasang SIM baru itu dan menerima semua kode verifikasi SMS Anda: Alipay, bank, WeChat—semua terbuka lebar.
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Bagaimana mendeteksinya? Tiga tanda peringatan SIM swap
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Ponsel tiba-tiba menampilkan "Tidak Ada Layanan"/"Tidak Ada SIM", padahal Anda tidak menyentuh kartu dan restart tidak membantu—sering kali ini saat pembajakan terjadi.
+- Menerima SMS dari operator "penggantian SIM berhasil" atau "layanan berhasil diproses"—padahal Anda tidak pernah mengurusnya.
+- Tiba-tiba tidak menerima kode verifikasi, dan SMS lain pun tidak masuk—karena SMS dialihkan ke kartu penyerang.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Langkah perlindungan—"kunci" juga SIM Anda
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Atur PIN SIM: jalur Pengaturan &gt; Telepon &gt; PIN SIM. Setelah aktif, setiap kali ponsel restart atau ganti kartu, Anda harus memasukkan PIN agar kartu bisa dipakai. Penyerang sekalipun memegang kartunya tidak bisa menggunakannya.
+- Aktifkan verifikasi dua langkah operator: masuk App China Mobile/Unicom/Telecom, cari "Pusat Keamanan" atau "Verifikasi Pengurusan Layanan", aktifkan peringatan SMS penggantian SIM oleh bukan pemilik dan verifikasi kata sandi kedua untuk pengurusan layanan. Dengan begitu, saat orang lain mengurus SIM Anda, petugas akan meminta verifikasi identitas tambahan.
+- Akun penting jangan hanya andalkan SMS: untuk akun bernilai tinggi seperti bank dan Apple ID, utamakan App autentikator (Google Authenticator, Microsoft Authenticator) atau kunci perangkat keras, bukan kode verifikasi SMS.
+- Beri watermark pada salinan KTP: untuk salinan yang dibutuhkan pengurusan, tulis "Hanya untuk keperluan XX"—penyerang sering mengandalkan kebocoran data KTP untuk menyamar sebagai Anda.
+:::
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+Penanganan darurat setelah dibajak—kecepatan adalah segalanya
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Segera telepon layanan pelanggan operator untuk blokir: China Mobile 10086 / Unicom 10010 / Telecom 10000—mintakan penangguhan segera dan pembekuan penggantian SIM, hentikan penyerang memakai nomor Anda.
+2. Masuk akun kunci dari perangkat lain: pakai komputer atau ponsel keluarga—segera ubah kata sandi bank, Alipay, WeChat, dan Apple ID, lalu keluarkan perangkat asing.
+3. Bekukan akun pembayaran: blokir Alipay lewat 95188, bekukan lewat Pusat Keamanan WeChat, dan hubungi layanan pelanggan bank untuk membekukan perbankan internet.
+4. Bawa KTP ke gerai operator: datang sendiri dengan KTP ke gerai resmi untuk mencetak SIM baru dan memulihkan hak pakai nomor.
+5. Lapor polisi: SIM swap sudah termasuk "kejahatan pelanggaran informasi pribadi warga"—bawa semua bukti (catatan waktu penangguhan, kerugian dana, catatan penggantian SIM) untuk membuat laporan.
+6. Audit menyeluruh: setelah nomor pulih, periksa satu per satu riwayat login dan arus dana terakhir—pastikan tidak ada jejak penyalahgunaan.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Pencegahan lebih baik daripada pengobatan—5 hal harian
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Kata sandi layar kunci + autentikasi dua faktor—aktifkan keduanya
+2. Pastikan "Temukan Ponsel Saya" aktif
+3. Atur PIN SIM (Pengaturan > Telepon > PIN SIM)—jika ponsel hilang, orang lain tidak bisa memakai kartu Anda
+4. Jangan pasang App tidak jelas asalnya, jangan klik tautan asing
+5. Cadangkan data penting secara berkala (foto, kontak, riwayat chat)
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Praktik: buat "Kartu Kontak Darurat" milik Anda sendiri
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Ambil selembar kertas, tulis nomor berikut: layanan pelanggan operator (China Mobile 10086/Unicom 10010/Telecom 10000), layanan pelanggan bank, hotline anti-penipuan 96110, nomor darurat 110, dan nomor telepon keluarga.
+2. Tulis email pendaftaran Apple ID/akun merek Anda dan kontak cadangan.
+3. Simpan kertas itu di dompet atau tempel di kulkas—jangan simpan hanya di ponsel, karena saat kejadian ponsel mungkin tidak ada di dekat Anda.
+4. Periksa sekarang juga: apakah "Temukan Ponsel Saya" sudah aktif, dan apakah PIN SIM sudah diatur.
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+Ringkasan bab ini
+
+{class="list-disc pl-5 text-sm space-y-0.5"}
+- Ponsel hilang—30 menit emas: pinjam ponsel untuk menelepon → kunci jarak jauh → blokir SIM → bekukan pembayaran → beri tahu keluarga/teman → lapor polisi
+- Setelah tertipu—72 jam: hentikan transfer → simpan bukti → telepon 96110 → lapor polisi → hubungi bank → ganti kata sandi
+- Ponsel terkena malware: mode aman → hapus App mencurigakan → pindai keamanan → setel ulang pabrik (solusi pamungkas)
+- Akun dibobol: ganti kata sandi → keluarkan perangkat → periksa riwayat login → aktifkan 2FA → periksa info terkait → periksa pembayaran
+- Pesan pemerasan 99,9% penipuan—jangan balas, jangan bayar, tangkap layar lalu blokir
+- Penipuan tukar wajah/suara AI: perhatikan kedipan/bibir/tepi/cahaya yang janggal—mintalah menoleh dan menutup wajah, ajukan pertanyaan pribadi, telepon balik ke nomor yang dikenal
+- Pembajakan SIM swap: ponsel tiba-tiba "Tidak Ada Layanan" harus diwaspadai; atur PIN SIM, aktifkan verifikasi dua langkah operator, alihkan akun penting ke App autentikator
+- Lima pencegahan harian: layar kunci+2FA, temukan ponsel, PIN SIM, jangan pasang App asal-asalan, cadangkan berkala
+:::

@@ -1,0 +1,72 @@
+---
+id: di-shi-er-zhang
+num: 12
+part: ruan-jian-pian
+nav: Chapter 12: Audio-Visual Entertainment and Reading
+toc: default
+kind: chapter
+---
+
+### Chapter 12: Audio-Visual Entertainment and Reading
+
+{class="chapter-intro mb-4"}
+QQ Music
+
+#### : Has the most complete licensing — popular artists like Jay Chou and Mayday are basically only on QQ Music. The sound quality options are also very rich, and members can enable lossless quality. If you care about "being able to find every song you want to listen to", QQ Music is the most reliable choice.
+
+Apple Music
+
+- <strong>: The first choice for Apple users. Clean interface, no ads, good sound quality, and supports lossless and Dolby Atmos. But its recommendation algorithm doesn't understand Chinese users' preferences as well as domestic apps, and the playlist culture isn't as developed as NetEase Cloud's. Suitable for people who like a clean experience and don't care much about social features.</strong> Spotify
+- <strong>: Has the most users globally, and is widely recognized as having the strongest recommendation algorithm. "Discover Weekly" and "Daily Mix" have scarily high accuracy — the longer you use it, the better it knows you. The downside is that the free version has many ads, and some Chinese songs have incomplete licensing. Requires a special network to use.</strong> A few music-listening tips
+- <strong>: If you use Bluetooth headphones, check the music app settings for "Sound Effects" or "Equalizer" — slightly adjust the bass and treble for a noticeable improvement. Also, streaming music uses a lot of data — remember to turn on "Play lossless only on Wi-Fi" in settings, or download your favorite playlists in advance for offline listening.</strong>2. Podcasts: The "Ear Companion" on Your Commute
+- <strong>Podcasts — people who haven't listened think they have nothing to do with them, but once they start, there's no going back. Essentially, it's "the Netflix version of radio shows" — some talk tech, some discuss history, some read stories — whatever type you want, it's there.</strong> Xiaoyuzhou App
+
+<strong>: The best podcast app in China, with a clean interface and no clutter. Its "Daily Recommendations" and "Editor's Picks" help you discover new shows, and the comment section is very active. I personally listen most to "Hu Zuo Hu You" (culture and history) and "Bu He Shi Yi" (social issues) — each episode feels like eavesdropping on a conversation among smart people.</strong> Apple Podcasts
+
+#### : Built into iPhone, no need to download an additional app. Best integration with CarPlay, very convenient when driving.
+
+Listening tips
+
+- <strong>: Most podcast apps support 1.2x or 1.5x playback speed — once you're used to it, you can save a lot of time. I usually listen to Chinese at 1.2x and English at 1.5x. Also, definitely turn on "Auto-download new episodes" and "Auto-delete after playing", so your phone won't pile up with audio files you've already heard.</strong>3. Watching Video: The Right Way to Open Players and Streaming
+- <strong>Many people don't know that the formats a phone can play are far more than what streaming apps offer. A good local player can solve many problems.</strong> VLC Player
+- <strong>: Open source and free, can play almost any format — MKV, AVI, FLAC, even ISO disc images. If you downloaded a video that plays on your computer but not on your phone, it's most likely a format issue — install VLC and it's solved. It also supports external subtitles — put the .srt subtitle file and the video in the same folder, and VLC will auto-load it.</strong> nPlayer
+
+#### : If you want a more refined experience, this paid app is worth buying. Nice interface, smooth gesture controls — swipe up and down on the left to adjust brightness, on the right to adjust volume, swipe left and right to fast-forward and rewind. Supports DTS and Dolby audio, giving a much stronger immersive feel when watching blockbusters.
+
+Bilibili (B Site)
+
+- <strong>: No longer just an ACG site — the learning resources on it are now absurdly abundant. Postgraduate exam prep, programming, photography, cooking — tutorials on everything. The bullet-screen (danmaku) culture is the soul of Bilibili — watching videos with danmaku on feels like having a group of people watching with you. However, when watching educational videos, it's recommended to turn off danmaku, otherwise it's easy to get distracted.</strong> Casting to TV
+- <strong>: No matter how big your phone screen is, it's not as comfortable as a TV. On the same Wi-Fi, open the "TV" cast button in the upper-right corner of the video app to cast the image to your TV. Most smart TVs and projectors support it — the experience of watching shows and movies is so much better. iPhone users can also use AirPlay to directly mirror the entire screen.</strong>4. E-Book Reading: You Can Read Well on a Phone Too
+- <strong>Some say reading on a phone hurts the eyes and is distracting — these points are indeed valid. But the advantages of phone reading are also obvious — anytime, anywhere, maximizing the use of fragmented time. I've read quite a few books on my phone — on the subway, while queuing, before bed.</strong> WeChat Reading
+- <strong>: Currently the best reading app experience in China. The library is very comprehensive, with both published books and web novels. It uses a "reading time for book coins" model — the more you read, the more free books you can exchange for, which is very friendly to students. Its "Underline" feature lets you see which passages others have marked — sometimes seeing good sentences highlighted by others really resonates. However, the "Reading Leaderboard" thing is a bit competitive, easily turning into "reading just to rack up hours" — I suggest turning it off.</strong> Kindle App
+
+#### : If you have a Kindle device, the phone Kindle app can sync your reading progress. Genuine Kindle e-books have much better layout quality than pirated PDFs, but the Kindle China store has closed, so you need to switch to an overseas region.
+
+Apple Books
+
+- <strong>: Built into iPhone, suitable for reading EPUB and PDF. Minimalist interface, very comfortable page-turning animation. If you download an e-book file from the internet, just "Share to Books" to import it.</strong> Reading Settings Advice
+- <strong>: No matter which app you use, be sure to set the background to a warm yellow tone (eye-care mode), increase the font size, and widen the line spacing. When reading at night, turn on "Dark Mode" — white text on black is much easier on the eyes. Never read with white background, black text, and small fonts in low light for too long — eye fatigue accumulates.</strong>5. Mobile Gaming: Play Well, Without Harming Your Phone
+- <strong>My attitude toward mobile gaming is: playing is fine, but don't let it control you in return. Use gaming tools wisely to play more comfortably without delaying your real business.</strong> Game Mode / Game Space
+- <strong>: Mainstream phones now all have this feature. When turned on, the phone automatically clears background apps, blocks notifications, and prevents accidental touches — if you're in the middle of a team battle and a phone call suddenly pops up, Game Mode can block it for you. Some phones also support Performance Mode / E-sports Mode, forcing the processor to run at full speed, but at the cost of faster heating and battery drain.</strong> How to adjust image quality and frame rate
+
+#### : Don't just max everything out. First ensure frame rate (smoothness), then pursue image quality. 60 fps is much smoother than 30 fps, but 120 fps puts a lot of pressure on the phone — mid-range phones shouldn't force it. If you play competitive games (like Honor of Kings or PUBG Mobile), frame rate priority is far more important than image quality — smooth control feel is a hundred times more important than pretty grass textures.
+
+What to do when your phone heats up while gaming
+
+- <strong>: This is normal, but prolonged high temperatures will damage battery life. A few cooling methods: remove the phone case for better heat dissipation; lower screen brightness to around 70% (brightness is a major heat source); don't charge and play games at the same time (compounded heating kills the battery fast). If the phone gets too hot to hold, exit the game immediately and let it rest for a while.</strong> Anti-addiction tools
+- <strong>: iOS "Screen Time" and Android "Digital Wellbeing" both let you set daily time limits for game apps. I set myself a maximum of one hour on weekdays and two hours on weekends. When the time is up, the app icon turns gray and can't be opened. This limit is genuinely useful, not just for show.</strong> Cloud Gaming
+- <strong>: If your phone isn't powerful enough but you want to play big titles, you can try cloud gaming platforms (like Tencent START Cloud Gaming or NetEase Cloud Gaming). The game runs on a remote server, and the image is streamed to your phone as video. It demands a lot from your network but almost nothing from your phone's performance. The downside is that latency is unavoidable — suitable for strategy and RPG games, not for FPS shooters.</strong> Get Hands-On: Build Your Mobile Entertainment System
+- <strong>In your music app, download your 3 favorite albums or playlists to ensure offline listening.</strong> Subscribe to 3 channels of interest on Xiaoyuzhou or Apple Podcasts, and download an episode to try.
+- <strong>Install VLC Player, and try using it to play a video file copied from your computer.</strong> Find a book you want to read in WeChat Reading, set a warm background and eye-care mode, and adjust the font to a comfortable size.
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>If you play games, open Game Mode and see what settings you can optimize (do-not-disturb, frame rate priority, etc.).
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Chapter 13: Recommended Tool Apps
+2. This chapter selects tool apps that can truly boost efficiency, promote health, and facilitate travel.
+3. 1. Productivity Tools: Manage Your Time and Attention
+4. To-Do Lists
+5. : System memo, Microsoft To Do (lightweight); TickTick, Todoist (full-featured).
+:::

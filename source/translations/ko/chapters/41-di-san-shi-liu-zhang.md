@@ -1,0 +1,143 @@
+---
+id: di-san-shi-liu-zhang
+num: 36
+part: er-tong-pian
+nav: 제36장: 스마트폰과 스마트 홈 — 집을 똑똑하게
+toc: default
+kind: chapter
+---
+
+### 제36장: 휴대폰과 스마트홈 — 집을 똑똑하게
+
+{class="chapter-intro mb-4"}
+휴대폰이 점점 더 중요해지는 일 하나 — 온 집의 "리모컨"이 되기. 전구 하나, 콘센트 하나에서 현관 도어락까지, 스마트홈은 "기크 장난감"에서 "생활 필수품"으로 바뀌고 있습니다. 이 장은 프로토콜, 생태계, 허브, 입문 키트를 정리하고 보안 체크리스트로 마무리해 "스마트"가 당신을 해치지 않게 합니다.
+
+#### 1. 스마트홈 프로토콜: 무엇을 고를지가 중요합니다
+
+스마트 기기를 사기 전에 어떤 프로토콜을 지원하는지 보세요. 이게 휴대폰과 생태계가 그 기기를 "부릴" 수 있는지 결정합니다. 현재 주류 프로토콜은 네 가지이며 각각의 성격은 다음과 같습니다.
+
+- Matter 프로토콜: 2022년 CSA(Connectivity Standards Alliance)가 발표했고, 애플, Google, Amazon, Samsung 등 거대 기업이 뭉쳤습니다. 목표는 하나 — 모든 브랜드의 스마트 기기가 같은 언어를 쓰게 하기. 2023~2026년 빠르게 통일 표준이 되어 가고 있으며, 지원 기기는 Apple HomeKit, Google Home, Amazon Alexa, Mi Home에 동시에 연결되어 단일 생태계에 묶이지 않습니다.
+- Thread 프로토콜: Matter의 하위 네트워크 "관"입니다. 저전력, 자가 메시(어떤 노드가 전원이 끊겨도 신호가 자동으로 우회), 빠른 응답, 끊김 없음. Thread 경계 라우터가 있는 기기(HomePod mini, Apple TV 4K, 샤오미 허브 게이트웨이 등)를 사면 체감이 확실히 안정적입니다.
+- Wi-Fi: 대역폭이 크고 라우터에 직접 연결되지만 전력 소모가 크고 기기가 많으면 채널이 붐빕니다. 카메라, 로봇 청소기처럼 대용량 데이터가 필요한 기기에 적합합니다.
+- 블루투스(BLE): 네트워크 설정이 간단하고 전력이 적지만 거리가 짧고 자가 메시를 못 합니다. 도어락, 온습도계 같은 소용량 데이터 기기에 적합합니다.
+- Zigbee: 오래된 저전력 자가 메시 프로토콜. 전용 게이트웨이가 필요하고 기기는 저렴하고 안정적이지만 브랜드 간 호환성이 떨어져 Matter+Thread로 대체되는 중입니다.
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+한 문장 원칙
+
+{class="mt-1"}
+2026년에 스마트 기기를 살 때는 "Matter over Thread" 표시를 먼저 보세요 — 현재 시점에서 가장 시간이 검증한 선택입니다. Wi-Fi나 블루투스만 지원하는 기존 기기라고 서둘러 버릴 필요는 없습니다. 먼저 쓰고, 새로 살 때 Matter로 넘어가세요.
+:::
+
+#### 2. 3대 생태계 비교
+
+프로토콜이 "언어"라면 생태계는 "무리"입니다. 모두 Matter를 지원해도 일상에서는 자동화와 음성 제어를 위한 주 생태계를 하나 골라야 합니다. 3대 주류 생태계 비교는 다음과 같습니다.
+
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                    <thead>
+                        <tr class="bg-light dark:bg-gray-700">
+                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">생태계</th>
+                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">장점</th>
+                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">단점</th>
+                            <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">대상 사용자</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apple HomeKit</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">프라이버시 최강(로컬 처리 중심), iPhone/Siri/단축어 연동 매끄러움</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 적고 비쌈, HomePod 또는 Apple TV가 허브 필요</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">온 집이 애플 기기, 프라이버시와 체감을 중시하는 사용자</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Mi Home(샤오미)</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 가장 풍부, 가성비 최고, Xiao AI 음성 비서가 편리</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">생태계가 상대적으로 폐쇄적, 데이터가 대개 클라우드, 광고가 많음</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">예산이 한정적이고 집 전체를 한 번에 맞추고 싶은 입문 사용자</td>
+                        </tr>
+                        <tr>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Huawei HiLink(하모니OS)</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">하모니OS 휴대폰/태블릿/워치와 매끄러운 연속성, 기기 수 빠르게 증가</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">해외 기기 지원이 적음, 생태계가 아직 추격 중</td>
+                            <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이 휴대폰 사용자, "슈퍼 디바이스" 다중 기기 협업을 중시하는 분</td>
+                        </tr>
+                    </tbody>
+                </table>
+```
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+생태계 선택 가이드
+
+{class="mt-1"}
+휴대폰을 보고 생태계를 고르세요: iPhone 사용자는 HomeKit, 화웨이 사용자는 HiLink, 그 외 안드로이드는 Mi Home이 가장 편합니다. Matter 덕분에 다른 생태계 기기도 같은 휴대폰으로 제어할 수 있으니 한꺼번에 "편"을 고를 필요는 없습니다.
+:::
+
+#### 3. 휴대폰을 홈 허브로
+
+대부분의 입문 장면에서 휴대폰이 바로 "홈 허브"입니다. 앱으로 조명, 에어컨, 커튼, 보안을 제어하고 자동화 장면을 만들어 집이 "스스로 움직이게" 할 수 있습니다.
+
+- 기기 제어: HomeKit/Mi Home/Smart Life 앱을 열면 원격 또는 로컬로 조명을 켜고 끄고, 색온도를 조절하고, 에어컨 온도를 설정하고, 커튼을 열고 닫고, 카메라 화면을 볼 수 있습니다.
+- 자동화 장면: "조건→동작"을 조합합니다. 자주 쓰는 3대 장면: 귀가 모드: 집 도착+해가 지면 → 현관등 켜기+에어컨 켜기+커튼 닫기+도어락 잠금.
+- 외출 모드: 마지막 사람이 나가면(위치 이탈 또는 도어락 잠김) → 조명 끄기+에어컨 끄기+콘센트 끄기+카메라 작동+경비 모드.
+- 수면 모드: 매일 밤 23:00 → 집 전체 주조명 끄기+커튼 닫기+에어컨 26도+무드등 켜기.
+
+- NFC 태그: 현관에 NFC 태그를 붙이고 휴대폰을 가져다 대면 해당 장면이 실행됩니다(한 번 대면 현관등, 두 번 대면 수면 모드). iPhone은 "단축어" 자동화, 안드로이드는 "지갑" 또는 제조사 앱으로 기록할 수 있습니다.
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+해봅시다: "귀가 모드" 만들기
+
+{class="mt-1"}
+휴대폰 스마트홈 앱의 "자동화"에서 새로 만드세요. 트리거 조건은 "특정 장소 도착"(집)으로, 동작은 "현관등 켜기", "에어컨 26도", "커튼 닫기"를 순서대로 추가하세요. 저장 후 밖에 나갔다 돌아오면 저절로 불이 켜지는지 보세요. 첫 성공의 쾌감은 새 기기를 주문하는 것보다 짜릿합니다.
+:::
+
+#### 4. 입문 키트 추천
+
+한꺼번에 다 맞출 필요 없습니다. 이 네 가지로 시작하면 일상 수요의 80%를 커버합니다.
+
+- 스마트 스피커: Xiao AI(Mi Home 생태계, 가성비) / HomePod mini(애플 생태계, Thread 허브 겸용) / Alexa(해외 생태계 넓음). 주의: 스피커가 음성 생태계를 결정합니다. 먼저 생태계를 정하고 스피커를 사세요.
+- 스마트 전구: Yeelight(Mi Home/Matter, 색온도·밝기 조절, 저렴) / Philips Hue(색감 좋고 안정적, 단 Hue 게이트웨이 필요하고 비쌈). 주의: 구매 전 소켓 규격(E27/B22)과 색상 조절 필요 여부를 확인하세요.
+- 스마트 콘센트: 샤오미 스마트 콘센트(저렴, 전력량 통계) / TP-Link Kasa(해외 Matter 지원 우수). 주의: 대용량 가전(온수기, 전기 히터)에 쓸 때는 정격 전력을 확인하고 과부하하지 마세요.
+- 스마트 도어락: Loock/샤오미(가성비, Mi Home 연동) / Kaadas(전통 자물쇠 대기업, 기계 구조 견고). 주의: Matter 또는 내가 쓰는 생태계를 지원하는지, 배터리 수명과 비상 열쇠 구멍 위치를 확인하세요.
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+구매 순서 권장
+
+{class="mt-1"}
+스마트 스피커부터(생태계 결정) → 스마트 전구와 콘센트(진입 장벽 낮고 즉시 체감) → 마지막으로 도어락과 카메라(보안 관련이므로 신중히). 한 번에 한 종류씩 추가하고 익숙해진 뒤 확장하세요. "사 놓고 못 쓰는" 일을 피하세요.
+:::
+
+#### 5. 보안 주의사항
+
+스마트 기기가 많은 집일수록 공격받을 지점도 많아져요. 아래 네 가지는 최소한의 기본 수칙이니 하나씩 확인해 보세요.
+
+1. 기본 비밀번호 변경: 카메라, 라우터, 도어락의 공장 기본 비밀번호는 인터넷에 공개되어 있습니다. 받자마자 "길고 중복되지 않은" 강력한 비밀번호로 바꾸세요.
+2. 펌웨어 즉시 업데이트: 제조사가 보내는 펌웨어에는 보안 취약점이 고쳐져 있는 경우가 많습니다. 앱에서 "자동 업데이트"를 켜거나 최소한 매월 한 번은 수동으로 확인하세요.
+3. 네트워크 분리: IoT 기기만 별도 Wi-Fi(또는 게스트 네트워크)에 두고 휴대폰, PC의 메인 네트워크와 분리하세요. 어떤 기기가 뚫려도 중요한 데이터로 옆으로 퍼지기 어렵습니다.
+4. 프라이버시 보호: 카메라의 "프라이버시 영역" 가리기를 켜고(침실, 화장실은 촬영하지 않음), 클라우드 24시간 녹화를 끄세요. 집에 없을 때 카메라 화면을 타사 앱에 오래 열어 두지 마세요.
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+이런 함정은 피하세요
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- 도어락의 "원격 열기" 기능을 모르는 사람에게 쓰지 마세요 — 임시 비밀번호를 우선하고, 쓰고 나면 만료시키세요.
+- 카메라를 침대나 창문 바로 앞에 두지 마세요 — 유출되는 것은 당신 자신의 프라이버시입니다.
+- 싸다고 "노브랜드" 무명 기기를 사지 마세요 — 대개 펌웨어를 안 내주고, 집에 백도어를 달아 놓는 셈입니다.
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+이 장 요약
+
+{class="list-disc pl-5 text-sm space-y-0.5"}
+- Matter+Thread가 2023~2026년의 통일 방향. 새 기기는 이 표시를 먼저 보세요
+- 3대 생태계 각각의 강점: 애플은 프라이버시·체감, Mi Home은 가성비, 화웨이는 다중 기기 협업
+- 휴대폰을 허브로 쓰고 "귀가/외출/수면" 3대 장면을 잘 짜면 집이 저절로 움직입니다
+- 입문 4종 세트: 스마트 스피커, 전구, 콘센트, 도어락. 이 순서로 차근차근
+- 기본 비밀번호 변경, 펌웨어 업데이트, 네트워크 분리, 프라이버시 가리기 — 4대 보안 최소선은 건너뛸 수 없습니다
+:::

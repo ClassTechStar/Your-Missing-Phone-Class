@@ -1,0 +1,227 @@
+---
+id: di-liu-shi-si-zhang
+num: 64
+part: ios-kai-fa-pian
+nav: 第六十四章：データ保存とネットワーク通信
+toc: default
+kind: chapter
+---
+
+### 第六十四章：データ保存とネットワーク通信
+
+{class="chapter-intro mb-4"}
+「見る」だけのアプリは生きていません。データを保存できて、ネットにつながるアプリこそが本物です。この章では、iOSのデータ層の「3点セット」を紹介します：UserDefaults（小さな設定を保存）、SwiftData（構造化データを保存）、URLSession（サーバーとやり取り）。さらにJSONを解析するCodableと、現代的なasync/awaitも加わります。この章を終えれば、ユーザーの使い方を覚えて、内容をリアルタイムで更新できる本物のアプリが書けるようになります。
+
+#### 1. 保存方式の選び方：まずこの表を見る
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">どんなデータに向くか</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特徴</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">本書での出番</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">UserDefaults</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">こまごました設定（スイッチ、好み）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">キーと値のペア。シンプルでストレート</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六十五章の設定、第六十六章のお気に入り都市</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SwiftData</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">構造化データ（収支、記録）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公式データベースのラッパー。@Modelの1行で宣言</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六十五章の収支記録</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">URLSession</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（保存せず、通信で取得）サーバーのデータ</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">システム標準のネットワークフレームワーク。サードパーティ依存なし</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第六十六章の天気データ</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+データ3点セットの役割分担
+
+合言葉をひとつ覚えましょう：「小さな設定はUserDefaultsへ、まとまったデータはSwiftDataへ、外のデータはURLSessionで」。古いチュートリアルのCore Dataは今も使えます（SwiftDataはその現代版です）。手書きのSQLiteは基本さわらなくてOK——新しい方をそのまま学び、古い道は通らないでください。
+
+#### 2. UserDefaults：小さな設定を保存する
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · UserDefaultsの例</span><span class="dots">···</span>
+:::
+
+```
+// 書く：値を保存
+UserDefaults.standard.set(true, forKey: "isDarkMode")
+UserDefaults.standard.set("北京", forKey: "favoriteCity")
+
+// 読む：取り出す（なければデフォルト値を返す）
+let isDark = UserDefaults.standard.bool(forKey: "isDarkMode")
+let city = UserDefaults.standard.string(forKey: "favoriteCity") ?? "北京"
+
+// 削除：キーを取り除く
+UserDefaults.standard.removeObject(forKey: "isDarkMode")
+```
+:::
+
+注意したいのは、これはこまごました小さな設定にしか向かないということ——数十、数百件の記録はSwiftDataに任せましょう。UserDefaultsをデータベース代わりに使わないでください（起動が遅くなるうえ、検索も不便です）。
+
+#### 3. SwiftData：データに「ちゃんとした家」を用意する
+
+SwiftDataはiOS 17からの公式データベース方式で、「テーブル作成・追加・削除・更新・検索」を極限まで簡単にしてくれます——@Modelという注釈を1つ付けるだけで、データのクラスがデータベースのテーブルになります：
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · SwiftDataの例</span><span class="dots">···</span>
+:::
+
+```
+import SwiftData
+
+// 1. @Model：このクラスは自動的に「テーブル」になる
+@Model
+class Record {
+    var amount: Double
+    var category: String
+    var note: String
+    var date: Date
+
+    init(amount: Double, category: String, note: String, date: Date) {
+        self.amount = amount
+        self.category = category
+        self.note = note
+        self.date = date
+    }
+}
+
+// 2. アプリ入口にコンテナを接続
+@main
+struct MyApp: App {
+    var body: some Scene {
+        WindowGroup {
+            ContentView()
+        }
+        .modelContainer(for: Record.self)   // データベース準備完了
+    }
+}
+
+// 3. viewでは@Queryで読み、@Environmentで書く
+struct RecordListView: View {
+    @Query(sort: \Record.date, order: .reverse) var records: [Record]
+    @Environment(\.modelContext) private var context
+
+    var body: some View {
+        List(records) { r in
+            Text("\(r.category) \(r.amount) 元")
+        }
+    }
+
+    func add(amount: Double, category: String) {
+        let r = Record(amount: amount, category: category, note: "", date: Date())
+        context.insert(r)     // 保存
+        try? context.save()   // ディスクに書き込む
+    }
+}
+```
+:::
+
+この「@Model＋modelContainer＋@Query」のテンプレートは、そのままどんなプロジェクトにも持ち込めます——フィールド名を差し替えるだけでOK。データが変わると@Queryが画面を自動更新してくれる、なんとも気持ちいい仕掛けです。
+
+#### 4. Codable：JSONを「翻訳」する
+
+サーバーからのデータは、たいていJSONのテキストです。SwiftのCodableプロトコルは「JSON ⇄ 構造体」の変換を自動で行ってくれます——フィールド名が合っていれば、魔法が発動します：
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · CodableでJSONを解析</span><span class="dots">···</span>
+:::
+
+```
+// JSON: {"name":"北京","main":{"temp":26.5},"weather":[{"description":"晴れ"}]}
+struct WeatherResponse: Codable {
+    let name: String
+    let main: Main
+    let weather: [Weather]
+}
+struct Main: Codable { let temp: Double }
+struct Weather: Codable { let description: String }
+
+// JSON文字列 → struct
+let decoder = JSONDecoder()
+let data = jsonString.data(using: .utf8)!
+let result = try decoder.decode(WeatherResponse.self, from: data)
+print(result.weather[0].description)   // "晴れ"
+```
+:::
+
+鉄則：まず本物の返りJSONを見てから、フィールドを定義すること。「解析に失敗した」系のバグの多くは、フィールド名の書き間違いや型の読み違い（サーバーが"26.5"という文字列を送っているのに、こちらはDoubleと宣言）です——元のJSONをprintして見比べれば、10秒で原因が突き止められます。
+
+#### 5. URLSession＋async/await：サーバーと会話する
+
+iOSの通信にはシステム標準のURLSessionを使い、Swiftのasync/await（非同期関数）と組み合わせます。「ネットワークを待つ」のは「宅配便を待つ」のと同じくらい自然になります：
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · URLSession + async/await</span><span class="dots">···</span>
+:::
+
+```
+struct WeatherService {
+    // 非同期関数：asyncは「少し待つ」の印、throwsは「失敗するかも」の印
+    func fetchWeather(city: String) async throws -> WeatherResponse {
+        let url = URL(string:
+            "https://api.example.com/weather?city=\(city)")!
+        let (data, _) = try await URLSession.shared.data(from: url)
+        return try JSONDecoder().decode(WeatherResponse.self, from: data)
+    }
+}
+
+// 呼び出し側（.taskの中）：
+.task {
+    do {
+        let weather = try await service.fetchWeather(city: "北京")
+        // 画面を更新……
+    } catch {
+        print("エラー発生：\(error)")
+    }
+}
+```
+:::
+
+::: div .danger-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+落とし穴注意：ネットワークの2大鉄則
+
+{class="mt-1"}
+①通信は必ずasync/awaitで。メインスレッドは絶対に止めないこと——画面が固まるのは、クラッシュ並みの最悪体験です。Swiftの構造化並行性なら自然に書けますが、try awaitとdo/catchを忘れずに。②ATSはデフォルトで平文HTTPを禁止します：iOSはHTTPSを求めます。ローカルのhttp://サービスをテストするときだけ、Info.plistで一時的に例外（NSAppTransportSecurity）を開けますが、正式な製品はすべてHTTPSに——審査でもここは見られます。
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+やってみよう：「今日のひとこと」アプリを作る
+
+#### 6. ネットワークエラーも「レベル分け」を：すべてのエラーをユーザーに丸投げしない
+
+通信断、タイムアウト、404、サーバー500……エラーの種類によって、ユーザーに見せる言葉は変わるべきです：
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · エラーの段階別処理</span><span class="dots">···</span>
+:::
+
+```
+func friendlyMessage(_ error: Error) -> String {
+    if let urlError = error as? URLError {
+        switch urlError.code {
+        case .notConnectedToInternet: return "ネットが切れました。接続を確認してみますか？"
+        case .timedOut:               return "リクエストがタイムアウトしました。後でもう一度？"
+        case .cannotFindHost:         return "サーバーが見つかりません"
+        default:                      return "ネットワークに問題があります：\(urlError.code)"
+        }
+    }
+    if let d = error as? DecodingError {
+        return "データの形式が違います（APIが変わったのかも）"
+    }
+    return "エラーが発生しました：\(error.localizedDescription)"
+}
+```
+:::
+
+ユーザーには「人の言葉」を、ログには「原文」を（errorの中身をprint）。error.localizedDescriptionの英語の呪文を、そのままユーザーに投げつけないこと——製品の品質感は、こうした細部に宿ります。
+
+{class="mt-1"}
+無料の名言API（hitokotoなど）を探して、URLSession＋async/awaitで「今日のひとこと」を取得して画面中央に表示し、「次のひとこと」ボタンを付けます。気に入った文はSwiftDataで「お気に入り」に保存しましょう。この練習は、UserDefaults/SwiftData/Codable/URLSessionをぜんぶ一度に使います——これをやり終えれば、第7・8章は朝メシ前です。
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+本章のまとめ
+
+- 合言葉：小さな設定はUserDefaults、まとまったデータはSwiftData、外のデータはURLSession
+- SwiftDataの3段構え：@Modelでテーブル宣言、modelContainerでコンテナ接続、@Queryで読み＋context.insertで書き
+- CodableがJSONを自動「翻訳」：フィールド名が合えば、魔法が発動
+- URLSession＋async/await：通信は宅配便を待つ感覚。失敗はdo/catchで処理
+- 2大鉄則：メインスレッドを止めない。正式な製品は必ずHTTPS（ATS）
+:::

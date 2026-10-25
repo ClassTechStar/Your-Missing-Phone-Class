@@ -1,0 +1,86 @@
+---
+id: di-shi-zhang
+num: 10
+part: ruan-jian-pian
+nav: Capítulo 10: Pagamentos móveis e serviços diários
+toc: default
+kind: chapter
+---
+
+### Capítulo 10: Pagamento Móvel e Serviços do Dia a Dia
+
+{class="chapter-intro mb-4"}
+Sinceramente, a geração dos meus pais, no começo, era resistente a "pagar com o celular". "O dinheiro está no celular, e se alguém roubar?" Essa preocupação é normal, mas a realidade é esta: o dinheiro vivo que você carrega no bolso tem mais chance de ser perdido do que o pagamento móvel ser fraudado. Pagamento móvel não é guardar dinheiro dentro do celular, é apenas uma chave — uma chave que abre sua conta bancária.
+
+#### I. Afinal, Como Vincular o Cartão Bancário?
+
+Seja usando Alipay ou WeChat, a primeira vinculação do cartão segue estes passos:
+
+1. Abra o app, encontre "Meu" ou "Carteira". Toque em "Adicionar Cartão Bancário".
+2. Digite o número do cartão. Hoje a maioria dos apps oferece reconhecimento por foto do número do cartão, sem precisar digitar dígito por dígito.
+3. O banco enviará um SMS com código de verificação para o número de celular cadastrado. Preencha o código e defina uma senha de pagamento de 6 dígitos.
+4. Essa senha de pagamento, a senha do seu cartão bancário e a senha de bloqueio de tela devem ser, de preferência, três senhas diferentes — não use a mesma por preguiça.
+
+Uma dica: se estiver preocupado com segurança, vá ao app do banco e abra uma conta eletrônica de Classe II ou III, exclusivamente para vincular ao pagamento móvel. Coloque nesse cartão só o dinheiro para gastos diários. Assim, mesmo que algo aconteça, a perda é limitada.
+
+#### II. O Código de Pagamento: "Quem Vê, Cobra"
+
+Muita gente não entende a diferença entre código de pagamento e código de recebimento, e essa diferença é importante.
+
+- <strong>Código de Pagamento</strong>: é aquele código de barras + QR code que você mostra para o caixa escanear. Esse código equivale à sua "carteira eletrônica" — quem escaneia pode debitar dinheiro da sua conta. Por isso, <strong>nunca tire print e envie para ninguém</strong>. Esse código é atualizado automaticamente a cada minuto justamente para evitar uso indevido.
+- <strong>Código de Recebimento</strong>: outros escaneiam esse código para transferir dinheiro para você. Esse código pode ser salvo como print e enviado para outras pessoas, é seguro.
+
+Reconhecer essa diferença pode evitar muitas armadilhas de fraude. Sempre que alguém pedir para você "tirar print do código de pagamento e enviar", com certeza é golpista.
+
+#### III. Estas Configurações de Segurança, em 5 Minutos, Podem Evitar Muitas Dores de Cabeça
+
+- <strong>Pagamento por Impressão Digital / Reconhecimento Facial</strong>: nas configurações de pagamento do Alipay e WeChat, ative o pagamento biométrico. Assim, a cada pagamento é necessário impressão digital ou escaneamento facial. Mesmo que o celular seja perdido, quem o encontrar não conseguirá gastar seu dinheiro.
+- <strong>Bloqueio de Segurança</strong>: tanto Alipay quanto WeChat têm a função "Bloqueio de Segurança". Quando ativada, acessar a página "Carteira" do app exige uma verificação extra de identidade. Caminho: Alipay → Meu → Configurações → Conta e Segurança → Central de Segurança → Bloqueio de Segurança.
+- <strong>Verificação de Pagamento sem Senha</strong>: muita gente assina vários serviços de pagamento sem senha e acaba esquecendo. Vá nas "Configurações de Pagamento" do Alipay e WeChat, encontre "Pagamento sem Senha / Débito Automático", veja quais serviços estão contratados e cancele os que não precisa.
+- <strong>Gerenciamento de Dispositivos Conectados</strong>: verifique periodicamente quais dispositivos estão logados na sua conta. Se encontrar algum dispositivo desconhecido, remova imediatamente. Caminho: Alipay → Configurações → Conta e Segurança → Gerenciamento de Dispositivos Conectados.
+
+#### IV. Ônibus e Metrô: O Celular é o Cartão de Transporte
+
+Hoje em dia, ao pegar ônibus e metrô, pouca gente ainda usa o cartão de transporte físico. Para passar o celular na catraca, há dois caminhos:
+
+- <strong>Cartão de Transporte Virtual na Carteira do Celular</strong>: na Apple Wallet, Huawei Wallet ou Xiaomi Wallet, você pode ativar diretamente um cartão de transporte virtual. A vantagem desse método é: não precisa desbloquear o celular para usar, basta encostar, a velocidade de resposta é a mais rápida, e funciona até sem internet. Em algumas cidades, o cartão virtual também tem os mesmos descontos de integração do cartão físico.
+- <strong>Código de Embarque do Alipay / WeChat</strong>: pesquise "Código de Embarque" dentro do app e ative o código de ônibus ou metrô da sua cidade. A vantagem desse método é: não precisa recarregar, o valor é debitado diretamente do saldo ou do cartão bancário vinculado. Mas requer conexão com a internet, e é preciso abrir o app e encontrar o código antes de passar.
+
+Pessoalmente, recomendo mais o cartão de transporte virtual da carteira do celular. Embora seja preciso colocar uns 10 ou 20 reais na primeira vez, usar é realmente muito mais prático, especialmente quando se está com pressa para pegar o metrô — não precisa parar para desbloquear o celular e procurar o app.
+
+#### V. Contas de Casa, Delivery e Táxi por Aplicativo
+
+- <strong>Pagamento de água, luz e gás</strong>: no "Pagamento de Contas" do Alipay ou WeChat, vincule os números de conta de água, luz e gás da sua casa. Depois, todo mês, ao receber a fatura, é só entrar e pagar direto. O número da conta geralmente está na fatura impressa da sua casa, ou você pode ligar para o atendimento ao cliente e perguntar.
+- <strong>Comparação de preços de delivery</strong>: a mesma loja muitas vezes tem preços e promoções diferentes no Meituan e no Ele.me. Antes de pedir, dê uma olhada nos dois; às vezes dá para economizar alguns reais. Além disso, a função "Pedido em Grupo" do Meituan, pedindo junto com amigos, o preço pode cair bastante.
+- <strong>Segurança ao pedir táxi</strong>: no Didi ou Gaode Maps, lembre-se de configurar o "Contato de Emergência" e o "Compartilhamento de Trajeto". Ao chamar o carro, o app automaticamente compartilha seu trajeto com o contato definido. Além disso, para corridas tarde da noite, prefira "Táxi" em vez de "Carro Particular" — o táxi tem regulação do setor, o que oferece mais segurança.
+
+#### VI. Resolver Plano de Saúde, Previdência Social e Serviços Públicos pelo Celular
+
+Houve grandes mudanças nos últimos anos. Muitas coisas que antes exigiam ir ao guichê e enfrentar fila, agora são resolvidas em poucos minutos pelo celular.
+
+- <strong>Certificado Eletrônico do Plano de Saúde</strong>: pesquise "Certificado Eletrônico do Plano de Saúde" no Alipay ou WeChat. Após ativar, você pode ir ao médico ou comprar remédios na farmácia só passando o celular, sem precisar levar o cartão físico do plano. Na primeira vez, é necessária a verificação por reconhecimento facial; depois, a cada uso, é gerado um código dinâmico.
+- <strong>Consulta de Previdência Social</strong>: baixe o app "Zhangshang 12333" ou use o "Centro do Cidadão" no Alipay para consultar registros de contribuição previdenciária, saldo da conta de aposentadoria, solicitação de seguro-desemprego, etc.
+- <strong>Imposto de Renda</strong>: a declaração anual de ajuste do imposto de renda, de março a junho, pode ser feita pelo app "Imposto de Renda Pessoa Física". Lembre-se de verificar se há deduções adicionais aplicáveis (educação dos filhos, juros de financiamento imobiliário, sustento de idosos, etc.), que podem ajudar a pagar menos imposto ou até gerar restituição.
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>Lembre-se Disso para Evitar Fraudes e Ficar Tranquilo
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- Autoridades policiais, judiciais, bancos e atendimento ao cliente nunca pedirão para você transferir dinheiro para uma "conta segura".
+- Qualquer pessoa que peça para você tirar print do código de pagamento e enviar é golpista.
+- Não clique em links desconhecidos, especialmente SMS do tipo "ETC vencido" ou "Cartão de previdência suspenso".
+- Reembolsos de compras online são feitos pelo mesmo meio de pagamento; você não precisa fornecer o número do cartão bancário.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>Faça Agora: Um Check-up de Segurança no Seu App de Pagamento
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. Abra o Alipay e o WeChat e confirme se o pagamento por impressão digital / reconhecimento facial está ativado.
+2. Encontre a função "Bloqueio de Segurança" e ative-a.
+3. Verifique a lista de "Pagamento sem Senha / Débito Automático" e cancele os serviços que não são mais necessários.
+4. Veja a lista de "Dispositivos Conectados" e remova os dispositivos desconhecidos.
+5. Ative seu Certificado Eletrônico do Plano de Saúde — da próxima vez que for ao hospital, não precisará levar o cartão físico.
+:::

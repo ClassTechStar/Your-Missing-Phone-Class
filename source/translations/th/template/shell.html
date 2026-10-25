@@ -1,0 +1,3066 @@
+ <!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="จัดการมือถือให้เป็น! จากมือใหม่สู่มืออาชีพ หนังสือวิชาพื้นฐานดิจิทัลที่เขียนเพื่อคนธรรมดาอย่างแท้จริง 69 บท อธิบายอย่างเป็นระบบทั้งฮาร์ดแวร์ ระบบปฏิบัติการ เครือข่าย ความปลอดภัย AI ภาคปฏิบัติการเขียนโปรแกรมด้วย AI ภาคปฏิบัติการพัฒนา Android ภาคปฏิบัติการพัฒนา iOS ระบบอัตโนมัติ การปรับให้เหมาะกับผู้สูงอายุ คู่มือเลือกซื้อ สุขภาพดิจิทัล การฉายจอและระบบในรถ การสร้างคลิปสั้น ฉุกเฉินด้านความปลอดภัย และแนวโน้มอนาคต พร้อมกรณีตัวอย่างมากมาย แบบฝึกลงมือทำ การอ่านออกเสียง แดชบอร์ดการเรียนรู้ การสำรองความคืบหน้า และการเปิดค้นศัพท์อย่างรวดเร็ว v3.2 เพิ่มภาคปฏิบัติใหม่ 3 ภาค ได้แก่ เขียนโปรแกรมด้วย AI พัฒนา Android และพัฒนา iOS (บทที่ 37-69 รวม 33 บท)">
+    <meta name="keywords" content="บทเรียนมือถือ,วิชาพื้นฐานดิจิทัล,สมาร์ตโฟน,Android,iOS,HarmonyOS,เทคนิคมือถือ,ชีวิตดิจิทัล,โมเดล AI ขนาดใหญ่,เขียนโปรแกรมด้วย AI,API โมเดลขนาดใหญ่,Prompt Engineering,พัฒนา Android,พัฒนา iOS,Swift,Kotlin,SwiftUI,Jetpack Compose,การถ่ายภาพเชิงคำนวณ,ความปลอดภัยสารสนเทศ,การจัดการรหัสผ่าน,ระบบอัตโนมัติ,การเลือกซื้อมือถือ">
+    <meta name="author" content="ผู้นำทางชีวิตดิจิทัล">
+    <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)">
+    <meta name="robots" content="index, follow">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:title" content="จัดการมือถือให้เป็น! วิชาพื้นฐานดิจิทัลที่มือใหม่ต้องเรียน v3.2">
+    <meta property="og:description" content="จากเริ่มต้นสู่ระดับเชี่ยวชาญ ควบคุมชีวิตดิจิทัลของคุณได้อย่างเบ็ดเสร็จ 69 บท อธิบายอย่างเป็นระบบ + ลงมือทำมากมาย + อ่านออกเสียง + แดชบอร์ดการเรียนรู้ + สำรองความคืบหน้า + เปิดค้นศัพท์ด่วน v3.2 เพิ่มภาคปฏิบัติใหญ่ 3 ภาค: เขียนโปรแกรมด้วย AI พัฒนา Android และพัฒนา iOS">
+    <meta property="og:type" content="book">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="จัดการมือถือให้เป็น! วิชาพื้นฐานดิจิทัล">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="จัดการมือถือให้เป็น! วิชาพื้นฐานดิจิทัลที่มือใหม่ต้องเรียน">
+    <meta name="twitter:description" content="จากเริ่มต้นสู่ระดับเชี่ยวชาญ ควบคุมชีวิตดิจิทัลของคุณได้อย่างเบ็ดเสร็จ">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
+    <title>{{TITLE}} · {{VERSION}}</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4f46e5',
+                        secondary: '#6B7280',
+                        light: '#F3F4F6',
+                        dark: '#1F2937',
+                        accent: '#7c3aed',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .scrollbar-hide {
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+            }
+            .scrollbar-hide::-webkit-scrollbar {
+                display: none;
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .focus-ring:focus-visible {
+                outline: 2px solid #4f46e5;
+                outline-offset: 2px;
+            }
+        }
+    </style>
+    <style>
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 5rem;
+        }
+        body {
+            font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            line-height: 1.8;
+            letter-spacing: 0.02em;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .dark body {
+            background-color: #111827;
+        }
+        .toc-item.active {
+            color: #4f46e5;
+            font-weight: 600;
+            background-color: #eef2ff;
+            border-left: 3px solid #4f46e5;
+        }
+        .dark .toc-item.active {
+            background-color: #1e1b4b;
+            border-left-color: #818cf8;
+        }
+        /* สไตล์พื้นฐานลิงก์แถบข้าง */
+        #sidebar a {
+            display: block;
+            transition: all 0.2s ease;
+            position: relative;
+            text-decoration: none;
+        }
+        #sidebar a:hover {
+            color: #4f46e5 !important;
+            background-color: #eef2ff;
+            transform: translateX(2px);
+        }
+        .dark #sidebar a:hover {
+            background-color: rgba(79, 70, 229, 0.12);
+        }
+        /* หัวข้อกลุ่มแม่ */
+        .toc-parent > div {
+            transition: background-color 0.15s ease;
+        }
+        .toc-parent > div:hover {
+            background-color: #f8fafc;
+        }
+        .dark .toc-parent > div:hover {
+            background-color: rgba(255,255,255,0.03);
+        }
+        /* โซนไอคอนพับแยกต่างหาก */
+        .toc-toggle-btn {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            flex-shrink: 0;
+            cursor: pointer;
+            transition: background-color 0.15s, transform 0.3s ease;
+            color: #9ca3af;
+        }
+        .toc-toggle-btn:hover {
+            background-color: #e5e7eb;
+            color: #374151;
+        }
+        .dark .toc-toggle-btn:hover {
+            background-color: #374151;
+            color: #e5e7eb;
+        }
+        /* แอนิเมชันเปลี่ยนของรายการย่อย */
+        .toc-child li {
+            opacity: 1;
+            transform: translateX(0);
+            transition: opacity 0.25s ease, transform 0.25s ease;
+        }
+        .toc-child:not(.open) + .toc-child li,
+        .toc-child:not(.open) li {
+            /* ตอนพับควบคุมด้วย max-height */
+        }
+        /* แถบบอกตำแหน่งอ่านปัจจุบัน */
+        .toc-reading-indicator {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: #4f46e5;
+            border-radius: 0;
+            transition: top 0.3s ease, height 0.3s ease;
+            z-index: 1;
+        }
+        /* ส่วนบนแถบข้าง (เสริม) */
+        #sidebar > nav > div:first-child {
+            background: #f5f6f8;
+            border-radius: 0;
+            padding: 0.875rem 1rem !important;
+        }
+        .dark #sidebar > nav > div:first-child {
+            background: #1a2230;
+        }
+        /* แถบข้างทั้งหมด (เสริม) */
+        #sidebar {
+            box-shadow: none;
+            border-right: 1px solid #e5e7eb;
+        }
+        .dark #sidebar {
+            border-right-color: #374151;
+        }
+        @media (max-width: 1023px) {
+            #sidebar {
+                box-shadow: 4px 0 24px rgba(0,0,0,0.12);
+                border-right: none;
+            }
+        }
+        /* สไตล์เลขบท */
+        .toc-item span[class*="font-mono"] {
+            display: inline-block;
+            min-width: 1.5rem;
+            text-align: center;
+            font-variant-numeric: tabular-nums;
+            opacity: 0.6;
+            transition: opacity 0.2s, color 0.2s;
+        }
+        .toc-item:hover span[class*="font-mono"],
+        .toc-item.active span[class*="font-mono"] {
+            opacity: 1;
+            color: #4f46e5;
+        }
+        .dark .toc-item:hover span[class*="font-mono"],
+        .dark .toc-item.active span[class*="font-mono"] {
+            color: #818cf8;
+        }
+        /* กระพริบไฮไลต์บทปลายทาง */
+        .scroll-target-flash {
+            animation: targetFlash 1.2s ease-out;
+        }
+        @keyframes targetFlash {
+            0% { box-shadow: inset 0 0 0 2px rgba(79,70,229,0.25); background-color: rgba(79,70,229,0.02); }
+            100% { box-shadow: none; background-color: transparent; }
+        }
+        .dark .scroll-target-flash {
+            animation: targetFlashDark 1.2s ease-out;
+        }
+        @keyframes targetFlashDark {
+            0% { box-shadow: inset 0 0 0 2px rgba(150,180,200,0.2); background-color: rgba(150,180,200,0.04); }
+            100% { box-shadow: none; background-color: transparent; }
+        }
+        .toc-child {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+        .toc-child.open {
+            max-height: 3000px;
+        }
+        .content-section {
+            content-visibility: auto;
+            contain-intrinsic-size: 0 800px;
+        }
+        .content-section p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            max-width: 95ch;
+        }
+        .content-section h4 {
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        .content-section h5 {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        .content-section ul, .content-section ol {
+            margin-bottom: 1rem;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+        }
+        .theme-toggle {
+            transition: all 0.3s ease;
+        }
+        .theme-toggle:hover {
+            transform: rotate(180deg);
+        }
+        .callout-box {
+            border-left: 4px solid;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            margin-top: 1rem;
+            max-width: 82ch;
+        }
+        .info-box {
+            border-color: #4f46e5;
+            background: #eef2f5;
+        }
+        .dark .info-box {
+            background: #1e2a36;
+        }
+        .warning-box {
+            border-color: #d4a017;
+            background: #fdf8ef;
+        }
+        .dark .warning-box {
+            background: #3d2e0f;
+        }
+        .danger-box {
+            border-color: #c0392b;
+            background: #fdf0ef;
+        }
+        .dark .danger-box {
+            background: #3d1a1a;
+        }
+        .success-box {
+            border-color: #27ae60;
+            background: #eef9f2;
+        }
+        .dark .success-box {
+            background: #0d2c1a;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 1rem 0;
+        }
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            border: 1px solid #e5e7eb;
+        }
+        .dark th, .dark td {
+            border-color: #374151;
+        }
+        th {
+            background-color: #f3f4f6;
+            font-weight: 600;
+        }
+        .dark th {
+            background-color: #1f2937;
+        }
+        .practice-box {
+            background: #f0f4f8;
+            border: 1px solid #d0d8e0;
+        }
+        .dark .practice-box {
+            background: #1e2a36;
+            border-color: #354152;
+        }
+        .chapter-intro {
+            font-size: 1.05em;
+            color: #4b5563;
+            padding: 1rem 1.25rem;
+            border-radius: 0.25rem;
+            background: #f5f6f8;
+            border-left: 3px solid #4f46e5;
+        }
+        .dark .chapter-intro {
+            color: #9ca3af;
+            background: #1a2230;
+        }
+        .key-point {
+            background: #eef2f5;
+            padding: 0.5rem 0;
+            font-weight: 500;
+        }
+        .dark .key-point {
+            background: #1e2a36;
+        }
+        #reading-progress {
+            position: fixed;
+            top: 64px;
+            left: 0;
+            height: 3px;
+            background: #4f46e5;
+            z-index: 51;
+            transition: width 0.1s linear;
+        }
+        .search-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 60;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 15vh;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
+        }
+        .search-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .search-panel {
+            background: white;
+            border-radius: 1rem;
+            width: 90%;
+            max-width: 600px;
+            max-height: 70vh;
+            overflow: hidden;
+            box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+        }
+        .dark .search-panel {
+            background: #1f2937;
+        }
+        .search-input-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 1rem 1.25rem;
+            border-bottom: 1px solid #e5e7eb;
+            gap: 0.75rem;
+        }
+        .dark .search-input-wrapper {
+            border-color: #374151;
+        }
+        .search-input-wrapper input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 1.1rem;
+            background: transparent;
+            color: inherit;
+        }
+        .search-results {
+            overflow-y: auto;
+            max-height: calc(70vh - 60px);
+            padding: 0.5rem;
+        }
+        .search-result-item {
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+        .search-result-item:hover {
+            background: #f3f4f6;
+        }
+        .dark .search-result-item:hover {
+            background: #374151;
+        }
+        .search-result-item .result-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .search-result-item .result-excerpt {
+            font-size: 0.85rem;
+            color: #6b7280;
+            margin-top: 0.25rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .dark .search-result-item .result-excerpt {
+            color: #9ca3af;
+        }
+        .search-result-item mark {
+            background: #fef08a;
+            color: inherit;
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+        .dark .search-result-item mark {
+            background: #854d0e;
+        }
+        .font-size-btn {
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 0.375rem;
+            cursor: pointer;
+            transition: background 0.15s;
+            font-weight: 700;
+            user-select: none;
+        }
+        .font-size-btn:hover {
+            background: #f3f4f6;
+        }
+        .dark .font-size-btn:hover {
+            background: #374151;
+        }
+        .chapter-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 0;
+            margin-top: 2rem;
+            border-top: 1px solid #e5e7eb;
+        }
+        .dark .chapter-nav {
+            border-color: #374151;
+        }
+        .chapter-nav a {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-size: 0.9rem;
+            color: #4f46e5;
+            transition: background 0.15s;
+            text-decoration: none;
+            max-width: 45%;
+        }
+        .chapter-nav a:hover {
+            background: #eef2f5;
+        }
+        .dark .chapter-nav a:hover {
+            background: #1e2a36;
+        }
+        .chapter-nav a.next {
+            margin-left: auto;
+            text-align: right;
+        }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .search-panel {
+                width: 95%;
+                max-height: 75vh;
+            }
+        }
+        @media print {
+            #navbar, #sidebar, #overlay, #back-to-top, #reading-progress, .chapter-nav, #quick-tools, #tts-controls, #shortcuts-overlay, #backup-overlay, #streak-toast, .chapter-rating, .no-print {
+                display: none !important;
+            }
+            main {
+                margin: 0 !important;
+                padding: 1rem !important;
+                box-shadow: none !important;
+                max-width: 100% !important;
+            }
+            .content-section {
+                content-visibility: visible !important;
+                contain-intrinsic-size: none !important;
+                page-break-inside: avoid;
+            }
+            body {
+                font-size: 12pt !important;
+                color: #000 !important;
+                background: #fff !important;
+            }
+            a {
+                color: #000 !important;
+                text-decoration: underline;
+            }
+        }
+
+        /* ===== สไตล์เสริม: การ์ดนำอ่าน สรุปบท เส้นทางเรียนรู้ ===== */
+        .reading-guide-card {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.25rem;
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .dark .reading-guide-card {
+            background: #1a2230;
+            border-color: #354152;
+        }
+        .hero-banner {
+            background: #4f46e5;
+            border-radius: 0.25rem;
+            color: #fff;
+            padding: 2rem 1.5rem;
+        }
+        .stat-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            padding: 0.3rem 0.7rem;
+            background: rgba(255,255,255,0.15);
+            border-radius: 0.25rem;
+            font-size: 0.78rem;
+        }
+        .learning-path {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .path-step {
+            background: #fafafa;
+            border: 1px solid #e0e0e0;
+            border-radius: 0.25rem;
+            padding: 1rem;
+            position: relative;
+        }
+        .path-step:hover {
+            border-color: #4f46e5;
+        }
+        .dark .path-step {
+            background: #1a2230;
+            border-color: #354152;
+        }
+        .path-step .step-num {
+            position: absolute;
+            top: -0.7rem;
+            left: 1rem;
+            background: #4f46e5;
+            color: #fff;
+            width: 1.6rem;
+            height: 1.6rem;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.85rem;
+            font-weight: 700;
+        }
+        .chapter-summary {
+            background: #fdf8ef;
+            border-left: 4px solid #d4a017;
+            border-radius: 0.25rem;
+            padding: 1rem 1.25rem;
+            margin-top: 1.5rem;
+        }
+        .dark .chapter-summary {
+            background: #3d2e0f;
+        }
+        .breadcrumb {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 0.4rem;
+            font-size: 0.85rem;
+            color: #6b7280;
+            padding: 0.6rem 0;
+        }
+        .dark .breadcrumb { color: #9ca3af; }
+        .breadcrumb a:hover { color: #4f46e5; text-decoration: underline; }
+        .breadcrumb .sep { color: #cbd5e1; }
+        .quick-tools {
+            position: fixed;
+            right: 1rem;
+            bottom: 5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 40;
+        }
+        .quick-tool-btn {
+            width: 2.6rem;
+            height: 2.6rem;
+            background: #fff;
+            color: #374151;
+            border-radius: 999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .dark .quick-tool-btn {
+            background: #1f2937;
+            color: #e5e7eb;
+        }
+        .quick-tool-btn:hover {
+            transform: translateY(-1px);
+            color: #4f46e5;
+        }
+        .reading-time {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            font-size: 0.8rem;
+            color: #6b7280;
+        }
+        .dark .reading-time { color: #9ca3af; }
+        .difficulty-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.15rem 0.55rem;
+            border-radius: 999px;
+            font-size: 0.72rem;
+            font-weight: 600;
+        }
+        .difficulty-beginner { background: #d1fae5; color: #065f46; }
+        .difficulty-intermediate { background: #dbeafe; color: #1e40af; }
+        .difficulty-advanced { background: #fce7f3; color: #9f1239; }
+        .dark .difficulty-beginner { background: #064e3b; color: #6ee7b7; }
+        .dark .difficulty-intermediate { background: #1e3a5f; color: #93c5fd; }
+        .dark .difficulty-advanced { background: #831843; color: #fbcfe8; }
+        .pill-list { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+        .toc-section-label {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #9ca3af;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.5rem 0.75rem 0.25rem;
+        }
+        .dark .toc-section-label { color: #6b7280; }
+        .toc-progress-bar {
+            height: 2px;
+            background: #4f46e5;
+            margin: 0.3rem 0;
+            transform-origin: left;
+            transition: transform 0.3s;
+        }
+        .skip-link {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            background: #4f46e5;
+            color: #fff;
+            padding: 0.5rem 1rem;
+            z-index: 100;
+        }
+        .skip-link:focus { left: 0; }
+        .glossary-item {
+            display: flex;
+            gap: 1rem;
+            padding: 0.6rem 0;
+            border-bottom: 1px dashed #e5e7eb;
+        }
+        .dark .glossary-item { border-color: #374151; }
+        .glossary-item:last-child { border-bottom: 0; }
+        .glossary-term {
+            flex-shrink: 0;
+            font-weight: 700;
+            color: #4f46e5;
+            min-width: 90px;
+        }
+        .comparison-table th { font-weight: 700; }
+        .comparison-table tr:nth-child(even) td { background: #f9fafb; }
+        .dark .comparison-table tr:nth-child(even) td { background: #111827; }
+        .highlight-quote {
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+            border-left: 4px solid #0ea5e9;
+            padding: 1rem 1.25rem;
+            border-radius: 0 0.5rem 0.5rem 0;
+            margin: 1rem 0;
+            font-style: italic;
+            color: #075985;
+        }
+        .dark .highlight-quote {
+            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            color: #bae6fd;
+        }
+        .kbd {
+            display: inline-block;
+            padding: 0.1rem 0.45rem;
+            background: #f3f4f6;
+            color: #374151;
+            border: 1px solid #d1d5db;
+            border-bottom-width: 2px;
+            border-radius: 0.3rem;
+            font-family: ui-monospace, monospace;
+            font-size: 0.78rem;
+            font-weight: 600;
+        }
+        .dark .kbd { background: #374151; color: #e5e7eb; border-color: #4b5563; }
+        @media (max-width: 768px) {
+            body {
+                font-size: 15px;
+            }
+            .search-panel {
+                width: 95%;
+                max-height: 75vh;
+            }
+            .hero-banner { padding: 1.5rem 1rem; }
+            .hero-banner h1 { font-size: 1.5rem !important; }
+            .learning-path { grid-template-columns: 1fr; }
+            .quick-tools { right: 0.5rem; bottom: 4.5rem; }
+            .quick-tool-btn { width: 2.3rem; height: 2.3rem; }
+        }
+        @media (max-width: 480px) {
+            .breadcrumb { font-size: 0.78rem; }
+        }
+        @media (min-width: 1280px) {
+            main { max-width: 56rem; }
+        }
+
+        /* ===== สไตล์ปรับปรุงเชิงลึก ===== */
+
+        /* แถบความคืบหน้าการอ่านแบบไล่เฉด */
+        #reading-progress {
+            background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
+            background-size: 200% 100% !important;
+            animation: progressShimmer 3s ease infinite;
+            height: 3px;
+            box-shadow: 0 0 8px rgba(79,70,229,0.3);
+        }
+        .dark #reading-progress {
+            background: linear-gradient(90deg, #818cf8, #a78bfa, #818cf8) !important;
+            background-size: 200% 100% !important;
+        }
+        @keyframes progressShimmer {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
+        }
+
+        /* แอนิเมชันตอนเลื่อนเข้ามา */
+        .content-section {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
+                        transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .content-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        /* เนื้อหาจอแรกมองเห็นทันที */
+        .content-section:first-of-type,
+        .content-section.immediately-visible {
+            opacity: 1;
+            transform: none;
+            transition: none;
+        }
+
+        /* แบนเนอร์ Hero (เสริม) */
+        .hero-banner {
+            background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-banner::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 60%;
+            height: 200%;
+            background: radial-gradient(ellipse, rgba(167,139,250,0.2) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 40%;
+            height: 120%;
+            background: radial-gradient(ellipse, rgba(236,72,153,0.12) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-banner > * { position: relative; z-index: 1; }
+
+        /* เอฟเฟกต์เมื่อชี้การ์ด */
+        .path-step {
+            transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+                        box-shadow 0.3s ease,
+                        border-color 0.3s ease;
+        }
+        .path-step:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(79,70,229,0.15);
+        }
+        .dark .path-step:hover {
+            box-shadow: 0 12px 24px rgba(0,0,0,0.3);
+        }
+        .reading-guide-card {
+            transition: box-shadow 0.3s ease;
+        }
+        .reading-guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .dark .reading-guide-card:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+        }
+
+        /* ปุ่มกลับขึ้นด้านบน (เสริม) */
+        #back-to-top {
+            position: fixed;
+            right: 1rem;
+            bottom: 1.5rem;
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+            background: #4f46e5;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 14px rgba(79,70,229,0.3);
+            cursor: pointer;
+            z-index: 40;
+            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            border: none;
+            font-size: 1rem;
+        }
+        .dark #back-to-top {
+            background: #374151;
+            box-shadow: 0 4px 14px rgba(0,0,0,0.4);
+        }
+        #back-to-top:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 20px rgba(79,70,229,0.35);
+        }
+        #back-to-top .progress-ring {
+            position: absolute;
+            inset: -3px;
+            width: calc(100% + 6px);
+            height: calc(100% + 6px);
+        }
+        #back-to-top .progress-ring circle {
+            fill: none;
+            stroke-width: 2.5;
+            stroke-linecap: round;
+        }
+        #back-to-top .progress-ring .bg {
+            stroke: rgba(255,255,255,0.15);
+        }
+        #back-to-top .progress-ring .fg {
+            stroke: #60a5fa;
+            transition: stroke-dashoffset 0.15s linear;
+            transform: rotate(-90deg);
+            transform-origin: center;
+        }
+
+        /* ปุ่มบุ๊กมาร์ก */
+        .bookmark-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            color: #6b7280;
+        }
+        .dark .bookmark-btn {
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        .bookmark-btn:hover {
+            border-color: #4f46e5;
+            color: #4f46e5;
+        }
+        .dark .bookmark-btn:hover {
+            border-color: #818cf8;
+            color: #818cf8;
+        }
+        .bookmark-btn.active {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
+        .dark .bookmark-btn.active {
+            background: #818cf8;
+            border-color: #818cf8;
+        }
+
+        /* ติ๊กเช็คบทที่อ่านจบ */
+        .chapter-check {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.3rem;
+            padding: 0.2rem 0.6rem;
+            border-radius: 0.25rem;
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: transparent;
+            color: #6b7280;
+            user-select: none;
+        }
+        .dark .chapter-check {
+            border-color: #374151;
+            color: #9ca3af;
+        }
+        .chapter-check:hover {
+            border-color: #27ae60;
+            color: #27ae60;
+        }
+        .chapter-check.checked {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+        .chapter-check .check-icon {
+            width: 14px;
+            height: 14px;
+            border: 2px solid currentColor;
+            border-radius: 3px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+        }
+        .chapter-check.checked .check-icon {
+            border-color: #fff;
+            background: #fff;
+        }
+        .chapter-check.checked .check-icon::after {
+            content: '✓';
+            color: #27ae60;
+            font-size: 10px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        /* ผลค้นหาที่เลือกด้วยคีย์บอร์ด */
+        .search-result-item.selected {
+            background: #eef2f5;
+        }
+        .dark .search-result-item.selected {
+            background: #374151;
+        }
+
+        /* การ์ดแดชบอร์ด */
+        .dashboard-card {
+            transition: transform 0.3s cubic-bezier(0.22,1,0.36,1), box-shadow 0.3s ease;
+        }
+
+        /* ป้ายวันอ่านต่อเนื่อง */
+        #streak-toast {
+            transform: translateX(-50%) translateY(100px);
+            left: 50%;
+            right: auto;
+            font-weight: 600;
+        }
+        #streak-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* ดาวให้คะแนนบท */
+        .chapter-rating {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.15rem;
+            margin-left: 0.5rem;
+        }
+        .chapter-rating .star {
+            font-size: 0.85rem;
+            color: #d1d5db;
+            cursor: pointer;
+            transition: color 0.15s, transform 0.15s;
+            user-select: none;
+        }
+        .chapter-rating .star:hover { transform: scale(1.2); }
+        .chapter-rating .star.active { color: #fbbf24; }
+        .dark .chapter-rating .star { color: #4b5563; }
+        .dark .chapter-rating .star.active { color: #fbbf24; }
+
+        .dashboard-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 28px rgba(79,70,229,0.12);
+        }
+        .dark .dashboard-card:hover {
+            box-shadow: 0 12px 28px rgba(0,0,0,0.3);
+        }
+        .check-item:hover span { color: #4f46e5; }
+        .dark .check-item:hover span { color: #818cf8; }
+        .check-item input:checked + span {
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+
+        /* ปุ่มควบคุมอ่านออกเสียง */
+        .tts-controls {
+            position: fixed;
+            bottom: 6rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 50;
+            background: #fff;
+            box-shadow: 0 4px 24px rgba(79,70,229,0.18);
+            border-radius: 2rem;
+            padding: 0.5rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+        .tts-controls.active {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+        }
+        .dark .tts-controls {
+            background: #1f2937;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.4);
+        }
+        .tts-btn {
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s;
+            font-size: 1rem;
+            background: #f3f4f6;
+            color: #374151;
+        }
+        .dark .tts-btn { background: #374151; color: #e5e7eb; }
+        .tts-btn:hover { background: #4f46e5; color: #fff; }
+        .dark .tts-btn:hover { background: #818cf8; }
+        .tts-btn.play-btn {
+            background: #4f46e5;
+            color: #fff;
+            width: 3rem;
+            height: 3rem;
+            font-size: 1.2rem;
+        }
+        .dark .tts-btn.play-btn { background: #818cf8; }
+        .tts-btn.play-btn:hover { background: #1a252f; }
+        .tts-btn.play-btn.playing { background: #e74c3c; animation: ttsPulse 1.5s ease-in-out infinite; }
+        @keyframes ttsPulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(231,76,60,0.4); }
+            50% { box-shadow: 0 0 0 12px rgba(231,76,60,0); }
+        }
+        .tts-speed-badge {
+            font-size: 0.7rem;
+            font-weight: 700;
+            color: #6b7280;
+            min-width: 2rem;
+            text-align: center;
+        }
+        .dark .tts-speed-badge { color: #9ca3af; }
+        .tts-controls .tts-chapter-label {
+            font-size: 0.75rem;
+            color: #6b7280;
+            max-width: 12rem;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .dark .tts-controls .tts-chapter-label { color: #9ca3af; }
+        .quick-tool-btn.tts-active {
+            color: #4f46e5;
+            box-shadow: 0 0 0 2px #4f46e5;
+        }
+        .dark .quick-tool-btn.tts-active { color: #818cf8; box-shadow: 0 0 0 2px #818cf8; }
+        @media (max-width: 768px) {
+            .tts-controls {
+                bottom: 5rem;
+                padding: 0.4rem 0.75rem;
+                gap: 0.4rem;
+            }
+            .tts-btn { width: 2.2rem; height: 2.2rem; font-size: 0.9rem; }
+            .tts-btn.play-btn { width: 2.6rem; height: 2.6rem; font-size: 1rem; }
+            .tts-controls .tts-chapter-label { max-width: 8rem; }
+        }
+
+        /* ปุ่มคัดลอก */
+        .copy-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            padding: 0.15rem 0.5rem;
+            border-radius: 0.25rem;
+            font-size: 0.7rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid #e5e7eb;
+            background: #f9fafb;
+            color: #6b7280;
+            vertical-align: middle;
+        }
+        .dark .copy-btn {
+            border-color: #374151;
+            background: #1f2937;
+            color: #9ca3af;
+        }
+        .copy-btn:hover {
+            background: #4f46e5;
+            color: #fff;
+            border-color: #4f46e5;
+        }
+        .copy-btn.copied {
+            background: #27ae60;
+            color: #fff;
+            border-color: #27ae60;
+        }
+
+        /* บล็อกเนื้อหาแบบพับได้ */
+        .collapsible-header {
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 0;
+            user-select: none;
+            transition: color 0.2s;
+        }
+        .collapsible-header:hover {
+            color: #4f46e5;
+        }
+        .dark .collapsible-header:hover {
+            color: #818cf8;
+        }
+        .collapsible-header .collapse-icon {
+            transition: transform 0.3s ease;
+            font-size: 0.75rem;
+            color: #9ca3af;
+        }
+        .collapsible-header.collapsed .collapse-icon {
+            transform: rotate(-90deg);
+        }
+        .collapsible-body {
+            max-height: 5000px;
+            overflow: hidden;
+            transition: max-height 0.4s ease, opacity 0.3s ease;
+            opacity: 1;
+        }
+        .collapsible-body.collapsed {
+            max-height: 0;
+            opacity: 0;
+        }
+
+        /* แจ้งเตือนกลับตำแหน่งอ่านเดิม */
+        .restore-position-toast {
+            position: fixed;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #4f46e5;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 999px;
+            font-size: 0.875rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+            z-index: 55;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+            white-space: nowrap;
+        }
+        .dark .restore-position-toast {
+            background: #374151;
+        }
+        .restore-position-toast.show {
+            transform: translateX(-50%) translateY(0);
+        }
+        .restore-position-toast button {
+            padding: 0.3rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            border: none;
+            transition: background 0.2s;
+        }
+        .restore-position-toast .btn-restore {
+            background: #fff;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+        .restore-position-toast .btn-dismiss {
+            background: rgba(255,255,255,0.15);
+            color: #fff;
+        }
+
+        /* เส้นคั่นบท (เสริม) */
+        .content-section {
+            position: relative;
+            padding-top: 1rem;
+        }
+        .content-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #d1d5db 20%, #d1d5db 80%, transparent);
+        }
+        .dark .content-section::before {
+            background: linear-gradient(90deg, transparent, #374151 20%, #374151 80%, transparent);
+        }
+        .content-section:first-of-type::before {
+            display: none;
+        }
+
+        /* กล่อง Callout (เสริม) */
+        .callout-box {
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .callout-box:hover {
+            transform: translateX(2px);
+        }
+
+        /* แถวตารางเมื่อชี้เมาส์ */
+        table tbody tr {
+            transition: background-color 0.15s ease;
+        }
+        table tbody tr:hover {
+            background-color: #f0f4f8;
+        }
+        .dark table tbody tr:hover {
+            background-color: rgba(255,255,255,0.04);
+        }
+
+        /* ปุ่มนำทางบท (เสริม) */
+        .chapter-nav a {
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .chapter-nav a:hover {
+            transform: translateX(4px);
+            background: #eef2f5;
+        }
+        .chapter-nav a.next:hover {
+            transform: translateX(-4px);
+        }
+        .dark .chapter-nav a:hover {
+            background: #1e2a36;
+        }
+
+        /* มาร์กบุ๊กมาร์กในแถบข้าง */
+        .toc-item.bookmarked::after {
+            content: '★';
+            color: #d4a017;
+            font-size: 0.65rem;
+            margin-left: 0.3rem;
+        }
+        .toc-item.completed-toc {
+            color: #27ae60 !important;
+        }
+
+        /* เครื่องมือด่วน (เสริม) */
+        .quick-tool-btn {
+            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .quick-tool-btn:hover {
+            transform: translateY(-2px) scale(1.08);
+        }
+        .quick-tool-btn:active {
+            transform: translateY(0) scale(0.95);
+        }
+
+        /* พื้นที่ปลอดภัยด้านล่างบนมือถือ */
+        @media (max-width: 768px) {
+            #back-to-top {
+                right: 0.75rem;
+                bottom: 1.25rem;
+                width: 2.6rem;
+                height: 2.6rem;
+            }
+            .restore-position-toast {
+                font-size: 0.8rem;
+                padding: 0.6rem 1rem;
+                left: 1rem;
+                right: 1rem;
+                transform: translateX(0) translateY(100px);
+                white-space: normal;
+                text-align: center;
+                justify-content: center;
+            }
+            .restore-position-toast.show {
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        /* ซ่อนองค์ประกอบเพิ่มเติมตอนพิมพ์ */
+        @media print {
+            .bookmark-btn, .chapter-check, .copy-btn,
+            .restore-position-toast, #back-to-top .progress-ring,
+            #tts-controls, .quick-tool-btn.tts-active {
+                display: none !important;
+            }
+            .content-section {
+                opacity: 1 !important;
+                transform: none !important;
+                transition: none !important;
+            }
+        }
+    </style>
+<style>
+        /* ===== เพิ่มใน v1.8: สไตล์ประกอบภาคลงมือทำเขียนโค้ดด้วย AI ===== */
+        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; }
+        .code-head { background: #374151; color: #e5e7eb; font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
+        .code-head .dots { letter-spacing: 3px; color: #9ca3af; }
+        .code-block pre { background: #1f2937; color: #e5e7eb; padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
+        .dark .code-block { border-color: #4b5563; }
+        code.inline { background: #eef2f5; color: #4f46e5; padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+        .dark code.inline { background: #1e2a36; color: #818cf8; }
+        .quote-line { border-left: 4px solid #4f46e5; background: #eef2ff; color: #1e1b4b; padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
+        .dark .quote-line { background: #1e1b4b; color: #c7d2fe; }
+        @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
+    <a class="skip-link focus-ring" href="#content">ข้ามไปที่เนื้อหาหลัก</a>
+    <div id="reading-progress" style="width:0%" aria-hidden="true"></div>
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" role="banner">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <div class="flex items-center gap-3 min-w-0">
+                <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="เปิดเมนูสารบัญ" aria-expanded="false" aria-controls="sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <a href="#top" class="flex items-center gap-2 min-w-0" aria-label="กลับหน้าแรก">จัดการมือถือให้เป็น · วิชาพื้นฐานดิจิทัล</a>
+            </div>
+            <nav class="flex items-center gap-1 md:gap-2" aria-label="การทำงานหลัก">
+                <a href="#ji-chu-pian" class="hidden md:inline-flex items-center gap-1 text-sm text-secondary dark:text-gray-400 hover:text-primary px-2 py-1 rounded-md transition-colors focus-ring" title="เริ่มจากพื้นฐาน">เริ่มเรียน</a>
+                <button id="search-toggle" class="text-lg p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="ค้นหา (Ctrl+K)" aria-label="ค้นหาเนื้อหา">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                </button>
+                <div class="hidden md:flex items-center border border-gray-200 dark:border-gray-600 rounded-md overflow-hidden" role="group" aria-label="ปรับขนาดตัวอักษร">
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="decrease" title="ย่อตัวอักษร" aria-label="ย่อตัวอักษร">A-</button>
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="reset" title="รีเซ็ตขนาดตัวอักษร" aria-label="รีเซ็ตขนาดตัวอักษร">A</button>
+                    <button class="font-size-btn text-gray-600 dark:text-gray-300 focus-ring" data-action="increase" title="ขยายตัวอักษร" aria-label="ขยายตัวอักษร">A+</button>
+                </div>
+                <button id="theme-toggle" class="theme-toggle text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 text-gray-600 dark:text-gray-300 focus-ring" title="สลับโหมดมืด/สว่าง" aria-label="สลับโหมดมืด/สว่าง">
+                    <i class="fas fa-moon dark:hidden" aria-hidden="true"></i>
+                    <i class="fas fa-sun hidden dark:inline" aria-hidden="true"></i>
+                </button>
+                <button id="print-btn" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary p-2 rounded-md transition-colors focus-ring" title="พิมพ์ / ส่งออก PDF" aria-label="พิมพ์หรือส่งออก PDF">
+                    <i class="fas fa-print" aria-hidden="true"></i>
+                </button>
+                <a href="#top" class="hidden md:flex items-center text-sm text-secondary dark:text-gray-400 hover:text-primary transition-colors focus-ring px-2 py-1 rounded-md" aria-label="กลับขึ้นด้านบน">
+                    <i class="fas fa-arrow-up mr-1" aria-hidden="true"></i>ด้านบน
+                </a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="flex min-h-screen pt-16 relative">
+        <aside id="sidebar" class="fixed left-0 top-16 h-[calc(100vh-4rem)] w-72 bg-white dark:bg-gray-800 border-r border-gray-200 dark:border-gray-700 overflow-y-auto scrollbar-hide transition-transform duration-300 z-40 -translate-x-full lg:translate-x-0" role="navigation" aria-label="สารบัญบทความ">
+            <nav class="p-4">
+                <div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
+                    <h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
+                        <i class="fas fa-list-ul text-primary" aria-hidden="true"></i>สารบัญ
+                    </h2>
+                    <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        <span id="reading-progress-text">0 / 38 บท</span>
+                        <span id="reading-percent" class="font-semibold text-primary">0%</span>
+                    </div>
+                    <div class="toc-progress-bar mt-1.5" id="toc-progress-bar" style="transform: scaleX(0);" aria-hidden="true"></div>
+                </div>
+                <div class="mb-3 px-1">
+                    <input type="text" id="toc-filter" placeholder="กรองบท..." class="w-full text-sm px-3 py-1.5 rounded-md border border-gray-200 dark:border-gray-600 bg-gray-50 dark:bg-gray-900 focus:outline-none focus:border-primary" aria-label="กรองบท">
+                </div>
+                <ul class="space-y-1 text-sm" id="toc-list">{{TOC}}</ul>
+            </nav>
+        </aside>
+
+        <div id="overlay" class="fixed inset-0 bg-black/50 z-30 hidden lg:hidden"></div>
+
+        <div id="search-overlay" class="search-overlay" role="dialog" aria-label="ค้นหา">
+            <div class="search-panel">
+                <div class="search-input-wrapper">
+                    <i class="fas fa-search text-gray-400"></i>
+                    <input type="text" id="search-input" placeholder="ค้นหาเนื้อหา..." autocomplete="off" aria-label="คำค้นหา">
+                    <button id="search-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="ปิดการค้นหา">ESC</button>
+                </div>
+                <div id="search-results" class="search-results scrollbar-hide">
+                    <div class="p-4 text-center text-gray-400 text-sm">พิมพ์คำค้นเพื่อเริ่มค้นหา</div>
+                </div>
+            </div>
+        </div>
+
+        <main id="content" class="w-full lg:ml-72 px-5 md:px-10 py-8 bg-white dark:bg-gray-800 min-h-screen">
+            <div class="content-col">
+            <a id="top"></a>
+
+            <!-- Breadcrumb ด้านบน -->
+            <nav class="breadcrumb no-print" aria-label="ตำแหน่ง">
+                <a href="#top">หน้าแรก</a>
+                <span class="sep" aria-hidden="true">›</span>
+                <span class="text-gray-700 dark:text-gray-300">วิชาพื้นฐานดิจิทัล · v1.8</span>
+            </nav>
+
+            <!-- แบนเนอร์ Hero -->
+            <section class="hero-banner mb-8" aria-labelledby="hero-title">
+                <div class="flex flex-wrap items-center gap-2 mb-3">
+                    <span class="stat-pill"><i class="fas fa-book" aria-hidden="true"></i>69 บท + 8 ภาคผนวก</span>
+                    <span class="stat-pill"><i class="fas fa-clock" aria-hidden="true"></i>ประมาณ 40-55 ชั่วโมง</span>
+                    <span class="stat-pill"><i class="fas fa-signal" aria-hidden="true"></i>จากง่ายไปลึก</span>
+                </div>
+                <h1 id="hero-title" class="text-3xl md:text-4xl font-bold mb-2">เอามือถือให้อยู่! วิชาพื้นฐานดิจิทัลที่มือใหม่ต้องรู้</h1>
+                <p class="text-base md:text-lg opacity-90 mb-4 text-balance">เริ่มจาก "คอมพิวเตอร์ส่วนตัว" ในกระเป๋า ค่อย ๆ รู้จักฮาร์ดแวร์ ระบบ เครือข่าย ความปลอดภัย AI และเทรนด์อนาคตอย่างเป็นระบบ</p>
+                <div class="flex flex-wrap gap-2">
+                    <a href="#ji-chu-pian" class="inline-flex items-center gap-2 bg-white text-primary font-semibold px-4 py-2 rounded-md hover:bg-blue-50 transition-colors focus-ring text-sm">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i>เริ่มจากพื้นฐาน
+                    </a>
+                    <a href="#ruan-jian-pian" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">
+                        <i class="fas fa-th-large" aria-hidden="true"></i>ดูรายชื่อภาค
+                    </a>
+                    <a href="#fu-lu-c" class="inline-flex items-center gap-2 bg-white/15 text-white font-semibold px-4 py-2 rounded-md hover:bg-white/25 transition-colors backdrop-blur-sm focus-ring text-sm">C ภาคผนวก C: ตารางศัพท์ฉบับย่อที่สุด</a>
+                </div>
+            </section>
+
+            <!-- วิธีใช้หนังสือเล่มนี้ -->
+            <section class="reading-guide-card" aria-labelledby="how-to-use-title">
+                <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
+                    <i class="fas fa-compass text-primary" aria-hidden="true"></i>ใช้หนังสือเล่มนี้ยังไง?
+                </h2>
+                <div class="grid md:grid-cols-2 gap-3 text-sm">
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-bullseye mr-1" aria-hidden="true"></i>เป้าหมายของหนังสือเล่มนี้</p>
+                        <p class="text-gray-700 dark:text-gray-300">หนังสือเล็ก ๆ "พูดได้ ลงมือได้" เล่มนี้ ช่วยพามือถือของคุณจาก "ใช้เป็น" ไปสู่ "เข้าใจจริง" จาก "รับอย่างเดียว" ไปสู่ "ควบคุมเองได้"</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-route mr-1" aria-hidden="true"></i>เส้นทางการอ่าน</p>
+                        <p class="text-gray-700 dark:text-gray-300">แบ่งเป็น 8 ภาค:<strong>พื้นฐาน→ซอฟต์แวร์→ขั้นกลาง→ก้าวไกล→ลงมือทำ→เขียนโค้ดด้วย AI→พัฒนาแอนดรอยด์→พัฒนา iOS</strong> ครอบคลุม 69 บท มือใหม่อ่านเรียงลำดับได้ ส่วนคนมีประสบการณ์กระโดดไปบทที่สนใจได้เลย v3.2 เพิ่มสามภาคลงมือทำพัฒนา (บทที่ 37-69 รวม 33 บท): เขียนโค้ดด้วย AI พัฒนาแอนดรอยด์ และพัฒนา iOS พาคุณจากผู้ใช้ดิจิทัลสู่นักพัฒนาแอป</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-hand-pointer mr-1" aria-hidden="true"></i>คำอธิบายสัญลักษณ์</p>
+                        <p class="text-gray-700 dark:text-gray-300"><span class="kbd">[ปุ่ม]</span> หมายถึงปุ่มเฉพาะบนหน้าจอ <span class="kbd">&gt;</span> หมายถึงลำดับการทำงาน <strong>ตัวหนา</strong>คือประเด็นสำคัญที่ต้องจำให้ขึ้นใจ</p>
+                    </div>
+                    <div>
+                        <p class="font-semibold text-primary mb-1"><i class="fas fa-magic mr-1" aria-hidden="true"></i>เทคนิคโต้ตอบ</p>
+                        <p class="text-gray-700 dark:text-gray-300">ด้านบน <span class="kbd">Ctrl+K</span> ค้นหา  <span class="kbd">A+/A-</span> ปรับขนาดตัวอักษร  <span class="kbd">R</span> อ่านออกเสียง รองรับสลับโหมดสว่าง/มืด พิมพ์และส่งออก PDF</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- เส้นทางการเรียนรู้ 5 ขั้นตอน -->
+            <section class="mb-8" aria-labelledby="learning-path-title">
+                <h2 id="learning-path-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1">เส้นทางเรียนรู้: 5 ก้าวสู่มือถือขั้นเทพ</h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">หนังสือเล่มนี้เรียงตามหลัก รู้จัก→ชำนาญ→ลงมือทำ แต่ละภาคคือรากฐานของภาคถัดไป</p>
+                <div class="learning-path">
+                    <a href="#ji-chu-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">1</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">ภาคพื้นฐาน</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">บทที่ 0 - 7</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">รู้จักมือถือของคุณ: ฮาร์ดแวร์ ระบบ ไฟล์ เครือข่าย แอป ความปลอดภัย ฟีเจอร์ล้ำสมัย</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>เริ่มต้น</span>
+                    </a>
+                    <a href="#ruan-jian-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">2</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">ภาคซอฟต์แวร์</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">บทที่ 8 - 14</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">ใช้แอปให้ครบทุกด้าน: การสื่อสาร ทำงาน ชำระเงิน ถ่ายภาพ ดูหนังฟังเพลง จัดการรหัสผ่าน</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>เริ่มต้น</span>
+                    </a>
+                    <a href="#jin-jie-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">3</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">ภาคขั้นกลาง</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">บทที่ 15 - 20</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">ปลดล็อกทักษะขั้นโปร: วิทยาศาสตร์แบตเตอรี่ บัญชีและคลาวด์ สำรองและย้ายข้อมูล แก้ปัญหาเอง</p>
+                        <span class="difficulty-tag difficulty-intermediate mt-2 inline-block"><i class="fas fa-mountain" aria-hidden="true"></i>ขั้นกลาง</span>
+                    </a>
+                    <a href="#chao-yue-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">4</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">ภาคก้าวไกล</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">บทที่ 21 - 26</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">แตะเทคโนโลยีล้ำหน้า: ความปลอดภัยสารสนเทศ โมเดล AI ขนาดใหญ่ วิธีคิดเขียนโค้ด และชีวิตดิจิทัลในอนาคต</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>ขั้นสูง</span>
+                    </a>
+                    <a href="#shi-zhan-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">5</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">ภาคลงมือทำ</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">บทที่ 27 - 32</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">ใช้งานจริง: สอนพ่อแม่ใช้มือถือ เลือกซื้อมือถือ ดิจิทัลเวลเนส ฉายหน้าจอและรถยนต์ ถ่ายคลิปสั้น และกู้ภัยฉุกเฉิน</p>
+                        <span class="difficulty-tag difficulty-beginner mt-2 inline-block"><i class="fas fa-seedling" aria-hidden="true"></i>เริ่มต้น</span>
+                    </a>
+                    <a href="#ai-biancheng-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">6</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">ภาคลงมือทำเขียนโค้ดด้วย AI</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">บทที่ 37 - 47</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">สั่ง AI เขียนโค้ด: จากการปฏิวัติวิธีทำงาน หลักคิด 5 ข้อ สู่การเลือกเครื่องมือและโมเดล การใช้ API จริง และโปรเจกต์เต็ม</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>ขั้นสูง</span>
+                    </a>
+                    <a href="#an-zhuo-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">7</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">ภาคลงมือทำพัฒนาแอนดรอยด์</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">บทที่ 48 - 58</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">สั่ง AI เขียนแอปแอนดรอยด์: Kotlin, Jetpack Compose, สองโปรเจกต์เต็ม และเผยแพร่บน Google Play</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>ขั้นสูง</span>
+                    </a>
+                    <a href="#ios-kai-fa-pian" class="path-step block focus-ring" style="text-decoration:none;color:inherit;">
+                        <div class="step-num">8</div>
+                        <h3 class="font-bold text-base mt-2 mb-1 text-primary">ภาคลงมือทำพัฒนา iOS</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-1">บทที่ 59 - 69</p>
+                        <p class="text-sm text-gray-700 dark:text-gray-300">สั่ง AI เขียนแอป Apple: Swift, SwiftUI, สองโปรเจกต์เต็ม และเผยแพร่บน App Store</p>
+                        <span class="difficulty-tag difficulty-advanced mt-2 inline-block"><i class="fas fa-rocket" aria-hidden="true"></i>ขั้นสูง</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- ตารางแผนที่บทอย่างรวดเร็ว -->
+            <section class="reading-guide-card" aria-labelledby="chapter-map-title">
+                <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
+                    <i class="fas fa-map text-primary" aria-hidden="true"></i>แผนที่บทฉับไว
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">หาบทตามเป้าหมายการเรียนได้เร็ว</p>
+                <div class="grid md:grid-cols-2 gap-2 text-sm">
+                    <div class="flex items-start gap-2"><i class="fas fa-microchip text-primary mt-1" aria-hidden="true"></i><span><strong>อยากเข้าใจฮาร์ดแวร์</strong> → <a href="#di-yi-zhang" class="text-primary hover:underline">01 บทที่ 1: สวัสดี คอมพิวเตอร์ส่วนตัวของฉัน</a> · <a href="#di-san-zhang" class="text-primary hover:underline">03 บทที่ 3: ต่อ "เส้นชีวิต" ให้มือถือ</a>(เครือข่ายและเบสแบนด์)</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-shield-halved text-primary mt-1" aria-hidden="true"></i><span><strong>ใส่ใจความเป็นส่วนตัวและความปลอดภัย</strong> → <a href="#di-liu-zhang" class="text-primary hover:underline">06 บทที่ 6: พิทักษ์ชีวิตดิจิทัลของคุณ</a> · <a href="#di-shi-si-zhang" class="text-primary hover:underline">14 บทที่ 14: โฟกัสพิเศษเรื่องตัวจัดการรหัสผ่าน</a> · <a href="#di-er-shi-yi-zhang" class="text-primary hover:underline">บทที่ 21</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-camera text-primary mt-1" aria-hidden="true"></i><span><strong>อยากถ่ายรูปสวย</strong> → <a href="#di-shi-yi-zhang" class="text-primary hover:underline">11 บทที่ 11: การถ่ายภาพและการจัดการรูปภาพ</a> + <a href="#di-shi-yi-zhang-advanced" class="text-primary hover:underline">ภาคผนวกบทที่ 11: เทคโนโลยีภาพระดับมืออาชีพ</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-robot text-primary mt-1" aria-hidden="true"></i><span><strong>เล่น AI ผู้ช่วยให้ครบทุกท่า</strong> → <a href="#di-er-shi-er-zhang" class="text-primary hover:underline">22 บทที่ 22: AI ทำงานในมือถืออย่างไร</a> · <a href="#di-qi-zhang-jichu" class="text-primary hover:underline">07 บทที่ 7: ถอดรหัสฟีเจอร์ล้ำสมัยทั้งหมด</a>(ล้ำหน้า)</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-code text-primary mt-1" aria-hidden="true"></i><span><strong>อยากสั่ง AI เขียนโค้ด</strong> → <a href="#ai-biancheng-pian" class="text-primary hover:underline">บทที่ 37 - 47</a>: การปฏิวัติวิธีทำงาน หลักคิด 5 ข้อ การเลือกเครื่องมือและโมเดล การใช้ API จริง และโปรเจกต์เต็ม</span></div>
+                    <div class="flex items-start gap-2"><i class="fab fa-android text-primary mt-1" aria-hidden="true"></i><span><strong>อยากเรียนพัฒนาแอนดรอยด์</strong> → <a href="#an-zhuo-kai-fa-pian" class="text-primary hover:underline">บทที่ 48 - 58</a>: Kotlin, Compose, สองโปรเจกต์ และเผยแพร่บน Google Play</span></div>
+                    <div class="flex items-start gap-2"><i class="fab fa-apple text-primary mt-1" aria-hidden="true"></i><span><strong>อยากเรียนพัฒนา iOS</strong> → <a href="#ios-kai-fa-pian" class="text-primary hover:underline">บทที่ 59 - 69</a>: Swift, SwiftUI, สองโปรเจกต์ และเผยแพร่บน App Store</span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-bolt text-primary mt-1" aria-hidden="true"></i><span><strong>กังวลแบตหมด</strong> → <a href="#di-shi-wu-zhang" class="text-primary hover:underline">บทที่ 15</a> + <a href="#di-shi-wu-zhang-kuichong" class="text-primary hover:underline">ภาคผนวก: ถอดรหัสโปรโตคอลชาร์จเร็วทั้งหมด</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-bug text-primary mt-1" aria-hidden="true"></i><span><strong>มือถือพัง</strong> → <a href="#di-shi-jiu-zhang" class="text-primary hover:underline">19 บทที่ 19: การแก้ปัญหาและช่วยเหลือตัวเอง</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-arrows-rotate text-primary mt-1" aria-hidden="true"></i><span><strong>เปลี่ยนเครื่อง/ย้ายข้อมูล</strong> → <a href="#di-shi-ba-zhang" class="text-primary hover:underline">18 บทที่ 18: การสำรองและย้ายข้อมูล</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-wand-magic-sparkles text-primary mt-1" aria-hidden="true"></i><span><strong>ลองเล่นระบบอัตโนมัติ</strong> → <a href="#di-er-shi-san-zhang" class="text-primary hover:underline">23 บทที่ 23: แนวคิดการเขียนโปรแกรมและจุดเริ่มต้นของระบบอัตโนมัติ</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-mobile-screen text-primary mt-1" aria-hidden="true"></i><span><strong>เลือกมือถือพับยังไงดี</strong> → <a href="#fu-lu-f" class="text-primary hover:underline">F ภาคผนวก F: โฟกัสพิเศษการเลือกซื้อและใช้งานมือถือจอพับ</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-heart text-primary mt-1" aria-hidden="true"></i><span><strong>ช่วยพ่อแม่ใช้มือถือ</strong> → <a href="#di-er-shi-qi-zhang" class="text-primary hover:underline">บทที่ 27</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-cart-shopping text-primary mt-1" aria-hidden="true"></i><span><strong>อยากซื้อมือถือ</strong> → <a href="#di-er-shi-ba-zhang" class="text-primary hover:underline">28 บทที่ 28: เงินคุ้มเครื่องใจ — คู่มือสูงสุดการเลือกซื้อมือถือ</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-heart-pulse text-primary mt-1" aria-hidden="true"></i><span><strong>ดิจิทัลเวลเนส/กันเสพติด</strong> → <a href="#di-er-shi-jiu-zhang" class="text-primary hover:underline">29 บทที่ 29: สุขภาพดิจิทัล — สร้างความสัมพันธ์ที่ดีกับมือถือ</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-tv text-primary mt-1" aria-hidden="true"></i><span><strong>ฉายหน้าจอ/ในรถยนต์</strong> → <a href="#di-san-shi-zhang" class="text-primary hover:underline">30 บทที่ 30: การฉายจอ การนำเสนอ และการเชื่อมต่อในรถยนต์</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-video text-primary mt-1" aria-hidden="true"></i><span><strong>ถ่ายคลิปสั้น</strong> → <a href="#di-san-shi-yi-zhang" class="text-primary hover:underline">31 บทที่ 31: เริ่มต้นถ่ายคลิปสั้นและสร้างคอนเทนต์</a></span></div>
+                    <div class="flex items-start gap-2"><i class="fas fa-triangle-exclamation text-primary mt-1" aria-hidden="true"></i><span><strong>มือถือหาย/ถูกหลอกโอนเงิน</strong> → <a href="#di-san-shi-er-zhang" class="text-primary hover:underline">32 บทที่ 32: คู่มือฉุกเฉินด้านความปลอดภัยมือถือ</a></span></div>
+                </div>
+            </section>
+
+            <!-- บทส่งท้าย: สิ่งที่หนังสือเล่มนี้ไม่สอน -->
+            <div class="highlight-quote">
+                <p class="mb-1"><i class="fas fa-quote-left mr-2" aria-hidden="true"></i>หนังสือเล่มนี้ไม่ได้สอนให้ "ดูคลิปเพลินขึ้น" แต่อยากให้คุณเข้าใจว่า: ทำไมมือถือทำงานแบบนี้? มันทำอะไรได้และทำไม่ได้อะไร? และจะใช้มันให้เป็นประโยชน์กับคุณจริง ๆ ได้อย่างไร ไม่ใช่ปล่อยให้มันครอบงำเวลาและความสนใจของคุณ</p>
+                <p class="text-right text-sm">— เจตนารมณ์ของหนังสือเล่มนี้</p>
+            </div>
+
+            <!-- เช็กลิสต์แบบโต้ตอบ + แดชบอร์ดการอ่าน -->
+            <section class="mb-8" aria-labelledby="dashboard-title">
+                <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
+                    <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>แดชบอร์ดการเรียนรู้
+                </h2>
+                <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">ติดตามความคืบหน้าการอ่าน และเช็คสุขภาพมือถือของคุณ</p>
+                <div class="grid md:grid-cols-2 gap-4">
+
+                    <!-- การ์ดความคืบหน้าการอ่าน -->
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>ความคืบหน้าการอ่าน</h3>
+                        <div class="flex items-center gap-4">
+                            <div class="relative w-20 h-20 flex-shrink-0">
+                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90">
+                                    <circle cx="40" cy="40" r="34" fill="none" stroke="#e5e7eb" stroke-width="8" class="dark:stroke-gray-700"/>
+                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
+                                </svg>
+                                <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span>
+                            </div>
+                            <div class="flex-1 text-sm space-y-1">
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">บทที่อ่านแล้ว</span><span id="read-count" class="font-semibold">0 / 38</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">จำนวนบุ๊กมาร์ก</span><span id="bookmark-count" class="font-semibold">0</span></div>
+                                <div class="flex justify-between"><span class="text-gray-500 dark:text-gray-400">อ่านครั้งล่าสุดถึง</span><span id="last-chapter" class="font-semibold text-xs truncate max-w-[8rem]">—</span></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- การ์ดตรวจสุขภาพโทรศัพท์ -->
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>เช็คสุขภาพมือถือด้วยตัวเอง</h3>
+                        <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">ติ๊กรายการที่ทำได้แล้ว แล้วดู "คะแนนสุขภาพ" ของมือถือคุณ:</p>
+                        <div id="checklist-items" class="space-y-1.5 text-sm">
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>ตั้งรหัสล็อกหน้าจอแล้ว (ไม่ใช่ 1234/0000)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>เปิดยืนยันตัวตนสองชั้นแล้ว (Apple ID/บัญชีแบรนด์)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>เปิด "ค้นหาโทรศัพท์ของฉัน" แล้ว</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>รูปมีสำรองบนคลาวด์ (อย่างน้อยหนึ่งแหล่ง)</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>สำรองแชท WeChat ไว้ที่คอมพิวเตอร์แล้ว</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>เปิดจ่ายด้วยลายนิ้วมือ/ใบหน้าในแอปชำระเงินแล้ว</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>ติดตั้งแอป "National Anti-Fraud Center" แล้ว</span></label>
+                            <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>ล้างรายการหักอัตโนมัติที่ไม่ต้องใช้แล้ว</span></label>
+                        </div>
+                        <div class="mt-3 flex items-center justify-between">
+                            <span class="text-xs text-gray-500 dark:text-gray-400">คะแนนสุขภาพ</span>
+                            <span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span>
+                        </div>
+                        <div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
+                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all duration-500" style="width: 0%"></div>
+                        </div>
+                        <p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">เช็คด้วยตัวเองให้ครบ เพื่อรู้สถานะความปลอดภัยของมือถือคุณ</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- เนื้อหา "top" เดิมคงไว้เพื่อความเข้ากันได้ -->
+            <div class="sr-only" aria-hidden="true">v3.2 · วิชาพื้นฐานดิจิทัลที่ออกแบบมาเพื่อคนธรรมดาจริง ๆ</div>
+
+            {{BODY}}ยวกับการตัดสินใจซื้อ โปรดตรวจสอบรีวิวล่าสุดและความคิดเห็นของผู้ใช้</p>
+                    </div>
+                </div>
+            </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- เครื่องมือด่วน: กลุ่มปุ่มลอย -->
+    <div id="quick-tools" class="quick-tools no-print" aria-label="เครื่องมือลัด">
+        <button id="quick-search" class="quick-tool-btn" title="ค้นหา (Ctrl+K)" aria-label="ค้นหา">
+            <i class="fas fa-search" aria-hidden="true"></i>
+        </button>
+        <button id="quick-theme" class="quick-tool-btn" title="สลับมืด/สว่าง" aria-label="สลับธีม">
+            <i class="fas fa-circle-half-stroke" aria-hidden="true"></i>
+        </button>
+        <button id="quick-print" class="quick-tool-btn" title="พิมพ์ / ส่งออก PDF" aria-label="พิมพ์หรือส่งออก">
+            <i class="fas fa-print" aria-hidden="true"></i>
+        </button>
+        <button id="quick-toc" class="quick-tool-btn" title="สารบัญ" aria-label="เปิดสารบัญ">
+            <i class="fas fa-list" aria-hidden="true"></i>
+        </button>
+        <button id="quick-tts" class="quick-tool-btn" title="อ่านออกเสียง" aria-label="อ่านออกเสียง">
+            <i class="fas fa-headphones" aria-hidden="true"></i>
+        </button>
+        <button id="quick-shortcuts" class="quick-tool-btn" title="คีย์ลัดคีย์บอร์ด (?)" aria-label="แผงคีย์ลัด">
+            <i class="fas fa-keyboard" aria-hidden="true"></i>
+        </button>
+        <button id="quick-backup" class="quick-tool-btn" title="สำรอง/กู้คืนความคืบหน้า" aria-label="สำรองความคืบหน้า">
+            <i class="fas fa-cloud-arrow-up" aria-hidden="true"></i>
+        </button>
+    </div>
+
+    <!-- แผงปุ่มลัด -->
+    <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="คีย์ลัดคีย์บอร์ด">
+        <div class="search-panel" style="max-width:480px">
+            <div class="search-input-wrapper">
+                <i class="fas fa-keyboard text-gray-400"></i>
+                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">คีย์ลัด</span>
+                <button id="shortcuts-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="ปิด">ESC</button>
+            </div>
+            <div class="p-4 space-y-2 text-sm">
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">ค้นหาเนื้อหา</span><span class="kbd">Ctrl + K</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">สลับโหมดมืด/สว่าง</span><span class="kbd">T</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">อ่านออกเสียง เล่น/พัก</span><span class="kbd">R</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">หยุดอ่านออกเสียง</span><span class="kbd">ESC</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">เปิดแผงคีย์ลัด</span><span class="kbd">?</span></div>
+                <div class="flex justify-between items-center py-1.5 border-b border-gray-100 dark:border-gray-700"><span class="text-gray-600 dark:text-gray-400">ขยาย / ย่อขนาดตัวอักษร</span><span><span class="kbd">A+</span> <span class="kbd">A-</span></span></div>
+                <div class="flex justify-between items-center py-1.5"><span class="text-gray-600 dark:text-gray-400">พิมพ์ / ส่งออก PDF</span><span class="kbd">Ctrl + P</span></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- กล่องโต้ตอบสำรอง/กู้คืน -->
+    <div id="backup-overlay" class="search-overlay" role="dialog" aria-label="สำรองและกู้คืน">
+        <div class="search-panel" style="max-width:520px">
+            <div class="search-input-wrapper">
+                <i class="fas fa-cloud-arrow-up text-gray-400"></i>
+                <span class="font-semibold text-gray-700 dark:text-gray-300 flex-1">สำรองและกู้คืนความคืบหน้าการอ่าน</span>
+                <button id="backup-close" class="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-sm px-2 py-1 rounded border border-gray-200 dark:border-gray-600" aria-label="ปิด">ESC</button>
+            </div>
+            <div class="p-5 space-y-4 text-sm">
+                <div class="info-box rounded-lg p-3">
+                    <p class="text-xs">ข้อมูลสำรองประกอบด้วย: บทที่อ่านแล้ว ที่คั่น ตำแหน่งการอ่าน ค่าที่ตั้งขนาดตัวอักษร และผลตรวจสุขภาพมือถือ ข้อมูลเก็บไว้ในเบราว์เซอร์ภายในเครื่อง หากเปลี่ยนเบราว์เซอร์หรือล้างแคชจะสูญหาย แนะนำให้ส่งออกข้อมูลสำรองเป็นระยะ</p>
+                </div>
+                <div>
+                    <button id="backup-export" class="w-full bg-primary text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-download"></i> ส่งออกไฟล์สำรอง
+                    </button>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">ดาวน์โหลดไฟล์ JSON หนึ่งไฟล์ แล้วบันทึกไว้ในที่ปลอดภัย</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <button id="backup-import-btn" class="w-full bg-emerald-600 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-upload"></i> นำเข้าไฟล์สำรองเพื่อกู้คืน
+                    </button>
+                    <input type="file" id="backup-import-input" accept=".json" class="hidden">
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 text-center">เลือกไฟล์สำรองที่เคยส่งออกไว้ก่อนหน้าเพื่อกู้คืนความคืบหน้า</p>
+                </div>
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-4">
+                    <button id="backup-reset" class="w-full bg-red-500 text-white font-semibold py-2.5 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2">
+                        <i class="fas fa-trash"></i> ล้างข้อมูลการอ่านทั้งหมด
+                    </button>
+                    <p class="text-xs text-red-400 mt-1 text-center">กู้คืนไม่ได้! กรุณาส่งออกข้อมูลสำรองก่อน</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- การแจ้งเตือนวันอ่านต่อเนื่อง -->
+    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
+        <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
+        <span id="streak-toast-text">อ่านต่อเนื่องวันที่ X แล้ว!</span>
+    </div>
+
+    <!-- แถบควบคุมการอ่านออกเสียง -->
+    <div id="tts-controls" class="tts-controls" role="region" aria-label="ตัวควบคุมการอ่านออกเสียง" aria-live="polite">
+        <span class="tts-chapter-label" id="tts-label" title="บทที่กำลังอ่านออกเสียง">ยังไม่เริ่ม</span>
+        <button class="tts-btn" id="tts-prev" title="ย่อหน้าก่อนหน้า" aria-label="ย่อหน้าก่อนหน้า"><i class="fas fa-step-backward"></i></button>
+        <button class="tts-btn play-btn" id="tts-play" title="เล่น/พัก" aria-label="เล่นการอ่านออกเสียง"><i class="fas fa-play"></i></button>
+        <button class="tts-btn" id="tts-next" title="ย่อหน้าถัดไป" aria-label="ย่อหน้าถัดไป"><i class="fas fa-step-forward"></i></button>
+        <button class="tts-btn" id="tts-speed-down" title="ช้าลง" aria-label="ช้าลง">−</button>
+        <span class="tts-speed-badge" id="tts-speed-display">1.0x</span>
+        <button class="tts-btn" id="tts-speed-up" title="เร็วขึ้น" aria-label="เร็วขึ้น">+</button>
+        <button class="tts-btn" id="tts-stop" title="หยุดการอ่านออกเสียง" aria-label="หยุดการอ่านออกเสียง"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- ปุ่มกลับขึ้นด้านบน -->
+    <button id="back-to-top" class="opacity-0 invisible" aria-label="กลับขึ้นด้านบน">
+        <svg class="progress-ring" viewBox="0 0 40 40">
+            <circle class="bg" cx="20" cy="20" r="18"/>
+            <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/>
+        </svg>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- การแจ้งเตือนกู้คืนตำแหน่งการอ่าน -->
+    <div id="restore-toast" class="restore-position-toast" role="alert">
+        <i class="fas fa-bookmark" aria-hidden="true"></i>
+        <span id="restore-toast-text">อ่านครั้งล่าสุดถึง: ...</span>
+        <button class="btn-restore" id="restore-btn">อ่านต่อ</button>
+        <button class="btn-dismiss" id="dismiss-btn">ข้าม</button>
+    </div>
+
+    <!-- สคริปต์ JS -->
+    <script>
+        (function() {
+            'use strict';
+
+            const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+            const $$ = (sel, ctx) => [...(ctx || document).querySelectorAll(sel)];
+
+            const html = document.documentElement;
+            const body = document.body;
+            const navbar = $('#navbar');
+            const sidebar = $('#sidebar');
+            const overlay = $('#overlay');
+            const menuToggle = $('#menu-toggle');
+            const backToTop = $('#back-to-top');
+            const progressBar = $('#reading-progress');
+            const searchOverlay = $('#search-overlay');
+            const searchInput = $('#search-input');
+            const searchResults = $('#search-results');
+            const tocProgressBar = $('#toc-progress-bar');
+            const readingProgressText = $('#reading-progress-text');
+            const readingPercent = $('#reading-percent');
+            const contentEl = $('#content');
+            const tocList = $('#toc-list');
+            const tocFilter = $('#toc-filter');
+            const printBtn = $('#print-btn');
+            const quickSearch = $('#quick-search');
+            const quickTheme = $('#quick-theme');
+            const quickPrint = $('#quick-print');
+            const quickToc = $('#quick-toc');
+            let themeToggle = null;
+            const restoreToast = $('#restore-toast');
+            const restoreToastText = $('#restore-toast-text');
+            const restoreBtn = $('#restore-btn');
+            const dismissBtn = $('#dismiss-btn');
+
+            // ===== ธีม =====
+            function syncThemeControls() {
+                const isDark = html.classList.contains('dark');
+                const nextLabel = isDark ? 'สลับไปโหมดสว่าง' : 'สลับไปโหมดมืด';
+                [themeToggle, quickTheme].filter(Boolean).forEach(btn => {
+                    btn.setAttribute('aria-label', nextLabel);
+                    btn.setAttribute('title', nextLabel);
+                    btn.setAttribute('aria-pressed', String(isDark));
+                });
+            }
+            function applyTheme(theme) {
+                const resolvedTheme = theme === 'dark' ? 'dark' : 'light';
+                html.classList.toggle('dark', resolvedTheme === 'dark');
+                body.classList.toggle('dark', resolvedTheme === 'dark');
+                html.setAttribute('data-theme', resolvedTheme);
+                body.setAttribute('data-theme', resolvedTheme);
+                localStorage.setItem('theme', resolvedTheme);
+                syncThemeControls();
+            }
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                applyTheme('dark');
+            } else {
+                applyTheme('light');
+            }
+            function toggleTheme() {
+                applyTheme(html.classList.contains('dark') ? 'light' : 'dark');
+            }
+            themeToggle = $('#theme-toggle');
+            if (themeToggle) themeToggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+            if (quickTheme) quickTheme.addEventListener('click', (e) => {
+                e.preventDefault();
+                toggleTheme();
+            });
+
+            // ===== การเลื่อน: ความคืบหน้า + เงา + กลับขึ้นด้านบน + ความคืบหน้าสารบัญ + วงแหวนความคืบหน้า =====
+            const sections = $$('.content-section');
+            const totalChapters = sections.length;
+            if (readingProgressText) readingProgressText.textContent = `0 / ${totalChapters} บท`;
+
+            // พารามิเตอร์วงแหวนความคืบหน้า
+            const progressRingFg = backToTop ? backToTop.querySelector('.progress-ring .fg') : null;
+            const RING_CIRCUMFERENCE = 2 * Math.PI * 18; // r=18
+            if (progressRingFg) progressRingFg.setAttribute('stroke-dasharray', RING_CIRCUMFERENCE.toFixed(1));
+
+            let ticking = false;
+            function onScroll() {
+                if (!ticking) {
+                    requestAnimationFrame(() => {
+                        const scrollY = window.scrollY;
+                        const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+                        const progress = docHeight > 0 ? (scrollY / docHeight) * 100 : 0;
+                        if (progressBar) progressBar.style.width = progress + '%';
+
+                        // อัปเดตวงแหวนความคืบหน้า
+                        if (progressRingFg) {
+                            const offset = RING_CIRCUMFERENCE - (progress / 100) * RING_CIRCUMFERENCE;
+                            progressRingFg.setAttribute('stroke-dashoffset', offset.toFixed(1));
+                        }
+
+                        if (navbar) {
+                            if (scrollY > 50) {
+                                navbar.classList.add('shadow-md', 'bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-sm');
+                            } else {
+                                navbar.classList.remove('shadow-md', 'bg-white/95', 'dark:bg-gray-800/95', 'backdrop-blur-sm');
+                            }
+                        }
+
+                        if (backToTop) {
+                            if (scrollY > 300) {
+                                backToTop.classList.remove('opacity-0', 'invisible');
+                                backToTop.classList.add('opacity-100', 'visible');
+                            } else {
+                                backToTop.classList.add('opacity-0', 'invisible');
+                                backToTop.classList.remove('opacity-100', 'visible');
+                            }
+                        }
+
+                        // อ่านถึงบทไหนแล้ว
+                        let passedChapters = 0;
+                        const viewportTop = scrollY + 100;
+                        sections.forEach(sec => {
+                            if (sec.offsetTop <= viewportTop) passedChapters++;
+                        });
+                        if (readingProgressText) {
+                            const passed = Math.max(0, Math.min(totalChapters, passedChapters));
+                            readingProgressText.textContent = `${passed} / ${totalChapters} บท`;
+                        }
+                        if (readingPercent) {
+                            const pct = Math.round(progress);
+                            readingPercent.textContent = pct + '%';
+                        }
+                        if (tocProgressBar) {
+                            tocProgressBar.style.transform = `scaleX(${Math.min(1, progress/100)})`;
+                        }
+
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+
+            if (backToTop) {
+                backToTop.addEventListener('click', () => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            }
+
+            // ===== จำตำแหน่งการอ่าน =====
+            const POSITION_KEY = 'phoneCourse_scrollPos';
+            const POSITION_CHAPTER_KEY = 'phoneCourse_lastChapter';
+            let savePosTimer = null;
+            function saveReadingPosition() {
+                const scrollY = window.scrollY;
+                if (scrollY < 200) return; // ยังเร็วเกินไป ไม่บันทึก
+                localStorage.setItem(POSITION_KEY, scrollY.toString());
+                // หาชื่อบทปัจจุบัน
+                let currentChapter = '';
+                const viewportTop = scrollY + 100;
+                for (let i = sections.length - 1; i >= 0; i--) {
+                    if (sections[i].offsetTop <= viewportTop) {
+                        const h3 = sections[i].querySelector('h3');
+                        if (h3) currentChapter = h3.textContent;
+                        break;
+                    }
+                }
+                if (currentChapter) localStorage.setItem(POSITION_CHAPTER_KEY, currentChapter);
+            }
+            window.addEventListener('scroll', () => {
+                clearTimeout(savePosTimer);
+                savePosTimer = setTimeout(saveReadingPosition, 1000);
+            }, { passive: true });
+
+            // กู้ตำแหน่งตอนโหลดหน้า
+            function tryRestorePosition() {
+                const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
+                const savedChapter = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+                if (savedPos > 500 && savedChapter && restoreToast && restoreToastText) {
+                    restoreToastText.textContent = `อ่านครั้งล่าสุด: ${savedChapter}`;
+                    setTimeout(() => restoreToast.classList.add('show'), 800);
+                    // ซ่อนอัตโนมัติหลัง 10 วินาที
+                    setTimeout(() => restoreToast.classList.remove('show'), 15000);
+                }
+            }
+            if (restoreBtn) {
+                restoreBtn.addEventListener('click', () => {
+                    const savedPos = parseInt(localStorage.getItem(POSITION_KEY) || '0', 10);
+                    if (savedPos > 0) {
+                        window.scrollTo({ top: savedPos, behavior: 'smooth' });
+                    }
+                    if (restoreToast) restoreToast.classList.remove('show');
+                });
+            }
+            if (dismissBtn) {
+                dismissBtn.addEventListener('click', () => {
+                    if (restoreToast) restoreToast.classList.remove('show');
+                });
+            }
+
+            // ===== แอนิเมชันเข้าจอตอนเลื่อน =====
+            const visibleObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        visibleObserver.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+            // เนื้อหาในจอแรกให้แสดงทันที
+            sections.forEach((sec, i) => {
+                const rect = sec.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    sec.classList.add('visible');
+                } else {
+                    visibleObserver.observe(sec);
+                }
+            });
+
+            // ===== เปิด/ปิดแถบข้าง =====
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+                overlay.classList.remove('hidden');
+                body.classList.add('overflow-hidden');
+                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'true');
+            }
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+                overlay.classList.add('hidden');
+                body.classList.remove('overflow-hidden');
+                if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+            }
+            if (menuToggle) menuToggle.addEventListener('click', () => {
+                if (sidebar.classList.contains('-translate-x-full')) openSidebar();
+                else closeSidebar();
+            });
+            if (overlay) overlay.addEventListener('click', closeSidebar);
+
+            // เครื่องมือด่วน: เปิดสารบัญ
+            if (quickToc) quickToc.addEventListener('click', () => {
+                if (window.innerWidth < 1024) openSidebar();
+                else window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+
+            // ===== การนำทางแองเคอร์ทั่วโลก: ชดเชยระยะเหลื่อมของแถบคงที่ =====
+            // ต้องใช้ scrollIntoView ไม่ใช่คำนวณพิกัดเอง: .content-section ตั้งค่าไว้
+            // content-visibility:auto + contain-intrinsic-size(0 800px): บทที่อยู่นอกจอ
+            // ใช้พื้นที่ placeholder ขนาด 800px, getBoundingClientRect คืนพิกัดของ placeholder และ scrollTo ตรง ๆ
+            // จะไปผิดตำแหน่ง (ยิ่งบทอยู่ท้ายยิ่งเหลื่อมสะสมมาก) scrollIntoView ยกให้เบราว์เซอร์
+            // เรนเดอร์เป้าหมายตามต้องการและจัดตำแหน่งให้ และ html{scroll-padding-top:5rem} ชดเชยแถบคงที่
+            // คงที่
+            function scrollToAnchor(id) {
+                const el = document.getElementById(id);
+                if (!el) return;
+                // ขั้น 1: โหมด instant บังคับเรนเดอร์บทเป้าหมายและจัดตำแหน่งก่อน ป้องกันไม่ให้ content-visibility
+                // การเหลื่อมระหว่างการเลื่อนแบบ smooth ที่เกิดจากการเรนเดอร์ช้ากว่ากำหนด
+                el.scrollIntoView({ behavior: 'instant', block: 'start' });
+                // ขั้น 2: เมื่อเป้าหมายเรนเดอร์แล้วและพิกัดนิ่ง ค่อยสั่งเลื่อนแบบ smooth เพื่อสัมผัสที่ลื่นไหล
+                requestAnimationFrame(() => {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    el.classList.add('scroll-target-flash');
+                    setTimeout(() => el.classList.remove('scroll-target-flash'), 1200);
+                });
+            }
+            document.addEventListener('click', (e) => {
+                const link = e.target.closest('a[href^="#"]');
+                if (!link) return;
+                const href = link.getAttribute('href');
+                if (!href || href === '#' || href === '#top') return;
+                e.preventDefault();
+                const targetId = href.slice(1);
+                if (window.innerWidth < 1024) closeSidebar();
+                requestAnimationFrame(() => scrollToAnchor(targetId));
+            }, { passive: false });
+
+            // ===== ยุบสารบัญ =====
+            $$('.toc-toggle-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    const targetId = btn.dataset.target;
+                    if (!targetId) return;
+                    const childList = document.getElementById(targetId);
+                    if (!childList) return;
+                    const icon = btn.querySelector('.toc-toggle-icon');
+                    const isOpen = childList.classList.contains('open');
+                    childList.classList.toggle('open', !isOpen);
+                    if (icon) {
+                        icon.classList.toggle('fa-chevron-down', !isOpen);
+                        icon.classList.toggle('fa-chevron-up', isOpen);
+                    }
+                });
+            });
+
+            // ===== กรองสารบัญ =====
+            if (tocFilter && tocList) {
+                tocFilter.addEventListener('input', () => {
+                    const q = tocFilter.value.trim().toLowerCase();
+                    $$('.toc-parent', tocList).forEach(parent => {
+                        let hasMatch = false;
+                        $$('a', parent).forEach(a => {
+                            const txt = a.textContent.toLowerCase();
+                            const show = !q || txt.includes(q);
+                            a.closest('li').style.display = show ? '' : 'none';
+                            if (show) hasMatch = true;
+                        });
+                        parent.style.display = hasMatch ? '' : 'none';
+                    });
+                });
+            }
+
+            // ===== ไฮไลต์ในสารบัญ =====
+            const tocLinkMap = new Map();
+            $$('#sidebar a').forEach(item => {
+                const href = item.getAttribute('href');
+                if (href && href.startsWith('#')) {
+                    tocLinkMap.set(href.slice(1), item);
+                }
+            });
+
+            let currentActive = null;
+            function ensureParentExpanded(link) {
+                if (!link) return;
+                const parentLi = link.closest('.toc-parent');
+                if (!parentLi) return;
+                const childList = parentLi.querySelector(':scope > ul.toc-child');
+                if (childList && !childList.classList.contains('open')) {
+                    childList.classList.add('open');
+                    const btn = parentLi.querySelector('.toc-toggle-btn .toc-toggle-icon');
+                    if (btn) {
+                        btn.classList.remove('fa-chevron-up');
+                        btn.classList.add('fa-chevron-down');
+                    }
+                }
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const id = entry.target.getAttribute('id');
+                        if (currentActive) currentActive.classList.remove('active');
+                        const link = tocLinkMap.get(id);
+                        if (link) {
+                            link.classList.add('active');
+                            currentActive = link;
+                            ensureParentExpanded(link);
+                            try { link.scrollIntoView({ block: 'nearest', behavior: 'smooth' }); } catch (e) { link.scrollIntoView(); }
+                        }
+                    }
+                });
+            }, { root: null, rootMargin: '0px 0px -60% 0px', threshold: 0 });
+
+            sections.forEach(section => observer.observe(section));
+
+            // ===== ระบบรายการโปรด =====
+            const BOOKMARKS_KEY = 'phoneCourse_bookmarks';
+            function getBookmarks() {
+                try { return JSON.parse(localStorage.getItem(BOOKMARKS_KEY) || '[]'); } catch { return []; }
+            }
+            function saveBookmarks(bm) { localStorage.setItem(BOOKMARKS_KEY, JSON.stringify(bm)); }
+            function toggleBookmark(id) {
+                let bm = getBookmarks();
+                const idx = bm.indexOf(id);
+                if (idx >= 0) bm.splice(idx, 1);
+                else bm.push(id);
+                saveBookmarks(bm);
+                return idx < 0; // true = added
+            }
+            function isBookmarked(id) { return getBookmarks().includes(id); }
+
+            // เพิ่มปุ่มรายการโปรดให้ทุกบท
+            sections.forEach(sec => {
+                const id = sec.id;
+                if (!id) return;
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                const btn = document.createElement('button');
+                btn.className = 'bookmark-btn' + (isBookmarked(id) ? ' active' : '');
+                btn.innerHTML = '<i class="fas fa-bookmark"></i><span>' + (isBookmarked(id) ? 'ในรายการโปรด' : 'รายการโปรด') + '</span>';
+                btn.setAttribute('aria-label', isBookmarked(id) ? 'เอาออกจากรายการโปรด' : 'เพิ่มบทนี้เป็นรายการโปรด');
+                btn.addEventListener('click', () => {
+                    const added = toggleBookmark(id);
+                    btn.classList.toggle('active', added);
+                    btn.querySelector('span').textContent = added ? 'ในรายการโปรด' : 'รายการโปรด';
+                    btn.setAttribute('aria-label', added ? 'เอาออกจากรายการโปรด' : 'เพิ่มบทนี้เป็นรายการโปรด');
+                    // อัปเดตสัญลักษณ์ในแถบข้าง
+                    updateTocBookmark(id, added);
+                });
+                // แทรกต่อจาก h3
+                h3.parentNode.insertBefore(btn, h3.nextSibling);
+            });
+
+            function updateTocBookmark(id, isBookmarked) {
+                const tocLink = tocLinkMap.get(id);
+                if (tocLink) {
+                    tocLink.classList.toggle('bookmarked', isBookmarked);
+                }
+            }
+            // เริ่มต้นสัญลักษณ์รายการโปรดในแถบข้าง
+            getBookmarks().forEach(id => updateTocBookmark(id, true));
+
+            // ===== ติ๊กว่าอ่านบทแล้ว =====
+            const COMPLETED_KEY = 'phoneCourse_completed';
+            function getCompleted() {
+                try { return JSON.parse(localStorage.getItem(COMPLETED_KEY) || '[]'); } catch { return []; }
+            }
+            function saveCompleted(arr) { localStorage.setItem(COMPLETED_KEY, JSON.stringify(arr)); }
+            function toggleCompleted(id) {
+                let arr = getCompleted();
+                const idx = arr.indexOf(id);
+                if (idx >= 0) arr.splice(idx, 1);
+                else arr.push(id);
+                saveCompleted(arr);
+                return idx < 0;
+            }
+            function isCompleted(id) { return getCompleted().includes(id); }
+
+            sections.forEach(sec => {
+                const id = sec.id;
+                if (!id) return;
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                // หาแถวเมตาหรือองค์ประกอบก่อนหน้า h3
+                const metaDiv = h3.previousElementSibling;
+                const check = document.createElement('button');
+                check.className = 'chapter-check' + (isCompleted(id) ? ' checked' : '');
+                check.innerHTML = '<span class="check-icon"></span><span>' + (isCompleted(id) ? 'อ่านแล้ว' : 'อ่านแล้ว') + '</span>';
+                check.setAttribute('aria-label', isCompleted(id) ? 'ยกเลิกเครื่องหมายอ่านแล้ว' : 'ทำเครื่องหมายว่าอ่านแล้ว');
+                check.addEventListener('click', () => {
+                    const done = toggleCompleted(id);
+                    check.classList.toggle('checked', done);
+                    check.querySelector('span:last-child').textContent = done ? 'อ่านแล้ว' : 'อ่านแล้ว';
+                    check.setAttribute('aria-label', done ? 'ยกเลิกเครื่องหมายอ่านแล้ว' : 'ทำเครื่องหมายว่าอ่านแล้ว');
+                    // อัปเดตแถบข้าง
+                    updateTocCompleted(id, done);
+                    // อัปเดตความคืบหน้าการอ่าน
+                    updateCompletedProgress();
+                });
+                if (metaDiv && metaDiv.classList.contains('flex')) {
+                    metaDiv.appendChild(check);
+                } else {
+                    h3.parentNode.insertBefore(check, h3.nextSibling.nextSibling);
+                }
+            });
+
+            function updateTocCompleted(id, done) {
+                const tocLink = tocLinkMap.get(id);
+                if (tocLink) {
+                    tocLink.classList.toggle('completed-toc', done);
+                }
+            }
+            getCompleted().forEach(id => updateTocCompleted(id, true));
+
+            function updateCompletedProgress() {
+                const completed = getCompleted().length;
+                if (readingProgressText) {
+                    // อัปเดตตัวนับบทที่อ่านแล้วด้วย
+                    const passed = parseInt(readingProgressText.textContent) || 0;
+                    readingProgressText.textContent = `${passed} / ${totalChapters} บท`;
+                }
+            }
+
+            // ===== ค้นหา (อัปเกรด: นำทางด้วยคีย์บอร์ด + นับผลลัพธ์) =====
+            let searchData = null;
+            let searchSelectedIdx = -1;
+            let searchResultItems = [];
+
+            function buildSearchIndex() {
+                if (searchData) return;
+                searchData = sections.map(section => {
+                    const id = section.getAttribute('id');
+                    const h3 = section.querySelector('h3');
+                    const title = h3 ? h3.textContent : '';
+                    const text = section.textContent;
+                    return { id, title, text };
+                });
+            }
+
+            function renderSearchPlaceholder(message) {
+                if (searchResults) {
+                    searchResults.innerHTML = `<div class="p-4 text-center text-gray-400 text-sm">${message}</div>`;
+                }
+            }
+            function runSearch(query) {
+                buildSearchIndex();
+                const normalizedQuery = (query || '').trim().toLowerCase();
+                if (!normalizedQuery) {
+                    renderSearchPlaceholder('พิมพ์คำสำคัญเพื่อเริ่มค้นหา');
+                    searchSelectedIdx = -1;
+                    searchResultItems = [];
+                    return;
+                }
+                const results = searchData.filter(item =>
+                    item.title.toLowerCase().includes(normalizedQuery) || item.text.toLowerCase().includes(normalizedQuery)
+                ).slice(0, 20);
+
+                if (results.length === 0) {
+                    renderSearchPlaceholder('ไม่พบเนื้อหาที่เกี่ยวข้อง');
+                    searchSelectedIdx = -1;
+                    searchResultItems = [];
+                    return;
+                }
+
+                const countHtml = `<div class="px-4 py-2 text-xs text-gray-400 border-b border-gray-100 dark:border-gray-700">พบ ${results.length} ผลลัพธ์</div>`;
+                searchResults.innerHTML = countHtml + results.map(item => {
+                    const idx = item.text.toLowerCase().indexOf(normalizedQuery);
+                    const start = Math.max(0, idx - 40);
+                    const end = Math.min(item.text.length, idx + normalizedQuery.length + 80);
+                    let excerpt = (start > 0 ? '...' : '') + item.text.slice(start, end) + (end < item.text.length ? '...' : '');
+                    const re = new RegExp(normalizedQuery.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
+                    const highlightedTitle = item.title.replace(re, '<mark>$&</mark>');
+                    const highlightedExcerpt = excerpt.replace(re, '<mark>$&</mark>');
+                    return `<div class="search-result-item" data-target="${item.id}">
+                        <div class="result-title">${highlightedTitle}</div>
+                        <div class="result-excerpt">${highlightedExcerpt}</div>
+                    </div>`;
+                }).join('');
+
+                searchResultItems = $$('.search-result-item', searchResults);
+                searchSelectedIdx = -1;
+
+                searchResultItems.forEach(el => {
+                    el.addEventListener('click', () => {
+                        const targetId = el.dataset.target;
+                        if (targetId) {
+                            closeSearch();
+                            scrollToAnchor(targetId);
+                        }
+                    });
+                });
+            }
+            function openSearch() {
+                if (!searchOverlay) return;
+                buildSearchIndex();
+                searchOverlay.classList.add('active');
+                searchOverlay.setAttribute('aria-hidden', 'false');
+                if (searchInput) {
+                    setTimeout(() => {
+                        searchInput.focus();
+                        if (searchInput.value) {
+                            runSearch(searchInput.value);
+                        }
+                    }, 100);
+                }
+            }
+            function closeSearch() {
+                if (searchOverlay) {
+                    searchOverlay.classList.remove('active');
+                    searchOverlay.setAttribute('aria-hidden', 'true');
+                }
+                if (searchInput) searchInput.value = '';
+                renderSearchPlaceholder('พิมพ์คำสำคัญเพื่อเริ่มค้นหา');
+                searchSelectedIdx = -1;
+                searchResultItems = [];
+            }
+
+            function updateSearchSelection() {
+                searchResultItems.forEach((el, i) => {
+                    el.classList.toggle('selected', i === searchSelectedIdx);
+                });
+                if (searchSelectedIdx >= 0 && searchResultItems[searchSelectedIdx]) {
+                    searchResultItems[searchSelectedIdx].scrollIntoView({ block: 'nearest' });
+                }
+            }
+
+            const searchToggle = $('#search-toggle');
+            if (searchToggle) searchToggle.addEventListener('click', openSearch);
+            if (quickSearch) quickSearch.addEventListener('click', openSearch);
+            const searchClose = $('#search-close');
+            if (searchClose) searchClose.addEventListener('click', closeSearch);
+            if (searchOverlay) searchOverlay.addEventListener('click', (e) => {
+                if (e.target === searchOverlay) closeSearch();
+            });
+
+            let searchTimer = null;
+            if (searchInput) searchInput.addEventListener('input', () => {
+                clearTimeout(searchTimer);
+                searchTimer = setTimeout(() => runSearch(searchInput.value), 200);
+            });
+
+            // นำทางการค้นหาด้วยคีย์บอร์ด
+            if (searchInput) searchInput.addEventListener('keydown', (e) => {
+                if (!searchResultItems.length) return;
+                if (e.key === 'ArrowDown') {
+                    e.preventDefault();
+                    searchSelectedIdx = Math.min(searchSelectedIdx + 1, searchResultItems.length - 1);
+                    updateSearchSelection();
+                } else if (e.key === 'ArrowUp') {
+                    e.preventDefault();
+                    searchSelectedIdx = Math.max(searchSelectedIdx - 1, 0);
+                    updateSearchSelection();
+                } else if (e.key === 'Enter' && searchSelectedIdx >= 0) {
+                    e.preventDefault();
+                    const el = searchResultItems[searchSelectedIdx];
+                    if (el) {
+                        const targetId = el.dataset.target;
+                        if (targetId) {
+                            closeSearch();
+                            scrollToAnchor(targetId);
+                        }
+                    }
+                }
+            });
+
+            // ===== ขนาดฟอนต์ =====
+            const DEFAULT_FONT_SIZE = 16;
+            function setFontSize(size) {
+                contentEl.style.fontSize = size + 'px';
+                localStorage.setItem('fontSize', size + 'px');
+            }
+            const savedFontSize = parseInt(localStorage.getItem('fontSize') || '', 10);
+            setFontSize(Number.isFinite(savedFontSize) ? savedFontSize : DEFAULT_FONT_SIZE);
+
+            $$('.font-size-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const action = btn.dataset.action;
+                    const current = parseFloat(getComputedStyle(contentEl).fontSize);
+                    let newSize;
+                    if (action === 'reset') newSize = DEFAULT_FONT_SIZE;
+                    else if (action === 'increase') newSize = Math.min(current + 2, 24);
+                    else newSize = Math.max(current - 2, 12);
+                    setFontSize(newSize);
+                });
+            });
+
+            // ===== ปิดแถบข้างด้วยการปัด =====
+            let touchStartX = 0;
+            let touchStartY = 0;
+            sidebar.addEventListener('touchstart', (e) => {
+                touchStartX = e.touches[0].clientX;
+                touchStartY = e.touches[0].clientY;
+            }, { passive: true });
+            sidebar.addEventListener('touchend', (e) => {
+                const dx = e.changedTouches[0].clientX - touchStartX;
+                const dy = Math.abs(e.changedTouches[0].clientY - touchStartY);
+                if (dx < -60 && dy < 50 && window.innerWidth < 1024) closeSidebar();
+            }, { passive: true });
+
+            // ===== นำทางระหว่างบท =====
+            const sectionIds = sections.map(s => s.id);
+            sections.forEach((section, i) => {
+                const nav = document.createElement('div');
+                nav.className = 'chapter-nav';
+                let navHtml = '';
+                if (i > 0) {
+                    navHtml += `<a href="#${sectionIds[i-1]}" class="prev"><i class="fas fa-arrow-left" aria-hidden="true"></i><span class="truncate">${sections[i-1].querySelector('h3')?.textContent || 'บทก่อนหน้า'}</span></a>`;
+                } else {
+                    navHtml += '<span></span>';
+                }
+                if (i < sections.length - 1) {
+                    navHtml += `<a href="#${sectionIds[i+1]}" class="next"><span class="truncate">${sections[i+1].querySelector('h3')?.textContent || 'บทถัดไป'}</span><i class="fas fa-arrow-right" aria-hidden="true"></i></a>`;
+                }
+                nav.innerHTML = navHtml;
+                section.appendChild(nav);
+            });
+
+            // ===== พิมพ์ =====
+            function doPrint() { window.print(); }
+            if (printBtn) printBtn.addEventListener('click', doPrint);
+            if (quickPrint) quickPrint.addEventListener('click', doPrint);
+
+            // ===== ปุ่มลัดทั่วไป =====
+            const shortcutsOverlay = $('#shortcuts-overlay');
+            const backupOverlay = $('#backup-overlay');
+            function openShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.add('active'); }
+            function closeShortcuts() { if (shortcutsOverlay) shortcutsOverlay.classList.remove('active'); }
+            function openBackup() { if (backupOverlay) backupOverlay.classList.add('active'); }
+            function closeBackup() { if (backupOverlay) backupOverlay.classList.remove('active'); }
+
+            const quickShortcuts = $('#quick-shortcuts');
+            const quickBackup = $('#quick-backup');
+            if (quickShortcuts) quickShortcuts.addEventListener('click', openShortcuts);
+            if (quickBackup) quickBackup.addEventListener('click', openBackup);
+            const shortcutsClose = $('#shortcuts-close');
+            const backupClose = $('#backup-close');
+            if (shortcutsClose) shortcutsClose.addEventListener('click', closeShortcuts);
+            if (backupClose) backupClose.addEventListener('click', closeBackup);
+
+            // ปิดหน้าต่างเมื่อคลิกที่ฉากหลัง
+            if (shortcutsOverlay) shortcutsOverlay.addEventListener('click', (e) => {
+                if (e.target === shortcutsOverlay) closeShortcuts();
+            });
+            if (backupOverlay) backupOverlay.addEventListener('click', (e) => {
+                if (e.target === backupOverlay) closeBackup();
+            });
+
+            document.addEventListener('keydown', (e) => {
+                if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
+                    else openSearch();
+                } else if ((e.ctrlKey || e.metaKey) && e.key === 'p') {
+                    // การพิมพ์เบราว์เซอร์จัดการเองแล้ว
+                } else if (e.key === 'Escape') {
+                    if (searchOverlay && searchOverlay.classList.contains('active')) closeSearch();
+                    if (shortcutsOverlay && shortcutsOverlay.classList.contains('active')) closeShortcuts();
+                    if (backupOverlay && backupOverlay.classList.contains('active')) closeBackup();
+                } else if (e.key === 't' || e.key === 'T') {
+                    if (!e.ctrlKey && !e.metaKey) toggleTheme();
+                } else if (e.key === '?') {
+                    if (!e.ctrlKey && !e.metaKey && shortcutsOverlay) {
+                        shortcutsOverlay.classList.contains('active') ? closeShortcuts() : openShortcuts();
+                    }
+                }
+            });
+
+            // ===== ติดตามวันอ่านต่อเนื่อง =====
+            const STREAK_KEY = 'reading-streak';
+            const STREAK_DATE_KEY = 'reading-streak-date';
+            const streakToast = $('#streak-toast');
+            const streakToastText = $('#streak-toast-text');
+
+            function updateStreak() {
+                try {
+                    const today = new Date().toDateString();
+                    const lastDate = localStorage.getItem(STREAK_DATE_KEY);
+                    let streak = parseInt(localStorage.getItem(STREAK_KEY) || '0', 10);
+
+                    if (lastDate !== today) {
+                        const yesterday = new Date(Date.now() - 86400000).toDateString();
+                        if (lastDate === yesterday) {
+                            streak += 1;
+                        } else if (lastDate !== today) {
+                            streak = 1;
+                        }
+                        localStorage.setItem(STREAK_KEY, streak.toString());
+                        localStorage.setItem(STREAK_DATE_KEY, today);
+
+                        // แสดงแจ้งเตือนวันต่อเนื่อง
+                        if (streak >= 2 && streakToast && streakToastText) {
+                            streakToastText.textContent = '🔥 วันที่ ' + streak + ' ของการอ่านต่อเนื่อง สู้ ๆ!';
+                            streakToast.classList.add('show');
+                            setTimeout(() => streakToast.classList.remove('show'), 5000);
+                        }
+                    }
+                } catch(e) { /* localStorage อาจใช้ไม่ได้ */ }
+            }
+            updateStreak();
+
+            // ===== สำรอง/กู้คืน =====
+            function exportBackup() {
+                try {
+                    const data = {
+                        version: '3.0',
+                        exportDate: new Date().toISOString(),
+                        theme: localStorage.getItem('theme'),
+                        fontSize: localStorage.getItem('fontSize'),
+                        readingPosition: localStorage.getItem(POSITION_KEY),
+                        readingChapter: localStorage.getItem(POSITION_CHAPTER_KEY),
+                        streak: localStorage.getItem(STREAK_KEY),
+                        streakDate: localStorage.getItem(STREAK_DATE_KEY),
+                        healthChecks: {},
+                        chapterChecks: {},
+                        bookmarks: [],
+                        ratings: {}
+                    };
+                    // รวบรวมสถานะเช็กสุขภาพ
+                    for (let i = 0; i < 8; i++) {
+                        data.healthChecks[i] = localStorage.getItem('health-check-' + i);
+                    }
+                    // รวบรวมสถานะการอ่านบท
+                    $$('.chapter-check.checked').forEach(c => {
+                        const sec = c.closest('.content-section');
+                        if (sec) data.chapterChecks[sec.id] = true;
+                    });
+                    // รวบรวมรายการโปรด
+                    $$('.toc-item.bookmarked').forEach(b => {
+                        data.bookmarks.push(b.getAttribute('href').replace('#', ''));
+                    });
+                    // รวบรวมคะแนน
+                    $$('.chapter-rating').forEach(r => {
+                        const sec = r.closest('.content-section');
+                        if (sec) data.ratings[sec.id] = r.dataset.rating || '0';
+                    });
+
+                    const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
+                    const url = URL.createObjectURL(blob);
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = 'สำรองการอ่าน-PhoneClass_' + new Date().toISOString().slice(0,10) + '.json';
+                    a.click();
+                    URL.revokeObjectURL(url);
+                } catch(e) {
+                    alert('ส่งออกสำรองข้อมูลล้มเหลว: ' + e.message);
+                }
+            }
+
+            function importBackup(file) {
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    try {
+                        const data = JSON.parse(e.target.result);
+                        if (data.theme) localStorage.setItem('theme', data.theme);
+                        if (data.fontSize) localStorage.setItem('fontSize', data.fontSize);
+                        if (data.readingPosition) localStorage.setItem(POSITION_KEY, data.readingPosition);
+                        if (data.readingChapter) localStorage.setItem(POSITION_CHAPTER_KEY, data.readingChapter);
+                        if (data.streak) localStorage.setItem(STREAK_KEY, data.streak);
+                        if (data.streakDate) localStorage.setItem(STREAK_DATE_KEY, data.streakDate);
+                        // กู้คืนสถานะเช็กสุขภาพ
+                        if (data.healthChecks) {
+                            Object.keys(data.healthChecks).forEach(i => {
+                                localStorage.setItem('health-check-' + i, data.healthChecks[i]);
+                            });
+                        }
+                        // กู้คืนสถานะการอ่านบท
+                        if (data.chapterChecks) {
+                            Object.keys(data.chapterChecks).forEach(id => {
+                                const sec = document.getElementById(id);
+                                if (sec) {
+                                    const check = sec.querySelector('.chapter-check');
+                                    if (check) check.classList.add('checked');
+                                    const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
+                                    if (tocItem) tocItem.classList.add('completed-toc');
+                                }
+                            });
+                        }
+                        // กู้คืนรายการโปรด
+                        if (data.bookmarks) {
+                            data.bookmarks.forEach(id => {
+                                const tocItem = document.querySelector('.toc-item[href="#' + id + '"]');
+                                if (tocItem) tocItem.classList.add('bookmarked');
+                            });
+                        }
+                        alert('กู้คืนสำเร็จ! หน้าจะรีโหลดเพื่อใช้ข้อมูลทั้งหมด');
+                        location.reload();
+                    } catch(err) {
+                        alert('กู้คืนล้มเหลว: รูปแบบไฟล์ไม่ถูกต้อง ' + err.message);
+                    }
+                };
+                reader.readAsText(file);
+            }
+
+            function resetAllData() {
+                if (!confirm('ล้างข้อมูลการอ่านทั้งหมด? ทำไม่ได้แล้ว! ส่งออกสำรองข้อมูลก่อน')) return;
+                if (!confirm('ยืนยันอีกครั้ง: ความคืบหน้า รายการโปรด และคะแนนจะถูกลบทั้งหมด จะไปต่อหรือไม่?')) return;
+                localStorage.clear();
+                alert('ล้างข้อมูลทั้งหมดแล้ว หน้าจะรีโหลด');
+                location.reload();
+            }
+
+            const backupExport = $('#backup-export');
+            const backupImportBtn = $('#backup-import-btn');
+            const backupImportInput = $('#backup-import-input');
+            const backupReset = $('#backup-reset');
+            if (backupExport) backupExport.addEventListener('click', exportBackup);
+            if (backupImportBtn && backupImportInput) {
+                backupImportBtn.addEventListener('click', () => backupImportInput.click());
+            }
+            if (backupImportInput) backupImportInput.addEventListener('change', (e) => {
+                if (e.target.files[0]) importBackup(e.target.files[0]);
+            });
+            if (backupReset) backupReset.addEventListener('click', resetAllData);
+
+            // ===== ระบบให้คะแนนบท =====
+            sections.forEach(sec => {
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+                const ratingDiv = document.createElement('div');
+                ratingDiv.className = 'chapter-rating';
+                ratingDiv.dataset.rating = localStorage.getItem('rating-' + sec.id) || '0';
+                for (let i = 1; i <= 5; i++) {
+                    const star = document.createElement('span');
+                    star.className = 'star';
+                    star.textContent = '★';
+                    star.dataset.value = i;
+                    star.addEventListener('click', () => {
+                        const current = parseInt(ratingDiv.dataset.rating, 10);
+                        const newRating = current === i ? 0 : i;
+                        ratingDiv.dataset.rating = newRating;
+                        localStorage.setItem('rating-' + sec.id, newRating);
+                        updateStars(ratingDiv);
+                    });
+                    ratingDiv.appendChild(star);
+                }
+                // แทรกต่อจาก h3
+                h3.parentNode.insertBefore(ratingDiv, h3.nextSibling);
+                updateStars(ratingDiv);
+            });
+
+            function updateStars(container) {
+                const rating = parseInt(container.dataset.rating, 10);
+                container.querySelectorAll('.star').forEach(s => {
+                    s.classList.toggle('active', parseInt(s.dataset.value, 10) <= rating);
+                });
+            }
+
+            // ===== ปรับดีเบานซ์การเลื่อน =====
+            let scrollTicking = false;
+            const originalOnScroll = onScroll;
+            function debouncedScroll() {
+                if (!scrollTicking) {
+                    requestAnimationFrame(() => {
+                        originalOnScroll();
+                        scrollTicking = false;
+                    });
+                    scrollTicking = true;
+                }
+            }
+            window.removeEventListener('scroll', onScroll);
+            window.addEventListener('scroll', debouncedScroll, { passive: true });
+
+            // ===== ตามโหมดมืดของระบบ =====
+            if (window.matchMedia) {
+                const mq = window.matchMedia('(prefers-color-scheme: dark)');
+                if (mq.addEventListener) {
+                    mq.addEventListener('change', (e) => {
+                        if (!localStorage.getItem('theme')) {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                } else if (mq.addListener) {
+                    mq.addListener((e) => {
+                        if (!localStorage.getItem('theme')) {
+                            applyTheme(e.matches ? 'dark' : 'light');
+                        }
+                    });
+                }
+            }
+
+            // ===== เติม breadcrumb และป้ายระดับความยากให้หัวข้อบทโดยอัตโนมัติ =====
+            sections.forEach(sec => {
+                const id = sec.id || '';
+                const h3 = sec.querySelector('h3');
+                if (!h3) return;
+
+                let level = 'intermediate';
+                if (id.startsWith('di-ling') || id.startsWith('di-yi') || id.startsWith('di-er') || id.startsWith('di-san') || id.startsWith('di-er-shi-qi') || id.startsWith('di-er-shi-ba') || id.startsWith('di-er-shi-jiu') || id.startsWith('di-san-shi') || id.startsWith('fu-lu')) {
+                    level = 'beginner';
+                } else if (id.startsWith('di-shi-wu') || id.startsWith('di-shi-liu') || id.startsWith('di-shi-qi') || id.startsWith('di-shi-ba') || id.startsWith('di-shi-jiu') || id.startsWith('di-er-shi')) {
+                    level = 'intermediate';
+                } else {
+                    level = 'advanced';
+                }
+
+                const text = sec.textContent || '';
+                const minutes = Math.max(2, Math.round(text.length / 900));
+
+                const meta = document.createElement('div');
+                meta.className = 'flex flex-wrap items-center gap-2 mb-2 text-xs';
+                meta.innerHTML = `
+                    <span class="difficulty-tag difficulty-${level}">
+                        <i class="fas ${level === 'beginner' ? 'fa-seedling' : level === 'intermediate' ? 'fa-mountain' : 'fa-rocket'}" aria-hidden="true"></i>
+                        ${level === 'beginner' ? 'เริ่มต้น' : level === 'intermediate' ? 'ระดับกลาง' : 'ขั้นสูง'}
+                    </span>
+                    <span class="reading-time">
+                        <i class="far fa-clock" aria-hidden="true"></i>อ่าน ~${minutes} นาที
+                    </span>
+                `;
+                h3.parentNode.insertBefore(meta, h3);
+            });
+
+            // ===== เพิ่มบล็อก "สรุป" ให้บท =====
+            function addChapterSummary(sec, points) {
+                const div = document.createElement('div');
+                div.className = 'chapter-summary';
+                div.innerHTML = `<p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>สรุปประจำบท</p><ul class="list-disc pl-5 text-sm space-y-0.5">${points.map(p => `<li>${p}</li>`).join('')}</ul>`;
+                const nav = sec.querySelector('.chapter-nav');
+                if (nav) sec.insertBefore(div, nav);
+                else sec.appendChild(div);
+            }
+            const summaries = {
+                'fu-lu-f': ['จอพับสุกงอมแล้วแต่ยังไม่ใช่กระแสหลัก: เป็น "ของประดับ" ไม่ใช่ "ของช่วยชีวิต"', 'พับขวาง = โทรศัพท์ + แท็บเล็ต พับตาม = พกง่าย + แอบมองจอนอก', 'เหมาะกับ: อ่านหนัก/ธุรกิจ/สร้างสรรค์แบบพับค้าง/ผู้หญิงที่เน้นพกพา', 'หกจุดตรวจก่อนซื้อ: ชนิดบานพับ, จอใน UTG, รอยพับ, ขนาดจอนอก, น้ำหนักและความหนา, ราคาซ่อมหลังประกัน', 'ท่าเฉพาะตัว: ทำงานหลายอย่างบนจอแบ่งครึ่ง พับค้าง 90 องศา แอบดูจอนอก และโหมดคอมพิวเตอร์', 'หัวใจการดูแล: อย่าเปิด-ปิดในที่เย็นจัด กันเม็ดทรายเข้าจอ อย่าแปะฟิล์มธรรมดาบนจอใน และรักษาบานพับให้พ้นฝุ่น', 'คาดการณ์ไว้: รอยพับอยู่ตลอดไป หนักและหนาขึ้น แบตกลาง ๆ ราคาขายต่อต่ำ ซ่อมแพง', 'ปรัชญาการซื้อ: ซื้อเพราะรูปแบบเฉพาะตัว ไม่ใช่เพราะ "ล้ำกว่า"'],
+                'di-ling-zhang': ['เข้าใจตำแหน่งของหนังสือ: วิทยาศาสตร์ดิจิทัลที่พูดเข้าใจง่ายและลงมือทำได้', 'เชี่ยวชาญระบบสัญลักษณ์: [ปุ่ม], >, ตัวหนา และตัวเอียง หมายความว่าอะไร', 'ทำไมความจุโทรศัพท์ "หด" สาเหตุหลักมีอะไรบ้าง', 'สร้างนิสัยจดสเปกโทรศัพท์ของตัวเอง', 'โทรศัพท์ = ตู้เซฟสินทรัพย์ดิจิทัล ป้องกันก่อนคือแนวคิดหลัก', 'ข้อมูลมักมีมูลค่ามากกว่าฮาร์ดแวร์ตัวเอง'],
+                'di-yi-zhang': ['SoC = CPU + GPU + NPU + ISP + โมเด็มและโมดูลอื่นรวมในชิปเดียว', 'คอร์ใหญ่กับคอร์เล็กทำงานร่วมกัน: สมดุลประสิทธิภาพกับแบต', 'จอ: OLED/LCD อัตรารีเฟรช และความสว่างอัตโนมัติ', 'หัวใจระบบภาพ: ขนาดเซนเซอร์สำคัญกว่าจำนวนพิกเซล', 'วิวัฒนาการพอร์ต: Micro USB → Lightning → รวมเป็น USB-C', '5G-A นำความสามารถใหม่ "รวมการสื่อสารกับการรับรู้" มาให้'],
+                'di-yi-zhang-harmony': ['HarmonyOS = ระบบปฏิบัติการแบบกระจาย ออกแบบให้หลายอุปกรณ์มาตั้งแต่แรก', 'HarmonyOS 4.3 เข้ากันได้กับ AOSP และรันแอป Android ได้', 'HarmonyOS NEXT เป็นอิสระสมบูรณ์ และไม่รองรับแอป Android อีกต่อไป', 'ก่อนอัปเกรดให้แน่ใจว่าแอปที่ใช้ประจำมีเวอร์ชันดั้งเดิมแล้ว'],
+                'di-er-zhang': ['ที่เก็บสามชั้น: ตัวเครื่อง / การ์ด SD / คลาวด์', 'ความหมายของโฟลเดอร์ทั่วไปใน Android (DCIM, Download ฯลฯ)', 'สำรองข้อมูล = สำรองคลาวด์ + สำรองในเครื่อง กันสองชั้น', 'ลบไม่เท่าทำลาย ต้อง "เขียนทับ" จึงล้างจริง', 'สรุปสั้นฟอร์แมตไฟล์ที่พบบ่อย (ภาพ/เสียง/วิดีโอ/เอกสาร)', 'ตั้งชื่อแบบ "วันที่ + เหตุการณ์" เป็นธรรมเนียมพื้นฐาน', 'ล้างอัตโนมัติทุก 72 ชั่วโมง แก้ปัญหาแคชแอปโซเชียลสะสม', 'กันภัยรูปสองชั้น: ปิดบัง + ลบข้อมูล EXIF'],
+                'di-san-zhang': ['4G/5G ต่างมีบทบาท 5G-A คือเวอร์ชันเสริมพลัง', 'ความต่างทางเทคนิคสำคัญของ Wi-Fi 6/6E/7', 'Wi-Fi สาธารณะต้องระวัง: อย่าพิมพ์ข้อมูลอ่อนไหว', 'Bluetooth 5.x พัฒนาต่อเนื่อง LE Audio เริ่มแพร่หลาย', 'NFC ทำงานในระยะ 10 ซม. ความใกล้ชิดทางกายภาพคือเกราะป้องกันเอง'],
+                'di-si-zhang': ['ติดตั้งแอปจากร้านทางการก่อนเป็นอันดับแรก', 'แพ็กเกจ APK = ใบรับรอง + ทรัพยากร + ค่าตั้ง + ไบนารี', 'ระวังแอป "ทำความสะอาด-เร่งเครื่อง" แอปค้างพื้นหลังเป็นเรื่องสมเหตุสมผลได้', 'ตรวจลายเซ็นแอปกันการแก้กลับ: การป้องกันระดับระบบ', 'โหมดบริสุทธิ์ = ติดตั้งจากร้านทางการเท่านั้น กำแพงแรกสู้มัลแวร์', '"ปรสิตดิจิทัล" หมายถึงแอปแตกที่มีโทรจันฝังอยู่ข้างใน', 'กลไกตรวจร้านแอป: สแกนไวรัส + ตรวจสิทธิ์ + ยืนยันตัวนักพัฒนา'],
+                'di-wu-zhang': ['จอ: ความละเอียด อัตรารีเฟรช ความสว่างอัตโนมัติ', 'เสียง: เสียงเรียก/สื่อ/แจ้งเตือน ปรับแยกกัน', 'พื้นที่จัดเก็บ: ล้างแคชกับไฟล์ไม่จำเป็นอย่างสม่ำเสมอ', 'ไบโอเมตริก: ลายนิ้วมือสู้ใบหน้า 3 มิติปลอดภัยกว่า 2 มิติ', 'โปรแกรมอ่านหน้าจอ: VoiceOver บน iOS / TalkBack บน Android คือดวงตาของผู้ใช้ที่สายตาพิการ', 'ขยาย: คอนทราสต์สูง ตัวหนา ฟิลเตอร์สี สามชุด', 'AI บรรยายภาพ: ให้ AI อ่านรูป เมนู และแคปช่าให้คุณ', 'คำบรรยายสด: ผู้พิทักษ์ของผู้ฟังบกพร่องและสถานที่เสียงดัง', 'RTT/TTY: คนที่พูดไม่ได้หรือหูหนวกก็โทรได้'],
+                'di-liu-zhang': ['รหัสล็อกหน้าจอ + ยืนยันสองชั้น คือเส้นป้องกันพื้นฐาน', 'สิทธิ์แอป: เปิดตามความจำเป็น หลักการสิทธิน้อยที่สุด', 'ไม่ชำระเงิน ไม่ล็อกอินบน Wi-Fi สาธารณะ', 'ยุค AI เห็นแล้วไม่ควรเชื่อ: หน้าและเสียงปลอม แอบอ้างผู้มีอำนาจ และการลงทุนหลอกลวง คือแกล้งที่พบมากที่สุด', 'ทางรอด: ยืนยันด้วยการกระทำ + รหัสลับร่วมกัน + ยืนยันรอบสอง', 'ก่อนแชร์รูปให้เลิกระบุตัวตน: ปิดตำแหน่งและข้อมูลอุปกรณ์ใน EXIF', 'อุปกรณ์ IoT: เปลี่ยนรหัสผ่านเริ่มต้น', 'เจอการหลอกลวงให้จำ: ไม่เชื่อง่าย ไม่เปิดเผย ไม่โอน'],
+                'di-qi-zhang-jichu': ['ดาวเทียม: "เชือกช่วยชีวิต" ในยามฉุกเฉิน', 'คุยได้แม้ไร้เน็ต: วิทยุสื่อสารระยะไกล', 'ตรวจจับอุบัติเหตุ: การหลอมรวมเซนเซอร์จับการชนรุนแรงได้', 'StarFlash: การเชื่อมต่อไร้สายความหน่วงต่ำที่มีศักยภาพมหาศาล'],
+                'di-ba-zhang': ['อัดสาย: ระวังข้อกฎหมาย', 'iMessage/RCS ยกระดับ SMS เดิมเป็นสื่อสมบูรณ์', 'แชท WeChat ต้องใช้ฟังก์ชันสำรองในตัวของ WeChat', 'แอปเมลจัดการหลายบัญชีในที่เดียว', 'บล็อกการรบกวน: ระบบจับ + รายชื่อดำ/ขาว + กรองคำสำคัญใน SMS', 'เงียบสายไม่รู้จักบน iOS กันคนรบกวนได้ แต่ระวังสายที่พลาดไป', 'ถูกแจ้งผิดว่าเป็นสแปมขออุทธรณ์ผ่าน Dianhua Bang/360/เทนเซ็นต์ และช่องทางผู้ให้บริการ'],
+                'di-jiu-zhang': ['WPS Office ใช้ดีที่สุดในจีน, Microsoft 365 เข้ากันได้ดีที่สุด', 'โน้ตสามขั้น: จดไว้ก่อน → ค่อยอ่าน → กลายเป็นระบบความรู้', 'สแกนด้วยโทรศัพท์: โน้ตของเครื่อง/Mic Lens/Baimiao/CamScanner', 'คลาวด์ตามความจำเป็น: iCloud/OneDrive/ไป๋ตู้/Aliyun Drive แต่ละตัวมีโอกาสใช้งานของตัวเอง'],
+                'di-shi-zhang': ['ใครเห็นรหัสชำระเงิน คนนั้นได้เงิน อย่าส่งภาพหน้าจอให้ใครเด็ดขาด', 'เช็กสุขภาพความปลอดภัย 5 นาที: ชำระด้วยชีวมิติ + กุญแจความปลอดภัย + ตรวจการจ่ายแบบไม่ต้องใส่รหัส + จัดการอุปกรณ์', 'บนรถไฟฟ้าและรถเมล์ ใช้บัตรเดินทางเสมือนในกระเป๋าโทรศัพท์ดีกว่า ทำงานได้แม้ออฟไลน์', 'บัตรประกันสุขภาพอิเล็กทรอนิกส์ เช็กบำนาญ ยื่นภาษี ทำได้หมดบนมือถือ', 'สี่ไม่สู้โจร: ไม่โอนไป "บัญชีปลอดภัย", ไม่ส่งรหัสชำระเงิน, ไม่กดลิงก์แปลกปลอม, ไม่บอกเลขบัตร'],
+                'di-shi-yi-zhang': ['สี่ข้อผิดพลาดที่พบบ่อย: เลนส์สกปรก ไม่ปรับรูแสง ใช้แฟลชเกินงาน ใช้ซูมดิจิทัลผิดที่', 'โหมดกลางคืนรวมหลายเฟรม จับนิ่ง 2-4 วินาที', 'โหมดโปร: ISO ต่ำภาพสะอาด ชัตเตอร์คุมแสง', 'สายงานหลังถ่าย: แก้เอียง → ปรับพื้นฐาน → เก็บรายละเอียด → ใส่สไตล์', 'ค้นหาอัจฉริยะ + เก็บกวาดสม่ำเสมอ + อัลบั้มจัดเอง = สามเสาการจัดรูปภาพ'],
+                'di-shi-yi-zhang-advanced': ['สามเสาของวิดีโอ: ความละเอียด เฟรมเรต บิตเรต', 'H.265 บีบอัดได้ดีกว่า H.264 อีก 50%', 'ProRes คือโคเดกมืออาชีพของ Apple ไฟล์ใหญ่มาก', 'HDR10/10+/Dolby Vision แต่ละตัวมีจุดยืนของตัวเอง'],
+                'di-shi-er-zhang': ['NetEase Cloud Music เด่นเรื่องเพลย์ลิสต์และชุมชน, QQ Music มีแคตตาล็อกกว้างสุด, Apple Music เรียบและไร้การสูญเสีย, Spotify แนะนำแม่นยำ', 'Xiaoyuzhou คือตัวเลือกแรกของพอดแคสต์ภาษาจีน ใช้ความเร็วกับการล้างอัตโนมัติให้เป็น', 'วิดีโอในเครื่อง: VLC (ทุกฟอร์แมต) หรือ nPlayer (ควบคุมด้วยท่าทาง)', 'การขีดเส้นใต้ใน WeChat Read มีมิติสังคม + ซิงก์ Kindle โหมดพักสายตาต้องเปิดทุกครั้ง', 'โหมดเกมมุ่งรักษาเฟรมให้ลื่นก่อน ร้อนจัดช่วยได้ด้วยพัดหลังเครื่อง'],
+                'di-shi-san-zhang': ['เครื่องมือเพิ่มผลิตภาพ: สิ่งที่ต้องทำ + โพโมโดโร + ปฏิทิน', 'สุขภาพและออกกำลังกาย: Apple Health/Google Fit เป็นศูนย์กลางข้อมูล', 'เบราว์เซอร์: เริ่มที่ Edge คู่กับ Copilot เพิ่มประสิทธิภาพ', 'ค้นหาให้ออกของจริง: เชื่อโดเมนทางการ เลี่ยงส่วนท้ายราคาถูกอย่าง .xyz', 'ให้ระบบในเครื่องทำความสะอาดก่อน ตัวนอกอย่าง Qingzhuo เป็นเพียงเสริม ห้ามล้างทั้งหมดปุ่มเดียว', 'แอปกันรบกวน: ศูนย์ต่อต้านการหลอกลวงแห่งชาติ + ผู้พิทักษ์ของแบรนด์ + บล็อกจากผู้ให้บริการ', 'การบล็อกในตัว: iOS เปิด เงียบสายไม่รู้จัก, Android เปิดในแอปโทรศัพท์ของแต่ละแบรนด์', 'สามชั้นรวมกัน: บล็อกระบบ + ผู้ให้บริการ + ศูนย์ต่อต้านภัยคุกคาม ระวังรายชื่อขาวกันลบของตัวเอง', 'เตือนภัยอากาศ: แอปอากาศของระบบ + ช่องทางการอุตุนิยมวิทยาทางการ ลงมือตามระดับ น้ำเงิน/เหลือง/ส้ม/แดง', 'เตือนภัยธรรมชาติ: อุตุนิยมวิทยา + ช่องทางป้องกันภัย ฝนหนักพายุให้เลี่ยงที่ต่ำและป้ายโฆษณา', 'เตือนแผ่นดินไหวล่วงหน้าไม่ใช่การพยากรณ์: นำหน้าเป็นวินาทีถึงสิบวินาที บน Android มักอยู่ในการตั้งค่าความปลอดภัย', 'TickTick: ลิสต์ + ปฏิทิน + โพโมโดโร จดนัดด้วยภาษาธรรมชาติ', 'สแกนกระดาษ: กล้องของระบบ/Mic Lens/Baimiao/CamScanner ถ่ายให้คมแล้วค่อย OCR', 'ควบคุมคอมพิวเตอร์ระยะไกล: Sunflower/ToDesk ถ้าคนแปลกหน้าให้คุณติดตั้งโปรแกรมควบคุมระยะไกล = หลอกลวง', 'AI ทำงานสำนักงาน: Trae และอื่น ๆ งานหนักให้คอมทำ จากมือถือติดตามได้จากระยะไกล', 'ส่งไฟล์เร็วในเครือข่ายเฉพาะที่: LocalSend/AirDrop/Feige คลิปบอร์ด: KDE Connect/เครื่องมือของแบรนด์', 'รหัสใช้ครั้งเดียว 2FA: Aegis/Microsoft Authenticator และสำรองรหัสแบบกระดาษสองที่'],
+                'di-shi-si-zhang': ['มีตัวจัดการรหัสผ่านแล้ว จำรหัสหลักรหัสเดียวพอ', 'Bitwarden โอเพนซอร์สและฟรี, 1Password ประสบการณ์ดีที่สุด', 'รหัสหลักต้องยาวและซับซ้อน พร้อมเปิด 2FA', 'ตรวจความปลอดภัยรหัสผ่านเป็นประจำ', 'สถาปัตยกรรมความรู้เป็นศูนย์: แม้ผู้ให้บริการก็ไม่เห็นรหัสผ่านของคุณ การเข้ารหัสเกิดในเครื่อง', 'AES-256 + การดึงกุญแจด้วย PBKDF2/Argon2 เป็นรากฐานความปลอดภัยของตู้เซฟรหัสผ่าน', 'บทเรียนจากเหตุการณ์ LastPass ปี 2022: คนที่เสี่ยงที่สุดคือผู้ใช้รหัสหลักอ่อน', 'ความแข็งแรงของรหัสผ่านคือ "เอนโทรปี": ยาว + สุ่ม ชนะสัญลักษณ์วิเศษ', 'HaveIBeenPwned เช็กข้อมูลรั่ว 1Password Watchtower เฝ้าดูเหตุการณ์', 'Passkey สร้างบน FIDO2/WebAuthn: ต้านฟิชชิง และไม่มีรหัสผ่านถูกส่งออกไป', 'การซิงก์ Passkey ข้ามอุปกรณ์: iCloud Keychain/Google Password Manager รองรับแล้ว', 'กุญแจฮาร์ดแวร์ (YubiKey/Titan) ทนฟิชชิงและการแฮ็กสลับซิม - เหมาะกับผู้ที่เสี่ยงสูง', 'ห้องนิรภัยใช้ร่วมของ 1Password + การเข้าถึงฉุกเฉินของ Bitwarden ทำให้แชร์ในครอบครัวและทีมปลอดภัยขึ้น'],
+                'di-shi-wu-zhang': ['แบตลิเทียม: ชาร์จตามใช้ กลัวร้อน และเสื่อมตามเวลา', 'ต่ำกว่า 80% สุขภาพแบต ระยะใช้งานลดลงชัดเจน', 'โปรโตคอลชาร์จเร็ว: PD/QC/VOOC/SuperCharge ไม่ใช้ร่วมกันได้', 'ชาร์จไร้สาย Qi2 เพิ่มการจัดตำแหน่งแม่เหล็ก', 'หัวใจประหยัดแบต: ลดความสว่าง + ปิดพื้นหลัง + สลับไป 4G'],
+                'di-shi-liu-zhang': ['บัญชีคือทะเบียนบ้านของชีวิตดิจิทัลคุณ: ผูกทั้งรายชื่อ รูป การซื้อ และค้นหาโทรศัพท์', 'สามต้อง: เปิด 2FA ตั้งกุญแจกู้คืน และยืนยันว่าค้นหาโทรศัพท์เปิดอยู่', 'iCloud 5GB ไม่พอ: เก็บกวาด หรืออัปเกรดเป็น 50GB ราว ¥1/เดือน', 'ซิงก์สองทาง (ลบแล้วหายทั้งระบบ) สำรองคือภาพหยุดทางเดียว (ลบแล้วยังอยู่)', 'ผู้ใช้ Android ต้องเช็กแยกกัน: สำรองคลาวด์ของแบรนด์ สำรองของ Google สำรองของ WeChat'],
+                'di-shi-qi-zhang': ['ทำงานข้ามอุปกรณ์: AirDrop ของ Apple/Huawei Multi-Screen Collaboration/Xiaomi Mi Share/เชื่อมต่อกับ Windows', 'ส่งไปทีวี: ไอโฟนใช้ Screen Mirroring, แอนดรอยด์ใช้การส่งไร้สาย ถ้าไม่ได้ตรวจว่าอยู่ Wi-Fi เดียวกัน', 'สมาร์ทวอตช์ = กรองแจ้งเตือน + สถานีสุขภาพ + จ่ายจากข้อมือ ซื้อให้พ่อแม่อาจช่วยชีวิตได้', 'สมาร์ทโฮมเลือกตามระบบนิเวศ: Apple HomeKit/Xiaomi Mijia/Huawei HarmonyOS Connect', 'ความปลอดภัยของการเชื่อม: ฉายในที่สาธารณะระวังความเป็นส่วนตัว และยกเลิกผูกอุปกรณ์เก่าให้ทันเวลา'],
+                'di-shi-ba-zhang': ['สำรองทั้งเครื่อง: ในคอม (เชื่อถือสุด) + คลาวด์ (สบายใจสุด) กันพลาดสองชั้น', 'แชท WeChat เป็นกรณีพิเศษสุด: ต้องใช้ระบบสำรองในตัวของ WeChat เท่านั้น เครื่องมือย้ายเครื่องช่วยไม่ได้', 'กฎ 3-2-1: สำรอง 3 สำเนา บนสื่อ 2 ชนิด และ 1 ชุดอยู่นอกบ้าน', 'ย้ายโทรศัพท์: แบรนด์เดียวกันใช้แอปย้ายของทางการ ข้ามแบรนด์ต้องเตรียมทางผ่านข้อมูลก่อน'],
+                'di-shi-jiu-zhang': ['อืดร้อนสี่ขั้น: ย้อนนึกถึงสิ่งที่เปลี่ยน → เช็กพื้นที่เก็บ → เช็กการใช้แบต → เช็กสัญญาณ', 'ขั้นตอนแอปเดี้ยง: ปิดเปิดใหม่ → อัปเดต → เช็กสิทธิ์ → ล้างแคช → ติดตั้งใหม่', 'ไม่ชาร์จ: ทำความสะอาดพอร์ตก่อน แล้วสลับสายกับหัวชาร์จข้ามกันหาตัวการ', 'เน็ตไม่ได้: สลับโหมดเครื่องบิน → ลืม Wi-Fi แล้วเชื่อมใหม่ → รีสตาร์ทเราเตอร์', 'การรีสตาร์ทสากลแก้ปัญหาแปลก ๆ ได้เกือบทั้งหมด ซ่อมให้เลือกศูนย์ที่ได้รับอนุญาต ก่อนส่งสำรองข้อมูลและออกจากบัญชี'],
+                'di-er-shi-zhang-jinjie': ['โหมดนักพัฒนา: แตะหมายเลขบิลด์ 7 ครั้งเพื่อเปิด', 'ล็อก BL: การป้องกันของผู้ผลิต ปลดด้วยความระมัดระวัง', 'Root: ความเสี่ยงมากกว่าประโยชน์ ผู้ใช้ทั่วไปไม่แนะนำ', 'Magisk ยังต้องปลด BL แต่ซ่อนสถานะ root ได้'],
+                'di-er-shi-yi-zhang': ['VPN = อุโมงค์เข้ารหัส VPN ฟรีกลับอาจเป็นคนขโมยข้อมูลคุณ', 'ป้องกันคนบุกรุกกลางคันบน Wi-Fi สาธารณะ: เชื่อ HTTPS ปิดการเชื่อมต่ออัตโนมัติ งานสำคัญใช้เน็ตมือถือ', 'การจับมือ HTTPS เข้ารหัสภายในสี่รอบ แต่เว็บฟิชชิงก็ใช้ HTTPS ได้เหมือนกัน', 'DoH/DoT เข้ารหัสคำถาม DNS ผู้ให้บริการจึงแอบดูการท่องเว็บของคุณไม่ได้', 'โหมดไม่ระบุตัวตน = ยางลบในเครื่อง ไม่ใช่เสื้อคลุมล่องหน ผู้ให้บริการและเว็บยังมองเห็นคุณ', 'เช็กลิสต์ความปลอดภัย: ปิดเชื่อมต่อ Wi-Fi อัตโนมัติ เปลี่ยนไป DNS เข้ารหัส เปิด 2FA ตรวจสิทธิ์แอป และปิดกั้น Juice Jacking'],
+                'di-er-shi-er-zhang': ['กล้อง AI: จับฉาก → รวมหลายเฟรม → ปรับแต่งอัจฉริยะ', 'ผู้ช่วยเสียง: ได้ยิน → เข้าใจ → ลงมือ สามขั้น', 'AI บนเครื่อง: เร็ว เป็นส่วนตัว ทำงานออฟไลน์ได้', 'โมเดลใหญ่ AI แยกเป็นงานสนทนา/เขียน/แปล/ภาพ/เรียนรู้', 'การใช้งานจริง: แปลสด, ยางลบ AI, แต่งภาพด้วย AI, จัดการเอกสาร, ค้นหารูปด้วย AI', 'เฟรมเวิร์กพรอมป์ CRISPE: บทบาท + คำขอ + บริบท + ผลลัพธ์ + น้ำเสียง + ตัวอย่าง', 'ใช้ AI ระวังอาการหลอนและการรั่วของความเป็นส่วนตัว', '"บทบาท-บริบท-งาน-ข้อจำกัด" คือทางเข้าเขียนพรอมป์ที่ง่ายกว่า', 'ลักษณะพรอมป์ดี: เจาะจง มีบริบท มีรูปแบบ มีข้อจำกัด ตรวจสอบได้'],
+                'di-er-shi-san-zhang': ['องค์ประกอบอัตโนมัติ: ทริกเกอร์ + การกระทำ + ตรรกะตัดสินใจ (ถ้าต้องการ)', 'Shortcuts ของ iOS: พิธีเช้าปุ่มเดียว โหมดประหยัดอัตโนมัติ จดค่าใช้จ่ายด้วยการสแกน', 'Android: ตัวคลิกอัตโนมัติ (แมโครหน้าจอ), Tasker (ระบบอัตโนมัติที่ทรงพลังที่สุด), MacroDroid (เป็นมิตรกับมือใหม่)', 'หลุมพราง: ทริกเกอร์ตำแหน่งไม่แม่น, iOS ไม่รันอัตโนมัติเว้นแต่ยืนยันเอง, Tasker ต้องขอสิทธิ์การเข้าถึงพิเศษ', 'ความคิดแบบอัตโนมัติ: เปลี่ยนงานซ้ำ ๆ เป็น เงื่อนไข → การกระทำ โทรศัพท์ก็กลายเป็นผู้ช่วยส่วนตัวของคุณ'],
+                'di-er-shi-si-zhang': ['Bootloader คือผู้เฝ้าประตูตอนบูต การตรวจลายเซ็นกันการแก้กลับ', 'นโยบายปลด BL ต่างกันแต่ละแบรนด์ (Xiaomi เปิดให้/Huawei ล็อก)', 'ทางเลือก Root: Magisk/KernelSU/SuperSU', 'สามแบบการแฟลช: ROM ทางการ/Recovery ของบุคคลที่สาม/ROM บุคคลที่สาม'],
+                'di-er-shi-wu-zhang': ['ขายโทรศัพท์เก่า: สำรอง → ออกจากบัญชี → ลบแบบเข้ารหัส → ทับและลบซ้ำ', 'มรดกดิจิทัล: ผู้ติดต่อมรดกของ iCloud/บัญชี Google ที่ไม่ใช้งาน', 'รีไซเคิล: เริ่มจากโปรแกรมเปลี่ยนเครื่องทางการ เครื่องเก่ายังทำหน้าที่กล้องหรือนำทางได้'],
+                'di-er-shi-liu-zhang': ['สามมาตรฐานของโทรศัพท์ AI: โมเดลใหญ่บนเครื่อง, พลัง NPU หน่วย TOPS, AI Agent คร่อมแอป', 'กลยุทธ์ AI ของผู้ผลิต: Apple/Google/Huawei/Xiaomi/OPPO/vivo ต่างก็มีจุดเด่น', 'ดาวเทียม: ข้อความสั้น BeiDou ลงมาถึงระดับกลางแล้ว ส่วนโทร Tiantong ยังเป็นของเรือธง', 'จอพับ: ฮาร์ดแวร์สุกงอม แอปรองรับราวเจ็ดสิบเปอร์เซ็นต์ การพับค้างและแบ่งจอคือประสบการณ์เฉพาะตัว', '6G ยังอยู่ระหว่างทาง, Wi-Fi 7 มาถึงแล้ว, Bluetooth LE Audio เริ่มแพร่หลาย', 'แบตอโนดซิลิกอน-คาร์บอนทำให้ 5000-6000mAh เป็นมาตรฐานเรือธง'],
+                'di-er-shi-qi-zhang': ['เปิดโหมดง่ายหรือขยายฟอนต์/ไอคอนก่อน สิ่งแวดล้อมพร้อมแล้วปัญหาหายเกือบครึ่ง', 'กฎเหล็กสามข้อกับผู้สูงวัย: อย่าเร่ง ใช้การเปรียบเทียบ และจดให้', 'หกกลโกงที่ต้องเตือนซ้ำแล้วซ้ำเล่า สามแนวป้องกันกั้นการหลอกลวงได้ 90%', 'ช่วยเหลือระยะไกลให้คุณซ่อมโทรศัพท์ให้พ่อแม่ได้แม้อยู่ต่างเมือง', 'โหมดดูแลของ WeChat + พิมพ์ด้วยเสียง คือสองฟังก์ชันที่ใช้ประโยชน์สุดสำหรับผู้ใหญ่', 'SOS ฉุกเฉินและตรวจจับการล้ม คือการตั้งค่าที่ช่วยชีวิตในจังหวะวิกฤต'],
+                'di-er-shi-ba-zhang': ['เลือกโทรศัพท์สามขั้น: ความต้องการก่อน → งบต่อ → รุ่นทีหลัง', 'พารามิเตอร์หลักมีแค่ห้า: ซีพียู จอ กล้อง แบตกับชาร์จ และคำสัญญาอัปเดต', '¥1500-3500 คือช่วงคุ้มสุดและแนะนำสุด', 'เรือธงปีที่แล้วคุ้มกว่าระดับกลางปีนี้', 'ห้ากับดัก: ตำนานกล้องหลายตัว, ลัทธิเมกะพิกเซล, เวอร์ชันผู้ให้บริการ, ลัทธิจอโค้ง, ขายความ AI หลอก ๆ', '618 กับ Double 11 คือสองช่วงเวลาซื้อโทรศัพท์ที่คุ้มที่สุดในปี'],
+                'di-er-shi-jiu-zhang': ['ดูข้อมูลเวลาหน้าจอก่อน การเห็นสภาพจริงคือก้าวแรกของการเปลี่ยน', 'ตั้งขีดจำกัดแอปความบันเทิง ตั้งเวลาโหมดอย่ารบกวน คืนความสนใจกลับมาเป็นของคุณ', 'กฎ 20-20-20 คือนิสัยพักสายตาที่ง่ายและได้ผลที่สุด', 'ก้มดูโทรศัพท์ คอรับน้ำหนัก 5-6 เท่าของศีรษะ ยกโทรศัพท์สูงขึ้นและขยับคอเป็นระยะ', 'ชั่วโมงก่อนนอนไม่แตะโทรศัพท์ วางที่ชาร์จไว้ไกลกว่าเอื้อมมือ', 'ยาแก้ความวิตกข้อมูลคือ "บล็อกเชิงรุก" ไม่ใช่ "เอามาเพิ่ม"'],
+                'di-san-shi-zhang': ['สามค่ายการส่งภาพไร้สาย: AirPlay (Apple), Miracast (Android), DLNA (ผลักสื่อข้ามแพลตฟอร์ม)', 'ฉายด้วยสายนิ่งกว่าและหน่วงเป็นศูนย์ ในห้องประชุมต้องมีแอดแปเตอร์ HDMI', 'Samsung DeX/โหมดเดสก์ท็อปของ Huawei เปลี่ยนโทรศัพท์เป็นพีซีสำนักงานเบา ๆ', 'เชื่อมต่อในรถ: สี่ทางเลือก - CarPlay/Android Auto/HiCar/CarLife', 'กฎเหล็กการฉายในห้องประชุม: ทดสอบก่อน เตรียมแผนสำรอง ซ่อนพรีวิวการแจ้งเตือน'],
+                'di-san-shi-yi-zhang': ['ก่อนถ่ายให้ชัด: ผู้ชมคือใคร ให้คุณค่าอะไร ลงคลิปที่แพลตฟอร์มไหน', 'ห้าอย่างก่อนถ่าย: 1080P/30fps เช็ดเลนส์ ล็อกโฟกัสและรูแสง เลือกแนวนอนแนวตั้ง เปิดเส้นกริด', 'ห้าท่ากล้อง: ดัน ดึง แพน เลื่อน ตาม - นิ่งมาก่อน', 'ตัดต่อด้วย CapCut: ตัด → ทรานสิชัน → ซับไตเติล → เพลงประกอบ → ส่งออก หกขั้นตอน', 'สามวินาทีแรกตัดสินทุกอย่าง หนึ่งคลิปเล่าเรื่องเดียว ความต่อเนื่องชนะพรสวรรค์'],
+                'di-san-shi-er-zhang': ['โทรศัพท์หาย 30 นาทีทอง: ยืมโทรศัพท์คนอื่นโทรหาตัวเอง → ล็อกระยะไกล → ระงับซิม → หยุดยั้งการชำระเงิน → แจ้งครอบครัวและเพื่อน → แจ้งความ', '72 ชั่วโมงหลังโดนกลโกง: หยุดโอน → เก็บหลักฐาน → โทร 96110 → แจ้งความ → ติดต่อธนาคาร → เปลี่ยนรหัสผ่าน', 'โทรศัพท์ติดมัลแวร์: เซฟโหมด → ถอนแอปที่น่าสงสัย → สแกนความปลอดภัย → รีเซ็ตโรงงาน (ทางสุดท้าย)', 'บัญชีถูกแฮ็ก: เปลี่ยนรหัสผ่าน → ออกจากอุปกรณ์ → เช็กประวัติล็อกอิน → เปิด 2FA → เช็กการผูก → เช็กการชำระเงิน', '99.9% ของข้อความเรียกค่าไถ่เป็นการหลอกลวง ไม่ตอบ ไม่จ่าย เก็บภาพแล้วบล็อก', 'กลอุบายสลับใบหน้า/เสียง: จับผิดจากการกะพริบตา รูปปาก ขอบภาพ และแสง ให้เขาหมุนหน้า เอามือปิดหน้า ตั้งคำถามส่วนตัว และโทรกลับไปยังเบอร์ที่รู้จัก', 'แฮ็กสลับซิม: ถ้าโทรศัพท์ขึ้น "ไม่มีสัญญาณ" ฉับพลัน ถือเป็นสัญญาณเตือน ตั้ง PIN ซิม เปิดการยืนยันสองชั้นกับผู้ให้บริการ และย้ายบัญชีสำคัญไปใช้แอปยืนยันตัวตน', 'ห้านิสัยรายวัน: ล็อกหน้าจอ + 2FA, ค้นหาโทรศัพท์, PIN ซิม, ไม่ติดแอปแปลกปลอม, สำรองข้อมูลสม่ำเสมอ', 'แผ่นดินไหว/อากาศสุดขั้ว: หลบใกล้ตัวก่อนแล้วค่อยอพยพ ส่งเอสเอ็มเอสบอกปลอดภัยประหยัดแบตกว่าโทรยาว', 'ไม่มีสัญญาณให้ใช้ SOS ดาวเทียมก่อน (ถ้ารุ่นรองรับ) การเตือนภัยและการตั้งค่าอยู่บทที่ 13'],
+                'di-san-shi-san-zhang': ['Vision Pro และแว่น AR เป็นประตูคอมพิวเตอร์ใหม่นอกเหนือจากโทรศัพท์ แต่ยังไม่แทนที่เร็ว ๆ นี้', 'อินเทอร์เฟซสมอง-คอมพิวเตอร์ยังห่างผู้บริโภคอีก 10-20 ปี จริยธรรมก่อตัวก่อนเทคโนโลยี', 'โทรศัพท์กำลังวิวัฒน์ไปสู่ "การล่องหน": จากศูนย์กลางที่อุปกรณ์ สู่ศูนย์กลางที่ตัวตน', 'จริยธรรม AI อธิปไตยข้อมูล และช่องว่างดิจิทัล คือประเด็นหลักทศวรรษข้างหน้า', 'อยู่ในโลกออนไลน์โดยยังเป็นตัวของตัวเอง คือปรัชญาที่ไม่เปลี่ยนของชีวิตดิจิทัล'],
+            };
+            Object.keys(summaries).forEach(id => {
+                const sec = document.getElementById(id);
+                // ข้ามบทที่มีสรุปแทรกอยู่แล้ว กันซ้ำซ้อน
+                if (sec && !sec.querySelector('.chapter-summary')) {
+                    addChapterSummary(sec, summaries[id]);
+                }
+            });
+
+            // ===== ปุ่มคัดลอก (เพิ่มให้องค์ประกอบ kbd) =====
+            $$('.kbd').forEach(kbd => {
+                const btn = document.createElement('button');
+                btn.className = 'copy-btn';
+                btn.innerHTML = '<i class="fas fa-copy"></i>';
+                btn.setAttribute('aria-label', 'คัดลอก');
+                btn.addEventListener('click', () => {
+                    const text = kbd.textContent.trim();
+                    navigator.clipboard.writeText(text).then(() => {
+                        btn.classList.add('copied');
+                        btn.innerHTML = '<i class="fas fa-check"></i>';
+                        setTimeout(() => {
+                            btn.classList.remove('copied');
+                            btn.innerHTML = '<i class="fas fa-copy"></i>';
+                        }, 1500);
+                    }).catch(() => {});
+                });
+                kbd.parentNode.insertBefore(btn, kbd.nextSibling);
+            });
+
+            // ===== เนื้อหายาวแบบยุบได้ (ระดับ h4) =====
+            sections.forEach(sec => {
+                const h4s = $$('h4', sec);
+                h4s.forEach(h4 => {
+                    // ยุบเฉพาะส่วน h4 ที่ยาว
+                    let sibling = h4.nextElementSibling;
+                    let contentLength = 0;
+                    let elements = [];
+                    while (sibling && !sibling.matches('h4, h3, .chapter-nav, .chapter-summary')) {
+                        contentLength += (sibling.textContent || '').length;
+                        elements.push(sibling);
+                        sibling = sibling.nextElementSibling;
+                    }
+                    if (contentLength > 800) {
+                        // เพิ่มหัวยุบ
+                        const header = document.createElement('div');
+                        header.className = 'collapsible-header';
+                        header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
+                        h4.replaceWith(header);
+
+                        const body = document.createElement('div');
+                        body.className = 'collapsible-body';
+                        elements.forEach(el => body.appendChild(el));
+
+                        header.after(body);
+
+                        header.addEventListener('click', () => {
+                            const isCollapsed = body.classList.contains('collapsed');
+                            body.classList.toggle('collapsed', !isCollapsed);
+                            header.classList.toggle('collapsed', !isCollapsed);
+                        });
+                    }
+                });
+            });
+
+            // ===== แดชบอร์ดการเรียน: ความคืบหน้าการอ่าน + เช็กสุขภาพโทรศัพท์ =====
+            const dashProgressRing = $('#progress-ring-fg');
+            const progressPercent = $('#progress-percent');
+            const readCountEl = $('#read-count');
+            const bookmarkCountEl = $('#bookmark-count');
+            const lastChapterEl = $('#last-chapter');
+            const healthScoreEl = $('#health-score');
+            const healthBarEl = $('#health-bar');
+            const healthMsgEl = $('#health-msg');
+            const checkInputs = $$('.check-input');
+            const DASH_RING_CIRCUMFERENCE = 213.6;
+
+            function updateDashboard() {
+                // ความคืบหน้าการอ่าน
+                const completed = $$('.chapter-check.checked').length;
+                const total = sections.length;
+                const pct = total > 0 ? Math.round((completed / total) * 100) : 0;
+                if (dashProgressRing) {
+                    dashProgressRing.style.strokeDashoffset = DASH_RING_CIRCUMFERENCE * (1 - pct / 100);
+                }
+                if (progressPercent) progressPercent.textContent = pct + '%';
+                if (readCountEl) readCountEl.textContent = completed + ' / ' + total;
+
+                // จำนวนรายการโปรด
+                const bookmarks = $$('.toc-item.bookmarked').length;
+                if (bookmarkCountEl) bookmarkCountEl.textContent = bookmarks;
+
+                // บทล่าสุด
+                const lastCh = localStorage.getItem(POSITION_CHAPTER_KEY) || '';
+                if (lastChapterEl) lastChapterEl.textContent = lastCh || '—';
+
+                // เช็กสุขภาพ
+                const checked = checkInputs.filter(c => c.checked).length;
+                const totalChecks = checkInputs.length;
+                const healthPct = totalChecks > 0 ? Math.round((checked / totalChecks) * 100) : 0;
+                if (healthScoreEl) healthScoreEl.textContent = checked + ' / ' + totalChecks;
+                if (healthBarEl) healthBarEl.style.width = healthPct + '%';
+                if (healthMsgEl) {
+                    if (checked === totalChecks) healthMsgEl.innerHTML = '<i class="fas fa-shield-check mr-1"></i>เต็มคะแนน! ความปลอดภัยของโทรศัพท์คุณอยู่ในสภาพดีเยี่ยม';
+                    else if (checked >= totalChecks * 0.7) healthMsgEl.textContent = 'ดีมาก! ' + (totalChecks - checked) + ' รายการที่พัฒนาต่อได้';
+                    else if (checked >= totalChecks * 0.4) healthMsgEl.textContent = 'พอผ่าน - ให้จัดลำดับรายการความปลอดภัยที่ยังไม่ได้ติ๊กก่อน';
+                    else healthMsgEl.innerHTML = '<i class="fas fa-triangle-exclamation mr-1"></i>โทรศัพท์ของคุณยังมีช่องโหว่ความปลอดภัย - รีบแก้โดยเร็ว';
+                }
+            }
+
+            // กู้คืนสถานะการติ๊ก
+            checkInputs.forEach((input, i) => {
+                const saved = localStorage.getItem('health-check-' + i);
+                if (saved === 'true') input.checked = true;
+                input.addEventListener('change', () => {
+                    localStorage.setItem('health-check-' + i, input.checked);
+                    updateDashboard();
+                });
+            });
+
+            updateDashboard();
+            // รีเฟรชทุก 3 วินาที (จับการติ๊กของบท)
+            setInterval(updateDashboard, 3000);
+
+            // ===== อ่านออกเสียง (TTS) =====
+            const ttsControls = $('#tts-controls');
+            const ttsPlayBtn = $('#tts-play');
+            const ttsPrevBtn = $('#tts-prev');
+            const ttsNextBtn = $('#tts-next');
+            const ttsStopBtn = $('#tts-stop');
+            const ttsSpeedUp = $('#tts-speed-up');
+            const ttsSpeedDown = $('#tts-speed-down');
+            const ttsSpeedDisplay = $('#tts-speed-display');
+            const ttsLabel = $('#tts-label');
+            const quickTtsBtn = $('#quick-tts');
+            let ttsUtterance = null;
+            let ttsSpeed = 1.0;
+            let ttsActive = false;
+            let ttsSectionIndex = -1;
+            let ttsPendingPlay = false;
+            const ttsSectionIds = sections.map(s => s.id);
+
+            function updateTtsSpeedDisplay() {
+                ttsSpeedDisplay.textContent = ttsSpeed.toFixed(1) + 'x';
+            }
+
+            function getSectionText(sec) {
+                if (!sec) return '';
+                // โคลนและเอาองค์ประกอบที่ไม่ควรอ่านออกเสียงออก
+                const clone = sec.cloneNode(true);
+                const removes = clone.querySelectorAll('.chapter-nav, .chapter-summary, .practice-box, .bookmark-btn, .chapter-check, .copy-btn, .collapsible-header, .collapsible-body');
+                removes.forEach(el => el.remove());
+                // เอาเนื้อหาที่ยุบออก แต่เก็บข้อความของมันไว้
+                const text = clone.textContent.replace(/\s+/g, ' ').trim();
+                return text;
+            }
+
+            function speakSection(index) {
+                if (!('speechSynthesis' in window)) {
+                    alert('ขออภัย เบราว์เซอร์ของคุณไม่รองรับการอ่านออกเสียง ลองใช้ Chrome หรือ Edge');
+                    return;
+                }
+                if (index < 0 || index >= sections.length) return;
+
+                window.speechSynthesis.cancel();
+                ttsSectionIndex = index;
+                const sec = sections[index];
+                const text = getSectionText(sec);
+                if (!text) return;
+
+                const h3 = sec.querySelector('h3');
+                ttsLabel.textContent = h3 ? h3.textContent : 'บทไร้ชื่อ';
+
+                ttsUtterance = new SpeechSynthesisUtterance(text);
+                ttsUtterance.lang = 'th-TH';
+                ttsUtterance.rate = ttsSpeed;
+                ttsUtterance.pitch = 1.0;
+                ttsUtterance.volume = 1.0;
+
+                // พยายามเลือกเสียงภาษาไทยที่เป็นธรรมชาติกว่า
+                const voices = window.speechSynthesis.getVoices();
+                const zhVoice = voices.find(v => v.lang.startsWith('th'));
+                if (zhVoice) ttsUtterance.voice = zhVoice;
+
+                ttsUtterance.onstart = () => {
+                    ttsActive = true;
+                    ttsPlayBtn.classList.add('playing');
+                    ttsPlayBtn.querySelector('i').className = 'fas fa-pause';
+                    ttsControls.classList.add('active');
+                    if (quickTtsBtn) quickTtsBtn.classList.add('tts-active');
+                };
+
+                ttsUtterance.onend = () => {
+                    // อ่านบทถัดไปอัตโนมัติ
+                    if (ttsSectionIndex < sections.length - 1 && ttsActive) {
+                        ttsSectionIndex++;
+                        speakSection(ttsSectionIndex);
+                    } else {
+                        stopTts();
+                    }
+                };
+
+                ttsUtterance.onerror = (e) => {
+                    if (e.error !== 'interrupted' && e.error !== 'canceled') {
+                        console.warn('TTS error:', e.error);
+                    }
+                    stopTts();
+                };
+
+                window.speechSynthesis.speak(ttsUtterance);
+                ttsPendingPlay = false;
+            }
+
+            function toggleTtsPlay() {
+                if (!ttsActive) {
+                    // หาบทที่มองเห็นอยู่ขณะนี้
+                    if (ttsSectionIndex < 0) {
+                        // เริ่มจากต้นหรือจากบทที่ใกล้ตำแหน่งเลื่อนที่สุด
+                        const scrollCenter = window.scrollY + window.innerHeight / 2;
+                        let closestIdx = 0;
+                        let closestDist = Infinity;
+                        sections.forEach((sec, i) => {
+                            const rect = sec.getBoundingClientRect();
+                            const secCenter = rect.top + window.scrollY + rect.height / 2;
+                            const dist = Math.abs(scrollCenter - secCenter);
+                            if (dist < closestDist) {
+                                closestDist = dist;
+                                closestIdx = i;
+                            }
+                        });
+                        ttsSectionIndex = closestIdx;
+                    }
+                    speakSection(ttsSectionIndex);
+                } else if (window.speechSynthesis.speaking) {
+                    if (window.speechSynthesis.paused) {
+                        window.speechSynthesis.resume();
+                        ttsPlayBtn.classList.add('playing');
+                        ttsPlayBtn.querySelector('i').className = 'fas fa-pause';
+                    } else {
+                        window.speechSynthesis.pause();
+                        ttsPlayBtn.classList.remove('playing');
+                        ttsPlayBtn.querySelector('i').className = 'fas fa-play';
+                    }
+                }
+            }
+
+            function stopTts() {
+                window.speechSynthesis.cancel();
+                ttsActive = false;
+                ttsSectionIndex = -1;
+                ttsUtterance = null;
+                ttsPlayBtn.classList.remove('playing');
+                ttsPlayBtn.querySelector('i').className = 'fas fa-play';
+                ttsControls.classList.remove('active');
+                ttsLabel.textContent = 'ยังไม่เริ่ม';
+                if (quickTtsBtn) quickTtsBtn.classList.remove('tts-active');
+            }
+
+            // ผูกอีเวนต์
+            if (ttsPlayBtn) ttsPlayBtn.addEventListener('click', toggleTtsPlay);
+            if (ttsStopBtn) ttsStopBtn.addEventListener('click', stopTts);
+            if (ttsPrevBtn) ttsPrevBtn.addEventListener('click', () => {
+                if (ttsSectionIndex > 0) {
+                    ttsSectionIndex -= 2;
+                    if (ttsSectionIndex < 0) ttsSectionIndex = 0;
+                    speakSection(ttsSectionIndex);
+                }
+            });
+            if (ttsNextBtn) ttsNextBtn.addEventListener('click', () => {
+                if (ttsSectionIndex < sections.length - 1) {
+                    speakSection(ttsSectionIndex + 1);
+                }
+            });
+            if (ttsSpeedUp) ttsSpeedUp.addEventListener('click', () => {
+                ttsSpeed = Math.min(2.5, ttsSpeed + 0.25);
+                updateTtsSpeedDisplay();
+                if (ttsActive && ttsUtterance) {
+                    ttsUtterance.rate = ttsSpeed;
+                    // สร้างส่วนปัจจุบันใหม่แล้วเล่น
+                    const idx = ttsSectionIndex;
+                    window.speechSynthesis.cancel();
+                    setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
+                }
+            });
+            if (ttsSpeedDown) ttsSpeedDown.addEventListener('click', () => {
+                ttsSpeed = Math.max(0.5, ttsSpeed - 0.25);
+                updateTtsSpeedDisplay();
+                if (ttsActive && ttsUtterance) {
+                    ttsUtterance.rate = ttsSpeed;
+                    const idx = ttsSectionIndex;
+                    window.speechSynthesis.cancel();
+                    setTimeout(() => { if (ttsActive) speakSection(idx); }, 100);
+                }
+            });
+            if (quickTtsBtn) quickTtsBtn.addEventListener('click', toggleTtsPlay);
+
+            // ปุ่มลัด: กด R สลับการอ่านออกเสียง
+            document.addEventListener('keydown', (e) => {
+                if (['INPUT', 'TEXTAREA'].includes(e.target.tagName)) return;
+                if (e.key === 'r' || e.key === 'R') {
+                    if (!e.ctrlKey && !e.metaKey && !e.altKey) {
+                        toggleTtsPlay();
+                    }
+                } else if (e.key === 'Escape' && ttsActive) {
+                    stopTts();
+                }
+            });
+
+            // ===== เริ่มต้นระบบ =====
+            onScroll();
+            tryRestorePosition();
+        })();
+    </script>
+</body>
+</html>

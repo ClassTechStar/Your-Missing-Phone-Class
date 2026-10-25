@@ -1,0 +1,98 @@
+---
+id: fu-lu-e
+num: E
+nav: EApéndice E: Agradecimientos y notas
+toc: default
+kind: appendix
+after_part: fu-lu
+---
+
+### Apéndice E: Agradecimientos y aclaraciones
+
+¡Gracias por perseverar hasta el final de este «curso de móvil»! Al escribirlo consultamos gran cantidad de manuales oficiales de fabricantes, guías de usuario y artículos divulgativos de acceso público, para garantizar que la información sea precisa.
+
+La tecnología avanza a una velocidad pasmosa, y el contenido del libro se basa en las tecnologías y los productos dominantes en el momento de redactarlo. Cuando lo leas, quizá ya hayan aparecido nuevas funciones y productos. Ojalá las ideas y los métodos que enseña este libro te ayuden a afrontar con serenidad los nuevos artilugios digitales que vengan.
+
+#### Novedades de la versión 1.6
+
+- Se amplió «El valor y la gestión de los activos digitales» y se añadió el capítulo «Gestión de imágenes y del sistema de archivos» (nombres con fecha y evento, organización por categorías, limpieza automática a las 72 horas y anonimización de los datos EXIF).
+- Se perfeccionaron el «modo limpio/protección» y el sistema de defensa contra los «parásitos electrónicos».
+- Se añadieron las estafas habituales de la era de la IA (caras falsificadas y voces imitadas, suplantación de autoridades, inversiones falsas) y las ideas para defenderse y salir del paso.
+- Se reescribió la protección contra el «unboxing» fraudulento y los ataques de ingeniería social.
+- Se amplió el capítulo de accesibilidad (manejo completo de VoiceOver/TalkBack, lupa y filtros de color, descripción de imágenes con IA, subtítulos en tiempo real y llamadas de doble canal RTT/TTY).
+- Se reescribió el marco de prompts con el esquema «rol-contexto-tarea-restricciones», con 3 casos completos de ejemplo.
+- Se añadieron tres apéndices técnicos de nivel avanzado: Anexo al capítulo 1: análisis de la expansión de memoria en los móviles Android (definición esencial, principios de zRAM/swap, cuellos de botella de velocidad, límites de los casos de uso, denominación y activación según fabricante).
+- Anexo al capítulo 20: Termux, un entorno de terminal Linux portátil en dispositivos Android (funciones esenciales, ecosistema de plugins, instalación y configuración, y escenarios típicos como el desarrollo móvil, la administración de servidores y las pruebas de seguridad).
+- Anexo al capítulo 23: guía de iniciación a GitHub — del alojamiento de código a la plataforma de colaboración (diferencias entre Git y GitHub, conceptos clave, registro y primeros pasos, flujo de colaboración con Pull Requests, avisos de seguridad y opciones de acceso desde China).
+
+#### Novedades de la versión 1.7
+
+1\. Cuatro capítulos nuevos
+
+- Capítulo 29:Salud digital — análisis del tiempo de pantalla, límites por app, modo No molestar, regla 20-20-20 para cuidar la vista, rescate del cuello, gestión del sueño, «ceguera selectiva» frente a la ansiedad informativa y un reto de salud digital de una semana.
+- Capítulo 30: Duplicado de pantalla y coche — comparativa de las tres familias AirPlay / Miracast / DLNA, opciones de conexión por cable, modo escritorio Samsung DeX, los cuatro grandes sistemas para el coche (CarPlay / Android Auto / HiCar / CarLife) y práctica de proyección en salas de reuniones.
+- Capítulo 31: Creación de vídeos cortos — las tres preguntas para elegir tema, la configuración de rodaje en 5 pasos, los cinco movimientos de cámara (acercar, alejar, barrer, desplazar y seguir), el flujo de trabajo de CapCut en seis pasos, las claves para hacer la portada y la filosofía del contenido de que «los 3 primeros segundos deciden la vida o la muerte».
+- Capítulo 32:Manual de primeros auxilios digitales — protocolo de los 30 minutos de oro tras una pérdida, proceso a seguir en las 72 horas tras una estafa, revisión en modo seguro ante infecciones, seis pasos para recuperar una cuenta robada, cómo responder a mensajes de extorsión y cinco cosas para prevenir a diario.
+
+2\. Dos capítulos nuevos
+
+- Capítulo 27: Accesibilidad para mayores y cariño familiar — tabla comparativa del modo sencillo por marca, las seis estafas más comunes y las tres líneas de defensa, asistencia remota (Changlian / Sunflower), modo Cuidado de WeChat y entrada por voz, y SOS / detección de caídas / recordatorios de medicación.
+- Capítulo 28:Guía de compra — método de tres pasos para elegir móvil, tabla de especificaciones de «solo mirar cinco apartados», recomendaciones en cinco rangos de presupuesto, tabla de elección por siete escenarios, las cinco trampas al comprar un móvil y análisis del momento y los canales de compra.
+
+3\. Nuevas funciones de lectura en voz alta e interacción
+
+- Barra de control de lectura flotante: reproduce/pausa, párrafo anterior/siguiente, ajuste de velocidad de 0,5x a 2,5x y detención.
+- Botón rápido de auriculares a la derecha: inicia la lectura con un solo toque, que comienza automáticamente en tu posición de lectura actual.
+- Atajos de teclado: R activa o pausa la lectura y ESC la detiene.
+- Lectura mejorada: paso automático y continuo al capítulo siguiente, y los controles de lectura se ocultan solos al imprimir.
+
+4\. Actualización del sistema
+
+Índice, ruta de aprendizaje (de cuatro a cinco pasos), mapa de capítulos, número de versión (de 1.6 a 1.7), numeración de apéndices (de cinco a seis) y metadatos: todo actualizado y sincronizado a la vez.
+
+5\. Actualización de la vigencia del contenido
+
+- Procesadores: los Snapdragon 8 Elite Gen5 / Dimensity 9500 entran en la gama tope (referencia de 2026).
+- Referencias de gama alta: iPhone 17 Pro, Samsung S26 Ultra, Xiaomi 17 Ultra, Huawei Pura 80 Ultra, vivo X300 Pro.
+- Capítulos de IA: actualizados a DeepSeek R1, ChatGPT-5 y el estándar de 80 TOPS de potencia para NPU en el dispositivo.
+- Plegables: la franja de precios baja hasta los 4000-5000 yuanes.
+- Guía de compra: todos los rangos de presupuesto y las recomendaciones por escenario se han renovado según el mercado de 2026.
+- Redes y ecosistemas: Wi-Fi 7 / 5G-A / ecosistema HarmonyOS / LE Audio, todo actualizado a las últimas especificaciones.
+
+6\. Nuevo módulo de funciones: panel de aprendizaje (justo debajo de la zona Hero)
+
+- Anillo de progreso de lectura: muestra en tiempo real el porcentaje de capítulos leídos, con animación de anillo SVG.
+- Autodiagnóstico de salud del móvil: lista de 8 comprobaciones de seguridad (contraseñas, verificación en dos pasos, localizar el móvil, copia en la nube, copia de WeChat, seguridad de pagos, app antifraude y revisión de pagos sin contraseña).
+- Persistencia del estado: las casillas marcadas se guardan en localStorage, y la puntuación de salud se calcula dinámicamente y se presenta en una barra de progreso con degradado.
+- Mensajes por niveles: según la puntuación, muestra respuestas distintas como «puntuación perfecta / nada mal / suficiente / riesgos de seguridad».
+
+#### Novedades de la versión 1.8
+
+Nueva séptima parte, «Programación con IA en la práctica» (capítulos 37 a 47, 11 capítulos en total): la revolución de paradigma y el Agentic Engineering, los cinco principios de pensamiento de la programación con IA, la ingeniería de contexto y el desarrollo guiado por especificaciones (SDD), la ingeniería de requisitos, el panorama de las herramientas de programación con IA en 2026, el panorama de los grandes modelos y la práctica con la API, la ingeniería del diálogo, el flujo completo de un proyecto de 0 a 1, la garantía de calidad, el camino de avance (MCP / colaboración multiagente) y la guía de referencia rápida. Se actualizaron a la vez el índice, la ruta de aprendizaje (de cinco a seis pasos), el mapa de capítulos y el índice de consulta rápida. El contenido procede de «Pensamiento de programación con IA: guía metodológica de cero básico a práctica fullstack», edición de agosto de 2026.
+
+Nuevas octava parte, «Desarrollo Android en la práctica» (capítulos 48 a 58, 11 capítulos en total) y novena parte, «Desarrollo iOS en la práctica» (capítulos 59 a 69, 11 capítulos en total): ambas plataformas cubren la preparación del entorno (Android Studio / Xcode), la iniciación rápida al lenguaje (Kotlin / Swift), el framework de interfaz (Jetpack Compose / SwiftUI), datos y red, dos proyectos prácticos completos (libreta de cuentas + app del tiempo), pruebas y publicación (Google Play / App Store) y la guía de referencia rápida. Se actualizaron a la vez el índice, la ruta de aprendizaje (de seis a ocho pasos), el mapa de capítulos y el índice de consulta rápida. El contenido procede de «Desarrollo Android desde cero» y «Desarrollo iOS desde cero», edición de agosto de 2026.
+
+#### Ampliaciones de contenido: apps útiles y bloqueo de llamadas molestas
+
+- El capítulo 13 estrena la sección 6, «Herramientas del sistema prácticas»: recopila herramientas de limpieza como Qingzhuo, la limpieza de almacenamiento integrada en el sistema, la app nacional antifraude, el gestor del móvil de cada marca, los servicios antirrobollamadas de los operadores y AdGuard, y plantea el criterio de elección «primero el sistema / complementos oficiales / moderación con terceros».
+- Tabla comparativa del bloqueo de llamadas molestas integrado por marca: cubre las rutas de acceso y las opciones recomendadas de iOS, Xiaomi/Redmi, Huawei/Honor, OPPO/realme/OnePlus, vivo/iQOO y Samsung.
+- El capítulo 8 amplía sus capacidades de bloqueo de llamadas molestas: se añaden explicaciones prácticas sobre identificación de llamadas, listas negras y blancas, filtrado por palabras clave en los SMS, silenciar llamadas de desconocidos en iOS y la conexión con el modo No molestar, con enlaces cruzados al capítulo 13.
+- Recomendación de tres capas de protección: bloqueo del sistema + servicio antirrobollamadas del operador + app nacional antifraude, insistiendo en la lista blanca para evitar bloqueos por error.
+
+#### Ampliaciones de contenido: alertas meteorológicas / alertas de desastres naturales / alertas de terremoto
+
+- El capítulo 13 estrena la sección 7: alertas meteorológicas (canales meteorológicos oficiales + la app del tiempo del sistema + niveles de colores), alertas de desastres naturales (varios canales meteorológicos y de emergencias) y el principio y los malentendidos de las alertas de terremoto (alertar no es lo mismo que pronosticar).
+- Tabla de activación de alertas de terremoto por marca: accesos habituales y precauciones con los permisos en Xiaomi, Huawei/Honor, la familia OPPO, vivo, iPhone y Samsung.
+- El capítulo 32 añade el «escenario cero»: el orden de protección tras una alerta de terremoto, cómo actuar ante lluvias torrenciales y tifones, y el enlace con el SOS satelital y las comunicaciones sin red; el manual de primeros auxilios queda interconectado con la configuración de alertas del capítulo 13.
+- Conexión de la sección del tiempo: la entrada sobre apps del tiempo en los viajes añade las notificaciones de alerta y el recordatorio de que «si no abres las notificaciones, no las recibirás».
+
+#### Ampliaciones de contenido: colaboración entre dispositivos y herramientas de productividad
+
+- Sección 8 del capítulo 13: controlar el ordenador desde el móvil (Sunflower, ToDesk) y las líneas rojas antifraude; oficina con IA (Trae / WorkBuddy / Dumate) y flujos de trabajo con el móvil como mando del ordenador; la app de fondos de pantalla animados de miHoYo.
+- Transferencia rápida por red local y portapapeles: LocalSend, Feige (transmisión por LAN), AirDrop; KDE Connect, portapapeles universal y transferencia entre móvil y ordenador de la misma marca.
+- Códigos dinámicos 2FA: Aegis, Microsoft Authenticator, códigos de respaldo y precauciones al cambiar de móvil.
+- TickTick y el escaneo de papel: se amplía el uso para agenda y tareas; se completan las herramientas de escaneo y los trucos para fotografiar documentos.
+
+Te deseo que saques todo el partido a tu móvil, que disfrutes de la comodidad y la diversión que trae la tecnología y que te conviertas en un ciudadano digital despierto y seguro de sí mismo.
+
+— Tu guía de vida digital

@@ -1,0 +1,101 @@
+---
+id: di-si-shi-yi-zhang
+num: 41
+part: ai-biancheng-pian
+nav: Capítulo 41: Panorama de las herramientas de programación con IA en 2026
+toc: default
+kind: chapter
+---
+
+### Capítulo 41: Panorama de las herramientas de programación con IA en 2026
+
+{class="chapter-intro mb-4"}
+Un aviso antes de empezar: este capítulo es una «fotografía» del ecosistema de herramientas de agosto de 2026. Dentro de medio año estará desactualizado, y esa es justamente la primera lección que quiere enseñarte este capítulo. Su objetivo no es decirte «qué herramienta usar», sino ayudarte a construir un marco de criterios para «cómo elegir herramientas». Cuando entiendas la filosofía de diseño de las distintas herramientas, podrás tomar la decisión que mejor te convenga en cualquier momento.
+
+#### 1. Las tres escuelas y el marco de elección
+
+Las herramientas de programación con IA de 2026 se dividen aproximadamente en tres grandes escuelas, y detrás de cada una hay una filosofía de diseño distinta. Empieza mirando este panorama:
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Escuela</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Herramientas representativas</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Filosofía de diseño</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Casos ideales</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">IA integrada en el IDE</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor 3, Trae, Windsurf, CodeBuddy</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Integra a fondo las capacidades de IA en el editor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Desarrollo diario, revisión de código, mejora progresiva</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Agente de terminal</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Code, Codex CLI, Aider</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Toma la terminal como interfaz: la IA opera directamente el sistema de archivos y los comandos</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Operaciones a nivel de proyecto, cambios masivos, integración con CI/CD</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Builder en la nube</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">v0, Bolt, Replit Agent</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Crea proyectos completos desde cero en el navegador</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Prototipos rápidos, empezar sin configurar nada, vista previa inmediata</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+Las tres escuelas de herramientas de programación con IA
+
+La clave al elegir herramienta no es «cuál es la mejor», sino «cuál se ajusta mejor a tu situación actual». Tres criterios prácticos:
+
+- ¿Qué base de programación tienes? Sin base: elige un Builder en la nube; con base: una IA integrada en el IDE; usuario avanzado: un agente de terminal.
+- ¿En qué etapa está tu proyecto? Para empezar de cero: Builder en la nube; para desarrollo iterativo: IA integrada en el IDE; para mantenimiento y refactorización: agente de terminal.
+- ¿Qué necesitas para el despliegue? Validación rápida: Builder en la nube; proyectos serios: IA integrada en el IDE; flujos automatizados: agente de terminal.
+
+#### 2. La escuela de la IA integrada en el IDE
+
+La IA integrada en el IDE es la escuela más popular: incrusta las capacidades de IA en tu editor de código y suma mejoras con IA conservando la experiencia de programación tradicional. En 2026, sus representantes son Cursor 3, Trae, Windsurf y CodeBuddy.
+
+##### 1. Cursor 3
+
+Cursor es hoy el IDE de programación con IA más usado del mundo. Cursor 3, lanzado en abril de 2026, marca un punto de inflexión importante para estas herramientas: por primera vez, el uso del modo Agent superó al del autocompletado con Tab; los desarrolladores pasaron de «la IA me completa el código» a «la IA completa mis tareas». Entre las características clave de Cursor 3: edición multarchivo (la IA puede modificar varios archivos a la vez para completar una tarea), percepción del contexto (entiende automáticamente la estructura del proyecto y sus dependencias) e integración profunda con la terminal (la IA puede ejecutar comandos y ver la salida directamente dentro del editor).
+
+##### 2. Trae
+
+Trae es un IDE de programación con IA lanzado por ByteDance, con una base de usuarios considerable en el mercado chino. Su modo SOLO (también llamado modo Builder) es la típica capacidad de «crear un proyecto con una frase»: tú describes lo que necesitas y la IA completa por sí sola todo el flujo, desde inicializar el proyecto hasta generar el código. Las fortalezas de Trae están en el soporte del chino y su adaptación al entorno de red de China, ideal para que los usuarios locales empiecen rápido.
+
+##### 3. Otras herramientas
+
+Windsurf (antes Codeium) es conocido por su fluida experiencia de autocompletado, ideal para desarrolladores que buscan la sensación de «escribir a toda velocidad». CodeBuddy, de Tencent Cloud, funciona como extensión de VS Code, destaca en la integración con el ecosistema en la nube y conviene a proyectos pensados para desplegarse en Tencent Cloud o para desarrollar miniprogramas de WeChat. Tongyi Lingma, de Alibaba, y Comate, de Baidu, ofrecen experiencias de integración en el IDE parecidas, cada una con sus propias optimizaciones para los escenarios en chino.
+
+#### 3. La escuela del agente de terminal
+
+El agente de terminal es la escuela que más creció en 2026. Su idea central: la IA no debería ser un simple complemento del editor, sino poder manejar todo el entorno de desarrollo como lo hace un desarrollador: leer y escribir archivos, ejecutar comandos, ver la salida e instalar dependencias. Claude Code es el representante de esta escuela.
+
+##### 1. Claude Code
+
+Claude Code es la herramienta de programación con IA en terminal lanzada por Anthropic; a mediados de 2026 ya facturaba el equivalente a 2.500 millones de dólares al año. Su forma de trabajo es totalmente distinta a la de un IDE tradicional: describes la tarea en lenguaje natural en la terminal y Claude Code lee por sí solo los archivos relevantes, modifica el código, ejecuta las pruebas, revisa los resultados y corrige iterativamente; todo el proceso sin que tengas que abrir el editor.
+
+La ventaja de Claude Code es su «visión de todo el proyecto»: no está limitado por la ventana del editor y puede recorrer libremente todo el directorio del proyecto, entendiendo las dependencias entre archivos. También es compatible con el archivo de memoria del proyecto CLAUDE.md, para que la IA conozca el contexto desde el inicio de cada sesión. Para refactorizar proyectos grandes, hacer cambios masivos o escribir pruebas, los agentes de terminal son más eficientes que los complementos de IDE.
+
+##### 2. Codex CLI y Aider
+
+El Codex CLI de OpenAI ofrece una experiencia similar de programación en terminal y admite la función /import, que permite importar una base de código existente para que la IA la entienda. Aider es una herramienta de programación con IA en terminal de código abierto compatible con varios modelos (GPT, Claude, DeepSeek, etc.), ideal para quien quiera cambiar de modelo con flexibilidad. Aunque cada una tiene sus particularidades, todas comparten la misma idea central: dar a la IA, dentro de la terminal, la capacidad completa de operar el entorno de desarrollo.
+
+#### 4. La escuela del Builder en la nube
+
+El Builder en la nube es la escuela más adecuada para usuarios sin conocimientos previos. No necesitas instalar nada: abres el navegador, describes lo que quieres y la IA crea el proyecto completo en la nube, con vista previa inmediata.
+
+- v0 (de Vercel): destaca en generar componentes y páginas de interfaz frontend; ideal para crear prototipos web rápidamente.
+- Bolt: permite crear aplicaciones full-stack a partir de una sola frase, con frontend, backend y base de datos.
+- Replit Agent: trabaja en el IDE en la nube de Replit; no solo crea proyectos, sino que también puede ejecutarlos y desplegarlos directamente en la nube.
+
+La ventaja común de estas herramientas es «empezar sin configurar nada»: abres el navegador y ya puedes comenzar. Su limitación: cuando el proyecto se complica, el entorno de edición en la nube es menos flexible que un IDE local. Por eso son las más adecuadas para la fase de prototipo «de 0 a 1»: valida tus ideas rápido con un Builder en la nube y, una vez validadas, migra a un IDE local para el desarrollo en profundidad.
+
+#### 5. Las herramientas cambian, la metodología no
+
+:::inline div .quote-line
+Tres hábitos que deberías conservar aunque mañana desaparezcan todas las herramientas de programación con IA: pensar antes de actuar, avanzar solo un pequeño paso cada vez y verificar al terminar. Las herramientas son el amplificador; la metodología, el cimiento. El amplificador puede sustituirse; el cimiento no se tambalea.
+:::
+
+Repasemos los cambios de herramientas entre 2024 y 2026: en 2024 el rey era GitHub Copilot, en 2025 lo sustituyó Cursor y en 2026 Claude Code irrumpió con fuerza. Cada vez que aparece una herramienta nueva, hay quien proclama «esta vez es distinto», pero al final se descubre lo mismo: quienes aprovechan bien las herramientas nuevas son justamente los que tienen una metodología sólida. Ellos cambian de herramienta con solo unos días de adaptación, mientras que quien solo aprendió a manejar una herramienta concreta tiene que empezar de cero con cada cambio.
+
+Por eso, la ruta de aprendizaje que recomienda este libro es: empieza con una herramienta (cualquiera vale) y asimila en la práctica los cinco principios de pensamiento; cuando tu metodología sea lo bastante sólida, prueba herramientas de distintas escuelas para percibir las diferencias de filosofía de diseño; al final formarás tu propia combinación: por ejemplo, Cursor para el desarrollo diario, Claude Code para refactorizar y hacer pruebas, y v0 para prototipos rápidos. La combinación varía según la persona, pero la metodología es común.
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Manos a la obra: arma tu propio «combo de herramientas»
+
+{class="mt-1"}
+Ubícate con los tres criterios (base de programación, etapa del proyecto, necesidades de despliegue): si partes de cero → prueba Bolt o v0 para hacer una página; si tienes base → haz una tarea iterativa con Cursor o Trae; si quieres un reto → ejecuta Claude Code una vez en la terminal. Después responde: ¿qué escuela se ajusta mejor a tu etapa actual?
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+Resumen del capítulo
+
+- Las tres escuelas: IA integrada en el IDE (desarrollo diario), agente de terminal (operaciones a nivel de proyecto) y Builder en la nube (prototipos sin conocimientos previos)
+- Para elegir herramienta, tres preguntas: ¿base de programación? ¿etapa del proyecto? ¿necesidades de despliegue?
+- En Cursor 3, el modo Agent superó por primera vez al autocompletado con Tab; Claude Code factura 2.500 millones de dólares anualizados
+- El Builder en la nube es ideal para el «de 0 a 1»; tras validar, vuelve a un IDE local para desarrollar en profundidad
+- Las herramientas se renuevan cada tres meses: quien domina la metodología tarda solo unos días en adaptarse a una nueva
+:::

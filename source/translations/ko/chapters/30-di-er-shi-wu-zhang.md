@@ -1,0 +1,314 @@
+---
+id: di-er-shi-wu-zhang
+num: 25
+part: chao-yue-pian
+nav: 제25장: 중고 스마트폰 처리와 디지털 유산
+toc: default
+kind: chapter
+---
+
+### 제25장: 중고 스마트폰 처리와 디지털 유산
+
+{class="chapter-intro mb-4"}
+여러분, 앞의 20여 챕터의 "수련"을 거쳐, 이제 "디지털 초보자"에서 상당히 여유로운 스마트폰 사용자로 성장했겠죠. 하지만 기술 생활에는 항상 윤회가 있습니다——새 기기는 결국 오래된 것이 됩니다. 오래된 기기를 "은퇴"시킬 준비가 되었을 때, 어떻게 품위 있고 안전하게 작별할 수 있는지 아시나요?
+
+#### 1. 구형 스마트폰의 "안락사": 안전한 판매 또는 양도 가이드
+
+핵심 원칙: 데이터 정리는 "삭제"가 아니라 "덮어쓰기"입니다. 많은 사람들이 사진을 휴지통에 끌어다 놓고, 앨범을 비우면 만사형통이라고 생각하지만, 결과적으로 스마트폰을 넘긴 후 새 주인이 데이터 복구 소프트웨어로 스캔하면, 오래된 사진, 채팅 기록, 신분증 사진이 모두 돌아옵니다——이런 "사회적 죽음 현장"은 매년 반복됩니다.
+
+1. <strong>자기 "대청소"</strong>: 마지막 전체 백업을 완료하고, 모든 계정(iCloud, 화웨이/샤오미/삼성 계정, Google 계정)에서 로그아웃하며, "내 스마트폰 찾기" 기능을 끕니다——그렇지 않으면 다음 사용자가 활성화 잠금에 막힙니다.
+2. <strong>최종 "포맷" 실행</strong>: 현대 스마트폰의 "공장 초기화"는 일반적으로 암호화 삭제를 포함합니다——파괴되는 것은 암호화 키 자체이며, 키가 사라지면 전체 디스크 데이터가 즉시 난독화됩니다.
+3. <strong>마지막 "눈가림"(구형 기기에만 필요)</strong>: 현대 스마트폰(iOS 8+, Android 6+)은 기본적으로 전체 디스크 암호화(FBE)가 적용되어, 공장 초기화 시 암호화 키가 파괴되어 데이터는 이론적으로 복구 불가능하며, <strong>이 단계는 필요 없습니다</strong>. 매우 오래되고 비암호화된 기기(2015년 이전)에만 공장 초기화 후 휴지 파일로 저장 공간을 채우고, 다시 한 번 공장 초기화를 실행해야 합니다.
+
+<strong>각 브랜드별 데이터 삭제 경로 빠른 참조 표</strong>: 원리는 비슷하지만, 각 브랜드마다 "공장 초기화"를 숨긴 위치가 약간 다르고, 주요 차이점은 다음과 같습니다.
+
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                        <thead>
+                            <tr class="bg-light dark:bg-gray-700">
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">브랜드</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">삭제 진입점</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">주요 차이점 및 주의사항</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">화웨이</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 시스템 및 업데이트 > 재설정 > 공장 초기화</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 화웨이 계정에서 로그아웃하고 "내 스마트폰 찾기"를 꺼야 합니다. 그렇지 않으면 활성화 잠금이 트리거됩니다. 클린 모드에서는 비밀번호 인증이 필요할 수 있습니다.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">샤오미 / Redmi</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 내 기기 > 공장 초기화</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">하단에 "가상 SD 카드 포맷"과 "모든 콘텐츠 및 설정 지우기" 옵션이 있으며, 둘 다 선택해야 함; 샤오미 계정에서 로그아웃하기 전에 먼저 "내 기기 찾기"를 끔.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">OPPO / OnePlus</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 기타 설정 > 스마트폰 복원 > 모든 데이터 완전히 삭제</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ColorOS는 "완전 삭제" 모드를 제공하며 저장 공간을 여러 번 덮어씀; 잠금 화면 비밀번호로 확인 필요.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vivo</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 시스템 관리 > 백업 및 재설정 > 모든 데이터 삭제</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"스마트폰 저장 공간 포맷"을 선택해야만 SD 카드 영역이 정리됨; vivo 계정에서 로그아웃하고 "내 스마트폰 찾기"를 꺼야 함.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">삼성</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 일반 관리 > 재설정 > 공장 초기화</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 Samsung 계정을 제거하고 "내 스마트폰 찾기"를 꺼야 함; 일부 모델에는 "자동 덮어쓰기" 옵션이 있으므로 활성화 권장.</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iPhone</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">설정 > 일반 > iPhone 전송 또는 복원 > 모든 콘텐츠 및 설정 지우기</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">먼저 Apple ID에서 로그아웃해야 하며, 그렇지 않으면 다음 사용자가 iCloud 활성화 잠금에 막힘; iOS 15+는 나중에 확인할 수 있도록 "로그아웃 시 iCloud 데이터 유지" 지원.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+```
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>가장 쉽게 간과되는 세 가지
+
+{class="list-disc pl-6 mt-2 space-y-1"}
+- <strong>계정 로그아웃 누락</strong>: 스마트폰을 다음 사용자에게 판매한 후 원격으로 잠겨버려, 결국 신분증을 들고 공식 A/S 센터에 가서 잠금을 해제해야 함.
+- <strong>SD 카드 미제거</strong>: 공장 초기화는 외장 SD 카드의 사진을 포맷하지 않으므로, 수동으로 제거하거나 별도로 포맷해야 함.
+- <strong>U 디스크/OTG 주변기기를 분리하지 않음</strong>: 삭제 과정 중 주변기기가 연결되어 있으면 주변기기 데이터가 실수로 삭제되거나 삭제가 중단될 수 있음.
+:::
+
+#### 2. 디지털 유산: 당신의 소셜 영혼을 어떻게 안장할 것인가?
+
+스마트폰의 데이터는 이미 "가상"이 아닙니다. 그것은 당신의 자금, 사회적 관계, 창작 성과, 나아가 당신의 "디지털 정체성"을 담고 있습니다. <strong>한 사람이 사망한 후, 이러한 자산은 어떻게 처리해야 할까요?</strong> 이것은 더 이상 추상적인 문제가 아니라 점점 더 많은 가족이 실제로 직면하는 난제입니다——친척은 비밀번호를 모르고, 플랫폼은 상속을 허용하지 않으며, 암호화폐는 영원히 분실됩니다.
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-gavel mr-2"></i>법적 근거: 개인정보 보호법 제49조
+
+{class="mt-1"}
+2021년 시행된 "중화인민공화국 개인정보 보호법" 제49조는 명확히 규정합니다: <strong>자연인이 사망한 경우, 그 근친자는 자신의 합법적이고 정당한 이익을 위해 사자 관련 개인정보에 대해 본 장에서 규정한 열람, 복사, 정정, 삭제 등의 권리를 행사할 수 있다. 단, 사자 생전에 다른 규정이 있는 경우는 제외한다.</strong>
+
+{class="mt-2"}
+이는 다음을 의미합니다:
+
+{class="list-disc pl-6 mt-1 space-y-1"}
+- <strong>근친자는 법적 근거</strong>를 가지고 플랫폼에 사자의 계정 및 개인정보 처리를 신청할 수 있음.
+- "합법적이고 정당한 이익"은 일반적으로 유산 상속 처리, 계정 폐쇄, 민감한 프라이버시 삭제 등을 포함.
+- 사자 생전에 유서 또는 계약에 다른 arrangement(예: 지정 유산 연락처 지정)가 있는 경우, 그 약정을 따름.
+- 플랫폼은 "사용자 프라이버시"를 이유로 일률적으로 협조를 거부할 수 없으나, 구체적인 절차는 각 사마다 다름.
+:::
+
+{class="font-semibold mt-4 mb-1"}
+##### 1. 위챗과 알리페이: 계정은 상속 불가능하지만 자금은 가능
+
+이 두 가지 중국인이 가장 자주 사용하는 앱의 규칙은 각각 다릅니다:
+
+- <strong>위챗 계정</strong>: "텐센트 위챗 소프트웨어 라이선스 및 서비스 계약"에 따르면, 계정 소유권은 텐센트에 있으며 사용자는 사용권만 향유하며, <strong>계정 자체는 상속 또는 양도 불가</strong>. 그러나 계정 내의 <strong>잔액, 잔액통 자금</strong>은 개인 자산에 속하므로, 근친자는 사망 증명서, 친족 관계 증명서, 상속 공증서를 통해 차이나페이(차이푸통)에 출금 또는 이체 신청 가능.
+- <strong>알리페이</strong>: 계정 역시 직접 상속할 수 없으나, 알리페이 잔액, 위예바오(위예바오), 리차통(리차통) 등 <strong>자금은 상속 가능한 재산</strong>에 속함. 상속인은 알리페이 "고객 서비스 핫라인" 또는 오프라인에서 사망 증명서와 상속 공증서를 제출하여 처리 가능; 마윈타이(마이펑부)류의 재테크 제품은 펀드 회사 절차를 거쳐야 함.
+- <strong>채팅 기록</strong>: 법적으로는 개인 프라이버시에 속하며, 플랫폼은 가족에게 적극적으로 제공하지 않음. 유산 단서가 관련될 경우, 소송 또는 공증을 통해 조회를 신청할 수 있음.
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>절대 하지 말아야 할 것
+
+{class="list-disc pl-6 mt-2 space-y-1"}
+- <strong>사자의 계정 비밀번호를 직접 가족에게 넘겨 "계속 사용"하게 하지 마세요</strong>——이는 플랫폼 계약을 위반하며, 자금이 동결되거나 리스크 관리가 발동될 때 증거가 더 어려워짐.
+- <strong>사자의 스마트폰으로 인증 코드를 받아 "출금"하려 하지 마세요</strong>——도용으로 간주되어 오히려 법을 위반할 수 있음.
+- <strong>늦추지 마세요</strong>: 일부 계정은 장기간 로그인하지 않으면 자동으로 등록 취소되며, 자금 회수가 더 번거로워짐.
+:::
+
+{class="font-semibold mt-4 mb-1"}
+##### 2. Apple "유산 연락처": 미리 지정하면 일이 사반공배
+
+iOS 15.2부터 Apple은 "유산 연락처" 기능을 출시하여, 사용자가 신뢰하는 연락처를 미리 지정할 수 있으며, 사망 후 해당 연락처는 <strong>사망 증명서 + 유산 연락처 접근 키</strong>로 사자의 iCloud 데이터(사진, 메모, 연락처, 메모 등) 접근을 신청할 수 있음. 조작 단계:
+
+1. iPhone에서 <strong>[설정] &gt; [이름] &gt; [로그인 및 보안] &gt; [유산 연락처]</strong>로 이동.
+2. "유산 연락처 추가"를 탭하고, Face ID로 신원 확인.
+3. 연락처 선택(연락처에서 고르기), 시스템이 <strong>접근 키</strong>를 생성.
+4. 접근 키를 문자 메시지, 이메일 또는 인쇄된 종이 문서로 상대방에게 전달하고, 잘 보관하도록 알림.
+5. 단일 실패를 피하기 위해 여러 연락처를 백업으로 추가할 수 있음.
+
+지정된 사람은 Apple 기기가 필요 없으며, 키와 사망 증명서만으로 Apple 공식 웹사이트에서 접근을 신청할 수 있음. 전체 절차는 일반적으로 7일 이내에 완료됨.
+
+{class="font-semibold mt-4 mb-1"}
+##### 3. Google "비활성 계정 관리자": 사후 처리 자동화
+
+Google은 "비활성 계정 관리자(Inactive Account Manager)"를 제공하여, 사용자가 장기간 로그인하지 않을 때 사전 설정된 작업을 자동 실행——이는 현재 가장 완벽한 디지털 유산 메커니즘 중 하나.
+
+1. <strong>myaccount.google.com/inactive</strong>에 방문하여 Google 계정으로 로그인.
+2. 초과 기간 설정: 3 / 6 / 12 / 18개월 미로그인 후 트리거.
+3. 신뢰할 수 있는 연락처 추가(최대 10명) 및 각 연락처가 어떤 데이터(Gmail, 사진, 클라우드 드라이브 등)에 접근할 수 있는지 설정.
+4. 선택: 자동 답장 메일 설정, 발신자에게 더 이상 처리할 수 없음을 알림.
+5. 마지막 선택: 만료 후 <strong>연락처에게 데이터 공유</strong>할지, <strong>계정을 직접 삭제</strong>할지.
+6. 오작동을 피하기 위해 휴대폰 번호를 보조 인증으로 설정.
+
+{class="font-semibold mt-4 mb-1"}
+##### 4. 국내 소셜 계정: 추모화 및 등록 취소 절차
+
+국내 주류 소셜 플랫폼의 사자 계정 처리는 두 가지 사고방식: <strong>"추모화"(계정을 유지하여 가족이 추모하도록 함)</strong>와 <strong>"등록 취소"(완전 삭제)</strong>. 가족은 사망 증명서, 친족 관계 증명서, 신청자의 신분증을 플랫폼 고객 서비스에 제출하여 신청할 수 있음.
+
+- <strong>웨이보(웨이보)</strong>: 계정 "추모화" 지원, 가족이 사망 증명서를 제공하여 신청하면 계정이 잠겨 로그인할 수 없지만 내용이 보존되며, 홈에 "이 계정은 추모 계정으로 설정되었습니다"가 표시됨. 등록 취소도 신청할 수 있으며, 상속 공증 필요.
+- <strong>도우인(도우인)</strong>: "나 - 설정 - 피드백 및 도움말 - 계정 및 보안 - 계정 등록 취소" 또는 인적 고객 서비스를 통해 사망 증명서, 친족 관계 증명서, 신청자의 신분증을 제출하고, 심의 통과 후 등록 취소 또는 추모 상태로 전환 가능.
+- <strong>빌리빌리(B스테이션)</strong>: 고객 서비스 채널에 사자 증명 및 친족 증명 제출, 계정 등록 취소 또는 추모 페이지로 보존 신청 가능; UP주의 과거 게시에 대한 처리는 저작권 고지 결합 필요.
+- <strong>샤오홍슈(샤오홍슈)</strong>: 공식 고객 서비스를 통해 소송, 사망 증명서, 친족 관계 증명서 제출, 계정 등록 취소 및 내용 삭제 신청 가능.
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-lightbulb mr-2"></i>핵심 알림
+
+{class="list-disc pl-6 mt-2 space-y-1"}
+- 각 플랫폼 규칙은 업데이트되며, 처리 전에 먼저 공식 고객 서비스의 최신 지침을 확인하세요.
+- 모든 증명 파일은 먼저 스캔 백업한 후 제출하며, 원본은 잘 보관하세요.
+- 크로스 플랫폼 일괄 처리 시, <strong>상속 공증서</strong> 한 부를 통일 신청하면 반복적인 절차를 방지할 수 있습니다.
+:::
+
+{class="font-semibold mt-4 mb-1"}
+##### 5. 디지털 자산의 상속 난제
+
+소셜 계정 외에도, 점점 더 많은 사람들이 <strong>진정으로 가치가 있는 디지털 자산</strong>을 보유하고 있으며, 그 상속 문제는 더 복잡함:
+
+- <strong>암호화폐(비트코인, 이더리움 등)</strong>: "개인키 곧 소유권" 원칙에 기반하여, <strong>개인키가 없으면 자산이 소멸</strong>. 상속인은 법적 문서로 체인에 "소송"할 수 없음. 제안: 니모닉/개인키를 분할하여 여러 물리적 보안 위치(예: 은행 금고 + 집 금고)에 보관하고, 유서에 접근 방식을 명시.
+- <strong>거래소 계정</strong>: 은행 계좌와 유사하며, 상속 공증서를 통해 거래소(예: 바이낸스, OKX)에 처리를 신청할 수 있으나, 해외 거래소의 절차는 장기화.
+- <strong>도메인 이름</strong>: 상속 가능한 재산에 속하며, 상속인이 도메인 등록 기관(예: 알리바바 클라우드, GoDaddy)에 상속 공증을 제출한 후 양도 가능.
+- <strong>지적 재산권(원작 기사, 영상, 특허, 소프트웨어 저작권)</strong>: 저작권 중 재산적 권리는 상속 가능(인격권은 상속 불가), 수익권은 상속인이 저자 사후 50년까지 향유.
+- <strong>클라우드 저장 및 네트워크 디스크</strong>: 콘텐츠 데이터는 개인에 귀속되어 상속 가능; 그러나 일부 플랫폼 약관은 계정 자체의 양도를 허용하지 않으므로, 먼저 다운로드 후 등록 취소 필요.
+
+::: div .danger-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-skull-crossbones mr-2"></i>암호화폐 "소멸"의 실제 대가
+
+{class="mt-1"}
+Chainalysis 보고에 따르면, 전 세계적으로 이미 <strong>300만 비트코인 이상</strong>이 개인키 분실로 영원히 회수 불가능하며, 이는 현재 총량의 6분의 1에 해당. 암호화폐 자산을 보유하고 있다면, 반드시 당신이 절대 신뢰하는 최소 한 사람에게 <strong>복구 경로</strong>를 알려야 합니다——그렇지 않으면 이 부는 블록체인 위에서 영원히 잠들 것입니다.
+:::
+
+{class="font-semibold mt-4 mb-1"}
+##### 6. "디지털 유서" 템플릿
+
+전통적인 재산 유서는 디지털 자산을 관리할 수 없음. 매년 "디지털 유서" 부속 문서를 업데이트하여 공식 유서와 함께 보관할 것을 권장. 다음 템플릿을 참고하세요:
+
+::: div .bg-light .dark:bg-gray-700 .rounded-lg .p-4 .mt-2 .mb-3 .text-sm
+{class="font-semibold mb-2"}
+"개인 디지털 자산 처리 부속 문서"(템플릿)
+
+{class="mb-1"}
+<strong>제1부: 계정 목록</strong>(계정명 및 소속 플랫폼만 기록, <strong>비밀번호는 쓰지 말 것</strong>)
+
+{class="list-disc pl-6 mb-2 space-y-0.5"}
+- 소셜류: 위챗(계정xxx), 웨이보, 도우인, B스테이션, 샤오홍슈 등
+- 결제류: 알리페이, 위챗페이, 각 은행 카드 앱
+- 클라우드류: iCloud, 화웨이 클라우드, 샤오미 클라우드, Google 계정, Microsoft 계정
+- 이메일류: QQ 메일, 넷이즈 메일, Gmail 등
+- 기타: 네트워크 디스크, 구독 서비스, 게임 계정 등
+
+{class="mb-1"}
+<strong>제2부: 비밀번호 보관 방안</strong>
+
+{class="list-disc pl-6 mb-2 space-y-0.5"}
+- 주 비밀번호 보관 방식: 비밀번호 관리자(예: Bitwarden, 1Password) 사용, 주 비밀번호는 종이에 적어 집 금고에 밀봉 보관.
+- 복구 키/니모닉: 분할 보관, 최소 2개 물리적 위치(예: 은행 금고 + 집 금고).
+- 권한 조회인: 이름, 신분증 번호, 본인과 관계, 연락처.
+
+{class="mb-1"}
+<strong>제3부: 처리 의사</strong>
+
+{class="list-disc pl-6 mb-2 space-y-0.5"}
+- 각 계정을 "추모화"할지 "등록 취소"할지.
+- iCloud / Google 데이터에 "유산 연락처" 또는 "비활성 계정 관리자" 지정 여부.
+- 암호화 자산은 누가 상속하며, 개인키 획득 경로 설명.
+- 저작권류 작품 수익은 누가 향유할지.
+
+{class="mb-1"}
+<strong>제4부: 연락처 및 플랫폼</strong>
+
+{class="list-disc pl-6 space-y-0.5"}
+- 신뢰할 수 있는 집행인 이름, 연락처, 예비 연락처.
+- 상주 플랫폼 고객 서비스 진입점 및 필요 증명 자료 목록.
+- 본 부속 문서 업데이트 날짜: ____년 __월 __일, 다음 재검토 날짜: ____년 __월 __일.
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>"비밀번호"에 대한 법률 알림
+
+{class="mt-1"}
+비밀번호를 직접 유서에 쓰면 유출 위험이 있으며, 유서가 공개된 후 모든 상속인이 볼 수 있음. <strong>더 안전한 방법은: 유서에는 "계정 목록 + 처리 의사 + 비밀번호 보관 위치"만 쓰고, 진짜 비밀번호는 비밀번호 관리자 주 비밀번호를 통해 신뢰할 수 있는 집행인에게 별도로 전달</strong>. 이렇게 하면 법적 요구 사항을 준수할 뿐만 아니라 비밀번호 유출 위험도 줄일 수 있음.
+:::
+
+#### 3. 환경 보호의 마지막 여정
+
+한 대의 스마트폰에는 금, 은, 구리, 희토류 등 수십 종의 금속이 포함되어 있어, 함부로 버리면 토양을 오염시킬 뿐만 아니라 자원을 낭비함. 올바른 재활용 경로는 세 가지이며, 각각 중점이 다름:
+
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                        <thead>
+                            <tr class="bg-light dark:bg-gray-700">
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">경로</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">회수 가격</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">데이터보안</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">적용 시나리오</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">공식 트레이드인(화웨이/Apple/샤오미 등)</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">중간, 보조금 쿠폰 중첩 가능</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">최고, 공식의 규범화된 절차</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">같은 브랜드의 새 기기로 교체할 때 가장 합산함</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">제3자 재활용 플랫폼(아이회수, 주안쥐안, 후이쇼우바오 등)</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">약간 높음, 가격 비교 가능</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">높음, 데이터 정리 보고서 제공</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">직접 현금화하고 싶고 브랜드에 구속되지 않을 때</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">공익 기부(농촌 학교, 자선 기구 등)</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">경제적 보상 없음</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">자체적으로 철저히 삭제 필요</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기가 아직 사용 가능하고 자선을 하고 싶을 때</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">남은 가치 발휘(자체 개조)</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">새 기기 비용 절약</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">원래 사용자가 계속 사용, 위험 없음</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기 성능이 아직 괜찮고 가정에 개조 요구가 있을 때</td>
+                            </tr>
+                        </tbody>
+                    </table>
+```
+
+- <strong>공식 재활용/트레이드인</strong>: 가장 권장되는 방식으로, 절차가 규범적이고 데이터 보안이 보장됨. Apple, 화웨이, 샤오미 등 브랜드 공식 웹사이트에 모두 "트레이드인" 진입점이 있어, 평가 후 새 기기 대금을 공제할 수 있음.
+- <strong>정규 재활용 플랫폼</strong>: 평판이 좋은 대형 재활용 플랫폼을 선택하고, 주문 후 순펑(순펑)이 방문 수거하여 검수 후 송금. 반드시 <strong>"데이터 정리 보고서"를 제공하는</strong> 플랫폼을 선택하고 증거를 보관.
+- <strong>공익 기부</strong>: 현지 농촌 학교, 지역 공익 조직에 연락할 수 있으며, 구형 스마트폰은 교육용 태블릿 또는 노인용 전화기로 개조 가능. <strong>기부 전에 반드시 완전한 삭제 절차를 실행하고, 모든 SIM/SD 카드를 제거</strong>.
+- <strong>남은 가치 발휘</strong>: 차량 내비게이션, 스마트 홈 중앙 제어, 감시 카메라, 아기 모니터, 전자 액자로 개조. 한 대의 구형 스마트폰은 몇 년 더 싸울 수 있음.
+
+::: div .info-box .rounded-lg .p-4 .mt-3
+{class="font-semibold"}
+<i class="fas fa-leaf mr-2"></i>전자 폐기물의 진실
+
+{class="mt-1"}
+한 대의 스마트폰 회로기판에는 <strong>금, 은, 팔라듐, 구리</strong> 등 귀금속이 포함되어 있으며, 톤당 폐 회로기판의 금 함유량은 금광의 수십 배. 그러나 함부로 버리면 그 안의 납, 수은, 카드뮴이 토양과 지하수로 침투하여 수십 년 동안 오염을 지속함. <strong>올바른 재활용은 환경을 보호할 뿐만 아니라 희소 금속의 순환 재생에도 기여</strong>.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>실습: 구형 스마트폰에 "표준 장례"를 집행하기
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 마지막 전체 백업: 사진을 클라우드에 업로드, 중요한 파일은 컴퓨터에 복사, 채팅 기록을 내보내 보관.
+2. 모든 계정 로그아웃: iCloud / 화웨이 / 샤오미 / Google 계정, "내 스마트폰 찾기" 끄기.
+3. SIM 카드 및 SD 카드 제거, 모든 OTG 주변기기를 분리.
+4. 암호화 공장 초기화 실행, 필요시 수동으로 "저장 공간 포맷" 선택.
+5. (구형 기기에만 해당) 휴지 파일로 저장 공간을 채운 후 공장 초기화를 한 번 더 실행.
+6. 다음 행선지 선택: 공식 트레이드인, 정규 재활용 플랫폼, 공익 기부 또는 가족에게 양도.
+7. "디지털 유산 목록"을 동기화하여 업데이트하고, 도태된 기기를 목록에서 제외.
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-calendar-check mr-2"></i>이번 달 작업 목록
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 현재 주력 스마트폰에 Apple "유산 연락처"를 지정하거나 Google "비활성 계정 관리자"를 설정.
+2. 본 절의 템플릿을 사용하여 "개인 디지털 자산 처리 부속 문서" 초안을 작성하고, 가족과 보관 장소를 논의.
+3. 가정에 2대 이상의 유휴 구형 스마트폰이 있는지 확인하고, 공식 또는 정규 플랫폼 재활용을 예약.
+:::

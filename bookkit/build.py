@@ -45,10 +45,16 @@ def load_book(root: Path, book_path: Path = None) -> dict:
     return json.loads(path.read_text(encoding='utf-8'))
 
 
+_BOOK_ROOTS = {}
+
 def _read_md(root: Path, rel: str):
-    p = root / 'source' / rel
+    # 源稿根 = book.json 所在目录（source/ 或 source/translations/<lang>/）
+    src = _BOOK_ROOTS.get(str(root), root / 'source')
+    p = src / rel
+    if not p.is_file() and src != root / 'source':
+        p = (root / 'source') / rel      # 回退主源稿（共享件）
     if not p.is_file():
-        raise BookError(f'源稿缺失：source/{rel}')
+        raise BookError(f'源稿缺失：{src}/{rel}')
     meta, body = M.split_front_matter(p.read_text(encoding='utf-8'))
     return meta, body
 
@@ -79,9 +85,13 @@ def render_toc(book: dict) -> str:
 
 def build(root: Path, lang: str = 'zh-CN', out: Path = None, book_path: Path = None) -> dict:
     book = load_book(root, book_path)
-    src = root / 'source'
+    src = (Path(book_path).parent if book_path else root / 'source')
+    _BOOK_ROOTS[str(root)] = src
 
-    shell = (src / book['template']).read_text(encoding='utf-8')
+    shell_path = src / book['template']
+    if not shell_path.is_file():
+        shell_path = (root / 'source') / book['template']
+    shell = shell_path.read_text(encoding='utf-8')
 
     # 章节 front matter 是 TOC 的唯一数据源：先全部读入，再渲染
     for ch in book['chapters']:

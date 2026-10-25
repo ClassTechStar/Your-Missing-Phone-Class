@@ -1,0 +1,145 @@
+---
+id: di-er-shi-zhang-termux
+part: jin-jie-pian
+nav:  附：Termux行動式Linux終端
+toc: sub
+kind: supplement
+---
+
+### 第二十章附：Termux——Android裝置上的行動式Linux終端環境
+
+{class="chapter-intro mb-4"}
+如果你覺得開發者模式還不夠"硬核"，想要在手機上體驗完整的Linux命令列，那麼Termux正是為你準備的。它無需root權限，就能把一臺普通的安卓手機變成一臺便攜的Linux工作站，是進階使用者探索移動端開發與運維的利器。
+
+#### 一、什麼是Termux
+
+Termux是一款專為Android裝置設計的開源終端模擬器和Linux環境應用程式，它無需root權限即可在手機上提供完整的Linux shell體驗。作為一個輕量級應用（安裝包僅30MB左右），Termux透過APT包管理系統支援豐富的軟體生態，允許使用者在移動裝置上執行Python、Node.js、Git、SSH等工具，甚至搭建伺服器或進行滲透測試。
+
+Termux的核心優勢在於輕量化和高度可擴充性，適合開發、學習及系統管理等多種場景。它將標準的軟體包與精確的終端模擬結合在一個開源解決方案中。
+
+#### 二、核心功能與特性
+
+##### 🖥️ 完整的Linux環境
+
+Termux<strong>僅內建Bash</strong>這一種Shell。如果想使用Zsh或fish等其他Shell，需要透過包管理器手動安裝，例如：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>或<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>。同時Termux支援Vim、Nano、Emacs等編輯器，提供接近原生的命令列體驗。使用者可以透過"pkg install"安裝2000+軟體包，包括GCC、OpenSSH、SQLMap等開發和安全工具。
+
+##### 📦 強大的包管理
+
+使用APT包管理器（類似Debian和Ubuntu），可安裝數千種Linux軟體包，涵蓋開發工具、網路工具等。支援Python、Ruby、Node.js、Go、Rust、Swift等多種程式語言環境。
+
+##### 🔒 安全與網路功能
+
+- <strong>SSH遠端連線</strong>：支援SSH客戶端和伺服器功能，可遠端連線其他裝置或讓手機成為SSH主機。
+- <strong>加密工具</strong>：提供OpenSSL等加密工具，支援資料加密和安全通訊。
+- <strong>伺服器搭建</strong>：可配置Nginx或Apache搭建靜態網頁伺服器。
+
+##### 🔧 系統整合與擴充
+
+- 訪問手機儲存權限，實現本地檔案管理。
+- 透過Termux:API外掛呼叫感測器、攝像頭等Android硬體功能。
+- 支援藍芽鍵盤和外部顯示器連線，具有完整的滑鼠支援。
+
+#### 三、外掛生態系統
+
+Termux的核心應用程式可以透過幾個可選的外掛應用進行擴充，提供額外的功能和整合：
+
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+                        <thead>
+                            <tr class="bg-light dark:bg-gray-700">
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">外掛名稱</th>
+                                <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">功能描述</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">向命令列程式公開Android API功能</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允許在裝置啟動時執行指令碼</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提供浮動終端視窗</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">為終端啟用顏色方案和字型自定義</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">將Termux指令碼與Tasker自動化應用整合</td>
+                            </tr>
+                            <tr>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">允許從主螢幕小部件執行指令碼</td>
+                            </tr>
+                        </tbody>
+                    </table>
+```
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-exclamation-triangle mr-2"></i>重要提示
+
+{class="mt-1"}
+Termux及其外掛必須從同一來源安裝，因為它們共享相同的sharedUserId。混合來自不同來源（如F-Droid和GitHub）的安裝將導致安裝錯誤。
+:::
+
+#### 四、安裝與配置指南
+
+##### 📥 安裝步驟
+
+1. <strong>下載應用</strong>：從官方渠道（F-Droid或GitHub）下載安裝Termux，無需root權限。
+2. <strong>初始化系統</strong>：首次啟動後等待"Installing bootstrap packages"完成。
+3. <strong>獲取儲存權限</strong>：執行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>獲取手機檔案系統權限。
+4. <strong>更新軟體源</strong>：執行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>更新軟體包列表。
+
+##### ⚙️ 基礎最佳化
+
+- <strong>換映象源</strong>：使用<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code>命令透過圖形介面更換映象源（推薦清華大學映象源）。
+- <strong>快捷鍵設定</strong>：音量減鍵模擬Ctrl，音量加鍵模擬Esc，提升輸入效率。
+- <strong>介面美化</strong>：安裝Zsh + Oh My Zsh，配置主題和外掛。
+
+#### 五、典型應用場景
+
+##### 💻 移動開發測試
+
+在手機上搭建完整的開發環境，編寫並執行Python指令碼，使用GCC編譯C程式，透過Git管理程式碼倉庫，結合SSH與遠端伺服器同步。
+
+##### 🖥️ 伺服器運維
+
+透過SSH遠端管理伺服器，執行系統維護、日誌分析等任務，隨時隨地處理伺服器問題。
+
+##### 📚 學習Linux操作
+
+提供真實的Linux環境，是學習命令列和系統管理的理想平臺，可練習Shell指令碼編寫、Linux檔案權限管理（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> 設定 rwxr-xr-x 權限位、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> 修改檔案歸屬、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> 檢視 owner/group/other 三組九位權限）等基礎命令。注意這是Unix/Linux經典的"三組九位"權限模型（owner / group / other × 讀 / 寫 / 執行），與Windows NTFS的ACL訪問控制列表是完全不同的兩套體系。
+
+##### 🔐 網路安全測試
+
+安裝Nmap、SQLMap、Hydra、Metasploit等安全工具，進行網路掃描和滲透測試。
+
+#### 六、版本與相容性
+
+Termux的最新穩定版本是v0.118.2，適用於Android ≥ 7的裝置。需要注意的是，Termux在Android 12及更高版本上可能存在不穩定性，建議關注官方更新日誌以獲取最新相容性資訊。
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-info-circle mr-2"></i>總結
+
+{class="mt-1"}
+Termux將強大的Linux終端體驗帶到了Android裝置上，讓手機成為一臺便攜的開發和學習工具。無論是開發者、系統管理員還是技術愛好者，都可以利用Termux在移動裝置上享受完整的命令列體驗，實現"口袋裡的Linux"這一理念。
+:::
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+<i class="fas fa-hands mr-2"></i>來動手：在手機上跑通第一條Linux命令
+
+{class="list-decimal pl-6 mt-1 space-y-1"}
+1. 從F-Droid下載並安裝Termux，首次啟動等待初始化完成。
+2. 執行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>更新軟體包。
+3. 安裝Python：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install python</code>。
+4. 輸入<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>，感受在手機上執行程式碼的樂趣。
+:::

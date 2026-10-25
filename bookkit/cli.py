@@ -92,6 +92,7 @@ def build_parser() -> argparse.ArgumentParser:
     ex.add_argument("--lang", default="zh-CN", help="源语言（默认 zh-CN）")
     ex.add_argument("--out", type=Path, default=None, help="源稿根目录（默认 source/）")
     ex.add_argument("--dry-run", action="store_true", help="只解析不写盘")
+    ex.add_argument("--no-strict", action="store_true", help="跳过字节级往返断言（翻译反解用；提取按树位置，不受序列化差异影响）")
 
     i18 = common(sub.add_parser("i18n", help="翻译覆盖率报告"), fail_default="never")
     i18.add_argument("--report", type=Path, default=None, help="报告输出路径（Markdown）")
@@ -174,7 +175,8 @@ def main(argv=None) -> int:
     elif args.cmd == "extract":
         from .extract import extract
         version = args.version or mf.latest_version()
-        result = extract(mf.root, version, args.lang, args.out, args.dry_run)
+        result = extract(mf.root, version, args.lang, args.out, args.dry_run,
+                          strict=not args.no_strict)
         if args.json:
             print(json.dumps(result, ensure_ascii=False, indent=2))
         else:

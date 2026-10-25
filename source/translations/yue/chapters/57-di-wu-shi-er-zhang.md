@@ -1,0 +1,148 @@
+---
+id: di-wu-shi-er-zhang
+num: 52
+part: an-zhuo-kai-fa-pian
+nav: 第五十二章：四大組件與Activity生命週期
+toc: default
+kind: chapter
+---
+
+### 第五十二章：四大組件同 Activity 生命週期
+
+{class="chapter-intro mb-4"}
+如果話 Compose 係 App 嘅「面」，咁呢一章講嘅就係 App 嘅「骨架」。安卓系統有四大基本組件，所有 App 都係由佢哋砌出嚟嘅；而當中最重要嘅 Activity，有一張每個安卓開發者都必須刻入腦嘅「生命週期圖」。本章學完，你就可以理解「點解切咗去後台返嚟，我個 App 嘅狀態就冇咗」呢類千古之謎。
+
+#### 一、四大組件：安卓嘅「四樑八柱」
+
+安卓官方定義咗四種基本組件，分別負責一類工作：
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">組件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">職責</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">打個比方</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activity</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一個睇得到嘅介面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">舖頭嘅門面——用戶見到、又互動到</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Service</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">喺後台做嘢嘅「隱形人」</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">倉庫工人——播音樂、下載檔案，唔需要介面</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">BroadcastReceiver</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">接收系統廣播</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">傳達室——「冇電喇」「斷網喇」嘅喇叭</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ContentProvider</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨 App 共享資料</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">公共資料櫃——例如將聯絡人共享畀其他 App</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+安卓四大組件速覽
+
+新手階段你 95% 嘅時間都係同 Activity 打交道；Service 同 BroadcastReceiver 做音樂播放、訊息推送嗰陣會用到；ContentProvider 用得最少（系統已經將常用資料封裝好）。另外留意：四大組件全部都要喺 AndroidManifest.xml 入面「登記戶口」，唔登記嘅話系統就搵唔到佢哋。
+
+#### 二、Activity 生命週期：安卓開發嘅第一張「藏寶圖」
+
+手機上面嘅 App 隨時可能被打斷：嚟電話喇、用戶切咗去覆微信、系統記憶體唔夠將你殺咗……Activity 嘅一生，就係喺呢張圖度循環旅行：
+
+::: div .figure
+:::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
+<span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">onCreate（出生：初始化）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">onStart（可見了）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-green-500 bg-green-50 text-green-900 dark:bg-green-950 dark:text-green-200 rounded-md px-3 py-1 text-sm text-center">onResume（前臺交互中）</span>
+:::
+
+:::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
+<span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center">onPause（部分被遮住）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-amber-500 bg-amber-50 text-amber-900 dark:bg-amber-950 dark:text-amber-200 rounded-md px-3 py-1 text-sm text-center">onStop（完全看不見）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-red-500 bg-red-50 text-red-900 dark:bg-red-950 dark:text-red-200 rounded-md px-3 py-1 text-sm text-center">onDestroy（銷燬）</span>
+:::
+
+:::inline div .flex .flex-wrap .items-center .justify-center .gap-2 .my-2
+<span class="border-2 border-gray-400 bg-gray-100 text-gray-700 dark:bg-gray-800 dark:text-gray-300 rounded-md px-3 py-1 text-sm text-center">🔁 onRestart / onStart / onResume：回到前臺時原路返回</span>
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mt-1"}
+圖 4：Activity 生命週期（前進方向：上排出世 → 下排離場，返嚟嗰陣原路折返）
+:::
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">回調</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">幾時觸發</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型用途</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onCreate</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Activity 開嗰陣（一次）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">載入介面、初始化資料</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onStart</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">介面變為可見</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開始啲輕量邏輯</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onResume</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">攞到焦點、可以互動</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">開始動畫、恢復播放</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onPause</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">被部分遮住／切走嗰一刻</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">暫停動畫、儲存草稿</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onStop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完全睇唔到</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">釋放重磅資源、暫停下載</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">onDestroy</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">被銷毀之前</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最後嘅清理</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+六個生命週期回調嘅典型用途
+
+::: div .danger-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+避坑提醒：轉螢幕會「殺死」Activity
+
+{class="mt-1"}
+新手最經典嘅炒車現場：App 轉一轉螢幕，輸入框入面嘅字全部冇晒。原因：轉螢幕預設會銷毀並重建 Activity（行一次 onDestroy → onCreate）。解法：用 rememberSaveable 儲存狀態（Compose 入面代替 remember），佢會喺重建嗰陣自動將個值搵返。第 6、7 章會反覆用到。
+:::
+
+#### 三、Intent：App 內外通行嘅「車飛」
+
+Intent（意圖）係組件之間通訊嘅「車飛」。你想由一個頁面跳去另一個頁面，或者打開瀏覽器、叫起相機，都要「買飛上車」：
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · 用 Intent 跳轉</span><span class="dots">···</span>
+:::
+
+```
+// 方式一：顯式 Intent——明確指定去邊個頁面
+val intent = Intent(this, DetailActivity::class.java)
+intent.putExtra("name", "張三")     // 車上帶埋"行李"（數據）
+startActivity(intent)
+
+// 方式二：隱式 Intent——淨係講要做乜，系統搵邊個做
+val web = Intent(Intent.ACTION_VIEW, Uri.parse("https://developer.android.com"))
+startActivity(web)   // 系統會開瀏覽器／或者畀你揀
+```
+:::
+
+兩種方式各有用途：顯式用於自己 App 入面嘅頁面跳轉；隱式用於調用系統或者其他 App 嘅能力（開網頁、打電話、分享）。Compose 項目入面，喺 Composable 入面用 LocalContext.current 攞到 Context 就可以 startActivity。
+
+#### 四、多頁面同導航
+
+真實嘅 App 都有好多個頁面。Compose 官方推薦嘅導航方案係 Navigation Compose（依賴庫 androidx.navigation）：
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · Navigation Compose 骨架</span><span class="dots">···</span>
+:::
+
+```
+val navController = rememberNavController()
+
+NavHost(navController, startDestination = "home") {
+    composable("home") { HomeScreen(navController) }
+    composable("detail/{name}") { entry ->
+        val name = entry.arguments?.getString("name")
+        DetailScreen(name ?: "未知")
+    }
+}
+
+// 喺頁面入面跳轉：
+navController.navigate("detail/張三")     // 帶參數
+navController.popBackStack()              // 返回上一頁
+```
+:::
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+小貼士：頁面多咗點算？
+
+{class="mt-1"}
+項目大咗之後，將所有頁面路由集中寫喺一個檔案入面（例如 AppNavGraph.kt），統一管理，唔好畀「跳去邊」嘅邏輯散落喺各個頁面。呢一步係由「行到」走向「可維護」嘅第一步。
+:::
+
+#### 五、順便認識：Fragment 係乜嘢（同埋點解本書冇教）
+
+查舊教程嗰陣你一定會撞到 Fragment——佢係 Activity 入面嘅「可重用介面片段」，喺舊式多頁面架構入面係絕對主角。但係 Compose 年代，頁面直接用 Composable 函數 + Navigation 路由就夠，官方亦都已經淡化咗 Fragment 嘅地位。本書因此冇將佢放入主線。
+
+畀你嘅建議：新項目唔好主動用 Fragment；但係睇舊程式碼、面試被問到嗰陣，知道佢係「Activity 入面嵌住嘅介面片段」就得。學習資源永遠優先揀 2023 年之後嘅——安卓技術棧嘅「老黃曆」更新得比想像中快。
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+嚟動手：畀計數器裝上「記憶」
+
+{class="mt-1"}
+將第 51 章嘅計數器改一改：① 將 remember 換成 rememberSaveable，轉螢幕驗證個數字仲喺唔喺度；② 加一個「關於」按鈕，用 Navigation 跳去第二個頁面顯示版本號；③ 喺兩個頁面嘅 onCreate/onPause 入面 print 日誌（Log.d），用 Logcat 觀察生命週期調用次序。做完呢三步，生命週期就唔再係紙上談兵。
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+本章小結
+
+- 四大組件：Activity（門面）、Service（後台）、BroadcastReceiver（喇叭）、ContentProvider（資料櫃）
+- 生命週期六回調：onCreate → onStart → onResume → onPause → onStop → onDestroy
+- 轉螢幕會銷毀重建 Activity：用 rememberSaveable 保住狀態
+- Intent 係「車飛」：顯式跳自己頁面，隱式調系統能力
+- 多頁面用 Navigation Compose：NavHost + composable 路由
+:::

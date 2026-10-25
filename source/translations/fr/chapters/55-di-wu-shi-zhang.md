@@ -1,0 +1,232 @@
+---
+id: di-wu-shi-zhang
+num: 50
+part: an-zhuo-kai-fa-pian
+nav: Chapitre 50 : Prise en main rapide de Kotlin — le premier langage du développement Android
+toc: default
+kind: chapter
+---
+
+### Chapitre 50 : Kotlin en un rien de temps — le premier langage du développement Android
+
+{class="chapter-intro mb-4"}
+Dans ce chapitre, on se met sérieusement au langage. Pas de stress — Kotlin est réputé « adapté aux débutants », et pas besoin d'apprendre la grammaire par cœur : avec 20 % de la syntaxe maîtrisée, tu comprends et écris déjà 80 % du code du quotidien. Le reste, tu le consulteras en travaillant sur tes projets. Retiens notre principe d'apprentissage : comprendre vaut mieux que mémoriser, savoir utiliser vaut mieux que tout maîtriser.
+
+#### 1. Variables et types : donner un nom aux données
+
+Un programme, c'est « données + logique ». Une variable, c'est un nom donné à une donnée pour la ranger. Kotlin propose deux façons de la déclarer :
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · Variables</span><span class="dots">···</span>
+:::
+
+```
+val name = "Léa"        // val : variable en lecture seule (à privilégier par défaut)
+var age = 18             // var : variable modifiable (modifiable plus tard)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var peut être modifié
+// name = "Emma"         // <i class="fas fa-times-circle mr-1"></i> val ne peut pas être modifié : erreur de compilation
+
+val score: Int = 100     // on peut aussi préciser le type explicitement
+val pi = 3.14            // sans l'écrire, il est déduit automatiquement
+```
+:::
+
+Les types courants tiennent en quelques-uns : retiens-les avec ce tableau :
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Type</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ce qu'il stocke</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Exemple</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Int</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nombre entier</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">42</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Double</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Nombre décimal</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.14</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">String</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Texte</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Salut"</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Boolean</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Vrai/faux</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">true / false</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">List&lt; T&gt;</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Un ensemble de données</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">listOf(1, 2, 3)</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+Les types de base courants de Kotlin
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Petit conseil : la règle du val d'abord
+
+{class="mt-1"}
+La règle d'or de la communauté Kotlin : utilise val par défaut, et var seulement si c'est vraiment nécessaire. Si tu emploies var là où val suffirait, l'IDE te le signalera en jaune. Cette habitude élimine toute une catégorie de bugs de « variable modifiée par accident » — moins le code change, plus il est facile à raisonner.
+:::
+
+#### 2. Les fonctions : emballer la logique en « boutons »
+
+Une fonction est un morceau de logique qui porte un nom, comme un bouton de télécommande — on appuie (on l'appelle) et une suite d'actions s'exécute. En Kotlin, on la déclare avec fun :
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · Fonctions</span><span class="dots">···</span>
+:::
+
+```
+fun greet(name: String): String {
+    return "Bonjour, $name !"     // le symbole $ insère la variable dans la chaîne
+}
+
+println(greet("Léa"))        // sortie : Bonjour Léa !
+
+// une fonction d'une ligne peut s'écrire comme expression
+fun add(a: Int, b: Int) = a + b
+
+println(add(3, 5))            // sortie : 8
+```
+:::
+
+Quelques points clés : les paramètres s'écrivent entre parenthèses (le nom d'abord, le type ensuite, séparés par deux points) ; le type de retour s'écrit après la parenthèse fermante ; le gabarit de chaîne $nomVariable est la commodité signature de Kotlin — plus besoin de concaténer « chaîne + variable » comme en Java.
+
+#### 3. Conditions et boucles : donner de la « réflexion » au programme
+
+L'intelligence d'un programme tient à deux choses : savoir décider (if/when) et savoir répéter (for/while).
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · Conditions et boucles</span><span class="dots">···</span>
+:::
+
+```
+// condition : if / else
+val age = 17
+if (age >= 18) {
+    println("Adulte")
+} else {
+    println("Mineur")
+}
+
+// branches multiples : when (cent fois mieux que switch)
+val score = 85
+val level = when {
+    score >= 90 -> "Excellent"
+    score >= 60 -> "Passable"
+    else -> "Continue comme ça !"
+}
+
+// répéter : boucle for
+val fruits = listOf("pomme", "banane", "orange")
+for (fruit in fruits) {
+    println("J'adore manger $fruit")
+}
+```
+:::
+
+when est la structure multi-branches la plus utilisée de Kotlin ; en développement Android, tu t'en serviras tous les jours (pour afficher des écrans différents selon l'état, par exemple).
+
+#### 4. La null safety : le « gilet de sauvetage » de Kotlin
+
+Le bug le plus célèbre de l'ère Java s'appelle NullPointerException (exception de pointeur null) — le programme accède à quelque chose qui « n'existe pas » et plante immédiatement. Statistiquement, il trône depuis toujours en tête du classement des plantages Android. Kotlin le règle au niveau du langage : les valeurs nulles sont interdites par défaut.
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · Sécurité null</span><span class="dots">···</span>
+:::
+
+```
+var name: String = "Léa"   // type normal : ne peut jamais être null
+// name = null                // <i class="fas fa-times-circle mr-1"></i> erreur de compilation : ça te bloque direct
+
+var nickname: String? = null // ajoute un point d'interrogation : autorise null
+nickname = "Tommy"
+
+// avec les types nullables, il faut gérer en sécurité :
+println(nickname?.length)    // appel sûr : si null, renvoie null, pas de crash
+val len = nickname?.length ?: 0   // opérateur Elvis : valeur par défaut si null
+println(len)
+```
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+Attention : ne confonds pas ? et ?:
+
+{class="mt-1"}
+String? signifie « peut être null », et a ?: b signifie « si a est null, utilise b » (sa silhouette évoque la banane d'Elvis Presley, d'où le nom d'opérateur Elvis). Quand tu commences à coder, si le compilateur te signale une « erreur liée à null », c'est dans neuf cas sur dix que tu as oublié de traiter un type nullable — c'est le langage qui te protège.
+:::
+
+#### 5. Classes et objets : le moule à « pièces »
+
+La classe est le « moule » de l'objet, l'objet est le « produit fini » de la classe. Tout dans Android — écrans, boutons, données — est un objet. Kotlin possède une pépite nommée data class (classe de données), conçue justement pour « contenir des données » : une ligne vaut des dizaines de lignes de Java :
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · Classes et data class</span><span class="dots">···</span>
+:::
+
+```
+// classe normale : le moule
+class Dog(val name: String) {
+    fun bark() = println("$name : ouah !")
+}
+
+val dog = Dog("Rex")      // crée l'objet
+dog.bark()                 // Rex : ouah !
+
+// data class : la boîte à données (avec equals/copy etc. d'office)
+data class User(val id: Int, val name: String, val email: String)
+
+val me = User(1, "Léa", "zhangsan@example.com")
+val twin = me.copy(name = "Hugo")   // copie et modifie un champ
+```
+:::
+
+Quand tu feras ton carnet de comptes, chaque écriture sera une data class : data class Record(val amount: Double, val category: String, val date: String). Vois-tu : tu es déjà capable d'écrire la structure de code d'un vrai projet.
+
+#### 6. Lambdas et fonctions d'ordre supérieur : le « sucre syntaxique » de Kotlin
+
+Dans le code Android, tu verras chaque jour des fonctions « sans nom » comme { ... }, appelées lambdas (fonctions anonymes). Button avec onClick = { count++ } est un lambda — on emballe « quoi faire au clic » en un paquet et on le tend au bouton.
+
+::: div .code-block
+:::inline div .code-head
+<span>KOTLIN · Premières lambda</span><span class="dots">···</span>
+:::
+
+```
+// façon normale : définir une fonction nommée puis la passer
+fun double(x: Int) = x * 2
+val result = listOf(1, 2, 3).map(::double)
+
+// façon lambda : définie sur place, légère et directe
+val result2 = listOf(1, 2, 3).map { it * 2 }   // it = l'élément courant
+
+// filtrer + transformer en chaîne (très courant dans les vrais projets)
+val bills = listOf(12.5, 88.0, 5.0, 200.0)
+val bigBills = bills.filter { it > 50 }.sorted()
+// [88.0, 200.0]——"factures de plus de 50, triées"
+```
+:::
+
+Note quelques « combos » très fréquents sur les collections : filter (filtrer), map (transformer), sorted (trier), sum (additionner). 90 % de tes futurs traitements de listes seront des combinaisons de ces quatre coups. La philosophie de Kotlin : ce qu'une phrase suffit à exprimer, on ne l'écrit jamais en cinq.
+
+#### 7. La fiche mémo de syntaxe pour grands débutants
+
+N'essaie pas d'apprendre toute la syntaxe en une journée. Garde cette fiche de côté et consulte-la en écrivant ton code : dans deux semaines, ce sera naturel :
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Ce qu'on veut faire</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Écriture</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Définir une variable en lecture seule</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">val x = 1</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Définir une variable modifiable</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">var x = 1</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Définir une fonction</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">fun nom(paramètres) : TypeDeRetour { ... }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Décider</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">if (condition) {...} else {...}</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Multi-branches</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">when { condition -> résultat }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Parcourir</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">for (x in liste) { ... }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Concaténer des chaînes</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"Salut, $name"</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Traiter le null</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">x?.length ?: 0</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Définir une data class</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">data class X(val a: Int, val b: String)</code></td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+Fiche mémo de syntaxe Kotlin (édition débutant)
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+À toi de jouer : 10 minutes de Kotlin sans rien installer
+
+{class="mt-1"}
+Ouvre play.kotlinlang.org dans ton navigateur (le bac à sable officiel de Kotlin), colle-y chaque morceau de code de ce chapitre et exécute-le, modifie les nombres et les textes, et observe comment la sortie change. Ces 10 minutes de « jouer avant d'apprendre » te rendront deux fois plus à l'aise au chapitre 51.
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+Résumé du chapitre
+
+- val d'abord, var avec parcimonie ; les types sont déduits automatiquement, mais une déclaration explicite après le deux-points reste possible
+- Une fonction = de la logique emballée ; le gabarit de chaîne $ est la commodité signature
+- if/when pour décider, for pour répéter ; when est le « couteau suisse » du développement Android
+- La null safety est le gilet de sauvetage de Kotlin : les types ordinaires refusent null, les types nullables exigent ? / ?:
+- La data class est une boîte à données, un champ par ligne ; les vrais projets l'utilisent tous les jours
+- 20 % de la syntaxe fait 80 % du travail : d'abord savoir s'en servir, ensuite maîtriser
+:::

@@ -1,0 +1,180 @@
+---
+id: di-liu-shi-yi-zhang
+num: 61
+part: ios-kai-fa-pian
+nav: 제61장: Swift 빠르게 익히기 — 애플 개발의 첫 번째 언어
+toc: default
+kind: chapter
+---
+
+### 제61장: Swift 빠르게 시작하기 — 애플 개발의 첫 번째 언어
+
+{class="chapter-intro mb-4"}
+이 장에서는 본격적으로 언어를 배워요. 긴장하지 마세요. Swift는 '초보자에게 친절한' 언어로 유명하고, 문법책을 통 외울 필요도 없어요. 문법의 20%만 익혀도 일상 코드의 80%를 읽고 쓸 수 있어요. 나머지는 프로젝트를 하면서 찾아 보면 돼요. 우리의 학습 원칙을 기억하세요. 이해 > 암기, 활용 > 숙달.
+
+#### 1. 변수와 타입: 데이터에 이름 붙이기
+
+프로그램이란 '데이터 + 로직'이에요. 변수는 데이터에 이름을 붙여 저장하는 것이고요. Swift는 let과 var로 선언해요.
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · 변수</span><span class="dots">···</span>
+:::
+
+```
+let name = 김철수        // let: 상수(기본으로 추천)
+var age = 18             // var: 변수(나중에 바꿀 수 있어요)
+
+age = 19                 // <i class="fas fa-check-circle mr-1"></i> var는 바꿀 수 있어요
+// name = 이영희         // <i class="fas fa-times-circle mr-1"></i> let은 바꿀 수 없어요, 컴파일 오류
+
+let score: Int = 100     // 타입을 직접 쓸 수도 있어요
+let pi = 3.14            // 생략해도 자동으로 추론해요
+
+print("안녕, \(name)")   // 문자열 보간: 역슬래시 + 괄호
+```
+:::
+
+자주 쓰는 타입은 표 하나로 외우세요.
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">타입</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">저장하는 것</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">예시</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Int</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">정수</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">42</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Double</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">소수</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3.14</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">String</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">문자열</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"안녕하세요"</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Bool</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">참/거짓</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">true / false</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[Int](배열)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">데이터 묶음</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">[1, 2, 3]</td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+Swift 자주 쓰는 기본 타입
+
+::: div .info-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+팁: let 우선 원칙
+
+{class="mt-1"}
+Swift 커뮤니티의 철칙: 기본은 let, 정말 필요할 때만 var. let으로 충분한 곳에 var를 쓰면 Xcode가 노란 글자로 경고해 줘요. 이 습관은 '변수가 뜻밖에 바뀌는' 유형의 버그를 크게 줄여 줘요. 코드에서 변하는 부분이 적을수록 추론이 쉬워지거든요.
+:::
+
+#### 2. 옵셔널(Optional): Swift의 '크래시 방지 부적'
+
+이것이 Swift에서 가장 중요한 개념이에요. 다른 것이 아닌 바로 그것이죠. 한 문장으로 말하면, 값이 '없을 수도' 있을 때 Swift는 여러분이 그것을 처리하도록 강제해요. 언어 차원에서 '널 포인터 크래시'라는 업계의 악몽을 없앤 거예요.
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · 옵셔널</span><span class="dots">···</span>
+:::
+
+```
+var name: String = 김철수   // 일반 타입: 절대 nil이면 안 돼요
+// name = nil                // <i class="fas fa-times-circle mr-1"></i> 컴파일 오류로 바로 막혀요
+
+var nickname: String? = nil  // 물음표 하나: nil 허용(옵셔널)
+nickname = "순이"
+
+// 옵셔널을 쓰려면 반드시 "언래핑"해야 해요:
+if let n = nickname {        // if let: 안전 언래핑
+    print("안녕, \(n)")
+} else {
+    print("아직 닉네임이 없어요")
+}
+
+let len = nickname?.count ?? 0   // ?? 기본값 제공(널 병합 연산자)
+print(len)
+```
+:::
+
+::: div .warning-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+주의: !는 '위험한 조작'
+
+{class="mt-1"}
+코드에 nickname!(강제 언래핑)을 쓰는 것은 컴파일러에게 'nil이 아니라고 보증한다'고 소리치는 것과 같아요. 한 번 틀리면 앱이 그 자리에서 크래시돼요. 초보 시절 원칙: 가급적 if let / ??를 쓰고 !는 쓰지 마세요. Xcode가 코드를 완성할 때 가끔 !를 덧붙이니 꼭 고치세요.
+:::
+
+#### 3. 함수와 클로저: 로직을 '버튼'으로 포장하기
+
+함수는 이름이 붙은 로직 덩어리로, 리모컨의 버튼 같은 거예요. 클로저(Closure)는 '이름 없는 함수'로, 필요한 곳에 바로 건네줄 수 있어요.
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · 함수와 클로저</span><span class="dots">···</span>
+:::
+
+```
+// 함수: 이름이 먼저, 매개변수와 반환 타입이 뒤에
+func greet(name: String) -> String {
+    return "안녕, \(name)!"
+}
+print(greet(name: "김철수"))     // 호출할 때는 매개변수 이름을 붙여야 해요
+
+// 클로저: 그 자리에서 정의, 가볍고 직접적
+let numbers = [1, 2, 3, 4]
+let doubled = numbers.map { $0 * 2 }   // $0 = 현재 원소
+// [2, 4, 6, 8]
+
+let big = numbers.filter { $0 > 2 }    // 필터
+// [3, 4]
+```
+:::
+
+SwiftUI에는 클로저가 어디에나 있어요. 버튼의 Button("눌러 보세요") { ... } 뒤에 오는 중괄호가 바로 클로저죠. map, filter, sorted라는 '컬렉션 연속기'를 꼭 기억하세요. 앞으로 리스트 처리의 90%는 이들의 조합이에요.
+
+#### 4. 구조체와 프로토콜: Swift의 '레고' 체계
+
+Swift의 공식 선호는 분명해요. 구조체(struct)를 우선하고, 상속이 필요할 때만 클래스(class)를 쓰는 거예요. 구조체는 '값 타입'이라 복사하면 각자 따로 살아가기 때문에 한 유형의 버그가 애초에 생기지 않아요.
+
+::: div .code-block
+:::inline div .code-head
+<span>SWIFT · 구조체와 프로토콜</span><span class="dots">···</span>
+:::
+
+```
+// 구조체: 데이터를 담는 상자
+struct Record {
+    var id = UUID()
+    var amount: Double
+    var category: String
+    var date: Date
+
+    // 구조체는 "멤버와이즈 이니셜라이저"가 기본 제공돼요: 바로 생성 가능
+}
+let r = Record(amount: 25.5, category: "식사", date: Date())
+
+// 프로토콜: "어떤 능력을 갖춰야 하는지"의 약속
+protocol Identifiable {
+    var id: UUID { get }
+}
+struct Record: Identifiable { ... }   // 프로토콜 채택 = 요구사항을 구현하겠다는 약속
+```
+:::
+
+SwiftUI에서는 거의 모든 것이 struct예요(View는 프로토콜이에요). 지금 이 말이 이해되지 않아도 괜찮아요. 제62장에서 매일 마주치게 될 테니까요. Swift의 세계에서는 일단 struct를 받아들이세요.
+
+#### 5. 기초 없는 분을 위한 문법 빠른 참조 카드
+
+::: div .overflow-x-auto
+```html
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">하려는 것</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">작성법</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">상수/변수 정의</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">let x = 1</code> / <code class="inline">var x = 1</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">문자열 보간</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">"안녕하세요, \(name)"</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">함수 정의</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">func 이름(매개변수: 타입) -> 반환 타입 { ... }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">조건 판단</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">if 조건 { ... } else { ... }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">순회</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">for x in 배열 { ... }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">안전 언래핑</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">if let x = 옵셔널 { ... }</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기본값</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">x ?? 기본값</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">구조체 정의</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">struct X { var a: Int; var b: String }</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">클로저</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">{ $0 * 2 }</code></td></tr></tbody></table>
+```
+:::
+
+{class="text-xs text-gray-500 dark:text-gray-400 mb-3"}
+Swift 문법 빠른 참조 카드(초보자용)
+
+::: div .practice-box .rounded-lg .p-4 .mt-4
+{class="font-semibold"}
+직접 해 보기: Playgrounds에서 15분 Swift 놀이
+
+{class="mt-1"}
+Mac이 있으면 Xcode → Playground를 열고, 없으면 iPad의 Swift Playgrounds나 웹 버전 놀이터를 쓰세요. 이 장의 코드를 모두 한 번씩 실행해 보고, 숫자와 글자를 바꿔 보고, 일부러 오류를 몇 개 만들어 Xcode가 어떻게 알려 주는지 확인해 보세요. '먼저 놀고 나중에 배우는' 이 15분이 제62장에 들어설 때 두 배는 수월하게 해 줄 거예요.
+:::
+
+::: div .chapter-summary
+{class="font-semibold mb-1"}
+이 장 정리
+
+- let 우선, var는 신중하게; 타입은 자동 추론, 콜론 뒤에 명시해도 돼요
+- 옵셔널은 Swift의 영혼: 없을 수 있는 값은 반드시 처리, if let / ??는 부적, !는 위험한 조작
+- 함수 호출에는 매개변수 이름을 붙여요; 클로저 = 이름 없는 함수, SwiftUI에 어디에나 있어요
+- struct 우선, 프로토콜(Protocol) 채택; SwiftUI에서는 거의 모든 것이 struct
+- 20%의 문법으로 80%의 일 하기: 먼저 쓸 줄 알게 되고, 그다음 숙달해요
+:::
