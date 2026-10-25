@@ -142,3 +142,14 @@ python -m bookkit release --release-version v1.8   # → dist/release/
 `bookkit latex` 行为（2026-10 增补）：篇标题取自 HTML 各语言 `<section id>` 的 h2；书名取自
 `manifest/languages.json` 的 `language_descriptions`；babel 连字（de/ru/el/fr/es/it/pt/id/vi）+
 `\shorthandoff`（de/fr）；`\emergencystretch=3em` 与代码内 `.-_/-` 断行兜底长复合词/长标识符溢出。
+
+## 十、门户 / 测验 / MCP / 冒烟（2026-10-25 增补）
+
+| 命令 | 作用 |
+| --- | --- |
+| `python scripts/extract_translations.py` | 18 语言翻译反解到 `source/translations/<lang>/` 并逐章验证（应 18/18 全保真） |
+| `python scripts/web_smoke.py` | Playwright 浏览器冒烟：20 页 console 零报错 + 侧栏锚点全解析 + h3 计数（曾抓到折叠丢 id 的真 bug） |
+| `python mcp/server.py` | 本书结构 MCP 服务器（list_parts / list_chapters / get_chapter / search / stats），`.mcp.json` 已配置 |
+| `quiz.html` + `quiz/zh-CN.json` | 章节自测答题页与题库（基础篇 8 章 24 题，题库按语言扩展） |
+
+CI 的 `audit` job 已包含 html_audit / verify_pdf_toc / extract_translations / web_smoke 四道闸门。

@@ -14266,6 +14266,7 @@ func scheduleDailyReminder() {
                         const header = document.createElement('div');
                         header.className = 'collapsible-header';
                         header.innerHTML = '<i class="fas fa-chevron-down collapse-icon" aria-hidden="true"></i>' + h4.innerHTML;
+                        if (h4.id) header.id = h4.id;
                         h4.replaceWith(header);
 
                         const body = document.createElement('div');

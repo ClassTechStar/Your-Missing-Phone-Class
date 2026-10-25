@@ -78,3 +78,31 @@ jobs:
               raise SystemExit('book.json 存在重复章节 id')
           print('source OK:', len(ids), 'chapters,', len(book['parts']), 'parts')
           EOF
+
+  audit:
+    name: 全量质检与浏览器冒烟
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 设置 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: HTML 全量审计（顺序/编号/排版产物/rtl）
+        run: python scripts/html_audit.py
+
+      - name: PDF 目录风格审计（latex/*/main.toc）
+        run: |
+          pip install pymupdf -q
+          python scripts/verify_pdf_toc.py
+
+      - name: 翻译源稿保真验证（18 语言逐章等价）
+        run: python scripts/extract_translations.py
+
+      - name: 安装 Playwright
+        run: pip install playwright -q && python -m playwright install chromium --with-deps
+
+      - name: 浏览器冒烟（20 页 console 零报错 + 锚点解析 + h3 计数）
+        run: python scripts/web_smoke.py
