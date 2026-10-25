@@ -22,11 +22,11 @@ const SHELL = [
   './',
   './index.html',
   './manifest.webmanifest',
-  './quiz.html',
-  './quiz/zh-CN.json',
   './icons/icon-192.png',
   './icons/icon-512.png',
 ];
+// 自测页与题库不进预缓存：站点根部署时未必带这两个文件，
+// 预缓存会打出一串 404。用户访问时按需缓存即可。
 // 只有这些跨域域名允许进缓存（其余一概不碰，避免缓存污染）
 const CORS_OK = [
   'https://cdn.tailwindcss.com',

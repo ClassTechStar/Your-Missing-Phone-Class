@@ -64,6 +64,32 @@ python mcp/server.py                      # 本书结构 MCP 服务器（stdio�
 - gh 凭据：`git credential fill` 取 token 后 `export GH_TOKEN=…`。
 - PDF 大资产不入 git；仓库内 `latex/<lang>/` 是源稿+产物例外（已在 .gitignore 排除编译瞬态）。
 
+### 5.1 GitHub Pages 站点同步（`scripts/sync_site.py`）
+
+站点仓库是 `ClassTechStar/Yihggh.github.io`，根目录的 `index.html` 就是本书中文版。
+**层级不同，路径必须降级**：
+
+| | 书页 `<root>/v1.8/zh-CN.html` | 站点 `<root>/index.html` |
+|---|---|---|
+| Service Worker | `../sw.js` | `sw.js` |
+| Manifest | `../manifest.webmanifest` | `manifest.webmanifest` |
+| 图标 | `../icons/` | `icons/` |
+
+`python scripts/sync_site.py` 会复制 HTML 并改这三处，同时带上
+`sw.js` / `manifest.webmanifest` / `icons/`。漏改的后果是 SW 注册 404、
+manifest 与图标全不可达，PWA **静默失效**（页面照常能看，但装不了、离线不了）。
+
+推送：`git -c http.proxy= -c https.proxy= push git@github.com:ClassTechStar/Yihggh.github.io.git main`
+（本机 git 全局代理常失效，走 SSH 最稳；`gh` 未登录）。
+
+### 5.2 PWA 相关约束
+
+- `sw.js` 的预缓存清单**只放站点一定有的文件**。放过 `quiz.html` 会在站点根打出 404
+  （站点仓库没带自测页），装 SW 时控制台一片红。
+- 改缓存策略后要 bump `VERSION`，否则老客户端一直吃旧缓存。
+- `scripts/web_smoke.py` 已含 PWA 断言（manifest 可解析 + 图标可达 + SW active），
+  CI 会跑；本地跑需要 `pip install playwright && python -m playwright install chromium`。
+
 ## 六、md 方言要点（bookkit/markdown.py）
 
 - 行内 HTML 原样保留；表格/SVG 用 ```html 围栏整体保真；
