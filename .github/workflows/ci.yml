@@ -54,8 +54,19 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: 源稿 → HTML 与已发布成品等价性（逐章比对）
-        run: python -m bookkit build --verify
+      - name: 源稿 → HTML 与已发布成品等价性（全部 19 种语言逐章比对）
+        run: |
+          fail=0
+          for f in v1.8/*.html; do
+            L=$(basename "$f" .html)
+            if ! python -m bookkit build --lang "$L" --verify | tee /tmp/verify.log | grep -q "结论：PASS"; then
+              echo "!! $L 校验未通过："
+              grep -E "区块 id|目录一致|可见文本|逐章结构|结构差异" /tmp/verify.log
+              fail=1
+            fi
+          done
+          [ "$fail" = 0 ] || exit 1
+          echo "全部语言 build --verify 通过"
 
       - name: 构建幂等（两次构建字节一致）
         run: |
@@ -68,15 +79,18 @@ jobs:
           python - <<'EOF'
           import json
           from pathlib import Path
-          book = json.loads(Path('source/book.json').read_text(encoding='utf-8'))
-          missing = [c['file'] for c in book['chapters'] if not (Path('source') / c['file']).is_file()]
-          missing += [p['file'] for p in book['parts'] if not (Path('source') / p['file']).is_file()]
-          ids = [c['id'] for c in book['chapters']]
-          if missing:
-              raise SystemExit('源稿缺失：' + str(missing))
-          if len(ids) != len(set(ids)):
-              raise SystemExit('book.json 存在重复章节 id')
-          print('source OK:', len(ids), 'chapters,', len(book['parts']), 'parts')
+          for base in [Path('source')] + sorted(Path('source/translations').iterdir()):
+              if not base.is_dir() or not (base / 'book.json').is_file():
+                  continue
+              book = json.loads((base / 'book.json').read_text(encoding='utf-8'))
+              missing = [c['file'] for c in book['chapters'] if not (base / c['file']).is_file()]
+              missing += [p['file'] for p in book['parts'] if not (base / p['file']).is_file()]
+              ids = [c['id'] for c in book['chapters']]
+              if missing:
+                  raise SystemExit(f'源稿缺失（{base.name}）：' + str(missing[:5]))
+              if len(ids) != len(set(ids)):
+                  raise SystemExit(f'book.json 存在重复章节 id（{base.name}）')
+              print(f'{base.name}: {len(ids)} chapters, {len(book["parts"])} parts')
           EOF
 
   audit:
