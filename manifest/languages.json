@@ -209,67 +209,6 @@
         "source_sync": "error",
         "orphan": "error"
       }
-    },
-    "v1.7": {
-      "baseline": "zh-CN",
-      "expect_sections": 56,
-      "checks": {
-        "structure": "warn",
-        "anchors": "error",
-        "toc": "warn",
-        "title_version": "error",
-        "lang": "warn",
-        "nul": "error",
-        "residual": "warn",
-        "coverage": "warn",
-        "source_sync": "off",
-        "orphan": "warn"
-      }
-    },
-    "v1.6": {
-      "baseline": "zh-CN",
-      "expect_sections": 38,
-      "checks": {
-        "structure": "error",
-        "anchors": "error",
-        "toc": "warn",
-        "title_version": "error",
-        "lang": "warn",
-        "nul": "error",
-        "residual": "warn",
-        "coverage": "warn",
-        "source_sync": "off",
-        "orphan": "error"
-      }
-    },
-    "v1.5": {
-      "baseline": "zh-CN",
-      "checks": {
-        "structure": "warn",
-        "anchors": "error",
-        "toc": "off",
-        "title_version": "off",
-        "lang": "warn",
-        "nul": "error",
-        "residual": "warn",
-        "coverage": "warn",
-        "source_sync": "off",
-        "orphan": "off"
-      }
-    },
-    "archive": {
-      "checks": {
-        "structure": "off",
-        "anchors": "warn",
-        "toc": "off",
-        "title_version": "off",
-        "lang": "off",
-        "nul": "warn",
-        "residual": "off",
-        "coverage": "off",
-        "source_sync": "off",
-        "orphan": "off"
-      }
     }
   },
   "claims": {
@@ -293,30 +232,6 @@
       "card_extra": "border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg",
       "label_classes": "text-emerald-600",
       "label_suffix": "最新"
-    },
-    "v1.7": {
-      "badge_classes": "inline-block px-4 py-1.5 bg-amber-50 text-amber-600",
-      "badge_icon": "fas fa-history",
-      "badge_text": "历史版本归档 v1.7",
-      "card_extra": "border border-amber-200 rounded-xl p-5 hover:shadow-lg",
-      "label_classes": "text-amber-600",
-      "label_suffix": ""
-    },
-    "v1.6": {
-      "badge_classes": "inline-block px-4 py-1.5 bg-amber-50 text-amber-600",
-      "badge_icon": "fas fa-history",
-      "badge_text": "历史版本归档 v1.6",
-      "card_extra": "border border-amber-200 rounded-xl p-5 hover:shadow-lg",
-      "label_classes": "text-amber-600",
-      "label_suffix": ""
-    },
-    "v1.5": {
-      "badge_classes": "inline-block px-4 py-1.5 bg-primary/10 text-primary",
-      "badge_icon": "fas fa-globe",
-      "badge_text": "完整多语言版本 v1.5（17 种语言）",
-      "card_extra": "border border-primary-200 rounded-xl p-5 hover:shadow-lg",
-      "label_classes": "text-primary",
-      "label_suffix": ""
     }
   },
   "language_descriptions": {
@@ -340,67 +255,6 @@
       "ms": "Kuasai Telefon Pintar V1.8",
       "el": "Κυριαρχήστε το Κινητό V1.8",
       "lzh": "手機課 V1.8"
-    },
-    "v1.7": {
-      "zh-CN": "你缺失的那门手机课 V1.7",
-      "zh-TW": "你缺失的那門手機課 V1.7",
-      "yue": "你缺失嘅嗰門手機課 V1.7",
-      "ru": "Покоряем смартфон V1.7",
-      "it": "Corso Digitale V1.7",
-      "ko": "스마트폰 정복 V1.7",
-      "pt": "Curso Digital V1.7",
-      "en": "Master Your Phone V1.7",
-      "ja": "スマホマスター V1.7",
-      "es": "Domina tu Móvil V1.7",
-      "fr": "Maîtrisez votre Mobile V1.7",
-      "de": "Smartphone Meistern V1.7",
-      "ar": "إتقان الهاتف V1.7",
-      "he": "שליטה בסמארטפון V1.7",
-      "th": "ครองสมาร์ทโฟน V1.7",
-      "id": "Kuasai Ponselmu V1.7",
-      "ms": "Kuasai Telefon Pintar V1.7",
-      "el": "Κυριαρχήστε το Κινητό V1.7",
-      "lzh": "手機課 V1.7"
-    },
-    "v1.6": {
-      "zh-CN": "简体中文",
-      "zh-TW": "繁體中文",
-      "yue": "粵語",
-      "en": "English",
-      "ko": "한국어",
-      "ja": "日本語",
-      "ru": "Русский",
-      "it": "Italiano",
-      "pt": "Português",
-      "es": "Español",
-      "fr": "Français",
-      "de": "Deutsch",
-      "ar": "العربية",
-      "he": "עברית",
-      "th": "ภาษาไทย",
-      "id": "Bahasa Indonesia",
-      "ms": "Bahasa Melayu",
-      "el": "Ελληνικά",
-      "lzh": "文言文"
-    },
-    "v1.5": {
-      "zh-CN": "简体中文",
-      "zh-TW": "繁體中文",
-      "yue": "粵語",
-      "en": "English",
-      "ko": "한국어",
-      "ja": "日本語",
-      "ru": "Русский",
-      "it": "Italiano",
-      "pt": "Português",
-      "es": "Español",
-      "fr": "Français",
-      "th": "ภาษาไทย",
-      "vi": "Tiếng Việt",
-      "id": "Bahasa Indonesia",
-      "ms": "Bahasa Melayu",
-      "el": "Ελληνικά",
-      "lzh": "文言文"
     }
   }
 }

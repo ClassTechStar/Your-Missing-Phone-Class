@@ -1,10 +1,23 @@
-# 你缺失的那门手机课：从基础操作到数字生活掌控
+# 你缺失的那门手机课
 
-**副标题：** Your Missing Semester of Using Smartphone
+**副标题：** Your Missing Phone Class —— 从基础操作到数字生活掌控
+
+[![Release](https://img.shields.io/github/v/release/ClassTechStar/Your-Missing-Phone-Class?label=最新版本)](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases)
+[![Languages](https://img.shields.io/badge/语言-19%20种-blue)](#-在线阅读)
+[![Chapters](https://img.shields.io/badge/内容-84%20章%20·%2011%20篇-green)](#-在线阅读)
+[![PDF](https://img.shields.io/badge/PDF-74%20本免费下载-orange)](#-pdf-下载)
+[![License](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey)](#版权声明)
+
+> **一门写给所有人的手机素养课。** 84 章、11 篇，从"认识手机硬件"一路讲到"用 AI 写出你的第一个 App"——
+> 没有晦涩术语，像朋友聊天一样把原理讲透。每章配"动手练习"，手机是用会的，不是看会的。
+
+📖 **在线阅读：** <https://classtechstar.github.io/Yihggh.github.io/>
+🏠 **多语言入口：** [index.html](index.html)（自动检测浏览器语言）
+🎁 **全部 PDF 免费下载：** 见下方 [PDF 下载](#-pdf-下载)
 
 ---
 
-## 在线阅读：https://classtechstar.github.io/Yihggh.github.io/
+## 📖 在线阅读
 
 ### 最新版本 (v1.8) — 19 种语言 · 84 个内容区块
 
@@ -30,26 +43,47 @@
 | Ελληνικά | [el.html](v1.8/el.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/v1.8/MissingPhoneClass-1.8-el.apk) |
 | 文言文 | [lzh.html](v1.8/lzh.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/v1.8/MissingPhoneClass-1.8-lzh.apk) |
 
-### 历史版本
+> 每种语言都是完整翻译的 84 章单文件 HTML（离线可用），RTL 语言（阿拉伯语/希伯来语）已做从右到左排版。
 
-- **v1.7**（19 种语言）：[目录](v1.7/)
-- **v1.6**（19 种语言）：[目录](v1.6/)
-- **v1.5**（17 种语言）：[目录](v1.5/)
-- **v1.3 / v1.4**：[archive/](archive/)
+## 🎁 PDF 下载
 
-### 多语言入口
+XeLaTeX 精排、目录书签完整、免费下载（每版本每语言 1 本）：
 
-[index.html](index.html) — 自动检测浏览器语言并高亮推荐版本，支持一键直达
+| 版本 | Release | 内容 |
+|------|---------|------|
+| **v1.8**（推荐） | [latex-pdf-v1.8-final](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.8-final) | 19 种语言 × 84 章 |
+| v1.7 | [latex-pdf-v1.7](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.7) | 19 种语言 |
+| v1.6 | [latex-pdf-v1.6](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.6) | 19 种语言 |
+| v1.5 | [latex-pdf-v1.5](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.5) | 17 种语言 |
+
+> 📚 [latex/](latex/) 目录内含 19 种语言的 LaTeX 源稿（main.tex + chapters/），可自行编译定制。
+
+## 🗄️ 历史版本归档
+
+主分支仅保留 v1.8 以保持精简；历史版本已打包归档：
+
+- **HTML 归档（v1.5–v1.7）**：[html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/html-archive)
+- **HTML 归档（v1.3–v1.4）**：[legacy-html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/legacy-html-archive)
+- 各版本源稿与翻译（19 语言 × 84 章 Markdown）：[source/](source/)（v1.8）与 [source/translations/](source/translations/)
 
 ---
 
-## Android 应用
+## 🤖 AI 编程实战篇（v1.8 新增）
 
-- **v1.8 APK 安装包**：19 种语言，每种语言一个独立应用（包名 `com.classtechstar.phoneclass.<语言代码>`），可共存安装
-  - 全书 HTML 内嵌离线阅读，联网时自动加载完整在线样式
-  - 应用名随语言本地化（如「搞定手机！小白必学的数码必修课」「スマホ攻略！初心者必見のデジタル必修講座」）
-  - 适配 Android 5.0（API 21）及以上，支持返回键网页回退
-  - 下载见上方语言表格或 [Releases 页面](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/v1.8)
+v1.8 新增第七、八、九篇（第 37–69 章，共 33 章）：从 AI 编程的范式革命、五大思维原则、上下文与需求工程，
+到 Android/iOS 双平台完整开发链路（Kotlin / Swift / Jetpack Compose / SwiftUI）、实战项目与上架指南——
+带你从数码用户一路成长为 App 开发者。
+
+**其他亮点**（v1.7 起）：学习仪表盘（阅读进度 + 手机健康自检）、朗读功能（0.5x–2.5x 变速）、
+适老化实战篇（第 27–36 章：长辈模式、防诈骗、远程协助、数字健康、投屏、智能家居）。
+
+---
+
+## 📱 Android 应用
+
+v1.8 APK：19 种语言各一个独立应用（包名 `com.classtechstar.phoneclass.<语言代码>`，可共存安装）。
+全书 HTML 内嵌离线阅读，联网时自动加载完整样式；适配 Android 5.0+。
+下载见上方语言表或 [Releases](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/v1.8)。
 
 ---
 
@@ -58,80 +92,45 @@
 | 目录 | 说明 |
 |------|------|
 | `v1.8/` | **最新版本**（19 种语言，84 个内容区块） |
-| `v1.7/` | 历史版本（19 种语言） |
-| `v1.6/` | 历史版本（19 种语言） |
-| `v1.5/` | 完整多语言版本（17 种语言） |
-| `archive/` | 历史版本归档（v1.3 / v1.4） |
-| `source/` | 源稿（单一事实源）：`chapters/` 84 章 Markdown、`parts/` 11 篇导语、`template/` 页面骨架、`book.json` 结构清单、`legacy/` 历史源稿留档 |
-| `manifest/` | `languages.json`：语言元数据、各版本门禁等级、入口页卡片样式 |
-| `bookkit/` | Python 工具链（零依赖）：extract / build / lint / check / index / i18n / release |
-| `scripts/` | 工具链使用说明（见 [scripts/README.md](scripts/README.md)） |
-| `index.html` | 多语言在线阅读入口页（卡片块与统计区由 `bookkit index` 生成） |
-| `你缺失的那门手机课V1.8Fixed.html` | v1.8 简体中文源文件（与 `v1.8/zh-CN.html` 保持一致） |
-
----
+| `source/` | zh-CN 源稿（单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json` |
+| `source/translations/` | **18 种语言翻译源稿**（与 v1.8 成品逐章等价，反解生成） |
+| `manifest/` | `languages.json`：语言元数据、版本门禁、入口页卡片 |
+| `bookkit/` | Python 工具链（零依赖）：extract / build / lint / check / index / i18n / latex / release |
+| `scripts/` | 质检与维护脚本（HTML/PDF 全量审计、标题修复、翻译反解等），见 [scripts/README.md](scripts/README.md) |
+| `latex/` | 19 种语言 LaTeX 书稿源文件与编译产物 |
+| `mcp/` | 本书结构 MCP 查询服务器（AI 客户端可直连查询章节） |
+| `quiz/` | 章节自测题库（zh-CN 首批 8 章）与 [quiz.html](quiz.html) 答题页 |
+| `index.html` | 多语言在线阅读入口页（卡片块由 `bookkit index` 生成） |
+| `手机课-LaTeX-PDF/` | 排版管线脚本（typeset.py，PDF 可复现；大资产见 Releases） |
 
 ## 工程工具链
 
 ```bash
-python -m bookkit lint --all-versions   # v1.5–v1.8 全版本一致性门禁
-python -m bookkit check --claims        # README / index.html 宣称值校验
-python -m bookkit build --verify        # source/ → HTML，与已发布成品逐章比对
+python -m bookkit lint                 # v1.8 结构/锚点/目录/版本串/lang/NUL/残留字
+python -m bookkit check --claims --index  # README / index.html 宣称值与死链校验
+python -m bookkit build --verify       # source/ → HTML，与成品逐章等价比对
 python -m bookkit i18n --report coverage.md
+python scripts/html_audit.py           # 全量审计（顺序/编号/排版产物）
 ```
 
-源稿现已是"单一事实源"：`v1.8/zh-CN.html` 的 84 章已反解为 `source/chapters/` 下的 Markdown，
-构建产物与成品在区块 id、侧栏目录（97 锚点）、可见文本（312,756 字）三项上完全等价。
-详见 [scripts/README.md](scripts/README.md)。
+- **源稿即事实源**：zh-CN 与 18 种语言译文均为 Markdown 源稿（`source/` + `source/translations/`），
+  改稿后一键重建 HTML；构建产物与线上成品逐章等价（84/84）。
+- **翻译源稿化**：`python scripts/extract_translations.py` 反解 + 逐章验证，
+  当前 18/18 语言 84/84 章全保真。
+- **全量质检**：`scripts/html_audit.py`（HTML）与 `scripts/pdf_audit.py`（PDF 书签/编号/顺序）双闸门，
+  详见 [scripts/README.md](scripts/README.md)。
 
----
+## 已知问题（历史归档）
 
-## V1.8 更新亮点
-
-新增第七、八、九篇「AI编程实战篇」「安卓开发实战篇」「iOS开发实战篇」（第37-69章，共33章）
-
-从AI编程的范式革命、五大思维原则、上下文与需求工程、2026工具与模型全景、API实战、对话工程、三个完整项目、质量保障与进阶之路——带你从"会用AI"升级到"指挥AI写代码"；到安卓与iOS两大平台的完整开发链路：环境搭建（Android Studio / Xcode）、语言速成（Kotlin / Swift）、界面框架（Jetpack Compose / SwiftUI）、数据与网络、实战项目（记账本 + 天气查询）、测试与上架（Google Play / App Store）及速查手册——带你从数码用户一路成长为 App 开发者。
-
----
-
-## V1.7 更新亮点
-
-- **新增实战篇**（第 27–32 章）：适老化改造、手机选购指南、数字健康管理、投屏与车载、短视频创作入门、安全急救功能
-- **新增展望篇**（第 33–34 章）：未来技术展望、车机互联指南
-- **新增拓展篇**（第 35–36 章）：儿童与手机专题、智能家居入门
-- **新增专题章**（第 37–41 章）：AI 与手机、投屏与车机互联、儿童与手机、适老化与无障碍、数字健康与安全急救（v1.7 独有，v1.8 起改版为第七至九篇开发教程）
-- **学习仪表盘**：阅读进度追踪 + 手机健康自检 8 项清单
-- **朗读功能**：浮动控制栏，0.5x–2.5x 无极调速，键盘快捷键支持
-- **多语言扩展**：v1.7 支持 **19 种语言**（新增阿拉伯语、希伯来语、希腊语等）
-
----
-
-## 语言代码对照
-
-`zh-CN` 简体中文 | `zh-TW` 繁體中文 | `yue` 粵語 | `en` English | `ko` 한국어 | `ja` 日本語 | `ru` Русский | `it` Italiano | `pt` Português | `es` Español | `fr` Français | `de` Deutsch | `ar` العربية | `he` עברית | `th` ภาษาไทย | `id` Bahasa Indonesia | `ms` Bahasa Melayu | `el` Ελληνικά | `lzh` 文言文
-
-> 注：越南语 `vi` 仅维护至 v1.5（见 [v1.5/vi.html](v1.5/vi.html)），v1.6 起未再更新，故 v1.8 的 19 种语言中不含 `vi`。
-
----
-
-## 已知问题
-
-- **v1.7 六种语言缺章**：`it` / `ko` / `pt` / `ru` / `yue` / `zh-TW` 的 v1.7 版本仅含 51 个内容区块（其余语言为 56），缺第 37–41 章；请阅读 [v1.8](v1.8/) 对应语言版获取完整内容。
-- **v1.6 缺章**：`yue` 缺第一章及两个附章，`he` 缺第二十三章，`ru` 缺第四、十三章。
-- **v1.7/lzh.html 历史损坏**：早期版本含 NUL 字节（已清理），历史上章节标题受损，文言文版推荐阅读 [v1.8/lzh.html](v1.8/lzh.html)。
-- **工具链已重建**：`bookkit` 取代了被删除的 `scripts/*.py`，CI 由"仅 v1.8 内联脚本"升级为
-  "全版本矩阵 + 宣称值校验 + 构建等价性"，用法见 [scripts/README.md](scripts/README.md)。
-- **构建仅覆盖简体中文源稿**：其余 18 种语言仍以 `v1.8/<语言>.html` 成品为准，由 `bookkit lint` 与
-  `bookkit i18n` 守护一致性；多语言构建（`source/translations/`）为下一步计划。
-
----
+- v1.5–v1.7 已归档至 [html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/html-archive)；
+  其中 v1.7 六种语言（it/ko/pt/ru/yue/zh-TW）缺第 37–41 章、v1.6 有零星缺章（详见归档说明）。
+  **v1.8 无缺章**，请优先阅读 v1.8。
+- 文言文（lzh）v1.7 历史文件曾含 NUL 损坏，已修复；推荐阅读 [v1.8/lzh.html](v1.8/lzh.html)。
 
 ## 交流社区
 
 - **项目 QQ 群**：1074995524
 - **哔哩哔哩**：[@ClassTechStar](https://space.bilibili.com/702063384)
-
----
 
 ## 版权声明
 

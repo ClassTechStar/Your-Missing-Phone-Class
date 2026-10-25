@@ -22,7 +22,7 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: 结构/锚点/目录/版本串/lang/NUL/残留字（v1.5–v1.8 + archive）
+      - name: 结构/锚点/目录/版本串/lang/NUL/残留字（v1.8）
         run: python -m bookkit lint --all-versions
 
       - name: README 与 index.html 宣称值校验（章数/区块数/语言数/链接）

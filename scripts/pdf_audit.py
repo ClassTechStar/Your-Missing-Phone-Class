@@ -182,7 +182,7 @@ def main():
     json_out = None
     if '--json' in sys.argv:
         json_out = sys.argv[sys.argv.index('--json') + 1]
-    vers = args or ['v1.5', 'v1.6', 'v1.7', 'v1.8']
+    vers = args or ['v1.8']
     report = {}
     for v in vers:
         d = PDFROOT / v

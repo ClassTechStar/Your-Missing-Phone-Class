@@ -18,7 +18,7 @@ sys.path.insert(0, str(ROOT))
 from bookkit import htmlparse as H  # noqa: E402
 
 APPLY = '--apply' in sys.argv
-VERS = [a for a in sys.argv[1:] if a.startswith('v1.')] or ['v1.5', 'v1.6', 'v1.7', 'v1.8']
+VERS = [a for a in sys.argv[1:] if a.startswith('v1.')] or ['v1.8']
 
 DIV_OPEN = re.compile(r'<div\b')
 DIV_CLOSE = re.compile(r'</div\s*>')

@@ -141,7 +141,7 @@ def audit(path: Path, ver: str, zh_order: list):
     return {'issues': issues, 'warns': warns, 'sections': len(sids)}
 
 def main():
-    vers = [a for a in sys.argv[1:] if a.startswith('v1.')] or ['v1.5', 'v1.6', 'v1.7', 'v1.8']
+    vers = [a for a in sys.argv[1:] if a.startswith('v1.')] or ['v1.8']
     n_issue_files = 0
     for ver in vers:
         zh_path = ROOT / ver / 'zh-CN.html'

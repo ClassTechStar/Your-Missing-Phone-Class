@@ -24,7 +24,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 from translation_overrides import OVERRIDES, V_OVERRIDES  # noqa: E402
 
 APPLY = '--apply' in sys.argv
-VERSIONS = [a for a in sys.argv[1:] if re.match(r'^v1\.[5-8]$', a)] or ['v1.8', 'v1.7']
+VERSIONS = [a for a in sys.argv[1:] if re.match(r'^v1\.[5-8]$', a)] or ['v1.8']
 
 # ---------------------------------------------------------------- 分类
 

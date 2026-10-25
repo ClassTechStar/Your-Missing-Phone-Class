@@ -89,6 +89,12 @@ def render_index(mf) -> str:
     html = path.read_text(encoding='utf-8')
 
     versions = [v for v in mf.versions if mf.html_files(v)]
+    # 清除已下线版本的 AUTOGEN 块（目录移除/归档后卡片不应残留）
+    for m in list(RE_BLOCK.finditer(html)):
+        ver = m.group(1)
+        if ver not in versions:
+            start = html.rfind(chr(10), 0, m.start()) + 1
+            html = html[:start] + html[m.end():]
     for ver in versions:
         block = render_block(mf, ver)
         pat = re.compile(r'[ \t]*<!-- AUTOGEN:languages-' + re.escape(ver) + r' START[^>]*-->'
