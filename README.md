@@ -1,18 +1,35 @@
 # 你缺失的那门手机课
 
-**副标题：** Your Missing Phone Class —— 从基础操作到数字生活掌控
+面向普通人的手机使用指南。84 章、11 篇，从看懂手机硬件参数讲到用 AI 工具做出自己的第一个 App。
 
+- **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>
+- **多语言入口**：[index.html](index.html)（按浏览器语言跳转）
+- **PDF 下载**：见 [PDF 下载](#pdf-下载)
+- **Android 应用**：19 种语言各有独立 APK，见 [Releases](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases)
 
-> **一门写给所有人的手机素养课。** 84 章、11 篇，从"认识手机硬件"一路讲到"用 AI 写出你的第一个 App"——
-> 没有晦涩术语，像朋友聊天一样把原理讲透。每章配"动手练习"，手机是用会的，不是看会的。
-
-📖 **在线阅读：** <https://classtechstar.github.io/Yihggh.github.io/>
-🏠 **多语言入口：** [index.html](index.html)（自动检测浏览器语言）
-🎁 **全部 PDF 免费下载：** 见下方 [PDF 下载](#-pdf-下载)
+内容与代码采用 CC BY-NC-SA 4.0 许可。
 
 ---
 
-## 📖 在线阅读
+## 这本书讲什么
+
+全书分四块：
+
+**基础（第 0–7 章）**：手机里到底有什么。SoC、运存、存储分别干什么，怎么管文件，Wi-Fi 和流量的区别，装 App 该注意什么，怎么把手机调顺手。
+
+**软件与安全（第 8–26 章）**：账号怎么管、照片怎么备份、密码怎么存、手机丢了第一时间做什么、诈骗短信怎么认、权限该不该给。
+
+**生活场景（第 27–36 章）**：给长辈和孩子配手机、屏幕时间怎么控、手机和智能家居、投屏、数字遗产。这部分是实操向的，照着做就行。
+
+**开发（第 37–69 章）**：从零学做 App。怎么跟 AI 描述需求、怎么让它写代码、怎么调试，到用 Kotlin / Swift 在安卓和 iOS 上各做一个，再上架。
+
+每章开头有「本章导览」，结尾有「动手练习」。页面带阅读进度记忆、字号调节、深色模式和朗读；也做了 PWA，装到桌面后断网能看。
+
+写这本书的起因是我爸妈老问我「存储满了删什么」「这条中奖短信是真的吗」「照片怎么搬到新手机」。市面上要么是太浅的入门册子，要么是维修手册，把原理讲清楚的没几本。所以我写了一本，安卓和 iOS 都覆盖。
+
+---
+
+## 在线阅读
 
 ### 最新版本 (v1.8) — 19 种语言 · 84 个内容区块
 
@@ -38,11 +55,13 @@
 | Ελληνικά | [el.html](v1.8/el.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/v1.8/MissingPhoneClass-1.8-el.apk) |
 | 文言文 | [lzh.html](v1.8/lzh.html) | [APK](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/download/v1.8/MissingPhoneClass-1.8-lzh.apk) |
 
-> 每种语言都是完整翻译的 84 章单文件 HTML（离线可用），RTL 语言（阿拉伯语/希伯来语）已做从右到左排版。
+每种语言都是完整的 84 章单文件 HTML，可以离线打开。阿拉伯语和希伯来语做了从右到左排版。
 
-## 🎁 PDF 下载
+---
 
-XeLaTeX 精排、目录书签完整、免费下载（每版本每语言 1 本）：
+## PDF 下载
+
+XeLaTeX 排版，带目录和书签，四个版本共 74 本，全部免费。
 
 | 版本 | Release | 内容 |
 |------|---------|------|
@@ -51,34 +70,25 @@ XeLaTeX 精排、目录书签完整、免费下载（每版本每语言 1 本）
 | v1.6 | [latex-pdf-v1.6](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.6) | 19 种语言 |
 | v1.5 | [latex-pdf-v1.5](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.5) | 17 种语言 |
 
-> 📚 [latex/](latex/) 目录内含 19 种语言的 LaTeX 源稿（main.tex + chapters/），可自行编译定制。
-
-## 🗄️ 历史版本归档
-
-主分支仅保留 v1.8 以保持精简；历史版本已打包归档：
-
-- **HTML 归档（v1.5–v1.7）**：[html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/html-archive)
-- **HTML 归档（v1.3–v1.4）**：[legacy-html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/legacy-html-archive)
-- 各版本源稿与翻译（19 语言 × 84 章 Markdown）：[source/](source/)（v1.8）与 [source/translations/](source/translations/)
+[latex/](latex/) 里是 19 种语言的 LaTeX 源稿，想自己改排版可以直接编译。
 
 ---
 
-## 🤖 AI 编程实战篇（v1.8 新增）
+## 历史版本
 
-v1.8 新增第七、八、九篇（第 37–69 章，共 33 章）：从 AI 编程的范式革命、五大思维原则、上下文与需求工程，
-到 Android/iOS 双平台完整开发链路（Kotlin / Swift / Jetpack Compose / SwiftUI）、实战项目与上架指南——
-带你从数码用户一路成长为 App 开发者。
+主分支只留 v1.8，旧版本打包放到了 Release：
 
-**其他亮点**（v1.7 起）：学习仪表盘（阅读进度 + 手机健康自检）、朗读功能（0.5x–2.5x 变速）、
-适老化实战篇（第 27–36 章：长辈模式、防诈骗、远程协助、数字健康、投屏、智能家居）。
+- HTML 归档（v1.5–v1.7）：[html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/html-archive)
+- HTML 归档（v1.3–v1.4）：[legacy-html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/legacy-html-archive)
+- 源稿与翻译：[source/](source/)（中文）与 [source/translations/](source/translations/)（另外 18 种语言）
 
 ---
 
-## 📱 Android 应用
+## Android 应用
 
-v1.8 APK：19 种语言各一个独立应用（包名 `com.classtechstar.phoneclass.<语言代码>`，可共存安装）。
-全书 HTML 内嵌离线阅读，联网时自动加载完整样式；适配 Android 5.0+。
-下载见上方语言表或 [Releases](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/v1.8)。
+19 种语言各一个独立应用，包名不同，可以同时装。正文内嵌在包里，离线能看；联网时才加载完整排版样式。需要 Android 5.0 以上。
+
+下载见上面的语言表，或 [Releases](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/v1.8)。
 
 ---
 
@@ -86,77 +96,44 @@ v1.8 APK：19 种语言各一个独立应用（包名 `com.classtechstar.phonecl
 
 | 目录 | 说明 |
 |------|------|
-| `v1.8/` | **最新版本**（19 种语言，84 个内容区块） |
-| `source/` | zh-CN 源稿（单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json` |
-| `source/translations/` | **18 种语言翻译源稿**（与 v1.8 成品逐章等价，反解生成） |
+| `v1.8/` | 最新版本，19 种语言的单文件 HTML |
+| `source/` | 中文源稿（单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json` |
+| `source/translations/` | 另外 18 种语言的翻译源稿，与成品逐章等价 |
 | `manifest/` | `languages.json`：语言元数据、版本门禁、入口页卡片 |
 | `bookkit/` | Python 工具链（零依赖）：extract / build / lint / check / index / i18n / latex / release |
-| `scripts/` | 质检与维护脚本（HTML/PDF 全量审计、标题修复、翻译反解等），见 [scripts/README.md](scripts/README.md) |
-| `latex/` | 19 种语言 LaTeX 书稿源文件与编译产物 |
-| `mcp/` | 本书结构 MCP 查询服务器（AI 客户端可直连查询章节） |
-| `quiz/` | 章节自测题库（zh-CN 首批 8 章）与 [quiz.html](quiz.html) 答题页 |
-| `index.html` | 多语言在线阅读入口页（卡片块由 `bookkit index` 生成） |
-| `手机课-LaTeX-PDF/` | 排版管线脚本（typeset.py，PDF 可复现；大资产见 Releases） |
+| `scripts/` | 质检与维护脚本，见 [scripts/README.md](scripts/README.md) |
+| `latex/` | 19 种语言的 LaTeX 书稿源文件与编译产物 |
+| `mcp/` | 本书结构的 MCP 查询服务器，AI 客户端可以直连查章节 |
+| `quiz/` | 章节自测题库（82 章 218 题）与 [quiz.html](quiz.html) 答题页 |
+| `index.html` | 多语言阅读入口页（卡片块由 `bookkit index` 生成） |
+| `手机课-LaTeX-PDF/` | 排版管线脚本（typeset.py，PDF 可复现；大文件见 Releases） |
 
-## 工程工具链
+## 工具链
 
 ```bash
-python -m bookkit lint                 # v1.8 结构/锚点/目录/版本串/lang/NUL/残留字
-python -m bookkit check --claims --index  # README / index.html 宣称值与死链校验
-python -m bookkit build --verify       # source/ → HTML，与成品逐章等价比对
+python -m bookkit lint                     # 结构/锚点/目录/版本串/lang 检查
+python -m bookkit check --claims --index   # README / index.html 宣称值与死链校验
+python -m bookkit build --verify           # 源稿重建 HTML，与成品逐章比对
 python -m bookkit i18n --report coverage.md
-python scripts/html_audit.py           # 全量审计（顺序/编号/排版产物）
+python scripts/html_audit.py               # 全量审计（顺序/编号/排版产物）
 ```
 
-- **源稿即事实源**：zh-CN 与 18 种语言译文均为 Markdown 源稿（`source/` + `source/translations/`），
-  改稿后一键重建 HTML；构建产物与线上成品逐章等价（84/84）。
-- **翻译源稿化**：`python scripts/extract_translations.py` 反解 + 逐章验证，
-  当前 18/18 语言 84/84 章全保真。
-- **全量质检**：`scripts/html_audit.py`（HTML）与 `scripts/pdf_audit.py`（PDF 书签/编号/顺序）双闸门，
-  详见 [scripts/README.md](scripts/README.md)。
+几点说明：
 
-## 已知问题（历史归档）
+- 源稿是唯一事实源。中文和另外 18 种语言都是 Markdown，改完一键重建 HTML。
+  构建产物和线上成品逐章比对，19 种语言全部等价。
+- 翻译从成品反解而来，`python scripts/extract_translations.py` 会逐章校验保真度。
+- 质检有两道闸门：`html_audit.py` 管 HTML，`pdf_audit.py` 管 PDF 书签与编号。
 
-- v1.5–v1.7 已归档至 [html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/html-archive)；
-  其中 v1.7 六种语言（it/ko/pt/ru/yue/zh-TW）缺第 37–41 章、v1.6 有零星缺章（详见归档说明）。
-  **v1.8 无缺章**，请优先阅读 v1.8。
-- 文言文（lzh）v1.7 历史文件曾含 NUL 损坏，已修复；推荐阅读 [v1.8/lzh.html](v1.8/lzh.html)。
+## 已知问题
 
-## 交流社区
+- v1.5–v1.7 已归档。其中 v1.7 有六种语言（it/ko/pt/ru/yue/zh-TW）缺第 37–41 章，
+  v1.6 有零星缺章，详见归档说明。v1.8 无缺章，请优先读 v1.8。
+- 文言文（lzh）v1.7 的旧文件曾有 NUL 字符损坏，已修复；推荐阅读 [v1.8/lzh.html](v1.8/lzh.html)。
 
-- **项目 QQ 群**：1074995524
-- **哔哩哔哩**：[@ClassTechStar](https://space.bilibili.com/702063384)
+## 交流与版权
 
-## 版权声明
+- 项目 QQ 群：1074995524
+- 哔哩哔哩：[@ClassTechStar](https://space.bilibili.com/702063384)
 
 本作品采用 [知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可。
-
----
-
-## 序言
-
-> 别让你的手机，只发挥了一半价值。
-
-清晨醒来，你伸手摸到的第一件东西是手机；通勤路上，支撑你打发时间的是手机；工作时，接收消息、处理文档可能还要靠手机；睡前，最后关掉屏幕的依然是手机。
-
-手机早已不是简单的"通讯工具"，它是你的移动相机、随身钱包、学习助手、办公终端，甚至是连接整个智能生活的中枢。可奇怪的是，我们花在手机上的时间越来越多，对它的了解却往往停留在"点图标打开 App"的层面。
-
-你是否遇到过这些困惑？
-
-- 手机提示"存储空间不足"，却不知道该删哪些文件才安全
-- 明明开通了 5G 套餐，刷视频却总卡顿
-- 微信聊天记录占了十几个 G，想备份又不知从何下手
-- 收到"中奖短信"，看着像真的又怕被骗
-- 换了新手机，旧手机里的照片和联系人转移得一团糟
-
-这些问题不是因为你"不聪明"，而是因为我们都缺少一门专门的"手机课"。学校不教，说明书太晦涩，身边的人要么和你一样一知半解，要么只会说"我帮你弄"，却没告诉你背后的逻辑。于是，我们只能在一次次"踩坑"中摸索，让本该为生活赋能的手机，反而成了麻烦的来源。
-
-这本书就是为了填补这个空白。它不是一本冷冰冰的操作手册，也不是针对某一款手机的"说明书"，而是一套面向所有人的"手机使用素养指南"。无论你用的是安卓还是 iOS，是千元机还是旗舰机，都能从这里找到适合自己的内容。
-
-我会陪你从最基础的"认识手机硬件"开始，一步步掌握文件管理、网络设置、应用管控这些核心技能，再到电池优化、设备联动、数据备份等进阶技巧，最后一起探讨 AI 时代手机的新玩法，以及如何守护自己的数字隐私与安全。
-
-书中没有复杂的术语，我会像朋友聊天一样把知识讲明白；每章都有"本章导览"帮你理清重点，还有"动手练习"让你边学边用——毕竟，手机是用会的，不是看会的。
-
-写这本书的目标很简单：让你从"被动使用"手机，变成"主动掌控"手机，让它真正成为你生活、工作、学习的得力助手，而不是一个让你焦虑的"黑盒子"。
-
-现在，拿起你的手机，我们一起开始这门"缺失的课程"吧。
