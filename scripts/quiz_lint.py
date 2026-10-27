@@ -35,7 +35,8 @@ def main() -> int:
             langs = mf.get('languages') or []
             if isinstance(langs, str):
                 langs = [langs]
-            actual = sorted(f.stem for f in QUIZ_DIR.glob('*.json') if f.name != 'manifest.json')
+            actual = sorted(f.stem for f in QUIZ_DIR.glob('*.json')
+                         if f.name not in ('manifest.json', '_failures.json'))
             missing = [l for l in langs if l not in actual]
             extra = [a for a in actual if a not in langs]
             if missing:
@@ -47,7 +48,7 @@ def main() -> int:
 
     # ---- 各语言题库 schema ----
     for f in sorted(QUIZ_DIR.glob('*.json')):
-        if f.name == 'manifest.json':
+        if f.name in ('manifest.json', '_failures.json'):
             continue
         problems.extend(S.validate_quiz_file(f))
 

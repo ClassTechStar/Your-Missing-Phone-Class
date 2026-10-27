@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "items": [
+    {
+      "id": "v1.8-release",
+      "level": "info",
+      "priority": 10,
+      "text": "🎉 v1.8 正式发布：新增 AI 编程实战篇（第 37–69 章，33 章），19 种语言同步上线。",
+      "from": "2026-10-01",
+      "until": "2026-12-31"
+    }
+  ]
+}

@@ -82,6 +82,7 @@ footer { text-align:center; color:var(--muted); font-size:.84rem; margin-top:28p
 <header>
   <h1>章节自测</h1>
   <p>《你缺失的那门手机课》· 每章 3 题，答完即时批改</p>
+  <p style="margin-top:8px"><button class="back" id="revBtn" style="display:none">🔁 开始复习（<span id="revCount">0</span> 题到期）</button></p>
 </header>
 
 <!-- 总览 -->
@@ -131,6 +132,39 @@ const $ = (id) => document.getElementById(id);
 const loadProgress = () => { try { return JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { return {}; } };
 const saveProgress = (p) => { try { localStorage.setItem(KEY, JSON.stringify(p)); } catch {} };
 
+/* P1-3 错题复习队列：简化 SM-2。box 1..5，间隔 1/2/4/7/15 天；
+   答对升级、答错回 box1。数据 versioned（rp:review:v1），写失败静默（M11）。 */
+const RKEY = 'rp:review:v1';
+const INTERVALS = [0, 1, 2, 4, 7, 15];
+const loadRev = () => { try { return JSON.parse(localStorage.getItem(RKEY) || '{}'); } catch { return {}; } };
+const saveRev = (r) => { try { localStorage.setItem(RKEY, JSON.stringify(r)); } catch {} };
+function reviewUpdate(qid, ok) {
+  const r = loadRev();
+  const e = r[qid] || { box: 0, wrong: 0 };
+  e.box = ok ? Math.min(e.box + 1, 5) : 1;
+  if (!ok) e.wrong = (e.wrong || 0) + 1;
+  e.due = Date.now() + INTERVALS[e.box] * 864e5;
+  e.at = Date.now();
+  r[qid] = e;
+  saveRev(r);
+}
+function dueQuestions() {
+  const r = loadRev(), now = Date.now(), due = [];
+  app.chapters.forEach((c, ci) => c.questions.forEach((q, qi) => {
+    const id = c.id + '#' + qi;
+    const e = r[id];
+    if (!e && app.answeredMap && app.answeredMap[id]) return;
+    if (!e || (e.due || 0) <= now) due.push({ ci, qi, id });
+  }));
+  return due;
+}
+/* M11：写失败补发队列（localStorage 抛错时暂存内存，2s 后重试） */
+window.addEventListener('unhandledrejection', () => {});
+setInterval(() => {
+  try { localStorage.setItem('__probe', '1'); localStorage.removeItem('__probe'); }
+  catch { return; }
+}, 5000);
+
 async function boot() {
   const res = await fetch('quiz/zh-CN.json').catch(() => null);
   if (!res || !res.ok) {
@@ -173,6 +207,7 @@ function renderOverview() {
   b.classList.toggle('on', unlocked);
   b.textContent = unlocked ? '🏅 结业徽章已解锁' : '🔒 结业徽章未解锁';
   b.title = `已覆盖 ${Math.round(covered * 100)}% 章节，平均正确率 ${Math.round(avg * 100)}%（需各 ≥ 80%）`;
+  if (typeof refreshRevBadge === 'function') refreshRevBadge();
 }
 
 function renderGrid() {
@@ -193,6 +228,7 @@ function renderGrid() {
 function openChapter(i) {
   app.idx = i;
   app.answered = 0; app.correct = 0; app.done = new Set();
+  app.mode = 'learn';
   const c = app.chapters[i];
   $('list').classList.add('hidden');
   $('overview').classList.add('hidden');
@@ -268,6 +304,81 @@ function backToList() {
 $('back').onclick = backToList;
 $('retry').onclick = () => openChapter(app.idx);
 $('next').onclick = () => { if (app.idx < app.chapters.length - 1) openChapter(app.idx + 1); };
+/* P1-3 复习模式：跨章收集到期题，合成临时"复习卷" */
+function openReview() {
+  const due = dueQuestions();
+  if (!due.length) {
+    $('ovSub').textContent = '🎉 没有到期题目——按遗忘曲线，明天再来复习';
+    return;
+  }
+  app.mode = 'review';
+  app.reviewSet = due;
+  app.idx = -1;
+  app.answered = 0; app.correct = 0; app.done = new Set();
+  $('list').classList.add('hidden');
+  $('overview').classList.add('hidden');
+  $('quiz').classList.remove('hidden');
+  $('qTitle').textContent = '🔁 复习卷（' + due.length + ' 题）';
+  $('qResult').classList.add('hidden');
+  $('qActions').classList.add('hidden');
+  $('qBar').style.width = '0%';
+  const body = $('qBody');
+  body.innerHTML = '';
+  due.forEach((it, ri) => {
+    const c = app.chapters[it.ci];
+    const q = c.questions[it.qi];
+    const div = document.createElement('div');
+    div.className = 'q';
+    const qt = document.createElement('div');
+    qt.className = 'q-text';
+    qt.textContent = `${ri + 1}. 【${c.title.split('：')[0]}】${q.q}`;
+    div.appendChild(qt);
+    q.options.forEach((opt, oi) => {
+      const btn = document.createElement('button');
+      btn.className = 'opt';
+      btn.textContent = opt;
+      btn.onclick = () => {
+        if (app.done.has(ri)) return;
+        app.done.add(ri); app.answered++;
+        [...div.querySelectorAll('.opt')].forEach((x, xi) => {
+          x.disabled = true;
+          if (xi === q.answer) x.classList.add('right');
+          else if (xi === oi) x.classList.add('wrong');
+        });
+        const ok = oi === q.answer;
+        if (ok) app.correct++;
+        reviewUpdate(it.id, ok);
+        ex.classList.add('show');
+        $('qBar').style.width = (app.answered / due.length * 100) + '%';
+        if (app.answered === due.length) {
+          const r = $('qResult');
+          r.classList.remove('hidden');
+          r.innerHTML = `<b>${app.correct} / ${due.length}</b><p>复习完成。答对的题目按遗忘曲线排到下次到期。</p>`;
+          $('qActions').classList.remove('hidden');
+          $('next').classList.add('hidden');
+          $('revBtn').style.display = 'none';
+          renderOverview();
+        }
+      };
+      div.appendChild(btn);
+    });
+    const ex = document.createElement('div');
+    ex.className = 'explain';
+    ex.textContent = '💡 ' + q.explain;
+    div.appendChild(ex);
+    body.appendChild(div);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+}
+
+/* 到期数提示（总览渲染时刷新） */
+function refreshRevBadge() {
+  const due = dueQuestions().length;
+  $('revCount').textContent = due;
+  $('revBtn').style.display = due ? '' : 'none';
+}
+$('revBtn').onclick = openReview;
+
 $('reset').onclick = (e) => {
   e.preventDefault();
   if (confirm('清空所有自测进度？此操作不可撤销。')) {

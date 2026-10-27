@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "schemaVersion": 1,
   "generator": "scripts/gen_quiz.py",
-  "languages": ["zh-CN"],
+  "languages": [
+    "zh-CN",
+    "ja"
+  ],
   "note": "题库由 scripts/gen_quiz.py 从源稿自动生成；新增语言题库后在此登记 languages 并跑 scripts/quiz_lint.py 校验。"
 }

@@ -1355,6 +1355,119 @@
         .dark .quote-line { background: #1e1b4b; color: #c7d2fe; }
         @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
     </style>
+<style id="reader-bundle-style">
+/* P2-2 懒渲染：长表格/代码块按需渲染（浏览器原生，回滚=移除本样式） */
+html:not(.safe) .content-section table,
+html:not(.safe) .content-section pre { content-visibility: auto; contain-intrinsic-size: auto 480px; }
+@media print {
+  html .content-section table, html .content-section pre { content-visibility: visible; }
+}
+/* P2-1 公告横幅 */
+#announce-bar { display:none; position:sticky; top:0; z-index:80; padding:8px 16px;
+  font-size:14px; text-align:center; }
+#announce-bar[data-level="info"] { background:#e0f2fe; color:#075985; }
+#announce-bar[data-level="warn"] { background:#fef3c7; color:#92400e; }
+#announce-bar[data-level="crit"] { background:#fee2e2; color:#991b1b; }
+#announce-bar button { position:absolute; right:10px; top:6px; border:0; background:none;
+  font-size:16px; cursor:pointer; color:inherit; }
+html.safe #announce-bar { display:none !important; }
+</style>
+<script id="reader-bundle">
+/* ═══ Reader Bundle（P1-4/P2-1/P2-3）═══
+ * ReaderPrefs：版本化偏好读写（P1-4，借鉴 ClassIsland MigrateSettings）
+ * 安全模式：?safe=1 禁用增强（P2-3，借鉴 CW2 --safe-mode）
+ * 公告横幅：docs/announcements.json feed（P2-1，借鉴 CW2 通知队列）
+ * 幂等标记：window.__readerBundle
+ */
+(function () {
+  if (window.__readerBundle) return;
+  window.__readerBundle = true;
+  window.__SAFE = /[?&]safe=1/.test(location.search);
+  if (window.__SAFE) document.documentElement.classList.add('safe');
+
+  var NS = 'rp', RP_VER = 2;
+  var RS = {
+    VERSION: RP_VER,
+    get: function (k, d) {
+      try {
+        var v = localStorage.getItem(NS + ':' + k);
+        if (v !== null) return JSON.parse(v);
+        return d;
+      } catch (e) { return d; }
+    },
+    set: function (k, v) {
+      try { localStorage.setItem(NS + ':' + k, JSON.stringify(v)); }
+      catch (e) { /* M11：隐私模式/配额失败静默，进度类由调用方兜底 */ }
+    },
+    remove: function (k) { try { localStorage.removeItem(NS + ':' + k); } catch (e) {} }
+  };
+  window.RS = RS;
+
+  /* 迁移链：v1 → v2。v1 无命名空间直接存原始键（fontSize/theme/rating-/health-check-）；
+     v2 统一进 rp: 命名空间。旧键保留不动（书内旧代码仍读旧键，渐进迁移）。 */
+  (function migrate() {
+    try {
+      if (RS.get('migrated') === RP_VER) return;
+      ['fontSize', 'theme'].forEach(function (k) {
+        var v = localStorage.getItem(k);
+        if (v !== null && RS.get(k, null) === null) RS.set(k, v);
+      });
+      RS.set('migrated', RP_VER);
+    } catch (e) {}
+  })();
+
+  /* P2-1 公告横幅：safe 模式跳过；fetch 失败（离线单文件）静默 */
+  function announce() {
+    if (window.__SAFE) return;
+    var url = location.pathname.indexOf('/v1.8/') >= 0
+      ? '../announcements.json' : 'announcements.json';
+    var tryAt = function (i) {
+      if (i >= 1) return;
+      fetch(url).then(function (r) {
+        if (!r.ok) throw 0;
+        return r.json();
+      }).then(function (feed) {
+        var now = Date.now();
+        var items = (feed.items || []).filter(function (a) {
+          var okWin = (!a.from || Date.parse(a.from) <= now) &&
+                      (!a.until || Date.parse(a.until) >= now);
+          if (!okWin) return false;
+          var dis = RS.get('announce-dismissed', {});
+          return !dis[a.id];
+        }).sort(function (x, y) { return (y.priority || 0) - (x.priority || 0); });
+        var top = items[0];
+        if (!top) return;
+        var bar = document.createElement('div');
+        bar.id = 'announce-bar';
+        bar.setAttribute('data-level', top.level || 'info');
+        bar.innerHTML = '<span>' + top.text + '</span><button aria-label="关闭">✕</button>';
+        bar.querySelector('button').onclick = function () {
+          bar.remove();
+          var dis = RS.get('announce-dismissed', {});
+          dis[top.id] = Date.now();
+          RS.set('announce-dismissed', dis);
+        };
+        document.body.insertBefore(bar, document.body.firstChild);
+      }).catch(function () { tryAt(i + 1); });
+    };
+    tryAt(0);
+  }
+
+  /* P2-3 SW 自愈：?nosw=1 注销全部 Service Worker（缓存失配逃生口） */
+  if (/[?&]nosw=1/.test(location.search) && navigator.serviceWorker) {
+    navigator.serviceWorker.getRegistrations().then(function (rs) {
+      rs.forEach(function (r) { r.unregister(); });
+    }).catch(function () {});
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', announce);
+  } else {
+    announce();
+  }
+})();
+</script>
+
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
     <a class="skip-link focus-ring" href="#content">본문으로 건너뛰기</a>

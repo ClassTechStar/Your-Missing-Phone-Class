@@ -152,6 +152,7 @@ def audit(path: Path, ver: str, zh_order: list):
     return {'issues': issues, 'warns': warns, 'sections': len(sids)}
 
 def main():
+    safe = '--safe' in sys.argv
     vers = [a for a in sys.argv[1:] if a.startswith('v1.')] or ['v1.8']
     n_issue_files = 0
     for ver in vers:
@@ -171,8 +172,9 @@ def main():
             print(f'{flag} {ver}/{p.stem} ({r["sections"]}节)')
             for i in r['issues']:
                 print(f'    [问题] {i}')
-            for w in r['warns'][:3]:
-                print(f'    [提示] {w}')
+            if not safe:
+                for w in r['warns'][:3]:
+                    print(f'    [提示] {w}')
     print(f'\n== 含问题文件 {n_issue_files} 个')
 
 if __name__ == '__main__':

@@ -83,7 +83,7 @@ def main():
     else:
         threading.Thread(target=serve, daemon=True).start()
 
-    targets = ([('index.html', None), ('quiz.html', None)]
+    targets = ([('index.html', None), ('quiz.html', None), ('v1.8/zh-CN.html?safe=1', None)]
                + [(f'v1.8/{l}.html', EXPECT_H3) for l in LANGS])
     fails = []
     with sync_playwright() as pw:

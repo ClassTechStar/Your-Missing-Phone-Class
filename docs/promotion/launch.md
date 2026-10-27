@@ -9,9 +9,7 @@
 ## 0. 发布前核验（5 条命令，全绿才发）
 
 ```bash
-python -m bookkit lint --all-versions     # 结构/锚点/版本串/分享卡片元数据
-python -m bookkit check --claims --index  # README、index.html 的宣称值与死链
-python scripts/web_smoke.py               # 21 页 console 零报错
+python scripts/preflight.py --fast        # 一条命令：全部闸门 + Release 链接抽检（报告 dist/preflight.html）
 python scripts/sync_site.py --dry-run     # 站点同步计划（含分享卡片 cover-og.png）
 ```
 

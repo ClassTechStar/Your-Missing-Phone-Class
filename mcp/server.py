@@ -13,14 +13,12 @@
 协议：MCP（initialize / tools/list / tools/call），标准输入输出 JSON-RPC。
 """
 import json
-import re
 import sys
-import unicodedata
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-BOOK = json.loads((ROOT / 'source' / 'book.json').read_text(encoding='utf-8'))
-MANIFEST = json.loads((ROOT / 'manifest' / 'languages.json').read_text(encoding='utf-8'))
+sys.path.insert(0, str(ROOT))
+from bookkit import content as C  # noqa: E402  （P1-1：数据访问统一走门面）
 
 TOOLS = [
     {
@@ -128,154 +126,36 @@ def _chapter_number(meta, ch):
     return None
 
 
-def _chapter_meta(ch, lang='zh-CN'):
-    base = ROOT / 'source' / 'translations' / lang
-    src_dir = base if (lang != 'zh-CN' and base.is_dir()) else (ROOT / 'source')
-    f = src_dir / ch['file']
-    title = ''
-    if f.is_file():
-        m = re.match(r'^---\s*\n(.*?)\n---', f.read_text(encoding='utf-8'), re.S)
-        if m:
-            nav = re.search(r'^nav:\s*(.+)$', m.group(1), re.M)
-            if nav:
-                title = nav.group(1).strip()
-    meta = {'id': ch['id'], 'part': ch.get('part') or ch.get('after_part'),
-            'kind': ch.get('kind', 'chapter'), 'title': title, 'file': ch['file']}
-    meta['number'] = _chapter_number(meta, ch)
-    return meta
-
-
-def _part_label(pid):
-    for p in BOOK['parts']:
-        if p['id'] == pid:
-            return p.get('nav', pid)
-    return pid
-
-
-def _chapter_path(ch, lang):
-    src = ROOT / 'source' / 'translations' / lang
-    if not src.is_dir():
-        src = ROOT / 'source'
-    return src / ch['file']
-
-
-def _fold(s):
-    return unicodedata.normalize('NFKC', s).lower()
-
-
-# ---------------------------------------------------------------- 工具实现
+# ---------------------------------------------------------------- 工具实现（P1-1：转调 bookkit.content 门面）
 
 
 def t_list_parts(_):
-    out = []
-    for p in BOOK['parts']:
-        chs = [c['id'] for c in BOOK['chapters']
-               if (c.get('part') or c.get('after_part')) == p['id']]
-        out.append({'id': p['id'], 'title': _part_label(p['id']), 'chapters': chs})
-    return out
+    parts = C.parts()
+    for part in parts:
+        part['chapters'] = [m['id'] for m in C.chapters() if m['part'] == part['title']]
+    return parts
 
 
 def t_list_chapters(args):
-    part = args.get('part')
-    out = []
-    for ch in BOOK['chapters']:
-        meta = _chapter_meta(ch)
-        if part and meta['part'] != part:
-            continue
-        out.append(meta)
-    return out
+    return C.chapters(lang=args.get('lang', 'zh-CN'), part=args.get('part'))
 
 
 def t_get_chapter(args):
-    cid = args['chapter_id']
-    lang = args.get('lang', 'zh-CN')
-    ch = next((c for c in BOOK['chapters'] if c['id'] == cid), None)
-    if ch is None:
-        # 允许用「第20章」「20」「第二十章附」按序号查
-        n = _cn_to_int(str(cid).strip())
-        if n is not None:
-            cands = [c for c in BOOK['chapters'] if _chapter_number({'title': ''}, c) == n]
-            if len(cands) > 1:
-                # 同一章号可能对应正文 + 附录（如第20章与第20章附），列出候选
-                return {'error': f'第 {n} 章对应 {len(cands)} 个区块，请指定 chapter_id',
-                        'candidates': [
-                            {'chapter_id': c['id'],
-                             'title': _chapter_meta(c, lang)['title'],
-                             'kind': c.get('kind')} for c in cands]}
-            if cands:
-                ch = cands[0]
-    if ch is None:
-        return {'error': f'章节不存在：{cid}（用 list_chapters 查询，也支持「第20章」这类序号）'}
-    p = _chapter_path(ch, lang)
-    if not p.is_file():
-        return {'error': f'该语言暂无此章源稿：{lang}/{cid}'}
-    return {'id': ch['id'], 'lang': lang,
-            'part': _part_label(ch.get('part') or ch.get('after_part')),
-            'file': str(p.relative_to(ROOT)), 'markdown': p.read_text(encoding='utf-8')}
+    return C.load_chapter(args['chapter_id'], args.get('lang', 'zh-CN'))
 
 
 def t_search(args):
-    """全文检索（OR 匹配 + 相关度排序）。
-
-    自然语言查询（如「Termux 附录」）里常混有同义词或虚词，
-    严格 AND 会把正确结果过滤掉。这里按「命中几个关键词」排序，
-    全部命中的排最前，部分命中的按命中比例随后。
-    """
-    q = _fold(args['query'])
-    lang = args.get('lang', 'zh-CN')
-    in_body = args.get('in_body', False)
-    limit = int(args.get('limit', 20) or 20)
-    terms = [t for t in re.split(r'[\s,，、]+', q) if t]
-    if not terms:
-        return {'query': args['query'], 'lang': lang, 'hits': []}
-    hits = []
-    for ch in BOOK['chapters']:
-        meta = _chapter_meta(ch, lang)
-        title_f = _fold(meta['title'])
-        id_f = _fold(meta['id'])
-        hit_title = sum(1 for t in terms if t in title_f)
-        hit_id = sum(1 for t in terms if t in id_f)
-        # 「第20章」「20」这类数字查询：命中章节序号也算标题命中
-        for t in terms:
-            n = _cn_to_int(t)
-            if n is not None and meta.get('number') == n:
-                hit_title += 1
-        score = hit_title * 2 + hit_id
-        if not score and not in_body:
-            continue
-        matched_lines = [meta['title']] if hit_title else []
-        body_hits = 0
-        if in_body:
-            p = _chapter_path(ch, lang)
-            if p.is_file():
-                for line in p.read_text(encoding='utf-8').splitlines():
-                    f = _fold(line)
-                    if any(t in f for t in terms):
-                        body_hits += 1
-                        if len(matched_lines) < 5:
-                            matched_lines.append(line.strip()[:120])
-        if score or body_hits:
-            hits.append({'score': score, 'chapter': meta['id'], 'title': meta['title'],
-                         'number': meta.get('number'), 'kind': meta.get('kind'),
-                         'body_matches': body_hits, 'matches': matched_lines[:5]})
-    hits.sort(key=lambda h: (-h['score'], -(h['body_matches'] > 0), h['number'] or 999))
-    return {'query': args['query'], 'lang': lang, 'terms': terms,
-            'hits': hits[:limit]}
+    return {'query': args['query'], 'lang': args.get('lang', 'zh-CN'),
+            'hits': C.search(args['query'], args.get('lang', 'zh-CN'),
+                             args.get('in_body', False))}
 
 
 def t_stats(_):
-    return {
-        'title': BOOK.get('title'),
-        'version': BOOK.get('version'),
-        'languages': len(MANIFEST['languages']),
-        'chapters': len(BOOK['chapters']),
-        'parts': len(BOOK['parts']),
-        'translation_sources': sorted(
-            d.name for d in (ROOT / 'source' / 'translations').iterdir() if d.is_dir()
-        ) if (ROOT / 'source' / 'translations').is_dir() else [],
-        'pdf_releases': ['latex-pdf-v1.8-final', 'latex-pdf-v1.7',
-                         'latex-pdf-v1.6', 'latex-pdf-v1.5'],
-    }
+    st = C.stats()
+    st['pdf_releases'] = ['latex-pdf-v1.8-final', 'latex-pdf-v1.7',
+                          'latex-pdf-v1.6', 'latex-pdf-v1.5']
+    return st
+
 
 
 IMPL = {'list_parts': t_list_parts, 'list_chapters': t_list_chapters,

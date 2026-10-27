@@ -26,6 +26,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SRC = ROOT / 'source'
 TRANS = ROOT / 'source' / 'translations'
+sys.path.insert(0, str(ROOT))
+from bookkit import content as C  # noqa: E402  （P1-1：数据访问统一走门面）
 
 # ---------------------------------------------------------------- 素材提取
 
@@ -201,19 +203,14 @@ def table_facts(md: str):
 
 
 def load_chapters(lang: str):
-    """返回 [(id, nav, md), ...]，按 book.json 顺序。"""
-    base = TRANS / lang if lang != 'zh-CN' else SRC
-    book = json.loads((base / 'book.json').read_text(encoding='utf-8'))
+    """返回 [(id, nav, md), ...]，按 book.json 顺序（P1-1：走 bookkit.content 门面）。"""
     out = []
-    for ch in book['chapters']:
-        p = base / ch['file']
-        if not p.is_file():
-            p = SRC / ch['file']
+    for m in C.chapters(lang):
+        p = ROOT / m['file']
         if not p.is_file():
             continue
         md = p.read_text(encoding='utf-8')
-        nav = re.search(r'^nav:\s*(.+)$', md, re.M)
-        out.append((ch['id'], (nav.group(1).strip() if nav else ch['id']), md))
+        out.append((m['id'], m['title'], md))
     return out
 
 
