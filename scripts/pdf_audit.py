@@ -14,7 +14,19 @@ import unicodedata
 
 import pymupdf
 
-PDFROOT = Path('C:/Users/18948/Documents/手机课-LaTeX-PDF/pdf')
+def _resolve_pdfroot() -> Path:
+    """成品 PDF 目录：仓库内 手机课-LaTeX-PDF/pdf 优先，Documents 副本兜底。"""
+    cands = [
+        Path(__file__).resolve().parents[1] / '手机课-LaTeX-PDF' / 'pdf',
+        Path('C:/Users/18948/Documents/手机课-LaTeX-PDF/pdf'),
+    ]
+    for c in cands:
+        if c.is_dir() and any(c.glob('*/*.pdf')):
+            return c
+    return cands[0]
+
+
+PDFROOT = _resolve_pdfroot()
 
 # 章级（outline level-2）前缀与"数字风格"判定；ja/zh 系应为汉字数字，其余为阿拉伯数字
 CJK_NUM = r'[零〇一二三四五六七八九十百]+'
@@ -86,6 +98,15 @@ def chapter_value(lang, title):
                 return None
     return None
 
+EXEMPTIONS = json.loads((Path(__file__).parent / 'audit_exemptions.json').read_text(encoding='utf-8'))
+
+def exempted(rule: str, ver: str, lang: str) -> bool:
+    return any(match(e, ver, lang) for e in EXEMPTIONS.get('pdf', {}).get(rule, []))
+
+def match(entry: str, ver: str, lang: str) -> bool:
+    v, _, l = entry.partition('/')
+    return (not v or v == ver) and (not l or l == lang)
+
 def audit_pdf(path: Path, lang: str):
     doc = pymupdf.open(path)
     r = {'file': str(path), 'pages': doc.page_count, 'issues': [], 'warn': []}
@@ -94,7 +115,7 @@ def audit_pdf(path: Path, lang: str):
     # ---- 章级顺序/风格 ----
     chs = [(unicodedata.normalize('NFC', t[1]), t[2]) for t in toc if t[0] == 2]
     ok, bad, name = CH_PAT.get(lang, (None, None, '?'))
-    if lang == 'ja' and path.parent.name == 'v1.5':
+    if lang == 'ja' and exempted('ja_digit_chapter_style', path.parent.name, lang):
         ok, bad, name = bad, ok, '第N章 数字（v1.5 约定）'
     n_style = n_badstyle = 0
     vals, pages_seq = [], []
@@ -124,7 +145,7 @@ def audit_pdf(path: Path, lang: str):
     good_vals = [v for v in vals if v is not None]
     desc = [a for a, b in zip(good_vals, good_vals[1:]) if b <= a]
     # v1.6/ru 出版时即缺第4、13章（见 README 已知问题），跳号属内容缺章
-    if desc and (lang, path.parent.name) != ('ru', 'v1.6'):
+    if desc and not exempted('chapter_gap', path.parent.name, lang):
         r['issues'].append(f'章号非严格递增 {len(desc)} 处（如 {good_vals[:12]}）')
     if pages_seq != sorted(pages_seq):
         r['issues'].append('章起始页码非单调递增（目录顺序错乱）')
@@ -164,7 +185,7 @@ def audit_pdf(path: Path, lang: str):
     full = '\n'.join(doc[i].get_text('text') for i in range(min(doc.page_count, 60)))
     full += '\n' + '\n'.join(doc[i].get_text('text')
                              for i in range(0, doc.page_count, 7))   # 抽样正文
-    stale = [] if (lang == 'ja' and path.parent.name == 'v1.5') else STALE.get(lang, [])
+    stale = [] if exempted('stale_markers', path.parent.name, lang) else STALE.get(lang, [])
     for pat, label in stale:
         n = len(re.findall(pat, full))
         if n and label:
@@ -178,7 +199,12 @@ def audit_pdf(path: Path, lang: str):
     return r
 
 def main():
-    args = [a for a in sys.argv[1:] if not a.startswith('--')]
+    argv = list(sys.argv[1:])
+    if '--json' in argv:
+        i = argv.index('--json')
+        argv.pop(i + 1)      # json 输出路径不是版本过滤
+        argv.pop(i)
+    args = [a for a in argv if not a.startswith('--')]
     json_out = None
     if '--json' in sys.argv:
         json_out = sys.argv[sys.argv.index('--json') + 1]

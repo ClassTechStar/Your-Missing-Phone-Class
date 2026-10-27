@@ -233,4 +233,31 @@ def run_lint(root: Path, mf, versions=None) -> list:
     issues = []
     for v in versions:
         issues.extend(lint_version(root, mf, v))
+    issues.extend(_lint_schema(root, mf))
+    return issues
+
+
+def _lint_schema(root: Path, mf) -> list:
+    """结构化数据 schema 校验（P0-1）：book.json / 翻译 book.json / 题库。"""
+    from . import schema as S
+    issues = []
+    lvl = mf.check_level(mf.default_version, "schema") if hasattr(mf, "check_level") else ERROR
+
+    def emit(message, file=None):
+        issues.append(Issue(check="schema", severity=ERROR, message=message, file=file))
+
+    book = root / "source" / "book.json"
+    if book.is_file():
+        for pr in S.validate_book_file(book):
+            emit(pr, "source/book.json")
+    for f in S.list_translation_book_files(root):
+        for pr in S.validate_book_file(f):
+            emit(pr, file=str(f.relative_to(root)))
+    quiz_dir = root / "quiz"
+    if quiz_dir.is_dir():
+        for f in sorted(quiz_dir.glob("*.json")):
+            if f.name == "manifest.json":     # 包清单不是题库文件
+                continue
+            for pr in S.validate_quiz_file(f):
+                emit(pr, file=str(f.relative_to(root)))
     return issues

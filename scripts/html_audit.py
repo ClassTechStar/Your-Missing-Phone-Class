@@ -44,6 +44,17 @@ def plain(html_fragment: str) -> str:
     import html as hm
     return re.sub(r'\s+', ' ', hm.unescape(re.sub(r'<[^>]+>', '', html_fragment))).strip()
 
+EXEMPTIONS = json.loads((Path(__file__).parent / 'audit_exemptions.json').read_text(encoding='utf-8'))
+
+def match(entry: str, ver: str, lang: str) -> bool:
+    v, _, l = entry.partition('/')
+    return (not v or v == ver) and (not l or l == lang)
+
+def exempted(rule: str, ver: str, lang: str) -> bool:
+    """声明式豁免表（audit_exemptions.json）：命中条目即跳过对应规则。"""
+    return any(match(e, ver, lang) for e in EXEMPTIONS.get('html', {}).get(rule, []))
+
+
 def strip_code(html: str) -> str:
     return re.sub(r'(<pre\b.*?</pre>|<code\b.*?</code>|<script\b.*?</script>|<style\b.*?</style>)',
                   '⟦C⟧', html, flags=re.S | re.I)
@@ -92,7 +103,7 @@ def audit(path: Path, ver: str, zh_order: list):
         n = len(re.findall(WORD_CH[lang], body))
         if n:
             issues.append(f'h3/正文残留词形章号 ×{n}')
-    if lang in DIGIT_CH and ver != 'v1.5':
+    if lang in DIGIT_CH and not exempted('digit_chapter_style', ver, lang):
         n = len(re.findall(DIGIT_CH[lang], body))
         if n:
             issues.append(f'残留数字章号（应为汉字）×{n}')
@@ -106,7 +117,7 @@ def audit(path: Path, ver: str, zh_order: list):
         if dups:
             issues.append(f'{m.group(1)} h4 编号重复/回退 {len(dups)} 处（{dups[:3]}）')
     # B5 侧栏 vs h3 风格（ja 数字/汉字）
-    if lang == 'ja' and ver != 'v1.5':
+    if lang == 'ja' and not exempted('digit_chapter_style', ver, lang):
         h3_digit = len(re.findall(r'第[0-9]+章', body))
         if h3_digit:
             issues.append(f'全文件残留数字章号 ×{h3_digit}')
@@ -147,7 +158,7 @@ def main():
         zh_path = ROOT / ver / 'zh-CN.html'
         zh_order = section_ids(zh_path.read_text(encoding='utf-8')) if zh_path.exists() else []
         for p in sorted((ROOT / ver).glob('*.html')):
-            if p.stem == 'index' or (ver, p.stem) == ('v1.7', 'lzh'):
+            if p.stem == 'index' or exempted('skip_file', ver, p.stem):
                 continue
             try:
                 r = audit(p, ver, zh_order)

@@ -339,7 +339,8 @@ def build(lang: str, per_chapter: int = 3):
             out_chapters.append({'id': cid, 'title': nav, 'questions': qs[:per_chapter]})
 
     nq = sum(len(c['questions']) for c in out_chapters)
-    return {'lang': lang,
+    return {'schemaVersion': 1,
+            'lang': lang,
             'note': '《你缺失的那门手机课》章节自测 · 由 scripts/gen_quiz.py 从源稿'
                     '自动生成，题目锚定书中真实内容（术语定义、标题比喻、章导读）。',
             'chapters': out_chapters}, nq

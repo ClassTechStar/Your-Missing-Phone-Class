@@ -141,3 +141,7 @@ jobs:
 
       - name: 浏览器冒烟（20 页 console 零报错 + 锚点解析 + h3 计数）
         run: python scripts/web_smoke.py
+
+      - name: 题库与结构 schema 校验（quiz / book.json）
+        if: always()
+        run: python scripts/quiz_lint.py

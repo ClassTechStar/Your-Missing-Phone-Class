@@ -1,4 +1,5 @@
 {
+ "schemaVersion": 1,
  "lang": "zh-CN",
  "note": "《你缺失的那门手机课》章节自测 · 由 scripts/gen_quiz.py 从源稿自动生成，题目锚定书中真实内容（术语定义、标题比喻、章导读）。",
  "chapters": [

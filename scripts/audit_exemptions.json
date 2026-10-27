@@ -1,0 +1,13 @@
+{
+  "_comment": "HTML/PDF 审计器的声明式豁免表（P0-3）。key=规则名，value=豁免的「版本/语言」条目；命中即跳过该规则。新增豁免改表不改码。",
+  "html": {
+    "digit_chapter_style": ["v1.5/ja"],
+    "sidebar_legacy_template": ["v1.5/*"],
+    "skip_file": ["v1.7/lzh"]
+  },
+  "pdf": {
+    "ja_digit_chapter_style": ["v1.5/ja"],
+    "chapter_gap": ["v1.6/ru"],
+    "stale_markers": ["v1.5/ja"]
+  }
+}

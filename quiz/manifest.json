@@ -1,0 +1,8 @@
+{
+  "name": "你缺失的那门手机课 · 章节自测题库",
+  "version": "1.0.0",
+  "schemaVersion": 1,
+  "generator": "scripts/gen_quiz.py",
+  "languages": ["zh-CN"],
+  "note": "题库由 scripts/gen_quiz.py 从源稿自动生成；新增语言题库后在此登记 languages 并跑 scripts/quiz_lint.py 校验。"
+}

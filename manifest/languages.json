@@ -229,7 +229,8 @@
         "coverage": "error",
         "source_sync": "error",
         "orphan": "error",
-        "social": "error"
+        "social": "error",
+        "schema": "error"
       }
     }
   },
