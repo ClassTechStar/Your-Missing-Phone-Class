@@ -65,10 +65,14 @@ XeLaTeX 排版，带目录和书签，四个版本共 74 本，全部免费。
 
 | 版本 | Release | 内容 |
 |------|---------|------|
-| **v1.8**（推荐） | [latex-pdf-v1.8-final](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.8-final) | 19 种语言 × 84 章 |
+| **v1.8**（推荐） | [latex-pdf-v1.8-20261028](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.8-20261028) | 19 种语言 × 84 章，书名统一版 |
+| v1.8 旧版 | [latex-pdf-v1.8-final](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.8-final) | 19 种语言（旧书名） |
 | v1.7 | [latex-pdf-v1.7](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.7) | 19 种语言 |
 | v1.6 | [latex-pdf-v1.6](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.6) | 19 种语言 |
 | v1.5 | [latex-pdf-v1.5](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.5) | 17 种语言 |
+
+v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Your Phone!），
+20261028 这一版起统一为《你缺失的那门手机课》及其译名。
 
 [latex/](latex/) 里是 19 种语言的 LaTeX 源稿，想自己改排版可以直接编译。
 
