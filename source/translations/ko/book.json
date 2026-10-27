@@ -1,1049 +1,1049 @@
 {
-  "schema_version": 1,
-  "version": "v1.8",
-  "lang": "ko",
-  "title": "스마트폰 정복! 초보자가 꼭 배워야 할 디지털 필수 교양",
-  "glossary": {
-    "ch_count": 69,
-    "app_count": 8,
-    "numbered_chapters": 70
+ "schema_version": 1,
+ "version": "v1.8",
+ "lang": "ko",
+ "title": "당신이 놓친 스마트폰 수업",
+ "glossary": {
+  "ch_count": 69,
+  "app_count": 8,
+  "numbered_chapters": 70
+ },
+ "template": "template/shell.html",
+ "parts": [
+  {
+   "id": "ji-chu-pian",
+   "group": "ji-chu",
+   "nav": "학습 시작",
+   "short": "기초 편 펼치기/접기",
+   "file": "parts/00-ji-chu-pian.md",
+   "open_tag": "<section id=\"ji-chu-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--기초편-->",
+   "comment": "",
+   "chapters": [
+    "di-ling-zhang",
+    "di-yi-zhang",
+    "di-yi-zhang-memory",
+    "di-yi-zhang-harmony",
+    "di-er-zhang",
+    "di-san-zhang",
+    "di-si-zhang",
+    "di-wu-zhang",
+    "di-liu-zhang",
+    "di-qi-zhang-jichu"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-ling-zhang",
+    "di-yi-zhang",
+    "di-yi-zhang-memory",
+    "di-yi-zhang-harmony",
+    "di-er-zhang",
+    "di-san-zhang",
+    "di-si-zhang",
+    "di-si-zhang-apk",
+    "di-wu-zhang",
+    "di-liu-zhang",
+    "di-qi-zhang-jichu"
+   ],
+   "toc_extra": [
+    {
+     "id": "di-si-zhang-apk",
+     "num": "",
+     "label": " 부록: 소프트웨어 설치 패키지 구성 요소",
+     "toc": "sub"
+    }
+   ]
   },
-  "template": "template/shell.html",
-  "parts": [
+  {
+   "id": "ruan-jian-pian",
+   "group": "ruan-jian",
+   "nav": "2. 소프트웨어 편(제8~14장)",
+   "short": "소프트웨어 편 펼치기/접기",
+   "file": "parts/01-ruan-jian-pian.md",
+   "open_tag": "<section id=\"ruan-jian-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--소프트웨어편-->",
+   "comment": "<!-- 2. 소프트웨어 편 -->",
+   "chapters": [
+    "di-ba-zhang",
+    "di-jiu-zhang",
+    "di-shi-zhang",
+    "di-shi-yi-zhang",
+    "di-shi-yi-zhang-advanced",
+    "di-shi-er-zhang",
+    "di-shi-san-zhang",
+    "di-shi-si-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-ba-zhang",
+    "di-jiu-zhang",
+    "di-shi-zhang",
+    "di-shi-yi-zhang",
+    "di-shi-yi-zhang-advanced",
+    "di-shi-er-zhang",
+    "di-shi-san-zhang",
+    "di-shi-si-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "jin-jie-pian",
+   "group": "jin-jie",
+   "nav": "3. 심화 편(제15~20장)",
+   "short": "심화 편 펼치기/접기",
+   "file": "parts/02-jin-jie-pian.md",
+   "open_tag": "<section id=\"jin-jie-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--심화편-->",
+   "comment": "<!-- 3. 심화편 -->",
+   "chapters": [
+    "di-shi-wu-zhang",
+    "di-shi-liu-zhang",
+    "di-shi-qi-zhang",
+    "di-shi-ba-zhang",
+    "di-shi-jiu-zhang",
+    "di-er-shi-zhang-jinjie",
+    "di-er-shi-zhang-termux"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-shi-wu-zhang",
+    "di-shi-wu-zhang-kuichong",
+    "di-shi-liu-zhang",
+    "di-shi-qi-zhang",
+    "di-shi-ba-zhang",
+    "di-shi-jiu-zhang",
+    "di-er-shi-zhang-jinjie",
+    "di-er-shi-zhang-termux"
+   ],
+   "toc_extra": [
     {
-      "id": "ji-chu-pian",
-      "group": "ji-chu",
-      "nav": "학습 시작",
-      "short": "기초 편 펼치기/접기",
-      "file": "parts/00-ji-chu-pian.md",
-      "open_tag": "<section id=\"ji-chu-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--기초편-->",
-      "comment": "",
-      "chapters": [
-        "di-ling-zhang",
-        "di-yi-zhang",
-        "di-yi-zhang-memory",
-        "di-yi-zhang-harmony",
-        "di-er-zhang",
-        "di-san-zhang",
-        "di-si-zhang",
-        "di-wu-zhang",
-        "di-liu-zhang",
-        "di-qi-zhang-jichu"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-ling-zhang",
-        "di-yi-zhang",
-        "di-yi-zhang-memory",
-        "di-yi-zhang-harmony",
-        "di-er-zhang",
-        "di-san-zhang",
-        "di-si-zhang",
-        "di-si-zhang-apk",
-        "di-wu-zhang",
-        "di-liu-zhang",
-        "di-qi-zhang-jichu"
-      ],
-      "toc_extra": [
-        {
-          "id": "di-si-zhang-apk",
-          "num": "",
-          "label": " 부록: 소프트웨어 설치 패키지 구성 요소",
-          "toc": "sub"
-        }
-      ]
-    },
-    {
-      "id": "ruan-jian-pian",
-      "group": "ruan-jian",
-      "nav": "2. 소프트웨어 편(제8~14장)",
-      "short": "소프트웨어 편 펼치기/접기",
-      "file": "parts/01-ruan-jian-pian.md",
-      "open_tag": "<section id=\"ruan-jian-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--소프트웨어편-->",
-      "comment": "<!-- 2. 소프트웨어 편 -->",
-      "chapters": [
-        "di-ba-zhang",
-        "di-jiu-zhang",
-        "di-shi-zhang",
-        "di-shi-yi-zhang",
-        "di-shi-yi-zhang-advanced",
-        "di-shi-er-zhang",
-        "di-shi-san-zhang",
-        "di-shi-si-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-ba-zhang",
-        "di-jiu-zhang",
-        "di-shi-zhang",
-        "di-shi-yi-zhang",
-        "di-shi-yi-zhang-advanced",
-        "di-shi-er-zhang",
-        "di-shi-san-zhang",
-        "di-shi-si-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "jin-jie-pian",
-      "group": "jin-jie",
-      "nav": "3. 심화 편(제15~20장)",
-      "short": "심화 편 펼치기/접기",
-      "file": "parts/02-jin-jie-pian.md",
-      "open_tag": "<section id=\"jin-jie-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--심화편-->",
-      "comment": "<!-- 3. 심화편 -->",
-      "chapters": [
-        "di-shi-wu-zhang",
-        "di-shi-liu-zhang",
-        "di-shi-qi-zhang",
-        "di-shi-ba-zhang",
-        "di-shi-jiu-zhang",
-        "di-er-shi-zhang-jinjie",
-        "di-er-shi-zhang-termux"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-shi-wu-zhang",
-        "di-shi-wu-zhang-kuichong",
-        "di-shi-liu-zhang",
-        "di-shi-qi-zhang",
-        "di-shi-ba-zhang",
-        "di-shi-jiu-zhang",
-        "di-er-shi-zhang-jinjie",
-        "di-er-shi-zhang-termux"
-      ],
-      "toc_extra": [
-        {
-          "id": "di-shi-wu-zhang-kuichong",
-          "num": "",
-          "label": " 부록: 빠른 충전 규격 완전 해설",
-          "toc": "sub"
-        }
-      ]
-    },
-    {
-      "id": "chao-yue-pian",
-      "group": "chao-yue",
-      "nav": "4. 넘어서기 편(제21~26장)",
-      "short": "넘어서기 편 펼치기/접기",
-      "file": "parts/03-chao-yue-pian.md",
-      "open_tag": "<section id=\"chao-yue-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--초월편-->",
-      "comment": "<!-- 넷, 초월 편 -->",
-      "chapters": [
-        "di-er-shi-yi-zhang",
-        "di-er-shi-er-zhang",
-        "di-er-shi-san-zhang",
-        "di-er-shi-san-zhang-github",
-        "di-er-shi-si-zhang",
-        "di-er-shi-wu-zhang",
-        "di-er-shi-liu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-er-shi-yi-zhang",
-        "di-er-shi-er-zhang",
-        "di-er-shi-san-zhang",
-        "di-er-shi-san-zhang-github",
-        "di-er-shi-si-zhang",
-        "di-er-shi-wu-zhang",
-        "di-er-shi-liu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "shi-zhan-pian",
-      "group": "shi-zhan",
-      "nav": "5. 실전 편(제27~32장)",
-      "short": "실전 편 펼치기/접기",
-      "file": "parts/04-shi-zhan-pian.md",
-      "open_tag": "<section id=\"shi-zhan-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--5. 실전편(제27-32장)-->",
-      "comment": "<!-- 5. 실전 편(제27-32장) -->",
-      "chapters": [
-        "di-er-shi-qi-zhang",
-        "di-er-shi-ba-zhang",
-        "di-er-shi-jiu-zhang",
-        "di-san-shi-zhang",
-        "di-san-shi-yi-zhang",
-        "di-san-shi-er-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-er-shi-qi-zhang",
-        "di-er-shi-ba-zhang",
-        "di-er-shi-jiu-zhang",
-        "di-san-shi-zhang",
-        "di-san-shi-yi-zhang",
-        "di-san-shi-er-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "zhan-wang-pian",
-      "group": "zhan-wang",
-      "nav": "6. 전망편 (제33장)",
-      "short": "전망 편 펼치기/접기",
-      "file": "parts/05-zhan-wang-pian.md",
-      "open_tag": "<section id=\"zhan-wang-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--6. 전망편(제33장)-->",
-      "comment": "<!-- 6. 전망편(제33장) -->",
-      "chapters": [
-        "di-san-shi-san-zhang",
-        "di-san-shi-si-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-san-zhang",
-        "di-san-shi-si-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "er-tong-pian",
-      "group": "er-tong-pian",
-      "nav": "아동과 스마트폰 특집 (제35-36장)",
-      "short": "아이와 스마트폰 특집 펼치기/접기",
-      "file": "parts/06-er-tong-pian.md",
-      "open_tag": "<section id=\"er-tong-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--아동과 휴대폰 특집(제35장)-->",
-      "comment": "<!-- 어린이와 스마트폰 특별(제35장) -->",
-      "chapters": [
-        "di-san-shi-wu-zhang",
-        "di-san-shi-liu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-wu-zhang",
-        "di-san-shi-liu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "ai-biancheng-pian",
-      "group": "ai-biancheng",
-      "nav": "7. AI 코딩 실전 편(제37~47장)",
-      "short": "AI 코딩 실전 편 펼치기/접기",
-      "file": "parts/07-ai-biancheng-pian.md",
-      "open_tag": "<section id=\"ai-biancheng-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--AI 코딩 실전편-->",
-      "comment": "<!-- 제10편 〈부록〉 -->\n<!-- AI 코딩 실전편(제37-47장) -->",
-      "chapters": [
-        "di-san-shi-qi-zhang",
-        "di-san-shi-ba-zhang",
-        "di-san-shi-jiu-zhang",
-        "di-si-shi-zhang",
-        "di-si-shi-yi-zhang",
-        "di-si-shi-er-zhang",
-        "di-si-shi-san-zhang",
-        "di-si-shi-si-zhang",
-        "di-si-shi-wu-zhang",
-        "di-si-shi-liu-zhang",
-        "di-si-shi-qi-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-qi-zhang",
-        "di-san-shi-ba-zhang",
-        "di-san-shi-jiu-zhang",
-        "di-si-shi-zhang",
-        "di-si-shi-yi-zhang",
-        "di-si-shi-er-zhang",
-        "di-si-shi-san-zhang",
-        "di-si-shi-si-zhang",
-        "di-si-shi-wu-zhang",
-        "di-si-shi-liu-zhang",
-        "di-si-shi-qi-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "an-zhuo-kai-fa-pian",
-      "group": "an-zhuo-kai-fa",
-      "nav": "8. 안드로이드 개발 실전 편(제48~58장)",
-      "short": "안드로이드 개발 실전 편 펼치기/접기",
-      "file": "parts/08-an-zhuo-kai-fa-pian.md",
-      "open_tag": "<section id=\"an-zhuo-kai-fa-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--안드로이드 개발 실전편-->",
-      "comment": "<!-- 안드로이드 개발 실전편(제48-58장) -->",
-      "chapters": [
-        "di-si-shi-ba-zhang",
-        "di-si-shi-jiu-zhang",
-        "di-wu-shi-zhang",
-        "di-wu-shi-yi-zhang",
-        "di-wu-shi-er-zhang",
-        "di-wu-shi-san-zhang",
-        "di-wu-shi-si-zhang",
-        "di-wu-shi-wu-zhang",
-        "di-wu-shi-liu-zhang",
-        "di-wu-shi-qi-zhang",
-        "di-wu-shi-ba-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-si-shi-ba-zhang",
-        "di-si-shi-jiu-zhang",
-        "di-wu-shi-zhang",
-        "di-wu-shi-yi-zhang",
-        "di-wu-shi-er-zhang",
-        "di-wu-shi-san-zhang",
-        "di-wu-shi-si-zhang",
-        "di-wu-shi-wu-zhang",
-        "di-wu-shi-liu-zhang",
-        "di-wu-shi-qi-zhang",
-        "di-wu-shi-ba-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "ios-kai-fa-pian",
-      "group": "ios-kai-fa",
-      "nav": "9. iOS 개발 실전 편(제59~69장)",
-      "short": "iOS 개발 실전 편 펼치기/접기",
-      "file": "parts/09-ios-kai-fa-pian.md",
-      "open_tag": "<section id=\"ios-kai-fa-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--iOS 개발 실전편-->",
-      "comment": "<!-- iOS 개발 실전편(제59-69장) -->",
-      "chapters": [
-        "di-wu-shi-jiu-zhang",
-        "di-liu-shi-zhang",
-        "di-liu-shi-yi-zhang",
-        "di-liu-shi-er-zhang",
-        "di-liu-shi-san-zhang",
-        "di-liu-shi-si-zhang",
-        "di-liu-shi-wu-zhang",
-        "di-liu-shi-liu-zhang",
-        "di-liu-shi-qi-zhang",
-        "di-liu-shi-ba-zhang",
-        "di-liu-shi-jiu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-wu-shi-jiu-zhang",
-        "di-liu-shi-zhang",
-        "di-liu-shi-yi-zhang",
-        "di-liu-shi-er-zhang",
-        "di-liu-shi-san-zhang",
-        "di-liu-shi-si-zhang",
-        "di-liu-shi-wu-zhang",
-        "di-liu-shi-liu-zhang",
-        "di-liu-shi-qi-zhang",
-        "di-liu-shi-ba-zhang",
-        "di-liu-shi-jiu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "fu-lu",
-      "group": "fu-lu",
-      "nav": "10. 부록",
-      "short": "부록 펼치기/접기",
-      "file": "parts/10-fu-lu.md",
-      "open_tag": "<section id=\"fu-lu\" class=\"mb-12\">",
-      "toc_comment": "<!--부록-->",
-      "comment": "",
-      "chapters": [
-        "fu-lu-a"
-      ],
-      "orphans": [
-        "fu-lu-b",
-        "fu-lu-c",
-        "fu-lu-d",
-        "fu-lu-e",
-        "fu-lu-f",
-        "jie-yu",
-        "fu-lu-g",
-        "fu-lu-h"
-      ],
-      "toc": [
-        "fu-lu-a",
-        "fu-lu-b",
-        "fu-lu-c",
-        "fu-lu-d",
-        "fu-lu-e",
-        "fu-lu-f",
-        "jie-yu",
-        "fu-lu-g",
-        "fu-lu-h"
-      ],
-      "toc_extra": []
+     "id": "di-shi-wu-zhang-kuichong",
+     "num": "",
+     "label": " 부록: 빠른 충전 규격 완전 해설",
+     "toc": "sub"
     }
-  ],
-  "chapters": [
-    {
-      "id": "di-ling-zhang",
-      "file": "chapters/00-di-ling-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-yi-zhang",
-      "file": "chapters/01-di-yi-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-yi-zhang-memory",
-      "file": "chapters/02-di-yi-zhang-memory.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- 제1장 부록: 안드로이드 스마트폰 메모리 확장 분석 -->"
-    },
-    {
-      "id": "di-yi-zhang-harmony",
-      "file": "chapters/03-di-yi-zhang-harmony.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": ""
-    },
-    {
-      "id": "di-er-zhang",
-      "file": "chapters/04-di-er-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-san-zhang",
-      "file": "chapters/05-di-san-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제3장 -->"
-    },
-    {
-      "id": "di-si-zhang",
-      "file": "chapters/06-di-si-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제4장 -->"
-    },
-    {
-      "id": "di-wu-zhang",
-      "file": "chapters/07-di-wu-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제5장 -->"
-    },
-    {
-      "id": "di-liu-zhang",
-      "file": "chapters/08-di-liu-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제6장 -->"
-    },
-    {
-      "id": "di-qi-zhang-jichu",
-      "file": "chapters/09-di-qi-zhang-jichu.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제7장: 최첨단 기능 -->"
-    },
-    {
-      "id": "di-ba-zhang",
-      "file": "chapters/10-di-ba-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제8장 -->"
-    },
-    {
-      "id": "di-jiu-zhang",
-      "file": "chapters/11-di-jiu-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제9장 -->"
-    },
-    {
-      "id": "di-shi-zhang",
-      "file": "chapters/12-di-shi-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제10장 -->"
-    },
-    {
-      "id": "di-shi-yi-zhang",
-      "file": "chapters/13-di-shi-yi-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제11장 -->"
-    },
-    {
-      "id": "di-shi-yi-zhang-advanced",
-      "file": "chapters/14-di-shi-yi-zhang-advanced.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- 제11장 부록: 전문 영상 기술 -->"
-    },
-    {
-      "id": "di-shi-er-zhang",
-      "file": "chapters/15-di-shi-er-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제12장 -->"
-    },
-    {
-      "id": "di-shi-san-zhang",
-      "file": "chapters/16-di-shi-san-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제13장 -->"
-    },
-    {
-      "id": "di-shi-si-zhang",
-      "file": "chapters/17-di-shi-si-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제14장: 비밀번호 관리자 특집 -->"
-    },
-    {
-      "id": "di-shi-wu-zhang",
-      "file": "chapters/18-di-shi-wu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제15장 -->"
-    },
-    {
-      "id": "di-shi-liu-zhang",
-      "file": "chapters/19-di-shi-liu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제16장 -->"
-    },
-    {
-      "id": "di-shi-qi-zhang",
-      "file": "chapters/20-di-shi-qi-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제17장 -->"
-    },
-    {
-      "id": "di-shi-ba-zhang",
-      "file": "chapters/21-di-shi-ba-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제18장 -->"
-    },
-    {
-      "id": "di-shi-jiu-zhang",
-      "file": "chapters/22-di-shi-jiu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제19장 -->"
-    },
-    {
-      "id": "di-er-shi-zhang-jinjie",
-      "file": "chapters/23-di-er-shi-zhang-jinjie.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- 제20장: 개발자 모드와 고급 권한 -->"
-    },
-    {
-      "id": "di-er-shi-zhang-termux",
-      "file": "chapters/24-di-er-shi-zhang-termux.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- 제20장 부록: Termux 휴대용 Linux 터미널 -->"
-    },
-    {
-      "id": "di-er-shi-yi-zhang",
-      "file": "chapters/25-di-er-shi-yi-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제21장 -->"
-    },
-    {
-      "id": "di-er-shi-er-zhang",
-      "file": "chapters/26-di-er-shi-er-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제22장 -->"
-    },
-    {
-      "id": "di-er-shi-san-zhang",
-      "file": "chapters/27-di-er-shi-san-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제23장 -->"
-    },
-    {
-      "id": "di-er-shi-san-zhang-github",
-      "file": "chapters/28-di-er-shi-san-zhang-github.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제23장 부록: GitHub 입문 가이드 -->"
-    },
-    {
-      "id": "di-er-shi-si-zhang",
-      "file": "chapters/29-di-er-shi-si-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제24장: Root 권한과 BL 잠금 심층 분석 -->"
-    },
-    {
-      "id": "di-er-shi-wu-zhang",
-      "file": "chapters/30-di-er-shi-wu-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제25장 -->"
-    },
-    {
-      "id": "di-er-shi-liu-zhang",
-      "file": "chapters/31-di-er-shi-liu-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제26장 -->"
-    },
-    {
-      "id": "di-er-shi-qi-zhang",
-      "file": "chapters/32-di-er-shi-qi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제27장:시니어 친화특집 -->"
-    },
-    {
-      "id": "di-er-shi-ba-zhang",
-      "file": "chapters/33-di-er-shi-ba-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제28장: 스마트폰 구매 궁극 가이드 -->"
-    },
-    {
-      "id": "di-er-shi-jiu-zhang",
-      "file": "chapters/34-di-er-shi-jiu-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제29장:디지털 건강 -->"
-    },
-    {
-      "id": "di-san-shi-zhang",
-      "file": "chapters/35-di-san-shi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제30장: 화면 미러링, 발표 및 차량 연동 -->"
-    },
-    {
-      "id": "di-san-shi-yi-zhang",
-      "file": "chapters/36-di-san-shi-yi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제31장: 숏폼 영상 촬영과 콘텐츠 제작 입문 -->"
-    },
-    {
-      "id": "di-san-shi-er-zhang",
-      "file": "chapters/37-di-san-shi-er-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제32장: 스마트폰 보안 응급처치 매뉴얼 -->"
-    },
-    {
-      "id": "di-san-shi-san-zhang",
-      "file": "chapters/38-di-san-shi-san-zhang.md",
-      "part": "zhan-wang-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제33장 -->"
-    },
-    {
-      "id": "di-san-shi-si-zhang",
-      "file": "chapters/39-di-san-shi-si-zhang.md",
-      "part": "zhan-wang-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제34장: 차량 연동 심층 가이드 -->"
-    },
-    {
-      "id": "di-san-shi-wu-zhang",
-      "file": "chapters/40-di-san-shi-wu-zhang.md",
-      "part": "er-tong-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제35장 -->"
-    },
-    {
-      "id": "di-san-shi-liu-zhang",
-      "file": "chapters/41-di-san-shi-liu-zhang.md",
-      "part": "er-tong-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제36장: 스마트폰과 스마트 홈——집을 똑똑하게 만들기 -->"
-    },
-    {
-      "id": "di-san-shi-qi-zhang",
-      "file": "chapters/42-di-san-shi-qi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제37장 -->"
-    },
-    {
-      "id": "di-san-shi-ba-zhang",
-      "file": "chapters/43-di-san-shi-ba-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제38장 -->"
-    },
-    {
-      "id": "di-san-shi-jiu-zhang",
-      "file": "chapters/44-di-san-shi-jiu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제39장 -->"
-    },
-    {
-      "id": "di-si-shi-zhang",
-      "file": "chapters/45-di-si-shi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제40장 -->"
-    },
-    {
-      "id": "di-si-shi-yi-zhang",
-      "file": "chapters/46-di-si-shi-yi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제41장 -->"
-    },
-    {
-      "id": "di-si-shi-er-zhang",
-      "file": "chapters/47-di-si-shi-er-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제42장 -->"
-    },
-    {
-      "id": "di-si-shi-san-zhang",
-      "file": "chapters/48-di-si-shi-san-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제43장 -->"
-    },
-    {
-      "id": "di-si-shi-si-zhang",
-      "file": "chapters/49-di-si-shi-si-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제44장 -->"
-    },
-    {
-      "id": "di-si-shi-wu-zhang",
-      "file": "chapters/50-di-si-shi-wu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제45장 -->"
-    },
-    {
-      "id": "di-si-shi-liu-zhang",
-      "file": "chapters/51-di-si-shi-liu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제46장 -->"
-    },
-    {
-      "id": "di-si-shi-qi-zhang",
-      "file": "chapters/52-di-si-shi-qi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제47장 -->"
-    },
-    {
-      "id": "di-si-shi-ba-zhang",
-      "file": "chapters/53-di-si-shi-ba-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제48장 -->"
-    },
-    {
-      "id": "di-si-shi-jiu-zhang",
-      "file": "chapters/54-di-si-shi-jiu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제49장 -->"
-    },
-    {
-      "id": "di-wu-shi-zhang",
-      "file": "chapters/55-di-wu-shi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제50장 -->"
-    },
-    {
-      "id": "di-wu-shi-yi-zhang",
-      "file": "chapters/56-di-wu-shi-yi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제51장 -->"
-    },
-    {
-      "id": "di-wu-shi-er-zhang",
-      "file": "chapters/57-di-wu-shi-er-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제52장 -->"
-    },
-    {
-      "id": "di-wu-shi-san-zhang",
-      "file": "chapters/58-di-wu-shi-san-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제53장 -->"
-    },
-    {
-      "id": "di-wu-shi-si-zhang",
-      "file": "chapters/59-di-wu-shi-si-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제54장 -->"
-    },
-    {
-      "id": "di-wu-shi-wu-zhang",
-      "file": "chapters/60-di-wu-shi-wu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제55장 -->"
-    },
-    {
-      "id": "di-wu-shi-liu-zhang",
-      "file": "chapters/61-di-wu-shi-liu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제56장 -->"
-    },
-    {
-      "id": "di-wu-shi-qi-zhang",
-      "file": "chapters/62-di-wu-shi-qi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제57장 -->"
-    },
-    {
-      "id": "di-wu-shi-ba-zhang",
-      "file": "chapters/63-di-wu-shi-ba-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제58장 -->"
-    },
-    {
-      "id": "di-wu-shi-jiu-zhang",
-      "file": "chapters/64-di-wu-shi-jiu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제59장 -->"
-    },
-    {
-      "id": "di-liu-shi-zhang",
-      "file": "chapters/65-di-liu-shi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제60장 -->"
-    },
-    {
-      "id": "di-liu-shi-yi-zhang",
-      "file": "chapters/66-di-liu-shi-yi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제61장 -->"
-    },
-    {
-      "id": "di-liu-shi-er-zhang",
-      "file": "chapters/67-di-liu-shi-er-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제62장 -->"
-    },
-    {
-      "id": "di-liu-shi-san-zhang",
-      "file": "chapters/68-di-liu-shi-san-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제63장 -->"
-    },
-    {
-      "id": "di-liu-shi-si-zhang",
-      "file": "chapters/69-di-liu-shi-si-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제64장 -->"
-    },
-    {
-      "id": "di-liu-shi-wu-zhang",
-      "file": "chapters/70-di-liu-shi-wu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제65장 -->"
-    },
-    {
-      "id": "di-liu-shi-liu-zhang",
-      "file": "chapters/71-di-liu-shi-liu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제66장 -->"
-    },
-    {
-      "id": "di-liu-shi-qi-zhang",
-      "file": "chapters/72-di-liu-shi-qi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제67장 -->"
-    },
-    {
-      "id": "di-liu-shi-ba-zhang",
-      "file": "chapters/73-di-liu-shi-ba-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제68장 -->"
-    },
-    {
-      "id": "di-liu-shi-jiu-zhang",
-      "file": "chapters/74-di-liu-shi-jiu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- 제69장 -->"
-    },
-    {
-      "id": "fu-lu-a",
-      "file": "chapters/75-fu-lu-a.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- 부록 A -->"
-    },
-    {
-      "id": "fu-lu-b",
-      "file": "chapters/76-fu-lu-b.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-c",
-      "file": "chapters/77-fu-lu-c.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-d",
-      "file": "chapters/78-fu-lu-d.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-e",
-      "file": "chapters/79-fu-lu-e.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-f",
-      "file": "chapters/80-fu-lu-f.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": "<!-- 부록 F: 폴더블 특집 -->"
-    },
-    {
-      "id": "jie-yu",
-      "file": "chapters/81-jie-yu.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "conclusion",
-      "comment": "<!-- 맺음말 -->"
-    },
-    {
-      "id": "fu-lu-g",
-      "file": "chapters/82-fu-lu-g.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-h",
-      "file": "chapters/83-fu-lu-h.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": "<!-- 부록 H: 버전 로드맵 -->"
-    }
-  ]
+   ]
+  },
+  {
+   "id": "chao-yue-pian",
+   "group": "chao-yue",
+   "nav": "4. 넘어서기 편(제21~26장)",
+   "short": "넘어서기 편 펼치기/접기",
+   "file": "parts/03-chao-yue-pian.md",
+   "open_tag": "<section id=\"chao-yue-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--초월편-->",
+   "comment": "<!-- 넷, 초월 편 -->",
+   "chapters": [
+    "di-er-shi-yi-zhang",
+    "di-er-shi-er-zhang",
+    "di-er-shi-san-zhang",
+    "di-er-shi-san-zhang-github",
+    "di-er-shi-si-zhang",
+    "di-er-shi-wu-zhang",
+    "di-er-shi-liu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-er-shi-yi-zhang",
+    "di-er-shi-er-zhang",
+    "di-er-shi-san-zhang",
+    "di-er-shi-san-zhang-github",
+    "di-er-shi-si-zhang",
+    "di-er-shi-wu-zhang",
+    "di-er-shi-liu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "shi-zhan-pian",
+   "group": "shi-zhan",
+   "nav": "5. 실전 편(제27~32장)",
+   "short": "실전 편 펼치기/접기",
+   "file": "parts/04-shi-zhan-pian.md",
+   "open_tag": "<section id=\"shi-zhan-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--5. 실전편(제27-32장)-->",
+   "comment": "<!-- 5. 실전 편(제27-32장) -->",
+   "chapters": [
+    "di-er-shi-qi-zhang",
+    "di-er-shi-ba-zhang",
+    "di-er-shi-jiu-zhang",
+    "di-san-shi-zhang",
+    "di-san-shi-yi-zhang",
+    "di-san-shi-er-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-er-shi-qi-zhang",
+    "di-er-shi-ba-zhang",
+    "di-er-shi-jiu-zhang",
+    "di-san-shi-zhang",
+    "di-san-shi-yi-zhang",
+    "di-san-shi-er-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "zhan-wang-pian",
+   "group": "zhan-wang",
+   "nav": "6. 전망편 (제33장)",
+   "short": "전망 편 펼치기/접기",
+   "file": "parts/05-zhan-wang-pian.md",
+   "open_tag": "<section id=\"zhan-wang-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--6. 전망편(제33장)-->",
+   "comment": "<!-- 6. 전망편(제33장) -->",
+   "chapters": [
+    "di-san-shi-san-zhang",
+    "di-san-shi-si-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-san-zhang",
+    "di-san-shi-si-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "er-tong-pian",
+   "group": "er-tong-pian",
+   "nav": "아동과 스마트폰 특집 (제35-36장)",
+   "short": "아이와 스마트폰 특집 펼치기/접기",
+   "file": "parts/06-er-tong-pian.md",
+   "open_tag": "<section id=\"er-tong-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--아동과 휴대폰 특집(제35장)-->",
+   "comment": "<!-- 어린이와 스마트폰 특별(제35장) -->",
+   "chapters": [
+    "di-san-shi-wu-zhang",
+    "di-san-shi-liu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-wu-zhang",
+    "di-san-shi-liu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "ai-biancheng-pian",
+   "group": "ai-biancheng",
+   "nav": "7. AI 코딩 실전 편(제37~47장)",
+   "short": "AI 코딩 실전 편 펼치기/접기",
+   "file": "parts/07-ai-biancheng-pian.md",
+   "open_tag": "<section id=\"ai-biancheng-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--AI 코딩 실전편-->",
+   "comment": "<!-- 제10편 〈부록〉 -->\n<!-- AI 코딩 실전편(제37-47장) -->",
+   "chapters": [
+    "di-san-shi-qi-zhang",
+    "di-san-shi-ba-zhang",
+    "di-san-shi-jiu-zhang",
+    "di-si-shi-zhang",
+    "di-si-shi-yi-zhang",
+    "di-si-shi-er-zhang",
+    "di-si-shi-san-zhang",
+    "di-si-shi-si-zhang",
+    "di-si-shi-wu-zhang",
+    "di-si-shi-liu-zhang",
+    "di-si-shi-qi-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-qi-zhang",
+    "di-san-shi-ba-zhang",
+    "di-san-shi-jiu-zhang",
+    "di-si-shi-zhang",
+    "di-si-shi-yi-zhang",
+    "di-si-shi-er-zhang",
+    "di-si-shi-san-zhang",
+    "di-si-shi-si-zhang",
+    "di-si-shi-wu-zhang",
+    "di-si-shi-liu-zhang",
+    "di-si-shi-qi-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "an-zhuo-kai-fa-pian",
+   "group": "an-zhuo-kai-fa",
+   "nav": "8. 안드로이드 개발 실전 편(제48~58장)",
+   "short": "안드로이드 개발 실전 편 펼치기/접기",
+   "file": "parts/08-an-zhuo-kai-fa-pian.md",
+   "open_tag": "<section id=\"an-zhuo-kai-fa-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--안드로이드 개발 실전편-->",
+   "comment": "<!-- 안드로이드 개발 실전편(제48-58장) -->",
+   "chapters": [
+    "di-si-shi-ba-zhang",
+    "di-si-shi-jiu-zhang",
+    "di-wu-shi-zhang",
+    "di-wu-shi-yi-zhang",
+    "di-wu-shi-er-zhang",
+    "di-wu-shi-san-zhang",
+    "di-wu-shi-si-zhang",
+    "di-wu-shi-wu-zhang",
+    "di-wu-shi-liu-zhang",
+    "di-wu-shi-qi-zhang",
+    "di-wu-shi-ba-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-si-shi-ba-zhang",
+    "di-si-shi-jiu-zhang",
+    "di-wu-shi-zhang",
+    "di-wu-shi-yi-zhang",
+    "di-wu-shi-er-zhang",
+    "di-wu-shi-san-zhang",
+    "di-wu-shi-si-zhang",
+    "di-wu-shi-wu-zhang",
+    "di-wu-shi-liu-zhang",
+    "di-wu-shi-qi-zhang",
+    "di-wu-shi-ba-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "ios-kai-fa-pian",
+   "group": "ios-kai-fa",
+   "nav": "9. iOS 개발 실전 편(제59~69장)",
+   "short": "iOS 개발 실전 편 펼치기/접기",
+   "file": "parts/09-ios-kai-fa-pian.md",
+   "open_tag": "<section id=\"ios-kai-fa-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--iOS 개발 실전편-->",
+   "comment": "<!-- iOS 개발 실전편(제59-69장) -->",
+   "chapters": [
+    "di-wu-shi-jiu-zhang",
+    "di-liu-shi-zhang",
+    "di-liu-shi-yi-zhang",
+    "di-liu-shi-er-zhang",
+    "di-liu-shi-san-zhang",
+    "di-liu-shi-si-zhang",
+    "di-liu-shi-wu-zhang",
+    "di-liu-shi-liu-zhang",
+    "di-liu-shi-qi-zhang",
+    "di-liu-shi-ba-zhang",
+    "di-liu-shi-jiu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-wu-shi-jiu-zhang",
+    "di-liu-shi-zhang",
+    "di-liu-shi-yi-zhang",
+    "di-liu-shi-er-zhang",
+    "di-liu-shi-san-zhang",
+    "di-liu-shi-si-zhang",
+    "di-liu-shi-wu-zhang",
+    "di-liu-shi-liu-zhang",
+    "di-liu-shi-qi-zhang",
+    "di-liu-shi-ba-zhang",
+    "di-liu-shi-jiu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "fu-lu",
+   "group": "fu-lu",
+   "nav": "10. 부록",
+   "short": "부록 펼치기/접기",
+   "file": "parts/10-fu-lu.md",
+   "open_tag": "<section id=\"fu-lu\" class=\"mb-12\">",
+   "toc_comment": "<!--부록-->",
+   "comment": "",
+   "chapters": [
+    "fu-lu-a"
+   ],
+   "orphans": [
+    "fu-lu-b",
+    "fu-lu-c",
+    "fu-lu-d",
+    "fu-lu-e",
+    "fu-lu-f",
+    "jie-yu",
+    "fu-lu-g",
+    "fu-lu-h"
+   ],
+   "toc": [
+    "fu-lu-a",
+    "fu-lu-b",
+    "fu-lu-c",
+    "fu-lu-d",
+    "fu-lu-e",
+    "fu-lu-f",
+    "jie-yu",
+    "fu-lu-g",
+    "fu-lu-h"
+   ],
+   "toc_extra": []
+  }
+ ],
+ "chapters": [
+  {
+   "id": "di-ling-zhang",
+   "file": "chapters/00-di-ling-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-yi-zhang",
+   "file": "chapters/01-di-yi-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-yi-zhang-memory",
+   "file": "chapters/02-di-yi-zhang-memory.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- 제1장 부록: 안드로이드 스마트폰 메모리 확장 분석 -->"
+  },
+  {
+   "id": "di-yi-zhang-harmony",
+   "file": "chapters/03-di-yi-zhang-harmony.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": ""
+  },
+  {
+   "id": "di-er-zhang",
+   "file": "chapters/04-di-er-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-san-zhang",
+   "file": "chapters/05-di-san-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제3장 -->"
+  },
+  {
+   "id": "di-si-zhang",
+   "file": "chapters/06-di-si-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제4장 -->"
+  },
+  {
+   "id": "di-wu-zhang",
+   "file": "chapters/07-di-wu-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제5장 -->"
+  },
+  {
+   "id": "di-liu-zhang",
+   "file": "chapters/08-di-liu-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제6장 -->"
+  },
+  {
+   "id": "di-qi-zhang-jichu",
+   "file": "chapters/09-di-qi-zhang-jichu.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제7장: 최첨단 기능 -->"
+  },
+  {
+   "id": "di-ba-zhang",
+   "file": "chapters/10-di-ba-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제8장 -->"
+  },
+  {
+   "id": "di-jiu-zhang",
+   "file": "chapters/11-di-jiu-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제9장 -->"
+  },
+  {
+   "id": "di-shi-zhang",
+   "file": "chapters/12-di-shi-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제10장 -->"
+  },
+  {
+   "id": "di-shi-yi-zhang",
+   "file": "chapters/13-di-shi-yi-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제11장 -->"
+  },
+  {
+   "id": "di-shi-yi-zhang-advanced",
+   "file": "chapters/14-di-shi-yi-zhang-advanced.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- 제11장 부록: 전문 영상 기술 -->"
+  },
+  {
+   "id": "di-shi-er-zhang",
+   "file": "chapters/15-di-shi-er-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제12장 -->"
+  },
+  {
+   "id": "di-shi-san-zhang",
+   "file": "chapters/16-di-shi-san-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제13장 -->"
+  },
+  {
+   "id": "di-shi-si-zhang",
+   "file": "chapters/17-di-shi-si-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제14장: 비밀번호 관리자 특집 -->"
+  },
+  {
+   "id": "di-shi-wu-zhang",
+   "file": "chapters/18-di-shi-wu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제15장 -->"
+  },
+  {
+   "id": "di-shi-liu-zhang",
+   "file": "chapters/19-di-shi-liu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제16장 -->"
+  },
+  {
+   "id": "di-shi-qi-zhang",
+   "file": "chapters/20-di-shi-qi-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제17장 -->"
+  },
+  {
+   "id": "di-shi-ba-zhang",
+   "file": "chapters/21-di-shi-ba-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제18장 -->"
+  },
+  {
+   "id": "di-shi-jiu-zhang",
+   "file": "chapters/22-di-shi-jiu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제19장 -->"
+  },
+  {
+   "id": "di-er-shi-zhang-jinjie",
+   "file": "chapters/23-di-er-shi-zhang-jinjie.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- 제20장: 개발자 모드와 고급 권한 -->"
+  },
+  {
+   "id": "di-er-shi-zhang-termux",
+   "file": "chapters/24-di-er-shi-zhang-termux.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- 제20장 부록: Termux 휴대용 Linux 터미널 -->"
+  },
+  {
+   "id": "di-er-shi-yi-zhang",
+   "file": "chapters/25-di-er-shi-yi-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제21장 -->"
+  },
+  {
+   "id": "di-er-shi-er-zhang",
+   "file": "chapters/26-di-er-shi-er-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제22장 -->"
+  },
+  {
+   "id": "di-er-shi-san-zhang",
+   "file": "chapters/27-di-er-shi-san-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제23장 -->"
+  },
+  {
+   "id": "di-er-shi-san-zhang-github",
+   "file": "chapters/28-di-er-shi-san-zhang-github.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제23장 부록: GitHub 입문 가이드 -->"
+  },
+  {
+   "id": "di-er-shi-si-zhang",
+   "file": "chapters/29-di-er-shi-si-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제24장: Root 권한과 BL 잠금 심층 분석 -->"
+  },
+  {
+   "id": "di-er-shi-wu-zhang",
+   "file": "chapters/30-di-er-shi-wu-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제25장 -->"
+  },
+  {
+   "id": "di-er-shi-liu-zhang",
+   "file": "chapters/31-di-er-shi-liu-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제26장 -->"
+  },
+  {
+   "id": "di-er-shi-qi-zhang",
+   "file": "chapters/32-di-er-shi-qi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제27장:시니어 친화특집 -->"
+  },
+  {
+   "id": "di-er-shi-ba-zhang",
+   "file": "chapters/33-di-er-shi-ba-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제28장: 스마트폰 구매 궁극 가이드 -->"
+  },
+  {
+   "id": "di-er-shi-jiu-zhang",
+   "file": "chapters/34-di-er-shi-jiu-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제29장:디지털 건강 -->"
+  },
+  {
+   "id": "di-san-shi-zhang",
+   "file": "chapters/35-di-san-shi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제30장: 화면 미러링, 발표 및 차량 연동 -->"
+  },
+  {
+   "id": "di-san-shi-yi-zhang",
+   "file": "chapters/36-di-san-shi-yi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제31장: 숏폼 영상 촬영과 콘텐츠 제작 입문 -->"
+  },
+  {
+   "id": "di-san-shi-er-zhang",
+   "file": "chapters/37-di-san-shi-er-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제32장: 스마트폰 보안 응급처치 매뉴얼 -->"
+  },
+  {
+   "id": "di-san-shi-san-zhang",
+   "file": "chapters/38-di-san-shi-san-zhang.md",
+   "part": "zhan-wang-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제33장 -->"
+  },
+  {
+   "id": "di-san-shi-si-zhang",
+   "file": "chapters/39-di-san-shi-si-zhang.md",
+   "part": "zhan-wang-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제34장: 차량 연동 심층 가이드 -->"
+  },
+  {
+   "id": "di-san-shi-wu-zhang",
+   "file": "chapters/40-di-san-shi-wu-zhang.md",
+   "part": "er-tong-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제35장 -->"
+  },
+  {
+   "id": "di-san-shi-liu-zhang",
+   "file": "chapters/41-di-san-shi-liu-zhang.md",
+   "part": "er-tong-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제36장: 스마트폰과 스마트 홈——집을 똑똑하게 만들기 -->"
+  },
+  {
+   "id": "di-san-shi-qi-zhang",
+   "file": "chapters/42-di-san-shi-qi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제37장 -->"
+  },
+  {
+   "id": "di-san-shi-ba-zhang",
+   "file": "chapters/43-di-san-shi-ba-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제38장 -->"
+  },
+  {
+   "id": "di-san-shi-jiu-zhang",
+   "file": "chapters/44-di-san-shi-jiu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제39장 -->"
+  },
+  {
+   "id": "di-si-shi-zhang",
+   "file": "chapters/45-di-si-shi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제40장 -->"
+  },
+  {
+   "id": "di-si-shi-yi-zhang",
+   "file": "chapters/46-di-si-shi-yi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제41장 -->"
+  },
+  {
+   "id": "di-si-shi-er-zhang",
+   "file": "chapters/47-di-si-shi-er-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제42장 -->"
+  },
+  {
+   "id": "di-si-shi-san-zhang",
+   "file": "chapters/48-di-si-shi-san-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제43장 -->"
+  },
+  {
+   "id": "di-si-shi-si-zhang",
+   "file": "chapters/49-di-si-shi-si-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제44장 -->"
+  },
+  {
+   "id": "di-si-shi-wu-zhang",
+   "file": "chapters/50-di-si-shi-wu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제45장 -->"
+  },
+  {
+   "id": "di-si-shi-liu-zhang",
+   "file": "chapters/51-di-si-shi-liu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제46장 -->"
+  },
+  {
+   "id": "di-si-shi-qi-zhang",
+   "file": "chapters/52-di-si-shi-qi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제47장 -->"
+  },
+  {
+   "id": "di-si-shi-ba-zhang",
+   "file": "chapters/53-di-si-shi-ba-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제48장 -->"
+  },
+  {
+   "id": "di-si-shi-jiu-zhang",
+   "file": "chapters/54-di-si-shi-jiu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제49장 -->"
+  },
+  {
+   "id": "di-wu-shi-zhang",
+   "file": "chapters/55-di-wu-shi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제50장 -->"
+  },
+  {
+   "id": "di-wu-shi-yi-zhang",
+   "file": "chapters/56-di-wu-shi-yi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제51장 -->"
+  },
+  {
+   "id": "di-wu-shi-er-zhang",
+   "file": "chapters/57-di-wu-shi-er-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제52장 -->"
+  },
+  {
+   "id": "di-wu-shi-san-zhang",
+   "file": "chapters/58-di-wu-shi-san-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제53장 -->"
+  },
+  {
+   "id": "di-wu-shi-si-zhang",
+   "file": "chapters/59-di-wu-shi-si-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제54장 -->"
+  },
+  {
+   "id": "di-wu-shi-wu-zhang",
+   "file": "chapters/60-di-wu-shi-wu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제55장 -->"
+  },
+  {
+   "id": "di-wu-shi-liu-zhang",
+   "file": "chapters/61-di-wu-shi-liu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제56장 -->"
+  },
+  {
+   "id": "di-wu-shi-qi-zhang",
+   "file": "chapters/62-di-wu-shi-qi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제57장 -->"
+  },
+  {
+   "id": "di-wu-shi-ba-zhang",
+   "file": "chapters/63-di-wu-shi-ba-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제58장 -->"
+  },
+  {
+   "id": "di-wu-shi-jiu-zhang",
+   "file": "chapters/64-di-wu-shi-jiu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제59장 -->"
+  },
+  {
+   "id": "di-liu-shi-zhang",
+   "file": "chapters/65-di-liu-shi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제60장 -->"
+  },
+  {
+   "id": "di-liu-shi-yi-zhang",
+   "file": "chapters/66-di-liu-shi-yi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제61장 -->"
+  },
+  {
+   "id": "di-liu-shi-er-zhang",
+   "file": "chapters/67-di-liu-shi-er-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제62장 -->"
+  },
+  {
+   "id": "di-liu-shi-san-zhang",
+   "file": "chapters/68-di-liu-shi-san-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제63장 -->"
+  },
+  {
+   "id": "di-liu-shi-si-zhang",
+   "file": "chapters/69-di-liu-shi-si-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제64장 -->"
+  },
+  {
+   "id": "di-liu-shi-wu-zhang",
+   "file": "chapters/70-di-liu-shi-wu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제65장 -->"
+  },
+  {
+   "id": "di-liu-shi-liu-zhang",
+   "file": "chapters/71-di-liu-shi-liu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제66장 -->"
+  },
+  {
+   "id": "di-liu-shi-qi-zhang",
+   "file": "chapters/72-di-liu-shi-qi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제67장 -->"
+  },
+  {
+   "id": "di-liu-shi-ba-zhang",
+   "file": "chapters/73-di-liu-shi-ba-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제68장 -->"
+  },
+  {
+   "id": "di-liu-shi-jiu-zhang",
+   "file": "chapters/74-di-liu-shi-jiu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- 제69장 -->"
+  },
+  {
+   "id": "fu-lu-a",
+   "file": "chapters/75-fu-lu-a.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- 부록 A -->"
+  },
+  {
+   "id": "fu-lu-b",
+   "file": "chapters/76-fu-lu-b.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-c",
+   "file": "chapters/77-fu-lu-c.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-d",
+   "file": "chapters/78-fu-lu-d.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-e",
+   "file": "chapters/79-fu-lu-e.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-f",
+   "file": "chapters/80-fu-lu-f.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": "<!-- 부록 F: 폴더블 특집 -->"
+  },
+  {
+   "id": "jie-yu",
+   "file": "chapters/81-jie-yu.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "conclusion",
+   "comment": "<!-- 맺음말 -->"
+  },
+  {
+   "id": "fu-lu-g",
+   "file": "chapters/82-fu-lu-g.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-h",
+   "file": "chapters/83-fu-lu-h.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": "<!-- 부록 H: 버전 로드맵 -->"
+  }
+ ]
 }

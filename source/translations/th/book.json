@@ -1,1049 +1,1049 @@
 {
-  "schema_version": 1,
-  "version": "v1.8",
-  "lang": "th",
-  "title": "จัดการมือถือให้เป็น! วิชาพื้นฐานดิจิทัลที่มือใหม่ต้องเรียน",
-  "glossary": {
-    "ch_count": 69,
-    "app_count": 8,
-    "numbered_chapters": 70
+ "schema_version": 1,
+ "version": "v1.8",
+ "lang": "th",
+ "title": "คาบเรียนมือถือที่คุณขาดไป",
+ "glossary": {
+  "ch_count": 69,
+  "app_count": 8,
+  "numbered_chapters": 70
+ },
+ "template": "template/shell.html",
+ "parts": [
+  {
+   "id": "ji-chu-pian",
+   "group": "ji-chu",
+   "nav": "เริ่มเรียน",
+   "short": "ขยาย/ยุบภาคพื้นฐาน",
+   "file": "parts/00-ji-chu-pian.md",
+   "open_tag": "<section id=\"ji-chu-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--ภาคพื้นฐาน-->",
+   "comment": "",
+   "chapters": [
+    "di-ling-zhang",
+    "di-yi-zhang",
+    "di-yi-zhang-memory",
+    "di-yi-zhang-harmony",
+    "di-er-zhang",
+    "di-san-zhang",
+    "di-si-zhang",
+    "di-wu-zhang",
+    "di-liu-zhang",
+    "di-qi-zhang-jichu"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-ling-zhang",
+    "di-yi-zhang",
+    "di-yi-zhang-memory",
+    "di-yi-zhang-harmony",
+    "di-er-zhang",
+    "di-san-zhang",
+    "di-si-zhang",
+    "di-si-zhang-apk",
+    "di-wu-zhang",
+    "di-liu-zhang",
+    "di-qi-zhang-jichu"
+   ],
+   "toc_extra": [
+    {
+     "id": "di-si-zhang-apk",
+     "num": "",
+     "label": " ภาคผนวก: องค์ประกอบของแพ็กเกจติดตั้งซอฟต์แวร์",
+     "toc": "sub"
+    }
+   ]
   },
-  "template": "template/shell.html",
-  "parts": [
+  {
+   "id": "ruan-jian-pian",
+   "group": "ruan-jian",
+   "nav": "2. ภาคซอฟต์แวร์ (บทที่ 8-14)",
+   "short": "ขยาย/ยุบภาคซอฟต์แวร์",
+   "file": "parts/01-ruan-jian-pian.md",
+   "open_tag": "<section id=\"ruan-jian-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--ภาคซอฟต์แวร์-->",
+   "comment": "<!-- II,ซอฟต์แวร์ -->",
+   "chapters": [
+    "di-ba-zhang",
+    "di-jiu-zhang",
+    "di-shi-zhang",
+    "di-shi-yi-zhang",
+    "di-shi-yi-zhang-advanced",
+    "di-shi-er-zhang",
+    "di-shi-san-zhang",
+    "di-shi-si-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-ba-zhang",
+    "di-jiu-zhang",
+    "di-shi-zhang",
+    "di-shi-yi-zhang",
+    "di-shi-yi-zhang-advanced",
+    "di-shi-er-zhang",
+    "di-shi-san-zhang",
+    "di-shi-si-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "jin-jie-pian",
+   "group": "jin-jie",
+   "nav": "3. ภาคระดับกลาง (บทที่ 15-20)",
+   "short": "ขยาย/ยุบภาคระดับกลาง",
+   "file": "parts/02-jin-jie-pian.md",
+   "open_tag": "<section id=\"jin-jie-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--ภาคระดับกลาง-->",
+   "comment": "<!-- III,ขั้นกลาง -->",
+   "chapters": [
+    "di-shi-wu-zhang",
+    "di-shi-liu-zhang",
+    "di-shi-qi-zhang",
+    "di-shi-ba-zhang",
+    "di-shi-jiu-zhang",
+    "di-er-shi-zhang-jinjie",
+    "di-er-shi-zhang-termux"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-shi-wu-zhang",
+    "di-shi-wu-zhang-kuichong",
+    "di-shi-liu-zhang",
+    "di-shi-qi-zhang",
+    "di-shi-ba-zhang",
+    "di-shi-jiu-zhang",
+    "di-er-shi-zhang-jinjie",
+    "di-er-shi-zhang-termux"
+   ],
+   "toc_extra": [
     {
-      "id": "ji-chu-pian",
-      "group": "ji-chu",
-      "nav": "เริ่มเรียน",
-      "short": "ขยาย/ยุบภาคพื้นฐาน",
-      "file": "parts/00-ji-chu-pian.md",
-      "open_tag": "<section id=\"ji-chu-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--ภาคพื้นฐาน-->",
-      "comment": "",
-      "chapters": [
-        "di-ling-zhang",
-        "di-yi-zhang",
-        "di-yi-zhang-memory",
-        "di-yi-zhang-harmony",
-        "di-er-zhang",
-        "di-san-zhang",
-        "di-si-zhang",
-        "di-wu-zhang",
-        "di-liu-zhang",
-        "di-qi-zhang-jichu"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-ling-zhang",
-        "di-yi-zhang",
-        "di-yi-zhang-memory",
-        "di-yi-zhang-harmony",
-        "di-er-zhang",
-        "di-san-zhang",
-        "di-si-zhang",
-        "di-si-zhang-apk",
-        "di-wu-zhang",
-        "di-liu-zhang",
-        "di-qi-zhang-jichu"
-      ],
-      "toc_extra": [
-        {
-          "id": "di-si-zhang-apk",
-          "num": "",
-          "label": " ภาคผนวก: องค์ประกอบของแพ็กเกจติดตั้งซอฟต์แวร์",
-          "toc": "sub"
-        }
-      ]
-    },
-    {
-      "id": "ruan-jian-pian",
-      "group": "ruan-jian",
-      "nav": "2. ภาคซอฟต์แวร์ (บทที่ 8-14)",
-      "short": "ขยาย/ยุบภาคซอฟต์แวร์",
-      "file": "parts/01-ruan-jian-pian.md",
-      "open_tag": "<section id=\"ruan-jian-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--ภาคซอฟต์แวร์-->",
-      "comment": "<!-- II,ซอฟต์แวร์ -->",
-      "chapters": [
-        "di-ba-zhang",
-        "di-jiu-zhang",
-        "di-shi-zhang",
-        "di-shi-yi-zhang",
-        "di-shi-yi-zhang-advanced",
-        "di-shi-er-zhang",
-        "di-shi-san-zhang",
-        "di-shi-si-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-ba-zhang",
-        "di-jiu-zhang",
-        "di-shi-zhang",
-        "di-shi-yi-zhang",
-        "di-shi-yi-zhang-advanced",
-        "di-shi-er-zhang",
-        "di-shi-san-zhang",
-        "di-shi-si-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "jin-jie-pian",
-      "group": "jin-jie",
-      "nav": "3. ภาคระดับกลาง (บทที่ 15-20)",
-      "short": "ขยาย/ยุบภาคระดับกลาง",
-      "file": "parts/02-jin-jie-pian.md",
-      "open_tag": "<section id=\"jin-jie-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--ภาคระดับกลาง-->",
-      "comment": "<!-- III,ขั้นกลาง -->",
-      "chapters": [
-        "di-shi-wu-zhang",
-        "di-shi-liu-zhang",
-        "di-shi-qi-zhang",
-        "di-shi-ba-zhang",
-        "di-shi-jiu-zhang",
-        "di-er-shi-zhang-jinjie",
-        "di-er-shi-zhang-termux"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-shi-wu-zhang",
-        "di-shi-wu-zhang-kuichong",
-        "di-shi-liu-zhang",
-        "di-shi-qi-zhang",
-        "di-shi-ba-zhang",
-        "di-shi-jiu-zhang",
-        "di-er-shi-zhang-jinjie",
-        "di-er-shi-zhang-termux"
-      ],
-      "toc_extra": [
-        {
-          "id": "di-shi-wu-zhang-kuichong",
-          "num": "",
-          "label": " ภาคผนวก: ถอดรหัสโปรโตคอลชาร์จเร็วทั้งหมด",
-          "toc": "sub"
-        }
-      ]
-    },
-    {
-      "id": "chao-yue-pian",
-      "group": "chao-yue",
-      "nav": "4. ภาคก้าวไกล (บทที่ 21-26)",
-      "short": "ขยาย/ยุบภาคก้าวไกล",
-      "file": "parts/03-chao-yue-pian.md",
-      "open_tag": "<section id=\"chao-yue-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--ภาคก้าวไกล-->",
-      "comment": "<!-- IV,ขั้นสูง -->",
-      "chapters": [
-        "di-er-shi-yi-zhang",
-        "di-er-shi-er-zhang",
-        "di-er-shi-san-zhang",
-        "di-er-shi-san-zhang-github",
-        "di-er-shi-si-zhang",
-        "di-er-shi-wu-zhang",
-        "di-er-shi-liu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-er-shi-yi-zhang",
-        "di-er-shi-er-zhang",
-        "di-er-shi-san-zhang",
-        "di-er-shi-san-zhang-github",
-        "di-er-shi-si-zhang",
-        "di-er-shi-wu-zhang",
-        "di-er-shi-liu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "shi-zhan-pian",
-      "group": "shi-zhan",
-      "nav": "5. ภาคใช้งานจริง (บทที่ 27-32)",
-      "short": "ขยาย/ยุบภาคใช้งานจริง",
-      "file": "parts/04-shi-zhan-pian.md",
-      "open_tag": "<section id=\"shi-zhan-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--5,ภาคลงมือปฏิบัติ(บทที่ 27-32)-->",
-      "comment": "<!-- V,ภาคปฏิบัติ(บทที่ 27-32) -->",
-      "chapters": [
-        "di-er-shi-qi-zhang",
-        "di-er-shi-ba-zhang",
-        "di-er-shi-jiu-zhang",
-        "di-san-shi-zhang",
-        "di-san-shi-yi-zhang",
-        "di-san-shi-er-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-er-shi-qi-zhang",
-        "di-er-shi-ba-zhang",
-        "di-er-shi-jiu-zhang",
-        "di-san-shi-zhang",
-        "di-san-shi-yi-zhang",
-        "di-san-shi-er-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "zhan-wang-pian",
-      "group": "zhan-wang",
-      "nav": "6. บทมองการณ์ไกล (บทที่ 33-41)",
-      "short": "ขยาย/ยุบภาคมองอนาคต",
-      "file": "parts/05-zhan-wang-pian.md",
-      "open_tag": "<section id=\"zhan-wang-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--6,มองไปข้างหน้า(บทที่ 33)-->",
-      "comment": "<!-- 6,มองไปข้างหน้า(บทที่ 33) -->",
-      "chapters": [
-        "di-san-shi-san-zhang",
-        "di-san-shi-si-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-san-zhang",
-        "di-san-shi-si-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "er-tong-pian",
-      "group": "er-tong-pian",
-      "nav": "โฟกัสพิเศษเด็กกับมือถือ (บทที่ 35-36)",
-      "short": "ขยาย/ยุบโฟกัสพิเศษเด็กกับมือถือ",
-      "file": "parts/06-er-tong-pian.md",
-      "open_tag": "<section id=\"er-tong-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--หัวข้อพิเศษ เด็กกับโทรศัพท์(บทที่ 35)-->",
-      "comment": "<!-- หัวข้อเด็กและโทรศัพท์(บทที่ 35) -->",
-      "chapters": [
-        "di-san-shi-wu-zhang",
-        "di-san-shi-liu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-wu-zhang",
-        "di-san-shi-liu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "ai-biancheng-pian",
-      "group": "ai-biancheng",
-      "nav": "7. ภาคปฏิบัติการเขียนโปรแกรมด้วย AI (บทที่ 37-47)",
-      "short": "ขยาย/ยุบภาคปฏิบัติการเขียนโปรแกรมด้วย AI",
-      "file": "parts/07-ai-biancheng-pian.md",
-      "open_tag": "<section id=\"ai-biancheng-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--ภาคปฏิบัติ: เขียนโค้ดด้วย AI-->",
-      "comment": "<!-- 10,ภาคผนวก -->\n<!-- ภาคปฏิบัติ: เขียนโค้ดด้วย AI(บทที่ 37-47) -->",
-      "chapters": [
-        "di-san-shi-qi-zhang",
-        "di-san-shi-ba-zhang",
-        "di-san-shi-jiu-zhang",
-        "di-si-shi-zhang",
-        "di-si-shi-yi-zhang",
-        "di-si-shi-er-zhang",
-        "di-si-shi-san-zhang",
-        "di-si-shi-si-zhang",
-        "di-si-shi-wu-zhang",
-        "di-si-shi-liu-zhang",
-        "di-si-shi-qi-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-qi-zhang",
-        "di-san-shi-ba-zhang",
-        "di-san-shi-jiu-zhang",
-        "di-si-shi-zhang",
-        "di-si-shi-yi-zhang",
-        "di-si-shi-er-zhang",
-        "di-si-shi-san-zhang",
-        "di-si-shi-si-zhang",
-        "di-si-shi-wu-zhang",
-        "di-si-shi-liu-zhang",
-        "di-si-shi-qi-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "an-zhuo-kai-fa-pian",
-      "group": "an-zhuo-kai-fa",
-      "nav": "8. ภาคปฏิบัติการพัฒนา Android (บทที่ 48-58)",
-      "short": "ขยาย/ยุบภาคปฏิบัติการพัฒนา Android",
-      "file": "parts/08-an-zhuo-kai-fa-pian.md",
-      "open_tag": "<section id=\"an-zhuo-kai-fa-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--ภาคปฏิบัติ: พัฒนาแอนดรอยด์-->",
-      "comment": "<!-- ภาคปฏิบัติ: พัฒนาแอนดรอยด์(บทที่ 48-58) -->",
-      "chapters": [
-        "di-si-shi-ba-zhang",
-        "di-si-shi-jiu-zhang",
-        "di-wu-shi-zhang",
-        "di-wu-shi-yi-zhang",
-        "di-wu-shi-er-zhang",
-        "di-wu-shi-san-zhang",
-        "di-wu-shi-si-zhang",
-        "di-wu-shi-wu-zhang",
-        "di-wu-shi-liu-zhang",
-        "di-wu-shi-qi-zhang",
-        "di-wu-shi-ba-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-si-shi-ba-zhang",
-        "di-si-shi-jiu-zhang",
-        "di-wu-shi-zhang",
-        "di-wu-shi-yi-zhang",
-        "di-wu-shi-er-zhang",
-        "di-wu-shi-san-zhang",
-        "di-wu-shi-si-zhang",
-        "di-wu-shi-wu-zhang",
-        "di-wu-shi-liu-zhang",
-        "di-wu-shi-qi-zhang",
-        "di-wu-shi-ba-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "ios-kai-fa-pian",
-      "group": "ios-kai-fa",
-      "nav": "9. ภาคปฏิบัติการพัฒนา iOS (บทที่ 59-69)",
-      "short": "ขยาย/ยุบภาคปฏิบัติการพัฒนา iOS",
-      "file": "parts/09-ios-kai-fa-pian.md",
-      "open_tag": "<section id=\"ios-kai-fa-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--ภาคปฏิบัติ: พัฒนา iOS-->",
-      "comment": "<!-- ภาคปฏิบัติ: พัฒนา iOS(บทที่ 59-69) -->",
-      "chapters": [
-        "di-wu-shi-jiu-zhang",
-        "di-liu-shi-zhang",
-        "di-liu-shi-yi-zhang",
-        "di-liu-shi-er-zhang",
-        "di-liu-shi-san-zhang",
-        "di-liu-shi-si-zhang",
-        "di-liu-shi-wu-zhang",
-        "di-liu-shi-liu-zhang",
-        "di-liu-shi-qi-zhang",
-        "di-liu-shi-ba-zhang",
-        "di-liu-shi-jiu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-wu-shi-jiu-zhang",
-        "di-liu-shi-zhang",
-        "di-liu-shi-yi-zhang",
-        "di-liu-shi-er-zhang",
-        "di-liu-shi-san-zhang",
-        "di-liu-shi-si-zhang",
-        "di-liu-shi-wu-zhang",
-        "di-liu-shi-liu-zhang",
-        "di-liu-shi-qi-zhang",
-        "di-liu-shi-ba-zhang",
-        "di-liu-shi-jiu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "fu-lu",
-      "group": "fu-lu",
-      "nav": "10. ภาคผนวก",
-      "short": "ขยาย/ยุบภาคผนวก",
-      "file": "parts/10-fu-lu.md",
-      "open_tag": "<section id=\"fu-lu\" class=\"mb-12\">",
-      "toc_comment": "<!--ภาคผนวก-->",
-      "comment": "",
-      "chapters": [
-        "fu-lu-a"
-      ],
-      "orphans": [
-        "fu-lu-b",
-        "fu-lu-c",
-        "fu-lu-d",
-        "fu-lu-e",
-        "fu-lu-f",
-        "jie-yu",
-        "fu-lu-g",
-        "fu-lu-h"
-      ],
-      "toc": [
-        "fu-lu-a",
-        "fu-lu-b",
-        "fu-lu-c",
-        "fu-lu-d",
-        "fu-lu-e",
-        "fu-lu-f",
-        "jie-yu",
-        "fu-lu-g",
-        "fu-lu-h"
-      ],
-      "toc_extra": []
+     "id": "di-shi-wu-zhang-kuichong",
+     "num": "",
+     "label": " ภาคผนวก: ถอดรหัสโปรโตคอลชาร์จเร็วทั้งหมด",
+     "toc": "sub"
     }
-  ],
-  "chapters": [
-    {
-      "id": "di-ling-zhang",
-      "file": "chapters/00-di-ling-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-yi-zhang",
-      "file": "chapters/01-di-yi-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-yi-zhang-memory",
-      "file": "chapters/02-di-yi-zhang-memory.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- ภาคผนวกบทที่ 1:การวิเคราะห์การขยายหน่วยความจำโทรศัพท์ Android -->"
-    },
-    {
-      "id": "di-yi-zhang-harmony",
-      "file": "chapters/03-di-yi-zhang-harmony.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": ""
-    },
-    {
-      "id": "di-er-zhang",
-      "file": "chapters/04-di-er-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-san-zhang",
-      "file": "chapters/05-di-san-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 3 -->"
-    },
-    {
-      "id": "di-si-zhang",
-      "file": "chapters/06-di-si-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 4 -->"
-    },
-    {
-      "id": "di-wu-zhang",
-      "file": "chapters/07-di-wu-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 5 -->"
-    },
-    {
-      "id": "di-liu-zhang",
-      "file": "chapters/08-di-liu-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 6 -->"
-    },
-    {
-      "id": "di-qi-zhang-jichu",
-      "file": "chapters/09-di-qi-zhang-jichu.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 7:ฟังก์ชันล้ำสมัย -->"
-    },
-    {
-      "id": "di-ba-zhang",
-      "file": "chapters/10-di-ba-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 8 -->"
-    },
-    {
-      "id": "di-jiu-zhang",
-      "file": "chapters/11-di-jiu-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 9 -->"
-    },
-    {
-      "id": "di-shi-zhang",
-      "file": "chapters/12-di-shi-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 10 -->"
-    },
-    {
-      "id": "di-shi-yi-zhang",
-      "file": "chapters/13-di-shi-yi-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 11 -->"
-    },
-    {
-      "id": "di-shi-yi-zhang-advanced",
-      "file": "chapters/14-di-shi-yi-zhang-advanced.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- ภาคผนวกบทที่ 11:เทคโนโลยีภาพถ่ายระดับมืออาชีพ -->"
-    },
-    {
-      "id": "di-shi-er-zhang",
-      "file": "chapters/15-di-shi-er-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 12 -->"
-    },
-    {
-      "id": "di-shi-san-zhang",
-      "file": "chapters/16-di-shi-san-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 13 -->"
-    },
-    {
-      "id": "di-shi-si-zhang",
-      "file": "chapters/17-di-shi-si-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 14: หัวข้อพิเศษ ตัวจัดรหัสผ่าน -->"
-    },
-    {
-      "id": "di-shi-wu-zhang",
-      "file": "chapters/18-di-shi-wu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 15 -->"
-    },
-    {
-      "id": "di-shi-liu-zhang",
-      "file": "chapters/19-di-shi-liu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 16 -->"
-    },
-    {
-      "id": "di-shi-qi-zhang",
-      "file": "chapters/20-di-shi-qi-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 17 -->"
-    },
-    {
-      "id": "di-shi-ba-zhang",
-      "file": "chapters/21-di-shi-ba-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 18 -->"
-    },
-    {
-      "id": "di-shi-jiu-zhang",
-      "file": "chapters/22-di-shi-jiu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 19 -->"
-    },
-    {
-      "id": "di-er-shi-zhang-jinjie",
-      "file": "chapters/23-di-er-shi-zhang-jinjie.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- บทที่ 20:โหมดนักพัฒนาและสิทธิ์ขั้นสูง -->"
-    },
-    {
-      "id": "di-er-shi-zhang-termux",
-      "file": "chapters/24-di-er-shi-zhang-termux.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- ภาคผนวกบทที่ 20:TermuxพกพาLinuxเทอร์มินัล -->"
-    },
-    {
-      "id": "di-er-shi-yi-zhang",
-      "file": "chapters/25-di-er-shi-yi-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 21 -->"
-    },
-    {
-      "id": "di-er-shi-er-zhang",
-      "file": "chapters/26-di-er-shi-er-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 22 -->"
-    },
-    {
-      "id": "di-er-shi-san-zhang",
-      "file": "chapters/27-di-er-shi-san-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 23 -->"
-    },
-    {
-      "id": "di-er-shi-san-zhang-github",
-      "file": "chapters/28-di-er-shi-san-zhang-github.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- ภาคผนวกบทที่ 23:GitHubคู่มือเริ่มต้น -->"
-    },
-    {
-      "id": "di-er-shi-si-zhang",
-      "file": "chapters/29-di-er-shi-si-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 24:Rootสิทธิ์และBLวิเคราะห์ระบบล็อกอย่างละเอียด -->"
-    },
-    {
-      "id": "di-er-shi-wu-zhang",
-      "file": "chapters/30-di-er-shi-wu-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 25 -->"
-    },
-    {
-      "id": "di-er-shi-liu-zhang",
-      "file": "chapters/31-di-er-shi-liu-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 26 -->"
-    },
-    {
-      "id": "di-er-shi-qi-zhang",
-      "file": "chapters/32-di-er-shi-qi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 27:หัวข้อพิเศษเรื่องผู้สูงอายุ -->"
-    },
-    {
-      "id": "di-er-shi-ba-zhang",
-      "file": "chapters/33-di-er-shi-ba-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 28:คู่มือซื้อโทรศัพท์ขั้นสุดยอด -->"
-    },
-    {
-      "id": "di-er-shi-jiu-zhang",
-      "file": "chapters/34-di-er-shi-jiu-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 29:สุขภาพดิจิทัล -->"
-    },
-    {
-      "id": "di-san-shi-zhang",
-      "file": "chapters/35-di-san-shi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 30:การแคสต์หน้าจอ,สาธิตและเชื่อมต่อรถยนต์ -->"
-    },
-    {
-      "id": "di-san-shi-yi-zhang",
-      "file": "chapters/36-di-san-shi-yi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 31:เริ่มต้นถ่ายวิดีโอสั้นและสร้างคอนเทนต์ -->"
-    },
-    {
-      "id": "di-san-shi-er-zhang",
-      "file": "chapters/37-di-san-shi-er-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 32:คู่มือปฐมพยาบาลความปลอดภัยโทรศัพท์ -->"
-    },
-    {
-      "id": "di-san-shi-san-zhang",
-      "file": "chapters/38-di-san-shi-san-zhang.md",
-      "part": "zhan-wang-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 33 -->"
-    },
-    {
-      "id": "di-san-shi-si-zhang",
-      "file": "chapters/39-di-san-shi-si-zhang.md",
-      "part": "zhan-wang-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 34:คู่มือเชื่อมต่อโทรศัพท์กับรถยนต์อย่างละเอียด -->"
-    },
-    {
-      "id": "di-san-shi-wu-zhang",
-      "file": "chapters/40-di-san-shi-wu-zhang.md",
-      "part": "er-tong-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 35 -->"
-    },
-    {
-      "id": "di-san-shi-liu-zhang",
-      "file": "chapters/41-di-san-shi-liu-zhang.md",
-      "part": "er-tong-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 36:โทรศัพท์และบ้านอัจฉริยะ——ทำให้บ้านของคุณฉลาดขึ้น -->"
-    },
-    {
-      "id": "di-san-shi-qi-zhang",
-      "file": "chapters/42-di-san-shi-qi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 37 -->"
-    },
-    {
-      "id": "di-san-shi-ba-zhang",
-      "file": "chapters/43-di-san-shi-ba-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 38 -->"
-    },
-    {
-      "id": "di-san-shi-jiu-zhang",
-      "file": "chapters/44-di-san-shi-jiu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 39 -->"
-    },
-    {
-      "id": "di-si-shi-zhang",
-      "file": "chapters/45-di-si-shi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 40 -->"
-    },
-    {
-      "id": "di-si-shi-yi-zhang",
-      "file": "chapters/46-di-si-shi-yi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 41 -->"
-    },
-    {
-      "id": "di-si-shi-er-zhang",
-      "file": "chapters/47-di-si-shi-er-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 42 -->"
-    },
-    {
-      "id": "di-si-shi-san-zhang",
-      "file": "chapters/48-di-si-shi-san-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 43 -->"
-    },
-    {
-      "id": "di-si-shi-si-zhang",
-      "file": "chapters/49-di-si-shi-si-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 44 -->"
-    },
-    {
-      "id": "di-si-shi-wu-zhang",
-      "file": "chapters/50-di-si-shi-wu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 45 -->"
-    },
-    {
-      "id": "di-si-shi-liu-zhang",
-      "file": "chapters/51-di-si-shi-liu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 46 -->"
-    },
-    {
-      "id": "di-si-shi-qi-zhang",
-      "file": "chapters/52-di-si-shi-qi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 47 -->"
-    },
-    {
-      "id": "di-si-shi-ba-zhang",
-      "file": "chapters/53-di-si-shi-ba-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 48 -->"
-    },
-    {
-      "id": "di-si-shi-jiu-zhang",
-      "file": "chapters/54-di-si-shi-jiu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 49 -->"
-    },
-    {
-      "id": "di-wu-shi-zhang",
-      "file": "chapters/55-di-wu-shi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 50 -->"
-    },
-    {
-      "id": "di-wu-shi-yi-zhang",
-      "file": "chapters/56-di-wu-shi-yi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 51 -->"
-    },
-    {
-      "id": "di-wu-shi-er-zhang",
-      "file": "chapters/57-di-wu-shi-er-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 52 -->"
-    },
-    {
-      "id": "di-wu-shi-san-zhang",
-      "file": "chapters/58-di-wu-shi-san-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 53 -->"
-    },
-    {
-      "id": "di-wu-shi-si-zhang",
-      "file": "chapters/59-di-wu-shi-si-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 54 -->"
-    },
-    {
-      "id": "di-wu-shi-wu-zhang",
-      "file": "chapters/60-di-wu-shi-wu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 55 -->"
-    },
-    {
-      "id": "di-wu-shi-liu-zhang",
-      "file": "chapters/61-di-wu-shi-liu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 56 -->"
-    },
-    {
-      "id": "di-wu-shi-qi-zhang",
-      "file": "chapters/62-di-wu-shi-qi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 57 -->"
-    },
-    {
-      "id": "di-wu-shi-ba-zhang",
-      "file": "chapters/63-di-wu-shi-ba-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 58 -->"
-    },
-    {
-      "id": "di-wu-shi-jiu-zhang",
-      "file": "chapters/64-di-wu-shi-jiu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 59 -->"
-    },
-    {
-      "id": "di-liu-shi-zhang",
-      "file": "chapters/65-di-liu-shi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 60 -->"
-    },
-    {
-      "id": "di-liu-shi-yi-zhang",
-      "file": "chapters/66-di-liu-shi-yi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 61 -->"
-    },
-    {
-      "id": "di-liu-shi-er-zhang",
-      "file": "chapters/67-di-liu-shi-er-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 62 -->"
-    },
-    {
-      "id": "di-liu-shi-san-zhang",
-      "file": "chapters/68-di-liu-shi-san-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 63 -->"
-    },
-    {
-      "id": "di-liu-shi-si-zhang",
-      "file": "chapters/69-di-liu-shi-si-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 64 -->"
-    },
-    {
-      "id": "di-liu-shi-wu-zhang",
-      "file": "chapters/70-di-liu-shi-wu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 65 -->"
-    },
-    {
-      "id": "di-liu-shi-liu-zhang",
-      "file": "chapters/71-di-liu-shi-liu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 66 -->"
-    },
-    {
-      "id": "di-liu-shi-qi-zhang",
-      "file": "chapters/72-di-liu-shi-qi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 67 -->"
-    },
-    {
-      "id": "di-liu-shi-ba-zhang",
-      "file": "chapters/73-di-liu-shi-ba-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 68 -->"
-    },
-    {
-      "id": "di-liu-shi-jiu-zhang",
-      "file": "chapters/74-di-liu-shi-jiu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- บทที่ 69 -->"
-    },
-    {
-      "id": "fu-lu-a",
-      "file": "chapters/75-fu-lu-a.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- ภาคผนวกA -->"
-    },
-    {
-      "id": "fu-lu-b",
-      "file": "chapters/76-fu-lu-b.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-c",
-      "file": "chapters/77-fu-lu-c.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-d",
-      "file": "chapters/78-fu-lu-d.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-e",
-      "file": "chapters/79-fu-lu-e.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-f",
-      "file": "chapters/80-fu-lu-f.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": "<!-- ภาคผนวก F: หัวข้อพิเศษ โทรศัพท์พับได้ -->"
-    },
-    {
-      "id": "jie-yu",
-      "file": "chapters/81-jie-yu.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "conclusion",
-      "comment": "<!-- บทส่งท้าย -->"
-    },
-    {
-      "id": "fu-lu-g",
-      "file": "chapters/82-fu-lu-g.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": ""
-    },
-    {
-      "id": "fu-lu-h",
-      "file": "chapters/83-fu-lu-h.md",
-      "part": "",
-      "after_part": "fu-lu",
-      "kind": "appendix",
-      "comment": "<!-- ภาคผนวก H: แผนที่เวอร์ชัน -->"
-    }
-  ]
+   ]
+  },
+  {
+   "id": "chao-yue-pian",
+   "group": "chao-yue",
+   "nav": "4. ภาคก้าวไกล (บทที่ 21-26)",
+   "short": "ขยาย/ยุบภาคก้าวไกล",
+   "file": "parts/03-chao-yue-pian.md",
+   "open_tag": "<section id=\"chao-yue-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--ภาคก้าวไกล-->",
+   "comment": "<!-- IV,ขั้นสูง -->",
+   "chapters": [
+    "di-er-shi-yi-zhang",
+    "di-er-shi-er-zhang",
+    "di-er-shi-san-zhang",
+    "di-er-shi-san-zhang-github",
+    "di-er-shi-si-zhang",
+    "di-er-shi-wu-zhang",
+    "di-er-shi-liu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-er-shi-yi-zhang",
+    "di-er-shi-er-zhang",
+    "di-er-shi-san-zhang",
+    "di-er-shi-san-zhang-github",
+    "di-er-shi-si-zhang",
+    "di-er-shi-wu-zhang",
+    "di-er-shi-liu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "shi-zhan-pian",
+   "group": "shi-zhan",
+   "nav": "5. ภาคใช้งานจริง (บทที่ 27-32)",
+   "short": "ขยาย/ยุบภาคใช้งานจริง",
+   "file": "parts/04-shi-zhan-pian.md",
+   "open_tag": "<section id=\"shi-zhan-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--5,ภาคลงมือปฏิบัติ(บทที่ 27-32)-->",
+   "comment": "<!-- V,ภาคปฏิบัติ(บทที่ 27-32) -->",
+   "chapters": [
+    "di-er-shi-qi-zhang",
+    "di-er-shi-ba-zhang",
+    "di-er-shi-jiu-zhang",
+    "di-san-shi-zhang",
+    "di-san-shi-yi-zhang",
+    "di-san-shi-er-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-er-shi-qi-zhang",
+    "di-er-shi-ba-zhang",
+    "di-er-shi-jiu-zhang",
+    "di-san-shi-zhang",
+    "di-san-shi-yi-zhang",
+    "di-san-shi-er-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "zhan-wang-pian",
+   "group": "zhan-wang",
+   "nav": "6. บทมองการณ์ไกล (บทที่ 33-41)",
+   "short": "ขยาย/ยุบภาคมองอนาคต",
+   "file": "parts/05-zhan-wang-pian.md",
+   "open_tag": "<section id=\"zhan-wang-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--6,มองไปข้างหน้า(บทที่ 33)-->",
+   "comment": "<!-- 6,มองไปข้างหน้า(บทที่ 33) -->",
+   "chapters": [
+    "di-san-shi-san-zhang",
+    "di-san-shi-si-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-san-zhang",
+    "di-san-shi-si-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "er-tong-pian",
+   "group": "er-tong-pian",
+   "nav": "โฟกัสพิเศษเด็กกับมือถือ (บทที่ 35-36)",
+   "short": "ขยาย/ยุบโฟกัสพิเศษเด็กกับมือถือ",
+   "file": "parts/06-er-tong-pian.md",
+   "open_tag": "<section id=\"er-tong-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--หัวข้อพิเศษ เด็กกับโทรศัพท์(บทที่ 35)-->",
+   "comment": "<!-- หัวข้อเด็กและโทรศัพท์(บทที่ 35) -->",
+   "chapters": [
+    "di-san-shi-wu-zhang",
+    "di-san-shi-liu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-wu-zhang",
+    "di-san-shi-liu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "ai-biancheng-pian",
+   "group": "ai-biancheng",
+   "nav": "7. ภาคปฏิบัติการเขียนโปรแกรมด้วย AI (บทที่ 37-47)",
+   "short": "ขยาย/ยุบภาคปฏิบัติการเขียนโปรแกรมด้วย AI",
+   "file": "parts/07-ai-biancheng-pian.md",
+   "open_tag": "<section id=\"ai-biancheng-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--ภาคปฏิบัติ: เขียนโค้ดด้วย AI-->",
+   "comment": "<!-- 10,ภาคผนวก -->\n<!-- ภาคปฏิบัติ: เขียนโค้ดด้วย AI(บทที่ 37-47) -->",
+   "chapters": [
+    "di-san-shi-qi-zhang",
+    "di-san-shi-ba-zhang",
+    "di-san-shi-jiu-zhang",
+    "di-si-shi-zhang",
+    "di-si-shi-yi-zhang",
+    "di-si-shi-er-zhang",
+    "di-si-shi-san-zhang",
+    "di-si-shi-si-zhang",
+    "di-si-shi-wu-zhang",
+    "di-si-shi-liu-zhang",
+    "di-si-shi-qi-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-qi-zhang",
+    "di-san-shi-ba-zhang",
+    "di-san-shi-jiu-zhang",
+    "di-si-shi-zhang",
+    "di-si-shi-yi-zhang",
+    "di-si-shi-er-zhang",
+    "di-si-shi-san-zhang",
+    "di-si-shi-si-zhang",
+    "di-si-shi-wu-zhang",
+    "di-si-shi-liu-zhang",
+    "di-si-shi-qi-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "an-zhuo-kai-fa-pian",
+   "group": "an-zhuo-kai-fa",
+   "nav": "8. ภาคปฏิบัติการพัฒนา Android (บทที่ 48-58)",
+   "short": "ขยาย/ยุบภาคปฏิบัติการพัฒนา Android",
+   "file": "parts/08-an-zhuo-kai-fa-pian.md",
+   "open_tag": "<section id=\"an-zhuo-kai-fa-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--ภาคปฏิบัติ: พัฒนาแอนดรอยด์-->",
+   "comment": "<!-- ภาคปฏิบัติ: พัฒนาแอนดรอยด์(บทที่ 48-58) -->",
+   "chapters": [
+    "di-si-shi-ba-zhang",
+    "di-si-shi-jiu-zhang",
+    "di-wu-shi-zhang",
+    "di-wu-shi-yi-zhang",
+    "di-wu-shi-er-zhang",
+    "di-wu-shi-san-zhang",
+    "di-wu-shi-si-zhang",
+    "di-wu-shi-wu-zhang",
+    "di-wu-shi-liu-zhang",
+    "di-wu-shi-qi-zhang",
+    "di-wu-shi-ba-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-si-shi-ba-zhang",
+    "di-si-shi-jiu-zhang",
+    "di-wu-shi-zhang",
+    "di-wu-shi-yi-zhang",
+    "di-wu-shi-er-zhang",
+    "di-wu-shi-san-zhang",
+    "di-wu-shi-si-zhang",
+    "di-wu-shi-wu-zhang",
+    "di-wu-shi-liu-zhang",
+    "di-wu-shi-qi-zhang",
+    "di-wu-shi-ba-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "ios-kai-fa-pian",
+   "group": "ios-kai-fa",
+   "nav": "9. ภาคปฏิบัติการพัฒนา iOS (บทที่ 59-69)",
+   "short": "ขยาย/ยุบภาคปฏิบัติการพัฒนา iOS",
+   "file": "parts/09-ios-kai-fa-pian.md",
+   "open_tag": "<section id=\"ios-kai-fa-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--ภาคปฏิบัติ: พัฒนา iOS-->",
+   "comment": "<!-- ภาคปฏิบัติ: พัฒนา iOS(บทที่ 59-69) -->",
+   "chapters": [
+    "di-wu-shi-jiu-zhang",
+    "di-liu-shi-zhang",
+    "di-liu-shi-yi-zhang",
+    "di-liu-shi-er-zhang",
+    "di-liu-shi-san-zhang",
+    "di-liu-shi-si-zhang",
+    "di-liu-shi-wu-zhang",
+    "di-liu-shi-liu-zhang",
+    "di-liu-shi-qi-zhang",
+    "di-liu-shi-ba-zhang",
+    "di-liu-shi-jiu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-wu-shi-jiu-zhang",
+    "di-liu-shi-zhang",
+    "di-liu-shi-yi-zhang",
+    "di-liu-shi-er-zhang",
+    "di-liu-shi-san-zhang",
+    "di-liu-shi-si-zhang",
+    "di-liu-shi-wu-zhang",
+    "di-liu-shi-liu-zhang",
+    "di-liu-shi-qi-zhang",
+    "di-liu-shi-ba-zhang",
+    "di-liu-shi-jiu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "fu-lu",
+   "group": "fu-lu",
+   "nav": "10. ภาคผนวก",
+   "short": "ขยาย/ยุบภาคผนวก",
+   "file": "parts/10-fu-lu.md",
+   "open_tag": "<section id=\"fu-lu\" class=\"mb-12\">",
+   "toc_comment": "<!--ภาคผนวก-->",
+   "comment": "",
+   "chapters": [
+    "fu-lu-a"
+   ],
+   "orphans": [
+    "fu-lu-b",
+    "fu-lu-c",
+    "fu-lu-d",
+    "fu-lu-e",
+    "fu-lu-f",
+    "jie-yu",
+    "fu-lu-g",
+    "fu-lu-h"
+   ],
+   "toc": [
+    "fu-lu-a",
+    "fu-lu-b",
+    "fu-lu-c",
+    "fu-lu-d",
+    "fu-lu-e",
+    "fu-lu-f",
+    "jie-yu",
+    "fu-lu-g",
+    "fu-lu-h"
+   ],
+   "toc_extra": []
+  }
+ ],
+ "chapters": [
+  {
+   "id": "di-ling-zhang",
+   "file": "chapters/00-di-ling-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-yi-zhang",
+   "file": "chapters/01-di-yi-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-yi-zhang-memory",
+   "file": "chapters/02-di-yi-zhang-memory.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- ภาคผนวกบทที่ 1:การวิเคราะห์การขยายหน่วยความจำโทรศัพท์ Android -->"
+  },
+  {
+   "id": "di-yi-zhang-harmony",
+   "file": "chapters/03-di-yi-zhang-harmony.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": ""
+  },
+  {
+   "id": "di-er-zhang",
+   "file": "chapters/04-di-er-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-san-zhang",
+   "file": "chapters/05-di-san-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 3 -->"
+  },
+  {
+   "id": "di-si-zhang",
+   "file": "chapters/06-di-si-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 4 -->"
+  },
+  {
+   "id": "di-wu-zhang",
+   "file": "chapters/07-di-wu-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 5 -->"
+  },
+  {
+   "id": "di-liu-zhang",
+   "file": "chapters/08-di-liu-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 6 -->"
+  },
+  {
+   "id": "di-qi-zhang-jichu",
+   "file": "chapters/09-di-qi-zhang-jichu.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 7:ฟังก์ชันล้ำสมัย -->"
+  },
+  {
+   "id": "di-ba-zhang",
+   "file": "chapters/10-di-ba-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 8 -->"
+  },
+  {
+   "id": "di-jiu-zhang",
+   "file": "chapters/11-di-jiu-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 9 -->"
+  },
+  {
+   "id": "di-shi-zhang",
+   "file": "chapters/12-di-shi-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 10 -->"
+  },
+  {
+   "id": "di-shi-yi-zhang",
+   "file": "chapters/13-di-shi-yi-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 11 -->"
+  },
+  {
+   "id": "di-shi-yi-zhang-advanced",
+   "file": "chapters/14-di-shi-yi-zhang-advanced.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- ภาคผนวกบทที่ 11:เทคโนโลยีภาพถ่ายระดับมืออาชีพ -->"
+  },
+  {
+   "id": "di-shi-er-zhang",
+   "file": "chapters/15-di-shi-er-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 12 -->"
+  },
+  {
+   "id": "di-shi-san-zhang",
+   "file": "chapters/16-di-shi-san-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 13 -->"
+  },
+  {
+   "id": "di-shi-si-zhang",
+   "file": "chapters/17-di-shi-si-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 14: หัวข้อพิเศษ ตัวจัดรหัสผ่าน -->"
+  },
+  {
+   "id": "di-shi-wu-zhang",
+   "file": "chapters/18-di-shi-wu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 15 -->"
+  },
+  {
+   "id": "di-shi-liu-zhang",
+   "file": "chapters/19-di-shi-liu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 16 -->"
+  },
+  {
+   "id": "di-shi-qi-zhang",
+   "file": "chapters/20-di-shi-qi-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 17 -->"
+  },
+  {
+   "id": "di-shi-ba-zhang",
+   "file": "chapters/21-di-shi-ba-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 18 -->"
+  },
+  {
+   "id": "di-shi-jiu-zhang",
+   "file": "chapters/22-di-shi-jiu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 19 -->"
+  },
+  {
+   "id": "di-er-shi-zhang-jinjie",
+   "file": "chapters/23-di-er-shi-zhang-jinjie.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- บทที่ 20:โหมดนักพัฒนาและสิทธิ์ขั้นสูง -->"
+  },
+  {
+   "id": "di-er-shi-zhang-termux",
+   "file": "chapters/24-di-er-shi-zhang-termux.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- ภาคผนวกบทที่ 20:TermuxพกพาLinuxเทอร์มินัล -->"
+  },
+  {
+   "id": "di-er-shi-yi-zhang",
+   "file": "chapters/25-di-er-shi-yi-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 21 -->"
+  },
+  {
+   "id": "di-er-shi-er-zhang",
+   "file": "chapters/26-di-er-shi-er-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 22 -->"
+  },
+  {
+   "id": "di-er-shi-san-zhang",
+   "file": "chapters/27-di-er-shi-san-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 23 -->"
+  },
+  {
+   "id": "di-er-shi-san-zhang-github",
+   "file": "chapters/28-di-er-shi-san-zhang-github.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- ภาคผนวกบทที่ 23:GitHubคู่มือเริ่มต้น -->"
+  },
+  {
+   "id": "di-er-shi-si-zhang",
+   "file": "chapters/29-di-er-shi-si-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 24:Rootสิทธิ์และBLวิเคราะห์ระบบล็อกอย่างละเอียด -->"
+  },
+  {
+   "id": "di-er-shi-wu-zhang",
+   "file": "chapters/30-di-er-shi-wu-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 25 -->"
+  },
+  {
+   "id": "di-er-shi-liu-zhang",
+   "file": "chapters/31-di-er-shi-liu-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 26 -->"
+  },
+  {
+   "id": "di-er-shi-qi-zhang",
+   "file": "chapters/32-di-er-shi-qi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 27:หัวข้อพิเศษเรื่องผู้สูงอายุ -->"
+  },
+  {
+   "id": "di-er-shi-ba-zhang",
+   "file": "chapters/33-di-er-shi-ba-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 28:คู่มือซื้อโทรศัพท์ขั้นสุดยอด -->"
+  },
+  {
+   "id": "di-er-shi-jiu-zhang",
+   "file": "chapters/34-di-er-shi-jiu-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 29:สุขภาพดิจิทัล -->"
+  },
+  {
+   "id": "di-san-shi-zhang",
+   "file": "chapters/35-di-san-shi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 30:การแคสต์หน้าจอ,สาธิตและเชื่อมต่อรถยนต์ -->"
+  },
+  {
+   "id": "di-san-shi-yi-zhang",
+   "file": "chapters/36-di-san-shi-yi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 31:เริ่มต้นถ่ายวิดีโอสั้นและสร้างคอนเทนต์ -->"
+  },
+  {
+   "id": "di-san-shi-er-zhang",
+   "file": "chapters/37-di-san-shi-er-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 32:คู่มือปฐมพยาบาลความปลอดภัยโทรศัพท์ -->"
+  },
+  {
+   "id": "di-san-shi-san-zhang",
+   "file": "chapters/38-di-san-shi-san-zhang.md",
+   "part": "zhan-wang-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 33 -->"
+  },
+  {
+   "id": "di-san-shi-si-zhang",
+   "file": "chapters/39-di-san-shi-si-zhang.md",
+   "part": "zhan-wang-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 34:คู่มือเชื่อมต่อโทรศัพท์กับรถยนต์อย่างละเอียด -->"
+  },
+  {
+   "id": "di-san-shi-wu-zhang",
+   "file": "chapters/40-di-san-shi-wu-zhang.md",
+   "part": "er-tong-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 35 -->"
+  },
+  {
+   "id": "di-san-shi-liu-zhang",
+   "file": "chapters/41-di-san-shi-liu-zhang.md",
+   "part": "er-tong-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 36:โทรศัพท์และบ้านอัจฉริยะ——ทำให้บ้านของคุณฉลาดขึ้น -->"
+  },
+  {
+   "id": "di-san-shi-qi-zhang",
+   "file": "chapters/42-di-san-shi-qi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 37 -->"
+  },
+  {
+   "id": "di-san-shi-ba-zhang",
+   "file": "chapters/43-di-san-shi-ba-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 38 -->"
+  },
+  {
+   "id": "di-san-shi-jiu-zhang",
+   "file": "chapters/44-di-san-shi-jiu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 39 -->"
+  },
+  {
+   "id": "di-si-shi-zhang",
+   "file": "chapters/45-di-si-shi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 40 -->"
+  },
+  {
+   "id": "di-si-shi-yi-zhang",
+   "file": "chapters/46-di-si-shi-yi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 41 -->"
+  },
+  {
+   "id": "di-si-shi-er-zhang",
+   "file": "chapters/47-di-si-shi-er-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 42 -->"
+  },
+  {
+   "id": "di-si-shi-san-zhang",
+   "file": "chapters/48-di-si-shi-san-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 43 -->"
+  },
+  {
+   "id": "di-si-shi-si-zhang",
+   "file": "chapters/49-di-si-shi-si-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 44 -->"
+  },
+  {
+   "id": "di-si-shi-wu-zhang",
+   "file": "chapters/50-di-si-shi-wu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 45 -->"
+  },
+  {
+   "id": "di-si-shi-liu-zhang",
+   "file": "chapters/51-di-si-shi-liu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 46 -->"
+  },
+  {
+   "id": "di-si-shi-qi-zhang",
+   "file": "chapters/52-di-si-shi-qi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 47 -->"
+  },
+  {
+   "id": "di-si-shi-ba-zhang",
+   "file": "chapters/53-di-si-shi-ba-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 48 -->"
+  },
+  {
+   "id": "di-si-shi-jiu-zhang",
+   "file": "chapters/54-di-si-shi-jiu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 49 -->"
+  },
+  {
+   "id": "di-wu-shi-zhang",
+   "file": "chapters/55-di-wu-shi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 50 -->"
+  },
+  {
+   "id": "di-wu-shi-yi-zhang",
+   "file": "chapters/56-di-wu-shi-yi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 51 -->"
+  },
+  {
+   "id": "di-wu-shi-er-zhang",
+   "file": "chapters/57-di-wu-shi-er-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 52 -->"
+  },
+  {
+   "id": "di-wu-shi-san-zhang",
+   "file": "chapters/58-di-wu-shi-san-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 53 -->"
+  },
+  {
+   "id": "di-wu-shi-si-zhang",
+   "file": "chapters/59-di-wu-shi-si-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 54 -->"
+  },
+  {
+   "id": "di-wu-shi-wu-zhang",
+   "file": "chapters/60-di-wu-shi-wu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 55 -->"
+  },
+  {
+   "id": "di-wu-shi-liu-zhang",
+   "file": "chapters/61-di-wu-shi-liu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 56 -->"
+  },
+  {
+   "id": "di-wu-shi-qi-zhang",
+   "file": "chapters/62-di-wu-shi-qi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 57 -->"
+  },
+  {
+   "id": "di-wu-shi-ba-zhang",
+   "file": "chapters/63-di-wu-shi-ba-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 58 -->"
+  },
+  {
+   "id": "di-wu-shi-jiu-zhang",
+   "file": "chapters/64-di-wu-shi-jiu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 59 -->"
+  },
+  {
+   "id": "di-liu-shi-zhang",
+   "file": "chapters/65-di-liu-shi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 60 -->"
+  },
+  {
+   "id": "di-liu-shi-yi-zhang",
+   "file": "chapters/66-di-liu-shi-yi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 61 -->"
+  },
+  {
+   "id": "di-liu-shi-er-zhang",
+   "file": "chapters/67-di-liu-shi-er-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 62 -->"
+  },
+  {
+   "id": "di-liu-shi-san-zhang",
+   "file": "chapters/68-di-liu-shi-san-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 63 -->"
+  },
+  {
+   "id": "di-liu-shi-si-zhang",
+   "file": "chapters/69-di-liu-shi-si-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 64 -->"
+  },
+  {
+   "id": "di-liu-shi-wu-zhang",
+   "file": "chapters/70-di-liu-shi-wu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 65 -->"
+  },
+  {
+   "id": "di-liu-shi-liu-zhang",
+   "file": "chapters/71-di-liu-shi-liu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 66 -->"
+  },
+  {
+   "id": "di-liu-shi-qi-zhang",
+   "file": "chapters/72-di-liu-shi-qi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 67 -->"
+  },
+  {
+   "id": "di-liu-shi-ba-zhang",
+   "file": "chapters/73-di-liu-shi-ba-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 68 -->"
+  },
+  {
+   "id": "di-liu-shi-jiu-zhang",
+   "file": "chapters/74-di-liu-shi-jiu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- บทที่ 69 -->"
+  },
+  {
+   "id": "fu-lu-a",
+   "file": "chapters/75-fu-lu-a.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- ภาคผนวกA -->"
+  },
+  {
+   "id": "fu-lu-b",
+   "file": "chapters/76-fu-lu-b.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-c",
+   "file": "chapters/77-fu-lu-c.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-d",
+   "file": "chapters/78-fu-lu-d.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-e",
+   "file": "chapters/79-fu-lu-e.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-f",
+   "file": "chapters/80-fu-lu-f.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": "<!-- ภาคผนวก F: หัวข้อพิเศษ โทรศัพท์พับได้ -->"
+  },
+  {
+   "id": "jie-yu",
+   "file": "chapters/81-jie-yu.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "conclusion",
+   "comment": "<!-- บทส่งท้าย -->"
+  },
+  {
+   "id": "fu-lu-g",
+   "file": "chapters/82-fu-lu-g.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": ""
+  },
+  {
+   "id": "fu-lu-h",
+   "file": "chapters/83-fu-lu-h.md",
+   "part": "",
+   "after_part": "fu-lu",
+   "kind": "appendix",
+   "comment": "<!-- ภาคผนวก H: แผนที่เวอร์ชัน -->"
+  }
+ ]
 }

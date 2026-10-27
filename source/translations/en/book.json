@@ -1,1048 +1,1048 @@
 {
-  "schema_version": 1,
-  "version": "v1.8",
-  "lang": "en",
-  "title": "Master Your Phone! The Must-Learn Digital Literacy Course for Beginners",
-  "glossary": {
-    "ch_count": 69,
-    "app_count": 8,
-    "numbered_chapters": 70
+ "schema_version": 1,
+ "version": "v1.8",
+ "lang": "en",
+ "title": "Your Missing Phone Class",
+ "glossary": {
+  "ch_count": 69,
+  "app_count": 8,
+  "numbered_chapters": 70
+ },
+ "template": "template/shell.html",
+ "parts": [
+  {
+   "id": "ji-chu-pian",
+   "group": "ji-chu",
+   "nav": "Get Started",
+   "short": "Expand/collapse Basics",
+   "file": "parts/00-ji-chu-pian.md",
+   "open_tag": "<section id=\"ji-chu-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--Foundations-->",
+   "comment": "",
+   "chapters": [
+    "di-ling-zhang",
+    "di-yi-zhang",
+    "di-yi-zhang-memory",
+    "di-yi-zhang-harmony",
+    "di-er-zhang",
+    "di-san-zhang",
+    "di-si-zhang",
+    "di-wu-zhang",
+    "di-liu-zhang",
+    "di-qi-zhang-jichu"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-ling-zhang",
+    "di-yi-zhang",
+    "di-yi-zhang-memory",
+    "di-yi-zhang-harmony",
+    "di-er-zhang",
+    "di-san-zhang",
+    "di-si-zhang",
+    "di-si-zhang-apk",
+    "di-wu-zhang",
+    "di-liu-zhang",
+    "di-qi-zhang-jichu"
+   ],
+   "toc_extra": [
+    {
+     "id": "di-si-zhang-apk",
+     "num": "",
+     "label": " Appendix: Components of a Software Installation Package",
+     "toc": "sub"
+    }
+   ]
   },
-  "template": "template/shell.html",
-  "parts": [
+  {
+   "id": "ruan-jian-pian",
+   "group": "ruan-jian",
+   "nav": "Part 2: Software (Chapters 8-14)",
+   "short": "Expand/collapse Software",
+   "file": "parts/01-ruan-jian-pian.md",
+   "open_tag": "<section id=\"ruan-jian-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--Software-->",
+   "comment": "<!-- 2,Software section -->",
+   "chapters": [
+    "di-ba-zhang",
+    "di-jiu-zhang",
+    "di-shi-zhang",
+    "di-shi-yi-zhang",
+    "di-shi-yi-zhang-advanced",
+    "di-shi-er-zhang",
+    "di-shi-san-zhang",
+    "di-shi-si-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-ba-zhang",
+    "di-jiu-zhang",
+    "di-shi-zhang",
+    "di-shi-yi-zhang",
+    "di-shi-yi-zhang-advanced",
+    "di-shi-er-zhang",
+    "di-shi-san-zhang",
+    "di-shi-si-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "jin-jie-pian",
+   "group": "jin-jie",
+   "nav": "Part 3: Advanced (Chapters 15-20)",
+   "short": "Expand/collapse Advanced",
+   "file": "parts/02-jin-jie-pian.md",
+   "open_tag": "<section id=\"jin-jie-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--Advanced-->",
+   "comment": "<!-- 3,Intermediate section -->",
+   "chapters": [
+    "di-shi-wu-zhang",
+    "di-shi-liu-zhang",
+    "di-shi-qi-zhang",
+    "di-shi-ba-zhang",
+    "di-shi-jiu-zhang",
+    "di-er-shi-zhang-jinjie",
+    "di-er-shi-zhang-termux"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-shi-wu-zhang",
+    "di-shi-wu-zhang-kuichong",
+    "di-shi-liu-zhang",
+    "di-shi-qi-zhang",
+    "di-shi-ba-zhang",
+    "di-shi-jiu-zhang",
+    "di-er-shi-zhang-jinjie",
+    "di-er-shi-zhang-termux"
+   ],
+   "toc_extra": [
     {
-      "id": "ji-chu-pian",
-      "group": "ji-chu",
-      "nav": "Get Started",
-      "short": "Expand/collapse Basics",
-      "file": "parts/00-ji-chu-pian.md",
-      "open_tag": "<section id=\"ji-chu-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--Foundations-->",
-      "comment": "",
-      "chapters": [
-        "di-ling-zhang",
-        "di-yi-zhang",
-        "di-yi-zhang-memory",
-        "di-yi-zhang-harmony",
-        "di-er-zhang",
-        "di-san-zhang",
-        "di-si-zhang",
-        "di-wu-zhang",
-        "di-liu-zhang",
-        "di-qi-zhang-jichu"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-ling-zhang",
-        "di-yi-zhang",
-        "di-yi-zhang-memory",
-        "di-yi-zhang-harmony",
-        "di-er-zhang",
-        "di-san-zhang",
-        "di-si-zhang",
-        "di-si-zhang-apk",
-        "di-wu-zhang",
-        "di-liu-zhang",
-        "di-qi-zhang-jichu"
-      ],
-      "toc_extra": [
-        {
-          "id": "di-si-zhang-apk",
-          "num": "",
-          "label": " Appendix: Components of a Software Installation Package",
-          "toc": "sub"
-        }
-      ]
-    },
-    {
-      "id": "ruan-jian-pian",
-      "group": "ruan-jian",
-      "nav": "Part 2: Software (Chapters 8-14)",
-      "short": "Expand/collapse Software",
-      "file": "parts/01-ruan-jian-pian.md",
-      "open_tag": "<section id=\"ruan-jian-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--Software-->",
-      "comment": "<!-- 2,Software section -->",
-      "chapters": [
-        "di-ba-zhang",
-        "di-jiu-zhang",
-        "di-shi-zhang",
-        "di-shi-yi-zhang",
-        "di-shi-yi-zhang-advanced",
-        "di-shi-er-zhang",
-        "di-shi-san-zhang",
-        "di-shi-si-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-ba-zhang",
-        "di-jiu-zhang",
-        "di-shi-zhang",
-        "di-shi-yi-zhang",
-        "di-shi-yi-zhang-advanced",
-        "di-shi-er-zhang",
-        "di-shi-san-zhang",
-        "di-shi-si-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "jin-jie-pian",
-      "group": "jin-jie",
-      "nav": "Part 3: Advanced (Chapters 15-20)",
-      "short": "Expand/collapse Advanced",
-      "file": "parts/02-jin-jie-pian.md",
-      "open_tag": "<section id=\"jin-jie-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--Advanced-->",
-      "comment": "<!-- 3,Intermediate section -->",
-      "chapters": [
-        "di-shi-wu-zhang",
-        "di-shi-liu-zhang",
-        "di-shi-qi-zhang",
-        "di-shi-ba-zhang",
-        "di-shi-jiu-zhang",
-        "di-er-shi-zhang-jinjie",
-        "di-er-shi-zhang-termux"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-shi-wu-zhang",
-        "di-shi-wu-zhang-kuichong",
-        "di-shi-liu-zhang",
-        "di-shi-qi-zhang",
-        "di-shi-ba-zhang",
-        "di-shi-jiu-zhang",
-        "di-er-shi-zhang-jinjie",
-        "di-er-shi-zhang-termux"
-      ],
-      "toc_extra": [
-        {
-          "id": "di-shi-wu-zhang-kuichong",
-          "num": "",
-          "label": " Supplement: Fast-Charging Protocols Explained",
-          "toc": "sub"
-        }
-      ]
-    },
-    {
-      "id": "chao-yue-pian",
-      "group": "chao-yue",
-      "nav": "Part 4: Beyond (Chapters 21-26)",
-      "short": "Expand/collapse Beyond",
-      "file": "parts/03-chao-yue-pian.md",
-      "open_tag": "<section id=\"chao-yue-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--Beyond-->",
-      "comment": "<!-- 4,Beyond section -->",
-      "chapters": [
-        "di-er-shi-yi-zhang",
-        "di-er-shi-er-zhang",
-        "di-er-shi-san-zhang",
-        "di-er-shi-san-zhang-github",
-        "di-er-shi-si-zhang",
-        "di-er-shi-wu-zhang",
-        "di-er-shi-liu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-er-shi-yi-zhang",
-        "di-er-shi-er-zhang",
-        "di-er-shi-san-zhang",
-        "di-er-shi-san-zhang-github",
-        "di-er-shi-si-zhang",
-        "di-er-shi-wu-zhang",
-        "di-er-shi-liu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "shi-zhan-pian",
-      "group": "shi-zhan",
-      "nav": "Part 5: Hands-On Practice (Chapters 27-32)",
-      "short": "Expand/collapse Hands-On Practice",
-      "file": "parts/04-shi-zhan-pian.md",
-      "open_tag": "<section id=\"shi-zhan-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--5,In Practice(Chapters 27-32)-->",
-      "comment": "<!-- 5,Practice section(Chapters 27-32) -->",
-      "chapters": [
-        "di-er-shi-qi-zhang",
-        "di-er-shi-ba-zhang",
-        "di-er-shi-jiu-zhang",
-        "di-san-shi-zhang",
-        "di-san-shi-yi-zhang",
-        "di-san-shi-er-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-er-shi-qi-zhang",
-        "di-er-shi-ba-zhang",
-        "di-er-shi-jiu-zhang",
-        "di-san-shi-zhang",
-        "di-san-shi-yi-zhang",
-        "di-san-shi-er-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "zhan-wang-pian",
-      "group": "zhan-wang",
-      "nav": "VI. Outlook (Chapters 33-41)",
-      "short": "Expand/collapse Outlook",
-      "file": "parts/05-zhan-wang-pian.md",
-      "open_tag": "<section id=\"zhan-wang-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--6,Looking ahead(Chapter 33)-->",
-      "comment": "<!-- 6,Looking ahead(Chapter 33) -->",
-      "chapters": [
-        "di-san-shi-san-zhang",
-        "di-san-shi-si-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-san-zhang",
-        "di-san-shi-si-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "er-tong-pian",
-      "group": "er-tong-pian",
-      "nav": "Kids and Phones Special (Chapters 35-36)",
-      "short": "Expand/collapse Kids and Phones Special",
-      "file": "parts/06-er-tong-pian.md",
-      "open_tag": "<section id=\"er-tong-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--Kids and phones special(Chapter 35)-->",
-      "comment": "<!-- Kids and phones special(Chapter 35) -->",
-      "chapters": [
-        "di-san-shi-wu-zhang",
-        "di-san-shi-liu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-wu-zhang",
-        "di-san-shi-liu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "ai-biancheng-pian",
-      "group": "ai-biancheng",
-      "nav": "Part 7: AI Coding in Practice (Chapters 37-47)",
-      "short": "Expand/collapse AI Coding in Practice",
-      "file": "parts/07-ai-biancheng-pian.md",
-      "open_tag": "<section id=\"ai-biancheng-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--AI Coding in Practice-->",
-      "comment": "<!-- Part 10: Appendices -->\n<!-- AI Coding in Practice(Chapters 37-47) -->",
-      "chapters": [
-        "di-san-shi-qi-zhang",
-        "di-san-shi-ba-zhang",
-        "di-san-shi-jiu-zhang",
-        "di-si-shi-zhang",
-        "di-si-shi-yi-zhang",
-        "di-si-shi-er-zhang",
-        "di-si-shi-san-zhang",
-        "di-si-shi-si-zhang",
-        "di-si-shi-wu-zhang",
-        "di-si-shi-liu-zhang",
-        "di-si-shi-qi-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-san-shi-qi-zhang",
-        "di-san-shi-ba-zhang",
-        "di-san-shi-jiu-zhang",
-        "di-si-shi-zhang",
-        "di-si-shi-yi-zhang",
-        "di-si-shi-er-zhang",
-        "di-si-shi-san-zhang",
-        "di-si-shi-si-zhang",
-        "di-si-shi-wu-zhang",
-        "di-si-shi-liu-zhang",
-        "di-si-shi-qi-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "an-zhuo-kai-fa-pian",
-      "group": "an-zhuo-kai-fa",
-      "nav": "Part 8: Android Development in Practice (Chapters 48-58)",
-      "short": "Expand/collapse Android Development in Practice",
-      "file": "parts/08-an-zhuo-kai-fa-pian.md",
-      "open_tag": "<section id=\"an-zhuo-kai-fa-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--Android Development in Practice-->",
-      "comment": "<!-- Android Development in Practice(Chapters 48-58) -->",
-      "chapters": [
-        "di-si-shi-ba-zhang",
-        "di-si-shi-jiu-zhang",
-        "di-wu-shi-zhang",
-        "di-wu-shi-yi-zhang",
-        "di-wu-shi-er-zhang",
-        "di-wu-shi-san-zhang",
-        "di-wu-shi-si-zhang",
-        "di-wu-shi-wu-zhang",
-        "di-wu-shi-liu-zhang",
-        "di-wu-shi-qi-zhang",
-        "di-wu-shi-ba-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-si-shi-ba-zhang",
-        "di-si-shi-jiu-zhang",
-        "di-wu-shi-zhang",
-        "di-wu-shi-yi-zhang",
-        "di-wu-shi-er-zhang",
-        "di-wu-shi-san-zhang",
-        "di-wu-shi-si-zhang",
-        "di-wu-shi-wu-zhang",
-        "di-wu-shi-liu-zhang",
-        "di-wu-shi-qi-zhang",
-        "di-wu-shi-ba-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "ios-kai-fa-pian",
-      "group": "ios-kai-fa",
-      "nav": "Part 9: iOS Development in Practice (Chapters 59-69)",
-      "short": "Expand/collapse iOS Development in Practice",
-      "file": "parts/09-ios-kai-fa-pian.md",
-      "open_tag": "<section id=\"ios-kai-fa-pian\" class=\"mb-12\">",
-      "toc_comment": "<!--iOS Development in Practice-->",
-      "comment": "<!-- iOS Development in Practice(Chapters 59-69) -->",
-      "chapters": [
-        "di-wu-shi-jiu-zhang",
-        "di-liu-shi-zhang",
-        "di-liu-shi-yi-zhang",
-        "di-liu-shi-er-zhang",
-        "di-liu-shi-san-zhang",
-        "di-liu-shi-si-zhang",
-        "di-liu-shi-wu-zhang",
-        "di-liu-shi-liu-zhang",
-        "di-liu-shi-qi-zhang",
-        "di-liu-shi-ba-zhang",
-        "di-liu-shi-jiu-zhang"
-      ],
-      "orphans": [],
-      "toc": [
-        "di-wu-shi-jiu-zhang",
-        "di-liu-shi-zhang",
-        "di-liu-shi-yi-zhang",
-        "di-liu-shi-er-zhang",
-        "di-liu-shi-san-zhang",
-        "di-liu-shi-si-zhang",
-        "di-liu-shi-wu-zhang",
-        "di-liu-shi-liu-zhang",
-        "di-liu-shi-qi-zhang",
-        "di-liu-shi-ba-zhang",
-        "di-liu-shi-jiu-zhang"
-      ],
-      "toc_extra": []
-    },
-    {
-      "id": "fu-lu",
-      "group": "fu-lu",
-      "nav": "Part 10: Appendices",
-      "short": "Expand/collapse Appendices",
-      "file": "parts/10-fu-lu.md",
-      "open_tag": "<section id=\"fu-lu\" class=\"mb-12\">",
-      "toc_comment": "<!--Appendix-->",
-      "comment": "",
-      "chapters": [
-        "fu-lu-a",
-        "fu-lu-b",
-        "fu-lu-c",
-        "fu-lu-d",
-        "fu-lu-e",
-        "fu-lu-f",
-        "jie-yu",
-        "fu-lu-g",
-        "fu-lu-h"
-      ],
-      "orphans": [],
-      "toc": [
-        "fu-lu-a",
-        "fu-lu-b",
-        "fu-lu-c",
-        "fu-lu-d",
-        "fu-lu-e",
-        "fu-lu-f",
-        "jie-yu",
-        "fu-lu-g",
-        "fu-lu-h"
-      ],
-      "toc_extra": []
+     "id": "di-shi-wu-zhang-kuichong",
+     "num": "",
+     "label": " Supplement: Fast-Charging Protocols Explained",
+     "toc": "sub"
     }
-  ],
-  "chapters": [
-    {
-      "id": "di-ling-zhang",
-      "file": "chapters/00-di-ling-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-yi-zhang",
-      "file": "chapters/01-di-yi-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-yi-zhang-memory",
-      "file": "chapters/02-di-yi-zhang-memory.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- Chapter 1 Appendix: Android phone memory expansion explained -->"
-    },
-    {
-      "id": "di-yi-zhang-harmony",
-      "file": "chapters/03-di-yi-zhang-harmony.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": ""
-    },
-    {
-      "id": "di-er-zhang",
-      "file": "chapters/04-di-er-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": ""
-    },
-    {
-      "id": "di-san-zhang",
-      "file": "chapters/05-di-san-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 3 -->"
-    },
-    {
-      "id": "di-si-zhang",
-      "file": "chapters/06-di-si-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 4 -->"
-    },
-    {
-      "id": "di-wu-zhang",
-      "file": "chapters/07-di-wu-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 5 -->"
-    },
-    {
-      "id": "di-liu-zhang",
-      "file": "chapters/08-di-liu-zhang.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 6 -->"
-    },
-    {
-      "id": "di-qi-zhang-jichu",
-      "file": "chapters/09-di-qi-zhang-jichu.md",
-      "part": "ji-chu-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 7:Cutting-edge features -->"
-    },
-    {
-      "id": "di-ba-zhang",
-      "file": "chapters/10-di-ba-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 8 -->"
-    },
-    {
-      "id": "di-jiu-zhang",
-      "file": "chapters/11-di-jiu-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 9 -->"
-    },
-    {
-      "id": "di-shi-zhang",
-      "file": "chapters/12-di-shi-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 10 -->"
-    },
-    {
-      "id": "di-shi-yi-zhang",
-      "file": "chapters/13-di-shi-yi-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 11 -->"
-    },
-    {
-      "id": "di-shi-yi-zhang-advanced",
-      "file": "chapters/14-di-shi-yi-zhang-advanced.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- Chapter 11 Appendix:Professional imaging technology -->"
-    },
-    {
-      "id": "di-shi-er-zhang",
-      "file": "chapters/15-di-shi-er-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 12 -->"
-    },
-    {
-      "id": "di-shi-san-zhang",
-      "file": "chapters/16-di-shi-san-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 13 -->"
-    },
-    {
-      "id": "di-shi-si-zhang",
-      "file": "chapters/17-di-shi-si-zhang.md",
-      "part": "ruan-jian-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 14: password manager special -->"
-    },
-    {
-      "id": "di-shi-wu-zhang",
-      "file": "chapters/18-di-shi-wu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 15 -->"
-    },
-    {
-      "id": "di-shi-liu-zhang",
-      "file": "chapters/19-di-shi-liu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 16 -->"
-    },
-    {
-      "id": "di-shi-qi-zhang",
-      "file": "chapters/20-di-shi-qi-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 17 -->"
-    },
-    {
-      "id": "di-shi-ba-zhang",
-      "file": "chapters/21-di-shi-ba-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 18 -->"
-    },
-    {
-      "id": "di-shi-jiu-zhang",
-      "file": "chapters/22-di-shi-jiu-zhang.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 19 -->"
-    },
-    {
-      "id": "di-er-shi-zhang-jinjie",
-      "file": "chapters/23-di-er-shi-zhang-jinjie.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- Chapter 20: developer mode and advanced permissions -->"
-    },
-    {
-      "id": "di-er-shi-zhang-termux",
-      "file": "chapters/24-di-er-shi-zhang-termux.md",
-      "part": "jin-jie-pian",
-      "after_part": "",
-      "kind": "supplement",
-      "comment": "<!-- Chapter 20 Appendix:TermuxPortableLinuxterminal -->"
-    },
-    {
-      "id": "di-er-shi-yi-zhang",
-      "file": "chapters/25-di-er-shi-yi-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 21 -->"
-    },
-    {
-      "id": "di-er-shi-er-zhang",
-      "file": "chapters/26-di-er-shi-er-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 22 -->"
-    },
-    {
-      "id": "di-er-shi-san-zhang",
-      "file": "chapters/27-di-er-shi-san-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 23 -->"
-    },
-    {
-      "id": "di-er-shi-san-zhang-github",
-      "file": "chapters/28-di-er-shi-san-zhang-github.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 23 Appendix:GitHubGetting started guide -->"
-    },
-    {
-      "id": "di-er-shi-si-zhang",
-      "file": "chapters/29-di-er-shi-si-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 24:RootPermissions andBLIn-depth lock analysis -->"
-    },
-    {
-      "id": "di-er-shi-wu-zhang",
-      "file": "chapters/30-di-er-shi-wu-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 25 -->"
-    },
-    {
-      "id": "di-er-shi-liu-zhang",
-      "file": "chapters/31-di-er-shi-liu-zhang.md",
-      "part": "chao-yue-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 26 -->"
-    },
-    {
-      "id": "di-er-shi-qi-zhang",
-      "file": "chapters/32-di-er-shi-qi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 27:Senior-friendly special topic -->"
-    },
-    {
-      "id": "di-er-shi-ba-zhang",
-      "file": "chapters/33-di-er-shi-ba-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 28:Ultimate smartphone buying guide -->"
-    },
-    {
-      "id": "di-er-shi-jiu-zhang",
-      "file": "chapters/34-di-er-shi-jiu-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 29:Digital wellbeing -->"
-    },
-    {
-      "id": "di-san-shi-zhang",
-      "file": "chapters/35-di-san-shi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 30: screen casting,Demo and car interconnection -->"
-    },
-    {
-      "id": "di-san-shi-yi-zhang",
-      "file": "chapters/36-di-san-shi-yi-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 31:Introduction to short video shooting and content creation -->"
-    },
-    {
-      "id": "di-san-shi-er-zhang",
-      "file": "chapters/37-di-san-shi-er-zhang.md",
-      "part": "shi-zhan-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 32:Phone security first aid manual -->"
-    },
-    {
-      "id": "di-san-shi-san-zhang",
-      "file": "chapters/38-di-san-shi-san-zhang.md",
-      "part": "zhan-wang-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 33 -->"
-    },
-    {
-      "id": "di-san-shi-si-zhang",
-      "file": "chapters/39-di-san-shi-si-zhang.md",
-      "part": "zhan-wang-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 34:In-depth guide to car-smartphone interconnection -->"
-    },
-    {
-      "id": "di-san-shi-wu-zhang",
-      "file": "chapters/40-di-san-shi-wu-zhang.md",
-      "part": "er-tong-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 35 -->"
-    },
-    {
-      "id": "di-san-shi-liu-zhang",
-      "file": "chapters/41-di-san-shi-liu-zhang.md",
-      "part": "er-tong-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 36:Phone and smart home——Make your home smart -->"
-    },
-    {
-      "id": "di-san-shi-qi-zhang",
-      "file": "chapters/42-di-san-shi-qi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 37 -->"
-    },
-    {
-      "id": "di-san-shi-ba-zhang",
-      "file": "chapters/43-di-san-shi-ba-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 38 -->"
-    },
-    {
-      "id": "di-san-shi-jiu-zhang",
-      "file": "chapters/44-di-san-shi-jiu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 39 -->"
-    },
-    {
-      "id": "di-si-shi-zhang",
-      "file": "chapters/45-di-si-shi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 40 -->"
-    },
-    {
-      "id": "di-si-shi-yi-zhang",
-      "file": "chapters/46-di-si-shi-yi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 41 -->"
-    },
-    {
-      "id": "di-si-shi-er-zhang",
-      "file": "chapters/47-di-si-shi-er-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 42 -->"
-    },
-    {
-      "id": "di-si-shi-san-zhang",
-      "file": "chapters/48-di-si-shi-san-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 43 -->"
-    },
-    {
-      "id": "di-si-shi-si-zhang",
-      "file": "chapters/49-di-si-shi-si-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 44 -->"
-    },
-    {
-      "id": "di-si-shi-wu-zhang",
-      "file": "chapters/50-di-si-shi-wu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 45 -->"
-    },
-    {
-      "id": "di-si-shi-liu-zhang",
-      "file": "chapters/51-di-si-shi-liu-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 46 -->"
-    },
-    {
-      "id": "di-si-shi-qi-zhang",
-      "file": "chapters/52-di-si-shi-qi-zhang.md",
-      "part": "ai-biancheng-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 47 -->"
-    },
-    {
-      "id": "di-si-shi-ba-zhang",
-      "file": "chapters/53-di-si-shi-ba-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 48 -->"
-    },
-    {
-      "id": "di-si-shi-jiu-zhang",
-      "file": "chapters/54-di-si-shi-jiu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 49 -->"
-    },
-    {
-      "id": "di-wu-shi-zhang",
-      "file": "chapters/55-di-wu-shi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 50 -->"
-    },
-    {
-      "id": "di-wu-shi-yi-zhang",
-      "file": "chapters/56-di-wu-shi-yi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 51 -->"
-    },
-    {
-      "id": "di-wu-shi-er-zhang",
-      "file": "chapters/57-di-wu-shi-er-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 52 -->"
-    },
-    {
-      "id": "di-wu-shi-san-zhang",
-      "file": "chapters/58-di-wu-shi-san-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 53 -->"
-    },
-    {
-      "id": "di-wu-shi-si-zhang",
-      "file": "chapters/59-di-wu-shi-si-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 54 -->"
-    },
-    {
-      "id": "di-wu-shi-wu-zhang",
-      "file": "chapters/60-di-wu-shi-wu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 55 -->"
-    },
-    {
-      "id": "di-wu-shi-liu-zhang",
-      "file": "chapters/61-di-wu-shi-liu-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 56 -->"
-    },
-    {
-      "id": "di-wu-shi-qi-zhang",
-      "file": "chapters/62-di-wu-shi-qi-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 57 -->"
-    },
-    {
-      "id": "di-wu-shi-ba-zhang",
-      "file": "chapters/63-di-wu-shi-ba-zhang.md",
-      "part": "an-zhuo-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 58 -->"
-    },
-    {
-      "id": "di-wu-shi-jiu-zhang",
-      "file": "chapters/64-di-wu-shi-jiu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 59 -->"
-    },
-    {
-      "id": "di-liu-shi-zhang",
-      "file": "chapters/65-di-liu-shi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 60 -->"
-    },
-    {
-      "id": "di-liu-shi-yi-zhang",
-      "file": "chapters/66-di-liu-shi-yi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 61 -->"
-    },
-    {
-      "id": "di-liu-shi-er-zhang",
-      "file": "chapters/67-di-liu-shi-er-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 62 -->"
-    },
-    {
-      "id": "di-liu-shi-san-zhang",
-      "file": "chapters/68-di-liu-shi-san-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 63 -->"
-    },
-    {
-      "id": "di-liu-shi-si-zhang",
-      "file": "chapters/69-di-liu-shi-si-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 64 -->"
-    },
-    {
-      "id": "di-liu-shi-wu-zhang",
-      "file": "chapters/70-di-liu-shi-wu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 65 -->"
-    },
-    {
-      "id": "di-liu-shi-liu-zhang",
-      "file": "chapters/71-di-liu-shi-liu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 66 -->"
-    },
-    {
-      "id": "di-liu-shi-qi-zhang",
-      "file": "chapters/72-di-liu-shi-qi-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 67 -->"
-    },
-    {
-      "id": "di-liu-shi-ba-zhang",
-      "file": "chapters/73-di-liu-shi-ba-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 68 -->"
-    },
-    {
-      "id": "di-liu-shi-jiu-zhang",
-      "file": "chapters/74-di-liu-shi-jiu-zhang.md",
-      "part": "ios-kai-fa-pian",
-      "after_part": "",
-      "kind": "chapter",
-      "comment": "<!-- Chapter 69 -->"
-    },
-    {
-      "id": "fu-lu-a",
-      "file": "chapters/75-fu-lu-a.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- AppendixA -->"
-    },
-    {
-      "id": "fu-lu-b",
-      "file": "chapters/76-fu-lu-b.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- AppendixB -->"
-    },
-    {
-      "id": "fu-lu-c",
-      "file": "chapters/77-fu-lu-c.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- AppendixC -->"
-    },
-    {
-      "id": "fu-lu-d",
-      "file": "chapters/78-fu-lu-d.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- AppendixD -->"
-    },
-    {
-      "id": "fu-lu-e",
-      "file": "chapters/79-fu-lu-e.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- AppendixE -->"
-    },
-    {
-      "id": "fu-lu-f",
-      "file": "chapters/80-fu-lu-f.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- Appendix F: foldable phones special -->"
-    },
-    {
-      "id": "jie-yu",
-      "file": "chapters/81-jie-yu.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "conclusion",
-      "comment": "<!-- Closing words -->"
-    },
-    {
-      "id": "fu-lu-g",
-      "file": "chapters/82-fu-lu-g.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- Appendix G: quick-reference index -->"
-    },
-    {
-      "id": "fu-lu-h",
-      "file": "chapters/83-fu-lu-h.md",
-      "part": "fu-lu",
-      "after_part": "",
-      "kind": "appendix",
-      "comment": "<!-- Appendix H: version roadmap -->"
-    }
-  ]
+   ]
+  },
+  {
+   "id": "chao-yue-pian",
+   "group": "chao-yue",
+   "nav": "Part 4: Beyond (Chapters 21-26)",
+   "short": "Expand/collapse Beyond",
+   "file": "parts/03-chao-yue-pian.md",
+   "open_tag": "<section id=\"chao-yue-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--Beyond-->",
+   "comment": "<!-- 4,Beyond section -->",
+   "chapters": [
+    "di-er-shi-yi-zhang",
+    "di-er-shi-er-zhang",
+    "di-er-shi-san-zhang",
+    "di-er-shi-san-zhang-github",
+    "di-er-shi-si-zhang",
+    "di-er-shi-wu-zhang",
+    "di-er-shi-liu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-er-shi-yi-zhang",
+    "di-er-shi-er-zhang",
+    "di-er-shi-san-zhang",
+    "di-er-shi-san-zhang-github",
+    "di-er-shi-si-zhang",
+    "di-er-shi-wu-zhang",
+    "di-er-shi-liu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "shi-zhan-pian",
+   "group": "shi-zhan",
+   "nav": "Part 5: Hands-On Practice (Chapters 27-32)",
+   "short": "Expand/collapse Hands-On Practice",
+   "file": "parts/04-shi-zhan-pian.md",
+   "open_tag": "<section id=\"shi-zhan-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--5,In Practice(Chapters 27-32)-->",
+   "comment": "<!-- 5,Practice section(Chapters 27-32) -->",
+   "chapters": [
+    "di-er-shi-qi-zhang",
+    "di-er-shi-ba-zhang",
+    "di-er-shi-jiu-zhang",
+    "di-san-shi-zhang",
+    "di-san-shi-yi-zhang",
+    "di-san-shi-er-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-er-shi-qi-zhang",
+    "di-er-shi-ba-zhang",
+    "di-er-shi-jiu-zhang",
+    "di-san-shi-zhang",
+    "di-san-shi-yi-zhang",
+    "di-san-shi-er-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "zhan-wang-pian",
+   "group": "zhan-wang",
+   "nav": "VI. Outlook (Chapters 33-41)",
+   "short": "Expand/collapse Outlook",
+   "file": "parts/05-zhan-wang-pian.md",
+   "open_tag": "<section id=\"zhan-wang-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--6,Looking ahead(Chapter 33)-->",
+   "comment": "<!-- 6,Looking ahead(Chapter 33) -->",
+   "chapters": [
+    "di-san-shi-san-zhang",
+    "di-san-shi-si-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-san-zhang",
+    "di-san-shi-si-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "er-tong-pian",
+   "group": "er-tong-pian",
+   "nav": "Kids and Phones Special (Chapters 35-36)",
+   "short": "Expand/collapse Kids and Phones Special",
+   "file": "parts/06-er-tong-pian.md",
+   "open_tag": "<section id=\"er-tong-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--Kids and phones special(Chapter 35)-->",
+   "comment": "<!-- Kids and phones special(Chapter 35) -->",
+   "chapters": [
+    "di-san-shi-wu-zhang",
+    "di-san-shi-liu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-wu-zhang",
+    "di-san-shi-liu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "ai-biancheng-pian",
+   "group": "ai-biancheng",
+   "nav": "Part 7: AI Coding in Practice (Chapters 37-47)",
+   "short": "Expand/collapse AI Coding in Practice",
+   "file": "parts/07-ai-biancheng-pian.md",
+   "open_tag": "<section id=\"ai-biancheng-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--AI Coding in Practice-->",
+   "comment": "<!-- Part 10: Appendices -->\n<!-- AI Coding in Practice(Chapters 37-47) -->",
+   "chapters": [
+    "di-san-shi-qi-zhang",
+    "di-san-shi-ba-zhang",
+    "di-san-shi-jiu-zhang",
+    "di-si-shi-zhang",
+    "di-si-shi-yi-zhang",
+    "di-si-shi-er-zhang",
+    "di-si-shi-san-zhang",
+    "di-si-shi-si-zhang",
+    "di-si-shi-wu-zhang",
+    "di-si-shi-liu-zhang",
+    "di-si-shi-qi-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-san-shi-qi-zhang",
+    "di-san-shi-ba-zhang",
+    "di-san-shi-jiu-zhang",
+    "di-si-shi-zhang",
+    "di-si-shi-yi-zhang",
+    "di-si-shi-er-zhang",
+    "di-si-shi-san-zhang",
+    "di-si-shi-si-zhang",
+    "di-si-shi-wu-zhang",
+    "di-si-shi-liu-zhang",
+    "di-si-shi-qi-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "an-zhuo-kai-fa-pian",
+   "group": "an-zhuo-kai-fa",
+   "nav": "Part 8: Android Development in Practice (Chapters 48-58)",
+   "short": "Expand/collapse Android Development in Practice",
+   "file": "parts/08-an-zhuo-kai-fa-pian.md",
+   "open_tag": "<section id=\"an-zhuo-kai-fa-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--Android Development in Practice-->",
+   "comment": "<!-- Android Development in Practice(Chapters 48-58) -->",
+   "chapters": [
+    "di-si-shi-ba-zhang",
+    "di-si-shi-jiu-zhang",
+    "di-wu-shi-zhang",
+    "di-wu-shi-yi-zhang",
+    "di-wu-shi-er-zhang",
+    "di-wu-shi-san-zhang",
+    "di-wu-shi-si-zhang",
+    "di-wu-shi-wu-zhang",
+    "di-wu-shi-liu-zhang",
+    "di-wu-shi-qi-zhang",
+    "di-wu-shi-ba-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-si-shi-ba-zhang",
+    "di-si-shi-jiu-zhang",
+    "di-wu-shi-zhang",
+    "di-wu-shi-yi-zhang",
+    "di-wu-shi-er-zhang",
+    "di-wu-shi-san-zhang",
+    "di-wu-shi-si-zhang",
+    "di-wu-shi-wu-zhang",
+    "di-wu-shi-liu-zhang",
+    "di-wu-shi-qi-zhang",
+    "di-wu-shi-ba-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "ios-kai-fa-pian",
+   "group": "ios-kai-fa",
+   "nav": "Part 9: iOS Development in Practice (Chapters 59-69)",
+   "short": "Expand/collapse iOS Development in Practice",
+   "file": "parts/09-ios-kai-fa-pian.md",
+   "open_tag": "<section id=\"ios-kai-fa-pian\" class=\"mb-12\">",
+   "toc_comment": "<!--iOS Development in Practice-->",
+   "comment": "<!-- iOS Development in Practice(Chapters 59-69) -->",
+   "chapters": [
+    "di-wu-shi-jiu-zhang",
+    "di-liu-shi-zhang",
+    "di-liu-shi-yi-zhang",
+    "di-liu-shi-er-zhang",
+    "di-liu-shi-san-zhang",
+    "di-liu-shi-si-zhang",
+    "di-liu-shi-wu-zhang",
+    "di-liu-shi-liu-zhang",
+    "di-liu-shi-qi-zhang",
+    "di-liu-shi-ba-zhang",
+    "di-liu-shi-jiu-zhang"
+   ],
+   "orphans": [],
+   "toc": [
+    "di-wu-shi-jiu-zhang",
+    "di-liu-shi-zhang",
+    "di-liu-shi-yi-zhang",
+    "di-liu-shi-er-zhang",
+    "di-liu-shi-san-zhang",
+    "di-liu-shi-si-zhang",
+    "di-liu-shi-wu-zhang",
+    "di-liu-shi-liu-zhang",
+    "di-liu-shi-qi-zhang",
+    "di-liu-shi-ba-zhang",
+    "di-liu-shi-jiu-zhang"
+   ],
+   "toc_extra": []
+  },
+  {
+   "id": "fu-lu",
+   "group": "fu-lu",
+   "nav": "Part 10: Appendices",
+   "short": "Expand/collapse Appendices",
+   "file": "parts/10-fu-lu.md",
+   "open_tag": "<section id=\"fu-lu\" class=\"mb-12\">",
+   "toc_comment": "<!--Appendix-->",
+   "comment": "",
+   "chapters": [
+    "fu-lu-a",
+    "fu-lu-b",
+    "fu-lu-c",
+    "fu-lu-d",
+    "fu-lu-e",
+    "fu-lu-f",
+    "jie-yu",
+    "fu-lu-g",
+    "fu-lu-h"
+   ],
+   "orphans": [],
+   "toc": [
+    "fu-lu-a",
+    "fu-lu-b",
+    "fu-lu-c",
+    "fu-lu-d",
+    "fu-lu-e",
+    "fu-lu-f",
+    "jie-yu",
+    "fu-lu-g",
+    "fu-lu-h"
+   ],
+   "toc_extra": []
+  }
+ ],
+ "chapters": [
+  {
+   "id": "di-ling-zhang",
+   "file": "chapters/00-di-ling-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-yi-zhang",
+   "file": "chapters/01-di-yi-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-yi-zhang-memory",
+   "file": "chapters/02-di-yi-zhang-memory.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- Chapter 1 Appendix: Android phone memory expansion explained -->"
+  },
+  {
+   "id": "di-yi-zhang-harmony",
+   "file": "chapters/03-di-yi-zhang-harmony.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": ""
+  },
+  {
+   "id": "di-er-zhang",
+   "file": "chapters/04-di-er-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": ""
+  },
+  {
+   "id": "di-san-zhang",
+   "file": "chapters/05-di-san-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 3 -->"
+  },
+  {
+   "id": "di-si-zhang",
+   "file": "chapters/06-di-si-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 4 -->"
+  },
+  {
+   "id": "di-wu-zhang",
+   "file": "chapters/07-di-wu-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 5 -->"
+  },
+  {
+   "id": "di-liu-zhang",
+   "file": "chapters/08-di-liu-zhang.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 6 -->"
+  },
+  {
+   "id": "di-qi-zhang-jichu",
+   "file": "chapters/09-di-qi-zhang-jichu.md",
+   "part": "ji-chu-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 7:Cutting-edge features -->"
+  },
+  {
+   "id": "di-ba-zhang",
+   "file": "chapters/10-di-ba-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 8 -->"
+  },
+  {
+   "id": "di-jiu-zhang",
+   "file": "chapters/11-di-jiu-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 9 -->"
+  },
+  {
+   "id": "di-shi-zhang",
+   "file": "chapters/12-di-shi-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 10 -->"
+  },
+  {
+   "id": "di-shi-yi-zhang",
+   "file": "chapters/13-di-shi-yi-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 11 -->"
+  },
+  {
+   "id": "di-shi-yi-zhang-advanced",
+   "file": "chapters/14-di-shi-yi-zhang-advanced.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- Chapter 11 Appendix:Professional imaging technology -->"
+  },
+  {
+   "id": "di-shi-er-zhang",
+   "file": "chapters/15-di-shi-er-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 12 -->"
+  },
+  {
+   "id": "di-shi-san-zhang",
+   "file": "chapters/16-di-shi-san-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 13 -->"
+  },
+  {
+   "id": "di-shi-si-zhang",
+   "file": "chapters/17-di-shi-si-zhang.md",
+   "part": "ruan-jian-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 14: password manager special -->"
+  },
+  {
+   "id": "di-shi-wu-zhang",
+   "file": "chapters/18-di-shi-wu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 15 -->"
+  },
+  {
+   "id": "di-shi-liu-zhang",
+   "file": "chapters/19-di-shi-liu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 16 -->"
+  },
+  {
+   "id": "di-shi-qi-zhang",
+   "file": "chapters/20-di-shi-qi-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 17 -->"
+  },
+  {
+   "id": "di-shi-ba-zhang",
+   "file": "chapters/21-di-shi-ba-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 18 -->"
+  },
+  {
+   "id": "di-shi-jiu-zhang",
+   "file": "chapters/22-di-shi-jiu-zhang.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 19 -->"
+  },
+  {
+   "id": "di-er-shi-zhang-jinjie",
+   "file": "chapters/23-di-er-shi-zhang-jinjie.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- Chapter 20: developer mode and advanced permissions -->"
+  },
+  {
+   "id": "di-er-shi-zhang-termux",
+   "file": "chapters/24-di-er-shi-zhang-termux.md",
+   "part": "jin-jie-pian",
+   "after_part": "",
+   "kind": "supplement",
+   "comment": "<!-- Chapter 20 Appendix:TermuxPortableLinuxterminal -->"
+  },
+  {
+   "id": "di-er-shi-yi-zhang",
+   "file": "chapters/25-di-er-shi-yi-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 21 -->"
+  },
+  {
+   "id": "di-er-shi-er-zhang",
+   "file": "chapters/26-di-er-shi-er-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 22 -->"
+  },
+  {
+   "id": "di-er-shi-san-zhang",
+   "file": "chapters/27-di-er-shi-san-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 23 -->"
+  },
+  {
+   "id": "di-er-shi-san-zhang-github",
+   "file": "chapters/28-di-er-shi-san-zhang-github.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 23 Appendix:GitHubGetting started guide -->"
+  },
+  {
+   "id": "di-er-shi-si-zhang",
+   "file": "chapters/29-di-er-shi-si-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 24:RootPermissions andBLIn-depth lock analysis -->"
+  },
+  {
+   "id": "di-er-shi-wu-zhang",
+   "file": "chapters/30-di-er-shi-wu-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 25 -->"
+  },
+  {
+   "id": "di-er-shi-liu-zhang",
+   "file": "chapters/31-di-er-shi-liu-zhang.md",
+   "part": "chao-yue-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 26 -->"
+  },
+  {
+   "id": "di-er-shi-qi-zhang",
+   "file": "chapters/32-di-er-shi-qi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 27:Senior-friendly special topic -->"
+  },
+  {
+   "id": "di-er-shi-ba-zhang",
+   "file": "chapters/33-di-er-shi-ba-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 28:Ultimate smartphone buying guide -->"
+  },
+  {
+   "id": "di-er-shi-jiu-zhang",
+   "file": "chapters/34-di-er-shi-jiu-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 29:Digital wellbeing -->"
+  },
+  {
+   "id": "di-san-shi-zhang",
+   "file": "chapters/35-di-san-shi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 30: screen casting,Demo and car interconnection -->"
+  },
+  {
+   "id": "di-san-shi-yi-zhang",
+   "file": "chapters/36-di-san-shi-yi-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 31:Introduction to short video shooting and content creation -->"
+  },
+  {
+   "id": "di-san-shi-er-zhang",
+   "file": "chapters/37-di-san-shi-er-zhang.md",
+   "part": "shi-zhan-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 32:Phone security first aid manual -->"
+  },
+  {
+   "id": "di-san-shi-san-zhang",
+   "file": "chapters/38-di-san-shi-san-zhang.md",
+   "part": "zhan-wang-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 33 -->"
+  },
+  {
+   "id": "di-san-shi-si-zhang",
+   "file": "chapters/39-di-san-shi-si-zhang.md",
+   "part": "zhan-wang-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 34:In-depth guide to car-smartphone interconnection -->"
+  },
+  {
+   "id": "di-san-shi-wu-zhang",
+   "file": "chapters/40-di-san-shi-wu-zhang.md",
+   "part": "er-tong-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 35 -->"
+  },
+  {
+   "id": "di-san-shi-liu-zhang",
+   "file": "chapters/41-di-san-shi-liu-zhang.md",
+   "part": "er-tong-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 36:Phone and smart home——Make your home smart -->"
+  },
+  {
+   "id": "di-san-shi-qi-zhang",
+   "file": "chapters/42-di-san-shi-qi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 37 -->"
+  },
+  {
+   "id": "di-san-shi-ba-zhang",
+   "file": "chapters/43-di-san-shi-ba-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 38 -->"
+  },
+  {
+   "id": "di-san-shi-jiu-zhang",
+   "file": "chapters/44-di-san-shi-jiu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 39 -->"
+  },
+  {
+   "id": "di-si-shi-zhang",
+   "file": "chapters/45-di-si-shi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 40 -->"
+  },
+  {
+   "id": "di-si-shi-yi-zhang",
+   "file": "chapters/46-di-si-shi-yi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 41 -->"
+  },
+  {
+   "id": "di-si-shi-er-zhang",
+   "file": "chapters/47-di-si-shi-er-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 42 -->"
+  },
+  {
+   "id": "di-si-shi-san-zhang",
+   "file": "chapters/48-di-si-shi-san-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 43 -->"
+  },
+  {
+   "id": "di-si-shi-si-zhang",
+   "file": "chapters/49-di-si-shi-si-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 44 -->"
+  },
+  {
+   "id": "di-si-shi-wu-zhang",
+   "file": "chapters/50-di-si-shi-wu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 45 -->"
+  },
+  {
+   "id": "di-si-shi-liu-zhang",
+   "file": "chapters/51-di-si-shi-liu-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 46 -->"
+  },
+  {
+   "id": "di-si-shi-qi-zhang",
+   "file": "chapters/52-di-si-shi-qi-zhang.md",
+   "part": "ai-biancheng-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 47 -->"
+  },
+  {
+   "id": "di-si-shi-ba-zhang",
+   "file": "chapters/53-di-si-shi-ba-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 48 -->"
+  },
+  {
+   "id": "di-si-shi-jiu-zhang",
+   "file": "chapters/54-di-si-shi-jiu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 49 -->"
+  },
+  {
+   "id": "di-wu-shi-zhang",
+   "file": "chapters/55-di-wu-shi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 50 -->"
+  },
+  {
+   "id": "di-wu-shi-yi-zhang",
+   "file": "chapters/56-di-wu-shi-yi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 51 -->"
+  },
+  {
+   "id": "di-wu-shi-er-zhang",
+   "file": "chapters/57-di-wu-shi-er-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 52 -->"
+  },
+  {
+   "id": "di-wu-shi-san-zhang",
+   "file": "chapters/58-di-wu-shi-san-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 53 -->"
+  },
+  {
+   "id": "di-wu-shi-si-zhang",
+   "file": "chapters/59-di-wu-shi-si-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 54 -->"
+  },
+  {
+   "id": "di-wu-shi-wu-zhang",
+   "file": "chapters/60-di-wu-shi-wu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 55 -->"
+  },
+  {
+   "id": "di-wu-shi-liu-zhang",
+   "file": "chapters/61-di-wu-shi-liu-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 56 -->"
+  },
+  {
+   "id": "di-wu-shi-qi-zhang",
+   "file": "chapters/62-di-wu-shi-qi-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 57 -->"
+  },
+  {
+   "id": "di-wu-shi-ba-zhang",
+   "file": "chapters/63-di-wu-shi-ba-zhang.md",
+   "part": "an-zhuo-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 58 -->"
+  },
+  {
+   "id": "di-wu-shi-jiu-zhang",
+   "file": "chapters/64-di-wu-shi-jiu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 59 -->"
+  },
+  {
+   "id": "di-liu-shi-zhang",
+   "file": "chapters/65-di-liu-shi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 60 -->"
+  },
+  {
+   "id": "di-liu-shi-yi-zhang",
+   "file": "chapters/66-di-liu-shi-yi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 61 -->"
+  },
+  {
+   "id": "di-liu-shi-er-zhang",
+   "file": "chapters/67-di-liu-shi-er-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 62 -->"
+  },
+  {
+   "id": "di-liu-shi-san-zhang",
+   "file": "chapters/68-di-liu-shi-san-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 63 -->"
+  },
+  {
+   "id": "di-liu-shi-si-zhang",
+   "file": "chapters/69-di-liu-shi-si-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 64 -->"
+  },
+  {
+   "id": "di-liu-shi-wu-zhang",
+   "file": "chapters/70-di-liu-shi-wu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 65 -->"
+  },
+  {
+   "id": "di-liu-shi-liu-zhang",
+   "file": "chapters/71-di-liu-shi-liu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 66 -->"
+  },
+  {
+   "id": "di-liu-shi-qi-zhang",
+   "file": "chapters/72-di-liu-shi-qi-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 67 -->"
+  },
+  {
+   "id": "di-liu-shi-ba-zhang",
+   "file": "chapters/73-di-liu-shi-ba-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 68 -->"
+  },
+  {
+   "id": "di-liu-shi-jiu-zhang",
+   "file": "chapters/74-di-liu-shi-jiu-zhang.md",
+   "part": "ios-kai-fa-pian",
+   "after_part": "",
+   "kind": "chapter",
+   "comment": "<!-- Chapter 69 -->"
+  },
+  {
+   "id": "fu-lu-a",
+   "file": "chapters/75-fu-lu-a.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- AppendixA -->"
+  },
+  {
+   "id": "fu-lu-b",
+   "file": "chapters/76-fu-lu-b.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- AppendixB -->"
+  },
+  {
+   "id": "fu-lu-c",
+   "file": "chapters/77-fu-lu-c.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- AppendixC -->"
+  },
+  {
+   "id": "fu-lu-d",
+   "file": "chapters/78-fu-lu-d.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- AppendixD -->"
+  },
+  {
+   "id": "fu-lu-e",
+   "file": "chapters/79-fu-lu-e.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- AppendixE -->"
+  },
+  {
+   "id": "fu-lu-f",
+   "file": "chapters/80-fu-lu-f.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- Appendix F: foldable phones special -->"
+  },
+  {
+   "id": "jie-yu",
+   "file": "chapters/81-jie-yu.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "conclusion",
+   "comment": "<!-- Closing words -->"
+  },
+  {
+   "id": "fu-lu-g",
+   "file": "chapters/82-fu-lu-g.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- Appendix G: quick-reference index -->"
+  },
+  {
+   "id": "fu-lu-h",
+   "file": "chapters/83-fu-lu-h.md",
+   "part": "fu-lu",
+   "after_part": "",
+   "kind": "appendix",
+   "comment": "<!-- Appendix H: version roadmap -->"
+  }
+ ]
 }
