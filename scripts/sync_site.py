@@ -23,7 +23,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 DEFAULT_DEST = Path.home() / 'Documents' / 'GitHub' / 'Yihggh.github.io'
 # 站点根要带的 PWA 资产
-ASSETS = ['sw.js', 'manifest.webmanifest']
+# announcements.json 是页面运行时 fetch 的公告数据，缺了会在控制台打 404
+ASSETS = ['sw.js', 'manifest.webmanifest', 'announcements.json']
 ASSET_DIRS = ['icons']
 # 书页里的 og:image 是绝对地址（manifest 的 site_url + cover-og.png），
 # 图必须一起部署到站点根，否则分享卡片抓不到图。
@@ -71,10 +72,12 @@ def main():
             print(f'!! 缺少资产：{a}')
             return 1
         plan.append((a, '复制'))
-    if not (ROOT / COVER[0]).is_file():
-        print(f'!! 缺少封面：{COVER[0]}（先运行 python scripts/gen_cover.py）')
-        return 1
-    plan.append((COVER[1], '分享卡片'))
+    # 分享卡片封面：推广物料目录可能已被清理，缺失时跳过而不是硬失败
+    # （HTML 里的 og:image 仍指向站点 URL，图不在则分享卡片无缩略图，不影响阅读）
+    if (ROOT / COVER[0]).is_file():
+        plan.append((COVER[1], '分享卡片'))
+    else:
+        print(f'  ! 跳过封面 {COVER[0]}（文件不存在，如需恢复运行 scripts/gen_cover.py）')
     for d in ASSET_DIRS:
         n = len(list((ROOT / d).glob('*'))) if (ROOT / d).is_dir() else 0
         plan.append((d + '/', f'{n} 个文件'))
@@ -88,7 +91,14 @@ def main():
     (dest / 'index.html').write_text(html, encoding='utf-8', newline='')
     for a in ASSETS:
         shutil.copy2(ROOT / a, dest / a)
-    shutil.copy2(ROOT / COVER[0], dest / COVER[1])
+    if (ROOT / COVER[0]).is_file():
+        shutil.copy2(ROOT / COVER[0], dest / COVER[1])
+    else:
+        # 源已清理：把站点上残留的旧封面也一并清掉，避免新旧不一致
+        stale = dest / COVER[1]
+        if stale.is_file():
+            stale.unlink()
+            print(f'  ! 已删除站点上残留的旧封面 {COVER[1]}')
     for d in ASSET_DIRS:
         tgt = dest / d
         if tgt.exists():
