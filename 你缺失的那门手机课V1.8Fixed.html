@@ -11826,8 +11826,8 @@ func scheduleDailyReminder() {
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2019</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 1.0 发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">搭载智慧屏；"备胎转正"的起点</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2021</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 2 上手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机用户破亿；仍兼容安卓应用</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2023</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 4 发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">宣布 HarmonyOS NEXT 开发者预览版</td></tr>
-<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2024</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS NEXT 商用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>移除 AOSP，不再兼容 APK</strong>；纯血鸿蒙元年</td></tr>
-<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2025 至今</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 5/6 持续迭代</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">头部应用完成鸿蒙原生版适配</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2024.10</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS NEXT（5.0）商用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>移除 AOSP，不再兼容 APK</strong>；纯血鸿蒙元年</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2025.10</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 6 发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">面向 90+ 机型开放升级，头部应用完成原生适配</td></tr>
 </tbody>
 </table>
 </div>
@@ -11991,10 +11991,10 @@ store.add('学 ArkTS')</pre>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、ArkTS 收紧了什么：从"动态"到"静态"</h4>
 <p class="mb-2">JS 的灵活性是把双刃剑，ArkUI 渲染引擎为了性能把它收紧了。四条最重要的约束：</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
-<li><strong>禁用 any/unknown</strong>：每个变量都要有明确类型。</li>
+<li><strong>禁用 any/unknown</strong>：每个变量都要有明确类型，@ts-ignore 也被禁用。</li>
 <li><strong>对象的形状不能运行时改变</strong>：不能给对象动态加减属性——这直接影响 UI 刷新（框架靠固定结构做高效比对）。</li>
 <li><strong>不用结构化类型</strong>：两个接口字段相同也不算同一类型，用 class 显式声明。</li>
-<li><strong>UI 层限定渲染数据类型</strong>：build() 里直接用的状态要用可观察装饰器标记。</li>
+<li><strong>UI 渲染数据类型受限</strong>：ArkUI 只支持 boolean/string/number 及其数组、class 实例等可观察类型，普通 object 不会触发刷新。</li>
 </ul>
 <p class="mb-2">这些约束换来的是：更小的包体、更快的启动、更稳定的渲染性能——和 Swift 逐年收紧动态特性的思路如出一辙。</p>
 
@@ -12009,6 +12009,7 @@ store.add('学 ArkTS')</pre>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@State</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">组件内部状态，变了刷新 UI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SwiftUI 的 @State</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Prop / @Link</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">父传子 / 父子双向</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Prop vs @Binding</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Watch</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">状态变化回调</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">属性观察器</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Observed/@ObjectLink</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">嵌套对象观察</td></tr>
 </tbody>
 </table>
 </div>
@@ -12189,11 +12190,11 @@ router.back()   // 复杂回传可用 emitter 事件或 AppStorage</pre>
 <pre>import { preferences } from '@kit.ArkData'
 import { Context } from '@kit.AbilityKit'
 
-let store: preferences.Preferences | null = null
+let store: preferences.Preferences | null = null   // 也有同步接口 getPreferencesSync
 
 // 初始化（一般在 EntryAbility onCreate 里拿 context 后做一次）
 async function initStore(context: Context) {
-  store = await preferences.getPreferences(context, 'settings')
+  store = await preferences.getPreferences(context, { name: 'settings' })
 }
 
 // 写
@@ -12268,7 +12269,7 @@ async function fetchTodos(): Promise&lt;string&gt; {
 </div>
 <div class="warning-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>三大易错点</p>
-<p class="mt-1">1. 忘记声明 INTERNET 权限（报错很隐晦）；2. req.destroy() 不调用导致连接泄漏；3. 明文 HTTP 默认被禁止——测试阶段可在 module.json5 里临时配置允许，上架前务必关闭。</p>
+<p class="mt-1">1. 忘记声明 INTERNET 权限（报错很隐晦）；2. req.destroy() 不调用导致连接泄漏；3. URL 里的中文参数记得 encodeURIComponent，否则请求会直接失败。</p>
 </div>
 <div class="chapter-summary">
 <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1"></i>本章小结</p>
@@ -12540,18 +12541,18 @@ struct WeatherPage {
 <p class="mb-2">鸿蒙的应用包格式：<strong>.hap</strong>（单个模块包）→ 打包成 <strong>.app</strong>（上架用，可含多个 HAP/HSP）。上架必须用<strong>发布证书 + Profile</strong> 签名，流程在 AGC（AppGallery Connect）网页端与 DevEco 里配合完成：</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
 <li><strong>AGC 创建应用</strong>：创建项目 → 创建应用（包名必须与工程的 bundleName 完全一致）</li>
-<li><strong>生成证书</strong>：AGC 证书管理 → 发布证书（.cer，一个账号上限有限，复用即可）</li>
+<li><strong>生成证书</strong>：AGC 证书管理 → 发布证书（.cer，每账号限 1 个，复用即可；Profile 上限 100 个）</li>
 <li><strong>注册设备 + 生成 Profile</strong>：调试期需要登记设备 UDID；发布 Profile 选择"发布证书 + 应用"</li>
 <li><strong>DevEco 配置签名</strong>：[File] → [Project Structure] → [Signing Configs] 一键自动签名（调试），发布签名手动导入 .cer/.p7b/.p12 三件套</li>
 <li><strong>打包</strong>：[Build] → [Build App(s)/Hap(s)] → [Build App]（注意选 release 模式）</li>
 </ul>
 <div class="warning-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>签名三坑</p>
-<p class="mt-1">1. Profile 与证书、包名三者必须匹配，错一个签名失败；2. 发布证书有效期通常 1 年，过期后更新版会签名失败——设个日历提醒；3. 调试 Profile 有设备数与有效期限制（90 天），到期重新生成。</p>
+<p class="mt-1">1. Profile 与证书、包名三者必须匹配，错一个签名失败；2. 发布证书有效期 3 年，到期后需更换新证书并同步更新 Profile——设个日历提醒；3. 调试证书实名开发者 180 天有效（未实名仅 14 天），到期重新生成。</p>
 </div>
 
 <h4 class="text-lg font-semibold mt-4 mb-2">三、提交审核：材料清单与常见驳回</h4>
-<p class="mb-2">在 AGC 的"我的应用"里提交 release 包，需要准备的材料：<strong>应用信息</strong>（名称、简介、分类、图标 216×216）、<strong>截图</strong>（手机至少 3 张，可加平板/折叠屏）、<strong>隐私政策 URL</strong>（必须有可访问的网页）、<strong>版权证明</strong>（个人开发者实名即可）、<strong>测试账号</strong>（应用需登录时提供）。</p>
+<p class="mb-2">在 AGC 的"我的应用"里提交 release 包，需要准备的材料：<strong>应用信息</strong>（名称、简介、分类、图标 216×216 PNG，500KB 以内）、<strong>截图</strong>（手机至少 3 张，可加平板/折叠屏）、<strong>隐私政策 URL</strong>（必须有可访问的网页）、<strong>版权证明</strong>（个人开发者实名即可）、<strong>测试账号</strong>（应用需登录时提供）。</p>
 <p class="mb-2">华为审核的常见驳回原因，提前避开：<strong>隐私政策与实际收集的数据不一致</strong>（最常见！比如声明不收集位置却申请了定位权限）；<strong>应用内强制登录才能用</strong>（基础功能应可游客体验）；<strong>截图与实际功能不符</strong>；<strong>应用崩溃或白屏</strong>（华为会用真机自动测试）。审核周期通常 1–3 个工作日，被驳回按修改意见改完重新提交即可。</p>
 <div class="practice-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-hands mr-2"></i>来动手：走一遍完整上架流程</p>
@@ -12633,6 +12634,7 @@ struct TodoCard {
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">hdc install xxx.hap</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">安装应用包</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">hdc shell aa start -b 包名 -a Ability名</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">命令行拉起应用</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">hdc file send / recv</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">与设备互传文件</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">hdc shell aa force-stop 包名</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">强制停止应用</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DevEco Log 窗口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HiLog 日志过滤（tag + 级别）</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DevEco Profiler</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">性能分析：CPU/内存/帧率</td></tr>
 </tbody>
