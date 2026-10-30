@@ -214,8 +214,25 @@
     "v1.8": {
       "baseline": "zh-CN",
       "expect_sections": 84,
+      "checks": {
+        "structure": "error",
+        "anchors": "error",
+        "toc": "error",
+        "title_version": "error",
+        "lang": "error",
+        "nul": "error",
+        "residual": "error",
+        "coverage": "error",
+        "source_sync": "off",
+        "orphan": "error",
+        "social": "off",
+        "schema": "error"
+      }
+    },
+    "v1.9": {
+      "baseline": "zh-CN",
       "source_sync": {
-        "canonical": "v1.8/zh-CN.html",
+        "canonical": "v1.9/zh-CN.html",
         "source": "你缺失的那门手机课V1.9Fixed.html"
       },
       "checks": {
@@ -227,7 +244,7 @@
         "nul": "error",
         "residual": "error",
         "coverage": "error",
-        "source_sync": "error",
+        "source_sync": "off",
         "orphan": "error",
         "social": "off",
         "schema": "error"
@@ -255,6 +272,14 @@
       "card_extra": "border-2 border-emerald-300 rounded-xl p-5 hover:shadow-lg",
       "label_classes": "text-emerald-600",
       "label_suffix": "最新"
+    },
+    "v1.9": {
+      "badge_classes": "inline-block px-4 py-1.5 bg-indigo-500/10 text-indigo-600",
+      "badge_icon": "fas fa-flask",
+      "badge_text": "v1.9 预览（中文先行）",
+      "card_extra": "border-2 border-indigo-200 rounded-xl p-5 hover:shadow-lg",
+      "label_classes": "text-indigo-600",
+      "label_suffix": "预览"
     }
   },
   "language_descriptions": {
@@ -278,6 +303,9 @@
       "ms": "Kuasai Telefon Pintar V1.8",
       "el": "Κυριαρχήστε το Κινητό V1.8",
       "lzh": "手機課 V1.8"
+    },
+    "v1.9": {
+      "zh-CN": "简体中文 · 含鸿蒙开发与可穿戴/旅行/健康/AI短视频/短剧五篇"
     }
   }
 }
