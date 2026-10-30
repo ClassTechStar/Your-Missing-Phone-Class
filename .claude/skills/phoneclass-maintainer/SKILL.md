@@ -26,7 +26,7 @@ manifest/languages.json  ← 语言元数据/版本门禁/卡片（单一数据�
 ```
 
 - 主分支**只保留 v1.8**；v1.5–v1.7 HTML 在 Release `html-archive`，v1.3/v1.4 在 `legacy-html-archive`。
-- 根目录 `你缺失的那门手机课V1.8Fixed.html` 必须与 `v1.8/zh-CN.html` 字节一致（lint source_sync 门禁）。
+- 根目录 `你缺失的那门手机课V1.9Fixed.html` 必须与 `v1.8/zh-CN.html` 字节一致（lint source_sync 门禁）。
 
 ## 二、编号约定（勿混用！）
 
@@ -53,7 +53,7 @@ python mcp/server.py                      # 本书结构 MCP 服务器（stdio�
 
 1. 改 `source/chapters/NN-*.md`（zh）或 `source/translations/<lang>/chapters/…`（译文）；
 2. `python -m bookkit build --verify` 必须回到 PASS；
-3. 若动了 zh：同步 `你缺失的那门手机课V1.8Fixed.html`（直接 cp）；
+3. 若动了 zh：同步 `你缺失的那门手机课V1.9Fixed.html`（直接 cp）；
 4. `lint` + `check --claims --index` + `html_audit.py` 三绿；
 5. 重排 PDF：`bash scripts/build_pdfs.sh <lang>`（MiKTeX XeLaTeX）。
 

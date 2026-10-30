@@ -216,7 +216,7 @@
       "expect_sections": 84,
       "source_sync": {
         "canonical": "v1.8/zh-CN.html",
-        "source": "你缺失的那门手机课V1.8Fixed.html"
+        "source": "你缺失的那门手机课V1.9Fixed.html"
       },
       "checks": {
         "structure": "error",
