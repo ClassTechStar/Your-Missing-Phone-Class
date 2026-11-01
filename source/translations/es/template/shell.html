@@ -1371,6 +1371,47 @@ html:not(.safe) .content-section pre { content-visibility: auto; contain-intrins
 #announce-bar button { position:absolute; right:10px; top:6px; border:0; background:none;
   font-size:16px; cursor:pointer; color:inherit; }
 html.safe #announce-bar { display:none !important; }
+
+/* ═══ Liquid Glass（借鉴 liquid-glass-js / callstack liquid-glass / Kyant0 backdrop）═══
+   html.lg-ready: 特性检测通过；html.lg-off: 用户关闭（rp:liquidGlass）；
+   .lg-adv: Chromium 增强层（SVG 位移折射）。safe 模式/打印强制关闭。 */
+html.lg-ready:not(.lg-off):not(.safe) #navbar,
+html.lg-ready:not(.lg-off):not(.safe) #sidebar,
+html.lg-ready:not(.lg-off):not(.safe) .quick-tool-btn,
+html.lg-ready:not(.lg-off):not(.safe) .search-panel {
+  background: rgba(255, 255, 255, 0.52) !important;
+  -webkit-backdrop-filter: blur(14px) saturate(1.7);
+  backdrop-filter: blur(14px) saturate(1.7);
+  box-shadow: 0 8px 32px rgba(15, 23, 42, 0.14),
+    inset 0 1px 0 rgba(255, 255, 255, 0.68),
+    inset 0 -1px 0 rgba(15, 23, 42, 0.05);
+  border-color: rgba(255, 255, 255, 0.42);
+}
+html.lg-ready:not(.lg-off):not(.safe).dark #navbar,
+html.lg-ready:not(.lg-off):not(.safe).dark #sidebar,
+html.lg-ready:not(.lg-off):not(.safe).dark .quick-tool-btn,
+html.lg-ready:not(.lg-off):not(.safe).dark .search-panel {
+  background: rgba(17, 24, 39, 0.5) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.14),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+html.lg-adv:not(.lg-off):not(.safe) #navbar,
+html.lg-adv:not(.lg-off):not(.safe) #sidebar,
+html.lg-adv:not(.lg-off):not(.safe) .quick-tool-btn,
+html.lg-adv:not(.lg-off):not(.safe) .search-panel {
+  -webkit-backdrop-filter: blur(12px) saturate(1.75) url(#lg-displace);
+  backdrop-filter: blur(12px) saturate(1.75) url(#lg-displace);
+}
+#quick-glass.lg-btn-off { opacity: 0.42; }
+@media print {
+  html.lg-ready #navbar, html.lg-ready #sidebar, html.lg-ready .quick-tool-btn,
+  html.lg-ready .search-panel {
+    background: #fff !important; backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important; box-shadow: none !important;
+  }
+}
 </style>
 <script id="reader-bundle">
 /* ═══ Reader Bundle（P1-4/P2-1/P2-3）═══
@@ -1467,6 +1508,46 @@ html.safe #announce-bar { display:none !important; }
   }
 })();
 </script>
+    <script id="liquid-glass-bundle">
+    /* ═══ Liquid Glass（P3：借鉴 liquid-glass-js / callstack liquid-glass / Kyant0 backdrop）═══
+     * 特性检测 → html.lg-ready；用户偏好 rp:liquidGlass → html.lg-off；
+     * Chromium 增强 → html.lg-adv（backdrop-filter 引用 #lg-displace SVG 折射滤镜）。
+     * 幂等标记 window.__liquidGlass；safe 模式不启用。 */
+    (function () {
+      if (window.__liquidGlass) return;
+      window.__liquidGlass = true;
+      if (window.__SAFE) return;
+      var ok = window.CSS && CSS.supports && CSS.supports('backdrop-filter', 'blur(4px)');
+      var reduce = window.matchMedia &&
+        window.matchMedia('(prefers-reduced-transparency: reduce)').matches;
+      if (!ok || reduce) return;
+      var root = document.documentElement;
+      root.classList.add('lg-ready');
+      if (window.RS && RS.get('liquidGlass', true) === false) root.classList.add('lg-off');
+      window.__lgToggle = function (v) {
+        var off = (v === undefined) ? !root.classList.contains('lg-off') : !v;
+        root.classList.toggle('lg-off', off);
+        if (window.RS) RS.set('liquidGlass', !off);
+        return !off;
+      };
+      var btn = document.getElementById('quick-glass');
+      var sync = function () {
+        var off = root.classList.contains('lg-off');
+        if (btn) {
+          btn.classList.toggle('lg-btn-off', off);
+          btn.setAttribute('aria-pressed', String(!off));
+          var ic = btn.querySelector('i');
+          if (ic) ic.className = off ? 'fas fa-droplet-slash' : 'fas fa-droplet';
+        }
+      };
+      if (btn) btn.addEventListener('click', function () { window.__lgToggle(); sync(); });
+      sync();
+      try {
+        if (CSS.supports('backdrop-filter', 'url(#lg-displace)')) root.classList.add('lg-adv');
+      } catch (e) { /* 增强层不可用则停留在毛玻璃 */ }
+    })();
+    </script>
+    
 
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
@@ -1756,7 +1837,10 @@ html.safe #announce-bar { display:none !important; }
 
     <!-- Herramientas rápidas: grupo de botones flotantes -->
     <div id="quick-tools" class="quick-tools no-print" aria-label="Herramientas rápidas">
-        <button id="quick-search" class="quick-tool-btn" title="Buscar (Ctrl+K)" aria-label="Buscar">
+        <button id="quick-glass" class="quick-tool-btn" title="液态玻璃效果 (开/关)" aria-label="切换液态玻璃效果" aria-pressed="true">
+            <i class="fas fa-droplet" aria-hidden="true"></i>
+        </button>
+                <button id="quick-search" class="quick-tool-btn" title="Buscar (Ctrl+K)" aria-label="Buscar">
             <i class="fas fa-search" aria-hidden="true"></i>
         </button>
         <button id="quick-theme" class="quick-tool-btn" title="Cambiar entre oscuro/claro" aria-label="Cambiar de tema">
@@ -3188,5 +3272,14 @@ html.safe #announce-bar { display:none !important; }
             });
         }
     </script>
-</body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+          <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
+          <feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </defs>
+    </svg>
+    </body>
 </html>
