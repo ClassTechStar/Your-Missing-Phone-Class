@@ -1419,8 +1419,9 @@ html.safe #announce-bar { display:none !important; }
   /* P2-1 公告横幅：safe 模式跳过；fetch 失败（离线单文件）静默 */
   function announce() {
     if (window.__SAFE) return;
-    var url = location.pathname.indexOf('/v1.8/') >= 0
+    var isSub = /[\/]v1\.[89][\/]/.test(location.pathname)
       ? '../announcements.json' : 'announcements.json';
+    var url = isSub;
     var tryAt = function (i) {
       if (i >= 1) return;
       fetch(url).then(function (r) {

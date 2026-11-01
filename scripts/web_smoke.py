@@ -83,12 +83,18 @@ def main():
     else:
         threading.Thread(target=serve, daemon=True).start()
 
-    targets = ([('index.html', None), ('quiz.html', None), ('v1.8/zh-CN.html?safe=1', None)]
+    targets = ([('index.html', None), ('quiz.html', None), ('v1.8/zh-CN.html?safe=1', None),
+                ('v1.9/zh-CN.html', 120)]
                + [(f'v1.8/{l}.html', EXPECT_H3) for l in LANGS])
     fails = []
     with sync_playwright() as pw:
         browser = pw.chromium.launch()
         page = browser.new_page()
+        # 外部 CDN（tailwind/fontawesome 等）不参与冒烟：拦截并回 200 空 JS/CSS，
+        # 避免本机网络对 CDN 的波动把 DOMContentLoaded 拖过 30s
+        page.route('**/*', lambda route: route.fulfill(status=200, body='window.tailwind = window.tailwind || {};')
+                   if route.request.url.startswith('http') and '127.0.0.1' not in route.request.url
+                   else route.continue_())
         for path, expect_h3 in targets:
             errors = []
             page.on('console', lambda m: errors.append(m.text) if m.type == 'error' else None)
