@@ -65,9 +65,263 @@
         .lang-card.recommended {
             box-shadow: 0 0 0 3px rgba(22, 93, 255, 0.35);
         }
+
+        /* ═══ Liquid Glass（借鉴 liquid-glass-js / callstack liquid-glass / Kyant0 backdrop）═══
+           技法对应：
+             Blur / ColorFilter → backdrop-filter: blur() saturate()
+             Lens（折射）        → SVG feTurbulence + feDisplacementMap（仅 Chromium，html.lg-adv）
+             Highlight（高光）   → inset box-shadow 白/暗双色描边
+           状态：html.lg-ready 特性检测通过 / html.lg-off 用户关闭 / html.lg-adv 折射增强层
+           降级：?safe=1、prefers-reduced-transparency、打印 均自动关闭 */
+        html.lg-ready:not(.lg-off):not(.safe) {
+            --lg-f: blur(16px) saturate(1.8);
+            --lg-bg: rgba(255, 255, 255, 0.52);
+            --lg-hi: inset 0 1px 0 rgba(255, 255, 255, 0.72), inset 0 -1px 0 rgba(15, 23, 42, 0.06);
+            --lg-sh: 0 8px 32px rgba(15, 23, 42, 0.12);
+        }
+        /* Chromium 增强：backdrop-filter 追加 SVG 位移折射滤镜 */
+        html.lg-adv:not(.lg-off):not(.safe) {
+            --lg-f: blur(14px) saturate(1.9) url(#lg-displace);
+        }
+        /* 玻璃表面：顶栏 / 痛点卡 / 序言 / 目录卡 / 路径卡 / 下载卡 / 语言磁贴 */
+        html.lg-ready:not(.lg-off):not(.safe) #navbar,
+        html.lg-ready:not(.lg-off):not(.safe) #about .card-hover,
+        html.lg-ready:not(.lg-off):not(.safe) #about .quote-box,
+        html.lg-ready:not(.lg-off):not(.safe) #contents .grid > div,
+        html.lg-ready:not(.lg-off):not(.safe) #paths .card,
+        html.lg-ready:not(.lg-off):not(.safe) #downloads .card,
+        html.lg-ready:not(.lg-off):not(.safe) #languages .lang-card {
+            background: var(--lg-grad, var(--lg-bg)) !important;
+            -webkit-backdrop-filter: var(--lg-f);
+            backdrop-filter: var(--lg-f);
+            box-shadow: var(--lg-sh), var(--lg-hi);
+        }
+        /* 顶栏：半透白玻璃 + 底部高光分隔线 */
+        html.lg-ready:not(.lg-off):not(.safe) #navbar {
+            background: rgba(255, 255, 255, 0.52) !important;
+            border-bottom-color: rgba(255, 255, 255, 0.55) !important;
+        }
+        /* Hero CTA：白 / 橙 / 透明三档玻璃，底色转半透以透出折射背景 */
+        html.lg-ready:not(.lg-off):not(.safe) #hero a {
+            -webkit-backdrop-filter: blur(14px) saturate(1.8);
+            backdrop-filter: blur(14px) saturate(1.8);
+            /* 顶部高光：模拟光源从上方打下的镜面反射，避免半透底色发灰 */
+            background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.26), rgba(255, 255, 255, 0) 62%) !important;
+            box-shadow: 0 10px 30px rgba(15, 23, 42, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.55);
+        }
+        html.lg-ready:not(.lg-off):not(.safe) #hero a.bg-white {
+            background-color: rgba(255, 255, 255, 0.74) !important;
+        }
+        html.lg-ready:not(.lg-off):not(.safe) #hero a.bg-accent {
+            background-color: rgba(255, 107, 53, 0.64) !important;
+        }
+        html.lg-ready:not(.lg-off):not(.safe) #hero a.bg-white\/10 {
+            background-color: rgba(255, 255, 255, 0.16) !important;
+        }
+        /* 玻璃需要"背景可折射"：区块底色转半透，透出页面彩色底纹 */
+        html.lg-ready:not(.lg-off):not(.safe) body {
+            background-color: #EDF2F8;
+            background-image:
+                radial-gradient(1100px 620px at 12% 6%, rgba(22, 93, 255, 0.20), transparent 62%),
+                radial-gradient(900px 640px at 88% 16%, rgba(255, 107, 53, 0.16), transparent 62%),
+                radial-gradient(1000px 720px at 50% 82%, rgba(16, 185, 129, 0.14), transparent 62%);
+            background-attachment: fixed;
+        }
+        html.lg-ready:not(.lg-off):not(.safe) #about,
+        html.lg-ready:not(.lg-off):not(.safe) #downloads,
+        html.lg-ready:not(.lg-off):not(.safe) #languages {
+            background: rgba(255, 255, 255, 0.64) !important;
+        }
+        html.lg-ready:not(.lg-off):not(.safe) #contents,
+        html.lg-ready:not(.lg-off):not(.safe) #paths {
+            background: rgba(248, 250, 252, 0.6) !important;
+        }
+        /* 悬停：玻璃面高光随之上浮 */
+        html.lg-ready:not(.lg-off):not(.safe) #about .card-hover:hover,
+        html.lg-ready:not(.lg-off):not(.safe) #paths .card:hover,
+        html.lg-ready:not(.lg-off):not(.safe) #downloads .card:hover,
+        html.lg-ready:not(.lg-off):not(.safe) #languages .lang-card:hover {
+            box-shadow: 0 16px 44px rgba(15, 23, 42, 0.18), var(--lg-hi);
+        }
+        /* 语言磁贴的"推荐"描边环在玻璃态下保留 */
+        html.lg-ready:not(.lg-off):not(.safe) #languages .lang-card.recommended {
+            box-shadow: 0 0 0 3px rgba(22, 93, 255, 0.35), var(--lg-sh), var(--lg-hi);
+        }
+        /* 液态玻璃开关 */
+        .lg-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(148, 163, 184, 0.4);
+            background: transparent;
+            color: #64748B;
+            cursor: pointer;
+            transition: all 0.25s ease;
+        }
+        .lg-toggle-btn:hover { color: #165DFF; border-color: rgba(22, 93, 255, 0.5); }
+        .lg-toggle-btn:focus-visible { outline: 2px solid #165DFF; outline-offset: 2px; }
+        html.lg-ready:not(.lg-off):not(.safe) .lg-toggle-btn {
+            background: rgba(255, 255, 255, 0.45);
+            -webkit-backdrop-filter: blur(10px) saturate(1.6);
+            backdrop-filter: blur(10px) saturate(1.6);
+            border-color: rgba(255, 255, 255, 0.6);
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8);
+        }
+        .lg-toggle-btn.lg-btn-off { opacity: 0.45; }
+        .lg-toggle-link {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            width: 100%;
+            padding: 0.5rem 0;
+            font-size: 0.875rem;
+            color: #4B5563;
+            text-align: left;
+            transition: color 0.2s ease;
+        }
+        .lg-toggle-link:hover { color: #165DFF; }
+        .lg-toggle-icon { width: 1rem; text-align: center; }
+        /* 打印：强制关闭玻璃（覆盖变量即可，无需逐条重写选择器） */
+        @media print {
+            html.lg-ready {
+                --lg-f: none;
+                --lg-bg: #fff;
+                --lg-hi: 0 0 0 0 transparent;
+                --lg-sh: 0 0 0 0 transparent;
+            }
+        }
     </style>
+
+    <script id="liquid-glass-bundle">
+    /* ═══ Liquid Glass（借鉴 liquid-glass-js / callstack liquid-glass / Kyant0 backdrop）═══
+     * 特性检测 → html.lg-ready；用户偏好 rp:liquidGlass → html.lg-off（与书页共用同一偏好键）；
+     * Chromium 增强 → html.lg-adv（backdrop-filter 追加 #lg-displace SVG 位移折射滤镜）。
+     * 幂等标记 window.__liquidGlass；?safe=1 / prefers-reduced-transparency / 打印 均不启用。 */
+    (function () {
+        if (window.__liquidGlass) return;
+        window.__liquidGlass = true;
+        var root = document.documentElement;
+        if (/[?&]safe=1/.test(location.search)) root.classList.add('safe');
+        /* 特性检测：部分 Chromium（如 Electron）CSS.supports 对 backdrop-filter 误报 false，
+           但属性本身可用，故补一条 style 属性探测 */
+        var supportsBackdrop = (function () {
+            if (window.CSS && CSS.supports &&
+                (CSS.supports('backdrop-filter', 'blur(4px)') ||
+                 CSS.supports('-webkit-backdrop-filter', 'blur(4px)'))) return true;
+            return 'backdropFilter' in document.documentElement.style ||
+                'webkitBackdropFilter' in document.documentElement.style;
+        })();
+        if (!supportsBackdrop) return;
+        if (window.matchMedia && window.matchMedia('(prefers-reduced-transparency: reduce)').matches) return;
+
+        /* 与书页（shell.html / ReaderPrefs）共用 rp:liquidGlass 偏好键 */
+        var PREF = 'rp:liquidGlass';
+        var pref = function (d) {
+            try {
+                var v = localStorage.getItem(PREF);
+                return v === null ? d : JSON.parse(v);
+            } catch (e) { return d; }
+        };
+        var setPref = function (v) {
+            try { localStorage.setItem(PREF, JSON.stringify(v)); } catch (e) {}
+        };
+
+        root.classList.add('lg-ready');
+        if (pref(true) === false) root.classList.add('lg-off');
+
+        /* Chromium 增强层：探测 backdrop-filter 是否接受 url() 滤镜引用（SVG 位移折射） */
+        function probeRefraction() {
+            try {
+                var probe = document.createElement('div');
+                probe.style.cssText = 'position:absolute;width:1px;height:1px;opacity:0;pointer-events:none';
+                probe.style.setProperty('backdrop-filter', 'blur(2px) url(#lg-displace)');
+                probe.style.setProperty('-webkit-backdrop-filter', 'blur(2px) url(#lg-displace)');
+                document.body.appendChild(probe);
+                var cs = getComputedStyle(probe);
+                var v = cs.backdropFilter || cs.webkitBackdropFilter || '';
+                document.body.removeChild(probe);
+                if (v.indexOf('url(') >= 0) root.classList.add('lg-adv');
+            } catch (e) { /* 增强层不可用则停留在毛玻璃 */ }
+        }
+
+        /* 彩色面板：把实色渐变改写为半透明版本，保留配色同时透出玻璃底 */
+        function glassify(el, alpha) {
+            var img = getComputedStyle(el).backgroundImage;
+            if (!img || img === 'none' || img.indexOf('gradient') < 0) return false;
+            var out = img.replace(/rgba?\(([^)]+)\)/g, function (m, inner) {
+                var p = inner.split(/[\s,\/]+/).filter(Boolean);
+                if (p.length < 3) return m;
+                return 'rgba(' + p[0] + ', ' + p[1] + ', ' + p[2] + ', ' + alpha + ')';
+            });
+            el.style.setProperty('--lg-grad', out);
+            return true;
+        }
+        function scan() {
+            var list = document.querySelectorAll('#languages .lang-card, #downloads .card, #about .quote-box');
+            for (var i = 0; i < list.length; i++) {
+                var el = list[i];
+                if (el.getAttribute('data-lg-grad')) continue;
+                if (glassify(el, 0.5)) el.setAttribute('data-lg-grad', '1');
+            }
+        }
+
+        function sync() {
+            var off = root.classList.contains('lg-off');
+            var btns = document.querySelectorAll('[data-lg-toggle]');
+            for (var i = 0; i < btns.length; i++) {
+                var btn = btns[i];
+                btn.classList.toggle('lg-btn-off', off);
+                btn.setAttribute('aria-pressed', String(!off));
+                var ic = btn.querySelector('.lg-toggle-icon');
+                if (ic) ic.className = (off ? 'fas fa-droplet-slash' : 'fas fa-droplet') + ' lg-toggle-icon';
+            }
+        }
+
+        window.__lgToggle = function (v) {
+            var off = (v === undefined) ? !root.classList.contains('lg-off') : !v;
+            root.classList.toggle('lg-off', off);
+            setPref(!off);
+            if (!off) scan();
+            sync();
+            return !off;
+        };
+
+        function bind() {
+            scan();
+            probeRefraction();
+            var btns = document.querySelectorAll('[data-lg-toggle]');
+            for (var i = 0; i < btns.length; i++) {
+                btns[i].addEventListener('click', function () { window.__lgToggle(); });
+            }
+            sync();
+        }
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', bind);
+        } else {
+            bind();
+        }
+        /* Tailwind CDN 运行时生成样式，渐变需等样式就绪后再改写 */
+        window.addEventListener('load', scan);
+        setTimeout(scan, 400);
+        setTimeout(scan, 1200);
+    })();
+    </script>
 </head>
 <body class="bg-white text-gray-800">
+
+    <!-- 液态玻璃折射滤镜：Chromium 增强层经 backdrop-filter url(#lg-displace) 引用 -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <defs>
+            <filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+                <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+                <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
+                <feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+            </filter>
+        </defs>
+    </svg>
 
     <nav id="navbar" class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-gray-100">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
@@ -79,6 +333,9 @@
                 <a href="#about" class="text-gray-600 hover:text-primary transition-colors">关于本书</a>
                 <a href="#contents" class="text-gray-600 hover:text-primary transition-colors">目录</a>
                 <a href="#languages" class="text-gray-600 hover:text-primary transition-colors">多语言版本</a>
+                <button data-lg-toggle class="lg-toggle-btn" title="液态玻璃效果（开/关）" aria-label="切换液态玻璃效果" aria-pressed="true">
+                    <i class="fas fa-droplet lg-toggle-icon" aria-hidden="true"></i>
+                </button>
                 <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" class="flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
                     <i class="fab fa-github"></i> GitHub
                 </a>
@@ -94,6 +351,9 @@
             <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" class="block py-2 text-gray-600 hover:text-primary">
                 <i class="fab fa-github"></i> GitHub
             </a>
+            <button data-lg-toggle class="lg-toggle-link" title="液态玻璃效果（开/关）" aria-label="切换液态玻璃效果" aria-pressed="true">
+                <i class="fas fa-droplet lg-toggle-icon" aria-hidden="true"></i><span>液态玻璃效果</span>
+            </button>
         </div>
     </nav>
 
@@ -205,7 +465,7 @@
                     <p class="text-sm text-gray-500">旧手机照片和联系人转移得一团糟</p>
                 </div>
             </div>
-            <div class="mt-16 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 fade-in">
+            <div class="mt-16 quote-box bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 md:p-12 fade-in">
                 <div class="max-w-3xl mx-auto text-center">
                     <i class="fas fa-quote-left text-primary/20 text-4xl mb-4"></i>
                     <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-6">
