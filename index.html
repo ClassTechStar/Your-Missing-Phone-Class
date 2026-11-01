@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 标记 JS 可用：淡入的隐藏样式仅在 JS 可用时生效，脚本缺失时内容照常显示，避免整页空白 -->
+    <script>document.documentElement.classList.add('js');</script>
     <title>你缺失的那门手机课 — 从基础操作到数字生活掌控</title>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
@@ -37,8 +39,9 @@
         .lang-card:hover { transform: scale(1.03); }
         .toc-item { transition: all 0.2s ease; }
         .toc-item:hover { padding-left: 1.25rem; background-color: #EFF6FF; }
-        .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
-        .fade-in.visible { opacity: 1; transform: translateY(0); }
+        /* 仅在 JS 可用时才隐藏淡入元素；否则内容直接可见 */
+        .js .fade-in { opacity: 0; transform: translateY(20px); transition: all 0.6s ease; }
+        .js .fade-in.visible { opacity: 1; transform: translateY(0); }
         .part-badge {
             display: inline-block;
             padding: 2px 10px;
@@ -1084,7 +1087,64 @@
                     <p class="text-sm text-gray-600">Curso Digital v1.4</p>
                 </a>
 
-'ru': 'Русский', 'it': 'Italiano',
+    <script>
+        /* 移动端菜单展开/收起 */
+        (function () {
+            var btn = document.getElementById('mobile-menu-btn');
+            var menu = document.getElementById('mobile-menu');
+            if (!btn || !menu) return;
+            btn.addEventListener('click', function () {
+                menu.classList.toggle('hidden');
+            });
+            menu.querySelectorAll('a').forEach(function (link) {
+                link.addEventListener('click', function () {
+                    menu.classList.add('hidden');
+                });
+            });
+        })();
+
+        /* 滚动淡入：元素进入视口后加上 .visible；不支持 IntersectionObserver 时直接显示 */
+        (function () {
+            var els = Array.prototype.slice.call(document.querySelectorAll('.fade-in'));
+            if (!els.length) return;
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(function (el) { el.classList.add('visible'); });
+                return;
+            }
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.05 });
+            els.forEach(function (el) { observer.observe(el); });
+        })();
+
+        /* 导航栏滚动阴影 */
+        (function () {
+            var navbar = document.getElementById('navbar');
+            if (!navbar) return;
+            var onScroll = function () {
+                navbar.classList.toggle('shadow-md', window.scrollY > 50);
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+
+        /* 检测浏览器语言，标记并推荐对应的 v1.8 版本 */
+        (function() {
+            var CODE_MAP = {
+                'zh-cn': 'zh-CN', 'zh-hans': 'zh-CN', 'zh': 'zh-CN',
+                'zh-tw': 'zh-TW', 'zh-hant': 'zh-TW', 'zh-hk': 'yue',
+                'en': 'en', 'ko': 'ko', 'ja': 'ja', 'ru': 'ru', 'it': 'it',
+                'pt': 'pt', 'pt-br': 'pt', 'es': 'es', 'fr': 'fr', 'de': 'de',
+                'ar': 'ar', 'he': 'he', 'th': 'th', 'id': 'id', 'ms': 'ms', 'el': 'el'
+            };
+            var NAME_MAP = {
+                'zh-CN': '简体中文', 'zh-TW': '繁體中文', 'yue': '粵語', 'en': 'English',
+                'ko': '한국어', 'ja': '日本語', 'ru': 'Русский', 'it': 'Italiano',
                 'pt': 'Português', 'es': 'Español', 'fr': 'Français', 'de': 'Deutsch',
                 'ar': 'العربية', 'he': 'עברית', 'th': 'ภาษาไทย', 'id': 'Bahasa Indonesia',
                 'ms': 'Bahasa Melayu', 'el': 'Ελληνικά'
