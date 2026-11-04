@@ -1,5 +1,7 @@
 # 你缺失的那门手机课
 
+![Version](https://img.shields.io/badge/version-v1.8-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-84%20章·18.1%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
+
 面向普通人的手机使用指南。84 章、11 篇，从看懂手机硬件参数讲到用 AI 工具做出自己的第一个 App。
 
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>
@@ -8,6 +10,35 @@
 - **Android 应用**：19 种语言各有独立 APK，见 [apk-v1.8-r2 Release](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/apk-v1.8-r2)（书名统一版，versionCode 2 可覆盖旧包）
 
 内容与代码采用 CC BY-NC-SA 4.0 许可。
+
+## 系统架构
+
+一条流水线，多端交付，全程可校验：
+
+```text
+Markdown 源稿（source/，逐章）
+        │
+        ▼  bookkit build（manifest/languages.json 单一数据源）
+19 种语言单文件 HTML（v1.8/，每语言一个，离线自足）
+        ├──▶ XeLaTeX 排版 ──▶ 5 个 Release 共 93 本 PDF（latex/）
+        ├──▶ aapt2 / d8 / apksigner ──▶ 19 个 Android APK（Release：apk-v1.8-r2）
+        ├──▶ PWA：sw.js 精准缓存，断网可读（manifest.webmanifest）
+        ├──▶ 章节自测题库（quiz/，zh-CN + ja，gen_quiz.py 自动生成）
+        └──▶ MCP Server（mcp/server.py）──▶ Claude 等 AI 客户端直查全书结构/全文
+```
+
+**质量门（全部自动化，0 error / 0 warn）**：
+
+- `bookkit lint --all-versions`：结构、章节锚点、目录、版本串、lang/RTL、NUL、残留字、覆盖率
+- `bookkit check --claims`：README / index.html 的每一处"宣称数字与链接" ↔ 真实内容逐条比对
+- `bookkit build --verify`：构建产物与已发布成品逐章比对
+- `web_smoke.py`：20 个页面 console 零报错 + 锚点解析 + h3 计数
+- 多语言逐节点对齐审计：译文与 zh-CN 源稿按位置 1:1 校验后发布
+
+## 参赛材料
+
+详见 [docs/competition/](docs/competition/)：[项目说明书](docs/competition/项目说明书.md)、
+[答辩演示脚本](docs/competition/答辩演示脚本.md)、[数据与证据](docs/competition/数据与证据.md)。
 
 ---
 
@@ -61,7 +92,7 @@
 
 ## PDF 下载
 
-XeLaTeX 排版，带目录和书签，四个版本共 74 本，全部免费。
+XeLaTeX 排版，带目录和书签，五个 Release 共 93 本（17 + 19 × 4），全部免费。
 
 | 版本 | Release | 内容 |
 |------|---------|------|

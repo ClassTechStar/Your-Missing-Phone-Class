@@ -9,6 +9,33 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     <link rel="manifest" href="manifest.webmanifest">
+    <meta name="description" content="《你缺失的那门手机课》：84 章 · 18.1 万字的开源手机素养教材，19 种语言（含 RTL），PWA 离线阅读 / Android APK / LaTeX PDF / 章节自测 / MCP Server。全民数字素养与反诈教育开源项目。">
+    <meta name="theme-color" content="#165DFF">
+    <meta property="og:type" content="book">
+    <meta property="og:site_name" content="你缺失的那门手机课">
+    <meta property="og:title" content="你缺失的那门手机课 — 84 章 · 19 种语言的开源手机素养教材">
+    <meta property="og:description" content="从认识硬件到用 AI 做出第一个 App：84 章 · 18.1 万字 · 19 种语言（含 RTL）· PWA 离线 · APK · LaTeX PDF · 自动化质检 0 错误。开源免费。">
+    <meta property="og:image" content="icons/icon-512.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="你缺失的那门手机课 — 84 章 · 19 语言开源教材">
+    <meta name="twitter:description" content="从认识硬件到用 AI 做出第一个 App：19 种语言 · PWA 离线 · APK · PDF · 自动化质检 0 错误。">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Book",
+      "name": "你缺失的那门手机课",
+      "alternateName": "Your Missing Phone Class",
+      "description": "面向普通人的开源手机素养教材：84 章、18.1 万字，覆盖硬件、安全、生活场景与 AI 编程实战，已翻译为 19 种语言。",
+      "inLanguage": ["zh-CN","zh-TW","yue","en","ko","ja","ru","it","pt","es","fr","de","ar","he","th","id","ms","el","lzh"],
+      "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+      "author": {"@type": "Organization", "name": "ClassTechStar"},
+      "url": "https://github.com/ClassTechStar/Your-Missing-Phone-Class",
+      "isAccessibleForFree": true
+    }
+    </script>
+    <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
@@ -333,10 +360,11 @@
                 <a href="#about" class="text-gray-600 hover:text-primary transition-colors">关于本书</a>
                 <a href="#contents" class="text-gray-600 hover:text-primary transition-colors">目录</a>
                 <a href="#languages" class="text-gray-600 hover:text-primary transition-colors">多语言版本</a>
+                <a href="#engineering" class="text-gray-600 hover:text-primary transition-colors">工程与质量</a>
                 <button data-lg-toggle class="lg-toggle-btn" title="液态玻璃效果（开/关）" aria-label="切换液态玻璃效果" aria-pressed="true">
                     <i class="fas fa-droplet lg-toggle-icon" aria-hidden="true"></i>
                 </button>
-                <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" class="flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
+                <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" rel="noopener" class="flex items-center gap-1 text-gray-600 hover:text-primary transition-colors">
                     <i class="fab fa-github"></i> GitHub
                 </a>
             </div>
@@ -348,7 +376,8 @@
             <a href="#about" class="block py-2 text-gray-600 hover:text-primary">关于本书</a>
             <a href="#contents" class="block py-2 text-gray-600 hover:text-primary">目录</a>
             <a href="#languages" class="block py-2 text-gray-600 hover:text-primary">多语言版本</a>
-            <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" class="block py-2 text-gray-600 hover:text-primary">
+            <a href="#engineering" class="block py-2 text-gray-600 hover:text-primary">工程与质量</a>
+            <a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" rel="noopener" class="block py-2 text-gray-600 hover:text-primary">
                 <i class="fab fa-github"></i> GitHub
             </a>
             <button data-lg-toggle class="lg-toggle-link" title="液态玻璃效果（开/关）" aria-label="切换液态玻璃效果" aria-pressed="true">
@@ -1009,11 +1038,72 @@
         </div>
     </section>
 
+    <section id="engineering" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-10 fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">工程实现与质量保障</h2>
+                <p class="text-gray-500">一本会"自我检查"的书：单一数据源驱动，19 种语言由同一条流水线生成与校验</p>
+                <div class="flex flex-wrap justify-center gap-2 mt-5 text-xs">
+                    <span class="px-3 py-1 rounded-full bg-blue-50 text-blue-700 font-semibold">18.1 万字正文</span>
+                    <span class="px-3 py-1 rounded-full bg-indigo-50 text-indigo-700 font-semibold">84 个内容区块 × 19 语言</span>
+                    <span class="px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 font-semibold">218 道自测题（中文/日语）</span>
+                    <span class="px-3 py-1 rounded-full bg-amber-50 text-amber-700 font-semibold">bookkit 质检 0 error / 0 warn</span>
+                </div>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="card bg-light rounded-2xl p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center text-blue-600 mb-4"><i class="fas fa-database"></i></div>
+                    <h3 class="font-bold text-dark mb-2">单一数据源流水线</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">manifest/languages.json 是唯一真值：语言元数据、检查等级、期望区块数全在其中，<code class="text-xs">bookkit build</code> 一键生成 19 种语言并与源稿逐章比对。</p>
+                </div>
+                <div class="card bg-light rounded-2xl p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-emerald-100 rounded-xl flex items-center justify-center text-emerald-600 mb-4"><i class="fas fa-shield-halved"></i></div>
+                    <h3 class="font-bold text-dark mb-2">全量自动化质检</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed"><code class="text-xs">bookkit lint/check</code> 覆盖结构、锚点、目录、版本串、lang/RTL、NUL、残留字与"宣称值↔真实内容"一致性，当前 <strong class="text-emerald-600">0 error / 0 warn</strong>。</p>
+                </div>
+                <div class="card bg-light rounded-2xl p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-purple-100 rounded-xl flex items-center justify-center text-purple-600 mb-4"><i class="fas fa-robot"></i></div>
+                    <h3 class="font-bold text-dark mb-2">AI 就绪：MCP Server</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">零依赖 stdio JSON-RPC 服务器提供 5 个工具（list_parts / list_chapters / get_chapter / search / stats），Claude 等 AI 客户端可直接查询全书结构与全文。</p>
+                </div>
+                <div class="card bg-light rounded-2xl p-6 border border-gray-100">
+                    <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center text-amber-600 mb-4"><i class="fas fa-layer-group"></i></div>
+                    <h3 class="font-bold text-dark mb-2">一次构建 · 多端交付</h3>
+                    <p class="text-sm text-gray-500 leading-relaxed">同一源稿产出：单文件 HTML（每语言一个）· PWA 离线 · 19 个 Android APK · XeLaTeX 排版 PDF · 逐章 Markdown 源稿与 API。</p>
+                </div>
+            </div>
+            <div class="bg-light rounded-2xl p-6 border border-gray-100 fade-in">
+                <h3 class="font-bold text-dark mb-4 text-center"><i class="fas fa-universal-access text-primary mr-2"></i>无障碍与包容设计</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3 text-center text-sm">
+                    <div class="bg-white rounded-xl px-2 py-3 border border-gray-100"><i class="fas fa-volume-high text-primary mb-1"></i><p class="text-gray-600">全文 TTS 朗读</p></div>
+                    <div class="bg-white rounded-xl px-2 py-3 border border-gray-100"><i class="fas fa-right-left text-primary mb-1"></i><p class="text-gray-600">阿拉伯语 / 希伯来语 RTL 排版</p></div>
+                    <div class="bg-white rounded-xl px-2 py-3 border border-gray-100"><i class="fas fa-magnifying-glass-plus text-primary mb-1"></i><p class="text-gray-600">全文无级字号调节</p></div>
+                    <div class="bg-white rounded-xl px-2 py-3 border border-gray-100"><i class="fas fa-moon text-primary mb-1"></i><p class="text-gray-600">深色模式</p></div>
+                    <div class="bg-white rounded-xl px-2 py-3 border border-gray-100"><i class="fas fa-wifi text-primary mb-1"></i><p class="text-gray-600">PWA 断网可读</p></div>
+                    <div class="bg-white rounded-xl px-2 py-3 border border-gray-100"><i class="fas fa-heart text-primary mb-1"></i><p class="text-gray-600">第 27 章长辈适配专题</p></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="languages" class="py-20 bg-white">
         <div class="container mx-auto px-4">
             <div class="text-center mb-16 fade-in">
                 <h2 class="text-3xl md:text-4xl font-bold text-dark mb-4">多语言版本</h2>
                 <p class="text-gray-500">让全世界的人都能读懂这门课</p>
+            <div class="max-w-4xl mx-auto mb-10 bg-gradient-to-br from-blue-50 to-indigo-50 border border-blue-100 rounded-2xl p-6 fade-in">
+                <h3 class="font-bold text-dark mb-2"><i class="fas fa-language text-primary mr-2"></i>For international judges — quick orientation in English</h3>
+                <p class="text-sm text-gray-600 leading-relaxed">
+                    This open-source project is a complete digital-literacy textbook for smartphone beginners:
+                    <strong>84 chapters (~180k Chinese characters)</strong> covering hardware basics, account &amp; anti-fraud safety,
+                    everyday scenarios, and building your first Android/iOS app with AI assistance — fully translated into
+                    <strong>19 languages</strong> (including right-to-left Arabic and Hebrew), each a single self-contained
+                    offline-ready HTML file. One Markdown source drives all 19 editions through an automated pipeline
+                    (<code>bookkit</code>) with structural QA — currently <strong>0 lint errors</strong> — plus PWA offline reading,
+                    19 signed Android APKs, 5 XeLaTeX PDF releases, an auto-generated quiz bank, and an MCP server so AI
+                    assistants can query the book directly. <a href="v1.8/en.html" class="text-primary font-semibold hover:underline">Open the English edition →</a>
+                </p>
+            </div>
             </div>
 
             <div id="lang-recommend" class="hidden max-w-3xl mx-auto mb-10 rounded-2xl border border-primary/20 bg-primary/5 px-6 py-5 text-center">
@@ -1443,5 +1533,41 @@
         }
     </script>
 
-</body>
+<footer class="bg-dark text-gray-400 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                    <div class="flex items-center gap-2 mb-3">
+                        <i class="fas fa-mobile-alt text-primary text-xl"></i>
+                        <span class="font-bold text-white">你缺失的那门手机课</span>
+                    </div>
+                    <p class="text-sm leading-relaxed">开源免费的全民手机素养教材：84 章 · 18.1 万字 · 19 种语言。从认识硬件到用 AI 做出第一个 App。</p>
+                    <p class="text-xs mt-3">内容与代码采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" class="text-blue-300 hover:underline">CC BY-NC-SA 4.0</a> 许可。</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-sm">阅读与下载</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="v1.8/zh-CN.html" class="hover:text-blue-300 transition-colors">在线阅读（v1.8 · 19 语言）</a></li>
+                        <li><a href="v1.9/zh-CN.html" class="hover:text-blue-300 transition-colors">v1.9 预览（中文先行）</a></li>
+                        <li><a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/latex-pdf-v1.8-20261028" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">PDF 下载（XeLaTeX 排版）</a></li>
+                        <li><a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/apk-v1.8-r2" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">Android APK（19 语言）</a></li>
+                        <li><a href="quiz.html" class="hover:text-blue-300 transition-colors">章节自测</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-semibold mb-3 text-sm">工程与社区</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors"><i class="fab fa-github mr-1"></i> GitHub 仓库</a></li>
+                        <li><a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/issues" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">问题反馈（Issues）</a></li>
+                        <li><a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/tree/main/docs/competition" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">项目说明书 / 参赛材料</a></li>
+                        <li><a href="https://github.com/ClassTechStar/Your-Missing-Phone-Class/tree/main/mcp" target="_blank" rel="noopener" class="hover:text-blue-300 transition-colors">MCP Server（AI 直查全书）</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-xs text-gray-500">
+                <p>© 2026 ClassTechStar · 开源免费 · 用 bookkit 流水线构建 · 愿每一位长辈都能安心用上智能手机</p>
+            </div>
+        </div>
+    </footer>
+    </body>
 </html>
