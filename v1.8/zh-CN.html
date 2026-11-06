@@ -1530,18 +1530,21 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
         if (window.RS) RS.set('liquidGlass', !off);
         return !off;
       };
-      var btn = document.getElementById('quick-glass');
       var sync = function () {
+        var btn = document.getElementById('quick-glass');
+        if (!btn) return;
         var off = root.classList.contains('lg-off');
-        if (btn) {
-          btn.classList.toggle('lg-btn-off', off);
-          btn.setAttribute('aria-pressed', String(!off));
-          var ic = btn.querySelector('i');
-          if (ic) ic.className = off ? 'fas fa-droplet-slash' : 'fas fa-droplet';
-        }
+        btn.classList.toggle('lg-btn-off', off);
+        btn.setAttribute('aria-pressed', String(!off));
+        var ic = btn.querySelector('i');
+        if (ic) ic.className = off ? 'fas fa-droplet-slash' : 'fas fa-droplet';
       };
-      if (btn) btn.addEventListener('click', function () { window.__lgToggle(); sync(); });
-      sync();
+      /* bundle 在 head 执行时 #quick-glass 尚未存在——绑定延迟到 DOMContentLoaded */
+      document.addEventListener('DOMContentLoaded', function () {
+        var btn = document.getElementById('quick-glass');
+        if (btn) btn.addEventListener('click', function () { window.__lgToggle(); sync(); });
+        sync();
+      });
       try {
         if (CSS.supports('backdrop-filter', 'url(#lg-displace)')) root.classList.add('lg-adv');
       } catch (e) { /* 增强层不可用则停留在毛玻璃 */ }
@@ -12011,6 +12014,11 @@ func scheduleDailyReminder() {
   <li>定期给照片、微信聊天记录做备份了吗？</li>
   <li>记住防骗口诀：不轻信、不泄露、不转账、不贪心、不急躁。</li>
 </ol>
+<h4 class="text-lg font-semibold mt-4 mb-2">友情链接 · 两门同样「缺失」的课：</h4>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>《你缺失的那门计算机课》</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — 中文开源计算机通识读本，本书的理念正是从它长出来的。</li>
+  <li><strong>计算机教育中缺失的那一课（The Missing Semester of Your CS Education · MIT）</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — MIT 的免费课，补的是 shell、Git、命令行这些学校不教、日常却天天要用的东西。</li>
+</ul>
                 </div>
 
                 <!-- 附录E -->
@@ -12425,6 +12433,15 @@ func scheduleDailyReminder() {
         </button>
     </div>
 
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+      <defs>
+        <filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
+          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+          <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
+          <feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/>
+        </filter>
+      </defs>
+    </svg>
     <!-- 快捷键面板 -->
     <div id="shortcuts-overlay" class="search-overlay" role="dialog" aria-label="键盘快捷键">
         <div class="search-panel" style="max-width:480px">
@@ -13835,14 +13852,5 @@ func scheduleDailyReminder() {
             });
         }
     </script>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
-      <defs>
-        <filter id="lg-displace" x="-20%" y="-20%" width="140%" height="140%" color-interpolation-filters="sRGB">
-          <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
-          <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
-          <feDisplacementMap in="SourceGraphic" in2="soft" scale="9" xChannelSelector="R" yChannelSelector="G"/>
-        </filter>
-      </defs>
-    </svg>
-    </body>
+</body>
 </html>

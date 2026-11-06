@@ -28,3 +28,8 @@ kind: appendix
 3. Apakah otentikasi dua faktor untuk akun penting sudah diaktifkan?
 4. Apakah Anda secara teratur mencadangkan foto dan riwayat chat WeChat?
 5. Ingat mantra anti-penipuan: jangan mudah percaya, jangan bocorkan informasi, jangan transfer uang, jangan serakah, jangan terburu-buru.
+
+#### Tautan bermanfaat · Dua "kursus yang hilang" lainnya：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Buku pengantar komputasi open source berbahasa Tionghoa; ide buku ini berawal darinya.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Kursus gratis dari MIT tentang shell, Git, dan baris perintah — hal yang tidak diajarkan di sekolah tetapi dipakai setiap hari.

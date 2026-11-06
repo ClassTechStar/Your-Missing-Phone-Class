@@ -28,3 +28,8 @@ kind: appendix
 3. ロック画面のパスワードは設定しましたか？
 4. 「デバイスを探す」はオンにしましたか？
 5. 重要アカウントの二要素認証はオンにしましたか？
+
+#### 関連リンク · もう二つの「足りない授業」：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — 中国語のオープンソース計算機入門。本書の構想はここから生まれました。
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — MIT の無料講義。シェルや Git、コマンドラインなど、学校では教えないが毎日使うことを扱います。

@@ -28,3 +28,8 @@ kind: appendix
 3. 重要賬號之雙重認證開矣乎？
 4. 定期給照片、微信聊天記錄做備份矣乎？
 5. 記防騙口訣：不輕信、不泄露、不轉賬、不貪心、不急躁。
+
+#### 友誼之鏈 · 二課亦闕：
+
+- <strong>《爾所闕之算學課》</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — 華文開源算學通識之書，此編之義，實自彼而生。
+- <strong>算學教育所闕之一課（The Missing Semester of Your CS Education · MIT）</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — 麻省理工之免費課，補 shell、Git、命令行之學，庠序不授而日用不離者也。

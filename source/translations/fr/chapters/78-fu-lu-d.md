@@ -28,3 +28,8 @@ after_part: fu-lu
 3. Avez-vous activé l'authentification à deux facteurs sur les comptes importants ?
 4. Faites-vous régulièrement des sauvegardes de vos photos et historiques WeChat ?
 5. Retenez la formule anti-arnaque : ne pas croire aveuglément, ne pas divulguer, ne pas transférer d'argent, ne pas être cupide, ne pas paniquer.
+
+#### Liens utiles · Deux autres « cours manquants »：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Une introduction libre à l'informatique en chinois : c'est d'elle qu'est née l'idée de ce livre.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Un cours gratuit du MIT sur le shell, Git et la ligne de commande — ce que l'école n'enseigne pas mais qu'on utilise chaque jour.

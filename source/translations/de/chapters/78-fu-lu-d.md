@@ -28,3 +28,8 @@ after_part: fu-lu
 3. Überarbeitung des Kapitels "Phishing und Social-Engineering-Schutz".
 4. Ausbau des Kapitels zu Bedienungshilfen (VoiceOver/TalkBack vollständige Bedienung, Vergrößerung und Farbfilter, KI-Bildbeschreibung, Live-Untertitel, RTT/TTY-Anruf-Doppelkanal).
 5. Mit dem "Rolle-Hintergrund-Aufgabe-Einschränkung"-Ansatz wurde der Prompt-Rahmen neu geschrieben und um drei vollständige Szenario-Beispiele ergänzt.
+
+#### Weiterführende Links · Zwei weitere „fehlende“ Kurse：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Eine offene chinesische Einführung in die Informatik — aus ihrer Idee ist dieses Buch entstanden.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Ein kostenloser MIT-Kurs über Shell, Git und Kommandozeile: Dinge, die die Schule nicht lehrt, die man aber täglich braucht.

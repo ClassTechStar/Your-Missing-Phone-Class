@@ -28,3 +28,8 @@ after_part: fu-lu
 3. 重要帳號嘅雙重認證開咗未？
 4. 定期畀相、微信聊天記錄做備份咗未？
 5. 記住防騙口訣：唔輕信、唔洩露、唔轉賬、唔貪心、唔急躁。
+
+#### 友情連結 · 兩堂同樣「缺失」嘅課：
+
+- <strong>《你缺失嗰門電腦課》</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — 中文開源電腦通識讀本，呢本書嘅理念正係由佢度生出嚟。
+- <strong>電腦教育中缺咗嗰課（The Missing Semester of Your CS Education · MIT）</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — MIT 嘅免費課，補嘅係 shell、Git、命令列呢啲學校唔教、但日日都要用嘅嘢。

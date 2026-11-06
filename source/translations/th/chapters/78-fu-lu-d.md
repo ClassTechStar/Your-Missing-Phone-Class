@@ -28,3 +28,8 @@ after_part: fu-lu
 3. การยืนยันสองขั้นของบัญชีสำคัญเปิดหรือยัง?
 4. สำรองรูปภาพและประวัติแชท WeChat เป็นประจำหรือยัง?
 5. จำสูตรกันโจรไว้: ไม่เชื่อง่าย ไม่เปิดเผย ไม่โอนเงิน ไม่โลภ ไม่รีบร้อน
+
+#### ลิงก์ที่แนะนำ · อีกสอง «วิชาที่ขาดหาย»：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — หนังสือคอมพิวเตอร์เบื้องต้นแบบโอเพนซอร์สภาษาจีน ซึ่งเป็นจุดเริ่มต้นของหนังสือเล่มนี้
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — คอร์สฟรีจาก MIT เกี่ยวกับเชลล์ Git และบรรทัดคำสั่ง — สิ่งที่โรงเรียนไม่สอนแต่ใช้ทุกวัน

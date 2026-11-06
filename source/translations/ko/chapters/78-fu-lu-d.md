@@ -28,3 +28,8 @@ after_part: fu-lu
 3. 중요 계정의 2단계 인증을 켰나요?
 4. 사진, 위챗 채팅 기록을 정기적으로 백업하고 있나요?
 5. 사기 방지 구호 기억: 경솔하게 믿지 마세요, 유출하지 마세요, 이체하지 마세요, 욕심내지 마세요, 조급해하지 마세요.
+
+#### 추천 링크 · 또 다른 두 개의 "빠진" 수업：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — 중국어 오픈소스 컴퓨터 교양서로, 이 책의 아이디어가 여기서 나왔습니다.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — MIT의 무료 강의. 학교에서 잘 가르치지 않지만 매일 쓰는 셸·Git·명령줄을 다룹니다.

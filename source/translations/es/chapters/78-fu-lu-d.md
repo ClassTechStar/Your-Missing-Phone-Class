@@ -28,3 +28,8 @@ after_part: fu-lu
 3. : leen PDF, anotan documentos y leen textos largos en el móvil. Con pantalla interna de casi 7.5 pulgadas abierta, ver PDF A4 sin zoom es una experiencia transformadora.
 4. Viajeros frecuentes/profesionales en reuniones
 5. : no quieren llevar tablet pero encuentran el móvil pequeno. Plegable horizontal abierto para ver PPT, firmar contratos, correo en doble pantalla — mucho más eficiente que un móvil convencional.
+
+#### Enlaces recomendados · Otros dos "cursos que faltaban"：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Una introducción abierta a la informática en chino: de ahí nació la idea de este libro.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Un curso gratuito del MIT sobre la terminal, Git y la línea de comandos: cosas que no se enseñan en la escuela pero se usan a diario.

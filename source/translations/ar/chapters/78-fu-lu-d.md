@@ -28,3 +28,8 @@ after_part: fu-lu
 3. إعادة كتابة "فتح الصندوق" وحماية هجمات الهندسة الاجتماعية.
 4. توسيع فصل إمكانية الوصول (VoiceOver/TalkBack كامل، تكبير ومرشحات ألوان، وصف صور بالذكاء الاصطناعي، ترجمة فورية، RTT/TTY مزدوج القناة).
 5. إعادة كتابة إطار المطالبات بمنهجية "الدور-الخلفية-المهمة-القيود"، مع 3 حالات كاملة.
+
+#### روابط مفيدة · دورسان آخران «ناقصان»：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — كتاب مفتوح المصدر بالصينية عن أساسيات الحوسبة، ومن فكرته نشأ هذا الكتاب.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — دورة مجانية من MIT عن الطرفية و Git وسطر الأوامر: أشياء لا تُدرَّس في المدرسة لكنها تُستخدم كل يوم.

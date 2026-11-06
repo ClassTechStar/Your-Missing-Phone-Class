@@ -28,3 +28,8 @@ kind: appendix
 3. Terima kasih kerana membaca "kelas telefon" ini sehingga selesai! Semasa penulisan, kami merujuk kepada banyak manual rasmi pengeluar, buku panduan pengguna, dan artikel sains teknologi awam untuk memastikan ketepatan maklumat.
 4. Perkembangan teknologi berubah dengan pesat, kandungan buku ini berdasarkan teknologi dan produk utama semasa penulisan. Apabila anda membacanya, mungkin sudah ada fungsi dan produk baharu yang muncul. Harapnya idea dan kaedah yang diajarkan dalam buku ini dapat membantu anda menghadapi lebih banyak peranti digital baharu pada masa hadapan dengan yakin.
 5. Poin kemas kini versi 1.6
+
+#### Pautan berguna · Dua lagi "kursus yang tertinggal"：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Buku pengenalan pengkomputeran sumber terbuka dalam bahasa Cina; idea buku ini berasal daripadanya.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Kursus percuma daripada MIT tentang shell, Git dan baris arahan — perkara yang tidak diajar di sekolah tetapi digunakan setiap hari.

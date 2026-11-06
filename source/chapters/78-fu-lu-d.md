@@ -28,3 +28,8 @@ kind: appendix
 3. 重要账号的双重认证开了吗？
 4. 定期给照片、微信聊天记录做备份了吗？
 5. 记住防骗口诀：不轻信、不泄露、不转账、不贪心、不急躁。
+
+#### 友情链接 · 两门同样「缺失」的课：
+
+- <strong>《你缺失的那门计算机课》</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — 中文开源计算机通识读本，本书的理念正是从它长出来的。
+- <strong>计算机教育中缺失的那一课（The Missing Semester of Your CS Education · MIT）</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — MIT 的免费课，补的是 shell、Git、命令行这些学校不教、日常却天天要用的东西。

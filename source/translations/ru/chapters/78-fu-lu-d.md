@@ -28,3 +28,8 @@ after_part: fu-lu
 3. Включена ли двухфакторная аутентификация для важных аккаунтов?
 4. Делаете ли вы регулярные резервные копии фотографий и переписок WeChat?
 5. Запомните правило защиты от мошенников: не доверяйте вслепую, не разглашайте данные, не переводите деньги, не жадничайте, не торопитесь.
+
+#### Полезные ссылки · Два других «пропущенных» курса：
+
+- <strong>An open-source Chinese primer on computing</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — Открытый китайский учебник по информатике — идея этой книги выросла из него.
+- <strong>The Missing Semester of Your CS Education (MIT)</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — Бесплатный курс MIT о командной строке, shell и Git: в школе этому не учат, а без него не обходится ни один день.

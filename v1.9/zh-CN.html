@@ -8249,7 +8249,27 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li>工具每三个月迭代一次，方法论每三年才进化一次——学方法论，不学操作</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 先把「vibe coding」这个词说准</h4>
+<p class="mb-3">这两年「vibe coding」被用得太宽，几乎成了「用 AI 写代码」的同义词。回到源头反而更清楚：Andrej Karpathy 提出它时，指的是「完全不看代码、只凭感觉和提示词往前走」。而 2026 年专业圈里更常用的词是 agentic engineering——同样用编码智能体，但人要定义任务、给验收标准、逐块审 diff，不降低质量门槛。工具是同一个，区别在于人有没有在把关。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>vibe coding 的适用边界</strong>：一次性原型、周末小项目、探索性脚本。代码明天就可能丢掉，看不看无所谓。</li>
+  <li><strong>agentic engineering 的适用边界</strong>：要维护、要上线、要给别人接手的代码。智能体负责跑循环，人负责规格与验收。</li>
+  <li><strong>别把两者对立起来</strong>：同一个 Claude Code 或 Cursor，既能做 vibe coding 也能做 agentic engineering；决定性质的是你的检查强度，不是产品名。</li>
+  <li><strong>一句判断标准</strong>：如果这段代码出错会让别人付代价，就必须有人读过它——哪怕只是审 diff。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">用法</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">谁定义范围</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">谁检查代码</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型场景</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vibe coding</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一句模糊的想法</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">基本不检查</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">原型、演示、一次性脚本</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">agentic engineering</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人写规格与验收标准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人逐块审 diff 并跑测试</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">真实项目、重构、上线功能</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">本章后面所有方法，都按 agentic engineering 的前提来讲：AI 放大你的能力，不替代你的判断。</p></div>
+</div>
 
                 <!-- 第38章 -->
 
@@ -8357,7 +8377,17 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li>Harness Engineering：能力 = 模型 × Harness，把 AI 当"天才实习生"来管理环境</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 2026 年补上的两条实践</h4>
+<p class="mb-3">五大原则今天仍然成立，但两年实践里长出了两条更硬的习惯，值得和原原则一起记。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>规格先行（spec-first）</strong>：动手前先把「做什么、不做什么、怎样算做完」写成几行文字。很多工具已支持 prompt → spec → tasks → code → PR 的规格驱动流程，先确认规格再让它写代码，返工最少。</li>
+  <li><strong>验证信号（verification signal）</strong>：智能体没有可运行的测试时，就只是「很自信的自动补全」。给它一条能自己跑的命令（单测、构建、类型检查），它才能自我纠错。</li>
+  <li><strong>把原则写进项目文件</strong>：CLAUDE.md、AGENTS.md 这类项目记忆文件，让「精准修改、不越界、先简单」从口头约定变成每次会话自动加载的约束。</li>
+  <li><strong>拒绝「顺手优化」</strong>：越界修改至今仍是智能体最常见的翻车点：你让它改一个按钮，它顺手重构了半个模块。规格里要明确写「只改以下文件」。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">判断一次协作是否健康，不看生成了多少行，看你能不能用一条命令证明它没弄坏东西。</p></div>
+</div>
 
                 <!-- 第39章 -->
 
@@ -8453,7 +8483,29 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li>五个实践要点：同步更新、@引用、短对话、给原信息、定期清理</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 上下文工程的 2026 形态</h4>
+<p class="mb-3">上下文不再只是「对话框里贴多少代码」。主流工具已经把上下文做成了可配置的一层基础设施。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>项目记忆文件</strong>：CLAUDE.md / AGENTS.md 放在仓库根目录，写清技术栈、目录约定、测试命令、禁止操作。多个工具开始共用同一份约定，换工具不用重写。</li>
+  <li><strong>MCP 成为通用接口</strong>：Model Context Protocol 让智能体以统一方式接外部系统：问题跟踪、数据库、文档、部署流水线。接什么由你决定，也意味着权限边界要由你划。</li>
+  <li><strong>子代理与上下文隔离</strong>：把「读代码库」「跑测试」「查文档」分给子代理，各自只带回结论，主上下文就不会被几千行日志挤爆。</li>
+  <li><strong>上下文预算</strong>：塞满不等于更好。无关文件会稀释注意力；给路径、给符号名、给失败信息，比整仓投喂更有效。</li>
+  <li><strong>会话可复现</strong>：把关键决策写回文件而不是只留在对话里。下次开新会话，智能体仍能接着同一套约定工作。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要传给智能体的东西</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">比它更有用的写法</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">改哪里</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">明确文件路径 + 函数名，附一句「其余文件不要动」</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">怎样算对</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一条可执行的测试或构建命令</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">项目约定</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">写进 AGENTS.md，而不是每次重新口述</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">失败现场</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完整报错原文 + 你已尝试过什么</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 
                 <!-- 第40章 -->
 
@@ -8558,13 +8610,24 @@ Step 5: 数据导出</pre>
   <li>完整推演模板：五要素 → 拆解 → PRD → 给指令，四步走</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 把想法写成智能体能执行的规格</h4>
+<p class="mb-3">需求工程在 2026 年有了比较固定的落地形态：先产出人能读的规格，再让智能体按规格拆任务、写代码、交 PR。规格不是长文档，是几段没有歧义的约束。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>五步链路</strong>：prompt → spec（功能与边界）→ tasks（可独立验收的小步）→ code → diff/PR。每一步都留给人一个确认点。</li>
+  <li><strong>写验收标准，不写实现步骤</strong>：「点击保存后刷新仍能看到这条记录」比「用 SharedPreferences 存」更好——前者允许智能体自己选方案。</li>
+  <li><strong>显式列出非目标</strong>：「本次不做登录、不改数据库结构、不加依赖」。非目标能挡住绝大多数越界修改。</li>
+  <li><strong>给失败留出口</strong>：规格里写清「遇到 XX 情况先停下来问我」，比事后回滚便宜得多。</li>
+  <li><strong>小步提交</strong>：一个任务一个可审查的改动。任务切得越小，diff 越容易读，出错越容易定位。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">规格写得好不好，有个简单检验：把它交给另一个人（或另一个工具），做出来的东西是否差不多。</p></div>
+</div>
 
                 <!-- 第41章 -->
 
                 <div id="di-si-shi-yi-zhang" class="mb-10 content-section">
 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第四十一章：2026年AI编程工具全景</h3>
-<p class="chapter-intro mb-4">先打个预防针：本章是 2026 年 8 月工具生态的一张"快照"。半年后它就会过时——这恰恰是本章想教会你的第一课。本章的目的不是教你"用哪个工具"，而是帮你建立"如何选择工具"的判断框架。当你理解了不同工具的设计哲学，你就能在任何时候做出适合自己的选择。</p>
+<p class="chapter-intro mb-4">先打个预防针：本章是 2026 年工具生态的一张"快照"。半年后它就会过时——这恰恰是本章想教会你的第一课。本章的目的不是教你"用哪个工具"，而是帮你建立"如何选择工具"的判断框架。当你理解了不同工具的设计哲学，你就能在任何时候做出适合自己的选择。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">一、三大流派与选择框架</h4>
 <p class="mb-2">2026 年的 AI 编程工具大致分为三大流派，每种流派背后是一种不同的设计哲学。先看这张全景图：</p>
 <div class="overflow-x-auto">
@@ -8618,7 +8681,31 @@ Step 5: 数据导出</pre>
   <li>工具每三个月迭代一次：学方法论的人换工具只需几天适应期</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 把快照日期更新到 2026 年 11 月</h4>
+<p class="mb-3">本章原文是 2026 年 8 月的生态快照。四个月后格局没变的是「按工作方式分派系」，变的是每个派系里多了哪些玩家、以及它们开始共享同一套约定（MCP、AGENTS.md、子代理、hooks）。下面这张表按「它跑在哪、你多久看它一眼」来分，比按品牌记更耐用。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>终端智能体</strong>：Claude Code（先规划后动手、hooks、子代理、SDK、MCP 生态最全，默认谨慎）、Codex CLI（先声明自治等级、在沙箱里跑、开源可读）、Gemini CLI（上下文窗口大、个人账号有免费额度）、Aider（老牌、模型无关、每次改动自动 git commit）。适合脚本化、SSH、CI。</li>
+  <li><strong>编辑器内智能体</strong>：Cursor（编辑器与智能体一体，也提供 CLI 与云端智能体）、GitHub Copilot（早已不止补全，有 agent mode、CLI 与 PR 集成，团队里最好推）。diff 就出现在你平时读代码的地方。</li>
+  <li><strong>开源 / 自带模型</strong>：Cline 一类提供显式 Plan/Act 切换与本地模型接入，胜在透明、可控成本；代价是自己配置。</li>
+  <li><strong>云端并行智能体</strong>：把一串定义清楚的任务丢进隔离环境并行跑，回来的是 diff 与测试结果。适合「工单队列」，不适合边想边做。</li>
+  <li><strong>不必只选一个</strong>：2026 年老手的常见做法是混用：谨慎的规划型做重构，快而窄的做小改动，各自绑到不同仓库。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">维度</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">该问自己的问题</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">通常指向</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">运行位置</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要在终端/脚本/CI 里跑吗？</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">终端智能体</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自治程度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">希望它先问，还是画好边界后自己跑？</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">谨慎型 vs 沙箱型</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开放程度</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要读源码、自托管、自带密钥吗？</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Aider / Cline 一类</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要不要接 MCP、hooks、项目记忆文件？</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Code / Cursor / Copilot</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">成本形状</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">固定订阅、套餐额度，还是按 token 计费？</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">先算一个月，再决定</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">工具三个月一换，方法论三年一变。把时间花在「怎么验收」上，比花在「哪个最强」上划算。</p></div>
+</div>
 
                 <!-- 第42章 -->
 
@@ -8962,7 +9049,17 @@ if __name__ == "__main__":
   <li>省钱五招：缓存命中、分级路由、限制输出、Batch API、监控用量</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 模型、API 与成本的三件新事</h4>
+<p class="mb-3">调 API 的姿势这两年变化不大，但围绕模型的调用方式多了三层，值得补在本章后面。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>工具调用（tool use / function calling）</strong>：模型不只是回文本，还能请求执行你登记过的函数。MCP 把这件事标准化了：一次实现，多个智能体都能用。</li>
+  <li><strong>本地模型确实可用了</strong>：在 Apple 芯片的 Mac 上，Xcode 26 已支持下载并运行本地模型；Ollama、LM Studio 一类工具也让「代码不出本机」成为可选项。代价是速度与能力，收益是隐私和零调用费。</li>
+  <li><strong>成本形状要看清</strong>：订阅制、套餐含额度、按 token 计费、本地算力，是四种完全不同的账。重度智能体会撞到额度上限，先用一个真实项目跑一周再决定档位。</li>
+  <li><strong>别把密钥交出去</strong>：API key 只放环境变量或密钥管理，不进仓库、不进提示词、不进截图。智能体有文件系统权限时尤其要检查。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">模型能力差距在缩小，「它能不能读到正确的上下文」反而成了效果分水岭——这又回到上一章的上下文工程。</p></div>
+</div>
 
                 <!-- 第43章 -->
 
@@ -9026,7 +9123,19 @@ if __name__ == "__main__":
   <li>上下文管理四招：锚定关键信息、总结-续接、一个对话一个任务、果断开新会话</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 对话之外的控制面：规划、钩子与无头模式</h4>
+<p class="mb-3">2026 年的智能体早已不只是「聊天窗口」。真正把它变成工程能力的是下面这几个开关。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>规划模式（plan mode / plan-then-build）</strong>：先让它只出计划不动文件，你确认后再执行。高风险重构默认开。</li>
+  <li><strong>钩子（hooks）</strong>：在特定事件前后自动跑命令：保存后格式化、提交前跑 lint、结束时跑测试。把 Check 从「你记得提醒」变成「必然发生」。</li>
+  <li><strong>子代理（subagents）</strong>：把调研、测试、审查分派出去，各自带独立上下文，只把结论送回主线程。</li>
+  <li><strong>工作树（worktree）</strong>：并行任务各用独立工作树，互不污染，改完再合并。</li>
+  <li><strong>无头模式（headless / -p）</strong>：非交互调用，便于写进脚本、定时任务与 CI 流水线；也是「智能体进流水线」的入口。</li>
+  <li><strong>会话历史与附件</strong>：把报错原文、相关文件、上一次的失败尝试一起给，比反复重述有效。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">这些开关的共同点：把「人的注意力」用在决策点，把「重复的检查」交给自动化。</p></div>
+</div>
 
                 <!-- 第44章 -->
 
@@ -9145,7 +9254,17 @@ Record { id, amount, type, category, note, date }
   <li>每一步都遵循"指令-验证-新对话"循环</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 从 0 到 1 时补的三个工程习惯</h4>
+<p class="mb-3">完整项目最容易翻车的不是写不出代码，是改着改着失去控制。把下面三件事加进流程，返工会少很多。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>先立一条可跑的验证命令</strong>：哪怕是 <code>npm test</code> 或 <code>./gradlew test</code>。有了它，智能体才会在改错时自己发现；没有它，你只能肉眼验收。</li>
+  <li><strong>沙箱与权限边界</strong>：声明自治等级、限定可写目录、禁止高危命令。数据库迁移、删除操作、对外发布，全部保留人工确认。</li>
+  <li><strong>一个改动一个提交</strong>：让每次提交对应一个能读懂的意图。出问题时 <code>git revert</code> 一行就能回滚，比在一大坨 diff 里挑代码块快得多。</li>
+  <li><strong>把任务切成队列</strong>：定义清楚的小任务可以并行交给云端智能体；边想边做的探索性任务留给自己手里的终端智能体。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">原型阶段靠速度，项目阶段靠可回滚。什么时候切过去，是这一章真正要练的判断。</p></div>
+</div>
 
                 <!-- 第45章 -->
 
@@ -9218,7 +9337,30 @@ Record { id, amount, type, category, note, date }
   <li>四大陷阱：信任（测试验证）、膨胀（砍掉多余）、理解（给足细节）、上下文（写入记忆文件）</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 2026 年的验收清单</h4>
+<p class="mb-3">「让 AI 写的代码可靠」在 2026 年已经有一套相当稳定的共识，可以当成每收工前的固定动作。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>给测试，再让它写</strong>：没有验证信号的智能体只是自信的自动补全。测试、类型检查、构建，至少给一条。</li>
+  <li><strong>像经理一样审 diff</strong>：按文件读改动，问「这处改动和任务有关吗」。越界修改、顺手重构、悄悄改依赖，都在这步被抓出来。</li>
+  <li><strong>盯住高风险动作</strong>：数据库迁移、鉴权逻辑、支付与隐私相关代码、 destructive shell 命令，必须人工过一遍。</li>
+  <li><strong>留意隐藏成本</strong>：后台并行任务、超大上下文、循环重试都会在账单上显形。给长任务设上限。</li>
+  <li><strong>让检查进 CI</strong>：把 lint、测试、构建挂到流水线；钩子负责本地，CI 负责团队，两道都要有。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">风险</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型表现</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">最低成本的防线</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">越界修改</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">改一个按钮却动了三个模块</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">规格里写「只改以下文件」+ 审 diff</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">权限过大</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能体能跑任意命令</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">沙箱 + 高危动作人工确认</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">成本失控</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">并行任务与重试堆出账单</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">额度上限 + 单任务超时</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">未被发现的回归</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">看起来能跑，边界全错</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一条可运行的测试</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">密钥外泄</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">key 出现在日志或提交里</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">环境变量 + 提交前扫描</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 
                 <!-- 第46章 -->
 
@@ -9259,7 +9401,30 @@ Record { id, amount, type, category, note, date }
   <li>持续学习四招：读源头、边做边学、不过度追新、建个人知识库</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 从「会用工具」到 agentic engineering</h4>
+<p class="mb-3">原章讲了进阶方向，这里补上 2026 年真正拉开差距的那层：不是更熟某个产品，而是能不能把智能体组织成一套可治理的工作流。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>别选「唯一赢家」，按任务分派</strong>：规划型智能体做高风险重构，快而窄的做已界定清楚的小改动，云端并行智能体吃掉工单队列。它们可以同时在跑，各自绑定不同工作树。</li>
+  <li><strong>把约定沉淀成文件</strong>：AGENTS.md / CLAUDE.md 写技术栈、目录、测试命令、禁止操作；多个工具开始共用同一份。换工具时这套资产不丢。</li>
+  <li><strong>规格 / 执行 / 验收三者分离</strong>：人写规格与验收标准，智能体跑执行循环，CI 做机器验收。三件事不放在同一个角色里，质量才稳。</li>
+  <li><strong>建立可观测性</strong>：每个任务留下 diff、测试输出与决策记录。出问题能回放，而不是「它上次好像说过」。</li>
+  <li><strong>治理比能力更重要</strong>：谁能给智能体接什么数据源、谁能让它跑什么命令、哪些动作必须人工批准——团队规模一大，这些规则比模型选型更决定成败。</li>
+  <li><strong>能力模型换一种算法</strong>：过去比「我记住多少 API」，现在比「我能否把模糊问题拆成可验收的任务、并判断结果对不对」。读代码的能力反而更值钱了。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">阶段</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主要动作</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">人把注意力放在</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">入门</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">按提示词让工具生成代码</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">说清要什么</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">熟练</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">规格 + 项目记忆 + 可运行测试</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">验收与边界</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">进阶</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多智能体分工 + 钩子 + CI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">流程设计与治理</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">工具会换，但这三层注意力不会白练：定义问题、设计验证、判断结果。</p></div>
+</div>
 
                 <!-- 第47章 -->
 
@@ -9314,7 +9479,30 @@ Record { id, amount, type, category, note, date }
   <li>Vibe Coding Community. (2026). Community-curated skills and best practices for AI-assisted programming.</li>
   <li>Spec-Driven Development (SDD) methodology. (2026). Emerging practices in specification-first AI programming.</li>
 </ol>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 速查页补三张小表</h4>
+<p class="mb-3">原速查卡之外，再补三张 2026 年最常用的对照表，打印出来贴在显示器边上也够用。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>选型一句话</strong>：要脚本化与 CI → 终端智能体；要边看 diff 边改 → 编辑器内智能体；要自带模型与可控成本 → 开源方案；要并行吃工单 → 云端智能体。</li>
+  <li><strong>收工四问</strong>：改动是否越界？有没有测试跑过？高风险动作人工看了吗？这次提交能不能一句话说清？</li>
+  <li><strong>最容易忽略的一条</strong>：给智能体一条「能自己跑起来发现错了」的命令，比多写三页提示词都有用。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">术语</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">中文说法</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话区别</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">vibe coding</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">氛围编程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">完全不看代码，凭感觉推进；适合一次性原型</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">coding agent</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编码智能体</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">能读仓库、改多文件、跑命令并迭代的工具</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">agentic engineering</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能体工程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">人定规格与验收、智能体执行，不降低质量门槛</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MCP</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">模型上下文协议</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">智能体接外部系统的统一接口</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AGENTS.md / CLAUDE.md</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">项目记忆文件</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把项目约定写进仓库，每次会话自动生效</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">hook</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">钩子</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">在特定事件前后自动执行的命令</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">worktree</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">工作树</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">并行任务各用一份独立目录，互不干扰</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 
             </section>
 
@@ -9401,7 +9589,17 @@ Record { id, amount, type, category, note, date }
   <li>2026 标准技术栈：Kotlin + Compose + MVVM + Room + Retrofit + Gradle + Android Studio</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 2026 年的安卓开发版图</h4>
+<p class="mb-3">三大平台的分工已经稳定：安卓主打开放与设备覆盖，iOS 主打生态一致性，鸿蒙主打全场景协同。安卓这一侧，新项目基本以 Kotlin + Jetpack Compose 为起点，传统的 XML 布局主要用于维护老项目。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>语言与界面</strong>：Kotlin 是第一语言；Compose 声明式 UI 是新项目默认。Java 与 XML 仍要会读，因为存量代码大量存在。</li>
+  <li><strong>构建链</strong>：Gradle + Android Gradle Plugin（AGP），依赖版本建议用 Compose BOM 统一管，别逐个手写版本号。</li>
+  <li><strong>最低版本</strong>：新项目常见 Minimum SDK 为 API 26（Android 8.0），覆盖绝大多数在用设备；选更低就要为兼容多写分支。</li>
+  <li><strong>分发</strong>：Google Play 与国内各应用商店并行，签名、包名、渠道包要一开始就规划好。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">版本会变，但「语言 → 界面 → 构建 → 分发」这条主线不会变。遇到新版本，先问它改的是这条线上的哪一环。</p></div>
+</div>
 
                 <!-- 第49章 -->
 
@@ -9411,7 +9609,7 @@ Record { id, amount, type, category, note, date }
 <h4 class="text-lg font-semibold mt-4 mb-2">一、安装 Android Studio</h4>
 <p class="mb-2">Android Studio 是谷歌官方的集成开发环境（IDE），免费，功能全家桶：写代码、看界面预览、调试、打包全在里面。安装四步：</p>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
-  <li>打开官网 developer.android.com/studio，下载最新稳定版（版本代号按动物名字母序轮换，2026 年 8 月已是 Rabbit 一代，Windows/Mac/Linux 都有）；</li>
+  <li>打开官网 developer.android.com/studio，下载最新稳定版（IDE 代号按动物名字母序轮换，别照着旧教程里的代号找安装包，以官网当前稳定版为准；Windows/Mac/Linux 都有）；</li>
   <li>运行安装包，一路"下一步"——安装向导会自动带上 <strong>Android SDK</strong> 和模拟器组件；</li>
   <li>首次启动时按提示下载 SDK 组件（默认勾选就好，可能需要几分钟和几个 GB 的空间）；</li>
   <li>完成后你会看到欢迎页——恭喜，"厨房"搭好了。</li>
@@ -9518,7 +9716,30 @@ Record { id, amount, type, category, note, date }
   <li>开发日常 = 改代码 → Run → 看效果，循环往复</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 版本怎么对齐（比记住代号更重要）</h4>
+<p class="mb-3">IDE 的代号年年换，照着旧教程装最容易踩空。真正要对齐的是「IDE ↔ AGP ↔ Gradle ↔ SDK ↔ Kotlin/Compose 插件」这条链。安装时以官网当前稳定版为准，不要按某篇教程里的动物代号去找安装包。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>Compose Compiler 已换插件</strong>：现在用 <code>org.jetbrains.kotlin.plugin.compose</code>，由 Kotlin 侧统一管理，不再单独配 <code>kotlinCompilerExtensionVersion</code>。</li>
+  <li><strong>用 BOM 管 Compose 版本</strong>：在依赖里声明 <code>platform("androidx.compose:compose-bom:2026.09.00")</code>，其余 Compose 依赖不再写版本号，避免互相打架。</li>
+  <li><strong>Kotlin 与编译器要配套</strong>：Compose 1.13 系列要求 kotlinc 2.2；升级 IDE 时顺手确认 Gradle 与 Kotlin 插件也在兼容区间。</li>
+  <li><strong>SDK 与模拟器</strong>：首次启动向导会装 SDK 与系统镜像；磁盘留足空间，CPU 开启虚拟化。老机器优先用真机调试。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">组件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2026-11 可核对的稳定值</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪确认</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose UI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.12.1（1.13.0 处于 beta）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Material 3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.4.0（1.5.0 处于 alpha）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose BOM</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2026.09.00</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose Compiler 设置文档</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.x（1.13 要求 2.2）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 发布说明</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimum SDK</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">示例项目用 API 26</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建项目向导</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">把这张表当索引，不要当答案：动手前打开官网看一眼当前稳定版，比背版本号可靠。</p></div>
+</div>
 
                 <!-- 第50章 -->
 
@@ -9666,7 +9887,18 @@ val bigBills = bills.filter { it > 50 }.sorted()
   <li>20% 语法干 80% 的活：先会用，再精通</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · Kotlin 2.x 值得留意的变化</h4>
+<p class="mb-3">Kotlin 语法主干没变，但编译器换了代（K2），几处体验差异值得知道，尤其是从旧教程抄代码时。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>K2 编译器</strong>：编译更快、类型推断与错误信息更清楚；旧项目升级后个别边界写法可能报新警告，按提示补显式类型即可。</li>
+  <li><strong>Compose 插件由 Kotlin 管</strong>：<code>org.jetbrains.kotlin.plugin.compose</code> 与 Kotlin 版本绑定，别再手动指定编译器扩展版本。</li>
+  <li><strong>显式类型是好习惯</strong>：空安全之外，给公开函数写明返回类型、给回调写明参数类型，既方便读也方便智能体改。</li>
+  <li><strong>协程仍是异步主线</strong>：suspend + CoroutineScope 的组合没变；注意在 ViewModel 作用域里启动，别用全局作用域。</li>
+  <li><strong>与 ArkTS 的对照</strong>：后面鸿蒙篇的 ArkTS 同样强调显式类型与严格模式；两边都学的话，这点是共通的。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">语言版本升级通常不动语法，动的是「编译器愿意容忍什么」。报错变多往往是变严格了，不是你写错了。</p></div>
+</div>
 
                 <!-- 第51章 -->
 
@@ -9833,7 +10065,18 @@ fun AnimatedBox() {
   <li>主题用 Material 3 + 动态取色，深色模式一次配置全局生效</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · Compose 依赖与预览的实用细节</h4>
+<p class="mb-3">写界面之前，先把依赖与预览这两件小事理顺，后面会省掉大量「为什么预览不出」的排查。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>BOM 一次声明</strong>：<code>implementation(platform("androidx.compose:compose-bom:2026.09.00"))</code>，之后 <code>material3</code>、<code>ui</code>、<code>ui-tooling-preview</code> 都不写版本。</li>
+  <li><strong>稳定版与预览版分开</strong>：稳定线是 Compose UI 1.12.1 / Material3 1.4.0；1.13 与 1.5 仍在 beta/alpha。学习项目一律用稳定版。</li>
+  <li><strong>预览要单独加依赖</strong>：<code>debugImplementation</code> 加 <code>ui-tooling</code>，<code>implementation</code> 加 <code>ui-tooling-preview</code>，预览窗才渲染得出来。</li>
+  <li><strong>状态驱动刷新</strong>：记住「状态变 → 重组 → 界面更新」。不要在 Composable 里直接改业务对象，把状态放在 ViewModel 或 remember 里。</li>
+  <li><strong>预览与真机都要看</strong>：预览快但不等同真机；深色模式、大字体、横屏这三类问题只在真机上暴露。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">Compose 的难点不是控件 API，是「状态放在哪」。把这一句想清楚，大部分界面 bug 会自己消失。</p></div>
+</div>
 
                 <!-- 第52章 -->
 
@@ -9916,7 +10159,18 @@ navController.popBackStack()              // 返回上一页</pre>
   <li>多页面用 Navigation Compose：NavHost + composable 路由</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · Compose 时代还要不要学四大组件</h4>
+<p class="mb-3">要，但着眼点变了：界面用 Compose 写，四大组件与生命周期仍然决定「你的代码什么时候活着」。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>Activity 仍是大门</strong>：旋转屏幕、切后台、被系统回收，走的是 Activity 生命周期；Compose 只是挂在它上面的界面。</li>
+  <li><strong>用生命周期感知的状态</strong>：ViewModel 承载业务状态，界面重组不会丢数据；<code>collectAsStateWithLifecycle</code> 一类 API 让订阅跟着生命周期走，避免后台泄漏。</li>
+  <li><strong>配置变更</strong>：旋转导致重建时，remember 会丢、ViewModel 不会。要跨重建保留的东西放 ViewModel 或 savedStateHandle。</li>
+  <li><strong>权限请求</strong>：危险权限仍在运行时申请，只是从 Activity 回调换成 <code>rememberLauncherForActivityResult</code>。</li>
+  <li><strong>Service / BroadcastReceiver / ContentProvider</strong>：后台任务、系统广播、跨应用数据共享仍靠它们；新代码多用 WorkManager 处理可延迟的后台工作。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">框架换了界面层，系统层没换。生命周期不过时，只是入口从回调变成了可组合函数里的副作用 API。</p></div>
+</div>
 
                 <!-- 第53章 -->
 
@@ -10059,7 +10313,18 @@ viewModelScope.launch {
   <li>协程 = 不阻塞界面的等待；viewModelScope 是页面专属工作间</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 数据与网络：把「版本」和「边界」分开记</h4>
+<p class="mb-3">Room、Retrofit、DataStore 的具体版本号年年变，但三者各自负责什么、以及哪些边界必须处理，是不变的。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>三层各有分工</strong>：Room 管结构化本地数据，DataStore 管小键值设置，Retrofit 管 HTTP。别用 SharedPreferences 存列表，也别用 Room 存一个开关。</li>
+  <li><strong>网络请求的四个必答</strong>：无网络怎么办、超时怎么办、返回码非 2xx 怎么办、解析失败怎么办。示例教程常只写成功路径，真实项目四问都要答。</li>
+  <li><strong>别在主线程做 I/O</strong>：协程 + 合适的 Dispatcher；数据库与网络操作放 IO，界面状态更新回主线程。</li>
+  <li><strong>敏感数据</strong>：token 用加密存储，别写进普通 DataStore 或日志；接口地址不要硬编码在代码里。</li>
+  <li><strong>先跑通离线可用</strong>：缓存一层之后，地铁里没网也能看到上次的数据——这是「能用」和「好用」的分界。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">升级依赖时先升 BOM 与 Kotlin 插件，再看编译报错；单独升某一个库最容易踩版本不匹配。</p></div>
+</div>
 
                 <!-- 第54章 -->
 
@@ -10218,7 +10483,17 @@ suspend fun deleteById(id: Long)
   <li>三层验收（功能/边界/架构）+ 进阶挑战（月度筛选、分类饼图）</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 记账本项目的三个加固点</h4>
+<p class="mb-3">本地版项目跑通之后，加下面三件事，它才像一个能用的 App，而不是一次演示。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>给金额一个明确类型</strong>：浮点数算钱会积累误差。用分为单位的整数或 BigDecimal，展示层再格式化。</li>
+  <li><strong>状态与持久化分层</strong>：界面只读 ViewModel 暴露的状态；写入走仓库层。这样以后把本地存储换成云端，界面不用改。</li>
+  <li><strong>补一条可跑的测试</strong>：至少覆盖「新增一笔 → 合计变化」与「删除后为空」两条。项目再小，有测试就有回归防线。</li>
+  <li><strong>空状态也要设计</strong>：第一次打开没有任何记录时，给一句引导而不是一片空白。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">小项目的价值不在功能多，在分层清楚。分层练熟了，后面天气项目加网络只是多接一层。</p></div>
+</div>
 
                 <!-- 第55章 -->
 
@@ -10346,7 +10621,18 @@ fun WeatherContent(data: WeatherResponse) {
   <li>断网、空输入、城市不存在——错误处理是联网 App 的及格线</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 天气项目的真实工程问题</h4>
+<p class="mb-3">接上网络之后，出错的种类一下子变多。把下面几种情况显式处理，比多画一个图标更有用。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>权限与明文流量</strong>：确认 <code>INTERNET</code> 权限；开发环境若用 http 接口，注意系统默认限制明文流量，正式接口一律 https。</li>
+  <li><strong>四种失败态</strong>：无网络、超时、限流（429）、服务错误（5xx）分别给不同提示，别统一弹「获取失败」。</li>
+  <li><strong>单位与地区</strong>：摄氏/华氏、时区、语言 locale 要显式处理；示例里写死城市没问题，但代码里要留出参数。</li>
+  <li><strong>密钥别进仓库</strong>：API key 放 local.properties 或环境变量，并在 .gitignore 里排除。</li>
+  <li><strong>缓存上一次成功结果</strong>：请求失败时展示旧数据并标注「数据来自 X 分钟前」，比白屏友好得多。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">网络项目的验收标准应该包括「断网时是什么样」。只测成功路径，等于没测。</p></div>
+</div>
 
                 <!-- 第56章 -->
 
@@ -10451,7 +10737,19 @@ fun normalValueParses() {
   <li>上架六步：注册 → 素材 → 上传 AAB → 数据安全表 → 审核 → 上架</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 上架前把发布链路走一遍</h4>
+<p class="mb-3">从「能跑」到「能装到别人手机上」，中间是签名、包格式、商店后台与审核四道关。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>发布格式</strong>：Google Play 现在以 Android App Bundle（.aab）提交，由商店按设备生成分包；本地调试仍常用 .apk。</li>
+  <li><strong>签名密钥要保管好</strong>：上传密钥丢失会非常麻烦。密钥库文件、口令、恢复流程都要离线备份，绝不提交到仓库。</li>
+  <li><strong>商店资料</strong>：应用图标、截图、隐私政策链接、分级问卷、数据安全表单，缺一项就卡在提交前。</li>
+  <li><strong>真机与多尺寸测试</strong>：至少一台真机 + 一个小屏/大屏模拟器；深色模式、大字体、无网络各过一遍。</li>
+  <li><strong>审核常见退回原因</strong>：权限与用途不符、崩溃、占位内容未清、隐私政策不可访问。提交前按这张清单自查。</li>
+  <li><strong>先小范围发布</strong>：用内部测试 / 封闭测试轨道放给少量用户，确认没问题再全量。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">把发布当成一次可重复的流水线：版本号、构建命令、签名位置、上传步骤写进文档，下次不用重新翻聊天记录。</p></div>
+</div>
 
                 <!-- 第57章 -->
 
@@ -10560,7 +10858,19 @@ if (ActivityCompat.checkSelfPermission(this,
   <li>AI 辅助四场景：写码、查资料、写测试、改 bug；方法论见第七篇（第37-47章）</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 现代架构的最小可用形态</h4>
+<p class="mb-3">权限、通知与架构这一章，2026 年可以收敛成一条清晰的单向数据流，够用且不容易写乱。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>UI → ViewModel → Repository → 数据源</strong>：事件往下走，状态往上流。界面不直接碰数据库或网络。</li>
+  <li><strong>单向数据流</strong>：用 StateFlow / Compose State 暴露一个不可变 UI 状态，界面只负责渲染与发事件。</li>
+  <li><strong>权限按场景申请</strong>：用到时再申请，并解释用途；被永久拒绝要给「去设置里开启」的入口。</li>
+  <li><strong>通知渠道</strong>：Android 8.0 起必须建通知渠道；按类别分渠道，让用户能只关掉某一类，而不是一刀切。</li>
+  <li><strong>后台工作</strong>：可延迟的任务交给 WorkManager，别自己常驻 Service。</li>
+  <li><strong>依赖注入</strong>：项目变大后引入 Hilt/Koin 之类，把构造交给容器，测试时能替换假实现。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">架构不是越多层越好；能让你「改一处不牵连三处」就够了。</p></div>
+</div>
 
                 <!-- 第58章 -->
 
@@ -10611,7 +10921,30 @@ if (ActivityCompat.checkSelfPermission(this,
   <li>AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.</li>
   <li>Square. (2026). Retrofit Documentation. github.com/square/retrofit.</li>
 </ol>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 版本与命令速查（2026-11 核对）</h4>
+<p class="mb-3">原章速查之外，补一张版本对照页，专治「教程里的版本号和我对不上」。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>依赖写法</strong>：先声明 BOM，其余 Compose 依赖不写版本号；升级只改 BOM 一处。</li>
+  <li><strong>升级顺序</strong>：IDE → AGP/Gradle → Kotlin 插件 → BOM → 逐个解决编译警告。</li>
+  <li><strong>排错第一步</strong>：版本对不上时先做一次 Clean + Sync，再去看报错；八成是缓存或插件不匹配。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要查的东西</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">当前稳定值 / 做法</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">官方出处</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose UI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.12.1（1.13.0 beta）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Material 3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.4.0（1.5.0 alpha）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose BOM</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2026.09.00</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose Compiler 设置文档</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose 编译器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 插件 org.jetbrains.kotlin.plugin.compose</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose Compiler 文档</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.x（1.13 要求 2.2）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 发布说明</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimum SDK</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">示例 API 26</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建项目向导</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发布包</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Google Play 用 .aab</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Play Console</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 
             </section>
 
@@ -10697,7 +11030,18 @@ if (ActivityCompat.checkSelfPermission(this,
   <li>2026 标准技术栈：Swift 6 + SwiftUI + MVVM + SwiftData + URLSession + Xcode</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 2026 年的苹果开发基线</h4>
+<p class="mb-3">苹果把版本号在 26 年统一成了「年份式」：iOS 26、iPadOS 26、watchOS 26、macOS Tahoe 26、visionOS 26，Xcode 26 一次带上全部 SDK。刚接触时最容易被「26」绕晕，记住 SDK 版本 ≠ 你的 App 最低支持版本就行。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>Xcode 26 与 Swift 6.2</strong>：官方发布说明写明 Xcode 26 包含 Swift 6.2 及各平台 26 SDK，并要求 macOS Sequoia 15.6 或更高版本。</li>
+  <li><strong>部署目标才是关键</strong>：装了 iOS 26 SDK 不代表 App 只能跑在 iOS 26 上。Xcode 26 支持在 iOS 15 及更高版本上做设备调试，最低支持哪一代由你在项目里设置的 deployment target 决定。</li>
+  <li><strong>硬件前提</strong>：原生 iOS 开发绕不开一台 Mac；先把 macOS 版本与 Xcode 版本的对应关系确认好，再装环境。</li>
+  <li><strong>账号与分发</strong>：免费 Apple 账户可做基础开发与本机调试；要上架 App Store 需要加入开发者计划，具体费用与条款以官网为准。</li>
+  <li><strong>Xcode 里也有 AI 了</strong>：Xcode 26 内置编程智能，支持接入 ChatGPT 与 Claude 账户，也能用 API 密钥接任何兼容「聊天完成 API」的供应商，或在 Apple 芯片的 Mac 上下载并运行本地模型。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">看到教程里写「Xcode 16」「iOS 18」不必紧张：主线流程一致，差异只在 SDK 能力与界面细节，按当前稳定版对照即可。</p></div>
+</div>
 
                 <!-- 第60章 -->
 
@@ -10804,7 +11148,19 @@ if (ActivityCompat.checkSelfPermission(this,
   <li>开发日常 = 改代码 → ⌘R → 看效果，循环往复</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 装好 Xcode 26 之后值得先做的事</h4>
+<p class="mb-3">环境一装好，先把下面几项试一遍，比急着建项目更能省后面的时间。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>确认版本对应</strong>：Xcode 26 需 macOS Sequoia 15.6+；Mac 系统版本不够时，先升系统再装 Xcode，别反过来。</li>
+  <li><strong>试一次编程智能</strong>：在编码助手里用自然语言问「这个视图为什么没刷新」，观察它自动收集上下文的过程。可以用 API key 接自己的模型供应商，也可以在 Apple 芯片 Mac 上跑本地模型，代码不出本机。</li>
+  <li><strong>建一个最小项目跑通两端</strong>：Simulator 跑一遍，真机再跑一遍。签名在 Xcode 里用个人账户即可先跑通，不必一上来就研究证书体系。</li>
+  <li><strong>认识 Icon Composer</strong>：Xcode 26 新增的图标工具，能从单个设计调整深度与动态光照，并分别预览 Default / Dark / Mono 三种渲染模式。图标不用再靠外部工具拼一堆尺寸。</li>
+  <li><strong>打开编译缓存</strong>：切换分支或清理构建后的重编译明显更快；大项目里这点体感很强。</li>
+  <li><strong>#Playground 宏</strong>：在预览面板里做交互式调试与代码探索，适合把一小段不确定的逻辑单独拿出来试。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">模拟器再快也替代不了真机：性能、相机、权限弹窗、后台行为，这几类只在设备上准。</p></div>
+</div>
 
                 <!-- 第61章 -->
 
@@ -10919,7 +11275,18 @@ struct Record: Identifiable { ... }   // 遵守协议 = 承诺实现其要求</p
   <li>20% 语法干 80% 的活：先会用，再精通</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · Swift 6.2 值得单独记的几点</h4>
+<p class="mb-3">Swift 语法主干稳定，但这几年苹果在并发安全上持续收紧。从旧教程抄代码时报的错，多半出在这里。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>并发检查更严格</strong>：Swift 6 系列把「跨 actor 边界传递可变状态」从警告推向错误。遇到这类报错，先想清楚数据归谁所有，再决定加 Sendable 约束还是改成不可变值。</li>
+  <li><strong>用调试工具看并发</strong>：Xcode 26 提供 Swift 并发调试：能跟踪跨异步函数与线程的执行，清晰展示任务属性与关系。卡在 actor / Task 上时用它能少猜很多。</li>
+  <li><strong>@Observable 与 SwiftData</strong>：新项目里状态观察与持久化多用这两个框架；旧的 ObservableObject / @Published 仍要会读，存量代码里到处都是。</li>
+  <li><strong>显式类型仍是好习惯</strong>：给公开 API 写明类型，既方便人读，也方便 Xcode 的编程智能与预测式补全给出更准的建议。</li>
+  <li><strong>写法差异别硬背</strong>：Swift 每年小版本都在调整语法糖；遇到不认识的写法，先看它属于「语言特性」还是「框架 API」，再去对应文档查。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">Xcode 26 的预测式代码补全跑在本地、能用到更多代码上下文。它是加速工具，不是判断工具——生成的内容仍要自己读懂。</p></div>
+</div>
 
                 <!-- 第62章 -->
 
@@ -11065,7 +11432,18 @@ struct ContentView: View {
   <li>#Preview 所见即所得；系统颜色自动适配深色模式；withAnimation 一行动效</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · SwiftUI 的调试工具链</h4>
+<p class="mb-3">声明式界面写起来快，难在「为什么这个视图重算了」。Xcode 26 补的几件工具正好对准这件事。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>SwiftUI 视图性能剖析</strong>：Xcode 26 的 Instruments 里可用 SwiftUI 相关剖析能力，定位「哪个视图因哪个状态被反复重建」。</li>
+  <li><strong>预览与真机并用</strong>：预览适合调布局，真机适合调性能与交互；大字体、深色模式、动态岛与横竖屏都要在设备上过一遍。</li>
+  <li><strong>状态归属先想清楚</strong>：一个状态该放在 @State、@Observable 对象还是 SwiftData 模型里，决定了视图重算范围。放错位置会出现「改一个字段整页闪」。</li>
+  <li><strong>用 #Preview 做排列组合</strong>：给同一视图写多个预览：浅色/深色、大字体、长文本、空数据。比手动切设置快得多。</li>
+  <li><strong>Processor Trace / CPU Counters</strong>：需要追性能瓶颈时，Xcode 26 提供 Processor Trace（捕捉每个函数调用）与 CPU Counters（识别瓶颈）；电池与散热看 Power Profiler。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">SwiftUI 的多数「玄学刷新」，最后都能归结到状态放错了地方，或是把派生值又存了一份。</p></div>
+</div>
 
                 <!-- 第63章 -->
 
@@ -11222,7 +11600,28 @@ struct MyApp: App {
   <li>List 是"国民列表"：分割线、滑动删除开箱即用</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 视图、状态与导航的现代写法</h4>
+<p class="mb-3">这一章的概念在 Swift 6.2 时代有了更统一的答案，可以整理成一张对照表。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>状态</strong>：本地小状态用 @State；跨视图共享的可观察模型用 @Observable；需要长期保存的结构化数据交给 SwiftData。</li>
+  <li><strong>导航</strong>：用基于值的导航（NavigationStack + 路径），把「当前在哪一页」变成可保存、可恢复的数据，深层链接也好接。</li>
+  <li><strong>派生值别另存</strong>：能由现有状态算出来的值就现算。存两份就必然要处理两份同步，这是最常见的 bug 来源。</li>
+  <li><strong>生命周期</strong>：注意 scenePhase 与后台恢复；界面重新出现时要能正确重建状态，而不是依赖「它一直没被销毁」。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">需求</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">优先选择</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要避免</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一个开关、一段输入</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@State</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">为了一个布尔值建全局模型</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">多个页面共享一份数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Observable 模型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">层层手动传参</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">需要持久化的记录</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SwiftData</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自己拼文件读写</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">页面跳转与返回</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NavigationStack + 路径</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">到处塞 isPresented 布尔值</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 
                 <!-- 第64章 -->
 
@@ -11384,7 +11783,18 @@ print(result.weather[0].description)   // "晴"</pre>
   <li>两条铁律：不阻塞主线程；正式产品必须 HTTPS（ATS）</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 数据与网络的四个现实问题</h4>
+<p class="mb-3">URLSession 与 SwiftData 的 API 不算难，难的是把失败、隐私与同步处理得像个正式产品。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>失败要分类</strong>：无网络、超时、鉴权失效、服务端错误分别处理；统一弹「加载失败」是最偷懒也最不友好的写法。</li>
+  <li><strong>缓存与离线</strong>：先展示上次成功的数据并标注时间，再后台刷新。全屏转圈等网络，体验上等于把风险转嫁给用户。</li>
+  <li><strong>隐私与权限</strong>：位置、照片、通知都要写清用途说明；申请时机放在用户真正要用该功能时。</li>
+  <li><strong>密钥与配置</strong>：接口地址、key 不要硬编码进源码或提交到仓库；用配置文件或环境变量并按环境区分。</li>
+  <li><strong>数据迁移要早想</strong>：SwiftData 模型一旦改字段，老用户的数据怎么办要在第一个版本就留余地。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">网络层最值钱的不是请求代码，是「失败时用户看到什么」的设计。</p></div>
+</div>
 
                 <!-- 第65章 -->
 
@@ -11547,7 +11957,17 @@ class RecordViewModel {
   <li>三层验收（功能/边界/架构）+ 进阶挑战（Swift Charts、iCloud 同步）</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 记账本项目：从演示到能用</h4>
+<p class="mb-3">本地版项目跑通之后，补下面几件事，它才经得起每天打开。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>金额用整数或 Decimal</strong>：浮点数算钱会出现 0.30000000000000004；以分为单位存整数，展示时再格式化。</li>
+  <li><strong>空状态与首屏引导</strong>：没有记录时给出明确提示与一个「记第一笔」的入口，别留白屏。</li>
+  <li><strong>加一条单元测试</strong>：覆盖「新增 → 合计变化」「删除 → 归零」两条。SwiftData 的持久化可用测试配置隔离。</li>
+  <li><strong>无障碍</strong>：给关键控件加辅助标签，支持动态字体；这一步花不了多久，却决定长辈能不能用。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">把界面、状态、持久化分成三层之后，以后把本地存储换成云同步，界面基本不用动。</p></div>
+</div>
 
                 <!-- 第66章 -->
 
@@ -11689,7 +12109,18 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
   <li>断网、空输入、城市不存在——错误处理是联网 App 的及格线</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 天气项目：把失败路径写完整</h4>
+<p class="mb-3">接上真实接口后，成功路径反而只占一半工作。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>四种失败分别提示</strong>：无网络、超时、限流、服务端错误——给出不同文案与「重试」入口。</li>
+  <li><strong>单位与地区</strong>：摄氏/华氏、时区、本地化格式显式处理，别把示例城市写死在业务逻辑里。</li>
+  <li><strong>缓存上次结果</strong>：请求失败时展示旧数据并标注时间，比白屏友好。</li>
+  <li><strong>定位权限的降级</strong>：用户拒绝定位时要能手动选城市，功能不能整个失效。</li>
+  <li><strong>真机验证</strong>：后台切回、弱网、飞行模式各试一次；模拟器对这些场景不敏感。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">一个项目的成熟度，看它在最差网络下是什么样子。</p></div>
+</div>
 
                 <!-- 第67章 -->
 
@@ -11791,7 +12222,19 @@ final class AmountTests: XCTestCase {
   <li>上架六步：注册 → 素材 → 上传 → 隐私问卷 → 审核 → 上架；TestFlight 先内测</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 上架链路与 Xcode 26 的新工具</h4>
+<p class="mb-3">从 Archive 到 App Store，中间是一串固定动作，顺序记清楚就不容易漏。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>先在 App Store Connect 建记录</strong>：应用名称、Bundle ID、类别、描述、截图、隐私政策要先有位置，构建才传得上去。</li>
+  <li><strong>签名与归档</strong>：用 Xcode 的自动签名先跑通；团队项目再切换到手动管理证书与描述文件。</li>
+  <li><strong>TestFlight 先小范围</strong>：上传构建后先给内部/外部测试员验证，收集崩溃与反馈，再提交审核。测试期规则以 Apple 官网为准。</li>
+  <li><strong>审核常见退回原因</strong>：崩溃、功能不完整、描述与实际不符、权限用途没写清、隐私政策链接打不开。</li>
+  <li><strong>构建号要管好</strong>：每次上传递增构建号，便于把崩溃日志对到具体版本。</li>
+  <li><strong>提交前用工具过一遍</strong>：Xcode 26 的 Processor Trace、Power Profiler、SwiftUI 剖析能帮你在提交前抓掉明显的性能与耗电问题。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">发布不是一次性动作：把版本号规则、归档步骤、上传与测试分组写进项目文档，下一版照着走就行。</p></div>
+</div>
 
                 <!-- 第68章 -->
 
@@ -11919,7 +12362,18 @@ func scheduleDailyReminder() {
   <li>AI 辅助四场景：写码、查资料、写测试、改 bug；方法论见第七篇（第37-47章）</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 权限、通知与现代架构的收束</h4>
+<p class="mb-3">进阶内容很多，落到项目里其实可以收敛成几条固定规则。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>单向数据流</strong>：界面只读状态、只发事件；数据存取放在独立的模型/服务层。</li>
+  <li><strong>权限按场景申请</strong>：用到时再申请，附上用途说明；被拒绝后给「去设置开启」的入口。</li>
+  <li><strong>通知要先问</strong>：第一次弹权限前先解释能收到什么，同意率与留存都会好很多。</li>
+  <li><strong>并发别绕开编译器的检查</strong>：Swift 6 系列的严格并发检查是为了帮你，不是障碍；优先改数据归属，而不是到处加逃逸口。</li>
+  <li><strong>隐私清单与第三方 SDK</strong>：上架前核对隐私清单与实际采集行为是否一致，第三方 SDK 也要算进去。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">架构的目标只有一句话：改一处，不牵连三处。做到这点就够用了。</p></div>
+</div>
 
                 <!-- 第69章 -->
 
@@ -11969,7 +12423,30 @@ func scheduleDailyReminder() {
   <li>Apple Inc. (2026). Human Interface Guidelines (HIG). developer.apple.com/design.</li>
   <li>Apple Inc. (2026). Xcode 27 Release Notes and App Distribution Guide.</li>
 </ol>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 版本速查（2026-11 核对）</h4>
+<p class="mb-3">补一张版本对照页，专治「教程版本与本机不一致」。数值以 Apple 官方发布说明为准。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>图标</strong>：Icon Composer：一份设计调深度与动态光照，预览 Default / Dark / Mono。</li>
+  <li><strong>调试</strong>：#Playground 宏、编译缓存、Processor Trace、SwiftUI 剖析、Swift 并发调试。</li>
+  <li><strong>升级顺序</strong>：先确认 macOS → 升 Xcode → 看发布说明里的 API 变更 → 处理编译警告 → 真机回归。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">项目</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">值 / 做法</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">出处</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">26（含 26.0.1 修订）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Swift</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6.2</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SDK</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS / iPadOS / tvOS / watchOS / macOS Tahoe / visionOS 26</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">macOS 要求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sequoia 15.6 或更高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设备调试</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 15 及更高版本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部署目标</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">项目里单独设置，不等于 SDK 版本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">项目设置</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">内置 AI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ChatGPT / Claude 账户、API 密钥、本地模型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
+</tbody>
+</table>
+</div>
+</div>
 
             </section>
 
@@ -12046,7 +12523,18 @@ func scheduleDailyReminder() {
   <li>学不学看三个判断题：目标用户、国产化需求、生态占位</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 把鸿蒙的版本坐标说清楚</h4>
+<p class="mb-3">鸿蒙这两年版本跳得快，最容易被「HarmonyOS 5 / NEXT / 6 / 7」和「API 18 / 20 / 26」两套编号绕晕。它们不是一回事：前者是面向用户的系统版本，后者是面向开发者的 API 版本。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>系统版本与 API 版本</strong>：华为官方升级适配指南写明：HarmonyOS 7.0 将面向所有 HarmonyOS NEXT 设备发布，对应 API 版本 26.0.0。看到「7.0」要能反应过来「API 26」。</li>
+  <li><strong>NEXT 意味着什么</strong>：不再兼容安卓 APK，应用以 HAP 包分发，运行时与工具链自成一套。这不是「换个皮肤」，是独立生态。</li>
+  <li><strong>全场景是主线</strong>：手机、平板、车机、手表、智慧屏共用一套分布式能力。写应用时从一开始就要想「同一份数据会在另一块屏幕上出现」。</li>
+  <li><strong>开发工具链</strong>：DevEco Studio 是 IDE，hvigor 是构建工具，hdc 是设备调试命令（相当于安卓的 adb），HAP 是应用包格式。</li>
+  <li><strong>版本升级是常态</strong>：官方建议随 DevEco Studio 升级同步升级命令行工具，让 CI 里构建出来的包与本地用同一套 SDK。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">学鸿蒙最大的成本不是语法，是接受「版本会频繁变」。养成先查官方版本说明的习惯，比记住某个版本号更有用。</p></div>
+</div>
 
                 <!-- 第71章 -->
                 <div id="di-qi-shi-yi-zhang" class="mb-10 content-section">
@@ -12123,7 +12611,32 @@ struct Index {
   <li>第一个应用 = @Entry + @Component + build() + @State，四个概念入门</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · DevEco Studio 与 SDK 的版本对齐</h4>
+<p class="mb-3">鸿蒙环境搭建最容易踩的坑是「IDE 装了新的，SDK 还是旧的」。下面这条对齐规则值得贴在显示器上。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>SDK 已经预置</strong>：官方文档说明：自 6.0.0(20) 起，DevEco Studio 预置了对应版本的 HarmonyOS SDK，重新构建时会自动使用。别再手动到处找 SDK 包。</li>
+  <li><strong>命令行工具同步升级</strong>：CI 或脚本构建用的命令行工具要升到与 DevEco Studio 相同版本，否则本地能编译、流水线里挂。</li>
+  <li><strong>三个版本字段</strong>：build-profile.json5 里的 <code>targetSdkVersion</code>（目标）、<code>compileSdkVersion</code>（编译）、<code>compatibleSdkVersion</code>（最早兼容）各管一件事。未显式配置时，升级 IDE 会自动把前两者更新到匹配的 SDK 版本。</li>
+  <li><strong>想兼容老设备就显式写</strong>：需要覆盖未升级系统的设备时，用 <code>compatibleSdkVersion</code> 指定最早兼容版本，并检查用到的新 API 是否有可用分支。</li>
+  <li><strong>升级后跑 API 变更助手</strong>：菜单 Tools &gt; API Change Assistant 能列出当前工程里行为发生变化或已废弃的 ArkTS / C API，并给出适配指引链接。</li>
+  <li><strong>新旧设备都要测</strong>：官方升级流程明确要求：在新旧两代设备上都做兼容性验证，通过后再发布到 AppGallery。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">升级步骤</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">做什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">漏了会怎样</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">升级 DevEco Studio，读 Changelogs</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用到已变更 API 却不知道</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">命令行工具升到同一版本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">CI 构建结果与本地不一致</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tools &gt; API Change Assistant 查变更</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编译报错或运行时行为悄悄变了</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新旧设备各跑一遍兼容性测试</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">老设备用户闪退</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重新打包发布到 AppGallery</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">商店里还是旧构建</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">华为官方提供了完整的「Upgrading to 26.0.0」升级适配指南，真要升级项目时按它走，不要凭印象改配置。</p></div>
+</div>
 
                 <!-- 第72章 -->
                 <div id="di-qi-shi-er-zhang" class="mb-10 content-section">
@@ -12198,7 +12711,19 @@ store.add('学 ArkTS')</pre>
   <li>约束带来的报错都是"提前的善意"，编译期比运行期友好</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · ArkTS 的严格类型：新版本最容易卡住的一关</h4>
+<p class="mb-3">从 TypeScript 过来的人，最容易低估 ArkTS 的严格程度。新版本普遍要求显式类型、禁止隐式推导，很多「JS 里能跑」的写法在这里会直接编译失败。下面这几条按官方与新版教程的口径整理，具体约束以当前 API 版本文档为准。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>函数要写明返回类型</strong>：没有返回值的也要写 <code>: void</code>，别依赖推断。报错里常见 <code>arkts-no-implicit-return-types</code> 一类提示。</li>
+  <li><strong>回调参数要标类型</strong>：TextInput、Button 的回调不能省略参数类型；写全之后编辑器补全也更准。</li>
+  <li><strong>对象字面量与数组要有类型</strong>：不要出现「裸对象」或「无类型数组」，先定义 interface / class 再实例化。</li>
+  <li><strong>状态装饰器按 V2 体系走</strong>：新项目常见 <code>@ComponentV2</code> + <code>@Local</code> 的组合；旧的 <code>@Component</code> + <code>@State</code> 仍需会读，存量示例里很多。两套装饰器不要混用在同一个组件里。</li>
+  <li><strong>别把 TS 的动态写法搬过来</strong>：<code>any</code>、随意增删对象属性、运行时改类型，这些正是 ArkTS 要挡掉的；它换来的收益是更好的静态检查与 AOT 性能。</li>
+  <li><strong>看版本说明里的行为变更</strong>：官方 5.1.0(18) 版本说明（2026-10-08 更新）就列有「ArkTS 默认不合并依赖混淆规则」「自定义组件名与内置属性重名改为编译报错」等条目——升级前后行为可能不同。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">把 ArkTS 当「更严格的 TypeScript」来学，比当「换个语法的 JavaScript」顺畅得多。报错多不是你写错了，是编译器把以前藏着的问题提前说了。</p></div>
+</div>
 
                 <!-- 第73章 -->
                 <div id="di-qi-shi-san-zhang" class="mb-10 content-section">
@@ -12279,7 +12804,32 @@ struct SettingsPage {
   <li>多语言资源目录与安卓 strings.xml 思路一致</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · ArkUI 状态管理：V1 与 V2 对照</h4>
+<p class="mb-3">声明式界面这一章，迟早会遇到两套装饰器并存的资料。先分清它们，再看代码就不会串。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>不要混用</strong>：同一组件里 V1 与 V2 装饰器不能随便搭；接手老项目时先看它整体用的是哪一代，再决定沿用还是整体迁移。</li>
+  <li><strong>状态放哪一层</strong>：只在一个组件里用的放 @Local，要跨页面共享的提到应用级状态或数据源层。</li>
+  <li><strong>派生值别另存</strong>：能算出来的就现算，存两份必然要处理同步。</li>
+  <li><strong>布局先跑通再优化</strong>：Row / Column / Stack / List 组合能覆盖绝大多数界面；性能问题等真出现再用 Profiler 定位。</li>
+  <li><strong>版本行为变更要查</strong>：官方 5.1.0(18) 说明里就有 ArkUI 的 <code>getKeyboardAvoidMode</code> 返回值变更、XComponent 上 <code>renderFit</code> 显示效果变更等条目，升级别只看编译是否通过。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">用途</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">V1（旧资料常见）</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">V2（新项目常见）</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">组件声明</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Component</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@ComponentV2</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">组件内状态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@State</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Local</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">父传子</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Prop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Param</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">父子双向</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Link</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Once / @Event 组合</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">嵌套对象观察</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Observed + @ObjectLink</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@ObservedV2 + @Trace</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">状态变化回调</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Watch</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Monitor</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">这份对照表是「读懂老代码」用的；写新代码时以你当前 SDK 版本的官方文档为准。</p></div>
+</div>
 
                 <!-- 第74章 -->
                 <div id="di-qi-shi-si-zhang" class="mb-10 content-section">
@@ -12347,7 +12897,18 @@ router.back()   // 复杂回传可用 emitter 事件或 AppStorage</pre>
   <li>权限三档：system_grant / user_grant / 受限开放——最小化授权原则通用</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · UIAbility 与路由：生命周期别靠猜</h4>
+<p class="mb-3">页面跳转在 ArkUI 里不难，难的是搞清楚「什么时候该存数据、什么时候该释放资源」。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>UIAbility 是应用的一个入口单元</strong>：它有自己的生命周期（创建、前台、后台、销毁）。页面只是它里面的一帧，别把应用级状态挂在页面上。</li>
+  <li><strong>路由要注册</strong>：页面跳转走路由表与声明式注册；把「当前在哪一页」变成可传参、可恢复的数据，比到处塞布尔标志可靠。</li>
+  <li><strong>前后台切换要能恢复</strong>：切到后台可能被回收，回来时要么能重建状态，要么已经把关键数据持久化了。</li>
+  <li><strong>跨设备是鸿蒙特有的变量</strong>：分布式场景下，同一个能力可能在另一台设备上被拉起。设计状态时提前想「这份数据会不会出现在别的屏幕上」。</li>
+  <li><strong>用 hdc 验证</strong>：<code>hdc shell aa start -b 包名 -a Ability名</code> 可以从命令行拉起应用，排查路由配置比反复点界面快。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">安卓篇讲 Activity 生命周期、iOS 篇讲 scenePhase，到这里是 UIAbility——三个平台的名字不同，要回答的问题其实是同一个。</p></div>
+</div>
 
                 <!-- 第75章 -->
                 <div id="di-qi-shi-wu-zhang" class="mb-10 content-section">
@@ -12451,7 +13012,30 @@ async function fetchTodos(): Promise&lt;string&gt; {
   <li>三者对应安卓 SP/Room/OkHttp 与 iOS UserDefaults/Core Data/URLSession</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 数据持久化与网络的分工</h4>
+<p class="mb-3">鸿蒙这一侧 Kit 名字多，但按「存什么」来分就清楚了。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>先声明权限再联网</strong>：网络权限要在模块配置里声明；正式接口一律 https，并明确处理超时与失败码。</li>
+  <li><strong>敏感数据别进普通 Preferences</strong>：token 一类要放更安全的存储，且不要打进 HiLog 日志。</li>
+  <li><strong>缓存上一次成功结果</strong>：地铁里没网时展示旧数据并标注时间，比白屏友好。</li>
+  <li><strong>升级时检查 Kit 行为</strong>：ArkData、NetworkKit 的 API 会随版本调整；升级 SDK 后用 API Change Assistant 扫一遍。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要存什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">用什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">一个开关、一点小设置</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ArkData - Preferences</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">键值型轻量配置</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">结构化记录（列表、账本）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ArkData - RelationalStore</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SQLite 关系库，适合查询与排序</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分布式键值数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分布式数据对象 / KV Store</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">跨设备同步场景</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTTP 请求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">NetworkKit - http</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">注意权限、超时与错误码</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件与图片</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件管理 / 应用沙箱路径</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">别把绝对路径写死</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">三大平台到这里可以对齐了：安卓 Room/DataStore、iOS SwiftData/UserDefaults、鸿蒙 RelationalStore/Preferences——都是「结构化」与「小设置」两分。</p></div>
+</div>
 
                 <!-- 第76章 -->
                 <div id="di-qi-shi-liu-zhang" class="mb-10 content-section">
@@ -12596,7 +13180,18 @@ struct TodoPage {
   <li>增删改查闭环 = 学完任何平台第一个完整应用的标志</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 待办清单项目：把严格类型真正用起来</h4>
+<p class="mb-3">这个项目最适合练 ArkTS 的类型约束。别为了跑通而到处绕过编译错误，那会错过这一篇的重点。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>先定义数据模型</strong>：给 TodoItem 写清 id / title / done / createdAt 的类型，再写界面。模型定清楚，后面加排序、筛选都不用大改。</li>
+  <li><strong>状态与存储分层</strong>：界面只读状态；新增、勾选、删除走独立的数据层。这样换成关系库或分布式存储时界面不用动。</li>
+  <li><strong>补一条测试</strong>：覆盖「新增 → 列表多一条」「勾选 → 状态变化」「删除 → 归零」。有测试，升级 SDK 时心里有底。</li>
+  <li><strong>空状态与无障碍</strong>：没有记录时给引导；缩放字体与读屏支持要让长辈也能用。</li>
+  <li><strong>顺手练一次 hdc</strong>：<code>hdc list targets</code> 看设备、<code>hdc install</code> 装包、<code>hdc shell aa force-stop</code> 强停，命令行比来回点 IDE 快。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">小项目的价值在分层。把「界面 / 状态 / 存储」拆开练熟，天气助手项目加网络只是多接一层。</p></div>
+</div>
 
                 <!-- 第77章 -->
                 <div id="di-qi-shi-qi-zhang" class="mb-10 content-section">
@@ -12698,7 +13293,18 @@ struct WeatherPage {
   <li>错误提示要说人话：区分"没网"与"城市不存在"</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 天气助手项目：网络与失败态</h4>
+<p class="mb-3">接上真实接口之后，成功路径只占一半工作。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>四种失败分别处理</strong>：无网络、超时、限流、服务端错误给不同文案与重试入口，别统一弹「获取失败」。</li>
+  <li><strong>权限与配置</strong>：网络权限在模块配置里声明；接口地址与 key 不硬编码进源码，按环境区分。</li>
+  <li><strong>缓存旧结果</strong>：失败时展示上次数据并标注时间。</li>
+  <li><strong>分布式是加分项</strong>：鸿蒙特有的机会：把天气做成服务卡片，在手表或智慧屏上也能看到同一份数据。第 79 章会展开。</li>
+  <li><strong>真机验证</strong>：弱网、飞行模式、后台切回各试一次；模拟器对这些场景不敏感。</li>
+</ul>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">做鸿蒙项目时多问一句「这块信息能不能在另一台设备上也有用」，往往就能自然长出分布式特性。</p></div>
+</div>
 
                 <!-- 第78章 -->
                 <div id="di-qi-shi-ba-zhang" class="mb-10 content-section">
@@ -12739,7 +13345,33 @@ struct WeatherPage {
   <li>审核 1–3 个工作日；元服务走单独入口发布</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 上架华为应用市场：完整链路</h4>
+<p class="mb-3">上架这一环比写代码更讲流程。按下面顺序走一遍，能避开大部分「卡在提交前」的情况。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>签名材料要离线备份</strong>：证书、密钥库、口令与恢复流程单独保管，绝不提交到仓库。丢了比想象中麻烦。</li>
+  <li><strong>命令行与 IDE 同版本</strong>：官方升级指南明确要求：升级 DevEco Studio 后，命令行工具也要升到相同版本，保证流水线构建出的包与本地一致。</li>
+  <li><strong>升级后先做兼容性验证</strong>：目标 SDK 变化时，先在旧系统与新系统设备上各跑一遍，通过后再发布到 AppGallery。</li>
+  <li><strong>隐私与权限对齐</strong>：应用实际申请的权限、采集的数据、隐私政策里的描述三者要一致，这是审核高频退回点。</li>
+  <li><strong>留灰度与回滚</strong>：先灰度给少量用户，观察崩溃与反馈；保留上一个可发布的构建。</li>
+  <li><strong>版本号与构建号</strong>：每次提交递增，方便把崩溃日志对到具体版本。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">阶段</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">要做的事</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">常见卡点</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">准备</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">在 AppGallery Connect 创建应用、填基本信息、准备截图与隐私政策</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">资料不齐无法提交</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">签名</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">生成/管理证书与 Profile，配置签名信息</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">证书与包名不匹配、密钥丢失</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">构建</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用 DevEco Studio 或命令行工具打 Release HAP</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">命令行工具版本与 IDE 不一致</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">兼容</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">在 HarmonyOS 新旧版本设备上各测一遍</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">只在新系统测，老设备闪退</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">提交</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上传 HAP，填版本说明、分级、隐私声明，提交审核</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">隐私声明与实际采集不符</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">审核通过后选择全量或灰度发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">没留回滚方案</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">把这条链路写成项目里的一份 checklist：下次发版照着勾，比凭记忆可靠。</p></div>
+</div>
 
                 <!-- 第79章 -->
                 <div id="di-qi-shi-jiu-zhang" class="mb-10 content-section">
@@ -12789,7 +13421,30 @@ struct TodoCard {
   <li>先做应用、再玩特色：卡片与元服务都建议在完成第 76 章项目后再加</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 服务卡片、元服务与分布式，到底各是什么</h4>
+<p class="mb-3">这一章是全篇最有鸿蒙特色的一节，三个词经常被混着说。先用一句话分开，再谈怎么做。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>卡片不是缩小版界面</strong>：它受刷新频率、尺寸与交互限制。设计时要先想「用户瞥一眼最想知道什么」，而不是把首页压缩一遍。</li>
+  <li><strong>卡片数据要能独立更新</strong>：卡片常在 App 没打开时刷新，数据刷新与持久化要独立设计，别依赖界面还在内存里。</li>
+  <li><strong>元服务改变分发思路</strong>：用户不必先装一个 App 才能用某个功能。适合低频、场景明确的能力，不适合需要长期后台的任务。</li>
+  <li><strong>分布式先想数据归属</strong>：哪台设备是数据源、冲突怎么合、断连时怎么办，这三个问题答完再写代码。</li>
+  <li><strong>权限要按设备分别确认</strong>：跨设备调用涉及新的权限边界，申请时机与说明文案都要写清楚。</li>
+  <li><strong>从天气助手改造起</strong>：第 77 章的天气项目正好可以加一张服务卡片：把「当前温度 + 城市」做成桌面卡片，是理解 Form Kit 最短的路径。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">概念</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型形态</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务卡片（Form）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不用打开 App，在桌面上直接显示信息并支持轻交互</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">天气卡片、待办卡片、播放控制</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">元服务</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免安装、可被搜索与分享的轻服务，按需拉起</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">扫码点单、快递查询、临时工具</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">分布式能力</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">让同一份数据或任务跨设备流转</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机看一半，平板接着看；手表看天气</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">这三样是鸿蒙区别于安卓/iOS 的地方。前两个项目练手，这一节练的是「换一种产品思路」。</p></div>
+</div>
 
                 <!-- 第80章 -->
                 <div id="di-ba-shi-zhang" class="mb-10 content-section">
@@ -12846,7 +13501,34 @@ struct TodoCard {
   <li>三大平台毕业：安卓、iOS、鸿蒙——你已经是全平台移动开发者</li>
 </ul>
 </div>
-                </div>
+                <!-- v19-enrich-2026-11 -->
+<h4 class="text-lg font-semibold mt-4 mb-2">2026 年末补记 · 补成一份真正能查的版本与升级清单</h4>
+<p class="mb-3">原章的命令与装饰器速查之外，再补三张表：版本坐标、升级检查清单、三大平台对照。写到后面前面总会忘，这页就是为「30 秒找回记忆」准备的。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>升级五步</strong>：升 DevEco Studio → 同步升命令行工具 → 跑 API Change Assistant → 新旧设备兼容性测试 → 发布到 AppGallery。</li>
+  <li><strong>常用命令</strong>：<code>hdc list targets</code> 列设备、<code>hdc install xxx.hap</code> 装包、<code>hdc shell aa start -b 包名 -a Ability名</code> 拉起、<code>hdc file send/recv</code> 传文件、<code>hdc shell aa force-stop 包名</code> 强停。</li>
+  <li><strong>状态装饰器两代</strong>：V1：@Component / @State / @Prop / @Link / @Observed+@ObjectLink / @Watch；V2：@ComponentV2 / @Local / @Param / @ObservedV2+@Trace / @Monitor。同一个组件里不要混用。</li>
+  <li><strong>ArkTS 严格类型四条</strong>：函数写返回类型、回调参数标类型、对象与数组有明确类型、别用 any 与动态增删属性。</li>
+  <li><strong>Kit 速记</strong>：ArkData 管存储（Preferences / RelationalStore）、NetworkKit 管 HTTP、Form Kit 管服务卡片、Ability Kit 管 UIAbility 生命周期与跳转。</li>
+  <li><strong>三大平台对照</strong>：安卓 Activity / iOS UIAbility 之外的 scenePhase / 鸿蒙 UIAbility，名字不同，回答的都是「何时创建、何时后台、何时销毁」。</li>
+  <li><strong>排错顺序</strong>：先看编译报错（多半是严格类型），再查版本说明里的行为变更，最后用 DevEco Log 过滤 HiLog 定位运行时问题。</li>
+</ul>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">项目</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2026-11 可核对的值 / 做法</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">出处</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">系统版本 ↔ API</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 7.0 对应 API 26.0.0</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方升级适配指南</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SDK 预置</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">自 DevEco Studio 6.0.0(20) 起预置配套 SDK</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方升级适配指南</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">版本字段</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">targetSdkVersion / compileSdkVersion / compatibleSdkVersion</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">build-profile.json5</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">API 变更检查</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Tools &gt; API Change Assistant</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方升级适配指南</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">行为变更示例</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">5.1.0(18) 含 ArkTS、ArkUI、XComponent 等条目</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方版本说明（2026-10-08 更新）</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">构建 / 调试 / 包</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">hvigor / hdc / HAP</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开发工具文档</td></tr>
+</tbody>
+</table>
+</div>
+<div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">到这里三平台都走完了：安卓、iOS、鸿蒙。把各自的「环境 → 语言 → 界面 → 数据 → 发布」五段串起来，你会发现迁移成本主要在名字，不在思路。</p></div>
+</div>
 
 
 <section id="ke-chuan-she-bei-pian" class="mb-12">
@@ -13969,6 +14651,12 @@ struct TodoCard {
   <li><strong>查技巧</strong>：在B站搜索"【你的手机型号】技巧"。</li>
   <li><strong>看测评</strong>：多看几个不同博主的测评视频。</li>
   <li><strong>学拍照</strong>：关注手机摄影教程博主。</li>
+</ul>
+
+<h4 class="text-lg font-semibold mt-4 mb-2">友情链接 · 两门同样「缺失」的课：</h4>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>《你缺失的那门计算机课》</strong>：<a href="https://www.criwits.top/missing/" class="text-primary hover:underline" target="_blank" rel="noopener">www.criwits.top/missing/</a> — 中文开源计算机通识读本，本书的理念正是从它长出来的。</li>
+  <li><strong>计算机教育中缺失的那一课（The Missing Semester of Your CS Education · MIT）</strong>：<a href="https://missing.csail.mit.edu/" class="text-primary hover:underline" target="_blank" rel="noopener">missing.csail.mit.edu</a> — MIT 的免费课，补的是 shell、Git、命令行这些学校不教、日常却天天要用的东西。</li>
 </ul>
 <h4 class="text-lg font-semibold mt-4 mb-2">安全自查一句话清单：</h4>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
