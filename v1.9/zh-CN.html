@@ -2238,6 +2238,16 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>华为麒麟9020</strong>：搭载于Mate 70系列，采用自研泰山CPU架构，NPU和ISP能力持续增强，支持5.5G和卫星通信，代表国产芯片的最新突破。</li>
 </ul>
 <p class="mb-2">看完参数表，再给你一个防坑提醒：<strong>别只看峰值跑分</strong>。同一代芯片，峰值性能和持续性能可能差出一截，真正决定体验的是散热和调度——长时间游戏、导航、拍视频时帧率稳不稳、机身烫不烫，比跑分软件里那个一次性数字有参考价值得多。看评测时，优先看半小时重度负载后的帧率曲线。</p>
+<h5 class="font-semibold mt-3 mb-1">CPU 缓存：L1 / L2 / L3，还有一颗大 SL cache</h5>
+<p class="mb-2">聊完核心数量，再说一个发布会上几乎不提、却实实在在影响日常体验的东西：<strong>缓存</strong>。CPU 的运算速度比内存快得多——它一拍就能算完一步，去内存里取数据却要干等上百拍。为了不让"大脑"空转，工程师在中间塞了好几层越做越大的"随身小仓库"。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>L1 缓存</strong>：每颗核心私有，指令和数据还分开存放。容量最小（几十 KB 级），但速度也最快，一两拍就能拿到数据。L1 的存在感太强，几乎没有厂商拿它做文章。</li>
+  <li><strong>L2 缓存</strong>：同样贴着核心（按核或按簇共享），容量几百 KB 到几 MB，速度比 L1 略慢。按公开拆解口径，A19 Pro 的 L2 合计有 22MB，天玑 9500 是 10.5MB。</li>
+  <li><strong>L3 缓存</strong>：整个 CPU 集群共享的大仓库，几 MB 到十几 MB。核心之间传数据、互相交换结果，主要走这一层。天玑 9500 配了 16MB L3。</li>
+  <li><strong>SL cache（System Level Cache，系统级缓存）</strong>：比 L3 更靠外的一层超大缓存，玩法也更新——它不只服务 CPU，<strong>GPU、NPU、ISP 都能来借</strong>。比如 A19 Pro 给到 32MB SLC（上一代 A18 Pro 是 24MB），骁龙的 SLC 起步晚（865 时代只有 3MB），近年才追上来；天玑 9500 干脆没做独立 SLC，只给 GPU 自带 4MB 私有 L2，各家路线并不一样。</li>
+</ul>
+<p class="mb-2">为什么它重要？<strong>缓存命中率决定 CPU 要绕几次内存</strong>。同样的任务，数据正好在缓存里，几拍搞定；不在，就得等上百拍。苹果 A 系单核性能和能效长期领先，超大 L2 加大容量 SLC 是公认的功臣之一——这也是为什么同样标着"3nm"，不同芯片的日常流畅度能拉开差距。</p>
+<p class="mb-2">一个实用的观察角度：缓存容量从来不进跑分软件，但同代芯片对比时，缓存结构比峰值频率更能预测"日常跟手度"。下次看拆解评测，记得留意 L2 / SLC 那两行数字。</p>
 <h5 class="font-semibold mt-3 mb-1">GPU：图形渲染引擎</h5>
 <p class="mb-2">GPU（Graphics Processing Unit）专门负责图形和并行计算任务。它的核心数量远多于CPU（动辄数百上千个核心），但每个核心的功能相对简单，适合同时处理大量相似的计算。</p>
 <p class="mb-2"><strong>图形渲染流程</strong>：</p>
@@ -2249,6 +2259,18 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <p class="mb-2"><strong>GPU对日常使用的影响</strong>：不只是游戏！界面滑动、动画效果、视频播放、照片滤镜、AR应用都依赖GPU。GPU性能弱的手机，滑动界面可能掉帧，游戏更是直接卡顿。</p>
 <p class="mb-2"><strong>各品牌GPU</strong>：高通使用自研Adreno GPU；联发科使用ARM Mali GPU；苹果使用自研GPU，性能和能效都是行业标杆。</p>
+<h5 class="font-semibold mt-3 mb-1">现代手机 GPU 的七个关键词：光追、NSS、NFRU、VRS、Mesh Shading、异步计算、LPAC</h5>
+<p class="mb-2">前面那套"顶点 → 光栅化 → 着色"是老管线，今天的手机 GPU 在它之上叠了一整层新能力。发布会上这些词会越来越密，这里一次讲透，以后你看参数表就不用猜了。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+  <li><strong>硬件光线追踪（Ray Tracing）</strong>：让光在场景里真实反弹，玻璃反光、水面倒影、角色阴影都按物理规律算出来，而不是"贴一张假的光斑图"。开销极大，所以手机上通常只在反射、阴影这些最出效果的局部开启。现状：天玑 9400 的 Immortalis-G925 光追性能比上代提升 40%，苹果从 A17 Pro 起有硬件光追单元，骁龙 Adreno 也已支持。</li>
+  <li><strong>NSS 神经超采样（Neural Super Sampling）</strong>：先用低分辨率渲染画面（比如 540p），再由 AI 把它放大回 1080p——省下来的算力拿去开更多特效。这是手机版的 DLSS。Arm 在新一代 Mali GPU 里塞了一个约 150KB 的神经模型，把 540p 放大到 1080p 单帧只要约 4 毫秒，画质接近原生，2026 年起在游戏里落地（首批适配包括《燕云十六声》）。骁龙 Adreno 有自己的一套方案，思路相同。</li>
+  <li><strong>NFRU 神经帧率提升（Neural Frame Rate Up-scaling，帧生成）</strong>：在两帧真实画面之间，用光流加神经推理"算"出一帧补上，30 帧就能变 60 帧。它依赖新 Mali GPU 里内置的运动矢量加速硬件，预计 2026 年下半年起在游戏里铺开。和外挂插帧芯片的区别在于：这个能力长在 GPU 里，游戏引擎可以直接配合它优化。</li>
+  <li><strong>NSSD 神经超采样 + 降噪</strong>：NSS 的光追加强版——开启大规模光源（MegaLights 一类）后画面噪点多，NSSD 把降噪和超采样合成一步做完，光追画面也能保持帧率。</li>
+  <li><strong>VRS 可变速率着色（Variable Rate Shading）</strong>：人眼盯着的地方全速渲染，边缘、暗部、高速运动的区域降低采样率——玩家几乎看不出差别，着色开销最多能省三成。高通、Arm、苹果的 GPU 都已支持，游戏适配后会自动生效。</li>
+  <li><strong>Mesh Shading 网格着色器</strong>：把"先算顶点、再光栅化"的老管线，换成着色器直接生成并处理网格的新管线。同样的算力，能画出数量级更多的独立物体——成片的草丛、千人同屏、细到发丝的毛发。Immortalis-G925 与苹果 Metal 框架都已支持。</li>
+  <li><strong>异步计算管线与 LPAC 低优先级异步计算</strong>：GPU 画画时并不是每时每刻都满负荷，异步计算让物理模拟、AI 后处理这些计算任务塞进图形任务的空隙里并行跑。LPAC 更进一步：给后台任务标上"低优先级"，它只能捡 GPU 的空闲单元用——下载解压、后台 AI 推理都不再把前台游戏挤掉帧。这项能力苹果在 M3 系列上率先引入，A19 Pro 把它带进了手机。</li>
+</ul>
+<p class="mb-2">给你的判断方法只有一句话：<strong>这些特性只有在游戏真正适配之后才有意义</strong>。听到发布会吹 GPU 新名词，先去查你常玩的那几款游戏有没有适配公告——适配了，是白捡的帧率；没适配，看看就好。</p>
 <h5 class="font-semibold mt-3 mb-1">NPU：AI加速引擎</h5>
 <p class="mb-2">NPU（Neural Processing Unit）是专门为神经网络运算设计的处理器。相比CPU和GPU，NPU在处理AI任务时效率更高、功耗更低。</p>
 <p class="mb-2"><strong>神经网络运算方式</strong>：NPU的核心运算是矩阵乘法和卷积运算——这正是神经网络中最基础、最频繁的计算。NPU通过硬件级优化，可以并行处理大量矩阵运算，速度比CPU快几十倍，功耗却低得多。</p>
