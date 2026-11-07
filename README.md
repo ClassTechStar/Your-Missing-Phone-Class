@@ -1,6 +1,6 @@
 # 你缺失的那门手机课
 
-![Version](https://img.shields.io/badge/version-v1.8-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-84%20章·18.1%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
+![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-84%20章·18.1%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
 
 面向普通人的手机使用指南。84 章、11 篇，从看懂手机硬件参数讲到用 AI 工具做出自己的第一个 App。
 
