@@ -1,9 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""把 v1.8/zh-CN.html 同步到 GitHub Pages 站点仓库（Yihggh.github.io）。
+"""把 v1.9/zh-CN.html 同步到 GitHub Pages 站点仓库（Yihggh.github.io）。
 
-站点根目录与本书 `v1.8/` 目录层级不同：
-    书页  <站点根>/v1.8/zh-CN.html   →  ../sw.js  ../manifest.webmanifest  ../icons/
+站点首页自 2026-11 起发布 v1.9 深编版（120 章），源必须用 v1.9；
+曾经这里写死 v1.8，导致站点被降级回 84 章，勿再改回。
+
+站点根目录与本书 `v1.9/` 目录层级不同：
+    书页  <站点根>/v1.9/zh-CN.html   →  ../sw.js  ../manifest.webmanifest  ../icons/
     站点  <站点根>/index.html        →   sw.js     manifest.webmanifest     icons/
 所以复制时必须把这三处相对路径降一级，否则 Service Worker 注册 404、
 manifest 与图标全不可达（PWA 静默失效）。
@@ -55,7 +58,8 @@ def main():
         print(f'目标不是 git 仓库：{dest}')
         return 1
 
-    src_html = ROOT / 'v1.8' / 'zh-CN.html'
+    # 站点首页发布 v1.9 深编版（120 章），不要用 v1.8（会把站点降级回 84 章）
+    src_html = ROOT / 'v1.9' / 'zh-CN.html'
     if not src_html.is_file():
         print(f'源文件缺失：{src_html}')
         return 1
