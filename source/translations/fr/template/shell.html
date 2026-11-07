@@ -223,7 +223,7 @@
         }
         .content-section {
             content-visibility: auto;
-            contain-intrinsic-size: 0 800px;
+            contain-intrinsic-size: auto 800px;
         }
         .content-section p {
             margin-bottom: 1rem;
@@ -1174,13 +1174,14 @@
             transform: rotate(-90deg);
         }
         .collapsible-body {
-            max-height: 5000px;
-            overflow: hidden;
-            transition: max-height 0.4s ease, opacity 0.3s ease;
+            max-height: none;
+            overflow: visible;
+            transition: opacity 0.3s ease;
             opacity: 1;
         }
         .collapsible-body.collapsed {
             max-height: 0;
+            overflow: hidden;
             opacity: 0;
         }
 
