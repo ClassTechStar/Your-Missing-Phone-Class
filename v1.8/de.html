@@ -221,10 +221,9 @@
         .toc-child.open {
             max-height: 3000px;
         }
-        .content-section {
-            content-visibility: auto;
-            contain-intrinsic-size: auto 800px;
-        }
+        /* 整章不做 content-visibility:auto：超长章节离屏按 800px 占位，
+           会让锚点跳转、scrollIntoView 与入场观察器全部失准。
+           表格/代码块的局部懒渲染见下方 P2-2 规则，不受影响。 */
         .content-section p {
             margin-bottom: 1rem;
             text-align: left;
@@ -765,7 +764,13 @@
         }
 
         /* Einblend-Animation beim Scrollen */
+        /* 默认可见：观察器失效、脚本未运行、打印时都不会白屏 */
         .content-section {
+            opacity: 1;
+            transform: none;
+        }
+        /* 只有脚本确认可用后，才对尚未进入视口的区块启用入场动画 */
+        html.anim-ready .content-section:not(.visible):not(.immediately-visible) {
             opacity: 0;
             transform: translateY(24px);
             transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
@@ -1550,6 +1555,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
     </script>
     
 
+<!-- v19-first-chapter-visibility-fix -->
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
     <a class="skip-link focus-ring" href="#content">Zum Hauptinhalt springen</a>
@@ -12664,18 +12670,26 @@ func scheduleDailyReminder() {
             }
 
             // ===== Einblende-Animation beim Scrollen =====
-            const visibleObserver = new IntersectionObserver((entries) => {
+            // 渐进增强：只有观察器可用时才启用隐藏态，否则正文保持默认可见
+            const supportsIO = 'IntersectionObserver' in window;
+            if (supportsIO) html.classList.add('anim-ready');
+            const visibleObserver = supportsIO ? new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
+                    if (entry.isIntersecting || entry.intersectionRatio > 0) {
                         entry.target.classList.add('visible');
                         visibleObserver.unobserve(entry.target);
                     }
                 });
-            }, { rootMargin: '0px 0px -40px 0px', threshold: 0.05 });
+            }, { rootMargin: '0px 0px -40px 0px', threshold: 0 }) : null;
+            // 阈值必须为 0：超长章节用 0.05 永远达不到，会整章白屏
+            // 兜底：观察器若因任何原因未触发，2 秒后强制全部显示
+            setTimeout(() => {
+                sections.forEach(sec => sec.classList.add('visible'));
+            }, 2000);
             // Inhalt des ersten Bildschirms ist direkt sichtbar
             sections.forEach((sec, i) => {
                 const rect = sec.getBoundingClientRect();
-                if (rect.top < window.innerHeight) {
+                if (!visibleObserver || rect.top < window.innerHeight) {
                     sec.classList.add('visible');
                 } else {
                     visibleObserver.observe(sec);
