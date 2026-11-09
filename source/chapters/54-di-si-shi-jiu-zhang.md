@@ -83,27 +83,27 @@ USB 调试相当于给电脑开了"后门"。在公共场合充电、连接不�
 
 ::: div .figure
 ```html
-<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="300" fill="#fafafa" rx="8"/>
-      <text x="20" y="30" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ 项目根目录</text>
-      <rect x="30" y="45" width="540" height="230" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <text x="45" y="70" font-size="11" fill="#4f46e5" font-weight="bold">app/ ← 你写代码的地方</text>
-      <rect x="60" y="82" width="240" height="178" fill="#eef2ff" rx="5"/>
-      <text x="70" y="102" font-size="10" fill="#1e1b4b" font-weight="bold">src/main/</text>
-      <text x="80" y="120" font-size="10" fill="#374151">├ java/…/MainActivity.kt  ← 逻辑代码</text>
-      <text x="80" y="138" font-size="10" fill="#374151">├ res/  ← 资源（图片、文字、颜色）</text>
-      <text x="80" y="156" font-size="10" fill="#374151">└ AndroidManifest.xml  ← 应用"户口本"</text>
-      <text x="70" y="180" font-size="10" fill="#1e1b4b" font-weight="bold">build.gradle.kts</text>
-      <text x="80" y="198" font-size="10" fill="#6b7280">声明依赖的库（SDK 版本、Compose 等）</text>
-      <text x="70" y="222" font-size="10" fill="#1e1b4b" font-weight="bold">src/androidTest/ 与 test/</text>
-      <text x="80" y="240" font-size="10" fill="#6b7280">自动化测试代码（第 56 章用）</text>
-      <rect x="320" y="82" width="230" height="178" fill="#f0fdf4" rx="5"/>
-      <text x="330" y="102" font-size="10" fill="#065f46" font-weight="bold">根目录的其他文件</text>
-      <text x="340" y="122" font-size="10" fill="#374151">gradle/ + gradlew.bat  ← 构建脚本</text>
-      <text x="340" y="142" font-size="10" fill="#374151">settings.gradle.kts  ← 项目设置</text>
-      <text x="340" y="162" font-size="10" fill="#6b7280">（新手的口诀：只碰 app/ 目录，</text>
-      <text x="340" y="180" font-size="10" fill="#6b7280">其余的先当"黑盒"，别乱动）</text>
-      <text x="340" y="208" font-size="10" fill="#9ca3af">.gitignore  ← 版本控制忽略清单</text>
+<svg aria-hidden="true" style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="600" height="300" rx="8" style="fill:var(--surface-6)" />
+      <text x="20" y="30" font-size="13" font-weight="bold" style="fill:var(--ink-3)">MyFirstApp/ 项目根目录</text>
+      <rect x="30" y="45" width="540" height="230" rx="6" style="fill:var(--ink-inverse);stroke:var(--line-2)" />
+      <text x="45" y="70" font-size="11" font-weight="bold" style="fill:var(--accent-book)">app/ ← 你写代码的地方</text>
+      <rect x="60" y="82" width="240" height="178" rx="5" style="fill:var(--accent-wash)" />
+      <text x="70" y="102" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">src/main/</text>
+      <text x="80" y="120" font-size="10" style="fill:#374151">├ java/…/MainActivity.kt  ← 逻辑代码</text>
+      <text x="80" y="138" font-size="10" style="fill:#374151">├ res/  ← 资源（图片、文字、颜色）</text>
+      <text x="80" y="156" font-size="10" style="fill:#374151">└ AndroidManifest.xml  ← 应用"户口本"</text>
+      <text x="70" y="180" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">build.gradle.kts</text>
+      <text x="80" y="198" font-size="10" style="fill:var(--muted-2)">声明依赖的库（SDK 版本、Compose 等）</text>
+      <text x="70" y="222" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">src/androidTest/ 与 test/</text>
+      <text x="80" y="240" font-size="10" style="fill:var(--muted-2)">自动化测试代码（第 56 章用）</text>
+      <rect x="320" y="82" width="230" height="178" rx="5" style="fill:#f0fdf4" />
+      <text x="330" y="102" font-size="10" font-weight="bold" style="fill:#065f46">根目录的其他文件</text>
+      <text x="340" y="122" font-size="10" style="fill:#374151">gradle/ + gradlew.bat  ← 构建脚本</text>
+      <text x="340" y="142" font-size="10" style="fill:#374151">settings.gradle.kts  ← 项目设置</text>
+      <text x="340" y="162" font-size="10" style="fill:var(--muted-2)">（新手的口诀：只碰 app/ 目录，</text>
+      <text x="340" y="180" font-size="10" style="fill:var(--muted-2)">其余的先当"黑盒"，别乱动）</text>
+      <text x="340" y="208" font-size="10" style="fill:var(--muted)">.gitignore  ← 版本控制忽略清单</text>
     </svg>
 ```
 

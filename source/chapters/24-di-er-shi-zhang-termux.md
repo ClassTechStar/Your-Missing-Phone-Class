@@ -19,21 +19,21 @@ Termux的核心优势在于轻量化和高度可扩展性，适合开发、学�
 
 #### 二、核心功能与特性
 
-##### 🖥️ 完整的Linux环境
+##### 完整的Linux环境
 
 Termux<strong>仅内置Bash</strong>这一种Shell。如果想使用Zsh或fish等其他Shell，需要通过包管理器手动安装，例如：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>或<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>。同时Termux支持Vim、Nano、Emacs等编辑器，提供接近原生的命令行体验。用户可以通过"pkg install"安装2000+软件包，包括GCC、OpenSSH、SQLMap等开发和安全工具。
 
-##### 📦 强大的包管理
+##### 强大的包管理
 
 使用APT包管理器（类似Debian和Ubuntu），可安装数千种Linux软件包，涵盖开发工具、网络工具等。支持Python、Ruby、Node.js、Go、Rust、Swift等多种编程语言环境。
 
-##### 🔒 安全与网络功能
+##### 安全与网络功能
 
 - <strong>SSH远程连接</strong>：支持SSH客户端和服务器功能，可远程连接其他设备或让手机成为SSH主机。
 - <strong>加密工具</strong>：提供OpenSSL等加密工具，支持数据加密和安全通信。
 - <strong>服务器搭建</strong>：可配置Nginx或Apache搭建静态网页服务器。
 
-##### 🔧 系统集成与扩展
+##### 系统集成与扩展
 
 - 访问手机存储权限，实现本地文件管理。
 - 通过Termux:API插件调用传感器、摄像头等Android硬件功能。
@@ -90,14 +90,14 @@ Termux及其插件必须从同一来源安装，因为它们共享相同的share
 
 #### 四、安装与配置指南
 
-##### 📥 安装步骤
+##### 安装步骤
 
 1. <strong>下载应用</strong>：从官方渠道（F-Droid或GitHub）下载安装Termux，无需root权限。
 2. <strong>初始化系统</strong>：首次启动后等待"Installing bootstrap packages"完成。
 3. <strong>获取存储权限</strong>：执行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>获取手机文件系统权限。
 4. <strong>更新软件源</strong>：执行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>更新软件包列表。
 
-##### ⚙️ 基础优化
+##### 基础优化
 
 - <strong>换镜像源</strong>：使用<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code>命令通过图形界面更换镜像源（推荐清华大学镜像源）。
 - <strong>快捷键设置</strong>：音量减键模拟Ctrl，音量加键模拟Esc，提升输入效率。
@@ -105,15 +105,15 @@ Termux及其插件必须从同一来源安装，因为它们共享相同的share
 
 #### 五、典型应用场景
 
-##### 💻 移动开发测试
+##### 移动开发测试
 
 在手机上搭建完整的开发环境，编写并运行Python脚本，使用GCC编译C程序，通过Git管理代码仓库，结合SSH与远程服务器同步。
 
-##### 🖥️ 服务器运维
+##### 服务器运维
 
 通过SSH远程管理服务器，执行系统维护、日志分析等任务，随时随地处理服务器问题。
 
-##### 📚 学习Linux操作
+##### 学习Linux操作
 
 提供真实的Linux环境，是学习命令行和系统管理的理想平台，可练习Shell脚本编写、Linux文件权限管理（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> 设置 rwxr-xr-x 权限位、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> 修改文件归属、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> 查看 owner/group/other 三组九位权限）等基础命令。注意这是Unix/Linux经典的"三组九位"权限模型（owner / group / other × 读 / 写 / 执行），与Windows NTFS的ACL访问控制列表是完全不同的两套体系。
 

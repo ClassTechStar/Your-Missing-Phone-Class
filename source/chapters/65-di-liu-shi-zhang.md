@@ -70,26 +70,26 @@ Xcode 是苹果官方的集成开发环境，免费。三步装好：
 
 ::: div .figure
 ```html
-<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" fill="#fafafa" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ 项目根目录</text>
-      <rect x="30" y="42" width="540" height="225" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="#eef2ff" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="#1e1b4b" font-weight="bold">MyFirstApp/（代码目录）</text>
-      <text x="66" y="100" font-size="10" fill="#374151">├ MyFirstAppApp.swift  ← 程序入口</text>
-      <text x="66" y="120" font-size="10" fill="#374151">├ ContentView.swift  ← 主界面</text>
-      <text x="66" y="140" font-size="10" fill="#374151">└ Assets.xcassets  ← 图标、图片、颜色</text>
-      <text x="56" y="166" font-size="10" fill="#6b7280">（新增文件都放这个目录下）</text>
-      <text x="56" y="196" font-size="10" fill="#1e1b4b" font-weight="bold">Info 标签页 / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="#6b7280">应用声明：名字、权限、设置</text>
-      <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
-      <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">其他重要位置</text>
-      <text x="331" y="100" font-size="10" fill="#374151">📁 Preview Content/  ← 预览素材</text>
-      <text x="331" y="122" font-size="10" fill="#374151"><i class="fas fa-bullseye mr-1"></i> Target 设置（蓝色工程图标）</text>
-      <text x="331" y="142" font-size="10" fill="#6b7280">——版本号、最低系统、签名都在这</text>
-      <text x="331" y="168" font-size="10" fill="#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← 单元测试</text>
-      <text x="331" y="188" font-size="10" fill="#374151">📱 MyFirstAppUITests/ ← 界面测试</text>
-      <text x="331" y="216" font-size="10" fill="#9ca3af">（测试模板已生成，第 67 章用）</text>
+<svg aria-hidden="true" style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
+      <rect x="0" y="0" width="600" height="290" rx="8" style="fill:var(--surface-6)" />
+      <text x="20" y="28" font-size="13" font-weight="bold" style="fill:var(--ink-3)">MyFirstApp/ 项目根目录</text>
+      <rect x="30" y="42" width="540" height="225" rx="6" style="fill:var(--ink-inverse);stroke:var(--line-2)" />
+      <rect x="45" y="56" width="250" height="196" rx="5" style="fill:var(--accent-wash)" />
+      <text x="56" y="78" font-size="11" font-weight="bold" style="fill:var(--accent-deep)">MyFirstApp/（代码目录）</text>
+      <text x="66" y="100" font-size="10" style="fill:#374151">├ MyFirstAppApp.swift  ← 程序入口</text>
+      <text x="66" y="120" font-size="10" style="fill:#374151">├ ContentView.swift  ← 主界面</text>
+      <text x="66" y="140" font-size="10" style="fill:#374151">└ Assets.xcassets  ← 图标、图片、颜色</text>
+      <text x="56" y="166" font-size="10" style="fill:var(--muted-2)">（新增文件都放这个目录下）</text>
+      <text x="56" y="196" font-size="10" font-weight="bold" style="fill:var(--accent-deep)">Info 标签页 / Info.plist</text>
+      <text x="66" y="216" font-size="10" style="fill:var(--muted-2)">应用声明：名字、权限、设置</text>
+      <rect x="310" y="56" width="245" height="196" rx="5" style="fill:#f0fdf4" />
+      <text x="321" y="78" font-size="11" font-weight="bold" style="fill:#065f46">其他重要位置</text>
+      <text x="331" y="100" font-size="10" style="fill:#374151">📁 Preview Content/  ← 预览素材</text>
+      <text x="331" y="122" font-size="10" style="fill:#374151"><i class="fas fa-bullseye mr-1"></i> Target 设置（蓝色工程图标）</text>
+      <text x="331" y="142" font-size="10" style="fill:var(--muted-2)">——版本号、最低系统、签名都在这</text>
+      <text x="331" y="168" font-size="10" style="fill:#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← 单元测试</text>
+      <text x="331" y="188" font-size="10" style="fill:#374151">📱 MyFirstAppUITests/ ← 界面测试</text>
+      <text x="331" y="216" font-size="10" style="fill:var(--muted)">（测试模板已生成，第 67 章用）</text>
     </svg>
 ```
 
