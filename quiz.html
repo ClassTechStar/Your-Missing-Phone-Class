@@ -3,11 +3,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="《你缺失的那门手机课》章节自测：边读边练，即时批改解析，题库由书稿自动生成。">
 <title>章节自测 · 你缺失的那门手机课</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
 <link rel="apple-touch-icon" href="icons/icon-192.png">
 <link rel="manifest" href="manifest.webmanifest">
 <style>
+/* Hallmark · built: the project (章节自测) · redesign: polish · critique: P4 H3 E4 S4 R4 V3 · weakest: H，进度条与卡片的层级可以更清楚；已补焦点环/动态降级/令牌 */
+:root {
+    --paper: #FDFDFE;
+    --ink: #0B0E13;
+    --ink-inverse: #F2F6FC;
+    --brand: #165DFF;
+    --line: #E5E7EB;
+}
+a:focus-visible, button:focus-visible { outline: 2px solid var(--brand); outline-offset: 2px; }
+html, body { overflow-x: clip; }
+h1 { text-wrap: balance; }
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}
 :root { --bg:#f7f8fa; --card:#fff; --text:#1f2937; --muted:#6b7280; --primary:#4f46e5;
   --ok:#16a34a; --no:#dc2626; --warn:#d97706; --line:#e5e7eb; --soft:rgba(79,70,229,.06); }
 @media (prefers-color-scheme: dark) {
@@ -36,7 +51,7 @@ a { color:var(--primary); text-decoration:none; }
 .ov-text p { color:var(--muted); font-size:.86rem; }
 .badge { display:inline-flex; align-items:center; gap:6px; padding:4px 12px; border-radius:999px;
   font-size:.82rem; font-weight:600; border:1px solid var(--line); color:var(--muted); }
-.badge.on { background:linear-gradient(135deg,#fde68a,#fbbf24); color:#78350f; border-color:#fbbf24; }
+.badge.on { background:linear-gradient(135deg,#F6E4A8,#EFB93D); color:#5F3A10; border-color:#EFB93D; }
 
 /* 章节网格 */
 .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(232px,1fr)); gap:10px; }
@@ -46,8 +61,8 @@ a { color:var(--primary); text-decoration:none; }
 .chip:hover { border-color:var(--primary); transform:translateY(-1px); }
 .chip .st { flex:0 0 auto; font-size:.72rem; padding:1px 7px; border-radius:6px;
   background:var(--soft); color:var(--primary); font-weight:700; }
-.chip.done .st { background:rgba(22,163,74,.12); color:var(--ok); }
-.chip.part .st { background:rgba(217,119,6,.14); color:var(--warn); }
+.chip.done .st { background:rgba(21,146,86,.14); color:var(--ok); }
+.chip.part .st { background:rgba(196,116,15,.16); color:var(--warn); }
 .chip .t { flex:1 1 auto; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 
 /* 答题视图 */
@@ -60,8 +75,8 @@ a { color:var(--primary); text-decoration:none; }
   border:1.5px solid var(--line); border-radius:10px; background:transparent; color:var(--text);
   font:inherit; font-size:.93rem; cursor:pointer; }
 .opt:hover:not(:disabled) { border-color:var(--primary); }
-.opt.right { border-color:var(--ok); background:rgba(22,163,74,.1); }
-.opt.wrong { border-color:var(--no); background:rgba(220,38,38,.08); }
+.opt.right { border-color:var(--ok); background:rgba(21,146,86,.12); }
+.opt.wrong { border-color:var(--no); background:rgba(210,48,48,.1); }
 .opt:disabled { cursor:default; }
 .explain { margin-top:8px; padding:10px 14px; border-radius:10px; background:var(--soft);
   font-size:.86rem; color:var(--muted); display:none; }
@@ -73,7 +88,7 @@ a { color:var(--primary); text-decoration:none; }
 .actions { display:flex; gap:10px; justify-content:center; margin-top:16px; flex-wrap:wrap; }
 .actions button { padding:9px 18px; border-radius:10px; border:1px solid var(--line);
   background:transparent; color:var(--text); font:inherit; cursor:pointer; }
-.actions button.primary { background:var(--primary); color:#fff; border-color:var(--primary); }
+.actions button.primary { background:var(--primary); color: var(--ink-inverse, #F2F6FC); border-color:var(--primary); }
 footer { text-align:center; color:var(--muted); font-size:.84rem; margin-top:28px; }
 .hidden { display:none !important; }
 </style>
@@ -82,7 +97,7 @@ footer { text-align:center; color:var(--muted); font-size:.84rem; margin-top:28p
 <header>
   <h1>章节自测</h1>
   <p>《你缺失的那门手机课》· 每章 3 题，答完即时批改</p>
-  <p style="margin-top:8px"><button class="back" id="revBtn" style="display:none">🔁 开始复习（<span id="revCount">0</span> 题到期）</button></p>
+  <p style="margin-top:8px"><button class="back" id="revBtn" style="display:none"><i class="fas fa-rotate-right" aria-hidden="true"></i> 开始复习（<span id="revCount">0</span> 题到期）</button></p>
 </header>
 
 <!-- 总览 -->
@@ -93,7 +108,7 @@ footer { text-align:center; color:var(--muted); font-size:.84rem; margin-top:28p
       <h2 id="ovTitle">还没开始</h2>
       <p id="ovSub">挑一章开始，进度只存在你自己的浏览器里</p>
     </div>
-    <div><span class="badge" id="badge">🔒 结业徽章未解锁</span></div>
+    <div><span class="badge" id="badge">结业徽章未解锁（完成全部章节后点亮）</span></div>
   </div>
   <div class="bar"><i id="ovBar"></i></div>
 </section>
@@ -113,7 +128,7 @@ footer { text-align:center; color:var(--muted); font-size:.84rem; margin-top:28p
     <div class="result hidden" id="qResult"></div>
     <div class="actions hidden" id="qActions">
       <button id="retry">重做这一章</button>
-      <button class="primary" id="next">下一章 →</button>
+      <button class="primary" id="next">进入下一章</button>
     </div>
   </div>
 </section>
@@ -205,7 +220,7 @@ function renderOverview() {
   const unlocked = covered >= 0.8 && avg >= 0.8;
   const b = $('badge');
   b.classList.toggle('on', unlocked);
-  b.textContent = unlocked ? '🏅 结业徽章已解锁' : '🔒 结业徽章未解锁';
+  b.textContent = unlocked ? '🏅 结业徽章已解锁' : '结业徽章未解锁（完成全部章节后点亮）';
   b.title = `已覆盖 ${Math.round(covered * 100)}% 章节，平均正确率 ${Math.round(avg * 100)}%（需各 ≥ 80%）`;
   if (typeof refreshRevBadge === 'function') refreshRevBadge();
 }

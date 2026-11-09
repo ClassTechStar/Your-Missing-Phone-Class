@@ -1,13 +1,14 @@
  <!DOCTYPE html>
 <html lang="th">
 <head>
+    <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="คาบเรียนมือถือที่คุณขาดไป · จากเริ่มต้นสู่ระดับเชี่ยวชาญ ควบคุมชีวิตดิจิทัลของคุณได้อย่างเบ็ดเสร็จ">
     <meta name="keywords" content="บทเรียนมือถือ,วิชาพื้นฐานดิจิทัล,สมาร์ตโฟน,Android,iOS,HarmonyOS,เทคนิคมือถือ,ชีวิตดิจิทัล,โมเดล AI ขนาดใหญ่,เขียนโปรแกรมด้วย AI,API โมเดลขนาดใหญ่,Prompt Engineering,พัฒนา Android,พัฒนา iOS,Swift,Kotlin,SwiftUI,Jetpack Compose,การถ่ายภาพเชิงคำนวณ,ความปลอดภัยสารสนเทศ,การจัดการรหัสผ่าน,ระบบอัตโนมัติ,การเลือกซื้อมือถือ">
     <meta name="author" content="ผู้นำทางชีวิตดิจิทัล">
-    <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="var(--accent-book)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="var(--accent-deep)" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index, follow">
     <meta name="format-detection" content="telephone=no">
     <meta property="og:type" content="book">
@@ -34,7 +35,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4f46e5',
+                        primary: 'var(--accent-book)',
                         secondary: '#6B7280',
                         light: '#F3F4F6',
                         dark: '#1F2937',
@@ -48,6 +49,69 @@
         }
     </script>
     <style type="text/tailwindcss">
+    /* Hallmark · 色彩令牌（高频字面量收编，原值不动仅收编） */
+    :root {
+        --accent-book: #4F46E5;
+        --accent-soft: #818CF8;
+        --accent-deep: #1E1B4B;
+        --accent-wash: #EEF2FF;
+        --ink: #0B0E13;
+        --ink-2: var(--ink-2);
+        --ink-3: var(--surface-dark-2);
+        --ink-inverse: #F2F6FC;
+        --muted: #9CA3AF;
+        --muted-2: #6B7280;
+        --muted-3: #4B5563;
+        --line: #E5E7EB;
+        --line-2: #D1D5DB;
+        --surface: #FDFDFE;
+        --surface-2: #F3F4F6;
+        --surface-3: #EEF2F5;
+        --surface-4: #F5F6F8;
+        --surface-dark: #1F2937;
+        --surface-dark-2: var(--surface-dark-2);
+        --surface-dark-3: #1E2A36;
+        --surface-dark-4: #1A2230;
+        --surface-dark-5: var(--surface-dark-5);
+        --ok: #27AE60;
+        --gold: #D4A017;
+        --sky: #0EA5E9;
+        --wash-warm: #FDF8EF;
+        --sky-deep: #075985;
+        --wash-dark: #3D2E0F;
+        --surface-5: #F0F4F8;
+        --surface-6: #FAFAFA;
+        --line-3: #E0E0E0;
+        --surface-7: #F9FAFB;
+        --sky-wash: #E0F2FE;
+        --gold-2: #FBBF24;
+        --surface-dark-6: #1E293B;
+    }
+/* Hallmark · built: the project (v1.8/v1.9 中文书页) · redesign: polish · critique: P4 H4 E4 S4 R4 V3 · weakest: V，同模板 21 页共用本样式；已去两端对齐/渐变卡/transition-colors，保留本书蓝色系与 95ch 版心 */
+:root {
+    /* Hallmark 令牌：微着色的纸与墨（纯 var(--ink-inverse)/var(--ink) 不再出现），主色沿用本书蓝 */
+    --paper: #FDFDFE;
+    --ink: #0B0E13;
+    --ink-inverse: #F2F6FC;
+}
+
+/* Hallmark · 质量门兜底：焦点可见、动态降级、横向溢出裁切 */
+:focus-visible {
+    outline: 2px solid #165DFF;
+    outline-offset: 2px;
+}
+html, body {
+    overflow-x: clip;
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
         @layer utilities {
             .scrollbar-hide {
                 -ms-overflow-style: none;
@@ -60,7 +124,7 @@
                 text-wrap: balance;
             }
             .focus-ring:focus-visible {
-                outline: 2px solid #4f46e5;
+                outline: 2px solid var(--accent-book);
                 outline-offset: 2px;
             }
         }
@@ -77,28 +141,28 @@
             transition: background-color 0.3s, color 0.3s;
         }
         .dark body {
-            background-color: #111827;
+            background-color: var(--surface-dark-2);
         }
         .toc-item.active {
-            color: #4f46e5;
+            color: var(--accent-book);
             font-weight: 600;
-            background-color: #eef2ff;
-            border-left: 3px solid #4f46e5;
+            background-color: var(--accent-wash);
+            border-left: 3px solid var(--accent-book);
         }
         .dark .toc-item.active {
-            background-color: #1e1b4b;
-            border-left-color: #818cf8;
+            background-color: var(--accent-deep);
+            border-left-color: var(--accent-soft);
         }
         /* สไตล์พื้นฐานลิงก์แถบข้าง */
         #sidebar a {
             display: block;
-            transition: all 0.2s ease;
+            transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
             position: relative;
             text-decoration: none;
         }
         #sidebar a:hover {
-            color: #4f46e5 !important;
-            background-color: #eef2ff;
+            color: var(--accent-book) !important;
+            background-color: var(--accent-wash);
             transform: translateX(2px);
         }
         .dark #sidebar a:hover {
@@ -125,15 +189,15 @@
             flex-shrink: 0;
             cursor: pointer;
             transition: background-color 0.15s, transform 0.3s ease;
-            color: #9ca3af;
+            color: var(--muted);
         }
         .toc-toggle-btn:hover {
-            background-color: #e5e7eb;
-            color: #374151;
+            background-color: var(--line);
+            color: var(--ink-2);
         }
         .dark .toc-toggle-btn:hover {
-            background-color: #374151;
-            color: #e5e7eb;
+            background-color: var(--ink-2);
+            color: var(--line);
         }
         /* แอนิเมชันเปลี่ยนของรายการย่อย */
         .toc-child li {
@@ -152,27 +216,27 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: #4f46e5;
+            background: var(--accent-book);
             border-radius: 0;
-            transition: top 0.3s ease, height 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
             z-index: 1;
         }
         /* ส่วนบนแถบข้าง (เสริม) */
         #sidebar > nav > div:first-child {
-            background: #f5f6f8;
+            background: var(--surface-4);
             border-radius: 0;
             padding: 0.875rem 1rem !important;
         }
         .dark #sidebar > nav > div:first-child {
-            background: #1a2230;
+            background: var(--surface-dark-4);
         }
         /* แถบข้างทั้งหมด (เสริม) */
         #sidebar {
             box-shadow: none;
-            border-right: 1px solid #e5e7eb;
+            border-right: 1px solid var(--line);
         }
         .dark #sidebar {
-            border-right-color: #374151;
+            border-right-color: var(--ink-2);
         }
         @media (max-width: 1023px) {
             #sidebar {
@@ -192,11 +256,11 @@
         .toc-item:hover span[class*="font-mono"],
         .toc-item.active span[class*="font-mono"] {
             opacity: 1;
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .dark .toc-item:hover span[class*="font-mono"],
         .dark .toc-item.active span[class*="font-mono"] {
-            color: #818cf8;
+            color: var(--accent-soft);
         }
         /* กระพริบไฮไลต์บทปลายทาง */
         .scroll-target-flash {
@@ -244,7 +308,7 @@
             margin-bottom: 0.5rem;
         }
         .theme-toggle {
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
         }
         .theme-toggle:hover {
             transform: rotate(180deg);
@@ -257,18 +321,18 @@
             max-width: 82ch;
         }
         .info-box {
-            border-color: #4f46e5;
-            background: #eef2f5;
+            border-color: var(--accent-book);
+            background: var(--surface-3);
         }
         .dark .info-box {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         .warning-box {
-            border-color: #d4a017;
-            background: #fdf8ef;
+            border-color: var(--gold);
+            background: var(--wash-warm);
         }
         .dark .warning-box {
-            background: #3d2e0f;
+            background: var(--wash-dark);
         }
         .danger-box {
             border-color: #c0392b;
@@ -278,7 +342,7 @@
             background: #3d1a1a;
         }
         .success-box {
-            border-color: #27ae60;
+            border-color: var(--ok);
             background: #eef9f2;
         }
         .dark .success-box {
@@ -292,54 +356,54 @@
         th, td {
             padding: 0.75rem 1rem;
             text-align: left;
-            border: 1px solid #e5e7eb;
+            border: 1px solid var(--line);
         }
         .dark th, .dark td {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         th {
-            background-color: #f3f4f6;
+            background-color: var(--surface-2);
             font-weight: 600;
         }
         .dark th {
-            background-color: #1f2937;
+            background-color: var(--surface-dark);
         }
         .practice-box {
-            background: #f0f4f8;
+            background: var(--surface-5);
             border: 1px solid #d0d8e0;
         }
         .dark .practice-box {
-            background: #1e2a36;
-            border-color: #354152;
+            background: var(--surface-dark-3);
+            border-color: var(--surface-dark-5);
         }
         .chapter-intro {
             font-size: 1.05em;
-            color: #4b5563;
+            color: var(--muted-3);
             padding: 1rem 1.25rem;
             border-radius: 0.25rem;
-            background: #f5f6f8;
-            border-left: 3px solid #4f46e5;
+            background: var(--surface-4);
+            border-left: 3px solid var(--accent-book);
         }
         .dark .chapter-intro {
-            color: #9ca3af;
-            background: #1a2230;
+            color: var(--muted);
+            background: var(--surface-dark-4);
         }
         .key-point {
-            background: #eef2f5;
+            background: var(--surface-3);
             padding: 0.5rem 0;
             font-weight: 500;
         }
         .dark .key-point {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         #reading-progress {
             position: fixed;
             top: 64px;
             left: 0;
             height: 3px;
-            background: #4f46e5;
+            background: var(--accent-book);
             z-index: 51;
-            transition: width 0.1s linear;
+            transition: transform 0.1s linear;
         }
         .search-overlay {
             position: fixed;
@@ -368,17 +432,17 @@
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
         }
         .dark .search-panel {
-            background: #1f2937;
+            background: var(--surface-dark);
         }
         .search-input-wrapper {
             display: flex;
             align-items: center;
             padding: 1rem 1.25rem;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--line);
             gap: 0.75rem;
         }
         .dark .search-input-wrapper {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         .search-input-wrapper input {
             flex: 1;
@@ -400,10 +464,10 @@
             transition: background 0.15s;
         }
         .search-result-item:hover {
-            background: #f3f4f6;
+            background: var(--surface-2);
         }
         .dark .search-result-item:hover {
-            background: #374151;
+            background: var(--ink-2);
         }
         .search-result-item .result-title {
             font-weight: 600;
@@ -411,7 +475,7 @@
         }
         .search-result-item .result-excerpt {
             font-size: 0.85rem;
-            color: #6b7280;
+            color: var(--muted-2);
             margin-top: 0.25rem;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -419,7 +483,7 @@
             overflow: hidden;
         }
         .dark .search-result-item .result-excerpt {
-            color: #9ca3af;
+            color: var(--muted);
         }
         .search-result-item mark {
             background: #fef08a;
@@ -443,10 +507,10 @@
             user-select: none;
         }
         .font-size-btn:hover {
-            background: #f3f4f6;
+            background: var(--surface-2);
         }
         .dark .font-size-btn:hover {
-            background: #374151;
+            background: var(--ink-2);
         }
         .chapter-nav {
             display: flex;
@@ -454,10 +518,10 @@
             align-items: center;
             padding: 1.5rem 0;
             margin-top: 2rem;
-            border-top: 1px solid #e5e7eb;
+            border-top: 1px solid var(--line);
         }
         .dark .chapter-nav {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         .chapter-nav a {
             display: flex;
@@ -466,16 +530,16 @@
             padding: 0.5rem 1rem;
             border-radius: 0.25rem;
             font-size: 0.9rem;
-            color: #4f46e5;
+            color: var(--accent-book);
             transition: background 0.15s;
             text-decoration: none;
             max-width: 45%;
         }
         .chapter-nav a:hover {
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .dark .chapter-nav a:hover {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         .chapter-nav a.next {
             margin-left: auto;
@@ -507,31 +571,31 @@
             }
             body {
                 font-size: 12pt !important;
-                color: #000 !important;
-                background: #fff !important;
+                color: var(--ink) !important;
+                background: var(--ink-inverse) !important;
             }
             a {
-                color: #000 !important;
+                color: var(--ink) !important;
                 text-decoration: underline;
             }
         }
 
         /* ===== สไตล์เสริม: การ์ดนำอ่าน สรุปบท เส้นทางเรียนรู้ ===== */
         .reading-guide-card {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
+            background: var(--surface-6);
+            border: 1px solid var(--line-3);
             border-radius: 0.25rem;
             padding: 1.25rem 1.5rem;
             margin-bottom: 1.5rem;
         }
         .dark .reading-guide-card {
-            background: #1a2230;
-            border-color: #354152;
+            background: var(--surface-dark-4);
+            border-color: var(--surface-dark-5);
         }
         .hero-banner {
-            background: #4f46e5;
+            background: var(--accent-book);
             border-radius: 0.25rem;
-            color: #fff;
+            color: var(--ink-inverse);
             padding: 2rem 1.5rem;
         }
         .stat-pill {
@@ -550,25 +614,25 @@
             margin: 1.5rem 0;
         }
         .path-step {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
+            background: var(--surface-6);
+            border: 1px solid var(--line-3);
             border-radius: 0.25rem;
             padding: 1rem;
             position: relative;
         }
         .path-step:hover {
-            border-color: #4f46e5;
+            border-color: var(--accent-book);
         }
         .dark .path-step {
-            background: #1a2230;
-            border-color: #354152;
+            background: var(--surface-dark-4);
+            border-color: var(--surface-dark-5);
         }
         .path-step .step-num {
             position: absolute;
             top: -0.7rem;
             left: 1rem;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             width: 1.6rem;
             height: 1.6rem;
             border-radius: 50%;
@@ -579,14 +643,14 @@
             font-weight: 700;
         }
         .chapter-summary {
-            background: #fdf8ef;
-            border-left: 4px solid #d4a017;
+            background: var(--wash-warm);
+            border-left: 4px solid var(--gold);
             border-radius: 0.25rem;
             padding: 1rem 1.25rem;
             margin-top: 1.5rem;
         }
         .dark .chapter-summary {
-            background: #3d2e0f;
+            background: var(--wash-dark);
         }
         .breadcrumb {
             display: flex;
@@ -594,11 +658,11 @@
             align-items: center;
             gap: 0.4rem;
             font-size: 0.85rem;
-            color: #6b7280;
+            color: var(--muted-2);
             padding: 0.6rem 0;
         }
-        .dark .breadcrumb { color: #9ca3af; }
-        .breadcrumb a:hover { color: #4f46e5; text-decoration: underline; }
+        .dark .breadcrumb { color: var(--muted); }
+        .breadcrumb a:hover { color: var(--accent-book); text-decoration: underline; }
         .breadcrumb .sep { color: #cbd5e1; }
         .quick-tools {
             position: fixed;
@@ -612,32 +676,32 @@
         .quick-tool-btn {
             width: 2.6rem;
             height: 2.6rem;
-            background: #fff;
-            color: #374151;
+            background: var(--ink-inverse);
+            color: var(--ink-2);
             border-radius: 999px;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
             cursor: pointer;
         }
         .dark .quick-tool-btn {
-            background: #1f2937;
-            color: #e5e7eb;
+            background: var(--surface-dark);
+            color: var(--line);
         }
         .quick-tool-btn:hover {
             transform: translateY(-1px);
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .reading-time {
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
             font-size: 0.8rem;
-            color: #6b7280;
+            color: var(--muted-2);
         }
-        .dark .reading-time { color: #9ca3af; }
+        .dark .reading-time { color: var(--muted); }
         .difficulty-tag {
             display: inline-flex;
             align-items: center;
@@ -657,15 +721,15 @@
         .toc-section-label {
             font-size: 0.7rem;
             font-weight: 700;
-            color: #9ca3af;
-            letter-spacing: 0.08em;
+            color: var(--muted);
+            
             text-transform: uppercase;
             padding: 0.5rem 0.75rem 0.25rem;
         }
-        .dark .toc-section-label { color: #6b7280; }
+        .dark .toc-section-label { color: var(--muted-2); }
         .toc-progress-bar {
             height: 2px;
-            background: #4f46e5;
+            background: var(--accent-book);
             margin: 0.3rem 0;
             transform-origin: left;
             transition: transform 0.3s;
@@ -674,8 +738,8 @@
             position: absolute;
             left: -9999px;
             top: 0;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             padding: 0.5rem 1rem;
             z-index: 100;
         }
@@ -684,45 +748,45 @@
             display: flex;
             gap: 1rem;
             padding: 0.6rem 0;
-            border-bottom: 1px dashed #e5e7eb;
+            border-bottom: 1px dashed var(--line);
         }
-        .dark .glossary-item { border-color: #374151; }
+        .dark .glossary-item { border-color: var(--ink-2); }
         .glossary-item:last-child { border-bottom: 0; }
         .glossary-term {
             flex-shrink: 0;
             font-weight: 700;
-            color: #4f46e5;
+            color: var(--accent-book);
             min-width: 90px;
         }
         .comparison-table th { font-weight: 700; }
-        .comparison-table tr:nth-child(even) td { background: #f9fafb; }
-        .dark .comparison-table tr:nth-child(even) td { background: #111827; }
+        .comparison-table tr:nth-child(even) td { background: var(--surface-7); }
+        .dark .comparison-table tr:nth-child(even) td { background: var(--surface-dark-2); }
         .highlight-quote {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border-left: 4px solid #0ea5e9;
+            background: linear-gradient(135deg, #f0f9ff 0%, var(--sky-wash) 100%);
+            border-left: 4px solid var(--sky);
             padding: 1rem 1.25rem;
             border-radius: 0 0.5rem 0.5rem 0;
             margin: 1rem 0;
             font-style: italic;
-            color: #075985;
+            color: var(--sky-deep);
         }
         .dark .highlight-quote {
-            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            background: linear-gradient(135deg, #0c4a6e 0%, var(--sky-deep) 100%);
             color: #bae6fd;
         }
         .kbd {
             display: inline-block;
             padding: 0.1rem 0.45rem;
-            background: #f3f4f6;
-            color: #374151;
-            border: 1px solid #d1d5db;
+            background: var(--surface-2);
+            color: var(--ink-2);
+            border: 1px solid var(--line-2);
             border-bottom-width: 2px;
             border-radius: 0.3rem;
             font-family: ui-monospace, monospace;
             font-size: 0.78rem;
             font-weight: 600;
         }
-        .dark .kbd { background: #374151; color: #e5e7eb; border-color: #4b5563; }
+        .dark .kbd { background: var(--ink-2); color: var(--line); border-color: var(--muted-3); }
         @media (max-width: 768px) {
             body {
                 font-size: 15px;
@@ -732,7 +796,7 @@
                 max-height: 75vh;
             }
             .hero-banner { padding: 1.5rem 1rem; }
-            .hero-banner h1 { font-size: 1.5rem !important; }
+            .hero-banner h1 { text-wrap: balance; font-size: 1.5rem !important; }
             .learning-path { grid-template-columns: 1fr; }
             .quick-tools { right: 0.5rem; bottom: 4.5rem; }
             .quick-tool-btn { width: 2.3rem; height: 2.3rem; }
@@ -748,14 +812,14 @@
 
         /* แถบความคืบหน้าการอ่านแบบไล่เฉด */
         #reading-progress {
-            background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
+            background: linear-gradient(90deg, var(--accent-book), #7c3aed, var(--accent-book)) !important;
             background-size: 200% 100% !important;
             animation: progressShimmer 3s ease infinite;
             height: 3px;
             box-shadow: 0 0 8px rgba(79,70,229,0.3);
         }
         .dark #reading-progress {
-            background: linear-gradient(90deg, #818cf8, #a78bfa, #818cf8) !important;
+            background: linear-gradient(90deg, var(--accent-soft), #a78bfa, var(--accent-soft)) !important;
             background-size: 200% 100% !important;
         }
         @keyframes progressShimmer {
@@ -770,7 +834,7 @@
             transform: none;
         }
         /* 只有脚本确认可用后，才对尚未进入视口的区块启用入场动画 */
-        html.anim-ready .content-section:not(.visible):not(.immediately-visible) {
+        html.anim-ready.js .content-section:not(.visible):not(.immediately-visible) {
             opacity: 0;
             transform: translateY(24px);
             transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
@@ -790,7 +854,7 @@
 
         /* แบนเนอร์ Hero (เสริม) */
         .hero-banner {
-            background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
+            background: linear-gradient(135deg, var(--accent-book) 0%, #6d28d9 40%, var(--accent-book) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -847,20 +911,20 @@
             width: 3rem;
             height: 3rem;
             border-radius: 50%;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 14px rgba(79,70,229,0.3);
             cursor: pointer;
             z-index: 40;
-            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1), transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
             border: none;
             font-size: 1rem;
         }
         .dark #back-to-top {
-            background: #374151;
+            background: var(--ink-2);
             box-shadow: 0 4px 14px rgba(0,0,0,0.4);
         }
         #back-to-top:hover {
@@ -897,31 +961,31 @@
             border-radius: 0.25rem;
             font-size: 0.75rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
             background: transparent;
-            color: #6b7280;
+            color: var(--muted-2);
         }
         .dark .bookmark-btn {
-            border-color: #374151;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            color: var(--muted);
         }
         .bookmark-btn:hover {
-            border-color: #4f46e5;
-            color: #4f46e5;
+            border-color: var(--accent-book);
+            color: var(--accent-book);
         }
         .dark .bookmark-btn:hover {
-            border-color: #818cf8;
-            color: #818cf8;
+            border-color: var(--accent-soft);
+            color: var(--accent-soft);
         }
         .bookmark-btn.active {
-            background: #4f46e5;
-            color: #fff;
-            border-color: #4f46e5;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
+            border-color: var(--accent-book);
         }
         .dark .bookmark-btn.active {
-            background: #818cf8;
-            border-color: #818cf8;
+            background: var(--accent-soft);
+            border-color: var(--accent-soft);
         }
 
         /* ติ๊กเช็คบทที่อ่านจบ */
@@ -933,24 +997,24 @@
             border-radius: 0.25rem;
             font-size: 0.75rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
             background: transparent;
-            color: #6b7280;
+            color: var(--muted-2);
             user-select: none;
         }
         .dark .chapter-check {
-            border-color: #374151;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            color: var(--muted);
         }
         .chapter-check:hover {
-            border-color: #27ae60;
-            color: #27ae60;
+            border-color: var(--ok);
+            color: var(--ok);
         }
         .chapter-check.checked {
-            background: #27ae60;
-            color: #fff;
-            border-color: #27ae60;
+            background: var(--ok);
+            color: var(--ink-inverse);
+            border-color: var(--ok);
         }
         .chapter-check .check-icon {
             width: 14px;
@@ -960,15 +1024,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
         }
         .chapter-check.checked .check-icon {
-            border-color: #fff;
-            background: #fff;
+            border-color: var(--ink-inverse);
+            background: var(--ink-inverse);
         }
         .chapter-check.checked .check-icon::after {
             content: '✓';
-            color: #27ae60;
+            color: var(--ok);
             font-size: 10px;
             font-weight: 700;
             line-height: 1;
@@ -976,10 +1040,10 @@
 
         /* ผลค้นหาที่เลือกด้วยคีย์บอร์ด */
         .search-result-item.selected {
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .dark .search-result-item.selected {
-            background: #374151;
+            background: var(--ink-2);
         }
 
         /* การ์ดแดชบอร์ด */
@@ -1007,15 +1071,15 @@
         }
         .chapter-rating .star {
             font-size: 0.85rem;
-            color: #d1d5db;
+            color: var(--line-2);
             cursor: pointer;
             transition: color 0.15s, transform 0.15s;
             user-select: none;
         }
         .chapter-rating .star:hover { transform: scale(1.2); }
-        .chapter-rating .star.active { color: #fbbf24; }
-        .dark .chapter-rating .star { color: #4b5563; }
-        .dark .chapter-rating .star.active { color: #fbbf24; }
+        .chapter-rating .star.active { color: var(--gold-2); }
+        .dark .chapter-rating .star { color: var(--muted-3); }
+        .dark .chapter-rating .star.active { color: var(--gold-2); }
 
         .dashboard-card:hover {
             transform: translateY(-3px);
@@ -1024,8 +1088,8 @@
         .dark .dashboard-card:hover {
             box-shadow: 0 12px 28px rgba(0,0,0,0.3);
         }
-        .check-item:hover span { color: #4f46e5; }
-        .dark .check-item:hover span { color: #818cf8; }
+        .check-item:hover span { color: var(--accent-book); }
+        .dark .check-item:hover span { color: var(--accent-soft); }
         .check-item input:checked + span {
             text-decoration: line-through;
             opacity: 0.5;
@@ -1038,14 +1102,14 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 50;
-            background: #fff;
+            background: var(--ink-inverse);
             box-shadow: 0 4px 24px rgba(79,70,229,0.18);
             border-radius: 2rem;
             padding: 0.5rem 1rem;
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+            transition: color 0.35s cubic-bezier(0.22,1,0.36,1), background-color 0.35s cubic-bezier(0.22,1,0.36,1), border-color 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s cubic-bezier(0.22,1,0.36,1), transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.35s cubic-bezier(0.22,1,0.36,1);
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -1056,7 +1120,7 @@
             pointer-events: auto;
         }
         .dark .tts-controls {
-            background: #1f2937;
+            background: var(--surface-dark);
             box-shadow: 0 4px 24px rgba(0,0,0,0.4);
         }
         .tts-btn {
@@ -1068,22 +1132,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
             font-size: 1rem;
-            background: #f3f4f6;
-            color: #374151;
+            background: var(--surface-2);
+            color: var(--ink-2);
         }
-        .dark .tts-btn { background: #374151; color: #e5e7eb; }
-        .tts-btn:hover { background: #4f46e5; color: #fff; }
-        .dark .tts-btn:hover { background: #818cf8; }
+        .dark .tts-btn { background: var(--ink-2); color: var(--line); }
+        .tts-btn:hover { background: var(--accent-book); color: var(--ink-inverse); }
+        .dark .tts-btn:hover { background: var(--accent-soft); }
         .tts-btn.play-btn {
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             width: 3rem;
             height: 3rem;
             font-size: 1.2rem;
         }
-        .dark .tts-btn.play-btn { background: #818cf8; }
+        .dark .tts-btn.play-btn { background: var(--accent-soft); }
         .tts-btn.play-btn:hover { background: #1a252f; }
         .tts-btn.play-btn.playing { background: #e74c3c; animation: ttsPulse 1.5s ease-in-out infinite; }
         @keyframes ttsPulse {
@@ -1093,25 +1157,25 @@
         .tts-speed-badge {
             font-size: 0.7rem;
             font-weight: 700;
-            color: #6b7280;
+            color: var(--muted-2);
             min-width: 2rem;
             text-align: center;
         }
-        .dark .tts-speed-badge { color: #9ca3af; }
+        .dark .tts-speed-badge { color: var(--muted); }
         .tts-controls .tts-chapter-label {
             font-size: 0.75rem;
-            color: #6b7280;
+            color: var(--muted-2);
             max-width: 12rem;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        .dark .tts-controls .tts-chapter-label { color: #9ca3af; }
+        .dark .tts-controls .tts-chapter-label { color: var(--muted); }
         .quick-tool-btn.tts-active {
-            color: #4f46e5;
-            box-shadow: 0 0 0 2px #4f46e5;
+            color: var(--accent-book);
+            box-shadow: 0 0 0 2px var(--accent-book);
         }
-        .dark .quick-tool-btn.tts-active { color: #818cf8; box-shadow: 0 0 0 2px #818cf8; }
+        .dark .quick-tool-btn.tts-active { color: var(--accent-soft); box-shadow: 0 0 0 2px var(--accent-soft); }
         @media (max-width: 768px) {
             .tts-controls {
                 bottom: 5rem;
@@ -1132,26 +1196,26 @@
             border-radius: 0.25rem;
             font-size: 0.7rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
-            background: #f9fafb;
-            color: #6b7280;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
+            background: var(--surface-7);
+            color: var(--muted-2);
             vertical-align: middle;
         }
         .dark .copy-btn {
-            border-color: #374151;
-            background: #1f2937;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            background: var(--surface-dark);
+            color: var(--muted);
         }
         .copy-btn:hover {
-            background: #4f46e5;
-            color: #fff;
-            border-color: #4f46e5;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
+            border-color: var(--accent-book);
         }
         .copy-btn.copied {
-            background: #27ae60;
-            color: #fff;
-            border-color: #27ae60;
+            background: var(--ok);
+            color: var(--ink-inverse);
+            border-color: var(--ok);
         }
 
         /* บล็อกเนื้อหาแบบพับได้ */
@@ -1165,15 +1229,15 @@
             transition: color 0.2s;
         }
         .collapsible-header:hover {
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .dark .collapsible-header:hover {
-            color: #818cf8;
+            color: var(--accent-soft);
         }
         .collapsible-header .collapse-icon {
             transition: transform 0.3s ease;
             font-size: 0.75rem;
-            color: #9ca3af;
+            color: var(--muted);
         }
         .collapsible-header.collapsed .collapse-icon {
             transform: rotate(-90deg);
@@ -1196,8 +1260,8 @@
             bottom: 2rem;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             padding: 0.75rem 1.5rem;
             border-radius: 999px;
             font-size: 0.875rem;
@@ -1210,7 +1274,7 @@
             white-space: nowrap;
         }
         .dark .restore-position-toast {
-            background: #374151;
+            background: var(--ink-2);
         }
         .restore-position-toast.show {
             transform: translateX(-50%) translateY(0);
@@ -1224,13 +1288,13 @@
             transition: background 0.2s;
         }
         .restore-position-toast .btn-restore {
-            background: #fff;
-            color: #4f46e5;
+            background: var(--ink-inverse);
+            color: var(--accent-book);
             font-weight: 600;
         }
         .restore-position-toast .btn-dismiss {
             background: rgba(255,255,255,0.15);
-            color: #fff;
+            color: var(--ink-inverse);
         }
 
         /* เส้นคั่นบท (เสริม) */
@@ -1245,10 +1309,10 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #d1d5db 20%, #d1d5db 80%, transparent);
+            background: linear-gradient(90deg, transparent, var(--line-2) 20%, var(--line-2) 80%, transparent);
         }
         .dark .content-section::before {
-            background: linear-gradient(90deg, transparent, #374151 20%, #374151 80%, transparent);
+            background: linear-gradient(90deg, transparent, var(--ink-2) 20%, var(--ink-2) 80%, transparent);
         }
         .content-section:first-of-type::before {
             display: none;
@@ -1268,7 +1332,7 @@
             transition: background-color 0.15s ease;
         }
         table tbody tr:hover {
-            background-color: #f0f4f8;
+            background-color: var(--surface-5);
         }
         .dark table tbody tr:hover {
             background-color: rgba(255,255,255,0.04);
@@ -1276,33 +1340,33 @@
 
         /* ปุ่มนำทางบท (เสริม) */
         .chapter-nav a {
-            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .chapter-nav a:hover {
             transform: translateX(4px);
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .chapter-nav a.next:hover {
             transform: translateX(-4px);
         }
         .dark .chapter-nav a:hover {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
 
         /* มาร์กบุ๊กมาร์กในแถบข้าง */
         .toc-item.bookmarked::after {
             content: '★';
-            color: #d4a017;
+            color: var(--gold);
             font-size: 0.65rem;
             margin-left: 0.3rem;
         }
         .toc-item.completed-toc {
-            color: #27ae60 !important;
+            color: var(--ok) !important;
         }
 
         /* เครื่องมือด่วน (เสริม) */
         .quick-tool-btn {
-            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .quick-tool-btn:hover {
             transform: translateY(-2px) scale(1.08);
@@ -1350,15 +1414,15 @@
     </style>
 <style>
         /* ===== เพิ่มใน v1.8: สไตล์ประกอบภาคลงมือทำเขียนโค้ดด้วย AI ===== */
-        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; }
-        .code-head { background: #374151; color: #e5e7eb; font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
-        .code-head .dots { letter-spacing: 3px; color: #9ca3af; }
-        .code-block pre { background: #1f2937; color: #e5e7eb; padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
-        .dark .code-block { border-color: #4b5563; }
-        code.inline { background: #eef2f5; color: #4f46e5; padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
-        .dark code.inline { background: #1e2a36; color: #818cf8; }
-        .quote-line { border-left: 4px solid #4f46e5; background: #eef2ff; color: #1e1b4b; padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
-        .dark .quote-line { background: #1e1b4b; color: #c7d2fe; }
+        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid var(--ink-2); }
+        .code-head { background: var(--ink-2); color: var(--line); font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
+        .code-head .dots { letter-spacing: 3px; color: var(--muted); }
+        .code-block pre { background: var(--surface-dark); color: var(--line); padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
+        .dark .code-block { border-color: var(--muted-3); }
+        code.inline { background: var(--surface-3); color: var(--accent-book); padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+        .dark code.inline { background: var(--surface-dark-3); color: var(--accent-soft); }
+        .quote-line { border-left: 4px solid var(--accent-book); background: var(--accent-wash); color: var(--accent-deep); padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
+        .dark .quote-line { background: var(--accent-deep); color: #c7d2fe; }
         @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
     </style>
 <style id="reader-bundle-style">
@@ -1371,7 +1435,7 @@ html:not(.safe) .content-section pre { content-visibility: auto; contain-intrins
 /* P2-1 公告横幅 */
 #announce-bar { display:none; position:sticky; top:0; z-index:80; padding:8px 16px;
   font-size:14px; text-align:center; }
-#announce-bar[data-level="info"] { background:#e0f2fe; color:#075985; }
+#announce-bar[data-level="info"] { background:var(--sky-wash); color:var(--sky-deep); }
 #announce-bar[data-level="warn"] { background:#fef3c7; color:#92400e; }
 #announce-bar[data-level="crit"] { background:#fee2e2; color:#991b1b; }
 #announce-bar button { position:absolute; right:10px; top:6px; border:0; background:none;
@@ -1414,7 +1478,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 @media print {
   html.lg-ready #navbar, html.lg-ready #sidebar, html.lg-ready .quick-tool-btn,
   html.lg-ready .search-panel {
-    background: #fff !important; backdrop-filter: none !important;
+    background: var(--ink-inverse) !important; backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important; box-shadow: none !important;
   }
 }
@@ -1560,7 +1624,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
     <a class="skip-link focus-ring" href="#content">ข้ามไปที่เนื้อหาหลัก</a>
     <div id="reading-progress" style="width:0%" aria-hidden="true"></div>
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" role="banner">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-colors duration-300" role="banner">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3 min-w-0">
                 <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="เปิดเมนูสารบัญ" aria-expanded="false" aria-controls="sidebar">
@@ -1597,7 +1661,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <nav class="p-4">
                 <div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
                     <h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
-                        <i class="fas fa-list-ul text-primary" aria-hidden="true"></i>สารบัญ
+                        <span aria-hidden="true" class="fas fa-list-ul text-primary" aria-hidden="true"></span>สารบัญ
                     </h2>
                     <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                         <span id="reading-progress-text">0 / 38 บท</span>
@@ -1868,7 +1932,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- วิธีใช้หนังสือเล่มนี้ -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
-                    <i class="fas fa-compass text-primary" aria-hidden="true"></i>ใช้หนังสือเล่มนี้ยังไง?
+                    <span aria-hidden="true" class="fas fa-compass text-primary" aria-hidden="true"></span>ใช้หนังสือเล่มนี้ยังไง?
                 </h2>
                 <div class="grid md:grid-cols-2 gap-3 text-sm">
                     <div>
@@ -1957,7 +2021,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- ตารางแผนที่บทอย่างรวดเร็ว -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
-                    <i class="fas fa-map text-primary" aria-hidden="true"></i>แผนที่บทฉับไว
+                    <span aria-hidden="true" class="fas fa-map text-primary" aria-hidden="true"></span>แผนที่บทฉับไว
                 </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">หาบทตามเป้าหมายการเรียนได้เร็ว</p>
                 <div class="grid md:grid-cols-2 gap-2 text-sm">
@@ -1991,19 +2055,19 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- เช็กลิสต์แบบโต้ตอบ + แดชบอร์ดการอ่าน -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
-                    <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>แดชบอร์ดการเรียนรู้
+                    <span aria-hidden="true" class="fas fa-gauge-high text-primary" aria-hidden="true"></span>แดชบอร์ดการเรียนรู้
                 </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">ติดตามความคืบหน้าการอ่าน และเช็คสุขภาพมือถือของคุณ</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
                     <!-- การ์ดความคืบหน้าการอ่าน -->
-                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
-                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>ความคืบหน้าการอ่าน</h3>
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 border border-indigo-100 dark:border-gray-700">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-chart-pie text-primary" aria-hidden="true"></span>ความคืบหน้าการอ่าน</h3>
                         <div class="flex items-center gap-4">
                             <div class="relative w-20 h-20 flex-shrink-0">
-                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90">
-                                    <circle cx="40" cy="40" r="34" fill="none" stroke="#e5e7eb" stroke-width="8" class="dark:stroke-gray-700"/>
-                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
+                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90" aria-hidden="true">
+                                    <circle cx="40" cy="40" r="34" fill="none" stroke="var(--line)" stroke-width="8" class="dark:stroke-gray-700"/>
+                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="var(--accent-book)" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
                                 </svg>
                                 <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span>
                             </div>
@@ -2017,7 +2081,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 
                     <!-- การ์ดตรวจสุขภาพโทรศัพท์ -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
-                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>เช็คสุขภาพมือถือด้วยตัวเอง</h3>
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></span>เช็คสุขภาพมือถือด้วยตัวเอง</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">ติ๊กรายการที่ทำได้แล้ว แล้วดู "คะแนนสุขภาพ" ของมือถือคุณ:</p>
                         <div id="checklist-items" class="space-y-1.5 text-sm">
                             <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>ตั้งรหัสล็อกหน้าจอแล้ว (ไม่ใช่ 1234/0000)</span></label>
@@ -2034,7 +2098,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
                             <span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span>
                         </div>
                         <div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all duration-500" style="width: 0%"></div>
+                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-colors duration-500" style="width: 0%"></div>
                         </div>
                         <p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">เช็คด้วยตัวเองให้ครบ เพื่อรู้สถานะความปลอดภัยของมือถือคุณ</p>
                     </div>
@@ -5694,17 +5758,17 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <p class="mb-2">Termux เป็นแอปเทอร์มินัลจำลองและสภาพแวดล้อม Linux โอเพนซอร์สที่ออกแบบมาเพื่ออุปกรณ์ Android โดยเฉพาะ ไม่ต้องมีสิทธิ์ root ก็ให้ประสบการณ์ Linux shell ครบวงจรบนมือถือ เป็นแอปขนาดเบา (แพ็กเกจติดตั้งราว 30MB) ใช้ระบบจัดการแพ็กเกจ APT ที่มีซอฟต์แวร์ให้เลือกมากมาย รัน Python, Node.js, Git, SSH ฯลฯ บนอุปกรณ์เคลื่อนที่ได้ จะตั้งเซิร์ฟเวอร์หรือทำเพนเทสต์ก็ยังได้</p>
 <p class="mb-2">จุดแข็งหลักของ Termux คือความเบาและความยืดหยุ่นสูง เหมาะกับหลากหลายสถานการณ์ ทั้งงานพัฒนา การเรียนรู้ และการจัดการระบบ มันรวมแพ็กเกจมาตรฐานกับการจำลองเทอร์มินัลที่แม่นยำไว้ในโซลูชันโอเพนซอร์สชุดเดียว</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">สอง ฟังก์ชันหลักและจุดเด่น</h4>
-<h5 class="font-semibold mt-3 mb-1">🖥️ สภาพแวดล้อม Linux ครบวงจร</h5>
+<h5 class="font-semibold mt-3 mb-1">สภาพแวดล้อม Linux ครบวงจร</h5>
 <p class="mb-2">Termux<strong>มีเพียง Bash</strong>Shell ชนิดเดียวเท่านั้น หากต้องการใช้ Shell ตัวอื่น เช่น Zsh หรือ fish จะต้องติดตั้งด้วยตนเองผ่านตัวจัดการแพ็กเกจ ตัวอย่างเช่น:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>หรือ<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>ในขณะเดียวกัน Termux ก็รองรับโปรแกรมแก้ไขข้อความอย่าง Vim, Nano, Emacs เป็นต้น มอบประสบการณ์การใช้งาน Command Line ที่ใกล้เคียงกับของจริง ผู้ใช้สามารถติดตั้งแพ็กเกจซอฟต์แวร์ได้มากกว่า 2000 รายการผ่าน "pkg install" ซึ่งรวมถึงเครื่องมือสำหรับการพัฒนาและความปลอดภัย เช่น GCC, OpenSSH, SQLMap เป็นต้น</p>
-<h5 class="font-semibold mt-3 mb-1">📦 การจัดการแพ็กเกจที่ทรงพลัง</h5>
+<h5 class="font-semibold mt-3 mb-1">การจัดการแพ็กเกจที่ทรงพลัง</h5>
 <p class="mb-2">ใช้ตัวจัดการแพ็กเกจ APT (คล้าย Debian และ Ubuntu) ติดตั้งแพ็กเกจ Linux ได้เป็นพัน ๆ ตัว ครอบคลุมทั้งเครื่องมือพัฒนา เครื่องมือเครือข่าย ฯลฯ รองรับสภาพแวดล้อมภาษาโปรแกรมหลากหลาย ทั้ง Python, Ruby, Node.js, Go, Rust, Swift</p>
-<h5 class="font-semibold mt-3 mb-1">🔒 ฟังก์ชันความปลอดภัยและเครือข่าย</h5>
+<h5 class="font-semibold mt-3 mb-1">ฟังก์ชันความปลอดภัยและเครือข่าย</h5>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>การเชื่อมต่อระยะไกลด้วย SSH</strong>: รองรับทั้ง SSH ไคลเอนต์และเซิร์ฟเวอร์ เชื่อมต่อไปยังอุปกรณ์อื่นจากระยะไกลได้ หรือให้มือถือเป็นเครื่อง SSH ก็ยังได้</li>
   <li><strong>เครื่องมือเข้ารหัส</strong>: มีเครื่องมือเข้ารหัสอย่าง OpenSSL รองรับการเข้ารหัสข้อมูลและการสื่อสารอย่างปลอดภัย</li>
   <li><strong>การตั้งเซิร์ฟเวอร์</strong>: ตั้งค่า Nginx หรือ Apache เป็นเว็บเซิร์ฟเวอร์แบบสถิตได้</li>
 </ul>
-<h5 class="font-semibold mt-3 mb-1">🔧 การเชื่อมรวมกับระบบและส่วนขยาย</h5>
+<h5 class="font-semibold mt-3 mb-1">การเชื่อมรวมกับระบบและส่วนขยาย</h5>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li>: เข้าถึงสิทธิ์พื้นที่จัดเก็บของมือถือ ทำการจัดการไฟล์ในเครื่องได้</li>
   <li>Termux:Styling</li>
@@ -5751,25 +5815,25 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <p class="mt-1">Termux และปลั๊กอินต้องติดตั้งจากแหล่งเดียวกัน เพราะมันแชร์ sharedUserId เดียวกัน การติดตั้งปนกันจากหลายแหล่ง (เช่น F-Droid กับ GitHub) จะทำให้ติดตั้งผิดพลาด</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">สี่ คู่มือติดตั้งและกำหนดค่า</h4>
-<h5 class="font-semibold mt-3 mb-1">📥 ขั้นตอนการติดตั้ง</h5>
+<h5 class="font-semibold mt-3 mb-1">ขั้นตอนการติดตั้ง</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li><strong>ดาวน์โหลดแอป</strong>: ดาวน์โหลดและติดตั้ง Termux จากช่องทางทางการ (F-Droid หรือ GitHub) ไม่ต้องใช้สิทธิ์ root</li>
   <li><strong>ตั้งค่าเริ่มต้นระบบ</strong>: หลังเปิดครั้งแรก รอให้ "Installing bootstrap packages" เสร็จสมบูรณ์</li>
   <li><strong>รับสิทธิ์พื้นที่จัดเก็บ</strong>: รันคำสั่ง<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>: รับสิทธิ์การเข้าถึงระบบไฟล์ของมือถือ</li>
   <li><strong>อัปเดตซอร์สซอฟต์แวร์</strong>: รันคำสั่ง<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update && pkg upgrade</code>: อัปเดตรายการแพ็กเกจซอฟต์แวร์</li>
 </ol>
-<h5 class="font-semibold mt-3 mb-1">⚙️ การเพิ่มประสิทธิภาพพื้นฐาน</h5>
+<h5 class="font-semibold mt-3 mb-1">การเพิ่มประสิทธิภาพพื้นฐาน</h5>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>เปลี่ยนซอร์สมิเรอร์</strong>: ใช้คำสั่ง<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code>คำสั่งนี้เปลี่ยนซอร์สมิเรอร์ผ่านอินเทอร์เฟซกราฟิก (แนะนำซอร์สมิเรอร์มหาวิทยาลัยชิงหัว)</li>
   <li><strong>ตั้งค่าปุ่มลัด</strong>: ปุ่มลดเสียงจำลอง Ctrl ปุ่มเพิ่มเสียงจำลอง Esc ช่วยเพิ่มประสิทธิภาพการพิมพ์</li>
   <li><strong>จัดหน้าตาอินเทอร์เฟซ</strong>: ติดตั้ง Zsh + Oh My Zsh ตั้งค่าธีมและปลั๊กอิน</li>
 </ul>
 <h4 class="text-lg font-semibold mt-4 mb-2">ห้า สถานการณ์การใช้งานทั่วไป</h4>
-<h5 class="font-semibold mt-3 mb-1">💻 ทดสอบการพัฒนาบนมือถือ</h5>
+<h5 class="font-semibold mt-3 mb-1">ทดสอบการพัฒนาบนมือถือ</h5>
 <p class="mb-2">สร้างสภาพแวดล้อมพัฒนาครบวงจรบนมือถือ เขียนและรันสคริปต์ Python คอมไพล์โปรแกรม C ด้วย GCC จัดการรีโปโค้ดด้วย Git และเชื่อมกับเซิร์ฟเวอร์ระยะไกลผ่าน SSH</p>
-<h5 class="font-semibold mt-3 mb-1">🖥️ ดูแลรักษาเซิร์ฟเวอร์</h5>
+<h5 class="font-semibold mt-3 mb-1">ดูแลรักษาเซิร์ฟเวอร์</h5>
 <p class="mb-2">จัดการเซิร์ฟเวอร์จากระยะไกลผ่าน SSH ทำงานบำรุงรักษาระบบ วิเคราะห์ล็อก ฯลฯ แก้ปัญหาเซิร์ฟเวอร์ได้ทุกเมื่อทุกที่</p>
-<h5 class="font-semibold mt-3 mb-1">📚 ฝึกเรียนการใช้ Linux</h5>
+<h5 class="font-semibold mt-3 mb-1">ฝึกเรียนการใช้ Linux</h5>
 <p class="mb-2">มอบสภาพแวดล้อม Linux ที่แท้จริง ถือเป็นแพลตฟอร์มในอุดมคติสำหรับการเรียนรู้ Command Line และการจัดการระบบ สามารถฝึกฝนการเขียน Shell Script, การจัดการสิทธิ์ไฟล์ Linux (เช่น <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> เพื่อตั้งค่าบิตสิทธิ์ rwxr-xr-x, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> เพื่อแก้ไขเจ้าของไฟล์, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> เพื่อดูสิทธิ์ทั้ง 9 บิตแบ่งเป็น 3 กลุ่มของ owner/group/other) และคำสั่งพื้นฐานอื่นๆ โปรดทราบว่านี่คือโมเดลสิทธิ์แบบ "สามกลุ่มเก้าบิต" แบบคลาสสิกของ Unix/Linux (owner / group / other × อ่าน / เขียน / ทำงาน) ซึ่งเป็นระบบที่แตกต่างกันโดยสิ้นเชิงกับระบบรายการควบคุมการเข้าถึงแบบ ACL ของ Windows NTFS</p>
 <h5 class="font-semibold mt-3 mb-1">🔐 ทดสอบความปลอดภัยเครือข่าย</h5>
 <p class="mb-2">ติดตั้งเครื่องมือด้านความปลอดภัยอย่าง Nmap, SQLMap, Hydra, Metasploit ทำการสแกนเครือข่ายและทดสอบเจาะระบบ</p>
@@ -6254,7 +6318,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
                     </table>
 <p class="mb-2">พูดสั้น ๆ:<strong>Git ดูแล "การบันทึกการเปลี่ยนแปลงอย่างไร" ส่วน GitHub ดูแล "การเปลี่ยนแปลงเก็บไว้ที่ไหนและร่วมงานกันอย่างไร"</strong> Git คือเครื่องมือ ทำงานอยู่บนเครื่องเรา GitHub คือแพลตฟอร์มที่เอารีโป Git ขึ้นคลาวด์ เพื่อความสะดวกในการร่วมมือและโชว์ผลงาน คุณใช้ Git อย่างเดียวโดยไม่ใช้ GitHub ก็ได้ (เช่น ทำเวอร์ชันเก็บโค้ดส่วนตัว) แต่ถ้าใช้ GitHub ต้องใช้ Git แน่นอน (เพราะ GitHub สร้างบนพื้นฐานของ Git นั่นเอง)</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">สาม คอนเซปต์และฟีเจอร์หลักของ GitHub</h4>
-<h5 class="font-semibold mt-3 mb-1">📁 คอนเซปต์พื้นฐาน</h5>
+<h5 class="font-semibold mt-3 mb-1">คอนเซปต์พื้นฐาน</h5>
 <p class="mb-2">ก่อนลงมือ มาทำความรู้จักคำที่ใช้บ่อยก่อน ไม่อย่างนั้นเปิดหน้า GitHub มาจะงงเป็นไข่แตก:</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>รีโป (Repository หรือ Repo)</strong>: หนึ่งโปรเจกต์ต่อหนึ่งรีโป ข้างในเก็บไฟล์โค้ดทั้งหมด ประวัติเวอร์ชัน และเอกสารของโปรเจกต์นั้น เข้าใจง่าย ๆ ว่าเป็น "โฟลเดอร์โปรเจกต์"</li>
@@ -6266,7 +6330,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>อิชชู (Issue)</strong>: ใช้จดบั๊ก ฟีเจอร์ที่ขอ และหัวข้ออภิปราย แต่ละ Issue เหมือนกระทู้สนทนาหนึ่งอัน มอบหมายผู้รับผิดชอบหรือติดป้ายกำกับได้</li>
   <li><strong>Fork</strong>: ก๊อปรีโปของคนอื่นมาไว้ใต้บัญชีของตัวเอง จะแก้อะไรในสำเนาของตัวเองก็ได้อย่างอิสระ ไม่กระทบรีโปเดิม พอแก้เสร็จก็ส่ง PR กลับไปให้ผู้เขียนเดิม ขอให้รวมงานที่เราปรับปรุงเข้าไป</li>
 </ul>
-<h5 class="font-semibold mt-3 mb-1">🛠️ ฟีเจอร์หลัก</h5>
+<h5 class="font-semibold mt-3 mb-1">ฟีเจอร์หลัก</h5>
 <p class="mb-2">GitHub ให้มาไม่ใช่แค่ที่เก็บโค้ด แต่ยังรวมถึง:</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>การควบคุมเวอร์ชัน</strong>: บันทึกประวัติการแก้โค้ดทุกครั้ง พอแก้พังเมื่อไรก็ย้อนกลับไปเวอร์ชันปกติก่อนหน้าได้ทันที</li>
@@ -6279,14 +6343,14 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>ชุมชนโอเพนซอร์ส</strong>: คุณกด Star (เก็บชอบ) โปรเจกต์ที่ชอบ Watch (ติดตาม) ข่าวคราวโปรเจกต์ Follow (ติดตาม) นักพัฒนา แล้วร่วมงานโอเพนซอร์สระดับโลกได้</li>
 </ul>
 <h4 class="text-lg font-semibold mt-4 mb-2">สี่ ลงทะเบียนและเริ่มใช้งาน: สร้างรีโปแรกของคุณใน 5 นาที</h4>
-<h5 class="font-semibold mt-3 mb-1">📝 ลงทะเบียนบัญชี</h5>
+<h5 class="font-semibold mt-3 mb-1">ลงทะเบียนบัญชี</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li>เปิด <a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a> แล้วกด "Sign up"</li>
   <li>กรอกอีเมล ตั้งรหัสผ่านและชื่อผู้ใช้ (ชื่อผู้ใช้จะโผล่ในที่อยู่โปรไฟล์ของคุณ แนะนำให้ใช้ภาษาอังกฤษ เช่น <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/yourname</code>)</li>
   <li>ยืนยันอีเมลและผ่านการตรวจสอบว่าไม่ใช่บอท</li>
   <li>เลือกแพ็กฟรี (Free) ก็พอ สำหรับผู้ใช้ทั่วไปเกินพออยู่แล้ว</li>
 </ol>
-<h5 class="font-semibold mt-3 mb-1">📁 สร้างรีโปแรก</h5>
+<h5 class="font-semibold mt-3 mb-1">สร้างรีโปแรก</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li>ล็อกอินแล้วกดปุ่ม "+" มุมขวาบน เลือก "New repository"</li>
   <li>ตั้งชื่อรีโป (Repository name) เช่น <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code></li>
@@ -6321,13 +6385,13 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <p class="mb-2">เวิร์กโฟลว์นี้รับประกันว่า <strong>โค้ดทุกชิ้นผ่านการรีวิวก่อนเข้าบรานช์หลักเสมอ</strong> ความเสี่ยงพลาดจึงต่ำลงมาก โปรเจกต์โอเพนซอร์สก็ใช้กลไกนี้รับงานจากคนแปลกหน้าทั่วโลก — คุณยื่น PR เข้าโปรเจกต์โอเพนซอร์สดัง ๆ ก็ได้ พอถูกรับ คุณก็กลายเป็นผู้ร่วมพัฒนาโปรเจกต์นั้นแล้ว</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">เจ็ด สถานการณ์ใช้งาน GitHub แบบคลาสสิก</h4>
-<h5 class="font-semibold mt-3 mb-1">🎓 นักศึกษากับการแข่งขันและโปรเจกต์รายวิชา</h5>
+<h5 class="font-semibold mt-3 mb-1">นักศึกษากับการแข่งขันและโปรเจกต์รายวิชา</h5>
 <p class="mb-2">นักศึกษาคอมพิวเตอร์ที่ลงแข่ง ACM แฮ็กะธอน หรือทำโปรเจกต์จบ แทบทุกคนต้องพึ่ง GitHub มันทำหน้าที่ทั้งแพลตฟอร์มทำงานร่วมกันของทีม และหน้าต่างโชว์ผลงาน — กรรมการแข่งเปิดดูรีโปของคุณได้ตรง ๆ เห็นทั้งคุณภาพโค้ดและกระบวนการทำงานร่วมกัน หลายบริษัทรับสมัครงานก็ขอลิงก์โปรไฟล์ GitHub มาเป็นหลักฐานฝีมือทางเทคนิคด้วย</p>
-<h5 class="font-semibold mt-3 mb-1">📚 คลังความรู้ส่วนตัวและที่เก็บโน้ต</h5>
+<h5 class="font-semibold mt-3 mb-1">คลังความรู้ส่วนตัวและที่เก็บโน้ต</h5>
 <p class="mb-2">คนที่ไม่ใช่โปรแกรมเมอร์ก็ใช้ GitHub ได้ หลายคนใช้เก็บโน้ตเรียน บล็อกสายเทคนิค (คู่กับ GitHub Pages ทำเว็บได้ฟรี) หรืออีบุ๊ก เขียนด้วย Markdown + จัดเวอร์ชันด้วย Git + สำรองบนคลาวด์ ครบสามอย่างในที่เดียว</p>
 <h5 class="font-semibold mt-3 mb-1">🌐 ร่วมพัฒนาโปรเจกต์โอเพนซอร์ส</h5>
 <p class="mb-2">GitHub คือฐานทัพหลักของกระแสโอเพนซอร์สทั่วโลก คุณ Fork โปรเจกต์ที่ชอบ แก้แล้วส่ง PR กลับคืนชุมชน หรือจะแค่ Star เก็บโปรเจกต์ดี ๆ ไว้ตามอัปเดตก็ได้ การร่วมโอเพนซอร์สเป็นทางที่ดีที่สุดทั้งฝึกฝีมือและสะสมชื่อเสียง</p>
-<h5 class="font-semibold mt-3 mb-1">🤖 ดีพลอยอัตโนมัติกับ CI/CD</h5>
+<h5 class="font-semibold mt-3 mb-1">ดีพลอยอัตโนมัติกับ CI/CD</h5>
 <p class="mb-2">ด้วยพลังของ GitHub Actions ทำ "พุชโค้ดปุ๊บ ทดสอบเอง + ดีพลอยขึ้นเซิร์ฟเวอร์เอง" แบบอัตโนมัติเต็มระบบได้ บล็อกส่วนตัวหรือเว็บเอกสารจำนวนมากตั้งมาแบบนี้ เขียนบทความเสร็จพุชหนึ่งที เว็บก็อัปเดตเองทันที</p>
 <h5 class="font-semibold mt-3 mb-1">💾 สำรองโค้ดและซิงก์หลายเครื่อง</h5>
 <p class="mb-2">ใช้รีโปโค้ดเป็นคลาวด์ไดรฟ์สิ เปลี่ยนคอม ทำงานหลายเครื่อง เมื่อไรก็ git pull หนึ่งครั้งได้โค้ดล่าสุด ไม่ต้องแบกแฟลชไดรฟ์ก๊อปไปก๊อปมาอีกต่อไป</p>
@@ -6395,7 +6459,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <h5 class="font-semibold mt-3 mb-1">🔗 ห่วงโซ่การบูตที่ปลอดภัย</h5>
 <p class="mb-2">การล็อก BL คือวงแรกของห่วงโซ่การบูตที่ปลอดภัยทั้งหมด เมื่อผ่านการตรวจสอบแล้ว จึงจะโหลดและดำเนินการโปรแกรมบูตในขั้นตอนถัดไป (เช่น Kernel) เพื่อให้มั่นใจในความน่าเชื่อถือของสภาพแวดล้อมการบูตระบบทีละขั้นตอน</p>
-<h5 class="font-semibold mt-3 mb-1">📊 ล็อก vs ปลดล็อก: ผลกระทบสองด้านของการล็อก BL</h5>
+<h5 class="font-semibold mt-3 mb-1">ล็อก vs ปลดล็อก: ผลกระทบสองด้านของการล็อก BL</h5>
 <p class="mb-2">เพื่อให้เข้าใจข้อดีและข้อเสียของการล็อก BL ได้ชัดเจนยิ่งขึ้น เราจะใช้ตารางเปรียบเทียบเพื่อแสดงความแตกต่างใน 5 มิติหลัก:</p>
 <div class="overflow-x-auto">
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
@@ -8051,32 +8115,32 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <p class="mb-2">ตัวเลขไม่เคยโกหก: ใน Cursor 3 ที่ปล่อยเมษายน 2026 อัตราการใช้โหมด Agent แซงโหมด Tab completion ไปได้เป็นครั้งแรก ซึ่งบอกว่านักพัฒนาได้ย้ายมาใช้วิธีทำงานแบบนี้กันเป็นวงกว้างแล้ว ส่วน Claude Code ซึ่งเป็นเครื่องมือเขียนโปรแกรมด้วย AI ที่อยู่บนเทอร์มินัลโดยตรง มาถึงกลางปี 2026 รายได้ที่คิดเป็นรายปีทะลุ 2.5 พันล้านดอลลาร์ไปแล้ว กราฟแนวโน้มข้างล่างจะให้คุณสัมผัสช่วงเวลาตัดกันตรงนี้ได้แบบเห็นภาพ:</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="640" height="300" fill="#ffffff" rx="8"/>
-      <line x1="70" y1="240" x2="600" y2="240" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="240" x2="70" y2="30" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="190" x2="600" y2="190" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="140" x2="600" y2="140" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="90" x2="600" y2="90" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="40" x2="600" y2="40" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="244" font-size="10" fill="#6b7280" text-anchor="end">0</text>
-      <text x="62" y="194" font-size="10" fill="#6b7280" text-anchor="end">20</text>
-      <text x="62" y="144" font-size="10" fill="#6b7280" text-anchor="end">40</text>
-      <text x="62" y="94" font-size="10" fill="#6b7280" text-anchor="end">60</text>
-      <text x="62" y="44" font-size="10" fill="#6b7280" text-anchor="end">80</text>
-      <text x="335" y="272" font-size="11" fill="#374151" text-anchor="middle">อัตราการใช้งาน (%)</text>
-      <polyline points="70,215 220,172 370,152 590,116" fill="none" stroke="#4f46e5" stroke-width="2.5"/>
-      <polyline points="70,52 220,85 370,103 590,135" fill="none" stroke="#9ca3af" stroke-width="2.5"/>
-      <circle cx="70" cy="215" r="4" fill="#4f46e5"/><circle cx="220" cy="172" r="4" fill="#4f46e5"/><circle cx="370" cy="152" r="4" fill="#4f46e5"/><circle cx="590" cy="116" r="4" fill="#4f46e5"/>
-      <circle cx="70" cy="52" r="4" fill="#9ca3af"/><circle cx="220" cy="85" r="4" fill="#9ca3af"/><circle cx="370" cy="103" r="4" fill="#9ca3af"/><circle cx="590" cy="135" r="4" fill="#9ca3af"/>
-      <text x="70" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2024 Q4</text>
-      <text x="220" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2025 Q2</text>
-      <text x="370" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2025 Q4</text>
-      <text x="590" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2026 Q2</text>
-      <line x1="435" y1="60" x2="465" y2="60" stroke="#4f46e5" stroke-width="2.5"/>
-      <text x="472" y="63" font-size="10" fill="#374151">อัตราการใช้โหมด Agent</text>
-      <line x1="435" y1="82" x2="465" y2="82" stroke="#9ca3af" stroke-width="2.5"/>
-      <text x="472" y="85" font-size="10" fill="#374151">อัตราการใช้โหมดเติม Tab</text>
+<svg style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="640" height="300" style="fill:var(--ink-inverse)" rx="8"/>
+      <line x1="70" y1="240" x2="600" y2="240" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="240" x2="70" y2="30" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="190" x2="600" y2="190" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="140" x2="600" y2="140" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="90" x2="600" y2="90" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="40" x2="600" y2="40" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="62" y="244" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+      <text x="62" y="194" font-size="10" fill="var(--muted-2)" text-anchor="end">20</text>
+      <text x="62" y="144" font-size="10" fill="var(--muted-2)" text-anchor="end">40</text>
+      <text x="62" y="94" font-size="10" fill="var(--muted-2)" text-anchor="end">60</text>
+      <text x="62" y="44" font-size="10" fill="var(--muted-2)" text-anchor="end">80</text>
+      <text x="335" y="272" font-size="11" fill="var(--ink-2)" text-anchor="middle">อัตราการใช้งาน (%)</text>
+      <polyline points="70,215 220,172 370,152 590,116" fill="none" stroke="var(--accent-book)" stroke-width="2.5"/>
+      <polyline points="70,52 220,85 370,103 590,135" fill="none" stroke="var(--muted)" stroke-width="2.5"/>
+      <circle cx="70" cy="215" r="4" fill="var(--accent-book)"/><circle cx="220" cy="172" r="4" fill="var(--accent-book)"/><circle cx="370" cy="152" r="4" fill="var(--accent-book)"/><circle cx="590" cy="116" r="4" fill="var(--accent-book)"/>
+      <circle cx="70" cy="52" r="4" fill="var(--muted)"/><circle cx="220" cy="85" r="4" fill="var(--muted)"/><circle cx="370" cy="103" r="4" fill="var(--muted)"/><circle cx="590" cy="135" r="4" fill="var(--muted)"/>
+      <text x="70" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2024 Q4</text>
+      <text x="220" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2025 Q2</text>
+      <text x="370" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2025 Q4</text>
+      <text x="590" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2026 Q2</text>
+      <line x1="435" y1="60" x2="465" y2="60" stroke="var(--accent-book)" stroke-width="2.5"/>
+      <text x="472" y="63" font-size="10" fill="var(--ink-2)">อัตราการใช้โหมด Agent</text>
+      <line x1="435" y1="82" x2="465" y2="82" stroke="var(--muted)" stroke-width="2.5"/>
+      <text x="472" y="85" font-size="10" fill="var(--ink-2)">อัตราการใช้โหมดเติม Tab</text>
       <circle cx="529" cy="126" r="3" fill="#c0392b"/>
       <text x="529" y="152" font-size="10" fill="#c0392b" text-anchor="middle">≈ ตัดกันช่วง Q2 2026</text>
     </svg>
@@ -8555,31 +8619,31 @@ Step 5: ส่งออกข้อมูล</pre>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">เปรียบเทียบโมเดลจีนห้าตัวแบบตาราง (สิงหาคม 2026)</p>
 <p class="mb-2">เทรนด์สำคัญอย่างหนึ่งคือ: ความรู้สึก "ต่างเจเนอเรชัน" ระหว่างโมเดลจีนกับ GPT/Claude หายไปแล้ว ด้าน logical reasoning และการแข่งขันคณิตศาสตร์ คะแนนเรือธงจีนกับ GPT-5 ห่างกันเพียงหลักหน่วย ด้านความคิดเชิงสถาปัตยกรรมแบบเป็นระบบและ reasoning ทางวิศวกรรมที่ซับซ้อน Claude ยังนำอยู่ — มันเสนอแนวทางสถาปัตยกรรมที่มีไหวพริบพลิกแพลงกว่า ขณะที่โมเดลจีนบางทีก็ดู "ติดกรอบตำรา" แต่ด้านสถานการณ์ภาษาจีน การคุมต้นทุน และการ deploy ตามกฎระเบียบ โมเดลจีนเหนือกว่าอย่างถล่มทลาย</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="620" height="290" fill="#ffffff" rx="8"/>
-      <line x1="70" y1="230" x2="590" y2="230" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="230" x2="70" y2="20" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="60" x2="590" y2="60" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="116" x2="590" y2="116" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="173" x2="590" y2="173" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="234" font-size="10" fill="#6b7280" text-anchor="end">0</text>
-      <text x="62" y="120" font-size="10" fill="#6b7280" text-anchor="end">50</text>
-      <text x="62" y="64" font-size="10" fill="#6b7280" text-anchor="end">100</text>
-      <text x="340" y="262" font-size="10.5" fill="#374151" text-anchor="middle">ราคาเอาต์พุต (หยวน/ล้านโทเคน)</text>
+<svg style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="620" height="290" style="fill:var(--ink-inverse)" rx="8"/>
+      <line x1="70" y1="230" x2="590" y2="230" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="230" x2="70" y2="20" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="60" x2="590" y2="60" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="116" x2="590" y2="116" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="173" x2="590" y2="173" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="62" y="234" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+      <text x="62" y="120" font-size="10" fill="var(--muted-2)" text-anchor="end">50</text>
+      <text x="62" y="64" font-size="10" fill="var(--muted-2)" text-anchor="end">100</text>
+      <text x="340" y="262" font-size="10.5" fill="var(--ink-2)" text-anchor="middle">ราคาเอาต์พุต (หยวน/ล้านโทเคน)</text>
       <!-- bars: price -->
-      <rect x="95" y="218" width="60" height="12" fill="#4f46e5"/><text x="125" y="212" font-size="9" fill="#374151" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="#374151" text-anchor="middle">DeepSeek</text>
-      <rect x="195" y="146" width="60" height="84" fill="#4f46e5"/><text x="225" y="140" font-size="9" fill="#374151" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="#374151" text-anchor="middle">Qwen</text>
-      <rect x="295" y="182" width="60" height="48" fill="#4f46e5"/><text x="325" y="176" font-size="9" fill="#374151" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="#374151" text-anchor="middle">GLM</text>
-      <rect x="395" y="200" width="60" height="30" fill="#4f46e5"/><text x="425" y="194" font-size="9" fill="#374151" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="#374151" text-anchor="middle">Kimi</text>
-      <rect x="495" y="170" width="60" height="60" fill="#4f46e5"/><text x="525" y="164" font-size="9" fill="#374151" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="#374151" text-anchor="middle">Doubao</text>
+      <rect x="95" y="218" width="60" height="12" fill="var(--accent-book)"/><text x="125" y="212" font-size="9" fill="var(--ink-2)" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">DeepSeek</text>
+      <rect x="195" y="146" width="60" height="84" fill="var(--accent-book)"/><text x="225" y="140" font-size="9" fill="var(--ink-2)" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Qwen</text>
+      <rect x="295" y="182" width="60" height="48" fill="var(--accent-book)"/><text x="325" y="176" font-size="9" fill="var(--ink-2)" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">GLM</text>
+      <rect x="395" y="200" width="60" height="30" fill="var(--accent-book)"/><text x="425" y="194" font-size="9" fill="var(--ink-2)" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Kimi</text>
+      <rect x="495" y="170" width="60" height="60" fill="var(--accent-book)"/><text x="525" y="164" font-size="9" fill="var(--ink-2)" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Doubao</text>
       <!-- scores -->
-      <circle cx="125" cy="118" r="5" fill="#d4a017"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
-      <circle cx="225" cy="110" r="5" fill="#d4a017"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
-      <circle cx="325" cy="105" r="5" fill="#d4a017"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
-      <circle cx="425" cy="112" r="5" fill="#d4a017"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
-      <circle cx="525" cy="116" r="5" fill="#d4a017"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
-      <rect x="90" y="30" width="12" height="12" fill="#4f46e5"/><text x="108" y="41" font-size="9.5" fill="#374151">ราคาเอาต์พุต (ยิ่งต่ำยิ่งดี)</text>
-      <circle cx="170" cy="36" r="5" fill="#d4a017"/><text x="182" y="40" font-size="9.5" fill="#374151">คะแนนรวม (ยิ่งสูงยิ่งดี)</text>
+      <circle cx="125" cy="118" r="5" fill="var(--gold)"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
+      <circle cx="225" cy="110" r="5" fill="var(--gold)"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
+      <circle cx="325" cy="105" r="5" fill="var(--gold)"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
+      <circle cx="425" cy="112" r="5" fill="var(--gold)"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
+      <circle cx="525" cy="116" r="5" fill="var(--gold)"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
+      <rect x="90" y="30" width="12" height="12" fill="var(--accent-book)"/><text x="108" y="41" font-size="9.5" fill="var(--ink-2)">ราคาเอาต์พุต (ยิ่งต่ำยิ่งดี)</text>
+      <circle cx="170" cy="36" r="5" fill="var(--gold)"/><text x="182" y="40" font-size="9.5" fill="var(--ink-2)">คะแนนรวม (ยิ่งสูงยิ่งดี)</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">ภาพที่ 4: เปรียบเทียบราคากับประสิทธิภาพของโมเดลห้าตัว (ราคายิ่งต่ำยิ่งดี คะแนนยิ่งสูงยิ่งดี)</p>
 </div>
@@ -9173,7 +9237,7 @@ Record { id, amount, type, category, note, date }
   <li>Andrej Karpathy. (2025). Vibe Coding. Social media post introducing the concept of vibe-driven programming with AI.</li>
   <li>Andrej Karpathy. (2025). CLAUDE.md - Project guidelines for AI-assisted development. GitHub repository, 70+K stars.</li>
   <li>Anthropic. (2026). Claude Code: Terminal-native AI programming. Official documentation and best practices.</li>
-  <li>Cursor Team. (2026). Cursor 3: The next generation of AI-first IDE. Release notes and documentation.</li>
+  <li>Cursor Team. (2026). Cursor 3: The the the next generation of tools of tools of AI-first IDE. Release notes and documentation.</li>
   <li>OpenAI. (2026). Codex CLI: Bringing AI to the terminal. Technical documentation.</li>
   <li>Model Context Protocol (MCP) Specification. (2025-2026). Open protocol for AI-tool integration.</li>
   <li>Vibe Coding Community. (2026). Community-curated skills and best practices for AI-assisted programming.</li>
@@ -9315,27 +9379,27 @@ Record { id, amount, type, category, note, date }
 <h4 class="text-lg font-semibold mt-4 mb-2">4. แกะโครงสร้างโปรเจกต์: แต่ละไฟล์ทำหน้าที่อะไร</h4>
 <p class="mb-2">ครั้งแรกที่เปิดโปรเจกต์ แผนผังไฟล์ฝั่งซ้ายอาจทำให้คุณตาลาย ไม่ต้องตกใจ งานพัฒนาประจำวัน 90% ของคุณ มีคู่หูแค่ตัวที่อยู่ด้านล่างนี้:</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="300" fill="#fafafa" rx="8"/>
-      <text x="20" y="30" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ โฟลเดอร์รากของโปรเจกต์</text>
-      <rect x="30" y="45" width="540" height="230" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <text x="45" y="70" font-size="11" fill="#4f46e5" font-weight="bold">app/ ← ที่ที่คุณเขียนโค้ด</text>
-      <rect x="60" y="82" width="240" height="178" fill="#eef2ff" rx="5"/>
-      <text x="70" y="102" font-size="10" fill="#1e1b4b" font-weight="bold">src/main/</text>
-      <text x="80" y="120" font-size="10" fill="#374151">├ java/…/MainActivity.kt  ← โค้ดตรรกะ</text>
-      <text x="80" y="138" font-size="10" fill="#374151">├ res/  ← รีซอร์ส (รูป ข้อความ สี)</text>
-      <text x="80" y="156" font-size="10" fill="#374151">└ AndroidManifest.xml  ← "ทะเบียนบ้าน" ของแอป</text>
-      <text x="70" y="180" font-size="10" fill="#1e1b4b" font-weight="bold">build.gradle.kts</text>
-      <text x="80" y="198" font-size="10" fill="#6b7280">ประกาศไลบรารีที่ใช้ (เวอร์ชัน SDK, Compose ฯลฯ)</text>
-      <text x="70" y="222" font-size="10" fill="#1e1b4b" font-weight="bold">src/androidTest/ และ test/</text>
-      <text x="80" y="240" font-size="10" fill="#6b7280">โค้ดเทสต์อัตโนมัติ (ใช้ในบทที่ 56)</text>
+<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="300" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="30" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ โฟลเดอร์รากของโปรเจกต์</text>
+      <rect x="30" y="45" width="540" height="230" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <text x="45" y="70" font-size="11" fill="var(--accent-book)" font-weight="bold">app/ ← ที่ที่คุณเขียนโค้ด</text>
+      <rect x="60" y="82" width="240" height="178" fill="var(--accent-wash)" rx="5"/>
+      <text x="70" y="102" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/main/</text>
+      <text x="80" y="120" font-size="10" fill="var(--ink-2)">├ java/…/MainActivity.kt  ← โค้ดตรรกะ</text>
+      <text x="80" y="138" font-size="10" fill="var(--ink-2)">├ res/  ← รีซอร์ส (รูป ข้อความ สี)</text>
+      <text x="80" y="156" font-size="10" fill="var(--ink-2)">└ AndroidManifest.xml  ← "ทะเบียนบ้าน" ของแอป</text>
+      <text x="70" y="180" font-size="10" fill="var(--accent-deep)" font-weight="bold">build.gradle.kts</text>
+      <text x="80" y="198" font-size="10" fill="var(--muted-2)">ประกาศไลบรารีที่ใช้ (เวอร์ชัน SDK, Compose ฯลฯ)</text>
+      <text x="70" y="222" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/androidTest/ และ test/</text>
+      <text x="80" y="240" font-size="10" fill="var(--muted-2)">โค้ดเทสต์อัตโนมัติ (ใช้ในบทที่ 56)</text>
       <rect x="320" y="82" width="230" height="178" fill="#f0fdf4" rx="5"/>
       <text x="330" y="102" font-size="10" fill="#065f46" font-weight="bold">ไฟล์อื่น ๆ ในโฟลเดอร์ราก</text>
-      <text x="340" y="122" font-size="10" fill="#374151">gradle/ + gradlew.bat  ← สคริปต์บิลด์</text>
-      <text x="340" y="142" font-size="10" fill="#374151">settings.gradle.kts  ← ตั้งค่าโปรเจกต์</text>
-      <text x="340" y="162" font-size="10" fill="#6b7280">(คำสวดของมือใหม่: แตะแค่โฟลเดอร์ app/ </text>
-      <text x="340" y="180" font-size="10" fill="#6b7280">ส่วนที่เหลือให้ถือเป็น "กล่องดำ" อย่าไปยุ่งก่อน)</text>
-      <text x="340" y="208" font-size="10" fill="#9ca3af">.gitignore  ← รายการไฟล์ที่ไม่รวมใน version control</text>
+      <text x="340" y="122" font-size="10" fill="var(--ink-2)">gradle/ + gradlew.bat  ← สคริปต์บิลด์</text>
+      <text x="340" y="142" font-size="10" fill="var(--ink-2)">settings.gradle.kts  ← ตั้งค่าโปรเจกต์</text>
+      <text x="340" y="162" font-size="10" fill="var(--muted-2)">(คำสวดของมือใหม่: แตะแค่โฟลเดอร์ app/ </text>
+      <text x="340" y="180" font-size="10" fill="var(--muted-2)">ส่วนที่เหลือให้ถือเป็น "กล่องดำ" อย่าไปยุ่งก่อน)</text>
+      <text x="340" y="208" font-size="10" fill="var(--muted)">.gitignore  ← รายการไฟล์ที่ไม่รวมใน version control</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">ภาพที่ 2: โครงสร้างโปรเจกต์ที่มือใหม่ต้องรู้ (จำง่าย ๆ: แตะแค่โฟลเดอร์ app/)</p>
 </div>
@@ -10589,26 +10653,26 @@ if (ActivityCompat.checkSelfPermission(this,
 <h4 class="text-lg font-semibold mt-4 mb-2">4. แกะโครงสร้างโปรเจกต์: ไฟล์แต่ละตัวทำอะไร</h4>
 <p class="mb-2">ด้านซ้ายคือตัวนำทางโปรเจกต์ มือใหม่แค่ต้องรู้จักไม่กี่ตัวนี้:</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" fill="#fafafa" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ โฟลเดอร์รากของโปรเจกต์</text>
-      <rect x="30" y="42" width="540" height="225" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="#eef2ff" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="#1e1b4b" font-weight="bold">MyFirstApp/ (โฟลเดอร์โค้ด)</text>
-      <text x="66" y="100" font-size="10" fill="#374151">├ MyFirstAppApp.swift  ← จุดเริ่มโปรแกรม</text>
-      <text x="66" y="120" font-size="10" fill="#374151">├ ContentView.swift  ← หน้าจอหลัก</text>
-      <text x="66" y="140" font-size="10" fill="#374151">└ Assets.xcassets  ← ไอคอน รูปภาพ สี</text>
-      <text x="56" y="166" font-size="10" fill="#6b7280">(ไฟล์ใหม่ทั้งหมดใส่ในโฟลเดอร์นี้)</text>
-      <text x="56" y="196" font-size="10" fill="#1e1b4b" font-weight="bold">แท็บ Info / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="#6b7280">การประกาศแอป: ชื่อ สิทธิ์ การตั้งค่า</text>
+<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ โฟลเดอร์รากของโปรเจกต์</text>
+      <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
+      <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/ (โฟลเดอร์โค้ด)</text>
+      <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift  ← จุดเริ่มโปรแกรม</text>
+      <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift  ← หน้าจอหลัก</text>
+      <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets  ← ไอคอน รูปภาพ สี</text>
+      <text x="56" y="166" font-size="10" fill="var(--muted-2)">(ไฟล์ใหม่ทั้งหมดใส่ในโฟลเดอร์นี้)</text>
+      <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">แท็บ Info / Info.plist</text>
+      <text x="66" y="216" font-size="10" fill="var(--muted-2)">การประกาศแอป: ชื่อ สิทธิ์ การตั้งค่า</text>
       <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
       <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">ตำแหน่งสำคัญอื่น ๆ</text>
-      <text x="331" y="100" font-size="10" fill="#374151">📁 Preview Content/  ← สื่อพรีวิว</text>
-      <text x="331" y="122" font-size="10" fill="#374151"><i class="fas fa-bullseye mr-1"></i> ตั้งค่า Target (ไอคอนโปรเจกต์สีน้ำเงิน)</text>
-      <text x="331" y="142" font-size="10" fill="#6b7280">— เลขเวอร์ชัน ระบบขั้นต่ำ และลายเซ็นอยู่ที่นี่</text>
-      <text x="331" y="168" font-size="10" fill="#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← unit test</text>
-      <text x="331" y="188" font-size="10" fill="#374151">📱 MyFirstAppUITests/ ← เทสต์ UI</text>
-      <text x="331" y="216" font-size="10" fill="#9ca3af">(เทมเพลตเทสต์สร้างไว้แล้ว ใช้ในบทที่ 67)</text>
+      <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/  ← สื่อพรีวิว</text>
+      <text x="331" y="122" font-size="10" fill="var(--ink-2)"><i class="fas fa-bullseye mr-1"></i> ตั้งค่า Target (ไอคอนโปรเจกต์สีน้ำเงิน)</text>
+      <text x="331" y="142" font-size="10" fill="var(--muted-2)">— เลขเวอร์ชัน ระบบขั้นต่ำ และลายเซ็นอยู่ที่นี่</text>
+      <text x="331" y="168" font-size="10" fill="var(--ink-2)"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← unit test</text>
+      <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← เทสต์ UI</text>
+      <text x="331" y="216" font-size="10" fill="var(--muted)">(เทมเพลตเทสต์สร้างไว้แล้ว ใช้ในบทที่ 67)</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">ภาพที่ 2: โครงสร้างโปรเจกต์ Xcode ที่มือใหม่ต้องรู้</p>
 </div>
@@ -12438,8 +12502,8 @@ func scheduleDailyReminder() {
     </div>
 
     <!-- การแจ้งเตือนวันอ่านต่อเนื่อง -->
-    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
-        <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
+    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),#7c3aed);color:var(--ink-inverse);border:none;">
+        <i class="fas fa-fire" aria-hidden="true" style="color:var(--gold-2)"></i>
         <span id="streak-toast-text">อ่านต่อเนื่องวันที่ X แล้ว!</span>
     </div>
 
@@ -12457,7 +12521,7 @@ func scheduleDailyReminder() {
 
     <!-- ปุ่มกลับขึ้นด้านบน -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="กลับขึ้นด้านบน">
-        <svg class="progress-ring" viewBox="0 0 40 40">
+        <svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true">
             <circle class="bg" cx="20" cy="20" r="18"/>
             <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/>
         </svg>

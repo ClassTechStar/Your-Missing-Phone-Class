@@ -3,8 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>页面不存在 — 你缺失的那门手机课</title>
+    <title>页面不存在：你缺失的那门手机课</title>
+    <meta name="description" content="页面不存在。回到《你缺失的那门手机课》首页或直接开始阅读。">
     <style>
+/* Hallmark · 兜底 */
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; } }
+html, body { overflow-x: clip; }
+
+:root { --paper: #FDFDFE; --ink: #0B0E13; --brand: #165DFF; }
+a:focus-visible { outline: 2px solid #fff; outline-offset: 3px; }
+
         body { margin: 0; min-height: 100vh; display: flex; align-items: center; justify-content: center;
                font-family: 'Noto Sans SC', system-ui, -apple-system, sans-serif;
                background: linear-gradient(135deg, #0F172A 0%, #1E3A5F 40%, #165DFF 100%); color: #fff; }
@@ -17,15 +25,15 @@
         a.btn { display: inline-block; margin: .4rem; padding: .8rem 1.6rem; border-radius: .8rem;
                 text-decoration: none; font-weight: 600; transition: transform .2s ease; }
         a.btn:hover { transform: translateY(-2px); }
-        .primary { background: #fff; color: #165DFF; }
-        .ghost { border: 1px solid rgba(255,255,255,.35); color: #fff; }
+        .primary { background: var(--ink-inverse, #F2F6FC); color: var(--brand); }
+        .ghost { border: 1px solid rgba(255,255,255,.4); color: var(--paper, #fff); }
     </style>
 </head>
 <body>
     <div class="box">
         <div class="code">404</div>
         <h1>这一页被你删掉了</h1>
-        <p>—— 别慌，书里第 22 章正好讲「误删了怎么办」。</p>
+        <p>别慌，书里第 22 章正好讲「误删了怎么办」。</p>
         <a class="btn primary" href="index.html">回到首页</a>
         <a class="btn ghost" href="v1.8/zh-CN.html">直接开始阅读</a>
     </div>

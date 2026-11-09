@@ -1,13 +1,14 @@
  <!DOCTYPE html>
 <html lang="ko">
 <head>
+    <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="당신이 놓친 스마트폰 수업 · 입문부터 마스터까지, 당신의 디지털 라이프를 온전히 주도하세요">
     <meta name="keywords" content="스마트폰 튜토리얼,디지털 필수 교양,스마트폰 기초,안드로이드,iOS,하모니OS,스마트폰 팁,디지털 라이프,AI 대형 언어 모델,AI 코딩,대형 언어 모델 API,프롬프트 엔지니어링,안드로이드 개발,iOS 개발,Swift,Kotlin,SwiftUI,Jetpack Compose,컴퓨테이셔널 포토그래피,정보 보안,비밀번호 관리,자동화,스마트폰 구매">
     <meta name="author" content="디지털 라이프 가이드">
-    <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="var(--accent-book)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="var(--accent-deep)" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index, follow">
     <meta name="format-detection" content="telephone=no">
     <meta property="og:type" content="book">
@@ -34,7 +35,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4f46e5',
+                        primary: 'var(--accent-book)',
                         secondary: '#6B7280',
                         light: '#F3F4F6',
                         dark: '#1F2937',
@@ -48,6 +49,69 @@
         }
     </script>
     <style type="text/tailwindcss">
+    /* Hallmark · 色彩令牌（高频字面量收编，原值不动仅收编） */
+    :root {
+        --accent-book: #4F46E5;
+        --accent-soft: #818CF8;
+        --accent-deep: #1E1B4B;
+        --accent-wash: #EEF2FF;
+        --ink: #0B0E13;
+        --ink-2: var(--ink-2);
+        --ink-3: var(--surface-dark-2);
+        --ink-inverse: #F2F6FC;
+        --muted: #9CA3AF;
+        --muted-2: #6B7280;
+        --muted-3: #4B5563;
+        --line: #E5E7EB;
+        --line-2: #D1D5DB;
+        --surface: #FDFDFE;
+        --surface-2: #F3F4F6;
+        --surface-3: #EEF2F5;
+        --surface-4: #F5F6F8;
+        --surface-dark: #1F2937;
+        --surface-dark-2: var(--surface-dark-2);
+        --surface-dark-3: #1E2A36;
+        --surface-dark-4: #1A2230;
+        --surface-dark-5: var(--surface-dark-5);
+        --ok: #27AE60;
+        --gold: #D4A017;
+        --sky: #0EA5E9;
+        --wash-warm: #FDF8EF;
+        --sky-deep: #075985;
+        --wash-dark: #3D2E0F;
+        --surface-5: #F0F4F8;
+        --surface-6: #FAFAFA;
+        --line-3: #E0E0E0;
+        --surface-7: #F9FAFB;
+        --sky-wash: #E0F2FE;
+        --gold-2: #FBBF24;
+        --surface-dark-6: #1E293B;
+    }
+/* Hallmark · built: the project (v1.8/v1.9 中文书页) · redesign: polish · critique: P4 H4 E4 S4 R4 V3 · weakest: V，同模板 21 页共用本样式；已去两端对齐/渐变卡/transition-colors，保留本书蓝色系与 95ch 版心 */
+:root {
+    /* Hallmark 令牌：微着色的纸与墨（纯 var(--ink-inverse)/var(--ink) 不再出现），主色沿用本书蓝 */
+    --paper: #FDFDFE;
+    --ink: #0B0E13;
+    --ink-inverse: #F2F6FC;
+}
+
+/* Hallmark · 质量门兜底：焦点可见、动态降级、横向溢出裁切 */
+:focus-visible {
+    outline: 2px solid #165DFF;
+    outline-offset: 2px;
+}
+html, body {
+    overflow-x: clip;
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
         @layer utilities {
             .scrollbar-hide {
                 -ms-overflow-style: none;
@@ -60,7 +124,7 @@
                 text-wrap: balance;
             }
             .focus-ring:focus-visible {
-                outline: 2px solid #4f46e5;
+                outline: 2px solid var(--accent-book);
                 outline-offset: 2px;
             }
         }
@@ -77,28 +141,28 @@
             transition: background-color 0.3s, color 0.3s;
         }
         .dark body {
-            background-color: #111827;
+            background-color: var(--surface-dark-2);
         }
         .toc-item.active {
-            color: #4f46e5;
+            color: var(--accent-book);
             font-weight: 600;
-            background-color: #eef2ff;
-            border-left: 3px solid #4f46e5;
+            background-color: var(--accent-wash);
+            border-left: 3px solid var(--accent-book);
         }
         .dark .toc-item.active {
-            background-color: #1e1b4b;
-            border-left-color: #818cf8;
+            background-color: var(--accent-deep);
+            border-left-color: var(--accent-soft);
         }
         /* 사이드바 링크 기본 스타일 */
         #sidebar a {
             display: block;
-            transition: all 0.2s ease;
+            transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
             position: relative;
             text-decoration: none;
         }
         #sidebar a:hover {
-            color: #4f46e5 !important;
-            background-color: #eef2ff;
+            color: var(--accent-book) !important;
+            background-color: var(--accent-wash);
             transform: translateX(2px);
         }
         .dark #sidebar a:hover {
@@ -125,15 +189,15 @@
             flex-shrink: 0;
             cursor: pointer;
             transition: background-color 0.15s, transform 0.3s ease;
-            color: #9ca3af;
+            color: var(--muted);
         }
         .toc-toggle-btn:hover {
-            background-color: #e5e7eb;
-            color: #374151;
+            background-color: var(--line);
+            color: var(--ink-2);
         }
         .dark .toc-toggle-btn:hover {
-            background-color: #374151;
-            color: #e5e7eb;
+            background-color: var(--ink-2);
+            color: var(--line);
         }
         /* 하위 항목 전환 애니메이션 */
         .toc-child li {
@@ -152,27 +216,27 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: #4f46e5;
+            background: var(--accent-book);
             border-radius: 0;
-            transition: top 0.3s ease, height 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
             z-index: 1;
         }
         /* 사이드바 상단 영역 강화 */
         #sidebar > nav > div:first-child {
-            background: #f5f6f8;
+            background: var(--surface-4);
             border-radius: 0;
             padding: 0.875rem 1rem !important;
         }
         .dark #sidebar > nav > div:first-child {
-            background: #1a2230;
+            background: var(--surface-dark-4);
         }
         /* 사이드바 전체 강화 */
         #sidebar {
             box-shadow: none;
-            border-right: 1px solid #e5e7eb;
+            border-right: 1px solid var(--line);
         }
         .dark #sidebar {
-            border-right-color: #374151;
+            border-right-color: var(--ink-2);
         }
         @media (max-width: 1023px) {
             #sidebar {
@@ -192,11 +256,11 @@
         .toc-item:hover span[class*="font-mono"],
         .toc-item.active span[class*="font-mono"] {
             opacity: 1;
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .dark .toc-item:hover span[class*="font-mono"],
         .dark .toc-item.active span[class*="font-mono"] {
-            color: #818cf8;
+            color: var(--accent-soft);
         }
         /* 내비게이션 대상 장 깜박임 강조 */
         .scroll-target-flash {
@@ -244,7 +308,7 @@
             margin-bottom: 0.5rem;
         }
         .theme-toggle {
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
         }
         .theme-toggle:hover {
             transform: rotate(180deg);
@@ -257,18 +321,18 @@
             max-width: 82ch;
         }
         .info-box {
-            border-color: #4f46e5;
-            background: #eef2f5;
+            border-color: var(--accent-book);
+            background: var(--surface-3);
         }
         .dark .info-box {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         .warning-box {
-            border-color: #d4a017;
-            background: #fdf8ef;
+            border-color: var(--gold);
+            background: var(--wash-warm);
         }
         .dark .warning-box {
-            background: #3d2e0f;
+            background: var(--wash-dark);
         }
         .danger-box {
             border-color: #c0392b;
@@ -278,7 +342,7 @@
             background: #3d1a1a;
         }
         .success-box {
-            border-color: #27ae60;
+            border-color: var(--ok);
             background: #eef9f2;
         }
         .dark .success-box {
@@ -292,54 +356,54 @@
         th, td {
             padding: 0.75rem 1rem;
             text-align: left;
-            border: 1px solid #e5e7eb;
+            border: 1px solid var(--line);
         }
         .dark th, .dark td {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         th {
-            background-color: #f3f4f6;
+            background-color: var(--surface-2);
             font-weight: 600;
         }
         .dark th {
-            background-color: #1f2937;
+            background-color: var(--surface-dark);
         }
         .practice-box {
-            background: #f0f4f8;
+            background: var(--surface-5);
             border: 1px solid #d0d8e0;
         }
         .dark .practice-box {
-            background: #1e2a36;
-            border-color: #354152;
+            background: var(--surface-dark-3);
+            border-color: var(--surface-dark-5);
         }
         .chapter-intro {
             font-size: 1.05em;
-            color: #4b5563;
+            color: var(--muted-3);
             padding: 1rem 1.25rem;
             border-radius: 0.25rem;
-            background: #f5f6f8;
-            border-left: 3px solid #4f46e5;
+            background: var(--surface-4);
+            border-left: 3px solid var(--accent-book);
         }
         .dark .chapter-intro {
-            color: #9ca3af;
-            background: #1a2230;
+            color: var(--muted);
+            background: var(--surface-dark-4);
         }
         .key-point {
-            background: #eef2f5;
+            background: var(--surface-3);
             padding: 0.5rem 0;
             font-weight: 500;
         }
         .dark .key-point {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         #reading-progress {
             position: fixed;
             top: 64px;
             left: 0;
             height: 3px;
-            background: #4f46e5;
+            background: var(--accent-book);
             z-index: 51;
-            transition: width 0.1s linear;
+            transition: transform 0.1s linear;
         }
         .search-overlay {
             position: fixed;
@@ -368,17 +432,17 @@
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
         }
         .dark .search-panel {
-            background: #1f2937;
+            background: var(--surface-dark);
         }
         .search-input-wrapper {
             display: flex;
             align-items: center;
             padding: 1rem 1.25rem;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--line);
             gap: 0.75rem;
         }
         .dark .search-input-wrapper {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         .search-input-wrapper input {
             flex: 1;
@@ -400,10 +464,10 @@
             transition: background 0.15s;
         }
         .search-result-item:hover {
-            background: #f3f4f6;
+            background: var(--surface-2);
         }
         .dark .search-result-item:hover {
-            background: #374151;
+            background: var(--ink-2);
         }
         .search-result-item .result-title {
             font-weight: 600;
@@ -411,7 +475,7 @@
         }
         .search-result-item .result-excerpt {
             font-size: 0.85rem;
-            color: #6b7280;
+            color: var(--muted-2);
             margin-top: 0.25rem;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -419,7 +483,7 @@
             overflow: hidden;
         }
         .dark .search-result-item .result-excerpt {
-            color: #9ca3af;
+            color: var(--muted);
         }
         .search-result-item mark {
             background: #fef08a;
@@ -443,10 +507,10 @@
             user-select: none;
         }
         .font-size-btn:hover {
-            background: #f3f4f6;
+            background: var(--surface-2);
         }
         .dark .font-size-btn:hover {
-            background: #374151;
+            background: var(--ink-2);
         }
         .chapter-nav {
             display: flex;
@@ -454,10 +518,10 @@
             align-items: center;
             padding: 1.5rem 0;
             margin-top: 2rem;
-            border-top: 1px solid #e5e7eb;
+            border-top: 1px solid var(--line);
         }
         .dark .chapter-nav {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         .chapter-nav a {
             display: flex;
@@ -466,16 +530,16 @@
             padding: 0.5rem 1rem;
             border-radius: 0.25rem;
             font-size: 0.9rem;
-            color: #4f46e5;
+            color: var(--accent-book);
             transition: background 0.15s;
             text-decoration: none;
             max-width: 45%;
         }
         .chapter-nav a:hover {
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .dark .chapter-nav a:hover {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         .chapter-nav a.next {
             margin-left: auto;
@@ -507,31 +571,31 @@
             }
             body {
                 font-size: 12pt !important;
-                color: #000 !important;
-                background: #fff !important;
+                color: var(--ink) !important;
+                background: var(--ink-inverse) !important;
             }
             a {
-                color: #000 !important;
+                color: var(--ink) !important;
                 text-decoration: underline;
             }
         }
 
         /* ===== 강화 스타일: 안내 카드, 장 요약, 학습 경로 ===== */
         .reading-guide-card {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
+            background: var(--surface-6);
+            border: 1px solid var(--line-3);
             border-radius: 0.25rem;
             padding: 1.25rem 1.5rem;
             margin-bottom: 1.5rem;
         }
         .dark .reading-guide-card {
-            background: #1a2230;
-            border-color: #354152;
+            background: var(--surface-dark-4);
+            border-color: var(--surface-dark-5);
         }
         .hero-banner {
-            background: #4f46e5;
+            background: var(--accent-book);
             border-radius: 0.25rem;
-            color: #fff;
+            color: var(--ink-inverse);
             padding: 2rem 1.5rem;
         }
         .stat-pill {
@@ -550,25 +614,25 @@
             margin: 1.5rem 0;
         }
         .path-step {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
+            background: var(--surface-6);
+            border: 1px solid var(--line-3);
             border-radius: 0.25rem;
             padding: 1rem;
             position: relative;
         }
         .path-step:hover {
-            border-color: #4f46e5;
+            border-color: var(--accent-book);
         }
         .dark .path-step {
-            background: #1a2230;
-            border-color: #354152;
+            background: var(--surface-dark-4);
+            border-color: var(--surface-dark-5);
         }
         .path-step .step-num {
             position: absolute;
             top: -0.7rem;
             left: 1rem;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             width: 1.6rem;
             height: 1.6rem;
             border-radius: 50%;
@@ -579,14 +643,14 @@
             font-weight: 700;
         }
         .chapter-summary {
-            background: #fdf8ef;
-            border-left: 4px solid #d4a017;
+            background: var(--wash-warm);
+            border-left: 4px solid var(--gold);
             border-radius: 0.25rem;
             padding: 1rem 1.25rem;
             margin-top: 1.5rem;
         }
         .dark .chapter-summary {
-            background: #3d2e0f;
+            background: var(--wash-dark);
         }
         .breadcrumb {
             display: flex;
@@ -594,11 +658,11 @@
             align-items: center;
             gap: 0.4rem;
             font-size: 0.85rem;
-            color: #6b7280;
+            color: var(--muted-2);
             padding: 0.6rem 0;
         }
-        .dark .breadcrumb { color: #9ca3af; }
-        .breadcrumb a:hover { color: #4f46e5; text-decoration: underline; }
+        .dark .breadcrumb { color: var(--muted); }
+        .breadcrumb a:hover { color: var(--accent-book); text-decoration: underline; }
         .breadcrumb .sep { color: #cbd5e1; }
         .quick-tools {
             position: fixed;
@@ -612,32 +676,32 @@
         .quick-tool-btn {
             width: 2.6rem;
             height: 2.6rem;
-            background: #fff;
-            color: #374151;
+            background: var(--ink-inverse);
+            color: var(--ink-2);
             border-radius: 999px;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
             cursor: pointer;
         }
         .dark .quick-tool-btn {
-            background: #1f2937;
-            color: #e5e7eb;
+            background: var(--surface-dark);
+            color: var(--line);
         }
         .quick-tool-btn:hover {
             transform: translateY(-1px);
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .reading-time {
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
             font-size: 0.8rem;
-            color: #6b7280;
+            color: var(--muted-2);
         }
-        .dark .reading-time { color: #9ca3af; }
+        .dark .reading-time { color: var(--muted); }
         .difficulty-tag {
             display: inline-flex;
             align-items: center;
@@ -657,15 +721,15 @@
         .toc-section-label {
             font-size: 0.7rem;
             font-weight: 700;
-            color: #9ca3af;
-            letter-spacing: 0.08em;
+            color: var(--muted);
+            
             text-transform: uppercase;
             padding: 0.5rem 0.75rem 0.25rem;
         }
-        .dark .toc-section-label { color: #6b7280; }
+        .dark .toc-section-label { color: var(--muted-2); }
         .toc-progress-bar {
             height: 2px;
-            background: #4f46e5;
+            background: var(--accent-book);
             margin: 0.3rem 0;
             transform-origin: left;
             transition: transform 0.3s;
@@ -674,8 +738,8 @@
             position: absolute;
             left: -9999px;
             top: 0;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             padding: 0.5rem 1rem;
             z-index: 100;
         }
@@ -684,45 +748,45 @@
             display: flex;
             gap: 1rem;
             padding: 0.6rem 0;
-            border-bottom: 1px dashed #e5e7eb;
+            border-bottom: 1px dashed var(--line);
         }
-        .dark .glossary-item { border-color: #374151; }
+        .dark .glossary-item { border-color: var(--ink-2); }
         .glossary-item:last-child { border-bottom: 0; }
         .glossary-term {
             flex-shrink: 0;
             font-weight: 700;
-            color: #4f46e5;
+            color: var(--accent-book);
             min-width: 90px;
         }
         .comparison-table th { font-weight: 700; }
-        .comparison-table tr:nth-child(even) td { background: #f9fafb; }
-        .dark .comparison-table tr:nth-child(even) td { background: #111827; }
+        .comparison-table tr:nth-child(even) td { background: var(--surface-7); }
+        .dark .comparison-table tr:nth-child(even) td { background: var(--surface-dark-2); }
         .highlight-quote {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border-left: 4px solid #0ea5e9;
+            background: linear-gradient(135deg, #f0f9ff 0%, var(--sky-wash) 100%);
+            border-left: 4px solid var(--sky);
             padding: 1rem 1.25rem;
             border-radius: 0 0.5rem 0.5rem 0;
             margin: 1rem 0;
             font-style: italic;
-            color: #075985;
+            color: var(--sky-deep);
         }
         .dark .highlight-quote {
-            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            background: linear-gradient(135deg, #0c4a6e 0%, var(--sky-deep) 100%);
             color: #bae6fd;
         }
         .kbd {
             display: inline-block;
             padding: 0.1rem 0.45rem;
-            background: #f3f4f6;
-            color: #374151;
-            border: 1px solid #d1d5db;
+            background: var(--surface-2);
+            color: var(--ink-2);
+            border: 1px solid var(--line-2);
             border-bottom-width: 2px;
             border-radius: 0.3rem;
             font-family: ui-monospace, monospace;
             font-size: 0.78rem;
             font-weight: 600;
         }
-        .dark .kbd { background: #374151; color: #e5e7eb; border-color: #4b5563; }
+        .dark .kbd { background: var(--ink-2); color: var(--line); border-color: var(--muted-3); }
         @media (max-width: 768px) {
             body {
                 font-size: 15px;
@@ -732,7 +796,7 @@
                 max-height: 75vh;
             }
             .hero-banner { padding: 1.5rem 1rem; }
-            .hero-banner h1 { font-size: 1.5rem !important; }
+            .hero-banner h1 { text-wrap: balance; font-size: 1.5rem !important; }
             .learning-path { grid-template-columns: 1fr; }
             .quick-tools { right: 0.5rem; bottom: 4.5rem; }
             .quick-tool-btn { width: 2.3rem; height: 2.3rem; }
@@ -748,14 +812,14 @@
 
         /* 그라데이션 독서 진행 바 */
         #reading-progress {
-            background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
+            background: linear-gradient(90deg, var(--accent-book), #7c3aed, var(--accent-book)) !important;
             background-size: 200% 100% !important;
             animation: progressShimmer 3s ease infinite;
             height: 3px;
             box-shadow: 0 0 8px rgba(79,70,229,0.3);
         }
         .dark #reading-progress {
-            background: linear-gradient(90deg, #818cf8, #a78bfa, #818cf8) !important;
+            background: linear-gradient(90deg, var(--accent-soft), #a78bfa, var(--accent-soft)) !important;
             background-size: 200% 100% !important;
         }
         @keyframes progressShimmer {
@@ -770,7 +834,7 @@
             transform: none;
         }
         /* 只有脚本确认可用后，才对尚未进入视口的区块启用入场动画 */
-        html.anim-ready .content-section:not(.visible):not(.immediately-visible) {
+        html.anim-ready.js .content-section:not(.visible):not(.immediately-visible) {
             opacity: 0;
             transform: translateY(24px);
             transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
@@ -790,7 +854,7 @@
 
         /* 히어로 배너 강화 */
         .hero-banner {
-            background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
+            background: linear-gradient(135deg, var(--accent-book) 0%, #6d28d9 40%, var(--accent-book) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -847,20 +911,20 @@
             width: 3rem;
             height: 3rem;
             border-radius: 50%;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 14px rgba(79,70,229,0.3);
             cursor: pointer;
             z-index: 40;
-            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1), transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
             border: none;
             font-size: 1rem;
         }
         .dark #back-to-top {
-            background: #374151;
+            background: var(--ink-2);
             box-shadow: 0 4px 14px rgba(0,0,0,0.4);
         }
         #back-to-top:hover {
@@ -897,31 +961,31 @@
             border-radius: 0.25rem;
             font-size: 0.75rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
             background: transparent;
-            color: #6b7280;
+            color: var(--muted-2);
         }
         .dark .bookmark-btn {
-            border-color: #374151;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            color: var(--muted);
         }
         .bookmark-btn:hover {
-            border-color: #4f46e5;
-            color: #4f46e5;
+            border-color: var(--accent-book);
+            color: var(--accent-book);
         }
         .dark .bookmark-btn:hover {
-            border-color: #818cf8;
-            color: #818cf8;
+            border-color: var(--accent-soft);
+            color: var(--accent-soft);
         }
         .bookmark-btn.active {
-            background: #4f46e5;
-            color: #fff;
-            border-color: #4f46e5;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
+            border-color: var(--accent-book);
         }
         .dark .bookmark-btn.active {
-            background: #818cf8;
-            border-color: #818cf8;
+            background: var(--accent-soft);
+            border-color: var(--accent-soft);
         }
 
         /* 완료한 장 체크 */
@@ -933,24 +997,24 @@
             border-radius: 0.25rem;
             font-size: 0.75rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
             background: transparent;
-            color: #6b7280;
+            color: var(--muted-2);
             user-select: none;
         }
         .dark .chapter-check {
-            border-color: #374151;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            color: var(--muted);
         }
         .chapter-check:hover {
-            border-color: #27ae60;
-            color: #27ae60;
+            border-color: var(--ok);
+            color: var(--ok);
         }
         .chapter-check.checked {
-            background: #27ae60;
-            color: #fff;
-            border-color: #27ae60;
+            background: var(--ok);
+            color: var(--ink-inverse);
+            border-color: var(--ok);
         }
         .chapter-check .check-icon {
             width: 14px;
@@ -960,15 +1024,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
         }
         .chapter-check.checked .check-icon {
-            border-color: #fff;
-            background: #fff;
+            border-color: var(--ink-inverse);
+            background: var(--ink-inverse);
         }
         .chapter-check.checked .check-icon::after {
             content: '✓';
-            color: #27ae60;
+            color: var(--ok);
             font-size: 10px;
             font-weight: 700;
             line-height: 1;
@@ -976,10 +1040,10 @@
 
         /* 검색 결과 키보드 선택 */
         .search-result-item.selected {
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .dark .search-result-item.selected {
-            background: #374151;
+            background: var(--ink-2);
         }
 
         /* 대시보드 카드 */
@@ -1007,15 +1071,15 @@
         }
         .chapter-rating .star {
             font-size: 0.85rem;
-            color: #d1d5db;
+            color: var(--line-2);
             cursor: pointer;
             transition: color 0.15s, transform 0.15s;
             user-select: none;
         }
         .chapter-rating .star:hover { transform: scale(1.2); }
-        .chapter-rating .star.active { color: #fbbf24; }
-        .dark .chapter-rating .star { color: #4b5563; }
-        .dark .chapter-rating .star.active { color: #fbbf24; }
+        .chapter-rating .star.active { color: var(--gold-2); }
+        .dark .chapter-rating .star { color: var(--muted-3); }
+        .dark .chapter-rating .star.active { color: var(--gold-2); }
 
         .dashboard-card:hover {
             transform: translateY(-3px);
@@ -1024,8 +1088,8 @@
         .dark .dashboard-card:hover {
             box-shadow: 0 12px 28px rgba(0,0,0,0.3);
         }
-        .check-item:hover span { color: #4f46e5; }
-        .dark .check-item:hover span { color: #818cf8; }
+        .check-item:hover span { color: var(--accent-book); }
+        .dark .check-item:hover span { color: var(--accent-soft); }
         .check-item input:checked + span {
             text-decoration: line-through;
             opacity: 0.5;
@@ -1038,14 +1102,14 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 50;
-            background: #fff;
+            background: var(--ink-inverse);
             box-shadow: 0 4px 24px rgba(79,70,229,0.18);
             border-radius: 2rem;
             padding: 0.5rem 1rem;
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+            transition: color 0.35s cubic-bezier(0.22,1,0.36,1), background-color 0.35s cubic-bezier(0.22,1,0.36,1), border-color 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s cubic-bezier(0.22,1,0.36,1), transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.35s cubic-bezier(0.22,1,0.36,1);
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -1056,7 +1120,7 @@
             pointer-events: auto;
         }
         .dark .tts-controls {
-            background: #1f2937;
+            background: var(--surface-dark);
             box-shadow: 0 4px 24px rgba(0,0,0,0.4);
         }
         .tts-btn {
@@ -1068,22 +1132,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
             font-size: 1rem;
-            background: #f3f4f6;
-            color: #374151;
+            background: var(--surface-2);
+            color: var(--ink-2);
         }
-        .dark .tts-btn { background: #374151; color: #e5e7eb; }
-        .tts-btn:hover { background: #4f46e5; color: #fff; }
-        .dark .tts-btn:hover { background: #818cf8; }
+        .dark .tts-btn { background: var(--ink-2); color: var(--line); }
+        .tts-btn:hover { background: var(--accent-book); color: var(--ink-inverse); }
+        .dark .tts-btn:hover { background: var(--accent-soft); }
         .tts-btn.play-btn {
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             width: 3rem;
             height: 3rem;
             font-size: 1.2rem;
         }
-        .dark .tts-btn.play-btn { background: #818cf8; }
+        .dark .tts-btn.play-btn { background: var(--accent-soft); }
         .tts-btn.play-btn:hover { background: #1a252f; }
         .tts-btn.play-btn.playing { background: #e74c3c; animation: ttsPulse 1.5s ease-in-out infinite; }
         @keyframes ttsPulse {
@@ -1093,25 +1157,25 @@
         .tts-speed-badge {
             font-size: 0.7rem;
             font-weight: 700;
-            color: #6b7280;
+            color: var(--muted-2);
             min-width: 2rem;
             text-align: center;
         }
-        .dark .tts-speed-badge { color: #9ca3af; }
+        .dark .tts-speed-badge { color: var(--muted); }
         .tts-controls .tts-chapter-label {
             font-size: 0.75rem;
-            color: #6b7280;
+            color: var(--muted-2);
             max-width: 12rem;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        .dark .tts-controls .tts-chapter-label { color: #9ca3af; }
+        .dark .tts-controls .tts-chapter-label { color: var(--muted); }
         .quick-tool-btn.tts-active {
-            color: #4f46e5;
-            box-shadow: 0 0 0 2px #4f46e5;
+            color: var(--accent-book);
+            box-shadow: 0 0 0 2px var(--accent-book);
         }
-        .dark .quick-tool-btn.tts-active { color: #818cf8; box-shadow: 0 0 0 2px #818cf8; }
+        .dark .quick-tool-btn.tts-active { color: var(--accent-soft); box-shadow: 0 0 0 2px var(--accent-soft); }
         @media (max-width: 768px) {
             .tts-controls {
                 bottom: 5rem;
@@ -1132,26 +1196,26 @@
             border-radius: 0.25rem;
             font-size: 0.7rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
-            background: #f9fafb;
-            color: #6b7280;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
+            background: var(--surface-7);
+            color: var(--muted-2);
             vertical-align: middle;
         }
         .dark .copy-btn {
-            border-color: #374151;
-            background: #1f2937;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            background: var(--surface-dark);
+            color: var(--muted);
         }
         .copy-btn:hover {
-            background: #4f46e5;
-            color: #fff;
-            border-color: #4f46e5;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
+            border-color: var(--accent-book);
         }
         .copy-btn.copied {
-            background: #27ae60;
-            color: #fff;
-            border-color: #27ae60;
+            background: var(--ok);
+            color: var(--ink-inverse);
+            border-color: var(--ok);
         }
 
         /* 접을 수 있는 콘텐츠 블록 */
@@ -1165,15 +1229,15 @@
             transition: color 0.2s;
         }
         .collapsible-header:hover {
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .dark .collapsible-header:hover {
-            color: #818cf8;
+            color: var(--accent-soft);
         }
         .collapsible-header .collapse-icon {
             transition: transform 0.3s ease;
             font-size: 0.75rem;
-            color: #9ca3af;
+            color: var(--muted);
         }
         .collapsible-header.collapsed .collapse-icon {
             transform: rotate(-90deg);
@@ -1196,8 +1260,8 @@
             bottom: 2rem;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             padding: 0.75rem 1.5rem;
             border-radius: 999px;
             font-size: 0.875rem;
@@ -1210,7 +1274,7 @@
             white-space: nowrap;
         }
         .dark .restore-position-toast {
-            background: #374151;
+            background: var(--ink-2);
         }
         .restore-position-toast.show {
             transform: translateX(-50%) translateY(0);
@@ -1224,13 +1288,13 @@
             transition: background 0.2s;
         }
         .restore-position-toast .btn-restore {
-            background: #fff;
-            color: #4f46e5;
+            background: var(--ink-inverse);
+            color: var(--accent-book);
             font-weight: 600;
         }
         .restore-position-toast .btn-dismiss {
             background: rgba(255,255,255,0.15);
-            color: #fff;
+            color: var(--ink-inverse);
         }
 
         /* 장 구분선 강화 */
@@ -1245,10 +1309,10 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #d1d5db 20%, #d1d5db 80%, transparent);
+            background: linear-gradient(90deg, transparent, var(--line-2) 20%, var(--line-2) 80%, transparent);
         }
         .dark .content-section::before {
-            background: linear-gradient(90deg, transparent, #374151 20%, #374151 80%, transparent);
+            background: linear-gradient(90deg, transparent, var(--ink-2) 20%, var(--ink-2) 80%, transparent);
         }
         .content-section:first-of-type::before {
             display: none;
@@ -1268,7 +1332,7 @@
             transition: background-color 0.15s ease;
         }
         table tbody tr:hover {
-            background-color: #f0f4f8;
+            background-color: var(--surface-5);
         }
         .dark table tbody tr:hover {
             background-color: rgba(255,255,255,0.04);
@@ -1276,33 +1340,33 @@
 
         /* 장 내비게이션 버튼 강화 */
         .chapter-nav a {
-            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .chapter-nav a:hover {
             transform: translateX(4px);
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .chapter-nav a.next:hover {
             transform: translateX(-4px);
         }
         .dark .chapter-nav a:hover {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
 
         /* 사이드바 북마크 표시 */
         .toc-item.bookmarked::after {
             content: '★';
-            color: #d4a017;
+            color: var(--gold);
             font-size: 0.65rem;
             margin-left: 0.3rem;
         }
         .toc-item.completed-toc {
-            color: #27ae60 !important;
+            color: var(--ok) !important;
         }
 
         /* 빠른 도구 버튼 강화 */
         .quick-tool-btn {
-            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .quick-tool-btn:hover {
             transform: translateY(-2px) scale(1.08);
@@ -1350,15 +1414,15 @@
     </style>
 <style>
         /* ===== v1.8 신규 추가: AI 코딩 실전편 스타일 ===== */
-        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; }
-        .code-head { background: #374151; color: #e5e7eb; font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
-        .code-head .dots { letter-spacing: 3px; color: #9ca3af; }
-        .code-block pre { background: #1f2937; color: #e5e7eb; padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
-        .dark .code-block { border-color: #4b5563; }
-        code.inline { background: #eef2f5; color: #4f46e5; padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
-        .dark code.inline { background: #1e2a36; color: #818cf8; }
-        .quote-line { border-left: 4px solid #4f46e5; background: #eef2ff; color: #1e1b4b; padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
-        .dark .quote-line { background: #1e1b4b; color: #c7d2fe; }
+        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid var(--ink-2); }
+        .code-head { background: var(--ink-2); color: var(--line); font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
+        .code-head .dots { letter-spacing: 3px; color: var(--muted); }
+        .code-block pre { background: var(--surface-dark); color: var(--line); padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
+        .dark .code-block { border-color: var(--muted-3); }
+        code.inline { background: var(--surface-3); color: var(--accent-book); padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+        .dark code.inline { background: var(--surface-dark-3); color: var(--accent-soft); }
+        .quote-line { border-left: 4px solid var(--accent-book); background: var(--accent-wash); color: var(--accent-deep); padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
+        .dark .quote-line { background: var(--accent-deep); color: #c7d2fe; }
         @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
     </style>
 <style id="reader-bundle-style">
@@ -1371,7 +1435,7 @@ html:not(.safe) .content-section pre { content-visibility: auto; contain-intrins
 /* P2-1 公告横幅 */
 #announce-bar { display:none; position:sticky; top:0; z-index:80; padding:8px 16px;
   font-size:14px; text-align:center; }
-#announce-bar[data-level="info"] { background:#e0f2fe; color:#075985; }
+#announce-bar[data-level="info"] { background:var(--sky-wash); color:var(--sky-deep); }
 #announce-bar[data-level="warn"] { background:#fef3c7; color:#92400e; }
 #announce-bar[data-level="crit"] { background:#fee2e2; color:#991b1b; }
 #announce-bar button { position:absolute; right:10px; top:6px; border:0; background:none;
@@ -1414,7 +1478,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 @media print {
   html.lg-ready #navbar, html.lg-ready #sidebar, html.lg-ready .quick-tool-btn,
   html.lg-ready .search-panel {
-    background: #fff !important; backdrop-filter: none !important;
+    background: var(--ink-inverse) !important; backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important; box-shadow: none !important;
   }
 }
@@ -1560,7 +1624,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
     <a class="skip-link focus-ring" href="#content">본문으로 건너뛰기</a>
     <div id="reading-progress" style="width:0%" aria-hidden="true"></div>
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" role="banner">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-colors duration-300" role="banner">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3 min-w-0">
                 <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="목차 메뉴 열기" aria-expanded="false" aria-controls="sidebar">
@@ -1597,7 +1661,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <nav class="p-4">
                 <div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
                     <h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
-                        <i class="fas fa-list-ul text-primary" aria-hidden="true"></i>학습 목차
+                        <span aria-hidden="true" class="fas fa-list-ul text-primary" aria-hidden="true"></span>학습 목차
                     </h2>
                     <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                         <span id="reading-progress-text">0 / 38장</span>
@@ -1868,7 +1932,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- 이 책 사용법 -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
-                    <i class="fas fa-compass text-primary" aria-hidden="true"></i>이 책, 어떻게 활용할까요?
+                    <span aria-hidden="true" class="fas fa-compass text-primary" aria-hidden="true"></span>이 책, 어떻게 활용할까요?
                 </h2>
                 <div class="grid md:grid-cols-2 gap-3 text-sm">
                     <div>
@@ -1957,7 +2021,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- 챕터 빠른 참조 지도 -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
-                    <i class="fas fa-map text-primary" aria-hidden="true"></i>장 빠른 참조 지도
+                    <span aria-hidden="true" class="fas fa-map text-primary" aria-hidden="true"></span>장 빠른 참조 지도
                 </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">학습 목표별로 장을 빠르게 찾아 보세요.</p>
                 <div class="grid md:grid-cols-2 gap-2 text-sm">
@@ -1991,19 +2055,19 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- 인터랙티브 체크리스트 + 독서 대시보드 -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
-                    <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>학습 대시보드
+                    <span aria-hidden="true" class="fas fa-gauge-high text-primary" aria-hidden="true"></span>학습 대시보드
                 </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">독서 진행 상황을 추적하고 휴대폰 건강 상태를 점검해요.</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
                     <!-- 독서 진행률 카드 -->
-                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
-                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>독서 진행률</h3>
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 border border-indigo-100 dark:border-gray-700">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-chart-pie text-primary" aria-hidden="true"></span>독서 진행률</h3>
                         <div class="flex items-center gap-4">
                             <div class="relative w-20 h-20 flex-shrink-0">
-                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90">
-                                    <circle cx="40" cy="40" r="34" fill="none" stroke="#e5e7eb" stroke-width="8" class="dark:stroke-gray-700"/>
-                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
+                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90" aria-hidden="true">
+                                    <circle cx="40" cy="40" r="34" fill="none" stroke="var(--line)" stroke-width="8" class="dark:stroke-gray-700"/>
+                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="var(--accent-book)" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
                                 </svg>
                                 <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span>
                             </div>
@@ -2017,7 +2081,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 
                     <!-- 휴대폰 건강 자가 점검 카드 -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
-                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>휴대폰 건강 자가 점검</h3>
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></span>휴대폰 건강 자가 점검</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">이미 실천하고 있는 항목에 체크하고 휴대폰 "건강 점수"를 확인해 보세요:</p>
                         <div id="checklist-items" class="space-y-1.5 text-sm">
                             <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>화면 잠금 비밀번호 설정됨(1234/0000 제외)</span></label>
@@ -2034,7 +2098,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
                             <span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span>
                         </div>
                         <div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all duration-500" style="width: 0%"></div>
+                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-colors duration-500" style="width: 0%"></div>
                         </div>
                         <p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">자가 점검을 마치고 휴대폰 보안 상태를 확인해 보세요</p>
                     </div>
@@ -4898,7 +4962,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">제20장 부록: Termux — Android 기기의 휴대용 Linux 터미널 환경</h3>
 <p class="chapter-intro mb-4">개발자 모드만으로는 아직 "하드코어"하지 않다고 느끼고, 스마트폰에서 완전한 Linux 명령줄을 경험하고 싶다면, Termux가 바로 그 해답입니다. Root 권한 없이도 일반 안드로이드 스마트폰을 휴대용 Linux 워크스테이션으로 바꿀 수 있어, 고급 사용자가 모바일 개발 및 운영을 탐구하는 훌륭한 도구입니다.</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">하나, Termux란 무엇인가</h4>
-<p class="mb-2">Termux는 Android 기기 전용으로 설계된 오픈 소스 터미널 에뮬레이터 및 Linux 환경 응용 프로그램으로, Root 권한 없이도 스마트폰에서 완전한 Linux Shell 경험을 제공합니다. 경량 응용 프로그램(약 30MB 설치 패키지)으로서, APT 패키지 관리 시스템을 통해 풍부한 소프트웨어 생태계를 지원하며, 사용자가 모바일 기기에서 Python, Node.js, Git, SSH 등의 도구를 실행하거나, 서버를 구축하거나, 침투 테스트를 수행할 수 있습니다. <p class="mb-2">Termux의 핵심 이점은 경량화와 높은 확장성으로, 개발, 학습 및 시스템 관리 등 다양한 시나리오에 적합합니다. 표준 소프트웨어 패키지와 정밀한 터미널 에뮬레이션을 하나의 오픈 소스 솔루션으로 결합했습니다.</p> <h4 class="text-lg font-semibold mt-4 mb-2">둘, 핵심 기능과 특성</h4> <h5 class="font-semibold mt-3 mb-1">🖥️ 완전한 Linux 환경</h5> <p class="mb-2">Termux는 <strong>Bash Shell 하나만 내장</strong>되어 있습니다. Zsh나 fish 등 다른 Shell을 사용하려면 패키지 관리자를 통해 수동으로 설치해야 합니다. 예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> 또는 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. 동시에 Termux는 Vim, Nano, Emacs 등의 편집기를 지원하여 거의 네이티브에 가까운 명령줄 경험을 제공합니다. 사용자는 "pkg install"로 2000개 이상의 소프트웨어 패키지를 설치할 수 있으며, GCC, OpenSSH, SQLMap 등 개발 및 보안 도구가 포함됩니다. <h5 class="font-semibold mt-3 mb-1">📦 강력한 패키지 관리</h5> <p class="mb-2">APT 패키지 관리자(Debian 및 Ubuntu와 유사)를 사용하여, 개발 도구, 네트워크 도구 등을 포함하여 수천 가지 Linux 소프트웨어 패키지를 설치할 수 있습니다. Python, Ruby, Node.js, Go, Rust, Swift 등 다양한 프로그래밍 언어 환경을 지원합니다. <h5 class="font-semibold mt-3 mb-1">🔒 보안 및 네트워크 기능</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>SSH 원격 연결</strong>: SSH 클라이언트 및 서버 기능을 지원하여, 다른 기기에 원격으로 연결하거나 스마트폰을 SSH 호스트로 만들 수 있습니다.</li> <li><strong>암호화 도구</strong>: OpenSSL 등 암호화 도구를 제공하여, 데이터 암호화 및 보안 통신을 지원합니다.</li> <li><strong>서버 구축</strong>: Nginx 또는 Apache를 구성하여 정적 웹 페이저 서버를 구축할 수 있습니다.</li> </ul> <h5 class="font-semibold mt-3 mb-1">🔧 시스템 통합 및 확장</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li>스마트폰 저장소 권한에 접근하여 로컬 파일 관리를 구현합니다.</li> <li>Termux:API 플러그인을 통해 센서, 카메라 등 Android 하드웨어 기능을 호출합니다.</li> <li>블루투스 키보드 및 외부 모니터 연결을 지원하며, 완전한 마우스 지원을 제공합니다.</li> </ul> <h4 class="text-lg font-semibold mt-4 mb-2">셋, 플러그인 생태계</h4> <p class="mb-2">Termux의 핵심 응용 프로그램은 여러 선택적 플러그인 응용 프로그램을 통해 확장하여 추가 기능과 통합을 제공할 수 있습니다:</p> <table class="w-full border-collapse border border-gray-300 text-sm mb-3"> <thead> <tr class="bg-light dark:bg-gray-700"> <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">플러그인 이름</th> <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">기능 설명</th> </tr> </thead> <tbody> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">명령줄 프로그램에 Android API 기능을 노출</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기 부팅 시 스크립트 실행 허용</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">플로팅 터미널 창 제공</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">터미널에 색상 테마 및 글꼴 사용자 정의 활성화</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux 스크립트를 Tasker 자동화 앱과 통합</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">홈 화면 위젯에서 스크립트 실행 허용</td> </tr> </tbody> </table> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>중요한 알림</p> <p class="mt-1">Termux와 해당 플러그인은 동일한 sharedUserId를 공유하므로 같은 출처에서 설치해야 합니다. 서로 다른 출처(예: F-Droid와 GitHub)의 설치를 혼합하면 설치 오류가 발생합니다.</p> </div> <h4 class="text-lg font-semibold mt-4 mb-2">넷, 설치 및 구성 가이드</h4> <h5 class="font-semibold mt-3 mb-1">📥 설치 단계</h5> <ol class="list-decimal pl-6 mb-3 space-y-1"> <li><strong>응용 프로그램 다운로드</strong>: 공식 채널(F-Droid 또는 GitHub)에서 Termux를 다운로드하여 설치하며, Root 권한이 필요 없습니다.</li> <li><strong>시스템 초기화</strong>: 처음 시작한 후 "Installing bootstrap packages"가 완료될 때까지 기다립니다.</li> <li><strong>저장소 권한 획득</strong>: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>를 실행하여 스마트폰 파일 시스템 권한을 얻습니다.</li> <li><strong>소프트웨어 소스 업데이트</strong>: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>를 실행하여 소프트웨어 패키지 목록을 업데이트합니다.</li> </ol> <h5 class="font-semibold mt-3 mb-1">⚙️ 기초최적화</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>미러 소스 변경</strong>: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code> 명령을 사용하여 그래픽 인터페이스로 미러 소스를 변경(칭화대학교 미러 소스 권장).</li> <li><strong>단축키 설정</strong>: 볼륨 감소 키를 Ctrl로, 볼륨 증가 키를 Esc로 시뮬레이션하여 입력 효율을 높입니다.</li> <li><strong>인터페이스 미화</strong>: Zsh + Oh My Zsh를 설치하고, 테마와 플러그인을 구성합니다.</li> </ul> <h4 class="text-lg font-semibold mt-4 mb-2">다섯, 일반적인 응용 시나리오</h4> <h5 class="font-semibold mt-3 mb-1">💻 모바일 개발 테스트</h5> <p class="mb-2">스마트폰에서 완전한 개발 환경을 구축하고, Python 스크립트를 작성 및 실행하고, GCC로 C 프로그램을 컴파일하며, Git으로 코드 저장소를 관리하고, SSH와 결합하여 원격 서버와 동기화합니다. <h5 class="font-semibold mt-3 mb-1">🖥️ 서버 운영 및 유지 보수</h5> <p class="mb-2">SSH로 서버를 원격 관리하고, 시스템 유지 보수, 로그 분석 등의 작업을 수행하며, 언제 어디서나 서버 문제를 처리합니다. <h5 class="font-semibold mt-3 mb-1">📚 Linux 학습</h5> <p class="mb-2">실제 Linux 환경을 제공하여, 명령줄과 시스템 관리를 배우기에 이상적인 플랫폼입니다. Shell 스크립트 작성, Linux 파일 권한 관리(예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code>로 rwxr-xr-x 권한 비트 설정, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code>으로 파일 소유권 변경, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code>로 owner/group/other 3그룹 9비트 권한 보기) 등 기본 명령을 연습할 수 있습니다. 이것은 Unix/Linux의 고전적인 "3그룹 9비트" 권한 모델(owner / group / other × 읽기 / 쓰기 / 실행)로, Windows NTFS의 ACL 접근 제어 목록과는 완전히 다른 두 시스템입니다.</p> <h5 class="font-semibold mt-3 mb-1">🔐 네트워크보안테스트</h5> <p class="mb-2">Nmap, SQLMap, Hydra, Metasploit 등 보안 도구를 설치하여 네트워크 스캔 및 침투 테스트를 수행합니다.</p> <h4 class="text-lg font-semibold mt-4 mb-2">여섯, 버전 및 호환성</h4> <p class="mb-2">Termux의 최신 안정 버전은 v0.118.2로, Android 7 이상 기기에 적용됩니다. 참고할 점은, Termux는 Android 12 이상에서 불안정성이 있을 수 있으므로, 공식 업데이트 로그를 주시하여 최신 호환성 정보를 얻는 것이 좋습니다.</p> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>요약</p> <p class="mt-1">Termux는 강력한 Linux 터미널 경험을 Android 기기로 가져와, 스마트폰을 휴대용 개발 및 학습 도구로 만듭니다. 개발자, 시스템 관리자, 기술 애호가 모두 Termux를 활용하여 모바일 기기에서 완전한 명령줄 경험을 즐기고, "주머니 속의 Linux"라는 이념을 실현할 수 있습니다.</p> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>직접 해보기: 스마트폰에서 첫 번째 Linux 명령 실행</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>F-Droid에서 Termux를 다운로드하여 설치하고, 처음 시작 시 초기화가 완료될 때까지 기다립니다.</li> <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>를 실행하여 소프트웨어 패키지를 업데이트합니다.</li> <li>설치Python:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install python</code>.</li> <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>를 입력하여, 스마트폰에서 코드를 실행하는 즐거움을 느껴보세요.</li> </ol> </div> </p></p></p></p></p>
+<p class="mb-2">Termux는 Android 기기 전용으로 설계된 오픈 소스 터미널 에뮬레이터 및 Linux 환경 응용 프로그램으로, Root 권한 없이도 스마트폰에서 완전한 Linux Shell 경험을 제공합니다. 경량 응용 프로그램(약 30MB 설치 패키지)으로서, APT 패키지 관리 시스템을 통해 풍부한 소프트웨어 생태계를 지원하며, 사용자가 모바일 기기에서 Python, Node.js, Git, SSH 등의 도구를 실행하거나, 서버를 구축하거나, 침투 테스트를 수행할 수 있습니다. <p class="mb-2">Termux의 핵심 이점은 경량화와 높은 확장성으로, 개발, 학습 및 시스템 관리 등 다양한 시나리오에 적합합니다. 표준 소프트웨어 패키지와 정밀한 터미널 에뮬레이션을 하나의 오픈 소스 솔루션으로 결합했습니다.</p> <h4 class="text-lg font-semibold mt-4 mb-2">둘, 핵심 기능과 특성</h4> <h5 class="font-semibold mt-3 mb-1">완전한 Linux 환경</h5> <p class="mb-2">Termux는 <strong>Bash Shell 하나만 내장</strong>되어 있습니다. Zsh나 fish 등 다른 Shell을 사용하려면 패키지 관리자를 통해 수동으로 설치해야 합니다. 예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> 또는 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. 동시에 Termux는 Vim, Nano, Emacs 등의 편집기를 지원하여 거의 네이티브에 가까운 명령줄 경험을 제공합니다. 사용자는 "pkg install"로 2000개 이상의 소프트웨어 패키지를 설치할 수 있으며, GCC, OpenSSH, SQLMap 등 개발 및 보안 도구가 포함됩니다. <h5 class="font-semibold mt-3 mb-1">강력한 패키지 관리</h5> <p class="mb-2">APT 패키지 관리자(Debian 및 Ubuntu와 유사)를 사용하여, 개발 도구, 네트워크 도구 등을 포함하여 수천 가지 Linux 소프트웨어 패키지를 설치할 수 있습니다. Python, Ruby, Node.js, Go, Rust, Swift 등 다양한 프로그래밍 언어 환경을 지원합니다. <h5 class="font-semibold mt-3 mb-1">보안 및 네트워크 기능</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>SSH 원격 연결</strong>: SSH 클라이언트 및 서버 기능을 지원하여, 다른 기기에 원격으로 연결하거나 스마트폰을 SSH 호스트로 만들 수 있습니다.</li> <li><strong>암호화 도구</strong>: OpenSSL 등 암호화 도구를 제공하여, 데이터 암호화 및 보안 통신을 지원합니다.</li> <li><strong>서버 구축</strong>: Nginx 또는 Apache를 구성하여 정적 웹 페이저 서버를 구축할 수 있습니다.</li> </ul> <h5 class="font-semibold mt-3 mb-1">시스템 통합 및 확장</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li>스마트폰 저장소 권한에 접근하여 로컬 파일 관리를 구현합니다.</li> <li>Termux:API 플러그인을 통해 센서, 카메라 등 Android 하드웨어 기능을 호출합니다.</li> <li>블루투스 키보드 및 외부 모니터 연결을 지원하며, 완전한 마우스 지원을 제공합니다.</li> </ul> <h4 class="text-lg font-semibold mt-4 mb-2">셋, 플러그인 생태계</h4> <p class="mb-2">Termux의 핵심 응용 프로그램은 여러 선택적 플러그인 응용 프로그램을 통해 확장하여 추가 기능과 통합을 제공할 수 있습니다:</p> <table class="w-full border-collapse border border-gray-300 text-sm mb-3"> <thead> <tr class="bg-light dark:bg-gray-700"> <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">플러그인 이름</th> <th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">기능 설명</th> </tr> </thead> <tbody> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:API</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">명령줄 프로그램에 Android API 기능을 노출</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Boot</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">기기 부팅 시 스크립트 실행 허용</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Float</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">플로팅 터미널 창 제공</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Styling</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">터미널에 색상 테마 및 글꼴 사용자 정의 활성화</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Tasker</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux 스크립트를 Tasker 자동화 앱과 통합</td> </tr> <tr> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Termux:Widget</td> <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">홈 화면 위젯에서 스크립트 실행 허용</td> </tr> </tbody> </table> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>중요한 알림</p> <p class="mt-1">Termux와 해당 플러그인은 동일한 sharedUserId를 공유하므로 같은 출처에서 설치해야 합니다. 서로 다른 출처(예: F-Droid와 GitHub)의 설치를 혼합하면 설치 오류가 발생합니다.</p> </div> <h4 class="text-lg font-semibold mt-4 mb-2">넷, 설치 및 구성 가이드</h4> <h5 class="font-semibold mt-3 mb-1">설치 단계</h5> <ol class="list-decimal pl-6 mb-3 space-y-1"> <li><strong>응용 프로그램 다운로드</strong>: 공식 채널(F-Droid 또는 GitHub)에서 Termux를 다운로드하여 설치하며, Root 권한이 필요 없습니다.</li> <li><strong>시스템 초기화</strong>: 처음 시작한 후 "Installing bootstrap packages"가 완료될 때까지 기다립니다.</li> <li><strong>저장소 권한 획득</strong>: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>를 실행하여 스마트폰 파일 시스템 권한을 얻습니다.</li> <li><strong>소프트웨어 소스 업데이트</strong>: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>를 실행하여 소프트웨어 패키지 목록을 업데이트합니다.</li> </ol> <h5 class="font-semibold mt-3 mb-1">기초최적화</h5> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>미러 소스 변경</strong>: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code> 명령을 사용하여 그래픽 인터페이스로 미러 소스를 변경(칭화대학교 미러 소스 권장).</li> <li><strong>단축키 설정</strong>: 볼륨 감소 키를 Ctrl로, 볼륨 증가 키를 Esc로 시뮬레이션하여 입력 효율을 높입니다.</li> <li><strong>인터페이스 미화</strong>: Zsh + Oh My Zsh를 설치하고, 테마와 플러그인을 구성합니다.</li> </ul> <h4 class="text-lg font-semibold mt-4 mb-2">다섯, 일반적인 응용 시나리오</h4> <h5 class="font-semibold mt-3 mb-1">모바일 개발 테스트</h5> <p class="mb-2">스마트폰에서 완전한 개발 환경을 구축하고, Python 스크립트를 작성 및 실행하고, GCC로 C 프로그램을 컴파일하며, Git으로 코드 저장소를 관리하고, SSH와 결합하여 원격 서버와 동기화합니다. <h5 class="font-semibold mt-3 mb-1">서버 운영 및 유지 보수</h5> <p class="mb-2">SSH로 서버를 원격 관리하고, 시스템 유지 보수, 로그 분석 등의 작업을 수행하며, 언제 어디서나 서버 문제를 처리합니다. <h5 class="font-semibold mt-3 mb-1">Linux 학습</h5> <p class="mb-2">실제 Linux 환경을 제공하여, 명령줄과 시스템 관리를 배우기에 이상적인 플랫폼입니다. Shell 스크립트 작성, Linux 파일 권한 관리(예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code>로 rwxr-xr-x 권한 비트 설정, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code>으로 파일 소유권 변경, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code>로 owner/group/other 3그룹 9비트 권한 보기) 등 기본 명령을 연습할 수 있습니다. 이것은 Unix/Linux의 고전적인 "3그룹 9비트" 권한 모델(owner / group / other × 읽기 / 쓰기 / 실행)로, Windows NTFS의 ACL 접근 제어 목록과는 완전히 다른 두 시스템입니다.</p> <h5 class="font-semibold mt-3 mb-1">🔐 네트워크보안테스트</h5> <p class="mb-2">Nmap, SQLMap, Hydra, Metasploit 등 보안 도구를 설치하여 네트워크 스캔 및 침투 테스트를 수행합니다.</p> <h4 class="text-lg font-semibold mt-4 mb-2">여섯, 버전 및 호환성</h4> <p class="mb-2">Termux의 최신 안정 버전은 v0.118.2로, Android 7 이상 기기에 적용됩니다. 참고할 점은, Termux는 Android 12 이상에서 불안정성이 있을 수 있으므로, 공식 업데이트 로그를 주시하여 최신 호환성 정보를 얻는 것이 좋습니다.</p> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>요약</p> <p class="mt-1">Termux는 강력한 Linux 터미널 경험을 Android 기기로 가져와, 스마트폰을 휴대용 개발 및 학습 도구로 만듭니다. 개발자, 시스템 관리자, 기술 애호가 모두 Termux를 활용하여 모바일 기기에서 완전한 명령줄 경험을 즐기고, "주머니 속의 Linux"라는 이념을 실현할 수 있습니다.</p> </div> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>직접 해보기: 스마트폰에서 첫 번째 Linux 명령 실행</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>F-Droid에서 Termux를 다운로드하여 설치하고, 처음 시작 시 초기화가 완료될 때까지 기다립니다.</li> <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>를 실행하여 소프트웨어 패키지를 업데이트합니다.</li> <li>설치Python:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install python</code>.</li> <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python3 -c "print('Hello from Termux!')"</code>를 입력하여, 스마트폰에서 코드를 실행하는 즐거움을 느껴보세요.</li> </ol> </div> </p></p></p></p></p>
                 </div>
 
             </section>
@@ -5047,7 +5111,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
                     </table>
 <p class="mb-2">간단히 말해: <strong>Git은 "변경을 어떻게 기록할지", GitHub는 "변경이 어디에 있고 어떻게 협업할지"를 관리</strong>. Git은 도구로, 로컬에서 실행; GitHub은 플랫폼으로, Git 저장소를 클라우드에 올려, 협업과 표시를 용이하게 합니다. Git만 사용하고 GitHub을 사용하지 않을 수 있지만(예: 자신만 코드를 쓰고 버전 관리), GitHub을 사용하려면 반드시 Git을 사용해야 합니다(GitHub은 Git 기반이기 때문).</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">셋, GitHub의 핵심 개념과 기능</h4>
-<h5 class="font-semibold mt-3 mb-1">📁 기본 개념</h5>
+<h5 class="font-semibold mt-3 mb-1">기본 개념</h5>
 <p class="mb-2">착수하기 전에, 먼저 몇 가지 고빈도 용어를 알아야 합니다, 그렇지 않으면 GitHub 인터페이스를 보고 완전히 멍해질 것입니다:</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>저장소(Repository, 약칭 Repo)</strong>: 한 프로젝트에 한 저장소가 대응하며, 이 프로젝트의 모든 코드 파일, 역사 버전, 문서가 들어 있습니다. "프로젝트 폴더"로 이해할 수 있습니다.</li>
@@ -5059,7 +5123,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>이슈(Issue)</strong>: 버그, 기능 수요, 토론 주제를 기록하는 데 사용. 각 이슈는 토론 게시물과 같으며, 담당자를 지정하고, 레이블을 붙일 수 있습니다.</li>
   <li><strong>Fork</strong>: 다른 사람의 저장소를 자신의 계정 아래로 복사하며, 원본 저장소에 영향을 주지 않고 자신의 복사본에서 자유롭게 수정할 수 있습니다. 수정 후 원작자에게 PR을 보내 병합을 요청할 수 있습니다.</li>
 </ul>
-<h5 class="font-semibold mt-3 mb-1">🛠️ 핵심 기능</h5>
+<h5 class="font-semibold mt-3 mb-1">핵심 기능</h5>
 <p class="mb-2">GitHub는 코드 저장만 제공하는 것이 아니라, 다음도 포함합니다:</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>버전 관리</strong>: 매번 코드 변경의 역사 기록, 코드를 잘못 수정해도 언제든 이전 정상 버전으로 돌아갈 수 있음.</li>
@@ -5072,14 +5136,14 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>오픈 소스 커뮤니티</strong>: 좋아하는 프로젝트 Star(즐겨찾기), Watch(프로젝트 동적 팔로우), Follow(개발자 팔로우), 전 세계 오픈 소스 협업 참여 가능.</li>
 </ul>
 <h4 class="text-lg font-semibold mt-4 mb-2">넷, 가입 및 시작: 5분 만에 첫 번째 저장소 만들기</h4>
-<h5 class="font-semibold mt-3 mb-1">📝 등록계정</h5>
+<h5 class="font-semibold mt-3 mb-1">등록계정</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li><a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a> 방문, "Sign up" 클릭.</li>
   <li>이메일 작성, 비밀번호와 사용자 이름 설정(사용자 이름은 개인 홈페이지 주소에 나타나며, 영어 사용 권장, 예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/yourname</code>).</li>
   <li>이메일 인증 및 사람-기계 인증 완료.</li>
   <li>무료 플랜(Free) 선택하면 됨, 개인 사용자에게는 완전히 충분.</li>
 </ol>
-<h5 class="font-semibold mt-3 mb-1">📁 첫 번째 저장소 만들기</h5>
+<h5 class="font-semibold mt-3 mb-1">첫 번째 저장소 만들기</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li>로그인 후 오른쪽 상단 "+" 클릭, "New repository" 선택.</li>
   <li>저장소 이름(Repository name) 작성, 예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.</li>
@@ -5112,7 +5176,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>코드 검토(Code Review)</strong>: 팀원이 코드를 보고, 의견 또는 수정 제안 제출. 피드백에 따라 계속 커밋할 수 있으며, PR이 자동 업데이트됨.</li>
   <li><strong>병합</strong>: 검토 통과 후, "Merge" 클릭하여 코드를 주 브랜치로 병합. 당신의 공헌이 공식적으로 프로젝트에 들어갔습니다!</li>
 </ol>
-<p class="mb-2">이 흐름은 <strong>모든 코드가 주 브랜치에 진입하기 전에 검토를 거치도록</strong> 보장하여, 오류 발생률을 크게 낮춥니다. 오픈 소스 프로젝트 또한 이 메커니즘을 사용하여 전 세계 낯선 사람들의 공헌을 받습니다 — 당신은 어떤 유명 오픈 소스 프로젝트에 PR을 제출하여, 채택되면 당신이 바로 이 프로젝트의 기여자가 될 수 있습니다. <h4 class="text-lg font-semibold mt-4 mb-2">일곱, GitHub의 일반적인 응용 시나리오</h4> <h5 class="font-semibold mt-3 mb-1">🎓 학생 대회 및 과제 프로젝트 참여</h5> <p class="mb-2">컴퓨터과 학생이 ACM, 해커톤, 졸업 설계에 참가할 때, 거의 모두 GitHub에서 떨어질 수 없습니다. 그것은 팀 협업 플랫폼이자 작품 표시 창구 역할을 합니다 — 심사위원이 직접 저장소를 보고, 코드 품질과 협업 과정을 이해할 수 있습니다. 많은 회사 채용 시 기술 능력의 증명으로서 GitHub 홈페이지를 첨부할 것을 요구합니다. <h5 class="font-semibold mt-3 mb-1">📚 개인 지식 창고 및 노트 호스팅</h5> <p class="mb-2">비프로그래머도 GitHub을 사용할 수 있습니다. 많은 사람들이 학습 노트, 기술 블로그(GitHub Pages와 결합하여 무료 웹사이트 구축), 전자책을 호스팅하는 데 사용. Markdown 형식 작성 + Git 버전 관리 + 클라우드 백업, 3 in 1. <h5 class="font-semibold mt-3 mb-1">🌐 오픈 소스 프로젝트 참여</h5> <p class="mb-2">GitHub은 전 세계 오픈 소스 운동의 핵심 거점입니다. 좋아하는 프로젝트를 Fork하여, 수정 후 PR을 커뮤니티에 환원할 수 있습니다; 또는 단순히 Star로 좋은 프로젝트를 북마크하고, 업데이트 추적. 오픈 소스 참여는 기술을 높이고 평판을 쌓는 절호의 기회.</p> <h5 class="font-semibold mt-3 mb-1">🤖 자동화 배포 및 CI/CD</h5> <p class="mb-2">GitHub Actions의 도움으로, "코드 push, 자동 테스트 + 서버에 자동 배포"의 완전 자동 흐름 구현 가능. 많은 개인 블로그, 문서 사이트가 이렇게 구축되며, 글 작성 후 push하면 사이트가 자동 업데이트.</p> <h5 class="font-semibold mt-3 mb-1">💾 코드 백업 및 다중 기기 동기화</h5> <p class="mb-2">코드 저장소를 클라우드 디스크로 사용, 기기 변경, 다중 기기 사무 시, git pull만 하면 최신 코드를 얻을 수 있어, 더 이상 USB 드라이브로 복사할 필요 없음.</p> <h4 class="text-lg font-semibold mt-4 mb-2">여덟, 초보자를 위한 몇 가지 조언</h4> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>커밋 설명을 명확히 작성</strong>: "update" 같은 쓸모없는 설명을 쓰지 마세요. 좋은 커밋 메시지는 "사용자 로그인 후 잘못된 페이지로 이동하는 문제 수정"을 쓰며, 반 년 후에 다시 봐도 그때 무엇을 했는지 알 수 있습니다.</li> <li><strong>자주 커밋, 작은 걸음 빠른 걸음</strong>: 작은 기능을 완료할 때마다 커밋하며, 하루 종일 쓴 다음에 한 번 커밋하지 마세요. 이렇게 하면 문제가 발생했을 때 더 쉽게 위치 파악.</li> <li><strong>브랜치로 개발, 주 브랜치를 직접 수정하지 말 것</strong>: 개인 프로젝트라도 브랜치를 여는 습관을 기르세요, 미래에 팀 협업 시 황란하지 않습니다.</li> <li><strong>.gitignore 잘 활용</strong>: 이 파일은 Git에게 어떤 파일을 버전 관리에 포함하지 말지 알려줍니다(예: 비밀번호 설정, 컴파일 산출물, 의존성 폴더), 쓰레기 파일이 업로드되는 것을 방지.</li> <li><strong>훌륭한 오픈 소스 프로젝트 많이 보기</strong>: GitHub Trending을 둘러보고, 높은 별점 프로젝트의 코드 구조, README 작성법, 협업 흐름을 보는 것이 가장 빠른 무료 향상 방법.</li> <li><strong>GitHub 학생 팩 신청</strong>: 학생 인증 후 대량의 유료 도구와 서비스 크레딧을 무료로 받을 수 있으며(Copilot, 도메인, 클라우드 서비스 등), 가치가 수천 달러에 달합니다.</li> </ul> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>보안리마인더</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>비밀번호, API 키, 데이터베이스 연결 문자열 등 민감한 정보를 GitHub에 절대 제출하지 마세요, 특히 공개 저장소 — 유출되면 크롤러가 즉시 가져가며, 결과가 심각합니다.</li> <li>실수로 민감한 정보를 제출했다면, 파일 삭제만으로는 부족하며(역사 기록에 아직 있음), <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> 또는 전문 도구로 역사를 정리하고, 즉시 유출된 키를 교체해야 합니다.</li> <li>비공개 저장소도 절대 안전하지 않으며, 민감한 정보는 가장 좋은 것은 환경 변수로 관리, 코드 저장소에 넣지 마세요.</li> </ul> </div> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>국내에서 GitHub 접근 시 주의사항</p> <p class="mt-1">GitHub은 국내에서 접근이 때때로 불안정하여, 열리지 않거나 클론이 느린 상황이 발생할 수 있습니다. 시도해 볼 수 있습니다: ① 국내 미러 사이트(예: GitClone, ghproxy)로 클론 가속; ② Hosts 설정 또는 프록시 사용; ③ 주로 국내 협업을 대상으로 한다면, 국산 대체품 <strong>Gitee(코드클라우드)</strong>를 고려해 볼 수 있으며, 기능이 유사하고 접근 속도가 빠릅니다. 많은 팀이 GitHub과 Gitee에 동시에 호스팅하여, 국제화와 국내 속도를 모두 겸합니다.</p> </div> <div class="success-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>고급 플레이법: GitHub Pages로 무료 개인 블로그 구축</p> <p class="mt-1">GitHub Pages는 정적 웹사이트를 무료 호스팅할 수 있게 해주며, Jekyll, Hexo, Hugo 등 정적 사이트 생성기와 결합하여, 쉽게 개인 블로그를 구축할 수 있습니다. Markdown 글 작성 후 저장소에 push하면, 블로그가 자동 업데이트되며, HTTPS와 사용자 정의 도메인 내장. 무수한 기술 블로거의 블로그가 이렇게 구축되었으며, 비용 0, 광고 없음, 버전 제어 가능.</p> </div> <h4 class="text-lg font-semibold mt-4 mb-2">아홉, 요약: 왜 모든 사람이 GitHub을 알아야 하는가</h4> <p class="mb-2">GitHub은 이미 "프로그래머의 도구"에 그치지 않고, <strong>디지털 시대의 작업 방식</strong>과 같습니다: 버전 관리로 모든 것을 추적 가능하게 하고, 협업 메커니즘으로 팀이 효율적으로 운영하게 하며, 오픈 소스 정신으로 지식이 자유롭게 흐르게 합니다. 코드를 쓰지 않더라도, "커밋, 브랜치, 병합"의 개념을 이해하면, "반복 수정 + 다중 협업"이 필요한 모든 콘텐츠를 더 잘 관리하는 데 도움이 됩니다 — 논문에서 문서, 노트에서 방안까지.</p> <p class="mb-2">컴퓨터과 학생에게 GitHub은 필수 기술입니다: 그것은 당신의 작품집, 협업 플랫폼, 학습 자료 창고이며, 미래 구직 시 가장 설득력 있는 "이력서"입니다. 일찍 계정을 등록하고, 자신의 과제, 소규모 프로젝트를 올려두며, 천천히 쌓아가세요, 몇 년 후 당신은 면접관의 눈을 밝게 할 기술 이력을 갖게 될 것입니다.</p> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>직접 해보기: GitHub 첫 경험 완료</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>GitHub 계정을 등록하고, 개인 자료(아바타, 소개, 관심 있는 기술 분야)를 완성.</li> <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">hello-github</code>라는 이름의 공개 저장소를 만들고, "Add a README file" 체크.</li> <li>저장소로 들어가, README.md의 편집 버튼(연필 아이콘) 클릭, Markdown으로 자기 소개 작성, 변경 사항 제출.</li> <li>GitHub 검색창에서 관심 있는 키워드 검색(예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python-tutorial</code>), 좋아하는 프로젝트 두 개에 Star.</li> <li>(고급) 컴퓨터에 Git 설치, 저장소를 로컬로 Clone, README 수정 후 클라우드로 push, 완전한 "로컬→클라우드" 작업 흐름 한 번 완료.</li> </ol> </div> </p></p></p>
+<p class="mb-2">이 흐름은 <strong>모든 코드가 주 브랜치에 진입하기 전에 검토를 거치도록</strong> 보장하여, 오류 발생률을 크게 낮춥니다. 오픈 소스 프로젝트 또한 이 메커니즘을 사용하여 전 세계 낯선 사람들의 공헌을 받습니다 — 당신은 어떤 유명 오픈 소스 프로젝트에 PR을 제출하여, 채택되면 당신이 바로 이 프로젝트의 기여자가 될 수 있습니다. <h4 class="text-lg font-semibold mt-4 mb-2">일곱, GitHub의 일반적인 응용 시나리오</h4> <h5 class="font-semibold mt-3 mb-1">학생 대회 및 과제 프로젝트 참여</h5> <p class="mb-2">컴퓨터과 학생이 ACM, 해커톤, 졸업 설계에 참가할 때, 거의 모두 GitHub에서 떨어질 수 없습니다. 그것은 팀 협업 플랫폼이자 작품 표시 창구 역할을 합니다 — 심사위원이 직접 저장소를 보고, 코드 품질과 협업 과정을 이해할 수 있습니다. 많은 회사 채용 시 기술 능력의 증명으로서 GitHub 홈페이지를 첨부할 것을 요구합니다. <h5 class="font-semibold mt-3 mb-1">개인 지식 창고 및 노트 호스팅</h5> <p class="mb-2">비프로그래머도 GitHub을 사용할 수 있습니다. 많은 사람들이 학습 노트, 기술 블로그(GitHub Pages와 결합하여 무료 웹사이트 구축), 전자책을 호스팅하는 데 사용. Markdown 형식 작성 + Git 버전 관리 + 클라우드 백업, 3 in 1. <h5 class="font-semibold mt-3 mb-1">🌐 오픈 소스 프로젝트 참여</h5> <p class="mb-2">GitHub은 전 세계 오픈 소스 운동의 핵심 거점입니다. 좋아하는 프로젝트를 Fork하여, 수정 후 PR을 커뮤니티에 환원할 수 있습니다; 또는 단순히 Star로 좋은 프로젝트를 북마크하고, 업데이트 추적. 오픈 소스 참여는 기술을 높이고 평판을 쌓는 절호의 기회.</p> <h5 class="font-semibold mt-3 mb-1">자동화 배포 및 CI/CD</h5> <p class="mb-2">GitHub Actions의 도움으로, "코드 push, 자동 테스트 + 서버에 자동 배포"의 완전 자동 흐름 구현 가능. 많은 개인 블로그, 문서 사이트가 이렇게 구축되며, 글 작성 후 push하면 사이트가 자동 업데이트.</p> <h5 class="font-semibold mt-3 mb-1">💾 코드 백업 및 다중 기기 동기화</h5> <p class="mb-2">코드 저장소를 클라우드 디스크로 사용, 기기 변경, 다중 기기 사무 시, git pull만 하면 최신 코드를 얻을 수 있어, 더 이상 USB 드라이브로 복사할 필요 없음.</p> <h4 class="text-lg font-semibold mt-4 mb-2">여덟, 초보자를 위한 몇 가지 조언</h4> <ul class="list-disc pl-6 mb-3 space-y-1"> <li><strong>커밋 설명을 명확히 작성</strong>: "update" 같은 쓸모없는 설명을 쓰지 마세요. 좋은 커밋 메시지는 "사용자 로그인 후 잘못된 페이지로 이동하는 문제 수정"을 쓰며, 반 년 후에 다시 봐도 그때 무엇을 했는지 알 수 있습니다.</li> <li><strong>자주 커밋, 작은 걸음 빠른 걸음</strong>: 작은 기능을 완료할 때마다 커밋하며, 하루 종일 쓴 다음에 한 번 커밋하지 마세요. 이렇게 하면 문제가 발생했을 때 더 쉽게 위치 파악.</li> <li><strong>브랜치로 개발, 주 브랜치를 직접 수정하지 말 것</strong>: 개인 프로젝트라도 브랜치를 여는 습관을 기르세요, 미래에 팀 협업 시 황란하지 않습니다.</li> <li><strong>.gitignore 잘 활용</strong>: 이 파일은 Git에게 어떤 파일을 버전 관리에 포함하지 말지 알려줍니다(예: 비밀번호 설정, 컴파일 산출물, 의존성 폴더), 쓰레기 파일이 업로드되는 것을 방지.</li> <li><strong>훌륭한 오픈 소스 프로젝트 많이 보기</strong>: GitHub Trending을 둘러보고, 높은 별점 프로젝트의 코드 구조, README 작성법, 협업 흐름을 보는 것이 가장 빠른 무료 향상 방법.</li> <li><strong>GitHub 학생 팩 신청</strong>: 학생 인증 후 대량의 유료 도구와 서비스 크레딧을 무료로 받을 수 있으며(Copilot, 도메인, 클라우드 서비스 등), 가치가 수천 달러에 달합니다.</li> </ul> <div class="warning-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>보안리마인더</p> <ul class="list-disc pl-6 mt-1 space-y-1"> <li>비밀번호, API 키, 데이터베이스 연결 문자열 등 민감한 정보를 GitHub에 절대 제출하지 마세요, 특히 공개 저장소 — 유출되면 크롤러가 즉시 가져가며, 결과가 심각합니다.</li> <li>실수로 민감한 정보를 제출했다면, 파일 삭제만으로는 부족하며(역사 기록에 아직 있음), <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">git filter-branch</code> 또는 전문 도구로 역사를 정리하고, 즉시 유출된 키를 교체해야 합니다.</li> <li>비공개 저장소도 절대 안전하지 않으며, 민감한 정보는 가장 좋은 것은 환경 변수로 관리, 코드 저장소에 넣지 마세요.</li> </ul> </div> <div class="info-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-info-circle mr-2"></i>국내에서 GitHub 접근 시 주의사항</p> <p class="mt-1">GitHub은 국내에서 접근이 때때로 불안정하여, 열리지 않거나 클론이 느린 상황이 발생할 수 있습니다. 시도해 볼 수 있습니다: ① 국내 미러 사이트(예: GitClone, ghproxy)로 클론 가속; ② Hosts 설정 또는 프록시 사용; ③ 주로 국내 협업을 대상으로 한다면, 국산 대체품 <strong>Gitee(코드클라우드)</strong>를 고려해 볼 수 있으며, 기능이 유사하고 접근 속도가 빠릅니다. 많은 팀이 GitHub과 Gitee에 동시에 호스팅하여, 국제화와 국내 속도를 모두 겸합니다.</p> </div> <div class="success-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>고급 플레이법: GitHub Pages로 무료 개인 블로그 구축</p> <p class="mt-1">GitHub Pages는 정적 웹사이트를 무료 호스팅할 수 있게 해주며, Jekyll, Hexo, Hugo 등 정적 사이트 생성기와 결합하여, 쉽게 개인 블로그를 구축할 수 있습니다. Markdown 글 작성 후 저장소에 push하면, 블로그가 자동 업데이트되며, HTTPS와 사용자 정의 도메인 내장. 무수한 기술 블로거의 블로그가 이렇게 구축되었으며, 비용 0, 광고 없음, 버전 제어 가능.</p> </div> <h4 class="text-lg font-semibold mt-4 mb-2">아홉, 요약: 왜 모든 사람이 GitHub을 알아야 하는가</h4> <p class="mb-2">GitHub은 이미 "프로그래머의 도구"에 그치지 않고, <strong>디지털 시대의 작업 방식</strong>과 같습니다: 버전 관리로 모든 것을 추적 가능하게 하고, 협업 메커니즘으로 팀이 효율적으로 운영하게 하며, 오픈 소스 정신으로 지식이 자유롭게 흐르게 합니다. 코드를 쓰지 않더라도, "커밋, 브랜치, 병합"의 개념을 이해하면, "반복 수정 + 다중 협업"이 필요한 모든 콘텐츠를 더 잘 관리하는 데 도움이 됩니다 — 논문에서 문서, 노트에서 방안까지.</p> <p class="mb-2">컴퓨터과 학생에게 GitHub은 필수 기술입니다: 그것은 당신의 작품집, 협업 플랫폼, 학습 자료 창고이며, 미래 구직 시 가장 설득력 있는 "이력서"입니다. 일찍 계정을 등록하고, 자신의 과제, 소규모 프로젝트를 올려두며, 천천히 쌓아가세요, 몇 년 후 당신은 면접관의 눈을 밝게 할 기술 이력을 갖게 될 것입니다.</p> <div class="practice-box rounded-lg p-4 mt-4"> <p class="font-semibold"><i class="fas fa-hands mr-2"></i>직접 해보기: GitHub 첫 경험 완료</p> <ol class="list-decimal pl-6 mt-1 space-y-1"> <li>GitHub 계정을 등록하고, 개인 자료(아바타, 소개, 관심 있는 기술 분야)를 완성.</li> <li><code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">hello-github</code>라는 이름의 공개 저장소를 만들고, "Add a README file" 체크.</li> <li>저장소로 들어가, README.md의 편집 버튼(연필 아이콘) 클릭, Markdown으로 자기 소개 작성, 변경 사항 제출.</li> <li>GitHub 검색창에서 관심 있는 키워드 검색(예: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">python-tutorial</code>), 좋아하는 프로젝트 두 개에 Star.</li> <li>(고급) 컴퓨터에 Git 설치, 저장소를 로컬로 Clone, README 수정 후 클라우드로 push, 완전한 "로컬→클라우드" 작업 흐름 한 번 완료.</li> </ol> </div> </p></p></p>
                 </div>
 
                 <!-- 제24장: Root 권한과 BL 잠금 심층 분석 -->
@@ -5139,7 +5203,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <h5 class="font-semibold mt-3 mb-1">🔗 보안 부팅 체인</h5>
 <p class="mb-2">BL 잠금은 전체 보안 부팅 체인의 첫 번째 고리입니다. 검증이 통과된 후에야 다음 단계의 부트로더(예: 커널)를 로드하고 실행하여 시스템 부팅 환경의 신뢰성을 단계별로 보장합니다.</p>
-<h5 class="font-semibold mt-3 mb-1">📊 잠금 vs 잠금 해제: BL 잠금의 양면적 영향</h5>
+<h5 class="font-semibold mt-3 mb-1">잠금 vs 잠금 해제: BL 잠금의 양면적 영향</h5>
 <p class="mb-2">BL 잠금의 장단점을 더 직관적으로 이해하기 위해 5가지 핵심 차원에서의 차이를 대비 표로 보여드립니다:</p>
 <div class="overflow-x-auto">
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
@@ -6670,32 +6734,32 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <p class="mb-2">숫자는 거짓말하지 않아요. 2026년 4월에 출시된 Cursor 3에서는 Agent 모드 사용률이 처음으로 Tab 자동완성 모드를 추월했고, 이는 개발자들이 대규모로 이 작업 방식으로 옮겨 갔다는 신호예요. 그리고 터미널 네이티브 AI 프로그래밍 도구인 Claude Code는 2026년 중반까지 연환산 수익 25억 달러 규모에 도달했어요. 아래 추이 그래프를 보면 이 교차 순간을 직관적으로 느낄 수 있어요.</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="640" height="300" fill="#ffffff" rx="8"/>
-      <line x1="70" y1="240" x2="600" y2="240" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="240" x2="70" y2="30" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="190" x2="600" y2="190" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="140" x2="600" y2="140" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="90" x2="600" y2="90" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="40" x2="600" y2="40" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="244" font-size="10" fill="#6b7280" text-anchor="end">0</text>
-      <text x="62" y="194" font-size="10" fill="#6b7280" text-anchor="end">20</text>
-      <text x="62" y="144" font-size="10" fill="#6b7280" text-anchor="end">40</text>
-      <text x="62" y="94" font-size="10" fill="#6b7280" text-anchor="end">60</text>
-      <text x="62" y="44" font-size="10" fill="#6b7280" text-anchor="end">80</text>
-      <text x="335" y="272" font-size="11" fill="#374151" text-anchor="middle">사용률(%)</text>
-      <polyline points="70,215 220,172 370,152 590,116" fill="none" stroke="#4f46e5" stroke-width="2.5"/>
-      <polyline points="70,52 220,85 370,103 590,135" fill="none" stroke="#9ca3af" stroke-width="2.5"/>
-      <circle cx="70" cy="215" r="4" fill="#4f46e5"/><circle cx="220" cy="172" r="4" fill="#4f46e5"/><circle cx="370" cy="152" r="4" fill="#4f46e5"/><circle cx="590" cy="116" r="4" fill="#4f46e5"/>
-      <circle cx="70" cy="52" r="4" fill="#9ca3af"/><circle cx="220" cy="85" r="4" fill="#9ca3af"/><circle cx="370" cy="103" r="4" fill="#9ca3af"/><circle cx="590" cy="135" r="4" fill="#9ca3af"/>
-      <text x="70" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2024 Q4</text>
-      <text x="220" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2025 Q2</text>
-      <text x="370" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2025 Q4</text>
-      <text x="590" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2026 Q2</text>
-      <line x1="435" y1="60" x2="465" y2="60" stroke="#4f46e5" stroke-width="2.5"/>
-      <text x="472" y="63" font-size="10" fill="#374151">Agent 모드 사용률</text>
-      <line x1="435" y1="82" x2="465" y2="82" stroke="#9ca3af" stroke-width="2.5"/>
-      <text x="472" y="85" font-size="10" fill="#374151">Tab 자동완성 모드 사용률</text>
+<svg style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="640" height="300" style="fill:var(--ink-inverse)" rx="8"/>
+      <line x1="70" y1="240" x2="600" y2="240" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="240" x2="70" y2="30" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="190" x2="600" y2="190" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="140" x2="600" y2="140" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="90" x2="600" y2="90" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="40" x2="600" y2="40" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="62" y="244" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+      <text x="62" y="194" font-size="10" fill="var(--muted-2)" text-anchor="end">20</text>
+      <text x="62" y="144" font-size="10" fill="var(--muted-2)" text-anchor="end">40</text>
+      <text x="62" y="94" font-size="10" fill="var(--muted-2)" text-anchor="end">60</text>
+      <text x="62" y="44" font-size="10" fill="var(--muted-2)" text-anchor="end">80</text>
+      <text x="335" y="272" font-size="11" fill="var(--ink-2)" text-anchor="middle">사용률(%)</text>
+      <polyline points="70,215 220,172 370,152 590,116" fill="none" stroke="var(--accent-book)" stroke-width="2.5"/>
+      <polyline points="70,52 220,85 370,103 590,135" fill="none" stroke="var(--muted)" stroke-width="2.5"/>
+      <circle cx="70" cy="215" r="4" fill="var(--accent-book)"/><circle cx="220" cy="172" r="4" fill="var(--accent-book)"/><circle cx="370" cy="152" r="4" fill="var(--accent-book)"/><circle cx="590" cy="116" r="4" fill="var(--accent-book)"/>
+      <circle cx="70" cy="52" r="4" fill="var(--muted)"/><circle cx="220" cy="85" r="4" fill="var(--muted)"/><circle cx="370" cy="103" r="4" fill="var(--muted)"/><circle cx="590" cy="135" r="4" fill="var(--muted)"/>
+      <text x="70" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2024 Q4</text>
+      <text x="220" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2025 Q2</text>
+      <text x="370" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2025 Q4</text>
+      <text x="590" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2026 Q2</text>
+      <line x1="435" y1="60" x2="465" y2="60" stroke="var(--accent-book)" stroke-width="2.5"/>
+      <text x="472" y="63" font-size="10" fill="var(--ink-2)">Agent 모드 사용률</text>
+      <line x1="435" y1="82" x2="465" y2="82" stroke="var(--muted)" stroke-width="2.5"/>
+      <text x="472" y="85" font-size="10" fill="var(--ink-2)">Tab 자동완성 모드 사용률</text>
       <circle cx="529" cy="126" r="3" fill="#c0392b"/>
       <text x="529" y="152" font-size="10" fill="#c0392b" text-anchor="middle">≈ 2026년 2분기 교차</text>
     </svg>
@@ -7174,31 +7238,31 @@ Step 5: 데이터 내보내기</pre>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">중국 5대 모델 비교(2026년 8월)</p>
 <p class="mb-2">주목할 중요한 추세 하나: 중국산 모델과 GPT/Claude 사이의 “세대차” 느낌은 사라졌어요. 논리 추론과 수학 경진에서는 중국산 플래그십과 GPT-5의 점수 차이가 거의 한 자릿수입니다. 체계적인 아키텍처 사고와 복잡한 엔지니어링 추론에서는 Claude가 여전히 앞서요. — 더 “영감”이 있는 아키텍처 안을 내놓는 반면 중국산 모델은 때때로 “교과서적”으로 보이거든요. 하지만 중국어 상황, 비용 통제, 규정에 맞는 배포에서는 중국산 모델이 압도적인 우위예요.</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="620" height="290" fill="#ffffff" rx="8"/>
-      <line x1="70" y1="230" x2="590" y2="230" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="230" x2="70" y2="20" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="60" x2="590" y2="60" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="116" x2="590" y2="116" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="173" x2="590" y2="173" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="234" font-size="10" fill="#6b7280" text-anchor="end">0</text>
-      <text x="62" y="120" font-size="10" fill="#6b7280" text-anchor="end">50</text>
-      <text x="62" y="64" font-size="10" fill="#6b7280" text-anchor="end">100</text>
-      <text x="340" y="262" font-size="10.5" fill="#374151" text-anchor="middle">출력 가격(위안/백만 토큰)</text>
+<svg style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="620" height="290" style="fill:var(--ink-inverse)" rx="8"/>
+      <line x1="70" y1="230" x2="590" y2="230" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="230" x2="70" y2="20" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="60" x2="590" y2="60" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="116" x2="590" y2="116" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="173" x2="590" y2="173" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="62" y="234" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+      <text x="62" y="120" font-size="10" fill="var(--muted-2)" text-anchor="end">50</text>
+      <text x="62" y="64" font-size="10" fill="var(--muted-2)" text-anchor="end">100</text>
+      <text x="340" y="262" font-size="10.5" fill="var(--ink-2)" text-anchor="middle">출력 가격(위안/백만 토큰)</text>
       <!-- bars: price -->
-      <rect x="95" y="218" width="60" height="12" fill="#4f46e5"/><text x="125" y="212" font-size="9" fill="#374151" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="#374151" text-anchor="middle">DeepSeek</text>
-      <rect x="195" y="146" width="60" height="84" fill="#4f46e5"/><text x="225" y="140" font-size="9" fill="#374151" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="#374151" text-anchor="middle">Qwen</text>
-      <rect x="295" y="182" width="60" height="48" fill="#4f46e5"/><text x="325" y="176" font-size="9" fill="#374151" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="#374151" text-anchor="middle">GLM</text>
-      <rect x="395" y="200" width="60" height="30" fill="#4f46e5"/><text x="425" y="194" font-size="9" fill="#374151" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="#374151" text-anchor="middle">Kimi</text>
-      <rect x="495" y="170" width="60" height="60" fill="#4f46e5"/><text x="525" y="164" font-size="9" fill="#374151" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="#374151" text-anchor="middle">더우바오</text>
+      <rect x="95" y="218" width="60" height="12" fill="var(--accent-book)"/><text x="125" y="212" font-size="9" fill="var(--ink-2)" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">DeepSeek</text>
+      <rect x="195" y="146" width="60" height="84" fill="var(--accent-book)"/><text x="225" y="140" font-size="9" fill="var(--ink-2)" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Qwen</text>
+      <rect x="295" y="182" width="60" height="48" fill="var(--accent-book)"/><text x="325" y="176" font-size="9" fill="var(--ink-2)" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">GLM</text>
+      <rect x="395" y="200" width="60" height="30" fill="var(--accent-book)"/><text x="425" y="194" font-size="9" fill="var(--ink-2)" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Kimi</text>
+      <rect x="495" y="170" width="60" height="60" fill="var(--accent-book)"/><text x="525" y="164" font-size="9" fill="var(--ink-2)" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">더우바오</text>
       <!-- scores -->
-      <circle cx="125" cy="118" r="5" fill="#d4a017"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
-      <circle cx="225" cy="110" r="5" fill="#d4a017"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
-      <circle cx="325" cy="105" r="5" fill="#d4a017"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
-      <circle cx="425" cy="112" r="5" fill="#d4a017"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
-      <circle cx="525" cy="116" r="5" fill="#d4a017"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
-      <rect x="90" y="30" width="12" height="12" fill="#4f46e5"/><text x="108" y="41" font-size="9.5" fill="#374151">출력 가격(낮을수록 좋음)</text>
-      <circle cx="170" cy="36" r="5" fill="#d4a017"/><text x="182" y="40" font-size="9.5" fill="#374151">종합 점수(높을수록 좋음)</text>
+      <circle cx="125" cy="118" r="5" fill="var(--gold)"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
+      <circle cx="225" cy="110" r="5" fill="var(--gold)"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
+      <circle cx="325" cy="105" r="5" fill="var(--gold)"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
+      <circle cx="425" cy="112" r="5" fill="var(--gold)"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
+      <circle cx="525" cy="116" r="5" fill="var(--gold)"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
+      <rect x="90" y="30" width="12" height="12" fill="var(--accent-book)"/><text x="108" y="41" font-size="9.5" fill="var(--ink-2)">출력 가격(낮을수록 좋음)</text>
+      <circle cx="170" cy="36" r="5" fill="var(--gold)"/><text x="182" y="40" font-size="9.5" fill="var(--ink-2)">종합 점수(높을수록 좋음)</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">그림 4: 5개 모델 가격·성능 비교(가격은 낮을수록, 점수는 높을수록 좋음)</p>
 </div>
@@ -7792,7 +7856,7 @@ Vitest 프레임워크를 사용해 완전한 테스트 파일을 제시해 주�
   <li>Andrej Karpathy. (2025). Vibe Coding. Social media post introducing the concept of vibe-driven programming with AI.</li>
   <li>Andrej Karpathy. (2025). CLAUDE.md - Project guidelines for AI-assisted development. GitHub repository, 70+K stars.</li>
   <li>Anthropic. (2026). Claude Code: Terminal-native AI programming. Official documentation and best practices.</li>
-  <li>Cursor Team. (2026). Cursor 3: The next generation of AI-first IDE. Release notes and documentation.</li>
+  <li>Cursor Team. (2026). Cursor 3: The the the next generation of tools of tools of AI-first IDE. Release notes and documentation.</li>
   <li>OpenAI. (2026). Codex CLI: Bringing AI to the terminal. Technical documentation.</li>
   <li>Model Context Protocol (MCP) Specification. (2025-2026). Open protocol for AI-tool integration.</li>
   <li>Vibe Coding Community. (2026). Community-curated skills and best practices for AI-assisted programming.</li>
@@ -7934,27 +7998,27 @@ Vitest 프레임워크를 사용해 완전한 테스트 파일을 제시해 주�
 <h4 class="text-lg font-semibold mt-4 mb-2">4. 프로젝트 구조 뜯어보기: 각 파일은 무슨 일을 할까</h4>
 <p class="mb-2">프로젝트를 처음 열면 왼쪽의 파일 트리가 어질어질 수 있어요. 놀라지 마세요. 일상 개발에서는 시간의 90%를 아래의 이것들만 다루는 데 쓰게 돼요:</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="300" fill="#fafafa" rx="8"/>
-      <text x="20" y="30" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ 프로젝트 루트</text>
-      <rect x="30" y="45" width="540" height="230" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <text x="45" y="70" font-size="11" fill="#4f46e5" font-weight="bold">app/ ← 코드를 작성하는 곳</text>
-      <rect x="60" y="82" width="240" height="178" fill="#eef2ff" rx="5"/>
-      <text x="70" y="102" font-size="10" fill="#1e1b4b" font-weight="bold">src/main/</text>
-      <text x="80" y="120" font-size="10" fill="#374151">├ java/…/MainActivity.kt  ← 로직 코드</text>
-      <text x="80" y="138" font-size="10" fill="#374151">├ res/  ← 리소스(이미지, 문자, 색상)</text>
-      <text x="80" y="156" font-size="10" fill="#374151">└ AndroidManifest.xml  ← 앱의 "주민등록부"</text>
-      <text x="70" y="180" font-size="10" fill="#1e1b4b" font-weight="bold">build.gradle.kts</text>
-      <text x="80" y="198" font-size="10" fill="#6b7280">의존 라이브러리 선언(SDK 버전, Compose 등)</text>
-      <text x="70" y="222" font-size="10" fill="#1e1b4b" font-weight="bold">src/androidTest/와 test/</text>
-      <text x="80" y="240" font-size="10" fill="#6b7280">자동화 테스트 코드(56장에서 사용)</text>
+<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="300" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="30" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ 프로젝트 루트</text>
+      <rect x="30" y="45" width="540" height="230" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <text x="45" y="70" font-size="11" fill="var(--accent-book)" font-weight="bold">app/ ← 코드를 작성하는 곳</text>
+      <rect x="60" y="82" width="240" height="178" fill="var(--accent-wash)" rx="5"/>
+      <text x="70" y="102" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/main/</text>
+      <text x="80" y="120" font-size="10" fill="var(--ink-2)">├ java/…/MainActivity.kt  ← 로직 코드</text>
+      <text x="80" y="138" font-size="10" fill="var(--ink-2)">├ res/  ← 리소스(이미지, 문자, 색상)</text>
+      <text x="80" y="156" font-size="10" fill="var(--ink-2)">└ AndroidManifest.xml  ← 앱의 "주민등록부"</text>
+      <text x="70" y="180" font-size="10" fill="var(--accent-deep)" font-weight="bold">build.gradle.kts</text>
+      <text x="80" y="198" font-size="10" fill="var(--muted-2)">의존 라이브러리 선언(SDK 버전, Compose 등)</text>
+      <text x="70" y="222" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/androidTest/와 test/</text>
+      <text x="80" y="240" font-size="10" fill="var(--muted-2)">자동화 테스트 코드(56장에서 사용)</text>
       <rect x="320" y="82" width="230" height="178" fill="#f0fdf4" rx="5"/>
       <text x="330" y="102" font-size="10" fill="#065f46" font-weight="bold">루트의 다른 파일들</text>
-      <text x="340" y="122" font-size="10" fill="#374151">gradle/ + gradlew.bat  ← 빌드 스크립트</text>
-      <text x="340" y="142" font-size="10" fill="#374151">settings.gradle.kts  ← 프로젝트 설정</text>
-      <text x="340" y="162" font-size="10" fill="#6b7280">(초보의 구호: app/ 디렉터리만 만지고,</text>
-      <text x="340" y="180" font-size="10" fill="#6b7280">나머지는 일단 "블랙박스"로 두고 함부로 만지지 않기)</text>
-      <text x="340" y="208" font-size="10" fill="#9ca3af">.gitignore  ← 버전 관리 제외 목록</text>
+      <text x="340" y="122" font-size="10" fill="var(--ink-2)">gradle/ + gradlew.bat  ← 빌드 스크립트</text>
+      <text x="340" y="142" font-size="10" fill="var(--ink-2)">settings.gradle.kts  ← 프로젝트 설정</text>
+      <text x="340" y="162" font-size="10" fill="var(--muted-2)">(초보의 구호: app/ 디렉터리만 만지고,</text>
+      <text x="340" y="180" font-size="10" fill="var(--muted-2)">나머지는 일단 "블랙박스"로 두고 함부로 만지지 않기)</text>
+      <text x="340" y="208" font-size="10" fill="var(--muted)">.gitignore  ← 버전 관리 제외 목록</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">그림 2: 초보자가 꼭 알아야 할 프로젝트 구조(주문: app/ 폴더만 다루기)</p>
 </div>
@@ -9208,26 +9272,26 @@ if (ActivityCompat.checkSelfPermission(this,
 <h4 class="text-lg font-semibold mt-4 mb-2">4. 프로젝트 구조 해부: 파일마다 하는 일</h4>
 <p class="mb-2">왼쪽은 프로젝트 내비게이터예요. 초보자는 이것들만 알면 돼요.</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" fill="#fafafa" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ 프로젝트 루트</text>
-      <rect x="30" y="42" width="540" height="225" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="#eef2ff" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="#1e1b4b" font-weight="bold">MyFirstApp/(코드 디렉터리)</text>
-      <text x="66" y="100" font-size="10" fill="#374151">├ MyFirstAppApp.swift  ← 앱 진입점</text>
-      <text x="66" y="120" font-size="10" fill="#374151">├ ContentView.swift  ← 메인 화면</text>
-      <text x="66" y="140" font-size="10" fill="#374151">└ Assets.xcassets  ← 아이콘, 이미지, 색상</text>
-      <text x="56" y="166" font-size="10" fill="#6b7280">(새 파일은 모두 이 디렉터리에 넣어요)</text>
-      <text x="56" y="196" font-size="10" fill="#1e1b4b" font-weight="bold">Info 탭 / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="#6b7280">앱 선언: 이름, 권한, 설정</text>
+<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ 프로젝트 루트</text>
+      <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
+      <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/(코드 디렉터리)</text>
+      <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift  ← 앱 진입점</text>
+      <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift  ← 메인 화면</text>
+      <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets  ← 아이콘, 이미지, 색상</text>
+      <text x="56" y="166" font-size="10" fill="var(--muted-2)">(새 파일은 모두 이 디렉터리에 넣어요)</text>
+      <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">Info 탭 / Info.plist</text>
+      <text x="66" y="216" font-size="10" fill="var(--muted-2)">앱 선언: 이름, 권한, 설정</text>
       <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
       <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">다른 중요한 위치</text>
-      <text x="331" y="100" font-size="10" fill="#374151">📁 Preview Content/  ← 미리보기 소재</text>
-      <text x="331" y="122" font-size="10" fill="#374151"><i class="fas fa-bullseye mr-1"></i> Target 설정(파란색 프로젝트 아이콘)</text>
-      <text x="331" y="142" font-size="10" fill="#6b7280">— 버전 번호, 최소 지원 시스템, 서명이 모두 여기</text>
-      <text x="331" y="168" font-size="10" fill="#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← 단위 테스트</text>
-      <text x="331" y="188" font-size="10" fill="#374151">📱 MyFirstAppUITests/ ← UI 테스트</text>
-      <text x="331" y="216" font-size="10" fill="#9ca3af">(테스트 템플릿이 이미 생성됨, 67장에서 사용)</text>
+      <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/  ← 미리보기 소재</text>
+      <text x="331" y="122" font-size="10" fill="var(--ink-2)"><i class="fas fa-bullseye mr-1"></i> Target 설정(파란색 프로젝트 아이콘)</text>
+      <text x="331" y="142" font-size="10" fill="var(--muted-2)">— 버전 번호, 최소 지원 시스템, 서명이 모두 여기</text>
+      <text x="331" y="168" font-size="10" fill="var(--ink-2)"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← 단위 테스트</text>
+      <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← UI 테스트</text>
+      <text x="331" y="216" font-size="10" fill="var(--muted)">(테스트 템플릿이 이미 생성됨, 67장에서 사용)</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">그림 2: 초보자가 꼭 알아야 할 Xcode 프로젝트 구조</p>
 </div>
@@ -11057,8 +11121,8 @@ func scheduleDailyReminder() {
     </div>
 
     <!-- 연속 독서 일수 알림 -->
-    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
-        <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
+    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),#7c3aed);color:var(--ink-inverse);border:none;">
+        <i class="fas fa-fire" aria-hidden="true" style="color:var(--gold-2)"></i>
         <span id="streak-toast-text">연속 독서 X일째!</span>
     </div>
 
@@ -11076,7 +11140,7 @@ func scheduleDailyReminder() {
 
     <!-- 맨 위로 버튼 -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="맨 위로">
-        <svg class="progress-ring" viewBox="0 0 40 40">
+        <svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true">
             <circle class="bg" cx="20" cy="20" r="18"/>
             <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/>
         </svg>

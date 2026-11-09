@@ -1,13 +1,14 @@
  <!DOCTYPE html>
 <html lang="de">
 <head>
+    <script>document.documentElement.classList.remove("no-js");document.documentElement.classList.add("js");</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <meta name="description" content="Der Smartphone-Kurs, der dir gefehlt hat · Vom Einsteiger zum Profi – volle Kontrolle über dein digitales Leben">
     <meta name="keywords" content="Handy-Tutorial,Digital-Grundkurs,Smartphone,Android,iOS,HarmonyOS,Handy-Tipps,digitales Leben,KI-Großmodelle,KI-Programmierung,Großmodell-API,Prompt-Engineering,Android-Entwicklung,iOS-Entwicklung,Swift,Kotlin,SwiftUI,Jetpack Compose,Computational Photography,Informationssicherheit,Passwort-Verwaltung,Automatisierung,Handy-Kaufberatung">
     <meta name="author" content="Guide fürs digitale Leben">
-    <meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1e1b4b" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="var(--accent-book)" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="var(--accent-deep)" media="(prefers-color-scheme: dark)">
     <meta name="robots" content="index, follow">
     <meta name="format-detection" content="telephone=no">
     <meta property="og:type" content="book">
@@ -34,7 +35,7 @@
             theme: {
                 extend: {
                     colors: {
-                        primary: '#4f46e5',
+                        primary: 'var(--accent-book)',
                         secondary: '#6B7280',
                         light: '#F3F4F6',
                         dark: '#1F2937',
@@ -48,6 +49,69 @@
         }
     </script>
     <style type="text/tailwindcss">
+    /* Hallmark · 色彩令牌（高频字面量收编，原值不动仅收编） */
+    :root {
+        --accent-book: #4F46E5;
+        --accent-soft: #818CF8;
+        --accent-deep: #1E1B4B;
+        --accent-wash: #EEF2FF;
+        --ink: #0B0E13;
+        --ink-2: var(--ink-2);
+        --ink-3: var(--surface-dark-2);
+        --ink-inverse: #F2F6FC;
+        --muted: #9CA3AF;
+        --muted-2: #6B7280;
+        --muted-3: #4B5563;
+        --line: #E5E7EB;
+        --line-2: #D1D5DB;
+        --surface: #FDFDFE;
+        --surface-2: #F3F4F6;
+        --surface-3: #EEF2F5;
+        --surface-4: #F5F6F8;
+        --surface-dark: #1F2937;
+        --surface-dark-2: var(--surface-dark-2);
+        --surface-dark-3: #1E2A36;
+        --surface-dark-4: #1A2230;
+        --surface-dark-5: var(--surface-dark-5);
+        --ok: #27AE60;
+        --gold: #D4A017;
+        --sky: #0EA5E9;
+        --wash-warm: #FDF8EF;
+        --sky-deep: #075985;
+        --wash-dark: #3D2E0F;
+        --surface-5: #F0F4F8;
+        --surface-6: #FAFAFA;
+        --line-3: #E0E0E0;
+        --surface-7: #F9FAFB;
+        --sky-wash: #E0F2FE;
+        --gold-2: #FBBF24;
+        --surface-dark-6: #1E293B;
+    }
+/* Hallmark · built: the project (v1.8/v1.9 中文书页) · redesign: polish · critique: P4 H4 E4 S4 R4 V3 · weakest: V，同模板 21 页共用本样式；已去两端对齐/渐变卡/transition-colors，保留本书蓝色系与 95ch 版心 */
+:root {
+    /* Hallmark 令牌：微着色的纸与墨（纯 var(--ink-inverse)/var(--ink) 不再出现），主色沿用本书蓝 */
+    --paper: #FDFDFE;
+    --ink: #0B0E13;
+    --ink-inverse: #F2F6FC;
+}
+
+/* Hallmark · 质量门兜底：焦点可见、动态降级、横向溢出裁切 */
+:focus-visible {
+    outline: 2px solid #165DFF;
+    outline-offset: 2px;
+}
+html, body {
+    overflow-x: clip;
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
         @layer utilities {
             .scrollbar-hide {
                 -ms-overflow-style: none;
@@ -60,7 +124,7 @@
                 text-wrap: balance;
             }
             .focus-ring:focus-visible {
-                outline: 2px solid #4f46e5;
+                outline: 2px solid var(--accent-book);
                 outline-offset: 2px;
             }
         }
@@ -77,28 +141,28 @@
             transition: background-color 0.3s, color 0.3s;
         }
         .dark body {
-            background-color: #111827;
+            background-color: var(--surface-dark-2);
         }
         .toc-item.active {
-            color: #4f46e5;
+            color: var(--accent-book);
             font-weight: 600;
-            background-color: #eef2ff;
-            border-left: 3px solid #4f46e5;
+            background-color: var(--accent-wash);
+            border-left: 3px solid var(--accent-book);
         }
         .dark .toc-item.active {
-            background-color: #1e1b4b;
-            border-left-color: #818cf8;
+            background-color: var(--accent-deep);
+            border-left-color: var(--accent-soft);
         }
         /* Basisstil der Seitenleisten-Links */
         #sidebar a {
             display: block;
-            transition: all 0.2s ease;
+            transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
             position: relative;
             text-decoration: none;
         }
         #sidebar a:hover {
-            color: #4f46e5 !important;
-            background-color: #eef2ff;
+            color: var(--accent-book) !important;
+            background-color: var(--accent-wash);
             transform: translateX(2px);
         }
         .dark #sidebar a:hover {
@@ -125,15 +189,15 @@
             flex-shrink: 0;
             cursor: pointer;
             transition: background-color 0.15s, transform 0.3s ease;
-            color: #9ca3af;
+            color: var(--muted);
         }
         .toc-toggle-btn:hover {
-            background-color: #e5e7eb;
-            color: #374151;
+            background-color: var(--line);
+            color: var(--ink-2);
         }
         .dark .toc-toggle-btn:hover {
-            background-color: #374151;
-            color: #e5e7eb;
+            background-color: var(--ink-2);
+            color: var(--line);
         }
         /* Übergang der Unterelemente */
         .toc-child li {
@@ -152,27 +216,27 @@
             top: 0;
             bottom: 0;
             width: 3px;
-            background: #4f46e5;
+            background: var(--accent-book);
             border-radius: 0;
-            transition: top 0.3s ease, height 0.3s ease;
+            transition: transform 0.3s ease, opacity 0.3s ease;
             z-index: 1;
         }
         /* Verbesserter Kopfbereich der Seitenleiste */
         #sidebar > nav > div:first-child {
-            background: #f5f6f8;
+            background: var(--surface-4);
             border-radius: 0;
             padding: 0.875rem 1rem !important;
         }
         .dark #sidebar > nav > div:first-child {
-            background: #1a2230;
+            background: var(--surface-dark-4);
         }
         /* Verbesserung der gesamten Seitenleiste */
         #sidebar {
             box-shadow: none;
-            border-right: 1px solid #e5e7eb;
+            border-right: 1px solid var(--line);
         }
         .dark #sidebar {
-            border-right-color: #374151;
+            border-right-color: var(--ink-2);
         }
         @media (max-width: 1023px) {
             #sidebar {
@@ -192,11 +256,11 @@
         .toc-item:hover span[class*="font-mono"],
         .toc-item.active span[class*="font-mono"] {
             opacity: 1;
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .dark .toc-item:hover span[class*="font-mono"],
         .dark .toc-item.active span[class*="font-mono"] {
-            color: #818cf8;
+            color: var(--accent-soft);
         }
         /* Blinken des anvisierten Kapitels beim Navigieren */
         .scroll-target-flash {
@@ -244,7 +308,7 @@
             margin-bottom: 0.5rem;
         }
         .theme-toggle {
-            transition: all 0.3s ease;
+            transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
         }
         .theme-toggle:hover {
             transform: rotate(180deg);
@@ -257,18 +321,18 @@
             max-width: 82ch;
         }
         .info-box {
-            border-color: #4f46e5;
-            background: #eef2f5;
+            border-color: var(--accent-book);
+            background: var(--surface-3);
         }
         .dark .info-box {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         .warning-box {
-            border-color: #d4a017;
-            background: #fdf8ef;
+            border-color: var(--gold);
+            background: var(--wash-warm);
         }
         .dark .warning-box {
-            background: #3d2e0f;
+            background: var(--wash-dark);
         }
         .danger-box {
             border-color: #c0392b;
@@ -278,7 +342,7 @@
             background: #3d1a1a;
         }
         .success-box {
-            border-color: #27ae60;
+            border-color: var(--ok);
             background: #eef9f2;
         }
         .dark .success-box {
@@ -292,54 +356,54 @@
         th, td {
             padding: 0.75rem 1rem;
             text-align: left;
-            border: 1px solid #e5e7eb;
+            border: 1px solid var(--line);
         }
         .dark th, .dark td {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         th {
-            background-color: #f3f4f6;
+            background-color: var(--surface-2);
             font-weight: 600;
         }
         .dark th {
-            background-color: #1f2937;
+            background-color: var(--surface-dark);
         }
         .practice-box {
-            background: #f0f4f8;
+            background: var(--surface-5);
             border: 1px solid #d0d8e0;
         }
         .dark .practice-box {
-            background: #1e2a36;
-            border-color: #354152;
+            background: var(--surface-dark-3);
+            border-color: var(--surface-dark-5);
         }
         .chapter-intro {
             font-size: 1.05em;
-            color: #4b5563;
+            color: var(--muted-3);
             padding: 1rem 1.25rem;
             border-radius: 0.25rem;
-            background: #f5f6f8;
-            border-left: 3px solid #4f46e5;
+            background: var(--surface-4);
+            border-left: 3px solid var(--accent-book);
         }
         .dark .chapter-intro {
-            color: #9ca3af;
-            background: #1a2230;
+            color: var(--muted);
+            background: var(--surface-dark-4);
         }
         .key-point {
-            background: #eef2f5;
+            background: var(--surface-3);
             padding: 0.5rem 0;
             font-weight: 500;
         }
         .dark .key-point {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         #reading-progress {
             position: fixed;
             top: 64px;
             left: 0;
             height: 3px;
-            background: #4f46e5;
+            background: var(--accent-book);
             z-index: 51;
-            transition: width 0.1s linear;
+            transition: transform 0.1s linear;
         }
         .search-overlay {
             position: fixed;
@@ -368,17 +432,17 @@
             box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
         }
         .dark .search-panel {
-            background: #1f2937;
+            background: var(--surface-dark);
         }
         .search-input-wrapper {
             display: flex;
             align-items: center;
             padding: 1rem 1.25rem;
-            border-bottom: 1px solid #e5e7eb;
+            border-bottom: 1px solid var(--line);
             gap: 0.75rem;
         }
         .dark .search-input-wrapper {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         .search-input-wrapper input {
             flex: 1;
@@ -400,10 +464,10 @@
             transition: background 0.15s;
         }
         .search-result-item:hover {
-            background: #f3f4f6;
+            background: var(--surface-2);
         }
         .dark .search-result-item:hover {
-            background: #374151;
+            background: var(--ink-2);
         }
         .search-result-item .result-title {
             font-weight: 600;
@@ -411,7 +475,7 @@
         }
         .search-result-item .result-excerpt {
             font-size: 0.85rem;
-            color: #6b7280;
+            color: var(--muted-2);
             margin-top: 0.25rem;
             display: -webkit-box;
             -webkit-line-clamp: 2;
@@ -419,7 +483,7 @@
             overflow: hidden;
         }
         .dark .search-result-item .result-excerpt {
-            color: #9ca3af;
+            color: var(--muted);
         }
         .search-result-item mark {
             background: #fef08a;
@@ -443,10 +507,10 @@
             user-select: none;
         }
         .font-size-btn:hover {
-            background: #f3f4f6;
+            background: var(--surface-2);
         }
         .dark .font-size-btn:hover {
-            background: #374151;
+            background: var(--ink-2);
         }
         .chapter-nav {
             display: flex;
@@ -454,10 +518,10 @@
             align-items: center;
             padding: 1.5rem 0;
             margin-top: 2rem;
-            border-top: 1px solid #e5e7eb;
+            border-top: 1px solid var(--line);
         }
         .dark .chapter-nav {
-            border-color: #374151;
+            border-color: var(--ink-2);
         }
         .chapter-nav a {
             display: flex;
@@ -466,16 +530,16 @@
             padding: 0.5rem 1rem;
             border-radius: 0.25rem;
             font-size: 0.9rem;
-            color: #4f46e5;
+            color: var(--accent-book);
             transition: background 0.15s;
             text-decoration: none;
             max-width: 45%;
         }
         .chapter-nav a:hover {
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .dark .chapter-nav a:hover {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
         .chapter-nav a.next {
             margin-left: auto;
@@ -507,31 +571,31 @@
             }
             body {
                 font-size: 12pt !important;
-                color: #000 !important;
-                background: #fff !important;
+                color: var(--ink) !important;
+                background: var(--ink-inverse) !important;
             }
             a {
-                color: #000 !important;
+                color: var(--ink) !important;
                 text-decoration: underline;
             }
         }
 
         /* ===== Verbesserte Stile: Lesekarten, Kapitelzusammenfassungen und Lernpfad ===== */
         .reading-guide-card {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
+            background: var(--surface-6);
+            border: 1px solid var(--line-3);
             border-radius: 0.25rem;
             padding: 1.25rem 1.5rem;
             margin-bottom: 1.5rem;
         }
         .dark .reading-guide-card {
-            background: #1a2230;
-            border-color: #354152;
+            background: var(--surface-dark-4);
+            border-color: var(--surface-dark-5);
         }
         .hero-banner {
-            background: #4f46e5;
+            background: var(--accent-book);
             border-radius: 0.25rem;
-            color: #fff;
+            color: var(--ink-inverse);
             padding: 2rem 1.5rem;
         }
         .stat-pill {
@@ -550,25 +614,25 @@
             margin: 1.5rem 0;
         }
         .path-step {
-            background: #fafafa;
-            border: 1px solid #e0e0e0;
+            background: var(--surface-6);
+            border: 1px solid var(--line-3);
             border-radius: 0.25rem;
             padding: 1rem;
             position: relative;
         }
         .path-step:hover {
-            border-color: #4f46e5;
+            border-color: var(--accent-book);
         }
         .dark .path-step {
-            background: #1a2230;
-            border-color: #354152;
+            background: var(--surface-dark-4);
+            border-color: var(--surface-dark-5);
         }
         .path-step .step-num {
             position: absolute;
             top: -0.7rem;
             left: 1rem;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             width: 1.6rem;
             height: 1.6rem;
             border-radius: 50%;
@@ -579,14 +643,14 @@
             font-weight: 700;
         }
         .chapter-summary {
-            background: #fdf8ef;
-            border-left: 4px solid #d4a017;
+            background: var(--wash-warm);
+            border-left: 4px solid var(--gold);
             border-radius: 0.25rem;
             padding: 1rem 1.25rem;
             margin-top: 1.5rem;
         }
         .dark .chapter-summary {
-            background: #3d2e0f;
+            background: var(--wash-dark);
         }
         .breadcrumb {
             display: flex;
@@ -594,11 +658,11 @@
             align-items: center;
             gap: 0.4rem;
             font-size: 0.85rem;
-            color: #6b7280;
+            color: var(--muted-2);
             padding: 0.6rem 0;
         }
-        .dark .breadcrumb { color: #9ca3af; }
-        .breadcrumb a:hover { color: #4f46e5; text-decoration: underline; }
+        .dark .breadcrumb { color: var(--muted); }
+        .breadcrumb a:hover { color: var(--accent-book); text-decoration: underline; }
         .breadcrumb .sep { color: #cbd5e1; }
         .quick-tools {
             position: fixed;
@@ -612,32 +676,32 @@
         .quick-tool-btn {
             width: 2.6rem;
             height: 2.6rem;
-            background: #fff;
-            color: #374151;
+            background: var(--ink-inverse);
+            color: var(--ink-2);
             border-radius: 999px;
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
             cursor: pointer;
         }
         .dark .quick-tool-btn {
-            background: #1f2937;
-            color: #e5e7eb;
+            background: var(--surface-dark);
+            color: var(--line);
         }
         .quick-tool-btn:hover {
             transform: translateY(-1px);
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .reading-time {
             display: inline-flex;
             align-items: center;
             gap: 0.3rem;
             font-size: 0.8rem;
-            color: #6b7280;
+            color: var(--muted-2);
         }
-        .dark .reading-time { color: #9ca3af; }
+        .dark .reading-time { color: var(--muted); }
         .difficulty-tag {
             display: inline-flex;
             align-items: center;
@@ -657,15 +721,15 @@
         .toc-section-label {
             font-size: 0.7rem;
             font-weight: 700;
-            color: #9ca3af;
-            letter-spacing: 0.08em;
+            color: var(--muted);
+            
             text-transform: uppercase;
             padding: 0.5rem 0.75rem 0.25rem;
         }
-        .dark .toc-section-label { color: #6b7280; }
+        .dark .toc-section-label { color: var(--muted-2); }
         .toc-progress-bar {
             height: 2px;
-            background: #4f46e5;
+            background: var(--accent-book);
             margin: 0.3rem 0;
             transform-origin: left;
             transition: transform 0.3s;
@@ -674,8 +738,8 @@
             position: absolute;
             left: -9999px;
             top: 0;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             padding: 0.5rem 1rem;
             z-index: 100;
         }
@@ -684,45 +748,45 @@
             display: flex;
             gap: 1rem;
             padding: 0.6rem 0;
-            border-bottom: 1px dashed #e5e7eb;
+            border-bottom: 1px dashed var(--line);
         }
-        .dark .glossary-item { border-color: #374151; }
+        .dark .glossary-item { border-color: var(--ink-2); }
         .glossary-item:last-child { border-bottom: 0; }
         .glossary-term {
             flex-shrink: 0;
             font-weight: 700;
-            color: #4f46e5;
+            color: var(--accent-book);
             min-width: 90px;
         }
         .comparison-table th { font-weight: 700; }
-        .comparison-table tr:nth-child(even) td { background: #f9fafb; }
-        .dark .comparison-table tr:nth-child(even) td { background: #111827; }
+        .comparison-table tr:nth-child(even) td { background: var(--surface-7); }
+        .dark .comparison-table tr:nth-child(even) td { background: var(--surface-dark-2); }
         .highlight-quote {
-            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-            border-left: 4px solid #0ea5e9;
+            background: linear-gradient(135deg, #f0f9ff 0%, var(--sky-wash) 100%);
+            border-left: 4px solid var(--sky);
             padding: 1rem 1.25rem;
             border-radius: 0 0.5rem 0.5rem 0;
             margin: 1rem 0;
             font-style: italic;
-            color: #075985;
+            color: var(--sky-deep);
         }
         .dark .highlight-quote {
-            background: linear-gradient(135deg, #0c4a6e 0%, #075985 100%);
+            background: linear-gradient(135deg, #0c4a6e 0%, var(--sky-deep) 100%);
             color: #bae6fd;
         }
         .kbd {
             display: inline-block;
             padding: 0.1rem 0.45rem;
-            background: #f3f4f6;
-            color: #374151;
-            border: 1px solid #d1d5db;
+            background: var(--surface-2);
+            color: var(--ink-2);
+            border: 1px solid var(--line-2);
             border-bottom-width: 2px;
             border-radius: 0.3rem;
             font-family: ui-monospace, monospace;
             font-size: 0.78rem;
             font-weight: 600;
         }
-        .dark .kbd { background: #374151; color: #e5e7eb; border-color: #4b5563; }
+        .dark .kbd { background: var(--ink-2); color: var(--line); border-color: var(--muted-3); }
         @media (max-width: 768px) {
             body {
                 font-size: 15px;
@@ -732,7 +796,7 @@
                 max-height: 75vh;
             }
             .hero-banner { padding: 1.5rem 1rem; }
-            .hero-banner h1 { font-size: 1.5rem !important; }
+            .hero-banner h1 { text-wrap: balance; font-size: 1.5rem !important; }
             .learning-path { grid-template-columns: 1fr; }
             .quick-tools { right: 0.5rem; bottom: 4.5rem; }
             .quick-tool-btn { width: 2.3rem; height: 2.3rem; }
@@ -748,14 +812,14 @@
 
         /* Lesefortschrittsbalken mit Verlauf */
         #reading-progress {
-            background: linear-gradient(90deg, #4f46e5, #7c3aed, #4f46e5) !important;
+            background: linear-gradient(90deg, var(--accent-book), #7c3aed, var(--accent-book)) !important;
             background-size: 200% 100% !important;
             animation: progressShimmer 3s ease infinite;
             height: 3px;
             box-shadow: 0 0 8px rgba(79,70,229,0.3);
         }
         .dark #reading-progress {
-            background: linear-gradient(90deg, #818cf8, #a78bfa, #818cf8) !important;
+            background: linear-gradient(90deg, var(--accent-soft), #a78bfa, var(--accent-soft)) !important;
             background-size: 200% 100% !important;
         }
         @keyframes progressShimmer {
@@ -770,7 +834,7 @@
             transform: none;
         }
         /* 只有脚本确认可用后，才对尚未进入视口的区块启用入场动画 */
-        html.anim-ready .content-section:not(.visible):not(.immediately-visible) {
+        html.anim-ready.js .content-section:not(.visible):not(.immediately-visible) {
             opacity: 0;
             transform: translateY(24px);
             transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1),
@@ -790,7 +854,7 @@
 
         /* Verbesserter Hero-Banner */
         .hero-banner {
-            background: linear-gradient(135deg, #4f46e5 0%, #6d28d9 40%, #4f46e5 100%);
+            background: linear-gradient(135deg, var(--accent-book) 0%, #6d28d9 40%, var(--accent-book) 100%);
             position: relative;
             overflow: hidden;
         }
@@ -847,20 +911,20 @@
             width: 3rem;
             height: 3rem;
             border-radius: 50%;
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             display: flex;
             align-items: center;
             justify-content: center;
             box-shadow: 0 4px 14px rgba(79,70,229,0.3);
             cursor: pointer;
             z-index: 40;
-            transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.3s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.3s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.3s cubic-bezier(0.22, 1, 0.36, 1), transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.3s cubic-bezier(0.22, 1, 0.36, 1);
             border: none;
             font-size: 1rem;
         }
         .dark #back-to-top {
-            background: #374151;
+            background: var(--ink-2);
             box-shadow: 0 4px 14px rgba(0,0,0,0.4);
         }
         #back-to-top:hover {
@@ -897,31 +961,31 @@
             border-radius: 0.25rem;
             font-size: 0.75rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
             background: transparent;
-            color: #6b7280;
+            color: var(--muted-2);
         }
         .dark .bookmark-btn {
-            border-color: #374151;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            color: var(--muted);
         }
         .bookmark-btn:hover {
-            border-color: #4f46e5;
-            color: #4f46e5;
+            border-color: var(--accent-book);
+            color: var(--accent-book);
         }
         .dark .bookmark-btn:hover {
-            border-color: #818cf8;
-            color: #818cf8;
+            border-color: var(--accent-soft);
+            color: var(--accent-soft);
         }
         .bookmark-btn.active {
-            background: #4f46e5;
-            color: #fff;
-            border-color: #4f46e5;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
+            border-color: var(--accent-book);
         }
         .dark .bookmark-btn.active {
-            background: #818cf8;
-            border-color: #818cf8;
+            background: var(--accent-soft);
+            border-color: var(--accent-soft);
         }
 
         /* Kapitel-erledigt-Häkchen */
@@ -933,24 +997,24 @@
             border-radius: 0.25rem;
             font-size: 0.75rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
             background: transparent;
-            color: #6b7280;
+            color: var(--muted-2);
             user-select: none;
         }
         .dark .chapter-check {
-            border-color: #374151;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            color: var(--muted);
         }
         .chapter-check:hover {
-            border-color: #27ae60;
-            color: #27ae60;
+            border-color: var(--ok);
+            color: var(--ok);
         }
         .chapter-check.checked {
-            background: #27ae60;
-            color: #fff;
-            border-color: #27ae60;
+            background: var(--ok);
+            color: var(--ink-inverse);
+            border-color: var(--ok);
         }
         .chapter-check .check-icon {
             width: 14px;
@@ -960,15 +1024,15 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
         }
         .chapter-check.checked .check-icon {
-            border-color: #fff;
-            background: #fff;
+            border-color: var(--ink-inverse);
+            background: var(--ink-inverse);
         }
         .chapter-check.checked .check-icon::after {
             content: '✓';
-            color: #27ae60;
+            color: var(--ok);
             font-size: 10px;
             font-weight: 700;
             line-height: 1;
@@ -976,10 +1040,10 @@
 
         /* Tastaturauswahl von Suchergebnissen */
         .search-result-item.selected {
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .dark .search-result-item.selected {
-            background: #374151;
+            background: var(--ink-2);
         }
 
         /* Dashboard-Karten */
@@ -1007,15 +1071,15 @@
         }
         .chapter-rating .star {
             font-size: 0.85rem;
-            color: #d1d5db;
+            color: var(--line-2);
             cursor: pointer;
             transition: color 0.15s, transform 0.15s;
             user-select: none;
         }
         .chapter-rating .star:hover { transform: scale(1.2); }
-        .chapter-rating .star.active { color: #fbbf24; }
-        .dark .chapter-rating .star { color: #4b5563; }
-        .dark .chapter-rating .star.active { color: #fbbf24; }
+        .chapter-rating .star.active { color: var(--gold-2); }
+        .dark .chapter-rating .star { color: var(--muted-3); }
+        .dark .chapter-rating .star.active { color: var(--gold-2); }
 
         .dashboard-card:hover {
             transform: translateY(-3px);
@@ -1024,8 +1088,8 @@
         .dark .dashboard-card:hover {
             box-shadow: 0 12px 28px rgba(0,0,0,0.3);
         }
-        .check-item:hover span { color: #4f46e5; }
-        .dark .check-item:hover span { color: #818cf8; }
+        .check-item:hover span { color: var(--accent-book); }
+        .dark .check-item:hover span { color: var(--accent-soft); }
         .check-item input:checked + span {
             text-decoration: line-through;
             opacity: 0.5;
@@ -1038,14 +1102,14 @@
             left: 50%;
             transform: translateX(-50%);
             z-index: 50;
-            background: #fff;
+            background: var(--ink-inverse);
             box-shadow: 0 4px 24px rgba(79,70,229,0.18);
             border-radius: 2rem;
             padding: 0.5rem 1rem;
             display: flex;
             align-items: center;
             gap: 0.6rem;
-            transition: all 0.35s cubic-bezier(0.22,1,0.36,1);
+            transition: color 0.35s cubic-bezier(0.22,1,0.36,1), background-color 0.35s cubic-bezier(0.22,1,0.36,1), border-color 0.35s cubic-bezier(0.22,1,0.36,1), box-shadow 0.35s cubic-bezier(0.22,1,0.36,1), transform 0.35s cubic-bezier(0.22,1,0.36,1), opacity 0.35s cubic-bezier(0.22,1,0.36,1);
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -1056,7 +1120,7 @@
             pointer-events: auto;
         }
         .dark .tts-controls {
-            background: #1f2937;
+            background: var(--surface-dark);
             box-shadow: 0 4px 24px rgba(0,0,0,0.4);
         }
         .tts-btn {
@@ -1068,22 +1132,22 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.2s;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
             font-size: 1rem;
-            background: #f3f4f6;
-            color: #374151;
+            background: var(--surface-2);
+            color: var(--ink-2);
         }
-        .dark .tts-btn { background: #374151; color: #e5e7eb; }
-        .tts-btn:hover { background: #4f46e5; color: #fff; }
-        .dark .tts-btn:hover { background: #818cf8; }
+        .dark .tts-btn { background: var(--ink-2); color: var(--line); }
+        .tts-btn:hover { background: var(--accent-book); color: var(--ink-inverse); }
+        .dark .tts-btn:hover { background: var(--accent-soft); }
         .tts-btn.play-btn {
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             width: 3rem;
             height: 3rem;
             font-size: 1.2rem;
         }
-        .dark .tts-btn.play-btn { background: #818cf8; }
+        .dark .tts-btn.play-btn { background: var(--accent-soft); }
         .tts-btn.play-btn:hover { background: #1a252f; }
         .tts-btn.play-btn.playing { background: #e74c3c; animation: ttsPulse 1.5s ease-in-out infinite; }
         @keyframes ttsPulse {
@@ -1093,25 +1157,25 @@
         .tts-speed-badge {
             font-size: 0.7rem;
             font-weight: 700;
-            color: #6b7280;
+            color: var(--muted-2);
             min-width: 2rem;
             text-align: center;
         }
-        .dark .tts-speed-badge { color: #9ca3af; }
+        .dark .tts-speed-badge { color: var(--muted); }
         .tts-controls .tts-chapter-label {
             font-size: 0.75rem;
-            color: #6b7280;
+            color: var(--muted-2);
             max-width: 12rem;
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
         }
-        .dark .tts-controls .tts-chapter-label { color: #9ca3af; }
+        .dark .tts-controls .tts-chapter-label { color: var(--muted); }
         .quick-tool-btn.tts-active {
-            color: #4f46e5;
-            box-shadow: 0 0 0 2px #4f46e5;
+            color: var(--accent-book);
+            box-shadow: 0 0 0 2px var(--accent-book);
         }
-        .dark .quick-tool-btn.tts-active { color: #818cf8; box-shadow: 0 0 0 2px #818cf8; }
+        .dark .quick-tool-btn.tts-active { color: var(--accent-soft); box-shadow: 0 0 0 2px var(--accent-soft); }
         @media (max-width: 768px) {
             .tts-controls {
                 bottom: 5rem;
@@ -1132,26 +1196,26 @@
             border-radius: 0.25rem;
             font-size: 0.7rem;
             cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid #e5e7eb;
-            background: #f9fafb;
-            color: #6b7280;
+            transition: color 0.2s, background-color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.2s, opacity 0.2s;
+            border: 1px solid var(--line);
+            background: var(--surface-7);
+            color: var(--muted-2);
             vertical-align: middle;
         }
         .dark .copy-btn {
-            border-color: #374151;
-            background: #1f2937;
-            color: #9ca3af;
+            border-color: var(--ink-2);
+            background: var(--surface-dark);
+            color: var(--muted);
         }
         .copy-btn:hover {
-            background: #4f46e5;
-            color: #fff;
-            border-color: #4f46e5;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
+            border-color: var(--accent-book);
         }
         .copy-btn.copied {
-            background: #27ae60;
-            color: #fff;
-            border-color: #27ae60;
+            background: var(--ok);
+            color: var(--ink-inverse);
+            border-color: var(--ok);
         }
 
         /* Einklappbare Blöcke */
@@ -1165,15 +1229,15 @@
             transition: color 0.2s;
         }
         .collapsible-header:hover {
-            color: #4f46e5;
+            color: var(--accent-book);
         }
         .dark .collapsible-header:hover {
-            color: #818cf8;
+            color: var(--accent-soft);
         }
         .collapsible-header .collapse-icon {
             transition: transform 0.3s ease;
             font-size: 0.75rem;
-            color: #9ca3af;
+            color: var(--muted);
         }
         .collapsible-header.collapsed .collapse-icon {
             transform: rotate(-90deg);
@@ -1196,8 +1260,8 @@
             bottom: 2rem;
             left: 50%;
             transform: translateX(-50%) translateY(100px);
-            background: #4f46e5;
-            color: #fff;
+            background: var(--accent-book);
+            color: var(--ink-inverse);
             padding: 0.75rem 1.5rem;
             border-radius: 999px;
             font-size: 0.875rem;
@@ -1210,7 +1274,7 @@
             white-space: nowrap;
         }
         .dark .restore-position-toast {
-            background: #374151;
+            background: var(--ink-2);
         }
         .restore-position-toast.show {
             transform: translateX(-50%) translateY(0);
@@ -1224,13 +1288,13 @@
             transition: background 0.2s;
         }
         .restore-position-toast .btn-restore {
-            background: #fff;
-            color: #4f46e5;
+            background: var(--ink-inverse);
+            color: var(--accent-book);
             font-weight: 600;
         }
         .restore-position-toast .btn-dismiss {
             background: rgba(255,255,255,0.15);
-            color: #fff;
+            color: var(--ink-inverse);
         }
 
         /* Verbesserte Kapiteltrenner */
@@ -1245,10 +1309,10 @@
             left: 0;
             right: 0;
             height: 1px;
-            background: linear-gradient(90deg, transparent, #d1d5db 20%, #d1d5db 80%, transparent);
+            background: linear-gradient(90deg, transparent, var(--line-2) 20%, var(--line-2) 80%, transparent);
         }
         .dark .content-section::before {
-            background: linear-gradient(90deg, transparent, #374151 20%, #374151 80%, transparent);
+            background: linear-gradient(90deg, transparent, var(--ink-2) 20%, var(--ink-2) 80%, transparent);
         }
         .content-section:first-of-type::before {
             display: none;
@@ -1268,7 +1332,7 @@
             transition: background-color 0.15s ease;
         }
         table tbody tr:hover {
-            background-color: #f0f4f8;
+            background-color: var(--surface-5);
         }
         .dark table tbody tr:hover {
             background-color: rgba(255,255,255,0.04);
@@ -1276,33 +1340,33 @@
 
         /* Kapitel-Navigationsbuttons */
         .chapter-nav a {
-            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .chapter-nav a:hover {
             transform: translateX(4px);
-            background: #eef2f5;
+            background: var(--surface-3);
         }
         .chapter-nav a.next:hover {
             transform: translateX(-4px);
         }
         .dark .chapter-nav a:hover {
-            background: #1e2a36;
+            background: var(--surface-dark-3);
         }
 
         /* Lesezeichen-Markierungen in der Seitenleiste */
         .toc-item.bookmarked::after {
             content: '★';
-            color: #d4a017;
+            color: var(--gold);
             font-size: 0.65rem;
             margin-left: 0.3rem;
         }
         .toc-item.completed-toc {
-            color: #27ae60 !important;
+            color: var(--ok) !important;
         }
 
         /* Verbesserte Schnellwerkzeuge */
         .quick-tool-btn {
-            transition: all 0.25s cubic-bezier(0.22, 1, 0.36, 1);
+            transition: color 0.25s cubic-bezier(0.22, 1, 0.36, 1), background-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.25s cubic-bezier(0.22, 1, 0.36, 1), transform 0.25s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.25s cubic-bezier(0.22, 1, 0.36, 1);
         }
         .quick-tool-btn:hover {
             transform: translateY(-2px) scale(1.08);
@@ -1350,15 +1414,15 @@
     </style>
 <style>
         /* ===== v1.8 neu: Styles für den KI-Programmierteil ===== */
-        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid #374151; }
-        .code-head { background: #374151; color: #e5e7eb; font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
-        .code-head .dots { letter-spacing: 3px; color: #9ca3af; }
-        .code-block pre { background: #1f2937; color: #e5e7eb; padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
-        .dark .code-block { border-color: #4b5563; }
-        code.inline { background: #eef2f5; color: #4f46e5; padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
-        .dark code.inline { background: #1e2a36; color: #818cf8; }
-        .quote-line { border-left: 4px solid #4f46e5; background: #eef2ff; color: #1e1b4b; padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
-        .dark .quote-line { background: #1e1b4b; color: #c7d2fe; }
+        .code-block { margin: 1rem 0; border-radius: 0.5rem; overflow: hidden; border: 1px solid var(--ink-2); }
+        .code-head { background: var(--ink-2); color: var(--line); font-size: 0.75rem; padding: 0.4rem 0.9rem; display: flex; justify-content: space-between; align-items: center; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; }
+        .code-head .dots { letter-spacing: 3px; color: var(--muted); }
+        .code-block pre { background: var(--surface-dark); color: var(--line); padding: 0.8rem 1rem; margin: 0; font-family: ui-monospace, SFMono-Regular, Consolas, 'Courier New', monospace; font-size: 0.8rem; line-height: 1.6; white-space: pre-wrap; word-break: break-all; overflow-x: auto; }
+        .dark .code-block { border-color: var(--muted-3); }
+        code.inline { background: var(--surface-3); color: var(--accent-book); padding: 0.1rem 0.4rem; border-radius: 0.3rem; font-family: ui-monospace, SFMono-Regular, Consolas, monospace; font-size: 0.9em; }
+        .dark code.inline { background: var(--surface-dark-3); color: var(--accent-soft); }
+        .quote-line { border-left: 4px solid var(--accent-book); background: var(--accent-wash); color: var(--accent-deep); padding: 0.7rem 1rem; border-radius: 0 0.375rem 0.375rem 0; margin: 0.9rem 0; }
+        .dark .quote-line { background: var(--accent-deep); color: #c7d2fe; }
         @media print { .code-block, .quote-line, .figure { break-inside: avoid; page-break-inside: avoid; } }
     </style>
 <style id="reader-bundle-style">
@@ -1371,7 +1435,7 @@ html:not(.safe) .content-section pre { content-visibility: auto; contain-intrins
 /* P2-1 公告横幅 */
 #announce-bar { display:none; position:sticky; top:0; z-index:80; padding:8px 16px;
   font-size:14px; text-align:center; }
-#announce-bar[data-level="info"] { background:#e0f2fe; color:#075985; }
+#announce-bar[data-level="info"] { background:var(--sky-wash); color:var(--sky-deep); }
 #announce-bar[data-level="warn"] { background:#fef3c7; color:#92400e; }
 #announce-bar[data-level="crit"] { background:#fee2e2; color:#991b1b; }
 #announce-bar button { position:absolute; right:10px; top:6px; border:0; background:none;
@@ -1414,7 +1478,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 @media print {
   html.lg-ready #navbar, html.lg-ready #sidebar, html.lg-ready .quick-tool-btn,
   html.lg-ready .search-panel {
-    background: #fff !important; backdrop-filter: none !important;
+    background: var(--ink-inverse) !important; backdrop-filter: none !important;
     -webkit-backdrop-filter: none !important; box-shadow: none !important;
   }
 }
@@ -1560,7 +1624,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
     <a class="skip-link focus-ring" href="#content">Zum Hauptinhalt springen</a>
     <div id="reading-progress" style="width:0%" aria-hidden="true"></div>
-    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-all duration-300" role="banner">
+    <header id="navbar" class="fixed top-0 left-0 w-full bg-white dark:bg-gray-800 shadow-sm z-50 transition-colors duration-300" role="banner">
         <div class="container mx-auto px-4 h-16 flex items-center justify-between">
             <div class="flex items-center gap-3 min-w-0">
                 <button id="menu-toggle" class="lg:hidden text-dark dark:text-gray-200 text-xl p-2 rounded-md hover:bg-light dark:hover:bg-gray-700 focus-ring" aria-label="Inhaltsmenü öffnen" aria-expanded="false" aria-controls="sidebar">
@@ -1597,7 +1661,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <nav class="p-4">
                 <div class="mb-4 pb-3 border-b border-gray-200 dark:border-gray-700">
                     <h2 class="text-base font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
-                        <i class="fas fa-list-ul text-primary" aria-hidden="true"></i>Inhaltsverzeichnis
+                        <span aria-hidden="true" class="fas fa-list-ul text-primary" aria-hidden="true"></span>Inhaltsverzeichnis
                     </h2>
                     <div class="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mt-1">
                         <span id="reading-progress-text">0 / 38 Kap.</span>
@@ -1868,7 +1932,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- Wie du dieses Buch nutzt -->
             <section class="reading-guide-card" aria-labelledby="how-to-use-title">
                 <h2 id="how-to-use-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
-                    <i class="fas fa-compass text-primary" aria-hidden="true"></i>Wie benutzt man dieses Buch?
+                    <span aria-hidden="true" class="fas fa-compass text-primary" aria-hidden="true"></span>Wie benutzt man dieses Buch?
                 </h2>
                 <div class="grid md:grid-cols-2 gap-3 text-sm">
                     <div>
@@ -1957,7 +2021,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- Schnellübersicht der Kapitel (Tabelle) -->
             <section class="reading-guide-card" aria-labelledby="chapter-map-title">
                 <h2 id="chapter-map-title" class="text-lg font-bold text-dark dark:text-gray-200 mb-3 flex items-center gap-2">
-                    <i class="fas fa-map text-primary" aria-hidden="true"></i>Schnellübersicht der Kapitel
+                    <span aria-hidden="true" class="fas fa-map text-primary" aria-hidden="true"></span>Schnellübersicht der Kapitel
                 </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Finde schnell das Kapitel zu deinem Lernziel.</p>
                 <div class="grid md:grid-cols-2 gap-2 text-sm">
@@ -1991,19 +2055,19 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
             <!-- Interaktive Checkliste + Lesedashboard -->
             <section class="mb-8" aria-labelledby="dashboard-title">
                 <h2 id="dashboard-title" class="text-xl font-bold text-dark dark:text-gray-200 mb-1 flex items-center gap-2">
-                    <i class="fas fa-gauge-high text-primary" aria-hidden="true"></i>Lern-Dashboard
+                    <span aria-hidden="true" class="fas fa-gauge-high text-primary" aria-hidden="true"></span>Lern-Dashboard
                 </h2>
                 <p class="text-sm text-gray-600 dark:text-gray-400 mb-3">Verfolge deinen Lesefortschritt und prüfe die Gesundheit deines Handys.</p>
                 <div class="grid md:grid-cols-2 gap-4">
 
                     <!-- Lesefortschritt (Karte) -->
-                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-gray-800 dark:to-gray-900">
-                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-chart-pie text-primary" aria-hidden="true"></i>Lesefortschritt</h3>
+                    <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 border border-indigo-100 dark:border-gray-700">
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-chart-pie text-primary" aria-hidden="true"></span>Lesefortschritt</h3>
                         <div class="flex items-center gap-4">
                             <div class="relative w-20 h-20 flex-shrink-0">
-                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90">
-                                    <circle cx="40" cy="40" r="34" fill="none" stroke="#e5e7eb" stroke-width="8" class="dark:stroke-gray-700"/>
-                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="#4f46e5" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
+                                <svg viewBox="0 0 80 80" class="w-full h-full -rotate-90" aria-hidden="true">
+                                    <circle cx="40" cy="40" r="34" fill="none" stroke="var(--line)" stroke-width="8" class="dark:stroke-gray-700"/>
+                                    <circle id="progress-ring-fg" cx="40" cy="40" r="34" fill="none" stroke="var(--accent-book)" stroke-width="8" stroke-linecap="round" stroke-dasharray="213.6" stroke-dashoffset="213.6" style="transition: stroke-dashoffset 0.5s ease;"/>
                                 </svg>
                                 <span id="progress-percent" class="absolute inset-0 flex items-center justify-center text-sm font-bold text-primary">0%</span>
                             </div>
@@ -2017,7 +2081,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 
                     <!-- Handy-Gesundheitscheck (Karte) -->
                     <div class="dashboard-card rounded-xl p-5 border border-gray-200 dark:border-gray-700 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-gray-800 dark:to-gray-900">
-                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><i class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></i>Handy-Gesundheitscheck</h3>
+                        <h3 class="font-bold text-base mb-3 flex items-center gap-2"><span aria-hidden="true" class="fas fa-heart-pulse text-emerald-600" aria-hidden="true"></span>Handy-Gesundheitscheck</h3>
                         <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">Hake an, was schon erledigt ist, und sieh dir den „Gesundheits-Score“ deines Handys an:</p>
                         <div id="checklist-items" class="space-y-1.5 text-sm">
                             <label class="flex items-center gap-2 cursor-pointer check-item"><input type="checkbox" class="rounded text-emerald-600 check-input"><span>Sperrcode eingerichtet (nicht 1234/0000)</span></label>
@@ -2034,7 +2098,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
                             <span id="health-score" class="text-lg font-bold text-emerald-600">0 / 8</span>
                         </div>
                         <div class="mt-1 h-2 rounded-full bg-gray-200 dark:bg-gray-700 overflow-hidden">
-                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-all duration-500" style="width: 0%"></div>
+                            <div id="health-bar" class="h-full bg-gradient-to-r from-emerald-400 to-teal-500 transition-colors duration-500" style="width: 0%"></div>
                         </div>
                         <p id="health-msg" class="mt-2 text-xs text-gray-500 dark:text-gray-400">Mach den Check und erfahre, wie sicher dein Handy ist</p>
                     </div>
@@ -5676,7 +5740,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <div class="practice-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-hands mr-2"></i>Verwendet den APT-Paketmanager (ähnlich wie Debian und Ubuntu), mit dem tausende Linux-Softwarepakete installiert werden können – darunter Entwicklungs- und Netzwerk-Tools. Unterstützt mehrere Programmiersprachen-Umgebungen wie Python, Ruby, Node.js, Go, Rust, Swift.</p>
 <ol class="list-decimal pl-6 mt-1 space-y-1">
-  <li>🔒 Sicherheits- und Netzwerkfunktionen</li>
+  <li>Sicherheits- und Netzwerkfunktionen</li>
   <li>SSH-Remote-Verbindung</li>
   <li>: Unterstützt SSH-Client- und -Server-Funktionen, kann andere Geräte remote verbinden oder das Smartphone zum SSH-Host machen.</li>
   <li>Verschlüsselungs-Tools</li>
@@ -5694,17 +5758,17 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <p class="mb-2">Termux ist eine Open-Source-Terminal-Emulation und Linux-Umgebungs-App, die speziell für Android-Geräte entwickelt wurde – ganz ohne Root-Rechte bringt sie eine Linux-Kommandozeile aufs Handy. Als leichte App (das Installationspaket ist nur etwa 30 MB groß) bietet Termux über APT tausende Pakete und bringt dir die vollständige Linux-Erfahrung aufs Handy.</p>
 <p class="mb-2">Termux punktet vor allem durch Leichtgewichtigkeit und hohe Erweiterbarkeit: entwickelt, gelernt und administriert wird damit vielerlei. Standardpakete und präzise Terminalwerkzeuge machen daraus eine Open-Source-Lösung.</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">II. Kernfunktionen und Merkmale</h4>
-<h5 class="font-semibold mt-3 mb-1">🖥️ Vollständige Linux-Umgebung</h5>
+<h5 class="font-semibold mt-3 mb-1">Vollständige Linux-Umgebung</h5>
 <p class="mb-2">Termux <strong>Nur Bash integriert</strong> als Shell. Wenn du Zsh, fish oder andere Shells verwenden moechtest, musst du sie manuell ueber den Paketmanager installieren, z. B.:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> oder<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Zudem unterstuetzt Termux Editoren wie Vim, Nano und Emacs und bietet ein nahezu originales Kommandozeilenerlebnis. Ueber „pkg install" lassen sich ueber 2000 Pakete installieren, darunter GCC, OpenSSH, SQLMap und weitere Entwicklungs- und Sicherheitstools.</p>
-<h5 class="font-semibold mt-3 mb-1">📦 Leistungsstarkes Paketmanagement</h5>
+<h5 class="font-semibold mt-3 mb-1">Leistungsstarkes Paketmanagement</h5>
 <p class="mb-2">Mit dem APT-Paketmanager (ähnlich wie Debian und Ubuntu) lassen sich tausende Linux-Pakete installieren: Entwicklungs- und Netzwerkwerkzeuge und Umgebungen für Python, Ruby, Node.js, Go, Rust, Swift und mehr.</p>
-<h5 class="font-semibold mt-3 mb-1">🔒 Sicherheit und Netzwerkfunktionen</h5>
+<h5 class="font-semibold mt-3 mb-1">Sicherheit und Netzwerkfunktionen</h5>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>SSH-Fernverbindung</strong>: Unterstützt SSH-Client- und -Server-Funktionen, kann andere Geräte remote verbinden oder das Smartphone zum SSH-Host machen.</li>
   <li><strong>Verschlüsselungswerkzeuge</strong>: Bietet Verschlüsselungstools wie OpenSSL für verschlüsselte Daten und sichere Kommunikation.</li>
   <li><strong>Server-Aufbau</strong>: Kann Nginx oder Apache konfigurieren, um einen statischen Webserver aufzusetzen.</li>
 </ul>
-<h5 class="font-semibold mt-3 mb-1">🔧 Systemintegration und Erweiterung</h5>
+<h5 class="font-semibold mt-3 mb-1">Systemintegration und Erweiterung</h5>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li>Zugriff auf Smartphone-Speicherberechtigungen für lokale Dateiverwaltung.</li>
   <li>Aufruf von Sensoren, Kameras und anderen Android-Hardware-Funktionen über das Termux:API-Plugin.</li>
@@ -5751,25 +5815,25 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <p class="mt-1">Termux und seine Plugins müssen aus derselben Quelle installiert werden, da sie dieselbe sharedUserId teilen. Eine Mischung aus verschiedenen Quellen (wie F-Droid und GitHub) führt zu Installationsfehlern.</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">IV. Installations- und Konfigurationsleitfaden</h4>
-<h5 class="font-semibold mt-3 mb-1">📥 Installationsschritte</h5>
+<h5 class="font-semibold mt-3 mb-1">Installationsschritte</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li><strong>App herunterladen</strong>: Termux aus offiziellen Quellen (F-Droid oder GitHub) herunterladen und installieren – keine Root-Rechte erforderlich.</li>
   <li><strong>System initialisieren</strong>: Nach dem ersten Start warten, bis „Installing bootstrap packages" abgeschlossen ist.</li>
   <li><strong>Speicherberechtigung abrufen</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> ausführen, um Zugriff auf das Smartphone-Dateisystem zu erhalten.</li>
   <li><strong>Softwarepakete aktualisieren</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> ausführen, um die Paketliste zu aktualisieren.</li>
 </ol>
-<h5 class="font-semibold mt-3 mb-1">⚙️ Grundlegende Optimierung</h5>
+<h5 class="font-semibold mt-3 mb-1">Grundlegende Optimierung</h5>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>Spiegel-Wechsel</strong>: Mit dem Befehl<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code>über eine grafische Oberfläche den Spiegel wechseln (empfohlen: Tsinghua-Universitätsspiegel).</li>
   <li><strong>Tastenkombinationen</strong>: Leiser-Taste simuliert Strg, Lauter-Taste simuliert Esc – erhöht die Eingabeeffizienz.</li>
   <li><strong>Oberfläche verschönern</strong>: Installiere Zsh + Oh My Zsh und konfiguriere Themes und Plugins.</li>
 </ul>
 <h4 class="text-lg font-semibold mt-4 mb-2">V. Typische Anwendungsszenarien</h4>
-<h5 class="font-semibold mt-3 mb-1">💻 Mobile Entwicklung &amp; Tests</h5>
+<h5 class="font-semibold mt-3 mb-1">Mobile Entwicklung &amp; Tests</h5>
 <p class="mb-2">Auf dem Smartphone eine vollständige Entwicklungsumgebung aufbauen, Python-Skripte schreiben und ausführen, C-Programme mit GCC kompilieren, Code-Repositories über Git verwalten und per SSH mit Remote-Servern synchronisieren.</p>
-<h5 class="font-semibold mt-3 mb-1">🖥️ Server-Administration</h5>
+<h5 class="font-semibold mt-3 mb-1">Server-Administration</h5>
 <p class="mb-2">Verwalte Server per SSH aus der Ferne – führe Systemwartungen und Log-Analysen durch und kümmere dich von überall um Server-Probleme.</p>
-<h5 class="font-semibold mt-3 mb-1">📚 Linux-Operationen lernen</h5>
+<h5 class="font-semibold mt-3 mb-1">Linux-Operationen lernen</h5>
 <p class="mb-2">Bietet eine echte Linux-Umgebung und ist die ideale Plattform zum Erlernen der Kommandozeile und Systemadministration. Man kann Shell-Skripte schreiben und Linux-Dateiberechtigungen ueben (z. B. <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> setzt die Berechtigungsbits rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> aendert den Dateieigentuemer,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> zeigt die drei Gruppen mit je neun Berechtigungsbits fuer owner/group/other). Beachte: Dies ist das klassische Unix/Linux-Drei-Gruppen-Neun-Bit-Berechtigungsmodell (owner / group / other × Lesen / Schreiben / Ausfuehren), das ein voellig anderes System darstellt als die ACL-Zugriffssteuerungslisten von Windows NTFS.</p>
 <h5 class="font-semibold mt-3 mb-1">🔐 Netzwerksicherheitstests</h5>
 <p class="mb-2">Nmap, SQLMap, Hydra, Metasploit und andere Sicherheits-Tools installieren, Netzwerk-Scans und Penetrationstests durchführen.</p>
@@ -6254,7 +6318,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
                     </table>
 <p class="mb-2">Kurz gesagt:<strong>Git entscheidet, "wie Änderungen protokolliert werden", GitHub entscheidet, "wo die Änderungen liegen und wie man zusammenarbeitet"</strong>. Git ist ein Werkzeug, das lokal läuft; GitHub ist eine Plattform, die Git-Repositorys in die Cloud stellt, um Zusammenarbeit und Präsentation zu erleichtern. Du kannst Git ohne GitHub nutzen (z. B. für die eigene Versionsverwaltung deines Codes), aber GitHub setzt Git voraus (denn GitHub basiert auf Git).</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">Drittens. Kernkonzepte und Funktionen von GitHub</h4>
-<h5 class="font-semibold mt-3 mb-1">📁 Grundkonzepte</h5>
+<h5 class="font-semibold mt-3 mb-1">Grundkonzepte</h5>
 <p class="mb-2">Bevor du loslegst, lerne einige häufige Begriffe kennen, sonst wird dir die GitHub-Oberfläche wie ein Rätsel vorkommen:</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>Repository (kurz Repo)</strong>: Ein Projekt entspricht einem Repository, das alle Codedateien, historischen Versionen und Dokumente dieses Projekts enthält. Man kann es sich als einen "Projektordner" vorstellen.</li>
@@ -6266,7 +6330,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>Issue</strong>: Dient der Erfassung von Bugs, Funktionswünschen und Diskussionsthemen. Jedes Issue ist wie ein Diskussionsbeitrag, dem Verantwortliche zugewiesen und die mit Labels versehen werden können.</li>
   <li><strong>Fork</strong>: Kopiert das Repository einer anderen Person unter dein eigenes Konto. Du kannst in deiner Kopie beliebig ändern, ohne das Original-Repository zu beeinflussen. Wenn du fertig bist, kannst du dem ursprünglichen Autor einen PR schicken und um die Übernahme deiner Verbesserungen bitten.</li>
 </ul>
-<h5 class="font-semibold mt-3 mb-1">🛠️ Kernfunktionen</h5>
+<h5 class="font-semibold mt-3 mb-1">Kernfunktionen</h5>
 <p class="mb-2">GitHub bietet mehr als nur Code-Speicherung, nämlich auch:</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>Versionskontrolle</strong>: Protokolliert die Historie jeder Code-Änderung; bei fehlerhaftem Code kannst du jederzeit zu einer früheren funktionierenden Version zurückkehren.</li>
@@ -6279,14 +6343,14 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>Open-Source-Community</strong>: Du kannst Projekte mit einem Stern (Star) markieren, Projektaktivitäten beobachten (Watch), Entwicklern folgen (Follow) und an globaler Open-Source-Zusammenarbeit teilnehmen.</li>
 </ul>
 <h4 class="text-lg font-semibold mt-4 mb-2">Viertens. Registrierung und Einstieg: Erstelle in fünf Minuten dein erstes Repository</h4>
-<h5 class="font-semibold mt-3 mb-1">📝 Konto registrieren</h5>
+<h5 class="font-semibold mt-3 mb-1">Konto registrieren</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li>Besuche<a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a>und klicke auf "Sign up".</li>
   <li>E-Mail-Adresse eingeben, Passwort und Benutzername festlegen (der Benutzername erscheint in der Adresse deiner persönlichen Startseite, Empfehlung: englisch, z. B.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/yourname</code>).</li>
   <li>E-Mail-Verifizierung und Captcha abschließen.</li>
   <li>Den kostenlosen Tarif (Free) wählen – für persönliche Nutzer völlig ausreichend.</li>
 </ol>
-<h5 class="font-semibold mt-3 mb-1">📁 Erstes Repository erstellen</h5>
+<h5 class="font-semibold mt-3 mb-1">Erstes Repository erstellen</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li>Nach dem Login oben rechts auf das "Anhang F"-Symbol klicken und "New repository" wählen.</li>
   <li>Repository-Namen (Repository name) eingeben, z. B.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.</li>
@@ -6321,13 +6385,13 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <p class="mb-2">Dieser Ablauf stellt sicher, dass <strong>jeder Code vor dem Eintritt in den Hauptzweig geprüft wurde</strong>, was die Fehlerquote deutlich senkt. Auch Open-Source-Projekte nutzen diesen Mechanismus, um Beiträge von Fremden weltweit anzunehmen – du kannst durchaus bei einem bekannten Open-Source-Projekt einen PR einreichen und nach Annahme als Mitwirkender dieses Projekts gelten.</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">Siebtens. Typische Anwendungsszenarien von GitHub</h4>
-<h5 class="font-semibold mt-3 mb-1">🎓 Studierende bei Wettbewerben und Kursprojekten</h5>
+<h5 class="font-semibold mt-3 mb-1">Studierende bei Wettbewerben und Kursprojekten</h5>
 <p class="mb-2">Informatik-Studierende, die an ACM, Hackathons oder Abschlussarbeiten teilnehmen, kommen kaum ohne GitHub aus. Es dient sowohl als Team-Kollaborationsplattform als auch als Schaufenster für Werke – Preisrichter können direkt dein Repository ansehen und Codequalität und Zusammenarbeitsprozess nachvollziehen. Viele Unternehmen verlangen bei Stellenausschreibungen die Angabe der GitHub-Startseite als Nachweis technischer Fähigkeiten.</p>
-<h5 class="font-semibold mt-3 mb-1">📚 Persönliche Wissensbasis und Notiz-Hosting</h5>
+<h5 class="font-semibold mt-3 mb-1">Persönliche Wissensbasis und Notiz-Hosting</h5>
 <p class="mb-2">Auch Nicht-Programmierer können GitHub nutzen. Viele verwenden es, um Lernnotizen, technische Blogs (in Kombination mit GitHub Pages kostenlos eine Website aufbauen), E-Books zu hosten. Markdown-Schreiben + Git-Versionsverwaltung + Cloud-Backup – drei in einem.</p>
 <h5 class="font-semibold mt-3 mb-1">🌐 Teilnahme an Open-Source-Projekten</h5>
 <p class="mb-2">GitHub ist das Kernzentrum der globalen Open-Source-Bewegung. Du kannst Lieblingsprojekte forken, nach Modifikation einen PR an die Community zurückgeben oder einfach gute Projekte mit einem Stern markieren und Aktualisierungen verfolgen. Sich an Open Source zu beteiligen, ist ein hervorragender Weg, um technisch zu wachsen und Reputation aufzubauen.</p>
-<h5 class="font-semibold mt-3 mb-1">🤖 Automatisiertes Deployment und CI/CD</h5>
+<h5 class="font-semibold mt-3 mb-1">Automatisiertes Deployment und CI/CD</h5>
 <p class="mb-2">Mit GitHub Actions lässt sich ein vollautomatischer Ablauf realisieren: "Code einmal pushen, automatisch testen, automatisch auf den Server deployen". Viele persönliche Blogs und Dokumentationsseiten sind so gebaut – nach dem Schreiben eines Artikels einmal pushen, und die Website aktualisiert sich automatisch.</p>
 <h5 class="font-semibold mt-3 mb-1">💾 Code-Backup und Mehrgeräte-Synchronisation</h5>
 <p class="mb-2">Das Code-Repository als Cloud-Laufwerk nutzen: Beim Gerätewechsel oder der Arbeit auf mehreren Geräten genügt ein git pull, um den neuesten Code zu holen – kein USB-Stick-Kopieren mehr.</p>
@@ -6393,7 +6457,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <h5 class="font-semibold mt-3 mb-1">🔗 Sichere Startkette</h5>
 <p class="mb-2">Das BL-Schloss ist das erste Glied der gesamten sicheren Startkette. Erst nach bestandener Pruefung wird die naechste Boot-Phase (z. B. der Kernel) geladen und ausgefuehrt – so wird die Vertrauenswuerdigkeit der Systemstartumgebung schrittweise gewaehrleistet.</p>
-<h5 class="font-semibold mt-3 mb-1">📊 Gesperrt vs. entsperrt: Die zwei Seiten des BL-Schlosses</h5>
+<h5 class="font-semibold mt-3 mb-1">Gesperrt vs. entsperrt: Die zwei Seiten des BL-Schlosses</h5>
 <p class="mb-2">Um Vor- und Nachteile des BL-Schlosses anschaulicher zu verstehen, zeigen wir eine Vergleichstabelle mit den Unterschieden in 5 Kernbereichen:</p>
 <div class="overflow-x-auto">
 <table class="w-full border-collapse border border-gray-300 dark:border-gray-600 text-sm">
@@ -8049,32 +8113,32 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ol>
 <p class="mb-2">Zahlen lügen nicht: In Cursor 3 (April 2026) überholte der Agent-Modus erstmals die Tab-Vervollständigung – ein Zeichen für den massiven Umbruch in der Entwicklerarbeit. Claude Code, das terminalnahe KI-Programmierwerkzeug, erreichte Mitte 2026 einen Jahresumsatz von 2,5 Milliarden US-Dollar. Das folgende Schaubild zeigt den Wendepunkt:</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="640" height="300" fill="#ffffff" rx="8"/>
-      <line x1="70" y1="240" x2="600" y2="240" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="240" x2="70" y2="30" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="190" x2="600" y2="190" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="140" x2="600" y2="140" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="90" x2="600" y2="90" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="40" x2="600" y2="40" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="244" font-size="10" fill="#6b7280" text-anchor="end">0</text>
-      <text x="62" y="194" font-size="10" fill="#6b7280" text-anchor="end">20</text>
-      <text x="62" y="144" font-size="10" fill="#6b7280" text-anchor="end">40</text>
-      <text x="62" y="94" font-size="10" fill="#6b7280" text-anchor="end">60</text>
-      <text x="62" y="44" font-size="10" fill="#6b7280" text-anchor="end">80</text>
-      <text x="335" y="272" font-size="11" fill="#374151" text-anchor="middle">Nutzung (%)</text>
-      <polyline points="70,215 220,172 370,152 590,116" fill="none" stroke="#4f46e5" stroke-width="2.5"/>
-      <polyline points="70,52 220,85 370,103 590,135" fill="none" stroke="#9ca3af" stroke-width="2.5"/>
-      <circle cx="70" cy="215" r="4" fill="#4f46e5"/><circle cx="220" cy="172" r="4" fill="#4f46e5"/><circle cx="370" cy="152" r="4" fill="#4f46e5"/><circle cx="590" cy="116" r="4" fill="#4f46e5"/>
-      <circle cx="70" cy="52" r="4" fill="#9ca3af"/><circle cx="220" cy="85" r="4" fill="#9ca3af"/><circle cx="370" cy="103" r="4" fill="#9ca3af"/><circle cx="590" cy="135" r="4" fill="#9ca3af"/>
-      <text x="70" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2024 Q4</text>
-      <text x="220" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2025 Q2</text>
-      <text x="370" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2025 Q4</text>
-      <text x="590" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2026 Q2</text>
-      <line x1="435" y1="60" x2="465" y2="60" stroke="#4f46e5" stroke-width="2.5"/>
-      <text x="472" y="63" font-size="10" fill="#374151">Nutzung des Agent-Modus</text>
-      <line x1="435" y1="82" x2="465" y2="82" stroke="#9ca3af" stroke-width="2.5"/>
-      <text x="472" y="85" font-size="10" fill="#374151">Nutzung der Tab-Vervollständigung</text>
+<svg style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="640" height="300" style="fill:var(--ink-inverse)" rx="8"/>
+      <line x1="70" y1="240" x2="600" y2="240" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="240" x2="70" y2="30" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="190" x2="600" y2="190" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="140" x2="600" y2="140" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="90" x2="600" y2="90" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="40" x2="600" y2="40" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="62" y="244" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+      <text x="62" y="194" font-size="10" fill="var(--muted-2)" text-anchor="end">20</text>
+      <text x="62" y="144" font-size="10" fill="var(--muted-2)" text-anchor="end">40</text>
+      <text x="62" y="94" font-size="10" fill="var(--muted-2)" text-anchor="end">60</text>
+      <text x="62" y="44" font-size="10" fill="var(--muted-2)" text-anchor="end">80</text>
+      <text x="335" y="272" font-size="11" fill="var(--ink-2)" text-anchor="middle">Nutzung (%)</text>
+      <polyline points="70,215 220,172 370,152 590,116" fill="none" stroke="var(--accent-book)" stroke-width="2.5"/>
+      <polyline points="70,52 220,85 370,103 590,135" fill="none" stroke="var(--muted)" stroke-width="2.5"/>
+      <circle cx="70" cy="215" r="4" fill="var(--accent-book)"/><circle cx="220" cy="172" r="4" fill="var(--accent-book)"/><circle cx="370" cy="152" r="4" fill="var(--accent-book)"/><circle cx="590" cy="116" r="4" fill="var(--accent-book)"/>
+      <circle cx="70" cy="52" r="4" fill="var(--muted)"/><circle cx="220" cy="85" r="4" fill="var(--muted)"/><circle cx="370" cy="103" r="4" fill="var(--muted)"/><circle cx="590" cy="135" r="4" fill="var(--muted)"/>
+      <text x="70" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2024 Q4</text>
+      <text x="220" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2025 Q2</text>
+      <text x="370" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2025 Q4</text>
+      <text x="590" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2026 Q2</text>
+      <line x1="435" y1="60" x2="465" y2="60" stroke="var(--accent-book)" stroke-width="2.5"/>
+      <text x="472" y="63" font-size="10" fill="var(--ink-2)">Nutzung des Agent-Modus</text>
+      <line x1="435" y1="82" x2="465" y2="82" stroke="var(--muted)" stroke-width="2.5"/>
+      <text x="472" y="85" font-size="10" fill="var(--ink-2)">Nutzung der Tab-Vervollständigung</text>
       <circle cx="529" cy="126" r="3" fill="#c0392b"/>
       <text x="529" y="152" font-size="10" fill="#c0392b" text-anchor="middle">≈ Kreuzung Q2 2026</text>
     </svg>
@@ -8553,31 +8617,31 @@ Gib die vollständige Implementierung.</pre>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Die fünf großen chinesischen Modelle im Vergleich (August 2026)</p>
 <p class="mb-2">Ein wichtiger Trend: Das Gefühl einer „Generationenlücke“ zwischen chinesischen Modellen und GPT/Claude ist verschwunden. Bei logischer Inferenz und Mathematik-Wettbewerben liegen die chinesischen Flaggschiffe zu GPT-5 meist nur im einstelligen Punktabstand. Beim systematischen Architekturdenken und komplexer Ingenieurs-Inferenz bleibt Claude vorn – es liefert Architekturvorschläge mit mehr „Feingefühl“, während chinesische Modelle gelegentlich „lehrbuchhaft“ wirken. Bei chinesischen Szenarien, Kostenkontrolle und regelkonformer Bereitstellung haben sie aber klar die Oberhand.</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="620" height="290" fill="#ffffff" rx="8"/>
-      <line x1="70" y1="230" x2="590" y2="230" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="230" x2="70" y2="20" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="60" x2="590" y2="60" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="116" x2="590" y2="116" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="173" x2="590" y2="173" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="234" font-size="10" fill="#6b7280" text-anchor="end">0</text>
-      <text x="62" y="120" font-size="10" fill="#6b7280" text-anchor="end">50</text>
-      <text x="62" y="64" font-size="10" fill="#6b7280" text-anchor="end">100</text>
-      <text x="340" y="262" font-size="10.5" fill="#374151" text-anchor="middle">Ausgabepreis (Yuan/Mio. Token)</text>
+<svg style="max-width:100%;height:auto" width="620" height="290" viewBox="0 0 620 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="620" height="290" style="fill:var(--ink-inverse)" rx="8"/>
+      <line x1="70" y1="230" x2="590" y2="230" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="230" x2="70" y2="20" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="60" x2="590" y2="60" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="116" x2="590" y2="116" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="173" x2="590" y2="173" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="62" y="234" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+      <text x="62" y="120" font-size="10" fill="var(--muted-2)" text-anchor="end">50</text>
+      <text x="62" y="64" font-size="10" fill="var(--muted-2)" text-anchor="end">100</text>
+      <text x="340" y="262" font-size="10.5" fill="var(--ink-2)" text-anchor="middle">Ausgabepreis (Yuan/Mio. Token)</text>
       <!-- bars: price -->
-      <rect x="95" y="218" width="60" height="12" fill="#4f46e5"/><text x="125" y="212" font-size="9" fill="#374151" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="#374151" text-anchor="middle">DeepSeek</text>
-      <rect x="195" y="146" width="60" height="84" fill="#4f46e5"/><text x="225" y="140" font-size="9" fill="#374151" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="#374151" text-anchor="middle">Qwen</text>
-      <rect x="295" y="182" width="60" height="48" fill="#4f46e5"/><text x="325" y="176" font-size="9" fill="#374151" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="#374151" text-anchor="middle">GLM</text>
-      <rect x="395" y="200" width="60" height="30" fill="#4f46e5"/><text x="425" y="194" font-size="9" fill="#374151" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="#374151" text-anchor="middle">Kimi</text>
-      <rect x="495" y="170" width="60" height="60" fill="#4f46e5"/><text x="525" y="164" font-size="9" fill="#374151" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="#374151" text-anchor="middle">Doubao</text>
+      <rect x="95" y="218" width="60" height="12" fill="var(--accent-book)"/><text x="125" y="212" font-size="9" fill="var(--ink-2)" text-anchor="middle">6</text><text x="125" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">DeepSeek</text>
+      <rect x="195" y="146" width="60" height="84" fill="var(--accent-book)"/><text x="225" y="140" font-size="9" fill="var(--ink-2)" text-anchor="middle">36</text><text x="225" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Qwen</text>
+      <rect x="295" y="182" width="60" height="48" fill="var(--accent-book)"/><text x="325" y="176" font-size="9" fill="var(--ink-2)" text-anchor="middle">24</text><text x="325" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">GLM</text>
+      <rect x="395" y="200" width="60" height="30" fill="var(--accent-book)"/><text x="425" y="194" font-size="9" fill="var(--ink-2)" text-anchor="middle">16</text><text x="425" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Kimi</text>
+      <rect x="495" y="170" width="60" height="60" fill="var(--accent-book)"/><text x="525" y="164" font-size="9" fill="var(--ink-2)" text-anchor="middle">30</text><text x="525" y="248" font-size="9.5" fill="var(--ink-2)" text-anchor="middle">Doubao</text>
       <!-- scores -->
-      <circle cx="125" cy="118" r="5" fill="#d4a017"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
-      <circle cx="225" cy="110" r="5" fill="#d4a017"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
-      <circle cx="325" cy="105" r="5" fill="#d4a017"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
-      <circle cx="425" cy="112" r="5" fill="#d4a017"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
-      <circle cx="525" cy="116" r="5" fill="#d4a017"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
-      <rect x="90" y="30" width="12" height="12" fill="#4f46e5"/><text x="108" y="41" font-size="9.5" fill="#374151">Ausgabepreis (niedriger = besser)</text>
-      <circle cx="170" cy="36" r="5" fill="#d4a017"/><text x="182" y="40" font-size="9.5" fill="#374151">Gesamtscore (höher = besser)</text>
+      <circle cx="125" cy="118" r="5" fill="var(--gold)"/><text x="140" y="114" font-size="9" fill="#78350f">87.5</text>
+      <circle cx="225" cy="110" r="5" fill="var(--gold)"/><text x="240" y="106" font-size="9" fill="#78350f">89.7</text>
+      <circle cx="325" cy="105" r="5" fill="var(--gold)"/><text x="340" y="101" font-size="9" fill="#78350f">90.5</text>
+      <circle cx="425" cy="112" r="5" fill="var(--gold)"/><text x="440" y="108" font-size="9" fill="#78350f">88+</text>
+      <circle cx="525" cy="116" r="5" fill="var(--gold)"/><text x="540" y="112" font-size="9" fill="#78350f">85+</text>
+      <rect x="90" y="30" width="12" height="12" fill="var(--accent-book)"/><text x="108" y="41" font-size="9.5" fill="var(--ink-2)">Ausgabepreis (niedriger = besser)</text>
+      <circle cx="170" cy="36" r="5" fill="var(--gold)"/><text x="182" y="40" font-size="9.5" fill="var(--ink-2)">Gesamtscore (höher = besser)</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Abbildung 4: Preis- und Leistungsvergleich der fünf Modelle (niedrigerer Preis ist besser, höhere Punktzahl ist besser)</p>
 </div>
@@ -9171,7 +9235,7 @@ Verwende das Vitest-Framework und gib die vollständige Testdatei.</pre>
   <li>Andrej Karpathy. (2025). Vibe Coding. Social media post introducing the concept of vibe-driven programming with AI.</li>
   <li>Andrej Karpathy. (2025). CLAUDE.md - Project guidelines for AI-assisted development. GitHub repository, 70+K stars.</li>
   <li>Anthropic. (2026). Claude Code: Terminal-native AI programming. Official documentation and best practices.</li>
-  <li>Cursor Team. (2026). Cursor 3: The next generation of AI-first IDE. Release notes and documentation.</li>
+  <li>Cursor Team. (2026). Cursor 3: The the the next generation of tools of tools of AI-first IDE. Release notes and documentation.</li>
   <li>OpenAI. (2026). Codex CLI: Bringing AI to the terminal. Technical documentation.</li>
   <li>Model Context Protocol (MCP) Specification. (2025-2026). Open protocol for AI-tool integration.</li>
   <li>Vibe Coding Community. (2026). Community-curated skills and best practices for AI-assisted programming.</li>
@@ -9313,27 +9377,27 @@ Verwende das Vitest-Framework und gib die vollständige Testdatei.</pre>
 <h4 class="text-lg font-semibold mt-4 mb-2">4. Die Projektstruktur zerlegt: wofür jede Datei gut ist</h4>
 <p class="mb-2">Beim ersten Öffnen des Projekts kann dich der Dateibaum links schwindelig machen. Keine Panik – im Alltag verbringst du 90 % deiner Zeit nur mit den folgenden paar Dateien:</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="300" fill="#fafafa" rx="8"/>
-      <text x="20" y="30" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ Projektstammverzeichnis</text>
-      <rect x="30" y="45" width="540" height="230" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <text x="45" y="70" font-size="11" fill="#4f46e5" font-weight="bold">app/ ← hier schreibst du deinen Code</text>
-      <rect x="60" y="82" width="240" height="178" fill="#eef2ff" rx="5"/>
-      <text x="70" y="102" font-size="10" fill="#1e1b4b" font-weight="bold">src/main/</text>
-      <text x="80" y="120" font-size="10" fill="#374151">├ java/…/MainActivity.kt  ← die Logik</text>
-      <text x="80" y="138" font-size="10" fill="#374151">├ res/  ← Ressourcen (Bilder, Texte, Farben)</text>
-      <text x="80" y="156" font-size="10" fill="#374151">└ AndroidManifest.xml  ← der "Personalausweis" der App</text>
-      <text x="70" y="180" font-size="10" fill="#1e1b4b" font-weight="bold">build.gradle.kts</text>
-      <text x="80" y="198" font-size="10" fill="#6b7280">deklariert die Abhängigkeiten (SDK-Version, Compose usw.)</text>
-      <text x="70" y="222" font-size="10" fill="#1e1b4b" font-weight="bold">src/androidTest/ und test/</text>
-      <text x="80" y="240" font-size="10" fill="#6b7280">Code für automatisierte Tests (Kapitel 56)</text>
+<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="300" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="30" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ Projektstammverzeichnis</text>
+      <rect x="30" y="45" width="540" height="230" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <text x="45" y="70" font-size="11" fill="var(--accent-book)" font-weight="bold">app/ ← hier schreibst du deinen Code</text>
+      <rect x="60" y="82" width="240" height="178" fill="var(--accent-wash)" rx="5"/>
+      <text x="70" y="102" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/main/</text>
+      <text x="80" y="120" font-size="10" fill="var(--ink-2)">├ java/…/MainActivity.kt  ← die Logik</text>
+      <text x="80" y="138" font-size="10" fill="var(--ink-2)">├ res/  ← Ressourcen (Bilder, Texte, Farben)</text>
+      <text x="80" y="156" font-size="10" fill="var(--ink-2)">└ AndroidManifest.xml  ← der "Personalausweis" der App</text>
+      <text x="70" y="180" font-size="10" fill="var(--accent-deep)" font-weight="bold">build.gradle.kts</text>
+      <text x="80" y="198" font-size="10" fill="var(--muted-2)">deklariert die Abhängigkeiten (SDK-Version, Compose usw.)</text>
+      <text x="70" y="222" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/androidTest/ und test/</text>
+      <text x="80" y="240" font-size="10" fill="var(--muted-2)">Code für automatisierte Tests (Kapitel 56)</text>
       <rect x="320" y="82" width="230" height="178" fill="#f0fdf4" rx="5"/>
       <text x="330" y="102" font-size="10" fill="#065f46" font-weight="bold">sonstige Dateien im Stammverzeichnis</text>
-      <text x="340" y="122" font-size="10" fill="#374151">gradle/ + gradlew.bat  ← Build-Skripte</text>
-      <text x="340" y="142" font-size="10" fill="#374151">settings.gradle.kts  ← Projekteinstellungen</text>
-      <text x="340" y="162" font-size="10" fill="#6b7280">(Faustregel für Anfänger: nur den Ordner app/ anfassen,</text>
-      <text x="340" y="180" font-size="10" fill="#6b7280">den Rest erstmal als "Blackbox" behandeln, nicht anfassen)</text>
-      <text x="340" y="208" font-size="10" fill="#9ca3af">.gitignore  ← Ignorierliste der Versionsverwaltung</text>
+      <text x="340" y="122" font-size="10" fill="var(--ink-2)">gradle/ + gradlew.bat  ← Build-Skripte</text>
+      <text x="340" y="142" font-size="10" fill="var(--ink-2)">settings.gradle.kts  ← Projekteinstellungen</text>
+      <text x="340" y="162" font-size="10" fill="var(--muted-2)">(Faustregel für Anfänger: nur den Ordner app/ anfassen,</text>
+      <text x="340" y="180" font-size="10" fill="var(--muted-2)">den Rest erstmal als "Blackbox" behandeln, nicht anfassen)</text>
+      <text x="340" y="208" font-size="10" fill="var(--muted)">.gitignore  ← Ignorierliste der Versionsverwaltung</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Abbildung 2: Die Projektstruktur, die Einsteiger kennen müssen (Merkregel: nur den Ordner app/ anfassen)</p>
 </div>
@@ -10587,26 +10651,26 @@ if (ActivityCompat.checkSelfPermission(this,
 <h4 class="text-lg font-semibold mt-4 mb-2">4. Die Projektstruktur aufgeschlüsselt: was jede Datei macht</h4>
 <p class="mb-2">Links ist der Projektnavigator; als Einsteiger brauchst du nur diese zu kennen:</p>
 <div class="figure">
-<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" fill="#fafafa" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ Projektstammverzeichnis</text>
-      <rect x="30" y="42" width="540" height="225" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="#eef2ff" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="#1e1b4b" font-weight="bold">MyFirstApp/ (Code-Ordner)</text>
-      <text x="66" y="100" font-size="10" fill="#374151">├ MyFirstAppApp.swift  ← Einstiegspunkt</text>
-      <text x="66" y="120" font-size="10" fill="#374151">├ ContentView.swift  ← Hauptansicht</text>
-      <text x="66" y="140" font-size="10" fill="#374151">└ Assets.xcassets  ← Symbole, Bilder, Farben</text>
-      <text x="56" y="166" font-size="10" fill="#6b7280">(neue Dateien kommen in diesen Ordner)</text>
-      <text x="56" y="196" font-size="10" fill="#1e1b4b" font-weight="bold">Tab "Info" / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="#6b7280">App-Deklaration: Name, Berechtigungen, Einstellungen</text>
+<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ Projektstammverzeichnis</text>
+      <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
+      <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/ (Code-Ordner)</text>
+      <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift  ← Einstiegspunkt</text>
+      <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift  ← Hauptansicht</text>
+      <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets  ← Symbole, Bilder, Farben</text>
+      <text x="56" y="166" font-size="10" fill="var(--muted-2)">(neue Dateien kommen in diesen Ordner)</text>
+      <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">Tab "Info" / Info.plist</text>
+      <text x="66" y="216" font-size="10" fill="var(--muted-2)">App-Deklaration: Name, Berechtigungen, Einstellungen</text>
       <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
       <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">weitere wichtige Orte</text>
-      <text x="331" y="100" font-size="10" fill="#374151">📁 Preview Content/  ← Vorschau-Material</text>
-      <text x="331" y="122" font-size="10" fill="#374151"><i class="fas fa-bullseye mr-1"></i> Target-Einstellungen (blaues Projekt-Symbol)</text>
-      <text x="331" y="142" font-size="10" fill="#6b7280">——Version, Mindestsystem und Signatur stehen hier</text>
-      <text x="331" y="168" font-size="10" fill="#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← Unit-Tests</text>
-      <text x="331" y="188" font-size="10" fill="#374151">📱 MyFirstAppUITests/ ← UI-Tests</text>
-      <text x="331" y="216" font-size="10" fill="#9ca3af">(die Testvorlage ist bereits erzeugt, Kapitel 67)</text>
+      <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/  ← Vorschau-Material</text>
+      <text x="331" y="122" font-size="10" fill="var(--ink-2)"><i class="fas fa-bullseye mr-1"></i> Target-Einstellungen (blaues Projekt-Symbol)</text>
+      <text x="331" y="142" font-size="10" fill="var(--muted-2)">——Version, Mindestsystem und Signatur stehen hier</text>
+      <text x="331" y="168" font-size="10" fill="var(--ink-2)"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← Unit-Tests</text>
+      <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← UI-Tests</text>
+      <text x="331" y="216" font-size="10" fill="var(--muted)">(die Testvorlage ist bereits erzeugt, Kapitel 67)</text>
     </svg>
 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">Abbildung 2: Die Xcode-Projektstruktur, die Einsteiger kennen müssen</p>
 </div>
@@ -12436,8 +12500,8 @@ func scheduleDailyReminder() {
     </div>
 
     <!-- Hinweis: Lesetage in Folge -->
-    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,#4f46e5,#7c3aed);color:#fff;border:none;">
-        <i class="fas fa-fire" aria-hidden="true" style="color:#fbbf24"></i>
+    <div id="streak-toast" class="restore-position-toast" role="alert" style="background:linear-gradient(135deg,var(--accent-book),#7c3aed);color:var(--ink-inverse);border:none;">
+        <i class="fas fa-fire" aria-hidden="true" style="color:var(--gold-2)"></i>
         <span id="streak-toast-text">Tag X am Stück gelesen!</span>
     </div>
 
@@ -12455,7 +12519,7 @@ func scheduleDailyReminder() {
 
     <!-- Schaltfläche «Nach oben» -->
     <button id="back-to-top" class="opacity-0 invisible" aria-label="Nach oben">
-        <svg class="progress-ring" viewBox="0 0 40 40">
+        <svg class="progress-ring" viewBox="0 0 40 40" aria-hidden="true">
             <circle class="bg" cx="20" cy="20" r="18"/>
             <circle class="fg" cx="20" cy="20" r="18" stroke-dasharray="113.1" stroke-dashoffset="113.1"/>
         </svg>
