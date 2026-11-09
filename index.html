@@ -9,15 +9,15 @@
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%234f46e5'/%3E%3Crect x='20' y='10' width='24' height='44' rx='4' fill='%23ffffff'/%3E%3Crect x='24' y='16' width='16' height='28' rx='2' fill='%234f46e5'/%3E%3Ccircle cx='32' cy='49' r='2' fill='%234f46e5'/%3E%3C/svg%3E">
     <link rel="apple-touch-icon" href="icons/icon-192.png">
     <link rel="manifest" href="manifest.webmanifest">
-    <meta name="description" content="《你缺失的那门手机课》：84 章 · 18.1 万字的开源手机素养教材，19 种语言（含 RTL），PWA 离线阅读 / Android APK / LaTeX PDF / 章节自测 / MCP Server。全民数字素养与反诈教育开源项目。">
+    <meta name="description" content="《你缺失的那门手机课》：最新版 v1.9 共 120 章 · 28 万字，完整版已译 19 种语言（含 RTL），PWA 离线阅读 / Android APK / LaTeX PDF / 章节自测 / MCP Server。全民数字素养与反诈教育开源项目。">
     <meta name="theme-color" content="var(--brand)">
     <meta property="og:type" content="book">
     <meta property="og:site_name" content="你缺失的那门手机课">
-    <meta property="og:title" content="你缺失的那门手机课 — 84 章 · 19 种语言的开源手机素养教材">
-    <meta property="og:description" content="从认识硬件到用 AI 做出第一个 App：84 章 · 18.1 万字 · 19 种语言（含 RTL）· PWA 离线 · APK · LaTeX PDF · 自动化质检 0 错误。开源免费。">
+    <meta property="og:title" content="你缺失的那门手机课 — 120 章 · 28 万字的开源手机素养教材">
+    <meta property="og:description" content="从认识硬件到用 AI 做出第一个 App：最新版 v1.9 120 章 · 28 万字；完整版已译 19 种语言（含 RTL）· PWA 离线 · APK · LaTeX PDF · 自动化质检 0 错误。开源免费。">
     <meta property="og:image" content="icons/icon-512.png">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="你缺失的那门手机课 — 84 章 · 19 语言开源教材">
+    <meta name="twitter:title" content="你缺失的那门手机课 — 120 章开源手机素养教材">
     <meta name="twitter:description" content="从认识硬件到用 AI 做出第一个 App：19 种语言 · PWA 离线 · APK · PDF · 自动化质检 0 错误。">
     <script type="application/ld+json">
     {
@@ -25,7 +25,7 @@
       "@type": "Book",
       "name": "你缺失的那门手机课",
       "alternateName": "Your Missing Phone Class",
-      "description": "面向普通人的开源手机素养教材：84 章、18.1 万字，覆盖硬件、安全、生活场景与 AI 编程实战，已翻译为 19 种语言。",
+      "description": "面向普通人的开源手机素养教材：最新版 v1.9 共 120 章、28 万字，覆盖硬件、安全、生活场景与 AI 编程实战，完整版已翻译为 19 种语言。",
       "inLanguage": ["zh-CN","zh-TW","yue","en","ko","ja","ru","it","pt","es","fr","de","ar","he","th","id","ms","el","lzh"],
       "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
       "author": {"@type": "Organization", "name": "ClassTechStar"},
@@ -61,7 +61,7 @@
         --paper: #FDFDFE;
         --paper-tint: #EDF3FE;
         --accent: #FF6B35;
-        --brand: var(--brand);
+        --brand: #165DFF;
         --line: var(--lg-t25);
         --shadow-card: 0 20px 40px var(--lg-t1);
         --lg-nav-bg: var(--lg-t2);
@@ -73,7 +73,7 @@
         --lg-btn-ghost: var(--lg-t8);
         --font-body: "Noto Sans SC", system-ui, -apple-system, sans-serif;
         --shadow-ring: 0 0 0 3px rgba(22, 93, 255, 0.35);
-        --lg-bg: var(--lg-bg-t);
+        --lg-bg: rgba(255, 255, 255, 0.52);
         --lg-hi: rgba(255, 255, 255, 0.72);
         --lg-hi2: rgba(15, 23, 42, 0.06);
         --lg-sh: rgba(15, 23, 42, 0.12);
@@ -130,7 +130,7 @@
     --ink: #0B0E13;
     --paper: #FDFDFE;
     --accent: #FF6B35;
-    --brand: var(--brand);
+    --brand: #165DFF;
     --brand-deep: #0E42D2;
     --line: var(--lg-t25);
 }
@@ -179,7 +179,7 @@
            降级：?safe=1、prefers-reduced-transparency、打印 均自动关闭 */
         html.lg-ready:not(.lg-off):not(.safe) {
             --lg-f: blur(16px) saturate(1.8);
-            --lg-bg: var(--lg-bg-t);
+            --lg-bg: rgba(255, 255, 255, 0.52);
             --lg-hi: inset 0 1px 0 var(--lg-t10), inset 0 -1px 0 var(--lg-t11);
             --lg-sh: 0 8px 32px var(--lg-t12);
         }
@@ -500,7 +500,7 @@
                         无论你用的是安卓还是 iOS，是千元机还是旗舰机，这本书都会陪你从最基础的"认识手机硬件"开始，一步步掌握文件管理、网络设置、应用管控等核心技能，让你从"被动使用"手机变成"主动掌控"手机。
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="v1.8/zh-CN.html#di-ling-zhang" class="px-8 py-3.5 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-lg shadow-white/20">
+                        <a href="v1.9/zh-CN.html#di-ling-zhang" class="px-8 py-3.5 bg-white text-primary font-semibold rounded-xl hover:bg-gray-100 transition-colors shadow-lg shadow-white/20">
                             <i class="fas fa-play mr-2"></i>开始阅读第零章
                         </a>
                         <a href="quiz.html" class="px-8 py-3.5 bg-accent text-white font-semibold rounded-xl hover:opacity-90 transition-shadow shadow-lg">
@@ -521,12 +521,12 @@
                             <div class="w-full h-full bg-gradient-to-b from-blue-600 to-blue-900 flex flex-col items-center justify-center text-white p-6">
                                 <i class="fas fa-mobile-alt text-6xl mb-6 opacity-80"></i>
                                 <div class="text-center">
-                                    <p class="text-lg font-bold mb-1">84 区块</p>
+                                    <p class="text-lg font-bold mb-1">120 章</p>
                                     <p class="text-sm opacity-70">内容总量</p>
                                 </div>
                                 <div class="w-full h-px bg-white/20 my-4"></div>
                                 <div class="text-center">
-                                    <p class="text-lg font-bold mb-1">v1.8</p>
+                                    <p class="text-lg font-bold mb-1">v1.9</p>
                                     <p class="text-sm opacity-70">最新版本</p>
                                 </div>
                                 <div class="w-full h-px bg-white/20 my-4"></div>
@@ -600,11 +600,11 @@
         <div class="container mx-auto px-4">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center text-white">
                 <div>
-                    <p class="text-4xl md:text-5xl font-black mb-2">84</p>
-                    <p class="text-blue-200 text-sm">内容区块</p>
+                    <p class="text-4xl md:text-5xl font-black mb-2">120</p>
+                    <p class="text-blue-200 text-sm">最新版章节</p>
                 </div>
                 <div>
-                    <p class="text-4xl md:text-5xl font-black mb-2">v1.8</p>
+                    <p class="text-4xl md:text-5xl font-black mb-2">v1.9</p>
                     <p class="text-blue-200 text-sm">最新版本</p>
                 </div>
                 <div>
@@ -1635,7 +1635,7 @@
                         <i class="fas fa-mobile-alt text-primary text-xl"></i>
                         <span class="font-bold text-white">你缺失的那门手机课</span>
                     </div>
-                    <p class="text-sm leading-relaxed">开源免费的全民手机素养教材：84 章，18.1 万字，19 种语言。从认识硬件，讲到用 AI 做出第一个 App。</p>
+                    <p class="text-sm leading-relaxed">开源免费的全民手机素养教材：最新版 v1.9 共 120 章、28 万字，完整版已译 19 种语言。从认识硬件，讲到用 AI 做出第一个 App。</p>
                     <p class="text-xs mt-3">内容与代码采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" rel="noopener" class="text-blue-300 hover:underline">CC BY-NC-SA 4.0</a> 许可。</p>
                 </div>
                 <div>

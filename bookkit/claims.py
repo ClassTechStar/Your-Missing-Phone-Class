@@ -93,6 +93,14 @@ def check_claims(root: Path, mf) -> list:
                                     file=readme_rel))
 
     # ---------- index.html ----------
+    # 双版本口径：default 版（v1.8）是 19 语言完整翻译版；仓库中版本号最大的
+    # 目录（v1.9）是最新版（中文先行）。统计区以最新版口径标注。
+    ver_dirs = [p.name for p in root.iterdir()
+                if p.is_dir() and re.fullmatch(r'v[\d.]+', p.name)]
+    newest = max(ver_dirs,
+                 key=lambda v: [int(x) for x in v.lstrip('v').split('.')]) if ver_dirs else version
+    newest_real = _stats(mf, root, newest)
+
     index_rel = cfg.get("index", "index.html")
     index_path = root / index_rel
     if not index_path.is_file():
@@ -107,17 +115,17 @@ def check_claims(root: Path, mf) -> list:
                                     f"index.html 含过期字符串 {s!r}", file=index_rel, line=line))
 
         stats = [s.strip() for s in RE_INDEX_STAT.findall(idx)]
-        if str(expected_sections) not in stats:
+        if newest not in stats:
             issues.append(Issue("claims", ERROR,
-                                f"index.html 统计区未标注内容区块数 {expected_sections}",
+                                f"index.html 统计区未标注最新版本 {newest}",
                                 file=index_rel, detail=f"实测统计值={stats}"))
-        if version not in stats:
+        if str(newest_real["sections"]) not in stats:
             issues.append(Issue("claims", ERROR,
-                                f"index.html 统计区未标注最新版本 {version}",
+                                f"index.html 统计区未标注最新版章节数 {newest_real['sections']}",
                                 file=index_rel, detail=f"实测统计值={stats}"))
         if str(real["languages"]) not in stats:
             issues.append(Issue("claims", ERROR,
-                                f"index.html 统计区未标注语言数 {real['languages']}",
+                                f"index.html 统计区未标注完整翻译版语言数 {real['languages']}",
                                 file=index_rel, detail=f"实测统计值={stats}"))
 
         marks = [(mm.group('ver'), mm.group('kind')) for mm in RE_INDEX_AUTOGEN.finditer(idx)]
