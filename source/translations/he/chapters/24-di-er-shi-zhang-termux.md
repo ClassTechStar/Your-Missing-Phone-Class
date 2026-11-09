@@ -15,25 +15,25 @@ kind: supplement
 
 שניים, פונקציות ותכונות מרכזיות
 
-🖥️ סביבת לינוקס מלאה
+סביבת לינוקס מלאה
 
 #### שניים, פונקציות ותכונות מרכזיות
 
-##### 🖥️ סביבת לינוקס מלאה
+##### סביבת לינוקס מלאה
 
 Termux<strong>Bash מובנה בלבד</strong>Shell. ל-Zsh/fish, התקן ידנית:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Termux: Vim/Nano/Emacs. "pkg install" 2000+ חבילות, GCC, OpenSSH, SQLMap.
 
-##### 📦 ניהול חבילות חזק
+##### ניהול חבילות חזק
 
 חיבור SSH מרוחק
 
-##### 🔒 פונקציות אבטחה ורשת
+##### פונקציות אבטחה ורשת
 
 - <strong>כלי הצפנה</strong>: מספק כלי הצפנה כמו OpenSSL, תומך בהצפנת נתונים ותקשורת מאובטחת.
 - <strong>בניית שרת</strong>: ניתן להגדיר Nginx או Apache לבניית שרת אתרים סטטיים.
-- <strong>🔧 שילוב מערכת והרחבה</strong>גישה להרשאות אחסון הטלפון לניהול קבצים מקומי.
+- <strong>שילוב מערכת והרחבה</strong>גישה להרשאות אחסון הטלפון לניהול קבצים מקומי.
 
-##### 🔧 שילוב מערכת והרחבה
+##### שילוב מערכת והרחבה
 
 - תומך בחיבור מקלדת בלוטות' וצגים חיצוניים, עם תמיכה מלאה בעכבר.
 - שלוש, מערכת אקולוגית של תוספים
@@ -85,35 +85,35 @@ Termux<strong>Bash מובנה בלבד</strong>Shell. ל-Zsh/fish, התקן יד
 <i class="fas fa-exclamation-triangle mr-2"></i>ארבע, מדריך התקנה והגדרה
 
 {class="mt-1"}
-📥 שלבי התקנה
+שלבי התקנה
 :::
 
 #### ארבע, מדריך התקנה והגדרה
 
-##### 📥 שלבי התקנה
+##### שלבי התקנה
 
 1. <strong>אתחול המערכת</strong>: לאחר ההפעלה הראשונה המתן עד להשלמת "Installing bootstrap packages".
 2. <strong>קבלת הרשאות אחסון</strong>: הרץ את
 3. <strong>termux-setup-storage</strong>לעדכון רשימת החבילות.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">עדכון מקורות תוכנה</code>: הרץ את
 4. <strong>pkg update &amp;&amp; pkg upgrade</strong>לעדכון רשימת החבילות.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">התקן את Python:</code>החלפת מקור מראה
 
-##### ⚙️ אופטימיזציה בסיסית
+##### אופטימיזציה בסיסית
 
 - <strong>termux-change-repo</strong>כדי להחליף מקור מראה דרך ממשק גרפי (מומלץ מקור המראה של אוניברסיטת Tsinghua).<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">הגדרת מקשי קיצור</code>: מקש הורדת עוצמת הקול מדמה Ctrl, מקש העלאת עוצמת הקול מדמה Esc, לשיפור יעילות הקלט.
 - <strong>עיצוב ממשק</strong>: התקן Zsh + Oh My Zsh, הגדר ערכות נושא ותוספים.
-- <strong>חמישה, תרחישי שימוש אופייניים</strong>💻 בדיקות פיתוח במובייל
+- <strong>חמישה, תרחישי שימוש אופייניים</strong>בדיקות פיתוח במובייל
 
 #### חמישה, תרחישי שימוש אופייניים
 
-##### 💻 בדיקות פיתוח במובייל
+##### בדיקות פיתוח במובייל
 
 נהל שרתים מרחוק דרך SSH, בצע משימות תחזוקת מערכת, ניתוח יומנים ועוד, טפל בבעיות שרת בכל זמן ובכל מקום.
 
-##### 🖥️ תפעול ותחזוקת שרתים
+##### תפעול ותחזוקת שרתים
 
 מספק סביבת לינוקס אמיתית, פלטפורמה אידיאלית ללימוד שורת פקודה וניהול מערכת, ניתן לתרגל כתיבת סקריפטים ב-Shell, ניהול הרשאות קבצים ופקודות בסיסיות.
 
-##### 📚 למידת פעולות לינוקס
+##### למידת פעולות לינוקס
 
 Linux אמיתי, ללימוד Shell והרשאות ( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> הגדרת סיביות הרשאה rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> שינוי בעלות קובץ,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> הצגת owner/group/other 3 קבוצות 9 סיביות) ופקודות בסיסיות. זהו מודל ההרשאות הקלאסי של Unix/Linux (owner / group / other × קריאה / כתיבה / ביצוע), שונה לחלוטין מ-ACL של NTFS ב-Windows.
 

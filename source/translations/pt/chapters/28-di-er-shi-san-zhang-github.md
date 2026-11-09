@@ -71,7 +71,7 @@ Resumindo: <strong>Git cuida de "como registrar alterações", GitHub cuida de "
 
 #### 3. Conceitos e funcionalidades principais do GitHub
 
-##### 📁 Conceitos básicos
+##### Conceitos básicos
 
 Antes de colocar a mão na massa, conheça alguns termos de alta frequência, senão a interface do GitHub vai parecer grego:
 
@@ -84,7 +84,7 @@ Antes de colocar a mão na massa, conheça alguns termos de alta frequência, se
 - <strong>Issue</strong>: usado para registrar bugs, solicitações de funcionalidades, tópicos de discussão. Cada issue funciona como um post de discussão, podendo atribuir responsáveis e adicionar etiquetas.
 - <strong>Fork</strong>: copiar o repositório de outra pessoa para sua própria conta. Você pode modificar livremente na sua cópia sem afetar o repositório original. Depois de pronto, pode enviar um PR ao autor original, solicitando a mesclagem das suas melhorias.
 
-##### 🛠️ Funcionalidades principais
+##### Funcionalidades principais
 
 O GitHub oferece não apenas armazenamento de código, mas também:
 
@@ -99,14 +99,14 @@ O GitHub oferece não apenas armazenamento de código, mas também:
 
 #### 4. Registro e primeiros passos: crie seu primeiro repositório em cinco minutos
 
-##### 📝 Registrar conta
+##### Registrar conta
 
 1. Acesse <a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a>, clique em "Sign up".
 2. Preencha o e-mail, defina a senha e o nome de usuário (o nome de usuário aparecerá no endereço da sua página pessoal; recomenda-se usar inglês, por exemplo <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/seunome</code>).
 3. Complete a verificação de e-mail e a verificação de humano.
 4. Escolha o plano gratuito (Free) — é totalmente suficiente para usuários individuais.
 
-##### 📁 Criar o primeiro repositório
+##### Criar o primeiro repositório
 
 1. Após fazer login, clique no "+" no canto superior direito e selecione "New repository".
 2. Preencha o nome do repositório (Repository name), por exemplo <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">meu-primeiro-projeto</code>.
@@ -150,11 +150,11 @@ Este fluxo garante que <strong>nenhum código entre no branch principal sem pass
 
 #### 7. Cenários típicos de aplicação do GitHub
 
-##### 🎓 Estudantes participando de competições e projetos de curso
+##### Estudantes participando de competições e projetos de curso
 
 Estudantes de ciência da computação que participam de ACM, hackathons, projetos de conclusão de curso — quase todos dependem do GitHub. Ele serve tanto como plataforma de colaboração em equipe quanto como vitrine de trabalhos — os juízes da competição podem ver diretamente seu repositório, avaliando a qualidade do código e o processo de colaboração. Muitas empresas também pedem o link do GitHub no processo de recrutamento, como comprovação de capacidade técnica.
 
-##### 📚 Base de conhecimento pessoal e hospedagem de notas
+##### Base de conhecimento pessoal e hospedagem de notas
 
 Não programadores também podem usar o GitHub. Muitas pessoas o usam para hospedar notas de estudo, blogs técnicos (com GitHub Pages, é possível criar sites gratuitamente), e-books. Escrita em formato Markdown + gerenciamento de versão com Git + backup na nuvem — três em um.
 
@@ -162,7 +162,7 @@ Não programadores também podem usar o GitHub. Muitas pessoas o usam para hospe
 
 O GitHub é o núcleo do movimento global de código aberto. Você pode fazer Fork de projetos que gosta, modificá-los e enviar PRs para retribuir à comunidade; ou simplesmente dar Star para colecionar bons projetos e acompanhar as atualizações. Participar de código aberto é uma excelente forma de aprimorar suas habilidades técnicas e construir reputação.
 
-##### 🤖 Implantação automatizada e CI/CD
+##### Implantação automatizada e CI/CD
 
 Com o GitHub Actions, é possível implementar um fluxo totalmente automatizado de "código push → teste automático + implantação automática no servidor". Muitos blogs pessoais e sites de documentação são construídos assim — escreva o artigo, faça push, e o site se atualiza automaticamente.
 

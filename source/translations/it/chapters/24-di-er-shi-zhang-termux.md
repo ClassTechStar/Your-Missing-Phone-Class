@@ -19,21 +19,21 @@ Il vantaggio principale di Termux è la leggerezza e l'alta estendibilità, adat
 
 #### 2. Funzioni e caratteristiche principali
 
-##### 🖥️ Ambiente Linux completo
+##### Ambiente Linux completo
 
 Termux <strong>include solo Bash</strong> come shell. Per usare altre shell come Zsh o fish, occorre installarle manualmente col gestore pacchetti, ad esempio: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> o <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Termux supporta editor come Vim, Nano ed Emacs e offre un'esperienza a riga di comando vicina a quella nativa. Con "pkg install" si possono installare oltre 2000 pacchetti, inclusi strumenti di sviluppo e sicurezza come GCC, OpenSSH, SQLMap.
 
-##### 📦 Gestione pacchetti potente
+##### Gestione pacchetti potente
 
 Usa il gestore pacchetti APT (simile a Debian e Ubuntu), consente di installare migliaia di pacchetti Linux, coprendo strumenti di sviluppo, di rete e altro. Supporta ambienti per numerosi linguaggi di programmazione: Python, Ruby, Node.js, Go, Rust, Swift, ecc.
 
-##### 🔒 Funzioni di sicurezza e di rete
+##### Funzioni di sicurezza e di rete
 
 - <strong>Connessione SSH remota</strong>: supporta client e server SSH, permette di connettersi a dispositivi remoti o di far diventare il telefono un host SSH.
 - <strong>Strumenti di cifratura</strong>: fornisce strumenti come OpenSSL per cifratura dati e comunicazioni sicure.
 - <strong>Allestimento server</strong>: si possono configurare Nginx o Apache per allestire un server web statico.
 
-##### 🔧 Integrazione di sistema ed estensioni
+##### Integrazione di sistema ed estensioni
 
 - Accesso ai permessi di archiviazione del telefono per la gestione locale dei file.
 - Tramite il plugin Termux:API richiama funzioni hardware Android come sensori e fotocamera.
@@ -90,14 +90,14 @@ Termux e i suoi plugin vanno installati dalla stessa fonte, perché condividono 
 
 #### 4. Guida all'installazione e alla configurazione
 
-##### 📥 Fasi di installazione
+##### Fasi di installazione
 
 1. <strong>Scarica l'app</strong>: scarica e installa Termux dai canali ufficiali (F-Droid o GitHub), senza permessi di root.
 2. <strong>Inizializza il sistema</strong>: al primo avvio attendi il completamento di "Installing bootstrap packages".
 3. <strong>Ottieni i permessi di archiviazione</strong>: esegui <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> per ottenere i permessi sul file system del telefono.
 4. <strong>Aggiorna i repository</strong>: esegui <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> per aggiornare l'elenco dei pacchetti.
 
-##### ⚙️ Ottimizzazioni di base
+##### Ottimizzazioni di base
 
 - <strong>Cambio mirror</strong>: usa il comando <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code> per cambiare mirror tramite interfaccia grafica (consigliato il mirror dell'Università Tsinghua).
 - <strong>Scorciatoie da tastiera</strong>: il tasto volume giù simula Ctrl, il volume su simula Esc, per migliorare l'efficienza di input.
@@ -105,15 +105,15 @@ Termux e i suoi plugin vanno installati dalla stessa fonte, perché condividono 
 
 #### 5. Scenari applicativi tipici
 
-##### 💻 Sviluppo e test su mobile
+##### Sviluppo e test su mobile
 
 Allestisci sul telefono un ambiente di sviluppo completo, scrivi ed esegui script Python, usa GCC per compilare programmi C, gestisci repository di codice con Git, sincronizzati con server remoti tramite SSH.
 
-##### 🖥️ Operations dei server
+##### Operations dei server
 
 Gestisci da remoto i server tramite SSH, esegui manutenzione di sistema, analisi dei log e altri compiti, per occuparti dei problemi del server in qualsiasi momento e luogo.
 
-##### 📚 Apprendimento di Linux
+##### Apprendimento di Linux
 
 Offre un ambiente Linux reale, una piattaforma ideale per imparare la riga di comando e l'amministrazione di sistema; puoi esercitarti con la scrittura di script Shell, la gestione dei permessi dei file Linux (ad esempio <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> per impostare i permessi rwxr-xr-x, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> per modificare il proprietario del file, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> per vedere i nove bit di permesso dei tre gruppi owner/group/other) e altri comandi di base. Nota: questo è il classico modello di permessi "tre gruppi da nove bit" di Unix/Linux (owner / group / other × lettura / scrittura / esecuzione), un sistema completamente diverso dalle ACL di Windows NTFS.
 

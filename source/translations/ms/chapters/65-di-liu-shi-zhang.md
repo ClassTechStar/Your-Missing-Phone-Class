@@ -70,26 +70,26 @@ Di sebelah kiri ialah navigator projek; pemula hanya perlu mengenali beberapa in
 
 ::: div .figure
 ```html
-<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" fill="#fafafa" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ direktori akar projek</text>
-      <rect x="30" y="42" width="540" height="225" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="#eef2ff" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="#1e1b4b" font-weight="bold">MyFirstApp/ (direktori kod)</text>
-      <text x="66" y="100" font-size="10" fill="#374151">├ MyFirstAppApp.swift  ← pintu masuk program</text>
-      <text x="66" y="120" font-size="10" fill="#374151">├ ContentView.swift  ← antara muka utama</text>
-      <text x="66" y="140" font-size="10" fill="#374151">└ Assets.xcassets  ← ikon, imej, warna</text>
-      <text x="56" y="166" font-size="10" fill="#6b7280">(semua fail baru letak dalam direktori ini)</text>
-      <text x="56" y="196" font-size="10" fill="#1e1b4b" font-weight="bold">Tab Info / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="#6b7280">Pengisytiharan aplikasi: nama, kebenaran, tetapan</text>
+<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ direktori akar projek</text>
+      <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
+      <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/ (direktori kod)</text>
+      <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift  ← pintu masuk program</text>
+      <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift  ← antara muka utama</text>
+      <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets  ← ikon, imej, warna</text>
+      <text x="56" y="166" font-size="10" fill="var(--muted-2)">(semua fail baru letak dalam direktori ini)</text>
+      <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">Tab Info / Info.plist</text>
+      <text x="66" y="216" font-size="10" fill="var(--muted-2)">Pengisytiharan aplikasi: nama, kebenaran, tetapan</text>
       <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
       <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">Kedudukan penting lain</text>
-      <text x="331" y="100" font-size="10" fill="#374151">📁 Preview Content/  ← bahan pratonton</text>
-      <text x="331" y="122" font-size="10" fill="#374151"><i class="fas fa-bullseye mr-1"></i> Tetapan Target (ikon projek biru)</text>
-      <text x="331" y="142" font-size="10" fill="#6b7280">— nombor versi, sistem minimum dan tandatangan semua di sini</text>
-      <text x="331" y="168" font-size="10" fill="#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← ujian unit</text>
-      <text x="331" y="188" font-size="10" fill="#374151">📱 MyFirstAppUITests/ ← ujian paparan</text>
-      <text x="331" y="216" font-size="10" fill="#9ca3af">(templat ujian sudah dijana, guna di Bab 67)</text>
+      <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/  ← bahan pratonton</text>
+      <text x="331" y="122" font-size="10" fill="var(--ink-2)"><i class="fas fa-bullseye mr-1"></i> Tetapan Target (ikon projek biru)</text>
+      <text x="331" y="142" font-size="10" fill="var(--muted-2)">— nombor versi, sistem minimum dan tandatangan semua di sini</text>
+      <text x="331" y="168" font-size="10" fill="var(--ink-2)"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← ujian unit</text>
+      <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← ujian paparan</text>
+      <text x="331" y="216" font-size="10" fill="var(--muted)">(templat ujian sudah dijana, guna di Bab 67)</text>
     </svg>
 ```
 

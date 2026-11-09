@@ -38,7 +38,7 @@ Lors de la publication d'une mise à jour système ou d'une image, le fabricant 
 
 Le verrouillage BL est le premier maillon de toute la chaîne de démarrage sécurisé. Une fois la vérification réussie, il charge et exécute le programme de démarrage suivant (par exemple le noyau), garantissant ainsi de proche en proche la fiabilité de l'environnement de démarrage du système.
 
-##### 📊 Verrouillé vs déverrouillé : l'impact à double tranchant du BL
+##### Verrouillé vs déverrouillé : l'impact à double tranchant du BL
 
 Pour mieux comprendre les avantages et les inconvénients du verrouillage BL, nous utilisons un tableau comparatif pour montrer les différences sur 5 dimensions clés :
 

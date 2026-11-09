@@ -19,21 +19,21 @@ kind: supplement
 
 #### II. Βασικές λειτουργίες και χαρακτηριστικά
 
-##### 🖥️ Πλήρες περιβάλλον Linux
+##### Πλήρες περιβάλλον Linux
 
 Termux <strong>Μόνο ενσωματωμένο Bash</strong> Shell.ZshfishShell, χειροκίνητο εγκατάσταση,:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>ή<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>.TermuxVim, Nano, Emacs Επεξεργασία, εγγενές Εντολή.Χρήστης "pkg install"εγκατάσταση 2000+,GCC, OpenSSH, SQLMap Ασφάλεια.
 
-##### 📦 Ισχυρός package manager
+##### Ισχυρός package manager
 
 Χρήση APT (όπως Debian, Ubuntu), εγκαθιστά χιλιάδες πακέτα Linux, εργαλεία ανάπτυξης και δικτύου. Υποστηρίζει Python, Ruby, Node.js, Go, Rust, Swift.
 
-##### 🔒 Ασφάλεια και δίκτυο
+##### Ασφάλεια και δίκτυο
 
 - <strong>SSH απομακρυσμένη σύνδεση</strong>. SSH client και server.
 - <strong>Εργαλείο κρυπτογράφησης</strong>. OpenSSL κ.λπ., κρυπτογράφηση και ασφαλής επικοινωνία.
 - <strong>Στήσιμο διακομιστή</strong>: Nginx ή Apache για static server.
 
-##### 🔧 Ενσωμάτωση και επέκταση
+##### Ενσωμάτωση και επέκταση
 
 - Πρόσβαση αποθήκευσης για τοπική διαχείριση αρχείων.
 - Καλέστε αισθητήρες και κάμερα Android μέσω Termux:API.
@@ -90,14 +90,14 @@ Termux <strong>Μόνο ενσωματωμένο Bash</strong> Shell.ZshfishShel
 
 #### IV. Οδηγός εγκατάστασης και ρύθμισης
 
-##### 📥 Βήματα εγκατάστασης
+##### Βήματα εγκατάστασης
 
 1. <strong>Λήψη εφαρμογής</strong>: Από F-Droid ή GitHub, χωρίς root.
 2. <strong>Αρχικοποίηση συστήματος</strong>. Περιμένετε "Installing bootstrap packages".
 3. <strong>Λήψη δι και ωμάτων αποθήκευσης</strong>: εκτέλεση<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>Λήψη δι και ωμάτων συστήματος αρχείων.
 4. <strong>Ενημέρωση πηγής λογισμικού</strong>: εκτέλεση<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>Ενημέρωση λίστας πακέτων.
 
-##### ⚙️ Βασική βελτιστοποίηση
+##### Βασική βελτιστοποίηση
 
 - <strong>Αλλαγή mirror</strong>: Χρήση<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code>Εντολή αλλαγής mirror μέσω γραφικού περιβάλλοντος (συνιστάται mirror του Πανεπιστημίου Tsinghua).
 - <strong>Ρυθμίσεις συντομεύσεων πληκτρολογίου</strong>. Τόνος- = Ctrl, τόνος+ = Esc, ταχύτητα.
@@ -105,15 +105,15 @@ Termux <strong>Μόνο ενσωματωμένο Bash</strong> Shell.ZshfishShel
 
 #### V. Τυπικά σενάρια χρήσης
 
-##### 💻 Mobile dev testing
+##### Mobile dev testing
 
 Στήστε ένα πλήρες περιβάλλον ανάπτυξης στο κινητό: γράψτε και τρέξτε Python scripts, μεταγλωττίστε C προγράμματα με GCC, διαχειριστείτε αποθετήρια με Git, συγχρονιστείτε με απομακρυσμένους servers μέσω SSH.
 
-##### 🖥️ Διαχείριση διακομιστή
+##### Διαχείριση διακομιστή
 
 Διαχειριστείτε διακομιστές μέσω SSH, συντήρηση και ανάλυση log, από παντού.
 
-##### 📚 Εκμάθηση Linux
+##### Εκμάθηση Linux
 
 Linux, Εντολή Σύστημα Πλατφόρμα, ShellScript, Linux Αρχείο Δικαίωμα( <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> Ορισμός δι και ωμάτων rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> Αλλαγή ιδιοκτησίας αρχείου,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> Προβολή owner/group/other Δικαίωμα)βασικό Εντολή.Unix/Linux""Δικαίωμα(owner / group / other × / / ),Windows NTFSACL.
 

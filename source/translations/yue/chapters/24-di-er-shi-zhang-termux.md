@@ -19,21 +19,21 @@ Termux嘅核心優勢喺於輕量化同高度可擴展性，適合開發、學�
 
 #### 二、核心功能與特性
 
-##### 🖥️ 完整嘅Linux環境
+##### 完整嘅Linux環境
 
 Termux<strong>淨係內置Bash</strong>呢一種Shell。如果想使用Zsh或fish等其他Shell，需要通過包管理器手動安裝，例如：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>或<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>。同時Termux支援Vim、Nano、Emacs等編輯器，提供接近原生嘅命令行體驗。用戶可以通過"pkg install"安裝2000+軟件包，包括GCC、OpenSSH、SQLMap等開發同安全工具。
 
-##### 📦 強大嘅包管理
+##### 強大嘅包管理
 
 使用APT包管理器（類似Debian同Ubuntu），可安裝數千種Linux軟件包，涵蓋開發工具、網絡工具等。支援Python、Ruby、Node.js、Go、Rust、Swift等多種編程語言環境。
 
-##### 🔒 安全與網絡功能
+##### 安全與網絡功能
 
 - <strong>SSH遠端連接</strong>：支援SSH用戶端同伺服器功能，可遠端連接其他設備或等手機成為SSH主機。
 - <strong>加密工具</strong>：提供OpenSSL等加密工具，支援數據加密同安全通信。
 - <strong>伺服器搭建</strong>：可配置Nginx或Apache搭建靜態網頁伺服器。
 
-##### 🔧 系統集成與擴展
+##### 系統集成與擴展
 
 - 訪問手機存儲權限，實現本地檔案管理。
 - 通過Termux:API插件調用傳感器、鏡頭等Android硬件功能。
@@ -90,14 +90,14 @@ Termux同埋佢嘅插件必須從同一來源安裝，因為佢哋共享相同�
 
 #### 四、安裝與配置指南
 
-##### 📥 安裝步驟
+##### 安裝步驟
 
 1. <strong>下載應用</strong>：從官方渠道（F-Droid或GitHub）下載安裝Termux，無需root權限。
 2. <strong>初始化系統</strong>：首次啟動後等待"Installing bootstrap packages"完成。
 3. <strong>獲取存儲權限</strong>：執行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code>獲取手機檔案系統權限。
 4. <strong>更新軟件源</strong>：執行<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code>更新軟件包列表。
 
-##### ⚙️ 基礎優化
+##### 基礎優化
 
 - <strong>換鏡像源</strong>：使用<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code>命令通過圖形界面更換鏡像源（推薦清華大學鏡像源）。
 - <strong>快捷鍵設定</strong>：音量減鍵模擬Ctrl，音量加鍵模擬Esc，提升輸入效率。
@@ -105,15 +105,15 @@ Termux同埋佢嘅插件必須從同一來源安裝，因為佢哋共享相同�
 
 #### 五、典型應用場景
 
-##### 💻 移動開發測試
+##### 移動開發測試
 
 喺手機上搭建完整嘅開發環境，編寫並運行Python腳本，使用GCC編譯C程式，通過Git管理代碼倉庫，結合SSH同遠程伺服器同步。
 
-##### 🖥️ 伺服器運維
+##### 伺服器運維
 
 通過SSH遠程管理伺服器，執行系統維護、日誌分析等任務，隨時隨地處理伺服器問題。
 
-##### 📚 學習Linux操作
+##### 學習Linux操作
 
 提供真實嘅Linux環境，係學習命令行同埋系統管理嘅理想平臺，可練習Shell腳本編寫、Linux檔案權限管理（如 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> 設定 rwxr-xr-x 權限位、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> 修改檔案歸屬、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> 查看 owner/group/other 三組九位權限）等基礎命令。注意呢個係Unix/Linux經典嘅"三組九位"權限模型（owner / group / other × 讀 / 寫 / 執行），同Windows NTFS嘅ACL訪問控制列表係完全唔同嘅兩套體系。
 

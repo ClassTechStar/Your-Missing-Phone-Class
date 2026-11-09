@@ -38,7 +38,7 @@ Quando il produttore rilascia un aggiornamento di sistema o un'immagine, la firm
 
 Il BL lock è il primo anuncio dell'intera catena di avvio sicura. Solo dopo che la sua verifica ha esito positivo, carica ed esegue il programma di bootstrap della fase successiva (come il kernel), garantendo così stratificatamente l'attendibilità dell'ambiente di avvio del sistema.
 
-##### 📊 Lock vs Unlock: il duplice impatto del BL lock
+##### Lock vs Unlock: il duplice impatto del BL lock
 
 Per capire in modo più intuitivo pro e contro del BL lock, usiamo una tabella comparativa che mostra le differenze su 5 dimensioni chiave:
 

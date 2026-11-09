@@ -38,7 +38,7 @@ Pengeluar apabila keluarkan kemas kini sistem atau image, akan guna kunci periba
 
 Kunci BL adalah cincin pertama seluruh rantai boot selamat. Selepas lulus pengesahan, barulah muat dan laksanakan bootloader peringkat seterusnya (seperti kernel), lapis demi lapis pastikan persekitaran boot sistem boleh dipercayai.
 
-##### 📊 Kunci vs Buka kunci: Dua kesan kunci BL
+##### Kunci vs Buka kunci: Dua kesan kunci BL
 
 Pilih data mana yang boleh dikongsi dengan kontak (Foto, Gmail, Drive dll).
 

@@ -19,21 +19,21 @@ Keunggulan inti Termux terletak pada ringan dan sangat dapat diperluas, cocok un
 
 #### 2. Fungsi dan karakteristik inti
 
-##### 🖥️ Lingkungan Linux lengkap
+##### Lingkungan Linux lengkap
 
 Termux <strong>Hanya Built-in Bash</strong> satu jenis Shell ini. Jika ingin memakai Zsh atau fish dan Shell lain, perlu via package manager install manual, misalnya:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> atau<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Bersamaan Termux mendukung editor Vim, Nano, Emacs, dll., memberikan pengalaman command line mendekati native. Pengguna bisa via "pkg install" install 2000+ package, termasuk GCC, OpenSSH, SQLMap, dan tool development serta security lain.
 
-##### 📦 Manajemen paket yang kuat
+##### Manajemen paket yang kuat
 
-🔒 Fungsi keamanan dan jaringan
+Fungsi keamanan dan jaringan
 
-##### 🔒 Fungsi keamanan dan jaringan
+##### Fungsi keamanan dan jaringan
 
 - <strong>: Mendukung fungsi klien dan server SSH, dapat terhubung remote ke perangkat lain atau menjadikan ponsel sebagai host SSH.</strong> Alat enkripsi
 - <strong>: Menyediakan alat enkripsi seperti OpenSSL, mendukung enkripsi data dan komunikasi aman.</strong> Pembangunan server
-- <strong>: Dapat mengkonfigurasi Nginx atau Apache untuk membangun server halaman web statis.</strong>🔧 Integrasi sistem dan ekstensi
+- <strong>: Dapat mengkonfigurasi Nginx atau Apache untuk membangun server halaman web statis.</strong>Integrasi sistem dan ekstensi
 
-##### 🔧 Integrasi sistem dan ekstensi
+##### Integrasi sistem dan ekstensi
 
 - Memanggil fungsi perangkat keras Android seperti sensor, kamera melalui plugin Termux:API.
 - Mendukung koneksi keyboard Bluetooth dan layar eksternal, memiliki dukungan mouse lengkap.
@@ -90,14 +90,14 @@ Nama plugin
 
 #### 4. Panduan instalasi dan konfigurasi
 
-##### 📥 Langkah instalasi
+##### Langkah instalasi
 
 1. <strong>: Unduh dan instal Termux dari saluran resmi (F-Droid atau GitHub), tanpa perlu izin root.</strong> Inisialisasi sistem
 2. <strong>: Setelah pertama kali dijalankan tunggu "Installing bootstrap packages" selesai.</strong> Dapatkan izin penyimpanan
 3. <strong>: Jalankan</strong> pkg update &amp;&amp; pkg upgrade<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">untuk mendapatkan izin sistem file ponsel.</code> Update sumber perangkat lunak
-4. <strong>: Jalankan</strong> pkg update &amp;&amp; pkg upgrade<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">untuk memperbarui paket perangkat lunak.</code>⚙️ Optimasi dasar
+4. <strong>: Jalankan</strong> pkg update &amp;&amp; pkg upgrade<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">untuk memperbarui paket perangkat lunak.</code>Optimasi dasar
 
-##### ⚙️ Optimasi dasar
+##### Optimasi dasar
 
 - <strong>: Gunakan perintah</strong> termux-change-repo<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">untuk mengganti mirror source melalui antarmuka grafis (rekomendasi mirror Tsinghua University).</code> Pengaturan shortcut
 - <strong>: Tombol volume turun mensimulasikan Ctrl, tombol volume naik mensimulasikan Esc, meningkatkan efisiensi input.</strong> Pempercantik antarmuka
@@ -105,15 +105,15 @@ Nama plugin
 
 #### 5. Skenario aplikasi tipikal
 
-##### 💻 Pengujian pengembangan mobile
+##### Pengujian pengembangan mobile
 
-🖥️ Operasi dan pemeliharaan server
+Operasi dan pemeliharaan server
 
-##### 🖥️ Operasi dan pemeliharaan server
+##### Operasi dan pemeliharaan server
 
 📚 Belajar operasi Linux
 
-##### 📚 Belajar operasi Linux
+##### Belajar operasi Linux
 
 Menyediakan environment Linux nyata, adalah platform ideal untuk belajar command line dan manajemen sistem, bisa latih Shell scripting, manajemen permission file Linux (seperti <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> setel permission bit rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> modifikasi ownership file,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> lihat permission tiga kelompok sembilan bit owner/group/other) dan perintah dasar lain. Perhatikan ini adalah model permission "tiga kelompok sembilan bit" klasik Unix/Linux (owner / group / other × read / write / execute), berbeda total dengan ACL access control list Windows NTFS, dua sistem yang berbeda.
 

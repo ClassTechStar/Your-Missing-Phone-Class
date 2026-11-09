@@ -19,21 +19,21 @@ Termux's core advantages lie in its lightweight nature and high extensibility, s
 
 #### 2. Core Features and Characteristics
 
-##### 🖥️ Complete Linux Environment
+##### Complete Linux Environment
 
 Termux <strong>Only Bash is Built-in</strong> is the only built-in shell. If you want to use Zsh, fish, or other shells, you need to install them manually via the package manager, for example:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> or<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Termux also supports editors like Vim, Nano, and Emacs, providing a near-native command-line experience. Users can install 2000+ packages via "pkg install," including GCC, OpenSSH, SQLMap, and other development and security tools.
 
-##### 📦 Powerful Package Management
+##### Powerful Package Management
 
 Uses the APT package manager (similar to Debian and Ubuntu), can install thousands of Linux software packages, covering development tools, network tools, and more. Supports multiple programming language environments including Python, Ruby, Node.js, Go, Rust, and Swift.
 
-##### 🔒 Security and Network Features
+##### Security and Network Features
 
 - <strong>SSH remote connection</strong>: Supports SSH client and server features—connect to other devices remotely or turn your phone into an SSH host.
 - <strong>Encryption tools</strong>: Provides encryption tools like OpenSSL, supports data encryption and secure communication.
 - <strong>Server setup</strong>: Can configure Nginx or Apache to set up a static web server.
 
-##### 🔧 System Integration and Extension
+##### System Integration and Extension
 
 - Access phone storage permissions for local file management.
 - Call Android hardware features like sensors and cameras through the Termux:API plugin.
@@ -90,14 +90,14 @@ Termux and its plugins must be installed from the same source, because they shar
 
 #### 4. Installation and Configuration Guide
 
-##### 📥 Installation Steps
+##### Installation Steps
 
 1. <strong>Download the app</strong>: Download and install Termux from official channels (F-Droid or GitHub), no root permission required.
 2. <strong>Initialize the system</strong>: Wait for "Installing bootstrap packages" to complete after first launch.
 3. <strong>Get storage permission</strong>: Execute<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> to get phone file system permission.
 4. <strong>Update package sources</strong>: Execute<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">: Use the</code> to update the package list.
 
-##### ⚙️ Basic Optimization
+##### Basic Optimization
 
 - <strong>Change mirror source</strong>: Use the<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Enter</code> command to change the mirror source through a graphical interface (Tsinghua University mirror recommended).
 - <strong>Shortcut settings</strong>: Volume down key simulates Ctrl, volume up key simulates Esc, improving input efficiency.
@@ -105,15 +105,15 @@ Termux and its plugins must be installed from the same source, because they shar
 
 #### 5. Typical Use Cases
 
-##### 💻 Mobile Development Testing
+##### Mobile Development Testing
 
 Set up a complete development environment on your phone, write and run Python scripts, compile C programs with GCC, manage code repositories with Git, and sync with remote servers via SSH.
 
-##### 🖥️ Server Operations
+##### Server Operations
 
 Remotely manage servers via SSH, perform system maintenance, log analysis, and other tasks, handling server issues anytime, anywhere.
 
-##### 📚 Learning Linux Operations
+##### Learning Linux Operations
 
 Provides a real Linux environment, an ideal platform for learning the command line and system administration—you can practice Shell scripting and Linux file permission management (such as  <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">🔐 Network Security Testing</code> Install security tools like Nmap, SQLMap, Hydra, and Metasploit for network scanning and penetration testing.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">6. Version and Compatibility</code> The latest stable version of Termux is v0.118.2, suitable for devices with Android ≥ 7. Note that Termux may have instability on Android 12 and higher versions; recommend following the official update log for the latest compatibility information.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Provides a real Linux environment, making it an ideal platform for learning command line and system administration. You can practice Shell scripting, Linux file permission management (such as</code> chmod 755
 

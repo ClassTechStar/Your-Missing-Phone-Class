@@ -71,7 +71,7 @@ GitHub = απαραίτητο.
 
 #### 3. Βασικές έννοιες
 
-##### 📁 Βασικά
+##### Βασικά
 
 Όροι:
 
@@ -84,7 +84,7 @@ GitHub = απαραίτητο.
 - <strong>Issue</strong>: Bug/feature tracking.
 - <strong>Fork</strong>: Copy to account.
 
-##### 🛠️ Λειτουργίες
+##### Λειτουργίες
 
 Περισσότερα από storage:
 
@@ -99,14 +99,14 @@ GitHub = απαραίτητο.
 
 #### 4. Εγγραφή: 5 λεπτά
 
-##### 📝 Εγγραφή
+##### Εγγραφή
 
 1. Επισκεφθείτε<a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a>, "Sign up".
 2. Email/password/username:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/yourname</code>).
 3. Verify email.
 4. Free plan.
 
-##### 📁 Δημιουργία repo
+##### Δημιουργία repo
 
 1. + → New repository.
 2. Όνομα:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.
@@ -150,11 +150,11 @@ README = πρώτη εντύπωση.
 
 #### 7. Σενάρια
 
-##### 🎓 Φοιτητές
+##### Φοιτητές
 
 ACM/hackathons/thesis.
 
-##### 📚 Σημειώσεις
+##### Σημειώσεις
 
 Markdown+Git+cloud.
 
@@ -162,7 +162,7 @@ Markdown+Git+cloud.
 
 Fork/Star.
 
-##### 🤖 CI/CD
+##### CI/CD
 
 Push → auto deploy.
 

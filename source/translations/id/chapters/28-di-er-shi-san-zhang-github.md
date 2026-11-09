@@ -71,7 +71,7 @@ Singkatnya:<strong>Git mengurus "bagaimana mencatat perubahan", GitHub mengurus 
 
 #### 3. Konsep dan Fungsi Inti GitHub
 
-##### 📁 Konsep Dasar
+##### Konsep Dasar
 
 Sebelum mulai, kenali beberapa kata frekuensi tinggi, jika tidak antarmuka GitHub akan membingungkan:
 
@@ -84,7 +84,7 @@ Sebelum mulai, kenali beberapa kata frekuensi tinggi, jika tidak antarmuka GitHu
 - <strong>Issue</strong>: Digunakan untuk mencatat bug, permintaan fitur, topik diskusi. Setiap Issue seperti thread diskusi, bisa menugaskan penanggung jawab, memberi label.
 - <strong>Fork</strong>: Menyalin repository orang lain ke akun Anda sendiri, Anda bisa bebas mengubah di salinan Anda tanpa mempengaruhi repository asli. Setelah selesai bisa kirim PR ke penulis asli, minta merge perbaikan Anda.
 
-##### 🛠️ Fungsi Inti
+##### Fungsi Inti
 
 GitHub tidak hanya menyediakan penyimpanan kode, tetapi juga:
 
@@ -99,14 +99,14 @@ GitHub tidak hanya menyediakan penyimpanan kode, tetapi juga:
 
 #### 4. Registrasi dan Memulai: Buat Repository Pertama Anda dalam Lima Menit
 
-##### 📝 Registrasi Akun
+##### Registrasi Akun
 
 1. Kunjungi<a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a>, klik "Sign up".
 2. Isi email, setel kata sandi dan username (username akan muncul di alamat halaman pribadi Anda, disarankan menggunakan bahasa Inggris, misalnya<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/yourname</code>).
 3. Selesaikan verifikasi email dan verifikasi human-machine.
 4. Pilih paket gratis (Free) saja, sudah cukup untuk pengguna individu.
 
-##### 📁 Buat Repository Pertama
+##### Buat Repository Pertama
 
 1. Setelah login, klik tanda "+" di pojok kanan atas, pilih "New repository".
 2. Isi nama repository (Repository name), misalnya<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.
@@ -150,11 +150,11 @@ Workflow ini memastikan <strong>setiap kode ditinjau sebelum masuk ke branch uta
 
 #### 7. Skenario Aplikasi Tipikal GitHub
 
-##### 🎓 Mahasiswa Mengikuti Kompetisi dan Proyek Mata Kuliah
+##### Mahasiswa Mengikuti Kompetisi dan Proyek Mata Kuliah
 
 Mahasiswa ilmu komputer mengikuti ACM, hackathon, tugas akhir, hampir selalu membutuhkan GitHub. Ia bisa menjadi platform kolaborasi tim sekaligus jendela tampilan karya—juri kompetisi bisa langsung melihat repository Anda, memahami kualitas kode dan proses kolaborasi. Banyak perusahaan saat rekrutmen juga meminta melampirkan halaman GitHub, sebagai bukti kemampuan teknis.
 
-##### 📚 Hosting Basis Pengetahuan dan Catatan Pribadi
+##### Hosting Basis Pengetahuan dan Catatan Pribadi
 
 Non-programmer juga bisa menggunakan GitHub. Banyak orang menggunakannya untuk hosting catatan belajar, blog teknis (dengan GitHub Pages bisa membuat situs gratis), buku elektronik. Penulisan format Markdown + kontrol versi Git + backup cloud, tiga dalam satu.
 
@@ -162,7 +162,7 @@ Non-programmer juga bisa menggunakan GitHub. Banyak orang menggunakannya untuk h
 
 GitHub adalah pusat gerakan open source global. Anda bisa Fork proyek favorit, modifikasi lalu kirim PR untuk memberi balik ke komunitas; atau sekadar Star koleksi proyek bagus, lacak update. Berpartisipasi dalam open source adalah cara terbaik untuk meningkatkan teknis dan membangun reputasi.
 
-##### 🤖 Deployment Otomatis dan CI/CD
+##### Deployment Otomatis dan CI/CD
 
 Dengan GitHub Actions, bisa mengimplementasikan workflow otomatis penuh "kode push, otomatis test + otomatis deploy ke server". Banyak blog pribadi, situs dokumentasi dibangun seperti ini, setelah menulis artikel push, situs otomatis update.
 

@@ -19,21 +19,21 @@ A principal vantagem do Termux é sua leveza e alta escalabilidade, adequado par
 
 #### 2. Funcionalidades e características principais
 
-##### 🖥️ Ambiente Linux completo
+##### Ambiente Linux completo
 
 O Termux <strong>inclui apenas o Bash</strong> como shell nativo. Se quiser usar Zsh, fish ou outros shells, é necessário instalá-los manualmente pelo gerenciador de pacotes, por exemplo: <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> ou <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. O Termux também suporta editores como Vim, Nano, Emacs, oferecendo uma experiência de linha de comando quase nativa. Os usuários podem instalar mais de 2000 pacotes de software via "pkg install", incluindo ferramentas de desenvolvimento e segurança como GCC, OpenSSH, SQLMap.
 
-##### 📦 Gerenciamento de pacotes poderoso
+##### Gerenciamento de pacotes poderoso
 
 Usa o gerenciador de pacotes APT (semelhante ao Debian e Ubuntu), podendo instalar milhares de pacotes de software Linux, abrangendo ferramentas de desenvolvimento, ferramentas de rede, etc. Suporta múltiplas linguagens de programação como Python, Ruby, Node.js, Go, Rust, Swift.
 
-##### 🔒 Recursos de segurança e rede
+##### Recursos de segurança e rede
 
 - <strong>Conexão remota SSH</strong>: suporta funções de cliente e servidor SSH, permitindo conectar-se remotamente a outros dispositivos ou transformar o telefone em um host SSH.
 - <strong>Ferramentas de criptografia</strong>: oferece ferramentas como OpenSSL, suportando criptografia de dados e comunicação segura.
 - <strong>Montagem de servidores</strong>: pode configurar Nginx ou Apache para criar servidores web estáticos.
 
-##### 🔧 Integração e extensão do sistema
+##### Integração e extensão do sistema
 
 - Acesso à permissão de armazenamento do telefone para gerenciamento local de arquivos.
 - Através do plugin Termux:API, é possível acessar sensores, câmera e outros recursos de hardware do Android.
@@ -90,14 +90,14 @@ O Termux e seus plugins devem ser instalados da mesma fonte, pois compartilham o
 
 #### 4. Guia de instalação e configuração
 
-##### 📥 Etapas de instalação
+##### Etapas de instalação
 
 1. <strong>Baixar o aplicativo</strong>: baixe e instale o Termux de fontes oficiais (F-Droid ou GitHub), sem necessidade de root.
 2. <strong>Inicializar o sistema</strong>: após a primeira inicialização, aguarde a conclusão de "Installing bootstrap packages".
 3. <strong>Obter permissão de armazenamento</strong>: execute <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> para obter permissão de acesso ao sistema de arquivos do telefone.
 4. <strong>Atualizar fontes de software</strong>: execute <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> para atualizar a lista de pacotes.
 
-##### ⚙️ Otimizações básicas
+##### Otimizações básicas
 
 - <strong>Trocar espelho</strong>: use o comando <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code> para trocar o espelho via interface gráfica (recomenda-se o espelho da Universidade Tsinghua).
 - <strong>Configuração de atalhos</strong>: botão de volume para baixo simula Ctrl, botão de volume para cima simula Esc, aumentando a eficiência de digitação.
@@ -105,15 +105,15 @@ O Termux e seus plugins devem ser instalados da mesma fonte, pois compartilham o
 
 #### 5. Cenários típicos de aplicação
 
-##### 💻 Desenvolvimento e testes móveis
+##### Desenvolvimento e testes móveis
 
 Monte um ambiente de desenvolvimento completo no celular, escreva e execute scripts Python, compile programas C com GCC, gerencie repositórios de código com Git, sincronize com servidores remotos via SSH.
 
-##### 🖥️ Operações de servidor
+##### Operações de servidor
 
 Gerencie servidores remotamente via SSH, execute tarefas de manutenção de sistema, análise de logs, resolva problemas de servidor a qualquer hora e em qualquer lugar.
 
-##### 📚 Aprendizado de Linux
+##### Aprendizado de Linux
 
 Oferece um ambiente Linux real, sendo uma plataforma ideal para aprender linha de comando e gerenciamento de sistema. Permite praticar scripts Shell, gerenciamento de permissões de arquivos Linux (como <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> para definir bits de permissão rwxr-xr-x, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> para modificar a propriedade do arquivo, <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> para visualizar as permissões dos três grupos de nove bits de owner/group/other) e outros comandos básicos. Note que este é o modelo clássico de permissões Unix/Linux de "três grupos, nove bits" (owner / group / other × leitura / escrita / execução), que é um sistema completamente diferente das ACLs (listas de controle de acesso) do Windows NTFS.
 

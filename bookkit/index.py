@@ -27,9 +27,9 @@ BLOCK = """{start}
             </div>
 {end}"""
 
-CARD = """                <a href="{ver}/{code}.html" class="lang-card block bg-gradient-to-br {gradient} {card_extra}">
+CARD = """                <a href="{ver}/{code}.html" class="lang-card block {bg} {card_extra}">
                     <div class="flex items-center gap-3 mb-2">
-                        <span class="text-3xl">{flag}</span>
+                        {badge}
                         <div>
                             <h4 class="font-bold text-dark">{name}</h4>
                             <p class="text-xs {label_classes} font-semibold">{label}</p>
@@ -51,9 +51,22 @@ def _card(mf, version: str, code: str) -> str:
         desc = f'{meta.get("name", code)} {version}'
     suffix = card.get('label_suffix', '')
     label = f'{version} {suffix}'.strip()
+    # 语言的视觉徽标：优先 manifest badge 配置（文字徽章/FA 图标，去 emoji 化），
+    # 缺省回退 flag emoji。bg 为完整 Tailwind 背景类（渐变或单色）。
+    badge = meta.get('badge')
+    if badge and badge.get('fa'):
+        badge_html = ('<span class="text-3xl"><i class="' + badge['fa']
+                      + '" aria-hidden="true"></i></span>')
+    elif badge and badge.get('text'):
+        badge_html = ('<span class="' + badge.get('classes',
+                      'text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5')
+                      + '">' + badge['text'] + '</span>')
+    else:
+        badge_html = '<span class="text-3xl">' + meta.get('flag', '🌐') + '</span>'
     return CARD.format(
         ver=version, code=code,
-        gradient=meta.get('gradient', 'from-slate-50 to-slate-100'),
+        badge=badge_html,
+        bg=meta.get('gradient', 'bg-slate-50'),
         card_extra=card.get('card_extra', 'border border-gray-200 rounded-xl p-5 hover:shadow-lg'),
         flag=meta.get('flag', '🌐'),
         name=meta.get('name', code),
@@ -84,6 +97,18 @@ def _stats(mf, version: str) -> list:
     return [str(mf.expect_sections(version) or sections), version, str(len(files))]
 
 
+def _newest_version(mf) -> str:
+    """仓库中版本号最大的目录（如 v1.9，中文先行深编版）。
+
+    统计区以最新版口径标注：章节数/版本号取最新版，语言数按完整翻译版口径
+    （由调用方覆盖）。与 claims 的最新版断言保持同一口径。"""
+    dirs = [p.name for p in mf.root.iterdir()
+            if p.is_dir() and re.fullmatch(r'v[\d.]+', p.name)]
+    if not dirs:
+        return mf.latest_version()
+    return max(dirs, key=lambda v: [int(x) for x in v.lstrip('v').split('.')])
+
+
 def render_index(mf) -> str:
     path = mf.root / mf.data.get('claims', {}).get('index', 'index.html')
     html = path.read_text(encoding='utf-8')
@@ -109,7 +134,9 @@ def render_index(mf) -> str:
                 html = html[:pos] + '\n\n' + block + html[pos:]
 
     if versions:
-        stats = _stats(mf, mf.latest_version())
+        latest_files = mf.html_files(mf.latest_version())
+        stats = _stats(mf, _newest_version(mf))
+        stats[2] = str(len(latest_files))  # 语言数按完整翻译版（default 版）口径
         counter = {'i': 0}
 
         def sub(m):

@@ -71,7 +71,7 @@ Hakikat
 
 #### 3. Konsep Teras dan Fungsi GitHub
 
-##### 📁 Konsep Asas
+##### Konsep Asas
 
 : Rekod satu pengubahsuaian kod. Setiap Commit disertakan mesej maklumat, merakam "apa yang diubah kali ini, mengapa diubah". Ini adalah asas bagi Git/GitHub untuk "mengembalikan masa".
 
@@ -84,7 +84,7 @@ Hakikat
 - <strong>🛠️ Fungsi Teras</strong> GitHub menyediakan bukan sahaja storan kod, tetapi juga termasuk:
 - <strong>Kawalan versi</strong>: Merakam sejarah setiap perubahan kod, kod rosak boleh kembali ke versi normal sebelumnya bila-bila masa.
 
-##### 🛠️ Fungsi Teras
+##### Fungsi Teras
 
 : Menyokong pembangunan selari berbilang pengguna pada projek yang sama, ramai orang membangunkan serentak tidak akan menimpa, tidak akan berkonflik.
 
@@ -99,14 +99,14 @@ Hakikat
 
 #### 4. Pendaftaran dan Permulaan: Lima Minit Mencipta Repositori Pertama Anda
 
-##### 📝 Daftar akaun
+##### Daftar akaun
 
 1. github.com/yourname<a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">).</a>Selesaikan pengesahan e-mel dan pengesahan manusia-mesin.
 2. Pilih pelan percuma (Free) sudah memadai, untuk pengguna peribadi cukup sepenuhnya.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">📁 Cipta repositori pertama</code> Selepas log masuk klik tanda "+" di penjuru kanan atas, pilih "New repository".
 3. Isikan nama repositori (Repository name), contohnya
 4. my-first-project
 
-##### 📁 Cipta repositori pertama
+##### Cipta repositori pertama
 
 1. Tulis satu penerangan ringkas (Description), membiarkan orang lain tahu repositori ini untuk apa.
 2. Pilih Awam (Public) atau Peribadi (Private). Repositori awam boleh dilihat semua orang, peribadi hanya boleh dilihat diri sendiri dan kolaborator. Akaun percuma juga menyokong repositori peribadi tanpa had.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Tandakan "Add a README file"—README ialah "manual arahan" projek, setiap repositori disyorkan mempunyainya.</code>
@@ -150,11 +150,11 @@ Tempat paling kuat GitHub terletak pada mekanisme kolaborasinya. Satu aliran ker
 
 #### 7. Senario Aplikasi Tipikal GitHub
 
-##### 🎓 Pelajar menyertai pertandingan dan projek kursus
+##### Pelajar menyertai pertandingan dan projek kursus
 
 GitHub adalah pusat gerakan sumber terbuka global. Anda boleh Fork projek yang disukai, mengubah dan menghantar PR untuk membalas komuniti; juga boleh sekadar Star mengutip projek baik, menjejaki kemas kini. Menyertai sumber terbuka adalah jalan terbaik untuk meningkatkan teknologi dan mengumpul reputasi.
 
-##### 📚 Pangkalan pengetahuan peribadi dan hos nota
+##### Pangkalan pengetahuan peribadi dan hos nota
 
 Dengan bantuan GitHub Actions, boleh merealisasikan aliran sepenuhnya automatik "kod sekali push, automatik uji + automatik sebar ke pelayan". Ramai blog peribadi dan laman dokumentasi dibina sedemikian, selepas menulis artikel push sekali, laman web dikemas kini secara automatik.
 
@@ -162,7 +162,7 @@ Dengan bantuan GitHub Actions, boleh merealisasikan aliran sepenuhnya automatik 
 
 Gunakan repositori kod sebagai pemacu awan, tukar komputer, bekerja berbilang peranti, git pull sekali boleh mendapatkan kod terkini, tidak perlu lagi salin bolak-balik menggunakan pemacu USB.
 
-##### 🤖 Penyebaran automatik dan CI/CD
+##### Penyebaran automatik dan CI/CD
 
 Mesej commit mesti ditulis dengan jelas
 

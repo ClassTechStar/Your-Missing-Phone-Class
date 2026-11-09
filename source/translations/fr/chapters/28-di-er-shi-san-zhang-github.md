@@ -71,7 +71,7 @@ En résumé :<strong>Git gère « comment enregistrer les modifications », GitH
 
 #### III. Concepts et fonctions clés de GitHub
 
-##### 📁 Concepts de base
+##### Concepts de base
 
 Avant de passer à la pratique, familiarisez-vous avec quelques termes fréquents, sinon l'interface de GitHub vous laissera perplexe :
 
@@ -84,7 +84,7 @@ Avant de passer à la pratique, familiarisez-vous avec quelques termes fréquent
 - <strong>Issue</strong>: utilisé pour enregistrer bugs, demandes de fonctionnalités, sujets de discussion. Chaque Issue est comme un fil de discussion avec assignation et étiquetage.
 - <strong>Fork</strong>:copier le dépôt de quelqu’un sous votre compte, modifier librement votre copie sans affecter l’original. Envoyez ensuite une PR à l’auteur pour demander la fusion de vos améliorations.
 
-##### 🛠️ Fonctions clés
+##### Fonctions clés
 
 GitHub offre bien plus que du stockage de code :
 
@@ -99,14 +99,14 @@ GitHub offre bien plus que du stockage de code :
 
 #### IV. Inscription et prise en main : créez votre premier dépôt en cinq minutes
 
-##### 📝 Inscription
+##### Inscription
 
 1. Visitez<a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a>,cliquez sur « Sign up ».
 2. Remplissez l'e-mail, définissez le mot de passe et le nom d'utilisateur (le nom d'utilisateur apparaîtra dans l'adresse de votre profil, utilisez de préférence l'anglais, par exemple<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/yourname</code>).
 3. Complétez la vérification par e-mail et le test CAPTCHA.
 4. Choisissez le plan gratuit (Free), largement suffisant pour un usage personnel.
 
-##### 📁 Créer votre premier dépôt
+##### Créer votre premier dépôt
 
 1. Après connexion, cliquez sur le « + » en haut à droite, choisissez « New repository ».
 2. Remplissez le nom du dépôt (Repository name), par exemple<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.
@@ -150,11 +150,11 @@ Ce flux garantit que <strong>tout code est examiné avant d’entrer dans la bra
 
 #### VII. Scénarios d'application typiques de GitHub
 
-##### 🎓 Étudiants en concours et projets de cours
+##### Étudiants en concours et projets de cours
 
 Les étudiants en informatique participant à des concours ACM, des hackathons ou des projets de fin d'études ne peuvent presque pas s'en passer de GitHub. Il sert à la fois de plateforme de collaboration et de vitrine de réalisations — les juges de concours peuvent directement consulter votre dépôt pour évaluer la qualité du code et le processus collaboratif. Beaucoup d'entreprises demandent aussi un lien GitHub lors du recrutement, comme preuve de compétence technique.
 
-##### 📚 Base de connaissances personnelle et hébergement de notes
+##### Base de connaissances personnelle et hébergement de notes
 
 Les non-programmeurs aussi peuvent utiliser GitHub. Beaucoup s'en servent pour héberger des notes d'étude, des blogs techniques (avec GitHub Pages, création de site gratuite), des livres numériques. Rédaction en Markdown + gestion de versions Git + sauvegarde cloud, trois en un.
 
@@ -162,7 +162,7 @@ Les non-programmeurs aussi peuvent utiliser GitHub. Beaucoup s'en servent pour h
 
 GitHub est le bastion du mouvement open source mondial. Vous pouvez Forker les projets que vous aimez, modifier et envoyer une PR pour contribuer à la communauté ; ou simplement Star vos coups de cœur et suivre leurs mises à jour. Participer à l'open source est un excellent moyen de progresser techniquement et de bâtir sa réputation.
 
-##### 🤖 Déploiement automatisé et CI/CD
+##### Déploiement automatisé et CI/CD
 
 Avec GitHub Actions, on peut réaliser un flux entièrement automatique « un push de code → test automatique + déploiement automatique sur le serveur ». Beaucoup de blogs personnels et de sites de documentation sont construits ainsi : écrivez un article, poussez-le, et le site se met à jour automatiquement.
 

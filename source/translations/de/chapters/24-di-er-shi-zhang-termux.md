@@ -19,21 +19,21 @@ Termux punktet vor allem durch Leichtgewichtigkeit und hohe Erweiterbarkeit: ent
 
 #### II. Kernfunktionen und Merkmale
 
-##### 🖥️ Vollständige Linux-Umgebung
+##### Vollständige Linux-Umgebung
 
 Termux <strong>Nur Bash integriert</strong> als Shell. Wenn du Zsh, fish oder andere Shells verwenden moechtest, musst du sie manuell ueber den Paketmanager installieren, z. B.:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> oder<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Zudem unterstuetzt Termux Editoren wie Vim, Nano und Emacs und bietet ein nahezu originales Kommandozeilenerlebnis. Ueber „pkg install" lassen sich ueber 2000 Pakete installieren, darunter GCC, OpenSSH, SQLMap und weitere Entwicklungs- und Sicherheitstools.
 
-##### 📦 Leistungsstarkes Paketmanagement
+##### Leistungsstarkes Paketmanagement
 
 Mit dem APT-Paketmanager (ähnlich wie Debian und Ubuntu) lassen sich tausende Linux-Pakete installieren: Entwicklungs- und Netzwerkwerkzeuge und Umgebungen für Python, Ruby, Node.js, Go, Rust, Swift und mehr.
 
-##### 🔒 Sicherheit und Netzwerkfunktionen
+##### Sicherheit und Netzwerkfunktionen
 
 - <strong>SSH-Fernverbindung</strong>: Unterstützt SSH-Client- und -Server-Funktionen, kann andere Geräte remote verbinden oder das Smartphone zum SSH-Host machen.
 - <strong>Verschlüsselungswerkzeuge</strong>: Bietet Verschlüsselungstools wie OpenSSL für verschlüsselte Daten und sichere Kommunikation.
 - <strong>Server-Aufbau</strong>: Kann Nginx oder Apache konfigurieren, um einen statischen Webserver aufzusetzen.
 
-##### 🔧 Systemintegration und Erweiterung
+##### Systemintegration und Erweiterung
 
 - Zugriff auf Smartphone-Speicherberechtigungen für lokale Dateiverwaltung.
 - Aufruf von Sensoren, Kameras und anderen Android-Hardware-Funktionen über das Termux:API-Plugin.
@@ -90,14 +90,14 @@ Termux und seine Plugins müssen aus derselben Quelle installiert werden, da sie
 
 #### IV. Installations- und Konfigurationsleitfaden
 
-##### 📥 Installationsschritte
+##### Installationsschritte
 
 1. <strong>App herunterladen</strong>: Termux aus offiziellen Quellen (F-Droid oder GitHub) herunterladen und installieren – keine Root-Rechte erforderlich.
 2. <strong>System initialisieren</strong>: Nach dem ersten Start warten, bis „Installing bootstrap packages" abgeschlossen ist.
 3. <strong>Speicherberechtigung abrufen</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> ausführen, um Zugriff auf das Smartphone-Dateisystem zu erhalten.
 4. <strong>Softwarepakete aktualisieren</strong>:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> ausführen, um die Paketliste zu aktualisieren.
 
-##### ⚙️ Grundlegende Optimierung
+##### Grundlegende Optimierung
 
 - <strong>Spiegel-Wechsel</strong>: Mit dem Befehl<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code>über eine grafische Oberfläche den Spiegel wechseln (empfohlen: Tsinghua-Universitätsspiegel).
 - <strong>Tastenkombinationen</strong>: Leiser-Taste simuliert Strg, Lauter-Taste simuliert Esc – erhöht die Eingabeeffizienz.
@@ -105,15 +105,15 @@ Termux und seine Plugins müssen aus derselben Quelle installiert werden, da sie
 
 #### V. Typische Anwendungsszenarien
 
-##### 💻 Mobile Entwicklung &amp; Tests
+##### Mobile Entwicklung &amp; Tests
 
 Auf dem Smartphone eine vollständige Entwicklungsumgebung aufbauen, Python-Skripte schreiben und ausführen, C-Programme mit GCC kompilieren, Code-Repositories über Git verwalten und per SSH mit Remote-Servern synchronisieren.
 
-##### 🖥️ Server-Administration
+##### Server-Administration
 
 Verwalte Server per SSH aus der Ferne – führe Systemwartungen und Log-Analysen durch und kümmere dich von überall um Server-Probleme.
 
-##### 📚 Linux-Operationen lernen
+##### Linux-Operationen lernen
 
 Bietet eine echte Linux-Umgebung und ist die ideale Plattform zum Erlernen der Kommandozeile und Systemadministration. Man kann Shell-Skripte schreiben und Linux-Dateiberechtigungen ueben (z. B. <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> setzt die Berechtigungsbits rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> aendert den Dateieigentuemer,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> zeigt die drei Gruppen mit je neun Berechtigungsbits fuer owner/group/other). Beachte: Dies ist das klassische Unix/Linux-Drei-Gruppen-Neun-Bit-Berechtigungsmodell (owner / group / other × Lesen / Schreiben / Ausfuehren), das ein voellig anderes System darstellt als die ACL-Zugriffssteuerungslisten von Windows NTFS.
 

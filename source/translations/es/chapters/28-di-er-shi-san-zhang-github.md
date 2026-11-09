@@ -71,7 +71,7 @@ En resumen:<strong>Git gestióna "como registrar cambios", GitHub gestióna "don
 
 #### III. Conceptos y funciones principales de GitHub
 
-##### 📁 Conceptos básicos
+##### Conceptos básicos
 
 Antes de empezar, conoce algúnos terminos frecuentes; de lo contrario la interfaz de GitHub te parecera confusa:
 
@@ -84,7 +84,7 @@ Antes de empezar, conoce algúnos terminos frecuentes; de lo contrario la interf
 - <strong>Issue</strong>: se usa para registrar bugs, solicitudes de funciones y temas de discusion. Cada Issue es como un hilo de discussion donde se puede asignar un responsable y etiquetar.
 - <strong>Fork</strong>: copiar el repositorio de otra persona a tu propia cuenta. Puedes modificar libremente tu copia sin afectar el repositorio original. Cuando hayas terminado, puedes enviar un PR al autor original solicitando fusionar tus mejoras.
 
-##### 🛠️ Funciones principales
+##### Funciones principales
 
 GitHub ofrece no solo almacenamiento de código, sino también:
 
@@ -99,14 +99,14 @@ GitHub ofrece no solo almacenamiento de código, sino también:
 
 #### IV. Registro e inicio: Crea tu primer repositorio en 5 minutos
 
-##### 📝 Registrar cuenta
+##### Registrar cuenta
 
 1. Visita<a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a>y haz clic en "Sign up".
 2. Introduce tu correo electrónico, establece una contrasena y un nombre de usuario (aparecera en la URL de tu perfil; se recomienda usar inglés, ej.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/tunombre</code>).
 3. Completa la verificación de correo y el captcha.
 4. Elige el plan gratuito (Free); es completamente suficiente para usuarios individuales.
 
-##### 📁 Crear tu primer repositorio
+##### Crear tu primer repositorio
 
 1. Tras iniciar sesion, haz clic en "+" en la esquina superior derecha y selecciona "New repository".
 2. Introduce el nombre del repositorio (Repository name), por ejemplo<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.
@@ -150,11 +150,11 @@ Este flujo garantiza que <strong>todo código que entra en la rama principal pas
 
 #### VII. Escenarios típicos de uso de GitHub
 
-##### 🎓 Estudíantes: competencias y proyectos academicos
+##### Estudíantes: competencias y proyectos academicos
 
 Los estudiantes de informática que participan en ACM, hackathons o trabajos de fin de carrera casi siempre usan GitHub. Sirve tanto como plataforma de colaboracion en equipo como como ventana de exhibicion de trabajos — los jueces pueden ver directamente tu repositorio para evaluar la calidad del código y el proceso de colaboracion. Muchas empresas piden el enlace a tu perfil de GitHub como prueba de capacidad técnica al contratar.
 
-##### 📚 Base de conocimiento personal y alojamiento de notas
+##### Base de conocimiento personal y alojamiento de notas
 
 Los no programadores también pueden usar GitHub. Muchos lo usan para alojar notas de estudio, blogs técnicos (con GitHub Pages se puede crear un sitio web gratis), libros electrónicos. Escritura en Markdown + control de versiones con Git + respaldo en la nube, tres en uno.
 
@@ -162,7 +162,7 @@ Los no programadores también pueden usar GitHub. Muchos lo usan para alojar not
 
 GitHub es la fortaleza central del movimiento open source global. Puedes Forkar proyectos que te gusten, modificarlos y enviar PRs para devolver mejoras a la comunidad; o simplemente StarGuardar buenos proyectos para seguir sus actualizaciones. Participar en open source es una via excelente para mejorar tus habilidades técnicas y acumular reputacion.
 
-##### 🤖 Despliegue automatizado y CI/CD
+##### Despliegue automatizado y CI/CD
 
 Con GitHub Actions puedes implementar un flujo totalmente automático de "código push -&gt; prueba automática + despliegue al servidor". Muchos blogs personales y sitios de documentación funcionan asi: escribes un artículo, haces push y el sitio se actualiza automáticamente.
 

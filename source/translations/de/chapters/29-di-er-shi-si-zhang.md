@@ -38,7 +38,7 @@ Beim Veroeffentlichen von System-Updates oder Images signiert der Hersteller die
 
 Das BL-Schloss ist das erste Glied der gesamten sicheren Startkette. Erst nach bestandener Pruefung wird die naechste Boot-Phase (z. B. der Kernel) geladen und ausgefuehrt – so wird die Vertrauenswuerdigkeit der Systemstartumgebung schrittweise gewaehrleistet.
 
-##### 📊 Gesperrt vs. entsperrt: Die zwei Seiten des BL-Schlosses
+##### Gesperrt vs. entsperrt: Die zwei Seiten des BL-Schlosses
 
 Um Vor- und Nachteile des BL-Schlosses anschaulicher zu verstehen, zeigen wir eine Vergleichstabelle mit den Unterschieden in 5 Kernbereichen:
 

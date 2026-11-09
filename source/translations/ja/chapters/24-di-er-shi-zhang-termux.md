@@ -19,21 +19,21 @@ Termuxの核心的優位性は軽量性と高い拡張性にあり、開発、�
 
 #### 二、核心機能と特徴
 
-##### 🖥️ 完全なLinux環境
+##### 完全なLinux環境
 
 Termux<strong>Bash のみ内蔵</strong>という1種類の Shell のみです。Zsh や fish などの他の Shell を使いたい場合は、パッケージマネージャーで手動インストールが必要です。例：<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>プロテクトモード<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>。また Termux は Vim、Nano、Emacs などのエディターをサポートし、ネイティブに近いコマンドライン体験を提供します。ユーザーは「pkg install」で2000以上のパッケージをインストールでき、GCC、OpenSSH、SQLMap などの開発・セキュリティツールも含まれます。
 
-##### 📦 強力なパッケージ管理
+##### 強力なパッケージ管理
 
-🔒 セキュリティとネットワーク機能
+セキュリティとネットワーク機能
 
-##### 🔒 セキュリティとネットワーク機能
+##### セキュリティとネットワーク機能
 
 - <strong>：SSHクライアントとサーバー機能をサポート、他デバイスへのリモート接続やスマホをSSHホストにすることが可能。</strong>暗号化ツール
 - <strong>：OpenSSLなどの暗号化ツールを提供、データ暗号化とセキュア通信をサポート。</strong>サーバー構築
-- <strong>：NginxやApacheを設定して静的ウェブページサーバーを構築可能。</strong>🔧 システム統合と拡張
+- <strong>：NginxやApacheを設定して静的ウェブページサーバーを構築可能。</strong>システム統合と拡張
 
-##### 🔧 システム統合と拡張
+##### システム統合と拡張
 
 - Termux:APIプラグインでセンサー、カメラなどAndroidハードウェア機能を呼び出し。
 - Bluetoothキーボードと外部ディスプレイの接続をサポート、完全なマウスサポートあり。
@@ -90,14 +90,14 @@ Termux<strong>Bash のみ内蔵</strong>という1種類の Shell のみです�
 
 #### 四、インストールと設定ガイド
 
-##### 📥 インストール手順
+##### インストール手順
 
 1. <strong>：公式チャネル（F-DroidまたはGitHub）からTermuxをダウンロードインストール、Root不要。</strong>システム初期化
 2. <strong>：初回起動後「Installing bootstrap packages」の完了を待つ。</strong>ストレージ権限の取得
 3. <strong>：</strong>pkg update &amp;&amp; pkg upgrade<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">を実行してスマホファイルシステム権限を取得。</code>ソフトウェアソースの更新
-4. <strong>：</strong>pkg update &amp;&amp; pkg upgrade<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Pythonをインストール：</code>⚙️ 基本最適化
+4. <strong>：</strong>pkg update &amp;&amp; pkg upgrade<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Pythonをインストール：</code>基本最適化
 
-##### ⚙️ 基本最適化
+##### 基本最適化
 
 - <strong>：</strong>termux-change-repo<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">コマンドでグラフィカルインターフェースからミラーソースを変更（清華大学ミラーソースを推奨）。</code>ショートカットキー設定
 - <strong>：音量下キーがCtrlを、音量上キーがEscをエミュレート、入力効率を向上。</strong>インターフェース美化
@@ -105,15 +105,15 @@ Termux<strong>Bash のみ内蔵</strong>という1種類の Shell のみです�
 
 #### 五、典型的な応用シーン
 
-##### 💻 モバイル開発テスト
+##### モバイル開発テスト
 
-🖥️ サーバー運用保守
+サーバー運用保守
 
-##### 🖥️ サーバー運用保守
+##### サーバー運用保守
 
 📚 Linux操作の学習
 
-##### 📚 Linux操作の学習
+##### Linux操作の学習
 
 リアルな Linux 環境を提供し、コマンドラインやシステム管理の学習に理想的なプラットフォームです。Shell スクリプト作成、Linux ファイル権限管理（例： <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> で rwxr-xr-x 権限を設定、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> でファイル所有者を変更、<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> で owner/group/other の3組9桁の権限を確認）などの基本コマンドを練習できます。これは Unix/Linux の古典的な「3組9桁」権限モデル（owner / group / other × 読み / 書き / 実行）で、Windows NTFS の ACL アクセス制御リストとは完全に異なる体系であることに注意してください。
 

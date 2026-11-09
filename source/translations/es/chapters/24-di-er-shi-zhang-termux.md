@@ -27,7 +27,7 @@ Termux <strong>Solo Bash integrado</strong> Este tipo de Shell. Si quieres usar 
 
 Usa el gestor de paquetes APT (similar a Debian/Ubuntu) para instalar miles de paquetes Linux: herramientas de desarrollo, red, etc. Soporta Python, Ruby, Node.js, Go, Rust, Swift y más.
 
-##### 🔒 Funciones de seguridad y red
+##### Funciones de seguridad y red
 
 - <strong>Conexión SSH remota</strong>: Soporta funciones de cliente y servidor SSH; puede conectarse a otros equipos en remoto o convertir el móvil en un host SSH.
 - <strong>Herramientas de cifrado</strong>: proporciona herramientas como OpenSSL; soporta cifrado de datos y comunicaciones seguras.

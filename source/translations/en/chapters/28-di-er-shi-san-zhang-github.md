@@ -71,7 +71,7 @@ Simply put:<strong>Git manages "how to record changes," GitHub manages "where ch
 
 #### 3. GitHub's Core Concepts and Features
 
-##### 📁 Basic Concepts
+##### Basic Concepts
 
 Before getting started, first get to know a few high-frequency words, otherwise you'll be confused when looking at GitHub's interface:
 
@@ -84,7 +84,7 @@ Before getting started, first get to know a few high-frequency words, otherwise 
 - <strong>Issue</strong>: Used to record bugs, feature requests, and discussion topics. Each Issue is like a discussion thread, where you can assign responsible persons and add labels.
 - <strong>Fork</strong>: Copy someone else's repository to your own account, where you can modify your copy freely without affecting the original repository. After modifications, you can send a PR to the original author, requesting to merge your improvements.
 
-##### 🛠️ Core Features
+##### Core Features
 
 GitHub provides more than just code storage, including:
 
@@ -99,14 +99,14 @@ GitHub provides more than just code storage, including:
 
 #### 4. Registration and Getting Started: Create Your First Repository in Five Minutes
 
-##### 📝 Register an Account
+##### Register an Account
 
 1. Visit<a href="https://github.com" class="text-primary hover:underline" target="_blank" rel="noopener">github.com</a>and click "Sign up."
 2. Fill in your email, set a password and username (the username will appear in your personal homepage address; English is recommended, such as<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">github.com/yourname</code>).
 3. Complete email verification and human verification.
 4. Select the Free plan, which is completely sufficient for individual users.
 
-##### 📁 Create Your First Repository
+##### Create Your First Repository
 
 1. After logging in, click the "+" in the top right corner and select "New repository."
 2. Fill in the repository name, such as<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">my-first-project</code>.
@@ -150,11 +150,11 @@ This process ensures that <strong>all code is reviewed before entering the main 
 
 #### 7. GitHub's Typical Application Scenarios
 
-##### 🎓 Students Participating in Competitions and Course Projects
+##### Students Participating in Competitions and Course Projects
 
 Computer science students participating in ACM, hackathons, and graduation designs almost all can't do without GitHub. It serves both as a team collaboration platform and as a showcase for work—competition judges can directly view your repository to understand code quality and the collaboration process. Many companies also require attaching a GitHub homepage when recruiting, as proof of technical ability.
 
-##### 📚 Personal Knowledge Base and Note Hosting
+##### Personal Knowledge Base and Note Hosting
 
 Non-programmers can also use GitHub. Many people use it to host study notes, technical blogs (combined with GitHub Pages for free website building), and e-books. Markdown writing + Git version management + cloud backup, all in one.
 
@@ -162,7 +162,7 @@ Non-programmers can also use GitHub. Many people use it to host study notes, tec
 
 GitHub is the core base of the global open source movement. You can Fork projects you like, modify them and send PRs to give back to the community; or simply Star to favorite good projects and track updates. Participating in open source is an excellent way to improve your skills and build reputation.
 
-##### 🤖 Automated Deployment and CI/CD
+##### Automated Deployment and CI/CD
 
 With GitHub Actions, you can achieve a fully automated process of "code pushed, automatically tested + automatically deployed to server." Many personal blogs and documentation sites are built this way—after writing an article, just push, and the website automatically updates.
 

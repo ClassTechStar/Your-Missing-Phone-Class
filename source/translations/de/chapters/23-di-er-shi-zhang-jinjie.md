@@ -216,7 +216,7 @@ Google aktualisiert die Erkennungsregeln regelmaessig, und App-Hersteller ziehen
 <i class="fas fa-hands mr-2"></i>Verwendet den APT-Paketmanager (ähnlich wie Debian und Ubuntu), mit dem tausende Linux-Softwarepakete installiert werden können – darunter Entwicklungs- und Netzwerk-Tools. Unterstützt mehrere Programmiersprachen-Umgebungen wie Python, Ruby, Node.js, Go, Rust, Swift.
 
 {class="list-decimal pl-6 mt-1 space-y-1"}
-1. 🔒 Sicherheits- und Netzwerkfunktionen
+1. Sicherheits- und Netzwerkfunktionen
 2. SSH-Remote-Verbindung
 3. : Unterstützt SSH-Client- und -Server-Funktionen, kann andere Geräte remote verbinden oder das Smartphone zum SSH-Host machen.
 4. Verschlüsselungs-Tools

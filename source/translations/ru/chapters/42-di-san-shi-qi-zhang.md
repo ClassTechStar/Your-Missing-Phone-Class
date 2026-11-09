@@ -46,32 +46,32 @@ Vibe дословно — «атмосфера, настроение». Vibe Cod
 
 ::: div .figure
 ```html
-<svg style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="640" height="300" fill="#ffffff" rx="8"/>
-      <line x1="70" y1="240" x2="600" y2="240" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="240" x2="70" y2="30" stroke="#9ca3af" stroke-width="1.5"/>
-      <line x1="70" y1="190" x2="600" y2="190" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="140" x2="600" y2="140" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="90" x2="600" y2="90" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <line x1="70" y1="40" x2="600" y2="40" stroke="#e5e7eb" stroke-width="1" stroke-dasharray="4,4"/>
-      <text x="62" y="244" font-size="10" fill="#6b7280" text-anchor="end">0</text>
-      <text x="62" y="194" font-size="10" fill="#6b7280" text-anchor="end">20</text>
-      <text x="62" y="144" font-size="10" fill="#6b7280" text-anchor="end">40</text>
-      <text x="62" y="94" font-size="10" fill="#6b7280" text-anchor="end">60</text>
-      <text x="62" y="44" font-size="10" fill="#6b7280" text-anchor="end">80</text>
-      <text x="335" y="272" font-size="11" fill="#374151" text-anchor="middle">Использование (%)</text>
-      <polyline points="70,215 220,172 370,152 590,116" fill="none" stroke="#4f46e5" stroke-width="2.5"/>
-      <polyline points="70,52 220,85 370,103 590,135" fill="none" stroke="#9ca3af" stroke-width="2.5"/>
-      <circle cx="70" cy="215" r="4" fill="#4f46e5"/><circle cx="220" cy="172" r="4" fill="#4f46e5"/><circle cx="370" cy="152" r="4" fill="#4f46e5"/><circle cx="590" cy="116" r="4" fill="#4f46e5"/>
-      <circle cx="70" cy="52" r="4" fill="#9ca3af"/><circle cx="220" cy="85" r="4" fill="#9ca3af"/><circle cx="370" cy="103" r="4" fill="#9ca3af"/><circle cx="590" cy="135" r="4" fill="#9ca3af"/>
-      <text x="70" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2024 Q4</text>
-      <text x="220" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2025 Q2</text>
-      <text x="370" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2025 Q4</text>
-      <text x="590" y="285" font-size="10" fill="#6b7280" text-anchor="middle">2026 Q2</text>
-      <line x1="435" y1="60" x2="465" y2="60" stroke="#4f46e5" stroke-width="2.5"/>
-      <text x="472" y="63" font-size="10" fill="#374151">Использование режима агента</text>
-      <line x1="435" y1="82" x2="465" y2="82" stroke="#9ca3af" stroke-width="2.5"/>
-      <text x="472" y="85" font-size="10" fill="#374151">Использование автодополнения Tab</text>
+<svg style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="640" height="300" style="fill:var(--ink-inverse)" rx="8"/>
+      <line x1="70" y1="240" x2="600" y2="240" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="240" x2="70" y2="30" stroke="var(--muted)" stroke-width="1.5"/>
+      <line x1="70" y1="190" x2="600" y2="190" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="140" x2="600" y2="140" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="90" x2="600" y2="90" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <line x1="70" y1="40" x2="600" y2="40" stroke="var(--line)" stroke-width="1" stroke-dasharray="4,4"/>
+      <text x="62" y="244" font-size="10" fill="var(--muted-2)" text-anchor="end">0</text>
+      <text x="62" y="194" font-size="10" fill="var(--muted-2)" text-anchor="end">20</text>
+      <text x="62" y="144" font-size="10" fill="var(--muted-2)" text-anchor="end">40</text>
+      <text x="62" y="94" font-size="10" fill="var(--muted-2)" text-anchor="end">60</text>
+      <text x="62" y="44" font-size="10" fill="var(--muted-2)" text-anchor="end">80</text>
+      <text x="335" y="272" font-size="11" fill="var(--ink-2)" text-anchor="middle">Использование (%)</text>
+      <polyline points="70,215 220,172 370,152 590,116" fill="none" stroke="var(--accent-book)" stroke-width="2.5"/>
+      <polyline points="70,52 220,85 370,103 590,135" fill="none" stroke="var(--muted)" stroke-width="2.5"/>
+      <circle cx="70" cy="215" r="4" fill="var(--accent-book)"/><circle cx="220" cy="172" r="4" fill="var(--accent-book)"/><circle cx="370" cy="152" r="4" fill="var(--accent-book)"/><circle cx="590" cy="116" r="4" fill="var(--accent-book)"/>
+      <circle cx="70" cy="52" r="4" fill="var(--muted)"/><circle cx="220" cy="85" r="4" fill="var(--muted)"/><circle cx="370" cy="103" r="4" fill="var(--muted)"/><circle cx="590" cy="135" r="4" fill="var(--muted)"/>
+      <text x="70" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2024 Q4</text>
+      <text x="220" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2025 Q2</text>
+      <text x="370" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2025 Q4</text>
+      <text x="590" y="285" font-size="10" fill="var(--muted-2)" text-anchor="middle">2026 Q2</text>
+      <line x1="435" y1="60" x2="465" y2="60" stroke="var(--accent-book)" stroke-width="2.5"/>
+      <text x="472" y="63" font-size="10" fill="var(--ink-2)">Использование режима агента</text>
+      <line x1="435" y1="82" x2="465" y2="82" stroke="var(--muted)" stroke-width="2.5"/>
+      <text x="472" y="85" font-size="10" fill="var(--ink-2)">Использование автодополнения Tab</text>
       <circle cx="529" cy="126" r="3" fill="#c0392b"/>
       <text x="529" y="152" font-size="10" fill="#c0392b" text-anchor="middle">≈ пересечение, 2-й кв. 2026</text>
     </svg>

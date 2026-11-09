@@ -70,26 +70,26 @@ Xcode รุ่นใหม่มักต้องการ macOS ล่าส�
 
 ::: div .figure
 ```html
-<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" fill="#fafafa" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ โฟลเดอร์รากของโปรเจกต์</text>
-      <rect x="30" y="42" width="540" height="225" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="#eef2ff" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="#1e1b4b" font-weight="bold">MyFirstApp/ (โฟลเดอร์โค้ด)</text>
-      <text x="66" y="100" font-size="10" fill="#374151">├ MyFirstAppApp.swift  ← จุดเริ่มโปรแกรม</text>
-      <text x="66" y="120" font-size="10" fill="#374151">├ ContentView.swift  ← หน้าจอหลัก</text>
-      <text x="66" y="140" font-size="10" fill="#374151">└ Assets.xcassets  ← ไอคอน รูปภาพ สี</text>
-      <text x="56" y="166" font-size="10" fill="#6b7280">(ไฟล์ใหม่ทั้งหมดใส่ในโฟลเดอร์นี้)</text>
-      <text x="56" y="196" font-size="10" fill="#1e1b4b" font-weight="bold">แท็บ Info / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="#6b7280">การประกาศแอป: ชื่อ สิทธิ์ การตั้งค่า</text>
+<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ โฟลเดอร์รากของโปรเจกต์</text>
+      <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
+      <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/ (โฟลเดอร์โค้ด)</text>
+      <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift  ← จุดเริ่มโปรแกรม</text>
+      <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift  ← หน้าจอหลัก</text>
+      <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets  ← ไอคอน รูปภาพ สี</text>
+      <text x="56" y="166" font-size="10" fill="var(--muted-2)">(ไฟล์ใหม่ทั้งหมดใส่ในโฟลเดอร์นี้)</text>
+      <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">แท็บ Info / Info.plist</text>
+      <text x="66" y="216" font-size="10" fill="var(--muted-2)">การประกาศแอป: ชื่อ สิทธิ์ การตั้งค่า</text>
       <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
       <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">ตำแหน่งสำคัญอื่น ๆ</text>
-      <text x="331" y="100" font-size="10" fill="#374151">📁 Preview Content/  ← สื่อพรีวิว</text>
-      <text x="331" y="122" font-size="10" fill="#374151"><i class="fas fa-bullseye mr-1"></i> ตั้งค่า Target (ไอคอนโปรเจกต์สีน้ำเงิน)</text>
-      <text x="331" y="142" font-size="10" fill="#6b7280">— เลขเวอร์ชัน ระบบขั้นต่ำ และลายเซ็นอยู่ที่นี่</text>
-      <text x="331" y="168" font-size="10" fill="#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← unit test</text>
-      <text x="331" y="188" font-size="10" fill="#374151">📱 MyFirstAppUITests/ ← เทสต์ UI</text>
-      <text x="331" y="216" font-size="10" fill="#9ca3af">(เทมเพลตเทสต์สร้างไว้แล้ว ใช้ในบทที่ 67)</text>
+      <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/  ← สื่อพรีวิว</text>
+      <text x="331" y="122" font-size="10" fill="var(--ink-2)"><i class="fas fa-bullseye mr-1"></i> ตั้งค่า Target (ไอคอนโปรเจกต์สีน้ำเงิน)</text>
+      <text x="331" y="142" font-size="10" fill="var(--muted-2)">— เลขเวอร์ชัน ระบบขั้นต่ำ และลายเซ็นอยู่ที่นี่</text>
+      <text x="331" y="168" font-size="10" fill="var(--ink-2)"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← unit test</text>
+      <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← เทสต์ UI</text>
+      <text x="331" y="216" font-size="10" fill="var(--muted)">(เทมเพลตเทสต์สร้างไว้แล้ว ใช้ในบทที่ 67)</text>
     </svg>
 ```
 

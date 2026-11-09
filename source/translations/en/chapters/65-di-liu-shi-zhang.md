@@ -70,26 +70,26 @@ On the left is the project navigator—as a beginner, you only need to know thes
 
 ::: div .figure
 ```html
-<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" fill="#fafafa" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ project root</text>
-      <rect x="30" y="42" width="540" height="225" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="#eef2ff" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="#1e1b4b" font-weight="bold">MyFirstApp/ (code folder)</text>
-      <text x="66" y="100" font-size="10" fill="#374151">├ MyFirstAppApp.swift  ← app entry point</text>
-      <text x="66" y="120" font-size="10" fill="#374151">├ ContentView.swift  ← main screen</text>
-      <text x="66" y="140" font-size="10" fill="#374151">└ Assets.xcassets  ← icons, images, colors</text>
-      <text x="56" y="166" font-size="10" fill="#6b7280">(new files all go in this folder)</text>
-      <text x="56" y="196" font-size="10" fill="#1e1b4b" font-weight="bold">Info tab / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="#6b7280">App declarations: name, permissions, settings</text>
+<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ project root</text>
+      <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
+      <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/ (code folder)</text>
+      <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift  ← app entry point</text>
+      <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift  ← main screen</text>
+      <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets  ← icons, images, colors</text>
+      <text x="56" y="166" font-size="10" fill="var(--muted-2)">(new files all go in this folder)</text>
+      <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">Info tab / Info.plist</text>
+      <text x="66" y="216" font-size="10" fill="var(--muted-2)">App declarations: name, permissions, settings</text>
       <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
       <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">Other key places</text>
-      <text x="331" y="100" font-size="10" fill="#374151">📁 Preview Content/  ← preview assets</text>
-      <text x="331" y="122" font-size="10" fill="#374151"><i class="fas fa-bullseye mr-1"></i> Target settings (the blue project icon)</text>
-      <text x="331" y="142" font-size="10" fill="#6b7280">— version number, minimum OS, signing are all here</text>
-      <text x="331" y="168" font-size="10" fill="#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← unit tests</text>
-      <text x="331" y="188" font-size="10" fill="#374151">📱 MyFirstAppUITests/ ← UI tests</text>
-      <text x="331" y="216" font-size="10" fill="#9ca3af">(test templates are already generated; used in Chapter 67)</text>
+      <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/  ← preview assets</text>
+      <text x="331" y="122" font-size="10" fill="var(--ink-2)"><i class="fas fa-bullseye mr-1"></i> Target settings (the blue project icon)</text>
+      <text x="331" y="142" font-size="10" fill="var(--muted-2)">— version number, minimum OS, signing are all here</text>
+      <text x="331" y="168" font-size="10" fill="var(--ink-2)"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← unit tests</text>
+      <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← UI tests</text>
+      <text x="331" y="216" font-size="10" fill="var(--muted)">(test templates are already generated; used in Chapter 67)</text>
     </svg>
 ```
 

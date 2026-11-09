@@ -83,27 +83,27 @@ USB 디버깅은 컴퓨터에 '뒷문'을 열어 주는 것과 같아요. 공공
 
 ::: div .figure
 ```html
-<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="300" fill="#fafafa" rx="8"/>
-      <text x="20" y="30" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ 프로젝트 루트</text>
-      <rect x="30" y="45" width="540" height="230" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <text x="45" y="70" font-size="11" fill="#4f46e5" font-weight="bold">app/ ← 코드를 작성하는 곳</text>
-      <rect x="60" y="82" width="240" height="178" fill="#eef2ff" rx="5"/>
-      <text x="70" y="102" font-size="10" fill="#1e1b4b" font-weight="bold">src/main/</text>
-      <text x="80" y="120" font-size="10" fill="#374151">├ java/…/MainActivity.kt  ← 로직 코드</text>
-      <text x="80" y="138" font-size="10" fill="#374151">├ res/  ← 리소스(이미지, 문자, 색상)</text>
-      <text x="80" y="156" font-size="10" fill="#374151">└ AndroidManifest.xml  ← 앱의 "주민등록부"</text>
-      <text x="70" y="180" font-size="10" fill="#1e1b4b" font-weight="bold">build.gradle.kts</text>
-      <text x="80" y="198" font-size="10" fill="#6b7280">의존 라이브러리 선언(SDK 버전, Compose 등)</text>
-      <text x="70" y="222" font-size="10" fill="#1e1b4b" font-weight="bold">src/androidTest/와 test/</text>
-      <text x="80" y="240" font-size="10" fill="#6b7280">자동화 테스트 코드(56장에서 사용)</text>
+<svg style="max-width:100%;height:auto" width="600" height="300" viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="300" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="30" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ 프로젝트 루트</text>
+      <rect x="30" y="45" width="540" height="230" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <text x="45" y="70" font-size="11" fill="var(--accent-book)" font-weight="bold">app/ ← 코드를 작성하는 곳</text>
+      <rect x="60" y="82" width="240" height="178" fill="var(--accent-wash)" rx="5"/>
+      <text x="70" y="102" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/main/</text>
+      <text x="80" y="120" font-size="10" fill="var(--ink-2)">├ java/…/MainActivity.kt  ← 로직 코드</text>
+      <text x="80" y="138" font-size="10" fill="var(--ink-2)">├ res/  ← 리소스(이미지, 문자, 색상)</text>
+      <text x="80" y="156" font-size="10" fill="var(--ink-2)">└ AndroidManifest.xml  ← 앱의 "주민등록부"</text>
+      <text x="70" y="180" font-size="10" fill="var(--accent-deep)" font-weight="bold">build.gradle.kts</text>
+      <text x="80" y="198" font-size="10" fill="var(--muted-2)">의존 라이브러리 선언(SDK 버전, Compose 등)</text>
+      <text x="70" y="222" font-size="10" fill="var(--accent-deep)" font-weight="bold">src/androidTest/와 test/</text>
+      <text x="80" y="240" font-size="10" fill="var(--muted-2)">자동화 테스트 코드(56장에서 사용)</text>
       <rect x="320" y="82" width="230" height="178" fill="#f0fdf4" rx="5"/>
       <text x="330" y="102" font-size="10" fill="#065f46" font-weight="bold">루트의 다른 파일들</text>
-      <text x="340" y="122" font-size="10" fill="#374151">gradle/ + gradlew.bat  ← 빌드 스크립트</text>
-      <text x="340" y="142" font-size="10" fill="#374151">settings.gradle.kts  ← 프로젝트 설정</text>
-      <text x="340" y="162" font-size="10" fill="#6b7280">(초보의 구호: app/ 디렉터리만 만지고,</text>
-      <text x="340" y="180" font-size="10" fill="#6b7280">나머지는 일단 "블랙박스"로 두고 함부로 만지지 않기)</text>
-      <text x="340" y="208" font-size="10" fill="#9ca3af">.gitignore  ← 버전 관리 제외 목록</text>
+      <text x="340" y="122" font-size="10" fill="var(--ink-2)">gradle/ + gradlew.bat  ← 빌드 스크립트</text>
+      <text x="340" y="142" font-size="10" fill="var(--ink-2)">settings.gradle.kts  ← 프로젝트 설정</text>
+      <text x="340" y="162" font-size="10" fill="var(--muted-2)">(초보의 구호: app/ 디렉터리만 만지고,</text>
+      <text x="340" y="180" font-size="10" fill="var(--muted-2)">나머지는 일단 "블랙박스"로 두고 함부로 만지지 않기)</text>
+      <text x="340" y="208" font-size="10" fill="var(--muted)">.gitignore  ← 버전 관리 제외 목록</text>
     </svg>
 ```
 

@@ -13,7 +13,11 @@
       "script": "Hans",
       "priority": 1,
       "flag": "🇨🇳",
-      "gradient": "from-red-50 to-red-100"
+      "gradient": "bg-gradient-to-br from-red-50 to-red-100",
+      "badge": {
+        "text": "中",
+        "classes": "text-xs font-bold text-red-600 border border-red-200 rounded px-1.5 py-0.5"
+      }
     },
     "zh-TW": {
       "name": "繁體中文",
@@ -23,7 +27,11 @@
       "script": "Hant",
       "priority": 2,
       "flag": "🇭🇰",
-      "gradient": "from-amber-50 to-amber-100"
+      "gradient": "bg-gradient-to-br from-amber-50 to-amber-100",
+      "badge": {
+        "text": "繁",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "yue": {
       "name": "粵語",
@@ -33,7 +41,10 @@
       "script": "Hant",
       "priority": 3,
       "flag": "🗣️",
-      "gradient": "from-pink-50 to-pink-100"
+      "gradient": "bg-gradient-to-br from-pink-50 to-pink-100",
+      "badge": {
+        "fa": "fas fa-comment-dots"
+      }
     },
     "en": {
       "name": "English",
@@ -43,7 +54,11 @@
       "script": "Latn",
       "priority": 4,
       "flag": "🇬🇧",
-      "gradient": "from-blue-50 to-blue-100"
+      "gradient": "bg-blue-50",
+      "badge": {
+        "text": "EN",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "ko": {
       "name": "한국어",
@@ -53,7 +68,11 @@
       "script": "Hang",
       "priority": 5,
       "flag": "🇰🇷",
-      "gradient": "from-violet-50 to-violet-100"
+      "gradient": "bg-gradient-to-br from-violet-50 to-violet-100",
+      "badge": {
+        "text": "한",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "ja": {
       "name": "日本語",
@@ -63,7 +82,11 @@
       "script": "Jpan",
       "priority": 6,
       "flag": "🇯🇵",
-      "gradient": "from-rose-50 to-rose-100"
+      "gradient": "bg-gradient-to-br from-rose-50 to-rose-100",
+      "badge": {
+        "text": "日",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "ru": {
       "name": "Русский",
@@ -73,7 +96,11 @@
       "script": "Cyrl",
       "priority": 7,
       "flag": "🇷🇺",
-      "gradient": "from-sky-50 to-sky-100"
+      "gradient": "bg-gradient-to-br from-sky-50 to-sky-100",
+      "badge": {
+        "text": "RU",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "it": {
       "name": "Italiano",
@@ -83,7 +110,11 @@
       "script": "Latn",
       "priority": 8,
       "flag": "🇮🇹",
-      "gradient": "from-green-50 to-green-100"
+      "gradient": "bg-gradient-to-br from-green-50 to-green-100",
+      "badge": {
+        "text": "IT",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "pt": {
       "name": "Português",
@@ -93,7 +124,11 @@
       "script": "Latn",
       "priority": 9,
       "flag": "🇵🇹",
-      "gradient": "from-emerald-50 to-emerald-100"
+      "gradient": "bg-emerald-50",
+      "badge": {
+        "text": "PT",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "es": {
       "name": "Español",
@@ -103,7 +138,11 @@
       "script": "Latn",
       "priority": 10,
       "flag": "🇪🇸",
-      "gradient": "from-yellow-50 to-yellow-100"
+      "gradient": "bg-amber-50",
+      "badge": {
+        "text": "ES",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "fr": {
       "name": "Français",
@@ -113,7 +152,11 @@
       "script": "Latn",
       "priority": 11,
       "flag": "🇫🇷",
-      "gradient": "from-indigo-50 to-indigo-100"
+      "gradient": "bg-indigo-50",
+      "badge": {
+        "text": "FR",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "de": {
       "name": "Deutsch",
@@ -123,7 +166,11 @@
       "script": "Latn",
       "priority": 12,
       "flag": "🇩🇪",
-      "gradient": "from-gray-50 to-gray-100"
+      "gradient": "bg-gray-50",
+      "badge": {
+        "text": "DE",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "ar": {
       "name": "العربية",
@@ -133,7 +180,11 @@
       "script": "Arab",
       "priority": 13,
       "flag": "🇸🇦",
-      "gradient": "from-lime-50 to-lime-100"
+      "gradient": "bg-gradient-to-br from-lime-50 to-lime-100",
+      "badge": {
+        "text": "SA",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "he": {
       "name": "עברית",
@@ -143,7 +194,11 @@
       "script": "Hebr",
       "priority": 14,
       "flag": "🇮🇱",
-      "gradient": "from-teal-50 to-teal-100"
+      "gradient": "bg-gradient-to-br from-teal-50 to-teal-100",
+      "badge": {
+        "text": "IL",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "th": {
       "name": "ภาษาไทย",
@@ -153,7 +208,11 @@
       "script": "Thai",
       "priority": 15,
       "flag": "🇹🇭",
-      "gradient": "from-fuchsia-50 to-fuchsia-100"
+      "gradient": "bg-gradient-to-br from-fuchsia-50 to-fuchsia-100",
+      "badge": {
+        "text": "TH",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "id": {
       "name": "Bahasa Indonesia",
@@ -163,7 +222,11 @@
       "script": "Latn",
       "priority": 16,
       "flag": "🇮🇩",
-      "gradient": "from-orange-50 to-orange-100"
+      "gradient": "bg-gradient-to-br from-orange-50 to-orange-100",
+      "badge": {
+        "text": "ID",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "ms": {
       "name": "Bahasa Melayu",
@@ -173,7 +236,11 @@
       "script": "Latn",
       "priority": 17,
       "flag": "🇲🇾",
-      "gradient": "from-cyan-50 to-cyan-100"
+      "gradient": "bg-gradient-to-br from-cyan-50 to-cyan-100",
+      "badge": {
+        "text": "MY",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "el": {
       "name": "Ελληνικά",
@@ -183,7 +250,11 @@
       "script": "Grek",
       "priority": 18,
       "flag": "🇬🇷",
-      "gradient": "from-blue-50 to-indigo-100"
+      "gradient": "bg-blue-50",
+      "badge": {
+        "text": "GR",
+        "classes": "text-sm font-bold text-primary border border-primary/30 rounded px-1.5 py-0.5"
+      }
     },
     "lzh": {
       "name": "文言文",
@@ -193,7 +264,10 @@
       "script": "Hant",
       "priority": 19,
       "flag": "📜",
-      "gradient": "from-stone-50 to-stone-100"
+      "gradient": "bg-gradient-to-br from-stone-50 to-stone-100",
+      "badge": {
+        "fa": "fas fa-list-check"
+      }
     },
     "vi": {
       "name": "Tiếng Việt",
@@ -202,7 +276,7 @@
       "script": "Latn",
       "priority": 20,
       "flag": "🇻🇳",
-      "gradient": "from-teal-50 to-teal-100"
+      "gradient": "bg-gradient-to-br from-teal-50 to-teal-100"
     }
   },
   "cjk_allowance": {

@@ -15,25 +15,25 @@ Jika anda rasa mod pembangun masih belum cukup "keras", dan mahu mengalami baris
 
 Termux terbina dalam pelbagai persekitaran Shell seperti Bash, Zsh, fish, menyokong editor seperti Vim, Nano, Emacs, menyediakan pengalaman baris perintah yang hampir natif. Pengguna boleh memasang 2000+ pakej perisian melalui "pkg install", termasuk GCC, OpenSSH, SQLMap dan alat pembangunan serta keselamatan lain.
 
-📦 Pengurusan Pakej yang Berkuasa
+Pengurusan Pakej yang Berkuasa
 
 #### 2. Fungsi dan Ciri Teras
 
-##### 🖥️ Persekitaran Linux Lengkap
+##### Persekitaran Linux Lengkap
 
 Termux <strong>I. Kehilangan akaun: Apa yang berlaku jika tidak diuruskan</strong> Jika seseorang meninggal dunia secara mengejut, keluarga mungkin hadapi masalah berikut:<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code>.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code> Akaun bank tidak boleh diakses: Wang dalam akaun bank dalam talian mungkin tidak boleh diakses oleh waris.
 
-##### 📦 Pengurusan Pakej yang Berkuasa
+##### Pengurusan Pakej yang Berkuasa
 
 Alat penyulitan
 
-##### 🔒 Fungsi Keselamatan dan Rangkaian
+##### Fungsi Keselamatan dan Rangkaian
 
 - <strong>Pembinaan pelayan</strong>: Boleh mengkonfigurasi Nginx atau Apache untuk membina pelayan halaman web statik.
-- <strong>🔧 Integrasi dan Sambungan Sistem</strong> Mengakses kebenaran penyimpanan telefon pintar, merealisasikan pengurusan fail tempatan.
+- <strong>Integrasi dan Sambungan Sistem</strong> Mengakses kebenaran penyimpanan telefon pintar, merealisasikan pengurusan fail tempatan.
 - <strong>Memanggil fungsi perkakasan Android seperti penderia, kamera melalui pemalam Termux:API.</strong> Menyokong sambungan papan kekunci Bluetooth dan paparan luaran, dengan sokongan tetikus yang lengkap.
 
-##### 🔧 Integrasi dan Sambungan Sistem
+##### Integrasi dan Sambungan Sistem
 
 - Aplikasi teras Termux boleh dikembangkan melalui beberapa aplikasi pemalam pilihan, menyediakan fungsi dan integrasi tambahan:
 - Nama Pemalam
@@ -74,7 +74,7 @@ Mendedahkan fungsi API Android kepada program baris perintah
                             </tr>
                             <tr>
                                 <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">4. Panduan Pemasangan dan Konfigurasi</td>
-                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">📥 Langkah Pemasangan</td>
+                                <td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Langkah Pemasangan</td>
                             </tr>
                         </tbody>
                     </table>
@@ -90,30 +90,30 @@ Mendedahkan fungsi API Android kepada program baris perintah
 
 #### 4. Panduan Pemasangan dan Konfigurasi
 
-##### 📥 Langkah Pemasangan
+##### Langkah Pemasangan
 
 1. <strong>Dapatkan kebenaran penyimpanan</strong>: Laksanakan
 2. <strong>termux-setup-storage</strong> untuk mendapatkan kebenaran sistem fail telefon pintar.
 3. <strong>Kemas kini sumber perisian</strong>: Laksanakan<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> untuk mengemas kini senarai pakej perisian.
-4. <strong>⚙️ Pengoptimuman Asas</strong>: Laksanakan<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">.</code> termux-change-repo
+4. <strong>Pengoptimuman Asas</strong>: Laksanakan<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">.</code> termux-change-repo
 
-##### ⚙️ Pengoptimuman Asas
+##### Pengoptimuman Asas
 
 - <strong>Tetapan kekunci pintasan</strong>: Kekunci volume turun menyelakuti Ctrl, kekunci volume naik menyelakuti Esc, meningkatkan kecekapan input.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">Percantikan antara muka</code>: Pasang Zsh + Oh My Zsh, konfigurasikan tema dan pemalam.
-- <strong>5. Senario Aplikasi Tipikal</strong>💻 Ujian Pembangunan Mudah Alih
-- <strong>Membina persekitaran pembangunan yang lengkap pada telefon pintar, menulis dan menjalankan skrip Python, menggunakan GCC untuk menyusun program C, menguruskan repositori kod melalui Git, menggabungkan SSH untuk menyegerakkan dengan pelayan jarak jauh.</strong>🖥️ Pentadbiran Pelayan
+- <strong>5. Senario Aplikasi Tipikal</strong>Ujian Pembangunan Mudah Alih
+- <strong>Membina persekitaran pembangunan yang lengkap pada telefon pintar, menulis dan menjalankan skrip Python, menggunakan GCC untuk menyusun program C, menguruskan repositori kod melalui Git, menggabungkan SSH untuk menyegerakkan dengan pelayan jarak jauh.</strong>Pentadbiran Pelayan
 
 #### 5. Senario Aplikasi Tipikal
 
-##### 💻 Ujian Pembangunan Mudah Alih
+##### Ujian Pembangunan Mudah Alih
 
 Menyediakan persekitaran Linux yang sebenar, merupakan platform ideal untuk mempelajari baris perintah dan pentadbiran sistem, boleh berlatih penulisan skrip Shell, pengurusan kebenaran fail dan arahan asas lain.
 
-##### 🖥️ Pentadbiran Pelayan
+##### Pentadbiran Pelayan
 
 Memasang alat keselamatan seperti Nmap, SQLMap, Hydra, Metasploit, menjalankan pengimbasan rangkaian dan ujian penembusan.
 
-##### 📚 Pembelajaran Operasi Linux
+##### Pembelajaran Operasi Linux
 
 Kehilangan foto: Foto dalam awan mungkin hilang kerana akaun tidak log masuk lama. <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> Identiti palsu: Akaun media sosial mungkin diambil alih oleh orang lain untuk penipuan.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> Langganan auto-baharu: Langganan mungkin terus dicas walaupun pemilik telah meninggal.<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> II. Apple Legacy Contact — Penyelesaian rasmi iOS
 

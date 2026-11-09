@@ -38,7 +38,7 @@ Saat vendor merilis system update atau image, akan memakai private key-nya untuk
 
 BL lock adalah link pertama dari seluruh secure boot chain. Setelah verifikasi lulus, baru load dan execute bootloader tahap berikutnya (seperti kernel), sehingga berlapis-lapis memastikan kredibilitas environment boot sistem.
 
-##### 📊 Lock vs Unlock: Dampak Dua Sisi BL Lock
+##### Lock vs Unlock: Dampak Dua Sisi BL Lock
 
 Untuk lebih intuitif memahami pro dan kontra BL lock, kita pakai comparison table untuk menampilkan perbedaannya di 5 dimensi inti:
 

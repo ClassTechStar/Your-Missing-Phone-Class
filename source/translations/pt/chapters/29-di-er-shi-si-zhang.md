@@ -38,7 +38,7 @@ Ao publicar atualizações de sistema ou imagens, o fabricante as assina com sua
 
 O bloqueio do Bootloader é o primeiro elo de toda a cadeia de inicialização segura. Somente após sua verificação ser aprovada, o próximo estágio do bootloader (como o kernel) é carregado e executado, garantindo assim, camada por camada, a confiabilidade do ambiente de inicialização do sistema.
 
-##### 📊 Bloqueado vs. Desbloqueado: o impacto duplo do bloqueio do Bootloader
+##### Bloqueado vs. Desbloqueado: o impacto duplo do bloqueio do Bootloader
 
 Para entender mais intuitivamente os prós e contras do bloqueio do Bootloader, apresentamos uma tabela comparativa em 5 dimensões principais:
 

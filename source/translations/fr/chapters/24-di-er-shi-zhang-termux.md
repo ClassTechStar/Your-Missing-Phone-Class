@@ -19,21 +19,21 @@ L'avantage principal de Termux réside dans sa légèreté et son extensibilité
 
 #### II. Fonctions et caractéristiques principales
 
-##### 🖥️ Environnement Linux complet
+##### Environnement Linux complet
 
 Termux <strong>Seul Bash est intégré</strong> comme shell. Si vous souhaitez utiliser d'autres shells comme Zsh ou fish, vous devez les installer manuellement via le gestionnaire de paquets, par exemple :<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install zsh</code> ou<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg install fish</code>. Termux prend également en charge les éditeurs tels que Vim, Nano, Emacs, offrant une expérience en ligne de commande quasi native. Les utilisateurs peuvent installer plus de 2000 paquets via « pkg install », y compris GCC, OpenSSH, SQLMap et d'autres outils de développement et de sécurité.
 
-##### 📦 Gestion de packages puissante
+##### Gestion de packages puissante
 
 Utilise le gestionnaire de packages APT (similaire à Debian et Ubuntu), peut installer des milliers de packages Linux, couvrant les outils de développement, les outils réseau, etc. Prend en charge plusieurs environnements de langages de programmation comme Python, Ruby, Node.js, Go, Rust, Swift.
 
-##### 🔒 Fonctions de sécurité et réseau
+##### Fonctions de sécurité et réseau
 
 - <strong>Connexion SSH à distance</strong>: prend en charge les fonctions client et serveur SSH, peut se connecter à distance à d'autres appareils ou transformer le téléphone en hôte SSH.
 - <strong>Outils de chiffrement</strong>: fournit des outils de chiffrement comme OpenSSL, prend en charge le chiffrement des données et les communications sécurisées.
 - <strong>Configuration de serveur</strong>: peut configurer Nginx ou Apache pour mettre en place un serveur web statique.
 
-##### 🔧 Intégration et extension système
+##### Intégration et extension système
 
 - Accès aux permissions de stockage du téléphone pour la gestion locale des fichiers.
 - Appel des fonctions matérielles Android comme les capteurs, la caméra via le plugin Termux:API.
@@ -90,14 +90,14 @@ Termux et ses plugins doivent être installés depuis la même source, car ils p
 
 #### IV. Guide d'installation et de configuration
 
-##### 📥 Étapes d'installation
+##### Étapes d'installation
 
 1. <strong>Télécharger l'application</strong>: téléchargez et installez Termux depuis les canaux officiels (F-Droid ou GitHub), sans nécessiter de permissions root.
 2. <strong>Initialiser le système</strong>: après le premier lancement, attendez que « Installing bootstrap packages » soit terminé.
 3. <strong>Obtenir les permissions de stockage</strong>: exécutez<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-setup-storage</code> pour obtenir les permissions du système de fichiers du téléphone.
 4. <strong>Mettre à jour les sources logicielles</strong>: exécutez<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">pkg update &amp;&amp; pkg upgrade</code> pour mettre à jour la liste des packages.
 
-##### ⚙️ Optimisations de base
+##### Optimisations de base
 
 - <strong>Changer de miroir</strong>: utilisez la commande<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">termux-change-repo</code> pour changer de miroir via une interface graphique (miroir de l'Université Tsinghua recommandé).
 - <strong>Configuration des raccourcis clavier</strong>: la touche volume bas simule Ctrl, la touche volume haut simule Esc, améliore l'efficacité de saisie.
@@ -105,15 +105,15 @@ Termux et ses plugins doivent être installés depuis la même source, car ils p
 
 #### V. Scénarios d'utilisation typiques
 
-##### 💻 Tests de développement mobile
+##### Tests de développement mobile
 
 Configurez un environnement de développement complet sur le smartphone, écrivez et exécutez des scripts Python, compilez des programmes C avec GCC, gérez des dépôts de code avec Git, synchronisez avec des serveurs distants via SSH.
 
-##### 🖥️ Administration de serveurs
+##### Administration de serveurs
 
 Gérez à distance des serveurs via SSH, exécutez des tâches de maintenance système, d'analyse de journaux, traitez les problèmes de serveurs à tout moment et en tout lieu.
 
-##### 📚 Apprentissage de Linux
+##### Apprentissage de Linux
 
 Fournit un véritable environnement Linux, c'est la plateforme idéale pour apprendre la ligne de commande et l'administration système, permettant de s'exercer à la rédaction de scripts shell, à la gestion des permissions de fichiers Linux (par exemple <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chmod 755</code> définir les bits de permission rwxr-xr-x,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">chown user:group</code> modifier le propriétaire du fichier,<code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">ls -l</code> consulter les trois groupes de neuf bits de permissions owner/group/other) et d'autres commandes de base. Notez qu'il s'agit du modèle de permissions classique Unix/Linux « trois groupes, neuf bits » (owner / group / other × lecture / écriture / exécution), qui est un système complètement différent des listes de contrôle d'accès (ACL) de Windows NTFS.
 

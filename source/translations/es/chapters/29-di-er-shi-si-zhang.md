@@ -38,7 +38,7 @@ Cuando los fabricantes publican actualizaciones del sistema o imágenes, las fir
 
 El bloqueo del bootloader es el primer eslabón de toda la cadena de arranque seguro. Solo después de pasar la verificación, carga y ejecuta el siguiente programa de arranque (como el kernel), garantizando así capa por capa que el entorno de arranque del sistema es de confianza.
 
-##### 📊 Bloqueado vs. Desbloqueado: El impacto dual del bloqueo del bootloader
+##### Bloqueado vs. Desbloqueado: El impacto dual del bloqueo del bootloader
 
 Para comprender más intuitivamente las ventajas y desventajas del bloqueo del bootloader, usamos una tabla comparativa para mostrar las diferencias en 5 dimensiones clave:
 

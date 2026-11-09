@@ -70,26 +70,26 @@ A la izquierda está el navegador del proyecto; como principiante solo necesitas
 
 ::: div .figure
 ```html
-<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg">
-      <rect x="0" y="0" width="600" height="290" fill="#fafafa" rx="8"/>
-      <text x="20" y="28" font-size="13" font-weight="bold" fill="#111827">MyFirstApp/ raíz del proyecto</text>
-      <rect x="30" y="42" width="540" height="225" fill="#ffffff" stroke="#d1d5db" rx="6"/>
-      <rect x="45" y="56" width="250" height="196" fill="#eef2ff" rx="5"/>
-      <text x="56" y="78" font-size="11" fill="#1e1b4b" font-weight="bold">MyFirstApp/ (carpeta de código)</text>
-      <text x="66" y="100" font-size="10" fill="#374151">├ MyFirstAppApp.swift  ← punto de entrada</text>
-      <text x="66" y="120" font-size="10" fill="#374151">├ ContentView.swift  ← pantalla principal</text>
-      <text x="66" y="140" font-size="10" fill="#374151">└ Assets.xcassets  ← iconos, imágenes, colores</text>
-      <text x="56" y="166" font-size="10" fill="#6b7280">(los archivos nuevos van en esta carpeta)</text>
-      <text x="56" y="196" font-size="10" fill="#1e1b4b" font-weight="bold">pestaña Info / Info.plist</text>
-      <text x="66" y="216" font-size="10" fill="#6b7280">declaración de la app: nombre, permisos, ajustes</text>
+<svg style="max-width:100%;height:auto" width="600" height="290" viewBox="0 0 600 290" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <rect x="0" y="0" width="600" height="290" fill="var(--surface-6)" rx="8"/>
+      <text x="20" y="28" font-size="13" font-weight="bold" fill="var(--surface-dark-2)">MyFirstApp/ raíz del proyecto</text>
+      <rect x="30" y="42" width="540" height="225" style="fill:var(--ink-inverse)" stroke="var(--line-2)" rx="6"/>
+      <rect x="45" y="56" width="250" height="196" fill="var(--accent-wash)" rx="5"/>
+      <text x="56" y="78" font-size="11" fill="var(--accent-deep)" font-weight="bold">MyFirstApp/ (carpeta de código)</text>
+      <text x="66" y="100" font-size="10" fill="var(--ink-2)">├ MyFirstAppApp.swift  ← punto de entrada</text>
+      <text x="66" y="120" font-size="10" fill="var(--ink-2)">├ ContentView.swift  ← pantalla principal</text>
+      <text x="66" y="140" font-size="10" fill="var(--ink-2)">└ Assets.xcassets  ← iconos, imágenes, colores</text>
+      <text x="56" y="166" font-size="10" fill="var(--muted-2)">(los archivos nuevos van en esta carpeta)</text>
+      <text x="56" y="196" font-size="10" fill="var(--accent-deep)" font-weight="bold">pestaña Info / Info.plist</text>
+      <text x="66" y="216" font-size="10" fill="var(--muted-2)">declaración de la app: nombre, permisos, ajustes</text>
       <rect x="310" y="56" width="245" height="196" fill="#f0fdf4" rx="5"/>
       <text x="321" y="78" font-size="11" fill="#065f46" font-weight="bold">otros lugares importantes</text>
-      <text x="331" y="100" font-size="10" fill="#374151">📁 Preview Content/  ← material de previsualización</text>
-      <text x="331" y="122" font-size="10" fill="#374151"><i class="fas fa-bullseye mr-1"></i> ajustes del Target (icono azul del proyecto)</text>
-      <text x="331" y="142" font-size="10" fill="#6b7280">——aquí están la versión, el sistema mínimo y la firma</text>
-      <text x="331" y="168" font-size="10" fill="#374151"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← pruebas unitarias</text>
-      <text x="331" y="188" font-size="10" fill="#374151">📱 MyFirstAppUITests/ ← pruebas de interfaz</text>
-      <text x="331" y="216" font-size="10" fill="#9ca3af">(la plantilla de tests ya está generada, se usa en el cap. 67)</text>
+      <text x="331" y="100" font-size="10" fill="var(--ink-2)">📁 Preview Content/  ← material de previsualización</text>
+      <text x="331" y="122" font-size="10" fill="var(--ink-2)"><i class="fas fa-bullseye mr-1"></i> ajustes del Target (icono azul del proyecto)</text>
+      <text x="331" y="142" font-size="10" fill="var(--muted-2)">——aquí están la versión, el sistema mínimo y la firma</text>
+      <text x="331" y="168" font-size="10" fill="var(--ink-2)"><i class="fas fa-flask mr-1"></i> MyFirstAppTests/  ← pruebas unitarias</text>
+      <text x="331" y="188" font-size="10" fill="var(--ink-2)">📱 MyFirstAppUITests/ ← pruebas de interfaz</text>
+      <text x="331" y="216" font-size="10" fill="var(--muted)">(la plantilla de tests ya está generada, se usa en el cap. 67)</text>
     </svg>
 ```
 
