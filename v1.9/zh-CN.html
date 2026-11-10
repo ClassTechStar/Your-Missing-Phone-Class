@@ -9092,7 +9092,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>工作产物变了</strong>：从"一段代码"变成"一个完整的项目"。</li>
   <li><strong>人的角色变了</strong>：从"逐行审核代码"变成"定义边界、验收结果"。</li>
 </ol>
-<p class="mb-2">数字不会说谎：Cursor 在 2026 年 4 月发布的 Cursor 3 版本中，<strong>Agent 模式的使用率首次反超 Tab 补全模式</strong>，标志着开发者已经大规模转向这种工作方式；而 Claude Code 这个终端原生的 AI 编程工具，到 2026 年中期已达到年化收入 25 亿美元的规模。下面的趋势图能让你直观感受这个交叉时刻：</p>
+<p class="mb-2">行业数据也印证了这一点：Cursor 在 2026 年 4 月发布的 Cursor 3 版本中，<strong>Agent 模式的使用率首次反超 Tab 补全模式</strong>，标志着开发者已经大规模转向这种工作方式；而 Claude Code 这个终端原生的 AI 编程工具，到 2026 年中期已达到年化收入 25 亿美元的规模。下面的趋势图能让你直观感受这个交叉时刻：</p>
 <div class="figure">
 <svg aria-hidden="true" style="max-width:100%;height:auto" width="640" height="300" viewBox="0 0 640 300" xmlns="http://www.w3.org/2000/svg">
       <rect x="0" y="0" width="640" height="300" rx="8" style="fill:var(--ink-inverse)" />
@@ -9167,7 +9167,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <p class="mb-2">故事的起点很有意思：Andrej Karpathy 在开源他的项目时，附了一份仅 <strong>70 行</strong>的 CLAUDE.md 文件，总结了与 AI 协作的四条核心原则。这份文件在 GitHub 上获得了超过 70,000 个 Star，成为全球 AI 编程实践者最广泛引用的准则。这四条原则不是空洞的口号，而是从大量实践中提炼出的、可操作的思维习惯。<strong>本书在其基础上补充了第五条——迭代验证——构成完整的五大原则体系</strong>。</p>
 <div class="info-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>70 行文件为什么这么值钱？</p>
-<p class="mt-1">70,000 个 Star 是什么概念？GitHub 上绝大多数项目一辈子都到不了这个数字。一个 70 行的文本文件能获得它，恰恰证明了一件事：AI 时代最稀缺的不是代码，而是"想清楚"的能力。这 70 行，就是"想清楚"的浓缩版。</p>
+<p class="mt-1">数万个 Star 是什么概念？GitHub 上绝大多数项目一辈子都到不了这个数字。一个 70 行的文本文件能获得它，恰恰证明了一件事：AI 时代最稀缺的不是代码，而是"想清楚"的能力。这 70 行，就是"想清楚"的浓缩版。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">一、原则一：Think Before Coding（先思考，再编码）</h4>
 <p class="mb-2">这是五条原则中最反直觉的一条。既然 AI 能帮我们写代码，为什么还要"先思考"？答案很简单：<strong>AI 的产出质量与你的输入质量正相关</strong>。你自己都没想清楚要做什么，AI 给出的答案只会让你陷入无休止的"改了又改"循环——俗称"AI 陪你一起迷路"。</p>
@@ -9280,7 +9280,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <p class="mb-2">AI 模型有一个根本性限制：<strong>它的记忆是"短时"的</strong>。每次对话开始时，AI 对你项目的了解为零。你需要在对话中不断告诉它"我们用的是 React""后端是 Node.js""数据库是 PostgreSQL""代码风格用双引号"。这不仅低效，而且容易遗漏——就像每天都要重新给新来的同事做入职培训。</p>
 <p class="mb-2">解决方案是"项目记忆文件"——一个放在项目根目录的纯文本文件，AI 工具会在每次对话开始时自动读取它。不同的工具有不同的命名约定：</p>
 <div class="overflow-x-auto">
-<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">工具</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">文件名</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">.cursorrules</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Code</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">CLAUDE.md</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitHub Copilot</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">copilot-instructions.md</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通用方案</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">AGENTS.md</code></td></tr></tbody></table>
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">工具</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">文件名</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">.cursor/rules 目录</code>（旧版 .cursorrules 已废弃）</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Code</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">CLAUDE.md</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GitHub Copilot</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">copilot-instructions.md</code></td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">通用方案</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><code class="inline">AGENTS.md</code></td></tr></tbody></table>
 </div>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">各工具的项目记忆文件命名约定</p>
 <p class="mb-2">虽然命名不同，但原理一样：<strong>把你希望 AI"始终记住"的信息写在这个文件里</strong>。一个好的项目记忆文件应该包含：项目概述（这是什么项目）、技术栈（用了什么技术）、代码规范（命名、缩进、注释风格）、目录结构（代码怎么组织的）、开发约定（分支策略、提交规范、测试要求）。Karpathy 的 CLAUDE.md 只有 70 行，但覆盖了所有关键信息——简洁但完备。这两年还有个好消息：各家的约定正在合流，CLAUDE.md、AGENTS.md 这类文件好多工具都认，写一份就够，换工具不用重写。</p>
@@ -9354,7 +9354,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 <h4 class="text-lg font-semibold mt-4 mb-2">五、2026 年的上下文基础设施</h4>
 <p class="mb-2">上下文工程走到今天，早就不只是"对话框里贴多少代码"——主流工具已经把它做成了可配置的一层基础设施。三件事值得专门说说：</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
-  <li><strong>MCP 成为通用接口</strong>：Model Context Protocol 让智能体以统一方式接外部系统——问题跟踪、数据库、文档、部署流水线。接什么由你决定，也意味着权限边界要由你划。</li>
+  <li><strong>MCP 成为通用接口</strong>：Model Context Protocol 让智能体以统一方式接外部系统——问题跟踪、数据库、文档、部署流水线。接什么由你决定，也意味着权限边界要由你划。装第三方 MCP 服务器前，先审查它的来源与权限——生态已经上万，供应链风险是真实的。</li>
   <li><strong>子代理与上下文隔离</strong>：把"读代码库""跑测试""查文档"分派给子代理，各自只带回结论，主上下文就不会被几千行日志挤爆。第四十三章还会展开这个玩法。</li>
   <li><strong>会话可复现</strong>：把关键决策写回文件，而不是只留在对话里。下次开新会话，智能体仍能接着同一套约定工作——这也是记忆文件要随项目同步更新的原因。</li>
 </ul>
@@ -9532,7 +9532,7 @@ Step 5: 数据导出</pre>
 <p class="mb-2">Claude Code 是 Anthropic 推出的终端 AI 编程工具，到 2026 年中期已达到年化收入 25 亿美元的规模。它的工作方式与传统 IDE 完全不同：你在终端中用自然语言描述任务，Claude Code 会自主读取相关文件、修改代码、运行测试、查看结果、迭代修正——整个过程不需要你打开编辑器。</p>
 <p class="mb-2">Claude Code 的优势在于"全项目感知"：它不受编辑器窗口限制，可以自由地浏览整个项目目录，理解文件间的依赖关系。它也支持 CLAUDE.md 项目记忆文件，让 AI 在每次会话开始时就了解项目背景。对于大型项目的重构、批量修改、测试编写等任务，终端 Agent 比 IDE 插件更高效。</p>
 <h5 class="font-semibold mt-3 mb-1">2. Codex CLI 与 Aider</h5>
-<p class="mb-2">OpenAI 的 Codex CLI 提供了类似的终端编程体验，并支持 /import 功能——可以导入现有的代码库让 AI 理解。Aider 是一个开源的终端 AI 编程工具，支持多种模型（GPT、Claude、DeepSeek 等），适合想要灵活切换模型的用户。Google 的 Gemini CLI 也加入了战团——上下文窗口大，个人账号还有免费额度，适合想零成本先试试终端智能体的用户。这些工具虽然各有特色，但核心理念一致：<strong>让 AI 在终端中拥有完整的开发环境操作能力</strong>。</p>
+<p class="mb-2">OpenAI 的 Codex CLI 提供了类似的终端编程体验，并支持用 /init 生成 AGENTS.md——让 AI 理解现有代码库的约定。Aider 是一个开源的终端 AI 编程工具，支持多种模型（GPT、Claude、DeepSeek 等），适合想要灵活切换模型的用户。Google 的 Gemini CLI 也加入了战团——上下文窗口大，个人账号还有免费额度，适合想零成本先试试终端智能体的用户。这些工具虽然各有特色，但核心理念一致：<strong>让 AI 在终端中拥有完整的开发环境操作能力</strong>。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">四、云端 Builder 流派</h4>
 <p class="mb-2">云端 Builder 是最适合零基础用户的流派。你不需要安装任何软件，只需要打开浏览器，描述你的需求，AI 就会在云端创建完整的项目，并提供即时预览。</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -9589,11 +9589,11 @@ Step 5: 数据导出</pre>
 
                 <div id="di-si-shi-er-zhang" class="mb-10 content-section">
 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第四十二章：大模型全景与API实战</h3>
-<p class="chapter-intro mb-4">前面几章讲的都是"怎么和 AI 协作"，本章解决一个更基础的问题："用哪个 AI？怎么用？"2026 年 8 月的大模型格局已经极其丰富——国际有 GPT、Claude、Gemini 三强争霸，国内有 DeepSeek、通义千问、GLM、Kimi、豆包百花齐放。每个模型都有自己的性格和特长：选对了事半功倍，选错了事倍功半。本章不仅带你认识这些模型，还会教你如何通过 API 将它们接入自己的应用，以及如何根据自己的需求选择合适的 Token Plan（用量套餐）。</p>
+<p class="chapter-intro mb-4">前面几章讲的都是"怎么和 AI 协作"，本章解决一个更基础的问题："用哪个 AI？怎么用？"2026 年 8 月的大模型格局已经极其丰富——国际有 GPT、Claude、Gemini 三强争霸，国内有 DeepSeek、通义千问、GLM、Kimi、豆包百花齐放。每个模型都有自己的性格和特长：选对了事半功倍，选错了事倍功半。<strong>11 月更新</strong>：OpenAI 的 GPT-6 Sol/Luna 已于 9 月下旬发布（价格约为 GPT-5.6 的一半），旗舰为 GPT-6 Astra；Anthropic 新主力是 Claude Opus 5.5——下表保留 8 月快照，供理解格局演变，价格以各家官网现价为准。本章不仅带你认识这些模型，还会教你如何通过 API 将它们接入自己的应用，以及如何根据自己的需求选择合适的 Token Plan（用量套餐）。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">一、国际主流大模型：三强格局</h4>
 <p class="mb-2">2026 年 8 月的国际大模型市场，形成了 OpenAI（GPT 系列）、Anthropic（Claude 系列）、Google（Gemini 系列）三强鼎立的格局。每家都有自己鲜明的特色——咱们一个一个认识。</p>
 <h5 class="font-semibold mt-3 mb-1">1. OpenAI GPT-5.6 系列：全能均衡的六边形战士</h5>
-<p class="mb-2">OpenAI 是大模型浪潮的开启者，GPT 系列至今仍是全球使用最广泛的模型。2026 年 7 月发布的 GPT-5.6 系列采用三档定位策略：旗舰款 GPT-5.6 Sol 面向高端推理需求，均衡款 GPT-5.6 Terra 面向日常开发，轻量款 GPT-5.6 Luna 面向高并发低成本场景。三款模型共享 105 万 Token 的上下文窗口，都支持图像输入、函数调用和结构化输出。</p>
+<p class="mb-2">OpenAI 是大模型浪潮的开启者，GPT 系列至今仍是全球使用最广泛的模型。2026 年 7 月发布的 GPT-5.6 系列采用三档定位策略：旗舰款 GPT-5.6 Sol 面向高端推理需求，均衡款 GPT-5.6 Terra 面向日常开发，轻量款 GPT-5.6 Luna 面向高并发低成本场景。三款模型共享约 100 万 Token 的上下文窗口，都支持图像输入、函数调用和结构化输出。</p>
 <div class="overflow-x-auto">
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">型号</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">定位</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">输入(/百万Token)</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">输出(/百万Token)</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">上下文窗口</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GPT-5.6 Sol</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旗舰推理</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$5.00 (约36元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$30.00 (约217元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">105万Token</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GPT-5.6 Terra</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">均衡日常</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$2.50 (约18元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$15.00 (约109元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">105万Token</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GPT-5.6 Luna</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">轻量低成本</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$1.00 (约7元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$6.00 (约44元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">105万Token</td></tr></tbody></table>
 </div>
@@ -9604,7 +9604,7 @@ Step 5: 数据导出</pre>
 <p class="mt-1">OpenAI 在 2026 年 8 月宣布免费用户默认模型升级为 GPT-5.6 Luna，并开放无限量文本聊天。这意味着你可以零成本体验 GPT 的基础能力，只有在需要更强推理或 API 调用时才需要付费。</p>
 </div>
 <h5 class="font-semibold mt-3 mb-1">2. Anthropic Claude 系列：编程与严谨的天花板</h5>
-<p class="mb-2">如果说 GPT 是全能选手，那 Claude 就是编程领域的"天花板"。Anthropic 的 Claude 系列在 SWE-bench（软件工程基准测试）上长期断层领先，代码生成质量和工程级项目落地能力业界第一。更难得的是，Claude 的幻觉率（生成虚假信息的概率）全网最低，仅约 1%——这使它特别适合学术、法务等高精度场景。</p>
+<p class="mb-2">如果说 GPT 是全能选手，那 Claude 就是编程领域的"天花板"。Anthropic 的 Claude 系列长期是编程场景的主力选手，代码生成质量和工程级项目落地能力在第一梯队（SWE-bench 各版本成绩几度轮换领先，看趋势别背单个数字）。更难得的是，Claude 的幻觉率（生成虚假信息的概率）全网最低，仅约 1%——这使它特别适合学术、法务等高精度场景。</p>
 <p class="mb-2">Claude 的另一个杀手锏是超长上下文：支持 100 万 Token 的上下文窗口，能一次性"读完"几百页的合同或整个代码库不漏细节。这在代码重构、长文档分析等场景中几乎无可替代。Claude Code 作为终端 AI 编程工具，到 2026 年中期年化收入已达 25 亿美元——这是 Claude 编程能力最受认可的证据。</p>
 <div class="overflow-x-auto">
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">型号</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">定位</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">输入(/百万Token)</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">输出(/百万Token)</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">上下文窗口</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Fable 5</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">旗舰款</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$10.00 (约72元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$50.00 (约362元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100万Token</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Opus 4.8</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">专业款</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$5.00 (约36元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$25.00 (约181元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100万Token</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Sonnet 5</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">性价比款</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$2.00 (约14元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$10.00 (约72元)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100万Token</td></tr></tbody></table>
@@ -9623,7 +9623,7 @@ Step 5: 数据导出</pre>
 <p class="mt-1">对于国内开发者来说，GPT、Claude、Gemini 的核心障碍是网络访问。虽然可以通过 Azure 代理、API 聚合平台等方式间接使用，但稳定性和合规性需要自行评估。如果你的项目对数据安全有严格要求，建议优先考虑国产模型。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、国产主流大模型：百花齐放</h4>
-<p class="mb-2">2026 年的国产大模型已经从"追赶者"变成了"并跑者"，在某些领域甚至实现了"领跑"。与 2023 年"套壳"争议不同，2026 年的国产旗舰模型在逻辑推理、代码生成、中文理解等方面已经与国际一线模型旗鼓相当，差距缩减到 5% 以内。更重要的是，国产模型在中文场景、价格成本和合规部署上有不可替代的优势。</p>
+<p class="mb-2">2026 年的国产大模型已经从"追赶者"变成了"并跑者"，在某些领域甚至实现了"领跑"。与 2023 年"套壳"争议不同，2026 年的国产旗舰模型在逻辑推理、代码生成、中文理解等方面已经与国际一线模型旗鼓相当，差距缩小到个位数。更重要的是，国产模型在中文场景、价格成本和合规部署上有不可替代的优势。</p>
 <h5 class="font-semibold mt-3 mb-1">1. DeepSeek V4：性价比之王</h5>
 <p class="mb-2">DeepSeek（深度求索）是国产大模型中现象级的存在。2025 年初，DeepSeek-V3 以"比 GPT 便宜十分之一但能力相当"的定位震撼市场，被业内称为"通用 AI 大模型斩杀线"——<strong>比它便宜的没它好用，比它贵的没它量大管饱</strong>。到 2026 年 8 月，DeepSeek V4-Pro 正式版发布：1.6 万亿参数 MoE 架构，激活约 49B，支持 100 万无损上下文，代码性价比被广泛认为是全球天花板。</p>
 <p class="mb-2">DeepSeek V4 在 Agent 能力上实现了大幅跃升——DeepSWE 基准从 12.8 跳至 62.7（+390%），NL2Repo 从 38.5 升至 61.5。API 新增了 Responses API 与 Anthropic API 双协议支持，已兼容 Codex 和 Claude Code 等主流编程工具。这意味着你可以用 DeepSeek 的 API 替代 Claude 的 API，在 Claude Code 中使用——<strong>成本降低数倍，体验几乎一致</strong>。</p>
@@ -9634,7 +9634,7 @@ Step 5: 数据导出</pre>
 <p class="mb-2">价格对比：同样 100 万 Token 的输入 + 100 万 Token 的输出，DeepSeek V4 Flash 花费约 0.42 美元，GPT-5.6 Sol 花费约 35 美元，Claude Fable 5 花费约 60 美元。<strong>差距高达 80-140 倍</strong>。</p>
 <div class="danger-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：DeepSeek 要涨价了</p>
-<p class="mt-1">DeepSeek 官方已于 2026 年 8 月 6 日公告"计划近期大幅上调 API 定价"，促销价可能不会持续太久。部分媒体传闻涨幅可能达 30 倍，截至 8 月 14 日官方尚未公布最终调价方案。此外，DeepSeek V4 正式版引入了<strong>峰谷定价机制</strong>——高峰时段调用价格直接翻倍。建议关注官方公告获取最新定价。</p>
+<p class="mt-1">DeepSeek 官方已于 2026 年 8 月 6 日公告"计划近期大幅上调 API 定价"，促销价可能不会持续太久。调价已于 2026 年 8 月中旬落地：输入、输出、缓存全面上调（涨幅 50%–1100%，缓存命中涨幅最大），峰谷定价的规则是"低谷半价"而非"高峰翻倍"——现价以 api-docs.deepseek.com 的价格页为准。</p>
 </div>
 <h5 class="font-semibold mt-3 mb-1">2. 通义千问 Qwen3.7 Max：阿里云的企业级选择</h5>
 <p class="mb-2">阿里云的通义千问（Qwen）系列依托阿里云生态，在企业级部署上有天然优势。2026 年 7 月的 Qwen3.7 Max 是当前旗舰：235B 参数稠密模型，256K 原生上下文，可扩展至 1M。Qwen 的核心优势在于：开源生态成熟（从 7B 到 235B 全系列开源）、中文场景理解精准、与阿里云基础设施深度集成。</p>
@@ -9648,7 +9648,7 @@ Step 5: 数据导出</pre>
 <h5 class="font-semibold mt-3 mb-1">4. Kimi K3：超长文本之王</h5>
 <p class="mb-2">月之暗面的 Kimi 系列以超长文本处理能力著称。2026 年 7 月发布的 Kimi K3 拥有 2.8 万亿参数规模，在多项复杂任务评测中进入全球第一梯队。Kimi 的核心场景是长代码库分析和长文档检索增强——它能处理整本书的文本或整个项目的代码，在"大海捞针"式检索任务中表现卓越。Kimi 的定价相对较高（输出约 12-20 元/百万 Token），但在长文本场景的性价比无人能及。</p>
 <h5 class="font-semibold mt-3 mb-1">5. 豆包 Doubao：字节跳动的全能选手</h5>
-<p class="mb-2">字节跳动的豆包系列在 2026 年表现稳定。Doubao Seed 2.1 Pro 是火山引擎旗舰模型，256K 上下文，在实测中综合发挥稳定，中文场景体验突出。豆包的优势在于：<strong>注册即送大量免费 Token</strong>，火山引擎生态集成完善，定价处于国内最低梯队之一。对于想要快速体验 AI 编程的初学者，豆包是零门槛的入门选择。</p>
+<p class="mb-2">字节跳动的豆包系列在 2026 年表现稳定。Doubao Seed 2.1 Pro 是火山引擎旗舰模型，256K 上下文，在实测中综合发挥稳定，中文场景体验突出。豆包的优势在于：<strong>注册即送大量免费 Token</strong>，火山引擎生态集成完善，注册即送大量免费 Token，体验零门槛。对于想要快速体验 AI 编程的初学者，豆包是零门槛的入门选择。</p>
 <div class="overflow-x-auto">
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对比项</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">DeepSeek V4</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Qwen3.7 Max</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">GLM-5.1</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">Kimi K3</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">豆包 2.1 Pro</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">综合得分</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">87.5</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">89.7</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">90.5</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">88+</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">85+</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编程能力</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">极强</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">强</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">国产SWE第一</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">强</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中上</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中文理解</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">优秀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">优秀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">精准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">优秀</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">优秀</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">上下文窗口</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100万</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">256K-1M</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">100万</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">超长</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">256K</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">输出价格(元/M)</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">36</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">24</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">12-20</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">30</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开源</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MIT协议</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">全系列开源</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">部分开源</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">闭源</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">闭源</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">私有化部署</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">支持</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不支持</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不支持</td></tr></tbody></table>
 </div>
@@ -9704,7 +9704,7 @@ Step 5: 数据导出</pre>
 <p class="mb-2">Token 不是字数，也不是字符数。大模型使用专门的分词器（Tokenizer）将文本切分成 Token。同一个词在不同模型中的 Token 数量可能不同——比如"人工智能"在 GPT 中可能是 3 个 Token，在 DeepSeek 中可能是 2 个。大多数模型的 API 会返回实际消耗的 Token 数量，你可以在 API 响应中查看。</p>
 <div class="info-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>Token 成本快速估算</p>
-<p class="mt-1">100 万字中文约等于 150 万 Token。用 DeepSeek V4 Flash 处理 100 万字输入 + 100 万字输出，成本约 0.42 美元（约 3 元人民币）；用 Claude Fable 5 处理同样的量，成本约 60 美元（约 434 元人民币）。<strong>这就是为什么模型选择直接影响你的项目成本</strong>。</p>
+<p class="mt-1">100 万字中文约等于 150 万 Token。用 DeepSeek V4 Flash 处理百万 Token 输入 + 百万 Token 输出，成本约 0.42 美元（约 3 元人民币）；用 Claude Fable 5 处理同样的量，成本约 60 美元（约 434 元人民币）。<strong>这就是为什么模型选择直接影响你的项目成本</strong>。</p>
 </div>
 <h5 class="font-semibold mt-3 mb-1">2. 获取 API Key</h5>
 <p class="mb-2">使用大模型 API 的第一步是获取 API Key——一串用于身份验证的密钥。每个模型提供商都有自己的 API 平台，你需要注册账号并创建 API Key。以下是主流模型的 API 平台入口和获取流程：</p>
@@ -9812,7 +9812,7 @@ for chunk in stream:
 <p class="mb-2">对于初学者，建议<strong>从按量计费开始</strong>——不需要预付费用，用多少花多少。当你的月使用量稳定在一个水平后（比如每月超过 50 元），再考虑切换到套餐订阅以获得更低单价。</p>
 <h5 class="font-semibold mt-3 mb-1">2. 主流订阅套餐一览</h5>
 <div class="overflow-x-auto">
-<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">套餐</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">月费</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">包含内容</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合人群</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ChatGPT Free</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GPT-5.6 Luna 无限文本对话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">零基础体验</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ChatGPT Plus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$20/月</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GPT-5.6 Sol、图像生成、数据分析、插件访问</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中度使用者</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ChatGPT Pro</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$200/月</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无限制使用所有模型、优先访问新功能</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重度专业用户</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Free</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有限次数Claude对话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">零基础体验</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Pro</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$20/月</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无限制Claude使用、优先访问新模型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编程开发者</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor Free</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有限次数AI补全和对话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">初学者体验</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor Pro</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$20/月</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无限AI补全、500次/月高级请求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常开发者</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor Business</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$40/月/人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">团队协作、管理后台、隐私模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">团队使用</td></tr></tbody></table>
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">套餐</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">月费</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">包含内容</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合人群</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ChatGPT Free</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GPT-5.6 Luna 无限文本对话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">零基础体验</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ChatGPT Plus</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$20/月</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GPT-5.6 Sol、图像生成、数据分析、GPTs 与连接器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">中度使用者</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">ChatGPT Pro</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$200/月</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无限制使用所有模型、优先访问新功能</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">重度专业用户</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Free</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有限次数Claude对话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">零基础体验</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Claude Pro</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$20/月</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无限制Claude使用、优先访问新模型</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">编程开发者</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor Free</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">免费</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有限次数AI补全和对话</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">初学者体验</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor Pro</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$20/月</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无限AI补全、500次/月高级请求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">日常开发者</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Cursor Business</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">US$40/月/人</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">团队协作、管理后台、隐私模式</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">团队使用</td></tr></tbody></table>
 </div>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">主流 AI 工具订阅套餐（2026 年 8 月）</p>
 <p class="mb-2">国内模型的订阅方案略有不同。DeepSeek 主要按量计费，没有月度订阅套餐——你充值后按实际使用量扣费。通义千问在百炼平台提供预付费资源包（购买一定量的 Token 额度，享受折扣价）。豆包在火山引擎上也有类似的预付费方案。对于国内开发者，最经济的组合通常是：<strong>DeepSeek 按量计费（日常开发）+ 豆包免费额度（体验测试）</strong>。</p>
@@ -9924,7 +9924,7 @@ if __name__ == "__main__":
 <div class="chapter-summary">
 <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1"></i>本章小结</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
-  <li>国际三强：GPT-5.6（均衡全能）、Claude（编程天花板+幻觉率仅1%）、Gemini（多模态之王+200万上下文）</li>
+  <li>国际三强：OpenAI GPT-6/5.6 系列（均衡全能）、Claude（编程主力）、Gemini（多模态+长上下文）</li>
   <li>国产五强：DeepSeek V4（性价比之王，注意涨价公告）、Qwen3.7（企业级）、GLM-5.1（SWE国产第一）、Kimi K3（超长文本）、豆包（免费入门）</li>
   <li>四问决策法：部署地点？编程还是其他？超长上下文？预算敏感？</li>
   <li>Token 是计费单位：中文 1 字约 1.5-2 Token；100万字约150万Token</li>
@@ -10092,7 +10092,7 @@ Record { id, amount, type, category, note, date }
 请给出完整的后端代码结构。</pre>
 </div>
 <p class="mb-2">注意这个指令的特点：它<strong>只描述当前这一步</strong>（后端骨架），不掺杂前端需求；它<strong>明确列出了字段和接口</strong>（给 AI 足够的约束），但具体实现由 AI 决定；它遵循了 Goal-Driven Execution 原则——说"做什么"而非"怎么做"。</p>
-<p class="mb-2">AI 给出代码后，立即验证：运行服务器，用 curl 或 Postman 测试每个接口是否正常工作。确认无误后，开新对话处理 Step 2（前端基础页面）。每一步都遵循"指令-验证-新对话"的循环。这个循环里再塞两件小事：一是先立一条能跑的<strong>验证命令</strong>，哪怕是 <code class="inline">npm test</code> 或 <code class="inline">./gradlew test</code> 这一级别的——有了它，智能体改错时自己就能发现；没有它，你只能肉眼验收。二是<strong>一个改动一个提交</strong>：每完成一步就 commit 一次，让每条提交记录对应一个能读懂的意图，出问题时 <code class="inline">git revert</code> 一行就能回滚，比在一大坨 diff 里挑代码块快得多。</p>
+<p class="mb-2">AI 给出代码后，立即验证：运行服务器，用 curl 或 Postman 测试每个接口是否正常工作。确认无误后，开新对话处理 Step 2（前端基础页面）。每一步都遵循"指令-验证-新对话"的循环。这个循环里再塞两件小事：一是先立一条能跑的<strong>验证命令</strong>，哪怕是 <code class="inline">npm test</code> 或 <code class="inline">gradlew test</code>（Windows 用 gradlew.bat）这一级别的——有了它，智能体改错时自己就能发现；没有它，你只能肉眼验收。二是<strong>一个改动一个提交</strong>：每完成一步就 commit 一次，让每条提交记录对应一个能读懂的意图，出问题时 <code class="inline">git revert</code> 一行就能回滚，比在一大坨 diff 里挑代码块快得多。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">三、项目三：AI 增强应用（高级）</h4>
 <h5 class="font-semibold mt-3 mb-1">1. 项目构思</h5>
 <p class="mb-2">目标：一个接入大模型 API 的应用——比如一个"AI 学习助手"，用户输入学习内容，AI 生成摘要、关联知识点、推荐学习资源。这个项目的特殊之处在于：<strong>你的应用本身就在调用 AI</strong>，你需要处理 API 调用、prompt 工程、错误处理等新问题。</p>
@@ -10223,13 +10223,13 @@ Record { id, amount, type, category, note, date }
 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第四十六章：进阶之路——从使用者到架构师</h3>
 <p class="chapter-intro mb-4">当你掌握了第三十七至四十四章的方法论，能熟练地用 AI 完成项目开发后，下一步是什么？本章探讨从"AI 工具使用者"到"AI 系统架构师"的进阶之路。这个阶段的关注点不再是"怎么让 AI 写好代码"，而是"怎么让 AI 更好地融入整个开发流程"。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">一、MCP 协议与工具扩展</h4>
-<p class="mb-2"><strong>MCP（Model Context Protocol）</strong>是 2025 年出现、2026 年逐渐普及的一个开放协议，它定义了 AI 模型与外部工具之间的通信标准。简单来说，MCP 让 AI 能够"使用工具"——不只生成代码，还能执行命令、查询数据库、调用 API、操作文件系统。</p>
+<p class="mb-2"><strong>MCP（Model Context Protocol）</strong>是 Anthropic 在 2024 年 11 月发布、2026 年逐渐普及的一个开放协议（现已交由 Linux 基金会中立托管），它定义了 AI 模型与外部工具之间的通信标准。简单来说，MCP 让 AI 能够"使用工具"——不只生成代码，还能执行命令、查询数据库、调用 API、操作文件系统。</p>
 <p class="mb-2">在 MCP 之前，每个 AI 工具都有自己的工具集成方式，互不兼容。MCP 的出现意味着：<strong>一个符合 MCP 标准的工具可以被任何支持 MCP 的 AI 工具使用</strong>。这大大降低了工具集成的成本，也让 AI 的能力边界从"生成文本"扩展到了"执行动作"。</p>
 <p class="mb-2">对于进阶用户来说，MCP 的意义在于：你可以为 AI 构建定制化的工具能力。比如，如果你的团队有一套内部的部署系统，你可以写一个 MCP 工具让 AI 直接调用部署系统，而不需要人工切换到终端操作。这种"AI 调用工具"的能力，是 Agentic Engineering 的基础设施。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、自定义工作流与 Skills</h4>
 <p class="mb-2">当你反复执行某些固定的 AI 编程流程时，可以把它们固化成"自定义工作流"或"Skills"。比如，你的团队可能有一套标准的代码审查流程——先检查安全性，再检查性能，再检查可维护性。你可以把这个流程写成一个 Skill，让 AI 在每次代码审查时自动按这个流程执行。</p>
 <p class="mb-2">自定义工作流的核心价值是"<strong>一致性</strong>"——它确保每次执行都遵循同样的标准，不会因为对话长短或上下文不同而产生偏差。这对于团队协作尤其重要：每个成员使用同样的工作流，产出的代码风格和质量标准就会趋于一致。</p>
-<p class="mb-2">构建自定义工作流的方法因工具而异。Cursor 支持 Rules 和 Custom Instructions，Claude Code 支持自定义命令，Replit 支持 Runme。但核心思路一样：<strong>把你的最佳实践"编码"成 AI 可执行的指令模板</strong>。</p>
+<p class="mb-2">构建自定义工作流的方法因工具而异。Cursor 支持 Rules 和 Custom Instructions，Claude Code 支持自定义命令，Replit 用 .replit 配置加 Agent 完成同类工作。但核心思路一样：<strong>把你的最佳实践"编码"成 AI 可执行的指令模板</strong>。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">三、多 Agent 协作模式</h4>
 <p class="mb-2">到 2026 年，多 Agent 协作开始成为一个热门话题。它的核心理念是：不只用一个 AI 来完成任务，而是用多个分工不同的 AI 来协作。比如，一个 AI 负责写代码，一个 AI 负责写测试，一个 AI 负责代码审查——它们各司其职，互相检查。</p>
 <p class="mb-2">多 Agent 协作的优势在于"分工"和"交叉验证"：每个 Agent 专注于自己的领域，产出质量更高；Agent 之间的交叉检查可以发现自己可能忽略的问题。但劣势也很明显：协调成本高，通信开销大，调试更复杂。</p>
@@ -10403,7 +10403,7 @@ Record { id, amount, type, category, note, date }
 <h4 class="text-lg font-semibold mt-4 mb-2">四、安卓技术栈全景：你的"武器清单"</h4>
 <p class="mb-2">正式学习前，先认识一下 2026 年主流安卓项目的标准配置——这张清单你现在看不懂没关系，全书学完回来看，会豁然开朗：</p>
 <div class="overflow-x-auto">
-<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">层次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主流选择（2026）</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用的</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">语言</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 2.x</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">写逻辑的语言</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">界面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jetpack Compose + Material 3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用代码画界面（本书主线）</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">架构</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MVVM + ViewModel</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把界面和逻辑分开，代码不乱</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Room（数据库）+ DataStore（配置）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把数据存进手机</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit + OkHttp + Kotlin 协程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">和服务器对话</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">构建工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gradle + Kotlin DSL</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把代码变成安装包</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开发环境</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Studio</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">谷歌官方的"全家桶"IDE</td></tr></tbody></table>
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">层次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">主流选择（2026）</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">干什么用的</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">语言</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 2.4.x</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">写逻辑的语言</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">界面</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Jetpack Compose + Material 3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">用代码画界面（本书主线）</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">架构</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MVVM + ViewModel</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把界面和逻辑分开，代码不乱</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">数据存储</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Room（数据库）+ DataStore（配置）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把数据存进手机</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">网络</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit + OkHttp + Kotlin 协程</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">和服务器对话</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">构建工具</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Gradle + Kotlin DSL</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">把代码变成安装包</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">开发环境</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Android Studio</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">谷歌官方的"全家桶"IDE</td></tr></tbody></table>
 </div>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">2026 年安卓主流技术栈速览</p>
 <p class="mb-2">别被这一串英文吓到。<strong>它们就像厨房里的锅碗瓢盆</strong>——你现在只需要知道"做饭要进厨房"，具体每样工具怎么用，后面章节逐个拆给你看。而且好消息是：Android Studio 创建新项目时会自动帮你把这一整套配置好，你只管炒菜。</p>
@@ -10513,7 +10513,7 @@ Record { id, amount, type, category, note, date }
   <li><strong>build.gradle.kts</strong>：构建配方——声明最低支持版本、依赖哪些库（比如 Compose）。</li>
 </ul>
 <h4 class="text-lg font-semibold mt-4 mb-2">五、小试牛刀：把"Hello"换成你的名字</h4>
-<p class="mb-2">打开 MainActivity.kt，你会看到 Compose 模板生成的代码。找到 <code class="inline">Text("Hello Android!")</code> 这一行，把引号里的字换成你的名字，比如 <code class="inline">Text("你好，张三！这是我的第一个App")</code>，然后按 <kbd>Ctrl+R</kbd>（Mac 是 <kbd>Cmd+R</kbd>）重新运行。几秒后，模拟器上就显示了你的名字。</p>
+<p class="mb-2">打开 MainActivity.kt，你会看到 Compose 模板生成的代码。找到 <code class="inline">Text("Hello Android!")</code> 这一行，把引号里的字换成你的名字，比如 <code class="inline">Text("你好，张三！这是我的第一个App")</code>，然后点工具栏的绿色三角 Run（Windows 默认 <kbd>Shift+F10</kbd>；Mac 默认 <kbd>Ctrl+R</kbd>）重新运行。几秒后，模拟器上就显示了你的名字。</p>
 <div class="code-block">
 <div class="code-head"><span>KOTLIN · MainActivity.kt（改这一行）</span><span class="dots">···</span></div>
 <pre>setContent {
@@ -10540,13 +10540,13 @@ Record { id, amount, type, category, note, date }
 <p class="mb-2">安装那一步说过：别按旧教程里的动物代号找安装包，以官网当前稳定版为准。这里把话说透——代号年年换，真正要对齐的是「IDE ↔ AGP ↔ Gradle ↔ SDK ↔ Kotlin/Compose 插件」这条链：</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>Compose Compiler 已换插件</strong>：现在用 <code class="inline">org.jetbrains.kotlin.plugin.compose</code>，由 Kotlin 侧统一管理，不再单独配 <code class="inline">kotlinCompilerExtensionVersion</code>。</li>
-  <li><strong>用 BOM 管 Compose 版本</strong>：依赖里声明 <code class="inline">platform("androidx.compose:compose-bom:2026.09.00")</code>，其余 Compose 依赖不再写版本号，避免互相打架。</li>
+  <li><strong>用 BOM 管 Compose 版本</strong>：依赖里声明 <code class="inline">platform("androidx.compose:compose-bom:2026.08.00")</code>，其余 Compose 依赖不再写版本号，避免互相打架。</li>
   <li><strong>Kotlin 与编译器要配套</strong>：Compose 1.13 系列要求 Kotlin 2.2；升级 IDE 时，顺手确认 Gradle 与 Kotlin 插件也在兼容区间。</li>
   <li><strong>硬件的事第一节讲过了</strong>：磁盘留足、虚拟化打开；老机器优先用真机调试，体验反而更流畅。</li>
 </ul>
 <p class="mb-2">再给一张可以核对的小表——把它当索引，别当答案：</p>
 <div class="overflow-x-auto">
-<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">组件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2026-11 可核对的稳定值</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪确认</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose UI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.12.1（1.13.0 处于 beta）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Material 3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.4.0（1.5.0 处于 alpha）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose BOM</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2026.09.00</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose Compiler 设置文档</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.x（1.13 要求 2.2）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 发布说明</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimum SDK</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">示例项目用 API 26</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建项目向导</td></tr></tbody></table>
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">组件</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">2026-11 可核对的稳定值</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">去哪确认</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose UI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.12.1（1.13.0 处于 beta）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Material 3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.4.0（1.5.0 处于 alpha）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose BOM</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2026.08.00</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose BOM 版本映射页（developer.android.com）</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.x（1.13 要求 2.2）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 发布说明</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimum SDK</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">示例项目用 API 26</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建项目向导</td></tr></tbody></table>
 </div>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">版本对齐速查（动手前打开官网核对当前稳定版）</p>
 <div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">把这张表当索引，不要当答案：动手前打开官网看一眼当前稳定版，比背版本号可靠。</p></div>
@@ -10879,7 +10879,7 @@ fun AnimatedBox() {
 <h4 class="text-lg font-semibold mt-4 mb-2">七、依赖与预览的实用细节</h4>
 <p class="mb-2">写界面之前，先把依赖与预览这两件小事理顺，后面能省掉大量"为什么预览不出"的排查时间：</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
-  <li><strong>BOM 一次声明</strong>：<code class="inline">implementation(platform("androidx.compose:compose-bom:2026.09.00"))</code>，之后 <code class="inline">material3</code>、<code class="inline">ui</code>、<code class="inline">ui-tooling-preview</code> 都不写版本。</li>
+  <li><strong>BOM 一次声明</strong>：<code class="inline">implementation(platform("androidx.compose:compose-bom:2026.08.00"))</code>，之后 <code class="inline">material3</code>、<code class="inline">ui</code>、<code class="inline">ui-tooling-preview</code> 都不写版本。</li>
   <li><strong>稳定版与预览版分开</strong>：稳定线是 Compose UI 1.12.1 / Material 3 1.4.0；1.13 与 1.5 还在 beta/alpha。学习项目一律用稳定版。</li>
   <li><strong>预览要单独加依赖</strong>：<code class="inline">debugImplementation</code> 加 <code class="inline">ui-tooling</code>，<code class="inline">implementation</code> 加 <code class="inline">ui-tooling-preview</code>，预览窗才渲染得出来。</li>
   <li><strong>状态驱动刷新</strong>：第四节的"状态变 → 重组 → 界面更新"要记牢——别在 Composable 里直接改业务对象，状态放进 remember 或 ViewModel。</li>
@@ -10930,7 +10930,7 @@ fun AnimatedBox() {
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">六个生命周期回调的典型用途</p>
 <div class="danger-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：屏幕旋转会"杀死"Activity</p>
-<p class="mt-1">新手最经典的翻车现场：App 转一下屏幕，输入框里的字全没了。原因：旋转屏幕默认会销毁并重建 Activity（走一遍 onDestroy → onCreate）。解法：用 <code class="inline">rememberSaveable</code> 保存状态（Compose 里替代 remember），它会在重建时自动把值找回来。第 6、7 章会反复用到。</p>
+<p class="mt-1">新手最经典的翻车现场：App 转一下屏幕，输入框里的字全没了。原因：旋转屏幕默认会销毁并重建 Activity（走一遍 onDestroy → onCreate）。解法：用 <code class="inline">rememberSaveable</code> 保存状态（Compose 里替代 remember），它会在重建时自动把值找回来。第 53、54 章会反复用到。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">三、Intent：App 里外通行的"车票"</h4>
 <p class="mb-2">Intent（意图）是组件之间通信的"车票"。你想从一个页面跳到另一个页面，或者打开浏览器、调起相机，都要"买票上车"：</p>
@@ -11008,7 +11008,7 @@ navController.popBackStack()              // 返回上一页</pre>
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">方案</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">适合存什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">特点</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">本书哪里用</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">DataStore</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">零散配置（主题、开关）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">键值对，简单安全</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第 54 章记账本设置</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Room</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">结构化数据（账目、用户）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">真正的 SQLite 数据库封装，可查询</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第 54 章账目记录</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Retrofit</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">（不存，联网取）服务器数据</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HTTP 请求库的事实标准</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第 55 章天气数据</td></tr></tbody></table>
 </div>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">数据三件套的分工</p>
-<p class="mb-2">记一个口诀：<strong>"小配置进 DataStore，成批数据进 Room，外面的数据走 Retrofit"</strong>。旧教程里常见的 SharedPreferences 已被 DataStore 取代，SQLite 手写 SQL 也已被 Room 取代——直接学新的，别走老路。反过来说也成立：别用 SharedPreferences 存列表，也别拿 Room 存一个开关——工具放错了层，代码处处跟你别扭。</p>
+<p class="mb-2">记一个口诀：<strong>"小配置进 DataStore，成批数据进 Room，外面的数据走 Retrofit"</strong>。旧教程里常见的 SharedPreferences，官方已推荐用 DataStore 替代，SQLite 手写 SQL 也已被 Room 取代——直接学新的，别走老路。反过来说也成立：别用 SharedPreferences 存列表，也别拿 Room 存一个开关——工具放错了层，代码处处跟你别扭。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、DataStore：存点小配置</h4>
 <p class="mb-2">想记住"用户上次选的币种""是否开启深色模式"这类零散值，用 DataStore（Preferences 版）：</p>
 <div class="code-block">
@@ -11130,7 +11130,7 @@ viewModelScope.launch {
 <div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">升级依赖时先升 BOM 与 Kotlin 插件，再看编译报错；单独升某一个库，最容易踩版本不匹配。</p></div>
 <div class="practice-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-hands mr-2"></i>来动手：做一个"每日一句"小应用</p>
-<p class="mt-1">找一个免费的名言 API（比如 hitokoto 之类），用 Retrofit 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮（协程里重新请求）。再把喜欢的句子用 Room 存进"收藏夹"。这个练习把 DataStore/Room/Retrofit/协程全用了一遍——做完它，第 7、8 章就是小菜一碟。</p>
+<p class="mt-1">找一个免费的名言 API（比如 hitokoto 之类），用 Retrofit 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮（协程里重新请求）。再把喜欢的句子用 Room 存进"收藏夹"。这个练习把 DataStore/Room/Retrofit/协程全用了一遍——做完它，第 54、55 章就是小菜一碟。</p>
 </div>
 <div class="chapter-summary">
 <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1"></i>本章小结</p>
@@ -11412,7 +11412,7 @@ fun WeatherContent(data: WeatherResponse) {
         Row {
             Text("💧 湿度 ${data.main.humidity}%")
             Spacer(Modifier.width(24.dp))
-            Text("🌡️ 体感 ${data.main.temp}°C")
+            Text("🌡️ 当前气温 ${data.main.temp}°C")
         }
     }
 }</pre>
@@ -11422,7 +11422,7 @@ fun WeatherContent(data: WeatherResponse) {
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>搜索框</strong>：顶部 TextField，输城市名点搜索（键盘上设"搜索"动作，回车即搜）；</li>
   <li><strong>天气卡片</strong>：大字号温度（26.5°）、天气描述（晴）、湿度、城市名；</li>
-  <li><strong>收藏城市</strong>：把常看的城市存进 DataStore，下次打开自动查——顺手复习第 6 章；</li>
+  <li><strong>收藏城市</strong>：把常看的城市存进 DataStore，下次打开自动查——顺手复习本章；</li>
   <li><strong>缓存上次的成功结果</strong>：请求失败时把上一次的数据摆出来，标注一句"数据来自 X 分钟前"，比一块白屏友好得多——天气这种内容，旧十分钟没什么大不了；</li>
   <li><strong>下拉刷新</strong>：Compose 里用 <code class="inline">PullToRefreshBox</code>（Material 3 提供），手感立刻"专业"起来。</li>
 </ul>
@@ -11458,7 +11458,7 @@ fun WeatherContent(data: WeatherResponse) {
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">调试三板斧</p>
 <div class="info-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>小贴士：报错怎么读？</p>
-<p class="mt-1">崩溃后 Logcat 里会有红色堆栈（Stacktrace），从下往上找 <strong>第一个自己包名开头的行</strong>（比如 com.example.yourapp），那行基本就是案发现场。先看"Exception 类型"（空指针？类型转换？），再看"at ... 你的文件:行号"。这招能解决 80% 的崩溃。</p>
+<p class="mt-1">崩溃后 Logcat 里会有红色堆栈（Stacktrace），在异常类型行之后，<strong>从上往下找第一条自己包名开头的行</strong>（比如 com.example.yourapp），那行基本就是案发现场。先看"Exception 类型"（空指针？类型转换？），再看"at ... 你的文件:行号"。这招能解决 80% 的崩溃。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、测试：给代码上保险</h4>
 <p class="mb-2">手测靠不住——改了这个功能，另一个悄悄坏了。测试就是"后悔药"兼"防弹衣"。安卓测试分三层，新手先吃透第一层：</p>
@@ -11499,7 +11499,7 @@ fun normalValueParses() {
 <p class="mb-2">为什么是 AAB？Google Play 现在以 Android App Bundle（.aab）提交，由商店按用户设备自动生成分包，用户下载到的包更小；本地调试、朋友之间传着装的包，仍常用 .apk。两种格式都认识，别在术语上犯迷糊。</p>
 <div class="danger-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：keystore 丢了 = App 丢了</p>
-<p class="mt-1">上架后更新 App 必须用<strong>同一个</strong>签名，否则商店会拒绝更新。keystore 文件和密码一旦丢失，你只能换个新应用重新上架——老用户全都接不上。务必把 keystore 和密码备份到安全的地方（云盘加密 + 记事本），恢复流程也提前想好，密钥文件绝不提交到仓库——这是安卓开发者最昂贵的教训之一。</p>
+<p class="mt-1">上架后更新 App 必须用<strong>同一个</strong>签名，否则商店会拒绝更新。keystore 文件和密码一旦丢失，你只能换个新应用重新上架——老用户全都接不上。务必把 keystore 和密码备份到安全的地方（密码管理器或加密备份，别用明文记事本），恢复流程也提前想好，密钥文件绝不提交到仓库——这是安卓开发者最昂贵的教训之一。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">四、上架 Google Play 全流程</h4>
 <div class="figure">
@@ -11594,7 +11594,7 @@ fun CameraButton() {
 </div>
 <div class="warning-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>注意：被永久拒绝怎么办？</p>
-<p class="mt-1">用户勾了"不再询问"后，<code class="inline">launchPermissionRequest</code> 不会再弹窗。此时应引导用户去系统设置里手动开启（用 <code class="inline">Intent</code> 跳到应用设置页），并在界面里说明"这个权限用来做什么"。态度好一点，用户开权限的意愿会高很多——<strong>申请权限的文案，值得认真写</strong>。</p>
+<p class="mt-1">用户勾了"不再询问"后，再次调用 <code class="inline">launcher.launch(...)</code> 不会再弹窗。此时应引导用户去系统设置里手动开启（用 <code class="inline">Intent</code> 跳到应用设置页），并在界面里说明"这个权限用来做什么"。态度好一点，用户开权限的意愿会高很多——<strong>申请权限的文案，值得认真写</strong>。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、通知：在正确的时间说有用的话</h4>
 <p class="mb-2">通知是 App 触达用户的通道，也是最容易被用户"拉黑"的功能。发通知三条纪律：<strong>只发有用的、让用户能关、别半夜骚扰</strong>。基础用法：</p>
@@ -11623,7 +11623,7 @@ if (ActivityCompat.checkSelfPermission(this,
 }</pre>
 </div>
 <p class="mb-2">代码里的 "reminder" 就是一个通知渠道——Android 8.0 起必须先建渠道才能发通知。渠道别只建一个兜底，按类别拆开（记账提醒、周报、系统公告），用户就能只关掉吵的那一类，而不是一刀切换掉你的全部通知。</p>
-<p class="mb-2">定时任务（比如"每天 20:00 提醒记账"）用 <strong>WorkManager</strong>——它是官方推荐的"后台调度管家"，能保证任务在合适时机执行，不用自己操心电池优化；可延迟的活儿都交给它，别自己起一个常驻 Service 硬扛。闹钟类需求用它准没错。</p>
+<p class="mb-2">定时任务（比如"每天 20:00 提醒记账"）用 <strong>WorkManager</strong>——它是官方推荐的"后台调度管家"，能保证任务在合适时机执行，不用自己操心电池优化；可延迟的活儿都交给它，别自己起一个常驻 Service 硬扛。日常提醒类用它没问题；必须准点的闹钟类需求，官方建议用 AlarmManager。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">三、架构进阶：依赖注入与模块化</h4>
 <p class="mb-2">项目变大后，两个"甜蜜的烦恼"会找上门：</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -11717,7 +11717,7 @@ if (ActivityCompat.checkSelfPermission(this,
 <tbody>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose UI</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.12.1（1.13.0 beta）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Material 3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">1.4.0（1.5.0 alpha）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AndroidX Compose 发布说明</td></tr>
-<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose BOM</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2026.09.00</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose Compiler 设置文档</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose BOM</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2026.08.00</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose BOM 版本映射页（developer.android.com）</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose 编译器</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 插件 org.jetbrains.kotlin.plugin.compose</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Compose Compiler 文档</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2.x（1.13 要求 2.2）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Kotlin 发布说明</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Minimum SDK</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">示例 API 26</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">新建项目向导</td></tr>
@@ -11731,12 +11731,12 @@ if (ActivityCompat.checkSelfPermission(this,
 <h4 class="text-lg font-semibold mt-4 mb-2">六、结语：从第一个 App 到第 N 个 App</h4>
 <p class="mb-2">回头看，你从"不知道 Activity 是什么"，到装好环境、学会 Kotlin、用 Compose 画出界面、给 App 接上数据库和网络，再到测试、打包、上架——<strong>这条路上你已经走完了从零到一最难的一段</strong>。</p>
 <p class="mb-2">技术的世界变化很快：框架会升级，工具会换代，AI 会接手越来越多"敲键盘"的活。但有一样东西不会过时：<strong>你把一个模糊的想法，拆解成清晰的步骤，再一步步实现它的能力</strong>。工具是放大器，思路是地基。放大器可以替换，地基不能动摇。</p>
-<div class="quote-line">你不再只是"会玩手机的人"。你能把脑海里的想法，变成三亿安卓设备上真实运行的 App。从今天开始，用键盘去创造——这就是安卓开发者的浪漫。</div>
+<div class="quote-line">你不再只是"会玩手机的人"。你能把脑海里的想法，变成三十亿安卓设备上真实运行的 App。从今天开始，用键盘去创造——这就是安卓开发者的浪漫。</div>
 <h4 class="text-lg font-semibold mt-4 mb-2">参考文献</h4>
 <ol class="list-decimal pl-6 mb-3 space-y-1 text-xs text-gray-500">
   <li>Android Developers. (2026). Android Developer Guides and Jetpack Compose Documentation. developer.android.com.</li>
   <li>Kotlin Foundation. (2026). Kotlin Language Documentation. kotlinlang.org.</li>
-  <li>Android Open Source Project. (2026). Android Platform Version History and API Levels.</li>
+  <li>Android Open Source Project. (2026). Android Platform Version History and API Levels.（source.android.com）</li>
   <li>Google Play. (2026). Play Console Help: Publishing and App Signing.</li>
   <li>AndroidX Release Notes. (2026). Room / DataStore / Navigation / WorkManager releases.</li>
   <li>Square. (2026). Retrofit Documentation. github.com/square/retrofit.</li>
@@ -11763,7 +11763,7 @@ if (ActivityCompat.checkSelfPermission(this,
 <p class="chapter-intro mb-4">恭喜你做出这个决定——从"用 iPhone 的人"变成"给 iPhone 写应用的人"。在动手之前，咱们先把地图摊开：iOS 从哪里来？苹果的"围墙花园"对开发者意味着什么？一个 App 从你的手指敲键盘到用户手机上，中间都发生了什么？</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">一、iOS 的身世：一部手机改变一个行业</h4>
 <p class="mb-2">2007 年 1 月，乔布斯在发布会上掏出了第一代 iPhone。当时它连第三方应用都不支持——直到 2008 年，苹果推出 App Store 和 iPhone SDK，允许全世界开发者给 iPhone 写软件。<strong>那一刻，"应用经济"诞生了</strong>：到今天，App Store 上有数百万个应用，为开发者累计分成超过数千亿美元。</p>
-<p class="mb-2">系统本身也在进化：最初叫 iPhone OS，2010 年更名 iOS；版本号一路走到 iOS 17（2023），然后在 2025 年，苹果把命名改为跟随年份——<strong>iOS 26</strong> 于 2025 年发布；2026 年 6 月的 WWDC 上，新一代 <strong>iOS 27</strong> 亮相，正式版秋季推送。命名会变，但一件事没变过：<strong>iOS 的用户付费习惯和软件质量口碑，是移动生态里公认最好的</strong>——同样的 App，iOS 端的收入往往显著高于安卓端。</p>
+<p class="mb-2">系统本身也在进化：最初叫 iPhone OS，2010 年更名 iOS；版本号一路走到 iOS 17（2023）、iOS 18（2024），然后在 2025 年，苹果把命名改为跟随年份——<strong>iOS 26</strong> 于 2025 年发布；2026 年 6 月的 WWDC 上，新一代 <strong>iOS 27</strong> 亮相，正式版秋季推送。命名会变，但一件事没变过：<strong>iOS 的用户付费习惯和软件质量口碑，是移动生态里公认最好的</strong>——同样的 App，iOS 端的收入往往显著高于安卓端。</p>
 <div class="overflow-x-auto">
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3"><thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">节点</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">年份</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">对开发者重要的事</th></tr></thead><tbody><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">App Store 上线</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2008</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">第三方开发生态开启</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Swift 发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2014</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">现代 iOS 开发语言登场</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SwiftUI 发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2019</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">声明式界面框架，本书主线</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 26（改名元年）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2025</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">命名跟随年份；Apple Intelligence 全面整合</td></tr><tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS 27</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2026</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">WWDC 亮相，秋季正式发布</td></tr></tbody></table>
 </div>
@@ -11773,7 +11773,7 @@ if (ActivityCompat.checkSelfPermission(this,
 <p class="mb-2">苹果生态常被形容为 <strong>"围墙花园"（Walled Garden）</strong>——规则多、管得严：App 必须审核才能上架、开发必须用 Mac 和 Xcode、分发主要走 App Store。听起来憋屈？但对开发者，这套规矩换来了真金白银的红利：</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li><strong>设备碎片化极小</strong>：iPhone 型号就那么几款，屏幕尺寸、系统版本高度统一——你适配 5 台机型，就覆盖了 95% 的用户（安卓可能要适配几十款）；</li>
-  <li><strong>系统版本更新率极高</strong>：新系统发布几周内就有七八成用户升级，新 API 可以大胆用，不用照顾"五年前的老系统"；</li>
+  <li><strong>系统版本更新率极高</strong>：新系统发布几个月内就有七八成用户升级，新 API 可以大胆用，不用照顾"五年前的老系统"；</li>
   <li><strong>用户付费习惯好</strong>：App Store 用户更愿意为应用和内购花钱；</li>
   <li><strong>审核虽然严格，但商店干净</strong>：山寨、流氓软件少，好产品更容易被看见。</li>
 </ul>
@@ -11845,7 +11845,7 @@ if (ActivityCompat.checkSelfPermission(this,
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">Mac 开发机配置参考（2026 年 8 月）</p>
 <div class="info-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>小贴士：没有 Mac 也能先学语言</p>
-<p class="mt-1">iPad 上免费的 <strong>Swift Playgrounds</strong> 能学 Swift 语言基础（不用 Mac）；甚至 iPhone 上也能装。先把第 61 章的语言知识在 Playgrounds 里玩熟，等拿到 Mac 后直接起飞。磨刀不误砍柴工，说的就是这个。</p>
+<p class="mt-1">iPad 上免费的 <strong>Swift Playgrounds</strong> 能学 Swift 语言基础（不用 Mac）；注意它只有 iPad/Mac 版，iPhone 上没有。先把第 61 章的语言知识在 Playgrounds 里玩熟，等拿到 Mac 后直接起飞。磨刀不误砍柴工，说的就是这个。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、安装 Xcode</h4>
 <p class="mb-2">Xcode 是苹果官方的集成开发环境，免费。三步装好：</p>
@@ -11856,7 +11856,7 @@ if (ActivityCompat.checkSelfPermission(this,
 </ol>
 <div class="warning-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>注意：版本和系统的"匹配游戏"</p>
-<p class="mt-1">新 Xcode 往往要求最新 macOS，旧 Mac 则会卡在老版本——拿当前版本说：Xcode 26 要求 macOS Sequoia 15.6 或更高。所以顺序别搞反：先升系统，再装 Xcode。上架 App Store 时，苹果也会要求用<strong>较新的 Xcode</strong> 构建（通常给一个宽限期）。系统更新别拖太久——iOS 开发者是"追新版"最勤快的一群人。</p>
+<p class="mt-1">新 Xcode 往往要求最新 macOS，旧 Mac 则会卡在老版本——拿当前版本说：Xcode 26 要求 macOS Sequoia 15.6 或更高。所以顺序别搞反：先升系统，再装 Xcode。上架 App Store 时，苹果也会要求用<strong>较新的 Xcode</strong> 构建（通常给一个宽限期；2026-04-28 起上传必须用 Xcode 26+/iOS 26 SDK 构建，超期旧 SDK 会被直接拒）。系统更新别拖太久——iOS 开发者是"追新版"最勤快的一群人。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">三、创建你的第一个项目</h4>
 <p class="mb-2">打开 Xcode → <kbd>Create New Project</kbd> → 选 <strong>iOS → App</strong> 模板，然后填：</p>
@@ -12032,8 +12032,8 @@ struct Record {
 let r = Record(amount: 25.5, category: "餐饮", date: Date())
 
 // 协议：约定"必须具备哪些能力"
-protocol Identifiable {
-    var id: UUID { get }
+protocol Identifiable {   // 标准库协议：id 为泛型 Hashable
+    var id: UUID { get }   // 这里以 UUID 为例的简化示意
 }
 struct Record: Identifiable { ... }   // 遵守协议 = 承诺实现其要求</pre>
 </div>
@@ -12533,7 +12533,7 @@ print(result.weather[0].description)   // "晴"</pre>
 </div>
 <p class="mb-2">给用户看"人话"，给日志看"原话"（print 完整 error）。别把 <code class="inline">error.localizedDescription</code> 的英文天书直接甩给用户——产品感就藏在这些细节里。</p>
 <p class="mb-2">比报错更进一步的，是根本不让用户干等：把上次成功的数据先摆出来，标注一句"更新于 X 分钟前"，再在后台默默刷新。全屏转圈等网络，体验上等于把风险转嫁给用户。网络层最值钱的从来不是请求代码，是"失败时用户看到什么"的设计。</p>
-<p class="mt-1">找一个免费的名言 API（比如 hitokoto 之类），用 URLSession + async/await 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮。再把喜欢的句子用 SwiftData 存进"收藏夹"。这个练习把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍——做完它，第 7、8 章就是小菜一碟。</p>
+<p class="mt-1">找一个免费的名言 API（比如 hitokoto 之类），用 URLSession + async/await 拉取"每日一句"，显示在屏幕中央，加个"换一句"按钮。再把喜欢的句子用 SwiftData 存进"收藏夹"。这个练习把 UserDefaults/SwiftData/Codable/URLSession 全用了一遍——做完它，第 65、66 章就是小菜一碟。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">七、三个容易被忽略的现实问题</h4>
 <p class="mb-2"><strong>权限与用途说明</strong>：位置、照片、通知这些敏感权限，iOS 要求在 Info.plist 里写清用途说明，审核也会看；申请时机放在用户真正要用那个功能的那一下，别一启动就弹一堆。第 57 章讲的"先敲门再进门"，在 iOS 上同样是铁律。</p>
@@ -12649,7 +12649,8 @@ class RecordViewModel {
                         RecordRow(record: r)
                     }
                     .onDelete { idx in
-                        idx.forEach { vm.delete(vm.records[$0]) }
+                        val targets = idx.map { vm.records[$0] }
+                    targets.forEach { vm.delete(it) }
                     }
                 }
             }
@@ -12822,7 +12823,7 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
                 .foregroundColor(.secondary)
             HStack(spacing: 24) {
                 Label("湿度 \(data.main.humidity)%", systemImage: "humidity")
-                Label("体感 \(Int(data.main.temp))°C", systemImage: "thermometer")
+                Label("当前气温 \(Int(data.main.temp))°C", systemImage: "thermometer")
             }
         }
         .padding()
@@ -12846,8 +12847,8 @@ case .error(let msg): Text(msg).foregroundColor(.secondary)
 <p class="mb-2">联网 App 出问题，十有八九在"请求没发对"或"响应没解析对"。三个调试手段：</p>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
   <li><strong>打印原始数据</strong>：把 <code class="inline">String(data: data, encoding: .utf8)</code> 打印出来看原始 JSON——字段名、类型一目了然，比猜快十倍；</li>
-  <li><strong>抓包工具</strong>：Mac 上免费的 Proxyman / 开源 Charles 能截获 App 的全部请求和响应，像 X 光一样看清网络层；</li>
-  <li><strong>模拟弱网</strong>：模拟器菜单 Features → Network Link Conditioner（需从开发者网站下载工具），能模拟 3G、高延迟——测出"转圈半天"的体验问题。</li>
+  <li><strong>抓包工具</strong>：Mac 上免费的 Proxyman / 付费的 Charles（可试用）/ 开源的 mitmproxy 能截获 App 的全部请求和响应，像 X 光一样看清网络层；</li>
+  <li><strong>模拟弱网</strong>：模拟器菜单 Features → Network Link Conditioner（模拟器自带；要限整台 Mac 的网速才需另装开发者网站的面板），能模拟 3G、高延迟——测出"转圈半天"的体验问题。</li>
 </ol>
 <div class="info-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>小贴士：请求没过 ATS？</p>
@@ -12920,7 +12921,7 @@ final class AmountTests: XCTestCase {
   <li><strong>分发阶段</strong>：付费开发者账号（99 美元/年）签发证书与描述文件，才能上架和长期安装。</li>
 </ul>
 <p class="mb-2">先把链路跑通，再谈精细控制：个人项目一路用自动签名完全够用，进了团队、需要管理多套证书时，再切手动——顺序别反。</p>
-<p class="mb-2">打包：Xcode 菜单 Product → Archive（归档），构建完成后在 Organizer 里 <kbd>Distribute App</kbd> → 选 App Store Connect → 上传。<strong>归档必须用 Generic iOS Device 作为目标</strong>（不是模拟器），这是新手常忘的一步。另外，每次上传的<strong>构建号（Build 号）要比上一次递增</strong>——崩溃日志就是靠它对回具体版本的，别随手乱填。</p>
+<p class="mb-2">打包：Xcode 菜单 Product → Archive（归档），构建完成后在 Organizer 里 <kbd>Distribute App</kbd> → 选 App Store Connect → 上传。<strong>归档必须选 "Any iOS Device (arm64)" 目标</strong>（旧版叫 Generic iOS Device，不是模拟器），这是新手常忘的一步。另外，每次上传的<strong>构建号（Build 号）要比上一次递增</strong>——崩溃日志就是靠它对回具体版本的，别随手乱填。</p>
 <div class="danger-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-circle mr-2"></i>避坑提醒：证书丢了 = 更新断档</p>
 <p class="mt-1">签名证书和私钥一旦丢失，你无法再给旧 App 发更新——用户只能装"全新"应用。妥善备份证书（钥匙串导出 .p12）并记好密码。好在苹果提供了"自动签名"和云证书管理（Xcode 里勾选 Automatically manage signing），能省掉大部分手工操作的坑。</p>
@@ -12937,7 +12938,7 @@ final class AmountTests: XCTestCase {
   <li><strong>素材</strong>：图标（1024×1024，别带圆角——苹果自己切）、截图（iPhone 各尺寸）、描述、隐私政策链接；</li>
   <li><strong>隐私问卷</strong>：如实申报收集了哪些数据——不联网的记账本可以"不收集任何数据"；</li>
   <li><strong>审核</strong>：首次提交常有 1-7 天等待，被拒就按"审核备注"逐条改——苹果的拒绝理由通常写得非常具体，照做即可。常见退回原因就那几样：崩溃、功能不完整、描述与实际不符、权限用途没写清、隐私政策链接打不开，提交前自查一遍；</li>
-  <li><strong>TestFlight</strong>：上传构建后先小范围发给测试员验证——内部同事加外部朋友（上限 10000 人），收集崩溃与反馈再正式提交，专业范儿十足。测试期的具体规则以 Apple 官网为准。</li>
+  <li><strong>TestFlight</strong>：上传构建后先小范围发给测试员验证——内部测试最多 100 人、外部测试最多 10000 人，收集崩溃与反馈再正式提交，专业范儿十足。测试期的具体规则以 Apple 官网为准。</li>
 </ul>
 <h4 class="text-lg font-semibold mt-4 mb-2">五、商店素材怎么做：第一印象就是下载量</h4>
 <p class="mb-2">商店页是用户"逛店"时看到的橱窗。三个素材决定第一印象：</p>
@@ -12955,7 +12956,7 @@ final class AmountTests: XCTestCase {
   <li><strong>列表用 LazyVStack / List</strong>：长列表别用普通 VStack 硬排——懒加载是性能第一课；</li>
   <li><strong>图片别硬塞原图</strong>：用 AsyncImage（远程图）和系统缓存，5MB 原图足以卡爆老机型；</li>
   <li><strong>别在主线程干重活</strong>：网络、大文件都走 async/await；</li>
-  <li><strong>用 Instruments 量一量</strong>：Xcode 自带的性能分析器（Time Profiler、内存泄漏检查）——先测量，再优化，别凭感觉。Xcode 26 还带来了 Processor Trace、Power Profiler 和 SwiftUI 专用剖析视图，提交前过一遍，能抓掉明显的性能与耗电问题。</li>
+  <li><strong>用 Instruments 量一量</strong>：Xcode 自带的性能分析器（Time Profiler、内存泄漏检查）——先测量，再优化，别凭感觉。Xcode 16 起的 SwiftUI 专用剖析视图，加上 26 新增的 Processor Trace 与 Power Profiler，提交前过一遍，能抓掉明显的性能与耗电问题。</li>
 </ol>
 <div class="practice-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-hands mr-2"></i>来动手：把记账本"交付"一次</p>
@@ -13007,7 +13008,7 @@ class LocationModel {
 </div>
 <div class="warning-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>注意：iOS 权限的"一次性"</p>
-<p class="mt-1">iOS 的权限弹窗<strong>只弹一次</strong>——用户拒绝后再也不会弹。所以：申请的时机要选在"用户正要用的那一刻"（而不是一启动就弹一堆），文案要说明用途。被拒后的界面引导（"去设置里开启定位"）是标配，别让用户困在死胡同里。</p>
+<p class="mt-1">iOS 的权限弹窗<strong>通常只弹一次</strong>——明确拒绝后再也不会弹（定位有"仅本次允许/下次再问"选项，选它下次还会问）。所以：申请的时机要选在"用户正要用的那一刻"（而不是一启动就弹一堆），文案要说明用途。被拒后的界面引导（"去设置里开启定位"）是标配，别让用户困在死胡同里。</p>
 </div>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、通知：在正确的时间说有用的话</h4>
 <p class="mb-2">通知是 App 触达用户的通道，也是最容易被用户"拉黑"的功能。iOS 用 <strong>UserNotifications</strong> 框架，发通知三条纪律：<strong>只发有用的、让用户能关、别半夜骚扰</strong>。基础用法：</p>
@@ -13118,7 +13119,7 @@ func scheduleDailyReminder() {
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">iOS 开发速查卡（2026 年 8 月版）</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">二、常见问题 FAQ</h4>
 <p class="mb-2"><strong>Q1：我没有 Mac，能学 iOS 开发吗？</strong></p>
-<p class="mb-2">能学语言，不能做完整开发。iPad/iPhone 上的 Swift Playgrounds 可以学完第 61 章的全部内容；但 Xcode 是 macOS 独占，最终必须有一台 Mac。预算有限可以先租云 Mac 或买二手 Mac mini 过渡，学完语言再决定投入。</p>
+<p class="mb-2">能学语言，不能做完整开发。iPad 上的 Swift Playgrounds 可以学完第 61 章的语言部分；但 Xcode 是 macOS 独占，最终必须有一台 Mac。预算有限可以先租云 Mac 或买二手 Mac mini 过渡，学完语言再决定投入。</p>
 <p class="mb-2"><strong>Q2：学 iOS 开发要花多少钱？</strong></p>
 <p class="mb-2">学习阶段：0 元（Xcode 免费 + 免费 Apple ID 真机调试）。发布阶段：开发者账号 99 美元/年（约 700 元）。加上一台 Mac 的硬件投入，这是全部成本。相比回报——App Store 上哪怕一个小工具也有付费用户——这笔账划算。</p>
 <p class="mb-2"><strong>Q3：SwiftUI 和 UIKit 先学哪个？</strong></p>
@@ -13152,7 +13153,7 @@ func scheduleDailyReminder() {
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
 <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">项目</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">值 / 做法</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">出处</th></tr></thead>
 <tbody>
-<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">26（含 26.0.1 修订）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">26.x（当前 26.6；26.4.1 起需 macOS Tahoe 26.2；2026-09 起另有 Xcode 27，本书以 26 为教学基线）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Swift</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">6.2</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">SDK</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">iOS / iPadOS / tvOS / watchOS / macOS Tahoe / visionOS 26</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">macOS 要求</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Sequoia 15.6 或更高</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Xcode 26 Release Notes</td></tr>
@@ -13206,14 +13207,14 @@ func scheduleDailyReminder() {
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2021</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 2 上手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机用户破亿；仍兼容安卓应用</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2023</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 4 发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">宣布 HarmonyOS NEXT 开发者预览版</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2024.10</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS NEXT（5.0）商用</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2"><strong>移除 AOSP，不再兼容 APK</strong>；纯血鸿蒙元年</td></tr>
-<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2025.10</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 6 发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">面向 90+ 机型开放升级，定位"AI 原生"；6.1 已在推进</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2025.10</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 6 发布</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">面向 90+ 机型开放升级，定位"AI 原生"；7.0 已于 2026 年 9 月发布</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">2026</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">HarmonyOS 7.0（对应 API 26.0.0）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">官方升级适配指南写明：面向所有 HarmonyOS NEXT 设备发布</td></tr>
 </tbody>
 </table>
 </div>
 <div class="info-box rounded-lg p-4 mt-3">
 <p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>小知识</p>
-<p class="mt-1">据华为官方口径，鸿蒙生态设备数量已超过 10 亿台。这个数字的含义是：即便鸿蒙手机市场份额还在爬坡，手表、平板、车机、智慧屏这些设备已经在跑鸿蒙系统了——<strong>为鸿蒙写一个应用，它天然面对的是"全场景"而不只是"手机"</strong>。</p>
+<p class="mt-1">据华为官方口径，鸿蒙生态设备数量已超过 13 亿台（2026 年年中口径）。这个数字的含义是：即便鸿蒙手机市场份额还在爬坡，手表、平板、车机、智慧屏这些设备已经在跑鸿蒙系统了——<strong>为鸿蒙写一个应用，它天然面对的是"全场景"而不只是"手机"</strong>。</p>
 </div>
 
 <h4 class="text-lg font-semibold mt-4 mb-2">二、三套系统的账：开放、封闭与分布式</h4>
@@ -13249,14 +13250,14 @@ func scheduleDailyReminder() {
 <p class="mb-2">学鸿蒙最大的成本不是语法，是接受「版本会频繁变」。养成先查官方版本说明的习惯，比背住某个版本号有用得多。</p>
 <div class="practice-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-hands mr-2"></i>来动手：看看你身边的鸿蒙设备</p>
-<p class="mt-1">拿出华为手机进 [设置] → [关于本机]，看系统版本号：如果是 HarmonyOS 4.x 及以下，说明这是一台"兼容版"鸿蒙；如果显示 HarmonyOS NEXT（版本号形如 5.0.0），这就是"纯血鸿蒙"。再去应用市场搜一下你常用的 App，看看有没有"鸿蒙原生版"——这个观察会帮你理解本篇反复强调的"生态迁移"。</p>
+<p class="mt-1">拿出华为手机进 [设置] → [关于本机]，看系统版本号：如果是 HarmonyOS 4.x 及以下，说明这是一台"兼容版"鸿蒙；如果显示 HarmonyOS NEXT（版本号形如 5.0.0/6.0.0/7.0.0），这就是"纯血鸿蒙"。再去应用市场搜一下你常用的 App，看看有没有"鸿蒙原生版"——这个观察会帮你理解本篇反复强调的"生态迁移"。</p>
 </div>
 <div class="chapter-summary">
 <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1"></i>本章小结</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
   <li>2019 备胎转正；2024 HarmonyOS NEXT 移除 AOSP，与安卓正式"分家"</li>
   <li>定位全场景分布式：手机、平板、手表、车机、智慧屏一套系统</li>
-  <li>生态设备超 10 亿台（华为官方口径），国内市场为主战场</li>
+  <li>生态设备超 13 亿台（华为官方口径），国内市场为主战场</li>
   <li>技术栈一句话：ArkTS + ArkUI + Stage 模型 + DevEco Studio</li>
   <li>TS/Compose/SwiftUI 的声明式经验全部可迁移；DevEco 在 Windows 就能开发</li>
   <li>学不学看三个判断题：目标用户、国产化需求、生态占位</li>
@@ -13272,7 +13273,7 @@ func scheduleDailyReminder() {
 
 <h4 class="text-lg font-semibold mt-4 mb-2">一、下载与安装 DevEco Studio</h4>
 <p class="mb-2">去华为开发者官网（developer.huawei.com）→ [开发] → [鸿蒙] → [工具]，下载 DevEco Studio for Windows（或 Mac）。安装过程一路下一步，唯一要注意的是<strong>磁盘位置</strong>：SDK + 模拟器 + 构建缓存加起来要 20GB 以上的空间，别塞进快满的 C 盘。</p>
-<p class="mb-2">首次启动会引导你完成三件事：<strong>同意协议</strong>、<strong>登录华为开发者账号</strong>（个人实名认证免费，后面真机调试和上架都要用）、<strong>配置 SDK</strong>（默认路径即可，也可自定义）。有个好消息：自 6.0.0(20) 起，DevEco Studio 已经预置了对应版本的 HarmonyOS SDK，重新构建时会自动使用——老教程里"单独下载 SDK"的步骤可以直接跳过。装完建议再进 [Settings] → [DevEco Studio] 检查一次 SDK 组件：ArkTS、ArkUI、预览器默认都会装上。</p>
+<p class="mb-2">首次启动会引导你完成三件事：<strong>同意协议</strong>、<strong>登录华为开发者账号</strong>（个人实名认证免费，后面真机调试和上架都要用）、<strong>配置 SDK</strong>（默认路径即可，也可自定义）。有个好消息：自 6.0.0(20) 起，DevEco Studio 已经预置了对应版本的 HarmonyOS SDK，重新构建时会自动使用——老教程里"单独下载 SDK"的步骤可以直接跳过。当前 IDE 版本方案也已随 API 走（最新为 DevEco Studio 26.0.0，另有鸿蒙电脑版）。装完建议再进 [Settings] → [DevEco Studio] 检查一次 SDK 组件：ArkTS、ArkUI、预览器默认都会装上。</p>
 <div class="warning-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>常见坑：Node.js 版本</p>
 <p class="mt-1">DevEco 的构建工具链依赖特定版本的 Node.js。如果本机已装过 Node，建议让 DevEco 使用它内置推荐的版本（安装向导会提示），避免全局版本冲突——这是新手最常见的第一个报错来源。</p>
@@ -13513,7 +13514,7 @@ struct SettingsPage {
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">组件声明</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Component</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@ComponentV2</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">组件内状态</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@State</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Local</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">父传子</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Prop</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Param</td></tr>
-<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">父子双向</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Link</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Once / @Event 组合</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">父子双向</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Link</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Param + @Event 组合（@Once @Param = 只同步一次）</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">嵌套对象观察</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Observed + @ObjectLink</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@ObservedV2 + @Trace</td></tr>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">状态变化回调</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Watch</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">@Monitor</td></tr>
 </tbody>
@@ -13523,7 +13524,7 @@ struct SettingsPage {
 <p class="mb-2">版本行为变更也要留心：官方 5.1.0(18) 说明里就有 ArkUI 的 <code class="inline">getKeyboardAvoidMode</code> 返回值变更、XComponent 上 <code class="inline">renderFit</code> 显示效果变更等条目——升级别只看编译能不能过。</p>
 
 <h4 class="text-lg font-semibold mt-4 mb-2">三、导航与资源：从一页到多页</h4>
-<p class="mb-2">多页面跳转用 <strong>Navigation</strong> 组件或 Router（页面级路由，router.pushUrl 类似 Intent/Segue）；资源引用统一用 <strong>$r('app.type.name')</strong> 语法——$r('app.string.app_name') 取字符串，$r('app.media.icon') 取图片，$r('app.color.primary') 取颜色。字符串等资源放在 resources/base/element/ 下的 JSON 里，配合 zh-CN/en_US 目录做多语言——和安卓的 strings.xml 一个思路。</p>
+<p class="mb-2">多页面跳转用 <strong>Navigation</strong> 组件或 Router（页面级路由，router.pushUrl 类似 Intent/Segue；注意官方已宣布 Router 仅维护不演进，新项目请优先用 Navigation）；资源引用统一用 <strong>$r('app.type.name')</strong> 语法——$r('app.string.app_name') 取字符串，$r('app.media.icon') 取图片，$r('app.color.primary') 取颜色。字符串等资源放在 resources/base/element/ 下的 JSON 里，配合 zh-CN/en_US 目录做多语言——和安卓的 strings.xml 一个思路。</p>
 <div class="practice-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-hands mr-2"></i>来动手：做出"设置页"</p>
 <p class="mt-1">用 Column + SettingItem 复刻手机设置首页的三行（Wi-Fi、蓝牙、显示），再给每行加一个箭头图标（Row 里追加 Image 或 Text('›')）。完成后用预览器看效果——布局、状态、组件复用三个概念你已经全部用上了。</p>
@@ -13722,7 +13723,7 @@ async function fetchTodos(): Promise&lt;string&gt; {
 </tbody>
 </table>
 </div>
-<p class="mb-2">这张表也提醒咱们一件事：Kit 的 API 会随版本调整。鸿蒙的版本节奏在加快——HarmonyOS 6 在 2025 年 10 月发布时首批就有 90 多款机型公测，6.1 已经在推进，ArkData、NetworkKit 的接口细节都可能跟着变。所以每次升级 SDK，先用 DevEco 里的 API Change Assistant 把工程扫一遍（[Tools] → [API Change Assistant]），改完再跑。</p>
+<p class="mb-2">这张表也提醒咱们一件事：Kit 的 API 会随版本调整。鸿蒙的版本节奏在加快——HarmonyOS 6 在 2025 年 10 月发布时首批就有 90 多款机型公测，7.0（2026 年 9 月发布）也已落地，ArkData、NetworkKit 的接口细节都可能跟着变。所以每次升级 SDK，先用 DevEco 里的 API Change Assistant 把工程扫一遍（[Tools] → [API Change Assistant]），改完再跑。</p>
 <div class="tip-box rounded-lg p-4 mb-3"><p class="font-semibold"><i class="fas fa-lightbulb mr-2"></i>一句话记牢</p><p class="mt-1">三大平台到这里可以对齐了：安卓 Room/DataStore、iOS SwiftData/UserDefaults、鸿蒙 RelationalStore/Preferences——都是「结构化」与「小设置」两分。</p></div>
 <div class="chapter-summary">
 <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1"></i>本章小结</p>
@@ -13812,7 +13813,7 @@ struct TodoPage {
   private db: TodoDb = new TodoDb()
 
   aboutToAppear() {
-    this.db.init(getContext(this)).then(async () =&gt; {
+    this.db.init(this.getUIContext().getHostContext()).then(async () =&gt; {
       this.todos = await this.db.list()
     })
   }
@@ -14013,7 +14014,7 @@ struct WeatherPage {
 </div>
 
 <h4 class="text-lg font-semibold mt-4 mb-2">三、提交审核：材料清单与常见驳回</h4>
-<p class="mb-2">在 AGC 的"我的应用"里提交 release 包，需要准备的材料：<strong>应用信息</strong>（名称、简介、分类、图标 216×216 PNG，500KB 以内）、<strong>截图</strong>（手机至少 3 张，可加平板/折叠屏）、<strong>隐私政策 URL</strong>（必须有可访问的网页）、<strong>版权证明</strong>（个人开发者实名即可）、<strong>测试账号</strong>（应用需登录时提供）。</p>
+<p class="mb-2">在 AGC 的"我的应用"里提交 release 包，需要准备的材料：<strong>应用信息</strong>（名称、简介、分类、图标 216×216 PNG，500KB 以内）、<strong>截图</strong>（手机至少 3 张，可加平板/折叠屏）、<strong>隐私政策 URL</strong>（必须有可访问的网页）、<strong>版权证明</strong>（个人开发者实名即可）、<strong>测试账号</strong>（应用需登录时提供）——另外别忘了<strong>工信部 App 备案</strong>：2024 年 4 月起未备案的应用不得上架，AGC 提审时要填备案编号，上架后还须在 App 内显著位置展示。</p>
 <p class="mb-2">华为审核的常见驳回原因，提前避开：<strong>隐私政策与实际收集的数据不一致</strong>（最常见！比如声明不收集位置却申请了定位权限）；<strong>应用内强制登录才能用</strong>（基础功能应可游客体验）；<strong>截图与实际功能不符</strong>；<strong>应用崩溃或白屏</strong>（华为会用真机自动测试）。对齐的口径就一句：实际申请的权限、实际采集的数据、隐私政策里的描述，三者保持一致。审核周期通常 1–3 个工作日，被驳回按修改意见改完重新提交即可。</p>
 <div class="practice-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-hands mr-2"></i>来动手：走一遍完整上架流程</p>
@@ -14058,7 +14059,7 @@ struct WeatherPage {
 <p class="mb-2">服务卡片（Form Kit）是放在桌面上的应用速览——用户不用打开应用就能看到信息、完成轻操作（对应安卓的 Widget，但鸿蒙卡片用 ArkTS 写，能力更强）。卡片本质是一个独立入口的 ArkTS 页面，定时刷新数据：</p>
 <div class="code-block">
 <div class="code-head"><span>ARKTS · 服务卡片卡片页（节选）</span><span class="dots">···</span></div>
-<pre>// 卡片也是 @Entry 组件，通过 formBindingAbility 提供数据
+<pre>// 卡片也是 @Entry 组件，数据由 FormExtensionAbility 经 formBindingData 提供
 @Entry
 @Component
 struct TodoCard {
@@ -14076,7 +14077,7 @@ struct TodoCard {
   }
 }</pre>
 </div>
-<p class="mb-2">卡片支持 2×2、2×4、2×6 等规格，可以配置定时刷新（如天气每小时更新）。做一张好看的卡片，是应用在桌面上的"免费广告位"。但两条设计心得先说在前面：别把卡片当成缩小版首页——它受刷新频率、尺寸与交互限制，先想清楚「用户瞥一眼最想知道什么」，再把这一个信息做好；也别依赖应用还活在内存里——卡片经常在 App 没打开时刷新，数据更新与持久化要独立设计，第 75 章的 Preferences 这时就派上用场。</p>
+<p class="mb-2">卡片支持 2×2、2×4、2×6 等规格，可以配置定时刷新（如天气每小时更新）；HarmonyOS 7.0 起互动卡片让卡片上的直接操作更进一步。做一张好看的卡片，是应用在桌面上的"免费广告位"。但两条设计心得先说在前面：别把卡片当成缩小版首页——它受刷新频率、尺寸与交互限制，先想清楚「用户瞥一眼最想知道什么」，再把这一个信息做好；也别依赖应用还活在内存里——卡片经常在 App 没打开时刷新，数据更新与持久化要独立设计，第 75 章的 Preferences 这时就派上用场。</p>
 
 <h4 class="text-lg font-semibold mt-4 mb-2">二、元服务：免安装的"即用即走"</h4>
 <p class="mb-2">元服务（前身叫原子化服务）是鸿蒙的应用形态创新：<strong>用户不安装就能用</strong>——在负一屏、搜索、扫码、碰一碰等入口直接拉起。它比普通应用更轻：包体积有严格上限、功能聚焦单一场景、可被万能卡片承载。适合做"查快递、共享单车、酒店入住"这类低频轻量场景，不适合需要长期后台的任务——判断标准就这一条。技术栈与普通应用完全相同（ArkTS + ArkUI），区别在工程配置与分发形态：它改变的是分发思路，用户不必先装一个 App 才能用上某个功能。</p>
@@ -17232,7 +17233,7 @@ struct TodoCard {
                 'di-san-shi-yi-zhang': ['拍之前想清楚：观众是谁、提供什么价值、在哪个平台发', '开拍5件事：1080P/30fps、擦镜头、锁对焦曝光、确定横竖、开网格线', '运镜五招：推、拉、摇、移、跟——稳是第一要务', '剪辑用剪映：裁剪→转场→字幕→BGM→导出，六步走', '前3秒定生死，一条视频只讲一件事，坚持比天赋重要'],
                 'di-san-shi-er-zhang': ['手机丢失黄金30分钟：借手机拨打→远程锁定→挂失SIM卡→冻结支付→通知亲友→报警', '被骗后72小时：停止转账→保留证据→拨96110→报警→联系银行→改密码', '手机中毒：安全模式→卸载可疑App→安全扫描→恢复出厂（终极方案）', '账号被盗：改密码→踢设备→查登录记录→开双重认证→查绑定→查支付', '勒索信息99.9%是诈骗，不回复不付钱，截图拉黑', 'AI换脸/拟声诈骗：看眨眼/嘴型/边缘/光影破绽，让对方转头捂脸、问私密问题、回拨已知号码', 'SIM swap劫持：手机突然"无服务"即警觉；设SIM卡PIN、开运营商二次验证、重要账号改用认证器App', '日常预防五件事：锁屏+2FA、查找手机、SIM卡PIN、不装来历不明App、定期备份', '地震/极端天气：先就近避险再撤离，短信报平安比长通话省电', '无信号时优先卫星SOS（机型支持）；预警与设置见第十三章'],
                 'di-san-shi-san-zhang': ['Vision Pro与AR眼镜是手机之外的新计算入口，但短期难以取代手机', '脑机接口距离消费级还有10-20年，伦理问题先于技术成熟', '手机正向"隐身"方向进化，从设备中心走向身份中心', 'AI伦理、数据主权、数字鸿沟是未来10年的核心议题', '保持连接也保持独立，是数字生活不变的哲学'],
-                'di-qi-shi-zhang': ['鸿蒙 NEXT 移除 AOSP，与安卓正式分家', '全场景分布式：手机/平板/手表/车机/智慧屏一套系统', '生态设备超 10 亿台，国内为主战场', '技术栈公式：ArkTS + ArkUI + Stage 模型 + DevEco Studio', '三大判断题：目标用户/国产化需求/生态占位', 'DevEco Studio 在 Windows 就能开发，无 Mac 门槛'],
+                'di-qi-shi-zhang': ['鸿蒙 NEXT 移除 AOSP，与安卓正式分家', '全场景分布式：手机/平板/手表/车机/智慧屏一套系统', '生态设备超 13 亿台，国内为主战场', '技术栈公式：ArkTS + ArkUI + Stage 模型 + DevEco Studio', '三大判断题：目标用户/国产化需求/生态占位', 'DevEco Studio 在 Windows 就能开发，无 Mac 门槛'],
                 'di-qi-shi-yi-zhang': ['DevEco Studio 基于 IntelliJ，Windows/Mac 可用', 'ets/ 是代码、resources/ 是资源、module.json5 是清单', '三种预览：Previewer 秒刷/模拟器/真机', 'Stage 模型是唯一主线，FA 模型别选', 'Node.js 版本冲突是新手第一坑', '@Entry+@Component+build()+@State 四概念入门'],
                 'di-qi-shi-er-zhang': ['ArkTS = TS 核心 + 鸿蒙约束 + UI 装饰器', '四条收紧：禁 any/对象形状固定/无结构化类型/UI 数据装饰器', '@Entry/@Component/@State/@Prop/@Link/@Watch 六装饰器', '收紧换性能：更小包体、更快启动、更稳渲染', '报错是提前的善意，编译期比运行期友好', '装饰器是 ArkUI 状态管理的骨架'],
                 'di-qi-shi-san-zhang': ['布局三件套：Column/Row/Stack + 对齐参数', 'List+ForEach 列表，Grid 网格，layoutWeight=flex:1', '状态三层：@State 自有/@Prop 单向/@Link 双向', '装饰器选错是第一坑：该 @Link 用 @Prop 不刷新', 'Navigation/Router 管跳转，$r() 统一资源引用', '多语言资源目录对齐安卓 strings.xml 思路'],
