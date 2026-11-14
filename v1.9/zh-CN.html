@@ -15321,7 +15321,7 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>复查与收尾</strong>：重启，再观察一天。恢复正常就复盘记录（第十九章的故障日志）；没恢复就回到第二步继续，或按第十九章送修。</li>
   <li><strong>收尾的安全动作</strong>：用完的开发者选项开关全部关回去，"撤销USB调试授权"顺手点一下。</li>
 </ol>
-<p class="mb-2">数一数这个案例用到的能力：排障心法（第十九章）、电池与存储的诊断、开发者选项的三件仪表、对照实验的思想、以及用完就关的纪律。你会发现本章和第十九章根本是一套组合拳：<strong>第十九章给你排查的流程，第二十章给你深入的工具</strong>。两章合在一起，你面对"手机不对劲"时，就同时拥有了流程感和工具箱——这正是它们被安排在进阶篇相邻位置的原因。</p></p>
+<p class="mb-2">数一数这个案例用到的能力：排障心法（第十九章）、电池与存储的诊断、开发者选项的三件仪表、对照实验的思想、以及用完就关的纪律。你会发现本章和第十九章根本是一套组合拳：<strong>第十九章给你排查的流程，第二十章给你深入的工具</strong>。两章合在一起，你面对"手机不对劲"时，就同时拥有了流程感和工具箱——这正是它们被安排在进阶篇相邻位置的原因。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">五、Root权限：安卓的"超级管理员"</h4>
 <p class="mb-2">Root权限相当于Linux中的超级用户（对/目录拥有完全控制权，可以读写任意文件），是安卓系统的最高权限。它与Windows的Administrator有本质区别：Windows出于安全考虑对管理员做了诸多限制（真正的最高权限其实是 TrustedInstaller），即便是 Administrator 也无法像 Linux root 那样直接执行 <code class="bg-gray-100 dark:bg-gray-800 px-1 rounded">sudo rm -rf /*</code>。获得Root权限后，你可以修改系统文件、卸载预装应用、使用需要Root的高级App。</p>
 <h5 class="font-semibold mt-3 mb-1">Root的好处：</h5>
@@ -38273,7 +38273,7 @@ LazyColumn {
 <h4 class="text-lg font-semibold mt-4 mb-2">四、一个 App 是怎么诞生的？</h4>
 <p class="mb-2">和所有平台一样，iOS App 的诞生也有一条流水线。但苹果版多了两道"安检"：</p>
 <div class="figure">
-<div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-lightbulb mr-1"></i> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-keyboard mr-1"></i> 写代码（Swift + SwiftUI）</span></div></span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-upload mr-1"></i> 提交审核</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">🏪 App Store 上架</span></div>
+<div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-lightbulb mr-1"></i> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-keyboard mr-1"></i> 写代码（Swift + SwiftUI）</span></div><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-upload mr-1"></i> 提交审核</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">🏪 App Store 上架</span></div>
 <p class="mb-2">两道"安检"分别是：<strong>证书签名</strong>——所有 iOS 应用必须由苹果颁发的证书签名才能在真机上运行（开发证书用于自己调试，发布证书用于上架），这套签名体系在第 60 章搭建环境时你就会首次接触；<strong>App Store 审核</strong>——上架前苹果人工审核应用的功能、隐私、内容，通过后才能出现在商店里（审核细节在第 67 章展开）。</p>
 <p class="mb-2">流水线的最后一段也和别的平台不同：<strong>上架不是终点，而是"新关系的开始"</strong>。用户评论、崩溃报告、版本更新——这些持续运营的动作都通过 App Store Connect（苹果的开发者后台）完成。第 67 章会把"上架后的运营"单独讲，这里先建立"上架之后还有半场"的预期。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">五、开发者账号与工具链：三样东西先备齐</h4>
@@ -48631,7 +48631,7 @@ workerPort.onmessage = (e: messageEvents) =&gt; {
 <div class="practice-box rounded-lg p-4 mt-4">
 <p class="font-semibold"><i class="fas fa-hand-pointer mr-2" aria-hidden="true"></i>来动手：给第 73 章的项目做一次"骨架体检"</p>
 <p class="mt-1">给 EntryAbility 的每个生命周期回调加一行日志；跑一遍冷启动、切后台、回前台、手动划掉，把日志按顺序抄下来对照本章的生命周期流程；再人为制造一次回收（后台清空或等系统回收，视机型方式不同），确认草稿能从 onBackground 的持久化里接回来。做完这三步，本章的内容就从"看过"变成"装进项目里了"。</p>
-</div></p>
+</div>
 
 <div class="chapter-summary">
 <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1"></i>本章小结</p>
@@ -54415,7 +54415,7 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre></div>
 </tbody></table>
 </div>
 <p class="text-xs text-gray-500 dark:text-gray-400 mb-3">智能戒指选购三看</p>
-三看的顺序别乱：先尺寸（决定能不能戴）、再订阅（决定养不养得起）、后生态（决定数据归谁）。很多人反着来——先被某款的功能清单种草，下单时才发现尺码要等、订阅要钱、数据出不来，退也不是不退也不是。戒指的选购顺序，就是它的使用顺序：先戴着合适，再看得起账单，最后确认数据是你的。</p>
+<p class="mb-2">三看的顺序别乱：先尺寸（决定能不能戴）、再订阅（决定养不养得起）、后生态（决定数据归谁）。很多人反着来——先被某款的功能清单种草，下单时才发现尺码要等、订阅要钱、数据出不来，退也不是不退也不是。戒指的选购顺序，就是它的使用顺序：先戴着合适，再看得起账单，最后确认数据是你的。</p>
 <h5 class="font-semibold mt-3 mb-1">预算三档，各有一句话建议</h5>
 <p class="mb-2">预算的档位感给你三句话。预算一千五到两千（入门）：国产免订阅是甜点位——功能够用、无长期费用，试错成本可控；预算两千到三千（主流）：各家的主力款都在这里，比的是算法深度与佩戴工艺，试戴盒的等待值得忍受；三千以上（旗舰）：为材质工艺与品牌服务买单，健康数据与入门档差距不大——确认多出来的钱买的是你看得见的差异。戒指的功能差异远小于价格差异，这是新品类早期的典型特征，把钱花在"你会天天用的那部分"。</p>
 <h5 class="font-semibold mt-3 mb-1">比价时的功能清单核对法</h5>
@@ -54501,7 +54501,7 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre></div>
 <h5 class="font-semibold mt-3 mb-1">第一周：建立佩戴节奏，不看分数</h5>
 <p class="mb-2">第一周你只做三件事。一是全天佩戴（洗澡力量训练除外），让身体和手指适应"多了一枚环"的存在感——多数人三五天后就"忘了它的存在"；二是建立摘戴节奏：进浴室摘、出浴室戴、睡前确认戴好，把动作固化成肌肉记忆；三是刻意不看分数——第一周的数据先攒着，别急着评价自己。第三件事的理由在第八十一章讲过（Orthosomnia）：戴上监测设备的头几天，人对分数的敏感度最高、焦虑也最高，先把"采集"和"评判"分开，是数据素养的第一课。</p>
 <h5 class="font-semibold mt-3 mb-1">第二周：开始读报告，建立基线</h5>
-第二周开始，每天早上花两分钟看报告——按固定顺序读：睡眠总时长（事实）→HRV 与静息心率相对基线的位置（状态）→就绪度/恢复度分数（建议）。同时开始做第八十一章来动手里的"恢复度日志"：把分数与前晚的行为（几点睡、有没有喝酒、训练强度）对照记下——两周后你会得到一份"个人红灯规律"的初稿，比如"熬夜+酒→次日恢复度必低"。这份规律比任何 App 的通用建议都值钱，因为它是你身体自己的说明书。</p>
+<p class="mb-2">第二周开始，每天早上花两分钟看报告——按固定顺序读：睡眠总时长（事实）→HRV 与静息心率相对基线的位置（状态）→就绪度/恢复度分数（建议）。同时开始做第八十一章来动手里的"恢复度日志"：把分数与前晚的行为（几点睡、有没有喝酒、训练强度）对照记下——两周后你会得到一份"个人红灯规律"的初稿，比如"熬夜+酒→次日恢复度必低"。这份规律比任何 App 的通用建议都值钱，因为它是你身体自己的说明书。</p>
 <p class="mb-2">第二周还有个加分动作：找一天"主动实验"。故意安排一次与平时不同的夜晚（早睡一小时、或睡前不刷手机），第二天看数据怎么回应。这种"小实验"的意义是把被动记录变成主动探索——你会第一次体会到"数据是可干预的"这个关键认知：睡眠不是发生在你身上的事，是你参与制造的事。这个认知一旦建立，后面的所有改善都有了心理基础。</p>
 <p class="mb-2">小实验的设计也有讲究：一次只改一个变量（只提前睡、或只去掉睡前手机），否则你看不出是哪个因素在起作用——这是所有自我实验的黄金法则。实验周期两三天足够（不必一周），改回来再观察一两天确认可重复。两次"单变量实验"下来，你对"数据如何回应行为"的手感就建立了——这比看任何教程都学得快。</p>
 <p class="mb-2">第二周还有一件重要的事：开始"对答案"。把你已经知道的身体规律拿出来验证——"我知道自己喝了酒睡不好""我知道周三加班晚睡"——对着这两周的数据看，如果数据与你的自我认知对得上，你对设备的信任就建立起来了；如果对不上，先查佩戴与测量条件，再考虑算法适应期。可穿戴的信任不是买来的，是"数据与体感互相印证"出来的——这两周就是印证期。</p>
@@ -55650,7 +55650,7 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre></div>
 <tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">流量卡（eSIM 或当地卡）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">导航、翻译、上传、一切上网</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">设为默认数据线路、按套餐开关漫游</td></tr>
 </tbody></table>
 </div>
-<p class="text-xs text-gray-500 dark:text-gray-400 mb-3">双卡分职速查表</p></p>
+<p class="text-xs text-gray-500 dark:text-gray-400 mb-3">双卡分职速查表</p>
 <h5 class="font-semibold mt-3 mb-1">四个设置点，落地后五分钟做完</h5>
 <ol class="list-decimal pl-6 mb-3 space-y-1">
 <li><strong>默认数据线路指到流量卡</strong>：设置里的蜂窝网络/SIM 卡管理，把"默认上网/数据线路"选成流量卡。这一步错了，后面全白搭；</li>
@@ -55735,7 +55735,6 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre></div>
 <h5 class="font-semibold mt-3 mb-1">第五步与第六步的细节：落地后的黄金十分钟</h5>
 <p class="mb-2">落地开机后的十分钟，建议按这个顺序过：关飞行模式 → 等 eSIM 注册网络（状态栏出现运营商名和信号）→ 确认默认数据线是 eSIM → 打开数据漫游开关（只对 eSIM 生效的那条）→ 打开浏览器访问一个网页 → 看流量余量计数是否启动。任何一步卡住，先看状态栏：没有信号说明覆盖问题，有信号但上不了网说明数据设置问题，能上网但流量不计数说明你连的是别的网络（比如误连了机场 Wi-Fi）。按这个顺序排查，90% 的"落地没网"都能在十分钟内自己解决。</p>
 <p class="mb-2">顺便说一个"落地后第一件事"的加分动作：打开地图 App 搜一下你预装的离线包覆盖区域是否正常、把酒店地址重新定位一次——确认"地图能用"比确认"网能用"更重要，因为地图是你接下来一小时的行动指南。</p>
-<p class="mb-2">
 <h4 class="text-lg font-semibold mt-4 mb-2">七、验证码的三层防御与联络约定</h4>
 <h5 class="font-semibold mt-3 mb-1">把验证码这件事拆成三层来看</h5>
 <p class="mb-2">第一层是"能不能收到"。跨境收短信绝大多数情况没问题，但有三类例外：号码长期停机保号状态的、运营商开通了"防骚扰拦截"把境外短信也拦了的、以及极少数国家的漫游网络对国内短信网关的兼容问题。第一类出发前充个话费解除停机；第二类在运营商 App 里检查短信拦截设置；第三类靠落地实测——落地后先给自己发条消息测试。</p>
