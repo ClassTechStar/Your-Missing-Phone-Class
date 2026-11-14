@@ -5481,6 +5481,74 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
 </ul>
 <p class="mb-2">判断标准可以浓缩成一句话：<strong>正规的分发渠道，一定有明确的"谁在负责"和"从哪里来"</strong>。单位IT指名道姓、有文档、有联系人，就是正规；群里没人认领、链接转了八手、只说"大家都装"，就是危险。同样是"商店之外的安装"，差就差在这两个字上。</p>
 <p class="mb-2">这条标准反过来用也能识破一类骗局：有人向你推销"内部渠道的低价会员""官方没上架的理财App""跟着我装这个稳赚"——凡是把"商店之外"包装成"独家优势"的，都在利用你对"内部"两个字的信任。记住，真正的正规内部应用只发给需要它的员工，从不发给陌生网友，更不承诺收益。</p>
+<h4 class="text-lg font-semibold mt-4 mb-2">手机病毒的原理与分类：它到底是什么</h4>
+<p class="mb-2">"病毒"是大众叫法，安全行业统一叫"恶意软件"（malware）。严格说，手机上能自我复制、主动传播的"真病毒"极少——手机的系统不像电脑那样共享文件夹，恶意代码想进来，几乎每一次都要你亲手点"安装"。所以新闻里的"手机病毒"，绝大多数其实是下面这些"冒充正常 App 混进来"的东西。理解了这一点，你的防范重点就清晰了：不是躲着空气中的"传染源"，而是管住自己的手指。</p>
+<h5 class="font-semibold mt-3 mb-1">1. 它们是怎么进来的</h5>
+<p class="mb-2">路径基本就三条。第一条，也是占绝大多数的一条：<strong>你自己装的</strong>——"去广告版""永久会员版""红包助手""抢票神器"，伪装成好处，利用的是贪便宜和图方便。第二条：<strong>冒充更新</strong>——正规应用不出自商店的"升级包"、聊天群里的"补丁文件"，借你熟悉的 App 名字混进来。第三条：<strong>借身份进来</strong>——企业签名签发的测试包、伪装成"系统工具"的安装包。三条路殊途同归：都要走"安装"这个动作。所以第二节讲的纯净模式才那么值钱——门守住了，后两条路直接堵死大半。</p>
+<h5 class="font-semibold mt-3 mb-1">2. 常见类型与各自的算盘</h5>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">类型</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">它想要什么</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">典型表现</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">木马（Trojan）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">拿到权限后各行其是</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">表面功能正常，背后悄悄干活</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">间谍软件（Spyware）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">短信、通话、定位、聊天记录</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">流量异常、耗电偏快</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">银行木马</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">盯支付与银行 App，截验证码、自动转账</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">手机毫无异样，账户悄悄少钱</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">勒索软件（Ransomware）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">锁屏或加密文件换赎金</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">屏幕被锁、文件打不开</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">广告软件（Adware）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">广告分成、偷跑流量</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">锁屏广告、通知栏垃圾推送、莫名多出一堆 App</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">挖矿程序</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">偷你的算力替别人干活</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">异常发热、掉电极快、莫名卡顿</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远控木马（RAT）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">远程拍照、录音、操控手机</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">几乎无感，是最危险的一类</td></tr>
+</tbody>
+</table>
+</div>
+<p class="mb-2">这些类型拿到权限后的动作链也很相似：先要权限 → 用无障碍服务读屏（看你在银行 App 里输什么、点哪里）→ 截获短信验证码 → 联网外传或自动转账。链路上任何一环被卡住，整条链就断了：不给无障碍权限，它读不了屏；国产系统普遍有"敏感权限保护"（验证码短信默认只有系统短信应用能读），验证码就漏不出去。这也是后面"防护措施"反复强调权限的原因。</p>
+<h5 class="font-semibold mt-3 mb-1">3. iPhone 也会中毒吗</h5>
+<p class="mb-2">iOS 的审核和沙盒机制让风险低很多，但"iPhone 不会中毒"是误区。不需要越狱的入口至少有三个：企业证书签发的"第三方商店"App（这类 App 证书一失效就集体闪退，你在一些群里见过）、来路不明的"描述文件"、以及最传统的钓鱼链接。欧盟地区近年开放了侧载，门槛进一步降低。原则跨平台通用：装的东西只从可信来源来，iPhone 也不例外。</p>
+<div class="info-box rounded-lg p-4 mt-4">
+<p class="font-semibold"><i class="fas fa-lightbulb mr-2" aria-hidden="true"></i>术语小抄</p>
+<p class="mt-1">恶意软件是统称，病毒、木马、蠕虫各有严格定义（蠕虫能自传播、病毒要寄生文件、木马靠伪装）——日常混用没关系，但记住一句话：手机上"自我复制传播"的几乎没有，防的重点不是"传染"，是"别把它亲手装进来"。</p>
+</div>
+<h4 class="text-lg font-semibold mt-4 mb-2">伪装成"System Service"的恶意程序：最值得警惕的一种伪装</h4>
+<p class="mb-2">在所有伪装里，"冒充系统服务"是最能唬人的一种：名字里带"系统"、图标是个齿轮、有的干脆没有图标。普通人一看就默认"这是手机自带的，不能动"，于是它就安安稳稳地住了下来。这一节把这类东西拆透——它也是本章第二节"防毒墙"最需要你理解的那个对手。</p>
+<h5 class="font-semibold mt-3 mb-1">1. 它在冒充什么</h5>
+<p class="mb-2">先说清楚一个技术事实：真正的系统进程（比如负责画状态栏和通知栏的 SystemUI）由系统本身的签名保护，第三方 App 装得再像也"进不了编制"，成不了系统服务。所以伪装者冒充的只是"名字"：应用包名起成 com.android.systemService 之类的"官方相"，显示名称写"系统服务""系统更新服务"，图标用齿轮或者干脆藏起来。换句话说——一个需要"安装"的应用顶着"系统服务"的名头，它本身就在撒谎：官方的系统服务从来不会以"可安装的应用"形式出现。</p>
+<h5 class="font-semibold mt-3 mb-1">2. 特征清单：对号入座</h5>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+<li><strong>没有桌面图标</strong>，应用列表里也翻不到，全靠安全扫描才现形；</li>
+<li><strong>"卸载"和"强行停止"按钮是灰的</strong>，点不动——多半是激活了设备管理器，给自己上了"防卸载"保险；</li>
+<li><strong>申请设备管理器权限</strong>——拿到后能改锁屏密码、远程锁定，这是勒索类惯用的抓手；</li>
+<li><strong>申请无障碍服务</strong>——读屏加模拟点击，银行木马的标准配置；</li>
+<li><strong>开机自启、杀掉复活</strong>，清理后台之后过一会儿又在耗电排行里冒头；</li>
+<li><strong>通知栏常驻一条没有来源的通知</strong>（"系统优化中""安全防护运行中"），点进去查不到详情。</li>
+</ul>
+<h5 class="font-semibold mt-3 mb-1">3. 它能造成什么危害</h5>
+<p class="mb-2">危害的上限取决于它拿到的权限。最凶的组合是"无障碍+设备管理器"：读屏让它看到你的银行账号和金额，模拟点击替你按转账按钮，截获短信验证码填进验证框——整个转账过程它可以"代劳"，这就是近年银行木马的完整作案链路。设备管理器则给了它另一条腿：改锁屏密码、锁死手机，向你勒索。轻一点的版本就干三件事：弹广告、偷跑流量、静默安装别的应用。要强调的一点是：权限列表里找不到"System Service"这个特权——它的每一样能力，都是你（或它诱导你）在弹窗里亲手点的"允许"。</p>
+<h5 class="font-semibold mt-3 mb-1">4. 识别方法：四步点名</h5>
+<ol class="list-decimal pl-6 mb-3 space-y-1">
+<li><strong>先跑一次全盘病毒扫描</strong>（安全中心/手机管家里），藏起来的应用会让扫描替你报出来——这一步最省事，命中率也最高；</li>
+<li><strong>点名设备管理器</strong>：设置里搜"设备管理"（各品牌路径略有差异），列表里每一个激活的设备管理应用都必须是你认识的，出现"系统服务""设备助手"这类陌生名字，就是重大嫌疑；</li>
+<li><strong>点名无障碍服务</strong>：设置里搜"无障碍"，已开启的服务逐个过——这里出现你不认识的"服务"，几乎等于实锤；</li>
+<li><strong>看包名和来源</strong>：点开可疑应用的详情页，看应用包名（含 system/service 字样）和安装来源（浏览器、聊天工具、二维码）。名字像官方、来源不正规、签名信息查不到的，一律按伪装处理。</li>
+</ol>
+<div class="warning-box rounded-lg p-4 mt-3">
+<p class="font-semibold"><i class="fas fa-exclamation-triangle mr-2"></i>卸载它有讲究，顺序别反</p>
+<p class="mt-1">先取消设备管理器激活（否则卸载按钮一直是灰的），再撤销无障碍授权，然后正常卸载，卸完再跑一次全盘扫描。手机被锁屏勒索时更不能慌：先断网、绝不转账，用另一台干净设备改关键账号密码，最后再考虑备份资料后恢复出厂。这三节的完整急救流程，第六章和第三十二章有更细的清单。</p>
+</div>
+<h5 class="font-semibold mt-3 mb-1">5. 防护手段：五条防线</h5>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+<li><strong>纯净模式开着，正门就守住了</strong>——这一节讲的所有伪装，前提都是"能从商店外安装"；</li>
+<li><strong>自称"系统工具""系统更新"的安装包一律不装</strong>——系统更新永远走 设置 → 系统更新，系统服务从来不需要你"手动安装"；</li>
+<li><strong>无障碍权限只给真正需要的可信应用</strong>（读屏辅助、你主动配置的自动化），装完就按上面第 4 步点名一遍；</li>
+<li><strong>认得系统的"保护性阻拦"</strong>——较新版本的安卓对商店外安装的应用默认封锁无障碍等高敏权限，要开启得多步确认，这是保护不是故障，别嫌麻烦直接点"仍要开启"；</li>
+<li><strong>把点名检查并进每月巡检</strong>——每月十分钟里加两分钟：设备管理器列表+无障碍列表各过一遍。</li>
+</ul>
+<div class="practice-box rounded-lg p-4 mt-4">
+<p class="font-semibold"><i class="fas fa-hand-pointer mr-2"></i>来动手：三分钟点名检查</p>
+<ol class="list-decimal pl-6 mt-1 space-y-1">
+  <li>设置里搜"设备管理"，逐个确认激活的设备管理应用——有不认识的，按本节流程处理。</li>
+  <li>设置里搜"无障碍"，已开启的服务逐个点名——尤其留意名字带"服务""助手"却说不出用途的。</li>
+  <li>应用列表按"安装时间"倒序翻一遍，看最近有没有"不记得装过"的应用；发现无图标或名字可疑的，点开详情看包名和来源。</li>
+</ol>
+</div>
 <h4 class="text-lg font-semibold mt-4 mb-2">四、装、更新、卸载</h4>
 <p class="mb-2">安全关过了，接下来是日常经营。装、更新、卸载这三件事，相当于给手机里的"员工"做人事管理：怎么招进来、怎么让他们保持业务水平、怎么礼貌地请人离开。管得好，手机清爽；管不好，迟早挤成一锅粥。</p>
 <ul class="list-disc pl-6 mb-3 space-y-1">
@@ -18505,6 +18573,48 @@ git merge upstream/main
 <p class="mb-2">报 bug 的正文照这个格式写，被处理的速度会快很多：标题一句话说清现象；正文第一段写你的环境（系统、版本）；第二段写复现步骤，一至三步，每步一行；第三段写"期望结果"和"实际结果"的对比，能附截图或简短录屏更好。别用"它坏了"当标题——维护者看到这种标题只能先反问你一轮，来回几天就这么耗掉了。</p>
 <h5 class="font-semibold mt-3 mb-1">把贡献变成履历</h5>
 <p class="mb-2">被合并的 PR 会永久留在项目历史里，署着你的名字。简历里可以直接放 PR 链接，面试官点开就能看到你改了什么、审查里讨论了什么、最后怎么被合并——这段过程本身就是证明，比一句"有开源经验"扎实得多。第一单哪怕只是修了个错别字，它也是从零到一的那一步。</p>
+<h4 class="text-lg font-semibold mt-4 mb-2">开源协议入门：你写的代码，别人能怎么用</h4>
+<p class="mb-2">前面"仓库怎么找"那节给过许可证的三句话扫盲，这一节把话展开讲全：开源协议到底是什么、常见的几种差别在哪、你该给自己的项目选哪一个、用别人的代码时怎么算账。无论你是"写代码放上去的人"还是"拿代码来用的人"，这一课都躲不开。</p>
+<h5 class="font-semibold mt-3 mb-1">1. 协议的本质：没有它，默认"保留所有权利"</h5>
+<p class="mb-2">代码公开不等于放弃权利。一个仓库没有 LICENSE 文件，著作权法默认作者保留所有权利——你可以看（公开即可见）、可以学（阅读和借鉴思路一般没问题），但不能把代码复制进自己的项目里分发或商用，哪怕加了署名也不行。开源协议就是作者签发的一份"使用合同"，写清楚三件事：允许你做什么、要求你必须做什么、禁止你做什么。它是"开源"这个词的法律地基——没有协议的"开源仓库"，只是"公开源码"，不是真正意义上的开源软件。</p>
+<h5 class="font-semibold mt-3 mb-1">2. 主流协议逐个看</h5>
+<p class="mb-2"><strong>MIT</strong>：最流行的宽松协议，全文不到两百词，翻译成人话就是"随便用，商用、闭源、改名出售都行，唯一条件是保留版权声明和协议文本"。个人小项目几乎不会选错。它的短板是没有专门的专利条款，涉及专利的正式项目多会换 Apache-2.0。</p>
+<p class="mb-2"><strong>Apache-2.0</strong>：同样宽松（可商用、可闭源），但多写了几页企业关心的内容：贡献者明确授予专利使用权（防止"先用你的代码、再告你侵犯专利"）、修改文件要标注、不得用项目商标宣传。企业项目和有专利顾虑的项目常选它。</p>
+<p class="mb-2"><strong>BSD（2-clause / 3-clause）</strong>：和 MIT 同一路数的宽松协议，3-clause 版多一条"不得用原作者名义为衍生产品背书"——防止别人拿你的名字打广告。</p>
+<p class="mb-2"><strong>GPL（v2 / v3）</strong>："传染性"协议（术语叫 Copyleft）的核心代表：你的程序用了 GPL 代码，再分发时整个程序就必须按 GPL 开源。它把"开源精神"变成了法律义务——你可以随便用、随便改，但改完放出来时也得让别人能继续改。v3 补了专利授权和硬件锁死相关的条款。LGPL 是"库"的例外版本：你的闭源软件可以链接 GPL 库而不必整体开源，但对库本身的修改仍要开源。AGPL 把"分发"扩展到了网络服务——哪怕你只是拿它架个网站不发布代码，也要向使用网站的人提供源码，堵住了"只提供在线服务就不算分发"的口子。</p>
+<p class="mb-2"><strong>MPL-2.0</strong>：折中派，"按文件传染"——你修改的文件要开源，新增的其他文件可以闭源。想给闭源产品留点余地、又想让核心回馈社区的项目常选它。<strong>CC0 / Unlicense</strong>：干脆放弃权利，送进公共领域，"爱怎么用怎么用"。</p>
+<h5 class="font-semibold mt-3 mb-1">3. 一张表看懂六个常用协议</h5>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse border border-gray-300 text-sm mb-3">
+<thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">协议</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话人设</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">商用</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">闭源分发</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">明确专利授权</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">传染性</th></tr></thead>
+<tbody>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MIT</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最宽松的"拿去用"</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">Apache-2.0</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">宽松＋专利清楚</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">BSD-3</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">类 MIT＋不许冒名背书</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">GPL-3.0</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">要开源就一起开源</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">不行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">强</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">LGPL-3.0</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">链接可以，改库要开源</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">链接可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">弱</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">AGPL-3.0</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">在线服务也要开源</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">服务端不行</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">最强</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">MPL-2.0</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">按文件开源</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以（改过的文件除外）</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">有</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">文件级</td></tr>
+<tr><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">CC0</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">送入公共领域</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">可以</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无</td><td class="border border-gray-300 dark:border-gray-600 px-3 py-2">无</td></tr>
+</tbody>
+</table>
+</div>
+<h5 class="font-semibold mt-3 mb-1">4. 怎么选：三个问题定协议</h5>
+<p class="mb-2">给自己或团队的项目挑协议，想清楚三个问题就够。第一，<strong>你在意别人拿去闭源商用吗</strong>？不在意，选 MIT 或 CC0；在意专利安全，选 Apache-2.0；希望"用我代码的人也回馈开源"，选 GPL 家族。第二，<strong>它是"库/框架"还是"完整应用"</strong>？库用强传染协议会吓跑集成方（LGPL、MPL 更友好），完整应用选 GPL 名正言顺。第三，<strong>将来会不会只提供在线服务、不发布代码</strong>？会，又想强制开源，就得 AGPL。拿不准时，个人小工具 MIT 几乎不会错，企业项目问一句法务——大多数的答案是 Apache-2.0。</p>
+<h5 class="font-semibold mt-3 mb-1">5. 用别人代码的人：三条硬规矩</h5>
+<p class="mb-2">第一，<strong>先找 LICENSE 再复制代码</strong>——没有协议的仓库，再心动也别搬，想要就去 Issue 区礼貌地问作者能不能补一个授权。第二，<strong>照办条款里的"必须"项</strong>：保留版权声明、按需附 NOTICE、衍生作品按协议开源，这些不是"建议"而是合同义务。第三，<strong>把传染性算成账</strong>：闭源产品里链进 GPL 代码，产品分发时就得整体开源——商业集成前想清楚，别"先抄了再说"。混装依赖时还要留意协议兼容性，一个常见的坑：Apache-2.0 与 GPLv3 兼容，但与 GPLv2 不兼容。</p>
+<h5 class="font-semibold mt-3 mb-1">6. 维护者视角：怎么给仓库挂上协议</h5>
+<p class="mb-2">GitHub 网页端就够用：仓库里 Add file，文件名写成 LICENSE 时会弹出"Choose a license"模板，MIT、Apache-2.0、GPL-3.0 等常见协议直接选，填好年份和姓名提交即可；本地操作就在仓库根目录放一个 LICENSE 文件。README 里也可以标注协议标识（如 MIT），方便工具自动识别。还有一件事趁早想好：<strong>协议可以换，但要征得所有贡献者同意</strong>——项目火起来之后再改协议，找齐几十位贡献者的同意书是个大工程，所以第一天就选好，比事后补救容易得多。</p>
+<ul class="list-disc pl-6 mb-3 space-y-1">
+<li><strong>很多人以为"开源=放弃版权"</strong>，其实恰恰相反：协议正是靠著作权才生效的授权，作者对未授权的使用方式随时可以维权。</li>
+<li><strong>很多人以为"署名了就能用任何代码"</strong>，其实署名只是 MIT、BSD 的条件之一；GPL 还要求开源，没有协议的则什么都不能用。</li>
+<li><strong>很多人以为"MIT 没有条件"</strong>，其实有——保留版权与许可声明，少这一行就是违约。</li>
+<li><strong>很多人以为"双重许可=两个都能要"</strong>，其实同一代码按两种协议发放（常见的是 GPL 版＋付费商业版）时，你只能选其中一份并遵守它的全部条款。</li>
+</ul>
+<div class="quote-box rounded-lg p-4 mt-4">
+<p class="font-semibold"><i class="fas fa-quote-left mr-2"></i>一句话记牢</p>
+<p class="mt-1">没有协议的代码"看着免费、用着违法"；选协议不是选信仰，是在给"你和所有后来者"定一份使用合同——想清楚再挂，挂了就别轻易改。</p>
+</div>
 <h4 class="text-lg font-semibold mt-4 mb-2">Git 命令速查表：先收藏，用到再查</h4>
 <p class="mb-2">命令不用背，常用的自然会记住，不常用的查表就行。下面按场景分六组，"注意"一栏专门标新手容易踩的地方。每条命令的具体行为，终端里输入 git help 或"命令 --help"随时可查，以你本地版本的帮助文档为准。</p>
 <h5 class="font-semibold mt-3 mb-1">初始化与配置</h5>
