@@ -1,8 +1,8 @@
 # 你缺失的那门手机课
 
-![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-84%20章·18.1%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
+![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20节·331.7%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
 
-面向普通人的手机使用指南。84 章、11 篇，从看懂手机硬件参数讲到用 AI 工具做出自己的第一个 App。
+面向普通人的手机使用指南。最新中文版 v1.9 十五篇 105 章（第 0 章写到第 105 章，含 7 个专题附节、结语与附录 A–H，共 120 个内容区块），331.7 万字——从看懂手机硬件参数，讲到在安卓、iOS、鸿蒙上做出并上架自己的 App，再到 AI 短视频、可穿戴健康与车机互联。
 
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>
 - **多语言入口**：[index.html](index.html)（按浏览器语言跳转）
@@ -25,6 +25,9 @@ Markdown 源稿（source/，逐章）
         ├──▶ PWA：sw.js 精准缓存，断网可读（manifest.webmanifest）
         ├──▶ 章节自测题库（quiz/，zh-CN + ja，gen_quiz.py 自动生成）
         └──▶ MCP Server（mcp/server.py）──▶ Claude 等 AI 客户端直查全书结构/全文
+
+v1.9/（最新中文版，120 个内容区块）在这条流水线之外直接维护：
+逐章扩写至约 3 万字（全书 43.5 万 → 331.7 万字），source/ 源稿回写同步中。
 ```
 
 **质量门（全部自动化，0 error / 0 warn）**：
@@ -32,7 +35,7 @@ Markdown 源稿（source/，逐章）
 - `bookkit lint --all-versions`：结构、章节锚点、目录、版本串、lang/RTL、NUL、残留字、覆盖率
 - `bookkit check --claims`：README / index.html 的每一处"宣称数字与链接" ↔ 真实内容逐条比对
 - `bookkit build --verify`：构建产物与已发布成品逐章比对
-- `web_smoke.py`：20 个页面 console 零报错 + 锚点解析 + h3 计数
+- `web_smoke.py`：23 个页面 console 零报错 + 锚点解析 + h3 计数
 - 多语言逐节点对齐审计：译文与 zh-CN 源稿按位置 1:1 校验后发布
 
 ## 参赛材料
@@ -44,15 +47,19 @@ Markdown 源稿（source/，逐章）
 
 ## 这本书讲什么
 
-全书分四块：
+全书十五篇，大致六块：
 
-**基础（第 0–7 章）**：手机里到底有什么。SoC、运存、存储分别干什么，怎么管文件，Wi-Fi 和流量的区别，装 App 该注意什么，怎么把手机调顺手。
+**基础（第 0–7 章）**：手机里到底有什么。SoC、运存与内存拓展、存储分别干什么，怎么管文件，Wi-Fi 和流量的区别，装 App 该注意什么（含手机病毒的原理分类与"伪装 System Service"恶意程序的识别），怎么把手机调顺手。
 
-**软件与安全（第 8–26 章）**：账号怎么管、照片怎么备份、密码怎么存、手机丢了第一时间做什么、诈骗短信怎么认、权限该不该给。
+**软件与安全（第 8–26 章）**：账号怎么管、照片怎么备份、密码管理器与 Passkey、手机丢了第一时间做什么、诈骗短信怎么认、权限该不该给。
 
-**生活场景（第 27–36 章）**：给长辈和孩子配手机、屏幕时间怎么控、手机和智能家居、投屏、数字遗产。这部分是实操向的，照着做就行。
+**生活场景（第 27–36 章）**：给长辈和孩子配手机、屏幕时间怎么控、车机互联、儿童与手机、智能家居、未来展望。这部分是实操向的，照着做就行。
 
-**开发（第 37–69 章）**：从零学做 App。怎么跟 AI 描述需求、怎么让它写代码、怎么调试，到用 Kotlin / Swift 在安卓和 iOS 上各做一个，再上架。
+**开发（第 37–80 章）**：从零学做 App。怎么跟 AI 描述需求、怎么让它写代码、怎么调试；再用 Kotlin / Compose、Swift / SwiftUI、ArkTS 分别在安卓、iOS、鸿蒙上各做一遍，直到上架。
+
+**场景与创作（第 81–105 章）**：可穿戴健康、旅行（eSIM、离线地图、海外支付）、女性健康与心理、AI 短视频创作、竖屏短剧入门。
+
+**展望与附录**：手机的下一程，加上 A–H 八个附录速查表。
 
 每章开头有「本章导览」，结尾有「动手练习」。页面带阅读进度记忆、字号调节、深色模式和朗读；也做了 PWA，装到桌面后断网能看。
 
@@ -61,6 +68,13 @@ Markdown 源稿（source/，逐章）
 ---
 
 ## 在线阅读
+
+### v1.9 · 最新中文版 — 120 个内容区块 · 331.7 万字
+
+- **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>（站点首页即 v1.9）
+- **仓库文件**：[v1.9/zh-CN.html](v1.9/zh-CN.html)（单文件 HTML，离线可开）
+- 十五篇 105 章全部扩写至每章约 3 万字；2026-11 起新增专题：手机病毒的原理与分类、伪装成 "System Service" 的恶意程序识别（第四章），开源协议详解（第二十三章附），eSIM 实操、离线地图、海外支付等旅行三章深编
+- 多语言版、PDF 与 Android APK 目前基于 v1.8（见下方），v1.9 的翻译与多端制作进行中
 
 ### 最新版本 (v1.8) — 19 种语言 · 84 个内容区块
 
@@ -92,7 +106,7 @@ Markdown 源稿（source/，逐章）
 
 ## PDF 下载
 
-XeLaTeX 排版，带目录和书签，五个 Release 共 93 本（17 + 19 × 4），全部免费。
+XeLaTeX 排版，带目录和书签，五个 Release 共 93 本（17 + 19 × 4），全部免费（均基于 v1.8，v1.9 的 PDF 在制作计划中）。
 
 | 版本 | Release | 内容 |
 |------|---------|------|
@@ -111,7 +125,7 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 
 ## 历史版本
 
-主分支只留 v1.8，旧版本打包放到了 Release：
+主分支保留 v1.9（最新中文版）与 v1.8（19 语言完整翻译版），更早版本打包放到了 Release：
 
 - HTML 归档（v1.5–v1.7）：[html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/html-archive)
 - HTML 归档（v1.3–v1.4）：[legacy-html-archive](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/legacy-html-archive)
@@ -121,7 +135,7 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 
 ## Android 应用
 
-19 种语言各一个独立应用，包名不同，可以同时装。正文内嵌在包里，离线能看；联网时才加载完整排版样式。需要 Android 5.0 以上。
+19 种语言各一个独立应用（基于 v1.8），包名不同，可以同时装。正文内嵌在包里，离线能看；联网时才加载完整排版样式。需要 Android 5.0 以上。
 
 下载见上面的语言表，或 [Releases](https://github.com/ClassTechStar/Your-Missing-Phone-Class/releases/tag/v1.8)。
 
@@ -131,8 +145,9 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 
 | 目录 | 说明 |
 |------|------|
-| `v1.8/` | 最新版本，19 种语言的单文件 HTML |
-| `source/` | 中文源稿（单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json` |
+| `v1.9/` | 最新中文版：120 个内容区块，逐章约 3 万字（331.7 万字） |
+| `v1.8/` | 19 种语言的单文件 HTML（完整翻译版，84 章） |
+| `source/` | 中文源稿（v1.8 链路的单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json`；v1.9 扩写内容尚未回写，见[已知问题](#已知问题) |
 | `source/translations/` | 另外 18 种语言的翻译源稿，与成品逐章等价 |
 | `manifest/` | `languages.json`：语言元数据、版本门禁、入口页卡片 |
 | `bookkit/` | Python 工具链（零依赖）：extract / build / lint / check / index / i18n / latex / release |
