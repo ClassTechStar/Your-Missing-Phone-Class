@@ -108,9 +108,9 @@ self.addEventListener('message', (event) => {
     const cache = await caches.open(CACHE);
     const res = await fetch('./index.html');
     const html = await res.text();
-    // 必须用 [\w-]+：语言码含大写（zh-CN / zh-TW），且 v1.9/ 也要命中；
-    // 旧正则 [a-z\-]+ 把主语言和 v1.9 全漏了，「全部离线」承诺有缺口。
-    const files = [...html.matchAll(/v[\d.]+\/([\w-]+)\.html/g)]
+    // 必须用 [\w-]+：语言码含大写（zh-CN / zh-TW），且 v1.9/ 与分章页
+    // （v1.9/zh-CN/<id>.html）都要命中；旧正则 [a-z\-]+ 把主语言和 v1.9 全漏了。
+    const files = [...html.matchAll(/v[\d.]+\/(?:[\w-]+\/)?[\w-]+\.html/g)]
       .map((m) => `./${m[0]}`);
     await Promise.allSettled([...new Set(files)].map((u) => cache.add(u)));
   })());

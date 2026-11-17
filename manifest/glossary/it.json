@@ -1,0 +1,28 @@
+{
+ "lang": "it",
+ "terms": {
+  "SoC（系统级芯片）": "SoC (system-on-chip)",
+  "NPU（神经网络处理器）": "NPU (unità di elaborazione neurale)",
+  "GPU（图形处理器）": "GPU (processore grafico)",
+  "eSIM（嵌入式SIM卡）": "eSIM (SIM integrata)",
+  "Passkey（通行密钥）": "Passkey (chiave di accesso)",
+  "双因素认证": "autenticazione a due fattori",
+  "云备份": "backup su cloud",
+  "权限管理": "gestione dei permessi",
+  "侧载": "sideloading",
+  "刷机": "flash del firmware",
+  "恢复出厂设置": "ripristino delle impostazioni di fabbrica",
+  "钓鱼（网络诈骗）": "phishing",
+  "勒索软件": "ransomware",
+  "广告追踪": "tracciamento pubblicitario",
+  "刷新率": "frequenza di aggiornamento",
+  "分辨率": "risoluzione",
+  "快充": "ricarica rapida",
+  "无线充电": "ricarica wireless",
+  "口令短语": "passphrase",
+  "密码管理器": "gestore di password",
+  "系统更新": "aggiornamento di sistema",
+  "Root 权限": "accesso root",
+  "开发者模式": "modalità sviluppatore"
+ }
+}

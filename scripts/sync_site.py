@@ -88,6 +88,22 @@ def main():
 
     for name, note in plan:
         print(f'  → {name:24s} {note}')
+
+    # 分章页（章节级 URL + sitemap/JSON-LD）：构建后随站点一起发布
+    import subprocess
+    r = subprocess.run([sys.executable, '-m', 'bookkit', 'split',
+                        '--book', 'source/v1.9/book.json', '--out', 'dist/site',
+                        '--strict-budget'], cwd=ROOT)
+    if r.returncode != 0:
+        print('!! 分章化构建失败（超页级预算或构建错误），中止部署')
+        return 1
+    split_root = ROOT / 'dist' / 'site'
+    n_pages = len(list((split_root / 'v1.9' / 'zh-CN').glob('*.html')))
+    plan.append((f'v1.9/zh-CN/（分章 {n_pages} 页）', '复制'))
+    plan.append(('sitemap.xml', '复制'))
+    for name, note in plan[-2:]:
+        print(f'  → {name:24s} {note}')
+
     if args.dry_run:
         print('（dry-run，未写盘）')
         return 0
@@ -108,6 +124,10 @@ def main():
         if tgt.exists():
             shutil.rmtree(tgt)
         shutil.copytree(ROOT / d, tgt)
+
+    # 分章页与 sitemap
+    shutil.copytree(split_root / 'v1.9', dest / 'v1.9', dirs_exist_ok=True)
+    shutil.copy2(split_root / 'sitemap.xml', dest / 'sitemap.xml')
 
     # 自检：站点 index.html 里不能再出现 ../
     out = (dest / 'index.html').read_text(encoding='utf-8')

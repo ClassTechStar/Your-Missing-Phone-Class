@@ -1,0 +1,28 @@
+{
+ "lang": "id",
+ "terms": {
+  "SoC（系统级芯片）": "SoC (system-on-chip)",
+  "NPU（神经网络处理器）": "NPU (unit pemroses neural)",
+  "GPU（图形处理器）": "GPU (prosesor grafis)",
+  "eSIM（嵌入式SIM卡）": "eSIM (SIM tertanam)",
+  "Passkey（通行密钥）": "Passkey (kunci akses)",
+  "双因素认证": "autentikasi dua faktor",
+  "云备份": "pencadangan cloud",
+  "权限管理": "manajemen izin",
+  "侧载": "sideloading",
+  "刷机": "flashing firmware",
+  "恢复出厂设置": "reset pabrik",
+  "钓鱼（网络诈骗）": "phishing",
+  "勒索软件": "ransomware",
+  "广告追踪": "pelacakan iklan",
+  "刷新率": "tingkat penyegaran",
+  "分辨率": "resolusi",
+  "快充": "pengisian cepat",
+  "无线充电": "pengisian nirkabel",
+  "口令短语": "frasa sandi",
+  "密码管理器": "pengelola kata sandi",
+  "系统更新": "pembaruan sistem",
+  "Root 权限": "akses root",
+  "开发者模式": "mode pengembang"
+ }
+}

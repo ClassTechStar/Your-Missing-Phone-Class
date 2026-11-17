@@ -2,11 +2,11 @@
 # -*- coding: utf-8 -*-
 """浏览器冒烟测试（Playwright，零断言框架）。
 
-本地起 http.server，逐页打开 index.html + v1.8 全部语言页，断言：
+本地起 http.server，逐页打开 index.html + v1.8 全部语言页 + v1.9 + 分章页，断言：
 - 页面加载成功（200、无 crash）
 - console 零 error
 - 侧栏目录锚点全部可解析（getElementById 命中）
-- 章节标题数量符合预期（v1.8 = 84）
+- 章节标题数量符合预期（v1.8 = 84；v1.9 = 120；章节页 = 1）
 - PWA：manifest 可解析且图标齐全；Service Worker 注册成功并激活
 
 用法：python scripts/web_smoke.py [--base http://127.0.0.1:8642]
@@ -86,6 +86,10 @@ def main():
     targets = ([('index.html', None), ('quiz.html', None), ('v1.8/zh-CN.html?safe=1', None),
                 ('v1.9/zh-CN.html', 120)]
                + [(f'v1.8/{l}.html', EXPECT_H3) for l in LANGS])
+    # 分章页（bookkit split 构建存在时纳入冒烟）：书首页 + 首个章节页
+    if (ROOT / 'dist' / 'site' / 'v1.9' / 'zh-CN' / 'index.html').is_file():
+        targets += [('dist/site/v1.9/zh-CN/index.html', None),
+                    ('dist/site/v1.9/zh-CN/di-ling-zhang.html', 1)]
     fails = []
     with sync_playwright() as pw:
         browser = pw.chromium.launch()

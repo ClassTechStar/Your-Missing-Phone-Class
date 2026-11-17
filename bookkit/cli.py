@@ -87,6 +87,13 @@ def build_parser() -> argparse.ArgumentParser:
     bd.add_argument("--verify", action="store_true",
                     help="与已发布成品做逐章等价性比对并打印结论")
 
+    sp_ = common(sub.add_parser("split", help="分章化构建：每章一页 + 书首页 + sitemap/JSON-LD"))
+    sp_.add_argument("--lang", default="zh-CN", help="目标语言（默认 zh-CN）")
+    sp_.add_argument("--book", type=Path, default=None, help="book.json 路径（默认 source/book.json）")
+    sp_.add_argument("--out", type=Path, default=None, help="输出目录（默认 dist/site）")
+    sp_.add_argument("--strict-budget", action="store_true",
+                     help="超出页级性能预算（300KB / 5000 标签）时以非零码退出")
+
     ex = common(sub.add_parser("extract", help="成品 HTML → source/ 源稿反解"))
     ex.add_argument("--version", default=None, help="源版本目录（默认取 manifest 的最新版本）")
     ex.add_argument("--lang", default="zh-CN", help="源语言（默认 zh-CN）")
@@ -96,6 +103,18 @@ def build_parser() -> argparse.ArgumentParser:
 
     i18 = common(sub.add_parser("i18n", help="翻译覆盖率报告"), fail_default="never")
     i18.add_argument("--report", type=Path, default=None, help="报告输出路径（Markdown）")
+
+    tm = common(sub.add_parser("tm", help="翻译记忆库：build（构建）/ report（增量待译导出）/ import（译文合并）"))
+    tm.add_argument("action", choices=["build", "report", "import"])
+    tm.add_argument("--lang", default="ja", help="report/import 的目标语言（默认 ja）")
+    tm.add_argument("--book", type=Path, default=None,
+                    help="report 的源稿 book.json（默认 source/book.json；传 source/v1.9/book.json 查 v1.9）")
+    tm.add_argument("--file", type=Path, default=None, help="import 的译文 JSON（{hash: 译文段}）")
+    tm.add_argument("--out", type=Path, default=None, help="report 的待译段落输出目录（默认 dist/i18n）")
+
+    qk = common(sub.add_parser("quick", help="派生《给爸妈的 20 分钟速读版》（速读层合集）"))
+    qk.add_argument("--book", type=Path, default=None, help="book.json 路径（默认 source/book.json）")
+    qk.add_argument("--out", type=Path, default=None, help="输出 HTML 路径（默认 dist/quick-read-<version>.html）")
 
     tx = common(sub.add_parser("latex", help="生成 LaTeX 书稿（HTML → LaTeX，供 XeLaTeX 编译）"))
     tx.add_argument("--lang", default="zh-CN", help="源语言（默认 zh-CN）")
@@ -172,6 +191,23 @@ def main(argv=None) -> int:
                   f"{result['chapters']} 章，{result['toc_entries']} 个目录条目 → {result['out']}")
         return 0
 
+    elif args.cmd == "split":
+        from . import split as S
+        result = S.split(mf.root, args.lang, args.book, args.out)
+        over = result['over_budget']
+        if args.json:
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+        else:
+            print(f"split {result['version']}/{result['lang']}: {result['pages']} 页 → {result['out']}")
+            print(f"  页级预算：{result['budget']['max_html_kb']}KB / "
+                  f"{result['budget']['max_dom_tags']} 标签")
+            for name, kb, tags in over:
+                print(f"  !! 超预算 {name}: {kb}KB / {tags} 标签")
+            print("  结论：" + ("PASS" if not over else f"FAIL（{len(over)} 页超预算）"))
+        if args.strict_budget and over:
+            return 1
+        return 0
+
     elif args.cmd == "extract":
         from .extract import extract
         version = args.version or mf.latest_version()
@@ -197,6 +233,50 @@ def main(argv=None) -> int:
         issues = I.issues(mf)
         if issues:
             print(f"-- 缺章告警：{len(issues)} 条（详见报告）")
+
+    elif args.cmd == "quick":
+        from . import quick as Q
+        result = Q.build_quick(mf.root, args.book, args.out)
+        if args.json:
+            print(json.dumps(result, ensure_ascii=False, indent=2))
+        else:
+            print(f"quick {result['version']}: {result['chapters']} 章速读层 → {result['out']}"
+                  f"（{result['bytes'] // 1024}KB）")
+            if result['missing']:
+                print(f"  缺速读层：{result['missing'][:8]}")
+        return 0
+
+    elif args.cmd == "tm":
+        from . import tm as TM
+        if args.action == "build":
+            result = TM.build_tm(mf.root)
+            if args.json:
+                print(json.dumps(result, ensure_ascii=False, indent=2))
+            else:
+                for lang, st in result.items():
+                    print(f"tm build {lang}: {st['segments']} 段"
+                          + (f"（同源冲突 {st['conflicts']}）" if st['conflicts'] else ""))
+                print(f"→ manifest/tm/*.json（{len(result)} 个语言）")
+        elif args.action == "report":
+            book = args.book or (mf.root / 'source' / 'book.json')
+            result = TM.report(mf.root, book, args.lang, args.out)
+            if args.json:
+                print(json.dumps(result, ensure_ascii=False, indent=2))
+            else:
+                print(f"tm report {args.lang}: 共 {result['total']} 段，"
+                      f"TM 复用 {result['tm_hits']}（{result['coverage']}%），"
+                      f"待译 {result['todo']} → {result['out']}")
+        else:
+            if not args.file:
+                print("import 需要 --file 译文 JSON", file=sys.stderr)
+                return 2
+            result = TM.import_tm(mf.root, args.lang, args.file)
+            if args.json:
+                print(json.dumps(result, ensure_ascii=False, indent=2))
+            else:
+                print(f"tm import {args.lang}: 合并 {result['imported']} 段"
+                      f"（新增 {result['new']}），TM 现有 {result['total']} 段")
+        return 0
 
     elif args.cmd == "latex":
         from .latex import build as latex_build
