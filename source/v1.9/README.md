@@ -23,9 +23,27 @@ python -m bookkit build --book source/v1.9/book.json --out v1.9/zh-CN.html
 # 等价性校验（CI 必过门禁，直接改 HTML 不回写源稿会被阻断）
 python -m bookkit build --book source/v1.9/book.json --verify
 
+# 分章化构建：121 页（章节页 + 书首页）+ sitemap + JSON-LD（页级预算 300KB/5000 标签）
+python -m bookkit split --book source/v1.9/book.json --strict-budget
+
+# 派生《给爸妈的 20 分钟速读版》（速读层合集）
+python -m bookkit quick --book source/v1.9/book.json
+
 # 如需从成品反解（仅当成品是唯一改动源时）
 python -m bookkit extract --version v1.9 --out source/v1.9
 ```
+
+## 章节三层结构（2026-11-17 起）
+
+| 层 | 标记 | 说明 |
+|----|------|------|
+| 速读层 | `::: div .quick-read` 块（章首，`####` 小节前） | 每章 800–1500 字 + 速查表，5 分钟读完；`bookkit quick` 由此派生速读版 |
+| 正文层 | 默认正文 | 现有全部内容 |
+| 参考层 | 深编折叠块（JS 自动折叠长小节） | 需要深读时展开 |
+
+tier 标记以内容为准（front matter 由 extract 再生、不承载自定义键）：
+`quick-read` 块即速读层，自动折叠的长小节即参考层，其余为正文层。
+新章必须带速读层；写作规范见 [CONTRIBUTING.md](../../CONTRIBUTING.md)。
 
 ## 回写时修复的结构缺陷（2026-11-17）
 

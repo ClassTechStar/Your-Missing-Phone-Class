@@ -1,8 +1,8 @@
 # 你缺失的那门手机课
 
-![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20节·353.8%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
+![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20节·367.8%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
 
-面向普通人的手机使用指南。最新中文版 v1.9 十五篇 105 章（第 0 章写到第 105 章，含 7 个专题附节、结语与附录 A–H，共 120 个内容区块），353.8 万字——从看懂手机硬件参数，讲到在安卓、iOS、鸿蒙上做出并上架自己的 App，再到 AI 短视频、可穿戴健康与车机互联。
+面向普通人的手机使用指南。最新中文版 v1.9 十五篇 105 章（第 0 章写到第 105 章，含 7 个专题附节、结语与附录 A–H，共 120 个内容区块），367.8 万字——从看懂手机硬件参数，讲到在安卓、iOS、鸿蒙上做出并上架自己的 App，再到 AI 短视频、可穿戴健康与车机互联。
 
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>
 - **多语言入口**：[index.html](index.html)（按浏览器语言跳转）
@@ -27,16 +27,22 @@ Markdown 源稿（source/，逐章）
         └──▶ MCP Server（mcp/server.py）──▶ Claude 等 AI 客户端直查全书结构/全文
 
 v1.9/（最新中文版，120 个内容区块）曾在这条流水线之外直接维护：
-逐章扩写至约 3 万字（全书 43.5 万 → 353.8 万字）。2026-11-17 起源稿
+逐章扩写至约 3 万字（全书 43.5 万 → 367.8 万字）。2026-11-17 起源稿
 回写完成（source/v1.9/），`build --verify` 等价性已成为 CI 必过门禁。
+源稿之上再派生三条增量链路：
+        ├──▶ bookkit split：121 个分章页 + sitemap/JSON-LD（章节级 URL，页级预算 300KB）
+        ├──▶ bookkit quick：《给爸妈的 20 分钟速读版》（速读层合集）
+        └──▶ bookkit tm + manifest/glossary：段落级增量翻译（TM 记忆库 + 18 语术语表）
 ```
 
 **质量门（全部自动化，0 error / 0 warn）**：
 
-- `bookkit lint --all-versions`：结构、章节锚点、目录、版本串、lang/RTL、NUL、残留字、覆盖率
+- `bookkit lint --all-versions`：结构、章节锚点、目录、版本串、lang/RTL、NUL、残留字、覆盖率、性能预算
 - `bookkit check --claims`：README / index.html 的每一处"宣称数字与链接" ↔ 真实内容逐条比对
 - `bookkit build --verify`：构建产物与已发布成品逐章比对
-- `web_smoke.py`：23 个页面 console 零报错 + 锚点解析 + h3 计数
+- `bookkit split --strict-budget`：分章页 300KB / 5000 标签页级预算硬门禁
+- `pytest tests/`：bookkit 核心模块边界用例（47 项）
+- `web_smoke.py`：25 个页面 console 零报错 + 锚点解析 + h3 计数
 - 多语言逐节点对齐审计：译文与 zh-CN 源稿按位置 1:1 校验后发布
 
 ## 参赛材料
@@ -70,7 +76,7 @@ v1.9/（最新中文版，120 个内容区块）曾在这条流水线之外直�
 
 ## 在线阅读
 
-### v1.9 · 最新中文版 — 120 个内容区块 · 353.8 万字
+### v1.9 · 最新中文版 — 120 个内容区块 · 367.8 万字
 
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>（站点首页即 v1.9）
 - **仓库文件**：[v1.9/zh-CN.html](v1.9/zh-CN.html)（单文件 HTML，离线可开）
@@ -147,12 +153,14 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 
 | 目录 | 说明 |
 |------|------|
-| `v1.9/` | 最新中文版：120 个内容区块，逐章约 3 万字（353.8 万字） |
+| `v1.9/` | 最新中文版：120 个内容区块，逐章约 3 万字（367.8 万字） |
 | `v1.8/` | 19 种语言的单文件 HTML（完整翻译版，84 章） |
 | `source/` | 中文源稿（单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json`；v1.9 源稿见 `source/v1.9/`（120 区块，已回写） |
 | `source/translations/` | 另外 18 种语言的翻译源稿，与成品逐章等价 |
-| `manifest/` | `languages.json`：语言元数据、版本门禁、入口页卡片 |
-| `bookkit/` | Python 工具链（零依赖）：extract / build / lint / check / index / i18n / latex / release |
+| `manifest/` | `languages.json`：语言元数据、版本门禁、入口页卡片；`tm/` 翻译记忆库；`glossary/` 18 语术语表 |
+| `bookkit/` | Python 工具链（零依赖）：extract / build / split / quick / tm / lint / check / index / i18n / latex / release |
+| `tests/` | bookkit 单元测试（47 项，CI 必跑） |
+| `docs/` | 参赛材料、i18n 管线指南、双许可评估 |
 | `scripts/` | 质检与维护脚本，见 [scripts/README.md](scripts/README.md) |
 | `latex/` | 19 种语言的 LaTeX 书稿源文件与编译产物 |
 | `mcp/` | 本书结构的 MCP 查询服务器，AI 客户端可以直连查章节 |
@@ -187,5 +195,9 @@ python scripts/html_audit.py               # 全量审计（顺序/编号/排版
 
 - 项目 QQ 群：1074995524
 - 哔哩哔哩：[@ClassTechStar](https://space.bilibili.com/702063384)
+- 参与贡献（勘误 / 翻译 / 工具链）见 [CONTRIBUTING.md](CONTRIBUTING.md)；
+  翻译走增量管线（[docs/i18n/weblate-guide.md](docs/i18n/weblate-guide.md)），只翻变更段
+- 许可模式正在评估双许可（正文 CC BY-SA + 代码 Apache-2.0），
+  见 [docs/legal/dual-licensing-evaluation.md](docs/legal/dual-licensing-evaluation.md)
 
 本作品采用 [知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议](https://creativecommons.org/licenses/by-nc-sa/4.0/) 进行许可。

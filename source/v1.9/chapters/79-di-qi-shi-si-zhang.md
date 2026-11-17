@@ -14,6 +14,23 @@ after_part: hongmeng-kai-fa-pian
 
 先回答一个高频疑问：为什么需要"骨架"这种东西？因为应用不是一堆页面的堆砌——它需要在合适的时机初始化资源、在切到后台时保存状态、在回到前台时恢复界面、在收到系统事件时做出响应。这些"时机"就是生命周期，而承载生命周期的单元就是 Ability。理解了骨架，你在写任何页面时都会知道"我的代码运行在什么阶段"，内存泄漏和数据丢失这些经典问题也就有了预防的抓手。
 
+::: div .quick-read
+##### 本章速读（5 分钟版）
+这一章搞清楚"应用骨架"：一个鸿蒙应用由什么组成、页面怎么跳转、生命周期长什么样。它对应安卓的"四大组件"和 iOS 的 AppDelegate——概念一一对应，换的是名字。骨架立住了，你写任何页面时都知道"我的代码运行在什么阶段"，内存泄漏、数据丢失这些经典问题也有了预防的抓手。
+最关键的有三件事。第一，<strong>Stage 模型三层结构</strong>：应用 → 模块（entry 主模块 + feature 功能模块）→ 能力，UIAbility 是有界面的能力单元（相当于安卓的 Activity），页面只是它里面的"一帧"——所以应用级状态别挂在某个页面上；module.json5 是户口本，声明 Ability、权限和入口（entity.system.home 就是桌面图标入口）。第二，<strong>生命周期背熟一条主线</strong>：onCreate（读启动参数）→ onWindowStageCreate（窗口就绪、加载页面）→ onForeground / onBackground（前后台切换）→ onDestroy（释放资源）；其中 onBackground 是保存状态的最后机会——切后台随时可能被系统回收，"放了一晚上回来表单没了"就是没在这里落盘。第三，<strong>跳转用 Navigation，状态分层放</strong>：官方推荐 Navigation 路由表配 NavPathStack（把"当前在哪一页"变成可传参、可恢复的数据，比到处塞布尔标志可靠）；状态按作用域往上放——页面 @State、Ability 内共享 LocalStorage、全局 AppStorage、需要重启还在的配置才用 PersistentStorage。
+今天就能做的最小动作：给 EntryAbility 的每个生命周期回调打一行日志，跑一遍冷启动、切后台、回前台、手动划掉，把回调时间线抄下来——九成骨架问题，看一遍"应用被拉起时到底走了哪些回调"就有眉目。
+最常见的坑一串：只在 onCreate 里解析启动参数（应用挂在后台被点开走的是 onNewWant，参数根本没人接）；把用户数据寄希望于内存（后台被回收就清零，判定标准：用户丢了这条数据会不会骂你？会，就落盘）；PersistentStorage 当数据库使（它只配装几十个键值对的设置，用户内容走 preferences 或数据库）；EventHub 监听注册了不注销（aboutToAppear 里 on、aboutToDisappear 里 off，成对写）；重活压进 onWindowStageCreate（首帧白屏）；拿 Want 传来的数字直接比大小（它可能是字符串，先转类型）。还有鸿蒙特有的一个变量：分布式场景下同一能力可能在另一台设备被拉起——设计状态时想一句"这份数据，会不会出现在别的屏幕上"。权限按三档申请——system_grant 装完即有、user_grant 弹窗问用户、受限开放要单独申请，用到才申请，授权最小化。
+##### 速查表
+- 骨架三层：应用 → 模块 → 能力；UIAbility 是入口单元，页面只是它的一帧
+- 生命周期主线：onCreate → onWindowStageCreate → 前后台 → onDestroy
+- 存数据的最后机会是 onBackground：后台随时可能被回收，别指望 onDestroy
+- 路由学 Navigation（路由表 + NavPathStack）；router 看得懂即可
+- 状态住几楼：@State → LocalStorage → AppStorage → PersistentStorage，能窄就窄
+- 权限三档：system_grant 装即有、user_grant 弹窗问、受限开放要申请——授权最小化
+- 后台三张牌：长时任务（亮明身份）、短时任务、延迟任务，硬保活过不了审
+- 重活别压主线程：TaskPool 是"外包"用完即走，Worker 是"雇员"记得 terminate
+:::
+
 #### 一、Stage 模型：应用、模块与 Ability
 
 鸿蒙 Stage 模型的三层结构：<strong>应用（Application）→ 模块（Module）→ 能力（Ability）</strong>。一个应用可以有多个模块（主模块 entry + 动态特性模块 feature）；每个模块里放若干 Ability——<strong>UIAbility 是有界面的能力单元</strong>（对应安卓的 Activity、iOS 的 UIWindowScene），ExtensionAbility 是没有界面的后台扩展（对应安卓的 Service/Provider）。

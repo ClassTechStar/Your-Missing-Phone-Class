@@ -11,6 +11,26 @@ kind: supplement
 {class="chapter-intro mb-4"}
 如果你觉得开发者模式还不够"硬核"，想要在手机上体验完整的Linux命令行，那么Termux正是为你准备的。它无需root权限，就能把一台普通的安卓手机变成一台便携的Linux工作站，是进阶用户探索移动端开发与运维的利器。
 
+::: div .quick-read
+##### 本章速读（5 分钟版）
+这一章附给觉得开发者模式还不够"硬核"的人：Termux 把一台普通安卓手机变成便携的 Linux 工作站——无需 root，安装包仅 30MB 左右，就能得到完整的命令行环境，跑 Python、Node.js、Git、SSH，甚至搭服务器。它以普通应用的身份安家，装、卸都像微信一样干净利落，代价是挂载分区、修改系统文件这类底层操作做不了——但绝大多数人一辈子也用不上 root。
+
+最关键的有三件事。第一，认清官方渠道，别在第一步就翻车：靠谱的只有 F-Droid 和 GitHub Releases 两个（最新稳定版 v0.118.3，适用 Android ≥ 7，一切以 GitHub Releases 为准）；包名是 com.termux，凡是叫"高级版""汉化版"的安装包一律不要；<strong>主应用和插件必须同源</strong>，两个渠道装出来的签名不一样，不能混着升级。第三方商店搜到的基本是停更旧版。第二，理解它的"地盘"：Termux 的一切都在 /data/data/com.termux 这个私有沙盒里——敲 echo $HOME 看"家"、echo $PREFIX 看软件的"根"；卸载 App，沙盒连同里面所有东西一起消失，想彻底重置卸载重装就是。它和真正的 Linux 有三处差距：没有 systemd、纯命令行、后台进程会被系统冻结——长任务前后按检查单走，别指望它像电脑一样挂着不管。第三，上手顺序别乱：内置只有 bash（想用 zsh、fish 就 pkg install 装），编辑器拿不准先 nano；先跟着"第一个半小时"把 echo、ls、grep、pkg install 敲熟，再上 Python/Node.js/Git 三大件和 SSH，四周路线从"会敲"走到"会写"。
+
+今天就能做的最小动作：从 F-Droid 或 GitHub Releases 装好 Termux，花十分钟跑一遍首次启动的推荐配置（pkg update、装个 nano），敲一句 echo $HOME 看看自己的"家"在哪——第一周只求敲熟基本命令，别急着上项目。章里有现成的案例可以照着抄：每周自动备份相册精选、二十分钟整理一团糟的下载目录，跑通一个案例，比十条教程都长本事。
+
+最大的坑有四个。一是从下载站装"Termux Pro 中文版"——世上没有这个东西，装完连软件源都是空的。二是把老教程当圣经：网上教程和环境经常对不上号，先看它的日期和假设的 Termux 版本，官方 wiki 和 GitHub 才是权威。三是低估"后台被冻结"：安卓对后台进程没有豁免权，服务想常驻要靠插件和省电策略斗智斗勇。四是上来就追"最完整方案"——proot-distro 装 Debian、Ubuntu 学习够用、生产别指望；想跑重活就 SSH 连真机器，工具是拿来干活的，不是拿来供着的。
+##### 速查表
+- 官方渠道：只认 F-Droid 和 GitHub Releases；包名 com.termux，"Pro/汉化版"一律不要
+- 版本与同源：最新稳定 v0.118.3、Android ≥ 7；主应用和插件必须同源不混装
+- 沙盒：一切都在 /data/data/com.termux，卸载 App＝彻底重置
+- 不用 root：普通应用身份零风险，root 的代价一个不用付
+- 上手顺序：内置 bash、编辑器先 nano；装包前先 pkg search 搜一下
+- 发行版：proot-distro 能装 Debian/Ubuntu，学习够用、生产别指望
+- 后台现实：安卓会冻结后台，长任务前后按检查单走
+- 学习路线：四周从会敲到会写；教程先看日期，官方 wiki 最权威
+:::
+
 #### 一、什么是Termux
 
 Termux是一款专为Android设备设计的开源终端模拟器和Linux环境应用程序，它无需root权限即可在手机上提供完整的Linux shell体验。作为一个轻量级应用（安装包仅30MB左右），Termux通过APT包管理系统支持丰富的软件生态，允许用户在移动设备上运行Python、Node.js、Git、SSH等工具，甚至搭建服务器或进行渗透测试。
