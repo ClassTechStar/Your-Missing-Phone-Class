@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+"""增量管线边界用例：tm 分段/哈希、quick 块提取、split 链接改写。"""
+import pytest
+
+from bookkit import quick as Q
+from bookkit import split as S
+from bookkit import tm as TM
+
+
+class TestTm:
+    def test_seg_hash_stable_and_whitespace_insensitive(self):
+        assert TM.seg_hash('a  b\nc') == TM.seg_hash('a b c')
+
+    def test_seg_hash_differs(self):
+        assert TM.seg_hash('甲') != TM.seg_hash('乙')
+
+    def test_segments_split_on_blank_lines(self, tmp_path):
+        f = tmp_path / 'x.md'
+        f.write_text('---\nnav: t\n---\n\n第一段\n\n第二段\n第二行\n\n\n第三段\n',
+                     encoding='utf-8')
+        segs = TM.segments_of(f)
+        assert segs == ['第一段', '第二段\n第二行', '第三段']
+
+    def test_segments_skip_front_matter(self, tmp_path):
+        f = tmp_path / 'x.md'
+        f.write_text('---\nnav: t\nid: a\n---\n正文\n', encoding='utf-8')
+        assert TM.segments_of(f) == ['正文']
+
+
+class TestQuick:
+    def test_quick_block_extraction(self):
+        md = ('---\nnav: 第一章\n---\n\n### 第一章\n\n导览\n\n'
+              '::: div .quick-read\n##### 本章速读（5 分钟版）\n正文\n'
+              '##### 速查表\n- a：b\n:::\n\n#### 一、小节\n')
+        m = Q.RE_QUICK.search(md)
+        assert m and '速查表' in m.group(1)
+
+    def test_quick_block_missing(self):
+        assert Q.RE_QUICK.search('没有任何速读块') is None
+
+    def test_quick_block_matches_only_directive_form(self):
+        md = '::: div .quick-read\nx\n:::\n\n::: div .chapter-summary\ny\n:::\n'
+        m = Q.RE_QUICK.search(md)
+        assert m.group(1).strip() == 'x'
+
+
+class TestSplitRewrite:
+    MAP = {'di-a': 'di-a', 'di-b': 'di-b', 'sub-x': 'di-a', 'top': 'index'}
+
+    def test_same_page_anchor_kept(self):
+        out = S._rewrite_hrefs('<a href="#sub-x">', self.MAP, 'di-a')
+        assert 'href="#sub-x"' in out
+
+    def test_cross_page_anchor_rewritten(self):
+        out = S._rewrite_hrefs('<a href="#sub-x">', self.MAP, 'di-b')
+        assert 'href="di-a.html#sub-x"' in out
+
+    def test_chapter_link_rewritten(self):
+        out = S._rewrite_hrefs('<a href="#di-b">', self.MAP, 'di-a')
+        assert 'href="di-b.html"' in out
+
+    def test_top_anchor_always_local(self):
+        out = S._rewrite_hrefs('<a href="#top">', self.MAP, 'di-b')
+        assert 'href="#top"' in out
+
+    def test_part_anchor_maps_to_first_chapter(self):
+        m = {**self.MAP, 'ji-chu-pian': 'di-a'}
+        out = S._rewrite_hrefs('<a href="#ji-chu-pian">', m, 'di-b',
+                               frozenset({'ji-chu-pian'}))
+        assert 'href="di-a.html"' in out
+
+    def test_part_anchor_unmapped_falls_back(self):
+        out = S._rewrite_hrefs('<a href="#ji-chu-pian">', self.MAP, 'di-b',
+                               frozenset({'ji-chu-pian'}))
+        assert 'href="index.html"' in out
+
+    def test_unknown_anchor_goes_index(self):
+        out = S._rewrite_hrefs('<a href="#whatever">', self.MAP, 'di-a')
+        assert 'href="index.html#whatever"' in out
+
+
+class TestSplitAssets:
+    def test_externalize_moves_big_blocks_only(self):
+        assets = {}
+        page = ('<style>body{}</style><script>var x=1;</script>'
+                + '<script>' + 'a' * 3000 + '</script>')
+        out = S._externalize(page, assets)
+        assert '<style>' not in out
+        assert 'var x=1;' in out           # 小脚本保留内联
+        assert 'book.css' in assets and 'book.js' in assets
+        assert 'aaa' not in out
+
+
+if __name__ == '__main__':
+    pytest.main([__file__, '-q'])
