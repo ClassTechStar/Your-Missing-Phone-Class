@@ -101,15 +101,17 @@ self.addEventListener('fetch', (event) => {
   })());
 });
 
-// 页面可主动触发「把全部语言正文也存下来」（每本约 1MB，共 19 本）
+// 页面可主动触发「把全部语言正文也存下来」（v1.8 每本约 1–2.6MB；v1.9 中文全本约 12.5MB）
 self.addEventListener('message', (event) => {
   if (event.data !== 'cache-all-languages') return;
   event.waitUntil((async () => {
     const cache = await caches.open(CACHE);
     const res = await fetch('./index.html');
     const html = await res.text();
-    const files = [...html.matchAll(/v1\.8\/([a-z\-]+)\.html/g)]
-      .map((m) => `./v1.8/${m[1]}.html`);
-    await Promise.allSettled(files.map((u) => cache.add(u)));
+    // 必须用 [\w-]+：语言码含大写（zh-CN / zh-TW），且 v1.9/ 也要命中；
+    // 旧正则 [a-z\-]+ 把主语言和 v1.9 全漏了，「全部离线」承诺有缺口。
+    const files = [...html.matchAll(/v[\d.]+\/([\w-]+)\.html/g)]
+      .map((m) => `./${m[0]}`);
+    await Promise.allSettled([...new Set(files)].map((u) => cache.add(u)));
   })());
 });

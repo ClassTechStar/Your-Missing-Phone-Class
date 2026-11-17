@@ -23,8 +23,13 @@ from bookkit import content as C  # noqa: E402  （P1-1：数据访问统一走�
 TOOLS = [
     {
         "name": "list_parts",
-        "description": "列出全书 11 篇（篇名与章节范围）",
-        "inputSchema": {"type": "object", "properties": {}},
+        "description": "列出全书分篇（篇名与章节范围）；version 可选 v1.8（默认，19 语言版）/ v1.9（最新中文版）",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "version": {"type": "string", "description": "默认 v1.8；传 v1.9 查最新中文版"},
+            },
+        },
     },
     {
         "name": "list_chapters",
@@ -34,18 +39,20 @@ TOOLS = [
             "properties": {
                 "part": {"type": "string",
                          "description": "篇 id（如 ji-chu-pian / ai-biancheng-pian / fu-lu）"},
+                "version": {"type": "string", "description": "默认 v1.8；传 v1.9 查最新中文版"},
             },
         },
     },
     {
         "name": "get_chapter",
-        "description": "读取一章正文（Markdown 源稿）。chapter_id 可传章节 id、''第20章'' 或 ''20''；lang 可选，默认 zh-CN",
+        "description": "读取一章正文（Markdown 源稿）。chapter_id 可传章节 id、''第20章'' 或 ''20''；lang 可选，默认 zh-CN；version 默认 v1.8，传 v1.9 读最新中文版（353.8 万字深编稿）",
         "inputSchema": {
             "type": "object",
             "properties": {
                 "chapter_id": {"type": "string",
                                "description": "章节 id，如 di-san-shi-qi-zhang / fu-lu-a"},
                 "lang": {"type": "string", "description": "语言代码（默认 zh-CN）"},
+                "version": {"type": "string", "description": "默认 v1.8；传 v1.9 读最新中文版"},
             },
             "required": ["chapter_id"],
         },
@@ -58,6 +65,7 @@ TOOLS = [
             "properties": {
                 "query": {"type": "string"},
                 "lang": {"type": "string", "description": "默认 zh-CN"},
+                "version": {"type": "string", "description": "默认 v1.8；传 v1.9 检索最新中文版"},
                 "in_body": {"type": "boolean",
                             "description": "同时检索正文（默认仅标题）"},
             },
@@ -129,31 +137,39 @@ def _chapter_number(meta, ch):
 # ---------------------------------------------------------------- 工具实现（P1-1：转调 bookkit.content 门面）
 
 
-def t_list_parts(_):
-    parts = C.parts()
+def t_list_parts(args):
+    ver = args.get('version', 'v1.8')
+    parts = C.parts(ver)
     for part in parts:
-        part['chapters'] = [m['id'] for m in C.chapters() if m['part'] == part['title']]
+        part['chapters'] = [m['id'] for m in C.chapters(version=ver) if m['part'] == part['title']]
     return parts
 
 
 def t_list_chapters(args):
-    return C.chapters(lang=args.get('lang', 'zh-CN'), part=args.get('part'))
+    return C.chapters(lang=args.get('lang', 'zh-CN'), part=args.get('part'),
+                      version=args.get('version', 'v1.8'))
 
 
 def t_get_chapter(args):
-    return C.load_chapter(args['chapter_id'], args.get('lang', 'zh-CN'))
+    return C.load_chapter(args['chapter_id'], args.get('lang', 'zh-CN'),
+                          args.get('version', 'v1.8'))
 
 
 def t_search(args):
     return {'query': args['query'], 'lang': args.get('lang', 'zh-CN'),
             'hits': C.search(args['query'], args.get('lang', 'zh-CN'),
-                             args.get('in_body', False))}
+                             args.get('in_body', False), args.get('version', 'v1.8'))}
 
 
 def t_stats(_):
     st = C.stats()
     st['pdf_releases'] = ['latex-pdf-v1.8-final', 'latex-pdf-v1.7',
                           'latex-pdf-v1.6', 'latex-pdf-v1.5']
+    st['versions'] = {'v1.8': C.stats('v1.8')}
+    try:
+        st['versions']['v1.9'] = C.stats('v1.9')
+    except LookupError:
+        st['versions']['v1.9'] = {'available': False}
     return st
 
 

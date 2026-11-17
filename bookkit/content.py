@@ -8,6 +8,7 @@
 - 源稿根：source/（zh-CN）与 source/translations/<lang>/（其余语言）
 - 语言代码：'zh-CN' 为主源稿；其余语言回退规则 = 翻译缺失时回退主源稿
 - 标题来自各章 front matter 的 nav 行
+- 版本：version='v1.8'（默认，19 语言）与 'v1.9'（source/v1.9，仅 zh-CN）
 """
 import json
 import re
@@ -17,10 +18,25 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 _BOOK = json.loads((ROOT / 'source' / 'book.json').read_text(encoding='utf-8'))
 _LANGS = json.loads((ROOT / 'manifest' / 'languages.json').read_text(encoding='utf-8'))['languages']
+_BOOKS = {'v1.8': _BOOK}
 
 
-def src_root(lang: str) -> Path:
-    """该语言的源稿根目录（翻译缺失时回退 zh-CN 主源稿）。"""
+def _book(version: str = 'v1.8') -> dict:
+    """按版本取书籍结构（v1.8 = source/book.json；v1.9 = source/v1.9/book.json）。"""
+    key = version or 'v1.8'
+    if key not in _BOOKS:
+        rel = 'source/v1.9/book.json' if key == 'v1.9' else 'source/book.json'
+        path = ROOT / rel
+        if not path.is_file():
+            raise LookupError(f'版本源稿不存在：{rel}')
+        _BOOKS[key] = json.loads(path.read_text(encoding='utf-8'))
+    return _BOOKS[key]
+
+
+def src_root(lang: str, version: str = 'v1.8') -> Path:
+    """该版本/语言的源稿根目录（v1.8 翻译缺失时回退 zh-CN 主源稿）。"""
+    if (version or 'v1.8') == 'v1.9':
+        return ROOT / 'source' / 'v1.9'
     cand = ROOT / 'source' / 'translations' / lang
     if lang != 'zh-CN' and cand.is_dir():
         return cand
@@ -35,21 +51,21 @@ def available_langs() -> list:
     return out
 
 
-def parts() -> list:
-    return [{'id': p['id'], 'title': p.get('nav', p['id'])} for p in _BOOK['parts']]
+def parts(version: str = 'v1.8') -> list:
+    return [{'id': p['id'], 'title': p.get('nav', p['id'])} for p in _book(version)['parts']]
 
 
-def part_label(pid: str) -> str:
-    for p in _BOOK['parts']:
+def part_label(pid: str, version: str = 'v1.8') -> str:
+    for p in _book(version)['parts']:
         if p['id'] == pid:
             return p.get('nav', pid)
     return pid
 
 
-def chapter_meta(ch: dict, lang: str = 'zh-CN') -> dict:
+def chapter_meta(ch: dict, lang: str = 'zh-CN', version: str = 'v1.8') -> dict:
     """章节元数据：id/篇/kind/标题（front matter nav）/extras/文件路径。"""
-    path = src_root(lang) / ch['file']
-    if not path.is_file():
+    path = src_root(lang, version) / ch['file']
+    if not path.is_file() and (version or 'v1.8') != 'v1.9':
         path = ROOT / 'source' / ch['file']
     title, extras = '', None
     if path.is_file():
@@ -65,28 +81,31 @@ def chapter_meta(ch: dict, lang: str = 'zh-CN') -> dict:
                 except Exception:
                     extras = None
     return {'id': ch['id'],
-            'part': part_label(ch.get('part') or ch.get('after_part')),
+            'part': part_label(ch.get('part') or ch.get('after_part'), version),
             'kind': ch.get('kind', 'chapter'),
             'title': title,
             'extras': extras,
             'file': str(path.relative_to(ROOT))}
 
 
-def chapters(lang: str = 'zh-CN', part: str = None) -> list:
+def chapters(lang: str = 'zh-CN', part: str = None, version: str = 'v1.8') -> list:
     out = []
-    for ch in _BOOK['chapters']:
-        meta = chapter_meta(ch, lang)
-        if part and meta['part'] != part:
+    for ch in _book(version)['chapters']:
+        meta = chapter_meta(ch, lang, version)
+        # part 过滤同时接受篇 id（book.json 口径）与篇标题（nav 口径）
+        if part and meta['part'] != part and not (
+                ch.get('part') == part or ch.get('after_part') == part):
             continue
         out.append(meta)
     return out
 
 
-def load_chapter(cid: str, lang: str = 'zh-CN') -> dict:
-    ch = next((c for c in _BOOK['chapters'] if c['id'] == cid), None)
+def load_chapter(cid: str, lang: str = 'zh-CN', version: str = 'v1.8') -> dict:
+    book = _book(version)
+    ch = next((c for c in book['chapters'] if c['id'] == cid), None)
     if ch is None:
         return {'error': f'章节不存在：{cid}（用 chapters() 查询）'}
-    meta = chapter_meta(ch, lang)
+    meta = chapter_meta(ch, lang, version)
     path = ROOT / meta['file']
     if not path.is_file():
         return {'error': f'该语言暂无此章源稿：{lang}/{cid}'}
@@ -99,11 +118,12 @@ def _fold(s: str) -> str:
     return unicodedata.normalize('NFKC', s).lower()
 
 
-def search(query: str, lang: str = 'zh-CN', in_body: bool = False) -> list:
+def search(query: str, lang: str = 'zh-CN', in_body: bool = False,
+           version: str = 'v1.8') -> list:
     terms = [t for t in re.split(r'\s+', _fold(query)) if t]
     hits = []
-    for ch in _BOOK['chapters']:
-        meta = chapter_meta(ch, lang)
+    for ch in _book(version)['chapters']:
+        meta = chapter_meta(ch, lang, version)
         matched = []
         if all(t in _fold(meta['title']) for t in terms):
             matched.append(meta['title'])
@@ -120,9 +140,11 @@ def search(query: str, lang: str = 'zh-CN', in_body: bool = False) -> list:
     return hits
 
 
-def stats() -> dict:
+def stats(version: str = 'v1.8') -> dict:
+    book = _book(version)
     t = ROOT / 'source' / 'translations'
     trans = sorted(d.name for d in t.iterdir() if d.is_dir()) if t.is_dir() else []
-    return {'title': _BOOK.get('title'), 'version': _BOOK.get('version'),
-            'languages': len(_LANGS), 'chapters': len(_BOOK['chapters']),
-            'parts': len(_BOOK['parts']), 'translation_sources': trans}
+    return {'title': book.get('title'), 'version': book.get('version'),
+            'languages': len(_LANGS) if (version or 'v1.8') != 'v1.9' else 1,
+            'chapters': len(book['chapters']),
+            'parts': len(book['parts']), 'translation_sources': trans}

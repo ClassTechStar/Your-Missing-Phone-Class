@@ -35,6 +35,19 @@ def check_claims(root: Path, mf) -> list:
     real = _stats(mf, root, version)
     expected_sections = mf.expect_sections(version) or real["sections"]
 
+    # 双版本口径：default 版（v1.8）是 19 语言完整翻译版；仓库中版本号最大的
+    # 目录（v1.9）是最新版（中文先行）。统计与字数宣称以最新版口径标注。
+    ver_dirs = [p.name for p in root.iterdir()
+                if p.is_dir() and re.fullmatch(r'v[\d.]+', p.name)]
+    newest = max(ver_dirs,
+                 key=lambda v: [int(x) for x in v.lstrip('v').split('.')]) if ver_dirs else version
+    newest_real = _stats(mf, root, newest)
+    newest_wan = ''
+    nb = root / newest / f"{mf.baseline_lang(newest)}.html"
+    if nb.is_file():
+        chars = len(re.sub(r'\s+', '', T.visible_text(nb.read_text(encoding='utf-8'))))
+        newest_wan = f'{round(chars / 10000, 1):g}'
+
     # ---------- README ----------
     readme_rel = cfg.get("readme", "README.md")
     readme_path = root / readme_rel
@@ -92,15 +105,28 @@ def check_claims(root: Path, mf) -> list:
                                     f"README 提供 {len(apks)} 个 APK 链接，实际 {real['languages']} 种语言",
                                     file=readme_rel))
 
-    # ---------- index.html ----------
-    # 双版本口径：default 版（v1.8）是 19 语言完整翻译版；仓库中版本号最大的
-    # 目录（v1.9）是最新版（中文先行）。统计区以最新版口径标注。
-    ver_dirs = [p.name for p in root.iterdir()
-                if p.is_dir() and re.fullmatch(r'v[\d.]+', p.name)]
-    newest = max(ver_dirs,
-                 key=lambda v: [int(x) for x in v.lstrip('v').split('.')]) if ver_dirs else version
-    newest_real = _stats(mf, root, newest)
+        # 章数/字数宣称值：badge 与正文 ↔ 最新版基线实测（字数 = 可见文本去空白）
+        for label, rx, want in (
+            ('badge 章节数', re.compile(r'badge/章节-(\d+)%20节'), str(newest_real["sections"])),
+            ('badge 字数', re.compile(r'badge/章节-\d+%20节·([\d.]+)%20万字'), newest_wan),
+            ('v1.9 小节字数', re.compile(r'### v1\.9[^\n]*?([\d.]+)\s*万字'), newest_wan),
+            ('导语字数', re.compile(r'共 \d+ 个内容区块），([\d.]+) 万字'), newest_wan),
+            ('仓库表字数', re.compile(r'（([\d.]+) 万字）'), newest_wan),
+        ):
+            if not want:
+                continue
+            got = [m.group(1) for m in rx.finditer(rd)]
+            if not got:
+                issues.append(Issue("claims", ERROR,
+                                    f"README 未找到「{label}」宣称", file=readme_rel))
+            for v in got:
+                if v != want:
+                    issues.append(Issue("claims", ERROR,
+                                        f"README「{label}」宣称 {v}，实测 {want}",
+                                        file=readme_rel))
 
+    # ---------- index.html ----------
+    # 统计区以最新版口径标注（ver_dirs / newest 已在上方按双版本口径计算）。
     index_rel = cfg.get("index", "index.html")
     index_path = root / index_rel
     if not index_path.is_file():

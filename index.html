@@ -1175,6 +1175,16 @@
                     <div class="bg-white rounded-xl px-2 py-3 border border-gray-100"><i class="fas fa-heart text-primary mb-1"></i><p class="text-gray-600">第 27 章长辈适配专题</p></div>
                 </div>
             </div>
+            <div class="bg-light rounded-2xl p-6 border border-gray-100 fade-in mt-6 flex flex-wrap items-center justify-between gap-4">
+                <div>
+                    <h3 class="font-bold text-dark mb-1"><span aria-hidden="true" class="fas fa-cloud-arrow-down text-primary mr-2"></span>存到手机，断网也能看</h3>
+                    <p class="text-sm text-gray-500">一键把 19 本语言书与最新中文版存到本地（约 45MB，建议在 Wi-Fi 下操作）。</p>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button id="cache-all-btn" type="button" class="px-5 py-2.5 bg-primary text-white font-semibold rounded-xl">缓存全部离线包</button>
+                    <span id="cache-all-hint" class="text-sm text-gray-500" role="status"></span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -1623,6 +1633,30 @@
                     .catch(function (err) { console.warn('SW 注册失败：', err); });
             });
         }
+        /* 「缓存全部离线包」：用户主动触发，让 Service Worker 后台预取全部语言正文 */
+        (function () {
+            var btn = document.getElementById('cache-all-btn');
+            var hint = document.getElementById('cache-all-hint');
+            if (!btn || !hint) return;
+            btn.addEventListener('click', function () {
+                if (!('serviceWorker' in navigator) || !location.protocol.startsWith('http')) {
+                    hint.textContent = '本地 file:// 打开时不可用';
+                    return;
+                }
+                navigator.serviceWorker.ready.then(function (reg) {
+                    if (!reg.active) {
+                        hint.textContent = '离线组件尚未就绪，请稍后重试';
+                        return;
+                    }
+                    reg.active.postMessage('cache-all-languages');
+                    btn.disabled = true;
+                    btn.textContent = '缓存中…';
+                    hint.textContent = '已开始后台缓存，完成后断网也能打开';
+                }).catch(function () {
+                    hint.textContent = '缓存请求失败，请稍后重试';
+                });
+            });
+        })();
     </script>
 
 </div></div></div></section>

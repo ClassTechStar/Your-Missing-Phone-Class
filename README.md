@@ -1,6 +1,6 @@
 # 你缺失的那门手机课
 
-![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20节·331.7%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
+![Version](https://img.shields.io/badge/version-v1.9-165DFF) ![Languages](https://img.shields.io/badge/语言-19%20种-165DFF) ![Chapters](https://img.shields.io/badge/章节-120%20节·353.8%20万字-165DFF) ![QA](https://img.shields.io/badge/bookkit%20质检-0%20error-10B981) ![PWA](https://img.shields.io/badge/PWA-离线可读-8B5CF6) ![MCP](https://img.shields.io/badge/MCP%20Server-AI%20可直查-8B5CF6) ![License](https://img.shields.io/badge/license-CC%20BY--NC--SA%204.0-F59E0B)
 
 面向普通人的手机使用指南。最新中文版 v1.9 十五篇 105 章（第 0 章写到第 105 章，含 7 个专题附节、结语与附录 A–H，共 120 个内容区块），353.8 万字——从看懂手机硬件参数，讲到在安卓、iOS、鸿蒙上做出并上架自己的 App，再到 AI 短视频、可穿戴健康与车机互联。
 
@@ -26,8 +26,9 @@ Markdown 源稿（source/，逐章）
         ├──▶ 章节自测题库（quiz/，zh-CN + ja，gen_quiz.py 自动生成）
         └──▶ MCP Server（mcp/server.py）──▶ Claude 等 AI 客户端直查全书结构/全文
 
-v1.9/（最新中文版，120 个内容区块）在这条流水线之外直接维护：
-逐章扩写至约 3 万字（全书 43.5 万 → 353.8 万字），source/ 源稿回写同步中。
+v1.9/（最新中文版，120 个内容区块）曾在这条流水线之外直接维护：
+逐章扩写至约 3 万字（全书 43.5 万 → 353.8 万字）。2026-11-17 起源稿
+回写完成（source/v1.9/），`build --verify` 等价性已成为 CI 必过门禁。
 ```
 
 **质量门（全部自动化，0 error / 0 warn）**：
@@ -74,6 +75,7 @@ v1.9/（最新中文版，120 个内容区块）在这条流水线之外直接�
 - **在线阅读**：<https://classtechstar.github.io/Yihggh.github.io/>（站点首页即 v1.9）
 - **仓库文件**：[v1.9/zh-CN.html](v1.9/zh-CN.html)（单文件 HTML，离线可开）
 - 十五篇 105 章全部扩写至每章约 3 万字；2026-11 起新增专题：手机病毒的原理与分类、伪装成 "System Service" 的恶意程序识别（第四章），开源协议详解（第二十三章附），eSIM 实操、离线地图、海外支付等旅行三章深编
+- 源稿：[source/v1.9/](source/v1.9/)（已回写，`build --verify` 等价性为 CI 必过门禁）
 - 多语言版、PDF 与 Android APK 目前基于 v1.8（见下方），v1.9 的翻译与多端制作进行中
 
 ### 最新版本 (v1.8) — 19 种语言 · 84 个内容区块
@@ -147,7 +149,7 @@ v1.5–v1.8 旧版 PDF 用的是各语言各自的旧书名（如英文 Master Y
 |------|------|
 | `v1.9/` | 最新中文版：120 个内容区块，逐章约 3 万字（353.8 万字） |
 | `v1.8/` | 19 种语言的单文件 HTML（完整翻译版，84 章） |
-| `source/` | 中文源稿（v1.8 链路的单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json`；v1.9 扩写内容尚未回写，见[已知问题](#已知问题) |
+| `source/` | 中文源稿（单一事实源）：`chapters/` 84 章、`parts/` 11 篇导语、`book.json`；v1.9 源稿见 `source/v1.9/`（120 区块，已回写） |
 | `source/translations/` | 另外 18 种语言的翻译源稿，与成品逐章等价 |
 | `manifest/` | `languages.json`：语言元数据、版本门禁、入口页卡片 |
 | `bookkit/` | Python 工具链（零依赖）：extract / build / lint / check / index / i18n / latex / release |
