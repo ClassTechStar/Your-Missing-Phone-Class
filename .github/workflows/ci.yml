@@ -22,6 +22,11 @@ jobs:
         with:
           python-version: '3.x'
 
+      - name: 单元测试（bookkit 核心模块边界用例）
+        run: |
+          pip install pytest -q
+          python -m pytest tests/ -q
+
       - name: 结构/锚点/目录/版本串/lang/NUL/残留字（v1.8）
         run: python -m bookkit lint --all-versions
 
@@ -68,6 +73,14 @@ jobs:
           [ "$fail" = 0 ] || exit 1
           echo "全部语言 build --verify 通过"
 
+      - name: v1.9 源稿回写等价性（source/v1.9 ↔ v1.9/zh-CN.html，直接改 HTML 的提交一律阻断）
+        run: |
+          if ! python -m bookkit build --book source/v1.9/book.json --verify | tee /tmp/verify19.log | grep -q "结论：PASS"; then
+            echo "!! v1.9 源稿与成品不同步（改了 v1.9/zh-CN.html 请回写 source/v1.9，或改了 source/v1.9 请重建成品）："
+            grep -E "区块 id|目录一致|可见文本|逐章结构|结构差异" /tmp/verify19.log
+            exit 1
+          fi
+
       - name: 构建幂等（两次构建字节一致）
         run: |
           python -m bookkit build --out dist/a.html
@@ -79,7 +92,7 @@ jobs:
           python - <<'EOF'
           import json
           from pathlib import Path
-          for base in [Path('source')] + sorted(Path('source/translations').iterdir()):
+          for base in [Path('source'), Path('source/v1.9')] + sorted(Path('source/translations').iterdir()):
               if not base.is_dir() or not (base / 'book.json').is_file():
                   continue
               book = json.loads((base / 'book.json').read_text(encoding='utf-8'))
@@ -139,7 +152,7 @@ jobs:
       - name: 安装 Playwright
         run: pip install playwright -q && python -m playwright install chromium --with-deps
 
-      - name: 浏览器冒烟（20 页 console 零报错 + 锚点解析 + h3 计数）
+      - name: 浏览器冒烟（23 页 console 零报错 + 锚点解析 + h3 计数）
         run: python scripts/web_smoke.py
 
       - name: 题库与结构 schema 校验（quiz / book.json）

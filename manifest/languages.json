@@ -288,26 +288,9 @@
     "v1.8": {
       "baseline": "zh-CN",
       "expect_sections": 84,
-      "checks": {
-        "structure": "error",
-        "anchors": "error",
-        "toc": "error",
-        "title_version": "error",
-        "lang": "error",
-        "nul": "error",
-        "residual": "error",
-        "coverage": "error",
-        "source_sync": "off",
-        "orphan": "error",
-        "social": "off",
-        "schema": "error"
-      }
-    },
-    "v1.9": {
-      "baseline": "zh-CN",
-      "source_sync": {
-        "canonical": "v1.9/zh-CN.html",
-        "source": "你缺失的那门手机课V1.9Fixed.html"
+      "budget": {
+        "max_html_kb": 2700,
+        "max_dom_tags": 14500
       },
       "checks": {
         "structure": "error",
@@ -321,7 +304,31 @@
         "source_sync": "off",
         "orphan": "error",
         "social": "off",
-        "schema": "error"
+        "schema": "error",
+        "perf": "error"
+      }
+    },
+    "v1.9": {
+      "baseline": "zh-CN",
+      "note": "源稿↔成品等价性由 CI「v1.9 源稿回写等价性」必过门禁承担（bookkit build --book source/v1.9/book.json --verify）；直接修改 v1.9/zh-CN.html 而不回写 source/v1.9 的提交会被阻断",
+      "budget": {
+        "max_html_kb": 13100,
+        "max_dom_tags": 92500
+      },
+      "checks": {
+        "structure": "error",
+        "anchors": "error",
+        "toc": "error",
+        "title_version": "error",
+        "lang": "error",
+        "nul": "error",
+        "residual": "error",
+        "coverage": "error",
+        "source_sync": "off",
+        "orphan": "error",
+        "social": "off",
+        "schema": "error",
+        "perf": "error"
       }
     }
   },

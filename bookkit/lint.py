@@ -12,7 +12,7 @@ from .model import ERROR, Issue, OFF, WARN
 
 CHECK_ORDER = [
     "structure", "coverage", "toc", "orphan", "anchors",
-    "title_version", "lang", "nul", "residual", "source_sync", "social",
+    "title_version", "lang", "nul", "residual", "source_sync", "social", "perf",
 ]
 
 
@@ -177,6 +177,23 @@ def lint_version(root: Path, mf, version: str) -> list:
                     _emit(issues, version, "residual", lvl,
                           f"{code} 残留仅简体字形", file=rel, detail=f"{bad[:10]}")
 
+        # --- perf：单文件体积与 DOM 规模预算（防膨胀回归护栏） ---
+        lvl = mf.check_level(version, "perf")
+        budget = mf.version_spec(version).get("budget") or {}
+        if lvl != OFF and budget:
+            size_kb = path.stat().st_size // 1024
+            tags = len(re.findall(r'<[a-zA-Z][\w:-]*', raw))
+            cap_kb = budget.get("max_html_kb")
+            if cap_kb is not None and size_kb > cap_kb:
+                _emit(issues, version, "perf", lvl,
+                      f"{code} 单文件 {size_kb}KB 超出预算 {cap_kb}KB",
+                      file=rel, detail=f"超 {size_kb - cap_kb:+d}KB（分章化/裁剪后才可上调预算）")
+            cap_tags = budget.get("max_dom_tags")
+            if cap_tags is not None and tags > cap_tags:
+                _emit(issues, version, "perf", lvl,
+                      f"{code} DOM 开标签数 {tags} 超出预算 {cap_tags}",
+                      file=rel, detail=f"超 {tags - cap_tags:+d}")
+
         # --- social：分享卡片元数据（og / twitter） ---
         # 渠道分发时用户只看到这张卡片：图缺了就没有缩略图，locale 错了会被推到错的地区，
         # 标题里的版本串旧了会指向不存在的版本（历史上 v3.2 / 69 章就是这么留下来的）。
@@ -250,6 +267,10 @@ def _lint_schema(root: Path, mf) -> list:
     if book.is_file():
         for pr in S.validate_book_file(book):
             emit(pr, "source/book.json")
+    v19 = root / "source" / "v1.9" / "book.json"
+    if v19.is_file():
+        for pr in S.validate_book_file(v19):
+            emit(pr, "source/v1.9/book.json")
     for f in S.list_translation_book_files(root):
         for pr in S.validate_book_file(f):
             emit(pr, file=str(f.relative_to(root)))
