@@ -42,3 +42,6 @@ latex/*/pass*.log
 手机课-LaTeX-PDF/render-*/
 手机课-LaTeX-PDF/fonttest/
 手机课-LaTeX-PDF/fonts/
+
+# 根目录临时副本（成品以 v1.9/ 为准；站点部署由 scripts/sync_site.py 现场改写相对路径，无需固定副本）
+你缺失的那门手机课*Fixed.html

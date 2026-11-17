@@ -1,22 +1,37 @@
-# v1.9 新章计划（草稿，未并入 v1.8）
+# source/v1.9 —— v1.9 中文版源稿（单一事实源，已回写）
 
-五份新章草稿已按 **第 70–74 章** 重编号（原占位号 37–41 与 v1.8 正式章节冲突）：
+2026-11-17 起，v1.9 的源稿回写完成：`v1.9/zh-CN.html`（120 个内容区块）
+可由本目录完整重建，并通过 `bookkit build --verify` 逐章等价性校验
+（区块 id / 目录 / 可见文本 / 逐章结构 四项全一致）。
 
-| 章 | id | 主题 |
-|----|----|------|
-| 第七十章 | di-qishizhang | 手机与可穿戴设备——手腕上的协同 |
-| 第七十一章 | di-qishiyizhang | 旅行与手机——eSIM、流量与离线地图 |
-| 第七十二章 | di-qishierzhang | 手机与健康管理——把数字变成行动 |
-| 第七十三章 | di-qishisanzhang | AI 短视频创作——从一句话到一条片 |
-| 第七十四章 | di-qishisizhang | 竖屏短剧入门——3 分钟一个钩子 |
+## 目录结构
 
-## 并入 v1.9 的检查清单
+| 路径 | 说明 |
+|------|------|
+| `book.json` | 书籍结构（17 篇、120 章块、TOC 元数据、孤儿章节归属） |
+| `chapters/` | 120 个章节正文（Markdown + 行内 HTML） |
+| `parts/` | 17 篇导语 |
+| `template/shell.html` | 页面骨架（head + 导航 + 侧栏 + 页脚 + 脚本） |
+| `drafts/` | 历史新章草稿（原第 70–74 章规划稿，编号已并入正式篇章，仅存档） |
 
-1. 逐章补全「本章导览 / 动手练习 / 本章小结」结构（对齐 84 章既有版式）；
-2. `source/book.json` 增补 5 章（part 归属：建议实战篇或新设「拓展篇」）；
-3. `python -m bookkit build --verify` 通过后，再走 19 语言翻译流程
-   （翻译源稿体系见 source/translations/，新章翻译后同路径落盘）；
-4. 侧栏目录、附录 G 速查索引、index.html 卡片由 `bookkit index` 联动更新；
-5. 全量质检：`python scripts/html_audit.py` + `pdf_audit.py` 双绿。
+## 日常工作流
 
-原始草稿（含写作备注）：[../v1.9-drafts.md](../v1.9-drafts.md)
+```bash
+# 改完 source/ 后重建成品（写回 v1.9/zh-CN.html）
+python -m bookkit build --book source/v1.9/book.json --out v1.9/zh-CN.html
+
+# 等价性校验（CI 必过门禁，直接改 HTML 不回写源稿会被阻断）
+python -m bookkit build --book source/v1.9/book.json --verify
+
+# 如需从成品反解（仅当成品是唯一改动源时）
+python -m bookkit extract --version v1.9 --out source/v1.9
+```
+
+## 回写时修复的结构缺陷（2026-11-17）
+
+成品历史上由手工/脚本直改，存在多处解析脱轨缺陷（详见
+`scripts/fix_v19_normalize.py`）：正文裸 `<`（第 41/63 章）、损坏残片
+`<div\n</div>`（第 53/54 章间）、附录 B 缺 `</p>`、第 59 章 flex 行过早闭合、
+第 31/32 章「本章小结」游离于章节块外等。这些缺陷会让 htmlparse 把其后
+数十万字符吞进单个文本节点，导致反解只能识别 69/120 区块——历史上的
+「整章白屏与锚点漂移」事故同族。修复脚本幂等，可随时重放自检。

@@ -140,8 +140,13 @@ def extract(root: Path, version: str = 'v1.8', lang: str = 'zh-CN',
 
     parts, toc_items = _toc_model(toc_node)
 
+    # 篇 = 目录里的分组节点；或（兼容旧形态）内部含 content-section 的 section。
+    # v1.9 鸿蒙篇是「导语在 section 内、章节孤儿跟随其后」的形态，
+    # 仅靠 content-section 后代判断会把整篇导语丢掉，故以 TOC id 为准。
+    toc_part_ids = {p['id'] for p in parts}
     part_nodes = [n for n in main.find_all('section')
-                  if n.find('div', cls='content-section') is not None]
+                  if n.get('id') in toc_part_ids
+                  or n.find('div', cls='content-section') is not None]
     part_nodes.sort(key=lambda n: pos[id(n)][0])
     part_ids = {n.get('id') for n in part_nodes}
 

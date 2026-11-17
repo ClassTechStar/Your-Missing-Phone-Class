@@ -1623,7 +1623,6 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
     </script>
     
 
-<!-- v19-first-chapter-visibility-fix -->
 </head>
 <body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-200">
     <a class="skip-link focus-ring" href="#content">跳到主要内容</a>
@@ -2686,7 +2685,6 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>算子扩展与开放标准（TOSA / QNN）</strong>：新模型刚发布，里面往往有 NPU 没见过的新算子——过去从模型发布到 NPU 适配要等几个月。开放标准改变了节奏：Arm 的 TOSA 统一算子描述，高通 QNN 让开发者直接把模型接到 Hexagon 上，框架更新与 NPU 驱动更新开始同频迭代。</li>
 </ul>
 <p class="mb-2">判断方法和前面一样：这些能力最终都要落到"你真的会用的那个功能"上——本地文档摘要、实时通话翻译、照片语义搜索。发布会听完，回去打开手机试试那几个功能，比记参数有用。</p>
-<!-- v19-alu-section -->
 <h5 class="font-semibold mt-3 mb-1">ALU：三类处理器里真正"算数"的那个部件</h5>
 <p class="mb-2">前面把 CPU、GPU、NPU 各自干什么讲了一遍，但有个问题一直绕着没说：它们内部真正把数字算出来的，到底是什么？答案是个听起来有点老派的名字——<strong>ALU（Arithmetic Logic Unit，算术逻辑单元）</strong>。它是所有处理器里最基础的"算数部件"，可三类处理器把它用出了三种完全不同的样子。更常见的一个误会是把 NPU 说成"有很多 ALU"——这一节主要就是把这件事掰清楚。</p>
 
@@ -2841,7 +2839,6 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>微距</strong>：拍极近距离的小东西。</li>
 </ul>
 <p class="mb-2"><strong>像素数不是全部！</strong>传感器尺寸（底大一级压死人）、光圈大小（f/1.8比f/2.4大）、防抖（OIS光学防抖很重要）都影响画质。计算摄影（AI算法）现在越来越重要，能把多张照片合成一张好照片。</p>
-<!-- v19-cmos-section -->
 <h5 class="font-semibold mt-3 mb-1">CMOS 传感器：光是怎么变成数字的</h5>
 <p class="mb-2">刚才说"像素数不是全部"，那到底什么在决定画质？咱们先把镜头后面的那块硅片讲清楚。<strong>CMOS 图像传感器</strong>就是手机的眼睛，它的活是把照进来的光，老老实实变成一串数字——注意，只是数字，还不是你看到的照片。</p>
 <p class="mb-2">一个像素里发生的事其实很朴素：<strong>光电效应</strong>。光子打进硅里的光电二极管，激发出电子；曝光这段时间里，电子一点点攒在一个叫"势阱"的小坑里，光越强攒得越多。曝光结束，电荷被转成电压，经像素里的放大器读出，再由模数转换器变成数字。于是每个像素交出一个数：这一格有多亮。</p>
@@ -2965,7 +2962,6 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>气压计</strong>：测海拔高度，爬楼梯都能检测到。</li>
   <li><strong>霍尔传感器</strong>：检测磁吸壳的开合。</li>
 </ul>
-<!-- v19-soc-mechanism-chapter -->
 <h4 class="text-lg font-semibold mt-4 mb-2">二、SoC 是怎么把一件活干完的：调度、运算与数据通路</h4>
 <p class="mb-2">上一节把 SoC 里的部件认了个遍：CPU、GPU、NPU、ISP，还有刚讲过的 ALU。但认全零件不等于懂机器——真正让手机"跟手"的，是这些部件<strong>怎么被安排着一起干活</strong>。你点一下快门，到屏幕亮起一张夜景照片，中间要过五道手、排好几次队、等若干次信号。这一节就顺着这条线走一遍：谁负责决定做什么，谁负责决定什么时候做，数据又从哪里来、到哪里去。</p>
 <p class="mb-2">先把话说在前面：下面讲的都是<strong>通用架构规律</strong>——分几层调度、有哪几种并行、地址怎么转换，各家芯片大同小异。至于一个核心几级流水、能同时发射几条指令、缓存多大、一组线程有多少个 lane，那是<strong>具体芯片实现</strong>，每一代都在变，别把书里的说法当成某颗芯片的规格表，真要查就翻厂商文档。</p>
@@ -3209,7 +3205,6 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li><strong>5G NR Band（N系列）</strong>：如n1、n3、n28、n41、n78、n79等。n78（3.5GHz）是中国5G主力频段，n41（2.5GHz）移动使用较多。</li>
   <li><strong>购买建议</strong>：如果需要出国使用，购买前确认手机是否支持目标国家的频段。国行手机通常对中国频段支持最全，但可能缺少部分海外频段。</li>
 </ul>
-<!-- v19-baseband-rf-section -->
 <h5 class="font-semibold mt-3 mb-1">蜂窝基带（BP）到底管什么：</h5>
 <p class="mb-2">前面说"基带把数字信号调制成无线电波"，这句为了方便理解做了简化。真拆开看，<strong>BP（Baseband Processor，基带处理器）只管数字这一半</strong>：它产出的是一串比特或基带样值，并不直接把电波送出去。把比特变成电磁波，是后面射频前端的活。</p>
 <p class="mb-2">BP 的活分两类。一类是<strong>把数据搬过无线信道</strong>：发送时做信道编码、加校验、调制、成帧，让数据扛得住干扰和衰落；接收时反过来做同步、信道估计、均衡、解调、解码，出错的还要靠重传合并补回来。另一类是<strong>守着空口的规矩</strong>：小区搜索与注册、切换、功率控制、重传、加密与鉴权，全都对时间极敏感——晚几毫秒，基站那边这一帧就过去了。</p>
@@ -12357,7 +12352,6 @@ html.lg-adv:not(.lg-off):not(.safe) .search-panel {
   <li>如果充电器或手机异常发热、有异味，立即停止使用。</li>
 </ul>
 </div>
-<!-- v19-gan-adapter-section -->
 <h4 class="text-lg font-semibold mt-4 mb-2">四、氮化镓（GaN）适配器：充电头这边到底变了什么</h4>
 <p class="mb-2">前面在讲充电习惯时提过一句：GaN 充电头是出差党的好搭档，同样的功率能做得很小。上一节又把快充协议捋了一遍，知道了「先看协议，再谈瓦数」。那这块越做越小的充电头，里面究竟换了什么？为什么换了材料就能变小、少发热？它又凭什么被反复和「快充」「续航」绑在一起说？这一节把充电头这头讲清楚。</p>
 <p class="mb-2"><strong>先把位置摆正</strong>：从墙上插座到电池，中间至少隔着四段——适配器把市电变成低压直流，数据线把它送进手机，手机里的充电管理电路按协议要来的电压电流调整成电池能接受的形状，最后才是电芯把电能存进去。<strong>氮化镓只作用于第一段</strong>。它让这一段的转换更省、体积更小，但既不增加电池容量，也不减少手机耗电，更不会让屏幕、基带、SoC 少用一点电。后面会反复回到这条边界上。</p>
@@ -18541,7 +18535,7 @@ git merge upstream/main
 =======
 主分支上的内容
 &gt;&gt;&gt;&gt;&gt;&gt;&gt; upstream/main</pre></div>
-<p class="mb-2">你的任务是在两组内容之间拍板：留一边，或者融合成新的，然后把 <<<<<<<、=======、>>>>>>> 这些标记行全部删干净，git add 这个文件，完成合并提交，最后 git push。冲突解决的本质是"读懂两边意图再拿主意"，多做两次就熟了。</p>
+<p class="mb-2">你的任务是在两组内容之间拍板：留一边，或者融合成新的，然后把 &lt;&lt;&lt;&lt;&lt;&lt;&lt;、=======、&gt;&gt;&gt;&gt;&gt;&gt;&gt; 这些标记行全部删干净，git add 这个文件，完成合并提交，最后 git push。冲突解决的本质是"读懂两边意图再拿主意"，多做两次就熟了。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">开源贡献指南：从旁观者到贡献者</h4>
 <p class="mb-2">第七节提过"参与开源"，这一节把它展开成一份可执行的路线图。先把定义放宽：贡献不只是写代码——报一个说清楚的 bug、修一处文档错别字、补一段翻译，都算数，而且是维护者最欢迎的那类。</p>
 <h5 class="font-semibold mt-3 mb-1">从你真实在用的项目找起</h5>
@@ -23770,7 +23764,6 @@ git merge upstream/main
 </ol>
 </div>
 
-</div>
 <div class="chapter-summary">
 <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结</p>
 <ul class="list-disc pl-5 text-sm space-y-0.5">
@@ -23780,7 +23773,8 @@ git merge upstream/main
   <li>剪辑用剪映：裁剪→转场→字幕→BGM→导出，六步走</li>
   <li>前3秒定生死，一条视频只讲一件事，坚持比天赋重要</li>
 </ul>
-</div>
+</div></div>
+
 
                 <!-- 第三十二章：手机安全急救手册 -->
 
@@ -24400,7 +24394,6 @@ git merge upstream/main
 </ol>
 </div>
 
-</div>
 <div class="chapter-summary">
 <p class="font-semibold mb-1"><i class="fas fa-flag-checkered mr-1" aria-hidden="true"></i>本章小结</p>
 <ul class="list-disc pl-5 text-sm space-y-0.5">
@@ -24413,7 +24406,8 @@ git merge upstream/main
   <li>SIM swap劫持：手机突然"无服务"即警觉；设SIM卡PIN、开运营商二次验证、重要账号改用认证器App</li>
   <li>日常预防五件事：锁屏+2FA、查找手机、SIM卡PIN、不装来历不明App、定期备份</li>
 </ul>
-</div>
+</div></div>
+
 
             </section>
 
@@ -35263,11 +35257,6 @@ WorkManager.getInstance(context).enqueue(syncRequest)</pre></div>
 
                 <!-- 第54章 -->
 
-                <div
-</div>
-
-                <!-- 第54章 -->
-
                 <div id="di-wu-shi-si-zhang" class="mb-10 content-section">
 <h3 class="text-xl font-bold text-dark dark:text-gray-200 mb-4">第五十四章：项目一——我的记账本（本地版）</h3>
 <p class="chapter-intro mb-4">欢迎来到你的第一个“正经项目”。这个记账本虽然不联网，但五脏俱全：能记一笔账、能看流水、能按月统计、能删改。做完它，你就完整走了一遍“数据 → 逻辑 → 界面”的全流程。别急着抄代码——<strong>先想清楚再动手</strong>，这是咱们一贯的原则。</p>
@@ -38274,7 +38263,7 @@ LazyColumn {
 <h4 class="text-lg font-semibold mt-4 mb-2">四、一个 App 是怎么诞生的？</h4>
 <p class="mb-2">和所有平台一样，iOS App 的诞生也有一条流水线。但苹果版多了两道"安检"：</p>
 <div class="figure">
-<div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-lightbulb mr-1"></i> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-keyboard mr-1"></i> 写代码（Swift + SwiftUI）</span></div><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-upload mr-1"></i> 提交审核</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">🏪 App Store 上架</span></div>
+<div class="flex flex-wrap items-center justify-center gap-2 my-2"><span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-lightbulb mr-1"></i> 想法</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">📐 设计（界面+功能）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-keyboard mr-1"></i> 写代码（Swift + SwiftUI）</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center"><i class="fas fa-upload mr-1"></i> 提交审核</span><span class="text-gray-400 mx-1">➜</span> <span class="border-2 border-primary bg-indigo-50 text-indigo-900 dark:bg-indigo-950 dark:text-indigo-200 rounded-md px-3 py-1 text-sm text-center">🏪 App Store 上架</span></div></div>
 <p class="mb-2">两道"安检"分别是：<strong>证书签名</strong>——所有 iOS 应用必须由苹果颁发的证书签名才能在真机上运行（开发证书用于自己调试，发布证书用于上架），这套签名体系在第 60 章搭建环境时你就会首次接触；<strong>App Store 审核</strong>——上架前苹果人工审核应用的功能、隐私、内容，通过后才能出现在商店里（审核细节在第 67 章展开）。</p>
 <p class="mb-2">流水线的最后一段也和别的平台不同：<strong>上架不是终点，而是"新关系的开始"</strong>。用户评论、崩溃报告、版本更新——这些持续运营的动作都通过 App Store Connect（苹果的开发者后台）完成。第 67 章会把"上架后的运营"单独讲，这里先建立"上架之后还有半场"的预期。</p>
 <h4 class="text-lg font-semibold mt-4 mb-2">五、开发者账号与工具链：三样东西先备齐</h4>
@@ -39745,8 +39734,7 @@ print(member.description())   // 月费用 25.0 元</pre>
 
 let order = Order(price: 12.0, count: 3)
 print(order.total)             // 36.0
-// 改了 price，total 自动就是新值——因为它每次都现算
-</pre>
+// 改了 price，total 自动就是新值——因为它每次都现算</pre>
 </div>
 <p class="mb-2">判断该存还是该算，一条经验：<strong>能从别的属性推出来的，就别存</strong>。存一份"总价"，等于给数据开了两个户口，price 一改就闹分家。这和第 62 章 SwiftUI 里"派生值现算"的原则是同一条哲学，现在养成习惯，后面直接受益。</p>
 <p class="mb-2"><strong>与 Kotlin 对照</strong>：Kotlin 的 <code class="inline">val total get() = price * count</code> 和 Swift 的计算属性一模一样，连"无存储、现访问现算"的语义都同步。</p>
@@ -41354,7 +41342,7 @@ struct BookListView: View {
 <ol class="list-decimal pl-6 mb-3 space-y-1">
 <li>新建一个 SwiftUI View，命名 NavDemo，把整个 body 包进 NavigationStack——画布上暂时还是一张白纸；</li>
 <li>放一个 List，里面塞三个 NavigationLink("账户""隐私""关于")，目标先都指向同一个 PlaceholderPage()——运行，能看到三条可点的行；</li>
-<li>点任意一行，页面从右侧滑入，左上角自动出现"< 返回"——你没写任何返回代码，这就是栈在工作；</li>
+<li>点任意一行，页面从右侧滑入，左上角自动出现"&lt; 返回"——你没写任何返回代码，这就是栈在工作；</li>
 <li>在 PlaceholderPage 里加 .navigationTitle("详情")，运行，标题变成内联小字；</li>
 <li>把 List 外面套上 .navigationTitle("设置中心")，运行，首页出现系统大标题；</li>
 <li>从屏幕左缘往右滑，页面跟着手指滑走——右滑返回手势天然可用，一条三层链完工。</li>
@@ -66418,7 +66406,7 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre></div>
 <p class="mb-2">第三步回补：知道卡在哪了，就按原完成标准把练习补完。回补时优先挑和当下需求相关的；补完在"一句话心得"里记一句"当时卡在X，后来懂了Y"——这一句往往是你笔记里最值钱的一句。两次都没回补成功的，要么拆小，要么正式放弃，并给自己写一句原因——写得清原因的放弃，也是收获。</p>
 
 <h4 class="text-lg font-semibold mt-4 mb-2">四、练习打卡表：让"做了"看得见</h4>
-<p class="mb-2">打卡不用App，一张表五列就够：周次、练习、完成标准、完成日期、一句话心得。打印出来贴冰箱，或者抄进备忘录，都行。最值钱的是最后一列——练完当天写一句，只写一句，半年后它就是你自己的排错手册。这张表可以直接抄——抄完先填第一行，仪式感很重要。
+<p class="mb-2">打卡不用App，一张表五列就够：周次、练习、完成标准、完成日期、一句话心得。打印出来贴冰箱，或者抄进备忘录，都行。最值钱的是最后一列——练完当天写一句，只写一句，半年后它就是你自己的排错手册。这张表可以直接抄——抄完先填第一行，仪式感很重要。</p>
 <div class="overflow-x-auto">
 <table class="w-full border-collapse border border-gray-300 text-sm mb-3">
   <thead><tr class="bg-light dark:bg-gray-700"><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">周次</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">练习</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">完成标准</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">完成日期</th><th class="border border-gray-300 dark:border-gray-600 px-3 py-2 text-left">一句话心得</th></tr></thead>
@@ -69883,7 +69871,6 @@ hdc file recv /data/local/tmp/run.jpeg ./run.jpeg</pre></div>
 
 <p class="mb-2">为什么先深编再扩写？因为体量变大之后，错误会被放大：一个过期的版本串，在 43.5 万字里是一粒沙，扩到 353.8 万字后还是那粒沙，但被翻到的机会翻了倍。先把事实校准、把"整章白屏""锚点漂移"这类毛病修掉，扩出来的每一章才是盖在干净地基上的楼。原文照录：</p>
 
-<!-- v19-appendix-h-2026-11 -->
 <div class="info-box rounded-lg p-4 mt-3">
 <p class="font-semibold"><i class="fas fa-wrench mr-2"></i>v1.9 深编修订（2026 年 11 月）：逐章增补与阅读体验修复</p>
 <p class="mt-1">这一轮没再新增篇章，改的是「每一章够不够扎实、读起来顺不顺」。全书 120 个内容区块按 2026 年末可核对的公开事实逐章增补细节，早先单列的「2026 年末补记」也整合进正文，不用再跳着看两部分。版本号只写官方文档能核对的，其余一律以官方为准。</p>
